@@ -2,7 +2,7 @@
 title: "Parameter-name drift: activerecord migrations, encryption, validations and the rest"
 status: draft
 updated: 2026-08-28
-rfc: "0000-parameter-name-drift-burndown"
+rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:
   - activerecord

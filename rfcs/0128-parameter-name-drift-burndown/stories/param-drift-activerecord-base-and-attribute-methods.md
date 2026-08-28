@@ -1,15 +1,15 @@
 ---
-title: "Parameter-name drift: activerecord relation and scoping"
+title: "Parameter-name drift: activerecord base and attribute methods"
 status: draft
 updated: 2026-08-28
-rfc: "0000-parameter-name-drift-burndown"
+rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:
   - activerecord
 deps:
   - parity-api-compares-parameter-names-beside-arity
 deps-rfc: []
-est-loc: 232
+est-loc: 220
 priority: 2
 pr: null
 claim: null
@@ -21,7 +21,7 @@ closed-reason: null
 ## Context
 
 The parameter-name check landed by `parity-api-compares-parameter-names-beside-arity`
-(RFC 0126) reports **58 positions over 52 matched pairs** in `relation.rb`, `relation/**` and `scoping**`
+(RFC 0126) reports **55 positions over 54 matched pairs** in `base.rb`, `attribute_methods**` and the persistence/schema core
 where the TS parameter is not the Rails identifier camelCased. CLAUDE.md makes
 that spelling the rule ("a local or parameter keeps the Rails identifier,
 camelCased — Ruby `stmt` is `stmt`, not `statement`"); it went unmeasured until
@@ -29,26 +29,29 @@ this check, so the drift accumulated silently while arity read 100%.
 
 Rows by file:
 
-- `relation.rb` — 20
-- `relation/query_methods.rb` — 12
-- `scoping.rb` — 12
-- `relation/calculations.rb` — 6
-- `relation/delegation.rb` — 3
-- `querying.rb` — 2
-- `relation/finder_methods.rb` — 2
-- `relation/predicate_builder.rb` — 1
+- `base.rb` — 16
+- `attribute_methods.rb` — 14
+- `attribute_methods/dirty.rb` — 8
+- `persistence.rb` — 6
+- `store.rb` — 3
+- `core.rb` — 2
+- `readonly_attributes.rb` — 2
+- `attribute_methods/primary_key.rb` — 1
+- `attribute_methods/read.rb` — 1
+- `attribute_methods/write.rb` — 1
+- …and 1 further files with fewer rows each.
 
 A sample, in the artifact's own format (`output/param-name-mismatches.json`):
 
 ```text
-  querying.rb#async_find_by_sql @3  `allowRetry` → `block`
-  querying.rb#find_by_sql @3  `allowRetry` → `block`
-  relation.rb#any? @0  `args` → `pattern`
-  relation.rb#build @0  `attributes` → `attrs`
-  relation.rb#create @0  `attributes` → `attrs`
-  relation.rb#create! @0  `attributes` → `attrs`
-  relation.rb#delete @0  `idOrArray` → `id`
-  relation.rb#delete_by @0  `args` → `conditions`
+  attribute_methods.rb#_create_record @0  `attributeNames` → `block`
+  attribute_methods.rb#_update_record @0  `attributeNames` → `block`
+  attribute_methods.rb#attribute_before_last_save @0  `attrName` → `attr`
+  attribute_methods.rb#attribute_change_to_be_saved @0  `attrName` → `attr`
+  attribute_methods.rb#attribute_for_inspect @0  `attrName` → `attr`
+  attribute_methods.rb#attribute_in_database @0  `attrName` → `attr`
+  attribute_methods.rb#attribute_present? @0  `attrName` → `name`
+  attribute_methods.rb#format_for_inspect @0  `name` → `attr`
 ```
 
 ## Verifying

@@ -1,16 +1,16 @@
 ---
-title: "Parameter-name drift: actiondispatch"
+title: "Parameter-name drift: actioncontroller"
 status: draft
 updated: 2026-08-28
-rfc: "0000-parameter-name-drift-burndown"
+rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:
-  - actiondispatch
+  - actioncontroller
 deps:
   - parity-api-compares-parameter-names-beside-arity
 deps-rfc: []
-est-loc: 336
-priority: 3
+est-loc: 188
+priority: 4
 pr: null
 claim: null
 assignee: null
@@ -21,7 +21,7 @@ closed-reason: null
 ## Context
 
 The parameter-name check landed by `parity-api-compares-parameter-names-beside-arity`
-(RFC 0126) reports **84 positions over 79 matched pairs** in `actiondispatch`
+(RFC 0126) reports **47 positions over 37 matched pairs** in `actioncontroller`
 where the TS parameter is not the Rails identifier camelCased. CLAUDE.md makes
 that spelling the rule ("a local or parameter keeps the Rails identifier,
 camelCased — Ruby `stmt` is `stmt`, not `statement`"); it went unmeasured until
@@ -29,35 +29,35 @@ this check, so the drift accumulated silently while arity read 100%.
 
 Rows by file:
 
-- `routing/mapper.rb` — 10
-- `routing/route_set.rb` — 9
-- `http/url.rb` — 6
-- `middleware/debug_exceptions.rb` — 6
-- `middleware/stack.rb` — 6
-- `http/content_security_policy.rb` — 5
-- `http/headers.rb` — 4
-- `http/mime_type.rb` — 4
-- `http/request.rb` — 4
-- `http/response.rb` — 3
-- …and 16 further files with fewer rows each.
+- `metal/request_forgery_protection.rb` — 9
+- `metal/strong_parameters.rb` — 9
+- `base.rb` — 4
+- `metal/live.rb` — 4
+- `metal.rb` — 3
+- `metal/basic_implicit_render.rb` — 2
+- `metal/flash.rb` — 2
+- `metal/implicit_render.rb` — 2
+- `metal/logging.rb` — 2
+- `metal/redirecting.rb` — 2
+- …and 7 further files with fewer rows each.
 
 A sample, in the artifact's own format (`output/param-name-mismatches.json`):
 
 ```text
-  http/content_disposition.rb#percent_escape @0  `string` → `str`
-  http/content_security_policy.rb#build @0  `context` → `request`
-  http/content_security_policy.rb#plugin_types @0  `types` → `sources`
-  http/content_security_policy.rb#report_uri @0  `uri` → `sources`
-  http/content_security_policy.rb#require_sri_for @0  `types` → `sources`
-  http/content_security_policy.rb#sandbox @0  `values` → `sources`
-  http/headers.rb#fetch @1  `default` → `args`
-  http/headers.rb#initialize @0  `request` → `env`
+  base.rb#redirect_to @0  `options` → `url`
+  base.rb#redirect_to @1  `responseOptions` → `options`
+  base.rb#respond_to @0  `mimes` → `block`
+  base.rb#send_file @0  `path` → `filePath`
+  metal.rb#build @0  `action` → `name`
+  metal.rb#dispatch @0  `name` → `action`
+  metal.rb#url_for @0  `string` → `str`
+  metal/allow_browser.rb#initialize @0  `request` → `userAgentString`
 ```
 
 ## Verifying
 
 ```bash
-API_COMPARE_FORCE=1 pnpm parity:api --package actiondispatch --params
+API_COMPARE_FORCE=1 pnpm parity:api --package actioncontroller --params
 ```
 
 lists every remaining position as `file:method  @position  ruby \`x\` ts \`y\``.
@@ -79,7 +79,7 @@ left alone here.
 - There is no exclude register for parameter names and none is added. A position
   that genuinely cannot carry the Rails name is a `pnpm tasks block` naming the
   language shortcoming.
-- actiondispatch reads 0 rows, and enrols in the gate in this PR: add `"actiondispatch"` to
+- actioncontroller reads 0 rows, and enrols in the gate in this PR: add `"actioncontroller"` to
   `GATED_PACKAGES` in `scripts/api-compare/param-name-mark.ts` and seed its mark
   in `param-name-mark.json` at `{ "total": 0, "byFile": {} }`.
   `pnpm parity:api:params` then reports it OK.

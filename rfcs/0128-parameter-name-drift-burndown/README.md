@@ -1,5 +1,5 @@
 ---
-rfc: "0000-parameter-name-drift-burndown"
+rfc: "0128-parameter-name-drift-burndown"
 title: "Parameter-name drift: converge the 624 renamed parameters the new check found, then gate each package"
 status: active
 created: 2026-08-28

@@ -1,15 +1,15 @@
 ---
-title: "Parameter-name drift: activerecord postgresql, mysql and sqlite3 adapters"
+title: "Parameter-name drift: activemodel"
 status: draft
 updated: 2026-08-28
-rfc: "0000-parameter-name-drift-burndown"
+rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:
-  - activerecord
+  - activemodel
 deps:
   - parity-api-compares-parameter-names-beside-arity
 deps-rfc: []
-est-loc: 228
+est-loc: 164
 priority: 2
 pr: null
 claim: null
@@ -21,7 +21,7 @@ closed-reason: null
 ## Context
 
 The parameter-name check landed by `parity-api-compares-parameter-names-beside-arity`
-(RFC 0126) reports **57 positions over 49 matched pairs** in the CONCRETE adapters (`connection_adapters/{postgresql,mysql,sqlite3}*`)
+(RFC 0126) reports **41 positions over 38 matched pairs** in `activemodel`
 where the TS parameter is not the Rails identifier camelCased. CLAUDE.md makes
 that spelling the rule ("a local or parameter keeps the Rails identifier,
 camelCased — Ruby `stmt` is `stmt`, not `statement`"); it went unmeasured until
@@ -29,35 +29,35 @@ this check, so the drift accumulated silently while arity read 100%.
 
 Rows by file:
 
-- `connection_adapters/postgresql_adapter.rb` — 15
-- `connection_adapters/postgresql/schema_statements.rb` — 10
-- `connection_adapters/sqlite3_adapter.rb` — 6
-- `connection_adapters/mysql/schema_statements.rb` — 4
-- `connection_adapters/sqlite3/schema_statements.rb` — 4
-- `connection_adapters/postgresql/column.rb` — 3
-- `connection_adapters/sqlite3/column.rb` — 3
-- `connection_adapters/postgresql/oid/point.rb` — 2
-- `connection_adapters/postgresql/quoting.rb` — 2
-- `connection_adapters/postgresql/utils.rb` — 2
-- …and 5 further files with fewer rows each.
+- `dirty.rb` — 10
+- `type/date_time.rb` — 3
+- `type/registry.rb` — 3
+- `secure_password.rb` — 2
+- `type/date.rb` — 2
+- `type/value.rb` — 2
+- `validations/numericality.rb` — 2
+- `validations/with.rb` — 2
+- `attribute_methods.rb` — 1
+- `attribute_mutation_tracker.rb` — 1
+- …and 13 further files with fewer rows each.
 
 A sample, in the artifact's own format (`output/param-name-mismatches.json`):
 
 ```text
-  connection_adapters/mysql/schema_creation.rb#add_table_options! @0  `createSql` → `sql`
-  connection_adapters/mysql/schema_statements.rb#create_table @0  `tableName` → `name`
-  connection_adapters/mysql/schema_statements.rb#create_table @1  `options` → `optionsOrFn`
-  connection_adapters/mysql/schema_statements.rb#extract_schema_qualified_name @0  `string` → `str`
-  connection_adapters/mysql/schema_statements.rb#remove_foreign_key @1  `toTable` → `toTableOrOptions`
-  connection_adapters/postgresql/column.rb#initialize @1  `serial` → `defaultValue`
-  connection_adapters/postgresql/column.rb#initialize @2  `identity` → `sqlTypeMetadata`
-  connection_adapters/postgresql/column.rb#initialize @3  `generated` → `null_`
+  attribute/user_provided_default.rb#marshal_load @0  `values` → `data`
+  attribute_methods.rb#attribute_alias? @0  `newName` → `name`
+  attribute_mutation_tracker.rb#clone_value @0  `attrName` → `value`
+  attribute_set.rb#reverse_merge! @0  `targetAttributes` → `target`
+  attribute_set/builder.rb#marshal_load @0  `values` → `data`
+  attribute_set/yaml_encoder.rb#decode @0  `coder` → `input`
+  dirty.rb#attribute_change @0  `attrName` → `name`
+  dirty.rb#attribute_changed? @0  `attrName` → `name`
 ```
 
 ## Verifying
 
 ```bash
-API_COMPARE_FORCE=1 pnpm parity:api --package activerecord --params
+API_COMPARE_FORCE=1 pnpm parity:api --package activemodel --params
 ```
 
 lists every remaining position as `file:method  @position  ruby \`x\` ts \`y\``.
@@ -79,3 +79,7 @@ left alone here.
 - There is no exclude register for parameter names and none is added. A position
   that genuinely cannot carry the Rails name is a `pnpm tasks block` naming the
   language shortcoming.
+- activemodel reads 0 rows, and enrols in the gate in this PR: add `"activemodel"` to
+  `GATED_PACKAGES` in `scripts/api-compare/param-name-mark.ts` and seed its mark
+  in `param-name-mark.json` at `{ "total": 0, "byFile": {} }`.
+  `pnpm parity:api:params` then reports it OK.

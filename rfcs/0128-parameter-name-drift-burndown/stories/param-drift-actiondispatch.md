@@ -1,16 +1,16 @@
 ---
-title: "Parameter-name drift: activerecord base and attribute methods"
+title: "Parameter-name drift: actiondispatch"
 status: draft
 updated: 2026-08-28
-rfc: "0000-parameter-name-drift-burndown"
+rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:
-  - activerecord
+  - actiondispatch
 deps:
   - parity-api-compares-parameter-names-beside-arity
 deps-rfc: []
-est-loc: 220
-priority: 2
+est-loc: 336
+priority: 3
 pr: null
 claim: null
 assignee: null
@@ -21,7 +21,7 @@ closed-reason: null
 ## Context
 
 The parameter-name check landed by `parity-api-compares-parameter-names-beside-arity`
-(RFC 0126) reports **55 positions over 54 matched pairs** in `base.rb`, `attribute_methods**` and the persistence/schema core
+(RFC 0126) reports **84 positions over 79 matched pairs** in `actiondispatch`
 where the TS parameter is not the Rails identifier camelCased. CLAUDE.md makes
 that spelling the rule ("a local or parameter keeps the Rails identifier,
 camelCased — Ruby `stmt` is `stmt`, not `statement`"); it went unmeasured until
@@ -29,35 +29,35 @@ this check, so the drift accumulated silently while arity read 100%.
 
 Rows by file:
 
-- `base.rb` — 16
-- `attribute_methods.rb` — 14
-- `attribute_methods/dirty.rb` — 8
-- `persistence.rb` — 6
-- `store.rb` — 3
-- `core.rb` — 2
-- `readonly_attributes.rb` — 2
-- `attribute_methods/primary_key.rb` — 1
-- `attribute_methods/read.rb` — 1
-- `attribute_methods/write.rb` — 1
-- …and 1 further files with fewer rows each.
+- `routing/mapper.rb` — 10
+- `routing/route_set.rb` — 9
+- `http/url.rb` — 6
+- `middleware/debug_exceptions.rb` — 6
+- `middleware/stack.rb` — 6
+- `http/content_security_policy.rb` — 5
+- `http/headers.rb` — 4
+- `http/mime_type.rb` — 4
+- `http/request.rb` — 4
+- `http/response.rb` — 3
+- …and 16 further files with fewer rows each.
 
 A sample, in the artifact's own format (`output/param-name-mismatches.json`):
 
 ```text
-  attribute_methods.rb#_create_record @0  `attributeNames` → `block`
-  attribute_methods.rb#_update_record @0  `attributeNames` → `block`
-  attribute_methods.rb#attribute_before_last_save @0  `attrName` → `attr`
-  attribute_methods.rb#attribute_change_to_be_saved @0  `attrName` → `attr`
-  attribute_methods.rb#attribute_for_inspect @0  `attrName` → `attr`
-  attribute_methods.rb#attribute_in_database @0  `attrName` → `attr`
-  attribute_methods.rb#attribute_present? @0  `attrName` → `name`
-  attribute_methods.rb#format_for_inspect @0  `name` → `attr`
+  http/content_disposition.rb#percent_escape @0  `string` → `str`
+  http/content_security_policy.rb#build @0  `context` → `request`
+  http/content_security_policy.rb#plugin_types @0  `types` → `sources`
+  http/content_security_policy.rb#report_uri @0  `uri` → `sources`
+  http/content_security_policy.rb#require_sri_for @0  `types` → `sources`
+  http/content_security_policy.rb#sandbox @0  `values` → `sources`
+  http/headers.rb#fetch @1  `default` → `args`
+  http/headers.rb#initialize @0  `request` → `env`
 ```
 
 ## Verifying
 
 ```bash
-API_COMPARE_FORCE=1 pnpm parity:api --package activerecord --params
+API_COMPARE_FORCE=1 pnpm parity:api --package actiondispatch --params
 ```
 
 lists every remaining position as `file:method  @position  ruby \`x\` ts \`y\``.
@@ -79,3 +79,7 @@ left alone here.
 - There is no exclude register for parameter names and none is added. A position
   that genuinely cannot carry the Rails name is a `pnpm tasks block` naming the
   language shortcoming.
+- actiondispatch reads 0 rows, and enrols in the gate in this PR: add `"actiondispatch"` to
+  `GATED_PACKAGES` in `scripts/api-compare/param-name-mark.ts` and seed its mark
+  in `param-name-mark.json` at `{ "total": 0, "byFile": {} }`.
+  `pnpm parity:api:params` then reports it OK.

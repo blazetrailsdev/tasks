@@ -1,16 +1,16 @@
 ---
-title: "Parameter-name drift: actionview"
+title: "Parameter-name drift: activerecord relation and scoping"
 status: draft
 updated: 2026-08-28
-rfc: "0000-parameter-name-drift-burndown"
+rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:
-  - actionview
+  - activerecord
 deps:
   - parity-api-compares-parameter-names-beside-arity
 deps-rfc: []
-est-loc: 60
-priority: 3
+est-loc: 232
+priority: 2
 pr: null
 claim: null
 assignee: null
@@ -21,7 +21,7 @@ closed-reason: null
 ## Context
 
 The parameter-name check landed by `parity-api-compares-parameter-names-beside-arity`
-(RFC 0126) reports **14 positions over 13 matched pairs** in `actionview`
+(RFC 0126) reports **58 positions over 52 matched pairs** in `relation.rb`, `relation/**` and `scoping**`
 where the TS parameter is not the Rails identifier camelCased. CLAUDE.md makes
 that spelling the rule ("a local or parameter keeps the Rails identifier,
 camelCased — Ruby `stmt` is `stmt`, not `statement`"); it went unmeasured until
@@ -29,32 +29,32 @@ this check, so the drift accumulated silently while arity read 100%.
 
 Rows by file:
 
-- `helpers/text_helper.rb` — 4
-- `helpers/tag_helper.rb` — 2
-- `renderer/object_renderer.rb` — 2
-- `renderer/template_renderer.rb` — 2
-- `buffers.rb` — 1
-- `helpers/javascript_helper.rb` — 1
-- `helpers/number_helper.rb` — 1
-- `template/handlers.rb` — 1
+- `relation.rb` — 20
+- `relation/query_methods.rb` — 12
+- `scoping.rb` — 12
+- `relation/calculations.rb` — 6
+- `relation/delegation.rb` — 3
+- `querying.rb` — 2
+- `relation/finder_methods.rb` — 2
+- `relation/predicate_builder.rb` — 1
 
 A sample, in the artifact's own format (`output/param-name-mismatches.json`):
 
 ```text
-  buffers.rb#capture @0  `args` → `fn`
-  helpers/javascript_helper.rb#javascript_tag @0  `contentOrOptionsWithBlock` → `contentOrOptions`
-  helpers/number_helper.rb#valid_float? @0  `number` → `n`
-  helpers/tag_helper.rb#attributes @0  `attributes` → `attrs`
-  helpers/tag_helper.rb#content_tag @1  `contentOrOptionsWithBlock` → `contentOrOptions`
-  helpers/text_helper.rb#concat @0  `string` → `value`
-  helpers/text_helper.rb#cut_excerpt_part @0  `partPosition` → `position`
-  helpers/text_helper.rb#safe_concat @0  `string` → `value`
+  querying.rb#async_find_by_sql @3  `allowRetry` → `block`
+  querying.rb#find_by_sql @3  `allowRetry` → `block`
+  relation.rb#any? @0  `args` → `pattern`
+  relation.rb#build @0  `attributes` → `attrs`
+  relation.rb#create @0  `attributes` → `attrs`
+  relation.rb#create! @0  `attributes` → `attrs`
+  relation.rb#delete @0  `idOrArray` → `id`
+  relation.rb#delete_by @0  `args` → `conditions`
 ```
 
 ## Verifying
 
 ```bash
-API_COMPARE_FORCE=1 pnpm parity:api --package actionview --params
+API_COMPARE_FORCE=1 pnpm parity:api --package activerecord --params
 ```
 
 lists every remaining position as `file:method  @position  ruby \`x\` ts \`y\``.
@@ -76,7 +76,3 @@ left alone here.
 - There is no exclude register for parameter names and none is added. A position
   that genuinely cannot carry the Rails name is a `pnpm tasks block` naming the
   language shortcoming.
-- actionview reads 0 rows, and enrols in the gate in this PR: add `"actionview"` to
-  `GATED_PACKAGES` in `scripts/api-compare/param-name-mark.ts` and seed its mark
-  in `param-name-mark.json` at `{ "total": 0, "byFile": {} }`.
-  `pnpm parity:api:params` then reports it OK.

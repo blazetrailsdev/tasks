@@ -1,15 +1,15 @@
 ---
-title: "Parameter-name drift: activerecord associations"
+title: "Parameter-name drift: actionview"
 status: draft
 updated: 2026-08-28
-rfc: "0000-parameter-name-drift-burndown"
+rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:
-  - activerecord
+  - actionview
 deps:
   - parity-api-compares-parameter-names-beside-arity
 deps-rfc: []
-est-loc: 84
+est-loc: 60
 priority: 3
 pr: null
 claim: null
@@ -21,7 +21,7 @@ closed-reason: null
 ## Context
 
 The parameter-name check landed by `parity-api-compares-parameter-names-beside-arity`
-(RFC 0126) reports **21 positions over 19 matched pairs** in `associations/**`
+(RFC 0126) reports **14 positions over 13 matched pairs** in `actionview`
 where the TS parameter is not the Rails identifier camelCased. CLAUDE.md makes
 that spelling the rule ("a local or parameter keeps the Rails identifier,
 camelCased — Ruby `stmt` is `stmt`, not `statement`"); it went unmeasured until
@@ -29,35 +29,32 @@ this check, so the drift accumulated silently while arity read 100%.
 
 Rows by file:
 
-- `associations/collection_proxy.rb` — 6
-- `associations/collection_association.rb` — 2
-- `associations/errors.rb` — 2
-- `associations/has_many_through_association.rb` — 2
-- `associations/has_one_association.rb` — 2
-- `associations.rb` — 1
-- `associations/association_scope.rb` — 1
-- `associations/belongs_to_association.rb` — 1
-- `associations/builder/belongs_to.rb` — 1
-- `associations/join_dependency/join_part.rb` — 1
-- …and 2 further files with fewer rows each.
+- `helpers/text_helper.rb` — 4
+- `helpers/tag_helper.rb` — 2
+- `renderer/object_renderer.rb` — 2
+- `renderer/template_renderer.rb` — 2
+- `buffers.rb` — 1
+- `helpers/javascript_helper.rb` — 1
+- `helpers/number_helper.rb` — 1
+- `template/handlers.rb` — 1
 
 A sample, in the artifact's own format (`output/param-name-mismatches.json`):
 
 ```text
-  associations.rb#association_cached? @0  `name` → `assocName`
-  associations/association_scope.rb#eval_scope @1  `scope` → `scopeFn`
-  associations/belongs_to_association.rb#update_counters_via_scope @1  `foreignKey` → `foreignKeyValues`
-  associations/builder/belongs_to.rb#touch_record @0  `o` → `record`
-  associations/collection_association.rb#add_to_target @2  `replace` → `save`
-  associations/collection_association.rb#replace_on_target @3  `inversing` → `block`
-  associations/collection_proxy.rb#build @0  `attributes` → `attrs`
-  associations/collection_proxy.rb#create @0  `attributes` → `attrs`
+  buffers.rb#capture @0  `args` → `fn`
+  helpers/javascript_helper.rb#javascript_tag @0  `contentOrOptionsWithBlock` → `contentOrOptions`
+  helpers/number_helper.rb#valid_float? @0  `number` → `n`
+  helpers/tag_helper.rb#attributes @0  `attributes` → `attrs`
+  helpers/tag_helper.rb#content_tag @1  `contentOrOptionsWithBlock` → `contentOrOptions`
+  helpers/text_helper.rb#concat @0  `string` → `value`
+  helpers/text_helper.rb#cut_excerpt_part @0  `partPosition` → `position`
+  helpers/text_helper.rb#safe_concat @0  `string` → `value`
 ```
 
 ## Verifying
 
 ```bash
-API_COMPARE_FORCE=1 pnpm parity:api --package activerecord --params
+API_COMPARE_FORCE=1 pnpm parity:api --package actionview --params
 ```
 
 lists every remaining position as `file:method  @position  ruby \`x\` ts \`y\``.
@@ -79,3 +76,7 @@ left alone here.
 - There is no exclude register for parameter names and none is added. A position
   that genuinely cannot carry the Rails name is a `pnpm tasks block` naming the
   language shortcoming.
+- actionview reads 0 rows, and enrols in the gate in this PR: add `"actionview"` to
+  `GATED_PACKAGES` in `scripts/api-compare/param-name-mark.ts` and seed its mark
+  in `param-name-mark.json` at `{ "total": 0, "byFile": {} }`.
+  `pnpm parity:api:params` then reports it OK.
