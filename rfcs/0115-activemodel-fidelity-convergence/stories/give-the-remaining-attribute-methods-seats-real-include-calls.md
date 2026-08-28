@@ -19,8 +19,8 @@ closed-reason: null
 ## Context
 
 Surfaced while closing `order-the-attribute-methods-includes-as-rails-does`
-(PR #7157), which converged the *order* of the attribute-methods include spine
-in `packages/activerecord/src/base.ts` but deliberately left the *membership*
+(PR #7157), which converged the _order_ of the attribute-methods include spine
+in `packages/activerecord/src/base.ts` but deliberately left the _membership_
 alone (that story scoped itself to "the ordered spine, not relocating every
 member").
 
