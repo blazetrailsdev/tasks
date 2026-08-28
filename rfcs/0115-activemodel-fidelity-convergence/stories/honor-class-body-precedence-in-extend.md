@@ -1,6 +1,6 @@
 ---
 title: "Make extend() honor Ruby's class-body-over-ClassMethods precedence"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

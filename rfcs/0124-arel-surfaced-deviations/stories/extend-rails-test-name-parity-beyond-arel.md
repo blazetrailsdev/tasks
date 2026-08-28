@@ -1,6 +1,6 @@
 ---
 title: "lint: enroll a second package in the rails-test-name-parity ratchet"
-status: claimed
+status: in-progress
 updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 7155
 claim: "2026-08-28T11:31:08Z"
 assignee: "arel-dot-test-drops-define-method-cases-and-namespaced-labels"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Bodyless exported declarations outrank real bodies in call-parity pairing, silently retiring baselined rows"
-status: claimed
+status: done
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: null
+pr: 7154
 claim: "2026-08-28T11:35:55Z"
 assignee: "api-compare-bodyless-declaration-outranks-real-body"
 blocked-by: null

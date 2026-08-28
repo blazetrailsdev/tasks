@@ -1,6 +1,6 @@
 ---
 title: "associationInstanceGet drops the hasCachedData gate for Rails' bare @association_cache read"
-status: claimed
+status: in-progress
 updated: 2026-08-28
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 7153
 claim: "2026-08-28T11:42:16Z"
 assignee: "adapter-name-getter-conflates-rails-adapter-name-with-type-registry-key"
 blocked-by: null

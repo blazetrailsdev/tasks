@@ -1,6 +1,6 @@
 ---
 title: "bind_parameter_test to_sql_key is replaced by a notification-capture helper"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0077-quoting-binds-fidelity"
 cluster: null

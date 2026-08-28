@@ -1,6 +1,6 @@
 ---
 title: "arel: the 9 node-slot/registry guards Rails' bodies have no raise for"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null

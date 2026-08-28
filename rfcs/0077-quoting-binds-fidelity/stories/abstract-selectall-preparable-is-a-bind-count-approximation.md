@@ -1,6 +1,6 @@
 ---
 title: "select_all's preparable falls back to a bind count where Rails reads Arel's collector flag"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0077-quoting-binds-fidelity"
 cluster: null

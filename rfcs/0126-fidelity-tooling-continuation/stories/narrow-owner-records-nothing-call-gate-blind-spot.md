@@ -1,6 +1,6 @@
 ---
 title: "ownerRecordsNothing hides 68 measured pairs from the call gate"
-status: ready
+status: in-progress
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 7156
+claim: "2026-08-28T12:29:26Z"
+assignee: "narrow-owner-records-nothing-call-gate-blind-spot"
 blocked-by: null
 closed-reason: null
 ---
