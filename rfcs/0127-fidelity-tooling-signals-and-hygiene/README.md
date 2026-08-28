@@ -40,7 +40,8 @@ everything else: measurement dimensions that do not exist yet, guards against
 failure modes that have not fired, ratchet/reseed/report mechanics, baseline
 and register hygiene, CI-cost and ergonomics work, and docs.
 
-Carried in at creation: **42 stories, 4,820 est-LOC** (5 stories unsized).
+Carried in at creation, less one story returned to 0126 on 2026-08-27:
+**41 stories, 4,820 est-LOC** (4 stories unsized).
 
 ## Charter
 
@@ -54,7 +55,7 @@ green ratchet that verified nothing — the story is this RFC's.
 Concretely, the shapes that land here:
 
 - **New measurement dimensions and detectors.** Visibility parity, raise-message
-  parity, parameter-name parity, an arity ratchet, `Mirrors:` anchor integrity,
+  parity, an arity ratchet, `Mirrors:` anchor integrity,
   dead-shim / dead-override / unwired-override detection, a deliberate-gate
   deviation marker. Each adds a signal the toolchain does not emit today; none
   changes what an existing signal says.
@@ -107,7 +108,7 @@ queue, on this order:
    receipt-shape validator, which is what keeps the `CONVERGEABLE` ledger
    honest.
 2. **New dimensions that CLAUDE.md already mandates and nothing measures**
-   (visibility, raise-message, parameter-name parity; the arity ratchet).
+   (visibility, raise-message; the arity ratchet).
 3. **Guards whose failure mode is silent** (manifest truncation, Ruby-manifest
    staleness, the worker-dispatch TDZ).
 4. Ratchet mechanics, hygiene, and ergonomics, roughly by est-LOC ascending.
@@ -137,3 +138,5 @@ same drift caveats as 0126 apply — **re-derive numeric claims before starting*
   est-LOC carried here, 44 / 5,415 kept in 0126.
 - 2026-08-27: parked as `draft` — the lower-priority half stays out of the ready
   queue until RFC 0126 (measurement correctness) has burnt down.
+- 2026-08-27: `parity-api-compares-parameter-names-beside-arity` moved to RFC
+  0126 at the owner's direction; 41 stories remain.

@@ -2,13 +2,13 @@
 title: "parity-api-compares-parameter-names-beside-arity"
 status: ready
 updated: 2026-08-28
-rfc: "0127-fidelity-tooling-signals-and-hygiene"
+rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 7
+priority: 2
 pr: null
 claim: null
 assignee: null

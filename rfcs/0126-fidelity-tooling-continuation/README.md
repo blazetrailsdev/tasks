@@ -40,7 +40,8 @@ This RFC keeps the higher-priority half: every story whose deliverable changes
 a verdict the tooling emits on today's `main`. The sibling
 `0127-fidelity-tooling-signals-and-hygiene` takes the rest.
 
-Carried at the split: **44 stories, 5,415 est-LOC** (2 unsized), including the
+Carried at the split, plus one story returned from 0127 on 2026-08-27:
+**45 stories, 5,415 est-LOC** (3 unsized), including the
 one in-flight story (`test-compare-blind-to-define-method-loop-tests`).
 
 ## Charter
@@ -61,7 +62,8 @@ The shapes that land here, by the verdict they correct:
   `resolveParent` ties, nested namespaces, reopened modules, transitive
   re-exports), the coverage denominator (nested classes, pinned operators,
   `arel.rb` outside `libPath`, `date/conversions.rb` mis-mapped,
-  declaration-only credit), and visibility stamped from `defineModule`.
+  declaration-only credit, parameter names beside arity), and visibility
+  stamped from `defineModule`.
 - **The Ruby extractor's view of what Rails defines and calls** — metaprogrammed
   members, named-capture locals, `raise Class, msg`, hash and option keys.
 - **`parity:api:extra` scoring** — stdlib `Comparable`, symbol-keyed
@@ -91,7 +93,7 @@ Package-agnostic: the fix lives in `scripts/api-compare/**`,
 
 - **Tooling work that changes no current verdict** —
   `0127-fidelity-tooling-signals-and-hygiene`: new measurement dimensions
-  (visibility gate, raise-message signal, parameter-name parity, arity
+  (visibility gate, raise-message signal, arity
   ratchet, `Mirrors:` integrity, the `detect-*` family, the deliberate-gate
   marker), guards against latent failures (manifest truncation and staleness,
   the worker-dispatch TDZ, extractor-schema fields, cache-key wiring tests, the
@@ -123,7 +125,8 @@ whole RFC sorts ahead of it in the global ready queue — on this order:
    bodyless interface or a two-thirds-missing test file, and a ratchet verdict
    replayed from another worktree.
 2. **Wrong headline numbers** — the coverage denominator, pinned operators,
-   `arel.rb`, metaprogrammed members, the zeroed assertion marks.
+   `arel.rb`, metaprogrammed members, the zeroed assertion marks, and an
+   arity figure that reads 706/706 while 16 parameters are renamed.
 3. **False positives that cost review rounds or force receipts** — named-capture
    locals, `raise Class, msg`, fs-adapter spellings, test-helper population,
    value-equivalent constants, the `_` prefix.
@@ -166,3 +169,7 @@ re-derived before work starts:
 - 2026-08-27: RFC-level `priority` set to 3. Story-level tiers 1–5 are
   unchanged and are what actually orders the ready queue, since every story
   carries an explicit `priority` (`story.priority ?? rfc.priority`).
+- 2026-08-27: `parity-api-compares-parameter-names-beside-arity` returned from
+  RFC 0127 at the owner's direction (p2). Its arity twin already scores
+  706/706 on arel while two hand audits found 16 renamed parameters, so the
+  figure it sits beside overstates fidelity today.
