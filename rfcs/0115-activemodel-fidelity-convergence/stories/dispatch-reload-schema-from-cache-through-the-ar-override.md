@@ -1,6 +1,6 @@
 ---
 title: "Dispatch reload_schema_from_cache through the ActiveRecord::Attributes override"
-status: claimed
+status: in-progress
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7176
 claim: "2026-08-28T17:49:38Z"
 assignee: "assert-boolean-attribute-tests-through-the-generated-predicate"
 blocked-by: null
