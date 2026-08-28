@@ -1,6 +1,6 @@
 ---
 title: "no-freeform-comments drops the story id off CONVERGEABLE receipts"
-status: claimed
+status: ready
 updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: "2026-08-28T01:46:55Z"
-assignee: "arel-crud-interface-holds-no-bodies"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

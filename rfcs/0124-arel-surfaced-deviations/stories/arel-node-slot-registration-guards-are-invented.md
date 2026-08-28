@@ -1,6 +1,6 @@
 ---
 title: "arel: the 9 node-slot/registry guards Rails' bodies have no raise for"
-status: claimed
+status: in-progress
 updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 7148
 claim: "2026-08-28T01:46:55Z"
 assignee: "arel-crud-interface-holds-no-bodies"
 blocked-by: null
