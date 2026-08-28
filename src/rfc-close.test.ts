@@ -108,3 +108,34 @@ describe("rfc auto-close", () => {
     expect(await rfcStatus("0061-ci-failures")).toBe("active");
   });
 });
+
+/**
+ * Saving a record runs Rails' timestamp touch, which claims `updated_on` as
+ * well as `updated_at`. The verbs write date-only strings there (it is
+ * markdown's `updated:` field), and a full instant in that column makes
+ * readmodel's isoMidnight produce an Invalid Date — `next-bundle` then throws
+ * "Invalid time value" for every caller and the spawn loop stops. This is what
+ * happened the day the verbs stopped using updateAll.
+ */
+describe("date-only updated_on survives a record save", () => {
+  const dateOnly = /^\d{4}-\d{2}-\d{2}$/;
+
+  it("keeps a story's updated_on date-only when the verb re-stamps today", async () => {
+    // The trap needs the value to be UNCHANGED by the save: the touch skips a
+    // column the save is already changing, so only a re-stamp exposes it.
+    const today = new Date().toISOString().slice(0, 10);
+    await Story.where({ id: "s1" }).updateAll({ updated_on: today });
+
+    await markTracking(["s1"], "done", 42);
+
+    const s = await Story.findBy({ id: "s1" });
+    expect(String(s!.updated_on)).toMatch(dateOnly);
+  });
+
+  it("keeps an RFC's updated_on date-only when it auto-closes", async () => {
+    await markTracking(["s1", "s2"], "done", 42);
+    const rfc = await Rfc.findBy({ id: "0001-r" });
+    expect(rfc!.status).toBe("closed");
+    expect(String(rfc!.updated_on)).toMatch(dateOnly);
+  });
+});

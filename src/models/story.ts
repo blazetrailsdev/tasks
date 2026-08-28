@@ -67,6 +67,27 @@ export class Story extends Base {
   declare isReady: () => boolean;
 
   static {
+    // `updated_on` is a DATE-ONLY string ("2026-08-28"), markdown's `updated:`
+    // field — but Rails' update-timestamp columns are BOTH `updated_at` and
+    // `updated_on`, so a save stamps it with a full instant. It only skips a
+    // column the save is already changing, and a verb writing today's date
+    // onto a story already stamped today changes nothing — so the guard does
+    // not fire and the column comes back as "2026-08-28T13:54:05.114Z".
+    // readmodel's isoMidnight then builds "<that>T00:00:00.000Z", which is an
+    // Invalid Date, and `next-bundle` dies for every caller. Restrict the
+    // touch to the real timestamp column. (Assigning the resolved-columns
+    // cache is the lever the library reads; the public static of the same name
+    // is not consulted by its own internals.)
+    (
+      this as unknown as {
+        _timestampAttributesForCreateInModel?: string[];
+        _timestampAttributesForUpdateInModel?: string[];
+      }
+    )._timestampAttributesForCreateInModel = ["created_at", "updated_at"];
+    (
+      this as unknown as { _timestampAttributesForUpdateInModel?: string[] }
+    )._timestampAttributesForUpdateInModel = ["updated_at"];
+
     this.belongsTo("rfc", { foreignKey: "rfc_id" });
     this.hasMany("storyDeps", { foreignKey: "story_id", inverseOf: "story" });
     this.hasMany("deps", { through: "storyDeps", source: "dependsOn" });
