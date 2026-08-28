@@ -42,7 +42,7 @@ invented block left in the package after the 2026-08-28 re-audit — a Rails
 developer opening `to-sql.ts` finds 119 `visit_*` bodies they recognise,
 followed by 167 lines Rails does not have.
 
-The derivation already exists as the *fallback*: `visitor.ts:67-79
+The derivation already exists as the _fallback_: `visitor.ts:67-79
 dispatchMethod` tries the table, then `rubyClassName(object)`, then
 `visit${rubyClass}`; and `resolveDispatch` (`visitor.ts:85-101`) already walks
 the prototype chain and caches, which is Rails' `rescue NoMethodError …
@@ -68,7 +68,7 @@ reason to keep 167 lines.
 - `registerDispatch` is deleted from `to-sql.ts`, `dot.ts`, `postgresql.ts`
   (and `mysql.ts` / `sqlite.ts` if present), along with the
   prototype-method guard; `Visitor#visit`'s miss path is the prototype walk
-  + `TypeError "Cannot visit …"` (visitor.rb:39), nothing else.
+  - `TypeError "Cannot visit …"` (visitor.rb:39), nothing else.
 - The minification boundary is written down once, as a `PERMANENT` receipt
   on `dispatchCache` or a line in the package README — not per visitor.
 - `pnpm parity:api --package arel` 957/957; `parity:api:extra:gate` no worse

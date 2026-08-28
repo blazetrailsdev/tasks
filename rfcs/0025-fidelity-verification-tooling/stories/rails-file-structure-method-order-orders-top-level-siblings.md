@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-`blazetrails/rails-file-structure-method-order` orders the *members* of a
+`blazetrails/rails-file-structure-method-order` orders the _members_ of a
 class against the Rails source (manifest `eslint/rails-file-structure-method-order.json`,
 71 arel files, verified clean on 2026-08-28). It does not order the
 top-level declarations of a file against each other, so a file that holds
