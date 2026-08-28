@@ -1,5 +1,5 @@
 ---
-title: "Drop serialize's \"YAML\" string coder spelling so callers pass a constant"
+title: 'Drop serialize''s "YAML" string coder spelling so callers pass a constant'
 status: draft
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
