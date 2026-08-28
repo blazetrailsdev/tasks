@@ -350,9 +350,76 @@ async function ingestChunk(paths: string[], tasksDir: string, result: IngestResu
   });
 }
 
+/**
+ * An RFC whose README is gone.
+ *
+ * Ingest reaps vanished STORY files but silently ignored vanished RFCs, and
+ * every RFC leaves exactly one behind: `finalize-rfc.mjs` renames
+ * `0000-<slug>` to `NNNN-<slug>` at merge, so the placeholder's README
+ * disappears and the numbered one appears. Ingest created the new row and left
+ * the old — two identical `active` RFCs 49 seconds apart, one of them pointing
+ * at a directory that does not exist, both listed on the site.
+ *
+ * A placeholder is a RENAME, not an abandonment: hand its history to the
+ * successor (same slug, different number) and drop the row, because the
+ * identity itself was always temporary.
+ *
+ * Anything else is CLOSED, never deleted — the same rule stories follow, and
+ * for the same reason: the row carries history that outlives the file, and a
+ * numbered RFC whose directory vanished is a human decision worth preserving
+ * rather than a lifecycle event.
+ */
+async function reapVanishedRfc(rfcId: string): Promise<void> {
+  const rfc = await Rfc.findBy({ id: rfcId });
+  if (!rfc) return;
+
+  const placeholder = /^(?:0000|draft)-(.+)$/.exec(rfcId);
+  if (placeholder) {
+    const slug = placeholder[1];
+    // The successor carries the same slug under its assigned number. Match on
+    // the slug alone; the number is precisely what changed.
+    const candidates = (await Rfc.all().toArray()).filter(
+      (r) => r.id !== rfcId && r.id.endsWith(`-${slug}`) && /^\d{4}-/.test(r.id),
+    );
+    if (candidates.length === 1) {
+      const to = candidates[0].id;
+      // Repoint rather than delete: these are the birth events of stories that
+      // now live under the numbered RFC, and they are the only record of when
+      // that work was created.
+      await Event.where({ rfc_id: rfcId }).updateAll({ rfc_id: to });
+      await Story.where({ rfc_id: rfcId }).updateAll({ rfc_id: to });
+      await StoryRfcDep.where({ rfc_id: rfcId }).updateAll({ rfc_id: to });
+      await rfc.destroy();
+      console.log(
+        `ingest: ${rfcId} was finalized as ${to} — history repointed, placeholder row dropped`,
+      );
+      return;
+    }
+    // No single successor (finalized to a slug that also changed, or two
+    // matches): fall through and close it, so nothing is lost.
+  }
+
+  if (rfc.status !== "closed") {
+    await rfc.update({ status: "closed", updated_on: new Date().toISOString().slice(0, 10) });
+    await Event.create({
+      at: new Date().toISOString(),
+      verb: "rfc-close",
+      story_id: null,
+      rfc_id: rfcId,
+      pr: null,
+      actor: "ingest",
+      detail: JSON.stringify({ note: "RFC directory removed from the repo" }),
+    });
+    console.log(`ingest: ${rfcId}'s README is gone — closed (row kept for its history)`);
+  }
+}
+
 async function ingestRfc(tasksDir: string, rel: string, rfcId: string): Promise<void> {
   const abs = join(tasksDir, rel);
-  if (!existsSync(abs)) return;
+  if (!existsSync(abs)) {
+    await reapVanishedRfc(rfcId);
+    return;
+  }
   const parsed = parseFile(abs);
   if (!parsed) return;
   const fm = parsed.frontmatter;
@@ -395,3 +462,6 @@ async function ingestRfc(tasksDir: string, rel: string, rfcId: string): Promise<
     });
   }
 }
+
+/** Test seam for ingestRfc's vanished-README branch (see ingest-reap.test.ts). */
+export const ingestRfcForTest = ingestRfc;
