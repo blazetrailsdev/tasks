@@ -37,19 +37,19 @@ associations impl, each with `ignores: **/*.test.ts` on two of the blocks).
 Everything the last 25 commits actually commented into is **outside** it.
 Added comment lines by file over `git log -25`:
 
-| file | added comment lines | enrolled? |
-| --- | --- | --- |
-| `scripts/api-compare/compare.ts` | 182 | no |
-| `scripts/api-compare/param-names.ts` | 81 | no |
-| `packages/activerecord/src/attribute-methods/serialization.ts` | 75 | no |
-| `scripts/api-compare/cites.ts` | 64 | no |
-| `packages/activerecord/src/base.ts` | 59 | no |
-| `packages/activesupport/src/file-update-checker.ts` | 54 | no |
-| `scripts/parity/shared-cache.ts` | 45 | no |
-| `packages/activerecord/src/migration.ts` | 22 | no |
-| `packages/website/src/lib/frontiers/sql-js-adapter.ts` | 18 | no |
-| `packages/activerecord/src/attribute-methods/read.ts` | 11 | no |
-| `*.test.ts` under enrolled trees | many | explicitly `ignores`d |
+| file                                                           | added comment lines | enrolled?             |
+| -------------------------------------------------------------- | ------------------- | --------------------- |
+| `scripts/api-compare/compare.ts`                               | 182                 | no                    |
+| `scripts/api-compare/param-names.ts`                           | 81                  | no                    |
+| `packages/activerecord/src/attribute-methods/serialization.ts` | 75                  | no                    |
+| `scripts/api-compare/cites.ts`                                 | 64                  | no                    |
+| `packages/activerecord/src/base.ts`                            | 59                  | no                    |
+| `packages/activesupport/src/file-update-checker.ts`            | 54                  | no                    |
+| `scripts/parity/shared-cache.ts`                               | 45                  | no                    |
+| `packages/activerecord/src/migration.ts`                       | 22                  | no                    |
+| `packages/website/src/lib/frontiers/sql-js-adapter.ts`         | 18                  | no                    |
+| `packages/activerecord/src/attribute-methods/read.ts`          | 11                  | no                    |
+| `*.test.ts` under enrolled trees                               | many                | explicitly `ignores`d |
 
 Sample of what landed in `attribute-methods/serialization.ts` (#7176):
 
@@ -82,8 +82,8 @@ permanence token, keep tool directives, delete the rest, autofixably).
 `no-freeform-comments` stays the vehicle.
 
 The existing sweep story `enroll-remaining-packages-in-no-freeform-comments`
-(700 loc, RFC 0023, draft) is the *content* burndown and stays separate; this
-story is the *mechanism* flip and should shrink that story's remit to
+(700 loc, RFC 0023, draft) is the _content_ burndown and stays separate; this
+story is the _mechanism_ flip and should shrink that story's remit to
 "delete exclusion rows".
 
 ### 2. `parity:api:cites` (RFC 0121, #7165) contradicts the policy and is removed
@@ -120,31 +120,30 @@ qualified-basename discipline it enforced become dead conventions — but do not
 go rewrite existing receipt reasons in this PR. The reasons themselves are
 prose that the repo-wide flip will strip on its own schedule.
 
-
 ### Measured backlog (2026-08-28, `main` @ 9c3c95d82)
 
 Running the rule in `report` mode over `packages/*/src/**/*.ts` and
 `scripts/**/*.ts`: **3666 files scanned, 2317 with violations, 29665
 violations.** By tree:
 
-| violations | tree |
-| --- | --- |
-| 5524 | `scripts/test-compare/output/missing-activerecord-stubs.test.ts` |
-| 1862 | `packages/actionpack/src/action-dispatch` |
-| 997 | `packages/activerecord/src/associations` |
-| 859 | `packages/actionpack/src/action-controller` |
-| 771 | `packages/activesupport/src/core-ext` |
-| 730 | `scripts/test-compare/output/missing-activemodel-stubs.test.ts` |
-| 612 | `packages/activerecord/src/test-helpers` |
-| 565 | `scripts/test-compare/output/missing-arel-stubs.test.ts` |
-| 545 | `packages/date/src/date.ts` |
-| 444 | `packages/activerecord/src/encryption` |
-| 430 | `packages/activerecord/src/base.ts` |
-| 299 | `packages/activerecord/src/relation.ts` |
-| 264 | `scripts/api-compare/compare.ts` |
-| 263 | `packages/activesupport/src/cache` |
-| 261 | `packages/activerecord/src/connection-adapters` |
-| 228 | `scripts/tasks/cli.ts` |
+| violations | tree                                                             |
+| ---------- | ---------------------------------------------------------------- |
+| 5524       | `scripts/test-compare/output/missing-activerecord-stubs.test.ts` |
+| 1862       | `packages/actionpack/src/action-dispatch`                        |
+| 997        | `packages/activerecord/src/associations`                         |
+| 859        | `packages/actionpack/src/action-controller`                      |
+| 771        | `packages/activesupport/src/core-ext`                            |
+| 730        | `scripts/test-compare/output/missing-activemodel-stubs.test.ts`  |
+| 612        | `packages/activerecord/src/test-helpers`                         |
+| 565        | `scripts/test-compare/output/missing-arel-stubs.test.ts`         |
+| 545        | `packages/date/src/date.ts`                                      |
+| 444        | `packages/activerecord/src/encryption`                           |
+| 430        | `packages/activerecord/src/base.ts`                              |
+| 299        | `packages/activerecord/src/relation.ts`                          |
+| 264        | `scripts/api-compare/compare.ts`                                 |
+| 263        | `packages/activesupport/src/cache`                               |
+| 261        | `packages/activerecord/src/connection-adapters`                  |
+| 228        | `scripts/tasks/cli.ts`                                           |
 
 Note the top three: `scripts/test-compare/output/missing-*-stubs.test.ts` are
 **generated** files holding Rails test names verbatim. They are a permanent
