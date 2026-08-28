@@ -2,7 +2,7 @@
 title: "gate: a CONVERGEABLE receipt's story id is never checked against the tasks DB"
 status: draft
 updated: 2026-08-28
-rfc: "0124-arel-surfaced-deviations"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []

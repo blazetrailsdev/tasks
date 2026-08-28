@@ -1,8 +1,8 @@
 ---
-title: "rails-test-name-parity-rollout-globalid"
+title: "rails-test-name-parity-rollout-rack"
 status: draft
 updated: 2026-08-28
-rfc: "0124-arel-surfaced-deviations"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []
@@ -30,12 +30,12 @@ registrations that must stay in sync:
 Enrolled so far: `arel` (#7125/#7131), `date` (#7155), and `did-you-mean` +
 `i18n` (both seeded to nothing, since their `parity:test` extra counts were 0).
 
-`globalid` has 48 TS-only tests as of 2026-08-28, so it seeds to a real mark and then
+`rack` has 93 TS-only tests as of 2026-08-28, so it seeds to a real mark and then
 burns down.
 
 ## Acceptance criteria
 
-- `globalid` is added to all four registrations, and its mark is seeded with
+- `rack` is added to all four registrations, and its mark is seeded with
   `pnpm tsx scripts/tighten-rails-test-name-parity.ts --seed`.
 - Each TS-only test moves into the file's `.trails.test.ts` twin (the shape
   #7125 used for arel's 297), narrowing the mark with

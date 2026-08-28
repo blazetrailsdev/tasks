@@ -2,7 +2,7 @@
 title: "schema-creation-manual-dispatch-and-delegation"
 status: draft
 updated: 2026-08-28
-rfc: "0124-arel-surfaced-deviations"
+rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []

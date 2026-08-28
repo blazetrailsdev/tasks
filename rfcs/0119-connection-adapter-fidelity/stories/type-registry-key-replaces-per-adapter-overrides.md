@@ -2,7 +2,7 @@
 title: "type-registry-key-replaces-per-adapter-overrides"
 status: draft
 updated: 2026-08-28
-rfc: "0124-arel-surfaced-deviations"
+rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []

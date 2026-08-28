@@ -2,7 +2,7 @@
 title: "sync-reads-of-async-reflection-retire-with-rfc-0073"
 status: draft
 updated: 2026-08-28
-rfc: "0124-arel-surfaced-deviations"
+rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []

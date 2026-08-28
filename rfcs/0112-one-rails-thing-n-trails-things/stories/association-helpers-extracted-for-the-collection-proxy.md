@@ -2,7 +2,7 @@
 title: "association-helpers-extracted-for-the-collection-proxy"
 status: draft
 updated: 2026-08-28
-rfc: "0124-arel-surfaced-deviations"
+rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
 deps: []

@@ -2,7 +2,7 @@
 title: "sqlite3-and-mysql-bare-missing-rails-call-receipts"
 status: draft
 updated: 2026-08-28
-rfc: "0124-arel-surfaced-deviations"
+rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []
