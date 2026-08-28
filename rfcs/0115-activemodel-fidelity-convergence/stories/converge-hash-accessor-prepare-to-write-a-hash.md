@@ -27,7 +27,7 @@ def self.prepare(object, attribute)
 end
 ```
 
-— it writes an empty **Hash**. trails writes the *string* `"{}"` instead
+— it writes an empty **Hash**. trails writes the _string_ `"{}"` instead
 (`packages/activerecord/src/store.ts:182`), and then carries a
 `StringKeyedHashAccessor.prepare` override
 (`store.ts:243-252`) whose own comment says Rails has no such override and that
