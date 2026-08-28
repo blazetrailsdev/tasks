@@ -30,11 +30,11 @@ package holding one still scores against a Rails total that is too low.
 The reported loops, from the `pnpm parity:test` run that landed #7147:
 
 - activerecord (11) — `tasks/database_tasks_test.rb:276, :735, :1246, :1477,
-  :1510, :1651, :1668, :1716, :1769` (`ADAPTERS_TASKS.each do |k, v|` — a
+:1510, :1651, :1668, :1716, :1769` (`ADAPTERS_TASKS.each do |k, v|` — a
   constant hash, two block params), `locking_test.rb:570`,
   `relation/delegation_test.rb:22`
 - activesupport (14) — `inflector_test.rb:68, :91, :98, :105, :123, :130, :587,
-  :597, :606, :615`, `time_zone_test.rb:51, :78`, `json/encoding_test.rb:22`,
+:597, :606, :615`, `time_zone_test.rb:51, :78`, `json/encoding_test.rb:22`,
   `cache/behaviors/encoded_key_cache_behavior.rb:7` (`Encoding.list.each`)
 - actiondispatch (5) — `journey/path/pattern_test.rb:16, :40, :64` (a hash
   literal receiver destructured as `|path, expected|`),
