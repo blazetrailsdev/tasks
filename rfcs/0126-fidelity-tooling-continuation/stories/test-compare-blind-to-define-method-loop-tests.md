@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: 7147
 claim: "2026-08-28T01:43:26Z"
 assignee: "test-compare-blind-to-define-method-loop-tests"

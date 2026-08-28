@@ -9,7 +9,7 @@ deps:
   - converge-public-instance-methods-onto-one-helper
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null
