@@ -24,11 +24,11 @@ ONLY tag is `@noRailsEquivalent`, while accepting the same receipt in both
 other spellings. Isolated on `packages/arel/src/nodes/node.ts` by adding each
 shape and running `npx eslint` on the file:
 
-| shape | result |
-| --- | --- |
-| `/** @noRailsEquivalent PERMANENT */` (one line) | 0 errors |
-| `/**`<br>` * @noRailsEquivalent PERMANENT`<br>` */` | **1 error** |
-| `/**`<br>` * @internal`<br>` * @noRailsEquivalent PERMANENT`<br>` */` | 0 errors |
+| shape                                                                 | result      |
+| --------------------------------------------------------------------- | ----------- |
+| `/** @noRailsEquivalent PERMANENT */` (one line)                      | 0 errors    |
+| `/**`<br>` * @noRailsEquivalent PERMANENT`<br>` */`                   | **1 error** |
+| `/**`<br>` * @internal`<br>` * @noRailsEquivalent PERMANENT`<br>` */` | 0 errors    |
 
 The error is the generic "English-language comment. trails carries none: only
 the repo's JSDoc flags with their permanence token, and tool directives",
