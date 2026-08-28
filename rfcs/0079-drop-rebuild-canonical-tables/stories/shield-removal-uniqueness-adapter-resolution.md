@@ -18,7 +18,7 @@ closed-reason: 'Premise gone: PR #7114 (e4889f2cb, 2026-08-27) gave UniquenessCo
 
 ## Context
 
-#7111 added a new `rebuildCanonicalTables` call site — the shape this RFC
+PR #7111 added a new `rebuildCanonicalTables` call site — the shape this RFC
 exists to eliminate — in
 `packages/activerecord/src/validations/uniqueness-validation.trails.test.ts:104-106`:
 

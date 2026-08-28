@@ -28,11 +28,14 @@ hand.
 Rails issues these from two `included do` blocks, as macro calls:
 
 - `activerecord/lib/active_record/attribute_methods/before_type_cast.rb:32-33`
+
   ```ruby
   attribute_method_suffix "_before_type_cast", "_for_database", parameters: false
   attribute_method_suffix "_came_from_user?", parameters: false
   ```
+
 - `activerecord/lib/active_record/attribute_methods/dirty.rb:53-59`
+
   ```ruby
   attribute_method_affix(prefix: "saved_change_to_", suffix: "?", parameters: "**options")
   attribute_method_prefix("saved_change_to_", parameters: false)

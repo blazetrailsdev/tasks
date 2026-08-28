@@ -28,7 +28,7 @@ activerecord both port `attribute_methods.rb` to `attribute-methods.ts`, and the
 same holds for `attribute_assignment.rb`, `validations.rb`, `callbacks.rb` and
 every other file both gems carry.
 
-#7154 closed the hole for the BODY maps (`tsCallsByFileName`,
+PR #7154 closed the hole for the BODY maps (`tsCallsByFileName`,
 `tsCallArgsByFileName`, `tsCallSeqByFileName`, `tsSkeletonByFileName`), which
 are now written under `scope === "package"` only — ActiveModel's
 `generate_alias_attribute_methods` body had been answering for ActiveRecord's,

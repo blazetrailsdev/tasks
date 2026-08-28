@@ -35,7 +35,7 @@ the belt ever sees that id. So the exact failure the gate exists to prevent
 because a landed story is still cited in a comment) is still reachable through
 the branch path.
 
-#7087's story deliberately scoped this out, because gating on a branch-derived
+PR #7087's story deliberately scoped this out, because gating on a branch-derived
 id would red a legitimately partial PR — the sanctioned escape hatch is to drop
 the `Closes-story:` trailer while keeping the story stamped in-progress with
 `--pr N`, and that hatch is expressed precisely by having no trailer. It asked

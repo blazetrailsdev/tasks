@@ -18,10 +18,10 @@ closed-reason: null
 
 ## Context
 
-Sibling of `mysql2-raw-execute-preparable-is-a-bind-count-approximation` (PR
-#7121), which deleted the bind-count stand-in for Arel's `preparable` flag from
-mysql2's `perform_query`. The SAME approximation survives one level up, at the
-`to_sql_and_binds` position itself.
+Sibling of `mysql2-raw-execute-preparable-is-a-bind-count-approximation`
+(PR #7121), which deleted the bind-count stand-in for Arel's `preparable`
+flag from mysql2's `perform_query`. The SAME approximation survives one level
+up, at the `to_sql_and_binds` position itself.
 
 `packages/activerecord/src/connection-adapters/abstract/database-statements.ts:1374-1380`:
 

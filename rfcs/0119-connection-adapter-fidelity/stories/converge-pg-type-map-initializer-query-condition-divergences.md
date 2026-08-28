@@ -62,7 +62,7 @@ permission; neither of these is a TypeScript language shortcoming.
 
 ## Converged shape
 
-1. Drop the escape: `this.store.keys().map((key) => `'${key}'`)`, matching
+1. Drop the escape: ``this.store.keys().map((key) => `'${key}'`)``, matching
    rb:37 exactly.
 2. Drop the short-circuit and interpolate unconditionally, matching rb:52-57.
    Before doing so, confirm the empty-store path is genuinely unreachable from

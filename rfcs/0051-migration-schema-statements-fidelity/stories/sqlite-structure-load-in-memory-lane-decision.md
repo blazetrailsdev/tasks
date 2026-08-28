@@ -22,8 +22,10 @@ closed-reason: null
 (`packages/activerecord/src/tasks/sqlite-database-tasks.ts:172`) branches to a
 trails-only adapter path Rails does not have:
 
-    if (isInMemoryDatabase(this.dbConfig.database as string))
-      return this.inMemoryStructureLoad(filename);   // :173-174
+```ts
+if (isInMemoryDatabase(this.dbConfig.database as string))
+  return this.inMemoryStructureLoad(filename); // :173-174
+```
 
 Rails' `structure_load`
 (`vendor/rails/activerecord/lib/active_record/tasks/sqlite_database_tasks.rb:60-63`)

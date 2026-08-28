@@ -23,7 +23,7 @@ closed-reason: null
 > `leading-colon string writes` > `create and insert_all store a leading colon
 verbatim` fails intermittently with:
 
-```
+```text
 TypeError: Cannot read properties of null (reading 'title')
  ❯ packages/activerecord/src/relation/leading-colon-string-writes.trails.test.ts:56:24
 ```
@@ -96,7 +96,7 @@ story claimed the mechanism was "proven". It was not. Do not re-derive it.
 The instrumentation from trails#7106 has fired three times. PostgreSQL (run
 33026062066, shard 1/2):
 
-```
+```text
   returning:        []
   openTransactions: 1
   topics rows:      [[1,"seed",null],[2,"::Alpha",null]]
@@ -119,7 +119,7 @@ byte-for-byte.
 `Topic.create` on the failing path — `create` carries no ON CONFLICT clause, so a
 stale sequence must raise. SQLite (run 33027617100, job 98372576941):
 
-```
+```text
   returning:        []
   topics rows:      [[2,"seed",null],[3,"::Alpha",null]]
   next insert:      inserted id 5
@@ -158,7 +158,7 @@ so it is not a defect in itself. A probe capturing the write lease through the
 exact path `InsertAll.execute` uses (`insert-all.ts:141`) reported, on the next
 SQLite sighting (run 33028588004, job 98375630699):
 
-```
+```text
   returning:        []
   topics rows:      [[2,"seed",null],[3,"::Alpha",null]]
   next insert:      inserted id 5

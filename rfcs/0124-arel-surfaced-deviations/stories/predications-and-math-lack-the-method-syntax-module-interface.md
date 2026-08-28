@@ -22,7 +22,7 @@ Surfaced in PR #7102 (RFC 0124). Converting `Case#when` from a bound instance
 property to a prototype method — needed so a generic `Object#clone`-shaped copy
 could not carry it still closed over the original — produced a TS2425:
 
-```
+```text
 Class 'NodeExpression' defines instance member property 'when',
 but extended class 'Case' defines it as instance member function.
 ```

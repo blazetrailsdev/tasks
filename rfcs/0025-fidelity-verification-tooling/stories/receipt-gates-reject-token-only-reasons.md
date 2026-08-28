@@ -31,13 +31,13 @@ the reason text off 244 tags repo-wide — in arel, all 12 `PERMANENT` receipts
 `visitors/ruby-class.ts:1`, `math.ts:17`, `predications.ts:119`, and the
 `@missingRailsCall uniq — PERMANENT` at `nodes/bound-sql-literal.ts:14`). Before:
 
-```
+```ts
  * @noRailsEquivalent PERMANENT: `SqlLiteral < String` (sql_literal.rb:5), so
 ```
 
 After:
 
-```
+```ts
 /** @noRailsEquivalent PERMANENT */
 ```
 

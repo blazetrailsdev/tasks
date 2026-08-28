@@ -42,9 +42,9 @@ what turns that into a loud failure.
 
 trails' `packages/activerecord/src/attribute-methods/dirty.ts`'s
 `static [included](base)` (added by #7122) issues the two `class_attribute`s and
-the five affix/prefix/suffix macros, but not this guard. The comment in PR
-#7122's body records it as unported: "there is no module-ancestry predicate to
-test it with".
+the five affix/prefix/suffix macros, but not this guard. The comment in
+PR #7122's body records it as unported: "there is no module-ancestry
+predicate to test it with".
 
 Note the ordering in `base.ts` is currently correct — `include(Base, _Dirty)`
 runs well before `include(Base, Timestamp.InstanceMethods)` — so this is a
