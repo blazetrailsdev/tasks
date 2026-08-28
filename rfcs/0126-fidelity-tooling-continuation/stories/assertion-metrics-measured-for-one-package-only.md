@@ -1,6 +1,6 @@
 ---
 title: "Assertion metrics are computed for activerecord only, so the other eleven marks are unmeasured zeros"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

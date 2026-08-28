@@ -1,7 +1,7 @@
 ---
 title: "Seed AR's @attributes before init_internals, as core.rb:474 does"
-status: in-progress
-updated: 2026-08-28T14:21:28.044887806Z
+status: done
+updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []

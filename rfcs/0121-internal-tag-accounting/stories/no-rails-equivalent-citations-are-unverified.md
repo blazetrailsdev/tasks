@@ -1,6 +1,6 @@
 ---
 title: "Nothing verifies that a @noRailsEquivalent citation points at the method it names"
-status: ready
+status: claimed
 updated: 2026-08-28
 rfc: "0121-internal-tag-accounting"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-28T15:18:31Z"
+assignee: "arel-plus-and-taken-score-moved-against-their-own-rb"
 blocked-by: null
 closed-reason: null
 ---

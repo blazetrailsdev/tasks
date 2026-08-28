@@ -1,7 +1,7 @@
 ---
 title: "trim-active-model-model-to-api-and-access"
-status: in-progress
-updated: 2026-08-28T14:21:31.921891634Z
+status: done
+updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "activerecord/lib/arel.rb is outside every package's libPath, so Arel.sql/star score as extra surface"
-status: in-progress
+status: done
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

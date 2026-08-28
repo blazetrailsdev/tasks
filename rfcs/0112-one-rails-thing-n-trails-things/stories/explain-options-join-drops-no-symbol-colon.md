@@ -1,7 +1,7 @@
 ---
 title: "EXPLAIN's options join emits a Ruby Symbol's colon, which Symbol#to_s drops"
-status: ready
-updated: 2026-08-27
+status: claimed
+updated: 2026-08-28
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 130
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-28T15:22:55Z"
+assignee: "burn-down-inline-fallback-call-sites-in-has-many-associations-test"
 blocked-by: null
 closed-reason: null
 ---
