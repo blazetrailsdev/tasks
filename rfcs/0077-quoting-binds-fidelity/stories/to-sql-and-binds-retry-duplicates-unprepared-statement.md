@@ -44,7 +44,11 @@ field instead:
 ```ts
 const wasPreparedStatements = host.preparedStatements;
 host.preparedStatements = false;
-try { return block(); } finally { host.preparedStatements = wasPreparedStatements; }
+try {
+  return block();
+} finally {
+  host.preparedStatements = wasPreparedStatements;
+}
 ```
 
 Two divergences follow:
