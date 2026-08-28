@@ -1,6 +1,6 @@
 ---
 title: "Parameter-name drift: the rows that are a DROPPED Rails parameter, not a rename"
-status: ready
+status: draft
 updated: 2026-08-28
 rfc: "0000-parameter-name-drift-burndown"
 cluster: fidelity

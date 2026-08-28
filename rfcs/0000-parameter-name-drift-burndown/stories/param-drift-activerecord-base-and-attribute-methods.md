@@ -1,6 +1,6 @@
 ---
 title: "Parameter-name drift: activerecord base and attribute methods"
-status: ready
+status: draft
 updated: 2026-08-28
 rfc: "0000-parameter-name-drift-burndown"
 cluster: fidelity

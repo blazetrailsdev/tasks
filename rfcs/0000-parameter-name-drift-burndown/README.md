@@ -143,5 +143,9 @@ exist on `main` and no story here can verify its own completion.
 
 ## Changelog
 
+- 2026-08-28: the 16 stories are seeded `draft` pending triage. Their
+  markdown-owned `priority` tiers are set (1 for the misalignment and tail
+  stories, 2–4 for the package sweeps), so promoting them to `ready` is the
+  whole of the triage.
 - 2026-08-28: created from the first full-surface run of the parameter-name
   check (trails PR #7162), 624 rows across 12 packages.
