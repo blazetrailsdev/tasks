@@ -24,7 +24,7 @@ moving the worktree-independence check into the shared-cache contract:
 - `scripts/parity/shared-cache.ts` — `readSharedFor(dir, name, key, rootDir)`
   serves an entry only when it names no path outside `rootDir`;
   `publishShared(dir, name, key, body, tag)` publishes only when the payload
-  names no absolute path at all (the writer's own path is not *foreign* to the
+  names no absolute path at all (the writer's own path is not _foreign_ to the
   writer, yet is exactly as poisonous to every other worktree).
 - `scripts/api-compare/extract-ts-api.ts:426` and `:484` use them.
 
