@@ -1,0 +1,85 @@
+---
+title: "Parameter-name drift: actioncontroller"
+status: ready
+updated: 2026-08-28
+rfc: "0000-parameter-name-drift-burndown"
+cluster: fidelity
+packages:
+  - actioncontroller
+deps:
+  - parity-api-compares-parameter-names-beside-arity
+deps-rfc: []
+est-loc: 188
+priority: 4
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+The parameter-name check landed by `parity-api-compares-parameter-names-beside-arity`
+(RFC 0126) reports **47 positions over 37 matched pairs** in `actioncontroller`
+where the TS parameter is not the Rails identifier camelCased. CLAUDE.md makes
+that spelling the rule ("a local or parameter keeps the Rails identifier,
+camelCased — Ruby `stmt` is `stmt`, not `statement`"); it went unmeasured until
+this check, so the drift accumulated silently while arity read 100%.
+
+Rows by file:
+
+- `metal/request_forgery_protection.rb` — 9
+- `metal/strong_parameters.rb` — 9
+- `base.rb` — 4
+- `metal/live.rb` — 4
+- `metal.rb` — 3
+- `metal/basic_implicit_render.rb` — 2
+- `metal/flash.rb` — 2
+- `metal/implicit_render.rb` — 2
+- `metal/logging.rb` — 2
+- `metal/redirecting.rb` — 2
+- …and 7 further files with fewer rows each.
+
+A sample, in the artifact's own format (`output/param-name-mismatches.json`):
+
+```text
+  base.rb#redirect_to @0  `options` → `url`
+  base.rb#redirect_to @1  `responseOptions` → `options`
+  base.rb#respond_to @0  `mimes` → `block`
+  base.rb#send_file @0  `path` → `filePath`
+  metal.rb#build @0  `action` → `name`
+  metal.rb#dispatch @0  `name` → `action`
+  metal.rb#url_for @0  `string` → `str`
+  metal/allow_browser.rb#initialize @0  `request` → `userAgentString`
+```
+
+## Verifying
+
+```bash
+API_COMPARE_FORCE=1 pnpm parity:api --package actioncontroller --params
+```
+
+lists every remaining position as `file:method  @position  ruby \`x\` ts \`y\``.
+The story is done when that list is empty for the scope above.
+
+Read each row before renaming it — see the RFC's "three shapes" section. A
+union-type name (`columnOrOptions`) still takes the Rails identifier: the type
+describes what the argument may be, the name describes what it is. A positional
+misalignment — a dropped Rails parameter reported as a rename of its neighbour —
+belongs to `param-drift-positional-misalignment-is-a-dropped-parameter` and is
+left alone here.
+
+## Acceptance criteria
+
+- Every parameter in scope carries the Rails identifier, camelCased per
+  `docs/ruby-ts-conventions.md`, verified against `vendor/rails`.
+- No behaviour change and no test renamed; `pnpm parity:api` methods and arity
+  figures unmoved, `parity:api:calls` and `parity:api:calls:args` no new row.
+- There is no exclude register for parameter names and none is added. A position
+  that genuinely cannot carry the Rails name is a `pnpm tasks block` naming the
+  language shortcoming.
+- actioncontroller reads 0 rows, and enrols in the gate in this PR: add `"actioncontroller"` to
+  `GATED_PACKAGES` in `scripts/api-compare/param-name-mark.ts` and seed its mark
+  in `param-name-mark.json` at `{ "total": 0, "byFile": {} }`.
+  `pnpm parity:api:params` then reports it OK.
