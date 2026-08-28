@@ -26,7 +26,7 @@ convergence work.
 
 **17 tags on `origin/main` (9415a63a9) carry no permanence claim**, e.g.
 
-```
+```text
 @noRailsEquivalent Ruby needs no name for a duck type.
 @noRailsEquivalent Peels Ruby's trailing `parameters:` keyword back off the …
 @noRailsEquivalent Serves trails' awaitable `serializable_hash` (RFC 0022 b2).
@@ -38,7 +38,7 @@ convergence work.
 
 Find them all with:
 
-```
+```bash
 git grep -hoE '@noRailsEquivalent [^*]*' -- 'packages/*/src/*' \
   | grep -vE 'PERMANENT|CONVERGEABLE'
 ```

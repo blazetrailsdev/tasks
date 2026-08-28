@@ -24,7 +24,7 @@ share the fqn's last segment, because the rule matches a TS class body to a
 bucket by exact name and cannot tell the two apart. The drop is warned, not
 silent:
 
-```
+```text
 [build-rails-file-structure-manifest] last-segment collision in
 actiondispatch/journey/scanner.rb: `Scanner` shared by
 ActionDispatch::Journey::Scanner, ActionDispatch::Journey::Scanner::Scanner

@@ -31,7 +31,7 @@ reduced arel's 12 `PERMANENT` receipts to the bare token and nothing was
 lost. For `CONVERGEABLE` it also removed the story id, which was the only
 link between the deviation and the work that converges it:
 
-```
+```diff
 -   * @missingRailsCall build_statement_pool — CONVERGEABLE (story abstract-adapter-constructor-drops-rails-config-arg): RFC 0106: the base ctor takes no
 +   * @missingRailsCall build_statement_pool — CONVERGEABLE
 ```
@@ -46,7 +46,7 @@ story is the rule-side fix and the restoration.
 `CONVERGEABLE` is followed by one story id and nothing else — no
 parentheses, no `story` word, no prose:
 
-```
+```ts
 /** @noRailsEquivalent CONVERGEABLE abstract-adapter-constructor-drops-rails-config-arg */
 /** @missingRailsCall build_statement_pool — CONVERGEABLE abstract-adapter-constructor-drops-rails-config-arg */
 ```

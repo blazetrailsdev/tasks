@@ -36,7 +36,7 @@ measurement).
 
 Measured on `main` at the time of writing, after #7077 and #7083 landed:
 
-```
+```text
 extra-surface gate: OK (arel novel 0/0, total 62/62;
                         activerecord novel 374/376, total 1320/1324)
 ```

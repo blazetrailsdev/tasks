@@ -23,7 +23,7 @@ mirror image of `moved`: a Ruby module member whose TS body sits on an INCLUDING
 class's file instead of the file mirroring the module's own. It is report-only.
 `pnpm parity:api:extra --package arel` currently reports eight rows:
 
-```
+```text
 arel/attributes/attribute.ts     quotedNode    inlined-from predications.rb (quoted_node)
 arel/nodes/infix-operation.ts    quotedNode    inlined-from predications.rb (quoted_node)
 arel/nodes/node-expression.ts    quotedNode    inlined-from predications.rb (quoted_node)

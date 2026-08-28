@@ -11,6 +11,12 @@ packages:
   - "activemodel"
 clusters:
   - "rails-deviation"
+  - "duplicate-bodies"
+  - "invented-arm"
+  - "guard-parity"
+  - "lint-enrollment"
+  - "test-placement"
+  - "followup"
 related-rfcs:
   - "0023-surfaced-deviations"
   - "0066-arel-visitor-fidelity"

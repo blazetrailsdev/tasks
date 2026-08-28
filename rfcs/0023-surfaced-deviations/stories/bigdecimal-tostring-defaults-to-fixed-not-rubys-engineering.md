@@ -24,7 +24,7 @@ closed-reason: null
 `BigDecimal#to_s`". That justification is false. Ruby's `BigDecimal#to_s` with
 no argument is ENGINEERING notation, and ActiveSupport does not redefine it:
 
-```
+```console
 $ ruby -rbigdecimal -e 'puts BigDecimal("123456.789").to_s'
 0.123456789e6
 $ ruby -rbigdecimal -e 'puts BigDecimal("123456.789").to_s("F")'

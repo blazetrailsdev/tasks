@@ -32,7 +32,7 @@ return d ? new Date(`${d}T00:00:00.000Z`).toISOString() : null;
 It assumes `stories.updated_on` is a bare `YYYY-MM-DD`. Three rows hold a full
 nanosecond-precision RFC3339 timestamp instead:
 
-```
+```text
 trim-active-model-model-to-api-and-access             2026-08-28T14:21:31.921891634Z
 wire-attribute-methods-dependency-in-append-features-order  2026-08-28T14:21:35.853895613Z
 seed-ar-attributes-before-init-internals              2026-08-28T14:21:28.044887806Z

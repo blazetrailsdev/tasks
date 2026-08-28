@@ -7,6 +7,7 @@ updated: 2026-08-18
 owner: "@deanmarano"
 packages:
   - "activerecord"
+  - "trailties"
 clusters:
   - "rails-deviation"
   - "followup"

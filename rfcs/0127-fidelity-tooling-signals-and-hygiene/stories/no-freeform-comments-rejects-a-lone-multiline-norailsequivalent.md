@@ -24,11 +24,11 @@ ONLY tag is `@noRailsEquivalent`, while accepting the same receipt in both
 other spellings. Isolated on `packages/arel/src/nodes/node.ts` by adding each
 shape and running `npx eslint` on the file:
 
-| shape                                                                 | result      |
-| --------------------------------------------------------------------- | ----------- |
-| `/** @noRailsEquivalent PERMANENT */` (one line)                      | 0 errors    |
-| `/**`<br>` * @noRailsEquivalent PERMANENT`<br>` */`                   | **1 error** |
-| `/**`<br>` * @internal`<br>` * @noRailsEquivalent PERMANENT`<br>` */` | 0 errors    |
+| shape                                                              | result      |
+| ------------------------------------------------------------------ | ----------- |
+| `/** @noRailsEquivalent PERMANENT */` (one line)                   | 0 errors    |
+| `/**`<br>`* @noRailsEquivalent PERMANENT`<br>`*/`                  | **1 error** |
+| `/**`<br>`* @internal`<br>`* @noRailsEquivalent PERMANENT`<br>`*/` | 0 errors    |
 
 The error is the generic "English-language comment. trails carries none: only
 the repo's JSDoc flags with their permanence token, and tool directives",
@@ -43,8 +43,8 @@ only legal spelling and nothing says so, so the author's first instinct fails
 with a message that does not name the real cause.
 
 `KEPT_TAG_RE` (`^[\s*]*@(internal|noRailsEquivalent|...)\b`) does match
-`   * @noRailsEquivalent PERMANENT`, so the tag itself is recognised; the bug is
-in how a block's non-tag lines (`/**`, ` */`) are judged when no other kept tag
+`* @noRailsEquivalent PERMANENT`, so the tag itself is recognised; the bug is
+in how a block's non-tag lines (`/**`, `*/`) are judged when no other kept tag
 is present. `eslint/no-freeform-comments.test.mjs` is the place to pin it.
 
 ## Converged shape

@@ -21,7 +21,7 @@ closed-reason: null
 `declaredAttributeNames` (`packages/activerecord/src/model-schema.ts:374`) is
 exported and carries:
 
-```
+```text
 @noRailsEquivalent CONVERGEABLE — feeds `ensureSchemaLoaded`'s reflection
 gate, itself a trails-only bridge for Rails' synchronous `load_schema!`.
 ```

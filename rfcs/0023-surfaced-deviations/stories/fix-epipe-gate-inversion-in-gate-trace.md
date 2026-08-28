@@ -27,7 +27,7 @@ to false.
 
 Measured on that PR's own diff:
 
-```
+```text
 files: 756 paths, 45489 bytes
 PIPE form -> gate=FALSE   <-- WRONG   (echo "$files" | grep -qE …)
 HERE form -> gate=TRUE                (grep -qE … <<<"$files")

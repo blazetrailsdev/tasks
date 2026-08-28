@@ -5,6 +5,8 @@
     "MD024": { "siblings_only": true },
     "MD025": { "front_matter_title": "" },
     "MD033": false,
+    // prettier normalises emphasis to underscore; match it rather than fight it.
+    "MD049": { "style": "underscore" },
     "MD041": false,
   },
   "ignores": ["node_modules/**", "index.md", "rfcs/0000-template/**"],
