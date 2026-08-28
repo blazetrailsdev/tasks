@@ -1,6 +1,6 @@
 ---
 title: "parity-api-compares-parameter-names-beside-arity"
-status: claimed
+status: done
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: 7162
 claim: "2026-08-28T14:02:37Z"
 assignee: "parity-api-compares-parameter-names-beside-arity"
 blocked-by: null

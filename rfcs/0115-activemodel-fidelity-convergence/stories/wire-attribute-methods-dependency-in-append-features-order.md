@@ -1,7 +1,7 @@
 ---
 title: "Wire the AttributeMethods dependency in append_features order"
-status: claimed
-updated: 2026-08-28
+status: in-progress
+updated: 2026-08-28T14:21:35.853895613Z
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: 7160
 claim: "2026-08-28T13:55:21Z"
 assignee: "seed-ar-attributes-before-init-internals"
 blocked-by: null

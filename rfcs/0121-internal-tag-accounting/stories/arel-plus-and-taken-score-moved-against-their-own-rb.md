@@ -1,7 +1,7 @@
 ---
 title: "arel-plus-and-taken-score-moved-against-their-own-rb"
-status: draft
-updated: 2026-08-27
+status: ready
+updated: 2026-08-28
 rfc: "0121-internal-tag-accounting"
 cluster: null
 packages: []

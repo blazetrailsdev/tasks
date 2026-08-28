@@ -1,6 +1,6 @@
 ---
 title: "indexesInCreate filters constraint-backed indexes through an invented filterIndexesForDump hook"
-status: claimed
+status: in-progress
 updated: 2026-08-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 7161
 claim: "2026-08-28T14:07:26Z"
 assignee: "db-schema-load-sql-reports-success-for-memory-noop"
 blocked-by: null

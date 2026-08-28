@@ -1,6 +1,6 @@
 ---
 title: "bare-convergeable-receipts-name-no-story"
-status: draft
+status: in-progress
 updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7163
+claim: "2026-08-28T14:24:28Z"
+assignee: "dot-visit-edge-error-drops-the-class-namespace"
 blocked-by: null
 closed-reason: null
 ---
