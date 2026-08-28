@@ -1,7 +1,7 @@
 ---
 title: "indexesInCreate filters constraint-backed indexes through an invented filterIndexesForDump hook"
-status: draft
-updated: 2026-08-27
+status: ready
+updated: 2026-08-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []

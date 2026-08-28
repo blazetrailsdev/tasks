@@ -1,7 +1,7 @@
 ---
 title: "R4: drop the tableless synthesize-columnsHash-from-declarations fallback"
-status: ready
-updated: 2026-08-26
+status: in-progress
+updated: 2026-08-28
 rfc: "0031-schema-cache-always-warm-convergence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7143
+claim: "2026-08-28T00:45:13Z"
+assignee: "r4-drop-tableless-synthesize-from-declarations"
 blocked-by: null
 closed-reason: null
 ---

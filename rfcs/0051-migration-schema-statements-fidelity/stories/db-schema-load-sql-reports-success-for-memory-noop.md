@@ -1,7 +1,7 @@
 ---
 title: "db schema:load --format=sql reports success for a :memory: load that did nothing"
-status: draft
-updated: 2026-08-27
+status: ready
+updated: 2026-08-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []

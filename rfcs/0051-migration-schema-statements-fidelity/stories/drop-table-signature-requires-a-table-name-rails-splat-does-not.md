@@ -1,7 +1,7 @@
 ---
 title: "drop-table-signature-requires-a-table-name-rails-splat-does-not"
-status: draft
-updated: 2026-08-27
+status: ready
+updated: 2026-08-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []

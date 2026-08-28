@@ -1,7 +1,7 @@
 ---
 title: "substitute-binds-invents-preparable-retryable-defaults"
-status: draft
-updated: 2026-08-27
+status: in-progress
+updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7144
 claim: null
 assignee: null
 blocked-by: null

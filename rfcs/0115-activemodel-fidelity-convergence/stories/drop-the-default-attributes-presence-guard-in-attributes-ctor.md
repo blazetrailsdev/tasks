@@ -1,7 +1,7 @@
 ---
 title: "Drop the _defaultAttributes presence guard in Attributes' constructor"
-status: ready
-updated: 2026-08-27
+status: in-progress
+updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7142
+claim: "2026-08-28T00:36:52Z"
+assignee: "converge-pending-modification-helpers-onto-attribute-registration-classmethods"
 blocked-by: null
 closed-reason: null
 ---

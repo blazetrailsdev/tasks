@@ -1,7 +1,7 @@
 ---
 title: "indexParts emits a bare column where Rails always inspects the array"
-status: draft
-updated: 2026-08-27
+status: ready
+updated: 2026-08-28
 rfc: "0051-migration-schema-statements-fidelity"
 cluster: null
 packages: []

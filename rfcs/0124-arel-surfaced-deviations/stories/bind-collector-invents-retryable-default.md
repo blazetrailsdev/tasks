@@ -1,7 +1,7 @@
 ---
 title: "arel: Bind collector invents a retryable default and an optional block param"
-status: in-progress
-updated: 2026-08-27
+status: done
+updated: 2026-08-28
 rfc: "0124-arel-surfaced-deviations"
 cluster: null
 packages: []
