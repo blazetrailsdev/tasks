@@ -1,7 +1,7 @@
 ---
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 title: "Fidelity verification tooling — new signals, guards, and ratchet hygiene"
-status: active
+status: draft
 created: 2026-08-27
 updated: 2026-08-27
 owner: "@deanmarano"
@@ -135,3 +135,5 @@ same drift caveats as 0126 apply — **re-derive numeric claims before starting*
 
 - 2026-08-27: created by splitting RFC 0126 on priority; 42 stories / 4,820
   est-LOC carried here, 44 / 5,415 kept in 0126.
+- 2026-08-27: parked as `draft` — the lower-priority half stays out of the ready
+  queue until RFC 0126 (measurement correctness) has burnt down.
