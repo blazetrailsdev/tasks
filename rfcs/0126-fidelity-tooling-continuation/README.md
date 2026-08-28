@@ -20,7 +20,7 @@ related-rfcs:
   - "0110-parity-skip-register-correctness"
   - "0120-extra-surface-gating-rollout"
   - "0121-internal-tag-accounting"
-priority: 1
+priority: 3
 ---
 
 # RFC 0126 — Fidelity verification tooling: measurement correctness
@@ -162,4 +162,7 @@ re-derived before work starts:
 - 2026-08-27: split on priority. 42 stories / 4,820 est-LOC moved to
   `0127-fidelity-tooling-signals-and-hygiene` (new dimensions, guards, ratchet
   mechanics, hygiene, ergonomics); 44 / 5,415 kept here. Charter narrowed to
-  measurement correctness; `priority` raised 2 → 1.
+  measurement correctness.
+- 2026-08-27: RFC-level `priority` set to 3. Story-level tiers 1–5 are
+  unchanged and are what actually orders the ready queue, since every story
+  carries an explicit `priority` (`story.priority ?? rfc.priority`).
