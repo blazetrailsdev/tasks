@@ -163,3 +163,52 @@ describe("statusSet clears the fields the old status owned", () => {
     expect(s!.claim_at).toBeNull();
   });
 });
+
+/**
+ * Only `status` cleared the fields the old status owned; `close`, `done` and
+ * `release` each left a different half-cleared row behind. Six stories in the
+ * backlog carried one of those contradictions — a blocker on shipped work, an
+ * abandonment reason on a `done` story — and none were fixable by hand,
+ * because these fields are DB-owned.
+ */
+describe("a status move clears what the old status owned", () => {
+  it("drops a blocker when the story is closed", async () => {
+    await block("s1", "waiting on upstream");
+    await close("s1", "superseded");
+    const s = await Story.findBy({ id: "s1" });
+    expect(s!.blocked_by).toBeNull();
+    expect(s!.closed_reason).toBe("superseded");
+  });
+
+  it("drops a blocker when the story ships", async () => {
+    await block("s1", "waiting on upstream");
+    await markTracking(["s1"], "done", 7);
+    const s = await Story.findBy({ id: "s1" });
+    expect(s!.blocked_by).toBeNull();
+  });
+
+  it("drops an abandonment reason when a closed story is reopened and ships", async () => {
+    await close("s1", "not worth doing");
+    await markTracking(["s1"], "done", 7);
+    const s = await Story.findBy({ id: "s1" });
+    expect(s!.closed_reason).toBeNull();
+    expect(s!.status).toBe("done");
+  });
+
+  it("drops both when a story is released back to the queue", async () => {
+    await close("s1", "not worth doing");
+    await statusSet("s1", "blocked");
+    await claim(["s2"], "agent-a");
+    await release(["s2"]);
+    const s2 = await Story.findBy({ id: "s2" });
+    expect(s2!.assignee).toBeNull();
+    expect(s2!.claim_at).toBeNull();
+    expect(s2!.blocked_by).toBeNull();
+    expect(s2!.closed_reason).toBeNull();
+  });
+
+  it("keeps the blocker on a story that is actually blocked", async () => {
+    await block("s1", "waiting on upstream");
+    expect((await Story.findBy({ id: "s1" }))!.blocked_by).toBe("waiting on upstream");
+  });
+});
