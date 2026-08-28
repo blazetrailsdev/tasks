@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 10
 pr: null
 claim: "2026-08-28T19:57:42Z"
 assignee: "timestamp-reload-schema-from-cache-is-never-dispatched"
