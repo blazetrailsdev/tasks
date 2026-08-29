@@ -39,7 +39,7 @@ Two sub-shapes, both malformed:
   Rails file the prose already cites:
   - `packages/activerecord/src/model-schema.ts:144` —
     `CONVERGEABLE the primary-key predicate Ruby builds through
-    predicate_builder in _update_record`, Rails
+predicate_builder in _update_record`, Rails
     `activerecord/lib/active_record/persistence.rb:263`.
   - `packages/activerecord/src/model-schema.ts:346` — connection-free read of
     `ModelSchema#columns_hash`, Rails
