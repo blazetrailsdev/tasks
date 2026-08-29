@@ -1,6 +1,6 @@
 ---
 title: "Parameter-name drift: globalid, abstractcontroller, did-you-mean and test-support"
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity

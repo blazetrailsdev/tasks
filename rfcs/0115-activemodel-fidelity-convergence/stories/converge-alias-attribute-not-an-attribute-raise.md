@@ -1,6 +1,6 @@
 ---
 title: "converge-alias-attribute-not-an-attribute-raise"
-status: draft
+status: claimed
 updated: 2026-08-29
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 25
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-29T17:51:37Z"
+assignee: "converge-format-for-inspect-filter-order"
 blocked-by: null
 closed-reason: null
 ---

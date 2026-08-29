@@ -1,6 +1,6 @@
 ---
 title: "DisableJoinsAssociationRelation's constructor carries a fourth slot Rails has no counterpart for"
-status: claimed
+status: done
 updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 3
-pr: null
+pr: 7212
 claim: "2026-08-29T16:33:48Z"
 assignee: "param-drift-associations-constructors-take-an-extra-parameter"
 blocked-by: null

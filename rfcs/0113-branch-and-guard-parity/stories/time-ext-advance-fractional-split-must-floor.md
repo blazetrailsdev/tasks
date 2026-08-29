@@ -1,7 +1,7 @@
 ---
 title: "time-ext.ts advance's fractional weeks/days split truncates where Ruby's divmod(1) floors"
-status: ready
-updated: 2026-08-27
+status: claimed
+updated: 2026-08-29
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-29T17:33:51Z"
+assignee: "param-drift-relation-new-alias-scored-as-constructor"
 blocked-by: null
 closed-reason: null
 ---
