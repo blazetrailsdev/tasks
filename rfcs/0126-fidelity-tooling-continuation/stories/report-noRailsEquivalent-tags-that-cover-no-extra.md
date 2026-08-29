@@ -1,5 +1,5 @@
 ---
-title: "Report @noRailsEquivalent tags that cover no extra"
+title: "report-noRailsEquivalent-tags-that-cover-no-extra"
 status: draft
 updated: 2026-08-29
 rfc: "0126-fidelity-tooling-continuation"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 90
+est-loc: null
 priority: null
 pr: null
 claim: null

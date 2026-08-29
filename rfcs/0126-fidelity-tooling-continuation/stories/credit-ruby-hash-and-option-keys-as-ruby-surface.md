@@ -1,7 +1,7 @@
 ---
 title: "Credit Ruby Hash-constant and option-hash keys as Ruby-side names"
-status: in-progress
-updated: 2026-08-28
+status: done
+updated: 2026-08-29
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: ["activesupport"]

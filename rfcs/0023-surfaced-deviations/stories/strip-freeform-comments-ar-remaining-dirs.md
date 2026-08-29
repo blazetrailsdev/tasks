@@ -1,6 +1,6 @@
 ---
 title: "Enrol ALL of activerecord in no-freeform-comments and sweep it in one PR"
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0023-surfaced-deviations"
 cluster: null
