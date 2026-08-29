@@ -2,7 +2,7 @@
 title: "Enroll ruby-compat in the extra-surface gate so the only-what-we-call rule is mechanical, not reviewed"
 status: draft
 updated: 2026-08-29
-rfc: "0000-ruby-compat"
+rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat"]
 deps: ["ruby-compat-package-skeleton"]

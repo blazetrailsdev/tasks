@@ -2,7 +2,7 @@
 title: "Vendor ruby/ruby at v3_3_11 as the MRI read-anchor for ruby-compat citations"
 status: draft
 updated: 2026-08-29
-rfc: "0000-ruby-compat"
+rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat"]
 deps: []
@@ -43,7 +43,7 @@ stays at its own `v3.4.1` ref; interpreter and gem refs are independent.
 
 `ruby/ruby` also mirrors the ruby/spec suite in-tree at `spec/ruby/`, so this
 one source serves both the C read-anchor and the behavioural suite RFC
-0000-ruby-compat's `ruby-spec-behavioural-enrollment` story needs. A separate
+0129-ruby-compat's `ruby-spec-behavioural-enrollment` story needs. A separate
 `ruby/spec` clone (which RFC 0089 planned) is not required.
 
 Note the clone size: `ruby/ruby` is substantially larger than any currently

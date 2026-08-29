@@ -2,7 +2,7 @@
 title: "Rational moves out of the date gem port into ruby-compat, removing activemodel's accidental dependency on @blazetrails/date"
 status: draft
 updated: 2026-08-29
-rfc: "0000-ruby-compat"
+rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "date", "activemodel"]
 deps: ["ruby-compat-package-skeleton"]

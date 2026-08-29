@@ -2,7 +2,7 @@
 title: "Enroll the remaining packages in the ruby-compat call gate, activerecord last"
 status: draft
 updated: 2026-08-29
-rfc: "0000-ruby-compat"
+rfc: "0129-ruby-compat"
 cluster: null
 packages:
   ["ruby-compat", "activemodel", "actionpack", "actionview", "trailties", "date", "activerecord"]
@@ -33,7 +33,7 @@ takes a reviewed one-line reason.
 
 **This will not fit in one PR.** Size it against the report's per-package counts
 before starting. Ship the packages that fit, and file the remainder as a
-follow-on story against this RFC (`pnpm tasks new 0000-ruby-compat <slug>
+follow-on story against this RFC (`pnpm tasks new 0129-ruby-compat <slug>
 --body-file …`, carrying the per-package counts you already have) — do **not**
 fan out sibling PRs, and do not stack branches.
 

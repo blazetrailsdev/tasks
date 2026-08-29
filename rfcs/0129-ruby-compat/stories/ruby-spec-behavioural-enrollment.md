@@ -2,7 +2,7 @@
 title: "Enroll vendor/ruby's in-tree ruby/spec suite as ruby-compat's behavioural measure"
 status: draft
 updated: 2026-08-29
-rfc: "0000-ruby-compat"
+rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat"]
 deps: ["vendor-ruby-mri-source", "ruby-compat-package-skeleton"]

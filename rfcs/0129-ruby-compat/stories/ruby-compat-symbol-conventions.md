@@ -2,7 +2,7 @@
 title: "One Symbol implementation for the colon-prefixed convention, replacing five private isSymbol copies"
 status: draft
 updated: 2026-08-29
-rfc: "0000-ruby-compat"
+rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "i18n", "activemodel"]
 deps: ["ruby-compat-package-skeleton"]

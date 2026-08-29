@@ -2,7 +2,7 @@
 title: "Hash#fetch (both arms) and KeyError land in ruby-compat, replacing four private fetch copies and eight ad-hoc KeyErrors"
 status: draft
 updated: 2026-08-29
-rfc: "0000-ruby-compat"
+rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport", "activerecord", "activemodel", "actionpack"]
 deps: ["ruby-compat-package-skeleton"]

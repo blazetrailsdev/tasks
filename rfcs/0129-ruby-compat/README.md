@@ -1,5 +1,5 @@
 ---
-rfc: "0000-ruby-compat"
+rfc: "0129-ruby-compat"
 title: "@blazetrails/ruby-compat: one home for the MRI core value types trails emulates, anchored to vendored ruby/ruby and measured by the call gates"
 status: draft
 created: 2026-08-29

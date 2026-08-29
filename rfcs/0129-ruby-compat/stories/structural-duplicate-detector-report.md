@@ -2,7 +2,7 @@
 title: "Report-only structural detection of ruby-compat primitives re-implemented under an unrecognised name"
 status: draft
 updated: 2026-08-29
-rfc: "0000-ruby-compat"
+rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat"]
 deps: ["no-ruby-compat-reimplementation-lint"]
@@ -49,7 +49,7 @@ story) or a false positive (a detector problem).
   or abandon it — and if abandoned, the RFC's Gate 3 section updated to record
   that the name-based rule is the final answer and why.
 - Real duplicates found are filed as stories against this RFC with their
-  `file:line` (`pnpm tasks new 0000-ruby-compat <slug> --body-file …`), not
+  `file:line` (`pnpm tasks new 0129-ruby-compat <slug> --body-file …`), not
   fixed in this PR.
 - Report-only: no gate turns red, no baseline or mark moves, `pnpm lint` and
   every `parity:*` command unchanged.

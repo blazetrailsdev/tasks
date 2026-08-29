@@ -2,7 +2,7 @@
 title: "Delete the re-export shims left by the value-type moves and repoint the stale RFC 0089 citations"
 status: draft
 updated: 2026-08-29
-rfc: "0000-ruby-compat"
+rfc: "0129-ruby-compat"
 cluster: null
 packages:
   ["ruby-compat", "activesupport", "activerecord", "activemodel", "actionpack", "date", "i18n"]

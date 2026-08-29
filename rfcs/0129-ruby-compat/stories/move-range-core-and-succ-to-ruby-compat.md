@@ -2,7 +2,7 @@
 title: "Ruby's Range and its String#succ dependency move to ruby-compat, fixing the core-ext dependency inversion"
 status: draft
 updated: 2026-08-29
-rfc: "0000-ruby-compat"
+rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport", "activemodel"]
 deps: ["ruby-compat-package-skeleton"]
