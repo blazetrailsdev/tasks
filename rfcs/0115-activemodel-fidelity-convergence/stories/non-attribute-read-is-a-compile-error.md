@@ -46,12 +46,12 @@ PR #7208's branch): **610 errors across 102 files**, splitting as
   `serialization.ts`, `cases/json-shared-test-cases.ts`,
   `connection-adapters/abstract-mysql-adapter.ts`. Nearly all one shape:
   `Argument of type 'typeof Base' is not assignable to parameter of type
-  'SchemaHost'` (TS2345) and its `this`-context twin (TS2684). The index
+'SchemaHost'` (TS2345) and its `this`-context twin (TS2684). The index
   signature had been silently making `typeof Base` structurally satisfy
   interfaces that declare one.
 - **96 test files**, and the dominant error — **329 of the 610** (TS2339) — is
-  *legitimate* attributes: `Property 'name' does not exist on type
-  'SliceModel'`. Root cause: an ad-hoc test model declares its attributes at
+  _legitimate_ attributes: `Property 'name' does not exist on type
+'SliceModel'`. Root cause: an ad-hoc test model declares its attributes at
   run time inside `static { this.attribute("name", "string") }`, and a static
   block cannot contribute to its own class's type. The canonical models already
   do this correctly, pairing the runtime call with `declare title: string`.
