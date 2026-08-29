@@ -20,7 +20,7 @@ closed-reason: null
 
 `param-drift-activerecord-remainder` (PR pending) cleared every remainder-scope
 parameter-name row that is a rename. Four rows survive because the TS parameter
-holds something *different* from the Rails one — a rename would spell a lie —
+holds something _different_ from the Rails one — a rename would spell a lie —
 and each needs its own convergence, not a spelling change.
 
 ```text
@@ -41,7 +41,7 @@ and each needs its own convergence, not a spelling change.
 
 - `Aes256Gcm#generate_iv(cipher, clear_text)`
   (`.../encryption/cipher/aes256_gcm.rb:87`) reaches `cipher.random_iv` for the
-  non-deterministic arm. Node's `createCipheriv` needs the IV to *construct* the
+  non-deterministic arm. Node's `createCipheriv` needs the IV to _construct_ the
   cipher, so `packages/activerecord/src/encryption/cipher/aes256-gcm.ts:52` computes
   the IV first and `generateIv` is handed `this.deterministic` instead
   (`aes256-gcm.ts:109`). Converging needs the deterministic branch decided
