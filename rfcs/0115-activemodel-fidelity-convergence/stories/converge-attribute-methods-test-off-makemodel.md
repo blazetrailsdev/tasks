@@ -1,6 +1,6 @@
 ---
 title: "converge AttributeMethodsTest off makeModel onto canonical models"
-status: draft
+status: ready
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 600
-priority: null
+priority: 19
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "Parameter-name drift: activerecord associations"
-status: draft
+status: in-progress
 updated: 2026-08-28
 rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 84
 priority: 3
-pr: null
+pr: 7190
 claim: null
 assignee: null
 blocked-by: null

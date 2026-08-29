@@ -1,6 +1,6 @@
 ---
 title: 'Drop serialize''s "YAML" string coder spelling so callers pass a constant'
-status: draft
+status: in-progress
 updated: 2026-08-28
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 18
+pr: 7192
+claim: "2026-08-28T23:28:33Z"
+assignee: "rehome-store-accessors-module-and-local-stored-attributes"
 blocked-by: null
 closed-reason: null
 ---

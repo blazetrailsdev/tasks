@@ -1,6 +1,6 @@
 ---
 title: "Credit Ruby Hash-constant and option-hash keys as Ruby-side names"
-status: ready
+status: in-progress
 updated: 2026-08-28
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: 7193
+claim: "2026-08-28T23:31:26Z"
+assignee: "credit-ruby-hash-and-option-keys-as-ruby-surface"
 blocked-by: null
 closed-reason: null
 ---
