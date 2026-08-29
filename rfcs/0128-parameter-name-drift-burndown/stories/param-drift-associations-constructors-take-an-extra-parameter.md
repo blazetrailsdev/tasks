@@ -1,6 +1,6 @@
 ---
 title: "param-drift-associations-constructors-take-an-extra-parameter"
-status: ready
+status: claimed
 updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-29T16:33:48Z"
+assignee: "param-drift-associations-constructors-take-an-extra-parameter"
 blocked-by: null
 closed-reason: null
 ---

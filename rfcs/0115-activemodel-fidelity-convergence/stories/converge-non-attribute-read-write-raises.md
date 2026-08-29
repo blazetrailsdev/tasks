@@ -1,6 +1,6 @@
 ---
 title: "converge-non-attribute-read-write-raises"
-status: in-progress
+status: blocked
 updated: 2026-08-29
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -12,7 +12,7 @@ priority: 21
 pr: 7208
 claim: "2026-08-29T11:48:53Z"
 assignee: "converge-non-attribute-read-write-raises"
-blocked-by: null
+blocked-by: "The read half needs a Proxy get trap on every ActiveModel object; measured (PR #7208) at 4.9x on an attribute read and 11x on an internal _field read vs no proxy, on the hottest path in the system. Maintainer decision: ship the set trap only (write + respond_to? assertions port, 1.24x on a write, 1.28x on construction) and defer the read assertion. Rails: attribute_methods_test.rb:641-645's assert_raise(NoMethodError) { topic.mumbo }."
 closed-reason: null
 ---
 

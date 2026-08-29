@@ -1,6 +1,6 @@
 ---
 title: "Parameter-name drift: globalid, abstractcontroller, did-you-mean and test-support"
-status: ready
+status: in-progress
 updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
@@ -12,9 +12,9 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 7211
+claim: "2026-08-29T16:03:46Z"
+assignee: "param-drift-tail-packages"
 blocked-by: null
 closed-reason: null
 ---
