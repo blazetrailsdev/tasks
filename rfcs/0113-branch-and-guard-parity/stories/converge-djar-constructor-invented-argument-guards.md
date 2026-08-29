@@ -47,7 +47,7 @@ constructor body) raises `argumentError` in four places Rails does not:
 Alongside those it carries a key-collapse step (a one-element `key` array becomes
 the scalar string, with its `ids` tuples flattened) that Rails also has no
 counterpart for. The composite-key handling itself is real work the port needs —
-Rails' `record[key]` grouping is scalar-only — but the *validation* is invented
+Rails' `record[key]` grouping is scalar-only — but the _validation_ is invented
 surface at a site Rails leaves bare, and it is what makes the constructor read
 nothing like `disable_joins_association_relation.rb`.
 
