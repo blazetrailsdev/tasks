@@ -22,7 +22,7 @@ Surfaced while converging `establish_connection`'s adapter backfill in PR #7215.
 
 Rails splits these two classes cleanly, and trails does not.
 
-`DatabaseConfigurations::DatabaseConfig` is the *abstract* base and holds only
+`DatabaseConfigurations::DatabaseConfig` is the _abstract_ base and holds only
 two ivars (`database_config.rb:9-14`):
 
 ```ruby

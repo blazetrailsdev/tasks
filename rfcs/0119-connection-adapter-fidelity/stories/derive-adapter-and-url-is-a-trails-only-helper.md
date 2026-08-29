@@ -36,8 +36,7 @@ const originalUrl =
   (dbConfig instanceof UrlConfig ? dbConfig.url : undefined) ||
   (dbConfig.configuration.url as string) ||
   "";
-const adapterName =
-  dbConfig.adapter || (originalUrl ? adapterNameFromUrl(originalUrl) : undefined);
+const adapterName = dbConfig.adapter || (originalUrl ? adapterNameFromUrl(originalUrl) : undefined);
 const connectUrl = (dbConfig.configuration as { database?: string }).database ? "" : originalUrl;
 ```
 
