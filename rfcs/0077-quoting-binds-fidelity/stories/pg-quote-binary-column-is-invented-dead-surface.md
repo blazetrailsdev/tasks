@@ -1,6 +1,6 @@
 ---
 title: "PG quoteBinaryColumn is invented dead surface duplicating quotedBinary"
-status: ready
+status: done
 updated: 2026-08-29
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 7207
+claim: "2026-08-29T14:04:19Z"
+assignee: "pg-quote-binary-column-is-invented-dead-surface"
 blocked-by: null
 closed-reason: null
 ---

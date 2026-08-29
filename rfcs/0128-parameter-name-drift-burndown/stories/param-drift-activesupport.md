@@ -1,7 +1,7 @@
 ---
 title: "Parameter-name drift: activesupport"
-status: draft
-updated: 2026-08-28
+status: in-progress
+updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 252
 priority: 2
-pr: null
+pr: 7209
 claim: null
 assignee: null
 blocked-by: null

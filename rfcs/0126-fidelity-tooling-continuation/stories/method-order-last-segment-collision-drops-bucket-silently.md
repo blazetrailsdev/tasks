@@ -1,16 +1,16 @@
 ---
 title: "Last-segment collision silently disables method-order lint for a whole file"
-status: ready
-updated: 2026-07-27
+status: done
+updated: 2026-08-29
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: 7206
+claim: "2026-08-29T14:00:23Z"
+assignee: "method-order-last-segment-collision-drops-bucket-silently"
 blocked-by: null
 closed-reason: null
 ---
