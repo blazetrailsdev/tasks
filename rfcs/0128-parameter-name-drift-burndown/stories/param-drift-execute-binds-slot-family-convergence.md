@@ -59,7 +59,7 @@ call sites, so it did not fit the shape-rows story's 180 LOC and its explicit
 ## Acceptance criteria
 
 - Standalone `execute` mirrors `database_statements.rb:136` — `(sql, name = null,
-  { allowRetry = false } = {})` — and delegates to `internalExecute` rather than
+{ allowRetry = false } = {})` — and delegates to `internalExecute` rather than
   throwing.
 - The `binds` slot is gone from `DatabaseStatementsHost`,
   `DatabaseStatementsDefaultsHost`, `AbstractAdapter` and the three concrete
