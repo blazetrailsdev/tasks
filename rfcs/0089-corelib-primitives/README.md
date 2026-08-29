@@ -27,6 +27,20 @@ This is the sibling of RFC `0088-date-gem-port`. **The two are deliberately
 separate packages** because they have different anchoring contracts; see
 _The split_ below.
 
+## Superseded by `ruby-compat`
+
+**RFC `0000-ruby-compat` supersedes this one.** It inherits the inventory below
+rather than re-deriving it, and differs in three ways that made a successor the
+right shape rather than a reactivation: the package is named `ruby-compat`; MRI
+is **vendored** (`ruby/ruby` pinned to `v3_3_11`), which reverses this RFC's
+"not a distributable unit / no anchor" finding and replaces it with a citation
+gate plus the in-tree `spec/ruby/` suite; and the scope leads with **value
+types** (adding `Hash`, which this RFC did not consider and which is the largest
+population) with the object-model items below deferred to that RFC's Phase 2.
+
+This RFC's `status` is unchanged here — `status` is DB-owned and the flip is a
+`tasks` verb, not a markdown edit.
+
 ## Status: postponed
 
 **Nothing here is being worked.** RFC 0088 (the `date` gem port) is the active
