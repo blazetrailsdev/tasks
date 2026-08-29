@@ -1,6 +1,6 @@
 ---
 title: "Converge Ruby public_instance_methods onto one ActiveSupport helper"
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0082-ruby-ts-idiom-conversion-classes"
 cluster: null

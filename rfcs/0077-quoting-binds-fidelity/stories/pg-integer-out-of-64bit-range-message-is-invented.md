@@ -1,6 +1,6 @@
 ---
 title: "IntegerOutOf64BitRange raises an invented message, not Rails'"
-status: draft
+status: in-progress
 updated: 2026-08-29
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 7196
 claim: null
 assignee: null
 blocked-by: null

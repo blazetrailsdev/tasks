@@ -1,7 +1,7 @@
 ---
 title: "converge-format-for-inspect-temporal-to-fs"
-status: ready
-updated: 2026-08-28
+status: in-progress
+updated: 2026-08-29
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: null
-claim: null
-assignee: null
+pr: 7198
+claim: "2026-08-29T10:44:48Z"
+assignee: "converge-format-for-inspect-temporal-to-fs"
 blocked-by: null
 closed-reason: null
 ---
