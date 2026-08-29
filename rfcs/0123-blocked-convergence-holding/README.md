@@ -3,7 +3,7 @@ rfc: "0123-blocked-convergence-holding"
 title: "Holding epic: blocked convergence work carried from RFCs 0078 / 0096 / 0106 / 0107"
 status: active
 created: 2026-08-25
-updated: 2026-08-25
+updated: 2026-08-29
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -24,6 +24,12 @@ A **holding epic**. It owns no convergence programme of its own; it holds the
 blocked stories carried out of four RFCs that had run out of pickup-able work,
 so those RFCs could be retired without dropping the debt they had surfaced.
 
+Carried in on 2026-08-29:
+
+- `0077-quoting-binds-fidelity` — 1 blocked story carried
+  (`pg-lookup-cast-type-resolves-only-warmed-type-names`); the RFC stays
+  **active**, only its blocked story moved.
+
 Closed and superseded into this RFC on 2026-08-25:
 
 - `0078-sti-schema-reflection-fidelity` — 5 blocked stories carried
@@ -42,9 +48,9 @@ permission".
 
 ## Blocker themes
 
-The 13 stories group into five blockers. Eight of the thirteen are the same one.
+The 14 stories group into five blockers. Nine of the fourteen are the same one.
 
-### 1. No synchronous schema or connection read exists in TypeScript (8 stories)
+### 1. No synchronous schema or connection read exists in TypeScript (9 stories)
 
 The dominant theme, and the reason three separate RFCs stalled at once. Ruby can
 execute SQL synchronously, so Rails resolves schema and connections inline:
@@ -78,6 +84,13 @@ an async builder.
 - `load-async-bypasses-exec-queries-prerequisites` — the two trails-only
   `execQueries` prerequisites (lazy schema reflection, deferred distinct-PK
   materialization) are exactly the async-ness above, leaking into ordering.
+- `pg-lookup-cast-type-resolves-only-warmed-type-names` — carried from
+  `0077-quoting-binds-fidelity` on 2026-08-29. Rails' PostgreSQL
+  `lookup_cast_type` (`postgresql/quoting.rb:194-197`) is a live
+  `SELECT ...::regtype::oid` query; trails' `lookupCastType` went synchronous in
+  #7189 to converge `quote_default_expression` (`abstract/quoting.rb:156-162`),
+  and node's pg client offers no synchronous query, so it resolves only names the
+  warm-up already holds. Unblocks if `lookupCastType` may become async again.
 
 These unblock together, not individually. The shape that closes them is a
 synchronous schema/query seam (or an async `toSql`/`arel` with every caller

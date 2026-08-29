@@ -2,7 +2,7 @@
 title: "PG lookup_cast_type resolves only warmed type names, where Rails queries regtype live"
 status: blocked
 updated: 2026-08-29
-rfc: "0077-quoting-binds-fidelity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
