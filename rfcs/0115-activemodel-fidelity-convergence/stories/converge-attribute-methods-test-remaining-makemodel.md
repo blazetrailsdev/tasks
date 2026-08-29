@@ -24,8 +24,7 @@ The last `makeModel()` callers in
 Rails counterparts in
 `vendor/rails/activerecord/test/cases/attribute_methods_test.rb`:
 
-- `aliasing \`id\` attribute allows reading the column value for a CPK model`
-  (:63) — reads `Cpk::Order` (`test-helpers/models/cpk.ts`'s `CpkOrder`).
+- `aliasing \`id\` attribute allows reading the column value for a CPK model`(:63) — reads`Cpk::Order` (`test-helpers/models/cpk.ts`'s `CpkOrder`).
 - `declared prefixed attribute method affects respond_to? and method_missing`
   (:656), `... suffixed ...` (:670), `... affixed ...` (:684) — these mutate
   `ActiveRecord::Base`'s `attribute_method_patterns`, which is why the Rails
