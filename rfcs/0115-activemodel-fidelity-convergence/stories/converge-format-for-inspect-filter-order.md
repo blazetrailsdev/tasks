@@ -20,7 +20,7 @@ closed-reason: null
 
 `format_for_inspect`
 (`vendor/rails/activerecord/lib/active_record/attribute_methods.rb:527-541`)
-computes `inspected_value` FIRST and then filters the resulting *string*:
+computes `inspected_value` FIRST and then filters the resulting _string_:
 
 ```ruby
 inspected_value = if value.is_a?(String) && value.length > 50
