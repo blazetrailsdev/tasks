@@ -66,6 +66,6 @@ must.
       `resolvePortedWithArgsSigs` reads, and that a sibling source file's does —
       i.e. the test fails if the guard is moved to the owner-map block.
 - [ ] No change to any parity number: `API_COMPARE_FORCE=1 pnpm parity:api
-    --calls` produces an identical artifact before and after.
+  --calls` produces an identical artifact before and after.
 - [ ] `pnpm parity:api:calls` / `pnpm parity:api:calls:args` stay green with no
       baseline row added and no mark reseeded.
