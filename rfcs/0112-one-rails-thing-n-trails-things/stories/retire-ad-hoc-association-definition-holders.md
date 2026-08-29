@@ -1,6 +1,6 @@
 ---
 title: "retire-ad-hoc-association-definition-holders"
-status: claimed
+status: ready
 updated: 2026-08-29
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-29T11:52:35Z"
-assignee: "association-helpers-extracted-for-the-collection-proxy"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

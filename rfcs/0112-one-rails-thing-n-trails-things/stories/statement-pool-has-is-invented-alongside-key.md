@@ -1,6 +1,6 @@
 ---
 title: "StatementPool#has is invented surface alongside the ported key?"
-status: claimed
+status: in-progress
 updated: 2026-08-29
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 7204
 claim: "2026-08-29T11:52:35Z"
 assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: 'columns_hash skips deep_deduplicate on its key and init_with drops coder["columns_hash"]'
-status: claimed
+status: in-progress
 updated: 2026-08-29
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 7204
 claim: "2026-08-29T11:52:35Z"
 assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null
