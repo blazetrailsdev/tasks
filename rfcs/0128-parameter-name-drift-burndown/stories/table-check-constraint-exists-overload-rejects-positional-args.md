@@ -1,6 +1,6 @@
 ---
 title: "Table#checkConstraintExists' overload rejects the positional args Rails accepts"
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null

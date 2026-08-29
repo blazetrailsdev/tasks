@@ -1,6 +1,6 @@
 ---
 title: "converge-alias-attribute-not-an-attribute-raise"
-status: claimed
+status: blocked
 updated: 2026-08-29
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 25
-pr: null
+pr: 7216
 claim: "2026-08-29T17:51:37Z"
 assignee: "converge-format-for-inspect-filter-order"
-blocked-by: null
+blocked-by: "Rails' raise fires at instantiation because load_schema! generates nothing (model_schema.rb:587-597); trails' defineAttributeMethodsAfterLoad (model-schema.ts:589) calls define_attribute_methods at the END OF A SCHEMA LOAD, so the raise fires at schema-load time instead and reds attributes.test.ts '.type_for_attribute supports attribute aliases' (attributes_test.rb:54), whose WithAlias aliases a non-attribute and is never instantiated. Dropping that generate call was tried on PR #7216 and reverted: the hook is load-bearing beyond instantiation -- base.trails.test.ts:277 ('first_name' in Developer.prototype), model-schema-load-own-table-descendant.trails.test.ts:76/100/113 (STI base _schemaLoaded) and secure-token.test.ts 'token calls the setter method' all red on 3 lanes without it. Converging the raise needs alias generation moved off the schema-load hook first (Rails keeps it lazy: generate_alias_attributes runs from define_attribute_methods, attribute_methods.rb:127-139). The PERMANENT receipt on aliasAttributeMethodDefinition was corrected to CONVERGEABLE pointing here."
 closed-reason: null
 ---
 

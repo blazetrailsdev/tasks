@@ -1,6 +1,6 @@
 ---
 title: "Converge HashAccessor's read/write helpers and prepare's extra branch to Rails"
-status: claimed
+status: ready
 updated: 2026-08-29
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: 23
 pr: null
-claim: "2026-08-29T17:51:37Z"
-assignee: "converge-format-for-inspect-filter-order"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

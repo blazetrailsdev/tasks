@@ -1,6 +1,6 @@
 ---
 title: "Rails API/Test Comparison failing on main @eefec341"
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0061-ci-failures"
 cluster: null

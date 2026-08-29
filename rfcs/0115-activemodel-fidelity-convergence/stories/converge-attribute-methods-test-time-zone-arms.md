@@ -1,6 +1,6 @@
 ---
 title: "converge-attribute-methods-test-time-zone-arms"
-status: claimed
+status: in-progress
 updated: 2026-08-29
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 24
-pr: null
+pr: 7216
 claim: "2026-08-29T17:51:37Z"
 assignee: "converge-format-for-inspect-filter-order"
 blocked-by: null

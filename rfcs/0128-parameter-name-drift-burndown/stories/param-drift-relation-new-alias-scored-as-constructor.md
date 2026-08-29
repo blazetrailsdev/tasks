@@ -1,6 +1,6 @@
 ---
 title: "param-drift-relation-new-alias-scored-as-constructor"
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
