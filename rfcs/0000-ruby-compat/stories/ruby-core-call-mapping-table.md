@@ -76,6 +76,14 @@ only by `parity:api:calls:args` (RFC 0095). Do not invent a second artifact tree
 Edit baseline JSON only through `serializeBaseline` and keep rows sorted; an
 appended row passes locally and reds CI's reseed-drift check.
 
+**Expected size, so the report can be sanity-checked rather than trusted.** The
+existing baselines already hold 251 Ruby-core rows out of 601 (Motivation §4 of
+the RFC) — ~76 `Hash`, 21 `Proc#call`, 12 `Array#join`/`String#split`, 10
+`Regexp`, 4 `Kernel#warn`. The report's Hash and Regexp numbers should land in
+the same order of magnitude as those. A report that comes back far smaller means
+the receiver keying is rejecting rows it should keep; far larger means it is
+crediting Rails homonyms. Say which in the PR body.
+
 **This story is report-only.** `pnpm parity:api:calls:ruby-compat:report`. No
 package is enrolled, no gate turns red, and nothing in the baselines moves.
 Enrollment is `enroll-call-mapping-in-parity-gate` and it is deliberately

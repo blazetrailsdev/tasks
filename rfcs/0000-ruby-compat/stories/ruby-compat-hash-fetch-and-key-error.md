@@ -28,6 +28,11 @@ call analogue" (`activesupport/src/json/encoding.ts:33-36`,
 `number-helper/number-to-delimited-converter.ts:25`,
 `number-helper/rounding-helper.ts:34`, and 22 more).
 
+On top of those receipts, `call-mismatches-exclude/` carries **14 baselined
+`fetch` rows and 14 `delete` rows** across actioncontroller, actiondispatch,
+activemodel, activerecord and rack — a second register of the same gap, which no
+single package's burndown will ever reach.
+
 Four private copies exist, three of them byte-identical:
 
 | Site                                                                 | Body                                                                                                                                                              |

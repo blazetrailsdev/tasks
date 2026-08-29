@@ -11,6 +11,8 @@ packages:
   - activemodel
   - activerecord
   - actionpack
+  - actioncontroller
+  - actiondispatch
   - actionview
   - rack
   - date
@@ -67,8 +69,9 @@ into a measurable call.
 Not a projection — these are grep results as of 2026-08-29:
 
 | Primitive                                       | Canonical copy                                           | Duplicates                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ----------------------------------------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | `Regexp.escape` (`re.c` `rb_reg_s_quote`)       | `activesupport/src/core-ext/regexp.ts:18` `regexpEscape` | `activerecord/src/support/quote-regex.ts:27` `escapeRegExp`, `activerecord/src/support/run-token.ts:23` `escapeRegExp`, `trailties/src/generators/trails-actions.ts:191` `escapeRegExp` — all three byte-identical to the canonical body                                                                                                                                                                                      |
+| `Kernel#Rational()`                             | `vendor/ruby/rational.c` (`nurat_s_convert`)             | nowhere                                                                                                                                                                                                                                                                                                                                                                                                                       | Rails calls the FUNCTION at 20 sites; the class alone cannot answer them |
 | `Hash#fetch(key, default)`                      | none — no canonical copy exists                          | `activerecord/src/connection-adapters/postgresql-adapter.ts:157`, `activerecord/src/connection-adapters/abstract-mysql-adapter.ts:127`, `activesupport/src/core-ext/string/conversions.ts:27` — three identical `key in hash ? hash[key] : defaultValue` bodies; plus the raising arm at `activesupport/src/core-ext/date-and-time/calculations.ts:201`                                                                       |
 | `KeyError`                                      | `activesupport/src/core-ext/key-error.ts:12`             | `actionpack/src/action-dispatch/middleware/cookies.ts:509` (a second class declaration), and **seven** sites that build a plain `Error` and assign `err.name = "KeyError"` (`actionpack/.../test-case.ts:822`, `.../strong-parameters.ts:505`, `.../mime-type.ts:475`, `activemodel/src/attribute-set/builder.ts:157`, `activemodel/src/attribute-set.ts:31`, `activerecord/src/token-for.ts:107`, `rack/src/request.ts:673`) |
 | Symbol discrimination (`":name"` per CLAUDE.md) | none                                                     | `i18n/src/backend/base.ts:241`, `.../fallbacks.ts:31`, `.../simple.ts:43`, `.../key-value.ts:64` — four identical private `isSymbol`; a fifth, differently-shaped, at `activemodel/src/validations/numericality.ts:179`                                                                                                                                                                                                       |
@@ -125,6 +128,55 @@ for one method:
 
 That is this RFC's thesis, already ratified for `empty?`. ruby-compat generalizes
 it and gives the generalization a package.
+
+### 4. The call baselines already hold the population, unlabelled
+
+The strongest evidence is the debt register itself.
+`scripts/api-compare/call-mismatches-exclude/` holds **601 baselined
+call-mismatch rows across 204 shards. 251 of them — 42% — name a Ruby core or
+Enumerable call**, not a Rails method:
+
+| Family                       | Rows | Names                                                                                                                                   |
+| ---------------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `Hash` mutation / iteration  | ~48  | `merge` 18, `merge!` 7, `delete_if` 4, `each_pair` 3, `each_key` 3, `update` 3, `transform_values` 3, `slice` 3, `except` 2, `reject` 2 |
+| `Hash` lookup / removal      | 28   | `fetch` 14, `delete` 14                                                                                                                 |
+| `Proc#call`                  | 21   | `call`                                                                                                                                  |
+| `Array#join`, `String#split` | 12   |                                                                                                                                         |
+| `Regexp`                     | 10   | `escape` 4, `match` 3, `match?` 3                                                                                                       |
+| `Kernel#warn`                | 4    |                                                                                                                                         |
+
+They are spread over seven packages, so no single package's burndown will ever
+reach them. And where a row was individually adjudicated rather than seeded, the
+reason text states this RFC's thesis outright:
+
+> `Hash#merge` has no JS call form — `@defaults.merge(path.requirements)`
+> (`route.rb:96`) is object spread `{ ...this.defaults, ...this.path.requirements }`.
+>
+> `Hash#delete_if` has no JS call form — `delete_if { |_, v| /.+?/m == v }`
+> (`route.rb:96-98`) is spelled as an `Object.entries` loop.
+>
+> `Hash#transform_values` has no JS call form (RFC 0092
+> positional-idiom-analogues); the TS counterpart is a plain object rebuilt by an
+> `Object.entries` loop.
+
+Each of those is correct as a description and permanent as a verdict, because
+nothing in the tree offers the call form they say is missing. That is precisely
+the gap a `Hash` in ruby-compat closes, and it is why the Hash scope below is
+the mutation and iteration family and not only `fetch`.
+
+**One row is a finding against this RFC's own design**, and it is the reason
+`Kernel#Rational()` is in scope:
+
+> `Rational()` is a Kernel FUNCTION in Ruby; the port's Rational is a class
+> (`@blazetrails/date` date.ts:1241) and JS has no way to construct one without
+> `new`, so the kwarg value is `new Rational(999999999, 1000)`. (A Kernel-style
+> `Rational()` factory would additionally have to canonicalize `Rational(n, 1)`
+> to an Integer, which `new Rational` deliberately does not.)
+
+Rails calls `Rational(...)` — the Kernel function, not the class — at **20 sites
+across activesupport and activerecord**. Moving the _class_ alone would leave
+every one of them unable to make the call. Ruby has both spellings and so must
+ruby-compat, with the different fold semantics that row already identifies.
 
 ## Relationship to RFC 0089
 
@@ -195,24 +247,35 @@ Two consequences the move stories inherit:
 
 The language-level value objects, and only the parts called today.
 
-| Primitive                                | Source of truth                   | Moves from                                                  | Why now                                                                                                |
-| ---------------------------------------- | --------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `Rational`                               | `vendor/ruby/rational.c`          | `date/src/date.ts:1241`                                     | Wrongly homed in a gem port; already crosses a package boundary into activemodel                       |
-| `Range` (+ its `String#succ` dependency) | `vendor/ruby/range.c`, `string.c` | `activesupport/src/range-ext.ts`, `core-ext/string/succ.ts` | The unanchored class four Rails `core_ext/range/*.rb` ports reopen; fixes a dependency inversion       |
-| `Hash` semantics                         | `vendor/ruby/hash.c`              | nowhere — 4 private copies                                  | Largest receipt population (`fetch` ×25, `key?`/`has_key?` globally suppressed)                        |
-| Symbol conventions                       | `vendor/ruby/symbol.c`            | nowhere — 5 private copies                                  | CLAUDE.md already fixes the `":name"` representation; nothing implements it once                       |
-| `Comparable`                             | `vendor/ruby/compar.c`            | nowhere — 3 private copies                                  | `<=>` is the operator every value type above is ordered by                                             |
-| `Regexp.escape`                          | `vendor/ruby/re.c`                | `activesupport/src/core-ext/regexp.ts:18`                   | Named explicitly by the maintainer; 3 duplicates; the one entry `CORE_LIBRARY_ALIASES` already carries |
+| Primitive                                | Source of truth                              | Moves from                                                  | Why now                                                                                                |
+| ---------------------------------------- | -------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `Rational`                               | `vendor/ruby/rational.c`                     | `date/src/date.ts:1241`                                     | Wrongly homed in a gem port; already crosses a package boundary into activemodel                       |
+| `Range` (+ its `String#succ` dependency) | `vendor/ruby/range.c`, `string.c`            | `activesupport/src/range-ext.ts`, `core-ext/string/succ.ts` | The unanchored class four Rails `core_ext/range/*.rb` ports reopen; fixes a dependency inversion       |
+| `Hash` semantics                         | `vendor/ruby/hash.c`                         | nowhere — 4 private copies                                  | Largest population twice over: 76 baseline rows plus 25 `fetch` receipts                               |
+| Symbol conventions                       | `vendor/ruby/symbol.c`                       | nowhere — 5 private copies                                  | CLAUDE.md already fixes the `":name"` representation; nothing implements it once                       |
+| `Comparable`                             | `vendor/ruby/compar.c`                       | nowhere — 3 private copies                                  | `<=>` is the operator every value type above is ordered by                                             |
+| `Regexp.escape`                          | `vendor/ruby/re.c`                           | `activesupport/src/core-ext/regexp.ts:18`                   | Named explicitly by the maintainer; 3 duplicates; the one entry `CORE_LIBRARY_ALIASES` already carries |
+| `Kernel#Rational()`                      | `vendor/ruby/rational.c` (`nurat_s_convert`) | nowhere                                                     | Rails calls the FUNCTION at 20 sites; the class alone cannot answer them                               |
 
-This set is scoped by the receipt tally, not by MRI's method list. In:
-`fetch` (both arms — the stored-`nil`/`false` return **and** the `KeyError` raise,
-which is the CLAUDE.md "fetch vs `??`" trap made callable), `key?` / `has_key?`,
-`default` / `default_proc` (needed by RFC 0128's
-`converge-alias-tracker-constructor-onto-rails-two-parameters`, which is blocked on
-a Ruby-Hash default proc existing), `dig`, and insertion-ordered non-string keys
-where a port needs them. Out, measured and named: **`compare_by_identity`** — its
-only occurrence is `rack/src/headers.ts:481`, a Rails-anchored override that raises
-`TypeError`, so nothing calls the real semantics.
+This set is scoped by what the tree actually calls — the `@missingRailsCall`
+receipts and the baseline rows in Motivation §4 — not by MRI's method list. In:
+
+- **Lookup:** `fetch` (both arms — the stored-`nil`/`false` return **and** the
+  `KeyError` raise, the CLAUDE.md "fetch vs `??`" trap made callable), `key?` /
+  `has_key?`, `dig`, `delete`.
+- **Mutation and iteration**, which the baselines show is the larger half and
+  which an earlier draft of this RFC missed entirely: `merge`, `merge!`,
+  `update`, `delete_if`, `each_pair`, `each_key`, `transform_values`, `reject`,
+  `slice`, `except`. Every one is a row whose adjudicated reason is "has no JS
+  call form", ported as an object spread or an `Object.entries` loop.
+- **`default` / `default_proc`**, needed by RFC 0128's
+  `converge-alias-tracker-constructor-onto-rails-two-parameters`, which is
+  blocked on a Ruby-Hash default proc existing.
+- Insertion-ordered non-string keys where a port needs them.
+
+Out, measured and named: **`compare_by_identity`** — its only occurrence is
+`rack/src/headers.ts:481`, a Rails-anchored override that raises `TypeError`, so
+nothing calls the real semantics.
 
 #### Deferred — listed and sized, deliberately not scheduled
 
@@ -438,6 +501,11 @@ edge.
   calls a package can supply. Only `key?` / `has_key?` are this RFC's to
   discharge. A Ruby `Mutex` is deferred and is the only thing that could revisit
   `synchronize`.
+- **Rails' own Hash core_ext.** `deep_transform_keys` / `deep_transform_keys!`
+  (5 baseline rows) and `reverse_merge` are ActiveSupport extensions with real
+  `.rb` counterparts, not Ruby core. They stay in activesupport and are excluded
+  from the ~48-row figure above; `slice` and `except` ARE Ruby core (2.5 / 3.0)
+  and are in scope.
 - **Rails-anchored `core_ext` files.** `core-ext/kernel/`, `core-ext/numeric/`,
   `core-ext/securerandom.ts` have real `.rb` counterparts; moving them would
   charge Rails' surface to a non-Rails package and destroy working `parity:api`
@@ -523,6 +591,7 @@ Each is cited in the story that touches it.
    `move-range-core-and-succ-to-ruby-compat`, `move-rational-to-ruby-compat`,
    `ruby-compat-symbol-conventions`, `ruby-compat-comparable`,
    `ruby-compat-hash-fetch-and-key-error`, then
+   `ruby-compat-hash-merge-and-iteration` and
    `ruby-compat-hash-default-proc-and-dig`. Independent of each other; each
    leaves a shim.
 3. **Phase 2 — measurement.** `ruby-core-call-mapping-table` (report-only) →
@@ -542,20 +611,24 @@ have proved out.
 
 Numbers, measured on 2026-08-29 and closed against at the end of Phase 3.
 
-| Metric                                         | Command                                                                                                                   | Today                                                                                                                                                        | Target                                                          |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
-| Private `escapeRegExp` copies                  | `grep -rn "function escapeRegExp" packages/*/src --include=*.ts \| grep -v "\.test\."`                                    | 3                                                                                                                                                            | **0**                                                           |
-| Private `fetch(hash, key, default)` copies     | `grep -rn "^function fetch" packages/*/src --include=*.ts`                                                                | 4                                                                                                                                                            | **0**                                                           |
-| Private `isSymbol` copies                      | `grep -rn "function isSymbol" packages/*/src --include=*.ts \| grep -v "\.test\."`                                        | 5                                                                                                                                                            | **0**                                                           |
-| Hand-rolled `<=>`                              | `grep -rnE "^function (cmp\|compare\|spaceship)\(" packages/*/src --include=*.ts \| grep -v "\.test\."`                   | 3 (a 4th, `date/src/test-date.test.ts:37`, is test-local)                                                                                                    | **0**                                                           |
-| `Rational` declarations                        | `grep -rnE "(class\|interface) Rational\b" packages/*/src --include=*.ts \| grep -v "\.test\."`                           | 2                                                                                                                                                            | **1**                                                           |
-| `KeyError` class declarations                  | `grep -rn "class KeyError" packages/*/src --include=*.ts \| grep -v "\.test\."`                                           | 2                                                                                                                                                            | **1**                                                           |
-| Ad-hoc `err.name = "KeyError"` sites           | `grep -rn 'name = "KeyError"' packages/*/src --include=*.ts \| grep -v "\.test\."` — 9 hits, less the 2 real class bodies | 7                                                                                                                                                            | **0**                                                           |
-| `@missingRailsCall fetch` receipts             | `grep -rh "@missingRailsCall fetch" packages/*/src --include=*.ts \| wc -l`                                               | 25                                                                                                                                                           | **0**                                                           |
-| `NO_JS_CALL_FORM` entries                      | `compare.ts:249`                                                                                                          | 9                                                                                                                                                            | **7**                                                           |
-| `no-ruby-compat-reimplementation` exclude rows | the JSON's length                                                                                                         | seeded at today's duplicate DECLARATIONS (**17** = 3+4+5+3+1+1; the seven `err.name` sites are assignments, not declarations, so the rule does not see them) | **0**                                                           |
-| `ruby-compat` extra-surface `novel`            | `pnpm parity:api:extra --package ruby-compat`                                                                             | n/a                                                                                                                                                          | **= total**, monotonically non-increasing after each enrollment |
-| `parity:api` / `parity:test` deltas            | the two commands                                                                                                          | —                                                                                                                                                            | **non-negative at every story**                                 |
+| Metric                                         | Command                                                                                                                   | Today                                                                                                                                                        | Target                                                                     |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| Private `escapeRegExp` copies                  | `grep -rn "function escapeRegExp" packages/*/src --include=*.ts \| grep -v "\.test\."`                                    | 3                                                                                                                                                            | **0**                                                                      |
+| Private `fetch(hash, key, default)` copies     | `grep -rn "^function fetch" packages/*/src --include=*.ts`                                                                | 4                                                                                                                                                            | **0**                                                                      |
+| Private `isSymbol` copies                      | `grep -rn "function isSymbol" packages/*/src --include=*.ts \| grep -v "\.test\."`                                        | 5                                                                                                                                                            | **0**                                                                      |
+| Hand-rolled `<=>`                              | `grep -rnE "^function (cmp\|compare\|spaceship)\(" packages/*/src --include=*.ts \| grep -v "\.test\."`                   | 3 (a 4th, `date/src/test-date.test.ts:37`, is test-local)                                                                                                    | **0**                                                                      |
+| `Rational` declarations                        | `grep -rnE "(class\|interface) Rational\b" packages/*/src --include=*.ts \| grep -v "\.test\."`                           | 2                                                                                                                                                            | **1**                                                                      |
+| `KeyError` class declarations                  | `grep -rn "class KeyError" packages/*/src --include=*.ts \| grep -v "\.test\."`                                           | 2                                                                                                                                                            | **1**                                                                      |
+| Ad-hoc `err.name = "KeyError"` sites           | `grep -rn 'name = "KeyError"' packages/*/src --include=*.ts \| grep -v "\.test\."` — 9 hits, less the 2 real class bodies | 7                                                                                                                                                            | **0**                                                                      |
+| `@missingRailsCall fetch` receipts             | `grep -rh "@missingRailsCall fetch" packages/*/src --include=*.ts \| wc -l`                                               | 25                                                                                                                                                           | **0**                                                                      |
+| `NO_JS_CALL_FORM` entries                      | `compare.ts:249`                                                                                                          | 9                                                                                                                                                            | **7**                                                                      |
+| `no-ruby-compat-reimplementation` exclude rows | the JSON's length                                                                                                         | seeded at today's duplicate DECLARATIONS (**17** = 3+4+5+3+1+1; the seven `err.name` sites are assignments, not declarations, so the rule does not see them) | **0**                                                                      |
+| `ruby-compat` extra-surface `novel`            | `pnpm parity:api:extra --package ruby-compat`                                                                             | n/a                                                                                                                                                          | **= total**, monotonically non-increasing after each enrollment            |
+| Ruby-core rows in `call-mismatches-exclude/`   | the aggregate in Motivation §4                                                                                            | 251 of 601 (42%)                                                                                                                                             | **every row ruby-compat gives a call form is burned down, per enrollment** |
+| — of which `Hash`                              | the 12 Hash names above                                                                                                   | ~76                                                                                                                                                          | **0**                                                                      |
+| — of which `Regexp`                            | `escape` / `match` / `match?`                                                                                             | 10                                                                                                                                                           | **0**                                                                      |
+| Rails `Rational(...)` sites trails cannot call | `grep -rn "Rational(" vendor/rails/{activesupport,activerecord}/lib`                                                      | 20, none callable                                                                                                                                            | **all callable**                                                           |
+| `parity:api` / `parity:test` deltas            | the two commands                                                                                                          | —                                                                                                                                                            | **non-negative at every story**                                            |
 
 The RFC has failed, regardless of how much code moved, if the duplicate counts
 are not zero — relocation without convergence is the outcome it exists to
@@ -592,7 +665,19 @@ Each must be resolved or deferred to a named story before `status: active`.
    the answer; if the extractor cannot read them, that story blocks and the
    citation lint remains the package's only anchor — which is still stronger
    than RFC 0089's position.
-5. **Should `activesupport`'s public surface keep re-exporting `Range` and
+5. **Is `Proc#call` worth a ruby-compat spelling?** 21 baseline rows name it,
+   with an explicit adjudicated reason — "Ruby `Proc#call` has no JS
+   counterpart: the generator is invoked as a plain call, `generator(this)`,
+   since JS `Function#call` would bind the argument as the receiver instead of
+   passing it." A `call(proc, ...args)` export would give the gate a callee, the
+   same trade this RFC makes for `empty?` and `fetch`. But it is invasive in a
+   way those are not: it wraps _every function invocation_ in a ported body, and
+   `fn(x)` reads better than `call(fn, x)` to exactly the Rails developer the
+   fidelity bar is written for. **Recommendation:** out of scope; revisit only
+   with the mapping table's measured report in hand. Flagged rather than
+   silently omitted because it is the third-largest Ruby-core family in the
+   baselines.
+6. **Should `activesupport`'s public surface keep re-exporting `Range` and
    `KeyError`?** Deferred to `delete-ruby-compat-reexport-shims`, which requires
    a per-export decision stated in its PR body rather than an accidental
    narrowing.

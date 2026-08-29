@@ -14,6 +14,7 @@ deps:
     "ruby-compat-symbol-conventions",
     "ruby-compat-comparable",
     "ruby-compat-hash-fetch-and-key-error",
+    "ruby-compat-hash-merge-and-iteration",
     "ruby-compat-hash-default-proc-and-dig",
   ]
 deps-rfc: []
