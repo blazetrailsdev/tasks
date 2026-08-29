@@ -1,6 +1,6 @@
 ---
 title: "Retire the trails-only _preloadedHolderTarget reader onto Rails' loaded?/stale_target?/load_target"
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null

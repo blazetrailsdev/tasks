@@ -1,6 +1,6 @@
 ---
 title: "PG lookup_cast_type resolves only warmed type names, where Rails queries regtype live"
-status: draft
+status: ready
 updated: 2026-08-29
 rfc: "0077-quoting-binds-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: 'columns_hash skips deep_deduplicate on its key and init_with drops coder["columns_hash"]'
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null

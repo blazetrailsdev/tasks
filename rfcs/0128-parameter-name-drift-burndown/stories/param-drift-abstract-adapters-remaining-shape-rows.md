@@ -1,6 +1,6 @@
 ---
 title: "Parameter-name drift: the abstract-adapter rows that are a signature SHAPE, not a spelling"
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity

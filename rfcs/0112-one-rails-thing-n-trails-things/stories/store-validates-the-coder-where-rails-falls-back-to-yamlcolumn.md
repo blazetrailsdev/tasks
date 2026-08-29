@@ -1,6 +1,6 @@
 ---
 title: "store() raises on a non-coder where Rails falls back to YAMLColumn"
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
