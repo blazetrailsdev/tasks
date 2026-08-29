@@ -1,7 +1,7 @@
 ---
 title: "Converge Ruby public_instance_methods onto one ActiveSupport helper"
-status: draft
-updated: 2026-08-20
+status: in-progress
+updated: 2026-08-29
 rfc: "0082-ruby-ts-idiom-conversion-classes"
 cluster: null
 packages: ["activesupport", "activerecord"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: null
+pr: 7194
 claim: null
 assignee: null
 blocked-by: null

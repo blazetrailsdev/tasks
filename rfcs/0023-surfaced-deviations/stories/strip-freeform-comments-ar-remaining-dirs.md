@@ -1,7 +1,7 @@
 ---
 title: "Enrol ALL of activerecord in no-freeform-comments and sweep it in one PR"
-status: draft
-updated: 2026-08-28
+status: in-progress
+updated: 2026-08-29
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,8 +10,8 @@ deps:
   - "no-freeform-comments-repo-wide-and-drop-cites-gate"
 deps-rfc: []
 est-loc: 9000
-priority: 2
-pr: null
+priority: null
+pr: 7195
 claim: null
 assignee: null
 blocked-by: null

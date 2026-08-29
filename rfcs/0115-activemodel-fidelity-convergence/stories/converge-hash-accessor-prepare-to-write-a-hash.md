@@ -1,7 +1,7 @@
 ---
 title: "converge-hash-accessor-prepare-to-write-a-hash"
-status: in-progress
-updated: 2026-08-28
+status: done
+updated: 2026-08-29
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []

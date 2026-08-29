@@ -1,7 +1,7 @@
 ---
 title: "Parameter-name drift: activerecord postgresql, mysql and sqlite3 adapters"
-status: in-progress
-updated: 2026-08-28
+status: done
+updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:
