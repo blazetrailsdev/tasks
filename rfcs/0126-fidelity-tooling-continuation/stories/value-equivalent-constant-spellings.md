@@ -1,6 +1,6 @@
 ---
 title: "Value-equivalent constant spellings should not count as argument divergence"
-status: claimed
+status: done
 updated: 2026-08-29
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 3
-pr: null
+pr: 7210
 claim: "2026-08-29T14:33:51Z"
 assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null

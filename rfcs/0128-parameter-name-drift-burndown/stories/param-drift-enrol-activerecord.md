@@ -1,7 +1,7 @@
 ---
 title: "Enrol activerecord in the parameter-name gate once its six slices land"
-status: draft
-updated: 2026-08-28
+status: blocked
+updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:
@@ -16,11 +16,11 @@ deps:
   - param-drift-positional-misalignment-is-a-dropped-parameter
 deps-rfc: []
 est-loc: 30
-priority: 3
+priority: 5
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "activerecord is not at 0 param-name rows yet: its six declared slice deps are all done, but seven residual activerecord stories filed after this one still hold open rows — param-drift-activerecord-remainder-residual-four, param-drift-associations-constructors-take-an-extra-parameter, param-drift-column-constructors-anonymous-splat, param-drift-create-record-mixin-layers-and-inlined-partial-inserts, param-drift-execute-binds-slot-family-convergence, param-drift-relation-new-alias-scored-as-constructor, plus the two constructor-convergence stories. Its acceptance criterion is a 0-row run, so unblock only once those land (the CLI has no set-deps verb, so this is recorded as a block rather than a deps edge)."
 closed-reason: null
 ---
 

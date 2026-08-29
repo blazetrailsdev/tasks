@@ -1,7 +1,7 @@
 ---
 title: "Parameter-name drift: actiondispatch"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:

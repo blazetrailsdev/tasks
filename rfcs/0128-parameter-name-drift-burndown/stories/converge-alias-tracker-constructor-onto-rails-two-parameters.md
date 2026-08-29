@@ -1,14 +1,14 @@
 ---
 title: "AliasTracker#initialize takes two extra parameters standing in for Hash#default_proc"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
