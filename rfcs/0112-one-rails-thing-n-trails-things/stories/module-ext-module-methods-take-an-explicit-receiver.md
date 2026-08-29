@@ -58,10 +58,10 @@ Each function becomes `this`-typed, keeping the Rails parameter names and Rails'
 splat:
 
 ```ts
-export function mattrReader(this: any, ...syms: [...string[], MattrOptions?]): void
-export function delegate(this: object, ...methods: [...string[], DelegateOptions]): string[]
-export function rescueFrom(this: any, ...klasses: [...ErrorClass[], { with?: ErrorHandler }]): void
-export function attrInternalReader(this: object, ...attrs: string[]): void
+export function mattrReader(this: any, ...syms: [...string[], MattrOptions?]): void;
+export function delegate(this: object, ...methods: [...string[], DelegateOptions]): string[];
+export function rescueFrom(this: any, ...klasses: [...ErrorClass[], { with?: ErrorHandler }]): void;
+export function attrInternalReader(this: object, ...attrs: string[]): void;
 ```
 
 Call sites move from `mattrAccessor(K, ["a"], opts)` to
