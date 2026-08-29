@@ -1,6 +1,6 @@
 ---
 title: "Credit the fs-adapter's Node spellings as the File.exist?/stat/rename calls"
-status: claimed
+status: in-progress
 updated: 2026-08-29
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 3
-pr: null
+pr: 7213
 claim: "2026-08-29T17:33:51Z"
 assignee: "param-drift-relation-new-alias-scored-as-constructor"
 blocked-by: null

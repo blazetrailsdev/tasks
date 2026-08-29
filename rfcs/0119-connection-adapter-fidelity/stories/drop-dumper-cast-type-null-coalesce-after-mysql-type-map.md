@@ -1,6 +1,6 @@
 ---
 title: "Drop the schema-dumper cast-type null coalesce once the MySQL type-map lookup converges"
-status: claimed
+status: in-progress
 updated: 2026-08-29
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: 7213
 claim: "2026-08-29T17:33:51Z"
 assignee: "param-drift-relation-new-alias-scored-as-constructor"
 blocked-by: null

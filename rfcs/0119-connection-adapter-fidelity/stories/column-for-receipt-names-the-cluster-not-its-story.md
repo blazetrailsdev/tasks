@@ -1,7 +1,7 @@
 ---
 title: "column_for's receipt names the cluster story, not mysql-mismatched-fk-details-omits-primary-key-column"
-status: ready
-updated: 2026-08-28
+status: in-progress
+updated: 2026-08-29
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7215
+claim: "2026-08-29T18:33:52Z"
+assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null
 closed-reason: null
 ---

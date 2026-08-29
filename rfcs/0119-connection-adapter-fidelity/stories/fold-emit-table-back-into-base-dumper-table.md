@@ -1,16 +1,16 @@
 ---
 title: "fold-emit-table-back-into-base-dumper-table"
-status: ready
-updated: 2026-08-25
+status: done
+updated: 2026-08-29
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7094
+claim: "2026-08-29T18:33:52Z"
+assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null
 closed-reason: null
 ---

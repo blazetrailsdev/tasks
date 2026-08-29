@@ -1,6 +1,6 @@
 ---
 title: "param-drift-relation-new-alias-scored-as-constructor"
-status: claimed
+status: in-progress
 updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: 7213
 claim: "2026-08-29T17:33:51Z"
 assignee: "param-drift-relation-new-alias-scored-as-constructor"
 blocked-by: null
