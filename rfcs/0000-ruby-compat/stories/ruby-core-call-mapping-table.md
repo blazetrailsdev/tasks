@@ -3,7 +3,7 @@ title: "A Ruby-core to ruby-compat call resolution table, report-only, folding i
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat"]
 deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
@@ -59,7 +59,8 @@ must keep flagging normally. The comparator's available receiver signals are RFC
 0083's inert-receiver filter (`dropWeakCalls`) and the `FOREIGN_READ_PREFIX`
 marking (`enumerable-idioms.ts:126-140`). **Where the receiver cannot be
 resolved, the row does not go in the table** — an unresolvable row credits a
-Rails `fetch` for a Ruby one, which is worse than the status quo. Phase 1 is
+Rails `fetch` for a Ruby one, which is worse than the status quo. The value-type
+set is
 ~25 members, so per-row adjudication is tractable; that is a further reason the
 "only what we call" rule matters.
 

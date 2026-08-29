@@ -3,7 +3,7 @@ title: "Rational moves out of the date gem port into ruby-compat, removing activ
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat", "date", "activemodel"]
 deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
@@ -40,6 +40,19 @@ imported across a package boundary by activemodel —
 (`decimal.test.ts:3,36-49`, `time-value.test.ts:2,104-116`). activemodel
 depending on the date gem package to cast a decimal is an edge that exists only
 because the value type has no home.
+
+**There is a FOURTH `Rational`, and this story absorbs it.**
+`packages/activesupport/src/message-pack/extensions.ts:27-48` declares its own
+local `interface Rational { numerator: number; denominator: number }` and its own
+`rational()` reduction (a `gcd` cancel with a sign fix and a
+`ZeroDivisionError("divided by 0")` raise). RFC 0041's draft story
+`messagepack-rational-duplicates-the-ported-rational` opens with the line "Ruby
+has exactly one `Rational`. trails has two, and only one of them is the port."
+Converge it here — the messagepack extension calls the shared class — and the PR
+body says so, so that story can be closed rather than left pointing at a package
+that has moved. Watch the type difference: the local shape is `number`-backed
+where the port is `bigint`-backed, which is a real behavioural change at the
+messagepack boundary and needs its round-trip test exercised, not assumed.
 
 Related in-file: `wholenumP` (referenced from the same JSDoc) and `floatToR` —
 check whether each is Rational's or the date port's, and split accordingly.

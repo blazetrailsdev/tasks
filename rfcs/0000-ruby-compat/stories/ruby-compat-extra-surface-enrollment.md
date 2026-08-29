@@ -3,7 +3,7 @@ title: "Enroll ruby-compat in the extra-surface gate so the only-what-we-call ru
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat"]
 deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
@@ -38,6 +38,12 @@ exact proxy for "how much MRI surface have we ported".
 `parity:api:extra:tighten` writes marks DOWN and there is no reseed
 (`extra-surface-mark.ts:144-149` refuses an unseeded gated package, so the two
 edits must land together).
+
+**Coordinate with RFC 0025's `triage-no-counterpart-extra-surface-population`
+(ready).** That story triages exactly the `rubyFile === null` slice ruby-compat
+lands in, and a package arriving in that slice mid-triage will move its numbers.
+Check its state before seeding, and if it is in flight, say so in the PR body and
+agree the ordering rather than racing it.
 
 Do this immediately after the skeleton, while the mark is 0/0. Enrolling later
 means seeding a non-zero mark, and a non-zero seed is a licence to sit at it.

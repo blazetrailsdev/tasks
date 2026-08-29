@@ -3,7 +3,7 @@ title: "Retire the NO_JS_CALL_FORM entries and @missingRailsCall receipts that r
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat", "activesupport", "activerecord", "activemodel", "actionpack"]
 deps: ["enroll-call-mapping-remaining-packages", "ruby-compat-hash-fetch-and-key-error"]
 deps-rfc: []
@@ -41,7 +41,7 @@ precedent:** `to_s` (a template literal), `each` (a `for…of`), `catch` (a clau
 not a callee — `compare.ts:263-269`), `synchronize` (JS has no mutex —
 `compare.ts:271-278`), `present?` / `blank?` / `to_str` (truthiness and implicit
 coercion). Those are language constructs, not calls a package can supply. A Ruby
-`Mutex` is a **Phase 2** item and would be the only thing that could revisit
+`Mutex` is **deferred** by the RFC and would be the only thing that could revisit
 `synchronize`.
 
 **`@missingRailsCall` receipts.** 373 exist across `packages/*/src`. The ones this
@@ -52,6 +52,14 @@ ruby-compat now exports — chiefly the **25 `fetch`** receipts
 `number-helper/rounding-helper.ts:34`, and 22 more). Each is retired by making the
 call, not by rewording the receipt. A receipt whose reason is something else
 entirely stays.
+
+**Prior art.** RFC 0106's `audit-missing-rails-call-permanence-claims` (done,
+PR #6855) audited whether `@missingRailsCall … PERMANENT` claims were actually
+permanent. Read its verdict before re-auditing: the `fetch` receipts were
+defensible _then_, because no call form existed. This story is not overturning
+that audit — it is discharging the receipts whose premise the package has
+changed. RFC 0106's `port-hash-fetch-semantics-validate-and-seeds` (done, #6673)
+established the semantics at specific sites and is the behavioural reference.
 
 Deleting a receipt or a suppression makes previously-hidden calls visible, which
 lowers no mark by itself but WILL surface rows. Follow the only-shrink discipline:

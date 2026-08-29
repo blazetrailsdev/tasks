@@ -3,7 +3,7 @@ title: "Enroll the remaining packages in the ruby-compat call gate, activerecord
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages:
   ["ruby-compat", "activemodel", "actionpack", "actionview", "trailties", "date", "activerecord"]
 deps: ["enroll-call-mapping-i18n-and-activesupport"]

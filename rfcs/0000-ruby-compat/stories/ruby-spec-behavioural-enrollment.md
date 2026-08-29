@@ -3,7 +3,7 @@ title: "Enroll vendor/ruby's in-tree ruby/spec suite as ruby-compat's behavioura
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat"]
 deps: ["vendor-ruby-mri-source", "ruby-compat-package-skeleton"]
 deps-rfc: []
@@ -23,13 +23,13 @@ closed-reason: null
 `date` gem and `vendor/sources.ts:190-206` records. `parity:test` is different:
 MRI mirrors the ruby/spec suite in-tree at `spec/ruby/`, so the source vendored
 by `vendor-ruby-mri-source` already contains a behavioural suite covering exactly
-the Phase 1 primitives — `spec/ruby/core/rational`, `core/range`, `core/string`,
+the value-type primitives — `spec/ruby/core/rational`, `core/range`, `core/string`,
 `core/hash`, `core/symbol`, `core/comparable`, `core/regexp`.
 
 This is what RFC 0089 wanted from a separate `ruby/spec` clone and no longer
 needs one for.
 
-**Scope it to the Phase 1 primitives.** Enrolling all of `spec/ruby` would
+**Scope it to the value-type primitives.** Enrolling all of `spec/ruby` would
 present thousands of unported test names and drown the compare output; the
 enrollment is per-directory and grows with the package.
 
@@ -50,7 +50,7 @@ here — check how the extractor handles a spec-shaped file before assuming.
 ## Acceptance criteria
 
 - `compareTests` enabled for the `ruby` source with a `testPath` scoped to the
-  Phase 1 spec directories (and a comment saying the scoping is deliberate and
+  value-type spec directories (and a comment saying the scoping is deliberate and
   grows with the package).
 - All four `parity:test` enrollment registrations completed, including the
   assertion-mismatch mark.

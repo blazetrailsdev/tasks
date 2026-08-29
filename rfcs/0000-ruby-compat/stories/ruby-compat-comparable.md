@@ -3,7 +3,7 @@ title: "One Comparable / <=> for the three hand-rolled spaceship implementations
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat", "activesupport", "date"]
 deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
@@ -46,7 +46,7 @@ they do not ship.
 
 This story interacts with two others: `range-ext.ts:15` moves as part of the
 Range story (coordinate — the `cmp` body belongs here, the class there), and
-`rb-equal.ts` (`object.c` `rb_equal`) is the `==` arm and is a **Phase 2** item,
+`rb-equal.ts` (`object.c` `rb_equal`) is the `==` arm and is **deferred** (see the RFC's _Deferred_ table),
 so this story must not quietly pull it in.
 
 Use the repo's settled mixin idiom (CLAUDE.md "Module mixins"): `include()` /

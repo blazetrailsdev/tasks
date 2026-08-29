@@ -3,7 +3,7 @@ title: "Report-only structural detection of ruby-compat primitives re-implemente
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat"]
 deps: ["no-ruby-compat-reimplementation-lint"]
 deps-rfc: []

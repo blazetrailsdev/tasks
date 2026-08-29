@@ -1,9 +1,9 @@
 ---
-title: "Delete the re-export shims left by the Phase 1 moves and repoint the stale RFC 0089 citations"
+title: "Delete the re-export shims left by the value-type moves and repoint the stale RFC 0089 citations"
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages:
   ["ruby-compat", "activesupport", "activerecord", "activemodel", "actionpack", "date", "i18n"]
 deps:
@@ -28,7 +28,7 @@ closed-reason: null
 
 ## Context
 
-The last story of Phase 1. Each move story left a re-export shim at the old path
+The last story of the value-type moves. Each move story left a re-export shim at the old path
 so its PR stayed a reviewable move and every existing import kept working; the
 shims are the thing that let seven moves ship independently and be reverted
 independently. This story removes them once every caller has been flipped.
@@ -55,11 +55,11 @@ unanchored Ruby primitives (`range-ext.ts`, `include.ts`,
 `core-ext/string/succ.ts`) until RFC 0089 (`corelib-primitives`) reactivates and
 re-homes them together"), and `:233`. Two of the three files it names will have
 moved, so the sentence becomes false. Repoint all five at this RFC and correct
-the file list. `Tempfile` itself is a **Phase 2** item and does not move here.
+the file list. `Tempfile` itself is **deferred** and does not move here.
 
 ## Acceptance criteria
 
-- Every Phase 1 re-export shim deleted; no import in the tree resolves through
+- Every value-type re-export shim deleted; no import in the tree resolves through
   one.
 - Each affected package's public surface is either preserved (index re-exports
   from `@blazetrails/ruby-compat`) or deliberately changed with the change stated

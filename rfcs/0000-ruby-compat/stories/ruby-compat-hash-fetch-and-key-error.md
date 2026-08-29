@@ -3,7 +3,7 @@ title: "Hash#fetch (both arms) and KeyError land in ruby-compat, replacing four 
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat", "activesupport", "activerecord", "activemodel", "actionpack"]
 deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
@@ -52,7 +52,17 @@ declaration** at `actionpack/src/action-dispatch/middleware/cookies.ts:509`, and
 `actionpack/.../http/mime-type.ts:475`,
 `activemodel/src/attribute-set/builder.ts:157`,
 `activemodel/src/attribute-set.ts:31`,
-`activerecord/src/token-for.ts:107`.
+`activerecord/src/token-for.ts:107`,
+`rack/src/request.ts:673`.
+
+(`grep -rn 'name = "KeyError"' packages/*/src` returns 9; two of those are the
+real class bodies — the canonical `key-error.ts:15` and the duplicate
+`cookies.ts:512` — leaving seven ad-hoc assignments.)
+
+RFC 0111's draft `one-shared-nomethoderror-class` is the same consolidation for
+a sibling Ruby core error class; follow its shape rather than inventing a second
+one, and if it has landed by the time this story runs, reuse whatever home it
+chose for `NameError` / `NoMethodError`.
 
 The message format matters and is already settled by
 `key-error.ts:7-10`: a Symbol key keeps its colon (`key not found: :expression`
@@ -76,7 +86,7 @@ every options-hash port forever **with no way to ever discharge it**." A callabl
 - `KeyError` moves to ruby-compat; `activesupport/src/core-ext/key-error.ts`
   becomes a re-export shim so `@blazetrails/activesupport`'s export
   (`index.ts:2`) is unchanged.
-- The duplicate class at `cookies.ts:509` is deleted and all six
+- The duplicate class at `cookies.ts:509` is deleted and all seven ad-hoc
   `err.name = "KeyError"` sites construct the real class instead.
 - All four private `fetch` helpers deleted, callers importing the shared export;
   `conversions.ts:20-26`'s JSDoc explaining the `:offset` case carries across.

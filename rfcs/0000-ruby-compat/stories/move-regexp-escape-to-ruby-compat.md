@@ -3,7 +3,7 @@ title: "Regexp.escape moves to ruby-compat and the three private escapeRegExp co
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat", "activesupport", "activerecord", "trailties", "actionpack", "actionview"]
 deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
@@ -70,6 +70,13 @@ what stops the fourth.
 It also pinned the MRI-subset escape set with a `.trails.test.ts` specifically so
 it would not be "fixed" to MRI-exact later. **That test moves with the code and
 keeps its name.**
+
+**A stale sibling to resolve.** RFC 0023's draft
+`converge-regexp-escape-onto-one-ported-call` describes the same seven baseline
+rows that #7169 already converged, and its "Converged shape" says the home is
+"wherever the corelib primitives land (RFC 0089)". Both premises are now out of
+date. Re-point it at this RFC or close it as done-by-#7169 — decide which in this
+PR's body, and do not leave a second story claiming to own `Regexp.escape`.
 
 Note `quote-regex.ts` is otherwise an adapter-dispatch module; `escapeRegExp`
 is an unrelated passenger in it and simply leaves.

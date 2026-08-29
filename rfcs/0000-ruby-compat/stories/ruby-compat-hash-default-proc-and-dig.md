@@ -3,7 +3,7 @@ title: "Hash default / default_proc and dig, scoped by a measured call-site inve
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat", "activesupport", "activerecord"]
 deps: ["ruby-compat-hash-fetch-and-key-error"]
 deps-rfc: []
@@ -45,6 +45,17 @@ and trails' takes four, because `create` builds an `aliases` Hash whose
 into the constructor". That story's proposed shape — "a Map subclass whose `get`
 miss runs the closure `create` built" — **is** this primitive. Coordinate: this
 story supplies it, that story consumes it.
+
+**This story answers an existing open question.** RFC 0023's draft
+`plain-object-has-no-hash-default-seat` (surfaced by PR #6626, which gave HWIA a
+real `default` / `default_proc` seat) says in as many words: "Decide where a
+plain-object default seat lives." It lists the sites that lose the seat —
+`to_hash` (`hash_with_indifferent_access.rb:376-381`) calling `set_defaults(copy)`
+on the plain Hash it returns, and `Hash#slice!` (`core_ext/hash/slice.rb:13-14`)
+doing `hash.default = default` / `hash.default_proc = default_proc if
+default_proc`, for which `core-ext/hash/slice.ts` already carries a
+`@missingRailsCall default`. This package is the answer to that question; adopt
+those sites here and record in the PR body that the 0023 story is discharged.
 
 **`dig`.** Rails-anchored `dig` methods (`actionpack/.../request/session.ts:258`,
 `.../strong-parameters.ts:509`, `.../test-case.ts:795`) stay put — they are ports

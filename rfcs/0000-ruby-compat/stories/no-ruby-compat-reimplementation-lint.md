@@ -3,7 +3,7 @@ title: "A lint that fails a re-implementation of a ruby-compat primitive outside
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat"]
 deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []

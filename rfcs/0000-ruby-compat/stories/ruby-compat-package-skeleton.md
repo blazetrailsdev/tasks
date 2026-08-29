@@ -3,7 +3,7 @@ title: "Create packages/ruby-compat: an empty leaf package wired into the worksp
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat"]
 deps: ["vendor-ruby-mri-source"]
 deps-rfc: []

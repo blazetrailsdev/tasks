@@ -3,7 +3,7 @@ title: "Require every ruby-compat export to carry a resolvable vendor/ruby citat
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat"]
 deps: ["vendor-ruby-mri-source", "ruby-compat-package-skeleton"]
 deps-rfc: []

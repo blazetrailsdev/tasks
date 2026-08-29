@@ -3,7 +3,7 @@ title: "One Symbol implementation for the colon-prefixed convention, replacing f
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat", "i18n", "activemodel"]
 deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []

@@ -3,7 +3,7 @@ title: "Vendor ruby/ruby at v3_3_11 as the MRI read-anchor for ruby-compat citat
 status: draft
 updated: 2026-08-29
 rfc: "0000-ruby-compat"
-cluster: fidelity
+cluster: null
 packages: ["ruby-compat"]
 deps: []
 deps-rfc: []

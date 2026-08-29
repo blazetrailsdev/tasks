@@ -12,6 +12,7 @@ packages:
   - activerecord
   - actionpack
   - actionview
+  - rack
   - date
   - i18n
   - trailties
@@ -50,7 +51,7 @@ Three numbers set the scale:
 
 | Measurement                                                                                                                                     | Today             | Command                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | --------------------------------------------------------------------- |
-| `@missingRailsCall` receipts across `packages/*/src`                                                                                            | **373**           | `grep -rh "@missingRailsCall" packages/*/src --include=*.ts \| wc -l` |
+| `@missingRailsCall` receipts across `packages/*/src`                                                                                            | **373**           | `grep -rh "@missingRailsCall" packages/_/src --include=_.ts \| wc -l` |
 | …of which name a Ruby **core** method with no callable TS spelling (`empty?` 27, `fetch` 25, `merge` 16, `any?` 16, `size` 11, `include?` 4, …) | **the plurality** | `… \| awk '{print $2}' \| sort \| uniq -c \| sort -rn`                |
 | `NO_JS_CALL_FORM` entries — Ruby calls the gate suppresses **globally** because no TS body could ever satisfy them                              | **9**             | `scripts/api-compare/compare.ts:249`                                  |
 
@@ -65,13 +66,13 @@ into a measurable call.
 
 Not a projection — these are grep results as of 2026-08-29:
 
-| Primitive                                       | Canonical copy                                           | Duplicates                                                                                                                                                                                                                                                                                                                                                                                       |
-| ----------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Regexp.escape` (`re.c` `rb_reg_s_quote`)       | `activesupport/src/core-ext/regexp.ts:18` `regexpEscape` | `activerecord/src/support/quote-regex.ts:27` `escapeRegExp`, `activerecord/src/support/run-token.ts:23` `escapeRegExp`, `trailties/src/generators/trails-actions.ts:191` `escapeRegExp` — all three byte-identical to the canonical body                                                                                                                                                         |
-| `Hash#fetch(key, default)`                      | none — no canonical copy exists                          | `activerecord/src/connection-adapters/postgresql-adapter.ts:157`, `activerecord/src/connection-adapters/abstract-mysql-adapter.ts:127`, `activesupport/src/core-ext/string/conversions.ts:27` — three identical `key in hash ? hash[key] : defaultValue` bodies; plus the raising arm at `activesupport/src/core-ext/date-and-time/calculations.ts:201`                                          |
-| `KeyError`                                      | `activesupport/src/core-ext/key-error.ts:12`             | `actionpack/src/action-dispatch/middleware/cookies.ts:509` (a second class declaration), and **six** sites that build a plain `Error` and assign `err.name = "KeyError"` (`actionpack/.../test-case.ts:822`, `.../strong-parameters.ts:505`, `.../mime-type.ts:475`, `activemodel/src/attribute-set/builder.ts:157`, `activemodel/src/attribute-set.ts:31`, `activerecord/src/token-for.ts:107`) |
-| Symbol discrimination (`":name"` per CLAUDE.md) | none                                                     | `i18n/src/backend/base.ts:241`, `.../fallbacks.ts:31`, `.../simple.ts:43`, `.../key-value.ts:64` — four identical private `isSymbol`; a fifth, differently-shaped, at `activemodel/src/validations/numericality.ts:179`                                                                                                                                                                          |
-| `<=>` (`Comparable`)                            | none                                                     | `activesupport/src/range-ext.ts:15` `cmp`, `activesupport/src/core-ext/date-and-time/calculations.ts:81` `compare`, `date/src/date.ts:843` `spaceship`                                                                                                                                                                                                                                           |
+| Primitive                                       | Canonical copy                                           | Duplicates                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ----------------------------------------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Regexp.escape` (`re.c` `rb_reg_s_quote`)       | `activesupport/src/core-ext/regexp.ts:18` `regexpEscape` | `activerecord/src/support/quote-regex.ts:27` `escapeRegExp`, `activerecord/src/support/run-token.ts:23` `escapeRegExp`, `trailties/src/generators/trails-actions.ts:191` `escapeRegExp` — all three byte-identical to the canonical body                                                                                                                                                                                      |
+| `Hash#fetch(key, default)`                      | none — no canonical copy exists                          | `activerecord/src/connection-adapters/postgresql-adapter.ts:157`, `activerecord/src/connection-adapters/abstract-mysql-adapter.ts:127`, `activesupport/src/core-ext/string/conversions.ts:27` — three identical `key in hash ? hash[key] : defaultValue` bodies; plus the raising arm at `activesupport/src/core-ext/date-and-time/calculations.ts:201`                                                                       |
+| `KeyError`                                      | `activesupport/src/core-ext/key-error.ts:12`             | `actionpack/src/action-dispatch/middleware/cookies.ts:509` (a second class declaration), and **seven** sites that build a plain `Error` and assign `err.name = "KeyError"` (`actionpack/.../test-case.ts:822`, `.../strong-parameters.ts:505`, `.../mime-type.ts:475`, `activemodel/src/attribute-set/builder.ts:157`, `activemodel/src/attribute-set.ts:31`, `activerecord/src/token-for.ts:107`, `rack/src/request.ts:673`) |
+| Symbol discrimination (`":name"` per CLAUDE.md) | none                                                     | `i18n/src/backend/base.ts:241`, `.../fallbacks.ts:31`, `.../simple.ts:43`, `.../key-value.ts:64` — four identical private `isSymbol`; a fifth, differently-shaped, at `activemodel/src/validations/numericality.ts:179`                                                                                                                                                                                                       |
+| `<=>` (`Comparable`)                            | none                                                     | `activesupport/src/range-ext.ts:15` `cmp`, `activesupport/src/core-ext/date-and-time/calculations.ts:81` `compare`, `date/src/date.ts:843` `spaceship`                                                                                                                                                                                                                                                                        |
 
 `Regexp.escape` is the case that names the problem, because the tooling **already
 says so**. `scripts/api-compare/enumerable-idioms.ts:78-89` carries a
@@ -143,20 +144,22 @@ each one is why the successor exists rather than a reactivation:
    anchor at all" (see _Anchoring_).
 3. **The scope is inverted.** 0089 led with `Module#include` / `#prepend` — the
    interpreter's object model. This RFC leads with **value types**, defers the
-   object model to Phase 2, and adds `Hash`, which 0089 did not consider and which
+   object model entirely, and adds `Hash`, which 0089 did not consider and which
    the receipt tally says is the largest single population.
 
 0089's stories are not lost: `move-regexp-escape-to-corelib-and-adopt-remaining-copies`,
 `move-range-core-and-succ-to-corelib` and `corelib-package-scaffold` reappear here
 re-scoped, and `move-module-mixin-primitives`, `move-tempfile-and-tmpname-to-corelib`,
 `port-ruby-mutex-for-check-pending` and `port-uri-parser-escape-for-rack-and-routes-inspector`
-are listed under _Phase 2_ below. 0089's status is not changed by this RFC —
+are listed under _Deferred_ below. 0089's status is not changed by this RFC —
 `status` is DB-owned and the flip is the maintainer's verb, not a markdown edit.
 `packages/activesupport/src/tempfile.ts` carries five "until RFC 0089" citations
 (`:16`, `:32`, `:82`, `:83`, `:233`); repointing them is acceptance criteria on
 the final cleanup story, so no citation goes stale mid-flight.
 
-## The standing rule: only what trails actually calls
+## Design
+
+### The standing rule: only what trails actually calls
 
 **Every member of `ruby-compat` must have a real call site in this repo, or be
 reached by one that does.** No speculative MRI surface — not "the rest of
@@ -186,13 +189,13 @@ Two consequences the move stories inherit:
 - **A later need is a later story**, filed against this RFC with the call site
   that motivated it. Not a drive-by addition to a move PR.
 
-## Scope
+### Scope
 
-### Phase 1 — core value types
+#### In scope — the core value types
 
 The language-level value objects, and only the parts called today.
 
-| Primitive                                | Source of truth                   | Moves from                                                  | Why Phase 1                                                                                            |
+| Primitive                                | Source of truth                   | Moves from                                                  | Why now                                                                                                |
 | ---------------------------------------- | --------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | `Rational`                               | `vendor/ruby/rational.c`          | `date/src/date.ts:1241`                                     | Wrongly homed in a gem port; already crosses a package boundary into activemodel                       |
 | `Range` (+ its `String#succ` dependency) | `vendor/ruby/range.c`, `string.c` | `activesupport/src/range-ext.ts`, `core-ext/string/succ.ts` | The unanchored class four Rails `core_ext/range/*.rb` ports reopen; fixes a dependency inversion       |
@@ -201,7 +204,7 @@ The language-level value objects, and only the parts called today.
 | `Comparable`                             | `vendor/ruby/compar.c`            | nowhere — 3 private copies                                  | `<=>` is the operator every value type above is ordered by                                             |
 | `Regexp.escape`                          | `vendor/ruby/re.c`                | `activesupport/src/core-ext/regexp.ts:18`                   | Named explicitly by the maintainer; 3 duplicates; the one entry `CORE_LIBRARY_ALIASES` already carries |
 
-`Hash` is scoped by the receipt tally, not by MRI's method list. In:
+This set is scoped by the receipt tally, not by MRI's method list. In:
 `fetch` (both arms — the stored-`nil`/`false` return **and** the `KeyError` raise,
 which is the CLAUDE.md "fetch vs `??`" trap made callable), `key?` / `has_key?`,
 `default` / `default_proc` (needed by RFC 0128's
@@ -211,10 +214,11 @@ where a port needs them. Out, measured and named: **`compare_by_identity`** — 
 only occurrence is `rack/src/headers.ts:481`, a Rails-anchored override that raises
 `TypeError`, so nothing calls the real semantics.
 
-### Phase 2 — listed, sized, not scheduled
+#### Deferred — listed and sized, deliberately not scheduled
 
-Real findings from the same inventory, deliberately **not** given Phase 1 stories.
-Each becomes a story only when Phase 1's tooling has landed and proved out.
+Real findings from the same inventory, deliberately given **no story in this
+RFC**. Each becomes one only when the value types and their tooling have landed
+and proved out — a successor RFC's work, not a later wave of this one.
 
 | Item                                                               | Location                                     | ~LOC | Note                                                                   |
 | ------------------------------------------------------------------ | -------------------------------------------- | ---- | ---------------------------------------------------------------------- |
@@ -236,9 +240,9 @@ Each becomes a story only when Phase 1's tooling has landed and proved out.
 those would charge Rails' surface to a non-Rails package and destroy working
 `parity:api` coverage — the exact inverse of the problem being solved. Only
 individually-identified unanchored members are ever in scope, and that
-identification is Phase 2 work.
+identification is deferred work.
 
-## Anchoring: vendored `ruby/ruby`
+### Anchoring: vendored `ruby/ruby`
 
 `vendor/ruby/`, fetched by `pnpm vendor:fetch` beside `vendor/rails/` and laid
 down by `scripts/start-worktree.sh`, so a ruby-compat port cites
@@ -273,13 +277,13 @@ Two mechanisms replace it, and together they are a stronger contract than 0089's
   `core/rational`, `core/symbol`, `core/comparable`. 0089 planned a second
   vendored `ruby/spec` clone; it is unnecessary.
 
-## Parity integration
+### Parity integration
 
 Three gates, in dependency order. All three are **report-only first, gated
 second** — the house pattern, and non-negotiable here because seeding a gate red
 across nine packages blocks every unrelated PR.
 
-### Gate 1 — the Ruby-core → ruby-compat call mapping
+#### Gate 1 — the Ruby-core → ruby-compat call mapping
 
 **Where.** A new `scripts/parity/ruby-compat.ts`, and
 `enumerable-idioms.ts`'s one-entry `CORE_LIBRARY_ALIASES` folds into it — that
@@ -310,7 +314,7 @@ that matter: RFC 0083's inert-receiver filter, plus the `FOREIGN_READ_PREFIX`
 marking `enumerable-idioms.ts:126` records. Where the receiver genuinely cannot
 be resolved, **the row does not go in the table** — an unresolvable row would
 credit a Rails `fetch` for a Ruby one, which is worse than the status quo. The
-population is small enough (Phase 1 is ~25 members) that per-row adjudication is
+population is small enough (the value-type set is ~25 members) that per-row adjudication is
 tractable; that is another reason the "only what we call" rule matters.
 
 **Direction — and this is the part that is new.** `CORE_LIBRARY_ALIASES` is
@@ -350,7 +354,7 @@ and stay: a template literal, a `for…of`, a `catch` clause and a body with no
 mutex are language constructs, not calls a package can supply. The gate must not
 be used to argue otherwise.
 
-### Gate 2 — `parity:api:extra` scores ruby-compat's own surface
+#### Gate 2 — `parity:api:extra` scores ruby-compat's own surface
 
 Answered above under _the standing rule_: every member is _novel_, the package
 enrolls in `GATED_PACKAGES` at a seeded mark, only-shrink, no reseed. **Members
@@ -366,7 +370,7 @@ measured surface. ruby-compat members are _entirely_ absent from that manifest, 
 the pairing is mandatory package-wide, not case-by-case. ruby-compat joins that
 rule's enrollment set at the same time.
 
-### Gate 3 — no re-implementation outside the package
+#### Gate 3 — no re-implementation outside the package
 
 The gate the maintainer asked for, and the one the three `escapeRegExp` copies
 motivate. A new ESLint rule, `blazetrails/no-ruby-compat-reimplementation`,
@@ -390,9 +394,9 @@ positives are unknown until it runs against the real tree. Shipping the name-bas
 rule first, gated, beats shipping the structural one late and ungated.
 
 The exclude JSON is seeded with today's copies, one row each, and each row is
-deleted by the move story that converges it. It reaches zero when Phase 1 lands.
+deleted by the move story that converges it. It reaches zero when the value-type moves land.
 
-## Migration shape
+### Migration shape
 
 Per-primitive, one primitive per PR, in three beats:
 
@@ -416,6 +420,182 @@ Everything else may depend on it. `packages/date` becomes a dependent (it loses
 `Rational`), which also removes activemodel's accidental `@blazetrails/date`
 edge.
 
+## Non-goals
+
+- **Porting MRI.** Only members with a real call site in this repo, ever. See
+  _the standing rule_; this is the package's defining constraint and the reason
+  `parity:api:extra` gates it from 0/0.
+- **`parity:api` enrollment.** MRI's surface is C; `extract-ruby-api.rb` extracts
+  nothing (measured for `date` by RFC 0088's `date-c-source-extractor-decision`).
+  `compareApi: false` is permanent, not a flag a later story flips.
+- **`compare_by_identity`.** Its only occurrence is `rack/src/headers.ts:481`, a
+  Rails-anchored override that raises `TypeError`; nothing calls the real
+  semantics.
+- **The other seven `NO_JS_CALL_FORM` entries.** `to_s`, `to_str`, `each`,
+  `present?`, `blank?`, `catch`, `synchronize` are language constructs (a
+  template literal, a `for…of`, a `catch` clause, a body with no mutex), not
+  calls a package can supply. Only `key?` / `has_key?` are this RFC's to
+  discharge. A Ruby `Mutex` is deferred and is the only thing that could revisit
+  `synchronize`.
+- **Rails-anchored `core_ext` files.** `core-ext/kernel/`, `core-ext/numeric/`,
+  `core-ext/securerandom.ts` have real `.rb` counterparts; moving them would
+  charge Rails' surface to a non-Rails package and destroy working `parity:api`
+  coverage — the inverse of the problem being solved. Only individually
+  identified unanchored members are ever in scope, and that identification is
+  deferred work.
+- **The three divergent Range VALUE shapes.** `range-ext.ts:14`,
+  `postgresql/oid/range.ts:26-31`,
+  `attribute-methods/time-zone-conversion.ts:375-382` are unrelated node/type
+  classes. `0023-surfaced-deviations/unify-three-range-value-shapes` is closed;
+  `0119/pg-oid-range-builds-bespoke-range-not-core-range` is the live owner.
+- **The object-model primitives.** `Module#include` / `#extend` / `#prepend`,
+  `Object#hash`, `rb_equal`, Ruby truthiness, `Tempfile`, `Mutex`, `URI` — all
+  real findings, all deferred, all listed and sized above. This RFC is value types.
+- **Rewording receipts.** A `@missingRailsCall` or `@noRailsEquivalent` is
+  retired by making the call or removing the surface, never by improving its
+  prose. (CLAUDE.md: a deviation register is a burndown ledger, not permission.)
+
+## Alternatives considered
+
+- **Reactivate RFC 0089 as-is.** Its central premise is refuted by `ruby/ruby`
+  being an ordinary git repository; reactivating would carry that premise into
+  the package's permanent contract. See _Relationship to RFC 0089_.
+- **Fold the primitives into `packages/date`.** `Rational` already lives there,
+  so it is the path of least resistance. Rejected: `date` is a **vendored gem**
+  with a gem's contract (its own upstream, its own test suite as the fidelity
+  measure). The interpreter is not a gem, and merging the two makes "which
+  contract applies here?" a rule contributors must remember rather than a
+  structural fact. This is RFC 0089's _split_ argument and it still holds.
+- **Fold them into `activesupport`.** Where most of them already sit. Rejected:
+  activesupport is a Rails package measured against
+  `vendor/rails/activesupport/`, so every Ruby-core file in it is permanently
+  unmatched surface, and a leaf package cannot depend on it — which is exactly
+  the inversion `compare-range.ts:9` demonstrates today.
+- **Extend `CORE_LIBRARY_ALIASES` instead of building a resolution table.**
+  Rejected by that table's own comment: an alias list "would ratify the
+  divergence this entry exists to make visible". An alias can only ever credit;
+  it can never flag a hand-rolled substitute, which is the whole fidelity claim.
+- **A second baseline artifact tree for `rubyCompat` rows.** Rejected: RFC 0095
+  already solved this shape by putting `kind: "args"` rows in the existing
+  `call-mismatches-exclude/` shards with each gate reading only its own kind.
+  One artifact, one reseed-drift check, one place to look.
+- **Gate the structural duplicate detector from day one.** Rejected: its
+  false-positive rate is unmeasured, and a `key in hash ? hash[key] : d` shape is
+  three tokens long. A gate seeded on an unmeasured signal is a gate that gets
+  disabled. Name-based gated now, structural report-only —
+  `structural-duplicate-detector-report` decides whether it can ever gate.
+- **Vendor `ruby/spec` separately** (RFC 0089's plan). Unnecessary: MRI mirrors
+  the suite in-tree at `spec/ruby/`, so one source yields both the C read-anchor
+  and the behavioural suite.
+- **Pin MRI to 3.4** (matching the vendored `date` gem's `v3.4.1`). Rejected:
+  the gem ref and the interpreter ref are independent, and CI
+  (`ci.yml:1412,1685,1798`), the host toolchain and `date.ts:1230`'s written
+  behavioural claim are all 3.3. Pinning to 3.4 would make existing in-tree
+  citations unverifiable.
+
+## Prior and adjacent work
+
+Live stories elsewhere that this RFC absorbs, answers, or must not collide with.
+Each is cited in the story that touches it.
+
+| Story                                                               | Status           | Relationship                                                                                                                                                        |
+| ------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `0126/converge-regexp-escape-call-gate-verdict`                     | done (#7169)     | Converged 8 copies onto `core-ext/regexp.ts` and added `CORE_LIBRARY_ALIASES`. Its closing note names RFC 0089's package as the eventual home — this RFC is it.     |
+| `0023/converge-regexp-escape-onto-one-ported-call`                  | draft            | **Stale** — its seven rows were converged by #7169 and its "Converged shape" points at RFC 0089. `move-regexp-escape-to-ruby-compat` re-points or closes it.        |
+| `0041/messagepack-rational-duplicates-the-ported-rational`          | draft            | A **fourth** `Rational` (`message-pack/extensions.ts:27-48`, a local interface + reduction). `move-rational-to-ruby-compat` absorbs it.                             |
+| `0023/plain-object-has-no-hash-default-seat`                        | draft            | Asks "decide where a plain-object default seat lives". `ruby-compat-hash-default-proc-and-dig` is that answer.                                                      |
+| `0128/converge-alias-tracker-constructor-onto-rails-two-parameters` | draft            | Blocked on a Ruby-Hash default proc existing. This RFC supplies it; that story consumes it.                                                                         |
+| `0106/audit-missing-rails-call-permanence-claims`                   | done (#6855)     | The prior audit of `@missingRailsCall` PERMANENT claims. `retire-no-js-call-form-entries-and-fetch-receipts` continues it with a call form that did not exist then. |
+| `0106/port-hash-fetch-semantics-validate-and-seeds`                 | done (#6673)     | Ported `Hash#fetch` semantics at specific sites. Establishes the semantics; this RFC gives them one home.                                                           |
+| `0092/positional-idiom-analogues`                                   | done             | The measured decision that `first`/`last`/`size`/`any?` cannot be credited by receiver. Bounds what Gate 1 may claim.                                               |
+| `0025/triage-no-counterpart-extra-surface-population`               | ready            | Triages the `rubyFile === null` extra-surface slice ruby-compat lands in. Coordinate before enrolling.                                                              |
+| `0111/one-shared-nomethoderror-class`                               | draft            | The same consolidation for a sibling Ruby core error class. `KeyError` follows its shape.                                                                           |
+| `0089/*` (9 stories)                                                | draft, postponed | Inventory inherited; four re-scoped here, five listed under _Deferred_.                                                                                             |
+
+## Rollout
+
+1. **Phase 0 — foundations.** `vendor-ruby-mri-source` →
+   `ruby-compat-package-skeleton` → `ruby-compat-extra-surface-enrollment`;
+   `ruby-compat-mri-citation-lint` and `no-ruby-compat-reimplementation-lint` in
+   parallel once the skeleton exists. Nothing moves yet.
+2. **Phase 1 — value types.** `move-regexp-escape-to-ruby-compat`,
+   `move-range-core-and-succ-to-ruby-compat`, `move-rational-to-ruby-compat`,
+   `ruby-compat-symbol-conventions`, `ruby-compat-comparable`,
+   `ruby-compat-hash-fetch-and-key-error`, then
+   `ruby-compat-hash-default-proc-and-dig`. Independent of each other; each
+   leaves a shim.
+3. **Phase 2 — measurement.** `ruby-core-call-mapping-table` (report-only) →
+   `enroll-call-mapping-i18n-and-activesupport` →
+   `enroll-call-mapping-remaining-packages` →
+   `retire-no-js-call-form-entries-and-fetch-receipts`.
+   `structural-duplicate-detector-report` and
+   `ruby-spec-behavioural-enrollment` run alongside.
+4. **Phase 3 — cleanup.** `delete-ruby-compat-reexport-shims`, after every
+   value-type story has landed and every caller is flipped.
+
+The _Deferred_ set (the object-model primitives) is deliberately absent from
+this rollout; it is a successor RFC's work, scheduled only once these phases
+have proved out.
+
+## Verification
+
+Numbers, measured on 2026-08-29 and closed against at the end of Phase 3.
+
+| Metric                                          | Command                                                                        | Today      | Target                                                              |
+| ----------------------------------------------- | ------------------------------------------------------------------------------ | ---------- | ------------------------------------------------------------------- |
+| Private `escapeRegExp` copies                   | `grep -rn "function escapeRegExp" packages/*/src`                              | 3          | **0**                                                               |
+| Private `fetch(hash, key, default)` copies      | `grep -rn "^function fetch" packages/*/src`                                    | 4          | **0**                                                               |
+| Private `isSymbol` copies                       | `grep -rn "function isSymbol" packages/*/src`                                  | 5          | **0**                                                               |
+| Hand-rolled `<=>` (`cmp`/`compare`/`spaceship`) | `grep -rn "function cmp\|function compare\|function spaceship" packages/*/src` | 3          | **0**                                                               |
+| `Rational` declarations                         | `grep -rn "class Rational\|interface Rational" packages/*/src`                 | 2          | **1**                                                               |
+| `KeyError` class declarations                   | `grep -rn "class KeyError" packages/*/src`                                     | 2          | **1**                                                               |
+| `err.name = "KeyError"` sites                   | `grep -rn 'name = "KeyError"' packages/*/src`                                  | 6          | **0**                                                               |
+| `@missingRailsCall fetch` receipts              | `grep -rh "@missingRailsCall fetch" packages/*/src \| wc -l`                   | 25         | **0**                                                               |
+| `NO_JS_CALL_FORM` entries                       | `compare.ts:249`                                                               | 9          | **7**                                                               |
+| `no-ruby-compat-reimplementation` exclude rows  | the JSON's length                                                              | seeded ~18 | **0**                                                               |
+| `ruby-compat` extra-surface `novel`             | `pnpm parity:api:extra --package ruby-compat`                                  | n/a        | **= total**, and monotonically non-increasing after each enrollment |
+| `parity:api` / `parity:test` deltas             | the two commands                                                               | —          | **non-negative at every story**                                     |
+
+The RFC has failed, regardless of how much code moved, if the duplicate counts
+are not zero — relocation without convergence is the outcome it exists to
+prevent.
+
+## Open questions
+
+Each must be resolved or deferred to a named story before `status: active`.
+
+1. **Does a full `ruby/ruby` clone cost too much in CI?** It is substantially
+   larger than any currently vendored source. Options: full clone; blobless
+   (`--filter=blob:none`); sparse checkout of the C sources plus
+   `spec/ruby/core/`. **Recommendation:** measure in
+   `vendor-ruby-mri-source` and let the number decide — that story requires the
+   measurement in its PR body. Deferred to that story, not to `active`.
+2. **Can the comparator resolve a Ruby call's receiver well enough to key the
+   mapping on `Hash#fetch` rather than `fetch`?** RFC 0092 measured that it
+   cannot, in general, distinguish an Array receiver from a Relation one. The
+   design's answer is that an unresolvable row simply does not go in the table,
+   which is safe but may leave the table small enough to be not worth it.
+   **Recommendation:** `ruby-core-call-mapping-table` reports the resolvable
+   population before any package is enrolled; if it is too small to justify the
+   gate, that story says so and Gate 1 is descoped to the forward direction
+   only. This is the RFC's main technical risk and is deliberately front-loaded.
+3. **Does `Comparable` have a workable mixin shape in a package that takes no
+   workspace dependencies?** `include()` / `Included<>` live in
+   `@blazetrails/activesupport`, which a leaf cannot import. `this`-typed
+   functions assigned to the class is the fallback. **Recommendation:** settle it
+   in `ruby-compat-comparable`; if neither works, that story blocks with the
+   specific blocker rather than inventing a third idiom.
+4. **Do `spec/ruby`'s RSpec-shaped files map onto `parity:test` at all?** The
+   extractor's known shapes are minitest `def test_` and our `it(...)`.
+   **Recommendation:** `ruby-spec-behavioural-enrollment` resolves it and records
+   the answer; if the extractor cannot read them, that story blocks and the
+   citation lint remains the package's only anchor — which is still stronger
+   than RFC 0089's position.
+5. **Should `activesupport`'s public surface keep re-exporting `Range` and
+   `KeyError`?** Deferred to `delete-ruby-compat-reexport-shims`, which requires
+   a per-export decision stated in its PR body rather than an accidental
+   narrowing.
+
 ## Constraints
 
 - One story per PR; each PR branches from `main`; no stacking; PRs open in draft.
@@ -424,30 +604,6 @@ edge.
   removed from an enrollment set to green a run.
 - `parity:api` never enrolls ruby-compat.
 
-## Sequencing
+## Changelog
 
-```text
-vendor-ruby-mri-source ──┬─> ruby-compat-package-skeleton ──> ruby-compat-extra-surface-enrollment
-                         │        │
-                         │        ├─> move-regexp-escape-to-ruby-compat ────────┐
-                         │        ├─> move-range-core-and-succ-to-ruby-compat ──┤
-                         │        ├─> move-rational-to-ruby-compat ─────────────┤
-                         │        ├─> ruby-compat-symbol-conventions ───────────┤
-                         │        ├─> ruby-compat-comparable ───────────────────┤
-                         │        ├─> ruby-compat-hash-fetch-and-key-error ─────┤
-                         │        │      └─> ruby-compat-hash-default-proc-and-dig ─┤
-                         │        │                                                 │
-                         │        ├─> ruby-core-call-mapping-table                  │
-                         │        │      └─> enroll-call-mapping-i18n-and-activesupport
-                         │        │             └─> enroll-call-mapping-remaining-packages
-                         │        │                    └─> retire-no-js-call-form-entries-and-fetch-receipts
-                         │        │
-                         │        ├─> no-ruby-compat-reimplementation-lint
-                         │        │      └─> structural-duplicate-detector-report
-                         │        │
-                         │        └─> ruby-spec-behavioural-enrollment            │
-                         │                                                        │
-                         └─> ruby-compat-mri-citation-lint                        │
-                                                                                  │
-                            delete-ruby-compat-reexport-shims  <──────────────────┘
-```
+- 2026-08-29: initial RFC. Supersedes `0089-corelib-primitives`.
