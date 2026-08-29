@@ -252,9 +252,10 @@ down by `scripts/start-worktree.sh`, so a ruby-compat port cites
 **Pin: `v3_3_11`.** CI pins `ruby-version: "3.3"` in three jobs
 (`.github/workflows/ci.yml:1412,1685,1798`), the host toolchain that runs
 `extract-ruby-api.rb` is `ruby 3.3.11`, and `packages/date/src/date.ts:1230-1231`
-already writes its behavioural claims against that exact build — _"on ruby 3.3.11
-`(Rational(1,2) _ 12).class`is`Rational`"*. Pinning anywhere else would make
-those in-tree citations unverifiable. The `date`gem stays pinned separately at`v3.4.1`; a gem's ref and the interpreter's ref are independent, as they are for
+already writes its behavioural claims against that exact build — "on ruby 3.3.11
+`(Rational(1,2) * 12).class` is `Rational`". Pinning anywhere else would make
+those in-tree citations unverifiable. The `date` gem stays pinned separately at
+`v3.4.1`; a gem's ref and the interpreter's ref are independent, as they are for
 a real Ruby install.
 
 `compareApi: false` and `compareTests: false` on the entry, for the reason 0089

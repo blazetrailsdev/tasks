@@ -29,8 +29,9 @@ The class is a careful port and its JSDoc is worth reading before touching it
 `numerator`/`denominator` are `bigint` because Ruby Integers are arbitrary
 precision and a parsed fraction literal of more than sixteen digits
 (`date_parse.c:2319-2325`) runs past `Number.MAX_SAFE_INTEGER`, and records the
-measured MRI behaviour it matches — _"on ruby 3.3.11 `(Rational(1,2) _ 12).class`is`Rational`, `(6/1)`, and so is `Rational(9,3)`"*, which is why the ported
-`FIXNUM_P` branch is unreachable. All of that carries across verbatim, and the
+measured MRI behaviour it matches — "on ruby 3.3.11
+`(Rational(1,2) * 12).class` is `Rational`, `(6/1)`, and so is `Rational(9,3)`",
+which is why the ported `FIXNUM_P` branch is unreachable. All of that carries across verbatim, and the
 vendored MRI pin (`v3_3_11`) is what finally makes those claims checkable.
 
 The dependency this fixes: `Rational` is exported from `@blazetrails/date` and
