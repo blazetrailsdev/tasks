@@ -27,7 +27,7 @@ relation.rb  relation.ts  new -> constructor  @0  ruby=attributes  ts=options
 ```
 
 `ActiveRecord::Relation#new` (`vendor/rails/activerecord/lib/active_record/relation.rb:125`)
-is an *instance* method — `alias build new` on line 133 — so the port spells it
+is an _instance_ method — `alias build new` on line 133 — so the port spells it
 `build`, and `relation.ts:build(attributes, block)` already matches the Ruby
 `build` pair cleanly. The row exists only because
 `scripts/parity/conventions.ts:1496` maps every Ruby `new` to TS `constructor`,
@@ -48,7 +48,7 @@ Rails identifiers.
 ## Acceptance criteria
 
 - The `relation.rb#new -> constructor` row no longer appears in
-  `output/param-name-mismatches.json`, fixed on the *tool* side — either by not
+  `output/param-name-mismatches.json`, fixed on the _tool_ side — either by not
   mapping a Ruby instance-method `new` onto `constructor` when the Ruby file also
   records the aliased name, or by not letting a receiver-strip form manufacture a
   parameter-name mismatch.
