@@ -1,7 +1,7 @@
 ---
 title: "legacy-point-serialize-should-extract-number-for-point"
-status: ready
-updated: 2026-08-24
+status: in-progress
+updated: 2026-08-29
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7219
+claim: "2026-08-29T22:33:50Z"
+assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null
 closed-reason: null
 ---

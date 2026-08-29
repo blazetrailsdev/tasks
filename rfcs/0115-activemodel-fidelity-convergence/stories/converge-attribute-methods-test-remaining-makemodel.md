@@ -1,6 +1,6 @@
 ---
 title: "converge-attribute-methods-test-remaining-makemodel"
-status: ready
+status: in-progress
 updated: 2026-08-29
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 26
-pr: null
-claim: null
-assignee: null
+pr: 7217
+claim: "2026-08-29T22:14:49Z"
+assignee: "converge-hash-accessor-read-write-and-prepare-branches"
 blocked-by: null
 closed-reason: null
 ---

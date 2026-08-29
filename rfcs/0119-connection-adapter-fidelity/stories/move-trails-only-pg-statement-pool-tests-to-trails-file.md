@@ -1,6 +1,6 @@
 ---
 title: "Move trails-only cases out of the Rails-mapped PG statement-pool test file"
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

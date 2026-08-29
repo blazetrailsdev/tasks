@@ -1,16 +1,16 @@
 ---
 title: "PG column helpers stamp a hardcoded sqlType instead of resolving through nativeDatabaseTypes"
-status: ready
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-29
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7219
+claim: "2026-08-29T22:33:50Z"
+assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "converge-attribute-methods-test-time-zone-arms"
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
