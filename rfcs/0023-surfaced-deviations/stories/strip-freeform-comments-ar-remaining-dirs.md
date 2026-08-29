@@ -50,33 +50,33 @@ however the config expresses it.
 Running the rule in `report` mode over `packages/activerecord/src/**/*.ts`:
 **1058 files with violations, 9098 violations.** By directory:
 
-| violations | dir |
-| --- | --- |
-| 5355 | `(root)` |
-| 997 | `associations` |
-| 612 | `test-helpers` |
-| 444 | `encryption` |
-| 261 | `connection-adapters` |
-| 209 | `type-virtualization` |
-| 191 | `tasks` |
-| 187 | `attribute-methods` |
-| 145 | `validations` |
-| 126 | `migration` |
-| 101 | `scoping` |
-| 84 | `sqlite` |
-| 78 | `database-configurations` |
-| 72 | `type` |
-| 62 | `test-fixtures` |
-| 36 | `cases` |
-| 35 | `coders` |
-| 30 | `locking` |
-| 28 | `testing` |
-| 17 | `middleware` |
-| 12 | `trailties` |
-| 9 | `type-caster` |
-| 3 | `locale` |
-| 2 | `assertions` |
-| 2 | `persistence` |
+| violations | dir                       |
+| ---------- | ------------------------- |
+| 5355       | `(root)`                  |
+| 997        | `associations`            |
+| 612        | `test-helpers`            |
+| 444        | `encryption`              |
+| 261        | `connection-adapters`     |
+| 209        | `type-virtualization`     |
+| 191        | `tasks`                   |
+| 187        | `attribute-methods`       |
+| 145        | `validations`             |
+| 126        | `migration`               |
+| 101        | `scoping`                 |
+| 84         | `sqlite`                  |
+| 78         | `database-configurations` |
+| 72         | `type`                    |
+| 62         | `test-fixtures`           |
+| 36         | `cases`                   |
+| 35         | `coders`                  |
+| 30         | `locking`                 |
+| 28         | `testing`                 |
+| 17         | `middleware`              |
+| 12         | `trailties`               |
+| 9          | `type-caster`             |
+| 3          | `locale`                  |
+| 2          | `assertions`              |
+| 2          | `persistence`             |
 
 Heaviest single files: `base.ts` 430, `relation.ts` 299, `migration.ts` 182,
 `associations/has-many-associations.test.ts` 144, `persistence.ts` 137,
