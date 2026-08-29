@@ -49,7 +49,7 @@ straight onto `scopeStack` as `path` / `namePrefix` / `controller`. So:
   inside a `namespace` cannot see the namespace segment.
 - Any OTHER key in `options` is silently dropped — Rails merges the whole hash
   into the `scope` call (`defaults.merge!(options)`), so `namespace :admin,
-  constraints: {...}` carries the constraint and trails discards it.
+constraints: {...}` carries the constraint and trails discards it.
 - `options.delete(:path)` means Rails consumes `:path` before the merge, so a
   `:path` given by the caller sets the URL segment and does NOT survive into the
   scope; the port has no equivalent consumption.
