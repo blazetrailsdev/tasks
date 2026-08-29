@@ -56,11 +56,19 @@ does not mirror.
 
 ## Acceptance criteria
 
-- `pnpm parity:api --package activerecord --params` reports no rows for
-  `connection_adapters/abstract*`.
-- `execute`'s parameter list matches `database_statements.rb:136` in order and
-  name, or the extra slot carries a `@missingRailsArgs` receipt with its
-  permanence.
+- `pnpm parity:api --package activerecord --params` reports no
+  `checkConstraintExists` row for `connection_adapters/abstract*`.
+- The two `execute` rows are out of scope, and their convergence is filed as
+  `param-drift-execute-binds-slot-family-convergence`. The receipt this story
+  originally offered as the alternative does not exist for this position:
+  `@missingRailsArgs` is a call-SITE receipt keyed to a Ruby call
+  (`scripts/api-compare/missing-rails-args-tags.ts`), and the parameter-name
+  comparer (`scripts/api-compare/param-names.ts`) reads no JSDoc tag at all, so
+  no tag can clear a params row. Tagging the stub was tried and measured: the
+  artifact records it under neither `suppressed` nor `staleTags` — it is inert.
+  The only thing that clears those two rows is the family-wide signature flip,
+  which is a behavioural refactor of three concrete adapters and ~124 call
+  sites, outside this story's 180 LOC and its own no-behaviour-change criterion.
 - `SchemaStatementsLike` no longer scores against `schema_definitions.rb` — moved
   out of the Rails-matched file, or otherwise excluded from the matched surface.
   Its members keep the SchemaStatements identifiers they already have.
