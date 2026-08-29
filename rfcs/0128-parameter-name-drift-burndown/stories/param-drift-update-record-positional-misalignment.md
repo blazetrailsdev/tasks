@@ -1,7 +1,7 @@
 ---
 title: "Parameter-name drift: _update_record's dropped attribute_names, the _create_record twin"
-status: draft
-updated: 2026-08-28
+status: in-progress
+updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 7201
 claim: null
 assignee: null
 blocked-by: null

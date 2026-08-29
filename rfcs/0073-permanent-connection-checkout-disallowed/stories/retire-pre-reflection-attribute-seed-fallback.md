@@ -1,14 +1,14 @@
 ---
 title: "Retire the pre-reflection attribute-seed fallback once columns_hash can block"
-status: draft
-updated: 2026-08-20
+status: ready
+updated: 2026-08-29
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 55
 pr: null
 claim: null
 assignee: null

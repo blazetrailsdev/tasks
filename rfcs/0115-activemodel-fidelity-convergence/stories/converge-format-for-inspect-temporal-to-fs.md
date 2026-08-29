@@ -1,6 +1,6 @@
 ---
 title: "converge-format-for-inspect-temporal-to-fs"
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

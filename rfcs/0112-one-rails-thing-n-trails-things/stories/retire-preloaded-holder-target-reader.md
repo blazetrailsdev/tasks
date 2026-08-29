@@ -1,7 +1,7 @@
 ---
 title: "Retire the trails-only _preloadedHolderTarget reader onto Rails' loaded?/stale_target?/load_target"
-status: ready
-updated: 2026-08-27
+status: claimed
+updated: 2026-08-29
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-29T11:52:35Z"
+assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null
 closed-reason: null
 ---

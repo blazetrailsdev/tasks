@@ -1,7 +1,7 @@
 ---
 title: "converge-non-attribute-read-write-raises"
-status: ready
-updated: 2026-08-28
+status: claimed
+updated: 2026-08-29
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 21
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-29T11:48:53Z"
+assignee: "converge-non-attribute-read-write-raises"
 blocked-by: null
 closed-reason: null
 ---

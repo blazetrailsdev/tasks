@@ -1,14 +1,14 @@
 ---
 title: "PostgreSQL quote_string escapes without taking with_raw_connection's lease"
-status: draft
-updated: 2026-08-24
+status: ready
+updated: 2026-08-29
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 60
 pr: null
 claim: null
 assignee: null

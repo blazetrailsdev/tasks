@@ -1,13 +1,13 @@
 ---
 title: "TypeCaster::Connection drops the data_source_exists? gate and the with_connection lease (sync/async)"
 status: ready
-updated: 2026-07-27
+updated: 2026-08-29
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

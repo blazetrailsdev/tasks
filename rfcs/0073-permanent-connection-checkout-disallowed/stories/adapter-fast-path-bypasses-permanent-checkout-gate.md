@@ -1,13 +1,13 @@
 ---
 title: "_adapter fast path bypasses the permanent-checkout gate, narrowing the ban vs Rails"
 status: ready
-updated: 2026-07-27
+updated: 2026-08-29
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: null
+priority: 28
 pr: null
 claim: null
 assignee: null
