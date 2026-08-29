@@ -31,7 +31,7 @@ is currently no way to do that for a private member:
 - A `@noRailsEquivalent PERMANENT` on `registerSqlTypeName` is scored STALE by
   the extra-surface gate, which reports
   `1 STALE @noRailsEquivalent tag(s) on methods that no longer flag as extra
-  surface — ... the declaration is internal or _-prefixed (never counted)` and
+surface — ... the declaration is internal or _-prefixed (never counted)` and
   instructs "Delete the tag next to the code". A private declaration is never
   counted as extra surface, so the receipt is stale by construction.
 - `blazetrails/no-freeform-comments` removes any prose alternative, by design
