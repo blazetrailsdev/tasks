@@ -163,7 +163,9 @@ that this class is currently being rediscovered rather than tracked.
 ## Non-goals
 
 - **Predicate-semantics equivalence.** Explicitly out; see Design.
-- **Gating in the first phase.** Report-only until the noise floor is known.
+- **Gating.** Report-only until the noise floor was known — and, since
+  2026-08-30, report-only permanently: the measurement fired the tripwire. See
+  open question 1.
 - **Ruby idioms that change arm _count_ legitimately.** A Ruby `||=` is one arm;
   its faithful TS spelling may be two. Those belong in
   `0082-ruby-ts-idiom-conversion-classes`, not here — and if they prove common,
@@ -200,13 +202,14 @@ re-homed from `0023-surfaced-deviations` on 2026-08-18 and carry the
    `measure-arm-mismatch-noise-floor`. A reproducible hand-audited sample
    classified real / lowering artefact / extraction bug, against the one-third
    tripwire below.
-3. **Phase 3 — gate, or decide not to.**
-   `seed-arm-parity-ratchet-or-record-ungated`. Both outcomes close the story;
-   only one of them adds a baseline.
+3. ~~**Phase 3 — gate, or decide not to.**~~ **Closed 2026-08-30 by
+   `seed-arm-parity-ratchet-or-record-ungated`: the tripwire fired and this RFC
+   runs UNGATED.** No arms baseline exists and none is to be seeded; the report
+   stays report-only, wired into CI at `ci.yml:1521`. See open question 1 for
+   the measured number. There is no gating phase to reach.
 4. **Phase 4 — the specified methods.** Burndown stories that already name the
    exact arm list and order — `sqlite3-translate-exception-branch-set` is the
-   model. No investigation needed, only the edit. **Not blocked on Phases 1-3**:
-   these are correct fixes whether or not a gate ever lands.
+   model. No investigation needed, only the edit.
 5. **Phase 5 — the rest**, prioritised by whether the missing arm is a _raise_.
    A dropped raise is a silent wrong answer; a dropped fast path is a
    performance note. They are not the same severity and should not be worked in
@@ -216,14 +219,14 @@ re-homed from `0023-surfaced-deviations` on 2026-08-18 and carry the
 
 - `pnpm parity:api:arms:report` exists and runs in CI, reading the existing
   `output/call-skeletons.json`.
-- **The Phase 3 decision is recorded with its number** — the measured
-  artefact rate on the audited sample, whichever way it goes. A "we tried and it
-  was too noisy" outcome with a figure attached is a successful RFC; one without
-  a figure is not.
-- If gated: the arms baseline is only-shrink and reaches 0 rows for the 59
-  in-scope stories' methods.
-- If ungated: all 59 stories reach `done`, and the Phase 4 subset is verified by
-  arm-for-arm diff against the cited Rails `file:line` in review.
+- **The Phase 3 decision is recorded with its number** — done: 62.5% of an
+  80-row seeded sample (46 lowering artefacts + 4 extraction bugs of 80) is not
+  a real arm divergence, against a ⅓ threshold committed before measuring. A "we
+  tried and it was too noisy" outcome with a figure attached is a successful
+  RFC; one without a figure is not.
+- **Ungated, as decided.** No arms baseline exists, `parity:api:arms` is not a
+  script, and the 59 stories are verified arm-for-arm against the cited Rails
+  `file:line` in review rather than by a gate. All 59 reach `done`.
 - No story converges by adding a baseline row.
 
 ## Open questions
@@ -280,6 +283,11 @@ re-homed from `0023-surfaced-deviations` on 2026-08-18 and carry the
   `extract-ruby-api.rb:2392`) and `skeleton-loop-fold-covers-only-each`
   (`foldSkeletonTokens` folds `each` and nothing else, so `each_value`,
   `filter_map` and every other block iterator report an invented `loop`).
+- 2026-08-30: **Phase 3 closed on the ungated outcome.** No baseline seeded, no
+  `parity:api:arms` gating script added, nothing deleted:
+  `parity:api:arms:report` stays wired (`package.json:41`, `ci.yml:1521`) and
+  runnable. Rollout, Non-goals and Verification rewritten so no later reader
+  re-derives the decision from the conditional prose they used to carry.
 - 2026-08-19: **corrected a false premise.** The RFC proposed building an arm
   extractor; RFC 0084 had already shipped one (PRs #6152, #6161, #6163) and the
   paired skeleton artifact is written for every compared pair today, signal-only.
