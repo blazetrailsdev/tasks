@@ -1,7 +1,7 @@
 ---
 title: "Scope nested-class method allowances to the porting TS class, not the whole file"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-30
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 140
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T13:30:13Z"
+assignee: "api-compare-buckets-reopened-module-under-one-file"
 blocked-by: null
 closed-reason: null
 ---

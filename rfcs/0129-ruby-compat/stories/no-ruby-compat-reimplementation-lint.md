@@ -1,6 +1,6 @@
 ---
 title: "A lint that fails a re-implementation of a ruby-compat primitive outside the package"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null

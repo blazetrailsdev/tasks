@@ -1,7 +1,7 @@
 ---
 title: "Decide the skeleton merge rule and ship parity:api:arms:report"
-status: ready
-updated: 2026-08-27
+status: in-progress
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7236
+claim: "2026-08-30T13:43:19Z"
+assignee: "promote-call-skeletons-to-an-arms-report"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Require every ruby-compat export to carry a resolvable vendor/ruby citation, replacing the parity:api anchor it can never have"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
