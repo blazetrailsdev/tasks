@@ -1,6 +1,6 @@
 ---
 title: "param-drift-activerecord-aes256-gcm-generate-iv-cipher"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Regexp.escape moves to ruby-compat and the three private escapeRegExp copies adopt it"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null

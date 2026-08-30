@@ -1,6 +1,6 @@
 ---
 title: "api-compare misses members of a namespace nested in a namespace (Ruby module ClassMethods)"
-status: claimed
+status: done
 updated: 2026-08-30
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 4
-pr: null
+pr: 7238
 claim: "2026-08-30T13:30:13Z"
 assignee: "api-compare-buckets-reopened-module-under-one-file"
 blocked-by: null

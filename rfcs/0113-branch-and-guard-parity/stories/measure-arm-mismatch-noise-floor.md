@@ -1,7 +1,7 @@
 ---
 title: "Measure the arm-mismatch noise floor against the one-third tripwire"
-status: ready
-updated: 2026-08-27
+status: done
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
 packages: []
@@ -9,9 +9,9 @@ deps: ["promote-call-skeletons-to-an-arms-report"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7239
+claim: "2026-08-30T14:12:56Z"
+assignee: "measure-arm-mismatch-noise-floor"
 blocked-by: null
 closed-reason: null
 ---

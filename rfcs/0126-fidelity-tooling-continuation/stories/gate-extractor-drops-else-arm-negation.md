@@ -1,7 +1,7 @@
 ---
 title: "Gate extractor drops else-arm negation, colliding same-named if/else tests"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-08-30
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 140
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T14:52:42Z"
+assignee: "extra-surface-walkmixin-honours-method-file"
 blocked-by: null
 closed-reason: null
 ---

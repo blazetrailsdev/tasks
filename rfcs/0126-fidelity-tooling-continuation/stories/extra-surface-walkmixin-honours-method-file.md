@@ -1,7 +1,7 @@
 ---
 title: "extra-surface: walkMixin ignores methodFile, widening a reopening file's allow-set"
-status: ready
-updated: 2026-08-28
+status: claimed
+updated: 2026-08-30
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T14:52:42Z"
+assignee: "extra-surface-walkmixin-honours-method-file"
 blocked-by: null
 closed-reason: null
 ---

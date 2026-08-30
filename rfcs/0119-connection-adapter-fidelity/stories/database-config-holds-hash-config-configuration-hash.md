@@ -1,6 +1,6 @@
 ---
 title: "DatabaseConfig holds the configuration hash Rails keeps on HashConfig"
-status: ready
+status: claimed
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T14:57:57Z"
+assignee: "integer-cast-value-is-a-rescue-not-a-probe"
 blocked-by: null
 closed-reason: null
 ---

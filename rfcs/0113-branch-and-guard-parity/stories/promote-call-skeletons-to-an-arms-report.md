@@ -1,6 +1,6 @@
 ---
 title: "Decide the skeleton merge rule and ship parity:api:arms:report"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling

@@ -1,7 +1,7 @@
 ---
 title: "Converge Regexp.escape onto one ported call"
-status: draft
-updated: 2026-08-28
+status: closed
+updated: 2026-08-30
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "done-by-#7169: the seven baseline rows it names were converged there, and its stated home (RFC 0089 corelib, postponed) is superseded by RFC 0129 — Regexp.escape now lives at packages/ruby-compat/src/regexp.ts (PR #7237)"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Gate the naming class once the burndown has drained it"
 status: blocked
-updated: 2026-08-27
+updated: 2026-08-30
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -17,7 +17,7 @@ est-loc: 80
 pr: null
 claim: "2026-08-11T01:14:36Z"
 assignee: "arel-collector-argument-order-convergence"
-blocked-by: "Re-measured 2026-08-27 against origin/main (53c3f0a) with pnpm build && API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api:calls:args:report. The wave-5 dep band (wave-5-naming-activesupport / -ar-model-core / -ar-adapters / -ar-associations / -ar-relation / -tail) is ALL DONE, so the dep-list half of the old reason is satisfied — but the gate's real precondition is a measured count, and it is NOT zero. Repo-wide naming residue is now burndown 193 + module-mixin-receiver 9 = 202 (was 244 + 11). Filtered to the AR require-closure (ar-closure.json, data-layer packages whole), the convergeable in-closure count is 50 rows across 34 files (was 107 across 67): activerecord burndown 35 + module-mixin-receiver 2, activesupport burndown 9 + module-mixin-receiver 2, arel burndown 1, activemodel burndown 1. So the burndown has drained 53% since the 2026-08-21 artifact but has 50 rows to go, all now inside activerecord/activesupport/arel/activemodel. Unblocks when that count reaches zero — needs a new naming wave over those 34 files, which wants its home in 0096 (still active), not here."
+blocked-by: "Re-measured 2026-08-30 against origin/main (f6e5abe) with pnpm build && API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api:calls:args:report. The wave-5 dep band is still ALL DONE, so the dep-list half of the reason remains satisfied — but the gate's real precondition is a measured count of zero, and the count went UP, not down. Repo-wide naming residue is now burndown 214 + module-mixin-receiver 9 = 223 (was 202 on 2026-08-27, 255 on 2026-08-21). Filtered to the AR require-closure packages, the burndown rows alone are activerecord 63 + activesupport 16 + activemodel 1 + arel 1 = 81 (was 50 across those same packages on 2026-08-27), before counting module-mixin-receiver. So the burndown REGRESSED by ~31 in-closure rows over the last three days — new ports are landing naming residue faster than the waves drain it. Still unblocks only when the in-closure convergeable count reaches zero; that wants a new naming wave homed in 0096 (still active), not here."
 closed-reason: null
 priority: 20
 ---

@@ -1,6 +1,6 @@
 ---
 title: "One Symbol implementation for the colon-prefixed convention, replacing five private isSymbol copies"
-status: ready
+status: claimed
 updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T14:42:41Z"
+assignee: "move-rational-to-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---
