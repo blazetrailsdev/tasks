@@ -228,12 +228,19 @@ re-homed from `0023-surfaced-deviations` on 2026-08-18 and carry the
 
 ## Open questions
 
-1. **What artefact rate is acceptable?** **Recommendation:** set the tripwire
-   before measuring, not after — if more than roughly one third of reported
-   mismatches are lowering artefacts rather than real divergences, take the
-   ungated path. Writing the threshold down first is what stops the gate being
-   tuned until it agrees with us. Carried by
-   `measure-arm-mismatch-noise-floor`.
+1. ~~**What artefact rate is acceptable?**~~ **Resolved 2026-08-30 — the
+   tripwire fired; this RFC runs UNGATED.** The measurement
+   (`measure-arm-mismatch-noise-floor`, written up in trails'
+   `docs/infrastructure/arm-mismatch-noise-floor.md`) hand-audited an 80-row
+   seeded sample — `report-arms.ts --sample=80 --seed=113`, drawn from 2,718
+   mismatched pairs across 559 files out of 5,614 pairs compared — and
+   classified each row real / lowering artefact / extraction bug:
+   **30 real (37.5%), 46 lowering artefacts (57.5%), 4 extraction bugs (5.0%)**.
+   62.5% of reported rows are not real arm divergences, against a pre-committed
+   threshold of ⅓, and the 95% interval (±10.8 points) does not come near it.
+   The report stays report-only and stays useful — 37.5% of 2,718 is ~1,020
+   genuine divergences and it is how a burndown story finds its rows — but
+   nothing gates on it, and no baseline is seeded.
 2. ~~**Does the TS side need a real parser or will the existing extraction
    do?**~~ **Resolved 2026-08-19.** `extract-ts-api.ts` imports the TypeScript
    compiler API directly (`import * as ts from "typescript"`) and already calls
@@ -261,6 +268,18 @@ re-homed from `0023-surfaced-deviations` on 2026-08-18 and carry the
 
 - 2026-08-18: initial RFC, carved out of `0023-surfaced-deviations` by the
   backlog triage pass; 59 burndown stories re-homed.
+- 2026-08-30: **the tripwire fired — ungated.** The noise-floor measurement
+  came back 57.5% lowering artefacts plus 5.0% extraction bugs on an 80-row
+  seeded sample (seed 113), against a ⅓ threshold written down before any
+  measurement. Open question 1 resolved; the arms report stays report-only and
+  the 59 burndown stories are verified arm-for-arm in review. Two extraction
+  defects the audit surfaced are filed here rather than against RFC 0084, which
+  is superseded and refuses new stories:
+  `ruby-logical-op-assign-emits-no-skeleton-arm` (Ruby `||=` / `&&=` emits no
+  arm where the TS `??=` port emits one — a dead Symbol-vs-String comparison at
+  `extract-ruby-api.rb:2392`) and `skeleton-loop-fold-covers-only-each`
+  (`foldSkeletonTokens` folds `each` and nothing else, so `each_value`,
+  `filter_map` and every other block iterator report an invented `loop`).
 - 2026-08-19: **corrected a false premise.** The RFC proposed building an arm
   extractor; RFC 0084 had already shipped one (PRs #6152, #6161, #6163) and the
   paired skeleton artifact is written for every compared pair today, signal-only.
