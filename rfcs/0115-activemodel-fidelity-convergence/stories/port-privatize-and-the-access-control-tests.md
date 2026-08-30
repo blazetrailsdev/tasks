@@ -1,6 +1,6 @@
 ---
 title: "port-privatize-and-the-access-control-tests"
-status: ready
+status: claimed
 updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 32
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T11:55:50Z"
+assignee: "converge-ar-dirty-test-off-the-rec-alias"
 blocked-by: null
 closed-reason: null
 ---
