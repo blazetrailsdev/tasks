@@ -26,7 +26,7 @@ rename.
 (`vendor/rack/lib/rack/headers.rb:144-148`). Under
 `docs/ruby-ts-conventions.md` a Ruby `?` predicate drops the mark, so `key?`
 normalises to the TS name `key` — which `packages/rack/src/headers.ts:221`
-already uses for the *other* Ruby method, `Hash#key(value)` (returns the key for
+already uses for the _other_ Ruby method, `Hash#key(value)` (returns the key for
 a value; inherited, not redefined in headers.rb). `has_key?` itself is ported as
 `hasKey` (`headers.ts:77`), so the alias has no TS declaration of its own and
 the comparer scores it against `key(value)`, reporting `value` as a rename of
