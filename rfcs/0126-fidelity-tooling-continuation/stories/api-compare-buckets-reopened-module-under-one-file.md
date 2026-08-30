@@ -35,12 +35,19 @@ and exported in `packages/activerecord/src/support/connection.ts`, and
 
 PR #5517 papered over this with a `SCOPED_SKIP_GROUPS` entry
 (`scripts/api-compare/conventions.ts`, the `config.rb` group) whose reason
-documents the artifact at length. Four of that group's seven names
-(`connection_name`, `test_configuration_hashes`, `connect`, `expand_config`)
-are suppressed **only** because of this bucketing — they are real, matching
-ports. Fixing the bucketing lets those four be deleted from the skip group,
-leaving it to cover just the genuine no-counterpart trio (`config`,
-`config_file`, `read_config`).
+documents the artifact at length. Three of that group's seven names
+(`connection_name`, `test_configuration_hashes`, `connect`) are suppressed
+**only** because of this bucketing — they are real, matching ports declared in
+connection.rb. Fixing the bucketing lets those three be deleted from the skip
+group.
+
+Corrected 2026-08-30 (PR #7238): this paragraph used to name `expand_config` as
+a fourth bucketing-only name. It is not one. `expand_config` is declared in
+config.rb itself (config.rb:26, under that file's `private` at :13), so it
+buckets under config.rb however the reopening split is spelled; what makes it
+miss is the import cycle below, not the bucketing. It stays in the skip group
+alongside the no-counterpart trio (`config`, `config_file`, `read_config`),
+whose reason is narrowed to those two populations.
 
 Note the move that would "fix" it at the source is not available: relocating
 `expandConfig` into `config.ts` would create an import cycle (`connection.ts`
@@ -59,9 +66,12 @@ from the entity's own, to size the blast radius before changing the grouping.
 - `connection.rb` appears as a compared Ruby file for
   `activerecord-test-support`, paired with `support/connection.ts`, and its
   three public methods match there.
-- The four bucketing-only names are removed from the `config.rb`
-  `SCOPED_SKIP_GROUPS` entry and its reason is trimmed to the remaining trio;
-  `docs/ruby-ts-conventions.md` regenerated.
+- The three bucketing-only names (`connection_name`,
+  `test_configuration_hashes`, `connect`) are removed from the `config.rb`
+  `SCOPED_SKIP_GROUPS` entry and its reason is narrowed to what remains —
+  the no-counterpart trio plus `expand_config`, which is not a bucketing
+  artifact (see the correction above); `docs/ruby-ts-conventions.md`
+  regenerated.
 - No package's method total regresses — check the full `parity:api` summary
   before/after, since re-bucketing moves methods between files repo-wide.
 
