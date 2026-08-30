@@ -1,6 +1,6 @@
 ---
 title: "retire-ad-hoc-association-definition-holders"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null

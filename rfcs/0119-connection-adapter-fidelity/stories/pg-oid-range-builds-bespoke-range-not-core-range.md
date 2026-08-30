@@ -1,6 +1,6 @@
 ---
 title: "PG OID::Range#map builds a bespoke Range class where Rails builds ::Range"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

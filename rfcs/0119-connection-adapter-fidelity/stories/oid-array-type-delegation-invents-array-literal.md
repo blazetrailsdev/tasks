@@ -1,6 +1,6 @@
 ---
 title: 'OID::Array#type invents an "array" literal where Rails delegates nil'
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

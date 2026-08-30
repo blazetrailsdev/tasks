@@ -1,6 +1,6 @@
 ---
 title: "Create packages/ruby-compat: an empty leaf package wired into the workspace, with its contract documented"
-status: ready
+status: in-progress
 updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["vendor-ruby-mri-source"]
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7230
+claim: "2026-08-30T02:32:07Z"
+assignee: "ruby-compat-package-skeleton"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQLAdapter#getDatabaseVersion bypasses withRawConnection for a fresh client"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
