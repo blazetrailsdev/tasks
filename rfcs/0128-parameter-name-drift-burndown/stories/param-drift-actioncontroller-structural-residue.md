@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 `param-drift-actioncontroller` took actioncontroller from 43 param-name rows to
-7 and enrolled it in `pnpm parity:api:params` at a mark of 7. Every survivor is
+10 and enrolled it in `pnpm parity:api:params` at a mark of 10. Every survivor is
 a structural port divergence rather than a rename.
 
 ### 1. `base.rb#respond_to` — 1 row, Ruby's `*mimes` dropped
@@ -61,7 +61,23 @@ itself (`packages/actionpack/src/action-controller/metal/allow-browser.ts:23`,
 misdescribe a `string`. Same shape as
 [[param-drift-actiondispatch-structural-residue]]'s `http/headers.rb#initialize`.
 
-### 5. `template_assertions.rb#assert_template` — 2 rows, a different signature
+### 5. `metal/request_forgery_protection.rb` storage strategies — 3 rows, the port holds the store, not the request
+
+`SessionStore#fetch(request)` / `#store(request, csrf_token)` / `#reset(request)`
+(`metal/request_forgery_protection.rb:320-330`) and `CookieStore`'s three
+(`:338-362`) all take a request and reach through it —
+`request.session[:_csrf_token]`, `request.cookie_jar.encrypted[@cookie_name]`.
+trails' `SessionStore` takes the session hash and `CookieStore` the cookie hash
+directly (`packages/actionpack/src/action-controller/metal/
+request-forgery-protection.ts:164-197`), indexing them with `this._tokenKey` /
+`this._cookieName`, so spelling either parameter `request` would misdescribe the
+value — and would read wrong beside the `read`/`write` helpers next to it. Same
+shape as [[param-drift-actiondispatch-structural-residue]]'s
+`http/headers.rb#initialize`; the `csrf_token` slot IS the token and already
+carries Rails' name. `CookieStore#fetch` also has a session-id check trails does
+not port, so the two converge together.
+
+### 6. `template_assertions.rb#assert_template` — 2 rows, a different signature
 
 Rails' `assert_template(options = {}, message = nil)`
 (`actionpack/lib/action_controller/template_assertions.rb:7`) raises
