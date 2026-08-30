@@ -41,7 +41,7 @@ This is not cosmetic — the path is load-bearing for a second Rails behaviour.
 `AppBase#skip_storage?` is `skip_active_storage? && !sqlite3?`
 (`railties/lib/rails/generators/app_base.rb:364-366`), and `create_storage_files`
 (`railties/lib/rails/generators/rails/app/app_generator.rb:468-470`) uses it to
-keep `storage/` alive for a sqlite3 app *even when Active Storage is skipped*,
+keep `storage/` alive for a sqlite3 app _even when Active Storage is skipped_,
 precisely because the database file lives there.
 
 PR #7260 guarded the `storage/.gitkeep` emission on `skip_active_storage?`
