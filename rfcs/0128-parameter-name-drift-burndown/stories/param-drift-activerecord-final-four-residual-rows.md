@@ -30,12 +30,12 @@ This story is the other four, filed rather than absorbed into the mark exactly
 as the enrolment story's criterion directs. Verbatim from
 `scripts/api-compare/output/param-name-mismatches.json`:
 
-| Ruby file | Ruby method | pos | Ruby param | TS param |
-| --- | --- | --- | --- | --- |
-| `autosave_association.rb` | `reload` | 0 | `options` | `inheritedReload` |
-| `core.rb` | `initialize` | 0 | `attributes` | `value` |
-| `insert_all.rb` | `quote_column` | 0 | `column` | `name` |
-| `type.rb` | `lookup` | 0 | `args` | `lookupKey` |
+| Ruby file                 | Ruby method    | pos | Ruby param   | TS param          |
+| ------------------------- | -------------- | --- | ------------ | ----------------- |
+| `autosave_association.rb` | `reload`       | 0   | `options`    | `inheritedReload` |
+| `core.rb`                 | `initialize`   | 0   | `attributes` | `value`           |
+| `insert_all.rb`           | `quote_column` | 0   | `column`     | `name`            |
+| `type.rb`                 | `lookup`       | 0   | `args`       | `lookupKey`       |
 
 Notes from a first read, so the next agent does not re-derive them:
 
