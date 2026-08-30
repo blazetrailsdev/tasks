@@ -23,7 +23,6 @@ superseded by 0123) and refuses new stories, and RFC 0113 is the RFC that reads
 the skeleton artifact today. This is a defect in the extraction, not in RFC
 0113's arm burndown.
 
-
 `extract-ruby-api.rb:2392` never emits an `if` arm for a Ruby `||=` / `&&=`:
 
 ```ruby

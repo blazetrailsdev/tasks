@@ -23,7 +23,6 @@ superseded by 0123) and refuses new stories, and RFC 0113 is the RFC that reads
 the skeleton artifact today. This is a defect in the extraction, not in RFC
 0113's arm burndown.
 
-
 `foldSkeletonTokens` (`compare.ts:303-320`) folds block-iteration onto `loop` so
 Ruby `xs.each { … }` and its `for (const x of xs)` port read alike. Its name set
 is derived, not listed:
