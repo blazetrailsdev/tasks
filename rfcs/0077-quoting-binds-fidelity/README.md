@@ -1,9 +1,9 @@
 ---
 rfc: "0077-quoting-binds-fidelity"
 title: "Adapter quoting and bind-param fidelity"
-status: active
+status: closed
 created: 2026-07-26
-updated: 2026-08-25
+updated: 2026-08-30
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -59,3 +59,11 @@ Points 1, 2 and 4 hold at that commit. Point 3's surviving rows are:
 override, and the abstract `quote` now self-dispatches `quote_string`
 (`abstract/quoting.rb:76`), so MySQL inherits it. The RFC stays `active` until
 point 5 holds.
+
+## Closed 2026-08-30
+
+All 53 stories are terminal (48 done, 5 closed). Closed on the backlog being
+empty rather than on a fresh run of the five-point "Done when" verification —
+the last recorded run is the 2026-08-09 one above. Anything the surviving rows
+there still describe is re-filed against the best-fit active RFC, not held open
+here.
