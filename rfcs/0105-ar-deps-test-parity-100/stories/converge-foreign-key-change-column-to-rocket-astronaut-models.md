@@ -48,12 +48,12 @@ The trails counterpart
 `changeColumnTables` factory) has no models. It substitutes:
 
 - `createRocketWithAstronaut(conn)` — hand-written `INSERT INTO … VALUES
-  ('myrocket')` plus a `SELECT id` and a second `INSERT`, in place of
+('myrocket')` plus a `SELECT id` and a second `INSERT`, in place of
   `Rocket.create!` + the `has_many` collection append.
 - `rocketName(conn)` — a raw `SELECT name … ORDER BY id`, in place of
   `Rocket.first.name`.
-- `const rockets = \`${prefix}rockets${suffix}\`` — string interpolation, in
-  place of `Rocket.table_name`.
+- `const rockets = \`${prefix}rockets${suffix}\``— string interpolation, in
+place of`Rocket.table_name`.
 
 The third substitution is the one that costs coverage. `ForeignKeyChangeColumnWithPrefixTest`
 and `…WithSuffixTest` (lines 145-163) exist precisely to check that the model
