@@ -32,6 +32,20 @@ and the walk falls through to `ts.forEachChild`. The tests inside are still
 recorded — but with the enclosing describe MISSING from their `ancestors`, so
 their `path` is wrong.
 
+A bare IDENTIFIER title is the same bug with no skeleton to fall back on:
+`describe(name, ...)` inside a `function makeSuite(name, ...)` helper returns
+null from `getArgString` exactly as a template does, but there is no static text
+to recover a name from. Confirmed in the field — `migration/foreign-key.test.ts`
+generated its three `ForeignKeyChangeColumn*` suites from a
+`foreignKeyChangeColumnTest(name, prefix, suffix)` helper, and all six contained
+`it`s were attributed to the outer `Migration` describe, surfacing as six
+wrong-describe rows that sat undetected until
+`port-migration-foreign-key-residue-and-mysql2-rake-skips` (#7252) inlined the
+three describes by hand. Whatever this story does for templates has to at least
+NOT silently reparent the identifier form; the honest fallback is to record the
+suite under an opaque dynamic placeholder so its children keep a complete
+ancestor chain and simply never match.
+
 That is worse than the `it()` case was: a wrong path is not inert. Pass 1 keys
 on the full path and pass 1.5 on a path suffix, so a test under a dropped
 describe silently demotes to a pass-2 description-only match (counted as "wrong
@@ -56,6 +70,11 @@ way `dynamic` cases are excluded today (`compare.ts`).
       through, and its contained tests carry it in `ancestors`.
 - [ ] A recovered suite skeleton never credits a Rails test: the contained cases
       are not matched on a path containing the placeholder.
-- [ ] A unit test covers a template-titled describe wrapping a static `it`.
+- [ ] A `describe` whose title is a bare identifier (the helper-generated
+      `describe(name, ...)` form) does not silently drop out of the ancestor
+      chain: its children either carry an opaque dynamic placeholder or are
+      excluded, never reparented onto the enclosing suite.
+- [ ] A unit test covers a template-titled describe wrapping a static `it`, and
+      one covers the identifier-titled form.
 - [ ] `pnpm parity:test --gates --check` stays at exit 0; report the movement in
       matched / wrong-describe.
