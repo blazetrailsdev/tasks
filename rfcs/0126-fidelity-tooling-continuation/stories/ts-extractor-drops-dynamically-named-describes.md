@@ -20,7 +20,7 @@ closed-reason: null
 
 PR #7241 taught the TS test extractor to record a dynamically-named
 `it()` / `test()` under the template's static skeleton
-(`` it(`${name} raises X`) `` → `"<expr> raises X"`, flagged `dynamic` so it
+(``it(`${name} raises X`)`` → `"<expr> raises X"`, flagged `dynamic` so it
 counts as extra and never matches a Rails test —
 `getArgTitle` / `getArgTemplateSkeleton`, `scripts/test-compare/extract-ts-core.ts`).
 
