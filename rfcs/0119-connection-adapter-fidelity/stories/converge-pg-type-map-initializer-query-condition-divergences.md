@@ -1,7 +1,7 @@
 ---
 title: "Converge TypeMapInitializer's query_conditions_for_* divergences: defensive quote-escaping and the WHERE 1=0 short-circuit"
-status: draft
-updated: 2026-08-26
+status: ready
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

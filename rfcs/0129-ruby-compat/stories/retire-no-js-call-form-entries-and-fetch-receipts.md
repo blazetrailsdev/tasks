@@ -1,14 +1,14 @@
 ---
 title: "Retire the NO_JS_CALL_FORM entries and @missingRailsCall receipts that ruby-compat has given a call form"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport", "activerecord", "activemodel", "actionpack"]
 deps: ["enroll-call-mapping-remaining-packages", "ruby-compat-hash-fetch-and-key-error"]
 deps-rfc: []
 est-loc: 240
-priority: null
+priority: 17
 pr: null
 claim: null
 assignee: null

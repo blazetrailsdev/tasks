@@ -1,7 +1,7 @@
 ---
 title: "PG Column predicates are getters where Rails (and the sqlite3 sibling) have methods"
-status: draft
-updated: 2026-08-25
+status: ready
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

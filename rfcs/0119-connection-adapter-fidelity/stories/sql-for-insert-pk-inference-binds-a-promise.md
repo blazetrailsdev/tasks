@@ -1,7 +1,7 @@
 ---
 title: "sqlForInsert's pk-inference branch binds the async primaryKey Promise into RETURNING"
-status: ready
-updated: 2026-08-25
+status: closed
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Promise-binding defect gone: abstract/database-statements.ts:1413 now reads `resolvedPk = (await this.primaryKey?.(tableRef)) ?? null`, so no Promise reaches the RETURNING list. Residual composite-PK arm is out of scope for this title and is covered by converge-sql-for-insert-and-supports-insert-returning-to-sync."
 ---
 
 ## Context

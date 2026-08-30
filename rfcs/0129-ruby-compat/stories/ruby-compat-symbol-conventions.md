@@ -1,14 +1,14 @@
 ---
 title: "One Symbol implementation for the colon-prefixed convention, replacing five private isSymbol copies"
 status: ready
-updated: 2026-08-29
+updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "i18n", "activemodel"]
 deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

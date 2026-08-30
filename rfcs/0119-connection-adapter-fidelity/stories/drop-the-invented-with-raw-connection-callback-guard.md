@@ -1,7 +1,7 @@
 ---
 title: "with_raw_connection carries a callback guard Rails has no counterpart for"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

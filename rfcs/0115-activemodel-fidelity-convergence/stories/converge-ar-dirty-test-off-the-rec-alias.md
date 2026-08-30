@@ -1,6 +1,6 @@
 ---
 title: "converge-ar-dirty-test-off-the-rec-alias"
-status: draft
+status: ready
 updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

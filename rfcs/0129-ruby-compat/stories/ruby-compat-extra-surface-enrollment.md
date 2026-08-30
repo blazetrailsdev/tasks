@@ -1,14 +1,14 @@
 ---
 title: "Enroll ruby-compat in the extra-surface gate so the only-what-we-call rule is mechanical, not reviewed"
 status: ready
-updated: 2026-08-29
+updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat"]
 deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
 est-loc: 130
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

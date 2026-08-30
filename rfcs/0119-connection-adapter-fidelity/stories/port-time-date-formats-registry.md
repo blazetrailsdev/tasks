@@ -1,7 +1,7 @@
 ---
 title: "Port the Time::DATE_FORMATS / Date::DATE_FORMATS registry and route TimeWithZone#to_fs through it"
-status: ready
-updated: 2026-08-25
+status: closed
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Landed: DATE_FORMATS registry exists and is mutable (activesupport/src/core-ext/time/conversions.ts:54), TimeWithZone#toFs looks the formatter up at time-with-zone.ts:713, and the to_fs/strftime args row is gone from call-mismatches-exclude/activesupport/time-with-zone.json."
 ---
 
 # Port the `Time::DATE_FORMATS` / `Date::DATE_FORMATS` registry

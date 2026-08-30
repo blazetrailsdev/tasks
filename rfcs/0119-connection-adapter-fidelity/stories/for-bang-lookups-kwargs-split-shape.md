@@ -1,7 +1,7 @@
 ---
 title: "Settle the kwargs-split shape for the *ForBang schema lookups (Ruby key:, **options)"
-status: draft
-updated: 2026-08-25
+status: ready
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

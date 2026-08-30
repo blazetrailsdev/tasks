@@ -1,7 +1,7 @@
 ---
 title: "Enroll the remaining packages in the ruby-compat call gate, activerecord last"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: ["enroll-call-mapping-i18n-and-activesupport"]
 deps-rfc: []
 est-loc: 260
-priority: null
+priority: 16
 pr: null
 claim: null
 assignee: null

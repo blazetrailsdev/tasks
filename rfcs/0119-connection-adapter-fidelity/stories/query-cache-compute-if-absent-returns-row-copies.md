@@ -1,7 +1,7 @@
 ---
 title: "compute_if_absent returns per-row copies where Rails returns the stored entry"
-status: ready
-updated: 2026-08-25
+status: closed
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged: query-cache.ts:79/89/91 now return the stored entry (`return Promise.resolve(entry)`, `return stored`, `return result`) with no per-row `{...row}` copies, matching query_cache.rb:70-79."
 ---
 
 ## Context

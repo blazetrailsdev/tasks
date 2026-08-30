@@ -1,7 +1,7 @@
 ---
 title: "reference-definition-columns-named-underscore-columns"
-status: ready
-updated: 2026-08-25
+status: closed
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Renamed already: ReferenceDefinition's helper is `private columns()` at abstract/schema-definitions.ts:780, called from :668, :684 and :767 — no `_columns` remains in the file, matching schema_definitions.rb:280-286."
 ---
 
 ## Context

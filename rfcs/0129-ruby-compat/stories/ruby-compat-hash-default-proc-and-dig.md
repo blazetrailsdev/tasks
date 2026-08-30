@@ -1,14 +1,14 @@
 ---
 title: "Hash default / default_proc and dig, scoped by a measured call-site inventory"
 status: ready
-updated: 2026-08-29
+updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport", "activerecord"]
 deps: ["ruby-compat-hash-fetch-and-key-error"]
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null

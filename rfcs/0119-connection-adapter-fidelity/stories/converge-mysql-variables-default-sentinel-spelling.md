@@ -1,7 +1,7 @@
 ---
 title: 'Accept only Rails'' ":default" sentinel for MySQL session variables'
-status: draft
-updated: 2026-08-26
+status: ready
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

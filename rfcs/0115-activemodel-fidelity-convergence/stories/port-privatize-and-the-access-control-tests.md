@@ -1,14 +1,14 @@
 ---
 title: "port-privatize-and-the-access-control-tests"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 32
 pr: null
 claim: null
 assignee: null

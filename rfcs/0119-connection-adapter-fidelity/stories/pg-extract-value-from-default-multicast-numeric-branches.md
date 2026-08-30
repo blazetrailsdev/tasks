@@ -1,6 +1,6 @@
 ---
 title: "resolve the non-Rails multi-cast numeric branches in PG extractValueFromDefault"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

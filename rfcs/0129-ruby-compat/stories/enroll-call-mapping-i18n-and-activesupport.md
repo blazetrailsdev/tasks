@@ -1,7 +1,7 @@
 ---
 title: "Enroll i18n and activesupport in the ruby-compat call gate at zero"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "i18n", "activesupport"]
@@ -13,7 +13,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 15
 pr: null
 claim: null
 assignee: null

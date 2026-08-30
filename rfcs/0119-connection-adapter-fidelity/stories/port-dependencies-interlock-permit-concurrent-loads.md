@@ -1,7 +1,7 @@
 ---
 title: "port-dependencies-interlock-permit-concurrent-loads"
-status: ready
-updated: 2026-08-25
+status: closed
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not portable and no longer cited: Node has no autoload interlock, ActiveSupport::Dependencies.interlock is unported, and the `@missingRailsCall permit_concurrent_loads` tag the story names is gone from waitPoll (connection-pool/queue.ts:236 awaits `this._cond.wait` bare, with only a `size` receipt left in the file)."
 ---
 
 ## Context

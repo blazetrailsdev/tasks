@@ -1,6 +1,6 @@
 ---
 title: "PG lookup_cast_type resolves by name string instead of Rails' ::regtype::oid"
-status: draft
+status: ready
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

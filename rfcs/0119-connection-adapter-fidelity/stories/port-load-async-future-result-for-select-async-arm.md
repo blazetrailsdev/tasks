@@ -1,7 +1,7 @@
 ---
 title: "port load_async/FutureResult so DatabaseStatements#select takes its async arm"
-status: ready
-updated: 2026-08-25
+status: closed
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Landed: FutureResult is ported (connection-adapters/future-result.ts:114), `asyncEnabled?()` exists (abstract/database-statements.ts:160), and `select` takes Rails' async arm raising AsynchronousQueryInsideTransactionError at database-statements.ts:1356-1358."
 ---
 
 ## Context

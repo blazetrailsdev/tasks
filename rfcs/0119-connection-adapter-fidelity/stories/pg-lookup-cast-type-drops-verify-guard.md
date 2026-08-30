@@ -1,6 +1,6 @@
 ---
 title: "PG lookup_cast_type_from_column drops Rails' verify!-when-type_map-nil guard"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

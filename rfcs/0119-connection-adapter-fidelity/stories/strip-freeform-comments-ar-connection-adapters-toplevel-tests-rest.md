@@ -1,7 +1,7 @@
 ---
 title: "strip-freeform-comments-ar-connection-adapters-toplevel-tests-rest"
-status: draft
-updated: 2026-08-28
+status: closed
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Done: the connection-adapters `ignores` array is gone from eslint.config.mjs (packages/activerecord is not in the no-freeform-comments exclusion list at eslint.config.mjs:840-862), and running the rule with {report:true} over all three named files — schema-cache.test.ts, postgresql-adapter.exec-query.trails.test.ts, postgresql-adapter.get-client.trails.test.ts — reports zero findings."
 ---
 
 ## Context

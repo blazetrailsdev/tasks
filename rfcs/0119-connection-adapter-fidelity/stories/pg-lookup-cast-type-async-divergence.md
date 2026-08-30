@@ -1,6 +1,6 @@
 ---
 title: "Converge PostgreSQLAdapter#lookup_cast_type onto the sync base signature"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

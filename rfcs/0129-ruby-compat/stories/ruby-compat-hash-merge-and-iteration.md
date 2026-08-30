@@ -1,7 +1,7 @@
 ---
 title: "Hash mutation and iteration — merge, update, delete_if, each_pair, transform_values — get a call form"
 status: ready
-updated: 2026-08-29
+updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
 packages:
@@ -18,7 +18,7 @@ packages:
 deps: ["ruby-compat-hash-fetch-and-key-error"]
 deps-rfc: []
 est-loc: 260
-priority: null
+priority: 12
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "Report-only structural detection of ruby-compat primitives re-implemented under an unrecognised name"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat"]
 deps: ["no-ruby-compat-reimplementation-lint"]
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 18
 pr: null
 claim: null
 assignee: null
