@@ -1,6 +1,6 @@
 ---
 title: "name-reader-types-left-unknown-on-canonical-models"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
