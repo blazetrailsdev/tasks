@@ -1,6 +1,6 @@
 ---
 title: "One Comparable / <=> for the three hand-rolled spaceship implementations"
-status: draft
+status: ready
 updated: 2026-08-29
 rfc: "0129-ruby-compat"
 cluster: null

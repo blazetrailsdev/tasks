@@ -1,6 +1,6 @@
 ---
 title: "Hash#fetch (both arms) and KeyError land in ruby-compat, replacing four private fetch copies and eight ad-hoc KeyErrors"
-status: draft
+status: ready
 updated: 2026-08-29
 rfc: "0129-ruby-compat"
 cluster: null

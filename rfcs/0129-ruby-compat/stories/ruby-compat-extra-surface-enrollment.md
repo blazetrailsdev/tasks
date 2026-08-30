@@ -1,6 +1,6 @@
 ---
 title: "Enroll ruby-compat in the extra-surface gate so the only-what-we-call rule is mechanical, not reviewed"
-status: draft
+status: ready
 updated: 2026-08-29
 rfc: "0129-ruby-compat"
 cluster: null

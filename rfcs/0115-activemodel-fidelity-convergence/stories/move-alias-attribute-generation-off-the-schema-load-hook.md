@@ -1,6 +1,6 @@
 ---
 title: "move-alias-attribute-generation-off-the-schema-load-hook"
-status: draft
+status: in-progress
 updated: 2026-08-29
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 7220
 claim: null
 assignee: null
 blocked-by: null

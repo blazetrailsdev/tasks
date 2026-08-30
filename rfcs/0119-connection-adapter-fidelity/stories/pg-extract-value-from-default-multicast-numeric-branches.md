@@ -1,7 +1,7 @@
 ---
 title: "resolve the non-Rails multi-cast numeric branches in PG extractValueFromDefault"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-29
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-29T23:33:49Z"
+assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null
 closed-reason: null
 ---

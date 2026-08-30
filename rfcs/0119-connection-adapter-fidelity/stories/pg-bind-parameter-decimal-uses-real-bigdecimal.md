@@ -1,6 +1,6 @@
 ---
 title: "PG bind-parameter decimal case stands in a Number for the real BigDecimal"
-status: in-progress
+status: done
 updated: 2026-08-29
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

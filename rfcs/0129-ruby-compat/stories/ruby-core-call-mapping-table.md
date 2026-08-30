@@ -1,6 +1,6 @@
 ---
 title: "A Ruby-core to ruby-compat call resolution table, report-only, folding in CORE_LIBRARY_ALIASES"
-status: draft
+status: ready
 updated: 2026-08-29
 rfc: "0129-ruby-compat"
 cluster: null

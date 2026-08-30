@@ -1,6 +1,6 @@
 ---
 title: "non-attribute-read-is-a-compile-error"
-status: draft
+status: in-progress
 updated: 2026-08-29
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7222
 claim: null
 assignee: null
 blocked-by: null

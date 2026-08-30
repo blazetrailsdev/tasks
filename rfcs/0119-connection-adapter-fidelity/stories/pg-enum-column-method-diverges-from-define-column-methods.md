@@ -1,16 +1,16 @@
 ---
 title: "Abstract TableDefinition#enum is PG-only surface in Rails"
-status: ready
-updated: 2026-08-25
+status: done
+updated: 2026-08-29
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7018
+claim: "2026-08-29T23:33:49Z"
+assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null
 closed-reason: null
 ---

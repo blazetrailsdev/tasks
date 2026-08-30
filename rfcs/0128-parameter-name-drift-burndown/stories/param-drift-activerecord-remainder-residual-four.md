@@ -1,6 +1,6 @@
 ---
 title: "param-drift-activerecord-remainder-residual-four"
-status: ready
+status: blocked
 updated: 2026-08-29
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
-claim: null
-assignee: null
-blocked-by: null
+pr: 7221
+claim: "2026-08-29T23:24:10Z"
+assignee: "param-drift-activerecord-remainder-residual-four"
+blocked-by: "3 of 4 rows cannot converge here: middleware/database_selector.rb#call and middleware/shard_selector.rb#call need ActionDispatch::Request in activerecord, convergeable only with RFC 0106 (call-time constant resolution); encryption/cipher/aes256_gcm.rb#generate_iv needs an OpenSSL::Cipher analogue in activesupport that mints its own random IV (Node createCipheriv takes the IV at construction), filed as param-drift-activerecord-aes256-gcm-generate-iv-cipher. The AutoFilteredParameters row converged in PR #7221."
 closed-reason: null
 ---
 

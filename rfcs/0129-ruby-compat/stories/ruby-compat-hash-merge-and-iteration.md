@@ -1,6 +1,6 @@
 ---
 title: "Hash mutation and iteration — merge, update, delete_if, each_pair, transform_values — get a call form"
-status: draft
+status: ready
 updated: 2026-08-29
 rfc: "0129-ruby-compat"
 cluster: null

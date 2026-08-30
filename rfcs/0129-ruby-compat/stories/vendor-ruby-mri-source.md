@@ -1,6 +1,6 @@
 ---
 title: "Vendor ruby/ruby at v3_3_11 as the MRI read-anchor for ruby-compat citations"
-status: draft
+status: ready
 updated: 2026-08-29
 rfc: "0129-ruby-compat"
 cluster: null

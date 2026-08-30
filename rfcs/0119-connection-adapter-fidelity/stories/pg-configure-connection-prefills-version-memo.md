@@ -1,7 +1,7 @@
 ---
 title: "PG configure_connection pre-fills the version memo instead of letting check_version fetch"
-status: ready
-updated: 2026-08-25
+status: done
+updated: 2026-08-29
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 6237
+claim: "2026-08-29T23:33:49Z"
+assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null
 closed-reason: null
 ---

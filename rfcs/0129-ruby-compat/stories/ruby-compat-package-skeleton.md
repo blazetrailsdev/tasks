@@ -1,6 +1,6 @@
 ---
 title: "Create packages/ruby-compat: an empty leaf package wired into the workspace, with its contract documented"
-status: draft
+status: ready
 updated: 2026-08-29
 rfc: "0129-ruby-compat"
 cluster: null

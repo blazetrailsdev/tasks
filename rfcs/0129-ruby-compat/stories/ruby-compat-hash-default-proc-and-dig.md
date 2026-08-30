@@ -1,6 +1,6 @@
 ---
 title: "Hash default / default_proc and dig, scoped by a measured call-site inventory"
-status: draft
+status: ready
 updated: 2026-08-29
 rfc: "0129-ruby-compat"
 cluster: null
