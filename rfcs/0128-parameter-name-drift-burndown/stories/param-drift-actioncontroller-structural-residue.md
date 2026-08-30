@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 `param-drift-actioncontroller` took actioncontroller from 43 param-name rows to
-6 and enrolled it in `pnpm parity:api:params` at a mark of 6. Every survivor is
+7 and enrolled it in `pnpm parity:api:params` at a mark of 7. Every survivor is
 a structural port divergence rather than a rename.
 
 ### 1. `base.rb#respond_to` — 1 row, Ruby's `*mimes` dropped
@@ -51,7 +51,17 @@ name and the file. The rows clear when the ActionController macro is ported (the
 existing `createLogAtFilter` is the closest trails has) and the logger helper
 moves to activesupport.
 
-### 4. `template_assertions.rb#assert_template` — 2 rows, a different signature
+### 4. `metal/allow_browser.rb#initialize` — 1 row, the port holds a UA string
+
+`ActionController::AllowBrowser::BrowserBlocker.new(request, versions:)`
+(`actionpack/lib/action_controller/metal/allow_browser.rb:80`) holds the request
+and reads `@request.user_agent` off it. trails takes the user-agent string
+itself (`packages/actionpack/src/action-controller/metal/allow-browser.ts:23`,
+`this._userAgent = userAgentString`), so spelling the parameter `request` would
+misdescribe a `string`. Same shape as
+[[param-drift-actiondispatch-structural-residue]]'s `http/headers.rb#initialize`.
+
+### 5. `template_assertions.rb#assert_template` — 2 rows, a different signature
 
 Rails' `assert_template(options = {}, message = nil)`
 (`actionpack/lib/action_controller/template_assertions.rb:7`) raises
