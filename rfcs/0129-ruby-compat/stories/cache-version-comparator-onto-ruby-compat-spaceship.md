@@ -30,7 +30,7 @@ spells out both halves of MRI's comparison inline:
 - a local `rubyClassName` arrow plus a `throw new ArgumentError(...)` that
   reproduces `rb_cmperr` (`object.c`): the message is
   `comparison of <class of the running max> with <class-or-inspect of the
-  incoming value> failed`, with a special const rendered by `inspect` (`nil`,
+incoming value> failed`, with a special const rendered by `inspect` (`nil`,
   not `NilClass`).
 
 Verified against MRI 3.3: with a real `Array#max` receiver,

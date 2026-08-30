@@ -25,9 +25,9 @@ tests, which does not fit inside one PR's LOC ceiling next to the other six.
 
 Measured 2026-08-30 after PR for `assertions-migration-cluster`:
 
-| Rails test file | count | kind | value |
-| --- | --: | --: | --: |
-| `migration_test.rb` | 46 | 74 | 0 |
+| Rails test file     | count | kind | value |
+| ------------------- | ----: | ---: | ----: |
+| `migration_test.rb` |    46 |   74 |     0 |
 
 Expand per test with
 `pnpm parity:test -- --package activerecord --assertions --missing` and grep for
