@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 `param-drift-actioncontroller` took actioncontroller from 43 param-name rows to
-10 and enrolled it in `pnpm parity:api:params` at a mark of 10. Every survivor is
+11 and enrolled it in `pnpm parity:api:params` at a mark of 11. Every survivor is
 a structural port divergence rather than a rename.
 
 ### 1. `base.rb#respond_to` — 1 row, Ruby's `*mimes` dropped
@@ -77,7 +77,30 @@ shape as [[param-drift-actiondispatch-structural-residue]]'s
 carries Rails' name. `CookieStore#fetch` also has a session-id check trails does
 not port, so the two converge together.
 
-### 6. `template_assertions.rb#assert_template` — 2 rows, a different signature
+### 6. `metal/strong_parameters.rb#deep_merge?` — 1 row, a predicate colliding with the method it guards
+
+`Parameters#deep_merge?(other_hash)` (`metal/strong_parameters.rb:1027`, `:nodoc:`)
+is the DeepMergeable hook asking whether a value should be merged recursively —
+a different method from `deep_merge`. Under `docs/ruby-ts-conventions.md` a `?`
+predicate drops the mark, so it normalises onto the TS name `deepMerge`, which
+`packages/actionpack/src/action-controller/metal/strong-parameters.ts:294`
+already uses for the port of `ActiveSupport::DeepMergeable#deep_merge(other,
+&block)` (`activesupport/lib/active_support/deep_mergeable.rb:29`). trails has no
+port of the predicate itself, so the comparer scores the alias against
+`deepMerge(other)` and reports `other` as a rename of `other_hash`.
+
+`param-drift-actioncontroller` briefly spelled the parameter `otherHash` to clear
+this row; review caught that it adopts the WRONG method's identifier — the
+implementing method names it `other`, as trails' own
+`packages/activesupport/src/deep-mergeable.ts:43` already does — so it was
+reverted to `other` and the collision recorded here. (Rails' rdoc at
+`strong_parameters.rb:168-191` documents Parameters' facing signature as
+`deep_merge(other_hash, &block)`, but that is a `# :method:` call-seq comment,
+not a `def`; the body being ported is DeepMergeable's.) Same shape as
+[[param-drift-rack-structural-residue]]'s `headers.rb#key?` row, and the two
+should be decided together.
+
+### 7. `template_assertions.rb#assert_template` — 2 rows, a different signature
 
 Rails' `assert_template(options = {}, message = nil)`
 (`actionpack/lib/action_controller/template_assertions.rb:7`) raises

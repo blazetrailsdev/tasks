@@ -79,7 +79,14 @@ left alone here.
 - There is no exclude register for parameter names and none is added. A position
   that genuinely cannot carry the Rails name is a `pnpm tasks block` naming the
   language shortcoming.
-- actioncontroller reads 0 rows, and enrols in the gate in this PR: add `"actioncontroller"` to
-  `GATED_PACKAGES` in `scripts/api-compare/param-name-mark.ts` and seed its mark
-  in `param-name-mark.json` at `{ "total": 0, "byFile": {} }`.
-  `pnpm parity:api:params` then reports it OK.
+- actioncontroller enrols in the gate in this PR: add `"actioncontroller"` to `GATED_PACKAGES` in
+  `scripts/api-compare/param-name-mark.ts` and seed its mark in
+  `param-name-mark.json`. `pnpm parity:api:params` then reports it OK.
+- **Settled in PR #7251 at a mark of 11, not 0.** The 43→11 rows this story
+  removed were every position that was actually a RENAME. What the count does not
+  distinguish, and this criterion assumed away, is a row where the Ruby
+  identifier names a value the port does not hold, or where two Ruby methods
+  normalise onto one TS name — neither of which a rename can fix, and both of
+  which a rename would paper over by making the code lie. Those are filed with
+  their `vendor/rails` `file:line` in [[param-drift-actioncontroller-structural-residue]]; the mark is only-shrink and burns
+  down there.
