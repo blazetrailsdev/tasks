@@ -1,6 +1,6 @@
 ---
 title: "respondToMissing drops respond_to_missing?'s self == Base arm and Method#valid?'s reflect_on_aggregation"
-status: claimed
+status: in-progress
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 7269
 claim: "2026-08-30T20:54:11Z"
 assignee: "converge-respond-to-missing-base-arm-and-aggregation-validity"
 blocked-by: null

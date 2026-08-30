@@ -1,7 +1,7 @@
 ---
 title: "Type::Registry lacks Rails' klass register arm, lookup varargs and error message"
-status: ready
-updated: 2026-08-27
+status: in-progress
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7271
+claim: "2026-08-30T21:34:09Z"
+assignee: "duration-modulo-missing-scalar-and-type-error-arms"
 blocked-by: null
 closed-reason: null
 ---

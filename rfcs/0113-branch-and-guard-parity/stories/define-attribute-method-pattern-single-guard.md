@@ -1,7 +1,7 @@
 ---
 title: "Drop define_attribute_method_pattern's extra prototype guard arm now that AR's predicate dispatches"
-status: ready
-updated: 2026-08-27
+status: done
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 6711
+claim: "2026-08-30T21:14:13Z"
+assignee: "decimal-type-missing-numeric-rational-cast-arm"
 blocked-by: null
 closed-reason: null
 ---

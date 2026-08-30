@@ -1,16 +1,16 @@
 ---
 title: "mysql dbconsole pushes config.database unconditionally (abstract_mysql_adapter.rb:80)"
-status: ready
-updated: 2026-08-27
+status: in-progress
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm
 deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7270
+claim: "2026-08-30T21:14:13Z"
+assignee: "decimal-type-missing-numeric-rational-cast-arm"
 blocked-by: null
 closed-reason: null
 ---
