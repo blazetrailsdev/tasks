@@ -57,6 +57,6 @@ reverted: it is load-bearing for `base.trails.test.ts:277`,
       attribute-methods call Rails' `core.rb:848` does not make.
 - [ ] Alias attribute methods are still generated at instantiation and not at
       schema load — `attribute-methods.trails.test.ts > a schema load does not
-      mass-generate alias attribute methods` stays green.
+    mass-generate alias attribute methods` stays green.
 - [ ] The tests PR #7216's revert identified stay green on all three lanes.
 - [ ] `pnpm parity:api:calls` / `:args` deltas non-negative.
