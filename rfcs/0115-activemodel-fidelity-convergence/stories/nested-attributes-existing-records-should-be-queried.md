@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 `assign_nested_attributes_for_collection_association` resolves an incoming
-`{ id: ... }` against the *existing records*, and Rails gets those by querying
+`{ id: ... }` against the _existing records_, and Rails gets those by querying
 when the association is not loaded
 (`activerecord/lib/active_record/nested_attributes.rb:565-570`):
 
