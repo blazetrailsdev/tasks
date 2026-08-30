@@ -1,6 +1,6 @@
 ---
 title: "AR Type::Time#castValue declares Instant but can return a TimeWithZone"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
