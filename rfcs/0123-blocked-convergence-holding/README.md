@@ -3,7 +3,7 @@ rfc: "0123-blocked-convergence-holding"
 title: "Holding epic: blocked convergence work carried from RFCs 0078 / 0096 / 0106 / 0107"
 status: active
 created: 2026-08-25
-updated: 2026-08-29
+updated: 2026-08-30
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -21,8 +21,21 @@ related-rfcs:
 ---
 
 A **holding epic**. It owns no convergence programme of its own; it holds the
-blocked stories carried out of four RFCs that had run out of pickup-able work,
+blocked stories carried out of the RFCs that had run out of pickup-able work,
 so those RFCs could be retired without dropping the debt they had surfaced.
+
+Carried in on 2026-08-30:
+
+- `0115-activemodel-fidelity-convergence` — 6 blocked stories carried
+  (`converge-non-attribute-read-write-raises`,
+  `port-privatize-and-the-access-control-tests`,
+  `regenerate-attribute-methods-on-read-after-undefine`,
+  `converge-default-attributes-reset-points-onto-rails`,
+  `resolve-serialization-thenable-hash-async-return`,
+  `seed-default-attributes-inside-with-connection`); the RFC stays **active**.
+  Its seventh blocked story, `converge-alias-attribute-not-an-attribute-raise`,
+  did **not** move — it is unblocked by 0115's own ready story
+  `retire-the-define-attribute-methods-after-load-hook`.
 
 Carried in on 2026-08-29:
 

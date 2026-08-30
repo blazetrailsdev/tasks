@@ -2,7 +2,7 @@
 title: "Converge the _default_attributes reset points onto Rails' reload_schema_from_cache"
 status: blocked
 updated: 2026-08-28
-rfc: "0115-activemodel-fidelity-convergence"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

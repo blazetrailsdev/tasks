@@ -2,7 +2,7 @@
 title: "Resolve serialization's thenableHash dual sync/async return"
 status: blocked
 updated: 2026-08-28
-rfc: "0115-activemodel-fidelity-convergence"
+rfc: "0123-blocked-convergence-holding"
 cluster: "api-compare"
 packages: ["activemodel"]
 deps:
