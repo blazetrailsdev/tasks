@@ -1,16 +1,16 @@
 ---
 title: "process-select-args-adds-nil-drop-branch"
-status: ready
-updated: 2026-08-27
+status: in-progress
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7275
+claim: "2026-08-30T22:54:06Z"
+assignee: "process-select-args-adds-nil-drop-branch"
 blocked-by: null
 closed-reason: null
 ---

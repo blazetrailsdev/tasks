@@ -1,7 +1,7 @@
 ---
 title: "ids-array-primary-key-ternary-keeps-null-pk"
-status: ready
-updated: 2026-08-27
+status: in-progress
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7273
+claim: "2026-08-30T22:14:05Z"
+assignee: "ids-array-primary-key-ternary-keeps-null-pk"
 blocked-by: null
 closed-reason: null
 ---

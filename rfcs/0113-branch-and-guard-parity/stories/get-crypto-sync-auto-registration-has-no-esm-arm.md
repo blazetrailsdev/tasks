@@ -1,6 +1,6 @@
 ---
 title: "get-crypto-sync-auto-registration-has-no-esm-arm"
-status: claimed
+status: in-progress
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7272
 claim: "2026-08-30T21:54:07Z"
 assignee: "get-crypto-sync-auto-registration-has-no-esm-arm"
 blocked-by: null

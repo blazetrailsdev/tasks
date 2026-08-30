@@ -1,7 +1,7 @@
 ---
 title: "Run initializeGeneratedModules at class-definition time and drop the instanceof gate arm"
-status: ready
-updated: 2026-08-27
+status: done
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 6959
+claim: "2026-08-30T22:34:09Z"
+assignee: "insert-all-unknown-attribute-guard-via-schema-cache"
 blocked-by: null
 closed-reason: null
 ---
