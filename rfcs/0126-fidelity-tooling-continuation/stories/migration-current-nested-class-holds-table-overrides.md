@@ -1,13 +1,14 @@
 ---
-title: "migration-current-nested-class-holds-table-overrides"
+title: "Introduce Migration::Current, where Rails declares the four table overrides"
 status: draft
 updated: 2026-08-30
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null
