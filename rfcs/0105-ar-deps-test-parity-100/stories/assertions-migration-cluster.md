@@ -1,7 +1,7 @@
 ---
 title: "migration assertion parity"
-status: ready
-updated: 2026-08-13
+status: claimed
+updated: 2026-08-30
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
 packages:
@@ -18,8 +18,8 @@ deps-rfc: []
 est-loc: 348
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T19:34:50Z"
+assignee: "assertions-migration-cluster"
 blocked-by: null
 closed-reason: null
 ---

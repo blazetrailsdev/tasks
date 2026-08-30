@@ -1,6 +1,6 @@
 ---
 title: "compute_cache_version's loaded-branch max swallows nils where Ruby's Array#max raises"
-status: claimed
+status: in-progress
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7258
 claim: "2026-08-30T18:52:55Z"
 assignee: "compute-cache-version-max-swallows-nil"
 blocked-by: null

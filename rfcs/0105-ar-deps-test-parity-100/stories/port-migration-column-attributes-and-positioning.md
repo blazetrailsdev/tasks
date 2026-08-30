@@ -1,6 +1,6 @@
 ---
 title: "Port migration/column_attributes_test.rb and column_positioning_test.rb (18 missing)"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap

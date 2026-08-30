@@ -1,7 +1,7 @@
 ---
 title: "converge-number-helper-percentage-currency-converters"
-status: ready
-updated: 2026-08-27
+status: done
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: guard-parity
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 6513
+claim: "2026-08-30T19:54:08Z"
+assignee: "converge-number-helper-percentage-currency-converters"
 blocked-by: null
 closed-reason: null
 ---

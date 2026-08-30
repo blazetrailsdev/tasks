@@ -1,14 +1,14 @@
 ---
 title: "middleware-stack-move-reverses-rails-target-and-source"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-08-30
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "param-drift-activerecord-final-four-residual-rows"
-status: draft
+status: ready
 updated: 2026-08-30
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "ConnectionDescriptor lives in its own file; Rails nests it in connection_handler.rb"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

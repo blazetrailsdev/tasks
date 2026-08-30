@@ -1,7 +1,7 @@
 ---
 title: "Seed the arm-parity ratchet, or record the ungated decision"
-status: ready
-updated: 2026-08-27
+status: done
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T19:00:33Z"
+assignee: "seed-arm-parity-ratchet-or-record-ungated"
 blocked-by: null
 closed-reason: null
 ---

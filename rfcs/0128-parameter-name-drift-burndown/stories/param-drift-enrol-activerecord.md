@@ -16,7 +16,7 @@ deps:
   - param-drift-positional-misalignment-is-a-dropped-parameter
 deps-rfc: []
 est-loc: 30
-priority: 5
+priority: 8
 pr: null
 claim: null
 assignee: null

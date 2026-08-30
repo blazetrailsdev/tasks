@@ -1,6 +1,6 @@
 ---
 title: "Render :variables session values through quote, not an on/off mapping"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

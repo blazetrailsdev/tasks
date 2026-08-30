@@ -1,6 +1,6 @@
 ---
 title: "Call disableReferentialIntegrity/executeBatch unconditionally in truncateTables and insertFixturesSet"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port migration/create_join_table_test.rb (19 missing)"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap

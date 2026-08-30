@@ -1,6 +1,6 @@
 ---
 title: "Close migration/foreign_key_test.rb's last case and the six mysql2 rake skips"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap

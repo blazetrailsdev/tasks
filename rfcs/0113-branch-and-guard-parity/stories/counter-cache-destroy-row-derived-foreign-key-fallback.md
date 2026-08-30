@@ -1,6 +1,6 @@
 ---
 title: "counter-cache: destroy_row derives foreign keys trails-side instead of reading reflection.foreign_key"
-status: claimed
+status: in-progress
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 7258
 claim: "2026-08-30T18:52:55Z"
 assignee: "compute-cache-version-max-swallows-nil"
 blocked-by: null

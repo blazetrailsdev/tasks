@@ -1,6 +1,6 @@
 ---
 title: "Numericality is_number?/option_as_number pre-coerce instead of letting parse_as_number dispatch"
-status: claimed
+status: done
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
+pr: 6790
 claim: "2026-08-30T18:52:55Z"
 assignee: "compute-cache-version-max-swallows-nil"
 blocked-by: null

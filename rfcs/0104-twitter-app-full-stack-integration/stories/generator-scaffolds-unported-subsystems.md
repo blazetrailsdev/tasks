@@ -1,7 +1,7 @@
 ---
 title: "trails new scaffolds ActionCable, ActionMailer, ActiveJob, ActiveStorage and Puma, none of which exist"
-status: draft
-updated: 2026-08-14
+status: in-progress
+updated: 2026-08-30
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["trailties"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 7260
 claim: null
 assignee: null
 blocked-by: null

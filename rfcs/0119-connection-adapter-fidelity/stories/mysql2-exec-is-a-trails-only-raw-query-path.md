@@ -1,6 +1,6 @@
 ---
 title: "Mysql2Adapter#exec is trails-only surface that bypasses performQuery's default_timezone read"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

@@ -1,16 +1,16 @@
 ---
 title: "has_one nullifyOwnerAttributes misses the primary-key guard and nulls the polymorphic type column"
-status: ready
-updated: 2026-08-27
+status: done
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: guard-parity
 deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 6815
+claim: "2026-08-30T19:54:08Z"
+assignee: "converge-number-helper-percentage-currency-converters"
 blocked-by: null
 closed-reason: null
 ---

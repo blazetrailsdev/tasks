@@ -1,6 +1,6 @@
 ---
 title: "One Comparable / <=> for the three hand-rolled spaceship implementations"
-status: ready
+status: claimed
 updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 190
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T19:46:13Z"
+assignee: "ruby-compat-comparable"
 blocked-by: null
 closed-reason: null
 ---
