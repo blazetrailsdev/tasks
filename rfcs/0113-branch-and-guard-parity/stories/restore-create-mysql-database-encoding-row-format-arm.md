@@ -1,7 +1,7 @@
 ---
 title: "Restore the dropped row_format_dynamic_by_default? arm in create mysql database with encoding"
-status: ready
-updated: 2026-08-27
+status: claimed
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T20:54:11Z"
+assignee: "converge-respond-to-missing-base-arm-and-aggregation-validity"
 blocked-by: null
 closed-reason: null
 ---

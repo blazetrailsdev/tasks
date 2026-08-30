@@ -1,6 +1,6 @@
 ---
 title: "DatabaseTaskHandler.truncateAll is a trails invention; mysql/sqlite tasks hand-roll what the adapter already emits"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm

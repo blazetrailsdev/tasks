@@ -1,6 +1,6 @@
 ---
 title: "Port the six missing autosave add-callback and habtm callback cases"
-status: draft
+status: in-progress
 updated: 2026-08-30
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 7264
 claim: null
 assignee: null
 blocked-by: null

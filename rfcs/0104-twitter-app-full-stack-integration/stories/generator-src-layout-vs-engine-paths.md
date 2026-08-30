@@ -1,7 +1,7 @@
 ---
 title: "trails new emits a src/ layout the engine's path set does not declare, so generated apps find no routes or views"
-status: draft
-updated: 2026-08-14
+status: in-progress
+updated: 2026-08-30
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["trailties"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7262
 claim: null
 assignee: null
 blocked-by: null

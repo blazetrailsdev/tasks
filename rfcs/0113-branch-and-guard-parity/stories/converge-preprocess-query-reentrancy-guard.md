@@ -1,16 +1,16 @@
 ---
 title: "Remove or relocate the preprocessQuery re-entrancy guard Rails does not have"
-status: ready
-updated: 2026-08-27
+status: in-progress
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm
 deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7268
+claim: "2026-08-30T20:30:22Z"
+assignee: "converge-preprocess-query-reentrancy-guard"
 blocked-by: null
 closed-reason: null
 ---

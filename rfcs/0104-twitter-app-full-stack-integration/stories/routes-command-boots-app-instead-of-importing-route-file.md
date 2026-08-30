@@ -1,6 +1,6 @@
 ---
 title: "routes-command-boots-app-instead-of-importing-route-file"
-status: draft
+status: closed
 updated: 2026-08-30
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "fixed in #7262 — RoutesCommand#perform ported there after review"
 ---
 
 ## Context

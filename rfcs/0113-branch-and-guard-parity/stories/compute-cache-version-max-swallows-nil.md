@@ -1,6 +1,6 @@
 ---
 title: "compute_cache_version's loaded-branch max swallows nils where Ruby's Array#max raises"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm

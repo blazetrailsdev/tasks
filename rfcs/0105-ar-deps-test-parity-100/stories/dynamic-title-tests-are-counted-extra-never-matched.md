@@ -1,6 +1,6 @@
 ---
 title: "Statically expand loop-generated it() titles so dynamic tests match"
-status: draft
+status: in-progress
 updated: 2026-08-30
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: 7265
 claim: null
 assignee: null
 blocked-by: null

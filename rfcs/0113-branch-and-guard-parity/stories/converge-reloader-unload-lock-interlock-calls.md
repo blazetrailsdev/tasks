@@ -1,7 +1,7 @@
 ---
 title: "Reloader's unload lock omits Dependencies.interlock start_unloading/done_unloading"
-status: ready
-updated: 2026-08-27
+status: in-progress
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-order
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7267
+claim: "2026-08-30T20:34:10Z"
+assignee: "converge-reloader-unload-lock-interlock-calls"
 blocked-by: null
 closed-reason: null
 ---

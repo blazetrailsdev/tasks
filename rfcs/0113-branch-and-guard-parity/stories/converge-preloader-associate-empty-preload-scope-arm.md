@@ -1,6 +1,6 @@
 ---
 title: "Preloader::Association#initialize drops the preload_scope.empty_scope? arm of @associate"
-status: claimed
+status: in-progress
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: guard-parity
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 7263
 claim: "2026-08-30T19:54:08Z"
 assignee: "converge-number-helper-percentage-currency-converters"
 blocked-by: null
