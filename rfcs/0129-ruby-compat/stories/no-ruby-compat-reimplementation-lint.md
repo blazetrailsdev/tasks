@@ -1,6 +1,6 @@
 ---
 title: "A lint that fails a re-implementation of a ruby-compat primitive outside the package"
-status: ready
+status: in-progress
 updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
 est-loc: 240
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: 7234
+claim: "2026-08-30T12:20:20Z"
+assignee: "ruby-compat-mri-citation-lint"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "converge-ar-dirty-test-off-the-rec-alias"
-status: claimed
+status: done
 updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 30
-pr: null
+pr: 7233
 claim: "2026-08-30T11:55:50Z"
 assignee: "converge-ar-dirty-test-off-the-rec-alias"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Drop the extra generateAliasAttributes call from init_internals"
-status: claimed
+status: done
 updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 31
-pr: null
+pr: 7233
 claim: "2026-08-30T11:55:50Z"
 assignee: "converge-ar-dirty-test-off-the-rec-alias"
 blocked-by: null

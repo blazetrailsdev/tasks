@@ -1,6 +1,6 @@
 ---
 title: "Enroll ruby-compat in the extra-surface gate so the only-what-we-call rule is mechanical, not reviewed"
-status: claimed
+status: done
 updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
 est-loc: 130
 priority: 3
-pr: null
+pr: 7232
 claim: "2026-08-30T11:50:12Z"
 assignee: "ruby-compat-extra-surface-enrollment"
 blocked-by: null

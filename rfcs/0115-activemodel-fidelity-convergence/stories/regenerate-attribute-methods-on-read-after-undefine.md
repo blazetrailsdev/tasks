@@ -1,6 +1,6 @@
 ---
 title: "regenerate-attribute-methods-on-read-after-undefine"
-status: claimed
+status: blocked
 updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -12,7 +12,7 @@ priority: 33
 pr: null
 claim: "2026-08-30T11:55:50Z"
 assignee: "converge-ar-dirty-test-off-the-rec-alias"
-blocked-by: null
+blocked-by: "JS has no method_missing for a plain instance. Arms 3 and 4 of attribute_methods_test.rb:1098 read `topic.subject_to_be_undefined` off an ALREADY-CONSTRUCTED record after the generated property was deleted from the prototype, and require that read itself to regenerate. A trails generated reader is an accessor property (CLAUDE.md, 'Generated attribute readers are properties'); reading a property that is not on the object or its prototype chain runs no code and yields undefined. The only JS read hook is a Proxy trap, which would mean every AR record is constructed as a Proxy rather than a class instance — an architecture-wide change well outside this story, and one that changes record identity and the cost of every attribute read. Arm 5 (respondTo) is reachable on its own but the story does not converge without 3 and 4."
 closed-reason: null
 ---
 

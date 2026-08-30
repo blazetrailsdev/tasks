@@ -1,6 +1,6 @@
 ---
 title: "port-privatize-and-the-access-control-tests"
-status: claimed
+status: blocked
 updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -12,7 +12,7 @@ priority: 32
 pr: null
 claim: "2026-08-30T11:55:50Z"
 assignee: "converge-ar-dirty-test-off-the-rec-alias"
-blocked-by: null
+blocked-by: "Ruby method privacy has no JS analogue. attribute_methods_test.rb:1022 requires the PUBLIC call `topic.title?` to raise NoMethodError while `topic.send(:title?)` succeeds — the same property get, discriminated only by Ruby's caller-visibility rule. JS has no per-call-site visibility: a function on the prototype is callable by everyone, and even wrapping every record in a Proxy cannot separate a direct call from a send (both are one [[Get]] plus a call). `privatize` (:1597) itself is unportable for the same reason: there is no `class_eval ... private` that makes a defined method uncallable from outside. respondTo/isInstanceMethodAlreadyImplemented/_assignAttributes could each consult a private-name set, but that only covers 2 of the 5 assertions and would ratify a fake privacy model rather than converge one."
 closed-reason: null
 ---
 
