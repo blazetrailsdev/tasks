@@ -1,6 +1,6 @@
 ---
 title: "Integer#cast_value should rescue to_i, not probe for callability"
-status: claimed
+status: in-progress
 updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: null
+pr: 7243
 claim: "2026-08-30T14:57:57Z"
 assignee: "integer-cast-value-is-a-rescue-not-a-probe"
 blocked-by: null

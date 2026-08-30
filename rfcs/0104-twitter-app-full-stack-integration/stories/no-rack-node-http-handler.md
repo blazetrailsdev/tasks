@@ -1,7 +1,7 @@
 ---
 title: "No Rack handler: serving a trails app over HTTP requires hand-rolling the env bridge"
-status: draft
-updated: 2026-08-13
+status: in-progress
+updated: 2026-08-30
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["trailties"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7244
 claim: null
 assignee: null
 blocked-by: null

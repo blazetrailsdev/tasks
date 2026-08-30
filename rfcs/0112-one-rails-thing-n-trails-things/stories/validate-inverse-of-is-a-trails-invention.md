@@ -1,16 +1,16 @@
 ---
 title: "validateInverseOf is a trails invention — Rails validates via check_validity_of_inverse!"
-status: ready
-updated: 2026-08-27
+status: in-progress
+updated: 2026-08-30
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-pr: null
-claim: null
-assignee: null
+pr: 7246
+claim: "2026-08-30T15:35:30Z"
+assignee: "validate-inverse-of-is-a-trails-invention"
 blocked-by: null
 closed-reason: null
 ---

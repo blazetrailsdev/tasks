@@ -1,6 +1,6 @@
 ---
 title: "postgresql/schema_statements.rb is ported into two TS files, so twelve methods score moved"
-status: ready
+status: in-progress
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7247
+claim: "2026-08-30T15:05:49Z"
+assignee: "biginteger-castvalue-declares-number-but-returns-bigint"
 blocked-by: null
 closed-reason: null
 ---

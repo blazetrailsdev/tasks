@@ -1,6 +1,6 @@
 ---
 title: "TS test extractor drops dynamically-named it() calls, hiding TS-only tests from the extra count"
-status: claimed
+status: done
 updated: 2026-08-30
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 4
-pr: null
+pr: 7241
 claim: "2026-08-30T14:52:42Z"
 assignee: "extra-surface-walkmixin-honours-method-file"
 blocked-by: null

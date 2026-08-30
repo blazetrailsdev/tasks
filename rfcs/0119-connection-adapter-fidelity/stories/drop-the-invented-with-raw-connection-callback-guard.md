@@ -1,6 +1,6 @@
 ---
 title: "with_raw_connection carries a callback guard Rails has no counterpart for"
-status: ready
+status: claimed
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T15:23:49Z"
+assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port migration/references_statements_test.rb (21 missing)"
-status: ready
-updated: 2026-08-13
+status: claimed
+updated: 2026-08-30
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T15:51:24Z"
+assignee: "port-migration-references-statements-test"
 blocked-by: null
 closed-reason: null
 ---

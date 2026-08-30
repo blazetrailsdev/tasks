@@ -1,7 +1,7 @@
 ---
 title: "message-pack declares a second Rational instead of the ported one"
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-08-30
 rfc: "0041-activesupport-messagepack-ext"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged by #7240: message-pack now calls the shared Rational/rational from @blazetrails/ruby-compat (RFC 0129); its local interface, gcd, rational() and ZeroDivisionError are deleted"
 ---
 
 ## Context

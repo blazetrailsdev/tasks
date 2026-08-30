@@ -1,7 +1,7 @@
 ---
 title: "Port migration/references_index_test.rb and schema_definitions_test.rb (19 missing)"
-status: ready
-updated: 2026-08-13
+status: done
+updated: 2026-08-30
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7242
+claim: "2026-08-30T15:11:14Z"
+assignee: "port-migration-references-index-and-schema-definitions"
 blocked-by: null
 closed-reason: null
 ---

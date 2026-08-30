@@ -1,6 +1,6 @@
 ---
 title: "Converge TypeMapInitializer's query_conditions_for_* divergences: defensive quote-escaping and the WHERE 1=0 short-circuit"
-status: claimed
+status: in-progress
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 7243
 claim: "2026-08-30T14:57:57Z"
 assignee: "integer-cast-value-is-a-rescue-not-a-probe"
 blocked-by: null

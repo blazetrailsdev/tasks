@@ -1,7 +1,7 @@
 ---
 title: "pg-type-map-timezone-option-is-inert"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T15:23:49Z"
+assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null
 closed-reason: null
 ---

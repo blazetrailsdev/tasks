@@ -1,7 +1,7 @@
 ---
 title: "pg-schema-statements-file-split-scores-misplaced"
-status: ready
-updated: 2026-08-28
+status: in-progress
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7247
 claim: null
 assignee: null
 blocked-by: null

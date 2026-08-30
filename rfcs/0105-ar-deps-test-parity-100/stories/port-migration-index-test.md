@@ -1,7 +1,7 @@
 ---
 title: "Port migration/index_test.rb (26 missing)"
-status: ready
-updated: 2026-08-13
+status: in-progress
+updated: 2026-08-30
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7245
+claim: "2026-08-30T15:11:10Z"
+assignee: "port-migration-index-test"
 blocked-by: null
 closed-reason: null
 ---

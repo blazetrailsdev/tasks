@@ -1,15 +1,15 @@
 ---
 title: "Wire AR readAttribute/writeAttribute onto Base instead of ActiveModel's"
-status: ready
-updated: 2026-08-27
+status: done
+updated: 2026-08-30
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: dead-mixin-companions
 deps: ["move-accessed-fields-tracking-to-attribute"]
 deps-rfc: []
 est-loc: 60
-pr: null
-claim: null
-assignee: null
+pr: 7170
+claim: "2026-08-30T15:47:31Z"
+assignee: "wire-ar-read-write-attribute-onto-base"
 blocked-by: null
 closed-reason: null
 ---
