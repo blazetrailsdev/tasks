@@ -40,8 +40,8 @@ split-brain rather than one story.
 This is not theoretical. In PR #7253 the two
 `added deferrable initially immediate …` cases issued
 `SET CONSTRAINTS … DEFERRED` through `Model.leaseConnection()` on an
-`_adapter`-bound model. It compiled, it ran, and it landed on a *different
-session* than the transaction and the inserts (which go through `withConnection`
+`_adapter`-bound model. It compiled, it ran, and it landed on a _different
+session_ than the transaction and the inserts (which go through `withConnection`
 and so honour the binding), so the deferral silently did nothing and the
 constraint fired immediately. Both cases red only on the PG lane; the SQLite and
 MySQL lanes skip them, and nothing locally catches it.
