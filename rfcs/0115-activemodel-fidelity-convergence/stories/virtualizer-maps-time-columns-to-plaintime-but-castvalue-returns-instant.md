@@ -37,7 +37,7 @@ The same wrong type is hand-written on the canonical model:
 `packages/activerecord/src/test-helpers/models/topic.ts:37` declares
 `bonus_time: Temporal.PlainTime`.
 
-Note `time-value.ts:29,153` legitimately mentions `PlainTime` on the *input*
+Note `time-value.ts:29,153` legitimately mentions `PlainTime` on the _input_
 side (`user_input_in_time_zone` accepts one); only the cast/reader type is
 wrong.
 
