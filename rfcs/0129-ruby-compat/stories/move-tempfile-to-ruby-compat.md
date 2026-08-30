@@ -72,7 +72,7 @@ Follow the shape #7237 established, which is the whole of the work:
 
 - `Tempfile` lives under `packages/ruby-compat/src/`, with a resolvable
   `vendor/ruby/lib/tempfile.rb:LINE` citation and a `@noRailsEquivalent
-  PERMANENT` receipt on every export.
+PERMANENT` receipt on every export.
 - `activesupport/src/tempfile.ts` is a re-export shim; every existing importer
   and the `@blazetrails/activesupport` public surface are unchanged.
 - Any member with no call site in this repo is deleted rather than moved
