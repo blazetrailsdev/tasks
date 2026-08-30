@@ -34,13 +34,13 @@ source-annotation registrars are filed as
 Measured before -> after on the merge commit (`novel` unchanged everywhere; all
 of the movement is `moved`, i.e. the name IS Rails', just on another host):
 
-| package | total extras before | after |
-| --- | --- | --- |
-| rack | 109 | 115 |
-| actiondispatch | 284 | 287 |
-| trailties | 262 | 266 |
-| actionview | 109 | 111 |
-| actioncontroller | 124 | 125 |
+| package          | total extras before | after |
+| ---------------- | ------------------- | ----- |
+| rack             | 109                 | 115   |
+| actiondispatch   | 284                 | 287   |
+| trailties        | 262                 | 266   |
+| actionview       | 109                 | 111   |
+| actioncontroller | 124                 | 125   |
 
 The exact rows, from `pnpm parity:api:extra --package <pkg>`:
 
