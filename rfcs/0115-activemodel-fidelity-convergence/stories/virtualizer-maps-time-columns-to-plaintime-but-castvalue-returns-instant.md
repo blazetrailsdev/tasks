@@ -1,6 +1,6 @@
 ---
 title: "virtualizer-maps-time-columns-to-plaintime-but-castvalue-returns-instant"
-status: claimed
+status: in-progress
 updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: 7257
 claim: "2026-08-30T16:19:59Z"
 assignee: "virtualizer-maps-time-columns-to-plaintime-but-castvalue-returns-instant"
 blocked-by: null

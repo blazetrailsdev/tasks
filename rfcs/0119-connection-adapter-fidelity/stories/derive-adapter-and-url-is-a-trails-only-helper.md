@@ -1,6 +1,6 @@
 ---
 title: "deriveAdapterAndUrl is a trails-only helper establish_connection has no counterpart for"
-status: claimed
+status: in-progress
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 7257
 claim: "2026-08-30T16:19:59Z"
 assignee: "virtualizer-maps-time-columns-to-plaintime-but-castvalue-returns-instant"
 blocked-by: null

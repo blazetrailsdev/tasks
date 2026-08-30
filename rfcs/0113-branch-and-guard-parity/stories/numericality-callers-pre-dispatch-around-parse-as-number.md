@@ -1,7 +1,7 @@
 ---
 title: "Numericality is_number?/option_as_number pre-coerce instead of letting parse_as_number dispatch"
-status: ready
-updated: 2026-08-27
+status: claimed
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T18:52:55Z"
+assignee: "compute-cache-version-max-swallows-nil"
 blocked-by: null
 closed-reason: null
 ---
