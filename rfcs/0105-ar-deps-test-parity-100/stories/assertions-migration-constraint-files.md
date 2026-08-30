@@ -26,9 +26,9 @@ cluster that no story owns, and `port-migration-constraints-and-residue`
 Measured 2026-08-30 on `origin/main`:
 
 | Rails test file (under `vendor/rails/activerecord/test/cases/`) | count | kind |
-| --- | --: | --: |
-| `migration/unique_constraint_test.rb` | 5 | 8 |
-| `migration/exclusion_constraint_test.rb` | 4 | 5 |
+| --------------------------------------------------------------- | ----: | ---: |
+| `migration/unique_constraint_test.rb`                           |     5 |    8 |
+| `migration/exclusion_constraint_test.rb`                        |     4 |    5 |
 
 Per-test breakdown via
 `pnpm parity:test -- --package activerecord --assertions --missing`, grepping
