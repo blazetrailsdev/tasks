@@ -1,13 +1,14 @@
 ---
-title: "converge-foreign-key-change-column-to-rocket-astronaut-models"
+title: "Drive ForeignKeyChangeColumnTest through Rocket/Astronaut models instead of raw SQL"
 status: draft
 updated: 2026-08-30
 rfc: "0105-ar-deps-test-parity-100"
-cluster: null
-packages: []
+cluster: name-gap
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 250
 priority: null
 pr: null
 claim: null
