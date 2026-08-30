@@ -28,14 +28,14 @@ baselined in
 with a per-row reason naming its Rails line. Each is a Ruby builtin with no JS
 counterpart — a burndown ledger row, not a settled decision:
 
-| Ruby method | Rails | Ruby builtin |
-| --- | --- | --- |
-| `column_names_from_column_numbers` | `:1153` | `Hash#values_at(*column_numbers)` |
-| `columns_for_distinct` | `:869-876` | `compact_blank.map{}.compact_blank.map.with_index{}` |
-| `exclusion_constraint_name` | `:1082` | `String#first(10)` |
-| `unique_constraint_name` | `:1102` | `String#first(10)` |
-| `unique_constraint_name` | `:1100` | `Array(...).map(&:to_s)` |
-| `unique_constraints` | `:709` | `String#delete("{}")` |
+| Ruby method                        | Rails      | Ruby builtin                                         |
+| ---------------------------------- | ---------- | ---------------------------------------------------- |
+| `column_names_from_column_numbers` | `:1153`    | `Hash#values_at(*column_numbers)`                    |
+| `columns_for_distinct`             | `:869-876` | `compact_blank.map{}.compact_blank.map.with_index{}` |
+| `exclusion_constraint_name`        | `:1082`    | `String#first(10)`                                   |
+| `unique_constraint_name`           | `:1102`    | `String#first(10)`                                   |
+| `unique_constraint_name`           | `:1100`    | `Array(...).map(&:to_s)`                             |
+| `unique_constraints`               | `:709`     | `String#delete("{}")`                                |
 
 `columns_for_distinct` is the one worth real attention: the port interleaves a
 `filter` between the two `map`s because JS has no `compact_blank`, so the call

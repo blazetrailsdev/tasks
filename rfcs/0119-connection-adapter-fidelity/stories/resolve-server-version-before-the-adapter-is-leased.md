@@ -51,7 +51,7 @@ so `pool.serverVersion()` can answer synchronously from the memo the way
   populated the memo by the time the adapter is leased.
 - Let `serverVersion()` return the memoized value synchronously when it is set,
   falling back to the mutex-guarded probe only when cold — `_serverVersion ??
-  this._mutex.synchronize(...)` rather than an `async` body that always wraps.
+this._mutex.synchronize(...)` rather than an `async` body that always wraps.
 
 Do NOT paper over a cold memo by returning `false` from a `supports_*`
 predicate: that silently disables `RETURNING` on backends that have it.
