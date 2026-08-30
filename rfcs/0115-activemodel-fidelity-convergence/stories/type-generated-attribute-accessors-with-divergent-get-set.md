@@ -1,6 +1,6 @@
 ---
 title: "type-generated-attribute-accessors-with-divergent-get-set"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
