@@ -1,5 +1,5 @@
 ---
-title: "pg-eager-load-additional-types-duplicates-the-rails-loader"
+title: "_eagerLoadAdditionalTypes duplicates Rails' single load_additional_types"
 status: draft
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null

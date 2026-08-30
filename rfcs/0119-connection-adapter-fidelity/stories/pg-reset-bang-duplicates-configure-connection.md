@@ -1,5 +1,5 @@
 ---
-title: "pg-reset-bang-duplicates-configure-connection"
+title: "PG resetBang runs configure_connection twice, duplicating super"
 status: draft
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 90
 priority: null
 pr: null
 claim: null
