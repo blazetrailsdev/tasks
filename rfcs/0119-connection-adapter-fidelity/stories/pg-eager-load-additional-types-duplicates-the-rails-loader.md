@@ -39,7 +39,7 @@ not do. Six sites reset `_typeMapEagerLoaded` (`:344, :858, :1488, :1508,
 The duplication is not inert. PR #7257 added a `sql_type` -> OID table for
 `lookup_cast_type` (postgresql/quoting.rb:194-196) and populated it in
 `loadAdditionalTypes` — the loader that mirrors Rails. The live connect path
-runs the *copy*, so the table stayed empty on a real connection and the
+runs the _copy_, so the table stayed empty on a real connection and the
 by-OID lookup silently fell back to the name string; caught only by a PG-lane
 CI failure on `lookup-cast-type.trails.test.ts`'s schema-qualified case. #7257
 routes both loaders through one private `_captureRegtypeOids`, which fixes the
