@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: 3
+priority: null
 pr: null
 claim: null
 assignee: null
@@ -66,6 +66,6 @@ caller would reach for, and it re-introduces the #5805 trap silently
 - [ ] `pnpm parity:api:extra --package activerecord` does not regress; the
       deletion should reduce, not raise, activerecord's novel-surface count.
 - [ ] `pnpm vitest run packages/activerecord/src/connection-pool.test.ts
-    packages/activerecord/src/connection-pool.trails.test.ts` is green.
+  packages/activerecord/src/connection-pool.trails.test.ts` is green.
 - [ ] `pool-adapter-proxy-makes-sync-adapter-methods-async` is dispositioned via
       a `tasks` verb (not a hand edit) once this lands.

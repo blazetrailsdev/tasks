@@ -1,7 +1,7 @@
 ---
 title: "fix-time-column-write-back-drops-time-with-zone"
-status: draft
-updated: 2026-08-29
+status: done
+updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7224
 claim: null
 assignee: null
 blocked-by: null

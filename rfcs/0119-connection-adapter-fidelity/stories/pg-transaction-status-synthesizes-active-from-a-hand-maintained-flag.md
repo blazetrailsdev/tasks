@@ -1,7 +1,7 @@
 ---
 title: "PG transactionStatus synthesizes PQTRANS_ACTIVE from a hand-maintained flag"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T00:04:01Z"
+assignee: "retire-ad-hoc-association-definition-holders"
 blocked-by: null
 closed-reason: null
 ---

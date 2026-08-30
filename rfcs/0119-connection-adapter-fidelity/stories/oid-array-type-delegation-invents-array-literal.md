@@ -1,7 +1,7 @@
 ---
 title: 'OID::Array#type invents an "array" literal where Rails delegates nil'
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T00:04:01Z"
+assignee: "retire-ad-hoc-association-definition-holders"
 blocked-by: null
 closed-reason: null
 ---

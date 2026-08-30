@@ -1,7 +1,7 @@
 ---
 title: "param-drift-execute-binds-slot-family-convergence"
-status: claimed
-updated: 2026-08-29
+status: in-progress
+updated: 2026-08-30
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: 7225
 claim: "2026-08-29T23:53:24Z"
 assignee: "param-drift-execute-binds-slot-family-convergence"
 blocked-by: null

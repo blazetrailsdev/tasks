@@ -1,7 +1,7 @@
 ---
 title: "PG lookup_cast_type_from_column drops Rails' verify!-when-type_map-nil guard"
-status: claimed
-updated: 2026-08-29
+status: in-progress
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 7223
 claim: "2026-08-29T23:33:49Z"
 assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null
