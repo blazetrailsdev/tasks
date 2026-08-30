@@ -1,7 +1,7 @@
 ---
 title: "converge-non-attribute-read-write-raises"
 status: blocked
-updated: 2026-08-29
+updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: 21
 pr: 7208
 claim: "2026-08-29T11:48:53Z"
 assignee: "converge-non-attribute-read-write-raises"
-blocked-by: "The read half needs a Proxy get trap on every ActiveModel object; measured (PR #7208) at 4.9x on an attribute read and 11x on an internal _field read vs no proxy, on the hottest path in the system. Maintainer decision: ship the set trap only (write + respond_to? assertions port, 1.24x on a write, 1.28x on construction) and defer the read assertion. Rails: attribute_methods_test.rb:641-645's assert_raise(NoMethodError) { topic.mumbo }."
+blocked-by: "Both halves are enforced at COMPILE time by #7222, which removed `[key: string]: unknown` from ActiveModel::Model: an undefined read and an undefined write are now TS errors. What stays unported is the RUNTIME raise Rails asserts in attribute_methods_test.rb:641-645 — assert_raise(NoMethodError) { topic.mumbo } and { topic.mumbo = 5 } — which a plain-JS caller or an `as any` cast still evades. Converged shape: Model's constructor returns a Proxy standing in for `self` (identity must be the object callers hold, or errors.base / association.owner / has_secure_password's ivars land on a second object). Blocker is cost, measured best-of-5 over 200k iterations in PR #7208: a get trap is 3.7x on an attribute read and 64x on an internal _field read (a proxied object defeats the inlining those reads get), a set trap 1.5x on a write and 1.7x on construction, on every ActiveModel instance. Reviving it needs a cheaper mechanism, not a re-argument. No proxy ships on #7208."
 closed-reason: null
 ---
 
