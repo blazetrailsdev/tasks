@@ -1,7 +1,7 @@
 ---
 rfc: "0129-ruby-compat"
 title: "@blazetrails/ruby-compat: one home for the MRI core value types trails emulates, anchored to vendored ruby/ruby and measured by the call gates"
-status: draft
+status: active
 created: 2026-08-29
 updated: 2026-08-29
 owner: "@deanmarano"
