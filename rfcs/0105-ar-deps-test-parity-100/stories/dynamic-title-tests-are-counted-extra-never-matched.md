@@ -42,12 +42,12 @@ main at 2026-08-30: **32 dynamically-named tests across 16 files**, including
 Two concrete instances verified by hand:
 
 - `transactions.test.ts:589,603` — `` `cancellation from before filters
-  rollbacks in ${filter}` `` over `["validation","save"]`, plus the `!` variants.
+rollbacks in ${filter}` `` over `["validation","save"]`, plus the `!` variants.
   All four Rails names are fully implemented and passing, ported by
   `before-filter-db-side-effect-cancellation` (RFC 0023, PR #4264, done), yet
   all four report Missing.
 - `autosave-association.test.ts:4655` — `` `should run remove callback
-  ${callbackType}s for has many` `` over `["method","proc"]`; both report Missing.
+${callbackType}s for has many` `` over `["method","proc"]`; both report Missing.
 
 **The Ruby extractor already does the thing this story asks for on its own side**
 — `extract-ruby-define-method.test.ts` covers "expands a constant array whose
