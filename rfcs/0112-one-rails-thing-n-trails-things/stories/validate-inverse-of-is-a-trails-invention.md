@@ -1,6 +1,6 @@
 ---
 title: "validateInverseOf is a trails invention — Rails validates via check_validity_of_inverse!"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: duplicate-bodies

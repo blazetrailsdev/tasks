@@ -1,6 +1,6 @@
 ---
 title: "pinConnectionBang's fixture arm takes an unleased _connections[0] where Rails always leases"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "StatementCache.create calls cacheable_query unconditionally, dropping the invented fallback arm"
-status: ready
-updated: 2026-08-27
+status: in-progress
+updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7255
+claim: "2026-08-30T16:34:54Z"
+assignee: "build-with-expression-nested-arg-and-invented-cte-name-guard"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port migration/column_attributes_test.rb and column_positioning_test.rb (18 missing)"
-status: ready
-updated: 2026-08-13
+status: claimed
+updated: 2026-08-30
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T16:38:34Z"
+assignee: "port-migration-column-attributes-and-positioning"
 blocked-by: null
 closed-reason: null
 ---

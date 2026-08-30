@@ -1,6 +1,6 @@
 ---
 title: "Port migration/index_test.rb (26 missing)"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap

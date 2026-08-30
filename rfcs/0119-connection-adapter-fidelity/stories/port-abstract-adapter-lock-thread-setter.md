@@ -1,7 +1,7 @@
 ---
 title: "Port AbstractAdapter#lock_thread= and free the lockThread name"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T16:19:59Z"
+assignee: "virtualizer-maps-time-columns-to-plaintime-but-castvalue-returns-instant"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "postgresql/schema_statements.rb is ported into two TS files, so twelve methods score moved"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

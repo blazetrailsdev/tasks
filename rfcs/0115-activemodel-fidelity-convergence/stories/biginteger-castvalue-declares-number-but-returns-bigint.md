@@ -1,6 +1,6 @@
 ---
 title: "biginteger-castvalue-declares-number-but-returns-bigint"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

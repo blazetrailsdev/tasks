@@ -1,7 +1,7 @@
 ---
 title: "Close migration/foreign_key_test.rb's last case and the six mysql2 rake skips"
-status: ready
-updated: 2026-08-13
+status: in-progress
+updated: 2026-08-30
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7252
+claim: "2026-08-30T16:38:42Z"
+assignee: "port-migration-foreign-key-residue-and-mysql2-rake-skips"
 blocked-by: null
 closed-reason: null
 ---

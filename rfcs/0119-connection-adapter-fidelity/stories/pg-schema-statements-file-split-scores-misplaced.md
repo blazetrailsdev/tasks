@@ -1,6 +1,6 @@
 ---
 title: "pg-schema-statements-file-split-scores-misplaced"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Render :variables session values through quote, not an on/off mapping"
-status: claimed
+status: in-progress
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 7250
 claim: "2026-08-30T15:23:49Z"
 assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Parameter-name drift: actioncontroller"
-status: ready
-updated: 2026-08-29
+status: in-progress
+updated: 2026-08-30
 rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 188
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 7251
+claim: "2026-08-30T16:04:53Z"
+assignee: "param-drift-actionview"
 blocked-by: null
 closed-reason: null
 ---
