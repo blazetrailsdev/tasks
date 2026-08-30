@@ -61,6 +61,6 @@ else `super`), no `default_timezone` read, no `TimeWithZone` arm, and no
 - MySQL `typeCast` carries Rails' four arms in Rails' order, including the
   `TimeWithZone` arm and the `utc?` guards inside the `Time` arm.
 - Neither body reaches `defaultSqlTimezone()` for the branch decision; if that
-  helper survives for formatting, it no longer carries the timezone *choice*.
+  helper survives for formatting, it no longer carries the timezone _choice_.
 - `pnpm parity:api:calls` shows the `default_timezone` omissions gone for both
   files, with no new baseline rows.

@@ -37,7 +37,7 @@ when Numeric
 `postgresql/quoting.ts:96-125` diverges three ways:
 
 1. **The `Numeric` arm is split in two and separated.** A `!Number.isFinite`
-   arm sits in the `Numeric` slot, and a *second* integer arm
+   arm sits in the `Numeric` slot, and a _second_ integer arm
    (`typeof value === "bigint" || Number.isInteger(value)` -> `String(value)`)
    sits after `Range`, immediately before the `super` fallthrough. Rails has no
    such arm — a finite Numeric goes to `super`.
@@ -56,7 +56,7 @@ converged** and are not in scope: `check_int_in_range` IS called
 ## Acceptance criteria
 
 - PG `quote` carries Rails' six arms in Rails' order, with `finite?` as a
-  branch *inside* the Numeric arm rather than as two separated arms.
+  branch _inside_ the Numeric arm rather than as two separated arms.
 - The trailing integer -> `String(value)` arm is gone; a finite Numeric reaches
   the abstract `quote`.
 - The `BitData` arm no longer returns a cast `null`; it mirrors Ruby's
