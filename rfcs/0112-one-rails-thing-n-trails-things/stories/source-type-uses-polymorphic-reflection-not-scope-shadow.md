@@ -1,5 +1,5 @@
 ---
-title: "source-type-uses-polymorphic-reflection-not-scope-shadow"
+title: "`source_type:` builds an ad-hoc scope shadow instead of a `PolymorphicReflection`"
 status: draft
 updated: 2026-08-30
 rfc: "0112-one-rails-thing-n-trails-things"

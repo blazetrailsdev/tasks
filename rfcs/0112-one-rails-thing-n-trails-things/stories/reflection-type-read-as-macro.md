@@ -1,5 +1,5 @@
 ---
-title: "reflection-type-read-as-macro"
+title: "`nested_attributes` / `autosave_association` read `reflection.type` as a macro"
 status: draft
 updated: 2026-08-30
 rfc: "0112-one-rails-thing-n-trails-things"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 140
 priority: null
 pr: null
 claim: null
