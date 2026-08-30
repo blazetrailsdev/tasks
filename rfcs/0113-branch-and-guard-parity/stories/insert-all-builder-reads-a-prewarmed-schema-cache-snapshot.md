@@ -55,7 +55,7 @@ override.
 
 - `extractTypesFromColumnsOn` reads the schema cache directly, as
   `insert_all.rb:307` does; `schemaCacheColumnsHash` and its `tableName ===
-  this.model.tableName` branch are gone.
+this.model.tableName` branch are gone.
 - `resolveConnectionFacts` / `ResolvedConnectionFacts` are gone, with their
   `@noRailsEquivalent PERMANENT` receipts, and `unique_indexes` / `primary_keys`
   read the cache at their Rails call sites.

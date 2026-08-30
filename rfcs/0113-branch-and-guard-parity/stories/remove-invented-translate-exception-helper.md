@@ -38,7 +38,7 @@ backtrace and sets the cause, and `translate_exception(exception, message:,
 sql:, binds:)`, which each adapter overrides. trails ports both
 (`abstract-adapter.ts:1969`, `:2029`), so `_translateException` is a third,
 parallel entry point that duplicates the cause/message bookkeeping — and
-duplicates it *differently*: it passes the raw driver message as `message`,
+duplicates it _differently_: it passes the raw driver message as `message`,
 where `translateExceptionClass` prefixes the error class name. A
 `StatementInvalid` raised through a driver callback therefore carries a
 different message depending on which entry point the adapter happened to use.

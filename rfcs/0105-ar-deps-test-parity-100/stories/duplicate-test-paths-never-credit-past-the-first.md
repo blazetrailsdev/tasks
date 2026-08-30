@@ -26,14 +26,14 @@ tests that repeat a name inside one `describe`. Sample from
 `scripts/test-compare/output/ts-tests.json`:
 
 - `packages/arel/src/table.test.ts` — `TableTest > should create join nodes with
-  a klass` ×3.
+a klass` ×3.
 - `packages/activerecord/src/associations/has-many-associations.test.ts` —
   `deleting updates counter cache with dependent destroy` ×3, `create with bang
-  on has many when parent is new raises` ×2.
+on has many when parent is new raises` ×2.
 - `packages/arel/src/attributes/math.test.ts` — five names ending `should be
-  compatible with ` (a trailing-space title) each ×2.
+compatible with ` (a trailing-space title) each ×2.
 - `packages/arel/src/attributes/attribute.test.ts` — `AttributeTest > #eq_all >
-  should create a Grouping node` ×2.
+should create a Grouping node` ×2.
 - `packages/activerecord/src/associations/eager-load-includes-full-sti-class.test.ts`
   — four top-level names ×2.
 
@@ -65,5 +65,5 @@ disambiguator.
   (bundle by file; this is larger than one PR — file per-file follow-ups rather
   than widening a single one).
 - Each converged group's tests match their Rails names, leaving the `extra (TS
-  only)` column.
+only)` column.
 - `compare.ts --gates --check` and the assertion-mismatch ratchet stay green.

@@ -48,7 +48,7 @@ end
 
 1. **Invented guard.** trails' `register` opens with
    `if (!block && klass == null) throw new TypeError("register requires either
-   a klass or a block")`. Rails has no such check — a nil `klass` with no block
+a klass or a block")`. Rails has no such check — a nil `klass` with no block
    builds a proc that raises `NoMethodError` on `nil.new` when the type is
    later looked up. The guard is invented surface with an invented message, and
    it moves the failure from lookup time to register time.
