@@ -1,14 +1,15 @@
 ---
-title: "delete-orphaned-pool-adapter-proxy"
+title: "Delete the orphaned ConnectionPool adapter proxy"
 status: draft
 updated: 2026-08-30
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
-priority: null
+est-loc: 90
+priority: 3
 pr: null
 claim: null
 assignee: null
