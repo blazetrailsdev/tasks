@@ -41,7 +41,7 @@ misplaced-file instances the same keying produces.
    `partial-renderer.ts:55`), so the comparer records
    `misplacedAt: renderer/abstract-renderer.ts` and takes that file's four
    `constructor` declarations as the candidates. `ObjectRenderer#initialize(
-   lookup_context, options)` (`object_renderer.rb:7`) is therefore scored
+lookup_context, options)` (`object_renderer.rb:7`) is therefore scored
    against `RenderedTemplate#initialize(body, template)`
    (`abstract_renderer.rb:144`) and reports TWO renames that exist nowhere — the
    TS constructor already spells `lookupContext, options` correctly. Reported as
