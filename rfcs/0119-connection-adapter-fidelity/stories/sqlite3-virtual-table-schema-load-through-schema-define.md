@@ -1,7 +1,7 @@
 ---
 title: "sqlite3 virtual_table_test schema load: go through Schema.define"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T12:34:13Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

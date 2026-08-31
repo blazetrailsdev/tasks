@@ -1,7 +1,7 @@
 ---
 title: "parity:api:extra credits symbol-keyed [included] / [extended] hooks"
-status: ready
-updated: 2026-08-28
+status: claimed
+updated: 2026-08-31
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T12:56:07Z"
+assignee: "api-compare-resolve-module-name-ancestry-chain"
 blocked-by: null
 closed-reason: null
 ---

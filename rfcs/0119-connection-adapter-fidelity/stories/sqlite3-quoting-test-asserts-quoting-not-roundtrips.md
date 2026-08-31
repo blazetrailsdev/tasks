@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 quoting_test: assert quoting methods, not round-tripped rows"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

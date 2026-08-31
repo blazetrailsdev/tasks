@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-adapter's direct raises omit connection_pool: @pool"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

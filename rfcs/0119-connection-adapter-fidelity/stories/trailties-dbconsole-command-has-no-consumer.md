@@ -1,7 +1,7 @@
 ---
 title: "dbconsole's argv/env has no consumer: port dbconsole_command.rb and the real PATH scan"
 status: ready
-updated: 2026-08-30
+updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

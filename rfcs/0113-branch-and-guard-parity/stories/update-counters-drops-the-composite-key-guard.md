@@ -1,6 +1,6 @@
 ---
 title: "update-counters-drops-the-composite-key-guard"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null

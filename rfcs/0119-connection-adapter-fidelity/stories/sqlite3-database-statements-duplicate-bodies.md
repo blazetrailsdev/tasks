@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 DatabaseStatements has two homes for one Rails method"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
