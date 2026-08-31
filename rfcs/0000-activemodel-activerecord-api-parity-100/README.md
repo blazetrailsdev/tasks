@@ -222,6 +222,24 @@ directions at once:
   `postgresql_adapter.rb:518-1034`; trails puts them in
   `postgresql/schema-statements.ts:1270`.
 
+##### Bucket B's file-parity half: the two `gem_version.rb`
+
+Both packages sit at one file short — activemodel 66/67, activerecord 280/281 —
+and it is `gem_version.rb` in each. **Its 2 methods are part of bucket B's 78,
+not a fourth category** — the fix is a move, the same as every other row in
+this bucket. It is in scope, and it is not an `unported-files` row.
+
+The surface exists: `gemVersion()` ships in both
+packages, in `deprecator.ts:15` / `deprecator.ts:13`, which is not the file
+`gem_version.rb` mirrors. activesupport already does it correctly
+(`activesupport/src/gem-version.ts:25`), so the fix is one file per package
+copied from a working sibling. CONTRIBUTING.md's rule applies exactly: the only
+admissible reason for an unported-files row is that the surface does not exist
+and is not intended to, and here it exists.
+
+These are the only two methods in the RFC that also move a `files:` count, which
+is why they get their own heading — but they are counted once, in bucket B.
+
 #### Bucket C — genuine ports (17 methods)
 
 Behavior that is not in trails at all:
@@ -241,18 +259,6 @@ Behavior that is not in trails at all:
 exists, on a trails-invented `ar-config.ts:174` config object rather than as a
 the module accessor `active_record.rb:260-263` declares, so the story both
 ports the seat and deletes the invention.
-
-#### The two unported files: `gem_version.rb`
-
-Both packages sit at one file short — activemodel 66/67, activerecord 280/281 —
-and it is `gem_version.rb` in each. **It is in scope, and it is not an
-`unported-files` row.** The surface exists: `gemVersion()` ships in both
-packages, in `deprecator.ts:15` / `deprecator.ts:13`, which is not the file
-`gem_version.rb` mirrors. activesupport already does it correctly
-(`activesupport/src/gem-version.ts:25`), so the fix is one file per package
-copied from a working sibling. CONTRIBUTING.md's rule applies exactly: the only
-admissible reason for an unported-files row is that the surface does not exist
-and is not intended to, and here it exists.
 
 ### Order
 
@@ -304,7 +310,7 @@ accounted for exactly once.
 | 2   | `credit-classattribute-generated-accessors`                      | A2     | 9 am + 12 ar | 240     | —    |
 | 3   | `credit-prototype-loop-generated-methods`                        | A3     | 43 ar        | 220     | —    |
 | 4   | `credit-defineproperty-loop-generated-accessors`                 | A4     | 55 ar        | 240     | —    |
-| 5   | `port-gem-version-files`                                         | files  | 1 am + 1 ar  | 90      | —    |
+| 5   | `port-gem-version-files`                                         | B      | 1 am + 1 ar  | 90      | —    |
 | 6   | `converge-activemodel-errors-index-and-attributes-constructor`   | C      | 2 am         | 170     | —    |
 | 7   | `rename-finder-methods-to-rails-names`                           | B      | 25 ar        | 300     | —    |
 | 8   | `rename-spawn-and-calculation-methods-to-rails-names`            | B      | 7 ar         | 180     | —    |
