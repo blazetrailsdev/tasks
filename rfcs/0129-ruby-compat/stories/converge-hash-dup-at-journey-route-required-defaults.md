@@ -54,7 +54,7 @@ Two reasons this is worth converging rather than leaving:
    (`scripts/api-compare/call-args.ts:39` / `:362`), so the pair is skipped into
    the `opaqueTsArg` bucket before it reaches the comparer. That is why the
    sibling site `route.ts::requirements` needed a `@missingRailsArgs delete_if —
-   PERMANENT` receipt for its identical block-as-positional-argument shape and
+PERMANENT` receipt for its identical block-as-positional-argument shape and
    this one needed none: the delta is present but unmeasured. Verified in
    #7284 by adding the tag and observing that `suppressed` was unchanged and
    `staleTags` stayed empty.
