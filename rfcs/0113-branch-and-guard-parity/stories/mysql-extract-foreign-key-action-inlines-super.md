@@ -1,5 +1,5 @@
 ---
-title: "mysql-extract-foreign-key-action-inlines-super"
+title: "extract_foreign_key_action inlines the abstract body where Rails calls super (mysql/schema_statements.rb:225-227)"
 status: draft
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 40
 priority: null
 pr: null
 claim: null
