@@ -23,7 +23,7 @@ parameters into Rails' order — `render(view, locals)`
 (`vendor/rails/actionview/lib/action_view/template.rb:159`) — and deleted the
 `@missingRailsArgs` receipt at
 `packages/actionview/src/renderer/template-renderer.ts`. It did NOT change how
-the *handler* below it is invoked, and three receipts that cite that story by
+the _handler_ below it is invoked, and three receipts that cite that story by
 slug describe exactly that residue. They are re-pointed here so the closing
 story leaves no stale reference.
 
