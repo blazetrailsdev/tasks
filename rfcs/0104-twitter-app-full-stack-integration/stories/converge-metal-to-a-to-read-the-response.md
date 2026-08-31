@@ -56,6 +56,37 @@ Note the name: Rails calls this `to_a`, and `Dispatcher#dispatch`
 `port-metal-dispatch-class-method`. Sequencing the two together is
 reasonable.
 
+### Measured blast radius (PR #7286 review)
+
+Every mirror setter on `Metal` writes to its own field and **none writes
+through to `this.response`** — verified in
+`packages/actionpack/src/action-controller/metal.ts`:
+
+| setter | writes | `response` updated |
+| --- | --- | --- |
+| `set status` | `_status` | no |
+| `setHeader` | `_headers` | no |
+| `set contentType` | `_contentType` | no |
+| `set body` | `_responseBody` | no |
+| `set responseBody` | `_responseBody` **and** `this.response` | yes |
+
+So the divergence is total in one direction: a controller that writes through
+`this.response.status` / `.setHeader` / `.body` — the shape Rails documents,
+since Rails' `to_a` reads exactly there — produces
+`[200, {}, ""]`, losing everything it set. A controller that writes through the
+mirror setters or `render` produces the right triple. Observed live: the
+sandbox controller in
+`packages/website/src/lib/frontiers/app-server.test.ts` set
+`this.response.status` / `.setHeader` / `.body` and came back with no
+content-type and an empty body once dispatch was routed through
+`toRackResponse`; PR #7286 moved it onto the mirror setters to land.
+
+This is **not new exposure from PR #7286**: the deleted
+`routing/dispatcher.ts#dispatch` helper it replaced already ended in
+`instance.toRackResponse()`, so railties' boot path went through the same call
+before. What that PR changed is that `RouteSet#call` no longer has a
+non-controller default response, so more callers now reach it.
+
 ## Acceptance criteria
 
 - `Metal#toRackResponse` returns `this.response`'s status, headers and body,
