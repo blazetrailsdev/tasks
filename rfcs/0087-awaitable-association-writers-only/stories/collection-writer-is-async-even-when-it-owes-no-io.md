@@ -44,7 +44,7 @@ observation the parent story made for has_one:
 The test `collection-proxy-replace-diff.trails.test.ts` >
 "refuses a mass-assigned replace that owes the database" was moved onto
 `setAttributes` in #7303 to accommodate this. That is the accommodation, not
-the fix: the assertion it originally made — that a *new* owner's empty replace
+the fix: the assertion it originally made — that a _new_ owner's empty replace
 does **not** raise on the sync surface — is the Rails-correct one.
 
 ## Converged shape
