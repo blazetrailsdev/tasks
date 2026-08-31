@@ -42,8 +42,7 @@ extractor already records `reExportedFrom` on exactly these entries
 `fn.reExportedFrom` when deciding whether to synthesize a file module):
 
 ```json
-{ "name": "except", "file": "index.ts", "line": 147,
-  "reExportedFrom": "hash-utils.ts:except" }
+{ "name": "except", "file": "index.ts", "line": 147, "reExportedFrom": "hash-utils.ts:except" }
 ```
 
 So the barrel entry is precisely identifiable and needs no heuristic.

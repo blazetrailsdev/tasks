@@ -56,9 +56,7 @@ Read the key's presence, not its nullishness — the JS spelling of `fetch` with
 a default:
 
 ```ts
-const secureCookies = "secureCookies" in config.sslOptions
-  ? config.sslOptions.secureCookies
-  : true;
+const secureCookies = "secureCookies" in config.sslOptions ? config.sslOptions.secureCookies : true;
 ```
 
 and widen `SslOptions["secureCookies"]` to admit the stored-`null` arm if the

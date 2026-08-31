@@ -36,7 +36,7 @@ ruby-compat exports sit in `AMBIGUOUS_RUBY_CALLS` rather than in the table:
 call-mismatch rows — `fetch` 14, `merge` 16, `merge!` 13 — against a reverse
 population of 14. Spot-checking every one of the 43, each is in fact a Hash
 receiver, so the rule is costing real signal; it is still correct today because
-nothing in the artifact can *prove* the receiver per row.
+nothing in the artifact can _prove_ the receiver per row.
 
 The unlock is a receiver hint on the Ruby side. Ripper gives the receiver node
 at each call site (`walk_for_calls` already inspects it to classify a call as
