@@ -268,11 +268,15 @@ shims and rewrites the importers — the shape RFC 0129 established
 
 ## Non-goals
 
-- **`Rack::Session::Cookie` and `Rack::Session::Encryptor`
-  (`cookie.rb`, 313 lines; `encryptor.rb`, 192).** Rails' `CookieStore`
-  subclasses `AbstractSecureStore`, not `Rack::Session::Cookie`, so trails
-  calls neither; they get `PERMANENT-SKIP` test stubs and are ported only if a
-  call site appears.
+- **A Ruby `Marshal` wire-format runtime.** `Cookie::Base64::Marshal`,
+  `Cookie::Marshal` and `Encryptor`'s default serializer all round-trip Ruby's
+  `Marshal` binary format, and
+  `packages/activesupport/src/messages/serializer-with-fallback.ts:11` records
+  the standing decision: *"trails has no Ruby Marshal runtime, so the
+  `:marshal` format is backed by the JSON serializer."* This RFC follows that
+  precedent rather than reversing it — the ~12 tests that assert on the binary
+  format itself get `PERMANENT-SKIP` stubs and an `unported-files.ts` row, the
+  way `marshalling.rb` / `marshal_serialization_test.rb` already do.
 - **`Rack::Session::Abstract::ID` (`abstract/id.rb:499`).** A deprecated
   compatibility shim over `Persisted`; nothing in Rails or trails calls it.
 - **Gating `rack-session` in `parity:api:extra:gate`.** Enrolling a package in
@@ -300,6 +304,16 @@ shims and rewrites the importers — the shape RFC 0129 established
   `minitest`).** Fixes the dangling citations and nothing else. Rejected: the
   two extractor runs above show both halves work unmodified, so the weaker
   contract buys nothing.
+- **Skip `Rack::Session::Cookie` and `Encryptor` as "surface trails does not
+  call".** That is `ruby-compat`'s contract (RFC 0129: no member without a real
+  call site), and it is the wrong one here — this package is measured by
+  `parity:api` over the whole vendored `libPath` and by the gem's own suite, so
+  an unported file is a measured gap, not an absent one. Concretely: the two
+  files are 20 of the 78 public methods but **64 of the 124 tests**
+  (`spec_session_cookie.rb` 48, `spec_session_encryptor.rb` 16), so skipping
+  them would cap `parity:test` at ~48% permanently. Rejected: it would leave
+  the RFC's headline measure half-dead to save two stories. They are ported —
+  see Rollout steps 5b and 6b.
 - **Vendor from RubyGems rather than git.** `vendor/sources.ts` has one origin
   shape (`type: "git"`) and every existing entry uses it. Rejected for
   consistency; the git tag `v2.1.0` is the released gem.
@@ -319,9 +333,14 @@ shims and rewrites the importers — the shape RFC 0129 established
    and moves whatever is there.
 5. **Port against the readable source.** `port-rack-session-session-hash` and
    `port-rack-session-abstract-persisted-bodies` (both dep on step 4).
-6. **Measure.** `enroll-rack-session-test-suite` (deps: step 5) — the 124 tests
-   and the `PERMANENT-SKIP` stubs for the non-goal files.
-7. **Clean up.** `delete-rack-session-reexport-shims` (deps: step 6) — shims
+   `port-rack-session-encryptor` (5b) deps only on step 3 — `encryptor.rb`
+   subclasses nothing that moves, so it runs in parallel with step 4.
+6. **Port the cookie store.** `port-rack-session-cookie` (6b, deps: step 4 and
+   5b — `cookie.rb:18` requires `encryptor`, and `Cookie <
+Abstract::PersistedSecure`).
+7. **Measure.** `enroll-rack-session-test-suite` (deps: steps 5, 5b, 6b) — the
+   124 tests, less the ~12 Marshal-wire-format ones.
+8. **Clean up.** `delete-rack-session-reexport-shims` (deps: step 7) — shims
    and `@nie` markers gone.
 
 ## Verification
@@ -337,7 +356,8 @@ shims and rewrites the importers — the shape RFC 0129 established
   exported names after PR 7317 (`SessionId`, `Persisted`, `PersistedSecure`,
   `DEFAULT_OPTIONS`, `ResponseRaw`, `Pool`).
 - `pnpm parity:test` reports `rack-session: 7 files, 124 tests` on the Ruby
-  side, with a non-negative delta at every step.
+  side and credits **at least 112 of them** (124 less the ~12 that assert on
+  Ruby's `Marshal` binary format), with a non-negative delta at every step.
 - `pnpm parity:api` / `parity:test` deltas for `actionpack` are non-negative
   throughout: nothing with a Rails `.rb` moves.
 
@@ -375,10 +395,25 @@ shims and rewrites the importers — the shape RFC 0129 established
    `spec_session_abstract_persisted_secure_secure_session_hash.rb` 11), and let
    the actionpack override keep returning `Request::Session`. That is
    `port-rack-session-session-hash`.
-4. **Is `Rack::Session::Cookie` really unused?** Checked against Rails'
-   `cookie_store.rb:52` (`class CookieStore < AbstractSecureStore`) — it is.
-   Flagged here because a future `Rack::Session::Cookie`-shaped requirement
-   would reopen the Non-goal, not because it is unresolved.
+4. **How far does the Marshal gap actually reach into the two specs?**
+   Grepped: `spec_session_cookie.rb` names `Marshal` on 12 lines across ~10 of
+   its 48 tests (the `Base64::Marshal` coder block at `:108-124`, the
+   legacy-HMAC cases at `:337/:407/:420`, and the coder-name assertions at
+   `:512/:517`); `spec_session_encryptor.rb` on 2 of 16 (`:106`, `:148`).
+   Recommendation: port both files and stub only those, rather than stubbing
+   whole files — but the exact per-test line is drawn in
+   `enroll-rack-session-test-suite`, since a test can be Marshal-*flavoured*
+   without asserting on the wire format. If the count comes out materially
+   above ~12, say so in that PR rather than quietly lowering the Verification
+   target.
+5. **Does trails want `Rack::Session::Cookie` at runtime, or only as a measured
+   port?** Rails' `CookieStore` subclasses `AbstractSecureStore`, not
+   `Rack::Session::Cookie` (`cookie_store.rb:52`), so nothing in trails calls
+   it today. It is ported because the package's contract is the gem, not
+   trails' call sites — but that means it ships with no trails consumer, which
+   is a legitimate thing for a reviewer to question. Recommendation: port it;
+   the 48 tests are the justification, and a bare-Rack consumer is the eventual
+   one.
 
 ## Changelog
 
