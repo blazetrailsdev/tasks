@@ -1,7 +1,7 @@
 ---
 title: "build_with_expression_from_value drops Rails' nested arg; buildWithValueFromHash adds an invented CTE-name guard"
-status: in-progress
-updated: 2026-08-30
+status: done
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm
 packages: []
