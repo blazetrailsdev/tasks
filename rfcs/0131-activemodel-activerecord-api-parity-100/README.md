@@ -1,5 +1,5 @@
 ---
-rfc: "0000-activemodel-activerecord-api-parity-100"
+rfc: "0131-activemodel-activerecord-api-parity-100"
 title: "Take activemodel and activerecord to 100% on parity:api, by porting what is absent and by teaching the TS extractor the codegen its Ruby twin already models"
 status: draft
 created: 2026-08-31
@@ -19,7 +19,7 @@ related-rfcs:
 priority: 2
 ---
 
-# RFC — activemodel and activerecord to 100% on `parity:api`
+# RFC 0131 — activemodel and activerecord to 100% on `parity:api`
 
 ## Summary
 

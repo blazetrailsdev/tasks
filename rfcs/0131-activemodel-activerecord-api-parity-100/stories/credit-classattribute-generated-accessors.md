@@ -2,7 +2,7 @@
 title: "Model classAttribute() in the TS extractor so the 21 class_attribute triples Ruby's extractor already credits stop scoring as declaration-only"
 status: draft
 updated: 2026-08-31
-rfc: "0000-activemodel-activerecord-api-parity-100"
+rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages:
   - activemodel

@@ -2,7 +2,7 @@
 title: "Give the SQLite and MySQL statement pools their dealloc/reset seats, and bodies to sqlite3 explain and the adapter's begin_transaction"
 status: draft
 updated: 2026-08-31
-rfc: "0000-activemodel-activerecord-api-parity-100"
+rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages:
   - activerecord
