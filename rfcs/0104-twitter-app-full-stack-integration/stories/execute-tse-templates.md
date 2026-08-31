@@ -8,7 +8,7 @@ packages: ["actionview"]
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 5
 pr: 7281
 claim: null
 assignee: null

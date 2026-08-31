@@ -8,7 +8,7 @@ packages: []
 deps: ["port-metal-dispatch-class-method"]
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 41
 pr: 7286
 claim: null
 assignee: null

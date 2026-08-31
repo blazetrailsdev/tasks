@@ -8,7 +8,7 @@ packages: ["actionview", "actionpack"]
 deps: ["execute-tse-templates"]
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 11
 pr: 7285
 claim: null
 assignee: null

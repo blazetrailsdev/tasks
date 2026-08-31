@@ -8,7 +8,7 @@ packages: []
 deps: ["generate-app-subclassing-application"]
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 36
 pr: null
 claim: null
 assignee: null
