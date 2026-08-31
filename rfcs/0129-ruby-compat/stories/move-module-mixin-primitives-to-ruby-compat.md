@@ -48,7 +48,7 @@ grown):
   reads _"Mirrors: Ruby's Module#include (core language feature)"_.
 
   Runtime and types are one unit and move together — `Included<typeof
-  QueryMethodBangs>` is how a mixed-in surface is declared, so splitting them
+QueryMethodBangs>` is how a mixed-in surface is declared, so splitting them
   leaves the type alias in a package that no longer owns the mechanism.
 
 - `packages/activesupport/src/prepend.ts` (**136 lines**) — `Module#prepend`,
@@ -80,7 +80,7 @@ already landed, file the deletion follow-up rather than widening this one.
 
 - [ ] Confirm `include.ts` and `prepend.ts` still have zero runtime imports; if
       one has acquired a workspace import since this story was written, `tasks
-      block` with that import rather than moving the dependency along with it.
+    block` with that import rather than moving the dependency along with it.
 - [ ] `include.ts`, `prepend.ts` and their tests moved to
       `packages/ruby-compat/src/`.
 - [ ] **`ruby-compat` is the definition site** for `include()`, `extend()`,
