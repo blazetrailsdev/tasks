@@ -62,13 +62,13 @@ Every mirror setter on `Metal` writes to its own field and **none writes
 through to `this.response`** — verified in
 `packages/actionpack/src/action-controller/metal.ts`:
 
-| setter | writes | `response` updated |
-| --- | --- | --- |
-| `set status` | `_status` | no |
-| `setHeader` | `_headers` | no |
-| `set contentType` | `_contentType` | no |
-| `set body` | `_responseBody` | no |
-| `set responseBody` | `_responseBody` **and** `this.response` | yes |
+| setter             | writes                                  | `response` updated |
+| ------------------ | --------------------------------------- | ------------------ |
+| `set status`       | `_status`                               | no                 |
+| `setHeader`        | `_headers`                              | no                 |
+| `set contentType`  | `_contentType`                          | no                 |
+| `set body`         | `_responseBody`                         | no                 |
+| `set responseBody` | `_responseBody` **and** `this.response` | yes                |
 
 So the divergence is total in one direction: a controller that writes through
 `this.response.status` / `.setHeader` / `.body` — the shape Rails documents,
