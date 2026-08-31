@@ -1,7 +1,7 @@
 ---
 title: "ActionView helpers and helper_method are invisible to .tse templates"
-status: draft
-updated: 2026-08-13
+status: in-progress
+updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["actionview", "actionpack"]
@@ -9,7 +9,7 @@ deps: ["execute-tse-templates"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7285
 claim: null
 assignee: null
 blocked-by: null

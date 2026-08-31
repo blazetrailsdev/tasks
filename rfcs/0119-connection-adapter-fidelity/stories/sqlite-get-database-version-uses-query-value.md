@@ -1,6 +1,6 @@
 ---
 title: "SQLite3Adapter#getDatabaseVersion probes the raw driver, not query_value"
-status: in-progress
+status: blocked
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: 7280
 claim: "2026-08-31T00:34:21Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
-blocked-by: null
+blocked-by: "The converged Version.new(query_value(...)) body makes the version probe a real query, but SQLite3Adapter's constructor fires configure_connection (-> check_version -> databaseVersion) without an await (sqlite3-adapter.ts:297). The in-flight probe then outlives its caller and reconnects an adapter disconnected meanwhile, via rawExecute -> ensureConnected -> verifyBang. Measured on PR #7280: reds all 5 AR lanes on connection-pool.test.ts:452 (isConnected after disconnectBang), with-transactional-fixtures.trails.test.ts:77/120 (fixture rollback + 'database is locked'), transactions.trails.test.ts:173/184 (savepoint dirtying), and sqlite3-adapter-perform-query.trails.test.ts (statement-lock reordering). Unblocking needs the constructor's deferred configure_connection to stop resurrecting a closed connection - a redesign of that deferral, not of get_database_version, whose Rails shape is otherwise correct and was verified working in isolation."
 closed-reason: null
 ---
 

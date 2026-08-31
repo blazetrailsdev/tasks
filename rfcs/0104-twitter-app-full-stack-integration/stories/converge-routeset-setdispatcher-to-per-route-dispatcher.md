@@ -1,7 +1,7 @@
 ---
 title: "converge-routeset-setdispatcher-to-per-route-dispatcher"
-status: draft
-updated: 2026-08-14
+status: in-progress
+updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: ["port-metal-dispatch-class-method"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7286
 claim: null
 assignee: null
 blocked-by: null
