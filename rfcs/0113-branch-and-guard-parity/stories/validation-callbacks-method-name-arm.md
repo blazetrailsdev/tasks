@@ -1,7 +1,7 @@
 ---
 title: "beforeValidation/afterValidation drop Rails' method-name (Symbol) arm"
-status: in-progress
-updated: 2026-08-30
+status: done
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
 packages: []

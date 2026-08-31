@@ -1,14 +1,14 @@
 ---
 title: "Accept PostgreSQL::Name in quoteTableName and the pk-sequence callers"
-status: claimed
-updated: 2026-08-30
+status: in-progress
+updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 7276
 claim: "2026-08-30T23:54:01Z"
 assignee: "time-at-with-coercion-onto-time-class"
 blocked-by: null

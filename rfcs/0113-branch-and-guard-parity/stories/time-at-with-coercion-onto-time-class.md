@@ -1,7 +1,7 @@
 ---
 title: "time-at-with-coercion-onto-time-class"
-status: claimed
-updated: 2026-08-30
+status: in-progress
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7276
 claim: "2026-08-30T23:54:01Z"
 assignee: "time-at-with-coercion-onto-time-class"
 blocked-by: null

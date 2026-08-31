@@ -1,7 +1,7 @@
 ---
 title: "Drive sharding separation tests through the model API, as Rails does"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T00:34:21Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

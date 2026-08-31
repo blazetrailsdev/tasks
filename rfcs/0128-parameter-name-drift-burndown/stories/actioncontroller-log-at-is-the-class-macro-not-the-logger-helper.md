@@ -1,7 +1,7 @@
 ---
 title: "actioncontroller log_at is the class macro, not the logger helper"
-status: ready
-updated: 2026-08-30
+status: in-progress
+updated: 2026-08-31
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: 7278
+claim: "2026-08-31T00:08:11Z"
+assignee: "param-drift-activerecord-final-four-residual-rows"
 blocked-by: null
 closed-reason: null
 ---

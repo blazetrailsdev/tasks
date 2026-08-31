@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-read-uncommitted-shared-cache-skip"
-status: ready
-updated: 2026-08-25
+status: blocked
+updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-08-31T00:54:11Z"
+assignee: "inline-ruby-bodies-extracted-as-named-helpers"
+blocked-by: "better-sqlite3 exposes no open-flags surface (Database(filename, {readonly, fileMustExist, timeout, verbose, nativeBinding}) only) and does not set SQLITE_OPEN_URI, so Rails' SQLite3::Constants::Open::SHAREDCACHE (transaction_test.rb:43,49) has no route. Probed on this worktree's better-sqlite3: new Database('file::memory:?cache=shared') reports memory:false and creates a literal file of that name; two handles on one file with PRAGMA read_uncommitted=ON see 0 rows of the other's uncommitted INSERT. sqlite3_enable_shared_cache is not bound either. Unskippable until the driver gains a flags/URI surface; baseline.json:112-116 remains the single register."
 closed-reason: null
 ---
 

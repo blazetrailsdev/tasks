@@ -1,7 +1,7 @@
 ---
 title: "time-ext-rubytime-arms-delegate-to-time-reopening"
-status: ready
-updated: 2026-08-27
+status: in-progress
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7277
+claim: "2026-08-31T00:14:13Z"
+assignee: "time-ext-rubytime-arms-delegate-to-time-reopening"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Retire Queue's invented rejectAll and leaseTo/unlease/leasedTo surface"
-status: claimed
-updated: 2026-08-30
+status: in-progress
+updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 7276
 claim: "2026-08-30T23:54:01Z"
 assignee: "time-at-with-coercion-onto-time-class"
 blocked-by: null

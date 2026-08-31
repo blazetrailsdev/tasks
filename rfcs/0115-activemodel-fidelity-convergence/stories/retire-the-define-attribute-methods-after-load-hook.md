@@ -1,7 +1,7 @@
 ---
 title: "Retire the defineAttributeMethodsAfterLoad schema-load hook"
-status: ready
-updated: 2026-08-30
+status: claimed
+updated: 2026-08-31
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T00:58:53Z"
+assignee: "retire-the-define-attribute-methods-after-load-hook"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Nested attributes should query existing records, not fabricate a stand-in"
 status: ready
-updated: 2026-08-30
+updated: 2026-08-31
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []

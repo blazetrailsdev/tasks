@@ -1,7 +1,7 @@
 ---
 title: "buildAdapterArg's SQLite whitelist silently drops config keys Rails passes to the adapter"
-status: ready
-updated: 2026-08-25
+status: in-progress
+updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7277
+claim: "2026-08-31T00:14:13Z"
+assignee: "time-ext-rubytime-arms-delegate-to-time-reopening"
 blocked-by: null
 closed-reason: null
 ---
