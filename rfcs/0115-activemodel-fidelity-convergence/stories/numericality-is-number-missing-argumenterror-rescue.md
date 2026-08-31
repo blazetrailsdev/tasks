@@ -1,11 +1,13 @@
 ---
 title: "is_number? drops Rails' rescue ArgumentError, TypeError => false arm"
 status: draft
-updated: 2026-08-30
+updated: 2026-08-31
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
-packages: []
-deps: []
+packages:
+  - "activemodel"
+deps:
+  - "kernel-float-raises-like-mri"
 deps-rfc: []
 est-loc: 90
 priority: null
@@ -52,19 +54,39 @@ Surfaced while reviewing `numericality-callers-pre-dispatch-around-parse-as-numb
 dispatch are converged, this guard is the one arm of the Ruby body with no TS
 counterpart.
 
+## Sequencing: `kernelFloat` first
+
+This story originally asked, as a follow-on inside itself, whether
+`kernelFloat` should raise like `Kernel.Float` rather than return `undefined`.
+It should — but that is a Ruby core primitive with no `.rb` in any gem to
+mirror, it already carries `@noRailsEquivalent PERMANENT — Ruby core
+(Kernel.Float)`, and it has three other callers that swallow the raise
+(`number_to_human_converter.rb:17`, `number_to_human_size_converter.rb:14` and
+`postgresql/oid/point.rb:64` are all BARE `Float(...)` in Rails). So it belongs
+to RFC 0129 and is filed there as `kernel-float-raises-like-mri`, which this
+story depends on.
+
+That dependency is not bookkeeping. Until `kernelFloat` raises, nothing in
+`parseAsNumber` can raise, so the rescue arm this story adds is dead code and
+the baseline-failing test below cannot be written without fabricating a
+throwing arm.
+
 ## Converged shape
 
 `isNumber` wraps its body the way Rails does — a `try` whose `catch` returns
-`false` for `ArgumentError` and `TypeError` (and rethrows anything else, since
-Ruby's `rescue` lists exactly those two classes). Whether `kernelFloat` should
-itself raise like `Kernel.Float` rather than returning `undefined` is the
-follow-on question to answer in the same story; converging it makes the rescue
-arm do real work rather than be dead code.
+`false` for `ArgumentError` and `TypeError`, and rethrows anything else, since
+Ruby's `rescue` lists exactly those two classes.
+
+With `kernel-float-raises-like-mri` landed, that arm is what keeps `is_number?`
+answering `false` for `"abc"` (`ArgumentError`) and `nil` (`TypeError`) instead
+of propagating — the behaviour the two RFCs preserve between them.
 
 ## Acceptance criteria
 
 - [ ] `isNumber` carries Rails' two-class rescue arm returning `false`, with
       anything else rethrown.
-- [ ] A test pins that a raising `parseAsNumber` arm yields `false` from
-      `isNumber` rather than propagating, and it fails on the baseline.
+- [ ] Tests pin that an `ArgumentError` and a `TypeError` out of
+      `parseAsNumber` each yield `false` from `isNumber` rather than
+      propagating, and they fail on the baseline (which they do once
+      `kernelFloat` raises).
 - [ ] `pnpm vitest run packages/activemodel` green.
