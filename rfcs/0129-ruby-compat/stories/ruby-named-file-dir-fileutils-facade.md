@@ -59,7 +59,7 @@ rather than building a façade for debt that no longer exists.
 **The counter-argument, recorded so it is weighed and not rediscovered.** RFC
 0129's README notes `File.join` is 96 Rails calls and `File.expand_path` 97, but
 **no port hand-rolls their semantics** — so unlike `Rational` or `Hash#fetch`,
-the debt here is *naming only*, not duplicated implementation. That makes this a
+the debt here is _naming only_, not duplicated implementation. That makes this a
 weaker case than the value-type moves. It is still real (the gate cannot credit
 a call it cannot see), but it means the deliverable is a thin naming façade over
 the existing adapter, never a reimplementation of filesystem semantics.
