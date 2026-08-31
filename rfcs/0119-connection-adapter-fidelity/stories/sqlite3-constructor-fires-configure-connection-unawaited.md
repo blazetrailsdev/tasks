@@ -95,7 +95,7 @@ reconnect through `ensureConnected`.
       (`sqlite3_adapter.rb:476-478`) with the five test sites above green, and
       `sqlite-get-database-version-uses-query-value` unblocks.
 - [ ] The `@missingRailsCall query_value — CONVERGEABLE
-      sqlite-get-database-version-uses-query-value` receipt at
+    sqlite-get-database-version-uses-query-value` receipt at
       `sqlite3-adapter.ts:831` is deleted with it.
 - [ ] A test pins the invariant: a probe in flight across a `disconnectBang`
       leaves the adapter closed.

@@ -109,7 +109,7 @@ unmet**, and the story is still the right convergence target:
   a map miss throws `ActionDispatch::MissingController` directly, collapsing
   Ruby's `missing_name == const_name || const_name.start_with?(...)`
   discrimination between "the controller constant is missing" and "a constant
-  *inside* the controller file is missing". #7286 disclosed this collapse; it
+  _inside_ the controller file is missing". #7286 disclosed this collapse; it
   becomes fixable the moment lookup goes through a real `constantize`.
 - `actioncontroller/test-case.ts`'s `tests(name)` still reaches for
   `globalThis` — untouched.
@@ -121,8 +121,8 @@ New since this story was written: `ActionDispatch::MissingController`
 error class they need to raise.
 
 #7286 tagged `controllerConstants` `@noRailsEquivalent PERMANENT` on the
-grounds that ESM has no `const_missing`. That justification covers *eager
-population* but not *a separate table* — activesupport already has the one
+grounds that ESM has no `const_missing`. That justification covers _eager
+population_ but not _a separate table_ — activesupport already has the one
 `constantize` reads. When this story lands, that receipt should be deleted
 along with the map; until then it is better read as `CONVERGEABLE` against
 this story.

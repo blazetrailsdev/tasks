@@ -21,7 +21,7 @@ closed-reason: null
 Superseded body — the process-global `compiledCache` this story was filed
 against is gone (PR #7285). The memo now lives on
 `Base#compiledMethodContainer`, which is where Rails puts the compiled
-*method* (`base.rb:198-210`). What remains is the other half: `Template` does
+_method_ (`base.rb:198-210`). What remains is the other half: `Template` does
 not own compilation at all.
 
 Rails splits it:

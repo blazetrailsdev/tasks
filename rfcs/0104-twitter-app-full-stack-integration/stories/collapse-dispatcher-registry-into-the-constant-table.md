@@ -84,8 +84,8 @@ counterpart.
 ## Notes
 
 PR #7286 tagged `controllerConstants` `@noRailsEquivalent PERMANENT` on the
-grounds that ESM has no `const_missing`. That reason holds for *eager
-population*, but not for *a separate table*: activesupport already has the
+grounds that ESM has no `const_missing`. That reason holds for _eager
+population_, but not for _a separate table_: activesupport already has the
 constant table `constantize` reads. When this story or
 `controller-constant-resolution-throws-instead-of-constantize` lands, that
 receipt should become `CONVERGEABLE <story-id>` — or disappear with the map.

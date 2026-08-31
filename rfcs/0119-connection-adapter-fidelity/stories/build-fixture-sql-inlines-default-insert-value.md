@@ -65,7 +65,7 @@ Two adjacent deviations in the same body, worth converging together since the
 fix touches the same loop:
 
 - **Column source.** Rails iterates `schema_cache.columns_hash(table_name)`
-  (minus virtual columns); trails iterates the union of the *fixtures'* own keys
+  (minus virtual columns); trails iterates the union of the _fixtures'_ own keys
   (`:1238`). A column absent from every fixture row is therefore never emitted
   at all, which is why the missing `default_insert_value` call has stayed
   invisible.

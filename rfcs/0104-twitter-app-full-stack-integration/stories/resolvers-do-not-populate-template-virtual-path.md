@@ -32,8 +32,7 @@ resolvers construct `Template` with `identifier` and no `virtualPath`, so
 
 ```ts
 // packages/actionview/src/template/handlers/tse.ts
-const virtualPath =
-  context.template?.virtualPath ?? context.template?.identifier ?? null;
+const virtualPath = context.template?.virtualPath ?? context.template?.identifier ?? null;
 ```
 
 The identifier is an absolute or resolver-relative path, not the virtual path,

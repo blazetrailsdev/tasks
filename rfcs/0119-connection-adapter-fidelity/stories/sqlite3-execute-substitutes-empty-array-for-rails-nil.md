@@ -62,10 +62,12 @@ export async function execute(
   name?: string | null,
   options?: { allowRetry?: boolean },
 ): Promise<Record<string, unknown>[] | undefined> {
-  const result = (await abstractExecute.call(this as DatabaseStatementsHost, sql, name, options)) as
-    | { toArray(): Record<string, unknown>[] }
-    | null
-    | undefined;
+  const result = (await abstractExecute.call(
+    this as DatabaseStatementsHost,
+    sql,
+    name,
+    options,
+  )) as { toArray(): Record<string, unknown>[] } | null | undefined;
   return result?.toArray();
 }
 ```

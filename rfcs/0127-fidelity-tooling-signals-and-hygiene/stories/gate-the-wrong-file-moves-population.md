@@ -38,17 +38,17 @@ file. It does not, and neither does anything else:
 So the count can grow indefinitely and no CI job notices. Measured 2026-08-31
 off a forced `pnpm parity:api`:
 
-| Methods to relocate | Package |
-| --- | --- |
-| 840 | activerecord |
-| 202 | activesupport |
-| 109 | actioncontroller |
-| 103 | activemodel |
-| 77 | actionview |
-| 57 | actiondispatch |
-| 19 | trailties |
-| 3 | arel |
-| 3 | abstractcontroller |
+| Methods to relocate | Package            |
+| ------------------- | ------------------ |
+| 840                 | activerecord       |
+| 202                 | activesupport      |
+| 109                 | actioncontroller   |
+| 103                 | activemodel        |
+| 77                  | actionview         |
+| 57                  | actiondispatch     |
+| 19                  | trailties          |
+| 3                   | arel               |
+| 3                   | abstractcontroller |
 
 This is a distinct population from the extra-surface `total` dimension.
 `total`'s moved-not-novel slice counts a name that is EXTRA in its TS file
