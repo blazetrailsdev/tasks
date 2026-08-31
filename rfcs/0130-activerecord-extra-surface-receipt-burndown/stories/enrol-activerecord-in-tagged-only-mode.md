@@ -6,7 +6,14 @@ rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
   - activerecord
-deps: ['receipt-package-root-base-fixtures-enum-errors','receipt-connection-adapters-and-sqlite-drivers','receipt-associations-and-join-dependency','receipt-encryption-and-type-virtualization','receipt-relation-delegation-and-relation-tree']
+deps:
+  [
+    "receipt-package-root-base-fixtures-enum-errors",
+    "receipt-connection-adapters-and-sqlite-drivers",
+    "receipt-associations-and-join-dependency",
+    "receipt-encryption-and-type-virtualization",
+    "receipt-relation-delegation-and-relation-tree",
+  ]
 deps-rfc: []
 est-loc: 40
 priority: 3

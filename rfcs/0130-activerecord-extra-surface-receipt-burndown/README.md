@@ -88,14 +88,14 @@ story must say which way each name went — the burndown is not "add 342 tags".
 
 By top-level directory, the 342 fall out as:
 
-| Names | Area |
-| ----- | ---- |
-| 107 | package root (`base.ts` 19, `fixtures.ts` 9, `enum.ts` 5, `errors.ts` 5, …) |
-| 81 | `connection-adapters/` + `adapters/` + `sqlite/` |
-| 48 | `relation/` (`relation/delegation.ts` 15) |
-| 29 | `associations/` |
-| 15 | `type-virtualization/` |
-| 15 | `encryption/` |
+| Names | Area                                                                        |
+| ----- | --------------------------------------------------------------------------- |
+| 107   | package root (`base.ts` 19, `fixtures.ts` 9, `enum.ts` 5, `errors.ts` 5, …) |
+| 81    | `connection-adapters/` + `adapters/` + `sqlite/`                            |
+| 48    | `relation/` (`relation/delegation.ts` 15)                                   |
+| 29    | `associations/`                                                             |
+| 15    | `type-virtualization/`                                                      |
+| 15    | `encryption/`                                                               |
 
 Stories are cut by area, not by count, so each one is reviewable against a
 single Rails subtree and its `vendor/rails/` counterpart. Each lands the same
@@ -160,7 +160,7 @@ fastest early.
 - `scripts/api-compare/extra-surface-mark.json` contains no `activerecord` key,
   and `activerecord` appears in `TAGGED_ONLY_PACKAGES`.
 - `pnpm parity:api:extra:gate` is green with `activerecord novel 0/0
-  (tagged-only)` in its summary line.
+(tagged-only)` in its summary line.
 - Every `@noRailsEquivalent` written by this RFC states `PERMANENT` or
   `CONVERGEABLE <story-id>`; the extra-surface run's unstated-permanence count
   does not rise.

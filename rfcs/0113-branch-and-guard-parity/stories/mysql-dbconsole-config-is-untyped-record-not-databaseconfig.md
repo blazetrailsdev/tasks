@@ -44,8 +44,8 @@ Two consequences, both live:
 
 1. **`config.database` is optionally-present**, so `args << config.database`
    (`rb:80`, unconditional) could push a literal `undefined`. PR #7270
-   (`mysql-dbconsole-database-pushed-unconditionally`) converged the *bare
-   truthiness* guard to a null-guard — `if (config.database !== undefined)` —
+   (`mysql-dbconsole-database-pushed-unconditionally`) converged the _bare
+   truthiness_ guard to a null-guard — `if (config.database !== undefined)` —
    which is the closest a loose `Record` allows, but it is still a guard
    `rb:80` does not have. Rails cannot reach that branch because
    `DatabaseConfig#database` is a declared reader.
