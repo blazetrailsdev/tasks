@@ -1,6 +1,6 @@
 ---
 title: "Engine::Configuration all_autoload(_once)_paths: union paths registry like Rails"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0069-globalid-trailtie-port"
 cluster: null

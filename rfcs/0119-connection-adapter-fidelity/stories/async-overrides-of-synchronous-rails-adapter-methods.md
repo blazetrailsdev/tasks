@@ -10,7 +10,7 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-31T15:26:18Z"
+claim: "2026-08-31T16:43:30Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null

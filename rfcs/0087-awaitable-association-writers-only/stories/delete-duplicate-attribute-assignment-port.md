@@ -1,7 +1,7 @@
 ---
 title: "Delete the duplicate _assign_attributes port that takes parity:api's credit for attribute_assignment.rb"
-status: draft
-updated: 2026-08-08
+status: closed
+updated: 2026-08-31
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by PR #6791 (2b25d57f0, 'collapse the two assign_attributes ports and retire the eager decorate bake'). On origin/main the duplicate pair is gone from persistence.ts — `git grep -n '_assignAttributes|assignNestedParameterAttributes' origin/main -- packages/activerecord/src` matches only attribute-assignment.ts (the Rails file path) plus one caller at associations/association.ts:363. The survivor carries isNestedParameterHash (attribute-assignment.ts:18) and is included into Base at base.ts:3012, which is exactly the story's acceptance shape."
 ---
 
 ## Context

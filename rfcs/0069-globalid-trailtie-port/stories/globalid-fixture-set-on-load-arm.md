@@ -1,6 +1,6 @@
 ---
 title: "globalid: port GlobalID::FixtureSet and the on_load(:active_record_fixture_set) arm"
-status: claimed
+status: done
 updated: 2026-08-31
 rfc: "0069-globalid-trailtie-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: 7301
 claim: "2026-08-31T15:51:54Z"
 assignee: "activesupport-railtie-initializer-yields-no-app"
 blocked-by: null

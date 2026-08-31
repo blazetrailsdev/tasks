@@ -1,6 +1,6 @@
 ---
 title: "param-drift-actioncontroller-structural-residue"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: 7
-pr: null
+pr: 7302
 claim: "2026-08-31T15:54:33Z"
 assignee: "template-render-takes-view-before-locals"
 blocked-by: null

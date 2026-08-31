@@ -1,6 +1,6 @@
 ---
 title: "Retire the parked-promise pattern: delete parkNestedReaderLoad and its four call sites"
-status: ready
+status: in-progress
 updated: 2026-08-31
 rfc: "0087-awaitable-association-writers-only"
 cluster: "rails-deviation"
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7303
+claim: "2026-08-31T16:13:25Z"
+assignee: "retire-the-parked-promise-pattern"
 blocked-by: null
 closed-reason: null
 ---

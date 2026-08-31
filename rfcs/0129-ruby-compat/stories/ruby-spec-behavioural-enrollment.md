@@ -1,6 +1,6 @@
 ---
 title: "Enroll vendor/ruby's in-tree ruby/spec suite as ruby-compat's behavioural measure"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["vendor-ruby-mri-source", "ruby-compat-package-skeleton"]
 deps-rfc: []
 est-loc: 240
 priority: 19
-pr: null
+pr: 7300
 claim: "2026-08-31T15:43:38Z"
 assignee: "ruby-spec-behavioural-enrollment"
 blocked-by: null

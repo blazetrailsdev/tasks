@@ -1,6 +1,6 @@
 ---
 title: "activesupport Railtie: initializer blocks take no arguments, so railties read the app off config"
-status: claimed
+status: done
 updated: 2026-08-31
 rfc: "0069-globalid-trailtie-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 7301
 claim: "2026-08-31T15:51:54Z"
 assignee: "activesupport-railtie-initializer-yields-no-app"
 blocked-by: null

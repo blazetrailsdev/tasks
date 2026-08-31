@@ -1,6 +1,6 @@
 ---
 title: "Delete the re-export shims left by the value-type moves and repoint the stale RFC 0089 citations"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -20,7 +20,7 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: 20
-pr: null
+pr: 7300
 claim: "2026-08-31T15:43:38Z"
 assignee: "ruby-spec-behavioural-enrollment"
 blocked-by: null
