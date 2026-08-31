@@ -1,5 +1,5 @@
 ---
-title: "\"validate column sizes\" gates on an adapter name where Rails gates on the column limit"
+title: '"validate column sizes" gates on an adapter name where Rails gates on the column limit'
 status: draft
 updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
