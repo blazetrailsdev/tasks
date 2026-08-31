@@ -76,6 +76,31 @@ kept each of them reviewable and independently revertible. Deleting the shim is
 `delete-ruby-compat-reexport-shims`' successor, not this PR; if that story has
 already landed, file the deletion follow-up rather than widening this one.
 
+### The citation-contract objection, and the answer
+
+`move-tempfile-to-ruby-compat`'s Context says `include.ts` is deliberately NOT
+in scope, because it is "a language-construct shim rather than a ported stdlib
+class, and it has no MRI file to cite". Half of that is right and it is the
+first thing to settle, not to skip past.
+
+ruby-compat's contract (README §2) is a resolving `vendor/ruby/<file>:<line>`
+citation plus `@noRailsEquivalent PERMANENT` on every exported member. The
+runtime halves cite fine: `Module#include` is `rb_mod_include` and
+`Module#prepend` `rb_mod_prepend` (`eval.c`), backed by `rb_include_module` /
+`rb_prepend_module` (`class.c`), and the last-included-wins ancestry emulation
+is exactly what those functions do to the ancestor chain — resolve the real
+lines against the pinned SHA as the first task.
+
+The **type-level** halves are the genuinely new case: `Included<>`,
+`Extended<>` and `CallableMethods` describe a TS type relation, and MRI has no
+line for a type. Decide it once, in this PR, and record the answer in the RFC —
+the plausible shapes are (a) cite the runtime function each type describes,
+since the type is that function's static face, or (b) let the citation lint
+exempt type-only exports, which is a lint change with its own reviewers. Do not
+invent a third receipt shape. If neither is acceptable to the lint's owner,
+`tasks block` this story on that decision rather than moving the file without a
+contract.
+
 ## Acceptance criteria
 
 - [ ] Confirm `include.ts` and `prepend.ts` still have zero runtime imports; if
