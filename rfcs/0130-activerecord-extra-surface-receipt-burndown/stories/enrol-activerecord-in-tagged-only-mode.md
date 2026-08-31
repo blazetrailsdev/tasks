@@ -2,7 +2,7 @@
 title: "Move activerecord from COUNTED_PACKAGES to TAGGED_ONLY_PACKAGES and delete its mark row"
 status: draft
 updated: 2026-08-30
-rfc: "0000-activerecord-extra-surface-receipt-burndown"
+rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
   - activerecord

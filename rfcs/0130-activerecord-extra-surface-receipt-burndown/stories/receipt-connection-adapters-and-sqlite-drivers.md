@@ -2,7 +2,7 @@
 title: "connection-adapters/, adapters/ and sqlite/: resolve 109 novel names, most in files with no Rails counterpart"
 status: draft
 updated: 2026-08-30
-rfc: "0000-activerecord-extra-surface-receipt-burndown"
+rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
   - activerecord

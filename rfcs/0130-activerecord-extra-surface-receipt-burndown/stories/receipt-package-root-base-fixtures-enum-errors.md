@@ -2,7 +2,7 @@
 title: "Package root: resolve the remaining 126 novel names across base.ts, index.ts, fixtures.ts, enum.ts and errors.ts"
 status: draft
 updated: 2026-08-30
-rfc: "0000-activerecord-extra-surface-receipt-burndown"
+rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
   - activerecord

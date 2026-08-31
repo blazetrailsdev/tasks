@@ -1,5 +1,5 @@
 ---
-rfc: "0000-activerecord-extra-surface-receipt-burndown"
+rfc: "0130-activerecord-extra-surface-receipt-burndown"
 title: "Burn activerecord's 342 untagged novel names down to zero so the package leaves the counted extra-surface mark for tagged-only mode"
 status: draft
 created: 2026-08-30
@@ -19,7 +19,7 @@ related-rfcs:
 priority: 3
 ---
 
-# RFC — activerecord extra-surface receipt burndown
+# RFC 0130 — activerecord extra-surface receipt burndown
 
 ## Summary
 

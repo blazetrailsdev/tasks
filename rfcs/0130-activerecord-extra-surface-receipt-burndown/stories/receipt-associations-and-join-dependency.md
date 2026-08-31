@@ -2,7 +2,7 @@
 title: "associations/: resolve 29 novel names across join-dependency, the scope slots and the through-reflection validators"
 status: draft
 updated: 2026-08-30
-rfc: "0000-activerecord-extra-surface-receipt-burndown"
+rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
   - activerecord
