@@ -69,14 +69,14 @@ before the i18n/`date_and_time_compatibility` movements). File by file:
 
 ### Owned (118)
 
-| Rails test file | remaining | owner (RFC 0101 unless noted) |
-| --- | --- | --- |
-| `cache/behaviors/cache_store_behavior.rb` | 40 missing | `port-the-remaining-cache-store-behavior-cases` |
-| `cache/behaviors/local_cache_behavior.rb` | 29 stubs | `port-cache-strategy-local-cache` (blocked) |
-| `core_ext/date_and_time_compatibility_test.rb` | 21 stubs | RFC 0105 `port-date-and-time-compatibility-and-zone-cases` |
-| `cache/behaviors/cache_store_version_behavior.rb` | 12 missing | `wire-cache-store-version-behavior-into-helpers` |
-| `cache/behaviors/cache_logging_behavior.rb` | 8 missing | `wire-cache-logging-behavior-into-helpers` |
-| `cache/behaviors/cache_store_format_version_behavior.rb` | 8 missing | `wire-cache-store-format-version-behavior-into-helpers` |
+| Rails test file                                          | remaining  | owner (RFC 0101 unless noted)                              |
+| -------------------------------------------------------- | ---------- | ---------------------------------------------------------- |
+| `cache/behaviors/cache_store_behavior.rb`                | 40 missing | `port-the-remaining-cache-store-behavior-cases`            |
+| `cache/behaviors/local_cache_behavior.rb`                | 29 stubs   | `port-cache-strategy-local-cache` (blocked)                |
+| `core_ext/date_and_time_compatibility_test.rb`           | 21 stubs   | RFC 0105 `port-date-and-time-compatibility-and-zone-cases` |
+| `cache/behaviors/cache_store_version_behavior.rb`        | 12 missing | `wire-cache-store-version-behavior-into-helpers`           |
+| `cache/behaviors/cache_logging_behavior.rb`              | 8 missing  | `wire-cache-logging-behavior-into-helpers`                 |
+| `cache/behaviors/cache_store_format_version_behavior.rb` | 8 missing  | `wire-cache-store-format-version-behavior-into-helpers`    |
 
 `wire-the-remaining-cache-behavior-modules-into-helpers` is closed, split into
 the three `wire-…` stories above; `enroll-cache-store-compression-behavior`,
@@ -86,16 +86,16 @@ remainder.
 
 ### Unowned — filed against RFC 0101 by this story (92)
 
-| Rails test file(s) | remaining | new story |
-| --- | --- | --- |
-| `cache/behaviors/failure_safety_behavior.rb`, `failure_raising_behavior.rb` | 25 | `port-cache-failure-safety-and-failure-raising-behaviors` |
-| `ordered_hash_test.rb`, `safe_buffer_test.rb` | 15 | `port-ordered-hash-and-safe-buffer-stubs` |
-| `testing/constant_lookup_test.rb`, `time_travel_test.rb`, `testing/file_fixtures_test.rb` | 12 | `port-activesupport-testing-helper-stubs` |
-| `rescuable_test.rb`, `tagged_logging_test.rb`, `isolated_execution_state_test.rb` | 10 | `port-rescuable-tagged-logging-and-isolated-execution-cases` |
-| the 1–2 case tail, 11 files | 14 | `port-out-of-closure-activesupport-singleton-tail` |
-| `cache/cache_store_logger_test.rb`, `cache/cache_entry_test.rb` | 6 | `port-cache-store-logger-and-cache-entry-cases` |
-| `cache/serializer_with_fallback_test.rb` | 5 | `port-cache-serializer-with-fallback-remaining-cases` |
-| `cache/behaviors/connection_pool_behavior.rb`, `encoded_key_cache_behavior.rb` | 5 | `port-cache-connection-pool-and-encoded-key-behaviors` |
+| Rails test file(s)                                                                        | remaining | new story                                                    |
+| ----------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------ |
+| `cache/behaviors/failure_safety_behavior.rb`, `failure_raising_behavior.rb`               | 25        | `port-cache-failure-safety-and-failure-raising-behaviors`    |
+| `ordered_hash_test.rb`, `safe_buffer_test.rb`                                             | 15        | `port-ordered-hash-and-safe-buffer-stubs`                    |
+| `testing/constant_lookup_test.rb`, `time_travel_test.rb`, `testing/file_fixtures_test.rb` | 12        | `port-activesupport-testing-helper-stubs`                    |
+| `rescuable_test.rb`, `tagged_logging_test.rb`, `isolated_execution_state_test.rb`         | 10        | `port-rescuable-tagged-logging-and-isolated-execution-cases` |
+| the 1–2 case tail, 11 files                                                               | 14        | `port-out-of-closure-activesupport-singleton-tail`           |
+| `cache/cache_store_logger_test.rb`, `cache/cache_entry_test.rb`                           | 6         | `port-cache-store-logger-and-cache-entry-cases`              |
+| `cache/serializer_with_fallback_test.rb`                                                  | 5         | `port-cache-serializer-with-fallback-remaining-cases`        |
+| `cache/behaviors/connection_pool_behavior.rb`, `encoded_key_cache_behavior.rb`            | 5         | `port-cache-connection-pool-and-encoded-key-behaviors`       |
 
 No `unported-files` rows were added for any of them, and no source was changed
 by this half of the bundle.
