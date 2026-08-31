@@ -1,6 +1,6 @@
 ---
 title: "fix-dangling-enrollment-story-citation"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null

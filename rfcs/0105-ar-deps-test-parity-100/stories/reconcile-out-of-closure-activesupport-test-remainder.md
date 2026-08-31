@@ -1,7 +1,7 @@
 ---
 title: "Reconcile the out-of-closure activesupport test remainder against RFC 0101"
-status: ready
-updated: 2026-08-13
+status: claimed
+updated: 2026-08-31
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T20:57:54Z"
+assignee: "reconcile-out-of-closure-activesupport-test-remainder"
 blocked-by: null
 closed-reason: null
 ---

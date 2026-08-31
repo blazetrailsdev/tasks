@@ -1,6 +1,6 @@
 ---
 title: "converge-activesupport-except-to-ruby-compat"
-status: ready
+status: claimed
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 28
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T20:49:55Z"
+assignee: "burn-down-ruby-compat-novel-surface-and-pin"
 blocked-by: null
 closed-reason: null
 ---

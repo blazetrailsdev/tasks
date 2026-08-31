@@ -1,6 +1,6 @@
 ---
 title: "No runnable session middleware: request.session is never populated and flash never commits"
-status: claimed
+status: ready
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: 13
 pr: null
-claim: "2026-08-31T19:31:24Z"
-assignee: "require-application-probes-dist-instead-of-app-path"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Enforce the reimplementation exclude JSON's only-shrink and sort invariants"
-status: ready
+status: claimed
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: 24
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T20:39:10Z"
+assignee: "enroll-call-mapping-remaining-packages"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Nested attributes should query existing records, not fabricate a stand-in"
-status: ready
+status: claimed
 updated: 2026-08-31
 rfc: "0087-awaitable-association-writers-only"
 cluster: "rails-deviation"
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 200
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T20:39:28Z"
+assignee: "nested-attributes-existing-records-should-be-queried"
 blocked-by: null
 closed-reason: null
 ---

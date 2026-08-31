@@ -1,7 +1,7 @@
 ---
 title: "corelib-spec-test-compare-enrollment"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-31
 rfc: "0089-corelib-primitives"
 cluster: null
 deps:
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by 0129-ruby-compat/ruby-spec-behavioural-enrollment"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "constructThroughRecordInMemory void-discards assignAttributes instead of threading it"
-status: ready
+status: claimed
 updated: 2026-08-31
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T20:39:28Z"
+assignee: "nested-attributes-existing-records-should-be-queried"
 blocked-by: null
 closed-reason: null
 ---

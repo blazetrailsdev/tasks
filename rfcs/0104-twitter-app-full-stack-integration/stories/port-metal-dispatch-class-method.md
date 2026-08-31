@@ -1,6 +1,6 @@
 ---
 title: "Port ActionController::Metal.dispatch including the middleware branch"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 17
-pr: null
+pr: 7310
 claim: "2026-08-31T19:31:24Z"
 assignee: "require-application-probes-dist-instead-of-app-path"
 blocked-by: null

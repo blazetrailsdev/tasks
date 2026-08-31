@@ -1,7 +1,7 @@
 ---
 title: "move-range-core-and-succ-to-corelib"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-31
 rfc: "0089-corelib-primitives"
 cluster: null
 deps: ["corelib-package-scaffold"]
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by 0129-ruby-compat/move-range-core-and-succ-to-ruby-compat"
 ---
 
 ## Context

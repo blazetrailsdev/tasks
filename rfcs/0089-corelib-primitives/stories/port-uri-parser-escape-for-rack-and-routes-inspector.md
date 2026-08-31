@@ -1,7 +1,7 @@
 ---
 title: "Port URI::RFC2396_Parser#escape so escape_path and normalize_filter make the call Rails makes"
-status: draft
-updated: 2026-08-28
+status: closed
+updated: 2026-08-31
 rfc: "0089-corelib-primitives"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "0089 superseded by 0129-ruby-compat, which lists URI as deferred; refile there when scheduled"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "regexpEscape moves to corelib and the five remaining private copies adopt it"
-status: draft
-updated: 2026-08-28
+status: closed
+updated: 2026-08-31
 rfc: "0089-corelib-primitives"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by 0129-ruby-compat/move-regexp-escape-to-ruby-compat"
 ---
 
 ## Context

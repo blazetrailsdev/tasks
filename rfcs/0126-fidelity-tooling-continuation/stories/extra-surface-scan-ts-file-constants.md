@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: scan TS module-level fileConstants (currently unscored)"
-status: claimed
+status: done
 updated: 2026-08-31
 rfc: "0126-fidelity-tooling-continuation"
 cluster: api-compare
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 5
-pr: null
+pr: 7309
 claim: "2026-08-31T19:32:59Z"
 assignee: "extra-surface-mixin-synthetic-constructor-attribution"
 blocked-by: null

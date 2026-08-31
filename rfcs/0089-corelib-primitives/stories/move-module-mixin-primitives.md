@@ -1,7 +1,7 @@
 ---
 title: "move-module-mixin-primitives"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-08-31
 rfc: "0089-corelib-primitives"
 cluster: null
 deps: ["corelib-package-scaffold"]
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "re-scoped into 0129-ruby-compat/move-module-mixin-primitives-to-ruby-compat"
 ---
 
 ## Context
