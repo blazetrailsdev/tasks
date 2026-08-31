@@ -1,6 +1,6 @@
 ---
 title: "locator-use-drops-the-no-locator-raise"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 1
-pr: null
+pr: 7287
 claim: "2026-08-31T09:54:12Z"
 assignee: "locator-use-drops-the-no-locator-raise"
 blocked-by: null
