@@ -1,5 +1,5 @@
 ---
-title: "i18n-thread-local-fallbacks"
+title: "Give I18n.fallbacks per-execution-context storage so the multi-threaded fallbacks test can port"
 status: draft
 updated: 2026-08-31
 rfc: "0105-ar-deps-test-parity-100"

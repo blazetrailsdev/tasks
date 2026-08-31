@@ -1,5 +1,5 @@
 ---
-title: "i18n-base-receiver-dispatch"
+title: "Dispatch I18n::Base intra-module calls through the receiver so an override module is seen"
 status: draft
 updated: 2026-08-31
 rfc: "0105-ar-deps-test-parity-100"
