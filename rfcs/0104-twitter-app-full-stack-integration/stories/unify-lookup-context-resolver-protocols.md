@@ -1,7 +1,7 @@
 ---
 title: "LookupContext has two incompatible resolver protocols; the Rails-shape lookup API is unreachable"
 status: ready
-updated: 2026-08-13
+updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["actionview", "actionpack"]

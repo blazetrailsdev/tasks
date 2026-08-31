@@ -1,7 +1,7 @@
 ---
 title: "Generated sqlite3 database path is db/, not Rails' storage/"
 status: draft
-updated: 2026-08-30
+updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []

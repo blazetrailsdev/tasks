@@ -1,7 +1,7 @@
 ---
 title: "CollectionProxy#length is an async method, so .length > 0 in a template is silently always false"
 status: draft
-updated: 2026-08-13
+updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["activerecord"]

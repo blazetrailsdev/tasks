@@ -1,7 +1,7 @@
 ---
 title: "has_secure_password is unported, so apps hand-roll password hashing"
 status: draft
-updated: 2026-08-13
+updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["activerecord"]

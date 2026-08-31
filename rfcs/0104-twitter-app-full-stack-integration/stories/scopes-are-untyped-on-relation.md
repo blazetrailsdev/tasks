@@ -1,7 +1,7 @@
 ---
 title: "Scopes only type-check at the head of a chain; Relation<T> never learns the name"
 status: draft
-updated: 2026-08-13
+updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["activerecord"]

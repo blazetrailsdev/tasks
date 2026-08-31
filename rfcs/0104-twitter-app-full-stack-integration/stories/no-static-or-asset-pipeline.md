@@ -1,7 +1,7 @@
 ---
 title: "No static file serving or asset pipeline: a generated app's stylesheet 404s"
 status: draft
-updated: 2026-08-14
+updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["actionpack", "trailties"]
