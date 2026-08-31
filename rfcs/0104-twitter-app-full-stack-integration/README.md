@@ -1,7 +1,7 @@
 ---
 rfc: "0104-twitter-app-full-stack-integration"
 title: "First full-stack trails application: route to rendered HTML"
-status: draft
+status: active
 created: 2026-08-13
 updated: 2026-08-13
 owner: "@deanmarano"
