@@ -40,16 +40,16 @@ is already in `RUBY_COMPAT_EXPORTS` (`scripts/parity/ruby-compat.ts:49`);
 
 Verified on MRI 3.3 (`ruby -e 'Float(x)'`):
 
-| input     | MRI             | trails `kernelFloat` |
-| --------- | --------------- | -------------------- |
-| `"abc"`   | `ArgumentError` | `undefined`          |
-| `""`      | `ArgumentError` | `undefined`          |
-| `"0b1"`   | `ArgumentError` | `undefined`          |
-| `nil`     | `TypeError`     | `undefined`          |
-| `[]`      | `TypeError`     | `undefined`          |
-| `Object.new` (no `to_f`) | `TypeError` | `undefined` |
-| `"1_000"` | `1000.0`        | `1000`               |
-| `"0x10"`  | `16.0`          | `16`                 |
+| input                    | MRI             | trails `kernelFloat` |
+| ------------------------ | --------------- | -------------------- |
+| `"abc"`                  | `ArgumentError` | `undefined`          |
+| `""`                     | `ArgumentError` | `undefined`          |
+| `"0b1"`                  | `ArgumentError` | `undefined`          |
+| `nil`                    | `TypeError`     | `undefined`          |
+| `[]`                     | `TypeError`     | `undefined`          |
+| `Object.new` (no `to_f`) | `TypeError`     | `undefined`          |
+| `"1_000"`                | `1000.0`        | `1000`               |
+| `"0x10"`                 | `16.0`          | `16`                 |
 
 The parse grammar is already faithful — that is not what this story changes.
 What diverges is the **failure protocol**: MRI raises, and raises two
@@ -62,12 +62,12 @@ into one `undefined`. The current doc comment ratifies the collapse with
 
 Rails' four `Float(...)` call sites in the vendored corpus:
 
-| Rails                                                       | rescued?                                       |
-| ----------------------------------------------------------- | ---------------------------------------------- |
-| `activemodel/validations/numericality.rb:82`                | yes — `is_number?`'s method-level rescue        |
-| `activesupport/number_helper/number_to_human_converter.rb:17` | **no** — bare, guarded by `validate_float = true` |
-| `activesupport/number_helper/number_to_human_size_converter.rb:14` | **no** — same shape                       |
-| `activerecord/.../postgresql/oid/point.rb:64`               | **no** — `build_point` lets it raise           |
+| Rails                                                              | rescued?                                          |
+| ------------------------------------------------------------------ | ------------------------------------------------- |
+| `activemodel/validations/numericality.rb:82`                       | yes — `is_number?`'s method-level rescue          |
+| `activesupport/number_helper/number_to_human_converter.rb:17`      | **no** — bare, guarded by `validate_float = true` |
+| `activesupport/number_helper/number_to_human_size_converter.rb:14` | **no** — same shape                               |
+| `activerecord/.../postgresql/oid/point.rb:64`                      | **no** — `build_point` lets it raise              |
 
 Three of the four are bare. In each, raising IS the behaviour, and trails
 swallows it:
