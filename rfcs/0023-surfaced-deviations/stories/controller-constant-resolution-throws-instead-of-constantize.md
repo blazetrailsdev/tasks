@@ -92,3 +92,40 @@ divergence — is unaffected; only the path to the baseline row changed.
 Remember the baseline is only-shrink: on converging, delete the one row by hand
 (via `serializeBaseline`, sorted — never `--write`/reseed), then
 `pnpm parity:api:calls:tighten <package>/<file>.json` for the stale high-water mark.
+
+## Update (2026-08-31): PR #7286 moved the line, did NOT close this story
+
+`converge-routeset-setdispatcher-to-per-route-dispatcher` (PR #7286) changed
+`Request#controllerClassFor` so it no longer throws unconditionally, and the
+stale doc comment quoted above is gone. **The acceptance criteria are still
+unmet**, and the story is still the right convergence target:
+
+- It resolves against a NEW dedicated map, `controllerConstants`, exported from
+  `packages/actionpack/src/action-dispatch/http/request.ts` and seeded by
+  railties' `setup_main_autoloader` — **not** through
+  `ActiveSupport::Inflector.constantize` and its constant table. So trails now
+  has a second controller table beside the one this story says to use.
+- The `NameError` rescue arms (`request.rb:99-110`) are still not reproduced:
+  a map miss throws `ActionDispatch::MissingController` directly, collapsing
+  Ruby's `missing_name == const_name || const_name.start_with?(...)`
+  discrimination between "the controller constant is missing" and "a constant
+  *inside* the controller file is missing". #7286 disclosed this collapse; it
+  becomes fixable the moment lookup goes through a real `constantize`.
+- `actioncontroller/test-case.ts`'s `tests(name)` still reaches for
+  `globalThis` — untouched.
+- The baseline rows this story names are untouched. (#7286 removed a different
+  row, `route-set.ts` `call → serve`.)
+
+New since this story was written: `ActionDispatch::MissingController`
+(`action_dispatch.rb:50`) now exists in trails, so the rescue arms have the
+error class they need to raise.
+
+#7286 tagged `controllerConstants` `@noRailsEquivalent PERMANENT` on the
+grounds that ESM has no `const_missing`. That justification covers *eager
+population* but not *a separate table* — activesupport already has the one
+`constantize` reads. When this story lands, that receipt should be deleted
+along with the map; until then it is better read as `CONVERGEABLE` against
+this story.
+
+See also `collapse-dispatcher-registry-into-the-constant-table`, which removes
+the third lookup path (`DispatcherRegistry`) and should land with or after this.
