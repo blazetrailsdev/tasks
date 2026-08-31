@@ -24,6 +24,20 @@ A **holding epic**. It owns no convergence programme of its own; it holds the
 blocked stories carried out of the RFCs that had run out of pickup-able work,
 so those RFCs could be retired without dropping the debt they had surfaced.
 
+Carried in on 2026-08-31 (second pass):
+
+- `0112-one-rails-thing-n-trails-things` — all 4 blocked stories carried
+  (`eliminate-pending-counter-cache-deferral-via-lazy-target-resolution`,
+  `mysql-mismatched-fk-details-omits-primary-key-column`,
+  `strict-loading-check-in-reader-not-find-target`,
+  `warning-count-seam-splits-one-rails-attribute-read`). None is unblocked by
+  0112's own convergence work: the first needs a reverse index the
+  `class_attribute` cannot carry, the second is gated on RFC 0076's awaitable
+  exception-translation path, the third on RFC 0023's still-`draft`
+  `inline-has-many-module-private-find-target-loader`, and the fourth on mysql2
+  npm surfacing `warning_count`. 0112 stays **active** with its ten remaining
+  ready stories.
+
 Carried in on 2026-08-31:
 
 - `0115-activemodel-fidelity-convergence` — `converge-alias-attribute-not-an-attribute-raise`,

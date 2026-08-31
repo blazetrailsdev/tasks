@@ -2,7 +2,7 @@
 title: "mismatched_foreign_key_details omits primary_key_column; the lookup is deferred to a trails-only _enrichMismatchedForeignKey rebuild"
 status: blocked
 updated: 2026-08-25
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0123-blocked-convergence-holding"
 cluster: split-stores
 packages: []
 deps: []

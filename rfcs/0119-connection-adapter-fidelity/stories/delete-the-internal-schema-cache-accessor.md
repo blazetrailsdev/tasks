@@ -2,7 +2,7 @@
 title: "Delete AbstractAdapter#internalSchemaCache once its last sync reader goes"
 status: draft
 updated: 2026-08-27
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []

@@ -2,7 +2,7 @@
 title: "The adapter config tail is copy-pasted into three subclass constructors"
 status: draft
 updated: 2026-08-28
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []

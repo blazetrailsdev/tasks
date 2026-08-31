@@ -2,7 +2,7 @@
 title: "Give Time.now sub-millisecond resolution, as CLOCK_REALTIME has"
 status: draft
 updated: 2026-08-29
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []

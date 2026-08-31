@@ -2,7 +2,7 @@
 title: "handle_warnings' @raw_connection.warning_count read became a trails-only warningCount method"
 status: blocked
 updated: 2026-08-20
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

@@ -2,7 +2,7 @@
 title: "Strict-loading violation check lives in the singular reader, not find_target"
 status: blocked
 updated: 2026-08-22
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0123-blocked-convergence-holding"
 cluster: dead-mixin-companions
 deps: []
 deps-rfc: []

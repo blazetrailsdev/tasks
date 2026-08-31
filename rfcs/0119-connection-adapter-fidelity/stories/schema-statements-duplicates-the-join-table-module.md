@@ -2,7 +2,7 @@
 title: "SchemaStatements re-implements JoinTable instead of mixing it in"
 status: draft
 updated: 2026-08-30
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0119-connection-adapter-fidelity"
 cluster: duplicate-bodies
 packages: ["activerecord"]
 deps: []

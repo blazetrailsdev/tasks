@@ -2,7 +2,7 @@
 title: "Eliminate the pending counter-cache deferral by resolving the belongs_to target lazily"
 status: blocked
 updated: 2026-08-21
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
