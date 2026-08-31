@@ -31,7 +31,7 @@ this branch after a clean `pnpm build`:
 | activemodel | 737/754 (97.7%) | 66/67 | 17 |
 | activerecord | 6160/6362 (96.8%) | 280/281 | 202 |
 
-219 missing methods. **Fewer than 15 of them are behavior trails does not have.**
+219 missing methods. **17 of them are behavior trails does not have.**
 The rest are the same three things over and over: a body that lives in the wrong
 file, a body that lives under an invented name, or a body the TypeScript
 extractor structurally cannot see because trails generates the member the way
@@ -52,16 +52,17 @@ answers "what would a Rails developer find on opening the file that mirrors this
 `.rb`" — deliberately (`compare.ts:4091-4098`). A method with a correct,
 tested, shipping body scores as missing when it is declared in the mirroring
 file only as a bodyless signature and nothing else accounts for it
-(`declarationOnlyInFile`, `compare.ts:1374-1382`). 168 of the 219 —
-**77%** — are exactly that: they arrive in the artifact's `declarationOnly`
-column, not as absences.
+(`declarationOnlyInFile`, `compare.ts:1374-1382`). 149 of the 219 —
+**68%** — are exactly that: they arrive in the artifact's `declarationOnly`
+column, not as absences. Counting the rest, only 17 methods are behavior
+trails does not have.
 
 So the taxonomy below is the deliverable's spine. Every story states which
 bucket it is in, and the two buckets that dominate are not ports.
 
 ## The taxonomy
 
-### Bucket A — extractor asymmetry (69 methods)
+### Bucket A — extractor asymmetry (124 methods)
 
 `extract-ruby-api.rb` models Ruby's metaprogramming: `attr_accessor`,
 `class_attribute`, `cattr_accessor`, `delegate`, `define_method`,
@@ -126,7 +127,28 @@ extractor credits the macro; TypeScript's cannot see a prototype assignment.
 **Hand-writing 43 methods here would make the port less faithful, not more, and
 no story in this RFC proposes it.** The fix is the extractor arm.
 
-### Bucket B — misplacement and invented names (about 135 methods)
+**A4 — a `defineProperty` loop is unmodelled.** The same blind spot in its
+other syntactic form, and the biggest single block in the RFC: 55 of
+`relation.rb`'s 82 are the `Relation::VALUE_METHODS` accessors. Rails generates
+them in `class_eval` from the name list
+(`relation/query_methods.rb:162-186`, list at `relation.rb:54-65`,
+`alias extensions extending_values` at `query_methods.rb:185`) — reader
+`@values.fetch(:name, DEFAULT)`, writer `assert_modifiable!` then store.
+
+trails already ports that generator faithfully: `defineValueMethods`
+(`relation/query-methods.ts:161-193`) walks the same three lists, picks the
+same three suffixes and defaults, and installs an `Object.defineProperty` pair
+whose getter is `name in values ? values[name] : defaultValue()` — Ruby's
+`fetch`, not `??` — and whose setter calls `assertModifiableBang` (`:1396`).
+`extensions` is installed the same way at `:195`.
+
+This one is worth stating explicitly because the plain reading of the artifact
+gets it backwards. The host-interface entries that look like plain mutable
+fields (`relation/query-methods.ts:214-244`, `relation.ts:1855-1890`) are the
+*types* of accessors that already exist; there is no behavioral divergence here
+to converge, and a story that "ported" these would be rewriting a correct port.
+
+### Bucket B — misplacement and invented names (78 methods)
 
 Real trails-source work, no tooling. The body exists, ships, and is tested; it
 is in the wrong file or under a name Rails does not use. Both are defects
@@ -146,21 +168,11 @@ maps `spawn: performSpawn`, `merge: performMerge`. The exported function name is
 The counter-example in the same file is the proof: `exists`, `include` and
 `member` are exported under their Rails names, and all three credit **today**,
 as moves, with no tooling change at all. The fix is the rename, and it also
-retires ~34 novel names from `parity:api:extra` (RFC 0130's population).
+retires ~32 novel names from `parity:api:extra` (RFC 0130's population).
+25 of the renames are on `relation.rb`, 2 more (`spawn`, `merge`) reach it
+through `spawn_methods.rb`, and 5 land on `relation/calculations.rb`.
 
-The second instance is the `Relation::VALUE_METHODS` surface — 55 of
-`relation.rb`'s 82. Rails generates a reader and a writer per value
-(`relation/query_methods.rb:162-186`); the reader is
-`@values.fetch(:name, DEFAULT)` and the writer calls `assert_modifiable!`
-before storing. trails models each as a plain mutable field on a host interface
-(`relation/query-methods.ts:214-244`, `relation.ts:1855-1890`) assigned
-directly (`query-methods.ts:1087`). That is not only invisible to the
-extractor; **it is a behavioral divergence** — every write currently skips
-`assert_modifiable!`, and `fetch` with a stored `nil` is not `??` (CLAUDE.md,
-"`fetch` vs `??`"). This bucket's largest story is therefore also a real bug
-fix.
-
-The third instance is adapter statements sitting one file off Rails, in both
+The second instance is adapter statements sitting one file off Rails, in both
 directions at once:
 
 - `connection_adapters/postgresql/database_statements.rb` — 12 missing.
@@ -175,7 +187,7 @@ directions at once:
   `postgresql_adapter.rb:518-1034`; trails puts them in
   `postgresql/schema-statements.ts:1270`.
 
-### Bucket C — genuine ports (13 methods)
+### Bucket C — genuine ports (17 methods)
 
 Behavior that is not in trails at all:
 
@@ -184,12 +196,15 @@ Behavior that is not in trails at all:
 | `associations/join_dependency.rb` | `column_aliases`, `node`, `node=` |
 | `associations/preloader/association.rb` | `LoaderRecords`: `keys_to_load`, `already_loaded_records_by_key`, `populate_keys_to_load_and_already_loaded_records`, `already_loaded_records` |
 | `encryption/properties.rb` | `encoding`, `encoding=` |
-| `insert_all.rb` | `format_columns`, `quote_columns` |
+| `associations/preloader/batch.rb` | `loaders` |
+| `insert_all.rb` | `columns_list`, `format_columns`, `quote_columns` |
 | `base.rb` | `db_warnings_ignore`, `db_warnings_ignore=` |
+| activemodel `errors.rb` | `[]` (→ `get`) |
+| activemodel `attributes.rb` | `initialize` (→ `constructor`) |
 
 `db_warnings_ignore` is a borderline case kept here deliberately: the value
 exists, on a trails-invented `ar-config.ts:174` config object rather than as a
-`class_attribute` on `Base` where `base.rb:352` puts it, so the story both
+the module accessor `active_record.rb:260-263` declares, so the story both
 ports the seat and deletes the invention.
 
 ### The two unported files: `gem_version.rb`
@@ -252,3 +267,59 @@ and `pnpm parity:api:calls:args`; touching a signature also means
   names.
 - No new row in any `call-mismatches-exclude/` shard, `arity-exclude.json`, or
   `unported-files/`, and no new `@noRailsEquivalent`.
+
+## Relationship to `burn-down-the-declaration-only-population` (RFC 0126)
+
+That story is the tracking parent for the 275-method declaration-only column
+PR #7159 first measured, and it says in as many words: "split it per file or
+per cluster as the work is claimed, biggest file first." **RFC 0000 is that
+split, for the 216 of those 275 that belong to activemodel and activerecord.**
+The parent stays open for the other eight packages
+(abstractcontroller 14, activesupport 12, actiondispatch 9, trailties 7,
+arel 5, rack 5, actioncontroller 4, actionview 3) and is not closed by this
+RFC.
+
+One correction that RFC carries forward, because acting on the parent story's
+text as written would send a claimer at the wrong code. It describes
+`relation.ts`'s 82 as "the finder/calculation members … under RENAMED
+identifiers". That is true of 25 of them and of the 2 spawn members, and it is
+the premise of stories 7 and 8 here. It is **not** true of the other 55: those
+are the `VALUE_METHODS` accessors, and `defineValueMethods`
+(`relation/query-methods.ts:161-193`) already installs them faithfully with
+Rails' `fetch` semantics and `assert_modifiable!` on write. Renaming there
+would be rewriting a correct port; story 4 credits it instead.
+
+## Stories
+
+19 stories, 202 activerecord methods and 17 activemodel methods, every one
+accounted for exactly once.
+
+| # | story | bucket | methods | est-loc | deps |
+| --- | --- | --- | --- | --- | --- |
+| 1 | `credit-bodied-object-literal-mixin-modules` | A1 | 5 am | 130 | — |
+| 2 | `credit-classattribute-generated-accessors` | A2 | 9 am + 12 ar | 240 | — |
+| 3 | `credit-prototype-loop-generated-methods` | A3 | 43 ar | 220 | — |
+| 4 | `credit-defineproperty-loop-generated-accessors` | A4 | 55 ar | 240 | — |
+| 5 | `port-gem-version-files` | files | 1 am + 1 ar | 90 | — |
+| 6 | `converge-activemodel-errors-index-and-attributes-constructor` | C | 2 am | 170 | — |
+| 7 | `rename-finder-methods-to-rails-names` | B | 25 ar | 300 | — |
+| 8 | `rename-spawn-and-calculation-methods-to-rails-names` | B | 7 ar | 180 | — |
+| 9 | `move-postgresql-database-statements-to-their-rails-file` | B | 12 ar | 340 | — |
+| 10 | `move-postgresql-enum-ddl-back-to-postgresql-adapter` | B | 7 ar | 300 | 9 |
+| 11 | `port-abstract-database-statements-transaction-and-result-seats` | B | 7 ar | 320 | — |
+| 12 | `move-migration-proxy-into-migration-file` | B | 6 ar | 200 | 5 |
+| 13 | `port-adapter-statement-pool-and-transaction-seats` | B | 5 ar | 240 | — |
+| 14 | `converge-activerecord-single-method-files` | B | 7 ar | 280 | — |
+| 15 | `port-join-dependency-column-aliases-and-table-node` | C | 3 ar | 220 | — |
+| 16 | `port-preloader-loader-records` | C | 5 ar | 300 | — |
+| 17 | `port-insert-all-column-formatting-helpers` | C | 3 ar | 190 | — |
+| 18 | `port-encryption-properties-encoding-accessor` | C | 2 ar | 160 | 4 |
+| 19 | `converge-db-warnings-ignore-onto-its-rails-seat` | C | 2 ar | 170 | — |
+
+activemodel closes on stories 1, 2, 5 and 6 — four stories, 17 methods, one
+file. Everything else is activerecord.
+
+Only three dependency edges exist, all file-overlap rather than logical:
+10 → 9 and 12 → 5 share a file with their parent, and 18 → 4 needs the
+`defineProperty` credit arm before it can replace five hand-written accessor
+pairs with Rails' loop without regressing the file.
