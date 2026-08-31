@@ -26,7 +26,7 @@ closed-reason: null
 is a port of Ruby's `Kernel#Float`, and its own JSDoc says so in the exact terms
 that define this RFC's population:
 
-```
+```text
 @noRailsEquivalent PERMANENT — Ruby core (Kernel.Float), which Rails calls
 without defining, so there is no Ruby file in any gem for the port to mirror.
 ```
@@ -53,7 +53,7 @@ Verified on MRI 3.3 (`ruby -e 'Float(x)'`):
 
 The parse grammar is already faithful — that is not what this story changes.
 What diverges is the **failure protocol**: MRI raises, and raises two
-*different* classes that callers discriminate on, where trails collapses both
+_different_ classes that callers discriminate on, where trails collapses both
 into one `undefined`. The current doc comment ratifies the collapse with
 "every Rails call site rescues both, so the unparseable cases answer
 `undefined` here rather than throwing." That premise is false — see below.
