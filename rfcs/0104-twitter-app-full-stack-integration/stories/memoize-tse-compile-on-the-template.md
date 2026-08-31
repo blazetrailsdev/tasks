@@ -1,14 +1,14 @@
 ---
-title: "memoize-tse-compile-on-the-template"
+title: "The .tse compile memo is a global Map, where Rails memoizes @compiled per Template"
 status: draft
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
-packages: []
-deps: []
+packages: ["actionview"]
+deps: ["execute-tse-templates"]
 deps-rfc: []
-est-loc: null
-priority: null
+est-loc: 120
+priority: 27
 pr: null
 claim: null
 assignee: null

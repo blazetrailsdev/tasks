@@ -1,14 +1,14 @@
 ---
-title: "port-template-translate-location"
+title: "Template#translate_location is unported, so the ported .tse location machinery has no caller"
 status: draft
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
-packages: []
+packages: ["actionview"]
 deps: []
 deps-rfc: []
-est-loc: null
-priority: null
+est-loc: 90
+priority: 28
 pr: null
 claim: null
 assignee: null
