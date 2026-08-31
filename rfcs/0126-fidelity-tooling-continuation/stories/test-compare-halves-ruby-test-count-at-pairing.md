@@ -37,8 +37,13 @@ declares FOUR tests, and both extractors see all four:
 But `scripts/test-compare/output/convention-comparison.json` records:
 
 ```json
-{ "rubyFile": "adapters/postgresql/transaction_nested_test.rb",
-  "rubyTestCount": 2, "matched": 2, "missing": 0, "extra": 2 }
+{
+  "rubyFile": "adapters/postgresql/transaction_nested_test.rb",
+  "rubyTestCount": 2,
+  "matched": 2,
+  "missing": 0,
+  "extra": 2
+}
 ```
 
 `rubyTestCount` is 2 where the manifest carries 4. Two Rails tests vanish
