@@ -58,7 +58,7 @@ diverge from `compar.c` in the same way: **they do not raise**.
   sentinel in `duration.ts:867` goes away with it.
 - `<`, `<=`, `>`, `>=` and `between?` raise `ArgumentError` with
   `rb_cmperr`'s message (`comparison of ActiveSupport::TimeWithZone with X
-  failed`) for an operand `<=>` cannot place, and `==` answers `false` without
+failed`) for an operand `<=>` cannot place, and `==` answers `false` without
   raising — the `compar.c:79` vs `:91` split.
 - Every existing call site that relied on the non-raising `false` is updated or
   shown not to reach the raising arm; the activesupport suite stays green.
