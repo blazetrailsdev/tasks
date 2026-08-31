@@ -26,14 +26,14 @@ lands.
 
 What moves, with its anchor at `vendor/rack-session/lib/rack/session/`:
 
-| TS today | Ruby |
-| --- | --- |
-| `SessionId` (`.../session/abstract-store.ts:21`) | `abstract/id.rb:21-44` |
-| `Persisted` (`abstract-store.ts:71` on main, rewritten by 7317) | `abstract/id.rb:239-458` |
-| `PersistedSecure` (`abstract-store.ts:102`) | `abstract/id.rb:460-497` |
-| `DEFAULT_OPTIONS` (added by 7317) | `abstract/id.rb:240-253` |
-| `ResponseRaw` (added by 7317) | `abstract/id.rb:275` (`Rack::Response::Raw`) |
-| `Pool` (`.../session/pool.ts`, 84 lines, added by 7317) | `pool.rb:26-76` |
+| TS today                                                        | Ruby                                         |
+| --------------------------------------------------------------- | -------------------------------------------- |
+| `SessionId` (`.../session/abstract-store.ts:21`)                | `abstract/id.rb:21-44`                       |
+| `Persisted` (`abstract-store.ts:71` on main, rewritten by 7317) | `abstract/id.rb:239-458`                     |
+| `PersistedSecure` (`abstract-store.ts:102`)                     | `abstract/id.rb:460-497`                     |
+| `DEFAULT_OPTIONS` (added by 7317)                               | `abstract/id.rb:240-253`                     |
+| `ResponseRaw` (added by 7317)                                   | `abstract/id.rb:275` (`Rack::Response::Raw`) |
+| `Pool` (`.../session/pool.ts`, 84 lines, added by 7317)         | `pool.rb:26-76`                              |
 
 Target files: `packages/rack-session/src/abstract/id.ts` and
 `packages/rack-session/src/pool.ts`.

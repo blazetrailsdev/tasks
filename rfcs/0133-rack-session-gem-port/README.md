@@ -55,9 +55,9 @@ already measures it against a real `.rb`.
   (`rails`, `rack`, `did_you_mean`, `globalid`, `date`, `minitest`, `ruby`);
   none is `rack-session`.
 - `packages/actionpack/src/action-dispatch/middleware/session/abstract-store.ts`
-  says so in its own file header (`:8-14` on `main`): *"Those Rack base classes
+  says so in its own file header (`:8-14` on `main`): _"Those Rack base classes
   are not yet ported; in their place this file defines a `Persisted`
-  scaffolding base with the surface the mixins call into."* It defines
+  scaffolding base with the surface the mixins call into."_ It defines
   `SessionId` (`:21`), `Persisted` (`:71`) and `PersistedSecure` (`:102`) in a
   219-line file, carrying **five** `@nie
 disposition=keep-as-strategy-hook rails=rack/lib/rack/session/abstract/id.rb
@@ -74,11 +74,11 @@ cluster=actionpack-session` markers (`:81`, `:86`, `:91`, `:96`, `:104`) whose
 `in-progress` on **PR 7317** (683 additions / 122 deletions, draft). Its diff
 adds **295 lines** to `abstract-store.ts` and creates
 `middleware/session/pool.ts` (**84 lines**), both pure `rack-session` ports:
-the new header reads *"Those two Rack base classes live in the `rack-session`
+the new header reads _"Those two Rack base classes live in the `rack-session`
 gem rather than in Rails, so they are ported here alongside their Rails
-subclasses, from `rack-session-2.1.0/lib/rack/session/abstract/id.rb:239-497`"*,
-and `pool.ts` says *"this class belongs to the `rack-session` gem rather than
-to Rails"*. The PR replaces the five dangling `@nie … rails=rack/…` markers
+subclasses, from `rack-session-2.1.0/lib/rack/session/abstract/id.rb:239-497`"_,
+and `pool.ts` says _"this class belongs to the `rack-session` gem rather than
+to Rails"_. The PR replaces the five dangling `@nie … rails=rack/…` markers
 with **three** `@nie disposition=TODO` markers on `findSession` /
 `writeSession` / `deleteSession` — an anchorless ledger, since a `TODO`
 disposition names no source at all. Two follow-up drafts,
@@ -93,7 +93,7 @@ queue up more work on the same files.
    counterpart under `vendor/rails/actionpack/`. They read as invented
    actionpack surface permanently, and the `ResponseRaw` interface PR 7317 adds
    already carries a `@noRailsEquivalent PERMANENT` receipt for a class that
-   *does* exist upstream (`Rack::Response::Raw`) — a permanent receipt written
+   _does_ exist upstream (`Rack::Response::Raw`) — a permanent receipt written
    only because the anchor is missing.
 2. **`parity:api` cannot match them.** There is no `.rb` to extract from. Run
    against a clone of `rack-session` `v2.1.0`, this repo's own extractor
@@ -108,6 +108,7 @@ queue up more work on the same files.
    ```
 
    78 public methods currently measurable against **zero**.
+
 3. **`parity:test` cannot credit the gem's own suite** — the fidelity measure
    that would actually prove the port correct. The same tooling reads it
    unmodified:
@@ -125,6 +126,7 @@ queue up more work on the same files.
    lists Minitest::Spec first), and their `spec_*.rb` filenames are exactly the
    shape `rubyToConventionTs`'s existing `pkg === "rack"` branch
    (`scripts/test-compare/compare.ts:127-133`) strips.
+
 4. **The `@nie` ledger has nothing to burn down against.** `@nie` is a
    burndown annotation (`eslint/nie-requires-annotation.mjs`); a marker whose
    `rails=` path does not exist, or which degrades to `disposition=TODO`, is a
@@ -186,17 +188,17 @@ rule `vendor/sources.ts` states for `minitest`.
 
 Verified line anchors at that ref (`lib/rack/session/`):
 
-| Ruby | file:line | lines |
-| --- | --- | --- |
-| `SessionId` | `abstract/id.rb:21` | 21-44 |
-| `Abstract::SessionHash` | `abstract/id.rb:50` | 50-236 |
-| `Abstract::Persisted` | `abstract/id.rb:239` | 239-458 |
-| `Abstract::PersistedSecure` (+ `SecureSessionHash`) | `abstract/id.rb:460` | 460-497 |
-| `Abstract::ID` | `abstract/id.rb:499` | 499-535 |
-| `Pool` | `pool.rb:26` | 26-76 |
-| `Cookie` | `cookie.rb:91` | 91-313 |
-| `Encryptor` | `encryptor.rb` | 192 lines |
-| `Constants` / `VERSION` | `constants.rb`, `version.rb` | 13 / 10 |
+| Ruby                                                | file:line                    | lines     |
+| --------------------------------------------------- | ---------------------------- | --------- |
+| `SessionId`                                         | `abstract/id.rb:21`          | 21-44     |
+| `Abstract::SessionHash`                             | `abstract/id.rb:50`          | 50-236    |
+| `Abstract::Persisted`                               | `abstract/id.rb:239`         | 239-458   |
+| `Abstract::PersistedSecure` (+ `SecureSessionHash`) | `abstract/id.rb:460`         | 460-497   |
+| `Abstract::ID`                                      | `abstract/id.rb:499`         | 499-535   |
+| `Pool`                                              | `pool.rb:26`                 | 26-76     |
+| `Cookie`                                            | `cookie.rb:91`               | 91-313    |
+| `Encryptor`                                         | `encryptor.rb`               | 192 lines |
+| `Constants` / `VERSION`                             | `constants.rb`, `version.rb` | 13 / 10   |
 
 ### What moves and what does not
 
@@ -207,25 +209,25 @@ contains exactly four `.rb` files: `abstract_store.rb`, `cache_store.rb`,
 
 **Moves to `packages/rack-session/src/`** — Rack-owned, no Rails `.rb`:
 
-| TS today | Ruby anchor |
-| --- | --- |
-| `SessionId` (`abstract-store.ts:21`) | `abstract/id.rb:21` |
-| `Persisted` (`abstract-store.ts:71`) | `abstract/id.rb:239` |
-| `PersistedSecure` (`abstract-store.ts:102`) | `abstract/id.rb:460` |
+| TS today                                            | Ruby anchor                      |
+| --------------------------------------------------- | -------------------------------- |
+| `SessionId` (`abstract-store.ts:21`)                | `abstract/id.rb:21`              |
+| `Persisted` (`abstract-store.ts:71`)                | `abstract/id.rb:239`             |
+| `PersistedSecure` (`abstract-store.ts:102`)         | `abstract/id.rb:460`             |
 | `DEFAULT_OPTIONS`, `ResponseRaw` (added by PR 7317) | `abstract/id.rb:240-253`, `:275` |
-| `Pool` (`session/pool.ts`, added by PR 7317) | `pool.rb:26` |
+| `Pool` (`session/pool.ts`, added by PR 7317)        | `pool.rb:26`                     |
 
 **Stays in actionpack** — each has a real Rails counterpart already measured by
 `parity:api`:
 
-| TS | Rails `.rb` |
-| --- | --- |
-| `AbstractStore`, `AbstractSecureStore`, `Compatibility`, `StaleSessionCheck`, `SessionObject`, `SessionRestoreError` | `abstract_store.rb:12-104` |
-| `CookieStore` (incl. its `SessionId < DelegateClass(Rack::Session::SessionId)`) | `cookie_store.rb:52-53` |
-| `CacheStore` | `cache_store.rb` |
-| `MemCacheStore` | `mem_cache_store.rb` |
-| `resolve-store.ts` | `action_dispatch.rb:113-124` |
-| `ActionDispatch::Request::Session` (`request/session.ts`) | `request/session.rb` |
+| TS                                                                                                                   | Rails `.rb`                  |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| `AbstractStore`, `AbstractSecureStore`, `Compatibility`, `StaleSessionCheck`, `SessionObject`, `SessionRestoreError` | `abstract_store.rb:12-104`   |
+| `CookieStore` (incl. its `SessionId < DelegateClass(Rack::Session::SessionId)`)                                      | `cookie_store.rb:52-53`      |
+| `CacheStore`                                                                                                         | `cache_store.rb`             |
+| `MemCacheStore`                                                                                                      | `mem_cache_store.rb`         |
+| `resolve-store.ts`                                                                                                   | `action_dispatch.rb:113-124` |
+| `ActionDispatch::Request::Session` (`request/session.ts`)                                                            | `request/session.rb`         |
 
 Moving any of those into the gem package would destroy working coverage — the
 inverse of the problem being solved.
@@ -343,7 +345,7 @@ shims and rewrites the importers — the shape RFC 0129 established
 
 ## Open questions
 
-1. **Sequencing against in-flight PR 7317.** *(Recommendation, not blocking.)*
+1. **Sequencing against in-flight PR 7317.** _(Recommendation, not blocking.)_
    `session-and-flash-lifecycle` is `in-progress` on PR 7317 and adds 295 lines
    to `abstract-store.ts` plus an 84-line `pool.ts`. Do **not** block it. Steps
    1–3 (`vendor-rack-session-source`, `rack-session-package-skeleton`,
@@ -355,7 +357,7 @@ shims and rewrites the importers — the shape RFC 0129 established
    **recommendation** is to let them land against actionpack as written (their
    work is `RequestCookieMethods` and `setup_default_session_store`, neither of
    which is Rack-owned) and have step 4 move only the Rack classes underneath
-   them. If either is claimed *after* step 4 merges, it targets the new package
+   them. If either is claimed _after_ step 4 merges, it targets the new package
    directly. `cookie-store-runnable-in-a-real-stack` also needs its Context
    citation rewritten to `vendor/rack-session/lib/rack/session/abstract/id.rb:239-497`
    once step 1 lands; that edit is folded into step 1's acceptance.
