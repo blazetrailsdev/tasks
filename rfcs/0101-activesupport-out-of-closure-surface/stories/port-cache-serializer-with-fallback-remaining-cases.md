@@ -23,7 +23,7 @@ From the RFC 0105 reconciliation
 `vendor/rails/activesupport/test/cache/serializer_with_fallback_test.rb:6`
 (`class SerializerWithFallbackTest`, 87 lines) has **5 cases missing** and no
 RFC 0101 owner — the existing `serializer_with_fallback` stories under RFC 0023
-and RFC 0072 are about the *implementation* surface
+and RFC 0072 are about the _implementation_ surface
 (`packages/activesupport/src/messages/serializer-with-fallback.ts`), not this
 test file's remaining cases.
 

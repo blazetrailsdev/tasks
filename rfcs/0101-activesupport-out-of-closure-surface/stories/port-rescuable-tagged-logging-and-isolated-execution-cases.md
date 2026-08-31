@@ -32,7 +32,7 @@ out-of-closure files, 10 cases between them:
   (`class IsolatedExecutionStateTest`, 56 lines) — **3 stubs**.
 
 Related but distinct: RFC 0098's `port-testing-tagged-logging-module` owns the
-`ActiveSupport::Testing::TaggedLogging` *module*, not
+`ActiveSupport::Testing::TaggedLogging` _module_, not
 `tagged_logging_test.rb`'s remaining cases; RFC 0099's
 `converge-isolated-execution-state-delete-returns-value` is a call-argument
 convergence, not a test port.

@@ -23,19 +23,19 @@ From the RFC 0105 reconciliation
 the out-of-closure activesupport remainder, 14 cases across 11 files, none
 owned by an RFC 0101 story. Each is small enough that one PR covers the lot.
 
-| Rails test file | remaining |
-| --- | --- |
-| `message_encryptor_test.rb:9` | 2 stubs |
-| `benchmark_test.rb:5` | 2 stubs |
-| `core_ext/object/json_gem_encoding_test.rb:20` | 2 stubs |
-| `option_merger_test.rb:6` | 1 missing |
-| `message_verifier_test.rb:10` | 1 stub |
-| `configurable_test.rb:6` | 1 stub |
-| `reloader_test.rb:5` | 1 stub |
-| `core_ext/benchmark_test.rb:6` | 1 stub |
-| `core_ext/kernel/concern_test.rb:6` | 1 stub |
-| `core_ext/pathname/blank_test.rb:6` | 1 stub |
-| `core_ext/pathname/existence_test.rb:6` | 1 stub |
+| Rails test file                                | remaining |
+| ---------------------------------------------- | --------- |
+| `message_encryptor_test.rb:9`                  | 2 stubs   |
+| `benchmark_test.rb:5`                          | 2 stubs   |
+| `core_ext/object/json_gem_encoding_test.rb:20` | 2 stubs   |
+| `option_merger_test.rb:6`                      | 1 missing |
+| `message_verifier_test.rb:10`                  | 1 stub    |
+| `configurable_test.rb:6`                       | 1 stub    |
+| `reloader_test.rb:5`                           | 1 stub    |
+| `core_ext/benchmark_test.rb:6`                 | 1 stub    |
+| `core_ext/kernel/concern_test.rb:6`            | 1 stub    |
+| `core_ext/pathname/blank_test.rb:6`            | 1 stub    |
+| `core_ext/pathname/existence_test.rb:6`        | 1 stub    |
 
 All paths are under `vendor/rails/activesupport/test/`.
 
