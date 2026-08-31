@@ -51,8 +51,7 @@ inability to recover a receiver keeps the row out.
 
 ## Converged shape
 
-- Add `["Hash#include?", "`Enumerable#include?` and `Range#include?` (ported as
-  `isInclude`) are also `include?`."]` to `AMBIGUOUS_RUBY_CALLS` in
+- Add `["Hash#include?", "`Enumerable#include?`and`Range#include?`(ported as`isInclude`) are also `include?`."]` to `AMBIGUOUS_RUBY_CALLS` in
   `scripts/parity/ruby-compat.ts`, beside the nine rows already there. That is
   the register's stated purpose — "the table's burndown, not its scrap heap" —
   and makes the exclusion reviewable instead of silent.

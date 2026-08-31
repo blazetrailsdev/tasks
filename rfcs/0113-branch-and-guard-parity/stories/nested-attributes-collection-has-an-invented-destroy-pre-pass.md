@@ -82,7 +82,7 @@ which deletes that arm outright.
 - [ ] `loadedCollectionTarget` is deleted, or its remaining callers are routed
       through `record.association(name).target`.
 - [ ] `nested-attributes.test.ts`'s destroy cases (`should destroy an existing
-      record if there is a matching id and destroy is truthy`, `should not destroy
-      an existing record if allow destroy is false`, and the has_many/habtm
+    record if there is a matching id and destroy is truthy`, `should not destroy
+    an existing record if allow destroy is false`, and the has_many/habtm
       collection variants) stay green on all three lanes.
 - [ ] `pnpm parity:api:calls` non-regressing; no baseline row added.
