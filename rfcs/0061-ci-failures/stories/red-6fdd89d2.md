@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (2) failing on main @6fdd89d2"
-status: closed
+status: in-progress
 updated: 2026-08-31
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
+pr: 7299
 claim: "2026-08-31T14:17:02Z"
 assignee: "red-6fdd89d2"
 blocked-by: null
-closed-reason: "Known PG-only flake: RelationTest > 'where with take memoization' — take() carries no ORDER BY, so firstPost can be the '3' row; assertion 'expected 15 not to be 15'. Unrelated to 6fdd89d2a (mysql2 type_casted_binds)."
+closed-reason: null
 ---
 
 ## Context

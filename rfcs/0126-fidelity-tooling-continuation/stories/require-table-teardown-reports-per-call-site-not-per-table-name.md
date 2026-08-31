@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown dedupes per table name, making disables order-dependent"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

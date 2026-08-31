@@ -1,6 +1,6 @@
 ---
 title: "Application#resolvedRoot()'s cwd fallback has no Rails counterpart"
-status: claimed
+status: done
 updated: 2026-08-31
 rfc: "0069-globalid-trailtie-port"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 4
-pr: null
+pr: 7297
 claim: "2026-08-31T14:32:02Z"
 assignee: "globalid-railtie-to-trailtie"
 blocked-by: null

@@ -8,7 +8,7 @@ packages: ["activerecord", "trailties"]
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 26
+priority: 21
 pr: null
 claim: null
 assignee: null

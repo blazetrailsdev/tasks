@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone and Duration::Scalar adopt the shared Comparable instead of hand-rolling compar.c"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 32
 pr: null
 claim: null
 assignee: null

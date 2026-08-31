@@ -1,16 +1,16 @@
 ---
 title: "Wrap nil-able column lists with Ruby Array() semantics in the FK visitor"
-status: ready
-updated: 2026-07-27
+status: in-progress
+updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7298
+claim: "2026-08-31T15:26:18Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

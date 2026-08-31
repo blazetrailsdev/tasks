@@ -1,7 +1,7 @@
 ---
 title: "Port activemodel's three remaining type/date, type/time and type/date_time cases"
-status: ready
-updated: 2026-08-13
+status: done
+updated: 2026-08-31
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 6988
+claim: "2026-08-31T15:55:17Z"
+assignee: "port-activemodel-type-temporal-cases"
 blocked-by: null
 closed-reason: null
 ---

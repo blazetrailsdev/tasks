@@ -1,6 +1,6 @@
 ---
 title: "Adopt the Hash call form at the remaining 43 baselined call sites"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 37
 pr: null
 claim: null
 assignee: null

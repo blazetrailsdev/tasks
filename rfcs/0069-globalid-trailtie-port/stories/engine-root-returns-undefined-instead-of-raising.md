@@ -1,6 +1,6 @@
 ---
 title: "Engine#root() returns undefined where Rails raises"
-status: claimed
+status: done
 updated: 2026-08-31
 rfc: "0069-globalid-trailtie-port"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 3
-pr: null
+pr: 7297
 claim: "2026-08-31T14:32:02Z"
 assignee: "globalid-railtie-to-trailtie"
 blocked-by: null

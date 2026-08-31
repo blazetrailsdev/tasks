@@ -1,6 +1,6 @@
 ---
 title: "Engine::Configuration all_autoload(_once)_paths: union paths registry like Rails"
-status: ready
+status: in-progress
 updated: 2026-08-31
 rfc: "0069-globalid-trailtie-port"
 cluster: null
@@ -8,9 +8,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: 7298
+claim: "2026-08-31T15:26:18Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

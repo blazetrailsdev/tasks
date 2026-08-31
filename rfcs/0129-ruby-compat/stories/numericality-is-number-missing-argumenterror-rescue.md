@@ -1,7 +1,7 @@
 ---
 title: "is_number? drops Rails' rescue ArgumentError, TypeError => false arm"
 status: draft
-updated: 2026-08-31
+updated: 2026-08-30
 rfc: "0129-ruby-compat"
 cluster: null
 packages:

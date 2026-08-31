@@ -1,7 +1,7 @@
 ---
 title: "param-drift-actiondispatch-structural-residue"
-status: ready
-updated: 2026-08-30
+status: claimed
+updated: 2026-08-31
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T15:54:33Z"
+assignee: "template-render-takes-view-before-locals"
 blocked-by: null
 closed-reason: null
 ---

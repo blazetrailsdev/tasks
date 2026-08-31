@@ -8,7 +8,7 @@ packages: ["actionview", "activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: 23
+priority: 19
 pr: null
 claim: null
 assignee: null

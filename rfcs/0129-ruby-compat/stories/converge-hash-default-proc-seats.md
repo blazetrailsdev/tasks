@@ -1,6 +1,6 @@
 ---
 title: "converge-hash-default-proc-seats"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 33
 pr: null
 claim: null
 assignee: null

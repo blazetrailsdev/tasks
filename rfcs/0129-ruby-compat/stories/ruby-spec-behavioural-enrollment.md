@@ -1,7 +1,7 @@
 ---
 title: "Enroll vendor/ruby's in-tree ruby/spec suite as ruby-compat's behavioural measure"
-status: ready
-updated: 2026-08-30
+status: claimed
+updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 240
 priority: 19
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T15:43:38Z"
+assignee: "ruby-spec-behavioural-enrollment"
 blocked-by: null
 closed-reason: null
 ---

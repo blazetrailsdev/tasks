@@ -1,7 +1,7 @@
 ---
 title: "arel visitor assertion parity"
-status: ready
-updated: 2026-08-14
+status: closed
+updated: 2026-08-31
 rfc: "0105-ar-deps-test-parity-100"
 cluster: assertion-parity
 packages: ["arel"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "arel assertion parity was delivered by RFC 0122-arel-assertion-parity; assertion-mismatch-mark.json reads arel 0/0/0 on all three dimensions, so this story has nothing left to burn down."
 ---
 
 ## Context

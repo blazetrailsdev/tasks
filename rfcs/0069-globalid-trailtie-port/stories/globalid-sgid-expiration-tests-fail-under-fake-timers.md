@@ -1,6 +1,6 @@
 ---
 title: "globalid: five SignedGlobalIDExpirationTest cases fail — fake timers do not move Temporal.Now"
-status: draft
+status: claimed
 updated: 2026-08-31
 rfc: "0069-globalid-trailtie-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T15:51:54Z"
+assignee: "activesupport-railtie-initializer-yields-no-app"
 blocked-by: null
 closed-reason: null
 ---

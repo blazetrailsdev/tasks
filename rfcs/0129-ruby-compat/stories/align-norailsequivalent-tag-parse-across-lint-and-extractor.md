@@ -1,6 +1,6 @@
 ---
 title: "One @noRailsEquivalent parse for ruby-compat-needs-mri-citation and extra-surface.ts"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: null
+priority: 21
 pr: null
 claim: null
 assignee: null

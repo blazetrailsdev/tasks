@@ -1,14 +1,14 @@
 ---
 title: "Ruby's stdlib Tempfile moves to ruby-compat, the last of activesupport's unanchored primitives"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 35
 pr: null
 claim: null
 assignee: null

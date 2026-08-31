@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: @internal JSDoc is ignored on class members too"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "skip-reexports-in-structural-duplicate-report"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 23
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "No static file serving or asset pipeline: a generated app's stylesheet 404s"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
