@@ -40,7 +40,7 @@ The four, against Rails:
   `render(partial, context, block)` (`object_renderer.rb:17`), i.e. the
   `PartialRenderer#render` it now inherits.
 - `renderObjectDerivePartial` calls `partialPath(object, context,
-  contextPrefix)`; Rails' `partial_path(object, view)`
+contextPrefix)`; Rails' `partial_path(object, view)`
   (`object_rendering.rb`) takes two and derives the prefix itself.
 
 ## Acceptance criteria
