@@ -105,7 +105,7 @@ contract.
 
 - [ ] Confirm `include.ts` and `prepend.ts` still have zero runtime imports; if
       one has acquired a workspace import since this story was written, `tasks
-  block` with that import rather than moving the dependency along with it.
+block` with that import rather than moving the dependency along with it.
 - [ ] `include.ts`, `prepend.ts` and their tests moved to
       `packages/ruby-compat/src/`.
 - [ ] **`ruby-compat` is the definition site** for `include()`, `extend()`,
