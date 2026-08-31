@@ -1,6 +1,6 @@
 ---
 title: "has_secure_password is unported, so apps hand-roll password hashing"
-status: draft
+status: done
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 14
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T14:16:57Z"
+assignee: "cli-cannot-load-typescript-app-code"
 blocked-by: null
 closed-reason: null
 ---

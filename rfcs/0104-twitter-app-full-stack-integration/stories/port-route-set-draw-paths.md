@@ -1,6 +1,6 @@
 ---
 title: "Port RouteSet#draw_paths and Mapper#draw, completing add_routing_paths"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

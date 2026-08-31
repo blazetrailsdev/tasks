@@ -1,6 +1,6 @@
 ---
 title: "Template#translate_location is unported, so the ported .tse location machinery has no caller"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

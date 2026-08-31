@@ -1,6 +1,6 @@
 ---
 title: "build-a-dispatcher-per-route-with-raise-on-name-error"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

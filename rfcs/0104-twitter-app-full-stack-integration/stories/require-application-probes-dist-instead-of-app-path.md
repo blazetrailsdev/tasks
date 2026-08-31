@@ -1,6 +1,6 @@
 ---
 title: "require-application-probes-dist-instead-of-app-path"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

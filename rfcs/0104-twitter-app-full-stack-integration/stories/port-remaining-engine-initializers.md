@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining Engine initializers (load_config_initializers, make_routes_lazy, ...)"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

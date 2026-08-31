@@ -1,6 +1,6 @@
 ---
 title: "trails db migrate loads db/schema.ts first, so migrating a dumped app fails"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

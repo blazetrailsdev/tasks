@@ -1,6 +1,6 @@
 ---
 title: "Scopes only type-check at the head of a chain; Relation<T> never learns the name"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

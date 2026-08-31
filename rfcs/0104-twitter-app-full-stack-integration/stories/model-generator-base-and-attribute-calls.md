@@ -1,6 +1,6 @@
 ---
 title: "Model generator emits this.attribute() calls and extends Base instead of ApplicationRecord"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port Configuration#loadDefaults and emit config.loadDefaults from trails new"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

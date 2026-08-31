@@ -1,6 +1,6 @@
 ---
 title: "Template does not own compile!: the handler compiles, so @compiled, method_name and handle_render_error are unported"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

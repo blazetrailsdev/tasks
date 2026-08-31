@@ -1,6 +1,6 @@
 ---
 title: "activesupport adapters do not self-register under ESM; every entry point primes them by hand"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

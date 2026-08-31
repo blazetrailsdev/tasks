@@ -1,6 +1,6 @@
 ---
 title: "Delete DispatcherRegistry so Dispatcher#controller is req.controller_class alone"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
