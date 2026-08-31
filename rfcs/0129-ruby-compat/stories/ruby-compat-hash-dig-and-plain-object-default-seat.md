@@ -1,5 +1,5 @@
 ---
-title: "ruby-compat-hash-dig-and-plain-object-default-seat"
+title: "Adjudicate Hash#dig and decide the plain-object default seat (closes RFC 0023's open question)"
 status: draft
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 220
 priority: null
 pr: null
 claim: null
