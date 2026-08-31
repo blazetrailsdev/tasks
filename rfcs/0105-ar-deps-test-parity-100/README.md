@@ -3,7 +3,7 @@ rfc: "0105-ar-deps-test-parity-100"
 title: "ActiveRecord + dependencies to 100% on the test-compare gate"
 status: active
 created: 2026-08-13
-updated: 2026-08-18
+updated: 2026-08-31
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -17,9 +17,11 @@ packages:
 clusters:
   - boundary-and-measurement
   - name-gap
+  # Retained for the assertion stories this RFC landed before the axis moved
+  # to RFC 0132; no new story here takes it.
   - assertion-parity
-  - enforcement
 related-rfcs:
+  - "0132-ar-closure-assertion-parity"
   - "0098-activesupport-ar-closure-port"
   - "0101-activesupport-out-of-closure-surface"
   - "0072-api-compare-parity-burndown"
@@ -30,6 +32,25 @@ priority: 10
 ---
 
 # ActiveRecord + dependencies to 100% on the test-compare gate
+
+## Scope split, 2026-08-31: the assertion axis moved to RFC 0132
+
+Everything below was written when this RFC owned both axes. It no longer does.
+The **name** gate is this RFC's remaining scope; the **assertion** gate — count,
+kind and value, its ratchet, its enforcement flip, and its whole open queue —
+moved to **RFC 0132 `ar-closure-assertion-parity`**, whose README carries the
+current measurements.
+
+What this RFC delivered on the name gate, measured 2026-08-31: **activerecord
+8372/8372 (100%)**, activemodel 963/963, arel 739/739, date 137/137, globalid
+131/131, did-you-mean 6/6. What remains: **activesupport 2547/2965 (85.9%)** and
+**i18n 291/307 (94.8%)**, plus the counting-hygiene drafts. This RFC closes when
+those two read 100%.
+
+The assertion stories this RFC actually landed stay in its `stories/`
+directory; they are the record of that work. Only the open queue moved. Read
+the "Assertion parity is in scope" section below as the derivation of RFC
+0132's problem statement, not as live scope.
 
 ## Problem
 
@@ -214,7 +235,10 @@ source axis) — the `testFile` field on that row is already anchored
 The fix is still real and one line (`/fixtures.rb`), and it belongs with the
 re-enrollment.
 
-## Assertion parity is in scope
+## Assertion parity is in scope — SUPERSEDED by RFC 0132
+
+> Kept as the derivation that produced RFC 0132. The plan it describes is that
+> RFC's, not this one's; its numbers are the 2026-08-13 measurement.
 
 "100% test compare" in this RFC means **name parity and assertion parity**, not
 name-matching only.
@@ -504,9 +528,6 @@ tooling.
 - `skipped = 0` for every package above. A stub is not a pass; where a Rails
   test genuinely cannot exist in TypeScript it leaves as a reasoned case-level
   `tests:` exclusion, never as an unskipped stub or a whole-file row.
-- **`pnpm parity:test -- --assertions` reports 0 count, 0 kind and 0 value
-  mismatches for every package above**, and
-  `scripts/test-compare/assertion-mismatch-mark.json` reads 0/0/0 for all of
-  them with `ASSERTION_REPORT_PACKAGES` covering the full in-scope closure.
-- `pnpm parity:test -- --check` fails on any assertion mismatch (hard zero, no
-  mark), the same shape `gates.ts` reached.
+
+Assertion parity is **not** part of this RFC's done condition any more; it is
+RFC 0132's (`ar-closure-assertion-parity`). This gate is name parity.

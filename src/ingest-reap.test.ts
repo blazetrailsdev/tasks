@@ -9,7 +9,10 @@ import { beforeEach, describe, expect, it } from "vitest";
 import { Base } from "@blazetrails/activerecord";
 import { migrate } from "./migrator.js";
 import { Event, Rfc, Story, StoryRfcDep } from "./models/index.js";
-import { ingestRfcForTest } from "./ingest.js";
+import { ingestChunkForTest, ingestRfcForTest, type IngestResult } from "./ingest.js";
+import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 
 beforeEach(async () => {
   await Base.establishConnection({ adapter: "node-sqlite", database: ":memory:", pool: 1 });
@@ -64,5 +67,52 @@ describe("an RFC whose README is gone", () => {
   it("is a no-op for an RFC that was never ingested", async () => {
     await ingestRfcForTest("/nonexistent", "rfcs/0077-never-seen/README.md", "0077-never-seen");
     expect((await Rfc.all().count()) as number).toBe(0);
+  });
+});
+
+const emptyResult = (): IngestResult => ({
+  from: null,
+  to: "0".repeat(40),
+  scanned: 0,
+  created: 0,
+  updated: 0,
+  closed: 0,
+  rfcsTouched: 0,
+});
+
+describe("a story file that moved to another RFC", () => {
+  it("does not close the story when the delete half sorts first", async () => {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-move-"));
+    const to = join(dir, "rfcs", "0132-new", "stories");
+    mkdirSync(to, { recursive: true });
+    mkdirSync(join(dir, "rfcs", "0105-old", "stories"), { recursive: true });
+    writeFileSync(
+      join(to, "s-moved.md"),
+      `---\ntitle: "Moved"\nstatus: ready\nrfc: "0132-new"\ncluster: null\ndeps: []\ndeps-rfc: []\nest-loc: 10\n---\n\nbody\n`,
+    );
+    await Rfc.create({ id: "0105-old", status: "active", title: "Old" });
+    await Rfc.create({ id: "0132-new", status: "active", title: "New" });
+    await Story.create({ id: "s-moved", rfc_id: "0105-old", status: "ready" });
+
+    await ingestChunkForTest(
+      ["rfcs/0105-old/stories/s-moved.md", "rfcs/0132-new/stories/s-moved.md"],
+      dir,
+      emptyResult(),
+    );
+
+    const story = (await Story.findBy({ id: "s-moved" }))!;
+    expect(story.status).toBe("ready");
+    expect(story.rfc_id).toBe("0132-new");
+  });
+
+  it("still closes a story whose file is gone from every RFC", async () => {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-gone-"));
+    mkdirSync(join(dir, "rfcs", "0105-old", "stories"), { recursive: true });
+    await Rfc.create({ id: "0105-old", status: "active", title: "Old" });
+    await Story.create({ id: "s-gone", rfc_id: "0105-old", status: "ready" });
+
+    await ingestChunkForTest(["rfcs/0105-old/stories/s-gone.md"], dir, emptyResult());
+
+    expect((await Story.findBy({ id: "s-gone" }))!.status).toBe("closed");
   });
 });

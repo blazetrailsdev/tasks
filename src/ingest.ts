@@ -23,7 +23,7 @@
  * `git diff <sha>..HEAD`, so this is cheap enough to run from the merge webhook.
  */
 import { execFileSync } from "node:child_process";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { Base } from "@blazetrails/activerecord";
 import { VerbExit } from "./db.js";
@@ -111,6 +111,24 @@ function int(v: unknown): number | null {
  */
 function isRealRfcDir(dir: string): boolean {
   return (RFC_DIR_RE as RegExp).test(dir);
+}
+
+/**
+ * Does `storyId` exist under some OTHER RFC directory than the one `rel` names?
+ *
+ * The tree is the authority here rather than the diff: a rename's add half may
+ * sit in a later chunk, or in a later ingest run entirely if the two halves
+ * land on different commits.
+ */
+function movedElsewhere(tasksDir: string, rel: string, storyId: string): boolean {
+  const rfcsDir = join(tasksDir, "rfcs");
+  if (!existsSync(rfcsDir)) return false;
+  return readdirSync(rfcsDir).some(
+    (dir) =>
+      isRealRfcDir(dir) &&
+      `rfcs/${dir}/stories/${storyId}.md` !== rel &&
+      existsSync(join(rfcsDir, dir, "stories", `${storyId}.md`)),
+  );
 }
 
 /** Story files live at rfcs/<rfc>/stories/<id>.md. */
@@ -278,6 +296,15 @@ async function ingestChunk(paths: string[], tasksDir: string, result: IngestResu
       const abs = join(tasksDir, rel);
 
       if (!existsSync(abs)) {
+        // A story that reappeared under a different RFC MOVED; it did not
+        // vanish. git renders a rename as a delete plus an add, and the delete
+        // sorts first whenever the destination RFC number is the higher one —
+        // so without this the close below fires and the add that follows only
+        // rewrites markdown-owned columns, leaving a live story silently
+        // closed. Moving an RFC's open queue into a new RFC is the case that
+        // hits it, one row per story.
+        if (movedElsewhere(tasksDir, rel, storyId)) continue;
+
         // A vanished file CLOSES the story; it never deletes the row.
         //
         // The row carries the history — every claim, every PR, and the
@@ -473,3 +500,6 @@ async function ingestRfc(tasksDir: string, rel: string, rfcId: string): Promise<
 
 /** Test seam for ingestRfc's vanished-README branch (see ingest-reap.test.ts). */
 export const ingestRfcForTest = ingestRfc;
+
+/** Test seam for the vanished-vs-moved story branch (see ingest-reap.test.ts). */
+export const ingestChunkForTest = ingestChunk;
