@@ -1,6 +1,6 @@
 ---
 title: "SQLite foreignKeys synthesizes a name Rails' PRAGMA path never sets"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

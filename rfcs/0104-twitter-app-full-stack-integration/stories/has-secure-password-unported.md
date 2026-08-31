@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 14
+priority: null
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 module-level schema/database-statements delegates duplicate the adapter and never run"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 7282
 claim: "2026-08-31T00:54:11Z"
 assignee: "inline-ruby-bodies-extracted-as-named-helpers"
 blocked-by: null

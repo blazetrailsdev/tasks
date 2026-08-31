@@ -1,7 +1,7 @@
 ---
 title: "Relation#destroy is missing the multiple-ids / composite-PK branch"
-status: in-progress
-updated: 2026-08-30
+status: done
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
 deps: []

@@ -1,6 +1,6 @@
 ---
 title: "Move PG unquoteIdentifier under the Utils namespace Rails scopes it to"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

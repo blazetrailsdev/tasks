@@ -1,7 +1,7 @@
 ---
 title: "show_variable adds a /^\\w+$/ guard Rails lacks (rejecting @@global.x), drops materialize_transactions/allow_retry, and string-coerces the scalar"
-status: in-progress
-updated: 2026-08-30
+status: done
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm
 packages: []

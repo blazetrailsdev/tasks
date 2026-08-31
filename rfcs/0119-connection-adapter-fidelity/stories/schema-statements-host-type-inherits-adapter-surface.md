@@ -1,6 +1,6 @@
 ---
 title: "schema-statements-host-type-inherits-adapter-surface"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

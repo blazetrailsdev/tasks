@@ -1,6 +1,6 @@
 ---
 title: "AbstractSQLite3Adapter connects in its constructor; Rails leaves raw_connection nil until connect!"
-status: claimed
+status: ready
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: "2026-08-31T00:54:11Z"
-assignee: "inline-ruby-bodies-extracted-as-named-helpers"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

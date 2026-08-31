@@ -1,6 +1,6 @@
 ---
 title: "Delete TypeMapInitializer#runInitializer and HashLookupTypeMap#has — invented surface with no Rails counterpart"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

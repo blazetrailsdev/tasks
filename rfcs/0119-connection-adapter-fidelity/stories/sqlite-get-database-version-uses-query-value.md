@@ -1,6 +1,6 @@
 ---
 title: "SQLite3Adapter#getDatabaseVersion probes the raw driver, not query_value"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 7280
 claim: "2026-08-31T00:34:21Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "mysql dbconsole pushes config.database unconditionally (abstract_mysql_adapter.rb:80)"
-status: in-progress
-updated: 2026-08-30
+status: done
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm
 deps: []

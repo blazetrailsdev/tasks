@@ -1,6 +1,6 @@
 ---
 title: "sequenceNameFromParts strips the schema qualifier; Rails uses table_name verbatim"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

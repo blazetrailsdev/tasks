@@ -1,7 +1,7 @@
 ---
 title: "Make lookupCastType required and drop fetchTypeMetadata's invented fallback arm"
-status: in-progress
-updated: 2026-08-30
+status: done
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm
 packages: []

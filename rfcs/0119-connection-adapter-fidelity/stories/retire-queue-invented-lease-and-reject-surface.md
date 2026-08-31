@@ -1,6 +1,6 @@
 ---
 title: "Retire Queue's invented rejectAll and leaseTo/unlease/leasedTo surface"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

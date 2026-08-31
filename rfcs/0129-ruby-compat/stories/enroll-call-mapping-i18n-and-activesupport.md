@@ -1,7 +1,7 @@
 ---
 title: "Enroll i18n and activesupport in the ruby-compat call gate at zero"
-status: ready
-updated: 2026-08-30
+status: blocked
+updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "i18n", "activesupport"]
@@ -15,9 +15,9 @@ deps-rfc: []
 est-loc: 200
 priority: 15
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-08-31T01:19:01Z"
+assignee: "enroll-call-mapping-i18n-and-activesupport"
+blocked-by: "dep ruby-core-call-mapping-table is still ready: scripts/parity/ruby-compat.ts, ENROLLED_PACKAGES and the parity:api:calls:ruby-compat script do not exist on main, so there is no gate to enroll i18n/activesupport into and no rubyCompat report to burn down"
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "respondToMissing drops respond_to_missing?'s self == Base arm and Method#valid?'s reflect_on_aggregation"
-status: in-progress
-updated: 2026-08-30
+status: done
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
 deps: []

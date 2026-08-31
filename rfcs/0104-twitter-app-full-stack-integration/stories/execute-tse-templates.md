@@ -1,6 +1,6 @@
 ---
 title: "Tse#render throws: no .tse template can execute"
-status: draft
+status: done
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -8,8 +8,8 @@ packages: ["actionview"]
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: 5
-pr: null
+priority: null
+pr: 7281
 claim: null
 assignee: null
 blocked-by: null

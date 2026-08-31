@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 quoting_test: assert quoting methods, not round-tripped rows"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
+pr: 7282
 claim: "2026-08-31T00:54:11Z"
 assignee: "inline-ruby-bodies-extracted-as-named-helpers"
 blocked-by: null
