@@ -38,7 +38,7 @@ Four-part test (README §1, §2, §4), item by item:
 1. **No `vendor/rails/` counterpart.**
    `parity:api:extra --package activesupport` scores `json-stdlib.ts` as
    `0 novel, 3 moved [no Rails counterpart]` — no Rails file maps onto it.
-   `ActiveSupport::JSON` is a *different* module and stays in activesupport
+   `ActiveSupport::JSON` is a _different_ module and stays in activesupport
    with its own anchor; this story must not touch `json.ts`.
 2. **MRI counterpart.** `vendor/ruby/ext/json/lib/json/common.rb:615`
    (`def dump`) and `:541` (`def load`). `json` is an ext bundled inside

@@ -64,7 +64,7 @@ public surface.
 ## Acceptance criteria
 
 - `grep -rn "class ArgumentError" packages/*/src --include=*.ts | grep -v
-  "\.test\."` returns exactly **1** — `ruby-compat/src/argument-error.ts` —
+"\.test\."` returns exactly **1** — `ruby-compat/src/argument-error.ts` —
   or exactly 2 with a stated, evidence-backed reason for keeping
   `i18n`'s gem-anchored one.
 - Every deleted site imports `ArgumentError` from `@blazetrails/ruby-compat`;

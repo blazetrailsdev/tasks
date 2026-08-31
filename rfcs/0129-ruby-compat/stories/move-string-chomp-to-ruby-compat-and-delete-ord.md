@@ -64,7 +64,7 @@ Four-part test (README §1, §2, §4), item by item:
 1. **No `vendor/rails/` counterpart.** Confirmed by the extra-surface run
    above: both score `novel` inside a Rails-matched file, i.e. the name appears
    in no `.rb` anywhere. `grep -rn "def chomp\|def ord" vendor/rails/
-   activesupport/lib/` returns nothing.
+activesupport/lib/` returns nothing.
 2. **MRI counterpart.** `vendor/ruby/string.c:9786` (`rb_str_chomp`, bound at
    `:12228`) and `vendor/ruby/string.c:10355` (`rb_str_ord`, bound at
    `:12213`). Both resolve at the pinned `v3_3_11`.

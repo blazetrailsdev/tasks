@@ -24,7 +24,7 @@ closed-reason: null
 `XmlMini._parse_file` (`vendor/rails/activesupport/lib/active_support/
 xml_mini.rb:180-186`) and `Rack::MockRequest` hand their callers. It is the
 same shape as `Tempfile` (`move-tempfile-to-ruby-compat`) — Ruby stdlib that
-Rails *uses* and never declares — and unlike `Tempfile` it is **not** blocked
+Rails _uses_ and never declares — and unlike `Tempfile` it is **not** blocked
 by the platform-adapter question.
 
 Its receipt already states the verdict, and the RFC's own precedent
@@ -41,13 +41,13 @@ Four-part test (README §1, §2, §4), item by item:
 1. **No `vendor/rails/` counterpart.** Confirmed:
    `parity:api:extra --package activesupport` scores `string-io.ts` as
    `0 novel, 9 moved [no Rails counterpart]` — no Rails file maps onto it. The
-   9 "moved" are names Rails *sends* (`read`, `write`, `rewind`, `size`…),
+   9 "moved" are names Rails _sends_ (`read`, `write`, `rewind`, `size`…),
    which is exactly what a stdlib stand-in should look like.
 2. **MRI counterpart.** `vendor/ruby/ext/stringio/stringio.c` — e.g.
    `strio_write` at `:1432`. `stringio` is an ext bundled inside `ruby/ruby`
    itself, so the citation resolves at the pinned `v3_3_11` with no extra
    vendoring. (This is the discriminator against `rexml/document.ts`, which is
-   a bundled *gem* and is NOT in the vendored MRI tree.)
+   a bundled _gem_ and is NOT in the vendored MRI tree.)
 3. **trails actually calls it.** **39 call sites across 4 packages** outside
    the defining file, excluding tests: `activesupport` 31 (`xml-mini.ts` 7,
    `xml-mini/nokogiri.ts` 7, `xml-mini/nokogirisax.ts` 7,

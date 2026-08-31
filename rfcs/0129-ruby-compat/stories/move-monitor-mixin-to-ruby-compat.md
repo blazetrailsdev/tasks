@@ -48,7 +48,7 @@ Four-part test (README §1, §2, §4), item by item:
 1. **No `vendor/rails/` counterpart.** Confirmed:
    `parity:api:extra --package activesupport` scores `concurrency/monitor.ts`
    as `1 novel, 1 moved [no Rails counterpart]` — no Rails file maps onto it.
-   Rails *includes* `MonitorMixin` and never declares it.
+   Rails _includes_ `MonitorMixin` and never declares it.
 2. **MRI counterpart.** `vendor/ruby/ext/monitor/lib/monitor.rb:200`
    (`def mon_synchronize`) and `:203` (`alias synchronize mon_synchronize`),
    plus the C half at `vendor/ruby/ext/monitor/monitor.c`. `monitor` is an ext
@@ -61,7 +61,7 @@ Four-part test (README §1, §2, §4), item by item:
    built on it. Re-exported at `activesupport/src/index.ts:621`.
 4. **It DOES drag a workspace dependency — this is the blocker.**
    `concurrency/monitor.ts:20-24` imports `getAsyncContext`, `type
-   AsyncContext` and `type AsyncContextAdapter` from
+AsyncContext` and `type AsyncContextAdapter` from
    `../async-context-adapter.js`. That is the same `*-adapter.ts` platform
    family RFC 0089 ruled out and RFC 0129's Non-goals re-affirm (fs/os/crypto),
    and it breaks ruby-compat's leaf rule (README §4) exactly the way
@@ -70,7 +70,7 @@ Four-part test (README §1, §2, §4), item by item:
    Thread and ours is owned by an async chain, via an AsyncContext-token scheme.
 
 So this story is **blocked on the platform-adapter question**, and it is a
-*wider* instance of it than `ruby-named-file-dir-fileutils-facade` covers:
+_wider_ instance of it than `ruby-named-file-dir-fileutils-facade` covers:
 that story settles `fs`/`path` (recommended shape: ruby-compat owns the
 Ruby-named surface plus its own `registerFsBackend()`, and activesupport's
 `registerFsAdapter` forwards into it). The same shape applied to

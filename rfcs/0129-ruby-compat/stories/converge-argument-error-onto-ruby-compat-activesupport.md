@@ -63,7 +63,7 @@ Four-part test (README §1, §2, §4), item by item:
 
 1. **No `vendor/rails/` counterpart.** Confirmed: Rails raises `ArgumentError`
    and never declares it. `parity:api:extra --package activesupport` scores
-   `hash-utils.ts`'s `ArgumentError` as *moved*, i.e. matched only by name
+   `hash-utils.ts`'s `ArgumentError` as _moved_, i.e. matched only by name
    appearing in some other `.rb` — not by a Rails class definition.
 2. **MRI counterpart.** `vendor/ruby/error.c:3323`
    (`rb_eArgError = rb_define_class("ArgumentError", rb_eStandardError)`) —
@@ -83,7 +83,7 @@ deleted and replaced by one import each.
   are deleted; each file imports `ArgumentError` from `@blazetrails/ruby-compat`
   instead.
 - `grep -rn "class ArgumentError" packages/activesupport/src --include=*.ts |
-  grep -v "\.test\."` returns **0**.
+grep -v "\.test\."` returns **0**.
 - `activesupport`'s public surface is unchanged: `hash-utils.ts` and
   `cache/store.ts` keep exporting the name (a re-export of the ruby-compat
   class), so every existing importer and every `err instanceof ArgumentError` /

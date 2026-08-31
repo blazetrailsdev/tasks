@@ -38,7 +38,7 @@ Four-part test (README §1, §2, §4), item by item:
    `parity:api:extra --package activesupport` scores `ruby-empty.ts` as
    `1 novel, 0 moved [no Rails counterpart]`. `Array#empty?` / `Hash#empty?` /
    `String#empty?` are C, not `.rb`. (The file's receiver-dispatch arms follow
-   `core_ext/object/blank.rb:96,111`, but that is Rails *calling* `empty?`, not
+   `core_ext/object/blank.rb:96,111`, but that is Rails _calling_ `empty?`, not
    defining it.)
 2. **MRI counterpart.** `vendor/ruby/array.c:2686` (`rb_ary_empty_p`),
    `vendor/ruby/hash.c:3023` (`rb_hash_empty_p`), `vendor/ruby/string.c:2243`
