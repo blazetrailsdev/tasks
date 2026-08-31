@@ -1,6 +1,6 @@
 ---
 title: "Port Engine.endpoint and drop the RackApp wrapper in Application#endpoint"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

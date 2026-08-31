@@ -1,7 +1,7 @@
 ---
 title: "GlobalID#hash and URI::Generic#hash have no trails port"
-status: draft
-updated: 2026-08-27
+status: closed
+updated: 2026-08-31
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Closed on the story's own escape clause and on RFC 0112 charter. The story says: 'if the reviewer judges an unconsumed hash to be invented surface in TS, block this story rather than inventing a hashing convention'. JS has no Object#hash protocol — Map/Set key on identity — so a ported GID#hash / GlobalID#hash would have zero runtime consumers and zero behavioural coverage; the equality half that DOES matter already landed in PR #7136 (GID#equals mirroring uri/generic.rb:1396-1402, routed through GlobalID#equals / SignedGlobalID#equals). Verified still absent on origin/main: git grep -n hash origin/main -- packages/globalid/src/global-id.ts packages/globalid/src/uri/gid.ts finds only a doc comment at gid.ts:293. It is also off-charter here: 0112 is 'one Rails thing, N trails things' (duplicate bodies / split stores); this is a missing port with no duplication, so it has no home in this RFC. Re-file against a globalid fidelity RFC if an actual consumer for a hash protocol ever appears."
 ---
 
 ## Context

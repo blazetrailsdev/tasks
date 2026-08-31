@@ -1,6 +1,6 @@
 ---
 title: "activesupport adapters do not self-register under ESM; every entry point primes them by hand"
-status: ready
+status: claimed
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 11
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T19:31:24Z"
+assignee: "require-application-probes-dist-instead-of-app-path"
 blocked-by: null
 closed-reason: null
 ---

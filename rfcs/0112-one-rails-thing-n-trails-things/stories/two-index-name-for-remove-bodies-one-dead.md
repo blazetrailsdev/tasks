@@ -1,7 +1,7 @@
 ---
 title: "Two index_name_for_remove bodies for Rails' one, the dead one diverged"
-status: draft
-updated: 2026-08-30
+status: closed
+updated: 2026-08-31
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise void on origin/main: PR #7298 (a861062fc, RFC 0119) deleted the dead module-level pair. `git grep -n 'indexNameForRemoveFrom|indexExistsForRemoveFrom|removeIndexSpec' origin/main -- packages/activerecord/src` returns nothing; schema-statements.ts now has exactly one indexNameForRemove body (abstract/schema-statements.ts:1507), matching schema_statements.rb:1521-1543's single definition. What survives is narrower and different in kind: canRemoveIndexByName still exists as a module-level export (schema-statements.ts:63) plus a delegating method (:1831) and is now called BY the live method (:1512), so the 'inventive early return' is on the live path rather than in a divergent dead copy. If that early return has no Rails counterpart it needs its own story against the live method, not this one."
 ---
 
 ## Context

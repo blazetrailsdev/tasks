@@ -1,14 +1,14 @@
 ---
 title: "Retire the last `AssociationDefinition` holder literal in `autosave_association`"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-08-31
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

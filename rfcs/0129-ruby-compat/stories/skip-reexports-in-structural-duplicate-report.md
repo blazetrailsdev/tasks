@@ -1,6 +1,6 @@
 ---
 title: "skip-reexports-in-structural-duplicate-report"
-status: ready
+status: in-progress
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 23
-pr: null
-claim: null
-assignee: null
+pr: 7307
+claim: "2026-08-31T19:35:25Z"
+assignee: "enroll-call-mapping-i18n-and-activesupport"
 blocked-by: null
 closed-reason: null
 ---

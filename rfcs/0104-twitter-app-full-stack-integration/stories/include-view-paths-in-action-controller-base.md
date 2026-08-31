@@ -1,6 +1,6 @@
 ---
 title: "include-view-paths-in-action-controller-base"
-status: ready
+status: claimed
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 16
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T19:31:24Z"
+assignee: "require-application-probes-dist-instead-of-app-path"
 blocked-by: null
 closed-reason: null
 ---

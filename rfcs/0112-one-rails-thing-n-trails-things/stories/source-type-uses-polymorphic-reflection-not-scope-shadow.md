@@ -1,14 +1,14 @@
 ---
 title: "`source_type:` builds an ad-hoc scope shadow instead of a `PolymorphicReflection`"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-08-31
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

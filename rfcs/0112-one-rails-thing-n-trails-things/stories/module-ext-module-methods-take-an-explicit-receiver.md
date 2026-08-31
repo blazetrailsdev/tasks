@@ -1,14 +1,14 @@
 ---
 title: "module-ext's Module# methods take an explicit receiver where configurable.ts is this-typed"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-08-31
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "Decide whether key?/has_key? should offer has as a method-name candidate"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

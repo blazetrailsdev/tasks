@@ -1,14 +1,14 @@
 ---
 title: "Retire the findCollectionTarget test helper — Rails tests read the association directly"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-08-31
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

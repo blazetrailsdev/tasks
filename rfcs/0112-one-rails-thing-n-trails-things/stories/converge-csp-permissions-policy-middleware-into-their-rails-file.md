@@ -1,14 +1,14 @@
 ---
 title: "CSP/PermissionsPolicy Middleware lives in a trails-only middleware/ file, not its Rails http/ file"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-08-31
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 260
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

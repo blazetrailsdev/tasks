@@ -1,6 +1,6 @@
 ---
 title: "Make a skip-if inverted feature restriction comparable across extractors"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

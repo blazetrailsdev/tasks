@@ -1,14 +1,14 @@
 ---
 title: "validate-through-reflection.ts is a trails-only wrapper around check_validity!"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-08-31
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null
