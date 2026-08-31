@@ -1,13 +1,13 @@
 ---
-title: "converge-encryption-configuration-onto-active-record-encryption-load-hook"
+title: "active_record_encryption.configuration runs its arms inline; Rails wraps them in on_load(:active_record_encryption)"
 status: draft
 updated: 2026-08-31
 rfc: "0069-globalid-trailtie-port"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 90
 priority: null
 pr: null
 claim: null

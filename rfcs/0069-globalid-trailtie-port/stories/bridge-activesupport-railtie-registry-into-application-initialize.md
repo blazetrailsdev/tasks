@@ -1,13 +1,13 @@
 ---
-title: "bridge-activesupport-railtie-registry-into-application-initialize"
+title: "Application#initialize never runs the activesupport Railtie registry, so no framework initializer fires in a booted app"
 status: draft
 updated: 2026-08-31
 rfc: "0069-globalid-trailtie-port"
 cluster: null
-packages: []
+packages: ["activesupport", "trailties"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: null
 claim: null
