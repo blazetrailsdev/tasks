@@ -86,10 +86,24 @@ porting more ActionView surface — it is deleting
 `trails new` generate an app that subclasses `Application`, and moving
 controller/route loading into initializers where Rails puts it.
 
+### The foundation is not on `main` (2026-08-30)
+
+"What booted" above describes the tree of branch
+`twitter-app-full-stack-11518d` (commit `5fbfe1886`, PR #6470 — **closed
+without merging**), not `main`. On `main`, `Tse#render` still throws
+"execution lands in Phase 2c", `metal/implicit-render.ts` is still imported by
+nothing, and there is no `examples/twitter-app`. Two stories now carry that
+work — `execute-tse-templates` (priority 5) and
+`wire-implicit-render-into-controller-dispatch` (6) — and they come before
+everything else, because every story about template scope, helpers or layouts
+is unreachable until a `.tse` template can execute at all. `5fbfe1886` is a
+working reference for both; it is not authoritative on fidelity.
+
 ### Ranked order (2026-08-30)
 
 `priority:` is now set on every open story (lower N first), in five bands:
 
+- **5–6 — make a template execute.** See the section above.
 - **10s — serve a real request.** The Rack/Node handler, helpers in `.tse`
   scope, a TypeScript loader for app code, session/flash, `has_secure_password`,
   static files. Without these an app boots but cannot render a page a user

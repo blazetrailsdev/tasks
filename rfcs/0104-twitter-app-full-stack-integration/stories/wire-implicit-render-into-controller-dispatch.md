@@ -1,14 +1,14 @@
 ---
-title: "wire-implicit-render-into-controller-dispatch"
+title: "ImplicitRender is dead code: an action with no explicit render returns an empty 200"
 status: draft
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
-packages: []
-deps: []
+packages: ["actionpack"]
+deps: ["execute-tse-templates"]
 deps-rfc: []
-est-loc: null
-priority: null
+est-loc: 150
+priority: 6
 pr: null
 claim: null
 assignee: null

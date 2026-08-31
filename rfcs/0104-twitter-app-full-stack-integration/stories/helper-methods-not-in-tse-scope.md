@@ -5,7 +5,7 @@ updated: 2026-08-13
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["actionview", "actionpack"]
-deps: []
+deps: ["execute-tse-templates"]
 deps-rfc: []
 est-loc: null
 priority: 11
