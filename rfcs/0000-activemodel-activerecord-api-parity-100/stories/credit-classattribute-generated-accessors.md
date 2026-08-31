@@ -34,12 +34,12 @@ interface that types it.
 
 21 methods, four files, both packages:
 
-| file | n | call site |
-| --- | --- | --- |
-| activemodel `attribute_methods.rb` — `attribute_aliases`, `attribute_method_patterns` triples | 6 | `activemodel/src/attribute-methods.ts:510`, typed at `:112-118` |
-| activemodel `validations.rb` — `_validators` triple | 3 | `activemodel/src/validations.ts:75`, typed at `:141` |
-| activerecord `attribute_methods/time_zone_conversion.rb` — `skip_time_zone_conversion_for_attributes`, `time_zone_aware_types` triples | 6 | `activerecord/src/attribute-methods/time-zone-conversion.ts:29,33` |
-| activerecord `model_schema.rb` — `table_name_prefix`, `table_name_suffix` triples | 6 | `activerecord/src/model-schema.ts`, typed at `:285` |
+| file                                                                                                                                   | n   | call site                                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------- | --- | ------------------------------------------------------------------ |
+| activemodel `attribute_methods.rb` — `attribute_aliases`, `attribute_method_patterns` triples                                          | 6   | `activemodel/src/attribute-methods.ts:510`, typed at `:112-118`    |
+| activemodel `validations.rb` — `_validators` triple                                                                                    | 3   | `activemodel/src/validations.ts:75`, typed at `:141`               |
+| activerecord `attribute_methods/time_zone_conversion.rb` — `skip_time_zone_conversion_for_attributes`, `time_zone_aware_types` triples | 6   | `activerecord/src/attribute-methods/time-zone-conversion.ts:29,33` |
+| activerecord `model_schema.rb` — `table_name_prefix`, `table_name_suffix` triples                                                      | 6   | `activerecord/src/model-schema.ts`, typed at `:285`                |
 
 Rails sides: `activemodel/lib/active_model/attribute_methods.rb`,
 `activemodel/lib/active_model/validations.rb:39`,
@@ -72,3 +72,18 @@ Depends on nothing; runs in parallel with the other two bucket-A stories.
   `:tighten`.
 - No host-interface field is converted to a `declare` as part of the fix — the
   extractor refuses to credit a bodyless signature by design.
+
+## Definition of done
+
+Converting a host-interface field to a `declare`, or hand-writing the 21 accessors, does not close this story — the extractor refuses a bodyless signature by design, and Rails does not hand-write them either.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api
+pnpm vitest run scripts/api-compare/
+```
+
+Read the four file rows named in the acceptance criteria and both package
+totals; the full run also shows activesupport, which calls `classAttribute`.

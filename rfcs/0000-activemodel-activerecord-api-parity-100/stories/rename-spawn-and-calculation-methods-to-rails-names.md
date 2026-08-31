@@ -56,3 +56,23 @@ the prefix is.
   names; the mark is lowered with `:tighten`, never raised.
 - `pnpm parity:api:calls`, `:calls:args` and `:params` clean, no new baseline
   row.
+
+## Definition of done
+
+Keeping a `perform*` alias beside the Rails name does not close this story; that leaves the invented name in the measured surface.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api --package activerecord
+pnpm parity:api:extra --package activerecord
+pnpm parity:api:extra:gate
+pnpm parity:api:calls
+pnpm parity:api:calls:args
+pnpm parity:api:params
+```
+
+A pure rename must leave all three ratchets green with no new baseline row. If
+`parity:api:extra:gate` goes red because the mark now sits above the
+measurement, lower it with `pnpm parity:api:extra:tighten` — never raise it.

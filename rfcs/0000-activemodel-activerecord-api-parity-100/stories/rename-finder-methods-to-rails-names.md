@@ -80,3 +80,23 @@ the two do not overlap files.
   `parity:api:extra:tighten`, never raised.
 - `pnpm parity:api:calls`, `:calls:args` and `:params` are clean; no new
   baseline row. A pure rename must not need one.
+
+## Definition of done
+
+A baseline row, an `arity-exclude.json` entry, or a raised extra-surface mark does not close this story. A pure rename that needs one has changed something it should not have.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api --package activerecord
+pnpm parity:api:extra --package activerecord
+pnpm parity:api:extra:gate
+pnpm parity:api:calls
+pnpm parity:api:calls:args
+pnpm parity:api:params
+```
+
+A pure rename must leave all three ratchets green with no new baseline row. If
+`parity:api:extra:gate` goes red because the mark now sits above the
+measurement, lower it with `pnpm parity:api:extra:tighten` — never raise it.

@@ -61,3 +61,19 @@ the rest of RFC 0000 is measured against, which is why it lands first.
 - The measured effect on every other package is reported in the PR body; no
   package's total falls. Marks move only via `:tighten`.
 - No `declare`, no baseline row, no `@noRailsEquivalent` anywhere in the diff.
+
+## Definition of done
+
+Widening the arm until the number moves does not close this story. The arm must refuse a bodyless declaration displacing a real class, and a passing negative test is what proves it. Nor does it close by hand-writing the five bodies into the interface.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api
+pnpm vitest run scripts/api-compare/
+```
+
+Read the `type/helpers/accepts_multiparameter_time.rb` row and the activemodel
+total line. Run the full compare, not `--package`, so the effect on every
+other package is visible in the same output.

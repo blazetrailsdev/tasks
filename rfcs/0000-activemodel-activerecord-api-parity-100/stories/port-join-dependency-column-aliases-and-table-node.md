@@ -52,3 +52,18 @@ RFC 0119 already touches this file's neighbourhood
   total rises by 3.
 - The eager-loading and join tests pass on all adapter lanes;
   `pnpm parity:api:calls` and `:calls:args` clean.
+
+## Definition of done
+
+Widening into the join-dependency tree does not close this story; the scope is the `Aliases` inner class, and RFC 0119 owns its neighbourhood.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api --package activerecord
+pnpm parity:api:calls
+pnpm parity:api:calls:args
+pnpm parity:api:params
+pnpm vitest run packages/activerecord/src/associations/join-dependency.test.ts
+```

@@ -59,3 +59,21 @@ names, not as a wrapper.
 - activerecord `connection_adapters/abstract/database_statements.rb` reaches
   **83/83**; package total rises by 7.
 - All five adapter lanes pass; `pnpm parity:api:calls` and `:calls:args` clean.
+
+## Definition of done
+
+Adding bodies while leaving the members optional does not close this story. The `?` and the `this.x?.()` call sites are the divergence; Rails' base class defines a real body every adapter inherits.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api --package activerecord
+pnpm parity:api:calls
+pnpm parity:api:calls:args
+pnpm parity:api:params
+pnpm vitest run packages/activerecord/src/connection-adapters/abstract
+```
+
+Dropping the optional-member guards changes call shapes, so read the
+`parity:api:calls` diff rather than only its exit code.

@@ -54,3 +54,22 @@ lands in the file the manifest keys on.
   package total rises by 7.
 - `pnpm parity:api:calls`, `:calls:args`, `:params` clean; no new baseline row.
 - The PG lane passes.
+
+## Definition of done
+
+Leaving the bodyless signatures in `postgresql/schema-statements.ts` alongside the moved bodies does not close this story — that is the declaration-only shape this RFC exists to remove.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api --package activerecord
+pnpm parity:api:calls
+pnpm parity:api:calls:args
+pnpm parity:api:params
+pnpm lint
+pnpm vitest run packages/activerecord/src/connection-adapters/postgresql
+```
+
+`pnpm lint` must pass without `--fix` supplying `@internal` on
+`columnDefinitions`.

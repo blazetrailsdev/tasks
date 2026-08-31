@@ -63,3 +63,21 @@ are missing.
 - activerecord `insert_all.rb` reaches **46/46**; package total rises by 3.
 - `pnpm parity:api:calls` and `:calls:args` clean — the point of the story is
   that the TS body starts making the calls the Ruby body makes.
+
+## Definition of done
+
+Porting only the mapped-and-joined arm does not close this story. Rails' `respond_to?(:map)` pass-through is a real branch and both arms need a test.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api --package activerecord
+pnpm parity:api:calls
+pnpm parity:api:calls:args
+pnpm parity:api:params
+pnpm vitest run packages/activerecord/src/insert-all.test.ts
+```
+
+`parity:api:calls` is the real signal here — the point of the story is that the
+TS body starts making the calls the Ruby body makes.

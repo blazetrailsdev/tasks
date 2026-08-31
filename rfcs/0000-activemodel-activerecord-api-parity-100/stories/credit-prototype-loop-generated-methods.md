@@ -70,3 +70,18 @@ part of this story.
   the diff contains no hand-expanded recorder method.
 - Effect on every other package reported in the PR body; marks move only via
   `:tighten`.
+
+## Definition of done
+
+Expanding `REVERSIBLE_AND_IRREVERSIBLE_METHODS` into 43 hand-written methods does not close this story. It would move the number and make the port less faithful than Rails' own `class_eval` loop.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api
+pnpm vitest run scripts/api-compare/
+```
+
+Read the `migration/command_recorder.rb` row. `git diff -- packages/` must be
+empty.

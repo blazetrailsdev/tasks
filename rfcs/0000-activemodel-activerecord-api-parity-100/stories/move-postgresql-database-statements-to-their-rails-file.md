@@ -61,3 +61,21 @@ ordered rather than parallel; take this one first because it is the larger.
 - `pnpm parity:api:calls` and `:calls:args` clean; a move must not add a
   baseline row. `:params` unchanged.
 - The PG lane passes; no behavior change is intended and none is shipped.
+
+## Definition of done
+
+A delegation wrapper left behind on `postgresql-adapter.ts` does not close this story. CLAUDE.md's "No extra abstraction" applies to the seam a move leaves as much as to a new helper.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api --package activerecord
+pnpm parity:api:calls
+pnpm parity:api:calls:args
+pnpm parity:api:params
+pnpm vitest run packages/activerecord/src/connection-adapters/postgresql
+```
+
+A move must add no baseline row to either call ratchet. Run the PG lane
+locally on the touched files only — CI runs the full suite.

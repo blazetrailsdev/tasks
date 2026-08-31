@@ -57,3 +57,21 @@ member with no caller.
 - A test covers the branch that matters: preloading a key whose owner is
   already loaded must not re-query for that key.
 - All adapter lanes pass; `pnpm parity:api:calls` and `:calls:args` clean.
+
+## Definition of done
+
+Porting the four readers without the `records` path that consumes them does not close this story — members with no caller are the misleading-surface defect CONTRIBUTING.md names.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api --package activerecord
+pnpm parity:api:calls
+pnpm parity:api:calls:args
+pnpm parity:api:params
+pnpm vitest run packages/activerecord/src/associations/preloader
+```
+
+The already-loaded-owner branch is the one worth a test: preloading a key whose
+owner is already loaded must issue no query for that key.

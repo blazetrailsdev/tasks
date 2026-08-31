@@ -55,3 +55,21 @@ Bucket B, a move: the behavior ships and is tested.
 - Every existing importer of `MigrationProxy` still resolves, and the migrator
   tests pass unchanged.
 - `pnpm parity:api:calls`, `:calls:args`, `:params` clean; no new baseline row.
+
+## Definition of done
+
+Keeping the class in `deprecator.ts` and re-exporting it from `migration.ts` does not close this story — the extractor attributes a member to where it is declared.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api --package activerecord
+pnpm parity:api:calls
+pnpm parity:api:calls:args
+pnpm parity:api:params
+pnpm vitest run packages/activerecord/src/migrator.trails.test.ts
+```
+
+Every importer of `MigrationProxy` must still resolve; `pnpm typecheck` is the
+cheap check for that.

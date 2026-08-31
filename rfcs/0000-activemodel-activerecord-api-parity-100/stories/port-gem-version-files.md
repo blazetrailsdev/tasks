@@ -51,3 +51,16 @@ section exists to prevent.
   file-parity denominators for this RFC close here.
 - activemodel `gem_version.rb` 1/1 and activerecord `gem_version.rb` 1/1.
 - No `unported-files` row is added for either file.
+
+## Definition of done
+
+An `unported-files` row for `gem_version.rb` does not close this story. The surface exists and ships; a row would be the stale-registry failure mode CONTRIBUTING.md names.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api
+```
+
+Read the `files:` figure in both package summary lines.

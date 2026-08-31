@@ -49,3 +49,22 @@ does not add the pair alongside the invention.
 - `pnpm parity:api:extra --package activerecord` does not rise, and the
   extra-surface mark moves only via `:tighten`.
 - The db-warnings tests pass on every adapter lane.
+
+## Definition of done
+
+Adding the reader/writer pair while leaving the `ar-config.ts` entry in place does not close this story. A documented deviation is debt, not permission.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api --package activerecord
+pnpm parity:api:calls
+pnpm parity:api:calls:args
+pnpm parity:api:params
+pnpm parity:api:extra --package activerecord
+pnpm parity:api:extra:gate
+```
+
+Deleting the `ar-config.ts` entry should lower `parity:api:extra`; tighten the
+mark, never raise it.

@@ -65,6 +65,20 @@ Neither depends on the other.
   ≥ **6215/6362** (from 6160).
 - `defineValueMethods` keeps its loop — no hand-expanded accessor appears in
   the diff, and neither `defineValueMethods` nor its `@noRailsEquivalent
-  PERMANENT` receipt is disturbed.
+PERMANENT` receipt is disturbed.
 - Effect on every other package reported in the PR body; marks move only via
   `:tighten`.
+
+## Definition of done
+
+Rewriting `defineValueMethods` into 55 hand-written accessors does not close this story, and neither does touching its `@noRailsEquivalent PERMANENT` receipt. The port is already correct; only the extractor is wrong.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api
+pnpm vitest run scripts/api-compare/
+```
+
+Read the `relation.rb` row. `git diff -- packages/` must be empty.

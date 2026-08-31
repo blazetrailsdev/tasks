@@ -50,3 +50,20 @@ find it.
   second states the 100% figure in its PR body.
 - `pnpm parity:api:calls`, `:calls:args` and `:params` clean; no new baseline
   row and no `@noRailsEquivalent`.
+
+## Definition of done
+
+A `get` that duplicates an existing lookup rather than replacing it does not close this story — two routes to the same data is new surface, not convergence.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api --package activemodel
+pnpm parity:api:calls
+pnpm parity:api:calls:args
+pnpm parity:api:params
+```
+
+The summary line must read `activemodel — 754/754 methods (100%) | files: 67/67`
+once `port-gem-version-files` has also landed.

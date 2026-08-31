@@ -62,3 +62,21 @@ dependency.
 - activerecord `encryption/properties.rb` reaches **21/21**; package total
   rises by 2 and no other member of that file regresses.
 - The encryption suite passes; `pnpm parity:api:calls` and `:calls:args` clean.
+
+## Definition of done
+
+Adding a sixth hand-written accessor pair beside the five does not close this story. The hand-expansion of Rails' `DEFAULT_PROPERTIES.each` loop is itself the decomposition divergence.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api --package activerecord
+pnpm parity:api:calls
+pnpm parity:api:calls:args
+pnpm parity:api:params
+pnpm vitest run packages/activerecord/src/encryption/
+```
+
+Read the `encryption/properties.rb` row: it must be 21/21, not 9/21. A drop
+means `credit-defineproperty-loop-generated-accessors` has not landed yet.

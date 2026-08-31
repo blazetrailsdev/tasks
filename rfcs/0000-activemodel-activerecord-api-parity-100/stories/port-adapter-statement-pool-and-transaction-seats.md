@@ -56,3 +56,19 @@ combined diff well under the ceiling.
   parameter is `_options` in Rails and stays underscore-prefixed.
 - The SQLite and MySQL lanes pass; `pnpm parity:api:calls`, `:calls:args` and
   `:params` clean.
+
+## Definition of done
+
+A free function or an inlined `finalize()` call does not close this story; the nested `StatementPool` is measured as a class member of the adapter's file.
+
+## Verification
+
+```sh
+pnpm build
+API_COMPARE_FORCE=1 pnpm parity:api --package activerecord
+pnpm parity:api:calls
+pnpm parity:api:calls:args
+pnpm parity:api:params
+```
+
+Read all four file rows named in the acceptance criteria in one run.
