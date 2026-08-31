@@ -39,7 +39,7 @@ caller, `FileSystemResolver#_findAll`.
 - Move `filterAndSortByDetails` to `FileSystemResolver` as a private method
   (`resolver.rb:172-181`).
 - Delete `requestedDetailsFor` and inline `key instanceof Requested ? key : new
-  Requested(...)` at the head of `FileSystemResolver#_findAll`, the way
+Requested(...)` at the head of `FileSystemResolver#_findAll`, the way
   `resolver.rb:128` does.
 
 ## Acceptance criteria
