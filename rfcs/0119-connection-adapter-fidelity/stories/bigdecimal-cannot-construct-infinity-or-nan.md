@@ -1,5 +1,5 @@
 ---
-title: "bigdecimal-cannot-construct-infinity-or-nan"
+title: "BigDecimal cannot construct Infinity or NaN; MRI does"
 status: draft
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 90
 priority: null
 pr: null
 claim: null
