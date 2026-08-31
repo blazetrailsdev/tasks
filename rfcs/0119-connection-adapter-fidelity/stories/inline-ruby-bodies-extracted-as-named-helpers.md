@@ -1,6 +1,6 @@
 ---
 title: "inline-ruby-bodies-extracted-as-named-helpers"
-status: ready
+status: claimed
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T14:08:44Z"
+assignee: "inline-ruby-bodies-extracted-as-named-helpers"
 blocked-by: null
 closed-reason: null
 ---

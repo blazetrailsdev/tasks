@@ -1,7 +1,7 @@
 ---
 title: "Kanban example: scaffold SvelteKit app + AR bootstrap"
-status: draft
-updated: 2026-06-17
+status: closed
+updated: 2026-08-31
 rfc: "0034-sveltekit-kanban-example"
 cluster: examples
 deps: []
@@ -12,6 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "RFC 0034 dropped: the SvelteKit kanban example is no longer wanted"
 ---
 
 ## Context

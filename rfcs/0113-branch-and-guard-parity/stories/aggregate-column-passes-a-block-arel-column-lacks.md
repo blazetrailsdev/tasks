@@ -1,6 +1,6 @@
 ---
 title: "aggregate_column passes arel_column a block Rails does not, taking an invented arm"
-status: ready
+status: claimed
 updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T14:08:44Z"
+assignee: "inline-ruby-bodies-extracted-as-named-helpers"
 blocked-by: null
 closed-reason: null
 ---

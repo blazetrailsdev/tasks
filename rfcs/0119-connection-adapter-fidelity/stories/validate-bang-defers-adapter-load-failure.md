@@ -1,7 +1,7 @@
 ---
 title: "validateBang defers a registered adapter's load failure to first checkout"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T14:08:44Z"
+assignee: "inline-ruby-bodies-extracted-as-named-helpers"
 blocked-by: null
 closed-reason: null
 ---

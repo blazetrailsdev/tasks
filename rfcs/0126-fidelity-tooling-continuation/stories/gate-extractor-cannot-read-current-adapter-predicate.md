@@ -1,7 +1,7 @@
 ---
 title: "parity:test gate extractor cannot read currentAdapter(), forcing a trails-only gate idiom"
-status: ready
-updated: 2026-07-30
+status: claimed
+updated: 2026-08-31
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 110
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T14:08:44Z"
+assignee: "inline-ruby-bodies-extracted-as-named-helpers"
 blocked-by: null
 closed-reason: null
 ---
