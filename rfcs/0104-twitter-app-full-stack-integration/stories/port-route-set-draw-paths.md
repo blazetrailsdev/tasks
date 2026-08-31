@@ -1,6 +1,6 @@
 ---
 title: "Port RouteSet#draw_paths and Mapper#draw, completing add_routing_paths"
-status: ready
+status: in-progress
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 8
-pr: null
-claim: null
-assignee: null
+pr: 7305
+claim: "2026-08-31T17:10:47Z"
+assignee: "wire-implicit-render-into-controller-dispatch"
 blocked-by: null
 closed-reason: null
 ---

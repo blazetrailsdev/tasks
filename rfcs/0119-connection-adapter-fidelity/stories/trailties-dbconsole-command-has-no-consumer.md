@@ -1,6 +1,6 @@
 ---
 title: "dbconsole's argv/env has no consumer: port dbconsole_command.rb and the real PATH scan"
-status: claimed
+status: ready
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: "2026-08-31T16:43:30Z"
-assignee: "async-overrides-of-synchronous-rails-adapter-methods"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

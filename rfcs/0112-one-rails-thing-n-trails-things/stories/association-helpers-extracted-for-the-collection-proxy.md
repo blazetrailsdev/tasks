@@ -1,7 +1,7 @@
 ---
 title: "association-helpers-extracted-for-the-collection-proxy"
-status: claimed
-updated: 2026-08-30
+status: ready
+updated: 2026-08-31
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-08-30T15:23:49Z"
-assignee: "association-helpers-extracted-for-the-collection-proxy"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

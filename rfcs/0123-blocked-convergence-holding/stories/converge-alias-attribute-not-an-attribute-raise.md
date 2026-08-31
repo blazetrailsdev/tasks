@@ -1,7 +1,7 @@
 ---
 title: "converge-alias-attribute-not-an-attribute-raise"
-status: blocked
-updated: 2026-08-30
+status: ready
+updated: 2026-08-31
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: 6
 pr: 7216
-claim: "2026-08-29T17:51:37Z"
-assignee: "converge-format-for-inspect-filter-order"
-blocked-by: "Re-verified 2026-08-30, blocker STILL LIVE but has an in-RFC unblock path, so this story STAYS in 0115. Rails raises at instantiation because load_schema! generates nothing (model_schema.rb:587-597); trails' defineAttributeMethodsAfterLoad (packages/activerecord/src/model-schema.ts:600, called from :569 — prior note said :589) generates at the END OF A SCHEMA LOAD, so the raise fires at schema-load time and reds attributes.test.ts '.type_for_attribute supports attribute aliases' (attributes_test.rb:54), whose WithAlias aliases a non-attribute and is never instantiated. Dropping the generate call was tried on PR #7216 and reverted (base.trails.test.ts:277, model-schema-load-own-table-descendant.trails.test.ts:76/100/113, secure-token.test.ts all red). UNBLOCKS WHEN the sibling ready story retire-the-define-attribute-methods-after-load-hook (this RFC, priority 4) lands: its acceptance criteria delete defineAttributeMethodsAfterLoad outright and move generation back to define_attribute_methods from init_internals (core.rb:848), which is exactly the lazy generate_alias_attributes placement (attribute_methods.rb:104-125) this story needs. Treat priority-4 as a hard prerequisite; the tasks CLI has no set-deps verb, so the edge is recorded here."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

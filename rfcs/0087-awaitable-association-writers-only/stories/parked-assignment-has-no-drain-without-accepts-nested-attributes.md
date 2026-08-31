@@ -1,6 +1,6 @@
 ---
 title: "Parked assignAttributes promises never drain on models without acceptsNestedAttributesFor"
-status: blocked
+status: closed
 updated: 2026-08-31
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Mutually exclusive with retire-the-parked-promise-pattern (claimed, priority 2), which deletes parkNestedReaderLoad / _pendingNestedReaderLoads outright; that story's ordering note says explicitly 'Land this one and close that as superseded ... do not do both.' Premise still live on origin/main (park sites at base.ts:561, base.ts:3198, scoping.ts:102, associations/association.ts:460; the only drain caller is nested-attributes.ts:68 inside the acceptsNestedAttributesFor save wrapper), so keep it as the stepping-stone fallback rather than closing it. Unblock and close as superseded once the deletion lands; unblock and flip ready if the deletion is abandoned."
-closed-reason: null
+blocked-by: null
+closed-reason: "superseded by retire-the-parked-promise-pattern (#7303) — the drain it proposed moving to save/save! is deleted, not relocated"
 ---
 
 ## Context

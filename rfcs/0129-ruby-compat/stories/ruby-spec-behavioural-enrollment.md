@@ -1,6 +1,6 @@
 ---
 title: "Enroll vendor/ruby's in-tree ruby/spec suite as ruby-compat's behavioural measure"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null

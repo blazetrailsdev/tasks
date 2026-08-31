@@ -1,6 +1,6 @@
 ---
 title: "none? -> every credits an unnegated predicate callback"
-status: claimed
+status: done
 updated: 2026-08-31
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 5
-pr: null
+pr: 7304
 claim: "2026-08-31T16:43:30Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null

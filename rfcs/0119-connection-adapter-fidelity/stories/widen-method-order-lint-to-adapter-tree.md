@@ -1,6 +1,6 @@
 ---
 title: "Widen rails-file-structure-method-order to the connection-adapter tree"
-status: claimed
+status: blocked
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-31T16:43:30Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
-blocked-by: null
+blocked-by: "25,488 LOC of pure eslint --fix member reordering across 57 files — cannot fit one PR (700 LOC ceiling) and its own acceptance criteria require a sequence of one-subdirectory slices each taken in a quiet window. Needs scheduling as slices, not a bundle seat."
 closed-reason: null
 ---
 

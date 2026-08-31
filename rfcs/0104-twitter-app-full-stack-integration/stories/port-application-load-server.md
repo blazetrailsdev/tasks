@@ -1,6 +1,6 @@
 ---
 title: "Port Application#loadServer and emit it from the generated config.ts"
-status: ready
+status: in-progress
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["generate-app-subclassing-application"]
 deps-rfc: []
 est-loc: 90
 priority: 9
-pr: null
-claim: null
-assignee: null
+pr: 7305
+claim: "2026-08-31T17:10:47Z"
+assignee: "wire-implicit-render-into-controller-dispatch"
 blocked-by: null
 closed-reason: null
 ---

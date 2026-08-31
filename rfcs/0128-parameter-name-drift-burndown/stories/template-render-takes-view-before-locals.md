@@ -1,6 +1,6 @@
 ---
 title: "template-render-takes-view-before-locals"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null

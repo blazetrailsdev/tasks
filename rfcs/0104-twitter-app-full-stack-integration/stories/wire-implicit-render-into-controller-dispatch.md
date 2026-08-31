@@ -1,6 +1,6 @@
 ---
 title: "ImplicitRender is dead code: an action with no explicit render returns an empty 200"
-status: ready
+status: in-progress
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["execute-tse-templates"]
 deps-rfc: []
 est-loc: 150
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: 7305
+claim: "2026-08-31T17:10:47Z"
+assignee: "wire-implicit-render-into-controller-dispatch"
 blocked-by: null
 closed-reason: null
 ---

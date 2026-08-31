@@ -1,6 +1,6 @@
 ---
 title: "Delete the re-export shims left by the value-type moves and repoint the stale RFC 0089 citations"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null

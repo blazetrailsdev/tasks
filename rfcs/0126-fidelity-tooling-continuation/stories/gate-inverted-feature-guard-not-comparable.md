@@ -1,16 +1,16 @@
 ---
 title: "Make a skip-if inverted feature restriction comparable across extractors"
-status: ready
-updated: 2026-07-29
+status: in-progress
+updated: 2026-08-31
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: 7306
+claim: "2026-08-31T17:19:28Z"
+assignee: "inline-ruby-bodies-extracted-as-named-helpers"
 blocked-by: null
 closed-reason: null
 ---
