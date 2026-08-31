@@ -1,13 +1,13 @@
 ---
 title: "Port globalid railtie to a Trailtie and drop its test exclusion"
 status: ready
-updated: 2026-07-27
+updated: 2026-08-31
 rfc: "0069-globalid-trailtie-port"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

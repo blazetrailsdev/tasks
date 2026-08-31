@@ -1,13 +1,13 @@
 ---
 title: "Application#resolvedRoot()'s cwd fallback has no Rails counterpart"
 status: ready
-updated: 2026-07-27
+updated: 2026-08-31
 rfc: "0069-globalid-trailtie-port"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

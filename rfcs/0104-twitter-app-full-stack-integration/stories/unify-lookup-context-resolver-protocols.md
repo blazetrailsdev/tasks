@@ -1,6 +1,6 @@
 ---
 title: "LookupContext has two incompatible resolver protocols; the Rails-shape lookup API is unreachable"
-status: ready
+status: claimed
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 25
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T14:13:41Z"
+assignee: "unify-lookup-context-resolver-protocols"
 blocked-by: null
 closed-reason: null
 ---

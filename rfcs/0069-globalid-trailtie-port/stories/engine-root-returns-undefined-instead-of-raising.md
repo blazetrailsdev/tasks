@@ -1,13 +1,13 @@
 ---
 title: "Engine#root() returns undefined where Rails raises"
 status: ready
-updated: 2026-07-27
+updated: 2026-08-31
 rfc: "0069-globalid-trailtie-port"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

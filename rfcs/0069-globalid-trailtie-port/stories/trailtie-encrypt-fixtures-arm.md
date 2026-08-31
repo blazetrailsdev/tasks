@@ -1,13 +1,13 @@
 ---
 title: "Port the railtie encrypt_fixtures arm and emit the active_record_fixture_set load hook"
 status: ready
-updated: 2026-07-27
+updated: 2026-08-31
 rfc: "0069-globalid-trailtie-port"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 100
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

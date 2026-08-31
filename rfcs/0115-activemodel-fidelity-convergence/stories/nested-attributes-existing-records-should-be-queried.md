@@ -1,6 +1,6 @@
 ---
 title: "Nested attributes should query existing records, not fabricate a stand-in"
-status: ready
+status: claimed
 updated: 2026-08-31
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T14:14:13Z"
+assignee: "postgresql-transaction-nested-tests-model-layer"
 blocked-by: null
 closed-reason: null
 ---
