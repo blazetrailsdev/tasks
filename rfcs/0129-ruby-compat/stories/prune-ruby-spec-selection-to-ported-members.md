@@ -30,12 +30,12 @@ members' spec files, but treated `hash`, `range`, `rational` and `comparable`
 as "whole-type ports" and took their whole directories. That premise is false —
 ruby-compat ports **no** type whole:
 
-| Type | ruby-compat ports | ruby/spec has |
-| --- | --- | --- |
-| `Hash` | 16 members | 69 files |
-| `Range` | 13 members | 30 files |
-| `Rational` | 14 members | 33 files |
-| `Comparable` | 6 members | 7 files |
+| Type         | ruby-compat ports | ruby/spec has |
+| ------------ | ----------------- | ------------- |
+| `Hash`       | 16 members        | 69 files      |
+| `Range`      | 13 members        | 30 files      |
+| `Rational`   | 14 members        | 33 files      |
+| `Comparable` | 6 members         | 7 files       |
 
 So the measure presents test names for members the package deliberately does not
 have (`Comparable#clamp`, `Rational#abs`/`#floor`/`#ceil`/`#truncate`,
