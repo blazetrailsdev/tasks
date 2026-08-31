@@ -1,13 +1,13 @@
 ---
-title: "resolvers-do-not-populate-template-virtual-path"
+title: "Resolvers do not populate Template#virtualPath, so the compiled method falls back to the identifier"
 status: draft
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
-packages: []
-deps: []
+packages: ["actionview"]
+deps: ["helper-methods-not-in-tse-scope"]
 deps-rfc: []
-est-loc: null
+est-loc: 90
 priority: null
 pr: null
 claim: null

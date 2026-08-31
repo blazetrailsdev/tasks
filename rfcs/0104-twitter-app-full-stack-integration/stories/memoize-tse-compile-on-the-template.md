@@ -1,5 +1,5 @@
 ---
-title: "The .tse compile memo is a global Map, where Rails memoizes @compiled per Template"
+title: "Template does not own compile!: the handler compiles, so @compiled, method_name and handle_render_error are unported"
 status: draft
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
@@ -7,7 +7,7 @@ cluster: null
 packages: ["actionview"]
 deps: ["execute-tse-templates"]
 deps-rfc: []
-est-loc: 120
+est-loc: 250
 priority: null
 pr: null
 claim: null
@@ -18,46 +18,66 @@ closed-reason: null
 
 ## Context
 
-Rails memoizes a template's compile ON THE TEMPLATE: `compile!`
-(`vendor/rails/actionview/lib/action_view/template.rb:418-438`) returns early on
-`@compiled` and sets it under `@compile_mutex`, so the memo is one boolean per
-`Template` instance and dies with it.
+Superseded body — the process-global `compiledCache` this story was filed
+against is gone (PR #7285). The memo now lives on
+`Base#compiledMethodContainer`, which is where Rails puts the compiled
+*method* (`base.rb:198-210`). What remains is the other half: `Template` does
+not own compilation at all.
 
-`Tse#render` (`packages/actionview/src/template/handlers/tse.ts`, PR #7281)
-cannot: the handler protocol
-(`packages/actionview/src/template/handlers.ts`, `TemplateHandler#render`)
-hands it `(source, locals, context)` and no `Template`, so the memo went to a
-module-level `Map` keyed on the emitted code:
+Rails splits it:
 
-```ts
-const compiledCache = new Map<string, CompiledTemplate>();
-```
+- `Template#compile!(view)` (`vendor/rails/actionview/lib/action_view/template.rb:418-438`)
+  returns early on `@compiled`, takes `@compile_mutex`, and `module_eval`s
+  `compiled_source` into `view.compiled_method_container`.
+- `Template#compiled_source` (`:443-485`) wraps the handler's code string in
+  `def #{method_name}(local_assigns, output_buffer, &_)` with `@virtual_path =`
+  and `locals_code` (`:561-572`) prepended.
+- `Template#method_name` (`:396-402`) is `_#{identifier_method_name}__#{hash}_#{id}`.
+- `Template#render(view, locals, buffer)` (`:271-287`) calls `compile!` then
+  `view._run(method_name, self, locals, OutputBuffer.new)`, with
+  `handle_render_error` (`:549-556`) as its rescue.
 
-That is correct for the fixed, ahead-of-time template set an app has, and wrong
-in two ways next to Rails: it is process-global rather than per-instance, and
-nothing evicts it, so a dynamically-generated `.tse` source accumulates a
-compiled function for the process lifetime. Surfaced in review of #7281.
+In trails, `Tse#render` (`packages/actionview/src/template/handlers/tse.ts`)
+does the compiling: it builds the function, keys it on
+`virtualPath + "\0" + code` and stores it in
+`container._compiledMethods`. `Template#render`
+(`packages/actionview/src/template.ts:127`) still calls `handler.render(source,
+locals, ctx)` directly — its own file header says the port "collapses Rails'
+compile-then-`module_eval` step into a direct `handler.render` call". So:
 
-`Template#render` (`packages/actionview/src/template.ts:127`) is the natural
-owner — it already holds the instance Rails memoizes on, and already ports
-`handle_render_error` (`template.rb:549-556`) around the same call.
+- there is no per-`Template` `@compiled` guard, so the key is re-derived and
+  looked up on every render;
+- `method_name` / `identifier_method_name` are unported, and the cache key
+  stands in for them;
+- `compiled_source`'s wrapper (and therefore `locals_code` as a named unit)
+  lives inside `evaluateTemplate` rather than on `Template`;
+- `Template#render` does not take the view and does not call `_run`, so the
+  handler has to reach `_run` itself.
+
+`handle_render_error` IS ported (`template.ts:143-155`); it is the one piece of
+this cluster that already sits in the right place.
 
 ## Converged shape
 
-Move the compile memo onto `Template`, so it is per-instance and GC'd with the
-template the way `@compiled` is, and delete the module-level `Map`. That means
-the handler has to be reachable with the template in hand — either by threading
-the `Template` through `RenderContext`, or by `Template#render` owning the
-compile step and handing the handler a compiled callable.
+Move compilation onto `Template`: port `method_name`, `compiled_source`,
+`locals_code` and `compile!(view)` per `template.rb:396-485`, with the
+`@compiled` early return, and have `Template#render` call `compile!` then
+`view._run(...)`. `Tse#call` then goes back to being what Rails'
+`Handlers::ERB#call` is — a function from source to a code string — and
+`Tse#render` disappears, since the handler protocol's `render` is a trails
+invention that exists only because the handler had to execute.
 
-Related: `helper-methods-not-in-tse-scope`, which replaces the handler's scope
-object with a real view object and revisits the same protocol seam.
+Depends on `template-render-takes-view-before-locals` (RFC 0128), which flips
+`Template#render` to Rails' `(view, locals, buffer)` signature, and overlaps
+`actionview-render-path-is-async-where-rails-is-sync`.
 
 ## Acceptance criteria
 
-- No module-level compiled-template cache survives in
-  `packages/actionview/src/template/handlers/tse.ts`.
-- Two `Template` instances over the same source do not share a memo entry, and
-  a discarded `Template` leaves nothing retained.
-- Re-rendering one `Template` still compiles once.
-- The `@compiled` guard's early-return shape matches `template.rb:418-438`.
+- `Template#methodName`, `#compiledSource`, `#localsCode` and `#compileBang`
+  match `template.rb:396-402,443-485,418-438,561-572`, including the
+  `@compiled` early return.
+- `Template#render` calls `compileBang` then `view._run`.
+- `Tse#render` and the `TemplateHandler#render` protocol member are gone;
+  `Tse#call` remains as the `Handlers::ERB#call` analogue.
+- The `view` / `template` fields on `RenderContext` and their
+  `@noRailsEquivalent` receipts are gone.
