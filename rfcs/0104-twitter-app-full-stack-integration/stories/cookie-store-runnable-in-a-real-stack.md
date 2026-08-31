@@ -20,7 +20,7 @@ closed-reason: null
 
 `session-and-flash-lifecycle` ported `Rack::Session::Abstract::Persisted#call`
 / `#context` / `#commit_session` and friends
-(`rack-session-2.1.0/lib/rack/session/abstract/id.rb:239-497`) into
+(`vendor/rack-session/lib/rack/session/abstract/id.rb:239-497`) into
 `packages/actionpack/src/action-dispatch/middleware/session/abstract-store.ts`,
 plus `Rack::Session::Pool` (`pool.rb`) at
 `.../middleware/session/pool.ts`, so a store IS now usable as middleware.
