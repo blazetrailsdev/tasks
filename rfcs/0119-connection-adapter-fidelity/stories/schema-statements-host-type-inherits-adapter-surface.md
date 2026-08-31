@@ -1,7 +1,7 @@
 ---
 title: "schema-statements-host-type-inherits-adapter-surface"
-status: ready
-updated: 2026-08-25
+status: claimed
+updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-30T23:54:01Z"
+assignee: "time-at-with-coercion-onto-time-class"
 blocked-by: null
 closed-reason: null
 ---

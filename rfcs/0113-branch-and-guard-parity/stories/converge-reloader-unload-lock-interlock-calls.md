@@ -1,6 +1,6 @@
 ---
 title: "Reloader's unload lock omits Dependencies.interlock start_unloading/done_unloading"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-order

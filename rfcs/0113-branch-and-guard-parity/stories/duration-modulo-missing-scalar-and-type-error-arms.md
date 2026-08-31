@@ -1,6 +1,6 @@
 ---
 title: "Duration#% drops Rails' Scalar arm and raise_type_error tail"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm

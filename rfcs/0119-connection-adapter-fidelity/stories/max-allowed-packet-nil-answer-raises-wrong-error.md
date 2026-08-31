@@ -1,6 +1,6 @@
 ---
 title: "max_allowed_packet's nil answer raises 'Fixtures set is too large' where Ruby raises ArgumentError"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "ids-array-primary-key-ternary-keeps-null-pk"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm

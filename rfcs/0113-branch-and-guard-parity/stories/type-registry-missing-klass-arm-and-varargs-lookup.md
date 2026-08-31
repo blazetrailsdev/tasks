@@ -1,6 +1,6 @@
 ---
 title: "Type::Registry lacks Rails' klass register arm, lookup varargs and error message"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm

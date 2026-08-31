@@ -1,6 +1,6 @@
 ---
 title: "deriveAdapterAndUrl is a trails-only helper establish_connection has no counterpart for"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

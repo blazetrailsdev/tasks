@@ -1,6 +1,6 @@
 ---
 title: "trails new emits a src/ layout the engine's path set does not declare, so generated apps find no routes or views"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

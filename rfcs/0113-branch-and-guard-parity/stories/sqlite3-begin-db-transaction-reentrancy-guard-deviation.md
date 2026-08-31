@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 beginDbTransaction carries a re-entrancy guard Rails does not have"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm

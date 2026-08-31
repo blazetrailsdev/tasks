@@ -1,6 +1,6 @@
 ---
 title: "AbstractAdapter#resetBang cannot propagate attempt_configure_connection's raise"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

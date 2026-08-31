@@ -1,6 +1,6 @@
 ---
 title: "process-select-args-adds-nil-drop-branch"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm

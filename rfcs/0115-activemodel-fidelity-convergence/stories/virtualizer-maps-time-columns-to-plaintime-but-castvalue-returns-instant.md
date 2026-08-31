@@ -1,6 +1,6 @@
 ---
 title: "virtualizer-maps-time-columns-to-plaintime-but-castvalue-returns-instant"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null

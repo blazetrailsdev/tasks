@@ -1,6 +1,6 @@
 ---
 title: "Route remaining where_clause writes through WhereClause#plus instead of in-place predicate pushes"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm

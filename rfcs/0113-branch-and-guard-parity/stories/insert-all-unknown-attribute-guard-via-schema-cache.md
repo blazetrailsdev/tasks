@@ -1,6 +1,6 @@
 ---
 title: "Replace invented insert-all unknown-attribute guard with schema-cache columns_hash check"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: invented-arm

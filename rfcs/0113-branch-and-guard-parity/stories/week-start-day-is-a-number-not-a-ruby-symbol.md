@@ -1,6 +1,6 @@
 ---
 title: "Week-start day is spelled as a number (and elsewhere a string), not Rails' day-name Symbol"
-status: in-progress
+status: done
 updated: 2026-08-30
 rfc: "0113-branch-and-guard-parity"
 cluster: missing-arm
