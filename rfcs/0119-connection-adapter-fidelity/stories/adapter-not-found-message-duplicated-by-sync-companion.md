@@ -1,7 +1,7 @@
 ---
 title: "AdapterNotFound message is built twice: resolve and the sync validateAdapterName twin"
-status: in-progress
-updated: 2026-08-30
+status: done
+updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
