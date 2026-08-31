@@ -2,7 +2,7 @@
 title: "Vendor the rack-session gem at v2.1.0 so every Rack::Session citation in the tree resolves"
 status: draft
 updated: 2026-08-31
-rfc: "0000-rack-session-gem-port"
+rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: []
 deps: []

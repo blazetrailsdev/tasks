@@ -2,7 +2,7 @@
 title: "Port Rack::Session::Abstract::SessionHash and SecureSessionHash against the vendored source"
 status: draft
 updated: 2026-08-31
-rfc: "0000-rack-session-gem-port"
+rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: ["rack-session"]
 deps: ["relocate-rack-session-scaffolding-out-of-actionpack"]

@@ -2,7 +2,7 @@
 title: "Move Persisted, PersistedSecure, SessionId and Pool out of actionpack into rack-session behind a re-export shim"
 status: draft
 updated: 2026-08-31
-rfc: "0000-rack-session-gem-port"
+rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: ["rack-session", "actionpack"]
 deps: ["enroll-rack-session-in-compare-tooling"]

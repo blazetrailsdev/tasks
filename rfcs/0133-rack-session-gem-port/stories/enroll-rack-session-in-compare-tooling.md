@@ -2,7 +2,7 @@
 title: "Enroll rack-session in parity:api and parity:test so the port is measured from its first line"
 status: draft
 updated: 2026-08-31
-rfc: "0000-rack-session-gem-port"
+rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: [rack-session]
 deps: [rack-session-package-skeleton]

@@ -1,5 +1,5 @@
 ---
-rfc: "0000-rack-session-gem-port"
+rfc: "0133-rack-session-gem-port"
 title: "@blazetrails/rack-session: vendor the rack-session gem and move Rack's session scaffolding out of actionpack"
 status: draft
 created: 2026-08-31
