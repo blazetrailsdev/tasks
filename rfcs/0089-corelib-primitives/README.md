@@ -1,9 +1,10 @@
 ---
 rfc: "0089-corelib-primitives"
 title: "corelib: a home for the Ruby interpreter primitives trails emulates"
-status: postponed
+status: superseded
+superseded-by: "0129-ruby-compat"
 created: 2026-08-05
-updated: 2026-08-05
+updated: 2026-08-31
 owner: "@deanmarano"
 packages:
   - "corelib"

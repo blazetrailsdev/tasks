@@ -210,11 +210,17 @@ each one is why the successor exists rather than a reactivation:
    the receipt tally says is the largest single population.
 
 0089's stories are not lost: `move-regexp-escape-to-corelib-and-adopt-remaining-copies`,
-`move-range-core-and-succ-to-corelib` and `corelib-package-scaffold` reappear here
-re-scoped, and `move-module-mixin-primitives`, `move-tempfile-and-tmpname-to-corelib`,
-`port-ruby-mutex-for-check-pending` and `port-uri-parser-escape-for-rack-and-routes-inspector`
-are listed under _Deferred_ below. 0089's status is not changed by this RFC —
-`status` is DB-owned and the flip is the maintainer's verb, not a markdown edit.
+`move-range-core-and-succ-to-corelib`, `corelib-package-scaffold`,
+`move-tempfile-and-tmpname-to-corelib` and `move-module-mixin-primitives` all
+reappear here re-scoped — the last as
+`move-module-mixin-primitives-to-ruby-compat`, which lifts the object-model
+deferral for `include` / `extend` / `prepend` only. `port-ruby-mutex-for-check-pending`
+and `port-uri-parser-escape-for-rack-and-routes-inspector` remain listed under
+_Deferred_ below. **0089 is `status: superseded`, `superseded-by: 0129-ruby-compat`,
+and its nine stories are closed** pointing at their successors here. (An RFC's
+`status:` is markdown-owned — unlike a story's, `ingest.ts:481` carries it
+across on every ingest — so that flip is a file edit, not a `tasks` verb. An
+earlier draft of this paragraph said the opposite.)
 `packages/activesupport/src/tempfile.ts` carries five "until RFC 0089" citations
 (`:16`, `:32`, `:82`, `:83`, `:233`); repointing them is acceptance criteria on
 the final cleanup story, so no citation goes stale mid-flight.
