@@ -1,7 +1,7 @@
 ---
 rfc: "0069-globalid-trailtie-port"
 title: "Port globalid railtie to a Trailtie"
-status: draft
+status: active
 created: 2026-07-24
 updated: 2026-07-27
 owner: "@deanmarano"
