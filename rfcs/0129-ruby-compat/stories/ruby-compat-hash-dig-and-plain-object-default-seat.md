@@ -1,0 +1,63 @@
+---
+title: "ruby-compat-hash-dig-and-plain-object-default-seat"
+status: draft
+updated: 2026-08-31
+rfc: "0129-ruby-compat"
+cluster: null
+packages: []
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+`ruby-compat-hash-default-proc-and-dig` shipped the `default` / `default_proc`
+half — `class Hash extends Map` in `packages/ruby-compat/src/hash.ts` with
+`default(...key)`, `setDefault`, `defaultProc()`, `setDefaultProc()` and a
+`get` whose miss path runs the proc (`vendor/ruby/hash.c:2068`
+`rb_hash_default_value`). It deliberately shipped NO `dig`, because the
+inventory found no call site with Ruby `Hash#dig` semantics:
+
+- `actionpack/.../request/session.ts:258`, `.../strong-parameters.ts:509`,
+  `.../test-case.ts:795` are ports of Rails' own `dig` methods and stay put.
+- `activerecord/src/store.ts:236` `dig(obj, key)` is a private single-key,
+  HashWithIndifferentAccess-aware lookup — not variadic, no `TypeError` on a
+  non-diggable intermediate. It is not `Hash#dig` and was left alone.
+
+Two adoptions the default-seat story identified and did not take, both from
+RFC 0023's `plain-object-has-no-hash-default-seat`:
+
+- `hash_with_indifferent_access.rb:376-381` `to_hash` calls `set_defaults(copy)`
+  on the plain Hash it returns; trails' `HashWithIndifferentAccess#toHash`
+  returns a plain object with nowhere to put them.
+- `core_ext/hash/slice.rb:13-14` `Hash#slice!` does `hash.default = default` /
+  `hash.default_proc = default_proc if default_proc`;
+  `packages/activesupport/src/core-ext/hash/slice.ts` documents the gap in its
+  `sliceBang` JSDoc.
+
+Both need those surfaces to return `ruby-compat`'s `Hash` rather than a plain
+object, which reaches every caller of `toHash` — a separate, larger change.
+
+## Acceptance criteria
+
+- Adjudicate `activerecord/src/store.ts:236` `dig`: either it is `Hash#dig` and
+  converges onto a ported `rb_hash_dig` (`vendor/ruby/hash.c:4627`, including
+  the `rb_obj_dig` `"%s does not have #dig method"` TypeError,
+  `vendor/ruby/object.c:3899`), or it is not and the finding is recorded.
+- `Hash#dig` is exported from `packages/ruby-compat/src/hash.ts` ONLY if a real
+  call site adopts it; the standing rule is "only what trails actually calls".
+- Decide and implement the plain-object default seat for
+  `HashWithIndifferentAccess#toHash` and `sliceBang`, or block the story with
+  the specific blocker. RFC 0023's `plain-object-has-no-hash-default-seat` is
+  closed by whichever outcome lands.
+- `compare_by_identity` stays unported (`packages/rack/src/headers.ts:481` is a
+  Rails-anchored override that raises).
+- `pnpm parity:api`, `parity:api:calls`, `parity:api:calls:args`,
+  `parity:api:extra` show no new rows; activesupport and all three AR lanes green.
