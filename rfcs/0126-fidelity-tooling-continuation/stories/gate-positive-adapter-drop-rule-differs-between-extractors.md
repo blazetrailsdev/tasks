@@ -47,7 +47,7 @@ SPACES, and they disagree for the `skipIf(A || B)` / `skip if A || B` shape.
   ```
 
   `runIsDisjunctive` is RUN space (`runsWhenTrue ? text.includes("||") :
-  text.includes("&&")`). TS reasons that under `skipIf` the run condition is the
+text.includes("&&")`). TS reasons that under `skipIf` the run condition is the
   De Morgan conjunction, so the adapter ∩ feature intersection is exactly what
   runs and BOTH dimensions are sound — deliberately more precise than Ruby,
   documented in that function's docstring and pinned by
@@ -57,10 +57,10 @@ SPACES, and they disagree for the `skipIf(A || B)` / `skip if A || B` shape.
 The two only coincide when the guard is conjunction-shaped. Verified divergence
 (both sides run against the real extractors, PR #7306 branch):
 
-| shape | Ruby | TS | classify |
-| --- | --- | --- | --- |
-| `skip if !current_adapter?(:Mysql2Adapter) \|\| !supports_expression_index?` | `guards:[no_expression_index]` | `adapters:[mysql] features:[expression_index]` | `wrong-gate` |
-| `skip if current_adapter?(:Mysql2Adapter) \|\| supports_expression_index?` | `guards:[no_expression_index]` | `adapters:[postgresql,sqlite] guards:[no_expression_index]` | `wrong-gate` |
+| shape                                                                        | Ruby                           | TS                                                          | classify     |
+| ---------------------------------------------------------------------------- | ------------------------------ | ----------------------------------------------------------- | ------------ |
+| `skip if !current_adapter?(:Mysql2Adapter) \|\| !supports_expression_index?` | `guards:[no_expression_index]` | `adapters:[mysql] features:[expression_index]`              | `wrong-gate` |
+| `skip if current_adapter?(:Mysql2Adapter) \|\| supports_expression_index?`   | `guards:[no_expression_index]` | `adapters:[postgresql,sqlite] guards:[no_expression_index]` | `wrong-gate` |
 
 No call site in the suite has this shape today (`pnpm parity:test --gates` is at
 0 gate-mismatch on that PR), so this is a latent trap, not a live red — but the
