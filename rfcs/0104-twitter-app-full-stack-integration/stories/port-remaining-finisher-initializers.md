@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining Finisher initializers (setup_default_session_store, finisher_hook, ...)"
-status: ready
+status: claimed
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: 20
 pr: 7295
-claim: null
-assignee: null
+claim: "2026-08-31T21:45:19Z"
+assignee: "session-and-flash-lifecycle"
 blocked-by: null
 closed-reason: null
 ---

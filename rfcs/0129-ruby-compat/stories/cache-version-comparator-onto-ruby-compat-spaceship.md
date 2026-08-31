@@ -1,6 +1,6 @@
 ---
 title: "compute_cache_version open-codes <=> and rb_cmperr; route it onto the ruby-compat Comparable primitive"
-status: ready
+status: claimed
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: 31
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T21:44:48Z"
+assignee: "converge-hash-dup-at-journey-route-required-defaults"
 blocked-by: null
 closed-reason: null
 ---

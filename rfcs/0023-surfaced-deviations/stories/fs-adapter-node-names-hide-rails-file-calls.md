@@ -1,7 +1,7 @@
 ---
 title: "fs-adapter's node-shaped names hide Rails File calls"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-08-31
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "re-scoped into 0129-ruby-compat/ruby-named-file-dir-fileutils-facade — File/Dir/FileUtils are Ruby, so the facade belongs in ruby-compat, not activesupport as this story proposed"
 ---
 
 ## Context

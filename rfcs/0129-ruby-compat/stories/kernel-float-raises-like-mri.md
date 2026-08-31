@@ -1,6 +1,6 @@
 ---
 title: "Kernel.Float belongs to ruby-compat and raises like MRI, not returns undefined"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: fidelity
@@ -13,7 +13,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: 26
-pr: null
+pr: 7314
 claim: "2026-08-31T20:49:55Z"
 assignee: "burn-down-ruby-compat-novel-surface-and-pin"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Converge Journey::Route#required_defaults' object spread onto a ported Hash#dup"
-status: ready
+status: claimed
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 29
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T21:44:48Z"
+assignee: "converge-hash-dup-at-journey-route-required-defaults"
 blocked-by: null
 closed-reason: null
 ---

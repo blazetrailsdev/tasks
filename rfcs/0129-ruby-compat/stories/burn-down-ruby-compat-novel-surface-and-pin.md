@@ -1,6 +1,6 @@
 ---
 title: "Burn ruby-compat's 4 novel extra-surface names to zero and pin the package"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 25
-pr: null
+pr: 7314
 claim: "2026-08-31T20:49:55Z"
 assignee: "burn-down-ruby-compat-novel-surface-and-pin"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "param-drift-actionview-structural-residue"
-status: ready
-updated: 2026-08-30
+status: in-progress
+updated: 2026-08-31
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 190
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: 7315
+claim: "2026-08-31T21:03:42Z"
+assignee: "param-drift-actionview-structural-residue"
 blocked-by: null
 closed-reason: null
 ---
