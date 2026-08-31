@@ -2,8 +2,8 @@
 title: "Application#initialize never runs the activesupport Railtie registry, so no framework initializer fires in a booted app"
 status: draft
 updated: 2026-08-31
-rfc: "0069-globalid-trailtie-port"
-cluster: null
+rfc: "0112-one-rails-thing-n-trails-things"
+cluster: "duplicate-bodies"
 packages: ["activesupport", "trailties"]
 deps: []
 deps-rfc: []
