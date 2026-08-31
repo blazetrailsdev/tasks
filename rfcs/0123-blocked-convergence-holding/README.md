@@ -3,7 +3,7 @@ rfc: "0123-blocked-convergence-holding"
 title: "Holding epic: blocked convergence work carried from RFCs 0078 / 0096 / 0106 / 0107"
 status: active
 created: 2026-08-25
-updated: 2026-08-30
+updated: 2026-08-31
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -23,6 +23,14 @@ related-rfcs:
 A **holding epic**. It owns no convergence programme of its own; it holds the
 blocked stories carried out of the RFCs that had run out of pickup-able work,
 so those RFCs could be retired without dropping the debt they had surfaced.
+
+Carried in on 2026-08-31:
+
+- `0115-activemodel-fidelity-convergence` — `converge-alias-attribute-not-an-attribute-raise`,
+  the seventh blocked story held back below. It arrives **unblocked and ready**:
+  its stated unblocker `retire-the-define-attribute-methods-after-load-hook`
+  landed in PR #7279 and `defineAttributeMethodsAfterLoad` no longer exists in
+  the tree, so the blocker note's premise is void. 0115 is now **closed**.
 
 Carried in on 2026-08-30:
 

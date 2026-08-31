@@ -2,7 +2,7 @@
 title: "is_number? drops Rails' rescue ArgumentError, TypeError => false arm"
 status: draft
 updated: 2026-08-31
-rfc: "0115-activemodel-fidelity-convergence"
+rfc: "0129-ruby-compat"
 cluster: null
 packages:
   - "activemodel"

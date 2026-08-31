@@ -1,9 +1,9 @@
 ---
 rfc: "0087-awaitable-association-writers-only"
 title: "Awaitable association writers only: delete the synchronous property setters"
-status: draft
+status: active
 created: 2026-08-03
-updated: 2026-08-10
+updated: 2026-08-31
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -13,6 +13,16 @@ related-rfcs:
   - "0068-awaitable-has-one-setter"
 priority: 3
 ---
+
+## Activated 2026-08-31
+
+Promoted draft → active. The trigger is a direct decision that the
+**parked-promise pattern is not permitted**: `parkNestedReaderLoad` and the
+`_pendingNestedReaderLoads` shape are to be deleted outright rather than
+mitigated. That work is `retire-the-parked-promise-pattern` (ready), and it is
+this RFC's thesis — "one surface, always awaited" — applied to the assignment
+path. Two stories carried in from `0115-activemodel-fidelity-convergence` on
+its closure depend on the answer.
 
 ## Summary
 
