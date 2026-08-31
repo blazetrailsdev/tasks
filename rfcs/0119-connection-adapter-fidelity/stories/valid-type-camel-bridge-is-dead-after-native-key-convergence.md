@@ -1,6 +1,6 @@
 ---
 title: "Remove isValidType's dead snake-to-camel native-type bridge"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 7293
 claim: "2026-08-31T14:14:13Z"
 assignee: "postgresql-transaction-nested-tests-model-layer"
 blocked-by: null

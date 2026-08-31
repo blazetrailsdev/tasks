@@ -1,6 +1,6 @@
 ---
 title: "Wire mysql2 executeBatch onto the MySQL adapter class"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 7292
 claim: "2026-08-31T13:54:11Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null

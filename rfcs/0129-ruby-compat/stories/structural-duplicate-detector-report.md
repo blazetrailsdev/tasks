@@ -1,6 +1,6 @@
 ---
 title: "Report-only structural detection of ruby-compat primitives re-implemented under an unrecognised name"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["no-ruby-compat-reimplementation-lint"]
 deps-rfc: []
 est-loc: 220
 priority: 18
-pr: null
+pr: 7294
 claim: "2026-08-31T14:08:15Z"
 assignee: "ruby-core-call-mapping-table"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Delete reflectColumnNames' warm-cache re-invalidation — Rails has one column view"
-status: blocked
-updated: 2026-08-27
+status: closed
+updated: 2026-08-31
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: 'Not actionable yet, per the story''s own ''Converged shape'': ''Do NOT converge it by rewriting the block; converge it by removing the reason it is needed.'' Verified on origin/main 2026-08-24: the warm-cache invalidation block is still live inside reflectColumnNames (packages/activerecord/src/model-schema.ts, the internalSchemaCache branch — ''if (ownSchemaMemo(host, "_schemaLoaded")) reloadSchemaFromCache.call(host)'' after cache.columnsHash returns names), and the poorer view it exists to discard is still created by loadSchema''s synthesized cold-cache columnsHash fallback. AC2 (''loadSchema no longer settles _schemaLoaded against a synthesized cold-cache view'') is the sync-schema-reflection work, which does not exist: loadSchemaFromCacheSync (model-schema.ts:1363) still reads only an already-warm cache and returns false otherwise. Unblock together with the sync-reflection work; sync-reflection-needs-explicit-warm-for-fake-adapter is the first ready step toward it.'
-closed-reason: null
+blocked-by: null
+closed-reason: 'Premise gone on origin/main. Both live ACs are satisfied by PR #7091 (773a05da3, ''retire reconcileVirtualAttributes and the virtual-attribute flag'', RFC 0115), which deleted reflectColumnNames outright: `git grep -n reflectColumnNames origin/main -- packages` now returns ZERO hits, so AC1 (delete the warm-cache invalidation block inside reflectColumnNames) has nothing left to delete. AC2 is met too: loadSchemaBangAnchor (model-schema.ts:557-571) no longer synthesizes a cold-cache columnsHash from declared attributes — it sets _schemaLoaded = true ONLY on the reflected path from loadSchemaFromCacheSync (model-schema.ts:689) and otherwise sets _columnsHash = {} without settling _schemaLoaded, so there is one column view as in Rails. No equivalent ''if (ownSchemaMemo(host, "_schemaLoaded")) reloadSchemaFromCache.call(host)'' re-invalidation survives anywhere in model-schema.ts. The remaining sync-schema-reflection debt is still tracked by the other eight stories in this holding epic.'
 ---
 
 ## Context

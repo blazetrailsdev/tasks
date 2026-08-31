@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: @internal JSDoc is ignored on class members too"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 5
-pr: null
+pr: 7293
 claim: "2026-08-31T14:14:13Z"
 assignee: "postgresql-transaction-nested-tests-model-layer"
 blocked-by: null

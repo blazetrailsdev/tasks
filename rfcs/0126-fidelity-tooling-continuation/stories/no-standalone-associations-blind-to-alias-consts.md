@@ -1,6 +1,6 @@
 ---
 title: "no-standalone-associations misses macro calls on aliased class consts"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 5
-pr: null
+pr: 7293
 claim: "2026-08-31T14:14:13Z"
 assignee: "postgresql-transaction-nested-tests-model-layer"
 blocked-by: null

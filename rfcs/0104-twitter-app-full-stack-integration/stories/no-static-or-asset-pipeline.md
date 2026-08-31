@@ -1,6 +1,6 @@
 ---
 title: "No static file serving or asset pipeline: a generated app's stylesheet 404s"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["splice-finisher-initializers"]
 deps-rfc: []
 est-loc: null
 priority: 15
-pr: null
+pr: 7295
 claim: "2026-08-31T14:16:57Z"
 assignee: "cli-cannot-load-typescript-app-code"
 blocked-by: null

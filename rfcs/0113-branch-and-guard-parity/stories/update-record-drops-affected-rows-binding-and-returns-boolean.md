@@ -1,6 +1,6 @@
 ---
 title: "_update_record drops Rails' affected_rows binding and returns a boolean instead of the count"
-status: claimed
+status: done
 updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 4
-pr: null
+pr: 7291
 claim: "2026-08-31T14:08:44Z"
 assignee: "inline-ruby-bodies-extracted-as-named-helpers"
 blocked-by: null

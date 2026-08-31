@@ -1,6 +1,6 @@
 ---
 title: "A Ruby-core to ruby-compat call resolution table, report-only, folding in CORE_LIBRARY_ALIASES"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
 est-loc: 260
 priority: 14
-pr: null
+pr: 7294
 claim: "2026-08-31T14:08:15Z"
 assignee: "ruby-core-call-mapping-table"
 blocked-by: null

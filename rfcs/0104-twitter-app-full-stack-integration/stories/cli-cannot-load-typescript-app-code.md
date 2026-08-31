@@ -1,6 +1,6 @@
 ---
 title: "The trails CLI has no TypeScript loader, so db seed cannot import app models"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 12
-pr: null
+pr: 7295
 claim: "2026-08-31T14:16:57Z"
 assignee: "cli-cannot-load-typescript-app-code"
 blocked-by: null
