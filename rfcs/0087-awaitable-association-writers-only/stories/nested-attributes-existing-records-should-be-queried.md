@@ -2,10 +2,12 @@
 title: "Nested attributes should query existing records, not fabricate a stand-in"
 status: ready
 updated: 2026-08-31
-rfc: "0115-activemodel-fidelity-convergence"
-cluster: null
-packages: []
-deps: []
+rfc: "0087-awaitable-association-writers-only"
+cluster: "rails-deviation"
+packages:
+  - "activerecord"
+deps:
+  - "retire-the-parked-promise-pattern"
 deps-rfc: []
 est-loc: 200
 priority: 5
@@ -58,10 +60,16 @@ i.e. the `existing_records` branch above, not a synthesized instance. The
 same list rather than needing its own guard.
 
 The obstacle is that the trails assignment path is synchronous where the query
-is async; the repo's settled idiom for that is the park/drain shape already used
-for deferred constructor assignment (see `parkNestedReaderLoad` and
-`retire-reapply-nested-attr-setters-onto-constructor-assign`), so this story
-should reuse it rather than invent a second one.
+is async. **Do not reach for `parkNestedReaderLoad`.** An earlier revision of
+this story prescribed exactly that; the parked-promise shape is being deleted
+outright by `retire-the-parked-promise-pattern`, which this story now depends
+on, and adding a fifth park site would be widening a register that is closing.
+
+The assignment path this story needs is `assign_nested_attributes_*` reached
+from an awaitable caller — `setAttributes` / the association writer — where the
+query can simply be awaited in place, exactly as the Ruby awaits nothing because
+its query is synchronous. That is the same "one surface, always awaited" answer
+this RFC applies everywhere else.
 
 ## Acceptance criteria
 
@@ -71,4 +79,5 @@ should reuse it rather than invent a second one.
 - [ ] `populateInMemoryExistingRecord`'s full-column-null stand-in is deleted.
 - [ ] A record reached this way answers its persisted column values, shown by a
       test where a callback reads a column other than the pk/FK.
+- [ ] No new `parkNestedReaderLoad` call site; the query is awaited in place.
 - [ ] AR suite green on all three lanes.

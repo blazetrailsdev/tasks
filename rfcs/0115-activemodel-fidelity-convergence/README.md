@@ -1,9 +1,9 @@
 ---
 rfc: "0115-activemodel-fidelity-convergence"
 title: "activemodel package-wide fidelity convergence and line-bloat burndown"
-status: active
+status: closed
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-31
 owner: "@deanmarano"
 packages:
   - "activemodel"
@@ -22,6 +22,17 @@ priority: 1
 ---
 
 # RFC 0115 — activemodel package-wide fidelity convergence and line-bloat burndown
+
+## Closed 2026-08-31
+
+204 stories done or closed. The three that were still open moved to the RFCs
+that actually own them:
+
+| story                                                  | to                                        | why                                                                                                                                                                                                                   |
+| ------------------------------------------------------ | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `converge-alias-attribute-not-an-attribute-raise`      | `0123-blocked-convergence-holding`        | **now unblocked** — its blocker `retire-the-define-attribute-methods-after-load-hook` landed in #7279 and the hook is gone from the tree, so it arrives `ready`, joining its six siblings carried there on 2026-08-30 |
+| `numericality-is-number-missing-argumenterror-rescue`  | `0129-ruby-compat`                        | it depends on `kernel-float-raises-like-mri`, the Ruby-core half it was bundling                                                                                                                                      |
+| `nested-attributes-existing-records-should-be-queried` | `0087-awaitable-association-writers-only` | its obstacle is the sync/async assignment split, which is 0087's whole subject                                                                                                                                        |
 
 ## Summary
 
