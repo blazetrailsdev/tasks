@@ -1,13 +1,13 @@
 ---
-title: "converge-incorporate-utc-offset-date-arm-onto-kernel-rational"
+title: "TimeWithZone#incorporate_utc_offset's Date arm advances seconds where Rails adds Rational(offset, SECONDS_PER_DAY)"
 status: draft
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
-packages: []
+packages: ["activesupport"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
