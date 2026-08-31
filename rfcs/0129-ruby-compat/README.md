@@ -480,7 +480,7 @@ The distribution says why, and it is structural rather than fixable. 708 of the
 `["ref:call"]` — one delegated call, the shape of every thin wrapper in the
 tree). Eleven more come from `Range#inspect` and five from `isBetween`'s
 `["ref:call", "if", "ref:call"]`. The primitives this RFC exists to protect are
-one-to-three tokens long *because they are primitives*, and a shape that short
+one-to-three tokens long _because they are primitives_, and a shape that short
 cannot be discriminating no matter how the normalizer is written. All four real
 hits landed on the longest distinct shapes in the set.
 
