@@ -2,8 +2,9 @@
 title: "Port the railtie encrypt_fixtures arm and emit the active_record_fixture_set load hook"
 status: ready
 updated: 2026-08-31
-rfc: "0069-globalid-trailtie-port"
-cluster: null
+rfc: "0113-branch-and-guard-parity"
+cluster: "missing-arm"
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 100
