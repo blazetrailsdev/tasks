@@ -467,6 +467,32 @@ answer, and it is filed as a **report-only** story precisely because its false
 positives are unknown until it runs against the real tree. Shipping the name-based
 rule first, gated, beats shipping the structural one late and ungated.
 
+**And the structural detector has now run, so that gap has a measurement rather
+than a plan** (`structural-duplicate-detector-report`,
+`pnpm parity:structural-duplicates:report`). Matching each ruby-compat export's
+normalized body — the `skeleton` the TS extractor already records, plus the
+literal arguments it erases — against every declaration in `packages/*/src`
+returns **235 candidates, of which 2 are real duplicates: precision 0.9%**.
+
+The distribution says why, and it is structural rather than fixable. 224 of the
+235 come from the four `Comparable` operators, whose whole normalized body is
+`["ref:call"]` — one delegated call, the shape of every thin wrapper in the
+tree. Five more come from `isBetween`'s `["ref:call", "if", "ref:call"]`. The
+primitives this RFC exists to protect are one-to-three tokens long *because they
+are primitives*, and a shape that short cannot be discriminating no matter how
+the normalizer is written. The two real hits both landed on the two longest
+distinct shapes in the set.
+
+**The recommendation is therefore: do not gate it, and the name-based rule is
+the final answer for Gate 3.** A gate at 0.9% precision is a gate that gets
+disabled in its first week, and the alternative — a minimum-skeleton-length
+threshold — buys precision by excluding exactly the primitives that motivated
+the RFC. The command stays in the tree as a report, because it earns its keep
+as a periodic audit: this first run found the two duplicates
+`no-ruby-compat-reimplementation` could not, both spelled nothing like their
+ruby-compat counterpart, filed as `converge-activesupport-is-include-to-ruby-compat`
+and `converge-activesupport-except-to-ruby-compat`.
+
 The exclude JSON is seeded with today's copies, one row each, and each row is
 deleted by the move story that converges it. It reaches zero when the value-type moves land.
 
