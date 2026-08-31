@@ -1,6 +1,6 @@
 ---
 title: "Burn ruby-compat's 4 novel extra-surface names to zero and pin the package"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null

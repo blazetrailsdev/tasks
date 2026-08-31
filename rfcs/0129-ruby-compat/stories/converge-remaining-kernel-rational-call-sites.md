@@ -1,6 +1,6 @@
 ---
 title: "Remaining ported bodies spell new Rational() where Rails calls Kernel#Rational()"
-status: claimed
+status: in-progress
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 30
-pr: null
+pr: 7316
 claim: "2026-08-31T21:44:48Z"
 assignee: "converge-hash-dup-at-journey-route-required-defaults"
 blocked-by: null

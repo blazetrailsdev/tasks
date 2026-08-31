@@ -1,6 +1,6 @@
 ---
 title: "constructThroughRecordInMemory void-discards assignAttributes instead of threading it"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0087-awaitable-association-writers-only"
 cluster: null

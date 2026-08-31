@@ -1,6 +1,6 @@
 ---
 title: "Nested attributes should query existing records, not fabricate a stand-in"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0087-awaitable-association-writers-only"
 cluster: "rails-deviation"
