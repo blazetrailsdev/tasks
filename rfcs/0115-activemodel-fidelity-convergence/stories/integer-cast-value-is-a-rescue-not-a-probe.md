@@ -1,7 +1,7 @@
 ---
 title: "Integer#cast_value should rescue to_i, not probe for callability"
-status: in-progress
-updated: 2026-08-30
+status: done
+updated: 2026-08-31
 rfc: "0115-activemodel-fidelity-convergence"
 cluster: null
 packages: []
