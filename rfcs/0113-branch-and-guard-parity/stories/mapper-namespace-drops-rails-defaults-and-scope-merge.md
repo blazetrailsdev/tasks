@@ -1,14 +1,14 @@
 ---
 title: "Mapper#namespace drops Rails' shallow_path/shallow_prefix defaults and the options merge"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

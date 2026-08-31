@@ -1,14 +1,14 @@
 ---
 title: "Port Time's *_with_coercion / *_with_duration named methods onto the reopened Time class"
 status: blocked
-updated: 2026-08-29
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 260
-priority: null
+priority: 34
 pr: null
 claim: "2026-08-29T17:33:51Z"
 assignee: "param-drift-relation-new-alias-scored-as-constructor"

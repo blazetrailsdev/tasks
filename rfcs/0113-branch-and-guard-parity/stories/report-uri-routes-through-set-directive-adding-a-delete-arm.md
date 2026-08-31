@@ -1,14 +1,14 @@
 ---
 title: "CSP#report_uri routes through set_directive, adding a delete arm and source mapping Rails has not"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

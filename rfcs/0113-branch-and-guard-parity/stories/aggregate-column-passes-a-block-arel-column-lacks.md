@@ -1,14 +1,14 @@
 ---
 title: "aggregate_column passes arel_column a block Rails does not, taking an invented arm"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

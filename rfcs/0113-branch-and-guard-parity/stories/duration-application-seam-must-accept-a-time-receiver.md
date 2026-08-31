@@ -1,14 +1,14 @@
 ---
 title: "duration-application-seam-must-accept-a-time-receiver"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 15
 pr: null
 claim: null
 assignee: null

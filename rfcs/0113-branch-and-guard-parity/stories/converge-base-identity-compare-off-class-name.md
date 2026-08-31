@@ -1,6 +1,6 @@
 ---
 title: "converge-base-identity-compare-off-class-name"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

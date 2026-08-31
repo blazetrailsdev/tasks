@@ -1,14 +1,14 @@
 ---
 title: "AdapterSpecificRegistry carries an invented register guard, lacks lookup varargs, and raises Error not ArgumentError"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 16
 pr: null
 claim: null
 assignee: null

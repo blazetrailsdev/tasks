@@ -1,17 +1,17 @@
 ---
 title: "locator-use-drops-the-no-locator-raise"
-status: draft
-updated: 2026-08-30
+status: claimed
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T09:54:12Z"
+assignee: "locator-use-drops-the-no-locator-raise"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,14 +1,14 @@
 ---
 title: "excluding inlines Relation#ids and invents a composite-primary-key raise"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: null
+priority: 17
 pr: null
 claim: null
 assignee: null

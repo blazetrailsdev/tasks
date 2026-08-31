@@ -1,6 +1,6 @@
 ---
 title: "MessageSerializer.dump narrows Ruby's duck type to string, forcing three casts on the identity NullSerializer"
-status: draft
+status: ready
 updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 22
 pr: null
 claim: null
 assignee: null

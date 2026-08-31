@@ -1,14 +1,14 @@
 ---
 title: "skeleton-loop-fold-covers-only-each"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 12
 pr: null
 claim: null
 assignee: null

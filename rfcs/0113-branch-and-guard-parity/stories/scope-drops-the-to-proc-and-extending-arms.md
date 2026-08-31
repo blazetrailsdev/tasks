@@ -1,14 +1,14 @@
 ---
 title: "scope-drops-the-to-proc-and-extending-arms"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-08-31
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null
