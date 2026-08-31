@@ -39,9 +39,7 @@ trails spells that arm as plain `Temporal.PlainDateTime` second arithmetic:
 
 ```ts
 if (time instanceof Temporal.PlainDate) {
-  return this._transferTimeValuesToUtcConstructor(
-    time.toPlainDateTime().add({ seconds: offset }),
-  );
+  return this._transferTimeValuesToUtcConstructor(time.toPlainDateTime().add({ seconds: offset }));
 }
 ```
 
@@ -63,7 +61,7 @@ it is filed rather than folded into a spelling PR.
 ## Acceptance criteria
 
 - `_incorporateUtcOffset`'s Date arm is `RubyDate#plus(rational(offset,
-  SECONDS_PER_DAY))`, mirroring `time_with_zone.rb:564`, and the JSDoc
+SECONDS_PER_DAY))`, mirroring `time_with_zone.rb:564`, and the JSDoc
   explaining the elision is deleted rather than reworded.
 - The `else` arm stays `time.plus(offset)` (`:566`).
 - `packages/activesupport/src/time-with-zone.test.ts` and the DST-gap cases in
