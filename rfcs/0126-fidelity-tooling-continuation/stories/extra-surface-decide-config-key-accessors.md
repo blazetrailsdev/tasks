@@ -1,6 +1,6 @@
 ---
 title: "extra-surface: database.yml config-key accessors (statementLimit) have no Ruby def"
-status: claimed
+status: done
 updated: 2026-08-31
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 5
-pr: null
+pr: 7289
 claim: "2026-08-31T12:56:07Z"
 assignee: "api-compare-resolve-module-name-ancestry-chain"
 blocked-by: null

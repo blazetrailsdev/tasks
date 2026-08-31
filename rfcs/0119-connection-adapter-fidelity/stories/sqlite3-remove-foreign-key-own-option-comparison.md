@@ -1,6 +1,6 @@
 ---
 title: "Port SQLite3 remove_foreign_key's own option comparison instead of reusing defined_for?"
-status: claimed
+status: done
 updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 7288
 claim: "2026-08-31T12:34:13Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null

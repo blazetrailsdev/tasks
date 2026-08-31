@@ -1,7 +1,7 @@
 ---
 title: "adapterNameFromConfig collapses Rails adapter spellings into three families"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-08-31
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-08-31T13:54:11Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---
