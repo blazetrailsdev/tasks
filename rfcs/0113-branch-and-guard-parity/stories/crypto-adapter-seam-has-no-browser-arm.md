@@ -34,7 +34,7 @@ module specifier, so it is the friendliest to a browser bundle (`require("node:m
 at :299 and `import("node:crypto")` in `tryAutoRegisterNodeAsync()` at :338 both
 need a bundler shim for a browser target).
 
-What the same PR *did* change for a browser: `Instrumenter#uniqueId`
+What the same PR _did_ change for a browser: `Instrumenter#uniqueId`
 (`notifications/instrumenter.ts:296-298`) previously wrapped the seam in a
 `try/catch` falling back to `crypto.getRandomValues`, which browsers have. That
 fallback was removed on fidelity grounds — `SecureRandom.hex(10)` at
@@ -45,7 +45,7 @@ throws `No crypto adapter configured` where it used to work.
 
 Registering a browser adapter through the existing seam
 (`registerCryptoAdapter()` / `cryptoAdapterConfig.adapter`) is the intended
-answer, but a Web Crypto adapter cannot be a *complete* one, which is why PR
+answer, but a Web Crypto adapter cannot be a _complete_ one, which is why PR
 #7272 deliberately did not register one:
 
 - Web Crypto serves `randomBytes` (`crypto.getRandomValues`) and `randomUUID`
@@ -81,7 +81,7 @@ Decide and record, in one place rather than per call site:
 1. Whether the browser is a supported target for `activesupport` at all. If it
    is not, say so at the seam and close this story — the current behavior
    (a clear throw) is then already correct.
-2. If it is: whether the randomness-only subset is a *declarable* partial
+2. If it is: whether the randomness-only subset is a _declarable_ partial
    adapter — a registered adapter that answers `randomBytes` / `randomUUID`
    and throws a seam-level "this adapter does not implement createHash"
    error naming the missing member, instead of the bare
