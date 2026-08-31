@@ -5,10 +5,10 @@ updated: 2026-08-14
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
-deps: []
+deps: ["port-execution-wrapper-and-reloader"]
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 51
 pr: null
 claim: null
 assignee: null

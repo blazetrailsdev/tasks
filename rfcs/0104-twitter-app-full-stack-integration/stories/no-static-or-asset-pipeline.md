@@ -5,11 +5,10 @@ updated: 2026-08-14
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["actionpack", "trailties"]
-deps:
-  - splice-finisher-initializers
+deps: ["splice-finisher-initializers"]
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 15
 pr: null
 claim: null
 assignee: null

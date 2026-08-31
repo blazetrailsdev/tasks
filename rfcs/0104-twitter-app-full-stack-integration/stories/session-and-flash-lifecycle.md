@@ -9,7 +9,7 @@ deps:
   - splice-finisher-initializers
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null

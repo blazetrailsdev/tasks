@@ -5,10 +5,10 @@ updated: 2026-08-14
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
-deps: []
+deps: ["generate-app-subclassing-application"]
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 38
 pr: null
 claim: null
 assignee: null

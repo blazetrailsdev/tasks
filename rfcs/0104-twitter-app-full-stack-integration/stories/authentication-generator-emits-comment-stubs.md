@@ -5,10 +5,10 @@ updated: 2026-08-13
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["trailties"]
-deps: []
+deps: ["has-secure-password-unported", "session-and-flash-lifecycle", "register-generators-by-lookup"]
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 32
 pr: null
 claim: null
 assignee: null

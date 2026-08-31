@@ -85,3 +85,26 @@ porting more ActionView surface — it is deleting
 `Trailties.Application`, which means splicing `Finisher`, making
 `trails new` generate an app that subclasses `Application`, and moving
 controller/route loading into initializers where Rails puts it.
+
+### Ranked order (2026-08-30)
+
+`priority:` is now set on every open story (lower N first), in five bands:
+
+- **10s — serve a real request.** The Rack/Node handler, helpers in `.tse`
+  scope, a TypeScript loader for app code, session/flash, `has_secure_password`,
+  static files. Without these an app boots but cannot render a page a user
+  would recognise, log in, or load its own stylesheet.
+- **20s — boot completeness and correct output.** The remaining `Engine` /
+  `Finisher` initializers, `CollectionProxy#length`, the date helpers'
+  `Temporal.Instant` gap, `ViewPaths` on `ActionController::Base`, the
+  `LookupContext` resolver unification, `db migrate`.
+- **30s — `trails new` output that runs.** Generator fidelity: model base
+  class, generator lookup, the authentication generator's stubs, the sqlite
+  `storage/` path, `--name`, `load_defaults` / `autoload_lib` / `load_server`.
+- **40s — convergences on paths that already work.** `Metal.dispatch`, the
+  per-route dispatcher, `Engine.endpoint`, `draw_paths`,
+  `railties_initializers`, `Configuration#root`, `Static`'s positional path,
+  `require_application!`, the two Rack request/input gaps.
+- **50s — large or peripheral.** `ExecutionWrapper`/`Reloader` and the routes
+  reloader hook that depends on it, ESM adapter priming, scope typing,
+  `trails-tsc`, the unused-routes command.
