@@ -33,7 +33,7 @@ The divergences, each with its Ruby anchor:
 
 - **The authority/host/port cluster.** `authority`
   (`request.rb:265-267`) is `forwarded_authority || host_authority ||
-  server_authority`; trails computes `host:port` from the raw env.
+server_authority`; trails computes `host:port` from the raw env.
   `host` (`request.rb:330-332`) is `split_authority(self.authority)[0]`;
   trails reads `HTTP_HOST` directly. `server_authority`
   (`request.rb:271-281`), `port` (`request.rb:342-348`) and `server_port`
