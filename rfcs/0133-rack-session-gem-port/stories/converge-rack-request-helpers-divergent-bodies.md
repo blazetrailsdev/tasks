@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 `port-the-rest-of-rack-request-helpers` (#7338) moved every member
-`Rack::Request::Helpers` defines (`vendor/rack/lib/rack/request.rb:149-664`)
+`Rack::Request::Helpers` defines (`vendor/rack/lib/rack/request.rb:149-787`)
 out of the `Rack::Request` class body and into the `Helpers` class module in
 `packages/rack/src/request.ts`. That move was mechanical by design — bodies
 changed host, not content — and it surfaced that a cluster of those bodies do
@@ -32,36 +32,40 @@ bodies. So none of this is caught today.
 The divergences, each with its Ruby anchor:
 
 - **The authority/host/port cluster.** `authority`
-  (`request.rb:265-267`) is `forwarded_authority || host_authority ||
+  (`request.rb:266-268`) is `forwarded_authority || host_authority ||
 server_authority`; trails computes `host:port` from the raw env.
-  `host` (`request.rb:330-332`) is `split_authority(self.authority)[0]`;
+  `host` (`request.rb:333-335`) is `split_authority(self.authority)[0]`;
   trails reads `HTTP_HOST` directly. `server_authority`
-  (`request.rb:271-281`), `port` (`request.rb:342-348`) and `server_port`
-  (`request.rb:287-289`, which returns the raw header where trails
+  (`request.rb:272-283`), `port` (`request.rb:345-351`) and `server_port`
+  (`request.rb:289-291`, which returns the raw header where trails
   `parseInt`s it) all follow from those two. `host_with_port`
-  (`request.rb:319-327`) takes an `authority = self.authority` parameter and
+  (`request.rb:322-330`) takes an `authority = self.authority` parameter and
   compares its port against `DEFAULT_PORTS[scheme]`; trails has it as a bare
   alias for `authority`, and `DEFAULT_PORTS` (`request.rb:168`) is unported.
 - **`ip` / `trusted_proxy?`.** Ruby routes both through
-  `Rack::Request.ip_filter` (`request.rb:47-58`, `603-605`), and `ip`
-  (`request.rb:410-427`) is four lines over `split_header`,
+  `Rack::Request.ip_filter` (`request.rb:47-58`, `615-617`), and `ip`
+  (`request.rb:414-433`) is four lines over `split_header`,
   `reject_trusted_ip_addresses` and `forwarded_for`. trails reads an invented
   `rack.request.trusted_proxy` env key that Rack has no notion of, hand-rolls
   the chain walk, and leaves `Request.ipFilter` permanently `null` and never
   read. `packages/rack/src/request.test.ts:1324-1390` pins the invented key,
   so those cases go with it.
-- **`cookies`** (`request.rb:291-303`) memoizes one hash and `replace`s its
+- **`cookies`** (`request.rb:293-306`) memoizes one hash and `replace`s its
   contents in place from `Utils.parse_cookies_header`; trails parses into a
   fresh object each miss through a file-local `parseCookies`, never calling
   the ported `parseCookiesHeader` (`packages/rack/src/utils.ts:242`).
-- **`GET` / `POST`** (`request.rb:479-491`, `497-539`): no
+- **`GET` / `POST`** (`request.rb:484-497`, `503-551`): no
   `RACK_REQUEST_FORM_ERROR` arm, no `form_input.equal?(rack_input)` identity
   check, and `POST` does not route multipart pairs through
   `expand_param_pairs`.
-- **`fullpath`** (`request.rb:591-593`) is
+- **`fullpath`** (`request.rb:603-605`) is
   `query_string.empty? ? path : "#{path}?#{query_string}"`; trails rebuilds
   the string from `script_name` and `path_info` rather than calling `path`.
-- **`values_at`** (`request.rb:608-612`) lacks the deprecation `warn`.
+- **`values_at`** (`request.rb:620-624`) lacks the deprecation `warn`.
+- **`content_length`** (`request.rb:199`) is `get_header('CONTENT_LENGTH')` —
+  the raw header string, unconverted. trails `parseInt`s it and returns a
+  `number | null`, so a caller cannot tell an absent header from a malformed
+  one, and the type differs from every other one-line accessor beside it.
 
 ## Acceptance criteria
 
