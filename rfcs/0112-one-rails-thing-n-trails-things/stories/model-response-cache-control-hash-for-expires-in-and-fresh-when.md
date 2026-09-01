@@ -25,11 +25,11 @@ conditional-GET writers merge into it:
 - `actionpack/lib/action_controller/metal/conditional_get.rb:290-302`
   `expires_in` — `response.cache_control.delete(:no_store)`, then
   `response.cache_control.merge!(max_age:, public:, must_revalidate:,
-  stale_while_revalidate:, stale_if_error:, immutable:)` pulling each through
+stale_while_revalidate:, stale_if_error:, immutable:)` pulling each through
   `options.delete`, then `options.delete(:private)` and
   `response.cache_control[:extras] = options.map { |k, v| "#{k}=#{v}" }`.
 - `conditional_get.rb:137-155` `fresh_when` — `response.cache_control.delete(
-  :no_store)` up front, `response.cache_control[:public] = true if public`, and
+:no_store)` up front, `response.cache_control[:public] = true if public`, and
   `response.cache_control.merge!(cache_control)` for the `cache_control:` kwarg.
 
 trails has no such hash. `packages/actionpack/src/action-controller/base.ts

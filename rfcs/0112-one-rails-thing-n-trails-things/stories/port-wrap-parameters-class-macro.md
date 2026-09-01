@@ -61,13 +61,13 @@ left baselined naming that, rather than converged.
 - `wrapParameters` ports `params_wrapper.rb:221-240` as the class macro: the
   four-armed `case` in Rails' order, Rails' parameter names
   (`nameOrModelOrOptions`, `options`), and the `Options.fromHash(slice(
-  _wrapperOptions.toH(), "format") merged with options)` construction, setting
+_wrapperOptions.toH(), "format") merged with options)` construction, setting
   `model`, `klass` and then `_wrapperOptions`.
 - The wrapping helper the name currently holds moves to the Rails member it
   actually is (`_wrapParameters` / `_extractParameters`,
   `params_wrapper.rb:277-297`) or is folded into the existing one, so no Rails
   name binds a body Rails does not have there. `pnpm parity:api:extra --package
-  actioncontroller` gains nothing.
+actioncontroller` gains nothing.
 - The `merge` and `slice` rows are deleted from
   `call-mismatches-exclude/actioncontroller/metal/params-wrapper.json` by hand
   (only-shrink, never a reseed); stale marks narrowed with
