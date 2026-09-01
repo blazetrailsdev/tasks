@@ -2,7 +2,7 @@
 title: "Dirty readers self-send resolve_attribute_name where Rails only does attr_name.to_s"
 status: draft
 updated: 2026-08-24
-rfc: "0000-activemodel-surfaced-deviations"
+rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
   - "activemodel"

@@ -2,7 +2,7 @@
 title: "activemodel: isValid inlines the validation-callback wrap Rails keeps in validations/callbacks.rb"
 status: ready
 updated: 2026-09-01
-rfc: "0000-activemodel-surfaced-deviations"
+rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages: ["activemodel"]
 deps: []

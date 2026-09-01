@@ -2,7 +2,7 @@
 title: "activemodel: receipt the no-counterpart utility files — sentinels, codecs, index barrel, trailtie, _accessor, MutableModule, TypeRegistry"
 status: ready
 updated: 2026-09-01
-rfc: "0000-activemodel-surfaced-deviations"
+rfc: "0134-activemodel-surfaced-deviations"
 cluster: receipt-hygiene
 packages: ["activemodel"]
 deps: []

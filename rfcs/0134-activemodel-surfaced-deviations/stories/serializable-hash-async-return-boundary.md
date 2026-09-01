@@ -2,7 +2,7 @@
 title: "Decide serializableHash / asJson return shape across the sync/async boundary"
 status: draft
 updated: 2026-08-23
-rfc: "0000-activemodel-surfaced-deviations"
+rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm
 packages:
   - "activemodel"

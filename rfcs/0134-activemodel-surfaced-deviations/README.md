@@ -1,5 +1,5 @@
 ---
-rfc: "0000-activemodel-surfaced-deviations"
+rfc: "0134-activemodel-surfaced-deviations"
 title: "ActiveModel surfaced deviations — the package's deviation bucket, taking custody from 0023 and adding the 2026-09-01 fidelity audit's findings"
 status: draft
 created: 2026-09-01
@@ -24,7 +24,7 @@ related-rfcs:
   - "0129-ruby-compat"
 ---
 
-# RFC — ActiveModel surfaced deviations
+# RFC 0134 — ActiveModel surfaced deviations
 
 The `activemodel-surfaced-deviations` bucket, following 0124's precedent for
 arel: activemodel's deviation findings are pulled out of the

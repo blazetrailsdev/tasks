@@ -2,7 +2,7 @@
 title: "activemodel: take custody of the ~74 remaining activemodel-labelled stories in 0023"
 status: ready
 updated: 2026-09-01
-rfc: "0000-activemodel-surfaced-deviations"
+rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages: ["activemodel"]
 deps: []

@@ -2,7 +2,7 @@
 title: "activemodel: parity:api and parity:api:extra disagree about ModelName vs Rails' Name"
 status: ready
 updated: 2026-09-01
-rfc: "0000-activemodel-surfaced-deviations"
+rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm
 packages: ["activemodel"]
 deps: []

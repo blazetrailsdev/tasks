@@ -2,7 +2,7 @@
 title: "activemodel: Attribute#withUserDefault guards a slot read with an invented throw"
 status: ready
 updated: 2026-09-01
-rfc: "0000-activemodel-surfaced-deviations"
+rfc: "0134-activemodel-surfaced-deviations"
 cluster: guard-parity
 packages: ["activemodel"]
 deps: []
