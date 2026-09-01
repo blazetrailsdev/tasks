@@ -54,7 +54,7 @@ The remaining question is which spelling survives, not whether both should.
 ## Acceptance criteria
 
 - One spelling of `delegate :formats, :formats=, :locale, :locale=, to:
-  :lookup_context` remains. Either the `view-paths.ts` functions are deleted as
+:lookup_context` remains. Either the `view-paths.ts` functions are deleted as
   unreachable, or `base.ts` is made to route through them (which requires
   splitting the overload pairs so `.call` can pick a signature — note that
   changes `view-paths.ts`'s existing exported shape).
