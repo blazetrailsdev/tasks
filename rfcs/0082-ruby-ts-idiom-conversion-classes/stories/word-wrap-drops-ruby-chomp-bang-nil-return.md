@@ -26,7 +26,7 @@ the method's actual return value:
 text.gsub(pattern, "\\1#{break_sequence}").chomp!(break_sequence)
 ```
 
-`String#chomp!` (`vendor/ruby/string.c:9808` `rb_str_chomp_bang`) returns `nil`
+`String#chomp!` (`vendor/ruby/string.c:9766` `rb_str_chomp_bang`) returns `nil`
 when it removes nothing, so Rails' `word_wrap` returns `nil` — not the wrapped
 text — whenever the gsub result does not end in `break_sequence`.
 
@@ -76,7 +76,7 @@ widening.
 ## Acceptance criteria
 
 - `chompBang` exists in ruby-compat with a resolving
-  `vendor/ruby/string.c:9808` citation and a `@noRailsEquivalent PERMANENT`
+  `vendor/ruby/string.c:9766` citation and a `@noRailsEquivalent PERMANENT`
   receipt, and returns `null` exactly where MRI returns `nil` (verify against
   `ruby -e`, which is on PATH).
 - `text-helper.ts:253` calls it, and `wordWrap`'s signature reflects the
