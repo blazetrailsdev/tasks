@@ -1,5 +1,5 @@
 ---
-title: "Move Persisted, PersistedSecure, SessionId and Pool out of actionpack into rack-session behind a re-export shim"
+title: "Move Persisted, PersistedSecure and SessionId out of actionpack into rack-session behind a re-export shim"
 status: done
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
