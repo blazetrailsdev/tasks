@@ -190,7 +190,7 @@ family, not a lone story:
 `class-body-reader-suppresses-generated-writer` declares
 `deps: ["bare-pattern-generates-reader-not-accessor-property"]`, which the
 custody pass closed as converged, and its "Converged shape" is premised on
-readers becoming generated *methods* rather than accessor properties. CLAUDE.md
+readers becoming generated _methods_ rather than accessor properties. CLAUDE.md
 ratifies the opposite ("Generated attribute readers are properties"), so that
 premise cannot land as written. The dep does not block — the ready queue treats
 `closed` as resolved — and a custody transfer does not rewrite bodies, so it is
