@@ -88,7 +88,7 @@ ruby-compat is a follow-up this story files with the counts it measures.
 - [ ] activesupport is ungated for extra surface today
       (`scripts/api-compare/extra-surface-mark.json` gates only activerecord,
       arel, ruby-compat), so state the measured `pnpm parity:api:extra --package
-      activesupport` before/after in the PR body rather than relying on a gate
+    activesupport` before/after in the PR body rather than relying on a gate
       to catch a regression.
 - [ ] If any name lands in ruby-compat, note that ruby-compat is **pinned at
       `novel: 0`** — the only remedies are a receipt at the declaration or not

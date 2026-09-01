@@ -33,13 +33,11 @@ the built output, not `src/`):
 
 So the browser-friendly claim holds **by luck**, not by construction. The gap:
 
-**`packages/ruby-compat/src/**` is absent from the `no-node-builtins` lint's
-`files` list.** `eslint.config.mjs:213-250` scopes
-`blazetrails/no-node-builtins` to arel, activemodel, activerecord,
+**`packages/ruby-compat/src/**`is absent from the`no-node-builtins`lint's`files`list.**`eslint.config.mjs:213-250`scopes`blazetrails/no-node-builtins`to arel, activemodel, activerecord,
 activesupport, rack, actionpack and actionview. The one package whose entire
 reason for existing is to be a dependency-free MRI-primitives leaf is the one
 package the browser-compat rule does not cover. A future story that adds, say,
-a `Digest` or `Tempfile` seat and reaches for `node:crypto` gets no lint, and
+a`Digest`or`Tempfile`seat and reaches for`node:crypto` gets no lint, and
 the leaf rule fails silently.
 
 A lint alone is also not sufficient, because it only sees this package's own
