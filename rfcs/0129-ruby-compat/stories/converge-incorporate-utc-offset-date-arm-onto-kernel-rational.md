@@ -18,8 +18,7 @@ closed-reason: null
 
 ## Context
 
-Surfaced while auditing the remaining `Kernel#Rational()` call sites in PR
-#7316 (`converge-remaining-kernel-rational-call-sites`, RFC 0129).
+Surfaced while auditing the remaining `Kernel#Rational()` call sites in PR #7316 (`converge-remaining-kernel-rational-call-sites`, RFC 0129).
 
 `TimeWithZone#incorporate_utc_offset`'s Date arm is
 

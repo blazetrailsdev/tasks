@@ -24,7 +24,7 @@ otherwise Rails-anchored `core_ext` file (Non-goals, "Rails-anchored
 `core_ext/string/*.rb` — has exactly **two** such members, and
 `parity:api:extra --package activesupport` names them:
 
-```
+```text
 string-utils.ts — 2 novel, 10 moved
   chomp   ord   | at exclude first from indent isBlank isPresent last stripHeredoc to
 ```

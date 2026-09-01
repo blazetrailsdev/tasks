@@ -20,7 +20,7 @@ closed-reason: null
 
 `0023-surfaced-deviations` is the retired catch-all. Counted 2026-09-01:
 
-```
+```console
 grep -l '"activemodel"' rfcs/0023-surfaced-deviations/stories/*.md | wc -l   # ~80
 ```
 

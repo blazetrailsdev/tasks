@@ -27,7 +27,7 @@ yet; this is it.
 
 The file's receipt is already `PERMANENT` and already says where it belongs:
 
-```
+```text
 @noRailsEquivalent PERMANENT `empty?` is Ruby core, not Rails — see the note
 above, and `activerecord/src/ruby-truthy.ts` for the sibling.
 ```

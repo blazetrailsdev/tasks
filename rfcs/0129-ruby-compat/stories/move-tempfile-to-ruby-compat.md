@@ -23,7 +23,7 @@ mirrors `tempfile.rb`'s `Tempfile`, which Rails uses (`ActionDispatch::Http::
 UploadedFile`, `ActiveStorage`) but never declares. It is the last member of
 the group RFC 0129 exists to relocate, and its own receipt says so:
 
-```
+```text
 @noRailsEquivalent CONVERGEABLE — `Tempfile` is Ruby stdlib rather than
   Rails, so it has no `vendor/rails` anchor and no natural package.
 ```

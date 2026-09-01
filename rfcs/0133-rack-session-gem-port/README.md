@@ -99,7 +99,7 @@ queue up more work on the same files.
    against a clone of `rack-session` `v2.1.0`, this repo's own extractor
    reports:
 
-   ```
+   ```console
    $ LOCKFILE_PATH=$PWD/vendor/sources.lock.json \
      LIB_PATHS_JSON='{"rack-session":".../rs/lib/rack/session"}' \
      ruby scripts/api-compare/extract-ruby-api.rb
@@ -113,7 +113,7 @@ queue up more work on the same files.
    that would actually prove the port correct. The same tooling reads it
    unmodified:
 
-   ```
+   ```console
    $ TEST_PATHS_JSON='{"rack-session":".../rs/test"}' \
      ruby scripts/test-compare/extract-ruby-tests.rb
    Processing rack-session: 7 test files...

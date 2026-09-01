@@ -26,7 +26,7 @@ canonical copy — a move, not a convergence"). It has no story yet; this is it.
 
 Its own receipt already states the verdict:
 
-```
+```text
 @noRailsEquivalent PERMANENT — `Object#hash` / `Array#hash` are C primitives
   (object.c, array.c), not Ruby methods, so they have no counterpart file.
 ```

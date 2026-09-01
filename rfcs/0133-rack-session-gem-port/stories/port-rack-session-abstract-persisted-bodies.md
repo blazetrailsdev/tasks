@@ -29,7 +29,7 @@ read line for line for the first time. This story does that pass.
 
 `Persisted` is `abstract/id.rb:239-458` — 25 methods:
 
-```
+```text
 initialize :257   call :267   context :271   make_request :282
 initialize_sid :286   generate_sid :296   prepare_session :309
 load_session :320   extract_session_id :328   current_session_id :336

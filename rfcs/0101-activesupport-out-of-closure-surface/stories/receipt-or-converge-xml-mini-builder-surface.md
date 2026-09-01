@@ -22,7 +22,7 @@ Measured on the merge commit of `credit-ruby-hash-and-option-keys-as-ruby-surfac
 (RFC 0126, PR #7193), `packages/activesupport/src/xml-mini.ts` reports **5 novel**
 names, none of which carries a receipt:
 
-```
+```text
 closeTag, instruct, openTag, XmlStringBuilder, IndentedXmlStringBuilder
 ```
 

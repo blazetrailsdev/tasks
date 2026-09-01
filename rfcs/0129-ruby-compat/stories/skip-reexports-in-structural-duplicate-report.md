@@ -22,7 +22,7 @@ closed-reason: null
 declaration twice — once at its real file and once at the package barrel. Both
 real findings in the first run showed up doubled:
 
-```
+```text
 except (4)
   activesupport/hash-utils.ts:147  except
   activesupport/index.ts:147  except        <- the same declaration

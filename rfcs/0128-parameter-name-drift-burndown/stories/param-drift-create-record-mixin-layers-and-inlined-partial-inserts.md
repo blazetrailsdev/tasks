@@ -47,7 +47,7 @@ Current TS:
 ## Converged shape
 
 `_createRecord(attributeNames, superFn)` in both mixin files, exactly as PR
-#7201 did for `_updateRecord`: `attributeNames ??= <the Rails default for that
+PR #7201 did for `_updateRecord`: `attributeNames ??= <the Rails default for that
 layer>` then `superFn(attributeNames)`, with `callbacks.ts` threading the
 resolved list down.
 

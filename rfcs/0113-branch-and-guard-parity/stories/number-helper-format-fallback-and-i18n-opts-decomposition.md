@@ -19,8 +19,7 @@ closed-reason: null
 ## Context
 
 Surfaced while verifying `converge-number-helper-percentage-currency-converters`
-(PR #7263 — the two converter bodies named there were already converged by
-#6513, but two smaller divergences in the same pair are still open).
+(PR #7263 — the two converter bodies named there were already converged by #6513, but two smaller divergences in the same pair are still open).
 
 ### 1. An invented `format` fallback in the percentage converter
 

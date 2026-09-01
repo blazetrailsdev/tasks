@@ -18,8 +18,7 @@ closed-reason: "0089 superseded by 0129-ruby-compat, which lists URI as deferred
 
 ## Context
 
-Two `"call": "escape"` rows survive in the call-mismatch baseline after PR
-#7169 removed the seven `Regexp.escape` ones. Both are the SAME unported
+Two `"call": "escape"` rows survive in the call-mismatch baseline after PR #7169 removed the seven `Regexp.escape` ones. Both are the SAME unported
 primitive — Ruby stdlib's URI parser escape, not `Regexp.escape`:
 
 - `Rack::Utils.escape_path` is `URI_PARSER.escape s`

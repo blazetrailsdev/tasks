@@ -23,7 +23,7 @@ throws `TypeError: BigDecimal: cannot parse Infinity` for `Infinity`, `-Infinity
 and `NaN`. Ruby's BigDecimal accepts all three — verified against MRI on this
 host:
 
-```
+```console
 $ ruby -rbigdecimal -e 'p BigDecimal(Float::INFINITY); p BigDecimal(Float::NAN)'
 Infinity
 NaN

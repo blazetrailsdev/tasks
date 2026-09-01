@@ -31,7 +31,7 @@ a klass` ×3.
   `deleting updates counter cache with dependent destroy` ×3, `create with bang
 on has many when parent is new raises` ×2.
 - `packages/arel/src/attributes/math.test.ts` — five names ending `should be
-compatible with ` (a trailing-space title) each ×2.
+compatible with` (a trailing-space title) each ×2.
 - `packages/arel/src/attributes/attribute.test.ts` — `AttributeTest > #eq_all >
 should create a Grouping node` ×2.
 - `packages/activerecord/src/associations/eager-load-includes-full-sti-class.test.ts`
@@ -48,7 +48,7 @@ determine which of the two applies:
 
 - **The Rails names differ** and the port collapsed them — restore the Rails
   spelling on each, verbatim. This is the expected outcome for `math.test.ts`'s
-  `should be compatible with ` family and for the `#eq_all` group, whose Rails
+  `should be compatible with` family and for the `#eq_all` group, whose Rails
   twins are distinguished by the operand.
 - **Rails genuinely has one test** and the TS file split it into several — fold
   them back into one `it()` with the Rails name, or move the extra coverage to a

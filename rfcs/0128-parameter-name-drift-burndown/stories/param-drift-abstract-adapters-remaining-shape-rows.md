@@ -27,7 +27,7 @@ without them.
 
 `API_COMPARE_FORCE=1 pnpm parity:api --package activerecord --params`:
 
-```
+```text
 connection-adapters/abstract/database-statements.ts:execute  @1  ruby `name`  ts `binds`
 connection-adapters/abstract/database-statements.ts:execute  @2  ruby `allowRetry`  ts `name`
 connection-adapters/abstract/schema-definitions.ts:checkConstraintExists  @0  ruby `args`  ts `tableName`

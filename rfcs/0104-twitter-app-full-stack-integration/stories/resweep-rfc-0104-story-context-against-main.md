@@ -23,7 +23,7 @@ full-stack app that **does not exist in this repo**. `examples/` holds only
 `twitter-clone`, a plain ActiveRecord example — no controllers, no layout, no
 `config/application.ts`, no `src/server.ts`:
 
-```
+```console
 $ ls examples/
 twitter-clone
 $ grep -rn "withStaticFiles\|digestPassword\|twitter-app" --include=*.ts .

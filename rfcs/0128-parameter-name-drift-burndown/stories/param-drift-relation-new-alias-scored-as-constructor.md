@@ -22,7 +22,7 @@ closed-reason: null
 the 61 measured parameter-name rows in `relation.rb`, `relation/**` and
 `scoping.rb`. One row survives, and it is not parameter drift:
 
-```
+```text
 relation.rb  relation.ts  new -> constructor  @0  ruby=attributes  ts=options
 ```
 

@@ -24,7 +24,7 @@ invented `checkIntegerRange` name, `pnpm parity:api:extra --package activerecord
 reports exactly one remaining novel name in
 `packages/activerecord/src/connection-adapters/postgresql/quoting.ts`:
 
-```
+```text
   connection-adapters/postgresql/quoting.ts — 1 novel, 0 moved
     quoteBinaryColumn
 ```

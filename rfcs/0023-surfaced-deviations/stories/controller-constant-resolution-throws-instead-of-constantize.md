@@ -120,7 +120,7 @@ New since this story was written: `ActionDispatch::MissingController`
 (`action_dispatch.rb:50`) now exists in trails, so the rescue arms have the
 error class they need to raise.
 
-#7286 tagged `controllerConstants` `@noRailsEquivalent PERMANENT` on the
+PR #7286 tagged `controllerConstants` `@noRailsEquivalent PERMANENT` on the
 grounds that ESM has no `const_missing`. That justification covers _eager
 population_ but not _a separate table_ — activesupport already has the one
 `constantize` reads. When this story lands, that receipt should be deleted

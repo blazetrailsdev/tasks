@@ -22,7 +22,7 @@ closed-reason: null
 `railties/test/application/initializers/finisher_test.rb`, and its header
 comment says so — but **that Rails file does not exist**:
 
-```
+```console
 $ ls vendor/rails/railties/test/application/initializers/
 frameworks_test.rb  hooks_test.rb  i18n_test.rb  load_path_test.rb  notifications_test.rb
 ```

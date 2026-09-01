@@ -37,7 +37,7 @@ const LOOP_SKELETON_NAMES = new Set(
 
 In practice that intersection is `{each, forEach}` and nothing else. Verified:
 
-```
+```text
 foldSkeletonTokens(["ref:each","ref:each_value","ref:each_with_index","ref:filter_map",
                     "ref:map","ref:each_pair","ref:each_key","ref:reverse_each",
                     "ref:each_with_object","ref:forEach"])

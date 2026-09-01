@@ -46,8 +46,7 @@ Each was defensible when RFC 0106's `audit-missing-rails-call-permanence-claims`
 (done, #6855) reviewed them, because no callable TS `fetch` existed. RFC 0129's
 `Hash#fetch` (`packages/ruby-compat/src/hash.ts`, the port of `rb_hash_fetch_m`,
 `vendor/ruby/hash.c:2176`) is that call form, so the premise the `PERMANENT`
-claim rests on is gone. `port-hash-fetch-semantics-validate-and-seeds` (done,
-#6673) is the behavioural reference for the two-arm semantics.
+claim rests on is gone. `port-hash-fetch-semantics-validate-and-seeds` (done, #6673) is the behavioural reference for the two-arm semantics.
 
 A receipt is retired **by making the call**, never by rewording it. `fetch` is
 listed in `AMBIGUOUS_RUBY_CALLS` (`scripts/parity/ruby-compat.ts:60`) because

@@ -12,7 +12,7 @@
  * could disagree with the first.
  */
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { Rfc } from "./models/index.js";
 import { currentBranch, mainWorktree } from "./db-path.js";
@@ -159,6 +159,24 @@ export async function newStory(
       date: new Date().toISOString().slice(0, 10),
     }),
   );
+
+  // Catch a bad-markdown body HERE, at authoring time, not on main's CI. This is
+  // the same `.markdownlint-cli2.jsonc` config `pnpm lint` runs against the
+  // whole repo, scoped to just the file just written so `tasks new` stays fast.
+  // A bare-``` fence (MD040) or a `#NNNN` PR reference misread as a heading
+  // (MD018) is exactly the recurring pattern that reds `pnpm lint` on main —
+  // reject it before it is committed, rather than baselining or disabling the
+  // rule once main is already red.
+  try {
+    execFileSync("node_modules/.bin/markdownlint-cli2", [rel], { cwd: tasksDir, encoding: "utf8" });
+  } catch (e) {
+    rmSync(abs);
+    const out = [(e as { stdout?: string }).stdout, (e as { stderr?: string }).stderr]
+      .filter(Boolean)
+      .join("\n");
+    console.error(`error: ${rel} fails markdownlint — story not written.\n\n${out}`);
+    throw new VerbExit(1);
+  }
 
   let committed = false;
   if (opts.commit !== false) {

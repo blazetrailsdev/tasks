@@ -59,7 +59,7 @@ anchors: `SessionId` `abstract/id.rb:21`, `SessionHash` `:50`, `Persisted`
 Both of this repo's extractors already run over the clone unmodified — verified
 before writing this story:
 
-```
+```console
 LOCKFILE_PATH=$PWD/vendor/sources.lock.json LIB_PATHS_JSON='{"rack-session":"<clone>/lib/rack/session"}' \
   ruby scripts/api-compare/extract-ruby-api.rb
   → rack-session: 19 classes, 3 modules, 78 public methods (46 internal)

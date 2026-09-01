@@ -46,7 +46,7 @@ throws `No crypto adapter configured` where it used to work.
 Registering a browser adapter through the existing seam
 (`registerCryptoAdapter()` / `cryptoAdapterConfig.adapter`) is the intended
 answer, but a Web Crypto adapter cannot be a _complete_ one, which is why PR
-#7272 deliberately did not register one:
+PR #7272 deliberately did not register one:
 
 - Web Crypto serves `randomBytes` (`crypto.getRandomValues`) and `randomUUID`
   (`crypto.randomUUID`).

@@ -24,7 +24,7 @@ put the call name `escape` into the ported-call population for the first time.
 That surfaced seven PRE-EXISTING divergences: Ruby bodies calling
 `Regexp.escape` whose TS ports do the same escaping under a different name, so
 the call-set gate scores the Rails call as omitted. All seven were baselined by
-#7166 with a shared reason; the rows are the debt.
+PR #7166 with a shared reason; the rows are the debt.
 
 | baseline row                                                                    | Ruby call site                                 | TS spelling                                          |
 | ------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------- |

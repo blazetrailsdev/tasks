@@ -24,7 +24,7 @@ not a rename — they are the whole adapter family's signature.
 
 `API_COMPARE_FORCE=1 pnpm parity:api --package activerecord --params`:
 
-```
+```text
 connection-adapters/abstract/database-statements.ts:execute  @1  ruby `name`  ts `binds`
 connection-adapters/abstract/database-statements.ts:execute  @2  ruby `allowRetry`  ts `name`
 ```

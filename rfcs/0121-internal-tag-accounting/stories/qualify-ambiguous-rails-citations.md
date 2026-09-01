@@ -18,7 +18,7 @@ closed-reason: "The cite ratchet it burns down is being deleted by no-freeform-c
 
 ## Context
 
-#7165 landed the citation checker (`scripts/api-compare/cites.ts`,
+PR #7165 landed the citation checker (`scripts/api-compare/cites.ts`,
 `pnpm parity:api:cites`, RFC 0121) and seeded
 `scripts/api-compare/cite-mark.json` at **130** unverifiable citations. Every
 one of the 130 is the same `ambiguous` problem: the receipt cites a bare

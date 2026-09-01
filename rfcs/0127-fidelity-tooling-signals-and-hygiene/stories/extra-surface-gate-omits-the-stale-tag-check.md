@@ -31,7 +31,7 @@ still red CI on a tag it added.
 That is exactly what happened on PR #7295: `parity:api:extra:gate` was green
 across four rounds, and CI failed with
 
-```
+```text
 extra-surface: 1 STALE @noRailsEquivalent tag(s) on methods that no longer flag
 as extra surface ...
   - trailties  generators/app-generator.ts  pmRun

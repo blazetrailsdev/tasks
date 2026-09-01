@@ -53,7 +53,7 @@ Both remaining overrides reimplement the base body rather than delegating:
 Deleting the mysql2 override changes its return type from
 `Record<string, unknown>[]` to whatever the base returns, so this story is a
 behavioural change with call-site fallout — which is why it did not fit in
-#7225.
+PR #7225.
 
 Related but distinct: `route-adapters-through-raw-execute` covers the
 `internalExecute` / `internalExecQuery` overrides bypassing `rawExecute`. This

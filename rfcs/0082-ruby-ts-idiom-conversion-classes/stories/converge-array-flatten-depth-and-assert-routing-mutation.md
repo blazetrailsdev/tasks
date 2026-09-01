@@ -50,7 +50,7 @@ end
 ```
 
 `packages/actionpack/src/action-dispatch/testing/assertions/routing.ts:187`
-writes `options = { ...options, controller: `/${controller}` }` — a rebind, so
+writes ``options = { ...options, controller: `/${controller}` }`` — a rebind, so
 the caller's hash is left unchanged where Rails leaves it rewritten. The
 subsequent `assert_generates` sees the same value either way, so no test
 distinguishes them today; the divergence is visible to a caller that reads its

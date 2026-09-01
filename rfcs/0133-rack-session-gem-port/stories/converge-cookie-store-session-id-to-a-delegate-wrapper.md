@@ -32,8 +32,7 @@ Rails:
 
 trails ports it as `class SessionId extends RackSessionId`
 (`packages/actionpack/src/action-dispatch/middleware/session/cookie-store.ts:36`) —
-a subclass, not a delegating wrapper. The difference was invisible until PR
-#7328 moved `Rack::Session::SessionId` into `@blazetrails/rack-session` and
+a subclass, not a delegating wrapper. The difference was invisible until PR #7328 moved `Rack::Session::SessionId` into `@blazetrails/rack-session` and
 brought its `alias :cookie_value :public_id`
 (`vendor/rack-session/lib/rack/session/abstract/id.rb:34`) with it.
 

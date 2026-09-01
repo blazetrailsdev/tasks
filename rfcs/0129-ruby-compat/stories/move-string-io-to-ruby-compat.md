@@ -30,7 +30,7 @@ by the platform-adapter question.
 Its receipt already states the verdict, and the RFC's own precedent
 (`@blazetrails/date` standing in for the `date` gem) is the model:
 
-```
+```text
 @noRailsEquivalent PERMANENT — Ruby stdlib, not Rails: `StringIO` ships with
 the interpreter, so no Rails file defines it and no port can remove the need
 for it while `_parse_file` and `Rack::MockRequest` hand callers an IO.
