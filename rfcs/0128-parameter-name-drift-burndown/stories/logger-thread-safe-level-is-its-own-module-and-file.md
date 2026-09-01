@@ -1,14 +1,14 @@
 ---
 title: "logger-thread-safe-level-is-its-own-module-and-file"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

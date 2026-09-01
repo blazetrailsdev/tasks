@@ -1,14 +1,14 @@
 ---
 title: "param-drift-actioncontroller-flash-and-deep-merge-residue"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

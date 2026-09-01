@@ -1,14 +1,14 @@
 ---
 title: "test-compare drops half a file's Rails tests at the pairing stage"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

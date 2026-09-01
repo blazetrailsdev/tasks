@@ -1,14 +1,14 @@
 ---
 title: "define_method/class_eval bodies carry no calls, so the call gates never see them"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

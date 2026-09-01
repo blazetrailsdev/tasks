@@ -1,7 +1,7 @@
 ---
 title: "Port Rack::Session::Abstract::SessionHash and SecureSessionHash against the vendored source"
-status: draft
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: ["rack-session"]
@@ -9,7 +9,7 @@ deps: ["relocate-rack-session-scaffolding-out-of-actionpack"]
 deps-rfc: []
 est-loc: 450
 priority: 5
-pr: null
+pr: 7335
 claim: null
 assignee: null
 blocked-by: null

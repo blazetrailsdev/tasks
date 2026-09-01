@@ -1,14 +1,14 @@
 ---
 title: "TS extractor drops dynamically-named describe titles, losing an ancestor from every test inside"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

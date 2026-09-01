@@ -1,14 +1,14 @@
 ---
 title: "Nest sibling-class TS ports by class so parity:test's (class, name) keying applies"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "method-order-manifest-actionpack-package-dirs-are-stale"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

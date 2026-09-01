@@ -1,7 +1,7 @@
 ---
 title: "record-ruby-call-receiver-hints"
-status: ready
-updated: 2026-08-31
+status: done
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: 36
-pr: null
-claim: null
-assignee: null
+pr: 7334
+claim: "2026-09-01T13:01:27Z"
+assignee: "record-ruby-call-receiver-hints"
 blocked-by: null
 closed-reason: null
 ---

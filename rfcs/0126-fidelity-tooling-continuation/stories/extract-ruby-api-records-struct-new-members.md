@@ -1,14 +1,14 @@
 ---
 title: "extract-ruby-api.rb skips Struct.new members, so a faithful port of one scores as extra surface"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 110
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

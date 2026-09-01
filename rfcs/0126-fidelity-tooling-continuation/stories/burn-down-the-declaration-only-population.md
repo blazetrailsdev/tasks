@@ -1,14 +1,14 @@
 ---
 title: "burn-down-the-declaration-only-population"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 1500
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

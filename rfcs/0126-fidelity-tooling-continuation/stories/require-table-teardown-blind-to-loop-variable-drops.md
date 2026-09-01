@@ -1,14 +1,14 @@
 ---
 title: "require-table-teardown cannot read a dropTable() whose name is a loop variable"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

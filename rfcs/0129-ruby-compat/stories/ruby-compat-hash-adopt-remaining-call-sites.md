@@ -1,7 +1,7 @@
 ---
 title: "Adopt the Hash call form at the remaining 43 baselined call sites"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 37
-pr: null
-claim: null
-assignee: null
+pr: 7339
+claim: "2026-09-01T13:15:59Z"
+assignee: "ruby-compat-hash-adopt-remaining-call-sites"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,14 +1,14 @@
 ---
 title: "converge-and-gate-the-inlined-from-bucket"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

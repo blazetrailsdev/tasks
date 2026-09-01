@@ -1,14 +1,14 @@
 ---
 title: "api-compare: the Ruby extractor never reads a gem's top-level entry file (arel.rb), so arel.ts scores as novel"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

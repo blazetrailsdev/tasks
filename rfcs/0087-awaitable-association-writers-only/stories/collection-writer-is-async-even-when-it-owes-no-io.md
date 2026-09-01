@@ -1,6 +1,6 @@
 ---
 title: "Collection writer is unconditionally async even when the replace owes no I/O"
-status: ready
+status: in-progress
 updated: 2026-09-01
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 7337
+claim: "2026-09-01T13:13:23Z"
+assignee: "collection-writer-is-async-even-when-it-owes-no-io"
 blocked-by: null
 closed-reason: null
 ---

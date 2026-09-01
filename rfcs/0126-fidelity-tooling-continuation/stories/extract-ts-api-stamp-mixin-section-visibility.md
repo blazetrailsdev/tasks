@@ -1,7 +1,7 @@
 ---
 title: "extract-ts-api: stamp visibility from defineModule sections"
-status: blocked
-updated: 2026-08-28
+status: ready
+updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: ["activerecord"]
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 200
 priority: 2
 pr: null
-claim: "2026-08-28T23:50:47Z"
-assignee: "extract-ts-api-stamp-mixin-section-visibility"
-blocked-by: "Dep converge-public-instance-methods-onto-one-helper (RFC 0082) is status=draft and unshipped: defineModule() does not exist in origin/main (packages/activesupport/src/include.ts exports include/extend/prepend/isModuleIncluded only). Every acceptance criterion is written against the defineModule(publicSection, protectedSection, privateSection) call shape; the current declaration site is sibling exported consts (QueryMethodsProtectedInstanceMethods query-methods.ts:1895, QueryMethodsPrivateInstanceMethods :1904, SpawnMethodsPrivateInstanceMethods spawn-methods.ts:73), which the story's Context explicitly rejects as the shape to teach the extractor. Unblocks when the dep lands."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

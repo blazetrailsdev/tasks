@@ -1,14 +1,14 @@
 ---
 title: "rails-api / rails-tests shared-cache entries bypass the worktree-independence gate"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

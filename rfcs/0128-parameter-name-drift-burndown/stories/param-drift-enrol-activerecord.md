@@ -1,7 +1,7 @@
 ---
 title: "Enrol activerecord in the parameter-name gate once its six slices land"
-status: blocked
-updated: 2026-08-30
+status: ready
+updated: 2026-09-01
 rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
 packages:
@@ -20,7 +20,7 @@ priority: 8
 pr: null
 claim: null
 assignee: null
-blocked-by: "activerecord is at 6 param-name rows, not 0, measured on origin/main@f1ef395e8 with a full build under API_COMPARE_FORCE=1 (2472/2478 pairs). Two rows are owned by param-drift-activerecord-middleware-call-takes-env (database_selector/shard_selector call(env)); the other four are now filed as param-drift-activerecord-final-four-residual-rows (autosave_association reload, core initialize, insert_all quote_column, type lookup). Per this story's own acceptance criterion the residual rows are filed rather than absorbed into the mark, so unblock only once those two stories land and a --params run reports 0."
+blocked-by: null
 closed-reason: null
 ---
 
