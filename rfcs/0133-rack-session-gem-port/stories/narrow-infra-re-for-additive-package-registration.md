@@ -30,16 +30,16 @@ for a diff that cannot affect any of them. Observed on both #7319
 
 The distinction the filter cannot currently draw:
 
-- an *additive* registration — a new `packages/<pkg>` entry appended to
+- an _additive_ registration — a new `packages/<pkg>` entry appended to
   `tsconfig.json`'s `references`, a new alias in `vitest.config.ts`, and the
   lockfile entries for a package nothing yet imports — reaches no existing
   package's build or test;
-- a *real* config change — an edited `compilerOptions`, a changed alias target,
+- a _real_ config change — an edited `compilerOptions`, a changed alias target,
   a bumped shared dependency — reaches everything, which is what `INFRA_RE` is
   correctly there for.
 
 Note the second is why this is not a one-line regex tweak: the discriminator is
-the *shape of the hunk*, not the path, so the honest implementations are either
+the _shape of the hunk_, not the path, so the honest implementations are either
 a content-aware step (parse the diff, fire only when a non-additive hunk is
 present) or an explicit opt-out marker on the PR. Pick one and justify it; a
 path-only narrowing that lets a real `tsconfig.json` edit through is strictly
