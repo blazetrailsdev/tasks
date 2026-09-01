@@ -35,27 +35,27 @@ The register excludes **219 Rails tests across 58 files** in total. Cross-checki
 each excluded description against the LIVE (non-`it.skip`) tests in the file's
 convention TS file leaves **19 entries that name a test the port already has**:
 
-| package | ruby file | test | file `extra` |
-| --- | --- | --- | --- |
-| activerecord | associations_test.rb | proxy object can be stubbed | 17 |
-| activerecord | associations/inverse_associations_test.rb | has many and belongs to should find inverse automatically for model in module | 4 |
-| activerecord | adapter_test.rb | active transaction is restored after remote disconnection | 2 |
-| activerecord | adapter_test.rb | dirty transaction cannot be restored after remote disconnection | 2 |
-| activerecord | reflection_test.rb | automatic inverse suppresses name error for association | 6 |
-| activerecord | adapters/postgresql/hstore_test.rb | yaml round trip with store accessors | 1 |
-| activerecord | serialized_attribute_test.rb | serialized attribute with class constraint | 19 |
-| activerecord | serialized_attribute_test.rb | where by serialized attribute with array | 19 |
-| activerecord | serialized_attribute_test.rb | where by serialized attribute with hash | 19 |
-| activerecord | serialized_attribute_test.rb | where by serialized attribute with hash in array | 19 |
-| activerecord | serialized_attribute_test.rb | serialize attribute via select method when time zone available | 19 |
-| activerecord | serialized_attribute_test.rb | serialize attribute can be serialized in an integer column | 19 |
-| activerecord | serialized_attribute_test.rb | serialized time attribute | 19 |
-| activerecord | connection_pool_test.rb | new connection no query | 6 |
-| activerecord | modules_test.rb | compute type can infer class name of sibling inside module | 6 |
-| activerecord | adapters/postgresql/transaction_test.rb | raises Deadlocked when a deadlock is encountered | 1 |
-| activerecord | disconnected_test.rb | reconnects to execute statements when disconnected | 1 |
-| activerecord | prepared_statement_status_test.rb | prepared statement status is thread and instance specific | 1 |
-| globalid | verifier_test.rb | generates URL-safe messages | 1 |
+| package      | ruby file                                 | test                                                                          | file `extra` |
+| ------------ | ----------------------------------------- | ----------------------------------------------------------------------------- | ------------ |
+| activerecord | associations_test.rb                      | proxy object can be stubbed                                                   | 17           |
+| activerecord | associations/inverse_associations_test.rb | has many and belongs to should find inverse automatically for model in module | 4            |
+| activerecord | adapter_test.rb                           | active transaction is restored after remote disconnection                     | 2            |
+| activerecord | adapter_test.rb                           | dirty transaction cannot be restored after remote disconnection               | 2            |
+| activerecord | reflection_test.rb                        | automatic inverse suppresses name error for association                       | 6            |
+| activerecord | adapters/postgresql/hstore_test.rb        | yaml round trip with store accessors                                          | 1            |
+| activerecord | serialized_attribute_test.rb              | serialized attribute with class constraint                                    | 19           |
+| activerecord | serialized_attribute_test.rb              | where by serialized attribute with array                                      | 19           |
+| activerecord | serialized_attribute_test.rb              | where by serialized attribute with hash                                       | 19           |
+| activerecord | serialized_attribute_test.rb              | where by serialized attribute with hash in array                              | 19           |
+| activerecord | serialized_attribute_test.rb              | serialize attribute via select method when time zone available                | 19           |
+| activerecord | serialized_attribute_test.rb              | serialize attribute can be serialized in an integer column                    | 19           |
+| activerecord | serialized_attribute_test.rb              | serialized time attribute                                                     | 19           |
+| activerecord | connection_pool_test.rb                   | new connection no query                                                       | 6            |
+| activerecord | modules_test.rb                           | compute type can infer class name of sibling inside module                    | 6            |
+| activerecord | adapters/postgresql/transaction_test.rb   | raises Deadlocked when a deadlock is encountered                              | 1            |
+| activerecord | disconnected_test.rb                      | reconnects to execute statements when disconnected                            | 1            |
+| activerecord | prepared_statement_status_test.rb         | prepared statement status is thread and instance specific                     | 1            |
+| globalid     | verifier_test.rb                          | generates URL-safe messages                                                   | 1            |
 
 Some are certainly real (`serialized_attribute.test.ts` carries a live
 `it("serialized time attribute")` at :198 AND an `it.skip` stub for the same
