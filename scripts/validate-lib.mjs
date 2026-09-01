@@ -18,6 +18,12 @@ export const MAX_LINES = 2000;
 // PR_MAX_LOC is retuned, this follows, and the two drifting apart is the bug
 // this constant exists to make visible (it sat at 500 for a while after the
 // ceiling moved to 700, rejecting stories the workers could have shipped).
+//
+// Only checked on a story that still has to SHIP as that single PR — `draft`
+// and `ready` (and every in-flight status in between). A `done`/`closed`
+// story's `est-loc` is a historical estimate, not a claim about tomorrow's PR:
+// `strip-freeform-comments-ar-remaining-dirs` shipped as one deliberate 9000
+// LOC sweep (PR #7195) and the ceiling has nothing left to say about it.
 export const MAX_EST_LOC = 700;
 
 // Numeric-prefix pairs that legitimately share a four-digit prefix and predate
@@ -114,6 +120,12 @@ export function checkDepGraph({ storyIds, rfcIds, depsOf, depsRfcOf, seeds }) {
 
   return { refViolations, cycles };
 }
+
+// A story counts as terminal-complete when it is `done` (shipped) OR `closed`
+// (abandoned/superseded) — shared between the RFC-closure check below and the
+// est-loc ceiling check, which both stop caring about a story once its fate is
+// settled.
+const isTerminal = (status) => status === "done" || status === "closed";
 
 export function validate({ rfcs, stories }) {
   const errors = [];
@@ -237,7 +249,7 @@ export function validate({ rfcs, stories }) {
     if (fm["deps-rfc"] && !Array.isArray(fm["deps-rfc"])) err(s.file, `deps-rfc must be an array`);
     if (fm["est-loc"] !== null && fm["est-loc"] !== undefined) {
       if (!Number.isInteger(fm["est-loc"])) err(s.file, `est-loc must be integer or null`);
-      else if (fm["est-loc"] > MAX_EST_LOC)
+      else if (fm["est-loc"] > MAX_EST_LOC && !isTerminal(fm.status))
         err(s.file, `est-loc ${fm["est-loc"]} exceeds the ${MAX_EST_LOC} LOC per-PR ceiling`);
     }
     // priority: optional integer; lower = higher ready-queue priority (absent = unprioritized)
@@ -346,7 +358,6 @@ export function validate({ rfcs, stories }) {
   for (const s of storyById.values()) {
     (storiesByRfc.get(s.rfc) ?? storiesByRfc.set(s.rfc, []).get(s.rfc)).push(s);
   }
-  const isTerminal = (status) => status === "done" || status === "closed";
   for (const r of rfcs) {
     if (r.frontmatter?.status !== "closed") continue;
     const open = (storiesByRfc.get(r.dir) ?? []).filter((s) => !isTerminal(s.frontmatter?.status));

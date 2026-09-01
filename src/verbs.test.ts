@@ -211,4 +211,24 @@ describe("a status move clears what the old status owned", () => {
     await block("s1", "waiting on upstream");
     expect((await Story.findBy({ id: "s1" }))!.blocked_by).toBe("waiting on upstream");
   });
+
+  // Two backlog stories carried `status: ready` with a stale `pr` left over
+  // from a prior in-progress stamp — invalid per validate's cross-field
+  // check, and only fixable through this path since `pr` is DB-owned.
+  it("drops a stale pr when a story moves back to ready", async () => {
+    await markTracking(["s1"], "in-progress", 42);
+    await statusSet("s1", "ready");
+    expect((await Story.findBy({ id: "s1" }))!.pr).toBeNull();
+  });
+
+  it("drops a stale pr when a story moves to draft", async () => {
+    await markTracking(["s1"], "in-progress", 42);
+    await statusSet("s1", "draft");
+    expect((await Story.findBy({ id: "s1" }))!.pr).toBeNull();
+  });
+
+  it("keeps pr when the story ships", async () => {
+    await markTracking(["s1"], "done", 42);
+    expect((await Story.findBy({ id: "s1" }))!.pr).toBe(42);
+  });
 });

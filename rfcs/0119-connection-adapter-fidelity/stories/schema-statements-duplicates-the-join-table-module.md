@@ -3,7 +3,7 @@ title: "SchemaStatements re-implements JoinTable instead of mixing it in"
 status: draft
 updated: 2026-08-30
 rfc: "0119-connection-adapter-fidelity"
-cluster: duplicate-bodies
+cluster: null
 packages: ["activerecord"]
 deps: []
 deps-rfc: []

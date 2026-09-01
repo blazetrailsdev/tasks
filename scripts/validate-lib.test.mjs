@@ -312,6 +312,30 @@ test("est-loc above the ceiling is rejected, and the error names the bound", () 
   expectError(errors, `exceeds the ${MAX_EST_LOC} LOC per-PR ceiling`);
 });
 
+// A done/closed story's est-loc is a historical estimate, not a claim about
+// tomorrow's PR — `strip-freeform-comments-ar-remaining-dirs` shipped as one
+// deliberate 9000 LOC sweep (PR #7195) and the ceiling has nothing left to say
+// about it once it has shipped or been abandoned.
+test("est-loc above the ceiling is legal once the story is done", () => {
+  expectClean(
+    validate({
+      rfcs: [rfc()],
+      stories: [story({}, { status: "done", "est-loc": MAX_EST_LOC + 1, pr: 1 })],
+    }).errors,
+  );
+});
+
+test("est-loc above the ceiling is legal once the story is closed", () => {
+  expectClean(
+    validate({
+      rfcs: [rfc()],
+      stories: [
+        story({}, { status: "closed", "est-loc": MAX_EST_LOC + 1, "closed-reason": "won't do" }),
+      ],
+    }).errors,
+  );
+});
+
 if (failures.length) {
   throw new Error(`${failures.length} test(s) failed:\n  ${failures.join("\n  ")}`);
 }

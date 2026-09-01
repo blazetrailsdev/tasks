@@ -3,7 +3,7 @@ title: "mismatched_foreign_key_details omits primary_key_column; the lookup is d
 status: blocked
 updated: 2026-08-25
 rfc: "0123-blocked-convergence-holding"
-cluster: split-stores
+cluster: null
 packages: []
 deps: []
 deps-rfc: []

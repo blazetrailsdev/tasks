@@ -3,7 +3,7 @@ title: "Strict-loading violation check lives in the singular reader, not find_ta
 status: blocked
 updated: 2026-08-22
 rfc: "0123-blocked-convergence-holding"
-cluster: dead-mixin-companions
+cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120

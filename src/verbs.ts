@@ -71,14 +71,23 @@ async function record(
  * these contradictions, all of them flagged by validate and none of them
  * fixable by hand — the fields are DB-owned, which is exactly what the
  * owned-fields guard exists to enforce.
+ *
+ * `draft`/`ready` originally cleared `assignee`/`claim_at` but not `pr`, even
+ * though validate's cross-field check requires all three null on those two
+ * statuses — the same shape of gap this function exists to close, just missed
+ * for a field only `markTracking` (in-progress/done) had ever written. Two
+ * more backlog stories carried the resulting contradiction: `ready` with a
+ * stale `pr` left over from a prior in-progress stamp, invisible to a
+ * hand-edit for the same DB-owned reason as the six above.
  */
 function clearedBy(status: StoryStatus): Record<string, unknown> {
   const fields: Record<string, unknown> = {};
   if (status !== "blocked") fields.blocked_by = null;
   if (status !== "closed") fields.closed_reason = null;
-  if (status === "ready") {
+  if (status === "ready" || status === "draft") {
     fields.assignee = null;
     fields.claim_at = null;
+    fields.pr = null;
   }
   return fields;
 }
