@@ -1,5 +1,5 @@
 ---
-title: "Drop the invented \"/\" default from Rack::Request::Helpers#path_info"
+title: 'Drop the invented "/" default from Rack::Request::Helpers#path_info'
 status: draft
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
