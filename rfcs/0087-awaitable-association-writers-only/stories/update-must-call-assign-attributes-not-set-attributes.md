@@ -1,6 +1,6 @@
 ---
 title: "update/update! call setAttributes where Rails calls assign_attributes"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0087-awaitable-association-writers-only"
 cluster: null

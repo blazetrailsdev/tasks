@@ -1,6 +1,6 @@
 ---
 title: "Object#hash (rbHash) moves to ruby-compat, beside the rbEqual it is consistent with"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
