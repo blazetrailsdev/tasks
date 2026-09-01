@@ -2,7 +2,7 @@
 title: "checkValidity should be checkValidityBang (Rails check_validity!)"
 status: closed
 updated: 2026-09-01
-rfc: "0023-surfaced-deviations"
+rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
 packages:
   - "activemodel"

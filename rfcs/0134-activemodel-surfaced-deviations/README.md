@@ -45,18 +45,21 @@ files against `vendor/rails/activemodel/lib/active_model/**` found debt the
 numbers do not show: silent behavioral divergences, one ratified-rule
 violation, ~50 unreceipted novel names, and four malformed receipts.
 
-This RFC holds **63 stories**: 17 from the audit, 45 taken into custody from
+This RFC holds **75 stories**: 17 from the audit, 57 taken into custody from
 0023 (see Reconciliation), and the Phase 0 story that performed the transfer.
-It is the home for activemodel deviation work going forward.
+19 of the transferred ones arrive already `closed` — they are here because
+their subject is activemodel, not because there is work left in them. It is the
+home for activemodel deviation work going forward.
 
 ## Reconciliation with 0023 (do this before adding anything else here)
 
-0023 is the retired catch-all. It still holds **~80 activemodel-labelled
-stories**, of which ~74 are open (`draft`/`ready`) — counted 2026-09-01 with
-`grep -l '"activemodel"' rfcs/0023-surfaced-deviations/stories/*.md`. That is
-the pool this bucket eventually owns, exactly as 0124 took custody of arel's 37.
+0023 is the retired catch-all. It held **81 activemodel-labelled stories**,
+of which 72 were open (`draft`/`ready`) — counted 2026-09-01 with
+`grep -l '"activemodel"' rfcs/0023-surfaced-deviations/stories/*.md`. That was
+the pool this bucket owns, exactly as 0124 took custody of arel's 37, and it is
+now transferred.
 
-**Six are already moved in this PR**, because the audit independently
+**Six moved with the RFC's seeding commit**, because the audit independently
 rediscovered them and their 0023 prose is equal or better than the audit's.
 Story IDs are filename-based, so a move preserves every existing reference:
 
@@ -77,56 +80,62 @@ and two were narrowed (`attribute-ts-novel-members-…` lost its
 
 **The remaining 72 open ones were re-verified and transferred by Phase 0**
 (`custody-transfer-activemodel-stories-from-0023`), following 0124's method
-exactly:
+exactly. Every one was read against the tree it describes, not just retitled:
 
-- **39 moved here**, each keeping its prose, its `packages` labels (10 keep
-  `activerecord` alongside `activemodel`, 2 keep `activesupport`, 1 keeps
-  `date` — all four are declared above) and gaining a declared `cluster`. Story
-  ids are filename-based, so every existing reference survives the move; each
-  id was `git grep`ed across trails first and none is cited by a
-  `CONVERGEABLE` receipt.
-- **12 closed as no-longer-applicable**, each verified against the tree on
-  2026-09-01: `check-validity-is-a-bang-method` (every validator now overrides
-  `checkValidityBang`), `apply-to-takes-an-extra-class-argument`
-  (`applyTo(attributeSet)` is the whole signature),
-  `attribute-set-deep-dup-clone-cache` and
-  `attribute-set-deep-dup-invented-clone-helper` (`AttributeSet#deepDup` is now
-  the one-line `transformValues(..., attr.deepDup())` of `attribute_set.rb:73-75`,
-  and the surviving `getOriginalAttribute` traces to Rails' `original_attribute`),
-  `decimal-castvalue-split-into-invented-helper` (`_castWithoutScale` is gone),
-  `errors-copy-bang-fuses-rails-deep-dup-call` (`copyBang` calls `deepDup`;
-  `dupWithBase` and the `@missingRailsCall` tag are gone),
-  `type-for-attribute-must-dispatch-resolve-attribute-name` (it dispatches
-  through `this.resolveAttributeName`),
-  `immutable-string-serialize-must-not-recast` (`ImmutableStringType#serialize`
-  is the branch of `immutable_string.rb:48-54` and `serializeCastValue` is
-  identity; `string.ts` and `date-time.ts` inherit it),
-  `secure-password-activation-module-and-max-length-constant` (both exist and
-  are used), `bare-pattern-generates-reader-not-accessor-property`
-  (`defineAliasAccessor` is gone and the pattern path has no carve-out),
-  `attribute-method-pattern-parameters-unused` (`pattern.parameters` gates the
-  `answersWithAMethod` guard and threads into `defineProxyCall`), and
-  `attribute-method-pattern-registrars-push-instead-of-class-attribute-append`
-  (the three registrars assign a new array, `ensureOwnPatterns` is gone, and AR
-  registers its suffixes through `attributeMethodSuffix`).
+- **32 moved here** and still open, each keeping its prose, `est-loc`, `deps`
+  and `packages` labels (9 keep `activerecord` alongside `activemodel`, 2 keep
+  `activesupport`, 1 keeps `date` — all four are declared above) and gaining a
+  declared `cluster`. Story ids are filename-based, so every existing reference
+  survives the move; each id was `git grep`ed across trails first and none is
+  cited by a `CONVERGEABLE` receipt.
+- **19 closed as converged**, each with a `closed-reason` naming the trails
+  `file:line` that retired it. Their files move here too — closing does not
+  change a story's subject — so 0134 is the whole activemodel record, open and
+  retired. In summary:
+  - **Attribute-method generation (4):** `defineAliasAccessor` is gone and
+    `defineAttributeMethodPattern` has no bare-pattern carve-out
+    (`bare-pattern-generates-reader-not-accessor-property`);
+    `pattern.parameters` now gates the `answersWithAMethod` arm and threads
+    into `defineProxyCall` (`attribute-method-pattern-parameters-unused`); the
+    three registrars assign a new array and `ensureOwnPatterns` is gone
+    (`attribute-method-pattern-registrars-push-instead-of-class-attribute-append`);
+    `applyTo(attributeSet)` is the whole signature
+    (`apply-to-takes-an-extra-class-argument`).
+  - **Dirty and mutation tracking (4):** the external `DirtyTracker` no longer
+    exists — `mutationsFromDatabase` / `mutationsBeforeLastSave` are
+    `AttributeMutationTracker`s (`dirty-tracker-is-one-object-…`,
+    `port-mutations-from-database-as-tracker`), `new M({attr})` now reports
+    `changes` against the `_defaultAttributes` baseline and `changesApplied()`
+    moves them to `previousChanges` (`construction-time-dirty-baseline-…`,
+    verified by probe), and the read marker lives on `Attribute#hasBeenRead`
+    (`accessed-fields-marker-belongs-on-the-attribute`).
+  - **Numericality (3):** `validateEach` walks one
+    `slice(options, ...RESERVED_OPTIONS)` loop in Rails' branch order, reassigns
+    `value` from `parseAsNumber` at Rails' line, and carries no trails-only
+    `allowBlank` arm; the exponent test no longer skips.
+  - **Type and attribute-set (5):** `AttributeSet#deepDup` is the one-line
+    `transform_values(&:deep_dup)` of `attribute_set.rb:73-75` (two stories),
+    `_castWithoutScale` is gone, `ImmutableStringType#serialize` is the branch
+    of `immutable_string.rb:48-54` with an identity `serializeCastValue`, and
+    `typeForAttribute` dispatches through `this.resolveAttributeName`.
+  - **Errors and validators (3):** `copyBang` calls `deepDup` and `dupWithBase`
+    plus its `@missingRailsCall` tag are gone; every validator overrides
+    `checkValidityBang`; `MAX_PASSWORD_LENGTH_ALLOWED` and
+    `InstanceMethodsOnActivation` both exist and are used.
 - **21 left in 0023**, because their subject is another package or they are
   cross-package sweeps. They are named in Non-goals below.
 
+`grep -l '"activemodel"' rfcs/0023-surfaced-deviations/stories/*.md` therefore
+returns 24 — the 21 in Non-goals plus 3 that were already closed or done before
+this pass and were left undisturbed. Filtered to open stories it returns exactly
+the 21.
+
 ### The eight families that came across
 
-The 39 fall into eight groups, and they are the shape of the work rather than
-the audit's five clusters — a claimant should pick a family, not a lone story:
+The 32 still-open transfers fall into eight groups, and they are the shape of
+the work rather than the audit's five clusters — a claimant should pick a
+family, not a lone story:
 
-- **Attribute-method generation (8)** —
-  `activemodel-attribute-methods-missing-code-generator-layer`,
-  `activemodel-attribute-methods-file-order-drift`,
-  `activemodel-attribute-generates-accessors-eagerly`,
-  `attribute-methods-method-missing-dispatch-unported`,
-  `class-body-reader-suppresses-generated-writer`,
-  `one-generated-attribute-methods-carrier-per-class`,
-  `define-dirty-attribute-methods-into-generated-module`,
-  `activemodel-instance-helper-methods-partial`. This is the family the audit's
-  `alias-attribute-method-definition-reroute-namespace` already sits in.
 - **Type cast and serialize (9)** — `integertype-castvalue-to-i-semantics`,
   `float-cast-lacks-string-to-f-semantics`,
   `binary-cast-coerces-non-string-values`,
@@ -138,23 +147,28 @@ the audit's five clusters — a claimant should pick a family, not a lone story:
   `date-parse-stand-in-zone-table-and-grammar-completeness`. Adjacent to the
   audit's `type-cast-for-schema-stringify-vs-inspect` and
   `time-value-fast-string-to-time-review`.
-- **Dirty and mutation tracking (7)** —
-  `dirty-tracker-is-one-object-where-rails-has-two-mutation-trackers` (the
-  root; the rest are its symptoms), `port-mutations-from-database-as-tracker`,
-  `construction-time-dirty-baseline-hides-ctor-assignments`,
-  `accessed-fields-marker-belongs-on-the-attribute`,
-  `binary-attribute-changed-uses-reference-equality`,
-  `mutable-changed-in-place-reserializes-raw-old-value`,
-  `activemodel-numeric-changed-passes-cast-value-to-equal-nan`.
-- **Numericality (4)** — `numericality-exponent-number-needs-bignum-compare`,
-  `numericality-validate-each-reserved-options-loop`,
-  `numericality-validate-each-reports-raw-value-and-duplicates-allow-blank`,
-  `wire-numericality-changed-in-place-short-circuit`.
-- **Assignment, access and validation mixins (4)** —
+- **Attribute-method generation (7)** —
+  `activemodel-attribute-methods-missing-code-generator-layer`,
+  `activemodel-attribute-methods-file-order-drift`,
+  `activemodel-attribute-generates-accessors-eagerly`,
+  `attribute-methods-method-missing-dispatch-unported`,
+  `class-body-reader-suppresses-generated-writer`,
+  `one-generated-attribute-methods-carrier-per-class`,
+  `define-dirty-attribute-methods-into-generated-module`. This is the family
+  the audit's `alias-attribute-method-definition-reroute-namespace` sits in,
+  and the one the custody pass retired four stories from.
+- **Assignment, access and validation mixins (5)** —
   `assign-attribute-respond-to-setter-reraise-arm`,
   `converge-sanitize-for-mass-assignment-mixin-split`,
   `access-has-no-standalone-mixin-or-indifferent-slice`,
-  `model-validate-is-not-variadic`.
+  `model-validate-is-not-variadic`,
+  `activemodel-instance-helper-methods-partial`.
+- **Dirty and mutation tracking (3)** —
+  `mutable-changed-in-place-reserializes-raw-old-value`,
+  `activemodel-numeric-changed-passes-cast-value-to-equal-nan`,
+  `binary-attribute-changed-uses-reference-equality`. The structural half of
+  this family converged; what is left is per-type equality semantics — `Value#isChanged`
+  is still `oldValue !== newValue` (`packages/activemodel/src/type/value.ts:57-59`).
 - **Test placement (3)** — `activemodel-tests-lack-shared-rails-test-models`,
   `date-time-hash-with-wrong-keys-test-asserts-wrong-behavior`,
   `errors-to-json-test-bypasses-activesupport-encoder`. Joins Rollout phase 5.
@@ -165,6 +179,11 @@ the audit's five clusters — a claimant should pick a family, not a lone story:
 - **Multiparameter time (2)** — `multiparameter-empty-string-truthiness` (also
   cited by RFC 0082's truthiness residual register) and
   `multiparameter-extra-positions-collapse`.
+- **Numericality (1)** — `wire-numericality-changed-in-place-short-circuit`,
+  the one member the custody pass did not retire:
+  `prepareValueForValidation` still lacks Rails' leading
+  `return value if record_attribute_changed_in_place?` arm
+  (`numericality.rb:122`).
 
 ### One carried-forward problem, flagged not fixed
 
@@ -177,11 +196,6 @@ premise cannot land as written. The dep does not block — the ready queue treat
 `closed` as resolved — and a custody transfer does not rewrite bodies, so it is
 recorded here for whoever claims it: the story's symptom is real, its stated
 route is not.
-
-The 12 closed stories keep their files in 0023 — closing is a DB verb, not a
-move — so `grep -l '"activemodel"' rfcs/0023-surfaced-deviations/stories/*.md`
-still returns 36: the 21 in Non-goals plus 15 closed/done. Filtered to open
-stories, it returns exactly the 21.
 
 ## Motivation
 
@@ -291,16 +305,16 @@ Work already owned elsewhere stays there; this RFC does not duplicate it:
 
 Each story is an independent PR from `main` (no stacking, non-overlapping
 files). Phases 1-5 sequence the audit's 17 findings, whose interlocks are
-known. The 39 custody-transferred stories are **not** folded into those
+known. The 32 still-open custody transfers are **not** folded into those
 phases — their ordering constraint is the family, described above, and each
 family's own `deps` — except the three test-placement ones, which join phase 5
 behind `test-compare-lint-and-serializers-json-mapping`.
 
 0. **Custody transfer** — **done**: the remaining 72 open activemodel-labelled
-   stories in 0023 were re-verified against the tree, 39 moved here, 12 closed
-   as no longer applicable, 21 left in 0023 as not activemodel-subject (see
-   Reconciliation and Non-goals). The 39 arrive clustered, so they slot into
-   the phases below by cluster rather than needing a re-read.
+   stories in 0023 were re-verified against the tree, 32 moved here still open,
+   19 closed as converged (files re-homed here), 21 left in 0023 as not
+   activemodel-subject (see Reconciliation and Non-goals). The 32 arrive
+   clustered and grouped by family, so they slot in without a re-read.
 1. **Behavior fixes** — `errors-as-json-drops-full-messages-option`,
    `dirty-readers-resolve-aliases-where-rails-does-not`,
    `builder-invented-default-value-type-fallback`,
@@ -333,7 +347,7 @@ behind `test-compare-lint-and-serializers-json-mapping`.
 
 - 0023 holds zero open activemodel-**subject** stories. Met by Phase 0: the 21
   still matching `grep -l '"activemodel"'` are activerecord-, activesupport- or
-  sweep-subject and are enumerated in Non-goals. None of the 12 closed was
+  sweep-subject and are enumerated in Non-goals. None of the 19 closed was
   closed without a recorded `closed-reason` citing the tree state.
 - Zero placeholder reasons left in
   `scripts/api-compare/call-mismatches-exclude/activemodel/` (3 today), and
@@ -359,9 +373,11 @@ behind `test-compare-lint-and-serializers-json-mapping`.
    invented rename?** `parity:api` matches the pair while `parity:api:extra`
    scores it novel; `modelname-vs-rails-name-tooling-disagreement` resolves
    the tool disagreement either way.
-3. ~~**Does Phase 0 move all ~74, or close some in place?**~~ **Answered** by
-   Phase 0: of 72 open, 39 moved, 12 closed in place with a tree-state reason,
-   21 stayed in 0023 as not activemodel-subject. See Reconciliation.
+3. ~~**Does Phase 0 move all 72, or close some in place?**~~ **Answered** by
+   Phase 0: of 72 open, 32 moved still-open, 19 closed as converged with a
+   tree-state reason, 21 stayed in 0023 as not activemodel-subject. Closed
+   stories are re-homed here rather than left behind, so 0134 is the whole
+   activemodel record. See Reconciliation.
 
 ## Changelog
 
@@ -370,6 +386,6 @@ behind `test-compare-lint-and-serializers-json-mapping`.
   after review found the overlap.
 - 2026-09-01: Phase 0 (`custody-transfer-activemodel-stories-from-0023`) — the
   remaining 72 open activemodel-labelled stories in 0023 re-verified against
-  the tree: 39 moved here and clustered, 12 closed as converged, 21 left in
-  0023 and named in Non-goals. `activesupport` added to declared `packages`;
-  open question 3 answered.
+  the tree: 32 moved here open and clustered, 19 closed as converged (their
+  files re-homed here too), 21 left in 0023 and named in Non-goals.
+  `activesupport` added to declared `packages`; open question 3 answered.
