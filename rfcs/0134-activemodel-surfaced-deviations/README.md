@@ -8,6 +8,7 @@ owner: "@deanmarano"
 packages:
   - "activemodel"
   - "activerecord"
+  - "activesupport"
   - "date"
 clusters:
   - "rails-deviation"
@@ -44,9 +45,9 @@ files against `vendor/rails/activemodel/lib/active_model/**` found debt the
 numbers do not show: silent behavioral divergences, one ratified-rule
 violation, ~50 unreceipted novel names, and four malformed receipts.
 
-This RFC holds **24 stories**: 17 from the audit, 6 taken into custody from
-0023 (see Reconciliation), and the Phase 0 story that transfers the rest. It
-is the home for activemodel deviation work going forward.
+This RFC holds **63 stories**: 17 from the audit, 45 taken into custody from
+0023 (see Reconciliation), and the Phase 0 story that performed the transfer.
+It is the home for activemodel deviation work going forward.
 
 ## Reconciliation with 0023 (do this before adding anything else here)
 
@@ -74,10 +75,47 @@ and two were narrowed (`attribute-ts-novel-members-…` lost its
 `overrideCastValue` item; the naming story was split, leaving
 `modelname-vs-rails-name-tooling-disagreement`).
 
-The remaining ~74 are Phase 0 below. They are **not** silently inherited: until
-they move, 0023 is still their home, and anyone filing new activemodel
-deviations should check both places. That double-lookup is the cost of leaving
-Phase 0 undone, and the reason it is Phase 0.
+**The remaining 72 open ones were re-verified and transferred by Phase 0**
+(`custody-transfer-activemodel-stories-from-0023`), following 0124's method
+exactly:
+
+- **39 moved here**, each keeping its prose, its `packages` labels (10 keep
+  `activerecord` alongside `activemodel`, 2 keep `activesupport`, 1 keeps
+  `date` — all four are declared above) and gaining a declared `cluster`. Story
+  ids are filename-based, so every existing reference survives the move; each
+  id was `git grep`ed across trails first and none is cited by a
+  `CONVERGEABLE` receipt.
+- **12 closed as no-longer-applicable**, each verified against the tree on
+  2026-09-01: `check-validity-is-a-bang-method` (every validator now overrides
+  `checkValidityBang`), `apply-to-takes-an-extra-class-argument`
+  (`applyTo(attributeSet)` is the whole signature),
+  `attribute-set-deep-dup-clone-cache` and
+  `attribute-set-deep-dup-invented-clone-helper` (`AttributeSet#deepDup` is now
+  the one-line `transformValues(..., attr.deepDup())` of `attribute_set.rb:73-75`,
+  and the surviving `getOriginalAttribute` traces to Rails' `original_attribute`),
+  `decimal-castvalue-split-into-invented-helper` (`_castWithoutScale` is gone),
+  `errors-copy-bang-fuses-rails-deep-dup-call` (`copyBang` calls `deepDup`;
+  `dupWithBase` and the `@missingRailsCall` tag are gone),
+  `type-for-attribute-must-dispatch-resolve-attribute-name` (it dispatches
+  through `this.resolveAttributeName`),
+  `immutable-string-serialize-must-not-recast` (`ImmutableStringType#serialize`
+  is the branch of `immutable_string.rb:48-54` and `serializeCastValue` is
+  identity; `string.ts` and `date-time.ts` inherit it),
+  `secure-password-activation-module-and-max-length-constant` (both exist and
+  are used), `bare-pattern-generates-reader-not-accessor-property`
+  (`defineAliasAccessor` is gone and the pattern path has no carve-out),
+  `attribute-method-pattern-parameters-unused` (`pattern.parameters` gates the
+  `answersWithAMethod` guard and threads into `defineProxyCall`), and
+  `attribute-method-pattern-registrars-push-instead-of-class-attribute-append`
+  (the three registrars assign a new array, `ensureOwnPatterns` is gone, and AR
+  registers its suffixes through `attributeMethodSuffix`).
+- **21 left in 0023**, because their subject is another package or they are
+  cross-package sweeps. They are named in Non-goals below.
+
+The 12 closed stories keep their files in 0023 — closing is a DB verb, not a
+move — so `grep -l '"activemodel"' rfcs/0023-surfaced-deviations/stories/*.md`
+still returns 36: the 21 in Non-goals plus 15 closed/done. Filtered to open
+stories, it returns exactly the 21.
 
 ## Motivation
 
@@ -138,10 +176,33 @@ Work already owned elsewhere stays there; this RFC does not duplicate it:
   (the Map-`fetch` spellings as spellings, bcrypt, Temporal `new_date`,
   `define_call match?`): correctly baselined; not re-litigated here.
 - **Cross-package sweeps that merely touch `packages/activemodel/`** stay in
-  0023 or with their owning package, per 0124's rule — e.g.
+  0023, per 0124's rule — they are `activemodel`-labelled but not
+  `activemodel`-subject:
   `hoist-module-super-and-bind-call-into-activesupport`,
   `consolidate-kernel-integer-and-float-conversions`,
-  `claude-md-module-mixins-section-contradicts-itself`.
+  `claude-md-module-mixins-section-contradicts-itself`,
+  `assertion-counter-ignores-ported-minitest-assertions`,
+  `converge-four-divergent-public-send-ports`,
+  `ruby-object-clone-dup-has-no-settled-trails-spelling`,
+  `unify-ruby-class-name-message-helpers`, and
+  `parity-api-extra-counts-symbol-keyed-module-hooks-as-novel` (a
+  `parity:api:extra` extractor finding).
+- **Stories whose subject is `activesupport`** stay in 0023:
+  `extend-copies-module-functions-ruby-does-not` (`include.ts`'s `extend()`),
+  `set-callback-undefined-chain-raises-bespoke-error` and
+  `restore-conditional-skip-callback-coverage-in-skip-writer` (both
+  `callbacks.ts`).
+- **Stories whose subject is `activerecord`** stay in 0023:
+  `column-serializer-arity-check-raises-typeerror-not-argumenterror`,
+  `route-record-hydration-through-build-from-database`,
+  `retire-the-ar-validates-macro-override`,
+  `activerecord-primes-a-new-records-dirty-set`,
+  `belongs-to-default-runs-at-before-validation-queue-position`,
+  `destroy-callback-preload-scans-filter-source-text`,
+  `query-parity-datetime-precision-unprecisioned-column`,
+  `connection-in-local-time-is-vacuous-under-utc-ci`,
+  `converge-update-columns-unknown-key-raise`, and
+  `auto-filtered-parameters-model-name-element`.
 
 ## Alternatives considered
 
@@ -165,11 +226,11 @@ Work already owned elsewhere stays there; this RFC does not duplicate it:
 Each story is an independent PR from `main` (no stacking, non-overlapping
 files).
 
-0. **Custody transfer** — move the remaining ~74 activemodel-labelled stories
-   out of 0023 into this RFC, re-verifying each against the tree as 0124 did
-   (0124 closed 7 of its 37 as no-longer-applicable). Mechanical but not
-   automatic: each needs a read. Sized as its own story, not folded into a
-   convergence PR.
+0. **Custody transfer** — **done**: the remaining 72 open activemodel-labelled
+   stories in 0023 were re-verified against the tree, 39 moved here, 12 closed
+   as no longer applicable, 21 left in 0023 as not activemodel-subject (see
+   Reconciliation and Non-goals). The 39 arrive clustered, so they slot into
+   the phases below by cluster rather than needing a re-read.
 1. **Behavior fixes** — `errors-as-json-drops-full-messages-option`,
    `dirty-readers-resolve-aliases-where-rails-does-not`,
    `builder-invented-default-value-type-fallback`,
