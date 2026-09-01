@@ -18,8 +18,7 @@ closed-reason: null
 
 ## Context
 
-Surfaced while completing `extract-ruby-api-records-struct-new-members` (PR
-#7341), which taught `scripts/api-compare/extract-ruby-api.rb` to record the
+Surfaced while completing `extract-ruby-api-records-struct-new-members` (PR #7341), which taught `scripts/api-compare/extract-ruby-api.rb` to record the
 members of a blockless `CONST = Struct.new(:a, :b)` alongside the already-handled
 `Struct.new(...) do … end` form.
 
@@ -55,7 +54,7 @@ no `ContentTypeHeader` class at all.
 Note the `class X < Struct.new :a, :b` form (arel/attributes/attribute.rb:5) is
 already handled — `process_class` -> `synthesize_struct_members` reads the
 superclass node directly and never goes through `struct_new_call`. This story is
-only about the `CONST = ` assignment form.
+only about the `CONST =` assignment form.
 
 ## Converged shape
 

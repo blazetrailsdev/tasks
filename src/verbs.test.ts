@@ -97,6 +97,40 @@ describe("markTracking", () => {
     await markTracking(["s1", "s2"], "done", 7);
     expect((await Story.findBy({ id: "s2" }))!.status).toBe("done");
   });
+
+  // Three backlog stories went straight to in-progress (a PR opened without a
+  // prior `claim`, the shape the /link skill produces) and sat invalid:
+  // validate requires a claim timestamp AND an assignee on in-progress.
+  it("self-claims an unclaimed story when marking it in-progress", async () => {
+    await markTracking(["s1"], "in-progress", 42);
+    const s = await Story.findBy({ id: "s1" });
+    expect(s!.claim_at).not.toBeNull();
+    expect(s!.assignee).toBe("s1");
+  });
+
+  it("does not overwrite a real claim already on the story", async () => {
+    await claim(["s1"], "agent-a");
+    const before = (await Story.findBy({ id: "s1" }))!.claim_at;
+    await markTracking(["s1"], "in-progress", 42);
+    const s = await Story.findBy({ id: "s1" });
+    expect(s!.assignee).toBe("agent-a");
+    expect(s!.claim_at).toBe(before);
+  });
+
+  it("re-running in-progress for an already-claimed sibling in a bundle stays a true no-op", async () => {
+    await claim(["s1"], "agent-a");
+    await markTracking(["s1"], "in-progress", 42);
+    const before = await Event.where({ story_id: "s1" }).count();
+    await markTracking(["s1"], "in-progress", 42);
+    expect(await Event.where({ story_id: "s1" }).count()).toBe(before);
+  });
+
+  it("does not self-claim on done — the done-without-PR path stays null/null", async () => {
+    await markTracking(["s1"], "done", null);
+    const s = await Story.findBy({ id: "s1" });
+    expect(s!.claim_at).toBeNull();
+    expect(s!.assignee).toBeNull();
+  });
 });
 
 describe("release", () => {
