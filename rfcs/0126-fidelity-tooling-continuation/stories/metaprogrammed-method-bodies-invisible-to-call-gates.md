@@ -1,6 +1,6 @@
 ---
 title: "define_method/class_eval bodies carry no calls, so the call gates never see them"
-status: ready
+status: in-progress
 updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 7341
+claim: "2026-09-01T16:00:48Z"
+assignee: "metaprogrammed-method-bodies-invisible-to-call-gates"
 blocked-by: null
 closed-reason: null
 ---

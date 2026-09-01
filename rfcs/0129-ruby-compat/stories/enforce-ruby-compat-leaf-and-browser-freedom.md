@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat's leaf / browser-free property is asserted in prose and enforced by nothing"
-status: ready
+status: draft
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null

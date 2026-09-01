@@ -1,7 +1,7 @@
 ---
 title: "Enroll rack-session's 124-test suite in parity:test, with PERMANENT-SKIP stubs for the unported files"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: ["rack-session"]

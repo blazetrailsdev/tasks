@@ -1,6 +1,6 @@
 ---
 title: "RuntimeError, NotImplementedError, TypeError, RangeError and FrozenError get one home in ruby-compat"
-status: claimed
+status: done
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 44
-pr: null
+pr: 7340
 claim: "2026-09-01T14:06:30Z"
 assignee: "converge-argument-error-remaining-packages"
 blocked-by: null

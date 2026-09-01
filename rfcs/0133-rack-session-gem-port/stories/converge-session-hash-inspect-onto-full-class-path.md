@@ -1,6 +1,6 @@
 ---
 title: "Converge SessionHash#inspect's not-yet-loaded form onto Ruby's full self.class path"
-status: draft
+status: in-progress
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 7344
 claim: null
 assignee: null
 blocked-by: null

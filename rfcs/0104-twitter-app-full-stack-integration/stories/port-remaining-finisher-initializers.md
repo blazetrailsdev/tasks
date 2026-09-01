@@ -1,7 +1,7 @@
 ---
 title: "Port the remaining Finisher initializers (setup_default_session_store, finisher_hook, ...)"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 20
-pr: 7295
-claim: null
-assignee: null
+pr: 7343
+claim: "2026-09-01T16:14:45Z"
+assignee: "collection-proxy-length-reads-as-function"
 blocked-by: null
 closed-reason: null
 ---

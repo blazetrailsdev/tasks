@@ -1,6 +1,6 @@
 ---
 title: "Converge Errors#messages and #to_hash onto the ruby-compat Hash default seat"
-status: ready
+status: in-progress
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 45
-pr: null
-claim: null
-assignee: null
+pr: 7345
+claim: "2026-09-01T16:14:07Z"
+assignee: "converge-errors-messages-onto-ruby-compat-hash"
 blocked-by: null
 closed-reason: null
 ---
