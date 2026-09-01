@@ -1,6 +1,6 @@
 ---
 title: "A generated app cannot render its own view: compiled .tse output is invisible to the resolver"
-status: draft
+status: in-progress
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: 7364
+claim: "2026-09-01T22:46:15Z"
+assignee: "generated-app-cannot-render-its-own-views"
 blocked-by: null
 closed-reason: null
 ---
