@@ -44,7 +44,7 @@ trails splits this across two places
   and branches on emptiness itself, calling `session.delete("flash")` where
   Rails assigns `nil` and lets its own `:80-82` arm delete it.
 
-PR #7317 fixed the *behaviour* here — the wrapper was previously missing
+PR #7317 fixed the _behaviour_ here — the wrapper was previously missing
 entirely, so `from_session_value` read the payload as the Rails-3 arm with an
 empty discard set and a carried flash never swept — but left the decomposition
 split. One Rails method is one TS method; this is two, and the wrapper shape
