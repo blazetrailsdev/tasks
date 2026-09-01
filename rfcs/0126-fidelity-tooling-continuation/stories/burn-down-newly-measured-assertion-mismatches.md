@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 2000
+est-loc: null
 priority: 5
 pr: null
 claim: null
@@ -17,6 +17,10 @@ closed-reason: null
 ---
 
 ## Context
+
+Sized at ~2000 LOC as a whole — over the per-PR ceiling, hence `est-loc: null`
+above. Not a single-PR story: claim and ship it per package slice, per the
+acceptance criteria below, sizing each slice's own PR as it's claimed.
 
 PR #7159 (RFC 0126, `assertion-metrics-measured-for-one-package-only`) removed
 `ASSERTION_REPORT_PACKAGES` from `scripts/test-compare/compare.ts`, so the three

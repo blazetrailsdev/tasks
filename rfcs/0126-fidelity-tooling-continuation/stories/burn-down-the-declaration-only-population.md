@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 1500
+est-loc: null
 priority: 5
 pr: null
 claim: null
@@ -17,6 +17,11 @@ closed-reason: null
 ---
 
 ## Context
+
+Sized at ~1500 LOC as a whole — over the per-PR ceiling, hence `est-loc: null`
+above. Not a single-PR story: this is the tracking parent, split per file or
+per cluster as the work is claimed (see below), sizing each slice's own PR as
+it's claimed.
 
 PR #7159 (RFC 0126) stopped `parity:api` crediting a Ruby method against a TS
 name whose only declaration in the mirrored file is a bodyless signature — an
