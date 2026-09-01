@@ -301,8 +301,6 @@ and proved out — a successor RFC's work, not a later wave of this one.
 
 | Item                                                               | Location                                     | ~LOC | Note                                                                                                                                                                       |
 | ------------------------------------------------------------------ | -------------------------------------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Module#include` / `#extend` / hooks / `Included<>` / `Extended<>` | `activesupport/src/include.ts`               | 239  | 0089's lead item; the object model, not a value type                                                                                                                       |
-| `Module#prepend`                                                   | `activesupport/src/prepend.ts`               | 117  | ditto                                                                                                                                                                      |
 | `Object#hash` (`rbHash`)                                           | `activesupport/src/rb-hash.ts`               | 82   | already a single canonical copy — a move, not a convergence                                                                                                                |
 | `rb_equal`                                                         | `activesupport/src/rb-equal.ts`              | 51   | ditto; `Comparable` will depend on it, so sequencing matters                                                                                                               |
 | `empty?` (`isEmpty`)                                               | `activesupport/src/ruby-empty.ts`            | 31   | the precedent this RFC generalizes; moves once the call mapping exists                                                                                                     |
@@ -617,9 +615,13 @@ edge.
   `attribute-methods/time-zone-conversion.ts:375-382` are unrelated node/type
   classes. `0023-surfaced-deviations/unify-three-range-value-shapes` is closed;
   `0119/pg-oid-range-builds-bespoke-range-not-core-range` is the live owner.
-- **The object-model primitives.** `Module#include` / `#extend` / `#prepend`,
-  `Object#hash`, `rb_equal`, Ruby truthiness, `Tempfile`, `Mutex`, `URI` — all
-  real findings, all deferred, all listed and sized above. This RFC is value types.
+- **The object-model primitives.** `Object#hash`, `rb_equal`, Ruby truthiness,
+  `Tempfile`, `Mutex`, `URI` — all real findings, all deferred, all listed and
+  sized above. This RFC is value types. `Module#include` / `#extend` /
+  `#prepend` and their type-level halves are the one exception: their deferral
+  was lifted by `move-module-mixin-primitives-to-ruby-compat`, because every
+  future ruby-compat mixin hits open question 3's inversion until the mechanism
+  itself lives in the leaf.
 - **Rewording receipts.** A `@missingRailsCall` or `@noRailsEquivalent` is
   retired by making the call or removing the surface, never by improving its
   prose. (CLAUDE.md: a deviation register is a burndown ledger, not permission.)
@@ -705,7 +707,9 @@ Each is cited in the story that touches it.
 
 The _Deferred_ set (the object-model primitives) is deliberately absent from
 this rollout; it is a successor RFC's work, scheduled only once these phases
-have proved out.
+have proved out. The mixin primitives are the exception, moved by
+`move-module-mixin-primitives-to-ruby-compat` because open question 3 showed
+every ruby-compat mixin blocked on them.
 
 ## Verification
 
@@ -759,6 +763,14 @@ Each must be resolved or deferred to a named story before `status: active`.
    functions assigned to the class is the fallback. **Recommendation:** settle it
    in `ruby-compat-comparable`; if neither works, that story blocks with the
    specific blocker rather than inventing a third idiom.
+   **Answered:** `ruby-compat-comparable` took the `this`-typed-functions
+   fallback, and `move-module-mixin-primitives-to-ruby-compat` has since removed
+   the constraint it was chosen under — `include()` / `Included<>` now live in
+   `ruby-compat` itself. No convergence follows: `this`-typed functions assigned
+   to the class are a first-class trails mixin idiom (CLAUDE.md "Module
+   mixins"), not a workaround, and `Comparable`'s members need the Ruby-shaped
+   receiver that form gives them. Only the stale rationale in
+   `packages/ruby-compat/src/comparable.ts:6` is corrected, in that PR.
 4. **Do `spec/ruby`'s RSpec-shaped files map onto `parity:test` at all?** The
    extractor's known shapes are minitest `def test_` and our `it(...)`.
    **Recommendation:** `ruby-spec-behavioural-enrollment` resolves it and records
@@ -781,3 +793,5 @@ Each must be resolved or deferred to a named story before `status: active`.
 ## Changelog
 
 - 2026-08-29: initial RFC. Supersedes `0089-corelib-primitives`.
+- 2026-09-01: `Module#include` / `#extend` / `#prepend` and their type-level
+  halves un-deferred and moved to `ruby-compat`; open question 3 answered.
