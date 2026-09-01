@@ -1,7 +1,7 @@
 ---
 title: "include-view-paths-in-action-controller-base"
-status: in-progress
-updated: 2026-08-31
+status: done
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []

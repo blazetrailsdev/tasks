@@ -1,6 +1,6 @@
 ---
 title: "converge-hash-default-proc-seats"
-status: claimed
+status: in-progress
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 33
-pr: null
+pr: 7321
 claim: "2026-09-01T00:46:36Z"
 assignee: "retire-no-js-call-form-entries-and-fetch-receipts"
 blocked-by: null
