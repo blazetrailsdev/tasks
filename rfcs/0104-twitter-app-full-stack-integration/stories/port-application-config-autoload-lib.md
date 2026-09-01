@@ -39,4 +39,13 @@ from the `trails new` application template.
 
 - `Configuration#autoloadLib` exists and mutates the same path collections
   Rails does.
-- The generated `src/config/application.ts` calls it; generator snapshot updated.
+- ~~The generated `src/config/application.ts` calls it; generator snapshot
+  updated.~~ **Knowingly unmet — split out as
+  `emit-autoload-lib-from-trails-new`.** Rails resolves `config.root` eagerly
+  in the class body, so `root.join("lib")` answers there; trails resolves the
+  root asynchronously (`Application.findRoot` is `async`, and
+  `Application#initialize` pins `config.root` only once the initializer chain
+  starts), so `Application.config.root` is still `null` inside a generated
+  `static { ... }` block and `autoloadLib` would join against `null`. Closing
+  this story on the first criterion alone is deliberate: the method is the
+  port, the emission is a timing problem with its own story.
