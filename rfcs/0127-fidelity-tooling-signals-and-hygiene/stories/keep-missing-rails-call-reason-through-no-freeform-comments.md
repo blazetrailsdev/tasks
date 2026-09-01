@@ -26,8 +26,16 @@ permanent deviation's justification has nowhere to live in the file it is about.
 from its data alone:
 
 ```js
-return [`@${name}`, rubyCall, rubyCall && permanence && "—", permanence?.[1], story, movedByShortName]
-  .filter(Boolean).join(" ");
+return [
+  `@${name}`,
+  rubyCall,
+  rubyCall && permanence && "—",
+  permanence?.[1],
+  story,
+  movedByShortName,
+]
+  .filter(Boolean)
+  .join(" ");
 ```
 
 so `@missingRailsCall fetch — PERMANENT: <why>` is rewritten to
