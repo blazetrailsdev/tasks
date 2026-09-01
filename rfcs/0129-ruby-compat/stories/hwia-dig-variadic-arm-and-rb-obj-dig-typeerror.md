@@ -38,7 +38,7 @@ Two arms of `rb_obj_dig`'s loop are missing at
   so the shape to match is next door.
 - **The TypeError.** An intermediate that answers no `dig` is
   `no_dig_method`'s `rb_raise(rb_eTypeError, "%"PRIsVALUE" does not have #dig
-  method")` (`vendor/ruby/object.c:3897-3900`); ours returns `undefined`
+method")` (`vendor/ruby/object.c:3897-3900`); ours returns `undefined`
   silently.
 
 The TypeError arm is the one to land carefully: today's silent `undefined` is
