@@ -1,5 +1,5 @@
 ---
-title: "A generated app cannot install its dependencies: trails new emits \"*\" for unpublished packages"
+title: 'A generated app cannot install its dependencies: trails new emits "*" for unpublished packages'
 status: draft
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
@@ -60,6 +60,6 @@ sqlite3 driver is unusable until the user discovers `pnpm approve-builds`.
   with no manual editing.
 - Whatever the mechanism (published packages, `file:` tarballs vendored by the
   generator, or a documented workspace/link mode), `trails new && pnpm install
-  && trails server` works from an empty directory.
+&& trails server` works from an empty directory.
 - The generated `package.json` allows the native builds its own dependencies
   need, so sqlite3 works without `pnpm approve-builds`.
