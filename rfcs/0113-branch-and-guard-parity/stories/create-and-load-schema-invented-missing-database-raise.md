@@ -1,6 +1,6 @@
 ---
 title: "create_and_load_schema raises on a missing database name where Rails has no guard"
-status: claimed
+status: done
 updated: 2026-09-01
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 19
-pr: null
+pr: 7355
 claim: "2026-09-01T18:59:00Z"
 assignee: "delete-pending-nested-attributes-and-the-save-monkey-patch"
 blocked-by: null

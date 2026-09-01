@@ -1,6 +1,6 @@
 ---
 title: "tsMethodsByFile pools dep packages under a relative path two gems share"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

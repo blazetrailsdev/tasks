@@ -1,6 +1,6 @@
 ---
 title: "port-unused-routes-command-for-routes-unused-flag"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Converge Configuration#root to Rails' memoizing find_root"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

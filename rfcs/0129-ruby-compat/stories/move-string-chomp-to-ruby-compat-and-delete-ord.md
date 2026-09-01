@@ -1,6 +1,6 @@
 ---
 title: "string-utils.ts's two unanchored members: chomp moves to ruby-compat, ord is deleted"
-status: claimed
+status: in-progress
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 51
-pr: null
+pr: 7354
 claim: "2026-09-01T18:53:13Z"
 assignee: "move-string-io-to-ruby-compat"
 blocked-by: null

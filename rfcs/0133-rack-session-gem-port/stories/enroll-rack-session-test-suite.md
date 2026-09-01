@@ -1,6 +1,6 @@
 ---
 title: "Enroll rack-session's 124-test suite in parity:test, with PERMANENT-SKIP stubs for the unported files"
-status: claimed
+status: in-progress
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-rack-session-session-hash", "port-rack-session-abstract-persisted-b
 deps-rfc: []
 est-loc: 600
 priority: 7
-pr: null
+pr: 7356
 claim: "2026-09-01T18:53:58Z"
 assignee: "enroll-rack-session-test-suite"
 blocked-by: null

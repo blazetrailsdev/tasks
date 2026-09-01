@@ -1,6 +1,6 @@
 ---
 title: "param-name check pairs a Ruby predicate with its non-predicate twin"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
