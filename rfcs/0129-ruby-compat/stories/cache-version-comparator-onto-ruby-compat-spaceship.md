@@ -1,6 +1,6 @@
 ---
 title: "compute_cache_version open-codes <=> and rb_cmperr; route it onto the ruby-compat Comparable primitive"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null

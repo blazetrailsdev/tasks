@@ -1,6 +1,6 @@
 ---
 title: "Remaining ported bodies spell new Rational() where Rails calls Kernel#Rational()"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null

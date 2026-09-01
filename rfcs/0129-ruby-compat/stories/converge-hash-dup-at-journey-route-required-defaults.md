@@ -1,6 +1,6 @@
 ---
 title: "Converge Journey::Route#required_defaults' object spread onto a ported Hash#dup"
-status: in-progress
+status: done
 updated: 2026-08-31
 rfc: "0129-ruby-compat"
 cluster: null

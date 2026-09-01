@@ -1,6 +1,6 @@
 ---
 title: "Vendor the rack-session gem at v2.1.0 so every Rack::Session citation in the tree resolves"
-status: draft
+status: done
 updated: 2026-08-31
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: null
+pr: 7318
 claim: null
 assignee: null
 blocked-by: null
