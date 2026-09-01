@@ -61,6 +61,45 @@ this package therefore needs the rule to emit the plain `noNodeBuiltin` message
 there rather than the `useAdapter` autofix, or the autofix will write an import
 that breaks the leaf rule it is meant to protect.
 
+### Import guards are blind to Node *globals* — close that at compile time
+
+An import-specifier guard sees `import … from "node:fs"`. It cannot see
+`Buffer`, `process`, `__dirname` or `__filename`, which are **ambient globals**,
+not imports — and they break a browser bundle just as thoroughly.
+
+Root `tsconfig.json` sets no `types` restriction, so `@types/node` leaks
+ambiently into every package, ruby-compat included. Measured on this branch,
+compiling a one-line probe inside `packages/ruby-compat/src/`:
+
+```ts
+export const p = Buffer.from("x").length + process.pid;
+```
+
+- with the tsconfig as it stands today → **compiles clean**;
+- with `--types` (an empty types list) →
+  `error TS2591: Cannot find name 'Buffer'` and the same for `process`.
+
+ruby-compat uses none of these globals today (grepped over `dist/**/*.js`), so
+this is a one-line fence around a currently-empty gap rather than a burndown.
+It is the cheapest of the three places this could be caught: `tsc` fails in the
+editor and on the pre-commit hook, where a CI-only guard fails minutes later
+and a browser test lane fails as a runtime error inside a bundle.
+
+**A browser test lane was considered and rejected here.** It is the only thing
+that could catch a Node global at *runtime*, but `"types": []` catches the same
+class at compile time for one line, and ruby-compat's suite is pure value
+semantics (`Hash`, `Rational`, `Range`, `Regexp`, `Comparable`, `Symbol`,
+`String#succ`) that exercises no platform surface — so a browser run would be a
+load check wearing a test suite's clothes, and the guard above already is the
+load check. The repo also has no browser test infrastructure to build on (no
+`@vitest/browser`; `playwright-core` is actionpack's system-testing dependency
+and `jsdom` is the website's), and RFC `0028-ci-cost-optimization` is actively
+reducing lane count. Revisit only when ruby-compat holds a member whose
+behaviour genuinely diverges across engines — `String#succ`'s UTF-8 width
+handling is the nearest candidate, and it does not diverge today. Do not
+re-litigate this without such a member in hand.
+
+
 ## Acceptance criteria
 
 - [ ] `packages/ruby-compat/src/**/*.ts` is added to the `no-node-builtins`
@@ -69,6 +108,13 @@ that breaks the leaf rule it is meant to protect.
       offers **no** autofix — the `ACTIVESUPPORT_REPLACEMENTS` path
       (`eslint/no-node-builtins.mjs:9-28`) must not fire there, because the
       import it writes is itself a leaf-rule violation. Covered by a rule test.
+- [ ] `packages/ruby-compat/tsconfig.json` sets `"types": []`, so ambient
+      `@types/node` no longer reaches this package and `Buffer` / `process` /
+      `__dirname` become compile errors rather than silently-valid code. Prove
+      it the same way the probe above did — add the one-line probe, confirm
+      `tsc` goes red, remove it — and state that in the PR body.
+- [ ] `pnpm typecheck` and `pnpm build` stay green for ruby-compat and for every
+      package that references it after that change.
 - [ ] A guard asserts, over `packages/ruby-compat/dist/**/*.js` (built output,
       not `src/`), that no runtime module imports a `node:`-prefixed or bare
       Node builtin specifier, and that `packages/ruby-compat/package.json`
