@@ -50,8 +50,7 @@ and a ruby-compat seat drags no workspace dependency — `float-domain-error.ts`
 would import only `./range-error.js` if one is added, exactly as
 `frozen-error.ts` imports `./runtime-error.js` today.
 
-Note that `RangeError` itself has NO Ruby-core hand-roll to converge — PR
-#7340 checked, and both trails declarations are ones Rails defines
+Note that `RangeError` itself has NO Ruby-core hand-roll to converge — PR #7340 checked, and both trails declarations are ones Rails defines
 (`vendor/rails/activemodel/lib/active_model/errors.rb:523`
 `class RangeError < ::RangeError`, and
 `vendor/rails/activerecord/lib/active_record/errors.rb:301`

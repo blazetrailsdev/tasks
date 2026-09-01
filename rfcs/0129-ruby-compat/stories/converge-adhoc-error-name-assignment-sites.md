@@ -34,8 +34,7 @@ left them behind. Verified 2026-09-01:
 
 The first three now have a real class to throw:
 `ArgumentError` and `FrozenError` both live at
-`packages/ruby-compat/src/argument-error.ts` / `frozen-error.ts` as of
-#7340, each with a `vendor/ruby/error.c:LINE` citation (3323 and 3366). The
+`packages/ruby-compat/src/argument-error.ts` / `frozen-error.ts` as of #7340, each with a `vendor/ruby/error.c:LINE` citation (3323 and 3366). The
 fourth is different in kind — `ActiveRecord::MigrationError` is a class Rails
 DOES define (`vendor/rails/activerecord/lib/active_record/migration.rb:118`,
 `class MigrationError < ActiveRecordError`) and trails already has it in
