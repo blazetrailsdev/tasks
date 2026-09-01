@@ -1,9 +1,9 @@
 ---
 rfc: "0133-rack-session-gem-port"
 title: "@blazetrails/rack-session: vendor the rack-session gem and move Rack's session scaffolding out of actionpack"
-status: draft
+status: active
 created: 2026-08-31
-updated: 2026-08-31
+updated: 2026-09-01
 owner: "@deanmarano"
 packages:
   - rack-session
