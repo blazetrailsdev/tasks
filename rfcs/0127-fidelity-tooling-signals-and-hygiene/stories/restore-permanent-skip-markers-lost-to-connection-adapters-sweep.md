@@ -38,7 +38,7 @@ deleted **7 markers**, which are gone from `origin/main` today:
 - `connection-adapters/connection-handlers-multi-db.test.ts` — 1
   (`PERMANENT-SKIP: Ruby-only — relies on real OS threads + Concurrent::CountDownLatch`)
 - `connection-adapters/standalone-connection.test.ts` — 1
-  (`PERMANENT-SKIP: Rails' `select_all("SELECT 1", async: true)` returns a ...`)
+  (``PERMANENT-SKIP: Rails' `select_all("SELECT 1", async: true)` returns a ...``)
 
 Recover the exact original text with
 `git show bff5f2169 -- 'packages/activerecord/src/connection-adapters/*.test.ts' | grep -E '^-.*(PERMANENT-SKIP:|BLOCKED:)'`

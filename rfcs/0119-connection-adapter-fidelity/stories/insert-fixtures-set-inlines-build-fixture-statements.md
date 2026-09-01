@@ -86,7 +86,7 @@ then the existing `transaction` / `disableReferentialIntegrity` /
 in PR #7250.
 
 Note the `?`-drop forces every fixture test double to supply the member — PR
-#7250 hit exactly this and absorbed it with a shared `hostDefaults` spread in
+PR #7250 hit exactly this and absorbed it with a shared `hostDefaults` spread in
 `database-statements.trails.test.ts`, plus per-file additions in
 `fixtures.test.ts`, `test-fixtures.test.ts` and
 `test-helpers/fixtures/fixtures.trails.test.ts`. Those doubles also assert

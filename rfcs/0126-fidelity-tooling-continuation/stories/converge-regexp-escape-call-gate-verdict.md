@@ -62,7 +62,7 @@ Rails call sites, all verified:
   reseed); files left with no rows removed. The unrelated `escape` rows for
   rack `escape_path` and actiondispatch `normalize_filter` (URI escaping) stay.
 - The escape set is MRI's MINUS `-`, `#` and whitespace, with the reason at the
-  definition: `\-` / `\#` / `\ ` are invalid identity escapes under a
+  definition: `\-` / `\#` / a backslash-space pair are invalid identity escapes under a
   `u`-flagged JS pattern (`new RegExp("a\\-b", "u")` throws), which
   `ParameterFilter#precompileFilters` builds. All three are literal outside a
   character class in JS, so the subset matches the same strings MRI's output

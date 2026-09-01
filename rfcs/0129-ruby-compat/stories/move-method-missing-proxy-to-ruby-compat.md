@@ -22,7 +22,7 @@ closed-reason: null
 trails idiom for Ruby's `method_missing` — a language hook JS does not have,
 only `Proxy`. Its own receipt says exactly that, and names the precedent:
 
-```
+```text
 @noRailsEquivalent PERMANENT — Ruby resolves an undefined method through
 `method_missing` at the language level; JS has no such hook, only `Proxy`.
 No amount of porting removes the need for a TS-side shape, so this is the one

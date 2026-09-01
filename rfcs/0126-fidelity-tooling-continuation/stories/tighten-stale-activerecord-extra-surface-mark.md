@@ -20,7 +20,7 @@ closed-reason: null
 
 `pnpm parity:api:extra:gate` reports, on an untouched checkout of `main`:
 
-```
+```text
 extra-surface gate: activerecord total mark 986 is above the current 985 —
 narrow it with `pnpm parity:api:extra:tighten`.
 ```

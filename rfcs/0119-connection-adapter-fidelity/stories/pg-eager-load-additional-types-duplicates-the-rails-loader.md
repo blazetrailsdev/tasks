@@ -61,7 +61,7 @@ rather than duplicating it, with whatever connect-time re-entrancy escape
 `internalExecute` needs justified at that call site with its Rails `file:line`.
 
 Related: `pg-lookup-cast-type-resolves-by-name-not-regtype-oid` (RFC 0119, PR
-#7257) is what surfaced this.
+PR #7257) is what surfaced this.
 
 ## Acceptance criteria
 

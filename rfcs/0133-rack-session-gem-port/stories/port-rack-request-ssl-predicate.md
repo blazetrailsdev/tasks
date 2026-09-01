@@ -24,17 +24,20 @@ guard a method that never exists and silently take the false arm:
 
 - `packages/actionpack/src/action-dispatch/middleware/session/abstract-store.ts`,
   `Persisted#isSecurityMatches` — Rails is
+
   ```ruby
   def security_matches?(request, options)   # abstract/id.rb:371-374
     return true unless options[:secure]
     request.ssl? || @assume_ssl == true
   end
   ```
+
   trails writes `request.isSsl?.() === true || this.assumeSsl === true` and
   carries a `@missingRailsCall ssl?` receipt (added by PR #7317). The
   consequence is real: a store configured `secure: true` can never commit its
   session, because `security_matches?` is false on every request including
   genuine HTTPS ones.
+
 - `packages/actionpack/src/action-dispatch/middleware/cookies.ts:297` guards the
   same absent method the same way, for the `secure` cookie decision.
 

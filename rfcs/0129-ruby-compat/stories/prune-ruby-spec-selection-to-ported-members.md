@@ -25,7 +25,7 @@ below is complete and verified locally; it was never committed.
 
 ### 1. The selection unit is still the DIRECTORY for four types
 
-#7300 correctly narrowed `String`, `Regexp` and `Symbol` to their ported
+PR #7300 correctly narrowed `String`, `Regexp` and `Symbol` to their ported
 members' spec files, but treated `hash`, `range`, `rational` and `comparable`
 as "whole-type ports" and took their whole directories. That premise is false —
 ruby-compat ports **no** type whole:

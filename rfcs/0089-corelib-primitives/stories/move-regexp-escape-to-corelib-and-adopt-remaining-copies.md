@@ -57,7 +57,7 @@ measures it.
   function; `packages/activerecord/src/support/quote-regex.ts` keeps
   `quoteTableName` and stops exporting an escape of its own.
 - The escape set stays the documented SUBSET of MRI's — MRI escapes `-`, `#`
-  and whitespace, and `\-` / `\#` / `\ ` are invalid identity escapes under a
+  and whitespace, and `\-` / `\#` / a backslash-space pair are invalid identity escapes under a
   `u`-flagged JS pattern, which `ParameterFilter#precompileFilters` builds. The
   pin in `core-ext/regexp-ext.trails.test.ts` moves with the function.
 - `CORE_LIBRARY_ALIASES` still maps `escape` to exactly one name.

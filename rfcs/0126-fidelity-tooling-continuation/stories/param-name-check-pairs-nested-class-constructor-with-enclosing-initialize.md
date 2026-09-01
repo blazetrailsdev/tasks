@@ -22,7 +22,7 @@ closed-reason: null
 38 rows in its slice. One residual row is not drift at all but a matcher
 homonym:
 
-```
+```text
 core.rb#initialize [core.ts#constructor] @0  ruby `attributes` → ts `value`
 ```
 

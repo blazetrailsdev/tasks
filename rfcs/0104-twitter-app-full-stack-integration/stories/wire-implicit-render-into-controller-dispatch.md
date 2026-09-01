@@ -21,7 +21,7 @@ closed-reason: null
 `packages/actionpack/src/action-controller/metal/implicit-render.ts` is dead
 code on `main`: nothing imports it.
 
-```
+```console
 $ grep -rn "implicit-render" packages/*/src --include=*.ts | grep -v "implicit-render.ts:"
 (no output)
 ```

@@ -22,7 +22,7 @@ The measure the whole RFC is for. `vendor/rack-session/test/` holds 7 files and
 **124 tests** — verified by running this repo's own extractor over a `v2.1.0`
 clone:
 
-```
+```console
 TEST_PATHS_JSON='{"rack-session":"<clone>/test"}' ruby scripts/test-compare/extract-ruby-tests.rb
   → rack-session: 7 files, 124 tests   (0 adapter/feature-gated)
 ```

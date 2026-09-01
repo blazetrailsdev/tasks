@@ -31,7 +31,7 @@ Found while landing `credit-ruby-hash-and-option-keys-as-ruby-surface`
 `ToXmlOptions#skipInstruct`. Measured on `origin/main`'s extractor with only
 that tag deleted:
 
-```
+```text
 activesupport novel 293 (unchanged), xml-mini.ts novel 8, allowlisted 0
 skipInstruct absent from the extras list in BOTH runs
 ```

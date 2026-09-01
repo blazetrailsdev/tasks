@@ -20,8 +20,7 @@ closed-reason: null
 
 `relocate-rack-session-scaffolding-out-of-actionpack` expected to move a
 `Pool` class out of
-`packages/actionpack/src/action-dispatch/middleware/session/pool.ts`, which PR
-#7317 was to have added. #7317 landed without it — there is no `Pool` anywhere
+`packages/actionpack/src/action-dispatch/middleware/session/pool.ts`, which PR #7317 was to have added. #7317 landed without it — there is no `Pool` anywhere
 in `packages/actionpack/src`, so the relocation had nothing to move and the
 gem's `Rack::Session::Pool` is still unported.
 

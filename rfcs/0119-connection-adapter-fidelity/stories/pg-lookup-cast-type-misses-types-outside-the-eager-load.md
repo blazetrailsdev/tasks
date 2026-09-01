@@ -45,8 +45,7 @@ type. The method keeps `@missingRailsCall query_value — PERMANENT` and
 `@missingRailsCall quote — PERMANENT` for this.
 
 The round trip cannot simply be restored. `lookupCastType` is synchronous, which
-is the settled outcome of `pg-lookup-cast-type-async-divergence` (done, PR
-#7223): it was async and issuing exactly this query, and that was converged away
+is the settled outcome of `pg-lookup-cast-type-async-divergence` (done, PR #7223): it was async and issuing exactly this query, and that was converged away
 because Rails' `lookup_cast_type` is synchronous and the base contract at
 `abstract/quoting.rb:234-236` returns a `Type`, not a promise. Seven synchronous
 call sites consume it — `abstract/quoting.ts:149,172`, `abstract-adapter.ts:2113`,

@@ -30,7 +30,7 @@ still reproduce, so they are on main itself.
 
 Representative failure, `packages/globalid/src/signed-global-id.test.ts:159`:
 
-```
+```text
 AssertionError: expected null not to be null
   const sgid = SignedGlobalID.create(person(5), { verifier, expiresIn: ... });
   vi.setSystemTime(new Date("2024-01-01T00:00:00.500Z"));

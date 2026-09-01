@@ -31,7 +31,7 @@ the next step:
 No open story covers that 4. Measured on `origin/main` after #7284
 (`pnpm parity:api:extra --package ruby-compat`):
 
-```
+```text
 Package                Files   Novel   Moved   Total Allowed NoCntrp
 ruby-compat                7       4      13      17      85      17
 ```

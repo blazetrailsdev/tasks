@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 Surfaced converging `sqlite3-explain-forwards-binds-rails-passes-empty` on PR
-#7287, which had to be blocked on this.
+PR #7287, which had to be blocked on this.
 
 Ruby's sqlite3 gem binds a parameter that was never supplied as `NULL`, so a
 prepared statement carrying `?` placeholders runs with no values at all. Rails

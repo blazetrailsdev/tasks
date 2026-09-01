@@ -38,7 +38,7 @@ error << "(#{ids.join(", ")})#{conditions} (found #{result_size} results, but wa
 For a composite key the `ids` are tuples, and Ruby's `Array#join` FLATTENS
 nested arrays. Verified against MRI on this box:
 
-```
+```console
 ruby -e 'p [[1,2],[3,4]].join(", ")'   # => "1, 2, 3, 4"
 ```
 
