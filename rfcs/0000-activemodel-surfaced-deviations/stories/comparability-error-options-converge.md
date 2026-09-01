@@ -2,7 +2,7 @@
 title: "activemodel: converge Comparability#errorOptions onto except/merge and retire its two placeholder baseline rows"
 status: ready
 updated: 2026-09-01
-rfc: "0134-activemodel-surfaced-deviations"
+rfc: "0000-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages: ["activemodel"]
 deps: []

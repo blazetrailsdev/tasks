@@ -2,7 +2,7 @@
 title: "activemodel: converge the Type/ValueType split and the per-subclass `name` property (~24 novel rows)"
 status: ready
 updated: 2026-09-01
-rfc: "0134-activemodel-surfaced-deviations"
+rfc: "0000-activemodel-surfaced-deviations"
 cluster: invented-arm
 packages: ["activemodel"]
 deps: []

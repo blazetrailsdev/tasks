@@ -2,7 +2,7 @@
 title: "activemodel: review time-value.ts fast_string_to_time's placeholder baseline row"
 status: ready
 updated: 2026-09-01
-rfc: "0134-activemodel-surfaced-deviations"
+rfc: "0000-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages: ["activemodel"]
 deps: []

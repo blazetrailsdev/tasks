@@ -2,7 +2,7 @@
 title: "activemodel: modelName hardcodes namespace=null unreceipted; ModelName vs Rails' Name scores novel"
 status: ready
 updated: 2026-09-01
-rfc: "0134-activemodel-surfaced-deviations"
+rfc: "0000-activemodel-surfaced-deviations"
 cluster: invented-arm
 packages: ["activemodel"]
 deps: []

@@ -2,7 +2,7 @@
 title: "activemodel: serialization.ts's thenableHash/asJsonThenable and free-function split need receipts"
 status: ready
 updated: 2026-09-01
-rfc: "0134-activemodel-surfaced-deviations"
+rfc: "0000-activemodel-surfaced-deviations"
 cluster: receipt-hygiene
 packages: ["activemodel"]
 deps: []

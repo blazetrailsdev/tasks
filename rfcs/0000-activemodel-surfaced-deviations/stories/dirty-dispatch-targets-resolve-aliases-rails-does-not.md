@@ -2,7 +2,7 @@
 title: "activemodel: every Dirty dispatch target resolves aliases where Rails passes attr_name.to_s raw"
 status: ready
 updated: 2026-09-01
-rfc: "0134-activemodel-surfaced-deviations"
+rfc: "0000-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages: ["activemodel"]
 deps: []

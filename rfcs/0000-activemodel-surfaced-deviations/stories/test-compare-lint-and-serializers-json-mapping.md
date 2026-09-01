@@ -2,7 +2,7 @@
 title: "activemodel: cases/lint_test.rb and serializers/json_serialization_test.rb sit outside the test-compare population"
 status: ready
 updated: 2026-09-01
-rfc: "0134-activemodel-surfaced-deviations"
+rfc: "0000-activemodel-surfaced-deviations"
 cluster: test-placement
 packages: ["activemodel"]
 deps: []

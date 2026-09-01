@@ -2,7 +2,7 @@
 title: "activemodel: three free-prose @noRailsEquivalent receipts and one duplicated tag"
 status: ready
 updated: 2026-09-01
-rfc: "0134-activemodel-surfaced-deviations"
+rfc: "0000-activemodel-surfaced-deviations"
 cluster: receipt-hygiene
 packages: ["activemodel"]
 deps: []
