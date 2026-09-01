@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy#length is an async method, so .length > 0 in a template is silently always false"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

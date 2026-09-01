@@ -1,7 +1,7 @@
 ---
 title: "port-setup-default-session-store"
-status: draft
-updated: 2026-08-31
+status: done
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7343
 claim: null
 assignee: null
 blocked-by: null

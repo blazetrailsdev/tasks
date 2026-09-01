@@ -1,7 +1,7 @@
 ---
 title: "Scopes only type-check at the head of a chain; Relation<T> never learns the name"
-status: ready
-updated: 2026-08-31
+status: claimed
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: 24
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-01T17:23:54Z"
+assignee: "scopes-are-untyped-on-relation"
 blocked-by: null
 closed-reason: null
 ---

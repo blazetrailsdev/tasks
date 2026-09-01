@@ -1,6 +1,6 @@
 ---
 title: "Converge the relocated Persisted bodies against abstract/id.rb now that the source is readable"
-status: ready
+status: in-progress
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["relocate-rack-session-scaffolding-out-of-actionpack"]
 deps-rfc: []
 est-loc: 500
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: 7346
+claim: "2026-09-01T17:04:32Z"
+assignee: "port-rack-session-pool"
 blocked-by: null
 closed-reason: null
 ---

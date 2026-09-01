@@ -1,6 +1,6 @@
 ---
 title: "Converge MockRequest.envFor onto Rack::MockRequest.env_for, URI#port scheme defaults included"
-status: draft
+status: ready
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 260
-priority: null
+priority: 12
 pr: null
 claim: null
 assignee: null

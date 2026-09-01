@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining Finisher initializers (setup_default_session_store, finisher_hook, ...)"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

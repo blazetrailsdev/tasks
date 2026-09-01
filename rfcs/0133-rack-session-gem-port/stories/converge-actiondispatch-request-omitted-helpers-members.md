@@ -1,6 +1,6 @@
 ---
 title: "Burn down ActionDispatch::Request's Omit list: delete every re-declaration Rails does not actually override"
-status: draft
+status: ready
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null

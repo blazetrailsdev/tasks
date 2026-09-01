@@ -1,7 +1,7 @@
 ---
 title: "converge-alias-attribute-not-an-attribute-raise"
 status: ready
-updated: 2026-08-31
+updated: 2026-09-01
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 6
-pr: 7216
+pr: null
 claim: null
 assignee: null
 blocked-by: null

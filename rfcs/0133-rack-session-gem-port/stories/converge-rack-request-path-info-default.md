@@ -1,6 +1,6 @@
 ---
 title: 'Drop the invented "/" default from Rack::Request::Helpers#path_info'
-status: draft
+status: ready
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

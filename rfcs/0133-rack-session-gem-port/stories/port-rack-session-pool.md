@@ -1,6 +1,6 @@
 ---
 title: "port-rack-session-pool"
-status: ready
+status: in-progress
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7346
+claim: "2026-09-01T17:04:32Z"
+assignee: "port-rack-session-pool"
 blocked-by: null
 closed-reason: null
 ---
