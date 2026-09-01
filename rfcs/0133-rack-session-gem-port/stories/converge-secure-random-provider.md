@@ -36,7 +36,7 @@ Surfaced while porting `spec_session_abstract_id.rb` in
 
 - `spec_session_abstract_id.rb` "use securerandom" — asserts
   `DEFAULT_OPTIONS[:secure_random] == ::SecureRandom` and `id.sid_secure ==
-  ::SecureRandom`.
+::SecureRandom`.
 - `spec_session_abstract_id.rb` "allow to use another securerandom provider" —
   passes a `secure_random:` object whose `hex` returns `'fake_hex'` and asserts
   `generate_sid` returns it.
