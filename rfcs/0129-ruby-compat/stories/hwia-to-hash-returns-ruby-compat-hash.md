@@ -1,6 +1,6 @@
 ---
 title: "HashWithIndifferentAccess#to_hash returns ruby-compat's Hash, so set_defaults has a seat to land in"
-status: claimed
+status: in-progress
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 48
-pr: null
+pr: 7347
 claim: "2026-09-01T17:04:17Z"
 assignee: "hwia-to-hash-returns-ruby-compat-hash"
 blocked-by: null

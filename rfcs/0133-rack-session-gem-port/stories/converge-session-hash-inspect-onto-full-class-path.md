@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: 7344
-claim: null
-assignee: null
+claim: "2026-09-01T17:30:06Z"
+assignee: "converge-session-hash-inspect-onto-full-class-path"
 blocked-by: null
 closed-reason: null
 ---
