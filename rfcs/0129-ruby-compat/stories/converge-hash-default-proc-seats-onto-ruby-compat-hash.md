@@ -1,6 +1,6 @@
 ---
 title: "HashWithIndifferentAccess and Rack::Headers extend ruby-compat's Hash instead of copying its default seat"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null

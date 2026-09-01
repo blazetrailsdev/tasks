@@ -1,6 +1,6 @@
 ---
 title: 'Drop the invented "/" default from Rack::Request::Helpers#path_info'
-status: claimed
+status: in-progress
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 9
-pr: null
+pr: 7348
 claim: "2026-09-01T17:28:51Z"
 assignee: "converge-rack-request-path-info-default"
 blocked-by: null

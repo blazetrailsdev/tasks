@@ -1,6 +1,6 @@
 ---
 title: "Parameter-name check has no Ruby kwarg-collapse candidate form"
-status: ready
+status: done
 updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: 7171
+claim: "2026-09-01T17:59:08Z"
+assignee: "test-compare-gate-stack-does-not-follow-a-helper-call"
 blocked-by: null
 closed-reason: null
 ---

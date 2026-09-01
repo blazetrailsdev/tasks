@@ -1,6 +1,6 @@
 ---
 title: "param-name candidates pool across sibling classes and guessed files"
-status: ready
+status: claimed
 updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-01T17:32:16Z"
+assignee: "shared-cache-rails-manifests-bypass-the-worktree-gate"
 blocked-by: null
 closed-reason: null
 ---

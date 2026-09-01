@@ -1,6 +1,6 @@
 ---
 title: "Capture Hash keys a constant gains through CONST.update(...)"
-status: ready
+status: claimed
 updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-01T17:59:08Z"
+assignee: "test-compare-gate-stack-does-not-follow-a-helper-call"
 blocked-by: null
 closed-reason: null
 ---
