@@ -70,6 +70,7 @@ object, which reaches every caller of `toHash` — a separate, larger change.
   `hwia-to-hash-returns-ruby-compat-hash`, which carries the inventory; RFC
   0023's story is closed as superseded by it, and this criterion is satisfied
   by that decision, not by a `block`.
+
 - `compare_by_identity` stays unported (`packages/rack/src/headers.ts:481` is a
   Rails-anchored override that raises).
 - `pnpm parity:api`, `parity:api:calls`, `parity:api:calls:args`,
