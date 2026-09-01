@@ -30,7 +30,7 @@ multiparameter attributes.
 
 Existing scattered stories (reference, do not re-home): open —
 `converge-pg-dumper-deferrable-truthiness` (0023, draft),
-`multiparameter-empty-string-truthiness` (0023, draft). Done precedent —
+`multiparameter-empty-string-truthiness` (0134, draft). Done precedent —
 `columns-memo-read-idiom-mismatch-truthy-vs-nullcheck` (0056),
 `encrypted-attr-default-guard-truthiness-not-undefined` (0023).
 
