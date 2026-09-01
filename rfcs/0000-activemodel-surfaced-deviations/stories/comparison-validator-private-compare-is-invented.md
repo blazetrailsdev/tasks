@@ -2,8 +2,8 @@
 title: "ComparisonValidator's private compare() has no Rails counterpart (public_send off the value)"
 status: draft
 updated: 2026-08-17
-rfc: "0023-surfaced-deviations"
-cluster: null
+rfc: "0000-activemodel-surfaced-deviations"
+cluster: invented-arm
 packages:
   - "activemodel"
   - "date"

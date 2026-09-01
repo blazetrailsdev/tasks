@@ -2,8 +2,8 @@
 title: "errors-as-json-drops-full-messages-option"
 status: draft
 updated: 2026-08-15
-rfc: "0023-surfaced-deviations"
-cluster: null
+rfc: "0000-activemodel-surfaced-deviations"
+cluster: rails-deviation
 packages:
   - "activemodel"
 deps: []
