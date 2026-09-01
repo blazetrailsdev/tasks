@@ -73,7 +73,7 @@ Both exist for the same root cause: trails' dirty state lives in an external
 `DirtyTracker` keyed on a snapshot `Map`, not on the `Attribute` objects — so the
 snapshot cannot carry its own baseline and one has to be reconstructed. That root
 cause is already tracked as
-`0023-surfaced-deviations/construction-time-dirty-baseline-hides-ctor-assignments`
+`0134-activemodel-surfaced-deviations/construction-time-dirty-baseline-hides-ctor-assignments`
 (cited in `DirtyTracker#deepDup`'s own `@noRailsEquivalent`), whose fix — making
 `DirtyTracker` derive from the `AttributeSet` — retires this too.
 

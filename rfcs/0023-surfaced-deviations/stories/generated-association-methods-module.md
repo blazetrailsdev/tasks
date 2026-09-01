@@ -51,8 +51,8 @@ whatever defines them.
 
 Note the repo already has the settled shapes for this: `include()` /
 `Included<>` from `@blazetrails/activesupport` (see CLAUDE.md "Module mixins"),
-and the sibling story `define-dirty-attribute-methods-into-generated-module`
-(0023) is the same convergence on the dirty-tracking side — coordinate with it
+and the story `define-dirty-attribute-methods-into-generated-module`
+(0134) is the same convergence on the dirty-tracking side — coordinate with it
 rather than inventing a second mechanism.
 
 ## Converged shape

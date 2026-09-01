@@ -112,6 +112,72 @@ exactly:
 - **21 left in 0023**, because their subject is another package or they are
   cross-package sweeps. They are named in Non-goals below.
 
+### The eight families that came across
+
+The 39 fall into eight groups, and they are the shape of the work rather than
+the audit's five clusters — a claimant should pick a family, not a lone story:
+
+- **Attribute-method generation (8)** —
+  `activemodel-attribute-methods-missing-code-generator-layer`,
+  `activemodel-attribute-methods-file-order-drift`,
+  `activemodel-attribute-generates-accessors-eagerly`,
+  `attribute-methods-method-missing-dispatch-unported`,
+  `class-body-reader-suppresses-generated-writer`,
+  `one-generated-attribute-methods-carrier-per-class`,
+  `define-dirty-attribute-methods-into-generated-module`,
+  `activemodel-instance-helper-methods-partial`. This is the family the audit's
+  `alias-attribute-method-definition-reroute-namespace` already sits in.
+- **Type cast and serialize (9)** — `integertype-castvalue-to-i-semantics`,
+  `float-cast-lacks-string-to-f-semantics`,
+  `binary-cast-coerces-non-string-values`,
+  `bigdecimal-lacks-nan-and-infinity-forms`,
+  `serialize-cast-value-drops-is-utc-normalization`,
+  `type-registries-register-nonexistent-value-type-name`,
+  `yaml-encoder-coder-is-per-call-not-per-encoder`,
+  `drop-fast-string-to-date-newline-guard`,
+  `date-parse-stand-in-zone-table-and-grammar-completeness`. Adjacent to the
+  audit's `type-cast-for-schema-stringify-vs-inspect` and
+  `time-value-fast-string-to-time-review`.
+- **Dirty and mutation tracking (7)** —
+  `dirty-tracker-is-one-object-where-rails-has-two-mutation-trackers` (the
+  root; the rest are its symptoms), `port-mutations-from-database-as-tracker`,
+  `construction-time-dirty-baseline-hides-ctor-assignments`,
+  `accessed-fields-marker-belongs-on-the-attribute`,
+  `binary-attribute-changed-uses-reference-equality`,
+  `mutable-changed-in-place-reserializes-raw-old-value`,
+  `activemodel-numeric-changed-passes-cast-value-to-equal-nan`.
+- **Numericality (4)** — `numericality-exponent-number-needs-bignum-compare`,
+  `numericality-validate-each-reserved-options-loop`,
+  `numericality-validate-each-reports-raw-value-and-duplicates-allow-blank`,
+  `wire-numericality-changed-in-place-short-circuit`.
+- **Assignment, access and validation mixins (4)** —
+  `assign-attribute-respond-to-setter-reraise-arm`,
+  `converge-sanitize-for-mass-assignment-mixin-split`,
+  `access-has-no-standalone-mixin-or-indifferent-slice`,
+  `model-validate-is-not-variadic`.
+- **Test placement (3)** — `activemodel-tests-lack-shared-rails-test-models`,
+  `date-time-hash-with-wrong-keys-test-asserts-wrong-behavior`,
+  `errors-to-json-test-bypasses-activesupport-encoder`. Joins Rollout phase 5.
+- **Model naming (2)** — `model-name-derives-from-segments-not-inflected-name`,
+  `model-name-initialize-invented-argument-errors`, completing the family whose
+  third member (`model-name-use-relative-model-naming-detection`) moved with
+  the first six.
+- **Multiparameter time (2)** — `multiparameter-empty-string-truthiness` (also
+  cited by RFC 0082's truthiness residual register) and
+  `multiparameter-extra-positions-collapse`.
+
+### One carried-forward problem, flagged not fixed
+
+`class-body-reader-suppresses-generated-writer` declares
+`deps: ["bare-pattern-generates-reader-not-accessor-property"]`, which the
+custody pass closed as converged, and its "Converged shape" is premised on
+readers becoming generated *methods* rather than accessor properties. CLAUDE.md
+ratifies the opposite ("Generated attribute readers are properties"), so that
+premise cannot land as written. The dep does not block — the ready queue treats
+`closed` as resolved — and a custody transfer does not rewrite bodies, so it is
+recorded here for whoever claims it: the story's symptom is real, its stated
+route is not.
+
 The 12 closed stories keep their files in 0023 — closing is a DB verb, not a
 move — so `grep -l '"activemodel"' rfcs/0023-surfaced-deviations/stories/*.md`
 still returns 36: the 21 in Non-goals plus 15 closed/done. Filtered to open
@@ -224,7 +290,11 @@ Work already owned elsewhere stays there; this RFC does not duplicate it:
 ## Rollout
 
 Each story is an independent PR from `main` (no stacking, non-overlapping
-files).
+files). Phases 1-5 sequence the audit's 17 findings, whose interlocks are
+known. The 39 custody-transferred stories are **not** folded into those
+phases — their ordering constraint is the family, described above, and each
+family's own `deps` — except the three test-placement ones, which join phase 5
+behind `test-compare-lint-and-serializers-json-mapping`.
 
 0. **Custody transfer** — **done**: the remaining 72 open activemodel-labelled
    stories in 0023 were re-verified against the tree, 39 moved here, 12 closed
@@ -261,8 +331,10 @@ files).
 
 ## Verification
 
-- 0023 holds zero open activemodel-labelled stories (~74 today after this PR's
-  six moves); none was closed without a recorded reason.
+- 0023 holds zero open activemodel-**subject** stories. Met by Phase 0: the 21
+  still matching `grep -l '"activemodel"'` are activerecord-, activesupport- or
+  sweep-subject and are enumerated in Non-goals. None of the 12 closed was
+  closed without a recorded `closed-reason` citing the tree state.
 - Zero placeholder reasons left in
   `scripts/api-compare/call-mismatches-exclude/activemodel/` (3 today), and
   the row count only shrinks (14 today; the comparability story alone
@@ -287,13 +359,17 @@ files).
    invented rename?** `parity:api` matches the pair while `parity:api:extra`
    scores it novel; `modelname-vs-rails-name-tooling-disagreement` resolves
    the tool disagreement either way.
-3. **Does Phase 0 move all ~74, or close some in place?** 0124 closed 7 of 37
-   as no-longer-applicable. Recommendation: move by default, close only with a
-   recorded `closed-reason` citing the tree state that retired it — deferred to
-   the Phase 0 story rather than guessed here.
+3. ~~**Does Phase 0 move all ~74, or close some in place?**~~ **Answered** by
+   Phase 0: of 72 open, 39 moved, 12 closed in place with a tree-state reason,
+   21 stayed in 0023 as not activemodel-subject. See Reconciliation.
 
 ## Changelog
 
 - 2026-09-01: initial RFC, seeded from the activemodel fidelity audit; six
   stories taken into custody from 0023 and three audit duplicates deleted
   after review found the overlap.
+- 2026-09-01: Phase 0 (`custody-transfer-activemodel-stories-from-0023`) — the
+  remaining 72 open activemodel-labelled stories in 0023 re-verified against
+  the tree: 39 moved here and clustered, 12 closed as converged, 21 left in
+  0023 and named in Non-goals. `activesupport` added to declared `packages`;
+  open question 3 answered.
