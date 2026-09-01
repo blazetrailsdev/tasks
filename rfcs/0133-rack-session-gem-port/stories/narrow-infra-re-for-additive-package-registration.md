@@ -1,6 +1,6 @@
 ---
 title: "narrow-infra-re-for-additive-package-registration"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null

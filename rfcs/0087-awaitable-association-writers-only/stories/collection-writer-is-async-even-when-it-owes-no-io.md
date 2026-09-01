@@ -1,14 +1,14 @@
 ---
 title: "Collection writer is unconditionally async even when the replace owes no I/O"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "run-did-you-mean-nokogiri-html-sanitizer-suites-in-ci"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null

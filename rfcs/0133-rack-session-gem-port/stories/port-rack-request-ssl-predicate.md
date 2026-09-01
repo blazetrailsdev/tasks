@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Request#ssl? so security_matches? and secure cookies stop guarding a missing method"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null

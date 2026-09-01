@@ -1,18 +1,18 @@
 ---
 title: "update/update! call setAttributes where Rails calls assign_attributes"
-status: draft
-updated: 2026-08-31
+status: blocked
+updated: 2026-09-01
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Blocker verified live on origin/main: CollectionAssociation#writer is still unconditionally async (collection-association.ts:58) and syncWrite still raises, so routing update/update! through the now-synchronous assignAttributes would throw. Unblocks when collection-writer-is-async-even-when-it-owes-no-io lands (this RFC, priority 1)."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Response::Raw so Persisted#context stops standing it in"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
