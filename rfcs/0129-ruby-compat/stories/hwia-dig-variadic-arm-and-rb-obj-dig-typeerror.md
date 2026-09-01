@@ -1,13 +1,14 @@
 ---
-title: "hwia-dig-variadic-arm-and-rb-obj-dig-typeerror"
+title: "HashWithIndifferentAccess#dig walks rb_obj_dig's Array arm and raises its TypeError"
 status: draft
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
-packages: []
+packages:
+  - activesupport
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
