@@ -80,6 +80,31 @@ export interface NewStoryResult {
 }
 
 /**
+ * Catch a bad-markdown body HERE, at authoring time, not on main's CI. This is
+ * the same `.markdownlint-cli2.jsonc` config `pnpm lint` runs against the
+ * whole repo, scoped to just the file just written so `tasks new` stays fast.
+ * A bare-``` fence (MD040) or a `#NNNN` PR reference misread as a heading
+ * (MD018) is exactly the recurring pattern that reds `pnpm lint` on main —
+ * reject it before it is committed, rather than baselining or disabling the
+ * rule once main is already red.
+ *
+ * `abs` is deleted and a `VerbExit` thrown on failure — the story either
+ * lands clean or not at all, matching every other guard in `newStory`.
+ */
+export function assertMarkdownlintClean(abs: string, rel: string, cwd: string): void {
+  try {
+    execFileSync("node_modules/.bin/markdownlint-cli2", [abs], { cwd, encoding: "utf8" });
+  } catch (e) {
+    rmSync(abs);
+    const out = [(e as { stdout?: string }).stdout, (e as { stderr?: string }).stderr]
+      .filter(Boolean)
+      .join("\n");
+    console.error(`error: ${rel} fails markdownlint — story not written.\n\n${out}`);
+    throw new VerbExit(1);
+  }
+}
+
+/**
  * Create a story: write the file, commit it, and let ingest create the row.
  *
  * `status` defaults to draft. `ready` is honored only when the parent RFC is
@@ -160,23 +185,7 @@ export async function newStory(
     }),
   );
 
-  // Catch a bad-markdown body HERE, at authoring time, not on main's CI. This is
-  // the same `.markdownlint-cli2.jsonc` config `pnpm lint` runs against the
-  // whole repo, scoped to just the file just written so `tasks new` stays fast.
-  // A bare-``` fence (MD040) or a `#NNNN` PR reference misread as a heading
-  // (MD018) is exactly the recurring pattern that reds `pnpm lint` on main —
-  // reject it before it is committed, rather than baselining or disabling the
-  // rule once main is already red.
-  try {
-    execFileSync("node_modules/.bin/markdownlint-cli2", [rel], { cwd: tasksDir, encoding: "utf8" });
-  } catch (e) {
-    rmSync(abs);
-    const out = [(e as { stdout?: string }).stdout, (e as { stderr?: string }).stderr]
-      .filter(Boolean)
-      .join("\n");
-    console.error(`error: ${rel} fails markdownlint — story not written.\n\n${out}`);
-    throw new VerbExit(1);
-  }
+  assertMarkdownlintClean(abs, rel, tasksDir);
 
   let committed = false;
   if (opts.commit !== false) {
