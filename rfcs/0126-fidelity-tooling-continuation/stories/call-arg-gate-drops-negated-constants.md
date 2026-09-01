@@ -35,7 +35,7 @@ The Ruby extractor throws away WHICH unary operator was applied:
 Two consequences:
 
 1. A negated CONSTANT is never compared. `dump_compressed(entry,
-   -Float::INFINITY)` (`activesupport/lib/active_support/cache/coder.rb:17`
+-Float::INFINITY)` (`activesupport/lib/active_support/cache/coder.rb:17`
    region) is opaque, and a port passing `Infinity` where Rails passes
    `-Float::INFINITY` is not flagged.
 2. `literals.ts`'s `NEGATIVE_INFINITY` row is reachable from the TS half only —
