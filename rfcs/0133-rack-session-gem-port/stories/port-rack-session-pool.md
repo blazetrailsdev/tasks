@@ -1,6 +1,6 @@
 ---
 title: "port-rack-session-pool"
-status: draft
+status: blocked
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Depends on relocate-rack-session-scaffolding-out-of-actionpack (PR #7328, still open): packages/rack-session/src/abstract/id.ts and scripts/api-compare/call-mismatches-exclude/rack-session/abstract/id.json do not exist on main, so Pool has no PersistedSecure base to extend without either stacking on #7328 or importing from @blazetrails/actionpack (forbidden by the story). Unblock once #7328 merges."
 closed-reason: null
 ---
 

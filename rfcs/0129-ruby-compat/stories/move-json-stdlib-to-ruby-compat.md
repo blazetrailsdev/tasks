@@ -1,14 +1,14 @@
 ---
 title: "Ruby's stdlib JSON (not ActiveSupport::JSON) moves to ruby-compat"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null

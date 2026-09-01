@@ -1,14 +1,14 @@
 ---
 title: "The last 10 ArgumentError declarations outside activesupport converge onto ruby-compat's"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "actionpack", "actionview", "activemodel", "activerecord", "rack", "i18n"]
 deps: ["converge-argument-error-onto-ruby-compat-activesupport"]
 deps-rfc: []
 est-loc: 160
-priority: null
+priority: 43
 pr: null
 claim: null
 assignee: null

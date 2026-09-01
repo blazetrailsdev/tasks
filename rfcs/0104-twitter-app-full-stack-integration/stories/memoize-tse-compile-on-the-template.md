@@ -1,7 +1,7 @@
 ---
 title: "Template does not own compile!: the handler compiles, so @compiled, method_name and handle_render_error are unported"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["actionview"]
@@ -9,9 +9,9 @@ deps: ["execute-tse-templates"]
 deps-rfc: []
 est-loc: 250
 priority: 27
-pr: null
-claim: null
-assignee: null
+pr: 7333
+claim: "2026-09-01T12:32:20Z"
+assignee: "memoize-tse-compile-on-the-template"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "schema-creation-manual-dispatch-and-delegation"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

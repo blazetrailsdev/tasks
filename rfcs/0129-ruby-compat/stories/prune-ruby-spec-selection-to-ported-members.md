@@ -1,17 +1,17 @@
 ---
 title: "Scope ruby-compat's ruby/spec measure per ported member, and reach the suite-level shared bodies"
-status: draft
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 40
+pr: 7330
+claim: "2026-09-01T12:03:02Z"
+assignee: "converge-argument-error-onto-ruby-compat-activesupport"
 blocked-by: null
 closed-reason: null
 ---

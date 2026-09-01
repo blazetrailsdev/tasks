@@ -1,6 +1,6 @@
 ---
 title: "HashWithIndifferentAccess#to_hash returns ruby-compat's Hash, so set_defaults has a seat to land in"
-status: draft
+status: ready
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 48
 pr: null
 claim: null
 assignee: null

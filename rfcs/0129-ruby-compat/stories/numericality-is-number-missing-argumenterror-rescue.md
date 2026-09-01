@@ -1,7 +1,7 @@
 ---
 title: "is_number? drops Rails' rescue ArgumentError, TypeError => false arm"
-status: draft
-updated: 2026-08-30
+status: closed
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages:
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already delivered. PR #7314 (2034408b9, 'burn ruby-compat novel extra surface to zero and pin it, move Kernel#Float in raising like MRI', RFC 0129) landed the dependency kernel-float-raises-like-mri AND this rescue arm in the same change. origin/main packages/activemodel/src/validations/numericality.ts:192-203 is exactly the acceptance criteria: isNumber wraps parseAsNumber in a try whose catch returns false for ArgumentError (both RubyArgumentError from ruby-compat and the attribute-assignment one) and TypeError, and rethrows everything else — Rails' 'rescue ArgumentError, TypeError => false' from numericality.rb:99. The story's premise ('trails isNumber has no such arm') no longer holds."
 ---
 
 ## Context

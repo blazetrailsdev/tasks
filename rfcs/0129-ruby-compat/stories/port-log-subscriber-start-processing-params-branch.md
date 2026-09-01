@@ -1,14 +1,14 @@
 ---
 title: "Port ActionController::LogSubscriber#start_processing's params and format branches"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 61
 pr: null
 claim: null
 assignee: null

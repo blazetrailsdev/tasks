@@ -1,14 +1,14 @@
 ---
 title: "RuntimeError, NotImplementedError, TypeError, RangeError and FrozenError get one home in ruby-compat"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport", "activemodel", "activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 44
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "method_missing's proxy moves to ruby-compat with core NameError and NoMethodError, leaving Rails' name_error.rb reopening behind"
-status: draft
+status: ready
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["ruby-compat", "activesupport", "activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 320
-priority: null
+priority: 54
 pr: null
 claim: null
 assignee: null

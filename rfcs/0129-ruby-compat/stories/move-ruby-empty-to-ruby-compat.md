@@ -1,14 +1,14 @@
 ---
 title: "Ruby empty? (isEmpty), called from six packages, moves to ruby-compat"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 52
 pr: null
 claim: null
 assignee: null

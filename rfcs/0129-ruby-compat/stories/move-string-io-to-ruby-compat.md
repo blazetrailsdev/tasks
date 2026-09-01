@@ -1,14 +1,14 @@
 ---
 title: "Ruby's stdlib StringIO moves to ruby-compat — Tempfile's shape, without Tempfile's adapter blocker"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 49
 pr: null
 claim: null
 assignee: null

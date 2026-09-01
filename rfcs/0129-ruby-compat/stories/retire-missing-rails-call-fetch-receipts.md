@@ -1,6 +1,6 @@
 ---
 title: "retire-missing-rails-call-fetch-receipts"
-status: draft
+status: in-progress
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 41
+pr: 7330
+claim: "2026-09-01T12:03:02Z"
+assignee: "converge-argument-error-onto-ruby-compat-activesupport"
 blocked-by: null
 closed-reason: null
 ---

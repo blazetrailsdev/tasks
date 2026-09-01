@@ -1,6 +1,6 @@
 ---
 title: "HashWithIndifferentAccess#dig walks rb_obj_dig's Array arm and raises its TypeError"
-status: draft
+status: ready
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 47
 pr: null
 claim: null
 assignee: null

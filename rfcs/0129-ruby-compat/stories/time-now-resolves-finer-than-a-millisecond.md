@@ -1,14 +1,14 @@
 ---
 title: "Give Time.now sub-millisecond resolution, as CLOCK_REALTIME has"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 60
 pr: null
 claim: null
 assignee: null

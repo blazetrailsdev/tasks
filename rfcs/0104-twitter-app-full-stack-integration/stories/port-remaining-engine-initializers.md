@@ -1,7 +1,7 @@
 ---
 title: "Port the remaining Engine initializers (load_config_initializers, make_routes_lazy, ...)"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 21
-pr: null
-claim: null
-assignee: null
+pr: 7332
+claim: "2026-09-01T12:29:58Z"
+assignee: "port-remaining-engine-initializers"
 blocked-by: null
 closed-reason: null
 ---

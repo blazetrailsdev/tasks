@@ -1,17 +1,17 @@
 ---
 title: "activesupport's 14 hand-rolled ArgumentError classes converge onto ruby-compat's"
-status: draft
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 42
+pr: 7330
+claim: "2026-09-01T12:03:02Z"
+assignee: "converge-argument-error-onto-ruby-compat-activesupport"
 blocked-by: null
 closed-reason: null
 ---

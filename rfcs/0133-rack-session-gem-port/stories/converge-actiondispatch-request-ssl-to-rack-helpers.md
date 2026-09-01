@@ -1,6 +1,6 @@
 ---
 title: "Drop ActionDispatch::Request's re-declared ssl? and inherit Rack::Request::Helpers' two-arm body"
-status: draft
+status: done
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 7329
 claim: null
 assignee: null
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Adjudicate Hash#dig and decide the plain-object default seat (closes RFC 0023's open question)"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null

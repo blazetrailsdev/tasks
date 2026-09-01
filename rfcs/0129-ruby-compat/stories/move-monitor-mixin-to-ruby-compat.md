@@ -1,14 +1,14 @@
 ---
 title: "Ruby's stdlib MonitorMixin moves to ruby-compat, once a leaf may hold the async-context adapter"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport", "activerecord"]
 deps: ["ruby-named-file-dir-fileutils-facade"]
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 57
 pr: null
 claim: null
 assignee: null

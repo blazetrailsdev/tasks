@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc type-checked nothing: its entry guard never fires through its own bin"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["activerecord-cli"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 23
-pr: null
-claim: null
-assignee: null
+pr: 7331
+claim: "2026-09-01T12:30:26Z"
+assignee: "trails-tsc-bin-is-a-no-op"
 blocked-by: null
 closed-reason: null
 ---
