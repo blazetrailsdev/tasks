@@ -1,13 +1,13 @@
 ---
-title: "enforce-ruby-compat-leaf-and-browser-freedom"
-status: draft
+title: "ruby-compat's leaf / browser-free property is asserted in prose and enforced by nothing"
+status: ready
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
-packages: []
+packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 180
 priority: null
 pr: null
 claim: null
