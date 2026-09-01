@@ -35,7 +35,7 @@ sibling, and the file itself makes the argument.
 The audit's earlier reservation was test #4: the file imports `NameError` from
 `./core-ext/name-error.js`, which IS Rails-anchored. **The resolution is that
 the errors come from ruby-compat only**, and the split is clean rather than a
-compromise, because Rails' file is a *reopening*:
+compromise, because Rails' file is a _reopening_:
 
 - `vendor/rails/activesupport/lib/active_support/core_ext/name_error.rb` is
   `class NameError` reopened to add **exactly three members** —
@@ -58,7 +58,7 @@ compromise, because Rails' file is a *reopening*:
 `declare module "@blazetrails/ruby-compat/range" { interface Range<T> { … } }`
 plus `prepend()`. One class identity, Rails' members measured in activesupport,
 the core class in the leaf. `core-ext/name-error.ts` takes the same shape.
-Note what this rules out: making activesupport's `NameError` a *subclass* of
+Note what this rules out: making activesupport's `NameError` a _subclass_ of
 ruby-compat's would fragment identity, and 82 references across four packages
 (`actionpack` 20, `activerecord` 14, `activemodel` 6, `activesupport` 42)
 narrow on the one class today.
@@ -80,7 +80,7 @@ move:
    - core `NameError`: the class and `name`; Rails only reopens it, per above.
 2. **MRI counterpart.** `vendor/ruby/vm_eval.c:2570`
    (`rb_define_private_method(rb_cBasicObject, "method_missing",
-   rb_method_missing, -1)`) for the proxy; `vendor/ruby/error.c:3348-3350` for
+rb_method_missing, -1)`) for the proxy; `vendor/ruby/error.c:3348-3350` for
    `NameError`; `vendor/ruby/error.c:3360` for `NoMethodError`. All resolve at
    the pinned `v3_3_11`.
 3. **trails actually calls it.** `methodMissingProxy`: **3 call sites**, all in

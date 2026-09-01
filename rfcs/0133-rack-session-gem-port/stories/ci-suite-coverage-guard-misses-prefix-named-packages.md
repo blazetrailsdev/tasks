@@ -44,7 +44,7 @@ of another's:
 
 2. **The package check never consults the gate.** The tooling half has a
    companion test — `it("matches every unit-tests filter against the gate that
-   runs the job")`, `:507-519` — that probes each filter against
+runs the job")`, `:507-519` — that probes each filter against
    `UNIT_TESTS_PKGS_RE`, precisely because a filter inside a gated job is dead
    when the gate does not fire. The package half has no such companion, so a
    package can be filtered by a job that its own changes never wake. That is
