@@ -54,7 +54,7 @@ currently documented in place:
   — because the compiler is what reads the signature.
 - `compile` has no parameter audit, and so no `to_sentence`d `ArgumentError`
   for `locals: (foo, *foo)`; it carries `@missingRailsCall to_sentence —
-  PERMANENT`.
+PERMANENT`.
 - `_strictLocalKeys` is never written, so `Template#render`'s
   `implicit_locals` branch (`:275-278`) is dead code by construction, and
   `Base#_run` does not accept `has_strict_locals:`.
