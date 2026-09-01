@@ -1,5 +1,5 @@
 ---
-title: "port-rack-response-helpers-mixin"
+title: "Model Rack::Response::Helpers as one mixin so Response and Raw stop duplicating its bodies"
 status: draft
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 350
 priority: null
 pr: null
 claim: null
