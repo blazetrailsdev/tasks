@@ -59,14 +59,14 @@ the pool this bucket eventually owns, exactly as 0124 took custody of arel's 37.
 rediscovered them and their 0023 prose is equal or better than the audit's.
 Story IDs are filename-based, so a move preserves every existing reference:
 
-| story (now here)                                     | why moved                                                                                                       |
-| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `errors-as-json-drops-full-messages-option`          | identical finding AND identical slug to the audit's; 0023's version additionally catches Ruby's `&&`-returns-LHS nil subtlety and names the Rails test |
+| story (now here)                                     | why moved                                                                                                                                                                                                        |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `errors-as-json-drops-full-messages-option`          | identical finding AND identical slug to the audit's; 0023's version additionally catches Ruby's `&&`-returns-LHS nil subtlety and names the Rails test                                                           |
 | `dirty-readers-resolve-aliases-where-rails-does-not` | same finding as the audit's Dirty story; 0023's is better — it enumerates the Rails lines, notes the behaviour predates PR #6990, notes both call gates are blind to it, and correctly labels `activerecord` too |
-| `attribute-override-cast-value-invented-mutator`     | the audit framed `overrideCastValue` as "plausibly PERMANENT", which is **wrong** — 0023 establishes Rails' value-returning `with_cast_value` (`attribute.rb:87`) as the counterpart, so it converges |
-| `serializable-hash-async-return-boundary`            | same surface as the audit's thenable-receipts story; 0023's diagnoses the real async boundary, names all four functions, and records that an 0115 story is blocked on it |
-| `model-name-use-relative-model-naming-detection`     | the namespace half of the audit's naming story; 0023's knows the PR #6572 history and both trails call sites the audit missed |
-| `comparison-validator-private-compare-is-invented`   | the other half of the comparability/comparison pair this RFC's `comparability-error-options-converge` touches — they edit the same two files |
+| `attribute-override-cast-value-invented-mutator`     | the audit framed `overrideCastValue` as "plausibly PERMANENT", which is **wrong** — 0023 establishes Rails' value-returning `with_cast_value` (`attribute.rb:87`) as the counterpart, so it converges            |
+| `serializable-hash-async-return-boundary`            | same surface as the audit's thenable-receipts story; 0023's diagnoses the real async boundary, names all four functions, and records that an 0115 story is blocked on it                                         |
+| `model-name-use-relative-model-naming-detection`     | the namespace half of the audit's naming story; 0023's knows the PR #6572 history and both trails call sites the audit missed                                                                                    |
+| `comparison-validator-private-compare-is-invented`   | the other half of the comparability/comparison pair this RFC's `comparability-error-options-converge` touches — they edit the same two files                                                                     |
 
 Three audit stories were **deleted** as inferior duplicates in the same commit
 (`errors-as-json-…`, `dirty-dispatch-targets-…`, `serialization-thenable-…`),

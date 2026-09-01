@@ -26,9 +26,9 @@ if (!_UserProvidedDefaultCtor) {
     "UserProvidedDefault not loaded. Import '@blazetrails/activemodel' " + ...
 ```
 
-CLAUDE.md's "Call-time constant resolution" section says in as many words: *a
+CLAUDE.md's "Call-time constant resolution" section says in as many words: _a
 slot read carries no guard … a `throw` explaining that the caller deep-imported
-the module is invented surface.* The reader should be
+the module is invented surface._ The reader should be
 `new _UserProvidedDefaultCtor!(…)`, and an unset slot surfaces as a plain
 `TypeError` — the JS analogue of Ruby's `NameError` at
 `with_user_default`'s constant reference.

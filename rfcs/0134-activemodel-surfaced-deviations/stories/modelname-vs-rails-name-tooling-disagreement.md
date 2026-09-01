@@ -45,8 +45,7 @@ real reason).
 The **namespace-detection** half of naming.ts's divergence — `model_name`'s
 `module_parents.detect { … use_relative_model_naming? }` walk
 (naming.rb:271-276) — is owned by the sibling story
-`model-name-use-relative-model-naming-detection`, carried into this RFC from
-0023. That story already identifies both trails call sites
+`model-name-use-relative-model-naming-detection`, carried into this RFC from 0023. That story already identifies both trails call sites
 (`model.ts:1531-1537`, `serializers/json.ts:144-150`) and the PR #6572 history.
 Do not re-derive it here.
 
