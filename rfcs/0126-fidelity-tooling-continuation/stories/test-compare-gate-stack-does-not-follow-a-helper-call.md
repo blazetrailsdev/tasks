@@ -1,6 +1,6 @@
 ---
 title: "test-compare-gate-stack-does-not-follow-a-helper-call"
-status: claimed
+status: done
 updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 7351
 claim: "2026-09-01T17:59:08Z"
 assignee: "test-compare-gate-stack-does-not-follow-a-helper-call"
 blocked-by: null

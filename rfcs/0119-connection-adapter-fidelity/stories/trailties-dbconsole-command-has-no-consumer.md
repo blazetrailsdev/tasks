@@ -1,6 +1,6 @@
 ---
 title: "dbconsole's argv/env has no consumer: port dbconsole_command.rb and the real PATH scan"
-status: ready
+status: blocked
 updated: 2026-09-01
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-01T18:29:06Z"
+assignee: "ts-methods-by-file-pools-deps-under-shared-relative-path"
+blocked-by: 'Rails::Command::Base (command/base.rb, 0/29 methods) and EnvironmentArgument (command/environment_argument.rb, 0/7) are both unported in trailties, and dbconsole_command.rb''s DbconsoleCommand IS a Base subclass including EnvironmentArgument. Porting the command on top of trailties'' invented commander CLI instead would copy a deviation rather than mirror Rails, so this needs command/base.rb + command/environment-argument.ts first (both show 0% in pnpm parity:api --package trailties --files). Also blocked on the design call for the PATH scan: find_cmd_and_exec''s ENV["PATH"] read is only forbidden in @blazetrails/activerecord by convention, not by any written rule, and whether it converges in place via @blazetrails/activesupport/process-adapter or moves to the command layer decides the whole shape.'
 closed-reason: null
 ---
 

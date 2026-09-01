@@ -1,6 +1,6 @@
 ---
 title: "Converge the relocated Persisted bodies against abstract/id.rb now that the source is readable"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null

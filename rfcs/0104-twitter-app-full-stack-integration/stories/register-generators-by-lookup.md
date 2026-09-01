@@ -1,7 +1,7 @@
 ---
 title: "14 generators exist on disk but are unreachable from trails generate"
 status: ready
-updated: 2026-08-31
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["trailties"]

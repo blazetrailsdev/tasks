@@ -1,6 +1,6 @@
 ---
 title: "Port Configuration#autoloadLib and emit it from the generated application.ts"
-status: claimed
+status: done
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["generate-app-subclassing-application"]
 deps-rfc: []
 est-loc: 80
 priority: 37
-pr: null
+pr: 7349
 claim: "2026-09-01T17:23:54Z"
 assignee: "scopes-are-untyped-on-relation"
 blocked-by: null

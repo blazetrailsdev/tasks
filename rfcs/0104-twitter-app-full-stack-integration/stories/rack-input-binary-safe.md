@@ -1,7 +1,7 @@
 ---
 title: "rack-input-binary-safe"
 status: ready
-updated: 2026-08-31
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []

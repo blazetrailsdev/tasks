@@ -1,6 +1,6 @@
 ---
 title: "activerecord extra-surface total mark is stale above the measurement"
-status: ready
+status: in-progress
 updated: 2026-09-01
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7352
+claim: "2026-09-01T18:29:06Z"
+assignee: "ts-methods-by-file-pools-deps-under-shared-relative-path"
 blocked-by: null
 closed-reason: null
 ---

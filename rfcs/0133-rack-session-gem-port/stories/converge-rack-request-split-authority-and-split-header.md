@@ -1,6 +1,6 @@
 ---
 title: "Converge Rack::Request::Helpers' split_authority and split_header onto the AUTHORITY regex and Ruby's miss shapes"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null

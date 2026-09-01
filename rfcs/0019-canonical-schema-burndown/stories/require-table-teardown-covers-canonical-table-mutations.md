@@ -1,7 +1,7 @@
 ---
 title: "require-table-teardown: flag unbalanced mutations of existing canonical tables"
-status: draft
-updated: 2026-08-27
+status: closed
+updated: 2026-09-01
 rfc: "0019-canonical-schema-burndown"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "didn't do, not relevant"
 ---
 
 ## Context

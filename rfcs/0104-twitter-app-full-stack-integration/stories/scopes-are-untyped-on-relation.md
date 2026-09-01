@@ -1,6 +1,6 @@
 ---
 title: "Scopes only type-check at the head of a chain; Relation<T> never learns the name"
-status: claimed
+status: done
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 24
-pr: null
+pr: 7349
 claim: "2026-09-01T17:23:54Z"
 assignee: "scopes-are-untyped-on-relation"
 blocked-by: null

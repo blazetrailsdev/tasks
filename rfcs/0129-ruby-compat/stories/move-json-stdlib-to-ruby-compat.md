@@ -1,6 +1,6 @@
 ---
 title: "Ruby's stdlib JSON (not ActiveSupport::JSON) moves to ruby-compat"
-status: ready
+status: claimed
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-01T18:53:13Z"
+assignee: "move-string-io-to-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---

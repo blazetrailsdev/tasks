@@ -1,6 +1,6 @@
 ---
 title: "port-railties-initializers-ordering"
-status: claimed
+status: done
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 44
-pr: null
+pr: 7349
 claim: "2026-09-01T17:23:54Z"
 assignee: "scopes-are-untyped-on-relation"
 blocked-by: null

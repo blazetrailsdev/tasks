@@ -1,7 +1,7 @@
 ---
 title: "converge-static-positional-path"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 46
-pr: null
-claim: null
-assignee: null
+pr: 7353
+claim: "2026-09-01T18:42:23Z"
+assignee: "converge-configuration-root-lazy-find-root"
 blocked-by: null
 closed-reason: null
 ---
