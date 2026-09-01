@@ -57,6 +57,19 @@ object, which reaches every caller of `toHash` — a separate, larger change.
   `HashWithIndifferentAccess#toHash` and `sliceBang`, or block the story with
   the specific blocker. RFC 0023's `plain-object-has-no-hash-default-seat` is
   closed by whichever outcome lands.
+
+  **Decided (trails#7325): there is no plain-object seat to implement.** The
+  seat is a type, not a field a plain object can be given, and trails already
+  has it in both places Rails' `set_defaults` writes to an ActiveSupport
+  receiver — `HashWithIndifferentAccess`'s own `_default` / `_defaultProc`,
+  which is why its `dup` (`hash_with_indifferent_access.rb:264-268`) and
+  `sliceBang` (`:366-369`) copy them faithfully today, and `ruby-compat`'s
+  `Hash`. The only site left is `to_hash` (`:375-381`), and converging it means
+  changing what it RETURNS — a migration of its 102 callers, each of which
+  reads the result as an object literal. That is
+  `hwia-to-hash-returns-ruby-compat-hash`, which carries the inventory; RFC
+  0023's story is closed as superseded by it, and this criterion is satisfied
+  by that decision, not by a `block`.
 - `compare_by_identity` stays unported (`packages/rack/src/headers.ts:481` is a
   Rails-anchored override that raises).
 - `pnpm parity:api`, `parity:api:calls`, `parity:api:calls:args`,
