@@ -24,7 +24,7 @@ closed-reason: null
 (`vendor/rack/lib/rack/mock_request.rb:96-170`) in ways that surface as wrong
 fixtures in ported specs rather than as failures in `mock-request.test.ts`.
 
-#7342 hit one instance and fixed only that one: Ruby's
+PR #7342 hit one instance and fixed only that one: Ruby's
 `env[SERVER_PORT] = (uri.port ? uri.port.to_s : "80").b` (`:106`) leans on
 `URI#port`, which answers the SCHEME'S DEFAULT PORT when the URI carries none —
 443 for `https`, 80 for `http`. trails read `parsedUrl.port || "80"`, which is

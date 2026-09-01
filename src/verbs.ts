@@ -185,6 +185,17 @@ export async function release(ids: string[]): Promise<void> {
  * Best-effort PER ID, unlike claim (ported rule): an id already carrying this
  * exact status+pr is skipped rather than aborting the rest, because a bundle
  * whose PR merged midway must be completable by re-running the same command.
+ *
+ * `in-progress` self-claims when unclaimed: the `/link` skill (and any other
+ * caller that opens a PR without first running `claim`) marks a story
+ * in-progress directly, and validate's cross-field check requires a claim
+ * timestamp AND an assignee on `in-progress` — a row this call never stamped.
+ * Three backlog stories carried that exact contradiction, invisible to a
+ * hand-edit for the usual DB-owned reason. Backfilling only fires when
+ * `claim_at` is still null, so it never overwrites a real claim, and it is
+ * folded into the same best-effort skip check above it (not a separate
+ * always-fires branch) so a bundle worker's repeat call for an
+ * already-correctly-claimed sibling stays a true no-op.
  */
 export async function markTracking(
   ids: string[],
@@ -195,11 +206,15 @@ export async function markTracking(
     const found = await findAll(ids);
     requireFound(ids, found);
     for (const s of found) {
-      if (s.status === status && s.pr === pr) {
+      if (s.status === status && s.pr === pr && (status !== "in-progress" || s.claim_at !== null)) {
         console.log(`${status} ${s.id} (already, skipped)`);
         continue;
       }
-      await s.update({ status, pr, ...clearedBy(status), updated_on: today() });
+      const selfClaim =
+        status === "in-progress" && s.claim_at === null
+          ? { claim_at: nowIso(), assignee: s.assignee ?? s.id }
+          : {};
+      await s.update({ status, pr, ...clearedBy(status), ...selfClaim, updated_on: today() });
       await record(status, s.id, { pr });
       console.log(`${status} ${s.id}${pr === null ? "" : ` #${pr}`}`);
     }
