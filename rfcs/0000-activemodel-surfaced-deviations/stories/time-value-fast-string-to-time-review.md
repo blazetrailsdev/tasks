@@ -40,3 +40,17 @@ the site and delete the row.
 - `type/helpers/time-value.test.ts` green; regex/parse behavior pinned
   against MRI (`ruby` is on PATH) for at least the fractional-seconds and
   offset arms.
+
+## Notes
+
+Do **not** confuse this with
+`0115-activemodel-fidelity-convergence/stories/port-time-value-type-cast-for-schema.md`
+(status: done, PR #6788). That story ported `time_value.rb`'s
+`type_cast_for_schema` (`to_fs(:db).inspect`); it did not touch
+`fast_string_to_time`'s construction call, which is what this story reviews.
+Its sibling `converge-time-value-helper-to-a-real-mixin` (also done, #6788)
+made the file a real mixin but likewise did not review this body.
+
+Adjacent open story in 0023: `drop-fast-string-to-date-newline-guard` — the
+same family of parse-path divergences; check it before starting so the two do
+not collide in the same file.

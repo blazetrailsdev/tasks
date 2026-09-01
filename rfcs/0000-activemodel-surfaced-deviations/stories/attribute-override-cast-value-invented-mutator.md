@@ -2,8 +2,8 @@
 title: "Replace Attribute#overrideCastValue with Rails' value-returning with_cast_value"
 status: draft
 updated: 2026-08-21
-rfc: "0023-surfaced-deviations"
-cluster: null
+rfc: "0000-activemodel-surfaced-deviations"
+cluster: invented-arm
 packages:
   - "activemodel"
   - "activerecord"

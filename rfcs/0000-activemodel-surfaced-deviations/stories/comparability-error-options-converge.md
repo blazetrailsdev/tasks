@@ -38,3 +38,14 @@ already).
 - Both baseline rows DELETED (only-shrink; then
   `pnpm parity:api:calls:tighten activemodel/validations/comparability.json`).
 - `validations/comparison` tests stay green.
+
+## Notes
+
+Sibling story in this RFC (carried from 0023):
+`comparison-validator-private-compare-is-invented` converges the OTHER half of
+the comparability/comparison pair — the invented private `compare()` dispatch
+table and the `@noRailsEquivalent PERMANENT` on `compareOperator` that stands
+in for Ruby's `public_send`. The two touch the same two files
+(`validations/comparability.ts`, `validations/comparison.ts`); sequence them
+rather than running both at once, and prefer landing that one first since it
+may delete the code this one edits.

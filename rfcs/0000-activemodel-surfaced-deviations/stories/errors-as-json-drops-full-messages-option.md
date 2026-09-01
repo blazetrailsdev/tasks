@@ -1,13 +1,14 @@
 ---
-title: "activemodel: Errors#asJson drops the full_messages option"
-status: ready
-updated: 2026-09-01
+title: "errors-as-json-drops-full-messages-option"
+status: draft
+updated: 2026-08-15
 rfc: "0000-activemodel-surfaced-deviations"
 cluster: rails-deviation
-packages: ["activemodel"]
+packages:
+  - "activemodel"
 deps: []
 deps-rfc: []
-est-loc: 20
+est-loc: null
 priority: null
 pr: null
 claim: null
@@ -16,26 +17,36 @@ blocked-by: null
 closed-reason: null
 ---
 
+# `Errors#as_json` drops the `:full_messages` option Rails forwards to `to_hash`
+
 ## Context
 
-Rails `Errors#as_json(options = nil)` is
-`to_hash(options && options[:full_messages])`
-(`vendor/rails/activemodel/lib/active_model/errors.rb:246-248`), so
-`errors.as_json(full_messages: true)` returns full messages.
+Spotted while converging the neighbouring `messages -> to_hash()` argument row
+(RFC 0099, PR for `converge-ar-and-model-non-constructor-argument-rows`).
 
-trails `asJson(_options?)` (`packages/activemodel/src/errors.ts:108-114`)
-ignores its argument and always calls `this.toHash(false)`. Silent: the ported
-tests pass while `as_json(full_messages: true)` returns short messages.
+`vendor/rails/activemodel/lib/active_model/errors.rb`:
 
-Note the Ruby guard is `options && options[:full_messages]` — Ruby truthiness,
-false only for `nil`/`false` — so port it as
-`options != null && options !== false ? options.fullMessages : undefined`
-shape, not `Boolean(options)`.
+```ruby
+def as_json(options = nil)
+  to_hash(options && options[:full_messages])
+end
+```
+
+`packages/activemodel/src/errors.ts:178-183` ignores its `_options` parameter
+entirely and hardcodes `this.toHash(false)`, so
+`errors.asJson({ fullMessages: true })` silently returns short messages where
+Rails returns full ones. The parameter is even spelled `_options` to mark it
+unused.
+
+Rails test: `vendor/rails/activemodel/test/cases/errors_test.rb`
+(`test_as_json_with_full_messages`).
 
 ## Acceptance criteria
 
-- `asJson(options)` forwards `options?.fullMessages` to `toHash` exactly as
-  errors.rb:247 does, including the nil-options arm.
-- A regression test (mirroring the Rails behavior in `errors_test.rb`'s
-  as_json coverage) that fails on the current body.
-- `pnpm parity:api:calls` stays green for `errors.ts`.
+- [ ] `asJson(options)` forwards `options?.fullMessages` to `toHash`, matching
+      Rails' `options && options[:full_messages]` (note Ruby's `&&` returns the
+      LHS when options is nil, so a nil/absent options object yields a falsy
+      argument, not `false` substituted for a stored value).
+- [ ] The Rails `as_json` full-messages test is ported under its Rails name and
+      fails on the current baseline.
+- [ ] `pnpm parity:test` delta non-negative.

@@ -33,3 +33,12 @@ The repo already consolidated a Ruby-`inspect` helper during the arel work
   against `ruby`).
 - Schema-dump call sites in activerecord that consume it stay green (run the
   touched test files only).
+
+## Notes
+
+Family context, already established by
+`0115-activemodel-fidelity-convergence/stories/port-time-value-type-cast-for-schema.md`
+(done, PR #6788): `Type::Date` (`date.ts:40`) and `Type::Decimal`
+(`decimal.ts:18`) carry their own `type_cast_for_schema` overrides, and
+`Type::DateTime` / `Type::Time` inherit the base `Value` one — which is
+exactly the body this story fixes, so the fix propagates to both.
