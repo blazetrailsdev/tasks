@@ -1,7 +1,7 @@
 ---
 title: "schema-creation-manual-dispatch-and-delegation"
-status: ready
-updated: 2026-08-28
+status: in-progress
+updated: 2026-09-01
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7327
+claim: "2026-09-01T02:30:05Z"
+assignee: "inline-ruby-bodies-extracted-as-named-helpers"
 blocked-by: null
 closed-reason: null
 ---

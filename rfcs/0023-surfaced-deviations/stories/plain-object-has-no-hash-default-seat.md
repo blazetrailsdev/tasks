@@ -1,7 +1,7 @@
 ---
 title: "to_hash and slice! drop Rails' default/default_proc copy (plain object has no default seat)"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by hwia-to-hash-returns-ruby-compat-hash (RFC 0129): the seat already exists on HashWithIndifferentAccess; the remaining gap is toHash's plain-object return, a 102-call-site migration"
 ---
 
 ## Context

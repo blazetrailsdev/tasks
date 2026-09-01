@@ -1,7 +1,7 @@
 ---
 title: "Adjudicate Hash#dig and decide the plain-object default seat (closes RFC 0023's open question)"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 34
-pr: null
-claim: null
-assignee: null
+pr: 7325
+claim: "2026-09-01T02:28:10Z"
+assignee: "ruby-compat-hash-dig-and-plain-object-default-seat"
 blocked-by: null
 closed-reason: null
 ---
