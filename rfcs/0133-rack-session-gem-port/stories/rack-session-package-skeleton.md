@@ -1,7 +1,7 @@
 ---
 title: "Create packages/rack-session: a workspace package over the vendored gem, depending only on rack"
-status: draft
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: [rack-session]
@@ -9,7 +9,7 @@ deps: [vendor-rack-session-source]
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: null
+pr: 7319
 claim: null
 assignee: null
 blocked-by: null
