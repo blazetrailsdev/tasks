@@ -1,7 +1,7 @@
 ---
 title: "AttributeSet#deepDup invents cloneAttribute + identity cache instead of porting Attribute#deep_dup"
-status: draft
-updated: 2026-08-23
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: cloneAttribute, the identity cache and dupForDeepClone are gone; Attribute#deepDup is ported (attribute.ts:225) and the surviving getOriginalAttribute traces to Rails' original_attribute (activemodel/lib/active_model/attribute.rb:12,33,37); verified 2026-09-01"
 ---
 
 ## Context

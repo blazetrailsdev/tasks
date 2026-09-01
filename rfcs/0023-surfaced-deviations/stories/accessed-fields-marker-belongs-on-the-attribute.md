@@ -1,7 +1,7 @@
 ---
 title: "accessed_fields marks reads at call sites instead of on the Attribute"
-status: draft
-updated: 2026-08-18
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: the read marker lives on Attribute (hasBeenRead, packages/activemodel/src/attribute.ts:190), AttributeSet#accessed mirrors attribute_set.rb:38, and accessedFields reads through it (packages/activerecord/src/attribute-methods.ts:97-99); verified 2026-09-01"
 ---
 
 ## Context

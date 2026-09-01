@@ -1,7 +1,7 @@
 ---
 title: "checkValidity should be checkValidityBang (Rails check_validity!)"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: every validator overrides checkValidityBang (packages/activemodel/src/validations/{length,with,format}.ts, clusivity.ts), no checkValidity remains in the tree; verified 2026-09-01"
 ---
 
 ## Context

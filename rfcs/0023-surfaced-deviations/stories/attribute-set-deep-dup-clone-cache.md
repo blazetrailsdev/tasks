@@ -1,7 +1,7 @@
 ---
 title: "AttributeSet#deepDup threads a clone cache instead of transform_values(&:deep_dup)"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: AttributeSet#deepDup is the one-line transformValues(attributes, attr.deepDup()) of attribute_set.rb:73-75 (attribute-set.ts:121-123); no clone cache remains; verified 2026-09-01"
 ---
 
 ## Context

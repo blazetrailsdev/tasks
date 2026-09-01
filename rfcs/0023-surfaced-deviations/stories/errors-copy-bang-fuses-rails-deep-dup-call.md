@@ -1,7 +1,7 @@
 ---
 title: "Errors#copy! fuses Rails' deep_dup into dupWithBase — converge and drop the @missingRailsCall tag"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: Errors#copyBang calls deepDup (packages/activemodel/src/errors.ts:50-55); dupWithBase and the @missingRailsCall deep_dup tag are gone; verified 2026-09-01"
 ---
 
 ## Context

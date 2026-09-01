@@ -1,6 +1,6 @@
 ---
 title: "string-utils.ts's two unanchored members: chomp moves to ruby-compat, ord is deleted"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null

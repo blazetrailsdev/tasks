@@ -1,7 +1,7 @@
 ---
 title: "attribute_method_suffix/prefix/affix push instead of class_attribute +="
-status: draft
-updated: 2026-08-20
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: attributeMethodPrefix/Suffix/Affix assign a new array mirroring += (attribute-methods.ts:140-172), ensureOwnPatterns is gone, and AR registers its suffixes through attributeMethodSuffix (attribute-methods/{query,write,dirty,before-type-cast}.ts); verified 2026-09-01"
 ---
 
 ## Context

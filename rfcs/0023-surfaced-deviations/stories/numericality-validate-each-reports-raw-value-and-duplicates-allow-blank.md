@@ -1,7 +1,7 @@
 ---
 title: "validate_each reports the raw value to filtered_options and duplicates EachValidator's allow_blank arm"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: validateEach reassigns value from parseAsNumber at Rails' line (numericality.ts:83-84) so every filteredOptions(value) below reports the parsed value, and the trails-only allowBlank arm is gone from the file; verified 2026-09-01"
 ---
 
 ## Context

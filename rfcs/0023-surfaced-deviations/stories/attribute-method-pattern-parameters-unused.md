@@ -1,7 +1,7 @@
 ---
 title: "AttributeMethodPattern#parameters is stored but never used when defining attribute methods"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: pattern.parameters gates the answersWithAMethod arm (attribute-methods.ts:276-278) and threads into defineProxyCall/defineCall (:296,:378,:387); verified 2026-09-01"
 ---
 
 # `AttributeMethodPattern#parameters` is stored but never used when defining attribute methods

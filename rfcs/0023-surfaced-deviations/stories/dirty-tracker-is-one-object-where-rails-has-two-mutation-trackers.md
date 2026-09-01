@@ -1,7 +1,7 @@
 ---
 title: "dirty-tracker-is-one-object-where-rails-has-two-mutation-trackers"
-status: draft
-updated: 2026-08-22
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: DirtyTracker no longer exists; mutationsFromDatabase and mutationsBeforeLastSave are AttributeMutationTracker instances (packages/activemodel/src/dirty.ts:37-45,124-129) and readers call <tracker>.isChanged(attrName, options) with Rails' argument list; the three @missingRailsArgs changed? tags are gone; verified 2026-09-01"
 ---
 
 # `DirtyTracker` is one object where Rails has two `AttributeMutationTracker` instances

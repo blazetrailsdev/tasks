@@ -1,6 +1,6 @@
 ---
 title: "Delete the invented assignNestedAttributes dispatcher; callers go through the generated writer"
-status: draft
+status: done
 updated: 2026-09-01
 rfc: "0087-awaitable-association-writers-only"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7358
+claim: "2026-09-01T20:02:55Z"
+assignee: "delete-invented-assign-nested-attributes-dispatcher"
 blocked-by: null
 closed-reason: null
 ---

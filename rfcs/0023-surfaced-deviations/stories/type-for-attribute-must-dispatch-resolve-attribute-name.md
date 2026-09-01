@@ -1,7 +1,7 @@
 ---
 title: "typeForAttribute dispatches through the class resolveAttributeName override"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: typeForAttribute dispatches through this.resolveAttributeName (packages/activemodel/src/attribute-registration.ts:186-194), which the class-level override at attribute-methods.ts:324 supplies; verified 2026-09-01"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "NumericalityValidator#validate_each walks one slice(*RESERVED_OPTIONS) loop"
-status: draft
-updated: 2026-08-11
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: validateEach walks one slice(options, ...RESERVED_OPTIONS) loop with Rails' NUMBER_CHECKS/RANGE_CHECKS/COMPARE_CHECKS branch order (packages/activemodel/src/validations/numericality.ts:86-115), mirroring numericality.rb:49-64; verified 2026-09-01"
 ---
 
 ## Context

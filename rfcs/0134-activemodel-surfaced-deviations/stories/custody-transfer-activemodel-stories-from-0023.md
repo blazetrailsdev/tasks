@@ -1,6 +1,6 @@
 ---
 title: "activemodel: take custody of the ~74 remaining activemodel-labelled stories in 0023"
-status: ready
+status: in-progress
 updated: 2026-09-01
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 25
+claim: "2026-09-01T20:37:49Z"
+assignee: "custody-transfer-activemodel-stories-from-0023"
 blocked-by: null
 closed-reason: null
 ---

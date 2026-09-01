@@ -1,7 +1,7 @@
 ---
 title: "actionview-render-path-is-async-where-rails-is-sync"
-status: ready
-updated: 2026-08-31
+status: closed
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rendering stays async by owner decision; the sync-convergence premise is rejected"
 ---
 
 ## Context

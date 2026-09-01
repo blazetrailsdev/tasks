@@ -1,6 +1,6 @@
 ---
 title: "Object#hash (rbHash) moves to ruby-compat, beside the rbEqual it is consistent with"
-status: ready
+status: in-progress
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 53
-pr: null
-claim: null
-assignee: null
+pr: 7360
+claim: "2026-09-01T20:28:56Z"
+assignee: "move-ruby-empty-to-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "StringType/DateTimeType serialize must not re-cast an already-cast value"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: ImmutableStringType#serialize is the Numeric/Duration/true/false branch with a super fallback and serializeCastValue is identity (packages/activemodel/src/type/immutable-string.ts:27-36), per immutable_string.rb:48-59; string.ts and date-time.ts no longer define serialize; verified 2026-09-01"
 ---
 
 ## Context

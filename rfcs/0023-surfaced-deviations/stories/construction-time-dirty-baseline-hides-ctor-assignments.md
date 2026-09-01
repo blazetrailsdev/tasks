@@ -1,7 +1,7 @@
 ---
 title: "New model reports clean where Rails reports dirty — ctor assignments invisible to DirtyTracker"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: new M({attr}) now reports changes {attr: [default, value]} with the baseline from _defaultAttributes and changesApplied() moves them to previousChanges — verified by probe against packages/activemodel on 2026-09-01; the external DirtyTracker and AR's reinstateNewRecordChanges compensation are both gone"
 ---
 
 ## Context

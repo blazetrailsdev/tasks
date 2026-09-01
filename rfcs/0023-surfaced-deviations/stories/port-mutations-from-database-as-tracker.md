@@ -1,7 +1,7 @@
 ---
 title: "mutations_from_database returns the AttributeMutationTracker, not the changes hash"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: Dirty#mutationsFromDatabase is a memoized getter returning AttributeMutationTracker, with the ForcedMutationTracker arm for a missing _attributes (packages/activemodel/src/dirty.ts:124-129), mirroring dirty.rb:382-388; attributeWillChange reads mutationsFromDatabase.forceChange (:159) and the _dirty receiver is gone; verified 2026-09-01"
 ---
 
 ## Context

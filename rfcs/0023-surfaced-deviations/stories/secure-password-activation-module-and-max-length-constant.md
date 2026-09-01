@@ -1,7 +1,7 @@
 ---
 title: "has_secure_password: InstanceMethodsOnActivation never instantiated, MAX_PASSWORD_LENGTH_ALLOWED inlined"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: MAX_PASSWORD_LENGTH_ALLOWED is declared and used by the too-long guard and InstanceMethodsOnActivation is instantiated (packages/activemodel/src/secure-password.ts:5,36,60,110); verified 2026-09-01"
 ---
 
 # `has_secure_password`: `InstanceMethodsOnActivation` is never instantiated and `MAX_PASSWORD_LENGTH_ALLOWED` is inlined as 72

@@ -1,7 +1,7 @@
 ---
 title: "numericality-exponent-number-needs-bignum-compare"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: 'validates numericality with exponent number' is no longer skipped and passes (pnpm vitest run packages/activemodel/src/validations/numericality-validation.test.ts -t 'exponent number'); verified 2026-09-01"
 ---
 
 ## Context

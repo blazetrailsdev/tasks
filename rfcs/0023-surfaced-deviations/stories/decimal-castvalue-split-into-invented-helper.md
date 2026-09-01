@@ -1,7 +1,7 @@
 ---
 title: "Decimal#cast_value is split into a trails-invented _castWithoutScale"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: _castWithoutScale is gone; DecimalType#castValue is a single method mirroring decimal.rb:60-78 (packages/activemodel/src/type/decimal.ts:23-49); verified 2026-09-01"
 ---
 
 ## Context

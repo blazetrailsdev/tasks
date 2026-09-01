@@ -1,7 +1,7 @@
 ---
 title: "Add trails new --name, restoring AppName#original_app_name's options[:name] arm"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 64
-pr: null
-claim: null
-assignee: null
+pr: 7362
+claim: "2026-09-01T20:35:26Z"
+assignee: "rack-input-binary-safe"
 blocked-by: null
 closed-reason: null
 ---

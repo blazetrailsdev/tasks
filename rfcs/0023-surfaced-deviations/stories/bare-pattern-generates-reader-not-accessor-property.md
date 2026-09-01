@@ -1,7 +1,7 @@
 ---
 title: "Generate the bare pattern's reader through the pattern path, retiring defineAliasAccessor"
-status: draft
-updated: 2026-08-14
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: defineAliasAccessor and its tag are gone; defineAttributeMethodPattern (attribute-methods.ts:263-303) has no bare-pattern carve-out and aliases route through aliasAttributeMethodDefinition; verified 2026-09-01"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "rack-input-binary-safe"
-status: ready
+status: in-progress
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 49
-pr: null
-claim: null
-assignee: null
+pr: 7362
+claim: "2026-09-01T20:35:26Z"
+assignee: "rack-input-binary-safe"
 blocked-by: null
 closed-reason: null
 ---

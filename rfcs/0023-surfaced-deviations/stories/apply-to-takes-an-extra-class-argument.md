@@ -1,7 +1,7 @@
 ---
 title: "PendingModification#applyTo takes a class argument Rails' apply_to does not"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: PendingModification#applyTo takes only attributeSet (packages/activemodel/src/attribute-registration.ts:46,56,72,85,217), matching attribute_registration.rb:86-88; verified 2026-09-01"
 ---
 
 ## Context

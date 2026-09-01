@@ -1,6 +1,6 @@
 ---
 title: "Move Module#include / #extend / #prepend and their type-level halves to ruby-compat"
-status: ready
+status: in-progress
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 55
-pr: null
-claim: null
-assignee: null
+pr: 7361
+claim: "2026-09-01T20:29:38Z"
+assignee: "move-module-mixin-primitives-to-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---
