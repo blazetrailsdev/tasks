@@ -61,7 +61,7 @@ this package therefore needs the rule to emit the plain `noNodeBuiltin` message
 there rather than the `useAdapter` autofix, or the autofix will write an import
 that breaks the leaf rule it is meant to protect.
 
-### Import guards are blind to Node *globals* — close that at compile time
+### Import guards are blind to Node _globals_ — close that at compile time
 
 An import-specifier guard sees `import … from "node:fs"`. It cannot see
 `Buffer`, `process`, `__dirname` or `__filename`, which are **ambient globals**,
@@ -86,7 +86,7 @@ editor and on the pre-commit hook, where a CI-only guard fails minutes later
 and a browser test lane fails as a runtime error inside a bundle.
 
 **A browser test lane was considered and rejected here.** It is the only thing
-that could catch a Node global at *runtime*, but `"types": []` catches the same
+that could catch a Node global at _runtime_, but `"types": []` catches the same
 class at compile time for one line, and ruby-compat's suite is pure value
 semantics (`Hash`, `Rational`, `Range`, `Regexp`, `Comparable`, `Symbol`,
 `String#succ`) that exercises no platform surface — so a browser run would be a
@@ -98,7 +98,6 @@ reducing lane count. Revisit only when ruby-compat holds a member whose
 behaviour genuinely diverges across engines — `String#succ`'s UTF-8 width
 handling is the nearest candidate, and it does not diverge today. Do not
 re-litigate this without such a member in hand.
-
 
 ## Acceptance criteria
 

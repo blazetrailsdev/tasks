@@ -1,5 +1,5 @@
 ---
-title: "The err.name = \"...\" sites throw the real class instead of relabelling an Error"
+title: 'The err.name = "..." sites throw the real class instead of relabelling an Error'
 status: draft
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
@@ -21,7 +21,7 @@ closed-reason: null
 The convergence PR #7340 named these out of its own scope, and RFC 0129's
 `converge-argument-error-remaining-packages` explicitly deferred them: sites
 that do not declare a class at all, but mutate a plain `Error`'s `name` after
-the fact so it *reads* as a Ruby core class. They are invisible to
+the fact so it _reads_ as a Ruby core class. They are invisible to
 `grep -rn "class ArgumentError"`, which is why the class-convergence stories
 left them behind. Verified 2026-09-01:
 
