@@ -47,7 +47,7 @@ so `railties_load_path` must stay an append-ordered list, not a set.
 - `Engine` declares `add_locales` at its Rails name, in Rails declaration order
   (between `add_routing_paths` at `engine.rb:595` and `add_view_paths` at
   `:614`), with Rails' one-line body and its `# I18n load paths are a special
-  case` comment preserved.
+case` comment preserved.
 - The `:add_locales` entry is removed from `engine.ts`'s
   deliberately-not-declared header comment.
 - Relates to `read-available-locales-from-i18n-in-lookup-and-pathparser` in this
