@@ -1,6 +1,6 @@
 ---
 title: "Collection writer is unconditionally async even when the replace owes no I/O"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0087-awaitable-association-writers-only"
 cluster: null

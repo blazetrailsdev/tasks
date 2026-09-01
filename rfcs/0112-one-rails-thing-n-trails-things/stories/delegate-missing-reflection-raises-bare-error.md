@@ -1,6 +1,6 @@
 ---
 title: "delegate.ts raises a bare Error for a missing association reflection"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null

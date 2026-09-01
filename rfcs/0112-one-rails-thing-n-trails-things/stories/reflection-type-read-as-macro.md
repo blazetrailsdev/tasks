@@ -1,6 +1,6 @@
 ---
 title: "`nested_attributes` / `autosave_association` read `reflection.type` as a macro"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "The last 10 ArgumentError declarations outside activesupport converge onto ruby-compat's"
-status: ready
+status: claimed
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: 43
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-01T14:06:30Z"
+assignee: "converge-argument-error-remaining-packages"
 blocked-by: null
 closed-reason: null
 ---

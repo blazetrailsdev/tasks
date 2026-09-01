@@ -1,6 +1,6 @@
 ---
 title: "Converge CookieStore::SessionId from a subclass to a DelegateClass wrapper, dropping the any-typed cookieValue override"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null

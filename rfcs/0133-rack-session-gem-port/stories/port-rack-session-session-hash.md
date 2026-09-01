@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Session::Abstract::SessionHash and SecureSessionHash against the vendored source"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0133-rack-session-gem-port"
 cluster: null
