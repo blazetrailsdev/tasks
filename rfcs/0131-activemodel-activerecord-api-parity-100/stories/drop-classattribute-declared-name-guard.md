@@ -43,7 +43,7 @@ credited by `scripts/api-compare/extract-ruby-api.rb:1494-1537`.
   the file also declares the name.
 - Every name that newly enters the measured surface either matches a Ruby
   counterpart or carries a `@noRailsEquivalent PERMANENT|CONVERGEABLE
-  <story-id>` receipt at its declaration — no mark is raised, and
+<story-id>` receipt at its declaration — no mark is raised, and
   `pnpm parity:api:extra:gate` is green.
 - No package total falls; marks move only via `:tighten`.
 - The negative test for a non-literal attribute name and for an unresolvable
