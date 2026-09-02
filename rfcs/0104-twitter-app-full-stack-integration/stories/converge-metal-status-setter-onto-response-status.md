@@ -57,7 +57,7 @@ trails-side table it made redundant.
 ## Acceptance criteria
 
 - The three remaining `resolveStatus` call sites — `action-controller/
-  renderer.ts`, `action-controller/metal/rendering.ts` — resolve through
+renderer.ts`, `action-controller/metal/rendering.ts` — resolve through
   `statusCode()` from `@blazetrails/rack` instead, matching every Rails
   `Rack::Utils.status_code` site.
 - `resolveStatus`'s 500-for-an-unknown-symbol fallback goes with them: Rack
