@@ -1,7 +1,7 @@
 ---
 title: "serialize_cast_value drops the is_utc? getutc/getlocal arm"
-status: draft
-updated: 2026-08-19
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 110
-priority: null
+priority: 60
 pr: null
 claim: null
 assignee: null

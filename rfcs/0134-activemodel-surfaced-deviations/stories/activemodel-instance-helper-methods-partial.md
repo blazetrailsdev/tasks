@@ -1,7 +1,7 @@
 ---
 title: "Only 2 of 12 HelperMethods exist as instance methods (Rails includes as well as extends)"
-status: draft
-updated: 2026-08-17
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 62
 pr: null
 claim: null
 assignee: null

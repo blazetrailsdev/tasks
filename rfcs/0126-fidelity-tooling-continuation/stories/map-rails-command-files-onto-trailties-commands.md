@@ -1,14 +1,14 @@
 ---
 title: "parity:api maps no rails/commands/*_command.rb onto trailties/commands"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

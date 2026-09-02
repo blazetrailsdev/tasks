@@ -1,7 +1,7 @@
 ---
 title: "Replace Attribute#overrideCastValue with Rails' value-returning with_cast_value"
-status: draft
-updated: 2026-08-21
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm
 packages:
@@ -10,7 +10,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

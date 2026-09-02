@@ -1,6 +1,6 @@
 ---
 title: "reset-trailtie-registry-between-tests"
-status: closed
+status: ready
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "implemented in #7386"
+closed-reason: null
 ---
 
 ## Context

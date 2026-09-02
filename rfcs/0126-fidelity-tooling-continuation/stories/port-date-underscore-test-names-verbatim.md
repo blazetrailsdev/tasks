@@ -1,6 +1,6 @@
 ---
 title: "date: ten ported test names drop the leading space their test__x Rails name carries"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 4
-pr: 7386
+pr: 7392
 claim: "2026-09-02T12:04:16Z"
 assignee: "fold-the-two-trailtie-ports-into-one"
 blocked-by: null

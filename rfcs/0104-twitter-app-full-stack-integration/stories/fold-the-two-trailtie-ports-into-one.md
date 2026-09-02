@@ -1,6 +1,6 @@
 ---
 title: "activesupport Trailtie and trailties Trailtie are two ports of one Rails::Railtie"
-status: in-progress
+status: ready
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 1
-pr: 7386
-claim: "2026-09-02T12:04:16Z"
-assignee: "fold-the-two-trailtie-ports-into-one"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

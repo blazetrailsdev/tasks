@@ -1,6 +1,6 @@
 ---
 title: "Type forwarded_for's elements as Ruby's String | nil instead of asserting non-null"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 20
-pr: null
-claim: null
-assignee: null
+pr: 7393
+claim: "2026-09-02T16:33:35Z"
+assignee: "converge-forwarded-for-nil-element-type"
 blocked-by: null
 closed-reason: null
 ---

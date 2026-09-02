@@ -1,7 +1,7 @@
 ---
 title: "Binary dirty tracking is inverted: equal-bytes assign reports changed, in-place mutation does not"
 status: ready
-updated: 2026-07-27
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 63
 pr: null
 claim: null
 assignee: null

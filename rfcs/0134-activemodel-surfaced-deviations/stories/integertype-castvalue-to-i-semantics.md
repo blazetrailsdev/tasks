@@ -1,7 +1,7 @@
 ---
 title: "IntegerType#cast_value diverges from to_i rescue nil for strings and objects"
 status: ready
-updated: 2026-07-27
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 60
 pr: null
 claim: null
 assignee: null

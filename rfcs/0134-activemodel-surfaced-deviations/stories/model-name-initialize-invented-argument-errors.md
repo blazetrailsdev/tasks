@@ -1,7 +1,7 @@
 ---
 title: "ActiveModel::Name#initialize raises three ArgumentErrors Rails does not"
-status: draft
-updated: 2026-08-15
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 64
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "Generate the dirty attribute-method cascade into generated_attribute_methods"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged: defineDirtyAttributeMethods no longer exists anywhere in packages/ (git grep -n 'defineDirty' origin/main -- packages/ scripts/ returns nothing), so the prototype-argument installer this story targeted, and its three call sites (activemodel/src/attributes.ts:217, attribute-methods.ts aliasAttribute, activerecord/src/model-schema.ts:1195), are gone. The dirty cascade is now generated the Rails way — origin/main packages/activemodel/src/dirty.ts:25-29 declares base.attributeMethodSuffix('PreviouslyChanged','Changed',{parameters:'**options'}), attributeMethodSuffix('Change','WillChange!','Was'), attributeMethodSuffix('PreviousChange','PreviouslyWas'), attributeMethodAffix({prefix:'restore',suffix:'!'}) and attributeMethodAffix({prefix:'clear',suffix:'Change'}), mirroring dirty.rb:141-149 — which routes every per-attribute dirty method through the generatedAttributeMethods module, exactly the story's Converged shape. So undefineAttributeMethods now clears them and a class-body method outranks them."
 ---
 
 ## Context

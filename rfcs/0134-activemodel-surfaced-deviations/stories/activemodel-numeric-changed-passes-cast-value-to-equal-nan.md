@@ -1,7 +1,7 @@
 ---
 title: "activemodel-numeric-changed-passes-cast-value-to-equal-nan"
-status: draft
-updated: 2026-08-12
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 63
 pr: null
 claim: null
 assignee: null

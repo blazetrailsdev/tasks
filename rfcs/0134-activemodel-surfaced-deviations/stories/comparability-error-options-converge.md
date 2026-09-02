@@ -1,7 +1,7 @@
 ---
 title: "activemodel: converge Comparability#errorOptions onto except/merge and retire its two placeholder baseline rows"
-status: ready
-updated: 2026-09-01
+status: closed
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages: ["activemodel"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged by #7339 (5493cfbed, 2026-09-01), 'adopt the ruby-compat Hash call form at 17 baselined call sites' (RFC 0129). origin/main packages/activemodel/src/validations/comparability.ts:12-21 now reads mergeBang(except(this.options, ...Object.keys(COMPARE_CHECKS)), {count, value}) — the hand-rolled filter loop is gone and the file imports { except, mergeBang } from @blazetrails/ruby-compat. The except baseline row is deleted; comparability.json holds one row only, and its reason is a specific per-body one (mergeBang is a free function so the receiver is an extra arg; the @missingRailsArgs receipt cannot be spelled on a bodyless interface member) — not the RFC 0126 'pending per-body convergence review' placeholder this story was filed against. Premise gone."
 ---
 
 ## Context

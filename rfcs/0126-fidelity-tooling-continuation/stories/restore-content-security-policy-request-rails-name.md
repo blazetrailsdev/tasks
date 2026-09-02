@@ -1,6 +1,6 @@
 ---
 title: "Restore the Rails name Request to the CSP mixin (drop the comparator-workaround rename)"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

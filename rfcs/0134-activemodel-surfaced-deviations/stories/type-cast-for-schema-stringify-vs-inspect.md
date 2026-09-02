@@ -1,14 +1,14 @@
 ---
 title: "activemodel: Type#typeCastForSchema spells Ruby inspect as JSON.stringify"
 status: ready
-updated: 2026-09-01
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

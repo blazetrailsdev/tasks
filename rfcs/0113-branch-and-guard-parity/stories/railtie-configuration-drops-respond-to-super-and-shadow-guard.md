@@ -1,6 +1,6 @@
 ---
 title: "railtie-configuration-drops-respond-to-super-and-shadow-guard"
-status: draft
+status: done
 updated: 2026-09-02
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7392
+claim: "2026-09-02T16:22:46Z"
+assignee: "railtie-configuration-drops-respond-to-super-and-shadow-guard"
 blocked-by: null
 closed-reason: null
 ---

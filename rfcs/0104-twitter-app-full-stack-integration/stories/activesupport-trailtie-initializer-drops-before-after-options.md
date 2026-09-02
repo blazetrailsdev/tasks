@@ -1,6 +1,6 @@
 ---
 title: "activesupport Trailtie.initializer takes no before:/after:/group: options"
-status: in-progress
+status: ready
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 3
-pr: 7386
-claim: "2026-09-02T13:01:37Z"
-assignee: "activesupport-trailtie-initializer-drops-before-after-options"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

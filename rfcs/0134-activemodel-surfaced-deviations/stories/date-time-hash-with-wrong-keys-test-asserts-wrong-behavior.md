@@ -1,7 +1,7 @@
 ---
 title: "hash with wrong keys test asserts an unrelated behavior"
-status: draft
-updated: 2026-07-29
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: test-placement
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 51
 pr: null
 claim: null
 assignee: null

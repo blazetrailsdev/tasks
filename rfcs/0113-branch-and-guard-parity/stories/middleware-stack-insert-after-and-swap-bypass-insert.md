@@ -1,6 +1,6 @@
 ---
 title: "MiddlewareStack#insert_after and #swap splice directly instead of delegating to insert"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0113-branch-and-guard-parity"
 cluster: null

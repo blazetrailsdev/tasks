@@ -1,7 +1,7 @@
 ---
 title: "ActiveModel::Access has no standalone mixin and slice lacks indifferent access"
-status: draft
-updated: 2026-08-14
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 62
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "AcceptsMultiparameterTime: extra positions must collapse positionally like values_hash.sort"
 status: ready
-updated: 2026-07-27
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 65
 pr: null
 claim: null
 assignee: null

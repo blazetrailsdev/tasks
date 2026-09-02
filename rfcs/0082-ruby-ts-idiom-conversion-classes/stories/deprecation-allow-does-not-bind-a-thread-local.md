@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7386
-claim: null
-assignee: null
+pr: 7392
+claim: "2026-09-02T16:22:41Z"
+assignee: "deprecation-allow-does-not-bind-a-thread-local"
 blocked-by: null
 closed-reason: null
 ---

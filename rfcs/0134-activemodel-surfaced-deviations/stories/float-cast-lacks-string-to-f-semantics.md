@@ -1,7 +1,7 @@
 ---
 title: "Type::Float#cast answers nil where Ruby String#to_f answers 0.0"
-status: draft
-updated: 2026-08-14
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 60
 pr: null
 claim: null
 assignee: null

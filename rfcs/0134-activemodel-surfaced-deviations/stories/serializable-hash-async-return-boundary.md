@@ -1,7 +1,7 @@
 ---
 title: "Decide serializableHash / asJson return shape across the sync/async boundary"
-status: draft
-updated: 2026-08-23
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 42
 pr: null
 claim: null
 assignee: null

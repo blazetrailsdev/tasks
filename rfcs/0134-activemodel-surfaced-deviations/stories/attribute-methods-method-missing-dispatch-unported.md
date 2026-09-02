@@ -1,7 +1,7 @@
 ---
 title: "AttributeMethods#method_missing and respond_to?'s attribute arm are unported; one call site open-codes them"
-status: draft
-updated: 2026-08-19
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 61
 pr: null
 claim: null
 assignee: null

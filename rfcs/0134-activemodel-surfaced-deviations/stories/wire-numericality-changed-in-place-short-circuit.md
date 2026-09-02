@@ -1,7 +1,7 @@
 ---
 title: "Wire numericality record_attribute_changed_in_place? short-circuit"
 status: ready
-updated: 2026-07-05
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 66
 pr: null
 claim: null
 assignee: null

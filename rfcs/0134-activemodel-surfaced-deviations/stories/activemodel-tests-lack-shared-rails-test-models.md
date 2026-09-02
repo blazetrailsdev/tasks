@@ -1,7 +1,7 @@
 ---
 title: "activemodel tests redeclare Rails test models inline instead of a shared test-helpers/models dir"
-status: draft
-updated: 2026-08-16
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: test-placement
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 51
 pr: null
 claim: null
 assignee: null

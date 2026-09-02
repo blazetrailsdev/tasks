@@ -1,7 +1,7 @@
 ---
 title: "Model.validate takes one filter where Rails takes *args plus a block"
-status: draft
-updated: 2026-08-17
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 62
 pr: null
 claim: null
 assignee: null

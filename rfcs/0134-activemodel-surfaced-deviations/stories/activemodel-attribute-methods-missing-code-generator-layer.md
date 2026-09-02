@@ -1,7 +1,7 @@
 ---
 title: "activemodel-attribute-methods-missing-code-generator-layer"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: trails now HAS the ActiveSupport::CodeGenerator layer. Landed by #7208 (c26bbb8c7) 'converge seven ports surfaced by the method_missing work' (RFC 0115). origin/main packages/activemodel/src/attribute-methods.ts:185-219 mirrors attribute_methods.rb:211-236 exactly: eagerlyGenerateAliasAttributeMethods wraps CodeGenerator.batch(this.generatedAttributeMethods(), __FILE__, __LINE__, codeGenerator => ...), generateAliasAttributeMethods takes codeGenerator: CodeGenerator and re-batches it, and aliasAttributeMethodDefinition takes codeGenerator and passes { owner: codeGenerator }. defineAttributeMethods (:231) and defineAttributeMethod (:248-251) likewise batch through CodeGenerator with _owner. The three naming call-arg rows this story existed to retire — RB [ref:codeGenerator,...] vs TS [ref:host,...] — no longer describe the file. The still-open audit story alias-attribute-method-definition-reroute-namespace covers what remains in this area (the reroute through defineAttributeMethodPattern instead of Rails' defineCall with namespace: :alias_attribute)."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "parity-api-cannot-follow-a-port-across-packages"
-status: draft
+status: closed
 updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "moot under the rewritten fold shape (tasks#31): keeping Rails::Railtie at packages/trailties/src/trailtie.ts removes the cross-package mapping this story existed to add"
 ---
 
 ## Context

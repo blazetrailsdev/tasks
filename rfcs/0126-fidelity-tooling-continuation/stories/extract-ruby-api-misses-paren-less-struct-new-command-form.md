@@ -1,14 +1,14 @@
 ---
 title: "extract-ruby-api.rb skips the paren-less `CONST = Struct.new :a, :b` command form"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "ActiveModel::Name derives its memos by joining pre-split segments instead of inflecting @name"
-status: draft
-updated: 2026-08-11
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 64
 pr: null
 claim: null
 assignee: null

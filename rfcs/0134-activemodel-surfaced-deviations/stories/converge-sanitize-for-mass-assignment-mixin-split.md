@@ -1,7 +1,7 @@
 ---
 title: "Converge the sanitizeForMassAssignment / sanitizeForbiddenAttributes mixin split"
-status: draft
-updated: 2026-07-28
+status: ready
+updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm
 packages:
@@ -10,7 +10,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 62
 pr: null
 claim: null
 assignee: null
