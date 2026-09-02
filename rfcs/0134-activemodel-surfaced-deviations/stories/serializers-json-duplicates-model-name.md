@@ -1,5 +1,5 @@
 ---
-title: "serializers-json-duplicates-model-name"
+title: "activemodel: Serializers::JSON carries a second copy of model_name, forcing a shared namespace helper"
 status: draft
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
