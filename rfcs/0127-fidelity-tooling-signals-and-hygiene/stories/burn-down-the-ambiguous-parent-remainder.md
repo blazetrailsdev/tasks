@@ -2,7 +2,7 @@
 title: "Burn the 19-name ambiguous-parent remainder to zero"
 status: draft
 updated: 2026-09-02
-rfc: "0126-fidelity-tooling-continuation"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []
