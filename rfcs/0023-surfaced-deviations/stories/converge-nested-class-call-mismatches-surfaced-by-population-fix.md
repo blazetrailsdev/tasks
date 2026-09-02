@@ -2,7 +2,7 @@
 title: "converge-nested-class-call-mismatches-surfaced-by-population-fix"
 status: ready
 updated: 2026-09-01
-rfc: "0126-fidelity-tooling-continuation"
+rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
