@@ -94,10 +94,10 @@ was being validated.
 and in `findIn`:
 
 ```ts
-      const extension = [...Annotation.extensions].find(([regexp]) => new RegExp(regexp).test(item));
-      if (!extension) continue;
-      const pattern = extension[1](this.tag);
-      const annotations = await extractFromFile(item, pattern);
+const extension = [...Annotation.extensions].find(([regexp]) => new RegExp(regexp).test(item));
+if (!extension) continue;
+const pattern = extension[1](this.tag);
+const annotations = await extractFromFile(item, pattern);
 ```
 
 `resetAnnotationRegistry` resets it with `new Map()`.
