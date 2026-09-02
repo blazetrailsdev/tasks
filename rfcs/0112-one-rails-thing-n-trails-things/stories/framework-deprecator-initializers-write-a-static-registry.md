@@ -1,6 +1,6 @@
 ---
 title: "Framework .deprecator initializers write a static registry instead of app.deprecators"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

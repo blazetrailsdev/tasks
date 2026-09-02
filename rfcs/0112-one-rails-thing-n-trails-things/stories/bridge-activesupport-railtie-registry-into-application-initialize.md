@@ -1,6 +1,6 @@
 ---
 title: "Application#initialize never runs the activesupport Railtie registry, so no framework initializer fires in a booted app"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: "duplicate-bodies"

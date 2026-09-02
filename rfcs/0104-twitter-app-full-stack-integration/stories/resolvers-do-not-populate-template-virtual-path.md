@@ -1,6 +1,6 @@
 ---
 title: "Resolvers do not populate Template#virtualPath, so the compiled method falls back to the identifier"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

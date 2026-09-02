@@ -1,7 +1,7 @@
 ---
 title: "Introduce Migration::Current, where Rails declares the four table overrides"
-status: ready
-updated: 2026-09-01
+status: in-progress
+updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 7382
+claim: "2026-09-02T11:29:24Z"
+assignee: "method-order-manifest-actionpack-package-dirs-are-stale"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Generated layout hardcodes an undigested asset path, so the stylesheet 404s against a production build"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 7379
+pr: 7378
 claim: "2026-09-02T02:07:36Z"
 assignee: "generated-layout-hardcodes-undigested-asset-path"
 blocked-by: null

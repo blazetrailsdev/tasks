@@ -1,7 +1,7 @@
 ---
 title: "method-order-manifest-actionpack-package-dirs-are-stale"
-status: ready
-updated: 2026-09-01
+status: in-progress
+updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7382
+claim: "2026-09-02T11:29:24Z"
+assignee: "method-order-manifest-actionpack-package-dirs-are-stale"
 blocked-by: null
 closed-reason: null
 ---

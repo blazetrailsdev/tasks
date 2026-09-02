@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat's leaf / browser-free property is asserted in prose and enforced by nothing"
-status: ready
+status: claimed
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: 63
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-02T11:42:52Z"
+assignee: "port-lazy-attribute-hash-delegate-to-a-record"
 blocked-by: null
 closed-reason: null
 ---

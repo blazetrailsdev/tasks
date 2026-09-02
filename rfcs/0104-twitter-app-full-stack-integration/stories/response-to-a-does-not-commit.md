@@ -1,6 +1,6 @@
 ---
 title: "response-to-a-does-not-commit"
-status: draft
+status: done
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7376
 claim: null
 assignee: null
 blocked-by: null

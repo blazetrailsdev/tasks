@@ -1,6 +1,6 @@
 ---
 title: "Map SessionHash#[] / SecureSessionHash#[] onto get in the operator-spelling map"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
