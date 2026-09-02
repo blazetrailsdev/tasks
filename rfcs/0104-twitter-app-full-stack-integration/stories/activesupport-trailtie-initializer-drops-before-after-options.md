@@ -2,7 +2,7 @@
 title: "activesupport Trailtie.initializer takes no before:/after:/group: options"
 status: in-progress
 updated: 2026-09-02
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
