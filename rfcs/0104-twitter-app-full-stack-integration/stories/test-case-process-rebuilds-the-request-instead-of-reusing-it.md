@@ -2,7 +2,7 @@
 title: "ActionController::TestCase#process rebuilds the request instead of reusing the one Rails dispatches"
 status: draft
 updated: 2026-09-02
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
