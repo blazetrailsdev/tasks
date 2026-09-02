@@ -30,7 +30,7 @@ receipted:
   written only by `initialize` (`:37`) and `init_with` (`:131`). A Ruby
   zero-arg reader ports as an accessor property (CLAUDE.md, "Generated
   attribute readers are properties"), so the pair should be one `protected get
-  originalAttribute()`.
+originalAttribute()`.
 - `fromUserWithValue()` (`:247`). `attribute.rb:12-14`'s `from_user` takes
   `(name, value_before_type_cast, type, original_attribute = nil)` and no eager
   `value`; there is no such factory anywhere in `attribute.rb`.

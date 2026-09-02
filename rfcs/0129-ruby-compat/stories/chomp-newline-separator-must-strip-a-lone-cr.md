@@ -22,7 +22,7 @@ closed-reason: null
 `str.replace(/\r?\n$/, "")`, so it leaves a lone trailing `\r` in place:
 
 ```ts
-chomp("x\r", "\n")  // => "x\r"
+chomp("x\r", "\n"); // => "x\r"
 ```
 
 MRI strips it:
