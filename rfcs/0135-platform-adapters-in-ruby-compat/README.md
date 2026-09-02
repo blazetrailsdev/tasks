@@ -136,10 +136,13 @@ Two disciplines follow, and they are the risk in this RFC:
 
 - **The list is only-shrink.** A receiver leaves `CORE_CLASS_RECEIVERS` when
   `ruby-compat` can spell it, and nothing is ever added back to quiet a red run.
-- **Unexempting and converging are one story, never two.** Removing `File`
-  resurrects every `File.*` row in a ported body at once. The story that
-  unexempts a receiver is the story that flips its call sites, and it lands
-  green or it does not land. The Rails-wide counts above are an upper bound, not
+- **A receiver leaves the list only in a story that leaves the gate green.**
+  Removing `File` resurrects every `File.*` row in a ported body at once, and
+  `File` is far too large to flip in one PR. So the call-site flips are
+  dependency stories, per package, and the unexemption is the last story in the
+  chain — the one that turns the gate on, with nothing left for it to catch.
+  A receiver small enough to flip in a single PR (`IO`, `Process`) unexempts in
+  that same story. The Rails-wide counts above are an upper bound, not
   the gate population — the first story measures the ported-body subset with
   `API_COMPARE_FORCE=1 pnpm parity:api --calls` before committing to a lane.
 
