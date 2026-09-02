@@ -57,3 +57,72 @@ Out-of-closure stubs (91) are not in this story's scope — they belong with RFC
   (`pnpm tasks edit`), so their scopes are real rather than estimated.
 - The PR body states the resulting in-closure remaining count and how it splits
   port vs exclude.
+
+## Triage (2026-09-01)
+
+Re-measured with `pnpm parity:test -- --package activesupport --json`,
+partitioned by `scripts/test-compare/closure-manifest.ts`. The story's
+2026-08-13 figure of **291** in-closure stubs is stale: sibling RFC 0105/0098
+work has since burnt it to **160 matched-skipped** across 22 in-closure files
+(162 `it.skip` stub names — `inflector_test.rb`'s `constantize` and
+`safe constantize` are stubbed in TS but score `missing`, not `matchedSkipped`).
+`core_ext/date_and_time_compatibility_test.rb`'s 21 are now out-of-closure and
+owned by `port-date-and-time-compatibility-and-zone-cases`;
+`cache/behaviors/local_cache_behavior.rb`'s 29 are out-of-closure under RFC 0101.
+
+The 162 split **81 exclude / 81 port**.
+
+### Exclude — landed as case-level `tests:` rows in this PR (81)
+
+All in `scripts/parity/unported-files/activesupport.ts`; the TS stubs were
+deleted so the excluded cases do not resurface as `extra`. Five files lost
+every case and so lost their whole TS file (`share-lock.test.ts`,
+`dependencies.test.ts`, `autoload.test.ts`, `multibyte-proxy.test.ts`,
+`concurrency/load-interlock-aware-monitor.test.ts`).
+
+| Rails test file                                         | n   | Ruby-only mechanism                                                             |
+| ------------------------------------------------------- | --- | ------------------------------------------------------------------------------- |
+| `share_lock_test.rb`                                    | 25  | `Thread.new` + Monitor/ConditionVariable blocking, `Thread#kill`                 |
+| `json/encoding_test.rb`                                 | 10  | `Process::Status` via a child process, Encoding transcode, `Struct`, `Data`, the `json` gem's `to_json(state)`, `IO` |
+| `dependencies_test.rb`                                  | 10  | `require_dependency` → `Kernel#require` against `$LOAD_PATH`                     |
+| `autoload_test.rb`                                      | 6   | `Module#autoload` / `autoload?`                                                  |
+| `transliterate_test.rb`                                 | 5   | non-UTF-8 Ruby `Encoding` and invalid byte sequences                             |
+| `core_ext/time_with_zone_test.rb`                       | 4   | Psych `!ruby/object:` round-trip                                                 |
+| `core_ext/class/attribute_test.rb`                      | 4   | per-object singleton class, `Module#prepend`                                     |
+| `core_ext/module/attribute_accessor_per_thread_test.rb` | 4   | `Thread` / `Fiber` isolation                                                     |
+| `time_zone_test.rb`                                     | 3   | Psych (2), `Time.new(…, in: zone)` zone slot (1)                                 |
+| `concurrency/load_interlock_aware_monitor_test.rb`      | 3   | GVL hand-off from a contending `Thread`                                          |
+| `inflector_test.rb`                                     | 2   | `Object.const_get` over a nested constant path                                   |
+| `core_ext/string_ext_test.rb`                           | 1   | Psych `to_yaml`                                                                  |
+| `core_ext/module/attribute_accessor_test.rb`            | 1   | `class << klass` body + Ruby class variables                                     |
+| `descendants_tracker_test.rb`                           | 1   | Ruby GC collecting a class, observed from a `Thread`                             |
+| `multibyte_proxy_test.rb`                               | 1   | `Multibyte.proxy_class` / `String#mb_chars`                                      |
+| `core_ext/object/inclusion_test.rb`                     | 1   | `Module#include?` ancestry                                                       |
+
+### Port — owned by the RFC 0105 porting stories (81)
+
+| Rails test file                     | n   | owner                                          |
+| ----------------------------------- | --- | ---------------------------------------------- |
+| `core_ext/hash_ext_test.rb`         | 43  | `port-core-ext-hash-ext-remaining-cases`       |
+| `core_ext/array/conversions_test.rb`| 12  | `port-core-ext-string-array-and-json-cases`    |
+| `core_ext/string_ext_test.rb`       | 4   | `port-core-ext-string-array-and-json-cases`    |
+| `json/encoding_test.rb`             | 1   | `port-core-ext-string-array-and-json-cases`    |
+| `core_ext/time_ext_test.rb`         | 4   | `port-core-ext-numeric-and-time-ext-cases`     |
+| `core_ext/date_ext_test.rb`         | 4   | `port-date-and-time-compatibility-and-zone-cases` |
+| `core_ext/time_with_zone_test.rb`   | 3   | `port-date-and-time-compatibility-and-zone-cases` |
+| `time_zone_test.rb`                 | 2   | `port-date-and-time-compatibility-and-zone-cases` |
+| `inflector_test.rb`                 | 4   | `port-inflector-dependencies-and-in-closure-residue` |
+| `core_ext/range_ext_test.rb`        | 2   | `port-inflector-dependencies-and-in-closure-residue` |
+| `core_ext/object/inclusion_test.rb` | 1   | `port-inflector-dependencies-and-in-closure-residue` |
+| `deep_mergeable_test.rb`            | 1   | `port-inflector-dependencies-and-in-closure-residue` |
+
+`core_ext/hash_ext_test.rb`'s 43 and `core_ext/array/conversions_test.rb`'s 12
+are all `to_xml`/`from_xml`; `packages/activesupport/src/xml-mini.ts` is ported,
+so they are ports rather than exclusions — what is missing is
+`core_ext/hash/conversions.rb`, not the XML backend.
+
+### Result
+
+In-closure after this PR: **1,721 Rails tests, 1,673 matched, 81 still stubbed,
+48 missing — 92.5%** (was 1,802 / 1,754 / 160 / 48 — 88.5%). The 81 remaining
+stubs are all ports, distributed across the five stories above.

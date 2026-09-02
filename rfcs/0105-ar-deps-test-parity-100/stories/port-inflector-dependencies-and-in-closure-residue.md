@@ -1,5 +1,5 @@
 ---
-title: "Port inflector, transliterate, dependencies/autoload and the in-closure residue (~60)"
+title: "Port inflector, range_ext, inclusion and the in-closure residue (~12)"
 status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
@@ -9,7 +9,7 @@ packages:
 deps:
   - "triage-activesupport-in-closure-skip-stubs"
 deps-rfc: []
-est-loc: 500
+est-loc: 150
 priority: null
 pr: null
 claim: null
@@ -26,15 +26,26 @@ ActiveModel actually load — so they are on the critical path for this RFC's
 `activesupport 100%`. Measured 2026-08-13 with
 `pnpm parity:test -- --cached --package activesupport`:
 
-- `vendor/rails/activesupport/test/transliterate_test.rb` — 7 stubs
-- `vendor/rails/activesupport/test/inflector_test.rb` — 4 stubs
-- `vendor/rails/activesupport/test/dependencies_test.rb` — 10 stubs
-- `vendor/rails/activesupport/test/autoload_test.rb` — 6 stubs
-- `vendor/rails/activesupport/test/core_ext/class/attribute_test.rb` — 5 stubs
+- `vendor/rails/activesupport/test/inflector_test.rb` — 8 remaining — 4 stubs, 4 missing
 - `vendor/rails/activesupport/test/core_ext/enumerable_test.rb` — 4 missing
-- `vendor/rails/activesupport/test/concurrency/load_interlock_aware_monitor_test.rb` — 3 stubs
-- `vendor/rails/activesupport/test/share_lock_test.rb` — 25 stubs — expect most to be exclusions, see the triage story
-- residue — ~14 across concern, deep_mergeable, descendants_tracker, broadcast_logger, deprecation, logger, hash_with_indifferent_access, core_ext/range_ext, core_ext/object/inclusion, core_ext/module/attribute_accessor
+- `vendor/rails/activesupport/test/core_ext/range_ext_test.rb` — 2 stubs
+- residue — `core_ext/object/inclusion_test.rb` 1 stub, `deep_mergeable_test.rb` 1 stub
+
+Scope after `triage-activesupport-in-closure-skip-stubs` (2026-09-01): the bulk
+of this story's original list became case-level exclusions and left the
+remainder — `share_lock_test.rb` (25, Thread/Monitor), `dependencies_test.rb`
+(10, `Kernel#require`), `autoload_test.rb` (6, `Module#autoload`),
+`transliterate_test.rb` (5, Ruby `Encoding`),
+`concurrency/load_interlock_aware_monitor_test.rb` (3, GVL),
+`core_ext/class/attribute_test.rb` (4, singleton class / `Module#prepend`),
+`core_ext/module/attribute_accessor_test.rb` (1),
+`descendants_tracker_test.rb` (1, GC), and `inflector_test.rb`'s `constantize` /
+`safe constantize` (`Object.const_get`). Five of those files lost their TS file
+entirely. What remains here is portable: `inflector`'s `pluralize with
+fallback`, `parameterize and normalize`, `parameterize with locale` and
+`inflector locality` (all I18n-backed), `range_ext`'s two TimeWithZone cases,
+`inclusion`'s `no method catching`, and `deep_mergeable`'s
+`deep_merge? can be overridden…`.
 
 Ports go in the convention TS file the compare report names beside each Ruby
 file (e.g. `core_ext/hash_ext_test.rb` → `packages/activesupport/src/core-ext/hash-ext.test.ts`);
