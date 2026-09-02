@@ -1,6 +1,6 @@
 ---
 title: "Route commit_session's two diagnostics through rack.errors instead of console"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null

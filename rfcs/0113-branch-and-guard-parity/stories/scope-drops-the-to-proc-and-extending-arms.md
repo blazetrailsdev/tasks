@@ -1,7 +1,7 @@
 ---
 title: "scope-drops-the-to-proc-and-extending-arms"
-status: ready
-updated: 2026-08-31
+status: claimed
+updated: 2026-09-02
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-02T13:34:18Z"
+assignee: "param-name-check-pairs-nested-class-constructor-with-enclosing-initialize"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Resolve rubyClassPath for stores defined outside abstract/id.ts, so Pool names itself Rack::Session::Pool"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null

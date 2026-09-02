@@ -1,6 +1,6 @@
 ---
 title: "validateBang defers a registered adapter's load failure to first checkout"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "widen-ruby-receiver-hint-proofs"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null

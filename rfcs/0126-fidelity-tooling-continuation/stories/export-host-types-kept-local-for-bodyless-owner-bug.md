@@ -1,6 +1,6 @@
 ---
 title: "Export the host types #6798 kept local to dodge the bodyless-owner bug"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "module-ext's Module# methods take an explicit receiver where configurable.ts is this-typed"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-02
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: 7388
+claim: "2026-09-02T13:04:16Z"
+assignee: "gate-positive-adapter-drop-rule-differs-between-extractors"
 blocked-by: null
 closed-reason: null
 ---

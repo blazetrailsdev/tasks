@@ -1,7 +1,7 @@
 ---
 title: "param-name-check-pairs-nested-class-constructor-with-enclosing-initialize"
-status: ready
-updated: 2026-09-01
+status: claimed
+updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-02T13:34:18Z"
+assignee: "param-name-check-pairs-nested-class-constructor-with-enclosing-initialize"
 blocked-by: null
 closed-reason: null
 ---

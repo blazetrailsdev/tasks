@@ -1,7 +1,7 @@
 ---
 title: "Ported-with-args population is a main() closure with no testable seam"
-status: ready
-updated: 2026-09-01
+status: in-progress
+updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 7388
+claim: "2026-09-02T13:04:16Z"
+assignee: "gate-positive-adapter-drop-rule-differs-between-extractors"
 blocked-by: null
 closed-reason: null
 ---

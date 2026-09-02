@@ -1,6 +1,6 @@
 ---
 title: "method-order-manifest-actionpack-package-dirs-are-stale"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

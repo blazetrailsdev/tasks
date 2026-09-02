@@ -1,6 +1,6 @@
 ---
 title: "activesupport Trailtie.initializer takes no before:/after:/group: options"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: 7386
+claim: "2026-09-02T13:01:37Z"
+assignee: "activesupport-trailtie-initializer-drops-before-after-options"
 blocked-by: null
 closed-reason: null
 ---

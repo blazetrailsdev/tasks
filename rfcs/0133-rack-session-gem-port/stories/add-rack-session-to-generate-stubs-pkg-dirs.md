@@ -1,6 +1,6 @@
 ---
 title: "Give generate-stubs.ts a rack-session PKG_DIRS row so its unported-file stubs are generated, not hand-written"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null

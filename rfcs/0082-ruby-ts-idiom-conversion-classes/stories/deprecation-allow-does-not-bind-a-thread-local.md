@@ -1,6 +1,6 @@
 ---
 title: "deprecation-allow-does-not-bind-a-thread-local"
-status: draft
+status: done
 updated: 2026-09-02
 rfc: "0082-ruby-ts-idiom-conversion-classes"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7386
 claim: null
 assignee: null
 blocked-by: null

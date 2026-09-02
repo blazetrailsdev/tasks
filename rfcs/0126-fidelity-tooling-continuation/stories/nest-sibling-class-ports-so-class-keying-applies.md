@@ -1,6 +1,6 @@
 ---
 title: "Nest sibling-class TS ports by class so parity:test's (class, name) keying applies"
-status: claimed
+status: in-progress
 updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 4
-pr: null
+pr: 7387
 claim: "2026-09-02T12:34:17Z"
 assignee: "framework-deprecator-initializers-write-a-static-registry"
 blocked-by: null
