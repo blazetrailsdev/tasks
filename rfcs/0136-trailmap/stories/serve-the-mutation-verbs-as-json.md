@@ -1,0 +1,46 @@
+---
+title: "Serve the mutation verbs, making trailmap the sole writer"
+status: draft
+updated: 2026-09-02
+rfc: "0136-trailmap"
+cluster: null
+packages: ["activerecord"]
+deps: ["move-mutation-verbs-onto-the-models"]
+deps-rfc: []
+est-loc: 200
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+The mutation half of the API: `claim`, `release`, `in-progress`, `done`,
+`record-spawn`, `block`, `close`, `status-set`, `priority`. These wrap the
+instance methods from the verbs story and, on landing, make trailmap the
+**sole writer** of `tasks.db`.
+
+That is the point of no return for this RFC, and the RFC accepts its cost
+explicitly: with the CLI behind the API, trailmap being down stops the fleet,
+where today any worktree can mutate the database unilaterally. The mitigation
+is a restart policy and a health check, not a second code path — a read-only
+fallback would resurrect the second read model this whole RFC exists to delete.
+
+So this story owns the operational side too: the app must come back by itself,
+and its failure must be visible.
+
+Concurrency stops being a correctness problem here rather than starting to be
+one — today the CLI writes from every worktree plus the container, and the Go
+process reads underneath. One writer in one process is strictly simpler.
+
+## Acceptance criteria
+
+- Every mutation verb has an endpoint, running the model methods in one
+  transaction and writing its `events` row.
+- Each returns the same refusals the CLI returns, with the same messages.
+- trailmap is the only process that opens `tasks.db` for writing.
+- The app has a restart policy and a health check, and a deliberate kill is
+  shown to recover without intervention.
