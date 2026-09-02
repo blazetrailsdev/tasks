@@ -1,7 +1,7 @@
 ---
 rfc: "0135-platform-adapters-in-ruby-compat"
 title: "The platform adapters move into ruby-compat: one home for the fs/crypto/os/process/http/child-process/async-context seams, registration included, so a leaf is the only thing rack depends on"
-status: ready
+status: draft
 created: 2026-09-02
 updated: 2026-09-02
 owner: "@deanmarano"
