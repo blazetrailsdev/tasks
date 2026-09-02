@@ -1,7 +1,7 @@
 ---
 title: "ActionController::Metal keeps a second header seat where Rails delegates to the response"
 status: draft
-updated: 2026-09-02
+updated: 2026-09-01
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
 packages: []

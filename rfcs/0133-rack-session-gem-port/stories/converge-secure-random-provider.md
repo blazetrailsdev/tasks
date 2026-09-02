@@ -1,14 +1,14 @@
 ---
 title: "converge-secure-random-provider"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 18
 pr: null
 claim: null
 assignee: null

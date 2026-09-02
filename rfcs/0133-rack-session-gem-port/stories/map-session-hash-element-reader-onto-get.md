@@ -1,14 +1,14 @@
 ---
 title: "Map SessionHash#[] / SecureSessionHash#[] onto get in the operator-spelling map"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 14
 pr: null
 claim: null
 assignee: null

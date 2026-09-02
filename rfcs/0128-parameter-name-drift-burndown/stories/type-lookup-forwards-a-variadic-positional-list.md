@@ -1,7 +1,7 @@
 ---
 title: "type-lookup-forwards-a-variadic-positional-list"
-status: ready
-updated: 2026-09-01
+status: claimed
+updated: 2026-09-02
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-02T00:37:12Z"
+assignee: "actionview-partial-renderer-bodies-pass-rails-arguments"
 blocked-by: null
 closed-reason: null
 ---

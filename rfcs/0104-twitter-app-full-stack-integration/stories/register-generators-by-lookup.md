@@ -1,7 +1,7 @@
 ---
 title: "14 generators exist on disk but are unreachable from trails generate"
-status: claimed
-updated: 2026-09-01
+status: done
+updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["trailties"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 61
-pr: null
+pr: 7368
 claim: "2026-09-01T23:37:00Z"
 assignee: "complete-set-routes-reloader-hook"
 blocked-by: null

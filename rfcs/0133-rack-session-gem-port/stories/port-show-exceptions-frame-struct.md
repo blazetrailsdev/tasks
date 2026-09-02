@@ -1,14 +1,14 @@
 ---
 title: "Port Rack::ShowExceptions::Frame's eight Struct members (show_exceptions.rb:56-59)"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 24
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "Delete the actionpack re-export shims and rewrite importers onto @blazetrails/rack-session"
-status: ready
-updated: 2026-09-01
+status: in-progress
+updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: ["rack-session", "actionpack"]
@@ -9,9 +9,9 @@ deps: ["enroll-rack-session-test-suite"]
 deps-rfc: []
 est-loc: 250
 priority: 8
-pr: null
-claim: null
-assignee: null
+pr: 7370
+claim: "2026-09-02T00:41:36Z"
+assignee: "delete-rack-session-reexport-shims"
 blocked-by: null
 closed-reason: null
 ---

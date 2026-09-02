@@ -1,7 +1,7 @@
 ---
 title: "converge-actiondispatch-response-header-seat"
-status: in-progress
-updated: 2026-09-01
+status: done
+updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Triage activesupport's 291 skip stubs into port-or-exclude dispositions"
-status: ready
-updated: 2026-08-13
+status: in-progress
+updated: 2026-09-02
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 280
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7369
+claim: "2026-09-02T00:41:22Z"
+assignee: "triage-activesupport-in-closure-skip-stubs"
 blocked-by: null
 closed-reason: null
 ---

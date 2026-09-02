@@ -1,7 +1,7 @@
 ---
 title: "Port Application#reloaders + reloader.to_run so routes reload"
-status: claimed
-updated: 2026-09-01
+status: done
+updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: ["port-execution-wrapper-and-reloader"]
 deps-rfc: []
 est-loc: 200
 priority: 51
-pr: null
+pr: 7368
 claim: "2026-09-01T23:37:00Z"
 assignee: "complete-set-routes-reloader-hook"
 blocked-by: null

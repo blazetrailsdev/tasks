@@ -1,7 +1,7 @@
 ---
 title: "TimeWithZone#incorporate_utc_offset's Date arm advances seconds where Rails adds Rational(offset, SECONDS_PER_DAY)"
-status: in-progress
-updated: 2026-09-01
+status: done
+updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["activesupport"]

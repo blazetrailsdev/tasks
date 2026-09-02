@@ -1,14 +1,14 @@
 ---
 title: "Derive AUTHORITY's hostname class from Ruby's [[:graph:]] instead of approximating it"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 21
 pr: null
 claim: null
 assignee: null

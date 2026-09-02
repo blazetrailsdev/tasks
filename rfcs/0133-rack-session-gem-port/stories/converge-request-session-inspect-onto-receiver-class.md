@@ -1,14 +1,14 @@
 ---
 title: "Converge Session#inspect's not-yet-loaded form onto Ruby's self.class path"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 19
 pr: null
 claim: null
 assignee: null
