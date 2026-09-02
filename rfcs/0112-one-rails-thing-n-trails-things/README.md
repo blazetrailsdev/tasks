@@ -1,9 +1,9 @@
 ---
 rfc: "0112-one-rails-thing-n-trails-things"
 title: "One Rails thing, N trails things — duplicate bodies and split stores"
-status: active
+status: closed
 created: 2026-08-18
-updated: 2026-09-01
+updated: 2026-09-02
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -240,7 +240,59 @@ buys nothing. Close this RFC when that story is done — no other work remains.
 
 ## Changelog
 
+- 2026-09-02: closed; the last eight stories, all trailtie/boot-path scope
+  creep, re-homed to 0104 and 0113 after PR #7386 closed unmerged.
 - 2026-09-01: triaged the 14 unfinished stories out to five active RFCs; 13
   moved, one claimed story held back. RFC stays active until it lands.
 - 2026-08-18: initial RFC, carved out of `0023-surfaced-deviations` by the
   backlog triage pass.
+
+## Closed 2026-09-02
+
+**The goal is met on the store half, and the gate shipped report-only as
+designed.** Of the six stores the Verification section names, four are gone
+repo-wide on `origin/main` — `git grep` finds no `_joinClauses`, `_ctes`,
+`_statementPool`, or `_cachedAssociations` anywhere under `packages/`. Two
+remain and are out of this RFC's reach: `_permanentlyClosed` and
+`_isFakeConnection` still sit side by side on `Mysql2Adapter`
+(`connection-adapters/mysql2-adapter.ts:126-127`), adapter territory that
+`0119-connection-adapter-fidelity` now owns; and
+`DatabaseTasks.databaseConfiguration` survives as the CLI's test-harness config
+seat (`packages/activerecord-cli/src/db-helpers.ts:28` and five test files).
+
+Phase 1's cheap half landed as `pnpm parity:structural-duplicates:report`
+(`scripts/api-compare/report-structural-duplicates.ts`), report-only, exactly
+as the design said it should be — it was never flipped to an enforcing
+`duplicate-definitions` ratchet, so the "baseline reaches 0 rows" criterion was
+never armed. The ivar work in `scripts/api-compare/extract-ruby-api.rb` exists
+(`collect_ivar_option_keys`, the `:@ivar` shape arm) but as option-key
+collection rather than the store-vs-store comparison Open Question 1 asked for;
+that question was answered by running Phase 3 ungated, which is what the
+Recommendation permitted.
+
+167 stories done across trails PRs #6369–#7387, 9 closed as void on re-check.
+
+## Wind-down, second pass — 2026-09-02
+
+The 2026-09-01 triage below left one claimed story here; since then that work
+finished and eight more stories accumulated on the trailtie/railtie-config
+surface, all of them scope creep past the original charter (the RFC was carved
+for `activerecord`/`activesupport` duplicate bodies and split stores; these are
+application-boot files). PR #7386, which carried the Trailtie fold, **closed
+unmerged on 2026-09-02**, so its two in-progress stories and the one story it
+had closed all returned to `ready` with nothing landed. All eight are re-homed:
+
+| Re-homed to                               | Stories                                                                                                                                                                                                                                                       |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `0104-twitter-app-full-stack-integration` | `fold-the-two-trailtie-ports-into-one`, `activesupport-trailtie-initializer-drops-before-after-options`, `reset-trailtie-registry-between-tests`, `globalid-trailtie-app-config-is-a-property-shape-the-application-lacks`, `set-hash-digest-class-reads-the-static-config-not-the-app`, `port-railtie-configuration-dynamic-options-test`, `test-case-process-rebuilds-the-request-instead-of-reusing-it` |
+| `0113-branch-and-guard-parity`            | `railtie-configuration-drops-respond-to-super-and-shadow-guard`                                                                                                                                                                                                |
+
+0104 owns the convergence onto one real `Trailties::Application` that actually
+serves requests, which is the same defect the Trailtie fold and the
+`app.config` reads are instances of. The one exception is a missing-arm story
+— `respond_to?` dropping its `super ||` arm and `method_missing` dropping the
+`actual_method?` raise (`railtie/configuration.rb:90-105`) — which is 0113's
+axis, not a duplicate store.
+
+No story remains under this RFC.
+
