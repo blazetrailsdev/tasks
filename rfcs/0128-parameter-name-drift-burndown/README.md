@@ -1,9 +1,9 @@
 ---
 rfc: "0128-parameter-name-drift-burndown"
 title: "Parameter-name drift: converge the 624 renamed parameters the new check found, then gate each package"
-status: active
+status: closed
 created: 2026-08-28
-updated: 2026-08-28
+updated: 2026-09-02
 owner: "@deanmarano"
 packages:
   - abstractcontroller
@@ -149,3 +149,17 @@ exist on `main` and no story here can verify its own completion.
   whole of the triage.
 - 2026-08-28: created from the first full-surface run of the parameter-name
   check (trails PR #7162), 624 rows across 12 packages.
+
+## Closed 2026-09-02
+
+The goal is met. All 12 packages named in the seed table are enrolled in
+`GATED_PACKAGES` in `scripts/api-compare/param-name-mark.ts` and every one of
+them carries `{ total: 0, byFile: {} }` in `param-name-mark.json` on
+`origin/main` — the 624-row population is at zero and armed, not budgeted.
+43 stories are done across 24 `RFC 0128` commits (trails #7171 through #7373).
+
+Two stories are re-homed to `0123-blocked-convergence-holding`, both blocked on
+permanent language shortcomings rather than on any 0128 work:
+`base-constructor-calls-init-internals-not-activemodel` (JS requires `super()`
+before `this`) and `template-render-hands-the-view-to-run` (the residual
+`has_strict_locals:` Ruby kwarg).
