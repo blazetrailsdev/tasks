@@ -53,10 +53,10 @@ PR #7365 (28→30), #7394 (30→32) and #7399 (32→33).
   Rails actually calls in ported bodies (measure; do not port all twelve
   speculatively — RFC 0129's standing rule is members with a real call site).
 - Each member carries an MRI citation and the class a `@noRailsEquivalent
-  PERMANENT` receipt.
+PERMANENT` receipt.
 - Every trails call site that was open-coding a `FileUtils` operation through
   `getFs()` now calls `FileUtils`, and `API_COMPARE_FORCE=1 pnpm parity:api
-  --calls` shows the credited rows — state the before/after row count in the PR
+--calls` shows the credited rows — state the before/after row count in the PR
   body.
 - `pnpm parity:api:extra:gate` is green; `novel` is still 0 and the `total`
   bump is the only mark change.

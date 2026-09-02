@@ -31,9 +31,9 @@ Whole-file shims in `packages/activesupport/src/`:
 - `include.ts:20-21` — `export { … } from "@blazetrails/ruby-compat/include"`,
   left by `move-module-mixin-primitives-to-ruby-compat` (done).
 - `prepend.ts:7-8` — `export { prepend }` / `export type { PrependMethod,
-  PrependModule }`, same move.
+PrependModule }`, same move.
 - `method-missing-proxy.ts:1` — `export { PROTOCOL_PROBES, methodMissingProxy }
-  from "@blazetrails/ruby-compat/method-missing-proxy"`, left by
+from "@blazetrails/ruby-compat/method-missing-proxy"`, left by
   `move-method-missing-proxy-to-ruby-compat` (done).
 
 Re-export lines inside live files:

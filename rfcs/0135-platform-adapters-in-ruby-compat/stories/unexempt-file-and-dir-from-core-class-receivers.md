@@ -5,7 +5,14 @@ updated: 2026-09-02
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["ruby-compat"]
-deps: ["flip-file-dir-call-sites-activesupport", "flip-file-dir-call-sites-activerecord", "flip-file-dir-call-sites-actionpack-and-actionview", "flip-file-dir-call-sites-trailties", "flip-file-dir-call-sites-rack"]
+deps:
+  [
+    "flip-file-dir-call-sites-activesupport",
+    "flip-file-dir-call-sites-activerecord",
+    "flip-file-dir-call-sites-actionpack-and-actionview",
+    "flip-file-dir-call-sites-trailties",
+    "flip-file-dir-call-sites-rack",
+  ]
 deps-rfc: []
 est-loc: 150
 priority: 11

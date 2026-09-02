@@ -5,7 +5,12 @@ updated: 2026-09-02
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["rack", "rack-session"]
-deps: ["flip-file-dir-call-sites-rack", "move-crypto-adapter-into-ruby-compat", "move-os-http-child-process-and-async-context-adapters"]
+deps:
+  [
+    "flip-file-dir-call-sites-rack",
+    "move-crypto-adapter-into-ruby-compat",
+    "move-os-http-child-process-and-async-context-adapters",
+  ]
 deps-rfc: []
 est-loc: 200
 priority: 15

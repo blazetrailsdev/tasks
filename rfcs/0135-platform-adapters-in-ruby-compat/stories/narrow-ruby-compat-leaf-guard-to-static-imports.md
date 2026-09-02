@@ -34,7 +34,7 @@ for the property rather than the property. `fs-adapter.ts:265-276`:
 
 ```ts
 if (typeof globalThis.process === "undefined" || !globalThis.process.versions?.node) return false;
-const req = syncBuiltinLoader();   // process.getBuiltinModule, else createRequire()
+const req = syncBuiltinLoader(); // process.getBuiltinModule, else createRequire()
 const nodeFs = req("node:fs");
 ```
 
