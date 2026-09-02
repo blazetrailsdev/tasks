@@ -1,6 +1,6 @@
 ---
 title: "converge-actiondispatch-response-header-seat"
-status: ready
+status: in-progress
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 58
-pr: null
-claim: null
-assignee: null
+pr: 7366
+claim: "2026-09-01T23:06:01Z"
+assignee: "ruby-named-file-dir-fileutils-facade"
 blocked-by: null
 closed-reason: null
 ---

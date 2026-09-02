@@ -1,6 +1,6 @@
 ---
 title: "A generated app cannot render its own view: compiled .tse output is invisible to the resolver"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

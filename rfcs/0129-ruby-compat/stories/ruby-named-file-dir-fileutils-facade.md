@@ -1,6 +1,6 @@
 ---
 title: "A Ruby-named File / Dir / FileUtils facade so ported bodies name what Rails names"
-status: ready
+status: closed
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 350
 priority: 56
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-01T23:06:01Z"
+assignee: "ruby-named-file-dir-fileutils-facade"
 blocked-by: null
-closed-reason: null
+closed-reason: "The debt this story burns down no longer exists. Its premise is the five File.exist? rows in call-mismatches-exclude/activesupport/cache/file-store.json; PR #6680 (8a2145ceb) added CORE_CLASS_RECEIVERS to extract-ruby-api.rb, which drops every call on File/Dir/IO/Marshal/... from the Ruby call-set as Ruby rather than a ported collaborator, and deleted those rows (74 in that commit) as stale. Verified on this branch with API_COMPARE_FORCE=1 pnpm parity:api --calls: cache/file-store.ts has ZERO call-set mismatches, and its shard holds only two kind:args rows (decode_www_form_component, split), neither a File/Dir call. A File/Dir facade would therefore credit no gate row while adding ~9 public names to ruby-compat, raising the extra-surface marks of a gated, pinned package — making debt, not burning it. FileUtils is NOT in CORE_CLASS_RECEIVERS, but no FileUtils row exists in any baseline either. The story's own escape clause directs this outcome. The platform-adapter/leaf-rule question (RFC 0129 non-goal 2) stays open and unsettled for move-tempfile-to-ruby-compat, which is unaffected."
 ---
 
 ## Context

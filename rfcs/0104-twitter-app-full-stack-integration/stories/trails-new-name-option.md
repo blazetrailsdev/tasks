@@ -1,6 +1,6 @@
 ---
 title: "Add trails new --name, restoring AppName#original_app_name's options[:name] arm"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

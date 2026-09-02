@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone#incorporate_utc_offset's Date arm advances seconds where Rails adds Rational(offset, SECONDS_PER_DAY)"
-status: ready
+status: in-progress
 updated: 2026-09-01
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 59
-pr: null
-claim: null
-assignee: null
+pr: 7366
+claim: "2026-09-01T23:06:01Z"
+assignee: "ruby-named-file-dir-fileutils-facade"
 blocked-by: null
 closed-reason: null
 ---

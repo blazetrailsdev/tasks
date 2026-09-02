@@ -1,6 +1,6 @@
 ---
 title: "Port ExecutionWrapper/Executor and the full ActiveSupport::Reloader"
-status: in-progress
+status: done
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

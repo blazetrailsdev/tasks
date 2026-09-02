@@ -1,7 +1,7 @@
 ---
 title: "build-a-dispatcher-per-route-with-raise-on-name-error"
-status: ready
-updated: 2026-08-31
+status: claimed
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-01T23:37:00Z"
+assignee: "complete-set-routes-reloader-hook"
 blocked-by: null
 closed-reason: null
 ---

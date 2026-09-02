@@ -1,17 +1,17 @@
 ---
 title: "Tighten activerecord's stale extra-surface mark to the measured novel/total"
-status: draft
-updated: 2026-08-24
+status: done
+updated: 2026-09-01
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 2
+pr: 7352
+claim: "2026-09-01T18:29:06Z"
+assignee: "ts-methods-by-file-pools-deps-under-shared-relative-path"
 blocked-by: null
 closed-reason: null
 ---

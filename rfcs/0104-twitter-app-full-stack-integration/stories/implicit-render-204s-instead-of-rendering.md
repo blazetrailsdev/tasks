@@ -1,6 +1,6 @@
 ---
 title: "Implicit render returns 204 instead of rendering the template or raising MissingTemplate"
-status: draft
+status: done
 updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 8
-pr: null
+pr: 7364
 claim: null
 assignee: null
 blocked-by: null

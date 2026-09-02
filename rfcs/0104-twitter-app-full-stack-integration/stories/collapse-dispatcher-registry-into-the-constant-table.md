@@ -1,7 +1,7 @@
 ---
 title: "Delete DispatcherRegistry so Dispatcher#controller is req.controller_class alone"
-status: ready
-updated: 2026-08-31
+status: claimed
+updated: 2026-09-01
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-01T23:54:13Z"
+assignee: "collapse-dispatcher-registry-into-the-constant-table"
 blocked-by: null
 closed-reason: null
 ---
