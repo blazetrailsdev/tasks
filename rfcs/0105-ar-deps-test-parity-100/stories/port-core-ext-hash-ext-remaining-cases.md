@@ -1,6 +1,6 @@
 ---
 title: "Port core_ext/hash_ext_test.rb's remaining cases (48)"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap

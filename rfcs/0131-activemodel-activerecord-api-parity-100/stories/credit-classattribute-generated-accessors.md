@@ -1,6 +1,6 @@
 ---
 title: "Model classAttribute() in the TS extractor so the 21 class_attribute triples Ruby's extractor already credits stop scoring as declaration-only"
-status: in-progress
+status: blocked
 updated: 2026-09-02
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -14,7 +14,7 @@ priority: 1
 pr: 7405
 claim: "2026-09-02T20:12:42Z"
 assignee: "credit-bodied-object-literal-mixin-modules"
-blocked-by: null
+blocked-by: "model_schema.rb 65/65 needs ModelSchema's Rails included-do block (model_schema.rb:162-168) moved off Base — carried by converge-table-name-prefix-onto-classattribute; the extractor arm landed in #7405"
 closed-reason: null
 ---
 

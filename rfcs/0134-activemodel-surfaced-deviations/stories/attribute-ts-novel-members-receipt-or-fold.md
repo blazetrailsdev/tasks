@@ -1,6 +1,6 @@
 ---
 title: "activemodel: attribute.ts's four remaining unreceipted novel members — fold or receipt"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm

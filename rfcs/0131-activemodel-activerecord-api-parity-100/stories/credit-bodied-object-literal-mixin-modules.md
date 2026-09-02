@@ -1,6 +1,6 @@
 ---
 title: "Let a bodied object-literal mixin module supersede a same-named bodyless interface in the TS extractor, and export the one module that hides behind one"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null

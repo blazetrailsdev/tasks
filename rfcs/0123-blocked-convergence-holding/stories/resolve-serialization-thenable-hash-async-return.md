@@ -1,7 +1,7 @@
 ---
 title: "Resolve serialization's thenableHash dual sync/async return"
-status: blocked
-updated: 2026-08-28
+status: closed
+updated: 2026-09-02
 rfc: "0123-blocked-convergence-holding"
 cluster: "api-compare"
 packages: ["activemodel"]
@@ -13,8 +13,8 @@ priority: null
 pr: null
 claim: "2026-08-23T14:27:28Z"
 assignee: "resolve-serialization-thenable-hash-async-return"
-blocked-by: "Re-verified against origin/main 2026-08-28: blocker STILL LIVE. The dep 0023-surfaced-deviations/serializable-hash-async-return-boundary is confirmed still an UNCLAIMED DRAFT with no PR, so the cross-package async-boundary decision has not been made. thenableHash / asJsonThenable are both still present (4 hits in packages/activemodel/src/serialization.ts, 2 in packages/activemodel/src/serializers/json.ts — the prior note said 3 there, count drifted), so removing them still requires serializableHash and asJson to return Promise unconditionally and still has to answer JSON.stringify's synchronous toJSON contract. The sibling specify-serializable-hash-async-return-boundary (this RFC, PR #6813) is the survey/decision-scoping story and is done — it did NOT settle the boundary; the 0023 story is the one that must. Not resolved by any ready story in this RFC. Candidate for the 0123 blocked epic; the tasks CLI has no move-between-RFCs verb, so flagged for manual reparent."
-closed-reason: null
+blocked-by: null
+closed-reason: "Blocker resolved by trails#7406 (merged): the cross-package async-boundary decision was made and ratified repo-wide in CLAUDE.md 'Serialization's dual sync/async hash' under option (b) of serializable-hash-async-return-boundary. The thenable STAYS — thenableHash / asJsonThenable / preloadIncludes now carry @noRailsEquivalent PERMANENT receipts. This story existed to remove them by making serializableHash / asJson return Promise unconditionally, which the ratified decision rejects, so it cannot be worked as written. Follow-up on the ratification prose is filed as strengthen-async-boundary-ratification-argument (RFC 0134)."
 ---
 
 ## Context

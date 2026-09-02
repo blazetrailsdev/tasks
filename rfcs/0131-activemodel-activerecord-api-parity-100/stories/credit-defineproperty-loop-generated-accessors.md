@@ -1,6 +1,6 @@
 ---
 title: "Credit the defineProperty loop that ports Rails' VALUE_METHODS generator so relation.rb's 55 faithful accessors stop scoring missing"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 7410
+claim: "2026-09-02T21:25:12Z"
+assignee: "credit-defineproperty-loop-generated-accessors"
 blocked-by: null
 closed-reason: null
 ---

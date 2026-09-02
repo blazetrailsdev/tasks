@@ -1,6 +1,6 @@
 ---
 title: "Give Errors its [] reader and Attributes its constructor, closing activemodel to 754/754"
-status: claimed
+status: in-progress
 updated: 2026-09-02
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 170
 priority: 2
-pr: null
+pr: 7409
 claim: "2026-09-02T20:56:54Z"
 assignee: "converge-activemodel-errors-index-and-attributes-constructor"
 blocked-by: null

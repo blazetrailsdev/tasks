@@ -1,6 +1,6 @@
 ---
 title: "generate_sid's non-secure arm must draw through a Kernel.rand analogue, not a hand-rolled BigInt loop"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null

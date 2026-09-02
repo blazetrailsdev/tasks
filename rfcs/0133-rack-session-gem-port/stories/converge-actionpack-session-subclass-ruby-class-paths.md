@@ -1,6 +1,6 @@
 ---
 title: "Resolve rubyClassPath for Session subclasses defined outside session.ts, so NullSessionHash and TestSession render their own Ruby constant paths"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
