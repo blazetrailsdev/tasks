@@ -12,6 +12,7 @@ packages:
   - tse-compiler
   - activerecord
   - activerecord-cli
+  - rack
 clusters: []
 ---
 
