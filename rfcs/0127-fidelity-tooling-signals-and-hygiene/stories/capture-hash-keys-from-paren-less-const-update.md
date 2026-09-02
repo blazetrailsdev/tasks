@@ -2,7 +2,7 @@
 title: "Capture Hash keys from the paren-less `CONST.update` command form"
 status: draft
 updated: 2026-09-01
-rfc: "0126-fidelity-tooling-continuation"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []
