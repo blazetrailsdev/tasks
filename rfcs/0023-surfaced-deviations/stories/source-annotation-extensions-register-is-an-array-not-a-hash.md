@@ -2,7 +2,7 @@
 title: "Annotation.extensions is an array where Rails keys a Hash by the generated Regexp"
 status: draft
 updated: 2026-09-02
-rfc: "0126-fidelity-tooling-continuation"
+rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
