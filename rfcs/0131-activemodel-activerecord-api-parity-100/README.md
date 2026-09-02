@@ -1,9 +1,9 @@
 ---
 rfc: "0131-activemodel-activerecord-api-parity-100"
 title: "Take activemodel and activerecord to 100% on parity:api, by porting what is absent and by teaching the TS extractor the codegen its Ruby twin already models"
-status: draft
+status: ready
 created: 2026-08-31
-updated: 2026-08-31
+updated: 2026-09-02
 owner: "@deanmarano"
 packages:
   - activemodel
