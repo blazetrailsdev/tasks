@@ -19,39 +19,29 @@ closed-reason: null
 ## Context
 
 `stylesheetLinkTag` was ported in the `generated-layout-hardcodes-undigested-asset-path`
-PR as the layout's asset entry point, but two arms of
-`actionview/lib/action_view/helpers/asset_tag_helper.rb:202-242` were left out
-and carry `@missingRailsCall` receipts at
-`packages/actionview/src/helpers/asset-tag-helper.ts`:
+PR (#7379) as the layout's asset entry point. Its body accumulates
+`preload_links` exactly as
+`actionview/lib/action_view/helpers/asset_tag_helper.rb:214-220` does, but the
+trailing `send_preload_links_header(preload_links)`
+(`asset_tag_helper.rb:237-239`) is not made, and carries a `@missingRailsCall`
+receipt at `packages/actionview/src/helpers/asset-tag-helper.ts`.
 
-- **`send_preload_links_header`** (`asset_tag_helper.rb:214-220, 237-239`) —
-  the `preload_links_header` / `nopush` / `integrity` / `crossorigin` Link
-  header arm. Its body (`asset_tag_helper.rb:654-676`) needs
-  `response.sending?`, `response.headers["link"]` and
-  `request.send_early_hints`, none of which the trails view reaches:
-  `CONTROLLER_DELEGATES`
-  (`packages/actionview/src/helpers/controller-helper.ts:28`) does delegate
-  `response`, but there is no `sendEarlyHints` and no `MAX_HEADER_SIZE`
-  constant ported.
-- **`content_security_policy_nonce`** (`asset_tag_helper.rb:227-229`) — the
-  `nonce: true` arm. The method exists at
-  `packages/actionpack/src/action-controller/metal/content-security-policy.ts:157`
-  but is not in `CONTROLLER_DELEGATES`, so the view cannot call it.
-  `asset_tag_helper.rb` reaches it through `ActionView::Helpers`' include of
-  `ContentSecurityPolicyHelper` / the controller delegate.
+`send_preload_links_header`'s body (`asset_tag_helper.rb:654-676`) needs
+`response.sending?`, `response.headers["link"]` and
+`request.send_early_hints`. `CONTROLLER_DELEGATES`
+(`packages/actionview/src/helpers/controller-helper.ts:28`) does delegate
+`response`, but the trails request has no `sendEarlyHints` and
+`MAX_HEADER_SIZE` is not ported.
 
-`javascriptIncludeTag` (`asset_tag_helper.rb:113-148`) shares both arms
+`javascriptIncludeTag` (`asset_tag_helper.rb:113-148`) shares the same arm
 verbatim, so whoever ports it lands in the same place.
 
 ## Acceptance criteria
 
-- `sendPreloadLinksHeader` is ported from `asset_tag_helper.rb:654-676`
-  (with `MAX_HEADER_SIZE`), and `stylesheetLinkTag` runs the
-  `use_preload_links_header` branch — the `preloadLinks` accumulation and the
-  trailing `sendPreloadLinksHeader(preloadLinks)` — as Rails writes it.
-- The `tagOptions["nonce"] === true` branch resolves
-  `contentSecurityPolicyNonce` through the view, whatever delegation that
-  needs.
-- Both `@missingRailsCall` receipts in
-  `packages/actionview/src/helpers/asset-tag-helper.ts` are deleted, and
-  `pnpm parity:api:calls` stays green.
+- `sendPreloadLinksHeader` is ported from `asset_tag_helper.rb:654-676` (with
+  `MAX_HEADER_SIZE`), including the `send_early_hints` and
+  `response.headers["link"]` arms.
+- `stylesheetLinkTag` calls it under `use_preload_links_header`, as Rails
+  writes it, and the `@missingRailsCall` receipt in
+  `packages/actionview/src/helpers/asset-tag-helper.ts` is deleted.
+- `pnpm parity:api:calls` stays green.
