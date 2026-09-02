@@ -13,6 +13,7 @@ packages:
   - actionpack
   - actionview
   - activerecord
+  - activerecord-cli
   - trailties
 clusters:
   - fidelity
