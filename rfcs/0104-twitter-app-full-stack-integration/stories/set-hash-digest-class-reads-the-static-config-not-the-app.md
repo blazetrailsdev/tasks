@@ -2,7 +2,7 @@
 title: "active_support.set_hash_digest_class reads the static railtie config, not the yielded app's"
 status: draft
 updated: 2026-09-02
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
