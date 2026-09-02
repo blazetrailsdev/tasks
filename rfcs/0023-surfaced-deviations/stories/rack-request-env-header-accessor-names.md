@@ -2,7 +2,7 @@
 title: "Rack::Request::Env: one spelling per header accessor — hasHeader/getHeader/fetchHeader/setHeader"
 status: ready
 updated: 2026-09-02
-rfc: "0133-rack-session-gem-port"
+rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
