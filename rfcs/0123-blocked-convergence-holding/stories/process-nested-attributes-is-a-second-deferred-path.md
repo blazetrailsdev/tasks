@@ -2,7 +2,7 @@
 title: "processNestedAttributes is a second, deferred nested-attributes path Rails does not have"
 status: draft
 updated: 2026-09-01
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

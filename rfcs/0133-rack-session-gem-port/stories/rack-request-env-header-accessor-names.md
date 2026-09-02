@@ -2,7 +2,7 @@
 title: "Rack::Request::Env: one spelling per header accessor — hasHeader/getHeader/fetchHeader/setHeader"
 status: draft
 updated: 2026-08-31
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: []
 deps: []
