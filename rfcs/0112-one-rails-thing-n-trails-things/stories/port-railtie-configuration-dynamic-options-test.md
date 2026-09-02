@@ -25,7 +25,7 @@ bag at `railties/lib/rails/railtie/configuration.rb:90-108`:
 - `test "raises NoMethodError on an unset key"` (`:22-27`) — reading an unset key
   falls through to `super`.
 - `test "raises NoMethodError with an informative message if assigning to an
-  existing method"` (`:29-35`) — `Cannot assign to \`eager_load_namespaces\`, it
+existing method"` (`:29-35`) — `Cannot assign to \`eager_load_namespaces\`, it
   is a configuration method`.
 
 The file is not enrolled in `parity:test`. PR #7386 ported the raise-on-shadow
