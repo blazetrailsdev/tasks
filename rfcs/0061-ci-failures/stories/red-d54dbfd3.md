@@ -1,6 +1,6 @@
 ---
 title: "Trailties Tests failing on main @d54dbfd3"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0061-ci-failures"
 cluster: null

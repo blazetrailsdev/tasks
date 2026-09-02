@@ -1,7 +1,7 @@
 ---
 title: "skeleton-misses-modifier-rescue-and-catch-arms"
-status: ready
-updated: 2026-08-31
+status: claimed
+updated: 2026-09-02
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: 13
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-02T12:34:17Z"
+assignee: "framework-deprecator-initializers-write-a-static-registry"
 blocked-by: null
 closed-reason: null
 ---

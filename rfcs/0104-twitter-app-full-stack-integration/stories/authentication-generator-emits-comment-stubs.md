@@ -1,6 +1,6 @@
 ---
 title: "trails generate authentication emits comment bodies, not working code"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 62
-pr: null
-claim: null
-assignee: null
+pr: 7385
+claim: "2026-09-02T12:05:56Z"
+assignee: "converge-csp-permissions-policy-middleware-into-their-rails-file"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "widen-ruby-receiver-hint-proofs"
-status: claimed
+status: in-progress
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 64
-pr: null
+pr: 7383
 claim: "2026-09-02T11:42:52Z"
 assignee: "port-lazy-attribute-hash-delegate-to-a-record"
 blocked-by: null

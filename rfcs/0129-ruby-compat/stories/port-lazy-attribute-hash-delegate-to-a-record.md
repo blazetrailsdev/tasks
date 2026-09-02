@@ -1,6 +1,6 @@
 ---
 title: "Port LazyAttributeHash's delegate hash to a Record so deep_dup can call transformValues"
-status: claimed
+status: in-progress
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 62
-pr: null
+pr: 7383
 claim: "2026-09-02T11:42:52Z"
 assignee: "port-lazy-attribute-hash-delegate-to-a-record"
 blocked-by: null
