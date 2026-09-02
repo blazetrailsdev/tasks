@@ -2,7 +2,7 @@
 title: "delegate.ts's generated body is an ActiveRecord association special case, not Rails' Module#delegate"
 status: draft
 updated: 2026-09-01
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

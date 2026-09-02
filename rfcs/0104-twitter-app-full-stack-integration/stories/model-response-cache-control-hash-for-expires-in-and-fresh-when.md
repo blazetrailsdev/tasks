@@ -2,7 +2,7 @@
 title: "expires_in/fresh_when compose the cache-control header instead of merging into the one response.cache_control hash"
 status: draft
 updated: 2026-09-01
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []

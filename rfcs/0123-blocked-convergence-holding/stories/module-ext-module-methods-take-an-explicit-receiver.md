@@ -2,7 +2,7 @@
 title: "module-ext's Module# methods take an explicit receiver where configurable.ts is this-typed"
 status: ready
 updated: 2026-08-31
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

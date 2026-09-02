@@ -3,7 +3,7 @@ rfc: "0112-one-rails-thing-n-trails-things"
 title: "One Rails thing, N trails things — duplicate bodies and split stores"
 status: active
 created: 2026-08-18
-updated: 2026-08-22
+updated: 2026-09-01
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -213,7 +213,34 @@ re-home.
    **Recommendation:** re-check the boundary at each phase transition rather
    than fixing the split once.
 
+## Wind-down
+
+This RFC is closing. 174 of its 188 stories are done or closed, and the
+remainder has been triaged to the active RFC that already owns the surface each
+one touches, rather than carried into a successor epic:
+
+| Re-homed to | Stories |
+| --- | --- |
+| `0129-ruby-compat` | `converge-actioncontroller-metal-header-seat-onto-response`, `response-content-type-and-charset-reparse-what-parsed-content-type-header-already-parsed`, `activesupport-stringio-puts-for-rack-errors` |
+| `0133-rack-session-gem-port` | `rack-request-env-header-accessor-names` |
+| `0104-twitter-app-full-stack-integration` | `converge-csp-permissions-policy-middleware-into-their-rails-file`, `model-response-cache-control-hash-for-expires-in-and-fresh-when`, `port-wrap-parameters-class-macro` |
+| `0105-ar-deps-test-parity-100` | `retire-the-find-collection-target-test-helper` |
+| `0123-blocked-convergence-holding` | `association-helpers-extracted-for-the-collection-proxy`, `association-scope-cpk-mismatch-second-raise-site`, `process-nested-attributes-is-a-second-deferred-path`, `module-ext-module-methods-take-an-explicit-receiver`, `delegate-is-an-ar-association-special-case-not-module-delegate` |
+
+The first two groups follow the work: PR #7366 converged
+`ActionDispatch::Response`'s header seat under `0129-ruby-compat` and
+explicitly deferred the two header stories now sitting beside it, and
+`0133-rack-session-gem-port` already carries the `Rack::Request::Helpers`
+convergences that `rack-request-env-header-accessor-names` belongs with.
+
+**One story stays here**, and the RFC stays `active` until it lands:
+`bridge-activesupport-railtie-registry-into-application-initialize` is claimed
+and in flight, and moving a claimed story out from under the agent holding it
+buys nothing. Close this RFC when that story is done — no other work remains.
+
 ## Changelog
 
+- 2026-09-01: triaged the 14 unfinished stories out to five active RFCs; 13
+  moved, one claimed story held back. RFC stays active until it lands.
 - 2026-08-18: initial RFC, carved out of `0023-surfaced-deviations` by the
   backlog triage pass.

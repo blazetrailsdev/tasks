@@ -2,7 +2,7 @@
 title: "wrap_parameters names the wrapping helper, not Rails' class macro — the macro's four arms are unported"
 status: draft
 updated: 2026-09-01
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
