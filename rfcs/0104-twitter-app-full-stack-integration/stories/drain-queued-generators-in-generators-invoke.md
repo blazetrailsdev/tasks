@@ -27,7 +27,11 @@ trails' port only queues the request:
 
 ```ts
 // packages/trailties/src/generators/actions.ts:22-29
-export function generate(this: ActionsHost & GeneratorActionsState, what: string, ...args: string[]): void {
+export function generate(
+  this: ActionsHost & GeneratorActionsState,
+  what: string,
+  ...args: string[]
+): void {
   this.output(`      generate  ${what}`);
   this.pendingGenerators.push({ what, args });
 }
