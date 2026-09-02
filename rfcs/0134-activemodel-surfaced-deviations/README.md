@@ -259,7 +259,6 @@ Work already owned elsewhere stays there; this RFC does not duplicate it:
   0023, per 0124's rule — they are `activemodel`-labelled but not
   `activemodel`-subject:
   `hoist-module-super-and-bind-call-into-activesupport`,
-  `consolidate-kernel-integer-and-float-conversions`,
   `claude-md-module-mixins-section-contradicts-itself`,
   `assertion-counter-ignores-ported-minitest-assertions`,
   `converge-four-divergent-public-send-ports`,

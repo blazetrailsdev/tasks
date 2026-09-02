@@ -86,6 +86,11 @@ raising for `"1__0"` / `"08"` / `"0b2"` / `"1e3"`) carry over to
 `kernel-integer.trails.test.ts` rather than being dropped — they are the only
 differential coverage the grammar has.
 
+`cache/store.ts`'s file-local `Float()` is the Float-side twin of this and is
+owned by [[consolidate-kernel-integer-and-float-conversions]], now in this RFC.
+If both land in one PR, delete `inspect()` / `rubyClassName()` there; if not,
+whichever goes second removes them.
+
 ## Acceptance criteria
 
 - [ ] `packages/ruby-compat/src/kernel-integer.ts` exports `kernelInteger`, is
