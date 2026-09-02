@@ -69,6 +69,7 @@ Neither depends on the other.
   baseline that had already moved: the row on `main` is `315/86`, not `319/82`,
   so the same 55 accessors land at 370. The bar is the 55 accessors, not the
   figure the stale baseline produced.
+
 - `defineValueMethods` keeps its loop — no hand-expanded accessor appears in
   the diff, and neither `defineValueMethods` nor its `@noRailsEquivalent
 PERMANENT` receipt is disturbed.
