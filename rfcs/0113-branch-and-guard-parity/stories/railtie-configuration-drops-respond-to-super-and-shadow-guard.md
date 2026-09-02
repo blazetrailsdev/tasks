@@ -2,7 +2,7 @@
 title: "railtie-configuration-drops-respond-to-super-and-shadow-guard"
 status: draft
 updated: 2026-09-02
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
