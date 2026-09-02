@@ -33,9 +33,14 @@ runs the block and restores in a `finally` instead. Two consequences:
    inside the block leaks the allow-list to anything else running in that window
    — `deprecator.allow` around an async body silences unrelated warnings.
 2. `parity:api:calls` flags it: the TS body omits the `bind` call the Ruby body
-   makes. Surfaced in PR #7386 once `API_COMPARE_FORCE=1` cleared the extractor
-   cache; that PR deliberately did NOT baseline it (reviewer feedback: unrelated
-   suppression debt in a fold PR), so the row is live.
+   makes. PR #7386 (the Trailtie fold) is what made the gate able to SEE it. The
+   gate resolves a Ruby callee name by asking whether that name is a ported
+   method taking arguments anywhere in the package, and the fold moved
+   `Initializer#bind` (`railties/lib/rails/initializable.rb:44-46`) into
+   activesupport, putting `bind` into that package's population. Confirmed by
+   experiment: renaming `Initializer#bind` on that branch turns the gate green
+   again. #7386 therefore carries a baseline row naming this story; deleting
+   that row is part of closing it.
 
 The reader half is `@explicitly_allowed_warnings.value` (`reporting.rb:120` via
 `deprecation_allowed?`), which the port reads straight off the field.
