@@ -36,7 +36,7 @@ and Node bootstrap included.**
 
 This RFC reverses RFC 0129 **non-goal 2**, which ruled the `*-adapter.ts` family
 out of `ruby-compat` on the grounds that it is "the Node platform adapter, which
-is not Ruby semantics". That reasoning is sound about what the adapters *are*
+is not Ruby semantics". That reasoning is sound about what the adapters _are_
 and wrong about what follows from it, because RFC 0129's own ledger records the
 cost: two of its stories are `blocked` on exactly this question, and the story
 meant to settle it was closed without shipping.
@@ -55,7 +55,7 @@ meant to settle it was closed without shipping.
   `@blazetrails/activesupport` in `dependencies`. The **Ruby `rack` gem has no
   runtime dependencies at all**, so this is a fidelity deviation with nothing
   tracking it. Its remaining content, once RFC 0129's re-export shims are gone,
-  is *entirely* adapter symbols: `getFs` (5 files), `getPath` (5), `getCrypto`
+  is _entirely_ adapter symbols: `getFs` (5 files), `getPath` (5), `getCrypto`
   (2), `FsStatResult`, `cwd`, `platform`, `stderr`, `HttpRequest` /
   `HttpResponse` / `HttpServer` / `getHttpAsync`.
 
@@ -70,15 +70,15 @@ to an owner — it has no owner.
 `registerFsBackend()`-shaped precedent exists to copy". That is wrong on the
 facts. Every adapter already exposes a registration seam:
 
-| adapter | LOC | registration |
-| --- | --- | --- |
-| `fs-adapter.ts` | 483 | `registerFsAdapter(name, fs, path)` :161 |
-| `crypto-adapter.ts` | 393 | `registerCryptoAdapter(name, adapter)` :282 |
-| `process-adapter.ts` | 393 | `registerProcessAdapter(adapter)` :170 |
-| `child-process-adapter.ts` | 212 | `registerChildProcessAdapter(...)` :54 |
-| `os-adapter.ts` | 158 | `registerOsAdapter(name, adapter)` :31 |
-| `async-context-adapter.ts` | 140 | `registerAsyncContextAdapter(...)` :71 |
-| `http-adapter.ts` | 108 | `registerHttpAdapter(name, adapter)` :44 |
+| adapter                    | LOC | registration                                |
+| -------------------------- | --- | ------------------------------------------- |
+| `fs-adapter.ts`            | 483 | `registerFsAdapter(name, fs, path)` :161    |
+| `crypto-adapter.ts`        | 393 | `registerCryptoAdapter(name, adapter)` :282 |
+| `process-adapter.ts`       | 393 | `registerProcessAdapter(adapter)` :170      |
+| `child-process-adapter.ts` | 212 | `registerChildProcessAdapter(...)` :54      |
+| `os-adapter.ts`            | 158 | `registerOsAdapter(name, adapter)` :31      |
+| `async-context-adapter.ts` | 140 | `registerAsyncContextAdapter(...)` :71      |
+| `http-adapter.ts`          | 108 | `registerHttpAdapter(name, adapter)` :44    |
 
 There is no architecture to invent. This is a file move plus an import rewrite.
 
@@ -90,7 +90,7 @@ names a builtin in a bundler-visible position (`fs-adapter.ts:250-276`):
 
 ```ts
 if (typeof globalThis.process === "undefined" || !globalThis.process.versions?.node) return false;
-const req = syncBuiltinLoader();          // process.getBuiltinModule, else createRequire()
+const req = syncBuiltinLoader(); // process.getBuiltinModule, else createRequire()
 const nodeFs = req("node:fs");
 ```
 
@@ -98,7 +98,7 @@ No static `import`, no dynamic `import()`. A browser bundle resolves zero Node
 modules and bails at the `process.versions.node` guard at runtime. The property
 RFC 0129's leaf rule protects is therefore **preserved** by the move.
 
-What is not preserved is the *current wording* of the guard.
+What is not preserved is the _current wording_ of the guard.
 `scripts/ruby-compat-leaf.ts:36-64` walks the built output's AST and records
 `require()` and `import()` argument strings alongside static specifiers, so
 `require("node:module")` counts as a violation today. The guard must narrow to
@@ -125,7 +125,7 @@ is a narrowing, and it should be argued in the PR, not assumed.
    `os-adapter` (158) prove the shape; `fs-adapter` (483) and
    `crypto-adapter` (393) are the load-bearing ones and come last.
 3. **Each move leaves a re-export shim in activesupport**, and each move's own
-   acceptance criteria delete the shims of the moves *before* it. RFC 0129
+   acceptance criteria delete the shims of the moves _before_ it. RFC 0129
    learned this the expensive way — see below.
 4. **`no-node-builtins.mjs` retargets.** Its replacement table
    (`eslint/no-node-builtins.mjs:9-28`) hard-codes `@blazetrails/activesupport`
@@ -141,7 +141,7 @@ RFC 0129 ran this sweep twice and is owed a third.
 `delete-ruby-compat-reexport-shims` (done, #7300) named only the five files it
 touched; every later move orphaned a fresh shim pointing at an already-closed
 story, which is why `delete-second-round-ruby-compat-reexport-shims` exists —
-and that story's list is *already* stale. Uncovered on main today:
+and that story's list is _already_ stale. Uncovered on main today:
 `activesupport/src/include.ts`, `prepend.ts`, `method-missing-proxy.ts` (whole
 files), and `index.ts:2` (`KeyError`), `:3` (`regexpEscape`), `:709` (`Range`).
 
@@ -152,14 +152,14 @@ deletion to a later story.**
 
 ~120 files import an adapter symbol, across every package but `arel` and `date`:
 
-| symbol | actionpack | activerecord | activesupport | rack | rack-session | trailties | other |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| `getFs` | 9 | 16 | 12 | 5 | — | 5 | 2 |
-| `getCrypto` | 12 | 6 | 18 | 1 | 1 | 1 | 1 |
-| `getOs` | 1 | 5 | 3 | — | — | — | — |
-| `getChildProcess` | 1 | 3 | 2 | — | — | 2 | — |
-| `getHttpAsync` | — | — | 3 | 1 | — | — | — |
-| `getAsyncContext` | — | — | 4 | — | — | — | — |
+| symbol            | actionpack | activerecord | activesupport | rack | rack-session | trailties | other |
+| ----------------- | ---------- | ------------ | ------------- | ---- | ------------ | --------- | ----- |
+| `getFs`           | 9          | 16           | 12            | 5    | —            | 5         | 2     |
+| `getCrypto`       | 12         | 6            | 18            | 1    | 1            | 1         | 1     |
+| `getOs`           | 1          | 5            | 3             | —    | —            | —         | —     |
+| `getChildProcess` | 1          | 3            | 2             | —    | —            | 2         | —     |
+| `getHttpAsync`    | —          | —            | 3             | 1    | —            | —         | —     |
+| `getAsyncContext` | —          | —            | 4             | —    | —            | —         | —     |
 
 Import-specifier rewrites only — no call site changes shape.
 
