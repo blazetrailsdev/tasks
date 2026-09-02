@@ -1,7 +1,7 @@
 ---
 title: "Retire the findCollectionTarget test helper — Rails tests read the association directly"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-02
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 10
-pr: null
-claim: null
-assignee: null
+pr: 7397
+claim: "2026-09-02T18:28:48Z"
+assignee: "retire-the-find-collection-target-test-helper"
 blocked-by: null
 closed-reason: null
 ---

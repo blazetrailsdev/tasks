@@ -1,6 +1,6 @@
 ---
 title: "unported-register-hides-tests-the-port-already-has"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

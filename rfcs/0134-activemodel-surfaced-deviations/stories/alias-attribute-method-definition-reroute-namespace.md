@@ -1,6 +1,6 @@
 ---
 title: "activemodel: aliasAttributeMethodDefinition reroutes through defineAttributeMethodPattern, losing Rails' alias_attribute namespace"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation

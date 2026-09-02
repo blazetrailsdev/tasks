@@ -1,6 +1,6 @@
 ---
 title: "errors-as-json-drops-full-messages-option"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation

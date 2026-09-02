@@ -1,6 +1,6 @@
 ---
 title: "Model.modelName detects use_relative_model_naming? like Rails"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation

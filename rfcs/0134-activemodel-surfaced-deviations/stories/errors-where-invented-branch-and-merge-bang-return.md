@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Errors#where invents an early-return branch; mergeBang drops Rails' return value"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation

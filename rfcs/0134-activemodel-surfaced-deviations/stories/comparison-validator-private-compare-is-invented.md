@@ -1,6 +1,6 @@
 ---
 title: "ComparisonValidator's private compare() has no Rails counterpart (public_send off the value)"
-status: ready
+status: claimed
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 200
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-02T18:43:20Z"
+assignee: "comparison-validator-private-compare-is-invented"
 blocked-by: null
 closed-reason: null
 ---

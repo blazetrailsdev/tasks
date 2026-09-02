@@ -1,6 +1,6 @@
 ---
 title: "48 ambiguous parent names leave their inheritance edge unfollowed"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

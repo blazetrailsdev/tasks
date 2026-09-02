@@ -1,6 +1,6 @@
 ---
 title: "hash-freeze-seat-and-errors-messages-freeze"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null

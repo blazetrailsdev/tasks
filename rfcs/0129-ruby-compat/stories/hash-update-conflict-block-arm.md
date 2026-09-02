@@ -1,6 +1,6 @@
 ---
 title: "Port rb_hash_update's conflict-block arm so reverse_merge! can converge onto ruby-compat"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null

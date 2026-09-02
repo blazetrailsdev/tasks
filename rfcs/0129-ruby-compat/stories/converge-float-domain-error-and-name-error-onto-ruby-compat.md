@@ -1,6 +1,6 @@
 ---
 title: "FloatDomainError and NameError get one home in ruby-compat"
-status: ready
+status: claimed
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: 69
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-02T18:51:12Z"
+assignee: "converge-float-domain-error-and-name-error-onto-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---
