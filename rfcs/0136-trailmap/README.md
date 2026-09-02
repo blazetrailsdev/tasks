@@ -39,13 +39,13 @@ application every time it spawns an agent.
 with `rfc_id`, `status`, associations to deps, packages and events, against a
 vendored `@blazetrails/activerecord` at a pinned commit. Beside it:
 
-| File | Lines | What it is |
-| --- | --- | --- |
-| `src/ranking.ts` | 431 | Ready-queue ordering and bundle packing |
-| `src/ingest.ts` | 397 | Markdown frontmatter to DB |
-| `src/verbs.ts` | 290 | `claim`, `release`, `block`, `close`, `statusSet` |
-| `src/authoring.ts` | 178 | `tasks new` — write file, commit, ingest |
-| `src/readmodel.ts` | 165 | DB to the published JSON |
+| File               | Lines | What it is                                        |
+| ------------------ | ----- | ------------------------------------------------- |
+| `src/ranking.ts`   | 431   | Ready-queue ordering and bundle packing           |
+| `src/ingest.ts`    | 397   | Markdown frontmatter to DB                        |
+| `src/verbs.ts`     | 290   | `claim`, `release`, `block`, `close`, `statusSet` |
+| `src/authoring.ts` | 178   | `tasks new` — write file, commit, ingest          |
+| `src/readmodel.ts` | 165   | DB to the published JSON                          |
 
 That is a Rails app's `app/models` and `app/services` living in a CLI's `src/`,
 with domain logic in free functions beside the models instead of on them.
@@ -192,12 +192,12 @@ tree it acts on. As an HTTP client it needs only a URL.
 
 Four call sites change:
 
-| Caller | Today | After |
-| --- | --- | --- |
-| trails' `pnpm tasks` | `scripts/tasks/tasks.sh` probes four locations for a checkout with `bin/tasks` | Execs the installed binary; the probe list is deleted |
-| `tasks` on `PATH` | Installed by `start-worktree.sh` into a tasks checkout | Installed from trailmap; location-independent |
-| ringo's Go process | Resolves `tasksCLIRel` + a vendored `tsx`, then shells out (`mergesweep.go:85`) | An HTTP request; no `tsx` spawning in the container |
-| trails' `CLAUDE.md` | "The `tasks` CLI itself lives in the tasks repo" | Points at trailmap |
+| Caller               | Today                                                                           | After                                                 |
+| -------------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| trails' `pnpm tasks` | `scripts/tasks/tasks.sh` probes four locations for a checkout with `bin/tasks`  | Execs the installed binary; the probe list is deleted |
+| `tasks` on `PATH`    | Installed by `start-worktree.sh` into a tasks checkout                          | Installed from trailmap; location-independent         |
+| ringo's Go process   | Resolves `tasksCLIRel` + a vendored `tsx`, then shells out (`mergesweep.go:85`) | An HTTP request; no `tsx` spawning in the container   |
+| trails' `CLAUDE.md`  | "The `tasks` CLI itself lives in the tasks repo"                                | Points at trailmap                                    |
 
 **No offline fallback.** If trailmap is down the CLI is down and the fleet
 stops. This is a real regression — today any worktree can mutate the DB
@@ -223,10 +223,10 @@ and `src/readmodel.ts:16` already imports `effectiveStoryStatus` from it, so
 the application reaches into the content repo's lint scripts for a rule about
 what a story's status _means_.
 
-| Stays in `tasks` | Moves to trailmap |
-| --- | --- |
+| Stays in `tasks`                                                                                 | Moves to trailmap                                                                                                          |
+| ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
 | Syntactic validation: frontmatter parses, required keys, enum values, markdownlint. No database. | Semantic validation: `effectiveStoryStatus`, cross-story dep resolution, RFC-lifecycle rules — these are model validations |
-| `finalize-rfc.mjs`, `lib.mjs`, `sync-rfcs.sh` | `build-index.mjs`, `import.ts`, `migrate.ts`, `reconcile.mjs`, `equivalence*.ts`, `vendor-trails.sh`, `install-bin.sh` |
+| `finalize-rfc.mjs`, `lib.mjs`, `sync-rfcs.sh`                                                    | `build-index.mjs`, `import.ts`, `migrate.ts`, `reconcile.mjs`, `equivalence*.ts`, `vendor-trails.sh`, `install-bin.sh`     |
 
 The split is forced: trailmap binds to loopback, so GitHub Actions cannot reach
 it. Content CI must be self-contained, so it can only check what a single file
