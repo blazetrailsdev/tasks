@@ -1,6 +1,6 @@
 ---
 title: "`source_type:` builds an ad-hoc scope shadow instead of a `PolymorphicReflection`"
-status: claimed
+status: done
 updated: 2026-09-02
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 5
-pr: null
+pr: 7372
 claim: "2026-09-02T00:42:21Z"
 assignee: "retire-autosave-association-definition-holder"
 blocked-by: null

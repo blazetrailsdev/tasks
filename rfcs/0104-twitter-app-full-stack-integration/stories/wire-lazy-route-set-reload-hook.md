@@ -1,7 +1,7 @@
 ---
 title: "wire-lazy-route-set-reload-hook"
 status: ready
-updated: 2026-09-01
+updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []

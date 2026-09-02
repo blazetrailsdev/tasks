@@ -1,7 +1,7 @@
 ---
 title: "converge-metal-to-a-to-read-the-response"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7376
+claim: "2026-09-02T01:16:08Z"
+assignee: "authentication-generator-emits-comment-stubs"
 blocked-by: null
 closed-reason: null
 ---

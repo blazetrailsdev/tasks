@@ -1,6 +1,6 @@
 ---
 title: "Generated vite.config nests outDir inside publicDir, duplicating public files and doubling the assets path"
-status: draft
+status: done
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["generated-layout-hardcodes-undigested-asset-path"]
 deps-rfc: []
 est-loc: 60
 priority: 9
-pr: null
-claim: null
-assignee: null
+pr: 7374
+claim: "2026-09-02T01:41:37Z"
+assignee: "generated-vite-outdir-nested-in-publicdir"
 blocked-by: null
 closed-reason: null
 ---

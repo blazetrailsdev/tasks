@@ -1,14 +1,14 @@
 ---
 title: "Rename the Module mixin hook Symbol.for keys off the activesupport namespace"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 82
 pr: null
 claim: null
 assignee: null

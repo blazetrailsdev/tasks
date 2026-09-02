@@ -1,14 +1,14 @@
 ---
 title: "retire-missing-rails-call-fetch-receipts-activerecord"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 72
 pr: null
 claim: null
 assignee: null

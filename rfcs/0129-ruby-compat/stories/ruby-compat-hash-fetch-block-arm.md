@@ -1,14 +1,14 @@
 ---
 title: "Port Hash#fetch's block arm and fold Rack::Request::Env#fetch_header onto it"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 65
 pr: null
 claim: null
 assignee: null

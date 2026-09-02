@@ -1,14 +1,14 @@
 ---
 title: "symbolize_keys / deep_symbolize_keys answer a Hash, keeping to_hash's seat"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 74
 pr: null
 claim: null
 assignee: null

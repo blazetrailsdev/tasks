@@ -1,7 +1,7 @@
 ---
 title: "Resolvers do not populate Template#virtualPath, so the compiled method falls back to the identifier"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["actionview"]
@@ -9,9 +9,9 @@ deps: ["helper-methods-not-in-tse-scope"]
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7376
+claim: "2026-09-02T01:16:08Z"
+assignee: "authentication-generator-emits-comment-stubs"
 blocked-by: null
 closed-reason: null
 ---

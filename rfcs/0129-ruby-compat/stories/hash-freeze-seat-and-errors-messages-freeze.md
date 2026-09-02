@@ -1,14 +1,14 @@
 ---
 title: "hash-freeze-seat-and-errors-messages-freeze"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 67
 pr: null
 claim: null
 assignee: null

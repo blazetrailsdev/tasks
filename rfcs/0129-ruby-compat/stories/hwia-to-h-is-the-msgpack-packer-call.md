@@ -1,14 +1,14 @@
 ---
 title: "HashWithIndifferentAccess#toH, the to_h the msgpack packer actually calls"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 75
 pr: null
 claim: null
 assignee: null

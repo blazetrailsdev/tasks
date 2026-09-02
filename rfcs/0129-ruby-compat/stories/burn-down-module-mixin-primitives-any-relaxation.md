@@ -1,14 +1,14 @@
 ---
 title: "Delete the no-explicit-any relaxation the Module mixin primitives carried into ruby-compat"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 80
 pr: null
 claim: null
 assignee: null

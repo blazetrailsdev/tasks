@@ -1,7 +1,7 @@
 ---
 title: "trails generate authentication emits comment bodies, not working code"
 status: ready
-updated: 2026-08-31
+updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["trailties"]

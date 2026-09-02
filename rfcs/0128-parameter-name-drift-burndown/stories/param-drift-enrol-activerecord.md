@@ -1,6 +1,6 @@
 ---
 title: "Enrol activerecord in the parameter-name gate once its six slices land"
-status: claimed
+status: in-progress
 updated: 2026-09-02
 rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity
@@ -17,7 +17,7 @@ deps:
 deps-rfc: []
 est-loc: 30
 priority: 8
-pr: null
+pr: 7373
 claim: "2026-09-02T00:37:12Z"
 assignee: "actionview-partial-renderer-bodies-pass-rails-arguments"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "validate-through-reflection.ts is a trails-only wrapper around check_validity!"
-status: claimed
+status: done
 updated: 2026-09-02
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 4
-pr: null
+pr: 7372
 claim: "2026-09-02T00:42:21Z"
 assignee: "retire-autosave-association-definition-holder"
 blocked-by: null

@@ -1,14 +1,14 @@
 ---
 title: "widen-ruby-receiver-hint-proofs"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 64
 pr: null
 claim: null
 assignee: null

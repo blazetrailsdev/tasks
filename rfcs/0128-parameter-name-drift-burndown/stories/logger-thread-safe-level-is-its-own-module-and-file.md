@@ -1,6 +1,6 @@
 ---
 title: "logger-thread-safe-level-is-its-own-module-and-file"
-status: claimed
+status: in-progress
 updated: 2026-09-02
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 6
-pr: null
+pr: 7373
 claim: "2026-09-02T00:37:12Z"
 assignee: "actionview-partial-renderer-bodies-pass-rails-arguments"
 blocked-by: null

@@ -1,14 +1,14 @@
 ---
 title: "OrderedOptions#dig walks rb_obj_dig's loop instead of indexing intermediates directly"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 110
-priority: null
+priority: 77
 pr: null
 claim: null
 assignee: null
