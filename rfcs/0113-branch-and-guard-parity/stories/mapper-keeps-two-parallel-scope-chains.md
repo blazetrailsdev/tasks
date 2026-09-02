@@ -29,7 +29,7 @@ Every scoping method pushes a frame onto it — `path_scope`
 
 - `this._scope`, a real `Scope` linked list — the Rails-shaped one; and
 - `this.scopeStack`, an array of `{ path, namePrefix, controller, resource,
-  memberPath, shallow, ... }` frames, which is what actually produces the URL
+memberPath, shallow, ... }` frames, which is what actually produces the URL
   (`currentPrefix()` reads only `scopeStack[last].path`).
 
 `resources`, `resource`, `collection`, `member` and `new` push `scopeStack`

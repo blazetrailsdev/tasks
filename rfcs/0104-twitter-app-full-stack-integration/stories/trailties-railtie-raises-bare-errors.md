@@ -22,13 +22,13 @@ Three raise sites in the railties port throw bare JS errors where Rails raises a
 named Ruby class, so a caller cannot rescue them the way Rails code does:
 
 - `packages/trailties/src/trailtie.ts` — `new Error("<X> is abstract, you cannot
-  instantiate it directly.")`. Ruby is a bare `raise "..."`
+instantiate it directly.")`. Ruby is a bare `raise "..."`
   (`railties/lib/rails/railtie.rb:247`), i.e. `RuntimeError`.
 - `packages/trailties/src/trailtie/configurable.ts` — `new Error("You cannot
-  inherit from a <X> child")`. Ruby is a bare `raise`
+inherit from a <X> child")`. Ruby is a bare `raise`
   (`railties/lib/rails/railtie/configurable.rb:14`), i.e. `RuntimeError`.
 - `packages/trailties/src/initializable.ts` — `new TypeError("A block must be
-  passed when defining an initializer")`. Ruby raises **ArgumentError**
+passed when defining an initializer")`. Ruby raises **ArgumentError**
   (`railties/lib/rails/initializable.rb:89`), and
   `railties/test/initializable_test.rb:170` asserts `assert_raise(ArgumentError)`.
   trails' `initializable.test.ts` currently asserts `TypeError`, so the test
