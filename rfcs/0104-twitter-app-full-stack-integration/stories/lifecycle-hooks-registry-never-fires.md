@@ -61,4 +61,4 @@ there is a working reference.
 - [ ] A regression test boots an `Application` and asserts a
       `config.afterInitialize` block runs; it must fail on today's code.
 - [ ] `trailtie.test.ts`'s `Configuration#<hook> block runs when <hook> hook
-  fires` cases keep their names.
+fires` cases keep their names.
