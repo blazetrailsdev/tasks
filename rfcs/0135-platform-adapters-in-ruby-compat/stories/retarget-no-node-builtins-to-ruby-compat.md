@@ -5,7 +5,7 @@ updated: 2026-09-02
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["ruby-compat"]
-deps: ["move-crypto-adapter-into-ruby-compat"]
+deps: ["port-file-and-dir-classes-onto-the-fs-backend", "move-crypto-adapter-into-ruby-compat"]
 deps-rfc: []
 est-loc: 150
 priority: 14
