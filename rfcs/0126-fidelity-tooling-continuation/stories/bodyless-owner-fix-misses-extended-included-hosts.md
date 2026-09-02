@@ -28,8 +28,8 @@ pairing.
 
 Two did NOT survive:
 
-  interface ClassMethodsHost extends AttributeMethodHost, Extended<typeof ClassMethods> {}
-  interface InstanceMethodsHost extends InstanceHost, Included<typeof InstanceMethods> { … }
+interface ClassMethodsHost extends AttributeMethodHost, Extended<typeof ClassMethods> {}
+interface InstanceMethodsHost extends InstanceHost, Included<typeof InstanceMethods> { … }
 
 (`packages/activemodel/src/attribute-methods.ts:124` and `:133`). Exporting
 either turns `pnpm parity:api:calls` red with three STALE rows —
