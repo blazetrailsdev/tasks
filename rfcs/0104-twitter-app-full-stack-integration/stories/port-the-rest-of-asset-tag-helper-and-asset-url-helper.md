@@ -35,9 +35,9 @@ Missing, all in the same two Ruby files:
 
 - `asset_url_helper.rb:216-218, 352-360` — the `*_url` family: `asset_url`
   /`url_to_asset`, `stylesheet_url`/`url_to_stylesheet`, and the `protocol:
-  :request` arm they pass.
+:request` arm they pass.
 - `asset_url_helper.rb:326-334, 348-350, and the image/video/audio/font
-  siblings` — `javascript_path`/`path_to_javascript`, `image_path`,
+siblings` — `javascript_path`/`path_to_javascript`, `image_path`,
   `video_path`, `audio_path`, `font_path` and their `_url` twins.
 - `asset_tag_helper.rb:113-147` — `javascript_include_tag`.
 - `asset_tag_helper.rb:244-` — `auto_discovery_link_tag`, `favicon_link_tag`,

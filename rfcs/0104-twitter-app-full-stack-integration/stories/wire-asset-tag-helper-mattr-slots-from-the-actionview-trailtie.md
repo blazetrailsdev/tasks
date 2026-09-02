@@ -36,7 +36,7 @@ Rails wires both from the ActionView railtie:
   `config.action_view.apply_stylesheet_media_default = true`.
 - `actionview/lib/action_view/railtie.rb:71`, inside `config.after_initialize`,
   assigns `ActionView::Helpers::AssetTagHelper.apply_stylesheet_media_default =
-  app.config.action_view.delete(:apply_stylesheet_media_default)`.
+app.config.action_view.delete(:apply_stylesheet_media_default)`.
 
 `packages/actionview/src/trailtie.ts` already carries the config slot
 (`defaultActionViewConfig()` returns `applyStylesheetMediaDefault: true`) but no
