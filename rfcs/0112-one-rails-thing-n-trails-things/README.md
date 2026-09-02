@@ -282,10 +282,10 @@ application-boot files). PR #7386, which carried the Trailtie fold, **closed
 unmerged on 2026-09-02**, so its two in-progress stories and the one story it
 had closed all returned to `ready` with nothing landed. All eight are re-homed:
 
-| Re-homed to                               | Stories                                                                                                                                                                                                                                                       |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Re-homed to                               | Stories                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `0104-twitter-app-full-stack-integration` | `fold-the-two-trailtie-ports-into-one`, `activesupport-trailtie-initializer-drops-before-after-options`, `reset-trailtie-registry-between-tests`, `globalid-trailtie-app-config-is-a-property-shape-the-application-lacks`, `set-hash-digest-class-reads-the-static-config-not-the-app`, `port-railtie-configuration-dynamic-options-test`, `test-case-process-rebuilds-the-request-instead-of-reusing-it` |
-| `0113-branch-and-guard-parity`            | `railtie-configuration-drops-respond-to-super-and-shadow-guard`                                                                                                                                                                                                |
+| `0113-branch-and-guard-parity`            | `railtie-configuration-drops-respond-to-super-and-shadow-guard`                                                                                                                                                                                                                                                                                                                                            |
 
 0104 owns the convergence onto one real `Trailties::Application` that actually
 serves requests, which is the same defect the Trailtie fold and the
@@ -295,4 +295,3 @@ serves requests, which is the same defect the Trailtie fold and the
 axis, not a duplicate store.
 
 No story remains under this RFC.
-
