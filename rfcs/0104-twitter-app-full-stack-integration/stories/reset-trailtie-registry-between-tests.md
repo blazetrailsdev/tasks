@@ -2,7 +2,7 @@
 title: "reset-trailtie-registry-between-tests"
 status: closed
 updated: 2026-09-02
-rfc: "0112-one-rails-thing-n-trails-things"
+rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
