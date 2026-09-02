@@ -1,13 +1,14 @@
 ---
-title: "guard-base-method-delegation-compares-off-class-name"
+title: "guardBaseMethodDelegation finds Base by class name, not identity"
 status: draft
 updated: 2026-09-02
 rfc: "0113-branch-and-guard-parity"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 90
 priority: null
 pr: null
 claim: null
