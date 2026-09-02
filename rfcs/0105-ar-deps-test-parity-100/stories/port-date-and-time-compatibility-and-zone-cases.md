@@ -1,5 +1,5 @@
 ---
-title: "Port date_and_time compatibility, date/date_time ext and zone cases (46)"
+title: "Port date_and_time compatibility, date/date_time ext and zone cases (33)"
 status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
@@ -9,7 +9,7 @@ packages:
 deps:
   - "triage-activesupport-in-closure-skip-stubs"
 deps-rfc: []
-est-loc: 500
+est-loc: 400
 priority: null
 pr: null
 claim: null
@@ -27,10 +27,18 @@ ActiveModel actually load — so they are on the critical path for this RFC's
 `pnpm parity:test -- --cached --package activesupport`:
 
 - `vendor/rails/activesupport/test/core_ext/date_and_time_compatibility_test.rb` — 21 stubs
-- `vendor/rails/activesupport/test/core_ext/date_ext_test.rb` — 8 remaining
-- `vendor/rails/activesupport/test/core_ext/date_time_ext_test.rb` — 5 stubs
-- `vendor/rails/activesupport/test/core_ext/time_with_zone_test.rb` — 7 stubs
-- `vendor/rails/activesupport/test/time_zone_test.rb` — 5 stubs
+- `vendor/rails/activesupport/test/core_ext/date_ext_test.rb` — 7 remaining — 4 stubs, 3 missing
+- `vendor/rails/activesupport/test/core_ext/date_time_ext_test.rb` — 0 remaining (converged)
+- `vendor/rails/activesupport/test/core_ext/time_with_zone_test.rb` — 3 stubs
+- `vendor/rails/activesupport/test/time_zone_test.rb` — 2 stubs
+
+Scope after `triage-activesupport-in-closure-skip-stubs` (2026-09-01): 4 of
+`time_with_zone`'s 7 and 2 of `time_zone`'s 5 are Psych `!ruby/object:`
+round-trips and are now exclusions, as is `works as ruby time zone`
+(`Time.new(…, in: zone)`). What is left is portable: `no limit on times`,
+`to r`, `plus two time instances raises deprecation warning`,
+`travel to a date`, `travel to travels back and reraises if the block raises`,
+and `date_ext`'s four `Time.zone`-set constructors.
 
 Ports go in the convention TS file the compare report names beside each Ruby
 file (e.g. `core_ext/hash_ext_test.rb` → `packages/activesupport/src/core-ext/hash-ext.test.ts`);

@@ -1,5 +1,5 @@
 ---
-title: "Port core_ext/string_ext, array/conversions and json/encoding cases (39)"
+title: "Port core_ext/string_ext, array/conversions and json/encoding cases (18)"
 status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
@@ -9,7 +9,7 @@ packages:
 deps:
   - "triage-activesupport-in-closure-skip-stubs"
 deps-rfc: []
-est-loc: 450
+est-loc: 200
 priority: null
 pr: null
 claim: null
@@ -26,9 +26,18 @@ ActiveModel actually load — so they are on the critical path for this RFC's
 `activesupport 100%`. Measured 2026-08-13 with
 `pnpm parity:test -- --cached --package activesupport`:
 
-- `vendor/rails/activesupport/test/core_ext/string_ext_test.rb` — 16 remaining — 15 stubs, 1 missing
+- `vendor/rails/activesupport/test/core_ext/string_ext_test.rb` — 5 remaining — 4 stubs, 1 missing
 - `vendor/rails/activesupport/test/core_ext/array/conversions_test.rb` — 12 stubs
-- `vendor/rails/activesupport/test/json/encoding_test.rb` — 11 stubs
+- `vendor/rails/activesupport/test/json/encoding_test.rb` — 1 stub
+
+Scope after `triage-activesupport-in-closure-skip-stubs` (2026-09-01): 11 of
+`string_ext`'s stubs converged in sibling work and `emits normal string YAML`
+is now a Psych exclusion; 10 of `json/encoding`'s 11 are exclusions
+(`Process::Status`, Ruby `Encoding`, `Struct`, `Data`, the `json` gem's
+`to_json(state)` protocol, `IO`), leaving only
+`twz to json when wrapping a date time`. `array/conversions`' 12 are all
+`to_xml` and all ports, sharing `core_ext/hash/conversions.rb` with
+`port-core-ext-hash-ext-remaining-cases`.
 
 Ports go in the convention TS file the compare report names beside each Ruby
 file (e.g. `core_ext/hash_ext_test.rb` → `packages/activesupport/src/core-ext/hash-ext.test.ts`);

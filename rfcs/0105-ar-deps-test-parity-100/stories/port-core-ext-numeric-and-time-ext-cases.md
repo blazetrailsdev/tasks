@@ -1,5 +1,5 @@
 ---
-title: "Port core_ext/numeric_ext_test.rb and time_ext_test.rb (36)"
+title: "Port core_ext/numeric_ext_test.rb and time_ext_test.rb (26)"
 status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
@@ -9,7 +9,7 @@ packages:
 deps:
   - "triage-activesupport-in-closure-skip-stubs"
 deps-rfc: []
-est-loc: 450
+est-loc: 350
 priority: null
 pr: null
 claim: null
@@ -26,8 +26,13 @@ ActiveModel actually load — so they are on the critical path for this RFC's
 `activesupport 100%`. Measured 2026-08-13 with
 `pnpm parity:test -- --cached --package activesupport`:
 
-- `vendor/rails/activesupport/test/core_ext/numeric_ext_test.rb` — 19 missing
-- `vendor/rails/activesupport/test/core_ext/time_ext_test.rb` — 17 remaining — 6 stubs, 11 missing
+- `vendor/rails/activesupport/test/core_ext/numeric_ext_test.rb` — 2 missing
+- `vendor/rails/activesupport/test/core_ext/time_ext_test.rb` — 24 remaining — 4 stubs, 11 missing, 9 misplaced
+
+Scope after `triage-activesupport-in-closure-skip-stubs` (2026-09-01): **all 4
+`time_ext` stubs are ports, none are exclusions** — each asserts `advance`
+preserving a whole or fractional-hour UTC offset across the end of DST, which a
+JS `Date` plus the ported `TimeZone` can express.
 
 Ports go in the convention TS file the compare report names beside each Ruby
 file (e.g. `core_ext/hash_ext_test.rb` → `packages/activesupport/src/core-ext/hash-ext.test.ts`);

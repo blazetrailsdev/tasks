@@ -1,5 +1,5 @@
 ---
-title: "Port core_ext/hash_ext_test.rb's remaining cases (49)"
+title: "Port core_ext/hash_ext_test.rb's remaining cases (48)"
 status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
@@ -26,7 +26,12 @@ ActiveModel actually load — so they are on the critical path for this RFC's
 `activesupport 100%`. Measured 2026-08-13 with
 `pnpm parity:test -- --cached --package activesupport`:
 
-- `vendor/rails/activesupport/test/core_ext/hash_ext_test.rb` — 49 remaining — 44 skip stubs, 5 missing, of 93 Rails tests
+- `vendor/rails/activesupport/test/core_ext/hash_ext_test.rb` — 48 remaining — 43 skip stubs, 5 missing, of 93 Rails tests
+
+Scope after `triage-activesupport-in-closure-skip-stubs` (2026-09-01): **all 43
+stubs are ports, none are exclusions**. Every one is a `to_xml`/`from_xml` case
+over `core_ext/hash/conversions.rb`; `packages/activesupport/src/xml-mini.ts` is
+already ported, so the gap is the Hash conversion layer, not the XML backend.
 
 Ports go in the convention TS file the compare report names beside each Ruby
 file (e.g. `core_ext/hash_ext_test.rb` → `packages/activesupport/src/core-ext/hash-ext.test.ts`);
