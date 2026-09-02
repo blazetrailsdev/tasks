@@ -38,6 +38,7 @@ import {
   statusSet,
 } from "./verbs.js";
 import { newStory } from "./authoring.js";
+import { rehome } from "./rehome.js";
 import type { StoryStatus } from "./models/index.js";
 
 const USAGE = `tasks — RFC/story tracking
@@ -65,6 +66,7 @@ Mutate:
   close <id> <reason|--reason R>
   status-set <id> <status>
   priority <id> <n|clear>
+  rehome <id...> --to <rfc> [--reason R] [--no-commit]
 
 Sync:
   ingest                           git -> DB (markdown-owned fields)
@@ -364,6 +366,19 @@ async function main(): Promise<number> {
     case "status-set": {
       if (pos.length < 2) return usage();
       await statusSet(pos[0], pos[1] as StoryStatus);
+      break;
+    }
+    // Moving a story between RFCs is a markdown act (see rehome.ts): the file
+    // moves, `rfc:` is rewritten, and ingest projects it. `--to` is a flag
+    // rather than the last positional so a batch of ids stays unambiguous.
+    case "rehome": {
+      const to = str(flags, "to");
+      const ids = [...new Set(pos)];
+      if (!to || ids.length === 0) return usage();
+      await rehome(ids, to, {
+        reason: str(flags, "reason"),
+        commit: flags["no-commit"] !== true,
+      });
       break;
     }
     case "priority": {
