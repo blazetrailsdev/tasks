@@ -93,7 +93,7 @@ differential coverage the grammar has.
       `@noRailsEquivalent PERMANENT` receipt in the shape `kernel-float.ts` uses.
 - [ ] Exactly one `FloatDomainError` declaration exists in the repo, in
       ruby-compat, extending `RangeError`; `grep -rn "class FloatDomainError"
-    packages/*/src` returns one hit.
+  packages/*/src` returns one hit.
 - [ ] `packages/activesupport/src/cache/integer.ts` is deleted.
 - [ ] `grep -rn "invalid value for Integer()" packages/*/src` returns hits only
       from ruby-compat.
