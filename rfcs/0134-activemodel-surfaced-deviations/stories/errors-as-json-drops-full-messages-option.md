@@ -1,6 +1,6 @@
 ---
 title: "errors-as-json-drops-full-messages-option"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 10
-pr: null
-claim: null
-assignee: null
+pr: 7396
+claim: "2026-09-02T17:16:38Z"
+assignee: "attribute-user-provided-default-slot-guard-invented-throw"
 blocked-by: null
 closed-reason: null
 ---

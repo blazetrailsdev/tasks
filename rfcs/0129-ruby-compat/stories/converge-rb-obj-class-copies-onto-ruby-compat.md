@@ -1,6 +1,6 @@
 ---
 title: "converge-rb-obj-class-copies-onto-ruby-compat"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 68
-pr: null
-claim: null
-assignee: null
+pr: 7394
+claim: "2026-09-02T17:24:58Z"
+assignee: "ruby-compat-hash-fetch-block-arm"
 blocked-by: null
 closed-reason: null
 ---

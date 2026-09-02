@@ -1,6 +1,6 @@
 ---
 title: "Type forwarded_for's elements as Ruby's String | nil instead of asserting non-null"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
