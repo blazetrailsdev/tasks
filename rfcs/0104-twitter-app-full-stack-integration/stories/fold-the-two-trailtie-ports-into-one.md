@@ -71,7 +71,7 @@ it. That is the wrong trade, for three measured reasons:
 
 1. **It puts a railties-gem class at the bottom of the dependency graph.**
    `parity:api` maps gem to package (`PATH_SEGMENT_ALIASES: { railties:
-   "trailties" }`, `scripts/parity/conventions.ts`), so `railtie.rb` is expected
+"trailties" }`, `scripts/parity/conventions.ts`), so `railtie.rb` is expected
    at `packages/trailties/src/trailtie.ts` — where Rails has it. Moving it costs
    **58 methods** off trailties' score (`railtie.rb` 25, `initializable.rb` 16,
    `railtie/configuration.rb` 14, `railtie/configurable.rb` 3), measured: main
