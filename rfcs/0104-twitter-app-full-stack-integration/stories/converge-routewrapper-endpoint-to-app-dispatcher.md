@@ -1,5 +1,5 @@
 ---
-title: "converge-routewrapper-endpoint-to-app-dispatcher"
+title: "Port RouteWrapper#endpoint's app.dispatcher? branch and rack_app"
 status: draft
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null

@@ -1,5 +1,5 @@
 ---
-title: "converge-generators-findbynamespace-to-targeted-lookup"
+title: "Normalize generator dir spellings and port the targeted Generators.lookup"
 status: draft
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null

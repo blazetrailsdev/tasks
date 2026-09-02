@@ -1,5 +1,5 @@
 ---
-title: "wire-generator-class-options-through-trails-generate"
+title: "Port Thor class_option so generator flags reach trails generate"
 status: draft
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 220
 priority: null
 pr: null
 claim: null

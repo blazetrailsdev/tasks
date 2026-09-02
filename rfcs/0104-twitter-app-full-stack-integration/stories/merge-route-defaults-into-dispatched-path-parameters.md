@@ -1,5 +1,5 @@
 ---
-title: "merge-route-defaults-into-dispatched-path-parameters"
+title: "Merge route.defaults into the dispatched path parameters"
 status: draft
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 50
 priority: null
 pr: null
 claim: null
