@@ -5,7 +5,7 @@ updated: 2026-08-25
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
-deps: ["consolidate-kernel-integer-and-float-conversions"]
+deps: ["move-kernel-integer-to-ruby-compat"]
 deps-rfc: []
 est-loc: 90
 priority: null
@@ -47,10 +47,12 @@ integer,invalid value}` tests) — `Integer("012") # => 10` octal,
 `Integer("0x1f") # => 31`, `Integer("1_000") # => 1000`, `Integer("0_1") # => 1`,
 raises for `"1__0"` / `"08"` / `"0b2"` / `"1e3"`.
 
-`consolidate-kernel-integer-and-float-conversions` (0023) already specifies the
-shared pair and this exact grammar, but its acceptance criteria name only
-`activesupport/src/cache/store.ts` and `activemodel/attribute-assignment.ts` as
-call sites — this third copy postdates it and would otherwise be missed.
+`move-kernel-integer-to-ruby-compat` (0129) builds the shared home this folds
+into, beside the `Kernel#Float` port that already landed there. It supersedes
+the draft `consolidate-kernel-integer-and-float-conversions` (0023, the retired
+catch-all), whose acceptance criteria named only `activesupport/src/cache/store.ts`
+and `activemodel/attribute-assignment.ts` as call sites — this copy postdates it
+and would otherwise be missed.
 
 ## Converged shape
 

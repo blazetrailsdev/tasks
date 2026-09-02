@@ -1,13 +1,13 @@
 ---
-title: "move-kernel-integer-to-ruby-compat"
+title: "Kernel#Integer moves to ruby-compat beside Kernel#Float, collapsing four file-local copies and three disagreeing FloatDomainErrors"
 status: draft
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
-packages: []
-deps: []
+packages: ["ruby-compat", "activesupport", "activerecord", "date"]
+deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
-est-loc: null
+est-loc: 260
 priority: null
 pr: null
 claim: null
