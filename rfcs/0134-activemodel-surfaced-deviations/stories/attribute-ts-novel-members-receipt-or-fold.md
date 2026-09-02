@@ -1,6 +1,6 @@
 ---
 title: "activemodel: attribute.ts's four remaining unreceipted novel members — fold or receipt"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm
@@ -9,9 +9,9 @@ deps: ["attribute-override-cast-value-invented-mutator"]
 deps-rfc: []
 est-loc: 50
 priority: 41
-pr: null
-claim: null
-assignee: null
+pr: 7406
+claim: "2026-09-02T20:13:10Z"
+assignee: "attribute-ts-novel-members-receipt-or-fold"
 blocked-by: null
 closed-reason: null
 ---

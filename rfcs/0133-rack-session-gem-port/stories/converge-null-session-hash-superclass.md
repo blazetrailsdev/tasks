@@ -1,6 +1,6 @@
 ---
 title: "NullSessionHash must subclass Rack::Session::Abstract::SessionHash, not ActionDispatch::Request::Session"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 26
-pr: null
-claim: null
-assignee: null
+pr: 7404
+claim: "2026-09-02T20:13:34Z"
+assignee: "converge-null-session-hash-superclass"
 blocked-by: null
 closed-reason: null
 ---

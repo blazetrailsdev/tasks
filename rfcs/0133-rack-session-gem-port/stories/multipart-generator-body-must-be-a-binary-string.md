@@ -1,6 +1,6 @@
 ---
 title: "multipart-generator-body-must-be-a-binary-string"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null

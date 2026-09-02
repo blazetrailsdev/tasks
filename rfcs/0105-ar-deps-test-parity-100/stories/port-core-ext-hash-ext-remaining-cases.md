@@ -1,7 +1,7 @@
 ---
 title: "Port core_ext/hash_ext_test.rb's remaining cases (48)"
-status: ready
-updated: 2026-08-13
+status: in-progress
+updated: 2026-09-02
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7407
+claim: "2026-09-02T20:23:51Z"
+assignee: "port-core-ext-hash-ext-remaining-cases"
 blocked-by: null
 closed-reason: null
 ---

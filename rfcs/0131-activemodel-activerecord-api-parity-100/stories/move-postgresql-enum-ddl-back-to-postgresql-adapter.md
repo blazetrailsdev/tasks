@@ -1,7 +1,7 @@
 ---
 title: "Move the PostgreSQL enum DDL and column_definitions off postgresql/schema-statements.ts back onto the adapter file Rails defines them in"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-02
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "Port the LoaderRecords seat in preloader/association and the loaders reader on preloader/batch"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-02
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages:

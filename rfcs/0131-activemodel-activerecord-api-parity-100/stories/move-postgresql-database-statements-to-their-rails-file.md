@@ -1,7 +1,7 @@
 ---
 title: "Move the twelve PostgreSQL::DatabaseStatements bodies off postgresql-adapter.ts into the file that mirrors their Rails home"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-02
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages:

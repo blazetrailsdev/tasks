@@ -1,7 +1,7 @@
 ---
 title: "Credit the defineProperty loop that ports Rails' VALUE_METHODS generator so relation.rb's 55 faithful accessors stop scoring missing"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-02
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages:

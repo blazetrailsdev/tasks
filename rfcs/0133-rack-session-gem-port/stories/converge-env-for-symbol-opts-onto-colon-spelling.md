@@ -1,6 +1,6 @@
 ---
 title: "Converge env_for's Symbol option keys onto the colon spelling and delete SYMBOL_OPTS (mock_request.rb:154-156)"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
