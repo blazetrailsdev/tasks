@@ -1,7 +1,7 @@
 ---
 rfc: "0135-platform-adapters-in-ruby-compat"
 title: "The platform adapters move into ruby-compat and arrive as Ruby: File, Dir, FileUtils, Pathname and Process are the surface, the FsAdapter shape becomes an internal backend contract, and rack depends on a leaf alone"
-status: draft
+status: active
 created: 2026-09-02
 updated: 2026-09-02
 owner: "@deanmarano"
