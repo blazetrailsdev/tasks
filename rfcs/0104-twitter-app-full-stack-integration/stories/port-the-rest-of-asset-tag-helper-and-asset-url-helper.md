@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 900
+est-loc: null
 priority: null
 pr: null
 claim: null
@@ -51,8 +51,11 @@ ordering once the manifest sees them), with the matching Rails test tables
 (`asset_tag_helper_test.rb:100-230`) enrolled in the existing
 `template/asset-tag-helper.test.ts`.
 
-This is larger than one PR — it should be split per helper family, and the
-est-loc here is the whole surface.
+This is larger than one PR — it should be split per helper family. The whole
+remaining surface is roughly **900 LOC**, which is why `est-loc` is left unset
+here rather than carrying that number: it exceeds the 700 LOC per-PR ceiling and
+is an estimate for the epic, not for any PR. Each per-family split story sets
+its own `est-loc` within the ceiling.
 
 ## Acceptance criteria
 
