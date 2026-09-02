@@ -1,6 +1,6 @@
 ---
 title: "Mapper#namespace drops Rails' shallow_path/shallow_prefix defaults and the options merge"
-status: claimed
+status: in-progress
 updated: 2026-09-02
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 7
-pr: null
+pr: 7389
 claim: "2026-09-02T13:34:18Z"
 assignee: "param-name-check-pairs-nested-class-constructor-with-enclosing-initialize"
 blocked-by: null

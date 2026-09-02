@@ -1,6 +1,6 @@
 ---
 title: "converge-base-identity-compare-off-class-name"
-status: claimed
+status: in-progress
 updated: 2026-09-02
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 10
-pr: null
+pr: 7389
 claim: "2026-09-02T13:34:18Z"
 assignee: "param-name-check-pairs-nested-class-constructor-with-enclosing-initialize"
 blocked-by: null

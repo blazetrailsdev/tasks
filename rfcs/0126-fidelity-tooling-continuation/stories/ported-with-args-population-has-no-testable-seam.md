@@ -1,6 +1,6 @@
 ---
 title: "Ported-with-args population is a main() closure with no testable seam"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

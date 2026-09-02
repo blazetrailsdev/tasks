@@ -1,6 +1,6 @@
 ---
 title: "gate-positive-adapter-drop-rule-differs-between-extractors"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null

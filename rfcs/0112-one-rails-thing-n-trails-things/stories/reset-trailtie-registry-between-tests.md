@@ -1,6 +1,6 @@
 ---
 title: "reset-trailtie-registry-between-tests"
-status: draft
+status: closed
 updated: 2026-09-02
 rfc: "0112-one-rails-thing-n-trails-things"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "implemented in #7386"
 ---
 
 ## Context

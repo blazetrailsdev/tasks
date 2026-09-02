@@ -1,6 +1,6 @@
 ---
 title: "Converge RouteSet#call onto Journey::Router#serve"
-status: claimed
+status: in-progress
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 7390
 claim: "2026-09-02T13:27:56Z"
 assignee: "converge-routeset-call-to-journey-router-serve"
 blocked-by: null

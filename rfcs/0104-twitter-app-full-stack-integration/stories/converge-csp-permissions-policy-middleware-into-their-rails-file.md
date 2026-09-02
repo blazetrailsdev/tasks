@@ -1,6 +1,6 @@
 ---
 title: "CSP/PermissionsPolicy Middleware lives in a trails-only middleware/ file, not its Rails http/ file"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

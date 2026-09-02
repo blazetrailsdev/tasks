@@ -1,6 +1,6 @@
 ---
 title: "adapterNameFromConfig collapses Rails adapter spellings into three families"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,9 +8,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7391
+claim: "2026-09-02T14:04:19Z"
+assignee: "report-noRailsEquivalent-tags-that-cover-no-extra"
 blocked-by: null
 closed-reason: null
 ---

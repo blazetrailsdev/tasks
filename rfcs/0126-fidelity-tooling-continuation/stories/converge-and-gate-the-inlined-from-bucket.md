@@ -1,7 +1,7 @@
 ---
 title: "converge-and-gate-the-inlined-from-bucket"
-status: ready
-updated: 2026-09-01
+status: in-progress
+updated: 2026-09-02
 rfc: "0126-fidelity-tooling-continuation"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 7391
+claim: "2026-09-02T14:04:19Z"
+assignee: "report-noRailsEquivalent-tags-that-cover-no-extra"
 blocked-by: null
 closed-reason: null
 ---

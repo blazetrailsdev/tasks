@@ -1,6 +1,6 @@
 ---
 title: "port-execute-command-as-a-generator-action"
-status: draft
+status: done
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7385
+claim: "2026-09-02T14:16:52Z"
+assignee: "port-execute-command-as-a-generator-action"
 blocked-by: null
 closed-reason: null
 ---

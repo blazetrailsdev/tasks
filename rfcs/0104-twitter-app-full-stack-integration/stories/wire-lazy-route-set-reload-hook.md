@@ -1,6 +1,6 @@
 ---
 title: "wire-lazy-route-set-reload-hook"
-status: claimed
+status: in-progress
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7390
 claim: "2026-09-02T13:27:56Z"
 assignee: "converge-routeset-call-to-journey-router-serve"
 blocked-by: null

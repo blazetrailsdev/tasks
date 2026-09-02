@@ -1,6 +1,6 @@
 ---
 title: "asset-tag-helper-preload-links-header"
-status: draft
+status: closed
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "send_preload_links_header was ported outright by PR #7378 (packages/actionview/src/helpers/asset-tag-helper.ts), so there is no missing call left to converge"
 ---
 
 ## Context

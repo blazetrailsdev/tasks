@@ -1,6 +1,6 @@
 ---
 title: "module-ext's Module# methods take an explicit receiver where configurable.ts is this-typed"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0123-blocked-convergence-holding"
 cluster: null
