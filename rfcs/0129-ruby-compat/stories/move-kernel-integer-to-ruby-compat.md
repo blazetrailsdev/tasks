@@ -24,12 +24,12 @@ because Rails calls `Float()` without defining it, so no gem file declares the
 module the export would live in. **Its Integer twin was never moved**, and in the
 meantime the repo has grown FOUR mutually-inconsistent file-local copies:
 
-| copy | grammar | `Integer(Float::NAN)` |
-| --- | --- | --- |
-| `activesupport/src/cache/store.ts:50-77` (`Integer`) | full: sign, `_` separators, `0x`/`0b`/`0o`/`0d` + bare-`0` octal | `FloatDomainError extends Error` |
-| `activesupport/src/cache/integer.ts:7-12` (`Integer`) | numeric domain only — no String arm at all | **`ArgumentError`** |
-| `activerecord/src/connection-adapters/abstract/database-statements.ts:670-709` (`integerFromString`, `rubyClassName`, `FloatDomainError`) | full, same grammar as `cache/store.ts` | `FloatDomainError extends RangeError` |
-| `date/src/time.ts:290-295` (`obj2vint`) | decimal only — `rb_str_to_inum(str, 10, TRUE)`, which is genuinely what `time.c` calls | n/a (truncates) |
+| copy                                                                                                                                      | grammar                                                                                | `Integer(Float::NAN)`                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------- |
+| `activesupport/src/cache/store.ts:50-77` (`Integer`)                                                                                      | full: sign, `_` separators, `0x`/`0b`/`0o`/`0d` + bare-`0` octal                       | `FloatDomainError extends Error`      |
+| `activesupport/src/cache/integer.ts:7-12` (`Integer`)                                                                                     | numeric domain only — no String arm at all                                             | **`ArgumentError`**                   |
+| `activerecord/src/connection-adapters/abstract/database-statements.ts:670-709` (`integerFromString`, `rubyClassName`, `FloatDomainError`) | full, same grammar as `cache/store.ts`                                                 | `FloatDomainError extends RangeError` |
+| `date/src/time.ts:290-295` (`obj2vint`)                                                                                                   | decimal only — `rb_str_to_inum(str, 10, TRUE)`, which is genuinely what `time.c` calls | n/a (truncates)                       |
 
 Three of the four are the same grammar written three times. The three
 `FloatDomainError` declarations disagree with each other and two disagree with
@@ -93,7 +93,7 @@ differential coverage the grammar has.
       `@noRailsEquivalent PERMANENT` receipt in the shape `kernel-float.ts` uses.
 - [ ] Exactly one `FloatDomainError` declaration exists in the repo, in
       ruby-compat, extending `RangeError`; `grep -rn "class FloatDomainError"
-      packages/*/src` returns one hit.
+    packages/*/src` returns one hit.
 - [ ] `packages/activesupport/src/cache/integer.ts` is deleted.
 - [ ] `grep -rn "invalid value for Integer()" packages/*/src` returns hits only
       from ruby-compat.
