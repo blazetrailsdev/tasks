@@ -25,7 +25,7 @@ the payload:
   (`vendor/rails/actionview/lib/action_view/renderer/partial_renderer.rb:245-260`)
   wraps its body in
   `ActiveSupport::Notifications.instrument("render_partial.action_view",
-  identifier:, layout:, locals:)` and sets
+identifier:, layout:, locals:)` and sets
   `payload[:cache_hit] = view.view_renderer.cache_hits[template.virtual_path]`
   (`:257`).
 - `CollectionRenderer#render_collection`
