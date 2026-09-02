@@ -1,9 +1,9 @@
 ---
 rfc: "0126-fidelity-tooling-continuation"
 title: "Fidelity verification tooling — measurement correctness: verdicts that are wrong on main today"
-status: active
+status: closed
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-02
 owner: "@deanmarano"
 packages:
   - actionpack
@@ -175,3 +175,11 @@ re-derived before work starts:
   RFC 0127 at the owner's direction (p2). Its arity twin already scores
   706/706 on arel while two hand audits found 16 renamed parameters, so the
   figure it sits beside overstates fidelity today.
+- 2026-09-02: **closed** (sunset). 79 stories done across PRs #6889–#7395; two
+  were closed as moot (`parity-api-cannot-follow-a-port-across-packages`,
+  `x-probe`). Nothing was blocked, claimed or in progress. The two remaining
+  `draft` stories — `ancestor-chain-cannot-cross-a-package-boundary` and
+  `burn-down-the-ambiguous-parent-remainder`, both continuations of PR #7395's
+  parent/ancestor resolution work — were re-homed to
+  `0127-fidelity-tooling-signals-and-hygiene`, the surviving fidelity-tooling
+  RFC (0025 remains `postponed`).
