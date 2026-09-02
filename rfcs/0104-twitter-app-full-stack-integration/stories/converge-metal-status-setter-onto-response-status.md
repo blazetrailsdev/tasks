@@ -48,21 +48,21 @@ Rails documents — stores the string; only `this.status = "not_found"` resolves
 `Metal.resolveStatus` and `metal/status-codes.ts` are the trails-side table that
 `packages/rack`'s `statusCode()` already duplicates.
 
-Surfaced while converging `Metal#to_a` onto `response.to_a` in #7376, which
-made every other `Metal` status/header/content-type member a plain delegation;
-the symbol arm is the one that did not move because the error message and the
-table are load-bearing for existing tests.
+#7376 landed the seam itself: `Response#status=` now resolves through
+`statusCode()` (`Rack::Utils.status_code`), `Metal#status=` is a plain
+delegation, and `redirect_to`'s `_extract_redirect_to_status`
+(`redirecting.rb:213-221`) calls `statusCode()` too. What is left is the
+trails-side table it made redundant.
 
 ## Acceptance criteria
 
-- `Response#status=` accepts a number or a Symbol-shaped string and resolves it
-  through `statusCode()` from `@blazetrails/rack` (`Rack::Utils.status_code`),
-  mirroring `response.rb:247-249`.
-- `Metal#status=` is a plain delegation with no lookup of its own
-  (`metal.rb:183-184`), and `Metal#head`'s `self.status = status`
-  (`head.rb:39`) goes through it.
-- The unknown-symbol raise is Rack's `ArgumentError` with Rack's message, not
-  `Error("Unknown status: ...")`; the tests asserting the old message move onto
-  the Rails one, keeping their names.
-- `metal/status-codes.ts`'s table and `Metal.resolveStatus` are removed in
-  favour of rack's, or the remaining caller is named.
+- The three remaining `resolveStatus` call sites — `action-controller/
+  renderer.ts`, `action-controller/metal/rendering.ts` — resolve through
+  `statusCode()` from `@blazetrails/rack` instead, matching every Rails
+  `Rack::Utils.status_code` site.
+- `resolveStatus`'s 500-for-an-unknown-symbol fallback goes with them: Rack
+  raises `ArgumentError` (`vendor/rack/lib/rack/utils.rb:592`), so the
+  `it("resolveStatus with unknown symbol returns 500")` test in
+  `controller/metal.test.ts` is retired rather than re-pointed.
+- `metal/status-codes.ts` and the `Metal.resolveStatus` static — a trails
+  invention with no Rails counterpart — are deleted.
