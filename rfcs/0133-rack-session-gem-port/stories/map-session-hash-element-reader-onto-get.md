@@ -1,6 +1,6 @@
 ---
 title: "Map SessionHash#[] / SecureSessionHash#[] onto get in the operator-spelling map"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 14
-pr: null
-claim: null
-assignee: null
+pr: 7380
+claim: "2026-09-02T02:16:41Z"
+assignee: "converge-actiondispatch-request-omitted-helpers-members"
 blocked-by: null
 closed-reason: null
 ---

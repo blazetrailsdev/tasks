@@ -1,6 +1,6 @@
 ---
 title: "Enrol activerecord in the parameter-name gate once its six slices land"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0128-parameter-name-drift-burndown"
 cluster: fidelity

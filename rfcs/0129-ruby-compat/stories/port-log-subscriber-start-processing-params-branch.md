@@ -1,6 +1,6 @@
 ---
 title: "Port ActionController::LogSubscriber#start_processing's params and format branches"
-status: claimed
+status: in-progress
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 61
-pr: null
+pr: 7377
 claim: "2026-09-02T01:45:12Z"
 assignee: "move-monitor-mixin-to-ruby-compat"
 blocked-by: null

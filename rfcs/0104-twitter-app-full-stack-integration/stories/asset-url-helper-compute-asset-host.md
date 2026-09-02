@@ -1,6 +1,6 @@
 ---
 title: "asset-url-helper-compute-asset-host"
-status: draft
+status: closed
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded — compute_asset_host is ported in #7378, the PR that filed this"
 ---
 
 ## Context

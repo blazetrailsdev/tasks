@@ -1,6 +1,6 @@
 ---
 title: "type-lookup-forwards-a-variadic-positional-list"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null

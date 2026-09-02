@@ -1,6 +1,6 @@
 ---
 title: "logger-thread-safe-level-is-its-own-module-and-file"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0128-parameter-name-drift-burndown"
 cluster: null

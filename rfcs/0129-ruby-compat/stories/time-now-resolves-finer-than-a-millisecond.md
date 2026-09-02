@@ -1,6 +1,6 @@
 ---
 title: "Give Time.now sub-millisecond resolution, as CLOCK_REALTIME has"
-status: claimed
+status: in-progress
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 60
-pr: null
+pr: 7377
 claim: "2026-09-02T01:45:12Z"
 assignee: "move-monitor-mixin-to-ruby-compat"
 blocked-by: null
