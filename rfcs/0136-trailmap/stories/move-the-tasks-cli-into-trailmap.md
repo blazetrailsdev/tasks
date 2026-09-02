@@ -33,12 +33,12 @@ Four call sites change, and they must change together — a half-migrated
 `tasks` that resolves to two implementations depending on cwd is worse than
 either:
 
-| Caller | Today | After |
-| --- | --- | --- |
-| trails' `pnpm tasks` | `scripts/tasks/tasks.sh` probes `$TASKS_DIR`, `$RFCS_DIR`, `$PWD/tasks`, `~/github/blazetrailsdev/tasks` for `bin/tasks` | Execs the installed binary; probe list deleted |
-| `tasks` on `PATH` | Installed by `start-worktree.sh` into a tasks checkout | Installed from trailmap; location-independent |
-| ringo's Go side | Resolves `tasksCLIRel` + vendored `tsx`, shells out (`mergesweep.go:85`) | An HTTP request |
-| trails' `CLAUDE.md:174` | "The `tasks` CLI itself lives in the tasks repo" | Points at trailmap |
+| Caller                  | Today                                                                                                                    | After                                          |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------- |
+| trails' `pnpm tasks`    | `scripts/tasks/tasks.sh` probes `$TASKS_DIR`, `$RFCS_DIR`, `$PWD/tasks`, `~/github/blazetrailsdev/tasks` for `bin/tasks` | Execs the installed binary; probe list deleted |
+| `tasks` on `PATH`       | Installed by `start-worktree.sh` into a tasks checkout                                                                   | Installed from trailmap; location-independent  |
+| ringo's Go side         | Resolves `tasksCLIRel` + vendored `tsx`, shells out (`mergesweep.go:85`)                                                 | An HTTP request                                |
+| trails' `CLAUDE.md:174` | "The `tasks` CLI itself lives in the tasks repo"                                                                         | Points at trailmap                             |
 
 ## Acceptance criteria
 
