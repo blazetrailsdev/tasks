@@ -521,7 +521,16 @@ augmentations: `core-ext/range/compare-range.ts:18`, `overlap.ts:64` and
 **not** carry a module augmentation — those three retarget in the same PR as the
 Range move, not later.
 
-**Dependency direction.** ruby-compat is a leaf and depends on nothing.
+**Dependency direction.** ruby-compat is a leaf and depends on nothing —
+enforced, not asserted: `scripts/ruby-compat-leaf.test.ts` reads the BUILT
+`packages/ruby-compat/dist/**/*.js` (compiled `*.test.js` exempted) and fails on
+any `node:`-prefixed or bare Node-builtin specifier, and on any
+`dependencies` / `peerDependencies` entry in the package manifest — the only
+place a transitive edge is visible. Its two source-side halves are
+`blazetrails/no-node-builtins` over `packages/ruby-compat/src/**` (which reports
+the plain message there and offers no activesupport autofix, since that import
+would itself break the leaf) and a `no-restricted-globals` fence on `Buffer` /
+`process` / `__dirname` / `__filename`, which no import guard can see.
 Everything else may depend on it. `packages/date` becomes a dependent (it loses
 `Rational`), which also removes activemodel's accidental `@blazetrails/date`
 edge.
