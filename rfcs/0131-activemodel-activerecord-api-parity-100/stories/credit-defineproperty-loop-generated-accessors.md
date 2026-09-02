@@ -61,8 +61,14 @@ Neither depends on the other.
 - A test in `scripts/api-compare/` pins the negatives: a computed property name
   the arm cannot resolve to literals, and a `defineProperty` on a non-prototype
   receiver, credit nothing.
-- activerecord `relation.rb` rises from **319/401 to ≥ 374/401**; package total
-  ≥ **6215/6362** (from 6160).
+- activerecord `relation.rb` rises from **315/401 to ≥ 370/401** — all 55 of
+  the `VALUE_METHODS` accessors, and no `*_values` / `*_value` / `*_clause` row
+  left in its missing list; package total ≥ **6215/6362** (from 6160).
+
+  The `319/401 → ≥ 374/401` this criterion first stated was arithmetic off a
+  baseline that had already moved: the row on `main` is `315/86`, not `319/82`,
+  so the same 55 accessors land at 370. The bar is the 55 accessors, not the
+  figure the stale baseline produced.
 - `defineValueMethods` keeps its loop — no hand-expanded accessor appears in
   the diff, and neither `defineValueMethods` nor its `@noRailsEquivalent
 PERMANENT` receipt is disturbed.
