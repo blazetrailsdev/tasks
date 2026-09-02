@@ -26,7 +26,7 @@ while the build emits a **hashed** filename plus a manifest.
 `packages/trailties/src/generators/app-generator.ts:734` emits:
 
 ```html
-<link rel="stylesheet" href="/assets/stylesheets/application.css">
+<link rel="stylesheet" href="/assets/stylesheets/application.css" />
 ```
 
 but `vite build` with the generated config (`manifest: true`,
