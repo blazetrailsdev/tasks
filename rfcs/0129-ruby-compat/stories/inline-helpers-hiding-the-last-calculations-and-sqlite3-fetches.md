@@ -1,6 +1,6 @@
 ---
 title: "inline-helpers-hiding-the-last-calculations-and-sqlite3-fetches"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null

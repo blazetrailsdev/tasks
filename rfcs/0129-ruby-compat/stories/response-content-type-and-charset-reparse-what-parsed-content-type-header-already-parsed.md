@@ -1,6 +1,6 @@
 ---
 title: "Response#content_type and #charset re-parse the header Rails reads through parsed_content_type_header"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null

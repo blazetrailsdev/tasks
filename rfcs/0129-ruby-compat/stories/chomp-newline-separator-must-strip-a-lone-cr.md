@@ -1,6 +1,6 @@
 ---
 title: "chomp-newline-separator-must-strip-a-lone-cr"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null

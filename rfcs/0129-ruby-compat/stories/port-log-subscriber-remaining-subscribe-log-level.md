@@ -1,6 +1,6 @@
 ---
 title: "port-log-subscriber-remaining-subscribe-log-level"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null

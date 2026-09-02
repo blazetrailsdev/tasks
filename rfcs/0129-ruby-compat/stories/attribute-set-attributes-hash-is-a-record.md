@@ -1,6 +1,6 @@
 ---
 title: "Port AttributeSet's @attributes to a Record, the last Map where Rails has a Hash"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null

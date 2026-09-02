@@ -1,7 +1,7 @@
 ---
 title: "cache/store.ts's file-local Kernel#Float retires onto ruby-compat's kernelFloat (cache.rb:213-214)"
-status: draft
-updated: 2026-08-13
+status: ready
+updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
 packages:

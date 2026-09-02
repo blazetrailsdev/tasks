@@ -1,6 +1,6 @@
 ---
 title: "symbolize_keys / deep_symbolize_keys answer a Hash, keeping to_hash's seat"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: 74
-pr: null
-claim: null
-assignee: null
+priority: null
+pr: 7411
+claim: "2026-09-02T22:05:56Z"
+assignee: "hwia-symbolize-keys-answers-a-hash"
 blocked-by: null
 closed-reason: null
 ---

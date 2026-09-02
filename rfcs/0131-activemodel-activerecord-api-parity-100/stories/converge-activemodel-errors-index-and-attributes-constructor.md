@@ -1,6 +1,6 @@
 ---
 title: "Give Errors its [] reader and Attributes its constructor, closing activemodel to 754/754"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null

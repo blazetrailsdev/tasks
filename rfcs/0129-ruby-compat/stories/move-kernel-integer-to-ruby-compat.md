@@ -1,6 +1,6 @@
 ---
 title: "Kernel#Integer moves to ruby-compat beside Kernel#Float, collapsing four file-local copies and three disagreeing FloatDomainErrors"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null

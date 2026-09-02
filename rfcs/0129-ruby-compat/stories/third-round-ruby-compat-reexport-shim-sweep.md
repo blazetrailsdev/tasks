@@ -1,6 +1,6 @@
 ---
 title: "The third round of orphaned re-export shims, and the rule change that stops a fourth"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["activesupport", "ruby-compat", "activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: 84
+priority: null
 pr: null
 claim: null
 assignee: null

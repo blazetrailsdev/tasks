@@ -1,6 +1,6 @@
 ---
 title: "types: [] does not fence Node globals in ruby-compat — decide between a test-only project and the lint fence"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null

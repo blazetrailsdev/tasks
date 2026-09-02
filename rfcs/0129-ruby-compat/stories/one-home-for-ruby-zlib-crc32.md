@@ -1,6 +1,6 @@
 ---
 title: "Zlib.crc32 is hand-rolled twice in two packages with no shared home"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null

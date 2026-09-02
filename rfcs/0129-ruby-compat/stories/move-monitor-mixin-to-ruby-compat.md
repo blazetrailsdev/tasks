@@ -8,7 +8,7 @@ packages: ["ruby-compat", "activesupport", "activerecord"]
 deps: ["ruby-named-file-dir-fileutils-facade"]
 deps-rfc: []
 est-loc: 220
-priority: 57
+priority: null
 pr: null
 claim: "2026-09-02T01:45:12Z"
 assignee: "move-monitor-mixin-to-ruby-compat"

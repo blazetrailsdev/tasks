@@ -1,6 +1,6 @@
 ---
 title: "activemodel: converge the Type/ValueType split and the per-subclass `name` property (~24 novel rows)"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 42
-pr: null
-claim: null
-assignee: null
+pr: 7412
+claim: "2026-09-02T22:05:40Z"
+assignee: "type-value-split-and-name-property-burndown"
 blocked-by: null
 closed-reason: null
 ---

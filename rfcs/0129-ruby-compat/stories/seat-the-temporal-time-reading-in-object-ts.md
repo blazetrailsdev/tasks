@@ -1,6 +1,6 @@
 ---
 title: "Seat the Temporal Time reading in object.ts so comparable.ts stops exporting hasEpochNanoseconds"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null

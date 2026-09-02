@@ -1,6 +1,6 @@
 ---
 title: "delete-object-inspect-reexport-shim-and-repoint-callers"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
