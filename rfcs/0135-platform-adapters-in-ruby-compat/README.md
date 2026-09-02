@@ -1,6 +1,6 @@
 ---
 rfc: "0135-platform-adapters-in-ruby-compat"
-title: "The platform adapters move into ruby-compat: one home for the fs/crypto/os/process/http/child-process/async-context seams, registration included, so a leaf is the only thing rack depends on"
+title: "The platform adapters move into ruby-compat and arrive as Ruby: File, Dir, FileUtils, Pathname and Process are the surface, the FsAdapter shape becomes an internal backend contract, and rack depends on a leaf alone"
 status: draft
 created: 2026-09-02
 updated: 2026-09-02
@@ -32,7 +32,21 @@ Seven `*-adapter.ts` files in `packages/activesupport/src` (1887 LOC) are the
 seam through which trails reaches `node:fs`, `node:crypto`, `node:os`,
 `process`, `node:http`, `node:child_process` and `AsyncLocalStorage` without any
 package statically importing them. **They move into `ruby-compat`, registration
-and Node bootstrap included.**
+and Node bootstrap included — and they arrive wearing Ruby's names.**
+
+`ruby-compat` exports `File`, `Dir`, `FileUtils`, `Pathname`, `IO` and
+`Process`. `FsAdapter` / `getFs()` stop being public API and become the
+**backend contract** a platform registers against:
+
+```ts
+// today, activesupport
+if (getFs().existsSync(getPath().join(dir, key))) …
+// after
+if (File.isExist(File.join(dir, key))) …
+```
+
+Rails writes `File.exist?(path)` (`cache/file_store.rb:123,133,201,205`). That
+is the whole argument.
 
 This RFC reverses RFC 0129 **non-goal 2**, which ruled the `*-adapter.ts` family
 out of `ruby-compat` on the grounds that it is "the Node platform adapter, which
@@ -82,7 +96,58 @@ facts. Every adapter already exposes a registration seam:
 
 There is no architecture to invent. This is a file move plus an import rewrite.
 
-### 3. The browser property survives the move — the guard's wording does not
+### 3. The gate exempts these names today; this RFC retires the exemption
+
+`extract-ruby-api.rb:3008-3011` holds `CORE_CLASS_RECEIVERS`:
+
+```ruby
+CORE_CLASS_RECEIVERS = %w[
+  File Dir IO Module Class Proc Kernel Marshal ObjectSpace GC Process Thread
+  Mutex Encoding Random Signal Struct Method
+].to_set.freeze
+```
+
+Every call on one of those receivers is dropped from the Ruby call-set before
+the gate compares. PR #6680 (`8a2145ceb`) added it and deleted 74 baseline rows
+as stale, on the reasoning that a call to `File.exist?` is _Ruby_, not a ported
+collaborator, so no TS body could be expected to make it.
+
+**That reasoning expires the moment `ruby-compat` exports `File`.** Once
+`File.isExist` is a real, callable trails member, a body that reaches the
+filesystem some other way is making a divergence the gate should see. So the
+exemption is not a permanent rule — it is a **burndown ledger of receivers
+trails cannot yet spell**, and it shrinks as this RFC lands classes.
+
+This is what closed `ruby-named-file-dir-fileutils-facade`: "a File/Dir facade
+would credit no gate row". True while the exemption stands, and this RFC's
+answer is to remove the exemption rather than to accept the verdict. Measured
+across `vendor/rails/**/*.rb`, the receivers in scope:
+
+| receiver                                                                                                                      | Rails calls   | status after this RFC                         |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------- | --------------------------------------------- |
+| `File`                                                                                                                        | 1415          | unexempted                                    |
+| `Dir`                                                                                                                         | 306           | unexempted                                    |
+| `Process`                                                                                                                     | 109           | unexempted                                    |
+| `IO`                                                                                                                          | 50            | unexempted                                    |
+| `FileUtils`                                                                                                                   | ~280          | **never exempt** — already in the call-set    |
+| `Class` `Thread` `Struct` `Proc` `Marshal` `Module` `Encoding` `Mutex` `Kernel` `GC` `ObjectSpace` `Method` `Random` `Signal` | 1834 combined | **stay exempt**, each retired by its own port |
+
+Two disciplines follow, and they are the risk in this RFC:
+
+- **The list is only-shrink.** A receiver leaves `CORE_CLASS_RECEIVERS` when
+  `ruby-compat` can spell it, and nothing is ever added back to quiet a red run.
+- **Unexempting and converging are one story, never two.** Removing `File`
+  resurrects every `File.*` row in a ported body at once. The story that
+  unexempts a receiver is the story that flips its call sites, and it lands
+  green or it does not land. The Rails-wide counts above are an upper bound, not
+  the gate population — the first story measures the ported-body subset with
+  `API_COMPARE_FORCE=1 pnpm parity:api --calls` before committing to a lane.
+
+`FileUtils` is the cheap proof: it was never in `CORE_CLASS_RECEIVERS`, so its
+62 `rm_rf` / 42 `mkdir_p` / 32 `touch` / 25 `cd` calls are in the call-set
+already and are being missed silently right now.
+
+### 4. The browser property survives the move — the guard's wording does not
 
 The reason the adapters look un-leaf-like is `tryAutoRegisterNode()`, which
 lazily resolves the Node backend so callers never have to register one. It never
@@ -117,23 +182,48 @@ is a narrowing, and it should be argued in the PR, not assumed.
 
 1. **The guard first.** Narrow `ruby-compat-leaf.ts` to static imports, and
    settle the ambient-global question: `eslint.config.mjs:253-269` bans the bare
-   `Buffer` and `process` identifiers in `ruby-compat/src/**`. The adapters read
-   `globalThis.process` throughout (a property access, not the banned global),
-   but `syncBuiltinLoader` also touches `typeof require` and `__filename`. Audit
+   `Buffer`, `process`, `__dirname` and `__filename` identifiers in
+   `ruby-compat/src/**`. The adapters read `globalThis.process` throughout (a
+   property access, not the banned global), but `syncBuiltinLoader`
+   (`fs-adapter.ts:250-263`) uses **`__filename`**, which is banned. Audit
    before moving, not after.
-2. **One adapter per story, smallest first.** `http-adapter` (108) and
-   `os-adapter` (158) prove the shape; `fs-adapter` (483) and
-   `crypto-adapter` (393) are the load-bearing ones and come last.
-3. **Each move leaves a re-export shim in activesupport**, and each move's own
-   acceptance criteria delete the shims of the moves _before_ it. RFC 0129
-   learned this the expensive way — see below.
-4. **`no-node-builtins.mjs` retargets.** Its replacement table
+2. **`FileUtils` first, because it needs no exemption change.** Its calls are
+   already in the call-set, so it proves the class shape, the receipt shape and
+   the mark movement against live gate rows and nothing else.
+3. **Then one class per story**, each landing three things together: the
+   Ruby-named class in `ruby-compat`, its receiver's removal from
+   `CORE_CLASS_RECEIVERS`, and the converged call sites. `IO` (50) and
+   `Process` (109) before `Dir` (306) and `File` (1415).
+4. **`crypto` / `os` / `http` / `child-process` / `async-context` move with
+   their current shape**, and are re-dressed as `SecureRandom`, `Digest`,
+   `Process` and friends by their own later stories. They are not on the
+   critical path for rack.
+5. **`no-node-builtins.mjs` retargets.** Its replacement table
    (`eslint/no-node-builtins.mjs:9-28`) hard-codes `@blazetrails/activesupport`
-   as the fix for `fs` / `path` / `crypto`. After the move that advice is wrong
-   everywhere, not just inside ruby-compat — the per-package exception
-   `enforce-ruby-compat-leaf-and-browser-freedom` had to carve out disappears.
-5. **rack and rack-session drop the dependency**, which is the acceptance test
-   for the whole RFC.
+   / `getFs` / `getPath` / `getCrypto` as the fix for `fs`, `path` and `crypto`.
+   After this RFC the correct advice is `@blazetrails/ruby-compat` and `File` /
+   `Dir`, so the table and its autofix change with the classes.
+6. **rack and rack-session drop the dependency**, the acceptance test for the
+   whole RFC.
+
+### Naming is determined, not designed
+
+`rubyMethodToTs` in `scripts/parity/conventions.ts` already produces every
+member name; confirm against it rather than inventing. Verified 2026-09-02:
+
+| Ruby                                             | TS                               |
+| ------------------------------------------------ | -------------------------------- |
+| `File.exist?`                                    | `File.isExist`                   |
+| `File.directory?`                                | `File.isDirectory`               |
+| `File.expand_path`                               | `File.expandPath`                |
+| `File.join` / `dirname` / `basename` / `extname` | unchanged                        |
+| `FileUtils.mkdir_p`                              | `FileUtils.mkdirP`               |
+| `FileUtils.rm_rf` / `rm_f` / `cp_r`              | `FileUtils.rmRf` / `rmF` / `cpR` |
+| `Dir.glob`                                       | `Dir.glob`                       |
+
+If a name you want is not what that function produces, the name is the bug.
+Note `fs-adapter.ts` already carries `rm` and `rmF` on its Node wrapper — the
+Ruby shape has been leaking in ad hoc, unowned, for some time.
 
 ### Shim deletion is part of each move, not a trailing sweep
 
@@ -165,8 +255,13 @@ Import-specifier rewrites only — no call site changes shape.
 
 ## Non-goals
 
-- **Changing any adapter's semantics.** This is a relocation. A behavioural fix
-  found en route is a separate story.
+- **Changing any adapter's semantics.** The surface is re-dressed as Ruby and
+  the implementation is not. A behavioural fix found en route is a separate
+  story, and a Ruby-named member whose semantics differ from MRI's is a bug in
+  this RFC, not a licence to reimplement the filesystem.
+- **Emptying `CORE_CLASS_RECEIVERS`.** Fourteen receivers (`Class`, `Thread`,
+  `Struct`, …) stay exempt. Each is retired by the port that can spell it, on
+  its own evidence — not by this RFC.
 - **A `ruby-compat-node` package.** Considered and rejected: it keeps the AST
   guard verbatim, but a ninth package earns its keep only if something must
   statically import Node, and nothing does.
@@ -185,3 +280,8 @@ Import-specifier rewrites only — no call site changes shape.
   shim for one remains either.
 - `scripts/ruby-compat-leaf.test.ts` still passes, over the narrowed rule, with
   the adapters in the package.
+- `File`, `Dir`, `IO` and `Process` are gone from `CORE_CLASS_RECEIVERS`, and
+  the call gates are green with them gone.
+- No ported body reaches the filesystem through a Node-shaped name: a
+  workspace-wide grep for `existsSync`, `readFileSync`, `unlinkSync` and
+  `statSync` outside `ruby-compat/src` returns nothing.
