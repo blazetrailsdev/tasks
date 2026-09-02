@@ -1,6 +1,6 @@
 ---
 title: "port-view-context-class-on-controller"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

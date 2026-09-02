@@ -1,6 +1,6 @@
 ---
 title: "Converge RouteSet#call onto Journey::Router#serve"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
