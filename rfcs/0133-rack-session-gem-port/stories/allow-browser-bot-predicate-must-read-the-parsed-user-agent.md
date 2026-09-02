@@ -1,6 +1,6 @@
 ---
 title: "AllowBrowser#bot? must read parsed_user_agent, not a bespoke user-agent regex"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 100
-priority: null
+priority: 31
 pr: null
 claim: null
 assignee: null

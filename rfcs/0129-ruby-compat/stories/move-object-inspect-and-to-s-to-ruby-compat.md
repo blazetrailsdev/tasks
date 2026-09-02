@@ -1,6 +1,6 @@
 ---
 title: "Ruby's Object#inspect / Object#to_s move to ruby-compat; present?/blank? stay in activesupport"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 71
-pr: null
-claim: null
-assignee: null
+pr: 7403
+claim: "2026-09-02T19:27:56Z"
+assignee: "move-object-inspect-and-to-s-to-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---

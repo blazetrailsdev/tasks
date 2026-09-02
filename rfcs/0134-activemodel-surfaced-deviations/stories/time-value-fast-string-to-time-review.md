@@ -1,6 +1,6 @@
 ---
 title: "activemodel: review time-value.ts fast_string_to_time's placeholder baseline row"
-status: claimed
+status: done
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 31
-pr: null
+pr: 7400
 claim: "2026-09-02T18:43:20Z"
 assignee: "comparison-validator-private-compare-is-invented"
 blocked-by: null

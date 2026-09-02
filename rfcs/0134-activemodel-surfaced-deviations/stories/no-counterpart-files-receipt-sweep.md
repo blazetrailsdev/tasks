@@ -1,6 +1,6 @@
 ---
 title: "activemodel: receipt the no-counterpart utility files — sentinels, codecs, index barrel, trailtie, _accessor, MutableModule, TypeRegistry"
-status: claimed
+status: done
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: receipt-hygiene
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 42
-pr: null
+pr: 7400
 claim: "2026-09-02T18:43:20Z"
 assignee: "comparison-validator-private-compare-is-invented"
 blocked-by: null

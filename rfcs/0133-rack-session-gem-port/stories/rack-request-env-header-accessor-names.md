@@ -1,14 +1,14 @@
 ---
 title: "Rack::Request::Env: one spelling per header accessor — hasHeader/getHeader/fetchHeader/setHeader"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 110
-priority: null
+priority: 29
 pr: null
 claim: null
 assignee: null

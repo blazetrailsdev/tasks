@@ -1,6 +1,6 @@
 ---
 title: "Replace Attribute#overrideCastValue with Rails' value-returning with_cast_value"
-status: claimed
+status: done
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm
@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 40
-pr: null
+pr: 7400
 claim: "2026-09-02T18:43:20Z"
 assignee: "comparison-validator-private-compare-is-invented"
 blocked-by: null

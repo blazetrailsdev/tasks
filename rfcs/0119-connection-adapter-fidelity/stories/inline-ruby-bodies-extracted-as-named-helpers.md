@@ -1,7 +1,7 @@
 ---
 title: "inline-ruby-bodies-extracted-as-named-helpers"
-status: ready
-updated: 2026-09-01
+status: in-progress
+updated: 2026-09-02
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7402
+claim: "2026-09-02T19:29:07Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'The err.name = "..." sites throw the real class instead of relabelling an Error'
-status: claimed
+status: done
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 70
-pr: null
+pr: 7399
 claim: "2026-09-02T18:51:12Z"
 assignee: "converge-float-domain-error-and-name-error-onto-ruby-compat"
 blocked-by: null

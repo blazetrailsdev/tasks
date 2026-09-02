@@ -1,6 +1,6 @@
 ---
 title: "multipart-generator-body-must-be-a-binary-string"
-status: claimed
+status: in-progress
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 23
-pr: null
+pr: 7401
 claim: "2026-09-02T18:45:08Z"
 assignee: "converge-env-for-symbol-opts-onto-colon-spelling"
 blocked-by: null
