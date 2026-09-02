@@ -46,7 +46,7 @@ Two consequences:
   PR for `authentication-generator-emits-comment-stubs` had to route the
   session id through the controller `session` hash instead of Rails'
   `cookies.signed.permanent[:session_id] = { value: session.id, httponly: true,
-  same_site: :lax }` (`authentication.rb.tt` `start_new_session_for`) and
+same_site: :lax }` (`authentication.rb.tt` `start_new_session_for`) and
   `cookies.signed[:session_id]` (`find_session_by_cookie`), with the divergence
   cited in the emitted template.
 
