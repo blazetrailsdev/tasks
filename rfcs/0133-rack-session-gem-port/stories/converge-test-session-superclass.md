@@ -53,6 +53,6 @@ constructor can seed them the way `initialize` does in Ruby.
   (`test_case.rb:196-260`), dropping any trails-only member the inherited
   `SessionHash` already supplies.
 - `TestSession#inspect` renders `#<ActionController::TestSession:0x… not yet
-  loaded>` through the inherited arm, and a test pins it.
+loaded>` through the inherited arm, and a test pins it.
 - `pnpm parity:api` actionpack inheritance figure non-negative;
   `pnpm parity:test` non-negative.
