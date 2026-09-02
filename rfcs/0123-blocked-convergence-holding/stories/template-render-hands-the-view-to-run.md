@@ -2,7 +2,7 @@
 title: "template-render-hands-the-view-to-run"
 status: blocked
 updated: 2026-09-02
-rfc: "0128-parameter-name-drift-burndown"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
