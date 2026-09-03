@@ -29,14 +29,14 @@ activerecord to `files: 281/281`.
 The mechanism is deliberately general, and the table has exactly one row
 today. The other six trailties are the same shape:
 
-| Ruby file | trails port |
-| --- | --- |
-| `activemodel:railtie.rb` | `packages/trailties/src/trailties/active-model.ts` |
-| `activesupport:railtie.rb` | `packages/trailties/src/trailties/active-support.ts` |
+| Ruby file                                 | trails port                                             |
+| ----------------------------------------- | ------------------------------------------------------- |
+| `activemodel:railtie.rb`                  | `packages/trailties/src/trailties/active-model.ts`      |
+| `activesupport:railtie.rb`                | `packages/trailties/src/trailties/active-support.ts`    |
 | `actionpack:action_controller/railtie.rb` | `packages/trailties/src/trailties/action-controller.ts` |
-| `actionpack:action_dispatch/railtie.rb` | `packages/trailties/src/trailties/action-dispatch.ts` |
-| `actionview:railtie.rb` | `packages/trailties/src/trailties/action-view.ts` |
-| `globalid:railtie.rb` | `packages/trailties/src/trailties/global-id.ts` |
+| `actionpack:action_dispatch/railtie.rb`   | `packages/trailties/src/trailties/action-dispatch.ts`   |
+| `actionview:railtie.rb`                   | `packages/trailties/src/trailties/action-view.ts`       |
+| `globalid:railtie.rb`                     | `packages/trailties/src/trailties/global-id.ts`         |
 
 The actionpack rows need checking against `PACKAGE_SRC_SUBDIR` /
 `PACKAGE_DIRS` in `scripts/api-compare/config.ts` — actionpack is four
