@@ -1,6 +1,6 @@
 ---
 title: "Port ActionController::LogSubscriber#process_action's additions, exception-status and GC branches"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null

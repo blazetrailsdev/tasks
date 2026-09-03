@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel attribute() generates accessors eagerly instead of deferring to define_attribute_methods"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation

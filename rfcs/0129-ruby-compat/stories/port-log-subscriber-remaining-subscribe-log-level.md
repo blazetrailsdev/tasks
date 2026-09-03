@@ -1,7 +1,7 @@
 ---
 title: "port-log-subscriber-remaining-subscribe-log-level"
-status: ready
-updated: 2026-09-02
+status: claimed
+updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T12:50:47Z"
+assignee: "port-log-subscriber-remaining-subscribe-log-level"
 blocked-by: null
 closed-reason: null
 ---

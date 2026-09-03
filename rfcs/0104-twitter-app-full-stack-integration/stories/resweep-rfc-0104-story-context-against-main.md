@@ -1,6 +1,6 @@
 ---
 title: "RFC 0104 story bodies cite an examples/twitter-app and a server/application.ts that do not exist"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

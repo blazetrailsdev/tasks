@@ -1,6 +1,6 @@
 ---
 title: "Port Aliases#column_aliases and the Aliases::Table node seat in join_dependency"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null

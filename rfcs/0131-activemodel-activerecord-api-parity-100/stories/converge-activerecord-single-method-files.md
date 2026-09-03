@@ -1,7 +1,7 @@
 ---
 title: "Close the seven one-method misses across result, schema_dumper, future_result, scoping, read, belongs_to_association and reflection"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 280
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 7441
+claim: "2026-09-03T12:20:52Z"
+assignee: "port-instrumentation-process-action-raw-payload"
 blocked-by: null
 closed-reason: null
 ---

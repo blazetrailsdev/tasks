@@ -1,6 +1,6 @@
 ---
 title: "port-named-route-collection-url-helper-modules"
-status: draft
+status: in-progress
 updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7439
+claim: "2026-09-03T12:40:04Z"
+assignee: "port-named-route-collection-url-helper-modules"
 blocked-by: null
 closed-reason: null
 ---

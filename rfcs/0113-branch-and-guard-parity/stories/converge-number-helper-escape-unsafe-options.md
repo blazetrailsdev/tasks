@@ -1,6 +1,6 @@
 ---
 title: "converge-number-helper-escape-unsafe-options"
-status: draft
+status: done
 updated: 2026-09-03
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7435
 claim: null
 assignee: null
 blocked-by: null

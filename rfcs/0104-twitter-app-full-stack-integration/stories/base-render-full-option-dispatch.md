@@ -1,6 +1,6 @@
 ---
 title: "Base#render handles only the partial: arm, not Rails' option-shape dispatch"
-status: claimed
+status: in-progress
 updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 7
-pr: null
+pr: 7439
 claim: "2026-09-03T11:34:47Z"
 assignee: "port-trails-autoloaders"
 blocked-by: null

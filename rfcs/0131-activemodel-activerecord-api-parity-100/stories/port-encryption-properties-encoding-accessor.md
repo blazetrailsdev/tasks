@@ -1,6 +1,6 @@
 ---
 title: "Restore Rails' DEFAULT_PROPERTIES accessor loop in encryption/properties.ts and with it the missing encoding seat"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null

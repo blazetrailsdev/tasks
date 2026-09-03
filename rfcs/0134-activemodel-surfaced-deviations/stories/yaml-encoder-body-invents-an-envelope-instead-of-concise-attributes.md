@@ -1,6 +1,6 @@
 ---
 title: "yaml-encoder-body-invents-an-envelope-instead-of-concise-attributes"
-status: draft
+status: done
 updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7436
+claim: "2026-09-03T12:12:05Z"
+assignee: "yaml-encoder-body-invents-an-envelope-instead-of-concise-attributes"
 blocked-by: null
 closed-reason: null
 ---

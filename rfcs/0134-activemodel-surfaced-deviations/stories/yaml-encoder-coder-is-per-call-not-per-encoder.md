@@ -1,6 +1,6 @@
 ---
 title: "YAMLEncoder takes the codec at construction; Rails passes coder per call"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm

@@ -1,7 +1,7 @@
 ---
 title: "port-instrumentation-process-action-raw-payload"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7441
+claim: "2026-09-03T12:20:52Z"
+assignee: "port-instrumentation-process-action-raw-payload"
 blocked-by: null
 closed-reason: null
 ---
