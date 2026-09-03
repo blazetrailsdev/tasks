@@ -35,7 +35,7 @@ finding at the call site as a `@missingRailsCall` receipt pointing here:
 - `Type::Time#cast_value` can answer a `TimeWithZone`, whose `getutc` /
   `getlocal` DO switch — but both answer a `::Time`
   (`packages/activesupport/src/time-with-zone.ts:523,560`), and trails' quoting
-  layer refuses one: `typeCast` raises `` can't cast Time ``
+  layer refuses one: `typeCast` raises `can't cast Time`
   (`packages/activerecord/src/connection-adapters/abstract/quoting.ts:133`),
   which accepts only the `Temporal` values and `TimeWithZone`. Porting the arm
   verbatim reds three `attribute-methods.test.ts` time zone-aware tests with
