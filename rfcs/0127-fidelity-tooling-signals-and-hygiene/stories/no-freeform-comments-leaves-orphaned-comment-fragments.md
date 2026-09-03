@@ -48,7 +48,7 @@ them.
 untouched:
 
 ```ts
-  isDefault: boolean; // exported as `export default class` vs a named export
+isDefault: boolean; // exported as `export default class` vs a named export
 ```
 
 `onlyCommentOnItsLine` is false for it, which is what keeps it out of a run —
