@@ -1,6 +1,6 @@
 ---
 title: "Both type registries register a :value name Rails has no registration for"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm

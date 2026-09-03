@@ -1,6 +1,6 @@
 ---
 title: "FileUtils arrives as a Ruby class — the one receiver already in the call-set, so the class shape proves out against live gate rows"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

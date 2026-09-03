@@ -1,6 +1,6 @@
 ---
 title: "Drop the deep_stringify_keys three to_hash consumers insert"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Extract insert_all's columns_list, format_columns and quote_columns instead of inlining the chain"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 190
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: 7432
+claim: "2026-09-03T10:41:17Z"
+assignee: "activesupport-trailtie-initializer-drops-before-after-options"
 blocked-by: null
 closed-reason: null
 ---

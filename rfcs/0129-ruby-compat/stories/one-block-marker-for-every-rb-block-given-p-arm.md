@@ -1,7 +1,7 @@
 ---
 title: "Give rb_hash_update's conflict block the same marker fetch's block arm uses"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7432
+claim: "2026-09-03T10:41:17Z"
+assignee: "activesupport-trailtie-initializer-drops-before-after-options"
 blocked-by: null
 closed-reason: null
 ---

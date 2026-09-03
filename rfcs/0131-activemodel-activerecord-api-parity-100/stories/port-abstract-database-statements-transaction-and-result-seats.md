@@ -1,6 +1,6 @@
 ---
 title: "Give the seven abstract DatabaseStatements members real bodies in their own file and drop the optional-member guards Rails does not have"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
