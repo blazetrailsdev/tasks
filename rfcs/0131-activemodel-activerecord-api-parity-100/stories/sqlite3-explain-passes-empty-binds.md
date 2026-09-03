@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-explain-passes-empty-binds"
-status: ready
+status: blocked
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: 6
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-03T15:51:19Z"
+assignee: "converge-future-result-event-buffer-instrument"
+blocked-by: "Story premise is wrong: Rails' ExplainSubscriber stores payload[:sql] as a STRING with placeholders (explain_subscriber.rb:14), and to_sql returns a String arel unchanged, so MRI also reaches sqlite3's internal_exec_query with '?' placeholders and []. Verified with real ruby that the sqlite3 C driver leaves unbound parameters NULL and the EXPLAIN succeeds; better-sqlite3 raises RangeError 'Too few parameter values were provided' instead. The divergence is driver tolerance, not the caller, and better-sqlite3 exposes no parameter-count API to pad the bind list with NULLs the way sqlite3 does. Needs a driver-shim story (unbound->NULL) before the seat can pass []."
 closed-reason: null
 ---
 

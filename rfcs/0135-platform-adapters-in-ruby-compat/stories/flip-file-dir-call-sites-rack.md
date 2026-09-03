@@ -1,6 +1,6 @@
 ---
 title: "Flip rack's File/Dir call sites off getFs/getPath"
-status: claimed
+status: in-progress
 updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-file-and-dir-classes-onto-the-fs-backend"]
 deps-rfc: []
 est-loc: 300
 priority: 10
-pr: null
+pr: 7444
 claim: "2026-09-03T13:00:33Z"
 assignee: "flip-file-dir-call-sites-rack"
 blocked-by: null
