@@ -5,8 +5,8 @@ updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
-deps: ["port-rack-test-cookie-jar", "port-rack-test-utils"]
-deps-rfc: []
+deps: ["port-rack-test-cookie-jar", "port-rack-test-utils", "port-uri-for-parse-merge-and-scheme-classes", "port-array-pack-strict-base64-directive"]
+deps-rfc: ["0129-ruby-compat"]
 est-loc: 400
 priority: 8
 pr: null
@@ -90,6 +90,8 @@ follow-up story instead.
 `Session#request` runs the app through `Rack::Test::Utils` for multipart bodies
 and through `CookieJar` for cookie round-trips, which is why this depends on
 both port stories.
+
+`Session#parse_uri` (`test.rb:271-277`) and `#env_for`'s `URI::HTTPS === uri` (`test.rb:297`) need a `URI` trails does not have, and `#basic_authorize` is `[...].pack('m0')` (`test.rb:199`). Both are ruby-compat gaps with their own stories under RFC 0129 — see `deps`.
 
 ## Acceptance criteria
 
