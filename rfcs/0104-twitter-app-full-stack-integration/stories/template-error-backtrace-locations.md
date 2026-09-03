@@ -1,5 +1,5 @@
 ---
-title: "template-error-backtrace-locations"
+title: "Template::Error#backtrace_locations over a settled parsed-frame type"
 status: draft
 updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null

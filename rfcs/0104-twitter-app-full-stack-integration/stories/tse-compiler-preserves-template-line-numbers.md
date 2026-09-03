@@ -1,5 +1,5 @@
 ---
-title: "tse-compiler-preserves-template-line-numbers"
+title: "Tse compiler emits line-number-aligned source so template errors report template lines"
 status: draft
 updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 180
 priority: null
 pr: null
 claim: null
