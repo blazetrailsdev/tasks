@@ -2,7 +2,7 @@
 title: "Retire _resolveInverseName, the second spelling of Reflection#inverse_name, onto the reflection"
 status: draft
 updated: 2026-09-03
-rfc: "0131-activemodel-activerecord-api-parity-100"
+rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
 deps: []
