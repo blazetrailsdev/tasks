@@ -8,7 +8,7 @@ packages: []
 deps: ["port-rack-test-uploaded-file"]
 deps-rfc: []
 est-loc: 250
-priority: 12
+priority: 13
 pr: null
 claim: null
 assignee: null
@@ -45,9 +45,12 @@ file to port. `port-rack-test-uploaded-file` supplies it.
 
 Downstream, `ActionController::Parameters`' permitted-scalar list names
 `Rack::Test::UploadedFile` (`vendor/rails/actionpack/lib/action_controller/
-metal/strong_parameters.rb:1311`) — check whether trails' port of that list
-needs the type added in the same PR, and if it is a larger change than fits,
-file it rather than folding it in.
+metal/strong_parameters.rb:1311`). That was checked while scoping this RFC and
+it is **not** in this story: trails' `isPermittedScalar`
+(`strong-parameters.ts:72-77`) is missing six of the thirteen types, so
+`params.permit` drops uploaded files today. It is filed whole as
+`port-permitted-scalar-types-list`. Do not add the one entry here — a
+half-converged list reads as a checked one.
 
 ## Acceptance criteria
 

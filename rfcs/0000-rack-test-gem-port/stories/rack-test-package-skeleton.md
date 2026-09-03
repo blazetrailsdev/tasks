@@ -62,9 +62,18 @@ Four cross-package registrations, from where `rack-session` sits today:
   subpath one placed ABOVE the bare one.
 - `vitest.dx-tests.config.ts` — both tsconfigs, if the package is referenced.
 
-Src is a bare `src/index.ts` re-export point. **No port bodies in this story** —
-`Session`, `Utils`, `CookieJar`, `UploadedFile` and `Methods` each have their
-own port story.
+Src is `src/index.ts` plus **one real port**: `src/version.ts`, the whole of
+`vendor/rack-test/lib/rack/test/version.rb` (5 lines,
+`VERSION = '2.2.0'.freeze`). It lands here rather than in a story of its own
+because it is a single frozen constant with no behaviour, and because it gives
+`index.ts` something to export instead of being an empty file — which CLAUDE.md
+forbids ("do NOT add empty stubs or placeholder interfaces"). Model it on
+`packages/rack/src/version.ts`, which exports `RELEASE` / `release` and aliases
+`VERSION` in `packages/rack/src/index.ts:1-2`, and mirror its
+`version.test.ts`.
+
+**No other port bodies in this story** — `Session`, `Utils`, `CookieJar`,
+`UploadedFile` and `Methods` each have their own port story.
 
 ## Acceptance criteria
 

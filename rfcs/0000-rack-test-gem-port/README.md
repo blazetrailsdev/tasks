@@ -371,6 +371,13 @@ Every registration point, enumerated from where `rack-session` appears today:
   to `GATED_PACKAGES`. Widening that set is a separate reviewed burndown
   (CLAUDE.md), not a side effect of creating a package.
 
+**No spec file gets a `PERMANENT-SKIP` stub, and that is a deliberate
+difference from RFC 0133.** rack-session declared `cookie.rb` and
+`encryptor.rb` non-goals and stubbed their specs; rack-test has no such file.
+All eight spec files and all 234 cases are assigned to a port story
+(10 + 52 + 50 + 7 + 115 = 234), so a stub here would be hiding an unported
+member rather than recording a descoping decision.
+
 Three of the eight spec files have no same-named lib file —
 `cookie_spec.rb` and `cookie_object_spec.rb` both cover `cookie_jar.rb`, and
 `multipart_spec.rb` covers `utils.rb`. Their TS counterparts (`cookie.test.ts`,
@@ -386,6 +393,7 @@ is ported, so no story is a rewrite plus a port in one PR:
 | --- | --- | --- |
 | `test-case.ts:671-708` `buildMultipartBody` / `shouldMultipart`, boundary `"AaB03x"` | `Rack::Test::Utils#build_multipart` + `MULTIPART_BOUNDARY` | `collapse-actionpack-multipart-encoder-onto-rack-test-utils` |
 | `test-process.ts:63-97` `fileFixtureUpload` returning `ActionDispatch::Http::UploadedFile` | `Rack::Test::UploadedFile` | `converge-file-fixture-upload-onto-rack-test-uploaded-file` |
+| `strong-parameters.ts:72-77` `isPermittedScalar`, 4 lines covering 7 of Rails' 13 types | the `PERMITTED_SCALAR_TYPES` list, `Rack::Test::UploadedFile` included | `port-permitted-scalar-types-list` |
 | `integration.ts:1073-1088` `class MockSession` | `Rack::Test::Session` + `Rack::Test::CookieJar` | **not this RFC** — see Non-goals |
 
 **Stays in actionpack**, because each has a real Rails `.rb` already measured by
@@ -491,8 +499,9 @@ that redirects its one call site.
    redirect/cookie-mutator/state-restore group are split by member at RFC time
    rather than left to whoever claims the work.
 6. **Collapse.** `collapse-actionpack-multipart-encoder-onto-rack-test-utils`
-   (deps: `port-rack-test-utils`, `port-rack-test-uploaded-file`) and
-   `converge-file-fixture-upload-onto-rack-test-uploaded-file` (deps:
+   (deps: `port-rack-test-utils`, `port-rack-test-uploaded-file`),
+   `converge-file-fixture-upload-onto-rack-test-uploaded-file` and
+   `port-permitted-scalar-types-list` (both dep on
    `port-rack-test-uploaded-file`).
 7. **Unblock.** `0104`'s `converge-integration-session-to-rack-test-session`
    becomes buildable once `port-rack-test-session` lands. Owned by 0104; this
@@ -501,7 +510,7 @@ that redirects its one call site.
    `remove-actionpack-uploaded-file-reexport`. Depends on nothing and can land
    at any point.
 
-Thirteen stories, 3,160 loc estimated, none over the 400-loc ceiling.
+Fourteen stories, 3,410 loc estimated, none over the 400-loc ceiling.
 
 ## Verification
 
