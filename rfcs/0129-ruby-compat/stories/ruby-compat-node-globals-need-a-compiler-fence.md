@@ -1,6 +1,6 @@
 ---
 title: "types: [] does not fence Node globals in ruby-compat — decide between a test-only project and the lint fence"
-status: claimed
+status: in-progress
 updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 7442
 claim: "2026-09-03T12:50:47Z"
 assignee: "port-log-subscriber-remaining-subscribe-log-level"
 blocked-by: null

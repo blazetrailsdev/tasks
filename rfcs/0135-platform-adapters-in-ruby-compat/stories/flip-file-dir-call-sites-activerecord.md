@@ -1,6 +1,6 @@
 ---
 title: "Flip activerecord and activerecord-cli's File/Dir call sites off getFs/getPath"
-status: claimed
+status: in-progress
 updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-file-and-dir-classes-onto-the-fs-backend"]
 deps-rfc: []
 est-loc: 350
 priority: 7
-pr: null
+pr: 7442
 claim: "2026-09-03T12:50:47Z"
 assignee: "port-log-subscriber-remaining-subscribe-log-level"
 blocked-by: null
