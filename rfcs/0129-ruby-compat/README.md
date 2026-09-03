@@ -798,9 +798,20 @@ Each must be resolved or deferred to a named story before `status: active`.
 - No member without a call site. No baseline reseed. No mark raised. No package
   removed from an enrollment set to green a run.
 - `parity:api` never enrolls ruby-compat.
+- **A move deletes its own shim.** A story that moves a member into
+  `ruby-compat` repoints every importer and deletes the re-export shim it would
+  otherwise leave behind, in the same PR. Deferring the deletion to a later
+  story is what owed this RFC three separate shim sweeps
+  (`delete-ruby-compat-reexport-shims`,
+  `delete-second-round-ruby-compat-reexport-shims`,
+  `third-round-ruby-compat-reexport-shim-sweep`): each `move-*` story wrote its
+  acceptance criteria against a deletion story that had already closed, so the
+  shim outlived every sweep that was supposed to catch it. No further sweep
+  story is to be filed; the move that creates a shim owns its removal.
 
 ## Changelog
 
 - 2026-08-29: initial RFC. Supersedes `0089-corelib-primitives`.
 - 2026-09-01: `Module#include` / `#extend` / `#prepend` and their type-level
   halves un-deferred and moved to `ruby-compat`; open question 3 answered.
+- 2026-09-03: shim deletion belongs to the move that creates the shim; no fourth sweep is owed.
