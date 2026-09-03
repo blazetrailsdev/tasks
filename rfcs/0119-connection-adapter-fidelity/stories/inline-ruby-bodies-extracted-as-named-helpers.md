@@ -1,7 +1,7 @@
 ---
 title: "inline-ruby-bodies-extracted-as-named-helpers"
-status: in-progress
-updated: 2026-09-02
+status: done
+updated: 2026-09-03
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
