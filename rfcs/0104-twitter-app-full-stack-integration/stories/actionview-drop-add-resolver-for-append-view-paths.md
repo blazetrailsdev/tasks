@@ -33,7 +33,9 @@ Callers today:
 - `packages/actionview/src/digestor.test.ts`
 - `packages/actionview/src/view-paths.trails.test.ts`
 - `packages/actionview/src/template/resolver.trails.test.ts`
-- `examples/twitter-app` and the trailties dev server, if they still call it
+
+Those four test files are the whole caller set on main: neither `trailties`
+nor `examples/` mentions `addResolver` (zero grep hits outside `actionview`).
 
 ## Acceptance criteria
 

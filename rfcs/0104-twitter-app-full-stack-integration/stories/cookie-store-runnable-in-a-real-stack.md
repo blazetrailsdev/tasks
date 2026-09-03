@@ -34,15 +34,12 @@ Two pieces of that story's acceptance did not fit the PR:
    `action-dispatch/deprecator.ts:36`. Rails prepends
    `ActionDispatch::RequestCookieMethods` onto Request
    (`middleware/cookies.rb`), which is what makes `request.cookie_jar` answer.
-2. **There is no example app to convert.** RFC 0104's stories describe an
-   `examples/twitter-app` that hand-rolls a cookie session behind a `TODO`
-   pointing at `session-and-flash-lifecycle`. That app exists only on the
-   unmerged branch it was authored on — `c2c2aa280` ("feat(examples): add
-   twitter-app, the first full-stack trails application") is NOT an ancestor of
-   `origin/main`. What main ships is `examples/twitter-clone`, an older
-   models-only example with no controllers, views, cookies or session (zero
-   grep hits for `cookie` / `session`). So the example-app acceptance criterion
-   this story inherited cannot be met until that app lands.
+2. **There is no example app to convert.** The full-stack example RFC 0104's
+   older story bodies were written against never landed on `origin/main`.
+   What main ships is `examples/twitter-clone`, a models-only example with no
+   controllers, views, cookies or session (zero grep hits for `cookie` /
+   `session`), so the example-app acceptance criterion this story inherited
+   has nothing to act on and has been dropped.
 
 Note `DefaultMiddlewareStack#buildStack`
 (`packages/trailties/src/application/default-middleware-stack.ts`) only uses
@@ -56,8 +53,5 @@ Note `DefaultMiddlewareStack#buildStack`
   `request.cookieJar` answers, per `middleware/cookies.rb`.
 - `CookieStore` runs as middleware end to end: a request through a stack
   carrying it round-trips `session[...]` across two requests via the cookie.
-- If (and only if) `examples/twitter-app` has landed on main by then, it drops
-  its hand-rolled cookie session in favour of `session[...]` and its `TODO`
-  referencing `session-and-flash-lifecycle` is removed. It is not on main
-  today, so this criterion is vacuous until that changes — do not convert
-  `examples/twitter-clone`, which has no session code to convert.
+- No example-app conversion: `examples/twitter-clone` has no session code to
+  convert, and no other example app exists on main.
