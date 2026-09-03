@@ -76,7 +76,7 @@ omitted, so do not add one.
 - [ ] `isPermittedScalar` accepts all thirteen types at
       `strong_parameters.rb:1296-1312`, in that order, including both
       `UploadedFile` classes.
-- [ ] A test proves `params.permit` now *keeps* an uploaded file where it
+- [ ] A test proves `params.permit` now _keeps_ an uploaded file where it
       previously dropped it, and it fails on the current implementation
       (a regression test that passes on baseline proves nothing).
 - [ ] Rails' deliberate omission of a separate `DateTime` check

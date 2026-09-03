@@ -53,7 +53,7 @@ resolves. Mirror the `rack` / `rack-session` entries at
 
 **The `libEntryFile` is the part that differs from its two siblings and needs
 its own comment.** `rack` and `rack-session` point `libPath` at the module root
-specifically to *exclude* the entrypoint shim beside it. rack-test's entrypoint
+specifically to _exclude_ the entrypoint shim beside it. rack-test's entrypoint
 is not a shim: `lib/rack/test.rb` is 382 lines and defines `Session` (`:53`),
 `Error` (`:45`), `DEFAULT_HOST` (`:33`) and `MULTIPART_BOUNDARY` (`:36`). The
 module-root `libPath` is kept for path mapping and the entry file recovered
@@ -87,15 +87,15 @@ So `compareApi` / `compareTests` stay ON. Enrollment itself is
 ## Acceptance criteria
 
 - [ ] `vendor/sources.ts` gains the source above, with a comment explaining why
-  `libEntryFile` is set here and not on `rack` / `rack-session`.
+      `libEntryFile` is set here and not on `rack` / `rack-session`.
 - [ ] `vendor/sources.lock.json` updated by the normal `pnpm vendor:fetch` path,
-  not hand-edited.
+      not hand-edited.
 - [ ] `vendor/sources.test.ts` passes; `vendor/README.md` lists rack-test alongside
-  the other eight.
+      the other eight.
 - [ ] `pnpm vendor:fetch` in a fresh worktree lays down
-  `vendor/rack-test/lib/rack/test.rb` and `vendor/rack-test/spec/`.
+      `vendor/rack-test/lib/rack/test.rb` and `vendor/rack-test/spec/`.
 - [ ] `pnpm parity:api` / `parity:test` deltas non-negative (the package is not yet
-  enrolled, so both are unchanged).
+      enrolled, so both are unchanged).
 
 ## Definition of done
 

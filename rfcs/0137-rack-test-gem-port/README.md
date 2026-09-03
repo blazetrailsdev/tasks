@@ -61,13 +61,13 @@ it uses the same tooling with no extractor changes at all.
 - **Rails' library code names it in five files**, and one of them is not test
   code at all:
 
-  | Rails file:line | names |
-  | --- | --- |
-  | `actionpack/lib/action_dispatch.rb:36` | `autoload :Test, "rack/test"` |
-  | `actionpack/lib/action_controller/test_case.rb:152,163,174` | `Rack::Test::Utils`, `Rack::Test::UploadedFile`, `Rack::Test::MULTIPART_BOUNDARY` |
-  | `actionpack/lib/action_dispatch/testing/integration.rb:7,283` | `require "rack/test"`, `Rack::Test::Session.new(_mock_session)` |
-  | `actionpack/lib/action_dispatch/testing/test_process.rb:12,27` | `Rack::Test::UploadedFile.new(path, mime_type, binary)` |
-  | `actionpack/lib/action_controller/metal/strong_parameters.rb:11,550,1311` | `Rack::Test::UploadedFile` in `PERMITTED_SCALAR_TYPES` |
+  | Rails file:line                                                           | names                                                                             |
+  | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+  | `actionpack/lib/action_dispatch.rb:36`                                    | `autoload :Test, "rack/test"`                                                     |
+  | `actionpack/lib/action_controller/test_case.rb:152,163,174`               | `Rack::Test::Utils`, `Rack::Test::UploadedFile`, `Rack::Test::MULTIPART_BOUNDARY` |
+  | `actionpack/lib/action_dispatch/testing/integration.rb:7,283`             | `require "rack/test"`, `Rack::Test::Session.new(_mock_session)`                   |
+  | `actionpack/lib/action_dispatch/testing/test_process.rb:12,27`            | `Rack::Test::UploadedFile.new(path, mime_type, binary)`                           |
+  | `actionpack/lib/action_controller/metal/strong_parameters.rb:11,550,1311` | `Rack::Test::UploadedFile` in `PERMITTED_SCALAR_TYPES`                            |
 
   `strong_parameters.rb` is production code: an app's `params.permit` behaves
   differently depending on whether `Rack::Test::UploadedFile` is a permitted
@@ -91,13 +91,13 @@ it uses the same tooling with no extractor changes at all.
 
 ### What trails does instead, measured
 
-| trails | what it is | Rails' answer |
-| --- | --- | --- |
-| `packages/actionpack/src/action-dispatch/testing/integration.ts:1073-1088` — `class MockSession` | a 26-line private class. Its header: _"Rack::Test lives outside Rails so there is no file to port"_ | `Rack::Test::Session` (`lib/rack/test.rb:53-373`, 320 lines) |
-| `integration.ts:1073` — `MockSession#cookieJar` is an `ActionDispatch::Cookies::CookieJar` | a genuine Rails class pressed into service as a stand-in | `Rack::Test::CookieJar` (`lib/rack/test/cookie_jar.rb:134-250`) |
-| `packages/actionpack/src/action-controller/test-case.ts:671-696` — `buildMultipartBody` | _"@internal Mirrors Rails Rack::Test::Utils.build_multipart"_. Hard-codes `const boundary = "AaB03x"` | `ENCODER` does `include Rack::Test::Utils` and `public :build_multipart` (`test_case.rb:152,171`); the boundary is `Rack::Test::MULTIPART_BOUNDARY` = `'----------XnJLe9ZIbbGUYtzPQJ16u1'` (`lib/rack/test.rb:36`) |
-| `test-case.ts:698-708` — `shouldMultipart` | reimplements the recursion over `UploadedFile` | `ENCODER#should_multipart?` (`test_case.rb:155-169`), whose own Rails comment reads _"FIXME: lifted from Rack-Test"_ |
-| `packages/actionpack/src/action-dispatch/testing/test-process.ts:63-97` — `fileFixtureUpload` | returns `ActionDispatch::Http::UploadedFile`, with a `NOTE:` conceding the divergence | `Rack::Test::UploadedFile.new(path, mime_type, binary)` (`test_process.rb:27`) |
+| trails                                                                                           | what it is                                                                                            | Rails' answer                                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `packages/actionpack/src/action-dispatch/testing/integration.ts:1073-1088` — `class MockSession` | a 26-line private class. Its header: _"Rack::Test lives outside Rails so there is no file to port"_   | `Rack::Test::Session` (`lib/rack/test.rb:53-373`, 320 lines)                                                                                                                                                       |
+| `integration.ts:1073` — `MockSession#cookieJar` is an `ActionDispatch::Cookies::CookieJar`       | a genuine Rails class pressed into service as a stand-in                                              | `Rack::Test::CookieJar` (`lib/rack/test/cookie_jar.rb:134-250`)                                                                                                                                                    |
+| `packages/actionpack/src/action-controller/test-case.ts:671-696` — `buildMultipartBody`          | _"@internal Mirrors Rails Rack::Test::Utils.build_multipart"_. Hard-codes `const boundary = "AaB03x"` | `ENCODER` does `include Rack::Test::Utils` and `public :build_multipart` (`test_case.rb:152,171`); the boundary is `Rack::Test::MULTIPART_BOUNDARY` = `'----------XnJLe9ZIbbGUYtzPQJ16u1'` (`lib/rack/test.rb:36`) |
+| `test-case.ts:698-708` — `shouldMultipart`                                                       | reimplements the recursion over `UploadedFile`                                                        | `ENCODER#should_multipart?` (`test_case.rb:155-169`), whose own Rails comment reads _"FIXME: lifted from Rack-Test"_                                                                                               |
+| `packages/actionpack/src/action-dispatch/testing/test-process.ts:63-97` — `fileFixtureUpload`    | returns `ActionDispatch::Http::UploadedFile`, with a `NOTE:` conceding the divergence                 | `Rack::Test::UploadedFile.new(path, mime_type, binary)` (`test_process.rb:27`)                                                                                                                                     |
 
 The boundary string is the clearest single symptom: a trails controller test
 posts `--AaB03x` where every Rails controller test posts
@@ -192,7 +192,7 @@ reasons, in descending order of force:
    `Rack::Test::UploadedFile` in `PERMITTED_SCALAR_TYPES`, reached by every
    `params.permit` call in a running app, not only under test. A dev-only
    package cannot be imported from `packages/actionpack/src/action-controller/
-   metal/strong-parameters.ts` in a published build.
+metal/strong-parameters.ts` in a published build.
 3. **trails users need it.** `Rack::Test::Methods` is the public integration
    surface a trails app's own tests will `include`. Publishing it as
    `@blazetrails/rack-test` is what makes that possible; hiding it in
@@ -256,7 +256,7 @@ A new source in `vendor/sources.ts`:
 
 **This is the one place rack-test's layout differs from its two siblings, and
 it is the layout decision worth stating.** `rack` and `rack-session` both point
-`libPath` at the module root explicitly to *exclude* the entrypoint shim beside
+`libPath` at the module root explicitly to _exclude_ the entrypoint shim beside
 it. rack-test's entrypoint is not a shim — it is the largest file in the gem.
 So the module-root `libPath` is kept for the same path-mapping reason, and the
 entry file is recovered through `libEntryFile`, the mechanism `arel` already
@@ -275,14 +275,14 @@ onto `src/test/cookie-jar.ts`.
 gemspec does not declare the **stdlib**, and rack-test requires six stdlib
 files across its 987 lines:
 
-| Ruby | rack-test file:line | trails home |
-| --- | --- | --- |
-| `tempfile` | `uploaded_file.rb:4` (`Tempfile.new` at `:92`) | `@blazetrails/activesupport` — `packages/activesupport/src/tempfile.ts` |
-| `stringio` | `uploaded_file.rb:5` (`when StringIO` at `:36`) | `@blazetrails/ruby-compat` — `src/string-io.ts:20` |
-| `fileutils` | `uploaded_file.rb:3` | `@blazetrails/ruby-compat` — `index.ts:41`, `FileUtils` |
-| `uri` | `test.rb:3`, `cookie_jar.rb:3`; `Session#parse_uri` at `test.rb:271` | `@blazetrails/ruby-compat` (`getFs` / `getPath` seat) |
-| `time` | `cookie_jar.rb:4` (`Cookie#expires`, `:81`) | `@blazetrails/activesupport` / `@blazetrails/ruby-compat` |
-| `forwardable` | `test.rb:21`, `methods.rb:3` | no port needed — TS delegation |
+| Ruby          | rack-test file:line                                                  | trails home                                                             |
+| ------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `tempfile`    | `uploaded_file.rb:4` (`Tempfile.new` at `:92`)                       | `@blazetrails/activesupport` — `packages/activesupport/src/tempfile.ts` |
+| `stringio`    | `uploaded_file.rb:5` (`when StringIO` at `:36`)                      | `@blazetrails/ruby-compat` — `src/string-io.ts:20`                      |
+| `fileutils`   | `uploaded_file.rb:3`                                                 | `@blazetrails/ruby-compat` — `index.ts:41`, `FileUtils`                 |
+| `uri`         | `test.rb:3`, `cookie_jar.rb:3`; `Session#parse_uri` at `test.rb:271` | `@blazetrails/ruby-compat` (`getFs` / `getPath` seat)                   |
+| `time`        | `cookie_jar.rb:4` (`Cookie#expires`, `:81`)                          | `@blazetrails/activesupport` / `@blazetrails/ruby-compat`               |
+| `forwardable` | `test.rb:21`, `methods.rb:3`                                         | no port needed — TS delegation                                          |
 
 So `packages/rack-test/package.json` declares **exactly the three workspace
 dependencies `packages/rack-session/package.json` already declares** —
@@ -306,18 +306,18 @@ drops out — one line in that story's sweep, not a story of its own here.
 
 Verified line anchors at `v2.2.0`:
 
-| Ruby | file:line | lines |
-| --- | --- | --- |
-| `DEFAULT_HOST` / `MULTIPART_BOUNDARY` | `test.rb:33`, `:36` | — |
-| `Error` | `test.rb:45` | 45 |
-| `Session` | `test.rb:53` | 53-373 |
-| `Rack::Test.encoding_aware_strings?` | `test.rb:375` | 375-377 |
-| `Cookie` | `cookie_jar.rb:10` | 10-132 |
-| `CookieJar` | `cookie_jar.rb:134` | 134-250 |
-| `Utils` | `utils.rb:5` | 5-155 |
-| `UploadedFile` | `uploaded_file.rb:14` | 14-98 |
-| `Methods` | `methods.rb:24` | 24-93 |
-| `VERSION` | `version.rb:3` | 5 |
+| Ruby                                  | file:line             | lines   |
+| ------------------------------------- | --------------------- | ------- |
+| `DEFAULT_HOST` / `MULTIPART_BOUNDARY` | `test.rb:33`, `:36`   | —       |
+| `Error`                               | `test.rb:45`          | 45      |
+| `Session`                             | `test.rb:53`          | 53-373  |
+| `Rack::Test.encoding_aware_strings?`  | `test.rb:375`         | 375-377 |
+| `Cookie`                              | `cookie_jar.rb:10`    | 10-132  |
+| `CookieJar`                           | `cookie_jar.rb:134`   | 134-250 |
+| `Utils`                               | `utils.rb:5`          | 5-155   |
+| `UploadedFile`                        | `uploaded_file.rb:14` | 14-98   |
+| `Methods`                             | `methods.rb:24`       | 24-93   |
+| `VERSION`                             | `version.rb:3`        | 5       |
 
 ### Package shape
 
@@ -325,19 +325,19 @@ Verified line anchors at `v2.2.0`:
 `tsconfig.json`, `src/index.ts`, and the four cross-package registrations —
 `pnpm-workspace.yaml` (covered by the `packages/*` glob), root `tsconfig.json`
 references (`tsconfig.json:30` is the rack-session row), and **both**
-`vitest.config.ts` alias entries, the trailing-slash subpath one placed *above*
+`vitest.config.ts` alias entries, the trailing-slash subpath one placed _above_
 the bare one (`vitest.config.ts:249-250`).
 
 Src mirrors the gem under the module root:
 
-| Ruby | TS |
-| --- | --- |
-| `lib/rack/test.rb` | `packages/rack-test/src/test.ts` |
-| `lib/rack/test/cookie_jar.rb` | `src/cookie-jar.ts` |
-| `lib/rack/test/methods.rb` | `src/methods.ts` |
-| `lib/rack/test/uploaded_file.rb` | `src/uploaded-file.ts` |
-| `lib/rack/test/utils.rb` | `src/utils.ts` |
-| `lib/rack/test/version.rb` | `src/version.ts` |
+| Ruby                             | TS                               |
+| -------------------------------- | -------------------------------- |
+| `lib/rack/test.rb`               | `packages/rack-test/src/test.ts` |
+| `lib/rack/test/cookie_jar.rb`    | `src/cookie-jar.ts`              |
+| `lib/rack/test/methods.rb`       | `src/methods.ts`                 |
+| `lib/rack/test/uploaded_file.rb` | `src/uploaded-file.ts`           |
+| `lib/rack/test/utils.rb`         | `src/utils.ts`                   |
+| `lib/rack/test/version.rb`       | `src/version.ts`                 |
 
 ### Tooling enrollment
 
@@ -384,29 +384,29 @@ source, which `packages/rack` already does.
 Each is a separate story, and each lands **after** the member it collapses onto
 is ported, so no story is a rewrite plus a port in one PR:
 
-| actionpack today | collapses onto | story |
-| --- | --- | --- |
-| `test-case.ts:671-708` `buildMultipartBody` / `shouldMultipart`, boundary `"AaB03x"` | `Rack::Test::Utils#build_multipart` + `MULTIPART_BOUNDARY` | `collapse-actionpack-multipart-encoder-onto-rack-test-utils` |
-| `test-process.ts:63-97` `fileFixtureUpload` returning `ActionDispatch::Http::UploadedFile` | `Rack::Test::UploadedFile` | `converge-file-fixture-upload-onto-rack-test-uploaded-file` |
-| `strong-parameters.ts:72-77` `isPermittedScalar`, 4 lines covering 7 of Rails' 13 types | the `PERMITTED_SCALAR_TYPES` list, `Rack::Test::UploadedFile` included | `port-permitted-scalar-types-list` |
-| `integration.ts:1073-1088` `class MockSession` | `Rack::Test::Session` + `Rack::Test::CookieJar` | **not this RFC** — see Non-goals |
+| actionpack today                                                                           | collapses onto                                                         | story                                                        |
+| ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- | ------------------------------------------------------------ |
+| `test-case.ts:671-708` `buildMultipartBody` / `shouldMultipart`, boundary `"AaB03x"`       | `Rack::Test::Utils#build_multipart` + `MULTIPART_BOUNDARY`             | `collapse-actionpack-multipart-encoder-onto-rack-test-utils` |
+| `test-process.ts:63-97` `fileFixtureUpload` returning `ActionDispatch::Http::UploadedFile` | `Rack::Test::UploadedFile`                                             | `converge-file-fixture-upload-onto-rack-test-uploaded-file`  |
+| `strong-parameters.ts:72-77` `isPermittedScalar`, 4 lines covering 7 of Rails' 13 types    | the `PERMITTED_SCALAR_TYPES` list, `Rack::Test::UploadedFile` included | `port-permitted-scalar-types-list`                           |
+| `integration.ts:1073-1088` `class MockSession`                                             | `Rack::Test::Session` + `Rack::Test::CookieJar`                        | **not this RFC** — see Non-goals                             |
 
 **Stays in actionpack**, because each has a real Rails `.rb` already measured by
 `parity:api`, and moving it would destroy working coverage:
 
-| TS | Rails `.rb` |
-| --- | --- |
-| `action-dispatch/http/upload.ts` (`ActionDispatch::Http::UploadedFile`) | `action_dispatch/http/upload.rb` |
-| `action-dispatch/dispatch/uploaded-file.test.ts` | `actionpack/test/dispatch/uploaded_file_test.rb` |
-| `action-dispatch/testing/test-process.ts` (`TestProcess`) | `action_dispatch/testing/test_process.rb` |
-| `action-dispatch/testing/integration.ts` (`Integration::Session`, `Runner`) | `action_dispatch/testing/integration.rb` |
-| `action-controller/test-case.ts` (`ActionController::TestCase`) | `action_controller/test_case.rb` |
+| TS                                                                          | Rails `.rb`                                      |
+| --------------------------------------------------------------------------- | ------------------------------------------------ |
+| `action-dispatch/http/upload.ts` (`ActionDispatch::Http::UploadedFile`)     | `action_dispatch/http/upload.rb`                 |
+| `action-dispatch/dispatch/uploaded-file.test.ts`                            | `actionpack/test/dispatch/uploaded_file_test.rb` |
+| `action-dispatch/testing/test-process.ts` (`TestProcess`)                   | `action_dispatch/testing/test_process.rb`        |
+| `action-dispatch/testing/integration.ts` (`Integration::Session`, `Runner`) | `action_dispatch/testing/integration.rb`         |
+| `action-controller/test-case.ts` (`ActionController::TestCase`)             | `action_controller/test_case.rb`                 |
 
 `ActionDispatch::Http::UploadedFile` and `Rack::Test::UploadedFile` are two
 different classes that both exist upstream — Rails' `test_process.rb:27`
 constructs the rack-test one and hands it to a request that parses it into the
 ActionDispatch one. Collapsing them into a single trails class would be the
-inverse of fidelity. One loose end noted and *not* fixed here:
+inverse of fidelity. One loose end noted and _not_ fixed here:
 `packages/actionpack/src/action-dispatch/uploaded-file.ts` is a one-line
 re-export of `./http/upload.js` at a path with no Rails counterpart
 (`action_dispatch/uploaded_file.rb` does not exist). It predates this work and
@@ -427,7 +427,7 @@ that redirects its one call site.
   `0104-twitter-app-full-stack-integration/converge-integration-session-to-rack-test-session`,
   already `ready` at 500 loc, and it is a much larger change than a relocation
   — it replaces trails' hand-rolled controller dispatch with a real middleware
-  round-trip. This RFC's job is to make that story *possible* by putting
+  round-trip. This RFC's job is to make that story _possible_ by putting
   `Rack::Test::Session` in the tree. `MockSession` is deleted by that story,
   not by this RFC. Filing a second story for the same work would duplicate an
   owned one.
@@ -449,7 +449,7 @@ that redirects its one call site.
 ## Alternatives considered
 
 - **Leave the stand-ins in actionpack and tag them `@noRailsEquivalent
-  PERMANENT`.** Cheapest today. It permanently misprices 90 measurable public
+PERMANENT`.** Cheapest today. It permanently misprices 90 measurable public
   methods as invented actionpack surface, forfeits 234 creditable test names,
   leaves `--AaB03x` on the wire, and leaves a `ready` 0104 story with no
   prerequisite. Rejected: a receipt is a ledger row, not a fix (CLAUDE.md, "A

@@ -37,7 +37,7 @@ trails reimplements all of it, because there was no gem in the tree to include:
 
 - `packages/actionpack/src/action-controller/test-case.ts:671-696`
   `buildMultipartBody`, tagged `@internal Mirrors Rails
-  Rack::Test::Utils.build_multipart`. It hand-rolls the part encoding **and
+Rack::Test::Utils.build_multipart`. It hand-rolls the part encoding **and
   invents its own boundary**: `:672` is `const boundary = "AaB03x"`, where
   Rails emits `Rack::Test::MULTIPART_BOUNDARY` =
   `'----------XnJLe9ZIbbGUYtzPQJ16u1'` (`vendor/rack-test/lib/rack/test.rb:36`).
@@ -60,16 +60,16 @@ from the gem.
 ## Acceptance criteria
 
 - [ ] `buildMultipartBody` is deleted from
-  `packages/actionpack/src/action-controller/test-case.ts`; the encoder calls
-  `buildMultipart` from `@blazetrails/rack-test`.
+      `packages/actionpack/src/action-controller/test-case.ts`; the encoder calls
+      `buildMultipart` from `@blazetrails/rack-test`.
 - [ ] The boundary comes from `MULTIPART_BOUNDARY`; `grep -rn 'AaB03x' packages/`
-  returns 0.
+      returns 0.
 - [ ] `shouldMultipart` remains in `test-case.ts`, matching `test_case.rb:155-169`.
 - [ ] `packages/actionpack`'s `parity:api:extra` novel count drops by the deleted
-  names; `parity:api` / `parity:test` deltas non-negative for actioncontroller.
+      names; `parity:api` / `parity:test` deltas non-negative for actioncontroller.
 - [ ] Existing actionpack multipart tests pass with the new boundary; any test that
-  asserted `AaB03x` is corrected to the Rails value — that is a value fix, not a
-  test rename.
+      asserted `AaB03x` is corrected to the Rails value — that is a value fix, not a
+      test rename.
 
 ## Definition of done
 

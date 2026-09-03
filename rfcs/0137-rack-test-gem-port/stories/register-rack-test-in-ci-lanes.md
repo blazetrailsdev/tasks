@@ -59,6 +59,6 @@ a silently-green guard, not a red one.
 
 - [ ] All four `ci.yml` registrations landed.
 - [ ] `pnpm vitest run scripts/ci-suite-coverage.test.ts` is green, and its
-  assertion actually distinguishes `rack`, `rack-session` and `rack-test`
-  rather than prefix-matching one for another.
+      assertion actually distinguishes `rack`, `rack-session` and `rack-test`
+      rather than prefix-matching one for another.
 - [ ] `pnpm vitest run packages/rack-test` runs the package's suite standalone.

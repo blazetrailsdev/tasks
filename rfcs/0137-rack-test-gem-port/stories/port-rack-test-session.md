@@ -94,15 +94,15 @@ both port stories.
 ## Acceptance criteria
 
 - [ ] `packages/rack-test/src/test.ts` ports `Error`, the `Session` members
-  listed above (including the `authorize` alias) and `encoding_aware_strings?`
-  in Rails source order, with the Rails names and
-  parameter names, including the default `default_host = DEFAULT_HOST`.
+      listed above (including the `authorize` alias) and `encoding_aware_strings?`
+      in Rails source order, with the Rails names and
+      parameter names, including the default `default_host = DEFAULT_HOST`.
 - [ ] A TS equivalent of `spec/fixtures/fake_app.rb` exists under
-  `packages/rack-test/src/`, and the fixture files it reads are mirrored.
+      `packages/rack-test/src/`, and the fixture files it reads are mirrored.
 - [ ] `packages/rack-test/src/test.test.ts` credits the cases covered by the members
-  landed; `parity:test` delta is non-negative and no test name is reworded.
+      landed; `parity:test` delta is non-negative and no test name is reworded.
 - [ ] `packages/actionpack/src/action-dispatch/testing/integration.ts` is unchanged
-  — driving it through this class belongs to 0104.
+      — driving it through this class belongs to 0104.
 - [ ] Both call gates green with no new baseline rows.
 
 ## Definition of done

@@ -34,7 +34,7 @@ Source: `vendor/rack-test/lib/rack/test/cookie_jar.rb` (251 lines), two classes:
   `valid?` (`:91`), `matches?` (`:101`), `<=>` (`:106`), `to_h` (`:111`),
   `default_uri` (`:125`).
 - `CookieJar` (`:134-250`) — `initialize(cookies = [], default_host =
-  DEFAULT_HOST)` (`:137`), `initialize_copy` (`:143`), `[]` (`:150`), `[]=`
+DEFAULT_HOST)` (`:137`), `initialize_copy` (`:143`), `[]` (`:150`), `[]=`
   (`:160`), `get_cookie` (`:166`), `delete` (`:174`), `merge` (`:184`), `<<`
   (`:197`), `for` (`:208`), `to_hash` (`:225`), `each_cookie_for` (`:244`).
 
@@ -43,11 +43,11 @@ Both are `# :nodoc:` in Ruby, so `blazetrails/rails-private-jsdoc` will want
 
 Tests, **52 cases** across three files:
 
-| Ruby | TS | cases |
-| --- | --- | --- |
-| `spec/rack/test/cookie_jar_spec.rb` | `src/cookie-jar.test.ts` | 10 |
-| `spec/rack/test/cookie_spec.rb` | `src/cookie.test.ts` | 33 |
-| `spec/rack/test/cookie_object_spec.rb` | `src/cookie-object.test.ts` | 9 |
+| Ruby                                   | TS                          | cases |
+| -------------------------------------- | --------------------------- | ----- |
+| `spec/rack/test/cookie_jar_spec.rb`    | `src/cookie-jar.test.ts`    | 10    |
+| `spec/rack/test/cookie_spec.rb`        | `src/cookie.test.ts`        | 33    |
+| `spec/rack/test/cookie_object_spec.rb` | `src/cookie-object.test.ts` | 9     |
 
 Ruby-idiom traps live here specifically: `<=>` is a comparison operator with no
 JS equivalent spelling (see `docs/ruby-ts-conventions.md` before naming it),
@@ -62,9 +62,9 @@ which owns that change.
 ## Acceptance criteria
 
 - [ ] `packages/rack-test/src/cookie-jar.ts` ports both classes member for member in
-  Rails source order, with the Rails names and parameter names.
+      Rails source order, with the Rails names and parameter names.
 - [ ] The three test files credit all 52 cases under `parity:test`; no test name is
-  reworded.
+      reworded.
 - [ ] `packages/actionpack/src/action-dispatch/testing/integration.ts` is unchanged.
 - [ ] `pnpm parity:api` / `parity:test` deltas non-negative; both call gates green
-  with no new baseline rows.
+      with no new baseline rows.

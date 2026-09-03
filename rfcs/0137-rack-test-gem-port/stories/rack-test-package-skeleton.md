@@ -78,19 +78,19 @@ forbids ("do NOT add empty stubs or placeholder interfaces"). Model it on
 ## Acceptance criteria
 
 - [ ] `packages/rack-test/package.json` exists as described, with **no**
-  `"private": true`, and declares `@blazetrails/rack`,
-  `@blazetrails/ruby-compat` and `@blazetrails/activesupport` — not `rack`
-  alone.
+      `"private": true`, and declares `@blazetrails/rack`,
+      `@blazetrails/ruby-compat` and `@blazetrails/activesupport` — not `rack`
+      alone.
 - [ ] `packages/rack-test/tsconfig.json` and `src/index.ts` exist; `pnpm typecheck`
-  is green.
+      is green.
 - [ ] The root `tsconfig.json` reference and both `vitest.config.ts` alias entries
-  are present, subpath above bare.
+      are present, subpath above bare.
 - [ ] `packages/actionpack/package.json` gains a plain `dependencies` entry on
-  `@blazetrails/rack-test`, mirroring `actionpack.gemspec:41`.
+      `@blazetrails/rack-test`, mirroring `actionpack.gemspec:41`.
 - [ ] A plain-node import of the **built** `packages/rack-test/dist/index.js` as an
-  entry module succeeds, and so does a plain-node import of
-  `packages/actionpack/dist/index.js` — the acyclicity check RFC Open Question 3
-  asks for. A vitest run does not satisfy this.
+      entry module succeeds, and so does a plain-node import of
+      `packages/actionpack/dist/index.js` — the acyclicity check RFC Open Question 3
+      asks for. A vitest run does not satisfy this.
 
 ## Definition of done
 

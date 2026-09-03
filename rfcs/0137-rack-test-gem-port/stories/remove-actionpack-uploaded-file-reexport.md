@@ -41,7 +41,7 @@ that work and is unrelated to rack-test — so it is filed rather than folded in
 
 - [ ] `packages/actionpack/src/action-dispatch/uploaded-file.ts` is deleted.
 - [ ] `dispatch/uploaded-file.test.ts` imports from `../http/upload.js`; its test
-  names are unchanged and `parity:test` still credits it against
-  `test/dispatch/uploaded_file_test.rb`.
+      names are unchanged and `parity:test` still credits it against
+      `test/dispatch/uploaded_file_test.rb`.
 - [ ] `parity:api:extra --package actionpack` novel count drops or holds; deltas
-  non-negative.
+      non-negative.

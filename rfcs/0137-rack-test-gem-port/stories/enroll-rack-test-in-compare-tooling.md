@@ -42,16 +42,16 @@ strip the redundant leading `test/` directory segment — the same
 repeated-lib-root case the existing i18n and rack-session arms handle — and map
 `_spec.rb` → `.test.ts`:
 
-| Ruby | TS |
-| --- | --- |
-| `rack/test_spec.rb` | `test.test.ts` |
-| `rack/test/cookie_jar_spec.rb` | `cookie-jar.test.ts` |
-| `rack/test/cookie_spec.rb` | `cookie.test.ts` |
+| Ruby                              | TS                      |
+| --------------------------------- | ----------------------- |
+| `rack/test_spec.rb`               | `test.test.ts`          |
+| `rack/test/cookie_jar_spec.rb`    | `cookie-jar.test.ts`    |
+| `rack/test/cookie_spec.rb`        | `cookie.test.ts`        |
 | `rack/test/cookie_object_spec.rb` | `cookie-object.test.ts` |
-| `rack/test/methods_spec.rb` | `methods.test.ts` |
-| `rack/test/multipart_spec.rb` | `multipart.test.ts` |
+| `rack/test/methods_spec.rb`       | `methods.test.ts`       |
+| `rack/test/multipart_spec.rb`     | `multipart.test.ts`     |
 | `rack/test/uploaded_file_spec.rb` | `uploaded-file.test.ts` |
-| `rack/test/utils_spec.rb` | `utils.test.ts` |
+| `rack/test/utils_spec.rb`         | `utils.test.ts`         |
 
 Note the existing arm strips a `spec_` PREFIX (`rack`'s `spec_mock_request.rb`);
 rack-test uses a `_spec` SUFFIX, so this is a new branch, not a widened one.
@@ -67,16 +67,16 @@ package in `GATED_PACKAGES` is its own reviewed burndown (CLAUDE.md).
 
 - [ ] All five registrations above landed in one PR.
 - [ ] `scripts/test-compare/compare.test.ts` gains cases for the eight mappings
-  above, beside the rack-session cases at `:157-159`.
+      above, beside the rack-session cases at `:157-159`.
 - [ ] `pnpm parity:api` prints a `rack-test` row; `pnpm parity:test` prints
-  `rack-test: 8 files, 234 tests`.
+      `rack-test: 8 files, 234 tests`.
 - [ ] `blazetrails/rails-private-jsdoc` is run with `--fix` in the same PR (the
-  extractor reports 17 of the 90 methods internal — RFC Open Question 1), so
-  the manifest addition does not leave the `rails-comparison` CI job red.
+      extractor reports 17 of the 90 methods internal — RFC Open Question 1), so
+      the manifest addition does not leave the `rails-comparison` CI job red.
 - [ ] `pnpm parity:api` / `parity:test` deltas for every other package are
-  non-negative.
+      non-negative.
 - [ ] `pnpm parity:api:extra --package rack-test` runs and reports; no baseline or
-  mark is widened.
+      mark is widened.
 
 ## Definition of done
 

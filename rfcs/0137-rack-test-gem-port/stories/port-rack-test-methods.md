@@ -59,10 +59,10 @@ already exercises it indirectly.
 ## Acceptance criteria
 
 - [ ] `packages/rack-test/src/methods.ts` ports the module member for member in
-  Rails source order, with `":default"` as the Symbol default.
+      Rails source order, with `":default"` as the Symbol default.
 - [ ] `methods.test.ts` credits all 7 cases under `parity:test`; no test name is
-  reworded.
+      reworded.
 - [ ] `packages/rack-test/src/index.ts` exports `Methods`, `Session`,
-  `UploadedFile`, `Utils`, `CookieJar`, `MULTIPART_BOUNDARY` and `DEFAULT_HOST`
-  — the surface Rails' five library call sites name.
+      `UploadedFile`, `Utils`, `CookieJar`, `MULTIPART_BOUNDARY` and `DEFAULT_HOST`
+      — the surface Rails' five library call sites name.
 - [ ] Both call gates green with no new baseline rows.

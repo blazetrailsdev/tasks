@@ -39,8 +39,8 @@ from Rails.
 
 The two classes are genuinely different and both exist upstream —
 `vendor/rails/actionpack/lib/action_dispatch/http/upload.rb` is what a request
-parses a multipart part *into*; `vendor/rack-test/lib/rack/test/uploaded_file.rb`
-is what a test hands *in*. trails collapsed them only because the second had no
+parses a multipart part _into_; `vendor/rack-test/lib/rack/test/uploaded_file.rb`
+is what a test hands _in_. trails collapsed them only because the second had no
 file to port. `port-rack-test-uploaded-file` supplies it.
 
 Downstream, `ActionController::Parameters`' permitted-scalar list names
@@ -55,16 +55,16 @@ half-converged list reads as a checked one.
 ## Acceptance criteria
 
 - [ ] `fileFixtureUpload` / `fixtureFileUpload` in `test-process.ts` return a
-  `Rack::Test::UploadedFile` from `@blazetrails/rack-test`, constructed as
-  `new UploadedFile(path, mimeType, binary)` — Rails' positional order.
+      `Rack::Test::UploadedFile` from `@blazetrails/rack-test`, constructed as
+      `new UploadedFile(path, mimeType, binary)` — Rails' positional order.
 - [ ] The `NOTE:` conceding the divergence is deleted, not reworded: the `binary`
-  flag now does what Rails' does.
+      flag now does what Rails' does.
 - [ ] `packages/actionpack/src/action-dispatch/http/upload.ts` and
-  `action-dispatch/dispatch/uploaded-file.test.ts` are unchanged — they mirror
-  `http/upload.rb` and `test/dispatch/uploaded_file_test.rb` and keep their
-  coverage.
+      `action-dispatch/dispatch/uploaded-file.test.ts` are unchanged — they mirror
+      `http/upload.rb` and `test/dispatch/uploaded_file_test.rb` and keep their
+      coverage.
 - [ ] `parity:api` / `parity:test` deltas non-negative for actiondispatch; both call
-  gates green with no new baseline rows.
+      gates green with no new baseline rows.
 
 ## Definition of done
 
