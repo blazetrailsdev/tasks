@@ -26,8 +26,8 @@ lint scripts.
 
 Split it where the RFC splits everything else:
 
-| Stays in `tasks` | Moves to trailmap |
-| --- | --- |
+| Stays in `tasks`                                                   | Moves to trailmap                                                       |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------- |
 | Frontmatter parses, required keys, legal enum values, markdownlint | `effectiveStoryStatus`, cross-story dep resolution, RFC-lifecycle rules |
 
 The constraint that forces it is not aesthetic: trailmap binds to loopback, so

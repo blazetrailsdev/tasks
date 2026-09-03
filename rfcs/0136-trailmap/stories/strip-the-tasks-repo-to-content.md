@@ -25,13 +25,13 @@ would keep a full second copy of the domain indefinitely.
 
 By the time this runs, every consumer should already be pointed elsewhere:
 
-| Removed | Replaced by |
-| --- | --- |
-| `src/models/`, `src/ranking.ts`, `src/verbs.ts`, `src/readmodel.ts` | trailmap's models |
-| `src/db.ts`, `src/db-path.ts` | trailmap owns the connection |
-| `src/cli.ts`, `bin/tasks` | trailmap's CLI |
-| `src/ingest.ts`, `src/authoring.ts`, `src/export.ts` | trailmap services |
-| `db/migrate/`, `vendor/`, `package.json`, lockfile, `node_modules` | not needed by a content repo |
+| Removed                                                             | Replaced by                  |
+| ------------------------------------------------------------------- | ---------------------------- |
+| `src/models/`, `src/ranking.ts`, `src/verbs.ts`, `src/readmodel.ts` | trailmap's models            |
+| `src/db.ts`, `src/db-path.ts`                                       | trailmap owns the connection |
+| `src/cli.ts`, `bin/tasks`                                           | trailmap's CLI               |
+| `src/ingest.ts`, `src/authoring.ts`, `src/export.ts`                | trailmap services            |
+| `db/migrate/`, `vendor/`, `package.json`, lockfile, `node_modules`  | not needed by a content repo |
 
 What stays: `rfcs/**/*.md`, the syntactic-validation `scripts/`,
 `finalize-rfc.mjs`, `lib.mjs`, `sync-rfcs.sh`, and repo metadata.
