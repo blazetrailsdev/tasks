@@ -21,7 +21,7 @@ closed-reason: null
 `ar-config.ts` has no Rails counterpart. It is a trails-invented object standing
 in for the `ActiveRecord` module's singleton config accessors, and
 `pnpm parity:api:extra --package activerecord` scores it _1 novel, 27 moved
-[no Rails counterpart]** — "moved" meaning Rails _does_ define the name, just in
+[no Rails counterpart]\*\* — "moved" meaning Rails \_does_ define the name, just in
 a `.rb` this file does not map to.
 
 RFC 0081 built this file (`convert-ar-config-accessors-exported-flags` #5563,
