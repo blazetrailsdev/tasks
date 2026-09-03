@@ -55,6 +55,28 @@ that let `rack` satisfy the assertion for `rack-session`, fixed by
 that fix generalizes to three rather than assuming it does — the failure mode is
 a silently-green guard, not a red one.
 
+**Three of the four already landed in #7453** (the skeleton story's PR), because
+`scripts/ci-suite-coverage.test.ts` turned that PR red the moment
+`packages/rack-test` existed with a test in it: `RACK_PKGS_RE` (`:118`), the
+"Rack tests" step (`:733`) and the coverage list (`:815`, shifted by one). What
+remains for this story is the fourth — **`AP_PKGS_RE` (`:112`)** — which nothing
+gates, since actionpack's dependency on `@blazetrails/rack-test` is a
+`package.json` edge the coverage guard does not read.
+
+Two findings from that forced pass, both good news for the paragraph below:
+
+- The prefix fix **does** generalize to three `rack`-prefixed packages. The
+  guard reported `packages/rack-test` as uncovered rather than letting
+  `packages/rack`'s filter satisfy it, so the hazard this story warns about did
+  not recur.
+- Registering the package **also** required editing the guard's own synthetic
+  fixture strings in `scripts/ci-suite-coverage.test.ts`, which embed the
+  literal `run: pnpm vitest run packages/rack packages/rack-session\n`.
+  Appending to that line makes the fixture's `.replace` a no-op and reds
+  `"reports a package a prefix-named sibling's filter appears to cover"`. The
+  `AP_PKGS_RE` edit does not touch that literal, so this story should not hit
+  it — but a future fourth `rack` package will.
+
 ## Acceptance criteria
 
 - [ ] All four `ci.yml` registrations landed.
