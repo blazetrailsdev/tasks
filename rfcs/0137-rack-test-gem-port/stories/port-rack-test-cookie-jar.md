@@ -5,8 +5,8 @@ updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
-deps: ["enroll-rack-test-in-compare-tooling"]
-deps-rfc: []
+deps: ["enroll-rack-test-in-compare-tooling", "port-uri-for-parse-merge-and-scheme-classes", "port-time-parse-reader-onto-the-date-time-seat"]
+deps-rfc: ["0129-ruby-compat"]
 est-loc: 400
 priority: 7
 pr: null
@@ -58,6 +58,8 @@ its behaviour directly.
 This story does **not** touch `integration.ts`. Replacing `MockSession`'s jar is
 `0104-twitter-app-full-stack-integration/converge-integration-session-to-rack-test-session`,
 which owns that change.
+
+`Cookie#expires` is `Time.parse(@options['expires'])` (`cookie_jar.rb:82`), and `#valid?` writes `uri.host = @default_host` on a `nil` host (`:93`) while `#default_uri` parses a scheme-less `'//' + host + '/'` (`:126`). Neither `Time.parse` nor `URI` exists in trails; both have stories under RFC 0129 — see `deps`.
 
 ## Acceptance criteria
 

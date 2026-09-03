@@ -5,8 +5,8 @@ updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
-deps: ["enroll-rack-test-in-compare-tooling"]
-deps-rfc: []
+deps: ["enroll-rack-test-in-compare-tooling", "expose-fileutils-copy-file-as-a-public-member", "port-set-encoding-on-stringio-and-tempfile"]
+deps-rfc: ["0129-ruby-compat"]
 est-loc: 300
 priority: 5
 pr: null
@@ -54,6 +54,8 @@ here.
 trails `method_missing` idiom; if the answer is to spell out the `IO` surface
 trails actually calls, that is a `@missingRailsCall` receipt at one site, not a
 design change (RFC Open Question 2).
+
+`initialize_from_file_path` calls `@tempfile.set_encoding(Encoding::BINARY)` and `FileUtils.copy_file(path, @tempfile.path)` (`uploaded_file.rb:93,95`). trails has neither member — `copyFile` is module-private (`ruby-compat/src/file-utils.ts:192`) and nothing answers `setEncoding`. See `deps`.
 
 ## Acceptance criteria
 

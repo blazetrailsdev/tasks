@@ -5,8 +5,8 @@ updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
-deps: ["port-rack-test-session"]
-deps-rfc: []
+deps: ["port-rack-test-session", "port-uri-for-parse-merge-and-scheme-classes"]
+deps-rfc: ["0129-ruby-compat"]
 est-loc: 250
 priority: 9
 pr: null
@@ -45,6 +45,8 @@ the happy one.
 Tests: the remainder of `test_spec.rb` that `port-rack-test-session` left
 uncredited — the redirect, cookie-mutator and multi-session groups. Do not
 reword a test name to fit the split.
+
+`follow_redirect!` computes the next location as `URI.parse(last_request.url) + URI.parse(last_response['Location'])` (`test.rb:225`) — `URI::Generic#merge`, which `new URL(rel, base)` approximates but does not equal. See `deps`.
 
 ## Acceptance criteria
 

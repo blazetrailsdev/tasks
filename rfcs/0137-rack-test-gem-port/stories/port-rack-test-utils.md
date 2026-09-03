@@ -5,8 +5,8 @@ updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
-deps: ["enroll-rack-test-in-compare-tooling", "port-rack-test-uploaded-file"]
-deps-rfc: []
+deps: ["enroll-rack-test-in-compare-tooling", "port-rack-test-uploaded-file", "port-string-b-binary-copy", "port-set-encoding-on-stringio-and-tempfile"]
+deps-rfc: ["0129-ruby-compat"]
 est-loc: 350
 priority: 6
 pr: null
@@ -45,6 +45,8 @@ Scope note: no trails caller is redirected onto `build_nested_query` in this
 story (trails' query building goes through `@blazetrails/rack`'s parser). It is
 ported for surface and covered by `utils_spec.rb`; redirecting callers is not
 part of this RFC.
+
+The multipart builder appends `.b` on every line (`utils.rb:125,127,137,139,141,143`) and guards `uploaded_file.set_encoding(Encoding::BINARY)` on `respond_to?(:set_encoding)` (`:147-148`) — so a missing `setEncoding` does not raise, it takes the other branch and drops the file body. Both members are ruby-compat gaps with stories under RFC 0129 — see `deps`.
 
 ## Acceptance criteria
 
