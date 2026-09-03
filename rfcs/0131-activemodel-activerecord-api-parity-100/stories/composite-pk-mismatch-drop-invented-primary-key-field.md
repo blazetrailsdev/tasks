@@ -93,7 +93,7 @@ blind sweep over `primaryKey,` hits it and breaks the parse.
 the invented affordance directly:
 
 > `it("CompositePrimaryKeyMismatchError accepts a pre-resolved primaryKey for
-> reflection-less guards")`
+reflection-less guards")`
 
 with a literal carrying `primaryKey: ["id"]` and neither predicate. Deleting
 the field without converging that test reds it — the message falls through to
