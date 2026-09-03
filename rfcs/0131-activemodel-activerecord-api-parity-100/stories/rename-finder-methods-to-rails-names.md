@@ -1,7 +1,7 @@
 ---
 title: "Drop the invented perform prefix from relation/finder-methods.ts so the 25 finders Relation mixes in credit to the file that ports them"
-status: in-progress
-updated: 2026-09-02
+status: done
+updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages:

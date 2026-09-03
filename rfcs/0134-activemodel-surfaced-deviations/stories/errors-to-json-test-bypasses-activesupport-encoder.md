@@ -1,7 +1,7 @@
 ---
 title: "errors_to_json asserts via JSON.stringify instead of ActiveSupport::JSON.encode"
-status: in-progress
-updated: 2026-09-02
+status: done
+updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: test-placement
 packages:

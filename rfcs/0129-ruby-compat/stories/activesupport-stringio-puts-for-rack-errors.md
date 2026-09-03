@@ -1,7 +1,7 @@
 ---
 title: "StringIO#puts so rack.errors writers call puts as Rails does, not a duck-typing wrapper"
-status: in-progress
-updated: 2026-09-02
+status: done
+updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []

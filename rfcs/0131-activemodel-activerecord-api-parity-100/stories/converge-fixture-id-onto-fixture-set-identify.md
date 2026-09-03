@@ -1,7 +1,7 @@
 ---
 title: "Retire the invented fixtureId/compositeIdentify in favour of FixtureSet.identify/composite_identify"
-status: ready
-updated: 2026-09-02
+status: claimed
+updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T00:39:59Z"
+assignee: "move-postgresql-enum-ddl-back-to-postgresql-adapter"
 blocked-by: null
 closed-reason: null
 ---

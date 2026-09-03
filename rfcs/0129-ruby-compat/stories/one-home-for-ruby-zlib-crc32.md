@@ -1,7 +1,7 @@
 ---
 title: "Zlib.crc32 is hand-rolled twice in two packages with no shared home"
-status: ready
-updated: 2026-09-02
+status: done
+updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7420
+claim: "2026-09-03T00:03:33Z"
+assignee: "one-home-for-ruby-zlib-crc32"
 blocked-by: null
 closed-reason: null
 ---

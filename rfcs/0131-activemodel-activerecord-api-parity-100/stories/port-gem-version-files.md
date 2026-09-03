@@ -1,7 +1,7 @@
 ---
 title: "Give activemodel and activerecord the gem_version.rb file each package's last unported file is, moving gemVersion off deprecator.ts"
-status: in-progress
-updated: 2026-09-02
+status: done
+updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages:

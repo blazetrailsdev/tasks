@@ -1,7 +1,7 @@
 ---
 title: "Drop fastStringToDate's newline guard, which Rails has no counterpart for"
-status: claimed
-updated: 2026-09-02
+status: done
+updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 60
-pr: null
+pr: 7421
 claim: "2026-09-02T23:54:54Z"
 assignee: "bigdecimal-lacks-nan-and-infinity-forms"
 blocked-by: null

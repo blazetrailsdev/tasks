@@ -1,7 +1,7 @@
 ---
 title: "fs-adapter moves into ruby-compat, bootstrap included, and is demoted from public API to the backend contract"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport"]
@@ -9,9 +9,9 @@ deps: ["narrow-ruby-compat-leaf-guard-to-static-imports"]
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7422
+claim: "2026-09-03T00:00:24Z"
+assignee: "move-fs-adapter-into-ruby-compat-as-a-backend-contract"
 blocked-by: null
 closed-reason: null
 ---

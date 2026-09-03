@@ -1,7 +1,7 @@
 ---
 title: "Drop the invented perform prefix from relation/spawn-methods.ts and relation/calculations.ts so spawn, merge and the five aggregates credit"
-status: in-progress
-updated: 2026-09-02
+status: done
+updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages:
