@@ -1,6 +1,6 @@
 ---
 title: "The four small adapters move, unblocking RFC 0129's move-monitor-mixin and move-tempfile"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

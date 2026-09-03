@@ -1,6 +1,6 @@
 ---
 title: "Credit the name-array prototype loop that ports Rails' class_eval generator so command_recorder's 43 faithful methods stop scoring missing"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null

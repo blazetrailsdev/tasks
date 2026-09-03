@@ -1,6 +1,6 @@
 ---
 title: "symbolize_keys / deep_symbolize_keys answer a Hash, keeping to_hash's seat"
-status: in-progress
+status: done
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null

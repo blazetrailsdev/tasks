@@ -1,6 +1,6 @@
 ---
 title: "Flip activerecord and activerecord-cli's File/Dir call sites off getFs/getPath"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

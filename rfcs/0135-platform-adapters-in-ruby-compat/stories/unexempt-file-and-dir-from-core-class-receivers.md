@@ -1,6 +1,6 @@
 ---
 title: "File and Dir leave CORE_CLASS_RECEIVERS — the story that turns the gate on, with nothing left for it to catch"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

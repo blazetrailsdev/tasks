@@ -1,6 +1,6 @@
 ---
 title: "activemodel tests redeclare Rails test models inline instead of a shared test-helpers/models dir"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: test-placement
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 51
-pr: null
-claim: null
-assignee: null
+pr: 7419
+claim: "2026-09-02T23:41:10Z"
+assignee: "activemodel-tests-lack-shared-rails-test-models"
 blocked-by: null
 closed-reason: null
 ---

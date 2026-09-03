@@ -1,6 +1,6 @@
 ---
 title: "IO and Process port, flip and leave CORE_CLASS_RECEIVERS in one story — the shape reserved for a receiver that fits one PR"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

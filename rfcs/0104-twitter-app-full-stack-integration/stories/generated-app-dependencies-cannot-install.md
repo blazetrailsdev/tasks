@@ -1,7 +1,7 @@
 ---
 title: 'A generated app cannot install its dependencies: trails new emits "*" for unpublished packages'
-status: draft
-updated: 2026-09-01
+status: closed
+updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["trailties"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not interested in publishing yet"
 ---
 
 ## Context

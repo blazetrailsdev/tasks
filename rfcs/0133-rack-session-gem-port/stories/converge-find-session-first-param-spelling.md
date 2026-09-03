@@ -1,6 +1,6 @@
 ---
 title: "converge Persisted#find_session's first parameter onto the Ruby spelling"
-status: draft
+status: done
 updated: 2026-09-02
 rfc: "0133-rack-session-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7414
+claim: "2026-09-02T23:13:25Z"
+assignee: "converge-find-session-first-param-spelling"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Complete the Date._parse stand-in's zone table and grammar"
-status: ready
+status: done
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 60
-pr: null
-claim: null
-assignee: null
+pr: 6151
+claim: "2026-09-02T23:54:54Z"
+assignee: "bigdecimal-lacks-nan-and-infinity-forms"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Importing @blazetrails/rack throws on Node 20/22 LTS; the Node 23+ floor is undeclared"
-status: draft
-updated: 2026-09-01
+status: closed
+updated: 2026-09-02
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["rack", "trailties"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Will deal with node later"
 ---
 
 ## Context

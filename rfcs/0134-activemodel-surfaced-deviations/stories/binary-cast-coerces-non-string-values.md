@@ -1,6 +1,6 @@
 ---
 title: "Type::Binary#cast coerces non-String values Rails passes through"
-status: ready
+status: done
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 60
-pr: null
-claim: null
-assignee: null
+pr: 6648
+claim: "2026-09-02T23:54:54Z"
+assignee: "bigdecimal-lacks-nan-and-infinity-forms"
 blocked-by: null
 closed-reason: null
 ---

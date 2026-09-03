@@ -1,6 +1,6 @@
 ---
 title: "The leaf guard narrows from 'names no Node builtin' to 'takes no static Node import', and the __filename ban is settled, before any adapter moves"
-status: draft
+status: done
 updated: 2026-09-02
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: null
+pr: 7415
 claim: null
 assignee: null
 blocked-by: null

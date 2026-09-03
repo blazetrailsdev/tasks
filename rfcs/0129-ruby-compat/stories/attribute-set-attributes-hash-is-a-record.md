@@ -1,6 +1,6 @@
 ---
 title: "Port AttributeSet's @attributes to a Record, the last Map where Rails has a Hash"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7418
+claim: "2026-09-02T23:10:28Z"
+assignee: "activesupport-stringio-puts-for-rack-errors"
 blocked-by: null
 closed-reason: null
 ---

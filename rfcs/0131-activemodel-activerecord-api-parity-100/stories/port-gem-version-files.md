@@ -1,6 +1,6 @@
 ---
 title: "Give activemodel and activerecord the gem_version.rb file each package's last unported file is, moving gemVersion off deprecator.ts"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -11,9 +11,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7416
+claim: "2026-09-02T23:06:33Z"
+assignee: "move-postgresql-database-statements-to-their-rails-file"
 blocked-by: null
 closed-reason: null
 ---

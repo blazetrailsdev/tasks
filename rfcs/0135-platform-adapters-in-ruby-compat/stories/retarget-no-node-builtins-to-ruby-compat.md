@@ -1,6 +1,6 @@
 ---
 title: "no-node-builtins points at ruby-compat and File/Dir, retiring the ruby-compat carve-out"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

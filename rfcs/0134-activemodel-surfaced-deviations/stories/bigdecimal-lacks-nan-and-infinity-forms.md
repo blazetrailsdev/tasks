@@ -1,6 +1,6 @@
 ---
 title: "BigDecimal has no NAN/INFINITY form, so DecimalType returns sentinel strings from cast_value"
-status: ready
+status: claimed
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 220
 priority: 60
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-02T23:54:54Z"
+assignee: "bigdecimal-lacks-nan-and-infinity-forms"
 blocked-by: null
 closed-reason: null
 ---

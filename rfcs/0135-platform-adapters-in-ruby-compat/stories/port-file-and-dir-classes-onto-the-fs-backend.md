@@ -1,6 +1,6 @@
 ---
 title: "File and Dir are the surface: the Ruby classes ported onto the relocated fs backend, with cache/file-store as the proof body"
-status: draft
+status: ready
 updated: 2026-09-02
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

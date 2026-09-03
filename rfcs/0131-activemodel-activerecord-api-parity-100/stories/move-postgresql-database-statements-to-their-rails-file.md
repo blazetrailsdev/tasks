@@ -1,6 +1,6 @@
 ---
 title: "Move the twelve PostgreSQL::DatabaseStatements bodies off postgresql-adapter.ts into the file that mirrors their Rails home"
-status: ready
+status: in-progress
 updated: 2026-09-02
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 340
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7416
+claim: "2026-09-02T23:06:33Z"
+assignee: "move-postgresql-database-statements-to-their-rails-file"
 blocked-by: null
 closed-reason: null
 ---
