@@ -1,6 +1,6 @@
 ---
 title: "Give db_warnings_ignore its Rails reader/writer pair and delete the ar-config.ts invention it currently lives on"
-status: claimed
+status: in-progress
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 170
 priority: 3
-pr: null
+pr: 7428
 claim: "2026-09-03T01:39:04Z"
 assignee: "converge-db-warnings-ignore-onto-its-rails-seat"
 blocked-by: null

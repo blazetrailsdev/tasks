@@ -1,6 +1,6 @@
 ---
 title: "IntegerType#cast_value diverges from to_i rescue nil for strings and objects"
-status: claimed
+status: done
 updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 60
-pr: null
+pr: 6642
 claim: "2026-09-03T01:39:19Z"
 assignee: "float-cast-lacks-string-to-f-semantics"
 blocked-by: null

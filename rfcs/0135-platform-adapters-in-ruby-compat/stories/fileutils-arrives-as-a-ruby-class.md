@@ -1,6 +1,6 @@
 ---
 title: "FileUtils arrives as a Ruby class — the one receiver already in the call-set, so the class shape proves out against live gate rows"
-status: claimed
+status: in-progress
 updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["move-fs-adapter-into-ruby-compat-as-a-backend-contract"]
 deps-rfc: []
 est-loc: 300
 priority: 3
-pr: null
+pr: 7426
 claim: "2026-09-03T01:38:58Z"
 assignee: "fileutils-arrives-as-a-ruby-class"
 blocked-by: null

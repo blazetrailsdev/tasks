@@ -1,7 +1,7 @@
 ---
 title: "File and Dir are the surface: the Ruby classes ported onto the relocated fs backend, with cache/file-store as the proof body"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport"]
@@ -9,9 +9,9 @@ deps: ["move-fs-adapter-into-ruby-compat-as-a-backend-contract"]
 deps-rfc: []
 est-loc: 320
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 7429
+claim: "2026-09-03T02:11:13Z"
+assignee: "port-file-and-dir-classes-onto-the-fs-backend"
 blocked-by: null
 closed-reason: null
 ---

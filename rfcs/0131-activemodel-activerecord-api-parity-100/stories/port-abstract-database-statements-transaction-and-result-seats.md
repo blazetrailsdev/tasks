@@ -1,7 +1,7 @@
 ---
 title: "Give the seven abstract DatabaseStatements members real bodies in their own file and drop the optional-member guards Rails does not have"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: 7430
+claim: "2026-09-03T02:12:25Z"
+assignee: "port-abstract-database-statements-transaction-and-result-seats"
 blocked-by: null
 closed-reason: null
 ---

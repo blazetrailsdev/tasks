@@ -1,7 +1,7 @@
 ---
 title: "HashWithIndifferentAccess#toH, the to_h the msgpack packer actually calls"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7431
+claim: "2026-09-03T02:25:21Z"
+assignee: "drop-deep-stringify-keys-around-to-hash"
 blocked-by: null
 closed-reason: null
 ---
