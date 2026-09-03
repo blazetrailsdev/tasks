@@ -1,7 +1,7 @@
 ---
 title: "Flip activesupport's File/Dir call sites off getFs/getPath"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["activesupport", "ruby-compat"]
@@ -9,9 +9,9 @@ deps: ["port-file-and-dir-classes-onto-the-fs-backend"]
 deps-rfc: []
 est-loc: 300
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: 7451
+claim: "2026-09-03T18:35:16Z"
+assignee: "flip-file-dir-call-sites-activesupport"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Vendor the rack-test gem at v2.2.0 so every Rack::Test citation in the tree resolves"
-status: ready
+status: in-progress
 updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 7450
+claim: "2026-09-03T18:06:13Z"
+assignee: "vendor-rack-test-source"
 blocked-by: null
 closed-reason: null
 ---

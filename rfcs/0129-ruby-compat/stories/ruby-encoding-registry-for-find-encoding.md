@@ -1,7 +1,7 @@
 ---
 title: "find_encoding asks TextDecoder where Ruby asks Encoding.find"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7450
+claim: "2026-09-03T18:06:13Z"
+assignee: "vendor-rack-test-source"
 blocked-by: null
 closed-reason: null
 ---

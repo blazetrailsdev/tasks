@@ -1,6 +1,6 @@
 ---
 title: "Pair a Ruby alias entry against its TS alias binding so build_having_clause stops scoring declaration-only"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null

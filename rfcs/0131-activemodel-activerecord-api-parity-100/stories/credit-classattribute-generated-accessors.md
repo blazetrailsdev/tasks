@@ -1,7 +1,7 @@
 ---
 title: "Model classAttribute() in the TS extractor so the 21 class_attribute triples Ruby's extractor already credits stop scoring as declaration-only"
-status: blocked
-updated: 2026-09-02
+status: closed
+updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages:
@@ -11,11 +11,11 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: 1
-pr: 7405
-claim: "2026-09-02T20:12:42Z"
-assignee: "credit-bodied-object-literal-mixin-modules"
-blocked-by: "model_schema.rb 65/65 needs ModelSchema's Rails included-do block (model_schema.rb:162-168) moved off Base — carried by converge-table-name-prefix-onto-classattribute; the extractor arm landed in #7405"
-closed-reason: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: 'Delivered. The classAttribute() extractor arm landed in #7405 (extract-ts-api.ts:2926-2977 recognizes a classAttribute.call(Host, "name", ...) site), and the blocker — ModelSchema''s Rails included-do block moved off Base, carried by converge-table-name-prefix-onto-classattribute — landed in #7446 (76bfb3be1). Measured on origin/main 8f2de0daf after a clean pnpm build with API_COMPARE_FORCE=1 pnpm parity:api, all four target files are 100% with DeclOnly 0: activemodel attribute_methods.rb 84/84, validations.rb 10/10; activerecord attribute_methods/time_zone_conversion.rb 16/16, model_schema.rb 65/65. activemodel overall is 757/757, 67/67 files.'
 ---
 
 ## Context

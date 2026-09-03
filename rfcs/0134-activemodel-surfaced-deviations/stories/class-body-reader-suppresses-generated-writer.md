@@ -1,6 +1,6 @@
 ---
 title: "A class-body reader makes its attribute unassignable — the generated writer is unreachable"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation

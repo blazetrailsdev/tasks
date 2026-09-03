@@ -1,6 +1,6 @@
 ---
 title: "Credit a mixin object-literal property by its key so relation.rb's with, excluding and without stop scoring declaration-only"
-status: ready
+status: claimed
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 260
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T18:34:33Z"
+assignee: "unify-instrumenter-instrument-sync-and-async-arms"
 blocked-by: null
 closed-reason: null
 ---

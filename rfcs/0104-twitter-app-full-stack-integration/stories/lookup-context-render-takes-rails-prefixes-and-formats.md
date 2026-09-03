@@ -1,6 +1,6 @@
 ---
 title: "lookup-context-render-takes-rails-prefixes-and-formats"
-status: ready
+status: claimed
 updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: 8
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T18:59:40Z"
+assignee: "lookup-context-render-takes-rails-prefixes-and-formats"
 blocked-by: null
 closed-reason: null
 ---
