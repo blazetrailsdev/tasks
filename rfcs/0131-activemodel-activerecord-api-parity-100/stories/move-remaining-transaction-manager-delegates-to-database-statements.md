@@ -41,13 +41,13 @@ when Rails puts them in `abstract/database_statements.rb`.
 
 The seven, with their current homes:
 
-| Ruby name                  | TS name                      | currently at        |
-| -------------------------- | ---------------------------- | ------------------- |
-| `open_transactions`        | `openTransactions` (getter)  | abstract-adapter.ts |
-| `begin_transaction`        | `beginTransaction`           | abstract-adapter.ts |
-| `commit_transaction`       | `commitTransaction`          | abstract-adapter.ts |
-| `rollback_transaction`     | `rollbackTransaction`        | abstract-adapter.ts |
-| `materialize_transactions` | `materializeTransactions`    | abstract-adapter.ts |
+| Ruby name                    | TS name                       | currently at        |
+| ---------------------------- | ----------------------------- | ------------------- |
+| `open_transactions`          | `openTransactions` (getter)   | abstract-adapter.ts |
+| `begin_transaction`          | `beginTransaction`            | abstract-adapter.ts |
+| `commit_transaction`         | `commitTransaction`           | abstract-adapter.ts |
+| `rollback_transaction`       | `rollbackTransaction`         | abstract-adapter.ts |
+| `materialize_transactions`   | `materializeTransactions`     | abstract-adapter.ts |
 | `disable_lazy_transactions!` | `disableLazyTransactionsBang` | abstract-adapter.ts |
 | `enable_lazy_transactions!`  | `enableLazyTransactionsBang`  | abstract-adapter.ts |
 
