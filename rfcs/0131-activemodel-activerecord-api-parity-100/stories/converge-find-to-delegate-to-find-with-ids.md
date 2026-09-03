@@ -1,14 +1,14 @@
 ---
 title: "converge-find-to-delegate-to-find-with-ids"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

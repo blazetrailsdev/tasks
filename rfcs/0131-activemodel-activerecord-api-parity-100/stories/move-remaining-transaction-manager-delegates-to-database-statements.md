@@ -1,6 +1,6 @@
 ---
 title: "Move the seven remaining transaction_manager delegates from abstract-adapter.ts into their Rails file"
-status: draft
+status: ready
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 260
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "retire-postgresql-columns-override-for-column-definitions"
-status: draft
+status: ready
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null
