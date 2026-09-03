@@ -2,7 +2,7 @@
 title: "Enroll rack-test in parity:api and parity:test"
 status: draft
 updated: 2026-09-03
-rfc: "0000-rack-test-gem-port"
+rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
 deps: ["rack-test-package-skeleton"]

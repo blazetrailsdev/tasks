@@ -1,5 +1,5 @@
 ---
-rfc: "0000-rack-test-gem-port"
+rfc: "0137-rack-test-gem-port"
 title: "@blazetrails/rack-test: vendor the rack-test gem and collapse actionpack's hand-rolled stand-ins onto it"
 status: draft
 created: 2026-09-03
@@ -20,12 +20,7 @@ related-rfcs:
 priority: 5
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
-     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
-
-# RFC — `@blazetrails/rack-test`
+# RFC 0137 — `@blazetrails/rack-test`
 
 ## Summary
 

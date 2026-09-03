@@ -2,7 +2,7 @@
 title: "Port Rack::Test::Cookie and Rack::Test::CookieJar"
 status: draft
 updated: 2026-09-03
-rfc: "0000-rack-test-gem-port"
+rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
 deps: ["enroll-rack-test-in-compare-tooling"]

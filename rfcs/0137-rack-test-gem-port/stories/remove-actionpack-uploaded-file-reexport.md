@@ -2,7 +2,7 @@
 title: "Remove the callerless action-dispatch/uploaded-file.ts re-export"
 status: draft
 updated: 2026-09-03
-rfc: "0000-rack-test-gem-port"
+rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
 deps: []
@@ -32,7 +32,7 @@ counterpart, and its only consumer is
 which imports `../uploaded-file.js` while mirroring
 `vendor/rails/actionpack/test/dispatch/uploaded_file_test.rb`.
 
-Surfaced while scoping the rack-test gem port (RFC 0000-rack-test-gem-port),
+Surfaced while scoping the rack-test gem port (RFC 0137-rack-test-gem-port),
 which had to establish which actionpack members are rack-test stand-ins and
 which are genuine `ActionDispatch` members. This one is neither — it predates
 that work and is unrelated to rack-test — so it is filed rather than folded in.
