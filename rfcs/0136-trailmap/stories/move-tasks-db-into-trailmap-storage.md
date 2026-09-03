@@ -5,7 +5,7 @@ updated: 2026-09-02
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
-deps: ["move-task-models-into-trailmap"]
+deps: ["move-task-models-into-trailmap", "deploy-trailmap-to-dokku", "move-the-tasks-cli-into-trailmap"]
 deps-rfc: []
 est-loc: 120
 priority: null
