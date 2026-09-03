@@ -1,6 +1,6 @@
 ---
 title: "Port Template::Error/SyntaxErrorInTemplate annotated_source_code and line_number"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

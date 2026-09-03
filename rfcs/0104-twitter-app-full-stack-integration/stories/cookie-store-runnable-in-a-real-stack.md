@@ -1,6 +1,6 @@
 ---
 title: "cookie-store-runnable-in-a-real-stack"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

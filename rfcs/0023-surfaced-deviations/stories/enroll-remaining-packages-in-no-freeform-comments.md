@@ -1,7 +1,7 @@
 ---
 title: "Enrol the remaining packages in no-freeform-comments and sweep them"
-status: draft
-updated: 2026-08-27
+status: in-progress
+updated: 2026-09-03
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7461
+claim: "2026-09-03T21:00:54Z"
+assignee: "enroll-remaining-packages-in-no-freeform-comments"
 blocked-by: null
 closed-reason: null
 ---

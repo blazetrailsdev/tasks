@@ -1,6 +1,6 @@
 ---
 title: "crypto-adapter moves into ruby-compat, bootstrap included; the SecureRandom/Digest re-dressing is deferred to its own story"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

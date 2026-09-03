@@ -1,6 +1,6 @@
 ---
 title: "wire-template-spot-to-exception-wrapper"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
