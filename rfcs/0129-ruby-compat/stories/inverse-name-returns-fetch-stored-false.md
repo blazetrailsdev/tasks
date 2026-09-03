@@ -1,6 +1,6 @@
 ---
 title: "inverse-name-returns-fetch-stored-false"
-status: claimed
+status: in-progress
 updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7435
 claim: "2026-09-03T10:51:58Z"
 assignee: "port-encryption-properties-encoding-accessor"
 blocked-by: null

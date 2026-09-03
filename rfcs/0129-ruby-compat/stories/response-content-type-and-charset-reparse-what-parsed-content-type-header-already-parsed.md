@@ -1,7 +1,7 @@
 ---
 title: "Response#content_type and #charset re-parse the header Rails reads through parsed_content_type_header"
-status: ready
-updated: 2026-09-02
+status: done
+updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7376
+claim: "2026-09-03T11:50:57Z"
+assignee: "inline-helpers-hiding-the-last-calculations-and-sqlite3-fetches"
 blocked-by: null
 closed-reason: null
 ---

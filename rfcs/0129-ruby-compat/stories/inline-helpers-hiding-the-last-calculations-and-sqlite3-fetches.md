@@ -1,7 +1,7 @@
 ---
 title: "inline-helpers-hiding-the-last-calculations-and-sqlite3-fetches"
-status: ready
-updated: 2026-09-02
+status: claimed
+updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 240
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T11:50:57Z"
+assignee: "inline-helpers-hiding-the-last-calculations-and-sqlite3-fetches"
 blocked-by: null
 closed-reason: null
 ---

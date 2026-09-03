@@ -1,6 +1,6 @@
 ---
 title: "Extract insert_all's columns_list, format_columns and quote_columns instead of inlining the chain"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Kernel#Integer moves to ruby-compat beside Kernel#Float, collapsing four file-local copies and three disagreeing FloatDomainErrors"
-status: claimed
+status: in-progress
 updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: 7433
 claim: "2026-09-03T10:50:46Z"
 assignee: "port-adapter-statement-pool-and-transaction-seats"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "sanitize_limit's file-local Kernel#Integer port folds into the shared pair (database_statements.rb:508-514)"
-status: ready
-updated: 2026-08-25
+status: in-progress
+updated: 2026-09-03
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["move-kernel-integer-to-ruby-compat"]
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7433
+claim: "2026-09-03T11:59:52Z"
+assignee: "port-adapter-statement-pool-and-transaction-seats"
 blocked-by: null
 closed-reason: null
 ---

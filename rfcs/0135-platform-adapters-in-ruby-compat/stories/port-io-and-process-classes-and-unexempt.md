@@ -1,7 +1,7 @@
 ---
 title: "IO and Process port, flip and leave CORE_CLASS_RECEIVERS in one story — the shape reserved for a receiver that fits one PR"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport"]
@@ -9,9 +9,9 @@ deps: ["narrow-ruby-compat-leaf-guard-to-static-imports"]
 deps-rfc: []
 est-loc: 320
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: 7438
+claim: "2026-09-03T11:11:43Z"
+assignee: "port-io-and-process-classes-and-unexempt"
 blocked-by: null
 closed-reason: null
 ---

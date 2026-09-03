@@ -1,6 +1,6 @@
 ---
 title: "Give rb_hash_update's conflict block the same marker fetch's block arm uses"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null

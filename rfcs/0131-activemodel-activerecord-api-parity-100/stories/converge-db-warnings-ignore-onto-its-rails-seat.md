@@ -1,6 +1,6 @@
 ---
 title: "Give db_warnings_ignore its Rails reader/writer pair and delete the ar-config.ts invention it currently lives on"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "ActiveModel attribute() generates accessors eagerly instead of deferring to define_attribute_methods"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -11,9 +11,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 61
-pr: null
-claim: null
-assignee: null
+pr: 7436
+claim: "2026-09-03T11:12:55Z"
+assignee: "yaml-encoder-coder-is-per-call-not-per-encoder"
 blocked-by: null
 closed-reason: null
 ---

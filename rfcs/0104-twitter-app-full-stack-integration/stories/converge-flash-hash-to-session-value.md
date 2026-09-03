@@ -1,17 +1,17 @@
 ---
 title: "Converge FlashHash#to_session_value into one method that owns the session payload shape"
-status: draft
-updated: 2026-09-01
+status: claimed
+updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 13
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T11:50:57Z"
+assignee: "inline-helpers-hiding-the-last-calculations-and-sqlite3-fetches"
 blocked-by: null
 closed-reason: null
 ---

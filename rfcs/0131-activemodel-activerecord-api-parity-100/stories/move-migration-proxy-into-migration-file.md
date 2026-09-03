@@ -1,6 +1,6 @@
 ---
 title: "Move MigrationProxy out of deprecator.ts into migration.ts, the file Rails defines it in"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null

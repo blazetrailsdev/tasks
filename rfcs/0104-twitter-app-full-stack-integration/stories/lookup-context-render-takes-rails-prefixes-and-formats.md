@@ -1,14 +1,14 @@
 ---
 title: "lookup-context-render-takes-rails-prefixes-and-formats"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

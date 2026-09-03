@@ -1,17 +1,17 @@
 ---
 title: "wire-drawn-route-set-into-controller-routes"
-status: draft
-updated: 2026-09-02
+status: claimed
+updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T11:34:47Z"
+assignee: "port-trails-autoloaders"
 blocked-by: null
 closed-reason: null
 ---

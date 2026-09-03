@@ -1,14 +1,14 @@
 ---
 title: "converge-controller-session-delegation"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 12
 pr: null
 claim: null
 assignee: null

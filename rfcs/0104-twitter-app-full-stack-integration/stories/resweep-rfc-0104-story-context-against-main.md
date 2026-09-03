@@ -1,17 +1,17 @@
 ---
 title: "RFC 0104 story bodies cite an examples/twitter-app and a server/application.ts that do not exist"
-status: draft
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: 7437
+claim: "2026-09-03T11:20:50Z"
+assignee: "resweep-rfc-0104-story-context-against-main"
 blocked-by: null
 closed-reason: null
 ---

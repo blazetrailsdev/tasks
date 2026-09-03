@@ -1,7 +1,7 @@
 ---
 title: "Port ActionController::LogSubscriber#process_action's additions, exception-status and GC branches"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7437
+claim: "2026-09-03T11:20:50Z"
+assignee: "resweep-rfc-0104-story-context-against-main"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,14 +1,14 @@
 ---
 title: "Drive Integration::Session through the app stack instead of a hand-rolled controller dispatch"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 500
-priority: null
+priority: 14
 pr: null
 claim: null
 assignee: null
