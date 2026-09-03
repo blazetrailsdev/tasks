@@ -36,7 +36,7 @@ receipts pointing here in
   `@missingRailsCall optimize_helper?`.
 
 - **`RouteSet#url_for(options, route_name = nil, url_strategy = UNKNOWN,
-  method_name = nil, reserved = RESERVED_OPTIONS)`**. trails' `RouteSet#urlFor`
+method_name = nil, reserved = RESERVED_OPTIONS)`**. trails' `RouteSet#urlFor`
   still carries a pre-Rails positional `(routeName, params, options)`
   signature, which is why `UrlHelper#call` reaches `generate` (the port of the
   private `generate` Rails' `url_for` calls) and hands the strategy a `path`
@@ -48,7 +48,7 @@ receipts pointing here in
 ## Acceptance criteria
 
 - `RouteSet#urlFor` takes Rails' `(options, routeName, urlStrategy,
-  methodName, reserved)` shape and `UrlHelper#call` calls it, deleting that
+methodName, reserved)` shape and `UrlHelper#call` calls it, deleting that
   receipt and the `route-set.ts` "needs the Rails-shape signature" throw.
 - `OptimizedUrlHelper` is ported with `optimize_helper?` selecting it in
   `UrlHelper.create`, deleting that receipt.
