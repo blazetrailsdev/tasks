@@ -28,7 +28,7 @@ trails-invented helpers that Rails performs inline in
   function; `TableRow#resolve_reference` reads the referenced row's primary key
   straight out of the fixture set it already holds.
 - `resolveCompositeRefColumn(adapter, tableName, fixtureName, targetColumn,
-  targetPkCols)` — the composite-key arm of the same lookup, which Rails gets
+targetPkCols)` — the composite-key arm of the same lookup, which Rails gets
   for free because `composite_identify` returns the whole hash and the caller
   indexes it.
 
