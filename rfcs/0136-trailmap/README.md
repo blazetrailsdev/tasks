@@ -149,14 +149,14 @@ app for three reasons:
 app — `trails new`, add a route, a controller and a `.tse` view, request `/` —
 produced six framework stories in an afternoon:
 
-| Story | Outcome |
-| --- | --- |
-| `generated-app-cannot-render-its-own-views` | done, #7364 |
-| `implicit-render-204s-instead-of-rendering` | done, #7364 |
+| Story                                          | Outcome     |
+| ---------------------------------------------- | ----------- |
+| `generated-app-cannot-render-its-own-views`    | done, #7364 |
+| `implicit-render-204s-instead-of-rendering`    | done, #7364 |
 | `generated-vite-config-makes-root-unreachable` | done, #7371 |
-| `generated-vite-outdir-nested-in-publicdir` | done, #7374 |
-| `undeclared-node-23-floor-breaks-lts` | open |
-| `generated-app-dependencies-cannot-install` | open |
+| `generated-vite-outdir-nested-in-publicdir`    | done, #7374 |
+| `undeclared-node-23-floor-breaks-lts`          | open        |
+| `generated-app-dependencies-cannot-install`    | open        |
 
 None was visible from parity counts. Each was found by running the thing.
 
