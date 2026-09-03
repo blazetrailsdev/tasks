@@ -99,7 +99,7 @@ that is in scope here since it falls out of the same declaration.
 - [ ] `ABSTRACT_RAILTIES` is the three fully-qualified Ruby strings, byte-for-byte
       `railtie.rb:142`.
 - [ ] `isAbstractRailtie()` is `ABSTRACT_RAILTIES.includes(<this class's ruby
-    path>)`, mirroring `railtie.rb:172-174`.
+  path>)`, mirroring `railtie.rb:172-174`.
 - [ ] `abstractRailtie()` and its three `static {}` call sites are gone, and so
       is the `@noRailsEquivalent PERMANENT` receipt on `ABSTRACT_RAILTIES`.
 - [ ] Each of the seven framework railties declares its Ruby constant path, and
