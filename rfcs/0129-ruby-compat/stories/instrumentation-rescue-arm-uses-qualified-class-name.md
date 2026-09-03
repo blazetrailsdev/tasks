@@ -46,8 +46,7 @@ is keyed by the qualified spellings for the ParseError/ParamError family
 (`"ActionDispatch::ParamError"`, `"ActionDispatch::Http::Parameters::ParseError"`,
 …), which trails error classes carry on `.name`, not on `constructor.name`. So
 every such error silently falls through `statusCodeFor`'s `?? 500`
-(`exception-wrapper.ts:272-274`) and the payload reports 500 where Rails maps
-400.
+(`exception-wrapper.ts:272-274`) and the payload reports 500 where Rails maps 400.
 
 `exception-wrapper.ts:78-83` already has the correct JS analogue of
 `exception.class.name` as a module-private `classNameOf` — prefer `e.name`,
