@@ -1,13 +1,13 @@
 ---
-title: "converge-raw-and-internal-exec-query-onto-cast-result"
+title: "Converge rawExecQuery and internalExecQuery onto Rails' unguarded cast_result(...) one-liners"
 status: draft
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 140
 priority: null
 pr: null
 claim: null
