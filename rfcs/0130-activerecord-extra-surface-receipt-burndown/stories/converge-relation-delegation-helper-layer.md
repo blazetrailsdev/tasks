@@ -34,7 +34,7 @@ twelve names, and the Ruby they stand in for:
 - `wrapWithScopeProxy`, `classMethodDelegator` and `guardBaseMethodDelegation`
   are the three pieces `ClassSpecificRelation#method_missing`
   (delegation.rb:114-131) is one method of. The `!DelegateCache
-  .delegate_base_methods && Base.respond_to?` arm (delegation.rb:117-123) is
+.delegate_base_methods && Base.respond_to?` arm (delegation.rb:117-123) is
   `guardBaseMethodDelegation`'s whole body.
 - `delegateArrayMethod`, `delegateEnumerableMethod` and
   `delegateRecordMethodSync` are the `delegate ... to: :records` line
@@ -42,7 +42,7 @@ twelve names, and the Ruby they stand in for:
   `DELEGATED_ARRAY_METHODS` / `RECORD_DELEGATES`.
 - `DelegationMethods` is a second mixin carrier beside the file's
   `interface Delegation`; `includeInto` is `delegate.include
-  generated_relation_methods` (delegation.rb:59); `initialize` on
+generated_relation_methods` (delegation.rb:59); `initialize` on
   `DelegateCache` is `initialize_relation_delegate_cache`
   (delegation.rb:32-44) under a name Rails does not use.
 
