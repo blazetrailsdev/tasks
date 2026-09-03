@@ -32,7 +32,7 @@ nothing else. None of the following has a counterpart in the corresponding
   (`:12`, `:16`, `:20`); there is no imperative entry point. It also carries a
   flat `i18nCustomizeFullMessage` backwards-compat arm that Rails does not have
   — Rails reads `config.active_model.delete(:i18n_customize_full_message) ||
-  false` (`railtie.rb:21`) and nothing else.
+false` (`railtie.rb:21`) and nothing else.
 - `packages/trailties/src/trailties/global-id.ts:86` — `static initialize(app: TrailtieApp)`.
   Its own JSDoc says it mirrors the `initializer "global_id"` BLOCK, so the body
   belongs inline in that initializer.

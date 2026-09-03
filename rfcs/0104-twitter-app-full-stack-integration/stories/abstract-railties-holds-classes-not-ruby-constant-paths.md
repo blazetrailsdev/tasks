@@ -68,8 +68,7 @@ CLAUDE.md's "Call-time constant resolution" section documents `rubyClassPath` â€
 `abstract/id.ts`'s `rubyClassPath` for Ruby's `self.class`,
 `rack-session/lib/rack/session/abstract/id.rb:155,396`). Two stories have
 already applied it â€” `converge-ruby-class-path-for-out-of-module-stores` and
-`converge-actionpack-session-subclass-ruby-class-paths`, both done under RFC
-0133.
+`converge-actionpack-session-subclass-ruby-class-paths`, both done under RFC 0133.
 
 Applied here, `ABSTRACT_RAILTIES` becomes Ruby's own array verbatim:
 
@@ -100,7 +99,7 @@ that is in scope here since it falls out of the same declaration.
 - [ ] `ABSTRACT_RAILTIES` is the three fully-qualified Ruby strings, byte-for-byte
       `railtie.rb:142`.
 - [ ] `isAbstractRailtie()` is `ABSTRACT_RAILTIES.includes(<this class's ruby
-      path>)`, mirroring `railtie.rb:172-174`.
+    path>)`, mirroring `railtie.rb:172-174`.
 - [ ] `abstractRailtie()` and its three `static {}` call sites are gone, and so
       is the `@noRailsEquivalent PERMANENT` receipt on `ABSTRACT_RAILTIES`.
 - [ ] Each of the seven framework railties declares its Ruby constant path, and
