@@ -24,11 +24,11 @@ closed-reason: null
 identifier:
 
 ```ts
-      if (Array.isArray(obj)) {
-        const index = Number(identifier);
-        obj = obj[index < 0 ? obj.length + index : index];
-        continue;
-      }
+if (Array.isArray(obj)) {
+  const index = Number(identifier);
+  obj = obj[index < 0 ? obj.length + index : index];
+  continue;
+}
 ```
 
 Ruby's Array arm is `rb_ary_at` (`object.c:3920-3923`), whose index goes
