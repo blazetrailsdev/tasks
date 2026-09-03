@@ -1,7 +1,7 @@
 ---
 title: "relation/ tree: resolve 48 novel names, 15 of them in relation/delegation.ts"
-status: draft
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-03
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 7425
+claim: "2026-09-03T01:39:49Z"
+assignee: "receipt-relation-delegation-and-relation-tree"
 blocked-by: null
 closed-reason: null
 ---

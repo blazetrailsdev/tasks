@@ -1,6 +1,6 @@
 ---
 title: "fs-adapter moves into ruby-compat, bootstrap included, and is demoted from public API to the backend contract"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

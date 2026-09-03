@@ -1,7 +1,7 @@
 ---
 title: "serialize_cast_value drops the is_utc? getutc/getlocal arm"
-status: ready
-updated: 2026-09-02
+status: claimed
+updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 110
 priority: 60
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T01:39:19Z"
+assignee: "float-cast-lacks-string-to-f-semantics"
 blocked-by: null
 closed-reason: null
 ---

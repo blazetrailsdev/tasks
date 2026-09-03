@@ -1,6 +1,6 @@
 ---
 title: "delete-second-round-ruby-compat-reexport-shims"
-status: claimed
+status: done
 updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7424
 claim: "2026-09-03T00:39:30Z"
 assignee: "consolidate-kernel-integer-and-float-conversions"
 blocked-by: null

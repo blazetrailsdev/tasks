@@ -1,7 +1,7 @@
 ---
 title: "Credit define_model_callbacks-generated names in the Ruby extractor so a faithful callback port stops scoring novel"
-status: draft
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-03
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 7425
+claim: "2026-09-03T01:39:45Z"
+assignee: "credit-define-model-callbacks-in-the-ruby-extractor"
 blocked-by: null
 closed-reason: null
 ---

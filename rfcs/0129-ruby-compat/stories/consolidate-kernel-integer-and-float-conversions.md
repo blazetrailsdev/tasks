@@ -1,6 +1,6 @@
 ---
 title: "cache/store.ts's file-local Kernel#Float retires onto ruby-compat's kernelFloat (cache.rb:213-214)"
-status: claimed
+status: done
 updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 7424
 claim: "2026-09-03T00:39:30Z"
 assignee: "consolidate-kernel-integer-and-float-conversions"
 blocked-by: null
