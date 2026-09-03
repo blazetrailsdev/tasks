@@ -41,15 +41,15 @@ needs the `URI` **object model**, not a single function, and four of its port
 stories cannot be written faithfully without it. Measured against
 `vendor/rack-test/lib/`:
 
-| Ruby                                                | Site                                   | What it needs                                     |
-| --------------------------------------------------- | -------------------------------------- | ------------------------------------------------- |
-| `URI.parse(path)`                                    | `test.rb:272` (`Session#parse_uri`)     | the reader                                        |
-| `uri.path = "/#{uri.path}"`, `uri.host \|\|=`, `uri.scheme \|\|=` | `test.rb:273-275`        | **mutable** writers; `URL`'s re-serialize/normalize |
-| `URI.parse(a) + URI.parse(b)`                        | `test.rb:225` (`follow_redirect!`)      | `URI::Generic#merge` — `new URL(rel, base)` is near, not equal |
-| `uri.port`, `uri.default_port`                       | `test.rb:296`                           | `nil` when the scheme's default applies, which `URL.port` cannot express |
-| `URI::HTTPS === uri`                                 | `test.rb:297` (`Session#env_for`)       | scheme-specific **subclasses**, so `parse` returns `URI::HTTP` / `URI::HTTPS` / `URI::Generic` |
-| `URI.parse('//' + @default_host + '/')`              | `cookie_jar.rb:126`                     | a scheme-less generic URI                         |
-| `uri.host = @default_host if uri.host.nil?`          | `cookie_jar.rb:93`                      | a host writer that accepts and reports `nil`      |
+| Ruby                                                              | Site                                | What it needs                                                                                  |
+| ----------------------------------------------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `URI.parse(path)`                                                 | `test.rb:272` (`Session#parse_uri`) | the reader                                                                                     |
+| `uri.path = "/#{uri.path}"`, `uri.host \|\|=`, `uri.scheme \|\|=` | `test.rb:273-275`                   | **mutable** writers; `URL`'s re-serialize/normalize                                            |
+| `URI.parse(a) + URI.parse(b)`                                     | `test.rb:225` (`follow_redirect!`)  | `URI::Generic#merge` — `new URL(rel, base)` is near, not equal                                 |
+| `uri.port`, `uri.default_port`                                    | `test.rb:296`                       | `nil` when the scheme's default applies, which `URL.port` cannot express                       |
+| `URI::HTTPS === uri`                                              | `test.rb:297` (`Session#env_for`)   | scheme-specific **subclasses**, so `parse` returns `URI::HTTP` / `URI::HTTPS` / `URI::Generic` |
+| `URI.parse('//' + @default_host + '/')`                           | `cookie_jar.rb:126`                 | a scheme-less generic URI                                                                      |
+| `uri.host = @default_host if uri.host.nil?`                       | `cookie_jar.rb:93`                  | a host writer that accepts and reports `nil`                                                   |
 
 The anchor is vendored: `vendor/ruby/lib/uri.rb` and `vendor/ruby/lib/uri/`.
 
