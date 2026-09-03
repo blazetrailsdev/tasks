@@ -31,6 +31,11 @@ The name is the job: a trail map shows the whole route — where it goes, what i
 behind you, and which way to head next. That is what the fleet asks this
 application every time it spawns an agent.
 
+trailmap has a second purpose, equal to the first: it is **the proving ground
+for trails**. It is a real application with real users and a real deployment,
+built on the port, and every gap it hits becomes a story against the framework.
+Expect this RFC to generate more trails work than trailmap work.
+
 ## Motivation
 
 ### The domain is already ActiveRecord, it just has no application
@@ -119,6 +124,60 @@ disappears, because serializing is what a controller does. `ingest.ts` and
 `authoring.ts` become service objects, since they touch the git checkout.
 
 trailmap is the **sole writer** of `tasks.db` and owns the migrations.
+
+### trailmap is the proving ground for trails
+
+Parity percentages measure whether a method exists. They do not measure whether
+the pieces are connected, and that is the gap trails keeps falling into. RFC
+0104 named it exactly: its failures "were almost entirely **integration**
+failures, not porting failures. Individually-correct modules had never been
+connected." Nothing finds that except an application that has to actually run.
+
+trailmap is that application, and it is a better proving ground than an example
+app for three reasons:
+
+- **It cannot be abandoned when it gets hard.** The fleet depends on it, so a
+  gap must be fixed rather than worked around.
+- **It exercises the unglamorous surface.** Not a tutorial's happy path but
+  deployment, migrations against a live database, a CLI client, sixty routes,
+  markdown rendering, and an app that has to survive a redeploy.
+- **A regression is felt immediately.** trailmap dispatches the port's own
+  work, so a broken framework stops the agents who would fix it. That is a
+  sharp incentive and a real hazard — see the bootstrapping open question.
+
+**This is already how it has gone.** A single boot probe against a generated
+app — `trails new`, add a route, a controller and a `.tse` view, request `/` —
+produced six framework stories in an afternoon:
+
+| Story | Outcome |
+| --- | --- |
+| `generated-app-cannot-render-its-own-views` | done, #7364 |
+| `implicit-render-204s-instead-of-rendering` | done, #7364 |
+| `generated-vite-config-makes-root-unreachable` | done, #7371 |
+| `generated-vite-outdir-nested-in-publicdir` | done, #7374 |
+| `undeclared-node-23-floor-breaks-lts` | open |
+| `generated-app-dependencies-cannot-install` | open |
+
+None was visible from parity counts. Each was found by running the thing.
+
+#### The discipline this depends on
+
+The proving ground only works if trailmap refuses to paper over what it finds:
+
+- **A framework gap becomes a story, not a workaround.** File it against the
+  RFC that owns the surface — 0104 while it is app-enablement, a new RFC
+  otherwise — with the reproduction that found it.
+- **Bespoke replacements for framework surface are the failure mode.** A
+  hand-rolled resolver or dispatcher inside trailmap hides exactly the gap this
+  is meant to expose. Where trailmap must carry a workaround to keep running,
+  it is commented with the story that will remove it.
+- **Vendoring is what makes that safe.** trailmap pins a trails commit, so a
+  gap is diagnosed against a known tree and a fix is adopted deliberately
+  rather than arriving mid-incident.
+
+The two workarounds trailmap carries today are both of that shape: vendored
+tarballs standing in for unpublished packages, and a pinned Node 24, each
+tracked by an open story above.
 
 ### The repo split
 
@@ -317,6 +376,10 @@ the gate, and the interim validation split collapses.
   deleted — the metric is those line counts reaching zero.
 - **Phase 4 burndown.** Task-domain routes served by trailmap rather than Go,
   reported per phase.
+- **Framework yield.** Trails stories filed because trailmap hit them, and how
+  many close. This is a deliverable of the RFC, not a side effect: a phase that
+  surfaces nothing has probably been built around the framework rather than on
+  it.
 
 ## Open questions
 
