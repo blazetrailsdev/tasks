@@ -54,15 +54,34 @@ this story. `spec/fixtures/` also carries `foo.txt`, `bar.txt`, `mb.txt`,
 **115 cases is more than one 400-loc PR can carry, so the split is already made
 rather than left to the implementer.** This story is the request/response core;
 `port-rack-test-session-redirects-and-state` is the rest. This story ports:
-`Error` (`:45`), `Session.new` (`:57`), `initialize` (`:99`), the generated verb
-methods (`:111`), `request` (`:150`), `custom_request` (`:160`), `header`
-(`:173`), `env` (`:185`), `basic_authorize` (`:198`), `last_request` (`:134`),
-`last_response` (`:141`), the private `close_body` (`:260`/`:266`), `parse_uri`
-(`:271`), `env_for` (`:293`), `append_query_params` (`:340`),
-`multipart_content_type` (`:346`), `process_request` (`:357`), and
+`Error` (`:45`), `Session.new` (`:57`), the `cookie_jar` accessor (`:67`), the
+`default_host` reader (`:70`), `initialize` (`:99`), the generated verb methods
+(`:111`), `clear_cookies` (`:123`), `last_request` (`:134`), `last_response`
+(`:141`), `request` (`:150`), `custom_request` (`:160`), `header` (`:173`),
+`env` (`:185`), `basic_authorize` (`:198`) **and its `authorize` alias
+(`:203`)**, the private `close_body` (`:260`/`:266`), `parse_uri` (`:271`),
+`env_for` (`:293`), `append_query_params` (`:340`), `multipart_content_type`
+(`:346`), `process_request` (`:357`), and
 `Rack::Test.encoding_aware_strings?` (`:375`). It does **not** port
-`after_request` (`:118`), `clear_cookies` (`:123`), `set_cookie` (`:128`),
-`follow_redirect!` (`:209`) or `restore_state` (`:240`).
+`after_request` (`:118`), `set_cookie` (`:128`), `follow_redirect!` (`:209`) or
+`restore_state` (`:240`).
+
+**Three of those — `cookie_jar`, `default_host` and `clear_cookies` — are in
+this half because the core cannot run without them, not for balance.** The
+split was drawn at the member group and then checked against the actual reads:
+
+- `initialize:107` ends with a call to `clear_cookies`, and `clear_cookies:124`
+  is what builds the jar (`@cookie_jar = CookieJar.new([], @default_host)`).
+  A `Session` without it constructs with no jar at all.
+- `process_request` (`:357`, in this half) reads through the **public**
+  accessor, not the ivar: `:358` is
+  `env['HTTP_COOKIE'] ||= cookie_jar.for(uri)` and `:364` is
+  `cookie_jar.merge(last_response.headers['set-cookie'], uri)`.
+- `parse_uri:274` reads `@default_host` as an ivar, and `process_request:365`
+  reads `@after_request` as an ivar — so the `default_host` **reader** is here
+  for `Methods#build_rack_test_session` (`methods.rb:46`,
+  `Session.new(app, default_host)`), while the `after_request` **registrar**
+  can safely stay deferred.
 
 Do not reword or reorder any test name to make the split tidy: `parity:test`
 matches on names, so an uncovered case stays uncovered and is credited by the
@@ -75,7 +94,8 @@ both port stories.
 ## Acceptance criteria
 
 - [ ] `packages/rack-test/src/test.ts` ports `Error`, the `Session` members
-  listed above and `encoding_aware_strings?` in Rails source order, with the Rails names and
+  listed above (including the `authorize` alias) and `encoding_aware_strings?`
+  in Rails source order, with the Rails names and
   parameter names, including the default `default_host = DEFAULT_HOST`.
 - [ ] A TS equivalent of `spec/fixtures/fake_app.rb` exists under
   `packages/rack-test/src/`, and the fixture files it reads are mirrored.
@@ -90,4 +110,5 @@ both port stories.
 Porting the five deferred members "while I am in the file" does not close this
 story — they are `port-rack-test-session-redirects-and-state`, which is sized
 for them. Neither does landing `Session` with a hand-rolled cookie store: it
-takes the `CookieJar` `port-rack-test-cookie-jar` ported.
+takes the `CookieJar` `port-rack-test-cookie-jar` ported, reached through the
+public `cookie_jar` accessor the way `process_request:358` reaches it.

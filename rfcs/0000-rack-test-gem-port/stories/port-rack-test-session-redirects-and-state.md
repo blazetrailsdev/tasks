@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: ["port-rack-test-session"]
 deps-rfc: []
-est-loc: 300
+est-loc: 250
 priority: 9
 pr: null
 claim: null
@@ -26,15 +26,16 @@ claims the work.
 
 Source, all in `vendor/rack-test/lib/rack/test.rb`:
 
-- `cookie_jar` accessor (`:67`) and `default_host` reader (`:70`)
-- `after_request(&block)` (`:118`) — the callback list `follow_redirect!` runs
-- `clear_cookies` (`:123`) and `set_cookie(cookie, uri = nil)` (`:128`)
+- `after_request(&block)` (`:118`) — the registrar for the callback list
+  `process_request:365` runs. Only the registrar is here: `initialize:102`
+  seeds `@after_request = []` and `process_request` reads the ivar, so the core
+  story needs no public member of it.
+- `set_cookie(cookie, uri = nil)` (`:128`)
 - `follow_redirect!` (`:209-238`) — raises `Rack::Test::Error` when the last
   response was not a redirect, and carries the 307/308 method-preservation
   arms
 - `restore_state` (`:240-258`) — saves and restores `@last_request` /
-  `@last_response` / the cookie jar around a block, which is what
-  `Rack::Test::Methods#with_session` (`methods.rb:61`) depends on
+  `@last_response` / `@cookie_jar` / `@after_request` around a block
 
 Ruby-idiom traps concentrated here: `follow_redirect!` is a **bang method**, so
 port both arms (CLAUDE.md — bang raises, the non-bang form returns falsy);
@@ -47,7 +48,7 @@ reword a test name to fit the split.
 
 ## Acceptance criteria
 
-- [ ] The seven members above are ported into
+- [ ] The four members above are ported into
       `packages/rack-test/src/test.ts` in Rails source order, with the Rails
       names and parameter names.
 - [ ] `follow_redirect!` raises `Rack::Test::Error` with the Rails message when
@@ -64,3 +65,10 @@ reword a test name to fit the split.
 Closing this by marking the residual `test_spec.rb` cases `PERMANENT-SKIP` does
 not close it. A skip stub is for a file the RFC declared a non-goal, and this
 file is the measure the RFC exists to buy.
+
+## Notes
+
+`cookie_jar` (`:67`), `default_host` (`:70`) and `clear_cookies` (`:123`) are
+**not** here — they moved to `port-rack-test-session` because
+`initialize:107` calls `clear_cookies` and `process_request:358,364` read
+through the public `cookie_jar` accessor. Do not re-port them.

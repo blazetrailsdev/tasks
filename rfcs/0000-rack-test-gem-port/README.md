@@ -501,7 +501,7 @@ that redirects its one call site.
    `remove-actionpack-uploaded-file-reexport`. Depends on nothing and can land
    at any point.
 
-Thirteen stories, 3,210 loc estimated, none over the 400-loc ceiling.
+Thirteen stories, 3,160 loc estimated, none over the 400-loc ceiling.
 
 ## Verification
 
