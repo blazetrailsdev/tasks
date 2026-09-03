@@ -1,6 +1,6 @@
 ---
 title: "Point the tooling at trailties' ActiveRecord trailtie so railtie.rb stops being the one file activerecord is short, taking it to 281/281"
-status: ready
+status: claimed
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T22:43:59Z"
+assignee: "port-activerecord-trailtie-file"
 blocked-by: null
 closed-reason: null
 ---

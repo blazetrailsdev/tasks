@@ -1,7 +1,7 @@
 ---
 title: "Ruby's stdlib Tempfile moves to ruby-compat, the last of activesupport's unanchored primitives"
-status: blocked
-updated: 2026-09-02
+status: ready
+updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: "2026-09-01T02:28:10Z"
-assignee: "ruby-compat-hash-dig-and-plain-object-default-seat"
-blocked-by: "Tempfile imports getFs/getPath (fs-adapter, 483 LOC), getOs (os-adapter, 158) and getCrypto (crypto-adapter, 393) from activesupport. ruby-compat is a leaf with no workspace dependencies (README section 4), and those three adapters are trails' pluggable-runtime registries with no vendor/ruby anchor to cite, so they cannot move with it (66 files reach getFs alone). The move needs a home for the fs/os/crypto seat decided first."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

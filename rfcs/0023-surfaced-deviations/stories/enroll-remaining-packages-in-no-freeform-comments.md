@@ -1,6 +1,6 @@
 ---
 title: "Enrol the remaining packages in no-freeform-comments and sweep them"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0023-surfaced-deviations"
 cluster: null

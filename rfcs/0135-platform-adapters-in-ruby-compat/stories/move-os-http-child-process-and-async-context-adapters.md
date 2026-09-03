@@ -1,7 +1,7 @@
 ---
 title: "The four small adapters move, unblocking RFC 0129's move-monitor-mixin and move-tempfile"
-status: ready
-updated: 2026-09-02
+status: claimed
+updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: 13
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T22:18:08Z"
+assignee: "unexempt-file-and-dir-from-core-class-receivers"
 blocked-by: null
 closed-reason: null
 ---
