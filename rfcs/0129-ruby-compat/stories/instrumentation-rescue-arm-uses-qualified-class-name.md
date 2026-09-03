@@ -78,6 +78,17 @@ payload.status = ExceptionWrapper.statusCodeForException(classNameOf(error as Er
 - No other call site is switched to `constructor.name`; if `classNameOf` is
   exported, its receipt is `PERMANENT`.
 
+## Trap in writing the test
+
+`blazetrails/rails-error-parity` rejects `new Error(...)` / `class X extends
+Error` in package code — "throw a ported Rails error class instead of `new
+Error`". The regression test must raise a ported error class whose `.name` is
+a Rails-qualified constant already in `STATUS_MAP`
+(`exception-wrapper.ts:16-39`), e.g. the `ActionDispatch::ParamError` family
+from `action-dispatch/http/param-error.ts`, rather than a locally-declared
+`Error` subclass. A hand-rolled subclass reds lint even though the assertion
+itself is correct (hit locally).
+
 ## Notes
 
 PR #7441's review raised this (finding 2) and a fix was written and verified

@@ -87,6 +87,23 @@ POSITIONAL argument to `_inlinePolymorphicKeys(ctor, options, primaryKey,
 foreignKey)`. It is not an object-literal key and must not be rewritten — a
 blind sweep over `primaryKey,` hits it and breaks the parse.
 
+## The invented field is enshrined by a trails-only test
+
+`packages/activerecord/src/associations/errors.trails.test.ts:88-100` asserts
+the invented affordance directly:
+
+> `it("CompositePrimaryKeyMismatchError accepts a pre-resolved primaryKey for
+> reflection-less guards")`
+
+with a literal carrying `primaryKey: ["id"]` and neither predicate. Deleting
+the field without converging that test reds it — the message falls through to
+the generic `"Association primary key doesn't match with foreign key."`
+(verified locally). The test is trails-only, so its name is NOT matched by
+`parity:test` and may be rewritten; Rails has no counterpart because Rails
+never reads `primary_key` here. Converge it onto
+`associationPrimaryKey: () => ["id"]` along with the five raise sites, or
+delete it if the reflection-less guard shape goes away entirely.
+
 ## Acceptance criteria
 
 - `CompositePrimaryKeyMismatchReflection` declares no `primaryKey` member, and
@@ -94,7 +111,8 @@ blind sweep over `primaryKey,` hits it and breaks the parse.
 - Both `as unknown as CompositePrimaryKeyMismatchReflection` casts in
   `reflection.ts` are deleted, not re-spelled.
 - Error messages are unchanged: the same value reaches `formatKey` at every
-  one of the five raise sites.
+  one of the five raise sites, and `errors.trails.test.ts` passes with its
+  expectations intact (only the literal's member name changes).
 - `pnpm typecheck`, the associations/reflection/has-many suites, and
   `pnpm parity:api:calls` stay green.
 
