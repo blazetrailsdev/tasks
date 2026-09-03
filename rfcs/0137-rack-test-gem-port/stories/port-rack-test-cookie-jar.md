@@ -11,7 +11,7 @@ deps:
     "port-uri-for-parse-merge-and-scheme-classes",
     "port-time-parse-reader-onto-the-date-time-seat",
   ]
-deps-rfc: ["0129-ruby-compat"]
+deps-rfc: []
 est-loc: 400
 priority: 7
 pr: null

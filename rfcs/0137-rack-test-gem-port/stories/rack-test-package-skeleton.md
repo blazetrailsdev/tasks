@@ -47,7 +47,7 @@ declare the stdlib and rack-test requires six stdlib files: `tempfile`
 `StringIO` and `FileUtils` are ruby-compat's
 (`packages/ruby-compat/src/string-io.ts:20`, `index.ts:41`); `Tempfile` is
 still `packages/activesupport/src/tempfile.ts`, because
-`0129-ruby-compat/move-tempfile-to-ruby-compat` is **`blocked`** on the
+`0129-ruby-compat/move-tempfile-to-ruby-compat` is still in flight behind the
 fs/os/crypto adapter seat. Do not wait on it and do not re-home `Tempfile`
 here: import the one that exists, as `packages/rack/src/mock-request.ts:21` and
 `packages/rack/src/multipart/parser.ts:1` already do. That story's sweep drops
@@ -99,4 +99,4 @@ dependency into `devDependencies`, does not close this story — the RFC's
 "Published, not devDependency-only" section decides that and cites
 `actionpack.gemspec:41` and `strong_parameters.rb:1311`. Re-home `Tempfile`
 here and the story is also not closed: that is
-`0129-ruby-compat/move-tempfile-to-ruby-compat`, and it is blocked.
+`0129-ruby-compat/move-tempfile-to-ruby-compat`, and it is that story's call.

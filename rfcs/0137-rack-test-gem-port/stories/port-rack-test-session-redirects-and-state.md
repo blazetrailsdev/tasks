@@ -6,7 +6,7 @@ rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
 deps: ["port-rack-test-session", "port-uri-for-parse-merge-and-scheme-classes"]
-deps-rfc: ["0129-ruby-compat"]
+deps-rfc: []
 est-loc: 250
 priority: 9
 pr: null

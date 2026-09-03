@@ -12,7 +12,7 @@ deps:
     "port-string-b-binary-copy",
     "port-set-encoding-on-stringio-and-tempfile",
   ]
-deps-rfc: ["0129-ruby-compat"]
+deps-rfc: []
 est-loc: 350
 priority: 6
 pr: null

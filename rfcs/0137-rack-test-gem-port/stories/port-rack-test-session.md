@@ -12,7 +12,7 @@ deps:
     "port-uri-for-parse-merge-and-scheme-classes",
     "port-array-pack-strict-base64-directive",
   ]
-deps-rfc: ["0129-ruby-compat"]
+deps-rfc: []
 est-loc: 400
 priority: 8
 pr: null

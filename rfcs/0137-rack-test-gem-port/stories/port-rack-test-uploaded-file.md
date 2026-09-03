@@ -11,7 +11,7 @@ deps:
     "expose-fileutils-copy-file-as-a-public-member",
     "port-set-encoding-on-stringio-and-tempfile",
   ]
-deps-rfc: ["0129-ruby-compat"]
+deps-rfc: []
 est-loc: 300
 priority: 5
 pr: null
@@ -51,7 +51,7 @@ The stdlib this class needs is already in the tree, in two different packages:
 (`packages/ruby-compat/src/string-io.ts:20`), `FileUtils` (`:3`) is
 ruby-compat's `index.ts:41`, and `Tempfile` (`:4`, constructed at `:92`) is
 still `packages/activesupport/src/tempfile.ts` — its move to ruby-compat
-(`0129-ruby-compat/move-tempfile-to-ruby-compat`) is `blocked` on the
+(`0129-ruby-compat/move-tempfile-to-ruby-compat`) is still in flight behind the
 fs/os/crypto adapter seat. Import the `Tempfile` that exists; do not re-home it
 here.
 
