@@ -1,5 +1,5 @@
 ---
-title: "File.join and Dir.glob recognise only '/', where MRI's isdirsep also accepts '\\\\' on Windows"
+title: "File.join and Dir.glob recognise only '/', where MRI's isdirsep also accepts '\\' on Windows"
 status: draft
 updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
