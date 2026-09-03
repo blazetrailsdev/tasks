@@ -34,8 +34,24 @@ package in the repo and rack-test does not join it.
 `packages/rack-session/package.json` is the template: `"name":
 "@blazetrails/rack-test"`, `"version": "0.1.0"`, `"type": "module"`,
 `main`/`types` under `dist/`, `"files": ["dist"]`, `"license": "MIT"`,
-`"scripts": { "build": "tsc" }`. Dependencies: `@blazetrails/rack` only
-(`rack-test.gemspec:28` — `s.add_dependency 'rack', '>= 1.3'`).
+`"scripts": { "build": "tsc" }`.
+
+**Dependencies: the same three `packages/rack-session/package.json` declares** —
+`@blazetrails/rack`, `@blazetrails/ruby-compat`, `@blazetrails/activesupport`.
+`rack-test.gemspec:28` declares only `rack '>= 1.3'`, but a gemspec does not
+declare the stdlib and rack-test requires six stdlib files: `tempfile`
+(`uploaded_file.rb:4`, `Tempfile.new` at `:92`), `stringio`
+(`uploaded_file.rb:5`, `when StringIO` at `:36`), `fileutils`
+(`uploaded_file.rb:3`), `uri` (`cookie_jar.rb:3`, `Session#parse_uri` at
+`test.rb:271`), `time` (`cookie_jar.rb:4`) and `forwardable` (`test.rb:21`).
+`StringIO` and `FileUtils` are ruby-compat's
+(`packages/ruby-compat/src/string-io.ts:20`, `index.ts:41`); `Tempfile` is
+still `packages/activesupport/src/tempfile.ts`, because
+`0129-ruby-compat/move-tempfile-to-ruby-compat` is **`blocked`** on the
+fs/os/crypto adapter seat. Do not wait on it and do not re-home `Tempfile`
+here: import the one that exists, as `packages/rack/src/mock-request.ts:21` and
+`packages/rack/src/multipart/parser.ts:1` already do. That story's sweep drops
+the `activesupport` edge when it lands.
 
 Four cross-package registrations, from where `rack-session` sits today:
 
@@ -53,7 +69,9 @@ own port story.
 ## Acceptance criteria
 
 - `packages/rack-test/package.json` exists as described, with **no**
-  `"private": true`.
+  `"private": true`, and declares `@blazetrails/rack`,
+  `@blazetrails/ruby-compat` and `@blazetrails/activesupport` — not `rack`
+  alone.
 - `packages/rack-test/tsconfig.json` and `src/index.ts` exist; `pnpm typecheck`
   is green.
 - The root `tsconfig.json` reference and both `vitest.config.ts` alias entries

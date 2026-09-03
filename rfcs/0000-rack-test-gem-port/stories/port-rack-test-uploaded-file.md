@@ -41,6 +41,15 @@ ports the ActionDispatch one at
 `packages/actionpack/src/action-dispatch/http/upload.ts`; leave it alone.
 Collapsing the two into a single trails class would be the inverse of fidelity.
 
+The stdlib this class needs is already in the tree, in two different packages:
+`StringIO` (branched on at `:36`) is `@blazetrails/ruby-compat`
+(`packages/ruby-compat/src/string-io.ts:20`), `FileUtils` (`:3`) is
+ruby-compat's `index.ts:41`, and `Tempfile` (`:4`, constructed at `:92`) is
+still `packages/activesupport/src/tempfile.ts` — its move to ruby-compat
+(`0129-ruby-compat/move-tempfile-to-ruby-compat`) is `blocked` on the
+fs/os/crypto adapter seat. Import the `Tempfile` that exists; do not re-home it
+here.
+
 `method_missing` (`:52-58`) forwards to the wrapped `Tempfile`. Pick the settled
 trails `method_missing` idiom; if the answer is to spell out the `IO` surface
 trails actually calls, that is a `@missingRailsCall` receipt at one site, not a

@@ -204,9 +204,11 @@ Consequences, stated so no story re-derives them:
 - **`packages/rack-test/package.json`** is modelled on
   `packages/rack-session/package.json` — `"name": "@blazetrails/rack-test"`,
   `"version": "0.1.0"`, `"type": "module"`, `main`/`types` at `dist/`,
-  `"files": ["dist"]`, `"license": "MIT"`, one workspace dependency on
-  `@blazetrails/rack`. **No `"private": true`** — `packages/website` is the
-  only private package in the repo.
+  `"files": ["dist"]`, `"license": "MIT"`. **No `"private": true`** —
+  `packages/website` is the only private package in the repo. Its workspace
+  dependencies are the same three `packages/rack-session` and `packages/rack`
+  both declare, and they are not interchangeable — see "Dependencies: rack,
+  ruby-compat and (for now) activesupport" below.
 - **CI lane registration follows `rack-session` exactly.** RFC 0133's
   `register-rack-session-in-ci-lanes` put the package into
   `RACK_PKGS_RE='^packages/(rack|rack-session|activesupport|date)/'`
@@ -266,6 +268,41 @@ maps `cookie_jar.rb` onto `packages/rack-test/src/cookie-jar.ts` rather than
 onto `src/test/cookie-jar.ts`.
 
 `testPath` is `spec`, not `test` — rack-test's suite lives in `spec/`.
+
+### Dependencies: rack, ruby-compat and (for now) activesupport
+
+`rack-test.gemspec:28` declares one runtime dependency, `rack '>= 1.3'`. But a
+gemspec does not declare the **stdlib**, and rack-test requires six stdlib
+files across its 987 lines:
+
+| Ruby | rack-test file:line | trails home |
+| --- | --- | --- |
+| `tempfile` | `uploaded_file.rb:4` (`Tempfile.new` at `:92`) | `@blazetrails/activesupport` — `packages/activesupport/src/tempfile.ts` |
+| `stringio` | `uploaded_file.rb:5` (`when StringIO` at `:36`) | `@blazetrails/ruby-compat` — `src/string-io.ts:20` |
+| `fileutils` | `uploaded_file.rb:3` | `@blazetrails/ruby-compat` — `index.ts:41`, `FileUtils` |
+| `uri` | `cookie_jar.rb:3`, and `Session#parse_uri` (`test.rb:271`) | `@blazetrails/ruby-compat` (`getFs` / `getPath` seat) |
+| `time` | `cookie_jar.rb:4` (`Cookie#expires`, `:81`) | `@blazetrails/activesupport` / `@blazetrails/ruby-compat` |
+| `forwardable` | `test.rb:21`, `methods.rb` | no port needed — TS delegation |
+
+So `packages/rack-test/package.json` declares **exactly the three workspace
+dependencies `packages/rack-session/package.json` already declares** —
+`@blazetrails/rack`, `@blazetrails/ruby-compat`, `@blazetrails/activesupport` —
+and `packages/rack/package.json` declares two of the three for the same reason
+(`packages/rack/src/mock-request.ts:21` imports `StringIO`;
+`packages/rack/src/multipart/parser.ts:1` imports `forceEncoding` from
+ruby-compat).
+
+**The `activesupport` edge is inherited debt, not a design choice.**
+`Tempfile` is Ruby stdlib and belongs in `ruby-compat`;
+`0129-ruby-compat/move-tempfile-to-ruby-compat` is the story that moves it and
+it is **`blocked`**, on "Tempfile imports getFs/getPath (fs-adapter, 483 LOC),
+getOs (158) and getCrypto (393) from activesupport … the move needs a home for
+the fs/os/crypto seat decided first". rack-test does **not** wait on that:
+`Rack::Test::UploadedFile` wraps a `Tempfile` (`uploaded_file.rb:9`, `:92`), so
+it imports the one that exists today, from wherever it lives, exactly as
+`packages/rack` does. When `move-tempfile-to-ruby-compat` unblocks and lands,
+rack-test's import moves with every other caller and its `activesupport` edge
+drops out — one line in that story's sweep, not a story of its own here.
 
 Verified line anchors at `v2.2.0`:
 
@@ -458,7 +495,9 @@ that redirects its one call site.
   fresh worktree lays down `vendor/rack-test/lib/rack/test.rb` and
   `vendor/rack-test/spec/`.
 - `packages/rack-test` exists as a **published, non-private** workspace package
-  with a single `@blazetrails/rack` dependency, and `packages/actionpack`
+  with the three workspace dependencies `packages/rack-session` declares
+  (`rack`, `ruby-compat`, `activesupport` — the last inherited from `Tempfile`'s
+  current home), and `packages/actionpack`
   declares a plain `dependencies` entry on it, mirroring
   `actionpack.gemspec:41`.
 - `pnpm parity:api` reports a `rack-test` row against 90 public methods
@@ -493,8 +532,9 @@ that redirects its one call site.
    receipt at one site rather than a design change. Deferred to
    `port-rack-test-uploaded-file`.
 3. **Does `packages/actionpack` depending on `@blazetrails/rack-test` close an
-   import cycle?** rack-test depends only on `@blazetrails/rack`, and actionpack
-   already depends on rack, so the graph stays acyclic on paper. Flagged
+   import cycle?** rack-test depends on `rack`, `ruby-compat` and
+   `activesupport`, all three of which actionpack already depends on, so the
+   graph stays acyclic on paper. Flagged
    because CLAUDE.md's zero-import-slot section exists for exactly the case
    where that reasoning turns out to be wrong at module-eval time; verify with
    a plain-node import of the **built** `dist/**.js` in
