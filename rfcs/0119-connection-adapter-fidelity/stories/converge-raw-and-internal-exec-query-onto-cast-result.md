@@ -2,7 +2,7 @@
 title: "Converge rawExecQuery and internalExecQuery onto Rails' unguarded cast_result(...) one-liners"
 status: draft
 updated: 2026-09-03
-rfc: "0131-activemodel-activerecord-api-parity-100"
+rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: ["activerecord"]
 deps: []
