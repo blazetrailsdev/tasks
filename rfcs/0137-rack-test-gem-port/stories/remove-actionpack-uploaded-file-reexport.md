@@ -1,6 +1,6 @@
 ---
 title: "Remove the callerless action-dispatch/uploaded-file.ts re-export"
-status: ready
+status: in-progress
 updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 14
-pr: null
-claim: null
-assignee: null
+pr: 7453
+claim: "2026-09-03T19:36:26Z"
+assignee: "rack-test-package-skeleton"
 blocked-by: null
 closed-reason: null
 ---

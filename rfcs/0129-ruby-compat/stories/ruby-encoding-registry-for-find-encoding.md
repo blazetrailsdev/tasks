@@ -1,6 +1,6 @@
 ---
 title: "find_encoding asks TextDecoder where Ruby asks Encoding.find"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null

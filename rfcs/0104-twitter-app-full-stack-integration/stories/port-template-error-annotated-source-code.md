@@ -1,6 +1,6 @@
 ---
 title: "Port Template::Error/SyntaxErrorInTemplate annotated_source_code and line_number"
-status: claimed
+status: in-progress
 updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 9
-pr: null
+pr: 7454
 claim: "2026-09-03T18:59:40Z"
 assignee: "lookup-context-render-takes-rails-prefixes-and-formats"
 blocked-by: null

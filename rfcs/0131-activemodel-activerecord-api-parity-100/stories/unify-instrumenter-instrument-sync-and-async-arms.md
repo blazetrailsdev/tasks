@@ -1,6 +1,6 @@
 ---
 title: "Unify Instrumenter#instrument with its async twin so EventBuffer can take the Rails name"
-status: claimed
+status: done
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 1
-pr: null
+pr: 7452
 claim: "2026-09-03T18:34:33Z"
 assignee: "unify-instrumenter-instrument-sync-and-async-arms"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Vendor the rack-test gem at v2.2.0 so every Rack::Test citation in the tree resolves"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null

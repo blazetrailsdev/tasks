@@ -1,6 +1,6 @@
 ---
 title: "Create packages/rack-test as a published workspace package"
-status: ready
+status: in-progress
 updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["vendor-rack-test-source"]
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7453
+claim: "2026-09-03T19:36:26Z"
+assignee: "rack-test-package-skeleton"
 blocked-by: null
 closed-reason: null
 ---

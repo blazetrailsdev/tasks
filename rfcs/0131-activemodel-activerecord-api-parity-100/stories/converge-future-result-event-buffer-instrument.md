@@ -1,6 +1,6 @@
 ---
 title: "converge-future-result-event-buffer-instrument"
-status: blocked
+status: done
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
+pr: 7452
 claim: "2026-09-03T15:51:19Z"
 assignee: "converge-future-result-event-buffer-instrument"
-blocked-by: "Gated on unify-instrumenter-instrument-sync-and-async-arms (now ready, priority 5), which is the prerequisite this reason previously described inline. Verified live on origin/main 2026-09-03: Instrumenter still splits instrument/instrumentAsync (activesupport/src/notifications/instrumenter.ts:244) and the AdapterInstrumenter contract still names instrumentAsync (activerecord/src/connection-adapters/abstract-adapter.ts:29-35), so EventBuffer still cannot take the Rails name. Unblock once that story lands."
+blocked-by: null
 closed-reason: null
 ---
 

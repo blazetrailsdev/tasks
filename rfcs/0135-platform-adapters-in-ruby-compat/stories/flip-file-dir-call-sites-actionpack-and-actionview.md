@@ -1,7 +1,7 @@
 ---
 title: "Flip actionpack and actionview's File/Dir call sites off getFs/getPath"
-status: ready
-updated: 2026-09-02
+status: claimed
+updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["actionpack", "actionview"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: 8
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T19:44:21Z"
+assignee: "flip-file-dir-call-sites-actionpack-and-actionview"
 blocked-by: null
 closed-reason: null
 ---

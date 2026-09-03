@@ -1,7 +1,7 @@
 ---
 title: "Flip trailties' File/Dir call sites off getFs/getPath — the largest link in the chain"
-status: ready
-updated: 2026-09-02
+status: claimed
+updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T19:56:27Z"
+assignee: "flip-file-dir-call-sites-trailties"
 blocked-by: null
 closed-reason: null
 ---

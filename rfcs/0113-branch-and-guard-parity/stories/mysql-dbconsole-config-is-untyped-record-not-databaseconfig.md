@@ -1,6 +1,6 @@
 ---
 title: "dbconsole takes an untyped Record where Rails takes a DatabaseConfig, forcing a guard rb:80 lacks"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0113-branch-and-guard-parity"
 cluster: null
