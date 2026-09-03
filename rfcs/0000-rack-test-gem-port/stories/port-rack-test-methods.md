@@ -8,7 +8,7 @@ packages: []
 deps: ["port-rack-test-session"]
 deps-rfc: []
 est-loc: 200
-priority: 8
+priority: 10
 pr: null
 claim: null
 assignee: null
@@ -42,11 +42,11 @@ already exercises it indirectly.
 
 ## Acceptance criteria
 
-- `packages/rack-test/src/methods.ts` ports the module member for member in
+- [ ] `packages/rack-test/src/methods.ts` ports the module member for member in
   Rails source order, with `":default"` as the Symbol default.
-- `methods.test.ts` credits all 7 cases under `parity:test`; no test name is
+- [ ] `methods.test.ts` credits all 7 cases under `parity:test`; no test name is
   reworded.
-- `packages/rack-test/src/index.ts` exports `Methods`, `Session`,
+- [ ] `packages/rack-test/src/index.ts` exports `Methods`, `Session`,
   `UploadedFile`, `Utils`, `CookieJar`, `MULTIPART_BOUNDARY` and `DEFAULT_HOST`
   — the surface Rails' five library call sites name.
-- Both call gates green with no new baseline rows.
+- [ ] Both call gates green with no new baseline rows.

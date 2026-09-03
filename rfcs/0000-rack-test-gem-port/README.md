@@ -20,7 +20,12 @@ related-rfcs:
 priority: 5
 ---
 
-# RFC 0000 — `@blazetrails/rack-test`
+<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
+     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
+     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
+     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
+
+# RFC — `@blazetrails/rack-test`
 
 ## Summary
 
@@ -480,7 +485,11 @@ that redirects its one call site.
 5. **Port**, leaf-first so each story is testable on landing:
    `port-rack-test-uploaded-file` → `port-rack-test-utils` →
    `port-rack-test-cookie-jar` → `port-rack-test-session` →
-   `port-rack-test-methods` (all dep on 3).
+   `port-rack-test-session-redirects-and-state` → `port-rack-test-methods`
+   (all dep on 3). `Session` is two stories, not one: the class is 320 lines and
+   `test_spec.rb` carries 115 cases, so the request/response core and the
+   redirect/cookie-mutator/state-restore group are split by member at RFC time
+   rather than left to whoever claims the work.
 6. **Collapse.** `collapse-actionpack-multipart-encoder-onto-rack-test-utils`
    (deps: `port-rack-test-utils`, `port-rack-test-uploaded-file`) and
    `converge-file-fixture-upload-onto-rack-test-uploaded-file` (deps:
@@ -488,8 +497,13 @@ that redirects its one call site.
 7. **Unblock.** `0104`'s `converge-integration-session-to-rack-test-session`
    becomes buildable once `port-rack-test-session` lands. Owned by 0104; this
    RFC only records the edge.
+8. **Unrelated cleanup**, carried because this scoping surfaced it:
+   `remove-actionpack-uploaded-file-reexport`. Depends on nothing and can land
+   at any point.
 
-## Acceptance criteria
+Thirteen stories, 3,210 loc estimated, none over the 400-loc ceiling.
+
+## Verification
 
 - `vendor/sources.ts` lists `rack-test` at `v2.2.0`; `pnpm vendor:fetch` in a
   fresh worktree lays down `vendor/rack-test/lib/rack/test.rb` and

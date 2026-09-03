@@ -8,7 +8,7 @@ packages: []
 deps: ["rack-test-package-skeleton"]
 deps-rfc: []
 est-loc: 80
-priority: 3
+priority: 4
 pr: null
 claim: null
 assignee: null
@@ -48,15 +48,17 @@ a published runtime package (RFC "Published, not devDependency-only"), and its
 "test-only package, skip its tests" carve-out and none is invented here.
 
 `scripts/ci-suite-coverage.test.ts` is the gate that checks a package appears in
-some lane; it also has a known prefix-matching hazard for similarly-named
-packages (`ci-suite-coverage-guard-misses-prefix-named-packages`, filed under
-0133 for `rack` / `rack-session`). `rack-test` is a third `rack`-prefixed
-package, so re-check that guard's behaviour rather than assuming green.
+some lane, and it had exactly this hazard once already: a prefix-matching bug
+that let `rack` satisfy the assertion for `rack-session`, fixed by
+`0133-rack-session-gem-port/ci-suite-coverage-guard-misses-prefix-named-packages`
+(**status `done`**). `rack-test` is a third `rack`-prefixed package, so confirm
+that fix generalizes to three rather than assuming it does — the failure mode is
+a silently-green guard, not a red one.
 
 ## Acceptance criteria
 
-- All four `ci.yml` registrations landed.
-- `pnpm vitest run scripts/ci-suite-coverage.test.ts` is green, and its
+- [ ] All four `ci.yml` registrations landed.
+- [ ] `pnpm vitest run scripts/ci-suite-coverage.test.ts` is green, and its
   assertion actually distinguishes `rack`, `rack-session` and `rack-test`
   rather than prefix-matching one for another.
-- `pnpm vitest run packages/rack-test` runs the package's suite standalone.
+- [ ] `pnpm vitest run packages/rack-test` runs the package's suite standalone.

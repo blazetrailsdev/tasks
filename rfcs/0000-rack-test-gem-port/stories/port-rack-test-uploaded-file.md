@@ -8,7 +8,7 @@ packages: []
 deps: ["enroll-rack-test-in-compare-tooling"]
 deps-rfc: []
 est-loc: 300
-priority: 4
+priority: 5
 pr: null
 claim: null
 assignee: null
@@ -57,10 +57,10 @@ design change (RFC Open Question 2).
 
 ## Acceptance criteria
 
-- `packages/rack-test/src/uploaded-file.ts` ports the class member for member,
+- [ ] `packages/rack-test/src/uploaded-file.ts` ports the class member for member,
   in Rails source order, with the Rails names and parameter names.
-- `packages/rack-test/src/uploaded-file.test.ts` credits all 10 cases from
+- [ ] `packages/rack-test/src/uploaded-file.test.ts` credits all 10 cases from
   `uploaded_file_spec.rb` under `parity:test`; no test name is reworded.
-- `packages/actionpack/src/action-dispatch/http/upload.ts` is unchanged.
-- `pnpm parity:api` / `parity:test` deltas non-negative; `pnpm parity:api:calls`
+- [ ] `packages/actionpack/src/action-dispatch/http/upload.ts` is unchanged.
+- [ ] `pnpm parity:api` / `parity:test` deltas non-negative; `pnpm parity:api:calls`
   and `pnpm parity:api:calls:args` green with no new baseline rows.

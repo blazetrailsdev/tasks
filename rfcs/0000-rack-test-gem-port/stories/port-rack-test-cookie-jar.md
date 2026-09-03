@@ -8,7 +8,7 @@ packages: []
 deps: ["enroll-rack-test-in-compare-tooling"]
 deps-rfc: []
 est-loc: 400
-priority: 6
+priority: 7
 pr: null
 claim: null
 assignee: null
@@ -61,10 +61,10 @@ which owns that change.
 
 ## Acceptance criteria
 
-- `packages/rack-test/src/cookie-jar.ts` ports both classes member for member in
+- [ ] `packages/rack-test/src/cookie-jar.ts` ports both classes member for member in
   Rails source order, with the Rails names and parameter names.
-- The three test files credit all 52 cases under `parity:test`; no test name is
+- [ ] The three test files credit all 52 cases under `parity:test`; no test name is
   reworded.
-- `packages/actionpack/src/action-dispatch/testing/integration.ts` is unchanged.
-- `pnpm parity:api` / `parity:test` deltas non-negative; both call gates green
+- [ ] `packages/actionpack/src/action-dispatch/testing/integration.ts` is unchanged.
+- [ ] `pnpm parity:api` / `parity:test` deltas non-negative; both call gates green
   with no new baseline rows.

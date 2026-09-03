@@ -86,13 +86,20 @@ So `compareApi` / `compareTests` stay ON. Enrollment itself is
 
 ## Acceptance criteria
 
-- `vendor/sources.ts` gains the source above, with a comment explaining why
+- [ ] `vendor/sources.ts` gains the source above, with a comment explaining why
   `libEntryFile` is set here and not on `rack` / `rack-session`.
-- `vendor/sources.lock.json` updated by the normal `pnpm vendor:fetch` path,
+- [ ] `vendor/sources.lock.json` updated by the normal `pnpm vendor:fetch` path,
   not hand-edited.
-- `vendor/sources.test.ts` passes; `vendor/README.md` lists rack-test alongside
+- [ ] `vendor/sources.test.ts` passes; `vendor/README.md` lists rack-test alongside
   the other seven.
-- `pnpm vendor:fetch` in a fresh worktree lays down
+- [ ] `pnpm vendor:fetch` in a fresh worktree lays down
   `vendor/rack-test/lib/rack/test.rb` and `vendor/rack-test/spec/`.
-- `pnpm parity:api` / `parity:test` deltas non-negative (the package is not yet
+- [ ] `pnpm parity:api` / `parity:test` deltas non-negative (the package is not yet
   enrolled, so both are unchanged).
+
+## Definition of done
+
+Hand-editing `vendor/sources.lock.json` does not close this story — the lock
+row comes from `pnpm vendor:fetch`. Setting `compareApi: false` or
+`compareTests: false` to avoid the day-one 0% rows also does not close it: both
+extractors were verified working, so the weaker contract buys nothing.

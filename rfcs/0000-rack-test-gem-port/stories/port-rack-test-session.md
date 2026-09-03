@@ -8,7 +8,7 @@ packages: []
 deps: ["port-rack-test-cookie-jar", "port-rack-test-utils"]
 deps-rfc: []
 est-loc: 400
-priority: 7
+priority: 8
 pr: null
 claim: null
 assignee: null
@@ -51,12 +51,22 @@ suite — mapping to `packages/rack-test/src/test.test.ts`. Its harness
 this story. `spec/fixtures/` also carries `foo.txt`, `bar.txt`, `mb.txt`,
 `space case.txt` and `config.ru`, used by the upload cases.
 
-**115 cases is more than one 400-loc PR can carry.** Ship the class and the
-subset of `test_spec.rb` the ported members cover; register the remainder as a
-follow-up story rather than fanning out PRs (CLAUDE.md). Split by member group
-if needed — the request/response core, then `follow_redirect!` / `restore_state`
-/ multi-session — but do not reword or reorder any test name to make a split
-tidy.
+**115 cases is more than one 400-loc PR can carry, so the split is already made
+rather than left to the implementer.** This story is the request/response core;
+`port-rack-test-session-redirects-and-state` is the rest. This story ports:
+`Error` (`:45`), `Session.new` (`:57`), `initialize` (`:99`), the generated verb
+methods (`:111`), `request` (`:150`), `custom_request` (`:160`), `header`
+(`:173`), `env` (`:185`), `basic_authorize` (`:198`), `last_request` (`:134`),
+`last_response` (`:141`), the private `close_body` (`:260`/`:266`), `parse_uri`
+(`:271`), `env_for` (`:293`), `append_query_params` (`:340`),
+`multipart_content_type` (`:346`), `process_request` (`:357`), and
+`Rack::Test.encoding_aware_strings?` (`:375`). It does **not** port
+`after_request` (`:118`), `clear_cookies` (`:123`), `set_cookie` (`:128`),
+`follow_redirect!` (`:209`) or `restore_state` (`:240`).
+
+Do not reword or reorder any test name to make the split tidy: `parity:test`
+matches on names, so an uncovered case stays uncovered and is credited by the
+follow-up story instead.
 
 `Session#request` runs the app through `Rack::Test::Utils` for multipart bodies
 and through `CookieJar` for cookie round-trips, which is why this depends on
@@ -64,15 +74,20 @@ both port stories.
 
 ## Acceptance criteria
 
-- `packages/rack-test/src/test.ts` ports `Error`, `Session` and
-  `encoding_aware_strings?` in Rails source order, with the Rails names and
+- [ ] `packages/rack-test/src/test.ts` ports `Error`, the `Session` members
+  listed above and `encoding_aware_strings?` in Rails source order, with the Rails names and
   parameter names, including the default `default_host = DEFAULT_HOST`.
-- A TS equivalent of `spec/fixtures/fake_app.rb` exists under
+- [ ] A TS equivalent of `spec/fixtures/fake_app.rb` exists under
   `packages/rack-test/src/`, and the fixture files it reads are mirrored.
-- `packages/rack-test/src/test.test.ts` credits the cases covered by the members
+- [ ] `packages/rack-test/src/test.test.ts` credits the cases covered by the members
   landed; `parity:test` delta is non-negative and no test name is reworded.
-- Any uncovered remainder of `test_spec.rb` is filed as a follow-up story with
-  the specific member group it needs, not left implicit.
-- `packages/actionpack/src/action-dispatch/testing/integration.ts` is unchanged
+- [ ] `packages/actionpack/src/action-dispatch/testing/integration.ts` is unchanged
   — driving it through this class belongs to 0104.
-- Both call gates green with no new baseline rows.
+- [ ] Both call gates green with no new baseline rows.
+
+## Definition of done
+
+Porting the five deferred members "while I am in the file" does not close this
+story — they are `port-rack-test-session-redirects-and-state`, which is sized
+for them. Neither does landing `Session` with a hand-rolled cookie store: it
+takes the `CookieJar` `port-rack-test-cookie-jar` ported.

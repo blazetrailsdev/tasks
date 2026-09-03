@@ -8,7 +8,7 @@ packages: []
 deps: ["port-rack-test-uploaded-file"]
 deps-rfc: []
 est-loc: 250
-priority: 9
+priority: 12
 pr: null
 claim: null
 assignee: null
@@ -51,14 +51,22 @@ file it rather than folding it in.
 
 ## Acceptance criteria
 
-- `fileFixtureUpload` / `fixtureFileUpload` in `test-process.ts` return a
+- [ ] `fileFixtureUpload` / `fixtureFileUpload` in `test-process.ts` return a
   `Rack::Test::UploadedFile` from `@blazetrails/rack-test`, constructed as
   `new UploadedFile(path, mimeType, binary)` — Rails' positional order.
-- The `NOTE:` conceding the divergence is deleted, not reworded: the `binary`
+- [ ] The `NOTE:` conceding the divergence is deleted, not reworded: the `binary`
   flag now does what Rails' does.
-- `packages/actionpack/src/action-dispatch/http/upload.ts` and
+- [ ] `packages/actionpack/src/action-dispatch/http/upload.ts` and
   `action-dispatch/dispatch/uploaded-file.test.ts` are unchanged — they mirror
   `http/upload.rb` and `test/dispatch/uploaded_file_test.rb` and keep their
   coverage.
-- `parity:api` / `parity:test` deltas non-negative for actiondispatch; both call
+- [ ] `parity:api` / `parity:test` deltas non-negative for actiondispatch; both call
   gates green with no new baseline rows.
+
+## Definition of done
+
+Rewording the `NOTE:` at `test-process.ts:88-91` into a better-justified
+deviation does not close this story — a deviation register is a burndown
+ledger, not permission (CLAUDE.md). Collapsing
+`ActionDispatch::Http::UploadedFile` and `Rack::Test::UploadedFile` into one
+trails class does not close it either: both exist upstream and are different.

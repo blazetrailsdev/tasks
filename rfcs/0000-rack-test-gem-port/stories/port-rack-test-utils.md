@@ -8,7 +8,7 @@ packages: []
 deps: ["enroll-rack-test-in-compare-tooling", "port-rack-test-uploaded-file"]
 deps-rfc: []
 est-loc: 350
-priority: 5
+priority: 6
 pr: null
 claim: null
 assignee: null
@@ -48,12 +48,12 @@ part of this RFC.
 
 ## Acceptance criteria
 
-- `packages/rack-test/src/utils.ts` ports the module member for member in Rails
+- [ ] `packages/rack-test/src/utils.ts` ports the module member for member in Rails
   source order, as a `this`-typed mixin per CLAUDE.md "Module mixins" (Rails
   `include Rack::Test::Utils`).
-- `MULTIPART_BOUNDARY` and `DEFAULT_HOST` exported from
+- [ ] `MULTIPART_BOUNDARY` and `DEFAULT_HOST` exported from
   `packages/rack-test/src/test.ts` with their exact Rails values.
-- `utils.test.ts` and `multipart.test.ts` credit all 50 cases under
+- [ ] `utils.test.ts` and `multipart.test.ts` credit all 50 cases under
   `parity:test`; no test name is reworded.
-- `pnpm parity:api` / `parity:test` deltas non-negative; both call gates green
+- [ ] `pnpm parity:api` / `parity:test` deltas non-negative; both call gates green
   with no new baseline rows.

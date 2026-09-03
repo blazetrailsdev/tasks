@@ -27,9 +27,10 @@ there; the rest are explicit lists:
 - `scripts/api-compare/config.ts:190` — `MANIFEST_PACKAGES` gains `"rack-test"`.
 - `scripts/test-compare/compare.ts:1493` — `pkgDirs` gains
   `"rack-test": "packages/rack-test/src/"`.
-- `scripts/test-compare/generate-stubs.ts:31` — same entry. RFC 0133 shipped
+- `scripts/test-compare/generate-stubs.ts:31` — the same entry. RFC 0133 shipped
   this half late and had to file
-  `add-rack-session-to-generate-stubs-pkg-dirs`; do both at once.
+  `add-rack-session-to-generate-stubs-pkg-dirs` (**status `done`**) to catch up;
+  land both lists in one PR here.
 - `scripts/test-compare/extract-ts-tests.ts:20` — the package list.
 - `scripts/test-compare/compare.ts:128-140` — `rubyToConventionTs` gains a
   `rack-test` arm.
@@ -64,15 +65,24 @@ package in `GATED_PACKAGES` is its own reviewed burndown (CLAUDE.md).
 
 ## Acceptance criteria
 
-- All five registrations above landed in one PR.
-- `scripts/test-compare/compare.test.ts` gains cases for the eight mappings
+- [ ] All five registrations above landed in one PR.
+- [ ] `scripts/test-compare/compare.test.ts` gains cases for the eight mappings
   above, beside the rack-session cases at `:157-159`.
-- `pnpm parity:api` prints a `rack-test` row; `pnpm parity:test` prints
+- [ ] `pnpm parity:api` prints a `rack-test` row; `pnpm parity:test` prints
   `rack-test: 8 files, 234 tests`.
-- `blazetrails/rails-private-jsdoc` is run with `--fix` in the same PR (the
+- [ ] `blazetrails/rails-private-jsdoc` is run with `--fix` in the same PR (the
   extractor reports 17 of the 90 methods internal — RFC Open Question 1), so
   the manifest addition does not leave the `rails-comparison` CI job red.
-- `pnpm parity:api` / `parity:test` deltas for every other package are
+- [ ] `pnpm parity:api` / `parity:test` deltas for every other package are
   non-negative.
-- `pnpm parity:api:extra --package rack-test` runs and reports; no baseline or
+- [ ] `pnpm parity:api:extra --package rack-test` runs and reports; no baseline or
   mark is widened.
+
+## Definition of done
+
+Adding `rack-test` to `GATED_PACKAGES` in
+`scripts/api-compare/extra-surface-mark.json` does not close this story and is
+not part of it — gating a package is its own reviewed burndown (CLAUDE.md).
+Nor does widening any baseline or mark to absorb the new package's day-one
+numbers: 0/90 and 0/234 are the honest baseline and they belong in the report,
+not in an allowlist.
