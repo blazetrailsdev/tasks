@@ -43,7 +43,7 @@ diverges in three ways, all surfaced while wiring it into
   readers.
 - **The guard is a nullish check, not Ruby truthiness.** `if view_runtime`
   is false only for `nil`/`false`, so a stored `0` still appends `Views:
-  0.0ms`; the port's `!== undefined && !== null` happens to agree here, but
+0.0ms`; the port's `!== undefined && !== null` happens to agree here, but
   it is spelled as a JS guard rather than the ported one.
 - **The format is `toFixed`, not `%.1f` over `to_f`.** Rails coerces with
   `to_f` first, so a String `view_runtime` formats rather than producing
