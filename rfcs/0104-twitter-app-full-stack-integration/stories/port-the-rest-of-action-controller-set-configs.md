@@ -32,7 +32,7 @@ The rest of the Ruby body is unported, and each line has a receiver that does
 not exist yet:
 
 - `:55-66` — `options.logger ||= Rails.logger`, `options.cache_store ||=
-  Rails.cache`, `javascripts_dir` / `stylesheets_dir` from
+Rails.cache`, `javascripts_dir` / `stylesheets_dir` from
   `paths["public/javascripts"]` / `["public/stylesheets"]`, and
   `asset_host` / `relative_url_root` from `app.config`. The `public/*` path
   entries are not in trails' `Engine::Configuration#paths`.

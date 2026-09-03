@@ -37,7 +37,7 @@ if (Object.hasOwn(hash, "file") || Object.hasOwn(hash, "inline")) {
   (`:27-33`). trails reads files through the async fs backend, so neither the
   check nor the read is available synchronously.
 - `:inline` builds `Template::Inline.new(options[:inline], "inline template",
-  handler, locals: keys, format: format)` (`:35-42`), picking the handler with
+handler, locals: keys, format: format)` (`:35-42`), picking the handler with
   `Template.handler_for_extension(options[:type] || "erb")` and the format from
   `handler.default_format`. The compile itself is synchronous in trails
   (`Template#render` is), so this arm is reachable; only `:file` is genuinely
