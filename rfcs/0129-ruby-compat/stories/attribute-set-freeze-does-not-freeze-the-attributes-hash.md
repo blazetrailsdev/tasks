@@ -43,7 +43,7 @@ Two neighbours are missing from the same file for the same reason:
   the `dup` twin of the `initialize_clone` trails already has
   (`attribute-set.ts:165-167`).
 - `==` (`attribute_set.rb:101-103`) — `other.is_a?(AttributeSet) && attributes ==
-  other.send(:attributes)`, which has no trails counterpart at all
+other.send(:attributes)`, which has no trails counterpart at all
   (`equals` is absent from the file).
 
 Surfaced while porting `@attributes` to a `Record` in PR #7418; none of the three
