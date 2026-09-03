@@ -1,6 +1,6 @@
 ---
 title: "Move the seven remaining transaction_manager delegates from abstract-adapter.ts into their Rails file"
-status: claimed
+status: in-progress
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: 7
-pr: null
+pr: 7447
 claim: "2026-09-03T15:54:31Z"
 assignee: "move-remaining-transaction-manager-delegates-to-database-statements"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "join-association-table-returns-the-arel-table"
-status: claimed
+status: in-progress
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 8
-pr: null
+pr: 7447
 claim: "2026-09-03T15:54:31Z"
 assignee: "move-remaining-transaction-manager-delegates-to-database-statements"
 blocked-by: null

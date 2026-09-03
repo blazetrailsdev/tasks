@@ -1,7 +1,7 @@
 ---
 title: "AR's initializeGeneratedModules splices a second carrier; ActiveModel's stays in the chain and keeps answering"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm
 packages:
@@ -11,9 +11,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 61
-pr: null
-claim: null
-assignee: null
+pr: 7449
+claim: "2026-09-03T16:11:55Z"
+assignee: "attribute-methods-method-missing-dispatch-unported"
 blocked-by: null
 closed-reason: null
 ---

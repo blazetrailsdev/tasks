@@ -1,6 +1,6 @@
 ---
 title: "converge-adapter-begin-transaction-lazy-overrides"
-status: claimed
+status: in-progress
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 6
-pr: null
+pr: 7446
 claim: "2026-09-03T15:51:19Z"
 assignee: "converge-future-result-event-buffer-instrument"
 blocked-by: null

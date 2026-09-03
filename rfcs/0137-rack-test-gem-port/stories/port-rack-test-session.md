@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Test::Session and the rack-test entry file"
-status: draft
+status: ready
 updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null

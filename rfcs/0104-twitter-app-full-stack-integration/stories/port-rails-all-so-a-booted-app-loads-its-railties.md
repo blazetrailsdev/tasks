@@ -1,6 +1,6 @@
 ---
 title: "No rails/all port, so which framework railties a booted app runs is an accident of the import graph"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Collapse ActionController::TestCase's hand-rolled multipart encoder onto Rack::Test::Utils"
-status: draft
+status: ready
 updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null

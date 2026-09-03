@@ -1,6 +1,6 @@
 ---
 title: "Guides Code Type Check failing on main @709a6a4b"
-status: ready
+status: closed
 updated: 2026-09-03
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T16:51:00Z"
+assignee: "red-709a6a4b"
 blocked-by: null
-closed-reason: null
+closed-reason: "Guides Code Type Check red (idioms.md Range import from @blazetrails/activesupport) was already fixed on main by #7448 / ca230097c"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "Converge TestProcess#fileFixtureUpload onto Rack::Test::UploadedFile"
-status: draft
+status: ready
 updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null

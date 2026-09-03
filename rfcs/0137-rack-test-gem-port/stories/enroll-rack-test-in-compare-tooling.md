@@ -1,6 +1,6 @@
 ---
 title: "Enroll rack-test in parity:api and parity:test"
-status: draft
+status: ready
 updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null

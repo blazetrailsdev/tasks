@@ -1,6 +1,6 @@
 ---
 title: "The third round of orphaned re-export shims, and the rule change that stops a fourth"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null

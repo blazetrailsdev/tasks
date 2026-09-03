@@ -1,6 +1,6 @@
 ---
 title: "converge-future-result-event-buffer-instrument"
-status: claimed
+status: blocked
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -12,7 +12,7 @@ priority: 5
 pr: null
 claim: "2026-09-03T15:51:19Z"
 assignee: "converge-future-result-event-buffer-instrument"
-blocked-by: null
+blocked-by: "Cannot converge without first unifying ActiveSupport::Notifications::Instrumenter#instrument with its trails async twin, which is a repo-wide activesupport change of its own size. EventBuffer#instrument (future_result.rb:33-40) is duck-typed against AdapterInstrumenter (abstract-adapter.ts:29-35, called at :2019), whose other implementation is Notifications.instrumenter — an Instrumenter that already carries Rails' SYNC instrument (instrumenter.rb:54-65) at that name, so the contract member cannot simply be renamed to instrument. Renaming only EventBuffer's member breaks the contract; adding instrument beside instrumentAsync is the synonym the story forbids. The one shape that closes it is a single non-async Instrumenter#instrument returning T | Promise<T> that finishes the handle in a then/finally for a thenable block (the settled trails idiom for a Ruby method whose one body must cover both), after which EventBuffer takes the Rails name and the contract follows. That touches instrumenter.ts, notifications.ts, abstract-adapter.ts and 4 test files and gates every sql.active_record event in the repo, so it needs its own PR."
 closed-reason: null
 ---
 
