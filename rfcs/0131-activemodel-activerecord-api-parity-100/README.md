@@ -8,6 +8,7 @@ owner: "@deanmarano"
 packages:
   - activemodel
   - activerecord
+  - trailties
 clusters:
   - fidelity
   - tooling
