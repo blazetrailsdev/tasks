@@ -4,7 +4,7 @@ status: draft
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 260
