@@ -1,6 +1,6 @@
 ---
 title: "Flip rack's File/Dir call sites off getFs/getPath"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

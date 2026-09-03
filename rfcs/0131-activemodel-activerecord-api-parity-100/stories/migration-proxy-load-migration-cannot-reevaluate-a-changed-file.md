@@ -1,6 +1,6 @@
 ---
 title: "MigrationProxy#loadMigration drops Rails' remove_const, so a changed migration file never re-evaluates"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null

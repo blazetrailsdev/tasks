@@ -1,6 +1,6 @@
 ---
 title: "retire-postgresql-columns-override-for-column-definitions"
-status: in-progress
+status: blocked
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -12,7 +12,7 @@ priority: 6
 pr: 7446
 claim: "2026-09-03T15:51:19Z"
 assignee: "converge-future-result-event-buffer-instrument"
-blocked-by: null
+blocked-by: "Attempted in #7446 and reverted: deleting the columns override deadlocks the PG lane. Reproduced locally against postgres:17 and bisected to this story alone (restoring the three beginTransaction overrides does NOT help; restoring the columns override does). Chain: the abstract columns (abstract/schema-statements.ts:797) reaches PostgreSQLAdapter#columnDefinitions, whose port — faithfully, per postgresql_adapter.rb:1034 — awaits supportsIdentityColumns()/supportsVirtualColumns() before building the SQL. Those read databaseVersion -> pool.serverVersion(), which takes the POOL mutex and then getDatabaseVersion() -> withRawConnection(), which takes the ADAPTER lock. columns() already runs under the adapter lock, and on a pool whose _serverVersion is not yet memoized this inverts the lock order and hangs: base.test.ts 'connection in local time' / 'connection in utc time' (which call establishConnection, creating a FRESH pool) time out in the withTransactionalFixtures afterEach at 30s, and every later test in the file cascades on PG 25P02. Instrumented columnDefinitions shows three concurrent entries for 'defaults' all parked in supportsIdentityColumns. Rails does not hit this because configure_connection calls check_version (abstract_adapter.rb:1212), so database_version is memoized on the pool before any column_definitions can run, while trails' _maybeConfigureConnection (postgresql-adapter.ts:482) is lazily gated on _connectionConfigured and can race the first columns() on a newly established connection. Converging this story needs that version warm-up / lock-ordering fix first; the override deletion itself is a two-line change once the deadlock is gone. Note the deleted override's batched loadAdditionalTypes was a trails optimisation the story correctly retires (Rails loads per-OID via get_oid_type), and the three trails-only tests in postgresql/schema-statements.trails.test.ts 'SchemaStatements#columns delegates to newColumnFromField' cover the bespoke query and go with it."
 closed-reason: null
 ---
 
