@@ -1,7 +1,7 @@
 ---
 rfc: "0137-rack-test-gem-port"
 title: "@blazetrails/rack-test: vendor the rack-test gem and collapse actionpack's hand-rolled stand-ins onto it"
-status: draft
+status: active
 created: 2026-09-03
 updated: 2026-09-03
 owner: "@deanmarano"
@@ -561,3 +561,4 @@ Fourteen stories, 3,410 loc estimated, none over the 400-loc ceiling.
 ## Changelog
 
 - 2026-09-03: initial RFC
+- 2026-09-03: merged as RFC 0137; status draft → active, all 14 stories set `ready`
