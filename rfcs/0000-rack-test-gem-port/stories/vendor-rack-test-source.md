@@ -22,7 +22,7 @@ closed-reason: null
 (`vendor/rails/actionpack/actionpack.gemspec:41`, `s.add_dependency "rack-test",
 ">= 0.6.3"`), resolved at `rack-test (2.2.0)` by
 `vendor/rails/Gemfile.lock:443`. Nothing under `vendor/` provides it:
-`vendor/sources.ts` lists seven sources (`rails`, `rack`, `rack-session`,
+`vendor/sources.ts` lists eight sources (`rails`, `rack`, `rack-session`,
 `did_you_mean`, `globalid`, `date`, `minitest`) and none is rack-test.
 
 So every `Rack::Test` citation in the tree is unresolvable today:
@@ -34,7 +34,7 @@ Rack::Test::Utils.build_multipart"), and
 
 Story 1 of the RFC: land the anchor first, so every later story's citation
 resolves. Mirror the `rack` / `rack-session` entries at
-`vendor/sources.ts:132-176`.
+`vendor/sources.ts:147-179`.
 
 ```ts
 {
@@ -58,7 +58,7 @@ is not a shim: `lib/rack/test.rb` is 382 lines and defines `Session` (`:53`),
 `Error` (`:45`), `DEFAULT_HOST` (`:33`) and `MULTIPART_BOUNDARY` (`:36`). The
 module-root `libPath` is kept for path mapping and the entry file recovered
 through `libEntryFile`, the mechanism `arel` already uses for
-`activerecord/lib/arel.rb` (`vendor/sources.ts:78-81`). `testPath` is `spec`,
+`activerecord/lib/arel.rb` (`vendor/sources.ts:83`). `testPath` is `spec`,
 not `test`.
 
 The clone lays down 6 lib files (987 lines: `test.rb` 382, `cookie_jar.rb` 251,
@@ -91,7 +91,7 @@ So `compareApi` / `compareTests` stay ON. Enrollment itself is
 - [ ] `vendor/sources.lock.json` updated by the normal `pnpm vendor:fetch` path,
   not hand-edited.
 - [ ] `vendor/sources.test.ts` passes; `vendor/README.md` lists rack-test alongside
-  the other seven.
+  the other eight.
 - [ ] `pnpm vendor:fetch` in a fresh worktree lays down
   `vendor/rack-test/lib/rack/test.rb` and `vendor/rack-test/spec/`.
 - [ ] `pnpm parity:api` / `parity:test` deltas non-negative (the package is not yet

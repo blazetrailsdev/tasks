@@ -37,7 +37,7 @@ encoder, its fixture-file upload helper and — in production code —
 `ActionController::Parameters`' permitted-scalar list all name `Rack::Test::`
 constants directly.
 
-Nothing under `vendor/` provides it. `vendor/sources.ts` vendors seven sources
+Nothing under `vendor/` provides it. `vendor/sources.ts` vendors eight sources
 (`rails`, `rack`, `rack-session`, `did_you_mean`, `globalid`, `date`,
 `minitest`); none is rack-test. So trails has been **hand-rolling stand-ins
 inside actionpack**: a private `MockSession` class in `integration.ts` whose
@@ -48,7 +48,7 @@ a `fileFixtureUpload` that returns `ActionDispatch::Http::UploadedFile` where
 Rails returns `Rack::Test::UploadedFile`.
 
 This RFC vendors `rack-test` at `v2.2.0` the way `vendor/sources.ts` already
-vendors seven other gems, creates `packages/rack-test`, ports the gem against
+vendors eight other sources, creates `packages/rack-test`, ports the gem against
 its own 234-case suite, and collapses the actionpack stand-ins onto it. It is
 the same shape as RFC 0133 (`rack-session-gem-port`), which is 43/45 done, and
 it uses the same tooling with no extractor changes at all.
@@ -265,7 +265,7 @@ it is the layout decision worth stating.** `rack` and `rack-session` both point
 it. rack-test's entrypoint is not a shim — it is the largest file in the gem.
 So the module-root `libPath` is kept for the same path-mapping reason, and the
 entry file is recovered through `libEntryFile`, the mechanism `arel` already
-uses for `activerecord/lib/arel.rb` (`vendor/sources.ts:78-81`). Verified: both
+uses for `activerecord/lib/arel.rb` (`vendor/sources.ts:83`). Verified: both
 spellings extract identically (`libPath: "lib/rack"` over 6 files, and
 `libPath: "lib/rack/test"` + `libEntryFile` over 5 + entry, each reporting
 `5 classes, 4 modules, 90 public methods (17 internal)`), but only the second
@@ -285,9 +285,9 @@ files across its 987 lines:
 | `tempfile` | `uploaded_file.rb:4` (`Tempfile.new` at `:92`) | `@blazetrails/activesupport` — `packages/activesupport/src/tempfile.ts` |
 | `stringio` | `uploaded_file.rb:5` (`when StringIO` at `:36`) | `@blazetrails/ruby-compat` — `src/string-io.ts:20` |
 | `fileutils` | `uploaded_file.rb:3` | `@blazetrails/ruby-compat` — `index.ts:41`, `FileUtils` |
-| `uri` | `cookie_jar.rb:3`, and `Session#parse_uri` (`test.rb:271`) | `@blazetrails/ruby-compat` (`getFs` / `getPath` seat) |
+| `uri` | `test.rb:3`, `cookie_jar.rb:3`; `Session#parse_uri` at `test.rb:271` | `@blazetrails/ruby-compat` (`getFs` / `getPath` seat) |
 | `time` | `cookie_jar.rb:4` (`Cookie#expires`, `:81`) | `@blazetrails/activesupport` / `@blazetrails/ruby-compat` |
-| `forwardable` | `test.rb:21`, `methods.rb` | no port needed — TS delegation |
+| `forwardable` | `test.rb:21`, `methods.rb:3` | no port needed — TS delegation |
 
 So `packages/rack-test/package.json` declares **exactly the three workspace
 dependencies `packages/rack-session/package.json` already declares** —
@@ -468,7 +468,7 @@ that redirects its one call site.
   contract buys nothing. `date` opts out because its surface is C; `minitest`
   because it has no TS package dir. Neither applies.
 - **Vendor from RubyGems rather than git.** `vendor/sources.ts` has one origin
-  shape (`type: "git"`) and all seven entries use it. Rejected for consistency;
+  shape (`type: "git"`) and all eight entries use it. Rejected for consistency;
   the tag `v2.2.0` is the released gem.
 
 ## Rollout

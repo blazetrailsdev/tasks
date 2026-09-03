@@ -42,8 +42,8 @@ package in the repo and rack-test does not join it.
 declare the stdlib and rack-test requires six stdlib files: `tempfile`
 (`uploaded_file.rb:4`, `Tempfile.new` at `:92`), `stringio`
 (`uploaded_file.rb:5`, `when StringIO` at `:36`), `fileutils`
-(`uploaded_file.rb:3`), `uri` (`cookie_jar.rb:3`, `Session#parse_uri` at
-`test.rb:271`), `time` (`cookie_jar.rb:4`) and `forwardable` (`test.rb:21`).
+(`uploaded_file.rb:3`), `uri` (`test.rb:3`, `cookie_jar.rb:3`; `Session#parse_uri` at `test.rb:271`),
+`time` (`cookie_jar.rb:4`) and `forwardable` (`test.rb:21`, `methods.rb:3`).
 `StringIO` and `FileUtils` are ruby-compat's
 (`packages/ruby-compat/src/string-io.ts:20`, `index.ts:41`); `Tempfile` is
 still `packages/activesupport/src/tempfile.ts`, because
