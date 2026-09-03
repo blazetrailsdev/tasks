@@ -1,6 +1,6 @@
 ---
 title: "Flip actionpack and actionview's File/Dir call sites off getFs/getPath"
-status: claimed
+status: done
 updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-file-and-dir-classes-onto-the-fs-backend"]
 deps-rfc: []
 est-loc: 300
 priority: 8
-pr: null
+pr: 7455
 claim: "2026-09-03T19:44:21Z"
 assignee: "flip-file-dir-call-sites-actionpack-and-actionview"
 blocked-by: null

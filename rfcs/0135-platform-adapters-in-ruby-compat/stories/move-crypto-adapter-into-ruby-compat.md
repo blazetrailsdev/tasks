@@ -1,7 +1,7 @@
 ---
 title: "crypto-adapter moves into ruby-compat, bootstrap included; the SecureRandom/Digest re-dressing is deferred to its own story"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport"]
@@ -9,9 +9,9 @@ deps: ["narrow-ruby-compat-leaf-guard-to-static-imports"]
 deps-rfc: []
 est-loc: 300
 priority: 12
-pr: null
-claim: null
-assignee: null
+pr: 7460
+claim: "2026-09-03T20:14:46Z"
+assignee: "move-crypto-adapter-into-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Register rack-test in the CI lanes"
-status: ready
+status: in-progress
 updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["rack-test-package-skeleton"]
 deps-rfc: []
 est-loc: 80
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 7459
+claim: "2026-09-03T20:37:20Z"
+assignee: "enroll-rack-test-in-compare-tooling"
 blocked-by: null
 closed-reason: null
 ---

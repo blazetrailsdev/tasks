@@ -1,6 +1,6 @@
 ---
 title: "Move newColumnFromField, changeColumnForAlter, dataSourceSql and extractSchemaQualifiedName off postgresql-adapter.ts into the file that mirrors their Rails home"
-status: claimed
+status: done
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 280
 priority: 3
-pr: null
+pr: 7456
 claim: "2026-09-03T19:46:04Z"
 assignee: "move-postgresql-schema-statement-privates-to-their-rails-file"
 blocked-by: null

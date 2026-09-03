@@ -1,6 +1,6 @@
 ---
 title: "Port RangeHandler::RangeWithBinds so range_handler.rb stops at 3/9, and retire the missingRailsCall receipt it forced"
-status: claimed
+status: done
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 3
-pr: null
+pr: 7456
 claim: "2026-09-03T19:46:04Z"
 assignee: "move-postgresql-schema-statement-privates-to-their-rails-file"
 blocked-by: null

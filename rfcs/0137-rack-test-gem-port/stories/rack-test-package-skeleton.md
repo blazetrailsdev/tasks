@@ -1,6 +1,6 @@
 ---
 title: "Create packages/rack-test as a published workspace package"
-status: in-progress
+status: done
 updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null
