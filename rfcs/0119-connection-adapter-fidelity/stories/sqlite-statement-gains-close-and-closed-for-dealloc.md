@@ -70,7 +70,7 @@ caller and moves to `close()` too.
 - [ ] `SqliteStatement` declares `close()` and a `closed` predicate; all four
       driver wrappers implement them.
 - [ ] `SQLite3Adapter::StatementPool#dealloc` is Rails' `stmt.close unless
-  stmt.closed?`, with no optional-call guard standing in for the `unless`.
+stmt.closed?`, with no optional-call guard standing in for the `unless`.
 - [ ] `pnpm parity:api:calls` shows `close` / `closed?` credited, with no new
       baseline row and no `@missingRailsCall` receipt.
 - [ ] The SQLite lane passes on every driver.
