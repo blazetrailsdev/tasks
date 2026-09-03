@@ -5,7 +5,12 @@ updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
-deps: ["enroll-rack-test-in-compare-tooling", "port-uri-for-parse-merge-and-scheme-classes", "port-time-parse-reader-onto-the-date-time-seat"]
+deps:
+  [
+    "enroll-rack-test-in-compare-tooling",
+    "port-uri-for-parse-merge-and-scheme-classes",
+    "port-time-parse-reader-onto-the-date-time-seat",
+  ]
 deps-rfc: ["0129-ruby-compat"]
 est-loc: 400
 priority: 7

@@ -5,7 +5,12 @@ updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
-deps: ["enroll-rack-test-in-compare-tooling", "expose-fileutils-copy-file-as-a-public-member", "port-set-encoding-on-stringio-and-tempfile"]
+deps:
+  [
+    "enroll-rack-test-in-compare-tooling",
+    "expose-fileutils-copy-file-as-a-public-member",
+    "port-set-encoding-on-stringio-and-tempfile",
+  ]
 deps-rfc: ["0129-ruby-compat"]
 est-loc: 300
 priority: 5

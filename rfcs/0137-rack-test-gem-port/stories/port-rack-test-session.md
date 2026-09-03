@@ -5,7 +5,13 @@ updated: 2026-09-03
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
-deps: ["port-rack-test-cookie-jar", "port-rack-test-utils", "port-uri-for-parse-merge-and-scheme-classes", "port-array-pack-strict-base64-directive"]
+deps:
+  [
+    "port-rack-test-cookie-jar",
+    "port-rack-test-utils",
+    "port-uri-for-parse-merge-and-scheme-classes",
+    "port-array-pack-strict-base64-directive",
+  ]
 deps-rfc: ["0129-ruby-compat"]
 est-loc: 400
 priority: 8

@@ -59,6 +59,6 @@ byte semantics already match; the shape does not.
   and `each`, and `sendFile` is `commitBang()` then seating `new FileBody(path)`.
 - `each` reads in 16384-byte chunks through `File.open(toPath, "rb")` and yields
   each chunk, stopping when `IO#read` answers `null` — Rails' `while chunk =
-  file.read(16384)`.
+file.read(16384)`.
 - The closed-over `cached` memo is gone; Ruby has no such memo, and `body` and
   `each` each open the file themselves.
