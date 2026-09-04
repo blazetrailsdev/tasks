@@ -1,6 +1,6 @@
 ---
 title: "Zlib is the last static node: import in activesupport, and the one builtin with no seam"
-status: ready
+status: in-progress
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["ruby-named-file-dir-fileutils-facade"]
 deps-rfc: []
 est-loc: 260
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 7483
+claim: "2026-09-04T14:20:45Z"
+assignee: "zlib-seam-is-the-last-static-node-builtin"
 blocked-by: null
 closed-reason: null
 ---

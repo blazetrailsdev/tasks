@@ -1,6 +1,6 @@
 ---
 title: "Port Array#pack's m/m0 directives so basic_authorize makes the strict-base64 call Rails makes"
-status: ready
+status: in-progress
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 7483
+claim: "2026-09-04T14:20:45Z"
+assignee: "zlib-seam-is-the-last-static-node-builtin"
 blocked-by: null
 closed-reason: null
 ---

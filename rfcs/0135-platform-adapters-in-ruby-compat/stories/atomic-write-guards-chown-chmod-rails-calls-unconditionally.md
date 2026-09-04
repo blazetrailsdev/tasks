@@ -1,6 +1,6 @@
 ---
 title: "atomic_write guards chown/chmod where atomic.rb:41-42 calls both unconditionally"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

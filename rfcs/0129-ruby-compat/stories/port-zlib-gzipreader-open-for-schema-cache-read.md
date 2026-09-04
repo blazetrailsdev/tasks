@@ -1,6 +1,6 @@
 ---
 title: "Zlib::GzipReader.open / GzipWriter.open, so SchemaCache.read stops opening the .gz itself"
-status: ready
+status: blocked
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 130
 priority: 2
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-04T14:50:46Z"
+assignee: "port-zlib-gzipreader-open-for-schema-cache-read"
+blocked-by: "Needs the ruby-compat Zlib seam that zlib-seam-is-the-last-static-node-builtin is still building: packages/ruby-compat/src/zlib-adapter.ts exists only on the unmerged PR #7483, and origin/main's ruby-compat/src/zlib.ts holds crc32 alone. GzipReader.open/GzipWriter.open cannot compress or decompress in a leaf package without that adapter, and the AC forbids a node:zlib import there. Building it now would stack on #7483 and conflict on both zlib.ts and gzip.ts. Unblock once #7483 merges."
 closed-reason: null
 ---
 
