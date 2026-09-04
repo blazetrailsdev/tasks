@@ -1,7 +1,7 @@
 ---
 title: "Converge FlashHash#to_session_value into one method that owns the session payload shape"
-status: in-progress
-updated: 2026-09-03
+status: done
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
