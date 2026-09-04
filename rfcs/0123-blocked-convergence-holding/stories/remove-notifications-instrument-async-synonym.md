@@ -2,7 +2,7 @@
 title: "Delete Notifications.instrumentAsync now that the unified Instrumenter#instrument covers an async block"
 status: draft
 updated: 2026-09-03
-rfc: "0131-activemodel-activerecord-api-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
