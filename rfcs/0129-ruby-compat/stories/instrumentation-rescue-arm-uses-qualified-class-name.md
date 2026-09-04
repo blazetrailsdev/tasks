@@ -1,6 +1,6 @@
 ---
 title: "Instrumentation#process_action's rescue arm must resolve error.class.name, not constructor.name"
-status: ready
+status: in-progress
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 10
-pr: null
-claim: null
-assignee: null
+pr: 7486
+claim: "2026-09-04T16:20:47Z"
+assignee: "sqlite3-and-mysql-bare-missing-rails-call-receipts"
 blocked-by: null
 closed-reason: null
 ---

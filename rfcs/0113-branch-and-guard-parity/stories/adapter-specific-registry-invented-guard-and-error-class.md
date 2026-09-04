@@ -1,7 +1,7 @@
 ---
 title: "AdapterSpecificRegistry carries an invented register guard, lacks lookup varargs, and raises Error not ArgumentError"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-04
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 16
-pr: null
-claim: null
-assignee: null
+pr: 7486
+claim: "2026-09-04T16:20:47Z"
+assignee: "sqlite3-and-mysql-bare-missing-rails-call-receipts"
 blocked-by: null
 closed-reason: null
 ---

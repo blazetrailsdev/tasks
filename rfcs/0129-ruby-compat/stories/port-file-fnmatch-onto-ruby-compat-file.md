@@ -1,6 +1,6 @@
 ---
 title: "File.fnmatch lands on ruby-compat's File, and actionview's HashResolver stops compiling its own glob RegExp"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null

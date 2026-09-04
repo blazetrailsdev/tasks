@@ -1,6 +1,6 @@
 ---
 title: "Zlib is the last static node: import in activesupport, and the one builtin with no seam"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null

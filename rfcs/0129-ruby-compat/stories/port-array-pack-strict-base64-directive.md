@@ -1,6 +1,6 @@
 ---
 title: "Port Array#pack's m/m0 directives so basic_authorize makes the strict-base64 call Rails makes"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null

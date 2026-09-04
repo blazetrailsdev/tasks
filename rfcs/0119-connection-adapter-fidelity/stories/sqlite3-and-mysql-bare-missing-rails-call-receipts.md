@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-and-mysql-bare-missing-rails-call-receipts"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-04
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7486
+claim: "2026-09-04T16:20:47Z"
+assignee: "sqlite3-and-mysql-bare-missing-rails-call-receipts"
 blocked-by: null
 closed-reason: null
 ---

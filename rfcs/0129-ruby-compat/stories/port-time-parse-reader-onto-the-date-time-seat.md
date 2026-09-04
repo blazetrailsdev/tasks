@@ -1,6 +1,6 @@
 ---
 title: "Port Time.parse onto @blazetrails/date's Time, the stdlib reader Cookie#expires and Messages::Metadata both need"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null

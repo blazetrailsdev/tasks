@@ -1,6 +1,6 @@
 ---
 title: "Ruby's stdlib MonitorMixin moves to ruby-compat, once a leaf may hold the async-context adapter"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null

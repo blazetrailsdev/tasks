@@ -1,6 +1,6 @@
 ---
 title: "Hash#to_h belongs on ruby-compat's Hash, not on HashWithIndifferentAccess"
-status: claimed
+status: in-progress
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 15
-pr: null
+pr: 7485
 claim: "2026-09-04T15:50:46Z"
 assignee: "route-remaining-default-env-call-sites"
 blocked-by: null
