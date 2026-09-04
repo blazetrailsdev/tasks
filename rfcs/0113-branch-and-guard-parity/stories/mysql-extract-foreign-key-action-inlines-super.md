@@ -1,6 +1,6 @@
 ---
 title: "extract_foreign_key_action inlines the abstract body where Rails calls super (mysql/schema_statements.rb:225-227)"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0113-branch-and-guard-parity"
 cluster: null

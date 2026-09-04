@@ -1,7 +1,7 @@
 ---
 title: "Declare TypeScript 7 as the supported floor in published peer ranges"
-status: ready
-updated: 2026-08-26
+status: in-progress
+updated: 2026-09-04
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: ["trails-tsc", "trailties", "activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7494
+claim: "2026-09-04T20:24:53Z"
+assignee: "declare-typescript-7-peer-ranges"
 blocked-by: null
 ---
 

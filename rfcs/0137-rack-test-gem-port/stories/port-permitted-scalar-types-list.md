@@ -1,7 +1,7 @@
 ---
 title: "PERMITTED_SCALAR_TYPES is five types short, so params.permit drops uploaded files"
-status: ready
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-04
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["port-rack-test-uploaded-file"]
 deps-rfc: []
 est-loc: 250
 priority: 12
-pr: null
-claim: null
-assignee: null
+pr: 7495
+claim: "2026-09-04T20:26:02Z"
+assignee: "port-permitted-scalar-types-list"
 blocked-by: null
 closed-reason: null
 ---

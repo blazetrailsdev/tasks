@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Test::UploadedFile"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0137-rack-test-gem-port"
 cluster: null

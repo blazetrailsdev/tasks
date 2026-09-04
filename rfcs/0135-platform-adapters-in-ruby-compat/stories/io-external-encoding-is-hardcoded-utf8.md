@@ -1,6 +1,6 @@
 ---
 title: "IO's non-binary read/write arms hardcode UTF-8 where Ruby reads the stream's external encoding"
-status: draft
+status: ready
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 37
 pr: null
 claim: null
 assignee: null

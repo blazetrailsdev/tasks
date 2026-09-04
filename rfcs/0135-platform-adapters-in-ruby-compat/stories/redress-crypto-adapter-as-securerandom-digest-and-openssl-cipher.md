@@ -1,6 +1,6 @@
 ---
 title: "redress-crypto-adapter-as-securerandom-digest-and-openssl-cipher"
-status: claimed
+status: in-progress
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 29
-pr: null
+pr: 7492
 claim: "2026-09-04T19:44:33Z"
 assignee: "move-remaining-monotonic-seats-onto-process-clock-gettime"
 blocked-by: null

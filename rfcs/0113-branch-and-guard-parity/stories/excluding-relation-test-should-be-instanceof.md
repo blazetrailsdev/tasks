@@ -1,6 +1,6 @@
 ---
 title: "excluding should test is_a?(Relation), not duck-type whereClause/havingClause"
-status: claimed
+status: in-progress
 updated: 2026-09-04
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 18
-pr: null
+pr: 7493
 claim: "2026-09-04T19:50:50Z"
 assignee: "type-registry-key-replaces-per-adapter-overrides"
 blocked-by: null

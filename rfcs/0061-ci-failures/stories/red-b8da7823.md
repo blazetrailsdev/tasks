@@ -1,6 +1,6 @@
 ---
 title: "Virtualized DX Type Tests failing on main @b8da7823"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0061-ci-failures"
 cluster: null
