@@ -60,7 +60,7 @@ Delete `overrideTypes` from both declarations and collapse the merge to Rails'
 single argument:
 
 ```ts
-(this as any).attributesBuilder().buildFromDatabase(row, columnTypes ?? {})
+(this as any).attributesBuilder().buildFromDatabase(row, columnTypes ?? {});
 ```
 
 matching `persistence.rb:312`'s `build_from_database(attributes, column_types)`.

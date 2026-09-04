@@ -64,7 +64,11 @@ alone.
 
 ```ts
 if (this.contentLength === 0 || this.contentMimeType === null) return fallback();
-const strategy = fetch(parsers, this.contentMimeType.symbol, block(() => fallback()));
+const strategy = fetch(
+  parsers,
+  this.contentMimeType.symbol,
+  block(() => fallback()),
+);
 ```
 
 with the `rawPost` clause dropped and the `?? toString()` fallback dropped, so

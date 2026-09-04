@@ -1,5 +1,5 @@
 ---
-title: "Encoding.find(\"internal\") raises where MRI answers nil — no default_internal seat"
+title: 'Encoding.find("internal") raises where MRI answers nil — no default_internal seat'
 status: draft
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
