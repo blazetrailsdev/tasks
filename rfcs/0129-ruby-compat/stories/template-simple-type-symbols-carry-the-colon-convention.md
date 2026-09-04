@@ -50,8 +50,15 @@ Symbols — straight into `LookupContext#formats=`, whose
 against `Types.symbols`. With one side converged and the other not, the
 comparison fails, so that PR flattens the Symbol back to a bare name at
 `packages/actionpack/src/action-controller/metal/rendering.ts`'s
-`processAction` with a comment pointing here. That flattening is the deviation
-this story removes.
+`processAction`. That flattening is the deviation this story removes.
+
+It carries no call-site comment pointing here, and cannot: `no-freeform-comments`
+(`eslint/no-freeform-comments.mjs`) keeps only the four repo JSDoc flags with
+their reason arguments and tool directives, and none of those four describes an
+EXTRA call the TS body makes — `@missingRailsCall` and `@missingRailsArgs` are
+both for calls Rails makes that TS omits or mis-argues, and `@noRailsEquivalent`
+is for a declaration with no Ruby counterpart, which `processAction`
+(`rendering.rb:191-194`) has. This story file is the tracking.
 
 ## Converged shape
 
@@ -71,7 +78,7 @@ so `request.formats.filter_map(&:ref)` reaches `formats=` verbatim.
       convention, mirroring `types.rb:10`.
 - [ ] `PathParser.buildPathRegex` maps them through `symbolToS`, mirroring
       `resolver.rb:17`'s `.map(&:to_s)`.
-- [ ] The `symbolToS` flattening and its comment in
+- [ ] The `symbolToS` flattening in
       `packages/actionpack/src/action-controller/metal/rendering.ts`'s
-      `processAction` are gone.
+      `processAction` is gone.
 - [ ] actionview and actionpack suites green.
