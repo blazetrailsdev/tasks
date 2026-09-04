@@ -1,6 +1,6 @@
 ---
 title: "File.binread decodes UTF-8 where Ruby answers ASCII-8BIT bytes"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

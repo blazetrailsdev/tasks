@@ -1,6 +1,6 @@
 ---
 title: "port-rack-test-utils-and-uploaded-file"
-status: draft
+status: closed
 updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of RFC 0137-rack-test-gem-port, which already schedules port-rack-test-utils, port-rack-test-uploaded-file, port-rack-test-methods, port-rack-test-cookie-jar, port-rack-test-session and port-rack-test-session-redirects-and-state; #7468 landed the slice of Session/CookieJar that Integration::Session#process drives, so those stories now converge a partial port rather than starting from zero"
 ---
 
 ## Context

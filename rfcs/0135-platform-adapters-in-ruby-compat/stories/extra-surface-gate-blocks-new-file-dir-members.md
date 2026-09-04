@@ -1,6 +1,6 @@
 ---
 title: "A new File/Dir member raises ruby-compat's extra-surface total despite its PERMANENT receipt, blocking the flip chain"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

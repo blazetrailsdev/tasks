@@ -1,7 +1,7 @@
 ---
 title: "A nested Rails entity's private member cannot carry @internal when a sibling entity publishes the name"
-status: ready
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-04
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: 7471
+claim: "2026-09-04T01:40:32Z"
+assignee: "nested-entity-privacy-unreachable-through-file-wide-fold"
 blocked-by: null
 closed-reason: null
 ---
