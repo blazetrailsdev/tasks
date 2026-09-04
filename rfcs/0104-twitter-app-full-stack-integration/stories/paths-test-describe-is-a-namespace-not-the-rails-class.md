@@ -25,7 +25,7 @@ Surfaced while adding the two `skip_*!` tests in PR #7497
 `describe("Rails::Paths", ...)`. `parity:test` normalizes the Ruby side to the
 test CLASS name, so every test in the file lands in the WRONG DESCRIBE bucket:
 
-```text
+````text
 paths_test.rb   paths.test.ts   11  0  11  0  28  0  39
                                 OK    Desc
 ```text
@@ -64,3 +64,4 @@ the same report and is likely the same cause — check it while here.
 - [ ] `pnpm parity:test` reports `paths_test.rb` with 0 in the Desc column.
 - [ ] The trailties WRONG DESCRIBE total drops by 11.
 - [ ] No `it` name changed.
+````
