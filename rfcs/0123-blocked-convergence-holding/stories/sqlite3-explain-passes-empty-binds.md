@@ -2,7 +2,7 @@
 title: "sqlite3-explain-passes-empty-binds"
 status: blocked
 updated: 2026-09-03
-rfc: "0131-activemodel-activerecord-api-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
