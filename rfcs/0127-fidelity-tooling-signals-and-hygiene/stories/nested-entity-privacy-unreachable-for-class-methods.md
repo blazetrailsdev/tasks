@@ -2,7 +2,7 @@
 title: "A nested Rails entity's private CLASS method is still unreachable through the file-wide fold"
 status: draft
 updated: 2026-09-04
-rfc: "0131-activemodel-activerecord-api-parity-100"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []
