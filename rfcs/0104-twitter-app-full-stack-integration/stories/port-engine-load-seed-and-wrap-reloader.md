@@ -1,6 +1,6 @@
 ---
 title: "Port Engine#load_seed and its wrap_reloader_around_load_seed initializer"
-status: ready
+status: claimed
 updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-04T19:50:50Z"
+assignee: "type-registry-key-replaces-per-adapter-overrides"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Instrumentation#process_action's rescue arm must resolve error.class.name, not constructor.name"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null

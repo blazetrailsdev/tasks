@@ -1,6 +1,6 @@
 ---
 title: "Parameters#merge! delegates to Hash#merge! instead of hand-rolling the conflict loop"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null

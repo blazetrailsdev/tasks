@@ -1,6 +1,6 @@
 ---
 title: "DisableJoinsAssociationRelation's constructor raises four ArgumentErrors Rails does not have"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0113-branch-and-guard-parity"
 cluster: null

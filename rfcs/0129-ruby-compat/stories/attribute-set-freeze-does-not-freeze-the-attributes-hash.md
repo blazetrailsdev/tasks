@@ -1,6 +1,6 @@
 ---
 title: "AttributeSet#freeze does not freeze the attributes hash; initialize_dup and == are missing"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null

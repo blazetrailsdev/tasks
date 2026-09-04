@@ -1,6 +1,6 @@
 ---
 title: "Converge MimeType#symbol onto the colon convention so start_processing's Symbol arm fires"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null

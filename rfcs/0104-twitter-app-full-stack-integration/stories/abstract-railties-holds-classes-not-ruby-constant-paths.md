@@ -1,6 +1,6 @@
 ---
 title: "ABSTRACT_RAILTIES holds classes, not Rails' fully-qualified constant paths, so railtieName is wrong for all seven railties"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

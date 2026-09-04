@@ -1,6 +1,6 @@
 ---
 title: "Virtualized DX Type Tests failing on main @b8da7823"
-status: ready
+status: in-progress
 updated: 2026-09-04
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: 7490
+claim: "2026-09-04T19:53:54Z"
+assignee: "red-b8da7823"
 blocked-by: null
 closed-reason: null
 ---

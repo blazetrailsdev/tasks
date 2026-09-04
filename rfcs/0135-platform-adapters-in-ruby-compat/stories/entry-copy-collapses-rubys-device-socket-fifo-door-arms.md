@@ -1,6 +1,6 @@
 ---
 title: "Entry_#copy's chardev/blockdev/socket/pipe/door arms collapse into one unknown-file-type raise — FsStatResult has no predicate for them"
-status: draft
+status: ready
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

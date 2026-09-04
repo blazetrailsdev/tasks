@@ -1,6 +1,6 @@
 ---
 title: "FsStatResult.uid/gid are optional, forcing ?? null at atomic_write's chown where atomic.rb:41 passes the readers straight through"
-status: draft
+status: ready
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

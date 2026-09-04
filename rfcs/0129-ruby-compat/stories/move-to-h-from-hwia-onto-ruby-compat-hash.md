@@ -1,6 +1,6 @@
 ---
 title: "Hash#to_h belongs on ruby-compat's Hash, not on HashWithIndifferentAccess"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null

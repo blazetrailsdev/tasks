@@ -1,6 +1,6 @@
 ---
 title: "move-remaining-monotonic-seats-onto-process-clock-gettime"
-status: ready
+status: claimed
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: 27
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-04T19:44:33Z"
+assignee: "move-remaining-monotonic-seats-onto-process-clock-gettime"
 blocked-by: null
 closed-reason: null
 ---

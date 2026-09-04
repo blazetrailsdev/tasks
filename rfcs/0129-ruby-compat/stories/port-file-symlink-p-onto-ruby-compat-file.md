@@ -1,6 +1,6 @@
 ---
 title: "File.symlink? lands on ruby-compat's File, retiring the last FsAdapter helper in Rails::Paths::Path"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null

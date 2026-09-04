@@ -1,6 +1,6 @@
 ---
 title: "copy_entry drops Ruby's dereference_root and remove_destination parameters"
-status: draft
+status: ready
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

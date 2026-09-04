@@ -1,6 +1,6 @@
 ---
 title: "template-simple-type-symbols-carry-the-colon-convention"
-status: draft
+status: closed
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of back-template-types-with-the-mime-registry (RFC 0104), which converges Types.symbols onto Mime::SET.symbols (types.rb:49-52) — since #7487 put the colon convention on Mime::Type#symbol that swap IS the colon convergence. Specifics folded there via blazetrailsdev/tasks#41."
 ---
 
 ## Context
