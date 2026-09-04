@@ -2,7 +2,7 @@
 title: "Move fetchTypeMetadata and quotedScope off postgresql-adapter.ts into their Rails file, retiring newColumnFromField's receiver retype"
 status: draft
 updated: 2026-09-03
-rfc: "0131-activemodel-activerecord-api-parity-100"
+rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []
