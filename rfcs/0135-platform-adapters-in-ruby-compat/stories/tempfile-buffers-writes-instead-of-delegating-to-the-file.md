@@ -1,14 +1,14 @@
 ---
 title: "Tempfile buffers writes in memory where tempfile.rb:89 delegates them to the open File"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 240
-priority: null
+priority: 19
 pr: null
 claim: null
 assignee: null

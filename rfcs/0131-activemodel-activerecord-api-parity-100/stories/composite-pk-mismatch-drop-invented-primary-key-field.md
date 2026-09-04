@@ -1,7 +1,7 @@
 ---
 title: "Drop the invented primaryKey field from CompositePrimaryKeyMismatchReflection and the two casts it forced"
-status: in-progress
-updated: 2026-09-03
+status: done
+updated: 2026-09-04
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages: []

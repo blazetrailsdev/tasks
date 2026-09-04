@@ -1,7 +1,7 @@
 ---
 title: "reset-trailtie-registry-between-tests"
-status: claimed
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7468
 claim: "2026-09-03T23:18:36Z"
 assignee: "converge-integration-session-to-rack-test-session"
 blocked-by: null

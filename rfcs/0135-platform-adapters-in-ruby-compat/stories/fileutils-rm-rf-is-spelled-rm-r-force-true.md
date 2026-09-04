@@ -1,14 +1,14 @@
 ---
 title: "FileUtils.rm_rf is ported as rm_r(force: true) at CreateMigration's two call sites"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 22
 pr: null
 claim: null
 assignee: null

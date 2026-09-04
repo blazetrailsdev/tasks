@@ -1,14 +1,14 @@
 ---
 title: "FileUtils' verbose: kwarg is accepted but inert — fu_output_message has no sink in the ruby-compat leaf"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 24
 pr: null
 claim: null
 assignee: null

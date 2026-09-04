@@ -1,7 +1,7 @@
 ---
 title: "prototype-less-hash-dup-merge-reject"
-status: in-progress
-updated: 2026-09-03
+status: done
+updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []

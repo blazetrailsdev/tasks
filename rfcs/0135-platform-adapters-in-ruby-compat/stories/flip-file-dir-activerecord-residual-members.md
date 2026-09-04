@@ -1,17 +1,17 @@
 ---
 title: "flip-file-dir-activerecord-residual-members"
-status: draft
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 17
+pr: 7470
+claim: "2026-09-04T00:19:14Z"
+assignee: "extra-surface-gate-blocks-new-file-dir-members"
 blocked-by: null
 closed-reason: null
 ---

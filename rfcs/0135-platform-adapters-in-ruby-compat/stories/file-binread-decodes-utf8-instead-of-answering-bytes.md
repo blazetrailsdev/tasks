@@ -1,17 +1,17 @@
 ---
 title: "File.binread decodes UTF-8 where Ruby answers ASCII-8BIT bytes"
-status: draft
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 18
+pr: 7470
+claim: "2026-09-04T00:19:14Z"
+assignee: "extra-surface-gate-blocks-new-file-dir-members"
 blocked-by: null
 closed-reason: null
 ---

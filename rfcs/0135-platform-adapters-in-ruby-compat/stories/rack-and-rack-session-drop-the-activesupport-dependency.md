@@ -1,7 +1,7 @@
 ---
 title: "rack and rack-session drop the activesupport dependency — the acceptance test for RFC 0135"
-status: in-progress
-updated: 2026-09-03
+status: done
+updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["rack", "rack-session"]

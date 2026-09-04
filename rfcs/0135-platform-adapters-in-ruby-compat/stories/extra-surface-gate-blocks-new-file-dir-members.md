@@ -1,17 +1,17 @@
 ---
 title: "A new File/Dir member raises ruby-compat's extra-surface total despite its PERMANENT receipt, blocking the flip chain"
-status: draft
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 16
+pr: 7470
+claim: "2026-09-04T00:19:14Z"
+assignee: "extra-surface-gate-blocks-new-file-dir-members"
 blocked-by: null
 closed-reason: null
 ---

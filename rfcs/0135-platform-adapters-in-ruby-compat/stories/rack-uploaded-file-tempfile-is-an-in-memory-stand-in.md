@@ -1,14 +1,14 @@
 ---
 title: "Rack::Multipart::UploadedFile's tempfile is an in-memory stand-in, not a Tempfile"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null
