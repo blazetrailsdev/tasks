@@ -1,7 +1,7 @@
 ---
 title: "Port String#b — the non-mutating BINARY copy the multipart builder makes on every appended line"
-status: draft
-updated: 2026-09-03
+status: done
+updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7475
+claim: "2026-09-04T12:11:34Z"
+assignee: "port-string-b-binary-copy"
 blocked-by: null
 closed-reason: null
 ---

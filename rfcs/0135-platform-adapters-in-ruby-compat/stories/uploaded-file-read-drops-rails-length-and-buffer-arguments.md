@@ -1,6 +1,6 @@
 ---
 title: "uploaded-file-read-drops-rails-length-and-buffer-arguments"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "FileUtils.copy_file drops Ruby's dereference argument — copyMetadata has no lstat arm to select"
-status: draft
+status: done
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7476
+claim: "2026-09-04T12:29:20Z"
+assignee: "fileutils-copy-file-drops-rubys-dereference-argument"
 blocked-by: null
 closed-reason: null
 ---

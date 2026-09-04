@@ -1,7 +1,7 @@
 ---
 title: "Port IO#set_encoding onto StringIO and Tempfile — a missing member here silently drops the multipart file body"
-status: draft
-updated: 2026-09-03
+status: done
+updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7474
+claim: "2026-09-04T12:11:20Z"
+assignee: "port-set-encoding-on-stringio-and-tempfile"
 blocked-by: null
 closed-reason: null
 ---

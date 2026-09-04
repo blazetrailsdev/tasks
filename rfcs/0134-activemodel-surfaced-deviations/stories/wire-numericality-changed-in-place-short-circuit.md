@@ -1,7 +1,7 @@
 ---
 title: "Wire numericality record_attribute_changed_in_place? short-circuit"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-04
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 66
-pr: null
-claim: null
-assignee: null
+pr: 7478
+claim: "2026-09-04T12:01:52Z"
+assignee: "mutable-changed-in-place-reserializes-raw-old-value"
 blocked-by: null
 closed-reason: null
 ---

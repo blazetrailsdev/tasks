@@ -1,6 +1,6 @@
 ---
 title: "FileUtils' verbose: kwarg is accepted but inert — fu_output_message has no sink in the ruby-compat leaf"
-status: ready
+status: done
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 24
-pr: null
-claim: null
-assignee: null
+pr: 7476
+claim: "2026-09-04T12:01:32Z"
+assignee: "fileutils-rm-rf-is-spelled-rm-r-force-true"
 blocked-by: null
 closed-reason: null
 ---

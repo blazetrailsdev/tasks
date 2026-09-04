@@ -1,7 +1,7 @@
 ---
 title: "Mutable#changed_in_place? re-serializes raw_old_value, masking a PG jsonb pre-parse upstream"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-04
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 63
-pr: null
-claim: null
-assignee: null
+pr: 7478
+claim: "2026-09-04T12:01:52Z"
+assignee: "mutable-changed-in-place-reserializes-raw-old-value"
 blocked-by: null
 closed-reason: null
 ---

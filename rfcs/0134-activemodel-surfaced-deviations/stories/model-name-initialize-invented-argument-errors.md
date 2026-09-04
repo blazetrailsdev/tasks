@@ -1,7 +1,7 @@
 ---
 title: "ActiveModel::Name#initialize raises three ArgumentErrors Rails does not"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-04
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 64
-pr: null
-claim: null
-assignee: null
+pr: 7478
+claim: "2026-09-04T12:01:52Z"
+assignee: "mutable-changed-in-place-reserializes-raw-old-value"
 blocked-by: null
 closed-reason: null
 ---
