@@ -274,6 +274,52 @@ Import-specifier rewrites only — no call site changes shape.
   backend still calls the registration function; no package re-registers on
   another's behalf.
 
+## Sanctioned residue
+
+Two findings from the flip chain are recorded here rather than converged,
+because there is nothing on the Ruby side to converge to.
+
+### `getPath().pathToFileURL` in `DatabaseTasks.loadSchema`
+
+`packages/activerecord/src/tasks/database-tasks.ts:658` keeps `getPathAsync()`
+for one call: turning an absolute schema path into a `file://` href for
+`import()`. Rails' body is `load(file)`
+(`activerecord/lib/active_record/tasks/database_tasks.rb`), which has no URL
+step at all — Ruby's `load` takes the path. The href exists only because ESM's
+dynamic `import()` will not take an absolute POSIX path on every platform, so
+there is no Ruby member for `File` or `Dir` to grow: a `File.pathToFileUrl`
+would be invented surface named after a Ruby method that does not exist.
+
+So the `PathAdapter` keeps this one seat, and the "no `getFs()` / `getPath()`
+outside `ruby-compat`" criterion reads as "outside `ruby-compat` and this call".
+The residue disappears if `load` ever ports to something that resolves the
+module itself; it is not waiting on a `File` member.
+
+### A `@noRailsEquivalent` receipt DOES exempt a member in a `NoCntrp` file
+
+`extra-surface-gate-blocks-new-file-dir-members` was filed on the premise that
+`scripts/api-compare/extra-surface.ts` scores a file "no Rails file maps onto"
+with an empty allowed set, and that a receipt therefore cannot exempt a name
+there. Measured, that is not what happens. The empty allowed set only means
+nothing is pre-allowed from a counterpart `.rb`; the per-declaration tag check
+runs BEFORE the novel/moved classification (`extra-surface.ts`, the
+`tagKeys.has(allowKey)` arm), so a tagged member is counted as `Allowed` and
+subtracted from both `novel` and `total` in a `NoCntrp` file exactly as in a
+Rails-mapped one.
+
+Verified on this branch by adding one member to `packages/ruby-compat/src/dir.ts`
+and measuring twice: untagged it scored `ruby-compat novel 1, total 31`; with a
+`@noRailsEquivalent PERMANENT` receipt and nothing else changed, `novel 0, total
+30`. No other property of the name is an input — neither its Rails hit count nor
+whether it scores `novel` or `moved`.
+
+The rule for a `NoCntrp` file is therefore: **every public member counts toward
+`total` unless it carries its own `@noRailsEquivalent` receipt.** `Dir.pwd`
+raised the total in #7442 because it landed without one; `File.mtime` and
+`File.binwrite` did not because they landed with one. The remaining flip stories
+need no mark work — each new `File`/`Dir`/`IO`/`Process` member carries its MRI
+citation and its receipt, and the gate stays green.
+
 ## Acceptance criteria for the RFC
 
 - `packages/rack/package.json` and `packages/rack-session/package.json` declare
