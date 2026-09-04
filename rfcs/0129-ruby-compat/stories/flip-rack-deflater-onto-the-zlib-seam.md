@@ -31,7 +31,7 @@ Reason, measured on that branch: the flip was written and reverted. Replacing
 `getZlib().gzip(...)` removes the only `new` in `Deflater#compress`, and
 `parity:api:calls` immediately reports
 
-```text
+````text
 + rack  deflater.ts  call  new  (rack/deflater.json)
 ```text
 
@@ -56,3 +56,4 @@ import at the cost of a new call-set baseline row, which is making debt.
       `vendor/ruby/ext/zlib/zlib.c:<line>` citation and a
       `@noRailsEquivalent PERMANENT` receipt, as every member of that file does.
 - [ ] `pnpm vitest run packages/rack/src/deflater.test.ts` (29 tests) stays green.
+````
