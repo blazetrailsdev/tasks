@@ -1,6 +1,6 @@
 ---
 title: "type-registry-key-replaces-per-adapter-overrides"
-status: claimed
+status: ready
 updated: 2026-09-04
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-09-04T17:50:45Z"
-assignee: "type-registry-key-replaces-per-adapter-overrides"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
