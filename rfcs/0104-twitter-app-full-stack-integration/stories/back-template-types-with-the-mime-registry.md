@@ -1,14 +1,14 @@
 ---
 title: "Template::Types is a frozen list, not the Mime registry, and SimpleType's instance side is unported"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 130
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "Ruby's stdlib MonitorMixin moves to ruby-compat, once a leaf may hold the async-context adapter"
-status: claimed
+status: in-progress
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["ruby-named-file-dir-fileutils-facade"]
 deps-rfc: []
 est-loc: 220
 priority: 6
-pr: null
+pr: 7484
 claim: "2026-09-04T14:50:46Z"
 assignee: "port-zlib-gzipreader-open-for-schema-cache-read"
 blocked-by: null

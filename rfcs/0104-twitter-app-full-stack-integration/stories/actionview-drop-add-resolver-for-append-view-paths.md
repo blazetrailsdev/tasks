@@ -1,14 +1,14 @@
 ---
 title: "actionview-drop-add-resolver-for-append-view-paths"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

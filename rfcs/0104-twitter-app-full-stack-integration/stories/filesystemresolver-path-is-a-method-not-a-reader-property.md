@@ -1,14 +1,14 @@
 ---
 title: "FileSystemResolver#path is a method where Rails has attr_reader :path"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

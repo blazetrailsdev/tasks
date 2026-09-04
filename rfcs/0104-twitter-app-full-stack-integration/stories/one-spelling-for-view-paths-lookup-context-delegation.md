@@ -1,14 +1,14 @@
 ---
 title: "Collapse the two spellings of ViewPaths' formats/locale delegation to one"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

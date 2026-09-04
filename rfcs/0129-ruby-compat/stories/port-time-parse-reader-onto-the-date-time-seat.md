@@ -1,6 +1,6 @@
 ---
 title: "Port Time.parse onto @blazetrails/date's Time, the stdlib reader Cookie#expires and Messages::Metadata both need"
-status: claimed
+status: in-progress
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 5
-pr: null
+pr: 7484
 claim: "2026-09-04T14:50:46Z"
 assignee: "port-zlib-gzipreader-open-for-schema-cache-read"
 blocked-by: null

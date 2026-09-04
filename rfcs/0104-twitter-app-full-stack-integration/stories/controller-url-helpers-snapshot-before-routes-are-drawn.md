@@ -1,14 +1,14 @@
 ---
 title: "Controller url-helper copy is a snapshot taken before the routes are drawn"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

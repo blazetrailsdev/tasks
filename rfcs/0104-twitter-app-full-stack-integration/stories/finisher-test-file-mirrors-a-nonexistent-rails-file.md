@@ -1,14 +1,14 @@
 ---
 title: "finisher.test.ts mirrors a Rails file that does not exist; TS-only tests need the .trails suffix"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

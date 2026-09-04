@@ -1,14 +1,14 @@
 ---
 title: "filterAndSortByDetails and requestedDetailsFor sit on Resolver, not FileSystemResolver"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

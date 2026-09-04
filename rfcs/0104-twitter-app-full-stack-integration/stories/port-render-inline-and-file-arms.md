@@ -1,14 +1,14 @@
 ---
 title: "render inline: returns raw source and render file: raises an invented error"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

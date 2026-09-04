@@ -1,14 +1,14 @@
 ---
 title: "Template#compile!'s @compiled is a boolean, not the container it compiled into"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

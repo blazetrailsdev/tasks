@@ -1,7 +1,7 @@
 ---
 title: "route-remaining-default-env-call-sites"
-status: ready
-updated: 2026-09-02
+status: claimed
+updated: 2026-09-04
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-04T15:50:46Z"
+assignee: "route-remaining-default-env-call-sites"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,14 +1,14 @@
 ---
 title: "converge-lazy-route-set-sync-ops-to-await-the-reload"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

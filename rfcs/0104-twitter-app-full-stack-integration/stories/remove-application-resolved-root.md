@@ -1,14 +1,14 @@
 ---
 title: "Application#resolvedRoot has no Rails counterpart"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

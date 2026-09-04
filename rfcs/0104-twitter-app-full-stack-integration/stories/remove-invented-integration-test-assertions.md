@@ -1,6 +1,6 @@
 ---
 title: "Remove integration.ts's four invented assertion helpers"
-status: draft
+status: ready
 updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

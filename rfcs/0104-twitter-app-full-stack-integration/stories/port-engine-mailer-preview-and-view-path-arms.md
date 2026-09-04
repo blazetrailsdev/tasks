@@ -1,14 +1,14 @@
 ---
 title: "Port Engine's add_mailer_preview_paths and restore add_view_paths' action_mailer arm"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

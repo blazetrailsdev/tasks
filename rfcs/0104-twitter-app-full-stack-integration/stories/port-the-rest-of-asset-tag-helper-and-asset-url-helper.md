@@ -1,14 +1,14 @@
 ---
 title: "Port the rest of AssetTagHelper and AssetUrlHelper (5 of 114 Rails tests match today)"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

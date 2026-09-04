@@ -1,14 +1,14 @@
 ---
 title: "render_to_string writes the response and then restores it, where Rails never touches it"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

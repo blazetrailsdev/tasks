@@ -1,14 +1,14 @@
 ---
 title: "LookupContext and PathParser hardcode the locale detail instead of reading I18n"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

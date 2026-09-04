@@ -1,14 +1,14 @@
 ---
 title: "ActionController::MiddlewareStack::Middleware is not ported; valid? sits on the shared ActionDispatch entry type"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 110
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

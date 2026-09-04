@@ -1,14 +1,14 @@
 ---
 title: "Paths::Path ports only x!/x? per flag — all four skip_x! methods are missing"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: ["trailties"]
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

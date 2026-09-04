@@ -1,14 +1,14 @@
 ---
 title: "Port Engine's add_fixture_paths initializer and fixtures_in_root_and_not_in_vendor_or_dot_dir?"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 130
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

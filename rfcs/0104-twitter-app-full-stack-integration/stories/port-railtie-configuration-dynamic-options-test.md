@@ -1,14 +1,14 @@
 ---
 title: "port-railtie-configuration-dynamic-options-test"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

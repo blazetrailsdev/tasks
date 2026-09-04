@@ -1,6 +1,6 @@
 ---
 title: "Parameters#merge! delegates to Hash#merge! instead of hand-rolling the conflict loop"
-status: ready
+status: claimed
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 110
 priority: 14
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-04T15:50:46Z"
+assignee: "route-remaining-default-env-call-sites"
 blocked-by: null
 closed-reason: null
 ---

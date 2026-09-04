@@ -1,14 +1,14 @@
 ---
 title: "Metal#body / #setHeader / #getHeader are invented surface; Rails has response_body and headers"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "Wire AssetTagHelper's apply_stylesheet_media_default and preload_links_header from the ActionView trailtie"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

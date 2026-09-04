@@ -1,14 +1,14 @@
 ---
 title: "Emitted auth controllers cast to any at every concern call site"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null
