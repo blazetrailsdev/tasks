@@ -1,18 +1,18 @@
 ---
 title: "Ruby's stdlib MonitorMixin moves to ruby-compat, once a leaf may hold the async-context adapter"
-status: blocked
-updated: 2026-09-03
+status: ready
+updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat", "activesupport", "activerecord"]
 deps: ["ruby-named-file-dir-fileutils-facade"]
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 6
 pr: null
-claim: "2026-09-03T23:40:03Z"
-assignee: "move-monitor-mixin-to-ruby-compat"
-blocked-by: "Its stated precondition is unmet: the platform-adapter-in-a-leaf shape is NOT settled. The dep ruby-named-file-dir-fileutils-facade was CLOSED without settling it — its closed_reason says verbatim 'The platform-adapter/leaf-rule question (RFC 0129 non-goal 2) stays open and unsettled'. concurrency/monitor.ts:20-24 imports getAsyncContext / AsyncContext / AsyncContextAdapter from ../async-context-adapter.js, which is load-bearing (the port's whole premise is an AsyncContext-token owner in place of Ruby's Thread), so moving it today either breaks ruby-compat's leaf rule or invents a second registerAsyncContextBackend() idiom ahead of the decision. Unblocks once a story settles the async-context adapter facade shape."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

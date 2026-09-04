@@ -1,14 +1,14 @@
 ---
 title: "Encoding.find's table covers 43 of MRI's 175 registered names, so a Ruby-resolvable charset silently falls to BINARY"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 18
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "extract_foreign_key_action inlines the abstract body where Rails calls super (mysql/schema_statements.rb:225-227)"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-04
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 24
-pr: null
-claim: null
-assignee: null
+pr: 7481
+claim: "2026-09-04T13:20:45Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

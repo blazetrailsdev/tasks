@@ -1,14 +1,14 @@
 ---
 title: "cache/store.ts's file-local Object#inspect retires onto ruby-compat's rbInspect (cache.rb:217)"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 17
 pr: null
 claim: null
 assignee: null

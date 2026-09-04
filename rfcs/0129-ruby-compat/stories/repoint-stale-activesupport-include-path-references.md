@@ -1,6 +1,6 @@
 ---
 title: "Repoint the five stale activesupport/src/include.ts path references at ruby-compat"
-status: draft
+status: ready
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 27
 pr: null
 claim: null
 assignee: null

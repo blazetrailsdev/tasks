@@ -1,6 +1,6 @@
 ---
 title: "Move fetchTypeMetadata and quotedScope off postgresql-adapter.ts into their Rails file, retiring newColumnFromField's receiver retype"
-status: ready
+status: in-progress
 updated: 2026-09-04
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7481
+claim: "2026-09-04T13:20:45Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

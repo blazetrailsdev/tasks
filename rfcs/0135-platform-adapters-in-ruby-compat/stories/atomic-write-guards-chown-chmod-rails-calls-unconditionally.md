@@ -1,6 +1,6 @@
 ---
 title: "atomic_write guards chown/chmod where atomic.rb:41-42 calls both unconditionally"
-status: ready
+status: in-progress
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 25
-pr: null
-claim: null
-assignee: null
+pr: 7480
+claim: "2026-09-04T13:31:56Z"
+assignee: "atomic-write-guards-chown-chmod-rails-calls-unconditionally"
 blocked-by: null
 closed-reason: null
 ---

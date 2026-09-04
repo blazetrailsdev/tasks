@@ -1,14 +1,14 @@
 ---
 title: "action-name-assigned-in-process-not-process-action"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

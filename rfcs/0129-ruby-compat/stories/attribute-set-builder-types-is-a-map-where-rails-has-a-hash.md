@@ -1,14 +1,14 @@
 ---
 title: "Port AttributeSet::Builder's types/additional_types to a Hash, the last Map in builder.ts"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 16
 pr: null
 claim: null
 assignee: null

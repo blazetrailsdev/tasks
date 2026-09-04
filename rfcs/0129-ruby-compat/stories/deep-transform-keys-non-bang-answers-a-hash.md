@@ -1,14 +1,14 @@
 ---
 title: "_deep_transform_keys_in_object answers self.class.new, not a plain object"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null

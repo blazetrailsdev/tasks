@@ -1,7 +1,7 @@
 ---
 title: "Repoint the guides' Range import at ruby-compat (Guides Code Type Check red on main)"
-status: draft
-updated: 2026-09-03
+status: closed
+updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Delivered: commit ca230097c (PR #7448) ''docs(website): point the idioms guide''s Range import at @blazetrails/ruby-compat''. On origin/main packages/website/docs/guides/idioms.md:252 reads import { Range } from "@blazetrails/ruby-compat" and the prose at :248-249 names @blazetrails/ruby-compat; git grep ''@blazetrails/activesupport'' -- that file returns nothing, so the TS2305 Guides Code Type Check failure this story existed to fix is gone.'
 ---
 
 ## Context

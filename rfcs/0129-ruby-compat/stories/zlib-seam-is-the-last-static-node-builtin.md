@@ -1,18 +1,18 @@
 ---
 title: "Zlib is the last static node: import in activesupport, and the one builtin with no seam"
-status: blocked
-updated: 2026-09-02
+status: ready
+updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["activesupport", "rack", "ruby-compat"]
 deps: ["ruby-named-file-dir-fileutils-facade"]
 deps-rfc: []
 est-loc: 260
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
-blocked-by: "Its only dep, ruby-named-file-dir-fileutils-facade, is CLOSED without settling the question this story depends on: that story's close reason says the File/Dir facade would credit no gate row, and explicitly leaves 'the platform-adapter/leaf-rule question (RFC 0129 non-goal 2) open and unsettled'. This story's acceptance criteria require 'a compression seam in the shape settled by ruby-named-file-dir-fileutils-facade' and forbid inventing a fourth shape, so there is no shape to adopt. Premise otherwise still live on origin/main: packages/activesupport/src/gzip.ts:1 is still the sole static node: import in activesupport/src (verified 2026-09-01), and eslint.config.mjs still ignore-lists gzip.ts and rack/src/deflater.ts. Unblock when the adapter-home question is decided (same wall as move-tempfile-to-ruby-compat)."
+blocked-by: null
 closed-reason: null
 ---
 

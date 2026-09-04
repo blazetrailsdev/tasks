@@ -1,14 +1,14 @@
 ---
 title: "io-write-must-transcode-to-utf8-in-text-mode"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

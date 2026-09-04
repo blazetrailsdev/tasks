@@ -1,7 +1,7 @@
 ---
 title: "Port Rack::Test::UploadedFile"
-status: ready
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-04
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: 7481
+claim: "2026-09-04T13:20:45Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

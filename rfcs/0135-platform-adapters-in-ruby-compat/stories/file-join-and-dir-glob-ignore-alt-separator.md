@@ -1,6 +1,6 @@
 ---
 title: "File.join and Dir.glob recognise only '/', where MRI's isdirsep also accepts '\\' on Windows"
-status: ready
+status: in-progress
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 26
-pr: null
-claim: null
-assignee: null
+pr: 7480
+claim: "2026-09-04T13:31:56Z"
+assignee: "atomic-write-guards-chown-chmod-rails-calls-unconditionally"
 blocked-by: null
 closed-reason: null
 ---
