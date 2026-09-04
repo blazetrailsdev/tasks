@@ -1,6 +1,6 @@
 ---
 title: "Drop the now-unread belongsTo member from CompositePrimaryKeyMismatchReflection"
-status: draft
+status: ready
 updated: 2026-09-04
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

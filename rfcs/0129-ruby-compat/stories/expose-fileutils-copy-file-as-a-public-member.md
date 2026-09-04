@@ -1,7 +1,7 @@
 ---
 title: "FileUtils.copy_file is module-private in trails and public in Ruby — promote it so uploaded-file ports can call it"
-status: draft
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
 packages: ["ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7472
+claim: "2026-09-04T02:36:29Z"
+assignee: "expose-fileutils-copy-file-as-a-public-member"
 blocked-by: null
 closed-reason: null
 ---

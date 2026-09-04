@@ -1,6 +1,6 @@
 ---
 title: "A nested Rails entity's private CLASS method is still unreachable through the file-wide fold"
-status: draft
+status: ready
 updated: 2026-09-04
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null

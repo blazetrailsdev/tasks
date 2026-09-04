@@ -1,7 +1,7 @@
 ---
 title: "Point the tooling at trailties' ActiveRecord trailtie so railtie.rb stops being the one file activerecord is short, taking it to 281/281"
-status: blocked
-updated: 2026-09-03
+status: closed
+updated: 2026-09-04
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord", "trailties"]
@@ -12,8 +12,8 @@ priority: 4
 pr: 7463
 claim: "2026-09-03T22:43:59Z"
 assignee: "port-activerecord-trailtie-file"
-blocked-by: "Premise is an extractor bug, not a missing port. extract-ruby-api.rb's process_include attributed an on_load block's include to the lexically enclosing class, so railtie.rb:271-273's 'ActiveSupport.on_load(:active_job) { include JobRuntime }' invented a Railtie#instrument expectation; Rails includes that module into ActiveJob::Base, and the body lives at railties/job_runtime.rb:9. Dumping rails-api.json shows NO framework railtie.rb declares any own members, so the specified RUBY_FILE_CROSS_PACKAGE_OVERRIDES mechanism has nothing to score for activerecord or the six siblings, and 281/281 is unreachable without inventing a Trailtie#instrument member (raised and rejected in PR #7463 review). PR #7463 fixes the extractor instead: railtie.rb leaves the file population and activerecord reads 280/280 files = 100% file parity. Reopen only to rewrite the acceptance criteria."
-closed-reason: null
+blocked-by: null
+closed-reason: "Premise invalid and the goal it served is met another way. The story wanted RUBY_FILE_CROSS_PACKAGE_OVERRIDES so railtie.rb could score 281/281, but no framework railtie.rb declares own members (rails-api.json), so there was nothing to score; the Railtie#instrument expectation was an extract-ruby-api.rb mis-attribution of an on_load block's include, fixed in PR #7463 (0ae9b1f00). railtie.rb now leaves the file population and activerecord measures files: 280/280 = 100% file parity, verified 2026-09-03 with API_COMPARE_FORCE=1 pnpm parity:api --package activerecord on origin/main 9bea8aaec (Overall: 6402/6402 methods (100%) | files: 280/280). Sibling map-remaining-trailtie-files-cross-package was already closed for the same reason."
 ---
 
 ## Context

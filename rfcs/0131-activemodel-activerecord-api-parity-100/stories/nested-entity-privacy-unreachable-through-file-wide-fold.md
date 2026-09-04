@@ -1,6 +1,6 @@
 ---
 title: "A nested Rails entity's private member cannot carry @internal when a sibling entity publishes the name"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
