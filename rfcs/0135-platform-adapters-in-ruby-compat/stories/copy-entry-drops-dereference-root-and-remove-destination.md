@@ -27,7 +27,7 @@ alone, so two of Ruby's five parameters have no port:
   before the traversal, so a symlinked root is copied as its target rather than
   as a link.
 - `remove_destination` — `File.unlink destent.path if remove_destination &&
-  (File.file?(destent.path) || File.symlink?(destent.path))`
+(File.file?(destent.path) || File.symlink?(destent.path))`
   (`fileutils.rb:1047`), which unlinks an existing destination entry before
   each copy.
 
