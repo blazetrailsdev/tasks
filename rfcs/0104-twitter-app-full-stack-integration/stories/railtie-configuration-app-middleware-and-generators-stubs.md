@@ -1,6 +1,6 @@
 ---
 title: "railtie-configuration-app-middleware-and-generators-stubs"
-status: claimed
+status: done
 updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 20
-pr: null
+pr: 7497
 claim: "2026-09-04T20:50:46Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null

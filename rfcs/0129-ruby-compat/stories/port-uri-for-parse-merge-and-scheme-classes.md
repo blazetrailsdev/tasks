@@ -1,6 +1,6 @@
 ---
 title: "Port URI: parse, the mutable Generic accessors, merge, the scheme subclasses and RFC2396_Parser#escape"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null

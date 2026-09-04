@@ -1,6 +1,6 @@
 ---
 title: "Declare TypeScript 7 as the supported floor in published peer ranges"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra

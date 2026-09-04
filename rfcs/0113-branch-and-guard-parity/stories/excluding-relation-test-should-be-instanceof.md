@@ -1,6 +1,6 @@
 ---
 title: "excluding should test is_a?(Relation), not duck-type whereClause/havingClause"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0113-branch-and-guard-parity"
 cluster: null

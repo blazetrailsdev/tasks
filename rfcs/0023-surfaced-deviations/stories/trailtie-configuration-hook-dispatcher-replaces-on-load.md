@@ -1,7 +1,7 @@
 ---
 title: "Trailtie::Configuration hand-rolls a hook dispatcher Rails routes through ActiveSupport.on_load (railtie/configuration.rb:54-77)"
-status: draft
-updated: 2026-08-25
+status: closed
+updated: 2026-09-04
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of lifecycle-hooks-registry-never-fires; every acceptance criterion shipped in #7493"
 ---
 
 ## Context

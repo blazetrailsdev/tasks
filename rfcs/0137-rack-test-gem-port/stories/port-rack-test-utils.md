@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Test::Utils and the MULTIPART constants"
-status: claimed
+status: in-progress
 updated: 2026-09-04
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -15,7 +15,7 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: 6
-pr: null
+pr: 7496
 claim: "2026-09-04T20:27:36Z"
 assignee: "port-rack-test-utils"
 blocked-by: null

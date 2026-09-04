@@ -1,6 +1,6 @@
 ---
 title: "PERMITTED_SCALAR_TYPES is five types short, so params.permit drops uploaded files"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0137-rack-test-gem-port"
 cluster: null

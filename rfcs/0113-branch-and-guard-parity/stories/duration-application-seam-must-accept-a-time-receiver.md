@@ -1,6 +1,6 @@
 ---
 title: "duration-application-seam-must-accept-a-time-receiver"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0113-branch-and-guard-parity"
 cluster: null

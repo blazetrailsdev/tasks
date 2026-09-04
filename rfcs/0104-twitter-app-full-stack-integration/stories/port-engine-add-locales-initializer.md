@@ -1,6 +1,6 @@
 ---
 title: "Port Engine's add_locales initializer (needs config.i18n.railties_load_path)"
-status: claimed
+status: blocked
 updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -12,7 +12,7 @@ priority: 20
 pr: null
 claim: "2026-09-04T20:50:46Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
-blocked-by: null
+blocked-by: "Blocked on I18n::Railtie. config.i18n is not an EngineConfiguration member in Rails: activesupport/lib/active_support/i18n_railtie.rb:10-11 sets config.i18n = ActiveSupport::OrderedOptions.new and config.i18n.railties_load_path = [] in the I18n::Railtie class body, so it lands in Railtie::Configuration's shared @@options bag (railtie/configuration.rb:143-166) and every railtie config sees it. trails has no I18n::Railtie — no file under packages/ ports i18n_railtie.rb — and activesupport cannot host one because it would have to subclass Trailtie from @blazetrails/trailties, which activesupport does not (and cannot circularly) depend on. Putting an i18n bag on EngineConfiguration instead, as this story's converged shape suggests, would ratify an invented location rather than converge. Port I18n::Railtie (deciding its package first) and then add_locales (engine.rb:610-612) is the stated one-liner."
 closed-reason: null
 ---
 
