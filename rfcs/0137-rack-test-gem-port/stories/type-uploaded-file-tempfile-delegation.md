@@ -39,8 +39,9 @@ uploaded_file.set_encoding(Encoding::BINARY)
 and in `packages/rack-test/src/utils.ts`'s `buildFilePart` they are:
 
 ```ts
-b(String((uploadedFile as unknown as { size: number }).size))
-(uploadedFile as unknown as { setEncoding(enc: Encoding): void }).setEncoding(Encoding.BINARY)
+b(String((uploadedFile as unknown as { size: number }).size))(
+  uploadedFile as unknown as { setEncoding(enc: Encoding): void },
+).setEncoding(Encoding.BINARY);
 ```
 
 The casts sit at exactly the line-for-line call sites the fidelity bar is

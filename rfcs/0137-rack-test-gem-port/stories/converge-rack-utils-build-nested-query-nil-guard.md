@@ -62,7 +62,7 @@ story.
 - [ ] The nil arm of `buildNestedQuery` (`packages/rack/src/utils.ts`) is
       `escape(prefix)` with no guard, as `utils.rb`'s `when nil` is.
 - [ ] The `else` arm keeps its `raise ArgumentError, "value must be a Hash" if
-      prefix.nil?`, which Rails does have.
+    prefix.nil?`, which Rails does have.
 - [ ] `buildNestedQuery(null)` answers `""`, matching MRI.
 - [ ] `pnpm parity:api` / `parity:test` deltas non-negative; both call gates
       green with no new baseline rows.
