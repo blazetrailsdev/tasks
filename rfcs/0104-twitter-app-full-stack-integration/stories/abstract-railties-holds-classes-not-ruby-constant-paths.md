@@ -1,6 +1,6 @@
 ---
 title: "ABSTRACT_RAILTIES holds classes, not Rails' fully-qualified constant paths, so railtieName is wrong for all seven railties"
-status: ready
+status: claimed
 updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-04T17:20:47Z"
+assignee: "sync-reads-of-async-reflection-retire-with-rfc-0073"
 blocked-by: null
 closed-reason: null
 ---

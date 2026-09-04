@@ -1,7 +1,7 @@
 ---
 title: "DisableJoinsAssociationRelation's constructor raises four ArgumentErrors Rails does not have"
-status: ready
-updated: 2026-08-31
+status: claimed
+updated: 2026-09-04
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-04T17:50:45Z"
+assignee: "type-registry-key-replaces-per-adapter-overrides"
 blocked-by: null
 closed-reason: null
 ---

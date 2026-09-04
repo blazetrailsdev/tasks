@@ -1,6 +1,6 @@
 ---
 title: "Port AttributeSet::Builder's types/additional_types to a Hash, the last Map in builder.ts"
-status: ready
+status: claimed
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: 16
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-04T17:20:47Z"
+assignee: "sync-reads-of-async-reflection-retire-with-rfc-0073"
 blocked-by: null
 closed-reason: null
 ---

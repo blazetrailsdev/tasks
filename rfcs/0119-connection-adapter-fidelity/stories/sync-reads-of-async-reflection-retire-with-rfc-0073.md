@@ -1,7 +1,7 @@
 ---
 title: "sync-reads-of-async-reflection-retire-with-rfc-0073"
-status: ready
-updated: 2026-09-02
+status: blocked
+updated: 2026-09-04
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-04T17:20:47Z"
+assignee: "sync-reads-of-async-reflection-retire-with-rfc-0073"
+blocked-by: "RFC 0073 (permanent-connection-checkout-disallowed) has not landed: all 16 of its stories are still ready, including retire-schema-cache-sync-readers-after-checkout-flip and arm-permanent-connection-checkout-disallowed. The six remaining CONVERGEABLE receipts in abstract-adapter.ts, abstract/connection-pool.ts and abstract/query-cache.ts only retire as those counterparts land."
 closed-reason: null
 ---
 
