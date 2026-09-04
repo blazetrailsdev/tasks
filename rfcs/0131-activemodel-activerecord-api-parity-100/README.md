@@ -1,9 +1,9 @@
 ---
 rfc: "0131-activemodel-activerecord-api-parity-100"
 title: "Take activemodel and activerecord to 100% on parity:api, by porting what is absent and by teaching the TS extractor the codegen its Ruby twin already models"
-status: active
+status: closed
 created: 2026-08-31
-updated: 2026-09-02
+updated: 2026-09-03
 owner: "@deanmarano"
 packages:
   - activemodel
@@ -474,3 +474,16 @@ single-method-files` can close the row either by moving the class to
 ## Changelog
 
 - 2026-08-31: initial RFC
+- 2026-09-03: **closed — goal met.** Measured on `origin/main` 9bea8aaec after a
+  clean `pnpm build`, with `API_COMPARE_FORCE=1 pnpm parity:api`: **activemodel
+  757/757 methods (100%), 67/67 files**; **activerecord 6402/6402 methods (100%),
+  280/280 files**. Every per-file `DeclOnly` cell reads 0 in both packages. The
+  denominators moved with the vendored Rails (754 → 757, 6362 → 6402), and the
+  activerecord file target is 280, not 281: `railtie.rb` left the file population
+  when PR #7463 stopped `extract-ruby-api.rb` attributing an `on_load` block's
+  include to the lexically enclosing class, which is why
+  `port-activerecord-trailtie-file` and `map-remaining-trailtie-files-cross-package`
+  are closed on an invalid premise rather than delivered. All 19 rollout stories
+  and 15 in-flight follow-ons are done; the five remaining incomplete stories were
+  rehomed (0119, 0123 ×3, 0127, 0130) because none of them moves a `parity:api`
+  count in these two packages.
