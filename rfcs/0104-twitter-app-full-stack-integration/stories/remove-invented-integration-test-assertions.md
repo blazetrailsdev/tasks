@@ -45,7 +45,7 @@ Rails' real spellings for what three of them approximate:
 - `followRedirect` duplicates `followRedirectBang`, the port of
   `follow_redirect!` (`integration.rb:378`, generated into
   `Integration::Runner` by the `%w(get post patch put head delete cookies
-  assigns follow_redirect!)` loop). Rails has no non-bang form.
+assigns follow_redirect!)` loop). Rails has no non-bang form.
 
 ## Converged shape
 

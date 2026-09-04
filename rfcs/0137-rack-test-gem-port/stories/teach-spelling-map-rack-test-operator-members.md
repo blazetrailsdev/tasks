@@ -24,13 +24,13 @@ PR #7468 landed the first real rack-test source
 surface even though every one is the settled trails spelling of a Ruby member
 that exists in the vendored gem:
 
-| TS name | Ruby | vendored source |
-| --- | --- | --- |
-| `Session.new` (novel) | `def self.new(app, default_host = DEFAULT_HOST)` | `vendor/rack-test/lib/rack/test.rb:57-65` |
-| `Cookie#spaceship` (novel) | `def <=>(other)` | `vendor/rack-test/lib/rack/test/cookie_jar.rb:106-108` |
-| `CookieJar#get` (moved) | `def [](name)` | `cookie_jar.rb:146-152` |
-| `CookieJar#set` (moved) | `def []=(name, value)` | `cookie_jar.rb:155-157` |
-| `CookieJar#push` (moved) | `def <<(new_cookie)` | `cookie_jar.rb:186-193` |
+| TS name                    | Ruby                                             | vendored source                                        |
+| -------------------------- | ------------------------------------------------ | ------------------------------------------------------ |
+| `Session.new` (novel)      | `def self.new(app, default_host = DEFAULT_HOST)` | `vendor/rack-test/lib/rack/test.rb:57-65`              |
+| `Cookie#spaceship` (novel) | `def <=>(other)`                                 | `vendor/rack-test/lib/rack/test/cookie_jar.rb:106-108` |
+| `CookieJar#get` (moved)    | `def [](name)`                                   | `cookie_jar.rb:146-152`                                |
+| `CookieJar#set` (moved)    | `def []=(name, value)`                           | `cookie_jar.rb:155-157`                                |
+| `CookieJar#push` (moved)   | `def <<(new_cookie)`                             | `cookie_jar.rb:186-193`                                |
 
 `scripts/api-compare/operator-order-spelling.ts` carries per-FQN entries for
 rack-session's `[]` readers (`operator-order-spelling.ts:157-160`) but has no
