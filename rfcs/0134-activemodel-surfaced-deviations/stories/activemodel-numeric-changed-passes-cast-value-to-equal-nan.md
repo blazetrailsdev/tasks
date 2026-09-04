@@ -1,7 +1,7 @@
 ---
 title: "activemodel-numeric-changed-passes-cast-value-to-equal-nan"
-status: ready
-updated: 2026-09-02
+status: claimed
+updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 80
 priority: 63
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-03T23:44:33Z"
+assignee: "converge-sanitize-for-mass-assignment-mixin-split"
 blocked-by: null
 closed-reason: null
 ---

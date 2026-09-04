@@ -1,6 +1,6 @@
 ---
 title: "File and Dir leave CORE_CLASS_RECEIVERS — the story that turns the gate on, with nothing left for it to catch"
-status: claimed
+status: done
 updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -16,7 +16,7 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: 11
-pr: null
+pr: 7462
 claim: "2026-09-03T22:18:08Z"
 assignee: "unexempt-file-and-dir-from-core-class-receivers"
 blocked-by: null

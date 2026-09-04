@@ -1,7 +1,7 @@
 ---
 title: "rack and rack-session drop the activesupport dependency — the acceptance test for RFC 0135"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["rack", "rack-session"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 15
-pr: null
-claim: null
-assignee: null
+pr: 7467
+claim: "2026-09-03T23:43:49Z"
+assignee: "retarget-no-node-builtins-to-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---

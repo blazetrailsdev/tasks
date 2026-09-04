@@ -1,6 +1,6 @@
 ---
 title: "map-remaining-trailtie-files-cross-package"
-status: draft
+status: closed
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Invalid premise, same as its parent port-activerecord-trailtie-file: no framework railtie.rb declares own members (verified against rails-api.json), so there is no cross-package member for any of the six trailties to score. The Railtie#instrument expectation that motivated the mechanism was an extract-ruby-api.rb mis-attribution of an on_load block's include, fixed in PR #7463."
 ---
 
 ## Context

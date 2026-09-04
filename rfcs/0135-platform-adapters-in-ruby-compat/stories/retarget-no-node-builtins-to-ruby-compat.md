@@ -1,7 +1,7 @@
 ---
 title: "no-node-builtins points at ruby-compat and File/Dir, retiring the ruby-compat carve-out"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["ruby-compat"]
@@ -9,9 +9,9 @@ deps: ["port-file-and-dir-classes-onto-the-fs-backend", "move-crypto-adapter-int
 deps-rfc: []
 est-loc: 150
 priority: 14
-pr: null
-claim: null
-assignee: null
+pr: 7467
+claim: "2026-09-03T23:43:49Z"
+assignee: "retarget-no-node-builtins-to-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---

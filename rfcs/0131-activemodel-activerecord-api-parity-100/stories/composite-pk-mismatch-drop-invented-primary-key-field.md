@@ -1,6 +1,6 @@
 ---
 title: "Drop the invented primaryKey field from CompositePrimaryKeyMismatchReflection and the two casts it forced"
-status: claimed
+status: in-progress
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 7
-pr: null
+pr: 7463
 claim: "2026-09-03T22:43:59Z"
 assignee: "port-activerecord-trailtie-file"
 blocked-by: null

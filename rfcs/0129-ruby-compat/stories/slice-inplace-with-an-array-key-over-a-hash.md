@@ -1,7 +1,7 @@
 ---
 title: "slice inplace with an array key over a Hash receiver, not a stub"
-status: ready
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-03
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7466
+claim: "2026-09-03T23:40:03Z"
+assignee: "move-monitor-mixin-to-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---

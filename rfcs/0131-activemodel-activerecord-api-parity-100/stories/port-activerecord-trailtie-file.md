@@ -1,6 +1,6 @@
 ---
 title: "Point the tooling at trailties' ActiveRecord trailtie so railtie.rb stops being the one file activerecord is short, taking it to 281/281"
-status: claimed
+status: blocked
 updated: 2026-09-03
 rfc: "0131-activemodel-activerecord-api-parity-100"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 4
-pr: null
+pr: 7463
 claim: "2026-09-03T22:43:59Z"
 assignee: "port-activerecord-trailtie-file"
-blocked-by: null
+blocked-by: "Premise is an extractor bug, not a missing port. extract-ruby-api.rb's process_include attributed an on_load block's include to the lexically enclosing class, so railtie.rb:271-273's 'ActiveSupport.on_load(:active_job) { include JobRuntime }' invented a Railtie#instrument expectation; Rails includes that module into ActiveJob::Base, and the body lives at railties/job_runtime.rb:9. Dumping rails-api.json shows NO framework railtie.rb declares any own members, so the specified RUBY_FILE_CROSS_PACKAGE_OVERRIDES mechanism has nothing to score for activerecord or the six siblings, and 281/281 is unreachable without inventing a Trailtie#instrument member (raised and rejected in PR #7463 review). PR #7463 fixes the extractor instead: railtie.rb leaves the file population and activerecord reads 280/280 files = 100% file parity. Reopen only to rewrite the acceptance criteria."
 closed-reason: null
 ---
 

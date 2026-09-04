@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel::Access has no standalone mixin and slice lacks indifferent access"
-status: claimed
+status: done
 updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 62
-pr: null
+pr: 7464
 claim: "2026-09-03T22:57:58Z"
 assignee: "access-has-no-standalone-mixin-or-indifferent-slice"
 blocked-by: null
