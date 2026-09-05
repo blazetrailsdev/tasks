@@ -1,6 +1,6 @@
 ---
 title: "six pg schema-statements call rows are Ruby builtins spelled ad-hoc in JS"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 7531
 claim: "2026-09-05T19:26:47Z"
 assignee: "port-actionview-cache-helper"
 blocked-by: null

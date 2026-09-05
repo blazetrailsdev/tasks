@@ -1,6 +1,6 @@
 ---
 title: "Skeleton throw token carries the raised class; arms report gains a raise-class verdict"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T20:51:57Z"
+assignee: "skeleton-throw-token-carries-the-raised-class"
 blocked-by: null
 closed-reason: null
 ---

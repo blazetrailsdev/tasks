@@ -1,6 +1,6 @@
 ---
 title: "Drop ConnectionLeasingQueue#internalPoll's promise arm once Queue#poll settles on one shape"
-status: ready
+status: blocked
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-05T20:06:45Z"
+assignee: "conversion-and-serialization-tests-redeclare-shared-models"
+blocked-by: "Precondition unreachable: the story converges only 'once Queue#poll settles on one shape', and Queue#poll cannot. Pool#acquireConnectionSync (connection-adapters/abstract/connection-pool.ts:584) calls this._available.poll() synchronously and returns DatabaseAdapter, feeding checkoutForExclusiveAccess (:1067-1069) and the :443 lease site — both structurally sync. Making internalPoll always-async turns poll() no-arg into a Promise and breaks those. That is the same wall as the sibling converge-sync-connection-lease-per-checkout-verify, itself blocked on an epic to make Arel::Nodes::Node#to_sql and the deprecated .connection getter async. Unblock when that epic lands."
 closed-reason: null
 ---
 

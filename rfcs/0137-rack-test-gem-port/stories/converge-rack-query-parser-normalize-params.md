@@ -1,6 +1,6 @@
 ---
 title: "converge-rack-query-parser-normalize-params"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null

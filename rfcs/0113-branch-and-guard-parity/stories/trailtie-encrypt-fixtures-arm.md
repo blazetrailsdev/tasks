@@ -1,7 +1,7 @@
 ---
 title: "Port the railtie encrypt_fixtures arm and emit the active_record_fixture_set load hook"
-status: ready
-updated: 2026-08-31
+status: claimed
+updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: "missing-arm"
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T20:51:57Z"
+assignee: "skeleton-throw-token-carries-the-raised-class"
 blocked-by: null
 closed-reason: null
 ---

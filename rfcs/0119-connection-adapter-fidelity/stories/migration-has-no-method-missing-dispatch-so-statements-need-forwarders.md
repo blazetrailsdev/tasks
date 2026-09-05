@@ -1,6 +1,6 @@
 ---
 title: "Migration has no method_missing dispatch, so every adapter statement needs a hand-written forwarder"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 260
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T20:46:47Z"
+assignee: "convert-time-to-time-zone-guard-is-an-instanceof-list"
 blocked-by: null
 closed-reason: null
 ---

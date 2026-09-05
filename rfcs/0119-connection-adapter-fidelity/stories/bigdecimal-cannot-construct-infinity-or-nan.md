@@ -1,6 +1,6 @@
 ---
 title: "BigDecimal cannot construct Infinity or NaN; MRI does"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

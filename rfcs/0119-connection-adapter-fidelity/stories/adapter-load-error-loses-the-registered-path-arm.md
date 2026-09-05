@@ -1,6 +1,6 @@
 ---
 title: "adapter-load-error-loses-the-registered-path-arm"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

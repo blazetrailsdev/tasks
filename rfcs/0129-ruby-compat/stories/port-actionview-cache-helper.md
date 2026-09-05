@@ -1,6 +1,6 @@
 ---
 title: "port-actionview-cache-helper"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7531
 claim: "2026-09-05T19:26:47Z"
 assignee: "port-actionview-cache-helper"
 blocked-by: null

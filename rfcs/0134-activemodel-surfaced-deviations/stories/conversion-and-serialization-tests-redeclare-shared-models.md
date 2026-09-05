@@ -1,6 +1,6 @@
 ---
 title: "conversion-and-serialization-tests-redeclare-shared-models"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7533
+claim: "2026-09-05T20:06:45Z"
+assignee: "conversion-and-serialization-tests-redeclare-shared-models"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Drop the invented ArgumentError guard from Rack::Utils#build_nested_query's nil arm"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
