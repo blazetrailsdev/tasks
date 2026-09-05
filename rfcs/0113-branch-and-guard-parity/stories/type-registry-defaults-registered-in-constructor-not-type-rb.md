@@ -1,6 +1,6 @@
 ---
 title: "Type::Registry's constructor registers the default types Rails registers in type.rb, plus a :value entry Rails has not"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 27
-pr: null
+pr: 7504
 claim: "2026-09-05T01:42:09Z"
 assignee: "type-registry-key-replaces-per-adapter-overrides"
 blocked-by: null

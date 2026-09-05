@@ -1,6 +1,6 @@
 ---
 title: "BigDecimal caps the exponent at 4000, so a large-exponent string silently casts to zero"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7505
+claim: "2026-09-05T02:02:14Z"
+assignee: "port-zlib-gzipreader-open-for-schema-cache-read"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "AttributeSet's assertNotFrozen helper guards three writers Rails does not guard"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T02:22:17Z"
+assignee: "flip-rack-deflater-onto-the-zlib-seam"
 blocked-by: null
 closed-reason: null
 ---
