@@ -1,6 +1,6 @@
 ---
 title: "abstract columns() runs newColumnFromField concurrently where Ruby's map is sequential"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

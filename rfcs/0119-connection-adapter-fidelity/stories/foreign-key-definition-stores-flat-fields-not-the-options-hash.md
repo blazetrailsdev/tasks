@@ -1,6 +1,6 @@
 ---
 title: "ForeignKeyDefinition stores flat fields where Rails' Struct stores only the options hash"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T19:46:50Z"
+assignee: "rack-deflater-call-diverges-from-rails-case-arms"
 blocked-by: null
 closed-reason: null
 ---

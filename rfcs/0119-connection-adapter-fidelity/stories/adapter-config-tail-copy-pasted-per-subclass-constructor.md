@@ -1,6 +1,6 @@
 ---
 title: "The adapter config tail is copy-pasted into three subclass constructors"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7530
+claim: "2026-09-05T19:06:48Z"
+assignee: "io-set-encoding-cannot-hold-mri-null-external-encoding"
 blocked-by: null
 closed-reason: null
 ---

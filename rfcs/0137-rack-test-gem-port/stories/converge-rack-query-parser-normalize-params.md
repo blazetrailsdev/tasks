@@ -1,6 +1,6 @@
 ---
 title: "converge-rack-query-parser-normalize-params"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 15
-pr: null
+pr: 7529
 claim: "2026-09-05T17:58:56Z"
 assignee: "port-rack-test-methods"
 blocked-by: null

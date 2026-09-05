@@ -1,6 +1,6 @@
 ---
 title: "validates_with registers an arrow wrapper where Rails registers the validator object"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null

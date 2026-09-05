@@ -1,6 +1,6 @@
 ---
 title: "Skeleton emits one arm per when / elsif / rescue clause on both sides, not one per statement"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling

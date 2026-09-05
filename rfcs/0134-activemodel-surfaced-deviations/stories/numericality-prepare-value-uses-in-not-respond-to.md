@@ -1,6 +1,6 @@
 ---
 title: "prepare_value_for_validation tests with the in operator where Rails uses respond_to?/public_send"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null

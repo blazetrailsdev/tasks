@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Test::Methods"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-rack-test-session", "port-rack-test-session-redirects-and-state"]
 deps-rfc: []
 est-loc: 200
 priority: 10
-pr: null
+pr: 7529
 claim: "2026-09-05T17:58:56Z"
 assignee: "port-rack-test-methods"
 blocked-by: null

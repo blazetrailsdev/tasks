@@ -1,6 +1,6 @@
 ---
 title: "Delete AbstractAdapter#internalSchemaCache once its last sync reader goes"
-status: ready
+status: blocked
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-05T19:46:50Z"
+assignee: "rack-deflater-call-diverges-from-rails-case-arms"
+blocked-by: "prerequisite retire-schema-cache-sync-readers-after-checkout-flip (RFC 0073) is still 'ready' — the sync getCached* peeks in model-schema.ts, attribute-methods/primary-key.ts, insert-all.ts and test-fixtures/with-transactional-fixtures.ts all still read internalSchemaCache, so the accessor cannot be deleted yet"
 closed-reason: null
 ---
 

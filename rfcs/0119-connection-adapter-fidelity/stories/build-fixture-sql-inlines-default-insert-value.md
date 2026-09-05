@@ -1,6 +1,6 @@
 ---
 title: "build-fixture-sql-inlines-default-insert-value"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T19:26:47Z"
+assignee: "port-actionview-cache-helper"
 blocked-by: null
 closed-reason: null
 ---

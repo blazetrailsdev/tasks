@@ -1,6 +1,6 @@
 ---
 title: "Attribute-set envelope loses the type key for types outside ActiveModel's registry"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null

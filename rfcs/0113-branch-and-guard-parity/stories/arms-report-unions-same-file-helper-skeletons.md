@@ -1,6 +1,6 @@
 ---
 title: "Arms report splices same-file helper skeletons at the reach, as the call gate unions their calls"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
