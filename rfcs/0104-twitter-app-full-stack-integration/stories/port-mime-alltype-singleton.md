@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 80
+est-loc: 70
 priority: 30
 pr: null
 claim: null
@@ -35,14 +35,18 @@ ALL = AllType.instance
 
 trails has a bare instance instead —
 `packages/actionpack/src/action-dispatch/http/mime-type.ts`:
-`static readonly ALL = new MimeType("*/*", "all")`. Three divergences follow
-from that one line:
+`static readonly ALL = new MimeType("*/*", null)`. Three divergences followed
+from that one line, and the first of them is now closed:
 
-- Its `symbol` is `"all"` where Rails' is `nil`, so `ref()` returns `"all"`
-  rather than `"*/*"` (`ref` is `symbol || to_s`, `mime_type.rb:285-287`). That
-  matters to `Request#formats`' `select! { |f| f.symbol || f.ref == "*/*" }`
-  (`mime_negotiation.rb`), which is the arm that keeps a wildcard `Accept`
-  alive and drops unregistered types.
+- ~~Its `symbol` is `"all"` where Rails' is `nil`~~ — **done** in
+  `restore-instrumentation-process-action-seat` (PR #7487), which converged
+  `MimeType#symbol` onto the colon convention repo-wide and so had to settle
+  what `ALL`'s symbol is; `nil` is Rails' answer (`mime_type.rb:352-354`), and
+  inventing a `":all"` was the alternative. `ref()` is now `"*/*"` (`ref` is
+  `symbol || to_s`, `mime_type.rb:285-287`), which is what
+  `Request#formats`' `select! { |f| f.symbol || f.ref == "*/*" }`
+  (`mime_negotiation.rb`) — the arm that keeps a wildcard `Accept` alive and
+  drops unregistered types — was always written for.
 - `all?` is unported entirely — there is no `isAll()` on `MimeType`.
 - `html?` is not overridden, so `MimeType.ALL.isHtml()` answers via the generic
   `symbol === "html" || string.includes("html")` (false) where Rails hard-codes
@@ -64,4 +68,5 @@ without a further ripple.
   (`mime_type.rb:327`, `def all?; false; end`), so the override has a base to
   override.
 - `MimeType.ALL.ref()` is `"*/*"` and `MimeType.ALL.symbol` is `null`, covered
-  by a test.
+  by a test. (The `null` itself already landed in #7487; what remains here is
+  the subclass, `isAll()`, the `isHtml()` override, and the test.)
