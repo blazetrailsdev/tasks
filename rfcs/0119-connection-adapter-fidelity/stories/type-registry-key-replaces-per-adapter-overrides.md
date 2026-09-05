@@ -34,4 +34,9 @@ overrides waiting to be written. All four readers carry a bare
   dispatches to, and the four
   `@noRailsEquivalent CONVERGEABLE type-registry-key-replaces-per-adapter-overrides`
   receipts are deleted with the reader.
-- `pnpm parity:api:extra --package activerecord` novel count strictly drops.
+- The repo-wide `@noRailsEquivalent CONVERGEABLE` receipt count drops by four.
+  `pnpm parity:api:extra --package activerecord` stays flat and is NOT the
+  metric here: a tagged member is scored `Allowed` and subtracted from `novel`
+  and `total`, so deleting four already-tagged readers cannot move either
+  figure. Measured both ways on #7523 — with the readers present and with them
+  deleted, activerecord reports `novel 178, total 649` either way.
