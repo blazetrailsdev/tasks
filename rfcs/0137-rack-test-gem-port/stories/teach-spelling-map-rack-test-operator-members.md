@@ -1,6 +1,6 @@
 ---
 title: "parity:api:extra misreports rack-test's operator-spelled members as extra surface"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T23:00:00Z"
+assignee: "teach-spelling-map-rack-test-operator-members"
 blocked-by: null
 closed-reason: null
 ---

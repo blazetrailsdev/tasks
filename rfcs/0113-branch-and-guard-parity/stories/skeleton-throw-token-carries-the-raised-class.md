@@ -1,6 +1,6 @@
 ---
 title: "Skeleton throw token carries the raised class; arms report gains a raise-class verdict"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling

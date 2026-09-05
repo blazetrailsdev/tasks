@@ -1,6 +1,6 @@
 ---
 title: "PG Array#changed_in_place? JSON-round-trips instead of comparing elementwise"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 7538
 claim: "2026-09-05T21:46:49Z"
 assignee: "commit-db-transaction-should-hold-its-own-internal-execute"
 blocked-by: null

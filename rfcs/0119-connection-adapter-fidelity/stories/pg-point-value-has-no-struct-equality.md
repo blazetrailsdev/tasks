@@ -1,6 +1,6 @@
 ---
 title: "PG PointValue lacks Struct#==, so an equal point always reports changed"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7539
+claim: "2026-09-05T22:06:49Z"
+assignee: "converge-adapter-args-url-parsing-onto-connection-url-resolver"
 blocked-by: null
 closed-reason: null
 ---

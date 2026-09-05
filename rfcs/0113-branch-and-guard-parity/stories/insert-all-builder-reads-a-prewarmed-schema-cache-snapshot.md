@@ -1,6 +1,6 @@
 ---
 title: "InsertAll::Builder reads a prewarmed schema-cache snapshot instead of the cache at Rails' call sites"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: null

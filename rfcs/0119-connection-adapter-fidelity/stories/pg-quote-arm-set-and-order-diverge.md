@@ -1,6 +1,6 @@
 ---
 title: "PG quote splits the Numeric arm, invents an integer arm, and reorders"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7540
+claim: "2026-09-05T22:26:46Z"
+assignee: "converge-connection-management-onto-executor-and-body-proxy"
 blocked-by: null
 closed-reason: null
 ---

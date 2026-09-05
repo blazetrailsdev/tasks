@@ -1,6 +1,6 @@
 ---
 title: "rollback-db-transaction-duplicated-on-adapters"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7540
+claim: "2026-09-05T22:26:46Z"
+assignee: "converge-connection-management-onto-executor-and-body-proxy"
 blocked-by: null
 closed-reason: null
 ---
