@@ -1,7 +1,7 @@
 ---
 title: "Collapse ActionController::TestCase's hand-rolled multipart encoder onto Rack::Test::Utils"
-status: ready
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["port-rack-test-utils"]
 deps-rfc: []
 est-loc: 300
 priority: 11
-pr: null
-claim: null
-assignee: null
+pr: 7502
+claim: "2026-09-05T00:22:11Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

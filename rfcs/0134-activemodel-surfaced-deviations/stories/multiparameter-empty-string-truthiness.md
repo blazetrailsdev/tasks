@@ -1,7 +1,7 @@
 ---
 title: "AcceptsMultiparameterTime: empty string is truthy in Rails' guard and defaults fill"
-status: in-progress
-updated: 2026-09-04
+status: done
+updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:
