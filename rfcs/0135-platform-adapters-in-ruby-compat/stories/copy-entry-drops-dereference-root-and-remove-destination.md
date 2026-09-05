@@ -1,7 +1,7 @@
 ---
 title: "copy_entry drops Ruby's dereference_root and remove_destination parameters"
-status: ready
-updated: 2026-09-04
+status: in-progress
+updated: 2026-09-05
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 33
-pr: null
-claim: null
-assignee: null
+pr: 7521
+claim: "2026-09-05T16:00:46Z"
+assignee: "copy-entry-drops-dereference-root-and-remove-destination"
 blocked-by: null
 closed-reason: null
 ---

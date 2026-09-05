@@ -1,14 +1,14 @@
 ---
 title: "parity:api:extra misreports rack-test's operator-spelled members as extra surface"
-status: draft
-updated: 2026-09-04
+status: ready
+updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

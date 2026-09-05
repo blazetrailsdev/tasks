@@ -1,6 +1,6 @@
 ---
 title: "Split validation: syntactic stays with the content, semantic moves to the models"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["move-task-models-into-trailmap"]
 deps-rfc: []
 est-loc: 200
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 4
+claim: "2026-09-05T16:26:46Z"
+assignee: "equivalence-gate-trailmap-against-the-cli"
 blocked-by: null
 closed-reason: null
 ---

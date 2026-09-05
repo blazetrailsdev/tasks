@@ -1,6 +1,6 @@
 ---
 title: "Gate trailmap's ready queue against the CLI's, byte for byte"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["move-ranking-onto-story-scopes"]
 deps-rfc: []
 est-loc: 150
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: 4
+claim: "2026-09-05T16:26:46Z"
+assignee: "equivalence-gate-trailmap-against-the-cli"
 blocked-by: null
 closed-reason: null
 ---

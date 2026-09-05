@@ -1,6 +1,6 @@
 ---
 title: "action_dispatch/send-file.ts is a trails invention: own MIME table, bare Error, own content-disposition"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

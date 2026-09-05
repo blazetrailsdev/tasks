@@ -1,14 +1,14 @@
 ---
 title: "port-rack-test-multipart-spec"
-status: draft
-updated: 2026-09-04
+status: ready
+updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 21
 pr: null
 claim: null
 assignee: null

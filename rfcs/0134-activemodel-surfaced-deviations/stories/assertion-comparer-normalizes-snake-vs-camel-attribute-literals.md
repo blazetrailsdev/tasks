@@ -1,6 +1,6 @@
 ---
 title: "assertion-comparer-normalizes-snake-vs-camel-attribute-literals"
-status: draft
+status: ready
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

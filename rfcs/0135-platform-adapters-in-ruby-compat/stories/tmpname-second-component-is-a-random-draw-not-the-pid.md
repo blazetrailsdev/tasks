@@ -1,7 +1,7 @@
 ---
 title: "Dir::Tmpname.create's second name component is a second random draw where tmpdir.rb:154 uses $$"
-status: ready
-updated: 2026-09-04
+status: in-progress
+updated: 2026-09-05
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 36
-pr: null
-claim: null
-assignee: null
+pr: 7521
+claim: "2026-09-05T16:00:46Z"
+assignee: "copy-entry-drops-dereference-root-and-remove-destination"
 blocked-by: null
 closed-reason: null
 ---

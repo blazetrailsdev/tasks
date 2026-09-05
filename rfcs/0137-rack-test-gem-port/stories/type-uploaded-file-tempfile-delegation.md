@@ -1,14 +1,14 @@
 ---
 title: "Type Rack::Test::UploadedFile's tempfile delegation so build_file_part drops its casts"
-status: draft
-updated: 2026-09-04
+status: ready
+updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 17
 pr: null
 claim: null
 assignee: null

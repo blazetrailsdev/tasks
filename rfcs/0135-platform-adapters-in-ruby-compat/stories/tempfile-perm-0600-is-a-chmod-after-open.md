@@ -1,7 +1,7 @@
 ---
 title: "Tempfile creates at the default umask and chmods to 0600 where tempfile.rb:158 passes perm: to open"
-status: ready
-updated: 2026-09-04
+status: in-progress
+updated: 2026-09-05
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 170
 priority: 34
-pr: null
-claim: null
-assignee: null
+pr: 7521
+claim: "2026-09-05T16:00:46Z"
+assignee: "copy-entry-drops-dereference-root-and-remove-destination"
 blocked-by: null
 closed-reason: null
 ---

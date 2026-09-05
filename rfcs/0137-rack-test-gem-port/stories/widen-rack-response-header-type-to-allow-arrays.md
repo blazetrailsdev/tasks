@@ -1,6 +1,6 @@
 ---
 title: "widen-rack-response-header-type-to-allow-arrays"
-status: draft
+status: ready
 updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 18
 pr: null
 claim: null
 assignee: null
