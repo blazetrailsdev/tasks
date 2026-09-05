@@ -4,7 +4,7 @@ status: draft
 updated: 2026-09-05
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
-packages: []
+packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
 est-loc: 220

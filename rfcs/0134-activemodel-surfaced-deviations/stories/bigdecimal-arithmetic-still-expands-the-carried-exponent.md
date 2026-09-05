@@ -4,7 +4,7 @@ status: ready
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
-packages: []
+packages: ["activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 240

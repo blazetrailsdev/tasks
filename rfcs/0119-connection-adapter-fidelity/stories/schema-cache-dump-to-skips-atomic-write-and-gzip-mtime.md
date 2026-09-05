@@ -4,7 +4,7 @@ status: draft
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 180
