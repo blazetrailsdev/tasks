@@ -24,11 +24,14 @@ parsing that Rails already does in
 which trails HAS ported at
 `packages/activerecord/src/database-configurations/connection-url-resolver.ts`.
 
-Three functions duplicate it:
+Two functions duplicate it, plus one already registered elsewhere:
 
-- `adapterNameFromUrl` / `inferAdapterNameFromUrl` — Rails reads the adapter off
-  `uri.scheme` in `ConnectionUrlResolver#to_hash` and normalizes it there; it has
-  no "guess the adapter from a `.sqlite3` suffix" arm at all.
+- `inferAdapterNameFromUrl` — Rails reads the adapter off `uri.scheme` in
+  `ConnectionUrlResolver#to_hash` and normalizes it there; it has no "guess the
+  adapter from a `.sqlite3` suffix" arm at all. It already carries a
+  `CONVERGEABLE inline-ruby-bodies-extracted-as-named-helpers` receipt; its
+  public wrapper `adapterNameFromUrl` was dead and is deleted by
+  `receipt-connection-adapters-and-sqlite-drivers`.
 - `parseSqliteUrl` — Rails' resolver produces `database:` from the URI path
   (`connection_url_resolver.rb`), and `SQLite3Adapter.new_client` handles
   `:memory:` / `file:` through `SQLITE_OPEN_URI` (`sqlite3_adapter.rb:34`).
@@ -47,7 +50,7 @@ gem per adapter, keyword-configured) has no counterpart for; it carries a
 
 ## Acceptance criteria
 
-- The three URL/adapter-name helpers are gone, their call sites routed through
+- The URL/adapter-name helpers are gone, their call sites routed through
   the ported `ConnectionUrlResolver` (and `AdapterNotFound` raised where Rails
   raises it).
 - The driver-alias table either moves to where trails registers its SQLite
