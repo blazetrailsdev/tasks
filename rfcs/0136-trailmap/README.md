@@ -11,6 +11,7 @@ packages:
   - trailties
   - activerecord
 clusters: []
+priority: 1
 ---
 
 # RFC 0136 — trailmap: one application owns the task domain

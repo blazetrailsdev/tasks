@@ -23,7 +23,7 @@ related-rfcs:
   - "0124-arel-surfaced-deviations"
   - "0126-fidelity-tooling-continuation"
   - "0129-ruby-compat"
-priority: 2
+priority: 3
 ---
 
 # RFC 0134 — ActiveModel surfaced deviations
