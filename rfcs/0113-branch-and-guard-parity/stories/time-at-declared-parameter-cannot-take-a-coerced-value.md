@@ -1,6 +1,6 @@
 ---
 title: "Converge Time.at's declared parameter onto MRI's VALUE so coerced callers drop the cast"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: null

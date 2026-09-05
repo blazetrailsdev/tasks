@@ -1,6 +1,6 @@
 ---
 title: "HttpAuthentication's four *ControllerLike/*Host duck types replace Rails' include of ControllerMethods on Metal"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

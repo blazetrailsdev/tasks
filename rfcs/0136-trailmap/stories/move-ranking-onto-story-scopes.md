@@ -1,6 +1,6 @@
 ---
 title: "Move the ready queue off ranking.ts and onto Story as scopes"
-status: ready
+status: done
 updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["move-task-models-into-trailmap"]
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 3
+claim: "2026-09-05T15:02:07Z"
+assignee: "move-ranking-onto-story-scopes"
 blocked-by: null
 closed-reason: null
 ---

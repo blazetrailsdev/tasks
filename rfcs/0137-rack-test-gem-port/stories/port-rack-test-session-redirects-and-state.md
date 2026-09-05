@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Test::Session's redirect following, cookie mutators and state restore"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
