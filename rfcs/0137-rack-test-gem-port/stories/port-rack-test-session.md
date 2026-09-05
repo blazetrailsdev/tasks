@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Test::Session and the rack-test entry file"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -15,7 +15,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 8
-pr: null
+pr: 7515
 claim: "2026-09-05T10:32:17Z"
 assignee: "port-rack-test-session"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "File.fnmatch advances by code point, as MRI's Inc/rb_enc_mbclen does"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 11
-pr: null
-claim: null
-assignee: null
+pr: 7518
+claim: "2026-09-05T11:02:18Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

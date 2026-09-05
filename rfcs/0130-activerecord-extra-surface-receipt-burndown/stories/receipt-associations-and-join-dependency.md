@@ -1,7 +1,7 @@
 ---
 title: "associations/: resolve 29 novel names across join-dependency, the scope slots and the through-reflection validators"
-status: draft
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-05
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7516
+claim: "2026-09-05T11:07:02Z"
+assignee: "receipt-associations-and-join-dependency"
 blocked-by: null
 closed-reason: null
 ---

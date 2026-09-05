@@ -1,7 +1,7 @@
 ---
 title: "connection-adapters/, adapters/ and sqlite/: resolve 109 novel names, most in files with no Rails counterpart"
-status: draft
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-05
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7517
+claim: "2026-09-05T11:14:03Z"
+assignee: "receipt-connection-adapters-and-sqlite-drivers"
 blocked-by: null
 closed-reason: null
 ---

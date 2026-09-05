@@ -1,7 +1,7 @@
 ---
 title: "ActionController::MiddlewareStack::Middleware is not ported; valid? sits on the shared ActionDispatch entry type"
-status: ready
-updated: 2026-09-04
+status: in-progress
+updated: 2026-09-05
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: 7518
+claim: "2026-09-05T11:02:18Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---
