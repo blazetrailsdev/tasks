@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Errors#delete returns Error objects where Rails returns the deleted messages"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation

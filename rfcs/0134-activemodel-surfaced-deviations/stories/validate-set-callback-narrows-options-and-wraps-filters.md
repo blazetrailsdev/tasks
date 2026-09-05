@@ -1,6 +1,6 @@
 ---
 title: "validate-set-callback-narrows-options-and-wraps-filters"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T10:42:09Z"
+assignee: "validate-set-callback-narrows-options-and-wraps-filters"
 blocked-by: null
 closed-reason: null
 ---

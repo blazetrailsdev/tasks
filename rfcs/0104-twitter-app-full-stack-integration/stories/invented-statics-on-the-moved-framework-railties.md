@@ -1,6 +1,6 @@
 ---
 title: "Six invented statics on the moved framework railties have no railtie.rb counterpart"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null

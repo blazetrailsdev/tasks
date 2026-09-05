@@ -1,6 +1,6 @@
 ---
 title: "Port Time#to_f onto @blazetrails/date's Time"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null

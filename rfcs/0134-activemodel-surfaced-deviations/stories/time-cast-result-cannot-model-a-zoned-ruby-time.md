@@ -1,6 +1,6 @@
 ---
 title: "time-cast-result-cannot-model-a-zoned-ruby-time"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7512
+claim: "2026-09-05T10:02:09Z"
+assignee: "time-cast-result-cannot-model-a-zoned-ruby-time"
 blocked-by: null
 closed-reason: null
 ---

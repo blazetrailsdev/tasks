@@ -1,6 +1,6 @@
 ---
 title: "Zlib::GzipReader.open / GzipWriter.open, so SchemaCache.read stops opening the .gz itself"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null

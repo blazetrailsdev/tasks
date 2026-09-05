@@ -1,6 +1,6 @@
 ---
 title: "type-name-property-registry-key-burndown"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: receipt-hygiene
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T10:22:05Z"
+assignee: "type-name-property-registry-key-burndown"
 blocked-by: null
 closed-reason: null
 ---

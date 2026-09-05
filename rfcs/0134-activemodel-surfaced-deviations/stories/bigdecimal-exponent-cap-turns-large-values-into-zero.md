@@ -1,6 +1,6 @@
 ---
 title: "BigDecimal caps the exponent at 4000, so a large-exponent string silently casts to zero"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: invented-arm

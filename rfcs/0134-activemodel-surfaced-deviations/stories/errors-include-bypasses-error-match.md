@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Errors#include? compares the attribute directly instead of delegating to Error#match?"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation

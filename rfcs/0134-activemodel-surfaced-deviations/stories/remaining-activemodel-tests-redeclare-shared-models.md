@@ -1,6 +1,6 @@
 ---
 title: "The rest of the activemodel suite still redeclares Rails test models inline"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: test-placement
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: 7511
 claim: "2026-09-05T09:42:07Z"
 assignee: "remaining-activemodel-tests-redeclare-shared-models"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Move the ActiveRecord models and migrations into trailmap"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 8
-pr: null
-claim: null
-assignee: null
+pr: 2
+claim: "2026-09-05T10:35:33Z"
+assignee: "move-task-models-into-trailmap"
 blocked-by: null
 closed-reason: null
 ---
