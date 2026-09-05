@@ -1,7 +1,7 @@
 ---
 title: "activemodel: cases/lint_test.rb and serializers/json_serialization_test.rb sit outside the test-compare population"
 status: blocked
-updated: 2026-09-02
+updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: test-placement
 packages: ["activemodel"]
@@ -12,7 +12,7 @@ priority: 50
 pr: null
 claim: "2026-09-02T22:05:40Z"
 assignee: "type-value-split-and-name-property-burndown"
-blocked-by: "The serializers half is already satisfied on main: cases/serializers/json_serialization_test.rb IS in the compare population and matches packages/activemodel/src/serializers/json-serialization.test.ts, so activemodel already sits at 56/56 files matched. The lint half is blocked by an only-shrink gate. cases/lint_test.rb (vendor/rails/activemodel/test/cases/lint_test.rb:5) defines no test methods at all — its body is 'include ActiveModel::Lint::Tests' and a CompliantModel, and the six tests live in activemodel/lib/active_model/lint.rb:31-107, outside every scanned test dir. Teaching extract-ruby-tests.rb to walk that lib file (an EXTERNAL_TEST_MIXINS map re-keying the collected module under the constant path the include spells, ~40 LOC) was prototyped and works: activemodel reaches 57/57 rubyFiles, 969 rubyTests. But the six materialized Ruby tests carry their mixin bodies' assertions (2, 2, 2, 2, 7, 2), while the faithful TS mirror of lint_test.rb delegates to the ported Lint::Tests functions in lint.ts and so extracts ZERO assertions — extract-ts-core.ts folds only SAME-FILE helpers, not imported ones. Enrolling therefore raises activemodel's assertion-count-mismatch from 284 to 290 against a committed mark of 286 (scripts/test-compare/assertion-mismatch-mark.json), and assertion-ratchet.ts is only-shrink, so the mark cannot be raised to admit it. Unblocking needs one of: cross-file helper folding in the TS assertion extractor, or converging six-plus of activemodel's existing count mismatches first to make room. Shipping the extractor change alone is worse than not shipping it — the six tests land unmatched and activemodel's parity:test percentage drops 100 percent to 99.4 percent, a negative delta."
+blocked-by: "Scope is now the lint half only; the serializers half is already satisfied on main (cases/serializers/json_serialization_test.rb matches serializers/json-serialization.test.ts, activemodel 56/56 files). cases/lint_test.rb (vendor/rails/activemodel/test/cases/lint_test.rb:5) defines no test methods — its six tests live in lib/active_model/lint.rb:31-107, outside every scanned test dir. Teaching extract-ruby-tests.rb to walk that lib file was prototyped and reaches 57/57 rubyFiles, but the six materialized Ruby tests carry 2/2/2/2/7/2 assertions while the faithful TS mirror delegates to lint.ts and extracts ZERO (extract-ts-core.ts folds only same-file helpers), so enrolling raises activemodel's assertion-count mismatch by 6. The committed mark has since TIGHTENED from 286 to 281 (scripts/test-compare/assertion-mismatch-mark.json), so there is less headroom than at first diagnosis, and assertion-ratchet.ts is only-shrink. Unblocks on exactly one of: cross-file helper folding in the TS assertion extractor (the real fix, generalizes), or converging six-plus of activemodel's existing count mismatches first and enrolling in the same PR."
 closed-reason: null
 ---
 

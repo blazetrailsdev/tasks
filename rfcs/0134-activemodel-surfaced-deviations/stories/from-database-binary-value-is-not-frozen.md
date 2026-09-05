@@ -1,7 +1,7 @@
 ---
 title: "from-database-binary-value-is-not-frozen"
-status: draft
-updated: 2026-09-04
+status: ready
+updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
 packages: []

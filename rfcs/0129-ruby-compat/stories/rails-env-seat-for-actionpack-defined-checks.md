@@ -1,7 +1,7 @@
 ---
 title: "defined?(Rails.env) reads an unset global, so process_action's development newline is unreachable"
-status: in-progress
-updated: 2026-09-04
+status: done
+updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []

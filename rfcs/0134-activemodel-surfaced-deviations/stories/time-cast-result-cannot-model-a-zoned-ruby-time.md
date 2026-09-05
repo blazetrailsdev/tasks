@@ -1,7 +1,7 @@
 ---
 title: "time-cast-result-cannot-model-a-zoned-ruby-time"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
 packages: []

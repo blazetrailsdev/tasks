@@ -1,6 +1,6 @@
 ---
 title: "prepare_value_for_validation calls record_attribute_changed_in_place? as a module function, not through the validator"
-status: draft
+status: ready
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null

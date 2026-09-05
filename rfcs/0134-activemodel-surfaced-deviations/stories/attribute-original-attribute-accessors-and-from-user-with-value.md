@@ -1,7 +1,7 @@
 ---
 title: "Attribute's get/setOriginalAttribute pair and fromUserWithValue have no Rails counterpart"
-status: draft
-updated: 2026-09-02
+status: closed
+updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged: getOriginalAttribute/setOriginalAttribute/fromUserWithValue are all gone from packages/activemodel/src/attribute.ts; originalAttribute is a plain field (:32,:86) at Rails' name and isAssigned is private (:213), so none of the three is measured surface any more"
 ---
 
 ## Context

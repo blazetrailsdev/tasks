@@ -1,7 +1,7 @@
 ---
 title: "Port Notifications::Event#allocations and now_allocations beside gc_time"
-status: in-progress
-updated: 2026-09-04
+status: done
+updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []

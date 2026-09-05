@@ -1,7 +1,7 @@
 ---
 title: "Percentage converter invents a format fallback; currency converter inlines i18n_opts"
-status: ready
-updated: 2026-08-31
+status: claimed
+updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: 21
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T01:42:09Z"
+assignee: "type-registry-key-replaces-per-adapter-overrides"
 blocked-by: null
 closed-reason: null
 ---

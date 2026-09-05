@@ -1,6 +1,6 @@
 ---
 title: "NumericalityValidator#prepare_value_for_validation reads _read_attribute where Rails reads the public read_attribute"
-status: draft
+status: ready
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null

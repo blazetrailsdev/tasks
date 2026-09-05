@@ -1,14 +1,14 @@
 ---
 title: "Move the ActiveRecord models and migrations into trailmap"
-status: draft
-updated: 2026-09-04
+status: ready
+updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

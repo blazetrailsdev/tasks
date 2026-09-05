@@ -1,7 +1,7 @@
 ---
 title: "action-name-assigned-in-process-not-process-action"
-status: in-progress
-updated: 2026-09-04
+status: done
+updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []

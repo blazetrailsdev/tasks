@@ -1,7 +1,7 @@
 ---
 title: "active_support.set_hash_digest_class reads the static railtie config, not the yielded app's"
-status: ready
-updated: 2026-09-04
+status: claimed
+updated: 2026-09-05
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T01:42:09Z"
+assignee: "type-registry-key-replaces-per-adapter-overrides"
 blocked-by: null
 closed-reason: null
 ---

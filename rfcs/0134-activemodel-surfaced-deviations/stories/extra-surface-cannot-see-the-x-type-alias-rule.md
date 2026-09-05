@@ -1,7 +1,7 @@
 ---
 title: "parity:api:extra scores the sanctioned <X>Type rename novel in the activemodel barrel"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
 packages: []

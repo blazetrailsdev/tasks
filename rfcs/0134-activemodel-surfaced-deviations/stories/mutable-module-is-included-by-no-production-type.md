@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel::Type::Helpers::Mutable is included by no production type; Json and Serialized hand-roll its members"
-status: draft
+status: ready
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
