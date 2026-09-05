@@ -36,9 +36,11 @@ trails has only the override. `respondTo` is defined once, on the
 Surfaced by porting `vendor/rails/activemodel/test/models/contact.rb` to
 `packages/activemodel/src/test-helpers/models/contact.ts`, whose Ruby original
 includes `Conversion` and `Validations` but NOT `AttributeMethods`. The
-workaround shipped there is a `respondTo` on `Model`
-(`packages/activemodel/src/model.ts`) carrying a `@noRailsEquivalent
-CONVERGEABLE` receipt naming this story.
+workaround shipped there is a `respondTo` on that model, spelling out the
+`Object#respond_to?` default so `toKey` can run. It carries NO
+`@noRailsEquivalent` receipt: `test-helpers/**` is outside the measured surface,
+so a tag there has nothing backing it and `extra-surface.ts` reports it as a
+STALE tag (it did, on PR #7533). This story is the record instead.
 
 ## Acceptance criteria
 
@@ -47,6 +49,6 @@ CONVERGEABLE` receipt naming this story.
   is in Rails, delegating to that default instead of standing alone
   (its `@missingRailsCall super — PERMANENT` at `attribute-methods.ts:484`
   retires with it).
-- The `respondTo` on `Model` and its `@noRailsEquivalent` receipt are deleted.
+- The `respondTo` on `test-helpers/models/contact.ts` is deleted.
 - `conversion.test.ts` (which exercises `toKey` / `toParam` on a plain
   `Contact`) stays green.
