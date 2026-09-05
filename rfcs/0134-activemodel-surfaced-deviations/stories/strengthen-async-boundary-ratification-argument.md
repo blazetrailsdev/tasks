@@ -1,6 +1,6 @@
 ---
 title: "Strengthen the serialization async-boundary ratification with the encoder-propagation argument"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7510
+claim: "2026-09-05T09:02:11Z"
+assignee: "from-database-binary-value-is-not-frozen"
 blocked-by: null
 closed-reason: null
 ---

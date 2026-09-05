@@ -1,6 +1,6 @@
 ---
 title: 'Encoding.find("internal") raises where MRI answers nil — no default_internal seat'
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T09:42:07Z"
+assignee: "remaining-activemodel-tests-redeclare-shared-models"
 blocked-by: null
 closed-reason: null
 ---

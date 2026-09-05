@@ -1,6 +1,6 @@
 ---
 title: "Enroll log_subscriber_test.rb's seven fragment-cache tests"
-status: ready
+status: blocked
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 160
 priority: 9
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-05T09:02:11Z"
+assignee: "from-database-binary-value-is-not-frozen"
+blocked-by: "Blocked on port-actionview-cache-helper. The seven Rails tests (vendor/rails/actionpack/test/controller/log_subscriber_test.rb:330-393) drive controller actions that render inline templates calling cache / cache_if / cache_unless (log_subscriber_test.rb:51-72), and ActionView::Helpers::CacheHelper (vendor/rails/actionview/lib/action_view/helpers/cache_helper.rb) is not ported — packages/actionview/src/helpers/ has no cache-helper.ts and nothing in packages/ names CacheHelper. With no helper nothing emits the read_fragment/write_fragment notifications the subscriber methods subscribe to, so the tests cannot be written the way Rails writes them and the acceptance criterion 'drive the controller the way log_subscriber_test.rb does, not the subscriber directly' is unreachable. Inline rendering itself is fine (packages/actionview/src/renderer/template-renderer.ts:40-42) and the controller-side fragment primitives exist (packages/actionpack/src/abstract-controller/caching.ts), so the helper port is the whole gap. Filed port-actionview-cache-helper under 0129-ruby-compat."
 closed-reason: null
 ---
 

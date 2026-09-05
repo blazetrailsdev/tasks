@@ -1,6 +1,6 @@
 ---
 title: "remaining-activemodel-tests-redeclare-shared-models-continued"
-status: draft
+status: closed
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of remaining-activemodel-tests-redeclare-shared-models, which stays open for the ~35 remaining test files"
 ---
 
 ## Context
