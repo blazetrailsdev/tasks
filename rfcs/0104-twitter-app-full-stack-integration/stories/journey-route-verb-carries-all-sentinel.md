@@ -1,5 +1,5 @@
 ---
-title: "Route#verb carries an \"ALL\" sentinel where Journey::Route#verb is verbs.join(\"|\")"
+title: 'Route#verb carries an "ALL" sentinel where Journey::Route#verb is verbs.join("|")'
 status: draft
 updated: 2026-09-05
 rfc: "0104-twitter-app-full-stack-integration"
