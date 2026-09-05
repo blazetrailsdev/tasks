@@ -30,10 +30,15 @@ end
 trails' `into` (`packages/activerecord/src/insert-all.ts`) carries an extra
 leading branch Rails does not have: when `keysIncludingTimestamps()` is empty
 it throws `"Bulk insert with no explicit columns is not supported"` for a
-multi-row insert, emits `INTO <table> () VALUES ()` on mysql2, and
-`INTO <table> DEFAULT VALUES` otherwise. It also appends the compiled
-`valuesList()`, where Rails' `into` stops at the column list and
+multi-row insert, and otherwise emits
+`INTO <table> <connection.emptyInsertStatementValue()>`. It also appends the
+compiled `valuesList()`, where Rails' `into` stops at the column list and
 `build_insert_sql` supplies the VALUES clause.
+
+(blazetrailsdev/trails#7523 routed that arm's per-adapter split through
+`emptyInsertStatementValue` — `abstract/database_statements.rb:498`,
+`abstract_mysql_adapter.rb:254` — so the adapter branch is gone, but the arm
+itself is still invented and is what this story removes.)
 
 None of that is in the Ruby. It is an invented arm (RFC 0113's shape: a branch
 and a guard Rails does not write), and it makes `into` a different method from
