@@ -30,15 +30,15 @@ guard, or a guard alone.
 From the noise-floor audit's "stdlib idiom" class
 (`docs/infrastructure/arm-mismatch-noise-floor.md`, rows 31, 35, 36, 58):
 
-| Ruby reach     | faithful TS lowering                          | expected tokens |
-| -------------- | --------------------------------------------- | --------------- |
-| `filter_map`   | `for … of` + `if (x != null) out.push(x)`     | `loop if`       |
-| `uniq`         | `Set` filter, or `for … of` + `if (!seen)`    | `loop if`       |
-| `compact` / `compact!` | `filter((x) => x != null)` or loop + guard | `if` or `loop if` |
-| `drop_while` / `take_while` | `for … of` + `if (!p) break`     | `loop if`       |
-| `delete_if` / `reject!` | `for … of` + `if (p) splice`         | `loop if`       |
-| `concat`       | `for … of` + `push`                           | `loop`          |
-| `dig`          | `a?.b?.c` (nothing) or guard chain            | `` or `if`      |
+| Ruby reach                  | faithful TS lowering                       | expected tokens   |
+| --------------------------- | ------------------------------------------ | ----------------- |
+| `filter_map`                | `for … of` + `if (x != null) out.push(x)`  | `loop if`         |
+| `uniq`                      | `Set` filter, or `for … of` + `if (!seen)` | `loop if`         |
+| `compact` / `compact!`      | `filter((x) => x != null)` or loop + guard | `if` or `loop if` |
+| `drop_while` / `take_while` | `for … of` + `if (!p) break`               | `loop if`         |
+| `delete_if` / `reject!`     | `for … of` + `if (p) splice`               | `loop if`         |
+| `concat`                    | `for … of` + `push`                        | `loop`            |
+| `dig`                       | `a?.b?.c` (nothing) or guard chain         | ``or`if`          |
 
 Each row is the same fact the enumerable alias table records for the CALL gate
 (`scripts/api-compare/enumerable-idioms.ts`: `any?` is `some`), stated for

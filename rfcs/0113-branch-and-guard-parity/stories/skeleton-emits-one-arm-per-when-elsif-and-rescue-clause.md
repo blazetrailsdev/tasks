@@ -35,7 +35,7 @@ TS side, `scripts/api-compare/extract-ts-api.ts#extractSkeleton` (`:4243`):
   `if / else if / else if` chain — the faithful port of a `case` — emits one
   per arm.
 - `TryStatement` emits one `try`; a `catch (e) { if (e instanceof A) … else if
-  (e instanceof B) … }` chain emits one `if` per clause on top.
+(e instanceof B) … }` chain emits one `if` per clause on top.
 
 Two consequences, measured in
 `docs/infrastructure/arm-mismatch-noise-floor.md`:

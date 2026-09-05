@@ -5,7 +5,14 @@ updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
 packages: []
-deps: ["skeleton-emits-one-arm-per-when-elsif-and-rescue-clause", "skeleton-throw-token-carries-the-raised-class", "skeleton-short-circuit-operators-get-their-own-token", "arms-report-unions-same-file-helper-skeletons", "fold-skeleton-tokens-takes-an-idiom-lowering-table"]
+deps:
+  [
+    "skeleton-emits-one-arm-per-when-elsif-and-rescue-clause",
+    "skeleton-throw-token-carries-the-raised-class",
+    "skeleton-short-circuit-operators-get-their-own-token",
+    "arms-report-unions-same-file-helper-skeletons",
+    "fold-skeleton-tokens-takes-an-idiom-lowering-table",
+  ]
 deps-rfc: []
 est-loc: 120
 priority: null
