@@ -1,6 +1,6 @@
 ---
 title: "parity:api:extra scores the sanctioned <X>Type rename novel in the activemodel barrel"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: 7506
 claim: "2026-09-05T02:22:17Z"
 assignee: "flip-rack-deflater-onto-the-zlib-seam"
 blocked-by: null

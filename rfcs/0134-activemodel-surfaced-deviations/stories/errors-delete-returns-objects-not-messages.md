@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Errors#delete returns Error objects where Rails returns the deleted messages"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 7506
 claim: "2026-09-05T02:22:17Z"
 assignee: "flip-rack-deflater-onto-the-zlib-seam"
 blocked-by: null

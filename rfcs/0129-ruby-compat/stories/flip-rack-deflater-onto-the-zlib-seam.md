@@ -1,6 +1,6 @@
 ---
 title: "flip-rack-deflater-onto-the-zlib-seam"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: 7506
 claim: "2026-09-05T02:22:17Z"
 assignee: "flip-rack-deflater-onto-the-zlib-seam"
 blocked-by: null
