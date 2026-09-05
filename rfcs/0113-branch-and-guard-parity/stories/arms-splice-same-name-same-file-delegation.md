@@ -1,13 +1,13 @@
 ---
-title: "arms-splice-same-name-same-file-delegation"
+title: "The arms splice resolves a method delegating to a same-named same-file function"
 status: draft
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
-cluster: null
+cluster: arm-parity-tooling
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 90
 priority: null
 pr: null
 claim: null
