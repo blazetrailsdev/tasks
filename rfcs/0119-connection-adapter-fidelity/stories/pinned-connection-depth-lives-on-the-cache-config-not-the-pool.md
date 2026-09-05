@@ -1,7 +1,7 @@
 ---
 title: "pinned-connection-depth-lives-on-the-cache-config-not-the-pool"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

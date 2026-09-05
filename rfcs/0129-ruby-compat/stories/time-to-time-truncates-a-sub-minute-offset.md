@@ -1,6 +1,6 @@
 ---
 title: "Time#toTime truncates a sub-minute utc_offset through of2str"
-status: draft
+status: ready
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null

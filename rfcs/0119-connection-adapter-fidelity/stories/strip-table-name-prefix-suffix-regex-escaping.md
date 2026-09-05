@@ -1,7 +1,7 @@
 ---
 title: "Escape table_name_prefix/suffix in the two raw strip regexes"
-status: blocked
-updated: 2026-08-31
+status: closed
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
@@ -11,8 +11,8 @@ priority: null
 pr: null
 claim: "2026-08-31T12:34:13Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
-blocked-by: "Story premise is stale: Rails itself does NOT escape at the two named sites. AbstractSchemaStatements#strip_table_name_prefix_and_suffix (schema_statements.rb:1749-1753) builds /#{prefix}(.+)#{suffix}/ with no Regexp.escape, and trails' stripTableNamePrefixAndSuffix (connection-adapters/abstract/schema-statements.ts:1749) mirrors it line-for-line. The third site, TableDefinition#new_foreign_key_definition (schema_definitions.rb:575-581), is plain string concatenation in Rails and in trails (abstract/schema-definitions.ts newForeignKeyDefinition) — there is no regex left to escape. Only SchemaDumper#remove_prefix_and_suffix (schema_dumper.rb:366-373) escapes in Rails, and trails already escapes there. Adding escaping to the other two would be a deviation FROM Rails, not a convergence toward it. Needs a respec (upstream-bug story) before it can be worked."
-closed-reason: null
+blocked-by: null
+closed-reason: "Premise is false against origin/main and against vendor/rails: the story asks trails to add Regexp.escape at two sites where Rails itself does not escape, which would be a deviation FROM Rails, not a convergence. vendor/rails/.../abstract/schema_statements.rb:1749-1753 builds /#{prefix}(.+)#{suffix}/ with no Regexp.escape, and trails' stripTableNamePrefixAndSuffix (abstract/schema-statements.ts:1720-1726) mirrors it line-for-line. The second site, new_foreign_key_definition (schema_definitions.rb:575-581), is plain string concatenation on both sides — no regex to escape. Only SchemaDumper#remove_prefix_and_suffix escapes in Rails, and trails already escapes there. This was already recorded as the blocked-by reason on 2026-08-31; closing rather than leaving it parked. A genuine upstream-bug story about Rails' unescaped regex can be filed fresh."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "commit-db-transaction-should-hold-its-own-internal-execute"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

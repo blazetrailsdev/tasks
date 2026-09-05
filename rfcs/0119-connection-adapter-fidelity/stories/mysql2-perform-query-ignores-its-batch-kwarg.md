@@ -1,7 +1,7 @@
 ---
 title: "mysql2 performQuery ignores its batch kwarg; multi-statements are enabled for the connection's life instead"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

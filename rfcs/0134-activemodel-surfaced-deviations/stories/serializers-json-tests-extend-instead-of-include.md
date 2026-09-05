@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Serializers::JSON test models use extends, so the included hook never runs"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7527
+claim: "2026-09-05T18:26:52Z"
+assignee: "attribute-set-envelope-loses-unregistered-type-keys"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "ControllerRuntime#initialize does not seat db_runtime to nil"
-status: draft
+status: claimed
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T18:47:06Z"
+assignee: "controller-runtime-initialize-does-not-seat-db-runtime"
 blocked-by: null
 closed-reason: null
 ---

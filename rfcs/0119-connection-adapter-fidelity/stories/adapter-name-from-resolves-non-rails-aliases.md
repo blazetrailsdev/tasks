@@ -1,7 +1,7 @@
 ---
 title: "adapterNameFromConfig resolves non-Rails adapter aliases Rails never registers"
-status: draft
-updated: 2026-09-02
+status: claimed
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T18:47:06Z"
+assignee: "controller-runtime-initialize-does-not-seat-db-runtime"
 blocked-by: null
 closed-reason: null
 ---

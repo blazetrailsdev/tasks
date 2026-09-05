@@ -1,6 +1,6 @@
 ---
 title: "converge-adapter-args-url-parsing-onto-connection-url-resolver"
-status: draft
+status: ready
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

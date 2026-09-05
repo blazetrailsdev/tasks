@@ -1,7 +1,7 @@
 ---
 title: "statement-pool-cache-drops-the-process-pid-key"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

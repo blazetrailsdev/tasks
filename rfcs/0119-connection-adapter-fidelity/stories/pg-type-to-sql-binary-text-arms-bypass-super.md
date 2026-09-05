@@ -1,7 +1,7 @@
 ---
 title: "PG type_to_sql binary/text arms hardcode literals where Rails calls super(type)"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

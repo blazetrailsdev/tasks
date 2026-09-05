@@ -1,6 +1,6 @@
 ---
 title: "SchemaCache#dump_to inlines Rails' private open, skipping atomic_write and zipper.mtime = 0"
-status: draft
+status: ready
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

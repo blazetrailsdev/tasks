@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-native-types-and-instance-type-map-onto-adapter"
-status: draft
+status: ready
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

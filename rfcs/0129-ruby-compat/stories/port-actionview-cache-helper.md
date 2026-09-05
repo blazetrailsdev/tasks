@@ -1,6 +1,6 @@
 ---
 title: "port-actionview-cache-helper"
-status: draft
+status: ready
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null

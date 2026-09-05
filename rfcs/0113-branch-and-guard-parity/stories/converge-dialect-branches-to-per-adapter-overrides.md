@@ -1,7 +1,7 @@
 ---
 title: "Converge the typeRegistryKey dialect branches to per-adapter overrides and delete the getter"
-status: ready
-updated: 2026-08-31
+status: done
+updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 33
-pr: null
+pr: 7523
 claim: null
 assignee: null
 blocked-by: null

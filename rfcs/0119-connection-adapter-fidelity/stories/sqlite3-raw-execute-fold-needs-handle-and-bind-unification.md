@@ -1,6 +1,6 @@
 ---
 title: "Unify sqlite3's raw connection handle and driver binds so raw_execute can fold onto the abstract"
-status: draft
+status: done
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: 7522
 claim: null
 assignee: null
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "converge-connection-management-onto-executor-and-body-proxy"
-status: draft
+status: ready
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

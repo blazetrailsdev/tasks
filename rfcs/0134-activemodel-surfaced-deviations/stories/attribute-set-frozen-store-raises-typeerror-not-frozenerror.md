@@ -1,6 +1,6 @@
 ---
 title: "AttributeSet's frozen backing store raises TypeError where Ruby's frozen Hash raises FrozenError"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7525
+claim: "2026-09-05T18:06:48Z"
+assignee: "assertion-comparer-normalizes-snake-vs-camel-attribute-literals"
 blocked-by: null
 closed-reason: null
 ---

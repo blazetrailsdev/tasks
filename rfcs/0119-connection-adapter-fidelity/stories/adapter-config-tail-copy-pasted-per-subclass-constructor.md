@@ -1,7 +1,7 @@
 ---
 title: "The adapter config tail is copy-pasted into three subclass constructors"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

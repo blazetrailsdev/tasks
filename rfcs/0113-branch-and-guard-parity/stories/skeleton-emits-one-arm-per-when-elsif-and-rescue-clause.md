@@ -1,6 +1,6 @@
 ---
 title: "Skeleton emits one arm per when / elsif / rescue clause on both sides, not one per statement"
-status: draft
+status: in-progress
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 3
+pr: 7526
+claim: "2026-09-05T18:26:02Z"
+assignee: "arms-report-unions-same-file-helper-skeletons"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "PG quote splits the Numeric arm, invents an integer arm, and reorders"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: ["activerecord"]

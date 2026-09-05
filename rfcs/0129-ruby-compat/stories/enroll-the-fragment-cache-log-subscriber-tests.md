@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: 9
+priority: null
 pr: null
 claim: "2026-09-05T09:02:11Z"
 assignee: "from-database-binary-value-is-not-frozen"

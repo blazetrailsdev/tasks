@@ -1,7 +1,7 @@
 ---
 title: "AbstractAdapter's lock defaults to the monitor where Rails installs NullLock"
-status: draft
-updated: 2026-08-30
+status: blocked
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-05T18:26:52Z"
+assignee: "attribute-set-envelope-loses-unregistered-type-keys"
+blocked-by: "Converging the default to NullLock (abstract_adapter.rb:157) breaks a real trails correctness invariant that Rails gets for free from exclusive thread-leasing. Beyond the three abstract-adapter.lifecycle.trails.test.ts serialization cases named in the story, packages/activerecord/src/connection-adapters/postgresql-adapter.exec-query.trails.test.ts:322 'reads currval on the session that ran its own INSERT' fails: with the monitor gone, two concurrent execInsert calls on one adapter interleave their INSERT and their currval probe, so the second insert's id is read for the first. Rails' non-returning exec_insert (postgresql/database_statements.rb:45-61) issues those as two separate unlocked statements and is safe only because the connection is leased to one thread. Unblocking needs the pool to prevent concurrent entry on a leased connection — see synchronize-lock-barges-in-the-release-window and converge-acquire-connection-blocking-wait — not an adapter-level change."
 closed-reason: null
 ---
 

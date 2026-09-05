@@ -1,7 +1,7 @@
 ---
 title: "SqliteStatement gains close/closed? so StatementPool#dealloc is Rails' line (sqlite3_adapter.rb:97)"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

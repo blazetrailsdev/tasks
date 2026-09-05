@@ -1,7 +1,7 @@
 ---
 title: "composite-key-record-not-found-ids-do-not-render-as-ruby-join"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

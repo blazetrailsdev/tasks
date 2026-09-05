@@ -1,7 +1,7 @@
 ---
 title: "abstract columns() runs newColumnFromField concurrently where Ruby's map is sequential"
-status: draft
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7527
+claim: "2026-09-05T18:26:52Z"
+assignee: "attribute-set-envelope-loses-unregistered-type-keys"
 blocked-by: null
 closed-reason: null
 ---

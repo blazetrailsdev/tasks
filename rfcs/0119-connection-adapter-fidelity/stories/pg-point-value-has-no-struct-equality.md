@@ -1,7 +1,7 @@
 ---
 title: "PG PointValue lacks Struct#==, so an equal point always reports changed"
-status: draft
-updated: 2026-09-04
+status: ready
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "MySQL type_to_sql special-cases ten types Rails renders through super"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

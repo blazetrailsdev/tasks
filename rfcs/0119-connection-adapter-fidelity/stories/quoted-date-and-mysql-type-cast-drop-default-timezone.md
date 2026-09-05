@@ -1,7 +1,7 @@
 ---
 title: "quoted_date and MySQL type_cast drop Rails' default_timezone branch"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: ["activerecord"]

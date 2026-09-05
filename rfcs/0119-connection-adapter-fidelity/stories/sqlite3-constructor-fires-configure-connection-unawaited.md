@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-constructor-fires-configure-connection-unawaited"
-status: draft
-updated: 2026-08-31
+status: closed
+updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone on origin/main: the escape clause the story itself names has triggered. sqlite3-adapter-connects-eagerly-in-constructor landed as #7287, and the constructor no longer fires the un-awaited configure — `git grep 'void this.configureConnection'` over origin/main returns nothing anywhere in the repo, and sqlite3-adapter.ts:291 now only sets `this._asyncConnectPending = this.driverIsAsync()`. configureConnection is awaited on both connect paths: connectBang (sqlite3-adapter.ts:1705) and _doAsyncConnect (:1704-1706), the latter drained through completeAsyncConnect/ensureConnected (:1687-1699), so no promise is dropped and nothing can outlive its caller to reconnect a closed adapter."
 ---
 
 # The SQLite3 constructor fires configure_connection un-awaited, so a deferred query can resurrect a closed connection
