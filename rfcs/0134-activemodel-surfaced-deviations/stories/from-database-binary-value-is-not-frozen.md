@@ -1,18 +1,18 @@
 ---
 title: "from-database-binary-value-is-not-frozen"
-status: ready
+status: blocked
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: rails-deviation
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-05T09:02:11Z"
+assignee: "from-database-binary-value-is-not-frozen"
+blocked-by: "Premise is wrong on both sides. (1) Rails has no freeze: verified with MRI against vendor/rails that the frozen-ness comes from the sqlite3 gem, not Rails code — bare SQLite3::Database#execute returns frozen blob Strings (gem frozen: true), which become value_before_type_cast, and ActiveModel::Type::Binary#cast (activemodel/lib/active_model/type/binary.rb:20-27) returns that identical object. No .freeze exists in Attribute::FromDatabase (activemodel/lib/active_model/attribute.rb:173-195) or in Type::Binary. pg and mysql2 do not freeze their result strings, so this is adapter-dependent in Rails and freezing in FromDatabase#type_cast would be invented behavior at a non-Rails site, applied to every type rather than binary. (2) JS cannot express it anyway: Object.freeze(new Uint8Array(n)) with n>0 throws TypeError 'Cannot freeze array buffer views with elements', so a from-database binary value can only be made mutation-raising via a Proxy wrapper — invented surface. If this is still wanted, it should be respecced as an adapter-result-level story naming the driver behavior it mirrors."
 closed-reason: null
 ---
 

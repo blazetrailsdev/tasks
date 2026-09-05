@@ -1,6 +1,6 @@
 ---
 title: "ControllerRuntime writes camelCase payload keys and never ports log_process_action"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: 7509
+claim: "2026-09-05T03:42:13Z"
+assignee: "fast-string-to-time-construct-through-time-new"
 blocked-by: null
 closed-reason: null
 ---

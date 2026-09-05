@@ -1,6 +1,6 @@
 ---
 title: "Deploy trailmap: dokku app, storage mounts, SSO, loopback API, health"
-status: claimed
+status: done
 updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 4
-pr: null
+pr: 1
 claim: "2026-09-05T01:34:38Z"
 assignee: "deploy-trailmap-to-dokku"
 blocked-by: null

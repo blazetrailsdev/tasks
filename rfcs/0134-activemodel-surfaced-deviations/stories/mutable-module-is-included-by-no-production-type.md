@@ -1,17 +1,17 @@
 ---
 title: "ActiveModel::Type::Helpers::Mutable is included by no production type; Json and Serialized hand-roll its members"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: invented-arm
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7506
+claim: "2026-09-05T02:22:17Z"
+assignee: "flip-rack-deflater-onto-the-zlib-seam"
 blocked-by: null
 closed-reason: null
 ---

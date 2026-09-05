@@ -1,7 +1,7 @@
 ---
 title: "move-remaining-monotonic-seats-onto-process-clock-gettime"
-status: in-progress
-updated: 2026-09-04
+status: done
+updated: 2026-09-05
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
