@@ -22,9 +22,10 @@ closed-reason: null
 (`packages/rack-test/src/cookie-jar.ts`) and credited two of the RFC's three
 cookie spec files — `spec/rack/test/cookie_jar_spec.rb` (10) and
 `spec/rack/test/cookie_object_spec.rb` (9). The third,
-`vendor/rack-test/spec/rack/test/cookie_spec.rb` (33 cases), was left out
-because every case but a handful drives the cookie jar through a live session
-against the spec app:
+`vendor/rack-test/spec/rack/test/cookie_spec.rb` (33 cases), is only partly
+covered: `packages/rack-test/src/cookie.test.ts` credits the 6 cases that are
+pure `Cookie` / `CookieJar` unit tests. The other 27 drive the cookie jar
+through a live session against the spec app:
 
 - `get` / `post` / `request` / `follow_redirect!` / `with_session` /
   `clear_cookies` / `set_cookie` / `last_request` / `rack_mock_session` all come
@@ -45,9 +46,9 @@ against the spec app:
 
 - [ ] A trails port of `vendor/rack-test/spec/fixtures/fake_app.rb` lands under
       `packages/rack-test/src/test-helpers/`, mirroring the Ruby route-by-route.
-- [ ] `packages/rack-test/src/cookie.test.ts` credits all 33 cases of
-      `spec/rack/test/cookie_spec.rb` under `parity:test`, with the Rails test
-      names verbatim.
+- [ ] `packages/rack-test/src/cookie.test.ts` credits the remaining 27 cases of
+      `spec/rack/test/cookie_spec.rb` under `parity:test` (33 total), with the
+      Rails test names verbatim.
 - [ ] `pnpm parity:test` delta non-negative; the assertion-kind ratchet stays green.
 - [ ] If `Rack::Test::Methods` is still unported when this is picked up, the port
       may drive `Rack::Test::Session` directly rather than blocking on it — but it
