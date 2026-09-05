@@ -39,7 +39,7 @@ answers a `Temporal.PlainDate`, not a `Date`, so neither `Date#to_time`
 PR #7528 ported the method with both lines spelled around that:
 
 - `.to_time` became an inline `Time.local(plainDate.year, plainDate.month,
-  plainDate.day)` — `Date#to_time`'s own body (`date.ts:5483-5490`, a local-zone
+plainDate.day)` — `Date#to_time`'s own body (`date.ts:5483-5490`, a local-zone
   `PlainDateTime`) copied to the call site, plus a `plainDate` temporary Ruby
   does not have.
 - `.yday` became `Temporal.PlainDate#dayOfYear`.

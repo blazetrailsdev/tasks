@@ -52,7 +52,7 @@ Two separate divergences:
   both. `ThreadLoadInterlockAwareMonitor` does not exist in trails at all —
   `packages/activesupport/src/concurrency/` has only
   `load-interlock-aware-monitor.ts` (`export class LoadInterlockAwareMonitor
-  extends Monitor {}`) and `null-lock.ts`. The Rails counterpart is
+extends Monitor {}`) and `null-lock.ts`. The Rails counterpart is
   `activesupport/lib/active_support/concurrency/load_interlock_aware_monitor.rb`,
   where `ThreadLoadInterlockAwareMonitor` wraps the monitor in
   `ActiveSupport::Dependencies.interlock.permit_concurrent_loads`.
