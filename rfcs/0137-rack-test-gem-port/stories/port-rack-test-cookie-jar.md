@@ -1,7 +1,7 @@
 ---
 title: "Port Rack::Test::Cookie and Rack::Test::CookieJar"
-status: ready
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-04
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: 7499
+claim: "2026-09-04T23:22:55Z"
+assignee: "port-rack-test-cookie-jar"
 blocked-by: null
 closed-reason: null
 ---

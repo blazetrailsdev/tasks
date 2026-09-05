@@ -1,6 +1,6 @@
 ---
 title: "Repoint the five stale activesupport/src/include.ts path references at ruby-compat"
-status: ready
+status: in-progress
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 27
-pr: null
-claim: null
-assignee: null
+pr: 7501
+claim: "2026-09-04T23:26:00Z"
+assignee: "io-write-must-transcode-to-utf8-in-text-mode"
 blocked-by: null
 closed-reason: null
 ---

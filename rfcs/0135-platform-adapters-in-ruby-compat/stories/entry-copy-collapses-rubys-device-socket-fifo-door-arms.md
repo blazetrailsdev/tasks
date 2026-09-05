@@ -1,6 +1,6 @@
 ---
 title: "Entry_#copy's chardev/blockdev/socket/pipe/door arms collapse into one unknown-file-type raise — FsStatResult has no predicate for them"
-status: ready
+status: in-progress
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 32
-pr: null
-claim: null
-assignee: null
+pr: 7498
+claim: "2026-09-04T23:14:52Z"
+assignee: "delete-the-degenerate-fs-async-accessors"
 blocked-by: null
 closed-reason: null
 ---

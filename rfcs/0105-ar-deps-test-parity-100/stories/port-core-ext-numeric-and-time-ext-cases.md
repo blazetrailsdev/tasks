@@ -1,7 +1,7 @@
 ---
 title: "Port core_ext/numeric_ext_test.rb and time_ext_test.rb (26)"
-status: ready
-updated: 2026-08-13
+status: in-progress
+updated: 2026-09-04
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7500
+claim: "2026-09-04T23:24:20Z"
+assignee: "port-core-ext-numeric-and-time-ext-cases"
 blocked-by: null
 closed-reason: null
 ---
