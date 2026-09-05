@@ -3,8 +3,8 @@ title: "AttributeSet's assertNotFrozen helper guards three writers Rails does no
 status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: invented-arm
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 90

@@ -3,8 +3,8 @@ title: "parity:api:extra scores the sanctioned <X>Type rename novel in the activ
 status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: receipt-hygiene
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 80

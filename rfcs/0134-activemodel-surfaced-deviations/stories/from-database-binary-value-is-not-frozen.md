@@ -3,11 +3,11 @@ title: "from-database-binary-value-is-not-frozen"
 status: blocked
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: rails-deviation
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: "2026-09-05T09:02:11Z"

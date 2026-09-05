@@ -3,8 +3,8 @@ title: "NumericalityValidator#prepare_value_for_validation reads _read_attribute
 status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: rails-deviation
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 40

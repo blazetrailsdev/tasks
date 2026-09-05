@@ -3,8 +3,8 @@ title: "ActiveModel::Type::Helpers::Mutable is included by no production type; J
 status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: invented-arm
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 120

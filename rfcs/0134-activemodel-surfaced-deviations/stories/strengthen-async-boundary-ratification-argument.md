@@ -3,8 +3,8 @@ title: "Strengthen the serialization async-boundary ratification with the encode
 status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: receipt-hygiene
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 40

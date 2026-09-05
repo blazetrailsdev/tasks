@@ -3,8 +3,8 @@ title: "activemodel: Errors#include? compares the attribute directly instead of 
 status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: rails-deviation
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 20

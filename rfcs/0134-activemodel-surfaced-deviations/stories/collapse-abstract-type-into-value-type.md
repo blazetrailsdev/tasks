@@ -3,11 +3,11 @@ title: "collapse-abstract-type-into-value-type"
 status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: rails-deviation
+packages: ["activemodel", "activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 400
 priority: null
 pr: 7507
 claim: "2026-09-05T02:42:13Z"

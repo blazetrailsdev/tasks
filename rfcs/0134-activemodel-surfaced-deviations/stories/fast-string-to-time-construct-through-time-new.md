@@ -3,11 +3,11 @@ title: "fast-string-to-time-construct-through-time-new"
 status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: rails-deviation
+packages: ["activemodel", "date"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: 7509
 claim: "2026-09-05T03:42:13Z"
