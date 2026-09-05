@@ -1,7 +1,7 @@
 ---
 title: "buffer-from-wrappers-obscure-the-rails-bodies-at-crypto-call-sites"
-status: in-progress
-updated: 2026-09-04
+status: done
+updated: 2026-09-05
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
