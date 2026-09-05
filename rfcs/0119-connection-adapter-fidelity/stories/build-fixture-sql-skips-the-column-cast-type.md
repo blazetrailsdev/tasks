@@ -30,7 +30,7 @@ The port skips the cast type entirely and quotes the raw value
 (`packages/activerecord/src/connection-adapters/abstract/database-statements.ts:1240`):
 
 ```ts
-arelSql(this.quote(withYamlFallback(fixture[name])))
+arelSql(this.quote(withYamlFallback(fixture[name])));
 ```
 
 so `lookup_cast_type_from_column` is never called and `type.serialize` never

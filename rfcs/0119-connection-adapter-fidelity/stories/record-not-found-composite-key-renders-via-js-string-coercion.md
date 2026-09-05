@@ -1,5 +1,5 @@
 ---
-title: "RecordNotFound renders a composite key as shop_id,id where Ruby renders [\"shop_id\", \"id\"]"
+title: 'RecordNotFound renders a composite key as shop_id,id where Ruby renders ["shop_id", "id"]'
 status: draft
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"

@@ -62,7 +62,7 @@ than on its own — removing it in isolation just reds the same test again.
 - [ ] `schemaCache` reads `connectionPool.call(this).schemaCache` with no
       `_adapter` arm, matching `connection_handling.rb:368-370`.
 - [ ] `core.trails.test.ts > insertAll resolves through the assigned adapter
-      without a pool` is either converged onto a pooled model or removed with
+    without a pool` is either converged onto a pooled model or removed with
       the fixture pattern it exercises.
 - [ ] The sibling `_adapter` arms on `connection()` and `adapterClassSync()`
       are addressed by the same retirement, so no row of the register is left

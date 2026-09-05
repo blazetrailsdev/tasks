@@ -24,9 +24,9 @@ clean tree and re-running — the failures are identical, so they predate #7532
 and are unrelated to it):
 
 - `packages/activerecord/src/schema-dumper.test.ts` — `SchemaDumperTest > schema
-  dumps check constraints`
+dumps check constraints`
 - `packages/activerecord/src/migration/check-constraint.test.ts` — `Migration >
-  CheckConstraintTest > check constraints`
+CheckConstraintTest > check constraints`
 
 Both fail the same way:
 
