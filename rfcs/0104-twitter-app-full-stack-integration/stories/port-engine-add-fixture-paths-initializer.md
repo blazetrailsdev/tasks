@@ -1,6 +1,6 @@
 ---
 title: "Port Engine's add_fixture_paths initializer and fixtures_in_root_and_not_in_vendor_or_dot_dir?"
-status: ready
+status: blocked
 updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 130
 priority: 20
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-04T20:50:46Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
+blocked-by: "Blocked on ActiveRecord::TestFixtures: the initializer's body needs the :active_record_fixtures load hook and a fixture_paths class_attribute, both of which come from ActiveSupport.run_load_hooks(:active_record_fixtures, self) inside test_fixtures.rb:20-40's included block. trails has no TestFixtures concern — packages/activerecord/src/test-fixtures.ts is a vitest fixtures helper, not a port of that module — so there is nothing for on_load(:active_record_fixtures) to fire on and nothing that owns fixture_paths (git grep 'fixture_paths|fixturePaths|active_record_fixtures' over packages/ returns nothing). Port ActiveRecord::TestFixtures first; Engine#fixtures_in_root_and_not_in_vendor_or_dot_dir? (engine.rb:741-745) and the add_fixture_paths initializer (engine.rb:629-636) are then a small follow-on."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "globalid's TrailtieApp declares a config property shape trailties' Configuration does not have"
-status: claimed
+status: done
 updated: 2026-09-04
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 20
-pr: null
+pr: 7488
 claim: "2026-09-04T17:50:45Z"
 assignee: "type-registry-key-replaces-per-adapter-overrides"
 blocked-by: null

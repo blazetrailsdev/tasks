@@ -1,13 +1,13 @@
 ---
 title: "type-name-property-registry-key-burndown"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: receipt-hygiene
+packages: ["activemodel", "activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 350
 priority: null
 pr: null
 claim: null

@@ -1,7 +1,7 @@
 ---
 title: "railtie-configuration-options-not-shared"
-status: ready
-updated: 2026-09-04
+status: done
+updated: 2026-09-05
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 20
-pr: null
-claim: null
-assignee: null
+pr: 7413
+claim: "2026-09-05T00:22:11Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

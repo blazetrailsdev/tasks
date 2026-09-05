@@ -1,7 +1,7 @@
 ---
 title: "Mutable#changed_in_place? re-serializes raw_old_value, masking a PG jsonb pre-parse upstream"
-status: in-progress
-updated: 2026-09-04
+status: done
+updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation
 packages:

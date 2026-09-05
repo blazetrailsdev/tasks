@@ -1,6 +1,6 @@
 ---
 title: "Move fetchTypeMetadata and quotedScope off postgresql-adapter.ts into their Rails file, retiring newColumnFromField's receiver retype"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

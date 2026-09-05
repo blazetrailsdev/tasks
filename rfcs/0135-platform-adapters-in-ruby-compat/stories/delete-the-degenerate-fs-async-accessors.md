@@ -1,7 +1,7 @@
 ---
 title: "getFsAsync/getPathAsync and their activesupport priming seat are deleted once the async bootstrap is gone"
-status: ready
-updated: 2026-09-04
+status: done
+updated: 2026-09-05
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: 7498
+claim: "2026-09-04T23:14:52Z"
+assignee: "delete-the-degenerate-fs-async-accessors"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,17 +1,17 @@
 ---
 title: "BigDecimal#toI answers 0 for NaN/Infinity where MRI raises FloatDomainError"
-status: draft
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: rails-deviation
+packages: ["activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7505
+claim: "2026-09-05T02:02:14Z"
+assignee: "port-zlib-gzipreader-open-for-schema-cache-read"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "hwia-dig-array-arm-rejects-non-integer-index"
-status: ready
-updated: 2026-09-04
+status: done
+updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 11
-pr: null
-claim: null
-assignee: null
+pr: 7501
+claim: "2026-09-04T23:26:00Z"
+assignee: "io-write-must-transcode-to-utf8-in-text-mode"
 blocked-by: null
 closed-reason: null
 ---

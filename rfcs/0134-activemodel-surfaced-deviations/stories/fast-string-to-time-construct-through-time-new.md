@@ -1,17 +1,17 @@
 ---
 title: "fast-string-to-time-construct-through-time-new"
-status: draft
-updated: 2026-09-02
+status: in-progress
+updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: rails-deviation
+packages: ["activemodel", "date"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7509
+claim: "2026-09-05T03:42:13Z"
+assignee: "fast-string-to-time-construct-through-time-new"
 blocked-by: null
 closed-reason: null
 ---

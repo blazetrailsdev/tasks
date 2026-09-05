@@ -1,6 +1,6 @@
 ---
 title: "ActionDispatch::Http::UploadedFile holds a path string where upload.rb:31 holds a Tempfile"
-status: draft
+status: ready
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

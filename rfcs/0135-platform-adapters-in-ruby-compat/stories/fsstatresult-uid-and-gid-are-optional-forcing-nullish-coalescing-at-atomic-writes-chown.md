@@ -1,17 +1,17 @@
 ---
 title: "FsStatResult.uid/gid are optional, forcing ?? null at atomic_write's chown where atomic.rb:41 passes the readers straight through"
-status: draft
-updated: 2026-09-04
+status: done
+updated: 2026-09-05
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 31
+pr: 7498
+claim: "2026-09-04T23:14:52Z"
+assignee: "delete-the-degenerate-fs-async-accessors"
 blocked-by: null
 closed-reason: null
 ---

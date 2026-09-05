@@ -1,6 +1,6 @@
 ---
 title: "Converge MimeType#symbol onto the colon convention so start_processing's Symbol arm fires"
-status: claimed
+status: done
 updated: 2026-09-04
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 19
-pr: null
+pr: 7487
 claim: "2026-09-04T17:20:47Z"
 assignee: "sync-reads-of-async-reflection-retire-with-rfc-0073"
 blocked-by: null

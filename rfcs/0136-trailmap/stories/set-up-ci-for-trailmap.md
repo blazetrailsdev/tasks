@@ -1,17 +1,17 @@
 ---
 title: "CI for trailmap: typecheck, tests, and a cold-start boot smoke test"
-status: draft
-updated: 2026-09-03
+status: done
+updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 5
+pr: 1
+claim: "2026-09-05T01:34:38Z"
+assignee: "deploy-trailmap-to-dokku"
 blocked-by: null
 closed-reason: null
 ---

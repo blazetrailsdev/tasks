@@ -1,7 +1,7 @@
 ---
 title: "duration-application-seam-must-accept-a-time-receiver"
-status: ready
-updated: 2026-08-31
+status: done
+updated: 2026-09-04
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 15
-pr: null
-claim: null
-assignee: null
+pr: 7493
+claim: "2026-09-04T19:50:50Z"
+assignee: "type-registry-key-replaces-per-adapter-overrides"
 blocked-by: null
 closed-reason: null
 ---

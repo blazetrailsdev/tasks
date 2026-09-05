@@ -1,17 +1,17 @@
 ---
 title: "nullable-attribute-type-assertions-outside-attribute"
-status: draft
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: guard-parity
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7507
+claim: "2026-09-05T02:42:13Z"
+assignee: "collapse-abstract-type-into-value-type"
 blocked-by: null
 closed-reason: null
 ---

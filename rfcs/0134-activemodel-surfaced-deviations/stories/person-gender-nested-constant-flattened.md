@@ -1,17 +1,17 @@
 ---
 title: "Person::Gender ports flat, losing the qualified name Translation keys off"
-status: draft
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: test-placement
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7508
+claim: "2026-09-05T03:22:11Z"
+assignee: "errors-include-bypasses-error-match"
 blocked-by: null
 closed-reason: null
 ---

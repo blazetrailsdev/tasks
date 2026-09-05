@@ -1,6 +1,6 @@
 ---
 title: "no-node-builtins declines the fs/path members whose Ruby seat reorders or drops an argument"
-status: draft
+status: ready
 updated: 2026-09-04
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 38
 pr: null
 claim: null
 assignee: null

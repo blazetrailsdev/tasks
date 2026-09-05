@@ -1,7 +1,7 @@
 ---
 title: "Port Rack::Test::Cookie and Rack::Test::CookieJar"
-status: ready
-updated: 2026-09-03
+status: done
+updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: 7499
+claim: "2026-09-04T23:22:55Z"
+assignee: "port-rack-test-cookie-jar"
 blocked-by: null
 closed-reason: null
 ---
@@ -46,7 +46,9 @@ DEFAULT_HOST)` (`:137`), `initialize_copy` (`:143`), `[]` (`:150`), `[]=`
 Both are `# :nodoc:` in Ruby, so `blazetrails/rails-private-jsdoc` will want
 `@internal` on them — autofixable.
 
-Tests, **52 cases** across three files:
+Tests, **52 cases** across three files — but only the two cookie-jar unit specs
+plus the pure-`Cookie`/`CookieJar` slice of `cookie_spec.rb` are in scope here;
+see the acceptance criteria:
 
 | Ruby                                   | TS                          | cases |
 | -------------------------------------- | --------------------------- | ----- |
@@ -70,8 +72,13 @@ which owns that change.
 
 - [ ] `packages/rack-test/src/cookie-jar.ts` ports both classes member for member in
       Rails source order, with the Rails names and parameter names.
-- [ ] The three test files credit all 52 cases under `parity:test`; no test name is
-      reworded.
+- [ ] `cookie_jar_spec.rb` (10) and `cookie_object_spec.rb` (9) credit in full
+      under `parity:test`, as do the cases of `cookie_spec.rb` that are pure
+      `Cookie` / `CookieJar` unit tests; no test name is reworded.
+- [ ] The `cookie_spec.rb` cases that drive the jar through `Rack::Test::Methods`
+      against `spec/fixtures/fake_app.rb` are NOT in scope — neither has a trails
+      counterpart, and both belong to `port-rack-test-methods` and
+      `port-rack-test-cookie-spec-session-cases`.
 - [ ] `packages/actionpack/src/action-dispatch/testing/integration.ts` is unchanged.
 - [ ] `pnpm parity:api` / `parity:test` deltas non-negative; both call gates green
       with no new baseline rows.

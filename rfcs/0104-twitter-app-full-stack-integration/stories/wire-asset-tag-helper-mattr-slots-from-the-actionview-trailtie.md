@@ -1,7 +1,7 @@
 ---
 title: "Wire AssetTagHelper's apply_stylesheet_media_default and preload_links_header from the ActionView trailtie"
-status: ready
-updated: 2026-09-04
+status: in-progress
+updated: 2026-09-05
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: null
-claim: null
-assignee: null
+pr: 7503
+claim: "2026-09-05T01:22:11Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

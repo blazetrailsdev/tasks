@@ -1,7 +1,7 @@
 ---
 title: "Remove the invented _translateException helper; route adapters through translateExceptionClass"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 23
-pr: null
-claim: null
-assignee: null
+pr: 7504
+claim: "2026-09-05T01:42:09Z"
+assignee: "type-registry-key-replaces-per-adapter-overrides"
 blocked-by: null
 closed-reason: null
 ---

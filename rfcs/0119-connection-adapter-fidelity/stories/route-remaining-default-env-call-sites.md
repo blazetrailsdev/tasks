@@ -1,6 +1,6 @@
 ---
 title: "route-remaining-default-env-call-sites"
-status: in-progress
+status: done
 updated: 2026-09-04
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

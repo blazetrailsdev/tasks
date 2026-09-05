@@ -1,7 +1,7 @@
 ---
 title: "Port Engine's add_mailer_preview_paths and restore add_view_paths' action_mailer arm"
-status: ready
-updated: 2026-09-04
+status: blocked
+updated: 2026-09-05
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: 20
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-05T00:22:11Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
+blocked-by: "No @blazetrails/actionmailer package and no :action_mailer load hook exist yet; both the add_mailer_preview_paths initializer (engine.rb:622-627) and the dropped add_view_paths on_load(:action_mailer) arm (engine.rb:614-620) are unwritable until ActionMailer lands."
 closed-reason: null
 ---
 
