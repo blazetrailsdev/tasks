@@ -1,6 +1,6 @@
 ---
 title: "Tempfile creates at the default umask and chmods to 0600 where tempfile.rb:158 passes perm: to open"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

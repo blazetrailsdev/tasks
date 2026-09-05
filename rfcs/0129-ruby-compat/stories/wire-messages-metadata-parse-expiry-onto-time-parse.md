@@ -1,6 +1,6 @@
 ---
 title: "wire-messages-metadata-parse-expiry-onto-time-parse"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 7524
+claim: "2026-09-05T17:26:48Z"
+assignee: "wire-messages-metadata-parse-expiry-onto-time-parse"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "widen-rack-response-header-type-to-allow-arrays"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 18
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T17:58:56Z"
+assignee: "port-rack-test-methods"
 blocked-by: null
 closed-reason: null
 ---

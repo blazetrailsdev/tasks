@@ -1,7 +1,7 @@
 ---
 title: "Port Rack::Test::Methods"
-status: ready
-updated: 2026-09-03
+status: claimed
+updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T17:58:56Z"
+assignee: "port-rack-test-methods"
 blocked-by: null
 closed-reason: null
 ---

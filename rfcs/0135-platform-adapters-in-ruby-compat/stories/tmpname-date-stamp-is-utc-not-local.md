@@ -1,6 +1,6 @@
 ---
 title: "Dir::Tmpname.create's date stamp is UTC where tmpdir.rb:153 uses Time.now local time"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

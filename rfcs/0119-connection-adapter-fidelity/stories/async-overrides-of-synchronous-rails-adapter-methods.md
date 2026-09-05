@@ -1,6 +1,6 @@
 ---
 title: "async-overrides-of-synchronous-rails-adapter-methods"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7522
 claim: "2026-09-05T16:46:45Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null

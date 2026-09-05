@@ -1,6 +1,6 @@
 ---
 title: "Split validation: syntactic stays with the content, semantic moves to the models"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
