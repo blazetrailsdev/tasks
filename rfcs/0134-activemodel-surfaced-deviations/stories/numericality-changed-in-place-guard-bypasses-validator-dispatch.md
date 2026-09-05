@@ -1,6 +1,6 @@
 ---
 title: "prepare_value_for_validation calls record_attribute_changed_in_place? as a module function, not through the validator"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 7509
 claim: "2026-09-05T03:42:13Z"
 assignee: "fast-string-to-time-construct-through-time-new"
 blocked-by: null

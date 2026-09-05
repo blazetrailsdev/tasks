@@ -1,6 +1,6 @@
 ---
 title: "The rest of the activemodel suite still redeclares Rails test models inline"
-status: in-progress
+status: ready
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 7508
-claim: "2026-09-05T03:22:11Z"
-assignee: "errors-include-bypasses-error-match"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "view_runtime misses the template/partial render deferred to renderAsync"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 7
-pr: null
+pr: 7509
 claim: "2026-09-05T03:42:13Z"
 assignee: "fast-string-to-time-construct-through-time-new"
 blocked-by: null
