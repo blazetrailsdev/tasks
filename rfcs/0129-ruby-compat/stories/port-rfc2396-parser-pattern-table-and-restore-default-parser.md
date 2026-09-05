@@ -1,6 +1,6 @@
 ---
 title: "Port RFC2396_Parser's pattern/regexp table so URI::Generic's parser default is DEFAULT_PARSER"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 14
-pr: null
-claim: null
-assignee: null
+pr: 7520
+claim: "2026-09-05T14:22:13Z"
+assignee: "type-registry-key-replaces-per-adapter-overrides"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,14 +1,14 @@
 ---
 title: "Point /graphs/velocity at the events table instead of the git log"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
 deps: ["serve-the-read-verbs-as-json"]
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 14
 pr: null
 claim: null
 assignee: null

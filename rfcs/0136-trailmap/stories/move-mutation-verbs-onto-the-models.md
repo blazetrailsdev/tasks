@@ -1,14 +1,14 @@
 ---
 title: "Move the mutation verbs off verbs.ts and onto the models"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
 deps: ["move-task-models-into-trailmap"]
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

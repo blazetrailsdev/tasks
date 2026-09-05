@@ -1,14 +1,14 @@
 ---
 title: "Split validation: syntactic stays with the content, semantic moves to the models"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
 deps: ["move-task-models-into-trailmap"]
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

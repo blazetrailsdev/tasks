@@ -1,7 +1,7 @@
 ---
 title: "Move tasks.db out of the git common dir into trailmap's storage"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
@@ -9,7 +9,7 @@ deps:
   ["move-task-models-into-trailmap", "deploy-trailmap-to-dokku", "move-the-tasks-cli-into-trailmap"]
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

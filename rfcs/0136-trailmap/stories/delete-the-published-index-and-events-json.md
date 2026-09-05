@@ -1,14 +1,14 @@
 ---
 title: "Delete index.json, events.json and publishReadModels"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
 deps: ["retire-the-go-read-model"]
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null

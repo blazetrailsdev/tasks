@@ -1,14 +1,14 @@
 ---
 title: "Move tasks new and ingest into the app"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
 deps: ["move-the-tasks-cli-into-trailmap"]
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

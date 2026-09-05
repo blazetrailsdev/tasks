@@ -1,6 +1,6 @@
 ---
 title: "NumericalityValidator's COMPARE_CHECKS arm compares raw operands instead of sending <=>"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation

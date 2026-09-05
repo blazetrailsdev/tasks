@@ -1,14 +1,14 @@
 ---
 title: "Server-render /rfcs and /backlog, replacing the JS shells"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
 deps: ["render-the-rfc-and-story-show-pages"]
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 16
 pr: null
 claim: null
 assignee: null

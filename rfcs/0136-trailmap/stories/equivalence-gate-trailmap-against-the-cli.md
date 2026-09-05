@@ -1,14 +1,14 @@
 ---
 title: "Gate trailmap's ready queue against the CLI's, byte for byte"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
 deps: ["move-ranking-onto-story-scopes"]
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

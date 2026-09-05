@@ -1,7 +1,7 @@
 ---
 title: "Converge Time.at's declared parameter onto MRI's VALUE so coerced callers drop the cast"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 29
-pr: null
-claim: null
-assignee: null
+pr: 7519
+claim: "2026-09-05T14:02:10Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

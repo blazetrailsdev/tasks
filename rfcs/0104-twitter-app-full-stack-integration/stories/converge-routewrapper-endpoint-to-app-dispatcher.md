@@ -1,7 +1,7 @@
 ---
 title: "Port RouteWrapper#endpoint's app.dispatcher? branch and rack_app"
-status: ready
-updated: 2026-09-04
+status: in-progress
+updated: 2026-09-05
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: 7520
+claim: "2026-09-05T14:22:13Z"
+assignee: "type-registry-key-replaces-per-adapter-overrides"
 blocked-by: null
 closed-reason: null
 ---

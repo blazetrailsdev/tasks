@@ -1,7 +1,7 @@
 ---
 title: "Port Rack::Test::Session's redirect following, cookie mutators and state restore"
-status: ready
-updated: 2026-09-03
+status: in-progress
+updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["port-rack-test-session", "port-uri-for-parse-merge-and-scheme-classes"]
 deps-rfc: []
 est-loc: 250
 priority: 9
-pr: null
-claim: null
-assignee: null
+pr: 7519
+claim: "2026-09-05T14:02:10Z"
+assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null
 closed-reason: null
 ---

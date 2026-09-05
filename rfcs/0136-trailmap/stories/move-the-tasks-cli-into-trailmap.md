@@ -1,14 +1,14 @@
 ---
 title: "Move the tasks CLI into trailmap and make it an HTTP client"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
 deps: ["serve-the-read-verbs-as-json", "serve-the-mutation-verbs-as-json"]
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null
