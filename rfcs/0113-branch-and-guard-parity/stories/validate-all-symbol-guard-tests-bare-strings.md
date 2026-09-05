@@ -51,7 +51,7 @@ guard is spelled differently from Rails' and nothing measures it.
 ## Acceptance criteria
 
 - [ ] The guard reads `filters.every((arg) => typeof arg === "string" &&
-    arg.startsWith(":"))`, the JS reading of `args.all?(Symbol)`
+  arg.startsWith(":"))`, the JS reading of `args.all?(Symbol)`
       (validations.rb:163).
 - [ ] `validate(() => {}, { presence: true })` still does NOT raise and
       `validate(":title", { presence: true })` still raises the
