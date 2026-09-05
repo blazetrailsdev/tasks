@@ -1,6 +1,6 @@
 ---
 title: "Percentage converter invents a format fallback; currency converter inlines i18n_opts"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: null

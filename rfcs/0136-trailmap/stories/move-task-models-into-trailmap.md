@@ -1,6 +1,6 @@
 ---
 title: "Move the ActiveRecord models and migrations into trailmap"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null

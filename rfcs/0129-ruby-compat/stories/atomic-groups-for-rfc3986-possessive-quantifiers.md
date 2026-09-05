@@ -1,6 +1,6 @@
 ---
 title: "Restore RFC3986_Parser's possessive quantifiers as JS atomic groups"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null

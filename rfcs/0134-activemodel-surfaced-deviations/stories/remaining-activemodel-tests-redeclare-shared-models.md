@@ -1,6 +1,6 @@
 ---
 title: "The rest of the activemodel suite still redeclares Rails test models inline"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: test-placement

@@ -1,6 +1,6 @@
 ---
 title: "converge-rack-test-session-off-whatwg-url"
-status: draft
+status: done
 updated: 2026-09-05
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 7515
 claim: null
 assignee: null
 blocked-by: null

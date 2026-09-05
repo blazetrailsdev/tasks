@@ -1,6 +1,6 @@
 ---
 title: "time-ext.ts holds second bodies for beginning_of_week/end_of_week/all_week alongside the ported DateAndTime::Calculations ones"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: null

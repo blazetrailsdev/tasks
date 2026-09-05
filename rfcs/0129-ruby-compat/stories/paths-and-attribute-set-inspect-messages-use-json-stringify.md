@@ -1,6 +1,6 @@
 ---
 title: "Ported inspect messages spell f.inspect as JSON.stringify instead of ruby-compat's rbInspect"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null

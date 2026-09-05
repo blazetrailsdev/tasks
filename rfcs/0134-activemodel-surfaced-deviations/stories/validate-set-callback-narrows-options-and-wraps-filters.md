@@ -1,6 +1,6 @@
 ---
 title: "validate-set-callback-narrows-options-and-wraps-filters"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: rails-deviation

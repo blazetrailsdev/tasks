@@ -1,6 +1,6 @@
 ---
 title: "Remove the invented _translateException helper; route adapters through translateExceptionClass"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "File.fnmatch advances by code point, as MRI's Inc/rb_enc_mbclen does"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
