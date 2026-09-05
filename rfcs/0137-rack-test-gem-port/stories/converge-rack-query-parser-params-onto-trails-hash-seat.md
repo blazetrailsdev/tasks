@@ -40,8 +40,8 @@ sites had to be patched around it:
   (`query_parser.rb:184`). It is a bare statement, so it can carry no receipt
   tag, and it is the only un-receipted invented line in that file.
 - `packages/rack-test/src/utils.ts` carries `isHash` (`@noRailsEquivalent
-  PERMANENT`), an invented predicate spelling `isPlainObject(v) || v instanceof
-  Params`, used at the six `when Hash` arms ported from
+PERMANENT`), an invented predicate spelling `isPlainObject(v) || v instanceof
+Params`, used at the six `when Hash` arms ported from
   `vendor/rack-test/lib/rack/test/utils.rb`.
 - `packages/actionpack/src/action-dispatch/request/utils.ts`'s `normalize` has a
   `!(params instanceof Params)` clause bolted onto its prototype check, standing
