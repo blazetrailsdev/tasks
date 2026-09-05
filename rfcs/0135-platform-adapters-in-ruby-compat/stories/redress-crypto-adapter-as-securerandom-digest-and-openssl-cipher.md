@@ -1,7 +1,7 @@
 ---
 title: "redress-crypto-adapter-as-securerandom-digest-and-openssl-cipher"
-status: in-progress
-updated: 2026-09-04
+status: done
+updated: 2026-09-05
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
