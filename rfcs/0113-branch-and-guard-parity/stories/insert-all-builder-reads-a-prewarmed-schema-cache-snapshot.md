@@ -1,6 +1,6 @@
 ---
 title: "InsertAll::Builder reads a prewarmed schema-cache snapshot instead of the cache at Rails' call sites"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 30
-pr: null
+pr: 7535
 claim: "2026-09-05T20:51:57Z"
 assignee: "skeleton-throw-token-carries-the-raised-class"
 blocked-by: null

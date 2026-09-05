@@ -1,6 +1,6 @@
 ---
 title: "lookup_cast_type still misses types outside load_additional_types' eager set"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T21:46:49Z"
+assignee: "commit-db-transaction-should-hold-its-own-internal-execute"
 blocked-by: null
 closed-reason: null
 ---

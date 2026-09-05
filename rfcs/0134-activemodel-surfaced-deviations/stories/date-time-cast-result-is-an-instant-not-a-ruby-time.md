@@ -1,6 +1,6 @@
 ---
 title: "Type::DateTime / Type::Time cast results are a Temporal.Instant, not a Ruby ::Time"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T21:06:57Z"
+assignee: "date-time-cast-result-is-an-instant-not-a-ruby-time"
 blocked-by: null
 closed-reason: null
 ---

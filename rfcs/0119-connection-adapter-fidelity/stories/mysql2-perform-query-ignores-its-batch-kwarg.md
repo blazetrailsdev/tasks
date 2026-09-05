@@ -1,6 +1,6 @@
 ---
 title: "mysql2 performQuery ignores its batch kwarg; multi-statements are enabled for the connection's life instead"
-status: ready
+status: blocked
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-05T21:26:49Z"
+assignee: "adapter-class-guards-a-missing-adapter-rails-lets-resolve-raise"
+blocked-by: "node mysql2 exposes no COM_SET_OPTION surface: lib/constants/commands.js defines SET_OPTION: 0x1b but there is no Command class for it in lib/commands/ (auth_switch, binlog_dump, change_user, client_handshake, close_statement, command, execute, index, ping, prepare, query, quit, register_slave, server_handshake) and nothing in the public typings. Rails' perform_query batch arm (mysql2/database_statements.rb:41-44,105-108) brackets the query with raw_connection.set_server_option(OPTION_MULTI_STATEMENTS_ON/OFF), which has no supported node equivalent; multipleStatements is only accepted at connect. Sending the packet would require hand-rolling a Command subclass against mysql2 internals. Per the story's own instruction, blocking rather than ratifying the connect-time flag. The narrower half (flags: ['-MULTI_STATEMENTS'] silently yielding a broken executeBatch) is convergeable separately."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Port the railtie encrypt_fixtures arm and emit the active_record_fixture_set load hook"
-status: claimed
+status: blocked
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: "missing-arm"
@@ -12,7 +12,7 @@ priority: 7
 pr: null
 claim: "2026-09-05T20:51:57Z"
 assignee: "skeleton-throw-token-carries-the-raised-class"
-blocked-by: null
+blocked-by: 'trails has no ActiveRecord::Fixture class and no EncryptedFixtures module to prepend onto. The blocker the story names (the :active_record_fixture_set load event never being emitted) is CLEARED — fixtures.ts:975 runs runLoadHooks("active_record_fixture_set", FixtureSet) since #7301 — but railtie.rb:357-362''s arm body is ActiveRecord::Fixture.prepend ActiveRecord::Encryption::EncryptedFixtures, and trails'' port of encrypted_fixtures.rb is the row-array function encryptFixtureRows (fixtures.ts:466), gated inline at fixtures.ts:809 on the same Configurable.config.encryptFixtures flag. There is no per-Fixture object to prepend onto, so the arm has nothing to install; moving the gate to boot also breaks the encryption tests, which set the config AFTER fixtures.ts module load has already fired the hook. Prerequisite: port ActiveRecord::Fixture and Encryption::EncryptedFixtures as its own story.'
 closed-reason: null
 ---
 

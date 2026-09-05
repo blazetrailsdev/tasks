@@ -1,6 +1,6 @@
 ---
 title: "Index include: collapses Rails' Symbol/String/Array arms into one raw-passthrough"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7534
 claim: "2026-09-05T20:46:47Z"
 assignee: "convert-time-to-time-zone-guard-is-an-instanceof-list"
 blocked-by: null

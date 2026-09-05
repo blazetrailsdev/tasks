@@ -1,6 +1,6 @@
 ---
 title: "convert-time-to-time-zone-guard-is-an-instanceof-list"
-status: claimed
+status: in-progress
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7534
 claim: "2026-09-05T20:46:47Z"
 assignee: "convert-time-to-time-zone-guard-is-an-instanceof-list"
 blocked-by: null

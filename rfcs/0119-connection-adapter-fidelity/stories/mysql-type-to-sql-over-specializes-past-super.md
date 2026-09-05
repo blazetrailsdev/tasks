@@ -1,6 +1,6 @@
 ---
 title: "MySQL type_to_sql special-cases ten types Rails renders through super"
-status: ready
+status: in-progress
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7536
+claim: "2026-09-05T21:26:49Z"
+assignee: "adapter-class-guards-a-missing-adapter-rails-lets-resolve-raise"
 blocked-by: null
 closed-reason: null
 ---

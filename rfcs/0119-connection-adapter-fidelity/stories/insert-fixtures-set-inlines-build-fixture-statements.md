@@ -1,6 +1,6 @@
 ---
 title: "insertFixturesSet inlines build_fixture_statements instead of calling it"
-status: claimed
+status: blocked
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-05T20:46:47Z"
 assignee: "convert-time-to-time-zone-guard-is-an-instanceof-list"
-blocked-by: null
+blocked-by: 'Blocked on build-fixture-sql-ignores-schema-cache-columns-and-default-insert-value: delegating insertFixturesSet to buildFixtureStatements routes fixture loads through buildFixtureSql, which takes its columns from the union of the fixture rows'' keys instead of schemaCache.columnsHash and hardcodes DEFAULT_VALUE = arelSql("DEFAULT") instead of calling this.defaultInsertValue(column) (database_statements.rb:608-647, sqlite3/database_statements.rb:139-145). Verified: with the delegation in place test-fixtures.test.ts fails with SqliteError: near "DEFAULT": syntax error on every multi-row table whose fixture rows carry differing keys.'
 closed-reason: null
 ---
 
