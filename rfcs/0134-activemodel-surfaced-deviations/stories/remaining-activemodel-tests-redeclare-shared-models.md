@@ -3,8 +3,8 @@ title: "The rest of the activemodel suite still redeclares Rails test models inl
 status: draft
 updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: test-placement
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 300

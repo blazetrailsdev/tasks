@@ -3,8 +3,8 @@ title: "serialized-type-must-delegate-to-subtype"
 status: draft
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: rails-deviation
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 60

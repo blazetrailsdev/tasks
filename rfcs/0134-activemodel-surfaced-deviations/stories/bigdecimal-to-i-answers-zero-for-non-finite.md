@@ -3,8 +3,8 @@ title: "BigDecimal#toI answers 0 for NaN/Infinity where MRI raises FloatDomainEr
 status: draft
 updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: rails-deviation
+packages: ["activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 60

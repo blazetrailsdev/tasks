@@ -3,8 +3,8 @@ title: "prepare_value_for_validation calls record_attribute_changed_in_place? as
 status: draft
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: guard-parity
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 40

@@ -3,8 +3,8 @@ title: "BigDecimal caps the exponent at 4000, so a large-exponent string silentl
 status: draft
 updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: invented-arm
+packages: ["activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 200

@@ -3,11 +3,11 @@ title: "time-cast-result-cannot-model-a-zoned-ruby-time"
 status: draft
 updated: 2026-09-03
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: rails-deviation
+packages: ["activemodel", "activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 250
 priority: null
 pr: null
 claim: null

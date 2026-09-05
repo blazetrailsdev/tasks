@@ -3,8 +3,8 @@ title: "ComparisonValidator's blank arm narrows Ruby's blank? to strings"
 status: draft
 updated: 2026-09-02
 rfc: "0134-activemodel-surfaced-deviations"
-cluster: null
-packages: []
+cluster: rails-deviation
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 40
