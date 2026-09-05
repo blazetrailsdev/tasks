@@ -19,8 +19,8 @@ closed-reason: null
 ## Context
 
 `scripts/test-compare`'s assertion-value comparer normalizes a Ruby Symbol to a
-String (`:foo` ↔ `"foo"`) but not snake_case to camelCase, so every ported
-assertion whose expected literal is an _attribute name_ is scored a
+String (`:foo` ↔ `"foo"`) but not snake*case to camelCase, so every ported
+assertion whose expected literal is an \_attribute name* is scored a
 value-mismatch by construction — trails camelCases attribute names, Rails does
 not.
 
