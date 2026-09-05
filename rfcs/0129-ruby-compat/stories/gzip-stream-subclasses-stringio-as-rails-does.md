@@ -1,14 +1,14 @@
 ---
 title: "ActiveSupport::Gzip::Stream subclasses StringIO instead of hand-rolling a Buffer"
-status: draft
-updated: 2026-09-04
+status: ready
+updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 110
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

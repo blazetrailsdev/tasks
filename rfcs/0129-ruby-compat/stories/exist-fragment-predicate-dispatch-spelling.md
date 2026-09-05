@@ -1,6 +1,6 @@
 ---
 title: "exist_fragment? keeps its ? because Subscriber#call cannot dispatch the conventions spelling"
-status: draft
+status: ready
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "Port RFC2396_Parser's pattern/regexp table so URI::Generic's parser default is DEFAULT_PARSER"
-status: draft
-updated: 2026-09-04
+status: ready
+updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 14
 pr: null
 claim: null
 assignee: null
