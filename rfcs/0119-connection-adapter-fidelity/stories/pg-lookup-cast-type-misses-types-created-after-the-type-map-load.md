@@ -66,7 +66,7 @@ two receipts to it. Options, in preference order:
 1. Invalidate or refresh the captured table where a type can come into
    existence — the adapter already awaits at the DDL paths that call
    `reloadTypeMap`; the gap is raw `execute` of a `CREATE TYPE` / `CREATE
-   DOMAIN`, which trails could detect the way it already classifies SQL
+DOMAIN`, which trails could detect the way it already classifies SQL
    (`connection-adapters/sql-classification.ts`).
 2. If that is too broad, establish that a type created by raw `execute` is
    outside AR's API on both sides and narrow the receipts to say so — noting
