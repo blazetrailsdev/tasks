@@ -1,13 +1,13 @@
 ---
 title: "argumentError() helper returns a name-stamped Error, so instanceof ArgumentError fails at 63 call sites"
-status: draft
-updated: 2026-07-31
+status: ready
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

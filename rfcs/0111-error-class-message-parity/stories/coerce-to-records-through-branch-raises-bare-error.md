@@ -1,13 +1,13 @@
 ---
 title: "coerce-to-records-through-branch-raises-bare-error"
-status: draft
-updated: 2026-08-02
+status: ready
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

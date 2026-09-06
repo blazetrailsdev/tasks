@@ -1,14 +1,14 @@
 ---
 title: "UnexpectedError sits inside DEFAULT_RESCUE, so handle swallows it under debugMode"
-status: draft
-updated: 2026-08-09
+status: ready
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: message-string-parity
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

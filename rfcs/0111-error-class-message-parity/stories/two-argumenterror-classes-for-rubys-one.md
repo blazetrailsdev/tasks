@@ -1,13 +1,13 @@
 ---
 title: "Two ArgumentError classes for Ruby's one, so instanceof is false across packages"
-status: draft
-updated: 2026-08-06
+status: ready
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: duplicate-error-classes
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

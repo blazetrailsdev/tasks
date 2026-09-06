@@ -1,13 +1,13 @@
 ---
 title: "request-variant-writer-argumenterror-type"
 status: ready
-updated: 2026-07-27
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "Railtie's abstract raise interpolates the JS leaf name where Rails uses the Ruby constant path"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "OpenSSL::Digest is modeled three incompatible ways across activesupport"
-status: draft
-updated: 2026-08-17
+status: ready
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: duplicate-error-classes
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

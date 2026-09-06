@@ -1,7 +1,7 @@
 ---
 title: "Gate signed-id verifier on nil secret (not falsy) and raise ArgumentError"
-status: draft
-updated: 2026-08-02
+status: closed
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered on trails origin/main: packages/activerecord/src/signed-id.ts:6 now imports ArgumentError from @blazetrails/ruby-compat and :30 guards `if (secret == null)` (empty string reaches MessageVerifier), matching signed_id.rb:87. Both source ACs met; the remaining test-assertion AC is covered by signed-id-nil-secret-tests-assert-argumenterror-class."
 ---
 
 ## Context

@@ -1,14 +1,14 @@
 ---
 title: "TimeZone#rfc3339 hand-rolls a regex + JS Date instead of Date._rfc3339 parts"
-status: draft
-updated: 2026-08-15
+status: ready
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 110
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

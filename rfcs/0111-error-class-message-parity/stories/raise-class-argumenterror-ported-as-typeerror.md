@@ -1,6 +1,6 @@
 ---
 title: "Three ArgumentError raises ported as TypeError"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: duplicate-error-classes
@@ -8,7 +8,7 @@ packages: ["actiondispatch", "actioncontroller"]
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

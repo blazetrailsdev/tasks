@@ -1,13 +1,13 @@
 ---
 title: "Type.adapterNameFrom falls back to sqlite where Rails raises on an unconfigured model"
 status: ready
-updated: 2026-07-27
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: exclude-burndown
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

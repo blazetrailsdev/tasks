@@ -1,14 +1,14 @@
 ---
 title: "InsertAll#disallow_raw_sql! rejects every raw String — drop the invented permit matcher, raise ArgumentError (insert_all.rb:212-219)"
-status: draft
-updated: 2026-08-16
+status: ready
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

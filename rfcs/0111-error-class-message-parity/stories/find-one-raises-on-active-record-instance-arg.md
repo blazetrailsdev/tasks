@@ -1,14 +1,14 @@
 ---
 title: "find-one-raises-on-active-record-instance-arg"
-status: draft
-updated: 2026-08-16
+status: ready
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: message-string-parity
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

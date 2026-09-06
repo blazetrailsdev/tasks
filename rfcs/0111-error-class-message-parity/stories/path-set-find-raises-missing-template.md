@@ -1,14 +1,14 @@
 ---
 title: "PathSet#find raises MissingTemplate so find_template callers need no re-raise"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "singular-association-replace-should-raise-not-implemented"
-status: draft
-updated: 2026-08-18
+status: ready
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: exclude-burndown
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

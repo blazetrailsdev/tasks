@@ -1,13 +1,13 @@
 ---
 title: "validatesWith strict callback wrapper diverges from Rails errors.add strict-raise"
 status: ready
-updated: 2026-07-17
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: exclude-burndown
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

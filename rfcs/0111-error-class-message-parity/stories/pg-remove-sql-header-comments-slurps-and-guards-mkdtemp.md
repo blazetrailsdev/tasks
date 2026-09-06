@@ -1,14 +1,14 @@
 ---
 title: "removeSqlHeaderComments slurps the whole dump and raises an invented mkdtempSync error"
-status: draft
-updated: 2026-08-09
+status: ready
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

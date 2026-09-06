@@ -1,14 +1,14 @@
 ---
 title: "One ported Ruby TypeError instead of three private mirrors and three suppressions"
-status: draft
-updated: 2026-08-13
+status: ready
+updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: duplicate-error-classes
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null
