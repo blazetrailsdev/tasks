@@ -1,6 +1,6 @@
 ---
 title: "isSameHash's identity guard cannot read a Map attributes hash"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null

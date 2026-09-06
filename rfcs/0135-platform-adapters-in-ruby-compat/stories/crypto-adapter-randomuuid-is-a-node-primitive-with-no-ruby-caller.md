@@ -1,6 +1,6 @@
 ---
 title: "Drop CryptoAdapter#randomUUID — no Ruby counterpart and no caller left"
-status: claimed
+status: done
 updated: 2026-09-06
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 41
-pr: null
+pr: 7573
 claim: "2026-09-06T19:04:29Z"
 assignee: "actionpack-uploaded-file-holds-a-path-not-a-tempfile"
 blocked-by: null

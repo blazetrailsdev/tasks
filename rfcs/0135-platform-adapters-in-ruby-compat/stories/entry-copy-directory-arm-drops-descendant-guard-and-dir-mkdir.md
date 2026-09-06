@@ -1,6 +1,6 @@
 ---
 title: "Entry_#copy's directory arm drops descendant_directory?'s ArgumentError and Dir.mkdir's rescue for a bare mkdir_p"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 46
-pr: null
-claim: null
-assignee: null
+pr: 7576
+claim: "2026-09-06T19:37:30Z"
+assignee: "digest-uuid-from-hash-takes-an-algorithm-string-not-the-digest-class"
 blocked-by: null
 closed-reason: null
 ---

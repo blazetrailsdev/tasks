@@ -1,6 +1,6 @@
 ---
 title: "generate_deterministic_iv HMACs a decoded key and a hardcoded iv_length"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 44
-pr: null
-claim: null
-assignee: null
+pr: 7576
+claim: "2026-09-06T19:37:30Z"
+assignee: "digest-uuid-from-hash-takes-an-algorithm-string-not-the-digest-class"
 blocked-by: null
 closed-reason: null
 ---

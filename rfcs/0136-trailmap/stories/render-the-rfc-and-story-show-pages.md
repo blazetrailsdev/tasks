@@ -1,6 +1,6 @@
 ---
 title: "Serve /rfc/<id> and /story/<id> from trailmap"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null

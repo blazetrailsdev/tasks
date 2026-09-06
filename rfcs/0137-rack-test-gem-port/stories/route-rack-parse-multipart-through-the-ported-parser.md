@@ -1,6 +1,6 @@
 ---
 title: "Route Rack::Multipart.parse_multipart through the ported Parser instead of a second inline scanner"
-status: claimed
+status: done
 updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 29
-pr: null
+pr: 7572
 claim: "2026-09-06T19:08:38Z"
 assignee: "route-rack-parse-multipart-through-the-ported-parser"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "polymorphic_inverse_of looks the inverse up by options[:inverse_of], not by inverse_name"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null

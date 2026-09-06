@@ -1,6 +1,6 @@
 ---
 title: "Rack::Directory#stat swallows every errno, not just ENOENT and ELOOP"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null

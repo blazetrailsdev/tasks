@@ -1,6 +1,6 @@
 ---
 title: "AbstractAdapter#execute declares sqlite3's backward-compatibility return shape"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7575
+claim: "2026-09-06T19:26:41Z"
+assignee: "attribute-methods-respond-to-drops-the-private-methods-arm"
 blocked-by: null
 closed-reason: null
 ---

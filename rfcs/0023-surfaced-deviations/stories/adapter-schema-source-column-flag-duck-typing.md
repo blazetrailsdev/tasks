@@ -1,7 +1,7 @@
 ---
 title: "AdapterSchemaSource hand-projects column flags; Rails passes real Column objects"
-status: ready
-updated: 2026-07-27
+status: done
+updated: 2026-09-06
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 7571
 claim: null
 assignee: null
 blocked-by: null

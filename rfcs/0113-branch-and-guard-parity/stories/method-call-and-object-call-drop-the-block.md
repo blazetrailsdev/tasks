@@ -1,6 +1,6 @@
 ---
 title: "MethodCall/ObjectCall drop the block Ruby's send forwards, so a Symbol-named around callback loses its continuation"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "DateTimeType#changed? and TimeZoneConverter#changed? are trails-only overrides Rails does not have"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7575
+claim: "2026-09-06T19:26:41Z"
+assignee: "attribute-methods-respond-to-drops-the-private-methods-arm"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Delete Notifications.instrumentAsync now that the unified Instrumenter#instrument covers an async block"
-status: ready
-updated: 2026-09-04
+status: in-progress
+updated: 2026-09-06
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7574
+claim: "2026-09-06T19:13:44Z"
+assignee: "converge-alias-attribute-not-an-attribute-raise"
 blocked-by: null
 closed-reason: null
 ---
