@@ -42,7 +42,7 @@ The eight artefacts are two named classes and nothing else:
   `autosave_association.rb:213`), plus `throw(:exception, …)` →
   `throwException(…)` (`i18n/backend/base.rb:47,54`).
 - Ruby-only guards with no JS counterpart at all: `require "bcrypt" rescue
-  LoadError` (`secure_password.rb:120-124`), `constantize` / `NameError`
+LoadError` (`secure_password.rb:120-124`), `constantize` / `NameError`
   (`request.rb:98-103`), and the raise-to-build-a-backtrace trick
   (`error_reporter.rb:258-263`).
 

@@ -40,14 +40,14 @@ with nothing pointing at the route as the cause. The correct string is
 
 Rails cannot check this at boot — Zeitwerk resolves constants lazily, so an
 unknown controller genuinely is not knowable until dispatch. trails is in the
-opposite position: `loadControllers` has *already* imported and keyed every
+opposite position: `loadControllers` has _already_ imported and keyed every
 controller before any route is recognised, so the information is sitting there
 unused.
 
 After `drawRoutes` and the autoloader have both run, walk the route set and
 raise for any route whose controller is absent from `controllerConstants`,
 naming the route and the near-miss (`readModels` -> did you mean
-`read_models`?). This is a place trails can be *better* than Rails rather than
+`read_models`?). This is a place trails can be _better_ than Rails rather than
 merely faithful, and the deviation is worth recording either way.
 
 Related: `controller-constant-resolution-throws-instead-of-constantize` covers
