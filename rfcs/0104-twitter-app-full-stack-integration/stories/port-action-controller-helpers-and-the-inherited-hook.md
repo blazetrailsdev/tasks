@@ -1,5 +1,5 @@
 ---
-title: "port-action-controller-helpers-and-the-inherited-hook"
+title: "Fire ActionController::Railties::Helpers#inherited at class definition, not first construction"
 status: draft
 updated: 2026-09-06
 rfc: "0104-twitter-app-full-stack-integration"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: null
 pr: null
 claim: null
@@ -18,60 +18,54 @@ closed-reason: null
 
 ## Context
 
-`ActionController::Helpers` (`vendor/rails/actionpack/lib/action_controller/metal/helpers.rb`)
-is not ported. Rails wires `app/helpers` into controllers through it:
+`ActionController::Helpers` and `ActionController::Railties::Helpers` are
+ported and live (blazetrailsdev/trails#7558). `inherited(klass, base)` carries
+Rails' body — assign `helpersPath`, then `helper :all` only when
+`klass.superclass == ActionController::Base` and `includeAllHelpers`
+(`actionpack/lib/action_controller/railties/helpers.rb:8-22`) — and it fires
+for real: `ActionController::Base`'s constructor walks from `new.target` up to
+`Base` and runs the hook once per class in the chain, nearest-first
+(`fireInherited`).
 
-- `class << self; attr_accessor :helpers_path; end` plus the `included do`
-  block's `class_attribute :helpers_path` / `:include_all_helpers`
-  (helpers.rb:66-72).
-- `ActionController::Railtie`'s `action_controller.set_helpers_path`
-  initializer (railtie.rb:30-32) sets `Helpers.helpers_path = app.helpers_paths`.
-- `ActionController::Railties::Helpers#inherited`
-  (`action_controller/railties/helpers.rb:8-23`) gives each controller its
-  `helpers_path` and calls `klass.helper :all` when the class inherits directly
-  from `ActionController::Base` and `include_all_helpers` is true.
-- `helper :all` resolves through `all_application_helpers` /
-  `all_helpers_from_path`.
+What remains is WHEN. Ruby fires `inherited` at class definition, so
+`ApplicationController._helpers` is populated the moment the class body is
+evaluated. JS has no definition-time hook — `class X extends Y` triggers
+nothing observable on `Y` — so trails fires at the first construction of a
+controller instead. That is before any render, so nothing user-facing differs,
+but two things do:
 
-trails currently includes the app's helpers ONCE at boot instead, from the
-`action_controller.include_all_helpers` initializer in
-`packages/trailties/src/trailties/action-controller.ts` (added by the PR that
-made `app/helpers` reachable from a view at all). Two consequences:
+1. `ApplicationController._helpers` is empty until the first controller is
+   constructed. Code that inspects it during boot — a diagnostic, a future
+   eager-load check — sees different state than Rails.
+2. The work happens on a request path rather than at boot, guarded by a
+   `WeakSet` so it runs once per class. The guard is cheap but it is a
+   per-construction branch Rails does not have.
 
-1. The include happens against whatever the `action_controller` load hook
-   yields, not per-controller in `inherited`, so a controller that does NOT
-   inherit directly from `ActionController::Base` gets the app helpers anyway,
-   where Rails would not give them to it.
-2. It is ordered `{ after: "prepend_helpers_path" }` because it reads
-   `config.helpersPaths` at boot. Rails needs no such ordering: `helpers_path`
-   is read lazily from `inherited`, long after every initializer.
+`fireInherited` carries the `@noRailsEquivalent CONVERGEABLE` receipt naming
+this story.
 
-`ActionController::Helpers.helpers_path` and the `include_all_helpers` class
-attribute do not exist on the TS side at all; the flag lives on the trailtie
-config (`config.actionController.includeAllHelpers`) rather than on
-`ActionController::Base` where Rails puts it.
+Candidate mechanisms, none yet chosen: fire from the eager-load pass that
+imports controller modules (closest to Ruby's timing, but eager loading is off
+in development); have the router fire it when it first resolves a controller
+class for a route (covers dev, still not definition time); or have the
+generated `ApplicationController` call it explicitly (exact timing, at the cost
+of generated boilerplate in every app).
 
-The blocker for a literal port is that Ruby resolves a helper name to a module
-with `constantize` + Zeitwerk, synchronously, inside `inherited`. ESM has no
-constant autoload, so the file has to be imported — asynchronously — before a
-name can resolve. `helperConstants` in the trailtie is that import step today.
-Converging likely means giving the resolver an eagerly-populated constant table
-at boot and keeping `inherited` synchronous against it.
+Explicitly NOT in scope: the eager constant table (`helperConstants` in
+`packages/trailties/src/trailties/action-controller.ts`), which exists because
+`constantize` is synchronous where a dynamic `import()` is not. That is
+receipted `PERMANENT` — Zeitwerk has no ESM counterpart.
 
 ## Acceptance criteria
 
-- `ActionController::Helpers` is ported at
-  `packages/actionpack/src/action-controller/metal/helpers.ts` with
-  `helpersPath` and `includeAllHelpers` as class attributes on
-  `ActionController::Base`, per helpers.rb:66-72.
-- `ActionController::Railties::Helpers#inherited` includes the app helpers per
-  controller class, gated on `klass.superclass === ActionController::Base &&
-ActionController::Base.includeAllHelpers`, replacing the boot-time include in
-  the trailtie initializer.
-- `action_controller.set_helpers_path` sets `Helpers.helpersPath` from
-  `app.helpersPaths()`, and the `{ after: "prepend_helpers_path" }` ordering
-  constraint on `action_controller.include_all_helpers` is gone.
-- A controller that does not descend directly from `ActionController::Base`
-  does not receive the app helpers, matching Rails.
-- The existing end-to-end proof still passes: a `.tse` template in the boot-app
-  fixture calls a helper from `app/helpers` and renders.
+- `inherited` fires for each app controller class without waiting for the first
+  construction, in both the development and production boot paths, and the
+  chosen mechanism is written down at the call site.
+- `ActionController::Base`'s constructor no longer fires the hook, and
+  `fireInherited`'s `@noRailsEquivalent CONVERGEABLE` receipt is gone.
+- `ApplicationController._helpers` carries the application helpers after boot,
+  with no request having been served.
+- The existing behaviour still holds: a controller that does not descend
+  directly from `ActionController::Base` is not included into again, and the
+  `boot-app` fixture's `.tse` template still renders a helper from
+  `app/helpers`.
