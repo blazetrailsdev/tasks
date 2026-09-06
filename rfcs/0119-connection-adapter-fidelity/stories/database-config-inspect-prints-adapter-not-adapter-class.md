@@ -31,7 +31,7 @@ trails renders the adapter **name** under a different key
 `inspect()`):
 
 ```ts
-`#<${this.constructor.name} env_name=${this.envName} name=${this.name} adapter=${this.adapter}>`
+`#<${this.constructor.name} env_name=${this.envName} name=${this.name} adapter=${this.adapter}>`;
 ```
 
 So both the key (`adapter=` vs `adapter_class=`) and the value (`"sqlite3"` vs

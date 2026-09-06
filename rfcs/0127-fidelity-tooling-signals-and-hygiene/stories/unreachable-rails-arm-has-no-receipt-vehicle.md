@@ -40,7 +40,7 @@ for every real caller.
 
 1. `/** @missingRailsCall b — PERMANENT */` at the call site →
    `call-mismatches ratchet: STALE @missingRailsCall tag(s) whose call is no
-   longer flagged`. `b` is not in `write_query?`'s flagged call set, so there is
+longer flagged`. `b` is not in `write_query?`'s flagged call set, so there is
    nothing to suppress and the ratchet reds. True of the un-ported one-line body
    too, so it is not an artefact of porting.
 2. A prose note at the call site →
