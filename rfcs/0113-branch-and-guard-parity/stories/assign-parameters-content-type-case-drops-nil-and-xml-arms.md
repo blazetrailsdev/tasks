@@ -1,6 +1,6 @@
 ---
 title: "assignParameters' Content-Type case drops Rails' nil raise and encodes :xml as a query string"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 5
-pr: null
+pr: 7556
 claim: "2026-09-06T14:38:14Z"
 assignee: "converge-route-set-recognize-path-onto-mock-request-env-for"
 blocked-by: null

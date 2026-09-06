@@ -1,6 +1,6 @@
 ---
 title: "include-has-no-per-instance-initializer-hook"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7561
+claim: "2026-09-06T15:38:14Z"
+assignee: "include-has-no-per-instance-initializer-hook"
 blocked-by: null
 closed-reason: null
 ---

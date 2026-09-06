@@ -1,6 +1,6 @@
 ---
 title: "api-compare-pairs-a-ruby-predicate-and-instance-new-onto-one-ts-member"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: 7557
 claim: "2026-09-06T14:18:20Z"
 assignee: "api-compare-pairs-a-ruby-predicate-and-instance-new-onto-one-ts-member"
 blocked-by: null

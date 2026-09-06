@@ -1,6 +1,6 @@
 ---
 title: "PG type_to_sql binary/text arms hardcode literals where Rails calls super(type)"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: 7557
 claim: "2026-09-06T14:18:20Z"
 assignee: "api-compare-pairs-a-ruby-predicate-and-instance-new-onto-one-ts-member"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "include-abstract-controller-caching-into-action-controller-base"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7560
+claim: "2026-09-06T15:18:14Z"
+assignee: "include-abstract-controller-caching-into-action-controller-base"
 blocked-by: null
 closed-reason: null
 ---

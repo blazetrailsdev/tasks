@@ -1,6 +1,6 @@
 ---
 title: "export-converter-not-found-error"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7555
 claim: "2026-09-06T14:58:13Z"
 assignee: "export-converter-not-found-error"
 blocked-by: null

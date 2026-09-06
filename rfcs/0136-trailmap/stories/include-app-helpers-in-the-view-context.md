@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 9
+pr: 7558
 claim: "2026-09-06T13:14:56Z"
 assignee: "include-app-helpers-in-the-view-context"
 blocked-by: null
