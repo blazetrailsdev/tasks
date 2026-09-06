@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-native-types-and-instance-type-map-onto-adapter"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T23:56:22Z"
+assignee: "converge-pg-native-types-and-instance-type-map-onto-adapter"
 blocked-by: null
 closed-reason: null
 ---

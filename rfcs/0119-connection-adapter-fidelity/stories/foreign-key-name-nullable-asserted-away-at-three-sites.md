@@ -1,6 +1,6 @@
 ---
 title: "Nullable ForeignKeyDefinition#name is asserted away with ! at three call sites"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

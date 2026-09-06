@@ -1,6 +1,6 @@
 ---
 title: "The five MySQL supports_*? predicates live on AbstractMysqlAdapter where Rails puts them on Mysql2Adapter"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

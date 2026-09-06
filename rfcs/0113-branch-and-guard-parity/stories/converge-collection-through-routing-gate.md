@@ -1,7 +1,7 @@
 ---
 title: "Remove the has_many :through routing gate and its bespoke fallback loader"
-status: ready
-updated: 2026-08-31
+status: claimed
+updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: 31
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T23:00:28Z"
+assignee: "fold-skeleton-tokens-takes-an-idiom-lowering-table"
 blocked-by: null
 closed-reason: null
 ---

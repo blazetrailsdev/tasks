@@ -1,6 +1,6 @@
 ---
 title: "conversion-and-serialization-tests-redeclare-shared-models"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null

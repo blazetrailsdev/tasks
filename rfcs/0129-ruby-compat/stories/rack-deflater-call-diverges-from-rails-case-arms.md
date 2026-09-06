@@ -1,6 +1,6 @@
 ---
 title: "rack-deflater-call-diverges-from-rails-case-arms"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0129-ruby-compat"
 cluster: null

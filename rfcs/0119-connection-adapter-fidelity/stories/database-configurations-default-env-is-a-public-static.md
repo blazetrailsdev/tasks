@@ -1,6 +1,6 @@
 ---
 title: "DatabaseConfigurations.defaultEnv is a public static accessor pair where Rails has a private instance default_env"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

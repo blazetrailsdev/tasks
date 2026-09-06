@@ -1,6 +1,6 @@
 ---
 title: "Short-circuit operators get their own skeleton token instead of if"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T23:00:28Z"
+assignee: "fold-skeleton-tokens-takes-an-idiom-lowering-table"
 blocked-by: null
 closed-reason: null
 ---

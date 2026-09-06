@@ -1,6 +1,6 @@
 ---
 title: "foreign_key_name's absent-:column guard raises ArgumentError where Ruby fetch raises KeyError"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

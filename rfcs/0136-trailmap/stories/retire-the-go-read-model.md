@@ -1,6 +1,6 @@
 ---
 title: "Delete webhook/tasksdb.go and read the API instead"
-status: ready
+status: claimed
 updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: 12
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T23:01:36Z"
+assignee: "serve-the-mutation-verbs-as-json"
 blocked-by: null
 closed-reason: null
 ---

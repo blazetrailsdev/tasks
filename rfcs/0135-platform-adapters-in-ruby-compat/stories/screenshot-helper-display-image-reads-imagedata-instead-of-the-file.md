@@ -1,7 +1,7 @@
 ---
 title: "screenshot-helper-display-image-reads-imagedata-instead-of-the-file"
-status: ready
-updated: 2026-09-04
+status: claimed
+updated: 2026-09-05
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 39
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-05T23:56:30Z"
+assignee: "io-external-encoding-is-hardcoded-utf8"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Adapter-keyed maps typed Record<string,T> hide rename drift from tsc"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

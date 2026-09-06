@@ -1,6 +1,6 @@
 ---
 title: "Declare the DatabaseLimits methods on AbstractAdapter instead of casting at call sites"
-status: claimed
+status: done
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 7532
 claim: "2026-09-05T19:46:50Z"
 assignee: "rack-deflater-call-diverges-from-rails-case-arms"
 blocked-by: null

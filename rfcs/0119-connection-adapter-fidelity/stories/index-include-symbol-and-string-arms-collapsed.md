@@ -1,6 +1,6 @@
 ---
 title: "Index include: collapses Rails' Symbol/String/Array arms into one raw-passthrough"
-status: in-progress
+status: done
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
