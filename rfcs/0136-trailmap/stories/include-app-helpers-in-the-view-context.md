@@ -1,6 +1,6 @@
 ---
 title: "Include app/helpers in the view context so helper methods work"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null

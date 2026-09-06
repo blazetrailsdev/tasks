@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-range-helper-onto-oid-range-cast-value"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7562
 claim: "2026-09-06T15:58:15Z"
 assignee: "converge-pg-range-helper-onto-oid-range-cast-value"
 blocked-by: null

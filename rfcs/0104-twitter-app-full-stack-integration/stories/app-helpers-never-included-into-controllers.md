@@ -1,6 +1,6 @@
 ---
 title: "config.helpersPaths is never included into ActionController::Base (include_all_helpers)"
-status: draft
+status: done
 updated: 2026-09-06
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["actionpack-helper-glob-only-matches-ruby-file-names"]
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 7558
 claim: null
 assignee: null
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "oid-point-cast-and-serialize-null-out-instead-of-falling-through"
-status: ready
-updated: 2026-09-05
+status: in-progress
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7564
+claim: "2026-09-06T16:38:15Z"
+assignee: "oid-point-cast-and-serialize-null-out-instead-of-falling-through"
 blocked-by: null
 closed-reason: null
 ---

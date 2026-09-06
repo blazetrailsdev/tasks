@@ -1,6 +1,6 @@
 ---
 title: "api-compare-pairs-a-ruby-predicate-and-instance-new-onto-one-ts-member"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null

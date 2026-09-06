@@ -1,6 +1,6 @@
 ---
 title: "SQLite3Adapter#exec and PostgreSQLAdapter#exec are trails-only raw-query paths"
-status: claimed
+status: closed
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-09-06T14:18:20Z"
 assignee: "api-compare-pairs-a-ruby-predicate-and-instance-new-onto-one-ts-member"
 blocked-by: null
-closed-reason: null
+closed-reason: "SQLite half shipped in #7557 (SQLite3Adapter#exec deleted, ~90 callers on execute); PG half tracked as pg-exec-is-a-trails-only-raw-query-path"
 ---
 
 ## Context

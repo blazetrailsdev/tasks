@@ -1,6 +1,6 @@
 ---
 title: "allHelpersFromPath globs *_helper, so no trails app helper is ever found"
-status: draft
+status: done
 updated: 2026-09-06
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7558
 claim: null
 assignee: null
 blocked-by: null
