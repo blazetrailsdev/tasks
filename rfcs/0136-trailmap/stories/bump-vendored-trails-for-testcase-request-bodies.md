@@ -20,7 +20,9 @@ closed-reason: null
 
 `ActionController::TestCase` in the vendored tarball cannot test an endpoint
 that takes a request body, which is every mutation endpoint the JSON API
-serves.
+serves. Two workarounds now wait on the same one-line pin bump — this one and
+the app shell's status-badge normalisation — so they are tracked together
+rather than as two stories that run the same script.
 
 `_process` assigns `request.parameters` unconditionally from its `params`
 option alone:
@@ -47,7 +49,21 @@ with `dispatch` reading `request.parameters` and falling through to the
 getter that merges query and body (`metal.ts:229-230`). trailmap pins
 `vendor/TRAILS_PIN` at `7cece02d`, which predates it.
 
-## The workaround to delete
+## A second thing the same bump adopts
+
+`app/helpers` reaching a view was fixed upstream by trails#7558 — a helper
+module is now spliced into the view context, `allHelpersFromPath` globs the
+trails `<name>-helper.ts` spelling, `ActionController::Helpers` is ported, and
+`action_controller.set_helpers_path` reads `config.helpersPaths`. trailmap
+still pins `7cece02d`, so `app/helpers` is inert here until the same bump.
+
+## The workarounds to delete
+
+`app/views/shared/_status-badge.html.tse` carries the badge's status
+normalisation (blank or null becomes `unknown`) in the template because there
+was nowhere else to put it; once the pin is bumped that moves to
+`ApplicationHelper` and the partial calls it. The partial itself stays — a
+partial is the right shape for markup.
 
 `test/controllers/mutations-controller.test.ts` and
 `test/controllers/read-models-controller.test.ts` each hand-build a rack env,
@@ -59,7 +75,8 @@ places and drifts from how every other controller test in the app is written.
 ## Converged shape
 
 Bump the pin with `./scripts/vendor-trails.sh`, then replace both local `post`
-/ `get` helpers with `ActionController.TestCase` and its `body:` option. The
+/ `get` helpers with `ActionController.TestCase` and its `body:` option, and
+move the badge normalisation onto a helper. The
 assertions should not need to change — if they do, the harness is not
 equivalent and that is worth knowing before more controller tests are written
 against it.
