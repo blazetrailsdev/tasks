@@ -1,14 +1,14 @@
 ---
 title: "dump_schema opens the file BEFORE dumping into it, the way Rails' File.open block does"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: null
+priority: 46
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "The arms splice resolves a method delegating to a same-named same-file function"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

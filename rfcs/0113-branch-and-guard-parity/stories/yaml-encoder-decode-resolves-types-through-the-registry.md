@@ -1,7 +1,7 @@
 ---
 title: "YAMLEncoder#decode resolves types through the registry with a warn-and-default rescue Rails has not"
-status: draft
-updated: 2026-09-03
+status: closed
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: origin/main packages/activemodel/src/attribute-set/yaml-encoder.ts#decode already mirrors yaml_encoder.rb:21-33 — a nil type is answered from this.defaultTypes[attr.name], and the three invented pieces the story names are all gone: no type key in the serialized form, no registry.lookup round-trip, no warn-and-default rescue and no silenceDriftWarnings (git grep 'silenceDriftWarnings|registry.lookup' origin/main -- packages/activemodel/src/attribute-set/yaml-encoder.ts returns nothing; the file is 41 lines and imports no registry). Premise gone."
 ---
 
 ## Context

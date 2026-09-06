@@ -1,14 +1,14 @@
 ---
 title: "update_counters branches on the primary key's shape where Rails has one where! call"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 51
 pr: null
 claim: null
 assignee: null

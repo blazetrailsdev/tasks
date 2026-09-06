@@ -1,18 +1,18 @@
 ---
 title: "Port the railtie encrypt_fixtures arm and emit the active_record_fixture_set load hook"
 status: blocked
-updated: 2026-09-05
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: "missing-arm"
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 100
-priority: 7
+priority: 24
 pr: null
 claim: "2026-09-05T20:51:57Z"
 assignee: "skeleton-throw-token-carries-the-raised-class"
-blocked-by: 'trails has no ActiveRecord::Fixture class and no EncryptedFixtures module to prepend onto. The blocker the story names (the :active_record_fixture_set load event never being emitted) is CLEARED — fixtures.ts:975 runs runLoadHooks("active_record_fixture_set", FixtureSet) since #7301 — but railtie.rb:357-362''s arm body is ActiveRecord::Fixture.prepend ActiveRecord::Encryption::EncryptedFixtures, and trails'' port of encrypted_fixtures.rb is the row-array function encryptFixtureRows (fixtures.ts:466), gated inline at fixtures.ts:809 on the same Configurable.config.encryptFixtures flag. There is no per-Fixture object to prepend onto, so the arm has nothing to install; moving the gate to boot also breaks the encryption tests, which set the config AFTER fixtures.ts module load has already fired the hook. Prerequisite: port ActiveRecord::Fixture and Encryption::EncryptedFixtures as its own story.'
+blocked-by: 'Re-verified 2026-09-06 against origin/main. The load-hook half of the original blocker stays CLEARED (fixtures.ts:977 runs runLoadHooks("active_record_fixture_set", FixtureSet)), but the deeper reason still holds: there is still no ActiveRecord::Fixture class and no EncryptedFixtures module to prepend onto — git grep finds only the row-array function encryptFixtureRows (fixtures.ts:468), called inline at fixtures.ts:812 behind Configurable.config.encryptFixtures. Prerequisite is the sibling story port-active-record-fixture-class-and-encrypted-fixtures-module (RFC 0113, now ready, priority 23); unblock when it lands. Path drift for the claimer: the arm''s initializer no longer lives at packages/activerecord/src/trailtie.ts — that file is gone; the active_record_encryption/fixtures initializers are now in packages/trailties/src/trailties/active-record.ts.'
 closed-reason: null
 ---
 

@@ -1,14 +1,14 @@
 ---
 title: '"validate column sizes" gates on an adapter name where Rails gates on the column limit'
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 44
 pr: null
 claim: null
 assignee: null

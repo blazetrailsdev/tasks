@@ -1,6 +1,6 @@
 ---
 title: "extract_parameterized_parts invents a fifth arm"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 32
 pr: null
 claim: null
 assignee: null

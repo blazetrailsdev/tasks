@@ -1,14 +1,14 @@
 ---
 title: "assignParameters' Content-Type case drops Rails' nil raise and encodes :xml as a query string"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

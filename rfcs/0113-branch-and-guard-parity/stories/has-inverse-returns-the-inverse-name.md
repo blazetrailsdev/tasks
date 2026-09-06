@@ -1,14 +1,14 @@
 ---
 title: "has-inverse-returns-the-inverse-name"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "Headers#env_name invents four arms where Rails has one HTTP_HEADER regex guard"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 31
 pr: null
 claim: null
 assignee: null

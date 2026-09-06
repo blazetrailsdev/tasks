@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-execute-substitutes-empty-array-for-rails-nil"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 7552
 claim: "2026-09-06T12:58:18Z"
 assignee: "respond-to-is-only-defined-on-attribute-methods-hosts"
 blocked-by: null

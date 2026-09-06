@@ -1,14 +1,14 @@
 ---
 title: "active_record_encryption.configuration runs its arms inline; Rails wraps them in on_load(:active_record_encryption)"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: "missing-arm"
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 45
 pr: null
 claim: null
 assignee: null

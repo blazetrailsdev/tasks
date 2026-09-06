@@ -1,14 +1,14 @@
 ---
 title: "AttributeSet#write_from_database invents a type parameter and a default-type fallback"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 110
-priority: null
+priority: 16
 pr: null
 claim: null
 assignee: null

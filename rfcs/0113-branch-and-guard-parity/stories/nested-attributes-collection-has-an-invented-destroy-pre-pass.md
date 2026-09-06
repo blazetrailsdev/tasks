@@ -1,14 +1,14 @@
 ---
 title: "assign_nested_attributes_for_collection_association marks for destruction twice: delete the invented allow_destroy pre-pass"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 38
 pr: null
 claim: null
 assignee: null

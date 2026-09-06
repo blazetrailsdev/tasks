@@ -1,14 +1,14 @@
 ---
 title: "hash_filter iterates the filter instead of slice(*filter.keys), inlines permit_value, and invents an empty-filter arm"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 14
 pr: null
 claim: null
 assignee: null

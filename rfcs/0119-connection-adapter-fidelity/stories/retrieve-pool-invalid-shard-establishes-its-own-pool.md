@@ -1,6 +1,6 @@
 ---
 title: "retrieve connection pool with invalid shard establishes a pool Rails does not"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: 7552
 claim: "2026-09-06T12:58:18Z"
 assignee: "respond-to-is-only-defined-on-attribute-methods-hosts"
 blocked-by: null

@@ -1,14 +1,14 @@
 ---
 title: "ignore_key_file reads and appends to the SAME .gitignore, resolved against the destination"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 110
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null

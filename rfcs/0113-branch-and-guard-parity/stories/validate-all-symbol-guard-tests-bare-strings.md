@@ -1,14 +1,14 @@
 ---
 title: "validate's all?(Symbol) guard is spelled as a bare string test"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 34
 pr: null
 claim: null
 assignee: null

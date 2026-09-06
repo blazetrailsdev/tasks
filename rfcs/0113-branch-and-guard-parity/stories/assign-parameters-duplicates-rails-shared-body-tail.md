@@ -1,14 +1,14 @@
 ---
 title: "assignParameters duplicates Rails' single rack.input tail into both arms, with divergent length math"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 37
 pr: null
 claim: null
 assignee: null

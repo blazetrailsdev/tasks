@@ -1,7 +1,7 @@
 ---
 title: "guardBaseMethodDelegation finds Base by class name, not identity"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 33
 pr: null
 claim: null
 assignee: null

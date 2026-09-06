@@ -1,6 +1,6 @@
 ---
 title: "Arms report: --direction and --package filters, and a per-package token table"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling

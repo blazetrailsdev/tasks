@@ -1,14 +1,14 @@
 ---
 title: "time-ext-day-navigators-duplicate-the-ported-calculations-bodies"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 41
 pr: null
 claim: null
 assignee: null

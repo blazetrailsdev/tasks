@@ -1,18 +1,18 @@
 ---
 title: "Port Time's *_with_coercion / *_with_duration named methods onto the reopened Time class"
-status: blocked
-updated: 2026-08-31
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 260
-priority: 34
+priority: 43
 pr: null
-claim: "2026-08-29T17:33:51Z"
-assignee: "param-drift-relation-new-alias-scored-as-constructor"
-blocked-by: "Blocked on unported Ruby core methods the *_with_* halves delegate to: @blazetrails/date's Time has no to_f, no <=> (compare) and no eql? (packages/date/src/time.ts — only plus/minus/toI/toDatetime exist), so minus_with_coercion's DateTime arm (to_f - other.to_f, time/calculations.rb:319), compare_with_coercion's three compare_without_coercion calls (:328-337) and eql_with_coercion's eql_without_coercion (:345) have nothing to call. The story's premise that 'the without method IS the date package's own Time#minus/Time#compare' holds only for minus. The two *_with_duration halves are separately blocked: Duration#since/#until bottom out in applyDurationPreservingNs (duration.ts:727-735), which accepts only Date/Instant/PlainDate and raises ArgumentError for a ::Time receiver, so other.since(self) (:298) cannot run. Unblocks once Time#to_f/#<=>/#eql? are ported in @blazetrails/date and Duration's application seam accepts a ::Time."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

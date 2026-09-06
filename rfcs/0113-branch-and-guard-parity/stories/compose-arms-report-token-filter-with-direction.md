@@ -1,6 +1,6 @@
 ---
 title: "Compose the arms report's --token filter with --direction"
-status: draft
+status: blocked
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -8,11 +8,11 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "The --token= flag this story composes with does not exist on origin/main: scripts/api-compare/report-arms.ts#parseFilter reads only --direction= and --package= (:549-563), and PR #7549, which wrote --token=, is CLOSED unmerged (branch origin/remeasure-arm-noise-floor-per-token-9adb). There is nothing to compose until seed-a-missing-throw-arm-ratchet lands the flag, which is one of its acceptance criteria. Unblocks on that story."
 closed-reason: null
 ---
 

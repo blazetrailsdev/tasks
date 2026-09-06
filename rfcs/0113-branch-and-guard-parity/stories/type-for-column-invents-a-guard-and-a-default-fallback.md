@@ -1,14 +1,14 @@
 ---
 title: "type_for_column invents a respond_to guard and a default-type fallback Rails has neither of"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 15
 pr: null
 claim: null
 assignee: null

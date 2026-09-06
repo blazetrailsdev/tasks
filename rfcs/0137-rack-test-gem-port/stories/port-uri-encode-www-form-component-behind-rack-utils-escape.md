@@ -1,6 +1,6 @@
 ---
 title: "Port URI.encode_www_form_component and make Rack::Utils.escape the one-line delegation"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 25
-pr: null
-claim: null
-assignee: null
+pr: 7553
+claim: "2026-09-06T13:05:18Z"
+assignee: "converge-rack-conditional-get-to-rfc2822-guard"
 blocked-by: null
 closed-reason: null
 ---

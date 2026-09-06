@@ -1,6 +1,6 @@
 ---
 title: "Transaction#records invents a lazy _records array arm"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 25
 pr: null
 claim: null
 assignee: null

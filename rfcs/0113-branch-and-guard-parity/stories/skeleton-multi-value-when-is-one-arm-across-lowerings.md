@@ -1,14 +1,14 @@
 ---
 title: "A multi-value `when` reads as one arm against every faithful TS lowering"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
