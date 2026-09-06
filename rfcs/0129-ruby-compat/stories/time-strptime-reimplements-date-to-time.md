@@ -1,6 +1,6 @@
 ---
 title: "Time.strptime reimplements Date#to_time instead of calling it"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7570
 claim: "2026-09-06T12:38:20Z"
 assignee: "json-serialization-tests-stand-ins-are-person-not-contact"
 blocked-by: null

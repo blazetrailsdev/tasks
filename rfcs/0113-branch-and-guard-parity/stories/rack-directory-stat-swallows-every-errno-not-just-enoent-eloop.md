@@ -1,6 +1,6 @@
 ---
 title: "Rack::Directory#stat swallows every errno, not just ENOENT and ELOOP"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 8
-pr: null
-claim: null
-assignee: null
+pr: 7571
+claim: "2026-09-06T18:18:16Z"
+assignee: "schema-dumpers-take-columns-not-columninfo"
 blocked-by: null
 closed-reason: null
 ---

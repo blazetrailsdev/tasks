@@ -1,14 +1,14 @@
 ---
 title: "The ZlibAdapter seam is one-shot, so GzipWriter buffers the whole payload instead of streaming"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 48
 pr: null
 claim: null
 assignee: null

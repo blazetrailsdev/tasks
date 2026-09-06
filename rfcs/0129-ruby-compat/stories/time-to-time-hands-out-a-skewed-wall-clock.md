@@ -1,6 +1,6 @@
 ---
 title: "Time#toTime's ZonedDateTime wall clock is up to 59s off for a sub-minute utc_offset"
-status: claimed
+status: ready
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-09-06T12:38:20Z"
-assignee: "json-serialization-tests-stand-ins-are-person-not-contact"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

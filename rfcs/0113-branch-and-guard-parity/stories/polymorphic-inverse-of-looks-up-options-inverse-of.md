@@ -1,6 +1,6 @@
 ---
 title: "polymorphic_inverse_of looks the inverse up by options[:inverse_of], not by inverse_name"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 9
-pr: null
-claim: null
-assignee: null
+pr: 7569
+claim: "2026-09-06T18:38:16Z"
+assignee: "sqlite-driver-binds-unbound-parameters-as-null"
 blocked-by: null
 closed-reason: null
 ---

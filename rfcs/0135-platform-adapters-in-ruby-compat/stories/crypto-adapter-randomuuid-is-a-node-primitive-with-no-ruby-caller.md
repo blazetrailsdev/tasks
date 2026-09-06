@@ -1,14 +1,14 @@
 ---
 title: "Drop CryptoAdapter#randomUUID — no Ruby counterpart and no caller left"
-status: draft
-updated: 2026-09-04
+status: ready
+updated: 2026-09-06
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 41
 pr: null
 claim: null
 assignee: null

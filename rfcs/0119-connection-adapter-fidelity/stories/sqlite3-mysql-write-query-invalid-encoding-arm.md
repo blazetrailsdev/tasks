@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-mysql-write-query-invalid-encoding-arm"
-status: draft
+status: done
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7565
 claim: null
 assignee: null
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Move the tasks CLI into trailmap and make it an HTTP client"
-status: claimed
+status: blocked
 updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null
@@ -12,7 +12,7 @@ priority: 7
 pr: null
 claim: "2026-09-06T17:58:18Z"
 assignee: "render-the-rfc-and-story-show-pages"
-blocked-by: null
+blocked-by: "Cannot be an HTTP-only client yet: trailmap serves no new/rehome/ingest/export endpoint, so those verbs would lose their implementation. Needs move-authoring-and-ingest-into-trailmap and move-export-and-its-schedule-into-trailmap first. Two of its four call sites (ringo's mergesweep.go, trails' scripts/tasks/tasks.sh + CLAUDE.md) also live outside trailmap, so 'all four in the same change' is not a single trailmap PR — split them or relax the criterion."
 closed-reason: null
 ---
 

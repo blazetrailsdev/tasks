@@ -1,6 +1,6 @@
 ---
 title: "Type::Value#map drops its block instead of yielding"
-status: claimed
+status: closed
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-09-06T12:38:20Z"
 assignee: "json-serialization-tests-stand-ins-are-person-not-contact"
 blocked-by: null
-closed-reason: null
+closed-reason: "premise falsified by vendor/rails/activemodel/lib/active_model/type/value.rb:117-119, which is 'def map(value, &) / value / end' — the base does NOT yield, it accepts an anonymous block and returns the value untouched. trails' packages/activemodel/src/type/value.ts:72-74 already matches it exactly; the story quotes a 'yield value' body that is not in the vendored source. Making it yield would CREATE a divergence, not close one. Subtypes that do yield (postgresql/oid/range.rb:50, array.rb:67) override map, as trails' do."
 ---
 
 ## Context

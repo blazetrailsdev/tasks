@@ -1,6 +1,6 @@
 ---
 title: "Serve /rfc/<id> and /story/<id> from trailmap"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 3
-pr: null
+pr: 11
 claim: "2026-09-06T17:58:18Z"
 assignee: "render-the-rfc-and-story-show-pages"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "The Web Crypto adapter cannot serve digest, HMAC or cipher"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 320
-priority: null
+priority: 49
 pr: null
 claim: null
 assignee: null

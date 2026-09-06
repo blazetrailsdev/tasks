@@ -1,7 +1,7 @@
 ---
 title: "sqlite-driver-binds-unbound-parameters-as-null"
-status: ready
-updated: 2026-09-05
+status: in-progress
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7569
+claim: "2026-09-06T18:38:16Z"
+assignee: "sqlite-driver-binds-unbound-parameters-as-null"
 blocked-by: null
 closed-reason: null
 ---

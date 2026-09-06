@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-range-helper-onto-oid-range-cast-value"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
