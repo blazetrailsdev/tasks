@@ -66,7 +66,7 @@ at boot and keeping `inherited` synchronous against it.
   `ActionController::Base`, per helpers.rb:66-72.
 - `ActionController::Railties::Helpers#inherited` includes the app helpers per
   controller class, gated on `klass.superclass === ActionController::Base &&
-  ActionController::Base.includeAllHelpers`, replacing the boot-time include in
+ActionController::Base.includeAllHelpers`, replacing the boot-time include in
   the trailtie initializer.
 - `action_controller.set_helpers_path` sets `Helpers.helpersPath` from
   `app.helpersPaths()`, and the `{ after: "prepend_helpers_path" }` ordering
