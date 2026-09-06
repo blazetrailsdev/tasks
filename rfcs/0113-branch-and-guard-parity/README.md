@@ -246,7 +246,9 @@ re-homed from `0023-surfaced-deviations` on 2026-08-18 and carry the
    nothing gates on it, and no baseline is seeded.
 
    **Re-measured 2026-09-05, stratified by token** —
-   `remeasure-arm-noise-floor-per-token`, same doc, "Second measurement". Six
+   `remeasure-arm-noise-floor-per-token`, delivered as an audit report
+   (`audits/arm-mismatch-noise-floor-20260906T022720Z.md`, 229 rows
+   hand-audited with per-row verdict tables). Six
    extractor stories have since landed and the population moved 2,718 → 2,141
    pairs across 525 files out of 6,072 compared. The whole-population answer is
    UNCHANGED and slightly worse: **25.0% real / 72.5% artefact / 2.5%
@@ -289,14 +291,16 @@ re-homed from `0023-surfaced-deviations` on 2026-08-18 and carry the
 
 ## Changelog
 
-- 2026-09-05: **re-measured per token.** `remeasure-arm-noise-floor-per-token`
-  taught `report-arms.ts --sample` a `--token=` flag and re-ran the noise floor
-  after the six extractor stories. The whole population and the `if` stratum
-  stay ungated (75.0% / 70.0% non-real); the missing-`throw` stratum measures
-  11.6% non-real over all 69 of its rows and clears the tripwire, so
-  `seed-a-missing-throw-arm-ratchet` is filed to gate it. Two pairing defects
-  filed as
-  `api-compare-pairs-a-ruby-predicate-and-instance-new-onto-one-ts-member`.
+- 2026-09-05: **re-measured per token**, as an audit rather than a doc PR —
+  `remeasure-arm-noise-floor-per-token`, delivered to
+  `audits/arm-mismatch-noise-floor-20260906T022720Z.md`. The whole population
+  and the `if` stratum stay ungated (75.0% / 70.0% non-real); the
+  missing-`throw` stratum measures 11.6% non-real over all 69 of its rows and
+  clears the tripwire, so `seed-a-missing-throw-arm-ratchet` is filed to gate
+  it. Two pairing defects filed as
+  `api-compare-pairs-a-ruby-predicate-and-instance-new-onto-one-ts-member`. The
+  `--token=` sampling flag the audit needed is unmerged, on branch
+  `remeasure-arm-noise-floor-per-token-9adb`; the ratchet slot lands it.
 - 2026-08-18: initial RFC, carved out of `0023-surfaced-deviations` by the
   backlog triage pass; 59 burndown stories re-homed.
 - 2026-08-30: **the tripwire fired — ungated.** The noise-floor measurement
