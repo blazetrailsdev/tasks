@@ -1,5 +1,5 @@
 ---
-rfc: "0000-ruby-compat-residual-convergence"
+rfc: "0138-ruby-compat-residual-convergence"
 title: "The ruby-compat residual: the divergences left behind once the package and the platform adapters both landed"
 status: active
 created: 2026-09-06
@@ -20,7 +20,7 @@ related-rfcs:
 priority: 3
 ---
 
-# RFC — the ruby-compat residual
+# RFC 0138 — the ruby-compat residual
 
 ## Summary
 
