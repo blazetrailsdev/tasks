@@ -1,6 +1,6 @@
 ---
 title: "BigDecimal#round diverges from MRI on a negative ndigits and on negative zero"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null

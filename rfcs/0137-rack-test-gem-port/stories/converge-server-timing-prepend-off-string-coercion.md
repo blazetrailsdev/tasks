@@ -1,6 +1,6 @@
 ---
 title: "Prepend the server-timing header value itself, not a String() coercion of it"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null

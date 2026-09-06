@@ -1,6 +1,6 @@
 ---
 title: "retrieve connection pool with invalid shard establishes a pool Rails does not"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

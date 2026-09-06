@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 isSharedCache sniffs the filename string, not the open flags Rails reads"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 7554
 claim: "2026-09-06T13:38:20Z"
 assignee: "seed-a-missing-throw-arm-ratchet"
 blocked-by: null

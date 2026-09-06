@@ -1,6 +1,6 @@
 ---
 title: "Request#port falls back to SERVER_PORT where Rails falls back to standard_port"
-status: ready
+status: claimed
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-06T14:18:20Z"
+assignee: "api-compare-pairs-a-ruby-predicate-and-instance-new-onto-one-ts-member"
 blocked-by: null
 closed-reason: null
 ---

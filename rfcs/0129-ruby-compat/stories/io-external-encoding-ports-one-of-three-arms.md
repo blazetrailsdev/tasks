@@ -1,6 +1,6 @@
 ---
 title: "IO#external_encoding ports only the FMODE_WRITABLE arm; rb_io_t carries neither enc2 nor mode"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null

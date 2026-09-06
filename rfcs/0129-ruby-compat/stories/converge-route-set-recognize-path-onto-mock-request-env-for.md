@@ -1,6 +1,6 @@
 ---
 title: "converge-route-set-recognize-path-onto-mock-request-env-for"
-status: ready
+status: claimed
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-06T14:38:14Z"
+assignee: "converge-route-set-recognize-path-onto-mock-request-env-for"
 blocked-by: null
 closed-reason: null
 ---

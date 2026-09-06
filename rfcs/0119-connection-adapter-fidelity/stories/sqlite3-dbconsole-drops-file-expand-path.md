@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 dbconsole pushes config.database raw where rb:50 expands it against Rails.root"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: 7554
 claim: "2026-09-06T13:38:20Z"
 assignee: "seed-a-missing-throw-arm-ratchet"
 blocked-by: null

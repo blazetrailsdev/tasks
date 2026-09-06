@@ -1,6 +1,6 @@
 ---
 title: "MockResponse#body returns the body list where Rails returns a buffered String"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null

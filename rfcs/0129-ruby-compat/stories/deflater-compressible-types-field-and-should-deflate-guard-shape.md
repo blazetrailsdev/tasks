@@ -1,6 +1,6 @@
 ---
 title: "Deflater stores @compressible_types as `include` and splits should_deflate?'s combined guard"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null

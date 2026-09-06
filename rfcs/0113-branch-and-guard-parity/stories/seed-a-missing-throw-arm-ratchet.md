@@ -1,6 +1,6 @@
 ---
 title: "seed-a-missing-throw-arm-ratchet"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: 7554
 claim: "2026-09-06T13:38:20Z"
 assignee: "seed-a-missing-throw-arm-ratchet"
 blocked-by: null

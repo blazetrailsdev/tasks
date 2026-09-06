@@ -1,6 +1,6 @@
 ---
 title: "SQLite3Adapter#exec and PostgreSQLAdapter#exec are trails-only raw-query paths"
-status: ready
+status: claimed
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-06T14:18:20Z"
+assignee: "api-compare-pairs-a-ruby-predicate-and-instance-new-onto-one-ts-member"
 blocked-by: null
 closed-reason: null
 ---

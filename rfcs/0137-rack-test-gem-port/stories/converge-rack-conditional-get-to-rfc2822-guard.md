@@ -1,6 +1,6 @@
 ---
 title: "Restore Ruby's guard shape in ConditionalGet#to_rfc2822 and narrow at the caller"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null

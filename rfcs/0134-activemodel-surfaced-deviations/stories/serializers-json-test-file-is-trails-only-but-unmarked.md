@@ -1,6 +1,6 @@
 ---
 title: "activemodel: serializers/json.test.ts is trails-only but not named .trails.test.ts"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
