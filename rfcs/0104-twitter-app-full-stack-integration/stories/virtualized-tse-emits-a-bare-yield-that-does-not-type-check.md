@@ -65,7 +65,7 @@ layout in the proving ground with a `<%= yield %>` in it.
 ## Acceptance criteria
 
 - The emitted `.trails/views/**/*.tse.ts` for a template containing `<%= yield
-  %>` type-checks clean under the app's own `tsconfig.json`.
+%>` type-checks clean under the app's own `tsconfig.json`.
 - `<%= yield "sidebar" %>` emits the section argument through the same
   `yield(section?)` member.
 - A test compiles an emitted layout with `tsc` and asserts zero diagnostics, so
