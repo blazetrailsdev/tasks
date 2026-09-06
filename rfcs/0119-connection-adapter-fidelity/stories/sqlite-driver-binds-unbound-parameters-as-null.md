@@ -82,17 +82,31 @@ and comments. Options worth costing before writing code:
   version pinned in `packages/activerecord/package.json` before assuming it
   does not.
 - Otherwise reuse `stripSqlComments` / the adapter's existing SQL scanner
-  rather than a fresh regex, and confine the pad to the EXPLAIN path so a
-  short bind list stays an error for ordinary queries — a permissive pad
-  everywhere would mask genuine bind-count bugs across the suite, which is the
-  reason #7433 did not simply loosen the wrapper.
+  rather than a fresh regex.
+
+Confining the pad to the EXPLAIN path was the original plan, on the theory
+that a permissive pad everywhere would mask bind-count bugs across the suite.
+It is not what the gem does and it is not achievable here: the gem simply
+never calls `sqlite3_bind_*` for a parameter it was not given, on any
+statement, and `node:sqlite`, `libsql` and `expo-sqlite` all pad in their
+native bindings with no wrapper-side arity check for trails to gate. Only
+`better-sqlite3` validates arity, and #7546 already padded it unconditionally
+across `run`/`get`/`all`/`iterate`. So the pad is unconditional in all four
+drivers, and the safeguard is a test per driver pinning that behaviour rather
+than an EXPLAIN-only carve-out.
 
 ## Acceptance criteria
 
 - [ ] A prepared statement executed with fewer binds than parameters binds the
       remainder NULL on every sqlite driver, matching the sqlite3 gem.
-- [ ] A short bind list on an ordinary (non-EXPLAIN) query still raises, so the
-      change does not hide bind-count bugs.
+- [ ] The behaviour of a short bind list on an ordinary (non-EXPLAIN) query is
+      covered by a test on every driver. It does NOT raise: the sqlite3 gem
+      pads unconditionally rather than only under EXPLAIN — it never calls
+      `sqlite3_bind_*` for a parameter it was not given, on any statement — and
+      three of the four drivers pad in their native bindings, below any layer
+      trails could intercept. The earlier "still raises" wording assumed an
+      EXPLAIN-only pad that does not match the gem; it is retired here rather
+      than left contradicted on a closed story.
 - [ ] `[[sqlite3-explain-passes-empty-binds]]` can then pass `[]` and delete the
       `@missingRailsArgs` receipt from
       `connection-adapters/sqlite3/database-statements.ts`.
