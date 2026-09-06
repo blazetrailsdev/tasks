@@ -82,6 +82,7 @@ report-only: it gates `shape` rows and reports `naming` rows.
       reach zero, and that is correct rather than stale. The gate is
       unaffected — it is only-shrink over a mark seeded from the CURRENT
       measurement, which includes them.
+
 - [ ] Marks are seeded from the CURRENT measurement, and the seed run's figures
       are recorded in `docs/infrastructure/arm-mismatch-noise-floor.md`, which
       has carried this RFC's noise-floor record since the first measurement.
