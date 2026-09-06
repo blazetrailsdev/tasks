@@ -21,7 +21,7 @@ closed-reason: null
 Every page controller in trailmap has to name its template explicitly:
 
 ```ts
-    this.render({ template: "rfc-pages/show", locals, status });
+this.render({ template: "rfc-pages/show", locals, status });
 ```
 
 because the implicit lookup and the repo's file-naming convention disagree.

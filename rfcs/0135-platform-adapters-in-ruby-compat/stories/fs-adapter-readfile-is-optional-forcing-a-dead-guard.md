@@ -34,10 +34,10 @@ choice for request work, and what trailmap's show pages do — cannot just call
 it. It must first prove the method exists:
 
 ```ts
-  const fs = await getFsAsync();
-  if (!fs.readFile) {
-    return { markdown: "", error: "the filesystem adapter cannot read files asynchronously" };
-  }
+const fs = await getFsAsync();
+if (!fs.readFile) {
+  return { markdown: "", error: "the filesystem adapter cannot read files asynchronously" };
+}
 ```
 
 Surfaced building `/rfc/<id>` and `/story/<id>` in trailmap
