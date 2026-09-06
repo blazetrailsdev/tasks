@@ -41,6 +41,11 @@ process reads underneath. One writer in one process is strictly simpler.
 - Every mutation verb has an endpoint, running the model methods in one
   transaction and writing its `events` row.
 - Each returns the same refusals the CLI returns, with the same messages.
-- trailmap is the only process that opens `tasks.db` for writing.
+- trailmap can write `tasks.db`: the connection is no longer read-only, and
+  one in-process connection serializes the verbs. Becoming the ONLY writer is
+  `move-the-tasks-cli-into-trailmap`, which deps on this story because the
+  endpoints have to exist before the CLI can be pointed at them — the two
+  cannot land together, so stating the guarantee here made this story
+  unsatisfiable on its own terms.
 - The app has a restart policy and a health check, and a deliberate kill is
   shown to recover without intervention.
