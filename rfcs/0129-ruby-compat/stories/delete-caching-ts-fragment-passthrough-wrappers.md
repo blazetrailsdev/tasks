@@ -1,6 +1,6 @@
 ---
 title: "Delete AbstractController::Caching's pass-through wrappers around Fragments"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

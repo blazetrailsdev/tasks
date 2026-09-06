@@ -1,6 +1,6 @@
 ---
 title: "Seat Multipart::EmptyContentError under EOFError and raise EOFError from BoundedIO#read"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 33
 pr: null
 claim: null
 assignee: null

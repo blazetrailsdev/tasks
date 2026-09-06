@@ -1,6 +1,6 @@
 ---
 title: "Enroll log_subscriber_test.rb's seven fragment-cache tests"
-status: blocked
+status: ready
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,11 +8,11 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: null
+priority: 7
 pr: null
-claim: "2026-09-05T09:02:11Z"
-assignee: "from-database-binary-value-is-not-frozen"
-blocked-by: "Original blocker (port-actionview-cache-helper) is DISCHARGED: packages/actionview/src/helpers/cache-helper.ts landed in #7531 on origin/main. A deeper reason still holds — AbstractController::Caching is never mixed into ActionController::Base (git grep readFragment origin/main -- packages/actionpack/src finds only caching.ts, its own tests and the barrel; nothing assigns onto Base.prototype), so CacheHelper#cache cannot reach controller.read_fragment / write_fragment and no read_fragment.action_controller / write_fragment.action_controller notification is emitted from a controller action. Now blocked on include-abstract-controller-caching-into-action-controller-base (ready)."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

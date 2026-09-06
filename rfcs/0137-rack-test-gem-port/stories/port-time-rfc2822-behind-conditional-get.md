@@ -1,6 +1,6 @@
 ---
 title: "Port Time.rfc2822 and parse with it instead of JS Date in ConditionalGet#to_rfc2822"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 37
 pr: null
 claim: null
 assignee: null

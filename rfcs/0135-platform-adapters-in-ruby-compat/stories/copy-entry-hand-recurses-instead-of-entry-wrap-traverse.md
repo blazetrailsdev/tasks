@@ -1,6 +1,6 @@
 ---
 title: "copy_entry hand-recurses where fileutils.rb:1044 traverses through Entry_#wrap_traverse, interleaving the metadata pass"
-status: ready
+status: claimed
 updated: 2026-09-06
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: 47
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-06T22:37:23Z"
+assignee: "copy-entry-hand-recurses-instead-of-entry-wrap-traverse"
 blocked-by: null
 closed-reason: null
 ---

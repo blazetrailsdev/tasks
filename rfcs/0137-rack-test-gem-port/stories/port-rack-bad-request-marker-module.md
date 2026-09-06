@@ -1,6 +1,6 @@
 ---
 title: "port-rack-bad-request-marker-module"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 32
 pr: null
 claim: null
 assignee: null

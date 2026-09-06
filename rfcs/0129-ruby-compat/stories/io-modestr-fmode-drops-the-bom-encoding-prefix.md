@@ -1,6 +1,6 @@
 ---
 title: "rb_io_modestr_fmode drops the bom| prefix arm, so FMODE_SETENC_BY_BOM is never set"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

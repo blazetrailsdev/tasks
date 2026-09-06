@@ -1,6 +1,6 @@
 ---
 title: "Delete CookieJar's hand-rolled set-cookie formatter now that write goes through Rack::Response"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 36
 pr: null
 claim: null
 assignee: null

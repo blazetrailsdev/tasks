@@ -1,6 +1,6 @@
 ---
 title: "include() re-copies an already-included module's members"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null
