@@ -2,7 +2,7 @@
 title: "activemodel: 13 trails-authored plain .test.ts files should carry the .trails.test.ts suffix"
 status: ready
 updated: 2026-09-06
-rfc: "0134-activemodel-surfaced-deviations"
+rfc: "0105-ar-deps-test-parity-100"
 cluster: test-placement
 packages: ["activemodel"]
 deps: ["test-compare-lint-and-serializers-json-mapping"]
