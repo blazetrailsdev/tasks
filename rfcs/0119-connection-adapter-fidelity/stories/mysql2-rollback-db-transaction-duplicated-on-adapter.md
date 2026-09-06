@@ -1,5 +1,5 @@
 ---
-title: "mysql2-rollback-db-transaction-duplicated-on-adapter"
+title: "Mysql2Adapter#rollback_db_transaction bypasses exec_rollback_db_transaction, drops Rails' two-class rescue, and raises an invented 'No active transaction'"
 status: draft
 updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 110
 priority: null
 pr: null
 claim: null
@@ -81,6 +81,12 @@ it — `mysql2-adapter.ts:563`'s `rollback()` and the `commitDbTransaction` /
 `commit()` pair read the same flag, so the state it maintained has to land in
 `execRollbackDbTransaction` or the transaction manager rather than being
 dropped.
+
+`commit-db-transaction-should-hold-its-own-internal-execute` (RFC 0119, claimed
+2026-09-05) is the commit-side mirror and touches that same flag. Its context
+asserts "the rollback side is already the Rails way round" — true for SQLite3
+and PostgreSQL after PR #7540, but NOT for Mysql2, which is this story.
+Coordinate rather than converging `_inTransaction` twice.
 
 ## Acceptance criteria
 
