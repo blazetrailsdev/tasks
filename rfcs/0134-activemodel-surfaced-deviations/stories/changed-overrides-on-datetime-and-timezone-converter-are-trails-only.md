@@ -47,7 +47,7 @@ Prior art: `converge-value-type-changed-to-ruby-equality` (0023, draft) covers
 the generic `Value#changed?` seam and `type/value.ts`. This story is the
 dependent half — deleting the two per-type overrides once generic Ruby equality
 lands — and is filed separately because those two files are not in that story's
-`story_paths` and Rails. _absence_ of an override in them is the specific
+`story_paths` and Rails having no override in them is the specific
 deviation.
 
 ## Converged shape
