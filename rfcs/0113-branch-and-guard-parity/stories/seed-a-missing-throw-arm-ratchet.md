@@ -20,8 +20,8 @@ closed-reason: null
 
 `remeasure-arm-noise-floor-per-token` re-ran the RFC 0113 noise-floor
 measurement after the six extractor stories landed, stratified by token, and
-wrote it up in trails' `docs/infrastructure/arm-mismatch-noise-floor.md`
-("Second measurement — 2026-09-05").
+delivered it as an audit report, `audits/arm-mismatch-noise-floor-20260906T022720Z.md`
+(229 rows hand-audited, with the per-row verdict tables).
 
 The whole population still cannot gate (75.0% non-real, n=80, seed 113), and
 neither can the `if` stratum (70.0% non-real, n=80, seed 113) — `if` is 1,891 of
@@ -60,6 +60,11 @@ report-only: it gates `shape` rows and reports `naming` rows.
       baselined: a `throw(:abort)` / `throw(:exception, …)` whose port calls the
       settled halt helper does not count as a missing `throw`.
 - [ ] Marks are seeded from the CURRENT measurement, and the seed run's figures
-      are recorded in `docs/infrastructure/arm-mismatch-noise-floor.md`.
+      are recorded in `docs/infrastructure/arm-mismatch-noise-floor.md`, which
+      has carried this RFC's noise-floor record since the first measurement.
+- [ ] Lands the `--token=` sampling flag the audit was taken with — written but
+      unmerged, on trails branch `remeasure-arm-noise-floor-per-token-9adb`
+      (trails#7549, closed) — since without it the audit's draws cannot be
+      re-run.
 - [ ] A `package.json` script and a CI step, wired the way
       `parity:api:calls` is.
