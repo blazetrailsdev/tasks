@@ -1,6 +1,6 @@
 ---
 title: "converge-sql-classification-onto-build-read-query-regexp"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

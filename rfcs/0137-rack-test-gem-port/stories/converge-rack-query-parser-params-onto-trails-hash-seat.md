@@ -1,6 +1,6 @@
 ---
 title: "Give Rack::QueryParser::Params the trails Hash seat so three when-Hash patches delete"
-status: ready
+status: claimed
 updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 28
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-06T17:39:33Z"
+assignee: "converge-actiondispatch-cookies-middleware-onto-rack-response"
 blocked-by: null
 closed-reason: null
 ---

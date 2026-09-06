@@ -1,6 +1,6 @@
 ---
 title: "A multi-value `when` reads as one arm against every faithful TS lowering"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null

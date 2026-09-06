@@ -1,7 +1,7 @@
 ---
 title: "Move the tasks CLI into trailmap and make it an HTTP client"
-status: ready
-updated: 2026-09-05
+status: claimed
+updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-06T17:58:18Z"
+assignee: "render-the-rfc-and-story-show-pages"
 blocked-by: null
 closed-reason: null
 ---

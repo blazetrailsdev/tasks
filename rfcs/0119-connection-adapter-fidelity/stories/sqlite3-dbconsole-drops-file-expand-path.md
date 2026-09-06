@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 dbconsole pushes config.database raw where rb:50 expands it against Rails.root"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

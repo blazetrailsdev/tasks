@@ -1,6 +1,6 @@
 ---
 title: "oid-point-cast-and-serialize-null-out-instead-of-falling-through"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

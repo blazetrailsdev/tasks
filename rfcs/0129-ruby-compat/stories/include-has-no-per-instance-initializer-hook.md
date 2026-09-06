@@ -1,6 +1,6 @@
 ---
 title: "include-has-no-per-instance-initializer-hook"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null

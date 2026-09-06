@@ -1,6 +1,6 @@
 ---
 title: "postgresql-write-query-invalid-encoding-arm"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7565
 claim: "2026-09-06T16:58:13Z"
 assignee: "postgresql-write-query-invalid-encoding-arm"
 blocked-by: null

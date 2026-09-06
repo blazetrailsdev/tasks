@@ -1,6 +1,6 @@
 ---
 title: "include-abstract-controller-caching-into-action-controller-base"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null

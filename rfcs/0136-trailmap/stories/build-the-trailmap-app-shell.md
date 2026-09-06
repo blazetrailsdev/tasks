@@ -1,6 +1,6 @@
 ---
 title: "Build the trailmap app shell: layout, nav and the status colour vocabulary"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null

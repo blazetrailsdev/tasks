@@ -1,7 +1,7 @@
 ---
 title: "retire-adapter-resolution-sync-companions"
-status: ready
-updated: 2026-09-05
+status: in-progress
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7566
+claim: "2026-09-06T17:18:15Z"
+assignee: "retire-adapter-resolution-sync-companions"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 isSharedCache sniffs the filename string, not the open flags Rails reads"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
