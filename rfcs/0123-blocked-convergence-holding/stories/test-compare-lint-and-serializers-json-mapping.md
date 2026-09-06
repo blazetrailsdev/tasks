@@ -2,7 +2,7 @@
 title: "activemodel: cases/lint_test.rb sits outside the test-compare population"
 status: blocked
 updated: 2026-09-06
-rfc: "0134-activemodel-surfaced-deviations"
+rfc: "0123-blocked-convergence-holding"
 cluster: test-placement
 packages: ["activemodel"]
 deps: []
