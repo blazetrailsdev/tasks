@@ -2,7 +2,7 @@
 title: "PG OID::DateTime's BC arm parses wire format instead of rewriting the year and calling super"
 status: draft
 updated: 2026-09-06
-rfc: "0134-activemodel-surfaced-deviations"
+rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []
