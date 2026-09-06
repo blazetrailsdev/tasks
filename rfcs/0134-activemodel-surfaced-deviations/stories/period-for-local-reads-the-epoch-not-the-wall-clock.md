@@ -36,7 +36,7 @@ a new `ignoringOffset` helper. The other two local-side entry points still read
 the epoch and were left alone because nothing in that PR reached them:
 
 - `Timezone#periodsForLocal` (`time-zone.ts`) — `const localMs =
-  toDate(time).getTime()`, then searches the offsets around that instant.
+toDate(time).getTime()`, then searches the offsets around that instant.
 - `Timezone#periodForLocal` — takes the same value and forwards it, and its
   `PeriodNotFound` / `AmbiguousTime` messages render it with
   `toDate(time).toISOString()`, so a wrong seat also produces a wrong message.
