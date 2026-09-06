@@ -1,6 +1,6 @@
 ---
 title: "json-serialization-tests-stand-ins-are-person-not-contact"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7577
 claim: "2026-09-06T20:10:04Z"
 assignee: "json-serialization-tests-stand-ins-are-person-not-contact"
 blocked-by: null
