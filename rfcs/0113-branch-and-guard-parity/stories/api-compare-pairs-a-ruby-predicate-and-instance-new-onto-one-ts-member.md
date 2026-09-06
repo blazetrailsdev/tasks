@@ -23,7 +23,7 @@ two rows — 2.5% — that are neither real divergences nor lowering artefacts: 
 two bodies compared are not counterparts at all. Both are pairing defects in
 `scripts/api-compare`, not skeleton defects, so they inflate every report built
 over the manifest, not just the arms one. Written up in trails'
-`docs/infrastructure/arm-mismatch-noise-floor.md`, "Extraction defects found".
+`audits/arm-mismatch-noise-floor-20260906T022720Z.md`, "Gap inventory" 2-4.
 
 1. **A Ruby predicate pairs onto its own bare-named sibling.**
    `actionview/lib/action_view/helpers/capture_helper.rb` defines both
