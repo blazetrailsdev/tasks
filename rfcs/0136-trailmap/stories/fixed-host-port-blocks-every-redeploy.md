@@ -57,7 +57,7 @@ reachable at a stable address while letting the app deploy.
 Options seen so far, none yet chosen:
 
 - **nginx instead of a docker publish** — `dokku proxy:ports-add trailmap
-  http:8080:8080`, so nginx listens on 8080 and proxies to the container.
+http:8080:8080`, so nginx listens on 8080 and proxies to the container.
   No host-port collision, so deploys work. But dokku's
   `nginx:set <app> bind-address-ipv4` is per app, not per listener, so binding
   8080 to loopback would also bind the public 80/443 vhost there and take the
