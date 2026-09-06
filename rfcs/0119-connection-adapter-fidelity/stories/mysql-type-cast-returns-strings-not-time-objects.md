@@ -47,6 +47,6 @@ the way `mysql/quoting.rb:96-112` does, with only the `else` arm reaching
 - [ ] `typeCast`'s `TimeWithZone`, `Time` and `Date` arms answer the converted
       value itself (`mysql/quoting.rb:96-112`), not `this.quotedDate(...)`.
 - [ ] The `@noRailsEquivalent CONVERGEABLE
-    mysql-type-cast-returns-strings-not-time-objects` receipt is deleted from
+  mysql-type-cast-returns-strings-not-time-objects` receipt is deleted from
       `mysql/quoting.ts`.
 - [ ] The MariaDB lane stays green, including the prepared-statements-only job.
