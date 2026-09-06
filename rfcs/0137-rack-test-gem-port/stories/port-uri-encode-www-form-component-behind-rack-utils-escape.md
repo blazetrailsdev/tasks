@@ -1,14 +1,14 @@
 ---
 title: "Port URI.encode_www_form_component and make Rack::Utils.escape the one-line delegation"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 25
 pr: null
 claim: null
 assignee: null

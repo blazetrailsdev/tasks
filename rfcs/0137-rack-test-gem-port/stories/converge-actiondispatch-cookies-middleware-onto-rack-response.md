@@ -1,14 +1,14 @@
 ---
 title: "Port ActionDispatch::Cookies#call onto Rack::Response so set-cookie is a Rack 3 array"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 27
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "A rolled-back DDL leaves its reflected columns in the schema cache"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

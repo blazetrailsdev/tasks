@@ -1,14 +1,14 @@
 ---
 title: "Give Rack::QueryParser::Params the trails Hash seat so three when-Hash patches delete"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 28
 pr: null
 claim: null
 assignee: null

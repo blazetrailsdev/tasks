@@ -1,6 +1,6 @@
 ---
 title: "Arms report: --direction and --package filters, and a per-package token table"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: 7550
+claim: "2026-09-06T11:48:11Z"
+assignee: "arms-report-direction-and-package-strata"
 blocked-by: null
 closed-reason: null
 ---

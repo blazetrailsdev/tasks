@@ -1,6 +1,6 @@
 ---
 title: "SQLite driver shim raises on unbound placeholders where the Ruby gem binds NULL"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

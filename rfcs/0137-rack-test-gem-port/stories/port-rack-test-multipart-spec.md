@@ -1,6 +1,6 @@
 ---
 title: "port-rack-test-multipart-spec"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null

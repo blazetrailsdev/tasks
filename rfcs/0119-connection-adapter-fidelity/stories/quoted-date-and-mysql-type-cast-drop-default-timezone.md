@@ -1,6 +1,6 @@
 ---
 title: "quoted_date and MySQL type_cast drop Rails' default_timezone branch"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
