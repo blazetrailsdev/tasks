@@ -2,7 +2,7 @@
 title: "test-helpers Contact extends Model where Ruby's is a plain class"
 status: draft
 updated: 2026-09-06
-rfc: "0134-activemodel-surfaced-deviations"
+rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: ["activemodel"]
 deps: []
