@@ -1,7 +1,7 @@
 ---
 rfc: "0111-error-class-message-parity"
 title: "Error-class and message parity burndown"
-status: draft
+status: active
 created: 2026-08-18
 updated: 2026-08-18
 owner: "@deanmarano"

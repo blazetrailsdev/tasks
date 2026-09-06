@@ -6,7 +6,9 @@
 #   1. Fast-forwards the main worktree's view of origin/main (fetch only).
 #   2. Creates ~/github/blazetrailsdev/worktrees/<name> on a new branch <name>
 #      branched off origin/main.
-#   3. Runs `pnpm install` inside the new worktree so validate/build-index/
+#   3. Copies .claude/settings.local.json from the main worktree so the new
+#      worktree starts with the same per-machine permissions.
+#   4. Runs `pnpm install` inside the new worktree so validate/build-index/
 #      lint hooks work.
 #
 # Mirrors trails' scripts/start-worktree.sh but without the vendor-source and
@@ -78,6 +80,18 @@ cleanup_partial_worktree() {
   fi
 }
 trap cleanup_partial_worktree EXIT
+
+# settings.local.json is copied, not symlinked — claude resolves the file via
+# realpath, and a symlink to the main worktree's settings has been observed to
+# not take effect.
+echo "==> Copying .claude config from main worktree (per-machine permissions)"
+if [[ -e "$MAIN_REPO/.claude/settings.local.json" ]]; then
+  mkdir -p "$TARGET/.claude"
+  cp "$MAIN_REPO/.claude/settings.local.json" "$TARGET/.claude/settings.local.json"
+  echo "    copied .claude/settings.local.json"
+else
+  echo "    skip .claude/settings.local.json (not present in main worktree, optional)"
+fi
 
 echo "==> Running pnpm install"
 ( cd "$TARGET" && pnpm install )
