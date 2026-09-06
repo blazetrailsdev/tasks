@@ -1,5 +1,5 @@
 ---
-title: "execute-duplicated-on-adapters-and-wired-per-adapter"
+title: "execute is shadowed on all three adapters, forcing three per-adapter dirties_query_cache calls where Rails wires it once on the base class"
 status: draft
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null
