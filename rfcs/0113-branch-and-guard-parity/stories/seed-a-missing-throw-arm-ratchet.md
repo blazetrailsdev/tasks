@@ -56,9 +56,32 @@ report-only: it gates `shape` rows and reports `naming` rows.
       no reseed verb, a `tighten` verb that writes marks DOWN only.
 - [ ] The `if`, `loop`, `try` and `rescue` strata stay report-only;
       `parity:api:arms:report` is unchanged.
-- [ ] The two artefact classes above are suppressed at the source rather than
+- [ ] The HALT-HELPER artefact class is suppressed at the source rather than
       baselined: a `throw(:abort)` / `throw(:exception, …)` whose port calls the
       settled halt helper does not count as a missing `throw`.
+- [ ] The Ruby-only-guard class is NOT suppressed, and is recorded as a
+      permanent floor. This criterion originally asked for both classes to be
+      suppressed at the source, on the strength of the audit's Gap 1 bullet
+      ("both suppressible at the source"). That phrasing is loose and the same
+      audit supersedes it: **Gap 5** examines the class and dispositions it
+      "no action proposed — these have no JS counterpart at all, so there is
+      nothing to converge; they are a permanent floor, not debt."
+
+      There is also no mechanism to suppress them with. The class is four
+      DIFFERENT Ruby constructs — `require "bcrypt" rescue LoadError`
+      (`secure_password.rb:120-124`), `constantize` / `NameError`
+      (`request.rb:98-103`), `singleton_class?`
+      (`attribute_accessors.rb:56`) and the raise-to-build-a-backtrace trick
+      (`error_reporter.rb:258-263`) — each emitting a Ruby `throw` with no TS
+      token on the other side to fold it onto, the way the halt helper folds.
+      A rule broad enough to cover all four would discharge real dropped
+      raises with them.
+
+      So those four rows sit in `arm-throw-mark.json` permanently. A file
+      whose mark is held up by one is not a burndown target: its mark cannot
+      reach zero, and that is correct rather than stale. The gate is
+      unaffected — it is only-shrink over a mark seeded from the CURRENT
+      measurement, which includes them.
 - [ ] Marks are seeded from the CURRENT measurement, and the seed run's figures
       are recorded in `docs/infrastructure/arm-mismatch-noise-floor.md`, which
       has carried this RFC's noise-floor record since the first measurement.
