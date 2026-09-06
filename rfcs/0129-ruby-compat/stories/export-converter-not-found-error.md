@@ -41,7 +41,7 @@ The motivating call site is `doWriteconv` and it is already in the tree
 
 - `ConverterNotFoundError` moves to `packages/ruby-compat/src/converter-not-found-error.ts`
   with its `vendor/ruby/transcode.c` citation and a `@noRailsEquivalent
-  PERMANENT` receipt, and is exported from the package index.
+PERMANENT` receipt, and is exported from the package index.
 - `scripts/api-compare/extra-surface-mark.json`'s `ruby-compat.total` moves
   57 → 58 as the reviewed line of this story's diff; `novel` stays pinned at 0.
 - `io.ts`'s module-private declaration and the paragraph explaining why it is
