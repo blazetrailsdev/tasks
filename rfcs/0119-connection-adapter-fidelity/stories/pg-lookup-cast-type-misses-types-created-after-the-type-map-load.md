@@ -1,6 +1,6 @@
 ---
 title: "lookup_cast_type misses a type created after the last type-map load, where Rails' live ::regtype resolves it"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "setLockThread collapses Rails' three-arm lock_thread= into two and instantiates NullLock"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

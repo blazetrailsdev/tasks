@@ -1,6 +1,6 @@
 ---
 title: "normalizeAdapterName's family map is a second enumeration of the driver registry"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

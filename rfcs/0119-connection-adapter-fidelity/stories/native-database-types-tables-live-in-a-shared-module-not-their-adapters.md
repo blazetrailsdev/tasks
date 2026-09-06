@@ -1,6 +1,6 @@
 ---
 title: "NATIVE_DATABASE_TYPES tables live in a shared module and alias a by-adapter map with no Rails counterpart"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "buildUrlHash's Windows drive-letter arm is an invented third branch"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

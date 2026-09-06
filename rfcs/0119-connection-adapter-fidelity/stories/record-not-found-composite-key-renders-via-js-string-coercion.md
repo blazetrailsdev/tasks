@@ -1,7 +1,7 @@
 ---
 title: 'RecordNotFound renders a composite key as shop_id,id where Ruby renders ["shop_id", "id"]'
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

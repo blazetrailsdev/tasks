@@ -1,6 +1,6 @@
 ---
 title: "PG OID infinity bounds are JS numbers where Rails carries the subtype's own infinity"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

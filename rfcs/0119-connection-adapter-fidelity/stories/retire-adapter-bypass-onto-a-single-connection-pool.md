@@ -1,6 +1,6 @@
 ---
 title: "_adapter is a reader bypass where Rails has only connection_pool"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

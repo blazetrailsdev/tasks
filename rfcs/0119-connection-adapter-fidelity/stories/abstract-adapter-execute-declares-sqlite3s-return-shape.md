@@ -1,6 +1,6 @@
 ---
 title: "AbstractAdapter#execute declares sqlite3's backward-compatibility return shape"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

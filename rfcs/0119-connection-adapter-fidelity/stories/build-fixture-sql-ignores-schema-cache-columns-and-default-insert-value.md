@@ -1,7 +1,7 @@
 ---
 title: "build-fixture-sql-ignores-schema-cache-columns-and-default-insert-value"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "sql-datetime-instant-formatters-have-no-production-callers"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "build_configs inlines for_current_env? and invents _isThreeLevelConfig"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "isSharedCache carries a driver-capability guard Rails does not have, and five skipped cases"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

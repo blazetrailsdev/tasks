@@ -1,7 +1,7 @@
 ---
 title: "Make abstract adapter #explain a required NotImplementedError member, not an optional type slot"
-status: blocked
-updated: 2026-08-25
+status: closed
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: 7041
 claim: "2026-08-25T15:30:56Z"
 assignee: "port-attribute-method-pattern-match-struct"
-blocked-by: "Blocked on schema-statements-host-type-inherits-adapter-surface: interface SchemaStatements extends DatabaseAdapter (abstract/schema-statements.ts:313) republishes every REQUIRED adapter member as extra surface, so flipping explain? to explain moves activerecord 1392->1393 and reds parity:api:extra:gate. The NotImplementedError base body landed in #7041; the required-member half waits on that inheritance being removed."
-closed-reason: null
+blocked-by: null
+closed-reason: "Delivered on main (origin/main). Both remaining criteria hold: (1) explain is now a REQUIRED member — connection-adapters/abstract-adapter.ts:705 reads `explain(arel: unknown, binds?: unknown[], options?: ExplainOption[]): Promise<string>;` with no `?`; (2) explain.ts:33 calls `await c.explain(sql, binds, options)` with no non-null assertion and no justification comment. The NotImplementedError base body landed earlier in PR #7041. The blocker (schema-statements-host-type-inherits-adapter-surface) is done: abstract/schema-statements.ts:151 now reads `interface SchemaStatements extends Pick<DatabaseAdapter, ...>`, not `extends DatabaseAdapter`, so the extra-surface republication that blocked the flip is gone."
 ---
 
 ## Context
