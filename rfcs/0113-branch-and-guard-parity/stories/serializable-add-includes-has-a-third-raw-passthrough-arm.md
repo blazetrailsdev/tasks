@@ -2,7 +2,7 @@
 title: "serializable_add_includes' consumer has a third raw-passthrough arm Rails does not"
 status: draft
 updated: 2026-09-06
-rfc: "0134-activemodel-surfaced-deviations"
+rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: ["activemodel"]
 deps: []
