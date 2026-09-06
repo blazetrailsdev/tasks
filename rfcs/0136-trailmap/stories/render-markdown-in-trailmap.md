@@ -1,6 +1,6 @@
 ---
 title: "Render story and RFC markdown in trailmap"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: null
+pr: 8
 claim: "2026-09-06T11:55:27Z"
 assignee: "render-markdown-in-trailmap"
 blocked-by: null

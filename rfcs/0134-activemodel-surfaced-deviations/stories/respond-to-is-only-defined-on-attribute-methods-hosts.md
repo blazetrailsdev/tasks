@@ -1,6 +1,6 @@
 ---
 title: "respond-to-is-only-defined-on-attribute-methods-hosts"
-status: ready
+status: claimed
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-06T12:58:18Z"
+assignee: "respond-to-is-only-defined-on-attribute-methods-hosts"
 blocked-by: null
 closed-reason: null
 ---

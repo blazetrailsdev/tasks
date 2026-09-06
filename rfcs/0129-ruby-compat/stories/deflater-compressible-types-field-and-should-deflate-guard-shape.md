@@ -1,6 +1,6 @@
 ---
 title: "Deflater stores @compressible_types as `include` and splits should_deflate?'s combined guard"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7551
+claim: "2026-09-06T12:18:19Z"
+assignee: "bigdecimal-round-diverges-from-mri-on-negative-ndigits"
 blocked-by: null
 closed-reason: null
 ---

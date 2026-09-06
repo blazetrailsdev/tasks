@@ -1,6 +1,6 @@
 ---
 title: "Build the trailmap app shell: layout, nav and the status colour vocabulary"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: null
+pr: 7
 claim: "2026-09-06T11:50:16Z"
 assignee: "build-the-trailmap-app-shell"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "io-read-raises-textdecoders-rangeerror-for-a-label-less-encoding"
-status: ready
+status: claimed
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-06T12:58:18Z"
+assignee: "respond-to-is-only-defined-on-attribute-methods-hosts"
 blocked-by: null
 closed-reason: null
 ---

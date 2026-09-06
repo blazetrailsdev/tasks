@@ -1,6 +1,6 @@
 ---
 title: "IO#external_encoding ports only the FMODE_WRITABLE arm; rb_io_t carries neither enc2 nor mode"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7551
+claim: "2026-09-06T12:18:19Z"
+assignee: "bigdecimal-round-diverges-from-mri-on-negative-ndigits"
 blocked-by: null
 closed-reason: null
 ---

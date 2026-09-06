@@ -1,6 +1,6 @@
 ---
 title: "Type::Value#map drops its block instead of yielding"
-status: ready
+status: claimed
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-06T12:38:20Z"
+assignee: "json-serialization-tests-stand-ins-are-person-not-contact"
 blocked-by: null
 closed-reason: null
 ---

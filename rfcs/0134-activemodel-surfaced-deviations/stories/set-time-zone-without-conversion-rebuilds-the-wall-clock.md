@@ -1,6 +1,6 @@
 ---
 title: "set_time_zone_without_conversion rebuilds the wall clock instead of calling Time.zone.local_to_utc"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7551
+claim: "2026-09-06T12:18:19Z"
+assignee: "bigdecimal-round-diverges-from-mri-on-negative-ndigits"
 blocked-by: null
 closed-reason: null
 ---
