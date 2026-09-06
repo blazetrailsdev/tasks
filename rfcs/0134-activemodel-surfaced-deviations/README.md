@@ -1,9 +1,9 @@
 ---
 rfc: "0134-activemodel-surfaced-deviations"
 title: "ActiveModel surfaced deviations — the package's deviation bucket, taking custody from 0023 and adding the 2026-09-01 fidelity audit's findings"
-status: active
+status: closed
 created: 2026-09-01
-updated: 2026-09-02
+updated: 2026-09-06
 owner: "@deanmarano"
 packages:
   - "activemodel"
@@ -389,3 +389,19 @@ behind `test-compare-lint-and-serializers-json-mapping`.
   the tree: 32 moved here open and clustered, 19 closed as converged (their
   files re-homed here too), 21 left in 0023 and named in Non-goals.
   `activesupport` added to declared `packages`; open question 3 answered.
+- 2026-09-06: **closed — sunset.** 124 stories: 97 done, 27 closed, 0 open. Goal
+  met on the verification criteria that are checkable on `origin/main`: zero
+  free-prose `@noRailsEquivalent` tags in `packages/activemodel/src` (52 tags,
+  51 `PERMANENT` + 1 `CONVERGEABLE`, none malformed, no duplicate); the
+  `scripts/api-compare/call-mismatches-exclude/activemodel/` rows are down to 7
+  across 5 files with zero placeholder reasons (14 rows, 3 placeholders at
+  seeding); the named behaviour fixes landed (`errors.ts:126` honours
+  `full_messages`, `attribute-set/yaml-encoder.ts` writes `conciseAttributes`,
+  `dirty.ts` no longer resolves aliases). `parity:test` activemodel is 56/56
+  mapped files; the 57th (`lint_test.rb`) is not reachable — it defines no test
+  methods, and mapping it needs cross-file helper folding in
+  `scripts/test-compare/extract-ts-core.ts`. Four stories re-homed rather than
+  finished: `serializable-add-includes-has-a-third-raw-passthrough-arm` → 0113,
+  `contact-test-model-extends-model-where-rails-is-a-plain-class` and
+  `rename-trails-only-plain-tests-to-trails-suffix` → 0105,
+  `test-compare-lint-and-serializers-json-mapping` → 0123 (still blocked).
