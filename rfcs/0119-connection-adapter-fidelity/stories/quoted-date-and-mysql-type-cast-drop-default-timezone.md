@@ -1,7 +1,7 @@
 ---
 title: "quoted_date and MySQL type_cast drop Rails' default_timezone branch"
-status: claimed
-updated: 2026-09-05
+status: in-progress
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: ["activerecord"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 7543
 claim: "2026-09-05T23:06:51Z"
 assignee: "converge-hash-config-configuration-alias"
 blocked-by: null

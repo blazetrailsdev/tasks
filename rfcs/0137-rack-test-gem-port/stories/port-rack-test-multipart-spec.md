@@ -1,7 +1,7 @@
 ---
 title: "port-rack-test-multipart-spec"
-status: claimed
-updated: 2026-09-05
+status: in-progress
+updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 21
-pr: null
+pr: 7541
 claim: "2026-09-05T23:00:00Z"
 assignee: "teach-spelling-map-rack-test-operator-members"
 blocked-by: null

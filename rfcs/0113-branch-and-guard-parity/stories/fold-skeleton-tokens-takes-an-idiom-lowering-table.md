@@ -1,7 +1,7 @@
 ---
 title: "foldSkeletonTokens reads an idiom-lowering table, not a single derived loop set"
-status: claimed
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
 packages: []
@@ -9,7 +9,7 @@ deps: ["skeleton-loop-fold-covers-only-each"]
 deps-rfc: []
 est-loc: 160
 priority: 3
-pr: null
+pr: 7544
 claim: "2026-09-05T23:00:28Z"
 assignee: "fold-skeleton-tokens-takes-an-idiom-lowering-table"
 blocked-by: null
