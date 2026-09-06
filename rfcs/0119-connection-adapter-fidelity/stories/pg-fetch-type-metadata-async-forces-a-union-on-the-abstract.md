@@ -1,7 +1,7 @@
 ---
 title: "PG fetchTypeMetadata is async where Rails is sync, forcing a union return on the abstract and three super-site narrowings"
-status: in-progress
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

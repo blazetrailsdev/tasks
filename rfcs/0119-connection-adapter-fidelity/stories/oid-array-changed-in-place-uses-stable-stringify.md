@@ -1,7 +1,7 @@
 ---
 title: "PG Array#changed_in_place? JSON-round-trips instead of comparing elementwise"
-status: in-progress
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "the server-version memo is cold at first use because connect drops configureConnection's promise"
-status: in-progress
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "converge-connection-management-onto-executor-and-body-proxy"
-status: in-progress
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

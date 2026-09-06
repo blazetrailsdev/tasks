@@ -1,7 +1,7 @@
 ---
 title: "Serve /rfc/<id> and /story/<id> from trailmap"
 status: ready
-updated: 2026-09-05
+updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
@@ -9,7 +9,7 @@ deps:
   ["serve-the-read-verbs-as-json", "build-the-trailmap-app-shell", "render-markdown-in-trailmap"]
 deps-rfc: []
 est-loc: 250
-priority: 15
+priority: 3
 pr: null
 claim: null
 assignee: null

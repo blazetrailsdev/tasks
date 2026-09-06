@@ -1,7 +1,7 @@
 ---
 title: "lookup_cast_type still misses types outside load_additional_types' eager set"
-status: in-progress
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

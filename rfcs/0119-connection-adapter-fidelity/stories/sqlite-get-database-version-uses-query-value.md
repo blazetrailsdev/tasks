@@ -1,6 +1,6 @@
 ---
 title: "SQLite3Adapter#getDatabaseVersion probes the raw driver, not query_value"
-status: in-progress
+status: blocked
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: 7546
 claim: "2026-09-05T23:56:22Z"
 assignee: "converge-pg-native-types-and-instance-type-map-onto-adapter"
-blocked-by: null
+blocked-by: "Converging get_database_version onto query_value deadlocks the SQLite lane (base.test.ts 'connection in local time' / 'connection in utc time' hang for 30s; reproduced locally). Routing the probe through queryValue makes it a pooled, logged, lock-taking query issued from INSIDE configureConnection: PoolConfig.serverVersion (pool-config.ts:81-89) takes its monitor, calls getDatabaseVersion, and the resulting queryValue never resolves for a connection established mid-test via establishConnection — while checkVersion (sqlite3-adapter.ts:765, from abstract-adapter.ts:1973 configureConnection) and supportsVirtualColumns (:662, via tableInfo :1288) both re-enter databaseVersion behind that held monitor. Rails has no such cycle: get_database_version's query_value runs on the already-connected raw handle and Ruby's Monitor is thread-reentrant. Verified NOT caused by the async-connect flag (better-sqlite3 is the sync driver here) and NOT fixable inside this story's diff: it needs trails' connect/configure ordering to be able to service a query before configureConnection returns, which is its own story. Story 4's other half (dropping the sqlite-driver-await disable, the dual Promise arms and the 0.0.0 fallback) rides on the same change and is blocked with it. PR #7546 shipped the other three bundled stories; the @missingRailsCall query_value tag is left in place."
 closed-reason: null
 ---
 

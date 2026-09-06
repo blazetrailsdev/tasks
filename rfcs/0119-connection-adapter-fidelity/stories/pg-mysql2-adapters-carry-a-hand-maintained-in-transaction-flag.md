@@ -1,7 +1,7 @@
 ---
 title: "PG and mysql2 adapters carry a hand-maintained _inTransaction flag Rails derives from openTransactions"
-status: in-progress
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
