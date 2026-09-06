@@ -1,6 +1,6 @@
 ---
 title: "Port core_ext/string_ext, array/conversions and json/encoding cases (18)"
-status: claimed
+status: in-progress
 updated: 2026-09-06
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 7578
 claim: "2026-09-06T22:39:59Z"
 assignee: "port-core-ext-string-array-and-json-cases"
 blocked-by: null

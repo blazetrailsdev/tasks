@@ -1,6 +1,6 @@
 ---
 title: "The ZlibAdapter seam is one-shot, so GzipWriter buffers the whole payload instead of streaming"
-status: ready
+status: blocked
 updated: 2026-09-06
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 220
 priority: 48
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-06T22:42:57Z"
+assignee: "zlib-seam-is-one-shot-so-gzipwriter-buffers-the-payload"
+blocked-by: "No JS runtime offers a SYNCHRONOUS incremental zlib API, so the story's converged shape cannot be built. Verified on Node 20.19.6: (1) zlib.deflateSync/inflateSync are stateless one-shots - chaining them with Z_SYNC_FLUSH produces independent deflate streams, not a continuation, so the shape the story names ('zlib.deflateSync over chunks with Z_SYNC_FLUSH') does not concatenate into a valid stream; (2) the only incremental sync entry point, stream._processChunk(chunk, Z_SYNC_FLUSH), calls _close(self) unconditionally at the end of processChunkSync (node lib/zlib.js), nulling _handle - a second sync chunk throws 'Cannot read properties of null (reading writeSync)'; (3) createGzip/createGunzip and the browser CompressionStream are both asynchronous, so a browser backend cannot implement a sync handle either. The callers are sync and must stay sync (SchemaCache.read schema-cache.ts:107 and SchemaCache#open schema-cache.ts:467, mirroring Rails' sync schema_cache.rb:468), so the seam cannot be both streaming and sync. The two workarounds both relocate or worsen the deviation rather than converging it: buffering inside the adapter handle just moves the same retention behind the seam, and per-chunk multi-member gzip (gzipSync per write, concatenated - valid and genuinely non-buffering on the write side) emits a multi-member file where Ruby's rb_gzwriter_write/rb_gzfile_close (vendor/ruby/ext/zlib/zlib.c:3745,3524) emit ONE member with one header, which is a fidelity regression at a surface whose byte-identity SchemaCache depends on (the mtime=0 zeroing). Unblocking requires first making the GzipReader/GzipWriter callers async (SchemaCache.read / #dumpTo), which is a separate, larger story."
 closed-reason: null
 ---
 
