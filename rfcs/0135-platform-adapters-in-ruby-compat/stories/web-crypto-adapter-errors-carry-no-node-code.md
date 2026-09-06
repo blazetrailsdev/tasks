@@ -1,6 +1,6 @@
 ---
 title: "The Web Crypto adapter's errors carry no Node error code"
-status: ready
+status: claimed
 updated: 2026-09-06
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: 42
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-06T19:04:29Z"
+assignee: "actionpack-uploaded-file-holds-a-path-not-a-tempfile"
 blocked-by: null
 closed-reason: null
 ---

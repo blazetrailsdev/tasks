@@ -1,6 +1,6 @@
 ---
 title: "TimeZone#period_for_local / periods_for_local read the epoch where TZInfo ignores the offset"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null

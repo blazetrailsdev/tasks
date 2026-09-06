@@ -1,6 +1,6 @@
 ---
 title: "DateTimeType#changed? and TimeZoneConverter#changed? are trails-only overrides Rails does not have"
-status: blocked
+status: ready
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Hard prereq not landed: the story's converged shape is 'delete both per-type isChanged overrides and inherit the generic one', which requires Value#changed? to compare with Ruby != semantics first. That generic seam is converge-value-type-changed-to-ruby-equality (RFC 0023), still draft. Verified on origin/main that the overrides are all still present and load-bearing: type/date-time.ts:120, time-zone-conversion.ts:119 plus _nsAtPrecision:131 and toInstantOrNull:177 — deleting them before the generic seam lands regresses dirty tracking to reference equality (the live bug PR #7537 hit with time_zone_aware_attributes on and Time.zone unset). Unblocks the moment the 0023 story ships."
+blocked-by: null
 closed-reason: null
 ---
 

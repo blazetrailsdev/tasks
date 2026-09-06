@@ -1,6 +1,6 @@
 ---
 title: "activerecord: time-zone-converter.test.ts holds 11 trails-only cases in a Rails-mapped file"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null

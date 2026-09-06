@@ -1,6 +1,6 @@
 ---
 title: "AttributeMethods#respondTo drops Rails' private-methods arm"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
