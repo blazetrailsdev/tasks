@@ -1,6 +1,6 @@
 ---
 title: "Delete webhook/tasksdb.go and read the API instead"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null

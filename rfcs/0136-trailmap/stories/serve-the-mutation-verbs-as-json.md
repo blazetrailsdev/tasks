@@ -1,6 +1,6 @@
 ---
 title: "Serve the mutation verbs, making trailmap the sole writer"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null

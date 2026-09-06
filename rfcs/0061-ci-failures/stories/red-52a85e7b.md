@@ -1,6 +1,6 @@
 ---
 title: "Rails API/Test Comparison failing on main @52a85e7b"
-status: ready
+status: done
 updated: 2026-09-06
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: 7548
+claim: "2026-09-06T01:08:40Z"
+assignee: "red-52a85e7b"
 blocked-by: null
 closed-reason: null
 ---

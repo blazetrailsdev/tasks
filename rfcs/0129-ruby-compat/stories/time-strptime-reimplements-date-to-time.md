@@ -1,7 +1,7 @@
 ---
 title: "Time.strptime reimplements Date#to_time instead of calling it"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
