@@ -41,13 +41,18 @@ never set. The omission is cited at the site.
 The user-visible consequence is that Ruby's BOM mode prefix does nothing:
 
 ```console
-$ ruby -e 'File.write("x.txt","hi"); p File.open("x.txt", "bom|utf-8").external_encoding'
+$ ruby -e 'File.write("x.txt","hi"); p File.open("x.txt", "r:bom|utf-8").external_encoding'
 #<Encoding:UTF-8>
+$ ruby -e 'File.write("x.txt","hi"); p File.open("x.txt", "r:bom|euc-jp").external_encoding'
+-e:1: warning: BOM with non-UTF encoding euc-jp is nonsense
+#<Encoding:EUC-JP>
 ```
 
 Ruby reads and strips a leading byte-order mark and picks the encoding from it;
 trails treats `bom|utf-8` as an ordinary encoding name, so `Encoding.find`
-raises `unknown encoding name - bom|utf-8` rather than opening the file.
+raises `unknown encoding name - bom|utf-8` rather than opening the file. (The
+prefix rides in the mode string's encoding half, `"r:bom|utf-8"` — a bare
+`"bom|utf-8"` is an invalid access mode in MRI too.)
 
 Two more MRI pieces belong with it, both keyed off the same flag:
 
@@ -79,8 +84,10 @@ explicit rather than porting the same code twice.
 - [ ] `rbIoModestrFmode` sets `FMODE_SETENC_BY_BOM` for a `"bom|"`-prefixed
       encoding name, and `fmode` threads into `parseModeEnc` /
       `rbIoExtIntToEncs` as it does in MRI.
-- [ ] `File.open(path, "bom|utf-8")` opens and answers UTF-8 rather than raising
-      `unknown encoding name`; the non-UTF case warns as `parse_mode_enc` does.
+- [ ] `File.open(path, "r:bom|utf-8")` opens and answers UTF-8 rather than
+      raising `unknown encoding name`; `"r:bom|euc-jp"` warns
+      `BOM with non-UTF encoding euc-jp is nonsense` and answers EUC-JP, as
+      `parse_mode_enc` does.
 - [ ] The arm-specific paragraph on `rbIoModestrFmode`'s doc comment is removed
       once the arm is real.
 - [ ] `io.trails.test.ts` and `file.trails.test.ts` keep their names and pass.
