@@ -1,5 +1,5 @@
 ---
-title: "pg-exec-is-a-trails-only-raw-query-path"
+title: "PostgreSQLAdapter#exec is a trails-only raw-query path (~520 call sites, needs splitting)"
 status: draft
 updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 1100
 priority: null
 pr: null
 claim: null

@@ -1,5 +1,5 @@
 ---
-title: "request-env-methods-readers-are-unported"
+title: "Request's ENV_METHODS readers are unported, so callers inline env reads"
 status: draft
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null
