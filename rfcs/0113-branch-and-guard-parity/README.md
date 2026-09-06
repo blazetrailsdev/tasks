@@ -266,6 +266,7 @@ re-homed from `0023-surfaced-deviations` on 2026-08-18 and carry the
    The re-measurement itself gates nothing. It also surfaced two pairing
    defects, filed as
    `api-compare-pairs-a-ruby-predicate-and-instance-new-onto-one-ts-member`.
+
 2. ~~**Does the TS side need a real parser or will the existing extraction
    do?**~~ **Resolved 2026-08-19.** `extract-ts-api.ts` imports the TypeScript
    compiler API directly (`import * as ts from "typescript"`) and already calls
