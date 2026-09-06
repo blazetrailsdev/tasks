@@ -5,7 +5,7 @@ updated: 2026-09-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
-deps: ["serve-the-read-verbs-as-json"]
+deps: ["serve-the-read-verbs-as-json", "build-the-trailmap-app-shell", "render-markdown-in-trailmap"]
 deps-rfc: []
 est-loc: 250
 priority: 15
