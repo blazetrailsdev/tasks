@@ -1,6 +1,6 @@
 ---
 title: "json-serialization-tests-stand-ins-are-person-not-contact"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null

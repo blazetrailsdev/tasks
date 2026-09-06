@@ -1,6 +1,6 @@
 ---
 title: "uuid_from_hash takes an algorithm string where Rails takes the digest class"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

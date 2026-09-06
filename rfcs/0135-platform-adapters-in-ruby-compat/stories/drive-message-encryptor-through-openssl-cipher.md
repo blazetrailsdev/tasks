@@ -1,6 +1,6 @@
 ---
 title: "drive-message-encryptor-through-openssl-cipher"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null

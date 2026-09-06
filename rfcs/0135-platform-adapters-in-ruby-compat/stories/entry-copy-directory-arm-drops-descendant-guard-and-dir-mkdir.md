@@ -1,6 +1,6 @@
 ---
 title: "Entry_#copy's directory arm drops descendant_directory?'s ArgumentError and Dir.mkdir's rescue for a bare mkdir_p"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
