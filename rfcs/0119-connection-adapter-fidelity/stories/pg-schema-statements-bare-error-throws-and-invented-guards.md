@@ -1,7 +1,7 @@
 ---
 title: "pg schema-statements throws six bare error classes, two of them guards Rails does not have"
-status: in-progress
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

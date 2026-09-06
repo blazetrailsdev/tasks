@@ -1,7 +1,7 @@
 ---
 title: "The CryptoAdapter seam has no browser arm"
-status: ready
-updated: 2026-08-31
+status: in-progress
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 32
-pr: null
-claim: null
-assignee: null
+pr: 7547
+claim: "2026-09-06T00:55:36Z"
+assignee: "crypto-adapter-seam-has-no-browser-arm"
 blocked-by: null
 closed-reason: null
 ---

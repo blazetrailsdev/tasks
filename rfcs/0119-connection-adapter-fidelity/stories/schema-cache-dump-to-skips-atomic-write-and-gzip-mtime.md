@@ -1,7 +1,7 @@
 ---
 title: "SchemaCache#dump_to inlines Rails' private open, skipping atomic_write and zipper.mtime = 0"
-status: claimed
-updated: 2026-09-05
+status: in-progress
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: ["activerecord"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: 7543
 claim: "2026-09-05T23:06:51Z"
 assignee: "converge-hash-config-configuration-alias"
 blocked-by: null

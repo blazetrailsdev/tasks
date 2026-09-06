@@ -1,7 +1,7 @@
 ---
 title: "SQLite3Adapter#getDatabaseVersion probes the raw driver, not query_value"
-status: claimed
-updated: 2026-09-05
+status: in-progress
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: 7546
 claim: "2026-09-05T23:56:22Z"
 assignee: "converge-pg-native-types-and-instance-type-map-onto-adapter"
 blocked-by: null

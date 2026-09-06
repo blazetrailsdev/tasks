@@ -1,7 +1,7 @@
 ---
 title: "attributeTypes casts away the nil type Rails' attribute_types hash can hold"
-status: in-progress
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
 packages: []

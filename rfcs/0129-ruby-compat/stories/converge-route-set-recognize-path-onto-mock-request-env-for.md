@@ -1,6 +1,6 @@
 ---
 title: "converge-route-set-recognize-path-onto-mock-request-env-for"
-status: draft
+status: ready
 updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null

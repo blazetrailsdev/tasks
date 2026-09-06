@@ -1,7 +1,7 @@
 ---
 title: "PG resetBang runs configure_connection twice, duplicating super"
-status: in-progress
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

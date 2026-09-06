@@ -1,7 +1,7 @@
 ---
 title: "A rolled-back DDL leaves its reflected columns in the schema cache"
-status: claimed
-updated: 2026-09-05
+status: in-progress
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7543
 claim: "2026-09-05T23:06:51Z"
 assignee: "converge-hash-config-configuration-alias"
 blocked-by: null

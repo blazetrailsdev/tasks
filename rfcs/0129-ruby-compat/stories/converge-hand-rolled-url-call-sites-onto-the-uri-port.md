@@ -1,7 +1,7 @@
 ---
 title: "converge-hand-rolled-url-call-sites-onto-the-uri-port"
-status: claimed
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0129-ruby-compat"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 15
-pr: null
+pr: 7545
 claim: "2026-09-05T23:56:25Z"
 assignee: "converge-hand-rolled-url-call-sites-onto-the-uri-port"
 blocked-by: null

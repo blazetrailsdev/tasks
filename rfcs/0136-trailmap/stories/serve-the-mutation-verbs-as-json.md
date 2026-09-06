@@ -1,7 +1,7 @@
 ---
 title: "Serve the mutation verbs, making trailmap the sole writer"
-status: claimed
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
@@ -9,7 +9,7 @@ deps: ["move-mutation-verbs-onto-the-models"]
 deps-rfc: []
 est-loc: 200
 priority: 6
-pr: null
+pr: 6
 claim: "2026-09-05T23:01:36Z"
 assignee: "serve-the-mutation-verbs-as-json"
 blocked-by: null

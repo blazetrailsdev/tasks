@@ -1,7 +1,7 @@
 ---
 title: "BigDecimal's compare/round/toI still expand intDigits/fracDigits after the exponent-carrying switch"
-status: in-progress
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
 packages: ["activesupport"]

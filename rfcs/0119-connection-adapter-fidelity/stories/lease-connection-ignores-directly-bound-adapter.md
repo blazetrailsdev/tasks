@@ -1,7 +1,7 @@
 ---
 title: "leaseConnection ignores a directly-bound _adapter that connection and withConnection honour"
-status: in-progress
-updated: 2026-09-05
+status: done
+updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

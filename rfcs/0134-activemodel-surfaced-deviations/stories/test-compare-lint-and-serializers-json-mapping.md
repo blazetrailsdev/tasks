@@ -1,14 +1,14 @@
 ---
 title: "activemodel: cases/lint_test.rb sits outside the test-compare population"
 status: blocked
-updated: 2026-09-05
+updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: test-placement
 packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: 50
+priority: null
 pr: null
 claim: "2026-09-02T22:05:40Z"
 assignee: "type-value-split-and-name-property-burndown"

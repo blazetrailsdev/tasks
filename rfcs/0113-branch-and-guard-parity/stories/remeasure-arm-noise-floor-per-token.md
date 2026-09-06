@@ -1,7 +1,7 @@
 ---
 title: "Re-measure the arm noise floor per token after the extractor fixes"
-status: ready
-updated: 2026-09-05
+status: in-progress
+updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling
 packages: []
@@ -16,9 +16,9 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: 7549
+claim: "2026-09-06T00:58:51Z"
+assignee: "remeasure-arm-noise-floor-per-token"
 blocked-by: null
 closed-reason: null
 ---
