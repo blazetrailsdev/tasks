@@ -1,13 +1,13 @@
 ---
-title: "contact-test-model-extends-model-where-rails-is-a-plain-class"
+title: "test-helpers Contact extends Model where Ruby's is a plain class"
 status: draft
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
-packages: []
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null

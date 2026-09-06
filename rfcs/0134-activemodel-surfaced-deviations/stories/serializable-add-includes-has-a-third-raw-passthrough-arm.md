@@ -1,13 +1,13 @@
 ---
-title: "serializable-add-includes-has-a-third-raw-passthrough-arm"
+title: "serializable_add_includes' consumer has a third raw-passthrough arm Rails does not"
 status: draft
 updated: 2026-09-06
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
-packages: []
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
