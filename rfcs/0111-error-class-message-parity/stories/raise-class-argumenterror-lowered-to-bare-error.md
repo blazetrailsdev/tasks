@@ -42,18 +42,18 @@ nothing turns green when they are fixed; the evidence is the Rails `file:line`.
 
 ## The rows
 
-| divergence | trails site | Rails site |
-| --- | --- | --- |
+| divergence               | trails site                                                          | Rails site                                               |
+| ------------------------ | -------------------------------------------------------------------- | -------------------------------------------------------- |
 | `ArgumentError -> Error` | `activerecord/connection-adapters/postgresql/oid/range.ts#castValue` | `connection_adapters/postgresql/oid/range.rb#cast_value` |
-| `ArgumentError -> Error` | `activerecord/relation/batches.ts#actOnIgnoredOrder` | `relation/batches.rb#act_on_ignored_order` |
-| `ArgumentError -> Error` | `actiondispatch/journey/gtg/builder.ts#isNullable` | `journey/gtg/builder.rb#nullable?` |
-| `ArgumentError -> Error` | `actiondispatch/journey/parser.ts#parseGroup` | `journey/parser.rb#parse_group` |
-| `ArgumentError -> Error` | `actiondispatch/testing/request-encoder.ts#constructor` | `testing/request_encoder.rb#initialize` |
-| `ArgumentError -> Error` | `abstractcontroller/rendering.ts#_normalizeArgs` | `rendering.rb#_normalize_args` |
-| `ArgumentError -> Error` | `actionview/renderer/abstract-renderer.ts#raiseInvalidIdentifier` | `renderer/abstract_renderer.rb#raise_invalid_identifier` |
-| `ArgumentError -> Error` | `actionview/renderer/abstract-renderer.ts#raiseInvalidOptionAs` | `renderer/abstract_renderer.rb#raise_invalid_option_as` |
-| `ArgumentError -> Error` | `rack/builder.ts#run` | `builder.rb#run` |
-| `ArgumentError -> Error` | `globalid/global-id.ts#modelClass` | `global_id.rb#model_class` |
+| `ArgumentError -> Error` | `activerecord/relation/batches.ts#actOnIgnoredOrder`                 | `relation/batches.rb#act_on_ignored_order`               |
+| `ArgumentError -> Error` | `actiondispatch/journey/gtg/builder.ts#isNullable`                   | `journey/gtg/builder.rb#nullable?`                       |
+| `ArgumentError -> Error` | `actiondispatch/journey/parser.ts#parseGroup`                        | `journey/parser.rb#parse_group`                          |
+| `ArgumentError -> Error` | `actiondispatch/testing/request-encoder.ts#constructor`              | `testing/request_encoder.rb#initialize`                  |
+| `ArgumentError -> Error` | `abstractcontroller/rendering.ts#_normalizeArgs`                     | `rendering.rb#_normalize_args`                           |
+| `ArgumentError -> Error` | `actionview/renderer/abstract-renderer.ts#raiseInvalidIdentifier`    | `renderer/abstract_renderer.rb#raise_invalid_identifier` |
+| `ArgumentError -> Error` | `actionview/renderer/abstract-renderer.ts#raiseInvalidOptionAs`      | `renderer/abstract_renderer.rb#raise_invalid_option_as`  |
+| `ArgumentError -> Error` | `rack/builder.ts#run`                                                | `builder.rb#run`                                         |
+| `ArgumentError -> Error` | `globalid/global-id.ts#modelClass`                                   | `global_id.rb#model_class`                               |
 
 Ten sites where Rails raises `ArgumentError` and the port throws a bare JS
 `Error`. Related but NOT the same as `argument-error-helper-returns-bare-error`

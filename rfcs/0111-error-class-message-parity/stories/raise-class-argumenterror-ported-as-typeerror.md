@@ -42,11 +42,11 @@ nothing turns green when they are fixed; the evidence is the Rails `file:line`.
 
 ## The rows
 
-| divergence | trails site | Rails site |
-| --- | --- | --- |
-| `ArgumentError -> TypeError` | `actiondispatch/http/content-security-policy.ts#applyMappings` | `http/content_security_policy.rb#apply_mappings` |
+| divergence                   | trails site                                                                  | Rails site                                                    |
+| ---------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| `ArgumentError -> TypeError` | `actiondispatch/http/content-security-policy.ts#applyMappings`               | `http/content_security_policy.rb#apply_mappings`              |
 | `ArgumentError -> TypeError` | `actioncontroller/metal/request-forgery-protection.ts#protectionMethodClass` | `metal/request_forgery_protection.rb#protection_method_class` |
-| `ArgumentError -> TypeError` | `actioncontroller/metal/request-forgery-protection.ts#storageStrategy` | `metal/request_forgery_protection.rb#storage_strategy` |
+| `ArgumentError -> TypeError` | `actioncontroller/metal/request-forgery-protection.ts#storageStrategy`       | `metal/request_forgery_protection.rb#storage_strategy`        |
 
 Three sites where Rails raises `ArgumentError` and the port raises `TypeError`
 — a different class rather than a missing one, so a `rescue ArgumentError`

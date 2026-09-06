@@ -42,14 +42,14 @@ nothing turns green when they are fixed; the evidence is the Rails `file:line`.
 
 ## The rows
 
-| divergence | trails site | Rails site |
-| --- | --- | --- |
-| `NotImplementedError -> Error` | `activerecord/associations/builder/association.ts#macro` | `associations/builder/association.rb#macro` |
-| `NotImplementedError -> Error` | `activerecord/associations/builder/association.ts#validDependentOptions` | `associations/builder/association.rb#valid_dependent_options` |
-| `NotImplementedError -> Error` | `activerecord/associations/collection-association.ts#deleteRecords` | `associations/collection_association.rb#delete_records` |
-| `NotImplementedError -> Error` | `activerecord/connection-adapters/abstract/schema-statements.ts#changeTableComment` | `connection_adapters/abstract/schema_statements.rb#change_table_comment` |
+| divergence                     | trails site                                                                          | Rails site                                                                |
+| ------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| `NotImplementedError -> Error` | `activerecord/associations/builder/association.ts#macro`                             | `associations/builder/association.rb#macro`                               |
+| `NotImplementedError -> Error` | `activerecord/associations/builder/association.ts#validDependentOptions`             | `associations/builder/association.rb#valid_dependent_options`             |
+| `NotImplementedError -> Error` | `activerecord/associations/collection-association.ts#deleteRecords`                  | `associations/collection_association.rb#delete_records`                   |
+| `NotImplementedError -> Error` | `activerecord/connection-adapters/abstract/schema-statements.ts#changeTableComment`  | `connection_adapters/abstract/schema_statements.rb#change_table_comment`  |
 | `NotImplementedError -> Error` | `activerecord/connection-adapters/abstract/schema-statements.ts#changeColumnComment` | `connection_adapters/abstract/schema_statements.rb#change_column_comment` |
-| `NotImplementedError -> Error` | `actionview/template/resolver.ts#findTemplates` | `template/resolver.rb#find_templates` |
+| `NotImplementedError -> Error` | `actionview/template/resolver.ts#findTemplates`                                      | `template/resolver.rb#find_templates`                                     |
 
 Six abstract / must-override methods where Rails raises `NotImplementedError`
 and the port throws a bare JS `Error`. `singular-association-replace-should-raise-not-implemented`

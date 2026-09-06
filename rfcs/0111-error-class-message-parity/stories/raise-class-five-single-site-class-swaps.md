@@ -42,13 +42,13 @@ nothing turns green when they are fixed; the evidence is the Rails `file:line`.
 
 ## The rows
 
-| divergence | trails site | Rails site |
-| --- | --- | --- |
-| `NoMethodError -> Error` | `activerecord/associations/collection-proxy.ts#prepend` | `associations/collection_proxy.rb#prepend` |
-| `StandardError -> Error` | `activerecord/connection-adapters/sqlite3/database-statements.ts#internalBeginTransaction` | `connection_adapters/sqlite3/database_statements.rb#internal_begin_transaction` |
-| `Configuration -> ConfigurationError` | `activerecord/encryption/encryptable-record.ts#validateEncryptionAllowed` | `encryption/encryptable_record.rb#validate_encryption_allowed` |
-| `KeyError -> Error` | `activerecord/result.ts#fetch` | `result.rb#fetch` |
-| `RangeError -> ActiveModelRangeError` | `activemodel/type/integer.ts#ensureInRange` | `type/integer.rb#ensure_in_range` |
+| divergence                            | trails site                                                                                | Rails site                                                                      |
+| ------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| `NoMethodError -> Error`              | `activerecord/associations/collection-proxy.ts#prepend`                                    | `associations/collection_proxy.rb#prepend`                                      |
+| `StandardError -> Error`              | `activerecord/connection-adapters/sqlite3/database-statements.ts#internalBeginTransaction` | `connection_adapters/sqlite3/database_statements.rb#internal_begin_transaction` |
+| `Configuration -> ConfigurationError` | `activerecord/encryption/encryptable-record.ts#validateEncryptionAllowed`                  | `encryption/encryptable_record.rb#validate_encryption_allowed`                  |
+| `KeyError -> Error`                   | `activerecord/result.ts#fetch`                                                             | `result.rb#fetch`                                                               |
+| `RangeError -> ActiveModelRangeError` | `activemodel/type/integer.ts#ensureInRange`                                                | `type/integer.rb#ensure_in_range`                                               |
 
 The five singletons the other three stories do not cover — one row each, no
 shared root cause, which is why they are grouped by being ungrouped rather than
