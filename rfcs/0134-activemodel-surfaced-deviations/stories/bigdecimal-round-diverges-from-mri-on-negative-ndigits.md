@@ -1,13 +1,13 @@
 ---
-title: "bigdecimal-round-diverges-from-mri-on-negative-ndigits"
+title: "BigDecimal#round diverges from MRI on a negative ndigits and on negative zero"
 status: draft
 updated: 2026-09-05
 rfc: "0134-activemodel-surfaced-deviations"
 cluster: null
-packages: []
+packages: ["activesupport"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
