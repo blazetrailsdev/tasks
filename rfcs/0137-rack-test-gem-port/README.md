@@ -77,7 +77,7 @@ it uses the same tooling with no extractor changes at all.
 - **The whole-tree census is concentrated and small.** 55 `.rb` files under
   `vendor/rails/` mention `Rack::Test`, and what they name is:
 
-  ```
+  ```text
   45  Rack::Test::Methods
   17  Rack::Test::UploadedFile
    1  Rack::Test::Utils

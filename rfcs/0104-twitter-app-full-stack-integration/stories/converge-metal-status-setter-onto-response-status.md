@@ -48,7 +48,7 @@ Rails documents — stores the string; only `this.status = "not_found"` resolves
 `Metal.resolveStatus` and `metal/status-codes.ts` are the trails-side table that
 `packages/rack`'s `statusCode()` already duplicates.
 
-#7376 landed the seam itself: `Response#status=` now resolves through
+PR #7376 landed the seam itself: `Response#status=` now resolves through
 `statusCode()` (`Rack::Utils.status_code`), `Metal#status=` is a plain
 delegation, and `redirect_to`'s `_extract_redirect_to_status`
 (`redirecting.rb:213-221`) calls `statusCode()` too. What is left is the
