@@ -1,6 +1,6 @@
 ---
 title: "Mysql2Adapter#rollback_db_transaction bypasses exec_rollback_db_transaction, drops Rails' two-class rescue, and raises an invented 'No active transaction'"
-status: claimed
+status: in-progress
 updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
+pr: 7597
 claim: "2026-09-07T19:28:42Z"
 assignee: "execute-duplicated-on-adapters-and-wired-per-adapter"
 blocked-by: null

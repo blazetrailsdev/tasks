@@ -1,6 +1,6 @@
 ---
 title: "reserialize-cookie-on-read-through-the-jar"
-status: claimed
+status: in-progress
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7598
 claim: "2026-09-07T19:26:54Z"
 assignee: "port-chained-cookie-jars-module-and-memoize-the-readers"
 blocked-by: null

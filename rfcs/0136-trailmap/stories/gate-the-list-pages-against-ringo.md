@@ -1,6 +1,6 @@
 ---
 title: "Gate /rfcs and /backlog against ringo's data, per tab"
-status: claimed
+status: in-progress
 updated: 2026-09-07
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 18
 claim: "2026-09-07T13:01:44Z"
 assignee: "gate-the-list-pages-against-ringo"
 blocked-by: null
