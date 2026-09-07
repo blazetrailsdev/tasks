@@ -1,5 +1,5 @@
 ---
-title: "delete-cookiejar-static-parse-and-its-null-request-stub"
+title: "CookieJar.parse and its nullRequest stub have no Rails counterpart"
 status: draft
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"

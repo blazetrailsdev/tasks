@@ -1,5 +1,5 @@
 ---
-title: "default-cookie-serializer-is-marshal-not-json"
+title: "The nil cookies_serializer arm returns JSON where Rails returns marshal"
 status: draft
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null

@@ -1,5 +1,5 @@
 ---
-title: "rename-serialized-cookie-jars-to-their-key-rotating-rails-names"
+title: "SignedCookieJar/EncryptedCookieJar drop Rails' KeyRotating"
 status: draft
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
