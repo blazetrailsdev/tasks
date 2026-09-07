@@ -2,7 +2,7 @@
 title: "FsAdapter.readFile is optional, forcing a dead guard at every async call site"
 status: draft
 updated: 2026-09-06
-rfc: "0138-ruby-compat-residual-convergence"
+rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: []
