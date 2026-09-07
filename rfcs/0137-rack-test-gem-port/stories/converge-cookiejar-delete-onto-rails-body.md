@@ -1,6 +1,6 @@
 ---
 title: "converge-cookiejar-delete-onto-rails-body"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null

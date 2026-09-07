@@ -1,6 +1,6 @@
 ---
 title: "Two check-constraint tests fail on MySQL 8 with Duplicate check constraint name (CI-invisible: mysql lane disabled)"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

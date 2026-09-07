@@ -1,6 +1,6 @@
 ---
 title: "prepend() ignores a module's per-instance initializer"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0138-ruby-compat-residual-convergence"
 cluster: null

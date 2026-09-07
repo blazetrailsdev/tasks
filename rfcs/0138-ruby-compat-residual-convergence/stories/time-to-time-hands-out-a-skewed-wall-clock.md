@@ -1,6 +1,6 @@
 ---
 title: "Time#toTime's ZonedDateTime wall clock is up to 59s off for a sub-minute utc_offset"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0138-ruby-compat-residual-convergence"
 cluster: null

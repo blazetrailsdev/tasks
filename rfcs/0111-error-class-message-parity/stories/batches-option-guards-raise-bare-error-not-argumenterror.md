@@ -1,7 +1,7 @@
 ---
 title: "ensure_valid_options_for_batching!'s other three guards raise a bare Error, not ArgumentError"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-07
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 20
-pr: null
-claim: null
-assignee: null
+pr: 7589
+claim: "2026-09-07T11:38:38Z"
+assignee: "shared-ruby-typeerror-mirror"
 blocked-by: null
 closed-reason: null
 ---

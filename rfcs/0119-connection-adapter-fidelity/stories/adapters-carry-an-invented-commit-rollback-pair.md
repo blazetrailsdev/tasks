@@ -1,6 +1,6 @@
 ---
 title: "PG, mysql2 and sqlite3 adapters carry an invented commit()/rollback() pair Rails puts on Transaction"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

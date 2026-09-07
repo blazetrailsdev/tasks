@@ -1,7 +1,7 @@
 ---
 title: "Move tasks new and ingest into the app"
-status: ready
-updated: 2026-09-05
+status: blocked
+updated: 2026-09-07
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
@@ -12,7 +12,7 @@ priority: 9
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Held: RFC 0136 cutover is gated behind a build-out phase — trailmap must reach full read-only parity with ringo (including the tmux surface), run a soak period as the fleet's dashboard, and grow app surface beyond parity before anything moves or is deleted. Unblock only when that phase's exit criteria are met."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "CookieJarOptions carries five dead fields Rails has no counterpart for"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null

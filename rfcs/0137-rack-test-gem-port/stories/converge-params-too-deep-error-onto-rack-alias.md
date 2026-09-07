@@ -1,6 +1,6 @@
 ---
 title: "ParamsTooDeepError is a subclass where Rack aliases it to QueryLimitError"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null

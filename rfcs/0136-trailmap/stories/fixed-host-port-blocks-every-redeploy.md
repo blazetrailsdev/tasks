@@ -1,7 +1,7 @@
 ---
 title: "trailmap cannot redeploy while running: the fixed loopback port collides"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-07
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: 16
+claim: "2026-09-07T11:36:26Z"
+assignee: "fixed-host-port-blocks-every-redeploy"
 blocked-by: null
 closed-reason: null
 ---

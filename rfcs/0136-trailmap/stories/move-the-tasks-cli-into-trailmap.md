@@ -1,7 +1,7 @@
 ---
 title: "Move the tasks CLI into trailmap and make it an HTTP client"
 status: blocked
-updated: 2026-09-06
+updated: 2026-09-07
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
@@ -12,7 +12,7 @@ priority: 7
 pr: null
 claim: "2026-09-06T17:58:18Z"
 assignee: "render-the-rfc-and-story-show-pages"
-blocked-by: "Cannot be an HTTP-only client yet: trailmap serves no new/rehome/ingest/export endpoint, so those verbs would lose their implementation. Needs move-authoring-and-ingest-into-trailmap and move-export-and-its-schedule-into-trailmap first. Two of its four call sites (ringo's mergesweep.go, trails' scripts/tasks/tasks.sh + CLAUDE.md) also live outside trailmap, so 'all four in the same change' is not a single trailmap PR — split them or relax the criterion."
+blocked-by: "Held: RFC 0136 cutover is gated behind a build-out phase — trailmap must reach full read-only parity with ringo (including the tmux surface), run a soak period as the fleet's dashboard, and grow app surface beyond parity before anything moves or is deleted. Unblock only when that phase's exit criteria are met."
 closed-reason: null
 ---
 

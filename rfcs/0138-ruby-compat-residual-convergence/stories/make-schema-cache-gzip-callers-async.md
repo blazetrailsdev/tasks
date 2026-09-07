@@ -1,6 +1,6 @@
 ---
 title: "Make the SchemaCache gzip callers async so the Zlib seam can stream"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0138-ruby-compat-residual-convergence"
 cluster: null

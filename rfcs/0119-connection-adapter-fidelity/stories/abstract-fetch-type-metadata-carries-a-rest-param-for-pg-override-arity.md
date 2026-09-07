@@ -1,6 +1,6 @@
 ---
 title: "abstract-fetch-type-metadata-carries-a-rest-param-for-pg-override-arity"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

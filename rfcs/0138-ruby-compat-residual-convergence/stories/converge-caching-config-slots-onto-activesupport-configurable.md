@@ -1,7 +1,7 @@
 ---
 title: "Converge the Caching include site onto ActiveSupport::Configurable"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-07
 rfc: "0138-ruby-compat-residual-convergence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: 7590
+claim: "2026-09-07T11:36:50Z"
+assignee: "initialize-included-modules-reaches-only-metal"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "initializeIncludedModules is called only from ActionController::Metal"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-07
 rfc: "0138-ruby-compat-residual-convergence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 7590
+claim: "2026-09-07T11:36:50Z"
+assignee: "initialize-included-modules-reaches-only-metal"
 blocked-by: null
 closed-reason: null
 ---

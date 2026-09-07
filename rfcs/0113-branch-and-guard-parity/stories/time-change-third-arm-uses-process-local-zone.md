@@ -1,7 +1,7 @@
 ---
 title: "time-change-third-arm-uses-process-local-zone"
-status: ready
-updated: 2026-09-06
+status: claimed
+updated: 2026-09-07
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-07T11:37:58Z"
+assignee: "time-change-third-arm-uses-process-local-zone"
 blocked-by: null
 closed-reason: null
 ---

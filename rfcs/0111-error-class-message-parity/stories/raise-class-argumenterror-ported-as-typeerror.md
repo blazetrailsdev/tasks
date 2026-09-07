@@ -1,6 +1,6 @@
 ---
 title: "Three ArgumentError raises ported as TypeError"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0111-error-class-message-parity"
 cluster: duplicate-error-classes
