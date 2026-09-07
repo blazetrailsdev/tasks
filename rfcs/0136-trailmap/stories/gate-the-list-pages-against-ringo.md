@@ -1,6 +1,6 @@
 ---
 title: "Gate /rfcs and /backlog against ringo's data, per tab"
-status: draft
+status: ready
 updated: 2026-09-07
 rfc: "0136-trailmap"
 cluster: null

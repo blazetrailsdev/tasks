@@ -1,7 +1,7 @@
 ---
 title: "Gate the RFC and story show pages against ringo's, over the whole database"
-status: draft
-updated: 2026-09-06
+status: ready
+updated: 2026-09-07
 rfc: "0136-trailmap"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Serve ringo's root fleet dashboard from trailmap"
-status: draft
-updated: 2026-09-06
+status: ready
+updated: 2026-09-07
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionpack", "actionview"]

@@ -1,6 +1,6 @@
 ---
 title: "hash_filter iterates the filter instead of slice(*filter.keys), inlines permit_value, and invents an empty-filter arm"
-status: claimed
+status: in-progress
 updated: 2026-09-07
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 14
-pr: null
+pr: 7591
 claim: "2026-09-07T11:37:58Z"
 assignee: "time-change-third-arm-uses-process-local-zone"
 blocked-by: null

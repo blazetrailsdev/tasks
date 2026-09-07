@@ -1,7 +1,7 @@
 ---
 title: "executeBatch is silently broken by a flags: ['-MULTI_STATEMENTS'] config (~70 LOC)"
-status: ready
-updated: 2026-09-06
+status: claimed
+updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-07T12:06:26Z"
+assignee: "configure-connection-cannot-service-a-query-on-the-connection-it-configures"
 blocked-by: null
 closed-reason: null
 ---

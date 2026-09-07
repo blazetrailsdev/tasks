@@ -1,6 +1,6 @@
 ---
 title: "ignore_key_file reads and appends to the SAME .gitignore, resolved against the destination"
-status: claimed
+status: in-progress
 updated: 2026-09-07
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: 13
-pr: null
+pr: 7591
 claim: "2026-09-07T11:37:58Z"
 assignee: "time-change-third-arm-uses-process-local-zone"
 blocked-by: null
