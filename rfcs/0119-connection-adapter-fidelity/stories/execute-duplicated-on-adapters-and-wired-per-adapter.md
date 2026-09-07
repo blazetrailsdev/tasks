@@ -36,7 +36,7 @@ end
 > override `execute` on two of the three adapters:
 > `sqlite3/database_statements.rb:53` (`def execute(...) super&.to_a end`) and
 > `postgresql/database_statements.rb:39` (`def execute(...) super ensure
-> @notice_receiver_sql_warnings = [] end`). Only mysql2 has no override.
+@notice_receiver_sql_warnings = [] end`). Only mysql2 has no override.
 >
 > What Rails does NOT do is re-wire `dirties_query_cache` per adapter: an
 > adapter module sits between the adapter class and `AbstractAdapter` in the

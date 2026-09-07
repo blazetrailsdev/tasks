@@ -37,7 +37,7 @@ trails collapses both into one method and leaves the other as a dead stub:
 - `packages/activerecord/src/model-schema.ts:889` — the seat that SHOULD hold
   the `model_schema.rb:622-628` body — is unreferenced dead code that still
   carries the invented `typeof connection?.lookupCastTypeFromColumn ===
-  "function"` guard and `return null`, and never had the `to_immutable_string`
+"function"` guard and `return null`, and never had the `to_immutable_string`
   arm at all. It is the last copy of the guard PR #7596 removed from
   `attributes.ts`.
 

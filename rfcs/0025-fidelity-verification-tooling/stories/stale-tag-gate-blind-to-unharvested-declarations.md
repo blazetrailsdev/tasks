@@ -24,7 +24,7 @@ surface" — a receipt that suppresses nothing is debt masquerading as a
 decision. It cannot see a whole class of them.
 
 `extract-ts-api.ts:864-899` handles `export const X = {...}` and bails out
-early on two conditions, __before__ any tag is read:
+early on two conditions, **before** any tag is read:
 
 - `if (isConstantCaseName(decl.name.text)) continue;` (`:870`; the predicate is
   at `:2940`, `/^[A-Z][A-Z0-9]*(_[A-Z0-9]+)+$/`)
