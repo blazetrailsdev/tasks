@@ -1,6 +1,6 @@
 ---
 title: "Rotate the signed and encrypted jars over request.cookies_rotations"
-status: draft
+status: ready
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null
