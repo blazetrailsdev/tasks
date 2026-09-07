@@ -124,7 +124,17 @@ instance methods and transactions (`story.claim(assignee)`); `readmodel.ts`
 disappears, because serializing is what a controller does. `ingest.ts` and
 `authoring.ts` become service objects, since they touch the git checkout.
 
-trailmap is the **sole writer** of `tasks.db` and owns the migrations.
+trailmap owns the migrations for every table in `tasks.db`, and is the **sole
+writer of the task-domain tables** — `rfcs`, `stories`, `events`, deps and
+packages.
+
+The rule is **one writer per table, not per file.** Phase B below moves ringo's
+own state into the same database, written by ringo directly, so two processes
+do hold write handles on one SQLite file. That is not a retreat from the rule:
+what the original wording protected against was two processes racing the same
+rows, plus a read model hand-copied between them. Disjoint ownership, one
+schema authority and an enforced ownership table give that protection without
+routing the webhook hot path through trails on day one.
 
 ### trailmap is the proving ground for trails
 
@@ -363,23 +373,55 @@ that deletes Go code yields no framework stories; a phase that makes trails
 hold a response open and stream a live tmux pane yields many. Deleting
 `tasksdb.go` is the reward, not the work.
 
+### Phase B: fleet state stops being JSON blobs
+
+The motivation section indicts `index.json` and `events.json` as "a permanent
+source of staleness bugs, maintained solely because there is no way to ask a
+running process a question". That argument does not stop at those two files.
+ringo keeps **thirteen** more in its data dir — `tracker-state.json`,
+`ci-fixer-state.json`, `pending-queue.json`, `cleanup-queue.json`,
+`copilot-queue.json`, `main-ci-failures.json`, `pull-failures.json`,
+`reviewers.json`, `reviewer-config.json`, `usage-log.json`, `usage-state.json`,
+`codex-usage-state.json`, plus `deploys.json` and `mergesweeps.json` — each
+marshalled whole and rewritten on every change.
+
+`tracker-state.json` is the clearest: `PRState` (`webhook/tracker.go:22`) is a
+28-field struct with a natural key of `(owner, repo, pr)`, five independent
+debounce booleans, and a process-wide `sync.RWMutex` standing in for a
+transaction. It is a table stored as a file.
+
+So phase B gives them tables, in trailmap's database, migrated by trailmap and
+written by ringo. Each file dual-writes through a soak before it is deleted;
+no file is removed in the story that adds its table.
+
+This phase is also what makes the root dashboard portable. `/` is a 2,442-line
+constant HTML string plus `EventSource('/events')` (`dashboard.go:2154,2348`)
+**because** its data lives in process memory and JSON blobs — there is nothing
+to render server-side from. Once `PRState` is a table, trailmap renders the
+dashboard from models like every other page, and the SSE stream carries change
+notifications rather than being the only route to the state. Without phase B,
+phase F's "trailmap is the dashboard" is not reachable.
+
 | Phase | What | Exit criterion |
 | ----- | ---- | -------------- |
 | **A. Freeze** | No move, no delete. Go keeps serving everything; trailmap runs beside it. | The six cutover stories stay `blocked`. |
-| **B. Read-only parity** | Every task-domain page ringo serves is served by trailmap and gated against ringo's output over the whole database. | Each page's gate green in CI. |
-| **C. Tmux reading** | The pane and session surface: archive index, transcripts, the terminal replay, live streaming. | Rendered pane matches Go's over a corpus of real logs. |
-| **D. Beyond parity** | Surface ringo never had — search, dependency graphs. Purpose is framework yield, not features. | Trails stories filed per surface. |
-| **E. Soak** | trailmap **is** the dashboard on the public hostname; Go still serves loopback, webhooks and SSE. | Two weeks, no unfixed incident, explicit owner sign-off. |
-| **F. Cutover** | Domain move completion, CLI as HTTP client, authoring and ingest, export, the database move, stripping the tasks repo, deleting the published JSON and the Go read model. | — |
+| **B. Fleet state to tables** | ringo's thirteen JSON state files become ringo-owned tables in trailmap's database, under an enforced per-table ownership rule. | Every file dual-writing against a table that matches it. |
+| **C. Read-only parity** | Every task-domain page ringo serves is served by trailmap and gated against ringo's output over the whole database — including the root dashboard, which phase B makes renderable. | Each page's gate green in CI. |
+| **D. Tmux reading** | The pane and session surface: archive index, transcripts, the terminal replay, live streaming. | Rendered pane matches Go's over a corpus of real logs. |
+| **E. Beyond parity** | Surface ringo never had — search, dependency graphs. Purpose is framework yield, not features. | Trails stories filed per surface. |
+| **F. Soak** | trailmap **is** the dashboard on the public hostname; Go still serves loopback, webhooks and SSE. | Two weeks, no unfixed incident, explicit owner sign-off. |
+| **G. Cutover** | Domain move completion, CLI as HTTP client, authoring and ingest, export, the database move, stripping the tasks repo, deleting the published JSON and the Go read model. | — |
 
-**No story in phases A–E deletes or moves anything.** Every one of them is
+**No story in phases A–F deletes anything.** Phase B moves state into tables,
+but every source file dual-writes through a soak and is deleted by a later
+story, never by the one that adds its table. Every one of them is
 additive and runs beside ringo, so any of them can be abandoned mid-flight
-without the fleet noticing. The six phase F stories are `blocked` with a reason
+without the fleet noticing. The six phase G stories are `blocked` with a reason
 naming `soak-trailmap-as-the-fleet-dashboard`, and that story's sign-off is the
 only thing that unblocks them — explicitly, by the RFC owner, not automatically
 on the calendar.
 
-**Phase F's internal order is unchanged** from the original rollout: the domain
+**Phase G's internal order is unchanged** from the original rollout: the domain
 move, then the API and CLI cutover with all four call sites updated in one
 change so `tasks` never resolves to two implementations, then the Go
 read-model retirement. What changed is when it starts, not what it does.
@@ -390,7 +432,7 @@ the gate, and the interim validation split collapses.
 ### What is deliberately out of the build-out
 
 `/graphs/parity`, `/graphs/cost` and `/grades` read `stats.db`, which this
-RFC's non-goals leave Go-owned. They are not part of phase B parity, and
+RFC's non-goals leave Go-owned. They are not part of phase C parity, and
 "trailmap serves every ringo page" is not the goal — trailmap serving every
 **task-domain** page is. `/audits` is the one file-backed exception, included
 because serving a directory of agent-supplied files is exactly the unglamorous
@@ -398,25 +440,31 @@ surface the proving ground is for.
 
 ## Verification
 
-- **Phase B, per page.** A gate diffs trailmap's output against ringo's over
+- **Phase B, per file.** Each of the thirteen has a table whose columns are the
+  struct's fields — not a JSON blob column, which reproduces the problem in a
+  new place — a backfill that is idempotent, and a soak of dual-writing before
+  the file is deleted. The debounce reset rules on `PRState` are load-bearing
+  and documented only in comments today; each gets a test that fails if the
+  semantics change.
+- **Phase C, per page.** A gate diffs trailmap's output against ringo's over
   the live database, for every task-domain page and every `/spawnloop/*` read
   endpoint in scope. This is the same shape as the ready-queue equivalence gate
   that already made the domain move safe (`scripts/equivalence.ts`) — that gate
   is the precedent, and every page repeats it.
-- **Phase C.** The pane renderer agrees with `webhook/paneterm.go` byte for
+- **Phase D.** The pane renderer agrees with `webhook/paneterm.go` byte for
   byte over a committed corpus of **real** captured logs, including at least
   one full-length agent session. Unit tests prove the cases ringo's tests name;
   only the corpus proves the 4 MB inline-repaint input the fleet actually
   produces. A tolerated difference needs a named reason in the gate's source,
   never a silenced assertion.
-- **Phase D.** Framework stories filed, with the reproduction that found them.
-  This is the deliverable, not a side effect: a phase D story that files
+- **Phase E.** Framework stories filed, with the reproduction that found them.
+  This is the deliverable, not a side effect: a phase E story that files
   nothing has been built around the framework rather than on it, and should say
   in its PR why not.
-- **Phase E.** Two weeks serving the public hostname, every phase B and C gate
+- **Phase F.** Two weeks serving the public hostname, every phase C and D gate
   green throughout, incidents recorded with the story that fixed each. Nothing
   is deleted during the soak. An unfixed incident fails it.
-- **Phase F.** As originally stated: every `tasks` verb leaves identical DB
+- **Phase G.** As originally stated: every `tasks` verb leaves identical DB
   state and prints identical stdout through the API; `blazetrailsdev/tasks`
   contains only `rfcs/**/*.md`, a syntactic `scripts/` and repo metadata, with
   content CI still failing a malformed frontmatter block **with no network

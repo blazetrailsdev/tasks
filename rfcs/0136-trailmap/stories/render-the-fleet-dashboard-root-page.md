@@ -5,7 +5,7 @@ updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionpack", "actionview"]
-deps: ["build-the-trailmap-app-shell"]
+deps: ["build-the-trailmap-app-shell", "move-tracker-state-into-the-database"]
 deps-rfc: []
 est-loc: 300
 priority: 4
@@ -83,3 +83,26 @@ in this story.
   the paused-on-red-main treatment, main-CI failures and pull failures.
 - The SSE target is documented in the PR, with the reason for the choice.
 - ringo's `/` still works.
+
+## Superseded by phase B
+
+The premise above — "trailmap serves the dashboard's HTML, still consuming
+ringo's `/events`" — held while the dashboard's data lived only in process
+memory and JSON blobs. RFC 0136's phase B changes that: `PRState` becomes the
+`pr_states` table (`move-tracker-state-into-the-database`), so trailmap can
+render the PR rows from models server-side, the way every other page in this
+RFC does.
+
+So this story now depends on that one, and the shape changes with it:
+
+- The PR rows render server-side from models. They are not an empty shell
+  waiting on SSE.
+- SSE carries **change notification**, not the state itself — the page has
+  content before the stream connects, and the stream tells it what moved.
+- The SSE-origin decision below (browser connects to ringo's `/events` directly
+  vs. trailmap proxying) is shared with `stream-a-live-pane-over-sse`.
+  Whichever story lands first settles it for both; the second cites the first
+  rather than re-deciding.
+- The Go-owned state that has no table — spawn-loop internals, live tmux pane
+  state — stays on the stream. Phase B does not move those, and this story does
+  not either.
