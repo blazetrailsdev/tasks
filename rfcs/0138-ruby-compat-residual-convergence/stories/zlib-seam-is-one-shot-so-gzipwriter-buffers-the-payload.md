@@ -49,10 +49,27 @@ over `CompressionStream`. `GzipWriter#write` then feeds the handle per call and
 `close` finishes it, and `GzipReader#read` pulls from the inflate handle, so
 neither holds the payload.
 
-Note the seam's callers are synchronous (`SchemaCache.read` /
-`#dumpTo` are sync and Rails' are too), so the streaming handle has to be a
-sync push/pull pair rather than a Node stream — `zlib.deflateSync` over chunks
-with `Z_SYNC_FLUSH` is the shape that fits, not `pipeline`.
+**Amended 2026-09-07 (#7586).** The paragraph that stood here called for a
+*synchronous* push/pull pair backed by `zlib.deflateSync` and `Z_SYNC_FLUSH`.
+That is not buildable, and it is why this story was blocked: `deflateSync` /
+`inflateSync` are stateless one-shots (chaining them with `Z_SYNC_FLUSH` yields
+independent streams, not a continuation); the one incremental sync entry point,
+`stream._processChunk(chunk, Z_SYNC_FLUSH)`, ends `processChunkSync` with an
+unconditional `_close(self)`, so a second sync chunk throws `Cannot read
+properties of null (reading 'writeSync')`; and `createGzip` / `createGunzip` and
+the browser `CompressionStream` are all asynchronous. Per-chunk multi-member
+gzip is the one non-buffering sync option and it emits a multi-member file where
+`rb_gzwriter_write` / `rb_gzfile_close` (`vendor/ruby/ext/zlib/zlib.c:3745,3524`)
+emit ONE member — a fidelity regression at a surface whose byte-identity
+`SchemaCache` depends on.
+
+So the handle is **asynchronous**, like the `gzipWriter(io)` handle the seam
+already carries for `Rack::Deflater::GzipStream`
+(`packages/ruby-compat/src/zlib-adapter.ts`, `packages/rack/src/deflater.ts:133`).
+#7586 (`make-schema-cache-gzip-callers-async`) made the callers await, which is
+what unblocked this: `GzipReader#read`, `GzipWriter#close` and `gzfileWrap`
+already answer Promises, and `SchemaCache.read` / `._loadFrom` / `#open` /
+`#dumpTo` already await them. This story now only has to swap the internals.
 
 ## Acceptance criteria
 
