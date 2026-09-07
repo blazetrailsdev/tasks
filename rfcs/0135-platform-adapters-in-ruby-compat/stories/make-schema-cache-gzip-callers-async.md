@@ -1,14 +1,14 @@
 ---
-title: "make-schema-cache-gzip-callers-async"
+title: "Make the SchemaCache gzip callers async so the Zlib seam can stream"
 status: draft
 updated: 2026-09-07
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
-packages: []
+packages: ["activerecord", "ruby-compat"]
 deps: []
 deps-rfc: []
-est-loc: null
-priority: null
+est-loc: 260
+priority: 48
 pr: null
 claim: null
 assignee: null
