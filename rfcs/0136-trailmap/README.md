@@ -402,15 +402,15 @@ dashboard from models like every other page, and the SSE stream carries change
 notifications rather than being the only route to the state. Without phase B,
 phase F's "trailmap is the dashboard" is not reachable.
 
-| Phase | What | Exit criterion |
-| ----- | ---- | -------------- |
-| **A. Freeze** | No move, no delete. Go keeps serving everything; trailmap runs beside it. | The six cutover stories stay `blocked`. |
-| **B. Fleet state to tables** | ringo's thirteen JSON state files become ringo-owned tables in trailmap's database, under an enforced per-table ownership rule. | Every file dual-writing against a table that matches it. |
-| **C. Read-only parity** | Every task-domain page ringo serves is served by trailmap and gated against ringo's output over the whole database — including the root dashboard, which phase B makes renderable. | Each page's gate green in CI. |
-| **D. Tmux reading** | The pane and session surface: archive index, transcripts, the terminal replay, live streaming. | Rendered pane matches Go's over a corpus of real logs. |
-| **E. Beyond parity** | Surface ringo never had — search, dependency graphs. Purpose is framework yield, not features. | Trails stories filed per surface. |
-| **F. Soak** | trailmap **is** the dashboard on the public hostname; Go still serves loopback, webhooks and SSE. | Two weeks, no unfixed incident, explicit owner sign-off. |
-| **G. Cutover** | Domain move completion, CLI as HTTP client, authoring and ingest, export, the database move, stripping the tasks repo, deleting the published JSON and the Go read model. | — |
+| Phase                        | What                                                                                                                                                                               | Exit criterion                                           |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| **A. Freeze**                | No move, no delete. Go keeps serving everything; trailmap runs beside it.                                                                                                          | The six cutover stories stay `blocked`.                  |
+| **B. Fleet state to tables** | ringo's thirteen JSON state files become ringo-owned tables in trailmap's database, under an enforced per-table ownership rule.                                                    | Every file dual-writing against a table that matches it. |
+| **C. Read-only parity**      | Every task-domain page ringo serves is served by trailmap and gated against ringo's output over the whole database — including the root dashboard, which phase B makes renderable. | Each page's gate green in CI.                            |
+| **D. Tmux reading**          | The pane and session surface: archive index, transcripts, the terminal replay, live streaming.                                                                                     | Rendered pane matches Go's over a corpus of real logs.   |
+| **E. Beyond parity**         | Surface ringo never had — search, dependency graphs. Purpose is framework yield, not features.                                                                                     | Trails stories filed per surface.                        |
+| **F. Soak**                  | trailmap **is** the dashboard on the public hostname; Go still serves loopback, webhooks and SSE.                                                                                  | Two weeks, no unfixed incident, explicit owner sign-off. |
+| **G. Cutover**               | Domain move completion, CLI as HTTP client, authoring and ingest, export, the database move, stripping the tasks repo, deleting the published JSON and the Go read model.          | —                                                        |
 
 **No story in phases A–F deletes anything.** Phase B moves state into tables,
 but every source file dual-writes through a soak and is deleted by a later
