@@ -30,7 +30,7 @@ bodies:
 - `cached?(table_name)`
   (`vendor/rails/activerecord/lib/active_record/connection_adapters/schema_cache.rb:79-88`)
   inlines its own load: `if @cache.nil?` / `unless
-  self.class.check_schema_cache_dump_version` / `@cache = load_cache(nil)`, then
+self.class.check_schema_cache_dump_version` / `@cache = load_cache(nil)`, then
   `@cache&.cached?(table_name)`.
 - `columns_hash?(pool, table_name)` (`schema_cache.rb:57-59`) is
   `cache(pool).columns_hash?(pool, table_name)`.

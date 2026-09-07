@@ -23,29 +23,29 @@ touched both members while making them async. Two deviations in
 `packages/activerecord/src/connection-adapters/schema-cache.ts` against
 `vendor/rails/activerecord/lib/active_record/connection_adapters/schema_cache.rb`:
 
-1. **`SchemaCache.read` is public.** Rails declares it and then immediately
-   privatises it: `private_class_method :read` (`schema_cache.rb:253`, right
-   after the body at `:244-252`). trails' `static read` (`schema-cache.ts:107`)
-   carries no `@internal`, so it is public API and measured surface. Its only
-   caller is `SchemaCache._loadFrom` (`schema-cache.ts:94`, Rails'
-   `_load_from`/`load` at `:238`).
+1.  **`SchemaCache.read` is public.** Rails declares it and then immediately
+    privatises it: `private_class_method :read` (`schema_cache.rb:253`, right
+    after the body at `:244-252`). trails' `static read` (`schema-cache.ts:107`)
+    carries no `@internal`, so it is public API and measured surface. Its only
+    caller is `SchemaCache._loadFrom` (`schema-cache.ts:94`, Rails'
+    `_load_from`/`load` at `:238`).
 
-2. **`SchemaCache#open`'s non-gz arm sets an encoding Rails does not.** Rails
-   (`schema_cache.rb:461-473`) is:
+2.  **`SchemaCache#open`'s non-gz arm sets an encoding Rails does not.** Rails
+    (`schema_cache.rb:461-473`) is:
 
-       File.atomic_write(filename) do |file|
-         if File.extname(filename) == ".gz"
-           ...
-         else
-           yield file
-         end
-       end
+        File.atomic_write(filename) do |file|
+          if File.extname(filename) == ".gz"
+            ...
+          else
+            yield file
+          end
+        end
 
-   trails' else arm (`schema-cache.ts:475-477`) calls
-   `file.setEncoding(Encoding.UTF_8)` before `block(file)`. Rails' tempfile is
-   already in `binmode` from `atomic_write` (`atomic.rb:25`) and it never
-   re-encodes; the extra call is a trails invention that changes how the
-   non-compressed dump is written.
+    trails' else arm (`schema-cache.ts:475-477`) calls
+    `file.setEncoding(Encoding.UTF_8)` before `block(file)`. Rails' tempfile is
+    already in `binmode` from `atomic_write` (`atomic.rb:25`) and it never
+    re-encodes; the extra call is a trails invention that changes how the
+    non-compressed dump is written.
 
 Both predate #7586.
 
