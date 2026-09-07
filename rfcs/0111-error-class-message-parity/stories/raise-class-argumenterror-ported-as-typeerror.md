@@ -4,7 +4,7 @@ status: ready
 updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: duplicate-error-classes
-packages: ["actiondispatch", "actioncontroller"]
+packages: ["actionpack"]
 deps: []
 deps-rfc: []
 est-loc: 60

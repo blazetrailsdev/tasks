@@ -14,6 +14,8 @@ packages:
   - "date"
   - "i18n"
   - "rack"
+  - "actionview"
+  - "globalid"
 clusters:
   - "duplicate-error-classes"
   - "bare-error-throws"

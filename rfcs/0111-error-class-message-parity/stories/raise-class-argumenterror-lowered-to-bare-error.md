@@ -4,7 +4,7 @@ status: ready
 updated: 2026-09-06
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
-packages: ["activerecord", "actiondispatch", "abstractcontroller", "actionview", "rack", "globalid"]
+packages: ["activerecord", "actionpack", "actionview", "rack", "globalid"]
 deps: []
 deps-rfc: []
 est-loc: 120
