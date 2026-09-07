@@ -37,5 +37,10 @@ prove it agrees with ringo on the logs the fleet actually produces, which are
 - Any difference fails the gate. A tolerated difference needs a named reason in
   the gate's own source, not a silenced assertion.
 - The gate runs in CI, not only by hand.
+- **The torn tail is a shared blind spot and the gate cannot see it.** Both
+  renderers read the same appended-to file with no locking, so both are wrong
+  together on a truncated trailing sequence and the diff stays green. Cover
+  it with a unit test that feeds a deliberately truncated log, not with the
+  corpus.
 - This story is a phase C exit criterion: the pane surface does not count as
   ported until it is green.
