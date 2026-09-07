@@ -1,9 +1,10 @@
 ---
 rfc: "0129-ruby-compat"
 title: "@blazetrails/ruby-compat: one home for the MRI core value types trails emulates, anchored to vendored ruby/ruby and measured by the call gates"
-status: active
+status: superseded
+superseded-by: "0138-ruby-compat-residual-convergence"
 created: 2026-08-29
-updated: 2026-08-29
+updated: 2026-09-06
 owner: "@deanmarano"
 packages:
   - ruby-compat
@@ -32,7 +33,12 @@ related-rfcs:
 priority: 3
 ---
 
-# RFC 0000 — `@blazetrails/ruby-compat`
+# RFC 0129 — `@blazetrails/ruby-compat`
+
+> **Superseded by [RFC 0138](../0138-ruby-compat-residual-convergence/README.md).**
+> The package exists and its structural work landed across 164 closed stories,
+> which stay here. The 12 residual divergences still open against the surface it
+> shipped moved to 0138, which consolidates them with 0135's.
 
 ## Summary
 
