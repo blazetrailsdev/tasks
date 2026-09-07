@@ -342,45 +342,89 @@ application-boot chain, view resolution and implicit render (#7364), and the
 generated asset config (#7371, #7374, #7378). A boot probe against a generated
 app confirmed the full chain — routing, controller, implicit render, `.tse`,
 layout — returns rendered HTML. `blazetrailsdev/trailmap` is scaffolded on
-vendored packages and serves a root route.
+vendored packages, serves the show and list pages against the live database,
+and its ready queue is gated byte-for-byte against the CLI's.
 
-1. **Domain move.** Models, migrations, ranking and verbs move out of
-   `blazetrailsdev/tasks/src/` and onto the models; the DB moves to trailmap's
-   storage. The CLI still writes directly; trailmap is read-only.
-2. **API + CLI cutover.** JSON API on loopback; the CLI moves into trailmap and
-   becomes a client, with all four call sites updated in one change so `tasks`
-   never resolves to two implementations; trailmap becomes the sole writer;
-   authoring and ingest move into the app.
-3. **Go read-model retirement.** `webhook/tasksdb.go`, `index.json`,
-   `events.json` and `publishReadModels()` deleted.
-4. **Pages.** `/rfc/<id>` and `/story/<id>` first — server-rendered, read-only,
-   real data. Then the list pages (`/rfcs`, `/backlog`, currently JS shells
-   over `/spawnloop/rfcs`), then the remaining task-domain pages.
+### Build out before cutting over
+
+The original order was domain move, then CLI cutover, then Go retirement, then
+pages — deletions second and pages last. **That is inverted.** Pages and the
+proving-ground work come first; every irreversible step is gated behind a soak.
+
+The reason is the one this RFC already states and then underweights: the
+cutover has **no offline fallback by design**. If trailmap is down the CLI is
+down and the fleet stops. That trade is acceptable only once trailmap has
+already been the thing everyone opens for long enough that its failure modes
+are known ones. Cutting over to prove it works gets the order backwards, and
+the blast radius is the fleet that would have to fix it.
+
+The build-out is also where the RFC's second purpose actually pays. A phase
+that deletes Go code yields no framework stories; a phase that makes trails
+hold a response open and stream a live tmux pane yields many. Deleting
+`tasksdb.go` is the reward, not the work.
+
+| Phase | What | Exit criterion |
+| ----- | ---- | -------------- |
+| **A. Freeze** | No move, no delete. Go keeps serving everything; trailmap runs beside it. | The six cutover stories stay `blocked`. |
+| **B. Read-only parity** | Every task-domain page ringo serves is served by trailmap and gated against ringo's output over the whole database. | Each page's gate green in CI. |
+| **C. Tmux reading** | The pane and session surface: archive index, transcripts, the terminal replay, live streaming. | Rendered pane matches Go's over a corpus of real logs. |
+| **D. Beyond parity** | Surface ringo never had — search, dependency graphs. Purpose is framework yield, not features. | Trails stories filed per surface. |
+| **E. Soak** | trailmap **is** the dashboard on the public hostname; Go still serves loopback, webhooks and SSE. | Two weeks, no unfixed incident, explicit owner sign-off. |
+| **F. Cutover** | Domain move completion, CLI as HTTP client, authoring and ingest, export, the database move, stripping the tasks repo, deleting the published JSON and the Go read model. | — |
+
+**No story in phases A–E deletes or moves anything.** Every one of them is
+additive and runs beside ringo, so any of them can be abandoned mid-flight
+without the fleet noticing. The six phase F stories are `blocked` with a reason
+naming `soak-trailmap-as-the-fleet-dashboard`, and that story's sign-off is the
+only thing that unblocks them — explicitly, by the RFC owner, not automatically
+on the calendar.
+
+**Phase F's internal order is unchanged** from the original rollout: the domain
+move, then the API and CLI cutover with all four call sites updated in one
+change so `tasks` never resolves to two implementations, then the Go
+read-model retirement. What changed is when it starts, not what it does.
 
 Then, as its own RFC: trailmap hosts the content repo, the receive hook becomes
 the gate, and the interim validation split collapses.
 
+### What is deliberately out of the build-out
+
+`/graphs/parity`, `/graphs/cost` and `/grades` read `stats.db`, which this
+RFC's non-goals leave Go-owned. They are not part of phase B parity, and
+"trailmap serves every ringo page" is not the goal — trailmap serving every
+**task-domain** page is. `/audits` is the one file-backed exception, included
+because serving a directory of agent-supplied files is exactly the unglamorous
+surface the proving ground is for.
+
 ## Verification
 
-- **Phase 1 equivalence gate.** `pnpm gate` (`scripts/equivalence.ts`,
-  `equivalence-ranking.ts`) already exists to prove a rewrite does not reorder
-  anyone's work queue. Reuse it: trailmap's ready queue and the CLI's must
-  produce byte-identical output over the live database, for every RFC. This is
-  what makes the domain move safe rather than hopeful.
-- **Phase 2.** Every `tasks` verb leaves identical DB state and prints
-  identical stdout through the API as it did in-process, across the full verb
-  set. `blazetrailsdev/tasks` contains only `rfcs/**/*.md`, a syntactic
-  `scripts/` and repo metadata, and content CI still fails a malformed
-  frontmatter block **with no network access**.
-- **Phase 3.** `webhook/tasksdb.go`, `readmodel.ts`, `db-path.ts`,
+- **Phase B, per page.** A gate diffs trailmap's output against ringo's over
+  the live database, for every task-domain page and every `/spawnloop/*` read
+  endpoint in scope. This is the same shape as the ready-queue equivalence gate
+  that already made the domain move safe (`scripts/equivalence.ts`) — that gate
+  is the precedent, and every page repeats it.
+- **Phase C.** The pane renderer agrees with `webhook/paneterm.go` byte for
+  byte over a committed corpus of **real** captured logs, including at least
+  one full-length agent session. Unit tests prove the cases ringo's tests name;
+  only the corpus proves the 4 MB inline-repaint input the fleet actually
+  produces. A tolerated difference needs a named reason in the gate's source,
+  never a silenced assertion.
+- **Phase D.** Framework stories filed, with the reproduction that found them.
+  This is the deliverable, not a side effect: a phase D story that files
+  nothing has been built around the framework rather than on it, and should say
+  in its PR why not.
+- **Phase E.** Two weeks serving the public hostname, every phase B and C gate
+  green throughout, incidents recorded with the story that fixed each. Nothing
+  is deleted during the soak. An unfixed incident fails it.
+- **Phase F.** As originally stated: every `tasks` verb leaves identical DB
+  state and prints identical stdout through the API; `blazetrailsdev/tasks`
+  contains only `rfcs/**/*.md`, a syntactic `scripts/` and repo metadata, with
+  content CI still failing a malformed frontmatter block **with no network
+  access**; and `webhook/tasksdb.go`, `readmodel.ts`, `db-path.ts`,
   `scripts/tasks/tasks.sh`'s probe list, `index.json` and `events.json` all
   deleted — the metric is those line counts reaching zero.
-- **Phase 4 burndown.** Task-domain routes served by trailmap rather than Go,
-  reported per phase.
 - **Framework yield.** Trails stories filed because trailmap hit them, and how
-  many close. This is a deliverable of the RFC, not a side effect: a phase that
-  surfaces nothing has probably been built around the framework rather than on
-  it.
+  many close, reported per phase.
 
 ## Open questions
 
