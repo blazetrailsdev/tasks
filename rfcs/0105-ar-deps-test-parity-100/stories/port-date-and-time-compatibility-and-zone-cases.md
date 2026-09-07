@@ -1,7 +1,7 @@
 ---
 title: "Port date_and_time compatibility, date/date_time ext and zone cases (33)"
-status: claimed
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-07
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 7582
 claim: "2026-09-06T23:16:21Z"
 assignee: "port-date-and-time-compatibility-and-zone-cases"
 blocked-by: null

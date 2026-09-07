@@ -1,7 +1,7 @@
 ---
 title: "converge-cookiejar-set-onto-rails-index-assign-guard"
-status: in-progress
-updated: 2026-09-06
+status: done
+updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
