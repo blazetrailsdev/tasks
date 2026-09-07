@@ -25,7 +25,7 @@ against the live database while building #15:
 /backlog                 200  791 rows   926 KB  2.1s
 /backlog?filter=icebox   200 1222 rows   1.6 MB  1.9s
 /backlog?filter=done     200 6597 rows   8.8 MB  2.2s
-```text
+```
 
 This was accepted knowingly in #15 rather than missed: ringo ships the whole
 story set to the browser as JSON on every load and renders the same 6,597
