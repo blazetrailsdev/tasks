@@ -1,6 +1,6 @@
 ---
 title: "Port core_ext/string_ext, array/conversions and json/encoding cases (18)"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap

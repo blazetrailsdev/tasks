@@ -1,6 +1,6 @@
 ---
 title: "Server-render /rfcs and /backlog, replacing the JS shells"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["render-the-rfc-and-story-show-pages"]
 deps-rfc: []
 est-loc: 250
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 15
+claim: "2026-09-06T23:17:54Z"
+assignee: "render-the-rfcs-and-backlog-list-pages"
 blocked-by: null
 closed-reason: null
 ---

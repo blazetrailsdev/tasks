@@ -1,6 +1,6 @@
 ---
 title: "Port MockResponse#empty? — the status-only override Rails has"
-status: ready
+status: in-progress
 updated: 2026-09-06
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 31
-pr: null
-claim: null
-assignee: null
+pr: 7581
+claim: "2026-09-06T23:10:57Z"
+assignee: "move-multipart-boundary-constant-to-multipart-module"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "The arms splice resolves a method delegating to a same-named same-file function"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0113-branch-and-guard-parity"
 cluster: arm-parity-tooling

@@ -1,6 +1,6 @@
 ---
 title: "copy_entry hand-recurses where fileutils.rb:1044 traverses through Entry_#wrap_traverse, interleaving the metadata pass"
-status: in-progress
+status: done
 updated: 2026-09-06
 rfc: "0135-platform-adapters-in-ruby-compat"
 cluster: null
