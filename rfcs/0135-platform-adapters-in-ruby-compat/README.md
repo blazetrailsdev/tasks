@@ -1,9 +1,10 @@
 ---
 rfc: "0135-platform-adapters-in-ruby-compat"
 title: "The platform adapters move into ruby-compat and arrive as Ruby: File, Dir, FileUtils, Pathname and Process are the surface, the FsAdapter shape becomes an internal backend contract, and rack depends on a leaf alone"
-status: active
+status: superseded
+superseded-by: "0138-ruby-compat-residual-convergence"
 created: 2026-09-02
-updated: 2026-09-02
+updated: 2026-09-06
 owner: "@deanmarano"
 packages:
   - ruby-compat
@@ -26,6 +27,11 @@ priority: 2
 ---
 
 # RFC 0135 — the platform adapters live in `@blazetrails/ruby-compat`
+
+> **Superseded by [RFC 0138](../0138-ruby-compat-residual-convergence/README.md).**
+> The adapters moved and arrived wearing Ruby's names across 49 closed stories,
+> which stay here. The 7 residual divergences still open against the surface it
+> shipped moved to 0138, which consolidates them with 0129's.
 
 ## Summary
 

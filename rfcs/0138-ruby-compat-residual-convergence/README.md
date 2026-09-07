@@ -10,6 +10,7 @@ packages:
   - activesupport
   - actionpack
   - actionview
+  - activerecord
 clusters:
   - fidelity
 related-rfcs:
