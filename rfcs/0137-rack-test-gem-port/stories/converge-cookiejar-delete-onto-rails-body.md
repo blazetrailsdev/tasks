@@ -1,6 +1,6 @@
 ---
 title: "converge-cookiejar-delete-onto-rails-body"
-status: claimed
+status: in-progress
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 40
-pr: null
+pr: 7585
 claim: "2026-09-07T01:54:26Z"
 assignee: "port-time-rfc2822-behind-conditional-get"
 blocked-by: null

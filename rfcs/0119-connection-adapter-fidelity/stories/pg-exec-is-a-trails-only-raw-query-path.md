@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQLAdapter#exec is a trails-only raw-query path (~520 call sites, needs splitting)"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

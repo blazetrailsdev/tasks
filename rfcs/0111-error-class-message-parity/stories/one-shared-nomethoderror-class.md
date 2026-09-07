@@ -1,7 +1,7 @@
 ---
 title: "One shared NoMethodError, extending NameError, for all eight raise sites"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-07
 rfc: "0111-error-class-message-parity"
 cluster: duplicate-error-classes
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 10
-pr: null
-claim: null
-assignee: null
+pr: 7587
+claim: "2026-09-07T02:20:00Z"
+assignee: "one-shared-nomethoderror-class"
 blocked-by: null
 closed-reason: null
 ---

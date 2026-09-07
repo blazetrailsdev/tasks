@@ -1,7 +1,7 @@
 ---
 title: "build_configs inlines for_current_env? and invents _isThreeLevelConfig"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7588
+claim: "2026-09-07T02:26:22Z"
+assignee: "abstract-fetch-type-metadata-carries-a-rest-param-for-pg-override-arity"
 blocked-by: null
 closed-reason: null
 ---

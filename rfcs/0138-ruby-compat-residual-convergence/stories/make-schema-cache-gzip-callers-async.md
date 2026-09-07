@@ -1,6 +1,6 @@
 ---
 title: "Make the SchemaCache gzip callers async so the Zlib seam can stream"
-status: claimed
+status: in-progress
 updated: 2026-09-07
 rfc: "0138-ruby-compat-residual-convergence"
 cluster: null
@@ -8,8 +8,8 @@ packages: ["activerecord", "ruby-compat"]
 deps: []
 deps-rfc: []
 est-loc: 260
-priority: null
-pr: null
+priority: 48
+pr: 7586
 claim: "2026-09-07T00:55:49Z"
 assignee: "zlib-seam-is-one-shot-so-gzipwriter-buffers-the-payload"
 blocked-by: null

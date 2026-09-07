@@ -1,6 +1,6 @@
 ---
 title: "Port Time.rfc2822 and parse with it instead of JS Date in ConditionalGet#to_rfc2822"
-status: claimed
+status: in-progress
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 37
-pr: null
+pr: 7585
 claim: "2026-09-07T01:54:26Z"
 assignee: "port-time-rfc2822-behind-conditional-get"
 blocked-by: null
