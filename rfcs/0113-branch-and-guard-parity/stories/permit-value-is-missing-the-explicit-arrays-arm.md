@@ -1,13 +1,13 @@
 ---
-title: "permit-value-is-missing-the-explicit-arrays-arm"
+title: "permit_value has four arms where Rails has five: the explicit_arrays arm is missing and explicitArrays is threaded nowhere"
 status: draft
 updated: 2026-09-07
 rfc: "0113-branch-and-guard-parity"
-cluster: null
-packages: []
+cluster: missing-arm
+packages: ["actionpack"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
