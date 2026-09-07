@@ -1,13 +1,14 @@
 ---
-title: "date-ext-calendar-reform-cases-assert-proleptic-values"
+title: "DateAndTime::Calculations week math is proleptic, so seven date_ext calendar-reform cases assert non-MRI values"
 status: draft
 updated: 2026-09-07
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
-packages: []
+packages:
+  - "activesupport"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 250
 priority: null
 pr: null
 claim: null

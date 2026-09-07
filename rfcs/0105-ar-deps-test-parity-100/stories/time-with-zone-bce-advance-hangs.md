@@ -1,13 +1,14 @@
 ---
-title: "time-with-zone-bce-advance-hangs"
+title: "TimeWithZone#- with a multi-millennium Duration hangs: getZoneInfo misreads BCE years from Intl, so periodsForLocal returns [] forever"
 status: draft
 updated: 2026-09-07
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
-packages: []
+packages:
+  - "activesupport"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null
