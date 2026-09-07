@@ -1,6 +1,6 @@
 ---
 title: "reserialize-cookie-on-read-through-the-jar"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null

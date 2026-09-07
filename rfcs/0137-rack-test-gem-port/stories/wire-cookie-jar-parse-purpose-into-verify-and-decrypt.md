@@ -1,6 +1,6 @@
 ---
 title: "wire-cookie-jar-parse-purpose-into-verify-and-decrypt"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null
