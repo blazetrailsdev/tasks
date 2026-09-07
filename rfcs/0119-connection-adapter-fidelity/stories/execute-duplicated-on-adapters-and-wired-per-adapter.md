@@ -31,6 +31,28 @@ def execute(sql, name = nil, allow_retry: false)
 end
 ```
 
+> **Correction (PR #7594, read from `vendor/rails`).** The paragraph below is
+> wrong on its face and the acceptance criteria inherit the error. Rails DOES
+> override `execute` on two of the three adapters:
+> `sqlite3/database_statements.rb:53` (`def execute(...) super&.to_a end`) and
+> `postgresql/database_statements.rb:39` (`def execute(...) super ensure
+> @notice_receiver_sql_warnings = [] end`). Only mysql2 has no override.
+>
+> What Rails does NOT do is re-wire `dirties_query_cache` per adapter: an
+> adapter module sits between the adapter class and `AbstractAdapter` in the
+> ancestor chain, so its `execute` shadows the wrapper `query_cache.rb:13`
+> installed on the base and reaches it again through `super`. That, not the
+> existence of the overrides, is the divergence.
+>
+> So the converged shape is: **keep** the SQLite3 and PostgreSQL overrides and
+> route their bodies through the inherited (wrapped) `execute` instead of
+> calling the abstract module function directly; **delete** the Mysql2 one,
+> pushing its `mysqlQuote` / translate / result-shaping specialisation down
+> into `rawExecute` the way Rails layers it (mysql2 has no `rawExecute`
+> override in trails today, which is the actual gap). The first acceptance
+> criterion below — "`execute` exists once ... the SQLite3, PostgreSQL and
+> Mysql2 copies are gone" — should be read as amended by this note.
+
 **No adapter overrides it.** Adapters specialise the layer underneath —
 `raw_execute` (`abstract/database_statements.rb:552`) — and `execute` reaches
 them through `internal_execute`. Because there is exactly one definition,
