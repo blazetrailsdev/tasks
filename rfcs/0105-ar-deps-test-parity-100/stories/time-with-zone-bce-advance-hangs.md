@@ -54,6 +54,23 @@ The forward half works. The backward half does not, and the loop is exact:
   `getZoneInfo(localMs - offset*1000)` reports that same offset (`:536-541`).
   For a BCE instant that round-trip never agrees, so the candidate list empties.
 
+The root cause is one line up, in `getZoneInfo`
+(`packages/activesupport/src/values/time-zone.ts:369-410`). It derives the
+offset by reformatting the instant in the zone and subtracting, and it reads
+the year with `parseInt(localParts.find((p) => p.type === "year").value)`.
+`Intl.DateTimeFormat` renders a BCE year as a **positive era-relative number**
+(`-008001` prints as `8002`, with the era in a separate part the code never
+reads), so `localAsUtc` lands ~16,000 years in the future and the subtraction
+yields a nonsense offset. Measured for Eastern at `-008001-12-31T19:00:00Z`:
+`abbr` is correctly `GMT-4:56:02`, while `utcOffsetSeconds` is `505005908638`,
+and the two ±1-day probes disagree (`505005908638` vs `504942836638`) because
+the bogus value tracks the date rather than the offset.
+
+So the fix is in `getZoneInfo` — read the `era` part (or compute the offset
+without round-tripping through the formatted year) — not in `periodsForLocal`
+or in the `for (;;)`. Note `getZoneInfo` also backs `abbr`, `dst?` and
+`utcOffset`, so the change wants its own regression coverage.
+
 Because the failure is a non-interruptible synchronous loop, a `testTimeout`
 does not rescue it — the vitest worker never returns — which is why the case
 stays an `it.skip` stub rather than a failing test.
