@@ -2,7 +2,7 @@
 title: "OpenSSL::Digest and Digest are one collapsed constant seat, so uuid_from_hash's two arms cannot discriminate"
 status: draft
 updated: 2026-09-06
-rfc: "0138-ruby-compat-residual-convergence"
+rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []

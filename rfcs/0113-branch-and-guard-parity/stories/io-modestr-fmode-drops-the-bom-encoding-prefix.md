@@ -2,7 +2,7 @@
 title: "rb_io_modestr_fmode drops the bom| prefix arm, so FMODE_SETENC_BY_BOM is never set"
 status: ready
 updated: 2026-09-06
-rfc: "0138-ruby-compat-residual-convergence"
+rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []

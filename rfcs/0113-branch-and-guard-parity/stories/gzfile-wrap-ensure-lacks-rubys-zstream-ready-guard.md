@@ -2,7 +2,7 @@
 title: "gzfile_wrap's ensure closes unconditionally, where Ruby guards on ZSTREAM_IS_READY"
 status: draft
 updated: 2026-09-07
-rfc: "0138-ruby-compat-residual-convergence"
+rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []

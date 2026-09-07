@@ -2,7 +2,7 @@
 title: "basicObjRespondTo ignores the pub parameter it now accepts"
 status: ready
 updated: 2026-09-06
-rfc: "0138-ruby-compat-residual-convergence"
+rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
