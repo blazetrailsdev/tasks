@@ -1,6 +1,6 @@
 ---
 title: "assertNestedAttributesAreKnown is an invented pre-flight guard Rails raises from the assignment instead"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0113-branch-and-guard-parity"
 cluster: null

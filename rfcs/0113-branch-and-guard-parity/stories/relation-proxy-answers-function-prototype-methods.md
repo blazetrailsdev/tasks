@@ -1,6 +1,6 @@
 ---
 title: "Relation proxy's respond_to? guard answers Function.prototype methods Ruby's Module never defines"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0113-branch-and-guard-parity"
 cluster: null
