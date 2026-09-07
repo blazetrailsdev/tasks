@@ -50,7 +50,7 @@ over `CompressionStream`. `GzipWriter#write` then feeds the handle per call and
 neither holds the payload.
 
 **Amended 2026-09-07 (#7586).** The paragraph that stood here called for a
-*synchronous* push/pull pair backed by `zlib.deflateSync` and `Z_SYNC_FLUSH`.
+_synchronous_ push/pull pair backed by `zlib.deflateSync` and `Z_SYNC_FLUSH`.
 That is not buildable, and it is why this story was blocked: `deflateSync` /
 `inflateSync` are stateless one-shots (chaining them with `Z_SYNC_FLUSH` yields
 independent streams, not a continuation); the one incremental sync entry point,
