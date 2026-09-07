@@ -1,7 +1,7 @@
 ---
 title: "include() re-copies an already-included module's members"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-07
 rfc: "0138-ruby-compat-residual-convergence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: 7584
+claim: "2026-09-07T01:43:51Z"
+assignee: "time-to-time-hands-out-a-skewed-wall-clock"
 blocked-by: null
 closed-reason: null
 ---

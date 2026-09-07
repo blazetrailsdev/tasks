@@ -1,6 +1,6 @@
 ---
 title: "Port date_and_time compatibility, date/date_time ext and zone cases (33)"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap

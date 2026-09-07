@@ -1,6 +1,6 @@
 ---
 title: "Port AbstractCookieJar; the three chained jars each hand-roll its []="
-status: draft
+status: ready
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 42
 pr: null
 claim: null
 assignee: null
