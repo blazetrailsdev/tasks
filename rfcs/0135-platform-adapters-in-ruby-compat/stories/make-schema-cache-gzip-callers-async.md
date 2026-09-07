@@ -33,7 +33,7 @@ on Node 20.19.6:
   `Z_SYNC_FLUSH` produces independent deflate streams rather than a
   continuation, so the concatenation is not a valid stream.
 - The one incremental sync entry point, `stream._processChunk(chunk,
-  Z_SYNC_FLUSH)`, ends `processChunkSync` (node `lib/zlib.js`) with an
+Z_SYNC_FLUSH)`, ends `processChunkSync` (node `lib/zlib.js`) with an
   unconditional `_close(self)`; the second sync chunk throws
   `Cannot read properties of null (reading 'writeSync')`.
 - `createGzip` / `createGunzip` are asynchronous, and so is the browser
