@@ -1,7 +1,7 @@
 ---
 title: "NATIVE_DATABASE_TYPES tables live in a shared module and alias a by-adapter map with no Rails counterpart"
-status: ready
-updated: 2026-09-06
+status: claimed
+updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-07T19:28:42Z"
+assignee: "execute-duplicated-on-adapters-and-wired-per-adapter"
 blocked-by: null
 closed-reason: null
 ---

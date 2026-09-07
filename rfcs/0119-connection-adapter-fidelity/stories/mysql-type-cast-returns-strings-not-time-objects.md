@@ -1,6 +1,6 @@
 ---
 title: "mysql-type-cast-returns-strings-not-time-objects"
-status: ready
+status: claimed
 updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-07T19:28:42Z"
+assignee: "execute-duplicated-on-adapters-and-wired-per-adapter"
 blocked-by: null
 closed-reason: null
 ---

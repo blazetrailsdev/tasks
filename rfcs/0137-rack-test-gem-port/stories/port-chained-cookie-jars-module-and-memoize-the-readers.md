@@ -1,6 +1,6 @@
 ---
 title: "port-chained-cookie-jars-module-and-memoize-the-readers"
-status: draft
+status: claimed
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-07T19:26:54Z"
+assignee: "port-chained-cookie-jars-module-and-memoize-the-readers"
 blocked-by: null
 closed-reason: null
 ---

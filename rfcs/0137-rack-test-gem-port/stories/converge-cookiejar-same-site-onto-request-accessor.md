@@ -1,6 +1,6 @@
 ---
 title: "handleOptions defaults sameSite from a jar-wide option where Rails reads request.cookies_same_site_protection"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null

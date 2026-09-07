@@ -1,9 +1,9 @@
 ---
 rfc: "0138-ruby-compat-residual-convergence"
 title: "The ruby-compat residual: the divergences left behind once the package and the platform adapters both landed"
-status: active
+status: closed
 created: 2026-09-06
-updated: 2026-09-06
+updated: 2026-09-07
 owner: "@deanmarano"
 packages:
   - ruby-compat
