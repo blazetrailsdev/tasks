@@ -1,7 +1,7 @@
 ---
 title: "Enroll log_subscriber_test.rb's seven fragment-cache tests"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-07
 rfc: "0138-ruby-compat-residual-convergence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: 7593
+claim: "2026-09-07T13:27:51Z"
+assignee: "enroll-the-fragment-cache-log-subscriber-tests"
 blocked-by: null
 closed-reason: null
 ---

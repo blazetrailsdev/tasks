@@ -1,6 +1,6 @@
 ---
 title: "ensure_valid_options_for_batching!'s other three guards raise a bare Error, not ArgumentError"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws

@@ -1,6 +1,6 @@
 ---
 title: "insert_fixtures_set builds INSERTs inline, leaving the whole build_fixture_sql path dead"
-status: claimed
+status: in-progress
 updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 7592
 claim: "2026-09-07T12:06:26Z"
 assignee: "configure-connection-cannot-service-a-query-on-the-connection-it-configures"
 blocked-by: null

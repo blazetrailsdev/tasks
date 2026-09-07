@@ -1,6 +1,6 @@
 ---
 title: "setLockThread collapses Rails' three-arm lock_thread= into two and instantiates NullLock"
-status: claimed
+status: ready
 updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: "2026-09-07T12:06:26Z"
-assignee: "configure-connection-cannot-service-a-query-on-the-connection-it-configures"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

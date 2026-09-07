@@ -1,6 +1,6 @@
 ---
 title: "ConditionalGet#fresh splits one Rails elsif into two nested ifs and renames the local"
-status: draft
+status: ready
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null

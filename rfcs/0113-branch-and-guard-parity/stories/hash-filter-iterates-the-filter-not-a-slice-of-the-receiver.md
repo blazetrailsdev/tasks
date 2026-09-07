@@ -1,6 +1,6 @@
 ---
 title: "hash_filter iterates the filter instead of slice(*filter.keys), inlines permit_value, and invents an empty-filter arm"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0113-branch-and-guard-parity"
 cluster: null

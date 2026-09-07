@@ -1,6 +1,6 @@
 ---
 title: "Gate the markdown renderer against webhook/markdown.go in CI"
-status: ready
+status: claimed
 updated: 2026-09-07
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-07T13:01:44Z"
+assignee: "gate-the-list-pages-against-ringo"
 blocked-by: null
 closed-reason: null
 ---

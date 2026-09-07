@@ -1,6 +1,6 @@
 ---
 title: "time-change-third-arm-uses-process-local-zone"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0113-branch-and-guard-parity"
 cluster: null

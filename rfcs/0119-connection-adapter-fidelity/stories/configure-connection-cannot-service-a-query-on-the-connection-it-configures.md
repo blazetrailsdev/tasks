@@ -1,6 +1,6 @@
 ---
 title: "configureConnection cannot service a query on the connection it is configuring"
-status: claimed
+status: in-progress
 updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 7592
 claim: "2026-09-07T12:06:26Z"
 assignee: "configure-connection-cannot-service-a-query-on-the-connection-it-configures"
 blocked-by: null

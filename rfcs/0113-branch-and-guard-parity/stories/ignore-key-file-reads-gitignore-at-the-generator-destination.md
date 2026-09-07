@@ -1,6 +1,6 @@
 ---
 title: "ignore_key_file reads and appends to the SAME .gitignore, resolved against the destination"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0113-branch-and-guard-parity"
 cluster: null

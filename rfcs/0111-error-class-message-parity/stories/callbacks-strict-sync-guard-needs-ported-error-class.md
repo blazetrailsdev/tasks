@@ -1,6 +1,6 @@
 ---
 title: 'strict:"sync" callback guards throw bare Error, blocking rails-error-parity burndown'
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
