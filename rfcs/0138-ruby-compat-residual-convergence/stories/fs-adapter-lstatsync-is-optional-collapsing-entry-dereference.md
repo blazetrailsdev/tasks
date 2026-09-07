@@ -2,7 +2,7 @@
 title: "lstatSync is optional on the fs backend, collapsing Entry_#lstat's dereference? arms"
 status: draft
 updated: 2026-09-06
-rfc: "0135-platform-adapters-in-ruby-compat"
+rfc: "0138-ruby-compat-residual-convergence"
 cluster: null
 packages: []
 deps: []

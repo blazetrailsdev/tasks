@@ -2,7 +2,7 @@
 title: "IO read cannot BOM-sniff the UTF-16 and UTF-32 dummy seats"
 status: ready
 updated: 2026-09-06
-rfc: "0129-ruby-compat"
+rfc: "0138-ruby-compat-residual-convergence"
 cluster: null
 packages: []
 deps: []

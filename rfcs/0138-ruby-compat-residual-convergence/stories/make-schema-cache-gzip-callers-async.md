@@ -2,7 +2,7 @@
 title: "Make the SchemaCache gzip callers async so the Zlib seam can stream"
 status: claimed
 updated: 2026-09-07
-rfc: "0135-platform-adapters-in-ruby-compat"
+rfc: "0138-ruby-compat-residual-convergence"
 cluster: null
 packages: ["activerecord", "ruby-compat"]
 deps: []

@@ -2,7 +2,7 @@
 title: "ActionView::Digestor is an fnv1a stub that drops dependencies and never walks the template tree"
 status: ready
 updated: 2026-09-06
-rfc: "0129-ruby-compat"
+rfc: "0138-ruby-compat-residual-convergence"
 cluster: null
 packages: []
 deps: []
