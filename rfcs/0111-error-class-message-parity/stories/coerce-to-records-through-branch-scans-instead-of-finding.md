@@ -1,13 +1,13 @@
 ---
-title: "coerce-to-records-through-branch-scans-instead-of-finding"
+title: "coerceToRecords scans the loaded target for a through association where Rails routes through find"
 status: draft
 updated: 2026-09-07
 rfc: "0111-error-class-message-parity"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 90
 priority: null
 pr: null
 claim: null
