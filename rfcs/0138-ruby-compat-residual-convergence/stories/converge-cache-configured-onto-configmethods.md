@@ -54,4 +54,4 @@ re-exporting a member Rails marks private.
 - [ ] `caching.ts`'s `cache` and the four `fragments.ts` bodies call it on
       `this`, as `caching.rb:60` and `caching/fragments.rb:79,90,102,113` do.
 - [ ] It is not re-exported as public surface; `pnpm parity:api:extra
-  --package actionpack` reports no name for it.
+--package actionpack` reports no name for it.
