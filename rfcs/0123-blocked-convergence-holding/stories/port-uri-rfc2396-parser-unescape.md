@@ -2,7 +2,7 @@
 title: "Port URI::RFC2396_Parser#unescape so recognize_path_with_request calls what Rails calls"
 status: ready
 updated: 2026-09-06
-rfc: "0138-ruby-compat-residual-convergence"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

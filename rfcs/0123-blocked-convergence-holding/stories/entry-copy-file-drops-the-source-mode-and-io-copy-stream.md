@@ -2,7 +2,7 @@
 title: "Entry_#copy_file is copyFileSync, dropping Ruby's source-mode create and IO.copy_stream"
 status: draft
 updated: 2026-09-06
-rfc: "0138-ruby-compat-residual-convergence"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

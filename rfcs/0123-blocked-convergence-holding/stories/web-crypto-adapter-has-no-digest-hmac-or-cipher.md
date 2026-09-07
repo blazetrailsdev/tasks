@@ -2,7 +2,7 @@
 title: "The Web Crypto adapter cannot serve digest, HMAC or cipher"
 status: ready
 updated: 2026-09-06
-rfc: "0138-ruby-compat-residual-convergence"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

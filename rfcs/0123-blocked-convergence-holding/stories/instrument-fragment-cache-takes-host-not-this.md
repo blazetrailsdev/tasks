@@ -2,7 +2,7 @@
 title: "instrument_fragment_cache takes the receiver as a leading argument and invents two fallbacks"
 status: draft
 updated: 2026-09-07
-rfc: "0138-ruby-compat-residual-convergence"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
