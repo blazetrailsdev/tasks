@@ -1,6 +1,6 @@
 ---
 title: "Gate the RFC and story show pages against ringo's, over the whole database"
-status: ready
+status: in-progress
 updated: 2026-09-07
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 17
+claim: "2026-09-07T15:15:36Z"
+assignee: "gate-the-show-pages-against-ringo"
 blocked-by: null
 closed-reason: null
 ---

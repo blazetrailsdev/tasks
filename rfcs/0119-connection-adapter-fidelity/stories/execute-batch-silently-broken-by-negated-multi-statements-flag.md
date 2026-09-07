@@ -1,6 +1,6 @@
 ---
 title: "executeBatch is silently broken by a flags: ['-MULTI_STATEMENTS'] config (~70 LOC)"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

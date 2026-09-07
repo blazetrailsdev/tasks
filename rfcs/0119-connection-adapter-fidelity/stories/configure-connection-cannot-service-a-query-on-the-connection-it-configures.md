@@ -1,6 +1,6 @@
 ---
 title: "configureConnection cannot service a query on the connection it is configuring"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

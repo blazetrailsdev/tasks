@@ -1,7 +1,7 @@
 ---
 title: "normalizeAdapterName's family map is a second enumeration of the driver registry"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7594
+claim: "2026-09-07T15:15:55Z"
+assignee: "database-config-inspect-prints-adapter-not-adapter-class"
 blocked-by: null
 closed-reason: null
 ---

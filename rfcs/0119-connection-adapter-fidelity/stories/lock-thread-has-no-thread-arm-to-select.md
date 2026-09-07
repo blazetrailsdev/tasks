@@ -1,6 +1,6 @@
 ---
 title: "lock-thread-has-no-thread-arm-to-select"
-status: ready
+status: closed
 updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-07T15:15:55Z"
+assignee: "database-config-inspect-prints-adapter-not-adapter-class"
 blocked-by: null
-closed-reason: null
+closed-reason: "Confirmed permanent: JS has one thread, so Rails' `when Thread` arm of lock_thread= (abstract_adapter.rb:181-192) is unreachable by construction. IsolatedExecutionState has no Thread/Fiber context to discriminate on, and ThreadLoadInterlockAwareMonitor's whole body is Thread.current bookkeeping that collapses to an empty subclass. No code change."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "insert_fixtures_set builds INSERTs inline, leaving the whole build_fixture_sql path dead"
-status: in-progress
+status: done
 updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

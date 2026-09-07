@@ -1,7 +1,7 @@
 ---
 title: "mysql-type-cast-returns-strings-not-time-objects"
 status: ready
-updated: 2026-09-06
+updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

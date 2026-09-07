@@ -1,7 +1,7 @@
 ---
 title: "execute is shadowed on all three adapters, forcing three per-adapter dirties_query_cache calls where Rails wires it once on the base class"
 status: ready
-updated: 2026-09-06
+updated: 2026-09-07
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
