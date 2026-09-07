@@ -42,7 +42,7 @@ The body itself is only half converged:
   `{ cwd, output }` — there is no Thor options object, so there is nothing to
   branch on today.
 - **The multi-arg arm drops `say_status` and the `behavior == :invoke ?
-  :green : :red` colour argument**, formatting the status line inline
+:green : :red` colour argument**, formatting the status line inline
   (`rjust(12)` + two spaces, Thor's `say_status` shape) instead. It carries a
   `@missingRailsCall say_status — PERMANENT` receipt.
 

@@ -38,7 +38,12 @@ included alongside.
 the receiver as an extra LEADING parameter instead:
 
 ```ts
-export function instrumentFragmentCache<T>(host: FragmentsHost, name: string, key: unknown, block: () => T): T
+export function instrumentFragmentCache<T>(
+  host: FragmentsHost,
+  name: string,
+  key: unknown,
+  block: () => T,
+): T;
 ```
 
 and reaches the two collaborators through optional chaining with fallbacks
