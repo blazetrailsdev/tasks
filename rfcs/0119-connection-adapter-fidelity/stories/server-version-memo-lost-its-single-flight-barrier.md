@@ -64,7 +64,7 @@ the register entry.
 - [ ] The regression cover in
       `sqlite3-adapter.database-version.trails.test.ts`
       (`a query issued from configureConnection runs on the connection being
-    configured`) stays green, and a new arm pins that two concurrent first
+  configured`) stays green, and a new arm pins that two concurrent first
       callers issue ONE `getDatabaseVersion`.
 - [ ] Or the deviation is ratified with a receipt the tooling accepts, rather
       than left unregistered.
