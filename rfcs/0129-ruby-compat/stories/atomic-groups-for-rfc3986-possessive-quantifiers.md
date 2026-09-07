@@ -60,7 +60,7 @@ comment rather than rewording it.
       in the port, cited to the Ruby line it mirrors.
 - [ ] `split` still answers the same nine components for the whole existing
       `uri.trails.test.ts` corpus, plus the pinned MRI-verified cases.
-- [ ] A test pins a long non-matching input (e.g. `"http://" + "a".repeat(50000)
-  - "\\"`), asserting `URI.parse`throws`InvalidURIError` promptly rather
-    than backtracking — the regression the atomic groups exist to prevent.
+- [ ] A test pins a long non-matching input (e.g. `"http://" + "a".repeat(50000) + "\\"`),
+      asserting `URI.parse` throws `InvalidURIError` promptly rather
+      than backtracking — the regression the atomic groups exist to prevent.
 - [ ] The module comment's possessive-quantifier caveat is deleted.

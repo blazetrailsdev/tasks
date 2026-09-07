@@ -88,7 +88,7 @@ destroy the record of what each accomplished.
 The residual falls into three groups, and naming them is most of the value of
 consolidating:
 
-**1. MRI object-model and core semantics** (ruby-compat proper)
+#### 1. MRI object-model and core semantics (ruby-compat proper)
 
 - `include()` re-copies an already-included module's members
 - `prepend()` ignores a module's per-instance initializer
@@ -99,7 +99,7 @@ consolidating:
 - `rb_io_modestr_fmode` drops the `bom|` prefix arm
 - Port `URI::RFC2396_Parser#unescape`
 
-**2. Platform backends** (the 0135 surface, post-move)
+#### 2. Platform backends (the 0135 surface, post-move)
 
 - The Web Crypto adapter cannot serve digest, HMAC or cipher
 - `OpenSSL::Digest` and `Digest` are one collapsed constant seat
@@ -111,7 +111,7 @@ consolidating:
 - The `ZlibAdapter` seam is one-shot, so `GzipWriter` buffers the payload
   (blocked — see below)
 
-**3. Callers that are not ruby-compat at all**
+#### 3. Callers that are not ruby-compat at all
 
 - `ActionView::Digestor` is an fnv1a stub that drops dependencies and never
   walks the template tree (400 LOC)
