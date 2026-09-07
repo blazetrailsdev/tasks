@@ -20,6 +20,7 @@ clusters:
   # Retained for the assertion stories this RFC landed before the axis moved
   # to RFC 0132; no new story here takes it.
   - assertion-parity
+  - test-placement
 related-rfcs:
   - "0132-ar-closure-assertion-parity"
   - "0098-activesupport-ar-closure-port"
