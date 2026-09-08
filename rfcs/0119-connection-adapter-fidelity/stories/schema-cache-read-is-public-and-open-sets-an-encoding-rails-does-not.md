@@ -72,7 +72,11 @@ converges `IO#write`'s byte path and then deletes this call.
 ## Acceptance criteria
 
 - [ ] `SchemaCache.read` is `@internal`, matching `private_class_method :read`
-      (`schema_cache.rb:253`).
+      (`schema_cache.rb:253`). The extractor does not model
+      `private_class_method`, so the tag is unbacked in
+      `eslint/rails-private-methods.json` and carries a
+      `@noRailsEquivalent CONVERGEABLE` receipt against
+      [[extractor-does-not-model-private-class-method]] until it does.
 - [ ] `SchemaCache#open`'s non-gz `setEncoding` is registered against
       [[binmode-write-emits-latin1-where-mri-emits-the-strings-own-bytes]],
       which is what has to converge before the arm can be Rails' bare
