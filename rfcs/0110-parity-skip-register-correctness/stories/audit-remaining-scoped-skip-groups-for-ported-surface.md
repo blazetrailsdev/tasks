@@ -1,7 +1,7 @@
 ---
 title: "Audit the remaining SCOPED_SKIP_GROUPS entries for ported surface and stale reasons"
-status: draft
-updated: 2026-08-18
+status: in-progress
+updated: 2026-09-08
 rfc: "0110-parity-skip-register-correctness"
 cluster: null
 packages: ["activerecord", "activesupport"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7603
+claim: "2026-09-08T11:37:43Z"
+assignee: "audit-remaining-scoped-skip-groups-for-ported-surface"
 blocked-by: null
 closed-reason: null
 ---

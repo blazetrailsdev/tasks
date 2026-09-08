@@ -1,6 +1,6 @@
 ---
 title: "Re-spell the Journey test names into Rails' def_test form"
-status: ready
+status: in-progress
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7602
+claim: "2026-09-08T11:12:58Z"
+assignee: "journey-test-names-to-rails-def-test-form"
 blocked-by: null
 closed-reason: null
 ---

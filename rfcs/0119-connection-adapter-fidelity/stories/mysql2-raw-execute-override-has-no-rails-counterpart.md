@@ -1,6 +1,6 @@
 ---
 title: "Mysql2Adapter#rawExecute is an override Rails does not have, holding mysqlQuote and FK enrichment"
-status: draft
+status: closed
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by mysql2-execute-override-only-shapes-driver-rows before it was ever worked: the rawExecute override this story was filed against was deleted during review of #7604. It was unreachable from execute — mysql2 overrides internalExecute, so execute never descends to rawExecute — and adding it changed executeBatch, the only real caller, for no benefit. The surviving deviation is the execute override itself."
 ---
 
 ## Context

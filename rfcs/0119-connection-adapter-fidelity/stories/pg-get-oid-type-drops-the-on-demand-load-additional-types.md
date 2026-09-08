@@ -1,7 +1,7 @@
 ---
 title: "pg-get-oid-type-drops-the-on-demand-load-additional-types"
-status: ready
-updated: 2026-09-06
+status: blocked
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-08T11:12:39Z"
+assignee: "execute-duplicated-on-adapters-and-wired-per-adapter"
+blocked-by: "Converging requires awaiting load_additional_types([oid]) inside getOidType, which pg-fetch-type-metadata-async-forces-a-union-on-the-abstract (merged) deliberately made synchronous so fetch_type_metadata / cast_result / new_column_from_field could stay synchronous as they are in Rails. A JS method cannot await; the only two outcomes available are (a) revert that merged story by making getOidType async, or (b) ratify the caller-side pre-load with a PERMANENT receipt. (b) is not an available outcome (converge, never ratify), so this needs an RFC-level decision on (a) before it can ship."
 closed-reason: null
 ---
 

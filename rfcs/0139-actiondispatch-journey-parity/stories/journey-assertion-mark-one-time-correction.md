@@ -1,6 +1,6 @@
 ---
 title: "One-time assertion-mark correction for newly-matched Journey tests"
-status: ready
+status: in-progress
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["journey-test-names-to-rails-def-test-form"]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7602
+claim: "2026-09-08T11:26:41Z"
+assignee: "journey-test-names-to-rails-def-test-form"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "InsertAll#disallow_raw_sql! rejects every raw String — drop the invented permit matcher, raise ArgumentError (insert_all.rb:212-219)"
-status: ready
-updated: 2026-09-06
+status: blocked
+updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: 20
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-08T11:24:09Z"
+assignee: "ensure-mutable-raises-bare-error-instead-of-the-through-error-class"
+blocked-by: 'Error class, message and node guard converged in #7605 (insert-all.ts disallowRawSqlBang now raises ArgumentError with insert_all.rb:215-218 verbatim and guards on Arel.arelNode, and both call sites are unconditional as at insert_all.rb:24-25). The permit-matcher AC cannot ship: Rails'' guard rejects Strings and PASSES Symbols, and trails spells a Ruby Symbol as a JS string, so on_duplicate: :skip and returning: %i[id] are indistinguishable from raw SQL at this call site. Dropping the matcher would reject onDuplicate: "skip" (relation.ts:917,936,1334) and returning: ["id"] — every Symbol Rails passes. Needs the colon-prefixed-Symbol idiom (CLAUDE.md, ''A Ruby Symbol is a JS string'') applied to insertAll''s onDuplicate/returning option surface first; that is its own story.'
 closed-reason: null
 ---
 

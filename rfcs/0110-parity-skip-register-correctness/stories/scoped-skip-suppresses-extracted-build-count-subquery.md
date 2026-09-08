@@ -1,7 +1,7 @@
 ---
 title: "Scoped skip suppresses build_count_subquery, which is already extracted at the Rails name"
-status: draft
-updated: 2026-08-18
+status: in-progress
+updated: 2026-09-08
 rfc: "0110-parity-skip-register-correctness"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7603
+claim: "2026-09-08T11:37:46Z"
+assignee: "scoped-skip-suppresses-extracted-build-count-subquery"
 blocked-by: null
 closed-reason: null
 ---

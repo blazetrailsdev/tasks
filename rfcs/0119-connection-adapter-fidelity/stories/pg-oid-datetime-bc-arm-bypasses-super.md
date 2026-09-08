@@ -1,7 +1,7 @@
 ---
 title: "PG OID::DateTime's BC arm parses wire format instead of rewriting the year and calling super"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7604
+claim: "2026-09-08T11:12:39Z"
+assignee: "execute-duplicated-on-adapters-and-wired-per-adapter"
 blocked-by: null
 closed-reason: null
 ---

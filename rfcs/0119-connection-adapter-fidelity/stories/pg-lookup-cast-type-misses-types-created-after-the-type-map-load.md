@@ -1,7 +1,7 @@
 ---
 title: "lookup_cast_type misses a type created after the last type-map load, where Rails' live ::regtype resolves it"
-status: ready
-updated: 2026-09-06
+status: blocked
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-08T11:12:39Z"
+assignee: "execute-duplicated-on-adapters-and-wired-per-adapter"
+blocked-by: "Same root cause as pg-get-oid-type-drops-the-on-demand-load-additional-types: Rails' lookup_cast_type issues a live 'SELECT <type>::regtype::oid' query per call (postgresql/quoting.rb:194-196) and trails' lookupCastType is synchronous by the settled outcome of pg-lookup-cast-type-async-divergence (#7223), so it cannot query. Of the story's two options, option 2 is a ratification (not an available outcome), and option 1 — sniffing raw execute for CREATE TYPE / CREATE DOMAIN and reloading the type map — is a mechanism Rails has no counterpart for, in the one method (PG execute) whose Rails body is 'super ensure @notice_receiver_sql_warnings = []'. Needs an RFC-level decision on whether an async lookupCastType (reverting #7223) is on the table."
 closed-reason: null
 ---
 
