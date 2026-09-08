@@ -1,6 +1,6 @@
 ---
 title: "PG typeMap getter lazily rebuilds initialize_type_map's registrations instead of being Rails' bare attr_reader"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

@@ -1,16 +1,16 @@
 ---
 title: "count() must compile select values via select_for_count (raise on invalid columns)"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: exclude-burndown
 deps: []
 deps-rfc: []
 est-loc: 180
 priority: 40
-pr: null
-claim: null
-assignee: null
+pr: 7618
+claim: "2026-09-08T15:34:03Z"
+assignee: "converge-pg-oid-point-build-point-float"
 blocked-by: null
 closed-reason: null
 ---

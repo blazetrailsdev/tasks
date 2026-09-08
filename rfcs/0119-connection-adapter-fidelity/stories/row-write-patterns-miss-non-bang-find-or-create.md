@@ -1,6 +1,6 @@
 ---
 title: "Row-write ratchet's non-bang patterns miss createOrFindBy / firstOrCreate"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

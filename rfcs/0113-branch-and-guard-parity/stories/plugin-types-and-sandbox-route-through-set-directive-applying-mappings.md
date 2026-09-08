@@ -1,7 +1,7 @@
 ---
 title: "CSP#plugin_types and #sandbox route through set_directive, applying source mappings Rails does not"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-08
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 20
-pr: null
-claim: null
-assignee: null
+pr: 7617
+claim: "2026-09-08T15:00:33Z"
+assignee: "in-time-zone-no-zone-arm-normalizes-instead-of-returning-self"
 blocked-by: null
 closed-reason: null
 ---

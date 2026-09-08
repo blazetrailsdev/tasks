@@ -1,6 +1,6 @@
 ---
 title: "DeleteRestrictionError takes Rails' single optional name, not (record, association)"
-status: claimed
+status: in-progress
 updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: exclude-burndown
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 40
-pr: null
+pr: 7615
 claim: "2026-09-08T14:45:03Z"
 assignee: "time-zone-rfc3339-hand-rolled-regex-parse"
 blocked-by: null

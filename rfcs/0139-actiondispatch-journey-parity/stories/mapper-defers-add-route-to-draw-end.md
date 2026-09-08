@@ -1,6 +1,6 @@
 ---
 title: "Mapper defers add_route to draw-end where Rails registers at the declaring line"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["actionpack"]
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

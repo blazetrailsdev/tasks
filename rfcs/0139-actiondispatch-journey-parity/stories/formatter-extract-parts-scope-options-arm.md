@@ -1,6 +1,6 @@
 ---
 title: "Carry Route#scopeOptions and its arm of the extract_parameterized_parts keep-condition"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 110
-priority: null
+priority: 51
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "Schema.define invents an env-resolution chain where Rails reads migration_context.current_environment"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

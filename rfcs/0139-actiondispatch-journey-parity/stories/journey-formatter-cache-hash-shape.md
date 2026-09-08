@@ -1,6 +1,6 @@
 ---
 title: "journey-formatter-cache-hash-shape"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 62
 pr: null
 claim: null
 assignee: null

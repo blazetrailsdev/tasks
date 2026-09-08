@@ -1,7 +1,7 @@
 ---
 title: "Controller url-helper copy is a snapshot taken before the routes are drawn"
-status: ready
-updated: 2026-09-04
+status: done
+updated: 2026-09-08
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: 7616
+claim: "2026-09-08T15:02:07Z"
+assignee: "retire-adapter-bypass-onto-a-single-connection-pool"
 blocked-by: null
 closed-reason: null
 ---

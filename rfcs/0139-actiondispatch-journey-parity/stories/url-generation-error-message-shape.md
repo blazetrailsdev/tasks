@@ -1,6 +1,6 @@
 ---
 title: "Build UrlGenerationError's message the way MissingRoute#message does"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: null
+priority: 31
 pr: null
 claim: null
 assignee: null

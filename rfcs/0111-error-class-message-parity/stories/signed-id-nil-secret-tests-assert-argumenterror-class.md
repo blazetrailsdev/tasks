@@ -1,7 +1,7 @@
 ---
 title: "assert the ArgumentError class in the signed-id nil-secret tests"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: exclude-burndown
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 40
-pr: null
-claim: null
-assignee: null
+pr: 7618
+claim: "2026-09-08T15:34:03Z"
+assignee: "converge-pg-oid-point-build-point-float"
 blocked-by: null
 closed-reason: null
 ---

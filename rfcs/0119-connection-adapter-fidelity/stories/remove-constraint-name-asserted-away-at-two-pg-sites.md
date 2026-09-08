@@ -1,6 +1,6 @@
 ---
 title: "removeExclusionConstraint and removeUniqueConstraint assert away a nullable name with ! (~40 LOC)"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "String#delete has no ruby-compat analogue, leaving the last pg schema-statements call row"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

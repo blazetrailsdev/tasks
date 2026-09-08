@@ -8,7 +8,7 @@ packages: ["actionpack"]
 deps: ["journey-visualizer-reads-its-assets-off-disk"]
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

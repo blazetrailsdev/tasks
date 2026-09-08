@@ -1,7 +1,7 @@
 ---
 title: "find_cmd_and_exec walks $PATH and stats for an executable, instead of returning the first candidate"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-08
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 21
-pr: null
-claim: null
-assignee: null
+pr: 7617
+claim: "2026-09-08T15:00:33Z"
+assignee: "in-time-zone-no-zone-arm-normalizes-instead-of-returning-self"
 blocked-by: null
 closed-reason: null
 ---

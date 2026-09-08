@@ -1,7 +1,7 @@
 ---
 title: "InsertAll::Builder#into carries an empty-columns arm and a VALUES clause Rails does not write"
-status: ready
-updated: 2026-09-06
+status: done
+updated: 2026-09-08
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 26
-pr: null
-claim: null
-assignee: null
+pr: 7616
+claim: "2026-09-08T15:02:07Z"
+assignee: "retire-adapter-bypass-onto-a-single-connection-pool"
 blocked-by: null
 closed-reason: null
 ---

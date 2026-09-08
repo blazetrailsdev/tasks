@@ -1,6 +1,6 @@
 ---
 title: "Trim trailing parts that restate route defaults in RouteSet#generate"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null

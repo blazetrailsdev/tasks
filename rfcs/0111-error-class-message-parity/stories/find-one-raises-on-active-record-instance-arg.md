@@ -1,6 +1,6 @@
 ---
 title: "find-one-raises-on-active-record-instance-arg"
-status: claimed
+status: in-progress
 updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: message-string-parity
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: null
+pr: 7615
 claim: "2026-09-08T14:45:03Z"
 assignee: "time-zone-rfc3339-hand-rolled-regex-parse"
 blocked-by: null

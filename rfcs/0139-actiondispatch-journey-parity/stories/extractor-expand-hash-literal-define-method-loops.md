@@ -1,6 +1,6 @@
 ---
 title: "Expand hash-literal loop receivers in the Ruby test extractor"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

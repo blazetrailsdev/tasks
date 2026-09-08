@@ -1,6 +1,6 @@
 ---
 title: "IO read cannot BOM-sniff the UTF-16 and UTF-32 dummy seats"
-status: claimed
+status: done
 updated: 2026-09-08
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 11
-pr: null
+pr: 7614
 claim: "2026-09-08T14:47:01Z"
 assignee: "relocate-fixture-error-to-fixtures-ts"
 blocked-by: null

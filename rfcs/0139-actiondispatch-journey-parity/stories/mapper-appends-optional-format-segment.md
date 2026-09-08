@@ -1,6 +1,6 @@
 ---
 title: "Append the optional (.:format) segment to declared route paths"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null
