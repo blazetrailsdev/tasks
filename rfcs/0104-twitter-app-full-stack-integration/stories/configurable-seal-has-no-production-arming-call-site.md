@@ -40,8 +40,8 @@ trails ports the raise faithfully — `assertNotSealed` in
 `packages/trailties/src/trailtie/configurable.ts:23-33`, called from
 `Trailtie.register` (`trailtie.ts:59`) because JS has no `inherited` hook
 (CLAUDE.md, "Module mixins"; its existing `@noRailsEquivalent CONVERGEABLE`
-receipt covers that deferral). But **nothing in `packages/trailties/src/**` ever
-calls `sealAgainstInheritance`** — the arming half. A repo-wide grep finds call
+receipt covers that deferral). But **nothing in `packages/trailties/src/**`ever
+calls`sealAgainstInheritance`** — the arming half. A repo-wide grep finds call
 sites only in `trailtie.test.ts:141,149`. So the seal is exercised by its own
 tests and is inert in a booted app: a user subclassing a concrete Engine gets no
 raise where Rails raises.
