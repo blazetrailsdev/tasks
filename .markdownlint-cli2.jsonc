@@ -7,6 +7,10 @@
     "MD033": false,
     // prettier normalises emphasis to underscore; match it rather than fight it.
     "MD049": { "style": "underscore" },
+    // prettier owns ordered-list marker spacing: one space for a wrapped item,
+    // two for a blank-line-separated one so the content aligns under the marker.
+    // MD030 cannot express that split, so prettier wins outright.
+    "MD030": false,
     "MD041": false,
   },
   "ignores": ["node_modules/**", "index.md", "rfcs/0000-template/**"],
