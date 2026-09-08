@@ -1,7 +1,7 @@
 ---
 title: "Serve ringo's root fleet dashboard from trailmap"
-status: ready
-updated: 2026-09-07
+status: claimed
+updated: 2026-09-08
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionpack", "actionview"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-08T12:10:06Z"
+assignee: "render-the-fleet-dashboard-root-page"
 blocked-by: null
 closed-reason: null
 ---

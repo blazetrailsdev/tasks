@@ -1,7 +1,7 @@
 ---
 title: "create/release/rollback_to_savepoint are overridden on SQLite3 and PG, which Rails defines once on the abstract class, and their inlined SQL quotes the savepoint name"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7607
+claim: "2026-09-08T12:09:09Z"
+assignee: "pg-oid-infinity-bounds-are-js-numbers-not-subtype-values"
 blocked-by: null
 closed-reason: null
 ---

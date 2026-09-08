@@ -1,7 +1,7 @@
 ---
 title: "ConnectionPoolConfiguration is a separate object where Rails includes it into the pool"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7607
+claim: "2026-09-08T12:09:09Z"
+assignee: "pg-oid-infinity-bounds-are-js-numbers-not-subtype-values"
 blocked-by: null
 closed-reason: null
 ---

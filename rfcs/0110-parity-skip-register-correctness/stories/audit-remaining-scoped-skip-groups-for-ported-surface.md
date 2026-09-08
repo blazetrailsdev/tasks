@@ -1,6 +1,6 @@
 ---
 title: "Audit the remaining SCOPED_SKIP_GROUPS entries for ported surface and stale reasons"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0110-parity-skip-register-correctness"
 cluster: null

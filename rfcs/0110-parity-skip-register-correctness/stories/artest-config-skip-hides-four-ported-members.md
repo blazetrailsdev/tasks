@@ -1,6 +1,6 @@
 ---
 title: "The ARTest config.rb skip hides four ported members behind a known bucketing bug"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0110-parity-skip-register-correctness"
 cluster: null

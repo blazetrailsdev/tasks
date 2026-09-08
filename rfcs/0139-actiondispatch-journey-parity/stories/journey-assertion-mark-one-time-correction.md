@@ -1,6 +1,6 @@
 ---
 title: "One-time assertion-mark correction for newly-matched Journey tests"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

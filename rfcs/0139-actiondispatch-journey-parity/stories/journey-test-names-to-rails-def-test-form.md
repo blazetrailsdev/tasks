@@ -1,6 +1,6 @@
 ---
 title: "Re-spell the Journey test names into Rails' def_test form"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

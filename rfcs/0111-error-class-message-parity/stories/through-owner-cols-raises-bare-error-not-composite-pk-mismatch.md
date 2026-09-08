@@ -1,7 +1,7 @@
 ---
 title: "_throughOwnerCols raises a bare Error instead of CompositePrimaryKeyMismatchError"
-status: ready
-updated: 2026-09-06
+status: done
+updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: null
-claim: null
-assignee: null
+pr: 6753
+claim: "2026-09-08T12:09:48Z"
+assignee: "port-load-error-for-require-stand-ins"
 blocked-by: null
 closed-reason: null
 ---
