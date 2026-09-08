@@ -90,6 +90,16 @@ this story consumes them.
   `WildcardResolver` then expands; an unbalanced brace discards the dependency
   rather than emitting a partial path.
 - `# Template Dependency: foo/bar` is picked up and de-duplicated.
-- Every regex whose Ruby original has an arm with no TS counterpart says so at
-  the constant, with the Rails `file:line`.
+- Every regex whose Ruby original has an arm with no TS counterpart is recorded
+  with the Rails `file:line`, in the PR body rather than at the constant.
+  `blazetrailsdev/trails`'s `blazetrails/no-freeform-comments` is `error` over
+  `packages/actionview/src/**` (`eslint.config.mjs:913-936`; the package rows
+  left the exclusion list with story
+  `enroll-remaining-packages-in-no-freeform-comments`) and deletes prose
+  comments, and none of the three JSDoc receipt shapes fits a dropped regex
+  arm: `@noRailsEquivalent` suppresses extra SURFACE, `@missingRailsCall` an
+  omitted CALL, `@missingRailsArgs` a call's ARGUMENT shape. A regex arm is
+  none of those — there is nothing for them to suppress, and a tag that
+  suppresses nothing reds as a STALE tag in the compare job. The PR body is the
+  sanctioned home until a receipt shape exists for this class.
 - No new runtime dependency in `packages/actionview/package.json`.
