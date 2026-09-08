@@ -34,8 +34,7 @@ are identical for a flat array, which is why the divergence is silent — it onl
 appears on the nested input, and it corrupts the separator rather than raising.
 
 Found in `ActionView::Digestor#dependency_digest`
-(`vendor/rails/actionview/lib/action_view/digestor.rb:97-107`), fixed in PR
-7628. `Digestor.digest` pushes each element of `dependencies` into an
+(`vendor/rails/actionview/lib/action_view/digestor.rb:97-107`), fixed in PR 7628. `Digestor.digest` pushes each element of `dependencies` into an
 `Injected` node **unflattened** (`digestor.rb:31-33`) and `Injected#digest`
 returns `name` itself (`digestor.rb:125-127`), so a nested dependency reached
 the join and two distinct dependency sets could collide on the comma spelling.
