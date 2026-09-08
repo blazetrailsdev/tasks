@@ -1,9 +1,9 @@
 ---
 rfc: "0137-rack-test-gem-port"
 title: "@blazetrails/rack-test: vendor the rack-test gem and collapse actionpack's hand-rolled stand-ins onto it"
-status: active
+status: closed
 created: 2026-09-03
-updated: 2026-09-03
+updated: 2026-09-08
 owner: "@deanmarano"
 packages:
   - rack-test

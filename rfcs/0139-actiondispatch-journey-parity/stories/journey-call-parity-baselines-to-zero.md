@@ -1,7 +1,7 @@
 ---
 title: "Journey call and call-argument baselines to zero"
 status: draft
-updated: 2026-09-07
+updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: ["actionpack"]

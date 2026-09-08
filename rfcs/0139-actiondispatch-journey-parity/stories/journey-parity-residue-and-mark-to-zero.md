@@ -1,7 +1,7 @@
 ---
 title: "Journey parity residue and the assertion mark back to zero"
 status: draft
-updated: 2026-09-07
+updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: ["actionpack"]
