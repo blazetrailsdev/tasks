@@ -2,7 +2,7 @@
 title: "Port Rails::Application#env_config so request envs carry the action_dispatch cookie keys"
 status: draft
 updated: 2026-09-08
-rfc: "0137-rack-test-gem-port"
+rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
 deps: []
