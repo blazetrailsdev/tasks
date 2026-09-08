@@ -77,9 +77,9 @@ here as acceptance criteria rather than rediscovered:
 5. **Prefix and zero-precision octal.** `%#08x` with `255` must be `0x0000ff`,
    not `00000xff`; `%#.0o` with `0` must keep the `0`
    (`vendor/ruby/sprintf.c:738,771`).
-6. **Precision disables zero-fill.** `%08.4x` with `-1` must be `    ..ff`, not
-   `..ffffff` — match the `FZERO|FMINUS|FPREC` condition
-   (`vendor/ruby/sprintf.c:756`).
+6. **Precision disables zero-fill.** `%08.4x` with `-1` must be `..ff` left-
+   padded with spaces to width 8, not `..ffffff` — match the
+   `FZERO|FMINUS|FPREC` condition (`vendor/ruby/sprintf.c:756`).
 7. **`%g`.** Notation is chosen before rounding and the alternate point is
    dropped: `%.1g` with `9.99` must be `1e+01`, `%#.1g` with `1` must be `1.`
    (`vendor/ruby/vsnprintf.c:903,938`).
