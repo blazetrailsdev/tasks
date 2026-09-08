@@ -1,6 +1,6 @@
 ---
 title: "connection-pool-cannot-seat-an-existing-adapter-instance"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

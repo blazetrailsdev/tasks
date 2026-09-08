@@ -1,6 +1,6 @@
 ---
 title: "CSP#plugin_types and #sandbox route through set_directive, applying source mappings Rails does not"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0113-branch-and-guard-parity"
 cluster: null

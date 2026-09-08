@@ -1,7 +1,7 @@
 ---
 title: "The base schema dumper duck-types PostgreSQL::Column#is_enum? in its emission loop"
-status: draft
-updated: 2026-09-06
+status: ready
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

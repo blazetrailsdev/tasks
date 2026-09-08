@@ -1,7 +1,7 @@
 ---
 title: "pg-exec-remaining-callers-and-deletion"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

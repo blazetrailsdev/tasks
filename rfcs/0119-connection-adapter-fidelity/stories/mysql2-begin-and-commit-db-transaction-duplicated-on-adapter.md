@@ -1,7 +1,7 @@
 ---
 title: "AbstractMysqlAdapter's begin/commit/exec_restart_db_transaction are empty stubs while Mysql2Adapter holds the bodies, and restart_db_transaction silently no-ops"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

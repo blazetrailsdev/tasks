@@ -1,7 +1,7 @@
 ---
 title: "insertFixture builds its INSERT inline instead of delegating to build_fixture_sql"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

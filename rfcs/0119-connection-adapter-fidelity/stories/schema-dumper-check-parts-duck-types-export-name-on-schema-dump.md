@@ -1,6 +1,6 @@
 ---
 title: "SchemaDumper#checkParts duck-types CheckConstraintDefinition's predicates"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

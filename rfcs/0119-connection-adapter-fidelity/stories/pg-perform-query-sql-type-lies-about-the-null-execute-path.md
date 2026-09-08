@@ -1,6 +1,6 @@
 ---
 title: "performQuery types sql as string while Rails' execute(nil) test passes null through it"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

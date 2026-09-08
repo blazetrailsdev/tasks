@@ -1,7 +1,7 @@
 ---
 title: "build_fixture_sql duplicates its create_values_list tail into both branches and calls create_values in one"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

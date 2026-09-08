@@ -1,6 +1,6 @@
 ---
 title: "Three sqlite drivers silently drop SQLITE_OPEN_SHAREDCACHE, so isSharedCache() reports a cache they do not have"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

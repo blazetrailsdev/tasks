@@ -1,7 +1,7 @@
 ---
 title: "build_fixture_sql pre-quotes each value instead of letting the Arel visitor quote it"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

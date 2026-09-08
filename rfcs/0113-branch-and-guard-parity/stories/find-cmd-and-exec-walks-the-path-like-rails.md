@@ -1,6 +1,6 @@
 ---
 title: "find_cmd_and_exec walks $PATH and stats for an executable, instead of returning the first candidate"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0113-branch-and-guard-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Journey call and call-argument baselines to zero"
-status: ready
+status: in-progress
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["journey-visualizer-reads-its-assets-off-disk"]
 deps-rfc: []
 est-loc: 220
 priority: 10
-pr: null
-claim: null
-assignee: null
+pr: 7625
+claim: "2026-09-08T16:33:05Z"
+assignee: "journey-call-parity-baselines-to-zero"
 blocked-by: null
 closed-reason: null
 ---

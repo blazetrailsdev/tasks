@@ -1,6 +1,6 @@
 ---
 title: "An aref receiver is kind `expr`, so a converged String#delete call still flags"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

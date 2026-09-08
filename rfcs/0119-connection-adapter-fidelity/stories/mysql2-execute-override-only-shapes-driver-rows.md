@@ -1,6 +1,6 @@
 ---
 title: "Mysql2Adapter#execute is an override Rails does not have, left only to shape driver rows into hashes"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

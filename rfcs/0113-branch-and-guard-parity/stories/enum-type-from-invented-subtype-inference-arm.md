@@ -1,7 +1,7 @@
 ---
 title: "enumTypeFrom's subtype-inference arm sends .type() where Rails' enum block never does"
-status: ready
-updated: 2026-09-06
+status: done
+updated: 2026-09-08
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 28
-pr: null
-claim: null
-assignee: null
+pr: 7620
+claim: "2026-09-08T16:01:58Z"
+assignee: "retire-adapter-bypass-onto-a-single-connection-pool"
 blocked-by: null
 closed-reason: null
 ---

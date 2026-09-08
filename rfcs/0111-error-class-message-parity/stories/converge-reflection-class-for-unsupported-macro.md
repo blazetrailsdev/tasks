@@ -1,6 +1,6 @@
 ---
 title: "reflection_class_for must raise Unsupported Macro, not fall back to AssociationReflection"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: exclude-burndown

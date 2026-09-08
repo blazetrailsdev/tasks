@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-execute-mutation-duplicates-driver-binds"
-status: ready
-updated: 2026-09-05
+status: in-progress
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7623
+claim: "2026-09-08T16:31:54Z"
+assignee: "sqlite3-execute-mutation-duplicates-driver-binds"
 blocked-by: null
 closed-reason: null
 ---

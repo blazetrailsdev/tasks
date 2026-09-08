@@ -1,6 +1,6 @@
 ---
 title: "in_time_zone's no-zone arm normalizes to an Instant where Rails returns self"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0113-branch-and-guard-parity"
 cluster: null

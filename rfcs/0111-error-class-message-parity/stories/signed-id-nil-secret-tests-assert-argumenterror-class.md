@@ -1,6 +1,6 @@
 ---
 title: "assert the ArgumentError class in the signed-id nil-secret tests"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: exclude-burndown

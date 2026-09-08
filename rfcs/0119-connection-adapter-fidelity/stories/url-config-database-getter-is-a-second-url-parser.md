@@ -1,6 +1,6 @@
 ---
 title: "UrlConfig#database is a second URL parser Rails does not have"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

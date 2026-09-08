@@ -1,6 +1,6 @@
 ---
 title: "rb_io_modestr_fmode drops the bom| prefix arm, so FMODE_SETENC_BY_BOM is never set"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0113-branch-and-guard-parity"
 cluster: null

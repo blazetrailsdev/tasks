@@ -1,6 +1,6 @@
 ---
 title: "exists? builds a throwaway JoinDependency Rails never builds"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: exclude-burndown

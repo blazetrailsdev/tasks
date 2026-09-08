@@ -1,7 +1,7 @@
 ---
 title: "primaryKeyOrderCache / resolvePrimaryKeyColumns have no Rails counterpart now that table holds the raw primary_key"
-status: draft
-updated: 2026-09-06
+status: ready
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

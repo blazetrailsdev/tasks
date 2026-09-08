@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 _driverBind duck-types ModelAttribute where Rails type-checks it"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

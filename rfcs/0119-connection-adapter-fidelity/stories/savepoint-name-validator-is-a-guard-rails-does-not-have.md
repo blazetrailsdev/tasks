@@ -1,6 +1,6 @@
 ---
 title: "validateSavepointName is an invented guard raising a trails-only Error, where Rails interpolates the name unchecked"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

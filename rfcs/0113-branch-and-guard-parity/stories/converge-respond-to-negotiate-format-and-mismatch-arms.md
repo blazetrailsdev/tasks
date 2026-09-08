@@ -1,6 +1,6 @@
 ---
 title: "respondTo drops respond_to's negotiate_format, RespondToMismatchError guard and content-type arms"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0113-branch-and-guard-parity"
 cluster: null

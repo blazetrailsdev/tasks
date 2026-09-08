@@ -1,7 +1,7 @@
 ---
 title: "actionpack-assign-parameters-raises-on-unknown-content-type"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 50
-pr: null
-claim: null
-assignee: null
+pr: 7624
+claim: "2026-09-08T16:18:19Z"
+assignee: "type-adapter-name-from-swallows-unconfigured-instead-of-raising"
 blocked-by: null
 closed-reason: null
 ---

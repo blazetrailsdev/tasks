@@ -1,6 +1,6 @@
 ---
 title: "Port URI::RFC2396_Parser#unescape so recognize_path_with_request calls what Rails calls"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null

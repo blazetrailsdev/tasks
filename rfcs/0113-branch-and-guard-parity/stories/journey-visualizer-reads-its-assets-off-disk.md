@@ -1,6 +1,6 @@
 ---
 title: "Journey's visualizer ships fsm.js/fsm.css/index.html.erb and reads them, dropping renderVisualizer"
-status: claimed
+status: done
 updated: 2026-09-08
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 48
-pr: null
+pr: 7619
 claim: "2026-09-08T15:34:30Z"
 assignee: "journey-visualizer-reads-its-assets-off-disk"
 blocked-by: null

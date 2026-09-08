@@ -1,6 +1,6 @@
 ---
 title: "checkout_and_verify's composition is inverted: the free function calls the module where Rails' module calls super"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL and Mysql2 #execute answer row hashes where #internal_execute answers a raw driver result, blocking Rails' one-line execute"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

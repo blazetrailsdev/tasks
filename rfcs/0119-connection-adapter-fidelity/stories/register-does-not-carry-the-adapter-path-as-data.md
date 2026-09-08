@@ -1,6 +1,6 @@
 ---
 title: "register stores only the loader closure, so resolve recovers path_to_adapter by stringifying it"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

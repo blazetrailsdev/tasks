@@ -1,6 +1,6 @@
 ---
 title: "_adapter is a reader bypass where Rails has only connection_pool"
-status: ready
+status: blocked
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -14,9 +14,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-08T16:01:58Z"
+assignee: "retire-adapter-bypass-onto-a-single-connection-pool"
+blocked-by: "Needs new ConnectionPool seating API + connection-handler registration that the story does not budget. A directly-bound model can only resolve through connectionPool if the given adapter INSTANCE is seated in a real pool: PoolConfig needs a HashConfig (a bound mock has none), the handler's setPoolManager is private so registration must go through establishConnection with _connectionClass=true (which changes connectionClassForSelf/shardKeys/connectedTo semantics for every bound model), and ConnectionPool has no public way to seat an existing connection - _connections/_available are private, checkin() no-ops for an unknown conn, and pinConnectionBang is async and opens a transaction. Once seated, every read routes through Queue#poll -> conn.lease() and checkoutAndVerify, so all 111 'X.adapter = <double>' sites across 27 activerecord test files (model-schema-load, model-schema-reload-recursion, migration.test.ts, hot-compatibility, core.trails, encryption/test-helpers) need their doubles taught lease/expire/steal/verifyBang/owner/dbConfig. That is far past the 700 LOC ceiling and past the ~200 LOC estimate; it wants its own RFC 0119 story pair (pool seating API first, then the doubles)."
 closed-reason: null
 ---
 

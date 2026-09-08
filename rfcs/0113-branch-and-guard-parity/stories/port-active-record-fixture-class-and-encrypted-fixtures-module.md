@@ -1,6 +1,6 @@
 ---
 title: "port-active-record-fixture-class-and-encrypted-fixtures-module"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0113-branch-and-guard-parity"
 cluster: null
