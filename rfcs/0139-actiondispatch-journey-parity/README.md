@@ -34,20 +34,20 @@ tree under the wrong name or in the wrong file.
 All figures from `pnpm parity:api --package actiondispatch` and
 `pnpm parity:test --package actiondispatch` against a fresh `pnpm build`.
 
-| Axis                        | Journey today    | Target    |
-| --------------------------- | ---------------- | --------- |
-| Methods                     | 222/226 (98.2%)  | 226/226   |
-| Arity                       | 0 mismatches     | 0         |
-| Parameter names             | 0 mismatches     | 0         |
-| Option keys / literals      | 0 / 0            | 0 / 0     |
-| Extra surface               | 0 novel, 0 moved | 0 / 0     |
-| Call-set baseline rows      | 8                | 0         |
-| Call-argument baseline rows | 1                | 0         |
-| Arm rows — gated `throw` | 1 | 0 |
-| Arm rows — report-only (`if`/`loop`/`try`/`rescue`) | 44 | triaged, not zero |
-| Short-circuit rows (`and`/`or`) | 27 | triaged, not zero |
-| Tests                       | **1/126 (0.8%)** | 126/126   |
-| Assertions                  | unmeasured       | 0 / 0 / 0 |
+| Axis                                                | Journey today    | Target            |
+| --------------------------------------------------- | ---------------- | ----------------- |
+| Methods                                             | 222/226 (98.2%)  | 226/226           |
+| Arity                                               | 0 mismatches     | 0                 |
+| Parameter names                                     | 0 mismatches     | 0                 |
+| Option keys / literals                              | 0 / 0            | 0 / 0             |
+| Extra surface                                       | 0 novel, 0 moved | 0 / 0             |
+| Call-set baseline rows                              | 8                | 0                 |
+| Call-argument baseline rows                         | 1                | 0                 |
+| Arm rows — gated `throw`                            | 1                | 0                 |
+| Arm rows — report-only (`if`/`loop`/`try`/`rescue`) | 44               | triaged, not zero |
+| Short-circuit rows (`and`/`or`)                     | 27               | triaged, not zero |
+| Tests                                               | **1/126 (0.8%)** | 126/126           |
+| Assertions                                          | unmeasured       | 0 / 0 / 0         |
 
 Four missing methods, across three files:
 
@@ -152,15 +152,15 @@ the mark is back below where it started.
 skeleton of each ported body. Journey has **45 arm rows** and **27
 short-circuit rows**:
 
-| Token | Missing (trails drops a Rails branch) | Invented |
-| --- | --- | --- |
-| `if` | 5 | 47 |
-| `loop` | 3 | 30 |
-| `throw` | 1 | 2 |
-| `try` | 0 | 1 |
-| `rescue` | 0 | 1 |
-| `or` | 14 | 18 |
-| `and` | 2 | 9 |
+| Token    | Missing (trails drops a Rails branch) | Invented |
+| -------- | ------------------------------------- | -------- |
+| `if`     | 5                                     | 47       |
+| `loop`   | 3                                     | 30       |
+| `throw`  | 1                                     | 2        |
+| `try`    | 0                                     | 1        |
+| `rescue` | 0                                     | 1        |
+| `or`     | 14                                    | 18       |
+| `and`    | 2                                     | 9        |
 
 Only the **missing-`throw`** dimension is gated
 (`scripts/api-compare/lint-arm-throws.ts`, only-shrink over
@@ -200,12 +200,12 @@ must not have one.
 Journey work is already scheduled outside this RFC, and RFC 0139 does not
 re-own it. Two of these bear directly on stories filed here:
 
-| Story | RFC | Status | Bearing on RFC 0139 |
-| --- | --- | --- | --- |
-| `journey-visualizer-reads-its-assets-off-disk` | 0113 | ready, 200 loc | **Owns both `transition-table.ts` visualizer call rows** — the `join` args row and the `read` row. It converges them by shipping Rails' real asset files and deleting the inlined `visualizer.ts` strings. `journey-call-parity-baselines-to-zero` is therefore scoped to the other seven rows and depends on it. |
-| `journey-scanner-last-segment-collision-drops-order` | 0025 | draft, 120 loc | `Scanner#peek_byte` lands on `ActionDispatch::Journey::Scanner::Scanner`, the nested class whose member-order bucket the file-structure manifest DROPS because it shares a last segment with its parent. `journey-missing-api-methods` notes the caveat. |
-| `journey-route-verb-carries-all-sentinel` | 0104 | draft, 90 loc | `routing/route.ts`, not `journey/route.ts` — adjacent, no file overlap. |
-| `journey-route-app-seated-after-construction` | 0104 | draft, 150 loc | `routing/route.ts` — adjacent, no file overlap. |
+| Story                                                | RFC  | Status         | Bearing on RFC 0139                                                                                                                                                                                                                                                                                               |
+| ---------------------------------------------------- | ---- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `journey-visualizer-reads-its-assets-off-disk`       | 0113 | ready, 200 loc | **Owns both `transition-table.ts` visualizer call rows** — the `join` args row and the `read` row. It converges them by shipping Rails' real asset files and deleting the inlined `visualizer.ts` strings. `journey-call-parity-baselines-to-zero` is therefore scoped to the other seven rows and depends on it. |
+| `journey-scanner-last-segment-collision-drops-order` | 0025 | draft, 120 loc | `Scanner#peek_byte` lands on `ActionDispatch::Journey::Scanner::Scanner`, the nested class whose member-order bucket the file-structure manifest DROPS because it shares a last segment with its parent. `journey-missing-api-methods` notes the caveat.                                                          |
+| `journey-route-verb-carries-all-sentinel`            | 0104 | draft, 90 loc  | `routing/route.ts`, not `journey/route.ts` — adjacent, no file overlap.                                                                                                                                                                                                                                           |
+| `journey-route-app-seated-after-construction`        | 0104 | draft, 150 loc | `routing/route.ts` — adjacent, no file overlap.                                                                                                                                                                                                                                                                   |
 
 `converge-journey-mapping-onto-ported-mapper-mapping` (0023, draft) is
 `routing/mapper.rb` work and belongs to the Routing subsystem, not here.

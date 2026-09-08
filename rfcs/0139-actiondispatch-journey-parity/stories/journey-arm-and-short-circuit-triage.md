@@ -21,15 +21,15 @@ closed-reason: null
 `pnpm parity:api:arms:report --package=actiondispatch` reports **45 arm rows**
 and **27 short-circuit rows** against `journey/**`:
 
-| Token | Missing | Invented |
-| --- | --- | --- |
-| `if` | 5 | 47 |
-| `loop` | 3 | 30 |
-| `throw` | 1 | 2 |
-| `try` | 0 | 1 |
-| `rescue` | 0 | 1 |
-| `or` | 14 | 18 |
-| `and` | 2 | 9 |
+| Token    | Missing | Invented |
+| -------- | ------- | -------- |
+| `if`     | 5       | 47       |
+| `loop`   | 3       | 30       |
+| `throw`  | 1       | 2        |
+| `try`    | 0       | 1        |
+| `rescue` | 0       | 1        |
+| `or`     | 14      | 18       |
+| `and`    | 2       | 9        |
 
 Only missing-`throw` is gated (`scripts/api-compare/lint-arm-throws.ts`,
 only-shrink over `arm-throw-mark.json`). The other tokens are report-only
