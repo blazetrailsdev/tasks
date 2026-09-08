@@ -52,13 +52,13 @@ Decide between the two honest options and take one; the current `as string` is
 neither.
 
 1. Widen `Node#name` to the union the Ruby field actually holds and absorb the
-    consequences at the two readers — the `digestCache()` key and `to_dep_map`'s
-    computed object key. Note `to_dep_map` is safe by construction: only a node
-    WITH children uses `name` as a key, and an `Injected` never has children.
+   consequences at the two readers — the `digestCache()` key and `to_dep_map`'s
+   computed object key. Note `to_dep_map` is safe by construction: only a node
+   WITH children uses `name` as a key, and an `Injected` never has children.
 2. Keep `name: string` and narrow `DigestorOptions["dependencies"]` back to a
-    flat list — but only with evidence that Rails' own callers cannot nest,
-    which `digestor.rb:20`'s `dependencies.flatten` argues against, since a
-    recursive flatten exists precisely because nesting is expected.
+   flat list — but only with evidence that Rails' own callers cannot nest,
+   which `digestor.rb:20`'s `dependencies.flatten` argues against, since a
+   recursive flatten exists precisely because nesting is expected.
 
 Option 1 is the one that keeps the port faithful. Whichever is taken, no
 `@noRailsEquivalent` receipt fits — that tag marks extra surface, and
