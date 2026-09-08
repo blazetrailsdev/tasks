@@ -1,6 +1,6 @@
 ---
 title: "Mapper#match fans out one Route per verb where Rails builds one"
-status: ready
+status: in-progress
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 41
-pr: null
-claim: null
-assignee: null
+pr: 7632
+claim: "2026-09-08T21:17:42Z"
+assignee: "mapper-match-fans-out-one-route-per-verb"
 blocked-by: null
 closed-reason: null
 ---

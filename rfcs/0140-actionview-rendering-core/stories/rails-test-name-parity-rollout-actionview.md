@@ -1,6 +1,6 @@
 ---
 title: "rails-test-name-parity-rollout-actionview"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0140-actionview-rendering-core"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "ActionView::Digestor is an fnv1a stub that drops dependencies and never walks the template tree"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0140-actionview-rendering-core"
 cluster: null

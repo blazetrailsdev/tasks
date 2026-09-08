@@ -1,6 +1,6 @@
 ---
 title: "Kernel#format is not ported, so PG OID::DateTime open-codes its %04d padding"
-status: in-progress
+status: ready
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 7627
-claim: "2026-09-08T19:43:53Z"
-assignee: "rails-test-name-parity-rollout-actionview"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

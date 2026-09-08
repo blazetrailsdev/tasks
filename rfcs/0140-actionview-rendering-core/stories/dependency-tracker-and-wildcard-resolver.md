@@ -1,6 +1,6 @@
 ---
 title: "Port DependencyTracker's registry and WildcardResolver"
-status: ready
+status: done
 updated: 2026-09-08
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 10
-pr: null
+pr: 7628
 claim: null
 assignee: null
 blocked-by: null
