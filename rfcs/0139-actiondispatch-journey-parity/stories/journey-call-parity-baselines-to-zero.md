@@ -5,7 +5,7 @@ updated: 2026-09-07
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: ["actionpack"]
-deps: []
+deps: ["journey-visualizer-reads-its-assets-off-disk"]
 deps-rfc: []
 est-loc: 220
 priority: null
@@ -20,7 +20,10 @@ closed-reason: null
 
 Nine baseline rows sit under
 `scripts/api-compare/call-mismatches-exclude/actiondispatch/journey/` — eight
-`calls` and one `args`. The RFC's target is zero. Both gates are only-shrink, so
+`calls` and one `args`. **This story owns seven of them.** The two
+`gtg/transition-table.json` visualizer rows are already owned by
+`journey-visualizer-reads-its-assets-off-disk` (RFC 0113, `ready`, 200 loc),
+which is listed as a dependency; do not touch that shard. Both gates are only-shrink, so
 each converged row is deleted by hand and the stale high-water mark narrowed
 with `pnpm parity:api:calls:tighten actiondispatch/journey/<file>.json`. Never
 `--write` or reseed.
@@ -33,7 +36,6 @@ with `pnpm parity:api:calls:tighten actiondispatch/journey/<file>.json`. Never
 | `gtg/builder.json`          | `build_followpos`                   | Order-only: the port makes every call Rails makes, in a different sequence. Reorder to Rails' `firstpos`, `lastpos`.                           |
 | `path/pattern.json`         | `captures`                          | Nested-class divergence in `MatchData`.                                                                                                        |
 | `visitors.json`             | `escape`                            | Nested-class divergence in `Parameter`.                                                                                                        |
-| `gtg/transition-table.json` | `visualizer` (`join` args + `read`) | Rails reads `fsm.js` / `fsm.css` / `index.html.erb` off disk at `transition_table.rb:128-133`; trails inlines them in `journey/visualizer.ts`. |
 
 The two nested-class rows are also named by
 `converge-nested-class-call-mismatches-surfaced-by-population-fix` (RFC 0023),
@@ -41,12 +43,14 @@ which is `ready` and unclaimed and covers the same class of row repo-wide. This
 story owns only the two Journey shards; do not widen into the rest of that
 story's population, and note the overlap in the PR body.
 
-The `visualizer` pair is the one row here that may not converge as a call. If
-inlining the assets is a genuine, permanent deviation, retire the baseline rows
-in favour of `@missingRailsCall` / `@missingRailsArgs` receipts at the call site
-— a receipt in the file being edited, rather than a shared counter — each opening
-with `PERMANENT` or `CONVERGEABLE <story-id>`. That still takes the shard to zero
-rows. Do not resolve it by broadening the existing reason.
+**Do not write a `@missingRailsCall` / `@missingRailsArgs` receipt for the
+visualizer rows.** An earlier draft of this story suggested that as a fallback;
+it is wrong. RFC 0113's `journey-visualizer-reads-its-assets-off-disk` has
+already settled the question the other way — actionpack ships Rails' real
+`visualizer/fsm.js`, `fsm.css` and `index.html.erb`, `visualizer` reads them with
+`File.read File.join(viz_dir, …)`, and the invented `renderVisualizer` helper and
+inlined asset strings are deleted. A receipt would ratify exactly the deviation
+that story converges.
 
 ## Acceptance criteria
 
