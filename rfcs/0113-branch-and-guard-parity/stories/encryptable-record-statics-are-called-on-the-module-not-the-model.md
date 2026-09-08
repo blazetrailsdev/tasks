@@ -37,8 +37,7 @@ trails' port
 calls it on the module instead:
 
 ```ts
-const sourceAttributeName =
-  EncryptableRecord.sourceAttributeFromPreservedAttribute(attributeName);
+const sourceAttributeName = EncryptableRecord.sourceAttributeFromPreservedAttribute(attributeName);
 ```
 
 because `EncryptableRecord`'s statics are not mixed onto `Base` in trails —
