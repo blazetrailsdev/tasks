@@ -25,14 +25,14 @@ each converged row is deleted by hand and the stale high-water mark narrowed
 with `pnpm parity:api:calls:tighten actiondispatch/journey/<file>.json`. Never
 `--write` or reseed.
 
-| Shard | Rails method | Row |
-| --- | --- | --- |
-| `nodes/node.json` | `glob?` | Rails `node.rb:38-40` reads `stars.any?`; trails `node.ts:276-278` reads `this.stars.length > 0`. A direct converge. |
-| `nodes/node.json` | `to_dot`, `to_s` | RFC 0047 seed rows on the omitted `accept` call. |
-| `route.json` | `verb_matcher` | RFC 0047 seed row on the omitted `fetch`. Note Ruby `fetch` vs `??` differ on a stored `nil`/`false`. |
-| `gtg/builder.json` | `build_followpos` | Order-only: the port makes every call Rails makes, in a different sequence. Reorder to Rails' `firstpos`, `lastpos`. |
-| `path/pattern.json` | `captures` | Nested-class divergence in `MatchData`. |
-| `visitors.json` | `escape` | Nested-class divergence in `Parameter`. |
+| Shard                       | Rails method                        | Row                                                                                                                                            |
+| --------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `nodes/node.json`           | `glob?`                             | Rails `node.rb:38-40` reads `stars.any?`; trails `node.ts:276-278` reads `this.stars.length > 0`. A direct converge.                           |
+| `nodes/node.json`           | `to_dot`, `to_s`                    | RFC 0047 seed rows on the omitted `accept` call.                                                                                               |
+| `route.json`                | `verb_matcher`                      | RFC 0047 seed row on the omitted `fetch`. Note Ruby `fetch` vs `??` differ on a stored `nil`/`false`.                                          |
+| `gtg/builder.json`          | `build_followpos`                   | Order-only: the port makes every call Rails makes, in a different sequence. Reorder to Rails' `firstpos`, `lastpos`.                           |
+| `path/pattern.json`         | `captures`                          | Nested-class divergence in `MatchData`.                                                                                                        |
+| `visitors.json`             | `escape`                            | Nested-class divergence in `Parameter`.                                                                                                        |
 | `gtg/transition-table.json` | `visualizer` (`join` args + `read`) | Rails reads `fsm.js` / `fsm.css` / `index.html.erb` off disk at `transition_table.rb:128-133`; trails inlines them in `journey/visualizer.ts`. |
 
 The two nested-class rows are also named by

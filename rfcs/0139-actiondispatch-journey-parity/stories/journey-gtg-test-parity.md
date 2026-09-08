@@ -28,7 +28,7 @@ Two sibling files, both credited almost entirely by the re-spelling story:
   `packages/actionpack/src/action-dispatch/journey/gtg/transition-table.test.ts`.
   Rails' list: `to json`, `to svg`, `simulate gt`, `simulate gt regexp`,
   `simulate gt regexp mix`, `simulate optional`, `match data`, `match data
-  ambiguous`.
+ambiguous`.
 
 ## Acceptance criteria
 

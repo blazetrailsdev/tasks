@@ -5,7 +5,18 @@ updated: 2026-09-07
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: ["actionpack"]
-deps: ["journey-router-test-parity", "journey-route-test-parity", "journey-path-pattern-test-parity", "journey-gtg-test-parity", "journey-utils-and-ast-test-parity", "journey-routes-test-parity", "journey-parser-and-scanner-test-parity", "journey-missing-api-methods", "journey-call-parity-baselines-to-zero"]
+deps:
+  [
+    "journey-router-test-parity",
+    "journey-route-test-parity",
+    "journey-path-pattern-test-parity",
+    "journey-gtg-test-parity",
+    "journey-utils-and-ast-test-parity",
+    "journey-routes-test-parity",
+    "journey-parser-and-scanner-test-parity",
+    "journey-missing-api-methods",
+    "journey-call-parity-baselines-to-zero",
+  ]
 deps-rfc: []
 est-loc: 200
 priority: null

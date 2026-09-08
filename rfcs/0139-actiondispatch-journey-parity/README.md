@@ -34,25 +34,25 @@ tree under the wrong name or in the wrong file.
 All figures from `pnpm parity:api --package actiondispatch` and
 `pnpm parity:test --package actiondispatch` against a fresh `pnpm build`.
 
-| Axis | Journey today | Target |
-| --- | --- | --- |
-| Methods | 222/226 (98.2%) | 226/226 |
-| Arity | 0 mismatches | 0 |
-| Parameter names | 0 mismatches | 0 |
-| Option keys / literals | 0 / 0 | 0 / 0 |
-| Extra surface | 0 novel, 0 moved | 0 / 0 |
-| Call-set baseline rows | 8 | 0 |
-| Call-argument baseline rows | 1 | 0 |
-| Tests | **1/126 (0.8%)** | 126/126 |
-| Assertions | unmeasured | 0 / 0 / 0 |
+| Axis                        | Journey today    | Target    |
+| --------------------------- | ---------------- | --------- |
+| Methods                     | 222/226 (98.2%)  | 226/226   |
+| Arity                       | 0 mismatches     | 0         |
+| Parameter names             | 0 mismatches     | 0         |
+| Option keys / literals      | 0 / 0            | 0 / 0     |
+| Extra surface               | 0 novel, 0 moved | 0 / 0     |
+| Call-set baseline rows      | 8                | 0         |
+| Call-argument baseline rows | 1                | 0         |
+| Tests                       | **1/126 (0.8%)** | 126/126   |
+| Assertions                  | unmeasured       | 0 / 0 / 0 |
 
 Four missing methods, across three files:
 
-| Ruby | Missing |
-| --- | --- |
+| Ruby                      | Missing                                          |
+| ------------------------- | ------------------------------------------------ |
 | `journey/router/utils.rb` | `UriEncoder#escape`, `UriEncoder#percent_encode` |
-| `journey/route.rb` | `VerbMatchers::Unknown#call` |
-| `journey/scanner.rb` | `Scanner#peek_byte` |
+| `journey/route.rb`        | `VerbMatchers::Unknown#call`                     |
+| `journey/scanner.rb`      | `Scanner#peek_byte`                              |
 
 Nine call baseline rows, across six shards under
 `scripts/api-compare/call-mismatches-exclude/actiondispatch/journey/`:
@@ -71,11 +71,11 @@ nothing and shows as simultaneous `missing` and `extra` on the same file.
 
 Triage of the 125-test gap, measured file by file:
 
-| Root cause | Tests | Fix |
-| --- | --- | --- |
-| Name spelled `test_foo_bar` instead of `foo bar` | 83 | Mechanical re-spelling |
-| Located in `dispatch/routing.test.ts`, not the convention file | 36 | Move to the convention file |
-| Genuinely absent | 6 | Port from the Ruby |
+| Root cause                                                     | Tests | Fix                         |
+| -------------------------------------------------------------- | ----- | --------------------------- |
+| Name spelled `test_foo_bar` instead of `foo bar`               | 83    | Mechanical re-spelling      |
+| Located in `dispatch/routing.test.ts`, not the convention file | 36    | Move to the convention file |
+| Genuinely absent                                               | 6     | Port from the Ruby          |
 
 A further **54 trails-only tests** sit inside the convention files. They are not
 deleted; they move to `.trails.test.ts` siblings, which are outside the
@@ -84,18 +84,18 @@ convention path and therefore outside the compared population
 
 Per Rails test file:
 
-| Ruby test file | Rails | Re-spell | Move | Port | trails-only |
-| --- | --- | --- | --- | --- | --- |
-| `journey/router_test.rb` | 35 | 0 | 25 | 10 | 14 |
-| `journey/route/definition/parser_test.rb` | 21 | 21 | 0 | 0 | 0 |
-| `journey/path/pattern_test.rb` | 20 | 18 | 0 | 2 | 18 |
-| `journey/route_test.rb` | 11 | 11 | 11 | 0 | 6 |
-| `journey/router/utils_test.rb` | 9 | 8 | 0 | 1 | 6 |
-| `journey/nodes/ast_test.rb` | 9 | 9 | 0 | 0 | 0 |
-| `journey/gtg/transition_table_test.rb` | 8 | 7 | 0 | 1 | 4 |
-| `journey/gtg/builder_test.rb` | 6 | 6 | 0 | 0 | 0 |
-| `journey/routes_test.rb` | 6 | 3 | 0 | 2 | 4 |
-| `journey/route/definition/scanner_test.rb` | 1 | 0 | 0 | 1 | 27 |
+| Ruby test file                             | Rails | Re-spell | Move | Port | trails-only |
+| ------------------------------------------ | ----- | -------- | ---- | ---- | ----------- |
+| `journey/router_test.rb`                   | 35    | 0        | 25   | 10   | 14          |
+| `journey/route/definition/parser_test.rb`  | 21    | 21       | 0    | 0    | 0           |
+| `journey/path/pattern_test.rb`             | 20    | 18       | 0    | 2    | 18          |
+| `journey/route_test.rb`                    | 11    | 11       | 11   | 0    | 6           |
+| `journey/router/utils_test.rb`             | 9     | 8        | 0    | 1    | 6           |
+| `journey/nodes/ast_test.rb`                | 9     | 9        | 0    | 0    | 0           |
+| `journey/gtg/transition_table_test.rb`     | 8     | 7        | 0    | 1    | 4           |
+| `journey/gtg/builder_test.rb`              | 6     | 6        | 0    | 0    | 0           |
+| `journey/routes_test.rb`                   | 6     | 3        | 0    | 2    | 4           |
+| `journey/route/definition/scanner_test.rb` | 1     | 0        | 0    | 1    | 27          |
 
 `route_test.rb`'s 11 appear in both the re-spell and move columns: the
 convention file `journey/route.test.ts` holds them under the `test_*` spelling
@@ -111,14 +111,14 @@ CLAUDE.md says test names are never renamed or reworded, because they are what
 `parity:test` matches on. That rule is not in tension with this RFC — it is the
 reason for it. `it("test_path_escape")` is not the Rails name; the Rails name,
 as the extractor derives it, is `"path escape"`. The current spelling is the
-drift and re-spelling is the convergence. No test's *meaning* changes, no test
+drift and re-spelling is the convergence. No test's _meaning_ changes, no test
 is reworded, and nothing is renamed to make a number move.
 
 ### The assertion mark will rise before it falls, once
 
 `scripts/test-compare/assertion-mismatch-mark.json` is per-package and
 only-shrink (`assertion-ratchet.ts`, RFC 0025). Journey's assertion debt is
-currently **invisible**: assertions are only compared for a *matched* pair, and
+currently **invisible**: assertions are only compared for a _matched_ pair, and
 Journey has one matched test. Matching 125 tests therefore surfaces their
 assertion mismatches for the first time and raises actiondispatch's counters —
 which reds `pnpm parity:test:assertions` even though nothing regressed.

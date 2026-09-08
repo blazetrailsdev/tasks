@@ -38,16 +38,16 @@ this change. No test's meaning changes and no test is reworded.
 
 Counts per file (Rails file -> convention TS file), measured 2026-09-07:
 
-| Convention TS file | Re-spell |
-| --- | --- |
-| `journey/route/definition/parser.test.ts` | 21 |
-| `journey/path/pattern.test.ts` | 18 |
-| `journey/route.test.ts` | 11 |
-| `journey/nodes/ast.test.ts` | 9 |
-| `journey/router/utils.test.ts` | 8 |
-| `journey/gtg/transition-table.test.ts` | 7 |
-| `journey/gtg/builder.test.ts` | 6 |
-| `journey/routes.test.ts` | 3 |
+| Convention TS file                        | Re-spell |
+| ----------------------------------------- | -------- |
+| `journey/route/definition/parser.test.ts` | 21       |
+| `journey/path/pattern.test.ts`            | 18       |
+| `journey/route.test.ts`                   | 11       |
+| `journey/nodes/ast.test.ts`               | 9        |
+| `journey/router/utils.test.ts`            | 8        |
+| `journey/gtg/transition-table.test.ts`    | 7        |
+| `journey/gtg/builder.test.ts`             | 6        |
+| `journey/routes.test.ts`                  | 3        |
 
 ## Acceptance criteria
 

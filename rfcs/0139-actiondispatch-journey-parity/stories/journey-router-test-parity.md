@@ -29,18 +29,18 @@ The 35 split cleanly:
   comparer reports them as misplaced against `journey/router.test.ts` — `dashes`,
   `unicode`, `regexp first precedence`, `required parts verified are anchored`,
   `required parts are verified when building`, `only required parts are
-  verified`, `knows what parts are missing from named route`, `does not include
-  missing keys message`, `x cascade`, `clear trailing slash from script name on
-  root unanchored routes`, `defaults merge correctly`, `recognize with unbound
-  regexp`, `bound regexp keeps path info`, `path not found`, `required part in
-  recall`, `splat in recall`, `recall should be used when scoring`, `nil path
-  parts are ignored`, `generate slash`, `generate id`, `generate escapes`,
+verified`, `knows what parts are missing from named route`, `does not include
+missing keys message`, `x cascade`, `clear trailing slash from script name on
+root unanchored routes`, `defaults merge correctly`, `recognize with unbound
+regexp`, `bound regexp keeps path info`, `path not found`, `required part in
+recall`, `splat in recall`, `recall should be used when scoring`, `nil path
+parts are ignored`, `generate slash`, `generate id`, `generate escapes`,
   `generate with name`, `recognize cares about get verbs`, `recognize cares
-  about post verbs`, `multi verb recognition`.
+about post verbs`, `multi verb recognition`.
 - **10 are genuinely absent** — `generate escapes with namespaced controller`,
   `generate extra params`, `generate missing keys no matches different format
-  keys`, `generate uses recall if needed`, `namespaced controller`, `recognize
-  literal`, `recognize head route`, `recognize head request as get route`,
+keys`, `generate uses recall if needed`, `namespaced controller`, `recognize
+literal`, `recognize head route`, `recognize head request as get route`,
   `eager load with routes`, `eager load without routes`.
 
 This is the largest story in the RFC. If the move and the port together exceed
