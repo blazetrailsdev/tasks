@@ -20,11 +20,14 @@ closed-reason: null
 
 `rails-test-name-parity-rollout-actionview` enrolled `actionview` in the
 `blazetrails/rails-test-name-parity` ratchet (all four registrations) and seeded
-its mark at 79 TS-only tests across 8 files. That PR burnt down the three
+its mark at 72 TS-only tests across 8 files. That PR burnt down the three
 smallest files — `template/date-helper.test.ts` (2),
 `template/javascript-helper.test.ts` (1) and
-`template/output-safety-helper.test.ts` (2) — leaving the mark at 74 across 5
-files. The rest did not fit under the 700 LOC ceiling.
+`template/output-safety-helper.test.ts` (2) — leaving the mark at 67 across 5
+files. (`pnpm parity:test:names:tighten` prints REPO-WIDE totals across every
+enrolled package, not per-package ones; the 79/74 figures first recorded here
+were those totals, which already included 7 rows from `arel`/`date`. The
+per-file rows below are the authority.) The rest did not fit under the 700 LOC ceiling.
 
 Remaining, from `eslint/rails-test-name-parity-mark.json`:
 
