@@ -39,6 +39,13 @@ so this is `escape`, not `escapeWith`, and `percentEncode` exists.
 `StringScanner` and defines `peek_byte` only when the C extension lacks it,
 reading `string.getbyte(pos)`. `Scanner#scan` calls it at `scanner.rb:56`.
 
+Caveat: it lands on `ActionDispatch::Journey::Scanner::Scanner`, the nested
+class that shares its last segment with its parent. `build-rails-file-structure-manifest.ts`
+DROPS that file's member-order bucket for exactly that reason — the only such
+collision repo-wide — so `rails-file-structure-method-order` will not enforce
+where the new member sits. Place it as Rails does anyway; the missing gate is
+tracked by `journey-scanner-last-segment-collision-drops-order` (RFC 0025).
+
 ## Acceptance criteria
 
 - All four methods exist at the Rails names, in the Rails files, with Rails'
