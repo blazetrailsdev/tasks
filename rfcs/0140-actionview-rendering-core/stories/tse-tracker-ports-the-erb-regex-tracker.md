@@ -37,7 +37,7 @@ The machinery, in Rails' own order:
   composed into `RENDER_ARGUMENTS` and `LAYOUT_DEPENDENCY`.
 - `self.supports_view_paths?` -> true, `self.call`, `initialize` (`:62-73`).
 - `dependencies` -> `WildcardResolver.new(@view_paths, render_dependencies +
-  explicit_dependencies).resolve` (`:75-77`).
+explicit_dependencies).resolve` (`:75-77`).
 - `render_dependencies` splits source on `/\brender\b/` and drops the first
   chunk (`:88-98`) — each remaining chunk is the argument text after one
   `render`.

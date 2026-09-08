@@ -29,12 +29,12 @@ deliberately excludes `helpers/**`, which is a separate campaign.
 92 Rails files present. That headline is misleading in a way that matters for
 scheduling: the gap is concentrated in helpers, not in rendering.
 
-| Bucket                              | Files | Methods |
-| ----------------------------------- | ----- | ------- |
-| Absent — `helpers/**`               | 29    | 94      |
-| Absent — rendering core             | 25    | 168     |
-| Missing methods in ported `helpers/**` | —  | 77      |
-| Missing methods in ported core      | —     | 87      |
+| Bucket                                 | Files | Methods |
+| -------------------------------------- | ----- | ------- |
+| Absent — `helpers/**`                  | 29    | 94      |
+| Absent — rendering core                | 25    | 168     |
+| Missing methods in ported `helpers/**` | —     | 77      |
+| Missing methods in ported core         | —     | 87      |
 
 The rendering core is already substantially there — `base.rb` 43/47,
 `template.rb` 30/41, `rendering.rb` 17/28, `lookup_context`, `path_set`,
@@ -201,17 +201,17 @@ their parents, where they remain the record of what those RFCs accomplished.
 The table below is the subset with dependency edges onto stories filed here. The
 full rehome list lives in the PR that files this RFC.
 
-| Story (all rehomed into 0140)                               | From | Status         | Bearing                                                                                                        |
-| ----------------------------------------------------------- | ---- | -------------- | -------------------------------------------------------------------------------------------------------------- |
+| Story (all rehomed into 0140)                                | From | Status         | Bearing                                                                                                                                     |
+| ------------------------------------------------------------ | ---- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `actionview-digestor-is-a-stub-not-a-dependency-tree-digest` | 0123 | ready, 400 loc | **Owns the digest tree.** Its own text says `RenderParser` "may warrant its own story"; this RFC answers that. Depends on stories 1-2 here. |
-| `port-resolver-caching-and-cache-template-loading`           | 0104 | ready          | Owns `Resolver.caching` + `Base.cacheTemplateLoading` + the trailtie initializer. `cache-expiry-view-reloader` depends on it. |
-| `decide-fate-of-the-unconsumed-aot-views-manifest`           | 0104 | ready, 90 loc  | Owns the build-time digest question above.                                                                     |
-| `port-unbound-template-for-resolver-binding`                 | 0104 | ready, 140 loc | Owns `unbound_template.rb` (11 methods). Excluded here.                                                         |
-| `port-template-sources-file-for-lazy-resolver-sources`       | 0104 | ready          | Owns `template/sources/file.rb` (2). Excluded here.                                                             |
-| `port-html-builder-and-ruby-template-handlers`               | 0104 | ready, 120 loc | Owns `handlers/builder.rb` (5) + `handlers/html.rb` (1). The likely first reader of `RubyTracker`.              |
-| `back-template-types-with-the-mime-registry`                 | 0104 | ready, 200 loc | Owns `template/types.rb` (6 missing).                                                                           |
-| `template-error-backtrace-locations`                         | 0104 | ready, 120 loc | Owns part of `template/error.rb` (13 missing).                                                                  |
-| `rails-test-name-parity-rollout-actionview`                  | 0127 | draft          | Adjacent to `enroll-actionview-in-parity-test`; once both are here, one absorbs the other rather than seeding the same mark twice. |
+| `port-resolver-caching-and-cache-template-loading`           | 0104 | ready          | Owns `Resolver.caching` + `Base.cacheTemplateLoading` + the trailtie initializer. `cache-expiry-view-reloader` depends on it.               |
+| `decide-fate-of-the-unconsumed-aot-views-manifest`           | 0104 | ready, 90 loc  | Owns the build-time digest question above.                                                                                                  |
+| `port-unbound-template-for-resolver-binding`                 | 0104 | ready, 140 loc | Owns `unbound_template.rb` (11 methods). Excluded here.                                                                                     |
+| `port-template-sources-file-for-lazy-resolver-sources`       | 0104 | ready          | Owns `template/sources/file.rb` (2). Excluded here.                                                                                         |
+| `port-html-builder-and-ruby-template-handlers`               | 0104 | ready, 120 loc | Owns `handlers/builder.rb` (5) + `handlers/html.rb` (1). The likely first reader of `RubyTracker`.                                          |
+| `back-template-types-with-the-mime-registry`                 | 0104 | ready, 200 loc | Owns `template/types.rb` (6 missing).                                                                                                       |
+| `template-error-backtrace-locations`                         | 0104 | ready, 120 loc | Owns part of `template/error.rb` (13 missing).                                                                                              |
+| `rails-test-name-parity-rollout-actionview`                  | 0127 | draft          | Adjacent to `enroll-actionview-in-parity-test`; once both are here, one absorbs the other rather than seeding the same mark twice.          |
 
 ### Layouts and the TSE compiler are in scope
 
@@ -234,7 +234,7 @@ alongside `actionview` in this RFC's packages.
 
 ## Non-goals
 
-- **`helpers/**`** — 29 absent files, 94 absent methods, 77 missing-in-ported.
+- **`helpers/**`\*\* — 29 absent files, 94 absent methods, 77 missing-in-ported.
   Form builders, tags, dates, assets, atom feeds. Its own campaign, sized
   honestly, after this.
 - **`RenderParser` and `RubyTracker`** — deferred to

@@ -23,14 +23,14 @@ Five small template classes are absent, 26 methods between them. They are the
 non-file template representations — what `render plain:`, `render html:`,
 `send_file` and inline rendering produce instead of a resolved `.tse` file:
 
-| Ruby                                | Methods |
-| ----------------------------------- | ------- |
-| `template/text.rb`                  | 7       |
-| `template/raw_file.rb`              | 7       |
-| `template/html.rb`                  | 6       |
-| `template/renderable.rb`            | 4       |
-| `template/inline.rb`                | 1       |
-| `template/handlers/html.rb`         | 1       |
+| Ruby                        | Methods |
+| --------------------------- | ------- |
+| `template/text.rb`          | 7       |
+| `template/raw_file.rb`      | 7       |
+| `template/html.rb`          | 6       |
+| `template/renderable.rb`    | 4       |
+| `template/inline.rb`        | 1       |
+| `template/handlers/html.rb` | 1       |
 
 They matter for this RFC because actionpack's renderers reach them directly —
 `action_controller/metal/renderers.rb` and `rendering.rb` construct
