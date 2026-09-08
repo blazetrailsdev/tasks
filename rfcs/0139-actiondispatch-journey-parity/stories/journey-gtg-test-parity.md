@@ -1,6 +1,6 @@
 ---
 title: "Journey gtg transition-table and builder test parity"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

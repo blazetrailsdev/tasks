@@ -1,6 +1,6 @@
 ---
 title: "Journey router test parity: move 25 misplaced tests and port 10 absent"
-status: draft
+status: ready
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

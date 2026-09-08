@@ -1,6 +1,6 @@
 ---
 title: "Port Journey's four missing methods"
-status: draft
+status: in-progress
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7601
+claim: "2026-09-08T02:07:31Z"
+assignee: "journey-arm-and-short-circuit-triage"
 blocked-by: null
 closed-reason: null
 ---
