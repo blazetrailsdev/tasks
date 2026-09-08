@@ -4,7 +4,7 @@ status: blocked
 updated: 2026-08-25
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
-deps: []
+deps: ["break-schema-statements-join-table-cycle-blocking-module-eval-includes"]
 deps-rfc: []
 est-loc: 120
 priority: null

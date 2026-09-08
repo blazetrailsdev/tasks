@@ -5,7 +5,7 @@ updated: 2026-08-25
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
-deps: []
+deps: ["association-tdz-on-entry-module"]
 deps-rfc: []
 est-loc: 150
 priority: null

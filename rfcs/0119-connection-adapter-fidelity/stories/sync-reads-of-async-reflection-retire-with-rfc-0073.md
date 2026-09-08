@@ -5,8 +5,8 @@ updated: 2026-09-04
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
-deps: []
-deps-rfc: []
+deps: ["retire-schema-cache-sync-readers-after-checkout-flip", "arm-permanent-connection-checkout-disallowed"]
+deps-rfc: ["0073-permanent-connection-checkout-disallowed"]
 est-loc: null
 priority: null
 pr: null

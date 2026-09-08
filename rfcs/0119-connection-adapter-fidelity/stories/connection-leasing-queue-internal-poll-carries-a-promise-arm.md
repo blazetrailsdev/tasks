@@ -5,7 +5,7 @@ updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
-deps: []
+deps: ["converge-sync-connection-lease-per-checkout-verify"]
 deps-rfc: []
 est-loc: 80
 priority: null

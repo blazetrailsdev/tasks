@@ -5,7 +5,7 @@ updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
-deps: []
+deps: ["retire-schema-cache-sync-readers-after-checkout-flip"]
 deps-rfc: []
 est-loc: 110
 priority: null

@@ -5,7 +5,7 @@ updated: 2026-09-06
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
-deps: []
+deps: ["configure-connection-cannot-service-a-query-on-the-connection-it-configures"]
 deps-rfc: []
 est-loc: 60
 priority: null

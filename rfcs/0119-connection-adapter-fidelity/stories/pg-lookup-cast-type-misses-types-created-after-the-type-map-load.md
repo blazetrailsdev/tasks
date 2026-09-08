@@ -5,7 +5,7 @@ updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
-deps: []
+deps: ["pg-get-oid-type-drops-the-on-demand-load-additional-types"]
 deps-rfc: []
 est-loc: 90
 priority: null

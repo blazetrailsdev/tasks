@@ -5,7 +5,7 @@ updated: 2026-09-05
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
-deps: []
+deps: ["synchronize-lock-barges-in-the-release-window", "converge-acquire-connection-blocking-wait"]
 deps-rfc: []
 est-loc: 110
 priority: null
