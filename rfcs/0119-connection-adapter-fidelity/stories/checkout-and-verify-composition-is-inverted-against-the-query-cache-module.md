@@ -1,6 +1,6 @@
 ---
 title: "checkout_and_verify's composition is inverted: the free function calls the module where Rails' module calls super"
-status: claimed
+status: in-progress
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7627
 claim: "2026-09-08T19:43:53Z"
 assignee: "rails-test-name-parity-rollout-actionview"
 blocked-by: null

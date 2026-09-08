@@ -1,7 +1,7 @@
 ---
 title: "ResponseBuffer and Live::Buffer raise a bare Error where Rails raises IOError"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 50
-pr: null
-claim: null
-assignee: null
+pr: 7629
+claim: "2026-09-08T20:19:11Z"
+assignee: "railtie-abstract-raise-interpolates-js-leaf-name"
 blocked-by: null
 closed-reason: null
 ---

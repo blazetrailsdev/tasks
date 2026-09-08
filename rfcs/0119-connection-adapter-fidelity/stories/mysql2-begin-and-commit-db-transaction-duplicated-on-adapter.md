@@ -1,6 +1,6 @@
 ---
 title: "AbstractMysqlAdapter's begin/commit/exec_restart_db_transaction are empty stubs while Mysql2Adapter holds the bodies, and restart_db_transaction silently no-ops"
-status: claimed
+status: in-progress
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
+pr: 7627
 claim: "2026-09-08T19:43:53Z"
 assignee: "rails-test-name-parity-rollout-actionview"
 blocked-by: null

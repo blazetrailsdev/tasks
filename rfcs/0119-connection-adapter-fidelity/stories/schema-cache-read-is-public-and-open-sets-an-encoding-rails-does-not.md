@@ -1,6 +1,6 @@
 ---
 title: "SchemaCache.read is public where Rails privatises it, and #open sets an encoding Rails does not"
-status: ready
+status: in-progress
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7631
+claim: "2026-09-08T20:28:51Z"
+assignee: "bound-adapter-test-doubles-cannot-satisfy-the-pool-protocol"
 blocked-by: null
 closed-reason: null
 ---
