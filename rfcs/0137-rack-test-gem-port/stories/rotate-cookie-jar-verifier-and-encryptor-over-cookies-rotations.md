@@ -1,7 +1,7 @@
 ---
 title: "Rotate the signed and encrypted jars over request.cookies_rotations"
-status: ready
-updated: 2026-09-07
+status: in-progress
+updated: 2026-09-08
 rfc: "0137-rack-test-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7600
+claim: "2026-09-08T00:10:55Z"
+assignee: "rotate-cookie-jar-verifier-and-encryptor-over-cookies-rotations"
 blocked-by: null
 closed-reason: null
 ---
