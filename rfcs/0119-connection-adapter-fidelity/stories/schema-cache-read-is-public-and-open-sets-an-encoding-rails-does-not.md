@@ -53,16 +53,30 @@ Both predate #7586.
 
 Tag `read` `@internal` (its Rails counterpart is `private_class_method`, so
 `blazetrails/rails-private-jsdoc` should be requiring this once the manifest
-sees it) and drop the `setEncoding` call so the else arm is Rails' bare
-`yield file`. Check the JSON dump still round-trips through
-`SchemaCache.read`'s `File.read` on the non-gz path before landing.
+sees it).
+
+The `setEncoding` call cannot be dropped here. It is a symptom, not the
+deviation: `File.atomic_write` puts the tempfile in `binmode`
+(`atomic.rb:25`), trails' `IO#binmode` faithfully mirrors MRI in setting the
+stream's encoding to ASCII-8BIT (`io.ts:457`,
+`vendor/ruby/io.c:6349`), and trails' `doWriteconv` (`io.ts:201`) reads that
+encoding as "one JS char per byte" and emits latin-1. MRI's ASCII-8BIT stream
+only suppresses transcoding, so a UTF-8 String's own bytes go out — which is
+why Rails needs no `setEncoding` and trails currently does. Removing the call
+reds `schema-cache.trails.test.ts`'s non-gz round trip of a `なまえ` column.
+
+That is tracked as
+[[binmode-write-emits-latin1-where-mri-emits-the-strings-own-bytes]], which
+converges `IO#write`'s byte path and then deletes this call.
 
 ## Acceptance criteria
 
 - [ ] `SchemaCache.read` is `@internal`, matching `private_class_method :read`
       (`schema_cache.rb:253`).
-- [ ] `SchemaCache#open`'s non-gz arm is `block(file)` with no `setEncoding`,
-      matching `schema_cache.rb:470-472`.
+- [ ] `SchemaCache#open`'s non-gz `setEncoding` is registered against
+      [[binmode-write-emits-latin1-where-mri-emits-the-strings-own-bytes]],
+      which is what has to converge before the arm can be Rails' bare
+      `block(file)` (`schema_cache.rb:470-472`).
 - [ ] `schema-cache.test.ts` and `schema-cache.trails.test.ts` keep their names
       and pass, including the non-gz dump/load round trip.
 - [ ] `pnpm parity:api:extra:gate` stays green (activerecord's totals should not
