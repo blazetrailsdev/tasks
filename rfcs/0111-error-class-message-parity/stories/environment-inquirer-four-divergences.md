@@ -1,6 +1,6 @@
 ---
 title: "EnvironmentInquirer: bare Error for ArgumentError, missing DEFAULT_ENVIRONMENTS and its real predicates, invented isLocal"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws

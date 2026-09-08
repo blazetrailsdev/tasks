@@ -1,6 +1,6 @@
 ---
 title: "Serve ringo's root fleet dashboard from trailmap"
-status: claimed
+status: in-progress
 updated: 2026-09-08
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["build-the-trailmap-app-shell", "move-tracker-state-into-the-database"]
 deps-rfc: []
 est-loc: 300
 priority: 4
-pr: null
+pr: 19
 claim: "2026-09-08T12:10:06Z"
 assignee: "render-the-fleet-dashboard-root-page"
 blocked-by: null

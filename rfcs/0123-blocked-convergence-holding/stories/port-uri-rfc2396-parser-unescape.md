@@ -1,7 +1,7 @@
 ---
 title: "Port URI::RFC2396_Parser#unescape so recognize_path_with_request calls what Rails calls"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 9
-pr: null
-claim: null
-assignee: null
+pr: 7612
+claim: "2026-09-08T14:32:01Z"
+assignee: "register-does-not-carry-the-adapter-path-as-data"
 blocked-by: null
 closed-reason: null
 ---

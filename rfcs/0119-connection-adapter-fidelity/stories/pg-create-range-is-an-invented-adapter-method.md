@@ -1,6 +1,6 @@
 ---
 title: "createRange is a test-only adapter method Rails has no counterpart for"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

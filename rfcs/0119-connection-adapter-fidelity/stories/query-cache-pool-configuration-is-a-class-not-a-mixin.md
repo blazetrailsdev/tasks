@@ -1,6 +1,6 @@
 ---
 title: "ConnectionPoolConfiguration is a separate object where Rails includes it into the pool"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

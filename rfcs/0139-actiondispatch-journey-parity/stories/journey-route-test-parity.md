@@ -1,6 +1,6 @@
 ---
 title: "Journey route test parity: credit the convention copy and delete the duplicate"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

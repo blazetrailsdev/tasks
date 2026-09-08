@@ -1,6 +1,6 @@
 ---
 title: "create/release/rollback_to_savepoint are overridden on SQLite3 and PG, which Rails defines once on the abstract class, and their inlined SQL quotes the savepoint name"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

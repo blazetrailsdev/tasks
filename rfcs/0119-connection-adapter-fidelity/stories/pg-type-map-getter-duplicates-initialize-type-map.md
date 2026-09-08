@@ -1,7 +1,7 @@
 ---
 title: "PG typeMap getter lazily rebuilds initialize_type_map's registrations instead of being Rails' bare attr_reader"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7613
+claim: "2026-09-08T14:17:03Z"
+assignee: "pg-type-map-getter-duplicates-initialize-type-map"
 blocked-by: null
 closed-reason: null
 ---

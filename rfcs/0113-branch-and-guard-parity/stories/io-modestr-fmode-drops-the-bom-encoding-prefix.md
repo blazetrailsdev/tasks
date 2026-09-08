@@ -1,7 +1,7 @@
 ---
 title: "rb_io_modestr_fmode drops the bom| prefix arm, so FMODE_SETENC_BY_BOM is never set"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-08
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 10
-pr: null
-claim: null
-assignee: null
+pr: 7612
+claim: "2026-09-08T14:32:01Z"
+assignee: "register-does-not-carry-the-adapter-path-as-data"
 blocked-by: null
 closed-reason: null
 ---

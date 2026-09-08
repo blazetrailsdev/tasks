@@ -1,7 +1,7 @@
 ---
 title: "exists? builds a throwaway JoinDependency Rails never builds"
-status: ready
-updated: 2026-09-06
+status: claimed
+updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: exclude-burndown
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-08T14:45:03Z"
+assignee: "time-zone-rfc3339-hand-rolled-regex-parse"
 blocked-by: null
 closed-reason: null
 ---

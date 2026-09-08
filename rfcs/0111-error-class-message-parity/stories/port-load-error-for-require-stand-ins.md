@@ -1,6 +1,6 @@
 ---
 title: "Port LoadError for the three require stand-ins raising bare Error"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws

@@ -1,7 +1,7 @@
 ---
 title: "isSharedCache carries a driver-capability guard Rails does not have, and five skipped cases"
-status: ready
-updated: 2026-09-06
+status: claimed
+updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-08T14:47:01Z"
+assignee: "relocate-fixture-error-to-fixtures-ts"
 blocked-by: null
 closed-reason: null
 ---

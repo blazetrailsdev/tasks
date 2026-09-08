@@ -1,6 +1,6 @@
 ---
 title: "quoted_include_columns is duplicated onto abstract SchemaCreation, where Rails has none"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
