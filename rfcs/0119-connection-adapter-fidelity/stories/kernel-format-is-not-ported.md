@@ -71,7 +71,7 @@ here as acceptance criteria rather than rediscovered:
    (`vendor/ruby/sprintf.c:111`).
 4. **Numeric conversion.** `Number()` is not Ruby's: `%d` with `"010"` must be
    `8` (octal), `"1.5"` must raise `ArgumentError: invalid value for Integer():
-   "1.5"`, and bigint / conversion-protocol objects must be accepted. Reuse
+"1.5"`, and bigint / conversion-protocol objects must be accepted. Reuse
    `kernelInteger` / `kernelFloat`, which already exist in this package
    (`vendor/ruby/sprintf.c:590,885`).
 5. **Prefix and zero-precision octal.** `%#08x` with `255` must be `0x0000ff`,
