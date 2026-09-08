@@ -1,6 +1,6 @@
 ---
 title: "Journey router test parity: move 25 misplaced tests and port 10 absent"
-status: ready
+status: claimed
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-08T13:31:47Z"
+assignee: "journey-router-test-parity"
 blocked-by: null
 closed-reason: null
 ---

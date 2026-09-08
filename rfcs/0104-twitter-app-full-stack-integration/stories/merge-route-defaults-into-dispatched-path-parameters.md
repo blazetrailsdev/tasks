@@ -1,7 +1,7 @@
 ---
 title: "Merge route.defaults into the dispatched path parameters"
-status: ready
-updated: 2026-09-04
+status: claimed
+updated: 2026-09-08
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 50
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-08T13:31:47Z"
+assignee: "journey-router-test-parity"
 blocked-by: null
 closed-reason: null
 ---

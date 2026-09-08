@@ -1,6 +1,6 @@
 ---
 title: "Journey route test parity: credit the convention copy and delete the duplicate"
-status: ready
+status: in-progress
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["journey-test-names-to-rails-def-test-form"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7609
+claim: "2026-09-08T13:01:45Z"
+assignee: "journey-path-pattern-test-parity"
 blocked-by: null
 closed-reason: null
 ---
