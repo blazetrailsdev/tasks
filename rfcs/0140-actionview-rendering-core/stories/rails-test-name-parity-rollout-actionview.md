@@ -1,7 +1,7 @@
 ---
 title: "rails-test-name-parity-rollout-actionview"
-status: ready
-updated: 2026-08-28
+status: claimed
+updated: 2026-09-08
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-08T19:43:53Z"
+assignee: "rails-test-name-parity-rollout-actionview"
 blocked-by: null
 closed-reason: null
 ---

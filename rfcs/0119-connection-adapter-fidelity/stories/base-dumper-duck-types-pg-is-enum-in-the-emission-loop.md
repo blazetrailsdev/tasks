@@ -1,6 +1,6 @@
 ---
 title: "The base schema dumper duck-types PostgreSQL::Column#is_enum? in its emission loop"
-status: ready
+status: done
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7626
+claim: "2026-09-08T19:00:34Z"
+assignee: "aref-receiver-kind-blocks-string-delete-credit"
 blocked-by: null
 closed-reason: null
 ---

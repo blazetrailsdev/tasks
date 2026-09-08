@@ -1,6 +1,6 @@
 ---
 title: "build_fixture_sql duplicates its create_values_list tail into both branches and calls create_values in one"
-status: ready
+status: claimed
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-08T19:43:53Z"
+assignee: "rails-test-name-parity-rollout-actionview"
 blocked-by: null
 closed-reason: null
 ---

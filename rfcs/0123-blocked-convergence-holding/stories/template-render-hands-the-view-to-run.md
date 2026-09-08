@@ -1,7 +1,7 @@
 ---
 title: "template-render-hands-the-view-to-run"
-status: blocked
-updated: 2026-09-02
+status: closed
+updated: 2026-09-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: 6
 pr: null
 claim: "2026-09-02T00:37:12Z"
 assignee: "actionview-partial-renderer-bodies-pass-rails-arguments"
-blocked-by: "The view/template context-field half has already landed: template/handlers.ts no longer carries RenderContext#view or RenderContext#template (TemplateHandler is Rails' `call(template, source)`), and Template#render hands the view to view._run(methodName, this, locals, buffer, ...) exactly as template.rb:280-284 does. The one residual receipt, @missingRailsArgs _run on base.ts, is the has_strict_locals: kwarg, and that is a Ruby-kwarg shortcoming: base.rb:265-276's strict arm exists only to splat locals as keyword arguments and convert the resulting ArgumentError into a StrictLocalsError. A JS compiled method has no keyword parameters and raises no ArgumentError for a missing/extra local, so the tse compiler emits the check into the template body and raises StrictLocalsMismatch there; passing the kwarg would add a parameter with no arm to select."
-closed-reason: null
+blocked-by: null
+closed-reason: "Work landed: Template#render hands the view to view._run(methodName, this, locals, buffer, ...) as template.rb:280-284 does, and template/handlers.ts no longer carries RenderContext#view or #template. The one residual, the @missingRailsArgs _run receipt for the has_strict_locals: kwarg, is a ratified Ruby-kwarg language shortcoming, not remaining work."
 ---
 
 ## Context
