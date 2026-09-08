@@ -76,5 +76,5 @@ class does.
   answers, and if not, the nested class's fields carry the state instead.
 - `pnpm parity:api --package actiondispatch` keeps `journey/scanner.rb` at 100%
   with 0 arity and 0 param-name mismatches, and `pnpm parity:api:extra
-  --package actiondispatch` still lists no `journey/scanner.ts`.
+--package actiondispatch` still lists no `journey/scanner.ts`.
 - `pnpm vitest run packages/actionpack/src/action-dispatch/journey` passes.
