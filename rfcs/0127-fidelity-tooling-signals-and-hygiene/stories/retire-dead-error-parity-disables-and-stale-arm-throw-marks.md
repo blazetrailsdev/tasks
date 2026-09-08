@@ -26,7 +26,7 @@ reseeded.
 **1. `hash-with-indifferent-access.ts` holds three dead
 `rails-error-parity` disables.** `pnpm lint` reports:
 
-```text
+````text
 packages/activesupport/src/hash-with-indifferent-access.ts
   278:7   warning  Unused eslint-disable directive (no problems were reported from 'blazetrails/rails-error-parity')
   397:11  warning  Unused eslint-disable directive
@@ -73,3 +73,4 @@ reseed.
 - [ ] `pnpm parity:api:arms:throws` reports no "mark is above the current"
       lines.
 - [ ] No mark is written upward and no reseed is run.
+````

@@ -68,7 +68,7 @@ nil when any does not resolve.
 ## Acceptance criteria
 
 - The five actiondispatch loops above expand; `pnpm parity:test --package
-  actiondispatch` shows `journey/path/pattern_test.rb` and
+actiondispatch` shows `journey/path/pattern_test.rb` and
   `journey/router_test.rb` with their full Rails test counts rather than the
   collapsed rows.
 - A receiver or interpolation that still does not resolve statically continues to

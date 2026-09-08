@@ -48,7 +48,7 @@ a string plus a line array where Rails streams.
   does — `postgresql_database_tasks.rb:129-131` writes the line back verbatim
   and depends on it.
 - Carry the `@noRailsEquivalent PERMANENT — Ruby core File.foreach
-  (vendor/ruby/io.c:12063)` receipt the sibling members use
+(vendor/ruby/io.c:12063)` receipt the sibling members use
   (`file.ts:355-357`, `io.ts:459`, `dir.ts:243`).
 - Then converge `removeSqlHeaderComments` onto it and unblock
   `pg-remove-sql-header-comments-slurps-and-guards-mkdtemp`.
