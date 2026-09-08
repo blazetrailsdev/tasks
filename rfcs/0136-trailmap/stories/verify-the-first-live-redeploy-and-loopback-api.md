@@ -18,21 +18,13 @@ closed-reason: null
 
 ## Context
 
-## Acceptance criteria
-
-## Definition of done
-
-## Verification
-
-## Context
-
 PR #16 fixed the two remaining defects in code, but nothing in it has been
 proved against the live box — the fix only takes effect on the next deploy
 from `main`, and no deploy was run.
 
 At merge time the box was serving a stale image, with:
 
-```
+```console
 $ curl -s http://127.0.0.1:8080/up            # unguarded
 {"status":"ok"}
 $ curl -s http://127.0.0.1:8080/stories/ready # every requireLoopback endpoint

@@ -66,7 +66,7 @@ emit ONE member — a fidelity regression at a surface whose byte-identity
 So the handle is **asynchronous**, like the `gzipWriter(io)` handle the seam
 already carries for `Rack::Deflater::GzipStream`
 (`packages/ruby-compat/src/zlib-adapter.ts`, `packages/rack/src/deflater.ts:133`).
-#7586 (`make-schema-cache-gzip-callers-async`) made the callers await, which is
+PR #7586 (`make-schema-cache-gzip-callers-async`) made the callers await, which is
 what unblocked this: `GzipReader#read`, `GzipWriter#close` and `gzfileWrap`
 already answer Promises, and `SchemaCache.read` / `._loadFrom` / `#open` /
 `#dumpTo` already await them. This story now only has to swap the internals.
