@@ -1,6 +1,6 @@
 ---
 title: "Port Journey's four missing methods"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

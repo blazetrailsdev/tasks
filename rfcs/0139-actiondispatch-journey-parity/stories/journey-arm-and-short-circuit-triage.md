@@ -1,6 +1,6 @@
 ---
 title: "Journey arm and short-circuit triage, and the gated throw row to zero"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
