@@ -5,7 +5,11 @@ updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
-deps: ["connection-pool-cannot-seat-an-existing-adapter-instance", "bound-adapter-test-doubles-cannot-satisfy-the-pool-protocol"]
+deps:
+  [
+    "connection-pool-cannot-seat-an-existing-adapter-instance",
+    "bound-adapter-test-doubles-cannot-satisfy-the-pool-protocol",
+  ]
 deps-rfc: []
 est-loc: 200
 priority: null
