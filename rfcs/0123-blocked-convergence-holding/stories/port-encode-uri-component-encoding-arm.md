@@ -2,7 +2,7 @@
 title: "Port _encode_uri_component's enc transcode arm"
 status: blocked
 updated: 2026-09-06
-rfc: "0137-rack-test-gem-port"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
