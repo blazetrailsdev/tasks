@@ -2,7 +2,7 @@
 title: "rails-test-name-parity-rollout-actionview"
 status: ready
 updated: 2026-08-28
-rfc: "0127-fidelity-tooling-signals-and-hygiene"
+rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []

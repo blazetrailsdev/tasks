@@ -2,7 +2,7 @@
 title: "Template owns the strict-locals check, not the tse compiler"
 status: ready
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []

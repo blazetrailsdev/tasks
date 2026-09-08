@@ -2,7 +2,7 @@
 title: "port-action-view-layouts-behind-rendering-stubs"
 status: draft
 updated: 2026-07-30
-rfc: "0023-surfaced-deviations"
+rfc: "0140-actionview-rendering-core"
 cluster: null
 packages:
   - "actionview"

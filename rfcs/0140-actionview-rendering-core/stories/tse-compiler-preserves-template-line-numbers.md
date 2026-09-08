@@ -2,7 +2,7 @@
 title: "Tse compiler emits line-number-aligned source so template errors report template lines"
 status: ready
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []

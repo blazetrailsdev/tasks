@@ -2,7 +2,7 @@
 title: "The virtualized .tse TypeScript emits a bare yield, so a layout's file does not parse"
 status: draft
 updated: 2026-09-06
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []
