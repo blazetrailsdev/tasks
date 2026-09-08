@@ -10,6 +10,7 @@ packages:
   - "activemodel"
   - "arel"
   - "activesupport"
+  - "ruby-compat"
 clusters:
   - "schema"
   - "api-compare"

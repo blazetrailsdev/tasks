@@ -12,6 +12,7 @@ packages:
   - "arel"
   - "date"
   - "trailties"
+  - "actionpack"
 clusters:
   - "arm-parity-tooling"
   - "missing-arm"

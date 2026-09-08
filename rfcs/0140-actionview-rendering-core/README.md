@@ -7,6 +7,7 @@ updated: 2026-09-08
 owner: "@deanmarano"
 packages:
   - "actionview"
+  - "tse-compiler"
 clusters: []
 priority: 2
 ---
@@ -185,13 +186,22 @@ cache Rails also populates lazily rather than replacing the rendering path. That
 argument belongs in that story, and this RFC's job is to make the fallback path
 correct first.
 
-### Prior art: much of this slice is already filed elsewhere
+### Prior art: much of this slice was already filed elsewhere, and is rehomed here
 
-Nine ready/draft stories already own parts of the rendering core. This RFC does
-**not** re-own them and does not rehome them — rehoming requires the RFC to be
-merged first, and the dependency edges below are enough to schedule around.
+Thirty open stories already owned parts of the rendering core, scattered
+across five RFCs — most of them in RFC 0104, where they were surfaced by the
+first full-stack app rather than scoped as ActionView work.
 
-| Story                                                       | RFC  | Status         | Bearing                                                                                                        |
+They are **rehomed into this RFC** as step 2 of the standard sequence: this RFC
+merges first, then `tasks rehome` runs from the tasks main worktree, because
+`rehome` resolves the destination RFC out of the DB and refuses to author from a
+feature branch. Only OPEN stories move; the `done` and `closed` ones stay with
+their parents, where they remain the record of what those RFCs accomplished.
+
+The table below is the subset with dependency edges onto stories filed here. The
+full rehome list lives in the PR that files this RFC.
+
+| Story (all rehomed into 0140)                               | From | Status         | Bearing                                                                                                        |
 | ----------------------------------------------------------- | ---- | -------------- | -------------------------------------------------------------------------------------------------------------- |
 | `actionview-digestor-is-a-stub-not-a-dependency-tree-digest` | 0123 | ready, 400 loc | **Owns the digest tree.** Its own text says `RenderParser` "may warrant its own story"; this RFC answers that. Depends on stories 1-2 here. |
 | `port-resolver-caching-and-cache-template-loading`           | 0104 | ready          | Owns `Resolver.caching` + `Base.cacheTemplateLoading` + the trailtie initializer. `cache-expiry-view-reloader` depends on it. |
@@ -201,7 +211,26 @@ merged first, and the dependency edges below are enough to schedule around.
 | `port-html-builder-and-ruby-template-handlers`               | 0104 | ready, 120 loc | Owns `handlers/builder.rb` (5) + `handlers/html.rb` (1). The likely first reader of `RubyTracker`.              |
 | `back-template-types-with-the-mime-registry`                 | 0104 | ready, 200 loc | Owns `template/types.rb` (6 missing).                                                                           |
 | `template-error-backtrace-locations`                         | 0104 | ready, 120 loc | Owns part of `template/error.rb` (13 missing).                                                                  |
-| `rails-test-name-parity-rollout-actionview`                  | 0127 | draft          | Adjacent to `enroll-actionview-in-parity-test`; that story must not duplicate it.                              |
+| `rails-test-name-parity-rollout-actionview`                  | 0127 | draft          | Adjacent to `enroll-actionview-in-parity-test`; once both are here, one absorbs the other rather than seeding the same mark twice. |
+
+### Layouts and the TSE compiler are in scope
+
+Two clusters join the slice by rehome rather than by original scoping, and the
+reason is the same in both cases: their work cannot be verified from the other
+side of an RFC boundary.
+
+**Layouts** (`port-action-view-layouts-behind-rendering-stubs`, from the retired
+0023 catch-all) is rendering core by any reading — `Base` includes it, and
+actionpack's `metal/rendering.rb` and a large share of `render_test.rb` reach it
+directly. It had no proper home rather than a considered one.
+
+**The TSE compiler** is ActionView's handler, and the seam between them is where
+several of these stories actually live. `template-error-backtrace-locations`
+needs `tse-compiler-preserves-template-line-numbers` to have landed before its
+assertions mean anything, and `template-owns-the-strict-locals-check` moves a
+check out of the compiler and into `Template`. Splitting those across two RFCs
+means neither half can be verified alone, so `tse-compiler` is declared
+alongside `actionview` in this RFC's packages.
 
 ## Non-goals
 
@@ -241,7 +270,9 @@ merged first, and the dependency edges below are enough to schedule around.
 4. Template representation — `template-text-html-and-raw-file-classes`,
    `actionview-context-and-record-identifier`, `collection-caching-for-partial-renderer`
 5. Peripherals — `actionview-log-subscriber`, `routing-url-for-includes-url-for`
-6. Measurement — `enroll-actionview-in-parity-test`
+6. Layouts — `port-action-view-layouts-behind-rendering-stubs`
+7. Measurement — `enroll-actionview-in-parity-test`,
+   `rails-test-name-parity-rollout-actionview`
 
 ## Verification
 
@@ -274,3 +305,6 @@ merged first, and the dependency edges below are enough to schedule around.
 ## Changelog
 
 - 2026-09-08: initial RFC
+- 2026-09-08: rehomed 30 open ActionView stories in from RFCs 0104, 0111, 0123,
+  0127 and 0023; added Layouts and the TSE compiler to the slice, and declared
+  `tse-compiler` in packages.
