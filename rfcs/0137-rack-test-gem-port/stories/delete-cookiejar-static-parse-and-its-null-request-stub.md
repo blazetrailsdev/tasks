@@ -1,6 +1,6 @@
 ---
 title: "CookieJar.parse and its nullRequest stub have no Rails counterpart"
-status: claimed
+status: done
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: 7599
 claim: "2026-09-07T22:55:35Z"
 assignee: "default-cookie-serializer-is-marshal-not-json"
 blocked-by: null

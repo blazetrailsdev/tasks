@@ -1,6 +1,6 @@
 ---
 title: "SignedCookieJar/EncryptedCookieJar drop Rails' KeyRotating"
-status: claimed
+status: done
 updated: 2026-09-07
 rfc: "0137-rack-test-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7599
 claim: "2026-09-07T22:55:35Z"
 assignee: "default-cookie-serializer-is-marshal-not-json"
 blocked-by: null
