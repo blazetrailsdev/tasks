@@ -153,3 +153,54 @@ same amount, for a net-zero-or-positive percentage move. A story that lowers
 ## Changelog
 
 - 2026-08-18: initial RFC, from the 2026-08-11 → 08-17 parity-burndown audit
+
+## Classification of every `SCOPED_SKIP_GROUPS` entry (2026-09-08)
+
+Read against `vendor/rails` and the trails tree at trails `main` (5f5ff5b0c), one
+row per group in register order. Classes: **(a)** genuine language shortcoming,
+**(b)** ported surface that should be credited, **(c)** stale reason, **(d)**
+duplicate of debt tracked elsewhere. Every (b)/(c) was established empirically —
+the group was deleted and `parity:api` re-run — not by reading alone.
+
+| Ruby file(s) | Names | Class | Evidence |
+| --- | --- | --- | --- |
+| `naming.rb` | `=~`, `!~` | a | no TS operator overload; `String#=~` returns an offset, not the ported boolean `match` |
+| `notifications/instrumenter.rb` | `gc_time`, `allocations`, `now_gc`, `now_allocations` | a | no JS GC/allocation counters without `node:*` |
+| `number_helper.rb` | `autoload` family | a | ESM has no autoload |
+| `time_with_zone.rb` | `marshal_dump`, `marshal_load` | a | no Marshal in JS |
+| `core_ext/time/calculations.rb` | `*_with_*`/`*_without_*` operator chain halves | a | no operator overloading, no reopening `Date`'s operators |
+| `core_ext/module/redefine_method.rb` | `silence_redefinition_of_method`, `redefine_singleton_method`, `method_visibility` | a | deleting the group leaves all three `missing` at `class-attribute.ts` — nothing ported to credit |
+| `core_ext/module/aliasing.rb`, `core_ext/module/concerning.rb` | `alias_attribute`, `concerning`, `concern` | a | needs `module_eval` + constant assignment |
+| `core_ext/module/attr_internal.rb` | `attr_internal_define`, `attr_internal_naming_format` | a | deleting the group leaves both `missing` at `module-ext.ts` |
+| `core_ext/string/filters.rb` | `squish!`, `remove!` | a | JS strings are immutable primitives |
+| `duration.rb` | `+@` | a | no unary-plus dispatch in TS |
+| the five AR value-object files | `-@` | a | no unary-minus method; `deduplicate` is the whole surface |
+| `dirty.rb` | `as_json` | **c** | `activemodel/src/dirty.ts:168` is a faithful port of `dirty.rb:264-268`; the reason ("a ported override would be a no-op") no longer describes the tree. **Deleted in this PR** — `dirty.rb` goes 35/35 with the member counted. |
+| `relation.rb`, `relation/calculations.rb` | `build_count_subquery` | **b** | `relation/calculations.ts:730` at the Rails name; handled by `scoped-skip-suppresses-extracted-build-count-subquery` (both seats pair, +2/+2) |
+| `relation.rb` | `perform_calculation` | **c** | `relation/calculations.ts:680` pairs at the `relation.rb` seat too — the reason's claim that it "is not on the Relation class surface relation.rb compares against" is false. **Deleted in this PR**; `relation.rb` stays 402/402 with the member counted. |
+| `adapter_helper.rb` | the four `supports_*?` predicates | a | deleting the group leaves all four `missing`; they live as `supports.ts` table keys (`:53`, `:55`) by design |
+| `config.rb` | `config`, `config_file`, `read_config` (+ `expand_config`) | a + **b** | (2) genuine: trails ships no `config.yml`. (1) `expand_config` is ported at `support/connection.ts`; handled by `artest-config-skip-hides-four-ported-members` |
+| `messages/rotator.rb` | `initialize` | a | `prepend()` cannot wrap a constructor (correct `tsMirrorName` use) |
+| `api.rb` | `initialize` | a | `include()` cannot install a constructor |
+| `dependencies.rb`, `dependencies/autoload.rb`, `dependencies/interlock.rb` | the Zeitwerk family | a | no autoload, no reload, no interlock |
+| the three `acts_like.rb` files | `acts_like_date?`, `acts_like_time?` | a | ratified by RFC 0098; `Time`/`TimeWithZone` halves are ported and credited elsewhere |
+| `multibyte.rb` | `proxy_class`, `proxy_class=` | a | its value, default and reader are all absent |
+| `concurrency/share_lock.rb` | the reader-writer lock | a | no JS preemption; callers take the null lock |
+| `testing/parallelization/{server,worker}.rb` | the DRb fork runner halves | a | vitest owns worker parallelism |
+| `multibyte/chars.rb` | the `Chars` proxy | a | JS strings iterate by code point already |
+| `testing/parallelization.rb` | `size`, `shutdown`, fork hooks | a | vitest owns parallelism |
+| `test_case.rb` | minitest runner plumbing | a | vitest is the runner |
+| `testing/declarative.rb` | `test` | a | vitest discovers nothing by reflection |
+| `concurrency/load_interlock_aware_monitor.rb` | `Monitor` subclass members | a | no threads, no interlock |
+| `cache/memory_store.rb` | `synchronize` | a | no threads to serialize |
+| `cache/file_store.rb` | `lock_file` | a | no `flock` in the allowed async fs surface |
+| `headers.rb` | `key?` | a | mapped spelling occupied by a different Ruby method (correct `tsMirrorName` use) |
+
+Two further findings, both fixed here rather than filed:
+
+- The `messages/rotator.rb` reason cited `packages/activesupport/src/prepend.ts`;
+  `prepend()` lives at `packages/ruby-compat/src/prepend.ts`. (c), corrected.
+- Two `file:line` citations had drifted (`headers.ts:77` → `:52`,
+  `time-with-zone.ts:955` → `:858`). Corrected.
+
+No (b)/(c) finding is left recorded only in this table.
