@@ -37,7 +37,7 @@ which requires seating a _given adapter instance_ in a real pool. Nothing in
   function assigned as a private field (`:942`) and does not enqueue into
   `_available`, so `acquireConnectionSync` (`:556`) still falls through to
   `tryToCheckoutNewConnection`, which refuses once `_connections.length >=
-  this.size`.
+this.size`.
 
 `PoolConfig` (`connection-adapters/pool-config.ts:29-42`) also requires a
 `HashConfig`, which a bound adapter built outside a pool does not have — its
