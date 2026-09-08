@@ -1,5 +1,5 @@
 ---
-title: "formatter-extract-parts-scope-options-arm"
+title: "Carry Route#scopeOptions and its arm of the extract_parameterized_parts keep-condition"
 status: draft
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 110
 priority: null
 pr: null
 claim: null

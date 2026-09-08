@@ -1,5 +1,5 @@
 ---
-title: "mapper-appends-optional-format-segment"
+title: "Append the optional (.:format) segment to declared route paths"
 status: draft
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 90
 priority: null
 pr: null
 claim: null
