@@ -1,5 +1,5 @@
 ---
-rfc: "0000-actiondispatch-journey-parity"
+rfc: "0139-actiondispatch-journey-parity"
 title: "ActionDispatch Journey to 100% on every parity axis"
 status: draft
 created: 2026-09-07
@@ -11,10 +11,7 @@ clusters: []
 priority: 2
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge and rewrites the number-free H1 below. -->
-
-# RFC — ActionDispatch Journey to 100% on every parity axis
+# RFC 0139 — ActionDispatch Journey to 100% on every parity axis
 
 ## Summary
 

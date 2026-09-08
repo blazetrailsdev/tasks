@@ -2,7 +2,7 @@
 title: "Journey parity residue and the assertion mark back to zero"
 status: draft
 updated: 2026-09-07
-rfc: "0000-actiondispatch-journey-parity"
+rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: ["actionpack"]
 deps: ["journey-router-test-parity", "journey-route-test-parity", "journey-path-pattern-test-parity", "journey-gtg-test-parity", "journey-utils-and-ast-test-parity", "journey-routes-test-parity", "journey-parser-and-scanner-test-parity", "journey-missing-api-methods", "journey-call-parity-baselines-to-zero"]
