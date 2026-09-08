@@ -45,6 +45,6 @@ three lines (rewrite the year, delete the `" BC"` suffix, `super`) but had to sp
       names, covering at least the flag/width/precision specs Ruby documents for
       the integer, float and string conversions the repo actually calls.
 - [ ] PG `OID::DateTime#cast_value` calls it and drops its `@missingRailsCall
-      format` receipt; `pnpm parity:api:calls` stays green.
+    format` receipt; `pnpm parity:api:calls` stays green.
 - [ ] `grep -rn "padStart\|padEnd" packages/*/src` is reviewed for other
       open-coded `format` call sites and each is either converted or listed here.
