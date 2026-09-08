@@ -1,5 +1,5 @@
 ---
-title: "Route#verb reports \"ALL\" where Rails' All matcher reports \"\""
+title: 'Route#verb reports "ALL" where Rails'' All matcher reports ""'
 status: draft
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
