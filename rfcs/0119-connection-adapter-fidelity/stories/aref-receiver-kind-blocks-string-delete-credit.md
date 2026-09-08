@@ -1,13 +1,13 @@
 ---
-title: "aref-receiver-kind-blocks-string-delete-credit"
+title: "An aref receiver is kind `expr`, so a converged String#delete call still flags"
 status: draft
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null
