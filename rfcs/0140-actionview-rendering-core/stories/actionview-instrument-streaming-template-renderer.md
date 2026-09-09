@@ -1,6 +1,6 @@
 ---
 title: "actionview-instrument-streaming-template-renderer"
-status: draft
+status: closed
 updated: 2026-09-09
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged in #7649 — delayedRender now spans the render with Notifications.buildHandle"
 ---
 
 ## Context
