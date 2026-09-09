@@ -1,5 +1,5 @@
 ---
-title: "parity:api:extra:gate does not run the STALE @noRailsEquivalent check that CI runs"
+title: "parity:api:extra:gate does not run the STALE or REDUNDANT @noRailsEquivalent checks that CI runs"
 status: draft
 updated: 2026-08-31
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
@@ -45,6 +45,30 @@ Note the existing sibling story `parity-api-extra-does-not-run-stale-tag-gate`
 in this author's memory refers to `parity:api --extra`; this is about the
 `parity:api:extra:gate` script CLAUDE.md actually names.
 
+**The REDUNDANT check has the same shape and the same blind spot.** PR #7631
+hit it from the opposite direction: `SchemaCache.read` was tagged `@internal`
+plus a `@noRailsEquivalent CONVERGEABLE` receipt, `pnpm parity:api:extra:gate`
+reported `OK (activerecord novel 174/174, total 606/606)`, and CI failed with
+
+```text
+extra-surface: 1 REDUNDANT @noRailsEquivalent tag(s) on names the scorer
+already allows — the tag asserts a Rails counterpart is absent where one was
+found, so it covers no extra surface. Delete the tag next to the code:
+  - activerecord  connection-adapters/schema-cache.ts  read
+```
+
+`pnpm parity:api --extra` does not surface it either — the extra-surface
+section does not render under that invocation at all, so only
+`pnpm parity:api:extra --package <pkg>` prints it. Both checks live in
+`scripts/api-compare/extra-surface.ts` and both are invisible to the gate, so
+whichever remedy is chosen should cover the pair rather than the stale arm
+alone.
+
+(That PR's underlying deviation is tracked separately as
+[[extractor-does-not-model-private-class-method]]: `read` had no valid JSDoc
+shape at all, because the unbacked-internal rule demanded a receipt the
+redundant check then rejected. It shipped as a real TS `private`.)
+
 ## Converged shape
 
 Either fold the stale-tag check into `parity:api:extra:gate` so the documented
@@ -55,5 +79,7 @@ one command, one contract, no third thing to remember.
 ## Acceptance criteria
 
 - `pnpm parity:api:extra:gate` fails on a stale `@noRailsEquivalent` tag.
-- A test covers the stale-tag arm of the gate.
+- `pnpm parity:api:extra:gate` fails on a redundant `@noRailsEquivalent` tag —
+  one on a name the scorer already allows.
+- A test covers the stale-tag and redundant-tag arms of the gate.
 - CLAUDE.md's step 4 needs no new command, or names the new one.
