@@ -2,7 +2,7 @@
 title: "port-rails-adapter-dbconsole-tests"
 status: draft
 updated: 2026-09-08
-rfc: "0113-branch-and-guard-parity"
+rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []
