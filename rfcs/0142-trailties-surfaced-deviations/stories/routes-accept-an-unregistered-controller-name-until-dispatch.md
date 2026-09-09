@@ -3,7 +3,7 @@ title: "Routes accept an unregistered controller name and 404 at dispatch instea
 status: draft
 updated: 2026-09-06
 rfc: "0142-trailties-surfaced-deviations"
-cluster: null
+cluster: "boot"
 packages: []
 deps: []
 deps-rfc: []

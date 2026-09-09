@@ -1,9 +1,9 @@
 ---
 rfc: "0142-trailties-surfaced-deviations"
 title: "trailties surfaced deviations — boot, railties and the generators"
-status: active
+status: draft
 created: 2026-09-08
-updated: 2026-09-08
+updated: 2026-09-09
 owner: "@deanmarano"
 packages:
   - "trailties"
@@ -132,8 +132,8 @@ The rehome batch, by cluster — these are the ids step 2 moves and step 3 stamp
 
 One arrives **newly actionable**:
 `empty-the-generated-new-and-edit-actions-once-implicit-render-lands`. Its
-stated blocker, `wire-implicit-render-into-controller-dispatch`, landed in
-#7305, so the explicit `render({ action: "new" })` calls the authentication
+stated blocker, `wire-implicit-render-into-controller-dispatch`, landed
+in PR #7305 — so the explicit `render({ action: "new" })` calls the authentication
 generator emits can go back to the empty bodies Rails' templates carry
 (`sessions_controller.rb.tt:5-6`).
 
@@ -167,19 +167,21 @@ generator emits can go back to the empty bodies Rails' templates carry
 
 Shares the 0104 sunset sequence with RFC 0141:
 
-1. **Filing (this PR).** Both buckets authored `status: active`; the four
+1. **Filing (this PR).** Both buckets authored; the four
    duplicates' criteria folded into survivors; the sunset recorded in 0104's
    README.
 2. **Verbs, from the main worktree after merge.** `tasks close` the 4
    duplicates; `tasks rehome` 73 stories — 25 here, 27 → 0141, 8 →
    0139, 4 → 0140, 6 → 0123, 3 → 0023.
 3. **Clusters.** Set `cluster:` on the 25 carried stories by markdown PR.
-4. **Close 0104.**
+4. **Close 0104.** Markdown-owned, so a file edit in the same PR as step 3,
+   and necessarily after step 2.
 
 ## Verification
 
 - `pnpm tasks list --rfc <this rfc>` reports **25** stories after step 2, and
-  `pnpm tasks ready --rfc <this rfc>` is **non-empty**.
+  the bucket is `status: draft`, so `pnpm tasks ready --rfc <this rfc>` is
+  **empty** until the owner flips it to `active`.
 - **0** stories in this bucket carry `status: blocked` — the property that makes
   its queue pickup-able, and the reason the six blocked ones went to RFC 0123.
 - `pnpm validate` passes across all RFCs and stories.
@@ -196,3 +198,8 @@ rather than queued; one `tasks rehome` recovers them).
 ## Changelog
 
 - 2026-09-08: initial RFC, filed as the trailties half of RFC 0104's sunset.
+- 2026-09-09: sunset steps 2–4 executed. 4 duplicates closed and 73 stories
+  rehomed by verb on `main` (`589cab0a..3f0b360d`); the 25 carried here stamped
+  with their clusters; RFC 0104 closed. Filed `status: active`, changed to
+  `draft` here at the owner's direction, so the bucket does not surface in a
+  ready queue until it is flipped back.

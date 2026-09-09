@@ -3,7 +3,7 @@ title: "trails server is hardcoded to development and ignores the environment"
 status: draft
 updated: 2026-09-06
 rfc: "0142-trailties-surfaced-deviations"
-cluster: null
+cluster: "boot"
 packages: ["trailties"]
 deps: []
 deps-rfc: []

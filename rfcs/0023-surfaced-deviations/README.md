@@ -162,3 +162,6 @@ authored ad-hoc and none are pre-enumerated; see the live index
   `file:line`; decision-only, infrastructure, and corelib-semantics items are out of
   scope) and the sweep cadence, after the 8-shard triage sweep closed 24 of 70 stories
   in one shard alone — most of them decision-only or non-fidelity work.
+- 2026-09-09: rehomed 3 example-app and CI-hygiene stories in from RFC 0104 at
+  its sunset. This RFC is `postponed`, so they are deliberately parked rather
+  than queued; one `tasks rehome` recovers them.

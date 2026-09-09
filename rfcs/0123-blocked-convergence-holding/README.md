@@ -198,3 +198,11 @@ claiming:
 five ACs already checked off by PR 6809, and its AC4 may already be satisfied;
 `mysql2-execute-batch-routes-through-raw-execute` has its body converged and only
 the install outstanding.
+
+## Changelog
+
+- 2026-09-09: rehomed 6 blocked stories in from RFC 0104 at its sunset — blocked
+  on Zeitwerk, ActionMailer, `I18n::Railtie` and `ActiveRecord::TestFixtures`.
+  They came here rather than into `0142-trailties-surfaced-deviations` so that
+  bucket carries no blocked story and its queue stays pickup-able all the way
+  down.

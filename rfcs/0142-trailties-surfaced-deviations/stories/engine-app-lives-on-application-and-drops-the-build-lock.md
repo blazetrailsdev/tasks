@@ -3,7 +3,7 @@ title: "Engine#app is declared on Application and drops @app_build_lock (engine.
 status: draft
 updated: 2026-09-04
 rfc: "0142-trailties-surfaced-deviations"
-cluster: null
+cluster: "boot"
 packages: []
 deps: []
 deps-rfc: []

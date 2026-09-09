@@ -308,3 +308,6 @@ alongside `actionview` in this RFC's packages.
 - 2026-09-08: rehomed 30 open ActionView stories in from RFCs 0104, 0111, 0123,
   0127 and 0023; added Layouts and the TSE compiler to the slice, and declared
   `tse-compiler` in packages.
+- 2026-09-09: rehomed 4 more open stories in from RFC 0104 at its sunset —
+  controller-side `render_to_body`, partial prefixes, and the two asset-helper
+  seeds for the helpers campaign this RFC anticipates.

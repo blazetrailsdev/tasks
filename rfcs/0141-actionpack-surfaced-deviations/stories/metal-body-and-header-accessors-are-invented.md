@@ -3,7 +3,7 @@ title: "Metal#body / #setHeader / #getHeader are invented surface; Rails has res
 status: ready
 updated: 2026-09-04
 rfc: "0141-actionpack-surfaced-deviations"
-cluster: null
+cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []

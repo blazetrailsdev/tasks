@@ -3,7 +3,7 @@ title: "ActionController::MiddlewareStack#build carries an invented non-string a
 status: draft
 updated: 2026-09-05
 rfc: "0141-actionpack-surfaced-deviations"
-cluster: null
+cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []

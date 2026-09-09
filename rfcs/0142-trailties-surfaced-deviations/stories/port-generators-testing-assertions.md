@@ -3,7 +3,7 @@ title: "Port Rails::Generators::Testing::Assertions instead of hand-rolled file 
 status: ready
 updated: 2026-09-04
 rfc: "0142-trailties-surfaced-deviations"
-cluster: null
+cluster: "generators"
 packages: []
 deps: []
 deps-rfc: []

@@ -3,7 +3,7 @@ title: "wrap_parameters names the wrapping helper, not Rails' class macro — th
 status: ready
 updated: 2026-09-04
 rfc: "0141-actionpack-surfaced-deviations"
-cluster: null
+cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []

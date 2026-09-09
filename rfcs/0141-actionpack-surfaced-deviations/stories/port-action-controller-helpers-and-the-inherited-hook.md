@@ -3,7 +3,7 @@ title: "Fire ActionController::Railties::Helpers#inherited at class definition, 
 status: draft
 updated: 2026-09-06
 rfc: "0141-actionpack-surfaced-deviations"
-cluster: null
+cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []

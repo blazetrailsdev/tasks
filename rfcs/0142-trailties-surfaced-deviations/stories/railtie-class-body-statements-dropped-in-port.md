@@ -3,7 +3,7 @@ title: "railtie-class-body-statements-dropped-in-port"
 status: draft
 updated: 2026-09-05
 rfc: "0142-trailties-surfaced-deviations"
-cluster: null
+cluster: "boot"
 packages: []
 deps: []
 deps-rfc: []

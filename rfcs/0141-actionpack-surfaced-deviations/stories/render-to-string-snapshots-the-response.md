@@ -3,7 +3,7 @@ title: "render_to_string writes the response and then restores it, where Rails n
 status: ready
 updated: 2026-09-04
 rfc: "0141-actionpack-surfaced-deviations"
-cluster: null
+cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []
