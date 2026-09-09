@@ -1,6 +1,6 @@
 ---
 title: "NullPool's @mutex is a reentrant Monitor where Ruby uses a non-reentrant Mutex"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

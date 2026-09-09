@@ -1,6 +1,6 @@
 ---
 title: "The dumper's emission loop uses a type-name allowlist where Rails tests for a Symbol"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

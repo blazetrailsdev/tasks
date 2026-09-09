@@ -1,6 +1,6 @@
 ---
 title: "formatPlainTimeForSqlMysql alias has no production caller"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

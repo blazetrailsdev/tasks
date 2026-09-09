@@ -1,6 +1,6 @@
 ---
 title: "SchemaReflection#cached? flattens Rails' nil predicate return to false"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

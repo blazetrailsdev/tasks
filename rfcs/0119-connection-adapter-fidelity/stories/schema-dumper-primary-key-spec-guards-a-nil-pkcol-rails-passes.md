@@ -1,6 +1,6 @@
 ---
 title: "SchemaDumper#table guards columnSpecForPrimaryKey against a nil pkcol Rails passes straight through"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
