@@ -1,6 +1,6 @@
 ---
 title: "Kernel#format is not ported, so PG OID::DateTime open-codes its %04d padding"
-status: ready
+status: in-progress
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7637
+claim: "2026-09-09T02:16:10Z"
+assignee: "kernel-format-is-not-ported"
 blocked-by: null
 closed-reason: null
 ---
