@@ -7,10 +7,16 @@ updated: 2026-09-09
 owner: "@deanmarano"
 packages:
   - "trailties"
+  # The two encryption boot stories carried in at the sunset of
+  # 0113-branch-and-guard-parity (2026-09-09) also touch activerecord/src/encryption.
+  - "activerecord"
 clusters:
   - "boot"
   - "generators"
+  # Carried in at the sunset of 0113-branch-and-guard-parity (2026-09-09).
+  - "missing-arm"
 related-rfcs:
+  - "0113-branch-and-guard-parity"
   - "0104-twitter-app-full-stack-integration"
   - "0141-actionpack-surfaced-deviations"
   - "0123-blocked-convergence-holding"

@@ -13,7 +13,11 @@ packages:
 clusters:
   - api-compare
   - lint
+  # Carried in at the sunset of 0113-branch-and-guard-parity (2026-09-09) with
+  # the three arms-report stories that are tooling rather than convergence.
+  - arm-parity-tooling
 related-rfcs:
+  - "0113-branch-and-guard-parity"
   - "0126-fidelity-tooling-continuation"
   - "0025-fidelity-verification-tooling"
   - "0108-call-gate-false-positives"

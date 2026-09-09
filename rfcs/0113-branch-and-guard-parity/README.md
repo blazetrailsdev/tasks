@@ -293,6 +293,35 @@ re-homed from `0023-surfaced-deviations` on 2026-08-18 and carry the
 
 ## Changelog
 
+- 2026-09-09: **sunset pass — the RFC is wound down but stays `active`.** The
+  tooling programme is delivered (see Verification); the burndown is not. 133 of
+  192 stories are `done`. 24 open stories were re-homed to the RFC that owns
+  their subsystem — 2 to `0119-connection-adapter-fidelity`
+  (`connection-adapters/**`), 1 to `0139-actiondispatch-journey-parity`
+  (`journey/formatter.ts`), 11 to `0141-actionpack-surfaced-deviations`, 5 to
+  `0142-trailties-surfaced-deviations` (three generators, two encryption
+  initializers that moved to `packages/trailties/src/trailties/active-record.ts`
+  when `packages/activerecord/src/trailtie.ts` was deleted), and 3 to
+  `0127-fidelity-tooling-signals-and-hygiene` (the arms-report tooling stories,
+  carried under the `arm-parity-tooling` cluster). One blocked story went to
+  `0123-blocked-convergence-holding`
+  (`binary-cast-drops-the-already-binary-arm`, whose blocker re-verified: the
+  arm is provably dead until `ActiveModel::Type::Binary` models an already-BINARY
+  Ruby String distinctly from a text one).
+  `compose-arms-report-token-filter-with-direction` was **closed as delivered** —
+  its blocker's premise was void, `--token=` landed and composes with
+  `--direction` exactly as specified (`report-arms.ts:328-344`,
+  `report-arms.test.ts:327-331`).
+  `trailtie-encrypt-fixtures-arm` was **unblocked** — its prerequisite
+  `port-active-record-fixture-class-and-encrypted-fixtures-module` landed in
+  PR #7617 (`Fixture` at `fixtures.ts:934`, `EncryptedFixtures` prepended at
+  `:961`) — and moved to 0142 as `ready`.
+  **The RFC stays `active` carrying 17 `ready` + 13 `draft` stories** in
+  activerecord, activesupport, ruby-compat, activemodel, date and rack: those
+  packages have no active RFC and no `<package>-surfaced-deviations` bucket, and
+  a closed RFC cannot hold an open story (`validate-lib.mjs:351-367`). It closes
+  when those buckets exist and the cohort moves, not before.
+
 - 2026-09-05: **re-measured per token**, as an audit rather than a doc PR —
   `remeasure-arm-noise-floor-per-token`, delivered to
   `audits/arm-mismatch-noise-floor-20260906T022720Z.md`. The whole population
