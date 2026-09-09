@@ -2,7 +2,7 @@
 title: "Generated new/edit actions render explicitly where Rails' are empty"
 status: ready
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

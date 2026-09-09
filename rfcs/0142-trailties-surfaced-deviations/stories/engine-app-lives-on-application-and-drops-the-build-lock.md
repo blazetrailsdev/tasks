@@ -2,7 +2,7 @@
 title: "Engine#app is declared on Application and drops @app_build_lock (engine.rb:515-524)"
 status: draft
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

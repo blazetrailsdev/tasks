@@ -2,7 +2,7 @@
 title: "railtie-class-body-statements-dropped-in-port"
 status: draft
 updated: 2026-09-05
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

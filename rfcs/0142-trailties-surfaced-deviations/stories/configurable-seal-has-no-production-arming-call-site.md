@@ -2,7 +2,7 @@
 title: "Railtie::Configurable's inheritance seal is never armed outside tests, so the raise is inert in a booted app"
 status: draft
 updated: 2026-09-08
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

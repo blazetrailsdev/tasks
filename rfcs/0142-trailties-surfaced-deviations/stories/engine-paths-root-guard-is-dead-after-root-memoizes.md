@@ -2,7 +2,7 @@
 title: "Engine#paths' root guard and Application#initialize's bootRoot fallback are dead now that root() memoizes into config.root"
 status: draft
 updated: 2026-09-05
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

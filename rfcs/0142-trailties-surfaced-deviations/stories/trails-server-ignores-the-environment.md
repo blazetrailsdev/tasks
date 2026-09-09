@@ -2,7 +2,7 @@
 title: "trails server is hardcoded to development and ignores the environment"
 status: draft
 updated: 2026-09-06
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
 deps: []
