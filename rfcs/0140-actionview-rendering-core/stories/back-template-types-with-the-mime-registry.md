@@ -1,5 +1,5 @@
 ---
-title: "Template::Types is a frozen list, not the Mime registry, and SimpleType's instance side is unported"
+title: "Template::Types is a frozen list, not the Mime registry"
 status: ready
 updated: 2026-09-04
 rfc: "0140-actionview-rendering-core"
@@ -18,18 +18,19 @@ closed-reason: null
 
 ## Context
 
-`packages/actionview/src/template/types.ts` scores 2/8 in
-`pnpm parity:api --package actionview`. It exposes `Types.symbols()` and
-`Types.isValidSymbols()` over a hardcoded array, with this note in the file:
+`packages/actionview/src/template/types.ts` exposes `Types.symbols()` and
+`Types.isValidSymbols()` over a hardcoded array, which carried this note:
 
 > until `Mime::Type` is ported the set is Rails' default registrations, in the
 > order `actionpack/lib/action_dispatch/http/mime_types.rb:8-56` registers them.
 
 Rails has two layers. `Template::SimpleType`
 (`vendor/rails/actionview/lib/action_view/template/types.rb:7-47`) is the
-stub used when Action View runs without Action Dispatch, and it carries an
-instance side trails has none of: `initialize`, `symbol`, `to_s`, `to_str`,
-`ref`, `to_sym`, `==`, and the `[]` constructor. `Template::Types` is then
+stub used when Action View runs without Action Dispatch. **Its instance side —
+`initialize`, `symbol`, `to_s`/`to_str`, `ref`, `to_sym`, `==` and the `[]`
+constructor — was ported by PR #7636**, which needed `Types[extname].symbol` for
+`RawFile#initialize` (`template/raw_file.rb:12-13`); `template/types.rb` now
+scores 9/9. What remains is the registry half below. `Template::Types` is then
 swapped for `Mime` once actionpack loads
 (`types.rb:49-52`, `mime_types_implementation`), so `Types.symbols` becomes
 `Mime::SET.symbols` (`actionpack/lib/action_dispatch/http/mime_type.rb:56-62`)
@@ -69,14 +70,12 @@ Every seat that turns a format into a template-file extension or an
 
 ## Converged shape
 
-Port `SimpleType`'s instance side, and back `Types.symbols` with the Mime
-registry — `packages/actionpack/src/action-dispatch/mime-type.ts` already
+Back `Types.symbols` with the Mime registry — `packages/actionpack/src/action-dispatch/mime-type.ts` already
 exists — through Rails' `mime_types_implementation` swap rather than a copy of
 the default list.
 
 ## Acceptance criteria
 
-- `SimpleType`'s `symbol` / `toString` / `ref` / `toSym` / `[]` are ported.
 - `Types.symbols()` reflects registrations made through `Mime::Type.register`,
   and is colon-spelled, mirroring `types.rb:10`.
 - `PathParser.buildPathRegex` maps them through `symbolToS`, mirroring
@@ -84,5 +83,9 @@ the default list.
 - The `symbolToS` flattening in
   `packages/actionpack/src/action-controller/metal/rendering.ts`'s
   `processAction` is gone.
+- `packages/actionview/src/template/html.test.ts`'s `it.todo` for
+  `html_test.rb:10-14`'s "formats returns string for recognized MIME type when
+  MIME does not have symbol" becomes a real test — it needs `Mime::Type.lookup`,
+  which is exactly what this story wires up.
 - actionview and actionpack suites green.
-- `template/types.rb` improves on 25% in `pnpm parity:api --package actionview`.
+- `template/types.rb` stays at 100% in `pnpm parity:api --package actionview`.
