@@ -44,22 +44,66 @@ UPDATE stories SET status='claimed', assignee=?, claim_at=?
 
 Zero rows affected means another agent won; the CLI exits 2.
 
-## trails is vendored, deliberately
+## trails is tracked from main, continuously
 
 This CLI depends on trails, and the agents it dispatches are the ones editing
-trails. Consuming trails from the live checkout would mean a broken trails
-`main` wedges the CLI that dispatches the agent who'd fix it.
+trails. That is a deadlock waiting to happen: consuming trails from the live
+checkout means a broken trails `main` wedges the CLI that dispatches the agent
+who would fix it.
 
-So `vendor/` holds immutable packed tarballs and `vendor/TRAILS_PIN` records the
-SHA. Bumping the pin is a deliberate, revertible commit:
+The old answer was a static pin, which traded the deadlock for unbounded
+staleness — it reached **538 commits behind** — and defeated the second half of
+RFC 0136: trailmap is meant to be the _proving ground_ for trails, and a
+proving ground that stale proves very little.
+
+The answer now keeps both properties. `vendor/` still holds immutable packed
+tarballs and `vendor/TRAILS_PIN` still records the SHA, so the installed bytes
+are always a named commit and `git revert` of a bump is still the one
+deliberate action that returns to a known-good state. What changed is that the
+bump happens by itself, and only ever after the bytes have been proven:
+
+```bash
+pnpm trails:track     # scripts/track-trails.sh — the whole job, cron-safe
+pnpm trails:status    # which trails am I on, how far behind, did the last run fail?
+pnpm smoke            # the gate, on the currently installed trails
+```
+
+`track-trails.sh` builds trails main in a tracking clone of its own, vendors
+and installs it in a **scratch worktree**, and runs `pnpm smoke` there. A red
+trails main dies at that step, having touched nothing the fleet runs. Only a
+candidate that passed is applied to this checkout — where it is installed and
+smoked a second time, with a rollback to the previous pin if that fails — and
+only then committed and pushed.
+
+`pnpm smoke` is what "proven" means: connect, migrate, write through the
+models, run the ready queue, and finally invoke `bin/tasks ready --json` as a
+subprocess so the packaged `dist` is exercised the way an agent invokes it. CI
+runs it too, so a hand-edited `vendor/` is held to the same bar and the gate
+cannot rot between bumps.
+
+**Failures are surfaced, never swallowed.** A held pin is the failure mode that
+used to be invisible, so a failed run exits non-zero, records itself where
+`pnpm trails:status` reads it back, and writes a ready-to-file story body with
+the `pnpm tasks new` command to file it — per RFC 0136, a trails gap this
+application hits is supposed to _become_ a story against the framework.
+`pnpm trails:status` escalates to a non-zero exit once a failed run has held
+the pin for more than 48h.
+
+Bumping by hand still works and is still a normal thing to do:
 
 ```bash
 scripts/vendor-trails.sh              # re-pack from the trails checkout at HEAD
-scripts/vendor-trails.sh ~/src/trails v1.2.3
-pnpm install
+scripts/vendor-trails.sh ~/src/trails <ref>
+pnpm install && pnpm smoke
 ```
 
-Never replace these with a `link:`/`file:` pointer at the working checkout.
+`vendor-trails.sh` refuses to vendor when the checkout's HEAD is not the ref it
+is recording, because packing reads the working tree — a pin that misdescribes
+the installed bytes is worse than a stale one. `track-trails.sh` satisfies that
+honestly with a detached checkout rather than working around it.
+
+Never replace these with a `link:`/`file:` pointer at a working checkout: that
+is the shape with no gate in front of it, and it is the deadlock.
 
 ## Editing this checkout
 
