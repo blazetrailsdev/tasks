@@ -271,6 +271,7 @@ export async function ingest(opts: { tasksDir?: string; to?: string } = {}): Pro
   for (let i = 0; i < paths.length; i += CHUNK) {
     await ingestChunk(paths.slice(i, i + CHUNK), tasksDir, result);
   }
+  await sweepVanishedRfcs(tasksDir);
   await Meta.set("last_ingested_sha", to);
 
   return result;
@@ -497,6 +498,46 @@ async function ingestRfc(tasksDir: string, rel: string, rfcId: string): Promise<
     });
   }
 }
+
+/**
+ * Every RFC row whose file is gone, whether or not the diff mentioned it.
+ *
+ * The per-path reap above only fires when `rfcs/<id>/README.md` shows up in
+ * `git diff <watermark>..HEAD`, and a placeholder's path frequently never
+ * does: the `0000-<slug>` README is created and ingested on a branch (or in
+ * the shared main checkout by `tasks new`), and by the time main moves, the
+ * auto-finalize workflow has already renamed the directory — so main's diff
+ * only ever contains the `NNNN-<slug>` half. Ingest inserted the numbered row
+ * and nothing ever asked about the placeholder, which is how two `0000-` rows
+ * sat in the shared DB pointing at directories that do not exist, listed as
+ * open RFCs.
+ *
+ * So the tree, not the diff, is the authority — the same rule `movedElsewhere`
+ * already follows. There are ~140 RFC rows, so a full existence check costs
+ * nothing next to the chunk loop that just ran.
+ *
+ * Applies the identical policy to whatever it finds (placeholder → hand the
+ * history to its numbered successor and drop the row; anything else → close,
+ * never delete), so the sweep widens WHEN the rule runs, not what it decides.
+ */
+async function sweepVanishedRfcs(tasksDir: string): Promise<void> {
+  const rfcsDir = join(tasksDir, "rfcs");
+  // A bare or missing rfcs/ is a broken checkout, not 140 abandoned RFCs.
+  if (!existsSync(rfcsDir) || !readdirSync(rfcsDir).some(isRealRfcDir)) return;
+
+  await Base.transaction(async () => {
+    for (const rfc of await Rfc.all().toArray()) {
+      // A row with no recorded path predates file_path and cannot be checked;
+      // absence of evidence is not a vanished file.
+      if (!rfc.file_path) continue;
+      if (existsSync(join(tasksDir, rfc.file_path))) continue;
+      await reapVanishedRfc(rfc.id);
+    }
+  });
+}
+
+/** Test seam for the whole-tree RFC sweep (see ingest-reap.test.ts). */
+export const sweepVanishedRfcsForTest = sweepVanishedRfcs;
 
 /** Test seam for ingestRfc's vanished-README branch (see ingest-reap.test.ts). */
 export const ingestRfcForTest = ingestRfc;

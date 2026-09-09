@@ -9,7 +9,12 @@ import { beforeEach, describe, expect, it } from "vitest";
 import { Base } from "@blazetrails/activerecord";
 import { migrate } from "./migrator.js";
 import { Event, Rfc, Story, StoryRfcDep } from "./models/index.js";
-import { ingestChunkForTest, ingestRfcForTest, type IngestResult } from "./ingest.js";
+import {
+  ingestChunkForTest,
+  ingestRfcForTest,
+  sweepVanishedRfcsForTest,
+  type IngestResult,
+} from "./ingest.js";
 import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -114,5 +119,93 @@ describe("a story file that moved to another RFC", () => {
     await ingestChunkForTest(["rfcs/0105-old/stories/s-gone.md"], dir, emptyResult());
 
     expect((await Story.findBy({ id: "s-gone" }))!.status).toBe("closed");
+  });
+});
+
+describe("the whole-tree RFC sweep", () => {
+  /** A checkout holding one real numbered RFC, so the sweep does not bail. */
+  function tree(): string {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-sweep-"));
+    mkdirSync(join(dir, "rfcs", "0139-journey"), { recursive: true });
+    writeFileSync(join(dir, "rfcs", "0139-journey", "README.md"), "# RFC 0139 — Journey\n");
+    return dir;
+  }
+
+  it("retracts a placeholder row the diff never mentioned", async () => {
+    // The exact shape that reached the shared DB: the 0000- README only ever
+    // existed on a branch, so main's diff contains the numbered half alone and
+    // the per-path reap is never asked about the placeholder.
+    const dir = tree();
+    await Rfc.create({
+      id: "0000-journey",
+      status: "draft",
+      title: "Journey",
+      file_path: "rfcs/0000-journey/README.md",
+    });
+    await Rfc.create({
+      id: "0139-journey",
+      status: "active",
+      title: "Journey",
+      file_path: "rfcs/0139-journey/README.md",
+    });
+    await Event.create({ at: "2026-09-08T01:13:56Z", verb: "new", rfc_id: "0000-journey" });
+
+    await sweepVanishedRfcsForTest(dir);
+
+    expect(await Rfc.findBy({ id: "0000-journey" })).toBeNull();
+    expect((await Rfc.findBy({ id: "0139-journey" }))!.status).toBe("active");
+    expect((await Event.where({ rfc_id: "0139-journey" }).count()) as number).toBe(1);
+  });
+
+  it("leaves an RFC whose file is on disk alone", async () => {
+    const dir = tree();
+    await Rfc.create({
+      id: "0139-journey",
+      status: "active",
+      title: "Journey",
+      file_path: "rfcs/0139-journey/README.md",
+    });
+
+    await sweepVanishedRfcsForTest(dir);
+
+    expect((await Rfc.findBy({ id: "0139-journey" }))!.status).toBe("active");
+  });
+
+  it("skips a row with no recorded file_path rather than closing it", async () => {
+    const dir = tree();
+    await Rfc.create({ id: "0100-legacy", status: "active", title: "Legacy" });
+
+    await sweepVanishedRfcsForTest(dir);
+
+    expect((await Rfc.findBy({ id: "0100-legacy" }))!.status).toBe("active");
+  });
+
+  it("does nothing at all when the checkout has no RFC directories", async () => {
+    // A broken or half-checked-out tree must not read as 140 abandoned RFCs.
+    const dir = mkdtempSync(join(tmpdir(), "tasks-bare-"));
+    await Rfc.create({
+      id: "0139-journey",
+      status: "active",
+      title: "Journey",
+      file_path: "rfcs/0139-journey/README.md",
+    });
+
+    await sweepVanishedRfcsForTest(dir);
+
+    expect((await Rfc.findBy({ id: "0139-journey" }))!.status).toBe("active");
+  });
+
+  it("closes a numbered RFC whose directory is gone, rather than deleting it", async () => {
+    const dir = tree();
+    await Rfc.create({
+      id: "0099-real",
+      status: "active",
+      title: "Real",
+      file_path: "rfcs/0099-real/README.md",
+    });
+
+    await sweepVanishedRfcsForTest(dir);
+
+    expect((await Rfc.findBy({ id: "0099-real" }))!.status).toBe("closed");
   });
 });
