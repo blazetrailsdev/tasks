@@ -1,6 +1,6 @@
 ---
 title: "formatPlainTimeForSqlMysql alias has no production caller"
-status: claimed
+status: in-progress
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 40
-pr: null
+pr: 7653
 claim: "2026-09-09T19:56:14Z"
 assignee: "savepoint-sql-builders-are-three-methods-rails-does-not-have"
 blocked-by: null
