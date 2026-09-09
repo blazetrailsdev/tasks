@@ -2,7 +2,7 @@
 title: "Port Engine's add_mailer_preview_paths and restore add_view_paths' action_mailer arm"
 status: blocked
 updated: 2026-09-05
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

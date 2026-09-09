@@ -2,7 +2,7 @@
 title: "Port Engine's add_fixture_paths initializer and fixtures_in_root_and_not_in_vendor_or_dot_dir?"
 status: blocked
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

@@ -2,7 +2,7 @@
 title: "Port Engine's add_locales initializer (needs config.i18n.railties_load_path)"
 status: blocked
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

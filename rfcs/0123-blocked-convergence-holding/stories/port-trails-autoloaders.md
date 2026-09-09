@@ -2,7 +2,7 @@
 title: "port-trails-autoloaders"
 status: blocked
 updated: 2026-09-03
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
