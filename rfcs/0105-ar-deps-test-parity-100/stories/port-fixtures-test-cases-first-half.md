@@ -40,6 +40,22 @@ sets `FixturesTest` dereferences via `fixtures(Ellipsis)` and removing
 in practice — a ported case that dereferences an undeclared fixture set will not
 run — so coordinate rather than re-doing it.
 
+## The split
+
+The halves are split at the Rails class boundary in
+`vendor/rails/activerecord/test/cases/fixtures_test.rb`, so the two PRs touch
+disjoint regions of the file and disjoint `describe` blocks in
+`packages/activerecord/src/fixtures.test.ts`:
+
+- **First half — lines 41-952**, `FixturesTest` (41) through
+  `FixturesWithForeignKeyViolationsTest` (887-952). 70 Rails cases.
+- **Second half — lines 954-1847**, `OverRideFixtureMethodTest` (954) through
+  the end of the file (last class: `MultipleFixtureConnectionsTest`, 1645). 83 Rails cases.
+
+`FixturesWithForeignKeyViolationsTest` already has a `describe` on our side, so
+the boundary also keeps the one pre-existing Rails-named block on the first
+half's side.
+
 ## Acceptance criteria
 
 - Every case in this half exists with the Rails name verbatim and passes on all
