@@ -3,7 +3,7 @@ title: "expires_in/fresh_when compose the cache-control header instead of mergin
 status: ready
 updated: 2026-09-04
 rfc: "0141-actionpack-surfaced-deviations"
-cluster: null
+cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []

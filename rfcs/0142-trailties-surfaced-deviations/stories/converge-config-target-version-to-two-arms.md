@@ -3,7 +3,7 @@ title: "converge-config-target-version-to-two-arms"
 status: ready
 updated: 2026-09-04
 rfc: "0142-trailties-surfaced-deviations"
-cluster: null
+cluster: "boot"
 packages: []
 deps: []
 deps-rfc: []

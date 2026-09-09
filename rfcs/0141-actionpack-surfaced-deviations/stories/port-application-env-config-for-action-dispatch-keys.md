@@ -3,7 +3,7 @@ title: "Port Rails::Application#env_config so request envs carry the action_disp
 status: draft
 updated: 2026-09-08
 rfc: "0141-actionpack-surfaced-deviations"
-cluster: null
+cluster: "http-middleware"
 packages: []
 deps: []
 deps-rfc: []

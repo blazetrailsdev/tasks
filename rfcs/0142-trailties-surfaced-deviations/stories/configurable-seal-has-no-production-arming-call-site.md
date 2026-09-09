@@ -3,7 +3,7 @@ title: "Railtie::Configurable's inheritance seal is never armed outside tests, s
 status: draft
 updated: 2026-09-08
 rfc: "0142-trailties-surfaced-deviations"
-cluster: null
+cluster: "boot"
 packages: []
 deps: []
 deps-rfc: []

@@ -1,9 +1,9 @@
 ---
 rfc: "0141-actionpack-surfaced-deviations"
 title: "actionpack surfaced deviations — the package's standing convergence bucket"
-status: active
+status: draft
 created: 2026-09-08
-updated: 2026-09-08
+updated: 2026-09-09
 owner: "@deanmarano"
 packages:
   - "actionpack"
@@ -195,7 +195,7 @@ unique acceptance criteria were folded into its survivor first:
 This RFC ships no code. Its rollout is the 0104 sunset sequence:
 
 1. **Filing (this PR).** Author this RFC and RFC 0142,
-   both `status: active` so their stories can reach `ready`; fold the four
+   both as package buckets; fold the four
    duplicates' criteria into their survivors; record the sunset in 0104's README.
 2. **Verbs, from the main worktree after merge.** `tasks close` the 4
    duplicates; `tasks rehome` 73 stories — 27 here, 25 → 0142, 8 → 0139, 4 →
@@ -208,8 +208,9 @@ Ordinary story work begins at step 3; nothing here blocks a claim.
 ## Verification
 
 - `pnpm tasks list --rfc <this rfc>` reports **27** stories immediately after
-  step 2, and `pnpm tasks ready --rfc <this rfc>` is **non-empty** — the check
-  that `status: active` was set at filing rather than left `draft`.
+  step 2. The bucket is `status: draft`, so its stories do not surface in a
+  ready queue until the owner flips it to `active`; `pnpm tasks ready --rfc
+<this rfc>` is therefore expected to be **empty** until then.
 - `pnpm tasks list --rfc 0104-twitter-app-full-stack-integration` reports **0**
   open stories, and 0104's status is `closed`.
 - `pnpm validate` passes across all RFCs and stories.

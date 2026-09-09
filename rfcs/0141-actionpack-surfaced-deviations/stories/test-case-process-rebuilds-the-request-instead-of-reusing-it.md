@@ -3,7 +3,7 @@ title: "ActionController::TestCase#process rebuilds the request instead of reusi
 status: ready
 updated: 2026-09-04
 rfc: "0141-actionpack-surfaced-deviations"
-cluster: null
+cluster: "test-harness"
 packages: []
 deps: []
 deps-rfc: []

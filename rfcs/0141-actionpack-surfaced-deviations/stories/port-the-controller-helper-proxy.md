@@ -3,7 +3,7 @@ title: "Port ActionController::Helpers#helpers, the controller helper proxy"
 status: draft
 updated: 2026-09-06
 rfc: "0141-actionpack-surfaced-deviations"
-cluster: null
+cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []

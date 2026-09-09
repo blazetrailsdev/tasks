@@ -3,7 +3,7 @@ title: "parse_formatted_parameters adds a rawPost guard and a media-type key fal
 status: draft
 updated: 2026-09-04
 rfc: "0141-actionpack-surfaced-deviations"
-cluster: null
+cluster: "http-middleware"
 packages: []
 deps: []
 deps-rfc: []

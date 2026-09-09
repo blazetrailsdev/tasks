@@ -3,7 +3,7 @@ title: "DebugExceptions#call drops the X-Cascade == pass arm that raises Routing
 status: draft
 updated: 2026-09-05
 rfc: "0141-actionpack-surfaced-deviations"
-cluster: null
+cluster: "http-middleware"
 packages: []
 deps: []
 deps-rfc: []

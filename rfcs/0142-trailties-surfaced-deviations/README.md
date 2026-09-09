@@ -1,9 +1,9 @@
 ---
 rfc: "0142-trailties-surfaced-deviations"
 title: "trailties surfaced deviations — boot, railties and the generators"
-status: active
+status: draft
 created: 2026-09-08
-updated: 2026-09-08
+updated: 2026-09-09
 owner: "@deanmarano"
 packages:
   - "trailties"
@@ -167,7 +167,7 @@ generator emits can go back to the empty bodies Rails' templates carry
 
 Shares the 0104 sunset sequence with RFC 0141:
 
-1. **Filing (this PR).** Both buckets authored `status: active`; the four
+1. **Filing (this PR).** Both buckets authored; the four
    duplicates' criteria folded into survivors; the sunset recorded in 0104's
    README.
 2. **Verbs, from the main worktree after merge.** `tasks close` the 4
@@ -179,7 +179,8 @@ Shares the 0104 sunset sequence with RFC 0141:
 ## Verification
 
 - `pnpm tasks list --rfc <this rfc>` reports **25** stories after step 2, and
-  `pnpm tasks ready --rfc <this rfc>` is **non-empty**.
+  the bucket is `status: draft`, so `pnpm tasks ready --rfc <this rfc>` is
+  **empty** until the owner flips it to `active`.
 - **0** stories in this bucket carry `status: blocked` — the property that makes
   its queue pickup-able, and the reason the six blocked ones went to RFC 0123.
 - `pnpm validate` passes across all RFCs and stories.

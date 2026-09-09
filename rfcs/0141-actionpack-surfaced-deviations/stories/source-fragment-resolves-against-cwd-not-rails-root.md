@@ -3,7 +3,7 @@ title: "ExceptionWrapper#source_fragment resolves against Dir.pwd instead of Rai
 status: ready
 updated: 2026-09-04
 rfc: "0141-actionpack-surfaced-deviations"
-cluster: null
+cluster: "http-middleware"
 packages: []
 deps: []
 deps-rfc: []

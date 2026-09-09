@@ -3,7 +3,7 @@ title: "Emitted auth controllers cast to any at every concern call site"
 status: ready
 updated: 2026-09-04
 rfc: "0142-trailties-surfaced-deviations"
-cluster: null
+cluster: "generators"
 packages: []
 deps: []
 deps-rfc: []

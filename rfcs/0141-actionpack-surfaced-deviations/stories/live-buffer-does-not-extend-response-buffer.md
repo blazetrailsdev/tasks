@@ -3,7 +3,7 @@ title: "Live::Buffer is a hand-rolled duplicate of Response::Buffer instead of e
 status: draft
 updated: 2026-09-05
 rfc: "0141-actionpack-surfaced-deviations"
-cluster: null
+cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []
