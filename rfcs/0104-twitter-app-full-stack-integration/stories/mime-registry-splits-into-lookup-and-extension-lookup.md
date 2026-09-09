@@ -88,4 +88,3 @@ resolves through.
       through the collapsed map they are built on today.
       Carried from `mime-type-register-collapses-lookup-and-extension-lookup`,
       merged into this story on 0104's sunset.
-

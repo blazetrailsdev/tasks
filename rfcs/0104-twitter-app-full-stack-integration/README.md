@@ -37,15 +37,15 @@ Every open story was verified against `main` (`9c54a7962f`) before rehoming.
 (#7437) had already swept the set on 2026-09-03. So the sunset rehomes rather
 than drops.
 
-| Destination                                | Stories | Theme                                                        |
-| ------------------------------------------ | ------- | ------------------------------------------------------------ |
-| **0141-actionpack-surfaced-deviations**    | 27      | ActionController runtime, the test harness, http + middleware |
-| **0142-trailties-surfaced-deviations**     | 25      | boot / engine / railties, generators + CLI                    |
-| **0139-actiondispatch-journey-parity**     | 8       | routing: mapper, route-set, url helpers, the invented `Routing::Route` |
-| **0140-actionview-rendering-core**         | 4       | controller-side `render_to_body`, partial prefixes, the two asset-helper seeds |
-| **0123-blocked-convergence-holding**       | 6       | blocked on Zeitwerk / ActionMailer / `I18n::Railtie` / `TestFixtures` |
-| **0023-surfaced-deviations**               | 3       | example-app and CI hygiene                                    |
-| closed as duplicates                       | 4       | see below                                                     |
+| Destination                             | Stories | Theme                                                                          |
+| --------------------------------------- | ------- | ------------------------------------------------------------------------------ |
+| **0141-actionpack-surfaced-deviations** | 27      | ActionController runtime, the test harness, http + middleware                  |
+| **0142-trailties-surfaced-deviations**  | 25      | boot / engine / railties, generators + CLI                                     |
+| **0139-actiondispatch-journey-parity**  | 8       | routing: mapper, route-set, url helpers, the invented `Routing::Route`         |
+| **0140-actionview-rendering-core**      | 4       | controller-side `render_to_body`, partial prefixes, the two asset-helper seeds |
+| **0123-blocked-convergence-holding**    | 6       | blocked on Zeitwerk / ActionMailer / `I18n::Railtie` / `TestFixtures`          |
+| **0023-surfaced-deviations**            | 3       | example-app and CI hygiene                                                     |
+| closed as duplicates                    | 4       | see below                                                                      |
 
 Closed rather than carried, each a duplicate of a better-sited survivor whose
 unique acceptance criteria were folded in first:

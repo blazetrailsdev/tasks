@@ -66,4 +66,3 @@ its explicit seeding only where Rails' test does.
       `ContentSecurityPolicyMiddleware` reads a seeded env in a booted app.
       Carried from `port-application-env-config`, closed as a duplicate of this
       story on 0104's sunset.
-
