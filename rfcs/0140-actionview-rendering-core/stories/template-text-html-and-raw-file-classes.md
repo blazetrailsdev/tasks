@@ -50,8 +50,10 @@ which members each one answers differs.
 ## Converged shape
 
 One TS file per Ruby file, at the converted paths under
-`packages/actionview/src/template/`. `Renderable` is a module in Ruby and takes
-the repo's module-mixin idiom.
+`packages/actionview/src/template/`. All five are plain classes in Ruby —
+including `Renderable`, which is `class Renderable` at `template/renderable.rb:6`
+and takes no mixin idiom. `Inline` is the one with a superclass:
+`class Inline < Template` (`template/inline.rb:5`).
 
 ## Acceptance criteria
 
