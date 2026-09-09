@@ -1,6 +1,6 @@
 ---
 title: "Decide the view-directory naming convention: snake_case dirs or explicit templates forever"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null

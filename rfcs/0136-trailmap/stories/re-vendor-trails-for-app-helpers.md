@@ -1,6 +1,6 @@
 ---
 title: "Re-vendor trails for working app/helpers, and make TRAILS_PIN true"
-status: blocked
+status: ready
 updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: 2
 pr: null
-claim: "2026-09-09T14:31:34Z"
-assignee: "snapshot-the-show-page-equivalence-before-it-goes-circular"
-blocked-by: "Blocked on blazetrailsdev/trails#7645. The bump itself is clean — trails main 3b7669835d typechecks and passes all 407 trailmap tests, with one forced change (getFsAsync/getPathAsync/getCryptoAsync moved from @blazetrails/activesupport to @blazetrails/ruby-compat as sync getFs/getPath/getCrypto). But packing trails main drops dist from date, did-you-mean, globalid, i18n and ruby-compat: those five declare no package.json files field, so npm falls back to the root .gitignore, which ignores dist/. The vendored @blazetrails/date arrives with no .d.ts and no dist/date.js for its own entry point to import. That is a framework packaging bug, fixed in trails#7645, not worked around here. Re-vendor once it merges."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

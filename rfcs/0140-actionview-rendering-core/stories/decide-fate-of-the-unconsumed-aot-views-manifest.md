@@ -1,6 +1,6 @@
 ---
 title: "decide-fate-of-the-unconsumed-aot-views-manifest"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0140-actionview-rendering-core"
 cluster: null

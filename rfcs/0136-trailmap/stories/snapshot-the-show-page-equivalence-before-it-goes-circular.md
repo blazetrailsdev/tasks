@@ -1,6 +1,6 @@
 ---
 title: "Snapshot the show-page equivalence before the gate goes circular"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null

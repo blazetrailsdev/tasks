@@ -1,6 +1,6 @@
 ---
 title: "The dumper's emission loop uses a type-name allowlist where Rails tests for a Symbol"
-status: ready
+status: claimed
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-09T19:56:14Z"
+assignee: "savepoint-sql-builders-are-three-methods-rails-does-not-have"
 blocked-by: null
 closed-reason: null
 ---
