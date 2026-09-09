@@ -61,3 +61,8 @@ its explicit seeding only where Rails' test does.
       the cookie salts, verified by a test that builds a jar off that env.
 - [ ] No jar-side null guard is introduced: the readers stay as bare as
       `cookies.rb:628`.
+- [ ] The four `content_security_policy*` env keys (`application.rb:342-346`)
+      are populated from `config.contentSecurityPolicy`, so
+      `ContentSecurityPolicyMiddleware` reads a seeded env in a booted app.
+      Carried from `port-application-env-config`, closed as a duplicate of this
+      story on 0104's sunset.
