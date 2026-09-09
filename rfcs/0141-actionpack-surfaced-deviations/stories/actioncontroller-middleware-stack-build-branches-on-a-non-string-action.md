@@ -2,7 +2,7 @@
 title: "ActionController::MiddlewareStack#build carries an invented non-string arm and drops action.to_s"
 status: draft
 updated: 2026-09-05
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

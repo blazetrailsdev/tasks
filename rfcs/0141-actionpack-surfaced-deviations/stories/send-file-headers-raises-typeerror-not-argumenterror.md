@@ -2,7 +2,7 @@
 title: "send_file_headers! raises TypeError where Rails raises ArgumentError"
 status: ready
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

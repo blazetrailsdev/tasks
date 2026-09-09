@@ -2,7 +2,7 @@
 title: "ActionController::UrlFor#url_options is unported, so controller *_url helpers ignore the request"
 status: draft
 updated: 2026-09-08
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

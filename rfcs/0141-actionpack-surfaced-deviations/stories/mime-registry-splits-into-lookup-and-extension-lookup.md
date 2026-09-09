@@ -2,7 +2,7 @@
 title: "Mime registry collapses Rails' LOOKUP and EXTENSION_LOOKUP into one map, and register/register_alias diverge with it"
 status: draft
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

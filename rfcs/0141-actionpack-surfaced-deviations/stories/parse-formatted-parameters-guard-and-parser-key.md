@@ -2,7 +2,7 @@
 title: "parse_formatted_parameters adds a rawPost guard and a media-type key fallback Rails has neither of"
 status: draft
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

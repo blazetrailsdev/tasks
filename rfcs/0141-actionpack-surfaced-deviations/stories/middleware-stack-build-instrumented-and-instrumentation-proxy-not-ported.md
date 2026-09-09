@@ -2,7 +2,7 @@
 title: "MiddlewareStack#build drops the instrumenting arm; build_instrumented and InstrumentationProxy are unported"
 status: draft
 updated: 2026-09-05
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

@@ -2,7 +2,7 @@
 title: "wrap_parameters names the wrapping helper, not Rails' class macro — the macro's four arms are unported"
 status: ready
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

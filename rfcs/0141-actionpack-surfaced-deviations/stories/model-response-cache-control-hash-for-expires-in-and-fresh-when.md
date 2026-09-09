@@ -2,7 +2,7 @@
 title: "expires_in/fresh_when compose the cache-control header instead of merging into the one response.cache_control hash"
 status: ready
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

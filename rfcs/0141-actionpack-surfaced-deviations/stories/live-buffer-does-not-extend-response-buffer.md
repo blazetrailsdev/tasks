@@ -2,7 +2,7 @@
 title: "Live::Buffer is a hand-rolled duplicate of Response::Buffer instead of extending it"
 status: draft
 updated: 2026-09-05
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

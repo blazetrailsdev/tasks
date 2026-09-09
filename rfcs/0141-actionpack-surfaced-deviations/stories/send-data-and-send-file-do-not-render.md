@@ -2,7 +2,7 @@
 title: "send_data does not render and send_file reads the file into memory instead of installing the stream"
 status: ready
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
