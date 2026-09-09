@@ -1,6 +1,6 @@
 ---
 title: "Port Template::Text, Template::HTML, Template::RawFile, Inline and Renderable"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0140-actionview-rendering-core"
 cluster: null

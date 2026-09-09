@@ -1,6 +1,6 @@
 ---
 title: "Port ActionView::Context, RecordIdentifier and ModelNaming"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0140-actionview-rendering-core"
 cluster: null

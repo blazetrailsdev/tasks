@@ -1,6 +1,6 @@
 ---
 title: "rails-error-parity-exclude grandfathers activerecord/callbacks.ts, which has no throws"
-status: ready
+status: claimed
 updated: 2026-09-09
 rfc: "0111-error-class-message-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: 12
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-09T12:54:47Z"
+assignee: "pg-and-mysql2-execute-return-rows-not-internal-execute-result"
 blocked-by: null
 closed-reason: null
 ---

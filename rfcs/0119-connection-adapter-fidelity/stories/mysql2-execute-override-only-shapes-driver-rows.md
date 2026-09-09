@@ -1,7 +1,7 @@
 ---
 title: "Mysql2Adapter#execute is an override Rails does not have, left only to shape driver rows into hashes"
-status: ready
-updated: 2026-09-08
+status: claimed
+updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-09T12:48:28Z"
+assignee: "mysql2-execute-override-only-shapes-driver-rows"
 blocked-by: null
 closed-reason: null
 ---
