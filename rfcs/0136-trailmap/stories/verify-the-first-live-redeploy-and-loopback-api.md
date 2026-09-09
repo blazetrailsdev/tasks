@@ -1,6 +1,6 @@
 ---
 title: "Run the first live redeploy on the box and prove the loopback API answers"
-status: claimed
+status: in-progress
 updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 2
-pr: null
+pr: 21
 claim: "2026-09-09T14:31:34Z"
 assignee: "snapshot-the-show-page-equivalence-before-it-goes-circular"
 blocked-by: null

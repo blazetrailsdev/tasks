@@ -1,6 +1,6 @@
 ---
 title: "FsAdapter.readFile is optional, forcing a dead guard at every async call site"
-status: ready
+status: blocked
 updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 90
 priority: 3
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-09T15:00:55Z"
+assignee: "deployed-rfcs-index-500s-with-connectionnotdefined"
+blocked-by: "Framework fix, not an application one: readFile's optionality lives in trails' FsAdapter. Opened as blazetrailsdev/trails#7646; the dead guard in app/models/concerns/document.ts comes out with the pin bump after that merges."
 closed-reason: null
 ---
 

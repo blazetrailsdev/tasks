@@ -1,6 +1,6 @@
 ---
 title: "cached?/columns_hash?/size route through an invented ensureSyncCache instead of Rails' three bodies"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

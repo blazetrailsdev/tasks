@@ -1,6 +1,6 @@
 ---
 title: "Deployed trailmap /rfcs 500s with ConnectionNotDefined"
-status: ready
+status: in-progress
 updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: 20
+claim: "2026-09-09T15:00:55Z"
+assignee: "deployed-rfcs-index-500s-with-connectionnotdefined"
 blocked-by: null
 closed-reason: null
 ---
