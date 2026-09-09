@@ -18,80 +18,60 @@ closed-reason: null
 
 ## Context
 
-trails derives a controller's view prefix with Rails' `underscore`
-(`AbstractController::Base.controllerPath`,
-`packages/actionpack/src/abstract-controller/base.ts:160-170`), so
-`RfcPagesController` looks for its templates under `app/views/rfc_pages/`.
-That is faithful to Rails — `abstract_controller/base.rb:127` — and
-`trails new`'s own generators emit snake_case view directories to match
-(`packages/trailties/src/generators/rails/controller/controller-generator.ts`
-builds `app/views/${paths.viewBase}/`, and the authentication generator ships
-`app/views/passwords_mailer/`).
+**This story was filed on a wrong premise, corrected here.** It said trails'
+generators emit snake_case view directories and that a kebab-case application
+therefore needs a carve-out. The generator emits **kebab-case**:
+`controller-paths.ts` derives its `viewBase` with `dasherize(underscore(...))`.
+What was actually true is worse and simpler — the generator and the lookup
+disagree, and have since the generator was written:
 
-trailmap is kebab-case in every other filename, and named its view directories
-`app/views/rfc-pages/` to match. The two disagreed, and the disagreement is
-silent: a controller that does not pass `template:` explicitly does not fall
-back, it 500s with a missing template at request time. trailmap#11 paid that
-twice.
-
-blazetrailsdev/trailmap#21 keeps the kebab-case directories and overrides the
-derivation instead, in one place:
-
-```ts
-export class ApplicationController extends ActionController.Base {
-  static controllerPath(): string {
-    return super.controllerPath().replace(/_/g, "-");
-  }
-}
+```text
+class             : RfcPagesController
+generator writes  : app/views/rfc-pages/   (controller-paths.ts)
+localPrefixes     : app/views/rfc_pages/   (view-paths.ts)
+agree?            : false
 ```
 
-That works today and is not a workaround dressed up: `controllerPath` is a
-public static exactly as Rails' `controller_path` is, `localPrefixes` reads it
-through that method, and actionview's own suites subclass it the same way
-(`packages/actionview/src/view-paths.trails.test.ts`). Nothing private is
-touched and the base derivation still runs.
+`trails g controller RfcPages` scaffolds an application that raises a missing
+template for the views it just created. It survived because every generator
+test uses a single-word name — `account`, `admin/account` — and for those
+`dasherize` is a no-op, so the two directories coincide.
 
-**So this story is no longer about unblocking an application — it is about
-whether every kebab-case app should have to write those three lines.** That is
-a weaker motivation than the one this story was filed with, and it should be
-weighed honestly against the parity cost below rather than treated as
-settled.
+So this is not a convention to push into the framework. It is a defect, and
+fixing it happens to land on kebab-case, which is the spelling the generator
+already chose.
 
-## What to do
+## Landed: blazetrailsdev/trails#7651
 
-Make the framework derive **kebab-case** view prefixes, so an app whose files
-are kebab-case throughout does not have to carve out one snake_case exception
-in `app/views/` to get implicit rendering.
+`localPrefixes` now looks under the kebab-cased directory first, keeping the
+underscored one as a fallback so applications already holding
+`app/views/rfc_pages/` keep rendering.
 
-Concretely, at minimum:
+**The spelling is applied in `localPrefixes`, NOT in `controllerPath`**, and
+that is the load-bearing decision. `controllerPath` has six consumers and only
+the view lookup was wrong: it also keys i18n lookups
+(`AbstractController::Translation`) and the rate limiter's cache entries.
+Dasherizing it would rename translation keys and reset live rate-limit counters
+— no part of this. `controllerPath` keeps returning Rails' value, so the API
+surface is unchanged and `parity:api` is unaffected; the divergence is that
+`local_prefixes` returns two entries where Rails' returns one.
 
-- the prefix derivation behind `controllerPath` / the view-prefix lookup
-- the generators, so `trails new` and `trails g controller` emit view
-  directories in whatever spelling is chosen
-- the lookup's missing-template message, which names the path it looked for
+## What is left: remove the fallback
 
-## The parity question this has to answer first
+The fallback is what makes #7651 safe to land, and it is also the thing that
+leaves the convention undecided — two spellings both work. Removing it is the
+remaining work and the deliberate breaking change:
 
-**This is a deliberate divergence from Rails, and it is the whole cost of the
-story.** Rails' prefix is `underscore(controller_path)`, and this repository
-measures itself against Rails' API surface with `pnpm parity:api`. A change
-here is not a bug fix; it is a decision that trails' file-naming convention is
-kebab-case and that it will not match Rails on this one derivation.
+- delete the underscored entry from `localPrefixes`
+- convert `app/views/passwords_mailer/` in the authentication generator, the
+  one underscored view path trails ships (mailer views — confirm that axis
+  should move too, rather than assuming it)
+- say so in the guides and in `trails new`'s generated `CLAUDE.md`
 
-Options worth pricing before any code is written:
-
-1. **Derive kebab-case unconditionally.** Simplest, and breaks every existing
-   app with snake_case view directories — including `trails new`'s previous
-   output and the framework's own fixtures.
-2. **Accept both spellings in the lookup**, preferring one. No app breaks and
-   no one has to choose; the cost is two paths probed on every miss and a
-   convention that is not actually decided.
-3. **Make it configurable**, defaulting to Rails' spelling. Parity is kept by
-   default and an app opts in, at the cost of one more knob.
-
-Whichever is chosen, say so in the RFC and in the generated app's `CLAUDE.md`,
-because the current situation — the choice implicit in one derivation and paid
-for by every application — is what this story exists to end.
+It is cheap: `packages/` contains **zero** underscored view directories today,
+so nothing inside trails breaks. The cost is entirely to applications that
+already hold them, which is why the fallback ships first and its removal is
+timed rather than bundled.
 
 ## Follow-on
 
@@ -104,11 +84,13 @@ done by halves.
 
 ## Acceptance criteria
 
-- The parity question above is answered explicitly in the RFC, not implicitly
-  in a diff.
-- The chosen spelling is derived in ONE place, and the generators, the lookup
-  and the missing-template message all agree with it.
-- A controller whose view directory follows the chosen convention renders with
-  no `template:` argument, proven by a test.
-- `pnpm parity:api` delta for actionpack/actionview is recorded in the PR body,
-  with the divergence named if the delta moves.
+- The generator and the lookup agree for a MULTI-WORD controller name, proven
+  by a generator test — the case whose absence hid the defect. (Done, #7651.)
+- The spelling is decided in one place, and `controllerPath` is not it, so i18n
+  keys and rate-limit cache keys are untouched. (Done, #7651.)
+- The underscored fallback is removed, leaving kebab-case as the only spelling,
+  and the missing-template message names the directory that is now expected.
+- `app/views/passwords_mailer/` is converted or explicitly exempted, with the
+  reason written down.
+- `pnpm parity:api` delta for actionpack/actionview is recorded, with the
+  `local_prefixes` divergence named.
