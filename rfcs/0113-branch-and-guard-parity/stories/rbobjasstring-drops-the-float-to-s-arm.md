@@ -1,5 +1,5 @@
 ---
-title: "rbObjAsString and rbInspect drop Float#to_s, so 1.0 renders as \"1\""
+title: 'rbObjAsString and rbInspect drop Float#to_s, so 1.0 renders as "1"'
 status: draft
 updated: 2026-09-09
 rfc: "0113-branch-and-guard-parity"

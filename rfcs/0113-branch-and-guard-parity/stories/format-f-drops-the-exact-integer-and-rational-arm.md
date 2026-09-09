@@ -40,7 +40,7 @@ The port landed in `kernel-format-is-not-ported` (#7637) routes every `%f`
 argument through `kernelFloat`
 (`packages/ruby-compat/src/kernel-format.ts` `formatFloat`), so a `Rational`
 from `@blazetrails/ruby-compat` is flattened to the nearest double first and a
-`bigint` loses its exactness past 2**53. The dropped arm is invisible to the
+`bigint` loses its exactness past 2\*\*53. The dropped arm is invisible to the
 call gates: the TS body calls what the Ruby body calls, just on one type where
 Ruby branches on three.
 
