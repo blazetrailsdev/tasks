@@ -2,7 +2,7 @@
 title: "port-action-view-render-to-body-into-the-controller"
 status: draft
 updated: 2026-09-07
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []

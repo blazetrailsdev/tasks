@@ -2,7 +2,7 @@
 title: "A controller's render partial: does not split the prefix out of the name"
 status: draft
 updated: 2026-09-06
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []
