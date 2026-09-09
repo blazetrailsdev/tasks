@@ -1,14 +1,14 @@
 ---
 title: "buildAdapterArg has no Rails counterpart: new_connection should pass configuration_hash straight to the constructor"
-status: draft
-updated: 2026-08-21
+status: ready
+updated: 2026-09-09
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

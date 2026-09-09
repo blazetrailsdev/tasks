@@ -1,7 +1,7 @@
 ---
 title: "activemodel: 13 trails-authored plain .test.ts files should carry the .trails.test.ts suffix"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-09
 rfc: "0105-ar-deps-test-parity-100"
 cluster: test-placement
 packages: ["activemodel"]
@@ -9,9 +9,9 @@ deps: ["test-compare-lint-and-serializers-json-mapping"]
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7654
+claim: "2026-09-09T23:13:24Z"
+assignee: "rename-trails-only-plain-tests-to-trails-suffix"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,13 +1,13 @@
 ---
 title: "SQLite3Adapter builds its statement pool in a field initializer, before the config is read"
-status: draft
-updated: 2026-08-04
+status: ready
+updated: 2026-09-09
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

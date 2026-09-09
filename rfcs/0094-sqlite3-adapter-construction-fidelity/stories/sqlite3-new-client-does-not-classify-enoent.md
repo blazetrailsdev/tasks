@@ -1,14 +1,14 @@
 ---
 title: "SQLite3Adapter.new_client does not classify Errno::ENOENT at open time"
-status: draft
-updated: 2026-08-25
+status: ready
+updated: 2026-09-09
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

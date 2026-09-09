@@ -1,7 +1,7 @@
 ---
 title: "Port the railtie encrypt_fixtures arm and emit the active_record_fixture_set load hook"
-status: blocked
-updated: 2026-09-06
+status: ready
+updated: 2026-09-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "missing-arm"
 packages: ["activerecord"]
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 100
 priority: 24
 pr: null
-claim: "2026-09-05T20:51:57Z"
-assignee: "skeleton-throw-token-carries-the-raised-class"
-blocked-by: 'Re-verified 2026-09-06 against origin/main. The load-hook half of the original blocker stays CLEARED (fixtures.ts:977 runs runLoadHooks("active_record_fixture_set", FixtureSet)), but the deeper reason still holds: there is still no ActiveRecord::Fixture class and no EncryptedFixtures module to prepend onto — git grep finds only the row-array function encryptFixtureRows (fixtures.ts:468), called inline at fixtures.ts:812 behind Configurable.config.encryptFixtures. Prerequisite is the sibling story port-active-record-fixture-class-and-encrypted-fixtures-module (RFC 0113, now ready, priority 23); unblock when it lands. Path drift for the claimer: the arm''s initializer no longer lives at packages/activerecord/src/trailtie.ts — that file is gone; the active_record_encryption/fixtures initializers are now in packages/trailties/src/trailties/active-record.ts.'
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

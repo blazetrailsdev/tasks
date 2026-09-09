@@ -1,14 +1,14 @@
 ---
 title: "SQLite3Adapter never builds Rails' @connection_parameters"
-status: draft
-updated: 2026-08-09
+status: ready
+updated: 2026-09-09
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: ["activerecord"]
 deps: ["sqlite3-constructor-connects-eagerly-unlike-rails"]
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null
