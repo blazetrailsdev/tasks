@@ -2,7 +2,7 @@
 title: "migration_template takes a source template PATH and expands it through find_in_source_paths"
 status: ready
 updated: 2026-09-06
-rfc: "0113-branch-and-guard-parity"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

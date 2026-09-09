@@ -2,7 +2,7 @@
 title: "generator_dir passes regular_class_path to File.join the way Rails does, Array-splicing an empty one"
 status: ready
 updated: 2026-09-06
-rfc: "0113-branch-and-guard-parity"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

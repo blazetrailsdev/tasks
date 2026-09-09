@@ -2,7 +2,7 @@
 title: "Generators' log drops options.quiet? and say_status, formatting the status line inline"
 status: draft
 updated: 2026-09-07
-rfc: "0113-branch-and-guard-parity"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

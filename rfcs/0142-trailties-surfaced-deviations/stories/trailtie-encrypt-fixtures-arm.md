@@ -2,7 +2,7 @@
 title: "Port the railtie encrypt_fixtures arm and emit the active_record_fixture_set load hook"
 status: blocked
 updated: 2026-09-06
-rfc: "0113-branch-and-guard-parity"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: "missing-arm"
 packages: ["activerecord"]
 deps: []
