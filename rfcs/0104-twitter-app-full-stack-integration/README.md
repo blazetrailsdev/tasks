@@ -16,6 +16,48 @@ packages:
 clusters: []
 ---
 
+## Sunset (2026-09-08)
+
+**This RFC's charter is met and it is being retired.** It set out to make one
+application boot route -> controller -> view -> HTML; `execute-tse-templates`
+(#7281) and `wire-implicit-render-into-controller-dispatch` (#7305) closed the
+two bottlenecks the sections below name, the `server/application.ts` split is
+gone, and 102 of its 188 stories are done.
+
+What kept it growing was not its charter. Of its 77 open stories at sunset, 3
+concerned an example application; the other 74 were per-member fidelity
+convergences against `packages/actionpack/**` and `packages/trailties/**` that
+landed here because **neither package had a `<package>-surfaced-deviations`
+bucket** — the destination CLAUDE.md names for exactly that kind of finding.
+0104 became one by default, and reached a size no single active RFC can be
+scheduled as.
+
+Every open story was verified against `main` (`9c54a7962f`) before rehoming.
+**None had a falsified premise**: `resweep-rfc-0104-story-context-against-main`
+(#7437) had already swept the set on 2026-09-03. So the sunset rehomes rather
+than drops.
+
+| Destination                                | Stories | Theme                                                        |
+| ------------------------------------------ | ------- | ------------------------------------------------------------ |
+| **0141-actionpack-surfaced-deviations**    | 27      | ActionController runtime, the test harness, http + middleware |
+| **0142-trailties-surfaced-deviations**     | 25      | boot / engine / railties, generators + CLI                    |
+| **0139-actiondispatch-journey-parity**     | 8       | routing: mapper, route-set, url helpers, the invented `Routing::Route` |
+| **0140-actionview-rendering-core**         | 4       | controller-side `render_to_body`, partial prefixes, the two asset-helper seeds |
+| **0123-blocked-convergence-holding**       | 6       | blocked on Zeitwerk / ActionMailer / `I18n::Railtie` / `TestFixtures` |
+| **0023-surfaced-deviations**               | 3       | example-app and CI hygiene                                    |
+| closed as duplicates                       | 4       | see below                                                     |
+
+Closed rather than carried, each a duplicate of a better-sited survivor whose
+unique acceptance criteria were folded in first:
+
+- `journey-route-verb-carries-all-sentinel` -> 0139's `route-verb-all-sentinel-vs-empty-string`
+- `port-application-env-config` -> `port-application-env-config-for-action-dispatch-keys`
+- `mime-type-register-collapses-lookup-and-extension-lookup` -> `mime-registry-splits-into-lookup-and-extension-lookup`
+- `journey-route-app-seated-after-construction` -> `routing-route-class-has-no-rails-counterpart`
+
+Everything below this section is the original 2026-08-13 charter and its
+2026-08-30 re-ranking, kept as the record of what the RFC set out to do.
+
 ## State of play
 
 `examples/twitter-app` is the first application in this repo to boot the

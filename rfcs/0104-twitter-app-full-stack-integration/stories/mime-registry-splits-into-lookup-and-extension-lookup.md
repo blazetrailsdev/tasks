@@ -83,3 +83,9 @@ resolves through.
 - [ ] `unregister` sweeps both maps (`mime_type.rb:243-251`).
 - [ ] actionpack suite green; `pnpm parity:api:calls` and
       `pnpm parity:api:params` non-negative.
+- [ ] The `MimeType.HTML`-style static accessors go through
+      `EXTENSION_LOOKUP`, the way Ruby's `Mime[:html]` does, rather than
+      through the collapsed map they are built on today.
+      Carried from `mime-type-register-collapses-lookup-and-extension-lookup`,
+      merged into this story on 0104's sunset.
+

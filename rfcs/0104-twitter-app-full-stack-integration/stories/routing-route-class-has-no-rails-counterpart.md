@@ -63,3 +63,9 @@ class; this story is the class itself.
   `journey/route_test.rb` (11/11) or `dispatch/routing/route_set_test.rb`.
 - Every call site inside `actionpack` (`dispatch/routing.test.ts` alone
   constructs it ~10 times) moves to the Rails seat rather than to a shim.
+- `Journey::Route#app` is passed to the constructor through
+  `Journey::Routes#add_route` (`journey/routes.rb:60`) rather than seated after
+  construction by `RouteSet#addRoute`, so a `Route` built outside a `RouteSet`
+  is never `app === undefined` and `RouteWrapper#app`'s `!` assertion goes.
+  Carried from `journey-route-app-seated-after-construction`, subsumed by this
+  story on 0104's sunset.
