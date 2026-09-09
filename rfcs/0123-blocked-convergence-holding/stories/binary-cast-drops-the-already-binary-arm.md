@@ -2,7 +2,7 @@
 title: "binary-cast-drops-the-already-binary-arm"
 status: blocked
 updated: 2026-08-31
-rfc: "0113-branch-and-guard-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
