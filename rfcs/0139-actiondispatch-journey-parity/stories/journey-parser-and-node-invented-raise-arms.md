@@ -1,6 +1,6 @@
 ---
 title: "Journey's parseTerminal default arm and Node#type base getter raise where Rails does not"
-status: claimed
+status: in-progress
 updated: 2026-09-09
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 63
-pr: null
+pr: 7641
 claim: "2026-09-09T13:02:34Z"
 assignee: "journey-uri-encoder-class-shape"
 blocked-by: null

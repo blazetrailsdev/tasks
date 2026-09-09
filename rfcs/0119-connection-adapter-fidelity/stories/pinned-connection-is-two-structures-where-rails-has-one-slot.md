@@ -1,7 +1,7 @@
 ---
 title: "pinned connection is a per-context map plus a fixture slot, where Rails has one @pinned_connection"
 status: ready
-updated: 2026-09-08
+updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

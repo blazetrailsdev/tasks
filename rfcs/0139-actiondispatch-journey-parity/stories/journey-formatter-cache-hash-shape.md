@@ -1,6 +1,6 @@
 ---
 title: "journey-formatter-cache-hash-shape"
-status: claimed
+status: in-progress
 updated: 2026-09-09
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 62
-pr: null
+pr: 7641
 claim: "2026-09-09T13:02:34Z"
 assignee: "journey-uri-encoder-class-shape"
 blocked-by: null

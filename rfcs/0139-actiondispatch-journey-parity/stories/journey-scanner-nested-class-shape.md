@@ -1,6 +1,6 @@
 ---
 title: "Restore Journey's nested Scanner::Scanner class and put peek_byte on it"
-status: claimed
+status: in-progress
 updated: 2026-09-09
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 61
-pr: null
+pr: 7641
 claim: "2026-09-09T13:02:34Z"
 assignee: "journey-uri-encoder-class-shape"
 blocked-by: null

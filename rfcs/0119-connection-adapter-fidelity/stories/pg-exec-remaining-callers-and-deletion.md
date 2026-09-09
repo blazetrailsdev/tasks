@@ -1,7 +1,7 @@
 ---
 title: "pg-exec-remaining-callers-and-deletion"
-status: ready
-updated: 2026-09-08
+status: claimed
+updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-09T13:39:48Z"
+assignee: "pg-exec-remaining-callers-and-deletion"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port PartialRenderer collection caching"
-status: ready
-updated: 2026-09-08
+status: in-progress
+updated: 2026-09-09
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 22
-pr: null
-claim: null
-assignee: null
+pr: 7643
+claim: "2026-09-09T13:36:21Z"
+assignee: "collection-caching-for-partial-renderer"
 blocked-by: null
 closed-reason: null
 ---

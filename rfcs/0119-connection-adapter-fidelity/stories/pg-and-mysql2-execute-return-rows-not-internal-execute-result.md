@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQL and Mysql2 #execute answer row hashes where #internal_execute answers a raw driver result, blocking Rails' one-line execute"
-status: claimed
+status: in-progress
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: 7640
 claim: "2026-09-09T12:54:47Z"
 assignee: "pg-and-mysql2-execute-return-rows-not-internal-execute-result"
 blocked-by: null
