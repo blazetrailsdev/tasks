@@ -2,7 +2,7 @@
 title: "Extract the deploy assertions into scripts/smoke-prod.sh"
 status: draft
 updated: 2026-09-09
-rfc: "0000-production-smoke"
+rfc: "0143-production-smoke"
 cluster: null
 packages: []
 deps: ["split-the-health-endpoint-into-liveness-and-readiness"]

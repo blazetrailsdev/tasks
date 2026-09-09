@@ -1,5 +1,5 @@
 ---
-rfc: "0000-production-smoke"
+rfc: "0143-production-smoke"
 title: "trailmap proves itself in production, not on a clean runner"
 status: draft
 created: 2026-09-09
@@ -11,7 +11,7 @@ clusters: []
 priority: 2
 ---
 
-# RFC — trailmap proves itself in production, not on a clean runner
+# RFC 0143 — trailmap proves itself in production, not on a clean runner
 
 ## Summary
 

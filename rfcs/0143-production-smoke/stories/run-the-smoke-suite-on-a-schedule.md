@@ -2,7 +2,7 @@
 title: "Run the smoke suite on a schedule on the box"
 status: draft
 updated: 2026-09-09
-rfc: "0000-production-smoke"
+rfc: "0143-production-smoke"
 cluster: null
 packages: []
 deps: ["extract-the-deploy-assertions-into-a-smoke-suite"]

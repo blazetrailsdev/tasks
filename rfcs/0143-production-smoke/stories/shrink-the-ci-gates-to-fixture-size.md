@@ -2,7 +2,7 @@
 title: "Shrink the CI gates to fixture size"
 status: draft
 updated: 2026-09-09
-rfc: "0000-production-smoke"
+rfc: "0143-production-smoke"
 cluster: null
 packages: []
 deps: ["run-the-equivalence-gates-against-the-live-pair"]

@@ -2,7 +2,7 @@
 title: "Spawn a daily end-to-end fleet canary"
 status: draft
 updated: 2026-09-09
-rfc: "0000-production-smoke"
+rfc: "0143-production-smoke"
 cluster: null
 packages: []
 deps: ["add-a-write-canary-for-the-claim-path", "render-the-smoke-history-page"]
