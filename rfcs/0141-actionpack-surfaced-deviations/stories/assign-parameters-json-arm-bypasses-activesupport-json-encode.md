@@ -2,7 +2,7 @@
 title: "assign_parameters' :json arm encodes with JSON.stringify, not ActiveSupport::JSON.encode"
 status: draft
 updated: 2026-09-06
-rfc: "0113-branch-and-guard-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

@@ -2,7 +2,7 @@
 title: "The CSRF cookie envelope serializes the session id under publicId where Rails writes public_id"
 status: draft
 updated: 2026-09-07
-rfc: "0113-branch-and-guard-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

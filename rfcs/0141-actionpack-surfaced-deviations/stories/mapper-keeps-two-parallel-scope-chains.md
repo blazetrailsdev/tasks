@@ -2,7 +2,7 @@
 title: "Mapper keeps scopeStack beside _scope where Rails has one @scope chain"
 status: ready
 updated: 2026-09-06
-rfc: "0113-branch-and-guard-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

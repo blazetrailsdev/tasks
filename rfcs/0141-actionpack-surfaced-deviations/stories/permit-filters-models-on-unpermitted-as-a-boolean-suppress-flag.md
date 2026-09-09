@@ -2,7 +2,7 @@
 title: "permit_filters models Rails' three-valued on_unpermitted: as a boolean suppressUnpermitted"
 status: draft
 updated: 2026-09-07
-rfc: "0113-branch-and-guard-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
