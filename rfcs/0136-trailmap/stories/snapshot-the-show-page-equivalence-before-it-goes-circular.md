@@ -1,17 +1,17 @@
 ---
 title: "Snapshot the show-page equivalence before the gate goes circular"
-status: draft
-updated: 2026-09-07
+status: claimed
+updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-09T14:31:34Z"
+assignee: "snapshot-the-show-page-equivalence-before-it-goes-circular"
 blocked-by: null
 closed-reason: null
 ---

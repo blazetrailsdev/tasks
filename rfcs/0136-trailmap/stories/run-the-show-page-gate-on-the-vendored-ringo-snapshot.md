@@ -1,14 +1,14 @@
 ---
 title: "Move the show-page gate onto the vendored ringo snapshot so CI can run it"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

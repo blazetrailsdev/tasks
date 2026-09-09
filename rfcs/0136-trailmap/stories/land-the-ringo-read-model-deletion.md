@@ -1,7 +1,7 @@
 ---
 title: "Land the ringo read-model deletion: btwebooks has no reviewable remote"
-status: draft
-updated: 2026-09-06
+status: blocked
+updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Changes the live workflow: repoints ringo's loadIndex/rfccharts/event stream at trailmap's API and deletes tasksdb.go. Held until snapshot-the-show-page-equivalence-before-it-goes-circular has recorded the independent show-page fixture, and until btwebooks has a reviewable GitHub remote."
 closed-reason: null
 ---
 

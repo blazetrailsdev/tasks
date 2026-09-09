@@ -1,14 +1,14 @@
 ---
 title: "Gate the pane renderer against ringo's over real captured logs"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: ["port-the-pane-terminal-emulator"]
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

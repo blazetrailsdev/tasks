@@ -1,14 +1,14 @@
 ---
 title: "The list gate compares ids and counts, never what a row says — inherited priority and packages are unchecked"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

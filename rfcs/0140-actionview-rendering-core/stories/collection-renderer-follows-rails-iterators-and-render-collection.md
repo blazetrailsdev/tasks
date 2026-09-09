@@ -1,7 +1,7 @@
 ---
 title: "CollectionRenderer follows Rails' iterators, render_collection and RenderedCollection"
-status: ready
-updated: 2026-09-04
+status: in-progress
+updated: 2026-09-09
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 280
 priority: 40
-pr: null
-claim: null
-assignee: null
+pr: 7643
+claim: "2026-09-09T14:15:04Z"
+assignee: "collection-caching-for-partial-renderer"
 blocked-by: null
 closed-reason: null
 ---

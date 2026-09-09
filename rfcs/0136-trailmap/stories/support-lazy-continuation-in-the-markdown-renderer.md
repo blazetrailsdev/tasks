@@ -1,7 +1,7 @@
 ---
 title: "Support lazy continuation lines in the markdown renderer, once ringo's is retired"
-status: draft
-updated: 2026-09-06
+status: blocked
+updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Its own AC forbids landing alone: the fix must be made after ringo's renderer is retired or in both renderers at once, and it turns gate:markdown red. Unblocks with land-the-ringo-read-model-deletion."
 closed-reason: null
 ---
 

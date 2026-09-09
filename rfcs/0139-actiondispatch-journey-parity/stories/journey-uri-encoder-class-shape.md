@@ -1,6 +1,6 @@
 ---
 title: "Port UriEncoder as Rails' class, with ENCODER and the composed pattern constants"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

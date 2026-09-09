@@ -1,14 +1,14 @@
 ---
 title: "Serve /sessions/transcript, /sessions/file and /sessions/pane"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionpack"]
 deps: ["port-the-pane-terminal-emulator"]
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

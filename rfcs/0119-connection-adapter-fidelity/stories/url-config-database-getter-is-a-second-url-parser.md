@@ -1,6 +1,6 @@
 ---
 title: "UrlConfig#database is a second URL parser Rails does not have"
-status: claimed
+status: done
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: 7644
 claim: "2026-09-09T13:39:48Z"
 assignee: "pg-exec-remaining-callers-and-deletion"
 blocked-by: null

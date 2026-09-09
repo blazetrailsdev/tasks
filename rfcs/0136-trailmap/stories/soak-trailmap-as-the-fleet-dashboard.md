@@ -1,7 +1,7 @@
 ---
 title: "Soak trailmap as the fleet dashboard before any cutover"
-status: draft
-updated: 2026-09-07
+status: blocked
+updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Phase F gate: trailmap becomes the public dashboard. Held until phase B/C parity work above lands and its gates are green in CI. Sign-off is explicit and by the RFC owner."
 closed-reason: null
 ---
 

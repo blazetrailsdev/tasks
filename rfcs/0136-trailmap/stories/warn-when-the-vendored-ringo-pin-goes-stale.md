@@ -1,14 +1,14 @@
 ---
 title: "Nothing notices when vendor/ringo falls behind btwhooks and the gates pass against a stale ringo"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

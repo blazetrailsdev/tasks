@@ -1,6 +1,6 @@
 ---
 title: "Deployed trailmap /rfcs 500s with ConnectionNotDefined"
-status: draft
+status: ready
 updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["activerecord", "trailties"]
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 0
 pr: null
 claim: null
 assignee: null

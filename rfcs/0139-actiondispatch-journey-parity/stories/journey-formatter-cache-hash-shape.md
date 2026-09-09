@@ -1,6 +1,6 @@
 ---
 title: "journey-formatter-cache-hash-shape"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

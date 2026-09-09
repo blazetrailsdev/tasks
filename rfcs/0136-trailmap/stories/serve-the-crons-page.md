@@ -1,14 +1,14 @@
 ---
 title: "Serve /crons read-only from trailmap, beside ringo"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null
