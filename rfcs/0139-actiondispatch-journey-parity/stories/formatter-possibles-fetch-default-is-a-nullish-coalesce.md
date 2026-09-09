@@ -77,5 +77,5 @@ TS method, and Rails extracts nothing here.
       100% with no arity or param-name regression; `pnpm parity:api:calls`,
       `:calls:args` and `:extra:gate` stay green.
 - [ ] No new helper or exported name; `pnpm parity:api:extra --package
-    actiondispatch` still lists no `journey/formatter.ts`.
+actiondispatch` still lists no `journey/formatter.ts`.
 - [ ] `pnpm vitest run packages/actionpack/src/action-dispatch/journey` passes.
