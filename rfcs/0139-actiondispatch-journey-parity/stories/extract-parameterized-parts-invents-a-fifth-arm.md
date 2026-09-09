@@ -2,7 +2,7 @@
 title: "extract_parameterized_parts invents a fifth arm"
 status: ready
 updated: 2026-09-06
-rfc: "0113-branch-and-guard-parity"
+rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []
 deps: []
