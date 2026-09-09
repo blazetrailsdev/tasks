@@ -97,16 +97,15 @@ deletion, not a re-arming.
       deriving it.
 - [ ] `pnpm parity:api:arms:report`'s actiondispatch invented-`throw` count
       drops by 1; `pnpm parity:api:arms:throws` stays green.
-
-      AMENDED (2026-09-09): this AC said "drops by 2", one per raise. Measured
-      against the artifact — `journey/parser.ts` and `journey/nodes/node.ts`
-      swapped to their `origin/main` versions, `API_COMPARE_FORCE=1 pnpm
-      parity:api --calls`, then counting `throw:`/`raise:` tokens per compared
-      pair — actiondispatch's invented-`throw` total is 34 before and 33 after.
-      Only `parseTerminal` is a compared pair carrying the token; the `type`
-      getters are not in the skeleton population at all, so deleting
-      `Terminal#type` is real convergence that this measure cannot see. Note
-      also that `pnpm parity:api:arms:throws` gates MISSING throws, not invented
-      ones, so neither deletion moves `arm-throw-mark.json`.
-
 - [ ] The Journey suites stay green.
+
+AMENDED (2026-09-09): the arms AC above said "drops by 2", one per raise.
+Measured against the artifact — `journey/parser.ts` and `journey/nodes/node.ts`
+swapped to their `origin/main` versions, `API_COMPARE_FORCE=1 pnpm parity:api
+--calls`, then counting `throw:`/`raise:` tokens per compared pair —
+actiondispatch's invented-`throw` total is 34 before and 33 after. Only
+`parseTerminal` is a compared pair carrying the token; the `type` getters are not
+in the skeleton population at all, so deleting `Terminal#type` is real
+convergence that this measure cannot see. Note also that
+`pnpm parity:api:arms:throws` gates MISSING throws, not invented ones, so neither
+deletion moves `arm-throw-mark.json`.
