@@ -40,6 +40,22 @@ sets `FixturesTest` dereferences via `fixtures(Ellipsis)` and removing
 in practice — a ported case that dereferences an undeclared fixture set will not
 run — so coordinate rather than re-doing it.
 
+## The split
+
+The halves are split at the Rails class boundary in
+`vendor/rails/activerecord/test/cases/fixtures_test.rb`, so the two PRs touch
+disjoint regions of the file and disjoint `describe` blocks in
+`packages/activerecord/src/fixtures.test.ts`:
+
+- **First half — lines 41-952**, `FixturesTest` (41) through
+  `FixturesWithForeignKeyViolationsTest` (887-952). 70 Rails cases.
+- **Second half — lines 954-1847**, `OverRideFixtureMethodTest` (954) through
+  the end of the file (last class: `MultipleFixtureConnectionsTest`, 1645). 83 Rails cases.
+
+`FixturesWithForeignKeyViolationsTest` already has a `describe` on our side, so
+the boundary also keeps the one pre-existing Rails-named block on the first
+half's side.
+
 ## Acceptance criteria
 
 - Every case in this half exists with the Rails name verbatim and passes on all
@@ -52,3 +68,25 @@ run — so coordinate rather than re-doing it.
   specific reasons, not as `it.skip` stubs.
 - `pnpm parity:test -- --package activerecord` shows the missing count for
   `fixtures_test.rb` down by this half, `skipped` unchanged at 0.
+
+### Ordering note: two criteria depend on the enrollment landing first
+
+The second and third criteria above — case-level `tests:` exclusions, and a
+reduced `missing` count — both presuppose that
+`vendor/rails/activerecord/test/cases/fixtures_test.rb` is enrolled. It is not:
+`scripts/parity/unported-files/unscoped.ts:120-128` still carries it as a
+**whole-file** row, and `UnportedFile` in
+`scripts/parity/unported-files/types.ts` types `tests?: never` on every
+whole-file variant, so a per-case exclusion for this file cannot be written
+while that row stands — it is a type error, not a stylistic choice.
+
+Narrowing that row is `reenroll-fixtures-tests-stale-unported-exclusion`
+(RFC 0023, currently `draft`), which also owns the compare-enrollment ratchet
+registrations the narrowing needs. It is deliberately NOT a `deps` edge here:
+that story is `draft` under a standing catch-all RFC that never closes, so the
+edge would park both halves indefinitely — the same trap
+`measure-fixtures-enrollment-gap` documents for `deps-rfc`.
+
+So the porting halves can proceed and land their cases; the two criteria above
+are satisfied by the enrollment PR, which is also when the ported cases begin
+crediting.
