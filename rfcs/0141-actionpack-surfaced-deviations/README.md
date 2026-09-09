@@ -109,6 +109,44 @@ tree, not on convenience:
 27 stories carried from RFC 0104 on 2026-09-08 — 17 `action-controller`, 3
 `test-harness`, 7 `http-middleware`.
 
+The rehome batch, by cluster — these are the ids step 2 moves and step 3 stamps:
+
+**`action-controller`** (17)
+
+- `action-controller-cookies-returns-the-request-cookie-jar`
+- `actioncontroller-middleware-stack-build-branches-on-a-non-string-action`
+- `controller-url-options-ignores-the-request`
+- `converge-metal-status-setter-onto-response-status`
+- `helper-name-error-has-no-did-you-mean`
+- `live-buffer-does-not-extend-response-buffer`
+- `metal-body-and-header-accessors-are-invented`
+- `metal-params-assigned-eagerly-in-dispatch`
+- `model-response-cache-control-hash-for-expires-in-and-fresh-when`
+- `port-action-controller-helpers-and-the-inherited-hook`
+- `port-helper-attr`
+- `port-mime-alltype-singleton`
+- `port-the-controller-helper-proxy`
+- `port-wrap-parameters-class-macro`
+- `render-to-string-snapshots-the-response`
+- `send-data-and-send-file-do-not-render`
+- `send-file-headers-raises-typeerror-not-argumenterror`
+
+**`test-harness`** (3)
+
+- `integration-process-splits-host-with-invented-ipv6-helper`
+- `remove-invented-integration-test-assertions`
+- `test-case-process-rebuilds-the-request-instead-of-reusing-it`
+
+**`http-middleware`** (7)
+
+- `debug-exceptions-x-cascade-pass-branch-not-ported`
+- `middleware-stack-build-instrumented-and-instrumentation-proxy-not-ported`
+- `middleware-stack-use-drops-rails-block-argument`
+- `mime-registry-splits-into-lookup-and-extension-lookup`
+- `parse-formatted-parameters-guard-and-parser-key`
+- `port-application-env-config-for-action-dispatch-keys`
+- `source-fragment-resolves-against-cwd-not-rails-root`
+
 Four 0104 stories were closed rather than carried, as duplicates. Each one's
 unique acceptance criteria were folded into its survivor first:
 

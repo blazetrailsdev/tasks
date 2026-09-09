@@ -92,6 +92,39 @@ Out of scope:
 
 ### Carried in
 
+The rehome batch, by cluster — these are the ids step 2 moves and step 3 stamps:
+
+**`boot`** (16)
+
+- `active-model-secure-password-reads-trails-env`
+- `active-record-set-configs-applies-every-config-key`
+- `configurable-seal-has-no-production-arming-call-site`
+- `converge-config-target-version-to-two-arms`
+- `converge-lazy-route-set-sync-ops-to-await-the-reload`
+- `converge-load-defaults-omitted-assignments`
+- `converge-trailtie-subclasses-to-direct-children`
+- `engine-app-lives-on-application-and-drops-the-build-lock`
+- `engine-paths-root-guard-is-dead-after-root-memoizes`
+- `global-id-deprecator-initializer-named-for-web-console`
+- `paths-test-describe-is-a-namespace-not-the-rails-class`
+- `port-the-rest-of-action-controller-set-configs`
+- `railtie-class-body-statements-dropped-in-port`
+- `railtie-configuration-app-generators`
+- `routes-accept-an-unregistered-controller-name-until-dispatch`
+- `trails-server-ignores-the-environment`
+
+**`generators`** (9)
+
+- `authentication-generator-emits-the-mailer-unconditionally`
+- `converge-db-system-change-database-config-to-a-template`
+- `converge-generators-findbynamespace-to-targeted-lookup`
+- `drain-queued-generators-in-generators-invoke`
+- `empty-the-generated-new-and-edit-actions-once-implicit-render-lands`
+- `model-generator-has-secure-password`
+- `port-generators-testing-assertions`
+- `type-the-authentication-concern-so-emitted-controllers-drop-any-casts`
+- `wire-generator-class-options-through-trails-generate`
+
 25 stories carried from RFC 0104 on 2026-09-08. Every one was verified against
 `main` before rehoming and none had a falsified premise;
 `resweep-rfc-0104-story-context-against-main` (#7437) had swept the set on
