@@ -132,8 +132,8 @@ The rehome batch, by cluster — these are the ids step 2 moves and step 3 stamp
 
 One arrives **newly actionable**:
 `empty-the-generated-new-and-edit-actions-once-implicit-render-lands`. Its
-stated blocker, `wire-implicit-render-into-controller-dispatch`, landed in
-#7305, so the explicit `render({ action: "new" })` calls the authentication
+stated blocker, `wire-implicit-render-into-controller-dispatch`, landed
+in PR #7305 — so the explicit `render({ action: "new" })` calls the authentication
 generator emits can go back to the empty bodies Rails' templates carry
 (`sessions_controller.rb.tt:5-6`).
 
