@@ -1,14 +1,14 @@
 ---
 title: "File.foreach lands on ruby-compat's File so remove_sql_header_comments can stream"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-09-09
 rfc: "0111-error-class-message-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 41
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "TSETracker's interpolation and sigil arms are ERB-shaped and never fire on a .tse template"
-status: draft
-updated: 2026-09-08
+status: done
+updated: 2026-09-09
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: 7633
 claim: null
 assignee: null
 blocked-by: null

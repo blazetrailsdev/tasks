@@ -1,14 +1,14 @@
 ---
 title: "csp-apply-mappings-message-drops-ruby-inspect"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-09
 rfc: "0111-error-class-message-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 33
 pr: null
 claim: null
 assignee: null

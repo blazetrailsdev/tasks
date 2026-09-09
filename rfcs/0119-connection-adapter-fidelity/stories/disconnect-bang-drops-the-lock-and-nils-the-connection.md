@@ -1,7 +1,7 @@
 ---
 title: "disconnectBang takes no lock, fire-and-forgets clearCacheBang, and nils _connection in the abstract body"
-status: ready
-updated: 2026-09-08
+status: in-progress
+updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7634
+claim: "2026-09-09T00:26:03Z"
+assignee: "disconnect-bang-drops-the-lock-and-nils-the-connection"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,14 +1,14 @@
 ---
 title: "ruby-compat-errors-bypass-standarderror"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-09
 rfc: "0111-error-class-message-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 110
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "rails-error-parity-exclude grandfathers activerecord/callbacks.ts, which has no throws"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-09
 rfc: "0111-error-class-message-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 12
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "Port ERBTracker as TSETracker, the default source-scanning tracker"
-status: in-progress
-updated: 2026-09-08
+status: done
+updated: 2026-09-09
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages:

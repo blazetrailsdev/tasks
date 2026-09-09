@@ -1,7 +1,7 @@
 ---
 title: "Kernel#format is not ported, so PG OID::DateTime open-codes its %04d padding"
 status: ready
-updated: 2026-09-08
+updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: ["ruby-compat", "activerecord"]

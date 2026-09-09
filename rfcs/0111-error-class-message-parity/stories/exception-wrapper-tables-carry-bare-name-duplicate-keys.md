@@ -1,14 +1,14 @@
 ---
 title: "ExceptionWrapper's four tables carry bare-name duplicates Rails does not have"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-09-09
 rfc: "0111-error-class-message-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 34
 pr: null
 claim: null
 assignee: null
