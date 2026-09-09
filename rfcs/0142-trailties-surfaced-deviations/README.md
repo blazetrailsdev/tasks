@@ -174,7 +174,8 @@ Shares the 0104 sunset sequence with RFC 0141:
    duplicates; `tasks rehome` 73 stories — 25 here, 27 → 0141, 8 →
    0139, 4 → 0140, 6 → 0123, 3 → 0023.
 3. **Clusters.** Set `cluster:` on the 25 carried stories by markdown PR.
-4. **Close 0104.**
+4. **Close 0104.** Markdown-owned, so a file edit in the same PR as step 3,
+   and necessarily after step 2.
 
 ## Verification
 
@@ -197,3 +198,8 @@ rather than queued; one `tasks rehome` recovers them).
 ## Changelog
 
 - 2026-09-08: initial RFC, filed as the trailties half of RFC 0104's sunset.
+- 2026-09-09: sunset steps 2–4 executed. 4 duplicates closed and 73 stories
+  rehomed by verb on `main` (`589cab0a..3f0b360d`); the 25 carried here stamped
+  with their clusters; RFC 0104 closed. Filed `status: active`, changed to
+  `draft` here at the owner's direction, so the bucket does not surface in a
+  ready queue until it is flipped back.

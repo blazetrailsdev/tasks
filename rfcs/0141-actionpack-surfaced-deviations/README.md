@@ -201,7 +201,9 @@ This RFC ships no code. Its rollout is the 0104 sunset sequence:
    duplicates; `tasks rehome` 73 stories — 27 here, 25 → 0142, 8 → 0139, 4 →
    0140, 6 → 0123, 3 → 0023.
 3. **Clusters.** Set `cluster:` on the 27 carried stories by markdown PR.
-4. **Close 0104.** `tasks status-set 0104-twitter-app-full-stack-integration closed`.
+4. **Close 0104.** An RFC's `status:` is markdown-owned, so this is a file
+   edit in the same PR as step 3 — and it must come after step 2, because
+   `pnpm validate` rejects a terminal RFC that still holds an open story.
 
 Ordinary story work begins at step 3; nothing here blocks a claim.
 
@@ -236,3 +238,8 @@ None. Two were resolved before filing, both by the RFC owner on 2026-09-08:
 ## Changelog
 
 - 2026-09-08: initial RFC, filed as the actionpack half of RFC 0104's sunset.
+- 2026-09-09: sunset steps 2–4 executed. 4 duplicates closed and 73 stories
+  rehomed by verb on `main` (`589cab0a..3f0b360d`); the 27 carried here stamped
+  with their clusters; RFC 0104 closed. Filed `status: active`, changed to
+  `draft` here at the owner's direction, so the bucket does not surface in a
+  ready queue until it is flipped back.

@@ -55,6 +55,14 @@ unique acceptance criteria were folded in first:
 - `mime-type-register-collapses-lookup-and-extension-lookup` -> `mime-registry-splits-into-lookup-and-extension-lookup`
 - `journey-route-app-seated-after-construction` -> `routing-route-class-has-no-rails-counterpart`
 
+**Executed 2026-09-09.** The four duplicates were closed and all 73 open
+stories rehomed by verb on `main` (`589cab0a..3f0b360d`); the 52 carried into
+0141 and 0142 were stamped with their clusters, and this RFC moved to
+`status: closed`. It keeps its 102 done and 13 closed stories as the record of
+what it accomplished, and reports 0 open. RFC 0141 and 0142 were filed
+`status: active` and changed to `draft` at the owner's direction, so their
+inherited backlogs are parked rather than queued until the owner flips them.
+
 Everything below this section is the original 2026-08-13 charter and its
 2026-08-30 re-ranking, kept as the record of what the RFC set out to do.
 
