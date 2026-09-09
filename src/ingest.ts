@@ -541,9 +541,16 @@ async function sweepVanishedRfcs(tasksDir: string, result: IngestResult): Promis
   // concurrent claims and closes fail outright. Per-RFC keeps each hold to the
   // handful of writes reapVanishedRfc actually makes.
   const vanished = (await Rfc.all().toArray()).filter(
-    // A row with no recorded path predates file_path and cannot be checked;
-    // absence of evidence is not a vanished file.
-    (rfc) => rfc.file_path && !existsSync(join(tasksDir, rfc.file_path)),
+    (rfc) =>
+      // A row with no recorded path predates file_path and cannot be checked;
+      // absence of evidence is not a vanished file.
+      rfc.file_path &&
+      // A CLOSED row whose file is gone is the documented steady state, not
+      // drift (equivalence.ts says so where it skips exactly this row). Without
+      // this, every such RFC is re-reaped on every ingest forever — a no-op
+      // transaction each time, and an rfcsTouched count that never settles.
+      rfc.status !== "closed" &&
+      !existsSync(join(tasksDir, rfc.file_path)),
   );
 
   for (const rfc of vanished) {

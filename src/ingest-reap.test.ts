@@ -211,4 +211,22 @@ describe("the whole-tree RFC sweep", () => {
 
     expect((await Rfc.findBy({ id: "0099-real" }))!.status).toBe("closed");
   });
+
+  it("leaves an already-closed RFC whose file is gone alone", async () => {
+    // The documented steady state after a numbered RFC's directory is removed.
+    // Re-reaping it every ingest would be a no-op transaction forever.
+    const dir = tree();
+    await Rfc.create({
+      id: "0098-settled",
+      status: "closed",
+      title: "Settled",
+      file_path: "rfcs/0098-settled/README.md",
+    });
+
+    const result = emptyResult();
+    await sweepVanishedRfcsForTest(dir, result);
+
+    expect((await Rfc.findBy({ id: "0098-settled" }))!.status).toBe("closed");
+    expect(result.rfcsTouched).toBe(0);
+  });
 });
