@@ -2,7 +2,7 @@
 title: "api-compare's TS-member claim resolves by file order, not by which match is better"
 status: draft
 updated: 2026-09-06
-rfc: "0113-branch-and-guard-parity"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []

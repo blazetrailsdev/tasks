@@ -2,7 +2,7 @@
 title: "Narrow the seven arm-throw mark dimensions left above their measurement"
 status: draft
 updated: 2026-09-09
-rfc: "0113-branch-and-guard-parity"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []

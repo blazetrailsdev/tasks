@@ -2,7 +2,7 @@
 title: "Audit the loop / try / rescue arm strata for gating"
 status: draft
 updated: 2026-09-06
-rfc: "0113-branch-and-guard-parity"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: arm-parity-tooling
 packages: []
 deps: []
