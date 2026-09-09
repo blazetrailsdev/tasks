@@ -28,6 +28,12 @@ jobs:
       - run: pnpm lint
       - run: pnpm test
       - run: pnpm validate
+      - name: CLI smoke against the vendored trails pin
+        # The gate scripts/track-trails.sh puts in front of every automatic pin
+        # bump. Running it here too means a hand-edited vendor/ or a pin bumped
+        # outside the tracker is held to the same bar, and that the gate itself
+        # cannot rot unnoticed between bumps.
+        run: pnpm smoke
       - name: DB-owned frontmatter fields not hand-edited
         # status/pr/claim/assignee/blocked-by/closed-reason/updated live in the
         # database. Ingest ignores edits to them on an EXISTING story, so such a
