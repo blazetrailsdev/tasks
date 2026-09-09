@@ -48,7 +48,7 @@ not own the file yet and writes nothing. The CLI keeps working untouched.
 ### `app/models/` is not autoloaded — the barrel is what makes it work
 
 Do not assume Rails' behaviour here. trails has **no autoloader**, and per
-`port-trails-autoloaders` (RFC 0104, blocked) it is not getting one: Zeitwerk's
+`port-trails-autoloaders` (RFC 0123, blocked) it is not getting one: Zeitwerk's
 mechanism is Ruby constant resolution at reference time, and ESM offers no hook
 for an unresolved identifier. The only directory scan trails performs is
 `loadControllers` in `trailties/src/application/finisher.ts`, and it is
