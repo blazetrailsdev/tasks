@@ -58,7 +58,7 @@ Measured 2026-09-08 against trails `main` (`9c54a7962f`):
 | — open (`ready` + `draft` + `blocked`)                    | 77     |
 | — open stories actually about an example application      | 3      |
 | Open stories carried here                                 | 27     |
-| Estimated LOC carried here (median-imputed for 4 unsized) | ~3,840 |
+| Estimated LOC carried here (median-imputed for 2 unsized) | ~3,560 |
 | Open actionpack stories with a falsified premise          | **0**  |
 
 That last row is the load-bearing one. Every carried story was verified against
