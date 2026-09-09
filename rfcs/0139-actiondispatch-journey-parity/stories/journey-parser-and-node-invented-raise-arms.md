@@ -71,9 +71,23 @@ to be overridden, enforced at compile time instead of at call time. The fix is
 therefore to delete `Terminal`'s getter and let the abstract base member stand,
 not to add a raise anywhere.
 
-The `NodeType` string union (`"LITERAL" | "SLASH" | ... | "OR"`) is still a
-trails addition; Rails dispatches on the class, which is why `gtg/builder.rb:83`
-interpolates `node.class.name`.
+CORRECTION 2 (2026-09-09, post-merge): the sentence that stood here said the
+`NodeType` string union (`"LITERAL" | "SLASH" | ... | "OR"`) "is still a trails
+addition; Rails dispatches on the class, which is why `gtg/builder.rb:83`
+interpolates `node.class.name`". That is also false, and nothing should be
+filed against it.
+
+Rails dispatches its visitors on `node.type`, not on the class:
+`journey/visitors.rb:64-66` is `send(DISPATCH_CACHE[node.type], node)` and
+`:104-106` is the seeded twin. Each concrete node returns a Symbol
+(`def type; :LITERAL; end`, `node.rb:116-118` and its siblings), and a Ruby
+Symbol is a JS string, so `"LITERAL"` is the correct port of `:LITERAL` and
+`NodeType` is only a type annotation over the values Rails already returns —
+the kind of type-only shape Ruby leaves to duck typing.
+
+The `node.class.name` at `gtg/builder.rb:83` is an error-message interpolation
+inside `nullable?`, a DIFFERENT method that genuinely does `case node ... when
+Nodes::Star` on the class. It is not evidence about `type`.
 
 `journey-arm-and-short-circuit-triage` in this RFC covers the arm-multiset
 triage broadly; these two are called out separately because the fix is a
