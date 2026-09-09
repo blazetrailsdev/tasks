@@ -271,7 +271,7 @@ export async function ingest(opts: { tasksDir?: string; to?: string } = {}): Pro
   for (let i = 0; i < paths.length; i += CHUNK) {
     await ingestChunk(paths.slice(i, i + CHUNK), tasksDir, result);
   }
-  await sweepVanishedRfcs(tasksDir);
+  await sweepVanishedRfcs(tasksDir, result);
   await Meta.set("last_ingested_sha", to);
 
   return result;
@@ -502,38 +502,59 @@ async function ingestRfc(tasksDir: string, rel: string, rfcId: string): Promise<
 /**
  * Every RFC row whose file is gone, whether or not the diff mentioned it.
  *
- * The per-path reap above only fires when `rfcs/<id>/README.md` shows up in
- * `git diff <watermark>..HEAD`, and a placeholder's path frequently never
- * does: the `0000-<slug>` README is created and ingested on a branch (or in
- * the shared main checkout by `tasks new`), and by the time main moves, the
- * auto-finalize workflow has already renamed the directory — so main's diff
- * only ever contains the `NNNN-<slug>` half. Ingest inserted the numbered row
- * and nothing ever asked about the placeholder, which is how two `0000-` rows
- * sat in the shared DB pointing at directories that do not exist, listed as
- * open RFCs.
+ * The per-path reap above fires only when `rfcs/<id>/README.md` appears in
+ * `changedPaths`, and for a finalized placeholder it never can. `git diff
+ * --name-only` has rename detection ON by default, so the auto-finalize commit
+ * that renames `rfcs/0000-<slug>/` to `rfcs/NNNN-<slug>/` reports the
+ * DESTINATION path alone:
  *
- * So the tree, not the diff, is the authority — the same rule `movedElsewhere`
- * already follows. There are ~140 RFC rows, so a full existence check costs
- * nothing next to the chunk loop that just ran.
+ *     git diff --name-only 1f833aa2^..1f833aa2
+ *       rfcs/0139-actiondispatch-journey-parity/README.md      <- only this
+ *     git diff --no-renames --name-only 1f833aa2^..1f833aa2
+ *       rfcs/0000-actiondispatch-journey-parity/README.md      <- and this
+ *       rfcs/0139-actiondispatch-journey-parity/README.md
+ *
+ * So ingest sees the numbered half, creates its row, and is never once asked
+ * about the placeholder — whose row it inserted 14 minutes earlier, during the
+ * window between the RFC landing on main and the auto-finalize workflow
+ * renaming it. That is how two `0000-` rows sat in the shared DB pointing at
+ * directories that do not exist, listed as open RFCs.
+ *
+ * `--no-renames` would surface the delete half, but it changes the diff shape
+ * for every story path too, and it cannot retract a row already inserted. The
+ * tree is the cheaper authority — the same rule `movedElsewhere` already
+ * follows — and it also cures rot that predates it. There are ~140 RFC rows,
+ * so a full existence check costs nothing next to the chunk loop just run.
  *
  * Applies the identical policy to whatever it finds (placeholder → hand the
  * history to its numbered successor and drop the row; anything else → close,
  * never delete), so the sweep widens WHEN the rule runs, not what it decides.
  */
-async function sweepVanishedRfcs(tasksDir: string): Promise<void> {
+async function sweepVanishedRfcs(tasksDir: string, result: IngestResult): Promise<void> {
   const rfcsDir = join(tasksDir, "rfcs");
   // A bare or missing rfcs/ is a broken checkout, not 140 abandoned RFCs.
   if (!existsSync(rfcsDir) || !readdirSync(rfcsDir).some(isRealRfcDir)) return;
 
-  await Base.transaction(async () => {
-    for (const rfc of await Rfc.all().toArray()) {
-      // A row with no recorded path predates file_path and cannot be checked;
-      // absence of evidence is not a vanished file.
-      if (!rfc.file_path) continue;
-      if (existsSync(join(tasksDir, rfc.file_path))) continue;
+  // Scan outside any transaction, then reap one RFC per transaction — for the
+  // reason the chunk loop above is chunked: a single transaction spanning the
+  // whole table holds SQLite's write lock past the 10s busy_timeout and makes
+  // concurrent claims and closes fail outright. Per-RFC keeps each hold to the
+  // handful of writes reapVanishedRfc actually makes.
+  const vanished = (await Rfc.all().toArray()).filter(
+    // A row with no recorded path predates file_path and cannot be checked;
+    // absence of evidence is not a vanished file.
+    (rfc) => rfc.file_path && !existsSync(join(tasksDir, rfc.file_path)),
+  );
+
+  for (const rfc of vanished) {
+    await Base.transaction(async () => {
       await reapVanishedRfc(rfc.id);
-    }
-  });
+    });
+    // Counted so `tasks ingest` reports the repair it just made; without this
+    // an ingest that retracted two orphans prints the same line as one that
+    // found none.
+    result.rfcsTouched++;
+  }
 }
 
 /** Test seam for the whole-tree RFC sweep (see ingest-reap.test.ts). */

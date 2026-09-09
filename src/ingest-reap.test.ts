@@ -150,11 +150,14 @@ describe("the whole-tree RFC sweep", () => {
     });
     await Event.create({ at: "2026-09-08T01:13:56Z", verb: "new", rfc_id: "0000-journey" });
 
-    await sweepVanishedRfcsForTest(dir);
+    const result = emptyResult();
+    await sweepVanishedRfcsForTest(dir, result);
 
     expect(await Rfc.findBy({ id: "0000-journey" })).toBeNull();
     expect((await Rfc.findBy({ id: "0139-journey" }))!.status).toBe("active");
     expect((await Event.where({ rfc_id: "0139-journey" }).count()) as number).toBe(1);
+    // The repair is reported, not silent: `tasks ingest` prints rfcsTouched.
+    expect(result.rfcsTouched).toBe(1);
   });
 
   it("leaves an RFC whose file is on disk alone", async () => {
@@ -166,7 +169,7 @@ describe("the whole-tree RFC sweep", () => {
       file_path: "rfcs/0139-journey/README.md",
     });
 
-    await sweepVanishedRfcsForTest(dir);
+    await sweepVanishedRfcsForTest(dir, emptyResult());
 
     expect((await Rfc.findBy({ id: "0139-journey" }))!.status).toBe("active");
   });
@@ -175,7 +178,7 @@ describe("the whole-tree RFC sweep", () => {
     const dir = tree();
     await Rfc.create({ id: "0100-legacy", status: "active", title: "Legacy" });
 
-    await sweepVanishedRfcsForTest(dir);
+    await sweepVanishedRfcsForTest(dir, emptyResult());
 
     expect((await Rfc.findBy({ id: "0100-legacy" }))!.status).toBe("active");
   });
@@ -190,7 +193,7 @@ describe("the whole-tree RFC sweep", () => {
       file_path: "rfcs/0139-journey/README.md",
     });
 
-    await sweepVanishedRfcsForTest(dir);
+    await sweepVanishedRfcsForTest(dir, emptyResult());
 
     expect((await Rfc.findBy({ id: "0139-journey" }))!.status).toBe("active");
   });
@@ -204,7 +207,7 @@ describe("the whole-tree RFC sweep", () => {
       file_path: "rfcs/0099-real/README.md",
     });
 
-    await sweepVanishedRfcsForTest(dir);
+    await sweepVanishedRfcsForTest(dir, emptyResult());
 
     expect((await Rfc.findBy({ id: "0099-real" }))!.status).toBe("closed");
   });
