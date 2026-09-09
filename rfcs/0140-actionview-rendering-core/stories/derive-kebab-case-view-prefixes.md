@@ -56,6 +56,43 @@ Dasherizing it would rename translation keys and reset live rate-limit counters
 surface is unchanged and `parity:api` is unaffected; the divergence is that
 `local_prefixes` returns two entries where Rails' returns one.
 
+## The divergence is sanctioned, and why it is language-forced
+
+`local_prefixes` returns `[controller_path]` in Rails and two entries here.
+That is a real behavioural divergence in a ported method, and the bar for
+shipping one is that it be forced by the target language rather than chosen by
+taste. It is forced.
+
+Ruby's underscored filenames are not a style choice — they fall out of
+autoloading. `require`/`autoload` map `RfcPages` to `rfc_pages.rb`, so the
+constant and the file path are the same string in two spellings, and Rails'
+view directories inherit that spelling because the generator derives them from
+the same `underscore`d `class_path`. TypeScript has no such coupling: a module
+is found by the path in its import, which has no relationship to the exported
+name. The constraint that produced `rfc_pages/` in Ruby does not exist here.
+
+What exists instead is the Node convention, which is kebab-case, and which
+trails already follows everywhere else it names a file — `rfc-pages-controller.
+ts`, `application-helper.ts`, every package directory. trails' own controller
+generator already writes `app/views/rfc-pages/`. The view directory was the
+last place the two spellings disagreed, and it disagreed with trails, not with
+Rails.
+
+So the divergence is the same class as the file-naming divergence trails took
+at the outset and applies in every other directory. Recording it here is what
+makes it a decision rather than a preference smuggled into a diff.
+
+**It is not annotated at the call site, deliberately.** trails'
+`no-freeform-comments` rule deletes Rails citations from code — a line number
+is wrong the moment Rails edits the file above it, and `pnpm rails:find` maps a
+name to its `file:line` on demand. The four JSDoc flags it keeps
+(`@internal`, `@noRailsEquivalent`, `@missingRailsCall`, `@missingRailsArgs`)
+all describe SURFACE; `localPrefixes` exists in Rails, so tagging it
+`@noRailsEquivalent` would be false and would mis-score
+`parity:api:extra`. A behavioural divergence in a ported method has no in-code
+slot in this repository by design, and its record is the commit message, the PR
+body, and this story.
+
 ## What is left: remove the fallback
 
 The fallback is what makes #7651 safe to land, and it is also the thing that
