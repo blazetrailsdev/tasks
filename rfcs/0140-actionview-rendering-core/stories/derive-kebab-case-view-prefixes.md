@@ -32,9 +32,30 @@ trailmap is kebab-case in every other filename, and named its view directories
 `app/views/rfc-pages/` to match. The two disagreed, and the disagreement is
 silent: a controller that does not pass `template:` explicitly does not fall
 back, it 500s with a missing template at request time. trailmap#11 paid that
-twice, and blazetrailsdev/trailmap#21 resolved it by renaming its view
-directories to snake_case — conforming the application to the framework,
-because the framework is what it is today.
+twice.
+
+blazetrailsdev/trailmap#21 keeps the kebab-case directories and overrides the
+derivation instead, in one place:
+
+```ts
+export class ApplicationController extends ActionController.Base {
+  static controllerPath(): string {
+    return super.controllerPath().replace(/_/g, "-");
+  }
+}
+```
+
+That works today and is not a workaround dressed up: `controllerPath` is a
+public static exactly as Rails' `controller_path` is, `localPrefixes` reads it
+through that method, and actionview's own suites subclass it the same way
+(`packages/actionview/src/view-paths.trails.test.ts`). Nothing private is
+touched and the base derivation still runs.
+
+**So this story is no longer about unblocking an application — it is about
+whether every kebab-case app should have to write those three lines.** That is
+a weaker motivation than the one this story was filed with, and it should be
+weighed honestly against the parity cost below rather than treated as
+settled.
 
 ## What to do
 
@@ -74,11 +95,12 @@ for by every application — is what this story exists to end.
 
 ## Follow-on
 
-blazetrailsdev/trailmap#21 renamed trailmap's view directories to snake_case
-and recorded the rule in its `CLAUDE.md`
-(`test/views/view-directory-names.test.ts` holds it). If this story lands with
-option 1 or 3, trailmap renames back and deletes that exception; the test is
-what will fail loudly and point at this story when it does.
+blazetrailsdev/trailmap#21 carries the `controllerPath` override and records
+the rule in its `CLAUDE.md`; `test/views/view-directory-names.test.ts` asserts
+both that the override still produces kebab-case and that every directory on
+disk is one a controller asks for. If this story lands with option 1 or 3,
+trailmap deletes the override and that suite is what notices if the cleanup is
+done by halves.
 
 ## Acceptance criteria
 
