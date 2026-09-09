@@ -108,4 +108,5 @@ deletion, not a re-arming.
       `Terminal#type` is real convergence that this measure cannot see. Note
       also that `pnpm parity:api:arms:throws` gates MISSING throws, not invented
       ones, so neither deletion moves `arm-throw-mark.json`.
+
 - [ ] The Journey suites stay green.
