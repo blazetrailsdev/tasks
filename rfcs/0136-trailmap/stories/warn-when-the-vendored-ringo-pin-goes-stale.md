@@ -1,6 +1,6 @@
 ---
 title: "Nothing notices when vendor/ringo falls behind btwhooks and the gates pass against a stale ringo"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null

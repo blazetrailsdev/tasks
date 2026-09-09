@@ -1,6 +1,6 @@
 ---
 title: "The markdown gate detects directories by catching readdir, where FsAdapter.stat exists"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null

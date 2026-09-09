@@ -1,6 +1,6 @@
 ---
 title: "Live::ClientDisconnected extends bare Error with an invented constructor where Rails has an empty RuntimeError subclass"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0111-error-class-message-parity"
 cluster: null

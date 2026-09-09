@@ -1,6 +1,6 @@
 ---
 title: "The list gate compares ids and counts, never what a row says — inherited priority and packages are unchecked"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null

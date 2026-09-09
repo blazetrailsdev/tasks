@@ -1,6 +1,6 @@
 ---
 title: "class_attribute and Range#overlap raise the JS global TypeError, not the ported Ruby one"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0111-error-class-message-parity"
 cluster: null
