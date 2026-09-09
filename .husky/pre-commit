@@ -1,0 +1,22 @@
+#!/bin/sh
+# Runs prettier + markdownlint over the staged files — the `format:check` and
+# `lint` halves of the `ci` workflow, scoped to what you are committing.
+#
+# `core.hooksPath` points at this tracked directory (set by the `prepare`
+# script), NOT at husky's generated `.husky/_` wrapper. A worktree created with
+# raw `git worktree add` therefore runs this hook the instant it exists, with no
+# `pnpm install` first — the failure mode `hooks-install-independent-format-gate`
+# (RFC 0024) exists to prevent, where a missing `.husky/_` makes git skip the
+# hook silently and unformatted commits land on main.
+#
+# Fails CLOSED: no lint-staged means a blocked commit with an actionable
+# message, never a silent pass.
+set -e
+
+if [ ! -x node_modules/.bin/lint-staged ]; then
+  echo "pre-commit: lint-staged not found — run 'pnpm install' in the tasks repo." >&2
+  echo "pre-commit: refusing to commit unchecked; CI would red on format:check/lint." >&2
+  exit 1
+fi
+
+exec node_modules/.bin/lint-staged
