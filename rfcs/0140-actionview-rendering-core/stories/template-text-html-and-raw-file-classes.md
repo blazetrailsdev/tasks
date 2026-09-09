@@ -1,7 +1,7 @@
 ---
 title: "Port Template::Text, Template::HTML, Template::RawFile, Inline and Renderable"
-status: ready
-updated: 2026-09-08
+status: claimed
+updated: 2026-09-09
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 300
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-09T01:49:11Z"
+assignee: "template-text-html-and-raw-file-classes"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "disconnectBang takes no lock, fire-and-forgets clearCacheBang, and nils _connection in the abstract body"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
