@@ -1,7 +1,7 @@
 ---
 title: "the server_version barrier acquires the connection lock first, which Rails does not"
-status: draft
-updated: 2026-09-08
+status: blocked
+updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Deleting the two connection.lock.synchronize(...) wrappers (pool-config.ts:84, abstract/connection-pool.ts:98 on origin/main) reinstates the #7592 A/B lock inversion until trails leases an adapter to one logical flow the way Ruby leases it to one thread. The prerequisite is abstract-adapter-lock-defaults-to-monitor-not-nulllock, itself blocked behind synchronize-lock-barges-in-the-release-window and converge-acquire-connection-blocking-wait. (port-abstract-adapter-lock-thread-setter, the story's other named neighbour, is already done via #7257.) The CLI in this tree has no set-deps verb, so the edge is recorded here rather than in deps."
 closed-reason: null
 ---
 

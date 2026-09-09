@@ -1,6 +1,6 @@
 ---
 title: "Settle which status trailmap's pages show — four of them now disagree"
-status: ready
+status: done
 updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: 22
+claim: "2026-09-09T17:08:06Z"
+assignee: "one-status-vocabulary-across-trailmaps-own-pages"
 blocked-by: null
 closed-reason: null
 ---

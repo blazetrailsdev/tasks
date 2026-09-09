@@ -1,7 +1,7 @@
 ---
 title: "Port RoutingUrlFor and the ActionDispatch::Routing::UrlFor include"
-status: ready
-updated: 2026-09-08
+status: in-progress
+updated: 2026-09-09
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 31
-pr: null
-claim: null
-assignee: null
+pr: 7649
+claim: "2026-09-09T17:31:10Z"
+assignee: "routing-url-for-includes-url-for"
 blocked-by: null
 closed-reason: null
 ---

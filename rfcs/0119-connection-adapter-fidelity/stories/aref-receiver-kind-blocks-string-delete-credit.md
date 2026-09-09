@@ -1,7 +1,7 @@
 ---
 title: "An aref receiver is kind `expr`, so a converged String#delete call still flags"
-status: blocked
-updated: 2026-09-08
+status: closed
+updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: ["activerecord"]
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-09-08T19:00:34Z"
 assignee: "aref-receiver-kind-blocks-string-delete-credit"
-blocked-by: 'Premise falsified against vendor/rails. (1) The story''s primary shape — resolve an aref whose base is a proven Hash-shaped local — cannot fire on its own instance: in unique_constraints (activerecord/lib/active_record/connection_adapters/postgresql/schema_statements.rb:711) `row` is the block parameter of `unique_info.map do |row|`, and hash_typed_locals (extract-ruby-api.rb:2637-2661) proves only `**opts` / hash-literal-default params and locals whose every assignment is a hash literal — never a block param. (2) The fallback shape — a narrower aref kind — cannot satisfy AC3. railties/lib/rails/generators/rails/db/system/change/change_generator.rb:141 is `compose_config["services"]["rails-app"].delete("depends_on")`: an aref receiver with a string-literal argument, Ripper-identical to `row["conkey"].delete("{}")`, and it is Hash#delete. Four more aref-receiver delete sites in vendored lib (test_fixtures.rb:309, pool_manager.rb:41, notifications/fanout.rb:91, subscriber_map.rb:29) are Hash/Array#delete. So any aref-keyed admission of String#delete wrongly credits them, violating ''the 17 Hash#delete / Response#delete_header sites must stay uncredited''. Unblocking needs a receiver-class proof Ripper does not have; re-scope to a different receipt shape (e.g. a call-site tag) or close.'
-closed-reason: null
+blocked-by: null
+closed-reason: 'Premise falsified against vendor/rails and recorded in the story''s own blocker (2026-09-08). The primary shape cannot fire: postgresql/schema_statements.rb:711''s `row` is a block parameter of `unique_info.map do |row|`, and extract-ruby-api.rb:2637-2661''s hash_typed_locals proves only **opts / hash-literal-default params and hash-literal-only locals, never a block param. The fallback shape cannot satisfy AC3: railties/lib/rails/generators/rails/db/system/change/change_generator.rb:141 (`compose_config["services"]["rails-app"].delete("depends_on")`) is Ripper-identical to the target and is Hash#delete, as are test_fixtures.rb:309, pool_manager.rb:41, notifications/fanout.rb:91 and subscriber_map.rb:29 — any aref-keyed admission of String#delete wrongly credits them. An aref-kind receipt cannot be made to work; a different receipt shape is a different story.'
 ---
 
 ## Context

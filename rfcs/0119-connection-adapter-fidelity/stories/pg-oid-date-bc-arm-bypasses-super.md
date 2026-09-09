@@ -1,7 +1,7 @@
 ---
 title: "PG OID::Date's BC arm parses wire format, swallows errors, and is mis-tagged PERMANENT"
-status: draft
-updated: 2026-09-08
+status: closed
+updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by PR #7637 (commit 1562cfeab9, 'feat(ruby-compat): port Kernel#format and converge four open-coded call sites'). On origin/main postgresql/oid/date.ts's BC arm is now Rails' three lines: `value.replace(/^\\d+/, (year) => format(\"%04d\", -Number(year) + 1))` then `super.castValue(rewritten.replace(/ BC$/, \"\"))`. `git grep -n 'PERMANENT|parsePostgresDate' origin/main -- packages/activerecord/src/connection-adapters/postgresql/oid/date.ts` returns nothing: the try/catch, the parsePostgresDate call and the '@missingRailsCall format — PERMANENT' receipt are all gone. Nothing left to converge."
 ---
 
 ## Context

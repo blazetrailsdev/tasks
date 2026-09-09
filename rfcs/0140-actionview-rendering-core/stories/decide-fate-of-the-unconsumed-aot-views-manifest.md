@@ -1,7 +1,7 @@
 ---
 title: "decide-fate-of-the-unconsumed-aot-views-manifest"
-status: ready
-updated: 2026-09-04
+status: in-progress
+updated: 2026-09-09
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 40
-pr: null
-claim: null
-assignee: null
+pr: 7649
+claim: "2026-09-09T17:31:10Z"
+assignee: "routing-url-for-includes-url-for"
 blocked-by: null
 closed-reason: null
 ---

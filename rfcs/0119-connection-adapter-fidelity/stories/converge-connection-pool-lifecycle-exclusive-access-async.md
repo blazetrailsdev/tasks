@@ -1,13 +1,13 @@
 ---
 title: "converge-connection-pool-lifecycle-exclusive-access-async"
 status: ready
-updated: 2026-08-25
+updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: ["converge-sync-connection-lease-per-checkout-verify"]
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 80
 pr: null
 claim: null
 assignee: null

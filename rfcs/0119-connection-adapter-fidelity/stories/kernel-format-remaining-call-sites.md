@@ -1,6 +1,6 @@
 ---
 title: "rack's common logger open-codes two Kernel#sprintf calls"
-status: draft
+status: ready
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 180
 pr: null
 claim: null
 assignee: null

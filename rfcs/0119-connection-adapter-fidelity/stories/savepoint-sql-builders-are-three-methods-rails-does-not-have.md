@@ -1,6 +1,6 @@
 ---
 title: "The three savepoint *Sql builders are extra surface; savepoints.rb interpolates inline"
-status: draft
+status: ready
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

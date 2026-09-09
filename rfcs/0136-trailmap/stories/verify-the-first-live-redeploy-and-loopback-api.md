@@ -1,6 +1,6 @@
 ---
 title: "Run the first live redeploy on the box and prove the loopback API answers"
-status: in-progress
+status: blocked
 updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
@@ -12,7 +12,7 @@ priority: 2
 pr: 21
 claim: "2026-09-09T14:31:34Z"
 assignee: "snapshot-the-show-page-equivalence-before-it-goes-circular"
-blocked-by: null
+blocked-by: "Blocked on mount-the-tasks-database-into-the-release. Three of four criteria are proved on the box by trailmap#21: two consecutive ./scripts/deploy.sh runs exiting 0 with the app serving throughout, the public hostname redirecting to auth (301) on each, and the running image asserted against dokku/trailmap:latest rather than a before/after pair (a redeploy of an unchanged commit builds a byte-identical image, so the old image-id check reported DEPLOY FAILED on a good release). The fourth is not: /stories/ready answers 500, not the ready queue. It is PAST requireLoopback — a 404 would mean it was not, so the loopback fix itself is proved — and the 500 is ConnectionNotDefined, because the release has no TASKS_DATABASE and no mount for the CLI's tasks.db. Closing that needs a dokku storage:mount on the box, which the agent environment's permission classifier blocks. #21 carries the deploy-script work without claiming this story."
 closed-reason: null
 ---
 

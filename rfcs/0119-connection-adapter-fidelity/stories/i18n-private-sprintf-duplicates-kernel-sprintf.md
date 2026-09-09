@@ -1,14 +1,14 @@
 ---
 title: "i18n's private sprintf duplicates Kernel#sprintf and should collapse onto ruby-compat"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 170
 pr: null
 claim: null
 assignee: null

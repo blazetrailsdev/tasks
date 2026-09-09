@@ -1,14 +1,14 @@
 ---
 title: "binmode-write-emits-latin1-where-mri-emits-the-strings-own-bytes"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: ["ruby-compat", "activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 160
 pr: null
 claim: null
 assignee: null
