@@ -1,6 +1,6 @@
 ---
 title: "trails stats sync cron failing: [ELIFECYCLE] Command failed with exit code 1."
-status: ready
+status: in-progress
 updated: 2026-09-09
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: 7638
+claim: "2026-09-09T10:30:34Z"
+assignee: "stats-sync-20260909"
 blocked-by: null
 closed-reason: null
 ---
