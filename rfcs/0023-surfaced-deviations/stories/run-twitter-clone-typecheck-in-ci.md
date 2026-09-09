@@ -2,7 +2,7 @@
 title: "Run examples/twitter-clone's typecheck in CI so the trails-tsc bin can't silently regress"
 status: ready
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

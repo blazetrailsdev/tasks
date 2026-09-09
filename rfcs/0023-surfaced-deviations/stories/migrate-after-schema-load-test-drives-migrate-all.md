@@ -2,7 +2,7 @@
 title: "Drive the schema-load migrate regression test through migrate_all/initialize_database"
 status: ready
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

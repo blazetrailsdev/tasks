@@ -2,7 +2,7 @@
 title: "examples/twitter-clone and database.test.ts still carry the pre-storage/ sqlite3 path"
 status: ready
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
