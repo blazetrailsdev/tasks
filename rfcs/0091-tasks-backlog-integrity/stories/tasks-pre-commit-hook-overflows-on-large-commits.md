@@ -18,8 +18,16 @@ closed-reason: null
 
 ## Context
 
-The tasks repo's pre-commit hook (`.husky/pre-commit`) passes the full staged
-markdown list to `prettier --write` and `markdownlint-cli2` as one argv:
+**Correction (2026-09-09): the premise below is false as written — this repo has
+never had a pre-commit hook.** `.husky` has no history here, `core.hooksPath` was
+unset, and the argv-overflow trace this story describes came from the trails
+repo's hook, not this one. What actually reached main unformatted did so because
+nothing ran before a commit at all. The concern the story records is still the
+right one to hold a new hook to, so the story is kept and its acceptance criteria
+are unchanged; only the diagnosis is corrected.
+
+The shape it warns about, for the hook that does not exist, is passing the full
+staged markdown list to `prettier --write` and `markdownlint-cli2` as one argv:
 
 ```sh
 STAGED_MD=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.md$' || true)
@@ -46,3 +54,8 @@ commits of 150 files each (`blazetrailsdev/tasks` 407d64cde..6583e818b).
 
 - [ ] A commit staging 2000+ markdown files runs the hook to completion.
 - [ ] Any hook failure prints an actionable message before exiting non-zero.
+
+Both are addressed by the `lint-staged` pre-commit gate in tasks #73, which
+batches argv itself rather than needing the `xargs` plumbing above, and fails
+closed with a named remedy. Measured there: a commit staging 2500 markdown files
+ran to completion in 3.3s. Leaving this open until that PR merges.
