@@ -1,7 +1,7 @@
 ---
 title: "Port UriEncoder as Rails' class, with ENCODER and the composed pattern constants"
-status: ready
-updated: 2026-09-08
+status: claimed
+updated: 2026-09-09
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: 60
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-09T13:02:34Z"
+assignee: "journey-uri-encoder-class-shape"
 blocked-by: null
 closed-reason: null
 ---

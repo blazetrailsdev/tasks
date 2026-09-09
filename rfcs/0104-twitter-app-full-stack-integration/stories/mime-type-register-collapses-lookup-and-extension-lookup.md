@@ -1,7 +1,7 @@
 ---
 title: "Mime::Type.register collapses LOOKUP and EXTENSION_LOOKUP into one registry, has no skip_lookup, and register_alias has the wrong arity"
-status: draft
-updated: 2026-09-04
+status: closed
+updated: 2026-09-09
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of mime-registry-splits-into-lookup-and-extension-lookup; its unique EXTENSION_LOOKUP accessor criterion was folded into the survivor in tasks #69; closed on RFC 0104's sunset"
 ---
 
 ## Context

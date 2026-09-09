@@ -1,6 +1,6 @@
 ---
 title: "primaryKeyOrderCache / resolvePrimaryKeyColumns have no Rails counterpart now that table holds the raw primary_key"
-status: claimed
+status: in-progress
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: 7639
 claim: "2026-09-09T12:48:28Z"
 assignee: "mysql2-execute-override-only-shapes-driver-rows"
 blocked-by: null

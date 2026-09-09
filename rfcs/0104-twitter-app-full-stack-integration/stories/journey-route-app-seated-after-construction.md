@@ -1,7 +1,7 @@
 ---
 title: "Journey::Route#app is seated by RouteSet#addRoute instead of passed to the constructor"
-status: draft
-updated: 2026-09-05
+status: closed
+updated: 2026-09-09
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of routing-route-class-has-no-rails-counterpart; its constructor-seated Journey::Route#app criterion was folded into the survivor in tasks #69; closed on RFC 0104's sunset"
 ---
 
 ## Context

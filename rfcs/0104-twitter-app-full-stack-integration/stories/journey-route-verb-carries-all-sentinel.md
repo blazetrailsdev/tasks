@@ -1,7 +1,7 @@
 ---
 title: 'Route#verb carries an "ALL" sentinel where Journey::Route#verb is verbs.join("|")'
-status: draft
-updated: 2026-09-05
+status: closed
+updated: 2026-09-09
 rfc: "0104-twitter-app-full-stack-integration"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of 0139's route-verb-all-sentinel-vs-empty-string, which supersedes it; closed on RFC 0104's sunset"
 ---
 
 ## Context
