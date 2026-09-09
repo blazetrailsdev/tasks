@@ -2,7 +2,7 @@
 title: "port-mapper-app-name-from-class-name"
 status: draft
 updated: 2026-09-05
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []
 deps: []

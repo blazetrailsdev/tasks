@@ -2,7 +2,7 @@
 title: "Port Mapping#app's StaticDispatcher and blocks.any? arms"
 status: ready
 updated: 2026-09-04
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []
 deps: []

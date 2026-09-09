@@ -2,7 +2,7 @@
 title: "ActionDispatch::Routing::Route is a trails invention; fold it into Journey::Route, Mapper::Mapping and RouteSet"
 status: draft
 updated: 2026-09-08
-rfc: "0104-twitter-app-full-stack-integration"
+rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []
 deps: []
