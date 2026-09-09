@@ -52,3 +52,28 @@ or accept that this repo lands by deploy and say so somewhere durable.
 
 Until it lands, ringo keeps a second read model of `tasks.db` that RFC 0136
 exists to delete, and the branch rots against a moving `main`.
+
+## Ordering: the show-page fixture is recorded first, and it already is
+
+This story is what makes `pnpm gate:pages` stop meaning anything. Once ringo's
+`loadIndex` reads trailmap's `GET /index`, ringo's `HandleRFCPage` and
+`HandleStoryPage` render from data trailmap produced, and the gate that
+compares the two keeps reporting EQUIVALENT while comparing trailmap against
+itself. It goes circular, not red — which is worse than losing it, because the
+green check keeps being cited as the evidence the show pages were verified.
+
+`snapshot-the-show-page-equivalence-before-it-goes-circular` closed that window
+first. trailmap now carries a recording of what ringo's pages SAID, made while
+ringo still had its own read model — 8,953 pages, no differences, 4,747 of them
+the story pages ringo hides under a closed RFC and trailmap serves — replayed
+in CI by `pnpm gate:snapshot` with no ringo present:
+
+- `test/fixtures/ringo-show-pages.ndjson`, ringo's extracted facts per page
+- `test/fixtures/ringo-show-pages-rows.ndjson`, the database rows they were
+  rendered from, because the live database moves under the fixture otherwise
+
+So the ordering constraint this story was held on is satisfied. What survives
+the deletion is the recording; what does not is the ability to make a new one,
+since an equivalent run against a ringo reading trailmap's own API proves
+nothing. Re-recording after this lands is not possible, and trailmap's README
+("The recorded show-page snapshot, and when to re-record it") says so.

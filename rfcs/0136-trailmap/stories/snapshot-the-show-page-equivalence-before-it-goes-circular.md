@@ -81,8 +81,30 @@ loses:
 
 - The recorded fixture reproduces today's result: every RFC and story
   compared, the closed-RFC exemption counted separately, no differences.
-- The replay runs in CI on every PR, against a database built from the content
-  tree, with no ringo.
+- The replay runs in CI on every PR, with no ringo, against the database rows
+  the recording was made from — captured in the same pass as the facts and
+  committed beside them.
+
+  **This criterion originally said "against a database built from the content
+  tree", and that does not work.** Measured rather than assumed, while
+  implementing it: a tree ingested at the recording's own commit reproduced all
+  8,806 story pages and got 47 RFC-page facts wrong. Two causes, both
+  structural rather than incidental:
+  - `status`, `assignee` and `pr` are database-owned. They reach git only when
+    `tasks export` runs, so a tree ingested at any commit carries whatever
+    state the last export left, not the state ringo answered from.
+  - A first ingest closes an RFC whose stories are all done, while the
+    incremental ingests that built the live database never did. Four RFCs
+    differ in status on that alone.
+
+  The recording is of ringo's answers over the database as it stood, and that
+  database does not stand still — a story moved `claimed` to `in-progress`
+  between the first recording and the first replay. Replaying against anything
+  but those rows diffs the database's movement rather than trailmap's
+  rendering, which is the opposite of what this gate is for. Pinning the rows
+  keeps what the four defects were actually about: how trailmap ORDERS, RANKS
+  and LABELS a fixed set of rows.
+
 - Re-recording is a deliberate, reviewable step, and the README says when it is
   legitimate to do it.
 - It is recorded BEFORE `land-the-ringo-read-model-deletion`, and that story
