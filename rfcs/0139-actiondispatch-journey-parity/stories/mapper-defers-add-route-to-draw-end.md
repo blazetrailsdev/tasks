@@ -1,6 +1,6 @@
 ---
 title: "Mapper defers add_route to draw-end where Rails registers at the declaring line"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

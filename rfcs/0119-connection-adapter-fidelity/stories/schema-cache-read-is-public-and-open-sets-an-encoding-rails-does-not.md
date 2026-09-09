@@ -1,6 +1,6 @@
 ---
 title: "SchemaCache.read is public where Rails privatises it, and #open sets an encoding Rails does not"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

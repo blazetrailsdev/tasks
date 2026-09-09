@@ -1,6 +1,6 @@
 ---
 title: "Port ERBTracker as TSETracker, the default source-scanning tracker"
-status: ready
+status: in-progress
 updated: 2026-09-08
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,9 +10,9 @@ deps: ["dependency-tracker-and-wildcard-resolver"]
 deps-rfc: []
 est-loc: 350
 priority: 11
-pr: null
-claim: null
-assignee: null
+pr: 7633
+claim: "2026-09-08T23:14:52Z"
+assignee: "tse-tracker-ports-the-erb-regex-tracker"
 blocked-by: null
 closed-reason: null
 ---

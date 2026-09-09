@@ -1,6 +1,6 @@
 ---
 title: "Mapper#match fans out one Route per verb where Rails builds one"
-status: in-progress
+status: done
 updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
