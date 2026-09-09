@@ -289,3 +289,5 @@ ratchet it did not cause.
   short-circuit rows; the merged draft omitted the axis entirely. Added the
   prior-art table and descoped the two visualizer call rows to RFC 0113's
   `journey-visualizer-reads-its-assets-off-disk`.
+- 2026-09-09: rehomed 8 open routing stories in from RFC 0104 at its sunset —
+  mapper, route-set, url helpers and the invented `Routing::Route`.

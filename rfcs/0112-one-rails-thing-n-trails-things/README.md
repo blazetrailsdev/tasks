@@ -227,6 +227,13 @@ one touches, rather than carried into a successor epic:
 | `0105-ar-deps-test-parity-100`            | `retire-the-find-collection-target-test-helper`                                                                                                                                                                                                                                              |
 | `0123-blocked-convergence-holding`        | `association-helpers-extracted-for-the-collection-proxy`, `association-scope-cpk-mismatch-second-raise-site`, `process-nested-attributes-is-a-second-deferred-path`, `module-ext-module-methods-take-an-explicit-receiver`, `delegate-is-an-ar-association-special-case-not-module-delegate` |
 
+Three of these have since moved on again: RFC 0104 was sunset on 2026-09-09
+and `model-response-cache-control-hash-for-expires-in-and-fresh-when`,
+`port-wrap-parameters-class-macro` and
+`test-case-process-rebuilds-the-request-instead-of-reusing-it` are now in
+`0141-actionpack-surfaced-deviations`. The rows above are left as the record of
+where this RFC sent them.
+
 The first two groups follow the work: PR #7366 converged
 `ActionDispatch::Response`'s header seat under `0129-ruby-compat` and
 explicitly deferred the two header stories now sitting beside it, and
