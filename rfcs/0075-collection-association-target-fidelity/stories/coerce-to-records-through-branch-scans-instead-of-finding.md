@@ -2,7 +2,7 @@
 title: "coerceToRecords scans the loaded target for a through association where Rails routes through find"
 status: draft
 updated: 2026-09-07
-rfc: "0111-error-class-message-parity"
+rfc: "0075-collection-association-target-fidelity"
 cluster: null
 packages: ["activerecord"]
 deps: []
