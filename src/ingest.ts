@@ -27,6 +27,7 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { Base } from "@blazetrails/activerecord";
 import { VerbExit } from "./db.js";
+import { normalizePrRef } from "./pr-ref.js";
 import { parse as parseYaml } from "yaml";
 import {
   Event,
@@ -103,6 +104,10 @@ function str(v: unknown): string | null {
 }
 function int(v: unknown): number | null {
   return Number.isInteger(v) ? (v as number) : null;
+}
+/** Only a well-formed `repo#N` seeds the column; validate rejects the rest. */
+function prRef(v: unknown): string | null {
+  return typeof v === "string" ? normalizePrRef(v) : null;
 }
 
 /**
@@ -366,7 +371,7 @@ async function ingestChunk(paths: string[], tasksDir: string, result: IngestResu
           // Seed-on-insert only.
           priority: int(fm.priority),
           status: str(fm.status) ?? "draft",
-          pr: int(fm.pr),
+          pr: prRef(fm.pr),
           assignee: str(fm.assignee),
           claim_at: str(fm.claim),
           blocked_by: str(fm["blocked-by"]),

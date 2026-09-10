@@ -60,7 +60,7 @@ describe("status values", () => {
   // model-based writers emitted `status: inProgress` into story files while
   // SQL-based readers saw "in-progress". Identity labels remove the gap.
   it("reads back the hyphenated value, not a camelCase label", async () => {
-    await markTracking(["s1"], "in-progress", 42);
+    await markTracking(["s1"], "in-progress", "trails#42");
     const viaModel = (await Story.findBy({ id: "s1" }))!.status;
     const viaSql = (
       await Base.connection.selectAll("SELECT status FROM stories WHERE id='s1'")
@@ -87,14 +87,22 @@ describe("claim timestamps", () => {
 
 describe("markTracking", () => {
   it("skips an id already at this exact status+pr rather than failing", async () => {
-    await markTracking(["s1"], "done", 7);
-    await expect(markTracking(["s1"], "done", 7)).resolves.toBeUndefined();
+    await markTracking(["s1"], "done", "trails#7");
+    await expect(markTracking(["s1"], "done", "trails#7")).resolves.toBeUndefined();
     expect(await Event.where({ story_id: "s1", verb: "done" }).count()).toBe(1);
   });
 
+  // trails#7 and tasks#7 are different PRs — the collision repo#N exists to end.
+  it("does not treat the same number in another repo as already done", async () => {
+    await markTracking(["s1"], "done", "trails#7");
+    await markTracking(["s1"], "done", "tasks#7");
+    expect((await Story.findBy({ id: "s1" }))!.pr).toBe("tasks#7");
+    expect(await Event.where({ story_id: "s1", verb: "done" }).count()).toBe(2);
+  });
+
   it("is best-effort per id, unlike claim", async () => {
-    await markTracking(["s1"], "done", 7);
-    await markTracking(["s1", "s2"], "done", 7);
+    await markTracking(["s1"], "done", "trails#7");
+    await markTracking(["s1", "s2"], "done", "trails#7");
     expect((await Story.findBy({ id: "s2" }))!.status).toBe("done");
   });
 
@@ -102,7 +110,7 @@ describe("markTracking", () => {
   // prior `claim`, the shape the /link skill produces) and sat invalid:
   // validate requires a claim timestamp AND an assignee on in-progress.
   it("self-claims an unclaimed story when marking it in-progress", async () => {
-    await markTracking(["s1"], "in-progress", 42);
+    await markTracking(["s1"], "in-progress", "trails#42");
     const s = await Story.findBy({ id: "s1" });
     expect(s!.claim_at).not.toBeNull();
     expect(s!.assignee).toBe("s1");
@@ -111,7 +119,7 @@ describe("markTracking", () => {
   it("does not overwrite a real claim already on the story", async () => {
     await claim(["s1"], "agent-a");
     const before = (await Story.findBy({ id: "s1" }))!.claim_at;
-    await markTracking(["s1"], "in-progress", 42);
+    await markTracking(["s1"], "in-progress", "trails#42");
     const s = await Story.findBy({ id: "s1" });
     expect(s!.assignee).toBe("agent-a");
     expect(s!.claim_at).toBe(before);
@@ -119,9 +127,9 @@ describe("markTracking", () => {
 
   it("re-running in-progress for an already-claimed sibling in a bundle stays a true no-op", async () => {
     await claim(["s1"], "agent-a");
-    await markTracking(["s1"], "in-progress", 42);
+    await markTracking(["s1"], "in-progress", "trails#42");
     const before = await Event.where({ story_id: "s1" }).count();
-    await markTracking(["s1"], "in-progress", 42);
+    await markTracking(["s1"], "in-progress", "trails#42");
     expect(await Event.where({ story_id: "s1" }).count()).toBe(before);
   });
 
@@ -216,14 +224,14 @@ describe("a status move clears what the old status owned", () => {
 
   it("drops a blocker when the story ships", async () => {
     await block("s1", "waiting on upstream");
-    await markTracking(["s1"], "done", 7);
+    await markTracking(["s1"], "done", "trails#7");
     const s = await Story.findBy({ id: "s1" });
     expect(s!.blocked_by).toBeNull();
   });
 
   it("drops an abandonment reason when a closed story is reopened and ships", async () => {
     await close("s1", "not worth doing");
-    await markTracking(["s1"], "done", 7);
+    await markTracking(["s1"], "done", "trails#7");
     const s = await Story.findBy({ id: "s1" });
     expect(s!.closed_reason).toBeNull();
     expect(s!.status).toBe("done");
@@ -250,19 +258,19 @@ describe("a status move clears what the old status owned", () => {
   // from a prior in-progress stamp — invalid per validate's cross-field
   // check, and only fixable through this path since `pr` is DB-owned.
   it("drops a stale pr when a story moves back to ready", async () => {
-    await markTracking(["s1"], "in-progress", 42);
+    await markTracking(["s1"], "in-progress", "trails#42");
     await statusSet("s1", "ready");
     expect((await Story.findBy({ id: "s1" }))!.pr).toBeNull();
   });
 
   it("drops a stale pr when a story moves to draft", async () => {
-    await markTracking(["s1"], "in-progress", 42);
+    await markTracking(["s1"], "in-progress", "trails#42");
     await statusSet("s1", "draft");
     expect((await Story.findBy({ id: "s1" }))!.pr).toBeNull();
   });
 
   it("keeps pr when the story ships", async () => {
-    await markTracking(["s1"], "done", 42);
-    expect((await Story.findBy({ id: "s1" }))!.pr).toBe(42);
+    await markTracking(["s1"], "done", "trails#42");
+    expect((await Story.findBy({ id: "s1" }))!.pr).toBe("trails#42");
   });
 });

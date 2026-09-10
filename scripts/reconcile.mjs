@@ -14,7 +14,8 @@
 // (cron, or a spawn-loop preamble) can alert on one line.
 //
 // Signals:
-//   1. `pr:` frontmatter set       → is that trails PR merged?
+//   1. `pr:` frontmatter set       → is that trails PR merged? (a tasks/
+//                                     trailmap ref is reported, not checked)
 //   2. `#NNNN` refs in the body     → are those trails PRs merged?
 //   3. memory-index seed            → a memory line names the story as
 //                                     done/shipped/resolved/no-op
@@ -71,7 +72,7 @@ function argValue(flag) {
 // weaker and prone to false positives at full scope — segmenting the drift
 // footer by this lets a cron alert on the high-confidence count, not the noise.
 function decisiveSignal(result) {
-  if (result.evidence.some((e) => /^pr:\d+ merged$/.test(e))) return "pr";
+  if (result.evidence.some((e) => /^pr:(trails#)?\d+ merged$/.test(e))) return "pr";
   if (result.evidence.some((e) => e.startsWith("body refs merged"))) return "body";
   if (result.evidence.some((e) => e.startsWith("memory:"))) return "memory";
   return "other";
@@ -151,10 +152,16 @@ function assess(story, merged, memory) {
   let verdict = "likely-open";
 
   // 1. pr: frontmatter
+  // `repo#N`, or a legacy bare number (read as trails, as it always was).
+  // Only trails refs can be looked up in the trails merged list: tasks#25 and
+  // trails#25 are different PRs.
   const fmPr = fm.pr != null ? String(fm.pr) : null;
-  if (fmPr) {
+  const [prRepo, prNum] = fmPr?.includes("#") ? fmPr.split("#") : ["trails", fmPr];
+  if (fmPr && prRepo !== "trails") {
+    evidence.push(`pr:${fmPr} (not a trails PR — merge-state unchecked)`);
+  } else if (fmPr) {
     if (!merged.available) evidence.push(`pr:${fmPr} (merge-state unchecked — gh unavailable)`);
-    else if (merged.byNumber.has(fmPr)) {
+    else if (merged.byNumber.has(prNum)) {
       evidence.push(`pr:${fmPr} merged`);
       verdict = "likely-done";
     } else evidence.push(`pr:${fmPr} NOT in merged list`);

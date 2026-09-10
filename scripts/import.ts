@@ -22,6 +22,7 @@ import { Base } from "@blazetrails/activerecord";
 import config from "../config/database.js";
 import { migrate } from "../src/migrator.js";
 import { publishReadModels } from "../src/db.js";
+import { normalizePrRef } from "../src/pr-ref.js";
 import {
   Event,
   Meta,
@@ -66,6 +67,15 @@ function str(v: unknown): string | null {
 
 function int(v: unknown): number | null {
   return Number.isInteger(v) ? (v as number) : null;
+}
+
+/**
+ * The old tree's `pr:` was a bare trails PR number — every PR the old CLI ever
+ * stamped was a trails PR — so a legacy integer imports as `trails#N`.
+ */
+function prRef(v: unknown): string | null {
+  if (typeof v === "string") return normalizePrRef(v);
+  return Number.isInteger(v) && (v as number) > 0 ? `trails#${v}` : null;
 }
 
 function relPathOf(abs: string): string {
@@ -150,7 +160,7 @@ async function importState(): Promise<{ rfcs: number; stories: number; joins: nu
           cluster: str(fm.cluster),
           priority: int(fm.priority),
           est_loc: int(fm["est-loc"]),
-          pr: int(fm.pr),
+          pr: prRef(fm.pr),
           claim_at: str(fm.claim),
           assignee: str(fm.assignee),
           blocked_by: str(fm["blocked-by"]),
@@ -223,7 +233,8 @@ interface ParsedSubject {
   target: string;
   /** Every id the subject names; length > 1 only for VARIADIC_VERBS. */
   targets: string[];
-  pr: number | null;
+  /** `trails#N` — the old log's "#N" only ever named trails PRs. */
+  pr: string | null;
   note: string | null;
 }
 
@@ -300,7 +311,7 @@ function parseSubject(subject: string): ParsedSubject | null {
     arg: argWords.length ? argWords.join(" ") : null,
     target: targets[0],
     targets,
-    pr: prMatch ? Number(prMatch[1]) : null,
+    pr: prMatch ? `trails#${Number(prMatch[1])}` : null,
     note,
   };
 }
