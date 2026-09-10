@@ -1,6 +1,6 @@
 ---
 title: "SQLite3Adapter never builds Rails' @connection_parameters"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
