@@ -1,6 +1,6 @@
 ---
 title: "Retire the deprecated positional SQLite3 adapter constructor"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null

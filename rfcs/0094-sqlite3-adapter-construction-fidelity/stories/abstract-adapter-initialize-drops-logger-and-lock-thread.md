@@ -1,6 +1,6 @@
 ---
 title: "AbstractAdapter#initialize drops Rails' logger assignment and lock_thread = nil"
-status: draft
+status: ready
 updated: 2026-09-10
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 14
 pr: null
 claim: null
 assignee: null

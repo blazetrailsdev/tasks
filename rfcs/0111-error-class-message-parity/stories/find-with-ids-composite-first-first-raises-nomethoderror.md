@@ -1,6 +1,6 @@
 ---
 title: "find-with-ids-composite-first-first-raises-nomethoderror"
-status: ready
+status: done
 updated: 2026-09-10
 rfc: "0111-error-class-message-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: 7663
 claim: null
 assignee: null
 blocked-by: null

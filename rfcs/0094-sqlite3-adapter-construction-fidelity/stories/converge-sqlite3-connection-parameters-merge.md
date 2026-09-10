@@ -1,6 +1,6 @@
 ---
 title: "converge-sqlite3-connection-parameters-merge"
-status: draft
+status: ready
 updated: 2026-09-10
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 15
 pr: null
 claim: null
 assignee: null

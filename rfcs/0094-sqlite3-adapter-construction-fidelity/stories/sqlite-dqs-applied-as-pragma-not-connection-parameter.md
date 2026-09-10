@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 applies dqs_ddl/dqs_dml as pragmas where Rails passes strict at open"
-status: draft
+status: in-progress
 updated: 2026-09-10
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 11
+pr: 7668
+claim: "2026-09-10T16:14:17Z"
+assignee: "delete-build-adapter-arg-once-constructors-take-config-hash"
 blocked-by: null
 closed-reason: null
 ---

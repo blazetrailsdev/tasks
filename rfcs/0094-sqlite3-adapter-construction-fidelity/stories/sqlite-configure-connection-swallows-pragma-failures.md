@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 configure_connection swallows pragma failures Rails lets raise"
-status: draft
+status: closed
 updated: 2026-09-10
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by #7662 (bcb137050): configureConnection's warn closure and try/catch are gone; origin/main sqlite3-adapter.ts ends with a bare 'for (const [sql] of stmts) await this._rawConnection!.pragma(sql)' on the single (post-check_version) path, and git grep finds no catch in configureConnection. PR body confirms a failing pragma setter now raises as in sqlite3_adapter.rb:837-843."
 ---
 
 ## Context

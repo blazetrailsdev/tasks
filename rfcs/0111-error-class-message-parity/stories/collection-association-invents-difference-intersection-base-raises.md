@@ -1,6 +1,6 @@
 ---
 title: "CollectionAssociation invents difference/intersection base stubs that raise a bare Error"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0111-error-class-message-parity"
 cluster: null

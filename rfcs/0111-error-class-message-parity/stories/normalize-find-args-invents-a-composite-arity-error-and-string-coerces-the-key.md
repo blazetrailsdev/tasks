@@ -1,6 +1,6 @@
 ---
 title: "normalizeFindArgs invents a composite-arity RecordNotFound and renders the key via String()"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0111-error-class-message-parity"
 cluster: null

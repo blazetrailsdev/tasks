@@ -1,6 +1,6 @@
 ---
 title: "better-sqlite3 and expo-sqlite refuse SQLITE_OPEN_SHAREDCACHE where Ruby's sqlite3 gem always honours it"
-status: blocked
+status: closed
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -12,8 +12,8 @@ priority: 150
 pr: 7661
 claim: "2026-09-10T12:37:56Z"
 assignee: "mysql2-internal-execute-and-exec-query-overrides-rails-lacks"
-blocked-by: "genuine driver limitation: better-sqlite3 12.6.2 compile_options include OMIT_SHARED_CACHE (probe: new D('file::memory:?cache=shared').pragma('compile_options')); expo-sqlite 15.2.14 native opens via flagless exsqlite3_open(path) (ios/SQLiteModule.swift:103, android NativeDatabaseBinding.cpp:116) — no flag or URI reaches SQLite. Refusal kept; see PR #7661 body."
-closed-reason: null
+blocked-by: null
+closed-reason: "Third-party driver limitation, probed and confirmed: better-sqlite3 12.6.2 is compiled with OMIT_SHARED_CACHE (new D('file::memory:?cache=shared').pragma('compile_options')) and expo-sqlite 15.2.14 opens via flagless exsqlite3_open(path) (ios/SQLiteModule.swift:103, android NativeDatabaseBinding.cpp:116) — no flag or URI reaches SQLite. Nothing to converge in trails; the refusal is kept and documented in PR #7661's body."
 ---
 
 ## Context

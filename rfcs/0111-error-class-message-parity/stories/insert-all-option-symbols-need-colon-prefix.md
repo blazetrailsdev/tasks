@@ -1,6 +1,6 @@
 ---
 title: "insertAll's on_duplicate and returning carry Ruby Symbols, so disallow_raw_sql! can drop its permit matcher"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0111-error-class-message-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 encoding getter returns the UTF-8 fallback on async-only drivers"
-status: draft
+status: in-progress
 updated: 2026-09-10
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 10
+pr: 7668
+claim: "2026-09-10T16:14:17Z"
+assignee: "delete-build-adapter-arg-once-constructors-take-config-hash"
 blocked-by: null
 closed-reason: null
 ---

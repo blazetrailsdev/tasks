@@ -1,6 +1,6 @@
 ---
 title: "AbstractAdapter.database_exists? disconnects where Rails just constructs and asks"
-status: draft
+status: ready
 updated: 2026-09-10
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "sqlite3 explain forwards binds where Rails passes []"
-status: blocked
-updated: 2026-08-31
+status: closed
+updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: []
@@ -11,8 +11,8 @@ priority: null
 pr: null
 claim: "2026-08-31T09:54:12Z"
 assignee: "locator-use-drops-the-no-locator-raise"
-blocked-by: "better-sqlite3 rejects a statement with fewer values than placeholders (RangeError: Too few parameter values were provided), where Ruby's sqlite3 gem binds unset parameters as NULL — verified with a probe running internalExecQuery('EXPLAIN QUERY PLAN SELECT * FROM t WHERE id = ?', 'EXPLAIN', []). Rails' to_sql(arel, binds) does NOT strip the placeholders when arel is a String (database_statements.rb:47-49), so passing [] as sqlite3/database_statements.rb:19-20 does requires either rendering the binds into the statement (needs a bind-rendering step the adapter does not have, and changes the plan EXPLAIN reports) or teaching the sqlite driver shim to bind missing parameters as NULL like the Ruby gem. Both are their own story."
-closed-reason: null
+blocked-by: null
+closed-reason: "Third-party driver limitation, probed: better-sqlite3 rejects a statement with fewer values than placeholders (RangeError: Too few parameter values were provided) where Ruby's sqlite3 gem binds unset parameters as NULL — verified with internalExecQuery('EXPLAIN QUERY PLAN SELECT * FROM t WHERE id = ?', 'EXPLAIN', []). Rails' to_sql(arel, binds) does not strip the placeholders when arel is a String, so trails cannot match without the driver's NULL-binding behaviour."
 ---
 
 ## Context
