@@ -2,7 +2,7 @@
 title: "Restore AbstractAdapter mixin wiring to module-evaluation time now that base.ts is out of the cycle"
 status: blocked
 updated: 2026-08-25
-rfc: "0119-connection-adapter-fidelity"
+rfc: "0144-adapter-module-load-cycles"
 cluster: null
 deps: ["break-schema-statements-join-table-cycle-blocking-module-eval-includes"]
 deps-rfc: []

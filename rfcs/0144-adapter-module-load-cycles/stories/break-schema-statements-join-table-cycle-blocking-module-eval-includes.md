@@ -2,7 +2,7 @@
 title: "Break the schema-statements -> join-table -> model-schema cycle so AbstractAdapter's includes can return to the class body"
 status: blocked
 updated: 2026-08-25
-rfc: "0119-connection-adapter-fidelity"
+rfc: "0144-adapter-module-load-cycles"
 cluster: null
 packages: []
 deps: ["association-tdz-on-entry-module"]
