@@ -44,6 +44,11 @@ Rails' `Relation#delete_all` wraps in `model.with_connection do |c|`
 `c` through the arel build and the `delete` call. The other `_conn()`
 callers need the same check against their Rails bodies.
 
+The same fallback shape sits in `packages/activerecord/src/persistence.ts:234`
+`_updateRecord` (`threadedConnectionFor(...) ?? this.connection`), 1 hit in the
+same measurement. Rails wraps it in `with_connection do |c|`
+(`vendor/rails/activerecord/lib/active_record/persistence.rb:277`).
+
 ## Acceptance criteria
 
 - `Relation#deleteAll` (and each other `_conn()` caller whose Rails body uses
@@ -51,5 +56,7 @@ callers need the same check against their Rails bodies.
   mirroring `relation.rb:1022`.
 - `_conn()`'s `this._model.connection` fallback is removed, or each
   remaining caller is justified against its Rails body.
+- `persistence.ts` `_updateRecord` borrows via `withConnection`, mirroring
+  `persistence.rb:277`.
 - Re-measure with the RFC 0073 gate instrumentation: no hits from
-  `relation.ts`.
+  `relation.ts` or `persistence.ts`.
