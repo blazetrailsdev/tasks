@@ -1,7 +1,7 @@
 ---
 title: "scope-pg-lane-apt-update-to-pgdg-list"
-status: claimed
-updated: 2026-09-09
+status: ready
+updated: 2026-09-10
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 10
 priority: 1
 pr: null
-claim: "2026-09-09T17:47:09Z"
-assignee: "dean"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
