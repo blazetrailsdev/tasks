@@ -443,7 +443,7 @@ tooling.
 - `size-and-file-assertion-work-for-widened-packages` — Size the newly measured assertion debt and file its burndown stories (160 LOC)
 - `widen-assertion-report-packages-and-seed-mark` — Measure assertion parity for the whole in-scope closure, not just activerecord (200 LOC)
 
-**Wave 2 — name gap** (20 stories, ~7610 est-LOC)
+**Wave 2 — name gap** (21 stories, ~8160 est-LOC)
 
 - `measure-fixtures-enrollment-gap` — Measure the real fixtures gap once the stale exclusion lifts (150 LOC)
 - `port-activemodel-type-temporal-cases` — Port activemodel's three remaining type/date, type/time and type/date_time cases (200 LOC)
@@ -453,7 +453,8 @@ tooling.
 - `port-date-and-time-compatibility-and-zone-cases` — Port date_and_time compatibility, date/date_time ext and zone cases (46) (500 LOC)
 - `port-fixture-set-file-and-test-fixtures-cases` — Port fixture_set/file_test.rb and test_fixtures_test.rb (19 tests) (350 LOC)
 - `port-fixtures-test-cases-first-half` — Port fixtures_test.rb, first half (500 LOC)
-- `port-fixtures-test-cases-second-half` — Port fixtures_test.rb, second half (500 LOC)
+- `port-fixtures-test-cases-second-half` — Port fixtures_test.rb, second half (lines 954-1477) (600 LOC)
+- `port-fixtures-test-cases-tail` — Port fixtures_test.rb, tail (lines 1480-1847) (450 LOC)
 - `port-i18n-remaining-cases` — Port i18n's 16 remaining tests (RFC 0074 is closed; they are unowned) (400 LOC)
 - `port-inflector-dependencies-and-in-closure-residue` — Port inflector, transliterate, dependencies/autoload and the in-closure residue (~60) (500 LOC)
 - `port-migration-column-attributes-and-positioning` — Port migration/column_attributes_test.rb and column_positioning_test.rb (18 missing) (400 LOC)

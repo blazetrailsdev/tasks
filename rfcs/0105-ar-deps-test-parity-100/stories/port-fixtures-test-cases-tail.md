@@ -1,13 +1,14 @@
 ---
 title: "Port fixtures_test.rb, tail (lines 1480-1847)"
 status: ready
-updated: 2026-08-13
+updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
   - "activerecord"
 deps:
   - "measure-fixtures-enrollment-gap"
+  - "port-fixtures-test-cases-second-half"
 deps-rfc: []
 est-loc: 450
 priority: null
@@ -49,9 +50,14 @@ otherwise give it a case-level `tests:` exclusion with that reason.
 
 ## Acceptance criteria
 
-- Every case above exists with the Rails name verbatim and passes on all three
-  adapter lanes, or has a case-level `tests:` exclusion with a specific reason.
-- Fixture sets come from the canonical corpus declared through
-  `fixtures({ ... })`; no bespoke tables, no invented fixture rows.
-- `pnpm parity:test -- --package activerecord` shows `fixtures_test.rb` missing
-  at 0.
+- [ ] Every case above exists with the Rails name verbatim and passes on all three
+      adapter lanes, or has a case-level `tests:` exclusion with a specific reason.
+- [ ] Fixture sets come from the canonical corpus declared through
+      `fixtures({ ... })`; no bespoke tables, no invented fixture rows.
+- [ ] `pnpm parity:test -- --package activerecord` shows `fixtures_test.rb` missing
+      at 0.
+
+## Verification
+
+`pnpm parity:test -- --package activerecord` from a trails checkout: the
+`fixtures_test.rb` row reads `missing 0`, `misplaced 0`.
