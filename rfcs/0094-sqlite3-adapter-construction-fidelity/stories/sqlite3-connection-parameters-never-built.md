@@ -73,8 +73,9 @@ breath.
 - [ ] `connect` / `reconnect` open the driver from that member; no driver
       argument is re-derived from `_filename` / `_readonly` / `_config` at
       connect time.
-- [ ] `default_transaction_mode` is the single source for the transaction mode —
-      the `BEGIN IMMEDIATE` the transaction path emits reads it rather than
-      hard-coding it.
+- [ ] `begin_db_transaction` keeps Rails' hard-coded `:immediate`
+      (`sqlite3/database_statements.rb:32-34`); `default_transaction_mode` is
+      carried in `_connectionParameters` for the driver, not read by the
+      transaction path.
 - [ ] `sqlite3-adapter.hash-constructor.test.ts` and the sqlite3 adapter suites
       pass unchanged; no emitted-SQL change on any lane.
