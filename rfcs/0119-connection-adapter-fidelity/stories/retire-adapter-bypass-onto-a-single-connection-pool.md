@@ -1,6 +1,6 @@
 ---
 title: "_adapter is a reader bypass where Rails has only connection_pool"
-status: ready
+status: claimed
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -14,8 +14,8 @@ deps-rfc: []
 est-loc: 200
 priority: 60
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-10T20:58:58Z"
+assignee: "retire-adapter-bypass-onto-a-single-connection-pool"
 blocked-by: null
 closed-reason: null
 ---

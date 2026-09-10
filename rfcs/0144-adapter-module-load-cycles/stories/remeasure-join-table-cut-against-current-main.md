@@ -1,6 +1,6 @@
 ---
 title: "Re-measure the join-table/model-schema cut on current main and rewrite both blockers"
-status: ready
+status: in-progress
 updated: 2026-09-10
 rfc: "0144-adapter-module-load-cycles"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: tasks#98
+claim: "2026-09-10T20:38:29Z"
+assignee: "remeasure-join-table-cut-against-current-main"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Stop unscoped concurrent flows from sharing one lease via executionContextId()'s zero fallback"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0146-exclusive-connection-leasing"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: trails#7672
+pr: null
 claim: "2026-09-10T19:11:56Z"
 assignee: "lease-identity-must-not-collapse-to-context-zero"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Retag the load_additional_types receipt PERMANENT, then close the pg-get-oid-type story"
-status: ready
+status: in-progress
 updated: 2026-09-10
 rfc: "0145-async-on-demand-adapter-lookups"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7675
+claim: "2026-09-10T20:43:37Z"
+assignee: "retag-load-additional-types-receipt-permanent-and-close"
 blocked-by: null
 closed-reason: null
 ---

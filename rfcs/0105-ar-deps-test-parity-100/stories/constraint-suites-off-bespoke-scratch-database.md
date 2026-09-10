@@ -1,6 +1,6 @@
 ---
 title: "Converge the constraint suites off the bespoke scratch database"
-status: claimed
+status: done
 updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#7673
 claim: "2026-09-10T19:56:32Z"
 assignee: "abstract-mysql-schema-test-fixtures-posts"
 blocked-by: null

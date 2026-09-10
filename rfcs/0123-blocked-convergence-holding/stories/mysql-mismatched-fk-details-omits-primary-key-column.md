@@ -1,17 +1,17 @@
 ---
 title: "mismatched_foreign_key_details omits primary_key_column; the lookup is deferred to a trails-only _enrichMismatchedForeignKey rebuild"
-status: blocked
-updated: 2026-08-25
+status: in-progress
+updated: 2026-09-10
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 110
-pr: null
+pr: trails#7676
 claim: "2026-08-25T16:58:47Z"
 assignee: "converge-duplicate-url-options-and-url-for"
-blocked-by: "Blocked on an awaitable exception-translation path (RFC 0076). Converging `mismatched_foreign_key_details` to include `primary_key_column` (abstract_mysql_adapter.rb:995) requires `column_for` — an async schema read in trails — inside `mismatchedForeignKeyDetails`, which is reached synchronously from AbstractMysqlAdapter#_translateException (abstract-mysql-adapter.ts:1472) and, through it, from AbstractAdapter#translateExceptionClass (abstract-adapter.ts:2583) at two sync call sites (abstract-adapter.ts:1324, :2417). Making the details lookup awaitable means making the whole translate path async; that is the RFC 0076 work this story's Converged shape already says to sequence after. The trails-only `_enrichMismatchedForeignKey` rebuild stays until then, carrying the existing @missingRailsCall receipt at abstract-mysql-adapter.ts:1381."
+blocked-by: null
 closed-reason: null
 ---
 

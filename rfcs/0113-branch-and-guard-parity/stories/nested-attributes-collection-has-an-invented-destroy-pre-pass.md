@@ -1,6 +1,6 @@
 ---
 title: "assign_nested_attributes_for_collection_association marks for destruction twice: delete the invented allow_destroy pre-pass"
-status: claimed
+status: done
 updated: 2026-09-10
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 38
-pr: null
+pr: trails#7674
 claim: "2026-09-10T19:57:09Z"
 assignee: "arel-column-early-returns-an-arel-node-past-rails-arms"
 blocked-by: null

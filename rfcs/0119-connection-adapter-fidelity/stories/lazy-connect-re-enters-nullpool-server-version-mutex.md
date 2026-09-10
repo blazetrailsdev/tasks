@@ -1,6 +1,6 @@
 ---
 title: "A pool-less adapter's first schema call re-enters NullPool#server_version and raises ThreadError"
-status: ready
+status: closed
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 120
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-10T20:36:09Z"
+assignee: "lazy-connect-re-enters-nullpool-server-version-mutex"
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise falsified by MRI: vendored Rails raises the identical ThreadError. SQLite3Adapter.new(adapter: 'sqlite3', database: ':memory:').database_version on a pool-less adapter raises 'StatementInvalid: ThreadError: deadlock; recursive locking' at connection_pool.rb:31 (NullPool#server_version), because Rails also connects lazily: with_raw_connection -> connect! -> reconnect! -> attempt_configure_connection -> check_version -> database_version re-enters the same Mutex. mysql2's create_table reaches database_version first via mariadb?/full_version, so Rails raises there too. Trails' pool-less BetterSQLite3Adapter already services createTable and databaseVersion as a first call without raising. No divergence to converge."
 ---
 
 ## Context

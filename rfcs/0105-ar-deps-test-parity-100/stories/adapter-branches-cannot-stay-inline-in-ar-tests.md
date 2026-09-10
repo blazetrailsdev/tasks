@@ -1,6 +1,6 @@
 ---
 title: "adapter branches cannot stay inline in AR test bodies"
-status: claimed
+status: done
 updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#7673
 claim: "2026-09-10T19:56:32Z"
 assignee: "abstract-mysql-schema-test-fixtures-posts"
 blocked-by: null

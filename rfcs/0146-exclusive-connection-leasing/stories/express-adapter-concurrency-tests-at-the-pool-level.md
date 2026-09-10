@@ -1,6 +1,6 @@
 ---
 title: "Express the four adapter-concurrency tests at the pool level, where Rails' guarantee lives"
-status: ready
+status: done
 updated: 2026-09-10
 rfc: "0146-exclusive-connection-leasing"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: 7672
 claim: null
 assignee: null
 blocked-by: null
