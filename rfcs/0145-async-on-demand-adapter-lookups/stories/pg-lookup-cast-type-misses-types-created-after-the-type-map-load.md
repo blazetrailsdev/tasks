@@ -2,7 +2,7 @@
 title: "lookup_cast_type misses a type created after the last type-map load, where Rails' live ::regtype resolves it"
 status: blocked
 updated: 2026-09-08
-rfc: "0119-connection-adapter-fidelity"
+rfc: "0145-async-on-demand-adapter-lookups"
 cluster: null
 packages: []
 deps: ["pg-get-oid-type-drops-the-on-demand-load-additional-types"]

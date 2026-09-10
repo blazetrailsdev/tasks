@@ -2,7 +2,7 @@
 title: "pg-get-oid-type-drops-the-on-demand-load-additional-types"
 status: blocked
 updated: 2026-09-08
-rfc: "0119-connection-adapter-fidelity"
+rfc: "0145-async-on-demand-adapter-lookups"
 cluster: null
 packages: []
 deps: []
