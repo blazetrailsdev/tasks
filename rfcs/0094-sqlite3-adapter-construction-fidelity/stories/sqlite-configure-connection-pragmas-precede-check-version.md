@@ -1,7 +1,7 @@
 ---
 title: "SQLite configure_connection runs pragmas before check_version on the sync-driver path"
-status: ready
-updated: 2026-09-09
+status: in-progress
+updated: 2026-09-10
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: 7662
+claim: "2026-09-10T12:43:31Z"
+assignee: "sqlite-configure-connection-pragmas-precede-check-version"
 blocked-by: null
 closed-reason: null
 ---

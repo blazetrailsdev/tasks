@@ -1,6 +1,6 @@
 ---
 title: "Port fixtures_test.rb, second half (lines 954-1477)"
-status: ready
+status: in-progress
 updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7660
+claim: "2026-09-10T12:33:30Z"
+assignee: "port-fixtures-test-cases-second-half"
 blocked-by: null
 closed-reason: null
 ---

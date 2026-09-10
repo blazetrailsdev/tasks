@@ -1,7 +1,7 @@
 ---
 title: "i18n's private sprintf duplicates Kernel#sprintf and should collapse onto ruby-compat"
-status: ready
-updated: 2026-09-09
+status: in-progress
+updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 170
-pr: null
-claim: null
-assignee: null
+pr: 7661
+claim: "2026-09-10T12:37:56Z"
+assignee: "mysql2-internal-execute-and-exec-query-overrides-rails-lacks"
 blocked-by: null
 closed-reason: null
 ---

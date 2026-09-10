@@ -1,6 +1,6 @@
 ---
 title: "sqlite3's _rawConnection accessor is non-nullable, so @raw_connection = nil has no spelling"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

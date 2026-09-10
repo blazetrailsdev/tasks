@@ -1,6 +1,6 @@
 ---
 title: "mysql2 spells @raw_connection as _client, so disconnect!/discard! name neither Rails statement"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

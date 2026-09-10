@@ -1,7 +1,7 @@
 ---
 title: "binmode-write-emits-latin1-where-mri-emits-the-strings-own-bytes"
-status: ready
-updated: 2026-09-09
+status: blocked
+updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: ["ruby-compat", "activerecord"]
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 200
 priority: 160
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-10T12:37:56Z"
+assignee: "mysql2-internal-execute-and-exec-query-overrides-rails-lacks"
+blocked-by: "rack multipart parser writes latin-1 binary strings from io.read into binmode tempfiles (packages/rack/src/multipart/parser.ts:240); UTF-8-encoding binmode strings corrupts non-ASCII uploads until rack (and other binary-string producers) can hand IO#write bytes"
 closed-reason: null
 ---
 

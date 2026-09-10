@@ -1,6 +1,6 @@
 ---
 title: "fixtures-inline-habtm-and-defaults-label"
-status: draft
+status: closed
 updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: implemented in port-fixtures-test-cases-second-half (PR #7660) per review"
 ---
 
 ## Context

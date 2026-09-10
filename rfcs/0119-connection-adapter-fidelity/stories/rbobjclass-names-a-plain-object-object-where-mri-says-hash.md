@@ -1,6 +1,6 @@
 ---
 title: "rbobjclass-names-a-plain-object-object-where-mri-says-hash"
-status: draft
+status: in-progress
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7661
+claim: "2026-09-10T12:52:03Z"
+assignee: "rbobjclass-names-a-plain-object-object-where-mri-says-hash"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Mysql2 and PG beginDeferredTransaction overrides drop the isolation level Rails branches on"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

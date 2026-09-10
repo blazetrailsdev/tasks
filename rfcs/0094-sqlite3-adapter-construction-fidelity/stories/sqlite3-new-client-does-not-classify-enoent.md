@@ -1,7 +1,7 @@
 ---
 title: "SQLite3Adapter.new_client does not classify Errno::ENOENT at open time"
-status: ready
-updated: 2026-09-09
+status: in-progress
+updated: 2026-09-10
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: 7662
+claim: "2026-09-10T12:43:31Z"
+assignee: "sqlite-configure-connection-pragmas-precede-check-version"
 blocked-by: null
 closed-reason: null
 ---
