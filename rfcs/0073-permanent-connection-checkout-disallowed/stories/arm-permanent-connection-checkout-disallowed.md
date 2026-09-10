@@ -8,6 +8,7 @@ deps:
   - route-fixture-machinery-off-deprecated-getter
   - resolve-model-schema-reflection-adapter-fallback
   - convert-residual-test-connection-call-sites
+  - relation-conn-fallback-reads-deprecated-connection
 deps-rfc: []
 est-loc: 20
 priority: 45

@@ -62,6 +62,27 @@ made every AR file fail at _collection_), `setup-second-pool.ts`,
 `encryption/test-helpers.ts:161`, `core.ts`, `insert-all.ts`. What remains is
 one fixture line, one production fallback, and a bounded test migration.
 
+### Re-measured 2026-09-10 (trails PR #7665)
+
+Same method over the 134 AR test files carrying a textual `.connection`, with
+the `_adapter` fast-path arm instrumented as well.
+
+| Source                                            | Hits | Disposition                                          |
+| ------------------------------------------------- | ---: | ---------------------------------------------------- |
+| `relation.ts` `_conn()` via `deleteAll`           |   10 | `relation-conn-fallback-reads-deprecated-connection` |
+| `persistence.ts:234` `_updateRecord`              |    1 | `relation-conn-fallback-reads-deprecated-connection` |
+| `connection-handling.test.ts:103`, `:145`, `:453` |    3 | Intentional — they test `.connection` itself         |
+| other test files                                  |    0 | Converted by #7665                                   |
+
+`_adapter` fast path: **114** hits, **0** on a permanent lease (100
+non-permanent, 14 on a model with no pool). The `connection()` gate is
+therefore deliberately narrower than `connection_handling.rb:274-295` for
+direct-adapter models: hoisting it above the short-circuit would raise nothing
+and would crash the no-pool models with `ConnectionNotEstablished`. The gap
+closes with `retire-direct-adapter-with-connection-shim`. This is recorded
+here rather than at the line because `blazetrails/no-freeform-comments`
+forbids an English comment there, and none of its structured directives fits.
+
 ## Method (reproducing the measurement)
 
 The numbers above are measured, not grepped. To re-run after any story lands:
@@ -71,12 +92,13 @@ The numbers above are measured, not grepped. To re-run after any story lands:
    `console.warn` printing the first non-internal stack frame. **This step is
    required** — with the raise armed, every AR file fails at _collection_ and
    you get one violation, not an inventory.
-3. Run every AR test file carrying a textual `.connection` (129 files) and
+3. Run every AR test file carrying a textual `.connection` (134 files as of
+   2026-09-10; re-derive the list with `grep -rlE` rather than reusing a count) and
    aggregate the warned frames.
 4. Revert both edits.
 
-A textual grep is not a substitute. `Base\.connection` over the AR suite reports
-114 files / 440 sites, which over-counts the tests by roughly 13× (most sites sit
+A textual grep is not a substitute. `Base\.connection` over the AR suite reported
+114 files / 440 sites on 2026-07-25, which over-counts the tests by roughly 13× (most sites sit
 behind a fixture pin and never reach the gate) _and_ misses the real defects —
 the two production bugs #5323 fixed spelled it `this.connection` and
 `model.connection`. Only the armed gate enumerates this accurately.
