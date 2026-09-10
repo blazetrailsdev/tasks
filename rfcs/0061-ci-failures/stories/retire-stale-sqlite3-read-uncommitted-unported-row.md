@@ -1,6 +1,6 @@
 ---
 title: "unported-live-test is red on main: sqlite3 read_uncommitted row claims a live test"
-status: draft
+status: closed
 updated: 2026-09-10
 rfc: "0061-ci-failures"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of retire-stale-read-uncommitted-suppression (RFC 0119), which predates it and is better sourced: it names the story that left the row behind (sqlite3-read-uncommitted-shared-cache-skip), the exact row at scripts/parity/unported-files/unscoped.ts:442-448, and the Rails cite (adapters/sqlite3/transaction_test.rb:42-56). Filed mine after grepping only 0061/0105/0113 and missing it under 0119."
 ---
 
 ## Context

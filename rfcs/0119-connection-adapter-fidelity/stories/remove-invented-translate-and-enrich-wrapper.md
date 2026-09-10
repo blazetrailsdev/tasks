@@ -1,6 +1,6 @@
 ---
 title: "Remove mysql2's invented _translateAndEnrich wrapper; the enrichment is Rails' query_parser lambda"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

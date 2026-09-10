@@ -1,6 +1,6 @@
 ---
 title: "Port fixture_set/{table_rows,table_row,model_metadata}.rb out of fixtures.ts"
-status: draft
+status: closed
 updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of converge-fixture-row-building-onto-table-rows (RFC 0130), which predates it and owns the same convergence — reshaping fixtures.ts' row-building onto FixtureSet#table_rows / TableRow requires exactly these three modules. Its unique content (the three fixture_set/*.rb files with Rails line numbers, the three unported-files pattern rows, the fixtures.ts:74 receipt deletion, and the out-of-scope note on the #table_rows case exclusions) moved onto that story in blazetrailsdev/tasks#81."
 ---
 
 ## Context

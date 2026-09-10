@@ -1,6 +1,6 @@
 ---
 title: "AbstractMysqlAdapter's exec_rollback and begin_isolated transaction bodies discard their result"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

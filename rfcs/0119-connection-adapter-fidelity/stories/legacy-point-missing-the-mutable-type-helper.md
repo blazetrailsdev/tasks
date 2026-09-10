@@ -1,6 +1,6 @@
 ---
 title: "LegacyPoint drops include Helpers::Mutable, so changed_in_place? and mutable? are missing"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

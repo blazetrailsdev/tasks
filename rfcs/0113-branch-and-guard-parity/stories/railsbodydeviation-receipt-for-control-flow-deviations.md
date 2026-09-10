@@ -1,6 +1,6 @@
 ---
 title: "No receipt shape for a language-forced control-flow deviation in a ported body"
-status: draft
+status: closed
 updated: 2026-09-10
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Contrary to a settled maintainer decision (2026-08-27), recorded in close-jsdoc-bypass-in-no-freeform-comments (RFC 0023, done): 'trails carries no English-language comments — only our JSDoc flags and the tool directives the toolchain reads, with no narrative prose around them', and prose dies 'including inside a JSDoc block that also carries a tag'. A fourth tag whose purpose is to make tag-anchored prose survive --fix is exactly what that ruled out, so this is re-arguing a decision rather than converging toward Rails. Verified on origin/main that even a bare 'Mirrors:' line is rejected in activerecord, so the no-in-file-citation constraint is real and intended, not a gap."
 ---
 
 ## Context
