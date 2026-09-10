@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 applies dqs_ddl/dqs_dml as pragmas where Rails passes strict at open"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null

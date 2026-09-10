@@ -1,6 +1,6 @@
 ---
 title: "Port fixtures_test.rb, tail (lines 1480-1847)"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
