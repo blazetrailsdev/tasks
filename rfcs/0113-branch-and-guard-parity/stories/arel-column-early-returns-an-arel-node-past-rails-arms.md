@@ -1,7 +1,7 @@
 ---
 title: "arel_column opens with an Arel-node early return Rails does not have, and feeds the block a node"
-status: ready
-updated: 2026-09-06
+status: claimed
+updated: 2026-09-10
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: 24
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-10T19:57:09Z"
+assignee: "arel-column-early-returns-an-arel-node-past-rails-arms"
 blocked-by: null
 closed-reason: null
 ---

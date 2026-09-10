@@ -1,7 +1,7 @@
 ---
 title: "has-inverse-returns-the-inverse-name"
-status: ready
-updated: 2026-09-06
+status: claimed
+updated: 2026-09-10
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-10T19:57:09Z"
+assignee: "arel-column-early-returns-an-arel-node-past-rails-arms"
 blocked-by: null
 closed-reason: null
 ---

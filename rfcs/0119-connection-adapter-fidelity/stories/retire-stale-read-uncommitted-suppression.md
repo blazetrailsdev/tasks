@@ -1,6 +1,6 @@
 ---
 title: "retire-stale-read-uncommitted-suppression"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 10
-pr: trails#7670
+pr: 7670
 claim: "2026-09-10T18:29:19Z"
 assignee: "retire-stale-read-uncommitted-suppression"
 blocked-by: null

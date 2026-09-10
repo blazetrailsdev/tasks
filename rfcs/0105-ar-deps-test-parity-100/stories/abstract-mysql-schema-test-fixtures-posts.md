@@ -1,6 +1,6 @@
 ---
 title: "abstract-mysql SchemaTest hand-inserts a posts row where Rails declares fixtures :posts"
-status: ready
+status: claimed
 updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-10T19:56:32Z"
+assignee: "abstract-mysql-schema-test-fixtures-posts"
 blocked-by: null
 closed-reason: null
 ---
