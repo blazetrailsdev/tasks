@@ -1,7 +1,7 @@
 ---
 rfc: "0144-adapter-module-load-cycles"
 title: "Break the module-load cycles that keep mixin wiring out of module scope"
-status: active
+status: closed
 created: 2026-09-10
 updated: 2026-09-10
 owner: "@deanmarano"

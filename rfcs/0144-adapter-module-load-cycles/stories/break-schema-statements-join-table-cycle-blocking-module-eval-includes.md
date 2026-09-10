@@ -1,6 +1,6 @@
 ---
 title: "Break the schema-statements -> join-table -> model-schema cycle so AbstractAdapter's includes can return to the class body"
-status: ready
+status: in-progress
 updated: 2026-09-10
 rfc: "0144-adapter-module-load-cycles"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["association-tdz-on-entry-module"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7678
+claim: "2026-09-10T22:15:10Z"
+assignee: "break-schema-statements-join-table-cycle-blocking-module-eval-includes"
 blocked-by: null
 closed-reason: null
 ---

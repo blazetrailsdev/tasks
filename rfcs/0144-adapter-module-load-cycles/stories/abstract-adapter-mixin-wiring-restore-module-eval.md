@@ -1,6 +1,6 @@
 ---
 title: "Restore AbstractAdapter mixin wiring to module-evaluation time now that base.ts is out of the cycle"
-status: blocked
+status: done
 updated: 2026-09-10
 rfc: "0144-adapter-module-load-cycles"
 cluster: null
@@ -8,10 +8,10 @@ deps: ["break-schema-statements-join-table-cycle-blocking-module-eval-includes"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#7678
 claim: "2026-08-25T15:38:33Z"
 assignee: "pg-table-definition-takes-unlogged-as-an-option-rails-reads-the-adapter"
-blocked-by: "Re-measured 2026-09-10 on main 13ca39d0b (story remeasure-join-table-cut-against-current-main): waits only on dep break-schema-statements-join-table-cycle-blocking-module-eval-includes, now ready. With migration/join-table.ts -> model-schema.ts AND migration.ts:47 (DEFAULT_ENV from connection-handling.ts) both cut to zero-import slots, the mixin block runs at module scope: adapter-graph-import-tdz.test.ts green, and plain-node imports of built dist entered at schema-statements, relation, associations, model-schema, collection-proxy, abstract-adapter, base and index all load."
+blocked-by: null
 closed-reason: null
 ---
 
