@@ -52,11 +52,13 @@ same measurement. Rails wraps it in `with_connection do |c|`
 ## Acceptance criteria
 
 - `Relation#deleteAll` (and each other `_conn()` caller whose Rails body uses
-  `with_connection`) borrows via `withConnection` and threads the connection,
+  `with_connection`) borrows via `withPooledOrDirectConnection` and threads the connection,
   mirroring `relation.rb:1022`.
 - `_conn()`'s `this._model.connection` fallback is removed, or each
   remaining caller is justified against its Rails body.
-- `persistence.ts` `_updateRecord` borrows via `withConnection`, mirroring
+- `persistence.ts` `_updateRecord` borrows via `withPooledOrDirectConnection`
+  (the RFC's constraint 1: `withConnection` raises for direct-adapter and HABTM
+  models until `retire-direct-adapter-with-connection-shim` lands), mirroring
   `persistence.rb:277`.
 - Re-measure with the RFC 0073 gate instrumentation: no hits from
   `relation.ts` or `persistence.ts`.

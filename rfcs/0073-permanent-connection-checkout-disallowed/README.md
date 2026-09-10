@@ -92,12 +92,13 @@ The numbers above are measured, not grepped. To re-run after any story lands:
    `console.warn` printing the first non-internal stack frame. **This step is
    required** — with the raise armed, every AR file fails at _collection_ and
    you get one violation, not an inventory.
-3. Run every AR test file carrying a textual `.connection` (129 files) and
+3. Run every AR test file carrying a textual `.connection` (134 files as of
+   2026-09-10; re-derive the list with `grep -rlE` rather than reusing a count) and
    aggregate the warned frames.
 4. Revert both edits.
 
-A textual grep is not a substitute. `Base\.connection` over the AR suite reports
-114 files / 440 sites, which over-counts the tests by roughly 13× (most sites sit
+A textual grep is not a substitute. `Base\.connection` over the AR suite reported
+114 files / 440 sites on 2026-07-25, which over-counts the tests by roughly 13× (most sites sit
 behind a fixture pin and never reach the gate) _and_ misses the real defects —
 the two production bugs #5323 fixed spelled it `this.connection` and
 `model.connection`. Only the armed gate enumerates this accurately.
