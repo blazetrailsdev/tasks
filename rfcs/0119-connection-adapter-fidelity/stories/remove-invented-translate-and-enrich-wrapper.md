@@ -1,7 +1,7 @@
 ---
 title: "Remove mysql2's invented _translateAndEnrich wrapper; the enrichment is Rails' query_parser lambda"
-status: claimed
-updated: 2026-09-09
+status: in-progress
+updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 39
-pr: null
+pr: 7657
 claim: "2026-09-09T23:42:02Z"
 assignee: "remove-invented-translate-and-enrich-wrapper"
 blocked-by: null

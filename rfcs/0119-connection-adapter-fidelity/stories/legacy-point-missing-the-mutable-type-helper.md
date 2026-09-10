@@ -1,7 +1,7 @@
 ---
 title: "LegacyPoint drops include Helpers::Mutable, so changed_in_place? and mutable? are missing"
-status: claimed
-updated: 2026-09-09
+status: in-progress
+updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 90
-pr: null
+pr: 7657
 claim: "2026-09-09T23:42:02Z"
 assignee: "remove-invented-translate-and-enrich-wrapper"
 blocked-by: null

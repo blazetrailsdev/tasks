@@ -1,7 +1,7 @@
 ---
 title: "port-fixture-set-render-context-binary"
-status: draft
-updated: 2026-09-09
+status: closed
+updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise falsified and the work shipped in #7655: File.binread (ruby-compat io.ts:583, inherited by File) and pack(…, 'm0') (array.ts:65, what Base64.strict_encode64 packs) both already exist, so RenderContext#binary needed no new ruby-compat surface and is ported in fixture-set/render-context.ts."
 ---
 
 ## Context
