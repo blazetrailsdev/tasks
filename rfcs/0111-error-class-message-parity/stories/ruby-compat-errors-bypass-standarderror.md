@@ -24,10 +24,13 @@ descendant of it:
 
 ```text
 StandardError
-  ArgumentError, RuntimeError, TypeError, IOError, IndexError (< KeyError),
-  NameError (< NoMethodError), NotImplementedError (< ScriptError in <3.0,
-  StandardError-rescuable in practice), FrozenError (< RuntimeError), ...
+  ArgumentError, RuntimeError, TypeError, IOError, IndexError (> KeyError),
+  NameError (> NoMethodError), FrozenError (< RuntimeError), ...
 ```
+
+`NotImplementedError` is NOT in this tree: MRI reports its ancestors as
+`[NotImplementedError, ScriptError, Exception]`, so a bare `rescue` does not
+catch it. It stays outside `StandardError` and out of this story's scope.
 
 `rescue => e` with no class named rescues `StandardError`, so in Ruby a bare
 `rescue` catches all of these. trails#7587 added
@@ -43,7 +46,7 @@ class still extends `Error` directly:
   `no-method-error.ts:12` inherits through it, already correct relative to
   `NameError`)
 - `io-error.ts`, `eof-error.ts`, `encoding-error.ts`, `float-domain-error.ts`,
-  `frozen-error.ts`, `not-implemented-error.ts`
+  `frozen-error.ts`
 
 So `catch (e) { if (e instanceof StandardError) }` — the JS spelling of Ruby's
 bare `rescue` — matches only the one class that PR added, and a port of a Ruby
