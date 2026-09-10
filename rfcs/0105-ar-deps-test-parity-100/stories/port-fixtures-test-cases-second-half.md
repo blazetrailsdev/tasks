@@ -1,5 +1,5 @@
 ---
-title: "Port fixtures_test.rb, second half"
+title: "Port fixtures_test.rb, second half (lines 954-1477)"
 status: ready
 updated: 2026-08-13
 rfc: "0105-ar-deps-test-parity-100"
@@ -9,7 +9,7 @@ packages:
 deps:
   - "measure-fixtures-enrollment-gap"
 deps-rfc: []
-est-loc: 500
+est-loc: 600
 priority: null
 pr: null
 claim: null
@@ -20,73 +20,69 @@ closed-reason: null
 
 ## Context
 
-`vendor/rails/activerecord/test/cases/fixtures_test.rb` is 153 Rails tests, the
-largest single file returning to activerecord's denominator when RFC 0023's
-`reenroll-fixtures-tests-stale-unported-exclusion` lands. Our counterpart is
-`packages/activerecord/src/fixtures.test.ts` (32 cases today) against
-`packages/activerecord/src/fixtures.ts` (the port of
-`vendor/rails/activerecord/lib/active_record/fixtures.rb`, with `create_fixtures`
-at `fixtures.rb:595`).
+Measured by `measure-fixtures-enrollment-gap` on trails `8f12d45ff`
+(`pnpm parity:test -- --package activerecord`), after
+`reenroll-fixtures-tests-stale-unported-exclusion` enrolled the file per case:
 
-This story ports the second half of the missing cases, as split by `measure-fixtures-enrollment-gap` — claim
-that story's output before starting, and keep the two halves non-overlapping so
-the sibling PR does not conflict.
+| Rails file                 | Rails | excluded | matched | missing | misplaced |
+| -------------------------- | ----- | -------- | ------- | ------- | --------- |
+| `fixtures_test.rb`         | 153   | 49       | 23      | 81      | 0         |
+| `fixture_set/file_test.rb` | 14    | 1        | 13      | 0       | 0         |
+| `test_fixtures_test.rb`    | 5     | 2        | 3       | 0       | 0         |
 
-Related and NOT duplicated here: RFC 0023's
-`port-fixtures-test-rb-fixture-declarations` covers declaring the 34 fixture
-sets `FixturesTest` dereferences via `fixtures(Ellipsis)` and removing
-`packages/activerecord/src/fixtures.test.ts` from
-`eslint/expected-fixtures-exclude.json`. That declaration work is a prerequisite
-in practice — a ported case that dereferences an undeclared fixture set will not
-run — so coordinate rather than re-doing it.
+The first half (lines 41-952, PR #7652) and
+`port-fixture-set-file-and-test-fixtures-cases` (PR #7655) are complete: every
+one of the 81 missing cases sits at line 954 or later. None uses `Marshal`, and
+none depends on ERB preprocessing — the ERB-bearing Rails fixture files
+(`developers.yml`, `mateys.yml`, `pirates.yml`, …) are already rendered into the
+TS corpus under `packages/activerecord/src/test-helpers/fixtures/`.
 
-## The split
+81 cases do not fit one PR, so the remainder is split at the class boundary at
+`fixtures_test.rb:1480`. This story is lines 954-1477 (52 cases); lines
+1480-1847 (29 cases) are `port-fixtures-test-cases-tail`.
 
-The halves are split at the Rails class boundary in
-`vendor/rails/activerecord/test/cases/fixtures_test.rb`, so the two PRs touch
-disjoint regions of the file and disjoint `describe` blocks in
-`packages/activerecord/src/fixtures.test.ts`:
+## Missing cases (`vendor/rails/activerecord/test/cases/fixtures_test.rb`)
 
-- **First half — lines 41-952**, `FixturesTest` (41) through
-  `FixturesWithForeignKeyViolationsTest` (887-952). 70 Rails cases.
-- **Second half — lines 954-1847**, `OverRideFixtureMethodTest` (954) through
-  the end of the file (last class: `MultipleFixtureConnectionsTest`, 1645). 83 Rails cases.
+- `OverRideFixtureMethodTest` (963): fixture methods can be overridden
+- `FixtureWithSetModelClassTest` (976, 980): uses fixture class defined in
+  yaml; loads the associations to fixtures with set model class
+- `SetFixtureClassPrevailsTest` (996): uses set fixture class
+- `FixtureWithSetModelClassPrevailsOverNamingConventionTest` (1002): model
+  class in fixture file is respected
+- `CheckSetTableNameFixturesTest` (1018): table method
+- `FixtureNameIsNotTableNameFixturesTest` (1030): named accessor
+- `FixtureNameIsNotTableNameMultipleFixturesTest` (1042, 1046): named accessor
+  of differently named fixture; named accessor of same named fixture
+- `CustomConnectionFixturesTest` (1056, 1061) and
+  `TransactionalFixturesOnCustomConnectionTest` (1071, 1076): leaky destroy; it
+  twice in whatever order to check for fixture leakage
+- `TransactionalFixturesOnConnectionNotification` (1085, 1108, 1136)
+- `InvalidTableNameFixturesTest` (1180): raises error
+- `CheckEscapedYamlFixturesTest` (1194): proper escaped fixture
+- `ManyToManyFixturesWithClassDefined` (1203): this should run cleanly
+- `FixturesBrokenRollbackTest` (1223): no rollback in teardown unless
+  transaction active
+- `LoadAllFixturesTest` / `LoadAllFixturesWithArrayTest` /
+  `LoadAllFixturesWithPathnameTest` (1238, 1251, 1264): all there
+- `FasterFixturesTest` (1286): cache
+- `FoxyFixturesTest` (1314-1477): all 29 cases
 
-`FixturesWithForeignKeyViolationsTest` already has a `describe` on our side, so
-the boundary also keeps the one pre-existing Rails-named block on the first
-half's side.
+## Exclusion candidates
+
+The three `all there` cases scan `fixture_paths` directories on disk for
+`fixtures :all` (`fixtures_test.rb:1238-1275`) and assert on the `.yml` layout
+under `test/fixtures/all`, the same missing surface as the existing
+`fixtures_test.rb` YAML-path row in `scripts/parity/unported-files/unscoped.ts`.
+Try porting `fixtures :all` against the TS corpus first; exclude them case by
+case, with that reason, only if it cannot be made to work. The fourth such case,
+`FileFixtureConflictTest` (1627), is in the tail story.
 
 ## Acceptance criteria
 
-- Every case in this half exists with the Rails name verbatim and passes on all
-  three adapter lanes.
-- Fixture sets come from the canonical corpus
-  (`packages/activerecord/src/test-helpers/fixtures/`) declared through
-  `fixtures({ ... })`; no bespoke tables, no invented fixture rows
-  (`vendor/rails/activerecord/test/fixtures/` is the source of truth).
-- Cases that genuinely cannot port land as case-level `tests:` exclusions with
-  specific reasons, not as `it.skip` stubs.
-- `pnpm parity:test -- --package activerecord` shows the missing count for
-  `fixtures_test.rb` down by this half, `skipped` unchanged at 0.
-
-### Ordering note: two criteria depend on the enrollment landing first
-
-The second and third criteria above — case-level `tests:` exclusions, and a
-reduced `missing` count — both presuppose that
-`vendor/rails/activerecord/test/cases/fixtures_test.rb` is enrolled. It is not:
-`scripts/parity/unported-files/unscoped.ts:120-128` still carries it as a
-**whole-file** row, and `UnportedFile` in
-`scripts/parity/unported-files/types.ts` types `tests?: never` on every
-whole-file variant, so a per-case exclusion for this file cannot be written
-while that row stands — it is a type error, not a stylistic choice.
-
-Narrowing that row is `reenroll-fixtures-tests-stale-unported-exclusion`
-(RFC 0023, currently `draft`), which also owns the compare-enrollment ratchet
-registrations the narrowing needs. It is deliberately NOT a `deps` edge here:
-that story is `draft` under a standing catch-all RFC that never closes, so the
-edge would park both halves indefinitely — the same trap
-`measure-fixtures-enrollment-gap` documents for `deps-rfc`.
-
-So the porting halves can proceed and land their cases; the two criteria above
-are satisfied by the enrollment PR, which is also when the ported cases begin
-crediting.
+- Every case above exists with the Rails name verbatim and passes on all three
+  adapter lanes, or has a case-level `tests:` exclusion with a specific reason
+  (never an `it.skip` stub).
+- Fixture sets come from the canonical corpus declared through
+  `fixtures({ ... })`; no bespoke tables, no invented fixture rows.
+- `pnpm parity:test -- --package activerecord` shows `fixtures_test.rb` missing
+  down from 81 to 29 (the tail story's cases).
