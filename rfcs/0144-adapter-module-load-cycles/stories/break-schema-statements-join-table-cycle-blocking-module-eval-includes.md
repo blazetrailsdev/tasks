@@ -79,6 +79,9 @@ Candidate approaches, in preference order:
    cycle before reaching for one.
 2. If some other hop turns out to be a trails-only edge, cut that instead.
 
+As re-measured below, approach 1 alone is not enough on current main: the
+`migration.ts:47` `DEFAULT_ENV` hop must also become a zero-import slot.
+
 Do NOT re-document the deferral again — #7042 already did that, and the
 deviation register is a burndown ledger, not permission.
 
@@ -124,6 +127,11 @@ block to module scope.
 
 ## Acceptance criteria
 
+- [ ] Two zero-import slots, each set at the bottom of its defining module:
+      `deriveJoinTableName` (read by `migration/join-table.ts`, set by
+      `model-schema.ts`) and `DEFAULT_ENV` (read by `migration.ts`, set by
+      `connection-handling.ts`). Both are added to trails CLAUDE.md's
+      "Call-time constant resolution" slot list.
 - [ ] The mixin block runs at module-evaluation time;
       `ensureAbstractAdapterMixinsApplied` and its call site in the ctor are
       deleted.

@@ -42,6 +42,15 @@ verified directly (`Object.keys(undefined)` inside `include()`). The
 
 ### The fix works, and lands on a second cycle
 
+> **Superseded 2026-09-10** (story `remeasure-join-table-cut-against-current-main`,
+> trails main 13ca39d0b). PR 7061 retired the `associations.ts:6` force-load, and
+> the AR suite no longer fails at collection time with the cut applied. The one
+> surviving leg is
+> `schema-statements -> migration/command-recorder.ts:4 -> migration.ts:47 (DEFAULT_ENV) -> connection-handling -> connection-adapters -> abstract-adapter`,
+> which Rails also resolves at call time (`migration.rb:676,773,1341`). See
+> `break-schema-statements-join-table-cycle-blocking-module-eval-includes` for
+> the measurement. The text below records the 2026-08-25 measurement.
+
 `break-schema-statements-join-table-cycle-blocking-module-eval-includes`
 measured the zero-import slot: it **does** break the cycle (`scripts/test-deps/`
 green with the mixin block back at module scope) and then reds the entire AR
@@ -111,7 +120,8 @@ Strictly ordered, because each step is only measurable once the previous lands.
 
 ## Rollout
 
-1. Phase 1 — `associations.ts` eager force-load retirement (new story).
+1. Phase 1 — `associations.ts` eager force-load retirement (done in PR 7061;
+   re-measured by `remeasure-join-table-cut-against-current-main`).
 2. Phase 2 — `break-schema-statements-join-table-cycle-blocking-module-eval-includes`.
 3. Phase 3 — `abstract-adapter-mixin-wiring-restore-module-eval`.
 
