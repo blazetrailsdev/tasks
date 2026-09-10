@@ -82,6 +82,46 @@ Candidate approaches, in preference order:
 Do NOT re-document the deferral again — #7042 already did that, and the
 deviation register is a burndown ledger, not permission.
 
+## Re-measured on main 13ca39d0b (2026-09-10)
+
+Story `remeasure-join-table-cut-against-current-main` re-ran the cut. The
+earlier blocker (`associations.ts:6` force-loading `collection-proxy.ts`) is
+retired by PR 7061 and no longer applies.
+
+- Cutting only `migration/join-table.ts -> model-schema.ts` with a zero-import
+  slot, with the mixin block at module scope: AR suite files
+  (`migration/columns.test.ts`, `associations/has-many-associations.test.ts`)
+  collect and pass. Plain-node imports of the built `dist` entered at
+  `relation.js`, `associations.js`, `model-schema.js`,
+  `associations/collection-proxy.js`, `abstract-adapter.js`, `base.js` and
+  `index.js` all load. `associations.ts:3`'s bare `import "./relation.js"` is
+  **not** load-bearing: with it deleted as well, every one of those entries
+  still loads.
+- `adapter-graph-import-tdz.test.ts` and a plain-node entry at
+  `connection-adapters/abstract/schema-statements.js` still fail
+  (`include(AbstractAdapter, DatabaseStatements)` reads undefined under vitest,
+  `Cannot access 'SchemaStatements' before initialization` under node) through a
+  second leg:
+
+  ```text
+  connection-adapters/abstract/schema-statements.ts
+    -> migration/command-recorder.ts   (:4, IrreversibleMigration)
+    -> migration.ts                    (:47, DEFAULT_ENV)
+    -> connection-handling.ts
+    -> connection-adapters.ts
+    -> connection-adapters/abstract-adapter.ts
+  ```
+
+- Cutting `migration.ts:47` as well makes `adapter-graph-import-tdz.test.ts`
+  green, and the node entry at `schema-statements.js` loads.
+
+That second hop is also one Ruby resolves at call time: `migration.rb:676,773,1341`
+name `ActiveRecord::ConnectionHandling::DEFAULT_ENV` inside method bodies
+(defined at `connection_handling.rb:7`). So the converged shape is **two**
+zero-import slots — one for `deriveJoinTableName` (set by `model-schema.ts`),
+one for `DEFAULT_ENV` (set by `connection-handling.ts`) — plus moving the mixin
+block to module scope.
+
 ## Acceptance criteria
 
 - [ ] The mixin block runs at module-evaluation time;
