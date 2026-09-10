@@ -8,6 +8,8 @@ owner: "@deanmarano"
 packages:
   - "actionview"
   - "tse-compiler"
+  - "actionpack"
+  - "trailties"
 clusters: []
 priority: 2
 ---
