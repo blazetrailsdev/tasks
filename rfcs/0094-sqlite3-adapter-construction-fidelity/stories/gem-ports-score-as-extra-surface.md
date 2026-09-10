@@ -1,5 +1,5 @@
 ---
-title: "gem-ports-score-as-extra-surface"
+title: "Gem ports score as extra surface, forcing receipts on faithful gem code"
 status: draft
 updated: 2026-09-10
 rfc: "0094-sqlite3-adapter-construction-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: null
 pr: null
 claim: null
@@ -42,11 +42,9 @@ dependency of a Rails call site.
 ## Acceptance criteria
 
 - The extractor can attribute a trails file to a non-Rails Ruby source (the
-  gem), so names with a gem counterpart are scored as matched rather than as
-  novel/extra surface — or a reviewed decision is recorded that gem ports are
-  deliberately out of the compared population and receipts are their permanent
-  shape.
-- If the former: `setPragma`'s `@noRailsEquivalent` receipt in
+  gem), so a name with a gem counterpart is scored as matched rather than as
+  novel/extra surface.
+- `setPragma`'s `@noRailsEquivalent` receipt in
   `packages/activerecord/src/sqlite/pragmas.ts` is deleted, and the marks are
   tightened with `pnpm parity:api:extra:tighten`.
 - `SQLite3Exception` is exported so a caller can catch the gem's counterpart
