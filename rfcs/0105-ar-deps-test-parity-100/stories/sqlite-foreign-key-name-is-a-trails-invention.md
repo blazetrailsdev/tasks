@@ -1,7 +1,7 @@
 ---
 title: "sqlite-foreign-key-name-is-a-trails-invention"
-status: draft
-updated: 2026-08-30
+status: closed
+updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by #7277 (6b43d413a, section 8 'sqlite3 foreignKeys sets no :name'): git grep _parseForeignKeyNames on origin/main returns nothing; SQLite3Adapter#foreignKeys builds options from PRAGMA only; foreign-key.test.ts 'schema dumping with options' carries both Rails adapter arms."
 ---
 
 ## Context

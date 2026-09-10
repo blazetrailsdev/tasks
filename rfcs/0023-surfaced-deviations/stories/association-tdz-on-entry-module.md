@@ -1,7 +1,7 @@
 ---
 title: "associations/association.js TDZ-crashes when imported as an entry module"
-status: draft
-updated: 2026-08-24
+status: in-progress
+updated: 2026-09-10
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7669
+claim: "2026-09-10T18:42:47Z"
+assignee: "association-tdz-on-entry-module"
 blocked-by: null
 closed-reason: null
 ---

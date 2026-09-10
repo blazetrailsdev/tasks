@@ -1,6 +1,6 @@
 ---
 title: "Measure what PRs 7288 and 7056 already guarantee about concurrent entry on a leased adapter"
-status: ready
+status: done
 updated: 2026-09-10
 rfc: "0146-exclusive-connection-leasing"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 94
+claim: "2026-09-10T18:19:36Z"
+assignee: "measure-what-exclusive-leasing-already-guarantees"
 blocked-by: null
 closed-reason: null
 ---

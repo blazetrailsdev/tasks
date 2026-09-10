@@ -1,7 +1,7 @@
 ---
 title: "abstract-mysql SchemaTest hand-inserts a posts row where Rails declares fixtures :posts"
-status: draft
-updated: 2026-08-27
+status: ready
+updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []

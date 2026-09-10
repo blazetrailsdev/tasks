@@ -1,6 +1,6 @@
 ---
 title: "MySQL beginIsolatedDbTransaction issues two internalExecute calls where Rails issues one execute_batch"
-status: draft
+status: ready
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: null
+priority: 90
 pr: null
 claim: null
 assignee: null

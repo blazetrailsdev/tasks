@@ -1,17 +1,17 @@
 ---
 title: "retire-stale-read-uncommitted-suppression"
-status: draft
-updated: 2026-09-09
+status: in-progress
+updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 10
+pr: 7670
+claim: "2026-09-10T18:29:19Z"
+assignee: "retire-stale-read-uncommitted-suppression"
 blocked-by: null
 closed-reason: null
 ---

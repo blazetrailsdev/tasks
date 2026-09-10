@@ -1,6 +1,6 @@
 ---
 title: "Retire associations.ts's eager collection-proxy force-load so relation/associations stop being load-order dependent"
-status: ready
+status: done
 updated: 2026-09-10
 rfc: "0144-adapter-module-load-cycles"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7061
+claim: "2026-09-10T18:14:49Z"
+assignee: "retire-associations-eager-collection-proxy-force-load"
 blocked-by: null
 closed-reason: null
 ---

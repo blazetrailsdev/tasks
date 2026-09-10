@@ -1,14 +1,14 @@
 ---
 title: "A pool-less adapter's first schema call re-enters NullPool#server_version and raises ThreadError"
-status: draft
-updated: 2026-09-09
+status: ready
+updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null

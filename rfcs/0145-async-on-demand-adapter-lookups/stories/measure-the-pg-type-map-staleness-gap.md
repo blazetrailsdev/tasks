@@ -1,6 +1,6 @@
 ---
 title: "Enumerate Rails' PG type-map discovery points and warm trails' type map at each"
-status: ready
+status: closed
 updated: 2026-09-10
 rfc: "0145-async-on-demand-adapter-lookups"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-10T18:19:24Z"
+assignee: "measure-the-pg-type-map-staleness-gap"
 blocked-by: null
-closed-reason: null
+closed-reason: "RFC 0145 decision (user, 2026-09-10): a PG type created by raw execute or by another session after the type-map load is out of ActiveRecord's API on both sides. Rails' own DDL paths all reload_type_map (postgresql_adapter.rb:478,489,559,575,584,602,615) plus configure_connection (:996), and trails mirrors every one; the live ::regtype (quoting.rb:196) and load_additional_types([oid]) (:856) only recover from out-of-API staleness. getOidType/lookupCastType stay sync; no warming beyond the 8 points."
 ---
 
 ## Context

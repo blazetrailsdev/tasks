@@ -1,6 +1,6 @@
 ---
 title: "ConnectionPool has no MonitorMixin, so Rails' four bare synchronize blocks are unported"
-status: draft
+status: in-progress
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 30
+pr: 7670
+claim: "2026-09-10T18:29:19Z"
+assignee: "retire-stale-read-uncommitted-suppression"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "TimeWithZone#+ replaces Rails' duration guard, method_missing and rescue TypeError with a positive type dispatch"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []

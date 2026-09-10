@@ -1,7 +1,7 @@
 ---
 title: "pg-get-oid-type-drops-the-on-demand-load-additional-types"
 status: blocked
-updated: 2026-09-08
+updated: 2026-09-10
 rfc: "0145-async-on-demand-adapter-lookups"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-08T11:12:39Z"
 assignee: "execute-duplicated-on-adapters-and-wired-per-adapter"
-blocked-by: "Converging requires awaiting load_additional_types([oid]) inside getOidType, which pg-fetch-type-metadata-async-forces-a-union-on-the-abstract (merged) deliberately made synchronous so fetch_type_metadata / cast_result / new_column_from_field could stay synchronous as they are in Rails. A JS method cannot await; the only two outcomes available are (a) revert that merged story by making getOidType async, or (b) ratify the caller-side pre-load with a PERMANENT receipt. (b) is not an available outcome (converge, never ratify), so this needs an RFC-level decision on (a) before it can ship."
+blocked-by: "RFC 0145 decision (user, 2026-09-10): a PG type created by raw execute or by another session after the type-map load is out of ActiveRecord's API on both sides. Rails' own DDL paths all reload_type_map (postgresql_adapter.rb:478,489,559,575,584,602,615) plus configure_connection (:996), and trails mirrors every one; the live ::regtype (quoting.rb:196) and load_additional_types([oid]) (:856) only recover from out-of-API staleness. getOidType/lookupCastType stay sync; no warming beyond the 8 points. Remaining: retag postgresql-adapter.ts:574 '@missingRailsCall load_additional_types — CONVERGEABLE <this story>' to PERMANENT, then close this story (closing first reds stale-story-refs)."
 closed-reason: null
 ---
 

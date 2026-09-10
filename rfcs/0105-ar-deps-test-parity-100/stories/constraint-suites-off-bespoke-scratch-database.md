@@ -1,7 +1,7 @@
 ---
 title: "Converge the constraint suites off the bespoke scratch database"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []

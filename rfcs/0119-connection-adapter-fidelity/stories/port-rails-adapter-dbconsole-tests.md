@@ -1,14 +1,14 @@
 ---
 title: "port-rails-adapter-dbconsole-tests"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 120
 pr: null
 claim: null
 assignee: null

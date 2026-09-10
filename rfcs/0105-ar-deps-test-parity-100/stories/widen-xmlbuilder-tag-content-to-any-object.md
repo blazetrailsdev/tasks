@@ -1,7 +1,7 @@
 ---
 title: "Widen XmlBuilder#tag content to any object, as Builder::XmlMarkup does"
-status: draft
-updated: 2026-09-06
+status: ready
+updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []

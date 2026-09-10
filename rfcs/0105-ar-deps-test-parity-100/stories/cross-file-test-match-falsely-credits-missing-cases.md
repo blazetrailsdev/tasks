@@ -1,7 +1,7 @@
 ---
 title: "A Ruby case is credited by a same-named test in another file and class"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []

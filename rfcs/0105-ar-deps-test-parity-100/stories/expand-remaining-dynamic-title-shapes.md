@@ -1,7 +1,7 @@
 ---
 title: "Statically expand Object.entries/keys and derived const arrays so the last 15 dynamic titles match"
-status: draft
-updated: 2026-08-30
+status: ready
+updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []

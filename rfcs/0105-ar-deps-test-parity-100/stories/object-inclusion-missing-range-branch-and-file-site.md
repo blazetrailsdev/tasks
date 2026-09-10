@@ -1,7 +1,7 @@
 ---
 title: "Object#in? has no Range branch, no ArgumentError arm, and sits outside core_ext/object"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "Fixture harness pins a new pool concurrently with the test body; converge to Rails' synchronous pin and drop pinConnectionBang's lock"
-status: draft
+status: in-progress
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 40
+pr: 7670
+claim: "2026-09-10T18:29:19Z"
+assignee: "retire-stale-read-uncommitted-suppression"
 blocked-by: null
 closed-reason: null
 ---

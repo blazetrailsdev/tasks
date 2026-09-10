@@ -1,7 +1,7 @@
 ---
 title: "AbstractAdapter's lock defaults to the monitor where Rails installs NullLock"
 status: blocked
-updated: 2026-09-05
+updated: 2026-09-10
 rfc: "0146-exclusive-connection-leasing"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-05T18:26:52Z"
 assignee: "attribute-set-envelope-loses-unregistered-type-keys"
-blocked-by: "Converging the default to NullLock (abstract_adapter.rb:157) breaks a real trails correctness invariant that Rails gets for free from exclusive thread-leasing. Beyond the three abstract-adapter.lifecycle.trails.test.ts serialization cases named in the story, packages/activerecord/src/connection-adapters/postgresql-adapter.exec-query.trails.test.ts:322 'reads currval on the session that ran its own INSERT' fails: with the monitor gone, two concurrent execInsert calls on one adapter interleave their INSERT and their currval probe, so the second insert's id is read for the first. Rails' non-returning exec_insert (postgresql/database_statements.rb:45-61) issues those as two separate unlocked statements and is safe only because the connection is leased to one thread. Unblocking needs the pool to prevent concurrent entry on a leased connection — see synchronize-lock-barges-in-the-release-window and converge-acquire-connection-blocking-wait — not an adapter-level change."
+blocked-by: "Re-measured on main 15627671d (RFC 0146 Phase 1): with @lock defaulted to NullLock (abstract_adapter.rb:157, else arm :181-192) all four serialization cases still fail on ARCONN=postgresql and sqlite3_mem (4 failed / 26 passed; 30/30 without the patch). PRs 7288 and 7056 do not close the gap: they order waiters ACROSS execution contexts, but ConnectionPool#connectionLease (abstract/connection-pool.ts:924-929) keys the lease on executionContextId(), which is 0 for all unscoped code (execution-context.ts:20-21), so concurrent promises in ONE flow (Promise.all over execInsert, withRawConnection, reconnectBang, verifyBang) share one leased adapter and enter it concurrently. Residual: RFC 0146 Phase 2, exclusive entry on a leased adapter per logical flow. Unblocks once a leased adapter cannot be entered by two concurrent promises of one flow."
 closed-reason: null
 ---
 

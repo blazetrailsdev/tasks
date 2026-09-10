@@ -1,6 +1,6 @@
 ---
 title: "pack's m directive UTF-8-expands bytes 0x80..0xff instead of encoding them"
-status: draft
+status: ready
 updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null

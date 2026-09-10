@@ -1,7 +1,7 @@
 ---
 title: "the server_version barrier acquires the connection lock first, which Rails does not"
 status: blocked
-updated: 2026-09-09
+updated: 2026-09-10
 rfc: "0146-exclusive-connection-leasing"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Deleting the two connection.lock.synchronize(...) wrappers (pool-config.ts:84, abstract/connection-pool.ts:98 on origin/main) reinstates the #7592 A/B lock inversion until trails leases an adapter to one logical flow the way Ruby leases it to one thread. The prerequisite is abstract-adapter-lock-defaults-to-monitor-not-nulllock, itself blocked behind synchronize-lock-barges-in-the-release-window and converge-acquire-connection-blocking-wait. (port-abstract-adapter-lock-thread-setter, the story's other named neighbour, is already done via #7257.) The CLI in this tree has no set-deps verb, so the edge is recorded here rather than in deps."
+blocked-by: "Re-measured on main 15627671d (RFC 0146 Phase 1): with @lock defaulted to NullLock (abstract_adapter.rb:157, else arm :181-192) all four serialization cases still fail on ARCONN=postgresql and sqlite3_mem (4 failed / 26 passed; 30/30 without the patch). PRs 7288 and 7056 do not close the gap: they order waiters ACROSS execution contexts, but ConnectionPool#connectionLease (abstract/connection-pool.ts:924-929) keys the lease on executionContextId(), which is 0 for all unscoped code (execution-context.ts:20-21), so concurrent promises in ONE flow (Promise.all over execInsert, withRawConnection, reconnectBang, verifyBang) share one leased adapter and enter it concurrently. Residual: RFC 0146 Phase 2, exclusive entry on a leased adapter per logical flow. The pool-config.ts / connection-pool.ts connection.lock.synchronize wrappers can only go after that and after abstract-adapter-lock-defaults-to-monitor-not-nulllock."
 closed-reason: null
 ---
 
