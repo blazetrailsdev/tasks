@@ -91,8 +91,13 @@ Establish, in the pool rather than in the adapter, that a checked-out adapter
 cannot be re-entered concurrently. This is what lets `@lock` default to
 `NullLock` (Rails' shape) instead of a monitor that exists to paper over shared
 entry, and what makes the non-returning `exec_insert` two-statement sequence
-safe. The unit of exclusivity is the trails analogue of a Ruby thread — the
-execution context, per `withExecutionContext`, not an isolated-state run.
+safe. The unit of exclusivity is the trails analogue of a Ruby thread: one
+sequential async flow. The execution context from `withExecutionContext` is
+necessary but not sufficient. Phase 1 measured that promises fanned out
+concurrently _inside_ one context (`Promise.all`) share its lease and enter the
+adapter together, and a Ruby thread can never do that. So the lease must also
+exclude a second concurrent entrant from the same context: it waits its turn at
+the pool, not at the adapter's `@lock`.
 
 ### 2. Connect and configure complete before the adapter is handed out
 
@@ -129,23 +134,26 @@ Rails shapes.
 
 1. Phase 1 — measure what #7288 and #7056 already guarantee; re-test
    `abstract-adapter-lock-defaults-to-monitor-not-nulllock` against main.
-   **Result (main `15627671d`):** with the `lock` field defaulted to `NullLock`
-   (`abstract_adapter.rb:157`, `else` arm `:181-192`), all four cases fail on
-   `ARCONN=postgresql` and `ARCONN=sqlite3_mem`: 4 failed / 26 passed, against
-   30/30 without the patch. The four are
-   `postgresql-adapter.exec-query.trails.test.ts` "reads currval on the session
-   that ran its own INSERT", plus these three in
-   `abstract-adapter.lifecycle.trails.test.ts`: "withRawConnection serializes
-   concurrent calls and yields the connection", "reconnectBang serializes
-   concurrent callers", and "verifyBang serializes concurrent callers and
-   promotes the unconfigured connection once". #7288 and #7056 only order waiters
-   _across_ execution contexts. `connectionLease()`
-   (`abstract/connection-pool.ts:924-929`) keys the lease on
-   `executionContextId()`, which is `0` for all unscoped code
-   (`connection-pool/execution-context.ts:20-21`). So concurrent promises in
-   _one_ flow share one leased adapter and still enter it concurrently. Phase 2
-   is sized at full scope: nothing it assumed is already delivered, and both
-   dependent stories stay blocked on it.
+   **Result (trails main `15627671d`):**
+   - _Patch:_ the `lock` field defaulted to `NullLock`
+     (`abstract_adapter.rb:157`, `else` arm `:181-192`), applied locally only.
+   - _Runs:_ on both `ARCONN=postgresql` and `ARCONN=sqlite3_mem`, the two test
+     files go from 30/30 passing to 4 failed / 26 passed.
+   - _Failing cases:_ `postgresql-adapter.exec-query.trails.test.ts` "reads
+     currval on the session that ran its own INSERT", and these three in
+     `abstract-adapter.lifecycle.trails.test.ts`: "withRawConnection serializes
+     concurrent calls and yields the connection", "reconnectBang serializes
+     concurrent callers", "verifyBang serializes concurrent callers and
+     promotes the unconfigured connection once".
+   - _Residual path:_ #7288 and #7056 only order waiters _across_ execution
+     contexts. `connectionLease()` (`abstract/connection-pool.ts:924-929`) keys
+     the lease on `executionContextId()`, which is `0` for all unscoped code
+     (`connection-pool/execution-context.ts:20-21`). Concurrent promises in one
+     flow therefore share one leased adapter and enter it together.
+   - _Consequence:_ Phase 2 keeps its full scope. Both
+     `abstract-adapter-lock-defaults-to-monitor-not-nulllock` and
+     `server-version-barrier-takes-the-connection-lock-first` stay blocked, and
+     their `blocked-by` now names this residual.
 2. Phase 2 — exclusive entry on a leased adapter; then the `NullLock` default
    and `server-version-barrier-takes-the-connection-lock-first`.
 3. Phase 3 — await `configureConnection` on the connect path; then
@@ -165,13 +173,14 @@ declaration at `abstract/connection-pool.ts:38` is honest. No
 ## Open questions
 
 1. **Does exclusive leasing land in the pool or in the execution context?** The
-   pool is where Rails puts it and is the recommendation. Phase 1 showed the
-   pool's per-context lease is already in place; what it lacks is exclusion
-   between concurrent promises _within_ a context, so Phase 2 must add that
-   there.
+   **Answered by Phase 1: in the pool.** The per-context lease
+   (`connectionLease()`) already exists. What it lacks is exclusion between
+   concurrent promises _within_ one context, and Phase 2 adds that to the
+   pool's lease, not to the adapter (see Design §1).
 
 ## Changelog
 
 - 2026-09-10: initial RFC
 - 2026-09-10: Phase 1 measured; #7288/#7056 do not prevent intra-flow
-  concurrent entry
+  concurrent entry. Design §1 narrowed from "execution context" to one
+  sequential flow; Open question 1 answered (in the pool).
