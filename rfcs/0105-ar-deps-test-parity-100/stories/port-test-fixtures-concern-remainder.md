@@ -1,5 +1,5 @@
 ---
-title: "port-test-fixtures-concern-remainder"
+title: "Port the rest of the ActiveRecord::TestFixtures concern"
 status: draft
 updated: 2026-09-09
 rfc: "0105-ar-deps-test-parity-100"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 400
 priority: null
 pr: null
 claim: null

@@ -1,5 +1,5 @@
 ---
-title: "pack-m-directive-utf8-expands-high-bytes"
+title: "pack's m directive UTF-8-expands bytes 0x80..0xff instead of encoding them"
 status: draft
 updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
