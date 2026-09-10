@@ -2,7 +2,7 @@
 title: "Drop ConnectionLeasingQueue#internalPoll's promise arm once Queue#poll settles on one shape"
 status: blocked
 updated: 2026-09-05
-rfc: "0119-connection-adapter-fidelity"
+rfc: "0146-exclusive-connection-leasing"
 cluster: null
 packages: []
 deps: ["converge-sync-connection-lease-per-checkout-verify"]

@@ -2,7 +2,7 @@
 title: "SQLite3Adapter#getDatabaseVersion probes the raw driver, not query_value"
 status: blocked
 updated: 2026-09-06
-rfc: "0119-connection-adapter-fidelity"
+rfc: "0146-exclusive-connection-leasing"
 cluster: null
 packages: []
 deps: ["configure-connection-cannot-service-a-query-on-the-connection-it-configures"]
