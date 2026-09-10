@@ -55,8 +55,12 @@ wrapping itself in `withExecutionContext`.
 
 ## Acceptance criteria
 
-- [ ] Two concurrent unscoped flows that borrow from the same pool do not share
-      a lease: `connectionLease()` returns distinct `Lease` objects for them.
+- [ ] Two concurrent unscoped flows that borrow from the same pool through the
+      block form (`withConnection`) do not share a lease: `connectionLease()`
+      returns distinct `Lease` objects for them. The blockless sticky form
+      (`leaseConnection()` / `leaseConnectionSync()`) has no block to scope a
+      new context to, so two sibling awaits in one context still share its
+      lease; that residual is out of scope here and needs its own story.
 - [ ] The `?? 0` unscoped fallback in `executionContextId()` no longer lets
       distinct flows collide on lease identity. Either every borrow establishes a
       context, or lease identity stops depending on a context id — state which,
