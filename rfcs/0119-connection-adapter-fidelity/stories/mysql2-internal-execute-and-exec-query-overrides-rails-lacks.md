@@ -1,7 +1,7 @@
 ---
 title: "mysql2-internal-execute-and-exec-query-overrides-rails-lacks"
 status: ready
-updated: 2026-09-09
+updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []

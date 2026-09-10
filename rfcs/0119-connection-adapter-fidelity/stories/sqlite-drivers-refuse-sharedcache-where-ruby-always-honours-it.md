@@ -1,7 +1,7 @@
 ---
 title: "better-sqlite3 and expo-sqlite refuse SQLITE_OPEN_SHAREDCACHE where Ruby's sqlite3 gem always honours it"
-status: ready
-updated: 2026-09-09
+status: in-progress
+updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 150
-pr: null
-claim: null
-assignee: null
+pr: 7659
+claim: "2026-09-10T11:42:32Z"
+assignee: "mysql2-and-pg-begin-deferred-transaction-drop-the-isolation-level"
 blocked-by: null
 closed-reason: null
 ---

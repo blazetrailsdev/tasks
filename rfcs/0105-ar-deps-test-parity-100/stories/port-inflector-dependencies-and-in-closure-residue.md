@@ -1,7 +1,7 @@
 ---
 title: "Port inflector, range_ext, inclusion and the in-closure residue (~12)"
-status: ready
-updated: 2026-08-13
+status: in-progress
+updated: 2026-09-10
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: 7658
+claim: "2026-09-10T11:42:36Z"
+assignee: "port-inflector-dependencies-and-in-closure-residue"
 blocked-by: null
 closed-reason: null
 ---

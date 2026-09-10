@@ -1,7 +1,7 @@
 ---
 title: "Re-enroll fixtures_test.rb/fixture_set/test_fixtures_test.rb: stale unported exclusion hides ~170 AR tests"
-status: draft
-updated: 2026-08-13
+status: done
+updated: 2026-09-10
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: 7655
 claim: null
 assignee: null
 blocked-by: null
