@@ -1,7 +1,7 @@
 ---
 title: "Retire the deprecated positional SQLite3 adapter constructor"
-status: ready
-updated: 2026-09-09
+status: in-progress
+updated: 2026-09-10
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: ["activerecord"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: 8
-pr: null
-claim: null
-assignee: null
+pr: 7666
+claim: "2026-09-10T15:12:27Z"
+assignee: "retire-sqlite3-positional-constructor-overload"
 blocked-by: null
 closed-reason: null
 ---
