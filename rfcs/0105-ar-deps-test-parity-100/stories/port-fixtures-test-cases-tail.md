@@ -29,7 +29,10 @@ missing cases in `vendor/rails/activerecord/test/cases/fixtures_test.rb`
 
 ## Missing cases
 
-- `ActiveSupportSubclassWithFixturesTest` (1490): foo
+- `ActiveSupportSubclassWithFixturesTest` (1490): foo — with `fixtures :organizations`
+  loaded, `organizations(:nsa)` equals `Organization.find_by_name("No Such Agency")`.
+  A regression guard for fixture setup on an `ActiveRecord::TestCase` subclass
+  that once called `nil[]` (`fixtures_test.rb:1486-1494`)
 - `CustomNameForFixtureOrModelTest` (1508, 1513, 1520)
 - `IgnoreFixturesTest` (1533, 1549)
 - `FixturesWithDefaultScopeTest` (1560, 1565)

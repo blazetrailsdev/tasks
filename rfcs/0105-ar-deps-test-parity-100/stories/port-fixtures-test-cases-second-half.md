@@ -38,7 +38,7 @@ none depends on ERB preprocessing — the ERB-bearing Rails fixture files
 TS corpus under `packages/activerecord/src/test-helpers/fixtures/`.
 
 81 cases do not fit one PR, so the remainder is split at the class boundary at
-`fixtures_test.rb:1480`. This story is lines 954-1477 (52 cases); lines
+`fixtures_test.rb:1480`. This story is lines 954-1477 (53 cases, 52 of them in the measured 81 — see below); lines
 1480-1847 (29 cases) are `port-fixtures-test-cases-tail`.
 
 ## Missing cases (`vendor/rails/activerecord/test/cases/fixtures_test.rb`)
@@ -57,7 +57,11 @@ TS corpus under `packages/activerecord/src/test-helpers/fixtures/`.
   `TransactionalFixturesOnCustomConnectionTest` (1071, 1076): leaky destroy; it
   twice in whatever order to check for fixture leakage
 - `TransactionalFixturesOnConnectionNotification` (1085, 1108, 1136)
-- `InvalidTableNameFixturesTest` (1180): raises error
+- `InvalidTableNameFixturesTest` (1180): raises error — genuinely unported
+  (`fixtures.test.ts` has no such case), but test-compare does not report it
+  missing: the bare name `raises error` credits against
+  `adapters/mysql2/mysql2-rake.test.ts`'s `MysqlDBCreateWithInvalidPermissionsTest`.
+  So it is outside the measured 81 and porting it does not move `missing`
 - `CheckEscapedYamlFixturesTest` (1194): proper escaped fixture
 - `ManyToManyFixturesWithClassDefined` (1203): this should run cleanly
 - `FixturesBrokenRollbackTest` (1223): no rollback in teardown unless
