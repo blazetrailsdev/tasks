@@ -62,6 +62,27 @@ made every AR file fail at _collection_), `setup-second-pool.ts`,
 `encryption/test-helpers.ts:161`, `core.ts`, `insert-all.ts`. What remains is
 one fixture line, one production fallback, and a bounded test migration.
 
+### Re-measured 2026-09-10 (trails PR #7665)
+
+Same method over the 134 AR test files carrying a textual `.connection`, with
+the `_adapter` fast-path arm instrumented as well.
+
+| Source                                            | Hits | Disposition                                          |
+| ------------------------------------------------- | ---: | ---------------------------------------------------- |
+| `relation.ts` `_conn()` via `deleteAll`           |   10 | `relation-conn-fallback-reads-deprecated-connection` |
+| `persistence.ts:234` `_updateRecord`              |    1 | `relation-conn-fallback-reads-deprecated-connection` |
+| `connection-handling.test.ts:103`, `:145`, `:453` |    3 | Intentional — they test `.connection` itself         |
+| other test files                                  |    0 | Converted by #7665                                   |
+
+`_adapter` fast path: **114** hits, **0** on a permanent lease (100
+non-permanent, 14 on a model with no pool). The `connection()` gate is
+therefore deliberately narrower than `connection_handling.rb:274-295` for
+direct-adapter models: hoisting it above the short-circuit would raise nothing
+and would crash the no-pool models with `ConnectionNotEstablished`. The gap
+closes with `retire-direct-adapter-with-connection-shim`. This is recorded
+here rather than at the line because `blazetrails/no-freeform-comments`
+forbids an English comment there, and none of its structured directives fits.
+
 ## Method (reproducing the measurement)
 
 The numbers above are measured, not grepped. To re-run after any story lands:

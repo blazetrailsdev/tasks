@@ -58,7 +58,10 @@ undocumented in code and unmeasured.
   via the `_adapter` fast path, using the same gate instrumentation the RFC 0073
   README documents (extended to count the fast-path arm).
 - Either move the flag check above the `_adapter` short-circuit so direct-adapter
-  models are covered too, or record — in a comment at that line, not only in an
-  RFC — that trails' ban is deliberately narrower than Rails' and why.
+  models are covered too, or record that trails' ban is deliberately narrower
+  than Rails' and why. The record lives in the RFC 0073 README ("Re-measured
+  2026-09-10"): `blazetrails/no-freeform-comments` forbids an English comment
+  at that line, and none of the structured directives it allows (`drift-ok:`,
+  `BLOCKED:`, `@nie`) carries this meaning.
 - If the check moves, expect fallout in the 32 `.adapter =` test files; size it
   before committing to the change and split if it exceeds the LOC ceiling.
