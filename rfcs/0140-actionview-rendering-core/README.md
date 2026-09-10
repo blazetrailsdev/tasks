@@ -1,9 +1,9 @@
 ---
 rfc: "0140-actionview-rendering-core"
 title: "ActionView rendering core — the non-helper half to parity"
-status: active
+status: draft
 created: 2026-09-08
-updated: 2026-09-08
+updated: 2026-09-09
 owner: "@deanmarano"
 packages:
   - "actionview"
