@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: pragmas option gating, warning text and value coercion diverge from Rails"
-status: ready
+status: in-progress
 updated: 2026-09-09
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
@@ -8,9 +8,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: 7656
+claim: "2026-09-09T23:26:10Z"
+assignee: "sqlite3-constructor-connects-eagerly-unlike-rails"
 blocked-by: null
 closed-reason: null
 ---

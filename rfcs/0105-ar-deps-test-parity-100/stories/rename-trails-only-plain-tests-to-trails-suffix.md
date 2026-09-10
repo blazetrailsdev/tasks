@@ -1,6 +1,6 @@
 ---
 title: "activemodel: 13 trails-authored plain .test.ts files should carry the .trails.test.ts suffix"
-status: in-progress
+status: done
 updated: 2026-09-09
 rfc: "0105-ar-deps-test-parity-100"
 cluster: test-placement

@@ -1,6 +1,6 @@
 ---
 title: "AbstractMysqlAdapter's exec_rollback and begin_isolated transaction bodies discard their result"
-status: ready
+status: claimed
 updated: 2026-09-09
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: 100
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-09T23:42:02Z"
+assignee: "remove-invented-translate-and-enrich-wrapper"
 blocked-by: null
 closed-reason: null
 ---
