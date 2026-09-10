@@ -1,6 +1,6 @@
 ---
 title: "rbobjclass-names-a-plain-object-object-where-mri-says-hash"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

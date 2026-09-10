@@ -1,16 +1,16 @@
 ---
 title: "create_or_find_by rescue reads ad-hoc _conn(), not a with_connection lease"
-status: ready
-updated: 2026-08-29
+status: done
+updated: 2026-09-10
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 40
 priority: 22
-pr: null
-claim: null
-assignee: null
+pr: 6672
+claim: "2026-09-10T13:28:56Z"
+assignee: "schema-cache-resolves-a-class-assigned-adapter"
 blocked-by: null
 closed-reason: null
 ---

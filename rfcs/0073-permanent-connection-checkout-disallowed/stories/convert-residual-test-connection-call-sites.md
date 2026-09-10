@@ -1,7 +1,7 @@
 ---
 title: "convert-residual-test-connection-call-sites"
-status: ready
-updated: 2026-07-27
+status: in-progress
+updated: 2026-09-10
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps:
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 90
 priority: 40
-pr: null
-claim: null
-assignee: null
+pr: 7665
+claim: "2026-09-10T13:36:28Z"
+assignee: "arel-tosql-borrow-return-connection-not-sync-lease"
 blocked-by: null
 closed-reason: null
 ---

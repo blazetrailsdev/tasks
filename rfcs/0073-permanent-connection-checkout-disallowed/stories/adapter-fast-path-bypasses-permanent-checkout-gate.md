@@ -1,16 +1,16 @@
 ---
 title: "_adapter fast path bypasses the permanent-checkout gate, narrowing the ban vs Rails"
-status: ready
-updated: 2026-08-29
+status: in-progress
+updated: 2026-09-10
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 50
 priority: 28
-pr: null
-claim: null
-assignee: null
+pr: 7665
+claim: "2026-09-10T13:36:28Z"
+assignee: "arel-tosql-borrow-return-connection-not-sync-lease"
 blocked-by: null
 closed-reason: null
 ---

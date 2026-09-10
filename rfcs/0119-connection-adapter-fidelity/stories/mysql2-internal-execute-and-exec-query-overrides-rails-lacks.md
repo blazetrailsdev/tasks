@@ -1,6 +1,6 @@
 ---
 title: "mysql2-internal-execute-and-exec-query-overrides-rails-lacks"
-status: ready
+status: blocked
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: 130
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-10T13:19:53Z"
+assignee: "mysql2-internal-execute-and-exec-query-overrides-rails-lacks"
+blocked-by: 'Two blockers. (1) AC1/AC3: RFC 0076 awaitable exception-translation path, same as mysql-mismatched-fk-details-omits-primary-key-column. The two overrides are the only async site running _enrichMismatchedForeignKey (column_for, abstract_mysql_adapter.rb:995); deleting them reds the 5 mysql2_adapter_test.rb ''which has type'' tests (:145,:171,:201,:229,:258). (2) AC2: retiring mysqlQuote reds both MariaDB shards (PR #7664, CI run 34484577518). The OFFSET half is redundant (arel/visitors/mysql.rb:23-24 already ported), but the double-quote to backtick half is load-bearing for hand-written SQL with double-quoted identifiers across migration.test.ts (9), active-record-schema.test.ts (6), unsafe-raw-sql.test.ts (2), nested-through-associations.test.ts (1), plus 4 finder.test.ts placeholder bodies (Rails writes bare topics, finder_test.rb:186,717-736), and at least one src-generated ORDER BY "posts"."title". Converge those SQL literals to Rails'' spelling first, then drop mysqlQuote.'
 closed-reason: null
 ---
 

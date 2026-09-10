@@ -1,16 +1,16 @@
 ---
 title: "truncate_tables should use with_temporary_connection + conn.tables"
-status: ready
-updated: 2026-08-29
+status: done
+updated: 2026-09-10
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 90
 priority: 24
-pr: null
-claim: null
-assignee: null
+pr: 7258
+claim: "2026-09-10T13:28:56Z"
+assignee: "schema-cache-resolves-a-class-assigned-adapter"
 blocked-by: null
 closed-reason: null
 ---

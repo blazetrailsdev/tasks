@@ -1,7 +1,7 @@
 ---
 title: "TypeCaster::Connection drops the data_source_exists? gate and the with_connection lease (sync/async)"
-status: ready
-updated: 2026-08-29
+status: blocked
+updated: 2026-09-10
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 80
 priority: 20
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-10T13:28:56Z"
+assignee: "schema-cache-resolves-a-class-assigned-adapter"
+blocked-by: "Blocked on retire-schema-cache-sync-readers-after-checkout-flip (draft): type_caster/connection.rb:16-26 needs data_source_exists?(pool,name) (trails: async, schema-cache.ts:206) and with_connection (async, connection-handling.ts) from sync typeForAttribute; only getCachedColumnsHash/getCachedDataSourceExists are sync, and that story retires them once checkouts can block."
 closed-reason: null
 ---
 

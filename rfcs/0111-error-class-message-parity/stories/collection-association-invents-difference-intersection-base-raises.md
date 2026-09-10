@@ -1,7 +1,7 @@
 ---
 title: "CollectionAssociation invents difference/intersection base stubs that raise a bare Error"
-status: ready
-updated: 2026-09-09
+status: in-progress
+updated: 2026-09-10
 rfc: "0111-error-class-message-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 31
-pr: null
-claim: null
-assignee: null
+pr: 7663
+claim: "2026-09-10T13:16:12Z"
+assignee: "ruby-compat-errors-bypass-standarderror"
 blocked-by: null
 closed-reason: null
 ---

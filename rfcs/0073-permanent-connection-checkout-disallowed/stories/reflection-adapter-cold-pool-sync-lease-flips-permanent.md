@@ -1,7 +1,7 @@
 ---
 title: "reflectionAdapter cold-pool fallback still flips the lease permanent"
-status: ready
-updated: 2026-08-29
+status: blocked
+updated: 2026-09-10
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 60
 priority: 10
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-10T13:28:56Z"
+assignee: "schema-cache-resolves-a-class-assigned-adapter"
+blocked-by: "Blocked on retire-schema-cache-sync-readers-after-checkout-flip (draft): reflectionAdapter (model-schema.ts:30) returns the adapter to 9 sync callers that use it after return, so no release-after-read is possible; the only sync acquisition is leaseConnectionSync (connection-pool.ts:403), which sets sticky=true. Rails' pool.with_connection (schema_cache.rb) needs a blocking checkout, which lands only with that flip."
 closed-reason: null
 ---
 

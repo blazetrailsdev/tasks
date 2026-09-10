@@ -1,7 +1,7 @@
 ---
 title: "rack's common logger open-codes two Kernel#sprintf calls"
-status: ready
-updated: 2026-09-09
+status: in-progress
+updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 180
-pr: null
-claim: null
-assignee: null
+pr: 7664
+claim: "2026-09-10T13:19:53Z"
+assignee: "mysql2-internal-execute-and-exec-query-overrides-rails-lacks"
 blocked-by: null
 closed-reason: null
 ---

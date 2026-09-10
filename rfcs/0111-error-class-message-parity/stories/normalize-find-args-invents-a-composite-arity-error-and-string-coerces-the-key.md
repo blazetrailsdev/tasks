@@ -1,7 +1,7 @@
 ---
 title: "normalizeFindArgs invents a composite-arity RecordNotFound and renders the key via String()"
-status: ready
-updated: 2026-09-09
+status: in-progress
+updated: 2026-09-10
 rfc: "0111-error-class-message-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 32
-pr: null
-claim: null
-assignee: null
+pr: 7663
+claim: "2026-09-10T13:16:12Z"
+assignee: "ruby-compat-errors-bypass-standarderror"
 blocked-by: null
 closed-reason: null
 ---
