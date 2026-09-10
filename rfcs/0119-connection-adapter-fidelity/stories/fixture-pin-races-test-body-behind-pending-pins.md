@@ -1,5 +1,5 @@
 ---
-title: "fixture-pin-races-test-body-behind-pending-pins"
+title: "Fixture harness pins a new pool concurrently with the test body; converge to Rails' synchronous pin and drop pinConnectionBang's lock"
 status: draft
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
