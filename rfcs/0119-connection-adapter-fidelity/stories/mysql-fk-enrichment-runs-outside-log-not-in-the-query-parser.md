@@ -1,6 +1,6 @@
 ---
 title: "mysql2's mismatched-FK enrichment runs outside log instead of inside the query_parser lambda"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

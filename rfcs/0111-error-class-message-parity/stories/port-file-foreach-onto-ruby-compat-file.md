@@ -1,6 +1,6 @@
 ---
 title: "File.foreach lands on ruby-compat's File so remove_sql_header_comments can stream"
-status: claimed
+status: done
 updated: 2026-09-10
 rfc: "0111-error-class-message-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 41
-pr: null
+pr: trails#7677
 claim: "2026-09-10T21:00:07Z"
 assignee: "exception-wrapper-tables-carry-bare-name-duplicate-keys"
 blocked-by: null

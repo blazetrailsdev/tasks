@@ -1,6 +1,6 @@
 ---
 title: "mismatched_foreign_key_details omits primary_key_column; the lookup is deferred to a trails-only _enrichMismatchedForeignKey rebuild"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0123-blocked-convergence-holding"
 cluster: null

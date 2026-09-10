@@ -1,6 +1,6 @@
 ---
 title: "Retag the load_additional_types receipt PERMANENT, then close the pg-get-oid-type story"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0145-async-on-demand-adapter-lookups"
 cluster: null

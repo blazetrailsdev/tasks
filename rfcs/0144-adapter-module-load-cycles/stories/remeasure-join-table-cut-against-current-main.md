@@ -1,6 +1,6 @@
 ---
 title: "Re-measure the join-table/model-schema cut on current main and rewrite both blockers"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0144-adapter-module-load-cycles"
 cluster: null
