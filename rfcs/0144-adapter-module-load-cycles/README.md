@@ -1,5 +1,5 @@
 ---
-rfc: "0000-adapter-module-load-cycles"
+rfc: "0144-adapter-module-load-cycles"
 title: "Break the module-load cycles that keep mixin wiring out of module scope"
 status: active
 created: 2026-09-10
@@ -11,7 +11,7 @@ clusters: []
 priority: 2
 ---
 
-# RFC — Break the module-load cycles that keep mixin wiring out of module scope
+# RFC 0144 — Break the module-load cycles that keep mixin wiring out of module scope
 
 ## Summary
 

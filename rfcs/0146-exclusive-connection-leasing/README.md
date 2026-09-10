@@ -1,5 +1,5 @@
 ---
-rfc: "0000-exclusive-connection-leasing"
+rfc: "0146-exclusive-connection-leasing"
 title: "Exclusive connection leasing and a connect path that finishes before hand-out"
 status: active
 created: 2026-09-10
@@ -12,7 +12,7 @@ clusters: []
 priority: 2
 ---
 
-# RFC — Exclusive connection leasing and a connect path that finishes before hand-out
+# RFC 0146 — Exclusive connection leasing and a connect path that finishes before hand-out
 
 ## Summary
 

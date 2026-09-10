@@ -1,5 +1,5 @@
 ---
-rfc: "0000-async-on-demand-adapter-lookups"
+rfc: "0145-async-on-demand-adapter-lookups"
 title: "On-demand adapter lookups that Rails resolves with a live query"
 status: active
 created: 2026-09-10
@@ -11,7 +11,7 @@ clusters: []
 priority: 2
 ---
 
-# RFC — On-demand adapter lookups that Rails resolves with a live query
+# RFC 0145 — On-demand adapter lookups that Rails resolves with a live query
 
 ## Summary
 
