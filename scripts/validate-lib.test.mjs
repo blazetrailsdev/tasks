@@ -104,6 +104,44 @@ test("draft with non-null pr is rejected", () => {
   expectError(errors, "status: draft must have null pr");
 });
 
+// ── pr format ──
+test("a repo#N pr is legal", () => {
+  for (const pr of ["trails#7228", "tasks#94", "trailmap#20", "tasks-legacy#28"]) {
+    expectClean(
+      validate({
+        rfcs: [rfc()],
+        stories: [
+          story({}, { status: "done", claim: "2026-01-01T00:00:00Z", assignee: "agent", pr }),
+        ],
+      }).errors,
+    );
+  }
+});
+
+// The legacy shape, legal until `tasks export` writes the backfilled values.
+test("a bare positive-integer pr is still legal", () => {
+  expectClean(
+    validate({
+      rfcs: [rfc()],
+      stories: [
+        story({}, { status: "done", claim: "2026-01-01T00:00:00Z", assignee: "agent", pr: 7 }),
+      ],
+    }).errors,
+  );
+});
+
+test("a malformed pr is rejected", () => {
+  for (const pr of ["#7228", "trails#", "trails#0", "Trails#7", "7228", -3, 1.5]) {
+    const errors = validate({
+      rfcs: [rfc()],
+      stories: [
+        story({}, { status: "done", claim: "2026-01-01T00:00:00Z", assignee: "agent", pr }),
+      ],
+    }).errors;
+    expectError(errors, "pr must be repo#N");
+  }
+});
+
 test("claimed without claim+assignee is rejected", () => {
   const errors = validate({
     rfcs: [rfc()],

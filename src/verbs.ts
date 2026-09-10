@@ -39,7 +39,7 @@ function today(): string {
 async function record(
   verb: string,
   storyId: string,
-  extra: { pr?: number | null; actor?: string | null; detail?: unknown } = {},
+  extra: { pr?: string | null; actor?: string | null; detail?: unknown } = {},
 ): Promise<void> {
   await Event.create({
     at: nowIso(),
@@ -200,7 +200,8 @@ export async function release(ids: string[]): Promise<void> {
 export async function markTracking(
   ids: string[],
   status: Extract<StoryStatus, "in-progress" | "done">,
-  pr: number | null,
+  /** A normalized `repo#N` (see pr-ref.ts), or null for done-without-PR. */
+  pr: string | null,
 ): Promise<void> {
   await Base.transaction(async () => {
     const found = await findAll(ids);
@@ -216,7 +217,7 @@ export async function markTracking(
           : {};
       await s.update({ status, pr, ...clearedBy(status), ...selfClaim, updated_on: today() });
       await record(status, s.id, { pr });
-      console.log(`${status} ${s.id}${pr === null ? "" : ` #${pr}`}`);
+      console.log(`${status} ${s.id}${pr === null ? "" : ` ${pr}`}`);
     }
   });
 }

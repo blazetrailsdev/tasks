@@ -22,7 +22,7 @@ const BASE =
 
 const VERB_FOR: Record<string, string> = {
   status: "tasks status-set <id> <status> (or claim/done/block/close)",
-  pr: "tasks in-progress <id> --pr N / tasks done <id> --pr N",
+  pr: "tasks in-progress <id> --pr repo#N / tasks done <id> --pr repo#N",
   claim: "tasks claim <id>",
   assignee: "tasks claim <id> --assignee <name>",
   "blocked-by": "tasks block <id> <reason>",

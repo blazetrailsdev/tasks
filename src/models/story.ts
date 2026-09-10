@@ -40,7 +40,8 @@ export class Story extends Base {
 
   // ── DB-owned: written only by the mutation verbs ──
   declare status: StoryStatus;
-  declare pr: number | null;
+  /** `repo#N` — see pr-ref.ts. */
+  declare pr: string | null;
   declare assignee: string | null;
   declare blocked_by: string | null;
   declare closed_reason: string | null;

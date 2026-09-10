@@ -256,6 +256,17 @@ export function validate({ rfcs, stories }) {
     if (fm.priority != null && (!Number.isInteger(fm.priority) || fm.priority < 0)) {
       err(s.file, `priority must be a non-negative integer or absent`);
     }
+    // pr: `repo#N` — the same shape as src/pr-ref.ts's PR_REF_RE. A bare
+    // integer (including the two stray `0`s the backfill nulls) is the legacy
+    // shape and stays legal only until `tasks export` writes the backfilled DB
+    // values into frontmatter: `pr` is DB-owned, so no PR can rewrite it.
+    if (
+      fm.pr != null &&
+      !(Number.isInteger(fm.pr) && fm.pr >= 0) &&
+      !(typeof fm.pr === "string" && /^[a-z0-9][a-z0-9._-]*#[1-9]\d*$/.test(fm.pr))
+    ) {
+      err(s.file, `pr must be repo#N, e.g. trails#7228 (got ${JSON.stringify(fm.pr)})`);
+    }
     for (const key of ["created", "updated"]) {
       if (fm[key] != null && !isYmdDate(fm[key])) {
         err(s.file, `${key} must be a YYYY-MM-DD date (got ${JSON.stringify(fm[key])})`);

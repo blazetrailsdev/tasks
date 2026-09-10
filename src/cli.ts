@@ -39,6 +39,7 @@ import {
 } from "./verbs.js";
 import { newStory } from "./authoring.js";
 import { rehome } from "./rehome.js";
+import { normalizePrRef, PR_REF_USAGE } from "./pr-ref.js";
 import type { StoryStatus } from "./models/index.js";
 
 const USAGE = `tasks — RFC/story tracking
@@ -58,8 +59,8 @@ Author:
 Mutate:
   claim <id...> [--assignee NAME]
   release <id...>
-  in-progress <id...> --pr N
-  done <id...> [--pr N]
+  in-progress <id...> --pr REPO#N   (e.g. --pr trails#7228, --pr tasks#94)
+  done <id...> [--pr REPO#N]
   record-spawn <id...> --source S [--branch B] [--pane P]
   record-spawn --rfc R --source S [--pane P]      (RFC-scoped, e.g. a refine)
   block <id> <reason|--reason R>
@@ -333,8 +334,16 @@ async function main(): Promise<number> {
     case "in-progress":
     case "done": {
       const ids = [...new Set(pos)];
-      const pr = num(flags, "pr");
       if (!ids.length) return usage();
+      // A given-but-unparseable --pr (a bare `123`, `--pr` with no value) is an
+      // error, never "no PR": on `done` that silently drops the PR, and a bare
+      // number is ambiguous across trails/tasks/trailmap — see pr-ref.ts.
+      const raw = flags.pr;
+      const pr = typeof raw === "string" ? normalizePrRef(raw) : null;
+      if (raw !== undefined && pr === null) {
+        console.error(`error: ${PR_REF_USAGE} (got ${JSON.stringify(raw)})`);
+        return 1;
+      }
       if (cmd === "in-progress" && pr === null) return usage();
       await markTracking(ids, cmd, pr);
       break;

@@ -71,7 +71,7 @@ export interface StoryEntry {
   deps_rfc: string[];
   est_loc: number | null;
   updated: string | null;
-  pr: number | null;
+  pr: string | null;
   priority: number | null;
   claim: string | null;
   assignee: string | null;

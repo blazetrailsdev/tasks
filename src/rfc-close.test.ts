@@ -34,14 +34,14 @@ beforeEach(async () => {
 
 describe("rfc auto-close", () => {
   it("closes the RFC when the last story is marked done", async () => {
-    await markTracking(["s1"], "done", 10);
+    await markTracking(["s1"], "done", "trails#10");
     expect(await rfcStatus()).toBe("active");
-    await markTracking(["s2"], "done", 11);
+    await markTracking(["s2"], "done", "trails#11");
     expect(await rfcStatus()).toBe("closed");
   });
 
   it("counts a closed story as landed, not as outstanding work", async () => {
-    await markTracking(["s1"], "done", 10);
+    await markTracking(["s1"], "done", "trails#10");
     await close("s2", "superseded by the rewrite");
     expect(await rfcStatus()).toBe("closed");
   });
@@ -53,13 +53,13 @@ describe("rfc auto-close", () => {
   });
 
   it("leaves the RFC active while any story is still open", async () => {
-    await markTracking(["s1"], "done", 10);
+    await markTracking(["s1"], "done", "trails#10");
     await block("s2", "waiting on upstream");
     expect(await rfcStatus()).toBe("active");
   });
 
   it("records an rfc-close event naming the RFC, so the close is chartable", async () => {
-    await markTracking(["s1", "s2"], "done", 10);
+    await markTracking(["s1", "s2"], "done", "trails#10");
     const events = await Event.where({ verb: "rfc-close" }).toArray();
     expect(events.map((e) => e.rfc_id)).toEqual(["0001-r"]);
     expect(events[0].story_id).toBeNull();
@@ -67,19 +67,19 @@ describe("rfc auto-close", () => {
 
   it("does not close an RFC that has no stories yet", async () => {
     await Rfc.create({ id: "0002-empty", status: "active", title: "Empty" });
-    await markTracking(["s1", "s2"], "done", 10);
+    await markTracking(["s1", "s2"], "done", "trails#10");
     expect(await rfcStatus("0002-empty")).toBe("active");
   });
 
   it("leaves a draft RFC alone — only an active one closes", async () => {
     await Rfc.where({ id: "0001-r" }).updateAll({ status: "draft" });
-    await markTracking(["s1", "s2"], "done", 10);
+    await markTracking(["s1", "s2"], "done", "trails#10");
     expect(await rfcStatus()).toBe("draft");
   });
 
   it("closes once: a repeat of the landing verb does not re-fire the event", async () => {
-    await markTracking(["s1", "s2"], "done", 10);
-    await markTracking(["s1"], "done", 10);
+    await markTracking(["s1", "s2"], "done", "trails#10");
+    await markTracking(["s1"], "done", "trails#10");
     await statusSet("s2", "done");
     expect((await Event.where({ verb: "rfc-close" }).count()) as number).toBe(1);
   });
@@ -91,7 +91,7 @@ describe("rfc auto-close", () => {
     writeFileSync(join(dir, rel), "---\nid: 0001-r\nstatus: active\n---\n\nbody\n");
     await Rfc.where({ id: "0001-r" }).updateAll({ file_path: rel });
 
-    await markTracking(["s1", "s2"], "done", 10);
+    await markTracking(["s1", "s2"], "done", "trails#10");
     const result = await exportState({ tasksDir: dir, commit: false });
 
     expect(result.changed).toContain(rel);
@@ -105,7 +105,7 @@ describe("rfc auto-close", () => {
   it("never closes the CI-failures RFC, whose backlog is empty between reds", async () => {
     await Rfc.create({ id: "0061-ci-failures", status: "active", title: "CI failures" });
     await Story.create({ id: "red-abc12345", rfc_id: "0061-ci-failures", status: "ready" });
-    await markTracking(["red-abc12345"], "done", 99);
+    await markTracking(["red-abc12345"], "done", "trails#99");
     expect(await rfcStatus("0061-ci-failures")).toBe("active");
   });
 });
@@ -127,7 +127,7 @@ describe("date-only updated_on survives a record save", () => {
     const today = new Date().toISOString().slice(0, 10);
     await Story.where({ id: "s1" }).updateAll({ updated_on: today });
 
-    await markTracking(["s1"], "done", 42);
+    await markTracking(["s1"], "done", "trails#42");
 
     const s = await Story.findBy({ id: "s1" });
     expect(String(s!.updated_on)).toMatch(dateOnly);
@@ -148,13 +148,13 @@ describe("date-only updated_on survives a record save", () => {
 
     const today = new Date().toISOString().slice(0, 10);
     await Story.where({ id: "s1" }).updateAll({ updated_on: today });
-    await markTracking(["s1"], "done", 42);
+    await markTracking(["s1"], "done", "trails#42");
 
     expect(String((await Story.findBy({ id: "s1" }))!.updated_on)).toMatch(dateOnly);
   });
 
   it("keeps an RFC's updated_on date-only when it auto-closes", async () => {
-    await markTracking(["s1", "s2"], "done", 42);
+    await markTracking(["s1", "s2"], "done", "trails#42");
     const rfc = await Rfc.findBy({ id: "0001-r" });
     expect(rfc!.status).toBe("closed");
     expect(String(rfc!.updated_on)).toMatch(dateOnly);
