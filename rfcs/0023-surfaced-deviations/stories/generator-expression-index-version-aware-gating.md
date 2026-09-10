@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4485
+pr: trails#4485
 claim: "2026-07-03T14:45:50Z"
 assignee: "generator-expression-index-version-aware-gating"
 blocked-by: null

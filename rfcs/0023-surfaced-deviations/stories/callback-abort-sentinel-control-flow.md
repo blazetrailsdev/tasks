@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 3596
+pr: trails#3596
 claim: "2026-06-18T18:00:40Z"
 assignee: "callback-abort-sentinel-control-flow"
 blocked-by: null

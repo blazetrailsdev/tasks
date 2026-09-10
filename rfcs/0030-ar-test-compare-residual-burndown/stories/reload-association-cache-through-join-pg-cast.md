@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 30
-pr: 3871
+pr: trails#3871
 claim: "2026-06-22T11:47:56Z"
 assignee: "reload-association-cache-through-join-pg-cast"
 blocked-by: null

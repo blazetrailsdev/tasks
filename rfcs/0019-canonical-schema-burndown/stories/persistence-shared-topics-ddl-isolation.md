@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3837
+pr: trails#3837
 claim: "2026-06-21T21:10:41Z"
 assignee: "persistence-shared-topics-ddl-isolation"
 blocked-by: null

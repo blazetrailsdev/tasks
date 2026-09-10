@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3271
+pr: trails#3271
 claim: "2026-06-14T16:54:33Z"
 assignee: "calculations-aggregate-column-through-joins"
 blocked-by: null

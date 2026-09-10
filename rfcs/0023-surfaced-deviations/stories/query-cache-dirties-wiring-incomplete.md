@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4852
+pr: trails#4852
 claim: "2026-07-13T20:32:34Z"
 assignee: "query-cache-dirties-wiring-incomplete"
 blocked-by: null

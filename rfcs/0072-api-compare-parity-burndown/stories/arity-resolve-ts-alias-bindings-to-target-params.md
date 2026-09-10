@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5312
+pr: trails#5312
 claim: "2026-07-25T19:10:51Z"
 assignee: "arity-resolve-ts-alias-bindings-to-target-params"
 blocked-by: null

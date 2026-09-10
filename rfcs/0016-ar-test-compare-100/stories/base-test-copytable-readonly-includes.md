@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3321
+pr: trails#3321
 claim: "2026-06-15T02:35:25Z"
 assignee: "base-test-copytable-readonly-includes"
 blocked-by: null

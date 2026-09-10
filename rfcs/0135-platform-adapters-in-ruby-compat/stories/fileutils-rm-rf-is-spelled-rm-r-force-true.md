@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 22
-pr: 7476
+pr: trails#7476
 claim: "2026-09-04T12:01:32Z"
 assignee: "fileutils-rm-rf-is-spelled-rm-r-force-true"
 blocked-by: null

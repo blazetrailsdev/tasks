@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 37
-pr: 7542
+pr: trails#7542
 claim: "2026-09-05T23:56:30Z"
 assignee: "io-external-encoding-is-hardcoded-utf8"
 blocked-by: null

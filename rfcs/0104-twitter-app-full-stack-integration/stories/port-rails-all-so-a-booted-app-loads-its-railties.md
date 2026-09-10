@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 6
-pr: 7439
+pr: trails#7439
 claim: "2026-09-03T11:34:47Z"
 assignee: "port-trails-autoloaders"
 blocked-by: null

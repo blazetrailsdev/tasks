@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 0
-pr: 5162
+pr: trails#5162
 claim: "2026-07-23T16:58:39Z"
 assignee: "reset-column-information-not-recursive-over-descendant-memos"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 4475
+pr: trails#4475
 claim: "2026-07-03T12:21:53Z"
 assignee: "convert-core-persistence-dropexisting-shields"
 blocked-by: null

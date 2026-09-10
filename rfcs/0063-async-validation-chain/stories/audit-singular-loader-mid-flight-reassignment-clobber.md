@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: 5009
+pr: trails#5009
 claim: "2026-07-20T20:11:48Z"
 assignee: "audit-singular-loader-mid-flight-reassignment-clobber"
 blocked-by: null

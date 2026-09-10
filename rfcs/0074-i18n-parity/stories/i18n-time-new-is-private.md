@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6062
+pr: trails#6062
 claim: "2026-08-04T13:53:49Z"
 assignee: "i18n-time-new-is-private"
 blocked-by: null

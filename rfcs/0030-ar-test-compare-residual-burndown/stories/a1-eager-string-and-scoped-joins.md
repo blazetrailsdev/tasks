@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 5069
+pr: trails#5069
 claim: "2026-07-22T17:56:47Z"
 assignee: "a1-eager-string-and-scoped-joins"
 blocked-by: null

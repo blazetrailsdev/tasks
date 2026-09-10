@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3576
+pr: trails#3576
 claim: "2026-06-18T02:22:10Z"
 assignee: "assoc-associations-test-wave9-convert-canonical"
 blocked-by: null

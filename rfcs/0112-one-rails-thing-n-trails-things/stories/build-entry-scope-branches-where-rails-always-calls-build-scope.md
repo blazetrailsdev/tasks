@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6860
+pr: trails#6860
 claim: "2026-08-22T15:47:08Z"
 assignee: "converge-lazy-alias-attribute-method-generation"
 blocked-by: null

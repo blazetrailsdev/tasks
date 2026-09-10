@@ -6,7 +6,7 @@ rfc: "0001-task-system"
 cluster: scaffold
 deps: []
 est-loc: 250
-pr: 2552
+pr: trails#2552
 claim: "2026-05-28T17:26:39Z"
 assignee: "scaffold-tooling"
 blocked-by: null

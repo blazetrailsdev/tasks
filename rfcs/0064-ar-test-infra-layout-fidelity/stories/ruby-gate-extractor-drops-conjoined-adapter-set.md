@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5602
+pr: trails#5602
 claim: "2026-07-29T19:58:31Z"
 assignee: "ruby-gate-extractor-drops-conjoined-adapter-set"
 blocked-by: null

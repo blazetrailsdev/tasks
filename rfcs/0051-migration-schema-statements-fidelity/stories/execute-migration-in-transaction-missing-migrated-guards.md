@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5843
+pr: trails#5843
 claim: "2026-08-02T00:16:03Z"
 assignee: "execute-migration-in-transaction-missing-migrated-guards"
 blocked-by: null

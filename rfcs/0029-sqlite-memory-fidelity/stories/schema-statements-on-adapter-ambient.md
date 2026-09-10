@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 6
-pr: 5287
+pr: trails#5287
 claim: "2026-07-25T02:30:54Z"
 assignee: "schema-statements-on-adapter-ambient"
 blocked-by: null

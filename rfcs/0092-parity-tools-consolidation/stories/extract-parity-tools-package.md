@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6253
+pr: trails#6253
 claim: "2026-08-08T18:04:21Z"
 assignee: "extract-parity-tools-package"
 blocked-by: null

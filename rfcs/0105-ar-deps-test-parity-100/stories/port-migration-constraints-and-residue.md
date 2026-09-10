@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 7253
+pr: trails#7253
 claim: "2026-08-30T16:38:39Z"
 assignee: "port-migration-constraints-and-residue"
 blocked-by: null

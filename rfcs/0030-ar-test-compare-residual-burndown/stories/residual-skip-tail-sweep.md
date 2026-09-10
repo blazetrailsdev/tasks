@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 7
-pr: 5138
+pr: trails#5138
 claim: "2026-07-23T12:17:50Z"
 assignee: "residual-skip-tail-sweep"
 blocked-by: null

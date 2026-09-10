@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6920
+pr: trails#6920
 claim: "2026-08-23T15:27:26Z"
 assignee: "nokogiri-backend-raises-syntax-error"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 4465
+pr: trails#4465
 claim: "2026-07-03T02:09:51Z"
 assignee: "collection-proxy-mutated-finder-scope-stale-new-owner-seed"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 3193
+pr: trails#3193
 claim: "2026-06-13T13:35:14Z"
 assignee: "f9g2-nested-attributes-immediate-build"
 blocked-by: null

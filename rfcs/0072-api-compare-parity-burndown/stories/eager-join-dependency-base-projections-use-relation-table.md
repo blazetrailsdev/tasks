@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5935
+pr: trails#5935
 claim: "2026-08-02T23:55:47Z"
 assignee: "eager-join-dependency-base-projections-use-relation-table"
 blocked-by: null

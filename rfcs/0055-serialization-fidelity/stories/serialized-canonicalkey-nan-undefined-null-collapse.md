@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 5
-pr: 4817
+pr: trails#4817
 claim: "2026-07-09T02:29:36Z"
 assignee: "serialized-canonicalkey-nan-undefined-null-collapse"
 blocked-by: null

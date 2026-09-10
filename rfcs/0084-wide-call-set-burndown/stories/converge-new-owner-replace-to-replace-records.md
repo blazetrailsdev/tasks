@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 2
-pr: 6506
+pr: trails#6506
 claim: "2026-08-14T01:57:12Z"
 assignee: "converged-row-stale-mark-forces-whole-tree-reseed"
 blocked-by: null

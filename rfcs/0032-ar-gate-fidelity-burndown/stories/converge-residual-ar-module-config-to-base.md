@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4097
+pr: trails#4097
 claim: "2026-06-25T02:42:34Z"
 assignee: "converge-residual-ar-module-config-to-base"
 blocked-by: null

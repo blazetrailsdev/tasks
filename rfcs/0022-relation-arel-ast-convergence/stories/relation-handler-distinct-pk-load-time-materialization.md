@@ -8,7 +8,7 @@ deps: ["relation-handler-distinct-pk-materialization"]
 deps-rfc: []
 est-loc: 350
 priority: 20
-pr: 3919
+pr: trails#3919
 claim: "2026-06-22T20:11:15Z"
 assignee: "relation-handler-distinct-pk-load-time-materialization"
 blocked-by: null

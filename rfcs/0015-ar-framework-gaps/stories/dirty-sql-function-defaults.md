@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 51
-pr: 2986
+pr: trails#2986
 claim: "2026-06-07T00:00:58Z"
 assignee: "dirty-sql-function-defaults"
 blocked-by: null

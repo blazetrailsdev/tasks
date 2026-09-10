@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6672
+pr: trails#6672
 claim: "2026-08-17T22:06:05Z"
 assignee: "converge-lock-value-stores-locks-not-clause-string"
 blocked-by: null

@@ -20,7 +20,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7057
+pr: trails#7057
 claim: "2026-08-25T17:14:37Z"
 assignee: "converge-test-fixtures-class-attribute-stores"
 blocked-by: null

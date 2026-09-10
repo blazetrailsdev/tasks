@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 30
-pr: 7610
+pr: trails#7610
 claim: "2026-09-08T13:31:47Z"
 assignee: "journey-router-test-parity"
 blocked-by: null

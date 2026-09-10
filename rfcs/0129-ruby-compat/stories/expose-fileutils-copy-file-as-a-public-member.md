@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 7472
+pr: trails#7472
 claim: "2026-09-04T02:36:29Z"
 assignee: "expose-fileutils-copy-file-as-a-public-member"
 blocked-by: null

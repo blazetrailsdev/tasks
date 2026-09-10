@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: 6962
+pr: trails#6962
 claim: "2026-08-24T01:24:28Z"
 assignee: "anchor-jsdoc-tag-recognition-to-line-start"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3770
+pr: trails#3770
 claim: "2026-06-21T03:10:43Z"
 assignee: "model-callbacks-block-false-after-skip-fidelity"
 blocked-by: null

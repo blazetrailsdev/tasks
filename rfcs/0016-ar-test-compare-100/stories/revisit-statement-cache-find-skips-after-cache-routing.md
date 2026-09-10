@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 50
-pr: 3537
+pr: trails#3537
 claim: "2026-06-17T13:01:27Z"
 assignee: "revisit-statement-cache-find-skips-after-cache-routing"
 blocked-by: null

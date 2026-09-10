@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6629
+pr: trails#6629
 claim: "2026-08-17T02:42:54Z"
 assignee: "converge-hwia-delete-returns-the-removed-value"
 blocked-by: null

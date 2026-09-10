@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: 48
-pr: 7586
+pr: trails#7586
 claim: "2026-09-07T00:55:49Z"
 assignee: "zlib-seam-is-one-shot-so-gzipwriter-buffers-the-payload"
 blocked-by: null

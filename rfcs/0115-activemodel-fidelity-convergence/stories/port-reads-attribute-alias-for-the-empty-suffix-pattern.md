@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7176
+pr: trails#7176
 claim: "2026-08-28T17:49:38Z"
 assignee: "assert-boolean-attribute-tests-through-the-generated-predicate"
 blocked-by: null

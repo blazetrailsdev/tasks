@@ -9,7 +9,7 @@ deps: ["journey-visualizer-reads-its-assets-off-disk"]
 deps-rfc: []
 est-loc: 220
 priority: 10
-pr: 7625
+pr: trails#7625
 claim: "2026-09-08T16:33:05Z"
 assignee: "journey-call-parity-baselines-to-zero"
 blocked-by: null

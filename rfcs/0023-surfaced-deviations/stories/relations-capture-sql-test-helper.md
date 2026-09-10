@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4956
+pr: trails#4956
 claim: "2026-07-19T14:31:09Z"
 assignee: "relations-capture-sql-test-helper"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 40
-pr: 3954
+pr: trails#3954
 claim: "2026-06-23T02:35:15Z"
 assignee: "website-media-copy-wrong-target-links"
 blocked-by: null

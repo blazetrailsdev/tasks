@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6023
+pr: trails#6023
 claim: "2026-08-03T21:11:08Z"
 assignee: "i18n-interpolation-key-symbol-spelling"
 blocked-by: null

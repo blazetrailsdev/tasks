@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4996
+pr: trails#4996
 claim: "2026-07-20T18:31:11Z"
 assignee: "trails-tsc-blocking-test-gate"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3701
+pr: trails#3701
 claim: "2026-06-20T03:18:42Z"
 assignee: "dup-initialize-dup-convergence"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["calculations-aggregations"]
 deps-rfc: []
 est-loc: 250
 priority: 33
-pr: 4176
+pr: trails#4176
 claim: "2026-06-26T03:22:45Z"
 assignee: "aggregations-remaining-describes"
 blocked-by: null

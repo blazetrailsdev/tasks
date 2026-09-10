@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: 7631
+pr: trails#7631
 claim: "2026-09-08T20:28:51Z"
 assignee: "bound-adapter-test-doubles-cannot-satisfy-the-pool-protocol"
 blocked-by: null

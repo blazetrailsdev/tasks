@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 5
-pr: 4024
+pr: trails#4024
 claim: "2026-06-23T17:37:48Z"
 assignee: "through-source-type-source-scope-not-merged"
 blocked-by: null

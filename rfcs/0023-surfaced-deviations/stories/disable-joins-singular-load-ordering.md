@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3764
+pr: trails#3764
 claim: "2026-06-21T02:07:30Z"
 assignee: "disable-joins-singular-load-ordering"
 blocked-by: null

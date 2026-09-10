@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 22
-pr: 7216
+pr: trails#7216
 claim: "2026-08-29T17:51:37Z"
 assignee: "converge-format-for-inspect-filter-order"
 blocked-by: null

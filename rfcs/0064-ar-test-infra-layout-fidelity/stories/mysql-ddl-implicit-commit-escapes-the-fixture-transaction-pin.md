@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6277
+pr: trails#6277
 claim: "2026-08-09T12:53:07Z"
 assignee: "mysql-ddl-implicit-commit-escapes-the-fixture-transaction-pin"
 blocked-by: null

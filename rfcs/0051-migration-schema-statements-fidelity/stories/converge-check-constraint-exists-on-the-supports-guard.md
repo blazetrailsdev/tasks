@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5824
+pr: trails#5824
 claim: "2026-08-01T19:39:04Z"
 assignee: "converge-check-constraint-exists-on-the-supports-guard"
 blocked-by: null

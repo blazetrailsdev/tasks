@@ -8,7 +8,7 @@ deps: ["i18n-facade-translate-interpolate"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6004
+pr: trails#6004
 claim: "2026-08-03T18:36:42Z"
 assignee: "i18n-backend-localize"
 blocked-by: null

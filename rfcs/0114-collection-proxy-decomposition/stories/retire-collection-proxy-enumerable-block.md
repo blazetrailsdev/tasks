@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6759
+pr: trails#6759
 claim: "2026-08-20T02:52:30Z"
 assignee: "retire-collection-proxy-enumerable-block"
 blocked-by: null

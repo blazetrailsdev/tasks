@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5147
+pr: trails#5147
 claim: "2026-07-23T14:07:36Z"
 assignee: "nested-hash-recursion-renormalizes-dot-notation"
 blocked-by: null

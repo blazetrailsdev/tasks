@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 46
-pr: 2979
+pr: trails#2979
 claim: "2026-06-06T19:30:56Z"
 assignee: "dirty-alias-under-reflection"
 blocked-by: null

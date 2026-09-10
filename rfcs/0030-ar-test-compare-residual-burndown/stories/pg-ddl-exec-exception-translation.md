@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 50
-pr: 3530
+pr: trails#3530
 claim: "2026-06-17T11:31:26Z"
 assignee: "pg-ddl-exec-exception-translation"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 3407
+pr: trails#3407
 claim: "2026-06-15T20:33:56Z"
 assignee: "a5-cascaded-and-sti-eager"
 blocked-by: null

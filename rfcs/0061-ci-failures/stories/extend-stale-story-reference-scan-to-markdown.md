@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6001
+pr: trails#6001
 claim: "2026-08-03T18:15:45Z"
 assignee: "extend-stale-story-reference-scan-to-markdown"
 blocked-by: null

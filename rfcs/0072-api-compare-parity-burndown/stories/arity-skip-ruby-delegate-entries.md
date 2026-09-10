@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5313
+pr: trails#5313
 claim: "2026-07-25T19:18:54Z"
 assignee: "arity-skip-ruby-delegate-entries"
 blocked-by: null

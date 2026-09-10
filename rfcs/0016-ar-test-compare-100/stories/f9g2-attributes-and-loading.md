@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 12
-pr: 3155
+pr: trails#3155
 claim: "2026-06-12T17:43:15Z"
 assignee: "f9g2-attributes-and-loading"
 blocked-by: null

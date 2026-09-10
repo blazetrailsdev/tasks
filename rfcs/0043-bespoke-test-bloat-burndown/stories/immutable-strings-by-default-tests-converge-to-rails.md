@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4104
+pr: trails#4104
 claim: "2026-06-25T10:22:38Z"
 assignee: "immutable-strings-by-default-tests-converge-to-rails"
 blocked-by: null

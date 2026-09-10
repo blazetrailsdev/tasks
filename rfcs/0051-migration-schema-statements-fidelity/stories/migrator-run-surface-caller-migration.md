@@ -8,7 +8,7 @@ deps:
   - unify-migration-discovery-delete-registered-migrations-seam
 deps-rfc: []
 est-loc: null
-pr: 6982
+pr: trails#6982
 claim: "2026-08-24T13:19:12Z"
 assignee: "migrator-run-surface-caller-migration"
 blocked-by: null

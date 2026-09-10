@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: 4095
+pr: trails#4095
 claim: "2026-06-25T02:02:34Z"
 assignee: "bulk-alter-default-functions-mariadb-uuid-branch"
 blocked-by: null

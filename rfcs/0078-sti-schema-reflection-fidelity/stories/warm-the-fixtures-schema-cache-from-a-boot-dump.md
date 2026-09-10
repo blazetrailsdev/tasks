@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6972
+pr: trails#6972
 claim: "2026-08-24T03:39:39Z"
 assignee: "warm-the-fixtures-schema-cache-from-a-boot-dump"
 blocked-by: null

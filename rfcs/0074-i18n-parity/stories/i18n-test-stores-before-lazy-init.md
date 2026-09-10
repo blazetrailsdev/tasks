@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6050
+pr: trails#6050
 claim: "2026-08-04T13:49:21Z"
 assignee: "i18n-test-stores-before-lazy-init"
 blocked-by: null

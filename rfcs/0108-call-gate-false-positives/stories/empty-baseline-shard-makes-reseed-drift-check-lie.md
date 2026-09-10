@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6665
+pr: trails#6665
 claim: "2026-08-17T19:08:15Z"
 assignee: "closure-resolves-foreign-receiver-calls-as-same-file-methods"
 blocked-by: null

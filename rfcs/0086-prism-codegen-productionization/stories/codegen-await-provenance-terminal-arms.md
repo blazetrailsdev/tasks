@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 5837
+pr: trails#5837
 claim: "2026-08-01T23:16:01Z"
 assignee: "codegen-await-provenance-terminal-arms"
 blocked-by: null

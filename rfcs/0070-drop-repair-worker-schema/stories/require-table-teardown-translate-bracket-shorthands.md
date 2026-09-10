@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 5589
+pr: trails#5589
 claim: "2026-07-29T18:46:12Z"
 assignee: "require-table-teardown-translate-bracket-shorthands"
 blocked-by: null

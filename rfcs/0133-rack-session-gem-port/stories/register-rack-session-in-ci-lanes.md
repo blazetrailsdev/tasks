@@ -9,7 +9,7 @@ deps: ["rack-session-package-skeleton"]
 deps-rfc: []
 est-loc: 60
 priority: 3
-pr: 7322
+pr: trails#7322
 claim: null
 assignee: null
 blocked-by: null

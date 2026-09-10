@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 20
-pr: 5220
+pr: trails#5220
 claim: "2026-07-24T12:53:32Z"
 assignee: "unported-files-audit-substring-overmatch"
 blocked-by: null

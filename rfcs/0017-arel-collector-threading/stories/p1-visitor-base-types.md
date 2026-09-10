@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 1
-pr: 3065
+pr: trails#3065
 claim: "2026-06-09T19:15:40Z"
 assignee: "p1-visitor-base-types"
 blocked-by: null

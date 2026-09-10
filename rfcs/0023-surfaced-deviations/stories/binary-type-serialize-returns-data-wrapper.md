@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4891
+pr: trails#4891
 claim: "2026-07-15T11:21:12Z"
 assignee: "binary-type-serialize-returns-data-wrapper"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4394
+pr: trails#4394
 claim: "2026-07-02T01:29:59Z"
 assignee: "converge-base-test-canonical-schema"
 blocked-by: null

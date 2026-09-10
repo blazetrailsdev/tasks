@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: 2
-pr: 70
+pr: tasks-legacy#70
 claim: "2026-08-18T16:04:41Z"
 assignee: "cross-rfc-convergence-report"
 blocked-by: null

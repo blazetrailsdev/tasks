@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 5879
+pr: trails#5879
 claim: "2026-08-02T12:36:50Z"
 assignee: "schema-cache-indexes-drop-unknown-return-type"
 blocked-by: null

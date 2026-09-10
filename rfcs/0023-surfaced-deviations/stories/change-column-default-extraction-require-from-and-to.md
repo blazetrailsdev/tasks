@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4650
+pr: trails#4650
 claim: "2026-07-06T00:25:40Z"
 assignee: "change-column-default-extraction-require-from-and-to"
 blocked-by: null

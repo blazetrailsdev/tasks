@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 1
-pr: 4745
+pr: trails#4745
 claim: "2026-07-07T16:01:48Z"
 assignee: "enum-macro-default-scopes-instance-methods-options"
 blocked-by: null

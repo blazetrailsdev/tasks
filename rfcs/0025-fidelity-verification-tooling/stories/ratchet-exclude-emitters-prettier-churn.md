@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 30
-pr: 5240
+pr: trails#5240
 claim: "2026-07-24T17:02:54Z"
 assignee: "ratchet-exclude-emitters-prettier-churn"
 blocked-by: null

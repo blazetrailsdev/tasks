@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5778
+pr: trails#5778
 claim: "2026-08-01T00:40:41Z"
 assignee: "converge-merge-preloads-helper-into-merger"
 blocked-by: null

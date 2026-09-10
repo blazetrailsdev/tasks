@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 3811
+pr: trails#3811
 claim: "2026-06-21T17:26:42Z"
 assignee: "establish-connection-accepts-databaseconfig-object"
 blocked-by: null

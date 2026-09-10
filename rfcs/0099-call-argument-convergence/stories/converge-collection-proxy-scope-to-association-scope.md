@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6492
+pr: trails#6492
 claim: "2026-08-13T19:45:40Z"
 assignee: "converge-collection-proxy-scope-to-association-scope"
 blocked-by: null

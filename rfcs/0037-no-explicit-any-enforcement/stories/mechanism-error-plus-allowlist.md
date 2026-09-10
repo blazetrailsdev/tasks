@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3590
+pr: trails#3590
 claim: "2026-06-18T15:13:41Z"
 assignee: "mechanism-error-plus-allowlist"
 blocked-by: null

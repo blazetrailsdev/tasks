@@ -9,7 +9,7 @@ deps:
   - converge-dirty-tracker-onto-rails-mutation-trackers
 deps-rfc: []
 est-loc: 320
-pr: 7021
+pr: trails#7021
 claim: "2026-08-25T00:42:02Z"
 assignee: "retire-attribute-set-map-adapter-surface"
 blocked-by: null

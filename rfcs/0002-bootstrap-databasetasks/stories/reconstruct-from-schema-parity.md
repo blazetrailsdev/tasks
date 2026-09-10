@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 1000003
-pr: 2999
+pr: trails#2999
 claim: "2026-06-07T16:43:51Z"
 assignee: "reconstruct-from-schema-parity"
 blocked-by: null

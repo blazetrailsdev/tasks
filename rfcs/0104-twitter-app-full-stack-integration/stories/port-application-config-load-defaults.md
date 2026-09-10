@@ -9,7 +9,7 @@ deps: ["generate-app-subclassing-application"]
 deps-rfc: []
 est-loc: 200
 priority: 36
-pr: 7349
+pr: trails#7349
 claim: "2026-09-01T17:23:54Z"
 assignee: "scopes-are-untyped-on-relation"
 blocked-by: null

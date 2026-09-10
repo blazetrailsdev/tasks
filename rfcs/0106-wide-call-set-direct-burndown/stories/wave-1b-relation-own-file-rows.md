@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: 6562
+pr: trails#6562
 claim: "2026-08-15T12:45:04Z"
 assignee: "index-name-exists-returns-index"
 blocked-by: null

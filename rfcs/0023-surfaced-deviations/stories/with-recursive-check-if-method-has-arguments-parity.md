@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 50
-pr: 3563
+pr: trails#3563
 claim: "2026-06-17T18:39:44Z"
 assignee: "with-recursive-check-if-method-has-arguments-parity"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4092
+pr: trails#4092
 claim: "2026-06-25T01:02:34Z"
 assignee: "emit-time-joined-tables-chain-tail-memoization"
 blocked-by: null

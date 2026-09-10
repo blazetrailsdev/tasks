@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6285
+pr: trails#6285
 claim: "2026-08-09T16:16:12Z"
 assignee: "date-start-argument-and-reform-surface-absent"
 blocked-by: null

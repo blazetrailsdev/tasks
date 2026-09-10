@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 3329
+pr: trails#3329
 claim: "2026-06-15T11:35:10Z"
 assignee: "infer-sti-at-instantiate-from-reflected-column"
 blocked-by: null

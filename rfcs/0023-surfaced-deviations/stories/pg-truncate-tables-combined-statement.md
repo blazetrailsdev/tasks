@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3346
+pr: trails#3346
 claim: "2026-06-15T13:55:33Z"
 assignee: "pg-truncate-tables-combined-statement"
 blocked-by: null

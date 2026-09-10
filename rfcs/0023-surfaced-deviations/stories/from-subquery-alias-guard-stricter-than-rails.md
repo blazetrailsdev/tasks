@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3297
+pr: trails#3297
 claim: "2026-06-14T22:12:13Z"
 assignee: "from-subquery-alias-guard-stricter-than-rails"
 blocked-by: null

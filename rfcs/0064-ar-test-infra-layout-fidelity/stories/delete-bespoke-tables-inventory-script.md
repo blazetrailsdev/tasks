@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: 5901
+pr: trails#5901
 claim: "2026-08-02T18:07:31Z"
 assignee: "delete-bespoke-tables-inventory-script"
 blocked-by: null

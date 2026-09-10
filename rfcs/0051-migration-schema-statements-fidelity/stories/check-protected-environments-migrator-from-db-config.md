@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5771
+pr: trails#5771
 claim: "2026-07-31T23:40:41Z"
 assignee: "check-protected-environments-migrator-from-db-config"
 blocked-by: null

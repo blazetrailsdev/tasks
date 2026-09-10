@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 40
-pr: 3894
+pr: trails#3894
 claim: "2026-06-22T16:43:56Z"
 assignee: "resolve-order-matcher-without-connection-getter"
 blocked-by: null

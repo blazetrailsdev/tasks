@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 9
-pr: 4915
+pr: trails#4915
 claim: "2026-07-16T19:41:11Z"
 assignee: "cover-method-name-around-dispatch"
 blocked-by: null

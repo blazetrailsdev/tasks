@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 5125
+pr: trails#5125
 claim: "2026-07-23T03:19:36Z"
 assignee: "has-many-assertion-value-restoration"
 blocked-by: null

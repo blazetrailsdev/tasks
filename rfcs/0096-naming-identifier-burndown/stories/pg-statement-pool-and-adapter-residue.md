@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6483
+pr: trails#6483
 claim: "2026-08-13T17:25:38Z"
 assignee: "pg-statement-pool-and-adapter-residue"
 blocked-by: null

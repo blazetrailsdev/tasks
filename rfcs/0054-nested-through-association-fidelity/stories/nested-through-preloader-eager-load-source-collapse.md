@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 28
-pr: 4802
+pr: trails#4802
 claim: "2026-07-08T21:07:35Z"
 assignee: "nested-through-preloader-eager-load-source-collapse"
 blocked-by: null

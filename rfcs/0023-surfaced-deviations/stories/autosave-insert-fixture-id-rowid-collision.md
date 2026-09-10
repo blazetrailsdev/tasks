@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 5
-pr: 3490
+pr: trails#3490
 claim: "2026-06-16T18:56:57Z"
 assignee: "autosave-insert-fixture-id-rowid-collision"
 blocked-by: null

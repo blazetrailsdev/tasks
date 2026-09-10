@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 40
-pr: 3951
+pr: trails#3951
 claim: "2026-06-23T02:03:16Z"
 assignee: "touch-edge-case-returns-converge"
 blocked-by: null

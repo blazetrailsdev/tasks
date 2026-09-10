@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6232
+pr: trails#6232
 claim: "2026-08-08T12:52:01Z"
 assignee: "retire-sqlite-tasks-with-operation-adapter"
 blocked-by: null

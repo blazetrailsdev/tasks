@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 40
-pr: 3883
+pr: trails#3883
 claim: "2026-06-22T13:23:57Z"
 assignee: "relation-exec-main-query-contradiction-short-circuit"
 blocked-by: null

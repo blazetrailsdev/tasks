@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6290
+pr: trails#6290
 claim: "2026-08-09T18:49:36Z"
 assignee: "datetime-constructor-fraction-bound-ignores-offset-and-start"
 blocked-by: null

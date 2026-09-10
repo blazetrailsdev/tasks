@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 24
-pr: 4764
+pr: trails#4764
 claim: "2026-07-08T01:12:26Z"
 assignee: "abstract-schema-creation-quoted-columns-for-index-delegate"
 blocked-by: null

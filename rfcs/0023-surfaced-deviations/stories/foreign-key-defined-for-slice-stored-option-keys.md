@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3809
+pr: trails#3809
 claim: "2026-06-21T17:18:42Z"
 assignee: "foreign-key-defined-for-slice-stored-option-keys"
 blocked-by: null

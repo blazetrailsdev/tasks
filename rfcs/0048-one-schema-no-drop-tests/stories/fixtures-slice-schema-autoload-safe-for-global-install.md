@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4603
+pr: trails#4603
 claim: "2026-07-05T11:52:27Z"
 assignee: "fixtures-slice-schema-autoload-safe-for-global-install"
 blocked-by: null

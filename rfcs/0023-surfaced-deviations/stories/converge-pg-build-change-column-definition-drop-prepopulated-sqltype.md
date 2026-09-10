@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3978
+pr: trails#3978
 claim: "2026-06-23T11:52:43Z"
 assignee: "converge-pg-build-change-column-definition-drop-prepopulated-sqltype"
 blocked-by: null

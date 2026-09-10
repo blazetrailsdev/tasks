@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6341
+pr: trails#6341
 claim: "2026-08-10T15:09:04Z"
 assignee: "check-limit-measures-utf16-units-not-bytes"
 blocked-by: null

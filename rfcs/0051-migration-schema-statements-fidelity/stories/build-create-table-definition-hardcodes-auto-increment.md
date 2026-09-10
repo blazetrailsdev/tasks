@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6079
+pr: trails#6079
 claim: "2026-08-04T17:44:59Z"
 assignee: "build-create-table-definition-hardcodes-auto-increment"
 blocked-by: null

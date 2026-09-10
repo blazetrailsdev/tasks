@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 6483
+pr: trails#6483
 claim: "2026-08-27T01:22:35Z"
 assignee: "named-function-over-overrides-the-mixin-and-quotes-eagerly"
 blocked-by: null

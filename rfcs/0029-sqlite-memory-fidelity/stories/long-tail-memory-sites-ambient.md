@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5495
+pr: trails#5495
 claim: "2026-07-28T12:46:17Z"
 assignee: "long-tail-memory-sites-ambient"
 blocked-by: null

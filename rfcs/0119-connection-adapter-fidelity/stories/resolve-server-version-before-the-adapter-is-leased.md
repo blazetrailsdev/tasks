@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7540
+pr: trails#7540
 claim: "2026-09-05T22:26:46Z"
 assignee: "converge-connection-management-onto-executor-and-body-proxy"
 blocked-by: null

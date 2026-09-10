@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3732
+pr: trails#3732
 claim: "2026-06-20T18:01:31Z"
 assignee: "derive-fk-query-constraints-composite-pk-guard-unconditional"
 blocked-by: null

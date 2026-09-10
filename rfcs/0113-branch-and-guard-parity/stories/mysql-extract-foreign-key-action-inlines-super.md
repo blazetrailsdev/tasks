@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 24
-pr: 7481
+pr: trails#7481
 claim: "2026-09-04T13:20:45Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null

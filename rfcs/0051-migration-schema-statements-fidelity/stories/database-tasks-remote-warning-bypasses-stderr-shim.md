@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 5595
+pr: trails#5595
 claim: "2026-07-29T19:34:18Z"
 assignee: "database-tasks-remote-warning-bypasses-stderr-shim"
 blocked-by: null

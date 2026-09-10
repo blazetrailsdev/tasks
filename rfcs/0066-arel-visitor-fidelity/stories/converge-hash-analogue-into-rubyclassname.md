@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 23
-pr: 5045
+pr: trails#5045
 claim: "2026-07-21T23:30:16Z"
 assignee: "converge-hash-analogue-into-rubyclassname"
 blocked-by: null

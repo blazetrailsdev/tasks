@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3757
+pr: trails#3757
 claim: "2026-06-21T00:23:25Z"
 assignee: "adapter-advisory-locks-generic-construction"
 blocked-by: null

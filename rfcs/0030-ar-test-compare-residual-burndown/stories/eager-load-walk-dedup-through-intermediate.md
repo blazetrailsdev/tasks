@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 4088
+pr: trails#4088
 claim: "2026-06-24T23:22:33Z"
 assignee: "eager-load-walk-dedup-through-intermediate"
 blocked-by: null

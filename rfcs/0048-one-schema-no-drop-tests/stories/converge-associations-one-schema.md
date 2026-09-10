@@ -7,7 +7,7 @@ cluster: "rails-deviation"
 deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 500
-pr: 4312
+pr: trails#4312
 claim: "2026-06-30T10:54:30Z"
 assignee: "converge-associations-one-schema"
 blocked-by: null

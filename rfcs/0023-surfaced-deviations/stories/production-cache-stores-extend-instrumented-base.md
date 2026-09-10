@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3839
+pr: trails#3839
 claim: "2026-06-21T21:26:44Z"
 assignee: "production-cache-stores-extend-instrumented-base"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6078
+pr: trails#6078
 claim: "2026-08-04T17:39:59Z"
 assignee: "yaml-optional-eager-edges-in-activerecord-and-actionview"
 blocked-by: null

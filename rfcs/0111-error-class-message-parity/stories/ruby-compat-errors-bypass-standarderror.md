@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: 10
-pr: 7663
+pr: trails#7663
 claim: "2026-09-10T13:16:12Z"
 assignee: "ruby-compat-errors-bypass-standarderror"
 blocked-by: null

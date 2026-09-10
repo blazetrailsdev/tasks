@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4826
+pr: trails#4826
 claim: "2026-07-09T11:29:34Z"
 assignee: "cpk-canonical-models-drop-owner-side-primarykey-id"
 blocked-by: null

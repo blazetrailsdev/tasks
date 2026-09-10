@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4006
+pr: trails#4006
 claim: "2026-06-23T14:18:10Z"
 assignee: "fixture-habtm-association-label-loader"
 blocked-by: null

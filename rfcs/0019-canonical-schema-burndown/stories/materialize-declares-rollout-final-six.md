@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 86
-pr: 4222
+pr: trails#4222
 claim: "2026-06-27T18:26:33Z"
 assignee: "materialize-declares-rollout-final-six"
 blocked-by: null

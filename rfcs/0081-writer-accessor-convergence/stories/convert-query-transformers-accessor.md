@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5565
+pr: trails#5565
 claim: "2026-07-29T02:45:44Z"
 assignee: "convert-query-transformers-accessor"
 blocked-by: null

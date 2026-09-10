@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5838
+pr: trails#5838
 claim: "2026-08-01T23:30:59Z"
 assignee: "codegen-mixin-constant-resolution-by-index"
 blocked-by: null

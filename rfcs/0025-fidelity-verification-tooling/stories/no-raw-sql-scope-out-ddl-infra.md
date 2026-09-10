@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3243
+pr: trails#3243
 claim: "2026-06-14T12:12:34Z"
 assignee: "no-raw-sql-scope-out-ddl-infra"
 blocked-by: null

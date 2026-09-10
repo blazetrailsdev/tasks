@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: 3906
+pr: trails#3906
 claim: "2026-06-22T18:12:02Z"
 assignee: "converge-table-metadata-unconditional-where-hash-alias"
 blocked-by: null

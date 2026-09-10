@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 21
-pr: 7473
+pr: trails#7473
 claim: "2026-09-04T02:19:05Z"
 assignee: "tempfile-buffers-writes-instead-of-delegating-to-the-file"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6430
+pr: trails#6430
 claim: "2026-08-12T18:36:50Z"
 assignee: "fold-perform-insert-update-into-persistence-record-bodies"
 blocked-by: null

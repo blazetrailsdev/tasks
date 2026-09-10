@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7124
+pr: trails#7124
 claim: "2026-08-27T16:00:26Z"
 assignee: "issue-the-validations-classmethods-extend-from-its-own-included-hook"
 blocked-by: null

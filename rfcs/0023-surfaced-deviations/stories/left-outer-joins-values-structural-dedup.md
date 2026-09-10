@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 4537
+pr: trails#4537
 claim: "2026-07-04T02:55:34Z"
 assignee: "left-outer-joins-values-structural-dedup"
 blocked-by: null

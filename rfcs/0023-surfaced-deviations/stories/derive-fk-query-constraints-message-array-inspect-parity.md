@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3768
+pr: trails#3768
 claim: "2026-06-21T02:54:41Z"
 assignee: "derive-fk-query-constraints-message-array-inspect-parity"
 blocked-by: null

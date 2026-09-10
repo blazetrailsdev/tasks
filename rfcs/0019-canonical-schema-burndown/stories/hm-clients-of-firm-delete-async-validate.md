@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 3610
+pr: trails#3610
 claim: "2026-06-18T23:43:08Z"
 assignee: "hm-clients-of-firm-delete-async-validate"
 blocked-by: null

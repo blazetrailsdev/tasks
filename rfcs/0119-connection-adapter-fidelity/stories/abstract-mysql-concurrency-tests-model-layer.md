@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7061
+pr: trails#7061
 claim: "2026-08-25T18:50:35Z"
 assignee: "pg-column-serial-identity-fields-are-public-where-rails-has-ivars"
 blocked-by: null

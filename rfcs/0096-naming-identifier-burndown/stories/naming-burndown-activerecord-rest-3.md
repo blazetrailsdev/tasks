@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6366
+pr: trails#6366
 claim: "2026-08-11T15:43:39Z"
 assignee: "naming-burndown-activerecord-rest-3"
 blocked-by: null

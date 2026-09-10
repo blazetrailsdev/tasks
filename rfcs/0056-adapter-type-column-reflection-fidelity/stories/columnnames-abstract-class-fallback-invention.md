@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 0
-pr: 5109
+pr: trails#5109
 claim: "2026-07-23T01:13:26Z"
 assignee: "columnnames-abstract-class-fallback-invention"
 blocked-by: null

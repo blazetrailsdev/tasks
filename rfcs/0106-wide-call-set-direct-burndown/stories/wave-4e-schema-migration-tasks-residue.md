@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 10
-pr: 6664
+pr: trails#6664
 claim: "2026-08-17T18:48:11Z"
 assignee: "activesupport-empty-predicate-call-rows"
 blocked-by: null

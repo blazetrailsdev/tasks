@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 83
-pr: 4219
+pr: trails#4219
 claim: "2026-06-27T17:26:35Z"
 assignee: "multiparameter-attributes-canonical-strip-asany"
 blocked-by: null

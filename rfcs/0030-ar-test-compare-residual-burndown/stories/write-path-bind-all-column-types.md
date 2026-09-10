@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 22
-pr: 5094
+pr: trails#5094
 claim: "2026-07-22T23:16:26Z"
 assignee: "write-path-bind-all-column-types"
 blocked-by: null

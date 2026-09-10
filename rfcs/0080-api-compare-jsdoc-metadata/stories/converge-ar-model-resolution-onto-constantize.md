@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5503
+pr: trails#5503
 claim: "2026-07-28T13:46:37Z"
 assignee: "converge-ar-model-resolution-onto-constantize"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5953
+pr: trails#5953
 claim: "2026-08-03T02:45:48Z"
 assignee: "mark-column-method-names-internal"
 blocked-by: null

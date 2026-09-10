@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 7644
+pr: trails#7644
 claim: "2026-09-09T13:39:48Z"
 assignee: "pg-exec-remaining-callers-and-deletion"
 blocked-by: null

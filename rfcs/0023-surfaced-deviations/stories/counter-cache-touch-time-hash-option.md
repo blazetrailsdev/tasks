@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4361
+pr: trails#4361
 claim: "2026-07-01T03:54:49Z"
 assignee: "counter-cache-touch-time-hash-option"
 blocked-by: null

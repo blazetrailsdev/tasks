@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4482
+pr: trails#4482
 claim: "2026-07-03T02:45:52Z"
 assignee: "habtm-sourcename-classname-convergence"
 blocked-by: null

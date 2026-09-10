@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5471
+pr: trails#5471
 claim: "2026-07-28T00:22:17Z"
 assignee: "port-constantize-retire-model-finder"
 blocked-by: null

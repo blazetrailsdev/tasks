@@ -7,7 +7,7 @@ cluster: adapter-cleanup
 deps: []
 deps-rfc: []
 est-loc: 150
-pr: 3133
+pr: trails#3133
 claim: "2026-06-11T20:54:05Z"
 assignee: "collapse-identical-quoting-overrides"
 blocked-by: null

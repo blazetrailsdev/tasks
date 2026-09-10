@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5604
+pr: trails#5604
 claim: "2026-07-29T21:20:51Z"
 assignee: "database-tasks-rollback-uses-global-migration-list"
 blocked-by: null

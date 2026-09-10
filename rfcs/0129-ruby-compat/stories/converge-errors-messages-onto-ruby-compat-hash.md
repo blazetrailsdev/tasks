@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 45
-pr: 7345
+pr: trails#7345
 claim: "2026-09-01T16:14:07Z"
 assignee: "converge-errors-messages-onto-ruby-compat-hash"
 blocked-by: null

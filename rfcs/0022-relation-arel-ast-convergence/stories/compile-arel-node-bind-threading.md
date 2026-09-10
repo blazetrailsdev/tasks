@@ -8,7 +8,7 @@ deps: ["audit-bind-inlining-rails-fidelity"]
 deps-rfc: []
 est-loc: 250
 priority: 6
-pr: 3317
+pr: trails#3317
 claim: "2026-06-15T02:16:41Z"
 assignee: "compile-arel-node-bind-threading"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4363
+pr: trails#4363
 claim: "2026-07-01T04:54:46Z"
 assignee: "cpk-join-dependency-composite-fk-collection"
 blocked-by: null

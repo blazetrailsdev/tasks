@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5384
+pr: trails#5384
 claim: "2026-07-27T01:02:54Z"
 assignee: "converge-pg-schema-statements-introspection-call-set"
 blocked-by: null

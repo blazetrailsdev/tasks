@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7183
+pr: trails#7183
 claim: "2026-08-28T20:35:54Z"
 assignee: "strip-freeform-comments-ar-connection-adapters-toplevel-tests"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4809
+pr: trails#4809
 claim: "2026-07-08T22:52:33Z"
 assignee: "converge-destroy-belongs-to-preload-to-lazy"
 blocked-by: null

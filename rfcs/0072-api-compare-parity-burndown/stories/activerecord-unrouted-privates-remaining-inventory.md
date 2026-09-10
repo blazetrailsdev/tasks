@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5629
+pr: trails#5629
 claim: "2026-07-30T12:42:14Z"
 assignee: "activerecord-unrouted-privates-remaining-inventory"
 blocked-by: null

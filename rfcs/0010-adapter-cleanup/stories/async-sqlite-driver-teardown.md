@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3260
+pr: trails#3260
 claim: "2026-06-14T15:00:34Z"
 assignee: "async-sqlite-driver-teardown"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 4
-pr: 3130
+pr: trails#3130
 claim: "2026-06-11T19:09:06Z"
 assignee: "abstract-schema-layer-quote-dispatch"
 blocked-by: null

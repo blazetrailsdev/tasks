@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4470
+pr: trails#4470
 claim: "2026-07-03T03:21:49Z"
 assignee: "hmt-unskip-build-include"
 blocked-by: null

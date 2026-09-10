@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 5560
+pr: trails#5560
 claim: "2026-07-29T19:22:12Z"
 assignee: "port-columns-test-rename-column-remainder"
 blocked-by: null

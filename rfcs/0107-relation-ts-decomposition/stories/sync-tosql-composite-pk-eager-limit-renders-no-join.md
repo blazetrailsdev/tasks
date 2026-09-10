@@ -9,7 +9,7 @@ deps: ["converge-sync-eager-builders-async-to-sql"]
 deps-rfc: []
 est-loc: 150
 priority: 7
-pr: 6939
+pr: trails#6939
 claim: "2026-08-23T19:43:14Z"
 assignee: "sync-tosql-composite-pk-eager-limit-renders-no-join"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 3180
+pr: trails#3180
 claim: "2026-06-13T11:01:43Z"
 assignee: "f9g2-inheritance-enum-sti-default-scope"
 blocked-by: null

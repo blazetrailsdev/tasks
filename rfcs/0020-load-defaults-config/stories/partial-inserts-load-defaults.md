@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: 3066
+pr: trails#3066
 claim: "2026-06-09T19:45:28Z"
 assignee: "partial-inserts-load-defaults"
 blocked-by: null

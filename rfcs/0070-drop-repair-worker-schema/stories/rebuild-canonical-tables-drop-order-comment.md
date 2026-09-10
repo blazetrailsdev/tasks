@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 7
-pr: 5267
+pr: trails#5267
 claim: "2026-07-24T21:02:57Z"
 assignee: "rebuild-canonical-tables-drop-order-comment"
 blocked-by: null

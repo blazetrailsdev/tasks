@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4691
+pr: trails#4691
 claim: "2026-07-06T18:08:55Z"
 assignee: "abstract-fk-mutators-use-foreign-keys-guard"
 blocked-by: null

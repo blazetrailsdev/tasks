@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4839
+pr: trails#4839
 claim: "2026-07-13T18:28:27Z"
 assignee: "memoize-attribute-types"
 blocked-by: null

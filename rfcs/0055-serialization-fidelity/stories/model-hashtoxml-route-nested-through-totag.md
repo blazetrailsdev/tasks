@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 22
-pr: 4797
+pr: trails#4797
 claim: "2026-07-08T19:37:36Z"
 assignee: "model-hashtoxml-route-nested-through-totag"
 blocked-by: null

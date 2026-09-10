@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3247
+pr: trails#3247
 claim: "2026-06-14T12:30:35Z"
 assignee: "p3-pg-enum-no-oid-warning"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5774
+pr: trails#5774
 claim: "2026-08-01T00:10:40Z"
 assignee: "migration-remaining-as-any-adapter-delegations"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
 est-loc: 240
 priority: 5
-pr: 7234
+pr: trails#7234
 claim: "2026-08-30T12:20:20Z"
 assignee: "ruby-compat-mri-citation-lint"
 blocked-by: null

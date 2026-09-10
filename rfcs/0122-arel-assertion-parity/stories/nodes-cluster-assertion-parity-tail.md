@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7079
+pr: trails#7079
 claim: "2026-08-26T12:44:26Z"
 assignee: "arel-assertion-residue-to-zero"
 blocked-by: null

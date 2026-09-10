@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7543
+pr: trails#7543
 claim: "2026-09-05T23:06:51Z"
 assignee: "converge-hash-config-configuration-alias"
 blocked-by: null

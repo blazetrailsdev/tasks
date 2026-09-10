@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3796
+pr: trails#3796
 claim: "2026-06-21T14:30:42Z"
 assignee: "pg-array-range-encode-helpers-off-live-path"
 blocked-by: null

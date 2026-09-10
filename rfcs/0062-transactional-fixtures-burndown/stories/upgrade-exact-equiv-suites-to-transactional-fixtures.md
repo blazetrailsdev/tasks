@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 0
-pr: 4639
+pr: trails#4639
 claim: "2026-07-05T22:07:19Z"
 assignee: "upgrade-exact-equiv-suites-to-transactional-fixtures"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6708
+pr: trails#6708
 claim: "2026-08-18T18:14:58Z"
 assignee: "port-test-date-strftime-different-format"
 blocked-by: null

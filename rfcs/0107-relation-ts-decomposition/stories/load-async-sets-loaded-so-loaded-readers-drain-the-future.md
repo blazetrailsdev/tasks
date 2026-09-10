@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 6918
+pr: trails#6918
 claim: "2026-08-23T14:57:28Z"
 assignee: "load-async-sets-loaded-so-loaded-readers-drain-the-future"
 blocked-by: null

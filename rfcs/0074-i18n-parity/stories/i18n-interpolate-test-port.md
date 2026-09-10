@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6013
+pr: trails#6013
 claim: "2026-08-03T20:00:43Z"
 assignee: "i18n-interpolate-test-port"
 blocked-by: null

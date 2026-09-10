@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6770
+pr: trails#6770
 claim: "2026-08-20T13:22:33Z"
 assignee: "proxy-record-delegates-read-through-merging-load-target"
 blocked-by: null

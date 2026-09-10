@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7479
+pr: trails#7479
 claim: "2026-09-04T12:02:12Z"
 assignee: "transaction-isolation-level-keys-are-symbol-spelled"
 blocked-by: null

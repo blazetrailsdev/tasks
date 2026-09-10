@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6399
+pr: trails#6399
 claim: "2026-08-12T03:06:02Z"
 assignee: "converge-preloader-reflection-scope-arity-and-lazy-memo"
 blocked-by: null

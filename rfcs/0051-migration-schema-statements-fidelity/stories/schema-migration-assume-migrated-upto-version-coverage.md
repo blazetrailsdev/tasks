@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5483
+pr: trails#5483
 claim: "2026-07-28T02:16:16Z"
 assignee: "schema-migration-assume-migrated-upto-version-coverage"
 blocked-by: null

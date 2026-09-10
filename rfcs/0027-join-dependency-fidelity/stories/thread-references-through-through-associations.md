@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 50
-pr: 3543
+pr: trails#3543
 claim: "2026-06-17T14:16:24Z"
 assignee: "thread-references-through-through-associations"
 blocked-by: null

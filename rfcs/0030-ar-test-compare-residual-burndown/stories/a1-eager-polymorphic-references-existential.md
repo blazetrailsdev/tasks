@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: 3929
+pr: trails#3929
 claim: "2026-06-22T21:47:16Z"
 assignee: "a1-eager-polymorphic-references-existential"
 blocked-by: null

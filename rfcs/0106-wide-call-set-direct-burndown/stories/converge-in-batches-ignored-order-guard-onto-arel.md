@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6870
+pr: trails#6870
 claim: "2026-08-22T18:19:59Z"
 assignee: "benchmarkable-should-mix-in-logger-reader"
 blocked-by: null

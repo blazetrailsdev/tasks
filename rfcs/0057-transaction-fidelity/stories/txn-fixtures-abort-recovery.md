@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 33
-pr: 4727
+pr: trails#4727
 claim: "2026-07-07T03:47:35Z"
 assignee: "txn-fixtures-abort-recovery"
 blocked-by: null

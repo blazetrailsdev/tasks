@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6279
+pr: trails#6279
 claim: "2026-08-09T13:39:33Z"
 assignee: "check-constraint-name-raises-argumenterror-not-keyerror"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 37
-pr: 2969
+pr: trails#2969
 claim: "2026-06-06T14:31:11Z"
 assignee: "readonly-collection-method-missing"
 blocked-by: null

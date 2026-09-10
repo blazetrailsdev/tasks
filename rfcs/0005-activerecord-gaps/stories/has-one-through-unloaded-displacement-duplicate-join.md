@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4494
+pr: trails#4494
 claim: "2026-07-16T16:11:13Z"
 assignee: "has-one-through-unloaded-displacement-duplicate-join"
 blocked-by: null

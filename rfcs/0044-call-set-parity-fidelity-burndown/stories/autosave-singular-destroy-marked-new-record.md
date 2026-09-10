@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4067
+pr: trails#4067
 claim: "2026-06-24T16:53:57Z"
 assignee: "autosave-singular-destroy-marked-new-record"
 blocked-by: null

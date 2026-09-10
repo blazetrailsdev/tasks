@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6637
+pr: trails#6637
 claim: "2026-08-17T10:25:53Z"
 assignee: "assertions-activesupport-array-extract-enumerator-arm"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3977
+pr: trails#3977
 claim: "2026-06-23T11:47:40Z"
 assignee: "converge-pg-add-unique-constraint-via-alter-table"
 blocked-by: null

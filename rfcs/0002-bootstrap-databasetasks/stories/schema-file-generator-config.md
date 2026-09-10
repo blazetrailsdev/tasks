@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 1000001
-pr: 2995
+pr: trails#2995
 claim: "2026-06-07T15:19:51Z"
 assignee: "schema-file-generator-config"
 blocked-by: null

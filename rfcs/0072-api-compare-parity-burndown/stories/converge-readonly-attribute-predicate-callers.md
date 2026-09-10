@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5321
+pr: trails#5321
 claim: "2026-07-25T20:38:52Z"
 assignee: "converge-readonly-attribute-predicate-callers"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6865
+pr: trails#6865
 claim: "2026-08-22T17:19:56Z"
 assignee: "fold-to-arel-into-the-arel-reader"
 blocked-by: null

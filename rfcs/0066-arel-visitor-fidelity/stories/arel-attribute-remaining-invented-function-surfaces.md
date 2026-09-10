@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5018
+pr: trails#5018
 claim: "2026-07-20T23:11:43Z"
 assignee: "arel-attribute-remaining-invented-function-surfaces"
 blocked-by: null

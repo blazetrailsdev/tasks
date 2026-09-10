@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 1
-pr: 3135
+pr: trails#3135
 claim: "2026-06-11T21:13:58Z"
 assignee: "cte-build-with-expression-ast"
 blocked-by: null

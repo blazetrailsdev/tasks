@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4407
+pr: trails#4407
 claim: "2026-07-02T14:09:44Z"
 assignee: "encrypt-attribute-converge-scheme-for-declared-new"
 blocked-by: null

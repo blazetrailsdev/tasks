@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5966
+pr: trails#5966
 claim: "2026-08-03T13:14:00Z"
 assignee: "mysql2-connected-predicate-folds-in-cached-ping-state"
 blocked-by: null

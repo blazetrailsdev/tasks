@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6726
+pr: trails#6726
 claim: "2026-08-18T21:06:56Z"
 assignee: "converge-references-eager-loaded-tables-symbol-to-s"
 blocked-by: null

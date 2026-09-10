@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5159
+pr: trails#5159
 claim: "2026-07-23T16:31:35Z"
 assignee: "checkout-leaves-raw-connection-unestablished"
 blocked-by: null

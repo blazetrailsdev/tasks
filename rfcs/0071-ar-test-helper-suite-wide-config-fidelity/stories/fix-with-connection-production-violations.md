@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5323
+pr: trails#5323
 claim: "2026-07-25T21:26:51Z"
 assignee: "fix-with-connection-production-violations"
 blocked-by: null

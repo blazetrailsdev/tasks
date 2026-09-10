@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 20
-pr: 4967
+pr: trails#4967
 claim: "2026-07-19T20:51:11Z"
 assignee: "scope-aware-helper-expansion-resolution"
 blocked-by: null

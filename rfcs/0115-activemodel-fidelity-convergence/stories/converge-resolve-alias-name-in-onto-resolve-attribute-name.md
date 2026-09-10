@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6781
+pr: trails#6781
 claim: "2026-08-20T21:53:51Z"
 assignee: "converge-resolve-alias-name-in-onto-resolve-attribute-name"
 blocked-by: null

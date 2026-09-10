@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 13
-pr: 3494
+pr: trails#3494
 claim: "2026-06-16T20:04:53Z"
 assignee: "before-add-callback-sync-target-load"
 blocked-by: null

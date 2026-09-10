@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5599
+pr: trails#5599
 claim: "2026-07-29T19:46:34Z"
 assignee: "converge-isolated-database-onto-canonical-pools"
 blocked-by: null

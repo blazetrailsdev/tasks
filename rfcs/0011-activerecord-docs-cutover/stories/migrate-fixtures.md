@@ -7,7 +7,7 @@ cluster: migrate
 deps: ["reconcile-existing-rfcs"]
 deps-rfc: []
 est-loc: 200
-pr: 6
+pr: tasks-legacy#6
 claim: null
 assignee: null
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5696
+pr: trails#5696
 claim: "2026-07-31T01:06:04Z"
 assignee: "serialize-load-schema-helper-seam-ownership"
 blocked-by: null

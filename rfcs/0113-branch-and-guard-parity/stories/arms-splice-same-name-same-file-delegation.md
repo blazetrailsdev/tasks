@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 4
-pr: 7579
+pr: trails#7579
 claim: "2026-09-06T22:38:48Z"
 assignee: "arms-splice-same-name-same-file-delegation"
 blocked-by: null

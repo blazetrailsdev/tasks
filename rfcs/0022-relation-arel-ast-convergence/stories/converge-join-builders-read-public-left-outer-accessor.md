@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 10
-pr: 4675
+pr: trails#4675
 claim: "2026-07-06T14:17:00Z"
 assignee: "converge-join-builders-read-public-left-outer-accessor"
 blocked-by: null

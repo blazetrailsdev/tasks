@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 7551
+pr: trails#7551
 claim: "2026-09-06T12:18:19Z"
 assignee: "bigdecimal-round-diverges-from-mri-on-negative-ndigits"
 blocked-by: null

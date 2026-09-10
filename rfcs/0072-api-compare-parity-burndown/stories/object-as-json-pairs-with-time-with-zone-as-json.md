@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6225
+pr: trails#6225
 claim: "2026-08-08T10:03:54Z"
 assignee: "object-as-json-pairs-with-time-with-zone-as-json"
 blocked-by: null

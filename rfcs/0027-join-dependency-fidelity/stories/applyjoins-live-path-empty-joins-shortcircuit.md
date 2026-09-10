@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4647
+pr: trails#4647
 claim: "2026-07-06T00:01:56Z"
 assignee: "applyjoins-live-path-empty-joins-shortcircuit"
 blocked-by: null

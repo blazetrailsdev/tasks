@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 5121
+pr: trails#5121
 claim: "2026-07-23T02:52:36Z"
 assignee: "port-abstract-mysql-concurrency-tests"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: 5531
+pr: trails#5531
 claim: "2026-07-28T20:39:08Z"
 assignee: "isolate-drop-all-tables-suite-from-shared-worker-db"
 blocked-by: null

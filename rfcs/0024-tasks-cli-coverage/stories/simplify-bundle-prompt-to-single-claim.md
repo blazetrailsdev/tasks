@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 0
+pr: null
 claim: "2026-08-04T18:00:52Z"
 assignee: "simplify-bundle-prompt-to-single-claim"
 blocked-by: null

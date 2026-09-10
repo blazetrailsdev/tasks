@@ -9,7 +9,7 @@ deps:
   - fan-out-model-attribute-methods-and-registration-surface
 deps-rfc: []
 est-loc: 280
-pr: 7010
+pr: trails#7010
 claim: "2026-08-24T22:42:07Z"
 assignee: "fan-out-model-serialization-conversion-access-naming-surface"
 blocked-by: null

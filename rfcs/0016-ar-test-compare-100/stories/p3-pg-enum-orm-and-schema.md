@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 14
-pr: 3160
+pr: trails#3160
 claim: "2026-06-12T20:39:17Z"
 assignee: "p3-pg-enum-orm-and-schema"
 blocked-by: null

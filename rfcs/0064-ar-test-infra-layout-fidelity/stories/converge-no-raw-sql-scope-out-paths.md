@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5408
+pr: trails#5408
 claim: "2026-07-27T14:21:07Z"
 assignee: "converge-no-raw-sql-scope-out-paths"
 blocked-by: null

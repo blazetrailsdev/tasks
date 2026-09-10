@@ -7,7 +7,7 @@ cluster: duplicate-bodies
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 6777
+pr: trails#6777
 claim: "2026-08-20T17:22:15Z"
 assignee: "converge-event-children-invention"
 blocked-by: null

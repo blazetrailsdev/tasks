@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5510
+pr: trails#5510
 claim: "2026-07-28T14:31:43Z"
 assignee: "remove-dead-pg-schema-statements-interface"
 blocked-by: null

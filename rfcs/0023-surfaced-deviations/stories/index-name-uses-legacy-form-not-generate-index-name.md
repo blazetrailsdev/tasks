@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3298
+pr: trails#3298
 claim: "2026-06-14T22:19:15Z"
 assignee: "index-name-uses-legacy-form-not-generate-index-name"
 blocked-by: null

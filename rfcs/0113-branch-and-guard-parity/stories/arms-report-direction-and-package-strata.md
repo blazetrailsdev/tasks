@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 3
-pr: 7550
+pr: trails#7550
 claim: "2026-09-06T11:48:11Z"
 assignee: "arms-report-direction-and-package-strata"
 blocked-by: null

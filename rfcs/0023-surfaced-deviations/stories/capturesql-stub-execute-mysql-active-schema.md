@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3646
+pr: trails#3646
 claim: "2026-06-19T14:48:26Z"
 assignee: "capturesql-stub-execute-mysql-active-schema"
 blocked-by: null

@@ -10,7 +10,7 @@ deps: ["rails-privates-manifest-package-dirs-drift"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 7045
+pr: trails#7045
 claim: "2026-08-25T15:36:20Z"
 assignee: "require-no-rails-equivalent-on-unbacked-internal"
 blocked-by: null

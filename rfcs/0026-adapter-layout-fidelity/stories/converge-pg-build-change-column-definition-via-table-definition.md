@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: 3903
+pr: trails#3903
 claim: "2026-06-22T17:47:59Z"
 assignee: "converge-pg-build-change-column-definition-via-table-definition"
 blocked-by: null

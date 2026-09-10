@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 7508
+pr: trails#7508
 claim: "2026-09-05T03:22:11Z"
 assignee: "errors-include-bypasses-error-match"
 blocked-by: null

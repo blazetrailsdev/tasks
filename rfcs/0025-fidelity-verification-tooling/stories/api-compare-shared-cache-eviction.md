@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3257
+pr: trails#3257
 claim: "2026-06-14T14:42:34Z"
 assignee: "api-compare-shared-cache-eviction"
 blocked-by: null

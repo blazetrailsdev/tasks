@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: 5186
+pr: trails#5186
 claim: "2026-07-23T22:12:08Z"
 assignee: "composite-qualified-cols-bind-through-base-table-type"
 blocked-by: null

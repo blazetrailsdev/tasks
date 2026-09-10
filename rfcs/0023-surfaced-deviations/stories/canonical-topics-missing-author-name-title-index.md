@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 4454
+pr: trails#4454
 claim: "2026-07-02T23:57:51Z"
 assignee: "canonical-topics-missing-author-name-title-index"
 blocked-by: null

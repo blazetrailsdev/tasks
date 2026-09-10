@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: 6324
+pr: trails#6324
 claim: "2026-08-10T03:46:43Z"
 assignee: "port-test-date-parse-heuristic-remainder"
 blocked-by: null

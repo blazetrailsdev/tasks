@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: 7055
+pr: trails#7055
 claim: "2026-08-26T15:41:47Z"
 assignee: "retire-explicit-target-and-loaded-from-preload-fields"
 blocked-by: null

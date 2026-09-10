@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3969
+pr: trails#3969
 claim: "2026-06-23T11:02:40Z"
 assignee: "association-scope-result-caching-and-comments-newest"
 blocked-by: null

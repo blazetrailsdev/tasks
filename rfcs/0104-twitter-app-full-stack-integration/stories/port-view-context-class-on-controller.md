@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7390
+pr: trails#7390
 claim: "2026-09-02T13:27:56Z"
 assignee: "converge-routeset-call-to-journey-router-serve"
 blocked-by: null

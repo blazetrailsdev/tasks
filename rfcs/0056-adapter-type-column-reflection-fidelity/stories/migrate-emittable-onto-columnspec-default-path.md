@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 40
-pr: 4548
+pr: trails#4548
 claim: "2026-07-04T14:04:29Z"
 assignee: "migrate-emittable-onto-columnspec-default-path"
 blocked-by: null

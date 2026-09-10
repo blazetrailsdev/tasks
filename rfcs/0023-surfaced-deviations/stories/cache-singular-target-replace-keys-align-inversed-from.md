@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3353
+pr: trails#3353
 claim: "2026-06-15T14:22:30Z"
 assignee: "cache-singular-target-replace-keys-align-inversed-from"
 blocked-by: null

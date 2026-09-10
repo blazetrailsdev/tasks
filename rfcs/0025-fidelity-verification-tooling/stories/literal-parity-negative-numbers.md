@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3303
+pr: trails#3303
 claim: "2026-06-14T23:01:11Z"
 assignee: "literal-parity-negative-numbers"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7532
+pr: trails#7532
 claim: "2026-09-05T19:46:50Z"
 assignee: "rack-deflater-call-diverges-from-rails-case-arms"
 blocked-by: null

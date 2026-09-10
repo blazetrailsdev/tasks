@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5475
+pr: trails#5475
 claim: "2026-07-28T00:58:15Z"
 assignee: "pg-sequence-name-from-parts-hardcodes-63"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 25
-pr: 5236
+pr: trails#5236
 claim: "2026-07-24T16:30:53Z"
 assignee: "unify-enumerable-idiom-lists-narrow-and-wide-call-lints"
 blocked-by: null

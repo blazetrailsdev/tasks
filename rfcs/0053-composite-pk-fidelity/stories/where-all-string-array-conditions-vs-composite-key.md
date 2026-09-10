@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 3
-pr: 4457
+pr: trails#4457
 claim: "2026-07-07T15:01:53Z"
 assignee: "where-all-string-array-conditions-vs-composite-key"
 blocked-by: null

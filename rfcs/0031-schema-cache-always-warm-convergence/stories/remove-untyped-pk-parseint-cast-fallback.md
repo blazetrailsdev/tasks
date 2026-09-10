@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: 3920
+pr: trails#3920
 claim: "2026-06-22T20:19:17Z"
 assignee: "remove-untyped-pk-parseint-cast-fallback"
 blocked-by: null

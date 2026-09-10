@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 4393
+pr: trails#4393
 claim: "2026-07-02T01:18:05Z"
 assignee: "assertion-expectation-kind-comparison"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 34
-pr: 3518
+pr: trails#3518
 claim: "2026-06-17T01:00:42Z"
 assignee: "where-hash-resolves-self-join-alias"
 blocked-by: null

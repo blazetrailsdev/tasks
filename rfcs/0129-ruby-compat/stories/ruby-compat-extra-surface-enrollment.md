@@ -9,7 +9,7 @@ deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
 est-loc: 130
 priority: 3
-pr: 7232
+pr: trails#7232
 claim: "2026-08-30T11:50:12Z"
 assignee: "ruby-compat-extra-surface-enrollment"
 blocked-by: null

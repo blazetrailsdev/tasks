@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: 6736
+pr: trails#6736
 claim: "2026-08-19T13:00:37Z"
 assignee: "assertions-tail-adapters-3c"
 blocked-by: null

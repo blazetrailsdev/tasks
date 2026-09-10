@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3332
+pr: trails#3332
 claim: "2026-06-15T11:55:11Z"
 assignee: "join-dependency-associations-map-key-consistency"
 blocked-by: null

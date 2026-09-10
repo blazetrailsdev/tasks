@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: 7513
+pr: trails#7513
 claim: "2026-09-05T10:22:05Z"
 assignee: "type-name-property-registry-key-burndown"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 3
-pr: 7491
+pr: trails#7491
 claim: "2026-09-04T15:20:44Z"
 assignee: "port-uri-for-parse-merge-and-scheme-classes"
 blocked-by: null

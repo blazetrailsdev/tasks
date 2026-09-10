@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 30
-pr: 28
+pr: tasks-legacy#28
 claim: "2026-06-13T02:07:59Z"
 assignee: "validate-as-library"
 blocked-by: null

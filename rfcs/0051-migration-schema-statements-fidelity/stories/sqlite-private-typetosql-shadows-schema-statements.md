@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5570
+pr: trails#5570
 claim: "2026-08-02T00:41:05Z"
 assignee: "sqlite-private-typetosql-shadows-schema-statements"
 blocked-by: null

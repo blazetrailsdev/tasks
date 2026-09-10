@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4907
+pr: trails#4907
 claim: "2026-07-16T16:01:15Z"
 assignee: "converge-vestigial-sqlite3-perform-query"
 blocked-by: null

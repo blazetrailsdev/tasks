@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6045
+pr: trails#6045
 claim: "2026-08-04T02:40:53Z"
 assignee: "i18n-connector-key-camelization-duplicated"
 blocked-by: null

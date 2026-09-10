@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4069
+pr: trails#4069
 claim: "2026-06-24T17:02:44Z"
 assignee: "call-mismatch-ratchet-env-nondeterminism"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: 6813
+pr: trails#6813
 claim: "2026-08-20T22:18:55Z"
 assignee: "delete-model-xml-serialization-and-nullify-blanks"
 blocked-by: null

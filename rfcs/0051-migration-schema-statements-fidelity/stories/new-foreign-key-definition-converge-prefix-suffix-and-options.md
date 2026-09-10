@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 21
-pr: 4716
+pr: trails#4716
 claim: "2026-07-07T01:27:36Z"
 assignee: "new-foreign-key-definition-converge-prefix-suffix-and-options"
 blocked-by: null

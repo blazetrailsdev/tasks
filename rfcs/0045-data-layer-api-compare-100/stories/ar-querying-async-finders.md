@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4050
+pr: trails#4050
 claim: "2026-06-24T03:30:43Z"
 assignee: "ar-querying-async-finders"
 blocked-by: null

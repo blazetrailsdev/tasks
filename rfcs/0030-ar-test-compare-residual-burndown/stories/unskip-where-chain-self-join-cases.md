@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 3
-pr: 4644
+pr: trails#4644
 claim: "2026-07-05T23:21:57Z"
 assignee: "unskip-where-chain-self-join-cases"
 blocked-by: null

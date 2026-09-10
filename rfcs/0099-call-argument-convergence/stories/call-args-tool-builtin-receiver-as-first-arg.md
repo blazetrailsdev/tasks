@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6351
+pr: trails#6351
 claim: "2026-08-11T11:44:18Z"
 assignee: "call-args-tool-builtin-receiver-as-first-arg"
 blocked-by: null

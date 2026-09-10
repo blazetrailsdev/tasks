@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 62
-pr: 7469
+pr: trails#7469
 claim: "2026-09-03T23:44:33Z"
 assignee: "converge-sanitize-for-mass-assignment-mixin-split"
 blocked-by: null

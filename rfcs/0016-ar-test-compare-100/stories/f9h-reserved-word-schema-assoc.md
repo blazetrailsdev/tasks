@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 3239
+pr: trails#3239
 claim: "2026-06-14T02:24:34Z"
 assignee: "f9h-reserved-word-schema-assoc"
 blocked-by: null

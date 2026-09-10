@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 4
-pr: 3131
+pr: trails#3131
 claim: "2026-06-11T19:39:05Z"
 assignee: "sanitize-sql-array-adapter-threading"
 blocked-by: null

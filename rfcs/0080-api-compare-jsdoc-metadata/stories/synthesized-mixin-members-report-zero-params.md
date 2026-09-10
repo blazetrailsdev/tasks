@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5654
+pr: trails#5654
 claim: "2026-07-30T18:17:18Z"
 assignee: "synthesized-mixin-members-report-zero-params"
 blocked-by: null

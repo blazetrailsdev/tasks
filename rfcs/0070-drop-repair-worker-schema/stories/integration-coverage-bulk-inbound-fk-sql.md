@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5305
+pr: trails#5305
 claim: "2026-07-25T14:22:54Z"
 assignee: "integration-coverage-bulk-inbound-fk-sql"
 blocked-by: null

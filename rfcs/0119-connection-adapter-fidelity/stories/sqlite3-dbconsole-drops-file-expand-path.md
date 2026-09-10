@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7554
+pr: trails#7554
 claim: "2026-09-06T13:38:20Z"
 assignee: "seed-a-missing-throw-arm-ratchet"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6178
+pr: trails#6178
 claim: "2026-08-07T16:02:16Z"
 assignee: "i18n-locale-tag-rfc4646"
 blocked-by: null

@@ -7,7 +7,7 @@ cluster: split-stores
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 7050
+pr: trails#7050
 claim: "2026-08-25T16:42:34Z"
 assignee: "converge-clear-cache-lock-mysql-sqlite"
 blocked-by: null

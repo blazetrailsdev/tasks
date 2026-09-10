@@ -7,7 +7,7 @@ cluster: dead-mixin-companions
 deps: []
 deps-rfc: []
 est-loc: 80
-pr: 6738
+pr: trails#6738
 claim: "2026-08-19T12:59:52Z"
 assignee: "days-into-week-duplicated-in-date-calculations"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6231
+pr: trails#6231
 claim: "2026-08-08T12:39:58Z"
 assignee: "checkout-raw-test-adapter-pools-are-never-disconnected"
 blocked-by: null

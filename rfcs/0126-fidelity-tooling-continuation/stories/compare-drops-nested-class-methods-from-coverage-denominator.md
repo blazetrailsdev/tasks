@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 2
-pr: 7173
+pr: trails#7173
 claim: "2026-08-28T17:19:53Z"
 assignee: "compare-drops-nested-class-methods-from-coverage-denominator"
 blocked-by: null

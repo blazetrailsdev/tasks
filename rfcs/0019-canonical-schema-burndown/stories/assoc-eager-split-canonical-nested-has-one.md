@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 44
-pr: 4185
+pr: trails#4185
 claim: "2026-06-26T11:53:40Z"
 assignee: "assoc-eager-split-canonical-nested-has-one"
 blocked-by: null

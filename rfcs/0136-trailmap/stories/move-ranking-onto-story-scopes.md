@@ -9,7 +9,7 @@ deps: ["move-task-models-into-trailmap"]
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: 3
+pr: trailmap#3
 claim: "2026-09-05T15:02:07Z"
 assignee: "move-ranking-onto-story-scopes"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 7603
+pr: trails#7603
 claim: "2026-09-08T11:37:46Z"
 assignee: "scoped-skip-suppresses-extracted-build-count-subquery"
 blocked-by: null

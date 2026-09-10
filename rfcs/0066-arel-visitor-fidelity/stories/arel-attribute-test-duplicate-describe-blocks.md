@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 55
-pr: 5057
+pr: trails#5057
 claim: "2026-07-22T14:41:49Z"
 assignee: "arel-attribute-test-duplicate-describe-blocks"
 blocked-by: null

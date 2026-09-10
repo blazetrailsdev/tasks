@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5757
+pr: trails#5757
 claim: "2026-07-31T21:10:40Z"
 assignee: "abstract-database-exists-body-diverges-from-connect-rescue"
 blocked-by: null

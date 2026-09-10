@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6106
+pr: trails#6106
 claim: "2026-08-05T00:11:03Z"
 assignee: "pin-fixture-pools-via-connection-notification"
 blocked-by: null

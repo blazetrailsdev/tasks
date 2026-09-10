@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 19
-pr: 7487
+pr: trails#7487
 claim: "2026-09-04T17:20:47Z"
 assignee: "sync-reads-of-async-reflection-retire-with-rfc-0073"
 blocked-by: null

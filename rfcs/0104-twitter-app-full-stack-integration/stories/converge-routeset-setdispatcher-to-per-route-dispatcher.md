@@ -9,7 +9,7 @@ deps: ["port-metal-dispatch-class-method"]
 deps-rfc: []
 est-loc: null
 priority: 41
-pr: 7286
+pr: trails#7286
 claim: null
 assignee: null
 blocked-by: null

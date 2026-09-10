@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3578
+pr: trails#3578
 claim: "2026-06-18T03:22:06Z"
 assignee: "assoc-associations-test-force-reload-async-validate"
 blocked-by: null

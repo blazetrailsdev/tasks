@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6608
+pr: trails#6608
 claim: "2026-08-16T19:33:30Z"
 assignee: "burn-down-in-closure-options-json-and-filters"
 blocked-by: null

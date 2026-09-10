@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 3614
+pr: trails#3614
 claim: "2026-06-19T00:52:18Z"
 assignee: "polymorphic-through-composite-owner-convergence"
 blocked-by: null

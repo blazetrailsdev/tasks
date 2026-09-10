@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 5
-pr: 3221
+pr: trails#3221
 claim: "2026-06-13T22:18:32Z"
 assignee: "pluck-includes-join-dependency"
 blocked-by: null

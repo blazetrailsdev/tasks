@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6782
+pr: trails#6782
 claim: "2026-08-20T18:15:06Z"
 assignee: "converge-assign-attribute-writer-ladder-onto-public-send"
 blocked-by: null

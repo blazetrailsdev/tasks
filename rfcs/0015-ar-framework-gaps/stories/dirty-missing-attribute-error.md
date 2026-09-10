@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 47
-pr: 2980
+pr: trails#2980
 claim: "2026-06-06T20:15:56Z"
 assignee: "dirty-missing-attribute-error"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5724
+pr: trails#5724
 claim: "2026-07-31T17:18:04Z"
 assignee: "converge-database-tasks-dump-filename-configs-onto-rails-names"
 blocked-by: null

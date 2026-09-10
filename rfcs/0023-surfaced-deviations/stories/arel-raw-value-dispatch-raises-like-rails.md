@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4873
+pr: trails#4873
 claim: "2026-07-14T19:51:09Z"
 assignee: "arel-raw-value-dispatch-raises-like-rails"
 blocked-by: null

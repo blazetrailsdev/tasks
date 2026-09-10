@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: 4160
+pr: trails#4160
 claim: "2026-06-25T22:32:16Z"
 assignee: "inheritance-extra-burndown"
 blocked-by: null

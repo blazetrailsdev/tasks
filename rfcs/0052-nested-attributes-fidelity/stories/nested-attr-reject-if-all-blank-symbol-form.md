@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 4579
+pr: trails#4579
 claim: "2026-07-04T23:47:05Z"
 assignee: "nested-attr-reject-if-all-blank-symbol-form"
 blocked-by: null

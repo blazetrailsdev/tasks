@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4557
+pr: trails#4557
 claim: "2026-07-04T16:49:29Z"
 assignee: "materialize-declares-generator-then-dynamic-import-misparse"
 blocked-by: null

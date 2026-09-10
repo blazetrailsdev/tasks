@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6674
+pr: trails#6674
 claim: "2026-08-17T22:43:01Z"
 assignee: "converge-collection-association-size-counted-arms"
 blocked-by: null

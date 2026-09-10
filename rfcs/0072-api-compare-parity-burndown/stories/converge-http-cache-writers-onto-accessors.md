@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5404
+pr: trails#5404
 claim: "2026-07-27T13:57:12Z"
 assignee: "converge-http-cache-writers-onto-accessors"
 blocked-by: null

@@ -12,7 +12,7 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: 7667
+pr: trails#7667
 claim: "2026-09-10T15:16:22Z"
 assignee: "port-fixtures-test-cases-tail"
 blocked-by: null

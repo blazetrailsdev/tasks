@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4895
+pr: trails#4895
 claim: "2026-07-15T19:11:11Z"
 assignee: "drop-pg-quoting-boolean-literal-extras"
 blocked-by: null

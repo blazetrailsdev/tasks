@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 1
-pr: 4814
+pr: trails#4814
 claim: "2026-07-09T01:07:35Z"
 assignee: "inherited-enum-decorator-replays-into-subclass-materialization"
 blocked-by: null

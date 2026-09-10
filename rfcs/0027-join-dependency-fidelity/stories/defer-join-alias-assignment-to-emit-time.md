@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 20
-pr: 3912
+pr: trails#3912
 claim: "2026-06-22T18:19:57Z"
 assignee: "defer-join-alias-assignment-to-emit-time"
 blocked-by: null

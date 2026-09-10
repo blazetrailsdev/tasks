@@ -8,7 +8,7 @@ deps: ["cli-package-scaffold"]
 deps-rfc: []
 est-loc: 50
 priority: 56
-pr: 2997
+pr: trails#2997
 claim: "2026-06-07T15:43:52Z"
 assignee: "cli-e2e-shared-helpers"
 blocked-by: null

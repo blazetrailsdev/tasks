@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6498
+pr: trails#6498
 claim: "2026-08-13T23:27:06Z"
 assignee: "converge-shard-selector-symbol-to-string"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 1
-pr: 3569
+pr: trails#3569
 claim: "2026-06-17T20:26:29Z"
 assignee: "converge-partial-decl-models-updated-at"
 blocked-by: null

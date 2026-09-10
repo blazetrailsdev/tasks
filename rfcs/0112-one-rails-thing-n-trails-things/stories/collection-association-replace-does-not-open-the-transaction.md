@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6902
+pr: trails#6902
 claim: "2026-08-23T02:57:28Z"
 assignee: "top-level-function-missing-rails-call-tag-does-not-suppress"
 blocked-by: null

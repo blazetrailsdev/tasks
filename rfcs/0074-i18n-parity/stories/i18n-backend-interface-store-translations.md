@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6011
+pr: trails#6011
 claim: "2026-08-03T19:39:43Z"
 assignee: "i18n-backend-interface-store-translations"
 blocked-by: null

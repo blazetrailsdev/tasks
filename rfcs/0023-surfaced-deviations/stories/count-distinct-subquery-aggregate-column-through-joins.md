@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3289
+pr: trails#3289
 claim: "2026-06-14T21:15:53Z"
 assignee: "count-distinct-subquery-aggregate-column-through-joins"
 blocked-by: null

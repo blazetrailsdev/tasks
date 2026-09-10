@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: 54
-pr: 7365
+pr: trails#7365
 claim: "2026-09-01T22:53:10Z"
 assignee: "move-method-missing-proxy-to-ruby-compat"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4553
+pr: trails#4553
 claim: "2026-07-04T15:49:28Z"
 assignee: "leftouterjoins-cte-outer-join-coverage"
 blocked-by: null

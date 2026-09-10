@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5112
+pr: trails#5112
 claim: "2026-07-23T01:33:09Z"
 assignee: "decrypt-assignments-unconditional-deserialize"
 blocked-by: null

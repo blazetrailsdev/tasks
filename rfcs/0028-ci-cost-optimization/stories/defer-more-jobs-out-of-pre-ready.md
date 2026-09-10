@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5931
+pr: trails#5931
 claim: "2026-08-02T23:11:05Z"
 assignee: "defer-more-jobs-out-of-pre-ready"
 blocked-by: null

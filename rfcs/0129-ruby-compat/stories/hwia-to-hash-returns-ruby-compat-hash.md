@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 48
-pr: 7347
+pr: trails#7347
 claim: "2026-09-01T17:04:17Z"
 assignee: "hwia-to-hash-returns-ruby-compat-hash"
 blocked-by: null

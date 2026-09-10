@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6460
+pr: trails#6460
 claim: "2026-08-13T13:36:35Z"
 assignee: "converge-async-sum-nil-identity-default"
 blocked-by: null

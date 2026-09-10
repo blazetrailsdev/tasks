@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6198
+pr: trails#6198
 claim: "2026-08-07T20:08:49Z"
 assignee: "polymorphic-reference-type-column-comes-first"
 blocked-by: null

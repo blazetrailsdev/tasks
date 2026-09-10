@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5553
+pr: trails#5553
 claim: "2026-07-29T00:35:45Z"
 assignee: "relocate-describe-if-mysql-adapter-out-of-adapters-tree"
 blocked-by: null

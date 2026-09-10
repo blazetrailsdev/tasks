@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4258
+pr: trails#4258
 claim: "2026-06-29T10:34:12Z"
 assignee: "assoc-eager-suite-canonical-wave-h"
 blocked-by: null

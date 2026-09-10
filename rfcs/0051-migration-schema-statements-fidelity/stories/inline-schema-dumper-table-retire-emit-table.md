@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: 55
-pr: 7094
+pr: trails#7094
 claim: "2026-08-26T17:11:41Z"
 assignee: "inline-schema-dumper-table-retire-emit-table"
 blocked-by: null

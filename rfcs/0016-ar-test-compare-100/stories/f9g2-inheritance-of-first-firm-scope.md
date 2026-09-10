@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: 3181
+pr: trails#3181
 claim: "2026-06-13T11:07:15Z"
 assignee: "f9g2-inheritance-of-first-firm-scope"
 blocked-by: null

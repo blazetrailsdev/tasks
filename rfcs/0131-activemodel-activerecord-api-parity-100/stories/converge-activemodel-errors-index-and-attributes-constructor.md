@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 170
 priority: 2
-pr: 7409
+pr: trails#7409
 claim: "2026-09-02T20:56:54Z"
 assignee: "converge-activemodel-errors-index-and-attributes-constructor"
 blocked-by: null

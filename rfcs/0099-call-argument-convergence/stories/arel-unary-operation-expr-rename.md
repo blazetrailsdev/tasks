@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6377
+pr: trails#6377
 claim: "2026-08-11T20:50:30Z"
 assignee: "arel-append-escape-inline-convergence"
 blocked-by: null

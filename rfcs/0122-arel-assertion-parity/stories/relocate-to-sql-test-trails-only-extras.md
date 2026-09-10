@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 7065
+pr: trails#7065
 claim: "2026-08-26T00:03:39Z"
 assignee: "db-warnings-log-arm-console-fallback"
 blocked-by: null

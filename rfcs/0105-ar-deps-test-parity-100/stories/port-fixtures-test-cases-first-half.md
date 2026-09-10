@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: 7652
+pr: trails#7652
 claim: "2026-09-09T19:57:01Z"
 assignee: "port-fixtures-test-cases-first-half"
 blocked-by: null

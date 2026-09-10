@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 8
-pr: 7315
+pr: trails#7315
 claim: "2026-08-31T21:03:42Z"
 assignee: "param-drift-actionview-structural-residue"
 blocked-by: null

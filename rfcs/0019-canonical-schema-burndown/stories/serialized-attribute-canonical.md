@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 65
-pr: 4204
+pr: trails#4204
 claim: "2026-06-26T18:13:08Z"
 assignee: "serialized-attribute-canonical"
 blocked-by: null

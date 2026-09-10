@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7163
+pr: trails#7163
 claim: "2026-08-28T14:24:28Z"
 assignee: "dot-visit-edge-error-drops-the-class-namespace"
 blocked-by: null

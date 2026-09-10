@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6428
+pr: trails#6428
 claim: "2026-08-12T17:36:52Z"
 assignee: "converge-collection-proxy-rich-reflection-re-resolve"
 blocked-by: null

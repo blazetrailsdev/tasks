@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 45
-pr: 4763
+pr: trails#4763
 claim: "2026-07-08T00:53:23Z"
 assignee: "sqlite-integer-bind-serializes-as-float"
 blocked-by: null

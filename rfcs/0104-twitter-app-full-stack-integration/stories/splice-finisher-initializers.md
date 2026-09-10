@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6504
+pr: trails#6504
 claim: "2026-08-14T01:35:18Z"
 assignee: "splice-finisher-initializers"
 blocked-by: null

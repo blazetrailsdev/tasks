@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3241
+pr: trails#3241
 claim: "2026-06-14T02:30:34Z"
 assignee: "f9i-calculations-grouped-assoc"
 blocked-by: null

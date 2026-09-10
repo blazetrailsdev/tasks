@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6633
+pr: trails#6633
 claim: "2026-08-17T09:26:50Z"
 assignee: "converge-batches-kernel-array-locals"
 blocked-by: null

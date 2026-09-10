@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3778
+pr: trails#3778
 claim: "2026-06-21T11:34:45Z"
 assignee: "nested-attr-cpk-composite-fk-from-reflection"
 blocked-by: null

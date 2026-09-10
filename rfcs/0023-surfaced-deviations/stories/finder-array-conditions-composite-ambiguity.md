@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4457
+pr: trails#4457
 claim: "2026-07-03T00:33:52Z"
 assignee: "finder-array-conditions-composite-ambiguity"
 blocked-by: null

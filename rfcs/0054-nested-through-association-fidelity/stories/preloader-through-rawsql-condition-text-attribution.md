@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: 4700
+pr: trails#4700
 claim: "2026-07-06T20:38:57Z"
 assignee: "preloader-through-rawsql-condition-text-attribution"
 blocked-by: null

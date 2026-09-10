@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7236
+pr: trails#7236
 claim: "2026-08-30T13:43:19Z"
 assignee: "promote-call-skeletons-to-an-arms-report"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5182
+pr: trails#5182
 claim: "2026-07-23T21:42:09Z"
 assignee: "wide-call-ratchet-js-enumerable-alias-mapping"
 blocked-by: null

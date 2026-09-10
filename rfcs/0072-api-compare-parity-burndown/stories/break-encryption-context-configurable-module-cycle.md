@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6123
+pr: trails#6123
 claim: "2026-08-05T11:44:59Z"
 assignee: "i18n-date-carries-start-and-ns"
 blocked-by: null

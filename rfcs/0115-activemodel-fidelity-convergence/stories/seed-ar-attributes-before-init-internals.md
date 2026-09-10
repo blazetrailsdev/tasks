@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7160
+pr: trails#7160
 claim: "2026-08-28T13:55:21Z"
 assignee: "seed-ar-attributes-before-init-internals"
 blocked-by: null

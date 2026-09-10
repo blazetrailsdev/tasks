@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 7378
+pr: trails#7378
 claim: "2026-09-02T02:07:36Z"
 assignee: "generated-layout-hardcodes-undigested-asset-path"
 blocked-by: null

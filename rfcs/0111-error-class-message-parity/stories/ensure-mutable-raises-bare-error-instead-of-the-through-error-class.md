@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 20
-pr: 6757
+pr: trails#6757
 claim: "2026-09-08T11:24:09Z"
 assignee: "ensure-mutable-raises-bare-error-instead-of-the-through-error-class"
 blocked-by: null

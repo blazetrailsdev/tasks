@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: 3915
+pr: trails#3915
 claim: "2026-06-22T19:15:18Z"
 assignee: "gate-extractor-capture-capability-wrappers"
 blocked-by: null

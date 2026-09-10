@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 11
-pr: 5420
+pr: trails#5420
 claim: "2026-07-27T15:51:28Z"
 assignee: "api-compare-cache-blind-to-third-party-declarations"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7161
+pr: trails#7161
 claim: "2026-08-28T14:07:26Z"
 assignee: "db-schema-load-sql-reports-success-for-memory-noop"
 blocked-by: null

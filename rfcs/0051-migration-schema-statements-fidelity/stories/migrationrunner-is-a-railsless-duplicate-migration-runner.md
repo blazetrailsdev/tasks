@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 53
-pr: 7069
+pr: trails#7069
 claim: "2026-08-26T00:59:17Z"
 assignee: "mysql-purge-does-not-call-recreate-database"
 blocked-by: null

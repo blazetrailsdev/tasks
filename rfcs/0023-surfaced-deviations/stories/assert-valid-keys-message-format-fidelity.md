@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4572
+pr: trails#4572
 claim: "2026-07-04T21:27:08Z"
 assignee: "assert-valid-keys-message-format-fidelity"
 blocked-by: null

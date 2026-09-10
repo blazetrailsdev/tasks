@@ -13,7 +13,7 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: 40
-pr: 5417
+pr: trails#5417
 claim: "2026-07-27T15:19:41Z"
 assignee: "partial-inserts-flip-ar-test-suite-ambient"
 blocked-by: null

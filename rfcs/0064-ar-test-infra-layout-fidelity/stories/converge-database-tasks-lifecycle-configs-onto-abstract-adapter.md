@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5716
+pr: trails#5716
 claim: "2026-07-31T15:57:05Z"
 assignee: "converge-database-tasks-lifecycle-configs-onto-abstract-adapter"
 blocked-by: null

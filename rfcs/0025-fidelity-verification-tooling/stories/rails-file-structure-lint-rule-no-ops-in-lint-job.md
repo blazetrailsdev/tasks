@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 13
-pr: 5422
+pr: trails#5422
 claim: "2026-07-27T16:10:26Z"
 assignee: "rails-file-structure-lint-rule-no-ops-in-lint-job"
 blocked-by: null

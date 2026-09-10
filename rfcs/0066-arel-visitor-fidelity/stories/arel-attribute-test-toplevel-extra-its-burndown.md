@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5107
+pr: trails#5107
 claim: "2026-07-23T01:03:25Z"
 assignee: "arel-attribute-test-toplevel-extra-its-burndown"
 blocked-by: null

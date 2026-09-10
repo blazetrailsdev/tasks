@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 13
-pr: 3156
+pr: trails#3156
 claim: "2026-06-12T18:25:50Z"
 assignee: "f9-core-misc-tail"
 blocked-by: null

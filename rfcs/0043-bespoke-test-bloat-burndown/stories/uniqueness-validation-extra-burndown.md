@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 8
-pr: 4135
+pr: trails#4135
 claim: "2026-06-25T17:12:52Z"
 assignee: "uniqueness-validation-extra-burndown"
 blocked-by: null

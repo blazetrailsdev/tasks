@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 29
-pr: 4766
+pr: trails#4766
 claim: "2026-07-08T01:31:24Z"
 assignee: "add-foreign-key-options-accept-composite-arrays"
 blocked-by: null

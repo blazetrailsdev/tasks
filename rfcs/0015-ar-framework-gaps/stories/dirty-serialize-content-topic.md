@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 41
-pr: 2973
+pr: trails#2973
 claim: "2026-06-06T16:31:09Z"
 assignee: "dirty-serialize-content-topic"
 blocked-by: null

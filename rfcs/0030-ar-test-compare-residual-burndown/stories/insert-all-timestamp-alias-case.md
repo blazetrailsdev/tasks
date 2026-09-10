@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 31
-pr: 3514
+pr: trails#3514
 claim: "2026-06-17T00:24:42Z"
 assignee: "insert-all-timestamp-alias-case"
 blocked-by: null

@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: 6626
+pr: trails#6626
 claim: "2026-08-17T01:42:50Z"
 assignee: "port-hwia-defaults-family"
 blocked-by: null

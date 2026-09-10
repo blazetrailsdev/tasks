@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 20
-pr: 4966
+pr: trails#4966
 claim: "2026-07-19T20:41:09Z"
 assignee: "schema-rb-test-schema-structural-parity"
 blocked-by: null

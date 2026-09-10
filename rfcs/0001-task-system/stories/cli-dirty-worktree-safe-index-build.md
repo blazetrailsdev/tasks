@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 12
-pr: 3151
+pr: trails#3151
 claim: "2026-06-12T16:54:56Z"
 assignee: "cli-dirty-worktree-safe-index-build"
 blocked-by: null

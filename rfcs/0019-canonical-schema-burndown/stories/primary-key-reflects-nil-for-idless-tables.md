@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3236
+pr: trails#3236
 claim: "2026-06-21T22:22:42Z"
 assignee: "primary-key-reflects-nil-for-idless-tables"
 blocked-by: null

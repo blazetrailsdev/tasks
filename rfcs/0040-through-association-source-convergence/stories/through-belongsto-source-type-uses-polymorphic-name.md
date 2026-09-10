@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 20
-pr: 3863
+pr: trails#3863
 claim: "2026-06-22T03:15:58Z"
 assignee: "through-belongsto-source-type-uses-polymorphic-name"
 blocked-by: null

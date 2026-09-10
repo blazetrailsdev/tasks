@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 6573
+pr: trails#6573
 claim: "2026-08-15T18:15:06Z"
 assignee: "apply-join-dependency-inlines-except-and-select-association-list"
 blocked-by: null

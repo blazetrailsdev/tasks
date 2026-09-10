@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3304
+pr: trails#3304
 claim: "2026-06-14T22:54:13Z"
 assignee: "joins-assoc-retains-target-klass-for-type-resolution"
 blocked-by: null

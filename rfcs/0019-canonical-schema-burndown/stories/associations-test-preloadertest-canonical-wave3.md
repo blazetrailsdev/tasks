@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3622
+pr: trails#3622
 claim: "2026-06-19T02:12:26Z"
 assignee: "associations-test-preloadertest-canonical-wave3"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5894
+pr: trails#5894
 claim: "2026-08-02T16:18:01Z"
 assignee: "converge-relation-primary-key-delegate-reads"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["shared-table-convergence", "counter-cache-extra-burndown"]
 deps-rfc: []
 est-loc: 300
 priority: 47
-pr: 4189
+pr: trails#4189
 claim: "2026-06-26T12:29:40Z"
 assignee: "counter-cache-test-canonical"
 blocked-by: null

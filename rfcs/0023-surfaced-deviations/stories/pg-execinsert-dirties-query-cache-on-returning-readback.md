@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 4843
+pr: trails#4843
 claim: "2026-07-13T19:08:24Z"
 assignee: "pg-execinsert-dirties-query-cache-on-returning-readback"
 blocked-by: null

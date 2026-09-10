@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 17
+pr: trailmap#17
 claim: "2026-09-07T15:15:36Z"
 assignee: "gate-the-show-pages-against-ringo"
 blocked-by: null

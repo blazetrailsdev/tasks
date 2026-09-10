@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 3383
+pr: trails#3383
 claim: "2026-06-15T17:06:27Z"
 assignee: "relation-handler-distinct-pk-materialization"
 blocked-by: null

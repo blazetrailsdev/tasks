@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5850
+pr: trails#5850
 claim: "2026-08-02T01:36:52Z"
 assignee: "guard-recorder-getter-fallback-swallows-real-errors"
 blocked-by: null

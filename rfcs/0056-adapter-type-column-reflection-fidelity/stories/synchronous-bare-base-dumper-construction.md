@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 213
-pr: 4825
+pr: trails#4825
 claim: "2026-07-09T10:49:36Z"
 assignee: "synchronous-bare-base-dumper-construction"
 blocked-by: null

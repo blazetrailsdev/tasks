@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 20
-pr: 7589
+pr: trails#7589
 claim: "2026-09-07T11:38:38Z"
 assignee: "shared-ruby-typeerror-mirror"
 blocked-by: null

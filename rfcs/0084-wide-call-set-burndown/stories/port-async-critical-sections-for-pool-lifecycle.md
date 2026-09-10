@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6408
+pr: trails#6408
 claim: "2026-08-12T11:06:01Z"
 assignee: "port-async-critical-sections-for-pool-lifecycle"
 blocked-by: null

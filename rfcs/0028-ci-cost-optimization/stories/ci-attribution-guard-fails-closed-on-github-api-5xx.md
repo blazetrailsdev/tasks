@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4995
+pr: trails#4995
 claim: "2026-07-20T18:21:11Z"
 assignee: "ci-attribution-guard-fails-closed-on-github-api-5xx"
 blocked-by: null

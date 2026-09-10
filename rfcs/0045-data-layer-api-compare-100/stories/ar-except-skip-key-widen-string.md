@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 30
 priority: 1
-pr: 4625
+pr: trails#4625
 claim: "2026-07-05T17:30:08Z"
 assignee: "ar-except-skip-key-widen-string"
 blocked-by: null

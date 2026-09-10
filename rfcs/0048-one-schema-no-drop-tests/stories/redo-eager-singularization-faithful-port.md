@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 4371
+pr: trails#4371
 claim: "2026-07-01T13:54:49Z"
 assignee: "redo-eager-singularization-faithful-port"
 blocked-by: null

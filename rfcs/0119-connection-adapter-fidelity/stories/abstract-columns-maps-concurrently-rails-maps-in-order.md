@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 7527
+pr: trails#7527
 claim: "2026-09-05T18:26:52Z"
 assignee: "attribute-set-envelope-loses-unregistered-type-keys"
 blocked-by: null

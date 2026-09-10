@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5538
+pr: trails#5538
 claim: "2026-07-28T22:05:43Z"
 assignee: "retire-trails-only-sqlite3-copy-table-test"
 blocked-by: null

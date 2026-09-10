@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4445
+pr: trails#4445
 claim: "2026-07-02T22:09:52Z"
 assignee: "encryption-ignore-case-original-column-check-fail-open"
 blocked-by: null

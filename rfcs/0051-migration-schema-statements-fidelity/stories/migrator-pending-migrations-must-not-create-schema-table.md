@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6981
+pr: trails#6981
 claim: "2026-08-24T13:05:17Z"
 assignee: "migrator-pending-migrations-must-not-create-schema-table"
 blocked-by: null

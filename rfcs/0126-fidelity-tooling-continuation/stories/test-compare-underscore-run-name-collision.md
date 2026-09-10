@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: 7309
+pr: trails#7309
 claim: "2026-08-31T19:32:59Z"
 assignee: "extra-surface-mixin-synthetic-constructor-attribution"
 blocked-by: null

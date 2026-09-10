@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5947
+pr: trails#5947
 claim: "2026-08-03T01:45:45Z"
 assignee: "extra-surface-mysql2-and-libsql-per-file-singletons"
 blocked-by: null

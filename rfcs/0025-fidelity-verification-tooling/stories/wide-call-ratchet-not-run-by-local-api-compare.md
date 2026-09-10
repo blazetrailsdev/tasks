@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 20
-pr: 5221
+pr: trails#5221
 claim: "2026-07-24T13:08:25Z"
 assignee: "wide-call-ratchet-not-run-by-local-api-compare"
 blocked-by: null

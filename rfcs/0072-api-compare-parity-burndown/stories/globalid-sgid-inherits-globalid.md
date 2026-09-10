@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5951
+pr: trails#5951
 claim: "2026-08-03T02:25:45Z"
 assignee: "globalid-sgid-inherits-globalid"
 blocked-by: null

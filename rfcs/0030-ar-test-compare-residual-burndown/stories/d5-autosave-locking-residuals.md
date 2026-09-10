@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 3461
+pr: trails#3461
 claim: "2026-06-16T12:29:02Z"
 assignee: "d5-autosave-locking-residuals"
 blocked-by: null

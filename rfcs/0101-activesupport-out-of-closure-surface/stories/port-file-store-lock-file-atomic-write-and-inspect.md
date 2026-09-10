@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6443
+pr: trails#6443
 claim: "2026-08-12T23:16:49Z"
 assignee: "port-file-store-lock-file-atomic-write-and-inspect"
 blocked-by: null

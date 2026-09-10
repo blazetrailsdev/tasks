@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3333
+pr: trails#3333
 claim: "2026-06-15T12:05:07Z"
 assignee: "mysql-test-harness-second-database-arunit2-config"
 blocked-by: null

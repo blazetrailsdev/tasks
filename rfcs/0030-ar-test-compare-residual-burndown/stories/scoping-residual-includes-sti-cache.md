@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 50
-pr: 3539
+pr: trails#3539
 claim: "2026-06-17T13:46:27Z"
 assignee: "scoping-residual-includes-sti-cache"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5926
+pr: trails#5926
 claim: "2026-08-02T22:46:52Z"
 assignee: "converge-excluding-deferred-arm-predicate-builder-table"
 blocked-by: null

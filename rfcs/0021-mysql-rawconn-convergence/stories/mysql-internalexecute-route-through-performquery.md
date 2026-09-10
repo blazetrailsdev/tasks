@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 3362
+pr: trails#3362
 claim: "2026-06-15T15:23:11Z"
 assignee: "mysql-internalexecute-route-through-performquery"
 blocked-by: null

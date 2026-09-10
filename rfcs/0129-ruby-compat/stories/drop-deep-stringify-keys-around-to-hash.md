@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: 7431
+pr: trails#7431
 claim: "2026-09-03T02:25:21Z"
 assignee: "drop-deep-stringify-keys-around-to-hash"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5443
+pr: trails#5443
 claim: "2026-07-27T19:29:50Z"
 assignee: "pg-samples-table-ddl-races-between-worker-files"
 blocked-by: null

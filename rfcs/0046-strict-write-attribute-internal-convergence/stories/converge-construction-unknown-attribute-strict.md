@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: 4706
+pr: trails#4706
 claim: "2026-07-06T21:53:52Z"
 assignee: "converge-construction-unknown-attribute-strict"
 blocked-by: null

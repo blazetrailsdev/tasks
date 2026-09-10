@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 16
-pr: 5000
+pr: trails#5000
 claim: "2026-07-20T18:51:52Z"
 assignee: "abstract-quote-boolean-arms-self-dispatch"
 blocked-by: null

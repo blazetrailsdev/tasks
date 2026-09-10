@@ -9,7 +9,7 @@ deps: ["port-file-and-dir-classes-onto-the-fs-backend"]
 deps-rfc: []
 est-loc: 350
 priority: 7
-pr: 7442
+pr: trails#7442
 claim: "2026-09-03T12:50:47Z"
 assignee: "port-log-subscriber-remaining-subscribe-log-level"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5691
+pr: trails#5691
 claim: "2026-07-31T00:21:06Z"
 assignee: "route-mysql-drop-sweep-through-disable-referential-integrity"
 blocked-by: null

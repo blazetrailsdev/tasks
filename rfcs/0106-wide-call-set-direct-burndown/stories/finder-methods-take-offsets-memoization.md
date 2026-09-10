@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6586
+pr: trails#6586
 claim: "2026-08-15T23:45:05Z"
 assignee: "finder-methods-take-offsets-memoization"
 blocked-by: null

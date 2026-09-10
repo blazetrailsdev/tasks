@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 50
-pr: 3523
+pr: trails#3523
 claim: "2026-06-17T02:31:24Z"
 assignee: "index-dumper-concise-orders-opclasses"
 blocked-by: null

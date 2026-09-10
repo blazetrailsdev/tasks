@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7465
+pr: trails#7465
 claim: "2026-09-03T23:00:44Z"
 assignee: "move-tempfile-to-ruby-compat"
 blocked-by: null

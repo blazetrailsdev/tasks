@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 3425
+pr: trails#3425
 claim: "2026-06-16T00:04:54Z"
 assignee: "c2-defaults-expression-dump"
 blocked-by: null

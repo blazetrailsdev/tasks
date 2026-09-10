@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 28
-pr: 3511
+pr: trails#3511
 claim: "2026-06-16T23:48:42Z"
 assignee: "insert-all-primarykeys-via-schema-cache"
 blocked-by: null

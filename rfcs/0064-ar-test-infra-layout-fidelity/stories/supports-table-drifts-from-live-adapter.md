@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5585
+pr: trails#5585
 claim: "2026-07-29T18:22:16Z"
 assignee: "supports-table-drifts-from-live-adapter"
 blocked-by: null

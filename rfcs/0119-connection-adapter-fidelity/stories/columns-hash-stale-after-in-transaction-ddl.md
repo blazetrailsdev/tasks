@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 7044
+pr: trails#7044
 claim: "2026-08-25T15:46:30Z"
 assignee: "sqlite-attached-schema-notion-has-no-rails-counterpart"
 blocked-by: null

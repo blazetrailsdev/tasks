@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 10
-pr: 3858
+pr: trails#3858
 claim: "2026-06-22T02:36:02Z"
 assignee: "schema-dumper-expression-default-pg-sqlite"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5518
+pr: trails#5518
 claim: "2026-07-28T15:47:11Z"
 assignee: "repoint-fixtures-entry-point"
 blocked-by: null

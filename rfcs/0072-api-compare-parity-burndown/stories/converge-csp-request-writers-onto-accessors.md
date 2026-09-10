@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5405
+pr: trails#5405
 claim: "2026-07-27T13:49:06Z"
 assignee: "converge-csp-request-writers-onto-accessors"
 blocked-by: null

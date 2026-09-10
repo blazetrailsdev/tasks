@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6434
+pr: trails#6434
 claim: "2026-08-12T19:36:51Z"
 assignee: "converge-count-body-onto-calculate"
 blocked-by: null

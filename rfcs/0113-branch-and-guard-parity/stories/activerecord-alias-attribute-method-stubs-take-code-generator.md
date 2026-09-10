@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6838
+pr: trails#6838
 claim: "2026-08-25T15:13:50Z"
 assignee: "activerecord-alias-attribute-method-stubs-take-code-generator"
 blocked-by: null

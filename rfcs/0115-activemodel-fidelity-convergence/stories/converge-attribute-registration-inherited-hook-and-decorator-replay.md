@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6784
+pr: trails#6784
 claim: "2026-08-20T18:50:10Z"
 assignee: "converge-attribute-registration-inherited-hook-and-decorator-replay"
 blocked-by: null

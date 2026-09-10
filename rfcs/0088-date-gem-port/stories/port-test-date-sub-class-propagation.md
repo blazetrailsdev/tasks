@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6710
+pr: trails#6710
 claim: "2026-08-18T18:37:42Z"
 assignee: "port-test-date-sub-class-propagation"
 blocked-by: null

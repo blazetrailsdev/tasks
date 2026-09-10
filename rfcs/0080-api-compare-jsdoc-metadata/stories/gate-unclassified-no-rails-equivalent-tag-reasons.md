@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5712
+pr: trails#5712
 claim: "2026-07-31T15:30:07Z"
 assignee: "gate-unclassified-no-rails-equivalent-tag-reasons"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 45
 priority: 11
-pr: 4676
+pr: trails#4676
 claim: "2026-07-06T14:29:05Z"
 assignee: "dedupe-merge-joins-fold-shared-helper"
 blocked-by: null

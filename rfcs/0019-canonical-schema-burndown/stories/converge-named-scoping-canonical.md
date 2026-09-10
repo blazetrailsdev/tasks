@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 3584
+pr: trails#3584
 claim: "2026-06-18T13:45:41Z"
 assignee: "converge-named-scoping-canonical"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6536
+pr: trails#6536
 claim: "2026-08-14T18:52:12Z"
 assignee: "converge-async-query-session-callers-onto-base"
 blocked-by: null

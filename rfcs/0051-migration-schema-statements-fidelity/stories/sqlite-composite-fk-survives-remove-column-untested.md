@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5813
+pr: trails#5813
 claim: "2026-08-01T18:39:00Z"
 assignee: "sqlite-composite-fk-survives-remove-column-untested"
 blocked-by: null

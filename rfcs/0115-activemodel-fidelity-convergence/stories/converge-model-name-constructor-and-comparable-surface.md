@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: 6787
+pr: trails#6787
 claim: "2026-08-20T19:35:09Z"
 assignee: "converge-model-name-constructor-and-comparable-surface"
 blocked-by: null

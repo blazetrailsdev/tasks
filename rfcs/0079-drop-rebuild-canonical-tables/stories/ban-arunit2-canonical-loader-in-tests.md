@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 7137
+pr: trails#7137
 claim: "2026-08-27T23:27:03Z"
 assignee: "ban-arunit2-canonical-loader-in-tests"
 blocked-by: null

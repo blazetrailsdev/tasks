@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 50
-pr: 3525
+pr: trails#3525
 claim: "2026-06-17T03:01:25Z"
 assignee: "loadhasmany-no-reflection-fallback-query-constraints-owner-key"
 blocked-by: null

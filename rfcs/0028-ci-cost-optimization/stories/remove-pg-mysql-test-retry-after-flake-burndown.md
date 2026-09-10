@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 20
 priority: 5
-pr: 5244
+pr: trails#5244
 claim: "2026-07-24T17:36:48Z"
 assignee: "remove-pg-mysql-test-retry-after-flake-burndown"
 blocked-by: null

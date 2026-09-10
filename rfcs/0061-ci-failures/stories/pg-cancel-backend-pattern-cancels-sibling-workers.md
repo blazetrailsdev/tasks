@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5437
+pr: trails#5437
 claim: "2026-07-27T18:41:53Z"
 assignee: "pg-cancel-backend-pattern-cancels-sibling-workers"
 blocked-by: null

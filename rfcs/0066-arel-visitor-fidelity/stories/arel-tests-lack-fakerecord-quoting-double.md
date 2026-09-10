@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5037
+pr: trails#5037
 claim: "2026-07-21T18:55:29Z"
 assignee: "arel-tests-lack-fakerecord-quoting-double"
 blocked-by: null

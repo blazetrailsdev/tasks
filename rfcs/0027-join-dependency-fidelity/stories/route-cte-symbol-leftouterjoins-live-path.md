@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 2
-pr: 4635
+pr: trails#4635
 claim: "2026-07-05T20:21:53Z"
 assignee: "route-cte-symbol-leftouterjoins-live-path"
 blocked-by: null

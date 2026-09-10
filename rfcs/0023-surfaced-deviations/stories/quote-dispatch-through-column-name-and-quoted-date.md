@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: 3222
+pr: trails#3222
 claim: "2026-06-13T22:24:33Z"
 assignee: "quote-dispatch-through-column-name-and-quoted-date"
 blocked-by: null

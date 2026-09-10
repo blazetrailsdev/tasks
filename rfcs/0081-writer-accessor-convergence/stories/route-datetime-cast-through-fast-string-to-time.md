@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5567
+pr: trails#5567
 claim: "2026-07-29T03:05:43Z"
 assignee: "route-datetime-cast-through-fast-string-to-time"
 blocked-by: null

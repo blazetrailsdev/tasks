@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5678
+pr: trails#5678
 claim: "2026-07-30T21:03:19Z"
 assignee: "converge-per-worker-canonical-arm-onto-load-canonical-schema"
 blocked-by: null

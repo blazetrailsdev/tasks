@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3431
+pr: trails#3431
 claim: "2026-06-16T00:52:53Z"
 assignee: "c1-schema-dumper-pg-decimal-array"
 blocked-by: null

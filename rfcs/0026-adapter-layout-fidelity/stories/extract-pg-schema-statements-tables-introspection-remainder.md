@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 20
-pr: 3910
+pr: trails#3910
 claim: "2026-06-22T18:44:00Z"
 assignee: "extract-pg-schema-statements-tables-introspection-remainder"
 blocked-by: null

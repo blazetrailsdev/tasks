@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: 5280
+pr: trails#5280
 claim: "2026-07-25T01:10:52Z"
 assignee: "pg-type-map-init-stale-unported-modifier-comment"
 blocked-by: null

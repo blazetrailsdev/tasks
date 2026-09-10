@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 6411
+pr: trails#6411
 claim: "2026-08-12T13:06:04Z"
 assignee: "activesupport-out-of-closure-unported-entries"
 blocked-by: null

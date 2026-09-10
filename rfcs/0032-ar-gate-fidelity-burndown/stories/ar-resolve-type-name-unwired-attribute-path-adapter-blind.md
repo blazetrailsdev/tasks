@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5196
+pr: trails#5196
 claim: "2026-07-24T00:47:36Z"
 assignee: "ar-resolve-type-name-unwired-attribute-path-adapter-blind"
 blocked-by: null

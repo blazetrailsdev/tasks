@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 65
-pr: 7394
+pr: trails#7394
 claim: "2026-09-02T17:24:58Z"
 assignee: "ruby-compat-hash-fetch-block-arm"
 blocked-by: null

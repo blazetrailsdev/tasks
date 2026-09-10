@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6222
+pr: trails#6222
 claim: "2026-08-08T09:03:57Z"
 assignee: "converge-create-all-config-read-and-connection-not-defined-rescue"
 blocked-by: null

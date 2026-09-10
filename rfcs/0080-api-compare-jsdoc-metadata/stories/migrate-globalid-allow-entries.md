@@ -8,7 +8,7 @@ deps: ["no-rails-equivalent-tag-extractor-support"]
 deps-rfc: []
 est-loc: 150
 priority: 2
-pr: 5369
+pr: trails#5369
 claim: "2026-07-26T22:14:56Z"
 assignee: "migrate-globalid-allow-entries"
 blocked-by: null

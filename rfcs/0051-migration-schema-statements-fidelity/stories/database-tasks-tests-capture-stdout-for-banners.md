@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5591
+pr: trails#5591
 claim: "2026-07-29T18:58:13Z"
 assignee: "database-tasks-tests-capture-stdout-for-banners"
 blocked-by: null

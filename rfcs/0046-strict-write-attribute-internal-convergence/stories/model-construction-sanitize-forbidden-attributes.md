@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 10
-pr: 4786
+pr: trails#4786
 claim: "2026-07-08T16:51:55Z"
 assignee: "model-construction-sanitize-forbidden-attributes"
 blocked-by: null

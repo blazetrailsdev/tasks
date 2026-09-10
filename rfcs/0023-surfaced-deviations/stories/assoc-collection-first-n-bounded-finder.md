@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4256
+pr: trails#4256
 claim: "2026-06-29T10:22:12Z"
 assignee: "assoc-collection-first-n-bounded-finder"
 blocked-by: null

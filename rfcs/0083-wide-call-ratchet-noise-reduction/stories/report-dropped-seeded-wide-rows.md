@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5873
+pr: trails#5873
 claim: "2026-08-02T11:36:48Z"
 assignee: "report-dropped-seeded-wide-rows"
 blocked-by: null

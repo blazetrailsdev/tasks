@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4668
+pr: trails#4668
 claim: "2026-07-06T12:46:25Z"
 assignee: "thread-column-limit-into-cast-type"
 blocked-by: null

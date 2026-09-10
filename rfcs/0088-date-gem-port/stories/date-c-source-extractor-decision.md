@@ -7,7 +7,7 @@ cluster: null
 deps: ["vendor-ruby-date-gem"]
 deps-rfc: []
 est-loc: 80
-pr: 6138
+pr: trails#6138
 claim: "2026-08-05T17:13:08Z"
 assignee: "date-yday-drops-m-yday-fast-arms"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5628
+pr: trails#5628
 claim: "2026-07-30T01:57:13Z"
 assignee: "change-table-recorder-and-adapter-direct-yield-adapter-table"
 blocked-by: null

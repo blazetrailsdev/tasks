@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 7033
+pr: trails#7033
 claim: "2026-08-25T13:22:54Z"
 assignee: "table-definition-takes-conn-positionally-and-invents-adaptername"
 blocked-by: null

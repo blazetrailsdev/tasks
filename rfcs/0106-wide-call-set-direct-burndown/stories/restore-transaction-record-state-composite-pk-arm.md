@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6752
+pr: trails#6752
 claim: "2026-08-19T23:52:33Z"
 assignee: "restore-transaction-record-state-composite-pk-arm"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6473
+pr: trails#6473
 claim: "2026-08-13T16:05:43Z"
 assignee: "route-update-record-through-update-row"
 blocked-by: null

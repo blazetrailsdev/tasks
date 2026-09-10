@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 3
-pr: 7287
+pr: trails#7287
 claim: "2026-08-31T09:54:12Z"
 assignee: "locator-use-drops-the-no-locator-raise"
 blocked-by: 'The arm has no representable trails analogue, so the story''s ''missing arm'' classification does not hold. ValueType#castValue is the identity (packages/activemodel/src/type/value.ts:91-93), so super.cast() returns a Uint8Array untouched and the existing ''typeof value === "string"'' test IS the port of Rails'' second condition: trails'' binary representation is Uint8Array and a JS string is never already binary, so ''value.encoding != Encoding::BINARY'' is true for every value that reaches the re-encode. Writing the condition out (!(value instanceof Uint8Array) && typeof value === ''string'') is provably dead — it can only short-circuit where the string test already failed — and no regression test can distinguish it from the current body, which is why the attempt on PR #7287 was reverted. What remains is a report-only arm-count row, not a behavioural gap. Converging it would need a trails value that models an already-BINARY Ruby String distinctly from a text one; that is a design change to ActiveModel::Type::Binary''s representation and belongs in its own story.'

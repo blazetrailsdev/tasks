@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3675
+pr: trails#3675
 claim: "2026-06-19T21:14:11Z"
 assignee: "automatically-invert-plural-global-config"
 blocked-by: null

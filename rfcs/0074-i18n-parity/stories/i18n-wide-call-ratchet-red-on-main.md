@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5988
+pr: trails#5988
 claim: "2026-08-03T16:37:43Z"
 assignee: "i18n-wide-call-ratchet-red-on-main"
 blocked-by: null

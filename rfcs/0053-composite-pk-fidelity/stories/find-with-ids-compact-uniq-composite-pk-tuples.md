@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4424
+pr: trails#4424
 claim: "2026-07-02T17:21:53Z"
 assignee: "find-with-ids-compact-uniq-composite-pk-tuples"
 blocked-by: null

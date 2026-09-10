@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6698
+pr: trails#6698
 claim: "2026-08-18T13:36:45Z"
 assignee: "schema-dumper-emit-table-and-underscored-callee-convergence"
 blocked-by: null

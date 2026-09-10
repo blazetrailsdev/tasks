@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 42
-pr: 4183
+pr: trails#4183
 claim: "2026-06-26T11:01:49Z"
 assignee: "assoc-eager-split-canonical-inheritance"
 blocked-by: null

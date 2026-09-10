@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6450
+pr: trails#6450
 claim: "2026-08-13T01:36:46Z"
 assignee: "call-args-ar-mysql-case-sensitive-comparison"
 blocked-by: null

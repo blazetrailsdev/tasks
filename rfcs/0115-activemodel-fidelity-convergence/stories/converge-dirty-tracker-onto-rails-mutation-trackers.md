@@ -9,7 +9,7 @@ deps:
   - fan-out-model-dirty-surface-to-dirty-ts
 deps-rfc: []
 est-loc: 400
-pr: 7004
+pr: trails#7004
 claim: "2026-08-24T18:15:29Z"
 assignee: "converge-dirty-tracker-onto-rails-mutation-trackers"
 blocked-by: null

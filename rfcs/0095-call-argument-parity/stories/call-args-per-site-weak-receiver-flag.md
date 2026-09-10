@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6334
+pr: trails#6334
 claim: "2026-08-10T12:55:18Z"
 assignee: "call-args-naming-dimension-disposition"
 blocked-by: null

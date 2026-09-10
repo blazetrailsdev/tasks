@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5617
+pr: trails#5617
 claim: "2026-07-29T22:53:10Z"
 assignee: "converge-models-by-name-with-model-registry"
 blocked-by: null

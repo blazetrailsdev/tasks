@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 3167
+pr: trails#3167
 claim: "2026-06-13T00:26:49Z"
 assignee: "encryption-message-serializer-double-base64"
 blocked-by: null

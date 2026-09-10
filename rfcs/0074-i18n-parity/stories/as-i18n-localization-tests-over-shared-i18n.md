@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6035
+pr: trails#6035
 claim: "2026-08-03T20:53:29Z"
 assignee: "as-i18n-localization-tests-over-shared-i18n"
 blocked-by: null

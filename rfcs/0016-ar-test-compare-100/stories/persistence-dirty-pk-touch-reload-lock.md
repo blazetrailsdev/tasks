@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 3343
+pr: trails#3343
 claim: "2026-06-15T12:40:11Z"
 assignee: "persistence-dirty-pk-touch-reload-lock"
 blocked-by: null

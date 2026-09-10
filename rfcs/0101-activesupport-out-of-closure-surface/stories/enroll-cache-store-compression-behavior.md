@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6439
+pr: trails#6439
 claim: "2026-08-12T21:56:49Z"
 assignee: "converge-store-coder-ivar-and-retire-per-store-coders"
 blocked-by: null

@@ -10,7 +10,7 @@ est-loc: 300
 blocked-by: null
 claim: "2026-06-10T01:31:59Z"
 assignee: "f6c-nested-attrs-canonical-models"
-pr: 3076
+pr: trails#3076
 ---
 
 ## Context

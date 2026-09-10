@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 6
-pr: 3489
+pr: trails#3489
 claim: "2026-06-16T19:11:57Z"
 assignee: "auto-finalize-rebase-duplicate-rfc-dir"
 blocked-by: null

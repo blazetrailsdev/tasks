@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 10
-pr: 7670
+pr: trails#7670
 claim: "2026-09-10T18:29:19Z"
 assignee: "retire-stale-read-uncommitted-suppression"
 blocked-by: null

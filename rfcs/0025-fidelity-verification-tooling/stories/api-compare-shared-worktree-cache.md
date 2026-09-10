@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 3206
+pr: trails#3206
 claim: "2026-06-13T20:30:32Z"
 assignee: "api-compare-shared-worktree-cache"
 blocked-by: null

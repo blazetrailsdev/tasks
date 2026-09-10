@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 3923
+pr: trails#3923
 claim: "2026-06-22T20:51:16Z"
 assignee: "tasks-cli-read-sync-discards-uncommitted-worktree-edits"
 blocked-by: null

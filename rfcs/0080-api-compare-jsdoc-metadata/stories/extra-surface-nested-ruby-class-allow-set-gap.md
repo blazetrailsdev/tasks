@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5458
+pr: trails#5458
 claim: "2026-07-27T21:22:17Z"
 assignee: "extra-surface-nested-ruby-class-allow-set-gap"
 blocked-by: null

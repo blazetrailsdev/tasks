@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 9
-pr: 5083
+pr: trails#5083
 claim: "2026-07-22T21:03:05Z"
 assignee: "schema-dumper-mysql-expression-index-dump"
 blocked-by: null

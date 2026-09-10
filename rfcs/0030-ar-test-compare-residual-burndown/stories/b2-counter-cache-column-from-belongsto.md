@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 3418
+pr: trails#3418
 claim: "2026-06-15T22:58:27Z"
 assignee: "b2-counter-cache-column-from-belongsto"
 blocked-by: null

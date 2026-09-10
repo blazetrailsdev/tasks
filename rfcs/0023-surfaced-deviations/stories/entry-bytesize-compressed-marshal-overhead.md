@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 3702
+pr: trails#3702
 claim: "2026-06-20T03:34:42Z"
 assignee: "entry-bytesize-compressed-marshal-overhead"
 blocked-by: null

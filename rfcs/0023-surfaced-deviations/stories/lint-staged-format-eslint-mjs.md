@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 3763
+pr: trails#3763
 claim: "2026-06-21T01:59:26Z"
 assignee: "lint-staged-format-eslint-mjs"
 blocked-by: null

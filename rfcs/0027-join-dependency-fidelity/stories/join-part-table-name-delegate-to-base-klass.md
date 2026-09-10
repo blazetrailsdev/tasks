@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4110
+pr: trails#4110
 claim: "2026-06-25T12:09:34Z"
 assignee: "join-part-table-name-delegate-to-base-klass"
 blocked-by: null

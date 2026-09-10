@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5295
+pr: trails#5295
 claim: "2026-07-25T03:26:52Z"
 assignee: "has-one-through-inherits-direct-fk-set-new-record"
 blocked-by: null

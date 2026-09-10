@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 6
-pr: 3093
+pr: trails#3093
 claim: "2026-06-10T18:33:23Z"
 assignee: "relation-select-order-cluster"
 blocked-by: null

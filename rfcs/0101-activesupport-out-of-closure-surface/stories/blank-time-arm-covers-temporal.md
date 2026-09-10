@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6508
+pr: trails#6508
 claim: "2026-08-14T03:57:08Z"
 assignee: "drop-builder-association-scope-option-shim"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 50
-pr: 3529
+pr: trails#3529
 claim: "2026-06-17T11:01:25Z"
 assignee: "multi-db-polymorphic-preload"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3345
+pr: trails#3345
 claim: "2026-06-15T13:49:21Z"
 assignee: "nested-attributes-singular-sync-in-memory-target"
 blocked-by: null

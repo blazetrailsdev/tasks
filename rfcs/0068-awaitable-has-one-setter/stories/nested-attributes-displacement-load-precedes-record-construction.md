@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5642
+pr: trails#5642
 claim: "2026-07-30T14:20:20Z"
 assignee: "nested-attributes-displacement-load-precedes-record-construction"
 blocked-by: null

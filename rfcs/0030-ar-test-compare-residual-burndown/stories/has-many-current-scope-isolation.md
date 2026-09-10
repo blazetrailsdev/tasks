@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 15
-pr: 3498
+pr: trails#3498
 claim: "2026-06-16T20:24:41Z"
 assignee: "has-many-current-scope-isolation"
 blocked-by: null

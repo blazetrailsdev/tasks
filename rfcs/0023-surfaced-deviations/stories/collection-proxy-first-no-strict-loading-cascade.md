@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4273
+pr: trails#4273
 claim: "2026-06-29T13:58:13Z"
 assignee: "collection-proxy-first-no-strict-loading-cascade"
 blocked-by: null

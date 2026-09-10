@@ -8,7 +8,7 @@ deps: ["move-test-helpers-to-support-dir"]
 deps-rfc: []
 est-loc: 350
 priority: 55
-pr: 5401
+pr: trails#5401
 claim: "2026-07-27T13:09:07Z"
 assignee: "port-missing-support-helpers"
 blocked-by: null

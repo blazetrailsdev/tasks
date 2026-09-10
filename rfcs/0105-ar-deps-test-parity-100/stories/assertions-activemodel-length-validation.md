@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: 6632
+pr: trails#6632
 claim: "2026-08-17T09:27:13Z"
 assignee: "assertions-activemodel-length-validation"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5859
+pr: trails#5859
 claim: "2026-08-02T02:56:48Z"
 assignee: "check-current-protected-environment-is-per-config"
 blocked-by: null

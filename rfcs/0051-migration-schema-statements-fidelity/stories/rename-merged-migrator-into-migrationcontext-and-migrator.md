@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: 5820
+pr: trails#5820
 claim: "2026-08-02T00:26:06Z"
 assignee: "rename-merged-migrator-into-migrationcontext-and-migrator"
 blocked-by: null

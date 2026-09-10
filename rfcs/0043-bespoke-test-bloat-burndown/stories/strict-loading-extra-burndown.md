@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 9
-pr: 4138
+pr: trails#4138
 claim: "2026-06-25T17:57:54Z"
 assignee: "strict-loading-extra-burndown"
 blocked-by: null

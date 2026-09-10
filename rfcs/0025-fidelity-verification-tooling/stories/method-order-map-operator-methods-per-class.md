@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 25
-pr: 5226
+pr: trails#5226
 claim: "2026-07-24T15:08:24Z"
 assignee: "method-order-map-operator-methods-per-class"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5636
+pr: trails#5636
 claim: "2026-07-30T13:26:23Z"
 assignee: "converge-foreign-key-derivation-single-site"
 blocked-by: null

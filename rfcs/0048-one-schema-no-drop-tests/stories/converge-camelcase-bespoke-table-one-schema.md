@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: 4366
+pr: trails#4366
 claim: "2026-07-02T02:19:59Z"
 assignee: "converge-camelcase-bespoke-table-one-schema"
 blocked-by: null

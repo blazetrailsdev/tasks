@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5111
+pr: trails#5111
 claim: "2026-07-23T01:23:10Z"
 assignee: "database-tasks-collation-reads-config"
 blocked-by: null

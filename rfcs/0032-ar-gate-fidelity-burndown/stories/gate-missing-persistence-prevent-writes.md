@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 3718
+pr: trails#3718
 claim: "2026-06-20T14:25:28Z"
 assignee: "gate-missing-persistence-prevent-writes"
 blocked-by: null

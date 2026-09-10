@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 6819
+pr: trails#6819
 claim: "2026-08-21T13:50:33Z"
 assignee: "retire-collection-proxy-append-bang-and-wire-inverse-target"
 blocked-by: null

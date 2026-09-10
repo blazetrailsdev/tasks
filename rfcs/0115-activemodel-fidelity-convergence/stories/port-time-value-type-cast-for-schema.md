@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6788
+pr: trails#6788
 claim: "2026-08-20T23:08:51Z"
 assignee: "port-time-value-type-cast-for-schema"
 blocked-by: null

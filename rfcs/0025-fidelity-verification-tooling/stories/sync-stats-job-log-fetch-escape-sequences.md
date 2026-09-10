@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 0
-pr: 6183
+pr: trails#6183
 claim: "2026-08-07T17:38:08Z"
 assignee: "sync-stats-job-log-fetch-escape-sequences"
 blocked-by: null

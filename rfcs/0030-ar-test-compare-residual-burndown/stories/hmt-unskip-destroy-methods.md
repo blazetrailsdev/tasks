@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4490
+pr: trails#4490
 claim: "2026-07-03T15:45:51Z"
 assignee: "hmt-unskip-destroy-methods"
 blocked-by: null

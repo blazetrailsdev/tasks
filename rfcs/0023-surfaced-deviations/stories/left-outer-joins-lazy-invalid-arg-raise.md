@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4536
+pr: trails#4536
 claim: "2026-07-04T02:39:31Z"
 assignee: "left-outer-joins-lazy-invalid-arg-raise"
 blocked-by: null

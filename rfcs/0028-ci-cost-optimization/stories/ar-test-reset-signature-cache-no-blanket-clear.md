@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3962
+pr: trails#3962
 claim: "2026-06-23T10:47:39Z"
 assignee: "ar-test-reset-signature-cache-no-blanket-clear"
 blocked-by: null

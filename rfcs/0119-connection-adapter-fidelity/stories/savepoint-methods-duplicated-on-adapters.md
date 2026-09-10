@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7607
+pr: trails#7607
 claim: "2026-09-08T12:09:09Z"
 assignee: "pg-oid-infinity-bounds-are-js-numbers-not-subtype-values"
 blocked-by: null

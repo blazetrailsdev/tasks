@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 25
-pr: 5234
+pr: trails#5234
 claim: "2026-07-24T16:15:36Z"
 assignee: "reflect-column-names-cold-cache-branch-untestable"
 blocked-by: null

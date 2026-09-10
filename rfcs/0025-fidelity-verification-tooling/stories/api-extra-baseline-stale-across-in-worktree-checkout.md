@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 12
-pr: 5421
+pr: trails#5421
 claim: "2026-07-27T15:59:29Z"
 assignee: "api-extra-baseline-stale-across-in-worktree-checkout"
 blocked-by: null

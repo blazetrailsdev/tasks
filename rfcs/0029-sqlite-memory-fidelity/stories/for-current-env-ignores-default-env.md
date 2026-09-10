@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5496
+pr: trails#5496
 claim: "2026-07-28T12:58:15Z"
 assignee: "for-current-env-ignores-default-env"
 blocked-by: null

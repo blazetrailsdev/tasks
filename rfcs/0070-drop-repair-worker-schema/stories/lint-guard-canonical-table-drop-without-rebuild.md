@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 5
-pr: 5266
+pr: trails#5266
 claim: "2026-07-24T20:46:52Z"
 assignee: "lint-guard-canonical-table-drop-without-rebuild"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 460
 priority: null
-pr: 5054
+pr: trails#5054
 claim: "2026-07-22T14:35:05Z"
 assignee: "convert-remaining-arel-visitor-sites-to-explicit-connection"
 blocked-by: null

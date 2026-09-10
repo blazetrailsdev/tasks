@@ -8,7 +8,7 @@ deps:
   - phase2a-read-path
 deps-rfc: []
 est-loc: 250
-pr: 3001
+pr: trails#3001
 claim: "2026-06-07T17:43:52Z"
 assignee: "phase2b-write-path"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5414
+pr: trails#5414
 claim: "2026-07-27T14:57:23Z"
 assignee: "arunit2-provisioning-owns-second-pool"
 blocked-by: null

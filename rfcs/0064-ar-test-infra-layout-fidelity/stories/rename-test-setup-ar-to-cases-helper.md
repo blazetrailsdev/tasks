@@ -8,7 +8,7 @@ deps: ["move-test-helpers-to-support-dir"]
 deps-rfc: []
 est-loc: 120
 priority: 35
-pr: 5395
+pr: trails#5395
 claim: "2026-07-27T11:41:10Z"
 assignee: "rename-test-setup-ar-to-cases-helper"
 blocked-by: null

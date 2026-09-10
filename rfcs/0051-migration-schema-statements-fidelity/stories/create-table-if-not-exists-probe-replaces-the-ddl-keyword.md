@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6284
+pr: trails#6284
 claim: "2026-08-09T20:49:23Z"
 assignee: "retire-quoting-dispatch-helpers-onto-self-send"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4880
+pr: trails#4880
 claim: "2026-07-15T02:01:12Z"
 assignee: "arel-dot-am-attribute-structural-check-looser-than-rails"
 blocked-by: null

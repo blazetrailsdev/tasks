@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3996
+pr: trails#3996
 claim: "2026-06-23T13:42:38Z"
 assignee: "delegate-base-methods-ban-suite-wide"
 blocked-by: null

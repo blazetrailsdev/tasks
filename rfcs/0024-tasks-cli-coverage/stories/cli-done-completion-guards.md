@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3227
+pr: trails#3227
 claim: "2026-06-14T00:54:35Z"
 assignee: "cli-done-completion-guards"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 170
 priority: null
-pr: 6304
+pr: trails#6304
 claim: "2026-08-09T22:56:32Z"
 assignee: "ts-extractor-emit-call-arguments"
 blocked-by: null

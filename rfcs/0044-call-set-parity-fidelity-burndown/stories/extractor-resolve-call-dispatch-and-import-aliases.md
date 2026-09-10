@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 4299
+pr: trails#4299
 claim: "2026-06-30T00:54:31Z"
 assignee: "extractor-resolve-call-dispatch-and-import-aliases"
 blocked-by: null

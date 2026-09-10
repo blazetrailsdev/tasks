@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: 6560
+pr: trails#6560
 claim: "2026-08-15T12:03:42Z"
 assignee: "wave-3-adapters"
 blocked-by: null

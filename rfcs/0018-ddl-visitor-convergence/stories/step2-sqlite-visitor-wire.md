@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: 6
-pr: 3075
+pr: trails#3075
 claim: "2026-06-10T01:43:16Z"
 assignee: "step2-sqlite-visitor-wire"
 blocked-by: null

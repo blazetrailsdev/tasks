@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 2
-pr: 4629
+pr: trails#4629
 claim: "2026-07-05T18:21:54Z"
 assignee: "order-values-arel-node-storage"
 blocked-by: null

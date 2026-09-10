@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: 7461
+pr: trails#7461
 claim: "2026-09-03T21:00:54Z"
 assignee: "enroll-remaining-packages-in-no-freeform-comments"
 blocked-by: null

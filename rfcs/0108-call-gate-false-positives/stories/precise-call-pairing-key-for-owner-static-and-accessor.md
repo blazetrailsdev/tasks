@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: 6659
+pr: trails#6659
 claim: "2026-08-17T17:01:13Z"
 assignee: "precise-call-pairing-key-for-owner-static-and-accessor"
 blocked-by: null

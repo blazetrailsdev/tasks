@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 4567
+pr: trails#4567
 claim: "2026-07-04T19:47:07Z"
 assignee: "converge-merge-empty-hash-test"
 blocked-by: null

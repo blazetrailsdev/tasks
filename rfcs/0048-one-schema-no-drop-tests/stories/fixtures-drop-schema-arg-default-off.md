@@ -9,7 +9,7 @@ deps-rfc:
   - 0019-canonical-schema-burndown
 est-loc: 300
 priority: 2
-pr: 4593
+pr: trails#4593
 claim: "2026-07-05T03:22:26Z"
 assignee: "fixtures-drop-schema-arg-default-off"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 3192
+pr: trails#3192
 claim: "2026-06-13T13:43:15Z"
 assignee: "f9g2-read-lazy-attribute-methods"
 blocked-by: null

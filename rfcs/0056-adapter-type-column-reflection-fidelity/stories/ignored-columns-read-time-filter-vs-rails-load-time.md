@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5140
+pr: trails#5140
 claim: "2026-07-23T12:55:36Z"
 assignee: "ignored-columns-read-time-filter-vs-rails-load-time"
 blocked-by: null

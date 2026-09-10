@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6166
+pr: trails#6166
 claim: "2026-08-07T02:48:26Z"
 assignee: "attribute-activesupport-json-singleton-members-to-json-ts"
 blocked-by: null

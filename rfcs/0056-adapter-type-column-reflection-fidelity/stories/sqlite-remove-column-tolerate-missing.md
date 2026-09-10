@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 21
-pr: 4535
+pr: trails#4535
 claim: "2026-07-07T20:27:25Z"
 assignee: "sqlite-remove-column-tolerate-missing"
 blocked-by: null

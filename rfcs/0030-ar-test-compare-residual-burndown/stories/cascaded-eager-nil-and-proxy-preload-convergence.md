@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: 3934
+pr: trails#3934
 claim: "2026-06-22T22:43:15Z"
 assignee: "cascaded-eager-nil-and-proxy-preload-convergence"
 blocked-by: null

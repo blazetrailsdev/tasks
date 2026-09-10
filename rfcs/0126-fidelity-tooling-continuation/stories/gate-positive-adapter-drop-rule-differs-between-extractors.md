@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 7388
+pr: trails#7388
 claim: "2026-09-02T13:04:16Z"
 assignee: "gate-positive-adapter-drop-rule-differs-between-extractors"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4845
+pr: trails#4845
 claim: "2026-07-13T19:29:37Z"
 assignee: "post-comments-counter-cache-column-alias"
 blocked-by: null

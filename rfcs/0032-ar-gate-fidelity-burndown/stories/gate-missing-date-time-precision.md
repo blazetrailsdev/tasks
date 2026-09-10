@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3714
+pr: trails#3714
 claim: "2026-06-20T13:37:30Z"
 assignee: "gate-missing-date-time-precision"
 blocked-by: null

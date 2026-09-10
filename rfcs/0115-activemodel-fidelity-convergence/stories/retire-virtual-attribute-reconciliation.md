@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 6
-pr: 7091
+pr: trails#7091
 claim: "2026-08-26T15:58:10Z"
 assignee: "retire-virtual-attribute-reconciliation"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["audit-setupfixtures-caller-buckets"]
 deps-rfc: []
 est-loc: 500
 priority: 0
-pr: 4627
+pr: trails#4627
 claim: "2026-07-05T18:01:58Z"
 assignee: "convert-remaining-setupfixtures-callers-to-fixtures"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3360
+pr: trails#3360
 claim: "2026-06-15T15:05:08Z"
 assignee: "mysql-foreign-keys-use-quoted-scope"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6535
+pr: trails#6535
 claim: "2026-08-14T18:15:07Z"
 assignee: "executor-seam-end-to-end-request-coverage"
 blocked-by: null

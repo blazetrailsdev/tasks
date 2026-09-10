@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5746
+pr: trails#5746
 claim: "2026-07-31T20:03:10Z"
 assignee: "data-source-exists-notimplementederror-fallback"
 blocked-by: null

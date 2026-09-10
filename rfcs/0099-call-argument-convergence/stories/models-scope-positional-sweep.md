@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6502
+pr: trails#6502
 claim: "2026-08-14T00:57:10Z"
 assignee: "models-scope-positional-sweep"
 blocked-by: null

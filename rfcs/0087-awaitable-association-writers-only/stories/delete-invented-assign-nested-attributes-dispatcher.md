@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 7358
+pr: trails#7358
 claim: "2026-09-01T20:02:55Z"
 assignee: "delete-invented-assign-nested-attributes-dispatcher"
 blocked-by: null

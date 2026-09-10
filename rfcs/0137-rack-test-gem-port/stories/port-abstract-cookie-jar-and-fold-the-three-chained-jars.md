@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 42
-pr: 7595
+pr: trails#7595
 claim: "2026-09-07T15:16:07Z"
 assignee: "converge-conditional-get-fresh-onto-rails-branches"
 blocked-by: null

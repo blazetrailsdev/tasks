@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 5665
+pr: trails#5665
 claim: "2026-07-30T19:47:45Z"
 assignee: "unloaded-displacement-removal-floating-rejection-untested"
 blocked-by: null

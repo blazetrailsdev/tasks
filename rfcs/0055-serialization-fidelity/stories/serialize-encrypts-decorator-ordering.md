@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5033
+pr: trails#5033
 claim: "2026-07-21T18:20:16Z"
 assignee: "serialize-encrypts-decorator-ordering"
 blocked-by: null

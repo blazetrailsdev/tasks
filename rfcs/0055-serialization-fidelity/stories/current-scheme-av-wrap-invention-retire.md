@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5142
+pr: trails#5142
 claim: "2026-07-23T13:13:38Z"
 assignee: "current-scheme-av-wrap-invention-retire"
 blocked-by: null

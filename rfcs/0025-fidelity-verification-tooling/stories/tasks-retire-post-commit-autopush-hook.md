@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 50
-pr: 5289
+pr: trails#5289
 claim: "2026-07-24T21:34:53Z"
 assignee: "tasks-retire-post-commit-autopush-hook"
 blocked-by: null

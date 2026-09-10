@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 26
-pr: 4170
+pr: trails#4170
 claim: "2026-06-26T01:37:00Z"
 assignee: "materialize-declares-generator-fixes"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 4053
+pr: trails#4053
 claim: "2026-06-24T10:00:41Z"
 assignee: "ar-schema-creation-quoting"
 blocked-by: null

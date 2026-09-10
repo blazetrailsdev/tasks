@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 0
-pr: 4986
+pr: trails#4986
 claim: "2026-07-20T01:51:19Z"
 assignee: "uniqueness-covered-by-unique-index"
 blocked-by: null

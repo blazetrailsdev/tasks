@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 50
-pr: 3612
+pr: trails#3612
 claim: "2026-06-19T01:00:08Z"
 assignee: "port-activesupport-expand-cache-key"
 blocked-by: null

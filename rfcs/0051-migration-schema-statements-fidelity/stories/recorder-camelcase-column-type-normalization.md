@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 29
-pr: 4723
+pr: trails#4723
 claim: "2026-07-07T03:05:33Z"
 assignee: "recorder-camelcase-column-type-normalization"
 blocked-by: null

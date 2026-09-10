@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 50
-pr: 7629
+pr: trails#7629
 claim: "2026-09-08T20:19:11Z"
 assignee: "railtie-abstract-raise-interpolates-js-leaf-name"
 blocked-by: null

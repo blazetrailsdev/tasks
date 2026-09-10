@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3783
+pr: trails#3783
 claim: "2026-06-21T12:22:42Z"
 assignee: "partial-inserts-composite-pk-key-retention"
 blocked-by: null

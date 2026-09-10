@@ -9,7 +9,7 @@ deps: ["no-ruby-compat-reimplementation-lint"]
 deps-rfc: []
 est-loc: 220
 priority: 18
-pr: 7294
+pr: trails#7294
 claim: "2026-08-31T14:08:15Z"
 assignee: "ruby-core-call-mapping-table"
 blocked-by: null

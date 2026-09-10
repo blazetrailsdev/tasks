@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7408
+pr: trails#7408
 claim: "2026-09-02T21:09:05Z"
 assignee: "converge-test-session-superclass"
 blocked-by: null

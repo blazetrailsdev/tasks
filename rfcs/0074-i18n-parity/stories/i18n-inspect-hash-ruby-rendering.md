@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6022
+pr: trails#6022
 claim: "2026-08-03T21:02:08Z"
 assignee: "i18n-inspect-hash-ruby-rendering"
 blocked-by: null

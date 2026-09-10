@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4657
+pr: trails#4657
 claim: "2026-07-06T03:06:20Z"
 assignee: "derive-typetosql-limit-from-native-types-table"
 blocked-by: null

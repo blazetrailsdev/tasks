@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6243
+pr: trails#6243
 claim: "2026-08-08T16:03:54Z"
 assignee: "retire-template-handler-registry-back-compat-object"
 blocked-by: null

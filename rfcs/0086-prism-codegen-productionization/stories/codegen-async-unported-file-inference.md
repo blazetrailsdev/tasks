@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5821
+pr: trails#5821
 claim: "2026-08-01T19:27:00Z"
 assignee: "codegen-async-unported-file-inference"
 blocked-by: null

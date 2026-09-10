@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 17
-pr: 7192
+pr: trails#7192
 claim: "2026-08-28T23:28:33Z"
 assignee: "rehome-store-accessors-module-and-local-stored-attributes"
 blocked-by: null

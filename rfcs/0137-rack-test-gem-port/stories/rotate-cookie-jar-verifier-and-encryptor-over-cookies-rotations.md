@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 7600
+pr: trails#7600
 claim: "2026-09-08T00:10:55Z"
 assignee: "rotate-cookie-jar-verifier-and-encryptor-over-cookies-rotations"
 blocked-by: null

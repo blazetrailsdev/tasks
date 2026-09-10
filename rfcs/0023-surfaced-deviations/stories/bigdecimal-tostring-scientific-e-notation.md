@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3262
+pr: trails#3262
 claim: "2026-06-14T16:36:38Z"
 assignee: "bigdecimal-tostring-scientific-e-notation"
 blocked-by: null

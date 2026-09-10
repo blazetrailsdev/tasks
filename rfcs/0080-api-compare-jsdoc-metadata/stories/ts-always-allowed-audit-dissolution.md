@@ -8,7 +8,7 @@ deps: ["no-rails-equivalent-tag-extractor-support"]
 deps-rfc: []
 est-loc: 300
 priority: 3
-pr: 5370
+pr: trails#5370
 claim: "2026-07-26T22:22:54Z"
 assignee: "ts-always-allowed-audit-dissolution"
 blocked-by: null

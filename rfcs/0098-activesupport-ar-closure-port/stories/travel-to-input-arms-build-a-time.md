@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6895
+pr: trails#6895
 claim: "2026-08-22T23:05:06Z"
 assignee: "converge-includes-preload-colon-sweep-relation-and-preloader"
 blocked-by: null

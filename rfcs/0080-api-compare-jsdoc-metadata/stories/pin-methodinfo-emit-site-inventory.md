@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5463
+pr: trails#5463
 claim: "2026-07-27T21:46:16Z"
 assignee: "pin-methodinfo-emit-site-inventory"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5296
+pr: trails#5296
 claim: "2026-07-25T03:34:52Z"
 assignee: "collection-ids-key-in-constructor-throws-typeerror"
 blocked-by: null

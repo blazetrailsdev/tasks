@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3648
+pr: trails#3648
 claim: "2026-06-19T14:36:26Z"
 assignee: "cache-serialization-marshal-vs-json"
 blocked-by: null

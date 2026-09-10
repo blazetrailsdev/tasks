@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 5067
+pr: trails#5067
 claim: "2026-07-22T17:41:48Z"
 assignee: "delete-arel-default-quoters-and-constructor-defaults"
 blocked-by: null

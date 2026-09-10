@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 0
-pr: 4383
+pr: trails#4383
 claim: "2026-07-01T19:41:56Z"
 assignee: "require-canonical-schema-unwrap-as-const"
 blocked-by: null

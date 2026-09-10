@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 5884
+pr: trails#5884
 claim: "2026-08-02T13:23:09Z"
 assignee: "converge-pg-advisory-lock-id-guard-and-exec-routing"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6510
+pr: trails#6510
 claim: "2026-08-14T09:57:07Z"
 assignee: "weak-receiver-rows-residual-mixin-call-pairing"
 blocked-by: null

@@ -7,7 +7,7 @@ cluster: followup
 deps: ["delete-bootstrap-handler"]
 deps-rfc: []
 est-loc: 150
-pr: 3691
+pr: trails#3691
 claim: "2026-06-20T01:41:36Z"
 assignee: "define-schema-preload-cleanup"
 blocked-by: null

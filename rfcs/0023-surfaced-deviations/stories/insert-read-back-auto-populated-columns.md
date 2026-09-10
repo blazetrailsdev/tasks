@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4659
+pr: trails#4659
 claim: "2026-07-06T03:46:25Z"
 assignee: "insert-read-back-auto-populated-columns"
 blocked-by: null

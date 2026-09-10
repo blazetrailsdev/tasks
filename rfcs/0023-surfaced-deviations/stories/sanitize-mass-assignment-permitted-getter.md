@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4972
+pr: trails#4972
 claim: "2026-07-19T21:41:11Z"
 assignee: "sanitize-mass-assignment-permitted-getter"
 blocked-by: null

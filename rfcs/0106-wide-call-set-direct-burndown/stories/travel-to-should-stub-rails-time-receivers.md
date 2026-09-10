@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6872
+pr: trails#6872
 claim: "2026-08-22T18:49:58Z"
 assignee: "travel-to-should-stub-rails-time-receivers"
 blocked-by: null

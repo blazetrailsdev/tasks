@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 1
-pr: 5969
+pr: trails#5969
 claim: "2026-08-03T13:44:01Z"
 assignee: "i18n-package-scaffold-config-exceptions"
 blocked-by: null

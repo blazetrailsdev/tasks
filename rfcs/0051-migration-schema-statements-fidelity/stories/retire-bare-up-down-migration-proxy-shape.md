@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5596
+pr: trails#5596
 claim: "2026-07-29T19:28:20Z"
 assignee: "retire-bare-up-down-migration-proxy-shape"
 blocked-by: null

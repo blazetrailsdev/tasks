@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 4477
+pr: trails#4477
 claim: "2026-07-03T12:45:52Z"
 assignee: "convert-defineschema-use-fixtures-test"
 blocked-by: null

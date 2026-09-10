@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4103
+pr: trails#4103
 claim: "2026-06-25T10:02:38Z"
 assignee: "hashlookup-registertype-block-param-fidelity"
 blocked-by: null

@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-pr: 6435
+pr: trails#6435
 claim: "2026-08-25T12:59:40Z"
 assignee: "collection-proxy-association-ivar-takes-rails-name"
 blocked-by: null

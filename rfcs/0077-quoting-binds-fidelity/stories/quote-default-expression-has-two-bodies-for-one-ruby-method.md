@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 7047
+pr: trails#7047
 claim: "2026-08-25T16:18:38Z"
 assignee: "collection-proxy-association-seat-is-degenerate-for-singular-names"
 blocked-by: null

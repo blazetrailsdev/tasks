@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5464
+pr: trails#5464
 claim: "2026-07-27T23:57:37Z"
 assignee: "enforce-missing-rails-call-reason-in-ci"
 blocked-by: null

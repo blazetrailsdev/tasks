@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 5775
+pr: trails#5775
 claim: "2026-08-01T00:00:41Z"
 assignee: "base-mixin-wiring-order-independent-module-init"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6743
+pr: trails#6743
 claim: "2026-08-19T14:30:05Z"
 assignee: "collection-proxy-clear-delegates-to-delete-or-nullify-all-records"
 blocked-by: null

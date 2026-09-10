@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7626
+pr: trails#7626
 claim: "2026-09-08T19:00:34Z"
 assignee: "aref-receiver-kind-blocks-string-delete-credit"
 blocked-by: null

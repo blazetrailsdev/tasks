@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: 7533
+pr: trails#7533
 claim: "2026-09-05T20:06:45Z"
 assignee: "conversion-and-serialization-tests-redeclare-shared-models"
 blocked-by: null

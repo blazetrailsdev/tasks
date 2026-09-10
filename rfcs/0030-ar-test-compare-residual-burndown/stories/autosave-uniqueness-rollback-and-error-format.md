@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3626
+pr: trails#3626
 claim: "2026-06-19T02:48:28Z"
 assignee: "autosave-uniqueness-rollback-and-error-format"
 blocked-by: null

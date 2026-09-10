@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5929
+pr: trails#5929
 claim: "2026-08-02T22:58:48Z"
 assignee: "adapter-class-name-renames-sqlite3-and-pg-schema-statements"
 blocked-by: null

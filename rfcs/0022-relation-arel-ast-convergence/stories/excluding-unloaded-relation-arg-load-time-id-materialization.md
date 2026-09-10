@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: 4286
+pr: trails#4286
 claim: "2026-06-29T18:53:46Z"
 assignee: "excluding-unloaded-relation-arg-load-time-id-materialization"
 blocked-by: null

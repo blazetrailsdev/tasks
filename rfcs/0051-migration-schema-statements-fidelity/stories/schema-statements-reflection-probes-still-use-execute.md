@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5811
+pr: trails#5811
 claim: "2026-08-01T18:33:00Z"
 assignee: "schema-statements-reflection-probes-still-use-execute"
 blocked-by: null

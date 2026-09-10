@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5143
+pr: trails#5143
 claim: "2026-07-23T13:22:36Z"
 assignee: "key-provider-ignores-store-key-references"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4959
+pr: trails#4959
 claim: "2026-07-19T15:11:11Z"
 assignee: "resolve-alias-arity-through-includes"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3401
+pr: trails#3401
 claim: "2026-06-15T19:36:26Z"
 assignee: "statement-cache-unprepared-bind-instrumentation"
 blocked-by: null

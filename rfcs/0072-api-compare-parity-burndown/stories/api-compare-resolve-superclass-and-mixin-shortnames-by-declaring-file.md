@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5948
+pr: trails#5948
 claim: "2026-08-03T01:55:46Z"
 assignee: "api-compare-resolve-superclass-and-mixin-shortnames-by-declaring-file"
 blocked-by: null

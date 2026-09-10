@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 6871
+pr: trails#6871
 claim: "2026-08-22T18:35:23Z"
 assignee: "call-tag-population-collides-on-shared-basename"
 blocked-by: null

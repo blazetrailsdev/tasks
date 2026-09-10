@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4411
+pr: trails#4411
 claim: "2026-07-02T14:45:52Z"
 assignee: "enum-db-default-on-new"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 16
-pr: 5086
+pr: trails#5086
 claim: "2026-07-22T22:03:08Z"
 assignee: "e4-adapter-explain-notifications"
 blocked-by: null

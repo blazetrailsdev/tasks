@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: 10
-pr: 6892
+pr: trails#6892
 claim: "2026-08-22T23:08:30Z"
 assignee: "arel-root-and-barrel-tail"
 blocked-by: null

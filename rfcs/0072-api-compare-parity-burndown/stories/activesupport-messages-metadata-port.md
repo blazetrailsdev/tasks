@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 5632
+pr: trails#5632
 claim: "2026-07-30T12:45:04Z"
 assignee: "activesupport-messages-metadata-port"
 blocked-by: null

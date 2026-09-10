@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 50
-pr: 3531
+pr: trails#3531
 claim: "2026-06-17T11:16:24Z"
 assignee: "pg-array-oid-element-subtypes"
 blocked-by: null

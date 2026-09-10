@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 5
-pr: 3141
+pr: trails#3141
 claim: "2026-06-12T00:41:59Z"
 assignee: "relocate-datetime-serializers-from-quoting"
 blocked-by: null

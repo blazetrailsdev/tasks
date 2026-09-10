@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6238
+pr: trails#6238
 claim: "2026-08-08T15:03:58Z"
 assignee: "pg-ddl-quoting-suite-builds-its-own-adapter-instead-of-leasing"
 blocked-by: null

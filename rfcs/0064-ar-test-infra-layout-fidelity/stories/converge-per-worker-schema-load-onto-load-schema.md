@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5670
+pr: trails#5670
 claim: "2026-07-30T20:11:19Z"
 assignee: "converge-per-worker-schema-load-onto-load-schema"
 blocked-by: null

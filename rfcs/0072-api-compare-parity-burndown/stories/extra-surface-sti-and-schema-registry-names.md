@@ -12,7 +12,7 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 5342
+pr: trails#5342
 claim: "2026-07-26T03:18:52Z"
 assignee: "extra-surface-sti-and-schema-registry-names"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 5388
+pr: trails#5388
 claim: "2026-07-27T01:48:41Z"
 assignee: "codec-tamper-collision-flake"
 blocked-by: null

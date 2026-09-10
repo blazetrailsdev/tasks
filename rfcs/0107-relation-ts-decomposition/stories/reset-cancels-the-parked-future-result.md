@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 3
-pr: 6905
+pr: trails#6905
 claim: "2026-08-23T10:57:34Z"
 assignee: "converge-relation-loaded-arm-readers-onto-seams"
 blocked-by: null

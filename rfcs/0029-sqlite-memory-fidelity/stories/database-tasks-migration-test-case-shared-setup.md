@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5299
+pr: trails#5299
 claim: "2026-07-25T13:18:53Z"
 assignee: "database-tasks-migration-test-case-shared-setup"
 blocked-by: null

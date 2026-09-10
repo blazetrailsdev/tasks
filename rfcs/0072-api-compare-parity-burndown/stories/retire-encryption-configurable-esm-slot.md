@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6146
+pr: trails#6146
 claim: "2026-08-05T23:53:11Z"
 assignee: "pg-schema-statements-abstract-signature-divergences"
 blocked-by: null

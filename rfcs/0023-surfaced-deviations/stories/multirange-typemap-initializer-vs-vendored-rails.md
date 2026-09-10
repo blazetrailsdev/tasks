@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3779
+pr: trails#3779
 claim: "2026-06-21T03:26:44Z"
 assignee: "multirange-typemap-initializer-vs-vendored-rails"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: 6843
+pr: trails#6843
 claim: "2026-08-21T22:32:56Z"
 assignee: "strip-freeform-comments-activerecord"
 ---

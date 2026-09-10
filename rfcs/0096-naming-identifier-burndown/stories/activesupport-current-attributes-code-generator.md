@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6538
+pr: trails#6538
 claim: "2026-08-14T18:57:42Z"
 assignee: "activemodel-define-attribute-method-code-generator"
 blocked-by: null

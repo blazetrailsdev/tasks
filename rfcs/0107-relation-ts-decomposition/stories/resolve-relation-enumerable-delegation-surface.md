@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6622
+pr: trails#6622
 claim: "2026-08-17T00:00:01Z"
 assignee: "teach-call-args-regexp-flag-equivalence"
 blocked-by: null

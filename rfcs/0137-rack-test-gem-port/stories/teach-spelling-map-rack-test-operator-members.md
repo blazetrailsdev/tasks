@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 20
-pr: 7541
+pr: trails#7541
 claim: "2026-09-05T23:00:00Z"
 assignee: "teach-spelling-map-rack-test-operator-members"
 blocked-by: null

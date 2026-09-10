@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4637
+pr: trails#4637
 claim: "2026-07-05T21:41:54Z"
 assignee: "sqlite3-columns-thread-generated-type"
 blocked-by: null

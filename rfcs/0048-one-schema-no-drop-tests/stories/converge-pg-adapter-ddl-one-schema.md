@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 4
-pr: 4329
+pr: trails#4329
 claim: "2026-06-30T16:02:41Z"
 assignee: "converge-pg-adapter-ddl-one-schema"
 blocked-by: null

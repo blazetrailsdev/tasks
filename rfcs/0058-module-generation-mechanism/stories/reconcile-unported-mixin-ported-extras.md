@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 26
-pr: 4721
+pr: trails#4721
 claim: "2026-07-07T02:23:32Z"
 assignee: "reconcile-unported-mixin-ported-extras"
 blocked-by: null

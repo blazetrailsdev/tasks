@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6546
+pr: trails#6546
 claim: "2026-08-14T21:45:07Z"
 assignee: "number-helper-bigdecimal-precision-spine"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3428
+pr: trails#3428
 claim: "2026-06-16T00:36:52Z"
 assignee: "cc-id-setter-missing-attribute"
 blocked-by: null

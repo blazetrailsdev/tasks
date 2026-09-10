@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 2
-pr: 4631
+pr: trails#4631
 claim: "2026-07-05T19:01:55Z"
 assignee: "relations-from-alias-group-by-qualifier"
 blocked-by: null

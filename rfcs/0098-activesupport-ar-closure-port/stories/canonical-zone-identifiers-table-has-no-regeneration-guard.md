@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: 6453
+pr: trails#6453
 claim: "2026-08-13T02:36:50Z"
 assignee: "converge-nokogiri-parse-onto-the-stringio-shim"
 blocked-by: null

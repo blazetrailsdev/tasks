@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 7376
+pr: trails#7376
 claim: "2026-09-02T01:16:08Z"
 assignee: "authentication-generator-emits-comment-stubs"
 blocked-by: null

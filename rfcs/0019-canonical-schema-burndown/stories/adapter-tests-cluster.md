@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 9
-pr: 3551
+pr: trails#3551
 claim: "2026-06-17T16:01:37Z"
 assignee: "adapter-tests-cluster"
 blocked-by: null

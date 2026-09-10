@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4780
+pr: trails#4780
 claim: "2026-07-08T11:01:23Z"
 assignee: "illegal-migration-name-error-message-rails-suffix"
 blocked-by: null

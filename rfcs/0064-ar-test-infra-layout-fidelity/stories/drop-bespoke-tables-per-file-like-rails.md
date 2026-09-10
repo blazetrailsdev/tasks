@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5698
+pr: trails#5698
 claim: "2026-07-31T01:15:07Z"
 assignee: "drop-bespoke-tables-per-file-like-rails"
 blocked-by: null

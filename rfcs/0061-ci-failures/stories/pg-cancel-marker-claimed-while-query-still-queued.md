@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5660
+pr: trails#5660
 claim: "2026-07-30T19:11:18Z"
 assignee: "pg-cancel-marker-claimed-while-query-still-queued"
 blocked-by: null

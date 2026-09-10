@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 8
-pr: 7447
+pr: trails#7447
 claim: "2026-09-03T15:54:31Z"
 assignee: "move-remaining-transaction-manager-delegates-to-database-statements"
 blocked-by: null

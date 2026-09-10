@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3425
+pr: trails#3425
 claim: "2026-06-16T01:48:52Z"
 assignee: "c2-defaults-nonstrict-null-coercion"
 blocked-by: null

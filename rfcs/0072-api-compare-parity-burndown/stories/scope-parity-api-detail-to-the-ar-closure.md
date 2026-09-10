@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6362
+pr: trails#6362
 claim: "2026-08-11T14:26:06Z"
 assignee: "arel-tosql-statement-visitor-helper-calls"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3716
+pr: trails#3716
 claim: "2026-06-20T14:01:27Z"
 assignee: "gate-missing-migration"
 blocked-by: null

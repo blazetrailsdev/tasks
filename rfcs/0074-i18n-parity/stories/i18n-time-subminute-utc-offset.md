@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6074
+pr: trails#6074
 claim: "2026-08-04T17:15:00Z"
 assignee: "i18n-time-subminute-utc-offset"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6566
+pr: trails#6566
 claim: "2026-08-15T14:45:06Z"
 assignee: "wave-1e-relation-batches-finder-spawn-rows"
 blocked-by: null

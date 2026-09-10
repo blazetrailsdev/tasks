@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 4
-pr: 7238
+pr: trails#7238
 claim: "2026-08-30T13:30:13Z"
 assignee: "api-compare-buckets-reopened-module-under-one-file"
 blocked-by: null

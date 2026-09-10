@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5787
+pr: trails#5787
 claim: "2026-08-01T02:24:02Z"
 assignee: "remove-bespoke-adapter-data-source-exists-overrides"
 blocked-by: null

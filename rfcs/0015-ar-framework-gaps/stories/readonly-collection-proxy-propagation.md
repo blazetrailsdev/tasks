@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 36
-pr: 2968
+pr: trails#2968
 claim: "2026-06-06T13:31:11Z"
 assignee: "readonly-collection-proxy-propagation"
 blocked-by: null

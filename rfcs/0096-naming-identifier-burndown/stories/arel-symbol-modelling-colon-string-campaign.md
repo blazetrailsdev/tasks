@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6478
+pr: trails#6478
 claim: "2026-08-13T17:05:42Z"
 assignee: "arel-symbol-modelling-colon-string-campaign"
 blocked-by: null

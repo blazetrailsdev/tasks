@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6276
+pr: trails#6276
 claim: "2026-08-09T02:45:47Z"
 assignee: "migration-context-collaborator-readers-cast-away-the-null-object"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 19
-pr: 4156
+pr: trails#4156
 claim: "2026-06-25T22:02:15Z"
 assignee: "attribute-methods-extra-burndown"
 blocked-by: null

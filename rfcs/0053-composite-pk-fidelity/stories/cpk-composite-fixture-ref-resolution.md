@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4369
+pr: trails#4369
 claim: "2026-07-01T11:24:48Z"
 assignee: "cpk-composite-fixture-ref-resolution"
 blocked-by: null

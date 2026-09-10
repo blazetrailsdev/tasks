@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 11
-pr: 3493
+pr: trails#3493
 claim: "2026-06-16T19:48:42Z"
 assignee: "proc-callback-this-instance-exec-binding"
 blocked-by: null

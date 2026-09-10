@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6527
+pr: trails#6527
 claim: "2026-08-14T15:47:02Z"
 assignee: "activemodel-code-generator-port"
 blocked-by: null

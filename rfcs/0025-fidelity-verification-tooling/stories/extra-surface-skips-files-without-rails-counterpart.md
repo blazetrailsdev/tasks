@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 18
-pr: 5427
+pr: trails#5427
 claim: "2026-07-27T17:23:13Z"
 assignee: "extra-surface-skips-files-without-rails-counterpart"
 blocked-by: null

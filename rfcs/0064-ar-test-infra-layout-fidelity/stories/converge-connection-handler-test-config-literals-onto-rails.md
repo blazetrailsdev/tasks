@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5715
+pr: trails#5715
 claim: "2026-07-31T15:48:03Z"
 assignee: "converge-connection-handler-test-config-literals-onto-rails"
 blocked-by: null

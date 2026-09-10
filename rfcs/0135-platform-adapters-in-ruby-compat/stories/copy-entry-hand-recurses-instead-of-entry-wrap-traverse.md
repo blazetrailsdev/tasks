@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 47
-pr: 7580
+pr: trails#7580
 claim: "2026-09-06T22:37:23Z"
 assignee: "copy-entry-hand-recurses-instead-of-entry-wrap-traverse"
 blocked-by: null

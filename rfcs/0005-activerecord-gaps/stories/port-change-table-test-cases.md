@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 5622
+pr: trails#5622
 claim: "2026-07-29T23:30:03Z"
 assignee: "port-change-table-test-cases"
 blocked-by: null

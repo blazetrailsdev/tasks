@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6201
+pr: trails#6201
 claim: "2026-08-07T21:12:47Z"
 assignee: "converge-composite-through-collection-proxy-owner-cols"
 blocked-by: null

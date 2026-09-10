@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5940
+pr: trails#5940
 claim: "2026-08-03T00:45:46Z"
 assignee: "extra-surface-has-one-through-classify"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: ["execute-tse-templates"]
 deps-rfc: []
 est-loc: 250
 priority: 27
-pr: 7333
+pr: trails#7333
 claim: "2026-09-01T12:32:20Z"
 assignee: "memoize-tse-compile-on-the-template"
 blocked-by: null

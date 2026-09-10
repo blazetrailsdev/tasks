@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 40
-pr: 3834
+pr: trails#3834
 claim: "2026-06-22T16:51:56Z"
 assignee: "restricted-name-attribute-reader-and-dirty-tracking"
 blocked-by: null

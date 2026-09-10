@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 3860
+pr: trails#3860
 claim: "2026-06-22T02:51:56Z"
 assignee: "route-establish-connection-string-hash-through-resolver"
 blocked-by: null

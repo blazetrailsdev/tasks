@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 31
+pr: tasks-legacy#31
 claim: "2026-06-13T20:42:34Z"
 assignee: "autogen-rfc-stories-table"
 blocked-by: null

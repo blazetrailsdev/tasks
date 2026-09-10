@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3781
+pr: trails#3781
 claim: "2026-06-21T12:06:48Z"
 assignee: "oo-has-many-delete-records-destroy-counter-cache-guard"
 blocked-by: null

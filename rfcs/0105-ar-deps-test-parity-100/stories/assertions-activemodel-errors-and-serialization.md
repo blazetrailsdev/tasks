@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 360
 priority: null
-pr: 6572
+pr: trails#6572
 claim: "2026-08-15T18:00:01Z"
 assignee: "assertions-activemodel-attributes-and-types-remainder"
 blocked-by: null

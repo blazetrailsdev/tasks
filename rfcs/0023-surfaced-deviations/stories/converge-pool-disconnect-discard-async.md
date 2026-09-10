@@ -8,7 +8,7 @@ deps: ["converge-connection-pool-lifecycle-async"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4483
+pr: trails#4483
 claim: "2026-07-03T14:21:53Z"
 assignee: "converge-pool-disconnect-discard-async"
 blocked-by: null

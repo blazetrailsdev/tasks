@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5852
+pr: trails#5852
 claim: "2026-08-02T01:46:48Z"
 assignee: "retire-introspect-helper-indirection"
 blocked-by: null

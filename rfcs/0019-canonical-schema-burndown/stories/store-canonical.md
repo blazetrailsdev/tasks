@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 66
-pr: 4205
+pr: trails#4205
 claim: "2026-06-26T18:42:58Z"
 assignee: "store-canonical"
 blocked-by: null

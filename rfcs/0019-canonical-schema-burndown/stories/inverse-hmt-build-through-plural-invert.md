@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3753
+pr: trails#3753
 claim: "2026-06-21T00:07:25Z"
 assignee: "inverse-hmt-build-through-plural-invert"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3244
+pr: trails#3244
 claim: "2026-06-14T12:06:34Z"
 assignee: "locking-dirty-primary-key"
 blocked-by: null

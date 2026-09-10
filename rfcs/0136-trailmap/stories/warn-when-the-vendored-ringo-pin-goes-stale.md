@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 3
-pr: 20
+pr: trailmap#20
 claim: "2026-09-09T15:00:55Z"
 assignee: "deployed-rfcs-index-500s-with-connectionnotdefined"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4909
+pr: trails#4909
 claim: "2026-07-16T16:51:13Z"
 assignee: "ignored-columns-absent-from-instance-attributes"
 blocked-by: null

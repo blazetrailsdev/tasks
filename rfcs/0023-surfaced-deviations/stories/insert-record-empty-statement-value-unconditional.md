@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 4118
+pr: trails#4118
 claim: "2026-06-25T13:29:36Z"
 assignee: "insert-record-empty-statement-value-unconditional"
 blocked-by: null

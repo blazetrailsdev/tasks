@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5610
+pr: trails#5610
 claim: "2026-07-29T22:24:55Z"
 assignee: "converge-sqlite-worker-clone-arunit2-sibling"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3982
+pr: trails#3982
 claim: "2026-06-23T12:12:39Z"
 assignee: "datetime-serialize-infinity-string-returns-null"
 blocked-by: null

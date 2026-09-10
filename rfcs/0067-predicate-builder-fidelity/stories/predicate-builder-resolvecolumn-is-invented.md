@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 62
-pr: 5068
+pr: trails#5068
 claim: "2026-07-22T16:41:47Z"
 assignee: "predicate-builder-resolvecolumn-is-invented"
 blocked-by: null

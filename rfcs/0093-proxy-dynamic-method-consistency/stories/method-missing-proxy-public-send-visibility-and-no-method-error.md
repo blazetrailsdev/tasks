@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6252
+pr: trails#6252
 claim: "2026-08-08T17:55:11Z"
 assignee: "method-missing-proxy-public-send-visibility-and-no-method-error"
 blocked-by: null

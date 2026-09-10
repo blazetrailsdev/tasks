@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3762
+pr: trails#3762
 claim: "2026-06-21T01:51:26Z"
 assignee: "join-model-create-through-sets-owner-fk"
 blocked-by: null

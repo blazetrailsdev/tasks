@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 7475
+pr: trails#7475
 claim: "2026-09-04T12:11:34Z"
 assignee: "port-string-b-binary-copy"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: 3932
+pr: trails#3932
 claim: "2026-06-22T22:03:15Z"
 assignee: "a1-eager-sti-through"
 blocked-by: null

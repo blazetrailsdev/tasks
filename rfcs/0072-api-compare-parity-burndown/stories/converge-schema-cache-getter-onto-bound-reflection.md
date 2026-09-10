@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5906
+pr: trails#5906
 claim: "2026-08-02T18:37:27Z"
 assignee: "converge-schema-cache-getter-onto-bound-reflection"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6349
+pr: trails#6349
 claim: "2026-08-11T01:54:24Z"
 assignee: "call-args-tool-resolve-ruby-callee"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["cli-package-scaffold"]
 deps-rfc: []
 est-loc: 30
 priority: 55
-pr: 2994
+pr: trails#2994
 claim: "2026-06-07T14:20:14Z"
 assignee: "cli-console-runner-empty-config"
 blocked-by: null

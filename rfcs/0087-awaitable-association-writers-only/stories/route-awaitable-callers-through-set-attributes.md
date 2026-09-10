@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6204
+pr: trails#6204
 claim: "2026-08-07T21:44:45Z"
 assignee: "converge-fixture-teardown-delete-onto-a-live-connection"
 blocked-by: null

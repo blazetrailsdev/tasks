@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7575
+pr: trails#7575
 claim: "2026-09-06T19:26:41Z"
 assignee: "attribute-methods-respond-to-drops-the-private-methods-arm"
 blocked-by: null

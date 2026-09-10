@@ -8,7 +8,7 @@ deps: ["extra-surface-reasoned-allowlist"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5333
+pr: trails#5333
 claim: "2026-07-25T23:42:50Z"
 assignee: "extra-surface-globalid-reconcile"
 blocked-by: null

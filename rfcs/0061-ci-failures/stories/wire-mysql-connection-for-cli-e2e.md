@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5439
+pr: trails#5439
 claim: "2026-07-27T18:53:50Z"
 assignee: "wire-mysql-connection-for-cli-e2e"
 blocked-by: null

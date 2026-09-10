@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 7064
+pr: trails#7064
 claim: "2026-08-25T23:38:27Z"
 assignee: "attribute-type-caster-delegations-cast-name-to-string"
 blocked-by: null

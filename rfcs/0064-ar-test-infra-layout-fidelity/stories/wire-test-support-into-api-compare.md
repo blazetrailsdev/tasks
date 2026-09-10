@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 5433
+pr: trails#5433
 claim: "2026-07-27T18:03:15Z"
 assignee: "wire-test-support-into-api-compare"
 blocked-by: null

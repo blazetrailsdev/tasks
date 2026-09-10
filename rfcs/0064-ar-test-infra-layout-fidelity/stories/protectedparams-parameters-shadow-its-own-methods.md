@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5690
+pr: trails#5690
 claim: "2026-07-30T23:45:18Z"
 assignee: "protectedparams-parameters-shadow-its-own-methods"
 blocked-by: null

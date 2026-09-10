@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: 3195
+pr: trails#3195
 claim: "2026-06-13T14:39:19Z"
 assignee: "f9g2-sti-dispatch-at-new"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5668
+pr: trails#5668
 claim: "2026-07-30T19:59:19Z"
 assignee: "lint-detached-jsdoc-tag-blocks"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 5530
+pr: trails#5530
 claim: "2026-07-28T20:36:54Z"
 assignee: "tighten-guides-typecheck-gate"
 blocked-by: null

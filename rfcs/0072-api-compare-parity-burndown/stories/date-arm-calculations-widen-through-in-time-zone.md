@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6197
+pr: trails#6197
 claim: "2026-08-07T19:52:41Z"
 assignee: "relation-proxy-respond-to-missing"
 blocked-by: null

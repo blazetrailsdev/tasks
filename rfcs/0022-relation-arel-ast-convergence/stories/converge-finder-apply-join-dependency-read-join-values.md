@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 9
-pr: 4674
+pr: trails#4674
 claim: "2026-07-06T14:05:00Z"
 assignee: "converge-finder-apply-join-dependency-read-join-values"
 blocked-by: null

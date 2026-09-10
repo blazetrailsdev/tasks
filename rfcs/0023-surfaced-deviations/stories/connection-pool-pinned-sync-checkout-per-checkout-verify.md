@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4443
+pr: trails#4443
 claim: "2026-07-02T21:45:51Z"
 assignee: "connection-pool-pinned-sync-checkout-per-checkout-verify"
 blocked-by: null

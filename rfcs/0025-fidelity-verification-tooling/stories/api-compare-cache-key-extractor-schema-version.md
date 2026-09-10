@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4044
+pr: trails#4044
 claim: "2026-06-24T01:00:41Z"
 assignee: "api-compare-cache-key-extractor-schema-version"
 blocked-by: null

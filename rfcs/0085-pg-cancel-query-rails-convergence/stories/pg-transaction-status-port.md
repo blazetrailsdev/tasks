@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6157
+pr: trails#6157
 claim: "2026-08-06T15:03:06Z"
 assignee: "d-new-by-frags-skips-the-second-civil-validation"
 blocked-by: null

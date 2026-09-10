@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 8
-pr: 7485
+pr: trails#7485
 claim: "2026-09-04T15:50:46Z"
 assignee: "route-remaining-default-env-call-sites"
 blocked-by: null

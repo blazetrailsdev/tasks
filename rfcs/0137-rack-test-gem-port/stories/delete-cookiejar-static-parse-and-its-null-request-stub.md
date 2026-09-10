@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 7599
+pr: trails#7599
 claim: "2026-09-07T22:55:35Z"
 assignee: "default-cookie-serializer-is-marshal-not-json"
 blocked-by: null

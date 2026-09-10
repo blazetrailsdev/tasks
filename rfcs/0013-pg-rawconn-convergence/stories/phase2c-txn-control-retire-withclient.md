@@ -8,7 +8,7 @@ deps:
   - phase2b-write-path
 deps-rfc: []
 est-loc: 200
-pr: 3086
+pr: trails#3086
 claim: "2026-06-10T15:13:20Z"
 assignee: "phase2c-txn-control-retire-withclient"
 blocked-by: null

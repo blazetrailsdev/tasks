@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4960
+pr: trails#4960
 claim: "2026-07-19T15:21:08Z"
 assignee: "returning-columns-for-insert-memoize"
 blocked-by: null

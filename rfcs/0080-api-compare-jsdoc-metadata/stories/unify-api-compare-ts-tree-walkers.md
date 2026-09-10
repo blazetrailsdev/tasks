@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5679
+pr: trails#5679
 claim: "2026-07-30T21:15:18Z"
 assignee: "unify-api-compare-ts-tree-walkers"
 blocked-by: null

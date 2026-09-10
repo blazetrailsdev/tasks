@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 17
-pr: 4792
+pr: trails#4792
 claim: "2026-07-08T18:22:34Z"
 assignee: "txn-fixtures-halting-destroy-savepoint"
 blocked-by: null

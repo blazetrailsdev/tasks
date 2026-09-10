@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-pr: 7248
+pr: trails#7248
 claim: "2026-08-30T15:47:31Z"
 assignee: "wire-ar-read-write-attribute-onto-base"
 blocked-by: null

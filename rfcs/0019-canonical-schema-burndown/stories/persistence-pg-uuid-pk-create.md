@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3836
+pr: trails#3836
 claim: "2026-06-21T21:02:42Z"
 assignee: "persistence-pg-uuid-pk-create"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4683
+pr: trails#4683
 claim: "2026-07-06T16:05:06Z"
 assignee: "in-memory-collection-find-conditions-clause"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6112
+pr: trails#6112
 claim: "2026-08-05T01:59:57Z"
 assignee: "i18n-date-rewrite-frags-and-new-by-frags-fast-path"
 blocked-by: null

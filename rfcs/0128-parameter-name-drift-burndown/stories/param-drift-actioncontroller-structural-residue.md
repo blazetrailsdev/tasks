@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: 7
-pr: 7302
+pr: trails#7302
 claim: "2026-08-31T15:54:33Z"
 assignee: "template-render-takes-view-before-locals"
 blocked-by: null

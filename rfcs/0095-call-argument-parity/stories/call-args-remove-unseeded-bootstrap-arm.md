@@ -9,7 +9,7 @@ deps: ["call-args-baseline-seed"]
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 6345
+pr: trails#6345
 claim: "2026-08-10T16:40:51Z"
 assignee: "call-args-remove-unseeded-bootstrap-arm"
 blocked-by: null

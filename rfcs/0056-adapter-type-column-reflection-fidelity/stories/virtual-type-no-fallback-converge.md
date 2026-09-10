@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 7
-pr: 4703
+pr: trails#4703
 claim: "2026-07-06T21:08:53Z"
 assignee: "virtual-type-no-fallback-converge"
 blocked-by: null

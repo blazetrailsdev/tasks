@@ -15,7 +15,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 8
-pr: 7515
+pr: trails#7515
 claim: "2026-09-05T10:32:17Z"
 assignee: "port-rack-test-session"
 blocked-by: null

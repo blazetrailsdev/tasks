@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 4863
+pr: trails#4863
 claim: "2026-07-14T13:41:11Z"
 assignee: "reflection-klass-cache-self-heal"
 blocked-by: null

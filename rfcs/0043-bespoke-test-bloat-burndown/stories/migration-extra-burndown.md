@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 14
-pr: 4146
+pr: trails#4146
 claim: "2026-06-25T19:47:16Z"
 assignee: "migration-extra-burndown"
 blocked-by: null

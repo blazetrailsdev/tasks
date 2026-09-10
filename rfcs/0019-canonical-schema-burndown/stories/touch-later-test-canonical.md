@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 200
 priority: 30
-pr: 4173
+pr: trails#4173
 claim: "2026-06-26T02:31:57Z"
 assignee: "touch-later-test-canonical"
 blocked-by: null

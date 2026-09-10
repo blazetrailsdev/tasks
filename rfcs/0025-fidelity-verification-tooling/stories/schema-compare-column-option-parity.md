@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 20
-pr: 5218
+pr: trails#5218
 claim: "2026-07-24T11:38:24Z"
 assignee: "schema-compare-column-option-parity"
 blocked-by: null

@@ -7,7 +7,7 @@ cluster: duplicate-bodies
 deps: []
 deps-rfc: []
 est-loc: 140
-pr: 7048
+pr: trails#7048
 claim: "2026-08-25T16:50:30Z"
 assignee: "converge-collection-proxy-anonymous-inline-reflection-guards"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6441
+pr: trails#6441
 claim: "2026-08-12T22:36:49Z"
 assignee: "port-xml-mini-backend-and-parsing-half"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: 3736
+pr: trails#3736
 claim: "2026-06-20T19:13:28Z"
 assignee: "includes-unknown-assoc-raises-configuration-error"
 blocked-by: null

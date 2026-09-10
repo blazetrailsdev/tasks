@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 50
-pr: 5319
+pr: trails#5319
 claim: "2026-07-25T20:14:53Z"
 assignee: "belongs-to-required-validates-fk-false"
 blocked-by: null

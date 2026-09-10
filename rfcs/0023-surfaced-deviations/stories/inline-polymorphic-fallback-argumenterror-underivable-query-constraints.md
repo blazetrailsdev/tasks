@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3751
+pr: trails#3751
 claim: "2026-06-20T23:58:57Z"
 assignee: "inline-polymorphic-fallback-argumenterror-underivable-query-constraints"
 blocked-by: null

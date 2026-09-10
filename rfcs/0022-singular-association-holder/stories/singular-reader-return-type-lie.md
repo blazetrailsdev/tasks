@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 20
-pr: 3922
+pr: trails#3922
 claim: "2026-06-22T20:35:15Z"
 assignee: "singular-reader-return-type-lie"
 blocked-by: null

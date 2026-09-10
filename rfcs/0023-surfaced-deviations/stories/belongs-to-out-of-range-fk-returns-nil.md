@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4267
+pr: trails#4267
 claim: "2026-06-29T12:34:10Z"
 assignee: "belongs-to-out-of-range-fk-returns-nil"
 blocked-by: null

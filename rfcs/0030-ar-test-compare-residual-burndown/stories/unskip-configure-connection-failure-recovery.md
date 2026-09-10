@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 6
-pr: 5137
+pr: trails#5137
 claim: "2026-07-23T12:10:35Z"
 assignee: "unskip-configure-connection-failure-recovery"
 blocked-by: null

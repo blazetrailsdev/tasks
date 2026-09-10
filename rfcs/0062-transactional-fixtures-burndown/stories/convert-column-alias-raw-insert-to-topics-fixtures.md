@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 0
-pr: 4643
+pr: trails#4643
 claim: "2026-07-05T23:34:42Z"
 assignee: "convert-column-alias-raw-insert-to-topics-fixtures"
 blocked-by: null

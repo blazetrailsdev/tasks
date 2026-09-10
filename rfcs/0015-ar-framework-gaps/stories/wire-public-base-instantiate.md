@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: 4019
+pr: trails#4019
 claim: "2026-06-23T16:22:58Z"
 assignee: "wire-public-base-instantiate"
 blocked-by: null

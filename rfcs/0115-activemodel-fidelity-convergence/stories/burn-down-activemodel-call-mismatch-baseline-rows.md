@@ -11,7 +11,7 @@ deps:
   - converge-dirty-tracker-onto-rails-mutation-trackers
 deps-rfc: []
 est-loc: 300
-pr: 7034
+pr: trails#7034
 claim: "2026-08-25T13:58:43Z"
 assignee: "burn-down-activemodel-call-mismatch-baseline-rows"
 blocked-by: null

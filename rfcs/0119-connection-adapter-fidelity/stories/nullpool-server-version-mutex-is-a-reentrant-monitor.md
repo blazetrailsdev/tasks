@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 60
-pr: 7653
+pr: trails#7653
 claim: "2026-09-09T19:56:14Z"
 assignee: "savepoint-sql-builders-are-three-methods-rails-does-not-have"
 blocked-by: null

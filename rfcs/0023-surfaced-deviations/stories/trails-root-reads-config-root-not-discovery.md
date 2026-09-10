@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4994
+pr: trails#4994
 claim: "2026-07-20T18:11:10Z"
 assignee: "trails-root-reads-config-root-not-discovery"
 blocked-by: null

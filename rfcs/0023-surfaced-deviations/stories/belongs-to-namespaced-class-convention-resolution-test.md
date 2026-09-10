@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4306
+pr: trails#4306
 claim: "2026-06-30T02:54:32Z"
 assignee: "belongs-to-namespaced-class-convention-resolution-test"
 blocked-by: null

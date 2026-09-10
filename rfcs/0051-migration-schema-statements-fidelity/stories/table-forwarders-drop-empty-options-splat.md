@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 16
-pr: 7019
+pr: trails#7019
 claim: "2026-08-25T00:18:05Z"
 assignee: "move-ts-only-extras-out-of-mirrored-activemodel-translation-test-file"
 blocked-by: null

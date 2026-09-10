@@ -8,7 +8,7 @@ deps: ["libsql-remote-mode"]
 deps-rfc: []
 est-loc: 160
 priority: 4
-pr: 3692
+pr: trails#3692
 claim: "2026-06-20T01:51:35Z"
 assignee: "libsql-embedded-replica"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 25
-pr: 4744
+pr: trails#4744
 claim: "2026-07-07T15:49:50Z"
 assignee: "route-composite-through-in-subquery-shapes-via-join-scope"
 blocked-by: null

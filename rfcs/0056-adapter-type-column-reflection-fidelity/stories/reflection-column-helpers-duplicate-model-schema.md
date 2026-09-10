@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 32
-pr: 5093
+pr: trails#5093
 claim: "2026-07-22T23:20:36Z"
 assignee: "reflection-column-helpers-duplicate-model-schema"
 blocked-by: null

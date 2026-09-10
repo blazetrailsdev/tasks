@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: 6803
+pr: trails#6803
 claim: "2026-08-21T02:40:24Z"
 assignee: "retire-the-encryption-decorator-idempotence-guard"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["call-mismatches-ratcheting-baseline"]
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4082
+pr: trails#4082
 claim: "2026-06-24T19:38:46Z"
 assignee: "dirty-tracking-changes-applied-cluster"
 blocked-by: null

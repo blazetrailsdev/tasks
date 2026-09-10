@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5351
+pr: trails#5351
 claim: "2026-07-26T13:34:54Z"
 assignee: "activesupport-messages-serializer-with-fallback-port"
 blocked-by: null

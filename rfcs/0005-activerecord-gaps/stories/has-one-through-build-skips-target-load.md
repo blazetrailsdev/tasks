@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4905
+pr: trails#4905
 claim: "2026-07-16T13:21:13Z"
 assignee: "has-one-through-build-skips-target-load"
 blocked-by: null

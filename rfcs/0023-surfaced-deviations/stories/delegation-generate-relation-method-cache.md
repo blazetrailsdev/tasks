@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3998
+pr: trails#3998
 claim: "2026-06-23T13:47:40Z"
 assignee: "delegation-generate-relation-method-cache"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["migrator-ctor-takes-schema-migration-and-internal-metadata"]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: 6194
+pr: trails#6194
 claim: "2026-08-07T19:36:37Z"
 assignee: "migrator-test-sites-adopt-rails-ctor-signature"
 blocked-by: null

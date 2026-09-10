@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6956
+pr: trails#6956
 claim: "2026-08-23T22:12:31Z"
 assignee: "date-suite-is-not-run-by-any-ci-job"
 blocked-by: null

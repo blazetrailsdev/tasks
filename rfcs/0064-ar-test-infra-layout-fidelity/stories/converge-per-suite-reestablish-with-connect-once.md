@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5415
+pr: trails#5415
 claim: "2026-07-27T14:45:07Z"
 assignee: "converge-per-suite-reestablish-with-connect-once"
 blocked-by: null

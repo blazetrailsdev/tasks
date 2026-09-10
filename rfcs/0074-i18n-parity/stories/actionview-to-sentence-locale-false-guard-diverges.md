@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 6042
+pr: trails#6042
 claim: "2026-08-04T01:55:53Z"
 assignee: "actionview-to-sentence-locale-false-guard-diverges"
 blocked-by: null

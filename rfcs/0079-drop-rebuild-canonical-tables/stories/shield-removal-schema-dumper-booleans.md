@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 7126
+pr: trails#7126
 claim: "2026-08-27T18:10:33Z"
 assignee: "shield-removal-schema-dumper-booleans"
 blocked-by: null

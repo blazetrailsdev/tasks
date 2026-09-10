@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 5122
+pr: trails#5122
 claim: "2026-07-23T03:10:36Z"
 assignee: "autosave-weakened-assertion-restoration"
 blocked-by: null

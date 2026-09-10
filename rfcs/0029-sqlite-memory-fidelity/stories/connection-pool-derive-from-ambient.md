@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 45
 priority: 4
-pr: 5285
+pr: trails#5285
 claim: "2026-07-25T02:14:53Z"
 assignee: "connection-pool-derive-from-ambient"
 blocked-by: null

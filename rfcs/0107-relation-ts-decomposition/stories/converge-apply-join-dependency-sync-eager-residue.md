@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: 6648
+pr: trails#6648
 claim: "2026-08-17T12:55:24Z"
 assignee: "assertions-activemodel-type-binary-cast"
 blocked-by: null

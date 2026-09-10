@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: 5358
+pr: trails#5358
 claim: "2026-07-26T16:22:55Z"
 assignee: "no-rails-equivalent-tag-extractor-support"
 blocked-by: null

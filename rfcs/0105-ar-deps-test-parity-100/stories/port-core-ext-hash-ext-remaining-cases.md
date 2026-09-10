@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: 7407
+pr: trails#7407
 claim: "2026-09-02T20:23:51Z"
 assignee: "port-core-ext-hash-ext-remaining-cases"
 blocked-by: null

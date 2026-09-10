@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 7530
+pr: trails#7530
 claim: "2026-09-05T19:06:48Z"
 assignee: "io-set-encoding-cannot-hold-mri-null-external-encoding"
 blocked-by: null

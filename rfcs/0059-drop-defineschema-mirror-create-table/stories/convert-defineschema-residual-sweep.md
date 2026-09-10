@@ -8,7 +8,7 @@ deps: ["create-table-canonical-schema-loader"]
 deps-rfc: []
 est-loc: 300
 priority: 1
-pr: 4473
+pr: trails#4473
 claim: "2026-07-03T11:57:54Z"
 assignee: "convert-defineschema-residual-sweep"
 blocked-by: null

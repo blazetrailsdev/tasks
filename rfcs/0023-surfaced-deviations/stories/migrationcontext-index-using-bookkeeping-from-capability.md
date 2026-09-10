@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4606
+pr: trails#4606
 claim: "2026-07-05T12:37:27Z"
 assignee: "migrationcontext-index-using-bookkeeping-from-capability"
 blocked-by: null

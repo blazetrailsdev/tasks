@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4028
+pr: trails#4028
 claim: "2026-06-23T18:09:48Z"
 assignee: "am-arity-convergence"
 blocked-by: null

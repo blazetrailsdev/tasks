@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 22
-pr: 7401
+pr: trails#7401
 claim: "2026-09-02T18:45:08Z"
 assignee: "converge-env-for-symbol-opts-onto-colon-spelling"
 blocked-by: null

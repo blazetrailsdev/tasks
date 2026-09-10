@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5905
+pr: trails#5905
 claim: "2026-08-02T18:31:25Z"
 assignee: "converge-relation-token-and-signed-id-finder-bodies"
 blocked-by: null

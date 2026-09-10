@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5834
+pr: trails#5834
 claim: "2026-08-01T22:45:58Z"
 assignee: "scorer-as-const-mixin-map"
 blocked-by: null

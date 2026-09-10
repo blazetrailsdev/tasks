@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 9
-pr: 3558
+pr: trails#3558
 claim: "2026-06-17T17:39:43Z"
 assignee: "require-table-teardown-rule-recognize-loops"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 7247
+pr: trails#7247
 claim: "2026-08-30T15:05:49Z"
 assignee: "biginteger-castvalue-declares-number-but-returns-bigint"
 blocked-by: null

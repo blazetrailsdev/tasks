@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3804
+pr: trails#3804
 claim: "2026-06-21T16:46:41Z"
 assignee: "foreign-key-defined-for-generic-option-matching"
 blocked-by: null

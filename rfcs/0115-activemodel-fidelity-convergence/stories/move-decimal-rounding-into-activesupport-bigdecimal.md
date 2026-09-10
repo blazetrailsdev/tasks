@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6790
+pr: trails#6790
 claim: "2026-08-20T20:20:10Z"
 assignee: "converge-numericality-and-length-parsing-residue"
 blocked-by: null

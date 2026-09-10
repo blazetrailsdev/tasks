@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6107
+pr: trails#6107
 claim: "2026-08-05T00:47:03Z"
 assignee: "i18n-date-valid-ordinal-civil-negative-fields"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3786
+pr: trails#3786
 claim: "2026-06-21T12:54:42Z"
 assignee: "dup-sets-attributes-before-after-initialize"
 blocked-by: null

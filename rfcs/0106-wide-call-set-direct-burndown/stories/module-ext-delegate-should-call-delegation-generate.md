@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6863
+pr: trails#6863
 claim: "2026-08-22T16:20:03Z"
 assignee: "module-ext-delegate-should-call-delegation-generate"
 blocked-by: null

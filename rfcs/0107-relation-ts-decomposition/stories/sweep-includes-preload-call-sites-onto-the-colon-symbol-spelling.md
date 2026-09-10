@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6715
+pr: trails#6715
 claim: "2026-08-18T19:42:42Z"
 assignee: "sweep-includes-preload-call-sites-onto-the-colon-symbol-spelling"
 blocked-by: null

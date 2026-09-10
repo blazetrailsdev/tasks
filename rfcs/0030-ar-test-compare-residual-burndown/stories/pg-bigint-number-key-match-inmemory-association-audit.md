@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 3
-pr: 4622
+pr: trails#4622
 claim: "2026-07-05T16:37:27Z"
 assignee: "pg-bigint-number-key-match-inmemory-association-audit"
 blocked-by: null

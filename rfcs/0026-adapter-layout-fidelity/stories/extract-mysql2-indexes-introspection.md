@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 3280
+pr: trails#3280
 claim: "2026-06-14T19:12:36Z"
 assignee: "extract-mysql2-indexes-introspection"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: 4041
+pr: trails#4041
 claim: "2026-06-23T23:30:39Z"
 assignee: "through-source-scope-not-merged-in-eager-preload"
 blocked-by: null

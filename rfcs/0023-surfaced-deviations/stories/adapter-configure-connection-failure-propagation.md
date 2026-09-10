@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3086
+pr: trails#3086
 claim: "2026-06-30T21:24:46Z"
 assignee: "adapter-configure-connection-failure-propagation"
 blocked-by: null

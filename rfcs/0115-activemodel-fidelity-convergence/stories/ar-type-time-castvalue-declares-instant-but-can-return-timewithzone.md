@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 29
-pr: 7228
+pr: trails#7228
 claim: "2026-08-30T01:37:02Z"
 assignee: "type-generated-attribute-accessors-with-divergent-get-set"
 blocked-by: null

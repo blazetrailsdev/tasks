@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6840
+pr: trails#6840
 claim: "2026-08-21T21:20:33Z"
 assignee: "port-relation-create-for-build-scope"
 blocked-by: null

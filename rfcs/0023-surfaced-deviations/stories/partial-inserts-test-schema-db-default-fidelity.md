@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3789
+pr: trails#3789
 claim: "2026-06-21T13:18:54Z"
 assignee: "partial-inserts-test-schema-db-default-fidelity"
 blocked-by: null

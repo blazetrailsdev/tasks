@@ -9,7 +9,7 @@ deps: ["generate-app-subclassing-application"]
 deps-rfc: []
 est-loc: 90
 priority: 9
-pr: 7305
+pr: trails#7305
 claim: "2026-08-31T17:10:47Z"
 assignee: "wire-implicit-render-into-controller-dispatch"
 blocked-by: null

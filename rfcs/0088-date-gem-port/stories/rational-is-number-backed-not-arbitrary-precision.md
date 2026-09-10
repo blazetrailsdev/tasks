@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6186
+pr: trails#6186
 claim: "2026-08-07T17:44:45Z"
 assignee: "flatten-store-resolve-link-to-sym-parity"
 blocked-by: null

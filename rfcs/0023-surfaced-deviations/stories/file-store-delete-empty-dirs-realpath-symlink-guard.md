@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4094
+pr: trails#4094
 claim: "2026-06-25T01:42:34Z"
 assignee: "file-store-delete-empty-dirs-realpath-symlink-guard"
 blocked-by: null

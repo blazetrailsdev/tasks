@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-pr: 5991
+pr: trails#5991
 claim: "2026-08-03T16:51:42Z"
 assignee: "eliminate-build-displacement-owned-by-caller-flag"
 blocked-by: null

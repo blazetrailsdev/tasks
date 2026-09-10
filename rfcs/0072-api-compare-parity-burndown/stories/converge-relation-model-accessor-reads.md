@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5322
+pr: trails#5322
 claim: "2026-07-25T21:18:52Z"
 assignee: "converge-relation-model-accessor-reads"
 blocked-by: null

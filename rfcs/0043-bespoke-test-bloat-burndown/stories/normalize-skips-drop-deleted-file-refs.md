@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 5
 priority: 1
-pr: 4664
+pr: trails#4664
 claim: "2026-07-06T10:26:20Z"
 assignee: "normalize-skips-drop-deleted-file-refs"
 blocked-by: null

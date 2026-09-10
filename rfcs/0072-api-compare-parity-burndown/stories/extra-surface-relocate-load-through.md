@@ -8,7 +8,7 @@ deps: ["extra-surface-associations-engine-classify"]
 deps-rfc: []
 est-loc: 170
 priority: null
-pr: 5364
+pr: trails#5364
 claim: "2026-07-26T17:18:56Z"
 assignee: "extra-surface-relocate-load-through"
 blocked-by: null

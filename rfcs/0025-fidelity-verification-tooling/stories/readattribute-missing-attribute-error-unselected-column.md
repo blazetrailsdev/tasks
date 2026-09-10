@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4857
+pr: trails#4857
 claim: "2026-07-14T01:02:35Z"
 assignee: "readattribute-missing-attribute-error-unselected-column"
 blocked-by: null

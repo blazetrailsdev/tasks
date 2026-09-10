@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 1
-pr: 3137
+pr: trails#3137
 claim: "2026-06-11T21:39:58Z"
 assignee: "set-operations-arel-nodes"
 blocked-by: null

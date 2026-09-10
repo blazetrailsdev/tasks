@@ -8,7 +8,7 @@ deps: ["converge-tree-construction-make-tree"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 3238
+pr: trails#3238
 claim: "2026-06-14T02:18:35Z"
 assignee: "converge-alias-tracking"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 40
-pr: 3884
+pr: trails#3884
 claim: "2026-06-22T14:43:58Z"
 assignee: "relation-handler-composite-pk-argumenterror-parity"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 5592
+pr: trails#5592
 claim: "2026-07-29T19:04:52Z"
 assignee: "unexport-raise-on-assign-to-attr-readonly-wrappers"
 blocked-by: null

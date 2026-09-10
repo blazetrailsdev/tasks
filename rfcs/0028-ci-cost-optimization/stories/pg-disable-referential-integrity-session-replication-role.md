@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: 4514
+pr: trails#4514
 claim: "2026-07-04T11:41:50Z"
 assignee: "pg-disable-referential-integrity-session-replication-role"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4561
+pr: trails#4561
 claim: "2026-07-04T17:49:27Z"
 assignee: "merge-hash-value-methods-key-validation"
 blocked-by: null

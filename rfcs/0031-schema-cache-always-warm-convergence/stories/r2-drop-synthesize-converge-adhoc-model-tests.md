@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 20
-pr: 3856
+pr: trails#3856
 claim: "2026-06-22T11:32:40Z"
 assignee: "r2-drop-synthesize-converge-adhoc-model-tests"
 blocked-by: null

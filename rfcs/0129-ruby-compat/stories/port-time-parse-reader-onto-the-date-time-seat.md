@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 5
-pr: 7484
+pr: trails#7484
 claim: "2026-09-04T14:50:46Z"
 assignee: "port-zlib-gzipreader-open-for-schema-cache-read"
 blocked-by: null

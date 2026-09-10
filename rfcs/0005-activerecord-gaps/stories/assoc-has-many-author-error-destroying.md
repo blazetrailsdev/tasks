@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4237
+pr: trails#4237
 claim: "2026-06-28T20:32:06Z"
 assignee: "assoc-has-many-author-error-destroying"
 blocked-by: null

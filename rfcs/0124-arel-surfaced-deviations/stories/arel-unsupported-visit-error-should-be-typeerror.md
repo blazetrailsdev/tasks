@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7054
+pr: trails#7054
 claim: "2026-08-25T16:56:36Z"
 assignee: "arel-star-is-a-shared-const-not-a-per-call-method"
 blocked-by: null

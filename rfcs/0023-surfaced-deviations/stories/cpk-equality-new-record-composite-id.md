@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4362
+pr: trails#4362
 claim: "2026-07-01T04:24:47Z"
 assignee: "cpk-equality-new-record-composite-id"
 blocked-by: null

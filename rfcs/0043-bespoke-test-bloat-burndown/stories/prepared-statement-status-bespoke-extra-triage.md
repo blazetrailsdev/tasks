@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 25
-pr: 4169
+pr: trails#4169
 claim: "2026-06-26T01:21:58Z"
 assignee: "prepared-statement-status-bespoke-extra-triage"
 blocked-by: null

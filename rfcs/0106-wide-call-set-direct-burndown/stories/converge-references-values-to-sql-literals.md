@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6611
+pr: trails#6611
 claim: "2026-08-16T20:53:32Z"
 assignee: "converge-references-values-to-sql-literals"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 5832
+pr: trails#5832
 claim: "2026-08-01T22:16:00Z"
 assignee: "codegen-await-provenance-branch-sensitivity"
 blocked-by: null

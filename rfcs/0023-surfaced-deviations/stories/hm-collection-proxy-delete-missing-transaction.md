@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3730
+pr: trails#3730
 claim: "2026-06-20T17:28:24Z"
 assignee: "hm-collection-proxy-delete-missing-transaction"
 blocked-by: null

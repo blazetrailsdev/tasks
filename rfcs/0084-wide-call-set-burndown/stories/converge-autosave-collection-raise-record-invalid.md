@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 6392
+pr: trails#6392
 claim: "2026-08-12T01:06:01Z"
 assignee: "converge-associated-records-custom-validation-context"
 blocked-by: null

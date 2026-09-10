@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6883
+pr: trails#6883
 claim: "2026-08-22T21:13:02Z"
 assignee: "extra-surface-scores-structural-interface-members"
 blocked-by: null

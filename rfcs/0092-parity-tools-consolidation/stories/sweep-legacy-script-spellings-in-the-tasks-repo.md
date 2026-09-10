@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6347
+pr: trails#6347
 claim: "2026-08-10T19:18:57Z"
 assignee: "ar-closure-rollup-in-parity-summaries"
 blocked-by: null

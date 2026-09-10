@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4874
+pr: trails#4874
 claim: "2026-07-14T20:51:13Z"
 assignee: "arel-attribute-quoted-node-nil-builds-casted"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4341
+pr: trails#4341
 claim: "2026-06-30T17:32:32Z"
 assignee: "converge-connection-adapters-mysql2-rails-port"
 blocked-by: null

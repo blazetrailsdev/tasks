@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5552
+pr: trails#5552
 claim: "2026-07-29T00:25:47Z"
 assignee: "repoint-sp-test-at-boot-laid-procedures"
 blocked-by: null

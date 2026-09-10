@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5740
+pr: trails#5740
 claim: "2026-07-31T19:15:04Z"
 assignee: "base-prevent-writes-declares-bespoke-bird-model"
 blocked-by: null

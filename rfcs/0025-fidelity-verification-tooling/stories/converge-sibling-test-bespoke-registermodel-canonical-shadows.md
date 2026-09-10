@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 5246
+pr: trails#5246
 claim: "2026-07-24T17:34:54Z"
 assignee: "converge-sibling-test-bespoke-registermodel-canonical-shadows"
 blocked-by: null

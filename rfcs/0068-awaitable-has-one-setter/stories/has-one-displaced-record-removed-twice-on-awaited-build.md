@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 16
-pr: 5290
+pr: trails#5290
 claim: "2026-07-25T02:54:53Z"
 assignee: "has-one-displaced-record-removed-twice-on-awaited-build"
 blocked-by: null

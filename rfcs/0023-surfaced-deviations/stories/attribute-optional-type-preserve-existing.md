@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4262
+pr: trails#4262
 claim: "2026-06-29T11:34:14Z"
 assignee: "attribute-optional-type-preserve-existing"
 blocked-by: null

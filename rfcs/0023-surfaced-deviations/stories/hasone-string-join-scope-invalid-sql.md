@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3729
+pr: trails#3729
 claim: "2026-06-20T17:15:25Z"
 assignee: "hasone-string-join-scope-invalid-sql"
 blocked-by: null

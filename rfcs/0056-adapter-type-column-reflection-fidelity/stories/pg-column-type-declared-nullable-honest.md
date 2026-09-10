@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 211
-pr: 4821
+pr: trails#4821
 claim: "2026-07-09T03:49:34Z"
 assignee: "pg-column-type-declared-nullable-honest"
 blocked-by: null

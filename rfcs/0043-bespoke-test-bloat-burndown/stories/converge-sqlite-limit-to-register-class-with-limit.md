@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4679
+pr: trails#4679
 claim: "2026-07-06T15:05:04Z"
 assignee: "converge-sqlite-limit-to-register-class-with-limit"
 blocked-by: null

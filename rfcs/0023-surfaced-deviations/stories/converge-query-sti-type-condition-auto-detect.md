@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3441
+pr: trails#3441
 claim: "2026-06-16T02:50:11Z"
 assignee: "converge-query-sti-type-condition-auto-detect"
 blocked-by: null

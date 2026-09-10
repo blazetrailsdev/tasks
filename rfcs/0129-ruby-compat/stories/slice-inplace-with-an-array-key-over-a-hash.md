@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7466
+pr: trails#7466
 claim: "2026-09-03T23:40:03Z"
 assignee: "move-monitor-mixin-to-ruby-compat"
 blocked-by: null

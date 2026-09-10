@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5758
+pr: trails#5758
 claim: "2026-07-31T21:20:42Z"
 assignee: "actionview-template-exists-still-is-prefixed"
 blocked-by: null

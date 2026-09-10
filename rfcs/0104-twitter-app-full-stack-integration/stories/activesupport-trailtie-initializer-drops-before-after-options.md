@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 3
-pr: 7432
+pr: trails#7432
 claim: "2026-09-03T10:41:17Z"
 assignee: "activesupport-trailtie-initializer-drops-before-after-options"
 blocked-by: null

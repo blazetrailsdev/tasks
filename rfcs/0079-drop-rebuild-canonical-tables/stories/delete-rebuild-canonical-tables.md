@@ -18,7 +18,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: 7149
+pr: trails#7149
 claim: "2026-08-28T11:35:08Z"
 assignee: "delete-rebuild-canonical-tables"
 blocked-by: null

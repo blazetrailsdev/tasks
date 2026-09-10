@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5872
+pr: trails#5872
 claim: "2026-08-02T11:26:49Z"
 assignee: "unify-narrow-and-wide-seed-reasons-in-justifies"
 blocked-by: null

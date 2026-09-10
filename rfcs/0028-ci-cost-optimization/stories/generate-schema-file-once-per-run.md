@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5678
+pr: trails#5678
 claim: "2026-08-05T00:47:03Z"
 assignee: "i18n-date-valid-ordinal-civil-negative-fields"
 blocked-by: null

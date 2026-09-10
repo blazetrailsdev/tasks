@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 2
-pr: 5283
+pr: trails#5283
 claim: "2026-07-25T01:42:54Z"
 assignee: "connection-swapping-nested-file-based"
 blocked-by: null

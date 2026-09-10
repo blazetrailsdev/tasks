@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6786
+pr: trails#6786
 claim: "2026-08-20T19:20:08Z"
 assignee: "converge-errors-enumerable-delegation-onto-rails"
 blocked-by: null

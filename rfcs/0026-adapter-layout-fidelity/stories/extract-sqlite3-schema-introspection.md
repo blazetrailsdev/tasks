@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 3234
+pr: trails#3234
 claim: "2026-06-14T01:54:33Z"
 assignee: "extract-sqlite3-schema-introspection"
 blocked-by: null

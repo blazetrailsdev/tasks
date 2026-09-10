@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7116
+pr: trails#7116
 claim: "2026-08-27T12:45:07Z"
 assignee: "retire-declared-attribute-names"
 blocked-by: null

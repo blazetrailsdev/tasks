@@ -7,7 +7,7 @@ cluster: integrated
 deps: ["w7-named-inner-joins-fix"]
 deps-rfc: []
 est-loc: 300
-pr: 3089
+pr: trails#3089
 claim: "2026-06-10T16:32:25Z"
 assignee: "w7-associations-relation-tail"
 blocked-by: null

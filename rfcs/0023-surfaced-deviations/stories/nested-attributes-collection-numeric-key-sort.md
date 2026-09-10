@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3774
+pr: trails#3774
 claim: "2026-06-21T03:50:42Z"
 assignee: "nested-attributes-collection-numeric-key-sort"
 blocked-by: null

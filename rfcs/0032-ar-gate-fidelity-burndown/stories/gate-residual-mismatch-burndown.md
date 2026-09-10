@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: 4090
+pr: trails#4090
 claim: "2026-06-25T00:02:37Z"
 assignee: "gate-residual-mismatch-burndown"
 blocked-by: null

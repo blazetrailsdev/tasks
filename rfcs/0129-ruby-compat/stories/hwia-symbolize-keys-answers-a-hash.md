@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 7411
+pr: trails#7411
 claim: "2026-09-02T22:05:56Z"
 assignee: "hwia-symbolize-keys-answers-a-hash"
 blocked-by: null

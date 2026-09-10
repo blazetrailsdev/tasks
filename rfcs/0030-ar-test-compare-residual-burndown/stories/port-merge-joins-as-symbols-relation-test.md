@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3821
+pr: trails#3821
 claim: "2026-06-21T18:46:43Z"
 assignee: "port-merge-joins-as-symbols-relation-test"
 blocked-by: null

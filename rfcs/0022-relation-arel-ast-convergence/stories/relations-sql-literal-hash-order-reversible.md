@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 2
-pr: 4632
+pr: trails#4632
 claim: "2026-07-05T19:21:55Z"
 assignee: "relations-sql-literal-hash-order-reversible"
 blocked-by: null

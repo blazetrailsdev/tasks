@@ -8,7 +8,7 @@ deps: ["call-mismatches-ratcheting-baseline"]
 deps-rfc: []
 est-loc: 100
 priority: 2
-pr: 4287
+pr: trails#4287
 claim: "2026-06-29T19:08:38Z"
 assignee: "touch-and-pessimistic-locking-cluster"
 blocked-by: null

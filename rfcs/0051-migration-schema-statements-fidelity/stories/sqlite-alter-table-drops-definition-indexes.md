@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5796
+pr: trails#5796
 claim: "2026-08-01T09:03:50Z"
 assignee: "sqlite-alter-table-drops-definition-indexes"
 blocked-by: null

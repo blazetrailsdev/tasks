@@ -8,7 +8,7 @@ deps: ["timestamp-alias-resolution-fidelity"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: 3588
+pr: trails#3588
 claim: "2026-06-18T01:29:47Z"
 assignee: "converge-integration-test-canonical-developer"
 blocked-by: null

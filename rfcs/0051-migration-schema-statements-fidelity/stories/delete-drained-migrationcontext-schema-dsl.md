@@ -8,7 +8,7 @@ deps: ["route-migrationcontext-dsl-callers-onto-schema-statements"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5801
+pr: trails#5801
 claim: "2026-08-01T17:28:14Z"
 assignee: "delete-drained-migrationcontext-schema-dsl"
 blocked-by: null

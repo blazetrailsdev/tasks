@@ -9,7 +9,7 @@ deps: ["ruby-named-file-dir-fileutils-facade"]
 deps-rfc: []
 est-loc: 260
 priority: 1
-pr: 7483
+pr: trails#7483
 claim: "2026-09-04T14:20:45Z"
 assignee: "zlib-seam-is-the-last-static-node-builtin"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5620
+pr: trails#5620
 claim: "2026-07-29T23:18:09Z"
 assignee: "converge-adapter-prevent-writes-tests-onto-pooled-scope"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 4323
+pr: trails#4323
 claim: "2026-06-30T14:53:29Z"
 assignee: "build-statement-pool-inline-type-cast-config-to-integer"
 blocked-by: null

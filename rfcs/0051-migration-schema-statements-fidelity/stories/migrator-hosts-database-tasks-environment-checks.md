@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 5861
+pr: trails#5861
 claim: "2026-08-02T03:16:48Z"
 assignee: "migrator-hosts-database-tasks-environment-checks"
 blocked-by: null

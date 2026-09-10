@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 7511
+pr: trails#7511
 claim: "2026-09-05T09:42:07Z"
 assignee: "remaining-activemodel-tests-redeclare-shared-models"
 blocked-by: null

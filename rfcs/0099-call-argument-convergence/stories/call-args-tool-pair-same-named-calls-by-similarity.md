@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6351
+pr: trails#6351
 claim: "2026-08-11T11:44:00Z"
 assignee: "call-args-tool-pair-same-named-calls-by-similarity"
 blocked-by: null

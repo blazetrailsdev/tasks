@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3735
+pr: trails#3735
 claim: "2026-06-20T18:49:28Z"
 assignee: "ho-through-source-klass-resolution"
 blocked-by: null

@@ -13,7 +13,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 9
-pr: 7007
+pr: trails#7007
 claim: "2026-08-24T20:39:36Z"
 assignee: "route-residual-call-set-rows-to-a-live-owner"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 30
-pr: 3938
+pr: trails#3938
 claim: "2026-06-22T22:59:16Z"
 assignee: "habtm-residual-features"
 blocked-by: null

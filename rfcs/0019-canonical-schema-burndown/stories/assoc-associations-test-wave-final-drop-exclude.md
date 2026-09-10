@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3589
+pr: trails#3589
 claim: "2026-06-18T13:39:51Z"
 assignee: "assoc-associations-test-wave-final-drop-exclude"
 blocked-by: null

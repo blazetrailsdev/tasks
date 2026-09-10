@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5907
+pr: trails#5907
 claim: "2026-08-02T18:55:25Z"
 assignee: "converge-signed-id-verifier-secret-writer"
 blocked-by: null

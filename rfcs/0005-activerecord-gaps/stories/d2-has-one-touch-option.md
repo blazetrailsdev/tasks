@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4833
+pr: trails#4833
 claim: "2026-07-13T17:18:22Z"
 assignee: "d2-has-one-touch-option"
 blocked-by: null

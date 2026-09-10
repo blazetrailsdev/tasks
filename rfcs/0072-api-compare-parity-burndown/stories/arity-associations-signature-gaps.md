@@ -13,7 +13,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5330
+pr: trails#5330
 claim: "2026-07-25T23:10:51Z"
 assignee: "arity-associations-signature-gaps"
 blocked-by: null

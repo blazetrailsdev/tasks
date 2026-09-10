@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6804
+pr: trails#6804
 claim: "2026-08-21T03:10:24Z"
 assignee: "converge-attribute-definitions-activemodel-readers"
 blocked-by: null

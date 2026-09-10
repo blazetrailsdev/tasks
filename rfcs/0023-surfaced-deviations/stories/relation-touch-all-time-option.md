@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4955
+pr: trails#4955
 claim: "2026-07-19T14:21:07Z"
 assignee: "relation-touch-all-time-option"
 blocked-by: null

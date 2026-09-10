@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 1
-pr: 4281
+pr: trails#4281
 claim: "2026-06-29T16:22:22Z"
 assignee: "prefer-await-relation-enforce-error"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: 4923
+pr: trails#4923
 claim: "2026-07-17T13:41:11Z"
 assignee: "acceptance-confirmation-setup-bang-via-validates-with"
 blocked-by: null

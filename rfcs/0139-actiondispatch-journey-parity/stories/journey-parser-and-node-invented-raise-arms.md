@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 63
-pr: 7641
+pr: trails#7641
 claim: "2026-09-09T13:02:34Z"
 assignee: "journey-uri-encoder-class-shape"
 blocked-by: null

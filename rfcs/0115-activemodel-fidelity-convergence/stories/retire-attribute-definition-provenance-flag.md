@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: 6789
+pr: trails#6789
 claim: "2026-08-20T20:05:07Z"
 assignee: "class-attribute-names-must-read-attribute-types"
 blocked-by: null

@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: 4747
+pr: trails#4747
 claim: "2026-07-07T18:06:33Z"
 assignee: "through-scope-join-route-composite-and-residual-shapes"
 blocked-by: null

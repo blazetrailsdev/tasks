@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5106
+pr: trails#5106
 claim: "2026-07-23T01:08:43Z"
 assignee: "arel-attribute-test-weak-tocontain-assertions"
 blocked-by: null

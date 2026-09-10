@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 3773
+pr: trails#3773
 claim: "2026-06-21T03:34:42Z"
 assignee: "mysql-adapter-reports-result-column-types"
 blocked-by: null

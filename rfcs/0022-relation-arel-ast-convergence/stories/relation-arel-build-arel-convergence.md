@@ -8,7 +8,7 @@ deps: ["from-clause-arel-manager"]
 deps-rfc: []
 est-loc: 300
 priority: 3
-pr: 3186
+pr: trails#3186
 claim: "2026-06-13T12:02:10Z"
 assignee: "relation-arel-build-arel-convergence"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 5
-pr: 4021
+pr: trails#4021
 claim: "2026-06-23T16:52:38Z"
 assignee: "migrate-preloaded-associations-shadow-readers-to-proxy"
 blocked-by: null

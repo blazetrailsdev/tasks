@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6425
+pr: trails#6425
 claim: "2026-08-12T16:36:52Z"
 assignee: "pg-cancel-block-half-has-no-regression"
 blocked-by: null

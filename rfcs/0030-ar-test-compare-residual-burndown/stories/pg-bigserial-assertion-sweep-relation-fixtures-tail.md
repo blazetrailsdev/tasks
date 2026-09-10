@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: 4042
+pr: trails#4042
 claim: "2026-06-24T00:00:43Z"
 assignee: "pg-bigserial-assertion-sweep-relation-fixtures-tail"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: 5756
+pr: trails#5756
 claim: "2026-07-31T20:55:31Z"
 assignee: "route-calculations-eager-paths-through-apply-join-dependency"
 blocked-by: null

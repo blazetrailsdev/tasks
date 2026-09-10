@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: 8
-pr: 4673
+pr: trails#4673
 claim: "2026-07-06T13:52:59Z"
 assignee: "unskip-persist-inherited-class-restricted-name-converged"
 blocked-by: null

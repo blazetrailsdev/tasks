@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6779
+pr: trails#6779
 claim: "2026-08-20T17:15:01Z"
 assignee: "retire-join-part-arel-join"
 blocked-by: null

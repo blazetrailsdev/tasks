@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4624
+pr: trails#4624
 claim: "2026-07-05T17:07:27Z"
 assignee: "port-namespaced-joins-sti-test"
 blocked-by: null

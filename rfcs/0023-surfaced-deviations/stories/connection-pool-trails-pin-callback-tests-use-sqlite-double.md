@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4432
+pr: trails#4432
 claim: "2026-07-02T18:45:54Z"
 assignee: "connection-pool-trails-pin-callback-tests-use-sqlite-double"
 blocked-by: null

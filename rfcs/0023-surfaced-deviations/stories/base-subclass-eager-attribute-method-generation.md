@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 3270
+pr: trails#3270
 claim: "2026-06-14T15:12:35Z"
 assignee: "base-subclass-eager-attribute-method-generation"
 blocked-by: null

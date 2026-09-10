@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4263
+pr: trails#4263
 claim: "2026-06-29T11:46:10Z"
 assignee: "attribute-types-subclass-column-inclusive"
 blocked-by: null

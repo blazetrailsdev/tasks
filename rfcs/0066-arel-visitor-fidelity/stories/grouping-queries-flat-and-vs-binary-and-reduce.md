@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 56
-pr: 5098
+pr: trails#5098
 claim: "2026-07-22T23:35:45Z"
 assignee: "grouping-queries-flat-and-vs-binary-and-reduce"
 blocked-by: null

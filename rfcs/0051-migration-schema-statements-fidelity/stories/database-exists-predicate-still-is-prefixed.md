@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5752
+pr: trails#5752
 claim: "2026-07-31T20:34:27Z"
 assignee: "database-exists-predicate-still-is-prefixed"
 blocked-by: null

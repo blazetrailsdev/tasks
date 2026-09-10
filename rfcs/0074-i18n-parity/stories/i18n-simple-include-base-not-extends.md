@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6054
+pr: trails#6054
 claim: "2026-08-04T12:38:44Z"
 assignee: "i18n-simple-include-base-not-extends"
 blocked-by: null

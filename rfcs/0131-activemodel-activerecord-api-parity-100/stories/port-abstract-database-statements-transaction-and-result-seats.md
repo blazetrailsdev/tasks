@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: 3
-pr: 7430
+pr: trails#7430
 claim: "2026-09-03T02:12:25Z"
 assignee: "port-abstract-database-statements-transaction-and-result-seats"
 blocked-by: null

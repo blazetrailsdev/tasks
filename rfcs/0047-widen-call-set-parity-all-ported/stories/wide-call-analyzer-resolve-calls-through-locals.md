@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 1
-pr: 4302
+pr: trails#4302
 claim: "2026-06-30T01:34:32Z"
 assignee: "wide-call-analyzer-resolve-calls-through-locals"
 blocked-by: null

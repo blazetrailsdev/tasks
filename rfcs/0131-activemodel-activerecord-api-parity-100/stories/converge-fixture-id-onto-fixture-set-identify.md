@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7423
+pr: trails#7423
 claim: "2026-09-03T00:39:59Z"
 assignee: "move-postgresql-enum-ddl-back-to-postgresql-adapter"
 blocked-by: null

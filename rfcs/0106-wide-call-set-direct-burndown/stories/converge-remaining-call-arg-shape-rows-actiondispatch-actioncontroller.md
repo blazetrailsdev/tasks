@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6697
+pr: trails#6697
 claim: "2026-08-18T13:26:57Z"
 assignee: "converge-remaining-call-arg-shape-rows-actiondispatch-actioncontroller"
 blocked-by: null

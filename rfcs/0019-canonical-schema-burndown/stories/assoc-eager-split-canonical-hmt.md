@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 41
-pr: 4182
+pr: trails#4182
 claim: "2026-06-26T10:44:46Z"
 assignee: "assoc-eager-split-canonical-hmt"
 blocked-by: null

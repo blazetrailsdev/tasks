@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6229
+pr: trails#6229
 claim: "2026-08-08T10:51:58Z"
 assignee: "resolve-libsql-whole-file-no-counterpart-case"
 blocked-by: null

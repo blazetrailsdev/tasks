@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 5
-pr: 7206
+pr: trails#7206
 claim: "2026-08-29T14:00:23Z"
 assignee: "method-order-last-segment-collision-drops-bucket-silently"
 blocked-by: null

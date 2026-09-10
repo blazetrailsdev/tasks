@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3681
+pr: trails#3681
 claim: "2026-06-19T23:14:12Z"
 assignee: "composite-primary-key-mismatch-error-message-parity"
 blocked-by: null

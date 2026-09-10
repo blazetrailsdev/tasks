@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: 6888
+pr: trails#6888
 claim: "2026-08-22T22:41:19Z"
 assignee: "missing-rails-call-tag-inert-on-top-level-function"
 blocked-by: null

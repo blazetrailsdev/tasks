@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5952
+pr: trails#5952
 claim: "2026-08-03T02:35:45Z"
 assignee: "inflector-methods-rb-unmapped-in-file-manifest"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5866
+pr: trails#5866
 claim: "2026-08-02T09:06:52Z"
 assignee: "wire-migration-execution-strategy-to-configured-class"
 blocked-by: null

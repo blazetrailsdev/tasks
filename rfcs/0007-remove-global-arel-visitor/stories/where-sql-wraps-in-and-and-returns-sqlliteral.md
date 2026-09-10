@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5180
+pr: trails#5180
 claim: "2026-07-23T21:32:09Z"
 assignee: "where-sql-wraps-in-and-and-returns-sqlliteral"
 blocked-by: null

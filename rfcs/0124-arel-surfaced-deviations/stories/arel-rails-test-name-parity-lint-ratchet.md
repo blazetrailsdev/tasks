@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 7131
+pr: trails#7131
 claim: "2026-08-27T18:46:13Z"
 assignee: "arel-enroll-three-lint-rules"
 blocked-by: null

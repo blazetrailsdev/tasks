@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 26
-pr: 3509
+pr: trails#3509
 claim: "2026-06-16T23:24:44Z"
 assignee: "strict-loading-new-record-gate-in-loaders"
 blocked-by: null

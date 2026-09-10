@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5888
+pr: trails#5888
 claim: "2026-08-02T15:35:18Z"
 assignee: "pg-indexes-table-and-include-match-rails"
 blocked-by: null

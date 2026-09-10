@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 4686
+pr: trails#4686
 claim: "2026-07-06T16:41:01Z"
 assignee: "mysql2-connectbang-populate-base-connection-field"
 blocked-by: null

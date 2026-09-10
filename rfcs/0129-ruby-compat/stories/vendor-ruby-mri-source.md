@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 1
-pr: 7229
+pr: trails#7229
 claim: "2026-08-30T02:06:22Z"
 assignee: "vendor-ruby-mri-source"
 blocked-by: null

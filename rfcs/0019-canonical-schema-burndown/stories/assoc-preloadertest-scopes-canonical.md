@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3674
+pr: trails#3674
 claim: "2026-06-19T20:54:11Z"
 assignee: "assoc-preloadertest-scopes-canonical"
 blocked-by: null

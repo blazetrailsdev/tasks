@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7474
+pr: trails#7474
 claim: "2026-09-04T12:11:20Z"
 assignee: "port-set-encoding-on-stringio-and-tempfile"
 blocked-by: null

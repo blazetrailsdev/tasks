@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 40
-pr: 5097
+pr: trails#5097
 claim: "2026-07-22T23:20:42Z"
 assignee: "encryption-eager-attribute-definitions-view-diverges"
 blocked-by: null

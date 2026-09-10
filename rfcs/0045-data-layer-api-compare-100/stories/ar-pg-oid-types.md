@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4049
+pr: trails#4049
 claim: "2026-06-24T03:00:42Z"
 assignee: "ar-pg-oid-types"
 blocked-by: null

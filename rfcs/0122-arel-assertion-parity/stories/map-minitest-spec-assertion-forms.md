@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 1
-pr: 6992
+pr: trails#6992
 claim: "2026-08-24T15:39:17Z"
 assignee: "map-minitest-spec-assertion-forms"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 3
-pr: 5284
+pr: trails#5284
 claim: "2026-07-25T01:50:53Z"
 assignee: "adapter-test-ambient-connection"
 blocked-by: null

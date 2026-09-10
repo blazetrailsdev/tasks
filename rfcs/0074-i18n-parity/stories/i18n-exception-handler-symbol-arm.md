@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6007
+pr: trails#6007
 claim: "2026-08-03T19:04:42Z"
 assignee: "i18n-exception-handler-symbol-arm"
 blocked-by: null

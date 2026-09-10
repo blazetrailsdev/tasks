@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3305
+pr: trails#3305
 claim: "2026-06-14T23:08:12Z"
 assignee: "locking-belongs-to-inverse-stale-state"
 blocked-by: null

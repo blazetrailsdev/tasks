@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 50
-pr: 3538
+pr: trails#3538
 claim: "2026-06-17T13:31:25Z"
 assignee: "scoping-all-queries-block"
 blocked-by: null

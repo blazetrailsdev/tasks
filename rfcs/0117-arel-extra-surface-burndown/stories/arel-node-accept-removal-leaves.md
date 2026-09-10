@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 2
-pr: 6857
+pr: trails#6857
 claim: "2026-08-22T12:50:36Z"
 assignee: "arel-to-sql-compile-unification"
 blocked-by: null

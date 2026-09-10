@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5178
+pr: trails#5178
 claim: "2026-07-23T21:22:09Z"
 assignee: "sti-subclass-own-ignoredcolumns-unmemoized-read-time"
 blocked-by: null

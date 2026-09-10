@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5802
+pr: trails#5802
 claim: "2026-08-01T17:33:14Z"
 assignee: "create-table-pending-indexes-emitted-after-comments"
 blocked-by: null

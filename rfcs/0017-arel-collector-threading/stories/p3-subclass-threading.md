@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: 3077
+pr: trails#3077
 claim: "2026-06-10T11:07:12Z"
 assignee: "p3-subclass-threading"
 blocked-by: null

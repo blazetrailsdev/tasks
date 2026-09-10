@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7014
+pr: trails#7014
 claim: "2026-08-24T22:45:55Z"
 assignee: "converge-activesupport-temporal-receiver-chaining"
 blocked-by: null

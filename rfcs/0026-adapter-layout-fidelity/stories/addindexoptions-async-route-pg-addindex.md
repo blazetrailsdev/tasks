@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3352
+pr: trails#3352
 claim: "2026-06-15T14:16:02Z"
 assignee: "addindexoptions-async-route-pg-addindex"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 7038
+pr: trails#7038
 claim: "2026-08-25T14:18:30Z"
 assignee: "migration-recording-flag-should-be-the-connection"
 blocked-by: null

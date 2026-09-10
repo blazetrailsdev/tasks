@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 130
-pr: 6239
+pr: trails#6239
 claim: "2026-08-08T15:16:01Z"
 assignee: "generate-migrator-advisory-lock-id-probes-and-falls-back"
 blocked-by: null

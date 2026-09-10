@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6455
+pr: trails#6455
 claim: "2026-08-13T03:16:53Z"
 assignee: "naming-burndown-2-ar-associations-a1a3-residue"
 blocked-by: null

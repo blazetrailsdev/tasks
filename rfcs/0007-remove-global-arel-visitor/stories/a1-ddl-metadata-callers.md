@@ -7,7 +7,7 @@ cluster: arel-visitor
 deps: []
 deps-rfc: []
 est-loc: 150
-pr: 2920
+pr: trails#2920
 claim: "2026-06-03T20:11:16Z"
 assignee: "a1-ddl-metadata-callers"
 blocked-by: null

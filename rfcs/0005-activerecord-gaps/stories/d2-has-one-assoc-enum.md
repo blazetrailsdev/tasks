@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4828
+pr: trails#4828
 claim: "2026-07-09T12:09:34Z"
 assignee: "d2-has-one-assoc-enum"
 blocked-by: null

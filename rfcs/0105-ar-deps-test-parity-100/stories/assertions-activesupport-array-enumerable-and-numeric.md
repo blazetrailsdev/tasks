@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 170
 priority: null
-pr: 6620
+pr: trails#6620
 claim: "2026-08-16T22:55:44Z"
 assignee: "assertions-activemodel-length-numericality-comparison"
 blocked-by: null

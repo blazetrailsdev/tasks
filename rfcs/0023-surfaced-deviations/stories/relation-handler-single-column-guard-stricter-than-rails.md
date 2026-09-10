@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3844
+pr: trails#3844
 claim: "2026-06-21T23:11:30Z"
 assignee: "relation-handler-single-column-guard-stricter-than-rails"
 blocked-by: null

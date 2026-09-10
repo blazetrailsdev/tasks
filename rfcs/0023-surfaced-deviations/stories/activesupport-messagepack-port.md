@@ -8,7 +8,7 @@ deps: ["encryption-messagepack-serializer-binary-format"]
 deps-rfc: []
 est-loc: 400
 priority: 5
-pr: 3255
+pr: trails#3255
 claim: "2026-06-14T14:24:37Z"
 assignee: "activesupport-messagepack-port"
 blocked-by: null

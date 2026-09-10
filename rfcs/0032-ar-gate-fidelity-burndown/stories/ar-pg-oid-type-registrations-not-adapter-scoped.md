@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5206
+pr: trails#5206
 claim: "2026-07-24T02:03:17Z"
 assignee: "ar-pg-oid-type-registrations-not-adapter-scoped"
 blocked-by: null

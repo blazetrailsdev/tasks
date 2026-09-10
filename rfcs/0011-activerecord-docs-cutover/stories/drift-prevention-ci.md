@@ -8,7 +8,7 @@ deps: ["repoint-references"]
 deps-rfc: []
 est-loc: 100
 priority: 26
-pr: 3208
+pr: trails#3208
 claim: "2026-06-13T21:00:34Z"
 assignee: "drift-prevention-ci"
 blocked-by: null

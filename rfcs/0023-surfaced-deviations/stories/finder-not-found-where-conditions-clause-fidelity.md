@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4108
+pr: trails#4108
 claim: "2026-06-25T11:49:31Z"
 assignee: "finder-not-found-where-conditions-clause-fidelity"
 blocked-by: null

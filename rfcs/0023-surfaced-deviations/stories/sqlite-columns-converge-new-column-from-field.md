@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 40
-pr: 3946
+pr: trails#3946
 claim: "2026-06-23T01:07:15Z"
 assignee: "sqlite-columns-converge-new-column-from-field"
 blocked-by: null

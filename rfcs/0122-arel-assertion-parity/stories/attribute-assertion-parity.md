@@ -9,7 +9,7 @@ deps: ["map-minitest-spec-assertion-forms"]
 deps-rfc: []
 est-loc: 280
 priority: null
-pr: 7003
+pr: trails#7003
 claim: "2026-08-24T18:14:58Z"
 assignee: "attribute-assertion-parity"
 blocked-by: null

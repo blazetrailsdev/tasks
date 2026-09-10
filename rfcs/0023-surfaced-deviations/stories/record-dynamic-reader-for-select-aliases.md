@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4861
+pr: trails#4861
 claim: "2026-07-14T01:42:32Z"
 assignee: "record-dynamic-reader-for-select-aliases"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 3682
+pr: trails#3682
 claim: "2026-06-19T23:34:11Z"
 assignee: "cache-store-base-class-full-port"
 blocked-by: null

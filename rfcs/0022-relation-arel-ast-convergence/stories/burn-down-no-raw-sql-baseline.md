@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 3211
+pr: trails#3211
 claim: "2026-06-13T21:12:35Z"
 assignee: "burn-down-no-raw-sql-baseline"
 blocked-by: null

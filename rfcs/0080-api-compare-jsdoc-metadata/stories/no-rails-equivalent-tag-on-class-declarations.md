@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 5462
+pr: trails#5462
 claim: "2026-07-27T21:41:00Z"
 assignee: "no-rails-equivalent-tag-on-class-declarations"
 blocked-by: null

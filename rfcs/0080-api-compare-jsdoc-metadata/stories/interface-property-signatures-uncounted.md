@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5977
+pr: trails#5977
 claim: "2026-08-03T14:38:14Z"
 assignee: "interface-property-signatures-uncounted"
 blocked-by: null

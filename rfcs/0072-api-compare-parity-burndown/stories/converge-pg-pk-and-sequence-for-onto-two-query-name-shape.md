@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5892
+pr: trails#5892
 claim: "2026-08-02T15:53:58Z"
 assignee: "converge-pg-pk-and-sequence-for-onto-two-query-name-shape"
 blocked-by: null

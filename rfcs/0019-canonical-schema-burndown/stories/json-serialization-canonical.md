@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 48
-pr: 4188
+pr: trails#4188
 claim: "2026-06-26T12:41:40Z"
 assignee: "json-serialization-canonical"
 blocked-by: null

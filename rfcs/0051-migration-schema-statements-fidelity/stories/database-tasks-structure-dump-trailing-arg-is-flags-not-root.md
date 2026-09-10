@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 6258
+pr: trails#6258
 claim: "2026-08-08T18:44:42Z"
 assignee: "mysql-half-of-connection-handler-is-connected-flake"
 blocked-by: null

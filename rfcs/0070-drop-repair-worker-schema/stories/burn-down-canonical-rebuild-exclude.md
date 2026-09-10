@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5273
+pr: trails#5273
 claim: "2026-07-24T22:06:55Z"
 assignee: "burn-down-canonical-rebuild-exclude"
 blocked-by: null

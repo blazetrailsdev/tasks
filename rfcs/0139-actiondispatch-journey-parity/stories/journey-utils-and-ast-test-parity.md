@@ -9,7 +9,7 @@ deps: ["journey-test-names-to-rails-def-test-form"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7611
+pr: trails#7611
 claim: "2026-09-08T14:01:49Z"
 assignee: "journey-routes-test-parity"
 blocked-by: null

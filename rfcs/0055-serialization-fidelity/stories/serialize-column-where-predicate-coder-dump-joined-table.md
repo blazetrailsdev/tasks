@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 4
-pr: 4731
+pr: trails#4731
 claim: "2026-07-09T02:09:39Z"
 assignee: "serialize-column-where-predicate-coder-dump-joined-table"
 blocked-by: null

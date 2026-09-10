@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3775
+pr: trails#3775
 claim: "2026-06-21T11:10:44Z"
 assignee: "nested-attributes-hasone-updateonly-dedicated-assoc"
 blocked-by: null

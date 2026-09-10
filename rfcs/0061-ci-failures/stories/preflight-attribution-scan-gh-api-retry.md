@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 10
-pr: 4995
+pr: trails#4995
 claim: "2026-07-25T19:42:51Z"
 assignee: "preflight-attribution-scan-gh-api-retry"
 blocked-by: null

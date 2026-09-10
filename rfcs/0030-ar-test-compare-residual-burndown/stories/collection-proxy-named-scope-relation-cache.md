@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3979
+pr: trails#3979
 claim: "2026-06-23T11:37:40Z"
 assignee: "collection-proxy-named-scope-relation-cache"
 blocked-by: null

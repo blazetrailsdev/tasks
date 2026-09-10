@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4107
+pr: trails#4107
 claim: "2026-06-25T11:39:32Z"
 assignee: "belongs-to-sync-read-direct-destroy-callback"
 blocked-by: null

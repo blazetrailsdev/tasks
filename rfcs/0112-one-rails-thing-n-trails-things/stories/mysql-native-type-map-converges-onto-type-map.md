@@ -7,7 +7,7 @@ cluster: split-stores
 deps: []
 deps-rfc: []
 est-loc: null
-pr: 7077
+pr: trails#7077
 claim: "2026-08-26T12:15:01Z"
 assignee: "mysql-native-type-map-converges-onto-type-map"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3302
+pr: trails#3302
 claim: "2026-06-21T19:58:42Z"
 assignee: "partial-inserts-locking-column-default-col-init-seed"
 blocked-by: null

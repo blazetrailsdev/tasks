@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 50
-pr: 3546
+pr: trails#3546
 claim: "2026-06-17T14:31:23Z"
 assignee: "through-scope-join-not-in-subquery"
 blocked-by: null

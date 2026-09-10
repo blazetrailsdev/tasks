@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 25
-pr: 5194
+pr: trails#5194
 claim: "2026-07-24T00:42:13Z"
 assignee: "threadsafe-fallback-test-does-not-exercise-fallback"
 blocked-by: null

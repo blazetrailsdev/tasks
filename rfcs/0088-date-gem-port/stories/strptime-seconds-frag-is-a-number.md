@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 6255
+pr: trails#6255
 claim: "2026-08-08T18:04:01Z"
 assignee: "connection-handler-is-connected-adapter-unique-flake"
 blocked-by: null

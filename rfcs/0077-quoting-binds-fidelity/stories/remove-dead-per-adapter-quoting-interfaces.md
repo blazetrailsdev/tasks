@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 6288
+pr: trails#6288
 claim: "2026-08-09T16:29:33Z"
 assignee: "converge-execute-batch-through-raw-execute"
 blocked-by: null

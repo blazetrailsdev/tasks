@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 4
-pr: 4254
+pr: trails#4254
 claim: "2026-06-29T09:02:21Z"
 assignee: "has-many-counter-cache-canonical"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6909
+pr: trails#6909
 claim: "2026-08-23T12:12:26Z"
 assignee: "duration-extracts-iso8601-serializer-and-parser"
 blocked-by: null

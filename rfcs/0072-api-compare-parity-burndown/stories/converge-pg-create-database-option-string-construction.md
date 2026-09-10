@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5886
+pr: trails#5886
 claim: "2026-08-02T13:31:09Z"
 assignee: "converge-pg-create-database-option-string-construction"
 blocked-by: null

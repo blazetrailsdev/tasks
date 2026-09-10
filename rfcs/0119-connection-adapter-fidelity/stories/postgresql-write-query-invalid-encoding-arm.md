@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7565
+pr: trails#7565
 claim: "2026-09-06T16:58:13Z"
 assignee: "postgresql-write-query-invalid-encoding-arm"
 blocked-by: null

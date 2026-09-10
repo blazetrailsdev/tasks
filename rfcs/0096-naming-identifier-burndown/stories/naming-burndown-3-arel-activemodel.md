@@ -8,7 +8,7 @@ packages: ["arel", "activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 112
-pr: 6513
+pr: trails#6513
 claim: "2026-08-14T11:47:18Z"
 assignee: "naming-burndown-3-activesupport"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 50
-pr: 3534
+pr: trails#3534
 claim: "2026-06-17T12:31:26Z"
 assignee: "preserve-queryattribute-binds-in-notification-payload"
 blocked-by: null

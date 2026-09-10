@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: 5304
+pr: trails#5304
 claim: "2026-07-25T14:32:28Z"
 assignee: "pg-type-map-init-modifier-register-source-order"
 blocked-by: null

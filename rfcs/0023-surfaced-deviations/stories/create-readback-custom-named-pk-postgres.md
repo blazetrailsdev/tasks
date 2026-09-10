@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 3327
+pr: trails#3327
 claim: "2026-06-15T02:50:08Z"
 assignee: "create-readback-custom-named-pk-postgres"
 blocked-by: null

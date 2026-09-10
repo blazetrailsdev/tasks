@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 4
-pr: 7463
+pr: trails#7463
 claim: "2026-09-03T22:43:59Z"
 assignee: "port-activerecord-trailtie-file"
 blocked-by: null

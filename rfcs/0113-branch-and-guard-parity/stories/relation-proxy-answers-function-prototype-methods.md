@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 17
-pr: 7596
+pr: trails#7596
 claim: "2026-09-07T15:26:42Z"
 assignee: "type-for-column-invents-a-guard-and-a-default-fallback"
 blocked-by: null

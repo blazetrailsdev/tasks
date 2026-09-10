@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6645
+pr: trails#6645
 claim: "2026-08-17T11:49:49Z"
 assignee: "route-time-and-date-to-fs-through-date-formats"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3474
+pr: trails#3474
 claim: "2026-06-16T16:33:31Z"
 assignee: "assoc-associations-test-wave5-delete-rails-guided-describes"
 blocked-by: null

@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 190
-pr: 6540
+pr: trails#6540
 claim: "2026-08-14T19:45:16Z"
 assignee: "naming-burndown-3-ar-model-encryption-tasks"
 blocked-by: null

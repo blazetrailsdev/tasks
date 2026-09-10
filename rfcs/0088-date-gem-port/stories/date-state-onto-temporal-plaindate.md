@@ -7,7 +7,7 @@ cluster: null
 deps: ["date-api-compare-enrollment", "date-test-compare-enrollment"]
 deps-rfc: []
 est-loc: 450
-pr: 6153
+pr: trails#6153
 claim: "2026-08-06T14:03:03Z"
 assignee: "date-state-onto-temporal-plaindate"
 blocked-by: null

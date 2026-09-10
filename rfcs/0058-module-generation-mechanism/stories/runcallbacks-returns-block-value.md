@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 30
-pr: 5015
+pr: trails#5015
 claim: "2026-07-20T22:46:43Z"
 assignee: "runcallbacks-returns-block-value"
 blocked-by: null

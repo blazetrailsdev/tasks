@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 4353
+pr: trails#4353
 claim: "2026-06-30T22:54:48Z"
 assignee: "converge-migration-test-columnshash-stubs"
 blocked-by: null

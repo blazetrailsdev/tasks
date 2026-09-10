@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4078
+pr: trails#4078
 claim: "2026-06-24T18:50:39Z"
 assignee: "cross-package-call-mismatch-false-positives"
 blocked-by: null

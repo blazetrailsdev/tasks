@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 13
-pr: 4962
+pr: trails#4962
 claim: "2026-07-19T20:01:09Z"
 assignee: "converge-ddl-through-execute-drop-dirty-guard"
 blocked-by: null

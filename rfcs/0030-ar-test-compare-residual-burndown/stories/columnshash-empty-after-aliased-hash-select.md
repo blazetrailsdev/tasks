@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3440
+pr: trails#3440
 claim: "2026-06-16T02:42:10Z"
 assignee: "columnshash-empty-after-aliased-hash-select"
 blocked-by: null

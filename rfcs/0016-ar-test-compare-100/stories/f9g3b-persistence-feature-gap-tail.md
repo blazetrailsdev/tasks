@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3236
+pr: trails#3236
 claim: "2026-06-14T02:12:36Z"
 assignee: "f9g3b-persistence-feature-gap-tail"
 blocked-by: null

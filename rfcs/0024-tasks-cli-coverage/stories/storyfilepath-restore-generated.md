@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3403
+pr: trails#3403
 claim: "2026-06-15T20:00:06Z"
 assignee: "storyfilepath-restore-generated"
 blocked-by: null

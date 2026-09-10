@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 360
 priority: null
-pr: 6640
+pr: trails#6640
 claim: "2026-08-17T10:49:51Z"
 assignee: "assertions-activesupport-cache-and-messages"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 23
-pr: 4164
+pr: trails#4164
 claim: "2026-06-26T00:02:15Z"
 assignee: "count-deleted-rows-with-lock-bespoke-extra-triage"
 blocked-by: null

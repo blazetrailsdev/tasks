@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6933
+pr: trails#6933
 claim: "2026-08-23T18:20:09Z"
 assignee: "sweep-trails-only-test-files-associations"
 blocked-by: null

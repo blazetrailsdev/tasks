@@ -7,7 +7,7 @@ cluster: query-cache
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 2662
+pr: trails#2662
 claim: null
 assignee: null
 blocked-by: null

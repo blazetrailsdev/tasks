@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4844
+pr: trails#4844
 claim: "2026-07-13T19:18:26Z"
 assignee: "port-autosave-association-reload-reset-marked-for-destruction"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5301
+pr: trails#5301
 claim: "2026-07-25T13:26:54Z"
 assignee: "lease-connection-leaves-raw-connection-unestablished"
 blocked-by: null

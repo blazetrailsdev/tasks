@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 4855
+pr: trails#4855
 claim: "2026-07-13T21:22:33Z"
 assignee: "rails-find-source-lookup"
 blocked-by: null

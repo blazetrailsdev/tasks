@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6019
+pr: trails#6019
 claim: "2026-08-03T20:46:03Z"
 assignee: "i18n-backend-transliterator-tests"
 blocked-by: null

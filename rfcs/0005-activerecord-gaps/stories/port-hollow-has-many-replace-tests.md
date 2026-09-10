@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: 5449
+pr: trails#5449
 claim: "2026-07-27T20:05:50Z"
 assignee: "port-hollow-has-many-replace-tests"
 blocked-by: null

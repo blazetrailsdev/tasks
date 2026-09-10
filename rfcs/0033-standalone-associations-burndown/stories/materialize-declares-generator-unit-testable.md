@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4562
+pr: trails#4562
 claim: "2026-07-04T18:04:26Z"
 assignee: "materialize-declares-generator-unit-testable"
 blocked-by: null

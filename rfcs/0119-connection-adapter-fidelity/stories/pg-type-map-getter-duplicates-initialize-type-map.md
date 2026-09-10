@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7613
+pr: trails#7613
 claim: "2026-09-08T14:17:03Z"
 assignee: "pg-type-map-getter-duplicates-initialize-type-map"
 blocked-by: null

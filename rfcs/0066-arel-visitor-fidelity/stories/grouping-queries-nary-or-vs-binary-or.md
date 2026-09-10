@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 51
-pr: 3424
+pr: trails#3424
 claim: "2026-07-22T15:56:47Z"
 assignee: "grouping-queries-nary-or-vs-binary-or"
 blocked-by: null

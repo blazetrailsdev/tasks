@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7165
+pr: trails#7165
 claim: "2026-08-28T15:18:31Z"
 assignee: "arel-plus-and-taken-score-moved-against-their-own-rb"
 blocked-by: null

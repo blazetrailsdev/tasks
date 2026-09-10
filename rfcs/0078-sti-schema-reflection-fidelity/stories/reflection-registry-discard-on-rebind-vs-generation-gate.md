@@ -8,7 +8,7 @@ deps: ["reflection-registry-poison-actual-mechanism"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6711
+pr: trails#6711
 claim: "2026-08-18T18:27:43Z"
 assignee: "retire-relation-is-named-join-value-discriminator"
 blocked-by: null

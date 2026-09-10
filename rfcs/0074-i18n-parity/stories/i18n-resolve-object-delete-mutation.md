@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5983
+pr: trails#5983
 claim: "2026-08-03T16:16:44Z"
 assignee: "i18n-resolve-object-delete-mutation"
 blocked-by: null

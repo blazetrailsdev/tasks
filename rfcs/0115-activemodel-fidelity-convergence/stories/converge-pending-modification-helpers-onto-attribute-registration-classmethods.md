@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 7142
+pr: trails#7142
 claim: "2026-08-28T00:36:52Z"
 assignee: "converge-pending-modification-helpers-onto-attribute-registration-classmethods"
 blocked-by: null

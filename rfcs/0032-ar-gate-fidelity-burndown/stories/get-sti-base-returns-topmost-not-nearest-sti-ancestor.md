@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 20
-pr: 5199
+pr: trails#5199
 claim: "2026-07-24T03:53:23Z"
 assignee: "get-sti-base-returns-topmost-not-nearest-sti-ancestor"
 blocked-by: null

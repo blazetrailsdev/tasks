@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: 3918
+pr: trails#3918
 claim: "2026-06-22T20:03:14Z"
 assignee: "ready-queue-gate-on-active-rfc"
 blocked-by: null

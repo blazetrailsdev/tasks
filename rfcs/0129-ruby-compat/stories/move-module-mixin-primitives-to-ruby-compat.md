@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 55
-pr: 7361
+pr: trails#7361
 claim: "2026-09-01T20:29:38Z"
 assignee: "move-module-mixin-primitives-to-ruby-compat"
 blocked-by: null

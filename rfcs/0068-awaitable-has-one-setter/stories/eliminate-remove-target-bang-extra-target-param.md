@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5651
+pr: trails#5651
 claim: "2026-07-30T17:53:16Z"
 assignee: "eliminate-remove-target-bang-extra-target-param"
 blocked-by: null

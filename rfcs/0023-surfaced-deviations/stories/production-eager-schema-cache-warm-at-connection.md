@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3373
+pr: trails#3373
 claim: "2026-06-15T16:42:28Z"
 assignee: "production-eager-schema-cache-warm-at-connection"
 blocked-by: null

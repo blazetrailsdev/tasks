@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6161
+pr: trails#6161
 claim: "2026-08-07T00:48:36Z"
 assignee: "datetime-carries-no-fractional-seconds"
 blocked-by: null

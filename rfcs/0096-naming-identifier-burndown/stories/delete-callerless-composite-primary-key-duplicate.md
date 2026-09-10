@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6832
+pr: trails#6832
 claim: "2026-08-21T18:50:32Z"
 assignee: "converge-association-primary-key-onto-rails-argument-shape"
 blocked-by: null

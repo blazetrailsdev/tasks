@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4924
+pr: trails#4924
 claim: "2026-07-17T13:55:26Z"
 assignee: "close-composite-pk-through-eager-bypass-for-scoped-source"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5379
+pr: trails#5379
 claim: "2026-07-27T14:13:06Z"
 assignee: "converge-instantiate-sti-extra-surface"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5528
+pr: trails#5528
 claim: "2026-07-28T18:13:48Z"
 assignee: "sqlite-alter-table-modify-callback-takes-pragma-rows-not-columns"
 blocked-by: null

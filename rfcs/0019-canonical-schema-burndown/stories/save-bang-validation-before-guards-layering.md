@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 4123
+pr: trails#4123
 claim: "2026-06-25T14:33:12Z"
 assignee: "save-bang-validation-before-guards-layering"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 41
+pr: tasks-legacy#41
 claim: "2026-06-15T17:00:30Z"
 assignee: "reconcile-all-active-rfcs"
 blocked-by: null

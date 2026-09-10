@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 30
-pr: 3174
+pr: trails#3174
 claim: "2026-06-13T01:55:59Z"
 assignee: "cli-status-transition-command"
 blocked-by: null

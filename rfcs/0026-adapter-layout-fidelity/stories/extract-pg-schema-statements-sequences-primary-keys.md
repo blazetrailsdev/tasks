@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 20
-pr: 3909
+pr: trails#3909
 claim: "2026-06-22T18:36:13Z"
 assignee: "extract-pg-schema-statements-sequences-primary-keys"
 blocked-by: null

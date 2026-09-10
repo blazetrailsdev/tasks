@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7141
+pr: trails#7141
 claim: "2026-08-27T23:27:55Z"
 assignee: "adapter-default-timezone-is-a-config-read-not-the-rails-ivar"
 blocked-by: null

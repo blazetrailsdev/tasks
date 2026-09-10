@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 7
-pr: 4694
+pr: trails#4694
 claim: "2026-07-06T19:08:56Z"
 assignee: "mysql2-performquery-castresult-hashmode-collapses-duplicates"
 blocked-by: null

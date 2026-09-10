@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3999
+pr: trails#3999
 claim: "2026-06-23T13:57:41Z"
 assignee: "extra-surface-walkmixin-unported-guard"
 blocked-by: null

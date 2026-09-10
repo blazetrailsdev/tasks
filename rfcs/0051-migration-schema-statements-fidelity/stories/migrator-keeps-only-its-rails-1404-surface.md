@@ -8,7 +8,7 @@ deps: ["move-migration-context-methods-off-migrator"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5845
+pr: trails#5845
 claim: "2026-08-02T00:21:03Z"
 assignee: "migrator-keeps-only-its-rails-1404-surface"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 3535
+pr: trails#3535
 claim: "2026-06-17T12:46:24Z"
 assignee: "reverse-single-term-balanced-paren-order"
 blocked-by: null

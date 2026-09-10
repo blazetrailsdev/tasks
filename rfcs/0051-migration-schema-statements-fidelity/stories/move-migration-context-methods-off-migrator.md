@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5820
+pr: trails#5820
 claim: "2026-08-01T19:11:31Z"
 assignee: "move-migration-context-methods-off-migrator"
 blocked-by: null

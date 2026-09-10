@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 14
-pr: 5004
+pr: trails#5004
 claim: "2026-07-20T19:16:43Z"
 assignee: "arel-in-not-in-hash-enumerable-arm-divergence"
 blocked-by: null

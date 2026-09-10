@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6055
+pr: trails#6055
 claim: "2026-08-04T13:42:04Z"
 assignee: "backend-base-symbol-arms-pre-strip-colon"
 blocked-by: null

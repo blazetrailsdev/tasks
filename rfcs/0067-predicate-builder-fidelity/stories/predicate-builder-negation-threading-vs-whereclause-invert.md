@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 63
-pr: 5064
+pr: trails#5064
 claim: "2026-07-22T16:56:50Z"
 assignee: "predicate-builder-negation-threading-vs-whereclause-invert"
 blocked-by: null

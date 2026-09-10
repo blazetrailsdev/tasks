@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: 6685
+pr: trails#6685
 claim: "2026-08-18T02:03:08Z"
 assignee: "port-duration-sum-so-since-and-ago-call-it"
 blocked-by: null

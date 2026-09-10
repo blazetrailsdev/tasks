@@ -7,7 +7,7 @@ cluster: test-perf
 deps: ["phase0-sqlite-template-spike"]
 deps-rfc: []
 est-loc: 150
-pr: 3085
+pr: trails#3085
 claim: "2026-06-10T14:40:19Z"
 assignee: "phase2-mariadb-template"
 blocked-by: null

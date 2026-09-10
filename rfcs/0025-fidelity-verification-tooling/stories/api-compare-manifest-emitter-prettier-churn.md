@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 5
-pr: 4987
+pr: trails#4987
 claim: "2026-07-20T01:57:27Z"
 assignee: "api-compare-manifest-emitter-prettier-churn"
 blocked-by: null

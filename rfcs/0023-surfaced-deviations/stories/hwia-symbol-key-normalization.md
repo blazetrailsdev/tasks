@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4517
+pr: trails#4517
 claim: "2026-07-03T21:55:08Z"
 assignee: "hwia-symbol-key-normalization"
 blocked-by: null

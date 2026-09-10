@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5275
+pr: trails#5275
 claim: "2026-07-24T22:14:55Z"
 assignee: "converge-autosave-association-unenumerated-canonical-shadows"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4074
+pr: trails#4074
 claim: "2026-08-11T23:06:01Z"
 assignee: "converge-association-instance-get-to-rails-one-liner"
 blocked-by: null

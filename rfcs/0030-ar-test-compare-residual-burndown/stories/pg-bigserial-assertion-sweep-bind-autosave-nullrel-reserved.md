@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 20
-pr: 4025
+pr: trails#4025
 claim: "2026-06-23T17:45:35Z"
 assignee: "pg-bigserial-assertion-sweep-bind-autosave-nullrel-reserved"
 blocked-by: null

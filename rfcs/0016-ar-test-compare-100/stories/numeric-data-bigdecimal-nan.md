@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3245
+pr: trails#3245
 claim: "2026-06-14T12:18:33Z"
 assignee: "numeric-data-bigdecimal-nan"
 blocked-by: null

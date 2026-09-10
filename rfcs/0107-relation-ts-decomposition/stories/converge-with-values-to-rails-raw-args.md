@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6607
+pr: trails#6607
 claim: "2026-08-16T20:17:36Z"
 assignee: "converge-query-method-stores-with-values-and-references"
 blocked-by: null

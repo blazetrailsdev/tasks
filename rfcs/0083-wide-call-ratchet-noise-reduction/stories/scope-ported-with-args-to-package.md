@@ -8,7 +8,7 @@ deps: ["ruby-extractor-record-call-receiver-kind"]
 deps-rfc: []
 est-loc: 120
 priority: 0
-pr: 5855
+pr: trails#5855
 claim: "2026-08-02T02:16:58Z"
 assignee: "scope-ported-with-args-to-package"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5797
+pr: trails#5797
 claim: "2026-08-01T09:13:46Z"
 assignee: "sqlite-alter-table-second-move-does-not-reflect-the-buffer"
 blocked-by: null

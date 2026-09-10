@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 5
-pr: 4016
+pr: trails#4016
 claim: "2026-06-23T15:41:25Z"
 assignee: "materialize-declares-bulk-conversion"
 blocked-by: null

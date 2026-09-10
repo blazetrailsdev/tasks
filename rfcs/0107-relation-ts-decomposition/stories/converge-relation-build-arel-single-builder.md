@@ -9,7 +9,7 @@ deps: ["retire-relation-private-thunk-block"]
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: 6593
+pr: trails#6593
 claim: "2026-08-16T12:18:38Z"
 assignee: "converge-relation-build-arel-single-builder"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 1
-pr: 5710
+pr: trails#5710
 claim: "2026-07-31T15:12:03Z"
 assignee: "set-exclusive-db-flag-for-every-stamped-slot"
 blocked-by: null

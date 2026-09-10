@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 7
-pr: 5288
+pr: trails#5288
 claim: "2026-07-25T02:38:55Z"
 assignee: "database-tasks-test-config-fidelity"
 blocked-by: null

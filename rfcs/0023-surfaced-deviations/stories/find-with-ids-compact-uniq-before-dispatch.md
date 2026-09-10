@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 4116
+pr: trails#4116
 claim: "2026-06-25T13:19:32Z"
 assignee: "find-with-ids-compact-uniq-before-dispatch"
 blocked-by: null

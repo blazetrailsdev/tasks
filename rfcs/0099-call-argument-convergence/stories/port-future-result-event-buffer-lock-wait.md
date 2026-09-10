@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6585
+pr: trails#6585
 claim: "2026-08-15T23:28:17Z"
 assignee: "extract-call-template-build"
 blocked-by: null

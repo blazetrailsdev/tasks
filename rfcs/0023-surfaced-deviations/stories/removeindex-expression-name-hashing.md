@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 5
-pr: 3223
+pr: trails#3223
 claim: "2026-06-13T22:30:33Z"
 assignee: "removeindex-expression-name-hashing"
 blocked-by: null

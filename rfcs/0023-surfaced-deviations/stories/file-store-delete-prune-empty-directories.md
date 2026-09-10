@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4000
+pr: trails#4000
 claim: "2026-06-23T14:02:38Z"
 assignee: "file-store-delete-prune-empty-directories"
 blocked-by: null

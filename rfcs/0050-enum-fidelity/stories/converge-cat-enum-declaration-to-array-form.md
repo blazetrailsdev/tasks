@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: 4890
+pr: trails#4890
 claim: "2026-07-15T11:31:10Z"
 assignee: "converge-cat-enum-declaration-to-array-form"
 blocked-by: null

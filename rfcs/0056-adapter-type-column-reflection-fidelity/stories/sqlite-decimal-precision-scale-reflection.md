@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 55
-pr: 4681
+pr: trails#4681
 claim: "2026-07-07T14:37:51Z"
 assignee: "sqlite-decimal-precision-scale-reflection"
 blocked-by: null

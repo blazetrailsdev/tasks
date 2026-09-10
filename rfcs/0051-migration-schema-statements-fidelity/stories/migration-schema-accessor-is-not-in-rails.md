@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5851
+pr: trails#5851
 claim: "2026-08-02T01:35:44Z"
 assignee: "migration-schema-accessor-is-not-in-rails"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 21
-pr: 5090
+pr: trails#5090
 claim: "2026-07-22T23:16:19Z"
 assignee: "belongs-to-composite-fk-stale-state-rails-convergence"
 blocked-by: null

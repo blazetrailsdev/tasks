@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 5030
+pr: trails#5030
 claim: "2026-07-18T19:21:11Z"
 assignee: "rails-file-structure-method-order-dormant-and-per-file"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: ["generated-layout-hardcodes-undigested-asset-path"]
 deps-rfc: []
 est-loc: 60
 priority: 9
-pr: 7374
+pr: trails#7374
 claim: "2026-09-02T01:41:37Z"
 assignee: "generated-vite-outdir-nested-in-publicdir"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 5555
+pr: trails#5555
 claim: "2026-07-29T00:55:44Z"
 assignee: "require-table-teardown-accept-prefix-sweep"
 blocked-by: null

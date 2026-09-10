@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: 5259
+pr: trails#5259
 claim: "2026-07-24T19:34:53Z"
 assignee: "restore-comment-habtm-canonical-tables"
 blocked-by: null

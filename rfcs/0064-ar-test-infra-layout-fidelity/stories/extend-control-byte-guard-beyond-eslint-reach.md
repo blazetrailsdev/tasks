@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5699
+pr: trails#5699
 claim: "2026-07-31T01:42:04Z"
 assignee: "extend-control-byte-guard-beyond-eslint-reach"
 blocked-by: null

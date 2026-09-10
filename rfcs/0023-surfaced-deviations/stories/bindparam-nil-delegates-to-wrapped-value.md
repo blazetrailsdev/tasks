@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4823
+pr: trails#4823
 claim: "2026-07-09T11:00:55Z"
 assignee: "bindparam-nil-delegates-to-wrapped-value"
 blocked-by: null

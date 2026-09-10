@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-pr: 7246
+pr: trails#7246
 claim: "2026-08-30T15:35:30Z"
 assignee: "validate-inverse-of-is-a-trails-invention"
 blocked-by: null

@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6227
+pr: trails#6227
 claim: "2026-08-08T10:27:54Z"
 assignee: "port-final-check-constraint-test-cases"
 blocked-by: null

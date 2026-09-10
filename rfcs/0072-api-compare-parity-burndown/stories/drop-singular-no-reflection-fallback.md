@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5925
+pr: trails#5925
 claim: "2026-08-02T21:01:25Z"
 assignee: "drop-singular-no-reflection-fallback"
 blocked-by: null

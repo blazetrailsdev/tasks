@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: 3897
+pr: trails#3897
 claim: "2026-06-22T17:14:05Z"
 assignee: "ar-sqlite-lane-coverage-reporting"
 blocked-by: null

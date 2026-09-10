@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4611
+pr: trails#4611
 claim: "2026-07-05T13:52:25Z"
 assignee: "nested-through-pk-dedup-in-direct-load"
 blocked-by: null

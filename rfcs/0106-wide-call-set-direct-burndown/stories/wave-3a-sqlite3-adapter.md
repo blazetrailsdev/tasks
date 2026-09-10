@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6567
+pr: trails#6567
 claim: "2026-08-15T15:15:04Z"
 assignee: "wave-3a-sqlite3-adapter"
 blocked-by: null

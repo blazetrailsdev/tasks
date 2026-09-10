@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 3
-pr: 7434
+pr: trails#7434
 claim: "2026-09-03T11:12:31Z"
 assignee: "port-preloader-loader-records"
 blocked-by: null

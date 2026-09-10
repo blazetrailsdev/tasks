@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6431
+pr: trails#6431
 claim: "2026-08-12T18:56:50Z"
 assignee: "extractor-multi-candidate-call-credits-later-read"
 blocked-by: null

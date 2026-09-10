@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 64
-pr: 5065
+pr: trails#5065
 claim: "2026-07-22T17:11:48Z"
 assignee: "relation-where-value-eager-precast-vs-rails-defer"
 blocked-by: null

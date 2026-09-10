@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 4
-pr: 4739
+pr: trails#4739
 claim: "2026-07-07T14:49:51Z"
 assignee: "hmt-primary-key-value-composite-source-pk-resolution"
 blocked-by: null

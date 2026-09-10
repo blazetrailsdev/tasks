@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5862
+pr: trails#5862
 claim: "2026-08-02T03:26:47Z"
 assignee: "migrator-internal-metadata-public-reader"
 blocked-by: null

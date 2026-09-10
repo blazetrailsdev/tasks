@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 5139
+pr: trails#5139
 claim: "2026-07-23T12:37:38Z"
 assignee: "find-path-cast-attribute-value-eager-precast-vs-rails-defer"
 blocked-by: null

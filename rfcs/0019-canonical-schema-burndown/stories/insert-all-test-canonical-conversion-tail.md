@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 2442
+pr: trails#2442
 claim: "2026-06-19T00:32:55Z"
 assignee: "insert-all-test-canonical-conversion-tail"
 blocked-by: null

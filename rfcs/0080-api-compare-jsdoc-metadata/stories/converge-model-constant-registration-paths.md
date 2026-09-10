@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5511
+pr: trails#5511
 claim: "2026-07-28T14:30:20Z"
 assignee: "converge-model-constant-registration-paths"
 blocked-by: null

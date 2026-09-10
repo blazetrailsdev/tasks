@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 40
-pr: 3886
+pr: trails#3886
 claim: "2026-06-22T14:59:58Z"
 assignee: "relation-raw-fragment-bind-parameterization"
 blocked-by: null

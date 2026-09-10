@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6396
+pr: trails#6396
 claim: "2026-08-12T02:26:00Z"
 assignee: "converge-collection-association-load-target-and-ids-writer"
 blocked-by: null

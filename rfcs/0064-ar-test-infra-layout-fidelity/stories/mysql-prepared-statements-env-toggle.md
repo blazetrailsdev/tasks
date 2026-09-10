@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5521
+pr: trails#5521
 claim: "2026-07-28T16:05:11Z"
 assignee: "mysql-prepared-statements-env-toggle"
 blocked-by: null

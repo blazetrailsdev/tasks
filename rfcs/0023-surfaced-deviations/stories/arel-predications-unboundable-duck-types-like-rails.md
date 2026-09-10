@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4887
+pr: trails#4887
 claim: "2026-07-15T03:11:14Z"
 assignee: "arel-predications-unboundable-duck-types-like-rails"
 blocked-by: null

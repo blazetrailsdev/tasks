@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 3908
+pr: trails#3908
 claim: "2026-06-22T18:27:57Z"
 assignee: "extract-pg-referential-integrity"
 blocked-by: null

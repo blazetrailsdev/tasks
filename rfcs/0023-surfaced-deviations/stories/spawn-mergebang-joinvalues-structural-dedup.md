@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 4767
+pr: trails#4767
 claim: "2026-07-20T00:11:09Z"
 assignee: "spawn-mergebang-joinvalues-structural-dedup"
 blocked-by: null

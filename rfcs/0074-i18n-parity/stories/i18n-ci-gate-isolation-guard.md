@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-pr: 5998
+pr: trails#5998
 claim: "2026-08-03T17:54:46Z"
 assignee: "i18n-ci-gate-isolation-guard"
 blocked-by: null

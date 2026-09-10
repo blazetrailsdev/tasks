@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4565
+pr: trails#4565
 claim: "2026-07-04T19:07:07Z"
 assignee: "fix-canonical-schema-test-dumpschema-array-rows"
 blocked-by: null

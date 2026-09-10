@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5493
+pr: trails#5493
 claim: "2026-07-28T12:40:19Z"
 assignee: "connection-handlers-sharding-db-file-based"
 blocked-by: null

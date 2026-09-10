@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 5
-pr: 4131
+pr: trails#4131
 claim: "2026-06-25T15:59:00Z"
 assignee: "transactions-extra-burndown"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 3
-pr: 4297
+pr: trails#4297
 claim: "2026-06-29T23:54:33Z"
 assignee: "thread-shared-tracker-through-eager-select-paths"
 blocked-by: null

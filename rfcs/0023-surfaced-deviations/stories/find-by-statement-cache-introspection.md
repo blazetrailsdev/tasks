@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4423
+pr: trails#4423
 claim: "2026-07-02T17:09:59Z"
 assignee: "find-by-statement-cache-introspection"
 blocked-by: null

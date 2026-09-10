@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: 7135
+pr: trails#7135
 claim: "2026-08-27T19:43:44Z"
 assignee: "migration-create-table-block-needs-a-caller-annotation"
 blocked-by: null

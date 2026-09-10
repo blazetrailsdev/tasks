@@ -7,7 +7,7 @@ cluster: null
 deps: ["move-date-time-to-date-package"]
 deps-rfc: []
 est-loc: 300
-pr: 6147
+pr: trails#6147
 claim: "2026-08-06T00:53:04Z"
 assignee: "converge-time-with-zone-strftime-onto-date-package"
 blocked-by: null

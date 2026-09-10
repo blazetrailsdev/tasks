@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 3
-pr: 5881
+pr: trails#5881
 claim: "2026-08-02T12:52:03Z"
 assignee: "narrow-ratchet-regenerate-artifact-in-gate"
 blocked-by: null

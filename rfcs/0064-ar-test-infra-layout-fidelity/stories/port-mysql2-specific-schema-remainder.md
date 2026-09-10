@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5534
+pr: trails#5534
 claim: "2026-07-28T21:24:03Z"
 assignee: "port-mysql2-specific-schema-remainder"
 blocked-by: null

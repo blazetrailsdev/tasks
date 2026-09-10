@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 45
-pr: 4186
+pr: trails#4186
 claim: "2026-06-26T12:05:40Z"
 assignee: "assoc-eager-split-canonical-preloading"
 blocked-by: null

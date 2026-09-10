@@ -8,7 +8,7 @@ deps: ["from-clause-arel-manager"]
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: 3148
+pr: trails#3148
 claim: "2026-06-12T16:17:56Z"
 assignee: "pluck-from-cte-threading"
 blocked-by: null

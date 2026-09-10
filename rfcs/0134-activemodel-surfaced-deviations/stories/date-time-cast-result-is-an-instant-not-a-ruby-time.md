@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: 7537
+pr: trails#7537
 claim: "2026-09-05T21:06:57Z"
 assignee: "date-time-cast-result-is-an-instant-not-a-ruby-time"
 blocked-by: null

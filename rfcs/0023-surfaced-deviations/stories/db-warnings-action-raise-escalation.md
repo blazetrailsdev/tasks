@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 23
-pr: 3506
+pr: trails#3506
 claim: "2026-06-16T22:00:42Z"
 assignee: "db-warnings-action-raise-escalation"
 blocked-by: null

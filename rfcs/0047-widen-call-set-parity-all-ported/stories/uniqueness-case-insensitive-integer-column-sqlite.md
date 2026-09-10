@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 4616
+pr: trails#4616
 claim: "2026-07-05T15:07:28Z"
 assignee: "uniqueness-case-insensitive-integer-column-sqlite"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5768
+pr: trails#5768
 claim: "2026-07-31T23:00:40Z"
 assignee: "assume-migrated-upto-version-drop-invented-numeric-guard"
 blocked-by: null

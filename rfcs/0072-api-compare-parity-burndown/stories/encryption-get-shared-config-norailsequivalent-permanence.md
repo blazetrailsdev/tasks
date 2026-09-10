@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6139
+pr: trails#6139
 claim: "2026-08-05T19:53:07Z"
 assignee: "date-package-scaffold"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 14
-pr: 5085
+pr: trails#5085
 claim: "2026-07-22T21:53:03Z"
 assignee: "missing-singletons-connection-handling-numeric-nan"
 blocked-by: null

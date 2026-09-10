@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6409
+pr: trails#6409
 claim: "2026-08-12T12:26:11Z"
 assignee: "call-args-ar-extra-argument-rest-2"
 blocked-by: null

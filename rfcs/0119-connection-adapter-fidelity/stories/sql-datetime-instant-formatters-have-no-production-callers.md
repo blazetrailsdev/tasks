@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7621
+pr: trails#7621
 claim: "2026-09-08T16:17:44Z"
 assignee: "sql-datetime-instant-formatters-have-no-production-callers"
 blocked-by: null

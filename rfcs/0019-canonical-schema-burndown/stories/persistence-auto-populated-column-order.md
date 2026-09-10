@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3833
+pr: trails#3833
 claim: "2026-06-21T20:38:44Z"
 assignee: "persistence-auto-populated-column-order"
 blocked-by: null

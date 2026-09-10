@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5760
+pr: trails#5760
 claim: "2026-07-31T21:40:42Z"
 assignee: "database-tasks-rollback-drops-database-configuration-gate"
 blocked-by: null

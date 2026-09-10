@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 4497
+pr: trails#4497
 claim: "2026-07-03T17:21:50Z"
 assignee: "convert-migration-test-defineschema-createtable"
 blocked-by: null

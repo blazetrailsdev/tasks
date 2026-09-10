@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 7368
+pr: trails#7368
 claim: "2026-09-01T23:37:00Z"
 assignee: "complete-set-routes-reloader-hook"
 blocked-by: null

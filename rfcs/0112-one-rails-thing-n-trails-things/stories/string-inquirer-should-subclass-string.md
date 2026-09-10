@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-pr: 7073
+pr: trails#7073
 claim: "2026-08-26T11:14:59Z"
 assignee: "globalid-uri-reader-is-a-string-not-a-uri-gid"
 blocked-by: null

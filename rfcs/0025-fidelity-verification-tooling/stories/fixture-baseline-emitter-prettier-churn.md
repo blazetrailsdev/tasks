@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5245
+pr: trails#5245
 claim: "2026-07-24T17:42:53Z"
 assignee: "fixture-baseline-emitter-prettier-churn"
 blocked-by: null

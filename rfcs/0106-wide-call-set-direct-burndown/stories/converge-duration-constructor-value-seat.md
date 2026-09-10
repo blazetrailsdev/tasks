@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6693
+pr: trails#6693
 claim: "2026-08-18T12:46:51Z"
 assignee: "converge-duration-constructor-value-seat"
 blocked-by: null

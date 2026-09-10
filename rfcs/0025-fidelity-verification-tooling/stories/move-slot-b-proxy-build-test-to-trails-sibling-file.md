@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5302
+pr: trails#5302
 claim: "2026-07-25T13:29:39Z"
 assignee: "move-slot-b-proxy-build-test-to-trails-sibling-file"
 blocked-by: null

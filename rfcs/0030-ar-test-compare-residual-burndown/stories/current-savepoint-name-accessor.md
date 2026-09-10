@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 3448
+pr: trails#3448
 claim: "2026-06-16T12:17:23Z"
 assignee: "current-savepoint-name-accessor"
 blocked-by: null

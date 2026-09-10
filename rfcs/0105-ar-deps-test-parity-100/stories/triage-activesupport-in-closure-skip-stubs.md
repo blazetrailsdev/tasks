@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 280
 priority: null
-pr: 7369
+pr: trails#7369
 claim: "2026-09-02T00:41:22Z"
 assignee: "triage-activesupport-in-closure-skip-stubs"
 blocked-by: null

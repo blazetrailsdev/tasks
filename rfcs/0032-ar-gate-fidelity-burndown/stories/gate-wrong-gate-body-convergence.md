@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3755
+pr: trails#3755
 claim: "2026-06-20T14:49:30Z"
 assignee: "gate-wrong-gate-body-convergence"
 blocked-by: null

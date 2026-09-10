@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3423
+pr: trails#3423
 claim: "2026-06-15T23:34:27Z"
 assignee: "associations-test-canonical-fixtures-convergence"
 blocked-by: null

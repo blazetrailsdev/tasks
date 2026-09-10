@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6488
+pr: trails#6488
 claim: "2026-08-13T19:05:38Z"
 assignee: "call-args-schema-definitions-add-to-foreign-key"
 blocked-by: null

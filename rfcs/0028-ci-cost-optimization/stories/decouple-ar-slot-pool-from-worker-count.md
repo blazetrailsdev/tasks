@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3986
+pr: trails#3986
 claim: "2026-06-23T12:27:45Z"
 assignee: "decouple-ar-slot-pool-from-worker-count"
 blocked-by: null

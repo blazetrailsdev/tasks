@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6275
+pr: trails#6275
 claim: "2026-08-09T02:30:47Z"
 assignee: "converge-check-constraint-name-fetch-semantics"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6129
+pr: trails#6129
 claim: "2026-08-05T15:59:24Z"
 assignee: "vendor-ruby-date-gem"
 blocked-by: null

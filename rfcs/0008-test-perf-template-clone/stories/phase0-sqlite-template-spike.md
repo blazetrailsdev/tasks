@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 80
-pr: 2998
+pr: trails#2998
 claim: "2026-06-07T15:55:52Z"
 assignee: "phase0-sqlite-template-spike"
 blocked-by: null

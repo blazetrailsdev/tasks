@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 4405
+pr: trails#4405
 claim: "2026-07-02T12:08:22Z"
 assignee: "assertion-value-capture-helper-callees"
 blocked-by: null

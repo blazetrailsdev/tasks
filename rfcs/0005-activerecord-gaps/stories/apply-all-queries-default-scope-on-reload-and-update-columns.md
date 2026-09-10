@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3259
+pr: trails#3259
 claim: "2026-06-14T14:48:34Z"
 assignee: "apply-all-queries-default-scope-on-reload-and-update-columns"
 blocked-by: null

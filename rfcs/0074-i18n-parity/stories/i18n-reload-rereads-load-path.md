@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6030
+pr: trails#6030
 claim: "2026-08-03T21:56:08Z"
 assignee: "i18n-reload-rereads-load-path"
 blocked-by: null

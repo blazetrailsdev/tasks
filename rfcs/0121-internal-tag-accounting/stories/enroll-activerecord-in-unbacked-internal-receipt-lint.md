@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7115
+pr: trails#7115
 claim: "2026-08-27T02:06:24Z"
 assignee: "enroll-activerecord-in-unbacked-internal-receipt-lint"
 blocked-by: null

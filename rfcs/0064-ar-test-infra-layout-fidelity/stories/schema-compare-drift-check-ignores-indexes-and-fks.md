@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 6114
+pr: trails#6114
 claim: "2026-08-05T02:30:05Z"
 assignee: "refresh-stale-eslint-exclude-baselines"
 blocked-by: null

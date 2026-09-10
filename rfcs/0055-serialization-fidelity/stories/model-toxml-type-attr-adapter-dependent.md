@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4574
+pr: trails#4574
 claim: "2026-07-04T22:07:09Z"
 assignee: "model-toxml-type-attr-adapter-dependent"
 blocked-by: null

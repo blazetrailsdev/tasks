@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4660
+pr: trails#4660
 claim: "2026-07-06T04:06:20Z"
 assignee: "merge-joins-preserve-single-array-order"
 blocked-by: null

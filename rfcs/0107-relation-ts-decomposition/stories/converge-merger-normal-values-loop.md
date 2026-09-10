@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6602
+pr: trails#6602
 claim: "2026-08-16T17:52:42Z"
 assignee: "converge-build-arel-limit-offset-cast-value"
 blocked-by: null

@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 1
-pr: 7405
+pr: trails#7405
 claim: "2026-09-02T20:12:42Z"
 assignee: "credit-bodied-object-literal-mixin-modules"
 blocked-by: null

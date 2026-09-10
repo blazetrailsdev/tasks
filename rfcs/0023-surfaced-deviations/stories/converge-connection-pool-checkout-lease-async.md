@@ -8,7 +8,7 @@ deps: ["connection-pool-async-pinned-checkout-no-fire-and-forget"]
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: 4466
+pr: trails#4466
 claim: "2026-07-03T01:45:53Z"
 assignee: "converge-connection-pool-checkout-lease-async"
 blocked-by: null

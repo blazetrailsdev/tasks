@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 6651
+pr: trails#6651
 claim: "2026-08-17T13:25:28Z"
 assignee: "assertions-activesupport-hash-and-ordered-options"
 blocked-by: null

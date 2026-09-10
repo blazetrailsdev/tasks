@@ -8,7 +8,7 @@ deps: ["b1-singular-association-holder"]
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: 3139
+pr: trails#3139
 claim: "2026-06-12T00:02:59Z"
 assignee: "b3-migrate-singular-readers"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 57
-pr: 5102
+pr: trails#5102
 claim: "2026-07-23T00:33:29Z"
 assignee: "select-manager-missing-create-join-klass-variant-tests"
 blocked-by: null

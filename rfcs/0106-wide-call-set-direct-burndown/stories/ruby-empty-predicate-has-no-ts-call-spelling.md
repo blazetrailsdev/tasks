@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: 6660
+pr: trails#6660
 claim: "2026-08-17T17:48:13Z"
 assignee: "call-mismatches-partial-regen-invents-phantom-rows"
 blocked-by: null

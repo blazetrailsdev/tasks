@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6211
+pr: trails#6211
 claim: "2026-08-08T00:38:05Z"
 assignee: "template-global-setup-adapters-carry-a-real-pool"
 blocked-by: null

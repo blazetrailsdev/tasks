@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6532
+pr: trails#6532
 claim: "2026-08-14T17:22:10Z"
 assignee: "converge-isolated-execution-state-delete-returns-value"
 blocked-by: null

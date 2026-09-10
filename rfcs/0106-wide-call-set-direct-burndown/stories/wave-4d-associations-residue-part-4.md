@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6739
+pr: trails#6739
 claim: "2026-08-19T13:26:32Z"
 assignee: "wave-4d-associations-residue-part-4"
 blocked-by: null

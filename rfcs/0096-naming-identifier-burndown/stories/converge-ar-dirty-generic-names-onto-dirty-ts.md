@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6893
+pr: trails#6893
 claim: "2026-08-22T23:01:54Z"
 assignee: "converge-ar-dirty-generic-names-onto-dirty-ts"
 blocked-by: null

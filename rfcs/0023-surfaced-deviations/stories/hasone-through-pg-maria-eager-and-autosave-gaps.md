@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4486
+pr: trails#4486
 claim: "2026-07-03T14:57:55Z"
 assignee: "hasone-through-pg-maria-eager-and-autosave-gaps"
 blocked-by: null

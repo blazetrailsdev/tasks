@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 4
-pr: 3488
+pr: trails#3488
 claim: "2026-06-16T18:41:56Z"
 assignee: "cli-mutation-atomic-rollback-and-error-surfacing"
 blocked-by: null

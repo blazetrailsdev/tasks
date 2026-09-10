@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4099
+pr: trails#4099
 claim: "2026-06-25T03:22:34Z"
 assignee: "generated-relation-methods-real-method-mechanism"
 blocked-by: null

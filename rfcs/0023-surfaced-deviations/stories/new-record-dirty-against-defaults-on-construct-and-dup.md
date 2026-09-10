@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3780
+pr: trails#3780
 claim: "2026-06-21T11:50:43Z"
 assignee: "new-record-dirty-against-defaults-on-construct-and-dup"
 blocked-by: null

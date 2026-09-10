@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 0
-pr: 4613
+pr: trails#4613
 claim: "2026-07-05T14:22:27Z"
 assignee: "rename-define-schema-residual-vocabulary"
 blocked-by: null

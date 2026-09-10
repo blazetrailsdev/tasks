@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4046
+pr: trails#4046
 claim: "2026-06-24T02:00:40Z"
 assignee: "ar-ddl-belongs-to-aliases"
 blocked-by: null

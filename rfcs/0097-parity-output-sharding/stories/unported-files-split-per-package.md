@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6340
+pr: trails#6340
 claim: "2026-08-10T15:03:46Z"
 assignee: "unported-files-split-per-package"
 blocked-by: null

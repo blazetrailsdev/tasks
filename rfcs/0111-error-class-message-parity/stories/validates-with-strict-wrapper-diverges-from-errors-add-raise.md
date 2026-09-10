@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 40
-pr: 7624
+pr: trails#7624
 claim: "2026-09-08T16:18:19Z"
 assignee: "type-adapter-name-from-swallows-unconfigured-instead-of-raising"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 6
-pr: 4671
+pr: trails#4671
 claim: "2026-07-06T13:29:08Z"
 assignee: "eager-test-fold-duplicate-describes"
 blocked-by: null

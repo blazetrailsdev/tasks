@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6187
+pr: trails#6187
 claim: "2026-08-07T18:00:51Z"
 assignee: "restore-worker-connection-covers-only-arunit"
 blocked-by: null

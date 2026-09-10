@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5693
+pr: trails#5693
 claim: "2026-07-31T00:39:09Z"
 assignee: "arm-cover-misroute-through-loadschema-is-pg-lane-only"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 7151
+pr: trails#7151
 claim: "2026-08-28T11:34:53Z"
 assignee: "honor-class-body-precedence-in-extend"
 blocked-by: null

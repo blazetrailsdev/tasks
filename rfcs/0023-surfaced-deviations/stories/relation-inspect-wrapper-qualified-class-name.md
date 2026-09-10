@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4865
+pr: trails#4865
 claim: "2026-07-14T15:08:33Z"
 assignee: "relation-inspect-wrapper-qualified-class-name"
 blocked-by: null

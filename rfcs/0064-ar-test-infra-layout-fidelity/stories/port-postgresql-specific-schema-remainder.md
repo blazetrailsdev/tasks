@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5535
+pr: trails#5535
 claim: "2026-07-28T21:36:00Z"
 assignee: "port-postgresql-specific-schema-remainder"
 blocked-by: null

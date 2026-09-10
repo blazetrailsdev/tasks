@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5293
+pr: trails#5293
 claim: "2026-07-25T03:18:52Z"
 assignee: "fallback-db-file-cleanup"
 blocked-by: null

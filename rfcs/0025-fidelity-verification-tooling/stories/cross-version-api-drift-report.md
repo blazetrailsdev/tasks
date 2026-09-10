@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 4014
+pr: trails#4014
 claim: "2026-06-23T15:14:54Z"
 assignee: "cross-version-api-drift-report"
 blocked-by: null

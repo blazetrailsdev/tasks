@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3226
+pr: trails#3226
 claim: "2026-06-13T22:48:34Z"
 assignee: "calculations-cte-body-bind-threading"
 blocked-by: null

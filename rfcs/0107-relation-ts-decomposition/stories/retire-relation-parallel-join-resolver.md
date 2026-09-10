@@ -9,7 +9,7 @@ deps: ["converge-relation-build-arel-single-builder"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: 6630
+pr: trails#6630
 claim: "2026-08-17T03:02:54Z"
 assignee: "port-date-time-to-fs-onto-the-datetime-receiver"
 blocked-by: null

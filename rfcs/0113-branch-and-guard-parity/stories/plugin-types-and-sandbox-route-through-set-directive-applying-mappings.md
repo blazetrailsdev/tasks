@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 20
-pr: 7617
+pr: trails#7617
 claim: "2026-09-08T15:00:33Z"
 assignee: "in-time-zone-no-zone-arm-normalizes-instead-of-returning-self"
 blocked-by: null

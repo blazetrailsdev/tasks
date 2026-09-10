@@ -8,7 +8,7 @@ deps: ["flip-activerecord-isvalid-async"]
 deps-rfc: []
 est-loc: 350
 priority: 3
-pr: 4926
+pr: trails#4926
 claim: "2026-07-17T13:51:14Z"
 assignee: "uniqueness-inline-delete-deferred-registry"
 blocked-by: null

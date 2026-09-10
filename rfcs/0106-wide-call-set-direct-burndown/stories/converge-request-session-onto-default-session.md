@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6696
+pr: trails#6696
 claim: "2026-08-18T13:16:49Z"
 assignee: "converge-request-session-onto-default-session"
 blocked-by: null

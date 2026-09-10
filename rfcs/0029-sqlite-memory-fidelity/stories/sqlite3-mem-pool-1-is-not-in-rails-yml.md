@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5539
+pr: trails#5539
 claim: "2026-07-28T22:15:43Z"
 assignee: "sqlite3-mem-pool-1-is-not-in-rails-yml"
 blocked-by: null

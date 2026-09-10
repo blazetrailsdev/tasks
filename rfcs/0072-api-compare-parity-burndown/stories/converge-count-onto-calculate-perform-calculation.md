@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6206
+pr: trails#6206
 claim: "2026-08-07T21:52:41Z"
 assignee: "converge-count-onto-calculate-perform-calculation"
 blocked-by: null

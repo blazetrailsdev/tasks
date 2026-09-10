@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 1
-pr: 7337
+pr: trails#7337
 claim: "2026-09-01T13:13:23Z"
 assignee: "collection-writer-is-async-even-when-it-owes-no-io"
 blocked-by: null

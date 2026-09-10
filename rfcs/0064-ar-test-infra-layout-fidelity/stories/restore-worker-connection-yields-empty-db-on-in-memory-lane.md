@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5692
+pr: trails#5692
 claim: "2026-07-31T00:12:08Z"
 assignee: "restore-worker-connection-yields-empty-db-on-in-memory-lane"
 blocked-by: null

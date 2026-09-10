@@ -8,7 +8,7 @@ deps: ["create-table-canonical-schema-loader"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4455
+pr: trails#4455
 claim: "2026-07-03T00:09:51Z"
 assignee: "delete-canonical-defineschema-calls"
 blocked-by: null

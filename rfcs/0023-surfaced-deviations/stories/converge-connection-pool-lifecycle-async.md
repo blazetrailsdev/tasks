@@ -8,7 +8,7 @@ deps: ["converge-connection-pool-checkout-lease-async"]
 deps-rfc: []
 est-loc: null
 priority: 60
-pr: 4472
+pr: trails#4472
 claim: "2026-07-03T11:45:54Z"
 assignee: "converge-connection-pool-lifecycle-async"
 blocked-by: null

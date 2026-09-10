@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6866
+pr: trails#6866
 claim: "2026-08-22T17:34:58Z"
 assignee: "build-join-buckets-default-hash-idiom"
 blocked-by: null

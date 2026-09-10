@@ -9,7 +9,7 @@ deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
 est-loc: 180
 priority: 6
-pr: 7237
+pr: trails#7237
 claim: "2026-08-30T13:21:37Z"
 assignee: "move-regexp-escape-to-ruby-compat"
 blocked-by: null

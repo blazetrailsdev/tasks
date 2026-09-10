@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 7227
+pr: trails#7227
 claim: "2026-08-30T00:04:01Z"
 assignee: "retire-ad-hoc-association-definition-holders"
 blocked-by: null

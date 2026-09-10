@@ -7,7 +7,7 @@ cluster: clusters
 deps: []
 deps-rfc: []
 est-loc: 250
-pr: 3012
+pr: trails#3012
 claim: "2026-06-08T00:04:43Z"
 assignee: "f8-small-core-leftovers"
 blocked-by: null

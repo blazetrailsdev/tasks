@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6931
+pr: trails#6931
 claim: "2026-08-23T17:44:08Z"
 assignee: "encryption-schemes-test-lacks-transactional-fixtures"
 blocked-by: null

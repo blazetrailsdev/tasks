@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5965
+pr: trails#5965
 claim: "2026-08-03T12:53:59Z"
 assignee: "port-arel-fetch-attribute-module-function"
 blocked-by: null

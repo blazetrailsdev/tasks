@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6881
+pr: trails#6881
 claim: "2026-08-22T20:35:01Z"
 assignee: "parity-api-build-must-not-drop-harvested-tags"
 blocked-by: null

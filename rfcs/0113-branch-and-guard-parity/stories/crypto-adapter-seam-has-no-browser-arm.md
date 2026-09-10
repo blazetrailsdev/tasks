@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 32
-pr: 7547
+pr: trails#7547
 claim: "2026-09-06T00:55:36Z"
 assignee: "crypto-adapter-seam-has-no-browser-arm"
 blocked-by: null

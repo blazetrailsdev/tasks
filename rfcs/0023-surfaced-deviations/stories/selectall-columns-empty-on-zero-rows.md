@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: 3224
+pr: trails#3224
 claim: "2026-06-13T22:36:38Z"
 assignee: "selectall-columns-empty-on-zero-rows"
 blocked-by: null

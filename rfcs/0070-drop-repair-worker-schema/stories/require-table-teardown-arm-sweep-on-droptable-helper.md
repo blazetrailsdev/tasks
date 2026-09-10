@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5559
+pr: trails#5559
 claim: "2026-07-29T01:55:45Z"
 assignee: "require-table-teardown-arm-sweep-on-droptable-helper"
 blocked-by: null

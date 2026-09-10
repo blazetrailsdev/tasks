@@ -17,7 +17,7 @@ deps:
 deps-rfc: []
 est-loc: 30
 priority: 8
-pr: 7373
+pr: trails#7373
 claim: "2026-09-02T00:37:12Z"
 assignee: "actionview-partial-renderer-bodies-pass-rails-arguments"
 blocked-by: null

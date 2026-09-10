@@ -8,7 +8,7 @@ deps: ["compile-arel-node-bind-threading"]
 deps-rfc: []
 est-loc: 200
 priority: 7
-pr: 3350
+pr: trails#3350
 claim: "2026-06-15T14:02:35Z"
 assignee: "compile-arel-node-join-on-threading"
 blocked-by: null

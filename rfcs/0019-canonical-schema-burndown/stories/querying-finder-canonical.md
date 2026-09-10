@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 300
 priority: 50
-pr: 4191
+pr: trails#4191
 claim: "2026-06-26T13:05:38Z"
 assignee: "querying-finder-canonical"
 blocked-by: null

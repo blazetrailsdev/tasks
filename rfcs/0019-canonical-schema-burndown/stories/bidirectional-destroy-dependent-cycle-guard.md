@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: 3469
+pr: trails#3469
 claim: "2026-06-16T15:16:42Z"
 assignee: "bidirectional-destroy-dependent-cycle-guard"
 blocked-by: null

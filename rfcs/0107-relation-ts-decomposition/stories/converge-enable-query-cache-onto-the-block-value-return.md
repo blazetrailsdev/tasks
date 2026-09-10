@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6913
+pr: trails#6913
 claim: "2026-08-23T13:12:30Z"
 assignee: "converge-enable-query-cache-onto-the-block-value-return"
 blocked-by: null

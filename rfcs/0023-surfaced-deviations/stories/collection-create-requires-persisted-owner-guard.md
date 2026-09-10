@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4652
+pr: trails#4652
 claim: "2026-07-06T01:01:57Z"
 assignee: "collection-create-requires-persisted-owner-guard"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 50
-pr: 2985
+pr: trails#2985
 claim: "2026-06-06T23:54:01Z"
 assignee: "w1b-variadic-rest-overloads"
 blocked-by: null

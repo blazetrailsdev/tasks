@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 6886
+pr: trails#6886
 claim: "2026-08-22T21:34:59Z"
 assignee: "api-build-should-retire-tags-compare-reports-stale"
 blocked-by: null

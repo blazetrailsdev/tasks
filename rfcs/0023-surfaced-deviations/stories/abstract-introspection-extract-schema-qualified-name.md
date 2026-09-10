@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 3792
+pr: trails#3792
 claim: "2026-06-21T13:58:41Z"
 assignee: "abstract-introspection-extract-schema-qualified-name"
 blocked-by: null

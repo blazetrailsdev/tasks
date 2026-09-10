@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: 0
-pr: 5902
+pr: trails#5902
 claim: "2026-08-02T18:43:24Z"
 assignee: "converge-apply-joins-to-manager-leading-join-prefix"
 blocked-by: null

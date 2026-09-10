@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 45
-pr: 2657
+pr: trails#2657
 claim: "2026-06-04T23:37:13Z"
 assignee: "abstract-class-own-property-fix"
 blocked-by: null

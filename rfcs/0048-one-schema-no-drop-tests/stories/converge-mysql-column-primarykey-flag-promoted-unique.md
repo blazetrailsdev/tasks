@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 4594
+pr: trails#4594
 claim: "2026-07-05T03:37:28Z"
 assignee: "converge-mysql-column-primarykey-flag-promoted-unique"
 blocked-by: null

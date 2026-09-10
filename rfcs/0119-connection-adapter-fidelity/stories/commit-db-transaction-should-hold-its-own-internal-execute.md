@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7538
+pr: trails#7538
 claim: "2026-09-05T21:46:49Z"
 assignee: "commit-db-transaction-should-hold-its-own-internal-execute"
 blocked-by: null

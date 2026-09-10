@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5618
+pr: trails#5618
 claim: "2026-07-29T22:36:01Z"
 assignee: "port-preloadertest-fixture-declaration"
 blocked-by: null

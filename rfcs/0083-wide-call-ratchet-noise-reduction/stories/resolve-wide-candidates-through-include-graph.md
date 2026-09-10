@@ -8,7 +8,7 @@ deps: ["audit-wide-cross-file-mixin-attribution"]
 deps-rfc: []
 est-loc: 250
 priority: 7
-pr: 5755
+pr: trails#5755
 claim: "2026-07-31T20:44:45Z"
 assignee: "resolve-wide-candidates-through-include-graph"
 blocked-by: null

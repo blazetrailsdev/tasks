@@ -7,7 +7,7 @@ cluster: clusters
 deps: ["f7-fixtures-backed-clusters"]
 deps-rfc: []
 est-loc: 50
-pr: 3082
+pr: trails#3082
 claim: "2026-06-10T13:29:37Z"
 assignee: "f5-query-cache-residuals"
 blocked-by: null

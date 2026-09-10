@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3402
+pr: trails#3402
 claim: "2026-06-15T19:06:26Z"
 assignee: "set-deps-share-validator"
 blocked-by: null

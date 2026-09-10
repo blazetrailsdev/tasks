@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4658
+pr: trails#4658
 claim: "2026-07-06T03:26:25Z"
 assignee: "eager-from-subquery-column-alias-projection"
 blocked-by: null

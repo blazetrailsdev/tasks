@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 7293
+pr: trails#7293
 claim: "2026-08-31T14:14:13Z"
 assignee: "postgresql-transaction-nested-tests-model-layer"
 blocked-by: null

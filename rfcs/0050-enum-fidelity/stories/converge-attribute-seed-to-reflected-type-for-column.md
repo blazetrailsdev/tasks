@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 24
-pr: 4799
+pr: trails#4799
 claim: "2026-07-08T20:07:34Z"
 assignee: "converge-attribute-seed-to-reflected-type-for-column"
 blocked-by: null

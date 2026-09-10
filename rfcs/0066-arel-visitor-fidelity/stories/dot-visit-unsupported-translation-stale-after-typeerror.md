@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 22
-pr: 5043
+pr: trails#5043
 claim: "2026-07-21T23:25:16Z"
 assignee: "dot-visit-unsupported-translation-stale-after-typeerror"
 blocked-by: null

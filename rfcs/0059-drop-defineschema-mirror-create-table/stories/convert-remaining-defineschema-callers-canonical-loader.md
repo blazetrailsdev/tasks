@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4550
+pr: trails#4550
 claim: "2026-07-04T14:49:31Z"
 assignee: "convert-remaining-defineschema-callers-canonical-loader"
 blocked-by: null

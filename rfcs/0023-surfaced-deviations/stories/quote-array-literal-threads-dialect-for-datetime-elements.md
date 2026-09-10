@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4851
+pr: trails#4851
 claim: "2026-07-13T20:52:34Z"
 assignee: "quote-array-literal-threads-dialect-for-datetime-elements"
 blocked-by: null

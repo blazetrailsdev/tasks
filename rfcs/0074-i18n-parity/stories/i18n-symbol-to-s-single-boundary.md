@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6052
+pr: trails#6052
 claim: "2026-08-04T12:44:44Z"
 assignee: "i18n-symbol-to-s-single-boundary"
 blocked-by: null

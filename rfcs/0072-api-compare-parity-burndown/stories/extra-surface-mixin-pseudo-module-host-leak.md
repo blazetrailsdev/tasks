@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5336
+pr: trails#5336
 claim: "2026-07-26T02:22:52Z"
 assignee: "extra-surface-mixin-pseudo-module-host-leak"
 blocked-by: null

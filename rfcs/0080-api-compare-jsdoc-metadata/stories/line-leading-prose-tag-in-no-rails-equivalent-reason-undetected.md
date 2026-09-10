@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5459
+pr: trails#5459
 claim: "2026-07-27T21:28:17Z"
 assignee: "line-leading-prose-tag-in-no-rails-equivalent-reason-undetected"
 blocked-by: null

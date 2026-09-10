@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 4
-pr: 4925
+pr: trails#4925
 claim: "2026-07-17T14:01:22Z"
 assignee: "serialized-canonicalkey-nan-non-reflexive-equality"
 blocked-by: null

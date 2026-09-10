@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4832
+pr: trails#4832
 claim: "2026-07-13T16:59:31Z"
 assignee: "d2-has-one-replacement-failure"
 blocked-by: null

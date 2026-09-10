@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 3657
+pr: trails#3657
 claim: "2026-06-19T16:36:32Z"
 assignee: "comments-on-first-posts-through-scope-canonical"
 blocked-by: null

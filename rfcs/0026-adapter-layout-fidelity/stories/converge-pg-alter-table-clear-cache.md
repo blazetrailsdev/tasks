@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3354
+pr: trails#3354
 claim: "2026-06-15T14:28:29Z"
 assignee: "converge-pg-alter-table-clear-cache"
 blocked-by: null

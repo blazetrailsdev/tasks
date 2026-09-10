@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4293
+pr: trails#4293
 claim: "2026-06-29T20:54:30Z"
 assignee: "relation-value-accessor-rails-semantics"
 blocked-by: null

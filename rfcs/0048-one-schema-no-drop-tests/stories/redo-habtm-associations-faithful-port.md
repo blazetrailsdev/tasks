@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 4373
+pr: trails#4373
 claim: "2026-07-01T14:24:49Z"
 assignee: "redo-habtm-associations-faithful-port"
 blocked-by: null

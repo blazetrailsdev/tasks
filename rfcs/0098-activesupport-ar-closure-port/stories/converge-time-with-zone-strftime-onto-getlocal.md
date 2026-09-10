@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6935
+pr: trails#6935
 claim: "2026-08-23T19:03:35Z"
 assignee: "converge-time-with-zone-strftime-onto-getlocal"
 blocked-by: null

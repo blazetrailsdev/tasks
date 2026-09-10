@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5377
+pr: trails#5377
 claim: "2026-07-26T23:50:56Z"
 assignee: "converge-base-query-cache-and-encryption-facade-bodies"
 blocked-by: null

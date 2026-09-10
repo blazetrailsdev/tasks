@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5737
+pr: trails#5737
 claim: "2026-07-31T18:38:55Z"
 assignee: "converge-merged-join-deps-into-joins-values"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: ["narrow-ruby-compat-leaf-guard-to-static-imports"]
 deps-rfc: []
 est-loc: 350
 priority: 13
-pr: 7462
+pr: trails#7462
 claim: "2026-09-03T22:18:08Z"
 assignee: "unexempt-file-and-dir-from-core-class-receivers"
 blocked-by: null

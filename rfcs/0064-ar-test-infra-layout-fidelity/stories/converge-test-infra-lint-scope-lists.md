@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: 5672
+pr: trails#5672
 claim: "2026-07-30T20:23:19Z"
 assignee: "converge-test-infra-lint-scope-lists"
 blocked-by: null

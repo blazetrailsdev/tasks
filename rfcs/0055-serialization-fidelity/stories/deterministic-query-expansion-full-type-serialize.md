@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5135
+pr: trails#5135
 claim: "2026-07-23T12:18:05Z"
 assignee: "deterministic-query-expansion-full-type-serialize"
 blocked-by: null

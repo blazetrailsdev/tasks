@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 30
-pr: 7233
+pr: trails#7233
 claim: "2026-08-30T11:55:50Z"
 assignee: "converge-ar-dirty-test-off-the-rec-alias"
 blocked-by: null

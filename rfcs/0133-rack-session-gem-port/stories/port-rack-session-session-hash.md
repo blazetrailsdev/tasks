@@ -9,7 +9,7 @@ deps: ["relocate-rack-session-scaffolding-out-of-actionpack"]
 deps-rfc: []
 est-loc: 450
 priority: 5
-pr: 7335
+pr: trails#7335
 claim: null
 assignee: null
 blocked-by: null

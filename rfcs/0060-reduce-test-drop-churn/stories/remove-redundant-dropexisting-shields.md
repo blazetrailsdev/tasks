@@ -8,7 +8,7 @@ deps: ["truncate-based-global-reset"]
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: 4475
+pr: trails#4475
 claim: "2026-07-04T13:34:28Z"
 assignee: "remove-redundant-dropexisting-shields"
 blocked-by: null

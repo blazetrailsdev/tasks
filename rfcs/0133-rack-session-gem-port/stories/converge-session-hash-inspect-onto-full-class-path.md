@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7344
+pr: trails#7344
 claim: "2026-09-01T17:30:06Z"
 assignee: "converge-session-hash-inspect-onto-full-class-path"
 blocked-by: null

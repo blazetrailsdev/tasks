@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 18
-pr: 4756
+pr: trails#4756
 claim: "2026-07-07T20:46:23Z"
 assignee: "schema-statements-duplicate-table-alias-length"
 blocked-by: null

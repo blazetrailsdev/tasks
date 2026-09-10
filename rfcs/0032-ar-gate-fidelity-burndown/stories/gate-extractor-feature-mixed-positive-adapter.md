@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 25
-pr: 5224
+pr: trails#5224
 claim: "2026-07-24T14:23:23Z"
 assignee: "gate-extractor-feature-mixed-positive-adapter"
 blocked-by: null

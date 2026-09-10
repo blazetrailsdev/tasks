@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3378
+pr: trails#3378
 claim: "2026-06-15T17:12:27Z"
 assignee: "relation-name-sqlliteral-unwrap-audit"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 3625
+pr: trails#3625
 claim: "2026-06-19T03:00:26Z"
 assignee: "belongs-to-association-primary-key-composite-pk-id-inference"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: 3288
+pr: trails#3288
 claim: "2026-06-14T21:16:11Z"
 assignee: "create-alias-double-dirties-query-cache"
 blocked-by: null

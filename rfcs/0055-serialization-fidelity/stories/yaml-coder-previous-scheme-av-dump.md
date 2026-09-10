@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5164
+pr: trails#5164
 claim: "2026-07-23T17:04:25Z"
 assignee: "yaml-coder-previous-scheme-av-dump"
 blocked-by: null

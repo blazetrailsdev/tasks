@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6613
+pr: trails#6613
 claim: "2026-08-16T21:13:33Z"
 assignee: "djar-eager-chain-ids-drop-disable-joins-arms"
 blocked-by: null

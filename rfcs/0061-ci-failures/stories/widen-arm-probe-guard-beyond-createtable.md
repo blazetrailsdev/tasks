@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5702
+pr: trails#5702
 claim: "2026-07-31T02:09:04Z"
 assignee: "widen-arm-probe-guard-beyond-createtable"
 blocked-by: null

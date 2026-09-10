@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4934
+pr: trails#4934
 claim: "2026-07-17T15:51:13Z"
 assignee: "quote-default-expression-serialize-and-default-prefix"
 blocked-by: null

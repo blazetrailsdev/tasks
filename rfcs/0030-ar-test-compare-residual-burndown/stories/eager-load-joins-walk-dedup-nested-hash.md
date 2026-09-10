@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4008
+pr: trails#4008
 claim: "2026-06-23T15:23:56Z"
 assignee: "eager-load-joins-walk-dedup-nested-hash"
 blocked-by: null

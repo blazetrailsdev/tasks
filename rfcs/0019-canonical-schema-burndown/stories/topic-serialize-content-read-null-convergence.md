@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4125
+pr: trails#4125
 claim: "2026-06-25T14:44:37Z"
 assignee: "topic-serialize-content-read-null-convergence"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 15
-pr: 5005
+pr: trails#5005
 claim: "2026-07-20T19:21:43Z"
 assignee: "arel-predications-in-not-in-enumerable-arm-iterable"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4600
+pr: trails#4600
 claim: "2026-07-05T11:07:29Z"
 assignee: "convert-pair-secure-validations-a"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 6291
+pr: trails#6291
 claim: "2026-08-09T18:59:16Z"
 assignee: "adapter-typecast-delegate-to-abstract-super"
 blocked-by: null

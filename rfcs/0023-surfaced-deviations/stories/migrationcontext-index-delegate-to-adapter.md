@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4568
+pr: trails#4568
 claim: "2026-07-04T20:07:07Z"
 assignee: "migrationcontext-index-delegate-to-adapter"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["cte-build-with-expression-ast"]
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: 3146
+pr: trails#3146
 claim: "2026-06-12T15:49:13Z"
 assignee: "cte-relation-arel-value-branches"
 blocked-by: null

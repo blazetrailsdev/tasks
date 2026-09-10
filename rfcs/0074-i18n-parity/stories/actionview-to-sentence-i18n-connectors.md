@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6040
+pr: trails#6040
 claim: "2026-08-04T01:33:59Z"
 assignee: "actionview-to-sentence-i18n-connectors"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5556
+pr: trails#5556
 claim: "2026-07-29T01:05:44Z"
 assignee: "next-bundle-prioritized-lead-busts-max-loc"
 blocked-by: null

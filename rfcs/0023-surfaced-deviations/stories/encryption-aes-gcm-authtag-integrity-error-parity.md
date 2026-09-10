@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: 3214
+pr: trails#3214
 claim: "2026-06-13T21:30:34Z"
 assignee: "encryption-aes-gcm-authtag-integrity-error-parity"
 blocked-by: null

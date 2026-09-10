@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3290
+pr: trails#3290
 claim: "2026-07-03T23:19:07Z"
 assignee: "includes-where-join-strategy-for-delete-update-all"
 blocked-by: null

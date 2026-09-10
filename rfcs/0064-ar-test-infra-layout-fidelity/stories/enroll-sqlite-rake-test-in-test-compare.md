@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6248
+pr: trails#6248
 claim: "2026-08-08T17:15:57Z"
 assignee: "enroll-sqlite-rake-test-in-test-compare"
 blocked-by: null

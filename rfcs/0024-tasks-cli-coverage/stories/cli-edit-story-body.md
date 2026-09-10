@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 31
-pr: 3200
+pr: trails#3200
 claim: "2026-06-13T19:24:33Z"
 assignee: "cli-edit-story-body"
 blocked-by: null

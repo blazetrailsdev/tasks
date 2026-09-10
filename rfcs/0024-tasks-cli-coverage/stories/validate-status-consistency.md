@@ -8,7 +8,7 @@ deps: ["validate-as-library"]
 deps-rfc: []
 est-loc: 250
 priority: 20
-pr: 53
+pr: tasks-legacy#53
 claim: "2026-06-22T11:39:59Z"
 assignee: "validate-status-consistency"
 blocked-by: null

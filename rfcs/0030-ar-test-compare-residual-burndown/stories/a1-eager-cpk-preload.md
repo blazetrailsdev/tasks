@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: 3927
+pr: trails#3927
 claim: "2026-06-22T21:23:14Z"
 assignee: "a1-eager-cpk-preload"
 blocked-by: null

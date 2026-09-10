@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 3606
+pr: trails#3606
 claim: "2026-06-18T21:43:06Z"
 assignee: "composite-hmt-composite-pk-target-convergence"
 blocked-by: null

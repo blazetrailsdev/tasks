@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 7
-pr: 4331
+pr: trails#4331
 claim: "2026-06-30T16:20:40Z"
 assignee: "redo-core-attribute-methods-faithful-port"
 blocked-by: null

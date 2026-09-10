@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5645
+pr: trails#5645
 claim: "2026-07-30T20:57:23Z"
 assignee: "cross-db-probe-drops-the-live-arunit2-database"
 blocked-by: null

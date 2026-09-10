@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 1
-pr: 4072
+pr: trails#4072
 claim: "2026-06-24T17:38:43Z"
 assignee: "unify-join-emission-build-joins"
 blocked-by: null

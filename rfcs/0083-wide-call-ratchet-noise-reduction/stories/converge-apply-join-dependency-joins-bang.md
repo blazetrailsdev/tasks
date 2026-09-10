@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5747
+pr: trails#5747
 claim: "2026-07-31T19:53:11Z"
 assignee: "converge-apply-join-dependency-joins-bang"
 blocked-by: null

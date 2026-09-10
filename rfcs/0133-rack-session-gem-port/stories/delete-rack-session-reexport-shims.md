@@ -9,7 +9,7 @@ deps: ["enroll-rack-session-test-suite"]
 deps-rfc: []
 est-loc: 250
 priority: 8
-pr: 7370
+pr: trails#7370
 claim: "2026-09-02T00:41:36Z"
 assignee: "delete-rack-session-reexport-shims"
 blocked-by: null

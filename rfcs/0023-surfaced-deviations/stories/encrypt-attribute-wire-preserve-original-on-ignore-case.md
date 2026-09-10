@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4412
+pr: trails#4412
 claim: "2026-07-02T14:57:58Z"
 assignee: "encrypt-attribute-wire-preserve-original-on-ignore-case"
 blocked-by: null

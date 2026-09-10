@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5669
+pr: trails#5669
 claim: "2026-07-30T20:05:19Z"
 assignee: "converge-fake-adapter-superclass-onto-abstract-adapter"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7105
+pr: trails#7105
 claim: "2026-08-26T21:48:02Z"
 assignee: "move-serialization-mixins-off-active-model-model"
 blocked-by: null

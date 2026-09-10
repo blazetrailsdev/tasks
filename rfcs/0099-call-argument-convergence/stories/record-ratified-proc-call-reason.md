@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: 6552
+pr: trails#6552
 claim: "2026-08-14T23:45:08Z"
 assignee: "record-ratified-proc-call-reason"
 blocked-by: null

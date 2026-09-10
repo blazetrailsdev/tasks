@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 14
-pr: 7535
+pr: trails#7535
 claim: "2026-09-05T20:51:57Z"
 assignee: "skeleton-throw-token-carries-the-raised-class"
 blocked-by: null

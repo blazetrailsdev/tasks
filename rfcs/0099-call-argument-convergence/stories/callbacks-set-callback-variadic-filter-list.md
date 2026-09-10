@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6491
+pr: trails#6491
 claim: "2026-08-13T19:35:39Z"
 assignee: "callbacks-set-callback-variadic-filter-list"
 blocked-by: null

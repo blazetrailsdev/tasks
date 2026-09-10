@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4974
+pr: trails#4974
 claim: "2026-07-19T22:01:10Z"
 assignee: "quote-column-name-array-tos-formatting"
 blocked-by: null

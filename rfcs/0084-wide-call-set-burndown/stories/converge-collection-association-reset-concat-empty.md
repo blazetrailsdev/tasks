@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6401
+pr: trails#6401
 claim: "2026-08-12T03:46:01Z"
 assignee: "converge-collection-association-reset-concat-empty"
 blocked-by: null

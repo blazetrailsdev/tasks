@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 5
-pr: 4692
+pr: trails#4692
 claim: "2026-07-06T18:38:56Z"
 assignee: "nested-through-preloader-recursive-scope-structuring"
 blocked-by: null

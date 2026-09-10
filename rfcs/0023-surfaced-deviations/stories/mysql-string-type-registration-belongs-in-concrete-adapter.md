@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4685
+pr: trails#4685
 claim: "2026-07-06T16:29:03Z"
 assignee: "mysql-string-type-registration-belongs-in-concrete-adapter"
 blocked-by: null

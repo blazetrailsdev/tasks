@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3995
+pr: trails#3995
 claim: "2026-06-23T13:32:53Z"
 assignee: "ar-test-reset-verify-raw-sql-burndown-churn-payoff"
 blocked-by: null

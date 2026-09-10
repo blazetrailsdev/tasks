@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3974
+pr: trails#3974
 claim: "2026-06-23T11:12:39Z"
 assignee: "cascaded-eager-join-emit-alias"
 blocked-by: null

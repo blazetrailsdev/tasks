@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 26
-pr: 5047
+pr: trails#5047
 claim: "2026-07-22T00:11:53Z"
 assignee: "select-manager-lock-missing-true-arm"
 blocked-by: null

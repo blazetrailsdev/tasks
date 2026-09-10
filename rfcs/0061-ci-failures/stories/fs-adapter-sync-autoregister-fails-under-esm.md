@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 10
-pr: 5314
+pr: trails#5314
 claim: "2026-07-25T19:26:52Z"
 assignee: "fs-adapter-sync-autoregister-fails-under-esm"
 blocked-by: null

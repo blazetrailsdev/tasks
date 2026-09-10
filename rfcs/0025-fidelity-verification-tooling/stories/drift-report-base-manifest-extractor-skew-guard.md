@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 4085
+pr: trails#4085
 claim: "2026-06-24T20:36:49Z"
 assignee: "drift-report-base-manifest-extractor-skew-guard"
 blocked-by: null

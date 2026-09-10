@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 7178
+pr: trails#7178
 claim: "2026-08-28T19:57:42Z"
 assignee: "timestamp-reload-schema-from-cache-is-never-dispatched"
 blocked-by: null

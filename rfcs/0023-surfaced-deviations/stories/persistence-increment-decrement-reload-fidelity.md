@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3798
+pr: trails#3798
 claim: "2026-06-21T14:46:41Z"
 assignee: "persistence-increment-decrement-reload-fidelity"
 blocked-by: null

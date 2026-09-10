@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 3666
+pr: trails#3666
 claim: "2026-06-19T18:57:31Z"
 blocked-by: null
 assignee: "inverse-associations-unskip-blocked"

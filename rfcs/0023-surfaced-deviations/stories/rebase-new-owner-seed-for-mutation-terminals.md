@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 45
 priority: null
-pr: 4862
+pr: trails#4862
 claim: "2026-07-14T13:22:36Z"
 assignee: "rebase-new-owner-seed-for-mutation-terminals"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6442
+pr: trails#6442
 claim: "2026-08-12T22:56:48Z"
 assignee: "convert-collection-removal-chain-to-sync-hybrid"
 blocked-by: null

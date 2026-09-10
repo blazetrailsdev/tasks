@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7560
+pr: trails#7560
 claim: "2026-09-06T15:18:14Z"
 assignee: "include-abstract-controller-caching-into-action-controller-base"
 blocked-by: null

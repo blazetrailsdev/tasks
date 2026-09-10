@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 31
-pr: 2685
+pr: trails#2685
 claim: "2026-06-06T00:45:20Z"
 assignee: "collection-size-identity-reconciliation"
 blocked-by: null

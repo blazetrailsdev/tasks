@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: 4590
+pr: trails#4590
 claim: "2026-07-05T02:37:27Z"
 assignee: "converge-setupfixtures-redundant-next-to-fixtures"
 blocked-by: null

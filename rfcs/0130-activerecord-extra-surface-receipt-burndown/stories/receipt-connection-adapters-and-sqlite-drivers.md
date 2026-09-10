@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: 7517
+pr: trails#7517
 claim: "2026-09-05T11:14:03Z"
 assignee: "receipt-connection-adapters-and-sqlite-drivers"
 blocked-by: null

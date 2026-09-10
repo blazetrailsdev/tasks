@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 50
-pr: 3422
+pr: trails#3422
 claim: "2026-06-17T16:21:38Z"
 assignee: "unscope-values-merge-replay"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4518
+pr: trails#4518
 claim: "2026-07-03T21:43:07Z"
 assignee: "hmt-unskip-through-scope"
 blocked-by: null

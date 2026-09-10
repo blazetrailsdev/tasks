@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6796
+pr: trails#6796
 claim: "2026-08-20T22:43:51Z"
 assignee: "issue-attribute-method-suffix-from-the-included-hook"
 blocked-by: null

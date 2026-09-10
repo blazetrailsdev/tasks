@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4115
+pr: trails#4115
 claim: "2026-06-25T12:59:32Z"
 assignee: "materialize-declares-nested-generator-gaps"
 blocked-by: null

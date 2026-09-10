@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 3
-pr: 4296
+pr: trails#4296
 claim: "2026-06-29T23:24:29Z"
 assignee: "sqlite-db-path-expansion-mkdir"
 blocked-by: null

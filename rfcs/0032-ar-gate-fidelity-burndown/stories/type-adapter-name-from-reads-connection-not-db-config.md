@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5181
+pr: trails#5181
 claim: "2026-07-23T21:27:09Z"
 assignee: "type-adapter-name-from-reads-connection-not-db-config"
 blocked-by: null

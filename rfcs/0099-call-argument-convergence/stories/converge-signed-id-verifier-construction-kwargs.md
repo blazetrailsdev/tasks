@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6476
+pr: trails#6476
 claim: "2026-08-13T16:55:39Z"
 assignee: "attribute-set-coder-rename-to-yaml-encoder"
 blocked-by: null

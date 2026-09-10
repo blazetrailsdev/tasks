@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4338
+pr: trails#4338
 claim: "2026-06-30T17:08:39Z"
 assignee: "converge-abstract-mysql-schema-migrations-rails-port"
 blocked-by: null

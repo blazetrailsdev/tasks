@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 62
-pr: 7383
+pr: trails#7383
 claim: "2026-09-02T11:42:52Z"
 assignee: "port-lazy-attribute-hash-delegate-to-a-record"
 blocked-by: null

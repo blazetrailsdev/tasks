@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5515
+pr: trails#5515
 claim: "2026-07-28T15:27:26Z"
 assignee: "resolve-pool-config-validate-bang"
 blocked-by: null

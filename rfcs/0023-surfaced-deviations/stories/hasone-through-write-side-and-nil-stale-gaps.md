@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4469
+pr: trails#4469
 claim: "2026-07-03T03:09:55Z"
 assignee: "hasone-through-write-side-and-nil-stale-gaps"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["route-establish-connection-string-hash-through-resolver"]
 deps-rfc: []
 est-loc: 100
 priority: 20
-pr: 3868
+pr: trails#3868
 claim: "2026-06-22T11:31:57Z"
 assignee: "funnel-autoconnect-through-object-path"
 blocked-by: null

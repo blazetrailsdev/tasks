@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 10
-pr: 7348
+pr: trails#7348
 claim: "2026-09-01T17:28:51Z"
 assignee: "converge-rack-request-path-info-default"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6297
+pr: trails#6297
 claim: "2026-08-09T20:29:15Z"
 assignee: "date-carries-no-nth-so-huge-years-lose-exactness"
 blocked-by: null

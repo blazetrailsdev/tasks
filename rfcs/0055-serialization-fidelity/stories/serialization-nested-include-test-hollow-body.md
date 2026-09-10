@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 6
-pr: 4693
+pr: trails#4693
 claim: "2026-07-06T18:53:52Z"
 assignee: "serialization-nested-include-test-hollow-body"
 blocked-by: null

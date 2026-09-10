@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 1
-pr: 6999
+pr: trails#6999
 claim: "2026-08-24T18:04:22Z"
 assignee: "descendants-tracker-weakset-include-predicate-name"
 blocked-by: null

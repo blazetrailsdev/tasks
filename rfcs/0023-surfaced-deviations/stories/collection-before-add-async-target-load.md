@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3651
+pr: trails#3651
 claim: "2026-06-19T15:24:27Z"
 assignee: "collection-before-add-async-target-load"
 blocked-by: null

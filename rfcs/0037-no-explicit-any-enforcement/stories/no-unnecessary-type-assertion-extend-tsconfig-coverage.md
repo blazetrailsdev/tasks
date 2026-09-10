@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 20
-pr: 3914
+pr: trails#3914
 claim: "2026-06-22T19:23:16Z"
 assignee: "no-unnecessary-type-assertion-extend-tsconfig-coverage"
 blocked-by: null

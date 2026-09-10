@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 3235
+pr: trails#3235
 claim: "2026-06-14T02:06:33Z"
 assignee: "f9-statement-cache-pool-introspection"
 blocked-by: null

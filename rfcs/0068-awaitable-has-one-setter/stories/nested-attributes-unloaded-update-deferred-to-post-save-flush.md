@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5643
+pr: trails#5643
 claim: "2026-07-30T14:26:19Z"
 assignee: "nested-attributes-unloaded-update-deferred-to-post-save-flush"
 blocked-by: null

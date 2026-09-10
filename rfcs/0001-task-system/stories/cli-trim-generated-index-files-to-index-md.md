@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 31
-pr: 3175
+pr: trails#3175
 claim: "2026-06-13T02:08:31Z"
 assignee: "cli-trim-generated-index-files-to-index-md"
 blocked-by: null

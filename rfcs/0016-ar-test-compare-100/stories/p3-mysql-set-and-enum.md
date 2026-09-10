@@ -8,7 +8,7 @@ deps: ["i1-schema-dumper-columnspec-u3"]
 deps-rfc: []
 est-loc: 60
 priority: 17
-pr: 3057
+pr: trails#3057
 claim: "2026-06-09T14:06:45Z"
 assignee: "p3-mysql-set-and-enum"
 blocked-by: null

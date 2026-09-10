@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5927
+pr: trails#5927
 claim: "2026-08-02T22:35:46Z"
 assignee: "extra-surface-adapter-class-names"
 blocked-by: null

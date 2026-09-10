@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: 6429
+pr: trails#6429
 claim: "2026-08-12T17:56:51Z"
 assignee: "converge-create-record-with-connection-and-attributes-with-values"
 blocked-by: null

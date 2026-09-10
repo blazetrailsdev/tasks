@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6247
+pr: trails#6247
 claim: "2026-08-08T14:51:58Z"
 assignee: "migration-ar-config-slot-members-are-spuriously-optional"
 blocked-by: null

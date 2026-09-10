@@ -8,7 +8,7 @@ deps: ["relation-handler-distinct-pk-load-time-materialization"]
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: 4073
+pr: trails#4073
 claim: "2026-06-24T17:50:40Z"
 assignee: "using-limitable-reflections-joins-leftjoins-convergence"
 blocked-by: null

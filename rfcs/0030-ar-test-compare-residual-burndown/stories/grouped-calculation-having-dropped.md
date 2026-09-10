@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 15
-pr: 5184
+pr: trails#5184
 claim: "2026-07-23T21:57:09Z"
 assignee: "grouped-calculation-having-dropped"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: 3212
+pr: trails#3212
 claim: "2026-06-13T21:18:34Z"
 assignee: "composite-fk-belongs-to-counter-cache-callbacks"
 blocked-by: null

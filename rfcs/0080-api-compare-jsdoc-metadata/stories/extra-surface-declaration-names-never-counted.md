@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5653
+pr: trails#5653
 claim: "2026-07-30T18:05:16Z"
 assignee: "extra-surface-declaration-names-never-counted"
 blocked-by: null

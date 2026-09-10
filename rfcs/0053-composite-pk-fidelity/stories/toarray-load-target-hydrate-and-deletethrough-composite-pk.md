@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: 4698
+pr: trails#4698
 claim: "2026-07-06T19:53:59Z"
 assignee: "toarray-load-target-hydrate-and-deletethrough-composite-pk"
 blocked-by: null

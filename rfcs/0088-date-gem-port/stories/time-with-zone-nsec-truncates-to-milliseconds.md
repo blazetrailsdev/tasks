@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6158
+pr: trails#6158
 claim: "2026-08-06T15:23:07Z"
 assignee: "time-with-zone-nsec-truncates-to-milliseconds"
 blocked-by: null

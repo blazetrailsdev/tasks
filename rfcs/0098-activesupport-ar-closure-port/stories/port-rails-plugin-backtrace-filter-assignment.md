@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6499
+pr: trails#6499
 claim: "2026-08-14T00:45:17Z"
 assignee: "converge-strict-loading-violation-signature"
 blocked-by: null

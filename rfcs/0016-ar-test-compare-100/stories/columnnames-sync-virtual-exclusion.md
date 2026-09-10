@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3268
+pr: trails#3268
 claim: "2026-06-14T17:06:34Z"
 assignee: "columnnames-sync-virtual-exclusion"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3422
+pr: trails#3422
 claim: "2026-06-15T23:40:28Z"
 assignee: "b2-unscope-where-merge-reset"
 blocked-by: null

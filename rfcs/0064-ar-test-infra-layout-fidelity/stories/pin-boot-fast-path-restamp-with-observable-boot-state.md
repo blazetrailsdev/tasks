@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5718
+pr: trails#5718
 claim: "2026-07-31T16:15:05Z"
 assignee: "pin-boot-fast-path-restamp-with-observable-boot-state"
 blocked-by: null

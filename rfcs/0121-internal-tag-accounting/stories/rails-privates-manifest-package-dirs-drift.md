@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6993
+pr: trails#6993
 claim: "2026-08-24T15:34:50Z"
 assignee: "deanmarano"
 blocked-by: null

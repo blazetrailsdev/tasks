@@ -8,7 +8,7 @@ deps: ["extract-pg-schema-statements-fks"]
 deps-rfc: []
 est-loc: 420
 priority: null
-pr: 3356
+pr: trails#3356
 claim: "2026-06-15T14:41:09Z"
 assignee: "extract-pg-schema-statements-constraints"
 blocked-by: null

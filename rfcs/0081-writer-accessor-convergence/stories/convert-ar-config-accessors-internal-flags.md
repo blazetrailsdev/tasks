@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5564
+pr: trails#5564
 claim: "2026-07-29T02:35:44Z"
 assignee: "convert-ar-config-accessors-internal-flags"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 7024
+pr: trails#7024
 claim: "2026-08-25T01:44:12Z"
 assignee: "retire-attribute-set-narrow-to"
 blocked-by: null

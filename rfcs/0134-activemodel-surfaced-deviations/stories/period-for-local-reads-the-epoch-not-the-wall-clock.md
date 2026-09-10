@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7577
+pr: trails#7577
 claim: "2026-09-06T20:10:04Z"
 assignee: "json-serialization-tests-stand-ins-are-person-not-contact"
 blocked-by: null

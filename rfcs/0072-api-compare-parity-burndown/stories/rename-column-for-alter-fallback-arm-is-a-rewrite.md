@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6228
+pr: trails#6228
 claim: "2026-08-08T10:39:59Z"
 assignee: "rename-column-for-alter-fallback-arm-is-a-rewrite"
 blocked-by: null

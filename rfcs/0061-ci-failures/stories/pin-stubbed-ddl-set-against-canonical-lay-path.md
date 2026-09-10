@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: 5709
+pr: trails#5709
 claim: "2026-07-31T15:03:06Z"
 assignee: "pin-stubbed-ddl-set-against-canonical-lay-path"
 blocked-by: null

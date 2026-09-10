@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 20
-pr: 3079
+pr: trails#3079
 claim: "2026-06-10T11:31:13Z"
 assignee: "relation-includes-count-join-dependency"
 blocked-by: null

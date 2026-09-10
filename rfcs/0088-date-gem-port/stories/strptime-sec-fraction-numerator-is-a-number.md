@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6192
+pr: trails#6192
 claim: "2026-08-07T18:48:45Z"
 assignee: "strptime-sec-fraction-numerator-is-a-number"
 blocked-by: null

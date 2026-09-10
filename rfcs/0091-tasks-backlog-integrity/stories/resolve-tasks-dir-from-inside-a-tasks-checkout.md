@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 66
+pr: tasks-legacy#66
 claim: "2026-08-17T16:29:30Z"
 assignee: "resolve-tasks-dir-from-inside-a-tasks-checkout"
 blocked-by: null

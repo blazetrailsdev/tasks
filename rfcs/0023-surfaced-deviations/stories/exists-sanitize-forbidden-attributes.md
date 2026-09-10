@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4456
+pr: trails#4456
 claim: "2026-07-03T00:21:51Z"
 assignee: "exists-sanitize-forbidden-attributes"
 blocked-by: null

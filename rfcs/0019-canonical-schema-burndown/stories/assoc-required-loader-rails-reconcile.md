@@ -8,7 +8,7 @@ deps: ["associations-eager-join-cluster"]
 deps-rfc: []
 est-loc: 150
 priority: 15
-pr: 4148
+pr: trails#4148
 claim: "2026-06-25T20:17:15Z"
 assignee: "assoc-required-loader-rails-reconcile"
 blocked-by: null

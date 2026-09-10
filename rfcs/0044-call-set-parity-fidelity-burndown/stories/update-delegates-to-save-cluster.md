@@ -8,7 +8,7 @@ deps: ["call-mismatches-ratcheting-baseline"]
 deps-rfc: []
 est-loc: 150
 priority: 2
-pr: 4289
+pr: trails#4289
 claim: "2026-06-29T19:38:40Z"
 assignee: "update-delegates-to-save-cluster"
 blocked-by: null

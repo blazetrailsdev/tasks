@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: 2
-pr: 7341
+pr: trails#7341
 claim: "2026-09-01T16:00:48Z"
 assignee: "metaprogrammed-method-bodies-invisible-to-call-gates"
 blocked-by: null

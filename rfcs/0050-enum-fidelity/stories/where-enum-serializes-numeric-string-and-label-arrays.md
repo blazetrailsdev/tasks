@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 17
-pr: 4754
+pr: trails#4754
 claim: "2026-07-07T19:25:50Z"
 assignee: "where-enum-serializes-numeric-string-and-label-arrays"
 blocked-by: null

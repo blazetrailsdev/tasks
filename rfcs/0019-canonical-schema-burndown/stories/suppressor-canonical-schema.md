@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 14
-pr: 4147
+pr: trails#4147
 claim: "2026-06-25T20:02:15Z"
 assignee: "suppressor-canonical-schema"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7104
+pr: trails#7104
 claim: "2026-08-26T22:18:03Z"
 assignee: "move-attribute-mixins-off-active-model-model"
 blocked-by: null

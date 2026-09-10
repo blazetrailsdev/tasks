@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5793
+pr: trails#5793
 claim: "2026-08-01T03:23:46Z"
 assignee: "route-remaining-migrationcontext-dsl-callers-onto-schema-statements"
 blocked-by: null

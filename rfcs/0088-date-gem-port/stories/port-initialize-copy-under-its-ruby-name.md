@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 6372
+pr: trails#6372
 claim: "2026-08-11T18:05:53Z"
 assignee: "burndown-annotate-verified-equivalents"
 blocked-by: null

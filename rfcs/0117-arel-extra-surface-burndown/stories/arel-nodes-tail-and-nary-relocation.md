@@ -9,7 +9,7 @@ deps: ["arel-node-accept-removal-members"]
 deps-rfc: []
 est-loc: 200
 priority: 9
-pr: 6867
+pr: trails#6867
 claim: "2026-08-22T17:05:00Z"
 assignee: "query-methods-order-only-call-inversions"
 blocked-by: null

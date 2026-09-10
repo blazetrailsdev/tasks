@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3587
+pr: trails#3587
 claim: "2026-06-18T14:52:07Z"
 assignee: "assoc-direct-loader-polymorphic-type-uses-polymorphic-name"
 blocked-by: null

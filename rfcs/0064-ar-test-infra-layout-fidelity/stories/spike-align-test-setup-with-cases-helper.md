@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 5309
+pr: trails#5309
 claim: "2026-07-25T15:34:40Z"
 assignee: "spike-align-test-setup-with-cases-helper"
 blocked-by: null

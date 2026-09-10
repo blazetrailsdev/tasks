@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6387
+pr: trails#6387
 claim: "2026-08-11T23:34:34Z"
 assignee: "call-args-ar-collection-proxy-delete-all-delegation"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4416
+pr: trails#4416
 claim: "2026-07-02T15:57:52Z"
 assignee: "enum-validate-option"
 blocked-by: null

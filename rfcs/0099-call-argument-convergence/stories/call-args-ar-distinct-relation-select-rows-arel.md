@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6363
+pr: trails#6363
 claim: "2026-08-11T15:26:09Z"
 assignee: "pg-query-canceled-unhandled-rejection-recurrence"
 blocked-by: null

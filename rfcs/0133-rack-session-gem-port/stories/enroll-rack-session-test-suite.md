@@ -9,7 +9,7 @@ deps: ["port-rack-session-session-hash", "port-rack-session-abstract-persisted-b
 deps-rfc: []
 est-loc: 600
 priority: 7
-pr: 7356
+pr: trails#7356
 claim: "2026-09-01T18:53:58Z"
 assignee: "enroll-rack-session-test-suite"
 blocked-by: null

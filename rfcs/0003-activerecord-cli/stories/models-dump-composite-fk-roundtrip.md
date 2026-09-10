@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 30
-pr: 3003
+pr: trails#3003
 claim: "2026-06-07T19:19:52Z"
 assignee: "models-dump-composite-fk-roundtrip"
 blocked-by: null

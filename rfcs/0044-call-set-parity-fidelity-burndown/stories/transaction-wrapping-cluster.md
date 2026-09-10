@@ -8,7 +8,7 @@ deps: ["call-mismatches-ratcheting-baseline"]
 deps-rfc: []
 est-loc: 100
 priority: 2
-pr: 4288
+pr: trails#4288
 claim: "2026-06-29T19:23:39Z"
 assignee: "transaction-wrapping-cluster"
 blocked-by: null

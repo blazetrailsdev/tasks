@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 50
-pr: 3532
+pr: trails#3532
 claim: "2026-06-17T11:46:25Z"
 assignee: "pg-typemap-eager-load-vs-lazy-defer"
 blocked-by: null

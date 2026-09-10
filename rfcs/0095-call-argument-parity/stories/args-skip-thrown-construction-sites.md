@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6889
+pr: trails#6889
 claim: "2026-08-22T23:01:35Z"
 assignee: "args-skip-thrown-construction-sites"
 blocked-by: null

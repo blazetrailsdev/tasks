@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6272
+pr: trails#6272
 claim: "2026-08-09T01:45:47Z"
 assignee: "date-to-date-seat-raises-on-julian-only-spellings"
 blocked-by: null

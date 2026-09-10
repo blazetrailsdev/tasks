@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6571
+pr: trails#6571
 claim: "2026-08-15T17:45:08Z"
 assignee: "except-only-go-through-relation-with-values"
 blocked-by: null

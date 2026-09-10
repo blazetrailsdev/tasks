@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5153
+pr: trails#5153
 claim: "2026-07-23T15:01:34Z"
 assignee: "pool-connected-predicate-skips-per-connection-probe"
 blocked-by: null

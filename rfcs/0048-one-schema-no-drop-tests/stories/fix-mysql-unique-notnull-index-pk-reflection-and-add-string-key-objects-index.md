@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 7
-pr: 4379
+pr: trails#4379
 claim: "2026-07-01T17:38:12Z"
 assignee: "fix-mysql-unique-notnull-index-pk-reflection-and-add-string-key-objects-index"
 blocked-by: null

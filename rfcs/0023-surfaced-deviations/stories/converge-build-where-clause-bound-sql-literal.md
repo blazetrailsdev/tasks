@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3693
+pr: trails#3693
 claim: "2026-06-20T02:01:35Z"
 assignee: "converge-build-where-clause-bound-sql-literal"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: 5129
+pr: trails#5129
 claim: "2026-07-23T11:34:37Z"
 assignee: "divergent-test-data-fidelity-sweep"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4958
+pr: trails#4958
 claim: "2026-07-19T15:01:09Z"
 assignee: "require-host-receiver-quote-table-name-default-expression"
 blocked-by: null

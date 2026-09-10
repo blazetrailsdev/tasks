@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 7476
+pr: trails#7476
 claim: "2026-09-04T12:29:20Z"
 assignee: "fileutils-copy-file-drops-rubys-dereference-argument"
 blocked-by: null

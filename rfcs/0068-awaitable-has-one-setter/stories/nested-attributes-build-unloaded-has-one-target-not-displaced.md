@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5456
+pr: trails#5456
 claim: "2026-07-27T21:10:16Z"
 assignee: "nested-attributes-build-unloaded-has-one-target-not-displaced"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: 3594
+pr: trails#3594
 claim: "2026-06-18T17:13:10Z"
 assignee: "pg-untyped-pk-int8-deserialization"
 blocked-by: null

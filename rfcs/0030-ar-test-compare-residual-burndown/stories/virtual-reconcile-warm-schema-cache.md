@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: 50
-pr: 3592
+pr: trails#3592
 claim: "2026-06-18T15:50:05Z"
 assignee: "virtual-reconcile-warm-schema-cache"
 blocked-by: null

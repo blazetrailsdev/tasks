@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: 4441
+pr: trails#4441
 claim: "2026-07-02T21:21:42Z"
 assignee: "create-table-canonical-schema-loader"
 blocked-by: null

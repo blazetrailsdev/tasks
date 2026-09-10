@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 3
-pr: 4623
+pr: trails#4623
 claim: "2026-07-05T16:52:27Z"
 assignee: "pirate-catchphrase-skip-columns-converge"
 blocked-by: null

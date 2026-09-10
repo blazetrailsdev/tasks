@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4535
+pr: trails#4535
 claim: "2026-07-04T02:07:37Z"
 assignee: "invertible-migration-revert-engine-gaps"
 blocked-by: null

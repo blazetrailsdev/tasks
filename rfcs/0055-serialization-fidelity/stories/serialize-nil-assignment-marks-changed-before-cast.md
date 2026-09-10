@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 44
-pr: 4736
+pr: trails#4736
 claim: "2026-07-07T13:37:52Z"
 assignee: "serialize-nil-assignment-marks-changed-before-cast"
 blocked-by: null

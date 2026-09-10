@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 30
-pr: 7020
+pr: trails#7020
 claim: "2026-08-25T00:30:08Z"
 assignee: "relocate-model-name-to-naming-module"
 blocked-by: null

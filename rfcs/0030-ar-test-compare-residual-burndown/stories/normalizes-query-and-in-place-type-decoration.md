@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4621
+pr: trails#4621
 claim: "2026-07-05T15:52:28Z"
 assignee: "normalizes-query-and-in-place-type-decoration"
 blocked-by: null

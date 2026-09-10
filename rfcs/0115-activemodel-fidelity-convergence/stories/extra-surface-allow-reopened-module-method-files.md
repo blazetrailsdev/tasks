@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6978
+pr: trails#6978
 claim: null
 assignee: null
 blocked-by: null

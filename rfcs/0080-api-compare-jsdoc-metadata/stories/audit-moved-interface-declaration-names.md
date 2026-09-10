@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5675
+pr: trails#5675
 claim: "2026-07-30T20:45:21Z"
 assignee: "audit-moved-interface-declaration-names"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3700
+pr: trails#3700
 claim: "2026-06-20T03:10:43Z"
 assignee: "deprecate-return-false-callback-halt-alias"
 blocked-by: null

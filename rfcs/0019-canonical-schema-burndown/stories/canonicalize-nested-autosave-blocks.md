@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: 3637
+pr: trails#3637
 claim: "2026-06-19T12:12:27Z"
 assignee: "canonicalize-nested-autosave-blocks"
 blocked-by: null

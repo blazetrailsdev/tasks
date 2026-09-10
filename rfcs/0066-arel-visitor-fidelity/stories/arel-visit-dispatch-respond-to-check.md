@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 24
-pr: 5046
+pr: trails#5046
 claim: "2026-07-21T23:56:49Z"
 assignee: "arel-visit-dispatch-respond-to-check"
 blocked-by: null

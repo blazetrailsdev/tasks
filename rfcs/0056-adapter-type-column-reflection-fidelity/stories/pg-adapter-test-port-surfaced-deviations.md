@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 32
-pr: 4725
+pr: trails#4725
 claim: "2026-07-07T03:33:35Z"
 assignee: "pg-adapter-test-port-surfaced-deviations"
 blocked-by: null

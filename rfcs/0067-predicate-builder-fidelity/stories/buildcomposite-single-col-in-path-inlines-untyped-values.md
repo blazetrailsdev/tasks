@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 10
-pr: 5207
+pr: trails#5207
 claim: "2026-07-24T02:08:23Z"
 assignee: "buildcomposite-single-col-in-path-inlines-untyped-values"
 blocked-by: null

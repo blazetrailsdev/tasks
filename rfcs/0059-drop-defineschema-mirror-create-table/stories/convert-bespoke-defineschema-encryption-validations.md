@@ -8,7 +8,7 @@ deps: ["create-table-canonical-schema-loader"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4449
+pr: trails#4449
 claim: "2026-07-02T22:57:49Z"
 assignee: "convert-bespoke-defineschema-encryption-validations"
 blocked-by: null

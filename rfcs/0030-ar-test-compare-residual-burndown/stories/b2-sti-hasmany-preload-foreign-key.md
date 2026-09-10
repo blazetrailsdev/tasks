@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 3421
+pr: trails#3421
 claim: "2026-06-15T23:16:27Z"
 assignee: "b2-sti-hasmany-preload-foreign-key"
 blocked-by: null

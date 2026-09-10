@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4918
+pr: trails#4918
 claim: "2026-07-17T01:21:11Z"
 assignee: "callback-object-compiles-to-objectcall"
 blocked-by: null

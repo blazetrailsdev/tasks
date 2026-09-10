@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4684
+pr: trails#4684
 claim: "2026-07-06T16:16:59Z"
 assignee: "internal-exec-query-bind-aware-shared-returning-readback"
 blocked-by: null

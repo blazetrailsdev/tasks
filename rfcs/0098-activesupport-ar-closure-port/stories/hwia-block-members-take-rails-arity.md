@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6575
+pr: trails#6575
 claim: "2026-08-15T19:15:06Z"
 assignee: "apply-join-dependency-limitability-guard-extracted-twice"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 4946
+pr: trails#4946
 claim: "2026-07-19T01:11:11Z"
 assignee: "port-notifications-module-subscribed-monotonic"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 3168
+pr: trails#3168
 claim: "2026-06-13T00:26:53Z"
 assignee: "abstract-quoting-helpers-broader-than-rails"
 blocked-by: null

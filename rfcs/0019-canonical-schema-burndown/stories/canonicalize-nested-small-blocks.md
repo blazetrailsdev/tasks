@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 3643
+pr: trails#3643
 claim: "2026-06-19T13:48:26Z"
 assignee: "canonicalize-nested-small-blocks"
 blocked-by: null

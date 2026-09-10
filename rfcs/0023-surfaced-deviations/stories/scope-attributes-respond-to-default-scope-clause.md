@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3389
+pr: trails#3389
 claim: "2026-06-15T18:24:26Z"
 assignee: "scope-attributes-respond-to-default-scope-clause"
 blocked-by: null

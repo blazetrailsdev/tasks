@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3210
+pr: trails#3210
 claim: "2026-06-13T21:04:43Z"
 assignee: "bigdecimal-type-absent-quote-no-decimal-point"
 blocked-by: null

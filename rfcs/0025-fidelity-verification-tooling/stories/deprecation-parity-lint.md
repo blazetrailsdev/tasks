@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 16
-pr: 3165
+pr: trails#3165
 claim: "2026-06-12T22:26:39Z"
 assignee: "deprecation-parity-lint"
 blocked-by: null

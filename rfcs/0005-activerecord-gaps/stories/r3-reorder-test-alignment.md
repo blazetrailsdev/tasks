@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 15
-pr: 2952
+pr: trails#2952
 claim: "2026-06-05T15:29:41Z"
 assignee: "r3-reorder-test-alignment"
 blocked-by: null

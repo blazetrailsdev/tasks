@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 54
-pr: 5056
+pr: trails#5056
 claim: "2026-07-22T14:26:58Z"
 assignee: "arel-tests-rails-named-placeholder-bodies-inflate-test-compare"
 blocked-by: null

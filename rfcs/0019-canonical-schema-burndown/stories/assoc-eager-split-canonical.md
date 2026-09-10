@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 1
-pr: 3458
+pr: trails#3458
 claim: "2026-06-16T14:13:37Z"
 assignee: "assoc-eager-split-canonical"
 blocked-by: null

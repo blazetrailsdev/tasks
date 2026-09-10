@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5541
+pr: trails#5541
 claim: "2026-07-28T22:35:45Z"
 assignee: "adapter-type-maps-inline-base-map-drop-aliases"
 blocked-by: null

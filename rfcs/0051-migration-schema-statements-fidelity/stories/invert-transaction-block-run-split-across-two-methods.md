@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 7175
+pr: trails#7175
 claim: "2026-08-28T17:46:26Z"
 assignee: "invert-transaction-block-run-split-across-two-methods"
 blocked-by: null

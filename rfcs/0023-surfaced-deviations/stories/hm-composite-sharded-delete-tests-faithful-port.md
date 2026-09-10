@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3739
+pr: trails#3739
 claim: "2026-06-20T19:58:04Z"
 assignee: "hm-composite-sharded-delete-tests-faithful-port"
 blocked-by: null

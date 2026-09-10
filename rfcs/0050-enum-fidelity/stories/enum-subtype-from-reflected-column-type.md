@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 9
-pr: 4748
+pr: trails#4748
 claim: "2026-07-07T18:13:49Z"
 assignee: "enum-subtype-from-reflected-column-type"
 blocked-by: null

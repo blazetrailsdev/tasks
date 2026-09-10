@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: 7143
+pr: trails#7143
 claim: "2026-08-28T00:45:13Z"
 assignee: "r4-drop-tableless-synthesize-from-declarations"
 blocked-by: null

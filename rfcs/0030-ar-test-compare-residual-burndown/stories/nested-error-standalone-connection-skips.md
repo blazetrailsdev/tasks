@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: 5091
+pr: trails#5091
 claim: "2026-07-22T23:13:03Z"
 assignee: "nested-error-standalone-connection-skips"
 blocked-by: null

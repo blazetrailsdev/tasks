@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: 5214
+pr: trails#5214
 claim: "2026-07-24T04:38:27Z"
 assignee: "rails-callback-invocation-rule-file-scoped"
 blocked-by: null

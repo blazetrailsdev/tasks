@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 10
-pr: 6756
+pr: trails#6756
 claim: "2026-08-20T01:52:31Z"
 assignee: "derive-collection-proxy-delegate-list-from-mixin-keys"
 blocked-by: null

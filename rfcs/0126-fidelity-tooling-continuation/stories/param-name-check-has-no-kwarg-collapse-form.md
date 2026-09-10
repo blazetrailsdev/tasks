@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 3
-pr: 7171
+pr: trails#7171
 claim: "2026-09-01T17:59:08Z"
 assignee: "test-compare-gate-stack-does-not-follow-a-helper-call"
 blocked-by: null

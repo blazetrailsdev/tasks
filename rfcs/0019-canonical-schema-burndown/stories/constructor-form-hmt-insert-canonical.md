@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 150
 priority: 18
-pr: 4154
+pr: trails#4154
 claim: "2026-06-25T21:32:16Z"
 assignee: "constructor-form-hmt-insert-canonical"
 blocked-by: null

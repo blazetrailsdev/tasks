@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6544
+pr: trails#6544
 claim: "2026-08-14T21:15:06Z"
 assignee: "sqlite3-internal-exec-query-delegates-to-raw-execute"
 blocked-by: null

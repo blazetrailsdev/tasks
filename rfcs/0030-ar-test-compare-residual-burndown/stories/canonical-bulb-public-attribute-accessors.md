@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3634
+pr: trails#3634
 claim: "2026-06-19T11:48:25Z"
 assignee: "canonical-bulb-public-attribute-accessors"
 blocked-by: null

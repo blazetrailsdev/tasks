@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6978
+pr: trails#6978
 claim: "2026-08-24T12:03:42Z"
 assignee: "extra-surface-allow-reopened-module-method-files"
 blocked-by: null

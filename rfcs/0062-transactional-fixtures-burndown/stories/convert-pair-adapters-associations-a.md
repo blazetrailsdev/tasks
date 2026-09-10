@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4597
+pr: trails#4597
 claim: "2026-07-05T04:37:27Z"
 assignee: "convert-pair-adapters-associations-a"
 blocked-by: null

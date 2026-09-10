@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: 5558
+pr: trails#5558
 claim: "2026-07-29T01:35:45Z"
 assignee: "port-migration-change-schema-cases"
 blocked-by: null

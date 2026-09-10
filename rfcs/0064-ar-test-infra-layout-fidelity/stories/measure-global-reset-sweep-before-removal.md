@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5707
+pr: trails#5707
 claim: "2026-07-31T02:00:04Z"
 assignee: "measure-global-reset-sweep-before-removal"
 blocked-by: null

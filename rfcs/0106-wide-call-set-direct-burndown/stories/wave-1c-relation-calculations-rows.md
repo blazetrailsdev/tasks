@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: 6564
+pr: trails#6564
 claim: "2026-08-15T13:45:02Z"
 assignee: "wave-1c-relation-calculations-rows"
 blocked-by: null

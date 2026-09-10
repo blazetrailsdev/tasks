@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5764
+pr: trails#5764
 claim: "2026-07-31T22:20:43Z"
 assignee: "align-cross-file-audit-with-shipped-resolution"
 blocked-by: null

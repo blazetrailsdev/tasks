@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 1
-pr: 5228
+pr: trails#5228
 claim: "2026-07-24T15:34:55Z"
 assignee: "fix-hot-compatibilities-pg-cached-plan-flake"
 blocked-by: null

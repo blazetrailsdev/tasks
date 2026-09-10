@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3577
+pr: trails#3577
 claim: "2026-06-18T02:52:06Z"
 assignee: "assoc-associations-test-finder-sql-inverse-on-create"
 blocked-by: null

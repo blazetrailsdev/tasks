@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 45
 priority: null
-pr: 5540
+pr: trails#5540
 claim: "2026-07-28T22:25:43Z"
 assignee: "relocate-describe-if-pg-and-mysql-out-of-adapters-trees"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5808
+pr: trails#5808
 claim: "2026-08-01T18:03:00Z"
 assignee: "create-table-table-comment-read-from-options-not-td"
 blocked-by: null

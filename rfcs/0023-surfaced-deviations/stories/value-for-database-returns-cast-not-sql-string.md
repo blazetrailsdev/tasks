@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 40
-pr: 3956
+pr: trails#3956
 claim: "2026-06-23T02:27:16Z"
 assignee: "value-for-database-returns-cast-not-sql-string"
 blocked-by: null

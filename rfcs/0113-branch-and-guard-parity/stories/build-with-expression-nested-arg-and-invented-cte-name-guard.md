@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 7255
+pr: trails#7255
 claim: "2026-08-30T16:34:54Z"
 assignee: "build-with-expression-nested-arg-and-invented-cte-name-guard"
 blocked-by: null

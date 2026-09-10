@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 8
-pr: 7375
+pr: trails#7375
 claim: "2026-09-02T01:36:12Z"
 assignee: "bridge-activesupport-railtie-registry-into-application-initialize"
 blocked-by: null

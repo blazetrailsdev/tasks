@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6490
+pr: trails#6490
 claim: "2026-08-13T19:25:38Z"
 assignee: "call-args-tool-pairing-ties-strand-blockpass-sites"
 blocked-by: null

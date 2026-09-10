@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 61
-pr: 7400
+pr: trails#7400
 claim: "2026-09-03T11:12:55Z"
 assignee: "yaml-encoder-coder-is-per-call-not-per-encoder"
 blocked-by: null

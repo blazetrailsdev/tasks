@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 7658
+pr: trails#7658
 claim: "2026-09-10T11:42:36Z"
 assignee: "port-inflector-dependencies-and-in-closure-residue"
 blocked-by: null

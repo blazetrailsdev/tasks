@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6333
+pr: trails#6333
 claim: "2026-08-10T13:05:58Z"
 assignee: "date-new-must-discard-date-initialize-add-frac"
 blocked-by: null

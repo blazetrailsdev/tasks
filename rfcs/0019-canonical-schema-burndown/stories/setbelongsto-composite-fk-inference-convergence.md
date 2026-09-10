@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 3615
+pr: trails#3615
 claim: "2026-06-19T01:01:05Z"
 assignee: "setbelongsto-composite-fk-inference-convergence"
 blocked-by: null

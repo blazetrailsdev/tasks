@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6073
+pr: trails#6073
 claim: "2026-08-04T17:01:16Z"
 assignee: "multi-id-story-status-verbs"
 blocked-by: null

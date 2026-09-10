@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 37
-pr: 7339
+pr: trails#7339
 claim: "2026-09-01T13:15:59Z"
 assignee: "ruby-compat-hash-adopt-remaining-call-sites"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5457
+pr: trails#5457
 claim: "2026-07-27T21:16:16Z"
 assignee: "fix-foreign-key-test-describe-path"
 blocked-by: null

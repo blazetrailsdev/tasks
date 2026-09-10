@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 3
-pr: 6889
+pr: trails#6889
 claim: "2026-08-29T14:33:51Z"
 assignee: "association-helpers-extracted-for-the-collection-proxy"
 blocked-by: null

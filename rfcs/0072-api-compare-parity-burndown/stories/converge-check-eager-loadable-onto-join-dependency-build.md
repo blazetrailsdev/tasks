@@ -8,7 +8,7 @@ deps: ["drop-join-dependency-preload-fallback-lane"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5973
+pr: trails#5973
 claim: "2026-08-03T14:24:16Z"
 assignee: "converge-check-eager-loadable-onto-join-dependency-build"
 blocked-by: null

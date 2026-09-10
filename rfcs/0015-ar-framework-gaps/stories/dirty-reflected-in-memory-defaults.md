@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 45
-pr: 2976
+pr: trails#2976
 claim: "2026-06-06T18:05:27Z"
 assignee: "dirty-reflected-in-memory-defaults"
 blocked-by: null

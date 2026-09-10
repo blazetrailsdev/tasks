@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 30
-pr: 3936
+pr: trails#3936
 claim: "2026-06-22T22:51:16Z"
 assignee: "habtm-namespaced-classname"
 blocked-by: null

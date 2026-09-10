@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 11
-pr: 4939
+pr: trails#4939
 claim: "2026-07-18T18:30:36Z"
 assignee: "unify-execute-mutation-into-perform-query-postgresql"
 blocked-by: null

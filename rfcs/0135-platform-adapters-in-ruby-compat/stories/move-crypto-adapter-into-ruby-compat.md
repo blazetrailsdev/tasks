@@ -9,7 +9,7 @@ deps: ["narrow-ruby-compat-leaf-guard-to-static-imports"]
 deps-rfc: []
 est-loc: 300
 priority: 12
-pr: 7460
+pr: trails#7460
 claim: "2026-09-03T20:14:46Z"
 assignee: "move-crypto-adapter-into-ruby-compat"
 blocked-by: null

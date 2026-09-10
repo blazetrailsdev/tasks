@@ -9,7 +9,7 @@ deps:
   - retire-model-set-callback-skip-callback-run-callbacks-passthrough
 deps-rfc: []
 est-loc: 300
-pr: 6963
+pr: trails#6963
 claim: "2026-08-24T01:33:42Z"
 assignee: "fan-out-model-validates-macro-to-validations-validates"
 blocked-by: null

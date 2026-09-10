@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6131
+pr: trails#6131
 claim: "2026-08-05T15:41:05Z"
 assignee: "row-write-ratchet-misses-implicit-model-level-writes"
 blocked-by: null

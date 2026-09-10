@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4638
+pr: trails#4638
 claim: "2026-07-05T22:01:53Z"
 assignee: "sqlite3-json-default-serialization"
 blocked-by: null

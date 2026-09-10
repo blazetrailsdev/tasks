@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4414
+pr: trails#4414
 claim: "2026-07-02T15:21:51Z"
 assignee: "enum-min-max-deserialize-in-aggregates"
 blocked-by: null

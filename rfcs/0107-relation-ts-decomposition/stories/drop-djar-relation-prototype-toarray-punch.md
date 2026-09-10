@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6949
+pr: trails#6949
 claim: "2026-08-23T21:02:49Z"
 assignee: "drop-djar-relation-prototype-toarray-punch"
 blocked-by: null

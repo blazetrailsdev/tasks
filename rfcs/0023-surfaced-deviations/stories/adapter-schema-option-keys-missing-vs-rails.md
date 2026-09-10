@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3205
+pr: trails#3205
 claim: "2026-06-13T19:54:33Z"
 assignee: "adapter-schema-option-keys-missing-vs-rails"
 blocked-by: null

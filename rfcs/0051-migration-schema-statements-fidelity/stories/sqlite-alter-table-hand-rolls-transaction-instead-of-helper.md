@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5621
+pr: trails#5621
 claim: "2026-07-29T23:42:00Z"
 assignee: "sqlite-alter-table-hand-rolls-transaction-instead-of-helper"
 blocked-by: null

@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 80
-pr: 4187
+pr: trails#4187
 claim: "2026-06-28T18:46:32Z"
 assignee: "save-callback-halt-propagation-on-inner-abort"
 blocked-by: null

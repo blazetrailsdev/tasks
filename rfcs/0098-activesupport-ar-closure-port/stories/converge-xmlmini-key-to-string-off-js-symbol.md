@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6922
+pr: trails#6922
 claim: "2026-08-23T15:42:31Z"
 assignee: "excluding-must-drain-a-scheduled-relation"
 blocked-by: null

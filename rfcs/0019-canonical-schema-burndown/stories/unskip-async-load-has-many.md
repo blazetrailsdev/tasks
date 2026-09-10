@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 10
 priority: 88
-pr: 4223
+pr: trails#4223
 claim: "2026-06-28T11:33:04Z"
 assignee: "unskip-async-load-has-many"
 blocked-by: null

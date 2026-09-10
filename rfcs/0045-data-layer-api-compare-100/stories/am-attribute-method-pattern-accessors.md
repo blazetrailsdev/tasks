@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4030
+pr: trails#4030
 claim: "2026-06-23T19:12:29Z"
 assignee: "am-attribute-method-pattern-accessors"
 blocked-by: null

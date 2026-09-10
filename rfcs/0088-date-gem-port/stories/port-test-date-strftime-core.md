@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: 6311
+pr: trails#6311
 claim: "2026-08-09T23:52:55Z"
 assignee: "port-test-date"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 40
-pr: 3945
+pr: trails#3945
 claim: "2026-06-23T01:15:18Z"
 assignee: "sqlite-pragma-introspection-quote-table-name"
 blocked-by: null

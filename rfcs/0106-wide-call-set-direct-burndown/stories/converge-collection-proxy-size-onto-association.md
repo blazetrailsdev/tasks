@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6679
+pr: trails#6679
 claim: "2026-08-17T23:58:00Z"
 assignee: "converge-collection-proxy-size-onto-association"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 50
-pr: 3665
+pr: trails#3665
 claim: "2026-06-19T18:42:31Z"
 blocked-by: null
 assignee: "associations-test-preloadertest-canonical"

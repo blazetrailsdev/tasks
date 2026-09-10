@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5671
+pr: trails#5671
 claim: "2026-07-30T20:17:17Z"
 assignee: "converge-setup-handler-suite-now-that-bootstrap-is-gone"
 blocked-by: null

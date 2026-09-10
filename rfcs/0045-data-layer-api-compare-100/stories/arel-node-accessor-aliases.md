@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4055
+pr: trails#4055
 claim: "2026-06-24T11:00:40Z"
 assignee: "arel-node-accessor-aliases"
 blocked-by: null

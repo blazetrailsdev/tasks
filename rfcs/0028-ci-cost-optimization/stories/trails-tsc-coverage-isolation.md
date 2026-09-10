@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: 3925
+pr: trails#3925
 claim: "2026-06-22T20:59:15Z"
 assignee: "trails-tsc-coverage-isolation"
 blocked-by: null

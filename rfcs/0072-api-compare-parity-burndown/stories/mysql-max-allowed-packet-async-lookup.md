@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 5957
+pr: trails#5957
 claim: "2026-08-03T03:35:45Z"
 assignee: "mysql-max-allowed-packet-async-lookup"
 blocked-by: null

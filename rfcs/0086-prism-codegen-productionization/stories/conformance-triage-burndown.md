@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 14
-pr: 6120
+pr: trails#6120
 claim: "2026-08-05T09:14:57Z"
 assignee: "relocate-erb-util-ports-to-core-ext-tse-util"
 blocked-by: null

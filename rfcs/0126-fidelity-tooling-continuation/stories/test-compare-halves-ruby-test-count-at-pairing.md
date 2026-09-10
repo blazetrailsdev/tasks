@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 1
-pr: 7350
+pr: trails#7350
 claim: "2026-09-01T17:32:16Z"
 assignee: "shared-cache-rails-manifests-bypass-the-worktree-gate"
 blocked-by: null

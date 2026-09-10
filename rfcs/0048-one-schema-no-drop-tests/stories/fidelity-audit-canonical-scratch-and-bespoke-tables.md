@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: 4367
+pr: trails#4367
 claim: "2026-07-01T11:54:48Z"
 assignee: "fidelity-audit-canonical-scratch-and-bespoke-tables"
 blocked-by: null

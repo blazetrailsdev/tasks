@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5547
+pr: trails#5547
 claim: "2026-07-28T23:05:45Z"
 assignee: "relocate-misplaced-migration-cases"
 blocked-by: null

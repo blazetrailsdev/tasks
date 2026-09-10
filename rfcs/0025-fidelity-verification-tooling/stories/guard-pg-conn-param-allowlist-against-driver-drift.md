@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 25
-pr: 5225
+pr: trails#5225
 claim: "2026-07-24T14:38:30Z"
 assignee: "guard-pg-conn-param-allowlist-against-driver-drift"
 blocked-by: null

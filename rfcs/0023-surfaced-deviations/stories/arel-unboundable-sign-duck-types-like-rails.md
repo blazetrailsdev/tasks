@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4876
+pr: trails#4876
 claim: "2026-07-14T21:01:12Z"
 assignee: "arel-unboundable-sign-duck-types-like-rails"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5344
+pr: trails#5344
 claim: "2026-07-26T11:42:54Z"
 assignee: "api-compare-scope-includer-graph-resolution"
 blocked-by: null

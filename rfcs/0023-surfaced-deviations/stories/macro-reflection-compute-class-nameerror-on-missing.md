@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: 4538
+pr: trails#4538
 claim: "2026-07-04T03:11:33Z"
 assignee: "macro-reflection-compute-class-nameerror-on-missing"
 blocked-by: null

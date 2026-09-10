@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7272
+pr: trails#7272
 claim: "2026-08-30T21:54:07Z"
 assignee: "get-crypto-sync-auto-registration-has-no-esm-arm"
 blocked-by: null

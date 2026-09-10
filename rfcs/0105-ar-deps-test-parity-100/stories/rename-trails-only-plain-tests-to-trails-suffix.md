@@ -9,7 +9,7 @@ deps: ["test-compare-lint-and-serializers-json-mapping"]
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 7654
+pr: trails#7654
 claim: "2026-09-09T23:13:24Z"
 assignee: "rename-trails-only-plain-tests-to-trails-suffix"
 blocked-by: null

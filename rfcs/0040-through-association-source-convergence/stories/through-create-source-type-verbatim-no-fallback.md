@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 5
-pr: 4022
+pr: trails#4022
 claim: "2026-06-23T17:32:57Z"
 assignee: "through-create-source-type-verbatim-no-fallback"
 blocked-by: null

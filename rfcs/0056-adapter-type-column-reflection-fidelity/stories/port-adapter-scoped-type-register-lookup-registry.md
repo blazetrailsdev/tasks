@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 40
-pr: 4759
+pr: trails#4759
 claim: "2026-07-07T22:21:22Z"
 assignee: "port-adapter-scoped-type-register-lookup-registry"
 blocked-by: null

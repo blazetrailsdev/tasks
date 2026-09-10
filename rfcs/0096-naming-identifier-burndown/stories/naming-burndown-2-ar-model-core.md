@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 6386
+pr: trails#6386
 claim: "2026-08-11T23:31:32Z"
 assignee: "naming-burndown-2-pg-adapter"
 blocked-by: null

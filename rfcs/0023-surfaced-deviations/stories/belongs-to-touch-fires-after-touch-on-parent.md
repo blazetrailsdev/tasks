@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4269
+pr: trails#4269
 claim: "2026-06-29T13:10:11Z"
 assignee: "belongs-to-touch-fires-after-touch-on-parent"
 blocked-by: null

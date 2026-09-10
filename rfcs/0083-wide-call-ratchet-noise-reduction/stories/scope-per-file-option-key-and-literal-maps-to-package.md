@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5871
+pr: trails#5871
 claim: "2026-08-02T11:16:52Z"
 assignee: "scope-per-file-option-key-and-literal-maps-to-package"
 blocked-by: null

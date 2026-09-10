@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 4518
+pr: trails#4518
 claim: "2026-07-05T21:01:56Z"
 assignee: "thread-alias-tracker-into-relation-arel"
 blocked-by: null

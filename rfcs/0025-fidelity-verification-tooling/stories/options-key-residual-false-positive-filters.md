@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3246
+pr: trails#3246
 claim: "2026-06-14T12:24:34Z"
 assignee: "options-key-residual-false-positive-filters"
 blocked-by: null

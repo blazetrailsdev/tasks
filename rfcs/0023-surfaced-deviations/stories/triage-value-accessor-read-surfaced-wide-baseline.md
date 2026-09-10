@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4997
+pr: trails#4997
 claim: "2026-07-20T18:41:45Z"
 assignee: "triage-value-accessor-read-surfaced-wide-baseline"
 blocked-by: null

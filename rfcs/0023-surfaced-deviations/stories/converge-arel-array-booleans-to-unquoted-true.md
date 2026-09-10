@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4869
+pr: trails#4869
 claim: "2026-07-14T18:41:12Z"
 assignee: "converge-arel-array-booleans-to-unquoted-true"
 blocked-by: null

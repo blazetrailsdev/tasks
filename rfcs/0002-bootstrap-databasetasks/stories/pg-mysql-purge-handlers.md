@@ -8,7 +8,7 @@ deps: ["rework-test-setup"]
 deps-rfc: []
 est-loc: 150
 priority: 1000006
-pr: 3005
+pr: trails#3005
 claim: "2026-06-07T20:51:00Z"
 assignee: "pg-mysql-purge-handlers"
 blocked-by: null

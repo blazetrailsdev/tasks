@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 1
-pr: 7425
+pr: trails#7425
 claim: "2026-09-03T01:39:45Z"
 assignee: "credit-define-model-callbacks-in-the-ruby-extractor"
 blocked-by: null

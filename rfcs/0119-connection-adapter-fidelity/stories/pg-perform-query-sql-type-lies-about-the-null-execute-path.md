@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 7639
+pr: trails#7639
 claim: "2026-09-09T12:48:28Z"
 assignee: "mysql2-execute-override-only-shapes-driver-rows"
 blocked-by: null

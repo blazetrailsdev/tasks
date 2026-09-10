@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 59
-pr: 7366
+pr: trails#7366
 claim: "2026-09-01T23:06:01Z"
 assignee: "ruby-named-file-dir-fileutils-facade"
 blocked-by: null

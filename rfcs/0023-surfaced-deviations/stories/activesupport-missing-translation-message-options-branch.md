@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4969
+pr: trails#4969
 claim: "2026-07-19T21:11:09Z"
 assignee: "activesupport-missing-translation-message-options-branch"
 blocked-by: null

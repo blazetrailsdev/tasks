@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 54
-pr: 4195
+pr: trails#4195
 claim: "2026-06-26T13:58:35Z"
 assignee: "validations-core"
 blocked-by: null

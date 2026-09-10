@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5896
+pr: trails#5896
 claim: "2026-08-02T17:39:26Z"
 assignee: "converge-order-by-pk-receiver-split"
 blocked-by: null

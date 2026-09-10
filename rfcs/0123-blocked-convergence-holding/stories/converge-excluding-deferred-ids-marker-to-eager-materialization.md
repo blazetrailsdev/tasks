@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: 6
-pr: 6928
+pr: trails#6928
 claim: "2026-08-23T17:39:45Z"
 assignee: "converge-excluding-deferred-ids-marker-to-eager-materialization"
 blocked-by: "Re-verified against origin/main 2026-08-24: un-loaded arm still blocked. excluding is still a synchronous chainable recording a DeferredIdsNotIn marker (relation/query-methods.ts:1937-1999, importing predicate-builder/deferred-distinct-pk-in.js at :16 — the body's :1960-1969/:2018-2040 anchors have drifted) and _materializeDeferredDistinctPkPredicates is still async at relation.ts:1857 (body says :1872-1891). Adapter selectAll is still Promise-returning (database-statements.ts:1253/1335 — body says :1293/1375) and toSql(): string is now read by 31 non-test callers (body says 26). Same root blocker as port-with-connection-acquisition-seam-for-the-arel-reader, now recorded as a deps edge."

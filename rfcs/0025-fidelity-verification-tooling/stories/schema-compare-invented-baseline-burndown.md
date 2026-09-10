@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4973
+pr: trails#4973
 claim: "2026-07-19T21:51:10Z"
 assignee: "schema-compare-invented-baseline-burndown"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6105
+pr: trails#6105
 claim: "2026-08-04T23:47:02Z"
 assignee: "model-name-human-drops-klass-guard-and-human-fallback"
 blocked-by: null

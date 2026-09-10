@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7093
+pr: trails#7093
 claim: "2026-08-26T16:41:51Z"
 assignee: "table-type-caster-delegations-cast-away-the-null-name"
 blocked-by: null

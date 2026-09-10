@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 3
-pr: 4646
+pr: trails#4646
 claim: "2026-07-05T23:41:57Z"
 assignee: "wrap-findbysql-internal-query-entry-points"
 blocked-by: null

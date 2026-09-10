@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 130
-pr: 7097
+pr: trails#7097
 claim: "2026-08-26T19:30:13Z"
 assignee: "time-zone-converter-rederives-type-value-map"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5887
+pr: trails#5887
 claim: "2026-08-02T13:39:10Z"
 assignee: "converge-pg-extension-cluster-onto-internal-exec-query"
 blocked-by: null

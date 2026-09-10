@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 170
 priority: 3
-pr: 7428
+pr: trails#7428
 claim: "2026-09-03T01:39:04Z"
 assignee: "converge-db-warnings-ignore-onto-its-rails-seat"
 blocked-by: null

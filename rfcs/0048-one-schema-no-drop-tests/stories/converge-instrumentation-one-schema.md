@@ -8,7 +8,7 @@ deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 200
 priority: 11
-pr: 4334
+pr: trails#4334
 claim: "2026-06-30T16:44:40Z"
 assignee: "converge-instrumentation-one-schema"
 blocked-by: null

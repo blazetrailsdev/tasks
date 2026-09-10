@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: 7297
+pr: trails#7297
 claim: "2026-08-31T14:32:02Z"
 assignee: "globalid-railtie-to-trailtie"
 blocked-by: null

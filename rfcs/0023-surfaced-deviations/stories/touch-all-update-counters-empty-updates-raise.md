@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4992
+pr: trails#4992
 claim: "2026-07-20T17:51:10Z"
 assignee: "touch-all-update-counters-empty-updates-raise"
 blocked-by: null

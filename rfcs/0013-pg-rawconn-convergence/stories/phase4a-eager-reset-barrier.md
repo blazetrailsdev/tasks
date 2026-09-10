@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 3249
+pr: trails#3249
 claim: "2026-06-14T12:36:38Z"
 assignee: "phase4a-eager-reset-barrier"
 blocked-by: null

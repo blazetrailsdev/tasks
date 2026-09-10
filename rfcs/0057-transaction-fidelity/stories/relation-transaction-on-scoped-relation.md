@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 8
-pr: 4695
+pr: trails#4695
 claim: "2026-07-06T19:23:55Z"
 assignee: "relation-transaction-on-scoped-relation"
 blocked-by: null

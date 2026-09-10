@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 40
-pr: 3896
+pr: trails#3896
 claim: "2026-06-22T16:59:58Z"
 assignee: "route-composite-pk-guards-through-check-validity"
 blocked-by: null

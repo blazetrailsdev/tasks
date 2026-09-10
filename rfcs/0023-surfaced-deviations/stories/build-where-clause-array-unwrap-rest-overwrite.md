@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4462
+pr: trails#4462
 claim: "2026-07-03T01:57:49Z"
 assignee: "build-where-clause-array-unwrap-rest-overwrite"
 blocked-by: null

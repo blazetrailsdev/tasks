@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: 6966
+pr: trails#6966
 claim: "2026-08-24T02:09:44Z"
 assignee: "api-build-reflows-same-family-tags-split-by-prose"
 blocked-by: null

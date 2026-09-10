@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4005
+pr: trails#4005
 claim: "2026-06-23T14:14:30Z"
 assignee: "findsti-namespace-relative-fallback"
 blocked-by: null

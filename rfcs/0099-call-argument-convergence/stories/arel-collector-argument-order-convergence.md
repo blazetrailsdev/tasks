@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6348
+pr: trails#6348
 claim: "2026-08-11T01:14:36Z"
 assignee: "arel-collector-argument-order-convergence"
 blocked-by: null

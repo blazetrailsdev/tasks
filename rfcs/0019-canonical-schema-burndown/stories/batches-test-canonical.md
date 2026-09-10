@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 400
 priority: 60
-pr: 4201
+pr: trails#4201
 claim: "2026-06-26T16:42:58Z"
 assignee: "batches-test-canonical"
 blocked-by: null

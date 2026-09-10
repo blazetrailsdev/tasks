@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 7
-pr: 7352
+pr: trails#7352
 claim: "2026-09-02T14:21:30Z"
 assignee: "param-drift-actioncontroller-flash-and-deep-merge-residue"
 blocked-by: null

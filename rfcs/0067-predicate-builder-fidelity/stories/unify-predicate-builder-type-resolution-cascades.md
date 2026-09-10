@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 5
-pr: 4963
+pr: trails#4963
 claim: "2026-07-19T20:11:09Z"
 assignee: "unify-predicate-builder-type-resolution-cascades"
 blocked-by: null

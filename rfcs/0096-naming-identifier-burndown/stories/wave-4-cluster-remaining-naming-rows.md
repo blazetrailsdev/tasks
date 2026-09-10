@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6554
+pr: trails#6554
 claim: "2026-08-15T00:40:23Z"
 assignee: "wave-4-cluster-remaining-naming-rows"
 blocked-by: null

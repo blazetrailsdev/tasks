@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6755
+pr: trails#6755
 claim: "2026-08-20T01:22:34Z"
 assignee: "collection-proxy-delegate-leftjoins-without-fix"
 blocked-by: null

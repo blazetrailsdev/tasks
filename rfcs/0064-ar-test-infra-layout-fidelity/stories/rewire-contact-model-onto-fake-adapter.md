@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5520
+pr: trails#5520
 claim: "2026-07-28T15:53:15Z"
 assignee: "rewire-contact-model-onto-fake-adapter"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: 7433
+pr: trails#7433
 claim: "2026-09-03T10:50:46Z"
 assignee: "port-adapter-statement-pool-and-transaction-seats"
 blocked-by: null

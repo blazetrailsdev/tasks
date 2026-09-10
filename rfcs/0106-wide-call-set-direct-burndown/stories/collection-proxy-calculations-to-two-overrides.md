@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6609
+pr: trails#6609
 claim: "2026-08-16T19:53:31Z"
 assignee: "collection-proxy-calculations-to-two-overrides"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6487
+pr: trails#6487
 claim: "2026-08-13T18:55:39Z"
 assignee: "call-args-database-tasks-handler-protocol"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3676
+pr: trails#3676
 claim: "2026-06-19T21:34:12Z"
 assignee: "cache-serializer-with-fallback-port"
 blocked-by: null

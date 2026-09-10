@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: 4015
+pr: trails#4015
 claim: "2026-06-23T15:45:23Z"
 assignee: "remove-cold-cache-insert-reflection-fallback"
 blocked-by: null

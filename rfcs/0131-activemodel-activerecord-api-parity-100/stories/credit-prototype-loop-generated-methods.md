@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 1
-pr: 7410
+pr: trails#7410
 claim: "2026-09-02T21:25:12Z"
 assignee: "credit-defineproperty-loop-generated-accessors"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 4501
+pr: trails#4501
 claim: "2026-07-03T17:57:50Z"
 assignee: "converge-sidecar-convenience-callers-base-connection"
 blocked-by: null

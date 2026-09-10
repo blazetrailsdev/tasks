@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5372
+pr: trails#5372
 claim: "2026-07-26T22:54:56Z"
 assignee: "ar-mysql-table-definition-charset-collation-readers"
 blocked-by: null

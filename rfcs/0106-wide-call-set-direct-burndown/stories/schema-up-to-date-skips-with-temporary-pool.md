@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6678
+pr: trails#6678
 claim: "2026-08-17T23:32:58Z"
 assignee: "schema-up-to-date-skips-with-temporary-pool"
 blocked-by: null

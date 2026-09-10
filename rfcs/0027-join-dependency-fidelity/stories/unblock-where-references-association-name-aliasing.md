@@ -8,7 +8,7 @@ deps: ["converge-references-lazy-make-constraints"]
 deps-rfc: []
 est-loc: 200
 priority: 20
-pr: 3518
+pr: trails#3518
 claim: "2026-06-22T21:07:16Z"
 assignee: "unblock-where-references-association-name-aliasing"
 blocked-by: null

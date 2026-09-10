@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5910
+pr: trails#5910
 claim: "2026-08-02T18:19:30Z"
 assignee: "converge-collection-proxy-find-delegation"
 blocked-by: null

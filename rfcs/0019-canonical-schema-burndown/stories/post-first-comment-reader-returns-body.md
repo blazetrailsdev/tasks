@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 94
-pr: 4228
+pr: trails#4228
 claim: "2026-06-27T20:06:34Z"
 assignee: "post-first-comment-reader-returns-body"
 blocked-by: null

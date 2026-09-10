@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 53
-pr: 5051
+pr: trails#5051
 claim: "2026-07-22T01:56:47Z"
 assignee: "arel-predications-trails-map-test-uses-keys-iterator"
 blocked-by: null

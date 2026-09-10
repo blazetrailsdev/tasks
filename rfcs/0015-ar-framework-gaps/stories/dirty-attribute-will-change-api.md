@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 42
-pr: 2977
+pr: trails#2977
 claim: "2026-06-06T16:50:27Z"
 assignee: "dirty-attribute-will-change-api"
 blocked-by: null

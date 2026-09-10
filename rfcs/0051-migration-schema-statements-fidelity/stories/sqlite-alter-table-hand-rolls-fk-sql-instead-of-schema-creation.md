@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 5487
+pr: trails#5487
 claim: "2026-07-28T02:34:18Z"
 assignee: "sqlite-alter-table-hand-rolls-fk-sql-instead-of-schema-creation"
 blocked-by: null

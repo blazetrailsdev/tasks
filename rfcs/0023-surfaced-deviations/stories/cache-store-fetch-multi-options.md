@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3694
+pr: trails#3694
 claim: "2026-06-20T02:22:46Z"
 assignee: "cache-store-fetch-multi-options"
 blocked-by: null

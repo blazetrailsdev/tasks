@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6691
+pr: trails#6691
 claim: "2026-08-18T12:36:57Z"
 assignee: "converge-remaining-call-arg-shape-rows-activesupport-rack-i18n"
 blocked-by: null

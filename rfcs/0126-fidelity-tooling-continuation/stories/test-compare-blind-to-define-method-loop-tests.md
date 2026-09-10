@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 7147
+pr: trails#7147
 claim: "2026-08-28T01:43:26Z"
 assignee: "test-compare-blind-to-define-method-loop-tests"
 blocked-by: null

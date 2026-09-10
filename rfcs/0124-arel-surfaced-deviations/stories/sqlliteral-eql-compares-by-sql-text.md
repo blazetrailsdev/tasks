@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 7074
+pr: trails#7074
 claim: "2026-08-26T11:06:14Z"
 assignee: "schema-qualified-name-helpers-belong-in-postgresql-utils"
 blocked-by: null

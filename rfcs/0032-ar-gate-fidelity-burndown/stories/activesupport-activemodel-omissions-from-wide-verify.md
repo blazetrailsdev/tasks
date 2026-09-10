@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5105
+pr: trails#5105
 claim: "2026-07-23T00:53:26Z"
 assignee: "activesupport-activemodel-omissions-from-wide-verify"
 blocked-by: null

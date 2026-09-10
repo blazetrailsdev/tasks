@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6890
+pr: trails#6890
 claim: "2026-08-23T00:27:26Z"
 assignee: "port-activesupport-date-value-type-for-time-zone-today"
 blocked-by: null

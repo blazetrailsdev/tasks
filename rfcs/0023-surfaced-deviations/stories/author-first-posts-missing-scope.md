@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 35
-pr: 3517
+pr: trails#3517
 claim: "2026-06-17T01:12:42Z"
 assignee: "author-first-posts-missing-scope"
 blocked-by: null

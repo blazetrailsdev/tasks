@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5942
+pr: trails#5942
 claim: "2026-08-03T00:58:05Z"
 assignee: "dedupe-list-json-files-in-prism-score-cli"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: 6217
+pr: trails#6217
 claim: "2026-08-08T02:06:08Z"
 assignee: "retire-schemaconn-for-a-leased-connection"
 blocked-by: null

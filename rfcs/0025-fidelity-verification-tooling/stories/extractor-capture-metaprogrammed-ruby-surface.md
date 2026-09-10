@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 20
-pr: 3913
+pr: trails#3913
 claim: "2026-06-22T19:07:15Z"
 assignee: "extractor-capture-metaprogrammed-ruby-surface"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3997
+pr: trails#3997
 claim: "2026-06-23T13:37:39Z"
 assignee: "converge-relation-wherevalues-to-whereclause"
 blocked-by: null

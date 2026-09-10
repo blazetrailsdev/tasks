@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4872
+pr: trails#4872
 claim: "2026-07-14T19:41:18Z"
 assignee: "converge-arel-array-string-elements-to-content-based-quoting"
 blocked-by: null

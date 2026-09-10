@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5110
+pr: trails#5110
 claim: "2026-07-23T01:08:56Z"
 assignee: "bulk-alter-changing-columns-query-counts"
 blocked-by: null

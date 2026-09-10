@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5876
+pr: trails#5876
 claim: "2026-08-02T12:06:48Z"
 assignee: "adapter-indexes-drop-adapterindexes-unknown-cast"
 blocked-by: null

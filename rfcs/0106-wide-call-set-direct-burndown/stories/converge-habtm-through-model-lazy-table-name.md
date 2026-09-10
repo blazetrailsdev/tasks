@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6825
+pr: trails#6825
 claim: "2026-08-21T16:20:37Z"
 assignee: "converge-habtm-through-model-lazy-table-name"
 blocked-by: null

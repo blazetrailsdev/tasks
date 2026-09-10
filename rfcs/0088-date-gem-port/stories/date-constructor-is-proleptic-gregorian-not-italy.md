@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6250
+pr: trails#6250
 claim: "2026-08-08T17:40:02Z"
 assignee: "date-constructor-is-proleptic-gregorian-not-italy"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 4386
+pr: trails#4386
 claim: "2026-07-01T22:16:14Z"
 assignee: "fix-schema-qualified-index-name-derivation"
 blocked-by: null

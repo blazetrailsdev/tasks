@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6193
+pr: trails#6193
 claim: "2026-08-07T19:20:43Z"
 assignee: "strftime-lacks-composite-conversions"
 blocked-by: null

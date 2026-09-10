@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 9
-pr: 3556
+pr: trails#3556
 claim: "2026-06-17T17:01:24Z"
 assignee: "require-table-teardown-burndown-schema-statements"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5735
+pr: trails#5735
 claim: "2026-07-31T18:51:00Z"
 assignee: "activerecord-cli-needs-one-environment-boot-connection"
 blocked-by: null

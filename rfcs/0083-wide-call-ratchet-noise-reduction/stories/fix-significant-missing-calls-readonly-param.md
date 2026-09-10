@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: 5739
+pr: trails#5739
 claim: "2026-07-31T19:08:55Z"
 assignee: "fix-significant-missing-calls-readonly-param"
 blocked-by: null

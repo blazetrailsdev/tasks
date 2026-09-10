@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: 4911
+pr: trails#4911
 claim: "2026-07-16T18:21:17Z"
 assignee: "converge-through-preload-collection-single-query-dedup"
 blocked-by: null

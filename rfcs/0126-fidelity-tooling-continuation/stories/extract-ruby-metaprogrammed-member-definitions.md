@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: 7179
+pr: trails#7179
 claim: "2026-08-28T19:54:27Z"
 assignee: "extract-ruby-metaprogrammed-member-definitions"
 blocked-by: null

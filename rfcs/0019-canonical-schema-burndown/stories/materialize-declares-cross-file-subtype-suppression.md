@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 85
-pr: 4220
+pr: trails#4220
 claim: "2026-06-27T18:06:35Z"
 assignee: "materialize-declares-cross-file-subtype-suppression"
 blocked-by: null

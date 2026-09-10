@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: 3953
+pr: trails#3953
 claim: "2026-06-23T02:19:17Z"
 assignee: "ar-test-reset-drop-table-churn"
 blocked-by: null

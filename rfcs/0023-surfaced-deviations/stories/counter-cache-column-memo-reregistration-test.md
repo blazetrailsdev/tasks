@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: 3706
+pr: trails#3706
 claim: "2026-06-20T12:13:27Z"
 assignee: "counter-cache-column-memo-reregistration-test"
 blocked-by: null

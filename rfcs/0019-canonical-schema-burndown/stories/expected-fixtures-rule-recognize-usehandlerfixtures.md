@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 3608
+pr: trails#3608
 claim: "2026-06-18T22:43:07Z"
 assignee: "expected-fixtures-rule-recognize-usehandlerfixtures-aa09"
 blocked-by: null

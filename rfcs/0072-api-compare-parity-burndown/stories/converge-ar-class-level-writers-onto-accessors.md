@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5387
+pr: trails#5387
 claim: "2026-07-27T01:42:55Z"
 assignee: "converge-ar-class-level-writers-onto-accessors"
 blocked-by: null

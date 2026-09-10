@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 140
-pr: 7659
+pr: trails#7659
 claim: "2026-09-10T11:42:32Z"
 assignee: "mysql2-and-pg-begin-deferred-transaction-drop-the-isolation-level"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: 5076
+pr: trails#5076
 claim: "2026-07-22T20:26:47Z"
 assignee: "persistence-insert-returning-gate"
 blocked-by: null

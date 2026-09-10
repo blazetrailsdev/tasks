@@ -26,7 +26,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 4
-pr: 4540
+pr: trails#4540
 claim: "2026-07-03T19:13:04Z"
 assignee: "retire-defineschema-and-one-schema-apparatus"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5738
+pr: trails#5738
 claim: "2026-07-31T19:02:56Z"
 assignee: "evaluate-loose-any-method-wide-resolution"
 blocked-by: null

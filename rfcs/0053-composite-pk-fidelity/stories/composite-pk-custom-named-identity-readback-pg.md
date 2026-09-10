@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 4
-pr: 4659
+pr: trails#4659
 claim: "2026-07-06T18:23:54Z"
 assignee: "composite-pk-custom-named-identity-readback-pg"
 blocked-by: null

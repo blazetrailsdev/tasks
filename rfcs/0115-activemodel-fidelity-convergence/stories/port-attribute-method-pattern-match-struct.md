@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 7041
+pr: trails#7041
 claim: "2026-08-25T15:30:56Z"
 assignee: "port-attribute-method-pattern-match-struct"
 blocked-by: null

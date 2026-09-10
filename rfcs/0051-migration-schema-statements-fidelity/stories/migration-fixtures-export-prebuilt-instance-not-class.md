@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5762
+pr: trails#5762
 claim: "2026-07-31T22:00:41Z"
 assignee: "migration-fixtures-export-prebuilt-instance-not-class"
 blocked-by: null

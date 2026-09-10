@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: 3218
+pr: trails#3218
 claim: "2026-06-13T22:12:34Z"
 assignee: "mysql-binds-no-attribute-unwrap"
 blocked-by: null

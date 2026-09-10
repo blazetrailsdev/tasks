@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7566
+pr: trails#7566
 claim: "2026-09-06T17:18:15Z"
 assignee: "retire-adapter-resolution-sync-companions"
 blocked-by: null

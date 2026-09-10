@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 100
-pr: 7039
+pr: trails#7039
 claim: "2026-08-25T14:34:31Z"
 assignee: "converge-association-klass-to-reflection-klass-delegate"
 blocked-by: null

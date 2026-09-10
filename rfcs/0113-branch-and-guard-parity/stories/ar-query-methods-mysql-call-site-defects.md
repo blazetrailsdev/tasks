@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6607
+pr: trails#6607
 claim: "2026-08-28T11:42:16Z"
 assignee: "adapter-name-getter-conflates-rails-adapter-name-with-type-registry-key"
 blocked-by: null

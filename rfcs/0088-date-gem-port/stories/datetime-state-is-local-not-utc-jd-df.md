@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6154
+pr: trails#6154
 claim: "2026-08-06T13:40:06Z"
 assignee: "activemodel-type-time-returns-a-time"
 blocked-by: null

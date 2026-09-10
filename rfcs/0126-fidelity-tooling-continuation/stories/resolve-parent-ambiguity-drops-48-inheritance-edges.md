@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 2
-pr: 7395
+pr: trails#7395
 claim: "2026-09-02T17:24:29Z"
 assignee: "bodyless-owner-fix-misses-extended-included-hosts"
 blocked-by: null

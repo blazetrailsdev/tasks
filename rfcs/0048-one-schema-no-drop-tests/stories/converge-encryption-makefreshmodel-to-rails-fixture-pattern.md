@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4419
+pr: trails#4419
 claim: "2026-07-02T16:09:53Z"
 assignee: "converge-encryption-makefreshmodel-to-rails-fixture-pattern"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5638
+pr: trails#5638
 claim: "2026-07-30T13:13:01Z"
 assignee: "stamp-run-token-into-pg-mysql-slot-databases"
 blocked-by: null

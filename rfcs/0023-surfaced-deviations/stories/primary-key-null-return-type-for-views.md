@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3372
+pr: trails#3372
 claim: "2026-06-15T16:18:28Z"
 assignee: "primary-key-null-return-type-for-views"
 blocked-by: null

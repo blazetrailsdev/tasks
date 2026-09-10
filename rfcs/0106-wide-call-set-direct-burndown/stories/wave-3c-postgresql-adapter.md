@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6581
+pr: trails#6581
 claim: "2026-08-15T22:45:03Z"
 assignee: "wave-3c-postgresql-adapter"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 18
-pr: 3500
+pr: trails#3500
 claim: "2026-06-16T21:00:42Z"
 assignee: "touch-transactional-callbacks"
 blocked-by: null

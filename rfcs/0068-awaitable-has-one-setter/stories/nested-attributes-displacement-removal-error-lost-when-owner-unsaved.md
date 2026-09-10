@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5441
+pr: trails#5441
 claim: "2026-07-27T19:11:50Z"
 assignee: "nested-attributes-displacement-removal-error-lost-when-owner-unsaved"
 blocked-by: null

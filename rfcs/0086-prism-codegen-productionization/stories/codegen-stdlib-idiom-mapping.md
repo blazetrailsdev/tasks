@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 11
-pr: 5842
+pr: trails#5842
 claim: "2026-08-02T00:03:26Z"
 assignee: "codegen-stdlib-idiom-mapping"
 blocked-by: null

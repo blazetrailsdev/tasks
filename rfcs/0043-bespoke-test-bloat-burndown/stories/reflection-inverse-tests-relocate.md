@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: 4667
+pr: trails#4667
 claim: "2026-07-06T11:26:24Z"
 assignee: "reflection-inverse-tests-relocate"
 blocked-by: null

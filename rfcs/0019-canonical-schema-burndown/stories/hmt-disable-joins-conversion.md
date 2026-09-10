@@ -8,7 +8,7 @@ deps: ["associations-collection-cluster"]
 deps-rfc: []
 est-loc: 150
 priority: 8
-pr: 4276
+pr: trails#4276
 claim: "2026-06-29T14:52:03Z"
 assignee: "hmt-disable-joins-conversion"
 blocked-by: null

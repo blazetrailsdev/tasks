@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: 6928
+pr: trails#6928
 claim: "2026-08-23T17:39:45Z"
 assignee: "converge-excluding-deferred-ids-marker-to-eager-materialization"
 blocked-by: "Re-verified against origin/main 2026-08-24: blocker still live. ConnectionPool#withConnection is still `async` (connection-adapters/abstract/connection-pool.ts:961 — the story body's :1008 anchor has drifted), so no synchronous with_connection seam is expressible; a sync seam could only serve an already-leased connection, which is exactly what Relation#_conn() (relation.ts:1142) returns. The reader is now spelled `arel(aliases?): SelectManager` (relation.ts:3381 — the body still calls it `toArel`, renamed since the body was written) and is still synchronous, read inline by 31 non-test call sites. Unblocks only when toSql/arel and their callers go async, or a sync query seam lands — neither fits this RFC's 700 LOC PR ceiling; this wants its own RFC."

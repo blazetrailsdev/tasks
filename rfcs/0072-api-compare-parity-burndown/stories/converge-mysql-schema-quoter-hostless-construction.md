@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5944
+pr: trails#5944
 claim: "2026-08-03T01:25:47Z"
 assignee: "converge-mysql-schema-quoter-hostless-construction"
 blocked-by: null

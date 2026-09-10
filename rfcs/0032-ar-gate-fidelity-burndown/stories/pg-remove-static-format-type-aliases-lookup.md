@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5166
+pr: trails#5166
 claim: "2026-07-23T17:15:35Z"
 assignee: "pg-remove-static-format-type-aliases-lookup"
 blocked-by: null

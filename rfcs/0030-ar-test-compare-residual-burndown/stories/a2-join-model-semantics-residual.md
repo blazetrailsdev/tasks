@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 3617
+pr: trails#3617
 claim: "2026-07-22T18:11:53Z"
 assignee: "a2-join-model-semantics-residual"
 blocked-by: null

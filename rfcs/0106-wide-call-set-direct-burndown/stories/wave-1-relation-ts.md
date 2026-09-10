@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 1
-pr: 6558
+pr: trails#6558
 claim: "2026-08-15T01:15:12Z"
 assignee: "wave-1-relation-ts"
 blocked-by: null

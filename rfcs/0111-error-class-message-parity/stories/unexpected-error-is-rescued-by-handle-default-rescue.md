@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 30
-pr: 7615
+pr: trails#7615
 claim: "2026-09-08T14:45:03Z"
 assignee: "time-zone-rfc3339-hand-rolled-regex-parse"
 blocked-by: null

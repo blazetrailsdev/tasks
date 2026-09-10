@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 3
-pr: 4346
+pr: trails#4346
 claim: "2026-06-30T19:08:36Z"
 assignee: "fixtures-rename-handler-callsites"
 blocked-by: null

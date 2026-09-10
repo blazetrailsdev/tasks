@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6904
+pr: trails#6904
 claim: "2026-08-23T11:57:31Z"
 assignee: "cache-ts-call-rows-have-no-body-bearing-declaration"
 blocked-by: null

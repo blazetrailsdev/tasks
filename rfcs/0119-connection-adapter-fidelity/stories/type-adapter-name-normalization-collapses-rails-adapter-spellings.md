@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 7391
+pr: trails#7391
 claim: "2026-09-02T14:04:19Z"
 assignee: "report-noRailsEquivalent-tags-that-cover-no-extra"
 blocked-by: null

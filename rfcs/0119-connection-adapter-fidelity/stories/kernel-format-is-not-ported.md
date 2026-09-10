@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 7637
+pr: trails#7637
 claim: "2026-09-09T02:16:10Z"
 assignee: "kernel-format-is-not-ported"
 blocked-by: null

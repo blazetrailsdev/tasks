@@ -8,7 +8,7 @@ deps: ["lint-guard-unawaited-isvalid"]
 deps-rfc: []
 est-loc: 400
 priority: 0
-pr: 4914
+pr: trails#4914
 claim: "2026-07-16T18:31:11Z"
 assignee: "flip-activemodel-validation-chain-async"
 blocked-by: null

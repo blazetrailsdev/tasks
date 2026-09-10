@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3846
+pr: trails#3846
 claim: "2026-06-21T23:10:44Z"
 assignee: "persistence-test-canonical-wave12"
 blocked-by: null

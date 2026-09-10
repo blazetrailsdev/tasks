@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 2
-pr: 7352
+pr: trails#7352
 claim: "2026-09-01T18:29:06Z"
 assignee: "ts-methods-by-file-pools-deps-under-shared-relative-path"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5950
+pr: trails#5950
 claim: "2026-08-03T02:05:48Z"
 assignee: "file-level-no-rails-equivalent-tag"
 blocked-by: null

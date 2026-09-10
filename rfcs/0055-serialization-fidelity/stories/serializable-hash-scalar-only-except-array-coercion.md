@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 31
-pr: 4724
+pr: trails#4724
 claim: "2026-07-07T03:19:38Z"
 assignee: "serializable-hash-scalar-only-except-array-coercion"
 blocked-by: null

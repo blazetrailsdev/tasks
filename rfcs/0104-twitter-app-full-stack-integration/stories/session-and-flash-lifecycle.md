@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 13
-pr: 7317
+pr: trails#7317
 claim: "2026-08-31T21:45:19Z"
 assignee: "session-and-flash-lifecycle"
 blocked-by: null

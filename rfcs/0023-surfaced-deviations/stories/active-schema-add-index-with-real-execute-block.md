@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3652
+pr: trails#3652
 claim: "2026-06-19T15:36:28Z"
 assignee: "active-schema-add-index-with-real-execute-block"
 blocked-by: null

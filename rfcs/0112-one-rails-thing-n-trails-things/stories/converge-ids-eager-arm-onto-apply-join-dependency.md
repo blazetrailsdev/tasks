@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-pr: 6634
+pr: trails#6634
 claim: "2026-08-25T16:50:30Z"
 assignee: "converge-collection-proxy-anonymous-inline-reflection-guards"
 blocked-by: null

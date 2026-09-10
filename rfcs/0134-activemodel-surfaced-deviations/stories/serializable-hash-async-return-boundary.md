@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 42
-pr: 7406
+pr: trails#7406
 claim: "2026-09-02T20:13:10Z"
 assignee: "attribute-ts-novel-members-receipt-or-fold"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3444
+pr: trails#3444
 claim: "2026-06-16T11:38:09Z"
 assignee: "core-inspect-attributes-for-inspect"
 blocked-by: null

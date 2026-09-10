@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6989
+pr: trails#6989
 claim: "2026-08-24T14:48:31Z"
 assignee: "converge-numericality-bigint-exponent-skip"
 blocked-by: null

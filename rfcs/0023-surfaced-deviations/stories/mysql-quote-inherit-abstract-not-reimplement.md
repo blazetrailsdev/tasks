@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 3311
+pr: trails#3311
 claim: "2026-06-15T00:13:01Z"
 assignee: "mysql-quote-inherit-abstract-not-reimplement"
 blocked-by: null

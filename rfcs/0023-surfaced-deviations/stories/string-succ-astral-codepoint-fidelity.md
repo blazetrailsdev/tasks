@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4989
+pr: trails#4989
 claim: "2026-07-20T02:01:11Z"
 assignee: "string-succ-astral-codepoint-fidelity"
 blocked-by: null

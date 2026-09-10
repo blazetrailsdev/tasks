@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 5311
+pr: trails#5311
 claim: "2026-07-25T19:08:52Z"
 assignee: "arity-collapse-required-kwargs-into-options-object"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 1
-pr: 7452
+pr: trails#7452
 claim: "2026-09-03T18:34:33Z"
 assignee: "unify-instrumenter-instrument-sync-and-async-arms"
 blocked-by: null

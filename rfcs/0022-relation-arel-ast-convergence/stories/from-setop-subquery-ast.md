@@ -8,7 +8,7 @@ deps: ["set-operations-arel-nodes", "from-clause-arel-manager"]
 deps-rfc: []
 est-loc: 120
 priority: 3
-pr: 3185
+pr: trails#3185
 claim: "2026-06-13T11:51:10Z"
 assignee: "from-setop-subquery-ast"
 blocked-by: null

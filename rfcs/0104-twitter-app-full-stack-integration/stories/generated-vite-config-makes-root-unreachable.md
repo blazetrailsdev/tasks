@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 6
-pr: 7371
+pr: trails#7371
 claim: "2026-09-02T01:01:28Z"
 assignee: "generated-vite-config-makes-root-unreachable"
 blocked-by: null

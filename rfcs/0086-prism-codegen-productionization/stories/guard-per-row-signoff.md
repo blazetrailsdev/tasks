@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5798
+pr: trails#5798
 claim: "2026-08-01T13:23:49Z"
 assignee: "guard-per-row-signoff"
 blocked-by: null

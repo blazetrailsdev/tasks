@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6524
+pr: trails#6524
 claim: "2026-08-14T14:47:03Z"
 assignee: "deprecation-raise-behavior-raises-deprecationexception"
 blocked-by: null

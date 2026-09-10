@@ -8,7 +8,7 @@ deps: ["abstract-sqlite3-adapter"]
 deps-rfc: []
 est-loc: 250
 priority: 10
-pr: 3142
+pr: trails#3142
 claim: "2026-06-12T01:07:59Z"
 assignee: "sqlite3-adapter-subclasses-registry-removal"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5984
+pr: trails#5984
 claim: "2026-08-03T16:09:42Z"
 assignee: "stale-deviation-comment-names-landed-story"
 blocked-by: null

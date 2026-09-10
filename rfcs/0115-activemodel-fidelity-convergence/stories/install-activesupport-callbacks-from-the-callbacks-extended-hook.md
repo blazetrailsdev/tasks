@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6987
+pr: trails#6987
 claim: "2026-08-24T14:19:54Z"
 assignee: "website-vitest-missing-activesupport-subpath-alias"
 blocked-by: null

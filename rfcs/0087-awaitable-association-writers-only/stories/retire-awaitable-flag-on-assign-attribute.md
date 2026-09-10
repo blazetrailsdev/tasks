@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6210
+pr: trails#6210
 claim: "2026-08-08T00:09:22Z"
 assignee: "raw-test-and-second-connection-adapters-carry-a-real-pool"
 blocked-by: null

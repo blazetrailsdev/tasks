@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3834
+pr: trails#3834
 claim: "2026-06-21T20:46:42Z"
 assignee: "persistence-becomes-restricted-name-dirty"
 blocked-by: null

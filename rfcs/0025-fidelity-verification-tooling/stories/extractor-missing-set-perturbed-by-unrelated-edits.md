@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6542
+pr: trails#6542
 claim: "2026-08-14T20:20:11Z"
 assignee: "extractor-missing-set-perturbed-by-unrelated-edits"
 blocked-by: null

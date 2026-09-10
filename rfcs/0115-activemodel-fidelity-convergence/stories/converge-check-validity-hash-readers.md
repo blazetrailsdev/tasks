@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6792
+pr: trails#6792
 claim: "2026-08-20T21:03:53Z"
 assignee: "converge-check-validity-hash-readers"
 blocked-by: null

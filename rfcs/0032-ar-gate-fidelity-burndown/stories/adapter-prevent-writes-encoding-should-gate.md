@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4091
+pr: trails#4091
 claim: "2026-06-25T00:22:37Z"
 assignee: "adapter-prevent-writes-encoding-should-gate"
 blocked-by: null

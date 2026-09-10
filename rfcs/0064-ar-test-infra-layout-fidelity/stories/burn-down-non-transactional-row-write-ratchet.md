@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6124
+pr: trails#6124
 claim: "2026-08-05T11:59:55Z"
 assignee: "burn-down-non-transactional-row-write-ratchet"
 blocked-by: null

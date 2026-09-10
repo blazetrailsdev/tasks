@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5145
+pr: trails#5145
 claim: "2026-07-23T13:49:41Z"
 assignee: "mismatched-fk-query-parser-rebuild-enrichment"
 blocked-by: null

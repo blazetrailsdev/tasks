@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4866
+pr: trails#4866
 claim: "2026-07-14T16:38:40Z"
 assignee: "cache-notification-info-lazy-binds-and-name-passthrough"
 blocked-by: null

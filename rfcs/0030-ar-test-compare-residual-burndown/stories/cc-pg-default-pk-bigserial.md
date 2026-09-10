@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 3966
+pr: trails#3966
 claim: "2026-07-22T18:56:47Z"
 assignee: "cc-pg-default-pk-bigserial"
 blocked-by: null

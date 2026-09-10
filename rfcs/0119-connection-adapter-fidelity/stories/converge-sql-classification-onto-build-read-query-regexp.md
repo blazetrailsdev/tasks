@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7563
+pr: trails#7563
 claim: "2026-09-06T16:18:16Z"
 assignee: "converge-sql-classification-onto-build-read-query-regexp"
 blocked-by: null

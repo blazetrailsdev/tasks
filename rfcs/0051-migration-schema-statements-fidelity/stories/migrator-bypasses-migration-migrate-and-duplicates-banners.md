@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: 5525
+pr: trails#5525
 claim: "2026-07-28T16:17:19Z"
 assignee: "migrator-bypasses-migration-migrate-and-duplicates-banners"
 blocked-by: null

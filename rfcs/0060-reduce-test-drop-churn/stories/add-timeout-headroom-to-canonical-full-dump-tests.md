@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4555
+pr: trails#4555
 claim: "2026-07-04T16:19:28Z"
 assignee: "add-timeout-headroom-to-canonical-full-dump-tests"
 blocked-by: null

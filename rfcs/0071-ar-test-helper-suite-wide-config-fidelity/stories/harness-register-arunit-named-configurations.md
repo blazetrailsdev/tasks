@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5445
+pr: trails#5445
 claim: "2026-07-27T19:41:53Z"
 assignee: "harness-register-arunit-named-configurations"
 blocked-by: null

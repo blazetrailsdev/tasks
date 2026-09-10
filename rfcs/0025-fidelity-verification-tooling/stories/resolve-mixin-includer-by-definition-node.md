@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 25
-pr: 5235
+pr: trails#5235
 claim: "2026-07-24T16:22:53Z"
 assignee: "resolve-mixin-includer-by-definition-node"
 blocked-by: null

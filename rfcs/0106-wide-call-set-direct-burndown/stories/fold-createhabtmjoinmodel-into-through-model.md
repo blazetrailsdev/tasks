@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6836
+pr: trails#6836
 claim: "2026-08-21T19:20:36Z"
 assignee: "converge-enumerable-min-receiver-call-shape"
 blocked-by: null

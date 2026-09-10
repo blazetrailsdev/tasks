@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6800
+pr: trails#6800
 claim: "2026-08-21T00:42:06Z"
 assignee: "apply-hook-attribute-type-inside-activemodel-attribute"
 blocked-by: null

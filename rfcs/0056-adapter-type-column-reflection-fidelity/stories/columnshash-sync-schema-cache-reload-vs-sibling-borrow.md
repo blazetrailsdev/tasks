@@ -9,7 +9,7 @@ deps-rfc:
   - 0031-schema-cache-always-warm-convergence
 est-loc: 120
 priority: 40
-pr: 3445
+pr: trails#3445
 claim: null
 assignee: null
 blocked-by: null

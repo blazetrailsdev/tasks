@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 7162
+pr: trails#7162
 claim: "2026-08-28T14:02:37Z"
 assignee: "parity-api-compares-parameter-names-beside-arity"
 blocked-by: null

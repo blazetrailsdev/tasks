@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 30
-pr: 5053
+pr: trails#5053
 claim: "2026-07-22T14:25:44Z"
 assignee: "select-manager-join-positional-condition-arg-extension"
 blocked-by: null

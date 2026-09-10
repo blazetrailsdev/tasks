@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 3564
+pr: trails#3564
 claim: "2026-06-17T18:24:42Z"
 assignee: "with-connection-query-path"
 blocked-by: null

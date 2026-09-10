@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: 4066
+pr: trails#4066
 claim: "2026-06-24T16:27:37Z"
 assignee: "converge-has-one-through-preloaded-reader-arity"
 blocked-by: null

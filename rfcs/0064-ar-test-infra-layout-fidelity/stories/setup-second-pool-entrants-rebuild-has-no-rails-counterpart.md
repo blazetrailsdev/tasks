@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 7
-pr: 6091
+pr: trails#6091
 claim: "2026-08-04T20:44:04Z"
 assignee: "i18n-date-parse-have-elem-gates"
 blocked-by: null

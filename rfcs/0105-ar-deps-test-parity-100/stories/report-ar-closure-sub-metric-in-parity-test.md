@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 7311
+pr: trails#7311
 claim: "2026-08-31T20:57:54Z"
 assignee: "reconcile-out-of-closure-activesupport-test-remainder"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 0
-pr: 5773
+pr: trails#5773
 claim: "2026-07-31T23:56:13Z"
 assignee: "guard-suite-db-names-against-granted-namespaces"
 blocked-by: null

@@ -10,7 +10,7 @@ deps: ["bare-pattern-generates-reader-not-accessor-property"]
 deps-rfc: []
 est-loc: 120
 priority: 61
-pr: 7449
+pr: trails#7449
 claim: "2026-09-03T16:11:55Z"
 assignee: "attribute-methods-method-missing-dispatch-unported"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 19
-pr: 4794
+pr: trails#4794
 claim: "2026-07-08T18:52:34Z"
 assignee: "enum-detect-conflict-relation-and-id-class-branches"
 blocked-by: null

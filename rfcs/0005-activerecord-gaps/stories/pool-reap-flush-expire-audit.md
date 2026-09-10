@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: 22
-pr: 2959
+pr: trails#2959
 claim: "2026-06-05T18:54:59Z"
 assignee: "pool-reap-flush-expire-audit"
 blocked-by: null

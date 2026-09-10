@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7066
+pr: trails#7066
 claim: "2026-08-26T00:23:02Z"
 assignee: "agent-docs-for-the-sqlite-tasks-process"
 blocked-by: null

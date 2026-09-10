@@ -8,7 +8,7 @@ deps: ["converge-join-constraints-references"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: 3272
+pr: trails#3272
 claim: "2026-06-14T18:06:34Z"
 assignee: "converge-instantiate-construct"
 blocked-by: null

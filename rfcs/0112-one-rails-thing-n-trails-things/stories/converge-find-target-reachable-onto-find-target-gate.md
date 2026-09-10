@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-pr: 7053
+pr: trails#7053
 claim: "2026-08-25T16:34:34Z"
 assignee: "converge-association-relation-through-scope-onto-scoping"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 3485
+pr: trails#3485
 claim: "2026-06-16T18:06:48Z"
 assignee: "pg-default-pk-bigserial-cascade"
 blocked-by: null

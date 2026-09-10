@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5655
+pr: trails#5655
 claim: "2026-07-30T17:53:05Z"
 assignee: "pg-query-canceled-unhandled-rejection"
 blocked-by: null

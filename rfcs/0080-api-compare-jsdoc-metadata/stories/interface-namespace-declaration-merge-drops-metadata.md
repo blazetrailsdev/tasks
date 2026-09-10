@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5615
+pr: trails#5615
 claim: "2026-07-29T22:46:26Z"
 assignee: "interface-namespace-declaration-merge-drops-metadata"
 blocked-by: null

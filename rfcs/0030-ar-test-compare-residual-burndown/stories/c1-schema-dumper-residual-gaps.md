@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3429
+pr: trails#3429
 claim: "2026-06-16T00:28:54Z"
 assignee: "c1-schema-dumper-residual-gaps"
 blocked-by: null

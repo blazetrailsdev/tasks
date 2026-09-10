@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3985
+pr: trails#3985
 claim: "2026-06-23T12:22:41Z"
 assignee: "ddl-rename-column-index-invalidate-schema-cache"
 blocked-by: null

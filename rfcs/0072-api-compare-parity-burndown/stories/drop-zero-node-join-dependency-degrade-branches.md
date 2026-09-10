@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5996
+pr: trails#5996
 claim: "2026-08-03T17:33:42Z"
 assignee: "drop-zero-node-join-dependency-degrade-branches"
 blocked-by: null

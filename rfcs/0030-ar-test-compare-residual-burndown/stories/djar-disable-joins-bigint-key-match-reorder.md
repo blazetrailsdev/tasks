@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4033
+pr: trails#4033
 claim: "2026-06-24T20:18:18Z"
 assignee: "djar-disable-joins-bigint-key-match-reorder"
 blocked-by: null

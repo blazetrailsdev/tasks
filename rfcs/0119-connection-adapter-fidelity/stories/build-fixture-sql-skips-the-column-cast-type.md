@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7588
+pr: trails#7588
 claim: "2026-09-07T02:26:22Z"
 assignee: "abstract-fetch-type-metadata-carries-a-rest-param-for-pg-override-arity"
 blocked-by: null

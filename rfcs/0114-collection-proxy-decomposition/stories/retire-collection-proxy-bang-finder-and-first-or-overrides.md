@@ -9,7 +9,7 @@ deps: ["collection-proxy-initialize-is-five-lines"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6758
+pr: trails#6758
 claim: "2026-08-20T02:22:31Z"
 assignee: "collapse-collection-proxy-toarray-onto-load"
 blocked-by: null

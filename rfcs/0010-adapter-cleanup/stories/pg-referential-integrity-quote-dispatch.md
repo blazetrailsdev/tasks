@@ -7,7 +7,7 @@ cluster: adapter-cleanup
 deps: []
 deps-rfc: []
 est-loc: 80
-pr: 3126
+pr: trails#3126
 claim: "2026-06-11T18:24:05Z"
 assignee: "pg-referential-integrity-quote-dispatch"
 blocked-by: null

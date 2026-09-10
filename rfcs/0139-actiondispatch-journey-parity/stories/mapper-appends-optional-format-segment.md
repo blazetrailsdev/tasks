@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 30
-pr: 7630
+pr: trails#7630
 claim: "2026-09-08T20:18:27Z"
 assignee: "mapper-appends-optional-format-segment"
 blocked-by: null

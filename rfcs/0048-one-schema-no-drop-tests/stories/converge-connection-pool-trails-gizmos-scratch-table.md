@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 1
-pr: 4384
+pr: trails#4384
 claim: "2026-07-01T20:00:05Z"
 assignee: "converge-connection-pool-trails-gizmos-scratch-table"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7531
+pr: trails#7531
 claim: "2026-09-05T19:26:47Z"
 assignee: "port-actionview-cache-helper"
 blocked-by: null

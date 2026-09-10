@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5914
+pr: trails#5914
 claim: "2026-08-02T19:37:24Z"
 assignee: "converge-collection-find-recursive-flatten"
 blocked-by: null

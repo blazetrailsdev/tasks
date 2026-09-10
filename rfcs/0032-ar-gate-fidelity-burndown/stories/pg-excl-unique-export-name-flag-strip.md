@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5167
+pr: trails#5167
 claim: "2026-07-23T17:25:37Z"
 assignee: "pg-excl-unique-export-name-flag-strip"
 blocked-by: null

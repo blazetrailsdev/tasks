@@ -7,7 +7,7 @@ cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 80
-pr: 5729
+pr: trails#5729
 claim: "2026-07-31T18:12:11Z"
 assignee: "wide-ratchet-regenerate-artifact-in-gate"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 51
-pr: 2987
+pr: trails#2987
 claim: "2026-06-07T01:15:57Z"
 assignee: "small-followups-bundle"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: 4588
+pr: trails#4588
 claim: "2026-07-05T02:07:26Z"
 assignee: "fixtures-autoload-canonical-model-index"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6627
+pr: trails#6627
 claim: "2026-08-17T02:22:52Z"
 assignee: "converge-parameter-filter-ignore-case-onto-inline-group"
 blocked-by: null

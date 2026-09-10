@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3747
+pr: trails#3747
 claim: "2026-06-20T22:47:27Z"
 assignee: "inline-fallback-polymorphic-as-owner-key-query-constraints"
 blocked-by: null

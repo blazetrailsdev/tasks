@@ -7,7 +7,7 @@ cluster: clusters
 deps: ["i1-schema-dumper-columnspec-u3"]
 deps-rfc: []
 est-loc: 200
-pr: 3081
+pr: trails#3081
 claim: "2026-06-10T12:01:40Z"
 assignee: "f7-fixtures-backed-clusters"
 blocked-by: null

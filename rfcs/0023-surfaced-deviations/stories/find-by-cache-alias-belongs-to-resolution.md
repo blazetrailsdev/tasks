@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 3295
+pr: trails#3295
 claim: "2026-06-14T21:58:12Z"
 assignee: "find-by-cache-alias-belongs-to-resolution"
 blocked-by: null

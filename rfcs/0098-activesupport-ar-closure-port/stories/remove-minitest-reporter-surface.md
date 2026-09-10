@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6547
+pr: trails#6547
 claim: "2026-08-14T21:41:01Z"
 assignee: "converge-activesupport-module-deprecator-and-gem-version"
 blocked-by: null

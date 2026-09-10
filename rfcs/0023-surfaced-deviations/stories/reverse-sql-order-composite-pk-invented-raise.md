@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4971
+pr: trails#4971
 claim: "2026-07-19T21:31:09Z"
 assignee: "reverse-sql-order-composite-pk-invented-raise"
 blocked-by: null

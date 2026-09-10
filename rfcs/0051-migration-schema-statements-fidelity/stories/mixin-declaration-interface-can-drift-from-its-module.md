@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5863
+pr: trails#5863
 claim: "2026-08-02T03:36:48Z"
 assignee: "mixin-declaration-interface-can-drift-from-its-module"
 blocked-by: null

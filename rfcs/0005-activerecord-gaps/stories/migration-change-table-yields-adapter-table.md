@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5626
+pr: trails#5626
 claim: "2026-07-30T01:22:12Z"
 assignee: "migration-change-table-yields-adapter-table"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6565
+pr: trails#6565
 claim: "2026-08-15T14:14:32Z"
 assignee: "call-recorder-matches-bodiless-interface-declarations"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: 3470
+pr: trails#3470
 claim: "2026-06-16T15:46:16Z"
 assignee: "assoc-associations-test-wave2-delete-dup-describes"
 blocked-by: null

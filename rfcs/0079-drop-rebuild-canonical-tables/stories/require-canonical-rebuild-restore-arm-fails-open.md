@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7118
+pr: trails#7118
 claim: "2026-08-27T13:28:57Z"
 assignee: "require-canonical-rebuild-restore-arm-fails-open"
 blocked-by: null

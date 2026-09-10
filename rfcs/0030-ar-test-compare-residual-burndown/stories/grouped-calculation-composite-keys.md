@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5172
+pr: trails#5172
 claim: "2026-07-23T13:40:35Z"
 assignee: "grouped-calculation-composite-keys"
 blocked-by: null

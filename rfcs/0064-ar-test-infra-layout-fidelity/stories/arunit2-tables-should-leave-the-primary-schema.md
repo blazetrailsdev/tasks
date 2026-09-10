@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5685
+pr: trails#5685
 claim: "2026-07-30T23:15:18Z"
 assignee: "arunit2-tables-should-leave-the-primary-schema"
 blocked-by: null

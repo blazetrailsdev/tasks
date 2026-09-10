@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4841
+pr: trails#4841
 claim: "2026-07-13T18:38:23Z"
 assignee: "narrow-alias-tracker-connection-length-fallback-catch"
 blocked-by: null

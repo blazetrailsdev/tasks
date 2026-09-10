@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6172
+pr: trails#6172
 claim: "2026-08-07T13:39:44Z"
 assignee: "date-temporal-default-return-and-ruby-opt-in"
 blocked-by: null

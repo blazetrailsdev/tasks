@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 3342
+pr: trails#3342
 claim: "2026-06-15T12:10:10Z"
 assignee: "mysql-unsigned-decimal-precision-scale-message"
 blocked-by: null

@@ -7,7 +7,7 @@ cluster: split-stores
 deps: []
 deps-rfc: []
 est-loc: 90
-pr: 6854
+pr: trails#6854
 claim: "2026-08-25T16:58:47Z"
 assignee: "converge-duplicate-url-options-and-url-for"
 blocked-by: null

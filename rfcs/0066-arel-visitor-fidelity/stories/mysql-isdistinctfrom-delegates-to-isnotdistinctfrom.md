@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 50
-pr: 5061
+pr: trails#5061
 claim: "2026-07-22T15:41:50Z"
 assignee: "mysql-isdistinctfrom-delegates-to-isnotdistinctfrom"
 blocked-by: null

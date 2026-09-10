@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5247
+pr: trails#5247
 claim: "2026-07-24T17:58:54Z"
 assignee: "method-order-expand-operator-spelling-coverage"
 blocked-by: null

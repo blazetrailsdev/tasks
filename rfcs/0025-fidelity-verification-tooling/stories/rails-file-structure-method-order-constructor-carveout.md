@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5044
+pr: trails#5044
 claim: "2026-07-21T20:55:19Z"
 assignee: "rails-file-structure-method-order-constructor-carveout"
 blocked-by: null

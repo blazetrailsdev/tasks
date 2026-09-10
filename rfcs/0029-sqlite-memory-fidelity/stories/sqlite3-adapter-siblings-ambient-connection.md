@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5499
+pr: trails#5499
 claim: "2026-07-28T13:16:41Z"
 assignee: "sqlite3-adapter-siblings-ambient-connection"
 blocked-by: null

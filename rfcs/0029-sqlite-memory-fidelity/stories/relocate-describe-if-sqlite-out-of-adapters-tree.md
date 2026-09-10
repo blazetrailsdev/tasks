@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5536
+pr: trails#5536
 claim: "2026-07-28T21:45:44Z"
 assignee: "relocate-describe-if-sqlite-out-of-adapters-tree"
 blocked-by: null

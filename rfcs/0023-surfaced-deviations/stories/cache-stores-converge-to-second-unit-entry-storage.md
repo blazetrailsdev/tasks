@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 3848
+pr: trails#3848
 claim: "2026-06-21T23:26:54Z"
 assignee: "cache-stores-converge-to-second-unit-entry-storage"
 blocked-by: null

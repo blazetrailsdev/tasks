@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5641
+pr: trails#5641
 claim: "2026-07-30T14:14:18Z"
 assignee: "docker-compose-db-services-lack-ci-tmpfs"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: 4599
+pr: trails#4599
 claim: "2026-07-05T10:07:26Z"
 assignee: "convert-pair-core-relation-a"
 blocked-by: null

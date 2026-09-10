@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: 4115
+pr: trails#4115
 claim: "2026-06-29T17:53:32Z"
 assignee: "materialize-declares-generator-id-accessor-gap"
 blocked-by: null

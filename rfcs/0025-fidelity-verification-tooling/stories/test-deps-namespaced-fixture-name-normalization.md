@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5034
+pr: trails#5034
 claim: "2026-07-21T18:25:22Z"
 assignee: "test-deps-namespaced-fixture-name-normalization"
 blocked-by: null

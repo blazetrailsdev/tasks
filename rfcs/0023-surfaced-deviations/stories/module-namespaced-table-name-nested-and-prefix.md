@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 3777
+pr: trails#3777
 claim: "2026-06-21T11:26:41Z"
 assignee: "module-namespaced-table-name-nested-and-prefix"
 blocked-by: null

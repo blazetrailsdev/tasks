@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5419
+pr: trails#5419
 claim: "2026-07-27T15:35:38Z"
 assignee: "activerecord-unrouted-privates-drop-carried-arguments"
 blocked-by: null

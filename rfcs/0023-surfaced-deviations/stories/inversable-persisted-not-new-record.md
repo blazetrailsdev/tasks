@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 4105
+pr: trails#4105
 claim: "2026-06-25T10:42:40Z"
 assignee: "inversable-persisted-not-new-record"
 blocked-by: null

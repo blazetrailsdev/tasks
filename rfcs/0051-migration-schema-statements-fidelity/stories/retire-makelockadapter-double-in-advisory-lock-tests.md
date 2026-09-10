@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 150
-pr: 6121
+pr: trails#6121
 claim: "2026-08-05T09:30:01Z"
 assignee: "rename-relation-modelclass-field-to-model"
 blocked-by: null

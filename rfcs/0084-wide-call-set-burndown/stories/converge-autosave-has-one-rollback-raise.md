@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6393
+pr: trails#6393
 claim: "2026-08-12T01:25:59Z"
 assignee: "converge-autosave-has-one-rollback-raise"
 blocked-by: null

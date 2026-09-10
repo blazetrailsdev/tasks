@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 3349
+pr: trails#3349
 claim: "2026-06-15T14:09:59Z"
 assignee: "abstract-tables-pg-fallback-misleading"
 blocked-by: null

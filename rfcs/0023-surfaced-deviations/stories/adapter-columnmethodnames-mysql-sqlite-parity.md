@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3565
+pr: trails#3565
 claim: "2026-06-17T18:54:44Z"
 assignee: "adapter-columnmethodnames-mysql-sqlite-parity"
 blocked-by: null

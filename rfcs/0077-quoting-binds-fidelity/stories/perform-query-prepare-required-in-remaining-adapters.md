@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 7158
+pr: trails#7158
 claim: "2026-08-28T13:34:54Z"
 assignee: "perform-query-prepare-required-in-remaining-adapters"
 blocked-by: null

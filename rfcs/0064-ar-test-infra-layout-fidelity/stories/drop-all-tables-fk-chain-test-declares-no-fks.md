@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5680
+pr: trails#5680
 claim: "2026-07-30T21:21:19Z"
 assignee: "drop-all-tables-fk-chain-test-declares-no-fks"
 blocked-by: null

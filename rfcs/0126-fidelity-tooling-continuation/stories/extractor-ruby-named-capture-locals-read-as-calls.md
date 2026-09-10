@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 3
-pr: 7180
+pr: trails#7180
 claim: "2026-08-28T20:19:51Z"
 assignee: "extractor-ruby-named-capture-locals-read-as-calls"
 blocked-by: null

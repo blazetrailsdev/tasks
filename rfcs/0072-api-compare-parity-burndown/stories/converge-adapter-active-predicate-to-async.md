@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5967
+pr: trails#5967
 claim: "2026-08-03T13:34:01Z"
 assignee: "converge-adapter-active-predicate-to-async"
 blocked-by: null

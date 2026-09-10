@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: 3874
+pr: trails#3874
 claim: "2026-06-22T12:11:58Z"
 assignee: "store-full-sti-class-name"
 blocked-by: null

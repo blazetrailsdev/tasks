@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 7243
+pr: trails#7243
 claim: "2026-08-30T14:57:57Z"
 assignee: "integer-cast-value-is-a-rescue-not-a-probe"
 blocked-by: null

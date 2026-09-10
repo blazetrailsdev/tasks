@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 4
-pr: 4236
+pr: trails#4236
 claim: "2026-06-28T17:46:36Z"
 assignee: "timestamp-suite-canonical"
 blocked-by: null

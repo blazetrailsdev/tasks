@@ -8,7 +8,7 @@ deps: ["migrator-test-sites-adopt-rails-ctor-signature"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6200
+pr: trails#6200
 claim: "2026-08-07T20:40:39Z"
 assignee: "migrator-connection-resolves-per-call"
 blocked-by: null

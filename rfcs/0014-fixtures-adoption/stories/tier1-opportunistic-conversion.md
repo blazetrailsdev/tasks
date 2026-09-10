@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 52
-pr: 2991
+pr: trails#2991
 claim: "2026-06-07T02:30:57Z"
 assignee: "tier1-opportunistic-conversion"
 blocked-by: null

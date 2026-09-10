@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 50
-pr: 3536
+pr: trails#3536
 claim: "2026-06-17T13:16:24Z"
 assignee: "schema-dumper-emittable-virtual-column-options"
 blocked-by: null

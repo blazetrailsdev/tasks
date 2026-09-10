@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4654
+pr: trails#4654
 claim: "2026-07-06T02:26:23Z"
 assignee: "cover-inverse-of-foreign-key-derivation-branches"
 blocked-by: null

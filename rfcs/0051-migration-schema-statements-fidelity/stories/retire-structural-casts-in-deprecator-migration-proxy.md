@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5788
+pr: trails#5788
 claim: "2026-08-01T02:33:47Z"
 assignee: "retire-structural-casts-in-deprecator-migration-proxy"
 blocked-by: null

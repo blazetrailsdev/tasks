@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6418
+pr: trails#6418
 claim: "2026-08-12T15:36:57Z"
 assignee: "call-args-ar-connection-adapters-blocks"
 blocked-by: null

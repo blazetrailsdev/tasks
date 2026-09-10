@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 17
-pr: 5088
+pr: trails#5088
 claim: "2026-07-22T22:13:09Z"
 assignee: "f1-prevent-writes-and-tail"
 blocked-by: null

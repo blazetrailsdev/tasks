@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 0
-pr: 4796
+pr: trails#4796
 claim: "2026-07-08T19:11:20Z"
 assignee: "lint-guard-unawaited-isvalid"
 blocked-by: null

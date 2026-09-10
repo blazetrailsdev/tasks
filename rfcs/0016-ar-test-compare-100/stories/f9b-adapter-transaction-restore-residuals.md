@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: 3176
+pr: trails#3176
 claim: "2026-06-13T02:13:00Z"
 assignee: "f9b-adapter-transaction-restore-residuals"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: 4327
+pr: trails#4327
 claim: "2026-06-30T15:56:41Z"
 assignee: "converge-migrator-stmtcache-adapter-one-schema"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7134
+pr: trails#7134
 claim: "2026-08-27T18:08:24Z"
 assignee: "move-attributes-and-attribute-methods-off-active-model-model"
 blocked-by: null

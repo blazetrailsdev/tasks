@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 7063
+pr: trails#7063
 claim: "2026-08-25T23:35:45Z"
 assignee: "abstract-statements-field-typed-structurally"
 blocked-by: null

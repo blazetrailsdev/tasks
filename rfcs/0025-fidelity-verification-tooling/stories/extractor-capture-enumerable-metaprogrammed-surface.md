@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3991
+pr: trails#3991
 claim: "2026-06-23T13:12:40Z"
 assignee: "extractor-capture-enumerable-metaprogrammed-surface"
 blocked-by: null

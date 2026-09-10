@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6113
+pr: trails#6113
 claim: "2026-08-05T02:15:00Z"
 assignee: "converge-mysql-version-string-single-raise-site"
 blocked-by: null

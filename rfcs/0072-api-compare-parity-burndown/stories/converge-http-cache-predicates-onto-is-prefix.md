@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5637
+pr: trails#5637
 claim: "2026-07-30T13:32:33Z"
 assignee: "converge-http-cache-predicates-onto-is-prefix"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4178
+pr: trails#4178
 claim: "2026-07-20T17:41:10Z"
 assignee: "structural-compat-unscope-dim-mapping"
 blocked-by: null

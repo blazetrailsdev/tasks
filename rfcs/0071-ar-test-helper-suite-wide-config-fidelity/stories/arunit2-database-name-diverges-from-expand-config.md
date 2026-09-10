@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5640
+pr: trails#5640
 claim: "2026-07-30T14:08:18Z"
 assignee: "arunit2-database-name-diverges-from-expand-config"
 blocked-by: null

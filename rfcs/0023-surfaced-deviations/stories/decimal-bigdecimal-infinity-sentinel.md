@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3273
+pr: trails#3273
 claim: "2026-06-14T18:18:34Z"
 assignee: "decimal-bigdecimal-infinity-sentinel"
 blocked-by: null

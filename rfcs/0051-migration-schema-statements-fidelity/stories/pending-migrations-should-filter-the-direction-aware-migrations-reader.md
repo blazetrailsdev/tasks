@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5803
+pr: trails#5803
 claim: "2026-08-01T17:35:41Z"
 assignee: "pending-migrations-should-filter-the-direction-aware-migrations-reader"
 blocked-by: null

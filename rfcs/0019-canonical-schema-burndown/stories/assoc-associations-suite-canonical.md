@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 5
-pr: 4238
+pr: trails#4238
 claim: "2026-06-28T18:06:34Z"
 assignee: "assoc-associations-suite-canonical"
 blocked-by: null

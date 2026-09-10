@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: 3074
+pr: trails#3074
 claim: "2026-06-10T01:31:18Z"
 assignee: "phase2-route-data-path-through-withrawconnection"
 blocked-by: null

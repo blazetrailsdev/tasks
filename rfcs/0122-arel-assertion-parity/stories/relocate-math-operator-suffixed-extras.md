@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7100
+pr: trails#7100
 claim: "2026-08-26T19:54:34Z"
 assignee: "relocate-math-operator-suffixed-extras"
 blocked-by: null

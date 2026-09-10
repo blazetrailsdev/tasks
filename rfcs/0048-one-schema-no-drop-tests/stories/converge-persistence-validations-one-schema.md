@@ -8,7 +8,7 @@ deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 450
 priority: 9
-pr: 4333
+pr: trails#4333
 claim: "2026-06-30T16:32:40Z"
 assignee: "converge-persistence-validations-one-schema"
 blocked-by: null

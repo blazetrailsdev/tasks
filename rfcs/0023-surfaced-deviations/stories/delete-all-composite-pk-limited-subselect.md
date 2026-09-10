@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 3277
+pr: trails#3277
 claim: "2026-06-14T18:42:34Z"
 assignee: "delete-all-composite-pk-limited-subselect"
 blocked-by: null

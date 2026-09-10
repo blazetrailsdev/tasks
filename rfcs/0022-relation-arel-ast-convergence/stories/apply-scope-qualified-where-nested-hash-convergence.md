@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3961
+pr: trails#3961
 claim: "2026-06-23T10:45:35Z"
 assignee: "apply-scope-qualified-where-nested-hash-convergence"
 blocked-by: null

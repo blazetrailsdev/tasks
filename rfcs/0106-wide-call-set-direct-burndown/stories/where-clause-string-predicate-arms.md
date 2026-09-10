@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6911
+pr: trails#6911
 claim: "2026-08-23T12:42:25Z"
 assignee: "where-clause-string-predicate-arms"
 blocked-by: null

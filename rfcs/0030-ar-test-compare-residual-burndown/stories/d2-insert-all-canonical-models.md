@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3446
+pr: trails#3446
 claim: "2026-06-16T11:53:00Z"
 assignee: "d2-insert-all-canonical-models"
 blocked-by: null

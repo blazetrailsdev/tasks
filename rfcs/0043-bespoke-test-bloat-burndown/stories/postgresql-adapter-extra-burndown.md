@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 15
-pr: 4149
+pr: trails#4149
 claim: "2026-06-25T20:19:03Z"
 assignee: "postgresql-adapter-extra-burndown"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6959
+pr: trails#6959
 claim: "2026-08-23T22:40:29Z"
 assignee: "collapse-the-activerecord-secure-password-duplicate"
 blocked-by: null

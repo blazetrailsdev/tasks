@@ -9,7 +9,7 @@ deps: ["rack-test-package-skeleton"]
 deps-rfc: []
 est-loc: 80
 priority: 4
-pr: 7459
+pr: trails#7459
 claim: "2026-09-03T20:37:20Z"
 assignee: "enroll-rack-test-in-compare-tooling"
 blocked-by: null

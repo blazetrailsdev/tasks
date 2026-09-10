@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6644
+pr: trails#6644
 claim: "2026-08-17T11:25:49Z"
 assignee: "assertions-activesupport-core-ext-date-time-duration"
 blocked-by: null

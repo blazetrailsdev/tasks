@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3771
+pr: trails#3771
 claim: "2026-06-21T03:18:42Z"
 assignee: "module-namespaced-sti-polymorphic-name"
 blocked-by: null

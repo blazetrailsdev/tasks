@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5455
+pr: trails#5455
 claim: "2026-07-27T21:04:16Z"
 assignee: "converge-two-detach-displaced-helpers-into-remove-target"
 blocked-by: null

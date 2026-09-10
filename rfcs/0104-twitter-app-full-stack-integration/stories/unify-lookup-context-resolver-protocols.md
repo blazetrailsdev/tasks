@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 25
-pr: 7296
+pr: trails#7296
 claim: "2026-08-31T14:13:41Z"
 assignee: "unify-lookup-context-resolver-protocols"
 blocked-by: null

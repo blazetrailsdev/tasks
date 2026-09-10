@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4578
+pr: trails#4578
 claim: "2026-07-04T23:07:06Z"
 assignee: "mysql2-adapter-nullpool-and-addreference-deviations"
 blocked-by: null

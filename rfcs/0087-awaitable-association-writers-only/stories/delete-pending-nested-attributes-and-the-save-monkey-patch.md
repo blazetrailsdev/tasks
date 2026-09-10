@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: 7355
+pr: trails#7355
 claim: "2026-09-01T18:59:00Z"
 assignee: "delete-pending-nested-attributes-and-the-save-monkey-patch"
 blocked-by: null

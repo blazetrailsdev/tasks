@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 5
-pr: 7372
+pr: trails#7372
 claim: "2026-09-02T00:42:21Z"
 assignee: "retire-autosave-association-definition-holder"
 blocked-by: null

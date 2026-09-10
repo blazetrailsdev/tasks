@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: 7601
+pr: trails#7601
 claim: "2026-09-08T02:07:31Z"
 assignee: "journey-arm-and-short-circuit-triage"
 blocked-by: null

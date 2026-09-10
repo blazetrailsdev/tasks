@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 13
-pr: 4752
+pr: trails#4752
 claim: "2026-07-07T19:01:50Z"
 assignee: "xml-mini-to-tag-shared-helper"
 blocked-by: null

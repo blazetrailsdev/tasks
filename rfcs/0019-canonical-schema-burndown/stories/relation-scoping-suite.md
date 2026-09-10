@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 64
-pr: 4203
+pr: trails#4203
 claim: "2026-06-26T17:42:57Z"
 assignee: "relation-scoping-suite"
 blocked-by: null

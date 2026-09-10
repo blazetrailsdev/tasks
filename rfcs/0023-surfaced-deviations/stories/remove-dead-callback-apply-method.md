@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 40
-pr: 3889
+pr: trails#3889
 claim: "2026-06-22T15:23:56Z"
 assignee: "remove-dead-callback-apply-method"
 blocked-by: null

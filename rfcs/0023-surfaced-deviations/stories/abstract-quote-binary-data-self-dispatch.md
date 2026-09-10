@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4870
+pr: trails#4870
 claim: "2026-07-14T19:21:13Z"
 assignee: "abstract-quote-binary-data-self-dispatch"
 blocked-by: null

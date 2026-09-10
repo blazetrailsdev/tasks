@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 5
-pr: 3132
+pr: trails#3132
 claim: "2026-06-11T20:39:06Z"
 assignee: "relocate-non-quoting-helpers-from-quoting"
 blocked-by: null

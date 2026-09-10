@@ -7,7 +7,7 @@ cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 5728
+pr: trails#5728
 claim: "2026-07-31T18:02:32Z"
 assignee: "wide-calls-same-file-transitive-call-set"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6361
+pr: trails#6361
 claim: "2026-08-11T14:16:14Z"
 assignee: "arel-nodes-manager-residual-classification"
 blocked-by: null

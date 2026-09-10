@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: 4815
+pr: trails#4815
 claim: "2026-07-09T01:22:34Z"
 assignee: "delegation-model-agnostic-delegator-sti-carrier-inheritance"
 blocked-by: null

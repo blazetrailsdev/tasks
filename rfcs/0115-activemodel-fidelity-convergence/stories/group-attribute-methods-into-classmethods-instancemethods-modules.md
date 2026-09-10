@@ -9,7 +9,7 @@ deps:
   - api-compare-bodyless-declaration-outranks-real-body
 deps-rfc: []
 est-loc: 420
-pr: 7103
+pr: trails#7103
 claim: "2026-08-26T20:28:08Z"
 assignee: "group-attribute-methods-into-classmethods-instancemethods-modules"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4187
+pr: trails#4187
 claim: "2026-06-29T13:34:13Z"
 assignee: "callbacks-local-update-test-coverage"
 blocked-by: null

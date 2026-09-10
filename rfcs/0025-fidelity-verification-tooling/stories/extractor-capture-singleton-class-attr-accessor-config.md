@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3993
+pr: trails#3993
 claim: "2026-06-23T13:22:50Z"
 assignee: "extractor-capture-singleton-class-attr-accessor-config"
 blocked-by: null

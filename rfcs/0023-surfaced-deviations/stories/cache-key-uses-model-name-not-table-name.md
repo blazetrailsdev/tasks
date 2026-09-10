@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3632
+pr: trails#3632
 claim: "2026-06-19T11:24:27Z"
 assignee: "cache-key-uses-model-name-not-table-name"
 blocked-by: null

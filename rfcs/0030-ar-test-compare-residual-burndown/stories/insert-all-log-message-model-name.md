@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3743
+pr: trails#3743
 claim: "2026-06-20T22:07:27Z"
 assignee: "insert-all-log-message-model-name"
 blocked-by: null

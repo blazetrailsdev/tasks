@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3975
+pr: trails#3975
 claim: "2026-06-23T11:42:40Z"
 assignee: "compute-type-namespace-relative-resolution"
 blocked-by: null

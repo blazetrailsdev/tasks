@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: 3818
+pr: trails#3818
 claim: "2026-06-21T18:22:42Z"
 assignee: "fk-slice-test-mocks-unstored-validate"
 blocked-by: null

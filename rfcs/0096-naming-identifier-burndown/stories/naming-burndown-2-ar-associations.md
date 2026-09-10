@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 188
-pr: 6420
+pr: trails#6420
 claim: "2026-08-12T15:43:28Z"
 assignee: "naming-burndown-2-ar-associations"
 blocked-by: null

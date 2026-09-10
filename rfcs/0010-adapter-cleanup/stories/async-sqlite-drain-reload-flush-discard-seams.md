@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 14
-pr: 4065
+pr: trails#4065
 claim: "2026-06-24T15:57:32Z"
 assignee: "async-sqlite-drain-reload-flush-discard-seams"
 blocked-by: null

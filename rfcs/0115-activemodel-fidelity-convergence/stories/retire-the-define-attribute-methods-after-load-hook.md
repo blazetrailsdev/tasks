@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 4
-pr: 7279
+pr: trails#7279
 claim: "2026-08-31T00:58:53Z"
 assignee: "retire-the-define-attribute-methods-after-load-hook"
 blocked-by: null

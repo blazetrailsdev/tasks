@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 4062
+pr: trails#4062
 claim: "2026-06-24T14:54:03Z"
 assignee: "force-equality-bind-convergence"
 blocked-by: null

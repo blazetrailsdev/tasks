@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: 10
-pr: 4755
+pr: trails#4755
 claim: "2026-07-07T19:37:53Z"
 assignee: "foreign-keys-enabled-reads-adapter-config"
 blocked-by: null

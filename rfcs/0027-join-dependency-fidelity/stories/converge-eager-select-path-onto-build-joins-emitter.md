@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 4326
+pr: trails#4326
 claim: "2026-06-30T15:32:37Z"
 assignee: "converge-eager-select-path-onto-build-joins-emitter"
 blocked-by: null

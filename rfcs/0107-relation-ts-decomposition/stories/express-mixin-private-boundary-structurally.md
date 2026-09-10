@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6767
+pr: trails#6767
 claim: "2026-08-20T12:22:28Z"
 assignee: "express-mixin-private-boundary-structurally"
 blocked-by: null

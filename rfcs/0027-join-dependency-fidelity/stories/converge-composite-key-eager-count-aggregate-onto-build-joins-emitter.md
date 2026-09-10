@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4549
+pr: trails#4549
 claim: "2026-07-04T14:19:28Z"
 assignee: "converge-composite-key-eager-count-aggregate-onto-build-joins-emitter"
 blocked-by: null

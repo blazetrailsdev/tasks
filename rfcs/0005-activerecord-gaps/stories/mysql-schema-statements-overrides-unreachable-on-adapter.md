@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5490
+pr: trails#5490
 claim: "2026-07-28T12:16:18Z"
 assignee: "mysql-schema-statements-overrides-unreachable-on-adapter"
 blocked-by: null

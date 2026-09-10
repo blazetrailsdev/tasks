@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6729
+pr: trails#6729
 claim: "2026-08-18T22:11:19Z"
 assignee: "suppressed-call-lets-sibling-claim-ts-candidate"
 blocked-by: null

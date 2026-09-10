@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 5810
+pr: trails#5810
 claim: "2026-08-01T18:27:00Z"
 assignee: "sqlite-alter-table-caller-bypasses-definition-foreign-key"
 blocked-by: null

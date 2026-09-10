@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7536
+pr: trails#7536
 claim: "2026-09-05T21:26:49Z"
 assignee: "adapter-class-guards-a-missing-adapter-rails-lets-resolve-raise"
 blocked-by: null

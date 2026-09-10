@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6761
+pr: trails#6761
 claim: "2026-08-20T03:52:32Z"
 assignee: "port-with-connection-acquisition-seam-for-the-arel-reader"
 blocked-by: null

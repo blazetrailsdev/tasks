@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4768
+pr: trails#4768
 claim: "2026-07-08T01:50:23Z"
 assignee: "arconn-without-test-url-must-not-silently-fall-back-to-sqlite"
 blocked-by: null

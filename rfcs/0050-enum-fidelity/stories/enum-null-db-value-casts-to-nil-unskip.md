@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 32
-pr: 4806
+pr: trails#4806
 claim: "2026-07-08T22:07:34Z"
 assignee: "enum-null-db-value-casts-to-nil-unskip"
 blocked-by: null

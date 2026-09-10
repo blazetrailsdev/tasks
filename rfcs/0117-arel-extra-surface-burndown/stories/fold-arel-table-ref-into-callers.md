@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6864
+pr: trails#6864
 claim: "2026-08-22T16:49:57Z"
 assignee: "fold-arel-table-ref-into-callers"
 blocked-by: null

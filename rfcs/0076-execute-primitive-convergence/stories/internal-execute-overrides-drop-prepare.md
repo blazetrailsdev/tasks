@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6295
+pr: trails#6295
 claim: "2026-08-09T19:39:19Z"
 assignee: "order-column-fallback-quotes-column-not-table-name"
 blocked-by: null

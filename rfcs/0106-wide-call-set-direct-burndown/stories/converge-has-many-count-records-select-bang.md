@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6825
+pr: trails#6825
 claim: "2026-08-21T17:20:33Z"
 assignee: "converge-has-many-count-records-select-bang"
 blocked-by: null

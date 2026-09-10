@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 3728
+pr: trails#3728
 claim: "2026-06-20T17:01:28Z"
 assignee: "hasone-polymorphic-as-getter-returns-undefined"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 7506
+pr: trails#7506
 claim: "2026-09-05T02:22:17Z"
 assignee: "flip-rack-deflater-onto-the-zlib-seam"
 blocked-by: null

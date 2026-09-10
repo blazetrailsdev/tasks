@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 6173
+pr: trails#6173
 claim: "2026-08-07T13:54:41Z"
 assignee: "datetime-new-drops-canon24oc"
 blocked-by: null

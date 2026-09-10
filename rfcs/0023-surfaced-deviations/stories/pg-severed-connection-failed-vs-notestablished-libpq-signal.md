@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4935
+pr: trails#4935
 claim: "2026-07-19T01:01:11Z"
 assignee: "pg-severed-connection-failed-vs-notestablished-libpq-signal"
 blocked-by: null

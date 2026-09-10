@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: 3310
+pr: trails#3310
 claim: "2026-06-15T00:00:39Z"
 assignee: "audit-bind-inlining-rails-fidelity"
 blocked-by: null

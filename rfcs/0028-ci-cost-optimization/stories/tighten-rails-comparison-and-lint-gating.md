@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 20
-pr: 3867
+pr: trails#3867
 claim: "2026-06-22T03:47:58Z"
 assignee: "tighten-rails-comparison-and-lint-gating"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: 6745
+pr: trails#6745
 claim: "2026-08-19T17:00:23Z"
 assignee: "collection-proxy-initialize-is-five-lines"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 7123
+pr: trails#7123
 claim: "2026-08-27T15:57:56Z"
 assignee: "arel-attribute-inlines-four-mixins"
 blocked-by: null

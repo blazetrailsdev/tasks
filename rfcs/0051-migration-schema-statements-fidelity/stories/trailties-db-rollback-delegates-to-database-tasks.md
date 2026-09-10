@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 5616
+pr: trails#5616
 claim: "2026-07-29T22:42:01Z"
 assignee: "trailties-db-rollback-delegates-to-database-tasks"
 blocked-by: null

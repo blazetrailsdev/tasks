@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 7627
+pr: trails#7627
 claim: "2026-09-08T19:43:53Z"
 assignee: "rails-test-name-parity-rollout-actionview"
 blocked-by: null

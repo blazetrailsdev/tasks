@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 3338
+pr: trails#3338
 claim: "2026-06-15T12:45:08Z"
 assignee: "persistence-query-constraints-where"
 blocked-by: null

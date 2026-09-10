@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 16
-pr: 7470
+pr: trails#7470
 claim: "2026-09-04T00:19:14Z"
 assignee: "extra-surface-gate-blocks-new-file-dir-members"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7060
+pr: trails#7060
 claim: "2026-08-25T18:47:56Z"
 assignee: "converge-association-check-klass-onto-reflection-check-validity"
 blocked-by: null

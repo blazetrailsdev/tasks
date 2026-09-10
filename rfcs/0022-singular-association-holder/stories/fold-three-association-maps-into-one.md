@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 3296
+pr: trails#3296
 claim: "2026-06-14T22:05:11Z"
 assignee: "fold-three-association-maps-into-one"
 blocked-by: null

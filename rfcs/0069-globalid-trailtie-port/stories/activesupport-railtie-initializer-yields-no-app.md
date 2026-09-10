@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 7301
+pr: trails#7301
 claim: "2026-08-31T15:51:54Z"
 assignee: "activesupport-railtie-initializer-yields-no-app"
 blocked-by: null

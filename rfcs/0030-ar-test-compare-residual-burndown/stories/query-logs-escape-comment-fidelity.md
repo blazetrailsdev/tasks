@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: 5124
+pr: trails#5124
 claim: "2026-07-23T03:37:38Z"
 assignee: "query-logs-escape-comment-fidelity"
 blocked-by: null

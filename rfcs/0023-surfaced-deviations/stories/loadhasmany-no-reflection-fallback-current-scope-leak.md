@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: 3765
+pr: trails#3765
 claim: "2026-06-21T02:15:26Z"
 assignee: "loadhasmany-no-reflection-fallback-current-scope-leak"
 blocked-by: null

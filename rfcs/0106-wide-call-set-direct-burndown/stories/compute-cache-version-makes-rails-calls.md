@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 4
-pr: 6663
+pr: trails#6663
 claim: "2026-08-17T18:08:11Z"
 assignee: "compute-cache-version-makes-rails-calls"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 4853
+pr: trails#4853
 claim: "2026-07-13T21:02:39Z"
 assignee: "rails-callback-invocation-lint-rule"
 blocked-by: null

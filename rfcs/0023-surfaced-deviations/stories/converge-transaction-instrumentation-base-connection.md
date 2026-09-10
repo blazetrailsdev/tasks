@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4520
+pr: trails#4520
 claim: "2026-07-03T22:55:08Z"
 assignee: "converge-transaction-instrumentation-base-connection"
 blocked-by: null

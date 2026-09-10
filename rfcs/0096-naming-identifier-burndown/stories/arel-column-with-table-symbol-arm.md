@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6475
+pr: trails#6475
 claim: "2026-08-13T16:35:50Z"
 assignee: "arel-column-with-table-symbol-arm"
 blocked-by: null

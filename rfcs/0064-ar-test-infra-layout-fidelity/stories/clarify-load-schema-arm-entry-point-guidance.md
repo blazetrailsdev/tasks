@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: 5695
+pr: trails#5695
 claim: "2026-07-31T00:57:04Z"
 assignee: "clarify-load-schema-arm-entry-point-guidance"
 blocked-by: null

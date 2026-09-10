@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 6768
+pr: trails#6768
 claim: "2026-08-20T12:52:31Z"
 assignee: "converge-accepts-multiparameter-time-cast-from-multiparameter"
 blocked-by: null

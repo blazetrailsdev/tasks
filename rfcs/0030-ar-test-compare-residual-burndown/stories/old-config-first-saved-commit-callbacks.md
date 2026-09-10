@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 19
-pr: 3502
+pr: trails#3502
 claim: "2026-06-16T21:12:43Z"
 assignee: "old-config-first-saved-commit-callbacks"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6919
+pr: trails#6919
 claim: "2026-08-23T15:12:27Z"
 assignee: "converge-xmlmini-symbol-representation-onto-colon-strings"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5470
+pr: trails#5470
 claim: "2026-07-28T00:28:15Z"
 assignee: "retire-unused-ambient-railtie-mixins-methods-arm"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 40
-pr: 7643
+pr: trails#7643
 claim: "2026-09-09T14:41:51Z"
 assignee: "collection-caching-for-partial-renderer"
 blocked-by: null

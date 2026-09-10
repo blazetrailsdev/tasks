@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6723
+pr: trails#6723
 claim: "2026-08-23T16:57:27Z"
 assignee: "dont-memoize-negative-source-resolution-from-unresolvable-klass"
 blocked-by: null

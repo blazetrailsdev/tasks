@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 17
-pr: 5426
+pr: trails#5426
 claim: "2026-07-27T17:21:59Z"
 assignee: "test-compare-unregistered-gate-wrapper-fails-loudly"
 blocked-by: null

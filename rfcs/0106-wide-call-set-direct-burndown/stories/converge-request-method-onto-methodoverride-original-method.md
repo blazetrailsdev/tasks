@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6670
+pr: trails#6670
 claim: "2026-08-17T21:28:00Z"
 assignee: "converge-request-method-onto-methodoverride-original-method"
 blocked-by: null

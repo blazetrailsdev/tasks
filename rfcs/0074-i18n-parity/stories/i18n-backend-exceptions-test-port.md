@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6009
+pr: trails#6009
 claim: "2026-08-03T19:11:45Z"
 assignee: "i18n-backend-exceptions-test-port"
 blocked-by: null

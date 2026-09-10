@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4945
+pr: trails#4945
 claim: "2026-07-19T00:51:11Z"
 assignee: "adapter-connection-active-transaction-restored-mysql-ungate"
 blocked-by: null

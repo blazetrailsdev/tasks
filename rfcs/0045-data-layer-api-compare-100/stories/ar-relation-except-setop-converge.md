@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4052
+pr: trails#4052
 claim: "2026-06-24T04:30:41Z"
 assignee: "ar-relation-except-setop-converge"
 blocked-by: null

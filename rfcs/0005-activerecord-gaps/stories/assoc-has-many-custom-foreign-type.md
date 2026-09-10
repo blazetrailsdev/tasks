@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4247
+pr: trails#4247
 claim: "2026-06-28T21:11:50Z"
 assignee: "assoc-has-many-custom-foreign-type"
 blocked-by: null

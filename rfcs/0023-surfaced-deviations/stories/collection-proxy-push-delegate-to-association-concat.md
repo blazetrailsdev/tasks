@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4308
+pr: trails#4308
 claim: "2026-06-30T03:54:31Z"
 assignee: "collection-proxy-push-delegate-to-association-concat"
 blocked-by: null

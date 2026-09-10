@@ -9,7 +9,7 @@ deps: ["serve-the-read-verbs-as-json"]
 deps-rfc: []
 est-loc: 200
 priority: 12
-pr: 6
+pr: trailmap#6
 claim: "2026-09-05T23:01:36Z"
 assignee: "serve-the-mutation-verbs-as-json"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5508
+pr: trails#5508
 claim: "2026-07-28T13:31:47Z"
 assignee: "sqlite3-mem-lane-status"
 blocked-by: null

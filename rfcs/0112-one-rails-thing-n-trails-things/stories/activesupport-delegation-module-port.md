@@ -7,7 +7,7 @@ cluster: duplicate-bodies
 deps: []
 deps-rfc: []
 est-loc: 350
-pr: 6965
+pr: trails#6965
 claim: "2026-08-24T02:13:27Z"
 assignee: "activesupport-delegation-module-port"
 blocked-by: null

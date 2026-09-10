@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3293
+pr: trails#3293
 claim: "2026-06-14T21:51:11Z"
 assignee: "f9g3b4-finder-eager-load-collection-ordering"
 blocked-by: null

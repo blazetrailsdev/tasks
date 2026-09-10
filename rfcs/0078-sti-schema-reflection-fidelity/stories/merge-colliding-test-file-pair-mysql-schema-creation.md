@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6960
+pr: trails#6960
 claim: "2026-08-23T23:22:31Z"
 assignee: "merge-colliding-test-file-pair-mysql-schema-creation"
 blocked-by: null

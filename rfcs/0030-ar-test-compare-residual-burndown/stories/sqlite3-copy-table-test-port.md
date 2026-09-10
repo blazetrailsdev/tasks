@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 30
-pr: 3873
+pr: trails#3873
 claim: "2026-06-22T12:03:58Z"
 assignee: "sqlite3-copy-table-test-port"
 blocked-by: null

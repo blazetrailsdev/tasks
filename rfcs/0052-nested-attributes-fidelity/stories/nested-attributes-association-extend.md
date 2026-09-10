@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4580
+pr: trails#4580
 claim: "2026-07-05T00:07:05Z"
 assignee: "nested-attributes-association-extend"
 blocked-by: null

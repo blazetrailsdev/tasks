@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: 5571
+pr: trails#5571
 claim: "2026-07-29T19:04:12Z"
 assignee: "port-columns-test-add-remove-column-tail"
 blocked-by: null

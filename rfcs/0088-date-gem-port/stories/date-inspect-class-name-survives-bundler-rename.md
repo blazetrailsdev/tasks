@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6495
+pr: trails#6495
 claim: "2026-08-13T21:57:10Z"
 assignee: "converge-fixtures-encrypted-attributes-present"
 blocked-by: null

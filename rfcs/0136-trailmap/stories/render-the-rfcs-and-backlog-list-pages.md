@@ -9,7 +9,7 @@ deps: ["render-the-rfc-and-story-show-pages"]
 deps-rfc: []
 est-loc: 250
 priority: 4
-pr: 15
+pr: trailmap#15
 claim: "2026-09-06T23:17:54Z"
 assignee: "render-the-rfcs-and-backlog-list-pages"
 blocked-by: null

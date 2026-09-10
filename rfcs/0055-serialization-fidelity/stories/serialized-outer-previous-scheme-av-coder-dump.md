@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5155
+pr: trails#5155
 claim: "2026-07-23T16:09:54Z"
 assignee: "serialized-outer-previous-scheme-av-coder-dump"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4573
+pr: trails#4573
 claim: "2026-07-04T21:47:05Z"
 assignee: "model-new-unknown-attribute"
 blocked-by: null

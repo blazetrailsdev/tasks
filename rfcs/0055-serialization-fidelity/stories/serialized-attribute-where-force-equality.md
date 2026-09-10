@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 26
-pr: 4731
+pr: trails#4731
 claim: "2026-07-07T21:05:24Z"
 assignee: "serialized-attribute-where-force-equality"
 blocked-by: null

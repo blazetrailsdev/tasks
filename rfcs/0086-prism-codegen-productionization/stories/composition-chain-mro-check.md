@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5830
+pr: trails#5830
 claim: "2026-08-01T21:46:01Z"
 assignee: "composition-chain-mro-check"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7011
+pr: trails#7011
 claim: "2026-08-24T22:54:10Z"
 assignee: "forced-mutation-tracker-takes-an-attributeset-where-rails-passes-the-model"
 blocked-by: null

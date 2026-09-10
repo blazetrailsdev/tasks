@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 37
-pr: 2972
+pr: trails#2972
 claim: "2026-06-06T14:01:10Z"
 assignee: "gate-mismatch-cleanup"
 blocked-by: null

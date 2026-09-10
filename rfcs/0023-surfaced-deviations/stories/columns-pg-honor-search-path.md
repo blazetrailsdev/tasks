@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3785
+pr: trails#3785
 claim: "2026-06-21T12:46:42Z"
 assignee: "columns-pg-honor-search-path"
 blocked-by: null

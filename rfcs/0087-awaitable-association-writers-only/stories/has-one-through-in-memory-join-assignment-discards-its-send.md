@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 6
-pr: 7312
+pr: trails#7312
 claim: "2026-08-31T20:39:28Z"
 assignee: "nested-attributes-existing-records-should-be-queried"
 blocked-by: null

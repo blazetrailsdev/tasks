@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 50
-pr: 3552
+pr: trails#3552
 claim: "2026-06-17T15:53:59Z"
 assignee: "unify-alias-tracker-across-join-buckets"
 blocked-by: null

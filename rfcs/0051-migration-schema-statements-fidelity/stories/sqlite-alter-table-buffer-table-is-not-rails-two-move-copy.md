@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 5527
+pr: trails#5527
 claim: "2026-07-28T18:13:42Z"
 assignee: "sqlite-alter-table-buffer-table-is-not-rails-two-move-copy"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 21
-pr: 7501
+pr: trails#7501
 claim: "2026-09-04T23:26:00Z"
 assignee: "io-write-must-transcode-to-utf8-in-text-mode"
 blocked-by: null

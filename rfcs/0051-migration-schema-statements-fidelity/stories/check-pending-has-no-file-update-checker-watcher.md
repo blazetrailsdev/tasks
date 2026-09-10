@@ -8,7 +8,7 @@ deps:
   - port-activesupport-file-update-checker
 deps-rfc: []
 est-loc: 180
-pr: 7166
+pr: trails#7166
 claim: "2026-08-28T15:18:13Z"
 assignee: "check-pending-has-no-file-update-checker-watcher"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4081
+pr: trails#4081
 claim: "2026-06-24T19:26:48Z"
 assignee: "build-joins-seed-alias-tracker-leading-join-nodes"
 blocked-by: null

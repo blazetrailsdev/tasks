@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6821
+pr: trails#6821
 claim: "2026-08-21T14:20:44Z"
 assignee: "retire-collection-proxy-raise-on-type-mismatch"
 blocked-by: null

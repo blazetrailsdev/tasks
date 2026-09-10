@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6209
+pr: trails#6209
 claim: "2026-08-08T00:01:22Z"
 assignee: "abstract-adapter-role-shard-cast-hides-ruby-nomethoderr"
 blocked-by: null

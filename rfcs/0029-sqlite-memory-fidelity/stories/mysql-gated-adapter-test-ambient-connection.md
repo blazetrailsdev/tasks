@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5303
+pr: trails#5303
 claim: "2026-07-25T13:34:54Z"
 assignee: "mysql-gated-adapter-test-ambient-connection"
 blocked-by: null

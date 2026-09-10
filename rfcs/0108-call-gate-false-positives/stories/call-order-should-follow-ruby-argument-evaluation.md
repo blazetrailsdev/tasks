@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6404
+pr: trails#6404
 claim: "2026-08-17T16:56:50Z"
 assignee: "call-arg-comparator-attr-reader-false-positives"
 blocked-by: null

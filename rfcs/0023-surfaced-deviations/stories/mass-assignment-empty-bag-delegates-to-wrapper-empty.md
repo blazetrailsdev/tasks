@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4838
+pr: trails#4838
 claim: "2026-07-13T18:18:25Z"
 assignee: "mass-assignment-empty-bag-delegates-to-wrapper-empty"
 blocked-by: null

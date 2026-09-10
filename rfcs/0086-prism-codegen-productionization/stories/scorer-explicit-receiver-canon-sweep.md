@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5825
+pr: trails#5825
 claim: "2026-08-01T19:45:02Z"
 assignee: "scorer-explicit-receiver-canon-sweep"
 blocked-by: null

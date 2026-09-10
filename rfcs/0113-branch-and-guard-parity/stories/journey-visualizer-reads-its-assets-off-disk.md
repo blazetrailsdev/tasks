@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 48
-pr: 7619
+pr: trails#7619
 claim: "2026-09-08T15:34:30Z"
 assignee: "journey-visualizer-reads-its-assets-off-disk"
 blocked-by: null

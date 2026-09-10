@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 41
-pr: 4737
+pr: trails#4737
 claim: "2026-07-07T14:01:51Z"
 assignee: "enum-frozen-statuses-per-class-redefinition-status-change"
 blocked-by: null

@@ -8,7 +8,7 @@ deps:
   - phase2c-txn-control-retire-withclient
 deps-rfc: []
 est-loc: 300
-pr: 3090
+pr: trails#3090
 claim: "2026-06-10T18:00:26Z"
 assignee: "phase3-unify-connection-slot"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6494
+pr: trails#6494
 claim: "2026-08-13T21:27:10Z"
 assignee: "drop-assert-valid-keys-set-for-rails-include"
 blocked-by: null

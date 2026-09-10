@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 22
-pr: 3505
+pr: trails#3505
 claim: "2026-06-16T21:48:41Z"
 assignee: "update-delete-all-default-scope-joins"
 blocked-by: null

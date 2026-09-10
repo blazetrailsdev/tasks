@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5844
+pr: trails#5844
 claim: "2026-08-02T00:11:04Z"
 assignee: "dissolve-the-postgresql-schema-statements-companion"
 blocked-by: null

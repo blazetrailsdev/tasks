@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 4707
+pr: trails#4707
 claim: "2026-07-06T22:08:58Z"
 assignee: "converge-enum-attribute-to-decorate-attributes"
 blocked-by: null

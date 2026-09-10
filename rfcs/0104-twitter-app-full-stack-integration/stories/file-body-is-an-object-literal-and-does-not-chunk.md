@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 30
-pr: 7520
+pr: trails#7520
 claim: "2026-09-08T16:01:58Z"
 assignee: "retire-adapter-bypass-onto-a-single-connection-pool"
 blocked-by: null

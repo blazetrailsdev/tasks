@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 40
-pr: 3892
+pr: trails#3892
 claim: "2026-06-22T16:19:57Z"
 assignee: "remove-receiverless-quoting-dispatch-support"
 blocked-by: null

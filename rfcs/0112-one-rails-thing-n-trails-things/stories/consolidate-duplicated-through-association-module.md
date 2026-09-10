@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 300
-pr: 6757
+pr: trails#6757
 claim: "2026-08-20T01:56:44Z"
 assignee: "consolidate-duplicated-through-association-module"
 blocked-by: null

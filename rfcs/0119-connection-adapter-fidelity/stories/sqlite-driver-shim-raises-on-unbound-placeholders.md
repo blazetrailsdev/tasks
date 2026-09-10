@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7546
+pr: trails#7546
 claim: "2026-09-05T23:56:22Z"
 assignee: "converge-pg-native-types-and-instance-type-map-onto-adapter"
 blocked-by: null

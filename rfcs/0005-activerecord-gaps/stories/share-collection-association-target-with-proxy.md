@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5461
+pr: trails#5461
 claim: "2026-07-27T20:35:56Z"
 assignee: "share-collection-association-target-with-proxy"
 blocked-by: null

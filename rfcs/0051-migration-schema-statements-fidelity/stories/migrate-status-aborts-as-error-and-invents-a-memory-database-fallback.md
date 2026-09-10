@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 6980
+pr: trails#6980
 claim: "2026-08-24T12:51:22Z"
 assignee: "converge-schema-cache-install-onto-cache-replacement"
 blocked-by: null

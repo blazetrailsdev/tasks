@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 4587
+pr: trails#4587
 claim: "2026-07-05T01:52:36Z"
 assignee: "delete-defineschema-function-and-test"
 blocked-by: null

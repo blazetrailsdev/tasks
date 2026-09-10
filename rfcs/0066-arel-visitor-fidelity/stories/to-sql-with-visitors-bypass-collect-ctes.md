@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 27
-pr: 5049
+pr: trails#5049
 claim: "2026-07-22T00:41:47Z"
 assignee: "to-sql-with-visitors-bypass-collect-ctes"
 blocked-by: null

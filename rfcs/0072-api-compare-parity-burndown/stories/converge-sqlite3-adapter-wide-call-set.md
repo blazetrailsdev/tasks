@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5913
+pr: trails#5913
 claim: "2026-08-02T19:19:25Z"
 assignee: "converge-sqlite3-adapter-wide-call-set"
 blocked-by: null

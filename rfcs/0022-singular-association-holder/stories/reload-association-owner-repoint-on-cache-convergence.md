@@ -8,7 +8,7 @@ deps: ["fold-three-association-maps-into-one"]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3379
+pr: trails#3379
 claim: "2026-06-15T17:18:27Z"
 assignee: "reload-association-owner-repoint-on-cache-convergence"
 blocked-by: null

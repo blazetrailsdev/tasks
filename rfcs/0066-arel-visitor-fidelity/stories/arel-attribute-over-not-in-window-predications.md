@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5027
+pr: trails#5027
 claim: "2026-07-21T12:30:16Z"
 assignee: "arel-attribute-over-not-in-window-predications"
 blocked-by: null

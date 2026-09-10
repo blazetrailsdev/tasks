@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5514
+pr: trails#5514
 claim: "2026-07-28T15:17:24Z"
 assignee: "model-private-constants"
 blocked-by: null

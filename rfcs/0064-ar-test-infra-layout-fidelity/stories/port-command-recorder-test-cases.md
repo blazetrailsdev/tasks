@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: 6175
+pr: trails#6175
 claim: "2026-08-07T15:41:27Z"
 assignee: "i18n-fallbacks-with-chain-tests"
 blocked-by: null

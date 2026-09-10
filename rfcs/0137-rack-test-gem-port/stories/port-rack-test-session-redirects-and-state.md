@@ -9,7 +9,7 @@ deps: ["port-rack-test-session", "port-uri-for-parse-merge-and-scheme-classes"]
 deps-rfc: []
 est-loc: 250
 priority: 9
-pr: 7519
+pr: trails#7519
 claim: "2026-09-05T14:02:10Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null

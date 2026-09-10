@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 7271
+pr: trails#7271
 claim: "2026-08-30T21:34:09Z"
 assignee: "duration-modulo-missing-scalar-and-type-error-arms"
 blocked-by: null

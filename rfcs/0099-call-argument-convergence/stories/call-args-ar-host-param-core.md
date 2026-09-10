@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: 6427
+pr: trails#6427
 claim: "2026-08-12T17:16:56Z"
 assignee: "call-args-ar-host-param-core"
 blocked-by: null

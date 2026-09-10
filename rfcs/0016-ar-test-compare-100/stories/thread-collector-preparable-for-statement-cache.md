@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 3598
+pr: trails#3598
 claim: "2026-06-18T19:18:48Z"
 assignee: "thread-collector-preparable-for-statement-cache"
 blocked-by: null

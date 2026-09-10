@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3404
+pr: trails#3404
 claim: "2026-06-15T19:54:05Z"
 assignee: "sti-dispatch-raise-subclass-not-found"
 blocked-by: null

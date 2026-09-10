@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 29
-pr: 3512
+pr: trails#3512
 claim: "2026-06-17T00:00:42Z"
 assignee: "insert-all-sti-type-injection"
 blocked-by: null

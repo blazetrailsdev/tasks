@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6064
+pr: trails#6064
 claim: "2026-08-04T14:34:07Z"
 assignee: "normalize-key-drops-js-symbol-arm"
 blocked-by: null

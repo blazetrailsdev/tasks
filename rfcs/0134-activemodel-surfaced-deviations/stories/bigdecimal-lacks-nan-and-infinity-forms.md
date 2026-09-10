@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 60
-pr: 7421
+pr: trails#7421
 claim: "2026-09-02T23:54:54Z"
 assignee: "bigdecimal-lacks-nan-and-infinity-forms"
 blocked-by: null

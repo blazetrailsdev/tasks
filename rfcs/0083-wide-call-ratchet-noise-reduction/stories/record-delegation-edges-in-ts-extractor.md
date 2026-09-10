@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5730
+pr: trails#5730
 claim: "2026-07-31T18:11:58Z"
 assignee: "record-delegation-edges-in-ts-extractor"
 blocked-by: null

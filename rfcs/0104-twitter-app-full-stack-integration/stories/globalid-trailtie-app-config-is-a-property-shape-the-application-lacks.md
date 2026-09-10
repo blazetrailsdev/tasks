@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 20
-pr: 7488
+pr: trails#7488
 claim: "2026-09-04T17:50:45Z"
 assignee: "type-registry-key-replaces-per-adapter-overrides"
 blocked-by: null

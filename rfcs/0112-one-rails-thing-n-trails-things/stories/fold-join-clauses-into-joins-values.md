@@ -7,7 +7,7 @@ cluster: split-stores
 deps: []
 deps-rfc: []
 est-loc: 400
-pr: 6773
+pr: trails#6773
 claim: "2026-08-26T11:05:45Z"
 assignee: "fold-join-clauses-into-joins-values"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6053
+pr: trails#6053
 claim: "2026-08-04T12:38:38Z"
 assignee: "i18n-share-one-ruby-date-across-localization-tests"
 blocked-by: null

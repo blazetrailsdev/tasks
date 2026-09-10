@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5277
+pr: trails#5277
 claim: "2026-07-24T22:46:52Z"
 assignee: "fk-safe-drop-inbound-and-cyclic-fks"
 blocked-by: null

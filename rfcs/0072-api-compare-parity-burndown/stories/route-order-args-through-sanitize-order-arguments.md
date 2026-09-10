@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5937
+pr: trails#5937
 claim: "2026-08-04T22:47:02Z"
 assignee: "i18n-date-complete-frags-wday-element"
 blocked-by: null

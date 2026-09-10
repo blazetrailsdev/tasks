@@ -8,7 +8,7 @@ deps: ["cli-generators-manifest"]
 deps-rfc: []
 est-loc: 5
 priority: 52
-pr: 2956
+pr: trails#2956
 claim: "2026-06-05T17:48:14Z"
 assignee: "cli-manifest-path-jsdoc"
 blocked-by: null

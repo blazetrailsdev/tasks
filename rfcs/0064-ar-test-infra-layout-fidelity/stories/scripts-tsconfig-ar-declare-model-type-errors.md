@@ -8,7 +8,7 @@ deps: ["scripts-tsconfig-program-has-384-type-errors"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5741
+pr: trails#5741
 claim: "2026-07-31T18:44:56Z"
 assignee: "scripts-tsconfig-ar-declare-model-type-errors"
 blocked-by: null

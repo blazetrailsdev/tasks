@@ -8,7 +8,7 @@ deps: ["call-mismatches-ratcheting-baseline"]
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 4061
+pr: trails#4061
 claim: "2026-06-24T14:29:55Z"
 assignee: "autosave-association-save-destroy-cluster"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5826
+pr: trails#5826
 claim: "2026-08-01T20:00:59Z"
 assignee: "await-precision-receiver-blind"
 blocked-by: null

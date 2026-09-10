@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 2
-pr: 5857
+pr: trails#5857
 claim: "2026-08-02T02:36:49Z"
 assignee: "decide-api-build-placeholder-tag-policy"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: 4920
+pr: trails#4920
 claim: "2026-07-17T02:01:14Z"
 assignee: "pg-quoted-binary-route-through-tobytes"
 blocked-by: null

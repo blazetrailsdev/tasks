@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 50
-pr: 5270
+pr: trails#5270
 claim: "2026-07-24T21:18:54Z"
 assignee: "tasks-new-surfaces-markdownlint-failure"
 blocked-by: null

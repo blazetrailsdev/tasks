@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 3805
+pr: trails#3805
 claim: "2026-06-21T16:54:40Z"
 assignee: "pg-extract-schema-qualified-name-three-part"
 blocked-by: null

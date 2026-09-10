@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 22
-pr: 4163
+pr: trails#4163
 claim: "2026-06-25T23:47:24Z"
 assignee: "nested-deadlock-bespoke-extra-triage"
 blocked-by: null

@@ -7,7 +7,7 @@ cluster: split-stores
 deps: []
 deps-rfc: []
 est-loc: 180
-pr: 6933
+pr: trails#6933
 claim: "2026-08-24T09:21:48Z"
 assignee: "association-cache-holds-only-association-instances"
 blocked-by: null

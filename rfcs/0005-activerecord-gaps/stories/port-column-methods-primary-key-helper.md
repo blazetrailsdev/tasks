@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5614
+pr: trails#5614
 claim: "2026-07-29T22:38:56Z"
 assignee: "port-column-methods-primary-key-helper"
 blocked-by: null

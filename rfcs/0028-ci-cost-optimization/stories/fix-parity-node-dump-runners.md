@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5264
+pr: trails#5264
 claim: "2026-07-24T20:22:53Z"
 assignee: "fix-parity-node-dump-runners"
 blocked-by: null

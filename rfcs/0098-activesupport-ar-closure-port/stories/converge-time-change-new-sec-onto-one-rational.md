@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: 6937
+pr: trails#6937
 claim: "2026-08-23T18:51:39Z"
 assignee: "carry-time-with-zone-to-time-arm-memos"
 blocked-by: null

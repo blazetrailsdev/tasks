@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6437
+pr: trails#6437
 claim: "2026-08-12T20:36:47Z"
 assignee: "converge-store-serialized-entry-hooks-and-file-store-paths"
 blocked-by: null

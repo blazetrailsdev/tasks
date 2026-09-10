@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4690
+pr: trails#4690
 claim: "2026-07-19T23:51:08Z"
 assignee: "setop-operand-preload-order-rails-faithful"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6669
+pr: trails#6669
 claim: "2026-08-17T21:02:59Z"
 assignee: "converge-exception-wrapper-traces-partition"
 blocked-by: null

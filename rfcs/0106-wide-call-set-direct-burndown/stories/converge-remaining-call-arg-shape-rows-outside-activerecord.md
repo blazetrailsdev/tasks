@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6688
+pr: trails#6688
 claim: "2026-08-18T12:16:46Z"
 assignee: "converge-remaining-call-arg-shape-rows-outside-activerecord"
 blocked-by: null

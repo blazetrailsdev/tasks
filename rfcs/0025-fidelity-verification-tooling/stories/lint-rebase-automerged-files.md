@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 22
-pr: 5431
+pr: trails#5431
 claim: "2026-07-27T17:55:13Z"
 assignee: "lint-rebase-automerged-files"
 blocked-by: null

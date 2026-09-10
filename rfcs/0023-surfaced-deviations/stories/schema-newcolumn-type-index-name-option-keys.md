@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3388
+pr: trails#3388
 claim: "2026-06-15T18:18:28Z"
 assignee: "schema-newcolumn-type-index-name-option-keys"
 blocked-by: null

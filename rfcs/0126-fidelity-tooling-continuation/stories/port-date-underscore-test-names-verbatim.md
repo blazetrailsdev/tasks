@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 4
-pr: 7392
+pr: trails#7392
 claim: "2026-09-02T12:04:16Z"
 assignee: "fold-the-two-trailtie-ports-into-one"
 blocked-by: null

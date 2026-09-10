@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 40
-pr: 3944
+pr: trails#3944
 claim: "2026-06-23T00:59:14Z"
 assignee: "sqlite-change-column-table-rebuild"
 blocked-by: null

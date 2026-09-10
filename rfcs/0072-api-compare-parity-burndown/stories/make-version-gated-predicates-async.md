@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6226
+pr: trails#6226
 claim: "2026-08-08T09:39:59Z"
 assignee: "make-version-gated-predicates-async"
 blocked-by: null

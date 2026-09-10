@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 18
-pr: 5292
+pr: trails#5292
 claim: "2026-07-25T03:10:53Z"
 assignee: "awaitable-ids-assignment-for-update-and-unpersisted-race"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: 3905
+pr: trails#3905
 claim: "2026-06-22T17:55:57Z"
 assignee: "unskip-dirty-tracking"
 blocked-by: null

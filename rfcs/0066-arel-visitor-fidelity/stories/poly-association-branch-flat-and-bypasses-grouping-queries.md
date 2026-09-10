@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5151
+pr: trails#5151
 claim: "2026-07-23T14:52:35Z"
 assignee: "poly-association-branch-flat-and-bypasses-grouping-queries"
 blocked-by: null

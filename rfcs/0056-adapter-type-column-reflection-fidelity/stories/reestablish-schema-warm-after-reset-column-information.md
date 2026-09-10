@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 6
-pr: 4743
+pr: trails#4743
 claim: "2026-07-07T15:37:50Z"
 assignee: "reestablish-schema-warm-after-reset-column-information"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6486
+pr: trails#6486
 claim: "2026-08-13T18:45:40Z"
 assignee: "call-args-as-notifications-callable-object"
 blocked-by: null

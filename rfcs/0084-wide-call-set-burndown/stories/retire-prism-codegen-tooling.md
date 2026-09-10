@@ -8,7 +8,7 @@ deps: ["call-sequence-parity-in-wide-ratchet"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6168
+pr: trails#6168
 claim: "2026-08-07T12:08:30Z"
 assignee: "load-schema-if-pending-drops-the-whole-repair-arm"
 blocked-by: null

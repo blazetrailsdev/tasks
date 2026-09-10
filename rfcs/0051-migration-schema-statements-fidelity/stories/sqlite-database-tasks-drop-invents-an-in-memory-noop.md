@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6273
+pr: trails#6273
 claim: "2026-08-09T02:00:45Z"
 assignee: "fixture-teardown-has-no-delete-rails-deletes-at-next-load"
 blocked-by: null

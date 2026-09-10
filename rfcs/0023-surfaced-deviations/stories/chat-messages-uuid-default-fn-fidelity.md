@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 12
 priority: null
-pr: 3852
+pr: trails#3852
 claim: "2026-06-22T00:14:42Z"
 assignee: "chat-messages-uuid-default-fn-fidelity"
 blocked-by: null

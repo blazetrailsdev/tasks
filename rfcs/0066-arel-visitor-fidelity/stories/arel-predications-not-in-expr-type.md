@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5024
+pr: trails#5024
 claim: "2026-07-21T01:35:16Z"
 assignee: "arel-predications-not-in-expr-type"
 blocked-by: null

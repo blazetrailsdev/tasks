@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5446
+pr: trails#5446
 claim: "2026-07-27T19:53:52Z"
 assignee: "route-reflection-adapter-off-base-connection"
 blocked-by: null

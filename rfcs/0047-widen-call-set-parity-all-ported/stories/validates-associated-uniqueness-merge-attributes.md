@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 1
-pr: 4301
+pr: trails#4301
 claim: "2026-06-30T01:24:31Z"
 assignee: "validates-associated-uniqueness-merge-attributes"
 blocked-by: null

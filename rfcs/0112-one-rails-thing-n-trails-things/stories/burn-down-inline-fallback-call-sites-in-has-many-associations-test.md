@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 7167
+pr: trails#7167
 claim: "2026-08-28T15:22:55Z"
 assignee: "burn-down-inline-fallback-call-sites-in-has-many-associations-test"
 blocked-by: null

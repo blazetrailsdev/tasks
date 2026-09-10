@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3324
+pr: trails#3324
 claim: "2026-06-15T02:45:09Z"
 assignee: "construct-no-primary-key-join-primary-key-branch"
 blocked-by: null

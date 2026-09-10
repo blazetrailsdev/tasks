@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6242
+pr: trails#6242
 claim: "2026-08-08T15:51:54Z"
 assignee: "clear-query-cache-duck-types-the-pool"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 6254
+pr: trails#6254
 claim: "2026-08-08T18:11:46Z"
 assignee: "clean-worktree-guard-races-concurrent-lock-holder"
 blocked-by: null

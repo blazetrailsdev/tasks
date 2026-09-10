@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5597
+pr: trails#5597
 claim: "2026-07-29T19:40:14Z"
 assignee: "require-table-teardown-translate-literal-bracket-backslash"
 blocked-by: null

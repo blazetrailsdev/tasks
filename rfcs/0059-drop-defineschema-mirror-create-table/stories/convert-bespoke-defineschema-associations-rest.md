@@ -8,7 +8,7 @@ deps: ["create-table-canonical-schema-loader"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: 4447
+pr: trails#4447
 claim: "2026-07-02T22:33:51Z"
 assignee: "convert-bespoke-defineschema-associations-rest"
 blocked-by: null

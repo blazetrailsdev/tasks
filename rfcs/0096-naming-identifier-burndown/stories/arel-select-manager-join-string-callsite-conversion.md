@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6714
+pr: trails#6714
 claim: "2026-08-18T19:32:44Z"
 assignee: "converge-includes-preload-colon-sweep-src-top-level"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: 5232
+pr: trails#5232
 claim: "2026-07-24T15:50:53Z"
 assignee: "composite-qualified-col-associated-table-needs-join-dependency-fallback"
 blocked-by: null

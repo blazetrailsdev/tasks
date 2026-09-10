@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3845
+pr: trails#3845
 claim: "2026-06-21T23:11:11Z"
 assignee: "relation-explain-uses-exec-queries-not-cached-toarray"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 5
-pr: 4746
+pr: trails#4746
 claim: "2026-07-07T16:13:49Z"
 assignee: "serialized-is-changed-hwia-content-equality"
 blocked-by: null

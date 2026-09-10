@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: 3178
+pr: trails#3178
 claim: "2026-06-13T02:30:08Z"
 assignee: "f9d-adapter-querycache-truncate-pkreset"
 blocked-by: null

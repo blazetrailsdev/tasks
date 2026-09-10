@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4114
+pr: trails#4114
 claim: "2026-06-25T13:09:37Z"
 assignee: "core-find-record-not-found-message-format-fidelity"
 blocked-by: null

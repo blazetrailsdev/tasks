@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3290
+pr: trails#3290
 claim: "2026-06-14T21:23:15Z"
 assignee: "delete-all-eager-loading-and-source-left-reassignment"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 3348
+pr: trails#3348
 claim: "2026-06-15T13:51:46Z"
 assignee: "nested-attributes-collection-sync-in-memory-grandchild"
 blocked-by: null

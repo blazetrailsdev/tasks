@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: 200
-pr: 4818
+pr: trails#4818
 claim: "2026-07-09T02:49:37Z"
 assignee: "migration-index-methods-forward-valid-and-ifexists"
 blocked-by: null

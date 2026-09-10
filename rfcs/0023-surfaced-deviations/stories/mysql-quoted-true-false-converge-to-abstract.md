@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 3363
+pr: trails#3363
 claim: "2026-06-15T15:29:09Z"
 assignee: "mysql-quoted-true-false-converge-to-abstract"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: 6438
+pr: trails#6438
 claim: "2026-08-12T21:36:51Z"
 assignee: "hoist-nokogirisax-hash-builder-to-module-scope"
 blocked-by: null

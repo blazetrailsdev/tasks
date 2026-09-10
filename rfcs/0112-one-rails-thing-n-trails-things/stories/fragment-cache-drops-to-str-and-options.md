@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-pr: 6975
+pr: trails#6975
 claim: "2026-08-24T09:21:48Z"
 assignee: "association-cache-holds-only-association-instances"
 blocked-by: null

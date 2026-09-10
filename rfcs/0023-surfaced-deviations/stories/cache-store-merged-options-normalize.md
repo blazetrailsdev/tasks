@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3684
+pr: trails#3684
 claim: "2026-06-20T00:24:24Z"
 assignee: "cache-store-merged-options-normalize"
 blocked-by: null

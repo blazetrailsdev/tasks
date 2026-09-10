@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6043
+pr: trails#6043
 claim: "2026-08-04T02:10:53Z"
 assignee: "i18n-backend-load-rb-decision"
 blocked-by: null

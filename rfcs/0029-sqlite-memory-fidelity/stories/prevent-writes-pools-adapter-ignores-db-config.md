@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 35
 priority: null
-pr: 5494
+pr: trails#5494
 claim: "2026-07-28T12:52:18Z"
 assignee: "prevent-writes-pools-adapter-ignores-db-config"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3696
+pr: trails#3696
 claim: "2026-06-20T02:46:42Z"
 assignee: "cpk-counter-cache-columns-pending-flush"
 blocked-by: null

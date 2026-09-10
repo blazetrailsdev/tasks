@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3318
+pr: trails#3318
 claim: "2026-06-15T02:25:08Z"
 assignee: "async-sqlite-pool-teardown-drain"
 blocked-by: null

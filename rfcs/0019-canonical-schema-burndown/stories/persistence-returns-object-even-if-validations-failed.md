@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3822
+pr: trails#3822
 claim: "2026-06-21T19:02:41Z"
 assignee: "persistence-returns-object-even-if-validations-failed"
 blocked-by: null

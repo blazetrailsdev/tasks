@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 25
-pr: 5222
+pr: trails#5222
 claim: "2026-07-24T13:38:24Z"
 assignee: "columns-memo-read-idiom-mismatch-truthy-vs-nullcheck"
 blocked-by: null

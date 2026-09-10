@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 33
-pr: 7521
+pr: trails#7521
 claim: "2026-09-05T16:00:46Z"
 assignee: "copy-entry-drops-dereference-root-and-remove-destination"
 blocked-by: null

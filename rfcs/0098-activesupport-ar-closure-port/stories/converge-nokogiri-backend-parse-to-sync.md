@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6837
+pr: trails#6837
 claim: "2026-08-21T19:50:35Z"
 assignee: "converge-through-reflection-association-primary-key-body"
 blocked-by: null

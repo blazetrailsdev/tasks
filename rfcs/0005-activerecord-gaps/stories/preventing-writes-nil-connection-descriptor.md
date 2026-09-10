@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5612
+pr: trails#5612
 claim: "2026-07-29T22:31:58Z"
 assignee: "preventing-writes-nil-connection-descriptor"
 blocked-by: null

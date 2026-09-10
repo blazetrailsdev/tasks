@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6940
+pr: trails#6940
 claim: "2026-08-23T19:38:27Z"
 assignee: "call-define-attribute-methods-from-init-internals"
 blocked-by: null

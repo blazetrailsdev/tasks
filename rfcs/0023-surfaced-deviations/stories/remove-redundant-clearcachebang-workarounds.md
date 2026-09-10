@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 40
-pr: 3891
+pr: trails#3891
 claim: "2026-06-22T16:27:56Z"
 assignee: "remove-redundant-clearcachebang-workarounds"
 blocked-by: null

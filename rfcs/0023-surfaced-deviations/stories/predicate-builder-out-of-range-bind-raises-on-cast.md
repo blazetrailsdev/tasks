@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4849
+pr: trails#4849
 claim: "2026-07-13T20:22:34Z"
 assignee: "predicate-builder-out-of-range-bind-raises-on-cast"
 blocked-by: null

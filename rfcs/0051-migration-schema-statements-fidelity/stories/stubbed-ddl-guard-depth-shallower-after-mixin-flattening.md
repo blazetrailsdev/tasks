@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5849
+pr: trails#5849
 claim: "2026-08-02T01:06:49Z"
 assignee: "stubbed-ddl-guard-depth-shallower-after-mixin-flattening"
 blocked-by: null

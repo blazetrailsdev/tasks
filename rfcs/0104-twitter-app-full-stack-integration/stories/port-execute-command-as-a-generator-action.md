@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7385
+pr: trails#7385
 claim: "2026-09-02T14:16:52Z"
 assignee: "port-execute-command-as-a-generator-action"
 blocked-by: null

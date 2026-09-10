@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: 3917
+pr: trails#3917
 claim: "2026-06-22T19:39:16Z"
 assignee: "rails-error-parity-flag-unported-error-files"
 blocked-by: null

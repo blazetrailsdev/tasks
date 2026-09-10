@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3281
+pr: trails#3281
 claim: "2026-06-14T18:24:34Z"
 assignee: "decimaltype-cast-returns-string-not-bigdecimal"
 blocked-by: null

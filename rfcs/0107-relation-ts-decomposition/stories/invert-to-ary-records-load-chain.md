@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 1
-pr: 6943
+pr: trails#6943
 claim: "2026-08-23T20:22:56Z"
 assignee: "invert-to-ary-records-load-chain"
 blocked-by: null

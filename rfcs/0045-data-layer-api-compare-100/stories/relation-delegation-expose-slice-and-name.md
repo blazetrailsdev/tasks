@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: 4615
+pr: trails#4615
 claim: "2026-07-05T14:52:29Z"
 assignee: "relation-delegation-expose-slice-and-name"
 blocked-by: null

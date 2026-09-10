@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5644
+pr: trails#5644
 claim: "2026-07-30T14:32:20Z"
 assignee: "port-remove-target-bang-as-a-has-one-association-method"
 blocked-by: null

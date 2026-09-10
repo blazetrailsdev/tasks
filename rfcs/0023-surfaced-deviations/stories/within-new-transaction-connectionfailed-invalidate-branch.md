@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 40
-pr: 3957
+pr: trails#3957
 claim: "2026-06-23T02:51:17Z"
 assignee: "within-new-transaction-connectionfailed-invalidate-branch"
 blocked-by: null

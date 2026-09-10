@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: 4012
+pr: trails#4012
 claim: "2026-06-23T15:33:24Z"
 assignee: "infer-adapter-at-config-build-for-schemeless-url"
 blocked-by: null

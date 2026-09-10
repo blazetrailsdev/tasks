@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 5897
+pr: trails#5897
 claim: "2026-08-02T17:33:25Z"
 assignee: "converge-calculation-and-batch-dispatch-shim-bodies"
 blocked-by: null

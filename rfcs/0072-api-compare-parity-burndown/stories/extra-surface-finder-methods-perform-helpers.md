@@ -8,7 +8,7 @@ deps: ["extra-surface-honor-internal-jsdoc-on-file-functions"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5339
+pr: trails#5339
 claim: "2026-07-26T03:02:53Z"
 assignee: "extra-surface-finder-methods-perform-helpers"
 blocked-by: null

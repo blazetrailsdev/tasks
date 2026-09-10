@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4860
+pr: trails#4860
 claim: "2026-07-14T01:22:37Z"
 assignee: "initialize-dup-fires-initialize-callbacks"
 blocked-by: null

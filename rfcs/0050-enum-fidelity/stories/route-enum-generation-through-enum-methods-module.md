@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 11
-pr: 4697
+pr: trails#4697
 claim: "2026-07-06T20:08:55Z"
 assignee: "route-enum-generation-through-enum-methods-module"
 blocked-by: null

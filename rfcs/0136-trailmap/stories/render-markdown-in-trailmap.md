@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: 8
+pr: trailmap#8
 claim: "2026-09-06T11:55:27Z"
 assignee: "render-markdown-in-trailmap"
 blocked-by: null

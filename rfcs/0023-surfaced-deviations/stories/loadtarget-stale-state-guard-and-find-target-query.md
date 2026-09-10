@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4112
+pr: trails#4112
 claim: "2026-06-25T12:49:45Z"
 assignee: "loadtarget-stale-state-guard-and-find-target-query"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6141
+pr: trails#6141
 claim: "2026-08-05T20:33:08Z"
 assignee: "mysql-schema-creation-memoizes-where-rails-allocates"
 blocked-by: null

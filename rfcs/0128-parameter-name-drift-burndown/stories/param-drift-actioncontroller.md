@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 188
 priority: 4
-pr: 7251
+pr: trails#7251
 claim: "2026-08-30T16:04:53Z"
 assignee: "param-drift-actionview"
 blocked-by: null

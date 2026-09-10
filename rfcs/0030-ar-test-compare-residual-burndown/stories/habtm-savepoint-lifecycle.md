@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 30
-pr: 3935
+pr: trails#3935
 claim: "2026-06-22T23:07:15Z"
 assignee: "habtm-savepoint-lifecycle"
 blocked-by: null

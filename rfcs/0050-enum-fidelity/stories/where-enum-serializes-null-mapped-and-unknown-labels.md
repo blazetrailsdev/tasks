@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 34
-pr: 4808
+pr: trails#4808
 claim: "2026-07-08T22:37:35Z"
 assignee: "where-enum-serializes-null-mapped-and-unknown-labels"
 blocked-by: null

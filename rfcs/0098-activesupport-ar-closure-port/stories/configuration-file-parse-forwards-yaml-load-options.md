@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6703
+pr: trails#6703
 claim: "2026-08-18T14:40:54Z"
 assignee: "request-forgery-protection-this-typed-mixin"
 blocked-by: null

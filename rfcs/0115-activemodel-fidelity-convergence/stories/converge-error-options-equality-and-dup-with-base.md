@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 6780
+pr: trails#6780
 claim: "2026-08-20T17:45:03Z"
 assignee: "converge-attribute-assignment-hash-guards"
 blocked-by: null

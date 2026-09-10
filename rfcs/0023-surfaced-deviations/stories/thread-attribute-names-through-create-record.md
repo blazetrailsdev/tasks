@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 40
-pr: 3949
+pr: trails#3949
 claim: "2026-06-23T01:39:16Z"
 assignee: "thread-attribute-names-through-create-record"
 blocked-by: null

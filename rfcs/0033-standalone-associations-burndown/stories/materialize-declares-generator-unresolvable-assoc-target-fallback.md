@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4558
+pr: trails#4558
 claim: "2026-07-04T17:04:28Z"
 assignee: "materialize-declares-generator-unresolvable-assoc-target-fallback"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5732
+pr: trails#5732
 claim: "2026-07-31T18:20:54Z"
 assignee: "base-prevent-writes-professors-rebuild-has-no-rails-counterpart"
 blocked-by: null

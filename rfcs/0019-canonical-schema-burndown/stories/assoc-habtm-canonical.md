@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 1
-pr: 3462
+pr: trails#3462
 claim: "2026-06-16T14:31:40Z"
 assignee: "assoc-habtm-canonical"
 blocked-by: null

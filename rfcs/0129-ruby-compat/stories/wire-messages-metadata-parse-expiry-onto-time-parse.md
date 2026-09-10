@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: 7524
+pr: trails#7524
 claim: "2026-09-05T17:26:48Z"
 assignee: "wire-messages-metadata-parse-expiry-onto-time-parse"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3449
+pr: trails#3449
 claim: "2026-06-16T12:23:01Z"
 assignee: "d4-dirty-force-dirty"
 blocked-by: null

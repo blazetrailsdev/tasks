@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6298
+pr: trails#6298
 claim: "2026-08-09T20:49:50Z"
 assignee: "call-args-artifact-and-report"
 blocked-by: null

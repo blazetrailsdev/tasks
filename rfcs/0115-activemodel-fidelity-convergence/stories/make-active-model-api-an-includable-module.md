@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 7108
+pr: trails#7108
 claim: "2026-08-26T23:54:56Z"
 assignee: "trim-active-model-model-to-api-and-access"
 blocked-by: null

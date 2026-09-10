@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6374
+pr: trails#6374
 claim: "2026-08-11T19:33:34Z"
 assignee: "audit-constructor-idiom-cluster-reasons"
 blocked-by: null

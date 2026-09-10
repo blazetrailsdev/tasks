@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4257
+pr: trails#4257
 claim: "2026-06-29T10:46:13Z"
 assignee: "assoc-poly-through-custom-foreign-type"
 blocked-by: null

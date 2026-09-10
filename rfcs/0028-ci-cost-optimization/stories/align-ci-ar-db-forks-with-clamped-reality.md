@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 15
-pr: 5185
+pr: trails#5185
 claim: "2026-07-23T22:07:11Z"
 assignee: "align-ci-ar-db-forks-with-clamped-reality"
 blocked-by: null

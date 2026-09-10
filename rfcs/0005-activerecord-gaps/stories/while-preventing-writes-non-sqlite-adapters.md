@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 5544
+pr: trails#5544
 claim: "2026-07-28T23:15:44Z"
 assignee: "while-preventing-writes-non-sqlite-adapters"
 blocked-by: null

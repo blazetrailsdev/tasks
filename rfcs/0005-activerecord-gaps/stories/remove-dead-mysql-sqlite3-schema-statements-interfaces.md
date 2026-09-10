@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5513
+pr: trails#5513
 claim: "2026-07-28T15:13:48Z"
 assignee: "remove-dead-mysql-sqlite3-schema-statements-interfaces"
 blocked-by: null

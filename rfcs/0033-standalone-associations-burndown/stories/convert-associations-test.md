@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 3981
+pr: trails#3981
 claim: "2026-06-23T12:02:40Z"
 assignee: "convert-associations-test"
 blocked-by: null

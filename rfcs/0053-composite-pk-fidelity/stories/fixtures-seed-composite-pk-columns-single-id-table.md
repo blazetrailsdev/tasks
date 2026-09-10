@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4364
+pr: trails#4364
 claim: "2026-07-03T00:57:52Z"
 assignee: "fixtures-seed-composite-pk-columns-single-id-table"
 blocked-by: null

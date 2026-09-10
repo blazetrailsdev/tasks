@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 6086
+pr: trails#6086
 claim: "2026-08-04T19:56:49Z"
 assignee: "i18n-async-reload-chain"
 blocked-by: null

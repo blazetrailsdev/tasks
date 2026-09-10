@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6127
+pr: trails#6127
 claim: "2026-08-05T13:14:58Z"
 assignee: "date-initialize-guess-style-fast-path"
 blocked-by: null

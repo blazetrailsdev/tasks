@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6941
+pr: trails#6941
 claim: "2026-08-23T19:52:31Z"
 assignee: "teach-api-build-to-mint-missing-rails-args-receipts"
 blocked-by: null

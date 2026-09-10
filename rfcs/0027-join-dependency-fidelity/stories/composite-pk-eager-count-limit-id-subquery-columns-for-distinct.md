@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4653
+pr: trails#4653
 claim: "2026-07-06T01:21:55Z"
 assignee: "composite-pk-eager-count-limit-id-subquery-columns-for-distinct"
 blocked-by: null

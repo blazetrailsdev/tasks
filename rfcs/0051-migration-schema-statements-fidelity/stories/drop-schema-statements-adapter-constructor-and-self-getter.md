@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 5854
+pr: trails#5854
 claim: "2026-08-02T02:06:48Z"
 assignee: "drop-schema-statements-adapter-constructor-and-self-getter"
 blocked-by: null

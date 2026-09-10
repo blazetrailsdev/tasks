@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4515
+pr: trails#4515
 claim: "2026-07-03T21:19:09Z"
 assignee: "converge-test-helper-sidecar-callers"
 blocked-by: null

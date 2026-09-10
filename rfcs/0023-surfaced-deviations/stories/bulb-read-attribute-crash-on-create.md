@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 3
-pr: 3486
+pr: trails#3486
 claim: "2026-06-16T18:26:55Z"
 assignee: "bulb-read-attribute-crash-on-create"
 blocked-by: null

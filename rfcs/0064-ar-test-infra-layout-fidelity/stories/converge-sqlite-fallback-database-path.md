@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5600
+pr: trails#5600
 claim: "2026-07-29T20:10:14Z"
 assignee: "converge-sqlite-fallback-database-path"
 blocked-by: null

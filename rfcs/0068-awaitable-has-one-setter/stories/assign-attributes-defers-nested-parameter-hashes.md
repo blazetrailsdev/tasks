@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6003
+pr: trails#6003
 claim: "2026-08-03T18:29:43Z"
 assignee: "assign-attributes-defers-nested-parameter-hashes"
 blocked-by: null

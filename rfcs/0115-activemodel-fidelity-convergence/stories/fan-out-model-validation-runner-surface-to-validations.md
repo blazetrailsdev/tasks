@@ -9,7 +9,7 @@ deps:
   - fan-out-model-validates-with-to-validations-with
 deps-rfc: []
 est-loc: 380
-pr: 6979
+pr: trails#6979
 claim: "2026-08-24T12:21:44Z"
 assignee: "fan-out-model-validation-runner-surface-to-validations"
 blocked-by: null

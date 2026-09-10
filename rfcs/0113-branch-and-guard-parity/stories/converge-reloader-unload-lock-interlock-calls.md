@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7267
+pr: trails#7267
 claim: "2026-08-30T20:34:10Z"
 assignee: "converge-reloader-unload-lock-interlock-calls"
 blocked-by: null

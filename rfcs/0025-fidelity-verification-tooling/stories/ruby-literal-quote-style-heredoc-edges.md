@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5174
+pr: trails#5174
 claim: "2026-07-23T20:57:11Z"
 assignee: "ruby-literal-quote-style-heredoc-edges"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3435
+pr: trails#3435
 claim: "2026-06-16T02:04:52Z"
 assignee: "check-if-method-has-arguments-flatten-parity"
 blocked-by: null

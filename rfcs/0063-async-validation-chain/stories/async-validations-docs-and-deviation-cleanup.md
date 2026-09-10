@@ -8,7 +8,7 @@ deps: ["uniqueness-inline-delete-deferred-registry"]
 deps-rfc: []
 est-loc: 150
 priority: 10
-pr: 4944
+pr: trails#4944
 claim: "2026-07-19T00:41:12Z"
 assignee: "async-validations-docs-and-deviation-cleanup"
 blocked-by: null

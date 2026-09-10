@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6774
+pr: trails#6774
 claim: "2026-08-20T15:22:34Z"
 assignee: "port-activejob-test-helper-for-destroy-association-async"
 blocked-by: null

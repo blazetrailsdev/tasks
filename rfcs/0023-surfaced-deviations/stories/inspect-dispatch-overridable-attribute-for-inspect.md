@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4522
+pr: trails#4522
 claim: "2026-07-03T23:43:09Z"
 assignee: "inspect-dispatch-overridable-attribute-for-inspect"
 blocked-by: null

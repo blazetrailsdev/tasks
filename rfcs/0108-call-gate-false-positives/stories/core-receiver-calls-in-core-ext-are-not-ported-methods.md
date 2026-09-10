@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6680
+pr: trails#6680
 claim: "2026-08-18T00:23:01Z"
 assignee: "port-request-session-options-instance"
 blocked-by: null

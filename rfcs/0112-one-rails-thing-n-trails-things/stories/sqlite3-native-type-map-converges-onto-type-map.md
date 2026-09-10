@@ -7,7 +7,7 @@ cluster: duplicate-bodies
 deps: []
 deps-rfc: []
 est-loc: 120
-pr: 7068
+pr: trails#7068
 claim: "2026-08-26T00:33:41Z"
 assignee: "filehandler-delegates-to-rack-files"
 blocked-by: null

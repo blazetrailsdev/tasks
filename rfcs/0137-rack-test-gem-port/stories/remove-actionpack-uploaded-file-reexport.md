@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 14
-pr: 7453
+pr: trails#7453
 claim: "2026-09-03T19:36:26Z"
 assignee: "rack-test-package-skeleton"
 blocked-by: null

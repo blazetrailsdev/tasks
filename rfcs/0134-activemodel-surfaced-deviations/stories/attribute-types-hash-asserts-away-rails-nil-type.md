@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7525
+pr: trails#7525
 claim: "2026-09-05T18:06:48Z"
 assignee: "assertion-comparer-normalizes-snake-vs-camel-attribute-literals"
 blocked-by: null

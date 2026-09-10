@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5250
+pr: trails#5250
 claim: "2026-07-24T18:14:54Z"
 assignee: "converge-autosave-association-pirate-ship-bird-parrot-shadows"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6724
+pr: trails#6724
 claim: "2026-08-18T21:11:48Z"
 assignee: "wave-4b-adapters-residue-remainder"
 blocked-by: null

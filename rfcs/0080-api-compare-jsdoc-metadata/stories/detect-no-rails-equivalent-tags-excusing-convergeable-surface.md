@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5648
+pr: trails#5648
 claim: "2026-07-30T15:02:23Z"
 assignee: "detect-no-rails-equivalent-tags-excusing-convergeable-surface"
 blocked-by: null

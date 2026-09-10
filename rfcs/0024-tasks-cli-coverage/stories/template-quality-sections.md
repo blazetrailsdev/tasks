@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: 3862
+pr: trails#3862
 claim: "2026-06-22T03:07:56Z"
 assignee: "template-quality-sections"
 blocked-by: null

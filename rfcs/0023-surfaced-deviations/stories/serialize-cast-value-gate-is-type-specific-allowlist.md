@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3397
+pr: trails#3397
 claim: "2026-06-15T19:00:27Z"
 assignee: "serialize-cast-value-gate-is-type-specific-allowlist"
 blocked-by: null

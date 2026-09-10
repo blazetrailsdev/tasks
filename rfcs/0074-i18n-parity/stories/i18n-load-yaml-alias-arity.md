@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6051
+pr: trails#6051
 claim: "2026-08-04T12:38:26Z"
 assignee: "i18n-load-yaml-alias-arity"
 blocked-by: null

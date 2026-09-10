@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5731
+pr: trails#5731
 claim: "2026-07-31T18:14:54Z"
 assignee: "sync-only-callback-registrar-types"
 blocked-by: null

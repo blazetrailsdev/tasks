@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6799
+pr: trails#6799
 claim: "2026-08-21T00:17:06Z"
 assignee: "converge-date-type-cast-for-schema-to-rails"
 blocked-by: null

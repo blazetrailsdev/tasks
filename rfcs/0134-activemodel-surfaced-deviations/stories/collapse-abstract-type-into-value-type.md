@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 7507
+pr: trails#7507
 claim: "2026-09-05T02:42:13Z"
 assignee: "collapse-abstract-type-into-value-type"
 blocked-by: null

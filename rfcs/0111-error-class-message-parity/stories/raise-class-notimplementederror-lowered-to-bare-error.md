@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 20
-pr: 7606
+pr: trails#7606
 claim: "2026-09-08T12:09:48Z"
 assignee: "port-load-error-for-require-stand-ins"
 blocked-by: null

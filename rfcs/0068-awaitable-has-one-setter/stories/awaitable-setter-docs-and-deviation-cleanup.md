@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: 19
-pr: 5298
+pr: trails#5298
 claim: "2026-07-25T13:10:53Z"
 assignee: "awaitable-setter-docs-and-deviation-cleanup"
 blocked-by: null

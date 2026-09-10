@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4274
+pr: trails#4274
 claim: "2026-06-29T14:10:12Z"
 assignee: "collection-proxy-length-size-no-requery-when-loaded"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["fixtures-add-nontransactional-mode", "fixtures-caller-supplied-connectio
 deps-rfc: []
 est-loc: 80
 priority: 8
-pr: 4389
+pr: trails#4389
 claim: "2026-07-01T23:46:17Z"
 assignee: "fixtures-delete-direct-adapter-overload"
 blocked-by: null

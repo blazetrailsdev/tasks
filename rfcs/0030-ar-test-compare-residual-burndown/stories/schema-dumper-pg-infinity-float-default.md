@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 30
-pr: 3872
+pr: trails#3872
 claim: "2026-06-22T11:55:58Z"
 assignee: "schema-dumper-pg-infinity-float-default"
 blocked-by: null

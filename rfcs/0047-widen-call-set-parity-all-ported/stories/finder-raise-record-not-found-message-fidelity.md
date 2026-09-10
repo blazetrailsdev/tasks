@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 4098
+pr: trails#4098
 claim: "2026-06-25T03:02:34Z"
 assignee: "finder-raise-record-not-found-message-fidelity"
 blocked-by: null

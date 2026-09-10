@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 11
-pr: 7012
+pr: trails#7012
 claim: "2026-08-24T23:18:09Z"
 assignee: "move-ts-only-extras-out-of-mirrored-activemodel-serialization-test-file"
 blocked-by: null

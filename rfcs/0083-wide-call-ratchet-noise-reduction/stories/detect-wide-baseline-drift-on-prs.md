@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5908
+pr: trails#5908
 claim: "2026-08-02T19:07:23Z"
 assignee: "detect-wide-baseline-drift-on-prs"
 blocked-by: null

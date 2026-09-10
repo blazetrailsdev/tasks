@@ -7,7 +7,7 @@ cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 5726
+pr: trails#5726
 claim: "2026-07-31T17:44:32Z"
 assignee: "ruby-extractor-record-call-receiver-kind"
 blocked-by: null

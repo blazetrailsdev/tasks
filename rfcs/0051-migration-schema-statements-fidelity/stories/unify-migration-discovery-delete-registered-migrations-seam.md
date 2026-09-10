@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
-pr: 6974
+pr: trails#6974
 claim: "2026-08-24T09:03:41Z"
 assignee: "unify-migration-discovery-delete-registered-migrations-seam"
 blocked-by: null

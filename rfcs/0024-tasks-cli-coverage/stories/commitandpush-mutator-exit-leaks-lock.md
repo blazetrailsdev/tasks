@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 20
-pr: 3900
+pr: trails#3900
 claim: "2026-06-22T17:23:57Z"
 assignee: "commitandpush-mutator-exit-leaks-lock"
 blocked-by: null

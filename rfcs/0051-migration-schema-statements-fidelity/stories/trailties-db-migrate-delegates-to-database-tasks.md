@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: 5864
+pr: trails#5864
 claim: "2026-08-02T03:46:49Z"
 assignee: "trailties-db-migrate-delegates-to-database-tasks"
 blocked-by: null

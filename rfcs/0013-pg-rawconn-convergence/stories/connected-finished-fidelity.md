@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3267
+pr: trails#3267
 claim: "2026-06-14T17:12:36Z"
 assignee: "connected-finished-fidelity"
 blocked-by: null

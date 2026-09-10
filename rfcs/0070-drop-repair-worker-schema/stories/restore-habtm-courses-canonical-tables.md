@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 5255
+pr: trails#5255
 claim: "2026-07-24T19:10:53Z"
 assignee: "restore-habtm-courses-canonical-tables"
 blocked-by: null

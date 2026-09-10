@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 1
-pr: 7207
+pr: trails#7207
 claim: "2026-08-29T14:04:19Z"
 assignee: "pg-quote-binary-column-is-invented-dead-surface"
 blocked-by: null

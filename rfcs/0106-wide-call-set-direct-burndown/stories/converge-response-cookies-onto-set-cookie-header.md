@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6671
+pr: trails#6671
 claim: "2026-08-17T21:52:58Z"
 assignee: "converge-response-cookies-onto-set-cookie-header"
 blocked-by: null

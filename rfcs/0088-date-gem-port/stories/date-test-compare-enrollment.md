@@ -7,7 +7,7 @@ cluster: null
 deps: ["move-date-time-to-date-package"]
 deps-rfc: []
 est-loc: 250
-pr: 6148
+pr: trails#6148
 claim: "2026-08-06T01:13:05Z"
 assignee: "date-api-compare-enrollment"
 blocked-by: null

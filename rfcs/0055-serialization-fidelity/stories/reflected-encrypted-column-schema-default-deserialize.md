@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: 4791
+pr: trails#4791
 claim: "2026-07-08T18:02:09Z"
 assignee: "reflected-encrypted-column-schema-default-deserialize"
 blocked-by: null

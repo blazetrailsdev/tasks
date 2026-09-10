@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 18
-pr: 4793
+pr: trails#4793
 claim: "2026-07-08T18:37:35Z"
 assignee: "delegation-remaining-delegate-class-prototype-carriers"
 blocked-by: null

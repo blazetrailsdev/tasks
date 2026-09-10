@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6468
+pr: trails#6468
 claim: "2026-08-13T15:19:07Z"
 assignee: "merge-clauses-where-clause-structure"
 blocked-by: null

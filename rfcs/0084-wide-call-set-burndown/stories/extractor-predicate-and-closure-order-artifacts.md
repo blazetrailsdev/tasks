@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6400
+pr: trails#6400
 claim: "2026-08-12T03:26:00Z"
 assignee: "extractor-predicate-and-closure-order-artifacts"
 blocked-by: null

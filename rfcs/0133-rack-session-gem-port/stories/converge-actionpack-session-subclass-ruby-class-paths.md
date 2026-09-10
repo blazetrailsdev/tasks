@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 27
-pr: 7404
+pr: trails#7404
 claim: "2026-09-02T20:13:34Z"
 assignee: "converge-null-session-hash-superclass"
 blocked-by: null

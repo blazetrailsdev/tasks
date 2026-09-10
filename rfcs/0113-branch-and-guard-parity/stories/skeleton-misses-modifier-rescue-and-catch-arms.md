@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 13
-pr: 7387
+pr: trails#7387
 claim: "2026-09-02T12:34:17Z"
 assignee: "framework-deprecator-initializers-write-a-static-registry"
 blocked-by: null

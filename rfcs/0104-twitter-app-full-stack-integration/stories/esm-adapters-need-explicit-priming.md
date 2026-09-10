@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 11
-pr: 7310
+pr: trails#7310
 claim: "2026-08-31T19:31:24Z"
 assignee: "require-application-probes-dist-instead-of-app-path"
 blocked-by: null

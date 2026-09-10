@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: 30
-pr: 5238
+pr: trails#5238
 claim: "2026-07-24T16:46:53Z"
 assignee: "gate-mismatch-zero-ci-enforcement"
 blocked-by: null

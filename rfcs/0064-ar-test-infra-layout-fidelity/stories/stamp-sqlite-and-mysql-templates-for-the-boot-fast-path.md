@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5706
+pr: trails#5706
 claim: "2026-07-31T02:45:05Z"
 assignee: "stamp-sqlite-and-mysql-templates-for-the-boot-fast-path"
 blocked-by: null

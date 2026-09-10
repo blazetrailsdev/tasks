@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5694
+pr: trails#5694
 claim: "2026-07-31T00:48:03Z"
 assignee: "canonical-loader-guard-stops-at-the-activerecord-package"
 blocked-by: null

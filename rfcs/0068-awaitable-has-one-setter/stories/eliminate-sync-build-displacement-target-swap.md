@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 5990
+pr: trails#5990
 claim: "2026-08-03T16:58:43Z"
 assignee: "eliminate-sync-build-displacement-target-swap"
 blocked-by: null

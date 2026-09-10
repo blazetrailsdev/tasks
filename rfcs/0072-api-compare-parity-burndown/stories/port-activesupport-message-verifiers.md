@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5972
+pr: trails#5972
 claim: "2026-08-03T14:06:39Z"
 assignee: "port-activesupport-message-verifiers"
 blocked-by: null

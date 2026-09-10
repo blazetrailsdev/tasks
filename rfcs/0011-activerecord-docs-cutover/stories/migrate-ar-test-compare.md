@@ -7,7 +7,7 @@ cluster: migrate
 deps: ["reconcile-existing-rfcs"]
 deps-rfc: []
 est-loc: 300
-pr: 3006
+pr: trails#3006
 claim: "2026-06-07T19:07:51Z"
 assignee: "migrate-ar-test-compare"
 blocked-by: null

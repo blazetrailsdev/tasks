@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6446
+pr: trails#6446
 claim: "2026-08-13T00:16:48Z"
 assignee: "converge-fidelity-coder-binary-string-payload"
 blocked-by: null

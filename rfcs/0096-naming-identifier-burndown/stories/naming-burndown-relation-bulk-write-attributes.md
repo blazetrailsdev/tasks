@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-pr: 6380
+pr: trails#6380
 claim: "2026-08-11T21:46:04Z"
 assignee: "converge-association-build-record-build-association"
 blocked-by: null

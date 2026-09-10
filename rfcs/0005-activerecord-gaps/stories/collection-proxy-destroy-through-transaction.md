@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4272
+pr: trails#4272
 claim: "2026-06-29T13:46:09Z"
 assignee: "collection-proxy-destroy-through-transaction"
 blocked-by: null

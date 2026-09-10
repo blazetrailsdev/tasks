@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: 4546
+pr: trails#4546
 claim: "2026-07-04T13:04:30Z"
 assignee: "shard-ar-adapter-suites"
 blocked-by: null

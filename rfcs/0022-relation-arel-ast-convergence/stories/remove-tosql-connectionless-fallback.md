@@ -8,7 +8,7 @@ deps: ["relation-tosql-unprepared-statement"]
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3386
+pr: trails#3386
 claim: "2026-06-15T17:54:26Z"
 assignee: "remove-tosql-connectionless-fallback"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["cli-generators-manifest"]
 deps-rfc: []
 est-loc: 5
 priority: 53
-pr: 2990
+pr: trails#2990
 claim: "2026-06-07T02:45:56Z"
 assignee: "cli-init-node-sqlite-driver"
 blocked-by: null

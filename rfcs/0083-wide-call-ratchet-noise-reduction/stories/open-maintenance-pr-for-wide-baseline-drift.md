@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5882
+pr: trails#5882
 claim: "2026-08-02T12:59:09Z"
 assignee: "open-maintenance-pr-for-wide-baseline-drift"
 blocked-by: null

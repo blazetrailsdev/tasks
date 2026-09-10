@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 50
-pr: 5271
+pr: trails#5271
 claim: "2026-07-24T21:26:54Z"
 assignee: "tasks-read-path-serves-index-without-reset-hard"
 blocked-by: null

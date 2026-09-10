@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: 7198
+pr: trails#7198
 claim: "2026-08-29T10:44:48Z"
 assignee: "converge-format-for-inspect-temporal-to-fs"
 blocked-by: null

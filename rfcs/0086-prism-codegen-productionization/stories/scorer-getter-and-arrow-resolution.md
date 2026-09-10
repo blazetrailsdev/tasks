@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: 5791
+pr: trails#5791
 claim: "2026-08-01T03:03:46Z"
 assignee: "scorer-getter-and-arrow-resolution"
 blocked-by: null

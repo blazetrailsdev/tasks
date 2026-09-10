@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5992
+pr: trails#5992
 claim: "2026-08-03T17:19:42Z"
 assignee: "clear-stale-norailsequivalent-tags"
 blocked-by: null

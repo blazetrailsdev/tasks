@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 6185
+pr: trails#6185
 claim: "2026-08-07T17:29:47Z"
 assignee: "activerecord-unrouted-privates-tasks-and-migration"
 blocked-by: null

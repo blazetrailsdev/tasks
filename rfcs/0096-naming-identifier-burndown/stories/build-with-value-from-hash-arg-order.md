@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6463
+pr: trails#6463
 claim: "2026-08-13T13:56:34Z"
 assignee: "build-with-value-from-hash-arg-order"
 blocked-by: null

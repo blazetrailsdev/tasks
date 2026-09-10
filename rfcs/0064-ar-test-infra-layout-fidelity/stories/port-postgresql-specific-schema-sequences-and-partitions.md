@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5551
+pr: trails#5551
 claim: "2026-07-29T00:15:44Z"
 assignee: "port-postgresql-specific-schema-sequences-and-partitions"
 blocked-by: null

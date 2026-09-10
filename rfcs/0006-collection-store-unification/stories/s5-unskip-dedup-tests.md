@@ -7,7 +7,7 @@ cluster: associations
 deps: ["s4-delete-cached-associations"]
 est-loc: 80
 priority: 4
-pr: 3098
+pr: trails#3098
 claim: "2026-06-11T01:57:13Z"
 assignee: "s5-unskip-dedup-tests"
 blocked-by: null

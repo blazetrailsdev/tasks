@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3749
+pr: trails#3749
 claim: "2026-06-20T23:15:44Z"
 assignee: "inverse-cpk-build-composite-pk-child"
 blocked-by: null

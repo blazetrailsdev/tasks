@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 50
-pr: 5242
+pr: trails#5242
 claim: "2026-07-24T17:18:53Z"
 assignee: "ruby-method-to-ts-include-predicate-maps-to-includes"
 blocked-by: null

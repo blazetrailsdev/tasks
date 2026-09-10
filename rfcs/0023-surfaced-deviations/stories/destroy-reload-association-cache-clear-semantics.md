@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3279
+pr: trails#3279
 claim: "2026-06-14T19:06:37Z"
 assignee: "destroy-reload-association-cache-clear-semantics"
 blocked-by: null

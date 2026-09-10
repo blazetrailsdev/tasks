@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: 4795
+pr: trails#4795
 claim: "2026-07-08T19:07:39Z"
 assignee: "mysql-table-alias-length-256-and-receiver-dispatch"
 blocked-by: null

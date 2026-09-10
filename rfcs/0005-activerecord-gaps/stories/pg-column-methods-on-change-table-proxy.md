@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5624
+pr: trails#5624
 claim: "2026-07-30T00:00:03Z"
 assignee: "pg-column-methods-on-change-table-proxy"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4827
+pr: trails#4827
 claim: "2026-07-09T11:49:38Z"
 assignee: "d2-has-one-remaining-gaps"
 blocked-by: null

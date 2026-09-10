@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5253
+pr: trails#5253
 claim: "2026-07-24T18:54:54Z"
 assignee: "guard-fork-count-precedence-parity"
 blocked-by: null

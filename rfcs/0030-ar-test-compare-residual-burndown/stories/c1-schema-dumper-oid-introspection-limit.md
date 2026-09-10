@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3439
+pr: trails#3439
 claim: "2026-06-16T02:34:09Z"
 assignee: "c1-schema-dumper-oid-introspection-limit"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 5958
+pr: trails#5958
 claim: "2026-08-03T03:45:46Z"
 assignee: "mysql-row-format-adapter-host-and-async-memo"
 blocked-by: null

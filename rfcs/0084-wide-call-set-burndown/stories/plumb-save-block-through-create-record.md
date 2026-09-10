@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6405
+pr: trails#6405
 claim: "2026-08-12T10:06:02Z"
 assignee: "plumb-save-block-through-create-record"
 blocked-by: null

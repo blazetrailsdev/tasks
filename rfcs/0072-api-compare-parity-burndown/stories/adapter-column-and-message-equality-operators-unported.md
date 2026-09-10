@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 5630
+pr: trails#5630
 claim: "2026-07-30T12:50:22Z"
 assignee: "adapter-column-and-message-equality-operators-unported"
 blocked-by: null

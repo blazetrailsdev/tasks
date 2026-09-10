@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 45
 priority: null
-pr: 3335
+pr: trails#3335
 claim: "2026-06-15T12:25:09Z"
 assignee: "new-rfc-body-full-template-sections"
 blocked-by: null

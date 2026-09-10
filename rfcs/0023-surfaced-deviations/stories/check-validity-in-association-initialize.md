@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3650
+pr: trails#3650
 claim: "2026-06-19T15:12:29Z"
 assignee: "check-validity-in-association-initialize"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4439
+pr: trails#4439
 claim: "2026-07-02T21:21:56Z"
 assignee: "connection-pool-async-pinned-checkout-no-fire-and-forget"
 blocked-by: null

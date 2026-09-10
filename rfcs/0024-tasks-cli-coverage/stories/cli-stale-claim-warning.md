@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3228
+pr: trails#3228
 claim: "2026-06-14T01:00:35Z"
 assignee: "cli-stale-claim-warning"
 blocked-by: null

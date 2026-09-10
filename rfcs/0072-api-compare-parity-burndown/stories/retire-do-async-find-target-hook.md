@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6110
+pr: trails#6110
 claim: "2026-08-05T01:29:56Z"
 assignee: "model-name-i18n-keys-drops-model-name-fallback"
 blocked-by: null

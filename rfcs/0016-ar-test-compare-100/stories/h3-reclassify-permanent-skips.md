@@ -7,7 +7,7 @@ cluster: hygiene
 deps: []
 deps-rfc: []
 est-loc: 40
-pr: 3006
+pr: trails#3006
 claim: "2026-06-07T20:51:46Z"
 assignee: "h3-reclassify-permanent-skips"
 blocked-by: null

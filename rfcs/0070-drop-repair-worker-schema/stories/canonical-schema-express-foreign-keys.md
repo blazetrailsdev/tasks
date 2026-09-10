@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 6
-pr: 5268
+pr: trails#5268
 claim: "2026-07-24T20:54:53Z"
 assignee: "canonical-schema-express-foreign-keys"
 blocked-by: null

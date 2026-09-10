@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4883
+pr: trails#4883
 claim: "2026-07-15T02:31:10Z"
 assignee: "arel-dot-hash-subclass-dispatch-and-classname"
 blocked-by: null

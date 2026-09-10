@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 3460
+pr: trails#3460
 claim: "2026-06-16T13:47:10Z"
 assignee: "e3-connection-handling"
 blocked-by: null

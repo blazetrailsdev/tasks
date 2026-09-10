@@ -9,7 +9,7 @@ deps: ["arel-operator-spellings-in-conventions", "arel-node-accept-removal-membe
 deps-rfc: []
 est-loc: 130
 priority: 5
-pr: 6877
+pr: trails#6877
 claim: "2026-08-22T19:48:21Z"
 assignee: "arel-attribute-extra-surface"
 blocked-by: null

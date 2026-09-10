@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5868
+pr: trails#5868
 claim: "2026-08-02T10:56:49Z"
 assignee: "call-less-missing-rails-call-tag-silently-ignored"
 blocked-by: null

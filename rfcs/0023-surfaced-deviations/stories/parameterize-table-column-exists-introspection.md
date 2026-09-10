@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3782
+pr: trails#3782
 claim: "2026-06-21T12:14:43Z"
 assignee: "parameterize-table-column-exists-introspection"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 8
-pr: 7454
+pr: trails#7454
 claim: "2026-09-03T18:59:40Z"
 assignee: "lookup-context-render-takes-rails-prefixes-and-formats"
 blocked-by: null

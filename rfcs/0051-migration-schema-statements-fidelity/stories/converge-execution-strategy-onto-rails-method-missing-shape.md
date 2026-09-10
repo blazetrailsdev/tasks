@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5743
+pr: trails#5743
 claim: "2026-07-31T19:20:55Z"
 assignee: "converge-execution-strategy-onto-rails-method-missing-shape"
 blocked-by: null

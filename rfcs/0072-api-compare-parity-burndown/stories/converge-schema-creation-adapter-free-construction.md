@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5938
+pr: trails#5938
 claim: "2026-08-03T00:25:45Z"
 assignee: "converge-schema-creation-adapter-free-construction"
 blocked-by: null

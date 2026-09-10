@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 4500
+pr: trails#4500
 claim: "2026-07-03T17:45:50Z"
 assignee: "converge-createtestadapter-callers-base-connection"
 blocked-by: null

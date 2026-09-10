@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 50
-pr: 3315
+pr: trails#3315
 claim: "2026-06-17T15:01:27Z"
 assignee: "tosql-inlining-post-process-not-collector-driven"
 blocked-by: null

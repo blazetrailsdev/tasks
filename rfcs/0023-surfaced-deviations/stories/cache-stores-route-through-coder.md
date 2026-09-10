@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3677
+pr: trails#3677
 claim: "2026-06-19T21:54:11Z"
 assignee: "cache-stores-route-through-coder"
 blocked-by: null

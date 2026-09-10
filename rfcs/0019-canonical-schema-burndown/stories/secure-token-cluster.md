@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 6
-pr: 3096
+pr: trails#3096
 claim: "2026-06-10T18:44:54Z"
 assignee: "secure-token-cluster"
 blocked-by: null

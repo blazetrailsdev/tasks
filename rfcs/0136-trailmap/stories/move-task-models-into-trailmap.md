@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 8
-pr: 2
+pr: trailmap#2
 claim: "2026-09-05T10:35:33Z"
 assignee: "move-task-models-into-trailmap"
 blocked-by: null

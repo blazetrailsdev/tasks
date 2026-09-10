@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6639
+pr: trails#6639
 claim: "2026-08-17T10:01:56Z"
 assignee: "assertions-activemodel-remainder-second-pass"
 blocked-by: null

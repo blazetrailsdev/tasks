@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 84
-pr: 4221
+pr: trails#4221
 claim: "2026-06-27T17:46:35Z"
 assignee: "assoc-has-many-residual-schemas-universal"
 blocked-by: null

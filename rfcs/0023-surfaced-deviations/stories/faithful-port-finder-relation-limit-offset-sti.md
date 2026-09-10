@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4422
+pr: trails#4422
 claim: "2026-07-02T16:57:53Z"
 assignee: "faithful-port-finder-relation-limit-offset-sti"
 blocked-by: null

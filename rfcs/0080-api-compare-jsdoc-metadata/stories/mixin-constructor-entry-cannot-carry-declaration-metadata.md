@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5468
+pr: trails#5468
 claim: "2026-07-28T00:10:17Z"
 assignee: "mixin-constructor-entry-cannot-carry-declaration-metadata"
 blocked-by: null

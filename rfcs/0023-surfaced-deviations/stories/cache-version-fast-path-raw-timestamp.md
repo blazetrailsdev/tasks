@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3633
+pr: trails#3633
 claim: "2026-06-19T11:36:27Z"
 assignee: "cache-version-fast-path-raw-timestamp"
 blocked-by: null

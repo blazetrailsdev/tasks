@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 20
-pr: 6189
+pr: trails#6189
 claim: "2026-08-07T17:53:00Z"
 assignee: "user-input-in-time-zone-utc-fallback-is-not-rails-zoneless-arm"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 15
-pr: 3163
+pr: trails#3163
 claim: "2026-06-12T21:15:15Z"
 assignee: "no-raw-sql-lint"
 blocked-by: null

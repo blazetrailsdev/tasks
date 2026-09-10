@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4670
+pr: trails#4670
 claim: "2026-07-06T15:17:03Z"
 assignee: "pg-pinned-client-write-query-serialization"
 blocked-by: null

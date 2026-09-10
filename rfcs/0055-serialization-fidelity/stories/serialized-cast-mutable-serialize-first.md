@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 49
-pr: 4738
+pr: trails#4738
 claim: "2026-07-07T14:25:51Z"
 assignee: "serialized-cast-mutable-serialize-first"
 blocked-by: null

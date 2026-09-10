@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7258
+pr: trails#7258
 claim: "2026-08-30T18:52:55Z"
 assignee: "compute-cache-version-max-swallows-nil"
 blocked-by: null

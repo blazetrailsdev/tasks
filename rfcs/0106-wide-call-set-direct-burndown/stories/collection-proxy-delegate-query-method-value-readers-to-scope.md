@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6612
+pr: trails#6612
 claim: "2026-08-16T20:33:34Z"
 assignee: "collection-proxy-delegate-query-method-value-readers-to-scope"
 blocked-by: null

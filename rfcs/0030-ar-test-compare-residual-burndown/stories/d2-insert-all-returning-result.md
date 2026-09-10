@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3447
+pr: trails#3447
 claim: "2026-06-16T11:59:00Z"
 assignee: "d2-insert-all-returning-result"
 blocked-by: null

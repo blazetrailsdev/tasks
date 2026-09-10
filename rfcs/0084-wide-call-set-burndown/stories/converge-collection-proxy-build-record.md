@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6388
+pr: trails#6388
 claim: "2026-08-11T23:46:06Z"
 assignee: "converge-collection-proxy-build-record"
 blocked-by: null

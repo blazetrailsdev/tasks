@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6184
+pr: trails#6184
 claim: "2026-08-07T17:13:47Z"
 assignee: "fk-test-pair-columns-are-integer-not-bigint"
 blocked-by: null

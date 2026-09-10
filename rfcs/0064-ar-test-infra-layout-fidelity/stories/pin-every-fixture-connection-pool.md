@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 4
-pr: 6103
+pr: trails#6103
 claim: "2026-08-04T23:23:03Z"
 assignee: "credit-mixin-methods-ported-in-their-own-file"
 blocked-by: null

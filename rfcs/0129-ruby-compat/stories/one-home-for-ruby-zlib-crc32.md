@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: 7420
+pr: trails#7420
 claim: "2026-09-03T00:03:33Z"
 assignee: "one-home-for-ruby-zlib-crc32"
 blocked-by: null

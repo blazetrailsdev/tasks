@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3971
+pr: trails#3971
 claim: "2026-06-23T11:17:40Z"
 assignee: "check-all-foreign-keys-valid-converge-requires-new-transaction"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5202
+pr: trails#5202
 claim: "2026-07-24T01:17:15Z"
 assignee: "grouped-composite-assoc-aggregate-alias"
 blocked-by: null

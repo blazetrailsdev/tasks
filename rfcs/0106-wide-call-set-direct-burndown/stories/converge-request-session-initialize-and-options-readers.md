@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6695
+pr: trails#6695
 claim: "2026-08-18T13:06:46Z"
 assignee: "converge-request-session-initialize-and-options-readers"
 blocked-by: null

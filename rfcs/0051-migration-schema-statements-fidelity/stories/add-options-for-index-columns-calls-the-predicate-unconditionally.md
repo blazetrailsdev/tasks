@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6300
+pr: trails#6300
 claim: "2026-08-09T20:59:21Z"
 assignee: "adapter-class-sync-swallows-the-pool-error-rails-raises"
 blocked-by: null

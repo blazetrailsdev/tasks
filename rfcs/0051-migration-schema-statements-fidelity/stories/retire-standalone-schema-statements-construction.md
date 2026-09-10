@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5847
+pr: trails#5847
 claim: "2026-08-02T00:56:47Z"
 assignee: "retire-standalone-schema-statements-construction"
 blocked-by: null

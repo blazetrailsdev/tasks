@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 3
-pr: 6737
+pr: trails#6737
 claim: "2026-08-19T12:59:17Z"
 assignee: "wave-4c-ar-core-residue-transactions-and-core"
 blocked-by: null

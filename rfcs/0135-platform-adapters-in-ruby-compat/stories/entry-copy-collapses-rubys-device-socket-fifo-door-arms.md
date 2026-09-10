@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 32
-pr: 7498
+pr: trails#7498
 claim: "2026-09-04T23:14:52Z"
 assignee: "delete-the-degenerate-fs-async-accessors"
 blocked-by: null

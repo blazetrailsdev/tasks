@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4998
+pr: trails#4998
 claim: "2026-07-20T18:46:44Z"
 assignee: "type-casted-binds-payload-self-dispatch"
 blocked-by: null

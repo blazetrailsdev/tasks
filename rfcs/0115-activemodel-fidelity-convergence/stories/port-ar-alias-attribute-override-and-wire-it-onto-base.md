@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6958
+pr: trails#6958
 claim: "2026-08-23T22:26:33Z"
 assignee: "api-build-reflows-the-other-tag-familys-jsdoc"
 blocked-by: null

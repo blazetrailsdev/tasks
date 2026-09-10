@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5507
+pr: trails#5507
 claim: "2026-07-28T13:56:44Z"
 assignee: "temporary-pool-normalized-path-loses-config-identity"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: ["0063-async-validation-chain"]
 est-loc: null
 priority: 5
-pr: 4988
+pr: trails#4988
 claim: "2026-07-20T01:57:46Z"
 assignee: "save-runs-validations-inside-transaction"
 blocked-by: null

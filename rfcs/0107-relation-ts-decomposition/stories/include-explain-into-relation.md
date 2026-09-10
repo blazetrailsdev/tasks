@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6594
+pr: trails#6594
 claim: "2026-08-16T12:45:04Z"
 assignee: "wave-2c-grouped-calculation-and-query-method-stores"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5519
+pr: trails#5519
 claim: "2026-07-28T15:44:22Z"
 assignee: "pg-items-absent-in-fixture-registry-seeding"
 blocked-by: null

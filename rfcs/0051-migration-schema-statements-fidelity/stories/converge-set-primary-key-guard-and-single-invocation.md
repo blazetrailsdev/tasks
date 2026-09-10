@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5993
+pr: trails#5993
 claim: "2026-08-03T17:12:49Z"
 assignee: "converge-set-primary-key-guard-and-single-invocation"
 blocked-by: null

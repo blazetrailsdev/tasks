@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 7308
+pr: trails#7308
 claim: "2026-08-31T19:37:15Z"
 assignee: "port-i18n-remaining-cases"
 blocked-by: null

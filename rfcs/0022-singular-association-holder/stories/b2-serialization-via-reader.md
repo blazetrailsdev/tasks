@@ -8,7 +8,7 @@ deps: ["b1-singular-association-holder"]
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: 3138
+pr: trails#3138
 claim: "2026-06-11T23:36:57Z"
 assignee: "b2-serialization-via-reader"
 blocked-by: null

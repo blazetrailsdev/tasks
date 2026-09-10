@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5890
+pr: trails#5890
 claim: "2026-08-02T15:41:57Z"
 assignee: "schema-cache-rehydrates-indexdefinition-instances"
 blocked-by: null

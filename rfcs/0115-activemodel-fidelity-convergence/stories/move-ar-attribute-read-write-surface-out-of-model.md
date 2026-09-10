@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 280
 priority: null
-pr: 6846
+pr: trails#6846
 claim: "2026-08-21T23:08:30Z"
 assignee: "move-ar-attribute-read-write-surface-out-of-model"
 blocked-by: null

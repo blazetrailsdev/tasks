@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5682
+pr: trails#5682
 claim: "2026-07-30T21:39:18Z"
 assignee: "ispreventingwrites-primary-class-case-displaces-base-pool"
 blocked-by: null

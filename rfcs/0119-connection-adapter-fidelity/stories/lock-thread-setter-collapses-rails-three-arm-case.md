@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7592
+pr: trails#7592
 claim: "2026-09-07T15:15:55Z"
 assignee: "database-config-inspect-prints-adapter-not-adapter-class"
 blocked-by: null

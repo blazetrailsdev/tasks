@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: 5785
+pr: trails#5785
 claim: "2026-08-01T01:53:48Z"
 assignee: "binds-missing-from-notification-under-prepared-default"
 blocked-by: null

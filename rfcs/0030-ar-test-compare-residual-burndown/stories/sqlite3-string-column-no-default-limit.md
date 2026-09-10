@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4640
+pr: trails#4640
 claim: "2026-07-05T22:21:55Z"
 assignee: "sqlite3-string-column-no-default-limit"
 blocked-by: null

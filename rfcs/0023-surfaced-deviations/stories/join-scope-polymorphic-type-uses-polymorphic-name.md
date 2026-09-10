@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3357
+pr: trails#3357
 claim: "2026-06-15T14:59:08Z"
 assignee: "join-scope-polymorphic-type-uses-polymorphic-name"
 blocked-by: null

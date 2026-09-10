@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6730
+pr: trails#6730
 claim: "2026-08-18T23:11:21Z"
 assignee: "order-check-ignores-suppressed-call-claims"
 blocked-by: null

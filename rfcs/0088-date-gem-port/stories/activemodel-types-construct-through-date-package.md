@@ -7,7 +7,7 @@ cluster: null
 deps: ["route-temporal-imports-activemodel-arel"]
 deps-rfc: []
 est-loc: 250
-pr: 6151
+pr: trails#6151
 claim: "2026-08-06T02:13:06Z"
 assignee: "activemodel-types-construct-through-date-package"
 blocked-by: null

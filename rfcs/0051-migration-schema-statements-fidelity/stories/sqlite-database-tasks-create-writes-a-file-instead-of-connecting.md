@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6259
+pr: trails#6259
 claim: "2026-08-08T19:57:19Z"
 assignee: "date-state-julian-only-spellings-unbuildable"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 7008
+pr: trails#7008
 claim: "2026-08-24T22:18:08Z"
 assignee: "converge-delegated-type-and-default-scope-call-set-rows"
 blocked-by: null

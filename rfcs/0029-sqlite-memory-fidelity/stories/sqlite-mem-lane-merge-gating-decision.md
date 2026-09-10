@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5609
+pr: trails#5609
 claim: "2026-07-29T22:26:02Z"
 assignee: "sqlite-mem-lane-merge-gating-decision"
 blocked-by: null

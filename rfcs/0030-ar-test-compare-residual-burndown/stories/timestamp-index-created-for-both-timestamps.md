@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 50
-pr: 3547
+pr: trails#3547
 claim: "2026-06-17T14:46:24Z"
 assignee: "timestamp-index-created-for-both-timestamps"
 blocked-by: null

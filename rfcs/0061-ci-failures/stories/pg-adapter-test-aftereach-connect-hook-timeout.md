@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6256
+pr: trails#6256
 claim: "2026-08-08T18:16:03Z"
 assignee: "pg-adapter-test-aftereach-connect-hook-timeout"
 blocked-by: null

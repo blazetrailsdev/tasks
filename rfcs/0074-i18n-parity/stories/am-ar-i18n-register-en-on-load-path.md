@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6084
+pr: trails#6084
 claim: "2026-08-04T18:21:59Z"
 assignee: "am-ar-i18n-register-en-on-load-path"
 blocked-by: null

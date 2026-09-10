@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6914
+pr: trails#6914
 claim: "2026-08-23T14:12:27Z"
 assignee: "encrypted-file-call-rows-are-stale-and-exclude-nothing"
 blocked-by: null

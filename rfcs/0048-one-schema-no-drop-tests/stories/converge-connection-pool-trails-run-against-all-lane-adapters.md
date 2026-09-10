@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4396
+pr: trails#4396
 claim: "2026-07-02T02:10:02Z"
 assignee: "converge-connection-pool-trails-run-against-all-lane-adapters"
 blocked-by: null

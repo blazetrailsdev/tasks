@@ -9,7 +9,7 @@ deps: ["retire-relation-parallel-join-resolver"]
 deps-rfc: []
 est-loc: 575
 priority: null
-pr: 6634
+pr: trails#6634
 claim: "2026-08-17T09:26:07Z"
 assignee: "converge-apply-join-dependency-eager-cluster"
 blocked-by: null

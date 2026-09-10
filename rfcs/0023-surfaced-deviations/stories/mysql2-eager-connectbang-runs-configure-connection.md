@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4661
+pr: trails#4661
 claim: "2026-07-06T04:26:23Z"
 assignee: "mysql2-eager-connectbang-runs-configure-connection"
 blocked-by: null

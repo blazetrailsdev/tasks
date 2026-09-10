@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5744
+pr: trails#5744
 claim: "2026-07-31T19:33:09Z"
 assignee: "base-prevent-writes-drops-query-count-assertions"
 blocked-by: null

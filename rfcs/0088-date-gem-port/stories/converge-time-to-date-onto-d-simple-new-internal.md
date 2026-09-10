@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6331
+pr: trails#6331
 claim: "2026-08-10T12:06:36Z"
 assignee: "converge-time-to-date-onto-d-simple-new-internal"
 blocked-by: null

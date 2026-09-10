@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3654
+pr: trails#3654
 claim: "2026-06-19T16:00:26Z"
 assignee: "collection-proxy-pretty-print-pp-deviation"
 blocked-by: null

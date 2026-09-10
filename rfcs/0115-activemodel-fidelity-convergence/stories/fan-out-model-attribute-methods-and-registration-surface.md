@@ -9,7 +9,7 @@ deps:
   - fan-out-model-dirty-surface-to-dirty-ts
 deps-rfc: []
 est-loc: 300
-pr: 7000
+pr: trails#7000
 claim: "2026-08-24T18:16:30Z"
 assignee: "fan-out-model-attribute-methods-and-registration-surface"
 blocked-by: null

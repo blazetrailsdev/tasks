@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 1
-pr: 6996
+pr: trails#6996
 claim: "2026-08-24T16:20:09Z"
 assignee: "sync-reflection-needs-explicit-warm-for-fake-adapter"
 blocked-by: null

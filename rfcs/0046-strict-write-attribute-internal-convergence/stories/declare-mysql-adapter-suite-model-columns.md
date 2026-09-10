@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 10
-pr: 4714
+pr: trails#4714
 claim: "2026-07-07T00:59:32Z"
 assignee: "declare-mysql-adapter-suite-model-columns"
 blocked-by: null

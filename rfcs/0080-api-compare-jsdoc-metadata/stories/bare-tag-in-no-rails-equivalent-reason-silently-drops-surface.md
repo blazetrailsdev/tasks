@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5393
+pr: trails#5393
 claim: "2026-07-27T02:21:10Z"
 assignee: "bare-tag-in-no-rails-equivalent-reason-silently-drops-surface"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5440
+pr: trails#5440
 claim: "2026-07-27T18:59:53Z"
 assignee: "has-one-create-deferred-load-error-reraise-untested"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 4390
+pr: trails#4390
 claim: "2026-07-02T00:16:14Z"
 assignee: "assertion-count-symmetric-helper-expansion"
 blocked-by: null

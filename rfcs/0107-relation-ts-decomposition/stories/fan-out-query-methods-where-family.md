@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 550
 priority: null
-pr: 6677
+pr: trails#6677
 claim: "2026-08-17T23:22:08Z"
 assignee: "fan-out-query-methods-where-family"
 blocked-by: null

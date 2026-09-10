@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6080
+pr: trails#6080
 claim: "2026-08-04T17:35:08Z"
 assignee: "i18n-date-zone-to-diff-offset"
 blocked-by: null

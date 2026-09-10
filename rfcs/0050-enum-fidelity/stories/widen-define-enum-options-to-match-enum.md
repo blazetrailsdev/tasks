@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: 8
-pr: 4937
+pr: trails#4937
 claim: "2026-07-17T14:51:14Z"
 assignee: "widen-define-enum-options-to-match-enum"
 blocked-by: null

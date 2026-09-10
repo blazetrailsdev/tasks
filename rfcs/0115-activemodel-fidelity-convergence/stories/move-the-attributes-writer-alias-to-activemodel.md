@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6801
+pr: trails#6801
 claim: "2026-08-21T01:13:06Z"
 assignee: "converge-model-name-match-raise-onto-string-match"
 blocked-by: null

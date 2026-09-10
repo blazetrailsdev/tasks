@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5919
+pr: trails#5919
 claim: "2026-08-02T20:07:27Z"
 assignee: "extra-surface-base-accessors-classify"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5782
+pr: trails#5782
 claim: "2026-08-01T01:20:41Z"
 assignee: "migrator-migrated-versions-memo-and-reload-under-lock"
 blocked-by: null

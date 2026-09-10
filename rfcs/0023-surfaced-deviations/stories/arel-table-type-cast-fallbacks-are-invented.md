@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4888
+pr: trails#4888
 claim: "2026-07-15T03:21:13Z"
 assignee: "arel-table-type-cast-fallbacks-are-invented"
 blocked-by: null

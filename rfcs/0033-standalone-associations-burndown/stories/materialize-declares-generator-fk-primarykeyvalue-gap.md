@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4556
+pr: trails#4556
 claim: "2026-07-04T16:34:29Z"
 assignee: "materialize-declares-generator-fk-primarykeyvalue-gap"
 blocked-by: null

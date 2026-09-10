@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6500
+pr: trails#6500
 claim: "2026-08-14T00:27:08Z"
 assignee: "converge-weak-receiver-surfaced-call-arg-rows"
 blocked-by: null

@@ -7,7 +7,7 @@ cluster: null
 deps: ["i18n-consolidate-activesupport-shim"]
 deps-rfc: []
 est-loc: 500
-pr: 6026
+pr: trails#6026
 claim: "2026-08-03T20:58:28Z"
 assignee: "i18n-consolidate-activemodel-activerecord-shims"
 blocked-by: null

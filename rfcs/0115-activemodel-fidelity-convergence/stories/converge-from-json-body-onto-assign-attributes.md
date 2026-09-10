@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7015
+pr: trails#7015
 claim: "2026-08-25T01:16:44Z"
 assignee: "fan-out-model-json-serializer-surface"
 blocked-by: null

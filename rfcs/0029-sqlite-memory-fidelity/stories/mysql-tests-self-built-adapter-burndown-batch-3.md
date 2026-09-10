@@ -8,7 +8,7 @@ deps: ["mysql-tests-self-built-adapter-burndown-batch-2"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5328
+pr: trails#5328
 claim: "2026-07-25T22:54:53Z"
 assignee: "mysql-tests-self-built-adapter-burndown-batch-3"
 blocked-by: null

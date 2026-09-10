@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6044
+pr: trails#6044
 claim: "2026-08-04T02:25:52Z"
 assignee: "i18n-base-not-implemented-raising-bodies"
 blocked-by: null

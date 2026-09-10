@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3248
+pr: trails#3248
 claim: "2026-06-14T02:42:35Z"
 assignee: "locking-counter-cache-lock-version"
 blocked-by: null

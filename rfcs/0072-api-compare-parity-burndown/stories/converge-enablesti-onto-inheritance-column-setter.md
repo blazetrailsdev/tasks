@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5376
+pr: trails#5376
 claim: "2026-07-26T23:58:54Z"
 assignee: "converge-enablesti-onto-inheritance-column-setter"
 blocked-by: null

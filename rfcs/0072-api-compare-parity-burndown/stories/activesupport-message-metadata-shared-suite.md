@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5867
+pr: trails#5867
 claim: "2026-08-02T09:16:49Z"
 assignee: "activesupport-message-metadata-shared-suite"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6501
+pr: trails#6501
 claim: "2026-08-14T01:06:59Z"
 assignee: "call-args-ar-select-async-kwarg"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3430
+pr: trails#3430
 claim: "2026-06-16T00:20:55Z"
 assignee: "c4-migration-column-def-tail"
 blocked-by: null

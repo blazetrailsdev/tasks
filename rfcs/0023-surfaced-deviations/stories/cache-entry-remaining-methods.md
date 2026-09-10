@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 3645
+pr: trails#3645
 claim: "2026-06-19T14:24:27Z"
 assignee: "cache-entry-remaining-methods"
 blocked-by: null

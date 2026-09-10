@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4402
+pr: trails#4402
 claim: "2026-07-02T03:38:22Z"
 assignee: "decimal-typetosql-precision-default-diverges-from-rails-native"
 blocked-by: null

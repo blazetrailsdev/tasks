@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 7092
+pr: trails#7092
 claim: "2026-08-26T16:11:48Z"
 assignee: "arel-nodes-node-is-abstract-but-rails-instantiates-it"
 blocked-by: null

@@ -7,7 +7,7 @@ cluster: duplicate-bodies
 deps: []
 deps-rfc: []
 est-loc: 250
-pr: 6900
+pr: trails#6900
 claim: null
 assignee: null
 blocked-by: null

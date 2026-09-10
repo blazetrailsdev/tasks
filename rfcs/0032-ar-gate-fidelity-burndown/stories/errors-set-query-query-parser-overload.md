@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5134
+pr: trails#5134
 claim: "2026-07-23T12:19:37Z"
 assignee: "errors-set-query-query-parser-overload"
 blocked-by: null

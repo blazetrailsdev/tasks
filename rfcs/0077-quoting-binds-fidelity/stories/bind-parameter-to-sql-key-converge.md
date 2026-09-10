@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7152
+pr: trails#7152
 claim: "2026-08-28T11:40:17Z"
 assignee: "abstract-quote-default-expression-has-non-rails-undefined-and-proc-arms"
 blocked-by: null

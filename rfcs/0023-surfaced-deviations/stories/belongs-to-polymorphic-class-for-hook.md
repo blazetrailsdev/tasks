@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4268
+pr: trails#4268
 claim: "2026-06-29T12:46:10Z"
 assignee: "belongs-to-polymorphic-class-for-hook"
 blocked-by: null

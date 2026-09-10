@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 15
-pr: 6915
+pr: trails#6915
 claim: "2026-08-23T14:27:28Z"
 assignee: "resolve-serialization-thenable-hash-async-return"
 blocked-by: null

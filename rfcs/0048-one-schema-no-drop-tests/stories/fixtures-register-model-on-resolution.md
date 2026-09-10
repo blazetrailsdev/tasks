@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: 4348
+pr: trails#4348
 claim: "2026-06-30T19:13:44Z"
 assignee: "fixtures-register-model-on-resolution"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6823
+pr: trails#6823
 claim: "2026-08-21T14:48:15Z"
 assignee: "args-dl-adapter-factory-invented-kwarg"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5877
+pr: trails#5877
 claim: "2026-08-02T12:16:48Z"
 assignee: "adapter-indexes-return-real-indexdefinition-instances"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 12
-pr: 3154
+pr: trails#3154
 claim: "2026-06-12T18:03:50Z"
 assignee: "f9g3-persistence-and-instrumentation"
 blocked-by: null

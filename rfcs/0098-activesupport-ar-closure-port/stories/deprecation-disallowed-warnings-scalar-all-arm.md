@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6521
+pr: trails#6521
 claim: "2026-08-14T14:27:02Z"
 assignee: "deprecation-disallowed-warnings-scalar-all-arm"
 blocked-by: null

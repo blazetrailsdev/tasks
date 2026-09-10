@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5549
+pr: trails#5549
 claim: "2026-07-28T23:55:45Z"
 assignee: "port-postgresql-specific-schema-identity-and-trigger-tables"
 blocked-by: null

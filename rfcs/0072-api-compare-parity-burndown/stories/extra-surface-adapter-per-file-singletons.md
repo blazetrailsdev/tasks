@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5918
+pr: trails#5918
 claim: "2026-08-02T20:01:26Z"
 assignee: "extra-surface-adapter-per-file-singletons"
 blocked-by: null

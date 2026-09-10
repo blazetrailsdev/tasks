@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: 3384
+pr: trails#3384
 claim: "2026-06-15T17:48:26Z"
 assignee: "remove-index-helper-can-remove-by-name-divergence"
 blocked-by: null

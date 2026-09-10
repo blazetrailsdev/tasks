@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 32
-pr: 3515
+pr: trails#3515
 claim: "2026-06-17T00:36:42Z"
 assignee: "exec-insert-all-route-via-internal-exec-query"
 blocked-by: null

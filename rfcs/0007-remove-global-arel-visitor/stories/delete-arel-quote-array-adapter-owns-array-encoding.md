@@ -8,7 +8,7 @@ deps: ["delete-arel-default-quoters-and-constructor-defaults"]
 deps-rfc: []
 est-loc: 250
 priority: 20
-pr: 5189
+pr: trails#5189
 claim: "2026-07-23T22:27:11Z"
 assignee: "delete-arel-quote-array-adapter-owns-array-encoding"
 blocked-by: null

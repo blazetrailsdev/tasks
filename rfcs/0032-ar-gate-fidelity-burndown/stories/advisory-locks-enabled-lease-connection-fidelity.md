@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3761
+pr: trails#3761
 claim: "2026-06-21T01:35:27Z"
 assignee: "advisory-locks-enabled-lease-connection-fidelity"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 52
+pr: tasks-legacy#52
 claim: "2026-06-21T19:50:43Z"
 assignee: "author-rfc-bespoke-test-bloat-burndown"
 blocked-by: null

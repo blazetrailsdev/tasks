@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5757
+pr: trails#5757
 claim: "2026-08-01T02:03:45Z"
 assignee: "pg-port-static-database-exists-from-config"
 blocked-by: null

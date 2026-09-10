@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: 20
-pr: 3069
+pr: trails#3069
 claim: "2026-06-09T21:30:51Z"
 assignee: "dirty-previous-changes-in-place-mutations"
 blocked-by: null

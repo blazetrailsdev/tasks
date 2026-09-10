@@ -8,7 +8,7 @@ deps: ["extra-surface-associations-engine-classify"]
 deps-rfc: []
 est-loc: 105
 priority: null
-pr: 5359
+pr: trails#5359
 claim: "2026-07-26T16:30:56Z"
 assignee: "extra-surface-relocate-counter-cache-helpers"
 blocked-by: null

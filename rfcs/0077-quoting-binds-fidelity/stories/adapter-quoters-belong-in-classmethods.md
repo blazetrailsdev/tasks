@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6329
+pr: trails#6329
 claim: "2026-08-10T09:06:33Z"
 assignee: "adapter-quoters-belong-in-classmethods"
 blocked-by: null

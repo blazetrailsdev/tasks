@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6516
+pr: trails#6516
 claim: "2026-08-14T12:07:07Z"
 assignee: "read-association-scope-off-reflection-not-definition-bag"
 blocked-by: null

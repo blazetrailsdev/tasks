@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3438
+pr: trails#3438
 claim: "2026-06-16T01:40:53Z"
 assignee: "c2-defaults-mariadb-expression-reflection"
 blocked-by: null

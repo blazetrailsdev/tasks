@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3737
+pr: trails#3737
 claim: "2026-06-20T19:01:29Z"
 assignee: "hot-compatibility-prepared-statement-cache-expired"
 blocked-by: null

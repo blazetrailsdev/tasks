@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6563
+pr: trails#6563
 claim: "2026-08-15T13:15:05Z"
 assignee: "wave-1b-relation-own-file-rows-remainder"
 blocked-by: null

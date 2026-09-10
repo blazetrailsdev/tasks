@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: 6278
+pr: trails#6278
 claim: "2026-08-09T13:15:56Z"
 assignee: "port-remaining-mysql2-rake-tests"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 6
 priority: 1
-pr: 5100
+pr: trails#5100
 claim: "2026-07-23T00:03:27Z"
 assignee: "comment-test-pg-dump-timeout"
 blocked-by: null

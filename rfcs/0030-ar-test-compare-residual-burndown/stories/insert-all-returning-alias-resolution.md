@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 30
-pr: 3513
+pr: trails#3513
 claim: "2026-06-17T00:12:45Z"
 assignee: "insert-all-returning-alias-resolution"
 blocked-by: null

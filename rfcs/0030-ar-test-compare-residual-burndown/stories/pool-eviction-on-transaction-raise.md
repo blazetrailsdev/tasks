@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 24
-pr: 3507
+pr: trails#3507
 claim: "2026-06-16T22:12:43Z"
 assignee: "pool-eviction-on-transaction-raise"
 blocked-by: null

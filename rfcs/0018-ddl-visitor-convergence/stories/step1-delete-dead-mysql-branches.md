@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 5
-pr: 3068
+pr: trails#3068
 claim: "2026-06-09T20:37:18Z"
 assignee: "step1-delete-dead-mysql-branches"
 blocked-by: null

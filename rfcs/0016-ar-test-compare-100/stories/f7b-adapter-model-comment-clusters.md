@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 10
-pr: 3147
+pr: trails#3147
 claim: "2026-06-12T15:37:37Z"
 assignee: "f7b-adapter-model-comment-clusters"
 blocked-by: null

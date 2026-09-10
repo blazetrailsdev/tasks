@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6215
+pr: trails#6215
 claim: "2026-08-08T01:42:08Z"
 assignee: "raw-test-adapters-should-come-from-pool-checkout"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4471
+pr: trails#4471
 claim: "2026-07-03T11:33:51Z"
 assignee: "generator-define-schema-index-gating-parity-guard"
 blocked-by: null

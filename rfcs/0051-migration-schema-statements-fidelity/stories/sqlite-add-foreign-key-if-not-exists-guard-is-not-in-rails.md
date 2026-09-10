@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5608
+pr: trails#5608
 claim: "2026-07-29T22:24:04Z"
 assignee: "sqlite-add-foreign-key-if-not-exists-guard-is-not-in-rails"
 blocked-by: null

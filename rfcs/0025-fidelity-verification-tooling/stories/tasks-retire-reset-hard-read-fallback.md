@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 24
-pr: 5432
+pr: trails#5432
 claim: "2026-07-27T18:04:58Z"
 assignee: "tasks-retire-reset-hard-read-fallback"
 blocked-by: null

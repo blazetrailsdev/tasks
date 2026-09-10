@@ -12,7 +12,7 @@ deps:
   - arel-nodes-manager-residual-classification
 deps-rfc: []
 est-loc: 400
-pr: 6378
+pr: trails#6378
 claim: "2026-08-11T21:06:02Z"
 assignee: "burndown-arel-visitors"
 blocked-by: null

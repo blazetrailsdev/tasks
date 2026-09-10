@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4941
+pr: trails#4941
 claim: "2026-07-18T19:01:11Z"
 assignee: "query-cache-store-max-size-nullable-not-infinity"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4121
+pr: trails#4121
 claim: "2026-06-25T14:09:12Z"
 assignee: "converge-readonly-enforcement-to-declaration-time-include"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["columnshash-sync-schema-cache-reload-vs-sibling-borrow"]
 deps-rfc: []
 est-loc: 90
 priority: 30
-pr: 5101
+pr: trails#5101
 claim: "2026-07-23T00:23:30Z"
 assignee: "converge-reset-column-information-sync-reload-remove-refreshbang"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4325
+pr: trails#4325
 claim: "2026-06-30T15:38:41Z"
 assignee: "converge-joins-table-on-trails-heuristic"
 blocked-by: null

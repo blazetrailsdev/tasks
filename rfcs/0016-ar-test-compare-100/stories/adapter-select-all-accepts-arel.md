@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3284
+pr: trails#3284
 claim: "2026-06-14T19:38:11Z"
 assignee: "adapter-select-all-accepts-arel"
 blocked-by: null

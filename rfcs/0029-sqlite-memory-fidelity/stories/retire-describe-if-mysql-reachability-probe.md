@@ -8,7 +8,7 @@ deps: ["mysql-tests-self-built-adapter-burndown-batch-3"]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5537
+pr: trails#5537
 claim: "2026-07-28T21:55:45Z"
 assignee: "retire-describe-if-mysql-reachability-probe"
 blocked-by: null

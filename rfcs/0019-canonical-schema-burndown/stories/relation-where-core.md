@@ -8,7 +8,7 @@ deps: ["shared-table-convergence", "where-extra-burndown"]
 deps-rfc: []
 est-loc: 300
 priority: 1
-pr: 4277
+pr: trails#4277
 claim: "2026-06-29T14:42:54Z"
 assignee: "relation-where-core"
 blocked-by: null

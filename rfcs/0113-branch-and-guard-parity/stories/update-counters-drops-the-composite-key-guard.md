@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 2
-pr: 7287
+pr: trails#7287
 claim: "2026-08-31T09:54:12Z"
 assignee: "locator-use-drops-the-no-locator-raise"
 blocked-by: null

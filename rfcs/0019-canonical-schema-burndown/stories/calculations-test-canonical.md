@@ -8,7 +8,7 @@ deps: ["shared-table-convergence", "calculations-extra-burndown"]
 deps-rfc: []
 est-loc: 500
 priority: 74
-pr: 4211
+pr: trails#4211
 claim: "2026-06-27T13:58:20Z"
 assignee: "calculations-test-canonical"
 blocked-by: null

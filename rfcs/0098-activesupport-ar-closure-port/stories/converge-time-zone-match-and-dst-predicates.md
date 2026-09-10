@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6740
+pr: trails#6740
 claim: "2026-08-19T13:36:07Z"
 assignee: "converge-time-zone-match-and-dst-predicates"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 91
-pr: 4226
+pr: trails#4226
 claim: "2026-06-27T19:26:33Z"
 assignee: "relation-or-fold-quadratic-perf"
 blocked-by: null

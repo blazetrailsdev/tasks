@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 70
-pr: 7399
+pr: trails#7399
 claim: "2026-09-02T18:51:12Z"
 assignee: "converge-float-domain-error-and-name-error-onto-ruby-compat"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: 5217
+pr: trails#5217
 claim: "2026-07-24T11:08:23Z"
 assignee: "schema-compare-adapter-specific-schemas"
 blocked-by: null

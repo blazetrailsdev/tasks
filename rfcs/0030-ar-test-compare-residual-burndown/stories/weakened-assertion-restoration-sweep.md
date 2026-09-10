@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: 5128
+pr: trails#5128
 claim: "2026-07-23T11:25:41Z"
 assignee: "weakened-assertion-restoration-sweep"
 blocked-by: null

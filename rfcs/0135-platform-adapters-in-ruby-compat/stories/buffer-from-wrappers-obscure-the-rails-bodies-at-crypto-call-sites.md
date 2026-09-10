@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 28
-pr: 7492
+pr: trails#7492
 claim: "2026-09-04T19:44:33Z"
 assignee: "move-remaining-monotonic-seats-onto-process-clock-gettime"
 blocked-by: null

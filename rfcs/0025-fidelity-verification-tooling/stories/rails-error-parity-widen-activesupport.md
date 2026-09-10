@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3251
+pr: trails#3251
 claim: "2026-06-14T13:54:33Z"
 assignee: "rails-error-parity-widen-activesupport"
 blocked-by: null

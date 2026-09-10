@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5786
+pr: trails#5786
 claim: "2026-08-01T02:13:48Z"
 assignee: "record-environment-reads-pool-db-config-env-name"
 blocked-by: null

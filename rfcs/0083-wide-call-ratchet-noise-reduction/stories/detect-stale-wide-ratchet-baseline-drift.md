@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 5869
+pr: trails#5869
 claim: "2026-08-02T11:06:51Z"
 assignee: "detect-stale-wide-ratchet-baseline-drift"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5025
+pr: trails#5025
 claim: "2026-07-21T11:25:16Z"
 assignee: "arel-unrouted-privates-drop-carried-arguments"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: 7070
+pr: trails#7070
 claim: "2026-08-26T01:05:34Z"
 assignee: "find-collection-target-inline-fallback-skips-find-target-gate"
 blocked-by: null

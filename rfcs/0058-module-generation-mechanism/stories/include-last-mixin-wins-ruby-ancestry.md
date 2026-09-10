@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4519
+pr: trails#4519
 claim: "2026-07-03T22:07:09Z"
 assignee: "include-last-mixin-wins-ruby-ancestry"
 blocked-by: null

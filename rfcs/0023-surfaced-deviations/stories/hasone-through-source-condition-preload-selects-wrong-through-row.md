@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4508
+pr: trails#4508
 claim: "2026-07-03T20:19:09Z"
 assignee: "hasone-through-source-condition-preload-selects-wrong-through-row"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3958
+pr: trails#3958
 claim: "2026-06-23T03:07:16Z"
 assignee: "abstract-sqlite-introspection-arm-dead-or-diverges-from-concrete"
 blocked-by: null

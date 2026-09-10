@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 15
-pr: 7467
+pr: trails#7467
 claim: "2026-09-03T23:43:49Z"
 assignee: "retarget-no-node-builtins-to-ruby-compat"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 3
-pr: 3411
+pr: trails#3411
 claim: "2026-07-22T18:26:51Z"
 assignee: "a6-inverse-and-association-tail"
 blocked-by: null

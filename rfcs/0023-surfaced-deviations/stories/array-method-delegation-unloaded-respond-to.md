@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3669
+pr: trails#3669
 claim: "2026-06-19T19:35:02Z"
 assignee: "array-method-delegation-unloaded-respond-to"
 blocked-by: null

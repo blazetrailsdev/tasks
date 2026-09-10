@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 14
-pr: 4753
+pr: trails#4753
 claim: "2026-07-07T19:13:48Z"
 assignee: "sqlite-mysql-datetime-literal-fixed-6-microseconds"
 blocked-by: null

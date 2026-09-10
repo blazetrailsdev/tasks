@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5858
+pr: trails#5858
 claim: "2026-08-02T02:46:48Z"
 assignee: "adapter-indexes-return-type-index-definition-shape"
 blocked-by: null

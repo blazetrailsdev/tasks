@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3791
+pr: trails#3791
 claim: "2026-06-21T13:34:42Z"
 assignee: "nested-attr-belongs-to-counter-cache-on-create"
 blocked-by: null

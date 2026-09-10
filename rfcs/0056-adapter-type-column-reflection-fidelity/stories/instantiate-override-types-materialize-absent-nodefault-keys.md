@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 23
-pr: 4798
+pr: trails#4798
 claim: "2026-07-08T19:52:34Z"
 assignee: "instantiate-override-types-materialize-absent-nodefault-keys"
 blocked-by: null

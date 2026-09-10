@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: 4126
+pr: trails#4126
 claim: "2026-06-25T14:54:37Z"
 assignee: "updateall-parenthesize-subquery-value"
 blocked-by: null

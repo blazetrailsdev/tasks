@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 28
-pr: 5050
+pr: trails#5050
 claim: "2026-07-22T00:56:49Z"
 assignee: "to-sql-base-isdistinctfrom-emits-native-not-case-form"
 blocked-by: null

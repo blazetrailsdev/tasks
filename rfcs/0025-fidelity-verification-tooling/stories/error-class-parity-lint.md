@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 15
-pr: 3162
+pr: trails#3162
 claim: "2026-06-12T20:51:15Z"
 assignee: "error-class-parity-lint"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: 6621
+pr: trails#6621
 claim: "2026-08-16T23:40:00Z"
 assignee: "make-transliterate-raise-on-non-strings"
 blocked-by: null

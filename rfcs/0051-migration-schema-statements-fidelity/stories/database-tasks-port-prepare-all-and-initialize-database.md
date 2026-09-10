@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 5584
+pr: trails#5584
 claim: "2026-07-29T18:28:17Z"
 assignee: "database-tasks-port-prepare-all-and-initialize-database"
 blocked-by: null

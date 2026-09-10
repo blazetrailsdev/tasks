@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4370
+pr: trails#4370
 claim: "2026-07-01T13:24:53Z"
 assignee: "converge-migration-test-people-migration-and-bespoke-schema"
 blocked-by: null

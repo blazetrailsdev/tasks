@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 12
-pr: 3152
+pr: trails#3152
 claim: "2026-06-12T17:16:32Z"
 assignee: "f9-autosave-association"
 blocked-by: null

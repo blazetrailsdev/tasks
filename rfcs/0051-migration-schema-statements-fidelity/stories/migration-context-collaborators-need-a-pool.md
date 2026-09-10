@@ -8,7 +8,7 @@ deps:
   - migration-collaborator-call-sites-pass-a-pool
 deps-rfc: []
 est-loc: 120
-pr: 6268
+pr: trails#6268
 claim: "2026-08-09T01:00:45Z"
 assignee: "converge-fixture-teardown-delete-onto-a-live-connection"
 blocked-by: null

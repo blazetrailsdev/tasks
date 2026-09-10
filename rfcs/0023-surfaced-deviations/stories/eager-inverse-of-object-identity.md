@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 4249
+pr: trails#4249
 claim: "2026-07-02T04:08:22Z"
 assignee: "eager-inverse-of-object-identity"
 blocked-by: null

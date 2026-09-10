@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3248
+pr: trails#3248
 claim: "2026-06-14T23:15:12Z"
 assignee: "locking-counter-cache-touch-polymorphic"
 blocked-by: null

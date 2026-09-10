@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 5118
+pr: trails#5118
 claim: "2026-07-23T02:25:41Z"
 assignee: "delete-deprecated-arelquoter-alias"
 blocked-by: null

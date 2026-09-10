@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 5
-pr: 4376
+pr: trails#4376
 claim: "2026-07-01T16:08:12Z"
 assignee: "audit-trails-ddl-tests-invented-tables-vs-rails"
 blocked-by: null

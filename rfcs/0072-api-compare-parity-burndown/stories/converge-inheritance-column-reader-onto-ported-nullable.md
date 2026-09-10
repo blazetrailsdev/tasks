@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5378
+pr: trails#5378
 claim: "2026-07-27T00:06:54Z"
 assignee: "converge-inheritance-column-reader-onto-ported-nullable"
 blocked-by: null

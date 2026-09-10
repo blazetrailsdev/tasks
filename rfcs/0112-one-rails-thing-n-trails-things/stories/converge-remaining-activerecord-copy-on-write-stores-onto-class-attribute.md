@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6887
+pr: trails#6887
 claim: "2026-08-22T22:33:40Z"
 assignee: "converge-remaining-activerecord-copy-on-write-stores-onto-class-attribute"
 blocked-by: null

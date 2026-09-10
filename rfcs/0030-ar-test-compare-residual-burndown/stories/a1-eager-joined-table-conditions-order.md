@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: 3928
+pr: trails#3928
 claim: "2026-06-22T21:31:16Z"
 assignee: "a1-eager-joined-table-conditions-order"
 blocked-by: null

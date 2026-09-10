@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6910
+pr: trails#6910
 claim: "2026-08-23T12:27:28Z"
 assignee: "pg-execute-batch-combines-statements-into-one-raw-execute"
 blocked-by: null

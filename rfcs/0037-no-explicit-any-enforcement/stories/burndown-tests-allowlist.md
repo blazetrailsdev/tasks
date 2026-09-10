@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 20
-pr: 3898
+pr: trails#3898
 claim: "2026-06-22T17:16:01Z"
 assignee: "burndown-tests-allowlist"
 blocked-by: null

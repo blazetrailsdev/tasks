@@ -9,7 +9,7 @@ deps: ["narrow-ruby-compat-leaf-guard-to-static-imports"]
 deps-rfc: []
 est-loc: 320
 priority: 5
-pr: 7438
+pr: trails#7438
 claim: "2026-09-03T11:11:43Z"
 assignee: "port-io-and-process-classes-and-unexempt"
 blocked-by: null

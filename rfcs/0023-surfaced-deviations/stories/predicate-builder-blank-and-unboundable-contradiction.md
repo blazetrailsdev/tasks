@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4848
+pr: trails#4848
 claim: "2026-07-13T19:58:24Z"
 assignee: "predicate-builder-blank-and-unboundable-contradiction"
 blocked-by: null

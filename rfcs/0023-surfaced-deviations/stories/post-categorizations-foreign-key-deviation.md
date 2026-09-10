@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 2332
+pr: trails#2332
 claim: "2026-06-21T20:22:40Z"
 assignee: "post-categorizations-foreign-key-deviation"
 blocked-by: null

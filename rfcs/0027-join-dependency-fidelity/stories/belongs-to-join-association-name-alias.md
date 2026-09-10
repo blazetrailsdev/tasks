@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: 3899
+pr: trails#3899
 claim: "2026-06-22T17:14:21Z"
 assignee: "belongs-to-join-association-name-alias"
 blocked-by: null

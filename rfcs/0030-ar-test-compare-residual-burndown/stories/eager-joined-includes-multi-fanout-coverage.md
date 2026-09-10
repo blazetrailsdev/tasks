@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3988
+pr: trails#3988
 claim: "2026-06-23T12:57:40Z"
 assignee: "eager-joined-includes-multi-fanout-coverage"
 blocked-by: null

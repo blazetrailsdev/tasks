@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5516
+pr: trails#5516
 claim: "2026-07-28T15:37:24Z"
 assignee: "converge-test-adapter-primary-configuration"
 blocked-by: null

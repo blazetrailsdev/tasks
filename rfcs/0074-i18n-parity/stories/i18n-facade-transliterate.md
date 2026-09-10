@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6015
+pr: trails#6015
 claim: "2026-08-03T19:53:43Z"
 assignee: "i18n-facade-transliterate"
 blocked-by: null

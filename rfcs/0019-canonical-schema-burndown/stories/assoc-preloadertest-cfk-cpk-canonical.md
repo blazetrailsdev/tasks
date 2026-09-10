@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3671
+pr: trails#3671
 claim: "2026-06-19T20:08:25Z"
 assignee: "assoc-preloadertest-cfk-cpk-canonical"
 blocked-by: null

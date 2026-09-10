@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 7112
+pr: trails#7112
 claim: "2026-08-27T02:01:16Z"
 assignee: "ratchet-rebuild-canonical-tables-callers"
 blocked-by: null

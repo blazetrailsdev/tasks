@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 45
+pr: tasks-legacy#45
 claim: "2026-06-15T19:48:08Z"
 assignee: "hooks-install-independent-format-gate"
 blocked-by: null

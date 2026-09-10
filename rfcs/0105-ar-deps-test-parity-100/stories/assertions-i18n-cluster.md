@@ -9,7 +9,7 @@ deps: [assertion-extractor-counts-mocha-expects]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6692
+pr: trails#6692
 claim: "2026-08-18T12:28:47Z"
 assignee: "assertions-activesupport-hash-and-ordered-options"
 blocked-by: null

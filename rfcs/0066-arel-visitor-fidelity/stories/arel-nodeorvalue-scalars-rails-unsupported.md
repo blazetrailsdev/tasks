@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5028
+pr: trails#5028
 claim: "2026-07-21T12:35:15Z"
 assignee: "arel-nodeorvalue-scalars-rails-unsupported"
 blocked-by: null

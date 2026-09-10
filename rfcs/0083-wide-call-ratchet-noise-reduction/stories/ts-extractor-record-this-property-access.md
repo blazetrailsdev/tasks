@@ -7,7 +7,7 @@ cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 4656
+pr: trails#4656
 claim: "2026-07-31T18:05:17Z"
 assignee: "ts-extractor-record-this-property-access"
 blocked-by: null

@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6218
+pr: trails#6218
 claim: "2026-08-08T02:51:56Z"
 assignee: "converge-time-zone-setter-through-find-zone-bang"
 blocked-by: null

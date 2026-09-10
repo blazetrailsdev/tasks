@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 18
-pr: 5007
+pr: trails#5007
 claim: "2026-07-20T20:06:44Z"
 assignee: "arel-attribute-coalesce-invented-surface-and-map-index-bug"
 blocked-by: null

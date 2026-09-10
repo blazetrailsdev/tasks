@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5048
+pr: trails#5048
 claim: "2026-07-22T00:45:34Z"
 assignee: "arel-suite-engine-is-fake-record-base"
 blocked-by: null

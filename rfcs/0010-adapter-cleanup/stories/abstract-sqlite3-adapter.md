@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 10
-pr: 3120
+pr: trails#3120
 claim: "2026-06-11T13:05:21Z"
 assignee: "abstract-sqlite3-adapter"
 blocked-by: null

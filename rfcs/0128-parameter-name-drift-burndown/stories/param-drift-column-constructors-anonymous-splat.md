@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 2
-pr: 7212
+pr: trails#7212
 claim: "2026-08-29T16:33:48Z"
 assignee: "param-drift-associations-constructors-take-an-extra-parameter"
 blocked-by: null

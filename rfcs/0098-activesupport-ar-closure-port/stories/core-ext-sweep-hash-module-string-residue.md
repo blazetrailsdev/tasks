@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6518
+pr: trails#6518
 claim: "2026-08-14T12:47:04Z"
 assignee: "core-ext-sweep-hash-module-string-residue"
 blocked-by: null

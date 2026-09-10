@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5839
+pr: trails#5839
 claim: "2026-08-01T23:46:00Z"
 assignee: "codegen-scope-defs-respect-class-nesting"
 blocked-by: null

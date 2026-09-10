@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 5
-pr: 7076
+pr: trails#7076
 claim: "2026-08-26T11:41:28Z"
 assignee: "retire-remaining-attribute-definitions-registry"
 blocked-by: null

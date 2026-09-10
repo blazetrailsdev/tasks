@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6292
+pr: trails#6292
 claim: "2026-08-09T19:19:19Z"
 assignee: "reset-column-information-leaves-sync-readers-cold"
 blocked-by: null

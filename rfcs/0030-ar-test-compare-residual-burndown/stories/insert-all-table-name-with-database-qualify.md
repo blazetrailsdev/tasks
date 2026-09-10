@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3748
+pr: trails#3748
 claim: "2026-06-20T23:11:30Z"
 assignee: "insert-all-table-name-with-database-qualify"
 blocked-by: null

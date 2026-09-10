@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 1
-pr: 4063
+pr: trails#4063
 claim: "2026-06-24T15:09:04Z"
 assignee: "wide-call-set-significant-knob-and-baseline"
 blocked-by: null

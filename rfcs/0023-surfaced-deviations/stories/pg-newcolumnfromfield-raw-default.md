@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3344
+pr: trails#3344
 claim: "2026-06-15T13:10:08Z"
 assignee: "pg-newcolumnfromfield-raw-default"
 blocked-by: null

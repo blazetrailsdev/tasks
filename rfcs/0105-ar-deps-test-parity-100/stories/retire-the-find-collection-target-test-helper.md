@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 10
-pr: 7397
+pr: trails#7397
 claim: "2026-09-02T18:28:48Z"
 assignee: "retire-the-find-collection-target-test-helper"
 blocked-by: null

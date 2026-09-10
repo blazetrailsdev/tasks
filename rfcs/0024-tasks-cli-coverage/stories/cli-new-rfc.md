@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: 31
-pr: 3202
+pr: trails#3202
 claim: "2026-06-13T19:36:33Z"
 assignee: "cli-new-rfc"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 5895
+pr: trails#5895
 claim: "2026-08-02T16:59:58Z"
 assignee: "converge-pg-indexes-body-shape"
 blocked-by: null

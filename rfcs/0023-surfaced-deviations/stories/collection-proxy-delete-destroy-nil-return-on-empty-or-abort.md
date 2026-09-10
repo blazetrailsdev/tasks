@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4506
+pr: trails#4506
 claim: "2026-07-03T19:43:08Z"
 assignee: "collection-proxy-delete-destroy-nil-return-on-empty-or-abort"
 blocked-by: null

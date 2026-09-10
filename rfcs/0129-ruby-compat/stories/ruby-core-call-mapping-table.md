@@ -9,7 +9,7 @@ deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
 est-loc: 260
 priority: 14
-pr: 7294
+pr: trails#7294
 claim: "2026-08-31T14:08:15Z"
 assignee: "ruby-core-call-mapping-table"
 blocked-by: null

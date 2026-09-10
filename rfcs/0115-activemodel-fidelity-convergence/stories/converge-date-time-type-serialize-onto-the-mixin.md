@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6785
+pr: trails#6785
 claim: "2026-08-20T19:05:09Z"
 assignee: "converge-date-time-type-serialize-onto-the-mixin"
 blocked-by: null

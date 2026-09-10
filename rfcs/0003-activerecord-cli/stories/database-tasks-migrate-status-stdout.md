@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 51
-pr: 2954
+pr: trails#2954
 claim: "2026-06-05T16:11:39Z"
 assignee: "database-tasks-migrate-status-stdout"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6299
+pr: trails#6299
 claim: "2026-08-09T20:39:15Z"
 assignee: "datetime-proleptic-arm-computes-its-jd-eagerly"
 blocked-by: null

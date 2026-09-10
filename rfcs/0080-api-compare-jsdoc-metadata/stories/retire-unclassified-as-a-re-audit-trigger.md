@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5722
+pr: trails#5722
 claim: "2026-07-31T17:09:04Z"
 assignee: "retire-unclassified-as-a-re-audit-trigger"
 blocked-by: null

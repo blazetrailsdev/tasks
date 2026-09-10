@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 40
-pr: 3893
+pr: trails#3893
 claim: "2026-06-22T16:35:57Z"
 assignee: "remove-stray-sqlite-uri-junk-file-from-repo-root"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3754
+pr: trails#3754
 claim: "2026-06-20T18:37:28Z"
 assignee: "hm-collection-proxy-delete-transaction-rollback-test"
 blocked-by: null

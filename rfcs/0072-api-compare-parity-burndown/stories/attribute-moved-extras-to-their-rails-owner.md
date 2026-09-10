@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6234
+pr: trails#6234
 claim: "2026-08-08T14:04:11Z"
 assignee: "attribute-moved-extras-to-their-rails-owner"
 blocked-by: null

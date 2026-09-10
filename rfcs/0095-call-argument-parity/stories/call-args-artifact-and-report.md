@@ -9,7 +9,7 @@ deps: ["call-args-normalize-and-compare"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6318
+pr: trails#6318
 claim: "2026-08-10T02:31:49Z"
 assignee: "call-args-artifact-and-report"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 170
 priority: 20
-pr: 3177
+pr: trails#3177
 claim: "2026-06-13T02:19:09Z"
 assignee: "f9c-adapter-exception-translation-refint"
 blocked-by: null

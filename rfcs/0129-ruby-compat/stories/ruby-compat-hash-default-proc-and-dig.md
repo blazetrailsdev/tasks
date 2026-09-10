@@ -9,7 +9,7 @@ deps: ["ruby-compat-hash-fetch-and-key-error"]
 deps-rfc: []
 est-loc: 220
 priority: 13
-pr: 7284
+pr: trails#7284
 claim: "2026-08-31T02:00:20Z"
 assignee: "ruby-compat-hash-merge-and-iteration"
 blocked-by: null

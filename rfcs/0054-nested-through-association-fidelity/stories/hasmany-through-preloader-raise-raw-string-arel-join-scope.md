@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 45
 priority: 4
-pr: 4741
+pr: trails#4741
 claim: "2026-07-07T15:13:51Z"
 assignee: "hasmany-through-preloader-raise-raw-string-arel-join-scope"
 blocked-by: null

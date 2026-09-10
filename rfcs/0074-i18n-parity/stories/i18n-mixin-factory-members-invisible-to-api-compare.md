@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6093
+pr: trails#6093
 claim: "2026-08-04T21:11:10Z"
 assignee: "i18n-date-parse-eu-us-gate-misses-have-digit"
 blocked-by: null

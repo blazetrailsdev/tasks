@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 7119
+pr: trails#7119
 claim: "2026-08-27T13:56:47Z"
 assignee: "credit-the-concern-included-hook-in-extra-surface"
 blocked-by: null

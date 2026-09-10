@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5794
+pr: trails#5794
 claim: "2026-08-01T03:43:46Z"
 assignee: "schema-statements-adapter-dispatch-shim-self-dispatch"
 blocked-by: null

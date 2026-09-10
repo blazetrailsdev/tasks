@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4101
+pr: trails#4101
 claim: "2026-06-25T04:22:34Z"
 assignee: "has-one-create-requires-persisted-owner-guard"
 blocked-by: null

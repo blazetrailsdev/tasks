@@ -7,7 +7,7 @@ cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 350
-pr: 6364
+pr: trails#6364
 claim: "2026-08-11T15:53:36Z"
 assignee: "burndown-annotate-permanent-deviations"
 blocked-by: null

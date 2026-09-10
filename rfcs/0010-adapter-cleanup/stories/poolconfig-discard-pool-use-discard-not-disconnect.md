@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 3
-pr: 4290
+pr: trails#4290
 claim: "2026-06-29T19:53:40Z"
 assignee: "poolconfig-discard-pool-use-discard-not-disconnect"
 blocked-by: null

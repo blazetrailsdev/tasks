@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 150
-pr: 6240
+pr: trails#6240
 claim: "2026-08-08T15:27:57Z"
 assignee: "deprecators-bucket-clusters-onto-deprecation-ts"
 blocked-by: null

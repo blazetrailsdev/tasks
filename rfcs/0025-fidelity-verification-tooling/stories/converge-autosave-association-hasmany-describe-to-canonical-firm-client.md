@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5278
+pr: trails#5278
 claim: "2026-07-24T22:30:54Z"
 assignee: "converge-autosave-association-hasmany-describe-to-canonical-firm-client"
 blocked-by: null

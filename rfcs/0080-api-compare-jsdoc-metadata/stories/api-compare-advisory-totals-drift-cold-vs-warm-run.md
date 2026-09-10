@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5662
+pr: trails#5662
 claim: "2026-07-30T19:29:17Z"
 assignee: "api-compare-advisory-totals-drift-cold-vs-warm-run"
 blocked-by: null

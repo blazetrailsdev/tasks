@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6625
+pr: trails#6625
 claim: "2026-08-17T01:22:52Z"
 assignee: "admit-index-by-and-compact-blank-to-receiver-as-first-arg"
 blocked-by: null

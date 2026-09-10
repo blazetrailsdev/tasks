@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 30
-pr: 5435
+pr: trails#5435
 claim: "2026-07-27T18:23:02Z"
 assignee: "ruby-extractor-records-metaprogrammed-methods"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5354
+pr: trails#5354
 claim: "2026-07-26T14:46:57Z"
 assignee: "api-compare-resolve-module-name-ambiguous-fallback"
 blocked-by: null

@@ -8,7 +8,7 @@ packages: ["activerecord", "activemodel"]
 deps: ["retire-attribute-definitions-registry-for-default-attributes"]
 deps-rfc: []
 est-loc: 260
-pr: 6961
+pr: trails#6961
 claim: "2026-08-23T23:16:55Z"
 assignee: "converge-ar-define-attribute-onto-define-default-attribute"
 blocked-by: null

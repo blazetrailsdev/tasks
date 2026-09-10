@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 5524
+pr: trails#5524
 claim: "2026-07-28T16:11:14Z"
 assignee: "migration-verbose-is-instance-not-class-attribute"
 blocked-by: null

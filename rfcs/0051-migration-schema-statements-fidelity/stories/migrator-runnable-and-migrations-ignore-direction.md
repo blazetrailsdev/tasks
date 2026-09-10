@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: 5784
+pr: trails#5784
 claim: "2026-08-01T01:43:30Z"
 assignee: "migrator-runnable-and-migrations-ignore-direction"
 blocked-by: null

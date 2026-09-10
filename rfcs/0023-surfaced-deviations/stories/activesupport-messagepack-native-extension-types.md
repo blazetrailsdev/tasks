@@ -8,7 +8,7 @@ deps: ["activesupport-messagepack-port"]
 deps-rfc: []
 est-loc: 350
 priority: 5
-pr: 3282
+pr: trails#3282
 claim: "2026-06-14T19:24:12Z"
 assignee: "activesupport-messagepack-native-extension-types"
 blocked-by: null

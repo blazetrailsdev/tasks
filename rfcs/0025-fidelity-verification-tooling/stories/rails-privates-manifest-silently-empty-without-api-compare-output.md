@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 14
-pr: 5423
+pr: trails#5423
 claim: "2026-07-27T16:15:19Z"
 assignee: "rails-privates-manifest-silently-empty-without-api-compare-output"
 blocked-by: null

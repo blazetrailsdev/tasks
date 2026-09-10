@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3987
+pr: trails#3987
 claim: "2026-06-23T12:32:38Z"
 assignee: "delegation-exclude-base-methods-guard"
 blocked-by: null

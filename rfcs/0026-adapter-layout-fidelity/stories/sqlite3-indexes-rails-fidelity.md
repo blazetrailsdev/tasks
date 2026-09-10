@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3400
+pr: trails#3400
 claim: "2026-06-15T19:30:27Z"
 assignee: "sqlite3-indexes-rails-fidelity"
 blocked-by: null

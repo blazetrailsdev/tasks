@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 120
-pr: 6122
+pr: trails#6122
 claim: "2026-08-05T09:45:03Z"
 assignee: "retire-module-level-find-target-engine-exports"
 blocked-by: null

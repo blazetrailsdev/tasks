@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 6
-pr: 6111
+pr: trails#6111
 claim: "2026-08-05T01:44:55Z"
 assignee: "i18n-date-calendar-reform-start-argument"
 blocked-by: null

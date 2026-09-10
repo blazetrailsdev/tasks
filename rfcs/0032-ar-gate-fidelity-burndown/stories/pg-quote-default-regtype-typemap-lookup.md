@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5150
+pr: trails#5150
 claim: "2026-07-23T14:34:37Z"
 assignee: "pg-quote-default-regtype-typemap-lookup"
 blocked-by: null

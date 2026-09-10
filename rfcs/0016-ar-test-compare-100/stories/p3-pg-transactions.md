@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 13
-pr: 3053
+pr: trails#3053
 claim: "2026-06-09T00:20:47Z"
 assignee: "p3-pg-transactions"
 blocked-by: null

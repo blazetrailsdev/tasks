@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 2
-pr: 7494
+pr: trails#7494
 claim: "2026-09-04T20:24:53Z"
 assignee: "declare-typescript-7-peer-ranges"
 blocked-by: null

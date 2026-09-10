@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 3416
+pr: trails#3416
 claim: "2026-06-15T22:46:28Z"
 assignee: "b3-relation-select-joins"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 7
-pr: 7364
+pr: trails#7364
 claim: "2026-09-01T22:46:15Z"
 assignee: "generated-app-cannot-render-its-own-views"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 5
-pr: 5104
+pr: trails#5104
 claim: "2026-07-23T00:13:25Z"
 assignee: "mysql-advisory-slot-exhaustion-at-four-forks"
 blocked-by: null

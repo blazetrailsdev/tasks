@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4559
+pr: trails#4559
 claim: "2026-07-04T17:19:27Z"
 assignee: "materialize-declares-large-bakes-reflection-autosave-hasmany"
 blocked-by: null

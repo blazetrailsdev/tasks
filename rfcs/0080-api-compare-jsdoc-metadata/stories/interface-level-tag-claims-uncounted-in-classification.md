@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5653
+pr: trails#5653
 claim: "2026-07-30T19:41:20Z"
 assignee: "interface-level-tag-claims-uncounted-in-classification"
 blocked-by: null

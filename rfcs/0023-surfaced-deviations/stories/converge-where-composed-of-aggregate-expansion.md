@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4431
+pr: trails#4431
 claim: "2026-07-02T18:33:51Z"
 assignee: "converge-where-composed-of-aggregate-expansion"
 blocked-by: null

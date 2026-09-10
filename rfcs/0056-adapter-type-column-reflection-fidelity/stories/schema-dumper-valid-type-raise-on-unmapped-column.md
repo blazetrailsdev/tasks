@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 212
-pr: 4822
+pr: trails#4822
 claim: "2026-07-09T04:09:34Z"
 assignee: "schema-dumper-valid-type-raise-on-unmapped-column"
 blocked-by: null

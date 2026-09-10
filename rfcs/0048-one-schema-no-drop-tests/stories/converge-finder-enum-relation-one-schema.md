@@ -8,7 +8,7 @@ deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 350
 priority: 8
-pr: 4339
+pr: trails#4339
 claim: "2026-06-30T16:26:42Z"
 assignee: "converge-finder-enum-relation-one-schema"
 blocked-by: null

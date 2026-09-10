@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 1
-pr: 5650
+pr: trails#5650
 claim: "2026-07-30T17:42:41Z"
 assignee: "wide-ratchet-report-and-grouping"
 blocked-by: null

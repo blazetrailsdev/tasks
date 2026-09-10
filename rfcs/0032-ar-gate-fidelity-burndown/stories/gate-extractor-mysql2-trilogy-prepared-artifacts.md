@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 6
-pr: 5077
+pr: trails#5077
 claim: "2026-07-22T20:41:48Z"
 assignee: "gate-extractor-mysql2-trilogy-prepared-artifacts"
 blocked-by: null

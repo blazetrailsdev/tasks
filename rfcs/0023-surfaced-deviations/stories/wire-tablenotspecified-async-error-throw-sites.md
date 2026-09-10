@@ -8,7 +8,7 @@ deps: ["error-class-hierarchy-parity-gaps"]
 deps-rfc: []
 est-loc: 60
 priority: 50
-pr: 3562
+pr: trails#3562
 claim: "2026-06-17T18:09:48Z"
 assignee: "wire-tablenotspecified-async-error-throw-sites"
 blocked-by: null

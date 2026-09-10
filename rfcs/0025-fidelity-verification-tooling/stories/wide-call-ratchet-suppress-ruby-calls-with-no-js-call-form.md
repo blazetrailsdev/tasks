@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 25
-pr: 5237
+pr: trails#5237
 claim: "2026-07-24T16:38:53Z"
 assignee: "wide-call-ratchet-suppress-ruby-calls-with-no-js-call-form"
 blocked-by: null

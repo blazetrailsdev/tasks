@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: 6600
+pr: trails#6600
 claim: "2026-08-16T02:00:26Z"
 assignee: "restore-relation-values-hash"
 blocked-by: null

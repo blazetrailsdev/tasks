@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4858
+pr: trails#4858
 claim: "2026-07-14T01:12:36Z"
 assignee: "ddl-execute-mutation-dirties-query-cache"
 blocked-by: null

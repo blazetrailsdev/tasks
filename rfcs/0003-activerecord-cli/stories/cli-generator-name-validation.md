@@ -8,7 +8,7 @@ deps: ["cli-generators-manifest"]
 deps-rfc: []
 est-loc: 10
 priority: 54
-pr: 2993
+pr: trails#2993
 claim: "2026-06-07T14:08:17Z"
 assignee: "cli-generator-name-validation"
 blocked-by: null

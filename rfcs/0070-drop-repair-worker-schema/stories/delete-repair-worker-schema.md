@@ -18,7 +18,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 9
-pr: 5269
+pr: trails#5269
 claim: "2026-07-24T21:10:54Z"
 assignee: "delete-repair-worker-schema"
 blocked-by: null

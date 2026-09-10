@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 20
-pr: 5211
+pr: trails#5211
 claim: "2026-07-24T03:23:24Z"
 assignee: "converge-adapters-onto-rails-socket-key"
 blocked-by: null

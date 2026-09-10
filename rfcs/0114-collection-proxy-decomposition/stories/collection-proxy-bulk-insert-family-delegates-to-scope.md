@@ -9,7 +9,7 @@ deps: ["collection-proxy-initialize-is-five-lines"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6750
+pr: trails#6750
 claim: "2026-08-19T23:26:39Z"
 assignee: "split-future-result-scheduled-dispatch-out-of-exec-queries"
 blocked-by: null

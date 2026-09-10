@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5639
+pr: trails#5639
 claim: "2026-07-30T14:02:20Z"
 assignee: "update-table-definition-single-home-per-adapter"
 blocked-by: null

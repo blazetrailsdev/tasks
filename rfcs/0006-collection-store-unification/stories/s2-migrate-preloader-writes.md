@@ -7,7 +7,7 @@ cluster: associations
 deps: ["s1-proxy-backed-read-api"]
 est-loc: 160
 priority: 1
-pr: 3095
+pr: trails#3095
 claim: "2026-06-10T19:09:39Z"
 assignee: "s2-migrate-preloader-writes"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3683
+pr: trails#3683
 claim: "2026-06-19T23:54:11Z"
 assignee: "collection-proxy-last-take-bang-no-requery-when-loaded"
 blocked-by: null

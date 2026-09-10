@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6092
+pr: trails#6092
 claim: "2026-08-04T20:56:04Z"
 assignee: "i18n-date-subx-cb-decomposition"
 blocked-by: null

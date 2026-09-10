@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6577
+pr: trails#6577
 claim: "2026-08-15T20:15:04Z"
 assignee: "wave-3b-abstract-mysql-adapter"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: 4543
+pr: trails#4543
 claim: "2026-07-04T12:08:31Z"
 assignee: "pg-scope-referential-integrity-to-loaded-tables"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6098
+pr: trails#6098
 claim: "2026-08-04T22:35:00Z"
 assignee: "error-type-symbols-are-colon-strings"
 blocked-by: null

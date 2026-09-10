@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 4048
+pr: trails#4048
 claim: "2026-06-24T02:30:40Z"
 assignee: "ar-feature-module-config-accessors"
 blocked-by: null

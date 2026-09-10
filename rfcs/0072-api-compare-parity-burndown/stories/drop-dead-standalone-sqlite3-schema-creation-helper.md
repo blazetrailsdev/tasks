@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5945
+pr: trails#5945
 claim: "2026-08-03T01:35:45Z"
 assignee: "drop-dead-standalone-sqlite3-schema-creation-helper"
 blocked-by: null

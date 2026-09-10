@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: 3412
+pr: trails#3412
 claim: "2026-06-15T22:40:29Z"
 assignee: "b2-default-scoping"
 blocked-by: null

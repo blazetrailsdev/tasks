@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 3312
+pr: trails#3312
 claim: "2026-06-15T00:06:59Z"
 assignee: "mysql-internal-exec-query-cast-result"
 blocked-by: null

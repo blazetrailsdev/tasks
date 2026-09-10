@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 1
-pr: 3067
+pr: trails#3067
 claim: "2026-06-09T20:13:46Z"
 assignee: "phase1-dirty-on-any-query"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 6
-pr: 4378
+pr: trails#4378
 claim: "2026-07-01T17:08:10Z"
 assignee: "fix-defineschema-materialization-precision-scale-limit-roundtrip"
 blocked-by: null

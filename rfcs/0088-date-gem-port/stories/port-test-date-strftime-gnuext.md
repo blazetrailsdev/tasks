@@ -9,7 +9,7 @@ deps: ["port-test-date-strftime-core"]
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6337
+pr: trails#6337
 claim: "2026-08-10T14:13:28Z"
 assignee: "complete-frags-doc-orphaned-onto-julian-epoch-date"
 blocked-by: null

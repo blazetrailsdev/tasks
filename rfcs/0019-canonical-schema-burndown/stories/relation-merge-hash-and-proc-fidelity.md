@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: 4161
+pr: trails#4161
 claim: "2026-06-25T22:47:17Z"
 assignee: "relation-merge-hash-and-proc-fidelity"
 blocked-by: null

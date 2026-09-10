@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5753
+pr: trails#5753
 claim: "2026-07-31T20:45:31Z"
 assignee: "drop-apply-joins-manager-join-source-count-guard"
 blocked-by: null

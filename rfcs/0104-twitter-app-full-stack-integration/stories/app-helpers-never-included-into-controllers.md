@@ -9,7 +9,7 @@ deps: ["actionpack-helper-glob-only-matches-ruby-file-names"]
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 7558
+pr: trails#7558
 claim: null
 assignee: null
 blocked-by: null

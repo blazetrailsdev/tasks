@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3628
+pr: trails#3628
 claim: "2026-06-19T03:36:25Z"
 assignee: "bound-sql-literal-relation-normalization"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5316
+pr: trails#5316
 claim: "2026-07-25T19:50:52Z"
 assignee: "arity-exclude-mechanism"
 blocked-by: null

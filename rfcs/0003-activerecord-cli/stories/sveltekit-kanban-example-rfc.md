@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: 3542
+pr: trails#3542
 claim: "2026-06-17T15:16:26Z"
 assignee: "sveltekit-kanban-example-rfc"
 blocked-by: null

@@ -15,7 +15,7 @@ deps:
 deps-rfc: []
 est-loc: 100
 priority: 1
-pr: 4585
+pr: trails#4585
 claim: null
 assignee: null
 blocked-by: null

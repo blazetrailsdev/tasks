@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4596
+pr: trails#4596
 claim: "2026-07-05T04:22:30Z"
 assignee: "convert-mixed-perdescribe-core-d"
 blocked-by: null

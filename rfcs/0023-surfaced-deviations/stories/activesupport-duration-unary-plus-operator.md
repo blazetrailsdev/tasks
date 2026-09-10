@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4056
+pr: trails#4056
 claim: "2026-06-24T11:30:40Z"
 assignee: "activesupport-duration-unary-plus-operator"
 blocked-by: null

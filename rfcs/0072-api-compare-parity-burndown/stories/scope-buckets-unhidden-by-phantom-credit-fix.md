@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6423
+pr: trails#6423
 claim: "2026-08-12T15:56:54Z"
 assignee: "converge-mark-for-destruction-slot-writes"
 blocked-by: null

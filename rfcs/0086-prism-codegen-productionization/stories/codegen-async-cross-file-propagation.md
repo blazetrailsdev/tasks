@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 5814
+pr: trails#5814
 claim: "2026-08-01T18:51:00Z"
 assignee: "codegen-async-cross-file-propagation"
 blocked-by: null

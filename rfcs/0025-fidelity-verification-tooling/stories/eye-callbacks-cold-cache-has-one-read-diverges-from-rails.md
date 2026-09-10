@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5251
+pr: trails#5251
 claim: "2026-07-24T18:30:54Z"
 assignee: "eye-callbacks-cold-cache-has-one-read-diverges-from-rails"
 blocked-by: null

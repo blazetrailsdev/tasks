@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 50
-pr: 3533
+pr: trails#3533
 claim: "2026-06-17T12:01:25Z"
 assignee: "preload-extending-grouping"
 blocked-by: null

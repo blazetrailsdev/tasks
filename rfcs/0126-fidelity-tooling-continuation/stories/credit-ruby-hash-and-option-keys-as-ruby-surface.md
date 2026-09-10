@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 3
-pr: 7193
+pr: trails#7193
 claim: "2026-08-28T23:31:26Z"
 assignee: "credit-ruby-hash-and-option-keys-as-ruby-surface"
 blocked-by: null

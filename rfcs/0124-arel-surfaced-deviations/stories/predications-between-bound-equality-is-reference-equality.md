@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 7067
+pr: trails#7067
 claim: "2026-08-26T00:30:12Z"
 assignee: "nodes-build-quoted-missing-from-nodes-namespace"
 blocked-by: null

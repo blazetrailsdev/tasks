@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 5909
+pr: trails#5909
 claim: "2026-08-02T18:49:25Z"
 assignee: "converge-live-eager-join-through-joins-values"
 blocked-by: null

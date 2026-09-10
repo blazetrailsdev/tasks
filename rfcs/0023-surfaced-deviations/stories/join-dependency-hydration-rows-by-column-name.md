@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4534
+pr: trails#4534
 claim: "2026-07-04T02:23:35Z"
 assignee: "join-dependency-hydration-rows-by-column-name"
 blocked-by: null

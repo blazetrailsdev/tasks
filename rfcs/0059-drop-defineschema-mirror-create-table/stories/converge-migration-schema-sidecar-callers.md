@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4513
+pr: trails#4513
 claim: "2026-07-03T20:54:52Z"
 assignee: "converge-migration-schema-sidecar-callers"
 blocked-by: null

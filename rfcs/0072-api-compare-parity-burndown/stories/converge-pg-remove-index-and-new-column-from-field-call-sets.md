@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5409
+pr: trails#5409
 claim: "2026-07-27T14:29:08Z"
 assignee: "converge-pg-remove-index-and-new-column-from-field-call-sets"
 blocked-by: null

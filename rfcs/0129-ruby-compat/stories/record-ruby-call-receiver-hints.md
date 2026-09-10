@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: 36
-pr: 7334
+pr: trails#7334
 claim: "2026-09-01T13:01:27Z"
 assignee: "record-ruby-call-receiver-hints"
 blocked-by: null

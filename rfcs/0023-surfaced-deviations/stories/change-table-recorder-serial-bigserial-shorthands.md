@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 2
-pr: 3484
+pr: trails#3484
 claim: "2026-06-16T18:11:27Z"
 assignee: "change-table-recorder-serial-bigserial-shorthands"
 blocked-by: null

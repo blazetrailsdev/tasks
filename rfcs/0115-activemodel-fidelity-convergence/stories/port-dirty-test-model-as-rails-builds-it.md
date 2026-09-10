@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 260
 priority: 4
-pr: 7072
+pr: trails#7072
 claim: "2026-08-26T11:07:41Z"
 assignee: "port-dirty-test-model-as-rails-builds-it"
 blocked-by: null

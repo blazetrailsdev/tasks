@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 5
-pr: 4038
+pr: trails#4038
 claim: "2026-06-23T22:30:39Z"
 assignee: "optimize-strip-asany-batch-bisect"
 blocked-by: null

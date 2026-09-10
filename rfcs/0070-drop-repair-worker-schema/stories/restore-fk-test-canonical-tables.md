@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: 5258
+pr: trails#5258
 claim: "2026-07-24T19:39:47Z"
 assignee: "restore-fk-test-canonical-tables"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 40
-pr: 3950
+pr: trails#3950
 claim: "2026-06-23T01:47:17Z"
 assignee: "through-assoc-scope-string-join-sources"
 blocked-by: null

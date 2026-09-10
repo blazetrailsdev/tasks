@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 380
 priority: null
-pr: 6916
+pr: trails#6916
 claim: "2026-08-23T14:42:26Z"
 assignee: "retire-model-lifecycle-callback-macros-onto-define-model-callbacks"
 blocked-by: null

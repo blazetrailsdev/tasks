@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5956
+pr: trails#5956
 claim: "2026-08-03T03:25:46Z"
 assignee: "method-order-rule-blind-to-mixin-objects"
 blocked-by: null

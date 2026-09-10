@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4932
+pr: trails#4932
 claim: "2026-07-17T15:31:13Z"
 assignee: "query-cache-disabled-gate-on-config-not-maxsize"
 blocked-by: null

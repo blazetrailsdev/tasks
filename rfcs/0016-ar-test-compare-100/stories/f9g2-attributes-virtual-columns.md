@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: 3182
+pr: trails#3182
 claim: "2026-06-13T11:00:35Z"
 assignee: "f9g2-attributes-virtual-columns"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5912
+pr: trails#5912
 claim: "2026-08-02T19:25:25Z"
 assignee: "converge-class-level-token-for-bodies"
 blocked-by: null

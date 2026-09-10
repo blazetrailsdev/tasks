@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6404
+pr: trails#6404
 claim: "2026-08-12T09:46:00Z"
 assignee: "extractor-argument-nesting-call-order"
 blocked-by: null

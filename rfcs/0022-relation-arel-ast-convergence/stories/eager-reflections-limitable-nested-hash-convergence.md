@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4089
+pr: trails#4089
 claim: "2026-06-24T23:42:35Z"
 assignee: "eager-reflections-limitable-nested-hash-convergence"
 blocked-by: null

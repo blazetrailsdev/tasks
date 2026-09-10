@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 21
-pr: 7332
+pr: trails#7332
 claim: "2026-09-01T12:29:58Z"
 assignee: "port-remaining-engine-initializers"
 blocked-by: null

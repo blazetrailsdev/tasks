@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3275
+pr: trails#3275
 claim: "2026-06-14T18:30:35Z"
 assignee: "defineenum-bang-uses-update-column-not-update-bang"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4575
+pr: trails#4575
 claim: "2026-07-04T22:27:08Z"
 assignee: "mysql-inline-index-sort-order-version-gate"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4242
+pr: trails#4242
 claim: "2026-07-03T01:09:50Z"
 assignee: "generated-methods-included-module-overwrites-assoc"
 blocked-by: null

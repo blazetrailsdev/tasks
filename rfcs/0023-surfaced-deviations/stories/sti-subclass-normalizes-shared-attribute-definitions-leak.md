@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4981
+pr: trails#4981
 claim: "2026-07-20T00:51:10Z"
 assignee: "sti-subclass-normalizes-shared-attribute-definitions-leak"
 blocked-by: null

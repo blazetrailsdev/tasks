@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 3427
+pr: trails#3427
 claim: "2026-06-16T00:12:53Z"
 assignee: "c3-primary-keys"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 10
-pr: 5380
+pr: trails#5380
 claim: "2026-07-27T15:43:45Z"
 assignee: "ts-api-cache-under-reports-mixin-surface"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 5
-pr: 6930
+pr: trails#6930
 claim: "2026-08-23T17:32:06Z"
 assignee: "converge-time-with-zone-utc-onto-a-ruby-time"
 blocked-by: null

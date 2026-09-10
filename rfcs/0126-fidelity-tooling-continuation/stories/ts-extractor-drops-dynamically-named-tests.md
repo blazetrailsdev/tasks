@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 4
-pr: 7241
+pr: trails#7241
 claim: "2026-08-30T14:52:42Z"
 assignee: "extra-surface-walkmixin-honours-method-file"
 blocked-by: null

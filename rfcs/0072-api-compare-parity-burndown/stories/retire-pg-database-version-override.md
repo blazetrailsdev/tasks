@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6237
+pr: trails#6237
 claim: "2026-08-08T14:27:54Z"
 assignee: "retire-pg-database-version-override"
 blocked-by: null

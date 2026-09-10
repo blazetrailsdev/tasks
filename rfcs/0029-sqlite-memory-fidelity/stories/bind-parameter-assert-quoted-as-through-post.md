@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5502
+pr: trails#5502
 claim: "2026-07-28T13:36:45Z"
 assignee: "bind-parameter-assert-quoted-as-through-post"
 blocked-by: null

@@ -8,7 +8,7 @@ packages: ["activemodel", "activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 500
-pr: 6948
+pr: trails#6948
 claim: "2026-08-23T20:34:25Z"
 assignee: "retire-attribute-definitions-registry-for-default-attributes"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 3980
+pr: trails#3980
 claim: "2026-06-23T11:57:40Z"
 assignee: "converge-pg-unique-constraint-for-via-detect"
 blocked-by: null

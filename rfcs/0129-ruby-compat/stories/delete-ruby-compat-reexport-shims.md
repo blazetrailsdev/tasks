@@ -20,7 +20,7 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: 20
-pr: 7300
+pr: trails#7300
 claim: "2026-08-31T15:43:38Z"
 assignee: "ruby-spec-behavioural-enrollment"
 blocked-by: null

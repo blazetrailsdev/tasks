@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 450
 priority: 7
-pr: 3112
+pr: trails#3112
 claim: "2026-06-11T01:07:11Z"
 assignee: "inheritance-modules-cluster"
 blocked-by: null

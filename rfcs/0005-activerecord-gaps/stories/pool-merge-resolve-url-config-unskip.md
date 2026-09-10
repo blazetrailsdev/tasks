@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 12
-pr: 2603
+pr: trails#2603
 claim: "2026-06-05T02:01:41Z"
 assignee: "pool-merge-resolve-url-config-unskip"
 blocked-by: null

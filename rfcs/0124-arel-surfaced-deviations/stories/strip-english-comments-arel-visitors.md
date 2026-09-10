@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 460
 priority: 2
-pr: 7132
+pr: trails#7132
 claim: "2026-08-27T19:00:30Z"
 assignee: "strip-english-comments-arel-visitors"
 blocked-by: null

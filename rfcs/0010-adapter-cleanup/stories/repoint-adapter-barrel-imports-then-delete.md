@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4295
+pr: trails#4295
 claim: "2026-06-29T22:59:12Z"
 assignee: "repoint-adapter-barrel-imports-then-delete"
 blocked-by: null

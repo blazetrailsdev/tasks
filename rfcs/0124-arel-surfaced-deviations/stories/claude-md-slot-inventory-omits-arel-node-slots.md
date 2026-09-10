@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: 7125
+pr: trails#7125
 claim: "2026-08-27T16:40:07Z"
 assignee: "arel-trails-only-tests-in-rails-named-files"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5933
+pr: trails#5933
 claim: "2026-08-02T23:25:46Z"
 assignee: "converge-remaining-relation-arel-table-reads"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 20
-pr: 6116
+pr: trails#6116
 claim: "2026-08-05T03:00:02Z"
 assignee: "fold-narrow-call-ratchet-into-wide"
 blocked-by: null

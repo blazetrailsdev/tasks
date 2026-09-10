@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 3921
+pr: trails#3921
 claim: "2026-06-22T20:27:15Z"
 assignee: "schema-cache-custom-primary-key-inference"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6410
+pr: trails#6410
 claim: "2026-08-12T12:46:03Z"
 assignee: "activesupport-closure-skip-groups-triage"
 blocked-by: null

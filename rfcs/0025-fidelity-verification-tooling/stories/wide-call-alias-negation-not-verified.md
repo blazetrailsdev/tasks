@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 19
-pr: 5428
+pr: trails#5428
 claim: "2026-07-27T17:31:14Z"
 assignee: "wide-call-alias-negation-not-verified"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5386
+pr: trails#5386
 claim: "2026-07-27T01:18:55Z"
 assignee: "converge-configurations-storage-onto-a-single-global-registry"
 blocked-by: null

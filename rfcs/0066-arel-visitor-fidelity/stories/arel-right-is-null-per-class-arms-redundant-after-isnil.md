@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 51
-pr: 5016
+pr: trails#5016
 claim: "2026-07-20T22:56:44Z"
 assignee: "arel-right-is-null-per-class-arms-redundant-after-isnil"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 2
-pr: 4630
+pr: trails#4630
 claim: "2026-07-05T18:41:55Z"
 assignee: "relations-eager-load-from-subquery"
 blocked-by: null

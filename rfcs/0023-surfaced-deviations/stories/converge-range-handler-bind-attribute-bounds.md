@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6456
+pr: trails#6456
 claim: "2026-08-13T04:33:35Z"
 assignee: "call-args-ar-predicate-builder-set-handler"
 blocked-by: null

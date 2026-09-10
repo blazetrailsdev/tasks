@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 13
-pr: 5084
+pr: trails#5084
 claim: "2026-07-22T21:43:04Z"
 assignee: "transaction-instrumentation-failed-rollback-port"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5673
+pr: trails#5673
 claim: "2026-07-30T20:29:24Z"
 assignee: "cover-non-pgcrypto-uuid-default-branch"
 blocked-by: null

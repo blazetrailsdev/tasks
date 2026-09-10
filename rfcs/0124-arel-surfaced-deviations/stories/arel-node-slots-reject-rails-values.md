@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7043
+pr: trails#7043
 claim: "2026-08-25T15:39:01Z"
 assignee: "arel-case-reader-readonly-vs-attr-accessor"
 blocked-by: null

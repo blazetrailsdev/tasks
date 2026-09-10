@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: 6802
+pr: trails#6802
 claim: "2026-08-21T02:10:29Z"
 assignee: "converge-duration-equals-non-duration-arm-to-a-ruby-send"
 blocked-by: null

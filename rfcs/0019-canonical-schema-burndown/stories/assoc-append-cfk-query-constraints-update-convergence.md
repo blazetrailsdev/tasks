@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3478
+pr: trails#3478
 claim: "2026-06-16T16:28:30Z"
 assignee: "assoc-append-cfk-query-constraints-update-convergence"
 blocked-by: null

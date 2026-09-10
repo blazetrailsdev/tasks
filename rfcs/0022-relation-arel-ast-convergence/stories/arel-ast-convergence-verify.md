@@ -8,7 +8,7 @@ deps: ["cte-build-with-expression-ast", "set-operations-bind-threading", "pluck-
 deps-rfc: []
 est-loc: 120
 priority: 3
-pr: 3184
+pr: trails#3184
 claim: "2026-06-13T11:40:09Z"
 assignee: "arel-ast-convergence-verify"
 blocked-by: null

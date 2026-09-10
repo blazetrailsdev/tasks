@@ -8,7 +8,7 @@ packages: ["activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 116
-pr: 6433
+pr: trails#6433
 claim: "2026-08-12T19:19:34Z"
 assignee: "naming-burndown-2-activesupport"
 blocked-by: null

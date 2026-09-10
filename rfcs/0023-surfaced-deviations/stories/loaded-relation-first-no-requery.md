@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 16
-pr: 3499
+pr: trails#3499
 claim: "2026-06-16T20:36:43Z"
 assignee: "loaded-relation-first-no-requery"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 13
-pr: 3158
+pr: trails#3158
 claim: "2026-06-12T20:16:51Z"
 assignee: "f9-quoting-and-typecast"
 blocked-by: null

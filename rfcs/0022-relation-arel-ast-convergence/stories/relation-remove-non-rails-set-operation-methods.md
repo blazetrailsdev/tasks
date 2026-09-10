@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: 4690
+pr: trails#4690
 claim: "2026-07-06T17:30:12Z"
 assignee: "relation-remove-non-rails-set-operation-methods"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6058
+pr: trails#6058
 claim: "2026-08-04T13:42:10Z"
 assignee: "i18n-chain-keyvalue-include-base-not-extends"
 blocked-by: null

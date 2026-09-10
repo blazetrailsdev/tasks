@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 65
+pr: tasks-legacy#65
 claim: "2026-08-17T16:26:39Z"
 assignee: "heal-stale-tasks-checkout-toolchain"
 blocked-by: null

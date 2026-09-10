@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5765
+pr: trails#5765
 claim: "2026-07-31T22:30:42Z"
 assignee: "port-build-join-buckets-eager-stash-pop"
 blocked-by: null

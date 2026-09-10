@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7604
+pr: trails#7604
 claim: "2026-09-08T11:12:39Z"
 assignee: "execute-duplicated-on-adapters-and-wired-per-adapter"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 45
 priority: null
-pr: 5243
+pr: trails#5243
 claim: "2026-07-24T17:26:53Z"
 assignee: "clamp-fork-count-via-os-adapter"
 blocked-by: null

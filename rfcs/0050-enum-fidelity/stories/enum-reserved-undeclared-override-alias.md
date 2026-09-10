@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4417
+pr: trails#4417
 claim: "2026-07-02T15:46:02Z"
 assignee: "enum-reserved-undeclared-override-alias"
 blocked-by: null

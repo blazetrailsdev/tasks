@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6472
+pr: trails#6472
 claim: "2026-08-13T16:15:37Z"
 assignee: "wire-violates-strict-loading-call-site"
 blocked-by: null

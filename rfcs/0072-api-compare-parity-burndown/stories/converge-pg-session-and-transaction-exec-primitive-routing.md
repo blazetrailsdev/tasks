@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5410
+pr: trails#5410
 claim: "2026-07-27T14:37:10Z"
 assignee: "converge-pg-session-and-transaction-exec-primitive-routing"
 blocked-by: null

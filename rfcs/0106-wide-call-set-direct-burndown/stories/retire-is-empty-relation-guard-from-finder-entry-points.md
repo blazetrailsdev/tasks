@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: 6596
+pr: trails#6596
 claim: "2026-08-16T14:15:03Z"
 assignee: "retire-is-empty-relation-guard-from-finder-entry-points"
 blocked-by: null

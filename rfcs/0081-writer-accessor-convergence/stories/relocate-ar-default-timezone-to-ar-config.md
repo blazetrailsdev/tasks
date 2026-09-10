@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5566
+pr: trails#5566
 claim: "2026-07-29T02:55:49Z"
 assignee: "relocate-ar-default-timezone-to-ar-config"
 blocked-by: null

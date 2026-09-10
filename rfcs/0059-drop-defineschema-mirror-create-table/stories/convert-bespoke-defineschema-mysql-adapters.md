@@ -8,7 +8,7 @@ deps: ["create-table-canonical-schema-loader"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 4450
+pr: trails#4450
 claim: "2026-07-02T23:09:50Z"
 assignee: "convert-bespoke-defineschema-mysql-adapters"
 blocked-by: null

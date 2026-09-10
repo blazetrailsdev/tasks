@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6713
+pr: trails#6713
 claim: "2026-08-18T19:23:13Z"
 assignee: "converge-includes-preload-colon-sweep-associations-eager-test"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 50
-pr: 3526
+pr: trails#3526
 claim: "2026-06-17T03:16:26Z"
 assignee: "mariadb-string-literal-default-unquote"
 blocked-by: null

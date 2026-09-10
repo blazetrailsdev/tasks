@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: 4514
+pr: trails#4514
 claim: "2026-07-03T21:07:10Z"
 assignee: "dedupe-disable-referential-integrity-tables"
 blocked-by: null

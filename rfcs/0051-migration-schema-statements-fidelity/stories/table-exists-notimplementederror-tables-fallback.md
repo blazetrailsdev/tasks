@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 5486
+pr: trails#5486
 claim: "2026-07-28T02:40:15Z"
 assignee: "table-exists-notimplementederror-tables-fallback"
 blocked-by: null

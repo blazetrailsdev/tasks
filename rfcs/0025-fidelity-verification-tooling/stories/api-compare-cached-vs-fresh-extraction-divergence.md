@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5375
+pr: trails#5375
 claim: "2026-07-26T23:42:55Z"
 assignee: "api-compare-cached-vs-fresh-extraction-divergence"
 blocked-by: null

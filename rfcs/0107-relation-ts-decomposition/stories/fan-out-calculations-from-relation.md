@@ -9,7 +9,7 @@ deps: ["retire-relation-private-thunk-block"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: 6597
+pr: trails#6597
 claim: "2026-08-16T13:45:03Z"
 assignee: "collection-proxy-delegate-query-method-bangs-to-scope"
 blocked-by: null

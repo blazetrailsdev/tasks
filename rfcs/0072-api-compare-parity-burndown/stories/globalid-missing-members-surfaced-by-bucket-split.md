@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6221
+pr: trails#6221
 claim: "2026-08-08T03:27:57Z"
 assignee: "globalid-missing-members-surfaced-by-bucket-split"
 blocked-by: null

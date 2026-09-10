@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5195
+pr: trails#5195
 claim: "2026-07-24T00:52:19Z"
 assignee: "body-pins-manifest-locale-sort-churn"
 blocked-by: null

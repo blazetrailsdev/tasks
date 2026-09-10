@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 12
-pr: 4788
+pr: trails#4788
 claim: "2026-07-08T17:31:58Z"
 assignee: "foreign-key-exists-composite-column-value-match"
 blocked-by: null

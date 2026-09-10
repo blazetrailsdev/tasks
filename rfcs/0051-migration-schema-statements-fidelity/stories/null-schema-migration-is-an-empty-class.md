@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 33
-pr: 7022
+pr: trails#7022
 claim: "2026-08-25T00:54:07Z"
 assignee: "split-model-mixin-surface-to-active-model-model"
 blocked-by: null

@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 400
-pr: 7055
+pr: trails#7055
 claim: "2026-08-25T17:22:41Z"
 assignee: "current-attributes-port-body"
 blocked-by: null

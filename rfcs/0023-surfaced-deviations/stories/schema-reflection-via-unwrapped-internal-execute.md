@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4977
+pr: trails#4977
 claim: "2026-07-19T22:31:12Z"
 assignee: "schema-reflection-via-unwrapped-internal-execute"
 blocked-by: null

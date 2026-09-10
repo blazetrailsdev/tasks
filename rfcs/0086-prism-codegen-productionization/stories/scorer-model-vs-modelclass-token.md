@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5818
+pr: trails#5818
 claim: "2026-08-01T19:15:00Z"
 assignee: "scorer-model-vs-modelclass-token"
 blocked-by: null

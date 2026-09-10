@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 1
-pr: 3136
+pr: trails#3136
 claim: "2026-06-11T21:26:58Z"
 assignee: "from-clause-arel-manager"
 blocked-by: null

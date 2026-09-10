@@ -7,7 +7,7 @@ cluster: split-stores
 deps: []
 deps-rfc: []
 est-loc: 180
-pr: 6801
+pr: trails#6801
 claim: "2026-08-26T19:28:52Z"
 assignee: "schema-cache-derive-step-skips-deep-deduplicate"
 blocked-by: null

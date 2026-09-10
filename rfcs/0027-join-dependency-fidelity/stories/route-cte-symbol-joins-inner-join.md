@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 2
-pr: 4633
+pr: trails#4633
 claim: "2026-07-05T19:41:55Z"
 assignee: "route-cte-symbol-joins-inner-join"
 blocked-by: null

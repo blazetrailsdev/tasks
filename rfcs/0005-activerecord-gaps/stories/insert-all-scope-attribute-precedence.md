@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 5
 priority: 20
-pr: 3073
+pr: trails#3073
 claim: "2026-06-10T00:42:36Z"
 assignee: "insert-all-scope-attribute-precedence"
 blocked-by: null

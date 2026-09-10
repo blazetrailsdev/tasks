@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 4093
+pr: trails#4093
 claim: "2026-06-25T01:22:34Z"
 assignee: "extractor-scan-umbrella-module-config-to-base"
 blocked-by: null

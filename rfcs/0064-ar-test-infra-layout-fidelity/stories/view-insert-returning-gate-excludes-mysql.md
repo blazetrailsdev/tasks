@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5585
+pr: trails#5585
 claim: "2026-07-29T20:31:07Z"
 assignee: "view-insert-returning-gate-excludes-mysql"
 blocked-by: null

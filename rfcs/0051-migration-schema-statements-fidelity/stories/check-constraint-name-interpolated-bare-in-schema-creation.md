@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 13
-pr: 7016
+pr: trails#7016
 claim: "2026-08-24T23:42:13Z"
 assignee: "move-ts-only-extras-out-of-the-remaining-activemodel-type-test-files-part-2"
 blocked-by: null

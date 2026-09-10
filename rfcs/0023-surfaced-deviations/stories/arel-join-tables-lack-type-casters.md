@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4889
+pr: trails#4889
 claim: "2026-07-15T11:11:11Z"
 assignee: "arel-join-tables-lack-type-casters"
 blocked-by: null

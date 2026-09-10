@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 50
 priority: 4
-pr: 3080
+pr: trails#3080
 claim: "2026-06-10T11:55:13Z"
 assignee: "p4-verification"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6514
+pr: trails#6514
 claim: "2026-08-14T12:27:03Z"
 assignee: "converge-time-zone-reader-names"
 blocked-by: null

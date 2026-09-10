@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3752
+pr: trails#3752
 claim: "2026-06-20T23:59:25Z"
 assignee: "inverse-hasone-through-inverse-of"
 blocked-by: null

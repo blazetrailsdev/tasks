@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 4663
+pr: trails#4663
 claim: "2026-07-06T10:06:22Z"
 assignee: "nested-through-scope-column-alias-subquery"
 blocked-by: null

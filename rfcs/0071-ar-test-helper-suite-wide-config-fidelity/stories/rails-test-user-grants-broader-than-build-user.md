@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5646
+pr: trails#5646
 claim: "2026-07-30T14:56:19Z"
 assignee: "rails-test-user-grants-broader-than-build-user"
 blocked-by: null

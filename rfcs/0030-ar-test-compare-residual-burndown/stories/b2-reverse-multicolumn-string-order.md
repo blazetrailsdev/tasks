@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3417
+pr: trails#3417
 claim: "2026-06-15T23:10:30Z"
 assignee: "b2-reverse-multicolumn-string-order"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4978
+pr: trails#4978
 claim: "2026-07-20T00:01:08Z"
 assignee: "spawn-honors-already-in-scope-registry"
 blocked-by: null

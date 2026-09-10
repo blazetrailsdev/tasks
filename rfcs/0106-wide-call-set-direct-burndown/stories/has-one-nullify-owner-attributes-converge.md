@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6815
+pr: trails#6815
 claim: "2026-08-21T12:20:33Z"
 assignee: "remeasure-collection-proxy-residue-after-the-burndown"
 blocked-by: null

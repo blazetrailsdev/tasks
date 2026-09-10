@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 7107
+pr: trails#7107
 claim: "2026-08-26T23:55:46Z"
 assignee: "node-eql-is-a-generic-serializer-not-per-class-eql"
 blocked-by: null

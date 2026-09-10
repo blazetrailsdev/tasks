@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4458
+pr: trails#4458
 claim: "2026-07-03T00:45:51Z"
 assignee: "fix-define-schema-import-tdz"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6859
+pr: trails#6859
 claim: "2026-08-22T14:49:29Z"
 assignee: "retire-postgresql-with-binds-onto-postgresql-bind-block"
 blocked-by: null

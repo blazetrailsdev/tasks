@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5568
+pr: trails#5568
 claim: "2026-07-31T16:51:07Z"
 assignee: "with-postgresql-datetime-type-helper-drags-pg-probe-onto-all-lanes"
 blocked-by: null

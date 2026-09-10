@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3399
+pr: trails#3399
 claim: "2026-06-15T19:24:26Z"
 assignee: "sqlite-quote-dispatch-through-super"
 blocked-by: null

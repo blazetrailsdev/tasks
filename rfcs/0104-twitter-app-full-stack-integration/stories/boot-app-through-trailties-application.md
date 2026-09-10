@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6517
+pr: trails#6517
 claim: "2026-08-14T12:16:28Z"
 assignee: "boot-app-through-trailties-application"
 blocked-by: null

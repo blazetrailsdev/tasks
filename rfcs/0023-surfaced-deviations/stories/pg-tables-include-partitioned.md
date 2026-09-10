@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3341
+pr: trails#3341
 claim: "2026-06-15T13:15:08Z"
 assignee: "pg-tables-include-partitioned"
 blocked-by: null

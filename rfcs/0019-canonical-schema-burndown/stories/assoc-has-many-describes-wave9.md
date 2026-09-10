@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3582
+pr: trails#3582
 claim: "2026-06-18T12:52:08Z"
 assignee: "assoc-has-many-describes-wave9"
 blocked-by: null

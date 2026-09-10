@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 70
-pr: 6119
+pr: trails#6119
 claim: "2026-08-05T03:44:59Z"
 assignee: "postgresql-active-issues-the-rails-liveness-query"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: 6249
+pr: trails#6249
 claim: "2026-08-08T17:27:58Z"
 assignee: "collaborator-queries-use-select-values-insert-delete"
 blocked-by: null

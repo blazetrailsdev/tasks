@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 7582
+pr: trails#7582
 claim: "2026-09-06T23:16:21Z"
 assignee: "port-date-and-time-compatibility-and-zone-cases"
 blocked-by: null

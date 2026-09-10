@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 30
 priority: 4
-pr: 4669
+pr: trails#4669
 claim: "2026-07-06T13:06:24Z"
 assignee: "transactions-call-after-commit-relocate"
 blocked-by: null

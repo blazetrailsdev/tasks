@@ -9,7 +9,7 @@ deps: ["migration-collaborators-hold-a-pool-and-reach-connections-through-it"]
 deps-rfc: []
 est-loc: 400
 priority: 131
-pr: 6261
+pr: trails#6261
 claim: "2026-08-08T20:04:41Z"
 assignee: "date-temporal-default-return-and-ruby-opt-in"
 blocked-by: null

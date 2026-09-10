@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4570
+pr: trails#4570
 claim: "2026-07-04T20:47:07Z"
 assignee: "migrator-validate-nil-version-name-dup"
 blocked-by: null

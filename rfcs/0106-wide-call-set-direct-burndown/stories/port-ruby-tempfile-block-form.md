@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: 5
-pr: 6984
+pr: trails#6984
 claim: "2026-08-24T13:47:15Z"
 assignee: "converge-activesupport-residual-set-rows-to-zero"
 blocked-by: null

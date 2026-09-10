@@ -16,7 +16,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 700
-pr: 6845
+pr: trails#6845
 claim: "2026-08-21T23:20:34Z"
 assignee: "wave-4g-tail-sweep"
 blocked-by: null

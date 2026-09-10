@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5546
+pr: trails#5546
 claim: "2026-07-28T23:35:47Z"
 assignee: "mysql-specific-table-list-ignores-insert-returning-gate"
 blocked-by: null

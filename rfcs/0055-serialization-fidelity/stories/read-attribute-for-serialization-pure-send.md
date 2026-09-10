@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 23
-pr: 4717
+pr: trails#4717
 claim: "2026-07-07T01:41:37Z"
 assignee: "read-attribute-for-serialization-pure-send"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6617
+pr: trails#6617
 claim: "2026-08-16T23:00:00Z"
 assignee: "converge-arel-column-with-table-schema-qualified-guard"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 15
-pr: 4789
+pr: trails#4789
 claim: "2026-07-08T18:07:37Z"
 assignee: "serialized-ischanged-value-equality-scoped-to-array-hash"
 blocked-by: null

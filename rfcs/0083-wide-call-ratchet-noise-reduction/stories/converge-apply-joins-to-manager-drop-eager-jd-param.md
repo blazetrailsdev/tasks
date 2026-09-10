@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5748
+pr: trails#5748
 claim: "2026-07-31T20:13:10Z"
 assignee: "converge-apply-joins-to-manager-drop-eager-jd-param"
 blocked-by: null

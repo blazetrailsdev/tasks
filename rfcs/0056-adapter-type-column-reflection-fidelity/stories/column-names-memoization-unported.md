@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5133
+pr: trails#5133
 claim: "2026-07-23T12:17:57Z"
 assignee: "column-names-memoization-unported"
 blocked-by: null

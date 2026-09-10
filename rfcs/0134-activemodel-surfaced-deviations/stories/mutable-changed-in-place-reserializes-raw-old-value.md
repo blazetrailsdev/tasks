@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 63
-pr: 7478
+pr: trails#7478
 claim: "2026-09-04T12:01:52Z"
 assignee: "mutable-changed-in-place-reserializes-raw-old-value"
 blocked-by: null

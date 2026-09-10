@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: 7303
+pr: trails#7303
 claim: "2026-08-31T16:13:25Z"
 assignee: "retire-the-parked-promise-pattern"
 blocked-by: null

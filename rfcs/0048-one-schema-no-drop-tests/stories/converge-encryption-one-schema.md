@@ -8,7 +8,7 @@ deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 400
 priority: 12
-pr: 4335
+pr: trails#4335
 claim: "2026-06-30T16:50:44Z"
 assignee: "converge-encryption-one-schema"
 blocked-by: null

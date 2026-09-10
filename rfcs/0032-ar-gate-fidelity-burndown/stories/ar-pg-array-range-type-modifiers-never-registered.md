@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5203
+pr: trails#5203
 claim: "2026-07-24T01:22:14Z"
 assignee: "ar-pg-array-range-type-modifiers-never-registered"
 blocked-by: null

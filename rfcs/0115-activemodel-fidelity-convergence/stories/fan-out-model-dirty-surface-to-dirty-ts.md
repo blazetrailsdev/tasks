@@ -9,7 +9,7 @@ deps:
   - fan-out-model-validates-of-macros-to-helper-methods
 deps-rfc: []
 est-loc: 300
-pr: 6990
+pr: trails#6990
 claim: "2026-08-24T15:08:28Z"
 assignee: "fan-out-model-dirty-surface-to-dirty-ts"
 blocked-by: null

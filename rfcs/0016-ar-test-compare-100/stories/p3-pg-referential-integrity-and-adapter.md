@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 14
-pr: 3055
+pr: trails#3055
 claim: "2026-06-09T12:59:59Z"
 assignee: "p3-pg-referential-integrity-and-adapter"
 blocked-by: null

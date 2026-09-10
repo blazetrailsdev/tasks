@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 2
-pr: 3465
+pr: trails#3465
 claim: "2026-06-16T14:52:35Z"
 assignee: "assoc-associations-test"
 blocked-by: null

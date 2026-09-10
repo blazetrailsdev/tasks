@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 43
-pr: 2974
+pr: trails#2974
 claim: "2026-06-06T17:05:28Z"
 assignee: "dirty-parrot-virtual-attr-registry"
 blocked-by: null

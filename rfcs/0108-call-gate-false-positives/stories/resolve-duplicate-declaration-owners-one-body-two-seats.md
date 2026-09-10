@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6676
+pr: trails#6676
 claim: "2026-08-17T23:20:47Z"
 assignee: "resolve-duplicate-declaration-owners-one-body-two-seats"
 blocked-by: null

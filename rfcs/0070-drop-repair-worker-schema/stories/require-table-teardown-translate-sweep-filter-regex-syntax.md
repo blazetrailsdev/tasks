@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5578
+pr: trails#5578
 claim: "2026-07-29T17:35:47Z"
 assignee: "require-table-teardown-translate-sweep-filter-regex-syntax"
 blocked-by: null

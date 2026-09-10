@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 4032
+pr: trails#4032
 claim: "2026-06-23T20:13:05Z"
 assignee: "pg-bigserial-assertion-sweep-belongs-to"
 blocked-by: null

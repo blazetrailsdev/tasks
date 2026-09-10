@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 7027
+pr: trails#7027
 claim: "2026-08-25T12:22:53Z"
 assignee: "converge-attribute-deep-dup-onto-ruby-dup"
 blocked-by: null

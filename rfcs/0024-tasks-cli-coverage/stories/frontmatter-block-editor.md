@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 15
-pr: 3161
+pr: trails#3161
 claim: "2026-06-12T21:03:14Z"
 assignee: "frontmatter-block-editor"
 blocked-by: null

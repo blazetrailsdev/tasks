@@ -8,7 +8,7 @@ deps: ["options-kwargs-key-parity"]
 deps-rfc: []
 est-loc: 250
 priority: 16
-pr: 3191
+pr: trails#3191
 claim: "2026-06-13T13:19:11Z"
 assignee: "constants-defaults-parity"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5489
+pr: trails#5489
 claim: "2026-07-28T12:22:16Z"
 assignee: "reference-definition-foreign-table-name-honors-pluralize-table-names"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: 4009
+pr: trails#4009
 claim: "2026-06-23T15:13:45Z"
 assignee: "call-mismatches-ratcheting-baseline"
 blocked-by: null

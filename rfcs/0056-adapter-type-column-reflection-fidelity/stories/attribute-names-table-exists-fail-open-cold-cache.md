@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5116
+pr: trails#5116
 claim: "2026-07-23T02:07:48Z"
 assignee: "attribute-names-table-exists-fail-open-cold-cache"
 blocked-by: null

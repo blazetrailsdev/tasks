@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 10
-pr: 5208
+pr: trails#5208
 claim: "2026-07-24T02:23:24Z"
 assignee: "ungrouped-count-having-dropped"
 blocked-by: null

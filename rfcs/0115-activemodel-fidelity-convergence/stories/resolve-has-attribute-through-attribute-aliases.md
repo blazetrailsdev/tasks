@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6818
+pr: trails#6818
 claim: "2026-08-21T13:20:34Z"
 assignee: "move-collection-proxy-transaction-and-clone-to-their-rails-seats"
 blocked-by: null

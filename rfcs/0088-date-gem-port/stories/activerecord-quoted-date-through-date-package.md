@@ -7,7 +7,7 @@ cluster: null
 deps: ["route-temporal-imports-activerecord"]
 deps-rfc: []
 est-loc: 250
-pr: 6152
+pr: trails#6152
 claim: "2026-08-06T13:43:09Z"
 assignee: "activerecord-quoted-date-through-date-package"
 blocked-by: null

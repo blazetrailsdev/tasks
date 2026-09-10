@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4482
+pr: trails#4482
 claim: "2026-07-03T13:33:52Z"
 assignee: "converge-habtm-jointable-preloader-batch-scheduling"
 blocked-by: null

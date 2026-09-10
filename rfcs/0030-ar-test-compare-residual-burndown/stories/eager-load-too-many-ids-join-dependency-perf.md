@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3989
+pr: trails#3989
 claim: "2026-06-23T13:07:47Z"
 assignee: "eager-load-too-many-ids-join-dependency-perf"
 blocked-by: null

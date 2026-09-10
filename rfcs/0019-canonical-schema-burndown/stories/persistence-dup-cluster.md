@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 7
-pr: 3662
+pr: trails#3662
 claim: "2026-06-19T17:36:29Z"
 blocked-by: null
 assignee: "persistence-dup-cluster"

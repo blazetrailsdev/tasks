@@ -9,7 +9,7 @@ deps: ["ruby-compat-package-skeleton"]
 deps-rfc: []
 est-loc: 150
 priority: 9
-pr: 7240
+pr: trails#7240
 claim: "2026-08-30T14:42:41Z"
 assignee: "move-rational-to-ruby-compat"
 blocked-by: null

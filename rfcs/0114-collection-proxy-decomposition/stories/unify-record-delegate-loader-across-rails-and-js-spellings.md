@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6773
+pr: trails#6773
 claim: "2026-08-20T14:52:33Z"
 assignee: "unify-record-delegate-loader-across-rails-and-js-spellings"
 blocked-by: null

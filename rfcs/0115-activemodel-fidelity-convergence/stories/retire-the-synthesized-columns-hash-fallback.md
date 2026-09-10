@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 7117
+pr: trails#7117
 claim: "2026-08-27T13:26:59Z"
 assignee: "retire-the-synthesized-columns-hash-fallback"
 blocked-by: null

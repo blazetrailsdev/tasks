@@ -8,7 +8,7 @@ deps: ["assoc-has-many"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: 3482
+pr: trails#3482
 claim: "2026-06-16T16:48:31Z"
 assignee: "assoc-has-many-remaining-describes"
 blocked-by: null

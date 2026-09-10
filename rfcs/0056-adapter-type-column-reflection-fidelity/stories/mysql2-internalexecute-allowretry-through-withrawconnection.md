@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4577
+pr: trails#4577
 claim: "2026-07-04T23:27:16Z"
 assignee: "mysql2-internalexecute-allowretry-through-withrawconnection"
 blocked-by: null

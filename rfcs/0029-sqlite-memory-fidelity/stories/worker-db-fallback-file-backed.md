@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 1
-pr: 5282
+pr: trails#5282
 claim: "2026-07-25T01:34:53Z"
 assignee: "worker-db-fallback-file-backed"
 blocked-by: null

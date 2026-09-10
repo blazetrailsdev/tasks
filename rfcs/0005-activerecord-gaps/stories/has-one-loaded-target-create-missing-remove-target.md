@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4904
+pr: trails#4904
 claim: "2026-07-16T13:11:13Z"
 assignee: "has-one-loaded-target-create-missing-remove-target"
 blocked-by: null

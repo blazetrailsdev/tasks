@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 25
-pr: 5223
+pr: trails#5223
 claim: "2026-07-24T13:53:23Z"
 assignee: "extractor-absolute-const-refs-option-key-path"
 blocked-by: null

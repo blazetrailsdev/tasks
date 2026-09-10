@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 3
-pr: 7456
+pr: trails#7456
 claim: "2026-09-03T19:46:04Z"
 assignee: "move-postgresql-schema-statement-privates-to-their-rails-file"
 blocked-by: null

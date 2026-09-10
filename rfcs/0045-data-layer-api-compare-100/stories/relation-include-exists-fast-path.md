@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4291
+pr: trails#4291
 claim: "2026-06-29T20:23:39Z"
 assignee: "relation-include-exists-fast-path"
 blocked-by: null

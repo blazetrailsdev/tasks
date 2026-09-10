@@ -9,7 +9,7 @@ deps: ["sqlite3-constructor-connects-eagerly-unlike-rails"]
 deps-rfc: []
 est-loc: 90
 priority: 6
-pr: 7662
+pr: trails#7662
 claim: "2026-09-10T12:43:31Z"
 assignee: "sqlite-configure-connection-pragmas-precede-check-version"
 blocked-by: null

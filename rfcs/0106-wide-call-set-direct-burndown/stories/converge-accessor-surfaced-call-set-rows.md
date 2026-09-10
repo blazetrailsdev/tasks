@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 4
-pr: 6666
+pr: trails#6666
 claim: "2026-08-17T19:47:58Z"
 assignee: "class-for-adapter-extracts-resolve-task"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4275
+pr: trails#4275
 claim: "2026-06-29T14:22:12Z"
 assignee: "collection-singular-ids-reader"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 46
-pr: 7576
+pr: trails#7576
 claim: "2026-09-06T19:37:30Z"
 assignee: "digest-uuid-from-hash-takes-an-algorithm-string-not-the-digest-class"
 blocked-by: null

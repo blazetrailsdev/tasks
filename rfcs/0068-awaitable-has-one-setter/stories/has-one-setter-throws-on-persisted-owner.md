@@ -8,7 +8,7 @@ deps: ["awaitable-set-accessor-sugar"]
 deps-rfc: []
 est-loc: 300
 priority: 11
-pr: 4949
+pr: trails#4949
 claim: "2026-07-19T01:31:12Z"
 assignee: "has-one-setter-throws-on-persisted-owner"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6788
+pr: trails#6788
 claim: "2026-08-20T19:50:09Z"
 assignee: "attribute-method-generation-driven-from-schema-reflection"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 4051
+pr: trails#4051
 claim: "2026-06-24T04:00:40Z"
 assignee: "ar-relation-surface"
 blocked-by: null

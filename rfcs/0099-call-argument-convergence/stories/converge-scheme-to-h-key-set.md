@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6497
+pr: trails#6497
 claim: "2026-08-13T22:57:07Z"
 assignee: "converge-scheme-to-h-key-set"
 blocked-by: null

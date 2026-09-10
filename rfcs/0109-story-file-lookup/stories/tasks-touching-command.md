@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 90
 priority: 1
-pr: 69
+pr: tasks-legacy#69
 claim: "2026-08-18T14:50:47Z"
 assignee: "tasks-touching-command"
 blocked-by: null

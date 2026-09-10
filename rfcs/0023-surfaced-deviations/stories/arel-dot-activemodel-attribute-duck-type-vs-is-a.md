@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4880
+pr: trails#4880
 claim: "2026-07-15T02:51:11Z"
 assignee: "arel-dot-activemodel-attribute-duck-type-vs-is-a"
 blocked-by: null

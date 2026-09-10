@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6904
+pr: trails#6904
 claim: "2026-08-23T10:42:30Z"
 assignee: "call-set-migrator-cannot-tag-members-split-into-a-subdirectory"
 blocked-by: null

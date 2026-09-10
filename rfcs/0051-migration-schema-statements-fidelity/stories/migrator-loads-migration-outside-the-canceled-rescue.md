@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5781
+pr: trails#5781
 claim: "2026-08-01T01:10:39Z"
 assignee: "migrator-loads-migration-outside-the-canceled-rescue"
 blocked-by: null

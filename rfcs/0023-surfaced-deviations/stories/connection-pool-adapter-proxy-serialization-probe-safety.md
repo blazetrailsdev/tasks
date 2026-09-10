@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4775
+pr: trails#4775
 claim: "2026-07-08T10:23:23Z"
 assignee: "connection-pool-adapter-proxy-serialization-probe-safety"
 blocked-by: null

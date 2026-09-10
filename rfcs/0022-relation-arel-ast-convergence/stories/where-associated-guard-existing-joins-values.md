@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 12
-pr: 4677
+pr: trails#4677
 claim: "2026-07-06T14:40:59Z"
 assignee: "where-associated-guard-existing-joins-values"
 blocked-by: null

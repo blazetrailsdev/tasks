@@ -8,7 +8,7 @@ deps: ["shared-table-convergence", "callbacks-extra-burndown"]
 deps-rfc: []
 est-loc: 300
 priority: 46
-pr: 4187
+pr: trails#4187
 claim: "2026-06-26T12:17:42Z"
 assignee: "callbacks-test-canonical"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: 30
-pr: 5349
+pr: trails#5349
 claim: "2026-07-26T13:24:31Z"
 assignee: "route-fixture-machinery-off-deprecated-getter"
 blocked-by: null

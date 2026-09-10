@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5767
+pr: trails#5767
 claim: "2026-07-31T22:40:40Z"
 assignee: "route-non-through-collection-push-onto-concat-records"
 blocked-by: null

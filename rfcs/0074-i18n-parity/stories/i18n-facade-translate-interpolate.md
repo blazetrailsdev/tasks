@@ -7,7 +7,7 @@ cluster: null
 deps: ["i18n-backend-base-simple"]
 deps-rfc: []
 est-loc: 450
-pr: 6000
+pr: trails#6000
 claim: "2026-08-03T18:01:45Z"
 assignee: "i18n-facade-translate-interpolate"
 blocked-by: null

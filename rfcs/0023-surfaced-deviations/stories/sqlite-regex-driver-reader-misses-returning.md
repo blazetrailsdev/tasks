@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4979
+pr: trails#4979
 claim: "2026-07-20T00:21:11Z"
 assignee: "sqlite-regex-driver-reader-misses-returning"
 blocked-by: null

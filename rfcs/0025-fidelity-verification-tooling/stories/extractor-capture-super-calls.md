@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4011
+pr: trails#4011
 claim: "2026-06-23T15:22:53Z"
 assignee: "extractor-capture-super-calls"
 blocked-by: null

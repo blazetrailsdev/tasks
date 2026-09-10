@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 300
-pr: 6607
+pr: trails#6607
 claim: "2026-08-26T20:00:17Z"
 assignee: "time-zone-converter-serialize-rederives-container-walk"
 blocked-by: null

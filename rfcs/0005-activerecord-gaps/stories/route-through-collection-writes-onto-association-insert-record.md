@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: 5751
+pr: trails#5751
 claim: "2026-07-31T20:16:47Z"
 assignee: "route-through-collection-writes-onto-association-insert-record"
 blocked-by: null

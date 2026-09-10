@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4096
+pr: trails#4096
 claim: "2026-06-25T02:22:47Z"
 assignee: "converge-joined-tables-memo-onto-regular-include-path"
 blocked-by: null

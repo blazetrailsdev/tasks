@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4842
+pr: trails#4842
 claim: "2026-07-13T18:58:23Z"
 assignee: "pg-disconnect-close-inflight-acquire-adoption-race"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 4047
+pr: trails#4047
 claim: "2026-06-24T02:01:44Z"
 assignee: "ar-encryption-surface"
 blocked-by: null

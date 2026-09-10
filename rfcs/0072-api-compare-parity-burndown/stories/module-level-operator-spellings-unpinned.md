@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5955
+pr: trails#5955
 claim: "2026-08-03T03:15:48Z"
 assignee: "module-level-operator-spellings-unpinned"
 blocked-by: null

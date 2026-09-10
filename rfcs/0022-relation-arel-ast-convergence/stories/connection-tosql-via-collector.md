@@ -8,7 +8,7 @@ deps: ["audit-bind-inlining-rails-fidelity"]
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: 3315
+pr: trails#3315
 claim: "2026-06-15T02:16:18Z"
 assignee: "connection-tosql-via-collector"
 blocked-by: null

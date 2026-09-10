@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: 6667
+pr: trails#6667
 claim: "2026-08-17T20:12:59Z"
 assignee: "converge-accessor-surfaced-call-set-rows-wave-2"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5585
+pr: trails#5585
 claim: "2026-08-09T19:47:17Z"
 assignee: "supports-default-expression-static-table-version-blind"
 blocked-by: null

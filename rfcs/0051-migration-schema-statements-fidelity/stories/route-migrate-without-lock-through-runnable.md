@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5809
+pr: trails#5809
 claim: "2026-08-01T18:21:00Z"
 assignee: "route-migrate-without-lock-through-runnable"
 blocked-by: null

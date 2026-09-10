@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6368
+pr: trails#6368
 claim: "2026-08-11T16:13:43Z"
 assignee: "naming-burndown-ar-field-and-body-restructures"
 blocked-by: null

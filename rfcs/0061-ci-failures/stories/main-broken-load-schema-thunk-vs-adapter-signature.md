@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5686
+pr: trails#5686
 claim: "2026-07-30T23:21:17Z"
 assignee: "main-broken-load-schema-thunk-vs-adapter-signature"
 blocked-by: null

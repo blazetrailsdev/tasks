@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6825
+pr: trails#6825
 claim: "2026-08-21T14:50:39Z"
 assignee: "add-leading-underscore-call-candidate-to-conventions"
 blocked-by: null

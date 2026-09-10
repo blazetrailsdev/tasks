@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 2
-pr: 3664
+pr: trails#3664
 claim: "2026-06-19T18:27:30Z"
 assignee: "libsql-local-driver"
 blocked-by: null

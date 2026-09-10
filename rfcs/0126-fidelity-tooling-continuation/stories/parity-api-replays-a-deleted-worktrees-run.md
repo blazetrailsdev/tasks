@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: 7156
+pr: trails#7156
 claim: "2026-08-28T12:29:26Z"
 assignee: "narrow-owner-records-nothing-call-gate-blind-spot"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 4
-pr: 7389
+pr: trails#7389
 claim: "2026-09-02T13:34:18Z"
 assignee: "param-name-check-pairs-nested-class-constructor-with-enclosing-initialize"
 blocked-by: null

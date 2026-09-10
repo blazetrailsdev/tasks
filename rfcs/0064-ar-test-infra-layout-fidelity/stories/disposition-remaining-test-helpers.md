@@ -8,7 +8,7 @@ deps: ["move-test-helpers-to-support-dir"]
 deps-rfc: []
 est-loc: 300
 priority: 60
-pr: 5403
+pr: trails#5403
 claim: "2026-07-27T13:17:08Z"
 assignee: "disposition-remaining-test-helpers"
 blocked-by: null

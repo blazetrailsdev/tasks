@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: 51
-pr: 7632
+pr: trails#7632
 claim: "2026-09-08T21:17:42Z"
 assignee: "mapper-match-fans-out-one-route-per-verb"
 blocked-by: null

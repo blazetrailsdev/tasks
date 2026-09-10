@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5156
+pr: trails#5156
 claim: "2026-07-23T16:22:35Z"
 assignee: "check-parts-name-ignores-chk-pattern"
 blocked-by: null

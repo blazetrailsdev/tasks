@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5805
+pr: trails#5805
 claim: "2026-08-01T17:39:01Z"
 assignee: "pool-migration-context-is-not-rails-migration-context"
 blocked-by: null

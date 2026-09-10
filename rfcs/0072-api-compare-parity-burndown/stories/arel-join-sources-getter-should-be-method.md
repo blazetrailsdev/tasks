@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5631
+pr: trails#5631
 claim: "2026-07-30T12:56:23Z"
 assignee: "arel-join-sources-getter-should-be-method"
 blocked-by: null

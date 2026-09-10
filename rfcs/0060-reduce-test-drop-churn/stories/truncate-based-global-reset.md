@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 0
-pr: 4504
+pr: trails#4504
 claim: "2026-07-03T19:31:08Z"
 assignee: "truncate-based-global-reset"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 39
-pr: 4180
+pr: trails#4180
 claim: "2026-06-26T10:10:45Z"
 assignee: "assoc-eager-split-canonical-default-scope"
 blocked-by: null

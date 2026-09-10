@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3640
+pr: trails#3640
 claim: "2026-06-19T13:24:24Z"
 assignee: "canonicalize-nested-has-one-assoc-block"
 blocked-by: null

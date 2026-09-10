@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 2
-pr: 4779
+pr: trails#4779
 claim: "2026-07-08T10:42:22Z"
 assignee: "enum-acronym-method-name-consistency"
 blocked-by: null

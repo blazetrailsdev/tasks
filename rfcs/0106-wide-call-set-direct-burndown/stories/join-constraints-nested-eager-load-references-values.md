@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6760
+pr: trails#6760
 claim: "2026-08-20T03:22:31Z"
 assignee: "join-constraints-nested-eager-load-references-values"
 blocked-by: null

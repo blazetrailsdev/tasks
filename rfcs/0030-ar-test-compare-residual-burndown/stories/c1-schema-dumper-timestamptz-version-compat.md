@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3433
+pr: trails#3433
 claim: "2026-06-16T01:00:54Z"
 assignee: "c1-schema-dumper-timestamptz-version-compat"
 blocked-by: null

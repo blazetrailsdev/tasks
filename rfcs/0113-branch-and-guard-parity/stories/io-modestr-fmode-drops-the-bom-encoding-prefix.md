@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 10
-pr: 7612
+pr: trails#7612
 claim: "2026-09-08T14:32:01Z"
 assignee: "register-does-not-carry-the-adapter-path-as-data"
 blocked-by: null

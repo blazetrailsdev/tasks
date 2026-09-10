@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6165
+pr: trails#6165
 claim: "2026-08-07T02:08:30Z"
 assignee: "datetime-to-s-drops-the-time-of-day"
 blocked-by: null

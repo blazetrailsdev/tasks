@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3742
+pr: trails#3742
 claim: "2026-06-20T20:37:27Z"
 assignee: "insert-all-builder-quote-delegation"
 blocked-by: null

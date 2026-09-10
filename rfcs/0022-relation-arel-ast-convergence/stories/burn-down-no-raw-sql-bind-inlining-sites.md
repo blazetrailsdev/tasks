@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3263
+pr: trails#3263
 claim: "2026-06-14T16:42:34Z"
 assignee: "burn-down-no-raw-sql-bind-inlining-sites"
 blocked-by: null

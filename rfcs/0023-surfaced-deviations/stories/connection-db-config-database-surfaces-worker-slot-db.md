@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3767
+pr: trails#3767
 claim: "2026-06-21T02:46:41Z"
 assignee: "connection-db-config-database-surfaces-worker-slot-db"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 9
-pr: 4137
+pr: trails#4137
 claim: "2026-06-25T17:42:53Z"
 assignee: "association-scope-alias-tracker-test-canonical"
 blocked-by: null

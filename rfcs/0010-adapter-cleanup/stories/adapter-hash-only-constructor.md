@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 14
-pr: 4064
+pr: trails#4064
 claim: "2026-06-24T15:42:28Z"
 assignee: "adapter-hash-only-constructor"
 blocked-by: null

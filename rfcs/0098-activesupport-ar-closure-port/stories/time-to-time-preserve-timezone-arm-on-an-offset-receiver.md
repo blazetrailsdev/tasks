@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6550
+pr: trails#6550
 claim: "2026-08-14T22:49:42Z"
 assignee: "retire-time-zone-config-test-only-zone-seams"
 blocked-by: null

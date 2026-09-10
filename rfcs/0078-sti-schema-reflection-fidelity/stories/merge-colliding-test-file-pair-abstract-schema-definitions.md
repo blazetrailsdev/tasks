@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6953
+pr: trails#6953
 claim: "2026-08-23T21:58:26Z"
 assignee: "merge-colliding-test-file-pair-abstract-schema-definitions"
 blocked-by: null

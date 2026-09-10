@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7146
+pr: trails#7146
 claim: "2026-08-28T01:45:27Z"
 assignee: "rails-file-structure-method-order-orders-top-level-siblings"
 blocked-by: null

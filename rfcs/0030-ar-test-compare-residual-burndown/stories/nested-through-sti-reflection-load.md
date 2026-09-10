@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5148
+pr: trails#5148
 claim: "2026-07-23T14:16:43Z"
 assignee: "nested-through-sti-reflection-load"
 blocked-by: null

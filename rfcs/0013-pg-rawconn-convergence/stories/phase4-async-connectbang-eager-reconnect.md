@@ -8,7 +8,7 @@ deps: ["phase3-unify-connection-slot"]
 deps-rfc: []
 est-loc: 400
 priority: 12
-pr: 3249
+pr: trails#3249
 claim: "2026-06-24T15:24:02Z"
 assignee: "phase4-async-connectbang-eager-reconnect"
 blocked-by: null

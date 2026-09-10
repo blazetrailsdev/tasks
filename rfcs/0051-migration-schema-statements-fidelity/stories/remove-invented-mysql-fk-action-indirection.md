@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 5477
+pr: trails#5477
 claim: "2026-07-28T01:16:16Z"
 assignee: "remove-invented-mysql-fk-action-indirection"
 blocked-by: null

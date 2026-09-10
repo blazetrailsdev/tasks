@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3724
+pr: trails#3724
 claim: "2026-06-20T16:13:30Z"
 assignee: "gate-extractor-compound-if-current-adapter"
 blocked-by: null

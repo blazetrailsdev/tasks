@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6448
+pr: trails#6448
 claim: "2026-08-13T00:36:51Z"
 assignee: "implement-fs-adapter-flock-for-file-store-lock-file"
 blocked-by: null

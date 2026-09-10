@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 5
-pr: 7590
+pr: trails#7590
 claim: "2026-09-07T11:36:50Z"
 assignee: "initialize-included-modules-reaches-only-metal"
 blocked-by: null

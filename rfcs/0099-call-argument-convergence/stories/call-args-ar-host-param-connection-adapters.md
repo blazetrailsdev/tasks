@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: 6369
+pr: trails#6369
 claim: "2026-08-11T16:36:38Z"
 assignee: "naming-burndown-ar-schema-dumper-stream"
 blocked-by: null

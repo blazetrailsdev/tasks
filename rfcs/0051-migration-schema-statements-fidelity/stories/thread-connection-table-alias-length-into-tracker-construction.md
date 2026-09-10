@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 201
-pr: 4819
+pr: trails#4819
 claim: "2026-07-09T03:09:35Z"
 assignee: "thread-connection-table-alias-length-into-tracker-construction"
 blocked-by: null

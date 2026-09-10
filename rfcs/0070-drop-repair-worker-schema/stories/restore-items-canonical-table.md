@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: 5257
+pr: trails#5257
 claim: "2026-07-24T19:42:52Z"
 assignee: "restore-items-canonical-table"
 blocked-by: null

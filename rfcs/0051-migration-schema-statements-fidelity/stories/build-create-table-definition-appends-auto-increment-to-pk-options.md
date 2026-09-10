@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 6065
+pr: trails#6065
 claim: "2026-08-04T14:49:08Z"
 assignee: "build-create-table-definition-appends-auto-increment-to-pk-options"
 blocked-by: null

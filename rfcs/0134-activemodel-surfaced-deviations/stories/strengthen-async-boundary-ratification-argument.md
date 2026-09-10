@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 7510
+pr: trails#7510
 claim: "2026-09-05T09:02:11Z"
 assignee: "from-database-binary-value-is-not-frozen"
 blocked-by: null

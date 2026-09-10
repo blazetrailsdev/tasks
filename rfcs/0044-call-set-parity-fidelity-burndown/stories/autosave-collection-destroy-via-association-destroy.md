@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4068
+pr: trails#4068
 claim: "2026-06-24T16:42:27Z"
 assignee: "autosave-collection-destroy-via-association-destroy"
 blocked-by: null

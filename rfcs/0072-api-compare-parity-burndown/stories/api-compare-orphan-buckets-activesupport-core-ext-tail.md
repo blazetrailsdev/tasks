@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6167
+pr: trails#6167
 claim: "2026-08-07T02:28:27Z"
 assignee: "api-compare-orphan-buckets-activesupport-core-ext-tail"
 blocked-by: null

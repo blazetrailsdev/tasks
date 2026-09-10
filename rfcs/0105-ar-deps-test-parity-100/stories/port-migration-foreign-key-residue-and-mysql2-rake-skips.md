@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 7252
+pr: trails#7252
 claim: "2026-08-30T16:38:42Z"
 assignee: "port-migration-foreign-key-residue-and-mysql2-rake-skips"
 blocked-by: null

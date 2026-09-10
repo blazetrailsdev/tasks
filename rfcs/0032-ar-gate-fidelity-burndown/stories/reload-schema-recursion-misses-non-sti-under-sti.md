@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5168
+pr: trails#5168
 claim: "2026-07-23T17:34:38Z"
 assignee: "reload-schema-recursion-misses-non-sti-under-sti"
 blocked-by: null

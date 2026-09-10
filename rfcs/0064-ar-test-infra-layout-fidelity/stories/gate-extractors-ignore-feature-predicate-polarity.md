@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 5683
+pr: trails#5683
 claim: "2026-07-30T21:33:20Z"
 assignee: "gate-extractors-ignore-feature-predicate-polarity"
 blocked-by: null

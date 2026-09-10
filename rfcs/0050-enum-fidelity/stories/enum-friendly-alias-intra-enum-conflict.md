@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 9
-pr: 4930
+pr: trails#4930
 claim: "2026-07-17T14:54:06Z"
 assignee: "enum-friendly-alias-intra-enum-conflict"
 blocked-by: null

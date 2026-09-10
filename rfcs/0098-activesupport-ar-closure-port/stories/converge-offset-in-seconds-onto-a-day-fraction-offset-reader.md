@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6556
+pr: trails#6556
 claim: "2026-08-15T00:45:07Z"
 assignee: "adapter-non-boolean-prepared-statements-config-raises"
 blocked-by: null

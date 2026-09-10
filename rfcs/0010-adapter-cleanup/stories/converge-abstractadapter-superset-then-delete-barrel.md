@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4070
+pr: trails#4070
 claim: "2026-06-24T17:14:43Z"
 assignee: "converge-abstractadapter-superset-then-delete-barrel"
 blocked-by: null

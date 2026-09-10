@@ -7,7 +7,7 @@ cluster: integrated
 deps: []
 deps-rfc: []
 est-loc: 60
-pr: 2849
+pr: trails#2849
 claim: "2026-06-10T15:57:23Z"
 assignee: "w7-named-inner-joins-fix"
 blocked-by: null

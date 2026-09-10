@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 6
-pr: 3105
+pr: trails#3105
 claim: "2026-06-10T23:30:18Z"
 assignee: "relation-with-test-canonical"
 blocked-by: null

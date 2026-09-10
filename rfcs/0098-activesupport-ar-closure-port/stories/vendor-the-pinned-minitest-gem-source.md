@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6531
+pr: trails#6531
 claim: "2026-08-14T17:15:04Z"
 assignee: "call-args-tool-dispatched-identifier-in-argument-position"
 blocked-by: null

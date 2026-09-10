@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 10
-pr: 6917
+pr: trails#6917
 claim: "2026-08-23T14:04:32Z"
 assignee: "wave-5-naming-activesupport"
 blocked-by: null

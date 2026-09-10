@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5923
+pr: trails#5923
 claim: "2026-08-02T20:49:25Z"
 assignee: "converge-is-touching-suppressed-to-no-touching-predicate"
 blocked-by: null

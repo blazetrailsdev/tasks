@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 7269
+pr: trails#7269
 claim: "2026-08-30T20:54:11Z"
 assignee: "converge-respond-to-missing-base-arm-and-aggregation-validity"
 blocked-by: null

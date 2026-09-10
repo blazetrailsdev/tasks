@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7133
+pr: trails#7133
 claim: "2026-08-27T19:19:55Z"
 assignee: "shield-removal-pg-constraint-suites"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5701
+pr: trails#5701
 claim: "2026-07-31T01:51:02Z"
 assignee: "fold-failure-safe-teardown-into-require-table-teardown"
 blocked-by: null

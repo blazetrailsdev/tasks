@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 40
-pr: 3887
+pr: trails#3887
 claim: "2026-06-22T15:07:57Z"
 assignee: "relation-scoping-pg-handler-transactional-fixtures"
 blocked-by: null

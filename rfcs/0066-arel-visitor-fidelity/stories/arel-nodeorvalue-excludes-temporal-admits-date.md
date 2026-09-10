@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5021
+pr: trails#5021
 claim: "2026-07-21T01:20:15Z"
 assignee: "arel-nodeorvalue-excludes-temporal-admits-date"
 blocked-by: null

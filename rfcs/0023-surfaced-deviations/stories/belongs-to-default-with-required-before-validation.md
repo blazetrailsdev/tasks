@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4305
+pr: trails#4305
 claim: "2026-06-30T02:24:33Z"
 assignee: "belongs-to-default-with-required-before-validation"
 blocked-by: null

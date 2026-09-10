@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 3959
+pr: trails#3959
 claim: "2026-06-23T03:15:15Z"
 assignee: "apply-scope-qualified-where-predicate-builder-convergence"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4773
+pr: trails#4773
 claim: "2026-07-08T03:25:23Z"
 assignee: "collapse-migrationcontext-introspection-onto-adapter"
 blocked-by: null

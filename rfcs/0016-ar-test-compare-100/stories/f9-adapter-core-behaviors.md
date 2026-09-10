@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 11
-pr: 3150
+pr: trails#3150
 claim: "2026-06-12T16:43:01Z"
 assignee: "f9-adapter-core-behaviors"
 blocked-by: null

@@ -7,7 +7,7 @@ cluster: clusters
 deps: []
 deps-rfc: []
 est-loc: 250
-pr: 3010
+pr: trails#3010
 claim: "2026-06-07T22:40:41Z"
 assignee: "f4-transactions-campaign"
 blocked-by: null

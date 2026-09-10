@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 24
-pr: 2961
+pr: trails#2961
 claim: "2026-06-05T23:26:52Z"
 assignee: "pr-b-schema-ar-models-audit"
 blocked-by: null

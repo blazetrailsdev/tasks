@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 21
-pr: 5013
+pr: trails#5013
 claim: "2026-07-20T21:51:45Z"
 assignee: "arel-ast-type-surface-excludes-model-attribute"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["shared-table-convergence", "transactions-extra-burndown"]
 deps-rfc: []
 est-loc: 300
 priority: 53
-pr: 4194
+pr: trails#4194
 claim: "2026-06-26T13:29:41Z"
 assignee: "transactions-test-canonical"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 5073
+pr: trails#5073
 claim: "2026-07-22T19:56:48Z"
 assignee: "feature-gate-missing-cte-upsert-partial-index"
 blocked-by: null

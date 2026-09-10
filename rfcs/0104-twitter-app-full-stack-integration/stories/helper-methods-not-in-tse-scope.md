@@ -9,7 +9,7 @@ deps: ["execute-tse-templates"]
 deps-rfc: []
 est-loc: null
 priority: 11
-pr: 7285
+pr: trails#7285
 claim: null
 assignee: null
 blocked-by: null

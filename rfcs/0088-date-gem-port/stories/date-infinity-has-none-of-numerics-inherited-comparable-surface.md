@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6315
+pr: trails#6315
 claim: "2026-08-10T01:16:46Z"
 assignee: "date-infinity-has-none-of-numerics-inherited-comparable-surface"
 blocked-by: null

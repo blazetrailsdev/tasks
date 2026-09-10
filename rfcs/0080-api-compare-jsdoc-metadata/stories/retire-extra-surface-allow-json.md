@@ -13,7 +13,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: 5399
+pr: trails#5399
 claim: "2026-07-27T12:53:08Z"
 assignee: "retire-extra-surface-allow-json"
 blocked-by: null

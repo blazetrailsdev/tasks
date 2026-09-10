@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: 3220
+pr: trails#3220
 claim: "2026-06-13T21:42:34Z"
 assignee: "enum-assert-valid-value-only-on-setter"
 blocked-by: null

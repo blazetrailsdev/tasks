@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 19
-pr: 5008
+pr: trails#5008
 claim: "2026-07-20T20:11:42Z"
 assignee: "arel-quote-array-duplicates-adapter-encode-array"
 blocked-by: null

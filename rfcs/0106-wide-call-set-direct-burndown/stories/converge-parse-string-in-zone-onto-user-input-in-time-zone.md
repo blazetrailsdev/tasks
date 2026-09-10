@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6848
+pr: trails#6848
 claim: "2026-08-21T23:50:30Z"
 assignee: "converge-parse-string-in-zone-onto-user-input-in-time-zone"
 blocked-by: null

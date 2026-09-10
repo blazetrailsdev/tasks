@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: 5390
+pr: trails#5390
 claim: "2026-07-27T01:57:10Z"
 assignee: "unexport-redundant-writer-helpers-activerecord"
 blocked-by: null

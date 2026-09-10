@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: 3937
+pr: trails#3937
 claim: "2026-06-22T23:15:17Z"
 assignee: "isvalid-does-not-run-uniqueness-validations"
 blocked-by: null

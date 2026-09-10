@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6561
+pr: trails#6561
 claim: "2026-08-15T12:15:05Z"
 assignee: "batch-enumerator-carries-cursor-order-use-ranges"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6924
+pr: trails#6924
 claim: "2026-08-23T16:12:28Z"
 assignee: "time-with-zone-residue-structural-blockers"
 blocked-by: null

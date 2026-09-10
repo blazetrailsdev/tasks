@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 50
-pr: 3601
+pr: trails#3601
 claim: "2026-06-18T20:28:56Z"
 assignee: "associations-test-overridingassociationstest-canonical"
 blocked-by: null

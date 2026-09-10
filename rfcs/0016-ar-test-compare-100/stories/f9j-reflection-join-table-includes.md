@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3240
+pr: trails#3240
 claim: "2026-06-14T02:36:34Z"
 assignee: "f9j-reflection-join-table-includes"
 blocked-by: null

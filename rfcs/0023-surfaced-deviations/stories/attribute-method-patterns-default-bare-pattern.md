@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4058
+pr: trails#4058
 claim: "2026-06-24T13:00:42Z"
 assignee: "attribute-method-patterns-default-bare-pattern"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5954
+pr: trails#5954
 claim: "2026-08-03T03:05:45Z"
 assignee: "inflector-ordinal-via-i18n-translate"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5629
+pr: trails#5629
 claim: "2026-08-02T01:17:34Z"
 assignee: "table-definition-hardcodes-id-ignoring-primary-key-prefix-type"
 blocked-by: null

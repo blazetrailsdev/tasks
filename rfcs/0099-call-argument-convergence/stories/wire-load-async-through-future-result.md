@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6530
+pr: trails#6530
 claim: "2026-08-14T16:17:48Z"
 assignee: "wire-load-async-through-future-result"
 blocked-by: null

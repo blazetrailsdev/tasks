@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 40
-pr: 2958
+pr: trails#2958
 claim: "2026-06-05T17:46:33Z"
 assignee: "dirty-create-time-capture"
 blocked-by: null

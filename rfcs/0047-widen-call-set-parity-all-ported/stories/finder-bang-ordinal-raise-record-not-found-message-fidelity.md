@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4100
+pr: trails#4100
 claim: "2026-06-25T04:02:34Z"
 assignee: "finder-bang-ordinal-raise-record-not-found-message-fidelity"
 blocked-by: null

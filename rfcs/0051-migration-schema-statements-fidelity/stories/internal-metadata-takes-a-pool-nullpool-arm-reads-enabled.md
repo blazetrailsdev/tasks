@@ -8,7 +8,7 @@ deps:
   - migration-collaborator-call-sites-pass-a-pool
 deps-rfc: []
 est-loc: 200
-pr: 6270
+pr: trails#6270
 claim: "2026-08-09T01:30:48Z"
 assignee: "port-sqlite-rake-create-drop-charset-collation-tests"
 blocked-by: null

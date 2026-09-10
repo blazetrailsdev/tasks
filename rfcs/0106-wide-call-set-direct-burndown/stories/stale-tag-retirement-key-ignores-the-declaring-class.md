@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6912
+pr: trails#6912
 claim: "2026-08-23T12:57:31Z"
 assignee: "converge-association-relation-inverse-wiring-onto-exec-queries"
 blocked-by: null

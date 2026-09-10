@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4569
+pr: trails#4569
 claim: "2026-07-04T20:27:09Z"
 assignee: "migrator-use-advisory-lock-currentdatabase-guard"
 blocked-by: null

@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 8
-pr: 4387
+pr: trails#4387
 claim: "2026-07-01T22:46:18Z"
 assignee: "fixtures-caller-supplied-connection-adapter"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5509
+pr: trails#5509
 claim: "2026-07-28T14:30:31Z"
 assignee: "database-config-database-setter-mutates-shared-hash"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4375
+pr: trails#4375
 claim: "2026-07-01T15:03:17Z"
 assignee: "redo-has-one-through-faithful-port"
 blocked-by: null

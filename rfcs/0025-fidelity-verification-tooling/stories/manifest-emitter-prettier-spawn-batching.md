@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 30
-pr: 5239
+pr: trails#5239
 claim: "2026-07-24T16:54:55Z"
 assignee: "manifest-emitter-prettier-spawn-batching"
 blocked-by: null

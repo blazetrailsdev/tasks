@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6149
+pr: trails#6149
 claim: "2026-08-06T01:33:05Z"
 assignee: "date-assertion-value-mark-vs-temporal-returns"
 blocked-by: null

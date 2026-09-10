@@ -9,7 +9,7 @@ deps: ["converge-argument-error-onto-ruby-compat-activesupport"]
 deps-rfc: []
 est-loc: 160
 priority: 43
-pr: 7340
+pr: trails#7340
 claim: "2026-09-01T14:06:30Z"
 assignee: "converge-argument-error-remaining-packages"
 blocked-by: null

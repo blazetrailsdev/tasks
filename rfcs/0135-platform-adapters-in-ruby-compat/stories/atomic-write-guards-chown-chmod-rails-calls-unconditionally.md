@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 25
-pr: 7480
+pr: trails#7480
 claim: "2026-09-04T13:31:56Z"
 assignee: "atomic-write-guards-chown-chmod-rails-calls-unconditionally"
 blocked-by: null

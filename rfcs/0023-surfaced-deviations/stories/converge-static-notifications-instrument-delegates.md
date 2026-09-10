@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4897
+pr: trails#4897
 claim: "2026-07-15T22:31:11Z"
 assignee: "converge-static-notifications-instrument-delegates"
 blocked-by: null

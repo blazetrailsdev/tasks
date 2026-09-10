@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 4
-pr: 4781
+pr: trails#4781
 claim: "2026-07-08T11:31:55Z"
 assignee: "converge-cpk-scalar-id-assignment-typeerror"
 blocked-by: null

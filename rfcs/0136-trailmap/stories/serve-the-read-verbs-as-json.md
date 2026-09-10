@@ -9,7 +9,7 @@ deps: ["move-ranking-onto-story-scopes"]
 deps-rfc: []
 est-loc: 200
 priority: 5
-pr: 5
+pr: trailmap#5
 claim: "2026-09-05T17:46:44Z"
 assignee: "serve-the-read-verbs-as-json"
 blocked-by: null

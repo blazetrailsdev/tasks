@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5921
+pr: trails#5921
 claim: "2026-08-02T20:43:29Z"
 assignee: "converge-base-where-not-to-where-chain"
 blocked-by: null

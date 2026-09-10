@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 7614
+pr: trails#7614
 claim: "2026-08-31T00:54:11Z"
 assignee: "inline-ruby-bodies-extracted-as-named-helpers"
 blocked-by: null

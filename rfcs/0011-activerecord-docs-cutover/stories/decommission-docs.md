@@ -13,7 +13,7 @@ deps:
 deps-rfc: []
 est-loc: 50
 priority: 25
-pr: 3169
+pr: trails#3169
 claim: "2026-06-13T01:07:59Z"
 assignee: "decommission-docs"
 blocked-by: null

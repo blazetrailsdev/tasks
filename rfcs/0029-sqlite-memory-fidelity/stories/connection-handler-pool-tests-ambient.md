@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5492
+pr: trails#5492
 claim: "2026-07-28T12:28:20Z"
 assignee: "connection-handler-pool-tests-ambient"
 blocked-by: null

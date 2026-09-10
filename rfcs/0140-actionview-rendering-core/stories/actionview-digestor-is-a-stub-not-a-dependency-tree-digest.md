@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 8
-pr: 7628
+pr: trails#7628
 claim: "2026-09-08T19:54:44Z"
 assignee: "actionview-digestor-is-a-stub-not-a-dependency-tree-digest"
 blocked-by: null

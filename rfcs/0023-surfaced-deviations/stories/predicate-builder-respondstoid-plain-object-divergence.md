@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3824
+pr: trails#3824
 claim: "2026-06-21T19:10:42Z"
 assignee: "predicate-builder-respondstoid-plain-object-divergence"
 blocked-by: null

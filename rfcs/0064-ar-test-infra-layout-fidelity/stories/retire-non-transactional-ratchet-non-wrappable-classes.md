@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6125
+pr: trails#6125
 claim: "2026-08-05T12:29:59Z"
 assignee: "retire-non-transactional-ratchet-non-wrappable-classes"
 blocked-by: null

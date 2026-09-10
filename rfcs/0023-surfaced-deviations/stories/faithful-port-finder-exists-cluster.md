@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 4426
+pr: trails#4426
 claim: "2026-07-02T17:45:51Z"
 assignee: "faithful-port-finder-exists-cluster"
 blocked-by: null

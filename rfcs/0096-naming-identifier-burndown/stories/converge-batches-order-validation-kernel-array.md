@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6646
+pr: trails#6646
 claim: "2026-08-17T12:10:23Z"
 assignee: "converge-batches-order-validation-kernel-array"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6216
+pr: trails#6216
 claim: "2026-08-08T01:34:07Z"
 assignee: "migration-connection-readers-name-lease-connection"
 blocked-by: null

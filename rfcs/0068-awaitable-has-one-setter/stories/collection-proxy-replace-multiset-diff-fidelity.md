@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 17
-pr: 5294
+pr: trails#5294
 claim: "2026-07-25T03:02:54Z"
 assignee: "collection-proxy-replace-multiset-diff-fidelity"
 blocked-by: null

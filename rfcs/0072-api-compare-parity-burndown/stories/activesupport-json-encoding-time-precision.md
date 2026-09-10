@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5971
+pr: trails#5971
 claim: "2026-08-03T14:13:48Z"
 assignee: "activesupport-json-encoding-time-precision"
 blocked-by: null

@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 51
-pr: 7419
+pr: trails#7419
 claim: "2026-09-02T23:41:10Z"
 assignee: "activemodel-tests-lack-shared-rails-test-models"
 blocked-by: null

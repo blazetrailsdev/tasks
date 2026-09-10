@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3368
+pr: trails#3368
 claim: "2026-06-15T15:54:30Z"
 assignee: "pg-sql-key-scoped-to-search-path"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 26
-pr: 7450
+pr: trails#7450
 claim: "2026-09-03T18:06:13Z"
 assignee: "vendor-rack-test-source"
 blocked-by: null

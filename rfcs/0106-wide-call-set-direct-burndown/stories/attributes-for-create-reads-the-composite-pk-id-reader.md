@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6907
+pr: trails#6907
 claim: "2026-08-23T11:42:26Z"
 assignee: "attributes-for-create-reads-the-composite-pk-id-reader"
 blocked-by: null

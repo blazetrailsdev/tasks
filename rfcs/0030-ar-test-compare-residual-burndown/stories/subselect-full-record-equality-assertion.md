@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 10
-pr: 3859
+pr: trails#3859
 claim: "2026-06-22T02:43:57Z"
 assignee: "subselect-full-record-equality-assertion"
 blocked-by: null

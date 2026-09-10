@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3278
+pr: trails#3278
 claim: "2026-06-14T18:48:34Z"
 assignee: "delete-all-invalid-methods-and-always-compile"
 blocked-by: null

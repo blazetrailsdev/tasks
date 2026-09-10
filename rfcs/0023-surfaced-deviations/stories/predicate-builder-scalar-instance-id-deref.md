@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3370
+pr: trails#3370
 claim: "2026-06-15T16:12:27Z"
 assignee: "predicate-builder-scalar-instance-id-deref"
 blocked-by: null

@@ -13,7 +13,7 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: 0
-pr: 5099
+pr: trails#5099
 claim: "2026-07-22T23:48:34Z"
 assignee: "remove-internal-write-bridge-converge-write-attribute-strict"
 blocked-by: null

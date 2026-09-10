@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4919
+pr: trails#4919
 claim: "2026-07-17T01:41:14Z"
 assignee: "fix-async-validation-touch-autosave-reorder"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5687
+pr: trails#5687
 claim: "2026-07-30T23:27:18Z"
 assignee: "canonical-loader-guard-scans-only-support-tree"
 blocked-by: null

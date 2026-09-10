@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4303
+pr: trails#4303
 claim: "2026-06-30T01:35:35Z"
 assignee: "adapter-discardbang-abandon-handle-not-close"
 blocked-by: null

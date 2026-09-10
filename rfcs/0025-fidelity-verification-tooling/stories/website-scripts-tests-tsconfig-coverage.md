@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 50
-pr: 5272
+pr: trails#5272
 claim: "2026-07-24T21:42:53Z"
 assignee: "website-scripts-tests-tsconfig-coverage"
 blocked-by: null

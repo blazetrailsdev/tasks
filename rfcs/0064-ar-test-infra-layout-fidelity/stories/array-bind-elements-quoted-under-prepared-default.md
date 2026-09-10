@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: 5779
+pr: trails#5779
 claim: "2026-08-01T00:50:41Z"
 assignee: "array-bind-elements-quoted-under-prepared-default"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: ["move-fs-adapter-into-ruby-compat-as-a-backend-contract"]
 deps-rfc: []
 est-loc: 320
 priority: 4
-pr: 7429
+pr: trails#7429
 claim: "2026-09-03T02:11:13Z"
 assignee: "port-file-and-dir-classes-onto-the-fs-backend"
 blocked-by: null

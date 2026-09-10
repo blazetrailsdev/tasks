@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4080
+pr: trails#4080
 claim: "2026-06-24T19:02:41Z"
 assignee: "default-column-serializer-config-accessor"
 blocked-by: null

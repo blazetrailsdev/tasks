@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5915
+pr: trails#5915
 claim: "2026-08-02T19:31:25Z"
 assignee: "core-equality-operators-live-in-base-not-core"
 blocked-by: null

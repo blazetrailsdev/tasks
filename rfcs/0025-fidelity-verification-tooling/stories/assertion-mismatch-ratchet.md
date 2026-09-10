@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: 5790
+pr: trails#5790
 claim: "2026-08-01T02:53:46Z"
 assignee: "assertion-mismatch-ratchet"
 blocked-by: null

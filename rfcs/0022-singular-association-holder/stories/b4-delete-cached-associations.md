@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 4
-pr: 3188
+pr: trails#3188
 claim: "2026-06-13T12:35:10Z"
 assignee: "b4-delete-cached-associations"
 blocked-by: null

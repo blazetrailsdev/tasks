@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5324
+pr: trails#5324
 claim: "2026-07-25T21:42:53Z"
 assignee: "has-one-create-record-unloaded-target-not-removed"
 blocked-by: null

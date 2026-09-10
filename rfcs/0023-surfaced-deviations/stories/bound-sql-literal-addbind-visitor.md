@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3641
+pr: trails#3641
 claim: "2026-06-19T03:12:25Z"
 assignee: "bound-sql-literal-addbind-visitor"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4391
+pr: trails#4391
 claim: "2026-07-02T01:10:02Z"
 assignee: "converge-attribute-methods-test-canonical-schema"
 blocked-by: null

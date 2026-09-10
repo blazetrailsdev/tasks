@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6440
+pr: trails#6440
 claim: "2026-08-12T22:16:47Z"
 assignee: "port-cache-store-coder-and-serializer-layer"
 blocked-by: null

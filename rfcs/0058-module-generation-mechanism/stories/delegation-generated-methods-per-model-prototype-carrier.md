@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 18
-pr: 4740
+pr: trails#4740
 claim: "2026-07-07T00:57:22Z"
 assignee: "delegation-generated-methods-per-model-prototype-carrier"
 blocked-by: null

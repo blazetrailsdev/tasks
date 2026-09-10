@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 5123
+pr: trails#5123
 claim: "2026-07-23T03:01:38Z"
 assignee: "attribute-methods-assertion-value-fidelity"
 blocked-by: null

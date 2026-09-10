@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 3450
+pr: trails#3450
 claim: "2026-06-16T12:04:59Z"
 assignee: "d2-insert-all-unique-index-introspection"
 blocked-by: null

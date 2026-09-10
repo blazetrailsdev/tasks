@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: 65
-pr: 5103
+pr: trails#5103
 claim: "2026-07-23T00:43:32Z"
 assignee: "retire-predicate-builder-relation-param-and-wide-gate-baseline"
 blocked-by: null

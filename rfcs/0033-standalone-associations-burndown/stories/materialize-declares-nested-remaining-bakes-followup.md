@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 1
-pr: 4282
+pr: trails#4282
 claim: "2026-06-29T17:59:35Z"
 assignee: "materialize-declares-nested-remaining-bakes-followup"
 blocked-by: null

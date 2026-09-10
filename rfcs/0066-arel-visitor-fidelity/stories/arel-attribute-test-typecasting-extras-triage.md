@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5115
+pr: trails#5115
 claim: "2026-07-23T02:07:41Z"
 assignee: "arel-attribute-test-typecasting-extras-triage"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4388
+pr: trails#4388
 claim: "2026-07-01T23:16:16Z"
 assignee: "api-compare-rails-body-hash-pinning"
 blocked-by: null

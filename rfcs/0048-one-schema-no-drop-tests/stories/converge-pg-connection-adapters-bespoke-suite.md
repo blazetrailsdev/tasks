@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4360
+pr: trails#4360
 claim: "2026-07-01T02:54:46Z"
 assignee: "converge-pg-connection-adapters-bespoke-suite"
 blocked-by: null

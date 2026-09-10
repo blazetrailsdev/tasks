@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 170
-pr: 7661
+pr: trails#7661
 claim: "2026-09-10T12:37:56Z"
 assignee: "mysql2-internal-execute-and-exec-query-overrides-rails-lacks"
 blocked-by: null

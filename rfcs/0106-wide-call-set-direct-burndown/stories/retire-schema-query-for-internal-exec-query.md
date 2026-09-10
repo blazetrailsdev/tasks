@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6574
+pr: trails#6574
 claim: "2026-08-15T18:45:04Z"
 assignee: "find-each-no-block-enumerator-size-arm"
 blocked-by: null

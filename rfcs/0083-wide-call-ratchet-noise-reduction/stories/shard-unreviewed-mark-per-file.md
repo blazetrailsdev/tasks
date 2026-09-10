@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 5922
+pr: trails#5922
 claim: "2026-08-02T20:44:08Z"
 assignee: "shard-unreviewed-mark-per-file"
 blocked-by: null

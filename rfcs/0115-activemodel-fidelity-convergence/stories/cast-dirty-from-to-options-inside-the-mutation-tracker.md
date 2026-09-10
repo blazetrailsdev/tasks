@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: 7122
+pr: trails#7122
 claim: "2026-08-27T14:43:53Z"
 assignee: "cast-dirty-from-to-options-inside-the-mutation-tracker"
 blocked-by: null

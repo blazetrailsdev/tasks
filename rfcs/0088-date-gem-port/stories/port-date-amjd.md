@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 6471
+pr: trails#6471
 claim: "2026-08-13T15:55:42Z"
 assignee: "port-relation-sum-block-arm"
 blocked-by: null

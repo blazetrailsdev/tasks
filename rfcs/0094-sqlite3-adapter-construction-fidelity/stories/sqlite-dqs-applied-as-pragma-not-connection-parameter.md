@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 11
-pr: 7668
+pr: trails#7668
 claim: "2026-09-10T16:14:17Z"
 assignee: "delete-build-adapter-arg-once-constructors-take-config-hash"
 blocked-by: null

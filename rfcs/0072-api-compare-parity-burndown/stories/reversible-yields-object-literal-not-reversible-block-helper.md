@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6244
+pr: trails#6244
 claim: "2026-08-08T16:15:56Z"
 assignee: "reversible-yields-object-literal-not-reversible-block-helper"
 blocked-by: null

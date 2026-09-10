@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6587
+pr: trails#6587
 claim: "2026-08-16T00:45:03Z"
 assignee: "wave-2b-query-methods-calculations"
 blocked-by: null

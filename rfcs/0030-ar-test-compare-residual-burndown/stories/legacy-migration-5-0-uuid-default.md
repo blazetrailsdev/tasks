@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 50
-pr: 3524
+pr: trails#3524
 claim: "2026-06-17T02:46:24Z"
 assignee: "legacy-migration-5-0-uuid-default"
 blocked-by: null

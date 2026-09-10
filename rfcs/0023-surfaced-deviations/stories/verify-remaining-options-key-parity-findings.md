@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: 3225
+pr: trails#3225
 claim: "2026-06-13T22:42:34Z"
 assignee: "verify-remaining-options-key-parity-findings"
 blocked-by: null

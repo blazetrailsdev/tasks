@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3624
+pr: trails#3624
 claim: "2026-06-19T02:36:25Z"
 assignee: "attribute-set-null-attribute-fallthrough"
 blocked-by: null

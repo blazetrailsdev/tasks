@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6568
+pr: trails#6568
 claim: "2026-08-15T15:45:07Z"
 assignee: "insert-all-touch-timestamps-trailing-comma"
 blocked-by: null

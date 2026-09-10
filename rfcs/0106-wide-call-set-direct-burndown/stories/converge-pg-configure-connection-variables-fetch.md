@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6874
+pr: trails#6874
 claim: "2026-08-22T19:19:58Z"
 assignee: "converge-pg-configure-connection-variables-fetch"
 blocked-by: null

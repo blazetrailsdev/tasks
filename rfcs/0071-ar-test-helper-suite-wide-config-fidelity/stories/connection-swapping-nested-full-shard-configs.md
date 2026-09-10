@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5444
+pr: trails#5444
 claim: "2026-07-27T19:35:52Z"
 assignee: "connection-swapping-nested-full-shard-configs"
 blocked-by: null

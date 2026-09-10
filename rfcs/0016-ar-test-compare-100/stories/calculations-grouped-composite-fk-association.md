@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3265
+pr: trails#3265
 claim: "2026-06-14T17:00:35Z"
 assignee: "calculations-grouped-composite-fk-association"
 blocked-by: null

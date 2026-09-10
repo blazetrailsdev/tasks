@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3325
+pr: trails#3325
 claim: "2026-06-15T03:05:08Z"
 assignee: "destroy-resets-previously-new-record"
 blocked-by: null

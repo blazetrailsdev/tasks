@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 6
-pr: 3092
+pr: trails#3092
 claim: "2026-06-10T18:22:23Z"
 assignee: "relation-mutation-cluster"
 blocked-by: null

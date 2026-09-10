@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 3902
+pr: trails#3902
 claim: "2026-06-22T17:39:59Z"
 assignee: "consolidate-preflight-micro-jobs"
 blocked-by: null

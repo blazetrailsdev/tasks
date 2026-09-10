@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 6673
+pr: trails#6673
 claim: "2026-08-17T22:18:04Z"
 assignee: "converge-collection-association-reader-reload-and-proxy"
 blocked-by: null

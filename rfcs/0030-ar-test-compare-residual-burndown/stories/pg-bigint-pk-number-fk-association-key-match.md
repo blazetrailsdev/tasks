@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: 4010
+pr: trails#4010
 claim: "2026-06-23T15:18:54Z"
 assignee: "pg-bigint-pk-number-fk-association-key-match"
 blocked-by: null

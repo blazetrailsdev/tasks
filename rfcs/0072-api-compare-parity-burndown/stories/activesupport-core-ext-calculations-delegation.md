@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6190
+pr: trails#6190
 claim: "2026-08-07T18:32:39Z"
 assignee: "activesupport-core-ext-calculations-delegation"
 blocked-by: null

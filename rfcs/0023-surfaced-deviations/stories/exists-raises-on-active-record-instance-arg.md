@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4434
+pr: trails#4434
 claim: "2026-07-02T19:21:51Z"
 assignee: "exists-raises-on-active-record-instance-arg"
 blocked-by: null

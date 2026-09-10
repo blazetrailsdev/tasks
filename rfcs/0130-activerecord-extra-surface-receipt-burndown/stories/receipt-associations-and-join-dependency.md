@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 2
-pr: 7516
+pr: trails#7516
 claim: "2026-09-05T11:07:02Z"
 assignee: "receipt-associations-and-join-dependency"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: ["wave-1-relation-ts"]
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: 6584
+pr: trails#6584
 claim: "2026-08-15T23:15:04Z"
 assignee: "wave-2-relation-family"
 blocked-by: null

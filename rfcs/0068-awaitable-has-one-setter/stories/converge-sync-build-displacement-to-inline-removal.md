@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 15
-pr: 5290
+pr: trails#5290
 claim: "2026-07-25T02:46:53Z"
 assignee: "converge-sync-build-displacement-to-inline-removal"
 blocked-by: null

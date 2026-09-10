@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5674
+pr: trails#5674
 claim: "2026-07-30T20:51:20Z"
 assignee: "extend-detached-jsdoc-lint-to-scripts"
 blocked-by: null

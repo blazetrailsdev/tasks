@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5812
+pr: trails#5812
 claim: "2026-08-01T18:15:01Z"
 assignee: "remove-schema-statements-dispatch-shim-companion-mixin-duality"
 blocked-by: null

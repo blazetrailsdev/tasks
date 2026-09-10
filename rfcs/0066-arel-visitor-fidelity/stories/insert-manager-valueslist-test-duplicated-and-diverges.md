@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 52
-pr: 5017
+pr: trails#5017
 claim: "2026-07-20T23:01:44Z"
 assignee: "insert-manager-valueslist-test-duplicated-and-diverges"
 blocked-by: null

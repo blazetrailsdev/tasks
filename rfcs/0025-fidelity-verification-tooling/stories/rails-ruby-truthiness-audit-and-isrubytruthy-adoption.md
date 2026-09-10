@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 20
-pr: 5215
+pr: trails#5215
 claim: "2026-07-24T04:53:23Z"
 assignee: "rails-ruby-truthiness-audit-and-isrubytruthy-adoption"
 blocked-by: null

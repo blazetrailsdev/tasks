@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4612
+pr: trails#4612
 claim: "2026-07-05T14:07:44Z"
 assignee: "mysql2-active-sync-getter-reflects-connection-state"
 blocked-by: null

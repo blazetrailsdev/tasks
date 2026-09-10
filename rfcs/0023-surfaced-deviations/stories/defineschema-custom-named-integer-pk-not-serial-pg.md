@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3276
+pr: trails#3276
 claim: "2026-06-14T18:36:37Z"
 assignee: "defineschema-custom-named-integer-pk-not-serial-pg"
 blocked-by: null

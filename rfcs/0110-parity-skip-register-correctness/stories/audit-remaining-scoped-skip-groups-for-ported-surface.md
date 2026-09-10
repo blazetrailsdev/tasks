@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7603
+pr: trails#7603
 claim: "2026-09-08T11:37:43Z"
 assignee: "audit-remaining-scoped-skip-groups-for-ported-surface"
 blocked-by: null

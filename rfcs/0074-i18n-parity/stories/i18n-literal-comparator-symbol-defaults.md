@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6048
+pr: trails#6048
 claim: "2026-08-04T03:25:54Z"
 assignee: "i18n-literal-comparator-symbol-defaults"
 blocked-by: null

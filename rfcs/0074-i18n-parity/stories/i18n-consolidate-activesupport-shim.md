@@ -7,7 +7,7 @@ cluster: null
 deps: ["i18n-facade-translate-interpolate"]
 deps-rfc: []
 est-loc: 450
-pr: 6008
+pr: trails#6008
 claim: "2026-08-03T18:50:43Z"
 assignee: "i18n-consolidate-activesupport-shim"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 13
-pr: 3157
+pr: trails#3157
 claim: "2026-06-12T19:52:51Z"
 assignee: "f9-counter-cache-reset"
 blocked-by: null

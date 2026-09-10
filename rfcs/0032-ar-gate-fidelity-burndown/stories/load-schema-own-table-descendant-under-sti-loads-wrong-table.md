@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5170
+pr: trails#5170
 claim: "2026-07-23T20:35:50Z"
 assignee: "load-schema-own-table-descendant-under-sti-loads-wrong-table"
 blocked-by: null

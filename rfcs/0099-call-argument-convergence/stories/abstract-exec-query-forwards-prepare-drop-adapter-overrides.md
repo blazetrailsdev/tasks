@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6548
+pr: trails#6548
 claim: "2026-08-14T22:42:14Z"
 assignee: "abstract-exec-query-forwards-prepare-drop-adapter-overrides"
 blocked-by: null

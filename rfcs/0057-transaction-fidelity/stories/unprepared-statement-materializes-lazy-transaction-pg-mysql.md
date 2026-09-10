@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 40
-pr: 4733
+pr: trails#4733
 claim: "2026-07-07T12:49:50Z"
 assignee: "unprepared-statement-materializes-lazy-transaction-pg-mysql"
 blocked-by: null

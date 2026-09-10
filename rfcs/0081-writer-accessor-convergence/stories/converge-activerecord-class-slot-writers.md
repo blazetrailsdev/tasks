@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5406
+pr: trails#5406
 claim: "2026-07-27T13:41:08Z"
 assignee: "converge-activerecord-class-slot-writers"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["materialize-declares-generator-fixes"]
 deps-rfc: []
 est-loc: 400
 priority: 1
-pr: 4193
+pr: trails#4193
 claim: "2026-06-26T13:41:40Z"
 assignee: "materialize-declares-rollout-remaining"
 blocked-by: null

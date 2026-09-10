@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 3733
+pr: trails#3733
 claim: "2026-06-20T18:13:28Z"
 assignee: "finder-nth-with-connection-shim"
 blocked-by: null

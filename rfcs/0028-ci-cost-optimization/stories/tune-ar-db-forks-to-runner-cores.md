@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 20
-pr: 3870
+pr: trails#3870
 claim: "2026-06-22T11:32:47Z"
 assignee: "tune-ar-db-forks-to-runner-cores"
 blocked-by: null

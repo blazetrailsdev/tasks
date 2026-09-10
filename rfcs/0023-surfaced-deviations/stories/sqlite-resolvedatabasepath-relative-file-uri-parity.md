@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 40
-pr: 3947
+pr: trails#3947
 claim: "2026-06-23T01:23:16Z"
 assignee: "sqlite-resolvedatabasepath-relative-file-uri-parity"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3660
+pr: trails#3660
 claim: "2026-06-19T17:12:27Z"
 assignee: "collection-proxy-relation-enumerable-sort-by"
 blocked-by: null

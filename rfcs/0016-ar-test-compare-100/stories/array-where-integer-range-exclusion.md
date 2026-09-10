@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3258
+pr: trails#3258
 claim: "2026-06-14T14:54:34Z"
 assignee: "array-where-integer-range-exclusion"
 blocked-by: null

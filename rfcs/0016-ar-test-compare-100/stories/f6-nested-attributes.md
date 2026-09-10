@@ -7,7 +7,7 @@ cluster: clusters
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 3011
+pr: trails#3011
 claim: "2026-06-07T22:52:40Z"
 assignee: "f6-nested-attributes"
 blocked-by: null

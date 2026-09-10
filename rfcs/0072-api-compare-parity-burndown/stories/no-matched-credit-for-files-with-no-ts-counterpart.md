@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6414
+pr: trails#6414
 claim: "2026-08-12T14:06:02Z"
 assignee: "converge-collection-proxy-create-delegates-to-association"
 blocked-by: null

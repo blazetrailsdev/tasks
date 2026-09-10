@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4952
+pr: trails#4952
 claim: "2026-07-19T02:11:14Z"
 assignee: "relation-order-string-arg-stays-bare"
 blocked-by: null

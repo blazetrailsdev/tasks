@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4902
+pr: trails#4902
 claim: "2026-07-16T13:01:12Z"
 assignee: "has-one-displaced-record-multi-slot"
 blocked-by: null

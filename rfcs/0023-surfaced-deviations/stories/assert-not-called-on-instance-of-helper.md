@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4265
+pr: trails#4265
 claim: "2026-06-29T12:10:12Z"
 assignee: "assert-not-called-on-instance-of-helper"
 blocked-by: null

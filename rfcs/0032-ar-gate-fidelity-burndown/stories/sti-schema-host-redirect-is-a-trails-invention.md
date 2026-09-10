@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5199
+pr: trails#5199
 claim: "2026-07-23T21:17:11Z"
 assignee: "sti-schema-host-redirect-is-a-trails-invention"
 blocked-by: null

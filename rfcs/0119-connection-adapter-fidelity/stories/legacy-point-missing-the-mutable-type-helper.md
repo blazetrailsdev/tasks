@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 90
-pr: 7657
+pr: trails#7657
 claim: "2026-09-09T23:42:02Z"
 assignee: "remove-invented-translate-and-enrich-wrapper"
 blocked-by: null

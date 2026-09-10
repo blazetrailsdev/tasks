@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5719
+pr: trails#5719
 claim: "2026-07-31T16:24:04Z"
 assignee: "remove-global-reset-and-skip-shield-after-canonical-burndown"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 5
-pr: 3219
+pr: trails#3219
 claim: "2026-06-13T22:06:34Z"
 assignee: "model-level-query-cache-classmethods"
 blocked-by: null

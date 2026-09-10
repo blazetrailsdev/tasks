@@ -8,7 +8,7 @@ packages: ["activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 700
-pr: 6731
+pr: trails#6731
 claim: "2026-08-18T23:41:17Z"
 assignee: "wave-4f-activesupport-residue"
 blocked-by: null

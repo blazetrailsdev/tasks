@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4484
+pr: trails#4484
 claim: "2026-07-03T14:33:52Z"
 assignee: "extractor-detect-non-top-level-includes"
 blocked-by: null

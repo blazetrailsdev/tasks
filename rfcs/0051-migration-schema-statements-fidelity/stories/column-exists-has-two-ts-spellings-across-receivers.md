@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5736
+pr: trails#5736
 claim: "2026-07-31T18:56:56Z"
 assignee: "column-exists-has-two-ts-spellings-across-receivers"
 blocked-by: null

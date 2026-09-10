@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 14
-pr: 3497
+pr: trails#3497
 claim: "2026-06-16T20:12:45Z"
 assignee: "collection-proxy-array-method-missing-delegation"
 blocked-by: null

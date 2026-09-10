@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3436
+pr: trails#3436
 claim: "2026-06-16T01:56:53Z"
 assignee: "cc-schema-dumper-pk-rendering"
 blocked-by: null

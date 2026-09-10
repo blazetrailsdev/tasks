@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 25
-pr: 7314
+pr: trails#7314
 claim: "2026-08-31T20:49:55Z"
 assignee: "burn-down-ruby-compat-novel-surface-and-pin"
 blocked-by: null

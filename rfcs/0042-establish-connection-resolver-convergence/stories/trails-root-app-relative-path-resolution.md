@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: 4300
+pr: trails#4300
 claim: "2026-06-30T01:06:03Z"
 assignee: "trails-root-app-relative-path-resolution"
 blocked-by: null

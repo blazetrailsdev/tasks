@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 3000
+pr: trails#3000
 claim: "2026-06-07T16:55:53Z"
 assignee: "phase2a-read-path"
 blocked-by: null

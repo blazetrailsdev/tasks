@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 15
-pr: 3122
+pr: trails#3122
 claim: "2026-06-11T16:39:06Z"
 assignee: "index-comments-mysql-pg"
 blocked-by: null

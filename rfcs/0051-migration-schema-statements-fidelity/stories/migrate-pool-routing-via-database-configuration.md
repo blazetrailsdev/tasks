@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5473
+pr: trails#5473
 claim: "2026-07-28T00:40:17Z"
 assignee: "migrate-pool-routing-via-database-configuration"
 blocked-by: null

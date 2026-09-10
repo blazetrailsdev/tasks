@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7439
+pr: trails#7439
 claim: "2026-09-03T12:40:04Z"
 assignee: "port-named-route-collection-url-helper-modules"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6741
+pr: trails#6741
 claim: "2026-08-19T14:38:06Z"
 assignee: "callback-chain-empty-predicate-bakeoff-haiku"
 blocked-by: null

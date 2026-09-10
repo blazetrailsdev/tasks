@@ -9,7 +9,7 @@ deps:
   - retire-attribute-set-map-adapter-surface
 deps-rfc: []
 est-loc: 180
-pr: 7028
+pr: trails#7028
 claim: "2026-08-25T12:34:50Z"
 assignee: "converge-attribute-set-builder-residue"
 blocked-by: null

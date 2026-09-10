@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 7
-pr: 3114
+pr: trails#3114
 claim: "2026-06-11T02:12:48Z"
 assignee: "misc-core-cluster"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3292
+pr: trails#3292
 claim: "2026-06-14T21:37:10Z"
 assignee: "f9g3b2-base-test-timezone-and-misc"
 blocked-by: null

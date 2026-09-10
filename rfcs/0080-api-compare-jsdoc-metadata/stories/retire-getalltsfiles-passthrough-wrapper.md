@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5878
+pr: trails#5878
 claim: "2026-08-02T12:26:49Z"
 assignee: "retire-getalltsfiles-passthrough-wrapper"
 blocked-by: null

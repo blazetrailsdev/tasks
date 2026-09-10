@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4655
+pr: trails#4655
 claim: "2026-07-06T02:06:26Z"
 assignee: "converge-normalization-single-type-decoration"
 blocked-by: null

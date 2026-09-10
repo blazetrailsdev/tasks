@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5533
+pr: trails#5533
 claim: "2026-07-28T21:09:04Z"
 assignee: "mysql-prepared-statements-ci-lane"
 blocked-by: null

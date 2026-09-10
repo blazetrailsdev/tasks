@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5761
+pr: trails#5761
 claim: "2026-07-31T21:50:42Z"
 assignee: "dedupe-assume-migrated-upto-version-two-implementations"
 blocked-by: null

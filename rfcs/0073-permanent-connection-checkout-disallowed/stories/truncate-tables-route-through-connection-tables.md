@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 24
-pr: 7258
+pr: trails#7258
 claim: "2026-09-10T13:28:56Z"
 assignee: "schema-cache-resolves-a-class-assigned-adapter"
 blocked-by: null

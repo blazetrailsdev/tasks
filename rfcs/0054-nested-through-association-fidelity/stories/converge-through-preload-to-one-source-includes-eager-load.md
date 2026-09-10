@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4917
+pr: trails#4917
 claim: "2026-07-16T19:51:14Z"
 assignee: "converge-through-preload-to-one-source-includes-eager-load"
 blocked-by: null

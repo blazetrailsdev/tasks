@@ -8,7 +8,7 @@ deps: []
 deps-rfc: ["0019-canonical-schema-burndown"]
 est-loc: 200
 priority: 10
-pr: 4340
+pr: trails#4340
 claim: "2026-06-30T16:38:40Z"
 assignee: "converge-query-cache-one-schema"
 blocked-by: null

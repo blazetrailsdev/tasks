@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6834
+pr: trails#6834
 claim: "2026-08-21T19:04:05Z"
 assignee: "move-ar-normalization-surface-out-of-model"
 blocked-by: null

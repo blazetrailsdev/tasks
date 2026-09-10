@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: 7445
+pr: trails#7445
 claim: "2026-09-03T16:02:25Z"
 assignee: "red-edb1f241"
 blocked-by: null

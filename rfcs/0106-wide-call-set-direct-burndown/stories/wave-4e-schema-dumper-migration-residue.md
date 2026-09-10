@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6689
+pr: trails#6689
 claim: "2026-08-18T12:07:58Z"
 assignee: "wave-4e-schema-dumper-migration-residue"
 blocked-by: null

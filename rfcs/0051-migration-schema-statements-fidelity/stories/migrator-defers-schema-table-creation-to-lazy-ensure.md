@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 5777
+pr: trails#5777
 claim: "2026-08-01T00:30:42Z"
 assignee: "migrator-defers-schema-table-creation-to-lazy-ensure"
 blocked-by: null

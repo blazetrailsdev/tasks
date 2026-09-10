@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 7
-pr: 3491
+pr: trails#3491
 claim: "2026-06-16T19:25:02Z"
 assignee: "id-getter-null-for-keyless-table"
 blocked-by: null

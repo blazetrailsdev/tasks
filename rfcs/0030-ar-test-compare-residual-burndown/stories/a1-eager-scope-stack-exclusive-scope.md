@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: 3931
+pr: trails#3931
 claim: "2026-06-22T21:55:15Z"
 assignee: "a1-eager-scope-stack-exclusive-scope"
 blocked-by: null

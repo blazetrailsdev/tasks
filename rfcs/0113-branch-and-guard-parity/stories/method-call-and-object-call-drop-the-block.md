@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 11
-pr: 7571
+pr: trails#7571
 claim: "2026-09-06T18:18:16Z"
 assignee: "schema-dumpers-take-columns-not-columninfo"
 blocked-by: null

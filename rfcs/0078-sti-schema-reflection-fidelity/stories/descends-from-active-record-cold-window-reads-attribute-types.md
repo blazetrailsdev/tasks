@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6926
+pr: trails#6926
 claim: "2026-08-23T16:42:28Z"
 assignee: "descends-from-active-record-cold-window-reads-attribute-types"
 blocked-by: null

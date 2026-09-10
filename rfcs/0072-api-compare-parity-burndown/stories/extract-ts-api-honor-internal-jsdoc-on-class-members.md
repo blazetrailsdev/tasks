@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5964
+pr: trails#5964
 claim: "2026-08-03T12:44:05Z"
 assignee: "extract-ts-api-honor-internal-jsdoc-on-class-members"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5766
+pr: trails#5766
 claim: "2026-07-31T22:50:41Z"
 assignee: "converge-merge-joins-helper-onto-joins-bang"
 blocked-by: null

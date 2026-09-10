@@ -17,7 +17,7 @@ deps:
 deps-rfc: []
 est-loc: 348
 priority: null
-pr: 7261
+pr: trails#7261
 claim: "2026-08-30T19:34:50Z"
 assignee: "assertions-migration-cluster"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7127
+pr: trails#7127
 claim: "2026-08-27T18:13:52Z"
 assignee: "group-model-ts-remaining-inline-mixin-literals-into-module-objects"
 blocked-by: null

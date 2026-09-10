@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4488
+pr: trails#4488
 claim: "2026-07-03T15:21:50Z"
 assignee: "hmt-unskip-dependent-nullify"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 7598
+pr: trails#7598
 claim: "2026-09-07T19:26:54Z"
 assignee: "port-chained-cookie-jars-module-and-memoize-the-readers"
 blocked-by: null

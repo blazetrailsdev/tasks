@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3964
+pr: trails#3964
 claim: "2026-06-23T10:45:43Z"
 assignee: "ar-cli-coverage-reporting"
 blocked-by: null

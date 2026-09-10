@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 40
-pr: 3948
+pr: trails#3948
 claim: "2026-06-23T01:31:16Z"
 assignee: "string-range-succ-reachability-fidelity"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7392
+pr: trails#7392
 claim: "2026-09-02T16:22:41Z"
 assignee: "deprecation-allow-does-not-bind-a-thread-local"
 blocked-by: null

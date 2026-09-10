@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 4859
+pr: trails#4859
 claim: "2026-07-14T01:32:37Z"
 assignee: "rebase-new-owner-seed-for-count-exists-pluck-terminals"
 blocked-by: null

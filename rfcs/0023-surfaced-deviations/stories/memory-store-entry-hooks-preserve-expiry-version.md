@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3849
+pr: trails#3849
 claim: "2026-06-21T23:34:43Z"
 assignee: "memory-store-entry-hooks-preserve-expiry-version"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6095
+pr: trails#6095
 claim: "2026-08-04T21:47:01Z"
 assignee: "converge-table-definition-index-deferred-options"
 blocked-by: null

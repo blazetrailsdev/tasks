@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6686
+pr: trails#6686
 claim: "2026-08-18T02:31:51Z"
 assignee: "invert-where-chain-trio-onto-wherechain"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6101
+pr: trails#6101
 claim: "2026-08-04T23:11:10Z"
 assignee: "of-kind-default-type-and-normalize-arguments"
 blocked-by: null

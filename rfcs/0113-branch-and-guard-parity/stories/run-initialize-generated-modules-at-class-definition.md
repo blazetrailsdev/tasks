@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6959
+pr: trails#6959
 claim: "2026-08-30T22:34:09Z"
 assignee: "insert-all-unknown-attribute-guard-via-schema-cache"
 blocked-by: null

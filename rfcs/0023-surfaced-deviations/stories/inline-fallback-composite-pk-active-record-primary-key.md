@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: 3740
+pr: trails#3740
 claim: "2026-06-20T20:17:27Z"
 assignee: "inline-fallback-composite-pk-active-record-primary-key"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: 5127
+pr: trails#5127
 claim: "2026-07-23T03:46:36Z"
 assignee: "sqlite3-adapter-virtual-column-value-fidelity"
 blocked-by: null

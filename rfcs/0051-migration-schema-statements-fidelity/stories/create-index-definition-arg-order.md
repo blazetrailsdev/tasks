@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: 6287
+pr: trails#6287
 claim: "2026-08-09T16:19:35Z"
 assignee: "converge-create-table-force-arm-to-rails-unconditional-drop-table"
 blocked-by: null

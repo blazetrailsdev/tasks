@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 14
-pr: 4709
+pr: trails#4709
 claim: "2026-07-06T22:38:52Z"
 assignee: "through-singular-association-statement-cache"
 blocked-by: null

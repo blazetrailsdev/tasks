@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3649
+pr: trails#3649
 claim: "2026-06-19T15:06:39Z"
 assignee: "bound-sql-literal-cast-bound-value-in-visitor"
 blocked-by: null

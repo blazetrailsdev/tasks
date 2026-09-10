@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: 6858
+pr: trails#6858
 claim: "2026-08-22T14:02:53Z"
 assignee: "move-ar-save-side-dirty-surface-out-of-model"
 blocked-by: null

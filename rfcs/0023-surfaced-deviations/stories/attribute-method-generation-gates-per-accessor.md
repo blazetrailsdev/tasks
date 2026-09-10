@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 3619
+pr: trails#3619
 claim: "2026-06-19T01:42:16Z"
 assignee: "attribute-method-generation-gates-per-accessor"
 blocked-by: null

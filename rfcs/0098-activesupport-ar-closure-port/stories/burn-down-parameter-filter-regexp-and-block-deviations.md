@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6614
+pr: trails#6614
 claim: "2026-08-16T22:33:32Z"
 assignee: "collection-proxy-retire-own-seeded-relation-state"
 blocked-by: null

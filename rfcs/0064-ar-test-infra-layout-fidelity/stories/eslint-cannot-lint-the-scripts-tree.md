@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5700
+pr: trails#5700
 claim: "2026-07-31T01:33:04Z"
 assignee: "eslint-cannot-lint-the-scripts-tree"
 blocked-by: null

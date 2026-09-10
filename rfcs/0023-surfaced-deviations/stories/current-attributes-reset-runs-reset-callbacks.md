@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4083
+pr: trails#4083
 claim: "2026-06-24T20:07:01Z"
 assignee: "current-attributes-reset-runs-reset-callbacks"
 blocked-by: null

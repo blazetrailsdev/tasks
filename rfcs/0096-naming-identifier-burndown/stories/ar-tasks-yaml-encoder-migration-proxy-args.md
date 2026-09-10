@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6474
+pr: trails#6474
 claim: "2026-08-13T16:25:38Z"
 assignee: "ar-tasks-yaml-encoder-migration-proxy-args"
 blocked-by: null

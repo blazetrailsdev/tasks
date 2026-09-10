@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 7157
+pr: trails#7157
 claim: "2026-08-28T13:01:51Z"
 assignee: "move-attribute-registration-classmethods-bodies-into-the-module-object"
 blocked-by: null

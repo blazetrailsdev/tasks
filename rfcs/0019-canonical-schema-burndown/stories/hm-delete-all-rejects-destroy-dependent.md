@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 3574
+pr: trails#3574
 claim: "2026-06-19T00:03:09Z"
 assignee: "hm-delete-all-rejects-destroy-dependent"
 blocked-by: null

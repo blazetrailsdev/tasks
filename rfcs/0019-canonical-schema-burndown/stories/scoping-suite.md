@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 300
 priority: 6
-pr: 3110
+pr: trails#3110
 claim: "2026-06-10T23:47:14Z"
 assignee: "scoping-suite"
 blocked-by: null

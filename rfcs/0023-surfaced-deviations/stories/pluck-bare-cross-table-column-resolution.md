@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 3369
+pr: trails#3369
 claim: "2026-06-15T16:00:27Z"
 assignee: "pluck-bare-cross-table-column-resolution"
 blocked-by: null

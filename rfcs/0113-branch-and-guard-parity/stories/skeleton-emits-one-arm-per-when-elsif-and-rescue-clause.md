@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 3
-pr: 7526
+pr: trails#7526
 claim: "2026-09-05T18:26:02Z"
 assignee: "arms-report-unions-same-file-helper-skeletons"
 blocked-by: null

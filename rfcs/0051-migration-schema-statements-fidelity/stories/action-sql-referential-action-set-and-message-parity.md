@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5418
+pr: trails#5418
 claim: "2026-07-27T15:27:35Z"
 assignee: "action-sql-referential-action-set-and-message-parity"
 blocked-by: null

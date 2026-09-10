@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 35
-pr: 4734
+pr: trails#4734
 claim: "2026-07-07T13:13:52Z"
 assignee: "enum-conflict-dangerous-class-method-fidelity"
 blocked-by: null

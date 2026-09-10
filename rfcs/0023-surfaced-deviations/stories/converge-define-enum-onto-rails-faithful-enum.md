@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 3269
+pr: trails#3269
 claim: "2026-06-14T17:24:37Z"
 assignee: "converge-define-enum-onto-rails-faithful-enum"
 blocked-by: null

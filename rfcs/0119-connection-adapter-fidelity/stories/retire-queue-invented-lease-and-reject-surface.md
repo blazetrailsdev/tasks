@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 7276
+pr: trails#7276
 claim: "2026-08-30T23:54:01Z"
 assignee: "time-at-with-coercion-onto-time-class"
 blocked-by: null

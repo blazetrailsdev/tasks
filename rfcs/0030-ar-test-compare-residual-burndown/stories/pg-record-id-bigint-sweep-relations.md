@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3820
+pr: trails#3820
 claim: "2026-06-21T18:38:40Z"
 assignee: "pg-record-id-bigint-sweep-relations"
 blocked-by: null

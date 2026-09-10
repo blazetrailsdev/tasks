@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4467
+pr: trails#4467
 claim: "2026-07-03T02:57:51Z"
 assignee: "has-many-bespoke-fk-skips"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5708
+pr: trails#5708
 claim: "2026-07-31T14:54:06Z"
 assignee: "guard-subclass-prototype-override-of-ddl-emitters"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5633
+pr: trails#5633
 claim: "2026-07-30T13:02:20Z"
 assignee: "arity-cache-sql-ported-block-param"
 blocked-by: null

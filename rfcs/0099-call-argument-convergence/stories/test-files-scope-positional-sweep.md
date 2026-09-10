@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6509
+pr: trails#6509
 claim: "2026-08-14T09:27:06Z"
 assignee: "test-files-scope-positional-sweep"
 blocked-by: null

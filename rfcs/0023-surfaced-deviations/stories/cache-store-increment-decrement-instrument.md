@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 3703
+pr: trails#3703
 claim: "2026-06-20T11:34:43Z"
 assignee: "cache-store-increment-decrement-instrument"
 blocked-by: null

@@ -9,7 +9,7 @@ deps:
   - retire-model-transactional-and-find-callback-macros
 deps-rfc: []
 est-loc: 200
-pr: 6951
+pr: trails#6951
 claim: "2026-08-23T21:16:29Z"
 assignee: "retire-attribute-names-memo-revision-stamp"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4343
+pr: trails#4343
 claim: "2026-06-30T17:32:37Z"
 assignee: "converge-finder-one-schema"
 blocked-by: null

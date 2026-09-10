@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 4602
+pr: trails#4602
 claim: "2026-07-05T11:37:44Z"
 assignee: "fixtures-autoload-rollout-delete-target-registrations"
 blocked-by: null

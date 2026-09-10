@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6191
+pr: trails#6191
 claim: "2026-08-07T18:40:40Z"
 assignee: "references-columns-are-bigint-and-indexed-across-canonical-schema"
 blocked-by: null

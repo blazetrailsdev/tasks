@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4358
+pr: trails#4358
 claim: "2026-07-01T02:24:48Z"
 assignee: "converge-transaction-instrumentation-one-schema"
 blocked-by: null

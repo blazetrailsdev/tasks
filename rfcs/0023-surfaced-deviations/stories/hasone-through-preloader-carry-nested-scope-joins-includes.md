@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4521
+pr: trails#4521
 claim: "2026-07-03T23:07:10Z"
 assignee: "hasone-through-preloader-carry-nested-scope-joins-includes"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5840
+pr: trails#5840
 claim: "2026-08-02T00:01:04Z"
 assignee: "converge-schema-statements-not-implemented-bodies"
 blocked-by: null

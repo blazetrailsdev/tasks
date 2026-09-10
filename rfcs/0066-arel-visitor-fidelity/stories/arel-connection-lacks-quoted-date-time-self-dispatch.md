@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5020
+pr: trails#5020
 claim: "2026-07-20T23:16:44Z"
 assignee: "arel-connection-lacks-quoted-date-time-self-dispatch"
 blocked-by: null

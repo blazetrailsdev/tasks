@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4505
+pr: trails#4505
 claim: "2026-07-03T19:32:22Z"
 assignee: "converge-nested-through-routing-to-association-scope"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 200
 priority: 27
-pr: 4171
+pr: trails#4171
 claim: "2026-06-26T01:51:57Z"
 assignee: "normalized-attribute-test-cluster"
 blocked-by: null

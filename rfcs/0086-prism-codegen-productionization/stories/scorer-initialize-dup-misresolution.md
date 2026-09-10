@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5833
+pr: trails#5833
 claim: "2026-08-01T22:31:00Z"
 assignee: "scorer-initialize-dup-misresolution"
 blocked-by: null

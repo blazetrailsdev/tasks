@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 3359
+pr: trails#3359
 claim: "2026-06-15T14:47:08Z"
 assignee: "fold-named-inner-joins-into-build-join-dependencies"
 blocked-by: null

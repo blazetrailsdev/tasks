@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3992
+pr: trails#3992
 claim: "2026-06-23T13:17:40Z"
 assignee: "extractor-capture-globalid-mixin-surface"
 blocked-by: null

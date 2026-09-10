@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5981
+pr: trails#5981
 claim: "2026-08-03T14:52:47Z"
 assignee: "table-definition-primary-keys-is-a-reader-not-rails-setter"
 blocked-by: null

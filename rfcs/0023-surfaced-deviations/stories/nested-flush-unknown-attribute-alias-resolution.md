@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4608
+pr: trails#4608
 claim: "2026-07-05T13:07:26Z"
 assignee: "nested-flush-unknown-attribute-alias-resolution"
 blocked-by: null

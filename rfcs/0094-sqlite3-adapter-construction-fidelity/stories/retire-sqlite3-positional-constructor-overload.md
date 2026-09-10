@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: 8
-pr: 7666
+pr: trails#7666
 claim: "2026-09-10T15:12:27Z"
 assignee: "retire-sqlite3-positional-constructor-overload"
 blocked-by: null

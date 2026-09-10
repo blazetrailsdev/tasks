@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 400
-pr: 6918
+pr: trails#6918
 claim: "2026-08-26T12:15:01Z"
 assignee: "mysql-native-type-map-converges-onto-type-map"
 blocked-by: null

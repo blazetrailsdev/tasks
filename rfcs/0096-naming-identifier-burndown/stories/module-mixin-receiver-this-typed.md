@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6469
+pr: trails#6469
 claim: "2026-08-13T15:35:52Z"
 assignee: "module-mixin-receiver-this-typed"
 blocked-by: null

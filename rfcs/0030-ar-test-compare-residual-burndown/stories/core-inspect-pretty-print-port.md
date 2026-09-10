@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 11
-pr: 5080
+pr: trails#5080
 claim: "2026-07-22T21:23:03Z"
 assignee: "core-inspect-pretty-print-port"
 blocked-by: null

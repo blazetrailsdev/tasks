@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7268
+pr: trails#7268
 claim: "2026-08-30T20:30:22Z"
 assignee: "converge-preprocess-query-reentrancy-guard"
 blocked-by: null

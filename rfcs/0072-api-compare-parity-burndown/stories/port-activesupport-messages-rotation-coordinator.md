@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5974
+pr: trails#5974
 claim: "2026-08-03T14:20:41Z"
 assignee: "port-activesupport-messages-rotation-coordinator"
 blocked-by: null

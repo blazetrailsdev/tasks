@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 3274
+pr: trails#3274
 claim: "2026-06-14T18:12:35Z"
 assignee: "converge-instantiate-sti-discriminate-class"
 blocked-by: null

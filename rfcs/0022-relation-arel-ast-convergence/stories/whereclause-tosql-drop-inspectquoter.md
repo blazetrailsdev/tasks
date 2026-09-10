@@ -8,7 +8,7 @@ deps: ["audit-bind-inlining-rails-fidelity"]
 deps-rfc: []
 est-loc: 90
 priority: 5
-pr: 3316
+pr: trails#3316
 claim: "2026-06-15T02:16:27Z"
 assignee: "whereclause-tosql-drop-inspectquoter"
 blocked-by: null

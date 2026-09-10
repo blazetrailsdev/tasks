@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6181
+pr: trails#6181
 claim: "2026-08-07T16:37:44Z"
 assignee: "port-command-recorder-test-cases-part-2"
 blocked-by: null

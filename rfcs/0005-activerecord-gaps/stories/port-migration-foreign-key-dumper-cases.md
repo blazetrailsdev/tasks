@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5453
+pr: trails#5453
 claim: "2026-07-27T20:29:51Z"
 assignee: "port-migration-foreign-key-dumper-cases"
 blocked-by: null

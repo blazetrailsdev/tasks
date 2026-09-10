@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: 7225
+pr: trails#7225
 claim: "2026-08-29T23:53:24Z"
 assignee: "param-drift-execute-binds-slot-family-convergence"
 blocked-by: null

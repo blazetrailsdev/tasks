@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 6314
+pr: trails#6314
 claim: "2026-08-10T00:56:48Z"
 assignee: "converge-date-infinity-nan-and-coerce-arms-to-lib-date-rb"
 blocked-by: null

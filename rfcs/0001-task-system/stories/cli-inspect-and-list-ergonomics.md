@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 30
-pr: 3173
+pr: trails#3173
 claim: "2026-06-13T01:44:01Z"
 assignee: "cli-inspect-and-list-ergonomics"
 blocked-by: null

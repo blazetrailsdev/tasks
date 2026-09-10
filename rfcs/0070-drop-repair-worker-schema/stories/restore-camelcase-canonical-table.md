@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: 5260
+pr: trails#5260
 claim: "2026-07-24T19:26:53Z"
 assignee: "restore-camelcase-canonical-table"
 blocked-by: null

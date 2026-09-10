@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3970
+pr: trails#3970
 claim: "2026-06-23T11:07:38Z"
 assignee: "canonical-company-enable-sti"
 blocked-by: null

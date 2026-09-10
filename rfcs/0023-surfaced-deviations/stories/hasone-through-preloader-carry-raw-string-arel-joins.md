@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 4526
+pr: trails#4526
 claim: "2026-07-04T00:19:08Z"
 assignee: "hasone-through-preloader-carry-raw-string-arel-joins"
 blocked-by: null

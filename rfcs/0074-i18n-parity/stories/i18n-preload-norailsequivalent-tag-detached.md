@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 6059
+pr: trails#6059
 claim: "2026-08-04T13:42:32Z"
 assignee: "i18n-preload-norailsequivalent-tag-detached"
 blocked-by: null

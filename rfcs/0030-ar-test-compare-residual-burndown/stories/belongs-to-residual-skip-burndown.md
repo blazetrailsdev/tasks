@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 6
-pr: 5131
+pr: trails#5131
 claim: "2026-07-23T11:43:37Z"
 assignee: "belongs-to-residual-skip-burndown"
 blocked-by: null

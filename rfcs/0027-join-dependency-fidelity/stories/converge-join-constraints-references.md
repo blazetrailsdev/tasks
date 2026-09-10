@@ -8,7 +8,7 @@ deps: ["converge-alias-tracking"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 3253
+pr: trails#3253
 claim: "2026-06-14T14:12:35Z"
 assignee: "converge-join-constraints-references"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5249
+pr: trails#5249
 claim: "2026-07-24T18:06:57Z"
 assignee: "converge-autosave-association-author-post-book-comment-shadows"
 blocked-by: null

@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4524
+pr: trails#4524
 claim: "2026-07-03T23:55:07Z"
 assignee: "instance-update-nil-raises-argumenterror"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4075
+pr: trails#4075
 claim: "2026-06-24T18:26:41Z"
 assignee: "canonical-pirate-remaining-nested-attributes"
 blocked-by: null

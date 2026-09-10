@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: 4013
+pr: trails#4013
 claim: "2026-06-23T15:37:26Z"
 assignee: "libsql-replica-auto-sync"
 blocked-by: null

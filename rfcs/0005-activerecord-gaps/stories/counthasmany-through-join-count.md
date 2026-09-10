@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: 3230
+pr: trails#3230
 claim: "2026-06-14T01:32:05Z"
 assignee: "counthasmany-through-join-count"
 blocked-by: null

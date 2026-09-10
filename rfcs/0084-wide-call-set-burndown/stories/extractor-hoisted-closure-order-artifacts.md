@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6436
+pr: trails#6436
 claim: "2026-08-12T19:56:51Z"
 assignee: "converge-pg-supports-optimizer-hints-memo"
 blocked-by: null

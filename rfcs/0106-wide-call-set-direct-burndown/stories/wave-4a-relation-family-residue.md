@@ -11,7 +11,7 @@ deps:
   - converge-execute-grouped-calculation-body-to-rails-source-order
 deps-rfc: []
 est-loc: 600
-pr: 6721
+pr: trails#6721
 claim: "2026-08-18T20:46:48Z"
 assignee: "wave-4a-relation-family-residue"
 blocked-by: null

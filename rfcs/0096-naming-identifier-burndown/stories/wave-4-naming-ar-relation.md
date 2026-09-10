@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6619
+pr: trails#6619
 claim: "2026-08-16T22:56:16Z"
 assignee: "activemodel-instance-validates-with"
 blocked-by: null

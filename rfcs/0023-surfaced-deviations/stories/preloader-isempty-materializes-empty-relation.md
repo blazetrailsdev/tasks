@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 40
-pr: 3881
+pr: trails#3881
 claim: "2026-06-22T13:07:57Z"
 assignee: "preloader-isempty-materializes-empty-relation"
 blocked-by: null

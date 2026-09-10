@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 1
-pr: 4498
+pr: trails#4498
 claim: "2026-07-03T17:33:51Z"
 assignee: "decouple-tdz-guard-from-define-schema"
 blocked-by: null

@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 5816
+pr: trails#5816
 claim: "2026-08-01T19:03:00Z"
 assignee: "delegate-macro-receiver-resolution"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5703
+pr: trails#5703
 claim: "2026-07-31T02:18:03Z"
 assignee: "protectedparams-dup-preserves-permitted"
 blocked-by: null

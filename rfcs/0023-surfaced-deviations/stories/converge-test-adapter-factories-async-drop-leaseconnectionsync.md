@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 4478
+pr: trails#4478
 claim: "2026-07-03T12:57:52Z"
 assignee: "converge-test-adapter-factories-async-drop-leaseconnectionsync"
 blocked-by: null

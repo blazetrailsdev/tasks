@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6325
+pr: trails#6325
 claim: "2026-08-10T10:02:14Z"
 assignee: "uncached-sql-payload-name-nil-passthrough"
 blocked-by: null

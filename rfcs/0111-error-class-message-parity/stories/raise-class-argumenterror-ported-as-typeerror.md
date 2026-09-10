@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 10
-pr: 7587
+pr: trails#7587
 claim: "2026-09-07T02:20:00Z"
 assignee: "one-shared-nomethoderror-class"
 blocked-by: null

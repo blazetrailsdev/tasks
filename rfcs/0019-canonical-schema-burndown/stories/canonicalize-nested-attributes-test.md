@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 50
-pr: 3604
+pr: trails#3604
 claim: "2026-06-18T21:23:08Z"
 assignee: "canonicalize-nested-attributes-test"
 blocked-by: null

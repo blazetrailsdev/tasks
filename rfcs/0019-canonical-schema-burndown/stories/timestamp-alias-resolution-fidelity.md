@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 3571
+pr: trails#3571
 claim: "2026-06-17T22:13:12Z"
 assignee: "timestamp-alias-resolution-fidelity"
 blocked-by: null

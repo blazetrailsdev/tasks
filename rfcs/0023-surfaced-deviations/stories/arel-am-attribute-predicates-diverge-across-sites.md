@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4882
+pr: trails#4882
 claim: "2026-07-15T02:21:13Z"
 assignee: "arel-am-attribute-predicates-diverge-across-sites"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4850
+pr: trails#4850
 claim: "2026-07-13T20:42:33Z"
 assignee: "query-cache-multi-role-connected-to-tests"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 40
-pr: 3940
+pr: trails#3940
 claim: "2026-06-23T00:27:22Z"
 assignee: "schema-dumper-partial-nulls-branch-not-skip"
 blocked-by: null

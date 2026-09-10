@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: 4106
+pr: trails#4106
 claim: "2026-06-25T11:22:33Z"
 assignee: "converge-ar-module-config-duplicate-homes-to-canonical"
 blocked-by: null

@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6241
+pr: trails#6241
 claim: "2026-08-08T15:39:54Z"
 assignee: "retire-pg-sqlite-get-database-version-memo-guards"
 blocked-by: null

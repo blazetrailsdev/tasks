@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 4
-pr: 7382
+pr: trails#7382
 claim: "2026-09-02T11:29:24Z"
 assignee: "method-order-manifest-actionpack-package-dirs-are-stale"
 blocked-by: null

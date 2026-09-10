@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6592
+pr: trails#6592
 claim: "2026-08-16T02:15:03Z"
 assignee: "collection-proxy-finder-overrides-collapse-to-super"
 blocked-by: null

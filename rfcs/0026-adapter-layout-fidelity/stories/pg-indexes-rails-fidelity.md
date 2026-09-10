@@ -8,7 +8,7 @@ deps: ["extract-pg-schema-statements-indexes"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3340
+pr: trails#3340
 claim: "2026-06-15T12:55:07Z"
 assignee: "pg-indexes-rails-fidelity"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 7
-pr: 6856
+pr: trails#6856
 claim: "2026-08-22T12:20:33Z"
 assignee: "arel-operator-spellings-in-conventions"
 blocked-by: null

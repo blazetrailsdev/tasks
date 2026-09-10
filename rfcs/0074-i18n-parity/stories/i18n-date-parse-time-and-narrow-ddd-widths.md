@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 6070
+pr: trails#6070
 claim: "2026-08-04T16:19:08Z"
 assignee: "i18n-date-parse-time-and-narrow-ddd-widths"
 blocked-by: null

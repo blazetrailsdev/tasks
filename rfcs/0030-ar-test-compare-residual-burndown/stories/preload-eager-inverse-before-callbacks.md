@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 3832
+pr: trails#3832
 claim: "2026-06-21T20:30:42Z"
 assignee: "preload-eager-inverse-before-callbacks"
 blocked-by: null

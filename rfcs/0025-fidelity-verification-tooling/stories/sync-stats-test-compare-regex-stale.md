@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 1
-pr: 5721
+pr: trails#5721
 claim: "2026-07-31T17:00:05Z"
 assignee: "sync-stats-test-compare-regex-stale"
 blocked-by: null

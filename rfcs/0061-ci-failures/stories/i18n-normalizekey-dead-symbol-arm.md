@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6038
+pr: trails#6038
 claim: "2026-08-04T00:56:41Z"
 assignee: "i18n-normalizekey-dead-symbol-arm"
 blocked-by: null

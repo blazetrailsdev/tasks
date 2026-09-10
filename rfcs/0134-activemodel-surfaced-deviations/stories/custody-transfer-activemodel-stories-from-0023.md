@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: 25
+pr: tasks#25
 claim: "2026-09-01T20:37:49Z"
 assignee: "custody-transfer-activemodel-stories-from-0023"
 blocked-by: null

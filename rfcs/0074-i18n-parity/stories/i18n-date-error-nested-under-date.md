@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6069
+pr: trails#6069
 claim: "2026-08-04T16:04:09Z"
 assignee: "i18n-date-error-nested-under-date"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6391
+pr: trails#6391
 claim: "2026-08-12T00:46:03Z"
 assignee: "naming-comparator-to-s-and-reserved-word-residue"
 blocked-by: null

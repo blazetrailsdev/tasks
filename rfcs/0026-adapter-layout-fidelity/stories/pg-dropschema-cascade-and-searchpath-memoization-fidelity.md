@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3337
+pr: trails#3337
 claim: "2026-06-15T12:50:07Z"
 assignee: "pg-dropschema-cascade-and-searchpath-memoization-fidelity"
 blocked-by: null

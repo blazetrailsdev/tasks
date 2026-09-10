@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-pr: 6716
+pr: trails#6716
 claim: "2026-08-18T19:52:42Z"
 assignee: "converge-execute-grouped-calculation-body-to-rails-source-order"
 blocked-by: null

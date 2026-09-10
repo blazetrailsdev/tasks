@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 7634
+pr: trails#7634
 claim: "2026-09-09T00:26:03Z"
 assignee: "disconnect-bang-drops-the-lock-and-nils-the-connection"
 blocked-by: null

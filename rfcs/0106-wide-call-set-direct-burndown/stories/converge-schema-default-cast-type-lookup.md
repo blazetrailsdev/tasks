@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6875
+pr: trails#6875
 claim: "2026-08-22T19:34:59Z"
 assignee: "converge-schema-default-cast-type-lookup"
 blocked-by: null

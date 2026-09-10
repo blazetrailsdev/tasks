@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 35
-pr: 4751
+pr: trails#4751
 claim: "2026-07-07T18:49:50Z"
 assignee: "hasone-through-preloader-resolve-multilevel-nested-tables"
 blocked-by: null

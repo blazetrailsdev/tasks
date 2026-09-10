@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3613
+pr: trails#3613
 claim: "2026-06-19T01:02:17Z"
 assignee: "assoc-check-validity-raises-at-load-not-constructor"
 blocked-by: null

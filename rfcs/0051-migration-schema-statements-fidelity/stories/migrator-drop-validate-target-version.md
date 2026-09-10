@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5780
+pr: trails#5780
 claim: "2026-08-01T01:01:11Z"
 assignee: "migrator-drop-validate-target-version"
 blocked-by: null

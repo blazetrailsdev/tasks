@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 6046
+pr: trails#6046
 claim: "2026-08-04T02:55:58Z"
 assignee: "i18n-defer-backend-flatten"
 blocked-by: null

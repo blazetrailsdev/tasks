@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: 3876
+pr: trails#3876
 claim: "2026-06-22T12:19:57Z"
 assignee: "thread-yielded-connection-internal-query-path"
 blocked-by: null

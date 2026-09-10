@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4961
+pr: trails#4961
 claim: "2026-07-19T14:51:11Z"
 assignee: "remove-test-url-sniffing-migrate-ci-onto-sub-settings"
 blocked-by: null

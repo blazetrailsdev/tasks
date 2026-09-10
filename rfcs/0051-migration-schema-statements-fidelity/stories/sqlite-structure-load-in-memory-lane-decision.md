@@ -9,7 +9,7 @@ deps: ["sqlite-structure-tasks-in-memory-branch-has-no-rails-counterpart"]
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 7136
+pr: trails#7136
 claim: "2026-08-27T20:13:47Z"
 assignee: "sqlite-structure-load-in-memory-lane-decision"
 blocked-by: null

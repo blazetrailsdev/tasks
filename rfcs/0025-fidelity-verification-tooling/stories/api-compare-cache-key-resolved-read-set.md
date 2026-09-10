@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5380
+pr: trails#5380
 claim: "2026-07-27T00:30:54Z"
 assignee: "api-compare-cache-key-resolved-read-set"
 blocked-by: null

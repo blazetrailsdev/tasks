@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4415
+pr: trails#4415
 claim: "2026-07-02T15:33:51Z"
 assignee: "enum-negative-scope-warn-not-raise"
 blocked-by: null

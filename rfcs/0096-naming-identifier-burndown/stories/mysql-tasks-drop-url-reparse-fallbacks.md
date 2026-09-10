@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6481
+pr: trails#6481
 claim: "2026-08-13T17:35:42Z"
 assignee: "mysql-tasks-drop-url-reparse-fallbacks"
 blocked-by: null

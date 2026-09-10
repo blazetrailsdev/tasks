@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 50
-pr: 7354
+pr: trails#7354
 claim: "2026-09-01T18:53:13Z"
 assignee: "move-string-io-to-ruby-compat"
 blocked-by: null

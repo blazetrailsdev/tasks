@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5562
+pr: trails#5562
 claim: "2026-07-29T02:15:44Z"
 assignee: "converge-tz-converter-fallback-onto-ar-default-timezone"
 blocked-by: null

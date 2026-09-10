@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4882
+pr: trails#4882
 claim: "2026-07-14T23:41:12Z"
 assignee: "arel-build-quoted-passes-model-attribute-unwrapped"
 blocked-by: null

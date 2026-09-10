@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 27
-pr: 3510
+pr: trails#3510
 claim: "2026-06-16T23:36:41Z"
 assignee: "transaction-option-validation-and-ddl"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 41
-pr: 7573
+pr: trails#7573
 claim: "2026-09-06T19:04:29Z"
 assignee: "actionpack-uploaded-file-holds-a-path-not-a-tempfile"
 blocked-by: null

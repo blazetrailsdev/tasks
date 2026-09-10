@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: 73
-pr: 4231
+pr: trails#4231
 claim: "2026-06-28T11:32:50Z"
 assignee: "autosave-association-canonical-conversion"
 blocked-by: null

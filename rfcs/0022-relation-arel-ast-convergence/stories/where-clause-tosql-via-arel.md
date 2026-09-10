@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 50
-pr: 3559
+pr: trails#3559
 claim: "2026-06-17T17:59:41Z"
 assignee: "where-clause-tosql-via-arel"
 blocked-by: null

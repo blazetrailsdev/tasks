@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5276
+pr: trails#5276
 claim: "2026-07-24T22:38:54Z"
 assignee: "drop-topics-relay-in-transactions-trails"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 5072
+pr: trails#5072
 claim: "2026-07-22T19:26:48Z"
 assignee: "relocate-validations-tests-and-wrong-describe"
 blocked-by: null

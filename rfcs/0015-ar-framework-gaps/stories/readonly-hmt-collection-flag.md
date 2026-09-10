@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 35
-pr: 2967
+pr: trails#2967
 claim: "2026-06-06T12:03:03Z"
 assignee: "readonly-hmt-collection-flag"
 blocked-by: null

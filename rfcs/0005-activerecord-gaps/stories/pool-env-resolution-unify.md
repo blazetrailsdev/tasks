@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 23
-pr: 2960
+pr: trails#2960
 claim: "2026-06-05T19:37:42Z"
 assignee: "pool-env-resolution-unify"
 blocked-by: null

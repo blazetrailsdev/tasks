@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 20
-pr: 5191
+pr: trails#5191
 claim: "2026-07-24T00:02:13Z"
 assignee: "pg-virtual-column-build-fixture-sql-canonical-data"
 blocked-by: null

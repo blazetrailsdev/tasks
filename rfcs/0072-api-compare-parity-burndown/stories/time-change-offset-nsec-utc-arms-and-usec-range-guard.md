@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6246
+pr: trails#6246
 claim: "2026-08-08T16:39:55Z"
 assignee: "time-change-offset-nsec-utc-arms-and-usec-range-guard"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 16
-pr: 5030
+pr: trails#5030
 claim: "2026-07-27T16:26:21Z"
 assignee: "arel-file-structure-method-order-manifest-stale"
 blocked-by: null

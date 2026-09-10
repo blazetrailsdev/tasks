@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 204
 priority: null
-pr: 6370
+pr: trails#6370
 claim: "2026-08-11T17:44:26Z"
 assignee: "pg-reset-body-under-one-lock"
 blocked-by: null

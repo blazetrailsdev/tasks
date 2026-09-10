@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 2
-pr: 7417
+pr: trails#7417
 claim: "2026-09-02T23:07:26Z"
 assignee: "rename-finder-methods-to-rails-names"
 blocked-by: null

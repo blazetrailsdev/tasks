@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 3741
+pr: trails#3741
 claim: "2026-06-20T20:07:28Z"
 assignee: "hot-compatibility-schema-cache-hot-reload-remove-column"
 blocked-by: null

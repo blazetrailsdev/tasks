@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: 5010
+pr: trails#5010
 claim: "2026-07-20T20:21:45Z"
 assignee: "converge-arel-array-type-cast-fallback-to-typeerror"
 blocked-by: null

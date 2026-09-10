@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 6
-pr: 7574
+pr: trails#7574
 claim: "2026-09-06T19:13:44Z"
 assignee: "converge-alias-attribute-not-an-attribute-raise"
 blocked-by: null

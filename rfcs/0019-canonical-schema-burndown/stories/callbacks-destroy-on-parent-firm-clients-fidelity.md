@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3766
+pr: trails#3766
 claim: "2026-06-21T02:38:42Z"
 assignee: "callbacks-destroy-on-parent-firm-clients-fidelity"
 blocked-by: null

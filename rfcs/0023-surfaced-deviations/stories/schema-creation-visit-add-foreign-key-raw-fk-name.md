@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 40
-pr: 3939
+pr: trails#3939
 claim: "2026-06-22T23:39:15Z"
 assignee: "schema-creation-visit-add-foreign-key-raw-fk-name"
 blocked-by: null

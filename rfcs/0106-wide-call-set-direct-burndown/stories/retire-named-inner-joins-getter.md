@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6582
+pr: trails#6582
 claim: "2026-08-15T23:25:26Z"
 assignee: "retire-named-inner-joins-getter"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4953
+pr: trails#4953
 claim: "2026-07-19T14:01:17Z"
 assignee: "pg-quote-default-expression-uuid-fn-branch"
 blocked-by: null

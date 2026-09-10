@@ -9,7 +9,7 @@ deps: ["api-compare-buckets-reopened-module-under-one-file"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7603
+pr: trails#7603
 claim: "2026-09-08T11:37:40Z"
 assignee: "artest-config-skip-hides-four-ported-members"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5603
+pr: trails#5603
 claim: "2026-07-29T21:24:00Z"
 assignee: "reconcile-repo-root-sqlite-audit-with-fixture-databases"
 blocked-by: null

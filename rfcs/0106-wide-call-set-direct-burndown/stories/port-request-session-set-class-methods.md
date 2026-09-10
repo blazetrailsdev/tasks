@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: 6675
+pr: trails#6675
 claim: "2026-08-17T23:07:59Z"
 assignee: "admit-first-to-receiver-as-first-arg"
 blocked-by: null

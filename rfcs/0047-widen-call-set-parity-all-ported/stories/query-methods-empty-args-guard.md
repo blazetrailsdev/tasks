@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: 1
-pr: 4283
+pr: trails#4283
 claim: "2026-06-29T18:08:41Z"
 assignee: "query-methods-empty-args-guard"
 blocked-by: null

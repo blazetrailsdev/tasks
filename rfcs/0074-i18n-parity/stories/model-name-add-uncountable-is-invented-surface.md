@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6176
+pr: trails#6176
 claim: "2026-08-07T15:54:17Z"
 assignee: "i18n-load-yml-json-take-the-psych4-arm"
 blocked-by: null

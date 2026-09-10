@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6576
+pr: trails#6576
 claim: "2026-08-15T19:45:02Z"
 assignee: "select-association-list-takes-joins-values-verbatim"
 blocked-by: null

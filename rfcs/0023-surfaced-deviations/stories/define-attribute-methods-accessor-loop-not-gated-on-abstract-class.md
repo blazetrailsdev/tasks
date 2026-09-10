@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3361
+pr: trails#3361
 claim: "2026-06-15T15:11:08Z"
 assignee: "define-attribute-methods-accessor-loop-not-gated-on-abstract-class"
 blocked-by: null

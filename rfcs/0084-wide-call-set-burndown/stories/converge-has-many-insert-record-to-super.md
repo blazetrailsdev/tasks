@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6407
+pr: trails#6407
 claim: "2026-08-12T10:46:04Z"
 assignee: "converge-has-many-insert-record-to-super"
 blocked-by: null

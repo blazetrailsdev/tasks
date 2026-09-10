@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3306
+pr: trails#3306
 claim: "2026-06-14T23:29:13Z"
 assignee: "materialize-transactions-reentrancy-guard-vs-rails"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 7061
+pr: trails#7061
 claim: "2026-09-10T18:14:49Z"
 assignee: "retire-associations-eager-collection-proxy-force-load"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6569
+pr: trails#6569
 claim: "2026-08-15T16:15:07Z"
 assignee: "sqlite3-virtual-tables-return-pairs"
 blocked-by: null

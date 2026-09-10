@@ -8,7 +8,7 @@ deps: [fixtures-additive-surface]
 deps-rfc: []
 est-loc: 400
 priority: 4
-pr: 4347
+pr: trails#4347
 claim: "2026-06-30T19:08:45Z"
 assignee: "fixtures-unify-direct-adapter-path"
 blocked-by: null

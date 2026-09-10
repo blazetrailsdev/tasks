@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5173
+pr: trails#5173
 claim: "2026-07-23T20:47:46Z"
 assignee: "attributes-own-table-descendant-under-sti-routes-to-base"
 blocked-by: null

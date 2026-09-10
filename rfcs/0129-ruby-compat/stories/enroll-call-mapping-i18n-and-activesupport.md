@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 15
-pr: 7307
+pr: trails#7307
 claim: "2026-08-31T19:35:25Z"
 assignee: "enroll-call-mapping-i18n-and-activesupport"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3725
+pr: trails#3725
 claim: "2026-06-20T16:37:30Z"
 assignee: "derive-fk-query-constraints-argumenterror-type"
 blocked-by: null

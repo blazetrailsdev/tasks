@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: 7584
+pr: trails#7584
 claim: "2026-09-07T01:43:51Z"
 assignee: "time-to-time-hands-out-a-skewed-wall-clock"
 blocked-by: null

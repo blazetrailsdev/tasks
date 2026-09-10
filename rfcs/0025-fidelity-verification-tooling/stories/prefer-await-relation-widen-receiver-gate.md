@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 25
-pr: 5233
+pr: trails#5233
 claim: "2026-07-24T16:06:57Z"
 assignee: "prefer-await-relation-widen-receiver-gate"
 blocked-by: null

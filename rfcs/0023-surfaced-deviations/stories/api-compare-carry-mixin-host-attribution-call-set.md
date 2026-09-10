@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 4678
+pr: trails#4678
 claim: "2026-07-06T14:52:59Z"
 assignee: "api-compare-carry-mixin-host-attribution-call-set"
 blocked-by: null

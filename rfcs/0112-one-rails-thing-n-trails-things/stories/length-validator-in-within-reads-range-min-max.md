@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-pr: 6632
+pr: trails#6632
 claim: "2026-08-25T16:42:34Z"
 assignee: "converge-clear-cache-lock-mysql-sqlite"
 blocked-by: null

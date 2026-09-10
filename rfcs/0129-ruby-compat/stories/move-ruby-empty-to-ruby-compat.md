@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 52
-pr: 7360
+pr: trails#7360
 claim: "2026-09-01T20:28:56Z"
 assignee: "move-ruby-empty-to-ruby-compat"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4846
+pr: trails#4846
 claim: "2026-07-13T19:38:23Z"
 assignee: "predicate-builder-base-not-tablemetadata-backed"
 blocked-by: null

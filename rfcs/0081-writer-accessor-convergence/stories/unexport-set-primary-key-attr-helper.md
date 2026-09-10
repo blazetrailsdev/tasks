@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5392
+pr: trails#5392
 claim: "2026-07-29T03:15:44Z"
 assignee: "unexport-set-primary-key-attr-helper"
 blocked-by: null

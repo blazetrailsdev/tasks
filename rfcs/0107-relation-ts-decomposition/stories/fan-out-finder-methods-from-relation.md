@@ -9,7 +9,7 @@ deps: ["retire-relation-private-thunk-block"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: 6605
+pr: trails#6605
 claim: "2026-08-16T18:52:31Z"
 assignee: "converge-execute-grouped-calculation-body-to-rails-source-order"
 blocked-by: null

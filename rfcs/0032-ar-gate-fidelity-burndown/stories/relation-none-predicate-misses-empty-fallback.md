@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5165
+pr: trails#5165
 claim: "2026-07-23T17:16:38Z"
 assignee: "relation-none-predicate-misses-empty-fallback"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4324
+pr: trails#4324
 claim: "2026-06-30T15:39:39Z"
 assignee: "core-test-ruby-only-skips-triage"
 blocked-by: null

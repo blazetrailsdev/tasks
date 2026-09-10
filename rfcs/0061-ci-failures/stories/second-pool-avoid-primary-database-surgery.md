@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5438
+pr: trails#5438
 claim: "2026-07-27T18:47:51Z"
 assignee: "second-pool-avoid-primary-database-surgery"
 blocked-by: null

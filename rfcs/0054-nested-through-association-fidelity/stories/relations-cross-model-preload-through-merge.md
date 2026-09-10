@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 19
-pr: 4742
+pr: trails#4742
 claim: "2026-07-07T15:25:49Z"
 assignee: "relations-cross-model-preload-through-merge"
 blocked-by: null

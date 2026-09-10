@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3968
+pr: trails#3968
 claim: "2026-06-23T10:57:39Z"
 assignee: "as-foreign-type-option-honored-in-reflection-type"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6868
+pr: trails#6868
 claim: "2026-08-22T17:50:03Z"
 assignee: "port-delegation-generate-module-and-reserved-receivers"
 blocked-by: null

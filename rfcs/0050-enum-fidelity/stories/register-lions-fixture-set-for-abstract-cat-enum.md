@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4864
+pr: trails#4864
 claim: "2026-07-14T13:57:02Z"
 assignee: "register-lions-fixture-set-for-abstract-cat-enum"
 blocked-by: null

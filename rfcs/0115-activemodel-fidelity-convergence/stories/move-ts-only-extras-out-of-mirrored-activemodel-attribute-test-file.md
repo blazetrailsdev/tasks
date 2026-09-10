@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 7017
+pr: trails#7017
 claim: "2026-08-24T23:54:09Z"
 assignee: "move-ts-only-extras-out-of-mirrored-activemodel-attribute-test-file"
 blocked-by: null

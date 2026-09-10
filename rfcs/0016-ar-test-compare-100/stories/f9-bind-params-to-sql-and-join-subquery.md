@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3237
+pr: trails#3237
 claim: "2026-06-14T02:00:34Z"
 assignee: "f9-bind-params-to-sql-and-join-subquery"
 blocked-by: null

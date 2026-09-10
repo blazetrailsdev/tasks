@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 4832
+pr: trails#4832
 claim: "2026-07-27T19:23:50Z"
 assignee: "remove-target-nullify-failure-raise-untested"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3965
+pr: trails#3965
 claim: "2026-06-23T10:45:52Z"
 assignee: "ar-test-reset-bespoke-table-teardown-ratchet"
 blocked-by: null

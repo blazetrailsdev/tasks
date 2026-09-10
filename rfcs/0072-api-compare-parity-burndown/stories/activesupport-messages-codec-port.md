@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 5353
+pr: trails#5353
 claim: "2026-07-26T14:38:58Z"
 assignee: "activesupport-messages-codec-port"
 blocked-by: null

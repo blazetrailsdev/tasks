@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6284
+pr: trails#6284
 claim: "2026-08-09T15:42:26Z"
 assignee: "converge-ddl-schema-cache-recording-into-the-ported-ddl-bodies"
 blocked-by: null

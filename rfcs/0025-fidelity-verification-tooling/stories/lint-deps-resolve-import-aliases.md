@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 50
-pr: 5241
+pr: trails#5241
 claim: "2026-07-24T17:10:55Z"
 assignee: "lint-deps-resolve-import-aliases"
 blocked-by: null

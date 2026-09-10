@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 7168
+pr: trails#7168
 claim: "2026-08-28T16:04:58Z"
 assignee: "converge-activemodel-callbacks-extended-hook-to-append-features-order"
 blocked-by: null

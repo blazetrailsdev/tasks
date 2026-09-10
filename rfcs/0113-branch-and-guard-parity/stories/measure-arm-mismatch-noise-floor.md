@@ -9,7 +9,7 @@ deps: ["promote-call-skeletons-to-an-arms-report"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7239
+pr: trails#7239
 claim: "2026-08-30T14:12:56Z"
 assignee: "measure-arm-mismatch-noise-floor"
 blocked-by: null

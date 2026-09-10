@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 30
-pr: 3878
+pr: trails#3878
 claim: "2026-06-22T12:43:58Z"
 assignee: "unskip-named-scoping-scope-definition-guards"
 blocked-by: null

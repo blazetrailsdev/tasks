@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5580
+pr: trails#5580
 claim: "2026-07-29T17:46:29Z"
 assignee: "sqlite-temp-db-exit-cleanup-unreliable"
 blocked-by: null

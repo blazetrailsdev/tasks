@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6012
+pr: trails#6012
 claim: "2026-08-03T19:46:42Z"
 assignee: "i18n-exceptions-test-through-facade"
 blocked-by: null

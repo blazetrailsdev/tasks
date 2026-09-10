@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6096
+pr: trails#6096
 claim: "2026-08-04T21:59:03Z"
 assignee: "port-compare-with-range"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 18
-pr: 3124
+pr: trails#3124
 claim: "2026-06-11T16:56:18Z"
 assignee: "where-nested-hash-assoc-name-table-resolution"
 blocked-by: null

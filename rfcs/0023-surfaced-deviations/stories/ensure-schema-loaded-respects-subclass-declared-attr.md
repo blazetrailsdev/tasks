@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4687
+pr: trails#4687
 claim: "2026-07-06T16:53:04Z"
 assignee: "ensure-schema-loaded-respects-subclass-declared-attr"
 blocked-by: null

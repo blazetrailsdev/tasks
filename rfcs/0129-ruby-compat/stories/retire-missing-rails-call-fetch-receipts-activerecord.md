@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 72
-pr: 7403
+pr: trails#7403
 claim: "2026-09-02T19:27:56Z"
 assignee: "move-object-inspect-and-to-s-to-ruby-compat"
 blocked-by: null

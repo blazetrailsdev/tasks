@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 4054
+pr: trails#4054
 claim: "2026-06-24T10:30:39Z"
 assignee: "ar-type-metadata-negation-operator"
 blocked-by: null

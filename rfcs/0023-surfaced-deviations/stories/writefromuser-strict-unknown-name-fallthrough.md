@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 40
-pr: 3960
+pr: trails#3960
 claim: "2026-06-23T02:59:17Z"
 assignee: "writefromuser-strict-unknown-name-fallthrough"
 blocked-by: null

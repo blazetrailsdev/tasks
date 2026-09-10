@@ -9,7 +9,7 @@ deps:
   - retire-model-set-callback-skip-callback-run-callbacks-passthrough
 deps-rfc: []
 est-loc: 340
-pr: 6964
+pr: trails#6964
 claim: "2026-08-24T01:51:39Z"
 assignee: "retire-activemodel-callbacks-proto-adapter-onto-activesupport"
 blocked-by: null

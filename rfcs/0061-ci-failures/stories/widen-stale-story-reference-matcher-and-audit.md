@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5999
+pr: trails#5999
 claim: "2026-08-03T17:52:20Z"
 assignee: "widen-stale-story-reference-matcher-and-audit"
 blocked-by: null

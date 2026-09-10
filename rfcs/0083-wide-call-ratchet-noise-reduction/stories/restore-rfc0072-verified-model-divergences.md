@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5733
+pr: trails#5733
 claim: "2026-07-31T18:26:54Z"
 assignee: "restore-rfc0072-verified-model-divergences"
 blocked-by: null

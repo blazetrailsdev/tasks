@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6879
+pr: trails#6879
 claim: "2026-08-22T20:19:57Z"
 assignee: "struct-member-missing-rows-in-activerecord"
 blocked-by: null

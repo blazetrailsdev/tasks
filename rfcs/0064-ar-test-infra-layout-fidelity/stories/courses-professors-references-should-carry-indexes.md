@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5689
+pr: trails#5689
 claim: "2026-07-30T23:39:17Z"
 assignee: "courses-professors-references-should-carry-indexes"
 blocked-by: null

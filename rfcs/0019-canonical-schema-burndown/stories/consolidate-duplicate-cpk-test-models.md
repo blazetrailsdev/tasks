@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 50
-pr: 3605
+pr: trails#3605
 claim: "2026-06-18T22:03:09Z"
 assignee: "consolidate-duplicate-cpk-test-models"
 blocked-by: null

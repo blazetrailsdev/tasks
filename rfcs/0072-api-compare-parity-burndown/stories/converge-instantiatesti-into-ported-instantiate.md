@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5379
+pr: trails#5379
 claim: "2026-07-27T00:14:55Z"
 assignee: "converge-instantiatesti-into-ported-instantiate"
 blocked-by: null

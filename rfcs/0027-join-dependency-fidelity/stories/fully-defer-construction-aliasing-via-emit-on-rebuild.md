@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 4007
+pr: trails#4007
 claim: "2026-06-23T14:50:22Z"
 assignee: "fully-defer-construction-aliasing-via-emit-on-rebuild"
 blocked-by: null

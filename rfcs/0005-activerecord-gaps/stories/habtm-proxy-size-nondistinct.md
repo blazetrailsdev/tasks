@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 20
-pr: 3143
+pr: trails#3143
 claim: "2026-06-12T01:20:59Z"
 assignee: "habtm-proxy-size-nondistinct"
 blocked-by: null

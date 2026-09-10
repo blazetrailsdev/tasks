@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3727
+pr: trails#3727
 claim: "2026-06-20T16:25:30Z"
 assignee: "adapter-update-prepared-statement-binds"
 blocked-by: null

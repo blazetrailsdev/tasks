@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6700
+pr: trails#6700
 claim: "2026-08-18T13:56:52Z"
 assignee: "converge-abstract-store-loaded-session-predicate"
 blocked-by: null

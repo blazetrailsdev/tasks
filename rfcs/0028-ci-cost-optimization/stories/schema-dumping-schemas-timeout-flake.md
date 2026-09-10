@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: 4976
+pr: trails#4976
 claim: "2026-07-19T22:21:09Z"
 assignee: "schema-dumping-schemas-timeout-flake"
 blocked-by: null

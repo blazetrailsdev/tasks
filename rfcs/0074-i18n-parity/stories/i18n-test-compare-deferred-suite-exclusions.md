@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6060
+pr: trails#6060
 claim: "2026-08-04T13:48:10Z"
 assignee: "i18n-test-compare-deferred-suite-exclusions"
 blocked-by: null

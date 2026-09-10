@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6077
+pr: trails#6077
 claim: "2026-08-04T17:25:02Z"
 assignee: "yaml-is-an-optional-npm-dependency"
 blocked-by: null

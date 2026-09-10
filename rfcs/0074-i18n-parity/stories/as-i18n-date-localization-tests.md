@@ -8,7 +8,7 @@ deps: ["i18n-consolidate-activesupport-shim"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6014
+pr: trails#6014
 claim: "2026-08-03T20:07:43Z"
 assignee: "as-i18n-date-localization-tests"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 12
-pr: 5082
+pr: trails#5082
 claim: "2026-07-22T21:33:04Z"
 assignee: "eager-where-references-from-missing-redux"
 blocked-by: null

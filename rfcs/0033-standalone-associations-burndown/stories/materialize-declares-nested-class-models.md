@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 5
-pr: 4036
+pr: trails#4036
 claim: "2026-06-23T21:30:42Z"
 assignee: "materialize-declares-nested-class-models"
 blocked-by: null

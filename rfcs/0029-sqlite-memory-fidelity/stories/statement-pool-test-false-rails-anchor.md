@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5506
+pr: trails#5506
 claim: "2026-07-28T13:51:43Z"
 assignee: "statement-pool-test-false-rails-anchor"
 blocked-by: null

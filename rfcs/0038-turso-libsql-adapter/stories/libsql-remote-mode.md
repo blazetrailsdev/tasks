@@ -8,7 +8,7 @@ deps: ["libsql-local-driver"]
 deps-rfc: []
 est-loc: 180
 priority: 3
-pr: 3670
+pr: trails#3670
 claim: "2026-06-19T19:53:24Z"
 assignee: "libsql-remote-mode"
 blocked-by: null

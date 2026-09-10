@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6579
+pr: trails#6579
 claim: "2026-08-15T21:45:01Z"
 assignee: "converge-remaining-named-inner-joins-readers"
 blocked-by: null

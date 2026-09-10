@@ -9,7 +9,7 @@ deps: ["port-execution-wrapper-and-reloader"]
 deps-rfc: []
 est-loc: 200
 priority: 51
-pr: 7368
+pr: trails#7368
 claim: "2026-09-01T23:37:00Z"
 assignee: "complete-set-routes-reloader-hook"
 blocked-by: null

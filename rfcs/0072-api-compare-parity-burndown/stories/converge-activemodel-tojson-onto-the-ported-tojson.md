@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6212
+pr: trails#6212
 claim: "2026-08-08T00:30:11Z"
 assignee: "schema-conn-adapters-carry-a-real-pool"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 3611
+pr: trails#3611
 claim: "2026-06-18T23:23:07Z"
 assignee: "hm-belongsto-inverse-cache-poisoned-after-collection-load"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 7148
+pr: trails#7148
 claim: "2026-08-28T01:46:55Z"
 assignee: "arel-crud-interface-holds-no-bodies"
 blocked-by: null

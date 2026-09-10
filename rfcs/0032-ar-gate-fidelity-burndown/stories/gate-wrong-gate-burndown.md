@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 3711
+pr: trails#3711
 claim: "2026-06-20T13:01:31Z"
 assignee: "gate-wrong-gate-burndown"
 blocked-by: null

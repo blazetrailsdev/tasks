@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6177
+pr: trails#6177
 claim: "2026-08-07T15:38:12Z"
 assignee: "datetime-sf-is-a-number-not-a-rational"
 blocked-by: null

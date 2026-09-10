@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6610
+pr: trails#6610
 claim: "2026-08-16T20:13:32Z"
 assignee: "collection-proxy-mutation-terminals-through-scope"
 blocked-by: null

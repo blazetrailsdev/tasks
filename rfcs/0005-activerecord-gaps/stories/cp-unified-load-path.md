@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 36
-pr: 2965
+pr: trails#2965
 claim: "2026-06-06T01:52:11Z"
 assignee: "cp-unified-load-path"
 blocked-by: null

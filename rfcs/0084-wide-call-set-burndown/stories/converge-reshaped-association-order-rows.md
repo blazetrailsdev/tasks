@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6394
+pr: trails#6394
 claim: "2026-08-12T01:45:59Z"
 assignee: "converge-reshaped-association-order-rows"
 blocked-by: null

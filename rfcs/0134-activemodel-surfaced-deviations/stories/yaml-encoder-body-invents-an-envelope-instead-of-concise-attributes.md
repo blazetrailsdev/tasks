@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7436
+pr: trails#7436
 claim: "2026-09-03T12:12:05Z"
 assignee: "yaml-encoder-body-invents-an-envelope-instead-of-concise-attributes"
 blocked-by: null

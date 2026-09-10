@@ -8,7 +8,7 @@ deps: ["strict-loading-extra-burndown"]
 deps-rfc: []
 est-loc: 400
 priority: 67
-pr: 4206
+pr: trails#4206
 claim: "2026-06-26T19:12:57Z"
 assignee: "strict-loading-canonical-schema"
 blocked-by: null

@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6235
+pr: trails#6235
 claim: "2026-08-08T14:02:06Z"
 assignee: "sqlite-in-memory-predicate-disagrees-with-adapter"
 blocked-by: null

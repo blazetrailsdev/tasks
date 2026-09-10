@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4921
+pr: trails#4921
 claim: "2026-07-17T10:51:12Z"
 assignee: "query-cache-dirties-clears-all-current-thread-pools"
 blocked-by: null

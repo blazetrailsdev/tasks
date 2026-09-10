@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: 3585
+pr: trails#3585
 claim: "2026-06-18T13:22:06Z"
 assignee: "assoc-has-one-shared-tables"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: 6424
+pr: trails#6424
 claim: "2026-08-12T16:16:54Z"
 assignee: "naming-burndown-2-ar-abstract-adapters-a1a3-residue"
 blocked-by: null

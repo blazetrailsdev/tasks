@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6308
+pr: trails#6308
 claim: "2026-08-09T23:26:04Z"
 assignee: "exclude-test-memsize-from-the-date-test-population"
 blocked-by: null

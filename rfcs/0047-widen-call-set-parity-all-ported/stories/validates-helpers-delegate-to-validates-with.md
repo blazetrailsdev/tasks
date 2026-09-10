@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 220
 priority: 1
-pr: 4285
+pr: trails#4285
 claim: "2026-06-29T18:38:44Z"
 assignee: "validates-helpers-delegate-to-validates-with"
 blocked-by: null

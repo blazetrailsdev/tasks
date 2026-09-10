@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5883
+pr: trails#5883
 claim: "2026-08-02T13:07:13Z"
 assignee: "converge-no-database-error-to-connect-site"
 blocked-by: null

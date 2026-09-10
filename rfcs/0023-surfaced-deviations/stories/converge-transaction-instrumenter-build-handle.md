@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4906
+pr: trails#4906
 claim: "2026-07-16T15:51:11Z"
 assignee: "converge-transaction-instrumenter-build-handle"
 blocked-by: null

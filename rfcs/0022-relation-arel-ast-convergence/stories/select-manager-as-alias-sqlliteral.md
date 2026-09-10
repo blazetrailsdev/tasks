@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3391
+pr: trails#3391
 claim: "2026-06-15T18:36:28Z"
 assignee: "select-manager-as-alias-sqlliteral"
 blocked-by: null

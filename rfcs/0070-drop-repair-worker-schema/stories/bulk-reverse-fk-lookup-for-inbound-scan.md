@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5300
+pr: trails#5300
 claim: "2026-07-25T13:19:47Z"
 assignee: "bulk-reverse-fk-lookup-for-inbound-scan"
 blocked-by: null

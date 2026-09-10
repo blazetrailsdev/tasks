@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3358
+pr: trails#3358
 claim: "2026-06-15T14:53:11Z"
 assignee: "inheritance-column-nil-disables-sti"
 blocked-by: null

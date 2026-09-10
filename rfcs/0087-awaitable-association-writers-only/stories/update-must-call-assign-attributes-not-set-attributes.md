@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: 7359
+pr: trails#7359
 claim: "2026-09-01T20:39:56Z"
 assignee: "update-must-call-assign-attributes-not-set-attributes"
 blocked-by: null

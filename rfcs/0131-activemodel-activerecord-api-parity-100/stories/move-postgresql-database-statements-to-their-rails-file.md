@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 340
 priority: 2
-pr: 7416
+pr: trails#7416
 claim: "2026-09-02T23:06:33Z"
 assignee: "move-postgresql-database-statements-to-their-rails-file"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 22
-pr: 7343
+pr: trails#7343
 claim: "2026-09-01T16:14:45Z"
 assignee: "collection-proxy-length-reads-as-function"
 blocked-by: null

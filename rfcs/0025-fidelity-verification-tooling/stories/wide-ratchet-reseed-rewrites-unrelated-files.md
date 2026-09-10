@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 20
-pr: 5429
+pr: trails#5429
 claim: "2026-07-27T17:39:14Z"
 assignee: "wide-ratchet-reseed-rewrites-unrelated-files"
 blocked-by: null

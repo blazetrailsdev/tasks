@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 200
 priority: 22
-pr: 4162
+pr: trails#4162
 claim: "2026-06-25T23:32:18Z"
 assignee: "collection-cache-key-canonical"
 blocked-by: null

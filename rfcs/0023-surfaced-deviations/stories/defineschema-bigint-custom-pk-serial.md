@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3323
+pr: trails#3323
 claim: "2026-06-15T03:00:08Z"
 assignee: "defineschema-bigint-custom-pk-serial"
 blocked-by: null

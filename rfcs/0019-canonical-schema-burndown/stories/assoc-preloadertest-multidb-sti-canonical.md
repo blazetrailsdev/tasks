@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3673
+pr: trails#3673
 claim: "2026-06-19T20:27:35Z"
 assignee: "assoc-preloadertest-multidb-sti-canonical"
 blocked-by: null

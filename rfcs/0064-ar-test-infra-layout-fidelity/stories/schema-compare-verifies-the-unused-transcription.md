@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5704
+pr: trails#5704
 claim: "2026-07-31T02:27:03Z"
 assignee: "schema-compare-verifies-the-unused-transcription"
 blocked-by: null

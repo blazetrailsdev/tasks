@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5481
+pr: trails#5481
 claim: "2026-07-28T01:58:15Z"
 assignee: "migration-write-uses-logger-not-puts"
 blocked-by: null

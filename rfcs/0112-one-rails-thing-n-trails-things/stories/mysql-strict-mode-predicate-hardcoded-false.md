@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-pr: 7059
+pr: trails#7059
 claim: "2026-08-25T17:30:31Z"
 assignee: "exec-scope-takes-explicit-fn-instead-of-instance-exec"
 blocked-by: null

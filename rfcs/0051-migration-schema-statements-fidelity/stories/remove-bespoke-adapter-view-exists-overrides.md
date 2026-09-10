@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5806
+pr: trails#5806
 claim: "2026-08-01T17:51:01Z"
 assignee: "remove-bespoke-adapter-view-exists-overrides"
 blocked-by: null

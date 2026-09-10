@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 70
-pr: 6115
+pr: trails#6115
 claim: "2026-08-05T02:45:04Z"
 assignee: "row-count-is-debt-not-seeded-reasons"
 blocked-by: null

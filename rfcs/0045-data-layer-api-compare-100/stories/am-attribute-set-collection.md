@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 4031
+pr: trails#4031
 claim: "2026-06-23T19:33:10Z"
 assignee: "am-attribute-set-collection"
 blocked-by: null

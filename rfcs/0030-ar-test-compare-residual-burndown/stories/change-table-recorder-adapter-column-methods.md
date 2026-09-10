@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3455
+pr: trails#3455
 claim: "2026-06-16T13:41:02Z"
 assignee: "change-table-recorder-adapter-column-methods"
 blocked-by: null

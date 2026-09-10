@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 12
-pr: 7295
+pr: trails#7295
 claim: "2026-08-31T14:16:57Z"
 assignee: "cli-cannot-load-typescript-app-code"
 blocked-by: null

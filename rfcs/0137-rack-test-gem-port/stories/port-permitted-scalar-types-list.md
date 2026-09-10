@@ -9,7 +9,7 @@ deps: ["port-rack-test-uploaded-file"]
 deps-rfc: []
 est-loc: 250
 priority: 12
-pr: 7495
+pr: trails#7495
 claim: "2026-09-04T20:26:02Z"
 assignee: "port-permitted-scalar-types-list"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5402
+pr: trails#5402
 claim: "2026-07-27T13:33:06Z"
 assignee: "converge-activemodel-timezone-onto-time-zone-default"
 blocked-by: null

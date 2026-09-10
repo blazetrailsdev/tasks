@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 93
-pr: 4227
+pr: trails#4227
 claim: "2026-06-27T19:46:35Z"
 assignee: "habtm-classname-aliased-shared-jointable-source"
 blocked-by: null

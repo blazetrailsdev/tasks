@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6830
+pr: trails#6830
 claim: "2026-08-21T17:50:30Z"
 assignee: "converge-log-subscriber-transform-keys-and-proc"
 blocked-by: null

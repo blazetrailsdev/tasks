@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 14
-pr: 7188
+pr: trails#7188
 claim: "2026-08-28T22:19:57Z"
 assignee: "converge-attribute-methods-test-off-maketopic"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 35
-pr: 2966
+pr: trails#2966
 claim: "2026-06-06T11:39:11Z"
 assignee: "pf5-connection-handler-reaudit"
 blocked-by: null

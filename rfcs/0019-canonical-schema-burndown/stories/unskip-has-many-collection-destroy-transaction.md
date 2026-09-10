@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 10
 priority: 3
-pr: 4225
+pr: trails#4225
 claim: "2026-06-28T16:41:57Z"
 assignee: "unskip-has-many-collection-destroy-transaction"
 blocked-by: null

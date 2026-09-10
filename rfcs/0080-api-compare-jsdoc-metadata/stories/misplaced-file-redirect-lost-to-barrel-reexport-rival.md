@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5982
+pr: trails#5982
 claim: "2026-08-03T16:11:09Z"
 assignee: "misplaced-file-redirect-lost-to-barrel-reexport-rival"
 blocked-by: null

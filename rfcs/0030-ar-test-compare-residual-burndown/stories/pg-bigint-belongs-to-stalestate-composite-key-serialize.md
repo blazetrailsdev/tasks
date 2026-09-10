@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 3
-pr: 4620
+pr: trails#4620
 claim: "2026-07-05T16:22:29Z"
 assignee: "pg-bigint-belongs-to-stalestate-composite-key-serialize"
 blocked-by: null

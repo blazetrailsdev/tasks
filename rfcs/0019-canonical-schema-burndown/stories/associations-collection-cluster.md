@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 8
-pr: 3116
+pr: trails#3116
 claim: "2026-06-11T02:42:48Z"
 assignee: "associations-collection-cluster"
 blocked-by: null

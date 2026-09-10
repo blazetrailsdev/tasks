@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: 6934
+pr: trails#6934
 claim: "2026-08-23T18:32:16Z"
 assignee: "seat-the-per-instance-primary-key-slot"
 blocked-by: null

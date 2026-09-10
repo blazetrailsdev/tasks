@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 5
-pr: 7289
+pr: trails#7289
 claim: "2026-08-31T12:56:07Z"
 assignee: "api-compare-resolve-module-name-ancestry-chain"
 blocked-by: null

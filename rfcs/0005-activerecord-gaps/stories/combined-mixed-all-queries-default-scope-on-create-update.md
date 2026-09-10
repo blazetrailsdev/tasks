@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3287
+pr: trails#3287
 claim: "2026-06-14T19:52:11Z"
 assignee: "combined-mixed-all-queries-default-scope-on-create-update"
 blocked-by: null

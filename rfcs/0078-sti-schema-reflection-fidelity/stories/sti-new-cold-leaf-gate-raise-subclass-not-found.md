@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 40
-pr: 6705
+pr: trails#6705
 claim: "2026-08-18T15:10:51Z"
 assignee: "port-test-date-parse-formats-iso8601-tests"
 blocked-by: null

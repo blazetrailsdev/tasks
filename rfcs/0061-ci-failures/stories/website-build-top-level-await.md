@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6479
+pr: trails#6479
 claim: "2026-08-13T18:20:30Z"
 assignee: "website-build-top-level-await"
 blocked-by: null

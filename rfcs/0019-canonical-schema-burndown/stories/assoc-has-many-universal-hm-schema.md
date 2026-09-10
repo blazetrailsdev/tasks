@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: 4237
+pr: trails#4237
 claim: "2026-06-28T16:46:36Z"
 assignee: "assoc-has-many-universal-hm-schema"
 blocked-by: null

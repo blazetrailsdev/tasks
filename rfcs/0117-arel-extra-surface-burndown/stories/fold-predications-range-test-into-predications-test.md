@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: 12
-pr: 6903
+pr: trails#6903
 claim: "2026-08-23T10:38:38Z"
 assignee: "fold-predications-range-test-into-predications-test"
 blocked-by: null

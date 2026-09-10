@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5158
+pr: trails#5158
 claim: "2026-07-23T16:40:38Z"
 assignee: "pg-change-column-default-route-through-for-alter"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6034
+pr: trails#6034
 claim: "2026-08-03T22:05:11Z"
 assignee: "i18n-ar-fallbacks-wiring"
 blocked-by: null

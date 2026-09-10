@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6089
+pr: trails#6089
 claim: "2026-08-04T20:32:03Z"
 assignee: "i18n-date-parse-day-sets-wday"
 blocked-by: null

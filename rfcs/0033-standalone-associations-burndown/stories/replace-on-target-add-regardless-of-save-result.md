@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 3
-pr: 4626
+pr: trails#4626
 claim: "2026-07-05T17:31:16Z"
 assignee: "replace-on-target-add-regardless-of-save-result"
 blocked-by: null

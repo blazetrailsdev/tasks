@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6765
+pr: trails#6765
 claim: "2026-08-20T10:52:33Z"
 assignee: "delegate-select-bang-to-scope"
 blocked-by: null

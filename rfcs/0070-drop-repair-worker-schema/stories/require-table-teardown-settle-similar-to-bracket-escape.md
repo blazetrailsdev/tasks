@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5593
+pr: trails#5593
 claim: "2026-07-29T19:10:12Z"
 assignee: "require-table-teardown-settle-similar-to-bracket-escape"
 blocked-by: null

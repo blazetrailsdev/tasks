@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 0
-pr: 3689
+pr: trails#3689
 claim: "2026-06-20T01:31:36Z"
 assignee: "restore-collector-preparable-threading-regressed-by-3601"
 blocked-by: null

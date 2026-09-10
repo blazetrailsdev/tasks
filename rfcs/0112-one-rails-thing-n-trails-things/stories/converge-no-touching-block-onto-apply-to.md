@@ -7,7 +7,7 @@ cluster: duplicate-bodies
 deps: []
 deps-rfc: []
 est-loc: 30
-pr: 6722
+pr: trails#6722
 claim: "2026-08-25T17:06:37Z"
 assignee: "converge-no-touching-block-onto-apply-to"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3707
+pr: trails#3707
 claim: "2026-06-20T03:26:45Z"
 assignee: "eager-load-extra-select-result-type-cast"
 blocked-by: null

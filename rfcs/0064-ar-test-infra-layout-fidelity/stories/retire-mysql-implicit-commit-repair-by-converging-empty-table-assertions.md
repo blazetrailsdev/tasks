@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6280
+pr: trails#6280
 claim: "2026-08-09T14:59:36Z"
 assignee: "fixture-harness-wrappers-restore-own-property-shadowing-prototype"
 blocked-by: null

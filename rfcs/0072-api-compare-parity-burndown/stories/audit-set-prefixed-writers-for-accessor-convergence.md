@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5385
+pr: trails#5385
 claim: "2026-07-27T01:26:55Z"
 assignee: "audit-set-prefixed-writers-for-accessor-convergence"
 blocked-by: null

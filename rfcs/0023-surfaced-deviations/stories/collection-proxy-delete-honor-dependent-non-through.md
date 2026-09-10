@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 40
-pr: 3750
+pr: trails#3750
 claim: "2026-06-20T20:27:28Z"
 assignee: "collection-proxy-delete-honor-dependent-non-through"
 blocked-by: null

@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 80
 priority: 7
-pr: 3078
+pr: trails#3078
 claim: "2026-06-10T11:19:14Z"
 assignee: "step3-pg-tosql-via-visitor"
 blocked-by: null

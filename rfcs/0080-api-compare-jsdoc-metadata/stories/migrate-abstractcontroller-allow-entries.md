@@ -8,7 +8,7 @@ deps: ["no-rails-equivalent-tag-extractor-support"]
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: 5367
+pr: trails#5367
 claim: "2026-07-26T21:58:56Z"
 assignee: "migrate-abstractcontroller-allow-entries"
 blocked-by: null

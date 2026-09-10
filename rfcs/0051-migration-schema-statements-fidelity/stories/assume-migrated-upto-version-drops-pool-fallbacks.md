@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 5800
+pr: trails#5800
 claim: "2026-08-01T13:33:46Z"
 assignee: "assume-migrated-upto-version-drops-pool-fallbacks"
 blocked-by: null

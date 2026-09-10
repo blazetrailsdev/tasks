@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7150
+pr: trails#7150
 claim: "2026-08-28T11:37:09Z"
 assignee: "privates-manifest-misses-mixin-redeclaration-sites"
 blocked-by: null

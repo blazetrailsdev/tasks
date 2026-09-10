@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7042
+pr: trails#7042
 claim: "2026-08-25T15:38:33Z"
 assignee: "pg-table-definition-takes-unlogged-as-an-option-rails-reads-the-adapter"
 blocked-by: null

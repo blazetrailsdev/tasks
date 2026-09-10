@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7468
+pr: trails#7468
 claim: "2026-09-03T23:18:36Z"
 assignee: "converge-integration-session-to-rack-test-session"
 blocked-by: null

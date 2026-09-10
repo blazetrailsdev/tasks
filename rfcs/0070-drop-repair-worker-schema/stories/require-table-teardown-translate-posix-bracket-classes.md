@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5611
+pr: trails#5611
 claim: "2026-07-29T22:24:48Z"
 assignee: "require-table-teardown-translate-posix-bracket-classes"
 blocked-by: null

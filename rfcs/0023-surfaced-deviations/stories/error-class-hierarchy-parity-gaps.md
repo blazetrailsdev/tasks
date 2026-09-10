@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 5
-pr: 3217
+pr: trails#3217
 claim: "2026-06-13T21:54:34Z"
 assignee: "error-class-hierarchy-parity-gaps"
 blocked-by: null

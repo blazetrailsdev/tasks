@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 25
-pr: 3508
+pr: trails#3508
 claim: "2026-06-16T23:12:42Z"
 assignee: "raw-connection-materializes-transactions"
 blocked-by: null

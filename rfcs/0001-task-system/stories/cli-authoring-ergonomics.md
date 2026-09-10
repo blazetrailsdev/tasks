@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: 30
-pr: 3172
+pr: trails#3172
 claim: "2026-06-13T01:32:05Z"
 assignee: "cli-authoring-ergonomics"
 blocked-by: null

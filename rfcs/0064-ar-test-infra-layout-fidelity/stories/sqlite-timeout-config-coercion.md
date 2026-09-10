@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5583
+pr: trails#5583
 claim: "2026-07-29T18:10:14Z"
 assignee: "sqlite-timeout-config-coercion"
 blocked-by: null

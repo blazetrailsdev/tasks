@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6326
+pr: trails#6326
 claim: "2026-08-10T10:06:33Z"
 assignee: "mysql-structure-dump-ignores-schema-dumper-ignore-tables"
 blocked-by: null

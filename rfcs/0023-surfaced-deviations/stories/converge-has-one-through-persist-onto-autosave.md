@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4493
+pr: trails#4493
 claim: "2026-07-03T16:21:52Z"
 assignee: "converge-has-one-through-persist-onto-autosave"
 blocked-by: null

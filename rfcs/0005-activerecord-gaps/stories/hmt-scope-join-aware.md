@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 13
-pr: 2946
+pr: trails#2946
 claim: "2026-06-05T10:08:16Z"
 assignee: "hmt-scope-join-aware"
 blocked-by: null

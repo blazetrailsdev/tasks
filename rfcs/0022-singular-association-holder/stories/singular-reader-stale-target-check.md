@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: 3924
+pr: trails#3924
 claim: "2026-06-22T20:43:15Z"
 assignee: "singular-reader-stale-target-check"
 blocked-by: null

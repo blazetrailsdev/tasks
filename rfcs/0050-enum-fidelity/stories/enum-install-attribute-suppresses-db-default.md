@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4413
+pr: trails#4413
 claim: "2026-07-02T15:09:52Z"
 assignee: "enum-install-attribute-suppresses-db-default"
 blocked-by: null

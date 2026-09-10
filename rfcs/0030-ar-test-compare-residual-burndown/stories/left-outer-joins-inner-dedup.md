@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 20
-pr: 3501
+pr: trails#3501
 claim: "2026-06-16T21:24:43Z"
 assignee: "left-outer-joins-inner-dedup"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6751
+pr: trails#6751
 claim: "2026-08-19T23:31:49Z"
 assignee: "converge-join-dependency-aliasing-through-alias-tracker"
 blocked-by: null

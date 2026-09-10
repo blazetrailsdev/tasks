@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 81
-pr: 4218
+pr: trails#4218
 claim: "2026-06-27T16:46:34Z"
 assignee: "transactions-test-rollback-restores-record-state"
 blocked-by: null

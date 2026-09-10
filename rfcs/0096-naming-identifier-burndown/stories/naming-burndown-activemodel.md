@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6350
+pr: trails#6350
 claim: "2026-08-11T11:41:05Z"
 assignee: "naming-burndown-activemodel"
 blocked-by: null

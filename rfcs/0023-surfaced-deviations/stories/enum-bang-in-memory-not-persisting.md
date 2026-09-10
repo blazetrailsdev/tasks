@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: 3216
+pr: trails#3216
 claim: "2026-06-13T21:48:36Z"
 assignee: "enum-bang-in-memory-not-persisting"
 blocked-by: null

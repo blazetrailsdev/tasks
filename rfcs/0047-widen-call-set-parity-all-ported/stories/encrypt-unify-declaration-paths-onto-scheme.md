@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4418
+pr: trails#4418
 claim: "2026-07-02T16:21:50Z"
 assignee: "encrypt-unify-declaration-paths-onto-scheme"
 blocked-by: null

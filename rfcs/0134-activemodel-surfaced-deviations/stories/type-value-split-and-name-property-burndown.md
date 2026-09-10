@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 42
-pr: 7412
+pr: trails#7412
 claim: "2026-09-02T22:05:40Z"
 assignee: "type-value-split-and-name-property-burndown"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 23
-pr: 5096
+pr: trails#5096
 claim: "2026-07-22T23:16:31Z"
 assignee: "verify-value-accessor-read-wide-entries-per-entry"
 blocked-by: null

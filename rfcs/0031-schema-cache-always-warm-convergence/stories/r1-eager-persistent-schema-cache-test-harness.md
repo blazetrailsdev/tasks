@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 20
-pr: 3856
+pr: trails#3856
 claim: "2026-06-21T22:30:43Z"
 assignee: "r1-eager-persistent-schema-cache-test-harness"
 blocked-by: null

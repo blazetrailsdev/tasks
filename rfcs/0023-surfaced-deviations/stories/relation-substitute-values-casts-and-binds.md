@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4954
+pr: trails#4954
 claim: "2026-07-19T14:11:10Z"
 assignee: "relation-substitute-values-casts-and-binds"
 blocked-by: null

@@ -10,7 +10,7 @@ deps: ["dependency-tracker-and-wildcard-resolver"]
 deps-rfc: []
 est-loc: 350
 priority: 11
-pr: 7633
+pr: trails#7633
 claim: "2026-09-08T23:14:52Z"
 assignee: "tse-tracker-ports-the-erb-regex-tracker"
 blocked-by: null

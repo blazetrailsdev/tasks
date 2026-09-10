@@ -8,7 +8,7 @@ deps: ["pg-transaction-status-port"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6171
+pr: trails#6171
 claim: "2026-08-07T13:08:28Z"
 assignee: "adapter-ddl-bodies-clear-schema-cache-rails-never-touches"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3049
+pr: trails#3049
 claim: "2026-06-08T20:52:13Z"
 assignee: "fix-tasks-new-command"
 blocked-by: null

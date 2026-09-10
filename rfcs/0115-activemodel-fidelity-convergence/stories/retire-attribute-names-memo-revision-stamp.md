@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 180
-pr: 5116
+pr: trails#5116
 claim: "2026-08-23T21:16:29Z"
 assignee: "retire-attribute-names-memo-revision-stamp"
 blocked-by: null

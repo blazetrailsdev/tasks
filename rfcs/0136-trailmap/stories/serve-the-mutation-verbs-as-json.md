@@ -9,7 +9,7 @@ deps: ["move-mutation-verbs-onto-the-models"]
 deps-rfc: []
 est-loc: 200
 priority: 6
-pr: 6
+pr: trailmap#6
 claim: "2026-09-05T23:01:36Z"
 assignee: "serve-the-mutation-verbs-as-json"
 blocked-by: null

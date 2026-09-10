@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 31
-pr: 4805
+pr: trails#4805
 claim: "2026-07-08T21:52:34Z"
 assignee: "warm-mysql-version-at-connection-configure"
 blocked-by: null

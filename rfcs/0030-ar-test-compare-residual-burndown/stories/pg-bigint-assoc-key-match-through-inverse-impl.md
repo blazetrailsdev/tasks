@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 18
-pr: 4033
+pr: trails#4033
 claim: "2026-06-23T19:53:05Z"
 assignee: "pg-bigint-assoc-key-match-through-inverse-impl"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: ["ruby-extractor-record-call-receiver-kind"]
 deps-rfc: []
 est-loc: 320
 priority: 10
-pr: 5754
+pr: trails#5754
 claim: "2026-07-31T20:45:00Z"
 assignee: "missing-rails-call-tag-suppresses-wide-flag"
 blocked-by: null

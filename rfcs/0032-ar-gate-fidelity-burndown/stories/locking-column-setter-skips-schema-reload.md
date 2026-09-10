@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5144
+pr: trails#5144
 claim: "2026-07-23T13:31:39Z"
 assignee: "locking-column-setter-skips-schema-reload"
 blocked-by: null

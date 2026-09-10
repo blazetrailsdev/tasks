@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5479
+pr: trails#5479
 claim: "2026-07-28T01:46:16Z"
 assignee: "awaitable-writer-is-the-port-of-rails-writer"
 blocked-by: null

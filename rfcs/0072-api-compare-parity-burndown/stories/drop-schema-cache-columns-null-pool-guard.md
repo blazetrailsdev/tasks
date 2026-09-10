@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 5917
+pr: trails#5917
 claim: "2026-08-02T19:55:26Z"
 assignee: "drop-schema-cache-columns-null-pool-guard"
 blocked-by: null

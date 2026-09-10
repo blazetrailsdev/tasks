@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 39
-pr: 2971
+pr: trails#2971
 claim: "2026-06-06T15:01:08Z"
 assignee: "hmt-self-ref-belongs-to-push"
 blocked-by: null

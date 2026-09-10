@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4087
+pr: trails#4087
 claim: "2026-06-24T23:04:18Z"
 assignee: "duration-unary-plus-scoped-skip-not-identity"
 blocked-by: null

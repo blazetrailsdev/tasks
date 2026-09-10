@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 400
-pr: 7089
+pr: trails#7089
 claim: "2026-08-26T15:11:44Z"
 assignee: "reference-definition-polymorphic-options-forwards-first-and-after"
 blocked-by: null

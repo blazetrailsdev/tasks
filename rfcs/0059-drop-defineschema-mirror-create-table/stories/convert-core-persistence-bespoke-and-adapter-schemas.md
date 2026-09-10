@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 4474
+pr: trails#4474
 claim: "2026-07-03T12:09:51Z"
 assignee: "convert-core-persistence-bespoke-and-adapter-schemas"
 blocked-by: null

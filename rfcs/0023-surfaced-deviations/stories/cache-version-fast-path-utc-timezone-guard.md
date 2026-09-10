@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3638
+pr: trails#3638
 claim: "2026-06-19T13:12:26Z"
 assignee: "cache-version-fast-path-utc-timezone-guard"
 blocked-by: null

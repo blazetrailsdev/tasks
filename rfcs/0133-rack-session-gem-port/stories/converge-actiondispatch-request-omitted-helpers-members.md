@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 13
-pr: 7380
+pr: trails#7380
 claim: "2026-09-02T02:16:41Z"
 assignee: "converge-actiondispatch-request-omitted-helpers-members"
 blocked-by: null

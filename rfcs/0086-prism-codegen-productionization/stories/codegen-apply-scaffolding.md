@@ -8,7 +8,7 @@ deps:
   - scorer-getter-and-arrow-resolution
 deps-rfc: []
 est-loc: 200
-pr: 5819
+pr: trails#5819
 claim: "2026-08-01T19:21:05Z"
 assignee: "codegen-apply-scaffolding"
 blocked-by: null

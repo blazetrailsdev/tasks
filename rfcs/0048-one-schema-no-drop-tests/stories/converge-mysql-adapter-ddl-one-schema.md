@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 5
-pr: 4330
+pr: trails#4330
 claim: "2026-06-30T16:08:43Z"
 assignee: "converge-mysql-adapter-ddl-one-schema"
 blocked-by: null

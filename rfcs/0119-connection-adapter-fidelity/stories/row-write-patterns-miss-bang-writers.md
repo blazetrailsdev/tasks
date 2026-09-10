@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7567
+pr: trails#7567
 claim: "2026-09-06T17:38:13Z"
 assignee: "row-write-patterns-miss-bang-writers"
 blocked-by: null

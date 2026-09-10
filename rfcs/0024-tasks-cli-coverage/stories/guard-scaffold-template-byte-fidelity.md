@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4004
+pr: trails#4004
 claim: "2026-06-23T14:49:50Z"
 assignee: "guard-scaffold-template-byte-fidelity"
 blocked-by: null

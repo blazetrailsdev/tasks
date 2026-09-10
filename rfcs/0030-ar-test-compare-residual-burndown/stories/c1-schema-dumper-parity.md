@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 3426
+pr: trails#3426
 claim: "2026-06-15T23:56:55Z"
 assignee: "c1-schema-dumper-parity"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: 4039
+pr: trails#4039
 claim: "2026-06-23T23:00:44Z"
 assignee: "remove-preloaded-associations-shadow-map"
 blocked-by: null

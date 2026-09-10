@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3744
+pr: trails#3744
 claim: "2026-06-20T22:17:27Z"
 assignee: "insert-all-multicolumn-unique-by-introspection"
 blocked-by: null

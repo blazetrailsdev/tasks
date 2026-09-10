@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4539
+pr: trails#4539
 claim: "2026-07-04T03:27:32Z"
 assignee: "mariadb-float-limit-columns-show-full-fields"
 blocked-by: null

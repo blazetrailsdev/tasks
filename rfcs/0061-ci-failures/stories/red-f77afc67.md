@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: 5816
+pr: trails#5816
 claim: "2026-08-01T19:37:36Z"
 assignee: "red-f77afc67"
 blocked-by: null

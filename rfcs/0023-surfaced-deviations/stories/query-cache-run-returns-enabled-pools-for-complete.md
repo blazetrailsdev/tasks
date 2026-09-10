@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4933
+pr: trails#4933
 claim: "2026-07-17T15:41:11Z"
 assignee: "query-cache-run-returns-enabled-pools-for-complete"
 blocked-by: null

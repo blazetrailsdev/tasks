@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6432
+pr: trails#6432
 claim: "2026-08-12T19:16:52Z"
 assignee: "converge-collection-callback-abort-catch-to-call-sites"
 blocked-by: null

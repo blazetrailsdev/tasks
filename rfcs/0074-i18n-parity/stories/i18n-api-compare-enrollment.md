@@ -8,7 +8,7 @@ deps: ["i18n-facade-translate-interpolate"]
 deps-rfc: []
 est-loc: 200
 priority: 4
-pr: 5978
+pr: trails#5978
 claim: "2026-08-03T14:32:32Z"
 assignee: "i18n-api-compare-enrollment"
 blocked-by: null

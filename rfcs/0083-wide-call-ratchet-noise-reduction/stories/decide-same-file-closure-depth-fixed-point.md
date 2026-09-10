@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5750
+pr: trails#5750
 claim: "2026-07-31T20:32:53Z"
 assignee: "decide-same-file-closure-depth-fixed-point"
 blocked-by: null

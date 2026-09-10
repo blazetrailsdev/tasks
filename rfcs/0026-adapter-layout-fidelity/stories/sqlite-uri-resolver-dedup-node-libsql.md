@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 5
-pr: 4040
+pr: trails#4040
 claim: "2026-06-23T23:23:01Z"
 assignee: "sqlite-uri-resolver-dedup-node-libsql"
 blocked-by: null

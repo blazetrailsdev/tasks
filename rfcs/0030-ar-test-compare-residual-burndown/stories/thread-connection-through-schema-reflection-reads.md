@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 3
-pr: 4641
+pr: trails#4641
 claim: "2026-07-05T22:41:54Z"
 assignee: "thread-connection-through-schema-reflection-reads"
 blocked-by: null

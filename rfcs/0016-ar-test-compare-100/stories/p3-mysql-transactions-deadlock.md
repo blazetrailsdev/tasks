@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 12
-pr: 3052
+pr: trails#3052
 claim: "2026-06-08T23:55:45Z"
 assignee: "p3-mysql-transactions-deadlock"
 blocked-by: null

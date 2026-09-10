@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3371
+pr: trails#3371
 claim: "2026-06-15T16:06:26Z"
 assignee: "pluck-includes-limit-offset-distinct-pk"
 blocked-by: null

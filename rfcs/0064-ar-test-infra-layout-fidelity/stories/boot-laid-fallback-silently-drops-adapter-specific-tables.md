@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 2
-pr: 5904
+pr: trails#5904
 claim: "2026-08-02T18:13:29Z"
 assignee: "boot-laid-fallback-silently-drops-adapter-specific-tables"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 10
-pr: 7486
+pr: trails#7486
 claim: "2026-09-04T16:20:47Z"
 assignee: "sqlite3-and-mysql-bare-missing-rails-call-receipts"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4894
+pr: trails#4894
 claim: "2026-07-15T19:01:11Z"
 assignee: "converge-instrumenter-yield-payload"
 blocked-by: null

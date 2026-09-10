@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 20
-pr: 5216
+pr: trails#5216
 claim: "2026-07-24T10:23:24Z"
 assignee: "reflection-test-bespoke-registermodel-canonical-name-collisions"
 blocked-by: null

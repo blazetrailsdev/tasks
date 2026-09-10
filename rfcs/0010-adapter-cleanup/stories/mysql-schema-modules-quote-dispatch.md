@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 3
-pr: 3129
+pr: trails#3129
 claim: "2026-06-11T18:54:05Z"
 assignee: "mysql-schema-modules-quote-dispatch"
 blocked-by: null

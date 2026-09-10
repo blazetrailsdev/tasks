@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6480
+pr: trails#6480
 claim: "2026-08-13T17:15:38Z"
 assignee: "enum-alias-resolution-into-decorate-attributes"
 blocked-by: null

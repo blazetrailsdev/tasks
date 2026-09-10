@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5936
+pr: trails#5936
 claim: "2026-08-03T00:05:46Z"
 assignee: "extra-surface-classify-invented-adapter-constants"
 blocked-by: null

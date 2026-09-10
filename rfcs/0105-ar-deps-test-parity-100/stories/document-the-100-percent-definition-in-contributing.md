@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6507
+pr: trails#6507
 claim: "2026-08-14T02:57:06Z"
 assignee: "widen-assertion-report-packages-and-seed-mark"
 blocked-by: null

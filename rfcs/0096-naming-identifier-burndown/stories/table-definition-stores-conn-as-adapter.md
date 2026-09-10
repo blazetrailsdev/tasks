@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 7040
+pr: trails#7040
 claim: "2026-08-25T15:35:31Z"
 assignee: "table-definition-stores-conn-as-adapter"
 blocked-by: null

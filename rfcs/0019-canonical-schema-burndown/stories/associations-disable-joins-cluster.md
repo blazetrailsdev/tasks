@@ -8,7 +8,7 @@ deps: ["associations-collection-cluster"]
 deps-rfc: []
 est-loc: 450
 priority: 68
-pr: 4208
+pr: trails#4208
 claim: "2026-06-27T11:54:50Z"
 assignee: "associations-disable-joins-cluster"
 blocked-by: null

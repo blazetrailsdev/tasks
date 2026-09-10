@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 2
-pr: 4417
+pr: trails#4417
 claim: "2026-07-06T17:53:52Z"
 assignee: "enum-detect-conflict-for-accessor-names"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3294
+pr: trails#3294
 claim: "2026-06-14T21:44:12Z"
 assignee: "f9g3b3-touch-later-association-propagation"
 blocked-by: null

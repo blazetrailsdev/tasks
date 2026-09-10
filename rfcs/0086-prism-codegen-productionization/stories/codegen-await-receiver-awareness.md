@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 5822
+pr: trails#5822
 claim: "2026-08-01T19:33:02Z"
 assignee: "codegen-await-receiver-awareness"
 blocked-by: null

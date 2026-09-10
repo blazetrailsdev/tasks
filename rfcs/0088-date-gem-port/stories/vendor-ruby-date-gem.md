@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 120
-pr: 6129
+pr: trails#6129
 claim: "2026-08-05T15:01:05Z"
 assignee: "vendor-ruby-date-gem"
 blocked-by: null

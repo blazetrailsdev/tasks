@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5442
+pr: trails#5442
 claim: "2026-07-27T19:05:51Z"
 assignee: "has-one-direct-association-build-leaves-displaced-row-attached"
 blocked-by: null

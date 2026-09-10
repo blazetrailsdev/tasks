@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 300
-pr: 6352
+pr: trails#6352
 claim: "2026-08-11T12:24:26Z"
 assignee: "naming-burndown-activerecord-relation"
 blocked-by: null

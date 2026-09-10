@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6505
+pr: trails#6505
 claim: "2026-08-14T02:27:09Z"
 assignee: "derive-ar-closure-test-manifest"
 blocked-by: null

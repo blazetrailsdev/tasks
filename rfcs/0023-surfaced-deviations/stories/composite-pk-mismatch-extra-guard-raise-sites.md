@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3695
+pr: trails#3695
 claim: "2026-06-20T02:30:48Z"
 assignee: "composite-pk-mismatch-extra-guard-raise-sites"
 blocked-by: null

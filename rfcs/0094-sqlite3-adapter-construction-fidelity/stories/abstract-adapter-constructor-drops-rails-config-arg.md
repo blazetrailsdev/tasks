@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 4
-pr: 7656
+pr: trails#7656
 claim: "2026-09-09T23:26:10Z"
 assignee: "sqlite3-constructor-connects-eagerly-unlike-rails"
 blocked-by: null

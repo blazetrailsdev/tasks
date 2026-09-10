@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6815
+pr: trails#6815
 claim: "2026-08-30T19:54:08Z"
 assignee: "converge-number-helper-percentage-currency-converters"
 blocked-by: null

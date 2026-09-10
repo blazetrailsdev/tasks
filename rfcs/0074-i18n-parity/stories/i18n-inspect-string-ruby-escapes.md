@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 6028
+pr: trails#6028
 claim: "2026-08-03T21:47:08Z"
 assignee: "i18n-inspect-string-ruby-escapes"
 blocked-by: null

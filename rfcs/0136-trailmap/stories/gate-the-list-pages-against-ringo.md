@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 18
+pr: trailmap#18
 claim: "2026-09-07T13:01:44Z"
 assignee: "gate-the-list-pages-against-ringo"
 blocked-by: null

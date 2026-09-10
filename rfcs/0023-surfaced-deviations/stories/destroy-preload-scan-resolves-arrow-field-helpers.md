@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 4834
+pr: trails#4834
 claim: "2026-07-13T17:28:24Z"
 assignee: "destroy-preload-scan-resolves-arrow-field-helpers"
 blocked-by: null

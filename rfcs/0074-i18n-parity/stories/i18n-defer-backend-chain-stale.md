@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6071
+pr: trails#6071
 claim: "2026-08-04T16:34:06Z"
 assignee: "i18n-defer-backend-chain-stale"
 blocked-by: null

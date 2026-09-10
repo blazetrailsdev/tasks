@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 8
-pr: 4785
+pr: trails#4785
 claim: "2026-07-08T12:51:54Z"
 assignee: "destroy-path-optimistic-lock-stale-check-affected-not-one"
 blocked-by: null

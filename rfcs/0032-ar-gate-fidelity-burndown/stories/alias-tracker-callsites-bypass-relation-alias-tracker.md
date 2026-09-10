@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5157
+pr: trails#5157
 claim: "2026-07-23T16:13:37Z"
 assignee: "alias-tracker-callsites-bypass-relation-alias-tracker"
 blocked-by: null

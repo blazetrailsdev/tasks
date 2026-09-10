@@ -9,7 +9,7 @@ deps: ["extract-parity-tools-package", "relocate-parity-pipeline"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6260
+pr: trails#6260
 claim: "2026-08-08T20:17:12Z"
 assignee: "parity-script-namespace"
 blocked-by: null

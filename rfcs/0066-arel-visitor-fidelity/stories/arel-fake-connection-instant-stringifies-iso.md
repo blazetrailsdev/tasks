@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 52
-pr: 5092
+pr: trails#5092
 claim: "2026-07-22T23:24:46Z"
 assignee: "arel-fake-connection-instant-stringifies-iso"
 blocked-by: null

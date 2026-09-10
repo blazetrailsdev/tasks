@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5160
+pr: trails#5160
 claim: "2026-07-23T16:49:37Z"
 assignee: "pg-change-default-definition-carries-live-column"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: ["move-ranking-onto-story-scopes"]
 deps-rfc: []
 est-loc: 150
 priority: 3
-pr: 4
+pr: trailmap#4
 claim: "2026-09-05T16:26:46Z"
 assignee: "equivalence-gate-trailmap-against-the-cli"
 blocked-by: null

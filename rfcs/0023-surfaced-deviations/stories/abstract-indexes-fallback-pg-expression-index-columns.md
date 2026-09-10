@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 3994
+pr: trails#3994
 claim: "2026-06-23T13:27:45Z"
 assignee: "abstract-indexes-fallback-pg-expression-index-columns"
 blocked-by: null

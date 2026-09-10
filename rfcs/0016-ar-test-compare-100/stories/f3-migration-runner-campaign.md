@@ -7,7 +7,7 @@ cluster: clusters
 deps: []
 deps-rfc: []
 est-loc: 200
-pr: 3008
+pr: trails#3008
 claim: "2026-06-07T22:28:41Z"
 assignee: "f3-migration-runner-campaign"
 blocked-by: null

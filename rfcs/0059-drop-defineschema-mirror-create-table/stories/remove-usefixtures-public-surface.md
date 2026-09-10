@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 4584
+pr: trails#4584
 claim: "2026-07-05T01:00:47Z"
 assignee: "remove-usefixtures-public-surface"
 blocked-by: null

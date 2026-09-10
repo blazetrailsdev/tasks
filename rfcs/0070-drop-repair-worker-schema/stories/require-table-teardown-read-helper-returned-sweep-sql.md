@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: 5587
+pr: trails#5587
 claim: "2026-07-29T18:35:32Z"
 assignee: "require-table-teardown-read-helper-returned-sweep-sql"
 blocked-by: null

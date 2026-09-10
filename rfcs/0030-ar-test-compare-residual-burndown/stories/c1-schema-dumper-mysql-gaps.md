@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3432
+pr: trails#3432
 claim: "2026-06-16T00:44:53Z"
 assignee: "c1-schema-dumper-mysql-gaps"
 blocked-by: null

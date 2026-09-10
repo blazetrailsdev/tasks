@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 15
-pr: 7384
+pr: trails#7384
 claim: "2026-09-02T12:03:27Z"
 assignee: "add-rack-session-to-generate-stubs-pkg-dirs"
 blocked-by: null

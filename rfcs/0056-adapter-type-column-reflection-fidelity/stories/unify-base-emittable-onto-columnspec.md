@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 27
-pr: 4777
+pr: trails#4777
 claim: "2026-07-07T21:24:24Z"
 assignee: "unify-base-emittable-onto-columnspec"
 blocked-by: null

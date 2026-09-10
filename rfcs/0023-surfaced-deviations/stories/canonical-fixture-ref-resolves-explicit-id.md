@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3635
+pr: trails#3635
 claim: "2026-06-19T12:00:26Z"
 assignee: "canonical-fixture-ref-resolves-explicit-id"
 blocked-by: null

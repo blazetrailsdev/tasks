@@ -7,7 +7,7 @@ cluster: null
 deps: ["i18n-api-compare-enrollment"]
 deps-rfc: []
 est-loc: 500
-pr: 6002
+pr: trails#6002
 claim: "2026-08-03T18:08:46Z"
 assignee: "i18n-test-compare-enrollment"
 blocked-by: null

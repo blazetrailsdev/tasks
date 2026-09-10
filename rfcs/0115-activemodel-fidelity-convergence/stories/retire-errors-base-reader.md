@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6793
+pr: trails#6793
 claim: "2026-08-20T21:29:07Z"
 assignee: "converge-enum-undeclared-type-check-to-subtype"
 blocked-by: null

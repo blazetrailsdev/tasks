@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3734
+pr: trails#3734
 claim: "2026-06-20T18:25:29Z"
 assignee: "has-one-writer-queue-until-save"
 blocked-by: null

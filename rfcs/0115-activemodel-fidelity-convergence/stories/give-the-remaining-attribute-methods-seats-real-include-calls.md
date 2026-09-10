@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: 7170
+pr: trails#7170
 claim: "2026-08-28T16:41:27Z"
 assignee: "give-the-remaining-attribute-methods-seats-real-include-calls"
 blocked-by: null

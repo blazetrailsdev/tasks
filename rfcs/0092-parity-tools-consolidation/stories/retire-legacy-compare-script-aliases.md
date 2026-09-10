@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6305
+pr: trails#6305
 claim: "2026-08-09T23:04:31Z"
 assignee: "retire-legacy-compare-script-aliases"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 7539
+pr: trails#7539
 claim: "2026-09-05T22:06:49Z"
 assignee: "converge-adapter-args-url-parsing-onto-connection-url-resolver"
 blocked-by: null

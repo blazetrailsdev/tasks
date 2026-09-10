@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 3705
+pr: trails#3705
 claim: "2026-06-20T12:01:28Z"
 assignee: "forbid-inline-disable"
 blocked-by: null

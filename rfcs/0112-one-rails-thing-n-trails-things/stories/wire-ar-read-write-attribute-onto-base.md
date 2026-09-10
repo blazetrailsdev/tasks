@@ -7,7 +7,7 @@ cluster: dead-mixin-companions
 deps: ["move-accessed-fields-tracking-to-attribute"]
 deps-rfc: []
 est-loc: 60
-pr: 7170
+pr: trails#7170
 claim: "2026-08-30T15:47:31Z"
 assignee: "wire-ar-read-write-attribute-onto-base"
 blocked-by: null

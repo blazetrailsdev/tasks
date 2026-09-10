@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6205
+pr: trails#6205
 claim: "2026-08-07T22:00:40Z"
 assignee: "converge-jsonify-branch-order-onto-rails-as-json"
 blocked-by: null

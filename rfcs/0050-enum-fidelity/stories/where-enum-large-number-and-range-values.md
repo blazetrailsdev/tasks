@@ -8,7 +8,7 @@ deps: ["where-enum-serializes-numeric-string-and-label-arrays"]
 deps-rfc: []
 est-loc: 80
 priority: 33
-pr: 4807
+pr: trails#4807
 claim: "2026-07-08T22:22:35Z"
 assignee: "where-enum-large-number-and-range-values"
 blocked-by: null

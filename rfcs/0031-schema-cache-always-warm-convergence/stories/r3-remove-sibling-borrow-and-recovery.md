@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 3882
+pr: trails#3882
 claim: "2026-06-22T13:15:56Z"
 assignee: "r3-remove-sibling-borrow-and-recovery"
 blocked-by: null

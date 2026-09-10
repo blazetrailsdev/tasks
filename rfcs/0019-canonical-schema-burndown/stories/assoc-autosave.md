@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 500
 priority: 69
-pr: 4207
+pr: trails#4207
 claim: "2026-06-27T11:58:18Z"
 assignee: "assoc-autosave"
 blocked-by: null

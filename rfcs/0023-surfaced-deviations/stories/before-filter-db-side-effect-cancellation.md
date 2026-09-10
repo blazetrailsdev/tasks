@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4264
+pr: trails#4264
 claim: "2026-06-29T11:58:10Z"
 assignee: "before-filter-db-side-effect-cancellation"
 blocked-by: null

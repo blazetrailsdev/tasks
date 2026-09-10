@@ -9,7 +9,7 @@ deps: ["port-test-date-arith-operators"]
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: 6321
+pr: trails#6321
 claim: "2026-08-10T02:26:38Z"
 assignee: "port-test-date-arith-iteration"
 blocked-by: null

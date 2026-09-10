@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4916
+pr: trails#4916
 claim: "2026-07-16T19:38:24Z"
 assignee: "arel-aliased-join-tables-should-be-tablealias"
 blocked-by: null

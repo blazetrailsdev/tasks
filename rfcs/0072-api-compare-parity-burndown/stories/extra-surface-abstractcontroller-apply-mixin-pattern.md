@@ -8,7 +8,7 @@ deps: ["extra-surface-reasoned-allowlist"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5332
+pr: trails#5332
 claim: "2026-07-25T23:34:53Z"
 assignee: "extra-surface-abstractcontroller-apply-mixin-pattern"
 blocked-by: null

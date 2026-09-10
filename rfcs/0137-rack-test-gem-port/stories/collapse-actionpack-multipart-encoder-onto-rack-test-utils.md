@@ -9,7 +9,7 @@ deps: ["port-rack-test-utils"]
 deps-rfc: []
 est-loc: 300
 priority: 11
-pr: 7502
+pr: trails#7502
 claim: "2026-09-05T00:22:11Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
 blocked-by: null

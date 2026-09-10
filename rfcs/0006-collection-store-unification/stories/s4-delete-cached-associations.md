@@ -7,7 +7,7 @@ cluster: associations
 deps: ["s3-migrate-findtarget-reads"]
 est-loc: 200
 priority: 3
-pr: 15
+pr: tasks-legacy#15
 claim: "2026-06-10T22:04:33Z"
 assignee: "s4-delete-cached-associations"
 blocked-by: null

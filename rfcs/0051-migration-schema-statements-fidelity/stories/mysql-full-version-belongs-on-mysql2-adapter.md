@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6145
+pr: trails#6145
 claim: "2026-08-05T23:40:20Z"
 assignee: "mysql-full-version-belongs-on-mysql2-adapter"
 blocked-by: null

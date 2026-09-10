@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5315
+pr: trails#5315
 claim: "2026-07-25T19:34:52Z"
 assignee: "port-missing-scope-predicates"
 blocked-by: null

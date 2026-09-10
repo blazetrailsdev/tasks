@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 3420
+pr: trails#3420
 claim: "2026-06-15T23:28:27Z"
 assignee: "b2-unscope-leftjoins-alias"
 blocked-by: null

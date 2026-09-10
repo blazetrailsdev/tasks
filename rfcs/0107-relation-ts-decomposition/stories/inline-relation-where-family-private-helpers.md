@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6618
+pr: trails#6618
 claim: "2026-08-16T23:19:58Z"
 assignee: "converge-ordered-options-constructor-and-dup"
 blocked-by: null

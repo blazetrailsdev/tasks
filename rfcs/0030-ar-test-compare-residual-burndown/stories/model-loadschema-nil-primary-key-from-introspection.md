@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 50
-pr: 3528
+pr: trails#3528
 claim: "2026-06-17T03:46:26Z"
 assignee: "model-loadschema-nil-primary-key-from-introspection"
 blocked-by: null

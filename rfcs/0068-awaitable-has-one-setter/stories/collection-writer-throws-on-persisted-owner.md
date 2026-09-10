@@ -8,7 +8,7 @@ deps: ["retire-has-one-displacement-machinery"]
 deps-rfc: []
 est-loc: 400
 priority: 14
-pr: 5042
+pr: trails#5042
 claim: "2026-07-21T21:05:19Z"
 assignee: "collection-writer-throws-on-persisted-owner"
 blocked-by: null

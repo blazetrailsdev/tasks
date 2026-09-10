@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4542
+pr: trails#4542
 claim: "2026-07-04T11:56:50Z"
 assignee: "converge-primary-test-pool-size-to-rails-default"
 blocked-by: null

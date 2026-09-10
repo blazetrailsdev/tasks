@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5554
+pr: trails#5554
 claim: "2026-07-29T00:45:08Z"
 assignee: "require-canonical-rebuild-detection-gaps"
 blocked-by: null

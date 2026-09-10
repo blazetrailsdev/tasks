@@ -8,7 +8,7 @@ deps: ["shared-table-convergence"]
 deps-rfc: []
 est-loc: 120
 priority: 11
-pr: 4141
+pr: trails#4141
 claim: "2026-06-25T18:32:15Z"
 assignee: "date-test-mysql-native"
 blocked-by: null

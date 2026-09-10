@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 380
 priority: null
-pr: 6798
+pr: trails#6798
 claim: "2026-08-20T23:33:52Z"
 assignee: "retire-activemodel-this-rebinding-thunks"
 blocked-by: null

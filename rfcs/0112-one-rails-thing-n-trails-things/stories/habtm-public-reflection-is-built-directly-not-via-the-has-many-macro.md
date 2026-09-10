@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6900
+pr: trails#6900
 claim: "2026-08-23T01:58:40Z"
 assignee: "wave-5g-head-sweep"
 blocked-by: null

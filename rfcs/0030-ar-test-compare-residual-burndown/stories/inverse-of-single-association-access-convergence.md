@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 17
-pr: 3503
+pr: trails#3503
 claim: "2026-06-16T20:48:46Z"
 assignee: "inverse-of-single-association-access-convergence"
 blocked-by: null

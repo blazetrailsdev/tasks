@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6199
+pr: trails#6199
 claim: "2026-08-07T20:32:46Z"
 assignee: "converge-comment-or-changes-descriptor-spellings"
 blocked-by: null

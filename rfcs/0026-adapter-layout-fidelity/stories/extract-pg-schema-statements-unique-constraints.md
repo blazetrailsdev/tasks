@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 20
-pr: 3911
+pr: trails#3911
 claim: "2026-06-22T18:51:57Z"
 assignee: "extract-pg-schema-statements-unique-constraints"
 blocked-by: null

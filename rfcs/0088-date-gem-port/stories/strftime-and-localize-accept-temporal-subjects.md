@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6251
+pr: trails#6251
 claim: "2026-08-08T17:51:58Z"
 assignee: "dt-new-by-frags-offset-truncates-to-int"
 blocked-by: null

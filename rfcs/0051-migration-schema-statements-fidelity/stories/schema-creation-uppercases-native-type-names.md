@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5570
+pr: trails#5570
 claim: "2026-08-01T03:33:46Z"
 assignee: "schema-creation-uppercases-native-type-names"
 blocked-by: null

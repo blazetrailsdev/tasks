@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 7242
+pr: trails#7242
 claim: "2026-08-30T15:11:14Z"
 assignee: "port-migration-references-index-and-schema-definitions"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: 3113
+pr: trails#3113
 claim: "2026-06-11T01:17:12Z"
 assignee: "b1-singular-association-holder"
 blocked-by: null

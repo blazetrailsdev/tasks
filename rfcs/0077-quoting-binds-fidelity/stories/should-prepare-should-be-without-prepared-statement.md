@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: 7035
+pr: trails#7035
 claim: "2026-08-25T14:10:32Z"
 assignee: "attribute-dup-must-redup-mutable-value"
 blocked-by: null

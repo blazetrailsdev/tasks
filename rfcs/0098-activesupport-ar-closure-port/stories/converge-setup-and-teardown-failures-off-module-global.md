@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6528
+pr: trails#6528
 claim: "2026-08-14T16:07:02Z"
 assignee: "date-cast-value-rails-branch-structure"
 blocked-by: null

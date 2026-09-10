@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 40
-pr: 3885
+pr: trails#3885
 claim: "2026-06-22T14:51:58Z"
 assignee: "relation-inspect-unloaded-converge-to-rails"
 blocked-by: null

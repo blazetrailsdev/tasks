@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 4813
+pr: trails#4813
 claim: "2026-07-09T00:37:34Z"
 assignee: "converge-valuefordatabase-property-access-guards"
 blocked-by: null

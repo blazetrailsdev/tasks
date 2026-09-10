@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5297
+pr: trails#5297
 claim: "2026-07-25T13:12:31Z"
 assignee: "database-tasks-dump-schema-cache-ambient-connection"
 blocked-by: null

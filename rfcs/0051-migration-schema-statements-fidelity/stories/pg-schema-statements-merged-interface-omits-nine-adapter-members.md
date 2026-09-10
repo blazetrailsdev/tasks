@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6128
+pr: trails#6128
 claim: "2026-08-05T14:47:37Z"
 assignee: "resolve-last-activerecord-inheritance-mismatch-schema-dumper"
 blocked-by: null

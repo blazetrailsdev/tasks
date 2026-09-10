@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4662
+pr: trails#4662
 claim: "2026-07-06T04:46:48Z"
 assignee: "nested-through-polymorphic-fk-direct-load"
 blocked-by: null

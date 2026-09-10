@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4875
+pr: trails#4875
 claim: "2026-07-14T21:11:11Z"
 assignee: "abstract-quote-string-symbol-branch-order"
 blocked-by: null

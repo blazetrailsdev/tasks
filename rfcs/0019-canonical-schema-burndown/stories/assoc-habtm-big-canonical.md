@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3480
+pr: trails#3480
 claim: "2026-06-16T16:43:31Z"
 assignee: "assoc-habtm-big-canonical"
 blocked-by: null

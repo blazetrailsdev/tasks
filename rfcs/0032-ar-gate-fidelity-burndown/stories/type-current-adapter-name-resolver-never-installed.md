@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5181
+pr: trails#5181
 claim: "2026-07-23T21:37:09Z"
 assignee: "type-current-adapter-name-resolver-never-installed"
 blocked-by: null

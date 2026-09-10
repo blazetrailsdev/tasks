@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4913
+pr: trails#4913
 claim: "2026-07-16T19:33:01Z"
 assignee: "converge-notifications-onto-fanout-notifier"
 blocked-by: null

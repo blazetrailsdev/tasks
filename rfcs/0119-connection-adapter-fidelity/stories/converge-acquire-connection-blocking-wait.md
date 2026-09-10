@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 7056
+pr: trails#7056
 claim: "2026-08-25T17:17:28Z"
 assignee: "converge-token-for-class-attribute-stores"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: ["enroll-rack-session-in-compare-tooling"]
 deps-rfc: []
 est-loc: 550
 priority: 4
-pr: 7328
+pr: trails#7328
 claim: null
 assignee: null
 blocked-by: null

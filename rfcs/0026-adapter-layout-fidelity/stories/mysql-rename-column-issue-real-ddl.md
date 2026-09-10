@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: 4037
+pr: trails#4037
 claim: "2026-06-23T22:00:42Z"
 assignee: "mysql-rename-column-issue-real-ddl"
 blocked-by: null

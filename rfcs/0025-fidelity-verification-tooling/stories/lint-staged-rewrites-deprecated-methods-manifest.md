@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 21
-pr: 5430
+pr: trails#5430
 claim: "2026-07-27T17:47:12Z"
 assignee: "lint-staged-rewrites-deprecated-methods-manifest"
 blocked-by: null

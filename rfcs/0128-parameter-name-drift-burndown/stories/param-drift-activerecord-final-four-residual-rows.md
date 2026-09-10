@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: 7278
+pr: trails#7278
 claim: "2026-08-31T00:08:11Z"
 assignee: "param-drift-activerecord-final-four-residual-rows"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4077
+pr: trails#4077
 claim: "2026-06-24T18:38:39Z"
 assignee: "counter-cache-aliased-column-test-canonical-fixtures"
 blocked-by: null

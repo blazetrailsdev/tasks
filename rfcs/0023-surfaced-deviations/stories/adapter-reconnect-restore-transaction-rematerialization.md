@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4356
+pr: trails#4356
 claim: "2026-07-01T00:54:48Z"
 assignee: "adapter-reconnect-restore-transaction-rematerialization"
 blocked-by: null

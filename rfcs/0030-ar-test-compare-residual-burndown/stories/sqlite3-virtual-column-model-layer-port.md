@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5177
+pr: trails#5177
 claim: "2026-07-23T21:12:09Z"
 assignee: "sqlite3-virtual-column-model-layer-port"
 blocked-by: null

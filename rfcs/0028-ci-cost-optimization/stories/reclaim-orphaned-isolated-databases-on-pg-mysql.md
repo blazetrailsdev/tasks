@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 6100
+pr: trails#6100
 claim: "2026-08-04T22:59:07Z"
 assignee: "i18n-date-numeric-parser-patterns"
 blocked-by: null

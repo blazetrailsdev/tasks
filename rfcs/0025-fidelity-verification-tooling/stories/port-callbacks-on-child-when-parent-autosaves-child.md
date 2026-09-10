@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5281
+pr: trails#5281
 claim: "2026-07-25T01:18:52Z"
 assignee: "port-callbacks-on-child-when-parent-autosaves-child"
 blocked-by: null

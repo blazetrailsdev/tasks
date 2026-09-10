@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5392
+pr: trails#5392
 claim: "2026-07-27T02:13:09Z"
 assignee: "audit-setx-functions-without-rails-counterpart"
 blocked-by: null

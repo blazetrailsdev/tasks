@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6641
+pr: trails#6641
 claim: "2026-08-17T11:13:56Z"
 assignee: "assertions-activesupport-cluster-tail"
 blocked-by: null

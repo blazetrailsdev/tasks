@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3302
+pr: trails#3302
 claim: "2026-06-14T22:26:15Z"
 assignee: "inheritance-column-default-type-and-has-attribute-gate"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3680
+pr: trails#3680
 claim: "2026-06-19T22:54:11Z"
 assignee: "comparison-validator-rescue-narrowing"
 blocked-by: null

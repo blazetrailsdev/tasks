@@ -8,7 +8,7 @@ deps: ["has-one-setter-throws-on-persisted-owner"]
 deps-rfc: []
 est-loc: 350
 priority: 12
-pr: 4983
+pr: trails#4983
 claim: "2026-07-20T01:31:13Z"
 assignee: "retire-has-one-displacement-machinery"
 blocked-by: null

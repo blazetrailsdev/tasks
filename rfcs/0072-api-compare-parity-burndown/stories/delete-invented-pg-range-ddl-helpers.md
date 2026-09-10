@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5916
+pr: trails#5916
 claim: "2026-08-02T19:49:25Z"
 assignee: "delete-invented-pg-range-ddl-helpers"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5841
+pr: trails#5841
 claim: "2026-08-02T00:06:04Z"
 assignee: "delete-the-schema-statements-accessor"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3807
+pr: trails#3807
 claim: "2026-06-21T17:13:54Z"
 assignee: "module-namespaced-table-name-global-prefix-suffix-reset"
 blocked-by: null

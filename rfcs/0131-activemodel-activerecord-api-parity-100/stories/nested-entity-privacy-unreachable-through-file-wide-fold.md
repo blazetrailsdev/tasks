@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 7
-pr: 7471
+pr: trails#7471
 claim: "2026-09-04T01:40:32Z"
 assignee: "nested-entity-privacy-unreachable-through-file-wide-fold"
 blocked-by: null

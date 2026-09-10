@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: 5943
+pr: trails#5943
 claim: "2026-08-03T01:05:45Z"
 assignee: "converge-join-dependency-single-build-path"
 blocked-by: null

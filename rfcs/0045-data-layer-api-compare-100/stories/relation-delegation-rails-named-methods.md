@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4292
+pr: trails#4292
 claim: "2026-06-29T20:08:41Z"
 assignee: "relation-delegation-rails-named-methods"
 blocked-by: null

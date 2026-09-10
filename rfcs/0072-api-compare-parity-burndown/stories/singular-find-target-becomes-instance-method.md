@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6097
+pr: trails#6097
 claim: "2026-08-04T22:11:04Z"
 assignee: "port-delegation-record-operators"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4940
+pr: trails#4940
 claim: "2026-07-18T18:51:12Z"
 assignee: "rails-error-parity-activemodel-rangeerror-rename"
 blocked-by: null

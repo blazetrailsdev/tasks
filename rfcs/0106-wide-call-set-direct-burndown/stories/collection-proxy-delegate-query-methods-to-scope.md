@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6595
+pr: trails#6595
 claim: "2026-08-16T13:15:03Z"
 assignee: "collection-proxy-delegate-query-methods-to-scope"
 blocked-by: null

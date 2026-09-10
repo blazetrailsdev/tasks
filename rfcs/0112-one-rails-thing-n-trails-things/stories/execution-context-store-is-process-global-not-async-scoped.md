@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-pr: 6734
+pr: trails#6734
 claim: "2026-08-25T17:06:37Z"
 assignee: "converge-no-touching-block-onto-apply-to"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6539
+pr: trails#6539
 claim: "2026-08-14T19:15:06Z"
 assignee: "sqlite3-perform-query-returns-result"
 blocked-by: null

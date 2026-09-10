@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5688
+pr: trails#5688
 claim: "2026-07-30T23:33:17Z"
 assignee: "canonical-table-rebuild-source-contains-nul-byte"
 blocked-by: null

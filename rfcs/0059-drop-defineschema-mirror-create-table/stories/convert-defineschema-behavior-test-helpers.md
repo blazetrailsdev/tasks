@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 4476
+pr: trails#4476
 claim: "2026-07-03T12:33:51Z"
 assignee: "convert-defineschema-behavior-test-helpers"
 blocked-by: null

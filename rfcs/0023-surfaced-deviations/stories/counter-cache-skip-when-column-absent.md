@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3983
+pr: trails#3983
 claim: "2026-06-23T12:07:41Z"
 assignee: "counter-cache-skip-when-column-absent"
 blocked-by: null

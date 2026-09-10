@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4510
+pr: trails#4510
 claim: "2026-07-03T20:43:10Z"
 assignee: "converge-join-dependency-wiring-tests-canonical-pk"
 blocked-by: null

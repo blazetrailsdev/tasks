@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: 42
-pr: 7400
+pr: trails#7400
 claim: "2026-09-02T18:43:20Z"
 assignee: "comparison-validator-private-compare-is-invented"
 blocked-by: null

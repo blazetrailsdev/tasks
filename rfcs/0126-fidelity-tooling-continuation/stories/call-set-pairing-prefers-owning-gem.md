@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 1
-pr: 7154
+pr: trails#7154
 claim: "2026-08-28T11:35:55Z"
 assignee: "api-compare-bodyless-declaration-outranks-real-body"
 blocked-by: null

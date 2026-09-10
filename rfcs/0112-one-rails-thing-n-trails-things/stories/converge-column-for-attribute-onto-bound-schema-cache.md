@@ -7,7 +7,7 @@ cluster: duplicate-bodies
 deps: []
 deps-rfc: []
 est-loc: 60
-pr: 6369
+pr: trails#6369
 claim: "2026-08-25T14:26:33Z"
 assignee: "consolidate-three-assign-attributes-implementations"
 blocked-by: null

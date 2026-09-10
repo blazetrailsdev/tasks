@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6037
+pr: trails#6037
 claim: "2026-08-03T23:25:52Z"
 assignee: "i18n-inspect-string-nonprintable-unicode"
 blocked-by: null

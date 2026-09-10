@@ -8,7 +8,7 @@ deps: [frontmatter-block-editor]
 deps-rfc: []
 est-loc: 90
 priority: 31
-pr: 3204
+pr: trails#3204
 claim: "2026-06-13T19:48:35Z"
 assignee: "cli-set-deps"
 blocked-by: null

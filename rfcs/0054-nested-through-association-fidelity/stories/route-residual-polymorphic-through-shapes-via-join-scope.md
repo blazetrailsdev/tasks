@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 21
-pr: 4744
+pr: trails#4744
 claim: "2026-07-08T19:22:35Z"
 assignee: "route-residual-polymorphic-through-shapes-via-join-scope"
 blocked-by: null

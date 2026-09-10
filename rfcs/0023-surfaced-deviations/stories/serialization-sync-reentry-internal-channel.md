@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3394
+pr: trails#3394
 claim: "2026-06-15T18:54:25Z"
 assignee: "serialization-sync-reentry-internal-channel"
 blocked-by: null

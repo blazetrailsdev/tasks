@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6282
+pr: trails#6282
 claim: "2026-08-09T15:40:10Z"
 assignee: "mysql-schema-creation-quoted-columns-reimplements-the-delegated-decoration"
 blocked-by: null

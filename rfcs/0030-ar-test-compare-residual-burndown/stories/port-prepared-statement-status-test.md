@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 5120
+pr: trails#5120
 claim: "2026-07-23T02:43:36Z"
 assignee: "port-prepared-statement-status-test"
 blocked-by: null

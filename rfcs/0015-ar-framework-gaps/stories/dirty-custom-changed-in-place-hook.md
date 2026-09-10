@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 52
-pr: 2988
+pr: trails#2988
 claim: "2026-06-07T01:30:56Z"
 assignee: "dirty-custom-changed-in-place-hook"
 blocked-by: null

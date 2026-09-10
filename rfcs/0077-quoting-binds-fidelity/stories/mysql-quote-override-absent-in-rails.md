@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6293
+pr: trails#6293
 claim: "2026-08-09T19:29:15Z"
 assignee: "fold-bind-for-pg-into-type-cast"
 blocked-by: null

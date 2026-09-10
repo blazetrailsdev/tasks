@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5714
+pr: trails#5714
 claim: "2026-07-31T15:39:02Z"
 assignee: "control-byte-guards-drift-between-eslint-and-shell"
 blocked-by: null

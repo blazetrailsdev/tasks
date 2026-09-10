@@ -8,7 +8,7 @@ deps: ["shared-table-convergence", "reflection-extra-burndown"]
 deps-rfc: []
 est-loc: 500
 priority: 75
-pr: 4212
+pr: trails#4212
 claim: "2026-06-27T14:28:19Z"
 assignee: "inheritance-modules-reflection-followup-6d2d"
 blocked-by: null

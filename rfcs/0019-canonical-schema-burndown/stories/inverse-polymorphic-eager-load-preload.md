@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3756
+pr: trails#3756
 claim: "2026-06-21T00:15:26Z"
 assignee: "inverse-polymorphic-eager-load-preload"
 blocked-by: null

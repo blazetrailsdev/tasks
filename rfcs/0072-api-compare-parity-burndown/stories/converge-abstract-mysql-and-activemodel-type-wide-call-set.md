@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5374
+pr: trails#5374
 claim: "2026-07-26T23:02:56Z"
 assignee: "converge-abstract-mysql-and-activemodel-type-wide-call-set"
 blocked-by: null

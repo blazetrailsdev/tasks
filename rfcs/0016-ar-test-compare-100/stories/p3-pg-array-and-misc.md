@@ -8,7 +8,7 @@ deps: ["i1-schema-dumper-columnspec-u3"]
 deps-rfc: []
 est-loc: 200
 priority: 20
-pr: 3061
+pr: trails#3061
 claim: "2026-06-09T15:51:02Z"
 assignee: "p3-pg-array-and-misc"
 blocked-by: null

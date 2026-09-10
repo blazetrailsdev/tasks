@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4404
+pr: trails#4404
 claim: "2026-07-02T04:23:22Z"
 assignee: "eager-test-length-reader-converge"
 blocked-by: null

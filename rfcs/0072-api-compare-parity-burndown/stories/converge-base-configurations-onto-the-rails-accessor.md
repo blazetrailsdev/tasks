@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5381
+pr: trails#5381
 claim: "2026-07-27T00:38:56Z"
 assignee: "converge-base-configurations-onto-the-rails-accessor"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3797
+pr: trails#3797
 claim: "2026-06-21T14:38:44Z"
 assignee: "pg-foreign-key-exists-converge-to-abstract"
 blocked-by: null

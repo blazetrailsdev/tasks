@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: 3471
+pr: trails#3471
 claim: "2026-06-16T15:34:14Z"
 assignee: "inverse-associations-fixture-port"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3723
+pr: trails#3723
 claim: "2026-06-20T16:01:29Z"
 assignee: "hasmany-fk-derivation-eager-at-proxy-construction"
 blocked-by: null

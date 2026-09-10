@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4113
+pr: trails#4113
 claim: "2026-06-25T12:39:31Z"
 assignee: "conditions-clause-from-full-arel-sti-default-scope"
 blocked-by: null

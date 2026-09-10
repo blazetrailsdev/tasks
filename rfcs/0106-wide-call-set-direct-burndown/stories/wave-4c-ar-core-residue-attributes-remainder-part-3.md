@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6838
+pr: trails#6838
 claim: "2026-08-21T20:20:32Z"
 assignee: "wave-4c-ar-core-residue-attributes-remainder-part-3"
 blocked-by: null

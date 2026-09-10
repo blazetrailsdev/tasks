@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 20
-pr: 7625
+pr: trails#7625
 claim: "2026-09-08T16:33:05Z"
 assignee: "journey-call-parity-baselines-to-zero"
 blocked-by: null

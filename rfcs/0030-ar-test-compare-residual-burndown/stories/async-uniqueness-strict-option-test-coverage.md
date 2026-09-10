@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: 3647
+pr: trails#3647
 claim: "2026-06-19T15:00:25Z"
 assignee: "async-uniqueness-strict-option-test-coverage"
 blocked-by: null

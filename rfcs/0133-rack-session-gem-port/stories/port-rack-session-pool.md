@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7346
+pr: trails#7346
 claim: "2026-09-01T17:04:32Z"
 assignee: "port-rack-session-pool"
 blocked-by: null

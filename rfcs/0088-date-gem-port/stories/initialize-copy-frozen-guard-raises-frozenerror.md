@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 6379
+pr: trails#6379
 claim: "2026-08-11T21:26:07Z"
 assignee: "burndown-order-only-rows-associations-remainder"
 blocked-by: null

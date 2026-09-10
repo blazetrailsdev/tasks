@@ -8,7 +8,7 @@ deps: ["assoc-join-model-canonical"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: 3586
+pr: trails#3586
 claim: "2026-06-18T13:52:18Z"
 assignee: "assoc-join-model-canonical-wave2"
 blocked-by: null

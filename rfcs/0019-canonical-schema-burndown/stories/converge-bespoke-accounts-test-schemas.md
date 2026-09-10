@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 10
-pr: 4139
+pr: trails#4139
 claim: "2026-06-25T18:07:05Z"
 assignee: "converge-bespoke-accounts-test-schemas"
 blocked-by: null

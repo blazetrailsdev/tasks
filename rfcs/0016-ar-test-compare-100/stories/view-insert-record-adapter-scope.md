@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 20
-pr: 3072
+pr: trails#3072
 claim: "2026-06-10T00:42:48Z"
 assignee: "view-insert-record-adapter-scope"
 blocked-by: null

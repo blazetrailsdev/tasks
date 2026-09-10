@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: 7440
+pr: trails#7440
 claim: "2026-09-03T11:50:57Z"
 assignee: "inline-helpers-hiding-the-last-calculations-and-sqlite3-fetches"
 blocked-by: null

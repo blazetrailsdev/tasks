@@ -8,7 +8,7 @@ deps: ["pg-serialize-fire-and-forget-client-query-sites"]
 deps-rfc: []
 est-loc: 150
 priority: 5
-pr: 4670
+pr: trails#4670
 claim: "2026-07-06T13:15:36Z"
 assignee: "pg-pinned-client-query-serializer-mutex"
 blocked-by: null

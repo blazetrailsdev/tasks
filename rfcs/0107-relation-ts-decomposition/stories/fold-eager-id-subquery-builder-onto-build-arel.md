@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: 11
-pr: 6764
+pr: trails#6764
 claim: "2026-08-20T10:22:32Z"
 assignee: "destroy-async-test-port-and-model-flip"
 blocked-by: null

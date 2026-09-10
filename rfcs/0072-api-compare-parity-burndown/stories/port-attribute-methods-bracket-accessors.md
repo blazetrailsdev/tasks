@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6068
+pr: trails#6068
 claim: "2026-08-04T15:49:36Z"
 assignee: "port-attribute-methods-bracket-accessors"
 blocked-by: null

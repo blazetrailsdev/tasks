@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 7
-pr: 5079
+pr: trails#5079
 claim: "2026-07-22T21:02:22Z"
 assignee: "migration-bulk-alter-generic-body"
 blocked-by: null

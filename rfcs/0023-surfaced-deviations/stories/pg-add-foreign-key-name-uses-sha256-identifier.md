@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3795
+pr: trails#3795
 claim: "2026-06-21T14:14:41Z"
 assignee: "pg-add-foreign-key-name-uses-sha256-identifier"
 blocked-by: null

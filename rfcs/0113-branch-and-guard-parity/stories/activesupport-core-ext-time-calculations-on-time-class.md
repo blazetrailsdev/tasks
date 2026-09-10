@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 7078
+pr: trails#7078
 claim: "2026-08-26T12:44:08Z"
 assignee: "activesupport-core-ext-time-calculations-on-time-class"
 blocked-by: null

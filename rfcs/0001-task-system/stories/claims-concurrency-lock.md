@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 5
-pr: 3140
+pr: trails#3140
 claim: "2026-06-12T00:28:58Z"
 assignee: "claims-concurrency-lock"
 blocked-by: null

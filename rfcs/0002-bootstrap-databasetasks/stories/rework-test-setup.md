@@ -8,7 +8,7 @@ deps: ["schema-file-generator-config", "memory-loadschema-spike", "reconstruct-f
 deps-rfc: []
 est-loc: 300
 priority: 1000004
-pr: 3002
+pr: trails#3002
 claim: "2026-06-07T18:31:53Z"
 assignee: "rework-test-setup"
 blocked-by: null

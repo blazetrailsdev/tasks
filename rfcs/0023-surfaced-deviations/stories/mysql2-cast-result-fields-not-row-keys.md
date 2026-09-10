@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3334
+pr: trails#3334
 claim: "2026-06-15T12:15:08Z"
 assignee: "mysql2-cast-result-fields-not-row-keys"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5497
+pr: trails#5497
 claim: "2026-07-28T13:11:50Z"
 assignee: "retire-legacy-sqlite3-adapter-test"
 blocked-by: null

@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 250
-pr: 7075
+pr: trails#7075
 claim: "2026-08-26T11:45:00Z"
 assignee: "hoist-schema-load-and-deferred-pk-materialization-out-of-ported-bodies"
 blocked-by: null

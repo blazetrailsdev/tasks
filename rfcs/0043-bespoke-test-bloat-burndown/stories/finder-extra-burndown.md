@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 11
-pr: 4142
+pr: trails#4142
 claim: "2026-06-25T18:47:16Z"
 assignee: "finder-extra-burndown"
 blocked-by: null

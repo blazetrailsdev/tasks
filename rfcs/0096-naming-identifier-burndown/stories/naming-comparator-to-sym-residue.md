@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6397
+pr: trails#6397
 claim: "2026-08-12T02:46:02Z"
 assignee: "naming-comparator-to-sym-residue"
 blocked-by: null

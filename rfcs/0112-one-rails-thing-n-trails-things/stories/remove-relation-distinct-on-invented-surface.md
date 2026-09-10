@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-pr: 6744
+pr: trails#6744
 claim: "2026-08-26T11:05:45Z"
 assignee: "fold-join-clauses-into-joins-values"
 blocked-by: null

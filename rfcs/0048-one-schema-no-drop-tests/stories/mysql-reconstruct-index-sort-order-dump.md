@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4397
+pr: trails#4397
 claim: "2026-07-04T22:47:10Z"
 assignee: "mysql-reconstruct-index-sort-order-dump"
 blocked-by: null

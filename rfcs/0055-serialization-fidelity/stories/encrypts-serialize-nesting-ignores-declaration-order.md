@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 40
-pr: 5060
+pr: trails#5060
 claim: "2026-07-22T15:26:50Z"
 assignee: "encrypts-serialize-nesting-ignores-declaration-order"
 blocked-by: null

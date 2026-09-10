@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4336
+pr: trails#4336
 claim: "2026-06-30T17:02:41Z"
 assignee: "converge-abstract-mysql-prevent-writes-rails-port"
 blocked-by: null

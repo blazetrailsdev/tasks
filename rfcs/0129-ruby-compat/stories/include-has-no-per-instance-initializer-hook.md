@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7561
+pr: trails#7561
 claim: "2026-09-06T15:38:14Z"
 assignee: "include-has-no-per-instance-initializer-hook"
 blocked-by: null

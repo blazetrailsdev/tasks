@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5505
+pr: trails#5505
 claim: "2026-07-28T13:46:57Z"
 assignee: "converge-connection-adapters-sqlite3-bespoke-tables"
 blocked-by: null

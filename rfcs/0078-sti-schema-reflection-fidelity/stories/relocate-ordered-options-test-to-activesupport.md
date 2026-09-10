@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6970
+pr: trails#6970
 claim: "2026-08-24T03:21:39Z"
 assignee: "relocate-ordered-options-test-to-activesupport"
 blocked-by: null

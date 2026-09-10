@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 230
 priority: null
-pr: 3409
+pr: trails#3409
 claim: "2026-06-15T20:20:26Z"
 assignee: "a3-has-one-and-through"
 blocked-by: null

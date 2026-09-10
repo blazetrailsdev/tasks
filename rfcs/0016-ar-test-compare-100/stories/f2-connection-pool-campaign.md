@@ -7,7 +7,7 @@ cluster: clusters
 deps: []
 deps-rfc: []
 est-loc: 250
-pr: 3009
+pr: trails#3009
 claim: "2026-06-07T22:07:51Z"
 assignee: "f2-connection-pool-campaign"
 blocked-by: null

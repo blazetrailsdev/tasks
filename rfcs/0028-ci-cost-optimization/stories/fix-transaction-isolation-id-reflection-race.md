@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 1
-pr: 5230
+pr: trails#5230
 claim: "2026-07-24T15:42:55Z"
 assignee: "fix-transaction-isolation-id-reflection-race"
 blocked-by: null

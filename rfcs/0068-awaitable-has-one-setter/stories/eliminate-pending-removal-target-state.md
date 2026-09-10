@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5663
+pr: trails#5663
 claim: "2026-07-30T19:23:18Z"
 assignee: "eliminate-pending-removal-target-state"
 blocked-by: null

@@ -9,7 +9,7 @@ deps-rfc:
   - "0019-canonical-schema-burndown"
 est-loc: 200
 priority: 20
-pr: 4298
+pr: trails#4298
 claim: "2026-06-30T00:24:33Z"
 assignee: "flake-elimination-as-ci-cost"
 blocked-by: null

@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 7
-pr: 7139
+pr: trails#7139
 claim: "2026-08-27T23:28:19Z"
 assignee: "single-to-sql-and-binds-compile-path"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4079
+pr: trails#4079
 claim: "2026-06-24T19:14:40Z"
 assignee: "build-joins-emit-single-construct-join-dependency"
 blocked-by: null

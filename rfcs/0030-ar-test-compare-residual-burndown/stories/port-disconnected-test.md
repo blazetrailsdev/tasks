@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 5119
+pr: trails#5119
 claim: "2026-07-23T02:34:36Z"
 assignee: "port-disconnected-test"
 blocked-by: null

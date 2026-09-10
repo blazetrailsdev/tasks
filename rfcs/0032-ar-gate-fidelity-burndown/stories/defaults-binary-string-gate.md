@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: 5075
+pr: trails#5075
 claim: "2026-07-22T20:11:47Z"
 assignee: "defaults-binary-string-gate"
 blocked-by: null

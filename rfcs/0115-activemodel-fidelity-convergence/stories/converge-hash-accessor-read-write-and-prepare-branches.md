@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 23
-pr: 7217
+pr: trails#7217
 claim: "2026-08-29T22:14:49Z"
 assignee: "converge-hash-accessor-read-write-and-prepare-branches"
 blocked-by: null

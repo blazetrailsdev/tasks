@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3759
+pr: trails#3759
 claim: "2026-06-21T01:19:26Z"
 assignee: "collection-proxy-targets-by-pk-canonical-coverage"
 blocked-by: null

@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7424
+pr: trails#7424
 claim: "2026-09-03T00:39:30Z"
 assignee: "consolidate-kernel-integer-and-float-conversions"
 blocked-by: null

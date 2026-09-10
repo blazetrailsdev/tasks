@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: 3617
+pr: trails#3617
 claim: "2026-06-21T01:43:26Z"
 assignee: "join-model-canonical-conversion"
 blocked-by: null

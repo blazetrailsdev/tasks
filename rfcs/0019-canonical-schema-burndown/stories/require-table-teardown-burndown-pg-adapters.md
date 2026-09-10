@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 9
-pr: 3555
+pr: trails#3555
 claim: "2026-06-17T16:48:25Z"
 assignee: "require-table-teardown-burndown-pg-adapters"
 blocked-by: null

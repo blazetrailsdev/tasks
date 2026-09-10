@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 5480
+pr: trails#5480
 claim: "2026-07-28T01:52:16Z"
 assignee: "port-migration-references-foreign-key-cases"
 blocked-by: null

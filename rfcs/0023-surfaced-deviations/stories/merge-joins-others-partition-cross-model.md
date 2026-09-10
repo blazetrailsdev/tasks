@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3769
+pr: trails#3769
 claim: "2026-06-21T03:02:43Z"
 assignee: "merge-joins-others-partition-cross-model"
 blocked-by: null

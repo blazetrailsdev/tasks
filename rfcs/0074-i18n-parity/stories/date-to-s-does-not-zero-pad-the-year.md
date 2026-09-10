@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6136
+pr: trails#6136
 claim: "2026-08-05T16:53:06Z"
 assignee: "date-to-s-does-not-zero-pad-the-year"
 blocked-by: null

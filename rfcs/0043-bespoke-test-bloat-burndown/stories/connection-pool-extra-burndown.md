@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 17
-pr: 4153
+pr: trails#4153
 claim: "2026-06-25T21:17:16Z"
 assignee: "connection-pool-extra-burndown"
 blocked-by: null

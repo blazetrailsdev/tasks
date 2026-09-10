@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6878
+pr: trails#6878
 claim: "2026-08-22T20:05:01Z"
 assignee: "struct-members-not-extracted-as-ruby-methods"
 blocked-by: null

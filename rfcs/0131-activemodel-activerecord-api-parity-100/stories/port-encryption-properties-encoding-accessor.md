@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 160
 priority: 3
-pr: 7435
+pr: trails#7435
 claim: "2026-09-03T10:51:58Z"
 assignee: "port-encryption-properties-encoding-accessor"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: 6683
+pr: trails#6683
 claim: "2026-08-18T00:44:19Z"
 assignee: "converge-collection-target-setter-coercion-and-proxy"
 blocked-by: null

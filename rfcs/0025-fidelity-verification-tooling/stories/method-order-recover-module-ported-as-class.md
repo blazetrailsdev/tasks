@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 25
-pr: 5231
+pr: trails#5231
 claim: "2026-07-24T16:00:03Z"
 assignee: "method-order-recover-module-ported-as-class"
 blocked-by: null

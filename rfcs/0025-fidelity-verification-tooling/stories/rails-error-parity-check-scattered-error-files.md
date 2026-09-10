@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3375
+pr: trails#3375
 claim: "2026-06-15T16:54:25Z"
 assignee: "rails-error-parity-check-scattered-error-files"
 blocked-by: null

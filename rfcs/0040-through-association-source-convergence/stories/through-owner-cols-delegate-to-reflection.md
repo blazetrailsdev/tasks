@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: 3864
+pr: trails#3864
 claim: "2026-06-22T03:23:56Z"
 assignee: "through-owner-cols-delegate-to-reflection"
 blocked-by: null

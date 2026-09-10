@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6779
+pr: trails#6779
 claim: "2026-08-21T12:50:30Z"
 assignee: "alert-on-stats-sync-failure"
 blocked-by: null

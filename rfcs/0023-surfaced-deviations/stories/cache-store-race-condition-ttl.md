@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3685
+pr: trails#3685
 claim: "2026-06-20T00:54:21Z"
 assignee: "cache-store-race-condition-ttl"
 blocked-by: null

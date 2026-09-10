@@ -8,7 +8,7 @@ deps: ["rework-test-setup"]
 deps-rfc: []
 est-loc: 150
 priority: 1000005
-pr: 3004
+pr: trails#3004
 claim: "2026-06-09T15:57:22Z"
 assignee: "delete-bootstrap-handler"
 blocked-by: null

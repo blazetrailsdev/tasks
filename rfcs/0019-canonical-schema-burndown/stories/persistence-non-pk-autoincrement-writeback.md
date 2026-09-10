@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3835
+pr: trails#3835
 claim: "2026-06-21T20:54:43Z"
 assignee: "persistence-non-pk-autoincrement-writeback"
 blocked-by: null

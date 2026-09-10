@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 3196
+pr: trails#3196
 claim: "2026-06-13T14:47:16Z"
 assignee: "f9g2-strict-loading-association-build"
 blocked-by: null

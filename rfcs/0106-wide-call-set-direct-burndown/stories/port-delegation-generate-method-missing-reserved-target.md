@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6998
+pr: trails#6998
 claim: "2026-08-24T18:07:08Z"
 assignee: "stale-story-references-scan-times-out-under-load"
 blocked-by: null

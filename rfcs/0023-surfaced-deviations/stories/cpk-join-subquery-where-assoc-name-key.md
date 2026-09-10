@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: 4400
+pr: trails#4400
 claim: "2026-07-02T03:23:22Z"
 assignee: "cpk-join-subquery-where-assoc-name-key"
 blocked-by: null

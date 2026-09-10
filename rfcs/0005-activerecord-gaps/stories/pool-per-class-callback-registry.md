@@ -7,7 +7,7 @@ cluster: connection-pool
 deps: []
 deps-rfc: []
 est-loc: 15
-pr: 3087
+pr: trails#3087
 claim: "2026-06-10T15:35:04Z"
 assignee: "pool-per-class-callback-registry"
 blocked-by: null

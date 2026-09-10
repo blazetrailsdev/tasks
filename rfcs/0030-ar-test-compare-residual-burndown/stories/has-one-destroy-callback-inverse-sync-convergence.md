@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4102
+pr: trails#4102
 claim: "2026-06-25T04:42:34Z"
 assignee: "has-one-destroy-callback-inverse-sync-convergence"
 blocked-by: null

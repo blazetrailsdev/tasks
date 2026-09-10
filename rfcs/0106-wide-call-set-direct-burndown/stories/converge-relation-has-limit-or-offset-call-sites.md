@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6578
+pr: trails#6578
 claim: "2026-08-15T21:15:04Z"
 assignee: "converge-relation-has-limit-or-offset-call-sites"
 blocked-by: null

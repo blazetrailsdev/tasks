@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: 4529
+pr: trails#4529
 claim: "2026-07-04T00:43:12Z"
 assignee: "assign-attributes-each-pair-duck-typing"
 blocked-by: null

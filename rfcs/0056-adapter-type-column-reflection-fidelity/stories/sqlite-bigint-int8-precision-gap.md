@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 50
-pr: 4533
+pr: trails#4533
 claim: "2026-07-07T13:49:53Z"
 assignee: "sqlite-bigint-int8-precision-gap"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 5032
+pr: trails#5032
 claim: "2026-07-21T01:40:20Z"
 assignee: "eliminate-arel-default-quoters-supply-connection"
 blocked-by: null

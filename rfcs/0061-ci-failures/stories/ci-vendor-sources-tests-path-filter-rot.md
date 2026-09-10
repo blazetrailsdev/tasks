@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5436
+pr: trails#5436
 claim: "2026-07-27T18:35:54Z"
 assignee: "ci-vendor-sources-tests-path-filter-rot"
 blocked-by: null

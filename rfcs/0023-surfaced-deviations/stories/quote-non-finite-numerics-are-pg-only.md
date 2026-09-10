@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4936
+pr: trails#4936
 claim: "2026-07-18T13:51:13Z"
 assignee: "quote-non-finite-numerics-are-pg-only"
 blocked-by: null

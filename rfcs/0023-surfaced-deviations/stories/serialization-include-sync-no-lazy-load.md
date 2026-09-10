@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 12
-pr: 3189
+pr: trails#3189
 claim: "2026-06-13T12:46:13Z"
 assignee: "serialization-include-sync-no-lazy-load"
 blocked-by: null

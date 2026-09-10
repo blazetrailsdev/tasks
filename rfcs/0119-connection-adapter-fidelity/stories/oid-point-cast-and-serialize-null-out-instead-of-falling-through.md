@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7564
+pr: trails#7564
 claim: "2026-09-06T16:38:15Z"
 assignee: "oid-point-cast-and-serialize-null-out-instead-of-falling-through"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 10
-pr: 4938
+pr: trails#4938
 claim: "2026-07-18T18:41:15Z"
 assignee: "awaitable-set-accessor-sugar"
 blocked-by: null

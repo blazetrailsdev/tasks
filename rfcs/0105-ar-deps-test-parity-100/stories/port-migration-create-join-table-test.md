@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 7254
+pr: trails#7254
 claim: "2026-08-30T16:38:39Z"
 assignee: "port-migration-create-join-table-test"
 blocked-by: null

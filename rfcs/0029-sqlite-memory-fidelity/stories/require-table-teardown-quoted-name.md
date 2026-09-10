@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5504
+pr: trails#5504
 claim: "2026-07-28T13:41:43Z"
 assignee: "require-table-teardown-quoted-name"
 blocked-by: null

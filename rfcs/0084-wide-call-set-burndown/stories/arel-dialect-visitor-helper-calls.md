@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: null
-pr: 6357
+pr: trails#6357
 claim: "2026-08-11T13:46:07Z"
 assignee: "arel-dialect-visitor-helper-calls"
 blocked-by: null

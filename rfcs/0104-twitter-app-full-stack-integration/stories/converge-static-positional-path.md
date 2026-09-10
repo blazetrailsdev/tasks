@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 46
-pr: 7353
+pr: trails#7353
 claim: "2026-09-01T18:42:23Z"
 assignee: "converge-configuration-root-lazy-find-root"
 blocked-by: null

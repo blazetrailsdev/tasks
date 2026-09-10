@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 5012
+pr: trails#5012
 claim: "2026-07-20T20:26:45Z"
 assignee: "encrypted-binary-column-text-ciphertext-roundtrip"
 blocked-by: null

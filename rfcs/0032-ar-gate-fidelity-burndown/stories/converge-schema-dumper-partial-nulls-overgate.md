@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3717
+pr: trails#3717
 claim: "2026-06-20T14:13:29Z"
 assignee: "converge-schema-dumper-partial-nulls-overgate"
 blocked-by: null

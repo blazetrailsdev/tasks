@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3823
+pr: trails#3823
 claim: "2026-06-21T18:54:41Z"
 assignee: "converge-cross-model-merge-join-aliasing"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6525
+pr: trails#6525
 claim: "2026-08-14T15:27:02Z"
 assignee: "port-minitest-reporter-surface"
 blocked-by: null

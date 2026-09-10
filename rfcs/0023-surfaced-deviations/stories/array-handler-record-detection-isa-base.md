@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3830
+pr: trails#3830
 claim: "2026-06-21T20:06:42Z"
 assignee: "array-handler-record-detection-isa-base"
 blocked-by: null

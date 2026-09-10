@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5723
+pr: trails#5723
 claim: "2026-07-31T16:56:52Z"
 assignee: "scripts-tsconfig-program-has-384-type-errors"
 blocked-by: null

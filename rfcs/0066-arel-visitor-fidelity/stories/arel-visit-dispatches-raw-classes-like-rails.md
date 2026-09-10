@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: 4990
+pr: trails#4990
 claim: "2026-07-20T01:57:56Z"
 assignee: "arel-visit-dispatches-raw-classes-like-rails"
 blocked-by: null

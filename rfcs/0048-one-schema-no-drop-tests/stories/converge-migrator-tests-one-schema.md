@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 1
-pr: 4428
+pr: trails#4428
 claim: "2026-07-02T18:21:51Z"
 assignee: "converge-migrator-tests-one-schema"
 blocked-by: null

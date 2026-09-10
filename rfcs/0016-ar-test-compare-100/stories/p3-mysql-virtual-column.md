@@ -8,7 +8,7 @@ deps: ["i1-schema-dumper-columnspec-u3"]
 deps-rfc: []
 est-loc: 50
 priority: 19
-pr: 3060
+pr: trails#3060
 claim: "2026-06-09T15:44:56Z"
 assignee: "p3-mysql-virtual-column"
 blocked-by: null

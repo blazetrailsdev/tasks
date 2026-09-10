@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4271
+pr: trails#4271
 claim: "2026-06-29T13:22:11Z"
 assignee: "belongs-to-type-mismatch-validation"
 blocked-by: null

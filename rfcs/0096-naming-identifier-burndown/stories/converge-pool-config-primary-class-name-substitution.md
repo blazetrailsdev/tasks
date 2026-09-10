@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6426
+pr: trails#6426
 claim: "2026-08-12T16:56:49Z"
 assignee: "converge-pool-config-primary-class-name-substitution"
 blocked-by: null

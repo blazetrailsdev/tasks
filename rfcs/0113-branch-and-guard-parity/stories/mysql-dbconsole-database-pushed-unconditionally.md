@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 7270
+pr: trails#7270
 claim: "2026-08-30T21:14:13Z"
 assignee: "decimal-type-missing-numeric-rational-cast-arm"
 blocked-by: null

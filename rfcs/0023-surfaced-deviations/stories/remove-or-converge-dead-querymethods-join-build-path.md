@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 40
-pr: 3890
+pr: trails#3890
 claim: "2026-06-22T15:32:00Z"
 assignee: "remove-or-converge-dead-querymethods-join-build-path"
 blocked-by: null

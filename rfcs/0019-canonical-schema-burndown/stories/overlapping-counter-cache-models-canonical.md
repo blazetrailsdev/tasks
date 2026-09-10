@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 1
-pr: 4280
+pr: trails#4280
 claim: "2026-06-29T16:45:39Z"
 assignee: "overlapping-counter-cache-models-canonical"
 blocked-by: null

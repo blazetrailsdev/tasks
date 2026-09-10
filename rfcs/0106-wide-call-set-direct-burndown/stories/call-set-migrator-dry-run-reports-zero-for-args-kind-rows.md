@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6938
+pr: trails#6938
 claim: "2026-08-23T19:22:37Z"
 assignee: "call-set-migrator-dry-run-reports-zero-for-args-kind-rows"
 blocked-by: null

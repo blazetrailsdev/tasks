@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6464
+pr: trails#6464
 claim: "2026-08-13T14:06:37Z"
 assignee: "extra-surface-scores-overridden-ruby-files"
 blocked-by: null

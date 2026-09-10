@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 7
-pr: 4784
+pr: trails#4784
 claim: "2026-07-08T12:31:54Z"
 assignee: "savepoint-reconnect-parent-dirty-live-adapter-tests"
 blocked-by: null

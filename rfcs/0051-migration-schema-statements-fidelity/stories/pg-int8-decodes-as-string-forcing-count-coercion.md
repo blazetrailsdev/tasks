@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 6265
+pr: trails#6265
 claim: "2026-08-09T00:15:03Z"
 assignee: "date-parse-union-return-is-ts-static-side-variance"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5517
+pr: trails#5517
 claim: "2026-07-28T15:39:18Z"
 assignee: "converge-test-support-api-compare-gaps"
 blocked-by: null

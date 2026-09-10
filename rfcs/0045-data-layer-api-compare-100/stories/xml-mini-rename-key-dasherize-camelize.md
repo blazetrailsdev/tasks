@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 4617
+pr: trails#4617
 claim: "2026-07-05T15:22:28Z"
 assignee: "xml-mini-rename-key-dasherize-camelize"
 blocked-by: null

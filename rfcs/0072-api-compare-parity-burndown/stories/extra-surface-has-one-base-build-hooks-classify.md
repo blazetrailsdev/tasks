@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 5946
+pr: trails#5946
 claim: "2026-08-03T01:15:48Z"
 assignee: "extra-surface-has-one-base-build-hooks-classify"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 6109
+pr: trails#6109
 claim: "2026-08-05T01:11:00Z"
 assignee: "pin-writing-pool-list-in-setup-transactional-fixtures"
 blocked-by: null

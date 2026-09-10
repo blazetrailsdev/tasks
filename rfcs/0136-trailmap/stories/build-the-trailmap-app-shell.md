@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: 7
+pr: trailmap#7
 claim: "2026-09-06T11:50:16Z"
 assignee: "build-the-trailmap-app-shell"
 blocked-by: null

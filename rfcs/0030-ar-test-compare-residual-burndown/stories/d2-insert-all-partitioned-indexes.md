@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3454
+pr: trails#3454
 claim: "2026-06-16T13:35:00Z"
 assignee: "d2-insert-all-partitioned-indexes"
 blocked-by: null

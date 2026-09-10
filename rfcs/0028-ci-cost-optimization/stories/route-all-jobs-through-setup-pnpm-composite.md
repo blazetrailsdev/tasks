@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3385
+pr: trails#3385
 claim: "2026-06-15T18:00:27Z"
 assignee: "route-all-jobs-through-setup-pnpm-composite"
 blocked-by: null

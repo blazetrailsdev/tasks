@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: 6766
+pr: trails#6766
 claim: "2026-08-20T11:52:30Z"
 assignee: "wave-4d-through-association-mixin-cluster"
 blocked-by: null

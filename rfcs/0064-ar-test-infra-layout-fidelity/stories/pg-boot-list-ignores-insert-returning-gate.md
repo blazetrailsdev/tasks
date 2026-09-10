@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 5579
+pr: trails#5579
 claim: "2026-07-29T17:45:54Z"
 assignee: "pg-boot-list-ignores-insert-returning-gate"
 blocked-by: null

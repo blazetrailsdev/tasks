@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4310
+pr: trails#4310
 claim: "2026-06-30T04:54:32Z"
 assignee: "composite-pk-eager-pluck-cache-preload-degrade"
 blocked-by: null

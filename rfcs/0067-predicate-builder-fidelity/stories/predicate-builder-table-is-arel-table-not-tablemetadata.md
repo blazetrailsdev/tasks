@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 60
-pr: 5062
+pr: trails#5062
 claim: "2026-07-22T16:11:49Z"
 assignee: "predicate-builder-table-is-arel-table-not-tablemetadata"
 blocked-by: null

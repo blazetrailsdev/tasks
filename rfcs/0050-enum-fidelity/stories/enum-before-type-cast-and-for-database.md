@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 20
-pr: 4722
+pr: trails#4722
 claim: "2026-07-07T02:51:32Z"
 assignee: "enum-before-type-cast-and-for-database"
 blocked-by: null

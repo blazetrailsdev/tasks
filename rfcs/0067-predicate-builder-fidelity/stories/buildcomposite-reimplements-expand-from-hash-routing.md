@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 5210
+pr: trails#5210
 claim: "2026-07-24T02:53:23Z"
 assignee: "buildcomposite-reimplements-expand-from-hash-routing"
 blocked-by: null

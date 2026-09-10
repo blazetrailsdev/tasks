@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: 38
-pr: 2970
+pr: trails#2970
 claim: "2026-06-06T14:32:04Z"
 assignee: "track9-single-test-gaps"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: 7367
+pr: trails#7367
 claim: "2026-09-01T23:54:13Z"
 assignee: "collapse-dispatcher-registry-into-the-constant-table"
 blocked-by: null

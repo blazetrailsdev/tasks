@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6066
+pr: trails#6066
 claim: "2026-08-04T15:04:07Z"
 assignee: "create-table-never-calls-validate-create-table-options"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 4403
+pr: trails#4403
 claim: "2026-07-02T03:53:23Z"
 assignee: "defineschema-mysql-native-time-json-columns"
 blocked-by: null

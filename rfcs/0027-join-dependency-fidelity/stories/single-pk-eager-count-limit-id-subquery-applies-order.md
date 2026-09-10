@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 2
-pr: 4636
+pr: trails#4636
 claim: "2026-07-05T20:42:01Z"
 assignee: "single-pk-eager-count-limit-id-subquery-applies-order"
 blocked-by: null

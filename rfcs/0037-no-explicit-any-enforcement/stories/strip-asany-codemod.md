@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 20
-pr: 3861
+pr: trails#3861
 claim: "2026-06-22T02:59:58Z"
 assignee: "strip-asany-codemod"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: ["vendor-ruby-mri-source"]
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: 7230
+pr: trails#7230
 claim: "2026-08-30T02:32:07Z"
 assignee: "ruby-compat-package-skeleton"
 blocked-by: null

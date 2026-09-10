@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 17
-pr: 5006
+pr: trails#5006
 claim: "2026-07-20T20:01:49Z"
 assignee: "table-alias-get-skips-rails-table-branch"
 blocked-by: null

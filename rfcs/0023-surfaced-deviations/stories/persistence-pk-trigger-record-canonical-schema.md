@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4618
+pr: trails#4618
 claim: "2026-07-06T17:16:58Z"
 assignee: "persistence-pk-trigger-record-canonical-schema"
 blocked-by: null

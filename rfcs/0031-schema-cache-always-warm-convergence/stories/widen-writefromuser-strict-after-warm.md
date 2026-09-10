@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: 4027
+pr: trails#4027
 claim: "2026-06-23T17:45:27Z"
 assignee: "widen-writefromuser-strict-after-warm"
 blocked-by: null

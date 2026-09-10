@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4896
+pr: trails#4896
 claim: "2026-07-15T22:21:11Z"
 assignee: "arel-tosql-temporal-catchall-misclassifies-duration"
 blocked-by: null

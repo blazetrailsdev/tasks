@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 5574
+pr: trails#5574
 claim: "2026-07-29T16:45:44Z"
 assignee: "port-migration-rename-table-cases"
 blocked-by: null

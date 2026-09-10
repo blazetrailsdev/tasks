@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 7512
+pr: trails#7512
 claim: "2026-09-05T10:02:09Z"
 assignee: "time-cast-result-cannot-model-a-zoned-ruby-time"
 blocked-by: null

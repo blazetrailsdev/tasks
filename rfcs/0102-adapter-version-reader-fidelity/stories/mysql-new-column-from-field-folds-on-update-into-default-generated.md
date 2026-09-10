@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6451
+pr: trails#6451
 claim: "2026-08-13T01:56:51Z"
 assignee: "database-version-sync-getter-forces-hand-warms"
 blocked-by: null

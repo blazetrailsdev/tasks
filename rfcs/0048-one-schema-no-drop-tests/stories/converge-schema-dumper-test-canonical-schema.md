@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 4366
+pr: trails#4366
 claim: "2026-07-01T03:24:45Z"
 assignee: "converge-schema-dumper-test-canonical-schema"
 blocked-by: null

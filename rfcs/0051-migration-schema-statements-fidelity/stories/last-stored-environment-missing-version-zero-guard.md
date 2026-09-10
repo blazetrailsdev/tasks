@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: 5472
+pr: trails#5472
 claim: "2026-07-28T00:34:14Z"
 assignee: "last-stored-environment-missing-version-zero-guard"
 blocked-by: null

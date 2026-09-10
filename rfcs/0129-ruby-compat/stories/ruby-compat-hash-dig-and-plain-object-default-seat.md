@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 34
-pr: 7325
+pr: trails#7325
 claim: "2026-09-01T02:28:10Z"
 assignee: "ruby-compat-hash-dig-and-plain-object-default-seat"
 blocked-by: null

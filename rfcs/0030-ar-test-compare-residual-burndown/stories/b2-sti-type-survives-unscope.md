@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 3419
+pr: trails#3419
 claim: "2026-06-15T23:22:27Z"
 assignee: "b2-sti-type-survives-unscope"
 blocked-by: null

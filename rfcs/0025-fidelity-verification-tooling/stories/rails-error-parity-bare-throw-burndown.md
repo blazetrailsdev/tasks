@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 3250
+pr: trails#3250
 claim: "2026-06-14T13:48:33Z"
 assignee: "rails-error-parity-bare-throw-burndown"
 blocked-by: null

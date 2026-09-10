@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6929
+pr: trails#6929
 claim: "2026-08-23T17:42:07Z"
 assignee: "wave-5-residual-arg-shape-findings"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 20
-pr: 7058
+pr: trails#7058
 claim: "2026-08-25T17:43:38Z"
 assignee: "adapter-column-subclasses-expose-ivars-rails-keeps-private"
 blocked-by: null

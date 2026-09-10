@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4868
+pr: trails#4868
 claim: "2026-07-14T18:31:12Z"
 assignee: "arel-quote-delegates-to-connection-like-rails"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 8
-pr: 3585
+pr: trails#3585
 claim: "2026-06-25T16:57:55Z"
 assignee: "assoc-has-one-writer-persist"
 blocked-by: null

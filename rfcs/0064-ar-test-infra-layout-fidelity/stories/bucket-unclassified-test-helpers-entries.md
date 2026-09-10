@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5403
+pr: trails#5403
 claim: "2026-07-28T15:01:19Z"
 assignee: "bucket-unclassified-test-helpers-entries"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 4071
+pr: trails#4071
 claim: "2026-06-24T17:26:39Z"
 assignee: "converge-association-inversable-matches-foreign-key"
 blocked-by: null

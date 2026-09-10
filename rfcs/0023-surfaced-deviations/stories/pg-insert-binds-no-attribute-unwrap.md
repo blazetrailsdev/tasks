@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3339
+pr: trails#3339
 claim: "2026-06-15T13:00:10Z"
 assignee: "pg-insert-binds-no-attribute-unwrap"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 7
-pr: 7593
+pr: trails#7593
 claim: "2026-09-07T13:27:51Z"
 assignee: "enroll-the-fragment-cache-log-subscriber-tests"
 blocked-by: null

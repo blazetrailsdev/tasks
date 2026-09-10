@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 6
-pr: 3441
+pr: trails#3441
 claim: "2026-06-25T15:07:36Z"
 assignee: "json-test-serialized-topic-rides-canonical"
 blocked-by: null

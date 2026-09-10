@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6781
+pr: trails#6781
 claim: "2026-08-20T18:00:06Z"
 assignee: "converge-attribute-methods-copy-on-write-and-alias-helpers"
 blocked-by: null

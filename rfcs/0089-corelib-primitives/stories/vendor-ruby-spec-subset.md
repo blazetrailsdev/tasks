@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 2
-pr: 6130
+pr: trails#6130
 claim: "2026-08-05T15:21:04Z"
 assignee: "datetime-new-start-preserves-the-receiver"
 blocked-by: null

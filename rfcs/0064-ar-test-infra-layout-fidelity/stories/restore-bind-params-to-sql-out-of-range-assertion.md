@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 5783
+pr: trails#5783
 claim: "2026-08-01T01:43:46Z"
 assignee: "restore-bind-params-to-sql-out-of-range-assertion"
 blocked-by: null

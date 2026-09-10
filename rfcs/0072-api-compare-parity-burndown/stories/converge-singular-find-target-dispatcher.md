@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 5911
+pr: trails#5911
 claim: "2026-08-02T19:13:26Z"
 assignee: "converge-singular-find-target-dispatcher"
 blocked-by: null

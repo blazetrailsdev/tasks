@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 4610
+pr: trails#4610
 claim: "2026-07-05T13:37:26Z"
 assignee: "nested-through-habtm-direct-load-empty"
 blocked-by: null

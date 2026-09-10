@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6580
+pr: trails#6580
 claim: "2026-08-15T22:15:06Z"
 assignee: "mysql-build-insert-sql-missing-raw-alias-arm"
 blocked-by: null

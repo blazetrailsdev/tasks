@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5467
+pr: trails#5467
 claim: "2026-07-28T00:04:17Z"
 assignee: "extra-surface-skip-duck-typed-interface-members"
 blocked-by: null

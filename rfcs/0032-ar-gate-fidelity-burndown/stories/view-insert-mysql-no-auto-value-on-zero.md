@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 10
-pr: 5081
+pr: trails#5081
 claim: "2026-07-22T21:13:06Z"
 assignee: "view-insert-mysql-no-auto-value-on-zero"
 blocked-by: null

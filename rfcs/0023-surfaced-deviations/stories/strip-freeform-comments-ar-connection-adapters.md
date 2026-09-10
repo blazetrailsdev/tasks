@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: 6946
+pr: trails#6946
 claim: "2026-08-23T20:39:07Z"
 assignee: "strip-freeform-comments-ar-connection-adapters"
 blocked-by: null

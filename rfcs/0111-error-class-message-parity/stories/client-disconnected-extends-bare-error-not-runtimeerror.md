@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 30
-pr: 7640
+pr: trails#7640
 claim: "2026-09-09T12:54:47Z"
 assignee: "pg-and-mysql2-execute-return-rows-not-internal-execute-result"
 blocked-by: null

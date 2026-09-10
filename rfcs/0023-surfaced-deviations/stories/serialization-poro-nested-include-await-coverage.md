@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3393
+pr: trails#3393
 claim: "2026-06-15T18:48:26Z"
 assignee: "serialization-poro-nested-include-await-coverage"
 blocked-by: null

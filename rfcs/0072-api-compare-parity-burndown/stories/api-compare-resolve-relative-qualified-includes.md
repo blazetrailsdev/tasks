@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5334
+pr: trails#5334
 claim: "2026-07-26T02:06:54Z"
 assignee: "api-compare-resolve-relative-qualified-includes"
 blocked-by: null

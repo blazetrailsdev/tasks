@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4810
+pr: trails#4810
 claim: "2026-07-08T23:07:34Z"
 assignee: "converge-pg-max-identifier-length-sync"
 blocked-by: null

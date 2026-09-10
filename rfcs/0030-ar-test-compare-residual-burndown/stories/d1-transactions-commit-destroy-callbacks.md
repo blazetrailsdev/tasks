@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 330
 priority: null
-pr: 3443
+pr: trails#3443
 claim: "2026-06-16T02:58:11Z"
 assignee: "d1-transactions-commit-destroy-callbacks"
 blocked-by: null

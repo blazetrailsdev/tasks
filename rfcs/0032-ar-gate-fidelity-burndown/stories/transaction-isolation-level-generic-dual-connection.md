@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 8
-pr: 5078
+pr: trails#5078
 claim: "2026-07-22T21:02:33Z"
 assignee: "transaction-isolation-level-generic-dual-connection"
 blocked-by: null

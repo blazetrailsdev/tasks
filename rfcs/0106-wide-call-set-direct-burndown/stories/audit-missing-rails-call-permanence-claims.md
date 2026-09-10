@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 6855
+pr: trails#6855
 claim: "2026-08-22T11:50:41Z"
 assignee: "api-build-order-row-tag-key-mismatch"
 blocked-by: null

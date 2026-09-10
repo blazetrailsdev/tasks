@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 300
-pr: 6936
+pr: trails#6936
 claim: "2026-08-23T18:08:08Z"
 assignee: "tablename-only-model-resolves-columns-without-explicit-reflect"
 blocked-by: null

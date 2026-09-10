@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5448
+pr: trails#5448
 claim: "2026-07-27T19:59:51Z"
 assignee: "test-harness-credential-defaults-diverge-from-config-example"
 blocked-by: null

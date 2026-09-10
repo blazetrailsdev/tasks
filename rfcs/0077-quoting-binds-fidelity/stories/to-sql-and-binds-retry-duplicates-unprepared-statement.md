@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 7185
+pr: trails#7185
 claim: "2026-08-28T20:25:29Z"
 assignee: "pg-quote-default-expression-lacks-super-arm"
 blocked-by: null

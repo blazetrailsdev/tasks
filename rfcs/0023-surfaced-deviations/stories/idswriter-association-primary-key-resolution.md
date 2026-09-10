@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4682
+pr: trails#4682
 claim: "2026-07-06T15:52:59Z"
 assignee: "idswriter-association-primary-key-resolution"
 blocked-by: null

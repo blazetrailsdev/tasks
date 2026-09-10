@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 5968
+pr: trails#5968
 claim: "2026-08-03T13:40:15Z"
 assignee: "drop-join-dependency-preload-fallback-lane"
 blocked-by: null

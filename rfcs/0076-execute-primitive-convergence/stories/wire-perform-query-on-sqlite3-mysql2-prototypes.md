@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6327
+pr: trails#6327
 claim: "2026-08-10T09:46:32Z"
 assignee: "wire-perform-query-on-sqlite3-mysql2-prototypes"
 blocked-by: null

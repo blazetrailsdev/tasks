@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 336
 priority: 3
-pr: 7211
+pr: trails#7211
 claim: "2026-08-29T16:03:46Z"
 assignee: "param-drift-tail-packages"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 7418
+pr: trails#7418
 claim: "2026-09-02T23:10:28Z"
 assignee: "activesupport-stringio-puts-for-rack-errors"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7622
+pr: trails#7622
 claim: "2026-09-08T16:16:53Z"
 assignee: "server-version-memo-lost-its-single-flight-barrier"
 blocked-by: null

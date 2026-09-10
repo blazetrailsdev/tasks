@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 6317
+pr: trails#6317
 claim: "2026-08-10T01:46:38Z"
 assignee: "port-test-date-arith-fractional-arms"
 blocked-by: null

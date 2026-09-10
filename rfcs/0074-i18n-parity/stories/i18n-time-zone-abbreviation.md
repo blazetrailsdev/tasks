@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6076
+pr: trails#6076
 claim: "2026-08-04T17:19:58Z"
 assignee: "i18n-time-zone-abbreviation"
 blocked-by: null

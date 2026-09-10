@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6214
+pr: trails#6214
 claim: "2026-08-08T01:26:09Z"
 assignee: "connection-pool-disconnect-returns-before-the-driver-drains"
 blocked-by: null

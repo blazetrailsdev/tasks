@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: 4982
+pr: trails#4982
 claim: "2026-07-20T01:01:09Z"
 assignee: "store-accessor-dirty-was-change-returns-null-not-undefined"
 blocked-by: null

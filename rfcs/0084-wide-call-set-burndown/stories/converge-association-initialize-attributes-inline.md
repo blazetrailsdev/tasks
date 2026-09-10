@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6381
+pr: trails#6381
 claim: "2026-08-11T22:06:06Z"
 assignee: "converge-association-initialize-attributes-inline"
 blocked-by: null

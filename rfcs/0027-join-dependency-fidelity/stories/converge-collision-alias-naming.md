@@ -8,7 +8,7 @@ deps: ["converge-alias-tracking"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 3266
+pr: trails#3266
 claim: "2026-06-14T17:18:33Z"
 assignee: "converge-collision-alias-naming"
 blocked-by: null

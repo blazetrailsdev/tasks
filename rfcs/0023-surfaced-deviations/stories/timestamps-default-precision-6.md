@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: 40
-pr: 3068
+pr: trails#3068
 claim: "2026-06-23T01:55:16Z"
 assignee: "timestamps-default-precision-6"
 blocked-by: null

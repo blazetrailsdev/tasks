@@ -8,7 +8,7 @@ deps: ["converge-encryption-cluster-one-schema"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4408
+pr: trails#4408
 claim: "2026-07-02T14:21:57Z"
 assignee: "converge-encryption-makefreshmodel-onto-canonical"
 blocked-by: null

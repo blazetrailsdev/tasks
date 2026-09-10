@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4111
+pr: trails#4111
 claim: "2026-06-25T12:19:31Z"
 assignee: "live-create-path-uses-insert-record"
 blocked-by: null

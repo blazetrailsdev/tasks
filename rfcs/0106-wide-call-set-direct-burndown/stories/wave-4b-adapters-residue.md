@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 700
-pr: 6718
+pr: trails#6718
 claim: "2026-08-18T19:57:44Z"
 assignee: "wave-4b-adapters-residue"
 blocked-by: null

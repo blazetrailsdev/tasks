@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3639
+pr: trails#3639
 claim: "2026-06-19T13:05:28Z"
 assignee: "canonicalize-hasone-autosave-block"
 blocked-by: null

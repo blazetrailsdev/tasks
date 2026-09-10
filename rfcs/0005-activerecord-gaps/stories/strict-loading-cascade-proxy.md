@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 34
-pr: 2964
+pr: trails#2964
 claim: "2026-06-06T00:45:30Z"
 assignee: "strict-loading-cascade-proxy"
 blocked-by: null

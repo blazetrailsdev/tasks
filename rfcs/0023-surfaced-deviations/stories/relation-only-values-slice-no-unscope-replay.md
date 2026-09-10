@@ -9,7 +9,7 @@ deps:
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 4951
+pr: trails#4951
 claim: "2026-07-19T02:01:12Z"
 assignee: "relation-only-values-slice-no-unscope-replay"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4409
+pr: trails#4409
 claim: "2026-07-02T14:09:49Z"
 assignee: "enum-boolean-nil-string-value-support"
 blocked-by: null

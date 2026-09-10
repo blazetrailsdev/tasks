@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 40
-pr: 7618
+pr: trails#7618
 claim: "2026-09-08T15:34:03Z"
 assignee: "converge-pg-oid-point-build-point-float"
 blocked-by: null

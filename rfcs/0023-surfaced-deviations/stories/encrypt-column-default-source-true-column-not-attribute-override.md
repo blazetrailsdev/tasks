@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4442
+pr: trails#4442
 claim: "2026-07-02T21:33:51Z"
 assignee: "encrypt-column-default-source-true-column-not-attribute-override"
 blocked-by: null

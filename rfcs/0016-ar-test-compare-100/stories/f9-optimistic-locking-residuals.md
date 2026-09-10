@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 13
-pr: 3159
+pr: trails#3159
 claim: "2026-06-12T20:04:52Z"
 assignee: "f9-optimistic-locking-residuals"
 blocked-by: null

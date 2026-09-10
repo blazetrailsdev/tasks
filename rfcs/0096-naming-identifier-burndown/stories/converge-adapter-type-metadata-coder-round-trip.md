@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 7026
+pr: trails#7026
 claim: "2026-08-25T09:46:54Z"
 assignee: "missing-rails-call-tag-inert-on-non-rails-class-member"
 blocked-by: null

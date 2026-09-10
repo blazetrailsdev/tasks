@@ -7,7 +7,7 @@ cluster: null
 deps: []
 deps-rfc: []
 est-loc: 250
-pr: 5817
+pr: trails#5817
 claim: "2026-08-01T19:09:02Z"
 assignee: "static-super-linearization"
 blocked-by: null

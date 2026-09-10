@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5607
+pr: trails#5607
 claim: "2026-07-29T21:48:01Z"
 assignee: "sqlite-alter-table-block-argument-goes-last"
 blocked-by: null

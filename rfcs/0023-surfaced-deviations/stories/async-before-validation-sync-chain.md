@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 12
-pr: 3495
+pr: trails#3495
 claim: "2026-06-16T20:00:41Z"
 assignee: "async-before-validation-sync-chain"
 blocked-by: null

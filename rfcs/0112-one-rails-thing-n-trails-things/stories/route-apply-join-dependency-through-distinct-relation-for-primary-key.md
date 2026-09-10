@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-pr: 6634
+pr: trails#6634
 claim: "2026-08-26T13:15:03Z"
 assignee: "mysql2-handle-warnings-report-arm"
 blocked-by: null

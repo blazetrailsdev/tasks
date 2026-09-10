@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: 3926
+pr: trails#3926
 claim: "2026-06-22T21:15:16Z"
 assignee: "a1-eager-count-multitable-conditional"
 blocked-by: null

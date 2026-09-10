@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: 7120
+pr: trails#7120
 claim: "2026-08-27T13:43:45Z"
 assignee: "arel-table-extends-node-but-rails-table-is-standalone"
 blocked-by: null

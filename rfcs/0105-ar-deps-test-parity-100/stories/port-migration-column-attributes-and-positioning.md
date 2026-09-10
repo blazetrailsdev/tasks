@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: 7256
+pr: trails#7256
 claim: "2026-08-30T16:38:34Z"
 assignee: "port-migration-column-attributes-and-positioning"
 blocked-by: null

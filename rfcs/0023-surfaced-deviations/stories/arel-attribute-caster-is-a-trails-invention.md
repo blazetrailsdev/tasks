@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4877
+pr: trails#4877
 claim: "2026-07-14T21:21:14Z"
 assignee: "arel-attribute-caster-is-a-trails-invention"
 blocked-by: null

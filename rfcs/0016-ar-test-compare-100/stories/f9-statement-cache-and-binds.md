@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 12
-pr: 3153
+pr: trails#3153
 claim: "2026-06-12T17:41:50Z"
 assignee: "f9-statement-cache-and-binds"
 blocked-by: null

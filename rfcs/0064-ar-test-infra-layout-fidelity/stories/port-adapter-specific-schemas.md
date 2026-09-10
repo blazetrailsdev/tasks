@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5523
+pr: trails#5523
 claim: "2026-07-28T15:39:27Z"
 assignee: "port-adapter-specific-schemas"
 blocked-by: null

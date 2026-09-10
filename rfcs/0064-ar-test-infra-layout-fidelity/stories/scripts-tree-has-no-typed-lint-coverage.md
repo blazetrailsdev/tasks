@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5713
+pr: trails#5713
 claim: "2026-07-31T02:36:03Z"
 assignee: "scripts-tree-has-no-typed-lint-coverage"
 blocked-by: null

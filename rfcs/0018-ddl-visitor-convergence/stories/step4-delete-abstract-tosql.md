@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 50
 priority: 8
-pr: 3084
+pr: trails#3084
 claim: "2026-06-10T14:29:27Z"
 assignee: "step4-delete-abstract-tosql"
 blocked-by: null

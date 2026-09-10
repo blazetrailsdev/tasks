@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 7277
+pr: trails#7277
 claim: "2026-08-31T00:14:13Z"
 assignee: "time-ext-rubytime-arms-delegate-to-time-reopening"
 blocked-by: null

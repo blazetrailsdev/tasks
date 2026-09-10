@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 5928
+pr: trails#5928
 claim: "2026-08-02T22:58:24Z"
 assignee: "api-build-lower-unreviewed-marks-on-drop"
 blocked-by: null

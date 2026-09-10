@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: 4614
+pr: trails#4614
 claim: "2026-07-05T14:37:27Z"
 assignee: "predicate-builder-force-equality-uniform-build"
 blocked-by: null

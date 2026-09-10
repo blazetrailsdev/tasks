@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 45
 priority: 6
-pr: 4782
+pr: trails#4782
 claim: "2026-07-08T12:11:54Z"
 assignee: "serialized-canonicalkey-order-insensitive-equality"
 blocked-by: null

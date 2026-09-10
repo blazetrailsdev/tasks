@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 3
-pr: 11
+pr: trailmap#11
 claim: "2026-09-06T17:58:18Z"
 assignee: "render-the-rfc-and-story-show-pages"
 blocked-by: null

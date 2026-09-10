@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 50
-pr: 5320
+pr: trails#5320
 claim: "2026-07-25T20:22:51Z"
 assignee: "encryption-extend-queries-suite-wide"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 5939
+pr: trails#5939
 claim: "2026-08-03T00:35:50Z"
 assignee: "extra-surface-defuse-has-many-find-target"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 53
-pr: 5095
+pr: trails#5095
 claim: "2026-07-22T23:31:51Z"
 assignee: "dispatch-contamination-test-does-not-exercise-real-dispatch"
 blocked-by: null

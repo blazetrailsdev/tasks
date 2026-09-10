@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 13
-pr: 7187
+pr: trails#7187
 claim: "2026-08-28T21:25:34Z"
 assignee: "rehome-store-and-store-accessor-as-class-methods"
 blocked-by: null

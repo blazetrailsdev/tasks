@@ -8,7 +8,7 @@ deps: ["create-table-canonical-schema-loader"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 4451
+pr: trails#4451
 claim: "2026-07-02T23:21:50Z"
 assignee: "convert-bespoke-defineschema-pg-adapters"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5835
+pr: trails#5835
 claim: "2026-08-01T23:01:01Z"
 assignee: "codegen-await-inside-non-async-block-arrow"
 blocked-by: null

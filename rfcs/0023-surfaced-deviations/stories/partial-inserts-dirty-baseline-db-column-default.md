@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 3784
+pr: trails#3784
 claim: "2026-06-21T12:30:44Z"
 assignee: "partial-inserts-dirty-baseline-db-column-default"
 blocked-by: null

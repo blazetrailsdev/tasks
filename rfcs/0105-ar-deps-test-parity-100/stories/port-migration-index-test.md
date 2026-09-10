@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: 7245
+pr: trails#7245
 claim: "2026-08-30T15:11:10Z"
 assignee: "port-migration-index-test"
 blocked-by: null

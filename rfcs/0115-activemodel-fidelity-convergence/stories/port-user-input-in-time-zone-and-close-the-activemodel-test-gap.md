@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 6988
+pr: trails#6988
 claim: "2026-08-24T14:30:11Z"
 assignee: "port-user-input-in-time-zone-and-close-the-activemodel-test-gap"
 blocked-by: null

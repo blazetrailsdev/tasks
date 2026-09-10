@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 3
-pr: 21
+pr: trailmap#21
 claim: "2026-09-09T14:31:34Z"
 assignee: "snapshot-the-show-page-equivalence-before-it-goes-circular"
 blocked-by: null

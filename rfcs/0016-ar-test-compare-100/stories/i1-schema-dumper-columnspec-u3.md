@@ -7,7 +7,7 @@ cluster: unblockers
 deps: []
 deps-rfc: []
 est-loc: 120
-pr: 3046
+pr: trails#3046
 claim: "2026-06-08T00:16:41Z"
 assignee: "i1-schema-dumper-columnspec-u3"
 blocked-by: null

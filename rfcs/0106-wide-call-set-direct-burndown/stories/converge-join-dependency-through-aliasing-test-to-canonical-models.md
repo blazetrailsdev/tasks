@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 6776
+pr: trails#6776
 claim: "2026-08-20T16:23:13Z"
 assignee: "converge-join-dependency-through-aliasing-test-to-canonical-models"
 blocked-by: null

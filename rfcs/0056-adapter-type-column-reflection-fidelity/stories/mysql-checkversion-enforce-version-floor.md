@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 210
-pr: 4820
+pr: trails#4820
 claim: "2026-07-09T03:31:20Z"
 assignee: "mysql-checkversion-enforce-version-floor"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 3387
+pr: trails#3387
 claim: "2026-06-15T18:12:28Z"
 assignee: "schema-cache-iscached-columnshash-consistency"
 blocked-by: null

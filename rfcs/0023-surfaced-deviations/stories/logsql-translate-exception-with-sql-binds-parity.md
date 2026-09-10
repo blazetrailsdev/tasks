@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4837
+pr: trails#4837
 claim: "2026-07-13T18:08:27Z"
 assignee: "logsql-translate-exception-with-sql-binds-parity"
 blocked-by: null

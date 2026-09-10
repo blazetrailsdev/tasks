@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 130
-pr: 6772
+pr: trails#6772
 claim: "2026-08-20T01:54:44Z"
 assignee: "handle-warnings-body-belongs-on-abstract-mysql-adapter"
 blocked-by: null

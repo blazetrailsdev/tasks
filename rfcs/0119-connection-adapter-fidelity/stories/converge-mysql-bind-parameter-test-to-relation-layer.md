@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: 7095
+pr: trails#7095
 claim: "2026-08-26T17:54:27Z"
 assignee: "sqlite-indexes-sorts-index-info-rows-rails-does-not"
 blocked-by: null

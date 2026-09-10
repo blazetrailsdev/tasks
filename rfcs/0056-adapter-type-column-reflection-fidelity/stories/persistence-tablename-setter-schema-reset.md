@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 37
-pr: 4758
+pr: trails#4758
 claim: "2026-07-07T22:02:22Z"
 assignee: "persistence-tablename-setter-schema-reset"
 blocked-by: null

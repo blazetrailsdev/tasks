@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: 3453
+pr: trails#3453
 claim: "2026-06-16T13:23:01Z"
 assignee: "e2-pg-ddl-via-exec"
 blocked-by: null

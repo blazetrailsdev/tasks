@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 0
-pr: 68
+pr: tasks-legacy#68
 claim: "2026-08-18T14:36:27Z"
 assignee: "index-story-paths"
 blocked-by: null

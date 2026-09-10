@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7084
+pr: trails#7084
 claim: "2026-08-26T13:07:06Z"
 assignee: "burn-down-internal-tags-unbacked-after-entity-keying"
 blocked-by: null

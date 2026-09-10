@@ -9,7 +9,7 @@ deps: ["ruby-extractor-emit-call-arguments", "ts-extractor-emit-call-arguments"]
 deps-rfc: []
 est-loc: 230
 priority: null
-pr: 6309
+pr: trails#6309
 claim: "2026-08-10T00:02:19Z"
 assignee: "call-args-normalize-and-compare"
 blocked-by: null

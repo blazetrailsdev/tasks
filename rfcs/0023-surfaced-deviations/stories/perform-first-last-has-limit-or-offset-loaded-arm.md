@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4422
+pr: trails#4422
 claim: "2026-07-06T10:46:21Z"
 assignee: "perform-first-last-has-limit-or-offset-loaded-arm"
 blocked-by: null

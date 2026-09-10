@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5529
+pr: trails#5529
 claim: "2026-07-28T18:13:54Z"
 assignee: "sqlite-alter-table-drops-fks-instead-of-remapping-renamed-columns"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 3
-pr: 4337
+pr: trails#4337
 claim: "2026-06-30T17:14:53Z"
 assignee: "converge-schema-dump-introspect-one-schema"
 blocked-by: null

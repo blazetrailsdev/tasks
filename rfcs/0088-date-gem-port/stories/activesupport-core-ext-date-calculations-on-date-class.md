@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6286
+pr: trails#6286
 claim: "2026-08-09T16:14:14Z"
 assignee: "activesupport-core-ext-date-calculations-on-date-class"
 blocked-by: null

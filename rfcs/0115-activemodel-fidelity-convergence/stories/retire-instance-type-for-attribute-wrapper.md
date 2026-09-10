@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7006
+pr: trails#7006
 claim: "2026-08-24T20:39:29Z"
 assignee: "converge-attribute-method-predicate-to-rails-body"
 blocked-by: null

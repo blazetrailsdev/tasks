@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6493
+pr: trails#6493
 claim: "2026-08-13T20:57:11Z"
 assignee: "converge-hash-to-message-construction-order"
 blocked-by: null

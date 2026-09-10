@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: 3607
+pr: trails#3607
 claim: "2026-06-18T22:23:07Z"
 assignee: "cpk-counter-cache-column-demodulize-convergence"
 blocked-by: null

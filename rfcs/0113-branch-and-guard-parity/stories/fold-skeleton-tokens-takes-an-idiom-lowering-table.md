@@ -9,7 +9,7 @@ deps: ["skeleton-loop-fold-covers-only-each"]
 deps-rfc: []
 est-loc: 160
 priority: 3
-pr: 7544
+pr: trails#7544
 claim: "2026-09-05T23:00:28Z"
 assignee: "fold-skeleton-tokens-takes-an-idiom-lowering-table"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5452
+pr: trails#5452
 claim: "2026-07-27T20:47:50Z"
 assignee: "drop-duplicate-allowlist-report-key"
 blocked-by: null

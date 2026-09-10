@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 4950
+pr: trails#4950
 claim: "2026-07-19T01:51:10Z"
 assignee: "relation-name-delegate-getter-not-method"
 blocked-by: null

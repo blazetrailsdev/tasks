@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: 6791
+pr: trails#6791
 claim: "2026-08-20T20:35:14Z"
 assignee: "collapse-the-two-assign-attributes-ports-onto-one"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5545
+pr: trails#5545
 claim: "2026-07-28T23:25:44Z"
 assignee: "database-tasks-create-drop-emit-banners"
 blocked-by: null

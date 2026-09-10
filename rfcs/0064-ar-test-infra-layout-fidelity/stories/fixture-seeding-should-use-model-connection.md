@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5681
+pr: trails#5681
 claim: "2026-07-30T21:27:22Z"
 assignee: "fixture-seeding-should-use-model-connection"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: 5606
+pr: trails#5606
 claim: "2026-07-29T21:36:01Z"
 assignee: "sqlite-add-foreign-key-strips-table-name-prefix"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 7
-pr: 6906
+pr: trails#6906
 claim: "2026-08-23T11:12:29Z"
 assignee: "wave-5g-head-sweep"
 blocked-by: "Re-verified against origin/main 2026-08-24: blocker still live. execMainQuery is still deliberately non-async (relation.ts:1125, with the FutureResult-adoption rationale in the doc comment at :1120-1124 — the body's :1115-1120 anchor has drifted by ~5 lines), so awaiting the prerequisites before execMainQuery(true) would still force every scheduled relation into the Promise arm and lose cancel universally. The hazard itself is unchanged and still latent: execQueries runs ensureSchemaLoaded + _materializeDeferredDistinctPkPredicates only on the foreground pass (relation.ts:1066; _materializeDeferredDistinctPkPredicates is still async at :1857). Unblocks only when both prerequisites leave the query path — schema warm before either entry point (RFC 0031 is closed, so this needs a new home) and distinct-PK materialization moved to where .where() puts it (finder_methods.rb:463-475)."

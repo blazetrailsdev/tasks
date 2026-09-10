@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 25
-pr: 3170
+pr: trails#3170
 claim: "2026-06-13T01:19:59Z"
 assignee: "remove-dead-validation-association-helpers"
 blocked-by: null

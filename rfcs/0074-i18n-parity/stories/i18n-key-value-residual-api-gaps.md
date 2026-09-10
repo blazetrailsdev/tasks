@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6063
+pr: trails#6063
 claim: "2026-08-04T14:19:06Z"
 assignee: "i18n-key-value-residual-api-gaps"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: 7087
+pr: trails#7087
 claim: "2026-08-26T14:41:07Z"
 assignee: "gate-closing-story-citations-at-pr-time"
 blocked-by: null

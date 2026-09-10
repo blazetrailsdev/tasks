@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 1100
 priority: null
-pr: 7583
+pr: trails#7583
 claim: "2026-09-07T01:29:33Z"
 assignee: "pg-exec-is-a-trails-only-raw-query-path"
 blocked-by: null

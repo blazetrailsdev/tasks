@@ -8,7 +8,7 @@ deps: ["addindexoptions-async-route-pg-addindex"]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3367
+pr: trails#3367
 claim: "2026-06-15T15:47:08Z"
 assignee: "pg-addindex-return-void-harmonize"
 blocked-by: null

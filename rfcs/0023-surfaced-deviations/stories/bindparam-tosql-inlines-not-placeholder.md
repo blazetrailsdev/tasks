@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 3209
+pr: trails#3209
 claim: "2026-06-13T21:06:33Z"
 assignee: "bindparam-tosql-inlines-not-placeholder"
 blocked-by: null

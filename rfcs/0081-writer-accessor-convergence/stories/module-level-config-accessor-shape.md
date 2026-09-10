@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 280
 priority: 3
-pr: 5391
+pr: trails#5391
 claim: "2026-07-27T02:05:10Z"
 assignee: "module-level-config-accessor-shape"
 blocked-by: null

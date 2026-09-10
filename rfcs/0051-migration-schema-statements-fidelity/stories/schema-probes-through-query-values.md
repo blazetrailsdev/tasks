@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 5846
+pr: trails#5846
 claim: "2026-08-02T00:31:03Z"
 assignee: "schema-probes-through-query-values"
 blocked-by: null

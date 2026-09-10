@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5920
+pr: trails#5920
 claim: "2026-08-02T20:37:26Z"
 assignee: "converge-attribute-names-list-instance-accessor"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 7514
+pr: trails#7514
 claim: "2026-09-05T10:42:09Z"
 assignee: "validate-set-callback-narrows-options-and-wraps-filters"
 blocked-by: null

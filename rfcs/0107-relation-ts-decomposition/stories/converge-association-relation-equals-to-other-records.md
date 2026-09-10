@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6624
+pr: trails#6624
 claim: "2026-08-17T01:02:54Z"
 assignee: "port-hwia-bang-forms-and-to-options"
 blocked-by: null

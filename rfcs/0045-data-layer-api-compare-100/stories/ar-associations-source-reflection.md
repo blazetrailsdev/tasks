@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 4045
+pr: trails#4045
 claim: "2026-06-24T01:30:44Z"
 assignee: "ar-associations-source-reflection"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 23
-pr: 7331
+pr: trails#7331
 claim: "2026-09-01T12:30:26Z"
 assignee: "trails-tsc-bin-is-a-no-op"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 13
-pr: 5003
+pr: trails#5003
 claim: "2026-07-20T19:11:43Z"
 assignee: "dot-visitor-uses-class-dispatch"
 blocked-by: null

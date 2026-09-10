@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 50
-pr: 3550
+pr: trails#3550
 claim: "2026-06-17T15:51:38Z"
 assignee: "typecast-dispatch-through-quoted-date-quoted-time"
 blocked-by: null

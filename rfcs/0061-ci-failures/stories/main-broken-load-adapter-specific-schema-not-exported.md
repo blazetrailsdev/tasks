@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5676
+pr: trails#5676
 claim: "2026-07-30T21:09:17Z"
 assignee: "main-broken-load-adapter-specific-schema-not-exported"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 7528
+pr: trails#7528
 claim: "2026-09-05T18:47:06Z"
 assignee: "controller-runtime-initialize-does-not-seat-db-runtime"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5389
+pr: trails#5389
 claim: "2026-07-27T01:34:56Z"
 assignee: "converge-pg-sequence-and-schema-qualified-name-helpers"
 blocked-by: null

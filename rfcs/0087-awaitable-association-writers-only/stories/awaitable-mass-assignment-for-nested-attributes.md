@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6196
+pr: trails#6196
 claim: "2026-08-07T20:00:40Z"
 assignee: "fold-errors-map-default-proxies"
 blocked-by: null

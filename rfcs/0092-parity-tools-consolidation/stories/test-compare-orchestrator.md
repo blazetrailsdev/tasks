@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: 6266
+pr: trails#6266
 claim: "2026-08-09T00:22:09Z"
 assignee: "test-compare-orchestrator"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: 5769
+pr: trails#5769
 claim: "2026-07-31T23:10:41Z"
 assignee: "migration-method-missing-say-with-time-and-proper-table-name"
 blocked-by: null

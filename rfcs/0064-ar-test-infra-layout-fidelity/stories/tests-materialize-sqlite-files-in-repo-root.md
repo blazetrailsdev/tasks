@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5705
+pr: trails#5705
 claim: "2026-07-31T02:54:06Z"
 assignee: "tests-materialize-sqlite-files-in-repo-root"
 blocked-by: null

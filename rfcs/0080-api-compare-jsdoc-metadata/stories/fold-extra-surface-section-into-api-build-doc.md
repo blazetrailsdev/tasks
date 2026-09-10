@@ -8,7 +8,7 @@ deps: ["no-rails-equivalent-tag-extractor-support"]
 deps-rfc: []
 est-loc: 80
 priority: 4
-pr: 5412
+pr: trails#5412
 claim: "2026-07-27T15:03:44Z"
 assignee: "fold-extra-surface-section-into-api-build-doc"
 blocked-by: null

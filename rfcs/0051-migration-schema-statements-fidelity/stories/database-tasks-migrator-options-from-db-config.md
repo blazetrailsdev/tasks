@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 5759
+pr: trails#5759
 claim: "2026-07-31T21:30:42Z"
 assignee: "database-tasks-migrator-options-from-db-config"
 blocked-by: null

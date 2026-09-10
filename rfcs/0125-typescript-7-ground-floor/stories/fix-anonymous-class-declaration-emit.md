@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 1
-pr: 7082
+pr: trails#7082
 claim: "2026-08-26T13:21:49Z"
 assignee: "fix-anonymous-class-declaration-emit"
 blocked-by: null

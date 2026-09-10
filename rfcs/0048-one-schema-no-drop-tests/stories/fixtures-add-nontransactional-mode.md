@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 0
-pr: 4381
+pr: trails#4381
 claim: "2026-07-01T18:54:56Z"
 assignee: "fixtures-add-nontransactional-mode"
 blocked-by: null

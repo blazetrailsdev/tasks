@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 36
-pr: 3519
+pr: trails#3519
 claim: "2026-06-17T01:31:25Z"
 assignee: "define-schema-clear-pg-prepared-cache"
 blocked-by: null

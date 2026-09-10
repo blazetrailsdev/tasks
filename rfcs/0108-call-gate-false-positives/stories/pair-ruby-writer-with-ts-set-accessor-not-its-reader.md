@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 6702
+pr: trails#6702
 claim: "2026-08-18T14:29:41Z"
 assignee: "pair-ruby-writer-with-ts-set-accessor-not-its-reader"
 blocked-by: null

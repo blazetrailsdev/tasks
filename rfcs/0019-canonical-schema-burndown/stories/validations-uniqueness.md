@@ -8,7 +8,7 @@ deps: ["uniqueness-validation-extra-burndown"]
 deps-rfc: []
 est-loc: 300
 priority: 55
-pr: 4196
+pr: trails#4196
 claim: "2026-06-26T14:13:33Z"
 assignee: "validations-uniqueness"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4900
+pr: trails#4900
 claim: "2026-07-16T01:21:13Z"
 assignee: "has-changes-to-save-getter-called-as-method"
 blocked-by: null

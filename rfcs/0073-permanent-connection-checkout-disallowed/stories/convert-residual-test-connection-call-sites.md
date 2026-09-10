@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 90
 priority: 40
-pr: 7665
+pr: trails#7665
 claim: "2026-09-10T13:36:28Z"
 assignee: "arel-tosql-borrow-return-connection-not-sync-lease"
 blocked-by: null

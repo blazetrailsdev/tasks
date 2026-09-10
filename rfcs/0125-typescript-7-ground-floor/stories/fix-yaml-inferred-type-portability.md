@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 1
-pr: 7081
+pr: trails#7081
 claim: "2026-08-26T13:21:55Z"
 assignee: "fix-yaml-inferred-type-portability"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: 4560
+pr: trails#4560
 claim: "2026-07-04T17:34:28Z"
 assignee: "memory-store-increment-integer-amount-raise"
 blocked-by: null

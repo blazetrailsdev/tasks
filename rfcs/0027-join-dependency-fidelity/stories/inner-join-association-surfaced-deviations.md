@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4523
+pr: trails#4523
 claim: "2026-07-03T23:31:08Z"
 assignee: "inner-join-association-surfaced-deviations"
 blocked-by: null

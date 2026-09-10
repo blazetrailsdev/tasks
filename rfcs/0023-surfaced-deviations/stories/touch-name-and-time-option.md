@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4993
+pr: trails#4993
 claim: "2026-07-20T18:01:11Z"
 assignee: "touch-name-and-time-option"
 blocked-by: null

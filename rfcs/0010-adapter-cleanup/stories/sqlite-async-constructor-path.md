@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 14
-pr: 3190
+pr: trails#3190
 claim: "2026-06-13T13:08:10Z"
 assignee: "sqlite-async-constructor-path"
 blocked-by: null

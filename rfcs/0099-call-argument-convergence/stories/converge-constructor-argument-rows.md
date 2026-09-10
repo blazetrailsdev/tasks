@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: 6557
+pr: trails#6557
 claim: "2026-08-15T00:39:10Z"
 assignee: "converge-ar-and-model-non-constructor-argument-rows"
 blocked-by: null

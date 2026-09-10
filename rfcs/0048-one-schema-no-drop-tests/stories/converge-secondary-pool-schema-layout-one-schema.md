@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: 4430
+pr: trails#4430
 claim: "2026-07-02T18:31:54Z"
 assignee: "converge-secondary-pool-schema-layout-one-schema"
 blocked-by: null

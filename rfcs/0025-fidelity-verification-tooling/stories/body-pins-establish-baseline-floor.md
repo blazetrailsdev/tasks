@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: 5209
+pr: trails#5209
 claim: "2026-07-24T02:38:25Z"
 assignee: "body-pins-establish-baseline-floor"
 blocked-by: null

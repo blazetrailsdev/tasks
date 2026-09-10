@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5149
+pr: trails#5149
 claim: "2026-07-23T14:25:37Z"
 assignee: "pg-export-name-ignores-dumper-patterns"
 blocked-by: null

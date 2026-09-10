@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: 4294
+pr: trails#4294
 claim: "2026-06-29T22:59:25Z"
 assignee: "reverse-order-value-deferred-flag-convergence"
 blocked-by: null

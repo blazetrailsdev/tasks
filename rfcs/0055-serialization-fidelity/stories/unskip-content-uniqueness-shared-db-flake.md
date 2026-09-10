@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: 4927
+pr: trails#4927
 claim: "2026-07-17T14:11:15Z"
 assignee: "unskip-content-uniqueness-shared-db-flake"
 blocked-by: null

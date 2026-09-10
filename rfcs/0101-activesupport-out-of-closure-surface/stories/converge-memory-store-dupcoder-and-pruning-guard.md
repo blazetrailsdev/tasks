@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6435
+pr: trails#6435
 claim: "2026-08-12T20:16:53Z"
 assignee: "converge-memory-store-dupcoder-and-pruning-guard"
 blocked-by: null

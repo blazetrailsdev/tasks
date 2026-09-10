@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 5605
+pr: trails#5605
 claim: "2026-07-29T21:30:01Z"
 assignee: "ts-gate-exclusion-ignores-run-disjunction"
 blocked-by: null

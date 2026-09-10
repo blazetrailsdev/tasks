@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 3984
+pr: trails#3984
 claim: "2026-06-23T12:17:39Z"
 assignee: "abstract-indexes-fallback-pg-mysql-where-orders"
 blocked-by: null

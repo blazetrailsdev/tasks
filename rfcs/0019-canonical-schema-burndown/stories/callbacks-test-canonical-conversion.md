@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3758
+pr: trails#3758
 claim: "2026-06-21T00:31:25Z"
 assignee: "callbacks-test-canonical-conversion"
 blocked-by: null

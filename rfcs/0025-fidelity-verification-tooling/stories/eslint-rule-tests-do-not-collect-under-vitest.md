@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 15
-pr: 5424
+pr: trails#5424
 claim: "2026-07-27T16:18:24Z"
 assignee: "eslint-rule-tests-do-not-collect-under-vitest"
 blocked-by: null

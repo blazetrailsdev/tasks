@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4270
+pr: trails#4270
 claim: "2026-06-29T12:58:11Z"
 assignee: "belongs-to-required-validates-association-target"
 blocked-by: null

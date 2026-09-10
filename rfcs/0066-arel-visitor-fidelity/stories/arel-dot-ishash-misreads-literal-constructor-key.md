@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 11
-pr: 5001
+pr: trails#5001
 claim: "2026-07-20T19:01:44Z"
 assignee: "arel-dot-ishash-misreads-literal-constructor-key"
 blocked-by: null

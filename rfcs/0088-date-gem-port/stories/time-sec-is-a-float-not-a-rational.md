@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: 6332
+pr: trails#6332
 claim: "2026-08-10T12:26:37Z"
 assignee: "date-side-builders-drop-num2int-with-frac-and-add-frac"
 blocked-by: null

@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4245
+pr: trails#4245
 claim: "2026-06-28T20:56:52Z"
 assignee: "assoc-has-many-counter-cache-clear"
 blocked-by: null

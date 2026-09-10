@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6224
+pr: trails#6224
 claim: "2026-08-08T10:15:57Z"
 assignee: "pg-configure-connection-never-calls-check-version"
 blocked-by: null

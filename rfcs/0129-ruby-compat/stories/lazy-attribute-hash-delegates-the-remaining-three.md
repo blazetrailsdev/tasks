@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: 7437
+pr: trails#7437
 claim: "2026-09-03T11:20:50Z"
 assignee: "resweep-rfc-0104-story-context-against-main"
 blocked-by: null

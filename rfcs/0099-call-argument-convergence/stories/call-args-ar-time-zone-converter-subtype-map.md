@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6485
+pr: trails#6485
 claim: "2026-08-13T18:35:39Z"
 assignee: "call-args-ar-time-zone-converter-subtype-map"
 blocked-by: null

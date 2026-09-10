@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 7661
+pr: trails#7661
 claim: "2026-09-10T12:52:03Z"
 assignee: "rbobjclass-names-a-plain-object-object-where-mri-says-hash"
 blocked-by: null

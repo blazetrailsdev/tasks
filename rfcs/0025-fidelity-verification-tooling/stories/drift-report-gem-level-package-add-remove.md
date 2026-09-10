@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: 4086
+pr: trails#4086
 claim: "2026-06-25T00:42:32Z"
 assignee: "drift-report-gem-level-package-add-remove"
 blocked-by: null

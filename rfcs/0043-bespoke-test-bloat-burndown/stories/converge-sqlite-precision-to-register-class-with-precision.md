@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4681
+pr: trails#4681
 claim: "2026-07-06T15:41:00Z"
 assignee: "converge-sqlite-precision-to-register-class-with-precision"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6522
+pr: trails#6522
 claim: "2026-08-14T14:43:25Z"
 assignee: "converge-date-time-current-since-to-datetime"
 blocked-by: null

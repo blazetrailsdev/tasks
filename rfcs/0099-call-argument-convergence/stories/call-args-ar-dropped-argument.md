@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 552
 priority: null
-pr: 6373
+pr: trails#6373
 claim: "2026-08-11T18:22:40Z"
 assignee: "call-args-ar-dropped-argument"
 blocked-by: null

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: 7213
+pr: trails#7213
 claim: "2026-08-29T17:33:51Z"
 assignee: "param-drift-relation-new-alias-scored-as-constructor"
 blocked-by: null

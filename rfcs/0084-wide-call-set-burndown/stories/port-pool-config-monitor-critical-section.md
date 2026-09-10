@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6416
+pr: trails#6416
 claim: "2026-08-12T14:56:52Z"
 assignee: "port-pool-config-monitor-critical-section"
 blocked-by: null

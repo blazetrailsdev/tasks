@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 5932
+pr: trails#5932
 claim: "2026-08-02T23:15:52Z"
 assignee: "converge-preprocess-order-args-through-order-column"
 blocked-by: null

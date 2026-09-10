@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: 4812
+pr: trails#4812
 claim: "2026-07-08T23:37:33Z"
 assignee: "converge-type-for-attribute-through-attribute-types"
 blocked-by: null

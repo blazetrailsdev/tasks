@@ -9,7 +9,7 @@ deps: ["narrow-ruby-compat-leaf-guard-to-static-imports"]
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: 7422
+pr: trails#7422
 claim: "2026-09-03T00:00:24Z"
 assignee: "move-fs-adapter-into-ruby-compat-as-a-backend-contract"
 blocked-by: null

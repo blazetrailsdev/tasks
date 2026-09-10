@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: 7102
+pr: trails#7102
 claim: "2026-08-26T20:10:48Z"
 assignee: "arel-node-predicate-inlined-at-three-call-sites"
 blocked-by: null

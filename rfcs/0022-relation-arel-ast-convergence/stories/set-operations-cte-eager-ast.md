@@ -8,7 +8,7 @@ deps: ["set-operations-arel-nodes"]
 deps-rfc: []
 est-loc: 300
 priority: 3
-pr: 3187
+pr: trails#3187
 claim: "2026-06-13T12:13:11Z"
 assignee: "set-operations-cte-eager-ast"
 blocked-by: null

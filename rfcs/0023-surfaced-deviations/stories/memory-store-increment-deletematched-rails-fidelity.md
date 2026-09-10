@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 40
-pr: 3853
+pr: trails#3853
 claim: "2026-06-22T00:22:41Z"
 assignee: "memory-store-increment-deletematched-rails-fidelity"
 blocked-by: null

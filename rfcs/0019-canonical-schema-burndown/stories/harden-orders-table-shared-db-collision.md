@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 7
-pr: 4134
+pr: trails#4134
 claim: "2026-06-25T16:42:30Z"
 assignee: "harden-orders-table-shared-db-collision"
 blocked-by: null

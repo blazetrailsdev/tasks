@@ -9,7 +9,7 @@ deps: ["map-minitest-spec-assertion-forms"]
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: 7009
+pr: trails#7009
 claim: "2026-08-24T22:30:08Z"
 assignee: "converge-postgresql-database-statements-call-set-rows"
 blocked-by: null

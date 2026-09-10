@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 5198
+pr: trails#5198
 claim: "2026-07-24T01:07:13Z"
 assignee: "derive-ar-slot-pool-from-clamped-fork-count"
 blocked-by: null

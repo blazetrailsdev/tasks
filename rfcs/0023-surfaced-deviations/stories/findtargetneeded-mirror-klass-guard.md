@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: 4120
+pr: trails#4120
 claim: "2026-06-25T13:57:11Z"
 assignee: "findtargetneeded-mirror-klass-guard"
 blocked-by: null

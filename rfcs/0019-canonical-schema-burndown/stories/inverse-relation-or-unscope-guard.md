@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 3760
+pr: trails#3760
 claim: "2026-06-21T01:27:25Z"
 assignee: "inverse-relation-or-unscope-guard"
 blocked-by: null

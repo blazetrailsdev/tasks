@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: 6170
+pr: trails#6170
 claim: "2026-08-07T12:48:31Z"
 assignee: "database-tasks-config-is-a-second-store-beside-base-configurations"
 blocked-by: null

@@ -7,7 +7,7 @@ cluster: api-compare
 deps: []
 deps-rfc: []
 est-loc: 120
-pr: 5725
+pr: trails#5725
 claim: "2026-07-31T17:27:11Z"
 assignee: "audit-wide-cross-file-mixin-attribution"
 blocked-by: null

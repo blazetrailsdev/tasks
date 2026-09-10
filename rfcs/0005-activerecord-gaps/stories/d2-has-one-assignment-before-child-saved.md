@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 4830
+pr: trails#4830
 claim: "2026-07-09T12:49:38Z"
 assignee: "d2-has-one-assignment-before-child-saved"
 blocked-by: null

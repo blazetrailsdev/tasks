@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: 6684
+pr: trails#6684
 claim: "2026-08-18T01:38:00Z"
 assignee: "association-target-setter-must-call-loaded-bang"
 blocked-by: null
