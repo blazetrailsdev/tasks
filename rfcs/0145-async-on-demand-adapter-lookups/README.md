@@ -54,26 +54,38 @@ larger than their own diff. That is the definition of RFC-level work.
 
 ## Design
 
-Answer one question for the whole cluster, then apply it three times:
+**The direction is decided: B — warm the type map so the on-demand load is never
+needed.** The sync signatures of `getOidType`, `lookupCastType`,
+`fetch_type_metadata`, `cast_result` and `new_column_from_field` stand, and the
+behavioral gap closes by reloading trails' type map at the points where Rails
+would have discovered a new OID.
 
-**Is an async `getOidType` / `lookupCastType` on the table, accepting that
-`fetch_type_metadata`, `cast_result` and `new_column_from_field` go async with
-them?**
+Rails' live query exists because its type map can go stale, not because the
+query is the interesting part: `lookup_cast_type` issues
+`SELECT <type>::regtype::oid` per call (`postgresql/quoting.rb:194-196`) and
+`get_oid_type` falls back to `load_additional_types([oid])`. Both are recovery
+from staleness. A type map that is not stale reaches the same answer with no
+query, and keeps the five methods in the synchronous shape Rails gives them.
 
-The two candidate answers, both of which are genuine convergence:
+This also means the two merged decisions —
+`pg-fetch-type-metadata-async-forces-a-union-on-the-abstract` and
+`pg-lookup-cast-type-async-divergence` (PR 7223) — stand rather than being
+reverted. They chose the right signatures; what was missing was the freshness
+guarantee behind them.
 
-- **A — go async.** Revert the sync-union decisions; the affected methods become
-  async and their call sites await. Cost: async spreads through the PG type
-  path, and it moves those four methods away from Rails' synchronous shape.
-- **B — warm the type map so the on-demand load is never needed.** Rails' live
-  query exists because its type map can be stale; if trails' type map is
-  reloaded at the points Rails would have discovered a new OID, the sync
-  signature stays and the behavioral gap closes. Cost: the reload points must
-  mirror Rails' discovery points exactly, or this becomes the invented
-  `CREATE TYPE` sniffing that option 1 was rejected for.
+### The one thing that can falsify this
 
-The decision belongs in this RFC's Phase 1, taken once, with the PG lane's
-measurements in hand.
+B is convergence only while the reload points mirror Rails' own discovery
+points, each anchored to a `vendor/rails` `file:line`. If the reload points can
+only be found by sniffing SQL text for `CREATE TYPE` / `CREATE DOMAIN`, B has
+turned into the invented mechanism that option 1 of
+`pg-lookup-cast-type-misses-types-created-after-the-type-map-load` was already
+rejected for — a mechanism Rails has no counterpart for, in the one method whose
+Rails body is `super ensure @notice_receiver_sql_warnings = []`.
+
+That is the single condition under which this decision reopens. It is not a
+licence to fall back to A quietly: escalate to the RFC, with the enumeration
+attempt as evidence.
 
 ## Non-goals
 
@@ -88,6 +100,11 @@ measurements in hand.
 
 ## Alternatives considered
 
+- **A — make `getOidType` and `lookupCastType` async**, reverting the sync-union
+  decisions and taking `fetch_type_metadata`, `cast_result` and
+  `new_column_from_field` async with them. Not chosen: it spreads async through
+  the PG type path and moves five methods away from Rails' synchronous shape to
+  buy a freshness guarantee that B provides without a signature change.
 - **Ratify each with a PERMANENT receipt.** Not an available outcome
   (CLAUDE.md: a documented deviation is debt, not permission), and it is what
   each story already refused.
@@ -112,11 +129,13 @@ query remains in the PG adapter.
 
 ## Open questions
 
-1. **Is reverting a merged, reviewed decision the right precedent?** It is when
-   the decision was taken with less information than we now have — both merged
-   stories chose sync to preserve Rails' signature, before the behavioral gap
-   was measured. Recommendation: yes, and record it in the reverting PR.
+1. **Resolved (2026-09-10): B, warm the type map.** The sync signatures stand
+   and the merged decisions behind them are not reverted. Reopens only on the
+   falsifying condition in Design — that Rails' discovery points cannot be
+   enumerated without sniffing SQL text.
 
 ## Changelog
 
 - 2026-09-10: initial RFC
+- 2026-09-10: Design decided — option B (warm the type map); A recorded under
+  Alternatives considered
