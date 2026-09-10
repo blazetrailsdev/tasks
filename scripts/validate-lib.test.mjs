@@ -118,20 +118,9 @@ test("a repo#N pr is legal", () => {
   }
 });
 
-// The legacy shape, legal until `tasks export` writes the backfilled values.
-test("a bare positive-integer pr is still legal", () => {
-  expectClean(
-    validate({
-      rfcs: [rfc()],
-      stories: [
-        story({}, { status: "done", claim: "2026-01-01T00:00:00Z", assignee: "agent", pr: 7 }),
-      ],
-    }).errors,
-  );
-});
-
+// A bare number is ambiguous across trails/tasks/trailmap, so it is malformed.
 test("a malformed pr is rejected", () => {
-  for (const pr of ["#7228", "trails#", "trails#0", "Trails#7", "7228", -3, 1.5]) {
+  for (const pr of ["#7228", "trails#", "trails#0", "Trails#7", "7228", 7, 0, -3, 1.5]) {
     const errors = validate({
       rfcs: [rfc()],
       stories: [
@@ -238,7 +227,10 @@ test("closed RFC with all stories done is clean", () => {
     validate({
       rfcs: [rfc({}, { status: "closed" })],
       stories: [
-        story({}, { status: "done", claim: "2026-01-01T00:00:00Z", assignee: "agent", pr: 7 }),
+        story(
+          {},
+          { status: "done", claim: "2026-01-01T00:00:00Z", assignee: "agent", pr: "trails#7" },
+        ),
       ],
     }).errors,
   );
@@ -251,7 +243,7 @@ test("closed RFC with a mix of done and closed stories is clean", () => {
       stories: [
         story(
           { id: "shipped" },
-          { status: "done", claim: "2026-01-01T00:00:00Z", assignee: "agent", pr: 7 },
+          { status: "done", claim: "2026-01-01T00:00:00Z", assignee: "agent", pr: "trails#7" },
         ),
         story({ id: "abandoned" }, { status: "closed", "closed-reason": "superseded" }),
       ],
@@ -358,7 +350,7 @@ test("est-loc above the ceiling is legal once the story is done", () => {
   expectClean(
     validate({
       rfcs: [rfc()],
-      stories: [story({}, { status: "done", "est-loc": MAX_EST_LOC + 1, pr: 1 })],
+      stories: [story({}, { status: "done", "est-loc": MAX_EST_LOC + 1, pr: "trails#1" })],
     }).errors,
   );
 });
