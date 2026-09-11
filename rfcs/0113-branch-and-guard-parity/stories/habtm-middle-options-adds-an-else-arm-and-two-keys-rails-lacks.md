@@ -1,7 +1,7 @@
 ---
 title: "middle_options invents an else arm and two option keys Rails does not set"
-status: in-progress
-updated: 2026-09-10
+status: done
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []

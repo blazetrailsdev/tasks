@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQLAdapter.dbconsole returns an env object instead of writing ENV"
-status: claimed
+status: ready
 updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: 70
 pr: null
-claim: "2026-09-11T02:25:50Z"
-assignee: "mysql-mismatched-fk-sql-arm-returns-a-promise"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
