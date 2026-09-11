@@ -8,6 +8,9 @@ owner: "@deanmarano"
 packages:
   - "activerecord"
   - "actionpack"
+  - "activesupport"
+  - "ruby-compat"
+  - "rack"
 clusters: []
 priority: 2
 ---
@@ -77,7 +80,54 @@ Each ported Rails thread-spawn site runs its task inside `withExecutionContext`:
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Async query executor | `@async_executor.post { future_result.execute_or_skip }` (`connection_pool.rb:697`); pool built at `connection_pool.rb:718`, `active_record.rb:288` | `ConnectionPool#scheduleQuery` (`connection-pool.ts:906`) → `AsyncExecutor#post` (`ar-config.ts:49`, `queueMicrotask`) |
 | Reaper               | `Thread.new(frequency)` (`connection_pool/reaper.rb:41`)                                                                                            | `Reaper._spawnTimer`'s `setInterval` callback (`connection-pool/reaper.ts:57`)                                         |
-| Request              | the server's per-request thread, whose work starts at `ActionDispatch::Executor#call`'s `@executor.run!` (`middleware/executor.rb:13-14`)           | `actionpack/src/action-dispatch/middleware/executor.ts` `call`                                                         |
+| Request              | the app server's per-request worker thread — Puma's thread pool, not Rails and not Rack                                                             | `Handler.Node#service` (`rack/src/handler/node.ts:57`)                                                                 |
+
+**The rule these three share: mint identity where the Ruby _runtime_ creates
+it, never inside a ported Rails body.** In Ruby nobody mints a request context —
+Puma's thread pool spawns a worker thread and `Thread.current` _is_ the
+identity, free and ambient. Rails only ever reads it, through
+`IsolatedExecutionState.context`, which is `scope.current`
+(`activesupport/lib/active_support/isolated_execution_state.rb:55-57`) — where
+`scope` is `Thread` or `Fiber` per `isolation_level` (`:13-28`); this RFC models
+`:thread`. So every `run()` boundary in trails sits at a Ruby thread-spawn site,
+and **every ported Rails body reads the context and never creates one**. The reaper
+(`setInterval`) and the async executor (`AsyncExecutor#post`) already satisfy
+this; the request did not.
+
+**Why `Handler.Node#service` and not `ActionDispatch::Executor#call`.**
+trails#7713 minted the request context in `executor.ts`, which is measured
+against `executor.rb:13-34` — a body that mints nothing. That deviation is what
+forced two others: a `BodyProxy` close callback re-scoping through
+`Symbol.for("ar_execution_context_id")` (actionpack hardcoding activerecord's
+private key by string), and callers of `call()` losing the request's state on
+return. Moving the mint to the server seam retires all three, because body close
+already runs inside the server callback.
+`request-context-minted-at-server-spawn-not-executor` does the move.
+
+**Why `service` and not the `createServer` callback.** A booted app reaches the
+handler by two routes, and only one passes through `createServer`:
+
+- no Vite — `commands/server.ts:23` calls `Handler.Node.run`, whose
+  `http.createServer` callback (`node.ts:39`) delegates to `service`;
+- Vite dev — `server/vite-plugin.ts:19-21` registers
+  `server.middlewares.use(... handler.service(req, res))`. Vite owns the HTTP
+  server and `node.ts:39` never runs.
+
+`service` (`node.ts:57`) is the one boundary both routes cross exactly once per
+request. Minting at `createServer` would leave every Vite dev request in
+`ROOT_CONTEXT` sharing one lease — the bug this RFC exists to remove, visible
+only in development.
+
+`node.ts` maps to no Ruby file (Rack 3 ships no handlers, and Ruby's Rack has
+nothing to mint with), so the call is trails-only by construction and carries a
+`@noRailsEquivalent PERMANENT` receipt naming the Puma analogue. It costs
+nothing on the ratchets: `rack` is in neither `COUNTED_PACKAGES`
+(`["activerecord"]`) nor `TAGGED_ONLY_PACKAGES` (`["arel", "ruby-compat"]`).
+
+**`rack-test` is deliberately out.** It calls the app directly with no server,
+so it keeps `ROOT_CONTEXT` — which is also what Ruby does, since a rack-test
+request runs on the caller's thread. Concurrent-request assertions therefore
+have to drive `service`, not `rack-test`.
 
 The ActiveJob async adapter's `Concurrent::ThreadPoolExecutor`
 (`activejob/lib/active_job/queue_adapters/async_adapter.rb:89`) is a fourth
@@ -241,3 +291,7 @@ by the Phase 1–3 stories.
 - 2026-09-11: review follow-up: reaper verification criterion and its
   one-context-per-timer shape; ActiveJob moved out of the ported-sites table;
   Phase 2 sized (19 in-scope sites of 34) and split into two stories
+- 2026-09-11: Design §1 restated as a rule — mint where the Ruby runtime creates
+  identity, never in a ported Rails body — and the request seam moved from
+  `ActionDispatch::Executor#call` to `Handler.Node#service`. Declared the
+  `activesupport`, `ruby-compat` and `rack` packages its stories already touch.
