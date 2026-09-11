@@ -2,7 +2,7 @@
 title: "The frontiers SqlJsAdapter duck-types the ActiveRecord adapter/pool contract behind a cast"
 status: ready
 updated: 2026-09-10
-rfc: "0051-migration-schema-statements-fidelity"
+rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []
