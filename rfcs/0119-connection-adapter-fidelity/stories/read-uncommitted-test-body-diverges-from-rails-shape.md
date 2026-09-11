@@ -1,14 +1,14 @@
 ---
 title: "sqlite3 read_uncommitted test body bypasses the transaction manager Rails' test exercises"
-status: draft
-updated: 2026-09-10
+status: ready
+updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 55
 pr: null
 claim: null
 assignee: null

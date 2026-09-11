@@ -1,17 +1,17 @@
 ---
 title: "converge-connection-pool-lifecycle-exclusive-access-async"
-status: ready
-updated: 2026-09-09
+status: blocked
+updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 deps: ["converge-sync-connection-lease-per-checkout-verify"]
 deps-rfc: []
 est-loc: 90
-priority: 80
+priority: 45
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "dep converge-sync-connection-lease-per-checkout-verify (RFC 0146) is itself blocked pending an epic that makes to_sql/.connection async; cannot be scheduled until that dep unblocks"
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Delete the deprecated Base.adapter getter Rails has no counterpart for"
-status: draft
+status: ready
 updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

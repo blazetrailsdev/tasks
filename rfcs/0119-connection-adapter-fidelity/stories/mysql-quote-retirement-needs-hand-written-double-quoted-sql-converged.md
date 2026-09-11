@@ -1,6 +1,6 @@
 ---
 title: 'mysqlQuote''s double-quote rewrite masks hand-written "ident" SQL; converge the SQL, then retire it'
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

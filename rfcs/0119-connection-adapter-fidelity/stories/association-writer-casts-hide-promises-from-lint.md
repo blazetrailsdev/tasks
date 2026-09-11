@@ -1,14 +1,14 @@
 ---
 title: "as-any casts in front of association writer() hide the promise from no-floating-promises"
-status: draft
-updated: 2026-09-10
+status: ready
+updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

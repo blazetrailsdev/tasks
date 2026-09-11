@@ -1,6 +1,6 @@
 ---
 title: "IO#write takes bytes so rack/zlib stop relying on binmode's latin-1 string arm"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
