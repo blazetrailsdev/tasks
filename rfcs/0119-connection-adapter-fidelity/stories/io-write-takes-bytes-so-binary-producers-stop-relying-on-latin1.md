@@ -1,7 +1,7 @@
 ---
 title: "IO#write takes bytes so rack/zlib stop relying on binmode's latin-1 string arm"
-status: ready
-updated: 2026-09-10
+status: claimed
+updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 130
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-11T00:01:04Z"
+assignee: "mysql-quote-retirement-needs-hand-written-double-quoted-sql-converged"
 blocked-by: null
 closed-reason: null
 ---

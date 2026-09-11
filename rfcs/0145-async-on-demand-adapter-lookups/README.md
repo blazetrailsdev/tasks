@@ -1,9 +1,9 @@
 ---
 rfc: "0145-async-on-demand-adapter-lookups"
 title: "On-demand adapter lookups that Rails resolves with a live query"
-status: active
+status: closed
 created: 2026-09-10
-updated: 2026-09-10
+updated: 2026-09-11
 owner: "@deanmarano"
 packages:
   - "activerecord"

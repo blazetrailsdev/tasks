@@ -1,7 +1,7 @@
 ---
 title: "removeSqlHeaderComments slurps the whole dump and raises an invented mkdtempSync error"
-status: blocked
-updated: 2026-09-08
+status: closed
+updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
 packages: []
@@ -12,8 +12,8 @@ priority: 20
 pr: null
 claim: "2026-09-08T11:24:09Z"
 assignee: "ensure-mutable-raises-bare-error-instead-of-the-through-error-class"
-blocked-by: "Only the streaming AC remains: the mkdtempSync guard, the invented error, the blank? analogue and both call-mismatch baseline rows are already gone (postgresql-database-tasks.ts:186-201 now uses Tempfile.open + isBlank; the exclude shard no longer exists). Streaming needs File.foreach in ruby-compat (IO only has readlines, which slurps), and ruby-compat's extra-surface mark is pinned at novel 0 / total 58 with zero headroom (parity:api:extra:gate reports 58/58), so adding one public name reds the only-shrink gate. Needs a ruby-compat File.foreach story that lands under its own burndown first."
-closed-reason: null
+blocked-by: null
+closed-reason: "Landed: File.foreach added to ruby-compat in #7677 (file.ts rb_io_s_foreach); origin/main postgresql-database-tasks.ts removeSqlHeaderComments streams via File.foreach into Tempfile.open — last AC met."
 ---
 
 ## Context
