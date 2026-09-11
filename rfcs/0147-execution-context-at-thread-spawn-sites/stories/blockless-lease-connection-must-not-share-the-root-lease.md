@@ -2,7 +2,7 @@
 title: "Give blockless leaseConnection() callers distinct leases instead of the shared root lease"
 status: blocked
 updated: 2026-09-11
-rfc: "0123-blocked-convergence-holding"
+rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
 packages: []
 deps: []
