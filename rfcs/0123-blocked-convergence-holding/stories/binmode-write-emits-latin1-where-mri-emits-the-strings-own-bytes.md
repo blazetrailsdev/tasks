@@ -2,7 +2,7 @@
 title: "binmode-write-emits-latin1-where-mri-emits-the-strings-own-bytes"
 status: blocked
 updated: 2026-09-10
-rfc: "0119-connection-adapter-fidelity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["ruby-compat", "activerecord"]
 deps: []
