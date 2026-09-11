@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQLAdapter.dbconsole returns an env object instead of writing ENV"
-status: claimed
+status: done
 updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 70
-pr: null
+pr: trails#7689
 claim: "2026-09-11T11:54:00Z"
 assignee: "read-uncommitted-test-body-diverges-from-rails-shape"
 blocked-by: null

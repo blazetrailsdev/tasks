@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone#+ replaces Rails' duration guard, method_missing and rescue TypeError with a positive type dispatch"
-status: claimed
+status: in-progress
 updated: 2026-09-11
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#7690
 claim: "2026-09-11T11:53:31Z"
 assignee: "converge-time-with-zone-plus-onto-the-ruby-body"
 blocked-by: null
