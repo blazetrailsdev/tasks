@@ -1,9 +1,9 @@
 ---
 rfc: "0111-error-class-message-parity"
 title: "Error-class and message parity burndown"
-status: active
+status: closed
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-09-11
 owner: "@deanmarano"
 packages:
   - "activerecord"

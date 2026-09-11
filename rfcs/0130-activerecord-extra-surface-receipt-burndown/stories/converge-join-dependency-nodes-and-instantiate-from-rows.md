@@ -1,6 +1,6 @@
 ---
 title: "converge-join-dependency-nodes-and-instantiate-from-rows"
-status: ready
+status: in-progress
 updated: 2026-09-11
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7720
+claim: "2026-09-11T20:22:15Z"
+assignee: "converge-join-dependency-nodes-and-instantiate-from-rows"
 blocked-by: null
 closed-reason: null
 ---

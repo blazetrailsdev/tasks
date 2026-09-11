@@ -1,6 +1,6 @@
 ---
 title: "FutureResult ports @mutex; drop the #scheduled Thread.pass stand-in"
-status: draft
+status: in-progress
 updated: 2026-09-11
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7722
+claim: "2026-09-11T20:20:31Z"
+assignee: "future-result-mutex-replaces-scheduled-promise"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Mint the request execution context in Handler.Node#service, not in ActionDispatch::Executor"
-status: draft
+status: in-progress
 updated: 2026-09-11
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7722
+claim: "2026-09-11T20:20:31Z"
+assignee: "future-result-mutex-replaces-scheduled-promise"
 blocked-by: null
 closed-reason: null
 ---

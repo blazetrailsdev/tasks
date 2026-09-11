@@ -1,6 +1,6 @@
 ---
 title: "lstatSync is optional on the fs backend, collapsing Entry_#lstat's dereference? arms"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null

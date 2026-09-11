@@ -1,6 +1,6 @@
 ---
 title: "scope keeps a _scopes Map beside the singleton method Rails defines"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null

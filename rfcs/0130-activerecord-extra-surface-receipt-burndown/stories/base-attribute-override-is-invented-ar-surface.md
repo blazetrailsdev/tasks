@@ -1,6 +1,6 @@
 ---
 title: "base-attribute-override-is-invented-ar-surface"
-status: ready
+status: in-progress
 updated: 2026-09-11
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7721
+claim: "2026-09-11T20:20:50Z"
+assignee: "enrol-activerecord-in-tagged-only-mode"
 blocked-by: null
 closed-reason: null
 ---

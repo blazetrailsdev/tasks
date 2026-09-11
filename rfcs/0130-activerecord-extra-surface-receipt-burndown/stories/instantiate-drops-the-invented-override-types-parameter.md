@@ -1,6 +1,6 @@
 ---
 title: "instantiate carries a dead invented overrideTypes parameter Rails' instantiate_instance_of has no counterpart for"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
