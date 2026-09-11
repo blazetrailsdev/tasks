@@ -2,7 +2,7 @@
 title: "AbstractAdapter's lock defaults to the monitor where Rails installs NullLock"
 status: blocked
 updated: 2026-09-11
-rfc: "0146-exclusive-connection-leasing"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: ["synchronize-lock-barges-in-the-release-window", "converge-acquire-connection-blocking-wait"]
