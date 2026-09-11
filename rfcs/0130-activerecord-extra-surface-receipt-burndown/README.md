@@ -1,9 +1,9 @@
 ---
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 title: "Burn activerecord's 342 untagged novel names down to zero so the package leaves the counted extra-surface mark for tagged-only mode"
-status: draft
+status: active
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-09-11
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -186,3 +186,11 @@ fastest early.
 ## Changelog
 
 - 2026-08-30: initial RFC
+- 2026-09-11: activated. Four phase stories have landed since filing and the
+  mark now reads `novel: 168 / total: 591`, against the 342 in this RFC's
+  title and body — those figures are the 2026-08-30 census, not the current
+  measurement. `refresh-stale-phase-inventories-before-claim` is readied first
+  and must land before any remaining phase story is claimed, because the phase
+  bodies carry that same stale census and their acceptance criteria name
+  absolute counts (this already cost a blocking review on #7516: body said 29
+  names across 10 files, the claim-time measurement was 22 across 9).
