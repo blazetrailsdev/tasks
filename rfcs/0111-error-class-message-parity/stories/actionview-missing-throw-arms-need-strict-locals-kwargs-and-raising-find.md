@@ -44,8 +44,18 @@ for ... Locals can only be set as keyword arguments."`. Same missing
   uses `findAll(...)[0]` plus an invented `findLayout(layout, ["layouts"], ...)`
   fallback, so nothing raises `MissingTemplate` to rescue.
 
+The two strict-locals rows (`_run`, `compile`) moved to
+`actionview-strict-locals-kwargs-signature-and-strict-locals-error`: trails
+compiles strict-locals templates with no signature at all, so they need a
+kwargs port that does not fit alongside this one. This story keeps the two
+renderer rows. `render file:` stays synchronous through ruby-compat
+`File.isExist`, the same wrapper `RawFile#render` already reads through.
+
 ## Acceptance criteria
 
-- [ ] Each of the four raise sites raises Rails' class with Rails' message,
-      each covered by a test that fails on baseline.
-- [ ] `pnpm parity:api:arms:throws:tighten` narrows actionview to 0.
+- [ ] `determineTemplate`'s `file:` arm returns `RawFile` or raises Rails' two
+      `ArgumentError`s; `resolveLayout` raises Rails' `ArgumentError` and
+      rescues a real `MissingTemplate` from `PathSet#find`. Each is covered by
+      a test that fails on baseline.
+- [ ] `pnpm parity:api:arms:throws:tighten` narrows
+      `renderer/template-renderer.ts` to 0.
