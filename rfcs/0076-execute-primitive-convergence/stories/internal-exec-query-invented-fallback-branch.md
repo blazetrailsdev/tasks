@@ -1,7 +1,7 @@
 ---
 title: "internalExecQuery's capability probe, invented error and no-binds execute arm have no Rails counterpart"
-status: draft
-updated: 2026-08-30
+status: done
+updated: 2026-09-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#7532
 claim: null
 assignee: null
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Break the schema-statements -> join-table -> model-schema cycle so AbstractAdapter's includes can return to the class body"
-status: in-progress
+status: done
 updated: 2026-09-10
 rfc: "0144-adapter-module-load-cycles"
 cluster: null

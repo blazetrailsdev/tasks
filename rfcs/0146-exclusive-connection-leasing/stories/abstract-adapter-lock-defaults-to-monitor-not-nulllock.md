@@ -1,6 +1,6 @@
 ---
 title: "AbstractAdapter's lock defaults to the monitor where Rails installs NullLock"
-status: ready
+status: in-progress
 updated: 2026-09-10
 rfc: "0146-exclusive-connection-leasing"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["synchronize-lock-barges-in-the-release-window", "converge-acquire-connec
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7680
+claim: "2026-09-10T23:24:06Z"
+assignee: "abstract-adapter-lock-defaults-to-monitor-not-nulllock"
 blocked-by: null
 closed-reason: null
 ---

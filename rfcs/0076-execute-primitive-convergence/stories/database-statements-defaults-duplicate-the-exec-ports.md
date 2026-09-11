@@ -1,7 +1,7 @@
 ---
 title: "Point the DatabaseStatements defaults at the ported execInsert/execDelete/execUpdate"
-status: draft
-updated: 2026-08-15
+status: done
+updated: 2026-09-10
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#6835
 claim: null
 assignee: null
 blocked-by: null
