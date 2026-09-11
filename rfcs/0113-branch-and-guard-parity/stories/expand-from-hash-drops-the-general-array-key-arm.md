@@ -1,6 +1,6 @@
 ---
 title: "expand-from-hash-drops-the-general-array-key-arm"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null

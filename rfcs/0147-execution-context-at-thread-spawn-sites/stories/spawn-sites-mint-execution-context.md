@@ -1,6 +1,6 @@
 ---
 title: "Mint an execution context at each Rails thread-spawn site"
-status: ready
+status: in-progress
 updated: 2026-09-11
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7704
+claim: "2026-09-11T16:36:04Z"
+assignee: "spawn-sites-mint-execution-context"
 blocked-by: null
 closed-reason: null
 ---

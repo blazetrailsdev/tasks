@@ -1,6 +1,6 @@
 ---
 title: "Port Time's *_with_coercion / *_with_duration named methods onto the reopened Time class"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
