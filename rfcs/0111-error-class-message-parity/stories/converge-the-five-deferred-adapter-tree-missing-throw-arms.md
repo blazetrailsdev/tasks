@@ -1,6 +1,6 @@
 ---
 title: "converge-the-five-deferred-adapter-tree-missing-throw-arms"
-status: claimed
+status: ready
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 55
 pr: null
-claim: "2026-09-11T13:26:35Z"
-assignee: "time-with-zone-change-lacks-zone-and-offset-options"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

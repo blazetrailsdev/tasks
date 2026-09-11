@@ -1,7 +1,7 @@
 ---
 title: "AbstractMysqlAdapter#configure_connection is unported; its body lives in Mysql2Adapter#_buildInitSql as a driver initSql string"
-status: draft
-updated: 2026-08-25
+status: in-progress
+updated: 2026-09-11
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7696
+claim: "2026-09-11T13:46:24Z"
+assignee: "mysql-configure-connection-lives-in-build-init-sql"
 blocked-by: null
 closed-reason: null
 ---

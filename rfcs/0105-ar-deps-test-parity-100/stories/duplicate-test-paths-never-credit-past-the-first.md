@@ -1,6 +1,6 @@
 ---
 title: "156 duplicate test paths credit once and count the rest as TS-only extra"
-status: claimed
+status: ready
 updated: 2026-09-11
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-09-11T13:23:00Z"
-assignee: "duplicate-test-paths-never-credit-past-the-first"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

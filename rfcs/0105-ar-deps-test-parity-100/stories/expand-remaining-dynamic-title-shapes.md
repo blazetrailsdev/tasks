@@ -1,6 +1,6 @@
 ---
 title: "Statically expand Object.entries/keys and derived const arrays so the last 15 dynamic titles match"
-status: claimed
+status: in-progress
 updated: 2026-09-11
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#7695
 claim: "2026-09-11T13:23:00Z"
 assignee: "duplicate-test-paths-never-credit-past-the-first"
 blocked-by: null

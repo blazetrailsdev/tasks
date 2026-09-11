@@ -1,6 +1,6 @@
 ---
 title: "time-with-zone-change-lacks-zone-and-offset-options"
-status: claimed
+status: in-progress
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 50
-pr: null
+pr: trails#7694
 claim: "2026-09-11T13:26:35Z"
 assignee: "time-with-zone-change-lacks-zone-and-offset-options"
 blocked-by: null

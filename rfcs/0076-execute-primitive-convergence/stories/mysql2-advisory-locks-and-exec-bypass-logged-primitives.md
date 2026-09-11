@@ -1,7 +1,7 @@
 ---
 title: "mysql2 advisory locks and exec issue SQL off the logged primitives"
-status: draft
-updated: 2026-08-10
+status: in-progress
+updated: 2026-09-11
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7696
+claim: "2026-09-11T13:46:27Z"
+assignee: "mysql2-advisory-locks-and-exec-bypass-logged-primitives"
 blocked-by: null
 closed-reason: null
 ---

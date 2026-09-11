@@ -1,6 +1,6 @@
 ---
 title: "Give blockless leaseConnection() callers distinct leases instead of the shared root lease"
-status: blocked
+status: closed
 updated: 2026-09-11
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Language gap: a blockless call cannot mint an async-context identity for its CALLER. ruby-compat's AsyncContext (and TC39 AsyncContext.Variable) expose only run(store, fn) — scope-bound, needs a block. Node's AsyncLocalStorage.enterWith was tested: called before the callee's first await it mutates the shared caller resource, so two Promise.all siblings both get id 1 (shared lease); called after an await it stays in the callee's continuation and the caller sees undefined after 'await pool.leaseConnection()'. Ruby gets identity from Thread.current (connection_pool.rb:710-711) which exists before any call; JS async flows have no per-flow identity absent a run() boundary. Sibling-checkin arm in withConnection therefore stays reachable (AC2 depends on AC1)."
-closed-reason: null
+blocked-by: null
+closed-reason: "superseded by RFC 0147: spawn-sites-mint-execution-context, adapter-fan-out-follows-rails-sequencing, association-fan-out-follows-rails-sequencing, with-connection-drops-lease-fork-and-sibling-checkin"
 ---
 
 ## Context
