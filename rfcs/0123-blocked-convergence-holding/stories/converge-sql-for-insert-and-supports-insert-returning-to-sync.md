@@ -2,7 +2,7 @@
 title: "sql_for_insert is async in trails because supports_insert_returning? and primary_key are; Rails' is sync"
 status: blocked
 updated: 2026-08-30
-rfc: "0146-exclusive-connection-leasing"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: ["sql-for-insert-pk-inference-binds-a-promise"]
