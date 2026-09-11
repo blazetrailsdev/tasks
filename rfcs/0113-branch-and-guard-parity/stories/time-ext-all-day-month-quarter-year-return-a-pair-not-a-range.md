@@ -1,7 +1,7 @@
 ---
 title: "time-ext.ts's all_day/all_month/all_quarter/all_year return {start,end} where Rails returns a Range"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 42
-pr: null
-claim: null
-assignee: null
+pr: trails#7692
+claim: "2026-09-11T13:18:43Z"
+assignee: "rack-files-invented-head-and-availability-arms"
 blocked-by: null
 closed-reason: null
 ---

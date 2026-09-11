@@ -1,7 +1,7 @@
 ---
 title: "Mysql2Adapter#execute should not exist and PostgreSQLAdapter#execute should be super plus its ensure"
-status: draft
-updated: 2026-08-30
+status: done
+updated: 2026-09-11
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: trails#7604
 claim: null
 assignee: null
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "fixture-cpk-reviews-association-label-composite-fk"
-status: ready
-updated: 2026-09-10
+status: claimed
+updated: 2026-09-11
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-11T13:23:00Z"
+assignee: "duplicate-test-paths-never-credit-past-the-first"
 blocked-by: null
 closed-reason: null
 ---
