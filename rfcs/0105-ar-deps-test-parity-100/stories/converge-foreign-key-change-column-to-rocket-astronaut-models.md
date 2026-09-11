@@ -1,7 +1,7 @@
 ---
 title: "Drive ForeignKeyChangeColumnTest through Rocket/Astronaut models instead of raw SQL"
-status: in-progress
-updated: 2026-09-10
+status: done
+updated: 2026-09-11
 rfc: "0105-ar-deps-test-parity-100"
 cluster: name-gap
 packages:

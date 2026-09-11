@@ -1,7 +1,7 @@
 ---
 title: "internal_execute takes binds positionally in Rails; trails buries them in the options object"
-status: in-progress
-updated: 2026-09-10
+status: done
+updated: 2026-09-11
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []

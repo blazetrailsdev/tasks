@@ -1,7 +1,7 @@
 ---
 title: "converge-fixtures-test-grouped-one-off-exclusions"
-status: in-progress
-updated: 2026-09-10
+status: done
+updated: 2026-09-11
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
