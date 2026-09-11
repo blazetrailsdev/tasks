@@ -1,6 +1,6 @@
 ---
 title: "Raise what Rails raises: the 9 missing-throw arms in activesupport, activemodel and arel"
-status: ready
+status: in-progress
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7687
+claim: "2026-09-11T02:08:27Z"
+assignee: "burn-the-missing-throw-arms-in-activerecord-model-and-relation"
 blocked-by: null
 closed-reason: null
 ---

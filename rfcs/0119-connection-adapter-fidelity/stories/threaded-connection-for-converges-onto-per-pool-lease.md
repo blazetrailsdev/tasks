@@ -1,6 +1,6 @@
 ---
 title: "threadedConnectionFor converges onto the model pool's own lease"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null

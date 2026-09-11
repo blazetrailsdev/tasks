@@ -1,6 +1,6 @@
 ---
 title: "Raise what Rails raises: the 8 missing-throw arms in actionview and the controller stack"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws

@@ -1,6 +1,6 @@
 ---
 title: "The frontiers SqlJsAdapter duck-types the ActiveRecord adapter/pool contract behind a cast"
-status: ready
+status: closed
 updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "not concerned about website right now"
 ---
 
 ## Context

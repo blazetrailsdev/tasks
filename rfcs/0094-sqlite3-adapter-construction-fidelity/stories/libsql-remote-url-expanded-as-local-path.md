@@ -1,7 +1,7 @@
 ---
 title: "libsql-remote: a remote database URL is expanded and mkdir'd as a local path"
-status: draft
-updated: 2026-09-10
+status: in-progress
+updated: 2026-09-11
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7686
+claim: "2026-09-11T02:29:34Z"
+assignee: "libsql-remote-url-expanded-as-local-path"
 blocked-by: null
 closed-reason: null
 ---

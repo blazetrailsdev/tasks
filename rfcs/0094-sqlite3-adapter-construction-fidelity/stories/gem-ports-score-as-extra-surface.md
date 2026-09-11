@@ -1,7 +1,7 @@
 ---
 title: "Gem ports score as extra surface, forcing receipts on faithful gem code"
 status: ready
-updated: 2026-09-10
+updated: 2026-09-11
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "AbstractAdapter.database_exists? disconnects where Rails just constructs and asks"
-status: ready
-updated: 2026-09-10
+status: in-progress
+updated: 2026-09-11
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 13
-pr: null
-claim: null
-assignee: null
+pr: trails#7686
+claim: "2026-09-11T02:14:13Z"
+assignee: "sqlite3-connection-parameters-carry-trails-driver-key"
 blocked-by: null
 closed-reason: null
 ---

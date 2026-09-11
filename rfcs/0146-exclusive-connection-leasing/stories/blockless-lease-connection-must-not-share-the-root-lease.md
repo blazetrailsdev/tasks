@@ -1,7 +1,7 @@
 ---
 title: "Give blockless leaseConnection() callers distinct leases instead of the shared root lease"
-status: draft
-updated: 2026-09-10
+status: blocked
+updated: 2026-09-11
 rfc: "0146-exclusive-connection-leasing"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Language gap: a blockless call cannot mint an async-context identity for its CALLER. ruby-compat's AsyncContext (and TC39 AsyncContext.Variable) expose only run(store, fn) — scope-bound, needs a block. Node's AsyncLocalStorage.enterWith was tested: called before the callee's first await it mutates the shared caller resource, so two Promise.all siblings both get id 1 (shared lease); called after an await it stays in the callee's continuation and the caller sees undefined after 'await pool.leaseConnection()'. Ruby gets identity from Thread.current (connection_pool.rb:710-711) which exists before any call; JS async flows have no per-flow identity absent a run() boundary. Sibling-checkin arm in withConnection therefore stays reachable (AC2 depends on AC1)."
 closed-reason: null
 ---
 

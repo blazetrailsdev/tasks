@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 read_uncommitted test body bypasses the transaction manager Rails' test exercises"
-status: ready
+status: claimed
 updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: 55
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-11T02:25:50Z"
+assignee: "mysql-mismatched-fk-sql-arm-returns-a-promise"
 blocked-by: null
 closed-reason: null
 ---

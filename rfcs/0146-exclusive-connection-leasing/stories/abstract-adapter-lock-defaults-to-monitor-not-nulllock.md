@@ -1,7 +1,7 @@
 ---
 title: "AbstractAdapter's lock defaults to the monitor where Rails installs NullLock"
-status: in-progress
-updated: 2026-09-10
+status: blocked
+updated: 2026-09-11
 rfc: "0146-exclusive-connection-leasing"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: trails#7680
 claim: "2026-09-10T23:24:06Z"
 assignee: "abstract-adapter-lock-defaults-to-monitor-not-nulllock"
-blocked-by: null
+blocked-by: "NullLock default reds same-context concurrency: one JS execution context can run concurrent statements on one connection (Promise.all), which a Ruby thread cannot; CI on trails#7680 showed duplicate sqlite insert ids, triple deferred open, interleaved PG resetBang. Lease-per-context cannot split Promise.all branches."
 closed-reason: null
 ---
 
