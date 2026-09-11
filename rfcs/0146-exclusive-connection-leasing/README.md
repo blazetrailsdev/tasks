@@ -1,9 +1,9 @@
 ---
 rfc: "0146-exclusive-connection-leasing"
 title: "Exclusive connection leasing and a connect path that finishes before hand-out"
-status: active
+status: closed
 created: 2026-09-10
-updated: 2026-09-10
+updated: 2026-09-11
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -178,9 +178,37 @@ declaration at `abstract/connection-pool.ts:38` is honest. No
    concurrent promises _within_ one context, and Phase 2 adds that to the
    pool's lease, not to the adapter (see Design §1).
 
+## Closure
+
+Closed 2026-09-11 with its Verification target **unmet**. Phase 1 and the two
+stories that followed it landed:
+
+- `measure-what-exclusive-leasing-already-guarantees` (tasks#94) — established
+  that PRs 7288 and 7056 are insufficient, with the 4-failed/26-passed runs on
+  both lanes recorded in Rollout above.
+- `express-adapter-concurrency-tests-at-the-pool-level` (trails#7672).
+- `lease-identity-must-not-collapse-to-context-zero`.
+
+The six convergence stories this RFC was opened to unblock were **not**
+converged. They are parked, still blocked, in `0123-blocked-convergence-holding`:
+`abstract-adapter-lock-defaults-to-monitor-not-nulllock`,
+`server-version-barrier-takes-the-connection-lock-first`,
+`converge-sync-connection-lease-per-checkout-verify`,
+`connection-leasing-queue-internal-poll-carries-a-promise-arm`,
+`converge-sql-for-insert-and-supports-insert-returning-to-sync`,
+`sqlite-get-database-version-uses-query-value`.
+
+So the stated Verification — RFC 0119's blocked count down by 6, `@lock`
+defaulting to `NullLock`, no `connection.lock.synchronize` wrapper at
+`pool-config.ts:84` or `abstract/connection-pool.ts:98` — still describes work
+that has not happened. Reopening this RFC is not the way back to it; whoever
+takes the holding-RFC stories files a fresh RFC with the Phase 1 measurement
+above as its starting evidence.
+
 ## Changelog
 
 - 2026-09-10: initial RFC
 - 2026-09-10: Phase 1 measured; #7288/#7056 do not prevent intra-flow
   concurrent entry. Design §1 narrowed from "execution context" to one
   sequential flow; Open question 1 answered (in the pool).
+- 2026-09-11: closed; six convergence stories parked in 0123-blocked-convergence-holding
