@@ -2,7 +2,7 @@
 title: "website-sandbox-drops-base-adapter-assignment"
 status: draft
 updated: 2026-09-11
-rfc: "0119-connection-adapter-fidelity"
+rfc: "0061-ci-failures"
 cluster: null
 packages: []
 deps: []
