@@ -1,7 +1,7 @@
 ---
 title: "insert-all-constructor-reads-the-schema-cache-at-its-rails-call-sites"
-status: ready
-updated: 2026-09-06
+status: blocked
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: 49
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-11T15:29:18Z"
+assignee: "time-coercion-operator-methods-onto-time-class"
+blocked-by: "InsertAll#initialize's reads (supports_insert_returning?, supports_insert_on_duplicate_*, supports_insert_conflict_target?, schema_cache.primary_keys/indexes) are all async in trails (abstract-adapter.ts:1298-1310,1576; abstract-mysql-adapter.ts:330 awaits isMariadb/databaseVersion); a TS constructor cannot await them, so the prewarm cannot go without first making the supports* predicates and the schema-cache readers synchronous."
 closed-reason: null
 ---
 

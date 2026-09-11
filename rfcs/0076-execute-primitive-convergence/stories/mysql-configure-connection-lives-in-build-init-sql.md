@@ -1,6 +1,6 @@
 ---
 title: "AbstractMysqlAdapter#configure_connection is unported; its body lives in Mysql2Adapter#_buildInitSql as a driver initSql string"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0076-execute-primitive-convergence"
 cluster: null

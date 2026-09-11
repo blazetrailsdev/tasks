@@ -1,7 +1,7 @@
 ---
 title: "Port FixtureSet's instance form and all_loaded_fixtures"
 status: ready
-updated: 2026-09-10
+updated: 2026-09-11
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []

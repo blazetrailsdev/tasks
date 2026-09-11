@@ -1,6 +1,6 @@
 ---
 title: "Rack::Files: compose HEAD through Rack::Head and stop re-deciding availability in serving"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null

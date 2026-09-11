@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-explain-passes-empty-binds"
-status: ready
-updated: 2026-09-06
+status: claimed
+updated: 2026-09-11
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-11T15:57:01Z"
+assignee: "sqlite3-explain-passes-empty-binds"
 blocked-by: null
 closed-reason: null
 ---

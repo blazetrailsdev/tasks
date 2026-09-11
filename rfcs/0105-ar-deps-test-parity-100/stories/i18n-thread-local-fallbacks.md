@@ -1,7 +1,7 @@
 ---
 title: "Give I18n.fallbacks per-execution-context storage so the multi-threaded fallbacks test can port"
 status: ready
-updated: 2026-09-10
+updated: 2026-09-11
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []

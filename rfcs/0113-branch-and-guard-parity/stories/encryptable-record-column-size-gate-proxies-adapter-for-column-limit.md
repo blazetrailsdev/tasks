@@ -1,7 +1,7 @@
 ---
 title: '"validate column sizes" gates on an adapter name where Rails gates on the column limit'
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 44
-pr: null
-claim: null
-assignee: null
+pr: trails#7701
+claim: "2026-09-11T15:29:18Z"
+assignee: "time-coercion-operator-methods-onto-time-class"
 blocked-by: null
 closed-reason: null
 ---

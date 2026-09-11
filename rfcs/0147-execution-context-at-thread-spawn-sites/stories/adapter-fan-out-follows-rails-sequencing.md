@@ -1,6 +1,6 @@
 ---
 title: "Adapter and schema fan-outs follow Rails' sequential map"
-status: ready
+status: in-progress
 updated: 2026-09-11
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7702
+claim: "2026-09-11T15:42:18Z"
+assignee: "adapter-fan-out-follows-rails-sequencing"
 blocked-by: null
 closed-reason: null
 ---

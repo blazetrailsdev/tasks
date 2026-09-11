@@ -1,7 +1,7 @@
 ---
 title: "encryption/ and type-virtualization/: resolve 30 novel names, 19 of them in files with no Rails counterpart"
-status: draft
-updated: 2026-08-31
+status: done
+updated: 2026-09-11
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: ["refresh-stale-phase-inventories-before-claim"]
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#7700
+claim: "2026-09-11T15:28:58Z"
+assignee: "receipt-encryption-and-type-virtualization"
 blocked-by: null
 closed-reason: null
 ---

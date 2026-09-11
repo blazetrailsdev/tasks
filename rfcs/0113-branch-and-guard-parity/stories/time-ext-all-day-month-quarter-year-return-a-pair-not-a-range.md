@@ -1,6 +1,6 @@
 ---
 title: "time-ext.ts's all_day/all_month/all_quarter/all_year return {start,end} where Rails returns a Range"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null

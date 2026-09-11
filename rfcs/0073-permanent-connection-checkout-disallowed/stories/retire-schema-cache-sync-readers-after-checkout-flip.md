@@ -1,7 +1,7 @@
 ---
 title: "retire the schema-cache sync readers once checkouts can block"
-status: ready
-updated: 2026-08-29
+status: blocked
+updated: 2026-09-11
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
@@ -9,9 +9,9 @@ deps-rfc: []
 est-loc: 300
 priority: 50
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-11T15:20:58Z"
+assignee: "relation-conn-fallback-reads-deprecated-connection"
+blocked-by: "Gated on arm-permanent-connection-checkout-disallowed (still draft): the story's own converged shape requires the permanent-connection-checkout flip to have landed before the sync schema-cache readers / seed miss branch can be retired."
 closed-reason: null
 ---
 

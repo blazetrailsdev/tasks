@@ -1,6 +1,6 @@
 ---
 title: "instrument-unpermitted-parameters-instead-of-console-warn"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: null

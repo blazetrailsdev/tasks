@@ -1,6 +1,6 @@
 ---
 title: "converge-the-five-deferred-adapter-tree-missing-throw-arms"
-status: ready
+status: done
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 55
-pr: null
-claim: null
-assignee: null
+pr: trails#7698
+claim: "2026-09-11T14:26:49Z"
+assignee: "converge-find-with-ids-raises-onto-the-rails-body"
 blocked-by: null
 closed-reason: null
 ---

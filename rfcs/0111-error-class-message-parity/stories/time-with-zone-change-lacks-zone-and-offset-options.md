@@ -1,6 +1,6 @@
 ---
 title: "time-with-zone-change-lacks-zone-and-offset-options"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: null

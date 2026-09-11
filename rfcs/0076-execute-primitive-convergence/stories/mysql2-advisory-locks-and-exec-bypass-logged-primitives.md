@@ -1,6 +1,6 @@
 ---
 title: "mysql2 advisory locks and exec issue SQL off the logged primitives"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0076-execute-primitive-convergence"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Object#in? has no Range branch, no ArgumentError arm, and sits outside core_ext/object"
-status: ready
-updated: 2026-09-10
+status: done
+updated: 2026-09-11
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7697
+claim: "2026-09-11T14:19:59Z"
+assignee: "fixture-set-instance-form-and-all-loaded-fixtures"
 blocked-by: null
 closed-reason: null
 ---

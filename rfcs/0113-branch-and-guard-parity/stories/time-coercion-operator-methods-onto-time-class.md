@@ -1,7 +1,7 @@
 ---
 title: "Port Time's *_with_coercion / *_with_duration named methods onto the reopened Time class"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: 43
-pr: null
-claim: null
-assignee: null
+pr: trails#7701
+claim: "2026-09-11T15:29:18Z"
+assignee: "time-coercion-operator-methods-onto-time-class"
 blocked-by: null
 closed-reason: null
 ---
