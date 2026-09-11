@@ -1,7 +1,7 @@
 ---
 title: "the server_version barrier acquires the connection lock first, which Rails does not"
 status: blocked
-updated: 2026-09-10
+updated: 2026-09-11
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Re-measured on main 15627671d (RFC 0146 Phase 1): with @lock defaulted to NullLock (abstract_adapter.rb:157, else arm :181-192) all four serialization cases still fail on ARCONN=postgresql and sqlite3_mem (4 failed / 26 passed; 30/30 without the patch). PRs 7288 and 7056 do not close the gap: they order waiters ACROSS execution contexts, but ConnectionPool#connectionLease (abstract/connection-pool.ts:924-929) keys the lease on executionContextId(), which is 0 for all unscoped code (execution-context.ts:20-21), so concurrent promises in ONE flow (Promise.all over execInsert, withRawConnection, reconnectBang, verifyBang) share one leased adapter and enter it concurrently. Residual: RFC 0146 Phase 2, exclusive entry on a leased adapter per logical flow. The pool-config.ts / connection-pool.ts connection.lock.synchronize wrappers can only go after that and after abstract-adapter-lock-defaults-to-monitor-not-nulllock."
+blocked-by: "waits on abstract-adapter-lock-defaults-to-monitor-not-nulllock: the NullLock flip still reds the concurrent unlocked-pin test in connection-pool.trails.test.ts"
 closed-reason: null
 ---
 

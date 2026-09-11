@@ -1,7 +1,7 @@
 ---
 title: "sql_for_insert is async in trails because supports_insert_returning? and primary_key are; Rails' is sync"
 status: blocked
-updated: 2026-08-30
+updated: 2026-09-11
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-30T15:05:49Z"
 assignee: "biginteger-castvalue-declares-number-but-returns-bigint"
-blocked-by: "supportsInsertReturning() cannot read a memoized version: trails' connect path fires configureConnection() without awaiting it (sqlite3-adapter.ts:290, `void this.configureConnection()`), so the pool's `_serverVersion` memo (pool-config.ts:81) is still cold on the first execInsert. A sync supportsInsertReturning() reading `this.databaseVersion` throws `this.databaseVersion.compare is not a function` from internal-metadata.ts:192's very first insert (measured on the SQLite lane). And sqlForInsert cannot be sync regardless: its pk-inference arm calls primaryKey(table_ref) -> primaryKeys(table_ref), which issues a schema query (abstract/schema-statements.ts:959), i.e. real I/O that Ruby blocks on and JS cannot. Unblocking needs (a) a connect path that resolves the server version before the adapter is handed out, and (b) the primaryKey residual split out per acceptance criterion 4."
+blocked-by: "RFC 0146 Design §2: configureConnection must be awaited on the connect path (a Non-goal of RFC 0147)"
 closed-reason: null
 ---
 

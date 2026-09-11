@@ -1,6 +1,6 @@
 ---
 title: "update_counters branches on the primary key's shape where Rails has one where! call"
-status: claimed
+status: done
 updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 51
-pr: null
+pr: trails#7712
 claim: "2026-09-11T17:54:11Z"
 assignee: "dump-schema-opens-the-file-around-the-dumper"
 blocked-by: null

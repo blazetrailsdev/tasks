@@ -1,6 +1,6 @@
 ---
 title: "Converge the three remaining adapter-tree missing-throw arms"
-status: claimed
+status: done
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#7710
 claim: "2026-09-11T17:52:42Z"
 assignee: "converge-the-three-remaining-adapter-tree-missing-throw-arms"
 blocked-by: null

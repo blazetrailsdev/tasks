@@ -1,6 +1,6 @@
 ---
 title: "Re-measure the six 0146 leasing stories parked in 0123 after RFC 0147 Phase 3"
-status: ready
+status: in-progress
 updated: 2026-09-11
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["with-connection-drops-lease-fork-and-sibling-checkin"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7713
+claim: "2026-09-11T18:27:08Z"
+assignee: "remeasure-0123-leasing-stories-after-0147"
 blocked-by: null
 closed-reason: null
 ---

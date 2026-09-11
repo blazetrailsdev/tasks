@@ -1,6 +1,6 @@
 ---
 title: "withConnection drops the lease fork and sibling-checkin arm"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null

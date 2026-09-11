@@ -1,7 +1,7 @@
 ---
 title: "SchemaDumper threads a stream, not a lines array (retires 8 naming rows)"
-status: draft
-updated: 2026-08-11
+status: done
+updated: 2026-09-11
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#7712
 claim: null
 assignee: null
 blocked-by: null

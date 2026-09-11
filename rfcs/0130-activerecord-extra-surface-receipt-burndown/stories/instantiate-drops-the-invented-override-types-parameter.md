@@ -1,17 +1,17 @@
 ---
 title: "instantiate carries a dead invented overrideTypes parameter Rails' instantiate_instance_of has no counterpart for"
-status: draft
-updated: 2026-09-04
+status: claimed
+updated: 2026-09-11
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-11T18:50:22Z"
+assignee: "converge-loader-query-eql-and-hash-onto-rails"
 blocked-by: null
 closed-reason: null
 ---

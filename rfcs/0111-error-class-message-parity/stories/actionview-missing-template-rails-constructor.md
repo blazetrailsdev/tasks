@@ -1,6 +1,6 @@
 ---
 title: "actionview-missing-template-rails-constructor"
-status: claimed
+status: done
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#7711
 claim: "2026-09-11T17:53:34Z"
 assignee: "actionview-missing-template-rails-constructor"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Re-measure RFC 0130's remaining phase inventories and drop absolute counts from their acceptance criteria"
-status: claimed
+status: done
 updated: 2026-09-11
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#7709
 claim: "2026-09-11T17:58:26Z"
 assignee: "drop-unread-belongsto-from-cpk-mismatch-reflection"
 blocked-by: null

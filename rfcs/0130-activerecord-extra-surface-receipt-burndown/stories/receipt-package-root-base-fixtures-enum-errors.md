@@ -1,6 +1,6 @@
 ---
 title: "Package root: resolve the remaining 126 novel names across base.ts, index.ts, fixtures.ts, enum.ts and errors.ts"
-status: ready
+status: in-progress
 updated: 2026-09-11
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#7714
+claim: "2026-09-11T18:31:02Z"
+assignee: "receipt-package-root-base-fixtures-enum-errors"
 blocked-by: null
 closed-reason: null
 ---

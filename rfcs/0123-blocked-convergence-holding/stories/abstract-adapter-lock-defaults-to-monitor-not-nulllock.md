@@ -12,7 +12,7 @@ priority: null
 pr: trails#7680
 claim: "2026-09-10T23:24:06Z"
 assignee: "abstract-adapter-lock-defaults-to-monitor-not-nulllock"
-blocked-by: "NullLock default reds same-context concurrency: one JS execution context can run concurrent statements on one connection (Promise.all), which a Ruby thread cannot; CI on trails#7680 showed duplicate sqlite insert ids, triple deferred open, interleaved PG resetBang. Lease-per-context cannot split Promise.all branches."
+blocked-by: "NullLock default reds connection-pool.trails.test.ts 'two concurrent contexts share the pool's single pinned connection' (cannot rollback - no transaction is active): pinConnectionBang() without lockThread leaves the shared pinned connection unlocked across contexts"
 closed-reason: null
 ---
 

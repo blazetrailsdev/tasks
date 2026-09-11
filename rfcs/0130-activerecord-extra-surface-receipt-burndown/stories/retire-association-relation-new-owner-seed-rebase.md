@@ -1,14 +1,14 @@
 ---
 title: "retire-association-relation-new-owner-seed-rebase"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-11
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null
