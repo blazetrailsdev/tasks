@@ -65,8 +65,7 @@ neither has a Rails counterpart:
    `connection-adapters/postgresql/schema-statements.ts:138,866,1106`,
    `connection-adapters/mysql/schema-statements.ts:136`,
    `connection-adapters/abstract/database-statements.ts:1229`,
-   `relation/query-methods.ts:305`. 18 non-test `activerecord/src` files contain
-   `Promise.all`; not all of them touch a connection.
+   `relation/query-methods.ts:305`. Design §2 sizes this.
 
 ## Design
 
@@ -74,12 +73,27 @@ neither has a Rails counterpart:
 
 Each ported Rails thread-spawn site runs its task inside `withExecutionContext`:
 
-| Rails spawn site        | Rails source                                                                                                                                        | trails site                                                                                                            |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Async query executor    | `@async_executor.post { future_result.execute_or_skip }` (`connection_pool.rb:697`); pool built at `connection_pool.rb:718`, `active_record.rb:288` | `ConnectionPool#scheduleQuery` (`connection-pool.ts:906`) → `AsyncExecutor#post` (`ar-config.ts:49`, `queueMicrotask`) |
-| Reaper                  | `Thread.new(frequency)` (`connection_pool/reaper.rb:41`)                                                                                            | `Reaper._spawnTimer`'s `setInterval` callback (`connection-pool/reaper.ts:57`)                                         |
-| Request                 | the server's per-request thread, whose work starts at `ActionDispatch::Executor#call`'s `@executor.run!` (`middleware/executor.rb:13-14`)           | `actionpack/src/action-dispatch/middleware/executor.ts` `call`                                                         |
-| ActiveJob async adapter | `Concurrent::ThreadPoolExecutor` (`activejob/lib/active_job/queue_adapters/async_adapter.rb:89`)                                                    | not ported; see Non-goals                                                                                              |
+| Rails spawn site     | Rails source                                                                                                                                        | trails site                                                                                                            |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Async query executor | `@async_executor.post { future_result.execute_or_skip }` (`connection_pool.rb:697`); pool built at `connection_pool.rb:718`, `active_record.rb:288` | `ConnectionPool#scheduleQuery` (`connection-pool.ts:906`) → `AsyncExecutor#post` (`ar-config.ts:49`, `queueMicrotask`) |
+| Reaper               | `Thread.new(frequency)` (`connection_pool/reaper.rb:41`)                                                                                            | `Reaper._spawnTimer`'s `setInterval` callback (`connection-pool/reaper.ts:57`)                                         |
+| Request              | the server's per-request thread, whose work starts at `ActionDispatch::Executor#call`'s `@executor.run!` (`middleware/executor.rb:13-14`)           | `actionpack/src/action-dispatch/middleware/executor.ts` `call`                                                         |
+
+The ActiveJob async adapter's `Concurrent::ThreadPoolExecutor`
+(`activejob/lib/active_job/queue_adapters/async_adapter.rb:89`) is a fourth
+Rails spawn site. It is not ported, so Phase 1 does not wrap it; see Non-goals.
+
+**The reaper is one thread per frequency, not one per sweep.** `spawn_thread`
+runs once per frequency (`reaper.rb:31-32`), and that thread loops over
+`sleep t` for its whole life (`reaper.rb:41-47`). So the reaper's context is
+minted once, when `_spawnTimer` creates the timer, and every sweep of that timer
+runs in it. Two timers with different frequencies get distinct contexts.
+`withExecutionContext` cannot be used as-is here: it runs its exit hooks as
+soon as a synchronous `fn` returns, which is right after `setInterval` is
+scheduled, while the timer keeps running in the context. The context has to
+stay live until the timer is cleared, when the Rails thread's loop exits
+(`reaper.rb:60-63`). `spawn-sites-mint-execution-context` settles how, without
+adding API surface Rails does not have.
 
 Unscoped top-level code keeps sharing `ROOT_CONTEXT`. That is Rails' main
 thread, and sharing it is Rails behaviour.
@@ -92,6 +106,40 @@ sequentially too (`for … of` with `await`). Where Rails really does run
 concurrently, it does so on separate threads, and the TS members each get a
 `withExecutionContext`. This is ordinary fidelity convergence; it is also what
 makes §3 safe.
+
+**Measured size** (trails main `5ee8f3512`): there are 34 non-test
+`Promise.all` / `Promise.allSettled` call sites in `packages/activerecord/src`.
+
+- **19 call sites in 12 files are in scope.** These are fan-outs whose members
+  issue work through one connection or lease. The story for each group confirms
+  every site against its Rails body before converting it.
+  - _Adapter, schema and statement cache (15 sites, 9 files):_
+    - `postgresql/schema-statements.ts:138,866,1106`
+    - `mysql/schema-statements.ts:136`
+    - `abstract-mysql-adapter.ts:751` (awaits `isMariadb()` and
+      `createTableInfo()` per row)
+    - `abstract/schema-creation.ts:181,182,185,188`
+    - `postgresql/schema-creation.ts:60,67`
+    - `abstract/database-statements.ts:1229`
+    - `model-schema.ts:374` (awaits `connection.returnValueAfterInsert` per
+      column)
+    - `statement-pool.ts:32,54`, which awaits concurrent deallocations on one
+      connection
+  - _Associations and preloading (4 sites, 3 files):_
+    - `associations/collection-association.ts:452`
+    - `associations/preloader/through-association.ts:209,216`
+    - `relation/query-methods.ts:305`
+- **11 are out of scope: pool-lifecycle drains.** Each member is a different
+  connection or pool, so no lease is shared:
+  - `abstract/connection-handler.ts:215,223,231`
+  - `pool-config.ts:143,159,173`
+  - `abstract/connection-pool.ts:657,688,716,764,815`
+- **4 are out of scope: test infrastructure.**
+  - `support/ddl-profile.ts:173`
+  - `support/template-global-setup.ts:255,299`
+  - `test-fixtures/with-transactional-fixtures.ts:178`
+
+Phase 2 is therefore two stories, one per in-scope group.
 
 ### 3. Delete the guards that stood in for thread identity
 
@@ -146,10 +194,12 @@ behaviour Rails does not have.
 ## Rollout
 
 1. Phase 1 (Design §1): `spawn-sites-mint-execution-context`.
-2. Phase 2 (Design §2): `internal-fan-out-follows-rails-sequencing`. It can run
-   in parallel with Phase 1.
+2. Phase 2 (Design §2): `adapter-fan-out-follows-rails-sequencing` and
+   `association-fan-out-follows-rails-sequencing`. Both can run in parallel
+   with Phase 1.
 3. Phase 3 (Design §3): `with-connection-drops-lease-fork-and-sibling-checkin`,
-   which depends on both.
+   which depends on
+   all three Phase 1 and Phase 2 stories.
 4. Phase 4 (Design §4): re-measure the 0123 stories; rehome the ones that
    unblock.
 
@@ -163,10 +213,14 @@ from the closed 0146 and closed as superseded by them.
   0 today), and a test shows two concurrent requests through
   `ActionDispatch::Executor` getting distinct `Lease` objects from
   `leaseConnection()`, with no opt-in at the call site. The same holds for two
-  `scheduleQuery` tasks.
-- **Phase 2:** no non-test `Promise.all` over a single connection's queries
-  remains where the Rails body is sequential. Each audited site is listed in
-  the story's PR.
+  `scheduleQuery` tasks. For the reaper, where the Rails shape is one thread
+  per frequency rather than per-call concurrency, a test shows that two sweeps
+  of one timer see the same context id, that the id is not `ROOT_CONTEXT`'s
+  `0`, and that timers with two different frequencies see distinct ids.
+- **Phase 2:** 0 of the 19 in-scope sites listed in Design §2 still fan out
+  where the Rails body is sequential. Each story's PR lists every site with
+  its Rails `file:line` and whether it was converted or found to be concurrent
+  in Rails too.
 - **Phase 3:** `withLeaseContext` has 0 definitions and the sibling-checkin arm
   is gone.
 - **Phase 4:** the 0146 Phase 1 patch (`NullLock` default) goes green on both
@@ -185,3 +239,6 @@ from the closed 0146 and closed as superseded by them.
 ## Changelog
 
 - 2026-09-11: initial RFC
+- 2026-09-11: review follow-up: reaper verification criterion and its
+  one-context-per-timer shape; ActiveJob moved out of the ported-sites table;
+  Phase 2 sized (19 in-scope sites of 34) and split into two stories
