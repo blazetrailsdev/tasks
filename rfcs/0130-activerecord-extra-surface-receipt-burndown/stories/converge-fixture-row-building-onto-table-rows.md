@@ -1,6 +1,6 @@
 ---
 title: "converge-fixture-row-building-onto-table-rows"
-status: claimed
+status: in-progress
 updated: 2026-09-11
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
+pr: trails#7723
 claim: "2026-09-11T20:21:38Z"
 assignee: "converge-ar-config-module-seats-onto-their-rails-files"
 blocked-by: null
