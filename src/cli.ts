@@ -39,6 +39,7 @@ import {
 } from "./verbs.js";
 import { newStory } from "./authoring.js";
 import { rehome } from "./rehome.js";
+import { rfcStatusSet } from "./rfc-status.js";
 import { normalizePrRef, PR_REF_USAGE } from "./pr-ref.js";
 import type { StoryStatus } from "./models/index.js";
 
@@ -68,6 +69,7 @@ Mutate:
   status-set <id> <status>
   priority <id> <n|clear>
   rehome <id...> --to <rfc> [--reason R] [--no-commit]
+  rfc-status <rfc> <draft|active|postponed|closed> [--reason R] [--no-commit]
 
 Sync:
   ingest                           git -> DB (markdown-owned fields)
@@ -389,6 +391,16 @@ async function main(): Promise<number> {
       const ids = [...new Set(pos)];
       if (!to || ids.length === 0) return usage();
       await rehome(ids, to, {
+        reason: str(flags, "reason"),
+        commit: flags["no-commit"] !== true,
+      });
+      break;
+    }
+    // An RFC's status is markdown-owned, so this rewrites frontmatter and
+    // commits rather than touching the row (see rfc-status.ts).
+    case "rfc-status": {
+      if (pos.length < 2) return usage();
+      await rfcStatusSet(pos[0], pos[1], {
         reason: str(flags, "reason"),
         commit: flags["no-commit"] !== true,
       });
