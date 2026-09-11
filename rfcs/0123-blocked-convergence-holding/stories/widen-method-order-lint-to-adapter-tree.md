@@ -2,7 +2,7 @@
 title: "Widen rails-file-structure-method-order to the connection-adapter tree"
 status: blocked
 updated: 2026-08-31
-rfc: "0119-connection-adapter-fidelity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
