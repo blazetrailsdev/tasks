@@ -1,6 +1,6 @@
 ---
 title: "withConnection drops the lease fork and sibling-checkin arm"
-status: ready
+status: in-progress
 updated: 2026-09-11
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7707
+claim: "2026-09-11T17:48:48Z"
+assignee: "with-connection-drops-lease-fork-and-sibling-checkin"
 blocked-by: null
 closed-reason: null
 ---

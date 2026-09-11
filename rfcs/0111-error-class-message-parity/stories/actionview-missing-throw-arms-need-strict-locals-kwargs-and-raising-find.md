@@ -1,6 +1,6 @@
 ---
 title: "actionview-missing-throw-arms-need-strict-locals-kwargs-and-raising-find"
-status: claimed
+status: done
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 54
-pr: null
+pr: trails#7706
 claim: "2026-09-11T15:28:07Z"
 assignee: "inline-store-nested-param-and-port-custom-param-encoder"
 blocked-by: null
