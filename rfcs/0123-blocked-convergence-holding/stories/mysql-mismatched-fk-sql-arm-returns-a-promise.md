@@ -2,7 +2,7 @@
 title: "mismatchedForeignKey's sql-present arm returns a Promise where abstract_mysql_adapter.rb merges details synchronously"
 status: blocked
 updated: 2026-09-11
-rfc: "0119-connection-adapter-fidelity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
