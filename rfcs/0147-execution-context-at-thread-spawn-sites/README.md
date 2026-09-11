@@ -198,14 +198,13 @@ behaviour Rails does not have.
    `association-fan-out-follows-rails-sequencing`. Both can run in parallel
    with Phase 1.
 3. Phase 3 (Design §3): `with-connection-drops-lease-fork-and-sibling-checkin`,
-   which depends on
-   all three Phase 1 and Phase 2 stories.
-4. Phase 4 (Design §4): re-measure the 0123 stories; rehome the ones that
-   unblock.
+   which depends on all three Phase 1 and Phase 2 stories.
+4. Phase 4 (Design §4): `remeasure-0123-leasing-stories-after-0147`, which
+   depends on Phase 3.
 
-These stories are filed with `tasks new` once this RFC has its number.
-`blockless-lease-connection-must-not-share-the-root-lease` is then rehomed here
-from the closed 0146 and closed as superseded by them.
+`blockless-lease-connection-must-not-share-the-root-lease` lives here as the
+record of why the call-site approach was abandoned. It is closed as superseded
+by the Phase 1–3 stories.
 
 ## Verification
 
