@@ -6,7 +6,11 @@ rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
   - activerecord
-deps: ["credit-define-model-callbacks-in-the-ruby-extractor"]
+deps:
+  [
+    "credit-define-model-callbacks-in-the-ruby-extractor",
+    "refresh-stale-phase-inventories-before-claim",
+  ]
 deps-rfc: []
 est-loc: 450
 priority: 3

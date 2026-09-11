@@ -6,7 +6,7 @@ rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
   - activerecord
-deps: []
+deps: ["refresh-stale-phase-inventories-before-claim"]
 deps-rfc: []
 est-loc: 200
 priority: 3
