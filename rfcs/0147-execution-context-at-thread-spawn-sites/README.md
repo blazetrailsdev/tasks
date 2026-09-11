@@ -1,5 +1,5 @@
 ---
-rfc: "0000-execution-context-at-thread-spawn-sites"
+rfc: "0147-execution-context-at-thread-spawn-sites"
 title: "Mint an execution context where Rails spawns a thread"
 status: active
 created: 2026-09-11
@@ -12,7 +12,7 @@ clusters: []
 priority: 2
 ---
 
-# RFC — Mint an execution context where Rails spawns a thread
+# RFC 0147 — Mint an execution context where Rails spawns a thread
 
 ## Summary
 
