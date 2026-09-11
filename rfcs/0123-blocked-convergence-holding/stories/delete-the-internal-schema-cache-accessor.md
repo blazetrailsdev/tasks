@@ -2,7 +2,7 @@
 title: "Delete AbstractAdapter#internalSchemaCache once its last sync reader goes"
 status: blocked
 updated: 2026-09-05
-rfc: "0119-connection-adapter-fidelity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: ["retire-schema-cache-sync-readers-after-checkout-flip"]
