@@ -2,7 +2,7 @@
 title: "dbconsole's argv/env has no consumer: port dbconsole_command.rb and the real PATH scan"
 status: blocked
 updated: 2026-09-01
-rfc: "0119-connection-adapter-fidelity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
