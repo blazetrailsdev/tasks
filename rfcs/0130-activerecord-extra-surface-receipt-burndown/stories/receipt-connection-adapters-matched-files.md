@@ -5,7 +5,7 @@ updated: 2026-09-05
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
-deps: []
+deps: ["refresh-stale-phase-inventories-before-claim"]
 deps-rfc: []
 est-loc: null
 priority: null
