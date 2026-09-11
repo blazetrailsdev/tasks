@@ -91,4 +91,20 @@ describe("rehome", () => {
     });
     expect(existsSync(join(dir, storyPath("0001-from", "s1")))).toBe(true);
   });
+
+  it("closes the source RFC when the move leaves only terminal stories behind", async () => {
+    const rel = storyPath("0001-from", "s2");
+    writeFileSync(
+      join(dir, rel),
+      buildStoryContent("0001-from", "s2", { date: "2026-09-02", status: "done" }),
+    );
+    git(["add", "-A"]);
+    git(["commit", "-q", "-m", "s2"]);
+    await Story.create({ id: "s2", rfc_id: "0001-from", status: "done", file_path: rel });
+
+    await rehome(["s1"], "0123-holding");
+
+    expect((await Rfc.findBy({ id: "0001-from" }))?.status).toBe("closed");
+    expect((await Rfc.findBy({ id: "0123-holding" }))?.status).toBe("active");
+  });
 });

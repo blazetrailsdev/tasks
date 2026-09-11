@@ -28,6 +28,7 @@ import { VerbExit } from "./db.js";
 import { editFrontmatter } from "./frontmatter.js";
 import { pushMain } from "./export.js";
 import { ingest } from "./ingest.js";
+import { closeRfcIfComplete } from "./rfc-close.js";
 
 export interface RehomeResult {
   moved: { id: string; from: string; to: string }[];
@@ -80,6 +81,7 @@ export async function rehome(
     execFileSync("git", args, { cwd: tasksDir, encoding: "utf8" }).trim();
 
   const planned: { id: string; from: string; to: string }[] = [];
+  const sources: string[] = [];
   for (const id of ids) {
     const s = await Story.findBy({ id });
     if (!s) {
@@ -101,6 +103,7 @@ export async function rehome(
       throw new VerbExit(1);
     }
     planned.push({ id, from, to });
+    sources.push(s.rfc_id);
   }
   if (planned.length === 0) return { moved: [], committed: false };
 
@@ -124,6 +127,12 @@ export async function rehome(
     // Project the move into the DB the same way a merged PR would. Ingest
     // reads git, so it has to run AFTER the commit.
     await ingest();
+    // Rehoming the last open story out of an RFC finishes it just as landing
+    // one would, but the auto-close hangs off a story save that turns
+    // TERMINAL, and a moved story usually isn't — so without this the source
+    // RFC sits `active` with nothing left in it forever (0119 did, with all
+    // 313 stories done or closed). Check each RFC we emptied.
+    for (const from of new Set(sources)) await closeRfcIfComplete(from);
   }
 
   return { moved: planned, committed };
