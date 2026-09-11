@@ -22,12 +22,14 @@ Sibling of `receipt-connection-adapters-and-sqlite-drivers`, which the story
 itself authorises ("May be split into two PRs (matched files / no-counterpart
 files) if it exceeds the LOC ceiling — file them as siblings"). That story's PR
 took the files with NO Rails counterpart plus `adapters/` and `sqlite/`; this one
-takes the ~54 novel names left in connection-adapters files that DO map onto a
+takes the novel names left in connection-adapters files that DO map onto a
 `.rb`, where a file-level blanket is refused by `fileTagVerdict` and each name is
 read against its counterpart.
 
-Measured 2026-09-05 with `pnpm parity:api:extra --package activerecord
---novel-only` (before the sibling PR):
+Re-measured 2026-09-11 with `pnpm parity:api:extra --package activerecord
+--novel-only`: **44 novel across 25 files** (the 2026-09-05 census said ~54);
+the rows below still match per file. They are a snapshot, not a target —
+re-measure at claim time.
 
 | Names  | TS file                                                                                                                                                                                                                                                                          | Rails counterpart                                                                                                                                                                                                                                                                       |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -54,7 +56,7 @@ receipt here.
   the PR body.
 - No file-level `@noRailsEquivalent` — every file here has a counterpart and
   `fileTagVerdict` refuses the blanket.
-- `pnpm parity:api:extra --package activerecord --novel-only` shows these files
-  at 0 novel; the mark is tightened in the same PR.
+- `pnpm parity:api:extra --package activerecord --novel-only` shows
+  `connection-adapters/` at 0 novel; the mark is tightened in the same PR.
 - `pnpm parity:api:calls` / `:args` show no new rows; the three AR adapter lanes
   stay green.

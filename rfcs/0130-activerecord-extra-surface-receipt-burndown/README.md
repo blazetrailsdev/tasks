@@ -86,7 +86,10 @@ story must say which way each name went — the burndown is not "add 342 tags".
 
 ### Shape of the work
 
-By top-level directory, the 342 fall out as:
+By top-level directory, the 342 fall out as follows. These are the 2026-08-30
+census — a snapshot, not a target; sibling PRs move them, so each phase story
+re-measures at claim time and gates on its area reaching 0 novel (re-measured
+2026-09-11: 140 remaining, 96 outside `connection-adapters/`, 44 inside).
 
 | Names | Area                                                                        |
 | ----- | --------------------------------------------------------------------------- |
