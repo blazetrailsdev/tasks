@@ -1,6 +1,6 @@
 ---
 title: "as-any casts in front of association writer() hide the promise from no-floating-promises"
-status: ready
+status: in-progress
 updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: null
-claim: null
-assignee: null
+pr: trails#7685
+claim: "2026-09-11T01:02:41Z"
+assignee: "delete-deprecated-base-adapter-getter"
 blocked-by: null
 closed-reason: null
 ---

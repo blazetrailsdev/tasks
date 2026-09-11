@@ -1,6 +1,6 @@
 ---
 title: "Raise what Rails raises: the 9 missing-throw arms in actiondispatch"
-status: claimed
+status: in-progress
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: trails#7684
 claim: "2026-09-11T00:43:14Z"
 assignee: "burn-the-missing-throw-arms-in-actiondispatch"
 blocked-by: null
