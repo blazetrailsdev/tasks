@@ -284,7 +284,11 @@ async function main(): Promise<number> {
         packages: csv("packages"),
         commit: flags["no-commit"] !== true,
       });
-      console.log(`created ${r.path}${r.committed ? " (committed)" : " (uncommitted)"}`);
+      console.log(
+        r.committed
+          ? `created ${r.path} (committed)`
+          : `dry run: ${r.path} not written (--no-commit)`,
+      );
 
       // The file and its commit are the DURABLE artifact; the index refresh is
       // derived and can be redone at any time. So a failing or slow ingest must
