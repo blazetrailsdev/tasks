@@ -2,7 +2,7 @@
 title: "mysql2-internal-execute-and-exec-query-overrides-rails-lacks"
 status: blocked
 updated: 2026-09-10
-rfc: "0145-async-on-demand-adapter-lookups"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
