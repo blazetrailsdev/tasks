@@ -1,14 +1,14 @@
 ---
 title: "type_for_column is one TS method where Rails has an override and a super, and the super seat is a dead stub with the invented guard"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 58
 pr: null
 claim: null
 assignee: null

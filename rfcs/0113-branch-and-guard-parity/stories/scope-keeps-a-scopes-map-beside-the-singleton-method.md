@@ -1,7 +1,7 @@
 ---
 title: "scope keeps a _scopes Map beside the singleton method Rails defines"
-status: ready
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 53
-pr: null
-claim: null
-assignee: null
+pr: trails#7718
+claim: "2026-09-11T19:24:57Z"
+assignee: "scope-keeps-a-scopes-map-beside-the-singleton-method"
 blocked-by: null
 closed-reason: null
 ---

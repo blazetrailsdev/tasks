@@ -1,6 +1,6 @@
 ---
 title: "Drop the deferred-distinct-PK prelude from Relation#update_all / #delete_all"
-status: draft
+status: ready
 updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 59
 pr: null
 claim: null
 assignee: null

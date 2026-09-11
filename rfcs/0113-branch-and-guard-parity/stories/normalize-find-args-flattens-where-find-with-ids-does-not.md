@@ -1,7 +1,7 @@
 ---
 title: "normalizeFindArgs recursively flattens simple-PK ids where Rails' find_with_ids does not"
-status: draft
-updated: 2026-09-10
+status: closed
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#7698 (7a67902db, converge find_with_ids onto the Rails raises): normalizeFindArgs no longer exists on origin/main (git grep normalizeFindArgs packages/activerecord/src → no hits), and findWithIds (finder-methods.ts:489-507) mirrors finder_methods.rb:492-502 — expectsArray, one-level ids[0] unwrap, compactUniqTuples, no flat(Infinity)."
 ---
 
 ## Context

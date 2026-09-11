@@ -1,6 +1,6 @@
 ---
 title: "Fallback AsyncContextAdapter shares one store across overlapping async scopes"
-status: draft
+status: done
 updated: 2026-09-11
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7716
+claim: "2026-09-11T19:06:58Z"
+assignee: "fallback-async-context-adapter-shares-one-store-across-overlapping-scopes"
 blocked-by: null
 closed-reason: null
 ---

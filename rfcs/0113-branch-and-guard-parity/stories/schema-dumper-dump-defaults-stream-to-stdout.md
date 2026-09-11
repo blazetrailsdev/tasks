@@ -1,6 +1,6 @@
 ---
 title: "SchemaDumper.dump defaults its stream to a StringIO where Rails defaults to $stdout"
-status: draft
+status: ready
 updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 66
 pr: null
 claim: null
 assignee: null

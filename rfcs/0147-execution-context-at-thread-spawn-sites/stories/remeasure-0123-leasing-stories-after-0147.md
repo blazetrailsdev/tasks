@@ -1,6 +1,6 @@
 ---
 title: "Re-measure the six 0146 leasing stories parked in 0123 after RFC 0147 Phase 3"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null

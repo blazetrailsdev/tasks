@@ -1,17 +1,17 @@
 ---
 title: "lstatSync is optional on the fs backend, collapsing Entry_#lstat's dereference? arms"
-status: draft
-updated: 2026-09-06
+status: in-progress
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 54
+pr: trails#7718
+claim: "2026-09-11T19:24:57Z"
+assignee: "scope-keeps-a-scopes-map-beside-the-singleton-method"
 blocked-by: null
 closed-reason: null
 ---

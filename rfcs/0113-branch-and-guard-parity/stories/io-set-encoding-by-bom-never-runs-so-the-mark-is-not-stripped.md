@@ -1,14 +1,14 @@
 ---
 title: "FMODE_SETENC_BY_BOM is set but io_set_encoding_by_bom never runs"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 64
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "uniqueness-build-relation-uses-where-bang"
-status: claimed
+status: in-progress
 updated: 2026-09-11
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: trails#7715
 claim: "2026-09-11T18:50:22Z"
 assignee: "converge-loader-query-eql-and-hash-onto-rails"
 blocked-by: null

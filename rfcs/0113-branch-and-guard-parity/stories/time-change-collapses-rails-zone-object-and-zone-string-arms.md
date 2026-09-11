@@ -1,14 +1,14 @@
 ---
 title: "Time#change collapses Rails' zone-object and zone-string arms because Time has one zone slot"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 70
 pr: null
 claim: null
 assignee: null

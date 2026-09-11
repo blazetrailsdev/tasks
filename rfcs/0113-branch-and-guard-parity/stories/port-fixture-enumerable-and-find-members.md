@@ -1,14 +1,14 @@
 ---
 title: "port-fixture-enumerable-and-find-members"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 68
 pr: null
 claim: null
 assignee: null

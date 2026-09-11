@@ -1,6 +1,6 @@
 ---
 title: "converge-postgresql-prepare-statement-missing-throw-arm"
-status: draft
+status: in-progress
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7717
+claim: "2026-09-11T19:10:29Z"
+assignee: "converge-postgresql-prepare-statement-missing-throw-arm"
 blocked-by: null
 closed-reason: null
 ---

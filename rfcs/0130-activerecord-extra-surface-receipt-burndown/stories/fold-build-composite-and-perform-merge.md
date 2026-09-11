@@ -1,6 +1,6 @@
 ---
 title: "fold-build-composite-and-perform-merge"
-status: claimed
+status: ready
 updated: 2026-09-11
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 4
 pr: null
-claim: "2026-09-11T18:50:22Z"
-assignee: "converge-loader-query-eql-and-hash-onto-rails"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

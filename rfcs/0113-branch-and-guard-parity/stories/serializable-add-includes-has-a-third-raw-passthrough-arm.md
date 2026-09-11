@@ -1,14 +1,14 @@
 ---
 title: "serializable_add_includes' consumer has a third raw-passthrough arm Rails does not"
-status: draft
-updated: 2026-09-06
+status: ready
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 57
 pr: null
 claim: null
 assignee: null

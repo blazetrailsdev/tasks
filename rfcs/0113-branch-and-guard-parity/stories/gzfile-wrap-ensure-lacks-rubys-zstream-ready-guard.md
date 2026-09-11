@@ -1,14 +1,14 @@
 ---
 title: "gzfile_wrap's ensure closes unconditionally, where Ruby guards on ZSTREAM_IS_READY"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 65
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "Port PredicateBuilder#build's operator arm and forward it from #[]"
-status: draft
+status: ready
 updated: 2026-09-11
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 60
 pr: null
 claim: null
 assignee: null
