@@ -12,15 +12,18 @@
  * could disagree with the first.
  */
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { Rfc } from "./models/index.js";
-import { currentBranch, mainWorktree } from "./db-path.js";
+import { resolveTasksDir } from "./db-path.js";
 import { VerbExit } from "./db.js";
 import { pushMain } from "./export.js";
 import type { StoryStatus } from "./models/index.js";
 
 /** Escape for a YAML double-quoted scalar: backslash first, then quote. */
+const MARKDOWNLINT = join(import.meta.dirname, "..", "node_modules", ".bin", "markdownlint-cli2");
+
 const qs = (s: string): string => `"${s.replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
 
 export interface NewStoryOpts {
@@ -93,7 +96,9 @@ export interface NewStoryResult {
  */
 export function assertMarkdownlintClean(abs: string, rel: string, cwd: string): void {
   try {
-    execFileSync("node_modules/.bin/markdownlint-cli2", [abs], { cwd, encoding: "utf8" });
+    // The binary comes from this CLI's own install, not `cwd`: a scratch
+    // worktree has the repo's lint config but no node_modules.
+    execFileSync(MARKDOWNLINT, [abs], { cwd, encoding: "utf8" });
   } catch (e) {
     rmSync(abs);
     const out = [(e as { stdout?: string }).stdout, (e as { stderr?: string }).stderr]
@@ -117,26 +122,6 @@ export async function newStory(
   storySlug: string,
   opts: Partial<Omit<NewStoryOpts, "date">> & { commit?: boolean } = {},
 ): Promise<NewStoryResult> {
-  // Author into the MAIN working tree, never the caller's worktree.
-  //
-  // Workers run `tasks new` from a trails worktree to file findings after their
-  // PR merges (the post-merge-findings flow). Committing that into the worktree
-  // puts the story on a feature branch that has ALREADY merged and never will
-  // again — the finding is stranded, and ingest either misses it or, worse,
-  // publishes an unmerged row into the shared DB.
-  //
-  // The old CLI avoided this by refusing to run outside main. Same intent here,
-  // achieved by writing where the story actually belongs.
-  const tasksDir = mainWorktree();
-  const branch = currentBranch(tasksDir);
-  if (branch !== "main") {
-    console.error(
-      `error: ${tasksDir} is on ${branch ?? "a detached HEAD"}, not main — refusing to author.\n` +
-        `  New stories must land on main or they are stranded on a dead branch.`,
-    );
-    throw new VerbExit(1);
-  }
-
   const rfc = await Rfc.findBy({ id: rfcSlug });
   if (!rfc) {
     console.error(`error: no such RFC "${rfcSlug}"`);
@@ -169,37 +154,81 @@ export async function newStory(
   }
 
   const rel = join("rfcs", rfcSlug, "stories", `${storySlug}.md`);
-  const abs = join(tasksDir, rel);
-  if (existsSync(abs)) {
-    console.error(`error: ${rel} already exists`);
-    throw new VerbExit(1);
-  }
+  const content = buildStoryContent(rfcSlug, storySlug, {
+    ...opts,
+    status,
+    date: new Date().toISOString().slice(0, 10),
+  });
 
-  mkdirSync(dirname(abs), { recursive: true });
-  writeFileSync(
-    abs,
-    buildStoryContent(rfcSlug, storySlug, {
-      ...opts,
-      status,
-      date: new Date().toISOString().slice(0, 10),
-    }),
-  );
+  // Author against origin/main in a throwaway worktree, never the caller's
+  // worktree and never the main checkout's.
+  //
+  // Workers run `tasks new` from a feature worktree to file findings after
+  // their PR merges. Committing there strands the story on a branch that has
+  // already merged. The fix used to be "write into the main checkout, and
+  // refuse unless it is on main" — but the main checkout is just another
+  // working tree, and whenever someone had it on a branch every agent's
+  // `tasks new` failed, and they fell back to hand-authoring story files.
+  // A detached scratch worktree at origin/main needs nobody's checkout.
+  return withMainScratch((dir) => {
+    const abs = join(dir, rel);
+    if (existsSync(abs)) {
+      console.error(`error: ${rel} already exists`);
+      throw new VerbExit(1);
+    }
+    mkdirSync(dirname(abs), { recursive: true });
+    writeFileSync(abs, content);
+    assertMarkdownlintClean(abs, rel, dir);
 
-  assertMarkdownlintClean(abs, rel, tasksDir);
-
-  let committed = false;
-  if (opts.commit !== false) {
+    if (opts.commit === false) {
+      // Nothing to land; hand back a copy the caller can inspect, since the
+      // scratch tree is about to be removed.
+      console.log(content);
+      return { path: rel, committed: false };
+    }
     const git = (args: string[]): string =>
-      execFileSync("git", args, { cwd: tasksDir, encoding: "utf8" }).trim();
-    // Stage only this file — never `git add -A`, which would sweep up an
-    // agent's in-flight edits sitting in the same worktree.
+      execFileSync("git", args, { cwd: dir, encoding: "utf8" }).trim();
     git(["add", "--", rel]);
     git(["commit", "-q", "-m", `new: ${rfcSlug}/${storySlug}`]);
-    // Push, or the story exists only on this host: invisible on github.com, and
-    // the local/origin drift eventually orphans the ingest watermark.
+    // Push, or the story exists only in a worktree that is about to vanish.
     pushMain(git, "tasks new");
-    committed = true;
-  }
+    return { path: rel, committed: true };
+  });
+}
 
-  return { path: rel, committed };
+/**
+ * Run `fn` in a temporary detached worktree of the tasks clone at origin/main,
+ * then remove it. Its commits survive as long as `fn` pushed them.
+ */
+export function withMainScratch<T>(fn: (dir: string) => T): T {
+  const repo = resolveTasksDir();
+  const git = (args: string[]): string =>
+    execFileSync("git", args, { cwd: repo, encoding: "utf8" }).trim();
+  try {
+    git(["fetch", "--quiet", "origin", "main"]);
+  } catch (e) {
+    console.error(`warning: could not fetch origin/main: ${(e as Error).message}`);
+  }
+  const base = hasRef(git, "origin/main") ? "origin/main" : "main";
+  const dir = mkdtempSync(join(tmpdir(), "tasks-new-"));
+  git(["worktree", "add", "--quiet", "--detach", dir, base]);
+  try {
+    return fn(dir);
+  } finally {
+    try {
+      git(["worktree", "remove", "--force", dir]);
+    } catch {
+      rmSync(dir, { recursive: true, force: true });
+      git(["worktree", "prune"]);
+    }
+  }
+}
+
+function hasRef(git: (args: string[]) => string, ref: string): boolean {
+  try {
+    git(["rev-parse", "--verify", "--quiet", ref]);
+    return true;
+  } catch {
+    return false;
+  }
 }

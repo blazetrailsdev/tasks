@@ -216,6 +216,19 @@ export async function ingest(opts: { tasksDir?: string; to?: string } = {}): Pro
   // and that branch is main. Ingesting from a feature-branch worktree publishes
   // unmerged stories to every agent on the host — see mainWorktree().
   const tasksDir = opts.tasksDir ?? mainWorktree();
+  // Refuse rather than mirror a branch. A detached or non-main main-worktree is
+  // a transient state (a bisect, a rebase); ingesting it would write branch
+  // content the next ingest cannot tell apart from merged content. Checked
+  // BEFORE syncMain, which would otherwise pull origin/main into that branch.
+  const branch = currentBranch(tasksDir);
+  if (branch !== "main") {
+    console.error(
+      `error: ${tasksDir} is on ${branch ?? "a detached HEAD"}, not main — refusing to ingest.\n` +
+        `  The database mirrors main. Ingesting another branch would publish unmerged\n` +
+        `  stories to every agent sharing this checkout.`,
+    );
+    throw new VerbExit(1);
+  }
   if (!opts.to) syncMain(tasksDir);
   const to = opts.to ?? headSha(tasksDir);
 
@@ -243,19 +256,6 @@ export async function ingest(opts: { tasksDir?: string; to?: string } = {}): Pro
   };
 
   if (from === to) return result;
-
-  // Refuse rather than mirror a branch. A detached or non-main main-worktree is
-  // a transient state (a bisect, a rebase); ingesting it would write branch
-  // content the next ingest cannot tell apart from merged content.
-  const branch = currentBranch(tasksDir);
-  if (branch !== "main") {
-    console.error(
-      `error: ${tasksDir} is on ${branch ?? "a detached HEAD"}, not main — refusing to ingest.\n` +
-        `  The database mirrors main. Ingesting another branch would publish unmerged\n` +
-        `  stories to every agent sharing this checkout.`,
-    );
-    throw new VerbExit(1);
-  }
 
   const paths = changedPaths(tasksDir, from, to);
   result.scanned = paths.length;
