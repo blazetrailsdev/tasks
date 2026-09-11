@@ -65,8 +65,12 @@ development.
 
 ## Acceptance criteria
 
-- [ ] `Handler.Node#service` runs its whole body inside one
-      `IsolatedExecutionState.run`, so each request gets its own context.
+- [ ] `Handler.Node#service` runs its whole body inside one ruby-compat
+      `new Thread(...)`, so each request gets its own context. rack may not
+      import activesupport (RFC 0135, `scripts/rack-activesupport-free.ts`), so
+      the mint cannot be `IsolatedExecutionState.run`; instead
+      `IsolatedExecutionState` keys its state on `Thread.current`, as
+      `isolated_execution_state.rb:55-69` does.
 - [ ] `executor.ts` has no `IsolatedExecutionState` reference and its body
       mirrors `executor.rb:13-34`, including the bare
       `new BodyProxy(body, () => state.completeBang())` with no re-scope.
@@ -77,9 +81,10 @@ development.
       `Handler.Node.run` server and a `handler.service` call of the kind the
       Vite plugin makes.
 - [ ] The body-close `completeBang` runs in the request's own state.
-- [ ] The mint in `node.ts` carries a `@noRailsEquivalent PERMANENT` receipt
-      naming the Puma analogue and citing RFC 0147 Design §1 — as a multi-line
-      JSDoc, since a one-line JSDoc does not register the tag.
+- [ ] The mint in `node.ts` carries a `@noRailsEquivalent PERMANENT` receipt.
+      `no-freeform-comments` strips prose and autofixes it to a tag-only
+      one-liner, which does register: `service` is absent from
+      `pnpm parity:api:extra --package rack`'s `handler/node.ts` names.
 - [ ] `pnpm parity:api:extra --package rack` reports no new novel name, and
       `pnpm parity:api:calls` stays green.
 - [ ] The `executor-seam.trails.test.ts` caller-side assertion is restored if
