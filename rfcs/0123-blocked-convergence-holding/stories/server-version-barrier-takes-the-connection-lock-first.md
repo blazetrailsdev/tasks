@@ -2,7 +2,7 @@
 title: "the server_version barrier acquires the connection lock first, which Rails does not"
 status: blocked
 updated: 2026-09-10
-rfc: "0146-exclusive-connection-leasing"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
