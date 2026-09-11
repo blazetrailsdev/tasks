@@ -2,7 +2,7 @@
 title: "converge-sync-connection-lease-per-checkout-verify"
 status: blocked
 updated: 2026-08-26
-rfc: "0146-exclusive-connection-leasing"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 deps: []
 deps-rfc: []
