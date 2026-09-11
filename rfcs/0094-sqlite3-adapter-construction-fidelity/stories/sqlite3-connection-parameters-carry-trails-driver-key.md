@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 _connectionParameters carries a driver key Rails' merge does not produce"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Raise what Rails raises: the 19 missing-throw arms in activerecord's adapter tree"
-status: ready
+status: claimed
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-11T11:52:14Z"
+assignee: "burn-the-missing-throw-arms-in-the-activerecord-adapter-tree"
 blocked-by: null
 closed-reason: null
 ---

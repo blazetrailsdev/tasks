@@ -1,6 +1,6 @@
 ---
 title: "Raise what Rails raises: the 5 missing-throw arms in rack, trailties and the test-support leaves"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0111-error-class-message-parity"
 cluster: bare-error-throws

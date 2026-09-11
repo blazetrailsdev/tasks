@@ -1,6 +1,6 @@
 ---
 title: "mismatchedForeignKey's sql-present arm returns a Promise where abstract_mysql_adapter.rb merges details synchronously"
-status: claimed
+status: blocked
 updated: 2026-09-11
 rfc: "0119-connection-adapter-fidelity"
 cluster: null
@@ -12,7 +12,7 @@ priority: 50
 pr: null
 claim: "2026-09-11T02:25:50Z"
 assignee: "mysql-mismatched-fk-sql-arm-returns-a-promise"
-blocked-by: null
+blocked-by: "a sync PK-column read would regress the reachable queryParser arm (real columns() lookup) and add a consumer to getCachedColumnsHash (retire-schema-cache-sync-readers-after-checkout-flip); Rails column_for is uncached. Needs the awaitable exception-translation path (RFC 0076)."
 closed-reason: null
 ---
 

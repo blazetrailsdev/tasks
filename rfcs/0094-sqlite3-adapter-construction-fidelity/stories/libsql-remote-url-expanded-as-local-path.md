@@ -1,6 +1,6 @@
 ---
 title: "libsql-remote: a remote database URL is expanded and mkdir'd as a local path"
-status: in-progress
+status: done
 updated: 2026-09-11
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
