@@ -12,7 +12,7 @@
  * could disagree with the first.
  */
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { Rfc } from "./models/index.js";
@@ -212,6 +212,10 @@ export function withMainScratch<T>(fn: (dir: string) => T): T {
   const base = hasRef(git, "origin/main") ? "origin/main" : "main";
   const dir = mkdtempSync(join(tmpdir(), "tasks-new-"));
   git(["worktree", "add", "--quiet", "--detach", dir, base]);
+  // The tracked pre-commit hook fails closed without node_modules/.bin/lint-staged,
+  // and a fresh worktree has none — so every `tasks new` commit was refused.
+  const modules = join(repo, "node_modules");
+  if (existsSync(modules)) symlinkSync(modules, join(dir, "node_modules"), "dir");
   try {
     return fn(dir);
   } finally {
