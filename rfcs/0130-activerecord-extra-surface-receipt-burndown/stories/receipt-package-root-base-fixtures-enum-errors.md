@@ -23,8 +23,13 @@ closed-reason: null
 
 ## Context
 
-**126 novel names across 50 files** at the package root — the long tail, and the
-last area before enrollment. Depends on
+**96 novel names across 43 files** outside `connection-adapters/` — the long
+tail, and the last area before enrollment. Re-measured 2026-09-11 with
+`pnpm parity:api:extra --package activerecord --novel-only` (package total 140:
+these 96, plus 44 in `connection-adapters/`, owned by
+`receipt-connection-adapters-matched-files`); the 2026-08-30 census said 126
+across 50. The per-file figures below are that 2026-09-11 snapshot, not a
+target — re-measure at claim time. Depends on
 `credit-define-model-callbacks-in-the-ruby-extractor`, which removes 16 of them
 from `base.ts` and its neighbours without a tag being written.
 
@@ -64,6 +69,7 @@ and file the split as a story rather than fanning out unfiled.
   definition, rather than carrying receipts for them.
 - No novel error class survives in `errors.ts` without a Rails counterpart or a
   `CONVERGEABLE` receipt naming the story that will remove it.
-- `pnpm parity:api:extra --package activerecord --novel-only` reports
-  `totalNovel: 0` for the whole package; the mark is tightened in the same PR
-  and now reads `novel: 0`.
+- Every file outside `connection-adapters/` reports 0 novel under
+  `pnpm parity:api:extra --package activerecord --novel-only`, and the mark is
+  tightened in the same PR. The census counts above are a snapshot; the
+  invariant is the 0, not a number resolved.
