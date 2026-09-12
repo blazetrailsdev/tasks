@@ -1,6 +1,6 @@
 ---
 title: "Migration's method_missing delegations: receipt or relocate the 51 moved extras across migration.ts and the schema dumpers"
-status: ready
+status: in-progress
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 260
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#7729
+claim: "2026-09-12T14:04:29Z"
+assignee: "receipt-moved-encryption-subtree"
 blocked-by: null
 closed-reason: null
 ---
