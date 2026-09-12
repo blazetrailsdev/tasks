@@ -13,9 +13,16 @@ deps:
     "receipt-associations-and-join-dependency",
     "receipt-encryption-and-type-virtualization",
     "receipt-relation-delegation-and-relation-tree",
+    "receipt-moved-migration-method-missing-delegations",
+    "receipt-moved-base-flattened-module-seats",
+    "receipt-moved-adapter-classes-and-pool",
+    "receipt-moved-adapter-subtrees-and-oid-types",
+    "receipt-moved-associations-and-attribute-methods",
+    "receipt-moved-encryption-subtree",
+    "receipt-moved-activerecord-remainder",
   ]
 deps-rfc: []
-est-loc: 500
+est-loc: 220
 priority: 3
 pr: null
 claim: "2026-09-12T00:32:41Z"
@@ -58,6 +65,43 @@ So the work is:
 At ~422 declarations this exceeds one PR's LOC ceiling. Split the receipts by
 directory into sibling stories (the `receipt-*` stories this one depends on are
 the template), and keep this story as the final gate change.
+
+### The split has been cut; this story is now the gate change alone
+
+Measured 2026-09-12 off a full `pnpm build` + `pnpm parity:api`:
+`pnpm parity:api:extra --package activerecord` reports **`novel: 0`, `moved: 396`,
+`total: 396`** across 125 files — the five `receipt-*` deps above burnt `novel`
+to zero, and none of them touched `moved`. So the 396 that stand between this
+story and a deleted row are all moved-not-novel, and they are cut by area into
+seven sibling stories, each carrying its own file-and-name census:
+
+| Names | Story                                                |
+| ----- | ---------------------------------------------------- |
+| 75    | `receipt-moved-associations-and-attribute-methods`   |
+| 62    | `receipt-moved-base-flattened-module-seats`          |
+| 60    | `receipt-moved-adapter-classes-and-pool`             |
+| 59    | `receipt-moved-activerecord-remainder`               |
+| 57    | `receipt-moved-adapter-subtrees-and-oid-types`       |
+| 51    | `receipt-moved-migration-method-missing-delegations` |
+| 32    | `receipt-moved-encryption-subtree`                   |
+
+They are this story's remaining deps. What is left here is the gate change and
+nothing else, which is why `est-loc` drops from 500 to 220: pin `total` at the
+constant 0 beside `novel` for a package in the new mode, exempt such a package
+from `unmarkedPackages`, add the `strandedMarks` check, move `"activerecord"`
+across, delete its row, and update the three prose sites.
+
+Note that RFC 0130's Non-goals entry for `total` — "tagged-only mode drops the
+moved-not-novel dimension by design" — is **stale**, and this story's premise
+supersedes it. The mark's own module comment records the correction ("an earlier
+revision of this comment was wrong to claim
+`blazetrails/rails-file-structure-method-order` would cover it"), and RFC 0127's
+`gate-the-wrong-file-moves-population` documents the same finding against
+PR #7283: `parity:api:moves` only reports, and the ordering lint filters its
+expected names to those already present in the container, so neither can see a
+cross-file relocation. `total` is the only thing gating that population, which
+is exactly why retiring the row requires driving it to 0 rather than dropping
+the dimension.
 
 ## Acceptance criteria
 

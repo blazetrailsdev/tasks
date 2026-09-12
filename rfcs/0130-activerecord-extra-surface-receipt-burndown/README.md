@@ -116,9 +116,18 @@ one reviewed line after that.
   it does not buy room.
 - **activemodel.** Same reasoning applies, but it has no burndown behind it and
   is not gated. Enrolling it is its own RFC, as `0120` has always said.
-- **`total`.** Tagged-only mode drops the moved-not-novel dimension by design
-  (see the module comment). Chasing `total` to zero is not part of reaching
-  enrollment.
+- ~~**`total`.** Tagged-only mode drops the moved-not-novel dimension by
+  design.~~ **Stale — reversed 2026-09-12.** Tagged-only mode does NOT drop
+  `total`. The mark's module comment records the correction ("an earlier revision
+  of this comment was wrong to claim
+  `blazetrails/rails-file-structure-method-order` would cover it"), and RFC 0127's
+  `gate-the-wrong-file-moves-population` documents the same finding against
+  PR #7283: the ordering lint filters its expected names to those already present
+  in a file's container, so a name Rails defines in another `.rb` never enters
+  the bucket, and `parity:api:moves` only reports. `total` is the only thing
+  gating that population. Since enrollment's whole point is that activerecord
+  needs **no row**, and a row is what gates `total`, driving `total` to 0 is
+  in scope after all — see the moved-burndown phase below.
 - **The `@internal` half.** RFC 0121's `unbacked-internal-needs-receipt` policies
   a different tag on an overlapping population. activerecord's enrollment there
   is tracked by 0121 and is not re-litigated here.
@@ -154,12 +163,23 @@ fastest early.
 4. Phase 4 — `receipt-associations-and-join-dependency`
 5. Phase 5 — `receipt-encryption-and-type-virtualization`
 6. Phase 6 — `receipt-package-root-base-fixtures-enum-errors`
-7. Phase 7 — `enrol-activerecord-in-tagged-only-mode`
+7. Phase 7 — the moved-not-novel burndown, cut by area and independently
+   mergeable like the phases above: `receipt-moved-migration-method-missing-delegations`
+   (51), `receipt-moved-base-flattened-module-seats` (62),
+   `receipt-moved-adapter-classes-and-pool` (60),
+   `receipt-moved-adapter-subtrees-and-oid-types` (57),
+   `receipt-moved-associations-and-attribute-methods` (75),
+   `receipt-moved-encryption-subtree` (32),
+   `receipt-moved-activerecord-remainder` (59)
+8. Phase 8 — `enrol-activerecord-in-tagged-only-mode`
 
 ## Verification
 
 - `pnpm parity:api:extra --package activerecord --novel-only` reports
-  `totalNovel: 0`, down from **342** measured 2026-08-30.
+  `totalNovel: 0`, down from **342** measured 2026-08-30. Reached 2026-09-12.
+- `pnpm parity:api:extra --package activerecord` reports `totalExtras: 0`, down
+  from the **396** moved-not-novel extras measured 2026-09-12 — the dimension
+  the stale `total` non-goal above had excused.
 - `scripts/api-compare/extra-surface-mark.json` contains no `activerecord` key,
   and `activerecord` appears in `TAGGED_ONLY_PACKAGES`.
 - `pnpm parity:api:extra:gate` is green with `activerecord novel 0/0
@@ -197,3 +217,9 @@ fastest early.
   bodies carry that same stale census and their acceptance criteria name
   absolute counts (this already cost a blocking review on #7516: body said 29
   names across 10 files, the claim-time measurement was 22 across 9).
+- 2026-09-12: `novel` reached 0. `enrol-activerecord-in-tagged-only-mode` could
+  not follow, because retiring the row needs `total` at 0 too and the
+  measurement was 396 moved-not-novel extras across 125 files. The `total`
+  non-goal above is reversed, seven moved-burndown stories are filed by area,
+  and the enrol story is blocked on them with its `est-loc` cut from 500 to 220
+  (the gate change alone).
