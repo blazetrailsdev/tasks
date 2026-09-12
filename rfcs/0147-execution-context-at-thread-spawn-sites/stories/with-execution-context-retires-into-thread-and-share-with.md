@@ -1,6 +1,6 @@
 ---
 title: "Retire withExecutionContext into the Thread seat and share_with"
-status: in-progress
+status: done
 updated: 2026-09-12
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
