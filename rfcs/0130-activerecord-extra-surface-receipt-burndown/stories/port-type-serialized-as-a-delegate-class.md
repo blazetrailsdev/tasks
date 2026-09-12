@@ -1,6 +1,6 @@
 ---
 title: "port-type-serialized-as-a-delegate-class"
-status: draft
+status: in-progress
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7728
+claim: "2026-09-12T15:45:23Z"
+assignee: "port-type-serialized-as-a-delegate-class"
 blocked-by: null
 closed-reason: null
 ---
