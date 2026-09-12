@@ -147,6 +147,15 @@ A receipt placed in a file outside the measured population — `src/test-helpers
 `src/support/**` — is always a STALE tag: there is nothing there for it to suppress, and only
 the CI compare job catches it.
 
+This story's names are **disjoint from every name already carrying a receipt.** A receipted
+name has been subtracted from the measurement, so it cannot appear in the census above — but
+it can sit in the same FILE, and two sibling stories own those:
+`converge-receipted-activerecord-root-and-adapter-names` holds the
+`CONVERGEABLE`-receipted novel names and lists them per file, and
+`receipt-connection-adapters-matched-files` (done, trails#7714) resolved the novel half of the
+adapter files. Read the first one's table before editing any file this story names, so the two
+PRs do not collide and a name it already owns is not re-resolved here.
+
 Extra-surface totals move with **build state**, not with the commit: an unbuilt package's
 types go unresolved and the methods carrying them drop out of the population. Always
 `pnpm build` before measuring, and use `API_COMPARE_FORCE=1` if a warm cache is
