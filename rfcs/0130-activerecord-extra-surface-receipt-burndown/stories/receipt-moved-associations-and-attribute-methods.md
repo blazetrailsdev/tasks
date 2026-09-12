@@ -1,13 +1,14 @@
 ---
-title: "receipt-moved-associations-and-attribute-methods"
+title: "associations/ and attribute-methods/: receipt or relocate the 75 moved extras"
 status: draft
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
-packages: []
+packages:
+  - activerecord
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 360
 priority: 4
 pr: null
 claim: null
@@ -117,3 +118,41 @@ already cost a blocking review on #7516).
   extra-surface run does not rise.
 - Every receipt cites a `vendor/rails/` `file:line` for the Rails name it stands against,
   in the story it points at where the tag itself cannot carry prose.
+
+## Definition of done
+
+A `@noRailsEquivalent` whose reason was generated rather than reasoned does NOT close this
+story — that is the "tag all of them mechanically" alternative RFC 0130 rejected as "fast and
+worthless". Route 1 (delete) and route 2 (relocate) have to be tried per name before a
+receipt is written, which is what makes this a burndown rather than a `sed` script. Raising
+activerecord's `total` mark does not close it either; the mark is only-shrink and there is no
+reseed.
+
+## Verification
+
+```sh
+pnpm build && pnpm parity:api                      # the manifests the measurement reads
+pnpm parity:api:extra --package activerecord        # this area's files report 0 extras
+pnpm parity:api:extra:tighten                       # writes `total` DOWN, never up
+pnpm parity:api:extra:gate                          # green
+```
+
+`pnpm parity:api:extra --package activerecord` must show no row for any of the 75 names
+listed above, and activerecord's `total` in `scripts/api-compare/extra-surface-mark.json`
+must fall by the number this story resolved.
+
+## Notes
+
+Two checks are easy to miss and both are green locally / red in CI: `pnpm parity:api --extra`
+does **not** run the STALE-tag gate, and `parity:api:extra:gate` does **not** run the
+REDUNDANT-tag check — only `pnpm parity:api:extra --package <pkg>` prints the latter. So run
+the `--package` form, not just the gate.
+
+A receipt placed in a file outside the measured population — `src/test-helpers/**`,
+`src/support/**` — is always a STALE tag: there is nothing there for it to suppress, and only
+the CI compare job catches it.
+
+Extra-surface totals move with **build state**, not with the commit: an unbuilt package's
+types go unresolved and the methods carrying them drop out of the population. Always
+`pnpm build` before measuring, and use `API_COMPARE_FORCE=1` if a warm cache is
+under-reporting.

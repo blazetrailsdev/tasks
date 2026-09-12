@@ -164,14 +164,30 @@ fastest early.
 5. Phase 5 — `receipt-encryption-and-type-virtualization`
 6. Phase 6 — `receipt-package-root-base-fixtures-enum-errors`
 7. Phase 7 — the moved-not-novel burndown, cut by area and independently
-   mergeable like the phases above: `receipt-moved-migration-method-missing-delegations`
-   (51), `receipt-moved-base-flattened-module-seats` (62),
-   `receipt-moved-adapter-classes-and-pool` (60),
-   `receipt-moved-adapter-subtrees-and-oid-types` (57),
-   `receipt-moved-associations-and-attribute-methods` (75),
-   `receipt-moved-encryption-subtree` (32),
-   `receipt-moved-activerecord-remainder` (59)
-8. Phase 8 — `enrol-activerecord-in-tagged-only-mode`
+   mergeable like the phases above. Ordered smallest-area-first, so `total`
+   starts falling on the first merge and each story stays reviewable against a
+   single Rails subtree; they do not depend on one another, so they can run in
+   parallel where reviewers allow.
+
+   | Names | Story                                                | est-loc | priority |
+   | ----- | ---------------------------------------------------- | ------- | -------- |
+   | 32    | `receipt-moved-encryption-subtree`                   | 220     | 2        |
+   | 51    | `receipt-moved-migration-method-missing-delegations` | 260     | 2        |
+   | 57    | `receipt-moved-adapter-subtrees-and-oid-types`       | 300     | 3        |
+   | 59    | `receipt-moved-activerecord-remainder`               | 340     | 3        |
+   | 60    | `receipt-moved-adapter-classes-and-pool`             | 320     | 3        |
+   | 62    | `receipt-moved-base-flattened-module-seats`          | 300     | 4        |
+   | 75    | `receipt-moved-associations-and-attribute-methods`   | 360     | 4        |
+
+   Two of these overlap adjacent burndowns rather than owning their names
+   outright: `receipt-moved-adapter-classes-and-pool` and
+   `receipt-moved-adapter-subtrees-and-oid-types` cover the population RFC 0119
+   (connection-adapter fidelity) is converging, so a `CONVERGEABLE` receipt
+   there points at an 0119 story wherever the name is misplaced rather than
+   genuinely extra.
+
+8. Phase 8 — `enrol-activerecord-in-tagged-only-mode`, the gate change alone
+   (`est-loc` cut 500 → 220).
 
 ## Verification
 

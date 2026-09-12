@@ -113,3 +113,43 @@ the dimension.
   file reds the gate — verified locally and stated in the PR body.
 - CLAUDE.md, the CI step comment, and the `extra-surface-mark.ts` module comment
   describe activerecord as pinned with no row.
+
+## Definition of done
+
+Dropping the `total` dimension does **not** close this story, and neither does widening
+`unmarkedPackages` to keep the row while calling it retired. The point of the mode is that no
+shared counter is left to conflict on, which means the row is deleted and both dimensions are
+pinned at the constant 0 — an enrollment that still reads a number from the mark file is the
+half-measure trails#7721 already shipped and this story exists to finish.
+
+Un-pinning a package, or moving one back out of the mode, to turn a red run green does not
+close it either: enrollment is only-grow, exactly like RFC 0121's.
+
+## Verification
+
+```sh
+pnpm build && pnpm parity:api
+pnpm parity:api:extra --package activerecord   # totalNovel: 0 AND totalExtras: 0
+pnpm parity:api:extra:gate                     # green, `activerecord novel 0/0 total 0/0 (tagged-only)`
+pnpm vitest run scripts/api-compare/extra-surface-mark.test.ts
+```
+
+Then prove the gate is armed rather than merely quiet, and state both in the PR body:
+
+1. add an untagged public method to a Rails-matched activerecord file and confirm
+   `parity:api:extra:gate` goes red on `novel`;
+2. re-add an `"activerecord"` key to `scripts/api-compare/extra-surface-mark.json` and
+   confirm the new stranded-row check goes red.
+
+## Notes
+
+`unmeasuredPackages` must keep covering activerecord. The row is what `unmarkedPackages`
+reads, so exempting the package from THAT check is correct; exempting it from the
+measurement-side check as well would disarm the gate the first time a filter hid the package
+from the run, which is the exact failure its docstring describes.
+
+The three prose sites to update are the TAGGED-ONLY MODE block in
+`scripts/api-compare/extra-surface-mark.ts`, the `Extra-surface ratchet` step comment in
+`.github/workflows/ci.yml`, and step 4 of CLAUDE.md's "Before you open the PR". The module
+comment's closing paragraph still says activerecord "stays ungated on `novel` until its own
+burndown" — that sentence goes with this change.
