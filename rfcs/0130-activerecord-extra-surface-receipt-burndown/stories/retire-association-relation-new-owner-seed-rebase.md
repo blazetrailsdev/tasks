@@ -1,7 +1,7 @@
 ---
 title: "retire-association-relation-new-owner-seed-rebase"
-status: ready
-updated: 2026-09-11
+status: in-progress
+updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7727
+claim: "2026-09-12T02:06:38Z"
+assignee: "converge-relation-delegation-helper-layer"
 blocked-by: null
 closed-reason: null
 ---

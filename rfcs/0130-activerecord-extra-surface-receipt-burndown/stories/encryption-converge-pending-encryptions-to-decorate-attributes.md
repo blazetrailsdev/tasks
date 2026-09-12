@@ -1,7 +1,7 @@
 ---
 title: "encryption-converge-pending-encryptions-to-decorate-attributes"
 status: ready
-updated: 2026-09-11
+updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
