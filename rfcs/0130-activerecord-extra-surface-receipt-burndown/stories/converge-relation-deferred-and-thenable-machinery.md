@@ -1,7 +1,7 @@
 ---
 title: "converge-relation-deferred-and-thenable-machinery"
-status: ready
-updated: 2026-09-11
+status: in-progress
+updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7725
+claim: "2026-09-12T01:16:28Z"
+assignee: "converge-join-part-onto-rails-join-part-surface"
 blocked-by: null
 closed-reason: null
 ---

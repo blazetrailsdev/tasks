@@ -1,6 +1,6 @@
 ---
 title: "Delete the orphaned ConnectionPool adapter proxy"
-status: in-progress
+status: done
 updated: 2026-09-12
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null

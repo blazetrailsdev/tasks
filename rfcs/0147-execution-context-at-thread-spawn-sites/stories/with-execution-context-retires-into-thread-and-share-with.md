@@ -1,6 +1,6 @@
 ---
 title: "Retire withExecutionContext into the Thread seat and share_with"
-status: draft
+status: claimed
 updated: 2026-09-12
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-12T01:50:56Z"
+assignee: "isolated-execution-state-scope-has-no-rails-counterpart"
 blocked-by: null
 closed-reason: null
 ---
