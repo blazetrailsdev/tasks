@@ -1,6 +1,6 @@
 ---
 title: "Receipt or relocate the last 59 moved extras across tasks/, locking/, relation/ and the remaining root files"
-status: ready
+status: in-progress
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 340
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#7730
+claim: "2026-09-12T16:19:09Z"
+assignee: "receipt-moved-activerecord-remainder"
 blocked-by: null
 closed-reason: null
 ---

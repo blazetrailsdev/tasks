@@ -1,7 +1,7 @@
 ---
 title: "Retire encryptedTypeOf by giving Serialized/NormalizedValueType DelegateClass forwarding"
-status: draft
-updated: 2026-08-21
+status: done
+updated: 2026-09-12
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: trails#7728
 claim: null
 assignee: null
 blocked-by: null
