@@ -19,14 +19,20 @@ Frontmatter fields are partitioned into two sets with **exactly one authority
 each**, and the sets are disjoint — so this is not bidirectional sync and
 cannot conflict.
 
-| Owner        | Fields                                                                                       | Written by               |
-| ------------ | -------------------------------------------------------------------------------------------- | ------------------------ |
-| **Markdown** | `title`, `rfc`, `cluster`, `deps`, `deps-rfc`, `est-loc`, `priority`, `packages`, body prose | humans/agents via PR     |
-| **DB**       | `status`, `pr`, `claim`, `assignee`, `blocked-by`, `closed-reason`, `updated`                | the CLI's mutation verbs |
+| Owner        | Fields                                                                                    | Written by               |
+| ------------ | ----------------------------------------------------------------------------------------- | ------------------------ |
+| **Markdown** | `title`, `rfc`, `cluster`, `deps`, `deps-rfc`, `est-loc`, `packages`, body prose          | humans/agents via PR     |
+| **DB**       | `status`, `pr`, `claim`, `assignee`, `blocked-by`, `closed-reason`, `updated`, `priority` | the CLI's mutation verbs |
 
 - **`tasks ingest`** (git → DB) upserts only markdown-owned columns. It is the
-  sole creator and deleter of rows. Frontmatter `status` is honored **on insert
-  only**, as a birth seed — never as a sync value.
+  sole creator and deleter of rows. Frontmatter `status` and `priority` are
+  honored **on insert only**, as birth seeds — never as sync values.
+- **`priority` is DB-owned** (`DB_OWNED` in `src/ingest.ts`, asserted by
+  `src/priority-ownership.test.ts`). Set it with `tasks priority <id> <n>`.
+  It used to be markdown-owned while the verb wrote the DB, which made every
+  priority an agent set silently temporary — export never carried it out and
+  the next ingest reverted it. Editing `priority:` in a story file still does
+  nothing durable.
 - **`tasks export`** (DB → git) writes only DB-owned fields, batched hourly into
   a single commit. Never in the mutation path.
 - CI **rejects any PR that edits a DB-owned field**, so a hand-edited
