@@ -18,60 +18,47 @@ closed-reason: null
 
 ## Context
 
-`findVersion` (`packages/activerecord/src/migration/compatibility.ts:43-61`) resolves an
-unknown migration version by **falling back to the nearest lower registered version**. Rails
-does not: `Compatibility.find`
-(`vendor/rails/activerecord/lib/active_record/migration/compatibility.rb:6-14`) is an exact
-constant lookup that raises for anything it does not find.
+**`findVersion` itself is converged (trails#7729).** It is now the exact lookup
+`Compatibility.find` is (`vendor/rails/activerecord/lib/active_record/migration/compatibility.rb:6-14`),
+raising `ArgumentError` with Rails' message shape
+(`Unknown migration version "8.5"; expected one of "8.0"`), and the nearest-lower fallback
+plus the `compareVersions` / `parseVersion` helpers that served it are deleted. A regression
+test pins it (`migrator.trails.test.ts`, "findVersion raises for a version above the highest
+registered one").
 
-```ruby
-def self.find(version)
-  version = version.to_s
-  name = "V#{version.tr('.', '_')}"
-  unless const_defined?(name)
-    versions = constants.grep(/\AV[0-9_]+\z/).map { |s| s.to_s.delete("V").tr("_", ".").inspect }
-    raise ArgumentError, "Unknown migration version #{version.inspect}; expected one of #{versions.sort.join(', ')}"
-  end
-  const_get(name)
-end
-```
+What remains is the reason the fallback existed: **trails defines ZERO
+`Compatibility::V*` classes, where Rails defines nine** — `V8_0` down to `V4_2`
+(`migration/compatibility.rb`). trails registers only `Current`.
 
-Three divergences, in increasing order of size:
-
-1. **The fallback itself.** `Migration[7.0]` silently resolves to the newest version at or
-   below 7.0 instead of raising, so a migration written for an older release runs under
-   today's semantics — the exact failure `Compatibility` exists to prevent (its own comment at
-   `:16-19`: "if you write a migration on Rails 6.1, then upgrade to Rails 7, the migration
-   should do the same thing to your database as it did when you were running Rails 6.1").
-2. **The error class and message.** trails raises `MigrationError` with
-   `Unknown migration version: 8.5. Registered versions: 8.0`; Rails raises `ArgumentError`
-   with `Unknown migration version "8.5"; expected one of "8.0"` — note `to_s` before
-   `inspect`, so the version is quoted, and the expected list is `inspect`ed and sorted.
-3. **The missing `V*` classes.** Rails defines nine (`V8_0` … `V4_2`,
-   `compatibility.rb`); trails defines **zero** and registers only `Current`. This is why
-   removing the fallback cannot be a drive-by: with one entry in the registry, exact lookup
-   makes every `Migration[7.0]` / `Migration[6.1]` in existing user migrations raise where it
-   previously resolved. The fallback is masking the absent classes.
+That was reviewed and accepted as the right trade in trails#7729 rather than left implicit:
+nothing in the repo resolved through the fallback, and a `Migration[7.0]` that silently ran
+today's semantics was the exact failure `Compatibility` exists to prevent (its own comment at
+`:16-19` — "if you write a migration on Rails 6.1, then upgrade to Rails 7, the migration
+should do the same thing to your database as it did when you were running Rails 6.1"). A clear
+`ArgumentError` beats a silent wrong answer. But it does mean `Migration[7.0]` now raises
+where it previously resolved, and the only real fix is the classes.
 
 ## Converged shape
 
-Port `Compatibility.find` exactly — `to_s`, `V#{version.tr('.', '_')}` lookup, `ArgumentError`
-with Rails' message — and drop the `compareVersions` / `parseVersion` helpers, which exist only
-to serve the fallback and have no Rails counterpart.
+Port the `Compatibility::V*` classes trails needs, each carrying its Rails behaviour deltas, and
+register them. Rails' set and the deltas are all in
+`vendor/rails/activerecord/lib/active_record/migration/compatibility.rb`:
 
-Sequence matters: the `V*` classes have to land first, or the exact lookup turns a silent
-wrong-semantics bug into a hard failure for every migration pinned to an older version. Either
-port them with their behaviour deltas, or land the exact lookup together with a deliberate
-decision about which versions trails claims to support.
+- `V8_0` (`:32`) is the current alias — trails' `Current` already fills this slot and just needs
+  registering under its own name as well.
+- `V7_2` (`:36`) — `create_table` default `_uses_legacy_table_name`, validate-constraint
+  defaults.
+- `V7_1` (`:48`) — `change_column_null` / `add_column` datetime precision, index algorithm.
+- `V7_0` (`:100`) — `create_table` `id: :integer` legacy primary keys, `new_column_definition`.
+- `V6_1` (`:160`) — `change_column` / `add_column` precision defaults, `t.timestamps`.
+- `V6_0` (`:216`), `V5_2` (`:246`), `V5_1` (`:280`), `V5_0` (`:300`), `V4_2` (`:399`).
 
-trails#7729 removed the one test that pinned the fallback
-(`findVersion falls back to nearest lower version`, migrator.trails.test.ts) so the deviation
-is no longer codified, but left the behaviour in place for the reason above.
+Each is an independently shippable slice; they do not have to land together, but each one that
+lands restores a version `Migration[x]` can name again.
 
 ## Acceptance criteria
 
-- [ ] `findVersion` is an exact lookup over the registry, with no nearest-lower fallback.
-- [ ] It raises `ArgumentError` with Rails' message shape: `Unknown migration version "8.5"; expected one of "8.0"` (version `to_s`-then-`inspect`ed, expected list `inspect`ed and sorted).
-- [ ] `compareVersions` and `parseVersion` are deleted with the fallback they served.
-- [ ] The `Compatibility::V*` classes trails needs are registered first, so no previously-resolving `Migration[x]` starts raising without that being a reviewed decision.
-- [ ] `findVersion`'s `@noRailsEquivalent CONVERGEABLE` receipt is re-evaluated: `Compatibility.find` is the Rails counterpart, so the ported shape should be matched rather than receipted.
+- [ ] The `Compatibility::V*` classes are ported with their behaviour deltas and registered, so `Migration[x]` resolves every version trails claims to support.
+- [ ] `Current` is registered under its own version as well as as `Current`.
+- [ ] Each ported class has tests covering the delta it carries, mirroring Rails' `test/cases/migration/compatibility_test.rb`.
+- [ ] `findVersion`'s `@noRailsEquivalent CONVERGEABLE` receipt is retired: `Compatibility.find` is its Rails counterpart and the ported shape now matches it.
