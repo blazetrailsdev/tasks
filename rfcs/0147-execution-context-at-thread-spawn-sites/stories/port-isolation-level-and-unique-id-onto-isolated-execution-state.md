@@ -60,6 +60,6 @@ file finds a class with no isolation level at all.
 - [ ] `pnpm parity:api --package activesupport` coverage for
       `isolated_execution_state.rb` rises; `parity:api:extra:gate` does not.
 - [ ] Rails' own cases port or are enrolled: `#[] when isolation level is
-    :fiber`, `#[] when isolation level is :thread` and `changing the
-    isolation level clear the old store` are `it.skip` stubs in
+:fiber`, `#[] when isolation level is :thread` and `changing the
+isolation level clear the old store` are `it.skip` stubs in
       `packages/activesupport/src/isolated-execution-state.test.ts` today.
