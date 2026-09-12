@@ -91,9 +91,12 @@ Each name resolves one of four ways — the story must say which way each went, 
    shortcoming, or **`@noRailsEquivalent CONVERGEABLE <story-id>`** with a filed story.
    A bare `CONVERGEABLE` with no id is half a receipt and the run says so.
 
-Write the receipt as a MULTI-LINE JSDoc block: a one-line `/** @noRailsEquivalent … */`
-does not register, and `no-freeform-comments` autofixes prose out of the block, so the
-tag must stand alone and the reasoning belongs in the story it cites.
+Write the receipt as a tag-only JSDoc block: `/** @noRailsEquivalent PERMANENT */` or
+`/** @noRailsEquivalent CONVERGEABLE <story-id> */`. A one-line tag-only block registers
+(trails#7732 cleared 18 names with tags alone), and `no-freeform-comments` autofixes a
+multi-line tag-only block down to that one-liner, so the one-liner is the only form that
+survives a commit. Prose does not survive in the block either: the reasoning belongs in the
+story it cites.
 
 The census above is a snapshot, not a target — sibling PRs move it. Re-measure at claim
 time with `pnpm build && pnpm parity:api && pnpm parity:api:extra --package activerecord`
