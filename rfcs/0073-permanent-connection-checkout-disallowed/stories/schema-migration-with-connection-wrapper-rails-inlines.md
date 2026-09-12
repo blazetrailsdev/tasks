@@ -64,5 +64,5 @@ convergence and the existing suites are the coverage.
 - [ ] `pnpm parity:api:calls` and `pnpm parity:api:extra --package activerecord`
       do not regress; extra surface should drop, not rise.
 - [ ] `pnpm vitest run packages/activerecord/src/schema-migration*.test.ts
-    packages/activerecord/src/internal-metadata*.test.ts` is green, with no
+packages/activerecord/src/internal-metadata*.test.ts` is green, with no
       test renames.
