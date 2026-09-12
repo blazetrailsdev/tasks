@@ -45,9 +45,16 @@ The concrete adapters spell `tables`, `views`, `tableExists`, `primaryKey`, `col
 `postgresql/schema_statements.rb`) — a cross-file relocation, which is precisely the
 population `total` exists to gate and which
 `blazetrails/rails-file-structure-method-order` cannot see (it filters expected names to
-those already present in the container). RFC 0119 (connection-adapter fidelity) is the
-burndown these belong to, so a `CONVERGEABLE` receipt here points at an 0119 story wherever
-the name is genuinely misplaced rather than genuinely extra.
+those already present in the container).
+
+RFC 0119 (connection-adapter fidelity) converged this tree, but it is **`status: closed`** —
+its end condition is met and every story under it is done. So it cannot take a new
+convergence obligation, and a `CONVERGEABLE` receipt must never point at one of its story
+ids. Where a name here is genuinely misplaced rather than genuinely extra, **file the
+follow-up under RFC 0130** (this RFC, active, and the owner of this population) with
+`pnpm tasks new 0130-activerecord-extra-surface-receipt-burndown <slug> --body-file <path>`,
+and point the receipt at the id it returns. Read 0119's closed stories first for the prior
+art on the name — they carry the Rails `file:line` you need — but do not reopen it.
 
 ### The population
 
@@ -94,16 +101,34 @@ already cost a blocking review on #7516).
 ## Acceptance criteria
 
 - Every moved extra in this area is deleted, relocated, credited in the extractor, or
-  carries a `@noRailsEquivalent PERMANENT` / `CONVERGEABLE <story-id>` receipt at its
-  declaration; `pnpm parity:api:extra --package activerecord` reports 0 extras for each
-  file listed above.
+  receipted; `pnpm parity:api:extra --package activerecord` reports 0 extras for each file
+  listed above.
 - activerecord's `total` in `scripts/api-compare/extra-surface-mark.json` is tightened in
   the same PR with `pnpm parity:api:extra:tighten`. The mark is only-shrink and there is
   no reseed — a name that cannot be resolved gets a `CONVERGEABLE` receipt, not room.
 - `pnpm parity:api:extra:gate` is green, and the unstated-permanence count in the
   extra-surface run does not rise.
-- Every receipt cites a `vendor/rails/` `file:line` for the Rails name it stands against,
-  in the story it points at where the tag itself cannot carry prose.
+
+The receipt form and the evidence it owes differ by whether the TS file has a Rails
+counterpart, and the two are not interchangeable:
+
+- **Matched files** (a `.rb` is named beside the file in the census above). Each surviving
+  name carries its own `@noRailsEquivalent PERMANENT` / `CONVERGEABLE <story-id>` tag **at
+  its declaration**, and cites the `vendor/rails/` `file:line` of the Rails name it stands
+  against — in the story it points at, since the tag itself cannot carry prose.
+  `fileTagVerdict` refuses a file-level blanket here, so do not reach for one.
+- **No-counterpart files** (marked _(no Rails counterpart)_ above). There is no Rails name
+  to cite and no per-declaration tag is required: a single FILE-level
+  `@noRailsEquivalent PERMANENT` verdict covers the file. Its evidence is different in kind
+  and must be stated in the PR body — that **no** `.rb` maps onto the file (shown by the
+  census row, and by the file's absence from `rails-api.json`), plus what the file is the TS
+  spelling of and why Rails needs no such file. Where the file IS the TS spelling of a Ruby
+  construct that has no file of its own — a bare Hash, a barrel, a JS-idiom shim — say which
+  construct and cite where Rails uses it.
+- A file-level verdict is **not** available as a shortcut for a matched file, and a
+  per-declaration tag on a no-counterpart file is not wrong, just unnecessary. Whichever
+  form is used, a receipt in a file outside the measured population is a STALE tag, not a
+  receipt (see Notes).
 
 ## Definition of done
 

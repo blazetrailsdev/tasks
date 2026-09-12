@@ -1,6 +1,6 @@
 ---
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
-title: "Burn activerecord's 342 untagged novel names down to zero so the package leaves the counted extra-surface mark for tagged-only mode"
+title: "Burn activerecord's untagged extra surface — 342 novel names, then 396 moved-not-novel — to zero so the package leaves the extra-surface mark file entirely"
 status: active
 created: 2026-08-30
 updated: 2026-09-11
@@ -30,9 +30,22 @@ written a receipt for**. arel reached zero and now runs in tagged-only mode: no
 row in `scripts/api-compare/extra-surface-mark.json`, gated at `novel === 0`,
 every extra justified at its own declaration.
 
-activerecord cannot follow until its 342 untagged novel names are resolved.
-This RFC is that burndown. Its end state is one line deleted from the mark file
-and `activerecord` moved from `COUNTED_PACKAGES` to `TAGGED_ONLY_PACKAGES`.
+activerecord cannot follow until its untagged extra surface is resolved. This RFC
+is that burndown. Its end state is one line deleted from the mark file and
+`activerecord` moved from `COUNTED_PACKAGES` to `TAGGED_ONLY_PACKAGES`.
+
+**That end state covers BOTH measured dimensions, in two phases.** Phase 1–6
+burnt the **342 novel** names (names Rails defines nowhere) to zero; that is
+done, reached 2026-09-12. Phase 7 burns the **396 moved-not-novel** names (names
+Rails defines, just in a different `.rb`) that the same measurement then
+reported, and phase 8 is the gate change.
+
+The second phase was originally excluded — a Non-goal below said tagged-only
+mode drops the `total` dimension. It does not, and the entry is struck: `total`
+is gated in both modes, and the mark ROW is what gates it. Since deleting the
+row is the whole point of enrollment, `total` has to reach 0 as well. Read the
+numbers in the sections below as the 2026-08-30 novel census they were written
+as; the current figures are in the Rollout and Verification sections.
 
 ## Motivation
 
@@ -102,12 +115,20 @@ re-measures at claim time and gates on its area reaching 0 novel (re-measured
 
 Stories are cut by area, not by count, so each one is reviewable against a
 single Rails subtree and its `vendor/rails/` counterpart. Each lands the same
-shape: names resolved by one of the four routes above, and activerecord's
-`novel` mark **tightened in the same PR** with `pnpm parity:api:extra:tighten`.
+shape: names resolved by one of the four routes above, and activerecord's mark
+**tightened in the same PR** with `pnpm parity:api:extra:tighten`.
+
+The table above is the **novel** population, and it is now at zero. The
+**moved-not-novel** population measured 2026-09-12 — 396 names across 125 files
+— is cut the same way, by area, into the seven phase-7 stories tabulated under
+Rollout. The four routes apply to it unchanged, with one addition specific to
+it: route 2 (relocate the name to the TS file mirroring the `.rb` that defines
+it) is the convergence `moved` is actually asking for, and it is the preferred
+outcome there in the way route 1 (delete) is for novel.
 
 The mark keeps shrinking under the existing only-shrink rule throughout. There
-is no intermediate mode: activerecord is counted until it is zero, and moves in
-one reviewed line after that.
+is no intermediate mode: activerecord is counted until BOTH dimensions are zero,
+and moves in one reviewed line after that.
 
 ## Non-goals
 
@@ -179,12 +200,15 @@ fastest early.
    | 62    | `receipt-moved-base-flattened-module-seats`          | 300     | 4        |
    | 75    | `receipt-moved-associations-and-attribute-methods`   | 360     | 4        |
 
-   Two of these overlap adjacent burndowns rather than owning their names
-   outright: `receipt-moved-adapter-classes-and-pool` and
-   `receipt-moved-adapter-subtrees-and-oid-types` cover the population RFC 0119
-   (connection-adapter fidelity) is converging, so a `CONVERGEABLE` receipt
-   there points at an 0119 story wherever the name is misplaced rather than
-   genuinely extra.
+   Two of these sit on the tree RFC 0119 (connection-adapter fidelity)
+   converged: `receipt-moved-adapter-classes-and-pool` and
+   `receipt-moved-adapter-subtrees-and-oid-types`. RFC 0119 is **closed** — its
+   end condition is met and all its stories are done — so it cannot take a new
+   convergence obligation and no `CONVERGEABLE` receipt may name one of its
+   story ids. A name that needs converging rather than receipting gets a
+   follow-up filed **under this RFC**, which is active and owns the population.
+   0119's closed stories remain the prior art to read for the Rails
+   `file:line`; they are not a place to add work.
 
 8. Phase 8 — `enrol-activerecord-in-tagged-only-mode`, the gate change alone
    (`est-loc` cut 500 → 220).
@@ -198,8 +222,10 @@ fastest early.
   the stale `total` non-goal above had excused.
 - `scripts/api-compare/extra-surface-mark.json` contains no `activerecord` key,
   and `activerecord` appears in `TAGGED_ONLY_PACKAGES`.
-- `pnpm parity:api:extra:gate` is green with `activerecord novel 0/0
-(tagged-only)` in its summary line.
+- `pnpm parity:api:extra:gate` is green with `activerecord novel 0/0 total 0/0
+(tagged-only)` in its summary line — both dimensions pinned at the constant 0,
+  which is one of the arming proofs for the reversed `total` non-goal and must
+  match what `enrol-activerecord-in-tagged-only-mode`'s own Verification expects.
 - Every `@noRailsEquivalent` written by this RFC states `PERMANENT` or
   `CONVERGEABLE <story-id>`; the extra-surface run's unstated-permanence count
   does not rise.
@@ -239,3 +265,9 @@ fastest early.
   non-goal above is reversed, seven moved-burndown stories are filed by area,
   and the enrol story is blocked on them with its `est-loc` cut from 500 to 220
   (the gate change alone).
+- 2026-09-12 (review round): RFC 0119 is closed, so the adapter stories' route-4
+  target moved to this RFC; the acceptance criteria split by matched vs
+  no-counterpart file, because a file-level `fileTagVerdict` is neither "at each
+  declaration" nor able to cite a Rails `file:line`; the title, Summary and
+  "Shape of the work" restated to cover both dimensions rather than novel alone;
+  and the gate's expected summary line corrected to `novel 0/0 total 0/0`.
