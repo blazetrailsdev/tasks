@@ -45,9 +45,14 @@ this is a small self-contained PR rather than a risky one:
   and reads `pool.dataSources?.() ?? pool.tables()`; an adapter answers both, so
   `dumpTableSchema(adapter, "foos")` works against it unchanged. Every call site is a literal
   `SchemaDumper.dumpTableSchema(` → `dumpTableSchema(` substitution plus one import.
-- **Only ONE of the ~139 call sites asserts exact equality.** The rest are
-  `expect(output).toMatch(/…/)` (and a few `not.toMatch`), so the helper's extra header and
-  trailer do not break them. That was the risk that looked blocking and is not.
+- **NO call site asserts exact equality on the dump output.** Every one is
+  `expect(output).toMatch(/…/)` or `not.toMatch`, so the helper's extra header and trailer do
+  not break them. (trails#7729 first reported "only one" exact-equality site; re-measuring
+  found that hit was an unrelated `toEqual` on `primaryKey`.) That was the risk that looked
+  blocking and is not.
+- **There are ZERO production callers** — it is a test-only API declared on a production
+  class, which is exactly Rails' own division: `schema_dumper.rb:43-58` publishes `dump` and a
+  private `generate_options`, and the helper lives in `test/support/`.
 
 The two bodies do still differ, and the one exact-equality site is where it shows:
 

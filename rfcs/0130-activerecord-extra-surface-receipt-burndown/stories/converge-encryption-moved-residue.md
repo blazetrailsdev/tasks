@@ -37,8 +37,26 @@ its own Rails anchor; none is a TypeScript language shortcoming.
   type-registry key.
 - `encryption/encrypted-attribute-type.ts` `serializeCastValue` — Rails does NOT include
   `ActiveModel::Type::SerializeCastValue` here (`encrypted_attribute_type.rb:10-11` is
-  `< ::ActiveModel::Type::Value` plus `Helpers::Mutable`), so the override has no Rails
-  declaration; `serialize` (`:39`) is the whole surface.
+  `< ::ActiveModel::Type::Value` plus `Helpers::Mutable`), so `serialize_cast_value` is simply
+  undefined on the type and `SerializeCastValue.serialize`
+  (`activemodel/lib/active_model/type/serialize_cast_value.rb:29-33`) falls through to
+  `type.serialize(value)` — because `itself_if_serialize_cast_value_compatible` (`:37-39`)
+  returns nil for a type that never included the module.
+
+  **The override is load-bearing in trails for a reason that lives in activemodel, not here.**
+  trails' `ActiveModel::Type::Value` defines `serializeCastValue(value) { return value; }` — an
+  IDENTITY — unconditionally (`packages/activemodel/src/type/value.ts:104-106`), where Rails'
+  `Type::Value` defines no such method at all; Rails adds `DefaultImplementation` only to
+  classes that include the module (`serialize_cast_value.rb:22`). So deleting the encryption
+  override would silently return the PLAINTEXT instead of the ciphertext.
+
+  Converging it therefore starts in activemodel: `ValueType` must stop defining an identity
+  `serializeCastValue`, matching `Type::Value`, so the dispatcher falls through to `serialize`
+  for every type that did not opt in. That touches every type in the repo, which is why it is
+  not a drive-by — and it is a real latent bug, not just extra surface: any other type whose
+  `serialize` does work and which never opted into the module is currently serialized by the
+  identity instead.
+
 - `encryption/extended-deterministic-queries.ts` `valueForDatabase` — Rails'
   `AdditionalValue` (`extended_deterministic_queries.rb:134-146`) declares only
   `attr_reader :value, :type`, `initialize` and a private `process`.
