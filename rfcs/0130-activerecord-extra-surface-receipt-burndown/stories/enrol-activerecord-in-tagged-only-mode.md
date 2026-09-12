@@ -1,5 +1,5 @@
 ---
-title: "Move activerecord from COUNTED_PACKAGES to TAGGED_ONLY_PACKAGES and delete its mark row"
+title: "Receipt every activerecord extra and retire its extra-surface mark row"
 status: ready
 updated: 2026-09-11
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
@@ -15,7 +15,7 @@ deps:
     "receipt-relation-delegation-and-relation-tree",
   ]
 deps-rfc: []
-est-loc: 40
+est-loc: 500
 priority: 3
 pr: null
 claim: null
@@ -26,37 +26,46 @@ closed-reason: null
 
 ## Context
 
-The last story of the RFC, and deliberately tiny: once every preceding phase has
-landed, `pnpm parity:api:extra --package activerecord --novel-only` reports
-`totalNovel: 0` and the package qualifies for the mode arel already runs in.
+The intent of this story is that activerecord needs **no row** in
+`scripts/api-compare/extra-surface-mark.json`: every public extra carries a
+`@noRailsEquivalent PERMANENT|CONVERGEABLE <story-id>` receipt at its
+declaration, so the gate can pin both dimensions at the constant 0 and there is
+no shared counter left to track or conflict on.
 
-The change is three edits in `scripts/api-compare/extra-surface-mark.ts` and its
-JSON:
+An earlier attempt (trails#7721) moved activerecord to `TAGGED_ONLY_PACKAGES`
+and kept its row. That pins `novel` only. `total` stayed a counted 422:
+moved-not-novel extras, names Rails defines in a different `.rb`. The row was
+still load-bearing, so novel surface was "tracked" by a number rather than by a
+receipt at each declaration. That is not the goal. Also, no `strandedMarks`
+check exists today; the gate's `unmarkedPackages` demands a row for every gated
+package, and tagged-only mode (see the TAGGED-ONLY MODE module comment in
+`scripts/api-compare/extra-surface-mark.ts`) keeps `total` gated by the row.
 
-- move `"activerecord"` from `COUNTED_PACKAGES` to `TAGGED_ONLY_PACKAGES`;
-- delete the `activerecord` row from
-  `scripts/api-compare/extra-surface-mark.json` — the gate's `strandedMarks`
-  check fails the run if the row is left behind, so this is not optional;
-- update the module comment, the `Extra-surface ratchet` step comment in
-  `.github/workflows/ci.yml`, and CLAUDE.md's step 4 so all three name
-  activerecord as tagged-only.
+So the work is:
 
-Enrollment is only-grow, exactly like RFC 0121's: after this lands, a new public
-activerecord name with no Ruby counterpart reds the gate and the ONLY remedies
-are a `@noRailsEquivalent` receipt at the declaration or deleting the name.
-There is no number to raise and no path back to counted mode.
+- receipt (or delete, or relocate to the Rails file that defines it) each of
+  activerecord's extras until `pnpm parity:api:extra --package activerecord`
+  reports `totalNovel: 0` AND `totalExtras: 0` — receipts already subtract
+  from both dimensions in `extra-surface.ts`;
+- change the gate so a package pinned in both dimensions needs no mark row:
+  pin `total` at 0 as well as `novel`, and exempt such packages from
+  `unmarkedPackages`; add a stranded-row check that fails if a row for one of
+  them is re-added;
+- move `"activerecord"` into that mode, delete its row, and update the module
+  comment, the `Extra-surface ratchet` step comment in
+  `.github/workflows/ci.yml`, and CLAUDE.md step 4.
 
-This also retires the merge-conflict source the RFC exists for: after this
-story, the mark file holds `ruby-compat` alone.
+At ~422 declarations this exceeds one PR's LOC ceiling. Split the receipts by
+directory into sibling stories (the `receipt-*` stories this one depends on are
+the template), and keep this story as the final gate change.
 
 ## Acceptance criteria
 
-- `pnpm parity:api:extra:gate` is green and its summary reads
-  `activerecord novel 0/0 (tagged-only)`.
+- `pnpm parity:api:extra --package activerecord` reports 0 novel and 0 total
+  unreceipted extras.
 - `scripts/api-compare/extra-surface-mark.json` has no `activerecord` key, and
-  the gate's stranded-row check is shown to fail if one is re-added.
-- A deliberately added untagged public name in a Rails-matched activerecord file
-  reds the gate with the UNRECEIPTED message — verified locally and stated in
-  the PR body, since a gate that cannot be shown to fail is not armed.
+  the new stranded-row check is shown to fail if one is re-added.
+- A deliberately added untagged public name in a Rails-matched activerecord
+  file reds the gate — verified locally and stated in the PR body.
 - CLAUDE.md, the CI step comment, and the `extra-surface-mark.ts` module comment
-  all describe activerecord as tagged-only.
+  describe activerecord as pinned with no row.
