@@ -1,6 +1,6 @@
 ---
 title: "Drop JoinPart#isReadonly / #isStrictLoading; Rails declares both only on JoinAssociation"
-status: draft
+status: ready
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

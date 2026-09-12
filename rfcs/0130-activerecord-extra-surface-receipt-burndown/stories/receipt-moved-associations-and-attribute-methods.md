@@ -1,6 +1,6 @@
 ---
 title: "associations/ and attribute-methods/: receipt or relocate the 75 moved extras"
-status: draft
+status: ready
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Audit the canonical fixture ref rewrite against Rails YAML (label vs literal)"
-status: draft
+status: ready
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

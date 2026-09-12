@@ -1,6 +1,6 @@
 ---
 title: "Converge clearAttributeNamesMemo's storyless CONVERGEABLE receipt into Rails' inline reload_schema_from_cache nil-out"
-status: draft
+status: ready
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

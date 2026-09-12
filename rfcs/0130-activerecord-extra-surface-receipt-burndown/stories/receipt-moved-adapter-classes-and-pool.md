@@ -1,6 +1,6 @@
 ---
 title: "connection-adapters: receipt or relocate the 60 moved extras on the adapter classes, the pool and the column types"
-status: draft
+status: ready
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

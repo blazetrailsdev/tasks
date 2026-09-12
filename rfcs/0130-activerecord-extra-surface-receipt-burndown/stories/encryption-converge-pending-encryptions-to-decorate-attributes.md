@@ -1,6 +1,6 @@
 ---
 title: "encryption-converge-pending-encryptions-to-decorate-attributes"
-status: ready
+status: in-progress
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7728
+claim: "2026-09-12T12:08:40Z"
+assignee: "encryption-converge-pending-encryptions-to-decorate-attributes"
 blocked-by: null
 closed-reason: null
 ---

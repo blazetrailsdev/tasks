@@ -1,6 +1,6 @@
 ---
 title: "Package root: receipt or relocate the 62 moved extras on base.ts, index.ts, ar-config.ts and inheritance.ts"
-status: draft
+status: ready
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

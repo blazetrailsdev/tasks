@@ -1,14 +1,14 @@
 ---
 title: "Enum predicate reads *_for_database like Rails, not castEnumValue"
-status: draft
-updated: 2026-09-11
+status: ready
+updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null
