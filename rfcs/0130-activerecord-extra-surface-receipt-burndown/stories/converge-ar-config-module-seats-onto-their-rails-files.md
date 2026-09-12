@@ -1,7 +1,7 @@
 ---
 title: "Converge the remaining 27 ar-config.ts module seats onto the Rails files that define them"
-status: in-progress
-updated: 2026-09-11
+status: done
+updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
