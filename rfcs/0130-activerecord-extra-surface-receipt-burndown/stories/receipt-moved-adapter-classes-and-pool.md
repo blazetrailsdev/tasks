@@ -1,6 +1,6 @@
 ---
 title: "connection-adapters: receipt or relocate the 60 moved extras on the adapter classes, the pool and the column types"
-status: ready
+status: in-progress
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#7731
+claim: "2026-09-12T20:34:09Z"
+assignee: "receipt-moved-adapter-classes-and-pool"
 blocked-by: null
 closed-reason: null
 ---

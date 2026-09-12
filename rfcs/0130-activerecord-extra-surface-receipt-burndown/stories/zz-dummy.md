@@ -1,6 +1,6 @@
 ---
 title: "zz-dummy"
-status: draft
+status: closed
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -13,5 +13,5 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "created by mistake while inspecting tasks new output; no work"
 ---
