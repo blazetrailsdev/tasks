@@ -1,7 +1,7 @@
 ---
 title: "Delete the orphaned ConnectionPool adapter proxy"
-status: draft
-updated: 2026-08-30
+status: in-progress
+updated: 2026-09-12
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7724
+claim: "2026-09-12T00:51:27Z"
+assignee: "delete-orphaned-pool-adapter-proxy"
 blocked-by: null
 closed-reason: null
 ---

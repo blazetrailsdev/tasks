@@ -1,16 +1,16 @@
 ---
 title: "Pool adapter proxy turns Rails' sync adapter methods into Promises"
-status: draft
-updated: 2026-08-01
+status: in-progress
+updated: 2026-09-12
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7724
+claim: "2026-09-12T00:51:30Z"
+assignee: "pool-adapter-proxy-makes-sync-adapter-methods-async"
 blocked-by: null
 closed-reason: null
 ---

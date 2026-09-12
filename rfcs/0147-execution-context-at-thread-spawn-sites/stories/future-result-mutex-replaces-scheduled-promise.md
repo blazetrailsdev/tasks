@@ -1,7 +1,7 @@
 ---
 title: "FutureResult ports @mutex; drop the #scheduled Thread.pass stand-in"
-status: in-progress
-updated: 2026-09-11
+status: blocked
+updated: 2026-09-12
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: trails#7722
 claim: "2026-09-11T20:20:31Z"
 assignee: "future-result-mutex-replaces-scheduled-promise"
-blocked-by: null
+blocked-by: "Rails' ordering comes from Thread.pass blocking the caller (connection_pool.rb:698) while the executor thread reaches @mutex.try_lock (future_result.rb:107). JS has no blocking wait, and the executor's path to try_lock spans an async checkout with real I/O, so no yield at the Rails site is long enough: with Thread.pass() as one macrotask, LoadAsyncTest > notification forwarding still reported payload.async == false on PostgreSQL in CI (run 34647598794). Awaiting the scheduled task at the call site also changes select_all's scheduled arm from returning the FutureResult to returning a Promise, reddening future-result.trails.test.ts:244 and relation-load-async.trails.test.ts:92,114,136,260. The only mechanism that orders it is the #scheduled in-flight field this story exists to delete. Needs a design that gives the executor the mutex before the foreground without a stand-in field."
 closed-reason: null
 ---
 

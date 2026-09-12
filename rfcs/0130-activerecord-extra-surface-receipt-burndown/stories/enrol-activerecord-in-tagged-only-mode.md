@@ -1,7 +1,7 @@
 ---
 title: "Receipt every activerecord extra and retire its extra-surface mark row"
-status: ready
-updated: 2026-09-11
+status: blocked
+updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
@@ -18,9 +18,9 @@ deps-rfc: []
 est-loc: 500
 priority: 3
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-12T00:32:41Z"
+assignee: "enrol-activerecord-in-tagged-only-mode"
+blocked-by: "Needs total=0, not just novel=0: measured 2026-09-12 novel 0 / moved 396 / total 396 across 125 files. The row gates total, so retiring it requires burning the moved-not-novel population down; tagged-only mode does NOT drop total (extra-surface-mark.ts module comment; RFC 0127 gate-the-wrong-file-moves-population vs PR #7283), so the RFC Non-goal excusing it is stale. Seven area stories filed (receipt-moved-*, 396 names) and added as deps in blazetrailsdev/tasks#116; what remains here is the gate change alone, est-loc 500 -> 220."
 closed-reason: null
 ---
 

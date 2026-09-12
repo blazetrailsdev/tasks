@@ -1,7 +1,7 @@
 ---
 title: "rails-private-method-set-must-be-a-committed-runtime-artifact"
-status: ready
-updated: 2026-08-09
+status: in-progress
+updated: 2026-09-12
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7724
+claim: "2026-09-12T00:39:12Z"
+assignee: "delete-orphaned-pool-adapter-proxy"
 blocked-by: null
 closed-reason: null
 ---

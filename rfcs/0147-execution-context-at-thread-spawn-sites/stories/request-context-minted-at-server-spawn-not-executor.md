@@ -1,7 +1,7 @@
 ---
 title: "Mint the request execution context in Handler.Node#service, not in ActionDispatch::Executor"
-status: in-progress
-updated: 2026-09-11
+status: done
+updated: 2026-09-12
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
 packages: []
