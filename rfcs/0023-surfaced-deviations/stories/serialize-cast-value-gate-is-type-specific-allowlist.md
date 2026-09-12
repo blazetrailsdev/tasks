@@ -52,3 +52,34 @@ paths.
   genuinely DB-ready post-cast.
 - Add regression coverage for at least one non-Temporal, non-Enum mapped type
   round-tripping through `updateColumns` and `insertAll`/`upsertAll`.
+
+## The Rails anchor for the identity default (added from trails#7729)
+
+The root cause above — "`ValueType`'s default `serializeCastValue` is the identity function" —
+has a precise Rails counterpart, which trails#7729 established while resolving
+`EncryptedAttributeType#serializeCastValue`:
+
+**Rails' `ActiveModel::Type::Value` defines no `serialize_cast_value` at all.** The method only
+exists on classes that opt in: `ActiveModel::Type::SerializeCastValue`
+(`vendor/rails/activemodel/lib/active_model/type/serialize_cast_value.rb`) adds
+`DefaultImplementation` on include, and only `unless klass.method_defined?(:serialize_cast_value)`
+(`:22`). For a type that never included the module, `SerializeCastValue.serialize` (`:29-33`)
+takes the fallback arm and calls `type.serialize(value)`, because
+`itself_if_serialize_cast_value_compatible` (`:37-39`) returns nil.
+
+trails instead defines it unconditionally on the base
+(`packages/activemodel/src/type/value.ts`, `serializeCastValue(value) { return value; }`), which
+is what turns a missing opt-in into a silent identity rather than a fallback to `serialize`.
+
+So the converged shape is narrower than "audit every type": **`ValueType` should stop defining
+`serializeCastValue`**, matching `Type::Value`, so the dispatcher falls through to `serialize`
+for every type that did not opt in. The type-specific allowlist patches (`EnumType`, the
+Temporal branch in `updateColumns`) then come out with it.
+
+One dependent to fix in the same change: `ActiveRecord::Encryption::EncryptedAttributeType`
+overrides `serializeCastValue` → `serialize` purely to defeat the identity
+(`packages/activerecord/src/encryption/encrypted-attribute-type.ts`). Rails does NOT include
+`SerializeCastValue` there (`encrypted_attribute_type.rb:10-11`), so once the base stops
+defining it the override is deleted, not rewritten — and its
+`@noRailsEquivalent CONVERGEABLE converge-encryption-moved-residue` receipt comes out too.
+Deleting the override BEFORE the base changes would serialize plaintext instead of ciphertext.
