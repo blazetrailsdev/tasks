@@ -1,6 +1,6 @@
 ---
 title: "encryption/: receipt or relocate the 32 moved extras across configurable, cipher, properties and the attribute type"
-status: in-progress
+status: done
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

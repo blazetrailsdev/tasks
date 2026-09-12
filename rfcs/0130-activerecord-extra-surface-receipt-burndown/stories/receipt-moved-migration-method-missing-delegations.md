@@ -1,6 +1,6 @@
 ---
 title: "Migration's method_missing delegations: receipt or relocate the 51 moved extras across migration.ts and the schema dumpers"
-status: in-progress
+status: done
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
