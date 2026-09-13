@@ -1,7 +1,7 @@
 ---
 title: "connection-adapters/{postgresql,mysql,sqlite3}: receipt or relocate the 57 moved extras across the subtrees and the OID types"
-status: in-progress
-updated: 2026-09-12
+status: done
+updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages:
