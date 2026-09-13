@@ -1,6 +1,6 @@
 ---
 title: "connection-adapters/{postgresql,mysql,sqlite3}: receipt or relocate the 57 moved extras across the subtrees and the OID types"
-status: ready
+status: in-progress
 updated: 2026-09-12
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#7732
+claim: "2026-09-12T23:03:17Z"
+assignee: "receipt-moved-adapter-subtrees-and-oid-types"
 blocked-by: null
 closed-reason: null
 ---
