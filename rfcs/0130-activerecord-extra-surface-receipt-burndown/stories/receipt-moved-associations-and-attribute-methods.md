@@ -1,6 +1,6 @@
 ---
 title: "associations/ and attribute-methods/: receipt or relocate the 75 moved extras"
-status: claimed
+status: in-progress
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 360
 priority: 4
-pr: null
+pr: trails#7733
 claim: "2026-09-13T00:42:37Z"
 assignee: "receipt-moved-associations-and-attribute-methods"
 blocked-by: null
