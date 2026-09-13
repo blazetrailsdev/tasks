@@ -1,7 +1,7 @@
 ---
 title: "converge-find-version-onto-compatibility-find"
-status: draft
-updated: 2026-09-12
+status: ready
+updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []

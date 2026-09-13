@@ -1,6 +1,6 @@
 ---
 title: "Audit the canonical fixture ref rewrite against Rails YAML (label vs literal)"
-status: claimed
+status: in-progress
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 9
-pr: null
+pr: trails#7739
 claim: "2026-09-13T18:49:18Z"
 assignee: "converge-relation-delegation-helper-layer"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Gate the EncryptedFixtures prepend on encrypt_fixtures, as railtie.rb does"
-status: claimed
+status: in-progress
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 8
-pr: null
+pr: trails#7739
 claim: "2026-09-13T18:49:18Z"
 assignee: "converge-relation-delegation-helper-layer"
 blocked-by: null

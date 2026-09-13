@@ -1,6 +1,6 @@
 ---
 title: "converge-has-one-builder-and-through-writer-overrides"
-status: draft
+status: ready
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

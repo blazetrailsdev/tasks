@@ -1,6 +1,6 @@
 ---
 title: "Port ModelSchema#inherited's reload_schema_from_cache(false) onto subclass registration"
-status: draft
+status: ready
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
