@@ -1,6 +1,6 @@
 ---
 title: "converge-create-schema-dumper-required-options"
-status: ready
+status: claimed
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-13T22:58:48Z"
+assignee: "converge-concrete-adapter-schema-statement-overrides"
 blocked-by: null
 closed-reason: null
 ---

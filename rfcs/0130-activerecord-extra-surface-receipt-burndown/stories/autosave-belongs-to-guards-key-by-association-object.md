@@ -1,6 +1,6 @@
 ---
 title: "autosave belongs_to guards key by association object, not name"
-status: ready
+status: claimed
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-13T22:57:43Z"
+assignee: "autosave-belongs-to-guards-key-by-association-object"
 blocked-by: null
 closed-reason: null
 ---
