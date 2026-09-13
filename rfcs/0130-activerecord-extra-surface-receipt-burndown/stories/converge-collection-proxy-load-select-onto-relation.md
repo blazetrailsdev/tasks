@@ -1,6 +1,6 @@
 ---
 title: "converge-collection-proxy-load-select-onto-relation"
-status: draft
+status: done
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#7733
 claim: null
 assignee: null
 blocked-by: null
