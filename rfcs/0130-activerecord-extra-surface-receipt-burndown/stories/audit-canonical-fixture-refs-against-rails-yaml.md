@@ -1,6 +1,6 @@
 ---
 title: "Audit the canonical fixture ref rewrite against Rails YAML (label vs literal)"
-status: in-progress
+status: done
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

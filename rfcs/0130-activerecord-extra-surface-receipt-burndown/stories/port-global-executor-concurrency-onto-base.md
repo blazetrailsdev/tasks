@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveRecord.global_executor_concurrency onto Base with its ArgumentError guard"
-status: in-progress
+status: done
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
