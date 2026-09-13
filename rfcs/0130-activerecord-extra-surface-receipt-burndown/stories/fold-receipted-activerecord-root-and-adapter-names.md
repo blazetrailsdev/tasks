@@ -5,7 +5,7 @@ updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
-deps: []
+deps: ["converge-receipted-activerecord-root-and-adapter-names"]
 deps-rfc: []
 est-loc: 500
 priority: null

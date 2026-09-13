@@ -5,7 +5,7 @@ updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
-deps: []
+deps: ["port-global-executor-concurrency-onto-base"]
 deps-rfc: []
 est-loc: 150
 priority: null
