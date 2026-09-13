@@ -1,6 +1,6 @@
 ---
 title: "Package root: receipt or relocate the 62 moved extras on base.ts, index.ts, ar-config.ts and inheritance.ts"
-status: claimed
+status: in-progress
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 4
-pr: null
+pr: trails#7734
 claim: "2026-09-13T09:58:10Z"
 assignee: "receipt-moved-base-flattened-module-seats"
 blocked-by: null
