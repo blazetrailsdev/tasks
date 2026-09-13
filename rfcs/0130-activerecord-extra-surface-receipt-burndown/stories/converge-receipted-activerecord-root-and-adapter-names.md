@@ -1,6 +1,6 @@
 ---
 title: "converge-receipted-activerecord-root-and-adapter-names"
-status: ready
+status: claimed
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-13T17:59:35Z"
+assignee: "converge-receipted-activerecord-root-and-adapter-names"
 blocked-by: null
 closed-reason: null
 ---

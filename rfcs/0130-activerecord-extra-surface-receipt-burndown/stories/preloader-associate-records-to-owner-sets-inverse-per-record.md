@@ -1,7 +1,7 @@
 ---
 title: "preloader-associate-records-to-owner-sets-inverse-per-record"
-status: ready
-updated: 2026-09-12
+status: done
+updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#7737
+claim: "2026-09-13T17:08:41Z"
+assignee: "converge-relation-delegation-helper-layer"
 blocked-by: null
 closed-reason: null
 ---
