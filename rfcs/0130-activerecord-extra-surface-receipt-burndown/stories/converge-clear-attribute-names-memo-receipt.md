@@ -1,7 +1,7 @@
 ---
 title: "Converge clearAttributeNamesMemo's storyless CONVERGEABLE receipt into Rails' inline reload_schema_from_cache nil-out"
-status: ready
-updated: 2026-09-12
+status: in-progress
+updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: trails#7736
+claim: "2026-09-13T16:34:24Z"
+assignee: "converge-receipted-activerecord-root-and-adapter-names"
 blocked-by: null
 closed-reason: null
 ---
