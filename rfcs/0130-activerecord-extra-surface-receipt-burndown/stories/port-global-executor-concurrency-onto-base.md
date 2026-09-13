@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveRecord.global_executor_concurrency onto Base with its ArgumentError guard"
-status: ready
-updated: 2026-09-12
+status: claimed
+updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 70
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-13T18:49:18Z"
+assignee: "converge-relation-delegation-helper-layer"
 blocked-by: null
 closed-reason: null
 ---

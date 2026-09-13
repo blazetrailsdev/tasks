@@ -1,6 +1,6 @@
 ---
 title: "retire-load-belongs-to-and-load-has-one"
-status: claimed
+status: in-progress
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 5
-pr: null
+pr: trails#7738
 claim: "2026-09-13T17:59:35Z"
 assignee: "converge-receipted-activerecord-root-and-adapter-names"
 blocked-by: null

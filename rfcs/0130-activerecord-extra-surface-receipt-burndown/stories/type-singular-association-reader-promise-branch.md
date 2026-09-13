@@ -1,6 +1,6 @@
 ---
 title: "type-singular-association-reader-promise-branch"
-status: draft
+status: closed
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "folded into trails#7738"
 ---
 
 ## Context
