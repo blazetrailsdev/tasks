@@ -1,7 +1,7 @@
 ---
 title: "pack's m directive UTF-8-expands bytes 0x80..0xff instead of encoding them"
-status: ready
-updated: 2026-09-10
+status: in-progress
+updated: 2026-09-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7751
+claim: "2026-09-14T13:36:47Z"
+assignee: "fixture-set-instance-form-and-all-loaded-fixtures"
 blocked-by: null
 closed-reason: null
 ---

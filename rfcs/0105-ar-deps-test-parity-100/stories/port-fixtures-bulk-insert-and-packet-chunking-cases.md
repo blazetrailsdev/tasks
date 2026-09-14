@@ -1,7 +1,7 @@
 ---
 title: "port-fixtures-bulk-insert-and-packet-chunking-cases"
 status: ready
-updated: 2026-09-10
+updated: 2026-09-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []

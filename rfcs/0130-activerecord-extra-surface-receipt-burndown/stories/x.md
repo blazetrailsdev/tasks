@@ -1,6 +1,6 @@
 ---
 title: "x"
-status: draft
+status: closed
 updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "created by mistake (empty stub from a mistyped command)"
 ---
 
 ## Context

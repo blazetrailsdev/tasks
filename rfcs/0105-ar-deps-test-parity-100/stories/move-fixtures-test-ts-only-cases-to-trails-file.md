@@ -1,7 +1,7 @@
 ---
 title: "move-fixtures-test-ts-only-cases-to-trails-file"
 status: ready
-updated: 2026-09-11
+updated: 2026-09-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []

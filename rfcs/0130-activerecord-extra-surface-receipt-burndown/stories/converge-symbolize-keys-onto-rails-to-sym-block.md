@@ -1,7 +1,7 @@
 ---
 title: "symbolize_keys drops Rails' to_sym block and is the identity"
-status: ready
-updated: 2026-09-13
+status: in-progress
+updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7750
+claim: "2026-09-14T13:11:52Z"
+assignee: "converge-pool-config-disconnect-lock-order"
 blocked-by: null
 closed-reason: null
 ---
