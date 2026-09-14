@@ -31,9 +31,25 @@ dropped. It stays that way because `ConnectionHandler#establishConnection` /
 `#removeConnectionPool` and `ConnectionHandling#removeConnection` are synchronous and
 have about 200 and 70 call sites respectively (surfaced by review on trails#7750).
 
+## Design (agreed on trails#7750 review)
+
+`establishConnection` cannot become async: `connects_to` runs from model
+static blocks. So it keeps a sync return and the clobbered pool's disconnect
+folds into the pool's existing pre-warm Promise, `pool.adapterReady`
+(`connection-handler.ts` sets it; `database-tasks.ts:843,848` already awaits
+it). `await pool.adapterReady` then means "old pool disconnected, adapter
+loaded". Make the pre-warm _required_: the pool's checkout path awaits
+`adapterReady` before its first `newConnection`, so a caller that skips the
+await cannot lease a connection while the old pool is still draining.
+
+Everything below `establishConnection` goes async for real.
+
 ## Acceptance criteria
 
 - `disconnectPoolFromPoolManager` awaits `poolConfig.disconnectBang()` before it returns `dbConfig`.
-- `removeConnectionPool` / `removeConnection` return `Promise<HashConfig | undefined>`, and
-  `establishConnection` awaits the disconnect of a pool it clobbers. All callers are updated.
+- `removeConnectionPool` / `removeConnection` return `Promise<HashConfig | undefined>`; all
+  ~35 callers are updated (mostly test teardown and `activerecord-cli`).
+- `establishConnection` stays sync; its clobber branch folds the disconnect into
+  `pool.adapterReady`, and `ConnectionPool` checkout awaits `adapterReady` before the first
+  `newConnection`.
 - No `void` disconnect remains in connection-handler.ts.
