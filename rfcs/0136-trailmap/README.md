@@ -1,9 +1,9 @@
 ---
 rfc: "0136-trailmap"
 title: "trailmap: one application owns the task domain"
-status: active
+status: draft
 created: 2026-09-02
-updated: 2026-09-04
+updated: 2026-09-14
 owner: "@deanmarano"
 packages:
   - actionpack
