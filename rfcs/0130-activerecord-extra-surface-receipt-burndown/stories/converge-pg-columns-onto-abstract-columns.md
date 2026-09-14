@@ -1,6 +1,6 @@
 ---
 title: "converge-pg-columns-onto-abstract-columns"
-status: in-progress
+status: done
 updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

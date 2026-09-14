@@ -1,7 +1,7 @@
 ---
 title: "converge-pool-and-cache-moved-residue"
-status: ready
-updated: 2026-09-13
+status: in-progress
+updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7748
+claim: "2026-09-14T11:26:45Z"
+assignee: "converge-pg-type-map-init-onto-adapter-class-methods"
 blocked-by: null
 closed-reason: null
 ---
