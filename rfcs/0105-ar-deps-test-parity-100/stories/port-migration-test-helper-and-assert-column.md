@@ -1,7 +1,7 @@
 ---
 title: "Port migration TestHelper and assert_column/assert_no_column instead of copying them per file"
-status: ready
-updated: 2026-09-10
+status: in-progress
+updated: 2026-09-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7754
+claim: "2026-09-14T16:12:40Z"
+assignee: "fixture-set-instance-form-and-all-loaded-fixtures"
 blocked-by: null
 closed-reason: null
 ---

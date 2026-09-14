@@ -1,7 +1,7 @@
 ---
 title: "methodMissingProxy visibility reads the Ruby private-method manifest, not the underscore heuristic"
-status: ready
-updated: 2026-09-12
+status: closed
+updated: 2026-09-14
 rfc: "0093-proxy-dynamic-method-consistency"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "No live failure and no test pressure: Migration dispatches by instanceof (migration.ts:265,874,937), not visibility, so the proxy's has trap never picks a code path; the get trap checks Reflect.has(proxyTarget) first, so a forwarded adapter private cannot shadow a CommandRecorder method. Rails' own command_recorder_test.rb has no private-visibility test. Exposure is real (~110 Ruby-private members publicly spelled across abstract-adapter.ts, abstract/schema-statements.ts, abstract/database-statements.ts) but one-directional: trails accepts what Rails rejects, which never breaks a working migration. The adapter is the only delegate with a Rails counterpart -- UploadedFile's tempfile and DelegateClass's __getobj__ are not in the manifest and would keep the underscore fallback regardless. Remaining risk is a porting hazard only (a ported body calling an adapter-private through the recorder goes green where Rails raises), which does not justify a new runtime visibility mechanism in ruby-compat plus ~110 declarations."
 ---
 
 ## Context

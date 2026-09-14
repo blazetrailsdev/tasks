@@ -1,6 +1,6 @@
 ---
 title: "port-deep-mergeable-overridable-deep-merge-predicate"
-status: ready
+status: in-progress
 updated: 2026-09-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7754
+claim: "2026-09-14T16:12:40Z"
+assignee: "fixture-set-instance-form-and-all-loaded-fixtures"
 blocked-by: null
 closed-reason: null
 ---

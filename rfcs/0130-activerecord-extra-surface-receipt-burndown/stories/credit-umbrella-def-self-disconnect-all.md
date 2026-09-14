@@ -1,6 +1,6 @@
 ---
 title: "Credit active_record.rb umbrella def self methods (disconnect_all!)"
-status: in-progress
+status: ready
 updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: trails#7752
-claim: "2026-09-14T13:20:36Z"
-assignee: "converge-tempfile-onto-the-delegate-class-primitive"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

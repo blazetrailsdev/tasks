@@ -1,7 +1,7 @@
 ---
 title: "pid-scoped pg_cancel_backend deviation is justified only in the PR body, not at the call site"
-status: draft
-updated: 2026-07-27
+status: closed
+updated: 2026-09-14
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: repo policy since 2026-08-27 (RFC 0124, trails#7132, eslint/no-freeform-comments.mjs) forbids English call-site comments with no opt-out, so the comment-only fix this story asks for would be auto-deleted by lint. The pid-scoped pg_cancel_backend deviation itself remains on origin/main (adapters/postgresql/transaction.test.ts:145), no action possible under the policy."
 ---
 
 ## Context

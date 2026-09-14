@@ -1,7 +1,7 @@
 ---
 title: "Drop the deferred-distinct-PK prelude from Relation#update_all / #delete_all"
-status: ready
-updated: 2026-09-11
+status: in-progress
+updated: 2026-09-14
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 59
-pr: null
-claim: null
-assignee: null
+pr: trails#7755
+claim: "2026-09-14T16:18:52Z"
+assignee: "serializable-add-includes-has-a-third-raw-passthrough-arm"
 blocked-by: null
 closed-reason: null
 ---

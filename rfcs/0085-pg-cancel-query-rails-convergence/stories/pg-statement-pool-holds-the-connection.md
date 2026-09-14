@@ -1,7 +1,7 @@
 ---
 title: "PG StatementPool holds the connection, not a pinned client (retires _detach/onIssue)"
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-09-14
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#6483 (4ec2058381, converge the PG StatementPool): origin/main postgresql-adapter.ts StatementPool constructor(connection: PostgreSQLAdapter, maxSize=1000); dealloc reads this._connection._rawConnection at call time and skips when null/_ending/_ended, swallowing errors. git grep '_detach|onIssue|_commandSettled' in packages/activerecord/src non-test: no hits (_commandSettled itself retired). Residual: GenericStatementPool#delete still returns T|undefined|Promise<T|undefined> (statement-pool.ts:40) — a 'revisit' note, not an acceptance criterion."
 ---
 
 ## Context

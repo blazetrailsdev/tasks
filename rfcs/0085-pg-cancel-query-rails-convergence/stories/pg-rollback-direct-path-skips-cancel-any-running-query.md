@@ -1,7 +1,7 @@
 ---
 title: "rollback()'s direct path skips cancel_any_running_query; Rails has one rollback body"
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-09-14
 rfc: "0085-pg-cancel-query-rails-convergence"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#7588 (4c35ff6c76, retire the invented adapter commit/rollback pair): PostgreSQLAdapter no longer overrides rollback(); origin/main has one body, postgresql/database-statements.ts execRollbackDbTransaction = await _cancelAnyRunningQuery() then internalExecute('ROLLBACK', 'TRANSACTION', allowRetry:false, materializeTransactions:true), matching database_statements.rb:78-81. git grep 'direct DB path|only safe in the TM path|openTransactions === 0' on origin/main postgresql adapter: no hits."
 ---
 
 ## Context
