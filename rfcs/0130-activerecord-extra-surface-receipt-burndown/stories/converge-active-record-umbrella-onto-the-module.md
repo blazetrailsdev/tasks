@@ -1,6 +1,6 @@
 ---
 title: "Port active_record.rb as a real file: the ActiveRecord module and its def self. methods"
-status: draft
+status: in-progress
 updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7759
+claim: "2026-09-14T18:07:21Z"
+assignee: "converge-active-record-umbrella-onto-the-module"
 blocked-by: null
 closed-reason: null
 ---

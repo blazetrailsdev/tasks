@@ -1,7 +1,7 @@
 ---
 title: "fold-receipted-activerecord-root-and-adapter-names"
-status: ready
-updated: 2026-09-13
+status: in-progress
+updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["converge-receipted-activerecord-root-and-adapter-names"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7760
+claim: "2026-09-14T18:17:01Z"
+assignee: "fold-receipted-activerecord-root-and-adapter-names"
 blocked-by: null
 closed-reason: null
 ---

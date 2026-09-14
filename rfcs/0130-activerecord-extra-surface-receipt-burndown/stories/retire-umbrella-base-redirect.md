@@ -1,6 +1,6 @@
 ---
 title: "Delete umbrella_base_redirect and the umbrellaConfig credit branch"
-status: draft
+status: ready
 updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

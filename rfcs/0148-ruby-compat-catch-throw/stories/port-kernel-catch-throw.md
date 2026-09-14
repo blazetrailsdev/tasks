@@ -1,6 +1,6 @@
 ---
 title: "Port Kernel#catch / Kernel#throw and UncaughtThrowError into ruby-compat"
-status: claimed
+status: done
 updated: 2026-09-14
 rfc: "0148-ruby-compat-catch-throw"
 cluster: fidelity
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 280
 priority: 1
-pr: null
+pr: trails#7758
 claim: "2026-09-14T17:44:01Z"
 assignee: "port-kernel-catch-throw"
 blocked-by: null
