@@ -1,7 +1,7 @@
 ---
 title: "extended-deterministic-queries-iterates-encrypted-not-deterministic-attributes"
-status: ready
-updated: 2026-09-13
+status: in-progress
+updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7757
+claim: "2026-09-14T17:42:04Z"
+assignee: "credit-umbrella-def-self-disconnect-all"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Converge i18n's throwException / catchException onto Kernel#catch / Kernel#throw"
-status: draft
+status: ready
 updated: 2026-09-14
 rfc: "0148-ruby-compat-catch-throw"
 cluster: fidelity

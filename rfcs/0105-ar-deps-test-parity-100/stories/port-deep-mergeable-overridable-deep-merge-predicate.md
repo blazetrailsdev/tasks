@@ -1,6 +1,6 @@
 ---
 title: "port-deep-mergeable-overridable-deep-merge-predicate"
-status: in-progress
+status: done
 updated: 2026-09-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null

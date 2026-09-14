@@ -1,6 +1,6 @@
 ---
 title: "Drop the deferred-distinct-PK prelude from Relation#update_all / #delete_all"
-status: in-progress
+status: done
 updated: 2026-09-14
 rfc: "0113-branch-and-guard-parity"
 cluster: null

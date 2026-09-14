@@ -1,6 +1,6 @@
 ---
 title: "extractOptionsBang neither mutates nor returns what Array#extract_options! does"
-status: in-progress
+status: done
 updated: 2026-09-14
 rfc: "0113-branch-and-guard-parity"
 cluster: null

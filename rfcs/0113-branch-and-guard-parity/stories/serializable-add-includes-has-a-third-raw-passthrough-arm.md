@@ -1,6 +1,6 @@
 ---
 title: "serializable_add_includes' consumer has a third raw-passthrough arm Rails does not"
-status: in-progress
+status: done
 updated: 2026-09-14
 rfc: "0113-branch-and-guard-parity"
 cluster: null

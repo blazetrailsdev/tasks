@@ -1,6 +1,6 @@
 ---
 title: "harvest-active-record-umbrella-singleton-defs"
-status: ready
+status: in-progress
 updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["port-global-executor-concurrency-onto-base"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7757
+claim: "2026-09-14T17:53:02Z"
+assignee: "credit-umbrella-def-self-disconnect-all"
 blocked-by: null
 closed-reason: null
 ---
