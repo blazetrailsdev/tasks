@@ -9,8 +9,8 @@ deps: ["converge-receipted-activerecord-root-and-adapter-names"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: trails#7760
-claim: "2026-09-14T18:17:01Z"
+pr: trails#7761
+claim: "2026-09-14T19:13:51Z"
 assignee: "fold-receipted-activerecord-root-and-adapter-names"
 blocked-by: null
 closed-reason: null

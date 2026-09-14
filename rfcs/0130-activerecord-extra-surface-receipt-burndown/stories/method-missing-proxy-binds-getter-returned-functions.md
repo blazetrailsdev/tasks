@@ -1,7 +1,7 @@
 ---
 title: "methodMissingProxy binds getter-returned functions; converge ReflectionProxy onto it"
-status: ready
-updated: 2026-09-13
+status: in-progress
+updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7762
+claim: "2026-09-14T19:18:35Z"
+assignee: "method-missing-proxy-binds-getter-returned-functions"
 blocked-by: null
 closed-reason: null
 ---
