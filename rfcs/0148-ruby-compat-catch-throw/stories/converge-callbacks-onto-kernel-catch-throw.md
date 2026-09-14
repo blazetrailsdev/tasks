@@ -2,7 +2,7 @@
 title: "Converge throwAbort / isAbortSignal onto Kernel#catch / Kernel#throw"
 status: draft
 updated: 2026-09-14
-rfc: "0000-ruby-compat-catch-throw"
+rfc: "0148-ruby-compat-catch-throw"
 cluster: fidelity
 packages: ["activesupport", "activemodel", "activerecord", "actionpack"]
 deps: ["port-kernel-catch-throw"]

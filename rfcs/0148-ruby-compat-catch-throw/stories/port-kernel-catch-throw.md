@@ -2,7 +2,7 @@
 title: "Port Kernel#catch / Kernel#throw and UncaughtThrowError into ruby-compat"
 status: draft
 updated: 2026-09-14
-rfc: "0000-ruby-compat-catch-throw"
+rfc: "0148-ruby-compat-catch-throw"
 cluster: fidelity
 packages: ["ruby-compat"]
 deps: []
