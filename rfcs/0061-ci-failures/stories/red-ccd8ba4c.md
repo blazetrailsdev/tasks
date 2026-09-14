@@ -1,6 +1,6 @@
 ---
 title: "Active Record MariaDB Tests (prepared statements) failing on main @ccd8ba4c"
-status: ready
+status: in-progress
 updated: 2026-09-14
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#7749
+claim: "2026-09-14T12:37:37Z"
+assignee: "red-ccd8ba4c"
 blocked-by: null
 closed-reason: null
 ---
