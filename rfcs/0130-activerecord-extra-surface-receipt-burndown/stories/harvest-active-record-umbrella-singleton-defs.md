@@ -1,6 +1,6 @@
 ---
 title: "harvest-active-record-umbrella-singleton-defs"
-status: claimed
+status: in-progress
 updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-global-executor-concurrency-onto-base"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#7752
 claim: "2026-09-14T13:34:36Z"
 assignee: "converge-tempfile-onto-the-delegate-class-primitive"
 blocked-by: null

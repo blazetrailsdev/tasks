@@ -1,6 +1,6 @@
 ---
 title: "credit-method-missing-forwarded-surface-in-the-extractor"
-status: claimed
+status: in-progress
 updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: trails#7752
 claim: "2026-09-14T13:20:36Z"
 assignee: "converge-tempfile-onto-the-delegate-class-primitive"
 blocked-by: null

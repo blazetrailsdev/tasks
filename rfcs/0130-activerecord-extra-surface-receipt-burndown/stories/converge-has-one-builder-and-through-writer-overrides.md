@@ -1,6 +1,6 @@
 ---
 title: "converge-has-one-builder-and-through-writer-overrides"
-status: claimed
+status: in-progress
 updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#7753
 claim: "2026-09-14T13:57:06Z"
 assignee: "converge-has-one-builder-and-through-writer-overrides"
 blocked-by: null
