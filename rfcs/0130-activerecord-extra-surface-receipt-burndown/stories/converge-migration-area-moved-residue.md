@@ -1,6 +1,6 @@
 ---
 title: "converge-migration-area-moved-residue"
-status: claimed
+status: in-progress
 updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: trails#7747
 claim: "2026-09-14T01:45:12Z"
 assignee: "converge-has-one-builder-and-through-writer-overrides"
 blocked-by: null
