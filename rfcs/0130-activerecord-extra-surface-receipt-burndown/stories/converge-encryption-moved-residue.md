@@ -1,7 +1,7 @@
 ---
 title: "converge-encryption-moved-residue"
-status: ready
-updated: 2026-09-13
+status: in-progress
+updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7744
+claim: "2026-09-14T01:44:25Z"
+assignee: "converge-encryption-moved-residue"
 blocked-by: null
 closed-reason: null
 ---

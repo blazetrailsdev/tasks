@@ -1,7 +1,7 @@
 ---
 title: "converge-normalized-value-type-and-locking-type-onto-delegate-class"
-status: ready
-updated: 2026-09-13
+status: in-progress
+updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7745
+claim: "2026-09-14T01:46:30Z"
+assignee: "converge-normalized-value-type-and-locking-type-onto-delegate-class"
 blocked-by: null
 closed-reason: null
 ---

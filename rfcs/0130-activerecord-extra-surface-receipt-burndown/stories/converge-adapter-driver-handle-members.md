@@ -1,7 +1,7 @@
 ---
 title: "converge-adapter-driver-handle-members"
-status: in-progress
-updated: 2026-09-13
+status: done
+updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []

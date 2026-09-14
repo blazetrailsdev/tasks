@@ -1,7 +1,7 @@
 ---
 title: "converge-migration-announce-option-key-spelling"
-status: ready
-updated: 2026-09-13
+status: claimed
+updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-14T01:45:12Z"
+assignee: "converge-has-one-builder-and-through-writer-overrides"
 blocked-by: null
 closed-reason: null
 ---
