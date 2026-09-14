@@ -1,6 +1,6 @@
 ---
 title: "converge-concrete-adapter-schema-statement-overrides"
-status: claimed
+status: in-progress
 updated: 2026-09-13
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#7743
 claim: "2026-09-13T22:58:48Z"
 assignee: "converge-concrete-adapter-schema-statement-overrides"
 blocked-by: null
