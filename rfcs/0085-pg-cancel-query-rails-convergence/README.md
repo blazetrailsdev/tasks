@@ -1,9 +1,9 @@
 ---
 rfc: "0085-pg-cancel-query-rails-convergence"
 title: "Converge PG query cancellation and serialization on Rails"
-status: draft
+status: closed
 created: 2026-07-31
-updated: 2026-08-10
+updated: 2026-09-14
 owner: "@deanmarano"
 packages:
   - "activerecord"
