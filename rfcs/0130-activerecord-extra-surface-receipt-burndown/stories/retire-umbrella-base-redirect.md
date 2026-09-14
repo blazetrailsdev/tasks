@@ -1,13 +1,14 @@
 ---
-title: "retire-umbrella-base-redirect"
+title: "Delete umbrella_base_redirect and the umbrellaConfig credit branch"
 status: draft
 updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
-deps: []
+deps:
+  - fold-ar-config-into-active-record-module
 deps-rfc: []
-est-loc: null
+est-loc: 250
 priority: null
 pr: null
 claim: null

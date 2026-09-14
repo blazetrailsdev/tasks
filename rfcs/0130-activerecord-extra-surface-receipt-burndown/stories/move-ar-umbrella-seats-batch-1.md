@@ -1,13 +1,14 @@
 ---
-title: "move-ar-umbrella-seats-batch-1"
+title: "Move ActiveRecord umbrella seats off Base, batch 1: connection and query core"
 status: draft
 updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
-deps: []
+deps:
+  - converge-active-record-umbrella-onto-the-module
 deps-rfc: []
-est-loc: null
+est-loc: 350
 priority: null
 pr: null
 claim: null
