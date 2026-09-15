@@ -91,16 +91,16 @@ code, option 2 on construction and quoting.
 
 ## Rollout
 
-1. **Phase 1: classify.** Measure, for each caller below, whether every Rails caller
-   above it is already reached from async code (option 1 candidate), or whether it
-   sits under a sync Rails API (option 2 candidate). Record the classification in
-   this RFC.
-   - Likely option 1: `typecaster-connection-drops-datasource-gate-and-with-connection`,
-     `converge-get-primary-key-lease-free-schema-cache-reads`.
-   - Likely option 2: `pg-quote-string-escapes-without-with-raw-connection` (under sync
-     `quote` / `to_sql`), `retire-pre-reflection-attribute-seed-fallback` and
-     `seed-default-attributes-inside-with-connection` (under `new Model()`),
-     `reflection-adapter-cold-pool-sync-lease-flips-permanent`.
+1. **Phase 1: classify** each caller by the rule in Open question 1: is the peek
+   reached only from a constructor or a property accessor? Record the result here.
+   - Option 2 (constructor / accessor): `retire-pre-reflection-attribute-seed-fallback`
+     and `seed-default-attributes-inside-with-connection` (`new Model()`),
+     `converge-get-primary-key-lease-free-schema-cache-reads` (read during
+     construction), `insert-all-constructor-reads-the-schema-cache-at-its-rails-call-sites`.
+   - To trace: `typecaster-connection-drops-datasource-gate-and-with-connection`,
+     `reflection-adapter-cold-pool-sync-lease-flips-permanent`,
+     `pg-quote-string-escapes-without-with-raw-connection`. Each is option 1 unless
+     its sync chain bottoms out in a constructor or an accessor.
 2. **Phase 2: option 1 conversions,** one caller per story.
 3. **Phase 3: ratification.** A CLAUDE.md section for the remaining peeks, with
    receipts converted to `PERMANENT`. Close the stories it covers.
@@ -121,11 +121,16 @@ code, option 2 on construction and quoting.
 
 ## Open questions
 
-1. **Who judges "too expensive to go async", and against what?** Options: a fixed
-   rule (any caller under a sync Rails public API is option 2); or a per-caller
-   measured cost (call-site count plus hot-path benchmark). Recommendation: the fixed
-   rule, since it matches how the Relation thenable was ratified and needs no
-   benchmark.
+1. **Who judges "too expensive to go async", and against what?** Resolved
+   (2026-09-15): it is not a cost judgement. The peeks are forced by JS
+   positions that cannot be async at all: a **constructor** (`new Model()`
+   seeding `_defaultAttributes`, `InsertAll#initialize`) and a **property
+   accessor** (a `get`/`set` pair, including generated attribute readers and
+   writers, per CLAUDE.md § "Generated attribute readers are properties"). A peek
+   reached only from one of those positions is option 2. Every other caller is
+   option 1 and converges async. A Rails `x=` writer that is not a generated
+   attribute accessor is option 1 through the settled `setX()` idiom, not an
+   exception.
 2. **One CLAUDE.md section or per-member receipts?** Recommendation: one section,
    named members, as § "Call-time constant resolution" does.
 3. **Does this RFC also own `pg-lookup-cast-type-resolves-only-warmed-type-names`?**
@@ -135,3 +140,4 @@ code, option 2 on construction and quoting.
 ## Changelog
 
 - 2026-09-15: initial draft, from the active-RFC triage audit.
+- 2026-09-15: Open question 1 resolved: only constructors and property accessors force the peek.
