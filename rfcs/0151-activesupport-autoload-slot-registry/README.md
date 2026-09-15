@@ -1,7 +1,7 @@
 ---
 rfc: "0151-activesupport-autoload-slot-registry"
 title: "Converge zero-import slots onto ActiveSupport::Autoload"
-status: draft
+status: active
 created: 2026-09-15
 updated: 2026-09-15
 owner: "@deanmarano"
