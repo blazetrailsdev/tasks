@@ -2,7 +2,7 @@
 title: "insert-all-constructor-reads-the-schema-cache-at-its-rails-call-sites"
 status: blocked
 updated: 2026-09-11
-rfc: "0113-branch-and-guard-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
