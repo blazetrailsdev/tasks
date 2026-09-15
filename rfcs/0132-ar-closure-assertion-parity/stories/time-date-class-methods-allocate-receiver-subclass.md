@@ -31,3 +31,11 @@ The travel stubs in `testing/time-helpers.ts` already dispatch on `this` (`time_
 
 - `Time`/`Date`/`DateTime` class constructors (`now`, `at`, `today`, `jd`) allocate the receiver class.
 - Unskip `time helper travel with time subclass` with Rails' 9 assertions.
+
+## LOC limit
+
+**The per-PR LOC limit is LIFTED for RFC 0132.** Stories here may ship as large
+a PR as the work honestly needs; do not split a file's burndown, restructure a
+test, or leave a remainder unconverged merely to fit a line budget. Every other
+constraint (no test renames, mark file only-shrink, no name-gate regression)
+still applies.

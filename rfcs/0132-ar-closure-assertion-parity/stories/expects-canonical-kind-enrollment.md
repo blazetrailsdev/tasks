@@ -56,3 +56,11 @@ cannot ride along with the extractor change.
 - `scripts/test-compare/assertion-mismatch-mark.json` lowered on a passing run.
 - No test name changes; `pnpm parity:test` percent does not drop for any package.
 - If this is larger than one PR, ship what fits and file the remainder.
+
+## LOC limit
+
+**The per-PR LOC limit is LIFTED for RFC 0132.** Stories here may ship as large
+a PR as the work honestly needs; do not split a file's burndown, restructure a
+test, or leave a remainder unconverged merely to fit a line budget. Every other
+constraint (no test renames, mark file only-shrink, no name-gate regression)
+still applies.

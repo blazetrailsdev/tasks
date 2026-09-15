@@ -58,3 +58,11 @@ Still outstanding (`pnpm parity:test -- --assertions --missing --package actives
   `pnpm parity:test -- --assertions --package activesupport` (LEAVE rows excepted).
 - `scripts/test-compare/assertion-mismatch-mark.json` lowered by the contribution.
 - No test name changes. If larger than one PR, ship what fits and file the rest.
+
+## LOC limit
+
+**The per-PR LOC limit is LIFTED for RFC 0132.** Stories here may ship as large
+a PR as the work honestly needs; do not split a file's burndown, restructure a
+test, or leave a remainder unconverged merely to fit a line budget. Every other
+constraint (no test renames, mark file only-shrink, no name-gate regression)
+still applies.

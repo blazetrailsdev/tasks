@@ -59,3 +59,11 @@ Techniques that worked in the parent PR (see `packages/activesupport/src/ordered
 - `scripts/test-compare/assertion-mismatch-mark.json` lowered via
   `pnpm parity:test:assertions:reseed` on a passing run; never hand-edited upward.
 - No test name changes; `pnpm parity:test` percent for activesupport does not drop.
+
+## LOC limit
+
+**The per-PR LOC limit is LIFTED for RFC 0132.** Stories here may ship as large
+a PR as the work honestly needs; do not split a file's burndown, restructure a
+test, or leave a remainder unconverged merely to fit a line budget. Every other
+constraint (no test renames, mark file only-shrink, no name-gate regression)
+still applies.

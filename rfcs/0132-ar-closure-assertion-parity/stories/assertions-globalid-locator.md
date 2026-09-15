@@ -81,3 +81,11 @@ trails 2` because Rails' third assertion is the
 - No test name changes; `pnpm parity:test` percent for globalid does not drop
   from 131/131.
 - No new rows in `scripts/parity/unported-files/`.
+
+## LOC limit
+
+**The per-PR LOC limit is LIFTED for RFC 0132.** Stories here may ship as large
+a PR as the work honestly needs; do not split a file's burndown, restructure a
+test, or leave a remainder unconverged merely to fit a line budget. Every other
+constraint (no test renames, mark file only-shrink, no name-gate regression)
+still applies.

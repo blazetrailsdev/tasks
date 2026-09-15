@@ -41,3 +41,11 @@ Rails test: `vendor/rails/activesupport/test/core_ext/date_ext_test.rb:24-72,313
   stubbed in the test.
 - `scripts/test-compare/assertion-mismatch-mark.json` lowered by exactly this
   story's contribution.
+
+## LOC limit
+
+**The per-PR LOC limit is LIFTED for RFC 0132.** Stories here may ship as large
+a PR as the work honestly needs; do not split a file's burndown, restructure a
+test, or leave a remainder unconverged merely to fit a line budget. Every other
+constraint (no test renames, mark file only-shrink, no name-gate regression)
+still applies.

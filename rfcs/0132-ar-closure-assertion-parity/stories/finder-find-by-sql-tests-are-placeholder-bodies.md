@@ -32,3 +32,11 @@ The Rails bodies (`vendor/rails/activerecord/test/cases/finder_test.rb`) use fix
 - [ ] All four bodies use the canonical `Topic` / `Account` models and `fixtures({ ... })`, with no local model class.
 - [ ] SQL literals and assertions match Rails line for line, including the async half of `test_find_with_entire_select_statement`.
 - [ ] Green on SQLite, PostgreSQL, MySQL 8 and MariaDB.
+
+## LOC limit
+
+**The per-PR LOC limit is LIFTED for RFC 0132.** Stories here may ship as large
+a PR as the work honestly needs; do not split a file's burndown, restructure a
+test, or leave a remainder unconverged merely to fit a line budget. Every other
+constraint (no test renames, mark file only-shrink, no name-gate regression)
+still applies.

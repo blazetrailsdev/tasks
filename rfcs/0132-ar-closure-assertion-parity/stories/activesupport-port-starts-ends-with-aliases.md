@@ -34,3 +34,11 @@ serves both), and both tests call them.
 
 - `startsWith`/`endsWith` ported at the convention path for `starts_ends_with.rb`, credited by `parity:api`.
 - `symbol-ext.test.ts` and string-ext `starts ends with alias` call the port; assertion parity stays 0/0/0.
+
+## LOC limit
+
+**The per-PR LOC limit is LIFTED for RFC 0132.** Stories here may ship as large
+a PR as the work honestly needs; do not split a file's burndown, restructure a
+test, or leave a remainder unconverged merely to fit a line budget. Every other
+constraint (no test renames, mark file only-shrink, no name-gate regression)
+still applies.

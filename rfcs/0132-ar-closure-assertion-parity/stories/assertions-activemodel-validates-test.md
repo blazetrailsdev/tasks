@@ -98,3 +98,11 @@ produced. Inlining the helper is what turns 2 Rails assertions into N trails
 - No test name changes; `pnpm parity:test` percent for activemodel does not drop.
 - Any trails-only extra test worth keeping moves to the sibling
   `*.trails.test.ts`, per CLAUDE.md.
+
+## LOC limit
+
+**The per-PR LOC limit is LIFTED for RFC 0132.** Stories here may ship as large
+a PR as the work honestly needs; do not split a file's burndown, restructure a
+test, or leave a remainder unconverged merely to fit a line budget. Every other
+constraint (no test renames, mark file only-shrink, no name-gate regression)
+still applies.
