@@ -2,7 +2,7 @@
 title: "Converge CollectionProxy scope delegates; delete wrapCollectionProxy"
 status: draft
 updated: 2026-09-15
-rfc: "0130-activerecord-extra-surface-receipt-burndown"
+rfc: "0075-collection-association-target-fidelity"
 cluster: null
 packages: []
 deps: []
