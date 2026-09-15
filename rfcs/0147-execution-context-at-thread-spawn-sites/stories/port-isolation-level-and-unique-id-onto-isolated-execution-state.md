@@ -1,6 +1,6 @@
 ---
 title: "Port isolation_level, scope and unique_id onto IsolatedExecutionState"
-status: claimed
+status: done
 updated: 2026-09-15
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#7784
 claim: "2026-09-15T13:52:05Z"
 assignee: "isolated-execution-state-fetch-and-run-have-no-rails-counterpart"
 blocked-by: null

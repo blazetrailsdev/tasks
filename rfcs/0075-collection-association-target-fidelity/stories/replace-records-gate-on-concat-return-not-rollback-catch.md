@@ -1,7 +1,7 @@
 ---
 title: "replace_records must gate on concat's falsy return, not a caught Rollback"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Landed: replaceRecords (collection-association.ts:902-930) gates on concat's falsy return via check(records) => records ? target : restoreAndRaise(), restoring the original target (_writeTargetStore) and raising RecordNotSaved; non-Rollback errors rethrow."
 ---
 
 ## Context

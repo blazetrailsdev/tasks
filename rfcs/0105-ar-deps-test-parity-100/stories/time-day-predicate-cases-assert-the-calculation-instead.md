@@ -1,7 +1,7 @@
 ---
 title: "Ten time_ext day-predicate cases assert the calculation, not the predicate"
-status: ready
-updated: 2026-09-10
+status: in-progress
+updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7790
+claim: "2026-09-15T14:27:15Z"
+assignee: "time-day-predicate-cases-assert-the-calculation-instead"
 blocked-by: null
 closed-reason: null
 ---

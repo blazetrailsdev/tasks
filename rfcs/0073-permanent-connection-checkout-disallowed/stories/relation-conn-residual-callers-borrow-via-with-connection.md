@@ -1,6 +1,6 @@
 ---
 title: "Relation#_conn residual callers (pluck, calculations helpers, arel) borrow via with_connection"
-status: draft
+status: in-progress
 updated: 2026-09-15
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7792
+claim: "2026-09-15T14:28:52Z"
+assignee: "relation-conn-residual-callers-borrow-via-with-connection"
 blocked-by: null
 closed-reason: null
 ---

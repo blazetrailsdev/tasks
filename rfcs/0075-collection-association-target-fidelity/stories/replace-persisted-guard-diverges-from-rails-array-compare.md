@@ -1,7 +1,7 @@
 ---
 title: "replace's persisted guard adds a wasLoaded disjunct Rails has no counterpart for"
-status: draft
-updated: 2026-08-14
+status: ready
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 packages: []

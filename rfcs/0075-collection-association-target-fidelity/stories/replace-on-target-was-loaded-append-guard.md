@@ -1,7 +1,7 @@
 ---
 title: "Port replace_on_target's @_was_loaded append guard"
-status: draft
-updated: 2026-07-27
+status: closed
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Landed: replaceOnTarget appends only 'else if (this._wasLoaded || !this.isLoaded())' and nulls _associationIds on that arm (collection-association.ts ~L830-834); _wasLoaded set inside insertRecord blocks. finishReplaceOnTarget and CollectionProxy#_commitToTarget no longer exist."
 ---
 
 ## Context

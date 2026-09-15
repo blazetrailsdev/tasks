@@ -1,6 +1,6 @@
 ---
 title: "touch computes the time default that Rails computes only in _touch_row"
-status: claimed
+status: done
 updated: 2026-09-15
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 75
-pr: null
+pr: trails#7785
 claim: "2026-09-15T13:50:14Z"
 assignee: "time-change-collapses-rails-zone-object-and-zone-string-arms"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Collection target store ownership is inverted: proxy owns it, association views it through a _shared* bridge"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged: CollectionProxy._target/_records getters now read this._association._targetStore (collection-proxy.ts:93-106); the _sharedTarget/_sharedStore bridge is gone (git grep '_sharedTarget|_sharedStore' empty)."
 ---
 
 ## Context

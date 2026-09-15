@@ -1,7 +1,7 @@
 ---
 title: "CollectionProxy#count(column) silently ignored on through loader fallback"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: CollectionProxy#count and its loadHasMany(...).length through fallback were removed; CollectionProxy#calculate(operation, columnName) forwards the column to scope().calculate / super.calculate (collection-proxy.ts ~L520-540). git grep 'loadHasMany(' empty."
 ---
 
 ## Context

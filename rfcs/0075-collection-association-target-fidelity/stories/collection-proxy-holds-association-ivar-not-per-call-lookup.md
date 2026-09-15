@@ -1,7 +1,7 @@
 ---
 title: "CollectionProxy re-resolves its association per call instead of holding Rails' @association"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged: CollectionProxy constructor(klass, association: CollectionAssociation) holds this._association and proxyAssociation returns it; _collectionAssociation() per-call lookup is gone (git grep '_collectionAssociation(): ' empty)."
 ---
 
 ## Context

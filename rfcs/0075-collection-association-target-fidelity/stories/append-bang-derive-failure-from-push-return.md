@@ -1,7 +1,7 @@
 ---
 title: "appendBang should raise from push's return value, not heuristic record inspection"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "appendBang no longer exists on origin/main: git grep 'appendBang' packages/activerecord/src is empty; CollectionProxy (now 645 lines) only has push/concat/append delegating to CollectionAssociation#concat."
 ---
 
 ## Context

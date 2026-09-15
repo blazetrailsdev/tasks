@@ -1,6 +1,6 @@
 ---
 title: "Port the rest of the ActiveRecord::TestFixtures concern"
-status: ready
+status: in-progress
 updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7791
+claim: "2026-09-15T14:26:52Z"
+assignee: "port-test-fixtures-concern-remainder"
 blocked-by: null
 closed-reason: null
 ---

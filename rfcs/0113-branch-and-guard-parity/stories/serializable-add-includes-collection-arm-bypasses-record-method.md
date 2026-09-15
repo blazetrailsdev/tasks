@@ -1,6 +1,6 @@
 ---
 title: "serializable_add_includes' collection arm bypasses each record's serializable_hash"
-status: claimed
+status: done
 updated: 2026-09-15
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 72
-pr: null
+pr: trails#7785
 claim: "2026-09-15T13:50:14Z"
 assignee: "time-change-collapses-rails-zone-object-and-zone-string-arms"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-configure-connection-pragma-host-literal-not-raw-connection"
-status: draft
+status: ready
 updated: 2026-09-15
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null

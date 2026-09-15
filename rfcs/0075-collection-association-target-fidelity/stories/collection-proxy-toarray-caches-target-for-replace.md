@@ -1,7 +1,7 @@
 ---
 title: "Cache toArray's hydrated records into _target so replace can read the real target"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: CollectionProxy#toArray and #_replaceRecords no longer exist (git grep '_replaceRecords' empty); CollectionProxy#replace delegates to CollectionAssociation#replace, which diffs against skipStrictLoading(loadTarget) like Rails."
 ---
 
 ## Context

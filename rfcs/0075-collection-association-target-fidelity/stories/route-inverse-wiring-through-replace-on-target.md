@@ -1,7 +1,7 @@
 ---
 title: "Route inverse collection wiring through replace_on_target(inversing:)"
-status: draft
-updated: 2026-07-27
+status: closed
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Landed: CollectionAssociation target= inverse path calls this.replaceOnTarget(record, true, { replace: true, inversing: true }) (collection-association.ts:38); _wireInverseTarget is gone (git grep empty)."
 ---
 
 ## Context

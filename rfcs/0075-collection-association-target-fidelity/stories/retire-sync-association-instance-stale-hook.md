@@ -1,7 +1,7 @@
 ---
 title: "Retire syncAssociationInstance by snapshotting @stale_state at the proxy load point"
-status: draft
-updated: 2026-07-27
+status: ready
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []

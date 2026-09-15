@@ -1,7 +1,7 @@
 ---
 title: "OO replaceOnTarget: model @replaced_or_added_targets dedup, @_was_loaded append gate, and conditional @association_ids reset"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "All three facets landed in CollectionAssociation#replaceOnTarget (collection-association.ts ~L810-835): _replacedOrAddedTargets re-index after yield and 'inversing || index !== -1 || isNewRecord' registration, the '_wasLoaded || !isLoaded()' append gate, and _associationIds = null only on the append arm. begin/finishReplaceOnTarget are gone."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Wrap CollectionAssociation#replace's load_target in skip_strict_loading"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Landed: collection-association.ts:407 replace() does 'const loaded = this.skipStrictLoading(() => this.loadTarget())'; the wide-exclude replace/skip_strict_loading entry no longer exists on origin/main."
 ---
 
 ## Context

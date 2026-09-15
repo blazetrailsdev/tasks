@@ -1,7 +1,7 @@
 ---
 title: "activemodel validates_test assertion parity"
-status: ready
-updated: 2026-08-17
+status: claimed
+updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages: []
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T14:54:14Z"
+assignee: "assertions-activemodel-validates-test"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Retire the CollectionProxy _queryExecutor flag; mutated loads run AssociationRelation#exec_queries"
-status: draft
-updated: 2026-08-08
+status: ready
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 packages: []

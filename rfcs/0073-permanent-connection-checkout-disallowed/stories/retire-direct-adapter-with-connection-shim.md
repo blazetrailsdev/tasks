@@ -1,16 +1,16 @@
 ---
 title: "Retire withPooledOrDirectConnection by eliminating Model.adapter = x"
-status: ready
-updated: 2026-08-29
+status: in-progress
+updated: 2026-09-15
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 200
 priority: 65
-pr: null
-claim: null
-assignee: null
+pr: trails#7792
+claim: "2026-09-15T14:28:52Z"
+assignee: "relation-conn-residual-callers-borrow-via-with-connection"
 blocked-by: null
 closed-reason: null
 ---

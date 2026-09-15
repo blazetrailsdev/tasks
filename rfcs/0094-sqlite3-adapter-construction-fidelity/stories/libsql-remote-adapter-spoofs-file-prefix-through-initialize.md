@@ -1,6 +1,6 @@
 ---
 title: "libsql-remote-adapter-spoofs-file-prefix-through-initialize"
-status: draft
+status: ready
 updated: 2026-09-15
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null

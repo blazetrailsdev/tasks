@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 63
-pr: trails#7764
+pr: trails#7785
 claim: "2026-09-14T23:55:11Z"
 assignee: "format-f-drops-the-exact-integer-and-rational-arm"
 blocked-by: null

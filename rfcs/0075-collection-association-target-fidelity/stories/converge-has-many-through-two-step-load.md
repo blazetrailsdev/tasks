@@ -1,7 +1,7 @@
 ---
 title: "Converge has_many :through off the two-step load onto the scope chain"
-status: draft
-updated: 2026-08-08
+status: closed
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: loadHasManyThrough and _routeThroughViaAssociationScope are gone (git grep empty); HasManyThroughAssociation#findTarget is target_reflection_has_associated_record? / disable_joins scope.toArray / super.findTarget, and the call-mismatches-exclude has-many-through-association.json row file no longer exists. Remaining _queryExecutor early return is tracked by retire-collection-proxy-query-executor-flag."
 ---
 
 ## Context

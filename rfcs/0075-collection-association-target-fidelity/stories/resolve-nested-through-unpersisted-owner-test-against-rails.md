@@ -1,7 +1,7 @@
 ---
 title: "Nested-through unpersisted-owner test asserts non-Rails behaviour and blocks the toArray collapse"
-status: draft
-updated: 2026-08-20
+status: ready
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 packages: []

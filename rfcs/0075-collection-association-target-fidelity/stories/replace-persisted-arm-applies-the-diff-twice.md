@@ -1,7 +1,7 @@
 ---
 title: "replace's persisted-owner arm applies the diff twice, once in-memory and once in persistReplacePlan"
-status: draft
-updated: 2026-08-20
+status: closed
+updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged: CollectionAssociation#replace (collection-association.ts:392-409) is Rails' body — new-owner replaceRecords, else replaceCommonRecordsInMemory + transaction(replaceRecords) — applied once; persistReplacePlan/ReplacePlan are gone (git grep empty)."
 ---
 
 ## Context
