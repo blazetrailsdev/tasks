@@ -1,5 +1,5 @@
 ---
-rfc: "0000-sync-schema-reflection-readers"
+rfc: "0150-sync-schema-reflection-readers"
 title: "Sync schema-reflection readers: converge callers async or ratify the peek"
 status: draft
 created: 2026-09-15
@@ -12,9 +12,7 @@ clusters:
   - connection-lease
 ---
 
-<!-- Unnumbered until merge; scripts/finalize-rfc.mjs assigns the number. -->
-
-# RFC — Sync schema-reflection readers
+# RFC 0150 — Sync schema-reflection readers
 
 ## Summary
 
