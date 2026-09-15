@@ -1,6 +1,6 @@
 ---
 title: "Drop invented constructors from ruby-compat core error classes"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0148-ruby-compat-catch-throw"
 cluster: null

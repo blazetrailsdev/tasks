@@ -1,6 +1,6 @@
 ---
 title: "Move ActiveRecord umbrella seats off Base, batch 1: connection and query core"
-status: claimed
+status: in-progress
 updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#7772
 claim: "2026-09-15T01:58:09Z"
 assignee: "move-ar-umbrella-seats-batch-1"
 blocked-by: null
