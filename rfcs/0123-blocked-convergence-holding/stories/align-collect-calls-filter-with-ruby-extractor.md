@@ -51,3 +51,12 @@ impossible.
    `--write` reseed).
 3. Tests pin that `this._helper()` and `Klass()` are not credited, while
    `constructor` and `super` still are.
+
+## Update 2026-09-15 (triage audit)
+
+The blocker names the design, so this story is ready once it is adopted. Acceptance
+criterion 1 is amended: apply the `_`-prefix / non-lowercase name filter to the
+**compared** call set only, AFTER `reachedSameFileMethods` / `SAME_FILE_CLOSURE_DEPTH`
+has walked the unfiltered edges (`scripts/api-compare/compare.ts:538-585`), or emit
+closure edges separately from `calls`. The closure must stay sound, which means no
+new closure false-positive rows. Only genuinely stale rows are deleted.

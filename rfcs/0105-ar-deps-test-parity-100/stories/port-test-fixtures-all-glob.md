@@ -5,7 +5,8 @@ updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - "port-test-fixtures-concern-remainder"
 deps-rfc: []
 est-loc: null
 priority: null
@@ -41,3 +42,8 @@ closed-reason: null
   `teardownTransactionalFixtures` driven by the per-suite TestFixtures class
   (`isUsesTransaction(name)`, `lockThreads`), then narrow or retire the
   `test_fixtures.rb` row in `scripts/parity/unported-files/unscoped.ts`.
+
+## Update 2026-09-15 (triage audit)
+
+The premise ("ClassMethods ported") is still in flight as trails#7791
+(`port-test-fixtures-concern-remainder`), and is now recorded as a dependency.

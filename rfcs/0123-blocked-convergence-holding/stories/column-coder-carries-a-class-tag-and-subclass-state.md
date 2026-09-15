@@ -71,3 +71,18 @@ gone. That needs both halves:
 - [ ] `base_test.rb` "clear cache!" passes on sqlite3, postgresql AND mysql2 —
       each lane fails this differently, so all three must be run.
 - [ ] `packages/activerecord/src/support/schema-cache-dump.trails.test.ts` passes.
+
+## Update 2026-09-15 (triage audit)
+
+Respec against vendor/rails, as the blocker requested. `postgresql/column.rb:50-61` and
+`sqlite3/column.rb:36-44` DO define `init_with`/`encode_with`, so the acceptance
+criterion "postgresql/column.ts and sqlite3/column.ts carry no override" is withdrawn. Those
+overrides stay and must match the Ruby keys exactly. The actionable scope is now:
+
+- Delete `mysql/column.ts`'s `encodeWith` override, since `mysql/column.rb` defines
+  none and `extra` belongs to `MySQL::TypeMetadata`.
+- Check that the PG and SQLite3 overrides write exactly the keys their Ruby bodies write.
+
+The `class` coder key and the Column-held `oid`/`fmod`/`extra` (which Rails keeps on
+TypeMetadata) stay out of scope. They are blocked on the dump-vs-reflected comparison in
+`test_clear_cache!` and should be filed as their own story if pursued.

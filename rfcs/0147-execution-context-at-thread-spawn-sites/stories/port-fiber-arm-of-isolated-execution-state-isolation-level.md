@@ -20,8 +20,9 @@ closed-reason: null
 
 `IsolatedExecutionState.isolationLevel=` (`packages/activesupport/src/isolated-execution-state.ts`)
 ports `activesupport/lib/active_support/isolated_execution_state.rb:13-27`, but only the
-`when :thread; Thread` arm of the `@scope` case: ruby-compat has no `Fiber` seat, so
-`isolationLevel = "fiber"` validates and clears but leaves `scope` at `Thread`. Rails also
+`when :thread; Thread` arm of the `@scope` case. ruby-compat has no `Fiber` seat, so since
+trails#7784 `isolationLevel = "fiber"` validates the level and then raises
+`NotImplementedError("Fiber")`. That raise is the placeholder this story removes. Rails also
 declares `Fiber.attr_accessor :active_support_execution_state` (`:8`).
 
 ## Acceptance criteria
