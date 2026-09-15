@@ -1,6 +1,6 @@
 ---
 title: "Give I18n.fallbacks per-execution-context storage so the multi-threaded fallbacks test can port"
-status: ready
+status: claimed
 updated: 2026-09-14
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-14T23:53:49Z"
+assignee: "fixture-set-instance-form-and-all-loaded-fixtures"
 blocked-by: null
 closed-reason: null
 ---

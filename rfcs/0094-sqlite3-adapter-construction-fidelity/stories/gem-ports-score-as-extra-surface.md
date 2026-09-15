@@ -1,7 +1,7 @@
 ---
 title: "Gem ports score as extra surface, forcing receipts on faithful gem code"
-status: ready
-updated: 2026-09-11
+status: claimed
+updated: 2026-09-14
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: 16
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-14T23:56:25Z"
+assignee: "gem-ports-score-as-extra-surface"
 blocked-by: null
 closed-reason: null
 ---

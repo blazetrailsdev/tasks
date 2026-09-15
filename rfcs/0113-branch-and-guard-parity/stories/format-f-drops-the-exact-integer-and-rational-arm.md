@@ -1,7 +1,7 @@
 ---
 title: "%f drops Rails' exact Integer/Rational arm and flattens every argument to a double"
-status: ready
-updated: 2026-09-11
+status: in-progress
+updated: 2026-09-14
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 62
-pr: null
-claim: null
-assignee: null
+pr: trails#7764
+claim: "2026-09-14T23:55:11Z"
+assignee: "format-f-drops-the-exact-integer-and-rational-arm"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "relocate-attribute-inspection-and-association-instance-methods"
-status: ready
-updated: 2026-09-13
+status: in-progress
+updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7763
+claim: "2026-09-14T23:29:33Z"
+assignee: "port-model-schema-inherited-non-recursive-reload"
 blocked-by: null
 closed-reason: null
 ---

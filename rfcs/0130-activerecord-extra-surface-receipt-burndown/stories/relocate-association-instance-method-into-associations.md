@@ -1,6 +1,6 @@
 ---
 title: "relocate-association-instance-method-into-associations"
-status: draft
+status: in-progress
 updated: 2026-09-14
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7763
+claim: "2026-09-14T23:54:24Z"
+assignee: "relocate-association-instance-method-into-associations"
 blocked-by: null
 closed-reason: null
 ---
