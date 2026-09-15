@@ -9,6 +9,7 @@ packages:
   - activesupport
   - activerecord
   - activemodel
+  - actionpack
   - actionview
   - arel
   - rack-session

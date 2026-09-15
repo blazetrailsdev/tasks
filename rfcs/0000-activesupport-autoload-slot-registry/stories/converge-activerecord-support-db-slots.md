@@ -5,9 +5,9 @@ updated: 2026-09-15
 rfc: "0000-activesupport-autoload-slot-registry"
 cluster: autoload
 packages:
-  - converge-arel-node-slots-onto-autoload
+  - activerecord
 deps:
-  - "activerecord"
+  - "converge-arel-node-slots-onto-autoload"
 deps-rfc: []
 est-loc: 60
 priority: null

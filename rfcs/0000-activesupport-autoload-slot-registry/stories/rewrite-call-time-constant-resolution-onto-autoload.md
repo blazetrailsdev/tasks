@@ -4,15 +4,14 @@ status: draft
 updated: 2026-09-15
 rfc: "0000-activesupport-autoload-slot-registry"
 cluster: autoload
-packages:
-  - converge-activerecord-association-slots-onto-autoload
-  - converge-activerecord-core-slots-onto-autoload
-  - converge-activemodel-and-actionview-slots-onto-autoload
-  - converge-activesupport-slots-onto-autoload
-  - converge-actionpack-rack-session-trailties-slots-onto-autoload
-  - converge-activerecord-support-db-slots
+packages: []
 deps:
-  - "trails"
+  - "converge-activerecord-association-slots-onto-autoload"
+  - "converge-activerecord-core-slots-onto-autoload"
+  - "converge-activemodel-and-actionview-slots-onto-autoload"
+  - "converge-activesupport-slots-onto-autoload"
+  - "converge-actionpack-rack-session-trailties-slots-onto-autoload"
+  - "converge-activerecord-support-db-slots"
 deps-rfc: []
 est-loc: 60
 priority: null
