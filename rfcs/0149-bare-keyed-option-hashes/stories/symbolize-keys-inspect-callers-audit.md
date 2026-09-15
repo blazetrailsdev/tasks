@@ -2,7 +2,7 @@
 title: "audit the 5 trails symbolizeKeys call sites against Rails; keep only where Symbol-ness is observable"
 status: ready
 updated: 2026-09-15
-rfc: "0000-bare-keyed-option-hashes"
+rfc: "0149-bare-keyed-option-hashes"
 cluster: symbolize-keys-policy
 packages: [actionview, activerecord]
 deps: [symbolize-keys-optional-in-call-gate]

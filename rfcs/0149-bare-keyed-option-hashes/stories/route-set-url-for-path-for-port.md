@@ -2,7 +2,7 @@
 title: "port RouteSet#url_for / #path_for at Rails signatures, reading camelCase option keys"
 status: ready
 updated: 2026-09-15
-rfc: "0000-bare-keyed-option-hashes"
+rfc: "0149-bare-keyed-option-hashes"
 cluster: option-hash-key-names
 packages: [actionpack]
 deps: []

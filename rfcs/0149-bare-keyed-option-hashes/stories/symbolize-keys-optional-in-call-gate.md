@@ -2,7 +2,7 @@
 title: "make symbolize_keys an optional call in parity:api:calls (NO_JS_CALL_FORM)"
 status: ready
 updated: 2026-09-15
-rfc: "0000-bare-keyed-option-hashes"
+rfc: "0149-bare-keyed-option-hashes"
 cluster: symbolize-keys-policy
 packages: []
 deps: []

@@ -1,5 +1,5 @@
 ---
-rfc: "0000-bare-keyed-option-hashes"
+rfc: "0149-bare-keyed-option-hashes"
 title: "Bare-keyed option hashes: symbolize_keys only where Symbol-ness is observable"
 status: active
 created: 2026-09-15
@@ -14,11 +14,7 @@ clusters:
   - option-hash-key-names
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. -->
-
-# RFC — Bare-keyed option hashes
+# RFC 0149 — Bare-keyed option hashes
 
 ## Summary
 
