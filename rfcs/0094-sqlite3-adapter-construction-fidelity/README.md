@@ -1,9 +1,9 @@
 ---
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 title: "SQLite3 adapter construction fidelity"
-status: draft
+status: active
 created: 2026-08-09
-updated: 2026-08-09
+updated: 2026-09-15
 owner: "@deanmarano"
 packages:
   - "activerecord"
