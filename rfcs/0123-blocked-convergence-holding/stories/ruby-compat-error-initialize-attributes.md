@@ -2,7 +2,7 @@
 title: "Port MRI initialize attributes for KeyError, NoMethodError, FrozenError"
 status: draft
 updated: 2026-09-15
-rfc: "0148-ruby-compat-catch-throw"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
