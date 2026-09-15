@@ -1,7 +1,7 @@
 ---
 title: "associations_test and eager-loading assertion parity"
 status: ready
-updated: 2026-08-13
+updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages:

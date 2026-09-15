@@ -1,6 +1,6 @@
 ---
 title: "mysql-server-version duplicates the four AdapterHelper supports_*? predicates as constants"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0110-parity-skip-register-correctness"
 cluster: null

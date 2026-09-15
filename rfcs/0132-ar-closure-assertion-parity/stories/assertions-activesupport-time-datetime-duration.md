@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-time-datetime-duration"
-status: ready
+status: in-progress
 updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7820
+claim: "2026-09-15T20:43:19Z"
+assignee: "assertions-activesupport-time-datetime-duration"
 blocked-by: null
 closed-reason: null
 ---

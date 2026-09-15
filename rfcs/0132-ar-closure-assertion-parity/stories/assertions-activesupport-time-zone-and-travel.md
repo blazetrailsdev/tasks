@@ -1,6 +1,6 @@
 ---
 title: "activesupport TimeWithZone / TimeZone / time-travel assertion parity"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity

@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveSupport::Autoload (autoload / autoload_under / autoload_at / eager_autoload / eager_load!)"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload

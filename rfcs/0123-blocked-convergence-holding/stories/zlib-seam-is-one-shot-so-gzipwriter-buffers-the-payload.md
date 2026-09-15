@@ -1,6 +1,6 @@
 ---
 title: "The ZlibAdapter seam is one-shot, so GzipWriter buffers the whole payload instead of streaming"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0123-blocked-convergence-holding"
 cluster: null
