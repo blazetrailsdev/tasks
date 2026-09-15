@@ -2,7 +2,7 @@
 title: "include() links the module method table so post-include alias/remove propagates"
 status: draft
 updated: 2026-09-15
-rfc: "0148-ruby-compat-catch-throw"
+rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
 deps: []
