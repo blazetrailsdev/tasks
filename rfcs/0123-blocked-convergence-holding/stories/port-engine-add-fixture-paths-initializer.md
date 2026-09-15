@@ -59,3 +59,12 @@ appended path carries a trailing slash (`"#{fixtures}/"`).
   `next if is_a?(Rails::Application)` early return.
 - The `:add_fixture_paths` entry is removed from `engine.ts`'s
   deliberately-not-declared header comment.
+
+## Update 2026-09-15 (triage audit)
+
+The recorded blocker no longer holds. `ActiveRecord::TestFixtures` is now ported as a concern:
+`packages/activerecord/src/test-fixtures.ts` `TestFixtures[included]` declares
+`classAttribute "fixturePaths"` and calls `runLoadHooks("active_record_fixtures", base)`,
+mirroring `test_fixtures.rb:20-40`. The initializer can hook `onLoad("active_record_fixtures")`
+and union onto `fixturePaths` today. `packages/trailties/src/engine.ts` still declares no
+`add_fixture_paths`.

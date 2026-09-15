@@ -66,3 +66,13 @@ half of the surfacing story that this blocks.
       matching `schema_cache.rb:470-472`, and
       `schema-cache.trails.test.ts`'s non-gz `なまえ` round trip passes.
 - [ ] `io.trails.test.ts` and `tempfile.trails.test.ts` keep their names.
+
+## Update 2026-09-15 (triage audit)
+
+The recorded blocker (the rack multipart parser writes latin-1 strings into binmode
+tempfiles) no longer holds. trails#7683 made `IO#write` accept bytes, and
+`packages/rack/src/multipart/parser.ts` now writes a `Uint8Array`. `zlib-adapter.ts`
+already writes `Uint8Array`. What remains is the work itself: `doWriteconv`'s ASCII-8BIT
+arm still calls `binaryBytes(string)` (`packages/ruby-compat/src/io.ts`), and
+`SchemaCache#open` still calls `file.setEncoding(Encoding.UTF_8)`. Before starting,
+grep for any remaining caller that writes a byte-per-char string to a binmode stream.

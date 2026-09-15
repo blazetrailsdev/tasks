@@ -45,3 +45,12 @@ canonical `Post` in the worker's model registry for every sibling file.
 - [ ] The canonical `Post` registration is unchanged after the suite runs. Pin it with
       an assertion in a `.trails.test.ts` sidecar.
 - [ ] Green on MySQL and MariaDB; `parity:test` holds at 9 for `schema_test.rb`.
+
+## Update 2026-09-15 (triage audit)
+
+Acceptance criterion 1 is already satisfied: `Base.adapter=` was retired in trails#7679
+and `schema.test.ts` no longer assigns `OmgPost.adapter`. The rest still stands. The
+named `class OmgPost extends Base { static name = "Post" }` can still register over the
+canonical `Post` through `registerSubclass` (`inheritance.ts`). The table name is also
+seeded as `static _tableName`, where Rails writes `self.table_name =`
+(`schema_test.rb:18-22`).

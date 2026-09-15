@@ -37,3 +37,9 @@ Drop the setter; writers seat `_errors` directly (the ivar, as Rails'
 
 - `Validations` defines only the `errors` reader.
 - `persistence.ts` clone and the two test writers assign `_errors` instead.
+
+## Update 2026-09-15 (triage audit)
+
+The production writer has moved. It is now `packages/activerecord/src/core.ts`
+(`copy.errors = new this.errors.constructor(copy)`), not `persistence.ts`. Read
+"`persistence.ts` clone" in the acceptance criteria as that `core.ts` site.
