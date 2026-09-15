@@ -2,7 +2,7 @@
 title: "Port ModelSchema#inherited's reload_schema_from_cache(false) onto subclass registration"
 status: blocked
 updated: 2026-09-14
-rfc: "0130-activerecord-extra-surface-receipt-burndown"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
