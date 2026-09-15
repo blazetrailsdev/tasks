@@ -1,6 +1,6 @@
 ---
 title: "converge-has-one-builder-define-writers"
-status: claimed
+status: blocked
 updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-09-15T15:50:15Z"
-assignee: "await-disconnect-pool-from-pool-manager"
-blocked-by: null
+claim: "2026-09-15T16:33:10Z"
+assignee: "converge-has-one-builder-define-writers"
+blocked-by: "Branch-free base defineWriters cannot serve both macros: belongs_to needs the sync property setter (removing it reds ~40 belongs-to-associations tests), while has_one's writer is async on a persisted owner, so emitting the same property setter for has_one drops the replace promise (has-one-persisted-setter-throws.trails.test.ts: setAttributes loses firm_id; property write starts a stray transaction -> 'cannot start a transaction within a transaction'). Emitting name= + setX in the base is fine (373/376 green); the property-setter half needs a decision: either a per-association sync/async dispatch (a branch the AC forbids) or a ratified rule that async singular writers expose no property setter."
 closed-reason: null
 ---
 

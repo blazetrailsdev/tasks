@@ -1,6 +1,6 @@
 ---
 title: "port RouteSet#url_for / #path_for at Rails signatures, reading camelCase option keys"
-status: ready
+status: in-progress
 updated: 2026-09-15
 rfc: "0149-bare-keyed-option-hashes"
 cluster: option-hash-key-names
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 550
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7806
+claim: "2026-09-15T16:40:17Z"
+assignee: "route-set-url-for-path-for-port"
 blocked-by: null
 closed-reason: null
 ---

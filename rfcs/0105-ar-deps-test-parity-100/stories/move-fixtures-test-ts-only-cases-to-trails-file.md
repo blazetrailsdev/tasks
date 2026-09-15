@@ -1,6 +1,6 @@
 ---
 title: "move-fixtures-test-ts-only-cases-to-trails-file"
-status: ready
+status: claimed
 updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T16:33:43Z"
+assignee: "load-fixtures-once-under-transactional-tests"
 blocked-by: null
 closed-reason: null
 ---

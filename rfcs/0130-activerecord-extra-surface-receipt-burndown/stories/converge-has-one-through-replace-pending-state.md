@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-09-15T15:50:15Z"
-assignee: "await-disconnect-pool-from-pool-manager"
+claim: "2026-09-15T16:58:05Z"
+assignee: "converge-has-one-through-replace-pending-state"
 blocked-by: null
 closed-reason: null
 ---

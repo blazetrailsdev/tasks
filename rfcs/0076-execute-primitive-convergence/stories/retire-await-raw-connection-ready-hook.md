@@ -1,6 +1,6 @@
 ---
 title: "Retire the trails-only awaitRawConnectionReady hook from withRawConnection (mysql2 is the last override)"
-status: draft
+status: done
 updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7802
+claim: "2026-09-15T16:27:44Z"
+assignee: "retire-await-raw-connection-ready-hook"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Route the generated collection accessor through CollectionAssociation#reader"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-cluster-tail-7"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity

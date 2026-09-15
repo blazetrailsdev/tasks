@@ -1,6 +1,6 @@
 ---
 title: "replace's persisted guard adds a wasLoaded disjunct Rails has no counterpart for"
-status: ready
+status: in-progress
 updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7804
+claim: "2026-09-15T16:32:53Z"
+assignee: "converge-preload-writeback-onto-the-preloader"
 blocked-by: null
 closed-reason: null
 ---

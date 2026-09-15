@@ -1,6 +1,6 @@
 ---
 title: "coerceToRecords scans the loaded target for a through association where Rails routes through find"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null

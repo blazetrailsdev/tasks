@@ -1,7 +1,7 @@
 ---
 title: "Delete umbrella_base_redirect and the umbrellaConfig credit branch"
-status: ready
-updated: 2026-09-14
+status: done
+updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7801
+claim: "2026-09-15T16:20:10Z"
+assignee: "retire-umbrella-base-redirect"
 blocked-by: null
 closed-reason: null
 ---

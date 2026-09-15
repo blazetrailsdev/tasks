@@ -1,7 +1,7 @@
 ---
 title: "activesupport Module / Class / Object core_ext assertion parity"
-status: ready
-updated: 2026-08-14
+status: in-progress
+updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages: ["activesupport"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7805
+claim: "2026-09-15T16:36:00Z"
+assignee: "assertions-activesupport-module-class-and-object"
 blocked-by: null
 closed-reason: null
 ---

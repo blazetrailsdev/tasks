@@ -1,6 +1,6 @@
 ---
 title: "privateConstant's mark is write-only now that constantize ignores constant visibility"
-status: ready
+status: done
 updated: 2026-09-15
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 77
-pr: null
-claim: null
-assignee: null
+pr: trails#7803
+claim: "2026-09-15T16:35:38Z"
+assignee: "private-constant-mark-is-write-only-after-constantize-ignores-it"
 blocked-by: null
 closed-reason: null
 ---

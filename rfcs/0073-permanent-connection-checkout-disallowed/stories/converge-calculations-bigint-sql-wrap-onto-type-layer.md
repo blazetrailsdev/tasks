@@ -1,6 +1,6 @@
 ---
 title: "Converge calculations' SQLite bigint SQL wrap onto the type layer; pass relation.arel to select_all"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
