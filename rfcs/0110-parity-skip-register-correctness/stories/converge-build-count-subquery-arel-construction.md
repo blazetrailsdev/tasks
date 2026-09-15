@@ -1,7 +1,7 @@
 ---
 title: "build_count_subquery inlines ONE_AS_ONE and drops Arel.sql's retryable: kwarg"
-status: draft
-updated: 2026-09-08
+status: in-progress
+updated: 2026-09-15
 rfc: "0110-parity-skip-register-correctness"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7780
+claim: "2026-09-15T12:47:28Z"
+assignee: "converge-build-count-subquery-arel-construction"
 blocked-by: null
 closed-reason: null
 ---

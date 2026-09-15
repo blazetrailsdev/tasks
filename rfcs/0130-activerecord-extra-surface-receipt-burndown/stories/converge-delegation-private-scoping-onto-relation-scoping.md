@@ -1,7 +1,7 @@
 ---
 title: "Converge delegation.ts private scoping helper onto Relation#scoping"
-status: draft
-updated: 2026-09-13
+status: ready
+updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "port-fixture-enumerable-and-find-members"
-status: ready
-updated: 2026-09-11
+status: done
+updated: 2026-09-15
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 68
-pr: null
-claim: null
-assignee: null
+pr: trails#7765
+claim: "2026-09-15T12:12:37Z"
+assignee: "io-set-encoding-by-bom-never-runs-so-the-mark-is-not-stripped"
 blocked-by: null
 closed-reason: null
 ---

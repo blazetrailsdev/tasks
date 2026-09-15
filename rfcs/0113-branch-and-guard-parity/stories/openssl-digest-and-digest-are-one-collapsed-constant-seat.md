@@ -1,7 +1,7 @@
 ---
 title: "OpenSSL::Digest and Digest are one collapsed constant seat, so uuid_from_hash's two arms cannot discriminate"
-status: ready
-updated: 2026-09-11
+status: in-progress
+updated: 2026-09-15
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: 69
-pr: null
-claim: null
-assignee: null
+pr: trails#7774
+claim: "2026-09-15T12:12:37Z"
+assignee: "io-set-encoding-by-bom-never-runs-so-the-mark-is-not-stripped"
 blocked-by: null
 closed-reason: null
 ---

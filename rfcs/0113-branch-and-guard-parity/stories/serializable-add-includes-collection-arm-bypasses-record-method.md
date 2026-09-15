@@ -1,14 +1,14 @@
 ---
 title: "serializable_add_includes' collection arm bypasses each record's serializable_hash"
-status: draft
-updated: 2026-09-14
+status: ready
+updated: 2026-09-15
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 72
 pr: null
 claim: null
 assignee: null

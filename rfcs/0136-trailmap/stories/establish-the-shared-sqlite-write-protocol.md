@@ -1,7 +1,7 @@
 ---
 title: "Establish the shared-SQLite write protocol: one writer per table"
-status: draft
-updated: 2026-09-07
+status: in-progress
+updated: 2026-09-15
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#25
+claim: "2026-09-15T12:40:42Z"
+assignee: "establish-the-shared-sqlite-write-protocol"
 blocked-by: null
 closed-reason: null
 ---

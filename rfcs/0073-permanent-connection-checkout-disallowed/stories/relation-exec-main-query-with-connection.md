@@ -1,7 +1,7 @@
 ---
 title: "Relation#exec_main_query borrows via with_connection; retire _conn()'s deprecated fallback"
-status: ready
-updated: 2026-09-11
+status: in-progress
+updated: 2026-09-15
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7781
+claim: "2026-09-15T12:36:32Z"
+assignee: "relation-exec-main-query-with-connection"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "SchemaMigration#_withConnection is a wrapper Rails inlines at all eight call sites"
-status: draft
-updated: 2026-09-12
+status: in-progress
+updated: 2026-09-15
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7781
+claim: "2026-09-15T12:59:21Z"
+assignee: "schema-migration-with-connection-wrapper-rails-inlines"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,14 +1,14 @@
 ---
 title: "touch computes the time default that Rails computes only in _touch_row"
-status: draft
-updated: 2026-09-12
+status: ready
+updated: 2026-09-15
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 75
 pr: null
 claim: null
 assignee: null

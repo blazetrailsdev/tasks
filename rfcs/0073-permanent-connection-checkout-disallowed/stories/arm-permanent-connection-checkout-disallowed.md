@@ -1,7 +1,7 @@
 ---
 title: "arm-permanent-connection-checkout-disallowed"
-status: ready
-updated: 2026-07-27
+status: in-progress
+updated: 2026-09-15
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 deps:
@@ -12,9 +12,9 @@ deps:
 deps-rfc: []
 est-loc: 20
 priority: 45
-pr: null
-claim: null
-assignee: null
+pr: trails#7781
+claim: "2026-09-15T12:36:32Z"
+assignee: "relation-exec-main-query-with-connection"
 blocked-by: null
 closed-reason: null
 ---

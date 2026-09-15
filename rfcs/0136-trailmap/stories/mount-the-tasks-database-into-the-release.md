@@ -1,7 +1,7 @@
 ---
 title: "Give the release its database: mount tasks.db and set TASKS_DATABASE"
-status: draft
-updated: 2026-09-09
+status: in-progress
+updated: 2026-09-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trailmap#25
+claim: "2026-09-15T12:40:31Z"
+assignee: "mount-the-tasks-database-into-the-release"
 blocked-by: null
 closed-reason: null
 ---

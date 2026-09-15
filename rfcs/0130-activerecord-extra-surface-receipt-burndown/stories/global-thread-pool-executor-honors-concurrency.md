@@ -1,7 +1,7 @@
 ---
 title: "global-thread-pool-executor-honors-concurrency"
-status: draft
-updated: 2026-09-14
+status: in-progress
+updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7779
+claim: "2026-09-15T12:25:16Z"
+assignee: "await-disconnect-pool-from-pool-manager"
 blocked-by: null
 closed-reason: null
 ---

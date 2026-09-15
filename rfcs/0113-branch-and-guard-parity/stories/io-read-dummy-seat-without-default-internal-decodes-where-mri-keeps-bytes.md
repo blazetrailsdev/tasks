@@ -1,14 +1,14 @@
 ---
 title: "A dummy-seat UTF-16/UTF-32 read with no default internal decodes where MRI returns the bytes untranscoded"
-status: draft
-updated: 2026-09-11
+status: ready
+updated: 2026-09-15
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 71
 pr: null
 claim: null
 assignee: null

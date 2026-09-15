@@ -1,7 +1,7 @@
 ---
 title: "FMODE_SETENC_BY_BOM is set but io_set_encoding_by_bom never runs"
-status: ready
-updated: 2026-09-11
+status: in-progress
+updated: 2026-09-15
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: 64
-pr: null
-claim: null
-assignee: null
+pr: trails#7774
+claim: "2026-09-15T12:12:37Z"
+assignee: "io-set-encoding-by-bom-never-runs-so-the-mark-is-not-stripped"
 blocked-by: null
 closed-reason: null
 ---

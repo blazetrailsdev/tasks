@@ -1,6 +1,6 @@
 ---
 title: "adapter-helper-supports-predicates-credit"
-status: draft
+status: closed
 updated: 2026-09-15
 rfc: "0110-parity-skip-register-correctness"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged in trails#7780: the four predicates are ported as functions in adapter-helper.ts"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "tsMirrorName takes one string, so an accessor pair or a keyed-table port cannot be credited"
-status: draft
-updated: 2026-08-18
+status: in-progress
+updated: 2026-09-15
 rfc: "0110-parity-skip-register-correctness"
 cluster: null
 packages: ["activesupport", "activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7780
+claim: "2026-09-15T12:47:31Z"
+assignee: "ts-mirror-name-cannot-express-multi-name-ports"
 blocked-by: null
 closed-reason: null
 ---

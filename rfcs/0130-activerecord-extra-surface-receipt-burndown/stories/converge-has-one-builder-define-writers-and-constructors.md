@@ -1,7 +1,7 @@
 ---
 title: "converge-has-one-builder-define-writers-and-constructors"
-status: draft
-updated: 2026-09-14
+status: closed
+updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Half delivered, half duplicated. defineConstructors half landed in trails#7753 (d9bef69c6a): origin/main packages/activerecord/src/associations/builder/has-one.ts no longer defines defineConstructors (only defineWriters at :18). The remaining defineWriters half is owned by converge-has-one-builder-define-writers, whose id is the one the live receipt at has-one.ts:17 names."
 ---
 
 ## Context
