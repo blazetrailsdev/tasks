@@ -42,7 +42,7 @@ autoloader", and this RFC does not reopen that.
 
 - **Invented surface, repeated.** `git ls-files 'packages/*/src/**/*slot*.ts'` lists
   about 24 non-test slot modules across activerecord, activemodel, activesupport,
-  actionview, arel, rack-session and trailties. Each has a bespoke setter name and none
+  actionpack, actionview, arel, rack-session and trailties. Each has a bespoke setter name and none
   has a Rails counterpart.
 - **The register has drifted.** CLAUDE.md says "Fifteen instances exist and are the
   only ones", but slots such as `load-schema-overrides-slot.ts`,
@@ -78,21 +78,25 @@ autoloader", and this RFC does not reopen that.
 - **Keep the slots and just fix the CLAUDE.md register.** Cheapest, but leaves N
   invented setter names and a register that drifts again.
 - **Real lazy loading via top-level `await import()` on first read.** Impossible for a
-  synchronous read; top-level await also breaks the IIFE/CJS bundles (see memory on
-  the Website build).
+  synchronous read; top-level await also breaks the IIFE/CJS bundles (they fail the Website build).
 - **Map slots to `Rails.autoloaders`.** Wrong layer: Zeitwerk is the application
   loader, and trails has none.
 
 ## Rollout
 
-1. **Phase 1:** port `ActiveSupport::Autoload` with direct tests mirroring
-   `activesupport/test/dependencies/autoload_test.rb` (if vendored) and a cycle-safety
-   test importing the built `dist/**.js` as an entry module.
-2. **Phase 2:** migrate `arel/src/node-slots.ts`. It is the hottest read path, so it
-   decides the performance question first.
-3. **Phase 3:** migrate the activerecord slots, then activemodel, actionview,
-   activesupport, rack-session and trailties, one package per story.
-4. **Phase 4:** rewrite the CLAUDE.md section and delete the instance list.
+1. **Phase 1 — registry:** `port-activesupport-dependencies-autoload`.
+2. **Phase 2 — hot path, decides Open question 1:** `converge-arel-node-slots-onto-autoload`.
+3. **Phase 3 — per package, in parallel after Phase 2:**
+   - `converge-activerecord-association-slots-onto-autoload`
+   - `converge-activerecord-core-slots-onto-autoload`
+   - `converge-activerecord-support-db-slots`
+   - `converge-activemodel-and-actionview-slots-onto-autoload`
+   - `converge-activesupport-slots-onto-autoload`
+   - `converge-actionpack-rack-session-trailties-slots-onto-autoload`
+
+   Slots that stand in for a Rails `on_load` hook or a cross-package `defined?` rather than a cycle are classified there and ported onto `onLoad` instead.
+
+4. **Phase 4 — docs:** `rewrite-call-time-constant-resolution-onto-autoload`.
 
 ## Verification
 
