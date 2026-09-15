@@ -42,7 +42,7 @@ autoloader", and this RFC does not reopen that.
 ## Motivation
 
 - **Invented surface, repeated.** `git ls-files 'packages/*/src/**/*slot*.ts'` lists
-  about 24 non-test slot modules across activerecord, activemodel, activesupport,
+  25 non-test slot modules across activerecord, activemodel, activesupport,
   actionpack, actionview, arel, rack-session and trailties. Each has a bespoke setter name and none
   has a Rails counterpart.
 - **The register has drifted.** CLAUDE.md says "Fifteen instances exist and are the
