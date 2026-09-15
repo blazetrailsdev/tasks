@@ -2,7 +2,7 @@
 title: "SchemaDumper.dump defaults its stream to a StringIO where Rails defaults to $stdout"
 status: blocked
 updated: 2026-09-15
-rfc: "0113-branch-and-guard-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
