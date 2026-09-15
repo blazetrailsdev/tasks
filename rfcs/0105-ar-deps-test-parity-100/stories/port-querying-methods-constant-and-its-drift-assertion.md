@@ -1,14 +1,14 @@
 ---
 title: "Port Querying::QUERYING_METHODS and the delegation test's equality assertion that guards it"
-status: draft
-updated: 2026-09-12
+status: ready
+updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

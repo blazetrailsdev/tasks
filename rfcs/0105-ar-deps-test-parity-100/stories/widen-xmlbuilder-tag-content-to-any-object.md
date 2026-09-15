@@ -1,6 +1,6 @@
 ---
 title: "Widen XmlBuilder#tag content to any object, as Builder::XmlMarkup does"
-status: claimed
+status: in-progress
 updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#7808
 claim: "2026-09-15T16:33:43Z"
 assignee: "load-fixtures-once-under-transactional-tests"
 blocked-by: null

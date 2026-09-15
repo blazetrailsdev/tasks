@@ -1,6 +1,6 @@
 ---
 title: "Remove time-ext.ts's Date.now-based day predicates in favour of DateAndTime::Calculations"
-status: draft
+status: ready
 updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "replace-mid-load-settarget-raise-with-loaded-flag-yield"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null

@@ -1,14 +1,14 @@
 ---
 title: "duplicate-test-paths-remaining-groups"
-status: draft
-updated: 2026-09-11
+status: ready
+updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

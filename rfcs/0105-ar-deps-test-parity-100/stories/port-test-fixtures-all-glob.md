@@ -1,6 +1,6 @@
 ---
 title: "port-test-fixtures-all-glob"
-status: draft
+status: ready
 updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps:
   - "port-test-fixtures-concern-remainder"
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 25
 pr: null
 claim: null
 assignee: null

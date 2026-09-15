@@ -1,6 +1,6 @@
 ---
 title: "Converge quotedTime onto value.change through the Type::Time::Value delegator"
-status: draft
+status: claimed
 updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T17:51:21Z"
+assignee: "converge-protocol-adapters-inheritable-options"
 blocked-by: null
 closed-reason: null
 ---

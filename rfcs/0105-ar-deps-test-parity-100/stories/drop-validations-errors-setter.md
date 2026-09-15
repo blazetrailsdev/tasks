@@ -1,14 +1,14 @@
 ---
 title: "Drop Validations#errors setter Rails does not define"
-status: draft
-updated: 2026-09-11
+status: ready
+updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "Add Thread#join / #exit to ruby-compat and use them in the multi-threaded fallbacks port"
-status: draft
+status: ready
 updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 15
 pr: null
 claim: null
 assignee: null

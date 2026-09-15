@@ -1,7 +1,7 @@
 ---
 title: "The ZlibAdapter seam is one-shot, so GzipWriter buffers the whole payload instead of streaming"
-status: ready
-updated: 2026-09-07
+status: in-progress
+updated: 2026-09-15
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 48
-pr: null
-claim: null
-assignee: null
+pr: trails#7811
+claim: "2026-09-15T17:52:47Z"
+assignee: "zlib-seam-is-one-shot-so-gzipwriter-buffers-the-payload"
 blocked-by: null
 closed-reason: null
 ---

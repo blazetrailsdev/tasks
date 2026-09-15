@@ -1,6 +1,6 @@
 ---
 title: "converge-relation-delegation-scope-proxy-and-records-delegates"
-status: claimed
+status: in-progress
 updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#7809
 claim: "2026-09-15T16:40:48Z"
 assignee: "converge-relation-delegation-scope-proxy-and-records-delegates"
 blocked-by: null

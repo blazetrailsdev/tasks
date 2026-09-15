@@ -1,6 +1,6 @@
 ---
 title: "Fix SingularAssociation TDZ when belongs-to builder is the entry module"
-status: draft
+status: claimed
 updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T17:51:21Z"
+assignee: "converge-protocol-adapters-inheritable-options"
 blocked-by: null
 closed-reason: null
 ---

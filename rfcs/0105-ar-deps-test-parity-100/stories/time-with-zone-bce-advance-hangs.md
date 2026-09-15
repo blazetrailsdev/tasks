@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone#- with a multi-millennium Duration hangs: getZoneInfo misreads BCE years from Intl, so periodsForLocal returns [] forever"
-status: claimed
+status: in-progress
 updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#7808
 claim: "2026-09-15T16:33:43Z"
 assignee: "load-fixtures-once-under-transactional-tests"
 blocked-by: null
