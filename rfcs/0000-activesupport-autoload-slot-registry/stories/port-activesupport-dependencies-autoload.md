@@ -1,0 +1,32 @@
+---
+title: "Port ActiveSupport::Autoload (autoload / autoload_under / autoload_at / eager_autoload / eager_load!)"
+status: draft
+updated: 2026-09-15
+rfc: "0000-activesupport-autoload-slot-registry"
+cluster: autoload
+packages:
+  - activesupport
+deps: []
+deps-rfc: []
+est-loc: 180
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+`ActiveSupport::Autoload` (`vendor/rails/activesupport/lib/active_support/dependencies/autoload.rb`) is the gems' own constant-resolution layer: `autoload(const_name, path = @_at_path)` (:30-43), `autoload_under` (:45-50), `autoload_at` (:52-57), `eager_autoload` (:58-63), `eager_load!` (:65-70). ActiveRecord uses it at `active_record.rb:41-43,95,132-136`. trails has no port (no `autoload` in `packages/activesupport/src`), and `vendor/rails/activesupport/test/autoload_test.rb` (6 tests) is listed unported in `scripts/parity/unported-files/activesupport.ts:267`.
+
+The registry is the foundation every slot migration in this RFC builds on, so it must itself have **zero runtime imports** — the property that lets a slot module sit in any cycle today.
+
+## Acceptance criteria
+
+- `packages/activesupport/src/dependencies/autoload.ts` exports the five methods at their Rails names, in source order, as `this`-typed functions a namespace object `extend`s (CLAUDE.md § Module mixins).
+- `autoload` binds a name that a defining module later seats and that a reader resolves at call time; `eagerAutoload` records names and `eagerLoadBang` imports them. The async signature of `eagerLoadBang` (Ruby's `const_get` is sync) is cited at its declaration.
+- The registry module has no runtime imports (checked by a trails test that reads its compiled import list).
+- `autoload_test.rb`'s six tests are ported with verbatim names, adapted to trails' registration shape where Ruby's file-path `require` has no counterpart, and the unported-files row is deleted.
+- `parity:api` credits `dependencies/autoload.rb`; `parity:test` delta non-negative.
