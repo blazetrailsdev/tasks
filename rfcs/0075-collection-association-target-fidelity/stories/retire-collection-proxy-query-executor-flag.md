@@ -1,6 +1,6 @@
 ---
 title: "Retire the CollectionProxy _queryExecutor flag; mutated loads run AssociationRelation#exec_queries"
-status: claimed
+status: done
 updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#7814
 claim: "2026-09-15T17:55:19Z"
 assignee: "resolve-nested-through-unpersisted-owner-test-against-rails"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "activesupport TimeWithZone / TimeZone / time-travel assertion parity"
-status: claimed
+status: in-progress
 updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#7812
 claim: "2026-09-15T17:53:34Z"
 assignee: "assertions-activesupport-time-zone-and-travel"
 blocked-by: null

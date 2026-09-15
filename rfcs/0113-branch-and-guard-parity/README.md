@@ -1,9 +1,9 @@
 ---
 rfc: "0113-branch-and-guard-parity"
 title: "Branch and guard parity — the axis the call gates cannot see"
-status: active
+status: closed
 created: 2026-08-18
-updated: 2026-08-25
+updated: 2026-09-15
 owner: "@deanmarano"
 packages:
   - "activerecord"

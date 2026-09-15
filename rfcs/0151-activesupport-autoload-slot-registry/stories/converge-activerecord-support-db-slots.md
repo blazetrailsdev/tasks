@@ -1,6 +1,6 @@
 ---
 title: "Retire activerecord test-support ar-db-slots or record it as test tooling"
-status: draft
+status: ready
 updated: 2026-09-15
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
@@ -10,7 +10,7 @@ deps:
   - "converge-arel-node-slots-onto-autoload"
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

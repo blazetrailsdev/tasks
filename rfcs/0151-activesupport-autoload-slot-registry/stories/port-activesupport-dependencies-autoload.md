@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveSupport::Autoload (autoload / autoload_under / autoload_at / eager_autoload / eager_load!)"
-status: draft
+status: in-progress
 updated: 2026-09-15
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
@@ -9,10 +9,10 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#7815
+claim: "2026-09-15T18:24:36Z"
+assignee: "port-activesupport-dependencies-autoload"
 blocked-by: null
 closed-reason: null
 ---

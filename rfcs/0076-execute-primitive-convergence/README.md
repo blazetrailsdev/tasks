@@ -1,7 +1,7 @@
 ---
 rfc: "0076-execute-primitive-convergence"
 title: "execute/raw_execute/perform_query primitive convergence"
-status: active
+status: closed
 created: 2026-07-26
 updated: 2026-09-15
 owner: "@deanmarano"

@@ -1,6 +1,6 @@
 ---
 title: "Converge activerecord core slots onto ActiveSupport::Autoload"
-status: draft
+status: ready
 updated: 2026-09-15
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
@@ -10,7 +10,7 @@ deps:
   - "converge-arel-node-slots-onto-autoload"
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

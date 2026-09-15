@@ -1,6 +1,6 @@
 ---
 title: "Rewrite CLAUDE.md § Call-time constant resolution for the ActiveSupport::Autoload shape"
-status: draft
+status: ready
 updated: 2026-09-15
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
@@ -14,7 +14,7 @@ deps:
   - "converge-activerecord-support-db-slots"
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

@@ -1,9 +1,9 @@
 ---
 rfc: "0148-ruby-compat-catch-throw"
 title: "Port Kernel#catch / Kernel#throw into ruby-compat and converge the two per-tag copies onto it"
-status: active
+status: closed
 created: 2026-09-14
-updated: 2026-09-14
+updated: 2026-09-15
 owner: "@deanmarano"
 packages:
   - ruby-compat

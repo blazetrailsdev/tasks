@@ -1,6 +1,6 @@
 ---
 title: "Converge CollectionProxy scope delegates; delete wrapCollectionProxy"
-status: draft
+status: in-progress
 updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7817
+claim: "2026-09-15T18:58:09Z"
+assignee: "converge-collection-proxy-scope-delegates-drop-wrap-collection-proxy"
 blocked-by: null
 closed-reason: null
 ---
