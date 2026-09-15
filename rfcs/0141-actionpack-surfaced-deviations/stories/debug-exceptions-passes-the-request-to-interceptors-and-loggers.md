@@ -1,5 +1,5 @@
 ---
-title: "DebugExceptions passes ActionDispatch::Request, not the Rack env, to interceptors, logging and the HTML render"
+title: "DebugExceptions passes ActionDispatch::Request, not the Rack env, to logging and the HTML render"
 status: draft
 updated: 2026-09-15
 rfc: "0141-actionpack-surfaced-deviations"
@@ -31,8 +31,7 @@ The review of #7777 raised this. It was left out because `Interceptor` is a publ
 
 ## Acceptance criteria
 
-- `Interceptor` receives the `Request`, matching `interceptor.call(request, exception)`.
-- `invokeInterceptors`, `logError`, `isLogRescuedResponses` and the HTML render take the `Request`, reading headers through it (`request.getHeader(...)`).
+- `logError`, `isLogRescuedResponses` and the HTML render take the `Request`, reading headers through it (`request.getHeader(...)`).
 - Rails-named tests in `debug-exceptions.test.ts` are updated to pass a `Request`.
 
 ## Definition of done
