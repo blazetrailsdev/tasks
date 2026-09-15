@@ -1,6 +1,6 @@
 ---
 title: "port-fiber-arm-of-isolated-execution-state-isolation-level"
-status: draft
+status: in-progress
 updated: 2026-09-15
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7818
+claim: "2026-09-15T19:06:36Z"
+assignee: "port-fiber-arm-of-isolated-execution-state-isolation-level"
 blocked-by: null
 closed-reason: null
 ---

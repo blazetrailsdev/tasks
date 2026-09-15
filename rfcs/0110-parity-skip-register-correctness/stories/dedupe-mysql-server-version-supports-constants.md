@@ -1,6 +1,6 @@
 ---
 title: "mysql-server-version duplicates the four AdapterHelper supports_*? predicates as constants"
-status: draft
+status: in-progress
 updated: 2026-09-15
 rfc: "0110-parity-skip-register-correctness"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7819
+claim: "2026-09-15T19:06:39Z"
+assignee: "dedupe-mysql-server-version-supports-constants"
 blocked-by: null
 closed-reason: null
 ---

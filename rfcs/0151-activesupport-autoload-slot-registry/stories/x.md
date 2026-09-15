@@ -1,7 +1,7 @@
 ---
 title: "x"
-status: draft
-updated: 2026-09-15
+status: closed
+updated: 2026-09-14
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "created by mistake (empty stub)"
 ---
 
 ## Context
