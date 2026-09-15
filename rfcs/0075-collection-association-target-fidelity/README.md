@@ -1,9 +1,9 @@
 ---
 rfc: "0075-collection-association-target-fidelity"
 title: "Collection association target-store fidelity"
-status: draft
+status: active
 created: 2026-07-26
-updated: 2026-07-27
+updated: 2026-09-15
 owner: "@deanmarano"
 packages:
   - "activerecord"
