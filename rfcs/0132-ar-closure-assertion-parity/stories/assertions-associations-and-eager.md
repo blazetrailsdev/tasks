@@ -1,5 +1,5 @@
 ---
-title: "associations_test and eager-loading assertion parity"
+title: "eager-loading assertion parity"
 status: in-progress
 updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: 396
+est-loc: 600
 priority: null
 pr: trails#7821
 claim: "2026-09-15T21:49:43Z"
@@ -31,13 +31,14 @@ Measured 2026-08-13 (`pnpm parity:test -- --cached --package activerecord --asse
 
 | Rails test file (under `vendor/rails/activerecord/test/cases/`) | count | kind | value |
 | --------------------------------------------------------------- | ----: | ---: | ----: |
-| `associations_test.rb`                                          |    37 |   89 |     0 |
 | `associations/eager_test.rb`                                    |    23 |   89 |     0 |
 | `associations/eager_singularization_test.rb`                    |     0 |    6 |     0 |
 | `associations/eager_load_nested_include_test.rb`                |     2 |    2 |     0 |
 
-**248 divergences** (62 assertion-count, 186 assertion-kind, 0
-assertion-value). Expand per test with `pnpm parity:test -- --package
+**122 divergences** (25 assertion-count, 97 assertion-kind, 0
+assertion-value). `associations_test.rb` (37 count, 89 kind) was split out to
+`assertions-associations-test`: together with this cluster it exceeded the PR
+LOC ceiling. Expand per test with `pnpm parity:test -- --package
 activerecord --assertions --missing` and grep for the file; each line prints
 `rails N vs trails M`. The trails counterparts are at the convention TS path
 the same report prints beside the Ruby file.
