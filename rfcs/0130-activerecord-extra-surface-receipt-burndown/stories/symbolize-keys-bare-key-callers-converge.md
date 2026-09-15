@@ -1,6 +1,6 @@
 ---
 title: "converge the two bare-key symbolize_keys callers dropped in trails#7750"
-status: ready
+status: closed
 updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T13:16:15Z"
+assignee: "symbolize-keys-bare-key-callers-converge"
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: user chose bare-keyed option hashes (tasks#125); symbolize_keys omission becomes gate policy via symbolize-keys-optional-in-call-gate"
 ---
 
 ## Context

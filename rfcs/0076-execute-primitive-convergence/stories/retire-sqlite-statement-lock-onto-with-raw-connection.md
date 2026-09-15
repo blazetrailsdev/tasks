@@ -1,6 +1,6 @@
 ---
 title: "Retire the sqlite _statementLock queue once execute routes through with_raw_connection"
-status: ready
+status: blocked
 updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-15T13:51:06Z"
+assignee: "pg-configure-connection-retire-configured-gate"
+blocked-by: "Reentrant arm IS reachable: with acquireStatementLock no-op'd, 25 Promise.all executeMutation INSERTs inside adapter.transaction() return [25,24,24,...] on BetterSQLite3 (withinNewTransaction holds lock.synchronize, children inherit the Monitor owner via AsyncContext and re-enter withRawConnection); outside a transaction they serialize correctly. Deleting the queue needs a non-reentrant statement section on the Monitor, which is new surface and needs its own design decision."
 closed-reason: null
 ---
 

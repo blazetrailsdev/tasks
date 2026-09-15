@@ -1,6 +1,6 @@
 ---
 title: "A dummy-seat UTF-16/UTF-32 read with no default internal decodes where MRI returns the bytes untranscoded"
-status: ready
+status: claimed
 updated: 2026-09-15
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: 71
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T13:50:14Z"
+assignee: "time-change-collapses-rails-zone-object-and-zone-string-arms"
 blocked-by: null
 closed-reason: null
 ---

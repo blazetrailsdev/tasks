@@ -1,6 +1,6 @@
 ---
 title: "url-for-options-symbol-keyed"
-status: draft
+status: closed
 updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: tasks#125
+claim: "2026-09-15T13:47:01Z"
+assignee: "url-for-options-symbol-keyed"
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: split into 0000-symbol-keyed-option-hashes Track B (tasks#125)"
 ---
 
 ## Context

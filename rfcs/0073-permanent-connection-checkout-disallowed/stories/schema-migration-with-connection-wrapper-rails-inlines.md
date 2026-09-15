@@ -1,6 +1,6 @@
 ---
 title: "SchemaMigration#_withConnection is a wrapper Rails inlines at all eight call sites"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null

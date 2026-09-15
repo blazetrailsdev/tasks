@@ -1,6 +1,6 @@
 ---
 title: "arm-permanent-connection-checkout-disallowed"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null

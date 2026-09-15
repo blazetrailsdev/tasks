@@ -1,6 +1,6 @@
 ---
 title: "PG configure_connection keeps a trails-only _connectionConfigured gate and lazy-acquire configure flag"
-status: draft
+status: claimed
 updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T13:51:06Z"
+assignee: "pg-configure-connection-retire-configured-gate"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "build_count_subquery inlines ONE_AS_ONE and drops Arel.sql's retryable: kwarg"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0110-parity-skip-register-correctness"
 cluster: null

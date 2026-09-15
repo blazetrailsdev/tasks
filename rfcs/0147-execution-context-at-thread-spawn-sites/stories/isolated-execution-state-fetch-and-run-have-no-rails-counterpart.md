@@ -1,7 +1,7 @@
 ---
 title: "IsolatedExecutionState.fetch and .run have no Rails counterpart"
-status: draft
-updated: 2026-09-12
+status: claimed
+updated: 2026-09-15
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T13:52:05Z"
+assignee: "isolated-execution-state-fetch-and-run-have-no-rails-counterpart"
 blocked-by: null
 closed-reason: null
 ---

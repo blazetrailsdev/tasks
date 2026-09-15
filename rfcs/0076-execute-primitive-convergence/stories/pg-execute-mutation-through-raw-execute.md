@@ -1,6 +1,6 @@
 ---
 title: "pg-execute-mutation-through-raw-execute"
-status: draft
+status: claimed
 updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T13:51:06Z"
+assignee: "pg-configure-connection-retire-configured-gate"
 blocked-by: null
 closed-reason: null
 ---

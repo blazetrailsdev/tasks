@@ -1,6 +1,6 @@
 ---
 title: "DebugExceptions picks XML for a browser's Accept header, so every 500 renders as an <error> document"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: trailmap#25
+pr: trails#7777
 claim: "2026-09-15T12:40:38Z"
 assignee: "debug-exceptions-negotiates-xml-for-browser-accept-headers"
 blocked-by: null

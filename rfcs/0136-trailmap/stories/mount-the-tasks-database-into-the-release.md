@@ -1,6 +1,6 @@
 ---
 title: "Give the release its database: mount tasks.db and set TASKS_DATABASE"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0136-trailmap"
 cluster: null

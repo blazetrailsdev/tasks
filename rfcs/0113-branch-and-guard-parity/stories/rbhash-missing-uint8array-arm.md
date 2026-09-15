@@ -1,6 +1,6 @@
 ---
 title: "rbHash drops the rb_str_hash byte arm rbEqual has, so equal binaries hash apart"
-status: ready
+status: claimed
 updated: 2026-09-15
 rfc: "0113-branch-and-guard-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: 74
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T13:50:14Z"
+assignee: "time-change-collapses-rails-zone-object-and-zone-string-arms"
 blocked-by: null
 closed-reason: null
 ---

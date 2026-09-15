@@ -1,6 +1,6 @@
 ---
 title: "tsMirrorName takes one string, so an accessor pair or a keyed-table port cannot be credited"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0110-parity-skip-register-correctness"
 cluster: null

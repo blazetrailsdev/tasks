@@ -1,6 +1,6 @@
 ---
 title: "Establish the shared-SQLite write protocol: one writer per table"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0136-trailmap"
 cluster: null

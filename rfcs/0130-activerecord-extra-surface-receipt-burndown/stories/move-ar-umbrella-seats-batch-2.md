@@ -1,6 +1,6 @@
 ---
 title: "Move ActiveRecord umbrella seats off Base, batch 2: schema, migration and adapter boot"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
