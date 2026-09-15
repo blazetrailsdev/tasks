@@ -1,6 +1,6 @@
 ---
 title: "fold-receipted-activerecord-root-and-adapter-names-remainder-2"
-status: draft
+status: closed
 updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate: remaining receipts stay tracked under fold-receipted-activerecord-root-and-adapter-names-remainder"
 ---
 
 ## Context

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: trails#7786
+pr: trails#7824
 claim: "2026-09-15T14:00:04Z"
 assignee: "fold-receipted-activerecord-root-and-adapter-names-remainder"
 blocked-by: null

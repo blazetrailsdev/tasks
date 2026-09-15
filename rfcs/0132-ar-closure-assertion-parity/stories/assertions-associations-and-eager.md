@@ -1,6 +1,6 @@
 ---
 title: "associations_test and eager-loading assertion parity"
-status: claimed
+status: in-progress
 updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 396
 priority: null
-pr: null
+pr: trails#7821
 claim: "2026-09-15T21:49:43Z"
 assignee: "assertions-associations-and-eager"
 blocked-by: null

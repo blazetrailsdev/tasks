@@ -1,6 +1,6 @@
 ---
 title: "IsolatedExecutionState.has should be isKey (key?)"
-status: ready
+status: in-progress
 updated: 2026-09-15
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7822
+claim: "2026-09-15T22:30:45Z"
+assignee: "isolated-execution-state-has-is-key-predicate"
 blocked-by: null
 closed-reason: null
 ---
