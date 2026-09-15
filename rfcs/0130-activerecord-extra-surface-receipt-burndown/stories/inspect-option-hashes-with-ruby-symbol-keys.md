@@ -1,7 +1,7 @@
 ---
 title: "inspect-option-hashes-with-ruby-symbol-keys"
-status: ready
-updated: 2026-09-13
+status: claimed
+updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T01:58:09Z"
+assignee: "move-ar-umbrella-seats-batch-1"
 blocked-by: null
 closed-reason: null
 ---

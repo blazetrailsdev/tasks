@@ -1,6 +1,6 @@
 ---
 title: "PG reconfigure_connection_timezone bypasses raw_execute"
-status: claimed
+status: done
 updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: trails#7768
 claim: "2026-09-15T00:38:23Z"
 assignee: "pg-configure-connection-body-off-rails-method"
 blocked-by: null

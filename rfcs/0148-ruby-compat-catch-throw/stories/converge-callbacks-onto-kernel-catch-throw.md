@@ -1,6 +1,6 @@
 ---
 title: "Converge throwAbort / isAbortSignal onto Kernel#catch / Kernel#throw"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0148-ruby-compat-catch-throw"
 cluster: fidelity

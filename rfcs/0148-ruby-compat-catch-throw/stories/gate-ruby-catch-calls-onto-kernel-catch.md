@@ -1,6 +1,6 @@
 ---
 title: "Gate Ruby catch calls against kernelCatch in the call-parity ratchet"
-status: draft
+status: in-progress
 updated: 2026-09-15
 rfc: "0148-ruby-compat-catch-throw"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7771
+claim: "2026-09-15T01:21:10Z"
+assignee: "converge-ruby-compat-error-constructors"
 blocked-by: null
 closed-reason: null
 ---

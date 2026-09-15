@@ -1,6 +1,6 @@
 ---
 title: "pg-query-canceled-cancel-trace"
-status: draft
+status: done
 updated: 2026-09-15
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7769
+claim: "2026-09-15T01:08:54Z"
+assignee: "pg-query-canceled-cancel-trace"
 blocked-by: null
 closed-reason: null
 ---
