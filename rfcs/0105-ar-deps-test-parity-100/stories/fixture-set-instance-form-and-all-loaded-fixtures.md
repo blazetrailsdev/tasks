@@ -1,7 +1,7 @@
 ---
 title: "Port FixtureSet's instance form and all_loaded_fixtures"
-status: claimed
-updated: 2026-09-14
+status: in-progress
+updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#7765
 claim: "2026-09-14T23:53:49Z"
 assignee: "fixture-set-instance-form-and-all-loaded-fixtures"
 blocked-by: null

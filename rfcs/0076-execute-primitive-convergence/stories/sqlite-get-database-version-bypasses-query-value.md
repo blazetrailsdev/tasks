@@ -1,7 +1,7 @@
 ---
 title: 'SQLite3Adapter#getDatabaseVersion queries the driver directly instead of queryValue(..., "SCHEMA")'
-status: blocked
-updated: 2026-08-07
+status: claimed
+updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages:
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: "2026-08-07T17:21:52Z"
-assignee: "abstract-adapter-pool-readers-soften-rails-behaviour"
-blocked-by: 'Gated on make-version-gated-predicates-async (RFC 0072), which is still `ready` as of 2026-08-07. The story text sequences this one after it: routing getDatabaseVersion through the async queryValue(..., "SCHEMA") makes the value unavailable to the sync version-gated supports*() readers in sqlite3-adapter.ts (:1240, :1264, :1268, :1304, :1324) until something awaits it. Converging today would have to reintroduce a driver-direct read or a hand-warm somewhere else, i.e. move the deviation rather than retire it.'
+claim: "2026-09-15T00:38:23Z"
+assignee: "pg-configure-connection-body-off-rails-method"
+blocked-by: null
 closed-reason: null
 ---
 

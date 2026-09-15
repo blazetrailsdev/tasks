@@ -1,7 +1,7 @@
 ---
 title: "Retire performQuery's counters out-parameter by converging the SQLite write path onto affected_rows(internal_execute(...))"
-status: draft
-updated: 2026-08-14
+status: closed
+updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "trails#7623 (sqlite3 executeMutation follows the rawExecute chain) removed the counters out-param; git grep counters in sqlite3-adapter.ts / sqlite3/database-statements.ts origin/main: 0 hits. Residual executeMutation reading _lastInsertRowid/_lastAffectedRows is receipted under RFC 0130 fold-receipted-activerecord-root-and-adapter-names-remainder."
 ---
 
 ## Context

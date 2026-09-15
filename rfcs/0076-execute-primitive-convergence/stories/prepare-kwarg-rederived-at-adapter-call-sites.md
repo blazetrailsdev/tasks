@@ -1,7 +1,7 @@
 ---
 title: "prepare: is re-derived at each performQuery call site instead of threaded from the Rails caller"
-status: draft
-updated: 2026-08-10
+status: closed
+updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "_shouldPrepare removed (trails#6835, trails#7035; git grep _shouldPrepare origin/main: 0 hits). prepare is computed upstream as preparedStatements && preparable (abstract/database-statements.ts:838) and PG performQuery threads options.prepare unchanged (postgresql-adapter.ts:2667)."
 ---
 
 ## Context

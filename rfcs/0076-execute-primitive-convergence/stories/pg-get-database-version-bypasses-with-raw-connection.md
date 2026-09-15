@@ -1,7 +1,7 @@
 ---
 title: "PG get_database_version bypasses with_raw_connection"
-status: draft
-updated: 2026-08-16
+status: closed
+updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "trails#7227: postgresql-adapter.ts:1380 getDatabaseVersion is now withRawConnection({}, conn => ...) with the version===0 ConnectionFailed guard inside the block, matching postgresql_adapter.rb:635-643."
 ---
 
 # PG get_database_version bypasses with_raw_connection

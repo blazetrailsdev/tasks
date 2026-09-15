@@ -1,7 +1,7 @@
 ---
 title: "Route executeBatch through rawExecute (Rails execute_batch to raw_execute, not in dirties set)"
-status: blocked
-updated: 2026-08-09
+status: closed
+updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps:
@@ -9,12 +9,12 @@ deps:
   - unify-execute-mutation-into-perform-query-mysql2
 deps-rfc: []
 est-loc: 60
-priority: 1
+priority: null
 pr: null
 claim: "2026-08-09T16:29:33Z"
 assignee: "converge-execute-batch-through-raw-execute"
-blocked-by: "rawExecute is unusable for batches on 2 of 3 adapters: it calls this.performQuery, which is assigned on ONE prototype only (postgresql-adapter.ts:5028) — sqlite3 (sqlite3-adapter.ts:515) and mysql2 (mysql2-adapter.ts:929) keep trails-shaped private _performQuery instead, so rawExecute throws NotImplementedError there. rawExecute also never calls log(), so routing batches through it would drop sql.active_record for every fixture load / truncate_tables / schema apply (Rails wraps perform_query in log, abstract/database_statements.rb:552-559) and take them out of support/ddl-profile.ts's execute/executeMutation leaf patches. Unblocks after wire-raw-execute-through-log (RFC 0076, status ready) plus a Rails-signature performQuery-on-prototype story for sqlite3+mysql2."
-closed-reason: null
+blocked-by: null
+closed-reason: "trails#6913 routed executeBatch through rawExecute: abstract/database-statements.ts:1144 and mysql2/database-statements.ts:98 both loop this.rawExecute; PG no longer assigns its own executeBatch; rawExecute wraps log (abstract/database-statements.ts:1044-1056), so the stated blocker is gone."
 ---
 
 ## Context

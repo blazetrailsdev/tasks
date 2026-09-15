@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-pragmas-port-per-pragma-setters"
-status: draft
+status: done
 updated: 2026-09-15
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7767
+claim: "2026-09-15T00:19:43Z"
+assignee: "sqlite3-pragmas-port-per-pragma-setters"
 blocked-by: null
 closed-reason: null
 ---

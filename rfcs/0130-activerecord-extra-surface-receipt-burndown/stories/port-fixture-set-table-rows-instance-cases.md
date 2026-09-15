@@ -1,7 +1,7 @@
 ---
 title: "port-fixture-set-table-rows-instance-cases"
-status: in-progress
-updated: 2026-09-14
+status: done
+updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Converge i18n's throwException / catchException onto Kernel#catch / Kernel#throw"
-status: claimed
-updated: 2026-09-14
+status: in-progress
+updated: 2026-09-15
 rfc: "0148-ruby-compat-catch-throw"
 cluster: fidelity
 packages: ["i18n"]
@@ -9,7 +9,7 @@ deps: ["port-kernel-catch-throw"]
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: null
+pr: trails#7766
 claim: "2026-09-14T23:54:26Z"
 assignee: "converge-callbacks-onto-kernel-catch-throw"
 blocked-by: null

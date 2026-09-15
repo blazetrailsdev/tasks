@@ -1,6 +1,6 @@
 ---
 title: "converge-create-fixtures-signature-and-read-and-insert"
-status: draft
+status: in-progress
 updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7765
+claim: "2026-09-15T00:54:33Z"
+assignee: "converge-create-fixtures-signature-and-read-and-insert"
 blocked-by: null
 closed-reason: null
 ---

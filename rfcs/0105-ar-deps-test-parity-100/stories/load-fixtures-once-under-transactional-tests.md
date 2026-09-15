@@ -1,7 +1,7 @@
 ---
 title: "load-fixtures-once-under-transactional-tests"
-status: claimed
-updated: 2026-09-14
+status: ready
+updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-09-14T23:53:49Z"
-assignee: "fixture-set-instance-form-and-all-loaded-fixtures"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "PG/abstract executeBatch's transformer-suppression flag spans the await"
-status: draft
-updated: 2026-08-10
+status: closed
+updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "trails#6913 routed executeBatch through rawExecute (abstract/database-statements.ts:1144, mysql2/database-statements.ts:98) and trails#7268 dropped the remaining flag; git grep _inQueryTransformers in non-test src on origin/main: 0 hits."
 ---
 
 ## Context

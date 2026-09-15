@@ -1,7 +1,7 @@
 ---
 title: "PG carries two bindings for one Rails perform_query; collapse onto the Rails name"
-status: draft
-updated: 2026-08-14
+status: claimed
+updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T00:38:23Z"
+assignee: "pg-configure-connection-body-off-rails-method"
 blocked-by: null
 closed-reason: null
 ---

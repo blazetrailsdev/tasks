@@ -1,7 +1,7 @@
 ---
 title: "sqlite3 initialize: file: arm widened for libsql URLs and memory detection; rescue broader than SystemCallError"
-status: draft
-updated: 2026-09-11
+status: done
+updated: 2026-09-15
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7767
+claim: "2026-09-15T00:11:10Z"
+assignee: "sqlite3-initialize-file-arm-widened-for-libsql-and-memory"
 blocked-by: null
 closed-reason: null
 ---

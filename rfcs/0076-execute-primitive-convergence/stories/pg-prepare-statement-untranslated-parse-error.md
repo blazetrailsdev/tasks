@@ -1,7 +1,7 @@
 ---
 title: "PG prepare_statement does not translate the Parse error"
-status: draft
-updated: 2026-08-16
+status: closed
+updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "trails#7717 converged the throw arm: postgresql-adapter.ts prepareStatement now wraps prepare(conn, nextkey, sql) in try/catch throwing this.translateExceptionClass(e, sql, binds), matching postgresql_adapter.rb:920-933; binds is used."
 ---
 
 # PG prepare_statement does not translate the Parse error

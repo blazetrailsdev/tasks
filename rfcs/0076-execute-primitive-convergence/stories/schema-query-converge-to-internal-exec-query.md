@@ -1,7 +1,7 @@
 ---
 title: "Converge schemaQuery onto a real internalExecQuery path, drop the UNWRAPPED_EXECUTE snapshot"
-status: ready
-updated: 2026-08-10
+status: closed
+updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "trails#6574 retired schemaQuery for internalExecQuery(sql, 'SCHEMA'); git grep schemaQuery / UNWRAPPED_EXECUTE / captureUnwrappedExecute in non-test src on origin/main: 0 hits."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "mysql2 computes two bind conversions where Rails computes one"
-status: draft
-updated: 2026-08-09
+status: closed
+updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "trails#7290 sends Rails' typeCastedBinds to the mysql2 driver; mysqlBinds deleted (git grep mysqlBinds origin/main: 0 hits). mysql2-adapter.ts:386-390 computes typeCastedBinds once and passes it to log and performQuery."
 ---
 
 ## Context

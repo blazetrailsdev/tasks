@@ -1,7 +1,7 @@
 ---
 title: "Drop the remaining (this.execute ?? execute) host-dispatch fallbacks"
-status: draft
-updated: 2026-08-30
+status: closed
+updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Fallback sites gone: trails#7225/#7250 (host optionality) and #7532 (invented internalExecQuery branch). git grep 'this.execute ?? execute' and optional 'execute?:' in abstract/database-statements.ts on origin/main: 0 hits."
 ---
 
 ## Context
