@@ -2,7 +2,7 @@
 title: "prove-hash-literal-ivars-in-ruby-compat-receiver-kinds"
 status: blocked
 updated: 2026-09-15
-rfc: "0130-activerecord-extra-surface-receipt-burndown"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
