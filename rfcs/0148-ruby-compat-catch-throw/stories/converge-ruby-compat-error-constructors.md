@@ -18,8 +18,9 @@ closed-reason: null
 
 ## Context
 
-Surfaced by trails#7758. Ruby core exception classes define no `initialize` of
-their own (`vendor/ruby/error.c:3320-3330` `rb_define_class("KeyError", rb_eIndexError)`
+Surfaced by trails#7758. Most of these Ruby core exception classes define no `initialize` of
+their own (`KeyError`, `NoMethodError` and `FrozenError` do, for
+receiver/key/args attributes the TS ports never carried — `error.c:3325-3328,3360-3368`) (`vendor/ruby/error.c:3320-3330` `rb_define_class("KeyError", rb_eIndexError)`
 etc.), yet several ruby-compat ports declare a constructor whose only job is
 `this.name = "X"`. Each one scores a moved extra (`constructor`) in
 `pnpm parity:api:extra --package ruby-compat`:
@@ -38,6 +39,8 @@ pattern, not a per-subclass constructor.
 ## Acceptance criteria
 
 - [ ] Message-only error classes carry no constructor; `name` comes from the prototype.
-- [ ] Default-message classes derive it once in a parent via `new.target`.
+- [ ] Default-message classes carry the class-name default with no constructor
+      (`X.prototype.message`); Ruby's nil-message arm lives on `Exception`
+      (`error.c:1420-1425`), so no single ruby-compat parent can own it.
 - [ ] Existing ruby-compat, activesupport and i18n tests pass; `.name` / `.message` unchanged.
 - [ ] `pnpm parity:api:extra:gate` ruby-compat `total` drops; mark tightened.
