@@ -2,7 +2,7 @@
 title: "Rewrite CLAUDE.md § Call-time constant resolution for the ActiveSupport::Autoload shape"
 status: draft
 updated: 2026-09-15
-rfc: "0000-activesupport-autoload-slot-registry"
+rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
 packages: []
 deps:

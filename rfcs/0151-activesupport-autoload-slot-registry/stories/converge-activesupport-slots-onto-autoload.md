@@ -1,15 +1,15 @@
 ---
-title: "Converge activerecord core slots onto ActiveSupport::Autoload"
+title: "Converge activesupport slots onto ActiveSupport::Autoload"
 status: draft
 updated: 2026-09-15
-rfc: "0000-activesupport-autoload-slot-registry"
+rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
 packages:
-  - activerecord
+  - activesupport
 deps:
   - "converge-arel-node-slots-onto-autoload"
 deps-rfc: []
-est-loc: 300
+est-loc: 150
 priority: null
 pr: null
 claim: null
@@ -22,16 +22,13 @@ closed-reason: null
 
 Slot modules in scope (`packages/<pkg>/src/`):
 
-- `base-slot.ts`
-- `connection-handling-slot.ts`
-- `model-schema-slot.ts`
-- `migration/compatibility-slot.ts`
-- `fixture-error-slot.ts`
-- `encryption/configurable-slot.ts`
-- `load-schema-overrides-slot.ts`
-- `relation/uncacheable-methods-slot.ts`
+- `trails-slot.ts`
+- `trails-logger-slot.ts`
+- `broadcast-logger-slot.ts`
+- `cache/format-version-slot.ts`
+- `action-dispatch-request-slot.ts`
 
-`base-slot.ts` also carries the `ActiveRecord` singleton config-seat reads and the one guarded read (`_Base?.logger` in the adapter constructor, for the standalone sqlite-drivers lane). Preserve that exception's semantics or retire it with its own evidence. Split this story if it passes the LOC ceiling; base-slot is the natural cut.
+These slots are not in CLAUDE.md's instance list. Establish for each whether it breaks a cycle (so it becomes `autoload`) or reaches a package activesupport cannot depend on (`action-dispatch-request-slot.ts`, `trails-slot.ts`). Rails reaches the latter through `on_load` hooks or `defined?` guards, so port it that way instead.
 Follow the read shape settled by `converge-arel-node-slots-onto-autoload` (RFC Open question 1). Do not re-decide it per package.
 
 ## Acceptance criteria

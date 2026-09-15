@@ -1,12 +1,13 @@
 ---
-title: "Converge activemodel and actionview slots onto ActiveSupport::Autoload"
+title: "Converge actionpack, rack-session and trailties slots onto ActiveSupport::Autoload"
 status: draft
 updated: 2026-09-15
-rfc: "0000-activesupport-autoload-slot-registry"
+rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
 packages:
-  - activemodel
-  - actionview
+  - actionpack
+  - rack-session
+  - trailties
 deps:
   - "converge-arel-node-slots-onto-autoload"
 deps-rfc: []
@@ -23,11 +24,12 @@ closed-reason: null
 
 Slot modules in scope (`packages/<pkg>/src/`):
 
-- `activemodel: attribute/user-provided-default-slot.ts`
-- `actionview: base-slot.ts`
-- `actionview: routing-url-for-slot.ts`
+- `actionpack: action-dispatch/http/request-slot.ts`
+- `rack-session: ruby-class-path-slot.ts`
+- `trailties: ruby-class-path-slot.ts`
+- `trailties: trails-slot.ts`
 
-`routing-url-for-slot.ts` is NOT a load-order cycle: it stands in for `ActiveSupport.on_load(:action_controller)` mixing `ActionDispatch::Routing::UrlFor` in (`actionview/lib/action_view/railtie.rb:97-101`), because actionview does not depend on actionpack. Classify it: if it is an `on_load` hook in Rails, port it onto `onLoad`/`runLoadHooks`, not `autoload`.
+The two `ruby-class-path-slot.ts` modules seat Ruby's `self.class` constant path (`rack-session/lib/rack/session/abstract/id.rb:155,396`), not a constant. Classify whether `autoload` is the right home or whether the value belongs on the class itself.
 Follow the read shape settled by `converge-arel-node-slots-onto-autoload` (RFC Open question 1). Do not re-decide it per package.
 
 ## Acceptance criteria

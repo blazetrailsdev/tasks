@@ -1,15 +1,16 @@
 ---
-title: "Converge activerecord association slots onto ActiveSupport::Autoload"
+title: "Converge activemodel and actionview slots onto ActiveSupport::Autoload"
 status: draft
 updated: 2026-09-15
-rfc: "0000-activesupport-autoload-slot-registry"
+rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
 packages:
-  - activerecord
+  - activemodel
+  - actionview
 deps:
   - "converge-arel-node-slots-onto-autoload"
 deps-rfc: []
-est-loc: 200
+est-loc: 150
 priority: null
 pr: null
 claim: null
@@ -22,10 +23,11 @@ closed-reason: null
 
 Slot modules in scope (`packages/<pkg>/src/`):
 
-- `associations/association-class-slots.ts`
-- `associations/collection-proxy-slot.ts`
-- `associations/_scope-slots.ts`
+- `activemodel: attribute/user-provided-default-slot.ts`
+- `actionview: base-slot.ts`
+- `actionview: routing-url-for-slot.ts`
 
+`routing-url-for-slot.ts` is NOT a load-order cycle: it stands in for `ActiveSupport.on_load(:action_controller)` mixing `ActionDispatch::Routing::UrlFor` in (`actionview/lib/action_view/railtie.rb:97-101`), because actionview does not depend on actionpack. Classify it: if it is an `on_load` hook in Rails, port it onto `onLoad`/`runLoadHooks`, not `autoload`.
 Follow the read shape settled by `converge-arel-node-slots-onto-autoload` (RFC Open question 1). Do not re-decide it per package.
 
 ## Acceptance criteria

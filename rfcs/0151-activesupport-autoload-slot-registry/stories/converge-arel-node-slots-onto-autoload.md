@@ -2,7 +2,7 @@
 title: "Converge arel's node-slots onto ActiveSupport::Autoload (decides the hot-path lookup cost)"
 status: draft
 updated: 2026-09-15
-rfc: "0000-activesupport-autoload-slot-registry"
+rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
 packages:
   - arel

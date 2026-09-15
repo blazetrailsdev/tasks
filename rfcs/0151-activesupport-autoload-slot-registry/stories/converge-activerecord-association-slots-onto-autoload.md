@@ -1,15 +1,15 @@
 ---
-title: "Converge activesupport slots onto ActiveSupport::Autoload"
+title: "Converge activerecord association slots onto ActiveSupport::Autoload"
 status: draft
 updated: 2026-09-15
-rfc: "0000-activesupport-autoload-slot-registry"
+rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
 packages:
-  - activesupport
+  - activerecord
 deps:
   - "converge-arel-node-slots-onto-autoload"
 deps-rfc: []
-est-loc: 150
+est-loc: 200
 priority: null
 pr: null
 claim: null
@@ -22,13 +22,10 @@ closed-reason: null
 
 Slot modules in scope (`packages/<pkg>/src/`):
 
-- `trails-slot.ts`
-- `trails-logger-slot.ts`
-- `broadcast-logger-slot.ts`
-- `cache/format-version-slot.ts`
-- `action-dispatch-request-slot.ts`
+- `associations/association-class-slots.ts`
+- `associations/collection-proxy-slot.ts`
+- `associations/_scope-slots.ts`
 
-These slots are not in CLAUDE.md's instance list. Establish for each whether it breaks a cycle (so it becomes `autoload`) or reaches a package activesupport cannot depend on (`action-dispatch-request-slot.ts`, `trails-slot.ts`). Rails reaches the latter through `on_load` hooks or `defined?` guards, so port it that way instead.
 Follow the read shape settled by `converge-arel-node-slots-onto-autoload` (RFC Open question 1). Do not re-decide it per package.
 
 ## Acceptance criteria

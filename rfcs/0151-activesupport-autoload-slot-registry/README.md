@@ -1,5 +1,5 @@
 ---
-rfc: "0000-activesupport-autoload-slot-registry"
+rfc: "0151-activesupport-autoload-slot-registry"
 title: "Converge zero-import slots onto ActiveSupport::Autoload"
 status: draft
 created: 2026-09-15
@@ -19,9 +19,7 @@ clusters:
   - load-order-cycles
 ---
 
-<!-- Unnumbered until merge; scripts/finalize-rfc.mjs assigns the number. -->
-
-# RFC — Converge zero-import slots onto ActiveSupport::Autoload
+# RFC 0151 — Converge zero-import slots onto ActiveSupport::Autoload
 
 ## Summary
 
