@@ -1,0 +1,33 @@
+---
+title: "time-date-class-methods-allocate-receiver-subclass"
+status: draft
+updated: 2026-09-15
+rfc: "0132-ar-closure-assertion-parity"
+cluster: null
+packages: []
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+`vendor/rails/activesupport/test/time_travel_test.rb` `test_time_helper_travel_with_time_subclass`
+asserts `TimeSubclass.now.class == TimeSubclass` (also `Date.today`, `DateTime.now`), inside and
+outside `travel`. In trails it is `it.skip` in `packages/activesupport/src/time-travel.test.ts`:
+`packages/date/src/time.ts` `Time.now` / `Time.at` build through `Time.#atInstant` (hard-coded
+`Time`, private static so `this` cannot reach it from a subclass), so a subclass receiver
+allocates the base class. `Date.today` / `DateTime.now` / `.jd` (`packages/date/src/date.ts`)
+likewise. Ruby's `time_s_now` / `time_s_at` allocate `klass` (`vendor/ruby/time.c`).
+The travel stubs in `testing/time-helpers.ts` already dispatch on `this` (`time_helpers.rb:179-191`).
+
+## Acceptance criteria
+
+- `Time`/`Date`/`DateTime` class constructors (`now`, `at`, `today`, `jd`) allocate the receiver class.
+- Unskip `time helper travel with time subclass` with Rails' 9 assertions.
