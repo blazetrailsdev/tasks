@@ -1,7 +1,7 @@
 ---
 title: 'rbObjAsString and rbInspect drop Float#to_s, so 1.0 renders as "1"'
-status: in-progress
-updated: 2026-09-14
+status: done
+updated: 2026-09-15
 rfc: "0113-branch-and-guard-parity"
 cluster: null
 packages: []
