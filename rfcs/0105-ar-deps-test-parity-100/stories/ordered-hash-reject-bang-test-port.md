@@ -1,6 +1,6 @@
 ---
 title: "Port OrderedHashTest#test_reject! verbatim (drop dead h.reject call)"
-status: ready
+status: claimed
 updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T23:26:23Z"
+assignee: "binaries-fixture-data-from-flowers-asset"
 blocked-by: null
 closed-reason: null
 ---

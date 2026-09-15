@@ -1,7 +1,7 @@
 ---
 title: "attribute_methods assertion parity"
-status: ready
-updated: 2026-08-13
+status: claimed
+updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages:
@@ -9,10 +9,10 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 289
-priority: null
+priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-15T23:14:18Z"
+assignee: "assertions-attribute-methods-test"
 blocked-by: null
 closed-reason: null
 ---

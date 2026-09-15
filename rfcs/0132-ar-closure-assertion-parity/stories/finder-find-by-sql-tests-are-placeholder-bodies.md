@@ -1,14 +1,14 @@
 ---
 title: "Four finder_test.rb find_by_sql/find tests are placeholder bodies with a local Topic and invented quoting"
-status: draft
-updated: 2026-09-10
+status: ready
+updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

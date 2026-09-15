@@ -1,6 +1,6 @@
 ---
 title: "Converge execute_simple/grouped_calculation: drop applyJoinDependency, use model.with_connection"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null

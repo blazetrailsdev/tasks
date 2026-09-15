@@ -1,7 +1,7 @@
 ---
 title: "has_many :through assertion parity"
 status: ready
-updated: 2026-08-13
+updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 307
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

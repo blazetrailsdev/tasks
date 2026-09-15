@@ -1,14 +1,14 @@
 ---
 title: "expects-canonical-kind-enrollment"
 status: ready
-updated: 2026-08-21
+updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

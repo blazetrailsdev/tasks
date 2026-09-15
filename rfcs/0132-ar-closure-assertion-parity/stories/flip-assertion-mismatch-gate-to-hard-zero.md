@@ -1,7 +1,7 @@
 ---
 title: "Flip the assertion-mismatch gate from ratchet to hard zero"
 status: ready
-updated: 2026-08-13
+updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: enforcement
 packages:
@@ -49,7 +49,7 @@ deps:
   - "assertions-validations-and-encryption"
 deps-rfc: []
 est-loc: 200
-priority: 3
+priority: 9
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "Size the newly measured assertion debt and file its burndown stories"
 status: ready
-updated: 2026-08-13
+updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: enforcement
 packages:
@@ -13,7 +13,7 @@ deps:
   - "widen-assertion-report-packages-and-seed-mark"
 deps-rfc: []
 est-loc: 160
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

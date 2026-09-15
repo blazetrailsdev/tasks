@@ -1,6 +1,6 @@
 ---
 title: "IsolatedExecutionState.has should be isKey (key?)"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
