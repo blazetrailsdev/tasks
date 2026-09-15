@@ -1,7 +1,7 @@
 ---
 rfc: "0150-sync-schema-reflection-readers"
 title: "Sync schema-reflection readers: converge callers async or ratify the peek"
-status: draft
+status: closed
 created: 2026-09-15
 updated: 2026-09-15
 owner: "@deanmarano"
