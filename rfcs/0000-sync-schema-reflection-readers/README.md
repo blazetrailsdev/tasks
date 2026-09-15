@@ -76,3 +76,62 @@ code, option 2 on construction and quoting.
   concurrent promises on one adapter, not about sync reads.
 - **`Relation#toSql` / Arel acquisition seam**: already ratified by CLAUDE.md
   § "`Relation` is evaluated by an async query".
+
+## Alternatives considered
+
+- **Leave the stories blocked in RFC 0073 / 0123.** Their recorded gate (the checkout
+  flip) has landed, so the blocker text is false, and the real decision would have no
+  owner.
+- **A synchronous query seam** (a blocking driver call or worker-thread `Atomics.wait`).
+  Not available for the async `pg`/`mysql2` drivers, and it would reintroduce blocking
+  I/O on the event loop that every other convergence in the repo avoids.
+- **Warm every cache eagerly at connect time** so peeks never miss. This was already
+  tried as `eagerLoadSchemaCache`, which is itself one of the members to retire. It
+  moves the miss window rather than closing it.
+
+## Rollout
+
+1. **Phase 1: classify.** Measure, for each caller below, whether every Rails caller
+   above it is already reached from async code (option 1 candidate), or whether it
+   sits under a sync Rails API (option 2 candidate). Record the classification in
+   this RFC.
+   - Likely option 1: `typecaster-connection-drops-datasource-gate-and-with-connection`,
+     `converge-get-primary-key-lease-free-schema-cache-reads`.
+   - Likely option 2: `pg-quote-string-escapes-without-with-raw-connection` (under sync
+     `quote` / `to_sql`), `retire-pre-reflection-attribute-seed-fallback` and
+     `seed-default-attributes-inside-with-connection` (under `new Model()`),
+     `reflection-adapter-cold-pool-sync-lease-flips-permanent`.
+2. **Phase 2: option 1 conversions,** one caller per story.
+3. **Phase 3: ratification.** A CLAUDE.md section for the remaining peeks, with
+   receipts converted to `PERMANENT`. Close the stories it covers.
+4. **Phase 4: retire the shared residue** that neither phase leaves a caller for:
+   `retire-schema-cache-sync-readers-after-checkout-flip`,
+   `delete-the-internal-schema-cache-accessor`,
+   `sync-reads-of-async-reflection-retire-with-rfc-0073`.
+
+## Verification
+
+- Every `@noRailsEquivalent CONVERGEABLE` and `@missingRailsCall … CONVERGEABLE` receipt
+  citing one of the nine stories is either deleted (option 1) or `PERMANENT` under the
+  new CLAUDE.md section (option 2). Target: 0 CONVERGEABLE receipts naming them.
+- `getCachedColumnsHash` / `getCachedDataSourceExists` / `getCachedPrimaryKeys` /
+  `leaseConnectionSync` have callers only at ratified sites.
+- `connection-handling.test.ts` "common APIs don't permanently hold a connection" stays
+  green on all three lanes under `permanent_connection_checkout = :disallowed`.
+
+## Open questions
+
+1. **Who judges "too expensive to go async", and against what?** Options: a fixed
+   rule (any caller under a sync Rails public API is option 2); or a per-caller
+   measured cost (call-site count plus hot-path benchmark). Recommendation: the fixed
+   rule, since it matches how the Relation thenable was ratified and needs no
+   benchmark.
+2. **One CLAUDE.md section or per-member receipts?** Recommendation: one section,
+   named members, as § "Call-time constant resolution" does.
+3. **Does this RFC also own `pg-lookup-cast-type-resolves-only-warmed-type-names`?**
+   It is the same sync-read shape (sync `lookupCastType` over a warmed map).
+   Recommendation: yes, add it in Phase 1.
+
+## Changelog
+
+- 2026-09-15: initial draft, from the active-RFC triage audit.
