@@ -2,7 +2,7 @@
 title: "No Float cast produces the boxed Float seat, so whole-valued Float attributes still render as Integers"
 status: draft
 updated: 2026-09-15
-rfc: "0113-branch-and-guard-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
