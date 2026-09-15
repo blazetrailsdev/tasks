@@ -1,9 +1,9 @@
 ---
 rfc: "0076-execute-primitive-convergence"
 title: "execute/raw_execute/perform_query primitive convergence"
-status: draft
+status: active
 created: 2026-07-26
-updated: 2026-08-10
+updated: 2026-09-15
 owner: "@deanmarano"
 packages:
   - "activerecord"
