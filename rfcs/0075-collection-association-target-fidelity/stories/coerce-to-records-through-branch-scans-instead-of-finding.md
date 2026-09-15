@@ -1,6 +1,6 @@
 ---
 title: "coerceToRecords scans the loaded target for a through association where Rails routes through find"
-status: ready
+status: in-progress
 updated: 2026-09-15
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7797
+claim: "2026-09-15T15:21:53Z"
+assignee: "coerce-to-records-through-branch-scans-instead-of-finding"
 blocked-by: null
 closed-reason: null
 ---

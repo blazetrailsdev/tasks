@@ -1,6 +1,6 @@
 ---
 title: "PG configure_connection keeps a trails-only _connectionConfigured gate and lazy-acquire configure flag"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null

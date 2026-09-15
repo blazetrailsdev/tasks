@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-hash-cluster"
-status: claimed
+status: done
 updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#7794
 claim: "2026-09-15T14:54:14Z"
 assignee: "assertions-activemodel-validates-test"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "pg-execute-mutation-through-raw-execute"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0076-execute-primitive-convergence"
 cluster: null

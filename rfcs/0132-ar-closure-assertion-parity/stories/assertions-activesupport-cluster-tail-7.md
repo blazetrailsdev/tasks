@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-cluster-tail-7"
-status: claimed
+status: in-progress
 updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: "2026-09-15T14:54:14Z"
-assignee: "assertions-activemodel-validates-test"
+pr: trails#7798
+claim: "2026-09-15T15:33:36Z"
+assignee: "assertions-activesupport-cluster-tail-7"
 blocked-by: null
 closed-reason: null
 ---

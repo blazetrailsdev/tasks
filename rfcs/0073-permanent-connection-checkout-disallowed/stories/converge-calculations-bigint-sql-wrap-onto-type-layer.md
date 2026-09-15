@@ -1,6 +1,6 @@
 ---
 title: "Converge calculations' SQLite bigint SQL wrap onto the type layer; pass relation.arel to select_all"
-status: draft
+status: in-progress
 updated: 2026-09-15
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7796
+claim: "2026-09-15T15:38:31Z"
+assignee: "converge-calculations-bigint-sql-wrap-onto-type-layer"
 blocked-by: null
 closed-reason: null
 ---

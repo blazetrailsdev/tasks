@@ -1,6 +1,6 @@
 ---
 title: "Relation#_conn residual callers (pluck, calculations helpers, arel) borrow via with_connection"
-status: in-progress
+status: done
 updated: 2026-09-15
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null

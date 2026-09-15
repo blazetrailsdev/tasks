@@ -1,7 +1,7 @@
 ---
 title: "relocate-ar-config-seats-onto-base"
 status: closed
-updated: 2026-09-14
+updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "superseded by converge-active-record-umbrella-onto-the-module: these converge by redirecting active_record.rb onto ActiveRecord::Base, the flattening trails#7752 rejected; the campaign now ports active_record.rb as a real file"
+closed-reason: "superseded by fold-ar-config-into-active-record-module"
 ---
 
 ## Context

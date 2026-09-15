@@ -1,7 +1,7 @@
 ---
 title: "activesupport logging, notifications and deprecation assertion parity"
-status: ready
-updated: 2026-08-14
+status: in-progress
+updated: 2026-09-15
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages: ["activesupport"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7798
+claim: "2026-09-15T15:33:36Z"
+assignee: "assertions-activesupport-cluster-tail-7"
 blocked-by: null
 closed-reason: null
 ---
