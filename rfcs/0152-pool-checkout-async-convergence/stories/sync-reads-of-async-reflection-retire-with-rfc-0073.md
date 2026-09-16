@@ -2,7 +2,7 @@
 title: "sync-reads-of-async-reflection-retire-with-rfc-0073"
 status: blocked
 updated: 2026-09-04
-rfc: "0123-blocked-convergence-holding"
+rfc: "0152-pool-checkout-async-convergence"
 cluster: null
 packages: []
 deps:

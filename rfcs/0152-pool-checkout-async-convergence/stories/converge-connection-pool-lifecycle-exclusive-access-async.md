@@ -2,7 +2,7 @@
 title: "converge-connection-pool-lifecycle-exclusive-access-async"
 status: blocked
 updated: 2026-09-11
-rfc: "0123-blocked-convergence-holding"
+rfc: "0152-pool-checkout-async-convergence"
 cluster: null
 deps: []
 deps-rfc: []
