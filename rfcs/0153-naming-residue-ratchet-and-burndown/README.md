@@ -1,7 +1,7 @@
 ---
 rfc: "0153-naming-residue-ratchet-and-burndown"
 title: "Ratchet the call-argument naming residue, then burn it down to the gate flip"
-status: draft
+status: active
 created: 2026-09-16
 updated: 2026-09-16
 owner: "@deanmarano"
