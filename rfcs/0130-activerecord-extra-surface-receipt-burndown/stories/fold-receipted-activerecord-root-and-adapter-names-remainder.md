@@ -1,7 +1,7 @@
 ---
 title: "fold-receipted-activerecord-root-and-adapter-names-remainder"
-status: in-progress
-updated: 2026-09-15
+status: done
+updated: 2026-09-16
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
