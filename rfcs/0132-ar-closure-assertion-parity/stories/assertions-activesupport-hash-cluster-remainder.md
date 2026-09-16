@@ -1,7 +1,7 @@
 ---
 title: "assertions-activesupport-hash-cluster-remainder"
 status: ready
-updated: 2026-09-15
+updated: 2026-09-16
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []

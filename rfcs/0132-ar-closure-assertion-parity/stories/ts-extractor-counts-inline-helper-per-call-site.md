@@ -1,7 +1,7 @@
 ---
 title: "TS assertion extractor counts an in-test helper per call site, not lexically"
-status: ready
-updated: 2026-09-15
+status: in-progress
+updated: 2026-09-16
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#7828
+claim: "2026-09-16T02:17:04Z"
+assignee: "expects-canonical-kind-enrollment"
 blocked-by: null
 closed-reason: null
 ---

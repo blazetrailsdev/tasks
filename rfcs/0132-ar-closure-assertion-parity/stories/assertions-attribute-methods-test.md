@@ -1,7 +1,7 @@
 ---
 title: "attribute_methods assertion parity"
-status: in-progress
-updated: 2026-09-15
+status: done
+updated: 2026-09-16
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "type-registry-variadic-lookup-forwarding"
-status: ready
-updated: 2026-09-15
+status: done
+updated: 2026-09-16
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#7513
+claim: "2026-09-16T02:17:04Z"
+assignee: "expects-canonical-kind-enrollment"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port OrderedHashTest#test_reject! verbatim (drop dead h.reject call)"
-status: in-progress
-updated: 2026-09-15
+status: done
+updated: 2026-09-16
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []

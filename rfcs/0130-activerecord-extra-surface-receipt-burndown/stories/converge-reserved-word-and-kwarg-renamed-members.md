@@ -1,7 +1,7 @@
 ---
 title: "converge-reserved-word-and-kwarg-renamed-members"
-status: ready
-updated: 2026-09-15
+status: in-progress
+updated: 2026-09-16
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7829
+claim: "2026-09-16T02:16:23Z"
+assignee: "converge-adapter-execute-mutation-onto-exec-statements"
 blocked-by: null
 closed-reason: null
 ---
