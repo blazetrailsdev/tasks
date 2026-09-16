@@ -1,5 +1,5 @@
 ---
-rfc: "0000-pool-checkout-async-convergence"
+rfc: "0152-pool-checkout-async-convergence"
 title: "Converge the synchronous pool-checkout seams onto the async checkout"
 status: draft
 created: 2026-09-16
@@ -15,11 +15,7 @@ related-rfcs:
   - "0150-sync-schema-reflection-readers"
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-pool-checkout-async-convergence
-     and the H1 below number-free. `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — Converge the synchronous pool-checkout seams onto the async checkout
+# RFC 0152 — Converge the synchronous pool-checkout seams onto the async checkout
 
 ## Summary
 
