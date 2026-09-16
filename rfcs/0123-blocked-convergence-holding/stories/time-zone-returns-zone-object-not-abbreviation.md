@@ -1,7 +1,7 @@
 ---
 title: "Time#zone returns the abbreviation for a zone-object time, so change reads an invented isZoneObject"
-status: draft
-updated: 2026-09-15
+status: ready
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

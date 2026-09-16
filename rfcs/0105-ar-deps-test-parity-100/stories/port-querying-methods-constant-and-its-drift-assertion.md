@@ -1,6 +1,6 @@
 ---
 title: "Port Querying::QUERYING_METHODS and the delegation test's equality assertion that guards it"
-status: done
+status: ready
 updated: 2026-09-16
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 20
-pr: trails#7827
-claim: "2026-09-15T23:26:23Z"
-assignee: "binaries-fixture-data-from-flowers-asset"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

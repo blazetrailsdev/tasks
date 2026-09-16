@@ -1,7 +1,7 @@
 ---
 title: "update/update! must call assignAttributes, not setAttributes (carried from RFC 0087)"
-status: draft
-updated: 2026-09-01
+status: ready
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

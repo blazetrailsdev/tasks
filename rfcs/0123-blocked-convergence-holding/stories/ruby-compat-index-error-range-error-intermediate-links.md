@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat KeyError and FloatDomainError skip Ruby's IndexError/RangeError links"
-status: draft
-updated: 2026-09-10
+status: ready
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

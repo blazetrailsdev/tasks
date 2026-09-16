@@ -1,7 +1,7 @@
 ---
 title: "website-sandbox-drops-base-adapter-assignment"
-status: draft
-updated: 2026-09-11
+status: ready
+updated: 2026-09-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

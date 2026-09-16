@@ -1,7 +1,7 @@
 ---
 title: "stats sync: cron-wrapper outer retry must cover transient gh failures, not only rate limits"
-status: draft
-updated: 2026-09-15
+status: ready
+updated: 2026-09-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

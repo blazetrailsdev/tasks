@@ -1,7 +1,7 @@
 ---
 title: "Gate or retire post-merge-findings' branch-name story fallback"
-status: draft
-updated: 2026-08-26
+status: ready
+updated: 2026-09-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

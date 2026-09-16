@@ -1,7 +1,7 @@
 ---
 title: "MemCacheStore descends from CacheStore, so its three includes cannot splice as Rails' do"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

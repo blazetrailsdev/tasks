@@ -1,7 +1,7 @@
 ---
 title: "no-conditional-in-test misses nested if, ternary and switch in AR test bodies"
 status: ready
-updated: 2026-09-15
+updated: 2026-09-16
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []

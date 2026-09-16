@@ -1,7 +1,7 @@
 ---
 title: "log-subscriber-fragment-tests-use-memorystore-not-file-store"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

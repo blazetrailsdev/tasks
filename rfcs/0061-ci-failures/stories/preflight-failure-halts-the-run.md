@@ -1,7 +1,7 @@
 ---
 title: "Preflight failure halts the whole CI run"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-09-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
