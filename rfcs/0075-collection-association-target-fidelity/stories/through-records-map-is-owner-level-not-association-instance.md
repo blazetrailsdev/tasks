@@ -1,7 +1,7 @@
 ---
 title: "@through_records is owner-level state in trails, per-association-instance in Rails"
-status: ready
-updated: 2026-09-15
+status: done
+updated: 2026-09-16
 rfc: "0075-collection-association-target-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7842
+claim: "2026-09-16T17:11:18Z"
+assignee: "through-records-map-is-owner-level-not-association-instance"
 blocked-by: null
 closed-reason: null
 ---

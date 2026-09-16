@@ -1,6 +1,6 @@
 ---
 title: "Converge FixtureSet.insert onto fixture_set.table_rows"
-status: ready
+status: in-progress
 updated: 2026-09-16
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: trails#7843
+claim: "2026-09-16T17:10:29Z"
+assignee: "remove-legacy-time-ext-day-predicates"
 blocked-by: null
 closed-reason: null
 ---

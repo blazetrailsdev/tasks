@@ -1,6 +1,6 @@
 ---
 title: "SafeBuffer#to_s returns self, and SafeBufferTest asserts its class"
-status: claimed
+status: done
 updated: 2026-09-16
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 10
-pr: null
+pr: trails#7827
 claim: "2026-09-16T16:58:54Z"
 assignee: "binaries-fixture-data-from-flowers-asset"
 blocked-by: null
