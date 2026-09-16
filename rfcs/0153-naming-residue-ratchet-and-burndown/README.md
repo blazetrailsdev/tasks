@@ -1,5 +1,5 @@
 ---
-rfc: "0000-naming-residue-ratchet-and-burndown"
+rfc: "0153-naming-residue-ratchet-and-burndown"
 title: "Ratchet the call-argument naming residue, then burn it down to the gate flip"
 status: draft
 created: 2026-09-16
@@ -23,11 +23,7 @@ related-rfcs:
   - "0126-fidelity-tooling-continuation"
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-naming-residue-ratchet-and-burndown
-     and the H1 below number-free. `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — Ratchet the call-argument naming residue, then burn it down to the gate flip
+# RFC 0153 — Ratchet the call-argument naming residue, then burn it down to the gate flip
 
 ## Summary
 
