@@ -1,7 +1,7 @@
 ---
 title: "the server_version barrier acquires the connection lock first, which Rails does not"
-status: blocked
-updated: 2026-09-11
+status: ready
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "waits on abstract-adapter-lock-defaults-to-monitor-not-nulllock: the NullLock flip still reds the concurrent unlocked-pin test in connection-pool.trails.test.ts"
+blocked-by: null
 closed-reason: null
 ---
 

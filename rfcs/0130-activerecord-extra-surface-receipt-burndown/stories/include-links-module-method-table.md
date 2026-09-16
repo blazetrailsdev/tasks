@@ -1,6 +1,6 @@
 ---
 title: "include() links the module method table so post-include alias/remove propagates"
-status: ready
+status: claimed
 updated: 2026-09-16
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-16T12:54:38Z"
+assignee: "converge-adapter-execute-mutation-onto-exec-statements"
 blocked-by: null
 closed-reason: null
 ---

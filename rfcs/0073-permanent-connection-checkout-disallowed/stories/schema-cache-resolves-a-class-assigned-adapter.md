@@ -1,7 +1,7 @@
 ---
 title: "schemaCache resolves a class-assigned adapter where Rails is always pool-resolved"
-status: blocked
-updated: 2026-09-10
+status: closed
+updated: 2026-09-16
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Blocked on retire-direct-adapter-with-connection-shim (200 LOC, draft): the story's own Converged shape says remove the _adapter arm only as part of that retirement; Model.adapter= has 140 assignment sites across 43 files in packages/activerecord/src, and removing the schemaCache arm alone reds core.trails.test.ts 'insertAll resolves through the assigned adapter without a pool' on all lanes."
-closed-reason: null
+blocked-by: null
+closed-reason: "Done: Base.adapter= retired trails#7679; connection-handling.ts:414 schemaCache is connectionPool.call(this).schemaCache with no _adapter arm"
 ---
 
 ## Context

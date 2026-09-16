@@ -1,7 +1,7 @@
 ---
 title: "AbstractAdapter#initialize drops Rails' logger assignment and lock_thread = nil"
-status: blocked
-updated: 2026-09-11
+status: closed
+updated: 2026-09-16
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: 14
 pr: trails#7686
 claim: "2026-09-11T02:14:13Z"
 assignee: "sqlite3-connection-parameters-carry-trails-driver-key"
-blocked-by: "logger half shipped in trails#7686; lock_thread=nil reds concurrent-statement tests (NullLock), see abstract-adapter-null-lock-breaks-concurrent-async-statements"
-closed-reason: null
+blocked-by: null
+closed-reason: "Logger half shipped trails#7686 (abstract-adapter.ts:799,813); lock half duplicates abstract-adapter-null-lock-breaks-concurrent-async-statements"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Port ModelSchema#inherited's reload_schema_from_cache(false) onto subclass registration"
-status: blocked
-updated: 2026-09-14
+status: closed
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-09-14T23:29:33Z"
 assignee: "port-model-schema-inherited-non-recursive-reload"
-blocked-by: "JS has no hook that runs when a subclass is defined (CLAUDE.md Module mixins: 'Only inherited has no equivalent'). model_schema.rb:574-580 resets the child's memos at definition time; a lazy reset at first schema read (registerSubclass is only reached from registerModel arrays / _defaultAttributes) would clobber memos written to the child before that read (applyColumnsHash, attribute declarations), so the own-property guards cannot be removed. Needs a class-definition hook (e.g. a decorator/registration step every model runs) before this can converge."
-closed-reason: null
+blocked-by: null
+closed-reason: "Ratified: CLAUDE.md 'inherited is deferred to own-property memo guards (ModelSchema.inherited)' (trails#7831) — a lazy reset at first schema read would clobber memos written to the child before that read"
 ---
 
 ## Context

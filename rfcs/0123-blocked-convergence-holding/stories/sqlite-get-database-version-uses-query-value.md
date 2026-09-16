@@ -1,7 +1,7 @@
 ---
 title: "SQLite3Adapter#getDatabaseVersion probes the raw driver, not query_value"
-status: blocked
-updated: 2026-09-11
+status: closed
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: trails#7546
 claim: "2026-09-05T23:56:22Z"
 assignee: "converge-pg-native-types-and-instance-type-map-onto-adapter"
-blocked-by: "RFC 0146 Design §2: configureConnection must be awaited on the connect path (a Non-goal of RFC 0147)"
-closed-reason: null
+blocked-by: null
+closed-reason: "Done in trails#7768: sqlite3-adapter.ts:637 getDatabaseVersion is new Version(await queryValue('SELECT sqlite_version(*)','SCHEMA')); baseline row gone"
 ---
 
 ## Context

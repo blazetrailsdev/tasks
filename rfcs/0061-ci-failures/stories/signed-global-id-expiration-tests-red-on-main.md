@@ -1,7 +1,7 @@
 ---
 title: "SignedGlobalID expiration tests are red on main"
-status: draft
-updated: 2026-08-30
+status: closed
+updated: 2026-09-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Fixed by trails#7301 (SGID clock convergence); signed-global-id.test.ts passes 42/42"
 ---
 
 ## Context

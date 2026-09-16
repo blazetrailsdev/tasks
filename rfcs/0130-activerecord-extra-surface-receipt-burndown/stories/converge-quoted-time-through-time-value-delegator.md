@@ -1,6 +1,6 @@
 ---
 title: "Converge quotedTime onto value.change through the Type::Time::Value delegator"
-status: ready
+status: done
 updated: 2026-09-16
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7813
+claim: "2026-09-16T12:54:38Z"
+assignee: "converge-adapter-execute-mutation-onto-exec-statements"
 blocked-by: null
 closed-reason: null
 ---

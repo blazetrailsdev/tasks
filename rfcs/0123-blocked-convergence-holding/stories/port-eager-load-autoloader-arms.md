@@ -1,7 +1,7 @@
 ---
 title: "port-eager-load-autoloader-arms"
-status: blocked
-updated: 2026-09-03
+status: closed
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: 3
 pr: null
 claim: "2026-09-03T11:34:47Z"
 assignee: "port-trails-autoloaders"
-blocked-by: "Downstream of port-trails-autoloaders, which is blocked: all three arms (Zeitwerk::Loader.eager_load_all, Rails.eager_load!, and the after_class_unload re-eager-load at finisher.rb:78-86) need a trails autoloader, and there is none to port — Zeitwerk is Ruby constant resolution, which ESM has no hook for. The story cannot be closed with PERMANENT receipts either, because that would ratify 'trails will never have an autoloader', a decision nobody has taken; the CONVERGEABLE receipts in trailties/src/application/finisher.ts stay pointed here. Unblock together with port-trails-autoloaders."
-closed-reason: null
+blocked-by: null
+closed-reason: "Ratified: CLAUDE.md 'Trails has no autoloader' — the eager directory scan (trailties application/finisher.ts loadControllers) is the port"
 ---
 
 ## Context

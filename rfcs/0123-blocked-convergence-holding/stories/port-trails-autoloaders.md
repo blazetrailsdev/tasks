@@ -1,7 +1,7 @@
 ---
 title: "port-trails-autoloaders"
-status: blocked
-updated: 2026-09-03
+status: closed
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: 2
 pr: null
 claim: "2026-09-03T11:34:47Z"
 assignee: "port-trails-autoloaders"
-blocked-by: "No Zeitwerk to port: Rails::Autoloaders (railties/lib/rails/autoloaders.rb:12-28) is a pair of Zeitwerk::Loader instances, and Zeitwerk's whole mechanism is Ruby constant resolution (Module#autoload / const_missing) at reference time. ESM resolves nothing from a constant name and offers no hook for an unresolved identifier, so there is no loader graph for Trails.autoloaders to hold; zeitwerk is also not vendored under vendor/, so a port would be invented surface with no Ruby source to mirror. What trails has instead is the eager directory scan (loadControllers in trailties/src/application/finisher.ts). Unblock if a trails autoloader concept is decided on; autoloadLib's @missingRailsCall ignore tag stays pointed here."
-closed-reason: null
+blocked-by: null
+closed-reason: "Ratified: CLAUDE.md 'Trails has no autoloader (Rails.autoloaders / Zeitwerk)' (strengthened trails#7831) — ESM has no hook for an unresolved identifier and Zeitwerk is not vendored, so there is no loader graph to hold"
 ---
 
 ## Context

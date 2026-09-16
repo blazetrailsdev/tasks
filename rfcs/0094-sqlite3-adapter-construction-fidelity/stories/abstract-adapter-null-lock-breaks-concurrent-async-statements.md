@@ -1,7 +1,7 @@
 ---
 title: "abstract-adapter-null-lock-breaks-concurrent-async-statements"
-status: blocked
-updated: 2026-09-14
+status: ready
+updated: 2026-09-16
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Adding setLockThread(null) (abstract_adapter.rb:157) reds all three named tests; _statementLock (sqlite3/database-statements.ts acquireStatementLock) covers only performQuery, not withRawConnection's connectBang (3 opens) nor executeMutation's post-rawExecute _lastInsertRowid read ([2,2], 24/25). Serializing those without the monitor needs a design decision on how un-pinned adapters shared by concurrent promises are serialized (no Rails counterpart: Ruby leases per thread) — not an in-bundle change."
+blocked-by: null
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "AbstractAdapter's lock defaults to the monitor where Rails installs NullLock"
-status: blocked
-updated: 2026-09-11
+status: closed
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: trails#7680
 claim: "2026-09-10T23:24:06Z"
 assignee: "abstract-adapter-lock-defaults-to-monitor-not-nulllock"
-blocked-by: "NullLock default reds connection-pool.trails.test.ts 'two concurrent contexts share the pool's single pinned connection' (cannot rollback - no transaction is active): pinConnectionBang() without lockThread leaves the shared pinned connection unlocked across contexts"
-closed-reason: null
+blocked-by: null
+closed-reason: "Duplicate of abstract-adapter-null-lock-breaks-concurrent-async-statements (same AC, same red-test class); ratified by CLAUDE.md 'The adapter lock defaults to a monitor, not NullLock' in trails#7831"
 ---
 
 ## Context

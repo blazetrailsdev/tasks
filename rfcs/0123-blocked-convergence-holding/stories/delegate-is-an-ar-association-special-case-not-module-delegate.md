@@ -1,7 +1,7 @@
 ---
 title: "delegate.ts's generated body is an ActiveRecord association special case, not Rails' Module#delegate"
-status: draft
-updated: 2026-09-01
+status: closed
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Done in trails#7734: activerecord/src/delegate.ts deleted; activesupport module-ext.ts:8 delegate ports Delegation.generate with allowNil/DelegationError"
 ---
 
 # `delegate.ts`'s generated body is an ActiveRecord association special case, not Rails' delegation

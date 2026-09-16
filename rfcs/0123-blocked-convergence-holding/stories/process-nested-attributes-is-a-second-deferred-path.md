@@ -1,7 +1,7 @@
 ---
 title: "processNestedAttributes is a second, deferred nested-attributes path Rails does not have"
-status: draft
-updated: 2026-09-01
+status: closed
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Done in trails#7355: processNestedAttributes, _pendingNestedAttributes and the save wrapper removed from nested-attributes.ts"
 ---
 
 # `processNestedAttributes` is a second, deferred nested-attributes path Rails does not have

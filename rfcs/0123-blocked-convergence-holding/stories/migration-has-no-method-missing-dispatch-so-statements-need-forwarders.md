@@ -1,7 +1,7 @@
 ---
 title: "Migration has no method_missing dispatch, so every adapter statement needs a hand-written forwarder"
-status: blocked
-updated: 2026-09-05
+status: closed
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-09-05T20:46:47Z"
 assignee: "convert-time-to-time-zone-guard-is-an-instanceof-list"
-blocked-by: "Acceptance criterion 3 (extra-surface total DOWN from 872 by deleting the forwarders) is unreachable in TypeScript. A Proxy get trap closes the DSL hole but carries no static types, and every migration and Schema.define block in the repo calls the forwarders as typed methods (createTable/addColumn/addIndex/... on packages/activerecord/src/migration.ts:355-990). Replacing them requires a declaration-merged 'interface Migration' block in the SAME file, whose members are counted by parity:api:extra exactly as the class members were, so 'moved' and 'total' do not drop — the surface only changes shape. Needs a re-scope: either (a) land the Proxy dispatch alone to close the hole and drop criterion 3, or (b) decide where the typed DSL declaration is allowed to live so the count can actually fall."
-closed-reason: null
+blocked-by: null
+closed-reason: "Ratified: CLAUDE.md 'Records are not Proxies (method_missing)' — the typed forwarders stay; a declaration-merged interface Migration is counted by parity:api:extra exactly as the class members were, so moved/total cannot drop"
 ---
 
 ## Context

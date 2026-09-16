@@ -1,7 +1,7 @@
 ---
 title: "converge-sync-connection-lease-per-checkout-verify"
 status: blocked
-updated: 2026-09-11
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 deps: []
@@ -11,7 +11,7 @@ priority: null
 pr: null
 claim: "2026-08-26T17:54:27Z"
 assignee: "sqlite-indexes-sorts-index-info-rows-rails-does-not"
-blocked-by: "waits on abstract-adapter-lock-defaults-to-monitor-not-nulllock: the NullLock flip still reds the concurrent unlocked-pin test in connection-pool.trails.test.ts"
+blocked-by: "Was 'waits on abstract-adapter-lock-defaults-to-monitor-not-nulllock' — that row is now CLOSED as a duplicate, and the NullLock question is ratified by CLAUDE.md 'The adapter lock defaults to a monitor, not NullLock' (trails#7831). The remaining blocker is the async pool-checkout seam, which is being rehomed to a dedicated convergence RFC; re-point this row there."
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "emit-autoload-lib-from-trails-new"
-status: blocked
-updated: 2026-09-03
+status: closed
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: 4
 pr: null
 claim: "2026-09-03T11:34:47Z"
 assignee: "port-trails-autoloaders"
-blocked-by: "config.root is null in a generated static { } block: Application.findRoot is async (trailties/src/application.ts:104-107) and config.root is pinned only once the initializer chain starts (application.ts:215-220), so autoloadLib's path.join(this.root, 'lib') (application/configuration.ts:412) would join against null exactly where Rails' eager @root ||= find_root answers (application/configuration.rb:472). Every seam that would make the call work — an app-class initializer, a top-level await pinning config.setRoot before the call — is a seam Rails does not have, which the acceptance criteria rule out. Unblock when trails has a synchronous root, or when the async-root deviation is ratified with a home for the call."
-closed-reason: null
+blocked-by: null
+closed-reason: "Ratified: CLAUDE.md 'Trails has no autoloader' — no autoload_lib line is emitted by trails new"
 ---
 
 ## Context

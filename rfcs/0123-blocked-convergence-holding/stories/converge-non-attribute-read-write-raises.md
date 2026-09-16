@@ -1,7 +1,7 @@
 ---
 title: "converge-non-attribute-read-write-raises"
-status: blocked
-updated: 2026-08-30
+status: closed
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: 21
 pr: trails#7208
 claim: "2026-08-29T11:48:53Z"
 assignee: "converge-non-attribute-read-write-raises"
-blocked-by: "NOT delivered by #7208 — the post-merge skill marked this done by falling back to the branch name; #7208 carried no Closes-story trailer by design. Both halves are enforced at COMPILE time by #7222, which removed `[key: string]: unknown` from ActiveModel::Model. What stays unported is the RUNTIME raise Rails asserts in attribute_methods_test.rb:641-645 — assert_raise(NoMethodError) { topic.mumbo } and { topic.mumbo = 5 } — which an `as any` cast or a plain-JS caller still evades. Converged shape: Model's constructor returns a Proxy standing in for `self` (identity must be the object callers hold, or errors.base / association.owner / has_secure_password's ivars land on a second object). Blocker is cost, measured best-of-5 over 200k iterations in #7208: a get trap is 3.7x on an attribute read and 64x on an internal _field read (a proxied object defeats the inlining those reads get), a set trap 1.5x on a write and 1.7x on construction, on every ActiveModel instance. Reviving it needs a cheaper mechanism, not a re-argument."
-closed-reason: null
+blocked-by: null
+closed-reason: "Ratified: CLAUDE.md 'Records are not Proxies (method_missing)' (strengthened trails#7831) — get trap measured at 3.7x on an attribute read and 64x on an internal _field read (trails#7208); compile-time enforcement (trails#7222) is the port"
 ---
 
 ## Context

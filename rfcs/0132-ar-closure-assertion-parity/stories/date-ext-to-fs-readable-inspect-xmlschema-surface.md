@@ -1,6 +1,6 @@
 ---
 title: "date-ext-to-fs-readable-inspect-xmlschema-surface"
-status: in-progress
+status: done
 updated: 2026-09-16
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity

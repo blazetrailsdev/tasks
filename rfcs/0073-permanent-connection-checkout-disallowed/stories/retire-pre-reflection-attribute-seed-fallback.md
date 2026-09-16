@@ -1,7 +1,7 @@
 ---
 title: "Retire the pre-reflection attribute-seed fallback once columns_hash can block"
-status: blocked
-updated: 2026-09-11
+status: closed
+updated: 2026-09-16
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: 55
 pr: null
 claim: "2026-09-11T15:20:58Z"
 assignee: "relation-conn-fallback-reads-deprecated-connection"
-blocked-by: "Gated on arm-permanent-connection-checkout-disallowed (still draft): the story's own converged shape requires the permanent-connection-checkout flip to have landed before the sync schema-cache readers / seed miss branch can be retired."
-closed-reason: null
+blocked-by: null
+closed-reason: "Ratified: CLAUDE.md 'Schema reflection peeks at a warm cache' — the cold-cache path is the only divergence and warming is an explicit async step"
 ---
 
 ## Context
