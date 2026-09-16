@@ -5,13 +5,7 @@ updated: 2026-08-30
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps:
-  - wave-5-naming-activesupport
-  - wave-5-naming-ar-model-core
-  - wave-5-naming-ar-adapters
-  - wave-5-naming-ar-associations
-  - wave-5-naming-ar-relation
-  - wave-5-naming-tail
+deps: []
 deps-rfc: []
 est-loc: 80
 pr: null
@@ -26,6 +20,13 @@ priority: 20
 
 The closing story of the RFC 0096 naming burndown, and the one that makes the
 campaign's completion mechanical rather than declared.
+
+RFC 0096 is closed, and its wave-5 stories, which this story depended on, are
+all done. Those dependency edges are dropped. The real precondition is a measured
+count: the in-closure `burndown` + `module-mixin-receiver` rows must reach zero.
+At the last re-measure (2026-08-30) that count was 81+ and rising, and no open
+story owns draining it. Whichever RFC this story is rehomed to has to schedule
+that drain first.
 
 `naming` rows are report-only today: `lint-call-args.ts` gates the `shape` rows
 of the shared `call-mismatches-exclude/` shards
@@ -97,9 +98,10 @@ when someone owns them. They are not this story's precondition.
    mixin idiom respectively); baselining them would ratify convergeable
    divergence. A non-empty in-closure count in either class means the flip is
    not ready, not that the rows need reasons. Out-of-closure counts do not gate.
-3. RFC 0095 `## Rollout`, RFC 0096, CLAUDE.md and CONTRIBUTING.md stop
+3. CLAUDE.md and CONTRIBUTING.md stop
    describing `naming` as report-only **for the AR closure**, and say plainly
    that it remains report-only elsewhere.
 4. `pnpm parity:api:calls:args` is green on `main` immediately after.
-5. The out-of-scope population is recorded — count and packages — in RFC 0096's
-   changelog, so the residue is handed off rather than silently dropped.
+5. The out-of-scope population is recorded, with count and packages, in the
+   changelog of the RFC that owns this story, so the residue is handed off rather
+   than silently dropped.

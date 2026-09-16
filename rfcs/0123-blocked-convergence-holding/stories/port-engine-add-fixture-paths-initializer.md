@@ -18,9 +18,9 @@ closed-reason: null
 
 ## Context
 
-`Engine`'s `add_fixture_paths` initializer (`engine.rb:629-636`) was left
-undeclared by PR #7332 and recorded in `packages/trailties/src/engine.ts`'s
-header comment:
+`Engine`'s `add_fixture_paths` initializer
+(`vendor/rails/railties/lib/rails/engine.rb:629-636`) was left undeclared by
+PR #7332 and is recorded in `packages/trailties/src/engine.ts`'s header comment:
 
 ```ruby
 initializer :add_fixture_paths do
@@ -33,38 +33,35 @@ initializer :add_fixture_paths do
 end
 ```
 
-Two pieces are missing on the trails side:
+The prerequisite the earlier blocker named, an `ActiveRecord::TestFixtures`
+concern that owns `fixture_paths` and runs the `:active_record_fixtures` hook, is
+ported now. It mirrors `test_fixtures.rb:20-40`:
 
-- The `:active_record_fixtures` load hook. `onLoad`/`runLoadHooks` from
-  `@blazetrails/activesupport` already exist and are used by `add_view_paths`
-  in the same file, so this is a matter of ActiveRecord's fixtures surface
-  running the hook and exposing `fixture_paths`.
+- `packages/activerecord/src/test-fixtures.ts:109` is
+  `classAttribute.call(base, "fixturePaths", { instanceWriter: false, default: [] })`.
+- `:118` calls `runLoadHooks("active_record_fixtures", base)`.
+
+`onLoad` from `@blazetrails/activesupport` is already used by `add_view_paths` in
+`engine.ts`.
+
+Still missing, as measured on trails `0236d460b2` (`engine.ts` has no
+`fixturePaths` or `fixturesInRoot` reference):
+
+- the `add_fixture_paths` initializer;
 - `Engine#fixtures_in_root_and_not_in_vendor_or_dot_dir?` (private,
-  `engine.rb:697+`). It is already present in
-  `eslint/rails-private-methods.json` under
-  `packages/trailties/src/engine.ts`, so the privates manifest expects it —
-  it just is not written yet.
+  `engine.rb:741-745`). It is already listed under `packages/trailties/src/engine.ts`
+  in `eslint/rails-private-methods.json`.
 
-Note the `|=` is a union that de-duplicates while preserving order, and the
-appended path carries a trailing slash (`"#{fixtures}/"`).
+The `|=` is an order-preserving de-duplicating union, and the appended path
+carries a trailing slash (`"#{fixtures}/"`).
 
-## Converged shape
+## Acceptance criteria
 
 - `Engine#fixturesInRootAndNotInVendorOrDotDir` is ported at its Rails name in
-  Rails' private section, carrying `@internal` (it is in the privates manifest,
-  unlike `load_config_initializer`, which carries `# :doc:`).
+  Rails' private section, carrying `@internal`.
 - `Engine` declares `add_fixture_paths` at its Rails name, in Rails declaration
-  order (between `add_mailer_preview_paths` at `engine.rb:622` and
+  order (after `add_mailer_preview_paths` at `engine.rb:622`, before
   `prepend_helpers_path` at `:638`), with Rails' body including the
-  `next if is_a?(Rails::Application)` early return.
-- The `:add_fixture_paths` entry is removed from `engine.ts`'s
-  deliberately-not-declared header comment.
-
-## Update 2026-09-15 (triage audit)
-
-The recorded blocker no longer holds. `ActiveRecord::TestFixtures` is now ported as a concern:
-`packages/activerecord/src/test-fixtures.ts` `TestFixtures[included]` declares
-`classAttribute "fixturePaths"` and calls `runLoadHooks("active_record_fixtures", base)`,
-mirroring `test_fixtures.rb:20-40`. The initializer can hook `onLoad("active_record_fixtures")`
-and union onto `fixturePaths` today. `packages/trailties/src/engine.ts` still declares no
-`add_fixture_paths`.
+  `next if is_a?(Rails::Application)` early return. The hook unions onto
+  `fixturePaths`.
+- `:add_fixture_paths` is removed from `engine.ts`'s not-declared header comment.

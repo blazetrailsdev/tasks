@@ -45,5 +45,5 @@ closed-reason: null
 
 ## Update 2026-09-15 (triage audit)
 
-The premise ("ClassMethods ported") is still in flight as trails#7791
-(`port-test-fixtures-concern-remainder`), and is now recorded as a dependency.
+The premise ("ClassMethods ported") landed in trails#7791
+(`port-test-fixtures-concern-remainder`, merged), which is recorded as a dependency.

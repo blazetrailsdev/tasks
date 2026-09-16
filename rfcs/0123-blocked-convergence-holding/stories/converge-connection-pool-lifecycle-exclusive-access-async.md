@@ -4,9 +4,9 @@ status: blocked
 updated: 2026-09-11
 rfc: "0123-blocked-convergence-holding"
 cluster: null
-deps: ["converge-sync-connection-lease-per-checkout-verify"]
+deps: []
 deps-rfc: []
-est-loc: 90
+est-loc: 150
 priority: 45
 pr: null
 claim: null
@@ -17,34 +17,52 @@ closed-reason: null
 
 ## Context
 
-`converge-connection-pool-lifecycle-async` landed as #4472, but the lifecycle
-path it named is still synchronous.
+The pool-checkout RFC `0000-pool-checkout-async-convergence` (Seam inventory §2, Design §2)
+owns this story. It will be rehomed there once that RFC merges.
 
-`packages/activerecord/src/connection-adapters/abstract/connection-pool.ts:1680-1693`
-(`checkoutForExclusiveAccess`, mirroring
-`ActiveRecord::ConnectionAdapters::ConnectionPool#checkout_for_exclusive_access`)
-calls `pool._acquireConnection()` directly rather than `checkout`, because
-`checkout` is now async (it awaits `verifyBang`) and the disconnect/discard
-sweep cannot await. The comment at :1691 still says the convergence "is tracked
-by `converge-connection-pool-lifecycle-async`", which is done.
+Rails' `checkout_for_exclusive_access` is `checkout(checkout_timeout)`, rescuing
+`ConnectionTimeoutError` into `ExclusiveConnectionTimeoutError`
+(`vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:802-820`).
+trails' `checkoutForExclusiveAccess`
+(`packages/activerecord/src/connection-adapters/abstract/connection-pool.ts:1045-1047`)
+calls `pool.acquireConnectionSync(checkoutTimeout)` instead. The reason is that
+`checkout` is async (it awaits `verifyBang`), and the caller,
+`attemptToCheckoutAllExistingConnections` (`:1010`), runs inside the synchronous
+`withExclusivelyAcquiredAllConnections` block.
 
-Two behaviours diverge as a result: the acquired connection skips
-`checkout_and_verify`'s `clean!` / query-cache wiring (Rails runs it; running it
-here regressed disconnect/discard tests when last tried), and the acquisition
-raises `ConnectionTimeoutError` from a different call site than Rails does.
+This causes two divergences:
 
-Related: the sync-lease residual in
-`converge-sync-connection-lease-per-checkout-verify` shares the same root
-cause (async `checkout`), and
-`project_pool_adapter_proxy_makes_sync_methods_async` records the wider shape.
+- The acquired connection skips `checkout_and_verify`
+  (`connection_pool.rb:942`).
+- The timeout is raised from a different call site.
+
+`acquireConnectionSync` (`:548-560`) stays. It is the no-wait half of
+`acquire_connection` (`connection_pool.rb:862-880`) and backs the sync
+`withConnectionSync` scope. This story only removes it from the sweep.
+
+The stale `converge-connection-pool-lifecycle-async` citation this story first
+asked to remove is already gone.
+
+The earlier blocker said the dependency on
+`converge-sync-connection-lease-per-checkout-verify` sat behind the NullLock
+default. It does not, and this story does not depend on that one. Each touches a
+different acquire path.
 
 ## Acceptance criteria
 
-- The disconnect/discard lifecycle sweep runs through the Rails-named
-  `checkout` (or an awaited equivalent), so `checkout_and_verify`'s
-  `clean!` / query-cache wiring is not skipped.
-- `ExclusiveConnectionTimeoutError` is still raised with Rails' message for a
-  busy pool.
-- The stale `converge-connection-pool-lifecycle-async` citation at
-  connection-pool.ts:1691 is removed.
-- Disconnect/discard pool tests stay green.
+- `checkoutForExclusiveAccess` awaits the Rails-named `checkout`, so
+  `checkout_and_verify` runs.
+- `attemptToCheckoutAllExistingConnections` and
+  `withExclusivelyAcquiredAllConnections` are async. `disconnect`, `discard!` and
+  `clear_reloadable_connections` await them.
+- Per CLAUDE.md § "The pool monitor guards only sections that span an `await`",
+  each of those bodies that now awaits moves onto `synchronize`, and that section
+  is updated in the same PR.
+- The sweep does not call `acquireConnectionSync`.
+- `ExclusiveConnectionTimeoutError` is still raised with Rails' message for a busy
+  pool.
+- `discardBangDraining` (`connection-pool.ts:674`, read by `pool-config.ts:128`)
+  and `drainPendingCloses` (`:793`) are deleted along with their
+  `CONVERGEABLE sync-reads-of-async-reflection-retire-with-rfc-0073` receipts,
+  because the awaited sweep makes them unnecessary.
+- Disconnect and discard pool tests are green on all three adapters.

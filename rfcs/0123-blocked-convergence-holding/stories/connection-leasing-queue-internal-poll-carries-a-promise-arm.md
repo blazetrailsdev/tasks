@@ -5,7 +5,11 @@ updated: 2026-09-11
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: ["converge-sync-connection-lease-per-checkout-verify"]
+deps:
+  [
+    "converge-sync-connection-lease-per-checkout-verify",
+    "converge-connection-pool-lifecycle-exclusive-access-async",
+  ]
 deps-rfc: []
 est-loc: 80
 priority: null
@@ -18,6 +22,11 @@ closed-reason: null
 
 ## Context
 
+The pool-checkout RFC `0000-pool-checkout-async-convergence` (Seam inventory §3, Design §3)
+owns this story. It will be rehomed there once that RFC merges. The earlier
+NullLock blocker does not apply: the promise arm is forced by the async
+`waitPoll` (`queue.ts:214`), not by the adapter lock.
+
 Rails' `ConnectionLeasingQueue#internal_poll` is three lines
 (`vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool/queue.rb:202-206`):
 
@@ -29,7 +38,7 @@ def internal_poll(timeout)
 end
 ```
 
-`packages/activerecord/src/connection-adapters/abstract/connection-pool/queue.ts:246-262`
+`packages/activerecord/src/connection-adapters/abstract/connection-pool/queue.ts:243-257`
 carries a second arm Rails does not have, because `super.internalPoll` can
 answer a promise where Ruby's blocking `wait_poll` answers the connection
 itself:
@@ -60,8 +69,13 @@ seam.
 
 ## Acceptance criteria
 
-- `internalPoll` reads as Rails' three lines — one `conn.lease()` call site, no
-  `then` branch and no `typeof ... === "function"` probe — once `Queue#poll`'s
-  return type settles on one shape.
-- The two `as` casts the probe forces go with it.
+- The no-timeout `poll()` stays synchronous. It is Rails' non-blocking
+  `no_wait_poll` (`queue.rb:71-78`), and `acquireConnectionSync` needs it.
+  `poll(timeout)` always returns a promise.
+- `internalPoll` has one `conn.lease()` call site, no `then` branch and no
+  `typeof ... === "function"` probe. Its shape is Rails' three lines if
+  possible (RFC Open question 2). If no single-arm shape exists, this story is
+  blocked with the measured reason, not ratified.
+- The `as` casts the probe forces in `queue.ts`, and the pool's no-timeout
+  `poll()` casts (`connection-pool.ts:1103,1108`), go with it.
 - Connection-pool and queue suites green on all three adapters.
