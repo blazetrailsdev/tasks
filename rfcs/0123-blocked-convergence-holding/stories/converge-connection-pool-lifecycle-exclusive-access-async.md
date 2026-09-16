@@ -6,7 +6,7 @@ rfc: "0123-blocked-convergence-holding"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: 90
+est-loc: 150
 priority: 45
 pr: null
 claim: null
@@ -36,9 +36,9 @@ This causes two divergences:
   (`connection_pool.rb:942`).
 - The timeout is raised from a different call site.
 
-`acquireConnectionSync` (`:548-560`) carries `@noRailsEquivalent PERMANENT`, but
-Rails has only one `acquire_connection` (`connection_pool.rb:862`), so the
-receipt is wrong.
+`acquireConnectionSync` (`:548-560`) stays. It is the no-wait half of
+`acquire_connection` (`connection_pool.rb:862-880`) and backs the sync
+`withConnectionSync` scope. This story only removes it from the sweep.
 
 The stale `converge-connection-pool-lifecycle-async` citation this story first
 asked to remove is already gone.
@@ -58,7 +58,7 @@ different acquire path.
 - Per CLAUDE.md § "The pool monitor guards only sections that span an `await`",
   each of those bodies that now awaits moves onto `synchronize`, and that section
   is updated in the same PR.
-- `acquireConnectionSync` is deleted.
+- The sweep does not call `acquireConnectionSync`.
 - `ExclusiveConnectionTimeoutError` is still raised with Rails' message for a busy
   pool.
 - Disconnect and discard pool tests are green on all three adapters.

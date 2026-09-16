@@ -6,7 +6,7 @@ rfc: "0123-blocked-convergence-holding"
 cluster: null
 deps: []
 deps-rfc: []
-est-loc: 120
+est-loc: 180
 priority: null
 pr: null
 claim: "2026-08-26T17:54:27Z"
@@ -40,8 +40,13 @@ Production callers, re-measured on trails `0236d460b2`. The `arel/nodes/node.ts`
 
 Test-infrastructure callers: `test-fixtures/fixture-connection.ts:8`,
 `test-fixtures/with-transactional-fixtures.ts:164` and
-`test-helpers/models/contact.ts:9`. `withConnectionSync` is also read by
-`Relation#loadAsync` (`relation.ts:455-456`).
+`test-helpers/models/contact.ts:9`.
+
+`withConnectionSync` (`:417-457`) is not in scope. It releases its lease after
+the block like Rails' `with_connection` (`connection_pool.rb:405-421`), and its
+callers are the synchronous `arel` path ratified by CLAUDE.md § "`Relation` is
+evaluated by an async query". It is the scope that `reflectionAdapter` and
+`AliasTracker.create` move onto.
 
 This is a convergence, not a language shortcoming. `model-schema.ts:604-611`
 records that the lease is permanent and trips
@@ -54,15 +59,17 @@ It does not apply, because nothing here touches the adapter lock.
 
 ## Acceptance criteria
 
-- `reflectionAdapter` and `AliasTracker.create` get their connection from a
-  `withConnection` scope, as Rails' pool read and `alias_tracker.rb:10` do.
-  Neither takes a permanent lease.
+- `reflectionAdapter` and `AliasTracker.create` get their connection from
+  `pool.withConnectionSync`, as Rails' pool read and `alias_tracker.rb:10`'s
+  `pool.with_connection` do. Neither takes a permanent lease, and
+  `AliasTracker.create` stays synchronous for its arel-building callers
+  (`relation/query-methods.ts:2449`, `associations/association-scope.ts:104`).
 - `migrationConnection` and the deprecated `connection` getter keep their Rails
   names and resolve through the async lease. The PR settles the RFC's open
   question (return the awaited lease, or answer only a threaded
   `activeConnection` and raise otherwise), with caller counts for both options.
-- `leaseConnectionSync` and `withConnectionSync` have 0 definitions and 0 callers
-  under `packages/`, including the test-infrastructure callers above.
+- `leaseConnectionSync` has 0 definitions and 0 callers under `packages/`,
+  including the test-infrastructure callers above.
 - The AR suite is green on sqlite3, postgresql and mysql2 with
   `permanent_connection_checkout = :disallowed`.
 - `scripts/stale-story-references.test.ts` stays green.

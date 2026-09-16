@@ -29,7 +29,7 @@ permanent sync lease (`leaseConnectionSync`), a sync acquire in the
 exclusive-access sweep (`acquireConnectionSync`), and a `Queue#poll` that can
 return a promise or a connection. Unlike the schema-cache readers, which are
 being ratified as a language shortcoming, these three are not forced by the
-language. They are a Rails divergence, and one of them now works against the
+language: each has a Rails-shaped replacement that trails already has. They are a Rails divergence, and one of them now works against the
 `permanent_connection_checkout` flag that trails#7781 armed. This RFC converges
 them.
 
@@ -71,8 +71,7 @@ Measured on trails `0236d460b2`.
 `lease_connection` (`connection_pool.rb:315`). It pins the pool's
 `_pinnedConnection` or runs `checkoutAndVerify(acquireConnectionSync(...))`, and
 never awaits the `verifyBang` that the async `leaseConnection` gets through
-`checkout` (`connection_pool.rb:547`). `withConnectionSync` (`:417-457`) is the
-same arm for `with_connection` (`connection_pool.rb:405`).
+`checkout` (`connection_pool.rb:547`).
 
 Production callers:
 
@@ -87,7 +86,17 @@ Callers in test infrastructure, which retire in the same pass:
 `test-fixtures/fixture-connection.ts:8`,
 `test-fixtures/with-transactional-fixtures.ts:164`, `test-helpers/models/contact.ts:9`.
 
-`withConnectionSync` is also read by `Relation#loadAsync` (`relation.ts:455-456`).
+`withConnectionSync` is a different case. Rails' `with_connection` checks out
+for the block and releases it afterwards unless the lease is sticky
+(`connection_pool.rb:405-421`), and `withConnectionSync` does the same. Its
+callers are synchronous because Rails' are: `Relation#arel`
+(`relation/query-methods.ts:1302`), `execMainQuery` and `loadAsync`
+(`relation.ts:456,686,698`), `find_with_ids` (`relation.ts:1030`,
+`relation/finder-methods.ts:355`), `attributes.ts:85` and `base.ts:3157`. Those
+callers fall under CLAUDE.md § "`Relation` is evaluated by an async query". The
+one thing it lacks against Rails is the awaited `verifyBang`. **So
+`withConnectionSync` is the sync scope this RFC converges callers onto, not a
+seam it deletes.**
 
 ### 2. The synchronous exclusive-access acquire
 
@@ -100,10 +109,13 @@ Callers in test infrastructure, which retire in the same pass:
 acquired connection skips `checkout_and_verify` (`connection_pool.rb:942`), and
 the timeout is raised from a different site than Rails'.
 
-`acquireConnectionSync` itself (`connection-pool.ts:548-560`) polls with no
-timeout and carries `@noRailsEquivalent PERMANENT`. That receipt is wrong: Rails
-has one `acquire_connection` (`connection_pool.rb:862`), and this RFC retires
-the sync twin.
+`acquireConnectionSync` itself (`connection-pool.ts:548-560`) is the no-wait
+half of `acquire_connection` (`connection_pool.rb:862-880`): the two
+`@available.poll || try_to_checkout_new_connection` attempts, without the final
+`@available.poll(checkout_timeout)` wait. It stays, because it backs
+`withConnectionSync`. What this RFC fixes is the receipt: its bare
+`@noRailsEquivalent PERMANENT` becomes a citation of the Relation section,
+which is the reason it is permanent.
 
 ### 3. The promise arm in `Queue#poll`
 
@@ -137,40 +149,49 @@ converging the rest here.
 
 ## Design
 
-**Target:** no synchronous checkout path. A connection comes from `checkout`,
-`leaseConnection` or `withConnection`, each awaited. Where Rails reads the pool
-(`schema_cache`, `with_connection`), trails reads the pool too, and never takes a
-permanent lease to do it.
+**Target:** no permanent lease that Rails does not take, and no sync acquire
+outside the sync `with_connection` scope. A caller gets its connection one of two
+ways:
 
-1. **Callers take the Rails-shaped path.**
-   - `reflectionAdapter` becomes a `withConnection` scope at the pool-read site,
-     as `loadSchemaFromAdapter` already does.
-   - `AliasTracker.create` takes a connection. Its caller (`relation.ts:1560`) is
-     already inside a `withConnection` scope, or is moved into one, matching
-     `alias_tracker.rb:10`.
+- from `checkout` / `leaseConnection` / `withConnection`, awaited, where its
+  Rails body can be reached from async code;
+- from `withConnectionSync`, whose lease is released after the block, where its
+  Rails body is on the synchronous `arel` / `to_sql` path that the Relation
+  section ratifies.
+
+1. **Retire the permanent sync lease.**
+   - `reflectionAdapter` (`model-schema.ts:29`) and `AliasTracker.create`
+     (`alias-tracker.ts:70`) take `pool.withConnectionSync`. This is exactly
+     `alias_tracker.rb:10`'s `pool.with_connection`, and Rails'
+     `schema_cache` pool read. `AliasTracker.create` stays synchronous, because
+     its callers (`relation/query-methods.ts:2449`,
+     `associations/association-scope.ts:104`) build arel synchronously.
    - `migrationConnection` and the deprecated `connection` getter keep their
-     Rails names and resolve the lease through the async surface (see Open
-     questions).
-   - Once `leaseConnectionSync` / `withConnectionSync` have no caller, both are
-     deleted.
+     Rails names; see Open question 1.
+   - The test-infrastructure callers move with them, and `leaseConnectionSync`
+     is deleted.
 2. **The exclusive sweep awaits `checkout`.**
-   - `checkoutForExclusiveAccess` becomes `await checkout(checkoutTimeout)`.
+   - `checkoutForExclusiveAccess` becomes `await this.checkout(checkoutTimeout)`.
    - `attemptToCheckoutAllExistingConnections` and
      `withExclusivelyAcquiredAllConnections` become async, so `disconnect`,
      `discard!` and `clear_reloadable_connections` await the sweep.
-   - `acquireConnectionSync` is deleted.
    - Per CLAUDE.md § "The pool monitor guards only sections that span an
      `await`", a body that gains an `await` gains the monitor in the same
-     change. The three sweep bodies listed there as "not wrapped" move onto
-     `synchronize` here.
-3. **`Queue#poll` has one shape.** With no sync acquirer left, every
-   `poll(timeout)` caller awaits. `poll` returns
-   `Promise<DatabaseAdapter | undefined>`, `internalPoll` is Rails' three lines,
-   and the overloads and `as` casts go.
+     change. The sweep bodies that section lists as "not wrapped" move onto
+     `synchronize`, and the section is updated in the same PR.
+3. **`Queue#poll` loses its duck-typed promise arm.** The no-timeout `poll()` is
+   non-blocking in Rails (`queue.rb:71-78`, `no_wait_poll`) and stays
+   synchronous for `acquireConnectionSync`. The timeout arm is only reached from
+   the async acquire, so `poll(timeout)` always returns a promise. `internalPoll`
+   then branches on the argument, not on a `then` probe, and the `as` casts at
+   `connection-pool.ts:1103,1108` go. Whether it can reach Rails' literal three
+   lines is Open question 2.
 4. **Receipts retire.** Each member cited by
-   `sync-reads-of-async-reflection-retire-with-rfc-0073` is deleted with its
-   receipt, or re-cited `PERMANENT` against a ratified CLAUDE.md section. No
-   `CONVERGEABLE` citation of that story remains.
+   `sync-reads-of-async-reflection-retire-with-rfc-0073` is either deleted with
+   its receipt, or re-cited `PERMANENT` against a ratified CLAUDE.md section.
+   `withConnectionSync` and the `relation*` `@missingRailsCall with_connection`
+   tags go to the Relation section. `internalSchemaCache` goes to the
+   schema-cache section. No `CONVERGEABLE` citation of that story remains.
 
 ## Non-goals
 
@@ -178,6 +199,9 @@ permanent lease to do it.
   are ratified in CLAUDE.md, not converged.
 - **`Relation#toSql`, `DeferredIdsIn` and the thenable**: already ratified by
   § "`Relation` is evaluated by an async query".
+- **Making `withConnectionSync` async.** Its callers are the sync `arel` /
+  `to_sql` path, which is ratified. Converging them is a change to that
+  section, not to this RFC.
 - **The adapter NullLock default and same-context serialization**: handled by
   RFC 0147 and `abstract-adapter-null-lock-breaks-concurrent-async-statements`.
   This RFC neither waits on them nor changes the adapter lock.
@@ -187,8 +211,12 @@ permanent lease to do it.
 - **Ratify `leaseConnectionSync` with the schema-cache readers.** Rejected. The
   permanent lease trips a Rails flag that Rails' own pool read never trips, so
   this is a fidelity bug rather than a language shortcoming.
-- **Make `leaseConnectionSync` non-permanent.** Rejected. It is still a second
-  checkout path that skips `verifyBang`, and nothing in Rails matches it.
+- **Make `leaseConnectionSync` non-permanent.** Rejected. That would just be
+  `withConnectionSync` under a name that says `lease_connection`, whose Rails
+  semantics are a permanent lease.
+- **Delete every sync acquire, `withConnectionSync` included.** Rejected, because
+  it needs async `arel`, which is ratified as out of reach (see Non-goals). The
+  first draft of this RFC proposed it.
 
 ## Rollout
 
@@ -212,10 +240,11 @@ tasks rehome converge-sync-connection-lease-per-checkout-verify \
 
 ## Verification
 
-- `leaseConnectionSync`, `withConnectionSync` and `acquireConnectionSync` have 0
-  definitions and 0 callers under `packages/`.
-- `Queue#poll` has one signature, and `queue.ts` contains no `.then ===
-"function"` probe.
+- `leaseConnectionSync` has 0 definitions and 0 callers under `packages/`.
+- `acquireConnectionSync` has exactly one caller, `withConnectionSync`
+  (`connection-pool.ts:448` today). The exclusive-access sweep has none.
+- `queue.ts` contains no `then` probe, and `connection-pool.ts` no
+  `poll() as DatabaseAdapter` cast.
 - `git grep "CONVERGEABLE sync-reads-of-async-reflection-retire-with-rfc-0073"`
   returns 0 hits.
 - The AR suite stays green on all three adapters with
@@ -232,7 +261,19 @@ tasks rehome converge-sync-connection-lease-per-checkout-verify \
    otherwise. **Deferred to
    `converge-sync-connection-lease-per-checkout-verify`**, which measures the
    callers of each before choosing.
+2. **Can `ConnectionLeasingQueue#internalPoll` be Rails' three lines?** Rails
+   leases after `super` returns a connection. With a promise-returning timeout
+   arm, the lease has to run after the promise settles, which is a second arm.
+   One option is to make `waitPoll`'s resolution go through the same lease site,
+   for example an async `internalPoll` that awaits `super`. **Deferred to
+   `connection-leasing-queue-internal-poll-carries-a-promise-arm`.** If no
+   single-arm shape exists, that story blocks with the measured reason. It does
+   not ratify.
 
 ## Changelog
 
 - 2026-09-16: initial RFC, from the 2026-09-15 triage audit's group A split
+- 2026-09-16: self-review. `withConnectionSync` and `acquireConnectionSync` are
+  kept as the sync `with_connection` scope, because their callers are the
+  ratified sync arel path, and `AliasTracker.create` moves onto that scope rather
+  than going async. Added Open question 2.

@@ -12,7 +12,7 @@ deps:
     "connection-leasing-queue-internal-poll-carries-a-promise-arm",
   ]
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: "2026-09-04T17:20:47Z"
@@ -57,7 +57,8 @@ Two of these fall under CLAUDE.md sections instead of convergence:
 - Each pool member above is deleted as its seam converges, together with its
   receipt.
 - Each site covered by a ratified CLAUDE.md section is re-cited `PERMANENT`
-  against that section.
+  against that section. `withConnectionSync` and the `relation*` sites go to the
+  Relation section, and `internalSchemaCache` to the schema-cache section.
 - `git grep "CONVERGEABLE sync-reads-of-async-reflection-retire-with-rfc-0073"`
   returns 0 hits.
 - No new sync twin is added beside an async reader.

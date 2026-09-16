@@ -69,10 +69,13 @@ seam.
 
 ## Acceptance criteria
 
-- `Queue#poll` (`queue.ts:179-183`) has one signature. With no sync acquirer
-  left, every caller awaits it, and the overloads go.
-- `internalPoll` reads as Rails' three lines: one `conn.lease()` call site, no
-  `then` branch and no `typeof ... === "function"` probe.
+- The no-timeout `poll()` stays synchronous. It is Rails' non-blocking
+  `no_wait_poll` (`queue.rb:71-78`), and `acquireConnectionSync` needs it.
+  `poll(timeout)` always returns a promise.
+- `internalPoll` has one `conn.lease()` call site, no `then` branch and no
+  `typeof ... === "function"` probe. Its shape is Rails' three lines if
+  possible (RFC Open question 2). If no single-arm shape exists, this story is
+  blocked with the measured reason, not ratified.
 - The `as` casts the probe forces in `queue.ts`, and the pool's no-timeout
   `poll()` casts (`connection-pool.ts:1103,1108`), go with it.
 - Connection-pool and queue suites green on all three adapters.
