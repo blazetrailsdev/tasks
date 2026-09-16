@@ -1,6 +1,6 @@
 ---
 title: "Receipt permanent naming rows with @missingRailsName and gate enrolled packages"
-status: in-progress
+status: done
 updated: 2026-09-16
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
