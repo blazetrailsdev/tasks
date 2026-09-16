@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-time-ext"
-status: ready
+status: claimed
 updated: 2026-09-16
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-16T14:32:47Z"
+assignee: "size-and-file-assertion-work-for-widened-packages"
 blocked-by: null
 closed-reason: null
 ---
