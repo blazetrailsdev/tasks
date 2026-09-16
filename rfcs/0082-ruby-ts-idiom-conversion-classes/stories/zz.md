@@ -1,6 +1,6 @@
 ---
 title: "zz"
-status: draft
+status: closed
 updated: 2026-09-16
 rfc: "0082-ruby-ts-idiom-conversion-classes"
 cluster: null
@@ -13,5 +13,5 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "created by mistake (empty placeholder from a CLI probe)"
 ---

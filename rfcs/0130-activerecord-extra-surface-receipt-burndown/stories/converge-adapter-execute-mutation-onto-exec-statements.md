@@ -1,6 +1,6 @@
 ---
 title: "converge-adapter-execute-mutation-onto-exec-statements"
-status: ready
+status: in-progress
 updated: 2026-09-16
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7844
+claim: "2026-09-16T18:07:58Z"
+assignee: "converge-adapter-execute-mutation-onto-exec-statements"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Widen rails-file-structure-method-order to the connection-adapter tree"
 status: blocked
-updated: 2026-08-31
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-08-31T16:43:30Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"
-blocked-by: "25,488 LOC of pure eslint --fix member reordering across 57 files — cannot fit one PR (700 LOC ceiling) and its own acceptance criteria require a sequence of one-subdirectory slices each taken in a quiet window. Needs scheduling as slices, not a bundle seat."
+blocked-by: "Rescoped 2026-09-16 to ONE waived-ceiling PR (tasks#132, pending merge); the slice requirement that blocked it is being removed from the ACs. Remaining precondition is a quiet window: no open PR touching packages/activerecord/src/connection-adapters/** when it is opened."
 closed-reason: null
 ---
 

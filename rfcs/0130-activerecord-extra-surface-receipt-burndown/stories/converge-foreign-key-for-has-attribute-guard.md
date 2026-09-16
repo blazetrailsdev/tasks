@@ -1,6 +1,6 @@
 ---
 title: "Converge Association#foreign_key_for? onto a bare _has_attribute? send"
-status: draft
+status: ready
 updated: 2026-09-16
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

@@ -1,14 +1,14 @@
 ---
 title: "Drop dead Temporal.PlainTime arm from PostgreSQL quotedDate yearOf"
-status: draft
-updated: 2026-09-15
+status: ready
+updated: 2026-09-16
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

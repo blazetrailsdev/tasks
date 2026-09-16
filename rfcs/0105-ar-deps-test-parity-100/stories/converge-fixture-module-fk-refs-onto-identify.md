@@ -1,6 +1,6 @@
 ---
 title: "converge-fixture-module-fk-refs-onto-identify"
-status: draft
+status: in-progress
 updated: 2026-09-16
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7843
+claim: "2026-09-16T18:11:12Z"
+assignee: "converge-fixture-module-fk-refs-onto-identify"
 blocked-by: null
 closed-reason: null
 ---
