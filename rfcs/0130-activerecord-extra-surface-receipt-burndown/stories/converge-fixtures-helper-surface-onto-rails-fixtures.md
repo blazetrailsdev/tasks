@@ -1,6 +1,6 @@
 ---
 title: "converge-fixtures-helper-surface-onto-rails-fixtures"
-status: ready
+status: done
 updated: 2026-09-16
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7838
+claim: "2026-09-16T16:02:39Z"
+assignee: "converge-fixtures-helper-surface-onto-rails-fixtures"
 blocked-by: null
 closed-reason: null
 ---

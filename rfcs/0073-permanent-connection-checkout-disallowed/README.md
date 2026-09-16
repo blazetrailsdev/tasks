@@ -1,9 +1,9 @@
 ---
 rfc: "0073-permanent-connection-checkout-disallowed"
 title: "Ban permanent Base.connection checkout in the AR suite (helper.rb:27)"
-status: active
+status: closed
 created: 2026-07-25
-updated: 2026-09-15
+updated: 2026-09-16
 owner: "@deanmarano"
 packages:
   - "activerecord"

@@ -1,6 +1,6 @@
 ---
 title: "TypeCaster::Connection lookup reads the leasing connection reader, not with_connection"
-status: draft
+status: closed
 updated: 2026-09-16
 rfc: "0073-permanent-connection-checkout-disallowed"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "sync/async boundary"
 ---
 
 ## Context

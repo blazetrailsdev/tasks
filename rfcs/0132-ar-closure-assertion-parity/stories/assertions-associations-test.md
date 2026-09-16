@@ -1,6 +1,6 @@
 ---
 title: "assertions-associations-test"
-status: ready
+status: claimed
 updated: 2026-09-16
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-16T16:49:09Z"
+assignee: "assertions-associations-test"
 blocked-by: null
 closed-reason: null
 ---

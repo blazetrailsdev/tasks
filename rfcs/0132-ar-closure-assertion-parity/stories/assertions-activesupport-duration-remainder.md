@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-duration-remainder"
-status: ready
+status: in-progress
 updated: 2026-09-16
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7840
+claim: "2026-09-16T16:50:04Z"
+assignee: "assertions-activesupport-duration-remainder"
 blocked-by: null
 closed-reason: null
 ---

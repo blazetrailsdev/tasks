@@ -1,6 +1,6 @@
 ---
 title: "binaries-fixture-data-from-flowers-asset"
-status: ready
+status: claimed
 updated: 2026-09-16
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 10
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-16T16:58:54Z"
+assignee: "binaries-fixture-data-from-flowers-asset"
 blocked-by: null
 closed-reason: null
 ---
