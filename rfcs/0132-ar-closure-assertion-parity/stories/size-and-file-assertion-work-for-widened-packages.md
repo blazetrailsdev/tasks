@@ -1,6 +1,6 @@
 ---
 title: "Size the newly measured assertion debt and file its burndown stories"
-status: claimed
+status: in-progress
 updated: 2026-09-16
 rfc: "0132-ar-closure-assertion-parity"
 cluster: enforcement
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 160
 priority: 3
-pr: null
+pr: tasks#131
 claim: "2026-09-16T14:32:47Z"
 assignee: "size-and-file-assertion-work-for-widened-packages"
 blocked-by: null

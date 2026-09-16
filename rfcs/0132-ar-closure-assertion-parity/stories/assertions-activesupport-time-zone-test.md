@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-time-zone-test"
-status: claimed
+status: in-progress
 updated: 2026-09-16
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
+pr: trails#7837
 claim: "2026-09-16T14:32:47Z"
 assignee: "size-and-file-assertion-work-for-widened-packages"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "converge-model-mixin-plumbing-surface"
-status: claimed
+status: in-progress
 updated: 2026-09-16
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#7836
 claim: "2026-09-16T14:35:03Z"
 assignee: "converge-adapter-execute-mutation-onto-exec-statements"
 blocked-by: null
