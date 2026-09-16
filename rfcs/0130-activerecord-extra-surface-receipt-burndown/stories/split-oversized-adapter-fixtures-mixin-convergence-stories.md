@@ -1,6 +1,6 @@
 ---
 title: "Split the four oversized RFC 0130 adapter/fixtures/mixin convergence stories"
-status: draft
+status: closed
 updated: 2026-09-16
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Moot: three of the four stories to split (converge-adapter-schema-and-result-helper-surface, converge-fixtures-helper-surface-onto-rails-fixtures, converge-model-mixin-plumbing-surface) are done; the fourth, converge-adapter-execute-mutation-onto-exec-statements, is in-progress under trails#7844. Any further split belongs to that claimer."
 ---
 
 ## Context

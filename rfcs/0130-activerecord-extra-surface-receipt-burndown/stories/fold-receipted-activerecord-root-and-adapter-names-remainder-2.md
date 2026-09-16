@@ -1,7 +1,7 @@
 ---
 title: "fold-receipted-activerecord-root-and-adapter-names-remainder-2"
-status: draft
-updated: 2026-09-15
+status: closed
+updated: 2026-09-16
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: no receipt on origin/main names this id (git grep 'names-remainder-2' origin/main is empty). trails#7825 (d8ecc122b1) removed the last 'remainder' receipts and retagged surviving names onto other stories (e.g. dumpSchemaFilename -> converge-adapter-schema-and-result-helper-surface); nothing left for this story's acceptance grep to burn."
 ---
 
 ## Context

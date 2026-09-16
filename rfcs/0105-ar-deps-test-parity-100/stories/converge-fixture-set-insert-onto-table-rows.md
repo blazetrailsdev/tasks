@@ -1,6 +1,6 @@
 ---
 title: "Converge FixtureSet.insert onto fixture_set.table_rows"
-status: in-progress
+status: done
 updated: 2026-09-16
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
