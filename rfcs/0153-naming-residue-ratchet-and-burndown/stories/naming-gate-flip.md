@@ -2,7 +2,7 @@
 title: "Gate the naming class once the burndown has drained it"
 status: blocked
 updated: 2026-09-16
-rfc: "0123-blocked-convergence-holding"
+rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: []
 deps: []
