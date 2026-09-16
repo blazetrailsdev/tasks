@@ -41,8 +41,11 @@ sync/async stories in one bucket. They split three ways:
 
 - The `toSql`, deferred-ids and acquisition-seam rows are already covered by
   CLAUDE.md § "`Relation` is evaluated by an async query".
-- The seven schema-cache reader rows are being ratified in a CLAUDE.md section
-  of their own (RFC 0150's decision).
+- The seven schema-cache reader rows are to be ratified in a trails CLAUDE.md
+  section of their own. The owner decided this on 2026-09-16 while triaging the
+  audit. The section is being written in a separate trails PR and has not landed
+  yet. RFC 0150 posed this question, but it was closed without recording a
+  ruling, so it is related context, not the source of the decision.
 - **The pool-checkout rows converge, and this RFC owns them.**
 
 They are not ratifiable because Rails never needs them. Rails' `schema_cache` is
@@ -202,7 +205,9 @@ ways:
 ## Non-goals
 
 - **Schema-cache sync readers** (`getCachedColumnsHash` and its siblings): these
-  are ratified in CLAUDE.md, not converged.
+  are being ratified in CLAUDE.md (see Motivation), not converged. Until that
+  section lands, `internalSchemaCache`'s `CONVERGEABLE` receipt stays, and
+  Design §4's re-citation of it waits on the section.
 - **`Relation#toSql`, `DeferredIdsIn` and the thenable**: already ratified by
   § "`Relation` is evaluated by an async query".
 - **Making `withConnectionSync` async.** Its callers are the sync `arel` /
@@ -293,3 +298,6 @@ tasks rehome converge-sync-connection-lease-per-checkout-verify \
   ratified sync arel path, and `AliasTracker.create` moves onto that scope rather
   than going async. Added Open question 2. Design §4 now names a disposition for
   every cited member, and Open question 3 was added for `adapterReady`.
+- 2026-09-16: review. The schema-cache ratification is cited as the owner's
+  pending CLAUDE.md decision, not as RFC 0150's, because 0150 closed without a
+  ruling.

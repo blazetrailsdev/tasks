@@ -48,8 +48,9 @@ Citations on trails `0236d460b2`:
 
 Two of these fall under CLAUDE.md sections instead of convergence:
 
-- `internalSchemaCache` belongs to the schema-cache sync readers ratified by RFC
-  0150's decision.
+- `internalSchemaCache` belongs to the schema-cache sync readers. Those are to
+  be ratified in a trails CLAUDE.md section that has not landed yet, so its
+  receipt is re-cited when that section merges, not before.
 - The `relation*` sites belong to § "`Relation` is evaluated by an async query".
 
 ## Acceptance criteria
