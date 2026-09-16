@@ -1,6 +1,6 @@
 ---
 title: "time-date-class-methods-allocate-receiver-subclass"
-status: ready
+status: blocked
 updated: 2026-09-16
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: 2
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-16T13:48:25Z"
+assignee: "globalid-locator-single-argument-deprecation"
+blocked-by: "Date.today/.jd and DateTime.now/.jd (packages/date/src/date.ts:4628,4704,5914,6229) return Temporal.PlainDate/PlainDateTime, not Date/DateTime instances, so no receiver subclass can be allocated until those class methods return Date objects"
 closed-reason: null
 ---
 

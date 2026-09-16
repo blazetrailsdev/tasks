@@ -1,7 +1,7 @@
 ---
 title: "Gate the naming class once the burndown has drained it"
 status: blocked
-updated: 2026-08-30
+updated: 2026-09-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -11,7 +11,7 @@ est-loc: 80
 pr: null
 claim: "2026-08-11T01:14:36Z"
 assignee: "arel-collector-argument-order-convergence"
-blocked-by: "Re-measured 2026-08-30 against origin/main (f6e5abe) with pnpm build && API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api:calls:args:report. The wave-5 dep band is still ALL DONE, so the dep-list half of the reason remains satisfied — but the gate's real precondition is a measured count of zero, and the count went UP, not down. Repo-wide naming residue is now burndown 214 + module-mixin-receiver 9 = 223 (was 202 on 2026-08-27, 255 on 2026-08-21). Filtered to the AR require-closure packages, the burndown rows alone are activerecord 63 + activesupport 16 + activemodel 1 + arel 1 = 81 (was 50 across those same packages on 2026-08-27), before counting module-mixin-receiver. So the burndown REGRESSED by ~31 in-closure rows over the last three days — new ports are landing naming residue faster than the waves drain it. Still unblocks only when the in-closure convergeable count reaches zero; that wants a new naming wave homed in 0096 (still active), not here."
+blocked-by: "Reason corrected 2026-09-16: the old text ended 'wants a new naming wave homed in 0096 (still active)' — RFC 0096 is CLOSED, so that home does not exist. The substantive blocker stands: the gate's precondition is a measured in-closure convergeable count of zero, and the count REGRESSED (~31 in-closure rows over three days; burndown 214 + module-mixin-receiver 9 = 223 repo-wide). No active RFC currently owns naming burndown, so this needs a new naming-wave RFC before it can be rehomed out of the holding pen."
 closed-reason: null
 priority: 20
 ---

@@ -1,6 +1,6 @@
 ---
 title: "globalid-locator-single-argument-deprecation"
-status: ready
+status: in-progress
 updated: 2026-09-16
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#7835
+claim: "2026-09-16T13:48:25Z"
+assignee: "globalid-locator-single-argument-deprecation"
 blocked-by: null
 closed-reason: null
 ---

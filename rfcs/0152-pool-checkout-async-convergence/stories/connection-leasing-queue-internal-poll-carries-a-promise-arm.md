@@ -16,7 +16,7 @@ priority: null
 pr: null
 claim: "2026-09-05T20:06:45Z"
 assignee: "conversion-and-serialization-tests-redeclare-shared-models"
-blocked-by: "Was 'waits on abstract-adapter-lock-defaults-to-monitor-not-nulllock' — that row is now CLOSED as a duplicate, and the NullLock question is ratified by CLAUDE.md 'The adapter lock defaults to a monitor, not NullLock' (trails#7831). The remaining blocker is the async pool-checkout seam, which is being rehomed to a dedicated convergence RFC; re-point this row there."
+blocked-by: "RFC 0152 rollout step 3: depends on steps 1 (converge-sync-connection-lease-per-checkout-verify) and 2 (converge-connection-pool-lifecycle-exclusive-access-async). Not a language blocker."
 closed-reason: null
 ---
 

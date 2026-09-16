@@ -1,7 +1,7 @@
 ---
 title: "sync-reads-of-async-reflection-retire-with-rfc-0073"
 status: blocked
-updated: 2026-09-04
+updated: 2026-09-16
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
 packages: []
@@ -17,7 +17,7 @@ priority: null
 pr: null
 claim: "2026-09-04T17:20:47Z"
 assignee: "sync-reads-of-async-reflection-retire-with-rfc-0073"
-blocked-by: "RFC 0073 (permanent-connection-checkout-disallowed) has not landed: all 16 of its stories are still ready, including retire-schema-cache-sync-readers-after-checkout-flip and arm-permanent-connection-checkout-disallowed. The six remaining CONVERGEABLE receipts in abstract-adapter.ts, abstract/connection-pool.ts and abstract/query-cache.ts only retire as those counterparts land."
+blocked-by: "RFC 0152 rollout step 4: depends on steps 1-3. Retires the five CONVERGEABLE receipts in relation.ts, relation/query-methods.ts, relation/finder-methods.ts, abstract-adapter.ts and connection-pool.ts, plus the adapterReady question (RFC 0152 open question 3)."
 closed-reason: null
 ---
 
