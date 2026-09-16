@@ -62,21 +62,21 @@ ports add naming residue faster than waves remove it:
 
 Since 08-30, repo-wide convergeable residue rose by 34 (+15%), and the in-closure
 `burndown` count rose by 3 more, on top of the +31 between 08-27 and 08-30.
-Nothing drained it in those two and a half weeks. The only thing preventing
-growth was the chance that a reviewer runs `parity:api:calls:args:report`.
+No story owned draining it in those two and a half weeks, and nothing stops
+growth except a reviewer happening to run `parity:api:calls:args:report`.
 
-The same pattern already happened, and was already fixed, three times in this
-repo:
+The same pattern has been met before in this repo, and the answer each time was
+a ratchet:
 
 - arel's extra surface grew on every measured day from 2026-08-05 to 08-22,
   until RFC 0117 armed a mark (`extra-surface-mark.ts`, module comment);
 - the call-set population, until RFC 0047/0084 made its baseline only-shrink;
-- parameter names, where RFC 0126 enrolled a package at zero so it could not
-  regress.
+- parameter names, where RFC 0126's mark (`param-name-mark.ts`) holds every
+  enrolled package at its measured count.
 
-Every one of those converged only once a ratchet was in place. RFC 0096 had
-waves and no ratchet, and it closed with its residue above where it started.
-Adding more waves without a ratchet would repeat that.
+RFC 0096 had waves and no ratchet. It closed with no owner for what was left,
+and the count has risen since. Adding more waves without a ratchet would repeat
+that.
 
 ## Residue inventory
 
@@ -111,9 +111,10 @@ compared). 134 are `shape` and 352 are `naming`.
 | **permanent**           |           |   95 | 27.0% of naming                         |
 
 The permanent share is 27% repo-wide and 45% inside the closure (below). RFC
-0095's ~6% sample estimate was too low. PR #6459's ~73% "unconvergeable" was too
-high, and it is almost exactly the convergeable share. This is why the RFC
-works from the measured taxonomy rather than either earlier estimate.
+0095's ~6% (a 32-row sample) was far too low. PR #6459's ~73% unconvergeable
+for activerecord (RFC 0096 README) was too high: activerecord measures 47
+permanent of 115 naming rows today (41%). This is why the RFC works from the
+measured taxonomy rather than either earlier estimate.
 
 **`module-mixin-receiver` must reach zero.** It is `permanent: false` in
 `NAMING_CLASSES`, and its reason reads "Converges by rewiring to the
@@ -215,12 +216,11 @@ not add a new mechanism.
 
 - A wave landed without the ratchet converges rows that the next unrelated port
   can undo, and nothing tells that port's author. Between 08-30 and 09-16 the
-  convergeable count rose by 34 with no wave running. That is the net inflow
-  every wave would have to beat, and it was measured at a time when nobody was
-  looking.
+  convergeable count rose by 34 while no story owned it. That is the net inflow
+  every wave would otherwise have to outrun.
 - A ratchet at today's count costs no convergence work. It only needs the
-  measurement, and it is about a ~200-LOC tooling PR on a pattern that already
-  exists twice. It is the cheapest thing on the path.
+  measurement, and it is an estimated ~250-LOC tooling PR (module, JSON, test,
+  scripts) copied from a pattern that already exists twice. It is the cheapest thing on the path.
 - With the ratchet in place, every wave is permanent: each tighten locks in its
   rows, and the total can only go down. Without it, the order of waves does not
   matter, because none of them sticks.
@@ -243,10 +243,15 @@ parameter or local it reads). It ends by running
   function to the `this`-typed mixin idiom (CLAUDE.md § "Module mixins"). This
   is not a rename.
 - **Recorder-shape rows:** a row with no differing `ref:` pair classifies as
-  `burndown` by default (`classifyRow`). A wave that finds one converges the
-  call if the TS is really different. If the recorder is misreading an identical
-  call, the wave files a recorder fix against RFC 0126. It never baselines the
-  row and never adds a permanent class to absorb it. See Open question 2.
+  `burndown` by default (`classifyRow`). **None exist in the closure today:** all
+  84 in-closure `burndown` rows carry at least one differing `ref:` pair, so each
+  is a real rename. If one appears, the wave converges the call if the TS really
+  differs; if the recorder misreads an identical call, the wave files a recorder
+  fix as a story under this RFC. It never baselines the row and never adds a
+  permanent class to absorb it.
+- **A rename can surface a `shape` row.** Once the identifiers match, the
+  recorder may compare a position it skipped before. That row is gated by the
+  existing `parity:api:calls:args` and is converged in the same wave.
 
 Waves, in closure order (counts as of `3c6616b0f1`):
 
@@ -262,11 +267,23 @@ Waves, in closure order (counts as of `3c6616b0f1`):
 A wave larger than one PR once measured splits by directory into sibling stories
 under this RFC, filed with `tasks new`. It never fans out into PRs from one
 agent. Waves W1–W5 are independent and can run in parallel, because their file
-sets do not overlap. W6 depends on all of them.
+sets do not overlap. The mark JSON is the one shared file: W3, W4 and W5 all
+tighten the `activerecord` row's `total`, so they run **in order** (W3 → W4 →
+W5), each rebased on the last. W1 and W2 touch other rows and can run beside them. W6 depends on
+all five.
+
+Sizing: a rename touches the call site plus every read of that local or
+parameter in the method body, so a row is typically 2–6 changed lines. 26 rows
+is an estimated 50–150 LOC, inside the ceiling. A wave that measures over it
+splits by directory as above.
 
 The 169 out-of-closure rows are ratcheted but not burned down here. They are
 recorded in this RFC's changelog at flip time as `naming-gate-flip` criterion 5
 requires, and they want an actionpack-family RFC of their own.
+
+After W6 the naming gate itself enforces the closure, so the mark's closure
+packages are already rowless and carry nothing. The out-of-closure rows stay on
+the mark until their own RFC flips them.
 
 ## Non-goals
 
@@ -283,13 +300,14 @@ requires, and they want an actionpack-family RFC of their own.
 
 ## Alternatives considered
 
-- **Waves only, no ratchet.** This is what RFC 0096 did. It closed with the
-  residue rising, and the 08-30 → 09-16 measurement shows +34 with no one
-  watching. Rejected.
-- **Waves first, ratchet at zero.** This arms the gate the way arel's param mark
-  was armed. It sounds cleaner, but the mark is only useful during the burndown,
-  which is when inflow happens, and it adds nothing at the moment it is armed.
+- **Waves only, no ratchet.** This is what RFC 0096 did. It closed with no
+  owner for the remainder, and the 08-30 → 09-16 measurement shows +34 since.
   Rejected.
+- **Waves first, then arm the mark at zero.** This is how arel's parameter-name
+  mark was armed (RFC 0126: enrolled once PRs #7123/#7148 reached zero). It
+  works when a population is small and quiet. This one gained 34 rows in two
+  and a half weeks, so every wave would race inflow, and the mark would protect
+  nothing until the very end. Rejected.
 - **Flip `naming-gate-flip` now and baseline the convergeable rows as seeded
   debt.** This is exactly what `NAMING_CLASSES` forbids ("Never baseline it"),
   and it turns the closing story into a ratification. Rejected.
@@ -323,7 +341,8 @@ Each step is one PR.
 7. **W6** `naming-gate-flip`: rehomed from `0123-blocked-convergence-holding`,
    unblocked when steps 2–6 have merged.
 
-Steps 2–6 depend on step 1 and not on each other.
+Steps 2–6 depend on step 1. Steps 2 and 3 are independent of the rest; steps
+4 → 5 → 6 run in order because they share the mark's `activerecord` row.
 
 The wave stories are **not** filed in the PR that adds this RFC. The RFC lands
 `draft`, and stories under a draft RFC never reach `ready`. After merge, from
@@ -336,7 +355,9 @@ tasks rehome naming-gate-flip --to <assigned-rfc>
 
 Then file steps 1–6 with `tasks new <assigned-rfc> <slug> --body-file …`,
 carrying this inventory as their Context. Add `deps:` edges on
-`naming-residue-mark` for steps 2–6, and on 2–6 for `naming-gate-flip`.
+`naming-residue-mark` for steps 2–6, `naming-burndown-activerecord-connection-adapters`
+for step 5, `naming-burndown-activerecord-relation` for step 6, and on steps
+2–6 for `naming-gate-flip`.
 
 ## Verification
 
@@ -356,21 +377,21 @@ carrying this inventory as their Context. Add `deps:` edges on
 
 ## Open questions
 
-1. **Should permanent rows get a soft mark too?** A cheap `permanentTotal` field,
+1. **Should permanent rows get a soft mark too?** A `permanentTotal` field,
    reported but not gated, would show whether a taxonomy arm is absorbing rows
-   it should not. **Proposed:** report-only in step 1. Gate it only if a wave
-   finds a misclassified row.
-2. **How many "burndown" rows are recorder shape?** The report cannot yet tell a
-   rename from a row with no differing `ref:` pair. **Deferred to step 1:** the
-   mark story prints that split in `--report` so W1–W5 are sized on real
-   renames.
+   it should not. **Recommendation:** report-only. **Deferred to
+   `naming-residue-mark`**; gate it only if a wave finds a misclassified row.
+2. **How many `burndown` rows are recorder shape?** **Resolved 2026-09-16:**
+   zero of the 84 in-closure rows. Every one carries a differing `ref:` pair,
+   so W1–W5 are sized on real renames.
 3. **Does the mark belong under `parity:api:calls:args` or its own script?**
    Folding it into `lint-call-args.ts` means one CI step and one artifact read.
-   A separate script matches `parity:api:params`. **Proposed:** a separate
-   script that reuses the artifact read, decided in step 1.
+   A separate script matches `parity:api:params`. **Recommendation:** a separate
+   script that reuses the artifact read. **Deferred to `naming-residue-mark`.**
 4. **Does `thisTypedFunctions` make the count build-state-dependent?** It is read
    from `output/ts-api.json`. If a stale manifest can flip a `module-mixin-call`
-   row to `burndown`, a sibling PR could red spuriously. **Deferred to step 1**,
+   row to `burndown`, a sibling PR could red spuriously. **Deferred to
+   `naming-residue-mark`**,
    which must show the count is stable across a forced and a warm
    `parity:api` run.
 
@@ -379,3 +400,7 @@ carrying this inventory as their Context. Add `deps:` edges on
 - 2026-09-16: initial RFC. Re-measured on `3c6616b0f1`: 257 convergeable
   repo-wide (was 223 on 08-30), 88 in the closure (84 `burndown` + 4
   `module-mixin-receiver`; `burndown` was 81 on 08-30).
+- 2026-09-16: self-review. Measured zero recorder-shape rows in the closure
+  (Open question 2 resolved). Serialised the three activerecord waves on the
+  shared mark row, added per-wave LOC sizing, deferred every open question to a
+  named story, and removed claims the measurements do not support.
