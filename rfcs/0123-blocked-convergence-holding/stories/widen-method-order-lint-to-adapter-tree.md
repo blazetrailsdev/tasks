@@ -51,38 +51,35 @@ Files affected include `abstract-adapter.ts`, `abstract/connection-pool.ts`,
 `abstract/transaction.ts`, `mysql2-adapter.ts`, `column.ts`, `deduplicable.ts`
 and ~17 more.
 
-### Why this is not one PR
+### Why this lands as one waived-ceiling PR
 
-25,488 LOC is far past the PR ceiling, and more importantly the reorder touches
-nearly every file that RFC 0119's ~106 open stories, RFC 0106 and RFC 0073 are
-all actively editing. Landing it as one change would conflict with essentially
-every agent working in the tree.
+25,488 LOC is far past the PR ceiling, and the reorder touches nearly every file
+that RFC 0119's open stories, RFC 0106 and RFC 0073 are also editing. Two shapes
+were weighed:
 
-Note that a pure reorder produces no semantic diff, so it is cheap to _redo_ but
-expensive to _hold_ — it must land in a quiet window per slice, not be carried
-on a long-lived branch.
+- **A sequence of one-subdirectory slices.** Keeps each diff reviewable, but five
+  PRs each still run 2,000-6,000 LOC — every one needs its own waiver — and each
+  rebase re-runs the reorder against a moved tree. Five quiet windows are harder
+  to find than one.
+- **One PR, ceiling explicitly waived.** Chosen. A pure reorder has no semantic
+  diff, so the review question is not "is each hunk correct" but "is this diff a
+  permutation" — which is answered once, mechanically, for the whole change.
+
+A pure reorder is cheap to _redo_ and expensive to _hold_, so this lands in a
+single quiet window and is regenerated rather than rebased if it goes stale.
 
 ## Acceptance criteria
 
 - The lint glob covers `packages/activerecord/src/connection-adapters/**/*.ts`
   and `packages/activerecord/src/adapters/**/*.ts`, and `pnpm lint` is clean.
-- Landed as a **sequence of slices**, each its own PR from `main`, each scoped to
-  one subdirectory and taken when that area has no open PRs touching it.
-  Suggested order, smallest blast radius first:
-  1. `connection-adapters/sqlite3/**` and `sqlite3-adapter.ts`
-  2. `connection-adapters/mysql/**`, `mysql2/**`, `mysql2-adapter.ts`,
-     `abstract-mysql-adapter.ts`
-  3. `connection-adapters/postgresql/**`, `postgresql-adapter.ts`
-  4. `connection-adapters/abstract/**`
-  5. the top-level files, and the glob widening itself as the final commit
-- Each slice is `eslint --fix` output only — **no hand edits**, so the diff is
-  verifiably a permutation. Reviewers should be able to confirm no line content
-  changed.
-- The glob widening lands **last**, so no intermediate slice leaves CI red.
-- Before each slice: `gh pr list --search "<subdir>"` to confirm the area is
-  quiet.
-
-## Notes
-
-File this as blocked-by-coordination rather than blocked-by-code: nothing
-technical prevents it, but it needs a quiet window per slice.
+- Landed as **one PR** from `main`, with the LOC ceiling explicitly waived in the
+  PR body and the waiver justified as pure `eslint --fix` output.
+- The diff is `eslint --fix` output only — **no hand edits**. Verifiable two ways:
+  `git diff --shortstat` shows insertions equal to deletions, and re-running
+  `pnpm lint --fix` on the branch produces no further change.
+- Taken in a quiet window: no open PR touches
+  `packages/activerecord/src/connection-adapters/**` when it is opened. Check
+  with `gh pr list --search "connection-adapters"` first. If the window closes
+  before merge, regenerate the branch rather than rebasing it.
+- No `.trails.test.ts` or snapshot churn: a permutation changes no behaviour, so
+  any test diff means a hand edit crept in.
