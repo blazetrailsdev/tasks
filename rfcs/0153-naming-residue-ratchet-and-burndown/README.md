@@ -301,8 +301,15 @@ A package that is not enrolled is measured by
   `parity:api:calls` already does. If step 1 finds that a forced and a warm run
   on the same tree classify a row differently, the gate classifies without
   `thisTypedFunctions`, the arm `classifyRow` already takes when the set is
-  absent. Those 5 `module-mixin-call` rows then need a rename or a rewire, not
-  a receipt. A spurious red on an unrelated PR is still the one outcome the
+  absent. That arm files the 5 `module-mixin-call` rows as `burndown`. They
+  are genuinely permanent, though, and a rename cannot remove them, so under
+  the fallback a naive receipt check would deadlock: no rename, no legal
+  receipt, and activerecord and activesupport could never enroll. So the
+  receipt-on-convergeable-row error (§1) is decided with `classifyRow`'s
+  **mixin-aware** arm whenever a manifest is present, and only the
+  row-counting side falls back. A receipt on a `ref:call` row is then accepted
+  exactly when some build classifies it `module-mixin-call`, and a unit test
+  pins that the fallback never rejects one of those 5 receipts. A spurious red on an unrelated PR is still the one outcome the
   ratchet cannot afford.
 - **Wiring.** The check runs in the `rails-comparison` CI job beside the
   `shape` gate, and never baselines a `naming` row. Receipts replace baseline
@@ -365,15 +372,15 @@ PERMANENT` at each site. A row whose classification looks wrong is not
 
 Waves, in closure order (counts as of `3c6616b0f1`):
 
-| wave | slice                                 | convergeable rows | permanent receipts | enrolls at end              |
-| ---- | ------------------------------------- | ----------------: | -----------------: | --------------------------- |
-| —    | step 1 (tag + gate)                   |                 0 |                  6 | i18n, globalid, AR-test-sup |
-| W1   | activemodel + arel                    |                 3 |                  6 | activemodel, arel           |
-| W2   | activesupport                         |                17 |                 14 | activesupport               |
-| W3   | activerecord `connection-adapters/**` |                26 |                  — | —                           |
-| W4   | activerecord `relation*`              |                16 |                  — | —                           |
-| W5   | activerecord, remaining               |                26 |                 47 | activerecord                |
-| W6   | `naming-gate-flip`                    |                 — |                  — | (closure fully enrolled)    |
+| wave | slice                                 | convergeable rows | permanent receipts | enrolls at end           |
+| ---- | ------------------------------------- | ----------------: | -----------------: | ------------------------ |
+| —    | step 1 (tag + gate)                   |                 0 |                  6 | 3 empty closure packages |
+| W1   | activemodel + arel                    |                 3 |                  6 | activemodel, arel        |
+| W2   | activesupport                         |                17 |                 14 | activesupport            |
+| W3   | activerecord `connection-adapters/**` |                26 |                  — | —                        |
+| W4   | activerecord `relation*`              |                16 |                  — | —                        |
+| W5   | activerecord, remaining               |                26 |                 47 | activerecord             |
+| W6   | `naming-gate-flip`                    |                 — |                  — | (closure fully enrolled) |
 
 W1 and W2 include their packages' `module-mixin-receiver` rows (0 and 2); W5
 includes activerecord's 2. The three closure packages with no convergeable rows
@@ -391,9 +398,9 @@ A wave larger than one PR once measured splits by directory into sibling stories
 under this RFC, filed with `tasks new`. It never fans out into PRs from one
 agent. Because no wave writes a shared counter, W1, W2 and W3 can run in
 parallel. W4 depends on W3 and W5 on W4 only so that activerecord's closing
-enrollment is measured over a tree that already carries both earlier slices,
-and so that the per-adapter CI of W3 is not rebased under W4's relation work.
-They share no file. W6 depends on all five.
+enrollment is measured over a tree that already carries both earlier slices.
+That is a scheduling choice, not a conflict: they share no file, and dropping
+the W3 → W4 edge to run them in parallel would be safe. W6 depends on all five.
 
 Sizing: a rename touches the call site plus every read of that local or
 parameter in the method body, so a row is typically 2–6 changed lines. 26 rows
@@ -510,7 +517,11 @@ Each step is one PR.
    errors, `NAMING_ENROLLED_PACKAGES` with its only-grow gate in the
    `rails-comparison` job, tests, and the trails CLAUDE.md / CONTRIBUTING.md
    lines. It enrolls `i18n`, `globalid` and `activerecord-test-support` with
-   their 6 permanent receipts.
+   their 6 permanent receipts. Estimated ~250–300 LOC: the tag parser reuses
+   `missing-rails-call-tags.ts`, and the gate is a filter over rows the report
+   already classifies. If it measures over the ceiling, the docs lines and the
+   three enrollments move to a follow-up story under this RFC, and the tag
+   plus gate land first with an empty set.
 2. **W1** `naming-burndown-activemodel-arel`: 3 convergeable rows, 6 receipts.
    Enrolls activemodel and arel.
 3. **W2** `naming-burndown-activesupport`: 17 convergeable rows, 14 receipts.
@@ -603,3 +614,7 @@ superseded mechanism. It is replaced by `naming-receipt-enrollment-gate`, and
   are ungated until a wave enrolls them. The remedy is enrollment order and
   out-of-closure waves, not a contended counter. The Summary and Motivation are
   re-pointed at the new mechanism; the inventory and measurement are unchanged.
+- 2026-09-16: self-review of the amendment. Resolved a deadlock in the
+  `thisTypedFunctions` fallback, where permanent `module-mixin-call` rows could
+  be neither renamed nor receipted. Added a step-1 size estimate and split
+  path, and stated plainly that W3 → W4 → W5 is a scheduling edge.
