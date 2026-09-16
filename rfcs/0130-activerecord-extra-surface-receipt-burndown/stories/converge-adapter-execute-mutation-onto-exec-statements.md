@@ -1,6 +1,6 @@
 ---
 title: "converge-adapter-execute-mutation-onto-exec-statements"
-status: draft
+status: ready
 updated: 2026-09-15
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

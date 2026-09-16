@@ -1,6 +1,6 @@
 ---
 title: "mysql2-honour-multi-statements-flag"
-status: claimed
+status: blocked
 updated: 2026-09-15
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -12,7 +12,7 @@ priority: 20
 pr: null
 claim: "2026-09-15T23:26:23Z"
 assignee: "binaries-fixture-data-from-flowers-asset"
-blocked-by: null
+blocked-by: "node-mysql2 implements no COM_SET_OPTION command (lib/commands/ has no SET_OPTION; the opcode exists only in constants/commands.js), so Rails' per-batch set_server_option(OPTION_MULTI_STATEMENTS_ON/OFF) (mysql2/database_statements.rb:41-43,106-107) is unreachable. Verified on mariadb:11: dropping the forced multipleStatements:true so the AR flags govern the handshake does honour flags, but then executeBatch can never combine on the default lane config (flags: [FOUND_ROWS], as Rails ships) and three ALREADY-PORTED Rails cases red: 'bulk insert multiple table with a multi statement query', 'insert fixtures set raises an error when max allowed packet is smaller than fixtures set size', 'insert fixtures set concat total sql into a single packet smaller than max allowed packet'. There is no arrangement that satisfies both the two new cases and those three without COM_SET_OPTION."
 closed-reason: null
 ---
 
