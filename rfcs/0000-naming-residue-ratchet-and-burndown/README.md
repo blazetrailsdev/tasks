@@ -10,6 +10,9 @@ packages:
   - activesupport
   - activemodel
   - arel
+  - i18n
+  - globalid
+  - activerecord-test-support
 clusters:
   - naming-residue
 related-rfcs:
@@ -194,16 +197,42 @@ not add a new mechanism.
   `parity:api:extra:tighten`. There is no reseed verb. A mark can only go up as
   a reviewed line in the diff of a story that justifies it, the same rule RFC
   0129 set for ruby-compat.
-- **Enrollment:** every package that appears in the artifact today is enrolled
-  at its measured count, as `param-name-mark.ts`'s `GATED_PACKAGES` is. The
-  out-of-closure packages are included. They are outside the flip, but the
-  ratchet costs them nothing and stops their 169 rows from growing. Enrollment
-  is only-grow.
+- **Enrollment:** two sources, unioned.
+  - **Every AR-closure package**, resolved from `ar-closure.ts` rather than
+    from the artifact. The flip gates the closure through the same module
+    (`naming-gate-flip` criterion 1), so the mark must cover exactly the same
+    set. A closure package with no convergeable rows today (`i18n`, `globalid`,
+    `activerecord-test-support`, and any other package `ar-closure.ts`
+    resolves) is enrolled **rowless from day one**, pinned at 0. A new
+    convergeable row there reds the gate immediately, and a package that a
+    moved `require` adds to the closure is enrolled by the same rule.
+  - **Every other package in the artifact**, at its measured count, as
+    `param-name-mark.ts`'s `GATED_PACKAGES` is. They are outside the flip, but
+    the ratchet costs them nothing and stops their 169 rows from growing.
+
+  Enrollment is only-grow.
+
 - **End states:** once a closure package reaches `total: 0`, it moves to a
   **rowless** set, as in `extra-surface-mark.ts`'s `ROWLESS_PACKAGES`. Its count
   is pinned at the constant 0, it carries no row, and the gate fails if a row is
   added back. arel and activemodel are expected to become rowless in the first
   wave. A package with nothing left to count needs a rule, not a number.
+- **Build-state independence:** the count must not depend on how warm the
+  local `parity:api` cache is. The only input outside the artifact is
+  `thisTypedFunctions` (read from `output/ts-api.json`), which decides whether a
+  `ref:call` row is `module-mixin-call` (permanent) or `burndown`. Two rules
+  keep that stable:
+  - **CI regenerates both files in the same job** before comparing, as
+    `parity:api:calls` already does for its own artifact. So the gated count is
+    always computed from one build.
+  - **If `naming-residue-mark` finds the forced and warm counts differ** on the
+    same tree, the mark drops the input and counts `ref:call` rows as
+    `burndown`. That is the arm `classifyRow` already takes when the set is
+    absent. The seeded count is then higher by the `module-mixin-call` rows (5
+    repo-wide, 3 in activerecord and 1 in activesupport), but it is
+    deterministic. Those rows can only turn permanent through the taxonomy,
+    never by moving the mark. A spurious red on an unrelated PR is the one
+    outcome the ratchet cannot afford.
 - **Wiring:** `lint-call-args.ts` already runs in the `rails-comparison` CI job
   over the same artifact. The mark check runs in that job next to the `shape`
   gate, as `pnpm parity:api:calls:args:naming`. It reports what the ratchet
@@ -391,16 +420,19 @@ for step 5, `naming-burndown-activerecord-relation` for step 6, and on steps
    script that reuses the artifact read. **Deferred to `naming-residue-mark`.**
 4. **Does `thisTypedFunctions` make the count build-state-dependent?** It is read
    from `output/ts-api.json`. If a stale manifest can flip a `module-mixin-call`
-   row to `burndown`, a sibling PR could red spuriously. **Deferred to
-   `naming-residue-mark`**,
-   which must show the count is stable across a forced and a warm
-   `parity:api` run.
+   row to `burndown`, a sibling PR could red spuriously. **Design decided**
+   (§1 "Build-state independence"): CI computes both inputs from one build,
+   and if the check fails the mark counts without `thisTypedFunctions`. Only
+   the measurement that picks the arm is **deferred to `naming-residue-mark`**.
 
 ## Changelog
 
 - 2026-09-16: initial RFC. Re-measured on `3c6616b0f1`: 257 convergeable
   repo-wide (was 223 on 08-30), 88 in the closure (84 `burndown` + 4
   `module-mixin-receiver`; `burndown` was 81 on 08-30).
+- 2026-09-16: review. Enrolled every AR-closure package from `ar-closure.ts`,
+  rowless at 0 where it has no rows, so the mark covers the same set the flip
+  gates. Committed a deterministic fallback for the `thisTypedFunctions` input.
 - 2026-09-16: self-review. Measured zero recorder-shape rows in the closure
   (Open question 2 resolved). Serialised the three activerecord waves on the
   shared mark row, added per-wave LOC sizing, deferred every open question to a
