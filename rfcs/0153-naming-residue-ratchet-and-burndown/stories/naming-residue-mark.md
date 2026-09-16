@@ -1,6 +1,6 @@
 ---
 title: "Ratchet the call-argument naming residue per package"
-status: draft
+status: closed
 updated: 2026-09-16
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by the RFC 0153 amendment (tasks#134): counts file replaced by @missingRailsName + NAMING_ENROLLED_PACKAGES; see naming-receipt-enrollment-gate"
 ---
 
 ## Context

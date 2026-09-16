@@ -1,6 +1,6 @@
 ---
 title: "Receipt permanent naming rows with @missingRailsName and gate enrolled packages"
-status: draft
+status: in-progress
 updated: 2026-09-16
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 280
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7845
+claim: "2026-09-16T20:30:20Z"
+assignee: "naming-receipt-enrollment-gate"
 blocked-by: null
 closed-reason: null
 ---
