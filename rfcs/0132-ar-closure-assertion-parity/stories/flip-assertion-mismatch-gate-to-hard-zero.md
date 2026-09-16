@@ -47,6 +47,23 @@ deps:
   - "assertions-tail-root-6b"
   - "assertions-transactions-locking-and-pool"
   - "assertions-validations-and-encryption"
+  - "assertions-activesupport-date-time-ext"
+  - "assertions-activesupport-duration-remainder"
+  - "assertions-activesupport-hash-cluster-remainder"
+  - "assertions-activesupport-logging-tail"
+  - "assertions-activesupport-module-class-remainder"
+  - "assertions-activesupport-string-ext-multibyte-safe-buffer"
+  - "assertions-activesupport-time-ext"
+  - "assertions-activesupport-time-with-zone-test"
+  - "assertions-activesupport-time-zone-test"
+  - "assertions-associations-test"
+  - "assertions-date-parse-unported-parsers"
+  - "assertions-globalid-locator"
+  - "assertions-migration-constraint-files"
+  - "assertions-migration-test-file"
+  - "assertions-activesupport-time-with-zone-structural-remainder"
+  - "assertions-activesupport-time-ext-source-remainder"
+  - "assertions-activesupport-module-class-third-pass"
 deps-rfc: []
 est-loc: 200
 priority: 9
