@@ -44,8 +44,9 @@ This RFC owns that work, in two halves, and **the ratchet comes first**:
 2. **Burndown waves** that converge the existing rows, one package slice per
    PR, each tightening the mark behind it.
 
-When the closure's mark reaches zero, `naming-gate-flip` is rehomed here and
-runs unchanged.
+`naming-gate-flip` is rehomed here right after merge, and stays blocked until
+the closure's mark reaches zero. It then runs with its acceptance criteria
+unchanged.
 
 ## Motivation
 
