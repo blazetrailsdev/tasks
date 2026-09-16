@@ -191,7 +191,13 @@ ways:
    its receipt, or re-cited `PERMANENT` against a ratified CLAUDE.md section.
    `withConnectionSync` and the `relation*` `@missingRailsCall with_connection`
    tags go to the Relation section. `internalSchemaCache` goes to the
-   schema-cache section. No `CONVERGEABLE` citation of that story remains.
+   schema-cache section. `discardBangDraining` (`connection-pool.ts:674`, read
+   only by `pool-config.ts:128`) and `drainPendingCloses` (`:793`) exist
+   because the discard and disconnect sweeps cannot await. They are deleted
+   with Design §2, once `discard_pool!` / `disconnect!` await the sweep.
+   `adapterReady` (`:271`, set at `connection-handler.ts:187-189`, awaited at
+   `tasks/database-tasks.ts:834,841`) is not a checkout seam; see Open
+   question 3. No `CONVERGEABLE` citation of that story remains.
 
 ## Non-goals
 
@@ -269,6 +275,15 @@ tasks rehome converge-sync-connection-lease-per-checkout-verify \
    `connection-leasing-queue-internal-poll-carries-a-promise-arm`.** If no
    single-arm shape exists, that story blocks with the measured reason. It does
    not ratify.
+3. **Where does `adapterReady` go?** It stands in for the synchronous `require`
+   in `ConnectionAdapters.resolve` (`connection_adapters.rb:34-39`), which ESM
+   can only do with an async `import()`. That is adapter loading, not pool
+   checkout. **Deferred to
+   `sync-reads-of-async-reflection-retire-with-rfc-0073`:** before this RFC's
+   Verification can pass, that story either converges it onto an eagerly
+   registered adapter class or files it with the
+   `connection-handler.ts:187` evidence under the surfaced-deviations bucket
+   for activerecord, and re-cites the receipt to the new story.
 
 ## Changelog
 
@@ -276,4 +291,5 @@ tasks rehome converge-sync-connection-lease-per-checkout-verify \
 - 2026-09-16: self-review. `withConnectionSync` and `acquireConnectionSync` are
   kept as the sync `with_connection` scope, because their callers are the
   ratified sync arel path, and `AliasTracker.create` moves onto that scope rather
-  than going async. Added Open question 2.
+  than going async. Added Open question 2. Design §4 now names a disposition for
+  every cited member, and Open question 3 was added for `adapterReady`.

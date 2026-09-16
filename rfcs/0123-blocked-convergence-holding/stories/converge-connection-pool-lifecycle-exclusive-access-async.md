@@ -61,4 +61,8 @@ different acquire path.
 - The sweep does not call `acquireConnectionSync`.
 - `ExclusiveConnectionTimeoutError` is still raised with Rails' message for a busy
   pool.
+- `discardBangDraining` (`connection-pool.ts:674`, read by `pool-config.ts:128`)
+  and `drainPendingCloses` (`:793`) are deleted along with their
+  `CONVERGEABLE sync-reads-of-async-reflection-retire-with-rfc-0073` receipts,
+  because the awaited sweep makes them unnecessary.
 - Disconnect and discard pool tests are green on all three adapters.

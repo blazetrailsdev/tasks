@@ -55,7 +55,11 @@ Two of these fall under CLAUDE.md sections instead of convergence:
 ## Acceptance criteria
 
 - Each pool member above is deleted as its seam converges, together with its
-  receipt.
+  receipt: `leaseConnectionSync` with the lease story, and `discardBangDraining`
+  and `drainPendingCloses` with the exclusive-access story.
+- `adapterReady` is either converged onto an eagerly registered adapter class, or
+  filed as its own activerecord surfaced-deviations story with its receipt
+  re-cited there (RFC Open question 3).
 - Each site covered by a ratified CLAUDE.md section is re-cited `PERMANENT`
   against that section. `withConnectionSync` and the `relation*` sites go to the
   Relation section, and `internalSchemaCache` to the schema-cache section.
