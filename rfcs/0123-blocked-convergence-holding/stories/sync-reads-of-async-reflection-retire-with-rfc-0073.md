@@ -7,10 +7,11 @@ cluster: null
 packages: []
 deps:
   [
-    "retire-schema-cache-sync-readers-after-checkout-flip",
-    "arm-permanent-connection-checkout-disallowed",
+    "converge-sync-connection-lease-per-checkout-verify",
+    "converge-connection-pool-lifecycle-exclusive-access-async",
+    "connection-leasing-queue-internal-poll-carries-a-promise-arm",
   ]
-deps-rfc: ["0073-permanent-connection-checkout-disallowed"]
+deps-rfc: []
 est-loc: null
 priority: null
 pr: null
@@ -22,30 +23,41 @@ closed-reason: null
 
 ## Context
 
-A cluster of `@noRailsEquivalent` members exists only because the port's
-reflection and connection checkout are async where Ruby's are synchronous, so a
-query-free "sync" twin sits beside the real reader:
+The pool-checkout RFC `0000-pool-checkout-async-convergence` (Seam inventory §4, Design §4)
+owns this story. It will be rehomed there once that RFC merges.
 
-- `connection-adapters/schema-cache.ts` — query-free reads of `columns_hash`
-  (schema_cache.rb:352), `data_source_exists?` (:309), `primary_keys` (:298),
-  their shared write half (Ruby populates only through `#add`, :326), the raw
-  cache slot `SchemaReflection` keeps (:16) with its writer, the `load!`/`add_all`
-  pairing (:27/:220), and its bound counterpart (:169)
-- `connection-adapters/abstract/connection-pool.ts` — the pre-async
-  `#lease_connection` (connection_pool.rb:315-319), the synchronous `require` of
-  `ConnectionAdapters.resolve` (connection_adapters.rb:34-39), and the async
-  drains added to `#discard!` (:484) and `conn.disconnect!` (:530)
-- `connection-adapters/abstract-adapter.ts` — the raw schema-cache slot behind
-  `#schema_cache` (abstract_adapter.rb:298)
-- `connection-adapters/abstract/query-cache.ts` — the per-context query-cache
-  store Ruby drops with the thread's `IsolatedExecutionState`
-  (abstract/query_cache.rb:62)
+This is the receipt story for the port's sync twins of async checkout and
+reflection. Its original gate was RFC 0073's
+`arm-permanent-connection-checkout-disallowed`, which landed as trails#7781.
+Arming that flag does not retire the twins, because JS cannot block a sync reader
+on a checkout. The twins go when the pool seams converge (the sibling stories
+under the same RFC), or they are ratified.
 
-Each retires with the pool sync/async convergence (RFC 0073).
+Citations on trails `0236d460b2`:
+
+- `@noRailsEquivalent CONVERGEABLE`:
+  - `connection-adapters/abstract/connection-pool.ts:269` `adapterReady`
+  - `:394` `leaseConnectionSync`
+  - `:415` `withConnectionSync`
+  - `:672` `discardBangDraining`
+  - `:791` `drainPendingCloses`
+  - `connection-adapters/abstract-adapter.ts:1269` `internalSchemaCache`
+- `@missingRailsCall with_connection`: `relation.ts:454,672,994` and
+  `relation/query-methods.ts:1298`.
+- `@missingRailsArgs where_sql`: `relation/finder-methods.ts:339`.
+
+Two of these fall under CLAUDE.md sections instead of convergence:
+
+- `internalSchemaCache` belongs to the schema-cache sync readers ratified by RFC
+  0150's decision.
+- The `relation*` sites belong to § "`Relation` is evaluated by an async query".
 
 ## Acceptance criteria
 
-- Each member is deleted as its RFC 0073 counterpart lands, along with its
-  `@noRailsEquivalent CONVERGEABLE sync-reads-of-async-reflection-retire-with-rfc-0073`
+- Each pool member above is deleted as its seam converges, together with its
   receipt.
+- Each site covered by a ratified CLAUDE.md section is re-cited `PERMANENT`
+  against that section.
+- `git grep "CONVERGEABLE sync-reads-of-async-reflection-retire-with-rfc-0073"`
+  returns 0 hits.
 - No new sync twin is added beside an async reader.

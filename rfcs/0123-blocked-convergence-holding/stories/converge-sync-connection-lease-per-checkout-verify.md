@@ -17,38 +17,52 @@ closed-reason: null
 
 ## Context
 
-`connection-pool-pinned-sync-checkout-per-checkout-verify` landed as #4443, but
-the residual it describes is still in the tree at three sites, each citing the
-landed story as its tracker:
+The pool-checkout RFC `0000-pool-checkout-async-convergence` (Seam inventory §1, Design §1)
+owns this story. It will be rehomed there once that RFC merges.
 
-- `packages/activerecord/src/connection-adapters/abstract/connection-pool.ts:636-660`
-  — `leaseConnectionSync()`, the sync lease that skips the async per-checkout
-  `verifyBang`. It is `@internal` and already carries
-  `@noRailsEquivalent CONVERGEABLE`.
-- `packages/activerecord/src/connection-handling.ts:499-509` — the deprecated
-  sync `.connection` getter routes through `leaseConnectionSync`, losing the
-  self-heal Rails' `lease_connection` performs there.
-- `packages/arel/src/nodes/node.ts:49-60` — `toSql` takes the sync
-  `engine.connection` lease in place of Rails'
-  `engine.with_connection { |c| ... }` (`arel/nodes/node.rb:148-153`), skipping
-  the same verify.
+`ConnectionPool#leaseConnectionSync`
+(`packages/activerecord/src/connection-adapters/abstract/connection-pool.ts:396-411`)
+is a sync twin of `lease_connection` (`connection_pool.rb:315`). It never awaits
+the per-checkout `verifyBang` that `checkout` (`connection_pool.rb:547`) runs, and
+its lease is permanent. `withConnectionSync` (`:417-457`) is the same arm for
+`with_connection` (`connection_pool.rb:405`). Both carry
+`@noRailsEquivalent CONVERGEABLE sync-reads-of-async-reflection-retire-with-rfc-0073`.
 
-The root cause is unchanged: trails' Rails-named `leaseConnection` / `checkout`
-became async (they await per-checkout `verifyBang`), while all three call sites
-are synchronous — `to_sql` alone is sync at 600+ call sites. The
-`@noRailsEquivalent` tag at connection-pool.ts:655 names
-`retire-connection-pool-async-resolution-shims` as the convergence owner, so
-this residual should either fold into that story or be tracked here.
+Production callers, re-measured on trails `0236d460b2`. The `arel/nodes/node.ts`
+`toSql` site this story originally listed is gone.
 
-See also `project_sync_active_getter_drops_rails_live_probe` and
-`project_pool_adapter_proxy_makes_sync_methods_async`.
+| trails site                                          | Rails counterpart                                                  |
+| ---------------------------------------------------- | ------------------------------------------------------------------ |
+| `model-schema.ts:29` `reflectionAdapter`             | `schema_cache` pool read (`model_schema.rb:591`)                   |
+| `connection-handling.ts:341` deprecated `connection` | `ConnectionHandling#connection` (`connection_handling.rb:274-290`) |
+| `associations/alias-tracker.ts:70` `create`          | `pool.with_connection` (`alias_tracker.rb:10`)                     |
+| `tasks/database-tasks.ts:884` `migrationConnection`  | `migration_class.lease_connection` (`database_tasks.rb:533-535`)   |
+
+Test-infrastructure callers: `test-fixtures/fixture-connection.ts:8`,
+`test-fixtures/with-transactional-fixtures.ts:164` and
+`test-helpers/models/contact.ts:9`. `withConnectionSync` is also read by
+`Relation#loadAsync` (`relation.ts:455-456`).
+
+This is a convergence, not a language shortcoming. `model-schema.ts:604-611`
+records that the lease is permanent and trips
+`permanent_connection_checkout = :deprecated | :disallowed` on every save. That
+flag was armed in the AR suite by trails#7781. Rails' pool reads never take a
+permanent lease.
+
+The earlier blocker named `abstract-adapter-lock-defaults-to-monitor-not-nulllock`.
+It does not apply, because nothing here touches the adapter lock.
 
 ## Acceptance criteria
 
-- The per-checkout `verifyBang` self-heal is restored on the sync paths, or
-  `leaseConnectionSync` is retired in favour of the async Rails-named surface
-  at all three sites.
-- All three comments stop citing the landed
-  `connection-pool-pinned-sync-checkout-per-checkout-verify` and either drop
-  the deviation note or cite the story that actually owns it.
+- `reflectionAdapter` and `AliasTracker.create` get their connection from a
+  `withConnection` scope, as Rails' pool read and `alias_tracker.rb:10` do.
+  Neither takes a permanent lease.
+- `migrationConnection` and the deprecated `connection` getter keep their Rails
+  names and resolve through the async lease. The PR settles the RFC's open
+  question (return the awaited lease, or answer only a threaded
+  `activeConnection` and raise otherwise), with caller counts for both options.
+- `leaseConnectionSync` and `withConnectionSync` have 0 definitions and 0 callers
+  under `packages/`, including the test-infrastructure callers above.
+- The AR suite is green on sqlite3, postgresql and mysql2 with
+  `permanent_connection_checkout = :disallowed`.
 - `scripts/stale-story-references.test.ts` stays green.
