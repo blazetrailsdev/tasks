@@ -537,12 +537,31 @@ Dependencies: steps 2–6 depend on step 1. Step 5 (W4) depends on step 4 (W3),
 and step 6 (W5) on step 5 (W4). Step 7 depends on steps 2–6. The W3 → W4 → W5
 edges are for the reasons given in §4, not because of a shared file.
 
-The RFC is active and `naming-gate-flip` is already rehomed. Steps 1–6 are
-filed with `tasks new 0153-naming-residue-ratchet-and-burndown <slug>
---body-file …`, carrying this inventory as their Context and the `deps:` edges
-above. The `naming-residue-mark` story filed before this amendment names the
-superseded mechanism. It is replaced by `naming-receipt-enrollment-gate`, and
-`naming-gate-flip`'s criterion 2 prose is amended to receipts (§4).
+The RFC is active and `naming-gate-flip` is already rehomed. **None of the
+story changes below is made by this amendment.** Each is a post-merge action
+for whoever files this RFC's stories, done in this order from the main
+worktree:
+
+1. **Close the superseded story.** `stories/naming-residue-mark.md` (filed
+   before this amendment) still describes the rejected counts file. Its status
+   is DB-owned, so it is closed with a verb, never by editing its frontmatter:
+
+   ```sh
+   tasks close naming-residue-mark "superseded by the RFC 0153 amendment (tasks#134): counts file replaced by @missingRailsName + NAMING_ENROLLED_PACKAGES; see naming-receipt-enrollment-gate"
+   ```
+
+2. **File steps 1–6** with `tasks new 0153-naming-residue-ratchet-and-burndown
+<slug> --body-file …`. Each carries this inventory as its Context and the
+   `deps:` edges above. Step 1's body names `naming-residue-mark` as the story
+   it replaces.
+3. **Amend `naming-gate-flip`'s prose** in a markdown PR. Criterion 2 ("seed
+   the permanent rows per class") becomes "every in-closure permanent row
+   carries a `@missingRailsName` receipt, with its reason in `NAMING_CLASSES`"
+   (§4), and `deps:` gains steps 2–6. The story stays blocked, and its status
+   is left to `tasks` verbs.
+
+Until those three actions land, the two story files on `main` describe the old
+mechanism. This README is authoritative wherever they disagree.
 
 ## Verification
 
@@ -618,3 +637,7 @@ superseded mechanism. It is replaced by `naming-receipt-enrollment-gate`, and
   `thisTypedFunctions` fallback, where permanent `module-mixin-call` rows could
   be neither renamed nor receipted. Added a step-1 size estimate and split
   path, and stated plainly that W3 → W4 → W5 is a scheduling edge.
+- 2026-09-16: review (tasks#134). Rollout claimed the superseded
+  `naming-residue-mark` story and `naming-gate-flip` criterion 2 were already
+  updated; neither is. Restated both as explicit, ordered post-merge actions,
+  with the `tasks close` verb for the DB-owned status.
