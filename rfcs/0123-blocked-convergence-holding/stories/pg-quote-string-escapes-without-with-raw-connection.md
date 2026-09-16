@@ -2,7 +2,7 @@
 title: "PostgreSQL quote_string escapes without taking with_raw_connection's lease"
 status: blocked
 updated: 2026-09-15
-rfc: "0073-permanent-connection-checkout-disallowed"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
