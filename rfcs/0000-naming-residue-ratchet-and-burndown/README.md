@@ -430,10 +430,10 @@ for step 5, `naming-burndown-activerecord-relation` for step 6, and on steps
 - 2026-09-16: initial RFC. Re-measured on `3c6616b0f1`: 257 convergeable
   repo-wide (was 223 on 08-30), 88 in the closure (84 `burndown` + 4
   `module-mixin-receiver`; `burndown` was 81 on 08-30).
-- 2026-09-16: review. Enrolled every AR-closure package from `ar-closure.ts`,
-  rowless at 0 where it has no rows, so the mark covers the same set the flip
-  gates. Committed a deterministic fallback for the `thisTypedFunctions` input.
 - 2026-09-16: self-review. Measured zero recorder-shape rows in the closure
   (Open question 2 resolved). Serialised the three activerecord waves on the
   shared mark row, added per-wave LOC sizing, deferred every open question to a
   named story, and removed claims the measurements do not support.
+- 2026-09-16: review. Enrolled every AR-closure package from `ar-closure.ts`,
+  rowless at 0 where it has no rows, so the mark covers the same set the flip
+  gates. Committed a deterministic fallback for the `thisTypedFunctions` input.
