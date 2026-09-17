@@ -32,7 +32,11 @@ Expect more than one PR; ship what fits and file the rest.
 ## Acceptance criteria
 
 - `core_ext/date_time_ext_test.rb` reports 0 count/kind/value mismatches.
-- `scripts/test-compare/assertion-mismatch-mark.json` lowered by exactly this story's contribution.
+- The mark file is FROZEN for this RFC by
+  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
+  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
+  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
+  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.
 - No test name changes; activesupport `parity:test` percent does not drop.
 
 ## LOC limit

@@ -56,7 +56,11 @@ Still outstanding (`pnpm parity:test -- --assertions --missing --package actives
 
 - Each file above reports 0 assertion-count / kind / value mismatches in
   `pnpm parity:test -- --assertions --package activesupport` (LEAVE rows excepted).
-- `scripts/test-compare/assertion-mismatch-mark.json` lowered by the contribution.
+- The mark file is FROZEN for this RFC by
+  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
+  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
+  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
+  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.
 - No test name changes. If larger than one PR, ship what fits and file the rest.
 
 ## LOC limit

@@ -49,5 +49,9 @@ divergent (`pnpm parity:test -- --assertions --missing --package activesupport`)
 
 - Each file above reports 0 count / kind / value mismatches, or carries a call-site
   comment where a Ruby-only protocol makes that impossible.
-- activesupport row of `scripts/test-compare/assertion-mismatch-mark.json` lowered.
+- The mark file is FROZEN for this RFC by
+  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
+  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
+  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
+  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.
 - No test name changes.

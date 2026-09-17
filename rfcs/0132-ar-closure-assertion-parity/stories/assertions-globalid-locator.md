@@ -76,8 +76,11 @@ trails 2` because Rails' third assertion is the
   assertion-value mismatches in `pnpm parity:test -- --assertions --package globalid`,
   except the single `use locator with class and single argument` count row
   tracked by `globalid-locator-single-argument-deprecation`.
-- `scripts/test-compare/assertion-mismatch-mark.json` lowers globalid from
-  `{24, 27, 1}` to `{1, 0, 0}`.
+- The mark file is FROZEN for this RFC by
+  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
+  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
+  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
+  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.
 - No test name changes; `pnpm parity:test` percent for globalid does not drop
   from 131/131.
 - No new rows in `scripts/parity/unported-files/`.

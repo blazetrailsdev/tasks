@@ -43,4 +43,8 @@ allowing nil`) expect `nil.to_f == 0.0` (`module_test.rb:340-348`): Rails'
   `name_error_test.rb` reports 0 mismatches.
 - Delegation to a nil target honours `nil.respond_to?(method)` for the NilClass methods
   Rails' tests reach (`to_f`), and the two `module_test.rb` tests assert `0.0`.
-- `assertion-mismatch-mark.json` activesupport row lowered by exactly this story.
+- The mark file is FROZEN for this RFC by
+  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
+  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
+  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
+  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.

@@ -41,8 +41,11 @@ call.
 - `eager.test.ts`'s `loading associations dont leak instance state` can be
   written with the Rails lambda shape (an `assertions` local called twice) and
   still report 0 assertion-count and 0 assertion-kind mismatches.
-- No package's counter in `scripts/test-compare/assertion-mismatch-mark.json`
-  increases; reseed only downward.
+- The mark file is FROZEN for this RFC by
+  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
+  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
+  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
+  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.
 
 ## LOC limit
 

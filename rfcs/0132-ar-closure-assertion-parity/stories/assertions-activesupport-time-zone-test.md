@@ -29,7 +29,11 @@ the value rows are `to s` (Rails uses "New Delhi") and `utc offset lazy loaded..
 ## Acceptance criteria
 
 - time_zone_test.rb reports 0 count/kind/value mismatches.
-- activesupport row of `scripts/test-compare/assertion-mismatch-mark.json` lowered by exactly this contribution.
+- The mark file is FROZEN for this RFC by
+  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
+  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
+  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
+  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.
 - No test name changes.
 
 ## LOC limit

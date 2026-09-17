@@ -46,8 +46,11 @@ Recurring mechanical shapes (all used in the eager PR):
 
 - `associations_test.rb` reports 0 assertion-count, 0 assertion-kind, 0
   assertion-value mismatches in `pnpm parity:test -- --package activerecord --assertions`.
-- `scripts/test-compare/assertion-mismatch-mark.json` lowered via
-  `pnpm parity:test:assertions:reseed` by exactly this contribution.
+- The mark file is FROZEN for this RFC by
+  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
+  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
+  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
+  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.
 - No test name changes; TS-only extra coverage moves to a `.trails.test.ts`.
 
 ## LOC limit

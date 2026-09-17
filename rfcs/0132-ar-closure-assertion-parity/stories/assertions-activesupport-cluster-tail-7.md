@@ -51,8 +51,11 @@ values. Do not reword test names, and never reseed
   `pnpm parity:test -- --assertions --package activesupport`, except
   `xml_mini_test.rb` and the two `json/encoding_test.rb` rows marked LEAVE,
   which have no TypeScript counterpart — leave them and cite the note.
-- `scripts/test-compare/assertion-mismatch-mark.json` lowered by this story's
-  contribution (activesupport is at 908 / 1253 / 107).
+- The mark file is FROZEN for this RFC by
+  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
+  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
+  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
+  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.
 - No test name changes; the activesupport `pnpm parity:test` percent does not
   drop.
 - If this is still larger than one PR, ship what fits and file the remainder.

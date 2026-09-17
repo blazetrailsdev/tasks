@@ -97,8 +97,23 @@ mark file and are not this RFC's problem.
 
 - **NEVER rename or reword a test name.** Names are how `parity:test` matches.
   If a test's behaviour does not fit its name, the implementation changes.
-- The mark file is **only-shrink**. Edit down the numbers you converged; never
-  reseed, and never raise a package's entry to make a run green.
+- The mark file is **FROZEN for the duration of this RFC**, by
+  `scripts/test-compare/assertion-mismatch-mark.freeze` (trails PR). A story
+  here converges assertions and leaves `assertion-mismatch-mark.json`
+  untouched: no `pnpm parity:test:assertions:reseed` — the reseed script
+  refuses while the marker exists — and no hand-edit in either direction.
+  Every story in this RFC lands in the same handful of package rows, so a
+  per-story write serializes the whole RFC on three integers; and because
+  `--write` rewrites every package in the artifact, one reflexive reseed also
+  tightens packages outside this RFC in a diff nobody reviewed. The mark stays
+  only-shrink, and the slack is green: a mark above the measurement is exactly
+  what this ratchet passes. `tighten-assertion-mark-after-0132` deletes the
+  marker and reseeds once, at the end.
+- **The freeze suspends protection of ground already converged.** Until it is
+  lifted, a story that regresses assertions an earlier story converged is
+  absorbed by the slack and CI stays green. The reviewer of the diff is the
+  only check on that; it is the price paid for parallelism, and it is why the
+  freeze is scoped to this RFC and lifted with it.
 - `assertion-kinds.ts` moves **every** package's numbers. Any change to it
   reports its effect on all marks in the file, before and after.
 - A mapping rule is not a way to make a real divergence disappear. Each rule
@@ -150,6 +165,12 @@ for the third):
 activesupport, activemodel, arel, date, globalid, i18n and did-you-mean; those
 eight entries in `assertion-mismatch-mark.json` read `0 / 0 / 0`; and the gate
 is hard rather than report-only for all eight, so they cannot regress.
+
+Reaching that state is `tighten-assertion-mark-after-0132`'s job: the counters
+fall to zero across the RFC's stories while the mark sits frozen above them, and
+the closing story is what writes the zeros in and deletes
+`assertion-mismatch-mark.freeze`. The RFC is not done while that marker exists,
+whatever the measured counters say.
 
 ## Relationship to RFC 0105
 

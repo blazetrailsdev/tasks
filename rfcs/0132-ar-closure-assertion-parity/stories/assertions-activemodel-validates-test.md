@@ -92,9 +92,11 @@ produced. Inlining the helper is what turns 2 Rails assertions into N trails
 
 - The file reports 0 assertion-count, 0 assertion-kind and 0 assertion-value
   mismatches in `pnpm parity:test -- --assertions --package activemodel`.
-- `scripts/test-compare/assertion-mismatch-mark.json` is lowered by exactly this
-  file's contribution (the ratchet lowers on a passing run; never hand-edit it
-  upward, and never lower a counter by narrowing a report scope).
+- The mark file is FROZEN for this RFC by
+  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
+  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
+  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
+  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.
 - No test name changes; `pnpm parity:test` percent for activemodel does not drop.
 - Any trails-only extra test worth keeping moves to the sibling
   `*.trails.test.ts`, per CLAUDE.md.

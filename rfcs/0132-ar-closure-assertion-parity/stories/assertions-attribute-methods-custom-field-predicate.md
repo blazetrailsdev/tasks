@@ -60,7 +60,9 @@ ceiling.
 - `custom field attribute predicate` is the Rails body over the canonical
   `Company` model and `findBySql`, with the same six assertions in the same
   order and the same kinds.
-- `attribute_methods_test.rb` reports one fewer assertion-count and one fewer
-  assertion-kind mismatch; `scripts/test-compare/assertion-mismatch-mark.json`
-  is lowered by `pnpm parity:test:assertions:reseed`.
+- The mark file is FROZEN for this RFC by
+  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
+  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
+  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
+  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.
 - No test name changes.

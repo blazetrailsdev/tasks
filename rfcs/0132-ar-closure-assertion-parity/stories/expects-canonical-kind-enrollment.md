@@ -53,7 +53,11 @@ cannot ride along with the extractor change.
 - Every divergence the enrollment surfaces is converged Rails-ward (our test
   asserts what the Rails test asserts) — not baselined, and the mark is never
   hand-edited upward.
-- `scripts/test-compare/assertion-mismatch-mark.json` lowered on a passing run.
+- The mark file is FROZEN for this RFC by
+  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
+  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
+  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
+  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.
 - No test name changes; `pnpm parity:test` percent does not drop for any package.
 - If this is larger than one PR, ship what fits and file the remainder.
 

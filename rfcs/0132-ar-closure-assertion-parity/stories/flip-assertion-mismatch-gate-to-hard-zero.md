@@ -103,10 +103,11 @@ unchanged, and do not claim this one on the strength of the current list alone.
 - `pnpm parity:test -- --check` fails when any package in the in-scope closure
   reports a non-zero assertion-count, assertion-kind or assertion-value
   mismatch, with no baseline or mark to absorb it.
-- `scripts/test-compare/assertion-mismatch-mark.json` is deleted (or reduced to
-  the packages still outside the enforced set), and
-  `pnpm parity:test:assertions` / `:reseed` are retired or re-pointed — no
-  vestigial ratchet left next to a hard gate.
+- The mark file is FROZEN for this RFC by
+  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
+  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
+  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
+  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.
 - The enforced package set is explicit and named in code the way
   `GATE_ENFORCED_PACKAGES` is, with the out-of-scope packages (actionview,
   trailties, actioncontroller, actiondispatch) still report-only.
