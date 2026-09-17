@@ -2,7 +2,7 @@
 title: 'BigDecimal#toString defaults to "F", where Ruby''s BigDecimal#to_s is engineering notation'
 status: draft
 updated: 2026-08-26
-rfc: "0023-surfaced-deviations"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
