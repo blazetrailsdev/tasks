@@ -17,7 +17,8 @@ related-rfcs:
   - "0135-platform-adapters-in-ruby-compat"
   - "0148-ruby-compat-catch-throw"
   - "0130-activerecord-extra-surface-receipt-burndown"
-  - "0117-extra-surface-gating"
+  - "0117-arel-extra-surface-burndown"
+  - "0120-extra-surface-gating-rollout"
 priority: 3
 ---
 
