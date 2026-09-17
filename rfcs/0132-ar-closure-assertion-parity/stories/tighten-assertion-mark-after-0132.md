@@ -1,13 +1,14 @@
 ---
-title: "tighten-assertion-mark-after-0132"
+title: "Lift the assertion-mark freeze and reseed once"
 status: draft
 updated: 2026-09-17
 rfc: "0132-ar-closure-assertion-parity"
-cluster: null
-packages: []
+cluster: enforcement
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 40
 priority: null
 pr: null
 claim: null
