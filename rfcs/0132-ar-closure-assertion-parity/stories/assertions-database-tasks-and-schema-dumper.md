@@ -1,6 +1,6 @@
 ---
 title: "database tasks and schema dumper assertion parity"
-status: claimed
+status: in-progress
 updated: 2026-09-17
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 259
 priority: 5
-pr: null
+pr: trails#7859
 claim: "2026-09-17T18:28:26Z"
 assignee: "assertions-database-tasks-and-schema-dumper"
 blocked-by: null

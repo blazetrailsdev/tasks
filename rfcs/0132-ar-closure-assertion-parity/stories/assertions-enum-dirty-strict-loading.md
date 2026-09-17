@@ -1,6 +1,6 @@
 ---
 title: "enum, dirty and strict_loading assertion parity"
-status: claimed
+status: in-progress
 updated: 2026-09-17
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 332
 priority: 5
-pr: null
+pr: trails#7858
 claim: "2026-09-17T18:47:55Z"
 assignee: "assertions-enum-dirty-strict-loading"
 blocked-by: null

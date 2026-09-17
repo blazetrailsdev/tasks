@@ -1,7 +1,7 @@
 ---
 title: "assert_valid_enum_definition_values' three messages interpolate #{values} and drop the got: suffix"
-status: draft
-updated: 2026-08-14
+status: in-progress
+updated: 2026-09-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7858
+claim: "2026-09-17T19:57:54Z"
+assignee: "enum-definition-error-messages-interpolate-values"
 blocked-by: null
 closed-reason: null
 ---
