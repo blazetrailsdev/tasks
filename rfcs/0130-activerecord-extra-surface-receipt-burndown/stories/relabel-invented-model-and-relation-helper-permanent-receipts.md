@@ -25,6 +25,13 @@ receipt, and are trails inventions — CLAUDE.md § No extra abstraction:
 - `relation/query-methods.ts:142` `defineValueMethods`, `:636` `setValues`,
   `:837` `structuralUnionEq`, `:2291` `assertValidLeftOuterJoinsBang`,
   `:1586` `toS` (unmeasured)
+- `ruby-first.ts:3` `first`, `ruby-drop.ts:5` `drop`, `relation/query-methods.ts:1425`
+  `toI`, `ruby-truthy.ts:3` `isRubyTruthy` — ruby-compat-shaped helpers
+- `inheritance.ts:108` `moduleParentChain` — a `string[]` prefix builder, not
+  `Module#module_parents` (`introspection.rb:53-64`)
+- `connection-adapters/postgresql/oid/point.ts:5` `PointValue` — scores `novel`;
+  Rails' `ActiveRecord::Point` (`oid/point.rb:4`) is a separate Struct from
+  `OID::Point`, so a rename is a convergence proposal to verify
 - `relation/predicate-builder.ts:350,353` `Attributes`, `entriesOf` (unmeasured)
 - `relation/delegation.ts:271` `refuseImplicitCount` (unmeasured)
 - `connection-adapters/abstract/quoting.ts:224` `isSqlLiteral`
