@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-module-class-remainder"
-status: claimed
+status: ready
 updated: 2026-09-17
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: "2026-09-17T01:04:11Z"
-assignee: "assertions-activesupport-module-class-remainder"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
