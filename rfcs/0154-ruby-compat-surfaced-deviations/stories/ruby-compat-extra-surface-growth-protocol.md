@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat's extra-surface mark needs a growth protocol: its extra surface is inventory, not debt"
-status: draft
+status: ready
 updated: 2026-09-17
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: "measurement"

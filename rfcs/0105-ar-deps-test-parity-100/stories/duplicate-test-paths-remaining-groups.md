@@ -1,7 +1,7 @@
 ---
 title: "duplicate-test-paths-remaining-groups"
-status: ready
-updated: 2026-09-16
+status: done
+updated: 2026-09-17
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 40
-pr: null
-claim: null
-assignee: null
+pr: trails#7852
+claim: "2026-09-17T16:09:08Z"
+assignee: "duplicate-test-paths-remaining-groups"
 blocked-by: null
 closed-reason: null
 ---

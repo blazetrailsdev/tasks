@@ -1,6 +1,6 @@
 ---
 title: "BigDecimal moves out of the activesupport core_ext into ruby-compat, and conversions.ts becomes an actual port of the prepend"
-status: draft
+status: in-progress
 updated: 2026-09-17
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: "mri-relocation"
@@ -13,9 +13,9 @@ deps-rfc:
   - "0023-surfaced-deviations"
 est-loc: 300
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#7853
+claim: "2026-09-17T16:41:59Z"
+assignee: "move-big-decimal-to-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: 'BigDecimal#toString defaults to "F", where Ruby''s BigDecimal#to_s is engineering notation'
-status: draft
-updated: 2026-08-26
+status: in-progress
+updated: 2026-09-17
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7853
+claim: "2026-09-17T16:42:02Z"
+assignee: "bigdecimal-tostring-defaults-to-fixed-not-rubys-engineering"
 blocked-by: null
 closed-reason: null
 ---
