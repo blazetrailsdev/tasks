@@ -1,6 +1,6 @@
 ---
 title: "assert_valid_enum_definition_values' three messages interpolate #{values} and drop the got: suffix"
-status: in-progress
+status: done
 updated: 2026-09-17
 rfc: "0023-surfaced-deviations"
 cluster: null
