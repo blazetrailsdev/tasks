@@ -1,7 +1,7 @@
 ---
 title: "converge-connection-pool-lifecycle-exclusive-access-async"
-status: in-progress
-updated: 2026-09-16
+status: done
+updated: 2026-09-17
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
 deps: []
