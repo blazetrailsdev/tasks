@@ -1,7 +1,7 @@
 ---
 title: "Converge activesupport naming residue and enroll it"
-status: done
-updated: 2026-08-11
+status: draft
+updated: 2026-09-17
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: ["activesupport"]
@@ -9,9 +9,9 @@ deps: ["naming-receipt-enrollment-gate"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: trails#6355
-claim: "2026-08-11T13:16:06Z"
-assignee: "naming-burndown-activesupport"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
