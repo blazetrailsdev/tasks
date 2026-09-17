@@ -524,10 +524,10 @@ Each step is one PR.
    plus gate land first with an empty set.
 2. **W1** `naming-burndown-activemodel-arel`: 3 convergeable rows, 6 receipts.
    Enrolls activemodel and arel.
-3. **W2** `naming-burndown-activesupport`: 17 convergeable rows, 14 receipts.
+3. **W2** `naming-residue-burndown-activesupport`: 17 convergeable rows, 14 receipts.
    Enrolls activesupport.
 4. **W3** `naming-burndown-activerecord-connection-adapters`: 26 rows.
-5. **W4** `naming-burndown-activerecord-relation`: 16 rows.
+5. **W4** `naming-residue-burndown-activerecord-relation`: 16 rows.
 6. **W5** `naming-burndown-activerecord-remaining`: 26 rows, plus activerecord's
    remaining receipts (47 total across W3–W5). Enrolls activerecord.
 7. **W6** `naming-gate-flip`: already rehomed here. Unblocked when steps 2–6
