@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-logging-tail-2"
-status: draft
+status: closed
 updated: 2026-09-17
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of assertions-activesupport-logging-tail, which stays open"
 ---
 
 ## Context

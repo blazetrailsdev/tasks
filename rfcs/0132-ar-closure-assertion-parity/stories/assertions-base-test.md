@@ -1,6 +1,6 @@
 ---
 title: "base_test assertion parity"
-status: in-progress
+status: done
 updated: 2026-09-17
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity

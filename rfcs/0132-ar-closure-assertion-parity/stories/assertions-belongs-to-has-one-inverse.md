@@ -1,7 +1,7 @@
 ---
 title: "belongs_to / has_one / inverse assertion parity"
-status: ready
-updated: 2026-09-15
+status: in-progress
+updated: 2026-09-17
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 360
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7851
+claim: "2026-09-17T13:22:01Z"
+assignee: "assertions-activesupport-logging-tail"
 blocked-by: null
 closed-reason: null
 ---

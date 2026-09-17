@@ -1,7 +1,7 @@
 ---
 title: "assertions-activesupport-logging-tail"
 status: ready
-updated: 2026-09-16
+updated: 2026-09-17
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
