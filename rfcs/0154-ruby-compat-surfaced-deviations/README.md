@@ -1,5 +1,5 @@
 ---
-rfc: "0000-ruby-compat-surfaced-deviations"
+rfc: "0154-ruby-compat-surfaced-deviations"
 title: "ruby-compat surfaced deviations — the MRI port's standing convergence bucket"
 status: active
 created: 2026-09-17
@@ -22,11 +22,7 @@ related-rfcs:
 priority: 3
 ---
 
-<!-- Unnumbered until merge: keep `rfc:` as 0000-ruby-compat-surfaced-deviations
-     and the H1 below number-free. `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — `ruby-compat` surfaced deviations
+# RFC 0154 — `ruby-compat` surfaced deviations
 
 ## Summary
 
