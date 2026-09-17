@@ -1,6 +1,6 @@
 ---
 title: "Port ConnectionPool#reap: the body is a guard behind three PERMANENT receipts"
-status: draft
+status: in-progress
 updated: 2026-09-17
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7860
+claim: "2026-09-17T22:32:45Z"
+assignee: "port-connection-pool-reap-body"
 blocked-by: null
 closed-reason: null
 ---
