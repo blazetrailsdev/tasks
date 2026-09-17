@@ -8,6 +8,10 @@ owner: "@deanmarano"
 packages:
   - "ruby-compat"
   - "activesupport"
+  # binmode-write-emits-latin1-where-mri-emits-the-strings-own-bytes, rehomed
+  # from RFC 0123, lands its MRI-side fix in ruby-compat but is measured
+  # through an activerecord call site.
+  - "activerecord"
 clusters:
   - "mri-relocation"
   - "measurement"
