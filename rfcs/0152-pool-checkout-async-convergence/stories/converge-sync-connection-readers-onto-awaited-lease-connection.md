@@ -1,6 +1,6 @@
 ---
 title: "converge-sync-connection-readers-onto-awaited-lease-connection"
-status: draft
+status: closed
 updated: 2026-09-16
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of converge-sync-connection-lease-per-checkout-verify; the reader arm was split back out of trails#7846"
 ---
 
 ## Context

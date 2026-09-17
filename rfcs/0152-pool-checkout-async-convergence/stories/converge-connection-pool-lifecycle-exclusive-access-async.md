@@ -1,6 +1,6 @@
 ---
 title: "converge-connection-pool-lifecycle-exclusive-access-async"
-status: claimed
+status: in-progress
 updated: 2026-09-16
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 45
-pr: null
+pr: trails#7846
 claim: "2026-09-16T22:56:18Z"
 assignee: "converge-connection-pool-lifecycle-exclusive-access-async"
 blocked-by: null
