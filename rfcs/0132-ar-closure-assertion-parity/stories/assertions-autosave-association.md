@@ -1,7 +1,7 @@
 ---
 title: "autosave association assertion parity"
-status: ready
-updated: 2026-09-16
+status: claimed
+updated: 2026-09-17
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 408
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-17T01:04:11Z"
+assignee: "assertions-activesupport-module-class-remainder"
 blocked-by: null
 closed-reason: null
 ---

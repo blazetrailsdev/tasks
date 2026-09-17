@@ -1,7 +1,7 @@
 ---
 title: "Mysql2Adapter constructor validates charset/collation; Rails does not"
-status: ready
-updated: 2026-09-16
+status: done
+updated: 2026-09-17
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7848
+claim: "2026-09-17T01:04:00Z"
+assignee: "mysql2-constructor-charset-collation-guard-rails-lacks"
 blocked-by: null
 closed-reason: null
 ---
