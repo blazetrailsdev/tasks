@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-string-ext-multibyte-safe-buffer"
-status: ready
+status: claimed
 updated: 2026-09-17
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-17T15:46:52Z"
+assignee: "assertions-activesupport-logging-tail"
 blocked-by: null
 closed-reason: null
 ---
