@@ -109,11 +109,15 @@ mark file and are not this RFC's problem.
   only-shrink, and the slack is green: a mark above the measurement is exactly
   what this ratchet passes. `tighten-assertion-mark-after-0132` deletes the
   marker and reseeds once, at the end.
-- **The freeze suspends protection of ground already converged.** Until it is
-  lifted, a story that regresses assertions an earlier story converged is
-  absorbed by the slack and CI stays green. The reviewer of the diff is the
-  only check on that; it is the price paid for parallelism, and it is why the
-  freeze is scoped to this RFC and lifted with it.
+- **The freeze suspends ENFORCEMENT on ground already converged.** Until it is
+  lifted, a story that regresses assertions an earlier story converged sits
+  inside the accumulated slack and CI stays green. It is not invisible: while
+  the marker is up, every gate run prints the slack per package and per counter
+  — the protection currently suspended — and those numbers should only ever
+  fall. A counter that RISES between two runs is a regression the gate
+  deliberately let through, and the reviewer of the converging PR is who catches
+  it. That is the price paid for parallelism, and it is why the freeze is scoped
+  to this RFC and lifted with it.
 - `assertion-kinds.ts` moves **every** package's numbers. Any change to it
   reports its effect on all marks in the file, before and after.
 - A mapping rule is not a way to make a real divergence disappear. Each rule
