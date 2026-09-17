@@ -2,7 +2,7 @@
 title: "ruby-compat stdout is a write-only WriteStream, not Ruby's $stdout IO"
 status: ready
 updated: 2026-09-16
-rfc: "0123-blocked-convergence-holding"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
