@@ -1,6 +1,6 @@
 ---
 title: "calculations assertion parity"
-status: claimed
+status: in-progress
 updated: 2026-09-17
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 291
 priority: 5
-pr: null
+pr: trails#7855
 claim: "2026-09-17T15:46:52Z"
 assignee: "assertions-activesupport-logging-tail"
 blocked-by: null
