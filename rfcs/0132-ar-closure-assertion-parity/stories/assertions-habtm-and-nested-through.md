@@ -1,7 +1,7 @@
 ---
 title: "habtm and nested-through assertion parity"
-status: ready
-updated: 2026-09-15
+status: claimed
+updated: 2026-09-18
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 200
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-18T00:32:54Z"
+assignee: "assertions-habtm-and-nested-through"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "assertions-globalid-locator"
-status: claimed
-updated: 2026-09-17
+status: done
+updated: 2026-09-18
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
+pr: trails#7862
 claim: "2026-09-17T23:04:44Z"
 assignee: "assertions-finder-test"
 blocked-by: null

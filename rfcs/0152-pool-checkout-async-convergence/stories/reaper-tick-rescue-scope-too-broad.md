@@ -1,6 +1,6 @@
 ---
 title: "Reaper.ts's tick catches every reap()/flush() failure, not just the WeakRef::RefError analogue"
-status: draft
+status: closed
 updated: 2026-09-18
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged inline in trails#7860 — reaper.ts now rescues only at the tick level, letting an unrescued reap()/flush() failure abort the tick and stop scheduling, matching a Rails reaper thread dying"
 ---
 
 ## Context
