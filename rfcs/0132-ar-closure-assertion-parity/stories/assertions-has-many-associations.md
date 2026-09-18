@@ -1,6 +1,6 @@
 ---
 title: "has_many association assertion parity"
-status: claimed
+status: done
 updated: 2026-09-18
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 537
 priority: 5
-pr: null
+pr: trails#7864
 claim: "2026-09-18T13:35:37Z"
 assignee: "assertions-has-many-associations"
 blocked-by: null

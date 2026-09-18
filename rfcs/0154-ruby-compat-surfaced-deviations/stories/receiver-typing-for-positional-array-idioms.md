@@ -1,6 +1,6 @@
 ---
 title: "Re-check whether RFC 0129 receiver-kind proof reaches first/last/any?/size's Relation-ambiguous rows"
-status: draft
+status: in-progress
 updated: 2026-09-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7865
+claim: "2026-09-18T14:31:49Z"
+assignee: "receiver-typing-for-positional-array-idioms"
 blocked-by: null
 closed-reason: null
 ---
