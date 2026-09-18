@@ -1,7 +1,7 @@
 ---
 title: "database tasks and schema dumper assertion parity"
-status: in-progress
-updated: 2026-09-17
+status: done
+updated: 2026-09-18
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages:
