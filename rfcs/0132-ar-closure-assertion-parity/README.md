@@ -180,22 +180,29 @@ So, when the mirrored assertion fails:
 
 1. **Land the converged body** — same count, same kinds, same expected values as
    Rails. Do not soften an assertion to make it pass, and do not delete it.
-2. **Park the test** as `it.skip`, converged body intact, with **one `BLOCKED:`
-   line** naming the story you filed:
+2. **Park the test** as `it.skip`, converged body intact, with one `BLOCKED:`
+   line pointing at the story you filed:
 
    ```ts
-   // BLOCKED: <category> — <what the port does instead> (<story-slug>)
+   // BLOCKED: <story-slug>
    ```
 
-   **One line, and it must be the `BLOCKED:` one.** `blazetrails/no-freeform-comments`
-   allowlists `BLOCKED:` and `PERMANENT-SKIP:` and nothing else in this
-   neighbourhood (`eslint/no-freeform-comments.mjs:84`), so the `ROOT-CAUSE:` and
-   `SCOPE:` lines in `scripts/test-compare/normalize-skips.ts`'s header are
-   stripped by `eslint --fix` and red the pre-commit hook. That header predates
-   the rule; the rule wins. Everything those two lines would have said belongs in
-   the story body, where it is reviewable and maintained — and **do not write a
-   root cause you have not established**. "I haven't investigated it" is a reason
-   to park and file, not a reason to guess in a comment.
+   **The comment is a pointer, nothing more.** It exists so a reader of the test
+   can find the story; it is not where the finding is recorded. Keep it to one
+   line — `blazetrails/no-freeform-comments` allowlists `BLOCKED:` and
+   `PERMANENT-SKIP:` and nothing else in this neighbourhood
+   (`eslint/no-freeform-comments.mjs:84`), so the `ROOT-CAUSE:` and `SCOPE:`
+   lines in `scripts/test-compare/normalize-skips.ts`'s header are stripped by
+   `eslint --fix` and red the pre-commit hook. That header predates the rule; the
+   rule wins.
+
+   **Put the effort in the story instead**, which is the artifact that is
+   reviewed, searched and scheduled. It carries the parked test's name and file,
+   the Rails `file:line` and what Rails asserts there, what the port does
+   instead, and — plainly — how far you actually got. "Isolated to this file;
+   cause not established" is a good story; a confident root cause you did not
+   verify is a worse one. Not having investigated is a reason to park and file,
+   never a reason to guess.
 
    `it.skip` over `it.todo`: `it.todo` takes no body, so the mirroring work
    would be thrown away and redone when the bug is fixed.
