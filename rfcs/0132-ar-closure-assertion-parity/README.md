@@ -180,22 +180,29 @@ So, when the mirrored assertion fails:
 
 1. **Land the converged body** — same count, same kinds, same expected values as
    Rails. Do not soften an assertion to make it pass, and do not delete it.
-2. **Park the test** as `it.skip`, converged body intact, with **one `BLOCKED:`
-   line** naming the story you filed:
+2. **Park the test** as `it.skip`, converged body intact, with one `BLOCKED:`
+   line pointing at the story you filed:
 
    ```ts
-   // BLOCKED: <category> — <what the port does instead> (<story-slug>)
+   // BLOCKED: <story-slug>
    ```
 
-   **One line, and it must be the `BLOCKED:` one.** `blazetrails/no-freeform-comments`
-   allowlists `BLOCKED:` and `PERMANENT-SKIP:` and nothing else in this
-   neighbourhood (`eslint/no-freeform-comments.mjs:84`), so the `ROOT-CAUSE:` and
-   `SCOPE:` lines in `scripts/test-compare/normalize-skips.ts`'s header are
-   stripped by `eslint --fix` and red the pre-commit hook. That header predates
-   the rule; the rule wins. Everything those two lines would have said belongs in
-   the story body, where it is reviewable and maintained — and **do not write a
-   root cause you have not established**. "I haven't investigated it" is a reason
-   to park and file, not a reason to guess in a comment.
+   **The comment is a pointer, nothing more.** It exists so a reader of the test
+   can find the story; it is not where the finding is recorded. Keep it to one
+   line — `blazetrails/no-freeform-comments` allowlists `BLOCKED:` and
+   `PERMANENT-SKIP:` and nothing else in this neighbourhood
+   (`eslint/no-freeform-comments.mjs:84`), so the `ROOT-CAUSE:` and `SCOPE:`
+   lines in `scripts/test-compare/normalize-skips.ts`'s header are stripped by
+   `eslint --fix` and red the pre-commit hook. That header predates the rule; the
+   rule wins.
+
+   **Put the effort in the story instead**, which is the artifact that is
+   reviewed, searched and scheduled. It carries the parked test's name and file,
+   the Rails `file:line` and what Rails asserts there, what the port does
+   instead, and — plainly — how far you actually got. "Isolated to this file;
+   cause not established" is a good story; a confident root cause you did not
+   verify is a worse one. Not having investigated is a reason to park and file,
+   never a reason to guess.
 
    `it.skip` over `it.todo`: `it.todo` takes no body, so the mirroring work
    would be thrown away and redone when the bug is fixed.
@@ -269,10 +276,25 @@ not. The `~` means it is a trigger to split, not a gate to argue with: a little
 over is a judgement call you make with the measurement in front of you, and a
 file at twice the line is not a judgement call.
 
+**Take a ~100-mismatch slice.** The split threshold above decides whether a
+story needs splitting at all; this decides how much one PR takes. Work the tests
+in `--missing` order, converge until you have cleared **~100 mismatches**, then
+re-measure, file the remainder and open the PR. Measured, not guessed:
+trails#7864 cleared 72 in a long session, trails#7862 cleared 238 in an
+exceptional one. A small converged PR with a good remainder story beats a large
+one that never opens.
+
 **Always exit through a PR.** An agent never ends a session with converged
 commits and no PR. If the story is done, the PR closes it. If it is not, the PR
 carries the converged subset and a remainder story is filed for the rest. There
 is no third exit.
+
+**Never release the claim, and never ask which option to take.** The remainder
+story IS the handoff: it carries your converged work plus the context you built.
+Releasing throws that context away and leaves the next agent to re-derive it.
+And "this is bigger than one turn" is the expected case for every file in this
+RFC — it is not a discovery that needs a decision from anyone, because the
+decision is written here.
 
 **A remainder story is a real story**, authored with the context you have right
 now: which tests are converged, the residue re-measured after your PR, the

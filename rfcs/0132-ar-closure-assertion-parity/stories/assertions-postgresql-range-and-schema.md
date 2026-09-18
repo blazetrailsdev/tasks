@@ -17,6 +17,37 @@ blocked-by: null
 closed-reason: null
 ---
 
+## How to work this story
+
+Read this before the measurements below. It is the whole operating procedure,
+and it does not vary by story.
+
+1. **Measure, then take a slice.** Run
+   `pnpm parity:test -- --package <pkg> --assertions --missing` and work the
+   tests in the order it lists them. Converge until you have cleared **~100
+   mismatches**, then stop taking new ones.
+2. **Re-measure, file the remainder, open the PR.** The remainder story carries
+   the residue you just measured plus everything you learned — the canonical
+   models you identified, the fixture wiring, the blockers. Then the PR goes up.
+3. **That is the end of the story either way.** If the file reached 0, the PR
+   closes it. If it did not, the PR plus the filed remainder closes it. A story
+   in this RFC is never handed back unfinished.
+
+**Do not ask which option to take.** There is one option and it is written
+above. A story here is a work order, not a request for a plan, and "this is
+bigger than one turn" is the expected case for every file in this RFC, not a
+discovery that needs a decision from anyone.
+
+**Do not release the claim.** The remainder story IS the handoff — it is how the
+next agent gets your work plus your context. Releasing instead throws the
+context away and leaves the next agent to re-derive it.
+
+**~100 is measured, not a guess.** trails#7864 cleared 72 mismatches in a long
+session on `has_many_associations_test.rb`; trails#7862 cleared 238 on
+`finder_test.rb` in an exceptional one. Clear more if the file is going well.
+Clear fewer and file earlier if it is not — a small converged PR with a good
+remainder story beats a large one that never opens.
+
 ## Context
 
 This RFC counts assertion parity, not only name parity: a test that matches
@@ -61,25 +92,32 @@ Instead:
 1. **Land the converged body.** The assertions stay exactly as Rails writes
    them — same count, same kinds, same expected values. Do not soften an
    assertion to make it pass, and do not delete it.
-2. **Park the test**, converged body intact, as `it.skip` carrying **one
-   `BLOCKED:` line** that names the story you filed:
+2. **Park the test**, converged body intact, as `it.skip` carrying one
+   `BLOCKED:` line pointing at the story you filed:
 
    ```ts
    it.skip("rails test name, unchanged", async () => {
-     // BLOCKED: <category> — <what the port does instead> (<story-slug>)
+     // BLOCKED: <story-slug>
      // ...converged body, mirroring the Rails assertions...
    });
    ```
 
-   **One line, and it must be the `BLOCKED:` one.** `blazetrails/no-freeform-comments`
-   allowlists `BLOCKED:` and `PERMANENT-SKIP:` and nothing else in this
-   neighbourhood (`eslint/no-freeform-comments.mjs:84`), so the `ROOT-CAUSE:` and
-   `SCOPE:` lines in `scripts/test-compare/normalize-skips.ts`'s header are
-   stripped by `eslint --fix` and red the pre-commit hook. That header predates
-   the rule; the rule wins. Everything those two lines would have said belongs in
-   the story body, where it is reviewable and maintained — and **do not write a
-   root cause you have not established**. "I haven't investigated it" is a reason
-   to park and file, not a reason to guess in a comment.
+   **The comment is a pointer, nothing more.** It exists so a reader of the test
+   can find the story; it is not where the finding is recorded. Keep it to one
+   line — `blazetrails/no-freeform-comments` allowlists `BLOCKED:` and
+   `PERMANENT-SKIP:` and nothing else in this neighbourhood
+   (`eslint/no-freeform-comments.mjs:84`), so the `ROOT-CAUSE:` and `SCOPE:`
+   lines in `scripts/test-compare/normalize-skips.ts`'s header are stripped by
+   `eslint --fix` and red the pre-commit hook. That header predates the rule; the
+   rule wins.
+
+   **Put the effort in the story instead**, which is the artifact that is
+   reviewed, searched and scheduled. It carries the parked test's name and file,
+   the Rails `file:line` and what Rails asserts there, what the port does
+   instead, and — plainly — how far you actually got. "Isolated to this file;
+   cause not established" is a good story; a confident root cause you did not
+   verify is a worse one. Not having investigated is a reason to park and file,
+   never a reason to guess.
 
 3. **File the story** in **RFC `0155-assertion-surfaced-port-bugs`**, the
    bucket this RFC's overflow goes to:
