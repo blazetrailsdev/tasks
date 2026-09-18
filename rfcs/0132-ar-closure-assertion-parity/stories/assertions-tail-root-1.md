@@ -134,6 +134,10 @@ regression test, or a change outside the file you are converging, is.
   `it.skip` with the structured annotation and a filed story — see "A
   converged assertion that fails is a story, not a detour" above — not fixed
   in this PR.
+- **Or the split is filed.** A file listed above that this PR does not take to
+  0 is named, with its residue re-measured, in a remainder story filed under
+  this RFC — see "Finish the story or split it" above. The converged subset plus
+  a filed remainder satisfies this story; converged commits with no PR do not.
 
 ## LOC limit
 
