@@ -3,7 +3,7 @@ rfc: "0132-ar-closure-assertion-parity"
 title: "ActiveRecord closure assertion parity to zero"
 status: active
 created: 2026-08-31
-updated: 2026-09-15
+updated: 2026-09-18
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -16,6 +16,7 @@ clusters:
   - assertion-parity
   - enforcement
 related-rfcs:
+  - "0155-assertion-surfaced-port-bugs"
   - "0105-ar-deps-test-parity-100"
   - "0122-arel-assertion-parity"
   - "0025-fidelity-verification-tooling"
@@ -138,20 +139,79 @@ Every mismatch lands in exactly one bucket (RFC 0122's rule, unchanged except
 for the third):
 
 - **real divergence** — the trails test asserts something different from the
-  Rails test. Fix the test to mirror the Ruby.
+  Rails test. Fix the test to mirror the Ruby. If the mirrored assertion then
+  FAILS, the port has a bug: park the test and file it, do not fix it here (see
+  the section below).
 - **legitimate trails-only extra** — an assertion with no Rails counterpart.
   Move it to a `.trails.test.ts` sibling. Do not delete rigour, and do not
   leave it inflating a mirrored test's count.
 - **missing production surface** — the assertion cannot be written because the
-  thing it asserts about is not ported. That is a separate story against the
-  package, not a test edit; four such stories are already here
-  (`date-ext-to-fs-readable-inspect-xmlschema-surface`,
+  thing it asserts about is not ported, or is ported wrong. That is a separate
+  story in RFC `0155-assertion-surfaced-port-bugs`, not a test edit, and the
+  test is parked rather than fixed here (see the section below). The four this
+  RFC delivered before 0155 existed —
+  `date-ext-to-fs-readable-inspect-xmlschema-surface`,
   `decimal-cast-value-to-s-fallback`,
-  `globalid-locator-single-argument-deprecation`,
-  `type-registry-variadic-lookup-forwarding`).
+  `globalid-locator-single-argument-deprecation` and
+  `type-registry-variadic-lookup-forwarding` — stay in this directory as the
+  record of that work; everything after them goes to 0155.
 - **tooling false positive** — a further mapping or extractor gap goes into
   `assertion-kinds.ts` or the extractor with its own justification, not into a
-  per-file workaround. `expects-canonical-kind-enrollment` is the open one.
+  per-file workaround. Assertion tooling stays in THIS RFC; 0155 is for
+  production `src/`.
+
+## A converged assertion that fails is a story, not a detour
+
+This is the rule that keeps the RFC moving, added 2026-09-18 after the burndown
+slowed down: converging a test's assertions regularly surfaces a real production
+bug — the test now asserts what Rails asserts, and the port does not do it.
+**The agent converging assertions does not fix it.** An assertion burndown that
+turns into an unrelated behaviour fix triples the PR's size and review rounds,
+and the rest of that story's files stall behind it. The bug is real and worth
+fixing; it is not worth fixing _inside_ an assertion-parity PR.
+
+So, when the mirrored assertion fails:
+
+1. **Land the converged body** — same count, same kinds, same expected values as
+   Rails. Do not soften an assertion to make it pass, and do not delete it.
+2. **Park the test** as `it.skip`, converged body intact, with the repo's
+   structured skip annotation (`scripts/test-compare/normalize-skips.ts:10-15`)
+   and the story you filed named in its `SCOPE:` line. `it.skip` over `it.todo`:
+   `it.todo` takes no body, so the mirroring work would be thrown away and
+   redone when the bug is fixed.
+3. **File the story in RFC `0155-assertion-surfaced-port-bugs`**
+   (`pnpm tasks new 0155-assertion-surfaced-port-bugs <slug> --body-file <path>`),
+   the bucket that exists so this RFC stops growing a tail of production stories
+   it cannot close — **not** this RFC, which owns the assertion axis and not the
+   behaviours it uncovers. If an active RFC already owns that behaviour, file it
+   there instead and say so; 0155 is the default, not a monopoly. Capture the
+   trails and Rails `file:line` already in front of you.
+4. **Move on to the next file.**
+
+Judgement on size: a one-line production fix you are already sure of is not
+worth a story round-trip. Anything needing its own investigation, its own
+regression test, or a change outside the file being converged, is.
+
+Two mechanical facts this rests on, and one consequence:
+
+- A pending test (`it.skip` / `it.todo`) is excluded from all three assertion
+  counters — `isAssertionCountMismatch`, `assertionKindMismatch` and the value
+  check all return early on `pending`
+  (`scripts/test-compare/compare.ts:526-560`) — and the name gate still credits
+  it, because `matched++` runs regardless of pending (`compare.ts:920-928`). So
+  parking clears the rows without dropping `parity:test`'s percent.
+- **Park inside the existing gate wrapper.** Replacing an adapter-gated trails
+  test with a bare `it.skip` makes `classifyGateMismatch` score it `should-gate`
+  (`scripts/test-compare/gates.ts:410-424`), and the `Test comparison` CI step
+  fails hard — activerecord's gate-mismatch count is a hard zero with no
+  baseline.
+- **Consequence, stated plainly:** because a pending test leaves the counters,
+  this RFC's end condition can be reached with parked tests in the tree. That is
+  accepted. The zero this RFC delivers is "every mirrored test that RUNS asserts
+  what Rails asserts", and each parked test carries a filed story that un-parks
+  it. What is NOT accepted is parking a test to avoid the work of mirroring its
+  assertions: the body lands converged, and the `ROOT-CAUSE:` line has to name a
+  production symbol, not a test-side difficulty.
 
 ## Clusters
 
@@ -169,6 +229,9 @@ for the third):
 activesupport, activemodel, arel, date, globalid, i18n and did-you-mean; those
 eight entries in `assertion-mismatch-mark.json` read `0 / 0 / 0`; and the gate
 is hard rather than report-only for all eight, so they cannot regress.
+
+Parked tests (above) are outside those counters by construction, and each is
+owned by a story elsewhere; they do not hold this RFC open.
 
 Reaching that state is `tighten-assertion-mark-after-0132`'s job: the counters
 fall to zero across the RFC's stories while the mark sits frozen above them, and
