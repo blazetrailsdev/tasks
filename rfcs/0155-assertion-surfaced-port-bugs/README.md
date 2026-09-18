@@ -81,14 +81,21 @@ the port does instead) and `## Acceptance criteria`. `tasks new` refuses a
 skeleton body, and rightly: a title-only stub forces a re-derivation that costs
 more than the original investigation.
 
-**Name the parked test.** Every story here should say which test is parked on
-it, and the parked test's one `BLOCKED:` line should name the story. That pair
-is what makes the bucket drainable: fixing the bug means un-parking a specific
-test, not hunting for what the fix was for. The story body is where the root
-cause and the `file:line` references live: `blazetrails/no-freeform-comments`
-strips anything past the `BLOCKED:` line out of the test file
-(`eslint/no-freeform-comments.mjs:84`), so a story here that carries no more
-than its comment could have is a story that has lost its context.
+**The story carries the finding; the test carries a pointer.** A parked test
+gets one `BLOCKED: <story-slug>` line and nothing else —
+`blazetrails/no-freeform-comments` strips anything past it
+(`eslint/no-freeform-comments.mjs:84`), and that is the right shape anyway: a
+comment is not reviewed, searched or scheduled, and a story is.
+
+So a story here carries, at minimum:
+
+- **which test is parked on it**, by name and file, so the fix has a definition
+  of done that is not "hunt for what this was for";
+- **the Rails `file:line`** and what Rails asserts or does there;
+- **what the port does instead**, with its `file:line`;
+- **how far you actually got.** "Isolated to this file; cause not established"
+  is a good story. A confident root cause you did not verify is a worse one than
+  no root cause at all.
 
 ## Definition of done for a story here
 
