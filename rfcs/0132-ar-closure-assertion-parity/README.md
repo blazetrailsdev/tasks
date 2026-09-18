@@ -276,10 +276,25 @@ not. The `~` means it is a trigger to split, not a gate to argue with: a little
 over is a judgement call you make with the measurement in front of you, and a
 file at twice the line is not a judgement call.
 
+**Take a ~100-mismatch slice.** The split threshold above decides whether a
+story needs splitting at all; this decides how much one PR takes. Work the tests
+in `--missing` order, converge until you have cleared **~100 mismatches**, then
+re-measure, file the remainder and open the PR. Measured, not guessed:
+trails#7864 cleared 72 in a long session, trails#7862 cleared 238 in an
+exceptional one. A small converged PR with a good remainder story beats a large
+one that never opens.
+
 **Always exit through a PR.** An agent never ends a session with converged
 commits and no PR. If the story is done, the PR closes it. If it is not, the PR
 carries the converged subset and a remainder story is filed for the rest. There
 is no third exit.
+
+**Never release the claim, and never ask which option to take.** The remainder
+story IS the handoff: it carries your converged work plus the context you built.
+Releasing throws that context away and leaves the next agent to re-derive it.
+And "this is bigger than one turn" is the expected case for every file in this
+RFC — it is not a discovery that needs a decision from anyone, because the
+decision is written here.
 
 **A remainder story is a real story**, authored with the context you have right
 now: which tests are converged, the residue re-measured after your PR, the
