@@ -16,6 +16,7 @@ clusters:
   - assertion-parity
   - enforcement
 related-rfcs:
+  - "0155-assertion-surfaced-port-bugs"
   - "0105-ar-deps-test-parity-100"
   - "0122-arel-assertion-parity"
   - "0025-fidelity-verification-tooling"
@@ -145,15 +146,19 @@ for the third):
   Move it to a `.trails.test.ts` sibling. Do not delete rigour, and do not
   leave it inflating a mirrored test's count.
 - **missing production surface** — the assertion cannot be written because the
-  thing it asserts about is not ported. That is a separate story against the
-  package, not a test edit; four such stories are already here
-  (`date-ext-to-fs-readable-inspect-xmlschema-surface`,
+  thing it asserts about is not ported, or is ported wrong. That is a separate
+  story in RFC `0155-assertion-surfaced-port-bugs`, not a test edit, and the
+  test is parked rather than fixed here (see the section below). The four this
+  RFC delivered before 0155 existed —
+  `date-ext-to-fs-readable-inspect-xmlschema-surface`,
   `decimal-cast-value-to-s-fallback`,
-  `globalid-locator-single-argument-deprecation`,
-  `type-registry-variadic-lookup-forwarding`).
+  `globalid-locator-single-argument-deprecation` and
+  `type-registry-variadic-lookup-forwarding` — stay in this directory as the
+  record of that work; everything after them goes to 0155.
 - **tooling false positive** — a further mapping or extractor gap goes into
   `assertion-kinds.ts` or the extractor with its own justification, not into a
-  per-file workaround. `expects-canonical-kind-enrollment` is the open one.
+  per-file workaround. Assertion tooling stays in THIS RFC; 0155 is for
+  production `src/`.
 
 ## A converged assertion that fails is a story, not a detour
 
@@ -174,11 +179,13 @@ So, when the mirrored assertion fails:
    and the story you filed named in its `SCOPE:` line. `it.skip` over `it.todo`:
    `it.todo` takes no body, so the mirroring work would be thrown away and
    redone when the bug is fixed.
-3. **File the story** (`pnpm tasks new <rfc> <slug> --body-file <path>`) against
-   the best-fit active RFC for that behaviour, else the package's
-   `<package>-surfaced-deviations` bucket — **not** this RFC, which owns the
-   assertion axis and not the behaviours it uncovers. Capture the trails and
-   Rails `file:line` already in front of you.
+3. **File the story in RFC `0155-assertion-surfaced-port-bugs`**
+   (`pnpm tasks new 0155-assertion-surfaced-port-bugs <slug> --body-file <path>`),
+   the bucket that exists so this RFC stops growing a tail of production stories
+   it cannot close — **not** this RFC, which owns the assertion axis and not the
+   behaviours it uncovers. If an active RFC already owns that behaviour, file it
+   there instead and say so; 0155 is the default, not a monopoly. Capture the
+   trails and Rails `file:line` already in front of you.
 4. **Move on to the next file.**
 
 Judgement on size: a one-line production fix you are already sure of is not

@@ -90,12 +90,18 @@ Instead:
    });
    ```
 
-3. **File the story** with `pnpm tasks new <rfc> <slug> --body-file <path>`,
-   against the best-fit active RFC for that behaviour, else the package's
-   `<package>-surfaced-deviations` bucket — not this RFC, which owns the
-   assertion axis only. Capture the trails and Rails `file:line` you already
-   have in front of you; a title-only stub forces an expensive re-derivation
-   later.
+3. **File the story** in **RFC `0155-assertion-surfaced-port-bugs`**, the
+   bucket this RFC's overflow goes to:
+
+   ```bash
+   pnpm tasks new 0155-assertion-surfaced-port-bugs <slug> --body-file <path>
+   ```
+
+   Not this RFC, which owns the assertion axis only. (If an active RFC already
+   owns that behaviour, file it there instead and say so — 0155 is the default,
+   not a monopoly.) Capture the trails and Rails `file:line` you already have in
+   front of you; a title-only stub forces an expensive re-derivation later.
+
 4. **Move on to the next file in the story.**
 
 Prefer `it.skip` with the converged body over `it.todo`: `it.todo` takes no
