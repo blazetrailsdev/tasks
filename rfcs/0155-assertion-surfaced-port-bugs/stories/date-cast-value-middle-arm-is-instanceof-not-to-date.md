@@ -2,7 +2,7 @@
 title: "Type::Date#cast_value's middle arm is a closed instanceof list, not Rails' respond_to?(:to_date)"
 status: draft
 updated: 2026-09-16
-rfc: "0132-ar-closure-assertion-parity"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []

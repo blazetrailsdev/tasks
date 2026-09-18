@@ -2,7 +2,7 @@
 title: "DecimalType#cast answers BigDecimal(1) for a boolean where Rails' to_s fallback answers 0"
 status: draft
 updated: 2026-09-16
-rfc: "0132-ar-closure-assertion-parity"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []

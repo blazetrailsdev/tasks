@@ -2,7 +2,7 @@
 title: "sqlite3-perform-query-positional-result"
 status: draft
 updated: 2026-09-17
-rfc: "0132-ar-closure-assertion-parity"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []

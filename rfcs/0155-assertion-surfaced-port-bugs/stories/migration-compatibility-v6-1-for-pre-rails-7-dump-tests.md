@@ -2,7 +2,7 @@
 title: "migration-compatibility-v6-1-for-pre-rails-7-dump-tests"
 status: draft
 updated: 2026-09-17
-rfc: "0132-ar-closure-assertion-parity"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
