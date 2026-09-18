@@ -1,7 +1,7 @@
 ---
 title: "assertion parity tail: adapters files, batch 1"
-status: ready
-updated: 2026-09-15
+status: in-progress
+updated: 2026-09-18
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 304
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7876
+claim: "2026-09-18T20:17:51Z"
+assignee: "assertions-tail-adapters-1"
 blocked-by: null
 closed-reason: null
 ---
