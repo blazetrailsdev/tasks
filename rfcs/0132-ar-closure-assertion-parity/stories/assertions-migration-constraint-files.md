@@ -1,7 +1,7 @@
 ---
 title: "assertions-migration-constraint-files"
-status: ready
-updated: 2026-09-15
+status: done
+updated: 2026-09-18
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7866
+claim: "2026-09-18T15:15:15Z"
+assignee: "assertions-has-many-through-cluster"
 blocked-by: null
 closed-reason: null
 ---
