@@ -1,7 +1,7 @@
 ---
 title: "Port ConnectionPool#reap: the body is a guard behind three PERMANENT receipts"
-status: in-progress
-updated: 2026-09-17
+status: done
+updated: 2026-09-18
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: ["activerecord"]
