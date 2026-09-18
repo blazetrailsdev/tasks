@@ -62,18 +62,25 @@ Instead:
 1. **Land the converged body.** The assertions stay exactly as Rails writes
    them — same count, same kinds, same expected values. Do not soften an
    assertion to make it pass, and do not delete it.
-2. **Park the test**, converged body intact, as `it.skip` carrying the repo's
-   structured skip annotation (`scripts/test-compare/normalize-skips.ts:10-15`)
-   with the story you filed named in `SCOPE:`:
+2. **Park the test**, converged body intact, as `it.skip` carrying **one
+   `BLOCKED:` line** that names the story you filed:
 
    ```ts
    it.skip("rails test name, unchanged", async () => {
-     // BLOCKED: <category> — <what the port does instead>
-     // ROOT-CAUSE: <file>#<symbol> not implementing <behavior>
-     // SCOPE: filed as <rfc>/<story-slug>
+     // BLOCKED: <category> — <what the port does instead> (<story-slug>)
      // ...converged body, mirroring the Rails assertions...
    });
    ```
+
+   **One line, and it must be the `BLOCKED:` one.** `blazetrails/no-freeform-comments`
+   allowlists `BLOCKED:` and `PERMANENT-SKIP:` and nothing else in this
+   neighbourhood (`eslint/no-freeform-comments.mjs:84`), so the `ROOT-CAUSE:` and
+   `SCOPE:` lines in `scripts/test-compare/normalize-skips.ts`'s header are
+   stripped by `eslint --fix` and red the pre-commit hook. That header predates
+   the rule; the rule wins. Everything those two lines would have said belongs in
+   the story body, where it is reviewable and maintained — and **do not write a
+   root cause you have not established**. "I haven't investigated it" is a reason
+   to park and file, not a reason to guess in a comment.
 
 3. **File the story** in **RFC `0155-assertion-surfaced-port-bugs`**, the
    bucket this RFC's overflow goes to:

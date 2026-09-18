@@ -180,11 +180,26 @@ So, when the mirrored assertion fails:
 
 1. **Land the converged body** — same count, same kinds, same expected values as
    Rails. Do not soften an assertion to make it pass, and do not delete it.
-2. **Park the test** as `it.skip`, converged body intact, with the repo's
-   structured skip annotation (`scripts/test-compare/normalize-skips.ts:10-15`)
-   and the story you filed named in its `SCOPE:` line. `it.skip` over `it.todo`:
-   `it.todo` takes no body, so the mirroring work would be thrown away and
-   redone when the bug is fixed.
+2. **Park the test** as `it.skip`, converged body intact, with **one `BLOCKED:`
+   line** naming the story you filed:
+
+   ```ts
+   // BLOCKED: <category> — <what the port does instead> (<story-slug>)
+   ```
+
+   **One line, and it must be the `BLOCKED:` one.** `blazetrails/no-freeform-comments`
+   allowlists `BLOCKED:` and `PERMANENT-SKIP:` and nothing else in this
+   neighbourhood (`eslint/no-freeform-comments.mjs:84`), so the `ROOT-CAUSE:` and
+   `SCOPE:` lines in `scripts/test-compare/normalize-skips.ts`'s header are
+   stripped by `eslint --fix` and red the pre-commit hook. That header predates
+   the rule; the rule wins. Everything those two lines would have said belongs in
+   the story body, where it is reviewable and maintained — and **do not write a
+   root cause you have not established**. "I haven't investigated it" is a reason
+   to park and file, not a reason to guess in a comment.
+
+   `it.skip` over `it.todo`: `it.todo` takes no body, so the mirroring work
+   would be thrown away and redone when the bug is fixed.
+
 3. **File the story in RFC `0155-assertion-surfaced-port-bugs`**
    (`pnpm tasks new 0155-assertion-surfaced-port-bugs <slug> --body-file <path>`),
    the bucket that exists so this RFC stops growing a tail of production stories
@@ -216,7 +231,7 @@ Two mechanical facts this rests on, and one consequence:
   accepted. The zero this RFC delivers is "every mirrored test that RUNS asserts
   what Rails asserts", and each parked test carries a filed story that un-parks
   it. What is NOT accepted is parking a test to avoid the work of mirroring its
-  assertions: the body lands converged, and the `ROOT-CAUSE:` line has to name a
+  assertions: the body lands converged, and the filed story has to name a
   production symbol, not a test-side difficulty.
 
 ## Finish the story or split it — never hand back WIP
@@ -277,9 +292,10 @@ All four came up in trails#7864 and all four have a settled answer:
 - **You found a production bug.** Park the test and file it in
   `0155-assertion-surfaced-port-bugs` — see the section above. Do not fix it
   here, however small it looks.
-- **A deep-dive came out inconclusive.** Park that one test with what you
-  learned in its `ROOT-CAUSE:` line, file it, and move on. Do not ship a guess,
-  and do not spend the session on it.
+- **A deep-dive came out inconclusive.** Park that one test, put what you
+  learned — including that it is inconclusive — in the filed story, and move on.
+  Do not ship a guess, do not write an unestablished root cause into the test
+  file, and do not spend the session on it.
 - **The canonical schema or a canonical model lacks what a test needs.** Add it
   to the canonical schema or model (never a bespoke table — CLAUDE.md), or, if
   the gap is in `src/support/`, park and file to 0155.
