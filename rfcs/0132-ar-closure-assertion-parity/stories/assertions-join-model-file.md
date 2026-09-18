@@ -1,6 +1,6 @@
 ---
 title: "assertions-join-model-file"
-status: draft
+status: in-progress
 updated: 2026-09-18
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7868
+claim: "2026-09-18T16:41:40Z"
+assignee: "assertions-join-model-file"
 blocked-by: null
 closed-reason: null
 ---

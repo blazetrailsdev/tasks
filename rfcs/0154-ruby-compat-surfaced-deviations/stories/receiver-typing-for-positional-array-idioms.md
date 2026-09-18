@@ -1,6 +1,6 @@
 ---
 title: "Re-check whether RFC 0129 receiver-kind proof reaches first/last/any?/size's Relation-ambiguous rows"
-status: in-progress
+status: done
 updated: 2026-09-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

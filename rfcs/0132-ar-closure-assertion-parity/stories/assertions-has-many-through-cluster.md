@@ -1,6 +1,6 @@
 ---
 title: "has_many :through assertion parity"
-status: ready
+status: in-progress
 updated: 2026-09-18
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 307
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7868
+claim: "2026-09-18T16:23:00Z"
+assignee: "assertions-has-many-through-cluster"
 blocked-by: null
 closed-reason: null
 ---
