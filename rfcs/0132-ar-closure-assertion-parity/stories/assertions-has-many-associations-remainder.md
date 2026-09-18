@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: 600
+est-loc: 420
 priority: null
 pr: null
 claim: null
@@ -98,14 +98,15 @@ regression test, or a change outside the file you are converging, is.
 
 ## Acceptance criteria
 
-- has_many_associations_test.rb reports 0 assertion-count/kind/value mismatches,
-  **or** this PR converges as much of it as one session honestly holds and files
-  its own remainder. At 264 mismatches across ~276 tests this file is over the
-  ~250 split threshold in the RFC's "Finish the story or split it", so expect to
-  split it again rather than to finish it here — and split at scoping, before
-  converging.
+- `has_many_associations_test.rb` reports 0 assertion-count/kind/value
+  mismatches, **or** this PR converges as much of it as one session honestly
+  holds and files its own remainder, with the residue re-measured — the converged
+  subset plus a filed remainder satisfies this story, converged commits with no
+  PR do not. Expect the latter: the residue after trails#7864 is **264
+  mismatches (97 count + 167 kind) across the ~276 tests that file still has
+  unconverged**, which is over the ~250 split threshold in the RFC's "Finish the
+  story or split it". Split at scoping, before converging.
+- `est-loc: 420` sizes the whole residue, not one PR: 264 mismatches at the
+  ~1.6 LOC-per-mismatch `assertions-finder-test` actually cost (238 mismatches,
+  380 LOC). Expect it to arrive as two PRs, not one.
 - No test renames; mark file untouched.
-- **Or the split is filed.** A file listed above that this PR does not take to
-  0 is named, with its residue re-measured, in a remainder story filed under
-  this RFC — see "Finish the story or split it" above. The converged subset plus
-  a filed remainder satisfies this story; converged commits with no PR do not.

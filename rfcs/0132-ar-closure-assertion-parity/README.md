@@ -235,13 +235,24 @@ change per story: converge what fits, file the rest, open the PR. A story in
 this RFC is not a request for a plan.
 
 **Split at scoping, before converging.** Measure the story's files first
-(`pnpm parity:test -- --package <pkg> --assertions --missing`). If one Rails
-file carries more than **~250 mismatches** or more than **~150 tests**, it is
-more than one PR: file the split stories _first_, take the first slice
-yourself, and leave the others in the queue for whoever claims them. The
-threshold is measured, not guessed — `finder_test.rb` (238 mismatches) landed in
-one PR as `assertions-finder-test`; `has_many_associations_test.rb` (336) did
-not.
+(`pnpm parity:test -- --package <pkg> --assertions --missing`), then apply
+**~250 mismatches or ~150 tests** twice:
+
+- **to each Rails file** — a single file over the line is its own story, or
+  several; it never shares one with anything else;
+- **to the story's total** across its files — a multi-file cluster over the line
+  splits along file boundaries, which is why `assertions-tail-root-*` and
+  `assertions-tail-adapters-*` are numbered.
+
+Over the line either way: file the split stories _first_, take the first slice
+yourself, and leave the rest in the queue for whoever claims them.
+
+The threshold is measured, not guessed — `finder_test.rb` (238 mismatches)
+landed in one PR as `assertions-finder-test`; `has_many_associations_test.rb`
+(336 mismatches across 311 tests, before trails#7864 converged ~35 of them) did
+not. The `~` means it is a trigger to split, not a gate to argue with: a little
+over is a judgement call you make with the measurement in front of you, and a
+file at twice the line is not a judgement call.
 
 **Always exit through a PR.** An agent never ends a session with converged
 commits and no PR. If the story is done, the PR closes it. If it is not, the PR
