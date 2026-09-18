@@ -1,6 +1,6 @@
 ---
 title: "assertions-migration-test-file-remainder"
-status: draft
+status: closed
 updated: 2026-09-18
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "migration_test.rb fully converged in the same PR (#7870); no remainder"
 ---
 
 ## Context
