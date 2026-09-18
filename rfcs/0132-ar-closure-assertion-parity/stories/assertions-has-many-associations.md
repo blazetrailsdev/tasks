@@ -11,7 +11,7 @@ deps-rfc: []
 est-loc: 537
 priority: 5
 pr: null
-claim: "2026-09-18T12:38:25Z"
+claim: "2026-09-18T13:35:37Z"
 assignee: "assertions-has-many-associations"
 blocked-by: null
 closed-reason: null
