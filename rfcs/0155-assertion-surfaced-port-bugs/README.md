@@ -82,16 +82,20 @@ skeleton body, and rightly: a title-only stub forces a re-derivation that costs
 more than the original investigation.
 
 **Name the parked test.** Every story here should say which test is parked on
-it, and the parked test's `SCOPE:` line should name the story. That pair is what
-makes the bucket drainable: fixing the bug means un-parking a specific test, not
-hunting for what the fix was for.
+it, and the parked test's one `BLOCKED:` line should name the story. That pair
+is what makes the bucket drainable: fixing the bug means un-parking a specific
+test, not hunting for what the fix was for. The story body is where the root
+cause and the `file:line` references live: `blazetrails/no-freeform-comments`
+strips anything past the `BLOCKED:` line out of the test file
+(`eslint/no-freeform-comments.mjs:84`), so a story here that carries no more
+than its comment could have is a story that has lost its context.
 
 ## Definition of done for a story here
 
 - The production divergence is converged on Rails — same behaviour, same error
   class and message, same site.
 - **The parked test is un-parked** (`it.skip` → `it`) and passes with its
-  assertions unchanged, and the structured skip annotation is deleted with it.
+  assertions unchanged, and its `BLOCKED:` line is deleted with it.
   A story here is not done while its test is still skipped.
 - `pnpm parity:test -- --assertions` does not regress for the file.
 
