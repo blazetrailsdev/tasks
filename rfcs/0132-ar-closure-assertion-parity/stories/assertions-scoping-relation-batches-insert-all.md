@@ -1,7 +1,7 @@
 ---
 title: "scoping, relation, batches and insert_all assertion parity"
-status: ready
-updated: 2026-09-15
+status: in-progress
+updated: 2026-09-18
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 408
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7873
+claim: "2026-09-18T19:26:37Z"
+assignee: "assertions-scoping-relation-batches-insert-all"
 blocked-by: null
 closed-reason: null
 ---

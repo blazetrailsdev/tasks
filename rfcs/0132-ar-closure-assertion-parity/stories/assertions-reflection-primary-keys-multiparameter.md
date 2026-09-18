@@ -1,6 +1,6 @@
 ---
 title: "reflection, primary keys and multiparameter assertion parity"
-status: ready
+status: in-progress
 updated: 2026-09-18
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 259
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7874
+claim: "2026-09-18T19:25:58Z"
+assignee: "assertions-reflection-primary-keys-multiparameter"
 blocked-by: null
 closed-reason: null
 ---
