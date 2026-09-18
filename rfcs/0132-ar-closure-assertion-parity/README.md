@@ -133,6 +133,12 @@ test, or leave a remainder unconverged merely to fit a line budget. Every other
 constraint (no test renames, mark file only-shrink, no name-gate regression)
 still applies.
 
+Lifted is not unbounded. A budget no longer bounds the PR, but a session still
+does, and a story too big to finish in one is split rather than ground at — see
+"Finish the story or split it" below. The lifted ceiling exists so a file's
+burndown is not chopped into arbitrary line-count slices, not so one story can
+swallow a 311-test file.
+
 ## Triage rule for the per-file stories
 
 Every mismatch lands in exactly one bucket (RFC 0122's rule, unchanged except
@@ -212,6 +218,71 @@ Two mechanical facts this rests on, and one consequence:
   it. What is NOT accepted is parking a test to avoid the work of mirroring its
   assertions: the body lands converged, and the `ROOT-CAUSE:` line has to name a
   production symbol, not a test-side difficulty.
+
+## Finish the story or split it — never hand back WIP
+
+`assertions-has-many-associations` (trails#7864) needed two rounds of
+hand-holding to land, and neither was the agent's fault. It stopped at scoping
+to ask how to proceed, then stopped again mid-convergence with five commits and
+no PR, because its acceptance criterion — 0 mismatches across a 311-test file —
+could not be met in one sitting and nothing in the story said what to do about
+that. A conscientious agent facing an all-or-nothing AC it cannot meet has no
+legitimate way to land partial progress, so it stalls and asks. The fix is
+structural, not exhortation.
+
+**Never stop to ask how to proceed.** The answer is written here and does not
+change per story: converge what fits, file the rest, open the PR. A story in
+this RFC is not a request for a plan.
+
+**Split at scoping, before converging.** Measure the story's files first
+(`pnpm parity:test -- --package <pkg> --assertions --missing`), then apply
+**~250 mismatches or ~150 tests** twice:
+
+- **to each Rails file** — a single file over the line is its own story, or
+  several; it never shares one with anything else;
+- **to the story's total** across its files — a multi-file cluster over the line
+  splits along file boundaries, which is why `assertions-tail-root-*` and
+  `assertions-tail-adapters-*` are numbered.
+
+Over the line either way: file the split stories _first_, take the first slice
+yourself, and leave the rest in the queue for whoever claims them.
+
+The threshold is measured, not guessed — `finder_test.rb` (238 mismatches)
+landed in one PR as `assertions-finder-test`; `has_many_associations_test.rb`
+(336 mismatches across 311 tests, before trails#7864 converged ~35 of them) did
+not. The `~` means it is a trigger to split, not a gate to argue with: a little
+over is a judgement call you make with the measurement in front of you, and a
+file at twice the line is not a judgement call.
+
+**Always exit through a PR.** An agent never ends a session with converged
+commits and no PR. If the story is done, the PR closes it. If it is not, the PR
+carries the converged subset and a remainder story is filed for the rest. There
+is no third exit.
+
+**A remainder story is a real story**, authored with the context you have right
+now: which tests are converged, the residue re-measured after your PR, the
+canonical models and fixtures you already identified, and any blocker you hit.
+`tasks new` refuses a skeleton body for exactly this reason — a title-only stub
+forces the next agent to re-derive everything you just learned.
+
+### These are expected, not reasons to check in
+
+All four came up in trails#7864 and all four have a settled answer:
+
+- **The test bodies are placeholders, not near-misses.** Whole clusters use
+  generic `Author`/`Post` stand-ins where Rails uses a specific scenario
+  (`Car`/`Bulb`, `Ship`/`ShipPart`, a custom primary key). Rewriting a body
+  against `vendor/rails` and the canonical models IS the work of this RFC, not a
+  change of scope. Expect it; do not escalate it.
+- **You found a production bug.** Park the test and file it in
+  `0155-assertion-surfaced-port-bugs` — see the section above. Do not fix it
+  here, however small it looks.
+- **A deep-dive came out inconclusive.** Park that one test with what you
+  learned in its `ROOT-CAUSE:` line, file it, and move on. Do not ship a guess,
+  and do not spend the session on it.
+- **The canonical schema or a canonical model lacks what a test needs.** Add it
+  to the canonical schema or model (never a bespoke table — CLAUDE.md), or, if
+  the gap is in `src/support/`, park and file to 0155.
 
 ## Clusters
 
