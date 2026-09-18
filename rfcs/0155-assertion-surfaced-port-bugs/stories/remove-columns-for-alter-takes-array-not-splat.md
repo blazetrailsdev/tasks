@@ -1,6 +1,6 @@
 ---
 title: "remove-columns-for-alter-takes-array-not-splat"
-status: draft
+status: closed
 updated: 2026-09-18
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "fixed in #7870"
 ---
 
 ## Context

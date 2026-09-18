@@ -1,6 +1,6 @@
 ---
 title: "postgresql range and schema assertion parity"
-status: ready
+status: in-progress
 updated: 2026-09-18
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 273
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7871
+claim: "2026-09-18T18:14:31Z"
+assignee: "assertions-postgresql-range-and-schema"
 blocked-by: null
 closed-reason: null
 ---
