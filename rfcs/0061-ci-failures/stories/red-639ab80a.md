@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (1) failing on main @639ab80a"
-status: ready
+status: closed
 updated: 2026-09-19
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-19T20:08:50Z"
+assignee: "red-639ab80a"
 blocked-by: null
-closed-reason: null
+closed-reason: "Timing flake: secure-password.test.ts 'authenticate_by takes the same amount of time regardless of whether record is found' failed once on PG shard 1 (1 of 6192); commit did not touch that file and it passes locally."
 ---
 
 ## Context

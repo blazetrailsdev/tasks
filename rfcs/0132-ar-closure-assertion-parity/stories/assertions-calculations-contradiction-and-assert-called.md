@@ -1,6 +1,6 @@
 ---
 title: "assertions-calculations-contradiction-and-assert-called"
-status: ready
+status: done
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7893
+claim: "2026-09-19T20:00:17Z"
+assignee: "assertions-calculations-contradiction-and-assert-called"
 blocked-by: null
 closed-reason: null
 ---

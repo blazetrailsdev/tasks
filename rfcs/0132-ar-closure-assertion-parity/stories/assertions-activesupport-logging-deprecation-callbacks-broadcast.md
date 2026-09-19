@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-logging-deprecation-callbacks-broadcast"
-status: claimed
+status: in-progress
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#7894
 claim: "2026-09-19T19:59:54Z"
 assignee: "assertions-activesupport-logging-deprecation-callbacks-broadcast"
 blocked-by: null
