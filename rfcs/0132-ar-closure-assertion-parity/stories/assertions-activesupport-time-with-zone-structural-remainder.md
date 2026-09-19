@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-time-with-zone-structural-remainder"
-status: claimed
+status: in-progress
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#7888
 claim: "2026-09-19T15:40:05Z"
 assignee: "assertions-tail-root-5b"
 blocked-by: null

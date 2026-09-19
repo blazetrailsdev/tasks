@@ -1,6 +1,6 @@
 ---
 title: "assertion parity tail: root files, batch 5b"
-status: claimed
+status: in-progress
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 5
-pr: null
+pr: trails#7888
 claim: "2026-09-19T15:40:05Z"
 assignee: "assertions-tail-root-5b"
 blocked-by: null

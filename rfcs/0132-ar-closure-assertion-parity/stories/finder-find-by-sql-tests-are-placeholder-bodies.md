@@ -1,6 +1,6 @@
 ---
 title: "Four finder_test.rb find_by_sql/find tests are placeholder bodies with a local Topic and invented quoting"
-status: claimed
+status: in-progress
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 5
-pr: null
+pr: trails#7888
 claim: "2026-09-19T15:40:05Z"
 assignee: "assertions-tail-root-5b"
 blocked-by: null
