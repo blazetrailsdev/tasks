@@ -2,7 +2,7 @@
 title: "find-each-find-in-batches-block-arm"
 status: draft
 updated: 2026-09-19
-rfc: "0132-ar-closure-assertion-parity"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
