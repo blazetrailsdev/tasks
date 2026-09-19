@@ -1,6 +1,6 @@
 ---
 title: "transactions, locking and connection-pool assertion parity"
-status: claimed
+status: in-progress
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 404
 priority: 5
-pr: null
+pr: trails#7885
 claim: "2026-09-19T01:41:57Z"
 assignee: "assertions-transactions-locking-and-pool"
 blocked-by: null

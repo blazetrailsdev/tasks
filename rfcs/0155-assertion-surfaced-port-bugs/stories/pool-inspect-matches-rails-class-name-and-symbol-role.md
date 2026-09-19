@@ -1,6 +1,6 @@
 ---
 title: "pool-inspect-matches-rails-class-name-and-symbol-role"
-status: draft
+status: closed
 updated: 2026-09-19
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "fixed in trails#7885 (ConnectionPool#inspect now matches Rails)"
 ---
 
 ## Context
