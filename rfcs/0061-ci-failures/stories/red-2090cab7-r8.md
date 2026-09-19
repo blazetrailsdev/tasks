@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite :memory: Tests failing on main @2090cab7"
-status: ready
+status: in-progress
 updated: 2026-09-19
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#7890
+claim: "2026-09-19T18:32:41Z"
+assignee: "red-2090cab7-r8"
 blocked-by: null
 closed-reason: null
 ---

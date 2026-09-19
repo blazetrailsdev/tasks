@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-time-with-zone-structural-remainder"
-status: in-progress
+status: done
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null

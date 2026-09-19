@@ -1,6 +1,6 @@
 ---
 title: "assertions-tail-root-3-remainder"
-status: draft
+status: closed
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "done in trails#7889"
 ---
 
 ## Context

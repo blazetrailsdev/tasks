@@ -1,7 +1,7 @@
 ---
 title: "assert_in_delta ports as toBeLessThanOrEqual (kind operator) instead of assertInDelta"
-status: draft
-updated: 2026-09-17
+status: ready
+updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []

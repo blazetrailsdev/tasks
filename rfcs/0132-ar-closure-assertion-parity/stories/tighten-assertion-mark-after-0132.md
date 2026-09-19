@@ -1,7 +1,7 @@
 ---
 title: "Lift the assertion-mark freeze and reseed once"
 status: draft
-updated: 2026-09-17
+updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: enforcement
 packages:

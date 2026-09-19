@@ -1,7 +1,7 @@
 ---
 title: "assertions-tail-schema-cache-rewrite"
-status: draft
-updated: 2026-09-18
+status: ready
+updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []

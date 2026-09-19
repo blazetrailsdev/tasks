@@ -1,7 +1,7 @@
 ---
 title: "has_many association assertion parity — remainder after trails#7864"
-status: draft
-updated: 2026-09-18
+status: ready
+updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages:
