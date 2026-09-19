@@ -1,7 +1,7 @@
 ---
 title: "establish-connection-returns-void-not-pool"
 status: draft
-updated: 2026-09-18
+updated: 2026-09-19
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
