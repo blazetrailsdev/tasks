@@ -1,6 +1,6 @@
 ---
 title: "assertion parity tail: adapters files, batch 3b"
-status: in-progress
+status: done
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
