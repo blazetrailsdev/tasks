@@ -1,7 +1,7 @@
 ---
 title: "assertions-activesupport-time-ext-source-remainder"
-status: ready
-updated: 2026-09-16
+status: claimed
+updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: ["activesupport", "date"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-19T15:40:05Z"
+assignee: "assertions-tail-root-5b"
 blocked-by: null
 closed-reason: null
 ---
