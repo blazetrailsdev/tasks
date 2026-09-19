@@ -1,8 +1,8 @@
 ---
-title: "assertions-activesupport-name-error-receiver-nil-delegation"
+title: "assertions-association-async-load-anonymous-class"
 status: ready
 updated: 2026-09-19
-rfc: "0132-ar-closure-assertion-parity"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
@@ -51,24 +51,18 @@ context away and leaves the next agent to re-derive it.
 
 ## Context
 
-Remainder of `assertions-activesupport-module-class-remainder` (RFC 0132) that needs
-implementation work rather than test convergence:
+Remainder of `assertions-belongs-to-has-one-inverse` (the bundle PR brought
+belongs_to / has_one / has_one_through / inverse to 0 except these rows):
 
-- `core_ext/name_error_test.rb` asserts `exc.receiver` in both tests
-  (`vendor/rails/activesupport/test/core_ext/name_error_test.rb:13,21`). Ruby core
-  `NameError#receiver` has no counterpart on `packages/ruby-compat/src/name-error.ts`,
-  and `constantize` (`packages/activesupport/src/inflector.ts`) does not record the
-  receiver it resolved against.
-- `core_ext/module_test.rb` `delegation to method that exists on nil` (and `... when
-allowing nil`) expect `nil.to_f == 0.0` (`module_test.rb:340-348`): Rails'
-  `Delegation.generate` (`active_support/delegation.rb:131-147`) calls the method on a
-  nil target when `nil.respond_to?(method)`. `packages/activesupport/src/delegation.ts`
-  raises `DelegationError` / returns `undefined` because there is no NilClass method
-  table in ruby-compat.
-- Permanent (not in scope): `delegation line number` / `delegate line with nil`
-  (`source_location`), the `private delegate*` `assert_not_respond_to` arms (CLAUDE.md
-  § "Method visibility is not a runtime fact in JS"), and the `-1` arities in
-  `delegation arity to self class`.
+- `belongs_to_associations_test.rb` `async load belongs to` and
+  `has_one_associations_test.rb` `async load has one` (rails 5 vs trails 2): Rails asserts
+  `events.first.payload[:async] == true` after `async_load_target` +
+  `wait_for_async_query` (`belongs_to_associations_test.rb:1851-1873`). trails'
+  `Association#asyncLoadTarget` (`associations/association.ts`) just awaits
+  `loadTarget()`, so no async-executor event exists to assert on.
+- `belongs_to_associations_test.rb` `default scope on relations is not cached`
+  (`:227-253`): needs `capture_sql_and_binds` in `testing/sql-capture.ts` and an
+  `anonymous_class:` association built on a class-expression model.
 
 ## A converged assertion that fails is a story, not a detour
 
@@ -150,15 +144,9 @@ regression test, or a change outside the file you are converging, is.
 
 ## Acceptance criteria
 
-- `NameError#receiver` ported onto ruby-compat's `NameError` and set by `constantize`;
-  `name_error_test.rb` reports 0 mismatches.
-- Delegation to a nil target honours `nil.respond_to?(method)` for the NilClass methods
-  Rails' tests reach (`to_f`), and the two `module_test.rb` tests assert `0.0`.
-- The mark file is FROZEN for this RFC by
-  `scripts/test-compare/assertion-mismatch-mark.freeze`: do NOT run
-  `pnpm parity:test:assertions:reseed` and do NOT hand-edit
-  `assertion-mismatch-mark.json`. The gate stays green while the mark carries
-  slack; `tighten-assertion-mark-after-0132` lowers it once at the end.
+- The three rows report 0 count / kind / value mismatches in
+  `pnpm parity:test -- --package activerecord --assertions`.
+- activerecord row of the assertion mark lowered; no test renames.
 - A converged assertion that fails because of a production bug is parked
   `it.skip` with the structured annotation and a filed story — see "A
   converged assertion that fails is a story, not a detour" above — not fixed
