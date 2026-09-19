@@ -18,14 +18,17 @@ closed-reason: null
 
 ## Context
 
-Remainder of assertions-tail-root-1 (RFC 0132). relation/where_chain_test.rb is converged (0 mismatches, PR for assertions-tail-root-1).
+Remainder of assertions-tail-root-1 (RFC 0132). trails#7880 converged relation/where_chain_test.rb and serialized_attribute_test.rb to 0/0/0.
 
-Files still with assertion-count/kind mismatches under vendor/rails/activerecord/test/cases/:
-sanitize_test.rb, inheritance_test.rb, serialized_attribute_test.rb, json_serialization_test.rb, transaction_instrumentation_test.rb, query_cache_test.rb.
+Files still with assertion mismatches under vendor/rails/activerecord/test/cases/, re-measured after #7880 (`pnpm parity:test -- --package activerecord --assertions --missing`):
 
-Expand with `pnpm parity:test -- --package activerecord --assertions --missing` and grep each file.
+- sanitize_test.rb: 24 tests. Rails asserts 4-12 assert_equal per test (bind enumerable: 12); the trails file builds bespoke Post classes and asserts on SQL strings, so it needs a rewrite on the canonical models. named bind arity and literal colons also need assert_raises ported.
+- inheritance_test.rb: 22 tests. assert_nothing_raised / assert_equal on class names (InheritanceAttributeTest::Empire vs trails AttrTestEmpire); eager load belongs to primary key quoting needs assert_queries_match.
+- json_serialization_test.rb: 20 tests. Rails uses assert_match on JSON strings (4-8 per test); trails compares parsed objects.
+- transaction_instrumentation_test.rb: 25 tests. Rails asserts equalities on collected events; trails asserts lengths.
+- query_cache_test.rb: 22 tests. Depends on assertQueriesCount / assertNoQueries / assertClears, which the comparer does not map to assert_called / assert_changes.
 
-Learnings from where_chain: `assert_raises` + `assert_match e.message` ports as `await expect(run()).rejects.toThrow(Cls)` then `const e = await run().catch(err => err); expect(e.message).toMatch(re)`; `assert_includes` is `toContainEqual`; `assert_predicate x, :any?` is `expect(await rel.isAny()).toBeTruthy()`; where_clause equality uses `whereClause.plus(...).invert()`.
+Learnings: `assert_raises` + `assert_match e.message` ports as `const e = await run().then(() => undefined, (err) => err); expect(() => { throw e; }).toThrow(Cls); expect(e.message).toMatch(re)`; `assert_includes` is `toContainEqual`; `assert_predicate x, :any?` is `expect(await rel.isAny()).toBeTruthy()`; where_clause equality uses `whereClause.plus(...).invert()`. Construct with `new Model(...)` before an asserted `save`, never `create` then `save`.
 
 ## Acceptance criteria
 
