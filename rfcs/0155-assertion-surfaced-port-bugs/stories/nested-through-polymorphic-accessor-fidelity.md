@@ -2,7 +2,7 @@
 title: "nested-through: read public accessors, not association(...).target, in the 3 preload tests this story skipped"
 status: draft
 updated: 2026-09-18
-rfc: "0132-ar-closure-assertion-parity"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
