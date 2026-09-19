@@ -1,6 +1,6 @@
 ---
 title: "has-many-build-accepts-block"
-status: draft
+status: closed
 updated: 2026-09-19
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "premise falsified: block is passed as second build() argument in trails; test passes with that idiom (trails#7891)"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-logging-deprecation-callbacks-broadcast"
-status: ready
+status: claimed
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-19T19:59:54Z"
+assignee: "assertions-activesupport-logging-deprecation-callbacks-broadcast"
 blocked-by: null
 closed-reason: null
 ---
