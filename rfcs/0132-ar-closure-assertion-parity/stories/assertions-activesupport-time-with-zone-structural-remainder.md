@@ -21,18 +21,26 @@ closed-reason: null
 Read this before the measurements below. It is the whole operating procedure,
 and it does not vary by story.
 
-1. **Measure, then take a slice.** Run
-   `pnpm parity:test -- --package <pkg> --assertions --missing` and work the
-   tests in the order it lists them. Converge until you have cleared **~100
-   mismatches**, then stop taking new ones.
-2. **Re-measure, file the remainder, open the PR.** The remainder story carries
-   the residue you just measured plus everything you learned — the canonical
-   models you identified, the fixture wiring, the blockers. Then the PR goes up.
-3. **That is the end of the story either way.** If the file reached 0, the PR
-   closes it. If it did not, the PR plus the filed remainder closes it. A story
-   in this RFC is never handed back unfinished.
+1. **The default is to finish the story in one PR.** Take the whole file. These
+   PRs are big by design — the LOC ceiling is lifted for this RFC precisely so a
+   file's burndown is not sliced up — and the ones that land clean are in the
+   **1,000–2,500 LOC** band: trails#7867 (1,202), trails#7868 (2,001),
+   trails#7870 (2,406), trails#7871 (2,471), trails#7872 (1,933).
+2. **Split only if the story is over the threshold** in the RFC's "Finish the
+   story or split it" (~250 mismatches or ~150 tests in one Rails file). Then
+   take a slice of **~250 mismatches / ~1,200 LOC** — a slice is a large PR too.
+   Re-measure, file the remainder with everything you learned, open the PR.
+3. **Either way the story ends here**: 0 mismatches, or a converged slice plus a
+   filed remainder. A story in this RFC is never handed back unfinished.
 
-**Do not ask which option to take.** There is one option and it is written
+**Do not open a partial PR under ~300 LOC.** Below that the split has cost more
+than it saved — a CI run, a review round and a remainder story, for a fraction
+of one file. If you are under it and the file is not done, keep going. The
+partial PRs that prompted this rule were 40, 77, 88 and 136 LOC
+(trails#7878, #7874, #7875, #7877), where the same files' predecessors were
+landing whole.
+
+**Do not ask which option to take.** There is one procedure and it is written
 above. A story here is a work order, not a request for a plan, and "this is
 bigger than one turn" is the expected case for every file in this RFC, not a
 discovery that needs a decision from anyone.
@@ -40,12 +48,6 @@ discovery that needs a decision from anyone.
 **Do not release the claim.** The remainder story IS the handoff — it is how the
 next agent gets your work plus your context. Releasing instead throws the
 context away and leaves the next agent to re-derive it.
-
-**~100 is measured, not a guess.** trails#7864 cleared 72 mismatches in a long
-session on `has_many_associations_test.rb`; trails#7862 cleared 238 on
-`finder_test.rb` in an exceptional one. Clear more if the file is going well.
-Clear fewer and file earlier if it is not — a small converged PR with a good
-remainder story beats a large one that never opens.
 
 ## Context
 

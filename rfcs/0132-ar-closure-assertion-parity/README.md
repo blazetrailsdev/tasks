@@ -276,13 +276,19 @@ not. The `~` means it is a trigger to split, not a gate to argue with: a little
 over is a judgement call you make with the measurement in front of you, and a
 file at twice the line is not a judgement call.
 
-**Take a ~100-mismatch slice.** The split threshold above decides whether a
-story needs splitting at all; this decides how much one PR takes. Work the tests
-in `--missing` order, converge until you have cleared **~100 mismatches**, then
-re-measure, file the remainder and open the PR. Measured, not guessed:
-trails#7864 cleared 72 in a long session, trails#7862 cleared 238 in an
-exceptional one. A small converged PR with a good remainder story beats a large
-one that never opens.
+**A slice is still a large PR.** The threshold above decides whether a story
+splits at all; this decides how much one PR takes when it does — **~250
+mismatches / ~1,200 LOC**, not whatever fits comfortably. The default remains
+taking the whole file.
+
+This is the correction to a rule that read "~100 mismatches" for one day and
+visibly shrank the work: on 2026-09-18 the merged PRs ran trails#7867 (1,202
+LOC), #7868 (2,001), #7870 (2,406), #7871 (2,471) and #7872 (1,933), all whole
+files; the ones immediately after ran 40, 77, 88, 136 and 297 LOC, most of them
+titled "(partial)". **Do not open a partial PR under ~300 LOC** — below that the
+split has cost a CI run, a review round and a remainder story for a fraction of
+one file, and the remainder mechanism is an escape hatch for oversized files,
+not the operating mode.
 
 **Always exit through a PR.** An agent never ends a session with converged
 commits and no PR. If the story is done, the PR closes it. If it is not, the PR
