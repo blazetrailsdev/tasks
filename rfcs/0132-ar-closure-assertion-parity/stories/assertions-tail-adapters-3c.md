@@ -1,17 +1,17 @@
 ---
 title: "assertions-tail-adapters-3c"
-status: draft
-updated: 2026-09-19
+status: done
+updated: 2026-08-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 3
+pr: trails#6736
+claim: "2026-08-19T13:00:37Z"
+assignee: "assertions-tail-adapters-3c"
 blocked-by: null
 closed-reason: null
 ---
