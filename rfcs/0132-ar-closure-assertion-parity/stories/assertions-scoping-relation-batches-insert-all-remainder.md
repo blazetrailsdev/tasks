@@ -1,6 +1,6 @@
 ---
 title: "assertions-scoping-relation-batches-insert-all-remainder"
-status: ready
+status: in-progress
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7896
+claim: "2026-09-19T22:24:33Z"
+assignee: "assertions-scoping-relation-batches-insert-all-remainder"
 blocked-by: null
 closed-reason: null
 ---
