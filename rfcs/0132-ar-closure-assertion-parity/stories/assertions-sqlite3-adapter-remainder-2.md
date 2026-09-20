@@ -1,6 +1,6 @@
 ---
 title: "assertions-sqlite3-adapter-remainder-2"
-status: in-progress
+status: done
 updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
