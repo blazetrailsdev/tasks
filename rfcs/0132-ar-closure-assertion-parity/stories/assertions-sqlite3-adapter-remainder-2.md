@@ -26,6 +26,16 @@ virtual_table, sqlite_rake) are already at 0.
 Trails file: `packages/activerecord/src/adapters/sqlite3/sqlite3-adapter.test.ts`.
 Rails file: `vendor/rails/activerecord/test/cases/adapters/sqlite3/sqlite3_adapter_test.rb`.
 
+In scope on the implementation side:
+`packages/activerecord/src/connection-adapters/sqlite3-adapter.ts`. `insert logged`
+asserts the exact SCHEMA queries logged during `@conn.insert`, and Rails logs
+`PRAGMA table_xinfo("ex")` plus the `sqlite_master` structure query because
+`primary_keys` goes through `table_structure` (`sqlite3_adapter.rb:281-284,515-519,757-766`).
+`SQLite3Adapter#primaryKey` is a trails-only override with no Ruby counterpart that
+emits a single `PRAGMA table_info("ex")` instead, so the assertion cannot converge
+while it stands. Deleting it (Rails' sqlite3 adapter answers through the inherited
+`primary_key`, `abstract/schema_statements.rb:145`) is part of this story.
+
 Remaining rows from `pnpm parity:test -- --package activerecord --assertions --missing`:
 
 - add column with custom primary key: equal rails 2 vs trails 3, falsy rails 1 vs trails 0
