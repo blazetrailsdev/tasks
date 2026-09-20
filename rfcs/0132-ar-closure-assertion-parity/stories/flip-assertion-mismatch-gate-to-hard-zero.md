@@ -1,7 +1,7 @@
 ---
 title: "Flip the assertion-mismatch gate from ratchet to hard zero"
-status: ready
-updated: 2026-09-15
+status: claimed
+updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: enforcement
 packages:
@@ -68,8 +68,8 @@ deps-rfc: []
 est-loc: 200
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-20T00:58:44Z"
+assignee: "assertions-activemodel-errors-cluster"
 blocked-by: null
 closed-reason: null
 ---

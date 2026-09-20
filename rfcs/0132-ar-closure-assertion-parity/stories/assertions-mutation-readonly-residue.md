@@ -1,7 +1,7 @@
 ---
 title: "assertion parity: mutation symbol-order table value and readonly notEmpty"
-status: ready
-updated: 2026-09-19
+status: claimed
+updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-20T00:58:44Z"
+assignee: "assertions-activemodel-errors-cluster"
 blocked-by: null
 closed-reason: null
 ---

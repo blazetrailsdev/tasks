@@ -1,6 +1,6 @@
 ---
 title: "sti-name-of-anonymous-class-should-be-nil"
-status: draft
+status: ready
 updated: 2026-09-20
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
