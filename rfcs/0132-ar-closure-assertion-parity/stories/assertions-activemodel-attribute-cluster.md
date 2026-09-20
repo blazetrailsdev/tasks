@@ -1,6 +1,6 @@
 ---
 title: "assertions-activemodel-attribute-cluster"
-status: ready
+status: claimed
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -8,10 +8,10 @@ packages: ["activemodel"]
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-19T23:37:57Z"
+assignee: "assertions-activemodel-attribute-cluster"
 blocked-by: null
 closed-reason: null
 ---

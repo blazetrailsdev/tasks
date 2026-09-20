@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 5
 pr: trails#7896
 claim: "2026-09-19T22:24:33Z"
 assignee: "assertions-scoping-relation-batches-insert-all-remainder"

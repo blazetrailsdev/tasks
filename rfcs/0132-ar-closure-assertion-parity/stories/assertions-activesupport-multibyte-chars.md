@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-multibyte-chars"
-status: ready
+status: closed
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of assertions-activesupport-multibyte-chars-port, which was rehomed to 0155 in this refine. Both were split from assertions-activesupport-string-ext-multibyte-safe-buffer on 2026-09-19 and describe the same residue (multibyte_chars_test.rb 110 rows -- still measuring 50 count + 55 kind + 5 value on 2026-09-19 -- plus the CoreExtStringMultibyteTest rows and the safe_buffer_test.rb row); the -port body carries the fuller file list. Work it as 0155/assertions-activesupport-multibyte-chars-port."
 ---
 
 ## How to work this story

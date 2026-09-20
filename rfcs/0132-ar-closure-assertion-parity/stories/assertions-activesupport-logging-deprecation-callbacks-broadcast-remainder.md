@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-logging-deprecation-callbacks-broadcast-remainder"
-status: draft
+status: closed
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Split, not dropped. Its body claimed ten activesupport files totalling 279 mismatches (re-measured 2026-09-19: deprecation 29/61/2, test_case 31/36/3, callbacks 16/26/1, broadcast_logger 7/31/0, logger 11/14/1, tagged_logging 8/9/3, error_reporter 2/3/0, rescuable 2/4/3, clean_logger 1/1/1, notifications 0/2/0), over this RFC's ~250-mismatch split threshold. Replaced along file boundaries by assertions-activesupport-deprecation-and-test-case, assertions-activesupport-loggers-cluster and assertions-activesupport-notifications-residue, which carry its measurements and its Fanout/setupTestCase context forward."
 ---
 
 ## Context

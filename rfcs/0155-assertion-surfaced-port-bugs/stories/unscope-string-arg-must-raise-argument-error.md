@@ -1,7 +1,7 @@
 ---
 title: "unscope-string-arg-must-raise-argument-error"
-status: draft
-updated: 2026-09-18
+status: closed
+updated: 2026-09-19
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Subsumed by 0155/unscope-symbol-vs-string-raising-arms (filed 2026-09-19, rehomed from 0132 in this refine), which covers the same defect -- Relation#unscope cannot tell a Ruby Symbol from a String -- and both of its Rails arms: the bare-argument case this story described (default_scoping_test.rb:472-484, test_unscope_errors_with_non_symbol_or_hash_arguments) and the Hash-key case (unscope("where" => :name)) that this story did not. Same parked test, same file; work the fuller story.'
 ---
 
 ## Context

@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 5
 pr: trails#7895
 claim: "2026-09-19T20:46:38Z"
 assignee: "assertions-sqlite3-adapter-remainder"

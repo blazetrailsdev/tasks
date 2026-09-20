@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-time-ext-date-port"
-status: ready
+status: closed
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Fully decomposed into RFC 0155 before this refine: its seven bullets are 0155 stories activesupport-time-advance-gregorian-proleptic, activesupport-time-sec-fraction-rational, activesupport-time-floor-ceil-ndigits, activesupport-time-new-timezone-object-argument, activesupport-time-at-in-option-and-case-equality, activesupport-time-to-datetime-start-and-to-time and activesupport-time-since-time-instance-deprecation. core_ext/time_ext_test.rb reports 0 count/kind/value mismatches in pnpm parity:test -- --assertions (2026-09-19), so nothing assertion-side is left here."
 ---
 
 ## How to work this story

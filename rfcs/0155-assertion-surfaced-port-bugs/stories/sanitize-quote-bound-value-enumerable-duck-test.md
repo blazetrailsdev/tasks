@@ -1,6 +1,6 @@
 ---
 title: "sanitize-quote-bound-value-enumerable-duck-test"
-status: draft
+status: ready
 updated: 2026-09-19
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

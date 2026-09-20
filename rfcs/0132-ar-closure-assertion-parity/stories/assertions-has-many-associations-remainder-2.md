@@ -1,6 +1,6 @@
 ---
 title: "assertions-has-many-associations-remainder-2"
-status: draft
+status: ready
 updated: 2026-09-19
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null
