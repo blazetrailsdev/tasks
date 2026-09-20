@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-deprecation-and-test-case"
-status: ready
+status: in-progress
 updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#7916
+claim: "2026-09-20T21:19:26Z"
+assignee: "assertions-activesupport-deprecation-and-test-case"
 blocked-by: null
 closed-reason: null
 ---

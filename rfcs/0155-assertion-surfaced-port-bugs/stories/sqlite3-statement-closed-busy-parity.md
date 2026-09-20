@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-statement-closed-busy-parity"
-status: draft
+status: closed
 updated: 2026-09-20
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "blocker resolved in trails#7915: the statement-read SQLITE_BUSY path already translates to StatementTimeout and closes the statement; 'statement closed' is ported and green"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "pluck-type-cast-min-expression-not-cast"
-status: draft
-updated: 2026-09-19
+status: closed
+updated: 2026-09-20
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of pluck-aggregate-expression-not-type-cast, which the merged BLOCKED: line in calculations.test.ts cites (trails#7914)"
 ---
 
 ## Context

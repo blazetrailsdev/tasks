@@ -1,7 +1,7 @@
 ---
 title: "port-class-side-attribute-method-and-allocate"
-status: draft
-updated: 2026-09-15
+status: closed
+updated: 2026-09-20
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "attribute_method? half is activerecord-class-level-attribute-method-predicate-strips-equals-suffix, which the merged BLOCKED: line in attribute-methods.test.ts cites; allocate half done in trails#7914 (allocated objects can be inspected now mirrors Rails' assert_equal via Object.create(Topic.prototype))"
 ---
 
 ## Context
