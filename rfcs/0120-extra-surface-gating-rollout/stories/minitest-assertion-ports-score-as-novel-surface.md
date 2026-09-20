@@ -1,6 +1,6 @@
 ---
 title: "minitest-assertion-ports-score-as-novel-surface"
-status: draft
+status: closed
 updated: 2026-09-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of map-vendored-minitest-and-drop-norailsequivalent (RFC 0098), closed 2026-08-14 as won't-do: maintainer decision is that trails does not port the minitest gem, the vendored gem stays out of parity:api, and the @noRailsEquivalent PERMANENT tags stay. Filed in error while reviewing trails#7900; vendor/sources.ts:326-334 records the same decision inline."
 ---
 
 ## Context

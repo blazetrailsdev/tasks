@@ -1,7 +1,7 @@
 ---
 title: "sanitize-test-trails-only-bespoke-models"
-status: draft
-updated: 2026-09-19
+status: done
+updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#7898
 claim: null
 assignee: null
 blocked-by: null

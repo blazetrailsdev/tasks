@@ -1,6 +1,6 @@
 ---
 title: "Scope transaction_instrumentation subscribers per test, as Rails' ensure does"
-status: draft
+status: closed
 updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of transaction-instrumentation-subscriber-ensure-scope; same finding filed twice after a failed tasks-repo sync"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "assertions-activemodel-validations-and-secure-password"
-status: claimed
+status: in-progress
 updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
-claim: "2026-09-20T00:58:44Z"
-assignee: "assertions-activemodel-errors-cluster"
+pr: trails#7901
+claim: "2026-09-20T01:37:37Z"
+assignee: "assertions-activemodel-validations-and-secure-password"
 blocked-by: null
 closed-reason: null
 ---

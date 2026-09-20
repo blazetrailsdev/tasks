@@ -1,6 +1,6 @@
 ---
 title: "assertions-activemodel-errors-cluster"
-status: claimed
+status: in-progress
 updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: trails#7900
 claim: "2026-09-20T00:58:44Z"
 assignee: "assertions-activemodel-errors-cluster"
 blocked-by: null

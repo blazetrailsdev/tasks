@@ -1,6 +1,6 @@
 ---
 title: "t"
-status: draft
+status: closed
 updated: 2026-09-20
 rfc: "0082-ruby-ts-idiom-conversion-classes"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "probe story created in error while locating an open RFC"
 ---
 
 ## Context

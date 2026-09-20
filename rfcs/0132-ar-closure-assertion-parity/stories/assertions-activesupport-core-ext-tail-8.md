@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 4
 pr: null
-claim: "2026-09-20T00:58:44Z"
-assignee: "assertions-activemodel-errors-cluster"
+claim: "2026-09-20T01:38:21Z"
+assignee: "assertions-activesupport-core-ext-tail-8"
 blocked-by: null
 closed-reason: null
 ---
