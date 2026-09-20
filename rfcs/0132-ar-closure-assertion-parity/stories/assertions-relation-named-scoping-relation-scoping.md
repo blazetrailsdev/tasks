@@ -1,6 +1,6 @@
 ---
 title: "assertions-relation-named-scoping-relation-scoping"
-status: claimed
+status: in-progress
 updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
+pr: trails#7912
 claim: "2026-09-20T18:47:49Z"
 assignee: "assertions-relation-named-scoping-relation-scoping"
 blocked-by: null
