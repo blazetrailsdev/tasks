@@ -95,6 +95,34 @@ line up, so this is a single systematic kind idiom, not 38 rewrites.
 `hash_with_indifferent_access_test.rb` still has 2 unported names and 40 TS-only
 extras; the name gap belongs to RFC 0105, not here — converge assertions only.
 
+## Scope amendment (2026-09-20)
+
+This story was scoped assertion-only, under RFC 0132's rule that a surfaced
+production bug is filed and not fixed in the converging PR. Review of
+trails#7903 rejected that split, and **the scope was widened to include the
+ports for the bugs the convergence surfaced**, where those ports are expressible
+in TypeScript.
+
+Five land in trails#7903, each closing the RFC 0155 story it was filed under:
+
+- `duration-has-no-zero-predicate` — `duration.rb:224`'s delegation of
+  `[:to_f, :positive?, :negative?, :zero?, :abs]` to `@value`.
+- `to-sentence-does-not-stringify-elements-or-nil-connectors` —
+  `core_ext/array/conversions.rb:74-84`'s interpolating arms.
+- `duration-divide-by-integer-keeps-float-parts` — `duration.rb:297-307` with
+  Ruby's flooring `Integer#/`.
+- `duration-since-rejects-a-datetime-receiver` — `duration.rb:487`'s
+  `acts_like?(:date)` arm.
+- `range-step-is-numeric-only-where-ruby-uses-succ` —
+  `vendor/ruby/range.c:540-560`'s succ arm, plus `check_step_domain` (`:369`).
+
+Two stories stay open because their ports are not expressible —
+`enumerable-sum-index-with-and-excluding-port-gaps` and
+`hwia-has-no-enumerator-form-or-yaml-dump` need a Float/Integer numeric
+distinction JS does not have, plus `Complex`, `Enumerator` and a YAML ivar dump
+that trails has no port of. Their tests stay parked and their stories carry the
+convergence.
+
 ## Acceptance criteria
 
 - [ ] Every Rails file above reports 0 assertion-count, 0 assertion-kind and
@@ -102,5 +130,8 @@ extras; the name gap belongs to RFC 0105, not here — converge assertions only.
       `pnpm parity:test -- --package activesupport --assertions`, or the residue is
       carried by a filed remainder story and the parked rows by filed 0155
       stories.
+- [ ] The surfaced port bugs that are expressible in TypeScript are ported here
+      and their 0155 stories closed; the rest stay parked with their stories
+      open.
 - [ ] No test renamed; `parity:test`'s name-gate percent for `activesupport` does not drop.
 - [ ] `scripts/test-compare/assertion-mismatch-mark.json` unchanged.
