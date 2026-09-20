@@ -1,6 +1,6 @@
 ---
 title: "assertions-mysql-and-sqlite-adapter-tail"
-status: ready
+status: in-progress
 updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7905
+claim: "2026-09-20T13:33:12Z"
+assignee: "assertions-mysql-and-sqlite-adapter-tail"
 blocked-by: null
 closed-reason: null
 ---
