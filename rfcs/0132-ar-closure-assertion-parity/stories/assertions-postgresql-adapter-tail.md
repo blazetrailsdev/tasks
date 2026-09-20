@@ -1,6 +1,6 @@
 ---
 title: "assertions-postgresql-adapter-tail"
-status: ready
+status: in-progress
 updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#7904
+claim: "2026-09-20T02:26:33Z"
+assignee: "assertions-postgresql-adapter-tail"
 blocked-by: null
 closed-reason: null
 ---

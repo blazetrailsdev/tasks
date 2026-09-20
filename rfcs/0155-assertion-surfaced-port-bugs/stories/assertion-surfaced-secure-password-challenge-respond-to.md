@@ -1,6 +1,6 @@
 ---
 title: "assertion-surfaced-secure-password-challenge-respond-to"
-status: draft
+status: closed
 updated: 2026-09-20
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "fixed in trails#7901 — the challenge validator reaches _digest_was through rbObjRespondTo"
 ---
 
 ## Context

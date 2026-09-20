@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-core-ext-tail-8"
-status: claimed
+status: in-progress
 updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: trails#7903
 claim: "2026-09-20T01:38:21Z"
 assignee: "assertions-activesupport-core-ext-tail-8"
 blocked-by: null
