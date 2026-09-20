@@ -1,6 +1,6 @@
 ---
 title: "assertions-transactions-and-adapter-remainder"
-status: ready
+status: claimed
 updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-20T17:51:28Z"
+assignee: "assertions-transactions-and-adapter-remainder"
 blocked-by: null
 closed-reason: null
 ---

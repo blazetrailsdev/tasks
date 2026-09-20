@@ -1,6 +1,6 @@
 ---
 title: "assertions-activemodel-attribute-cluster-remainder"
-status: in-progress
+status: done
 updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
