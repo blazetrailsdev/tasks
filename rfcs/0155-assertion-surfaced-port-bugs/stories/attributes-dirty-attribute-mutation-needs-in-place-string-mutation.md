@@ -1,6 +1,6 @@
 ---
 title: "attributes-dirty-attribute-mutation-needs-in-place-string-mutation"
-status: draft
+status: closed
 updated: 2026-09-20
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of assertions-immutable-js-string-values — same root cause (Ruby String is mutable, a JS string is an immutable primitive); attributes_dirty_test.rb:66-72 'attribute mutation' is parked under that story's BLOCKED receipt as an eighth row alongside attribute_test.rb's mutation and dup parks"
 ---
 
 ## Context

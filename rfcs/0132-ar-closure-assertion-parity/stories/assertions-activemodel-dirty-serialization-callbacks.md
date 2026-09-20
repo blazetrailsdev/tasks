@@ -1,6 +1,6 @@
 ---
 title: "assertions-activemodel-dirty-serialization-callbacks"
-status: ready
+status: in-progress
 updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7907
+claim: "2026-09-20T14:27:51Z"
+assignee: "assertions-activemodel-dirty-serialization-callbacks"
 blocked-by: null
 closed-reason: null
 ---

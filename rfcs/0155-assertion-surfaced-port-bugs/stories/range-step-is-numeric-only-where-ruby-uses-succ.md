@@ -1,6 +1,6 @@
 ---
 title: "range-step-is-numeric-only-where-ruby-uses-succ"
-status: in-progress
+status: done
 updated: 2026-09-20
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

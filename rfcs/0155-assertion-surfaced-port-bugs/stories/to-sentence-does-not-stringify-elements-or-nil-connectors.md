@@ -1,6 +1,6 @@
 ---
 title: "to-sentence-does-not-stringify-elements-or-nil-connectors"
-status: in-progress
+status: done
 updated: 2026-09-20
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
