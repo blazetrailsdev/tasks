@@ -42,6 +42,32 @@ TS-only extras to move into the `.trails.test.ts` sibling:
 `attribute-methods.trails.test.ts` already exists; so does
 `attributes.trails.test.ts`.
 
+### Scope: one file, the other two filed (resized 2026-09-20)
+
+Re-scoped after measuring, exactly as this story was itself carved out of
+`assertions-activemodel-attribute-cluster` — that story converged four of its
+seven files and stopped at the band the RFC blesses.
+
+All three trails files need a full-file rewrite rather than an assertion edit (see
+below), so each costs its current size in deletions plus its port in additions:
+
+| file                             | deletions | est. additions | churn |
+| -------------------------------- | --------: | -------------: | ----: |
+| `attributes.test.ts`             |       196 |            176 |   372 |
+| `attribute-registration.test.ts` |       589 |           ~350 |  ~940 |
+| `attribute-methods.test.ts`      |       650 |           ~400 | ~1050 |
+
+The PR ceiling is 700 LOC (additions + deletions; tests count). Either remaining
+file alone lands the PR near 1,300 and both put it past 2,300 — the ≥700 band
+review-cycle data shows needing 13+ rounds. CLAUDE.md § Conventions makes the
+ceiling the hard rule and filing the remainder the prescribed remedy, so this
+story ships `attributes_test.rb` and the other two are owned separately:
+
+- `assertions-activemodel-attribute-registration` — `attribute_registration_test.rb`
+  (10 count / 13 kind / 3 value, 7 TS-only extras)
+- `assertions-activemodel-attribute-methods` — `attribute_methods_test.rb`
+  (15 / 18 / 10, 10 TS-only extras)
+
 ### What the shape of the work is (learned on the first slice)
 
 All three trails files have the same defect as the four already converged: the test
@@ -105,11 +131,13 @@ A converged assertion that then fails is a story, not a detour: land it, park it
 
 ## Acceptance criteria
 
-- [ ] `attribute_methods_test.rb`, `attribute_registration_test.rb` and
-      `attributes_test.rb` each report 0 assertion-count, 0 assertion-kind and
+- [ ] `attributes_test.rb` reports 0 assertion-count, 0 assertion-kind and
       0 assertion-value mismatches in
       `pnpm parity:test -- --package activemodel --assertions`, or the residue is
       carried by filed 0155 stories for parked rows.
+- [ ] `attribute_registration_test.rb` and `attribute_methods_test.rb` are filed
+      as their own 0132 stories, each carrying the measured mismatch counts, the
+      Rails `file:line` anchors and the idioms this cluster settled.
 - [ ] TS-only extras live in the `.trails.test.ts` siblings, not in the
       Rails-matched files.
 - [ ] No test renamed; `parity:test`'s file count for `activemodel` does not drop.
