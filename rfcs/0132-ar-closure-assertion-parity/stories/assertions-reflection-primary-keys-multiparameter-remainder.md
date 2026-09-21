@@ -1,6 +1,6 @@
 ---
 title: "assertions-reflection-primary-keys-multiparameter-remainder"
-status: claimed
+status: in-progress
 updated: 2026-09-20
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: trails#7920
 claim: "2026-09-20T22:41:50Z"
 assignee: "assertions-reflection-primary-keys-multiparameter-remainder"
 blocked-by: null
