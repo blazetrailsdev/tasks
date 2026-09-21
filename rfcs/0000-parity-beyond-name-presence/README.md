@@ -62,10 +62,11 @@ non-boolean getter; excluded and rowless files; and stdlib includes that are
 never flattened. Of the 27 "method not ported" stories in 0155, one is reported
 as missing today.
 
-The call gate has the same hole. `significantMissingCalls` suppresses a Ruby
-call name that maps to no TS candidate, so `public_send`, `send`, `respond_to?`
-and `inspect` never flag. `update-attribute-uses-public-send-setter` is recorded
-in `call-skeletons.json` and absent from `call-mismatches.json`.
+The call gate has a related hole. `significantMissingCalls` suppresses a Ruby
+call name that maps to no TS candidate, so a body that dispatches through a
+dynamic setter never flags when the port writes the attribute directly.
+`update-attribute-uses-public-send-setter` is recorded in `call-skeletons.json`
+and absent from `call-mismatches.json`.
 
 Past the surface, nothing compares rendering (`inspect`, class paths, Symbols in
 messages), guard shape (`instanceof` lists where Ruby asks `respond_to?`), block
@@ -76,12 +77,18 @@ arms, or return values. Those are 17, 6, about 9 and 12 stories of the 180.
 Five clusters, in the order they should land.
 
 1. **`denominator`.** Make the number honest first. Report the own-row ratio,
-   stop collapsing class and instance, un-skip protocol names that a Ruby file
-   really defines, kind-check predicate matches, expect `Enumerable` /
+   stop collapsing class and instance, un-skip the protocol names that translate
+   directly (`inspect`, the `dup` family, `encode_with` / `init_with`, the
+   explicit conversions), decide the ones whose JS form is a different
+   mechanism (`is_a?`, `hash`, `eql?`, `method_missing`, `respond_to?`), kind-check predicate matches, expect `Enumerable` /
    `Comparable` surface, and reconcile the skip registers with open stories.
    activerecord will leave 100% when this lands. That drop is the finding stated
    as a number, and the new rows are a burndown, not a regression.
-2. **`call-gate`.** Stop suppressing the dynamic-dispatch call names.
+2. **`call-gate`.** One keyed check: Rails dispatches through a dynamic setter,
+   the port calls `writeAttribute`. `send` and `public_send` are deliberately
+   NOT made scored call names. They differ only in visibility, which JS lacks
+   at run time, and the faithful port is a computed-member assignment with no
+   callee, so a call-name comparison would flag correct ports too.
 3. **`lints`.** Two narrow lints. The guard lint is keyed on one call name on
    purpose: RFC 0113 measured whole-population arm comparison at 75% noise and
    runs it ungated permanently, while the single missing-`throw` stratum
@@ -117,8 +124,8 @@ lands it report-only unless its body says the noise has been measured.
 
 ## Open questions
 
-- Which global skip names are genuinely unportable (`hash`, `object_id`,
-  `freeze`) and which are ported somewhere and therefore scoreable. The un-skip
-  story answers it per name from the TS corpus.
+- Whether trails' 83 `hash` and 64 `eql?` members are live. Nothing in JS
+  calls them, so either a ruby-compat collection does or they are dead code.
+  `decide-protocol-names-with-a-different-js-mechanism` answers it.
 - Whether `Multibyte::Chars` and `TestCase.test_order` are to be ported. A skip
   reason says no and an open 0155 story says yes.

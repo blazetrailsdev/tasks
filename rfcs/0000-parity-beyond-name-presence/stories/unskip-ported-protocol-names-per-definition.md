@@ -1,5 +1,5 @@
 ---
-title: "Score inspect, initialize_dup, is_a? and the other protocol names where a Ruby file really defines them"
+title: "Score inspect, the dup family, encode_with/init_with and the explicit conversions where a Ruby file defines them"
 status: draft
 updated: 2026-09-20
 rfc: "0000-parity-beyond-name-presence"
@@ -8,7 +8,7 @@ packages: []
 deps:
   - "report-own-row-denominator-ratio"
 deps-rfc: []
-est-loc: 320
+est-loc: 260
 priority: null
 pr: null
 claim: null
@@ -19,16 +19,33 @@ closed-reason: null
 
 ## Context
 
-`SKIP_GROUPS[0]` (`scripts/parity/conventions.ts:455-498`) drops about 40 names everywhere: `dup`, `inspect`, `pretty_print`, `respond_to?`, `respond_to_missing?`, `method_missing`, `is_a?`, `initialize_dup`, `encode_with`, `init_with`, `to_a`, `to_h`. `rubyMethodToTs` returns `null` for them (`conventions.ts:1484`) and `dedupeRubyMethodInto` drops a null-mapped method (`compare.ts:2920`). Hits across activerecord, activemodel and activesupport: `inspect` 29, `hash` 20, `eql?` 19, `method_missing` 18, `initialize_dup` 16, `encode_with` 14, `init_with` 11, `respond_to_missing?` 11.
+`SKIP_GROUPS[0]` (`scripts/parity/conventions.ts:455-498`) drops about 40 names everywhere, under one reason: "Ruby core object / value-protocol methods with no meaningful public TypeScript surface". `rubyMethodToTs` returns `null` for them (`conventions.ts:1484`) and `dedupeRubyMethodInto` drops a null-mapped method (`compare.ts:2920`).
 
-So every `inspect` Rails defines is outside the denominator. That is 0155's whole rendering group (17 stories), plus `activemodel-errors-has-no-dup` (`errors.rb:122-125`, scored 33/33) and `activesupport-time-with-zone-is-a-time` (`time_with_zone.rb`, `is_a?`).
+For one subset that reason is false. These translate directly, and trails already ports them widely. Rails definitions against existing TS members, across arel, activemodel, activerecord and activesupport, from `rails-api.json` and `ts-api.json` on `4e7c35e36b`:
 
-The spellings already exist: `rubyMethodToTsIgnoringSkip` (`conventions.ts:1509`) answers "what would a faithful TS override be called" for extra-surface. Some names are genuinely unportable (`hash`, `object_id`, `freeze`, `instance_variable_get`) and stay skipped.
+| Ruby name         | Rails defs | TS members today |
+| ----------------- | ---------- | ---------------- |
+| `inspect`         | 35         | 62               |
+| `initialize_dup`  | 16         | 19               |
+| `initialize_copy` | 21         | 2                |
+| `dup`             | 2          | 20               |
+| `encode_with`     | 15         | 12               |
+| `init_with`       | 12         | 10               |
+| `to_a`            | 9          | 18               |
+| `to_h`            | 8          | 13               |
+| `to_hash`         | 12         | 12               |
+| `pretty_print`    | 6          | 16               |
+
+Skipping them hides real misses behind a false reason. `ActiveModel::Errors#initialize_dup` (`vendor/rails/activemodel/lib/active_model/errors.rb:122-125`) is unported and `errors.rb` scores 33/33, which is 0155's `activemodel-errors-has-no-dup`. Every `inspect` Rails defines is outside the denominator, which is where 0155's 17 rendering stories live.
+
+**Scope is this list only.** The rest of the group stays skipped and is not this story's business: names with no JS hook (`object_id`, `instance_variable_get`, `tap`, `send`, `public_send`, `nil?`, `equal?`, `to_ary`, and `then`, which would make an object a thenable that `await` calls), and names whose JS form is a different mechanism (`is_a?`, `hash`, `eql?`, `method_missing`, `respond_to?`), which `decide-protocol-names-with-a-different-js-mechanism` owns.
+
+The TS spellings already exist: `rubyMethodToTsIgnoringSkip` (`conventions.ts:1509`) produces them for extra-surface.
 
 ## Acceptance criteria
 
-- Each name in `SKIP_GROUPS[0]` is classified from the TS corpus as ported-somewhere or never-ported, and the table is in the PR body.
-- A ported-somewhere name is expected in the TS file mirroring each Ruby file that defines it, via `rubyMethodToTsIgnoringSkip`.
-- Never-ported names stay skipped, in a group whose `reason` says why.
-- `Errors#initialize_dup` and `TimeWithZone#is_a?` are reported missing.
-- If the new rows exceed one PR's burndown, the mechanism lands behind a per-package enrollment list that is only-grow, and the PR files one burndown story per unenrolled package.
+- The ten names above move out of `SKIP_GROUPS[0]` into the scored population, expected in the TS file mirroring each Ruby file that defines them.
+- `SKIP_GROUPS[0]`'s `reason` is rewritten to describe only what remains in it.
+- `Errors#initialize_dup` is reported missing.
+- A Ruby `initialize_copy` / `initialize_dup` is satisfied by either TS spelling or by an own `dup` / `clone` in that file, with a test, so the two Ruby hooks do not double-count one TS method.
+- The PR body lists every newly missing row per package. If they exceed one PR's burndown, the mechanism lands behind an only-grow per-package enrollment list and the PR files one burndown story per unenrolled package. New rows are never baselined away.

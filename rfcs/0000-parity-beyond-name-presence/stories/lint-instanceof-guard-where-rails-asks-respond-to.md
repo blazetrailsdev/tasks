@@ -5,8 +5,7 @@ updated: 2026-09-20
 rfc: "0000-parity-beyond-name-presence"
 cluster: "lints"
 packages: []
-deps:
-  - "call-gate-stop-suppressing-dynamic-dispatch-names"
+deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
@@ -29,7 +28,7 @@ Six 0155 stories are one shape: Rails duck-types, the port enumerates classes, a
 
 **Prior rejection, and why this differs.** RFC 0113 measured whole-population arm comparison at 75% non-real and runs it ungated permanently. Its single missing-`throw` stratum measured 88.4% real and gates (`seed-a-missing-throw-arm-ratchet`). This story is another single stratum, keyed on one Ruby call name, not a revival of the general comparison.
 
-`call-skeletons.json` already carries both bodies' tokens. It needs `respond_to?` and `acts_like?` to survive as Ruby-side tokens, which is the dependency.
+`call-skeletons.json` already carries both bodies' tokens, including the Ruby-side `ref:respond_to?` (151 occurrences on `4e7c35e36b`) and `ref:acts_like?` (10), so this needs no extractor change on the Ruby side.
 
 ## Acceptance criteria
 
