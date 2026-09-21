@@ -1,6 +1,6 @@
 ---
 title: "AR tests assert a bare Error where Ruby raises RuntimeError/StandardError"
-status: claimed
+status: in-progress
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 5
-pr: null
+pr: trails#7930
 claim: "2026-09-21T13:41:59Z"
 assignee: "assert-helper-only-tests-trip-the-missing-assertions-guard"
 blocked-by: null

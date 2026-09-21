@@ -1,6 +1,6 @@
 ---
 title: "assert_in_delta ports as toBeLessThanOrEqual (kind operator) instead of assertInDelta"
-status: claimed
+status: in-progress
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 5
-pr: null
+pr: trails#7929
 claim: "2026-09-21T13:56:49Z"
 assignee: "port-assert-in-delta-as-indelta-not-operator"
 blocked-by: null

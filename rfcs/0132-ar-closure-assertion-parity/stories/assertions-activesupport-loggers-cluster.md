@@ -1,6 +1,6 @@
 ---
 title: "assertions-activesupport-loggers-cluster"
-status: claimed
+status: ready
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: "2026-09-21T13:41:59Z"
-assignee: "assert-helper-only-tests-trip-the-missing-assertions-guard"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

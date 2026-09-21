@@ -1,6 +1,6 @@
 ---
 title: "has-many-associations-test-rails-member-order"
-status: claimed
+status: ready
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 8
 pr: null
-claim: "2026-09-21T13:56:49Z"
-assignee: "port-assert-in-delta-as-indelta-not-operator"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

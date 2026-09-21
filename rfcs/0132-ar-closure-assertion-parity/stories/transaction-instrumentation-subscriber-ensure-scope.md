@@ -1,6 +1,6 @@
 ---
 title: "Scope transaction_instrumentation subscribers per test, as Rails' ensure does"
-status: claimed
+status: in-progress
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: 7
-pr: null
+pr: trails#7929
 claim: "2026-09-21T13:56:49Z"
 assignee: "port-assert-in-delta-as-indelta-not-operator"
 blocked-by: null
