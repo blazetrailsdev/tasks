@@ -1,6 +1,6 @@
 ---
 title: "assertions-reflection-remainder"
-status: claimed
+status: in-progress
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
+pr: trails#7933
 claim: "2026-09-21T15:56:29Z"
 assignee: "assertions-reflection-remainder"
 blocked-by: null
