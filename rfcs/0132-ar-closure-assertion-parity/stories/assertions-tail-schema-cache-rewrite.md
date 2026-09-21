@@ -1,6 +1,6 @@
 ---
 title: "assertions-tail-schema-cache-rewrite"
-status: ready
+status: done
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7897
+claim: "2026-09-21T17:15:49Z"
+assignee: "assertions-tail-schema-cache-rewrite"
 blocked-by: null
 closed-reason: null
 ---

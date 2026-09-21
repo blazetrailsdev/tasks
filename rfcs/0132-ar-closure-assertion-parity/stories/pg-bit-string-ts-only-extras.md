@@ -1,6 +1,6 @@
 ---
 title: "Relocate TS-only extras out of postgresql bit-string.test.ts"
-status: draft
+status: claimed
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-21T17:54:07Z"
+assignee: "assertions-activesupport-cache-xml-json-callbacks"
 blocked-by: null
 closed-reason: null
 ---

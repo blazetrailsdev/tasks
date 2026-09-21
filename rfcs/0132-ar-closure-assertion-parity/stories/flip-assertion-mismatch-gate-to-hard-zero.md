@@ -1,6 +1,6 @@
 ---
 title: "Flip the assertion-mismatch gate from ratchet to hard zero"
-status: ready
+status: blocked
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: enforcement
@@ -70,7 +70,7 @@ priority: 9
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Not claimable: all 56 listed deps are done, but 20 open 0132 burndown stories are not in deps (CLI has no set-deps verb) and must land first: activerecorderror-not-a-standarderror, ar-tests-bare-error-assert-residue, assertions-activemodel-validations-remainder-2, assertions-has-many-associations-remainder-4, assertions-kind-of-integer-float-receipt, assertions-tail-adapters-1-remainder-2-{connection-adapters-lane-assertions,mysql-lane-assertions,pg-enum-dump-values,pg-uuid-assertions}, assertions-uniqueness-singleton-and-forced-encoding-residue, map-ar-helper-rb-assertion-kinds, pg-bit-string-ts-only-extras, assertions-activesupport-cache-xml-json-callbacks, assertions-activesupport-loggers-cluster, assertions-named-scoping, assertions-tail-schema-cache-rewrite, has-many-associations-test-rails-member-order, force-signal37-helper-zero-arg. Unblock when all are done and parity:test --assertions reads 0/0/0 for the in-scope closure."
 closed-reason: null
 ---
 

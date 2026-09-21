@@ -1,6 +1,6 @@
 ---
 title: "has-many-associations-test-rails-member-order"
-status: ready
+status: blocked
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: 8
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-21T17:14:30Z"
+assignee: "has-many-associations-test-rails-member-order"
+blocked-by: "blocked on has-many-associations-test-fixture-accessor-convergence: merging into Rails' single fixture union (rb:118-123) removes the fixtures([]) exemption and test-fixture-parity then reds 46 tests whose Rails bodies call fixture accessors. Prototype otherwise green: 316/316 pass, parity:test Move 37->0."
 closed-reason: null
 ---
 

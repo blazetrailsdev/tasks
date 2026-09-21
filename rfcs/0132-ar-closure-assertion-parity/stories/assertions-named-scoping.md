@@ -1,6 +1,6 @@
 ---
 title: "assertions-named-scoping"
-status: ready
+status: done
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7934
+claim: "2026-09-21T17:16:02Z"
+assignee: "assertions-named-scoping"
 blocked-by: null
 closed-reason: null
 ---
