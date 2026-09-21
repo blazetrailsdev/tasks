@@ -1,6 +1,6 @@
 ---
 title: "Remaining assertRaises([Error]) sites in AR tests"
-status: claimed
+status: in-progress
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#7935
 claim: "2026-09-21T17:54:07Z"
 assignee: "assertions-activesupport-cache-xml-json-callbacks"
 blocked-by: null

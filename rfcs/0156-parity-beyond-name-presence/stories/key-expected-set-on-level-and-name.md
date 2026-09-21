@@ -1,6 +1,6 @@
 ---
 title: "Stop collapsing class-level and instance-level Ruby methods into one expected row"
-status: draft
+status: in-progress
 updated: 2026-09-21
 rfc: "0156-parity-beyond-name-presence"
 cluster: "denominator"
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7936
+claim: "2026-09-21T18:16:00Z"
+assignee: "key-expected-set-on-level-and-name"
 blocked-by: null
 closed-reason: null
 ---
