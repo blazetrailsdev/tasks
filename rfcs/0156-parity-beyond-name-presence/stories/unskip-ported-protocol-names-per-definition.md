@@ -2,7 +2,7 @@
 title: "Score inspect, the dup family, encode_with/init_with and the explicit conversions where a Ruby file defines them"
 status: draft
 updated: 2026-09-20
-rfc: "0000-parity-beyond-name-presence"
+rfc: "0156-parity-beyond-name-presence"
 cluster: "denominator"
 packages: []
 deps:

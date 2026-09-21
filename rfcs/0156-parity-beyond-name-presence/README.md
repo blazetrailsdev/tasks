@@ -1,5 +1,5 @@
 ---
-rfc: "0000-parity-beyond-name-presence"
+rfc: "0156-parity-beyond-name-presence"
 title: "Parity tooling beyond name presence — audit the denominator, then measure behaviour"
 status: draft
 created: 2026-09-20
@@ -26,10 +26,7 @@ related-rfcs:
 priority: 6
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number. -->
-
-# RFC — Parity tooling beyond name presence
+# RFC 0156 — Parity tooling beyond name presence
 
 ## Summary
 

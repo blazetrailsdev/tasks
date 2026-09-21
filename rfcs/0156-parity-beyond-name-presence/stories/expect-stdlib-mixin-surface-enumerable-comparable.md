@@ -2,7 +2,7 @@
 title: "Expect Enumerable / Comparable surface from a class that includes them"
 status: draft
 updated: 2026-09-20
-rfc: "0000-parity-beyond-name-presence"
+rfc: "0156-parity-beyond-name-presence"
 cluster: "denominator"
 packages: []
 deps: []
