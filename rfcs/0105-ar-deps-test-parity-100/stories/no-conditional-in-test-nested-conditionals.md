@@ -1,7 +1,7 @@
 ---
 title: "no-conditional-in-test misses nested if, ternary and switch in AR test bodies"
-status: ready
-updated: 2026-09-16
+status: closed
+updated: 2026-09-21
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 200
 priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-21T21:24:45Z"
+assignee: "fixture-set-read-fixture-files-accepts-ts-rows"
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise falsified by vendor/rails: Rails AR tests DO contain nested if/ternary conditionals — e.g. transaction_instrumentation_test.rb has 18x 'ActiveSupport::Notifications.unsubscribe(subscriber) if subscriber' in ensure, relation/load_async_test.rb:113 'if Post.lease_connection.supports_concurrent_connections?', autosave_association_test.rb:278 'Firm.partial_updates? ? 0 : 1'. Widening the rule to every nested IfStatement/ConditionalExpression/SwitchStatement flags 95 sites in 43 files (measured), many of them faithful ports; converging them would create divergence from Rails."
 ---
 
 ## Context

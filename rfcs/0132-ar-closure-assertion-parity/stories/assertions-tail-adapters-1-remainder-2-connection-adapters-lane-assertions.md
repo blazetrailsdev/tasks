@@ -1,6 +1,6 @@
 ---
 title: "assertions-tail-adapters-1-remainder-2-connection-adapters-lane-assertions"
-status: ready
+status: in-progress
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7938
+claim: "2026-09-21T21:00:50Z"
+assignee: "assertions-tail-adapters-1-remainder-2-connection-adapters-lane-assertions"
 blocked-by: null
 closed-reason: null
 ---

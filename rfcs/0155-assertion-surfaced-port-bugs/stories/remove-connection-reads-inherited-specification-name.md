@@ -1,7 +1,7 @@
 ---
 title: "remove-connection-reads-inherited-specification-name"
-status: draft
-updated: 2026-09-18
+status: in-progress
+updated: 2026-09-21
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7938
+claim: "2026-09-21T21:09:08Z"
+assignee: "remove-connection-reads-inherited-specification-name"
 blocked-by: null
 closed-reason: null
 ---
