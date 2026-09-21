@@ -1,9 +1,9 @@
 ---
 rfc: "0156-parity-beyond-name-presence"
 title: "Parity tooling beyond name presence — audit the denominator, then measure behaviour"
-status: draft
+status: active
 created: 2026-09-20
-updated: 2026-09-20
+updated: 2026-09-21
 owner: "@deanmarano"
 packages:
   - "activerecord"
