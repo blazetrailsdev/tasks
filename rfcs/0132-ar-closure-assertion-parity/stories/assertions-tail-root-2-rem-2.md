@@ -1,6 +1,6 @@
 ---
 title: "assertions-tail-root-2-rem-2"
-status: ready
+status: in-progress
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7926
+claim: "2026-09-21T12:38:16Z"
+assignee: "assertions-tail-root-2-rem-2"
 blocked-by: null
 closed-reason: null
 ---

@@ -13,5 +13,5 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "created by mistake: stray tasks-new invocation with an empty body; no work"
+closed-reason: "created by mistake (empty duplicate from a mistyped tasks new)"
 ---

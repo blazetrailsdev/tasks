@@ -1,6 +1,6 @@
 ---
 title: "Active Record MariaDB Tests (prepared statements) failing on main @da31abdd"
-status: ready
+status: closed
 updated: 2026-09-21
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-21T12:45:00Z"
+assignee: "red-da31abdd"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: same commit da31abdd passed the MariaDB (prepared statements) job in run 35550229820 on the same MariaDB 11.8.9 server; the re-run 35599847807 failed only in untouched files (base, time-precision, mysql-explain) with missing fixture rows. No code change."
 ---
 
 ## Context
