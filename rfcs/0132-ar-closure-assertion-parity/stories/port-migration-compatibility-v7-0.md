@@ -1,6 +1,6 @@
 ---
 title: "port-migration-compatibility-v7-0"
-status: ready
+status: closed
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "old migration versions (V7_0 and below) are not wanted; operator decision"
 ---
 
 ## Context

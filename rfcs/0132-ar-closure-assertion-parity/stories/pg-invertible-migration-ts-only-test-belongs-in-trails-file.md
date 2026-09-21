@@ -1,6 +1,6 @@
 ---
 title: "Move the TS-only 'migrate and revert' test out of the Rails-mirroring pg invertible-migration file"
-status: ready
+status: in-progress
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#7927
+claim: "2026-09-21T13:49:04Z"
+assignee: "pg-invertible-migration-ts-only-test-belongs-in-trails-file"
 blocked-by: null
 closed-reason: null
 ---

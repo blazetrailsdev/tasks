@@ -1,7 +1,7 @@
 ---
 title: "assertion parity: mutation symbol-order table value and readonly notEmpty"
-status: ready
-updated: 2026-09-20
+status: done
+updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7911
+claim: "2026-09-21T13:41:59Z"
+assignee: "assert-helper-only-tests-trip-the-missing-assertions-guard"
 blocked-by: null
 closed-reason: null
 ---

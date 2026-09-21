@@ -1,6 +1,6 @@
 ---
 title: "Port the three unported postgresql/bit_string_test.rb tests"
-status: in-progress
+status: done
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null

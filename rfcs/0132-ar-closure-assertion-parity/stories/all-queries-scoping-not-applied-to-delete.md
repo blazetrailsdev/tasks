@@ -1,6 +1,6 @@
 ---
 title: "all-queries-scoping-not-applied-to-delete"
-status: ready
+status: done
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7912
+claim: "2026-09-21T13:41:59Z"
+assignee: "assert-helper-only-tests-trip-the-missing-assertions-guard"
 blocked-by: null
 closed-reason: null
 ---

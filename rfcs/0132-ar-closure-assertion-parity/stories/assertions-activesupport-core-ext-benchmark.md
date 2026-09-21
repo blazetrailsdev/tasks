@@ -1,6 +1,6 @@
 ---
 title: "Port core_ext/benchmark_test.rb and the Benchmark.ms core-ext it covers"
-status: ready
+status: claimed
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-21T13:41:59Z"
+assignee: "assert-helper-only-tests-trip-the-missing-assertions-guard"
 blocked-by: null
 closed-reason: null
 ---

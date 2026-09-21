@@ -1,6 +1,6 @@
 ---
 title: "Port the four unported abstract_mysql_adapter/optimizer_hints_test.rb tests"
-status: ready
+status: in-progress
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7928
+claim: "2026-09-21T13:48:55Z"
+assignee: "port-mysql-optimizer-hints-remaining-four"
 blocked-by: null
 closed-reason: null
 ---

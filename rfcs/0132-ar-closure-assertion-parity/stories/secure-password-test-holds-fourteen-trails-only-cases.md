@@ -1,6 +1,6 @@
 ---
 title: "activemodel: secure-password.test.ts holds 14 trails-only cases in a Rails-mapped file"
-status: in-progress
+status: done
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null

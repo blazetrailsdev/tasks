@@ -1,7 +1,7 @@
 ---
 title: "assertions-activesupport-notifications-residue"
-status: ready
-updated: 2026-09-20
+status: claimed
+updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
 packages: ["activesupport"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-21T13:41:59Z"
+assignee: "assert-helper-only-tests-trip-the-missing-assertions-guard"
 blocked-by: null
 closed-reason: null
 ---
