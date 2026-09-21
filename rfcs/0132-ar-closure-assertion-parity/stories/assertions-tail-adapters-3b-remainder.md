@@ -1,7 +1,7 @@
 ---
 title: "assertions-tail-adapters-3b-remainder"
-status: in-progress
-updated: 2026-09-20
+status: done
+updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []

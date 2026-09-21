@@ -1,7 +1,7 @@
 ---
 title: "Extend parity:fixtures:models to association scope lambdas and attr_* declarations"
 status: draft
-updated: 2026-09-20
+updated: 2026-09-21
 rfc: "0156-parity-beyond-name-presence"
 cluster: "comparers"
 packages: []

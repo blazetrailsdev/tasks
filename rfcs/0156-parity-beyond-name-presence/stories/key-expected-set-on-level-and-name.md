@@ -1,7 +1,7 @@
 ---
 title: "Stop collapsing class-level and instance-level Ruby methods into one expected row"
 status: draft
-updated: 2026-09-20
+updated: 2026-09-21
 rfc: "0156-parity-beyond-name-presence"
 cluster: "denominator"
 packages: []

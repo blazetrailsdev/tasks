@@ -1,7 +1,7 @@
 ---
 title: "Report the own-row ratio beside parity:api's percentage"
 status: draft
-updated: 2026-09-20
+updated: 2026-09-21
 rfc: "0156-parity-beyond-name-presence"
 cluster: "denominator"
 packages: []
