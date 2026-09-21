@@ -15,7 +15,6 @@ clusters:
   - "call-gate"
   - "lints"
   - "comparers"
-  - "mri-differential"
 related-rfcs:
   - "0155-assertion-surfaced-port-bugs"
   - "0132-ar-closure-assertion-parity"
@@ -38,7 +37,7 @@ RFC 0155 holds 180 real port defects, every one found by hand-converging a
 test's assertions, while `parity:api` reads 100% for arel, activemodel and
 activerecord. The audit in [`audit-20260920.md`](audit-20260920.md) explains the
 contradiction and sorts the 180 by defect shape. This RFC files the tooling that
-audit found to be buildable. Together the stories reach about 85 of the 180.
+audit found to be buildable. Together the stories catch about 40 of the 180 and make about 6 more visible.
 About 61 have no possible tool, and this RFC does not chase them.
 
 ## Motivation
@@ -74,7 +73,7 @@ arms, or return values. Those are 17, 6, about 9 and 12 stories of the 180.
 
 ## Design
 
-Five clusters, in the order they should land.
+Four clusters, in the order they should land.
 
 1. **`denominator`.** Make the number honest first. Report the own-row ratio,
    stop collapsing class and instance, un-skip the protocol names that translate
@@ -96,16 +95,13 @@ Five clusters, in the order they should land.
 4. **`comparers`.** A block-parameter check that can gate, and a void-return
    check that starts report-only and measures its noise before any gate, the
    same discipline RFC 0113 used.
-5. **`mri-differential`.** `ruby` is on PATH and Rails is vendored, and
-   `scripts/parity/pipeline/` already runs Rails and trails side by side over
-   206 fixtures, but diffs only SQL text and schema dumps. Add a pure-function
-   type that diffs `[class, inspect, raised class, message]`, with no bundler
-   and no database. The harness finds nothing by itself. The yield is in a fixed
-   adversarial input table driven through every `ActiveModel::Type#cast`. This
-   cluster starts with a spike and ends with a measure-then-decide story.
 
 ## Out of scope
 
+- **Differential testing against real MRI and Rails.** The audit proposed it and
+  the owner declined it on 2026-09-20. No story here builds it. The roughly ten
+  pure-function defects only it would have reached (wrong cast results, Integer
+  division, message interpolation) stay with assertion convergence.
 - **`add-error-message-parity-signal`** stays in RFC 0127, where it is already
   `ready`. It is the sixth proposal of the audit and needs a claimer, not a
   second story.
