@@ -1,6 +1,6 @@
 ---
 title: "Scope transaction_instrumentation subscribers per test, as Rails' ensure does"
-status: in-progress
+status: done
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null

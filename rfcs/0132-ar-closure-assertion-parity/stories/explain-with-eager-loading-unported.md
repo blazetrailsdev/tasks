@@ -1,6 +1,6 @@
 ---
 title: "Port explain with eager loading to the MySQL and PostgreSQL explain suites"
-status: in-progress
+status: done
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null

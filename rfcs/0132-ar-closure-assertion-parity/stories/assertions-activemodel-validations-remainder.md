@@ -1,6 +1,6 @@
 ---
 title: "assertions-activemodel-validations-remainder"
-status: ready
+status: in-progress
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7932
+claim: "2026-09-21T15:47:11Z"
+assignee: "assertions-activemodel-validations-remainder"
 blocked-by: null
 closed-reason: null
 ---

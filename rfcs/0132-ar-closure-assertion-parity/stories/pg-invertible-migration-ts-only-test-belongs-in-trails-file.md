@@ -1,6 +1,6 @@
 ---
 title: "Move the TS-only 'migrate and revert' test out of the Rails-mirroring pg invertible-migration file"
-status: in-progress
+status: done
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null

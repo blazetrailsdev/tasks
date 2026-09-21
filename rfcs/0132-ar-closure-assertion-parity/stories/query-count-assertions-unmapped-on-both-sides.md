@@ -1,6 +1,6 @@
 ---
 title: "assert_no_queries / assert_queries_count are unmapped, so the kind gate cannot tell them apart"
-status: in-progress
+status: done
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
