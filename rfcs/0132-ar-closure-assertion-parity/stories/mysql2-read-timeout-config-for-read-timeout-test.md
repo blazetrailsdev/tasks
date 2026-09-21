@@ -1,6 +1,6 @@
 ---
 title: "mysql2-read-timeout-config-for-read-timeout-test"
-status: draft
+status: done
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#7940
 claim: null
 assignee: null
 blocked-by: null

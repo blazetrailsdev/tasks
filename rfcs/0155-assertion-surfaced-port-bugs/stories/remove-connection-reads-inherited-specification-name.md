@@ -1,6 +1,6 @@
 ---
 title: "remove-connection-reads-inherited-specification-name"
-status: in-progress
+status: done
 updated: 2026-09-21
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
