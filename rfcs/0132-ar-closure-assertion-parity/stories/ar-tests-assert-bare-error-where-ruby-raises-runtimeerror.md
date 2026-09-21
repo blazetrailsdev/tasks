@@ -1,14 +1,14 @@
 ---
 title: "AR tests assert a bare Error where Ruby raises RuntimeError/StandardError"
-status: draft
-updated: 2026-09-20
+status: ready
+updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

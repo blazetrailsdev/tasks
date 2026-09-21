@@ -1,6 +1,6 @@
 ---
 title: "x"
-status: draft
+status: closed
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -13,5 +13,5 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "created by mistake: stray tasks-new invocation with an empty body; no work"
 ---

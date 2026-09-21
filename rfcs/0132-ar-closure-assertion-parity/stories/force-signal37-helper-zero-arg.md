@@ -1,18 +1,18 @@
 ---
 title: "force_signal37_to_load_all_clients_of_firm port takes a fixture-accessor parameter Rails has no counterpart for"
-status: draft
-updated: 2026-09-20
+status: blocked
+updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Needs has-many-associations-test-rails-member-order first (merges the 19 fixture-partitioned describes so one zero-arg helper can close over a single companies accessor). CLI has no set-deps verb; unblock when that story lands."
 closed-reason: null
 ---
 

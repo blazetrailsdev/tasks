@@ -1,7 +1,7 @@
 ---
 title: "assertions-activemodel-attribute-registration"
-status: draft
-updated: 2026-09-20
+status: closed
+updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#7913 (855c51d131, merged): attribute-registration.test.ts rewritten onto Rails' class_with/default_attributes_for helpers; origin/main has 0 'class Person extends Model' in it (was ad-hoc), file 589->329 LOC, and attribute-registration.trails.test.ts now exists holding the TS-only extras."
 ---
 
 ## Context
