@@ -2,7 +2,7 @@
 title: "Retire syncAssociationInstance's singular arm; association(name) memoizes only"
 status: draft
 updated: 2026-09-15
-rfc: "0075-collection-association-target-fidelity"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
