@@ -1,7 +1,7 @@
 ---
 title: "has-many-associations-test-fixture-accessor-convergence"
-status: draft
-updated: 2026-09-21
+status: in-progress
+updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7948
+claim: "2026-09-22T02:21:59Z"
+assignee: "has-many-associations-test-fixture-accessor-convergence"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "x"
 status: closed
-updated: 2026-09-21
+updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
@@ -13,5 +13,5 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "created by mistake (empty duplicate from a mistyped tasks new)"
+closed-reason: "created by mistake (stray tasks new invocation); no work"
 ---
