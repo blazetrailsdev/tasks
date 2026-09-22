@@ -2,7 +2,7 @@
 title: "CompositePrimaryKeyTest: non-transactional, per-test lease/create/drop as Rails"
 status: draft
 updated: 2026-09-22
-rfc: "0132-ar-closure-assertion-parity"
+rfc: "0152-pool-checkout-async-convergence"
 cluster: null
 packages: []
 deps: []
