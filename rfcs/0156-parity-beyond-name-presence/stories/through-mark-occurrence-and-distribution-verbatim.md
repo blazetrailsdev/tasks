@@ -2,7 +2,7 @@
 title: "mark_occurrence and distribution port verbatim, without the inverted guard or the bucket array"
 status: ready
 updated: 2026-09-15
-rfc: "0075-collection-association-target-fidelity"
+rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
 deps: []
