@@ -5,9 +5,9 @@ updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
-deps: []
+deps: ["activesupport-time-sec-fraction-rational"]
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: null
 pr: null
 claim: null
