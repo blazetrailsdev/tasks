@@ -1,6 +1,6 @@
 ---
 title: "has-many-associations-test-rails-member-order"
-status: claimed
+status: ready
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 8
 pr: null
-claim: "2026-09-22T17:58:00Z"
-assignee: "collection-proxy-extend-super-chain"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

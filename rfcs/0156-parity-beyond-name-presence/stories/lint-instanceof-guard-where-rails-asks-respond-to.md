@@ -1,6 +1,6 @@
 ---
 title: "Flag a closed instanceof list in a body whose Rails counterpart asks respond_to? or acts_like?"
-status: ready
+status: in-progress
 updated: 2026-09-22
 rfc: "0156-parity-beyond-name-presence"
 cluster: "lints"
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7979
+claim: "2026-09-22T18:19:58Z"
+assignee: "lint-instanceof-guard-where-rails-asks-respond-to"
 blocked-by: null
 closed-reason: null
 ---

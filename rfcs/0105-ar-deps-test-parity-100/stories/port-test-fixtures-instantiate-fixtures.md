@@ -1,6 +1,6 @@
 ---
 title: "port-test-fixtures-instantiate-fixtures"
-status: draft
+status: blocked
 updated: 2026-09-22
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-22T18:17:07Z"
+assignee: "port-test-fixtures-instantiate-fixtures"
+blocked-by: "needs trails#7976 (unmerged): setupFixtures, which this story adds instantiate_fixtures to, only exists on that branch"
 closed-reason: null
 ---
 

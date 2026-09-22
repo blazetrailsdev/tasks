@@ -1,6 +1,6 @@
 ---
 title: "schema-bracket-and-pre-7-1-migration-compatibility"
-status: draft
+status: ready
 updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

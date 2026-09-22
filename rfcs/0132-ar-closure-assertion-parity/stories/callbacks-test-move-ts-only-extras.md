@@ -1,6 +1,6 @@
 ---
 title: "Move callbacks.test.ts TS-only extras to callbacks.trails.test.ts"
-status: claimed
+status: in-progress
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 7
-pr: null
-claim: "2026-09-22T17:58:00Z"
-assignee: "collection-proxy-extend-super-chain"
+pr: trails#7980
+claim: "2026-09-22T18:34:40Z"
+assignee: "callbacks-test-move-ts-only-extras"
 blocked-by: null
 closed-reason: null
 ---

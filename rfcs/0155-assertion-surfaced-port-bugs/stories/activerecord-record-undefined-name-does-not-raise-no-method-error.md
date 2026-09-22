@@ -1,6 +1,6 @@
 ---
 title: "activerecord-record-undefined-name-does-not-raise-no-method-error"
-status: draft
+status: ready
 updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

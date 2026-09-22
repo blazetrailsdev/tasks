@@ -1,6 +1,6 @@
 ---
 title: "Retire the injected EncryptionHooks interface and route model/record calls through EncryptableRecord"
-status: ready
+status: in-progress
 updated: 2026-09-22
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#7977
+claim: "2026-09-22T18:13:16Z"
+assignee: "relocate-encryption-hooks-onto-encryptable-record"
 blocked-by: null
 closed-reason: null
 ---

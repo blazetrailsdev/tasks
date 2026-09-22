@@ -1,6 +1,6 @@
 ---
 title: "collection-proxy-extend-super-chain"
-status: claimed
+status: in-progress
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: trails#7978
 claim: "2026-09-22T17:58:00Z"
 assignee: "collection-proxy-extend-super-chain"
 blocked-by: null
