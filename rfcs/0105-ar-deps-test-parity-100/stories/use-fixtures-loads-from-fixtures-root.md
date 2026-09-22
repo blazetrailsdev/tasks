@@ -1,6 +1,6 @@
 ---
 title: "useFixtures by-name sets load from FIXTURES_ROOT with Rails set names"
-status: claimed
+status: in-progress
 updated: 2026-09-22
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#7985
 claim: "2026-09-22T18:17:07Z"
 assignee: "port-test-fixtures-instantiate-fixtures"
 blocked-by: null

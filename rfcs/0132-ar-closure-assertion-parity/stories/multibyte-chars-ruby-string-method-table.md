@@ -1,6 +1,6 @@
 ---
 title: "multibyte-chars-ruby-string-method-table"
-status: claimed
+status: in-progress
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 6
-pr: null
+pr: trails#7984
 claim: "2026-09-22T19:37:47Z"
 assignee: "multibyte-chars-ruby-string-method-table"
 blocked-by: null

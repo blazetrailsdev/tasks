@@ -1,7 +1,7 @@
 ---
 title: "Track: retire legacy Q-suffix predicate names"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-09-22
 rfc: "0082-ruby-ts-idiom-conversion-classes"
 cluster: null
 deps: []
@@ -12,7 +12,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by the rename-q-* stories and retire-q-suffix-crediting-in-extra-surface-and-naming under RFC 0153 (filed from trails#7981)"
 ---
 
 # Track: retire legacy Q-suffix predicate names

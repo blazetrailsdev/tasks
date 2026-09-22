@@ -1,7 +1,7 @@
 ---
 title: "Make isConnected the real port of connected?, not an alias of isConnectedQ"
-status: ready
-updated: 2026-07-27
+status: done
+updated: 2026-09-22
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#7981
 claim: null
 assignee: null
 blocked-by: null

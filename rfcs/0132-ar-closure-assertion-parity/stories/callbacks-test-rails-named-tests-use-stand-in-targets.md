@@ -1,6 +1,6 @@
 ---
 title: "callbacks.test.ts: converge Rails-named tests off bare stand-in targets onto Rails fixtures"
-status: in-progress
+status: done
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
