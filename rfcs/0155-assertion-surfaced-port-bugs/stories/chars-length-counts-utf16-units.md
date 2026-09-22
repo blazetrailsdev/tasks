@@ -2,7 +2,7 @@
 title: "Chars#length counts UTF-16 units where String#length counts characters"
 status: draft
 updated: 2026-09-22
-rfc: "0132-ar-closure-assertion-parity"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
