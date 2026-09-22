@@ -102,6 +102,7 @@ into a retired RFC in the first place.
 
 - `superseded-parent-with-open-story-is-unreported-drift`
 - `report-blocked-stories-whose-named-prs-have-merged`
+- `tasks-new-refuses-cross-rfc-slug-and-empty-body`
 
 ## Changelog
 
