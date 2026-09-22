@@ -2,7 +2,7 @@
 title: "Converge IsolatedExecutionState tests on Enumerator#next"
 status: ready
 updated: 2026-09-22
-rfc: "0147-execution-context-at-thread-spawn-sites"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
