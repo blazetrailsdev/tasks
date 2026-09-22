@@ -2,7 +2,7 @@
 title: "Converge PG lookup_cast_type_from_column's verify! guard out of build_fixture_sql"
 status: draft
 updated: 2026-09-16
-rfc: "0105-ar-deps-test-parity-100"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []

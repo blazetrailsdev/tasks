@@ -2,7 +2,7 @@
 title: "Time#next_weekday / #prev_weekday answer an Instant on the weekend branch"
 status: draft
 updated: 2026-09-16
-rfc: "0105-ar-deps-test-parity-100"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
