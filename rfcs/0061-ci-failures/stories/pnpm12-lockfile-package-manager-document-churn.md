@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 20
 priority: null
 pr: null
 claim: null
@@ -27,13 +27,16 @@ That prepended document is **environment-dependent, and `--frozen-lockfile`
 rewrites it in place** — it is not read-only. Measured on #7489:
 
 - Cold store (a fresh ephemeral runner container): pnpm records `pnpm` alone —
-  101 lines. This is the form committed in #7489.
+  101 lines.
 - Warm store where the bootstrap pulled the native binary: pnpm additionally
   records `@pnpm/exe` plus its eight per-platform entries — 120 lines.
 
-So `pnpm install --frozen-lockfile` on a developer machine silently adds 19
-lines, and a cold CI container silently removes them again. Confirmed by running
-frozen installs under both a cold `HOME` and the real one and diffing.
+The **warm** form is what is committed today (`pnpm-lock.yaml:15-25` carry the
+`@pnpm/exe.*@12.3.4` entries; the document marker sits at `:101`), so the churn
+now runs the other direction from #7489: a frozen install in a cold container
+silently removes those 19 lines, and the next developer install adds them back.
+Confirmed by running frozen installs under both a cold `HOME` and the real one
+and diffing.
 
 This does not red CI today — `.github/workflows/ci.yml` runs
 `pnpm install --frozen-lockfile --prefer-offline` at ~28 sites and none of them
@@ -41,27 +44,45 @@ follow it with a dirty-tree check (`git diff --exit-code` / `git status
 --porcelain` appear nowhere in `.github/workflows/` or `.github/actions/`). It
 is a permanent source of spurious lockfile diffs and cross-branch conflicts.
 
-The knob is pnpm's `managePackageManagerVersions` setting. Turning it off stops
-the self-install, which stops the recording — but it is **not** a free win, and
-that is why this is its own story rather than part of #7489:
-`.github/actions/setup-pnpm/action.yml:76-79` asserts the self-hosted runner's
-`pnpm --version` exactly equals the `pnpm-version` input, and #7489 merges
-without an image rebuild _precisely because_ `managePackageManagerVersions`
-makes a pnpm 11.5.1 image self-install the pin and report `12.3.4`. Disabling it
-re-arms that lockstep hazard: the Dokku image would have to be rebuilt with
-`PNPM_VERSION=12.3.4` and `dokku ps:scale gh-runner` cycled _before_ the setting
-lands, with no green intermediate state.
+The knob is pnpm's `managePackageManagerVersions` setting: turning it off stops
+the self-install, which stops the recording.
+
+### The lockstep hazard that made this a two-sided decision is gone
+
+This story was originally filed as a choice between two end states because
+`.github/actions/setup-pnpm/action.yml:64-83` asserts the runner's preinstalled
+`pnpm --version` **exactly** equals the `pnpm-version` input, and #7489 merged
+without a runner-image rebuild _precisely because_
+`managePackageManagerVersions` makes a pnpm 11.5.1 image self-install the pin
+and report `12.3.4`. Disabling the setting would have re-armed that lockstep:
+the Dokku `gh-runner` image had to be rebuilt and cycled first, with no green
+intermediate state.
+
+**That path is retired.** The sibling story
+`rebuild-self-hosted-runner-image-for-pnpm-12` was closed
+"we don't use the local runner", and the assertion is guarded by
+`if: runner.environment != 'github-hosted'` (`action.yml:63`), so it does not
+run at all on a GitHub-hosted runner. `vars.RUNNER` is unset on the repository
+(`gh api repos/blazetrailsdev/trails/actions/variables` returns no variables),
+so every `runs-on: ${{ vars.RUNNER || 'ubuntu-latest' }}` job resolves to
+`ubuntu-latest` — verified on green main run 35733541427, where `Lint` and
+`Build & Type Check` both report `labels: ubuntu-latest` and a
+`GitHub Actions …` runner name. The self-hosted branch of `setup-pnpm` is dead
+code on today's configuration.
+
+So there is no image to rebuild and no sequencing to coordinate: the setting can
+be flipped on its own.
 
 ## Acceptance criteria
 
-- Decide between the two coherent end states and implement one:
-  - **Keep `managePackageManagerVersions` on** and make the recorded document
-    deterministic (or accept the churn explicitly, documented where a
-    contributor hits it).
-  - **Set `managePackageManagerVersions: false`** in `pnpm-workspace.yaml`,
-    coordinated with the runner-image rebuild described above, so the assertion
-    at `action.yml:76-79` keeps passing.
-- Whichever is chosen, `pnpm install --frozen-lockfile` must leave
-  `pnpm-lock.yaml` byte-identical on both a cold store and a warm one.
-- If the lockstep path is taken, the image rebuild and the merge are sequenced
-  in the PR body, since the assertion is exact-match in both directions.
+- `managePackageManagerVersions: false` in `pnpm-workspace.yaml`, and the
+  `packageManagerDependencies` document dropped from `pnpm-lock.yaml`.
+- `pnpm install --frozen-lockfile` leaves `pnpm-lock.yaml` byte-identical on
+  both a cold store and a warm one.
+- State in the PR body that the self-hosted assertion at
+  `.github/actions/setup-pnpm/action.yml:64-83` is inert on the current
+  configuration (`vars.RUNNER` unset ⇒ `ubuntu-latest` ⇒ `runner.environment ==
+'github-hosted'`), so no runner-image rebuild is sequenced with this change.
+  If `vars.RUNNER` is ever set back to `self-hosted`, the image must ship
+  pnpm 12.3.4 in the image itself — note that where a future reader of
+  `setup-pnpm` will find it.
