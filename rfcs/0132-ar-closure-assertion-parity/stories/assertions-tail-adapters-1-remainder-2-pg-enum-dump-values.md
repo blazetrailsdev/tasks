@@ -1,7 +1,7 @@
 ---
 title: "assertions-tail-adapters-1-remainder-2-pg-enum-dump-values"
-status: in-progress
-updated: 2026-09-21
+status: done
+updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Map AR helper.rb suite assertions in assertion-kinds.ts"
-status: ready
-updated: 2026-09-21
+status: in-progress
+updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7953
+claim: "2026-09-22T13:29:53Z"
+assignee: "assertions-activesupport-cache-xml-json-callbacks"
 blocked-by: null
 closed-reason: null
 ---

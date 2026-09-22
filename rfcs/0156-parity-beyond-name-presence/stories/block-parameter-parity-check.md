@@ -1,7 +1,7 @@
 ---
 title: "Flag a Ruby method that takes a block where the TS signature has no function parameter"
-status: draft
-updated: 2026-09-21
+status: ready
+updated: 2026-09-22
 rfc: "0156-parity-beyond-name-presence"
 cluster: "comparers"
 packages: []

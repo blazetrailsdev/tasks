@@ -1,7 +1,7 @@
 ---
 title: "sti-name-of-anonymous-class-should-be-nil"
-status: ready
-updated: 2026-09-20
+status: in-progress
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7952
+claim: "2026-09-22T13:26:14Z"
+assignee: "assertions-activesupport-multibyte-chars-port"
 blocked-by: null
 closed-reason: null
 ---

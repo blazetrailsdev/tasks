@@ -1,7 +1,7 @@
 ---
 title: "Converge & | + - [] record delegates onto Delegation members"
-status: ready
-updated: 2026-09-16
+status: in-progress
+updated: 2026-09-22
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: trails#7951
+claim: "2026-09-22T13:31:05Z"
+assignee: "converge-delegation-slice-onto-ruby-array-slice"
 blocked-by: null
 closed-reason: null
 ---

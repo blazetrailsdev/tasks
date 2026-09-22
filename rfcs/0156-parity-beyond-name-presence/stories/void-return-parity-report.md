@@ -1,7 +1,7 @@
 ---
 title: "Report a TS void return where the Rails body returns a value callers use"
-status: draft
-updated: 2026-09-21
+status: ready
+updated: 2026-09-22
 rfc: "0156-parity-beyond-name-presence"
 cluster: "comparers"
 packages: []

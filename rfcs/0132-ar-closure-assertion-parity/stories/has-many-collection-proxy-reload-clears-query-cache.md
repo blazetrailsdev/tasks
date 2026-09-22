@@ -1,6 +1,6 @@
 ---
 title: "has-many-collection-proxy-reload-clears-query-cache"
-status: draft
+status: done
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#7947
 claim: null
 assignee: null
 blocked-by: null

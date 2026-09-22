@@ -1,7 +1,7 @@
 ---
 title: "Flag a Rails body that dispatches through a dynamic setter where the port writes the attribute directly"
-status: draft
-updated: 2026-09-21
+status: ready
+updated: 2026-09-22
 rfc: "0156-parity-beyond-name-presence"
 cluster: "call-gate"
 packages: []

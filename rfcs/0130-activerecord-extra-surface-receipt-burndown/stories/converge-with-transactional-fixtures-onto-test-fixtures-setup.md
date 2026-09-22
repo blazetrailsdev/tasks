@@ -1,7 +1,7 @@
 ---
 title: "converge-with-transactional-fixtures-onto-test-fixtures-setup"
 status: ready
-updated: 2026-09-16
+updated: 2026-09-22
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
