@@ -2,7 +2,7 @@
 title: "adapter.test.ts leases its connection as adapter_test.rb does"
 status: draft
 updated: 2026-09-22
-rfc: "0132-ar-closure-assertion-parity"
+rfc: "0152-pool-checkout-async-convergence"
 cluster: null
 packages: []
 deps: []
