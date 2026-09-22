@@ -1,7 +1,7 @@
 ---
 title: "Guides Code Type Check failing on main @c5cd9e07"
-status: ready
-updated: 2026-09-11
+status: closed
+updated: 2026-09-22
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "stale point-in-time red; the named check passes on current main (run 35733541427, 688d9598)"
 ---
 
 ## Context

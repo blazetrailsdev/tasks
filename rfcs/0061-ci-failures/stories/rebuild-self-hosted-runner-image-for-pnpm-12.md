@@ -1,7 +1,7 @@
 ---
 title: "Rebuild the self-hosted runner image on pnpm 12.3.4"
-status: ready
-updated: 2026-09-16
+status: closed
+updated: 2026-09-22
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "we don't use the local runner"
 ---
 
 ## Context

@@ -1,14 +1,14 @@
 ---
 title: "Make the include/prepend/set_callback calls PERMANENT call receipts claim trails cannot make"
-status: draft
-updated: 2026-09-17
+status: ready
+updated: 2026-09-22
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 350
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

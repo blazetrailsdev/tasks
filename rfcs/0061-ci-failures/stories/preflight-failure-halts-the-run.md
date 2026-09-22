@@ -1,7 +1,7 @@
 ---
 title: "Preflight failure halts the whole CI run"
-status: ready
-updated: 2026-09-16
+status: done
+updated: 2026-09-22
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#7642
+claim: "2026-09-22T14:09:21Z"
+assignee: "preflight-failure-halts-the-run"
 blocked-by: null
 closed-reason: null
 ---

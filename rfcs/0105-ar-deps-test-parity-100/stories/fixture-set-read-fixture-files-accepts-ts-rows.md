@@ -1,7 +1,7 @@
 ---
 title: "Converge FixtureSet#read_fixture_files off the TS-rows path branch"
-status: blocked
-updated: 2026-09-21
+status: claimed
+updated: 2026-09-22
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: 35
 pr: null
 claim: "2026-09-21T21:24:45Z"
 assignee: "fixture-set-read-fixture-files-accepts-ts-rows"
-blocked-by: "Decision (user, 2026-09-21): NO yml conversion. Remaining path is option B — path = directory of TS fixture modules, loaded by async import(); that makes read_fixture_files (and FixtureSet construction, fixtures.rb:781-797 / fixtures.ts:251,312) async, which needs an explicit ratification of the async read before implementation."
+blocked-by: null
 closed-reason: null
 ---
 

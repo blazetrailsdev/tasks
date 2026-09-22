@@ -1,6 +1,6 @@
 ---
 title: "ThroughReflection delegators raise DelegationError on nil source_reflection"
-status: draft
+status: ready
 updated: 2026-09-22
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

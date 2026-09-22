@@ -1,7 +1,7 @@
 ---
 title: "Converge activemodel + arel naming residue and enroll both"
-status: draft
-updated: 2026-09-16
+status: done
+updated: 2026-09-22
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: ["activemodel", "arel"]
@@ -9,9 +9,9 @@ deps: ["naming-receipt-enrollment-gate"]
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7956
+claim: "2026-09-22T14:18:16Z"
+assignee: "naming-burndown-activemodel-arel"
 blocked-by: null
 closed-reason: null
 ---
