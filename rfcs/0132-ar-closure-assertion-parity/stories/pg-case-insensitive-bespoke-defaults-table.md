@@ -2,7 +2,7 @@
 title: "PostgreSQL case-insensitive test builds a bespoke table instead of canonical defaults"
 status: draft
 updated: 2026-09-20
-rfc: "0105-ar-deps-test-parity-100"
+rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
 deps: []
