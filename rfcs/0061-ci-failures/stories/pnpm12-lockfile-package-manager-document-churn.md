@@ -1,5 +1,5 @@
 ---
-title: "pnpm12-lockfile-package-manager-document-churn"
+title: "Stop pnpm 12 rewriting the packageManagerDependencies lockfile document"
 status: ready
 updated: 2026-09-16
 rfc: "0061-ci-failures"
@@ -31,7 +31,7 @@ rewrites it in place** — it is not read-only. Measured on #7489:
 - Warm store where the bootstrap pulled the native binary: pnpm additionally
   records `@pnpm/exe` plus its eight per-platform entries — 120 lines.
 
-The **warm** form is what is committed today (`pnpm-lock.yaml:15-25` carry the
+The **warm** form is what is committed today (`pnpm-lock.yaml:15-99` carry the
 `@pnpm/exe.*@12.3.4` entries; the document marker sits at `:101`), so the churn
 now runs the other direction from #7489: a frozen install in a cold container
 silently removes those 19 lines, and the next developer install adds them back.
@@ -59,8 +59,8 @@ the Dokku `gh-runner` image had to be rebuilt and cycled first, with no green
 intermediate state.
 
 **That path is retired.** The sibling story
-`rebuild-self-hosted-runner-image-for-pnpm-12` was closed
-"we don't use the local runner", and the assertion is guarded by
+`rebuild-self-hosted-runner-image-for-pnpm-12` is closed
+(`closed-reason: we don't use the local runner`), and the assertion is guarded by
 `if: runner.environment != 'github-hosted'` (`action.yml:63`), so it does not
 run at all on a GitHub-hosted runner. `vars.RUNNER` is unset on the repository
 (`gh api repos/blazetrailsdev/trails/actions/variables` returns no variables),
@@ -83,6 +83,37 @@ be flipped on its own.
   `.github/actions/setup-pnpm/action.yml:64-83` is inert on the current
   configuration (`vars.RUNNER` unset ⇒ `ubuntu-latest` ⇒ `runner.environment ==
 'github-hosted'`), so no runner-image rebuild is sequenced with this change.
-  If `vars.RUNNER` is ever set back to `self-hosted`, the image must ship
-  pnpm 12.3.4 in the image itself — note that where a future reader of
-  `setup-pnpm` will find it.
+- A comment on the self-hosted guard (`action.yml:63`) saying that
+  `managePackageManagerVersions` is off, so a runner image no longer
+  self-installs the pin: if `vars.RUNNER` is ever set back to `self-hosted`,
+  `infra/runner/Dockerfile` must ship pnpm 12.3.4 in the image itself.
+
+## Definition of done
+
+Accepting the churn (documenting it, or adding `pnpm-lock.yaml` to a
+`.gitattributes` merge strategy) does not close this story; the lockfile has to
+stop changing under `--frozen-lockfile`.
+
+## Verification
+
+From a clean trails checkout on the merge commit:
+
+```sh
+pnpm install --frozen-lockfile --prefer-offline && git diff --exit-code pnpm-lock.yaml
+HOME=$(mktemp -d) pnpm install --frozen-lockfile && git diff --exit-code pnpm-lock.yaml
+head -1 pnpm-lock.yaml   # `lockfileVersion: '9.0'`, not a `---` document marker
+```
+
+Both diffs exit 0 and `grep -c packageManagerDependencies pnpm-lock.yaml`
+prints `0`.
+
+## Notes
+
+- Hosted CI is unaffected by the flip: `setup-pnpm` installs pnpm on
+  GitHub-hosted runners through `pnpm/action-setup` with
+  `version: ${{ inputs.pnpm-version }}` (`action.yml:38-41`), not through pnpm's
+  self-install.
+- Contributors lose the auto-install of the `packageManager` pin: a machine
+  running a different pnpm no longer upgrades itself on `pnpm install`. Corepack
+  (`corepack enable`) honours the same `packageManager` field, so point the
+  contributing docs at it if they do not already.
