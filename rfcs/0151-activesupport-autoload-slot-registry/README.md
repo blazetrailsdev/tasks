@@ -110,8 +110,14 @@ autoloader", and this RFC does not reopen that.
 
 1. **Registry lookup cost on Arel's hot path.** Options: a map lookup per read; or
    `autoload` also exporting a live binding the reader imports, which is the slot's
-   speed with Rails' registration API. Recommendation: decide in Phase 2 with a
-   benchmark.
+   speed with Rails' registration API. **Resolved (trails#7988): a property read
+   on the `Autoload`-extended namespace object** — `new Nodes.Not(this)`, through
+   the accessor `autoload` installs, with no second live-binding export. The
+   committed `packages/arel/src/nodes/node.bench.ts` measured no regression versus
+   the slot's `_Not!` read (Node#not/#or/#and 1.45M → 1.50–1.70M hz;
+   Predications#eq 5.3–5.5M → 6.1M hz). Phase 3 copies this shape; the namespace
+   objects live in a zero-cycle module (`packages/arel/src/namespaces.ts`), and the
+   defining module seats each constant (`Nodes.Not = Not`).
 2. **Where does `autoload` register when Ruby's receiver is a module with no TS
    object** (e.g. `Arel::Nodes`)? Recommendation: the namespace objects trails already
    exports, falling back to a registry keyed by the Ruby constant path.
@@ -122,3 +128,4 @@ autoloader", and this RFC does not reopen that.
 ## Changelog
 
 - 2026-09-15: initial draft.
+- 2026-09-22: Open question 1 resolved by trails#7988 (property read on the namespace object).
