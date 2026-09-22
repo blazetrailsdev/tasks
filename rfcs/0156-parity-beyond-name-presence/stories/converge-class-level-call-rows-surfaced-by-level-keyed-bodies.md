@@ -1,6 +1,6 @@
 ---
 title: "converge-class-level-call-rows-surfaced-by-level-keyed-bodies"
-status: claimed
+status: done
 updated: 2026-09-22
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#7960
 claim: "2026-09-22T14:49:45Z"
 assignee: "block-parameter-parity-check"
 blocked-by: null

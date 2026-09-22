@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL case-insensitive test builds a bespoke table instead of canonical defaults"
-status: draft
-updated: 2026-09-20
+status: in-progress
+updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7968
+claim: "2026-09-22T15:53:00Z"
+assignee: "pg-case-insensitive-bespoke-defaults-table"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Converge FixtureSet#read_fixture_files off the TS-rows path branch"
-status: claimed
+status: done
 updated: 2026-09-22
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 35
-pr: null
+pr: trails#7958
 claim: "2026-09-21T21:24:45Z"
 assignee: "fixture-set-read-fixture-files-accepts-ts-rows"
 blocked-by: null

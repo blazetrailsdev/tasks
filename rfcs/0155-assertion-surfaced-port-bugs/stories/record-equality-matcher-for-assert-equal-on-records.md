@@ -1,7 +1,7 @@
 ---
 title: "Record equality by class+id for assert_equal/assert_includes conversions"
-status: draft
-updated: 2026-09-18
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

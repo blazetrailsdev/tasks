@@ -1,7 +1,7 @@
 ---
 title: "assert-queries-count-discards-block-result"
-status: draft
-updated: 2026-09-20
+status: closed
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#7947 (24d055495f): assertQueriesCount/assertNoQueries now return the block's result (testing/query-assertions.ts:46-50, fn: () => T | Promise<T> -> Promise<T>), per query_assertions.rb:18-31."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Thread.attr_accessor :active_support_execution_state is unscored by parity:api"
-status: draft
-updated: 2026-09-15
+status: ready
+updated: 2026-09-22
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
 packages: []

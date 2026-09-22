@@ -1,7 +1,7 @@
 ---
 title: "Time#next_weekday / #prev_weekday answer an Instant on the weekend branch"
-status: draft
-updated: 2026-09-16
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

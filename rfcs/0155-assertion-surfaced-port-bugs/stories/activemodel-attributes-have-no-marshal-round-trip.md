@@ -1,7 +1,7 @@
 ---
 title: "activemodel-attributes-have-no-marshal-round-trip"
-status: draft
-updated: 2026-09-20
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

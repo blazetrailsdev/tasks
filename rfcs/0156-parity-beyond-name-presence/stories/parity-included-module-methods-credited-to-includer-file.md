@@ -1,7 +1,7 @@
 ---
 title: "parity-included-module-methods-credited-to-includer-file"
-status: draft
-updated: 2026-09-17
+status: ready
+updated: 2026-09-22
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

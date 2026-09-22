@@ -1,6 +1,6 @@
 ---
 title: "Flag a Rails body that dispatches through a dynamic setter where the port writes the attribute directly"
-status: ready
+status: claimed
 updated: 2026-09-22
 rfc: "0156-parity-beyond-name-presence"
 cluster: "call-gate"
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-22T15:48:48Z"
+assignee: "expect-stdlib-mixin-surface-enumerable-comparable"
 blocked-by: null
 closed-reason: null
 ---

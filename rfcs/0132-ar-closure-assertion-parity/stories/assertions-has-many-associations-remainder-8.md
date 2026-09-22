@@ -1,6 +1,6 @@
 ---
 title: "assertions-has-many-associations-remainder-8"
-status: draft
+status: done
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7959
+claim: "2026-09-22T15:04:38Z"
+assignee: "assertions-has-many-associations-remainder-8"
 blocked-by: null
 closed-reason: null
 ---

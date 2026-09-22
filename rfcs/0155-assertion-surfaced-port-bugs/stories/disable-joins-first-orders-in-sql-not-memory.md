@@ -1,7 +1,7 @@
 ---
 title: "disable-joins-first-orders-in-sql-not-memory"
-status: draft
-updated: 2026-09-18
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

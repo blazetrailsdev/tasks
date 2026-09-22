@@ -1,7 +1,7 @@
 ---
 title: "date_time_test: exercise local-time and in_time_zone arms"
-status: draft
-updated: 2026-09-19
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

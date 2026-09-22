@@ -1,7 +1,7 @@
 ---
 title: "Converge IsolatedExecutionState tests on Enumerator#next"
-status: draft
-updated: 2026-09-15
+status: ready
+updated: 2026-09-22
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
 packages: []

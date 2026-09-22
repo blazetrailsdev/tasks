@@ -1,14 +1,14 @@
 ---
 title: "Transactional fixture load skips FixtureSet.reset_cache"
-status: draft
-updated: 2026-09-15
+status: ready
+updated: 2026-09-22
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

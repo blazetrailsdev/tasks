@@ -1,14 +1,14 @@
 ---
 title: "port-test-fixtures-transactional-setup"
-status: draft
-updated: 2026-09-16
+status: ready
+updated: 2026-09-22
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 45
 pr: null
 claim: null
 assignee: null

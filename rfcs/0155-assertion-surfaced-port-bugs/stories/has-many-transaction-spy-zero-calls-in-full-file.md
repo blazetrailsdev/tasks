@@ -1,7 +1,7 @@
 ---
 title: "Comment.transaction spy records 0 calls for association proxy transaction inside has_many test file"
-status: draft
-updated: 2026-09-18
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

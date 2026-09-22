@@ -1,7 +1,7 @@
 ---
 title: "WithAnnotationsTest: use canonical SpacePirate instead of bespoke SpacePirateAnnotated"
-status: draft
-updated: 2026-09-16
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

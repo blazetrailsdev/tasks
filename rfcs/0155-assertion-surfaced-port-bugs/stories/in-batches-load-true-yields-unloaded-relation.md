@@ -1,7 +1,7 @@
 ---
 title: "in-batches-load-true-yields-unloaded-relation"
-status: draft
-updated: 2026-09-18
+status: closed
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: trails#7896 (e40d56f3b9) converged 'in batches should be loaded' onto Rails' block form (batches.test.ts:539-543, asserts relation.isLoaded, not skipped). The iterator form is unloaded by design, since BatchEnumerator#each passes load: false as Rails does (batch_enumerator.rb:109)."
 ---
 
 ## Context

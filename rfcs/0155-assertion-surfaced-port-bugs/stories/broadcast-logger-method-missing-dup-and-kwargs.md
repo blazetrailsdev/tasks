@@ -1,6 +1,6 @@
 ---
 title: "broadcast-logger-method-missing-dup-and-kwargs"
-status: draft
+status: ready
 updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

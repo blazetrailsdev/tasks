@@ -1,7 +1,7 @@
 ---
 title: "update_columns serializes the raw value like Rails"
-status: draft
-updated: 2026-09-17
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

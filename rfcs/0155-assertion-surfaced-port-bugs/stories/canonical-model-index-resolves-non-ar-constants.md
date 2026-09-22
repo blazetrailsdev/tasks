@@ -1,7 +1,7 @@
 ---
 title: "Canonical model index resolves non-AR constants for klass resolution"
-status: draft
-updated: 2026-09-21
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

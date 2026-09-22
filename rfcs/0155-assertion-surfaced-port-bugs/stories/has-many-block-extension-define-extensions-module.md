@@ -1,6 +1,6 @@
 ---
 title: "has_many block extension builds a real extension module (define_extensions)"
-status: draft
+status: ready
 updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

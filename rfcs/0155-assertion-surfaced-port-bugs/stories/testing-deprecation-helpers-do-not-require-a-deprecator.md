@@ -1,7 +1,7 @@
 ---
 title: "testing-deprecation-helpers-do-not-require-a-deprecator"
-status: draft
-updated: 2026-09-20
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

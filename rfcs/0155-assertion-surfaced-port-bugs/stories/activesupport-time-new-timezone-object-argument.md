@@ -1,7 +1,7 @@
 ---
 title: "Time.new(..., zone) does not accept a TimeZone object (advance, change preserves fractional seconds)"
-status: draft
-updated: 2026-09-19
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

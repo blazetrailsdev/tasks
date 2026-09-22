@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 quote_string inlines SQLite3::Database.quote"
-status: draft
+status: in-progress
 updated: 2026-09-22
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7966
+claim: "2026-09-22T15:32:36Z"
+assignee: "sqlite3-quote-string-inlines-sqlite3-database-quote"
 blocked-by: null
 closed-reason: null
 ---

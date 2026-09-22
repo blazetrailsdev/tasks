@@ -1,14 +1,14 @@
 ---
 title: "Converge or relabel sync/async shim receipts no ratified section covers"
-status: draft
-updated: 2026-09-17
+status: ready
+updated: 2026-09-22
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "converge-date-and-time-calculations-to-this-typed-mixin"
-status: draft
-updated: 2026-09-16
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

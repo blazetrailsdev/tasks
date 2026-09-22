@@ -1,7 +1,7 @@
 ---
 title: "DecimalType#cast answers BigDecimal(1) for a boolean where Rails' to_s fallback answers 0"
-status: draft
-updated: 2026-09-16
+status: closed
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise wrong: Rails' Decimal#cast goes through Helpers::Numeric#cast (vendor/rails/activemodel/lib/active_model/type/helpers/numeric.rb:15-28), which maps true->1 and false->0 before cast_value, so Rails answers BigDecimal(1) for cast(true). trails already matches, pinned in decimal.trails.test.ts:112-115. The story's MRI check exercised cast_value(true.to_s) directly and skipped the Numeric prelude."
 ---
 
 ## Context

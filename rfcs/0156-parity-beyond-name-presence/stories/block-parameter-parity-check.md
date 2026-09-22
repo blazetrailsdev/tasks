@@ -1,6 +1,6 @@
 ---
 title: "Flag a Ruby method that takes a block where the TS signature has no function parameter"
-status: claimed
+status: done
 updated: 2026-09-22
 rfc: "0156-parity-beyond-name-presence"
 cluster: "comparers"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: trails#7960
 claim: "2026-09-22T14:49:45Z"
 assignee: "block-parameter-parity-check"
 blocked-by: null

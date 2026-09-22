@@ -1,7 +1,7 @@
 ---
 title: "pg uuid.test.ts setup mirrors Rails create_table; move trails-only tests out"
-status: draft
-updated: 2026-09-21
+status: in-progress
+updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7962
+claim: "2026-09-22T15:20:51Z"
+assignee: "pg-uuid-test-setup-mirrors-rails"
 blocked-by: null
 closed-reason: null
 ---

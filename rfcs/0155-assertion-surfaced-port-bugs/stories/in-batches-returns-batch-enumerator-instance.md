@@ -1,7 +1,7 @@
 ---
 title: "in-batches-returns-batch-enumerator-instance"
-status: draft
-updated: 2026-09-18
+status: closed
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: inBatches without a block returns BatchEnumerator (relation/batches.ts:111,139; class at relation/batches/batch-enumerator.ts:13) and batches.test.ts:388 asserts toBeInstanceOf(BatchEnumerator) since trails#7896 (e40d56f3b9)."
 ---
 
 ## Context

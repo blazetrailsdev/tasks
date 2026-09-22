@@ -1,7 +1,7 @@
 ---
 title: "hash_with_indifferent_access_test: Enumerator and YAML dump remainder"
-status: draft
-updated: 2026-09-16
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

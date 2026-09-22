@@ -1,7 +1,7 @@
 ---
 title: "QueryAttribute accepts a nil name as Rails does"
-status: draft
-updated: 2026-09-18
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

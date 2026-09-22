@@ -1,7 +1,7 @@
 ---
 title: "Time#sec_fraction returns a number; Rails returns a Rational"
-status: draft
-updated: 2026-09-19
+status: ready
+updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
