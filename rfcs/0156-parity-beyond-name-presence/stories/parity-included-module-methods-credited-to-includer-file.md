@@ -2,7 +2,7 @@
 title: "parity-included-module-methods-credited-to-includer-file"
 status: draft
 updated: 2026-09-17
-rfc: "0105-ar-deps-test-parity-100"
+rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
 deps: []
