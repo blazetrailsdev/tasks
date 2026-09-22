@@ -2,7 +2,7 @@
 title: "Flip the assertion-mismatch gate from ratchet to hard zero"
 status: blocked
 updated: 2026-09-21
-rfc: "0132-ar-closure-assertion-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: enforcement
 packages:
   - "activerecord"
