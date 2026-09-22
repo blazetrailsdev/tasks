@@ -12,7 +12,7 @@ priority: 35
 pr: null
 claim: "2026-09-21T21:24:45Z"
 assignee: "fixture-set-read-fixture-files-accepts-ts-rows"
-blocked-by: "FixtureSet#initialize/read_fixture_files are synchronous (fixtures.rb:781-797, ported sync in fixtures.ts:251,312). Option B (path = dir of TS fixture modules) needs dynamic import(), which is async — no sync ESM import without node:module createRequire (forbidden). Option A (every canonical set via .yml/FixtureSet::File) needs converting all 133 test-helpers/fixtures/*.ts modules to .yml (far over the 700 LOC ceiling, and loses RegistryData typing used by fixtures() stores); Unit Tests CI has no vendor/rails so vendor yml can't be pointed at. Tableless {table,data} useFixtures entries also have no file. Needs a decision: yml conversion campaign split per-fixture, or ratify async read."
+blocked-by: "Decision (user, 2026-09-21): NO yml conversion. Remaining path is option B — path = directory of TS fixture modules, loaded by async import(); that makes read_fixture_files (and FixtureSet construction, fixtures.rb:781-797 / fixtures.ts:251,312) async, which needs an explicit ratification of the async read before implementation."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "assertions-tail-adapters-1-remainder-2-pg-enum-dump-values"
-status: claimed
+status: in-progress
 updated: 2026-09-21
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#7941
 claim: "2026-09-21T21:25:16Z"
 assignee: "assertions-tail-adapters-1-remainder-2-pg-enum-dump-values"
 blocked-by: null
