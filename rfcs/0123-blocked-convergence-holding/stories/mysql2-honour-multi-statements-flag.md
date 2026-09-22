@@ -2,7 +2,7 @@
 title: "mysql2-honour-multi-statements-flag"
 status: blocked
 updated: 2026-09-15
-rfc: "0105-ar-deps-test-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
