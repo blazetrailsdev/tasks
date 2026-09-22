@@ -42,7 +42,8 @@ Also still open from the parent story:
 
 - `core_ext/string_ext_test.rb`: `core ext adds mb chars` (`:792`),
   `string should recognize utf8 strings` (`:796-801`), `truncates bytes preserves encoding`
-  (`:379-386`), `string to datetime` (`:759-765`).
+  (`:379-386`). (`string to datetime`, `:759-765`, needs `DateTime.parse` to answer the
+  package's own `DateTime`; it belongs to `date-parse-returns-temporal-not-the-owned-date-class`.)
 - `safe_buffer_test.rb` `Should not fail if the returned object is not a string` (1 kind row).
 - MultibyteCharsTest `should concatenate` / `concatenation should return a proxy class instance`
   / `concatenate should return proxy instance` (Ruby `+` / `<<`).
@@ -54,5 +55,7 @@ Also still open from the parent story:
 - `Chars#method_missing` / `respond_to_missing?` reach Ruby String methods by their Ruby
   (camelCased) names, with bang forms mutating `wrappedString`.
 - Every `BLOCKED: multibyte-chars-ruby-string-method-table` test is unskipped and passes.
-- `core_ext/string_ext_test.rb` and `safe_buffer_test.rb` report 0 count/kind/value mismatches.
+- `core_ext/string_ext_test.rb` (except `string to datetime`, which
+  `date-parse-returns-temporal-not-the-owned-date-class` owns) and `safe_buffer_test.rb` report 0
+  count/kind/value mismatches.
 - The `multibyte_proxy_test.rb` unported row is converged or its reason corrected.
