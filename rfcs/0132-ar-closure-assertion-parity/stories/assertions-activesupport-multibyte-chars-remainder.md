@@ -2,7 +2,7 @@
 title: "assertions-activesupport-multibyte-chars-remainder"
 status: draft
 updated: 2026-09-22
-rfc: "0155-assertion-surfaced-port-bugs"
+rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
 deps: []
