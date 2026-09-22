@@ -1,6 +1,6 @@
 ---
 title: "useFixtures by-name sets load from FIXTURES_ROOT with Rails set names"
-status: blocked
+status: claimed
 updated: 2026-09-22
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-22T18:17:07Z"
 assignee: "port-test-fixtures-instantiate-fixtures"
-blocked-by: "needs trails#7976 (unmerged): that PR rewrites the same useFixtures fixturesDirectory/createFixtures lines (use-fixtures/registry); landing this from main would conflict"
+blocked-by: null
 closed-reason: null
 ---
 

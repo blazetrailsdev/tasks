@@ -1,6 +1,6 @@
 ---
 title: "Flag a closed instanceof list in a body whose Rails counterpart asks respond_to? or acts_like?"
-status: in-progress
+status: done
 updated: 2026-09-22
 rfc: "0156-parity-beyond-name-presence"
 cluster: "lints"

@@ -1,6 +1,6 @@
 ---
 title: "callbacks.test.ts: converge Rails-named tests off bare stand-in targets onto Rails fixtures"
-status: draft
+status: in-progress
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7982
+claim: "2026-09-22T19:49:27Z"
+assignee: "callbacks-test-rails-named-tests-use-stand-in-targets"
 blocked-by: null
 closed-reason: null
 ---

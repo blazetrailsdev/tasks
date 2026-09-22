@@ -1,6 +1,6 @@
 ---
 title: "first_or_create block pre-insert count assertion across adapters"
-status: in-progress
+status: done
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null

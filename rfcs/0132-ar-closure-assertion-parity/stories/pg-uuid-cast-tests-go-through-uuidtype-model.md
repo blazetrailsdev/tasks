@@ -1,6 +1,6 @@
 ---
 title: "pg uuid.test.ts cast tests go through UUIDType like uuid_test.rb"
-status: in-progress
+status: done
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null

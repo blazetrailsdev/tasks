@@ -1,6 +1,6 @@
 ---
 title: "Lint JSON.stringify, String() and constructor.name inside error messages and inspect bodies"
-status: in-progress
+status: done
 updated: 2026-09-22
 rfc: "0156-parity-beyond-name-presence"
 cluster: "lints"
