@@ -2,7 +2,7 @@
 title: "Port Rails' Association#find_target body into the base findTarget stub"
 status: blocked
 updated: 2026-08-05
-rfc: "0075-collection-association-target-fidelity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages:
   - activerecord
