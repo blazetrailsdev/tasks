@@ -1,7 +1,7 @@
 ---
 title: "force_signal37_to_load_all_clients_of_firm port takes a fixture-accessor parameter Rails has no counterpart for"
-status: blocked
-updated: 2026-09-21
+status: closed
+updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: 8
 pr: null
 claim: null
 assignee: null
-blocked-by: "Needs has-many-associations-test-rails-member-order first (merges the 19 fixture-partitioned describes so one zero-arg helper can close over a single companies accessor). CLI has no set-deps verb; unblock when that story lands."
-closed-reason: null
+blocked-by: null
+closed-reason: "Landed on trails origin/main via #7983 (member-order merge) / #7986: has-many-associations.test.ts defines one zero-arg forceSignal37ToLoadAllClientsOfFirm() after the tests (line ~4350, body companies('first_firm').clientsOfFirm.loadTarget(), mirroring rb:3249-3251), and every call site calls it with no arguments. Blocker has-many-associations-test-rails-member-order is done."
 ---
 
 ## Context

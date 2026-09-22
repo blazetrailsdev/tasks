@@ -1,9 +1,9 @@
 ---
 rfc: "0132-ar-closure-assertion-parity"
 title: "ActiveRecord closure assertion parity to zero"
-status: active
+status: closed
 created: 2026-08-31
-updated: 2026-09-18
+updated: 2026-09-22
 owner: "@deanmarano"
 packages:
   - activerecord

@@ -1,9 +1,9 @@
 ---
 rfc: "0105-ar-deps-test-parity-100"
 title: "ActiveRecord + dependencies to 100% on the test-compare gate"
-status: active
+status: closed
 created: 2026-08-13
-updated: 2026-08-31
+updated: 2026-09-22
 owner: "@deanmarano"
 packages:
   - activerecord

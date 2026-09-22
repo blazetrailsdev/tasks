@@ -1,6 +1,6 @@
 ---
 title: "Converge fixtures reload-accessor and inheritance new-with-ar-base assertion residue"
-status: draft
+status: closed
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Sunset of 0132 (assertion axis wound down). Inheritance half is a duplicate: the 'ActiveRecord::Base is an abstract class…' message is owned by 0155 ar-base-abstract-class-message-lacks-module-path (ready; origin/main base.ts:758 still renders ${this.name}). Fixtures half (fixtures_test.rb:786-792 assert_called on @loaded_fixtures find vs trails fixtures.test.ts:599 updateAll body) is a single test-side kind row; test-side assertion work has no owning RFC after 0132 — re-file under a successor assertion RFC if one opens."
 ---
 
 ## Context

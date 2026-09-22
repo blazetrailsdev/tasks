@@ -1,6 +1,6 @@
 ---
 title: "callbacks-using-object-test-uses-rails-fixture-classes"
-status: draft
+status: closed
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Sunset of 0132. trails#7982 converged callbacks_test.rb's assertions; UsingObjectTest still builds targets via local usingObjectBefore/customScopeObject closures (callbacks.test.ts:1002-1047) instead of Rails' CallbackObject/UsingObject* fixture classes (callbacks_test.rb:707-776), but that is body shape with no parity:test or assertion-counter row. No active RFC owns test-side body drift after 0132; re-file under a successor assertion RFC if one opens."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "Move has-many-associations.test.ts TS-only extras to the trails file"
-status: draft
+status: closed
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Sunset of 0132. After #7983/#7986 the seven TS-only tests are still in has-many-associations.test.ts (lines ~1643, 1656, 1892, 2577, 2936, 2977, 4166 on origin/main) and count as parity:test Extra, which does not move the name-gate percent or the assertion counters. It is test-side hygiene (plus bespoke models against the canonical-schema rule) that no active RFC charters after 0132; re-file under a successor test-hygiene/assertion RFC if one opens."
 ---
 
 ## Context
