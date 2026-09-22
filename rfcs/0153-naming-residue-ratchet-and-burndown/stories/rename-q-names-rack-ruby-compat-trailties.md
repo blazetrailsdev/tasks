@@ -23,10 +23,10 @@ camel / the quoted literal `"x?"` where a sibling collides), never `xQ`. The
 drop-q-predicate-suffix PR removed the `Q` candidate from `rubyMethodToTs`
 (`scripts/parity/conventions.ts`).
 
-A bare predicate may also port as `hasX` where it reads as possession
-(`active_connections?` → `hasActiveConnections`, `key?` → `hasKey`): trails#7981
-added `has*` as a candidate after `is*` and the camel form, so either scores.
-`is*` stays the default in the tables below.
+`has*` is a candidate only for a bare predicate that Rails itself aliases to a
+`has_*?` method (trails#7981's `HAS_PREDICATE_ALIASES`: `key?` → `hasKey`,
+`value?` → `hasValue`). Everything else takes the `is*` / camel / literal
+target in the tables below.
 
 This slice collects the small remainders in rack, ruby-compat and trailties:
 
