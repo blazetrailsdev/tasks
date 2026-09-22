@@ -1,6 +1,6 @@
 ---
 title: "useFixtures by-name sets load from FIXTURES_ROOT with Rails set names"
-status: in-progress
+status: done
 updated: 2026-09-22
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null

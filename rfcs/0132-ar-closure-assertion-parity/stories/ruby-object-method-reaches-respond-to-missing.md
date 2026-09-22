@@ -1,6 +1,6 @@
 ---
 title: "ruby-object-method-reaches-respond-to-missing"
-status: draft
+status: in-progress
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7984
+claim: "2026-09-22T21:10:06Z"
+assignee: "ruby-object-method-reaches-respond-to-missing"
 blocked-by: null
 closed-reason: null
 ---
