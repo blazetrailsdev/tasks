@@ -2,7 +2,7 @@
 title: "CollectionAssociation#reader stale arm defers load_target instead of calling reload"
 status: draft
 updated: 2026-09-15
-rfc: "0075-collection-association-target-fidelity"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
