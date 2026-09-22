@@ -1,6 +1,6 @@
 ---
 title: "pg uuid.test.ts cast tests go through UUIDType like uuid_test.rb"
-status: ready
+status: claimed
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-22T17:58:00Z"
+assignee: "collection-proxy-extend-super-chain"
 blocked-by: null
 closed-reason: null
 ---

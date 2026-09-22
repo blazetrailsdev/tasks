@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Tests (1) failing on main @36bcd797"
-status: ready
+status: closed
 updated: 2026-09-22
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-22T17:05:57Z"
+assignee: "red-36bcd797"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: SecurePasswordTest authenticate_by wall-clock assertInDelta (0.72s > 0.5s tolerance on loaded runner); commit 36bcd797 touched only future-result/isolated-execution-state/mutex, test passes locally"
 ---
 
 ## Context

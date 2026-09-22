@@ -1,6 +1,6 @@
 ---
 title: "has_many_associations_test assertion parity: land WIP branch + remaining rows"
-status: in-progress
+status: done
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null

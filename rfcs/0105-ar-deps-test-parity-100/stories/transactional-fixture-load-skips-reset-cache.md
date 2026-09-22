@@ -1,6 +1,6 @@
 ---
 title: "Transactional fixture load skips FixtureSet.reset_cache"
-status: claimed
+status: in-progress
 updated: 2026-09-22
 rfc: "0105-ar-deps-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 40
-pr: null
+pr: trails#7976
 claim: "2026-09-22T16:47:52Z"
 assignee: "serializer-with-fallback-interpolated-title-extractor-mismatch"
 blocked-by: null
