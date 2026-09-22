@@ -2,7 +2,7 @@
 title: "assertions-uniqueness-singleton-and-forced-encoding-residue"
 status: blocked
 updated: 2026-09-22
-rfc: "0132-ar-closure-assertion-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
