@@ -2,7 +2,7 @@
 title: "Mass-assigned collection replace refuses three Rails call sites instead of performing them"
 status: ready
 updated: 2026-09-15
-rfc: "0075-collection-association-target-fidelity"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
