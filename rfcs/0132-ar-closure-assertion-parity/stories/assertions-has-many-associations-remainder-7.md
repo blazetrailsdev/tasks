@@ -24,7 +24,7 @@ Counters now 42 count / 114 kind mismatches. Measure: `pnpm parity:test -- --pac
 
 Remaining: set ids for association on new record (rb, `company.contract_ids = [...]` — find the trails ids writer spelling), reload with query cache / reloading unloaded with query cache (rb:932-970), counter-cache cluster (`assert_difference`), dependence for associations with hash condition (rb:1910), in-memory replacement tests, custom primary key on new record, restrict with exception/error, destroying cluster.
 
-Known blockers: rb:2506 transaction proxy test; rb:1764 (`has-many-delete-nullify-out-of-scope`); multi-extension tests (`has-many-extend-option-super-chain`).
+Known blockers: rb:2506 transaction proxy test; rb:1764 (`has-many-delete-nullify-out-of-scope`); multi-extension tests (`collection-proxy-extend-super-chain`).
 
 ## Acceptance criteria
 
