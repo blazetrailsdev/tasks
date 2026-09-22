@@ -2,7 +2,7 @@
 title: "FutureResult ports @mutex; drop the #scheduled Thread.pass stand-in"
 status: ready
 updated: 2026-09-16
-rfc: "0147-execution-context-at-thread-spawn-sites"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
