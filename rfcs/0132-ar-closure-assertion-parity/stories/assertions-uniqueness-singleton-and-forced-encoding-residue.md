@@ -1,7 +1,7 @@
 ---
 title: "assertions-uniqueness-singleton-and-forced-encoding-residue"
-status: ready
-updated: 2026-09-21
+status: blocked
+updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-22T01:48:02Z"
+assignee: "assertions-uniqueness-singleton-and-forced-encoding-residue"
+blocked-by: "Two JS language blockers, no settled idiom in repo: (1) singleton_class — JS has no per-object class; record.constructor is the only class seat, and a per-instance subclass makes UniquenessValidator#find_finder_class_for (uniqueness.rb:58-68, uniqueness.ts:139) pick it and add an STI type condition; Ruby's record.class skips the singleton, JS cannot. (2) \"Hello \\x93\\xfa\".b — JS strings carry no encoding tag, so force_encoding_if_needed's value.encoding != forced check (encryptor.rb:164-170) has no input; a binary string is indistinguishable from UTF-8 \\u0093\\u00fa, and the only binary carrier (Uint8Array) is stringified by ImmutableString#cast_value (activemodel type/immutable-string.ts:39). Needs a repo-wide singleton-class and binary-String convention first."
 closed-reason: null
 ---
 
