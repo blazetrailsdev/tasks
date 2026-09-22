@@ -23,6 +23,11 @@ camel / the quoted literal `"x?"` where a sibling collides), never `xQ`. The
 drop-q-predicate-suffix PR removed the `Q` candidate from `rubyMethodToTs`
 (`scripts/parity/conventions.ts`).
 
+`has*` is a candidate only for a bare predicate that Rails itself aliases to a
+`has_*?` method (trails#7981's `HAS_PREDICATE_ALIASES`: `key?` → `hasKey`,
+`value?` → `hasValue`). Everything else takes the `is*` / camel / literal
+target in the tables below.
+
 This slice is the remaining ActiveRecord `*Q` names:
 
 | trails                                                                                                                                                                                                | Rails / Ruby                                                                                                       | target                                                                                                                                                            |

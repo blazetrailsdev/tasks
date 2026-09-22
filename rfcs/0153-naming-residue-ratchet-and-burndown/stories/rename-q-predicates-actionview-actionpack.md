@@ -25,6 +25,11 @@ drop-q-predicate-suffix PR removed the `Q` candidate from `rubyMethodToTs`
 `actiondispatch` `route_set.rb` (`key?`, `route_defined?`) and `actionview`
 `base.rb` / `rendering.rb` (`xss_safe?`, `changed?`, `inherit_view_context_class?`).
 
+`has*` is a candidate only for a bare predicate that Rails itself aliases to a
+`has_*?` method (trails#7981's `HAS_PREDICATE_ALIASES`: `key?` → `hasKey`,
+`value?` → `hasValue`). Everything else takes the `is*` / camel / literal
+target in the tables below.
+
 This slice covers actionview and actionpack. Several members cross the package
 boundary (`inheritViewContextClassQ`, `supportsPathQ`), so the two go in one PR.
 

@@ -23,6 +23,13 @@ camel / the quoted literal `"x?"` where a sibling collides), never `xQ`. The
 drop-q-predicate-suffix PR removed the `Q` candidate from `rubyMethodToTs`
 (`scripts/parity/conventions.ts`).
 
+`has*` is a candidate only for a bare predicate that Rails itself aliases to a
+`has_*?` method (trails#7981's `HAS_PREDICATE_ALIASES`: `key?` → `hasKey`,
+`value?` → `hasValue`). Everything else takes the `is*` / camel / literal
+target in the tables below.
+
+`connectionClassQ` → `isConnectionClass` already landed in trails#7981.
+
 This slice is the ActiveRecord class-kind predicates:
 
 | trails (declaration)                                                                                                                                                     | Rails                                                                                        | target                     |
@@ -47,9 +54,6 @@ tests `primary-class.test.ts` (24), `pool-config.trails.test.ts` (4),
 `connection-handling.test.ts`. Tooling fixtures that name the old spelling:
 `scripts/api-compare/naming-taxonomy.test.ts`, `scripts/test-compare/normalize-skips.ts`.
 
-The drop-q-predicate-suffix PR added a call-gate row for `connection-handling.ts`
-`connected_to` → `connection_class?`, which cites this story.
-
 Prior art, which this story does NOT replace: `application-record-class-q-in-wrong-file`
 and `application-record-class-q-has-two-ports` (0023, draft) handle _placement_
 (`core.ts`) and the duplicate port. Their acceptance criteria still say
@@ -58,11 +62,9 @@ and `application-record-class-q-has-two-ports` (0023, draft) handle _placement_
 
 ## Acceptance criteria
 
-- `primaryClassQ`, `connectionClassQ` and `applicationRecordClassQ` no longer
+- `primaryClassQ` and `applicationRecordClassQ` no longer
   exist anywhere in `packages/*/src`. Each is renamed to its target above, and
   `Base` has a single `isPrimaryClass`.
-- The `connection-handling.ts` `connected_to` → `connection_class?` call-gate
-  row is deleted, with marks tightened via `parity:api:calls:tighten` (no reseed).
 - `pnpm parity:api` activerecord coverage does not drop and gets back the
   `primary_class?` pairs (`abstract/connection_handler.rb`,
   `migration/pending_migration_connection.rb`).

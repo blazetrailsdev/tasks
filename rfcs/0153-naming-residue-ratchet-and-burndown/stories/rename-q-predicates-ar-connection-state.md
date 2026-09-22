@@ -24,6 +24,13 @@ collides), never `xQ`. The drop-q-predicate-suffix PR removed the `Q` candidate
 from `rubyMethodToTs` (`scripts/parity/conventions.ts`), so these members no
 longer pair with their Rails methods.
 
+`has*` is a candidate only for a bare predicate that Rails itself aliases to a
+`has_*?` method (trails#7981's `HAS_PREDICATE_ALIASES`: `key?` → `hasKey`,
+`value?` → `hasValue`). Everything else takes the `is*` / camel / literal
+target in the tables below.
+
+`connectedQ` → `isConnected` already landed in trails#7981, so this story is left with `connectedToQ` and `activeConnectionsQ`.
+
 This slice is the ActiveRecord connection-state predicates:
 
 | trails (declaration)                                                                 | Rails                                                                    | target                |
@@ -54,21 +61,12 @@ Prior art: `rename-is-connected-q-onto-the-rails-connected-name` (0023, draft)
 covers the `connected?` rename under the old `isConnectedQ` name. It is
 superseded by this story; close it as a duplicate when this lands.
 
-Bookkeeping from the rule removal: the drop-q-predicate-suffix PR added
-call-gate rows for `query-cache.ts` `cache` / `uncached` → `connected?`, deleted
-the stale call-args row for `connection-handling.ts` `connected?`, and cited
-this story on both. The rename should make both `cache` / `uncached` rows stale.
-
 ## Acceptance criteria
 
-- `connectedQ`, `connectedToQ` and `activeConnectionsQ` no longer exist anywhere
+- `connectedToQ` and `activeConnectionsQ` no longer exist anywhere
   in `packages/*/src` (source or tests). Each is renamed to its target above,
   including the `declare static` re-exports on `Base`.
-- The `query-cache.ts` `cache` / `uncached` → `connected?` call-gate rows this
-  story is cited on are deleted. The `connected?` pair's call-args row comes
-  back only if the argument shape still differs, and then only with a reviewed
-  reason. Use `parity:api:calls:tighten` for any stale marks; do not reseed.
 - `pnpm parity:api` activerecord coverage does not drop and gets back the
-  `connected?` / `active_connections?` pairs (`base.rb`, `connection_handling.rb`,
+  `connected?` / `active_connections?` pairs (`base.rb`,
   `abstract/connection_handler.rb`).
 - `pnpm parity:api:calls`, `parity:api:calls:args` and `parity:api:extra:gate` are green.
