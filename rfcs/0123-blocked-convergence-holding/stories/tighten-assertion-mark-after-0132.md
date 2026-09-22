@@ -2,7 +2,7 @@
 title: "Lift the assertion-mark freeze and reseed once"
 status: blocked
 updated: 2026-09-19
-rfc: "0132-ar-closure-assertion-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: enforcement
 packages:
   - "activerecord"
