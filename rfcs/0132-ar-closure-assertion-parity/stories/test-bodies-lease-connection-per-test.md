@@ -2,7 +2,7 @@
 title: "Test bodies read a per-test leased connection, not Base.connection (reserved-word, schema-dumper, migration, primary-keys)"
 status: draft
 updated: 2026-09-22
-rfc: "0105-ar-deps-test-parity-100"
+rfc: "0132-ar-closure-assertion-parity"
 cluster: null
 packages: []
 deps: []
