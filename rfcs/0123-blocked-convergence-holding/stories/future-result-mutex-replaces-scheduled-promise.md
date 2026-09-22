@@ -1,7 +1,7 @@
 ---
 title: "FutureResult ports @mutex; drop the #scheduled Thread.pass stand-in"
-status: ready
-updated: 2026-09-16
+status: blocked
+updated: 2026-09-22
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-22T16:05:43Z"
+assignee: "converge-isolated-execution-state-tests-on-enumerator-next"
+blocked-by: "trails#7970 ports @mutex/try_lock and deletes #executing; #scheduled remains because connection_pool.rb:698 Thread.pass cannot suspend select()'s synchronous caller in JS — notification forwarding fails without it"
 closed-reason: null
 ---
 

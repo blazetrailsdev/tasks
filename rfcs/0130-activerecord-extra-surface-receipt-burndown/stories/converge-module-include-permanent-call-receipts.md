@@ -1,6 +1,6 @@
 ---
 title: "Make the include/prepend/set_callback calls PERMANENT call receipts claim trails cannot make"
-status: ready
+status: claimed
 updated: 2026-09-22
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-22T16:36:38Z"
+assignee: "converge-module-include-permanent-call-receipts"
 blocked-by: null
 closed-reason: null
 ---

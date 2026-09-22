@@ -1,6 +1,6 @@
 ---
 title: "first_or_create block pre-insert count assertion across adapters"
-status: draft
+status: ready
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "has_many_associations_test assertion parity: land WIP branch + remaining rows"
-status: draft
+status: in-progress
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 600
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 3
+pr: trails#7973
+claim: "2026-09-22T16:42:42Z"
+assignee: "assertions-has-many-associations-remainder-11"
 blocked-by: null
 closed-reason: null
 ---

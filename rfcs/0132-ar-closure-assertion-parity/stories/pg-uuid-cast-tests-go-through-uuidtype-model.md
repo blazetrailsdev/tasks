@@ -1,6 +1,6 @@
 ---
 title: "pg uuid.test.ts cast tests go through UUIDType like uuid_test.rb"
-status: draft
+status: ready
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

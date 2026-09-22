@@ -1,6 +1,6 @@
 ---
 title: "Expect Enumerable / Comparable surface from a class that includes them"
-status: claimed
+status: done
 updated: 2026-09-22
 rfc: "0156-parity-beyond-name-presence"
 cluster: "denominator"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: trails#7969
 claim: "2026-09-22T15:48:48Z"
 assignee: "expect-stdlib-mixin-surface-enumerable-comparable"
 blocked-by: null

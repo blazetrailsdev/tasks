@@ -1,6 +1,6 @@
 ---
 title: "Converge IsolatedExecutionState tests on Enumerator#next"
-status: ready
+status: blocked
 updated: 2026-09-22
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-22T16:05:43Z"
+assignee: "converge-isolated-execution-state-tests-on-enumerator-next"
+blocked-by: "depends on port-a-minimal-enumerator-for-to-enum-arms (draft): ruby-compat has no Enumerator yet"
 closed-reason: null
 ---
 

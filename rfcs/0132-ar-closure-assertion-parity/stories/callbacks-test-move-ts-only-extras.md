@@ -1,6 +1,6 @@
 ---
 title: "Move callbacks.test.ts TS-only extras to callbacks.trails.test.ts"
-status: draft
+status: ready
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

@@ -1,9 +1,9 @@
 ---
 rfc: "0147-execution-context-at-thread-spawn-sites"
 title: "Mint an execution context where Rails spawns a thread"
-status: active
+status: closed
 created: 2026-09-11
-updated: 2026-09-11
+updated: 2026-09-22
 owner: "@deanmarano"
 packages:
   - "activerecord"

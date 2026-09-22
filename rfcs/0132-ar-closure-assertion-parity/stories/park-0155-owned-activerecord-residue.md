@@ -1,6 +1,6 @@
 ---
 title: "Converge-and-park the 33 activerecord rows waiting on 0155 stories"
-status: ready
+status: done
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: assertion-parity
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7971
+claim: "2026-09-22T16:08:53Z"
+assignee: "park-0155-owned-activerecord-residue"
 blocked-by: null
 closed-reason: null
 ---

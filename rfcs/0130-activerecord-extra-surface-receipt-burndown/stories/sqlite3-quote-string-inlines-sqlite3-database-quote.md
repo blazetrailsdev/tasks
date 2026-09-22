@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 quote_string inlines SQLite3::Database.quote"
-status: in-progress
+status: done
 updated: 2026-09-22
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

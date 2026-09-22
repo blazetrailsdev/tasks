@@ -1,6 +1,6 @@
 ---
 title: "require-table-teardown lint must allow Rails' per-table drop_table helper"
-status: draft
+status: in-progress
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 4
+pr: trails#7972
+claim: "2026-09-22T16:44:44Z"
+assignee: "require-table-teardown-allows-per-table-rails-helper"
 blocked-by: null
 closed-reason: null
 ---

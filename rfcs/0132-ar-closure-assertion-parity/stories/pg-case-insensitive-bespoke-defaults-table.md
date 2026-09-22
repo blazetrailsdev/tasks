@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQL case-insensitive test builds a bespoke table instead of canonical defaults"
-status: in-progress
+status: done
 updated: 2026-09-22
 rfc: "0132-ar-closure-assertion-parity"
 cluster: null

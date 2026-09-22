@@ -1,6 +1,6 @@
 ---
 title: "Thread.attr_accessor :active_support_execution_state is unscored by parity:api"
-status: ready
+status: done
 updated: 2026-09-22
 rfc: "0147-execution-context-at-thread-spawn-sites"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7970
+claim: "2026-09-22T16:05:43Z"
+assignee: "converge-isolated-execution-state-tests-on-enumerator-next"
 blocked-by: null
 closed-reason: null
 ---
