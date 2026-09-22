@@ -82,5 +82,8 @@ behind the class.
 - [ ] The `SCOPED_SKIP_GROUPS` entry in `scripts/parity/conventions.ts` for the
       three `acts_like.rb` files is narrowed to whatever actually remains, and
       RFC 0098's changelog records the ceiling coming back up.
+- [ ] `activesupport/test/core_ext/string_ext_test.rb` `string to datetime` (`:759-765`) reports 0
+      count/kind/value mismatches: `toDatetime` (`core-ext/string/conversions.ts`) answers the
+      `DateTime` whose `offset` and `start` it asserts.
 - [ ] `pnpm parity:api`, `pnpm parity:test` deltas non-negative;
       `pnpm parity:api:extra` clean.
