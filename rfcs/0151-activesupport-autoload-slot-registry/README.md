@@ -40,12 +40,13 @@ autoloader", and this RFC does not reopen that.
 ## Motivation
 
 - **Invented surface, repeated.** `git ls-files 'packages/*/src/**/*slot*.ts'` lists
-  25 non-test slot modules across activerecord, activemodel, activesupport,
+  25 non-test `*slot*` modules (24 slots plus `support/ar-db-slots.ts`, the test-DB
+  pool sizer, which is not a slot) across activerecord, activemodel, activesupport,
   actionpack, actionview, arel, rack-session and trailties. Each has a bespoke setter name and none
   has a Rails counterpart.
 - **The register has drifted.** CLAUDE.md says "Fifteen instances exist and are the
   only ones", but slots such as `load-schema-overrides-slot.ts`,
-  `relation/uncacheable-methods-slot.ts`, `support/ar-db-slots.ts`,
+  `relation/uncacheable-methods-slot.ts`,
   `activesupport/src/trails-logger-slot.ts`, `broadcast-logger-slot.ts` and
   `cache/format-version-slot.ts` are not listed. A per-file register cannot be kept
   current by hand.
@@ -99,7 +100,10 @@ autoloader", and this RFC does not reopen that.
 
 ## Verification
 
-- Zero `*-slot.ts` / `*-slots.ts` non-test modules remain under `packages/*/src`.
+- Zero `*-slot.ts` / `*-slots.ts` non-test modules remain under `packages/*/src`,
+  excluding `packages/activerecord/src/support/ar-db-slots.ts`: its "slots" are the
+  test-DB pool (`AR_DB_SLOTS`, `slotPoolSize`), it holds no call-time binding or
+  setter, and it breaks no cycle (`converge-activerecord-support-db-slots`).
 - `parity:api:extra:gate` `total` drops by the removed setters; no new rows.
 - For each migrated cycle, a plain-node import of the built `dist` entry module does
   not throw TDZ, in both directions (the check CLAUDE.md already requires).
@@ -129,3 +133,4 @@ autoloader", and this RFC does not reopen that.
 
 - 2026-09-15: initial draft.
 - 2026-09-22: Open question 1 resolved by trails#7988 (property read on the namespace object).
+- 2026-09-23: `support/ar-db-slots.ts` recorded as test tooling, not a slot; excluded from the Verification glob.

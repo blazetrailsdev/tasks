@@ -12,6 +12,7 @@ packages:
   - "date"
   - "globalid"
   - "sqlite3"
+  - "ruby-compat"
 clusters:
   - "surfaced-bugs"
 related-rfcs:

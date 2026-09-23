@@ -26,3 +26,18 @@ closed-reason: null
 
 - `ar-db-slots.ts` is either migrated onto `autoload` (meeting the TDZ entry-module check), or replaced by test-harness state with no slot module and no cycle.
 - `support/ar-db-slots.trails.test.ts` still covers the behaviour, under its current name.
+
+## Resolution
+
+The second acceptance arm holds already, so there is nothing to migrate. `ar-db-slots.ts` is not a zero-import slot: its "slots" are the test-DB pool.
+
+- `slotPoolSize()` and `workerForkCount()` size the per-worker database pool from `AR_DB_FORKS` / `TRAILS_TEST_FORKS` / `AR_DB_SLOTS`. Its only consumers are the test harness (`test-setup-worker-db.ts`, `support/template-global-setup.ts`, and its two `.trails.test.ts` files).
+- It exports no mutable binding and no `_setX()` setter, so there is no slot to replace.
+- It imports only `@blazetrails/ruby-compat` and `./ar-db-forks-default.js`, and nothing in the model layer imports it, so it closes no cycle and there is no TDZ entry-module check to meet.
+
+The file stays as it is, recorded as test tooling. RFC 0151's Verification glob and `rewrite-call-time-constant-resolution-onto-autoload`'s empty-glob criterion now exclude it by path.
+
+## Verification
+
+- `git grep -l "ar-db-slots" -- packages/` lists only `packages/activerecord/src/test-setup-worker-db.ts` and files under `packages/activerecord/src/support/`; the root `vitest.config.ts` names it in comments only.
+- `pnpm vitest run packages/activerecord/src/support/ar-db-slots.trails.test.ts` is green, unchanged.
