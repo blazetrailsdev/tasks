@@ -1,6 +1,6 @@
 ---
 title: "activesupport-assert-not-returns-void-where-rails-returns-true"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

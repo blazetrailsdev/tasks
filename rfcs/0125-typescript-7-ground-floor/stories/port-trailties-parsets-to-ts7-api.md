@@ -1,7 +1,7 @@
 ---
 title: "Move trailties' parseTs() onto the TS 7 API"
-status: ready
-updated: 2026-08-26
+status: in-progress
+updated: 2026-09-23
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8000
+claim: "2026-09-23T15:03:13Z"
+assignee: "port-trailties-parsets-to-ts7-api"
 blocked-by: null
 ---
 

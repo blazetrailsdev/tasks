@@ -1,6 +1,6 @@
 ---
 title: "Port the instance/class-seat rows surfaced by level-keyed expected set"
-status: claimed
+status: done
 updated: 2026-09-23
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#7999
 claim: "2026-09-23T14:36:27Z"
 assignee: "port-instance-seat-rows-surfaced-by-level-keyed-expected-set"
 blocked-by: null

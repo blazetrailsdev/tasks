@@ -1,6 +1,6 @@
 ---
 title: "audit the 5 trails symbolizeKeys call sites against Rails; keep only where Symbol-ness is observable"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0149-bare-keyed-option-hashes"
 cluster: symbolize-keys-policy

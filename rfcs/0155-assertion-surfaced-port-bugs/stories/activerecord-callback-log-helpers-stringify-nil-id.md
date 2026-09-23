@@ -1,6 +1,6 @@
 ---
 title: 'Association-callback log helpers render a nil id as "undefined", not ""'
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

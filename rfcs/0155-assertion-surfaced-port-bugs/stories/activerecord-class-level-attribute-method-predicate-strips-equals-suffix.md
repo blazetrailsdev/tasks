@@ -1,6 +1,6 @@
 ---
 title: "activerecord-class-level-attribute-method-predicate-strips-equals-suffix"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

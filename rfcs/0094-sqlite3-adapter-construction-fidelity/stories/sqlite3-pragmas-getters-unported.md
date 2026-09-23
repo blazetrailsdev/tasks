@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 Pragmas getters are unported"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
