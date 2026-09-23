@@ -15,6 +15,7 @@ clusters:
   - "schema"
   - "api-compare"
   - "test-placement"
+  - "enforcement"
 related-rfcs:
   - "0078-sti-schema-reflection-fidelity"
   - "0096-naming-identifier-burndown"
