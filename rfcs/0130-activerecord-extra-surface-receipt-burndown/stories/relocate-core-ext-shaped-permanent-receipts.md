@@ -1,6 +1,6 @@
 ---
 title: "Relocate core-ext-shaped activerecord names whose PERMANENT receipt is false"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
