@@ -2,7 +2,7 @@
 title: "Drop ConnectionLeasingQueue#internalPoll's promise arm once Queue#poll settles on one shape"
 status: blocked
 updated: 2026-09-23
-rfc: "0152-pool-checkout-async-convergence"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
