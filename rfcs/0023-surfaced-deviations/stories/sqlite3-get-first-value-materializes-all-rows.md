@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 binding getFirstValue materializes every row instead of stepping one"
-status: draft
+status: ready
 updated: 2026-09-23
 rfc: "0023-surfaced-deviations"
 cluster: null

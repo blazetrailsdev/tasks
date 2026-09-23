@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 configureConnection treats Pragmas set_*_pragma helpers as known pragmas"
-status: draft
+status: ready
 updated: 2026-09-23
 rfc: "0023-surfaced-deviations"
 cluster: null

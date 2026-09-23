@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 Pragmas#table_info and its private helpers are unported"
-status: draft
+status: ready
 updated: 2026-09-23
 rfc: "0023-surfaced-deviations"
 cluster: null
