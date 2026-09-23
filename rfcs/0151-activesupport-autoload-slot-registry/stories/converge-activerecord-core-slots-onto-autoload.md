@@ -1,7 +1,7 @@
 ---
 title: "Converge activerecord core slots onto ActiveSupport::Autoload"
-status: ready
-updated: 2026-09-15
+status: claimed
+updated: 2026-09-23
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
 packages:
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 300
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-23T00:59:14Z"
+assignee: "converge-activerecord-core-slots-onto-autoload"
 blocked-by: null
 closed-reason: null
 ---

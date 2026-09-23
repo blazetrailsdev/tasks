@@ -1,7 +1,7 @@
 ---
 title: "activemodel-errors-has-no-marshal"
-status: in-progress
-updated: 2026-09-22
+status: done
+updated: 2026-09-23
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

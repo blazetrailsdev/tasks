@@ -1,7 +1,7 @@
 ---
 title: "ActionView RoutingUrlFor writes camelCase url option keys (onlyPath, host) like actionpack reads"
-status: in-progress
-updated: 2026-09-22
+status: done
+updated: 2026-09-23
 rfc: "0149-bare-keyed-option-hashes"
 cluster: option-hash-key-names
 packages: [actionview]
