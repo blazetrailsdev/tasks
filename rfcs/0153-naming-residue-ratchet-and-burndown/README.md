@@ -13,6 +13,11 @@ packages:
   - i18n
   - globalid
   - activerecord-test-support
+  - actionpack
+  - actionview
+  - rack
+  - ruby-compat
+  - trailties
 clusters:
   - naming-residue
 related-rfcs:
