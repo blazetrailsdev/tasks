@@ -1,7 +1,7 @@
 ---
 title: "mark_occurrence and distribution port verbatim, without the inverted guard or the bucket array"
-status: ready
-updated: 2026-09-15
+status: claimed
+updated: 2026-09-23
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-23T16:38:24Z"
+assignee: "reconcile-skip-registers-with-open-stories"
 blocked-by: null
 closed-reason: null
 ---

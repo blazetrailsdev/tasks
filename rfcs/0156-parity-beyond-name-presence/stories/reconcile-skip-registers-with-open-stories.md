@@ -1,7 +1,7 @@
 ---
 title: "Flag an open story that asks to port something a skip register says is unportable"
-status: ready
-updated: 2026-09-22
+status: claimed
+updated: 2026-09-23
 rfc: "0156-parity-beyond-name-presence"
 cluster: "denominator"
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-23T16:38:24Z"
+assignee: "reconcile-skip-registers-with-open-stories"
 blocked-by: null
 closed-reason: null
 ---

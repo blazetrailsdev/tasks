@@ -1,7 +1,7 @@
 ---
 title: "A Ruby predicate must not be satisfied by a getter that returns a non-boolean"
-status: ready
-updated: 2026-09-22
+status: claimed
+updated: 2026-09-23
 rfc: "0156-parity-beyond-name-presence"
 cluster: "denominator"
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-23T16:38:24Z"
+assignee: "reconcile-skip-registers-with-open-stories"
 blocked-by: null
 closed-reason: null
 ---

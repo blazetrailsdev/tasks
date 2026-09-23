@@ -1,9 +1,9 @@
 ---
 rfc: "0149-bare-keyed-option-hashes"
 title: "Bare-keyed option hashes: symbolize_keys only where Symbol-ness is observable"
-status: active
+status: closed
 created: 2026-09-15
-updated: 2026-09-15
+updated: 2026-09-23
 owner: "@deanmarano"
 packages:
   - activerecord
