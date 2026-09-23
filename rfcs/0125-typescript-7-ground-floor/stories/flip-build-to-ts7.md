@@ -17,7 +17,7 @@ deps:
     "account-for-root-ts5-api-consumers",
   ]
 deps-rfc: []
-est-loc: 60
+est-loc: 110
 priority: null
 pr: null
 claim: null
@@ -91,10 +91,20 @@ is expected to be inert — confirm it rather than assume it (RFC open question 
 - [ ] The only remaining 5.x resolution is `@blazetrails/trails-tsc`'s, via an
       explicit alias (e.g. `typescript-5@npm:typescript@5.9.3`), scoped to its
       views pipeline and documented at the declaration. The one other permitted
-      5.x resolution is the root dev tooling's scoped 5.9.3 alias
-      (typescript-eslint's peer and the `scripts/` parity tooling, RFC
-      § "Root-level tooling consumers"). `scripts/` import it by its alias name,
-      never as bare `typescript`.
+      5.x resolution is the root dev tooling's scoped 5.9.3 alias:
+      typescript-eslint's and typedoc's peers, and the `scripts/` parity tooling
+      (RFC § "Root-level tooling consumers"). `scripts/` import that alias by
+      its alias name and never as bare `typescript`.
+      typescript-eslint's and typedoc's peers are moved by a root `.pnpmfile.cjs`
+      `readPackage` hook, not by `pnpm.overrides` or `packageExtensions`,
+      neither of which reaches a peer (RFC § "Root-level tooling consumers").
+- [ ] `packages/activesupport/src/dependencies/autoload.trails.test.ts` is
+      ported to the 7.1 API: `API#transpileModule`, as in
+      `trailties/src/template-builder/testing.ts:10`, and a `Project` parse, as
+      in `activerecord/src/type-virtualization/ts-api.ts`. It does not get the
+      alias.
+- [ ] `pnpm lint` and the website's `docs:typedoc` behave identically on the
+      aliased 5.9.3.
 - [ ] `pnpm build`, `pnpm typecheck`, `pnpm test:types:virtualized` and
       `pnpm guides:typecheck` are green.
 - [ ] The `.d.ts` shape delta versus the last 5.9.3 build is reviewed file by
@@ -115,16 +125,19 @@ is expected to be inert — confirm it rather than assume it (RFC open question 
 A flip that leaves 5.x resolving for any package **other than**
 `@blazetrails/trails-tsc` does not close this story. `trails-tsc`'s aliased 5.x
 is expected and scoped (RFC § Non-goals), and so is the root dev tooling's
-alias (typescript-eslint, `scripts/`; RFC § "Root-level tooling consumers").
+alias (typescript-eslint, typedoc and `scripts/`; RFC § "Root-level tooling
+consumers").
 Anything beyond those two is the split this RFC is avoiding.
 
 ## Verification
 
 ```bash
-pnpm why typescript            # expect 7.x everywhere except trails-tsc's and the root tooling's 5.9.3 alias
+pnpm why typescript            # expect 7.x everywhere except trails-tsc's and the root dev tooling's 5.9.3 alias
 pnpm build && pnpm typecheck
 pnpm test:types:virtualized
 pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:extra:gate
+pnpm lint                      # typed lint on typescript-eslint's hooked 5.9.3 peer
+pnpm --filter website docs:typedoc   # typedoc reports "Using TypeScript 5.9.3"
 ```
 
 Re-measure and record cold/warm wall-clock the same way the RFC did, stating the
