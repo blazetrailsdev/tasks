@@ -61,10 +61,44 @@ Note the API is exported under `unstable/` — no semver guarantee. Acceptable f
 internal tooling like this; the same is not automatically true of published
 surface (see `port-type-virtualization-to-ts7-api`).
 
+### The build-mode seam (2026-09-23)
+
+`scope-activerecord-cli-build-mode-ts5-seam` resolved this story's blocker by
+scoping, not widening, the 5.x (RFC § Non-goals). `trails-tsc --build` is
+`createArSolutionBuilder` (`tsc-wrapper/ar-program.ts`), a delegation to
+`trails-tsc`'s `createTrailsSolutionBuilder` = `ts.createSolutionBuilder`,
+which has no TS 7 equivalent. It stays on 5.x, receipted
+`@noRailsEquivalent CONVERGEABLE port-trails-tsc-to-ts7-api` at its
+declaration. That 5.x is `trails-tsc`'s own `typescript-5@npm:typescript@5.9.3`
+dependency — `trails-tsc` no longer takes `typescript` as a `^5.0.0` peer, so
+`activerecord-cli`'s bare `typescript` is free to move to the 7.x line without
+breaking it.
+
+Two things the original mapping above does not say, and this port must handle:
+
+- **The non-build path also goes through `trails-tsc`'s 5.x today.**
+  `createArTrailsProgram` (`ar-program.ts`) is `createPlainProgram` +
+  `createTrailsProgram` — a virtualizing 5.x `Program` — and `cli.ts` calls
+  `ts.getPreEmitDiagnostics` / `program.emit()` on it. It moves to a 7.1
+  `Project` over a virtualizing `createVirtualFileSystem` (`virtualize` in the
+  `readFile` hook, `remapDiagnostics`-equivalent on the way out), not to
+  `trails-tsc`. It is **not** part of the seam.
+- **Build-mode diagnostics are 5.x objects.** `cli.ts`'s `onDiagnostic` /
+  `onStatus` callbacks format `ts.Diagnostic`s with 5.x helpers. Those
+  conversions move behind the seam in `ar-program.ts`, so no 5.x object or
+  import crosses into `cli.ts`.
+
 ## Acceptance criteria
 
-- [ ] `packages/activerecord-cli` imports no `typescript` 5.x API; its only
-      `typescript` dependency is the 7.x line.
+- [ ] `packages/activerecord-cli` imports no `typescript` 5.x API outside
+      `tsc-wrapper/ar-program.ts`'s `createArSolutionBuilder` seam. Its
+      `typescript` dependency is the 7.x line. If the seam needs 5.x types or
+      helpers of its own, they come from an explicit
+      `typescript-5@npm:typescript@5.9.3` alias, imported by that name in
+      `ar-program.ts` only and never as bare `typescript`.
+- [ ] `createArTrailsProgram` and `cli.ts`'s non-build path are on the 7.1 API.
+- [ ] `generate-manifest.ts` and `tsconfig-merge.ts` (not in the mapping above)
+      are on the 7.1 API too.
 - [ ] `pnpm test:types:virtualized` passes, producing the same pass/fail verdict
       per fixture as it does on 5.9.3.
 - [ ] `schema-ts-parser.test.ts`, `schema-ts-model-parser.test.ts` and
@@ -83,5 +117,5 @@ the point is to use the API, so the wrapper can keep injecting virtual files.
 ```bash
 pnpm test:types:virtualized
 pnpm vitest run packages/activerecord-cli/src/tsc-wrapper/
-pnpm why typescript   # expect: no 5.x resolved for activerecord-cli
+pnpm why typescript   # expect: activerecord-cli on 7.x; 5.x only via trails-tsc (and a seam-only typescript-5 alias, if any)
 ```
