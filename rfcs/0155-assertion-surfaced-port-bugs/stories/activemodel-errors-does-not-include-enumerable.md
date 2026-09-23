@@ -1,6 +1,6 @@
 ---
 title: "activemodel-errors-does-not-include-enumerable"
-status: ready
+status: in-progress
 updated: 2026-09-22
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7989
+claim: "2026-09-22T23:11:04Z"
+assignee: "abstract-adapter-inspect-renders-role-shard-as-strings"
 blocked-by: null
 closed-reason: null
 ---

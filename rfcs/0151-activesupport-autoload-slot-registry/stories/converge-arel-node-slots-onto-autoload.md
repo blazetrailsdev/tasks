@@ -1,7 +1,7 @@
 ---
 title: "Converge arel's node-slots onto ActiveSupport::Autoload (decides the hot-path lookup cost)"
-status: ready
-updated: 2026-09-15
+status: in-progress
+updated: 2026-09-22
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
 packages:
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#7988
+claim: "2026-09-22T23:08:55Z"
+assignee: "converge-arel-node-slots-onto-autoload"
 blocked-by: null
 closed-reason: null
 ---

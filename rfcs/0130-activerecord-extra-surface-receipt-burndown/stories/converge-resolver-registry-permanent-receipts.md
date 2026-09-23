@@ -1,6 +1,6 @@
 ---
 title: "Replace PERMANENT-receipted resolver registries with imports or listed slots"
-status: ready
+status: in-progress
 updated: 2026-09-22
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7990
+claim: "2026-09-22T23:02:21Z"
+assignee: "converge-resolver-registry-permanent-receipts"
 blocked-by: null
 closed-reason: null
 ---

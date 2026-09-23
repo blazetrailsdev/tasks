@@ -1,7 +1,7 @@
 ---
 title: "abstract-adapter-null-lock-breaks-concurrent-async-statements"
-status: ready
-updated: 2026-09-16
+status: closed
+updated: 2026-09-22
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Ratified repo-wide by CLAUDE.md 'The adapter lock defaults to a monitor, not NullLock' (#7831). Verified 2026-09-22: porting self.lock_thread = nil into the constructor still reds sqlite-adapter.trails.test.ts 'opens once when several queries race the deferred async-only open' (3 opens vs 1), postgresql-adapter.get-client.trails.test.ts 'resetBang runs ROLLBACK + DISCARD ALL + reconfigure under one lock', and sqlite3-adapter.transactions.trails.test.ts 'writer changes are not visible to reader until committed'. Neither mechanism the acceptance criteria offer can reach those: connect! sits inside @lock.synchronize at abstract_adapter.rb:984-985, upstream of the yielded block _statementLock wraps, and the failing adapters are standalone on a NullPool so there is no lease to arm. The two perform-query insert-id tests the story names now pass on their own, since lastInsertRowId moved inside the statement lock."
 ---
 
 ## Context

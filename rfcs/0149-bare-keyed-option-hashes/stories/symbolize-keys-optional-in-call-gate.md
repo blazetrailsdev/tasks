@@ -1,7 +1,7 @@
 ---
 title: "make symbolize_keys an optional call in parity:api:calls (NO_JS_CALL_FORM)"
-status: ready
-updated: 2026-09-15
+status: in-progress
+updated: 2026-09-22
 rfc: "0149-bare-keyed-option-hashes"
 cluster: symbolize-keys-policy
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7991
+claim: "2026-09-22T23:45:17Z"
+assignee: "routing-url-for-option-keys-camel-case"
 blocked-by: null
 closed-reason: null
 ---

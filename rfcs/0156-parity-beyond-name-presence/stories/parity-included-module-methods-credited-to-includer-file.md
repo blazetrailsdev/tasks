@@ -1,6 +1,6 @@
 ---
 title: "parity-included-module-methods-credited-to-includer-file"
-status: ready
+status: done
 updated: 2026-09-22
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7987
+claim: "2026-09-22T23:01:15Z"
+assignee: "models-compare-association-scopes-and-attr-declarations"
 blocked-by: null
 closed-reason: null
 ---

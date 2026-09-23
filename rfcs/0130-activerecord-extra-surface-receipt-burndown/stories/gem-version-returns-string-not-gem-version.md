@@ -1,6 +1,6 @@
 ---
 title: "gem_version returns a String instead of Gem::Version"
-status: draft
+status: closed
 updated: 2026-09-22
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "not worth porting"
 ---
 
 ## Context
