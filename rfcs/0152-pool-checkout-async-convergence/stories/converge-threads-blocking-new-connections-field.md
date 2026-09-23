@@ -1,6 +1,6 @@
 ---
 title: "Declare ConnectionPool#_threadsBlockingNewConnections = 0 and drop its ?? 0 fallbacks"
-status: draft
+status: in-progress
 updated: 2026-09-23
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8017
+claim: "2026-09-23T22:47:17Z"
+assignee: "converge-threads-blocking-new-connections-field"
 blocked-by: null
 closed-reason: null
 ---
