@@ -64,6 +64,40 @@ is actually supported.
       `@blazetrails/activerecord/type-virtualization/*` still work
       (`ar-program.ts`, `cli.ts`, `ar-models-plugin.ts`, `auto-import.ts`).
 
+## Decision (2026-09-23)
+
+**Port to the TS 7 API directly, keep it published, and pin the peer to the one
+verified build.** Implemented in trails#8003.
+
+- **Why not keep 5.x.** On `typescript@7.1.0-dev.20260920.1`, text parsing is
+  `API.createSourceFile(fileName, text)` from `typescript/unstable/sync`. That
+  API is synchronous, and `virtualize()` needs a synchronous parse because it
+  runs inside a synchronous compiler host. 7.0.2 had no such call, which is why
+  this story was framed as a decision. With it, every call site here has a
+  direct TS 7 equivalent, including the checker walk in
+  `transitive-extends-walker.ts` (`Project.checker`, `NodeHandle.resolve`). One
+  TS 5 consumer remained: `activerecord-cli`'s `auto-import.ts` handed a TS 5
+  `SourceFile` to `walk()`. It moves into `type-virtualization/`.
+- **Out-of-process, weighed.** Parsing and checker queries now go to a Go
+  server. One lazily spawned `API` is shared per process (`ts-api.ts`), so the
+  ~100ms spawn is paid once. The sync client `unref()`s the child and kills it on
+  exit, so it never keeps a process alive. Measured end to end,
+  `trails-tsc -p packages/activerecord/virtualized-dx-tests/tsconfig.json` takes
+  19.9s after the port vs 19.1s before. For a user, the cost is one extra child
+  process while a `trails-tsc` run or a type-virtualization import is active.
+  That is accepted because the only consumers are type-checking tools, which
+  already run the compiler.
+- **`unstable/`, weighed.** The subpath has no semver guarantee, so the peer
+  range does not claim any: it is pinned to exactly `7.1.0-dev.20260920.1`, the
+  build this was verified against (byte-identical `--print-virtualized` output
+  on 231 files vs the 5.x implementation). Moving to a newer nightly or to 7.1
+  stable is a deliberate re-pin with re-verification, not something a caret
+  range admits silently.
+- **Why not stop publishing it.** `activerecord-cli`'s published `trails-tsc`
+  bin imports `./type-virtualization/*.js`, so dropping the subpath would mean
+  moving the directory into `activerecord-cli`. That is a bigger change, and it
+  doesn't avoid either risk above.
+
 ## Definition of done
 
 Porting the code while leaving the peer range at `>=5.0.0` does not close this
