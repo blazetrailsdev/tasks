@@ -70,3 +70,18 @@ merging this story's PR is that decision.
       that blocks them, and `recheck-ts7-api-surface` re-checks it at 7.1 stable.
 - [ ] `flip-build-to-ts7` lists this story in `deps`, and its 5.x AC, Definition
       of done and Verification allow exactly the ratified alias and nothing more.
+
+## Definition of done
+
+The RFC's § "Root-level tooling consumers" is merged with a decision for each
+consumer and a peer-pin mechanism measured on trails' pinned pnpm. The flip is
+then unblocked on this axis. Its remaining blocker is
+`port-tsc-wrapper-to-ts7-api`.
+
+## Verification
+
+```bash
+pnpm validate
+grep -rlE 'from "typescript"' scripts eslint packages/*/src   # every hit is in the RFC's tables
+npm view typescript-eslint peerDependencies; npm view typedoc peerDependencies
+```

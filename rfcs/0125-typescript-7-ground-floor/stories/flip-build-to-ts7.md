@@ -17,7 +17,7 @@ deps:
     "account-for-root-ts5-api-consumers",
   ]
 deps-rfc: []
-est-loc: 60
+est-loc: 110
 priority: null
 pr: null
 claim: null
@@ -136,6 +136,8 @@ pnpm why typescript            # expect 7.x everywhere except trails-tsc's and t
 pnpm build && pnpm typecheck
 pnpm test:types:virtualized
 pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:extra:gate
+pnpm lint                      # typed lint on typescript-eslint's hooked 5.9.3 peer
+pnpm --filter website docs:typedoc   # typedoc reports "Using TypeScript 5.9.3"
 ```
 
 Re-measure and record cold/warm wall-clock the same way the RFC did, stating the

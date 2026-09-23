@@ -470,9 +470,9 @@ would be reworkable onto the snapshot API. The two above are not.
 #### Root-level tooling consumers (found 2026-09-23)
 
 The survey above counted the four **package** consumers of the compiler API.
-It missed four more. Three are dev tooling at the repo root and one is a
-package test. None of them declares its own `typescript`, so each one resolves
-the root `package.json` pin (`"typescript": "^5.9.3"`), which is the pin
+It missed four more. Three are dev tooling: two at the repo root and typedoc
+in the private `packages/website`. The fourth is a package test. None of them
+declares its own `typescript`, so each one resolves the root `package.json` pin (`"typescript": "^5.9.3"`), which is the pin
 `flip-build-to-ts7` moves. On `typescript@7.1.0-dev.20260920.1`, `exports["."]`
 is `./lib/version.cjs`, which exports the version string and nothing else. So
 `import ts from "typescript"` loses every compiler entry point.
@@ -493,7 +493,9 @@ integration.
 so it does not affect the flip.
 
 The `scripts/` row is blocked for the same reason `trails-tsc` is. It needs
-programmatic `--build`, which has no TS 7 equivalent. Its in-process
+programmatic `--build`, which has no TS 7 equivalent. Its seven
+`createSourceFile` walkers have no standalone text parser to move to (see the
+mapping table above). Its in-process
 `TypeChecker` walk also feeds every `parity:api*` gate. Moving that walk to the
 out-of-process `Project` API means rewriting 10,420 lines of gate tooling whose
 output has to stay byte-identical, and that rewrite is not on the ground-floor
@@ -521,24 +523,29 @@ Concretely, for `flip-build-to-ts7`:
   `typescript-5@npm:typescript@5.9.3`. The alias is declared once and commented
   at the declaration, and `scripts/` never use the bare `typescript` specifier.
 - The `typescript` peers of typescript-eslint and typedoc resolve to that same
-  5.9.3. The mechanism is a root `.pnpmfile.cjs` `readPackage` hook. For
-  `typescript-eslint`, `@typescript-eslint/*`, `ts-api-utils` and `typedoc`, the
-  hook deletes the `typescript` peer and adds `typescript: "5.9.3"` as a
-  dependency. The flip verifies the result with `pnpm why typescript`.
+  5.9.3. The mechanism is a new root `.pnpmfile.cjs` with a `readPackage` hook;
+  trails has no pnpmfile today. For `typescript-eslint`, `@typescript-eslint/*`,
+  `ts-api-utils` and `typedoc`, the hook deletes the `typescript` peer and adds
+  `typescript: "5.9.3"` as a dependency. The flip verifies the result with
+  `pnpm why typescript`.
 
-  Measured in a scratch project on 2026-09-23 with pnpm 10.27.0, root
-  `typescript@7.1.0-dev.20260920.1` and `typescript-eslint@8.70.1`, three
-  mechanisms were tried. Only the hook moved the peer:
+  Three mechanisms were tried on 2026-09-23 in a scratch workspace that matches
+  trails' toolchain: pnpm 12.3.4 (trails' `packageManager`), Node 24.16.0,
+  root `typescript@7.1.0-dev.20260920.1` and `typescript-eslint@8.70.1`, with
+  `typedoc@0.28.18` in a workspace package the way `packages/website` has it.
+  Settings went in `pnpm-workspace.yaml`, where pnpm 12 reads them. Only the
+  hook moved the peer:
 
-  | mechanism                                                                                | what the typescript-eslint and typedoc peers resolve to              |
-  | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-  | `pnpm.overrides` (`"typescript-eslint>typescript": "npm:typescript@5.9.3"` and siblings) | 7.1, because overrides do not reach peer resolution                  |
-  | `pnpm.packageExtensions` (`dependencies: { typescript: "5.9.3" }`)                       | 7.1, because the peer wins over a same-named dependency              |
-  | `.pnpmfile.cjs` `readPackage` (peer → dependency)                                        | **5.9.3**, with the root `typescript` and the `tsc` bin still on 7.1 |
+  | mechanism                                                                           | what the typescript-eslint and typedoc peers resolve to              |
+  | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+  | `overrides` (`"typescript-eslint>typescript": "npm:typescript@5.9.3"` and siblings) | 7.1, because overrides do not reach peer resolution                  |
+  | `packageExtensions` (`dependencies: { typescript: "5.9.3" }`)                       | 7.1, because the peer wins over a same-named dependency              |
+  | `.pnpmfile.cjs` `readPackage` (peer → dependency)                                   | **5.9.3**, with the root `typescript` and the `tsc` bin still on 7.1 |
 
   With the hook in place, a `projectService` typed-lint run fired
   `@typescript-eslint/no-unnecessary-type-assertion`, and `typedoc` generated
-  HTML, reporting "Using TypeScript 5.9.3".
+  HTML, reporting "Using TypeScript 5.9.3". The same three results reproduce on
+  pnpm 10.27.0 outside a workspace.
 
 - The shipped DX (the `tsc` bin, `pnpm build`, `pnpm typecheck`, and every
   published package's resolution) is 7.x only. `trails-tsc` is still the one
