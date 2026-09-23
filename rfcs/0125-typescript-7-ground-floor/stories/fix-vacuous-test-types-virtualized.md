@@ -1,13 +1,13 @@
 ---
-title: "fix-vacuous-test-types-virtualized"
+title: "Make test:types:virtualized actually run trails-tsc (it exits 0 unconditionally)"
 status: draft
 updated: 2026-09-23
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
-packages: []
+packages: ["activerecord-cli", "activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 20
 priority: null
 pr: null
 claim: null
