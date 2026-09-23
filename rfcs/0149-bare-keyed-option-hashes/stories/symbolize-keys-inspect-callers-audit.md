@@ -1,7 +1,7 @@
 ---
 title: "audit the 5 trails symbolizeKeys call sites against Rails; keep only where Symbol-ness is observable"
-status: ready
-updated: 2026-09-15
+status: in-progress
+updated: 2026-09-23
 rfc: "0149-bare-keyed-option-hashes"
 cluster: symbolize-keys-policy
 packages: [actionview, activerecord]
@@ -9,9 +9,9 @@ deps: [symbolize-keys-optional-in-call-gate]
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7997
+claim: "2026-09-23T14:36:44Z"
+assignee: "symbolize-keys-inspect-callers-audit"
 blocked-by: null
 closed-reason: null
 ---

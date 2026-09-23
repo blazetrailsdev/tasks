@@ -1,6 +1,6 @@
 ---
 title: "sqlite3 Pragmas getters are unported"
-status: draft
+status: in-progress
 updated: 2026-09-23
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7996
+claim: "2026-09-23T14:36:10Z"
+assignee: "libsql-remote-adapter-memory-placeholder-and-concurrency-override"
 blocked-by: null
 closed-reason: null
 ---
