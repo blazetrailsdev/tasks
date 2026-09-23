@@ -1,13 +1,13 @@
 ---
-title: "plural-existence-predicates-spell-has"
+title: "Offer a has* candidate for plural-noun predicates (active_connections? → hasActiveConnections)"
 status: in-progress
 updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
-packages: []
+packages: ["activesupport"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 100
 priority: null
 pr: trails#8012
 claim: "2026-09-23T19:50:07Z"
@@ -42,29 +42,50 @@ The population is real but bounded. Plural-noun predicates across
 `resources?`, `routes?`, `saved_changes?`, `scope_attributes?`, `seeds?`,
 `database_tasks?`, `prepared_statements?`, `record_timestamps?`.
 
-## The tension to decide
+## Decision: no discriminator
 
-Plurality alone is not the semantics. `prepared_statements?`
-(`abstract_adapter.rb`) and `record_timestamps?` are configuration flags — "is
-this enabled?" — where `hasPreparedStatements` is worse than
-`isPreparedStatements`, not better. `active_connections?` and `attachments?` are
-existence questions, where `has*` is plainly right. So the rule cannot be "plural
-noun => has"; it needs a discriminator, and the candidate list is the lever that
-makes that cheap.
+An earlier draft of this story asked for a discriminator: config flags such as
+`prepared_statements?` (`abstract_adapter.rb:234`) and `record_timestamps?`
+(`insert_all.rb:87`) would stay `is*`-only, while existence questions such as
+`active_connections?` would also get `has*`. The maintainer rejected every
+exclusion on trails#8012. `has*` is only ever an APPENDED candidate, never
+imposed, so offering it costs nothing where it reads worse, and each port chooses
+the spelling that fits. So every name in the population above is admitted,
+whether its body is a flag, a threshold, an equality check or an existence test.
 
 ## Acceptance criteria
 
-- `HAS_PREDICATE_ALIASES` (or a new sibling map, if the alias-of-`has_*?`
-  admission rule is worth preserving under its own name) gains the
-  existence-question plural predicates, with the discriminator written down in a
-  comment beside the map — including why `prepared_statements?` and
-  `record_timestamps?` are excluded.
-- `active_connections?` is among them, so `hasActiveConnections` pairs with it.
-- The `has*` spelling is APPENDED as a further candidate, never a replacement:
-  `isActiveConnections` must keep pairing, so no already-merged name reds
-  `parity:api` or `parity:api:extra:gate` when this lands.
-- `docs/ruby-ts-conventions.md` regenerates from the change (never hand-edited).
-- The `scripts/` test asserting the mapping covers at least one newly-admitted
-  name and one deliberately-excluded one.
-- Renaming existing merged `is*` spellings to `has*` is OUT of scope here; if the
-  team wants the renames, they are a follow-up story per package.
+- [ ] A sibling map beside `HAS_PREDICATE_ALIASES` (keeping that map's
+      alias-of-`has_*?` admission rule under its own name) admits every
+      plural-noun predicate in the population above, with no discriminator. None
+      of them has a `has_*?` sibling in `vendor/rails/*/lib`, so the
+      `encrypted_attributes?` collision `HAS_PREDICATE_ALIASES` guards against
+      cannot arise.
+- [ ] `active_connections?` is among them, so `hasActiveConnections` pairs with
+      it.
+- [ ] The `has*` spelling is APPENDED as a further candidate, never a
+      replacement: `isActiveConnections` must keep pairing, so no already-merged
+      name reds `parity:api` or `parity:api:extra:gate` when this lands.
+- [ ] `docs/ruby-ts-conventions.md` regenerates from the change (never
+      hand-edited).
+- [ ] `packages/activesupport/src/support/rails-private-methods.generated.ts`
+      regenerates from the change via `pnpm rails-privates:manifest`. Its
+      private-helper candidate lists pick up the new `has*` spellings, and the
+      `Rails API/Test Comparison` CI job fails on drift.
+- [ ] The `scripts/` test asserting the mapping covers at least one admitted
+      name, one former config-flag candidate (`prepared_statements?`), and one
+      non-plural predicate that gets no `has*`.
+
+## Definition of done
+
+Renaming existing merged `is*` spellings to `has*` does NOT close this story and
+is out of scope. If the team wants the renames, they are a follow-up story per
+package.
+
+## Verification
+
+- `pnpm vitest run scripts/parity/conventions.test.ts`
+- `pnpm parity:api:conventions` leaves `docs/ruby-ts-conventions.md` unchanged.
+- `pnpm rails-privates:manifest` leaves the generated artifact unchanged.
+- `pnpm parity:api:extra:gate`, `pnpm parity:api:calls` and
+  `pnpm parity:api:calls:args` stay green.
