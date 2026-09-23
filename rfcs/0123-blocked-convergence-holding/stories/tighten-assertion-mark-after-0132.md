@@ -1,7 +1,7 @@
 ---
 title: "Lift the assertion-mark freeze and reseed once"
-status: blocked
-updated: 2026-09-19
+status: ready
+updated: 2026-09-23
 rfc: "0123-blocked-convergence-holding"
 cluster: enforcement
 packages:
@@ -13,7 +13,7 @@ priority: 10
 pr: null
 claim: null
 assignee: null
-blocked-by: "Capstone; cannot be scheduled yet. scripts/test-compare/assertion-mismatch-mark.freeze still exists on origin/main, and pnpm parity:test -- --assertions (2026-09-19) still reads activerecord 541/1121/11, activesupport 220/363/24, activemodel 241/374/33 (arel, date, globalid, i18n and did-you-mean are already 0/0/0). This story deletes the freeze marker and reseeds once, after flip-assertion-mismatch-gate-to-hard-zero."
+blocked-by: null
 closed-reason: null
 ---
 

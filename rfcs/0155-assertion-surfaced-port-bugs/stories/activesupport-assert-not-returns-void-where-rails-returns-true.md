@@ -1,7 +1,7 @@
 ---
 title: "activesupport-assert-not-returns-void-where-rails-returns-true"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-23
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7998
+claim: "2026-09-23T14:33:22Z"
+assignee: "activemodel-respond-to-cannot-hide-private-methods"
 blocked-by: null
 closed-reason: null
 ---

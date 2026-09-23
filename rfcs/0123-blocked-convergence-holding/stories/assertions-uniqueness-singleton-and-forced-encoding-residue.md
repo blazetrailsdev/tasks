@@ -1,7 +1,7 @@
 ---
 title: "assertions-uniqueness-singleton-and-forced-encoding-residue"
 status: blocked
-updated: 2026-09-22
+updated: 2026-09-23
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-22T01:48:02Z"
 assignee: "assertions-uniqueness-singleton-and-forced-encoding-residue"
-blocked-by: "Two JS language blockers, no settled idiom in repo: (1) singleton_class — JS has no per-object class; record.constructor is the only class seat, and a per-instance subclass makes UniquenessValidator#find_finder_class_for (uniqueness.rb:58-68, uniqueness.ts:139) pick it and add an STI type condition; Ruby's record.class skips the singleton, JS cannot. (2) \"Hello \\x93\\xfa\".b — JS strings carry no encoding tag, so force_encoding_if_needed's value.encoding != forced check (encryptor.rb:164-170) has no input; a binary string is indistinguishable from UTF-8 \\u0093\\u00fa, and the only binary carrier (Uint8Array) is stringified by ImmutableString#cast_value (activemodel type/immutable-string.ts:39). Needs a repo-wide singleton-class and binary-String convention first."
+blocked-by: "Re-verified 2026-09-23: half the premise is falsified. (1) singleton_class is SETTLED since this was written — rbObjSingletonClass exists at packages/ruby-compat/src/object.ts:56 and CLAUDE.md now ratifies it repo-wide under 'singleton_class is a per-object subclass (rbObjSingletonClass)', including the guidance that class-level schema memos must not be read off a singleton class and that UniquenessValidator#initialize's @klass.superclass (uniqueness.rb:16) ports as-is. uniqueness_validation_test.rb no longer shows any assertion mismatch in parity:test --assertions, so this half has no live residue. (2) The forced-encoding half STILL blocks: encryption/encryptable_record_test.rb 'forced encoding for deterministic attributes will replace invalid characters' is a live value mismatch (trails 'Hello ??' vs Rails 'Hello \\uFFFD\\uFFFD'), and the blocker stands — JS strings carry no encoding tag, so force_encoding_if_needed's value.encoding != forced check (encryptor.rb:164-170) has no input, and the only binary carrier (Uint8Array) is stringified by ImmutableString#cast_value (activemodel type/immutable-string.ts:39). Needs a repo-wide binary-String convention. Retitle/rescope to the encoding half alone when picked up; it is 1 of the 11 counters blocking flip-assertion-mismatch-gate-to-hard-zero."
 closed-reason: null
 ---
 
