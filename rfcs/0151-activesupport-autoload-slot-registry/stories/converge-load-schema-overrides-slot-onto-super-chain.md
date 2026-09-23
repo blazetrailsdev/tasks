@@ -1,6 +1,6 @@
 ---
 title: "converge-load-schema-overrides-slot-onto-super-chain"
-status: draft
+status: closed
 updated: 2026-09-23
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#7990 (merged 2026-09-23, cb683f1a6a): load-schema-overrides-slot.ts and its trails test deleted; base.ts:2887-2888 now does prepend(Base, { loadSchemaBang }) for CounterCache then EncryptableRecord, and ModelSchema#loadSchema self-dispatches this.loadSchemaBang(). git grep 'load-schema-overrides|LoadSchemaOverride|registerLoadSchemaOverride' on origin/main packages/ is empty."
 ---
 
 ## Context

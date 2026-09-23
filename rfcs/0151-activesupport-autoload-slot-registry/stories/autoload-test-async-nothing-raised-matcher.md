@@ -1,14 +1,14 @@
 ---
 title: "Port autoload_test's assert_nothing_raised as a matcher that runs against a promise"
-status: draft
-updated: 2026-09-15
+status: ready
+updated: 2026-09-23
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 16
 pr: null
 claim: null
 assignee: null

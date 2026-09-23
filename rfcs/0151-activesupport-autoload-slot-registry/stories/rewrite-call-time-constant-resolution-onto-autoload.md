@@ -1,7 +1,7 @@
 ---
 title: "Rewrite CLAUDE.md § Call-time constant resolution for the ActiveSupport::Autoload shape"
-status: ready
-updated: 2026-09-15
+status: blocked
+updated: 2026-09-23
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
 packages: []
@@ -14,11 +14,11 @@ deps:
   - "converge-activerecord-support-db-slots"
 deps-rfc: []
 est-loc: 60
-priority: 9
+priority: 17
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "AC requires zero *slot*.ts modules, but four activerecord slots on origin/main have no converging story in any RFC: reflection-slot.ts (trails#7813), connection-adapters-slot.ts, connection-adapters/type-metadata-slots.ts, tasks/database-tasks-slot.ts (all added by trails#7990). Also waits on converge-cross-gem-top-level-constant-slots and converge-relation-family-slot-onto-autoload (deps). Unblock once stories for the four AR slots exist and are wired as deps."
 closed-reason: null
 ---
 

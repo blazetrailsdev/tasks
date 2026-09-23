@@ -1,6 +1,6 @@
 ---
 title: "Encryption readers read config off the Encryption module (include Configurable)"
-status: draft
+status: ready
 updated: 2026-09-23
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "Relocate adapter members whose PERMANENT receipt is false (they score moved)"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#8001
+claim: "2026-09-23T16:42:05Z"
+assignee: "relocate-misfiled-permanent-adapter-receipts"
 blocked-by: null
 closed-reason: null
 ---

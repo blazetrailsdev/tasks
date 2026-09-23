@@ -1,7 +1,7 @@
 ---
 title: "Port activerecord-cli's tsc-wrapper to the TS 7 API"
-status: ready
-updated: 2026-08-26
+status: blocked
+updated: 2026-09-23
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: ["activerecord-cli"]
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 250
 priority: 3
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-23T16:44:44Z"
+assignee: "port-tsc-wrapper-to-ts7-api"
+blocked-by: "Premise falsified: tsc-wrapper is not self-contained. (1) --build mode + the public createArSolutionBuilder (ar-program.ts, exported via ./tsc) go through trails-tsc's createTrailsSolutionBuilder = ts.createSolutionBuilder, which has no TS 7 equivalent (typescript@7.1.0-dev.20260920.1 dist/api has no solution-builder API) — the same blocker as port-trails-tsc-to-ts7-api; cli.test.ts's 'trails-tsc --build composite projects' tests must pass unchanged (AC 3), so AC 1 (no 5.x import) and AC 3 are jointly unsatisfiable. (2) The non-build path builds its Program via trails-tsc createTrailsProgram/createPlainProgram (ts.Program) and feeds it to activerecord's collectBaseDescendants(program: ts.Program); auto-import.ts passes its SourceFile to activerecord walker.walk(sourceFile: ts.SourceFile) — TS 5 AST types (SyntaxKind numbering differs in 7). Needs port-type-virtualization-to-ts7-api first, and port-trails-tsc-to-ts7-api for --build. Porting only the two schema parsers would create an in-package 5.x+7 split env (rejected on tasks-legacy#59) without meeting AC 1."
 ---
 
 ## Context
