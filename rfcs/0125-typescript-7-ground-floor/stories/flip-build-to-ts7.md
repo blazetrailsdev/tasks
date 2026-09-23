@@ -72,7 +72,7 @@ instead of 647s, with the cache's safety property untouched. Expect ~9–10
 minutes of runner time back per run and ~55s off each AR lane's critical path.
 
 This is tracked from the CI side as
-`0028-ci-cost-optimization/build-cache-cannot-hit-on-source-changing-pr`, which
+`0000-ci-cost-round-2/build-cache-cannot-hit-on-source-changing-pr`, which
 names this story as the remedy. **Re-measure and record the real figure in the
 PR body** — the 10.8× is a local cold-build ratio, not a CI-measured one.
 

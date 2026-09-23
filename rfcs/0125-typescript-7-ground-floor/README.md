@@ -135,7 +135,7 @@ unchanged commit, and the redundant compile is not removable by caching.
 
 At the measured 10.8× it is removable by **compiler speed**: 647s becomes
 roughly 60s across the same eleven jobs, with no change to the cache's safety
-property. This is tracked as its own RFC 0028 story
+property. This is tracked as its own story in RFC `0000-ci-cost-round-2`
 (`build-cache-cannot-hit-on-source-changing-pr`), which records the measurement
 and names this RFC as the remedy.
 
