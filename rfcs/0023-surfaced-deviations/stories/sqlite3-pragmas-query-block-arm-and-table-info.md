@@ -2,7 +2,7 @@
 title: "sqlite3 Pragmas#table_info and its private helpers are unported"
 status: draft
 updated: 2026-09-23
-rfc: "0094-sqlite3-adapter-construction-fidelity"
+rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
   - "activerecord"
