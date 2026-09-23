@@ -2,7 +2,7 @@
 title: "The cache-build action cannot hit on a source-changing PR — 647s of redundant compile per run"
 status: draft
 updated: 2026-09-23
-rfc: "0000-ci-cost-round-2"
+rfc: "0157-ci-cost-round-2"
 cluster: caching-install
 packages: []
 deps: []

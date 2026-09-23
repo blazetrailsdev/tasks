@@ -1,5 +1,5 @@
 ---
-rfc: "0000-ci-cost-round-2"
+rfc: "0157-ci-cost-round-2"
 title: "CI cost, round 2 — the costs RFC 0028 created or could not reach"
 status: draft
 created: 2026-09-23

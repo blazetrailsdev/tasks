@@ -2,7 +2,7 @@
 title: "Shard the ARCONN=sqlite3_mem AR lane — the last unsharded one, now main's critical path"
 status: draft
 updated: 2026-09-23
-rfc: "0000-ci-cost-round-2"
+rfc: "0157-ci-cost-round-2"
 cluster: parallelism-rounding
 packages: []
 deps: []
