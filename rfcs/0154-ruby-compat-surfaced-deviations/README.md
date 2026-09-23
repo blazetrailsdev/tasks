@@ -23,7 +23,6 @@ related-rfcs:
   - "0130-activerecord-extra-surface-receipt-burndown"
   - "0117-arel-extra-surface-burndown"
   - "0120-extra-surface-gating-rollout"
-priority: 3
 ---
 
 # RFC 0154 — `ruby-compat` surfaced deviations
