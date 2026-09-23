@@ -2,7 +2,7 @@
 title: "url-for-parameters-keys-cross-into-camelcase-options"
 status: draft
 updated: 2026-09-23
-rfc: "0149-bare-keyed-option-hashes"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
