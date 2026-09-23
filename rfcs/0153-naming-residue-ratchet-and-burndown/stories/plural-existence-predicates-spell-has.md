@@ -4,7 +4,7 @@ status: in-progress
 updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
-packages: []
+packages: ["activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 100
