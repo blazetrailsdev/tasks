@@ -88,6 +88,12 @@ lookup rather than a re-derivation.
 - [ ] If either gap is a "no", the `trails-tsc` rewrite alternative (RFC
       § Alternatives considered) is costed rather than left as a sentence.
 
+- [ ] The root dev tooling's 5.9.3 alias (RFC § "Root-level tooling consumers")
+      is re-checked. That means the `typescript` peer range of typescript-eslint
+      and typedoc on `latest` (`npm view <pkg> peerDependencies`), and whether a
+      programmatic build API now exists for `scripts/`. Each consumer whose
+      blocker cleared gets a port story filed.
+
 ## Definition of done
 
 Re-reading the iteration plan does not close this story. The mapping must be

@@ -10,6 +10,7 @@ packages:
   - actionview
   - trailties
   - activerecord
+  - trails-tsc
 clusters: []
 priority: 1
 ---
