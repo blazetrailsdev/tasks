@@ -1,16 +1,16 @@
 ---
 title: "converge-sync-connection-lease-per-checkout-verify"
-status: ready
-updated: 2026-09-16
+status: in-progress
+updated: 2026-09-23
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8007
+claim: "2026-09-23T19:00:19Z"
+assignee: "converge-sync-connection-lease-per-checkout-verify"
 blocked-by: null
 closed-reason: null
 ---

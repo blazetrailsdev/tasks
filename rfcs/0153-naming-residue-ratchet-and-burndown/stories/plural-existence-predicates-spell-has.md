@@ -1,6 +1,6 @@
 ---
 title: "plural-existence-predicates-spell-has"
-status: draft
+status: in-progress
 updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8012
+claim: "2026-09-23T19:50:07Z"
+assignee: "plural-existence-predicates-spell-has"
 blocked-by: null
 closed-reason: null
 ---

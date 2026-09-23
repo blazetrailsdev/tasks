@@ -1,6 +1,6 @@
 ---
 title: "Report a TS void return where the Rails body returns a value callers use"
-status: claimed
+status: done
 updated: 2026-09-23
 rfc: "0156-parity-beyond-name-presence"
 cluster: "comparers"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
+pr: trails#8006
 claim: "2026-09-23T18:28:03Z"
 assignee: "unskip-ported-protocol-names-per-definition"
 blocked-by: null

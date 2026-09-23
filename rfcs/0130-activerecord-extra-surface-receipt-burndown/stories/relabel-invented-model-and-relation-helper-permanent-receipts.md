@@ -1,6 +1,6 @@
 ---
 title: "Inline or relabel invented relation/model helpers carrying PERMANENT receipts"
-status: claimed
+status: done
 updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 6
-pr: null
+pr: trails#8010
 claim: "2026-09-23T18:59:05Z"
 assignee: "relabel-invented-model-and-relation-helper-permanent-receipts"
 blocked-by: null

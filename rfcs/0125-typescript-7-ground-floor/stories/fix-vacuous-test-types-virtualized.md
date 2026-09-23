@@ -1,6 +1,6 @@
 ---
 title: "Make test:types:virtualized actually run trails-tsc (it exits 0 unconditionally)"
-status: draft
+status: done
 updated: 2026-09-23
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8009
+claim: "2026-09-23T19:22:28Z"
+assignee: "fix-vacuous-test-types-virtualized"
 blocked-by: null
 closed-reason: null
 ---

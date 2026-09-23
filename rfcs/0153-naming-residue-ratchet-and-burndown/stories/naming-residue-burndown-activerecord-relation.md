@@ -1,6 +1,6 @@
 ---
 title: "Converge activerecord relation naming residue"
-status: ready
+status: in-progress
 updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["naming-receipt-enrollment-gate", "naming-burndown-activerecord-connectio
 deps-rfc: []
 est-loc: 100
 priority: 12
-pr: null
-claim: null
-assignee: null
+pr: trails#8011
+claim: "2026-09-23T19:08:40Z"
+assignee: "naming-residue-burndown-activerecord-relation"
 blocked-by: null
 closed-reason: null
 ---

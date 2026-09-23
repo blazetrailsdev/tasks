@@ -1,6 +1,6 @@
 ---
 title: "Inline or relabel invented associations helpers carrying PERMANENT receipts"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

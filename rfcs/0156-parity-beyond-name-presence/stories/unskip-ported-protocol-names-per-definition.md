@@ -1,6 +1,6 @@
 ---
 title: "Score inspect, the dup family, encode_with/init_with and the explicit conversions where a Ruby file defines them"
-status: claimed
+status: done
 updated: 2026-09-23
 rfc: "0156-parity-beyond-name-presence"
 cluster: "denominator"
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: trails#8006
 claim: "2026-09-23T18:28:03Z"
 assignee: "unskip-ported-protocol-names-per-definition"
 blocked-by: null
