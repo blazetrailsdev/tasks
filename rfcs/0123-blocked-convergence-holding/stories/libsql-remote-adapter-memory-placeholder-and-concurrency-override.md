@@ -2,7 +2,7 @@
 title: "libsql-remote adapter passes a :memory: placeholder and overrides supportsConcurrentConnections"
 status: blocked
 updated: 2026-09-23
-rfc: "0094-sqlite3-adapter-construction-fidelity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
