@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-configure-connection-pragma-host-literal-not-raw-connection"
-status: ready
-updated: 2026-09-15
+status: in-progress
+updated: 2026-09-23
 rfc: "0094-sqlite3-adapter-construction-fidelity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7993
+claim: "2026-09-23T01:29:49Z"
+assignee: "libsql-remote-adapter-spoofs-file-prefix-through-initialize"
 blocked-by: null
 closed-reason: null
 ---
