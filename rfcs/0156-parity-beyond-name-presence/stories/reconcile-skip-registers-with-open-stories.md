@@ -1,6 +1,6 @@
 ---
 title: "Flag an open story that asks to port something a skip register says is unportable"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0156-parity-beyond-name-presence"
 cluster: "denominator"

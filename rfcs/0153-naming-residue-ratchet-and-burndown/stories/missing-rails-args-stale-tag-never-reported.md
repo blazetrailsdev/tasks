@@ -1,6 +1,6 @@
 ---
 title: "Report a @missingRailsArgs tag stale when its declaration's only receipt stops suppressing"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

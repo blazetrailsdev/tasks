@@ -1,6 +1,6 @@
 ---
 title: "Account for the TS 5.x API consumers the RFC's package survey missed"
-status: draft
+status: in-progress
 updated: 2026-09-23
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: tasks#163
+claim: "2026-09-23T18:36:25Z"
+assignee: "account-for-root-ts5-api-consumers"
 blocked-by: null
 closed-reason: null
 ---

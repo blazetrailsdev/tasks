@@ -1,6 +1,6 @@
 ---
 title: "Flip the pinned typescript to 7.x and drop TypeScript 5.x"
-status: ready
+status: blocked
 updated: 2026-09-23
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
@@ -20,9 +20,9 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-23T18:25:51Z"
+assignee: "flip-build-to-ts7"
+blocked-by: "Two unmet prerequisites. (1) Dep port-tsc-wrapper-to-ts7-api is blocked: activerecord-cli needs ts.createSolutionBuilder, which has no TS 7 equivalent (typescript@7.1.0-dev.20260920.1 exports['.'] = lib/version.cjs, and dist/api has no solution builder). activerecord-cli/package.json still declares typescript ^5.9.3, which violates this story's DoD. (2) The RFC does not list the root-level classic-API consumers that the root pin feeds. typescript-eslint has peer typescript >=4.8.4 <6.0.0 and backs the typed-lint block at eslint.config.mjs:1047 plus every blazetrails/* rule. The scripts/ parity tooling (api-compare/*, test-compare/extract-ts-core, mixin-declaration-drift, and others) does import ts from 'typescript'. Flipping the root pin breaks pnpm lint and parity:api*, which the ACs require to behave identically. Filed as account-for-root-ts5-api-consumers."
 ---
 
 ## Context

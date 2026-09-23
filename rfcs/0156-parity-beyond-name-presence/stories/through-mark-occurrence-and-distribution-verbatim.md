@@ -1,6 +1,6 @@
 ---
 title: "mark_occurrence and distribution port verbatim, without the inverted guard or the bucket array"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
