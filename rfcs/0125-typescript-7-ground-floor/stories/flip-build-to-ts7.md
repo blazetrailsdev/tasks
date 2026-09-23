@@ -14,6 +14,7 @@ deps:
     "port-tsc-wrapper-to-ts7-api",
     "port-type-virtualization-to-ts7-api",
     "port-trailties-parsets-to-ts7-api",
+    "account-for-root-ts5-api-consumers",
   ]
 deps-rfc: []
 est-loc: 60
@@ -89,7 +90,11 @@ is expected to be inert — confirm it rather than assume it (RFC open question 
       iteration plan now dates 2026-11-10 as the RC — re-fetched 2026-09-23).
 - [ ] The only remaining 5.x resolution is `@blazetrails/trails-tsc`'s, via an
       explicit alias (e.g. `typescript-5@npm:typescript@5.9.3`), scoped to its
-      views pipeline and documented at the declaration.
+      views pipeline and documented at the declaration. The one other permitted
+      5.x resolution is the root dev tooling's scoped 5.9.3 alias
+      (typescript-eslint's peer and the `scripts/` parity tooling, RFC
+      § "Root-level tooling consumers"). `scripts/` import it by its alias name,
+      never as bare `typescript`.
 - [ ] `pnpm build`, `pnpm typecheck`, `pnpm test:types:virtualized` and
       `pnpm guides:typecheck` are green.
 - [ ] The `.d.ts` shape delta versus the last 5.9.3 build is reviewed file by
@@ -109,13 +114,14 @@ is expected to be inert — confirm it rather than assume it (RFC open question 
 
 A flip that leaves 5.x resolving for any package **other than**
 `@blazetrails/trails-tsc` does not close this story. `trails-tsc`'s aliased 5.x
-is expected and scoped (RFC § Non-goals); anything beyond it is the split this
-RFC is avoiding.
+is expected and scoped (RFC § Non-goals), and so is the root dev tooling's
+alias (typescript-eslint, `scripts/`; RFC § "Root-level tooling consumers").
+Anything beyond those two is the split this RFC is avoiding.
 
 ## Verification
 
 ```bash
-pnpm why typescript            # expect 7.x everywhere except trails-tsc's alias
+pnpm why typescript            # expect 7.x everywhere except trails-tsc's and the root tooling's 5.9.3 alias
 pnpm build && pnpm typecheck
 pnpm test:types:virtualized
 pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:extra:gate

@@ -466,6 +466,45 @@ would be reworkable onto the snapshot API. The two above are not.
 
 **This is the whole remaining blocker, and it is one package.**
 
+#### Root-level tooling consumers (found 2026-09-23)
+
+The survey above covered `packages/` only. Two more consumers sit at the repo
+root. Neither is a package. Both resolve the root `package.json`'s `typescript`,
+the pin `flip-build-to-ts7` moves. On `typescript@7.1.0-dev.20260920.1`,
+`exports["."]` is `./lib/version.cjs`, which exports the version string and
+nothing else, so `import ts from "typescript"` loses every compiler entry point.
+
+| consumer                                                      | what it needs                                                                                                                                                                                                                                                                                                                                                                                         | status               |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| `typescript-eslint` (`@typescript-eslint/parser`, typed lint) | peer `typescript: ">=4.8.4 <6.1.0"` on `latest` 8.70.1, and the `canary` 8.70.2-alpha.5 has the same range (`npm view`, 2026-09-23); runs every `blazetrails/*` rule and the `projectService` block at `eslint.config.mjs:1047-1068`                                                                                                                                                                  | **blocked upstream** |
+| `scripts/` parity tooling                                     | `createSolutionBuilder` (`scripts/api-compare/build-freshness.ts:203`); `createProgram` + `getTypeChecker` (`extract-ts-api.ts:607,643`, `lint-calls.ts:84`, `lint-deps.ts:309,319`); `createSourceFile` + `forEachChild` (`test-compare/extract-ts-core.ts`, `mixin-declaration-drift.ts`, `ruby-compat-leaf.ts`, `strip-asany.ts`, `lint-detached-jsdoc-tags.ts`, `report-duck-type-instanceof.ts`) | **blocked**          |
+
+The `scripts/` row is blocked for the same reason `trails-tsc` is. Programmatic
+`--build` has no TS 7 equivalent. `extract-ts-api`'s in-process `TypeChecker`
+walk, which every `parity:api*` gate runs on, could move to the out-of-process
+`Project` API only by rewriting ~10k lines of gate tooling whose output must
+stay byte-identical. That is not on the ground-floor path.
+
+**Decision.** Both consumers keep a scoped 5.x resolution. They are dev-only
+tooling: nothing in `scripts/` is published, and the lint toolchain never
+reaches a user's install. This is the same distinction open question 1 draws
+for `trails-tsc`: the split #59 was rejected for sat under the shipped DX, and
+these consumers do not. Concretely, for `flip-build-to-ts7`:
+
+- `scripts/` import the classic API through an explicit root alias,
+  `typescript-5@npm:typescript@5.9.3`, declared once and commented at the
+  declaration, and never through the bare `typescript` specifier.
+- `typescript-eslint`'s peer resolves to that same 5.9.3, and it is pinned
+  through the root pnpm config, not left to peer auto-resolution. The flip picks
+  the mechanism and verifies it with `pnpm why typescript`.
+- The shipped DX (`tsc`, `pnpm build`, `pnpm typecheck`, and every published
+  package's resolution) is 7.x only. `trails-tsc` is still the one package
+  that resolves 5.x.
+
+This residue retires when typescript-eslint publishes a TS 7-compatible parser,
+and, for `scripts/`, when TS 7 ships a programmatic build API.
+`recheck-ts7-api-surface` re-checks both at 7.1 stable.
+
 ### What the virtual FS closes (measured 2026-08-25, TS 7.0.2)
 
 `typescript/unstable/fs`'s `createVirtualFileSystem` / `FileSystem` delegation
@@ -633,6 +672,10 @@ fear, not a measurement; the real thing is a 15-file allowlist.
   not close"). It keeps a pinned 5.x. This is **not** on the ground-floor path —
   it publishes only `trails-tsc-views`, serving the roadmap-stage TSE views
   pipeline.
+- **Migrating the root dev tooling (typescript-eslint, `scripts/` parity
+  tooling) to a TS 7 API.** Blocked upstream and on the missing build API
+  (§ "Root-level tooling consumers"). It keeps a scoped 5.9.3 alias. It is
+  never published and never under the shipped DX.
 - **Re-proposing #59's split.** That split was permanent, load-bearing, and sat
   under the shipped DX. This RFC puts the entire shipped DX on TS 7 and leaves a
   5.x dependency only in a package whose blocked feature is not yet a product.
@@ -702,6 +745,9 @@ stable on 2026-11-24. Every story branches from `main` and stands alone.
 4. **Flip the build.**
    - `flip-build-to-ts7` — pin `typescript` at the 7.1 line;
      `@blazetrails/trails-tsc` keeps an aliased 5.x for `trails-tsc-views`.
+     The root dev tooling (typescript-eslint, `scripts/`) keeps a scoped 5.9.3
+     alias (§ "Root-level tooling consumers"); `account-for-root-ts5-api-consumers`
+     records that decision.
 
 5. **Deferred.**
    - `port-trails-tsc-to-ts7-api` — blocked upstream; no solution-builder or
@@ -787,6 +833,12 @@ dist-tags time`, queried 2026-08-25.
 [iter]: https://github.com/microsoft/TypeScript/issues/63703
 
 ## Changelog
+
+- 2026-09-23: added § "Root-level tooling consumers". The consumer survey
+  covered `packages/` only, and it missed typescript-eslint and the `scripts/`
+  parity tooling. Both resolve the root pin that `flip-build-to-ts7` moves.
+  Both keep a scoped 5.9.3 alias as dev-only tooling. Found while claiming
+  the flip (story `account-for-root-ts5-api-consumers`).
 
 - 2026-08-25: initial RFC. Supersedes the closed
   `0000-typescript-7-native-compiler` (tasks-legacy PR #59, closed 2026-07-22).
