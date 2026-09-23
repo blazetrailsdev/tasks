@@ -1,6 +1,6 @@
 ---
 title: "Drop ConnectionLeasingQueue#internalPoll's promise arm once Queue#poll settles on one shape"
-status: claimed
+status: blocked
 updated: 2026-09-23
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -16,7 +16,7 @@ priority: 10
 pr: null
 claim: "2026-09-23T20:53:28Z"
 assignee: "connection-leasing-queue-internal-poll-carries-a-promise-arm"
-blocked-by: null
+blocked-by: "RFC 0152 Open question 2 answered no: AC bullet 1 keeps poll() synchronous for acquireConnectionSync (connection-pool.ts:526,531) while poll(timeout) returns a promise; one conn.lease() site covering a sync value and a promise needs a then/probe or an await, and await makes poll() async. A single-arm internalPoll exists only once acquireConnectionSync retires, i.e. after sync-acquire-cannot-complete-reap-before-retry. Measured on trails#8016."
 closed-reason: null
 ---
 

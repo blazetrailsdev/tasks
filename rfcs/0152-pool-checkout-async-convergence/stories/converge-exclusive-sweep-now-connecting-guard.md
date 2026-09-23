@@ -1,6 +1,6 @@
 ---
 title: "converge the exclusive sweep's @now_connecting exit guard"
-status: claimed
+status: done
 updated: 2026-09-23
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 30
-pr: null
+pr: trails#8016
 claim: "2026-09-23T20:53:28Z"
 assignee: "connection-leasing-queue-internal-poll-carries-a-promise-arm"
 blocked-by: null

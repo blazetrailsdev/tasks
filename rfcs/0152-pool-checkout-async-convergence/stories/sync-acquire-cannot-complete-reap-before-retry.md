@@ -1,6 +1,6 @@
 ---
 title: "acquireConnectionSync fires reap() fire-and-forget and cannot await its checkin/remove tail"
-status: claimed
+status: blocked
 updated: 2026-09-23
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -12,7 +12,7 @@ priority: 40
 pr: null
 claim: "2026-09-23T20:53:28Z"
 assignee: "connection-leasing-queue-internal-poll-carries-a-promise-arm"
-blocked-by: null
+blocked-by: "Neither AC outcome is reachable. (1) Retiring acquireConnectionSync leaves withConnectionSync serving only an already-leased connection, but its 11 sync callers (Relation#arel, execMainQuery, loadAsync, find_with_ids, attributes.ts:85, base.ts:3123, model-schema.ts:29, alias-tracker.ts:91, ...) build with nothing leased, and RFC 0152 Non-goals keep that path. (2) The PERMANENT-receipt arm ratifies a sync lease, which CLAUDE.md 'Schema reflection peeks at a warm cache' scope boundary forbids ('stay CONVERGEABLE ... Nothing here is a receipt for a new sync lease'). Needs an owner ruling reconciling RFC 0152 Non-goals with that boundary. Measured on trails#8016."
 closed-reason: null
 ---
 

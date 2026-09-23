@@ -1,6 +1,6 @@
 ---
 title: "Shard the ARCONN=sqlite3_mem AR lane — the last unsharded one, now main's critical path"
-status: draft
+status: done
 updated: 2026-09-23
 rfc: "0157-ci-cost-round-2"
 cluster: parallelism-rounding
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8015
+claim: "2026-09-23T21:03:16Z"
+assignee: "shard-ar-sqlite-mem-lane"
 blocked-by: null
 closed-reason: null
 ---
