@@ -1,6 +1,6 @@
 ---
 title: "Port activerecord's type-virtualization to the TS 7 API"
-status: claimed
+status: in-progress
 updated: 2026-09-23
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 3
-pr: null
+pr: trails#8003
 claim: "2026-09-23T16:55:57Z"
 assignee: "port-type-virtualization-to-ts7-api"
 blocked-by: null

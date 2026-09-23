@@ -1,7 +1,7 @@
 ---
 title: "Gate the naming class once the burndown has drained it"
 status: blocked
-updated: 2026-09-16
+updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: []
@@ -18,9 +18,9 @@ est-loc: 80
 pr: null
 claim: "2026-08-11T01:14:36Z"
 assignee: "arel-collector-argument-order-convergence"
-blocked-by: "Reason corrected 2026-09-16: the old text ended 'wants a new naming wave homed in 0096 (still active)' — RFC 0096 is CLOSED, so that home does not exist. The substantive blocker stands: the gate's precondition is a measured in-closure convergeable count of zero, and the count REGRESSED (~31 in-closure rows over three days; burndown 214 + module-mixin-receiver 9 = 223 repo-wide). No active RFC currently owns naming burndown, so this needs a new naming-wave RFC before it can be rehomed out of the holding pen."
+blocked-by: "Re-checked 2026-09-23 on trails b040d60164: still live. Precondition is zero in-closure convergeable naming rows; measured 92 (activesupport 23, activerecord 69: connection-adapters 26, relation 15, remaining 28). Owner is now RFC 0153 (the stale 'needs a new naming-wave RFC' text is superseded); the drain is encoded as deps on W1-W5 (W1 done via trails#7956). Unblock once W2-W5 merge and activesupport + activerecord are in NAMING_ENROLLED_PACKAGES. Body criterion 2 still describes seeding baseline rows; RFC 0153 Rollout step 3 prose amendment (receipts, not baseline) is pending."
 closed-reason: null
-priority: 20
+priority: 14
 ---
 
 ## Context

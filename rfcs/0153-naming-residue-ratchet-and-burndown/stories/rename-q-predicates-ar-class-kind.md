@@ -1,14 +1,14 @@
 ---
 title: "Rename the AR class-kind Q predicates to isPrimaryClass / isConnectionClass / isApplicationRecordClass"
-status: draft
-updated: 2026-09-22
+status: ready
+updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 31
 pr: null
 claim: null
 assignee: null

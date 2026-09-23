@@ -1,6 +1,6 @@
 ---
 title: "Relocate adapter members whose PERMANENT receipt is false (they score moved)"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

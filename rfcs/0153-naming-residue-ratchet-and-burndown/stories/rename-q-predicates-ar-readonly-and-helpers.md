@@ -1,14 +1,14 @@
 ---
 title: "Rename readonlyAttributeQ and the remaining AR Q names (utcQ, savedChangesQ, test-model closeToQ / ratingQ)"
-status: draft
-updated: 2026-09-22
+status: ready
+updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 32
 pr: null
 claim: null
 assignee: null

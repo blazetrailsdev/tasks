@@ -1,6 +1,6 @@
 ---
 title: "mark_occurrence and distribution port verbatim, without the inverted guard or the bucket array"
-status: claimed
+status: in-progress
 updated: 2026-09-23
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: trails#8002
 claim: "2026-09-23T16:38:24Z"
 assignee: "reconcile-skip-registers-with-open-stories"
 blocked-by: null
