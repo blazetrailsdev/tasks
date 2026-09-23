@@ -1,6 +1,6 @@
 ---
 title: "Account for the TS 5.x API consumers the RFC's package survey missed"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra

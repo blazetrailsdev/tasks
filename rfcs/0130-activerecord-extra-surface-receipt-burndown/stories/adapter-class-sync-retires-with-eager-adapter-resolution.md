@@ -1,6 +1,6 @@
 ---
 title: "Resolve the adapter class eagerly so adapter_class is sync and adapterClassSync retires"
-status: draft
+status: ready
 updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "The cache-build action cannot hit on a source-changing PR — 647s of redundant compile per run"
-status: draft
+status: done
 updated: 2026-09-23
 rfc: "0157-ci-cost-round-2"
 cluster: caching-install
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8013
+claim: "2026-09-23T20:29:55Z"
+assignee: "build-cache-cannot-hit-on-source-changing-pr"
 blocked-by: null
 closed-reason: null
 ---

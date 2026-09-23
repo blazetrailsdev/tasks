@@ -1,6 +1,6 @@
 ---
 title: "port-remaining-instance-seat-rows-from-level-keyed-set"
-status: draft
+status: ready
 updated: 2026-09-23
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

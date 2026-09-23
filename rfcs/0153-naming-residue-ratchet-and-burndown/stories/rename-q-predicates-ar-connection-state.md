@@ -1,6 +1,6 @@
 ---
 title: "Rename the AR connection-state Q predicates to isConnected / isConnectedTo / isActiveConnections"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

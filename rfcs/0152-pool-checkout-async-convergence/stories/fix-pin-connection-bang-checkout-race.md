@@ -1,7 +1,7 @@
 ---
 title: "fix-pin-connection-bang-checkout-race"
-status: draft
-updated: 2026-09-17
+status: closed
+updated: 2026-09-23
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#7861 (merged 2026-09-18, bbb3dcc5a5 'pinConnectionBang no longer races a concurrent checkout'). origin/main connection-pool.ts:436-444 re-checks _pinnedConnection after 'await this.checkout()' and checkin()s the loser; connection-pool.trails.test.ts:790 'two concurrent contexts share the pool's single pinned connection' is an active it(), no longer skipped."
 ---
 
 ## Context

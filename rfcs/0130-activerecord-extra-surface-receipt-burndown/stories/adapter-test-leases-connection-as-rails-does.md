@@ -1,14 +1,14 @@
 ---
 title: "adapter.test.ts leases its connection as adapter_test.rb does"
-status: draft
-updated: 2026-09-22
+status: ready
+updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

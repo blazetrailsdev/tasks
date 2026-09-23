@@ -1,7 +1,7 @@
 ---
 title: "applicationRecordClassQ ported in inheritance.ts, Rails puts it in core.rb"
-status: draft
-updated: 2026-07-29
+status: done
+updated: 2026-09-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8011
 claim: null
 assignee: null
 blocked-by: null

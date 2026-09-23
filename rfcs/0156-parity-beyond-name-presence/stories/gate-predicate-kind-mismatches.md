@@ -1,6 +1,6 @@
 ---
 title: "Gate predicateKindMismatches with an only-shrink mark"
-status: draft
+status: ready
 updated: 2026-09-23
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

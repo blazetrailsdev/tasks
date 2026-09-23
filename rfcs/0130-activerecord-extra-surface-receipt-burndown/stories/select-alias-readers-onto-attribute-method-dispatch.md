@@ -1,6 +1,6 @@
 ---
 title: "Reach select-alias attributes through a Rails-named attribute method, not defineDynamicSelectReaders"
-status: draft
+status: ready
 updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

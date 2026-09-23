@@ -1,17 +1,17 @@
 ---
 title: "acquireConnectionSync fires reap() fire-and-forget and cannot await its checkin/remove tail"
-status: draft
-updated: 2026-09-17
+status: claimed
+updated: 2026-09-23
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 40
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-23T20:53:28Z"
+assignee: "connection-leasing-queue-internal-poll-carries-a-promise-arm"
 blocked-by: null
 closed-reason: null
 ---

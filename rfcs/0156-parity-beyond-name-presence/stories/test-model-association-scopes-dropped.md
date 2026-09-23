@@ -1,7 +1,7 @@
 ---
 title: "test-model-association-scopes-dropped"
-status: draft
-updated: 2026-09-22
+status: ready
+updated: 2026-09-23
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

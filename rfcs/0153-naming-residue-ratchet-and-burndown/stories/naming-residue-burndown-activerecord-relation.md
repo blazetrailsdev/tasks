@@ -1,6 +1,6 @@
 ---
 title: "Converge activerecord relation naming residue"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

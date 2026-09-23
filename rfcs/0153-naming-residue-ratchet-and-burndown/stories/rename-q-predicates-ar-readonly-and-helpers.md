@@ -1,6 +1,6 @@
 ---
 title: "Rename readonlyAttributeQ and the remaining AR Q names (utcQ, savedChangesQ, test-model closeToQ / ratingQ)"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

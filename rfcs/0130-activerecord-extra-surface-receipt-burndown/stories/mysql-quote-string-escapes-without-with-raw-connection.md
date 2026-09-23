@@ -1,7 +1,7 @@
 ---
 title: "MySQL quote_string escapes without with_raw_connection's driver escape"
-status: draft
-updated: 2026-09-22
+status: blocked
+updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Same live blocker as pg-quote-string-escapes-without-with-raw-connection (RFC 0123, blocked): quoteString is reached synchronously from Quoting#quote, Sanitization and the Arel visitor's sync to_sql (abstract-mysql-adapter.ts:908 receipt still present on origin/main); taking async withRawConnection needs that whole chain awaitable — an RFC-sized async-quote change first."
 closed-reason: null
 ---
 

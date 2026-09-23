@@ -1,6 +1,6 @@
 ---
 title: "converge-sync-connection-lease-per-checkout-verify"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null

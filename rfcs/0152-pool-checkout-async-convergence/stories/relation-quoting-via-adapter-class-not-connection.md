@@ -1,6 +1,6 @@
 ---
 title: "relation-quoting-via-adapter-class-not-connection"
-status: draft
+status: claimed
 updated: 2026-09-23
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-23T20:53:28Z"
+assignee: "connection-leasing-queue-internal-poll-carries-a-promise-arm"
 blocked-by: null
 closed-reason: null
 ---

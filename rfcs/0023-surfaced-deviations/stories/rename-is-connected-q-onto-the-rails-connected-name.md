@@ -1,7 +1,7 @@
 ---
 title: "Make isConnected the real port of connected?, not an alias of isConnectedQ"
-status: done
-updated: 2026-09-22
+status: closed
+updated: 2026-09-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: trails#7981
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate: superseded by rename-q-predicates-ar-connection-state (isConnected landed in trails#7981; remaining connection-state renames in trails#8011)"
 ---
 
 ## Context

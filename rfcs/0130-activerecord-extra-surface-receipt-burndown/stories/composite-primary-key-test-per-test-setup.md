@@ -1,14 +1,14 @@
 ---
 title: "CompositePrimaryKeyTest: non-transactional, per-test lease/create/drop as Rails"
-status: draft
-updated: 2026-09-22
+status: ready
+updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

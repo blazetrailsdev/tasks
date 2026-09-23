@@ -1,7 +1,7 @@
 ---
 title: "converge-with-transactional-fixtures-onto-test-fixtures-setup"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#8014
+claim: "2026-09-23T20:19:01Z"
+assignee: "retire-redundant-and-exempt-permanent-receipts"
 blocked-by: null
 closed-reason: null
 ---

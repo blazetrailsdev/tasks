@@ -1,6 +1,6 @@
 ---
 title: "Offer a has* candidate for plural-noun predicates (active_connections? → hasActiveConnections)"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

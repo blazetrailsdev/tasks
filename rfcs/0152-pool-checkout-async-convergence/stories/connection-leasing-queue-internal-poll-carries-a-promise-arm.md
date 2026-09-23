@@ -1,7 +1,7 @@
 ---
 title: "Drop ConnectionLeasingQueue#internalPoll's promise arm once Queue#poll settles on one shape"
-status: blocked
-updated: 2026-09-16
+status: claimed
+updated: 2026-09-23
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
 packages: []
@@ -12,11 +12,11 @@ deps:
   ]
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 10
 pr: null
-claim: "2026-09-05T20:06:45Z"
-assignee: "conversion-and-serialization-tests-redeclare-shared-models"
-blocked-by: "RFC 0152 rollout step 3: depends on steps 1 (converge-sync-connection-lease-per-checkout-verify) and 2 (converge-connection-pool-lifecycle-exclusive-access-async). Not a language blocker."
+claim: "2026-09-23T20:53:28Z"
+assignee: "connection-leasing-queue-internal-poll-carries-a-promise-arm"
+blocked-by: null
 closed-reason: null
 ---
 

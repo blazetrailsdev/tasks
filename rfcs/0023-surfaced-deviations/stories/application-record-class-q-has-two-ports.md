@@ -1,7 +1,7 @@
 ---
 title: "applicationRecordClassQ is ported twice; Rails declares it once in core.rb:121"
-status: draft
-updated: 2026-08-27
+status: done
+updated: 2026-09-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: ["application-record-class-q-in-wrong-file"]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8011
 claim: null
 assignee: null
 blocked-by: null

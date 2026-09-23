@@ -1,7 +1,7 @@
 ---
 title: "sync-reads-of-async-reflection-retire-with-rfc-0073"
 status: blocked
-updated: 2026-09-16
+updated: 2026-09-23
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
 packages: []
@@ -13,11 +13,11 @@ deps:
   ]
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 60
 pr: null
 claim: "2026-09-04T17:20:47Z"
 assignee: "sync-reads-of-async-reflection-retire-with-rfc-0073"
-blocked-by: "RFC 0152 rollout step 4: depends on steps 1-3. Retires the five CONVERGEABLE receipts in relation.ts, relation/query-methods.ts, relation/finder-methods.ts, abstract-adapter.ts and connection-pool.ts, plus the adapterReady question (RFC 0152 open question 3)."
+blocked-by: "RFC 0152 rollout step 4 capstone. Steps 1 (converge-sync-connection-lease-per-checkout-verify) and 2 (converge-connection-pool-lifecycle-exclusive-access-async) are done; still waits on step 3 (connection-leasing-queue-internal-poll-carries-a-promise-arm, now ready). Also waits on the schema-cache CLAUDE.md section for the internalSchemaCache re-citation. Live CONVERGEABLE receipts remain on origin/main (e.g. acquireConnectionSync, connection-pool.ts:518)."
 closed-reason: null
 ---
 

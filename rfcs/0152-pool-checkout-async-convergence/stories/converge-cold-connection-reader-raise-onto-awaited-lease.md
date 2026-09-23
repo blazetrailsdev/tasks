@@ -1,6 +1,6 @@
 ---
 title: "Converge the cold-path ConnectionNotEstablished raise in Base.connection / Migration#connection onto the awaited lease"
-status: draft
+status: ready
 updated: 2026-09-23
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 600
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "can_use_fast_cache_version? reads the global default_timezone, not the connection's"
-status: draft
-updated: 2026-09-22
+status: blocked
+updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "cacheVersion (integration.ts:73) is a synchronous reader and withConnection is async; the only sync route is an unblessed sync lease (withConnectionSync). Needs a ratified sync-lease/peek rule or an async cache_version path first — verified on origin/main 2026-09-23, receipt at integration.ts:170."
 closed-reason: null
 ---
 
