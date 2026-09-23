@@ -5,7 +5,7 @@ updated: 2026-09-16
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: ["activerecord"]
-deps: ["naming-receipt-enrollment-gate", "naming-burndown-activerecord-relation"]
+deps: ["naming-receipt-enrollment-gate", "naming-residue-burndown-activerecord-relation"]
 deps-rfc: []
 est-loc: 200
 priority: null

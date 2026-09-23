@@ -5,7 +5,14 @@ updated: 2026-09-16
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: []
-deps: []
+deps:
+  [
+    "naming-burndown-activemodel-arel",
+    "naming-residue-burndown-activesupport",
+    "naming-burndown-activerecord-connection-adapters",
+    "naming-residue-burndown-activerecord-relation",
+    "naming-burndown-activerecord-remaining",
+  ]
 deps-rfc: []
 est-loc: 80
 pr: null
