@@ -1,6 +1,6 @@
 ---
 title: "Converge activerecord core slots onto ActiveSupport::Autoload"
-status: in-progress
+status: done
 updated: 2026-09-23
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload

@@ -1,7 +1,7 @@
 ---
 title: "Converge activesupport slots onto ActiveSupport::Autoload"
-status: ready
-updated: 2026-09-15
+status: in-progress
+updated: 2026-09-23
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
 packages:
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#7994
+claim: "2026-09-23T02:09:19Z"
+assignee: "converge-activesupport-slots-onto-autoload"
 blocked-by: null
 closed-reason: null
 ---
