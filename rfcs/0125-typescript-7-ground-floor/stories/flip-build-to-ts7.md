@@ -47,6 +47,35 @@ The spike in the RFC (2026-08-25, `typescript@7.0.2` run over this repo's real
   **91.75s → 9.73s (7.0.2) → 8.47s (7.1-dev)**; `tsc -b packages/activerecord`
   **69.92s → 8.34s**. Warm no-op 0.47s; incremental after one AR edit 6.36s.
 
+### The CI payoff, measured 2026-09-23
+
+Added after the story was written, because it is the largest single effect of
+this flip and the original body did not quantify it.
+
+`pnpm build` runs in **11 separate CI jobs** per run, each compiling the
+workspace from scratch. On green `main` run 35872727737 that cost **647s of
+runner time** (57–64s in each of the nine heaviest jobs, 48s and 42s in the
+other two), and ~60s of it sits on the critical path of every long-pole AR lane,
+_before_ the suite starts.
+
+That cost is not removable by caching. The `cache-build` action
+(`0028-ci-cost-optimization/cache-build-dist-across-jobs`) keys on an exact
+content hash of `packages/**/src/**` with no `restore-keys`, so a PR that
+changes source misses by construction — confirmed in that run's log
+(`Cache not found for input keys: build-v1-Linux-f60646f8…`). That design is
+deliberate and correct: a restored stale `.tsbuildinfo` lets `tsc --build` skip
+projects whose dependency `.d.ts` changed, which is how a cross-package
+signature break reaches green CI. It must not be relaxed to `restore-keys`.
+
+At the measured 10.8× the same eleven compiles cost roughly **60s total**
+instead of 647s, with the cache's safety property untouched. Expect ~9–10
+minutes of runner time back per run and ~55s off each AR lane's critical path.
+
+This is tracked from the CI side as
+`0028-ci-cost-optimization/build-cache-cannot-hit-on-source-changing-pr`, which
+names this story as the remedy. **Re-measure and record the real figure in the
+PR body** — the 10.8× is a local cold-build ratio, not a CI-measured one.
+
 Note for the `.d.ts` review: TS 7 retains `/** @internal */` in emitted
 declarations where TS 5.9.3 drops it. `parity:api:extra` and
 `blazetrails/unbacked-internal-needs-receipt` read **source**, not emit, so this
@@ -56,7 +85,8 @@ is expected to be inert — confirm it rather than assume it (RFC open question 
 
 - [ ] Root `package.json` pins `typescript` at an **exact** version on the 7.1
       line — a specific `7.1.0-dev.*` nightly, never the `next` tag — with a note
-      that it moves to 7.1 stable on 2026-11-10.
+      that it moves to 7.1 stable on 2026-11-24 (slipped from 2026-11-10; the
+      iteration plan now dates 2026-11-10 as the RC — re-fetched 2026-09-23).
 - [ ] The only remaining 5.x resolution is `@blazetrails/trails-tsc`'s, via an
       explicit alias (e.g. `typescript-5@npm:typescript@5.9.3`), scoped to its
       views pipeline and documented at the declaration.
@@ -71,6 +101,9 @@ is expected to be inert — confirm it rather than assume it (RFC open question 
 - [ ] `scripts/typecheck.mjs`'s "~60s cold" comment is corrected to the real
       measured number for the new compiler.
 - [ ] CONTRIBUTING.md / CLAUDE.md build notes reflect the new compiler.
+- [ ] The CI effect is measured and recorded in the PR body: total `pnpm build`
+      seconds across all eleven jobs, and per-lane critical-path delta, before
+      and after (baseline: 647s total on run 35872727737, 2026-09-23).
 
 ## Definition of done
 

@@ -27,7 +27,7 @@ trails is pre-release with no external dependents, so this is not a
 compatibility migration with a cost to weigh — it is a choice of baseline while
 that choice is still free. The RFC therefore recommends the **newest** target
 rather than the safest one: pin an exact `7.1.0-dev` nightly now and move to
-7.1 stable when it ships (2026-11-10). Writing against 7.1's API today means
+7.1 stable when it ships (2026-11-24). Writing against 7.1's API today means
 the code we write is the code we keep.
 
 Measured on this repo, cold full-monorepo `tsc --build` on a quiet host:
@@ -51,7 +51,7 @@ directly on our code:
   over 7.0.2. `activerecord-cli`'s `tsc-wrapper` has emit and config-parsing
   needs that 7.0.2 cannot serve.
 
-Targeting 7.0.2 means writing shims for things 7.1 gives us in eleven weeks.
+Targeting 7.0.2 means writing shims for things 7.1 gives us in thirteen weeks.
 Given no external dependents, that trade is not worth making.
 
 ### What 7.1 still does not give us
@@ -95,6 +95,49 @@ user-facing `trails-tsc` bin. It does not — **`activerecord-cli` does**
 package (`@blazetrails/trails-tsc`) publishes only `trails-tsc-views`. This
 distinction is load-bearing for the whole recommendation, and the stale comment
 is what obscured it.
+
+### The build cost is paid eleven times per CI run, not once
+
+Measured 2026-09-23 on green `main` run 35872727737 (trails), which is the
+strongest argument for this RFC that the original draft did not make.
+
+`pnpm build` does not run once in CI. It runs in **11 separate jobs**, each
+compiling the workspace from scratch:
+
+| job                                 | `pnpm build` |
+| ----------------------------------- | ------------ |
+| Active Record SQLite :memory: Tests | 64s          |
+| Active Record PostgreSQL Tests (1)  | 64s          |
+| Active Record MariaDB Tests (2)     | 64s          |
+| Rails API/Test Comparison           | 63s          |
+| Active Record SQLite Tests (1)      | 63s          |
+| Active Record SQLite Tests (2)      | 62s          |
+| Active Record MariaDB Tests (1)     | 61s          |
+| Build & Type Check                  | 59s          |
+| Active Record PostgreSQL Tests (2)  | 57s          |
+| Guides Code Type Check              | 48s          |
+| Unit Tests                          | 42s          |
+| **total**                           | **647s**     |
+
+That is **10.8 minutes of runner time per run** spent compiling the same tree
+eleven times, plus ~60s sitting on the critical path of every long-pole lane.
+
+The `cache-build` composite action was built to remove exactly this
+(`0028-ci-cost-optimization/cache-build-dist-across-jobs`, trails#3392), and it
+**cannot hit on a PR that changes source** — its key is an exact content hash of
+`packages/**/src/**` with no `restore-keys`, so any source edit misses by
+construction. The run above confirms it: `Cache not found for input keys:
+build-v1-Linux-f60646f8…`. That exact-match design is _correct_ and must not be
+relaxed — a restored stale `.tsbuildinfo` makes `tsc --build` skip projects
+whose dependency `.d.ts` changed, which is how a cross-package signature break
+reaches green CI. The cache is therefore structurally limited to re-runs of an
+unchanged commit, and the redundant compile is not removable by caching.
+
+At the measured 10.8× it is removable by **compiler speed**: 647s becomes
+roughly 60s across the same eleven jobs, with no change to the cache's safety
+property. This is tracked as its own RFC 0028 story
+(`build-cache-cannot-hit-on-source-changing-pr`), which records the measurement
+and names this RFC as the remedy.
 
 ## Motivation — pick the baseline while it is still free
 
@@ -253,15 +296,22 @@ invocations (including the ones that never reach a commit), so multiplying
 
 | Axis              | Cost of staying on TS 5.9.3                                 |
 | ----------------- | ----------------------------------------------------------- |
-| PR wall-clock     | **zero** — typecheck is off the critical path               |
+| PR wall-clock     | **~60s per lane** — corrected 2026-09-23; see below         |
 | CI runner time    | ≈ 8.9 runner-hours/week recoverable (5.1% of total)         |
 | Local cold build  | 91.75s → 8.47s per worktree bootstrap, ~2.1/day             |
 | Local incremental | 6.36s per commit touching AR; no TS 7 measurement yet       |
 | Host contention   | real but small: ~0.9 CPU-hours/week, concentrated in bursts |
 | Editor latency    | **unmeasured** — the likeliest real win, and the open gap   |
 
-This is a genuine but modest cost, and on its own it would not justify much of
-anything. It is not why this RFC recommends proceeding — the published contract
+**The "PR wall-clock: zero" row was wrong and is corrected above.** It assumed
+typecheck runs only in `Build & Type Check`, which is off the critical path. It
+does not: `pnpm build` runs inside all eleven jobs listed in § "The build cost
+is paid eleven times per CI run", including every critical-path AR lane, where
+it costs 57–64s _before_ the suite starts. Typecheck speed is therefore on the
+PR critical path, not off it.
+
+With that row corrected this is a larger cost than the section claims, though
+still secondary. It is not why this RFC recommends proceeding — the published contract
 being wrong is (§ Motivation). Read this section as the answer to "what do we
 also get", not "why do this".
 
@@ -285,16 +335,25 @@ version of this RFC had a 13-month one and its central fact went stale.
 ### The 7.1 schedule is published and dated
 
 Source: [TypeScript 7.1 Iteration Plan, microsoft/TypeScript#63703][iter]
-(fetched 2026-08-25).
+(re-fetched 2026-09-23; the issue was last edited 2026-09-12).
 
-| Milestone      | Date           |
-| -------------- | -------------- |
-| Beta prep      | 2026-09-04     |
-| **7.1 Beta**   | **2026-09-09** |
-| RC prep        | 2026-10-16     |
-| 7.1 RC         | 2026-10-20     |
-| Stable prep    | 2026-11-06     |
-| **7.1 Stable** | **2026-11-10** |
+**The schedule slipped after this RFC was written.** Every milestone moved, and
+the 2026-11-10 date the RFC originally recorded as _Stable_ is now the **RC**.
+Stable is two weeks later than first planned.
+
+| Milestone      | Date (2026-09-23) | As written 2026-08-25 |
+| -------------- | ----------------- | --------------------- |
+| Beta prep      | 2026-10-02        | 2026-09-04            |
+| **7.1 Beta**   | **2026-10-06**    | 2026-09-09            |
+| RC prep        | 2026-11-06        | 2026-10-16            |
+| 7.1 RC         | 2026-11-10        | 2026-10-20            |
+| Stable prep    | 2026-11-20        | 2026-11-06            |
+| **7.1 Stable** | **2026-11-24**    | 2026-11-10            |
+
+Confirmed against npm on 2026-09-23: `latest` is still `7.0.2` and the only 7.1
+artifacts published are `next` nightlies (`7.1.0-dev.20260923.1` that day). No
+7.1 beta exists yet, so the "pin an exact nightly now" recommendation below is
+unchanged — only its end date moved.
 
 The plan's "Language and Compiler" section names three APIs for stabilization:
 **Content Mapper API**, **Emit API**, and **Language Service API**. It does
@@ -595,9 +654,9 @@ fear, not a measurement; the real thing is a 15-file allowlist.
 
 ## Alternatives considered
 
-- **Wait for TS 7.1 (2026-11-10) and migrate everything at once.** This was
+- **Wait for TS 7.1 (2026-11-24) and migrate everything at once.** This was
   this RFC's own recommendation until the user-facing surface was examined.
-  Rejected: it leaves three published peer ranges wrong for eleven more weeks,
+  Rejected: it leaves three published peer ranges wrong for thirteen more weeks,
   and nothing on the ground-floor path actually needs 7.1 — `parseTs()`, the
   last apparent 7.1 dependency, was reimplemented on 7.0.2 and verified.
 - **#59's proposal: flip the build, pin 5.x for the API consumers.** Rejected
@@ -620,7 +679,7 @@ fear, not a measurement; the real thing is a 15-file allowlist.
 ## Rollout
 
 Target is the **7.1 line**: pin an exact `7.1.0-dev` nightly now, move to 7.1
-stable on 2026-11-10. Every story branches from `main` and stands alone.
+stable on 2026-11-24. Every story branches from `main` and stands alone.
 
 1. **Clear the two defects the 7.1 build finds.** Both are ours, both are
    narrow, and both are worth fixing regardless of TypeScript version.
@@ -647,7 +706,7 @@ stable on 2026-11-10. Every story branches from `main` and stands alone.
 5. **Deferred.**
    - `port-trails-tsc-to-ts7-api` — blocked upstream; no solution-builder or
      watch API exists in 7.1 either.
-   - `recheck-ts7-api-surface` — at 7.1 stable (2026-11-10), confirm the pin
+   - `recheck-ts7-api-surface` — at 7.1 stable (2026-11-24), confirm the pin
      moves cleanly off the nightly and re-check the two gaps.
    - `measure-editor-ls-latency` — postponed with the views pipeline.
 
@@ -691,8 +750,8 @@ stable on 2026-11-10. Every story branches from `main` and stands alone.
 3. **Is pinning a `7.1.0-dev` nightly acceptable in CI and across ~103
    worktrees?** An exact dev version is deterministic, so reproducibility is not
    the issue; being on unreleased software is. _Recommendation:_ yes, given
-   pre-release status and an eleven-week runway to 7.1 stable — but pin an exact
-   nightly, never `next`, and treat the 2026-11-10 move to stable as scheduled
+   pre-release status and a thirteen-week runway to 7.1 stable — but pin an exact
+   nightly, never `next`, and treat the 2026-11-24 move to stable as scheduled
    work (`recheck-ts7-api-surface`). If that is unpalatable, 7.0.2 is the
    fallback at the cost of shimming `transpileModule` and emit.
 4. **Does TS 7 retaining `@internal` in `.d.ts` affect our tooling?**

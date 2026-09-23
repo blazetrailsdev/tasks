@@ -24,6 +24,26 @@ is roadmap-stage (ActionView 8.2% of API surface, P3). The user-facing
 `src/cli.ts:6-10` says otherwise and is stale. So this package keeps a pinned
 5.x and does **not** block declaring TypeScript 7 as trails' floor.
 
+### The 7.1 plan still names neither gap (re-checked 2026-09-23)
+
+Re-read the [7.1 iteration plan](https://github.com/microsoft/TypeScript/issues/63703)
+(last edited 2026-09-12). Its "Language and Compiler → Stabilize API" list is
+unchanged and still names exactly three: **Content Mapper API**, **Emit API**,
+**Language Service API**. There is no solution-builder, `--build`, or watch API
+line item, and nothing about a language-service _plugin_ protocol.
+
+So the expected answer at `recheck-ts7-api-surface` is still "no" for
+`src/build.ts`, and "no host injection / no plugin protocol" for
+`src/lsp-plugin.ts` — the Language Service API being stabilized is the
+server-owned client, which is the thing the table below already records as
+unusable for plugin hosting.
+
+Note the schedule also slipped: 7.1 beta is now **2026-10-06** and stable
+**2026-11-24** (was 2026-09-09 / 2026-11-10). This story stays blocked behind
+`recheck-ts7-api-surface` either way; the re-check simply happens ~4 weeks later
+than planned. Nothing here changes the RFC's conclusion that this package keeps
+a pinned 5.x and does not block the ground floor.
+
 ## Original context
 
 This is **the** blocker described in RFC `0125-typescript-7-ground-floor`.
