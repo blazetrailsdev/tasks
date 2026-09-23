@@ -55,4 +55,4 @@ off time-to-green.
 - RFC 0028 measurement protocol applied: median time-to-green before/after on
   ≥5 runs; merge only on measured improvement, close if none (wall-time merge
   bar).
-- sqlite-tests left unsharded (not on the critical path).
+- ~~sqlite-tests left unsharded (not on the critical path).~~ **Overtaken:** sharding the other two lanes made sqlite-tests the critical path, so it was sharded too; the same displacement then made `sqlite-mem-tests` critical, sharded by `0157-ci-cost-round-2/shard-ar-sqlite-mem-lane`. Not a current criterion.
