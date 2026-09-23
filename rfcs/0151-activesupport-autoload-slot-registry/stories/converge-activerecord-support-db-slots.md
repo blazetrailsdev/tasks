@@ -26,3 +26,7 @@ closed-reason: null
 
 - `ar-db-slots.ts` is either migrated onto `autoload` (meeting the TDZ entry-module check), or replaced by test-harness state with no slot module and no cycle.
 - `support/ar-db-slots.trails.test.ts` still covers the behaviour, under its current name.
+
+## Resolution
+
+`ar-db-slots.ts` is not a zero-import slot. Its "slots" are the test-DB pool: `slotPoolSize()` and `workerForkCount()` size the per-worker database pool from `AR_DB_FORKS` / `TRAILS_TEST_FORKS` / `AR_DB_SLOTS`. It exports no mutable binding and no `_setX()` setter. Its imports are `@blazetrails/ruby-compat` and `./ar-db-forks-default.js`, so it closes no cycle. It stays as it is, recorded here as test tooling, and the RFC Verification glob excludes it.

@@ -30,4 +30,4 @@ CLAUDE.md § "Call-time constant resolution (Ruby autoload → the zero-import s
 
 - The section describes the ported `ActiveSupport::Autoload` shape (registration, call-time read, unguarded read, `eagerLoadBang`), cites `dependencies/autoload.rb`, and carries no per-instance list.
 - It keeps the rule that a registration is added only when a plain import actually closes a cycle, and keeps the `dist` entry-module verification requirement.
-- `git ls-files 'packages/*/src/**/*slot*.ts' | grep -v test` is empty.
+- `git ls-files 'packages/*/src/**/*slot*.ts' | grep -v test | grep -v src/support/ar-db-slots.ts` is empty (`ar-db-slots.ts` is the test-DB pool sizer, not a constant slot).
