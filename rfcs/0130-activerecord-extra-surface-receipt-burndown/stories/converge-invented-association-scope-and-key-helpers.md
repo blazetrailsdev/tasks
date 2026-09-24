@@ -51,6 +51,9 @@ abstraction):
       `invokeScopeLambda` is deleted.
 - [ ] `applyAssociationScope` is inlined into its callers or replaced by the
       Rails reader it stands for.
-- [ ] `isThenable` is deleted.
+- [ ] `isThenable` is handed to `converge-collection-writer-isthenable-dual-returns`
+      (its dual returns feed the constructor's `syncWrite`, which
+      `sync-collection-mass-assignment-refuses-rails-replace` must settle first),
+      and its receipt points there.
 - [ ] `normalizeAssociationKey` and `key-normalization.ts` are deleted.
 - [ ] `pnpm parity:api:extra:gate` stays green; no name gains a new receipt.
