@@ -26,8 +26,8 @@ Convergeable rows are never receipted (`permanent: false` in `NAMING_CLASSES`; t
 
 ## Acceptance criteria
 
-- [ ] `pnpm parity:api:calls:args:report` shows 0 `burndown` and 0 `module-mixin-receiver` rows in the slice.
+- [ ] `pnpm parity:api:calls:args:report` shows 0 `burndown` and 0 `module-mixin-receiver` rows in the slice, except the 10 rows re-homed to `naming-rows-recorder-shape-activerecord` (4 recorder misreadings) and `naming-burndown-activerecord-behavioral` (6 behaviour changes). A rename cannot close those rows, and the combined work exceeds the LOC ceiling (trails#8022).
 - [ ] Permanent rows in the slice carry `@missingRailsName <id> — PERMANENT`.
-- [ ] Adds `activerecord` to `NAMING_ENROLLED_PACKAGES`: activerecord has 0 convergeable rows repo-wide and all 47 permanent rows receipted.
+- [ ] Enrolling `activerecord` in `NAMING_ENROLLED_PACKAGES` moves to `naming-burndown-activerecord-behavioral`, the story that retires the last convergeable rows.
 - [ ] `pnpm parity:api:calls:args` and `pnpm parity:api:params` green; PR body reports the repo-wide convergeable count (RFC §5).
 - [ ] Over the LOC ceiling → split by directory into sibling stories under 0153 via `tasks new`; never fan out PRs.

@@ -1,5 +1,5 @@
 ---
-title: "naming-rows-recorder-shape-activerecord"
+title: "Fix the four activerecord naming rows the call-args recorder misreads (zero-arg receiver, raise X.new, core-ext function form)"
 status: ready
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
