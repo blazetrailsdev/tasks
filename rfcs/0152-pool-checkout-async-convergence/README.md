@@ -3,7 +3,7 @@ rfc: "0152-pool-checkout-async-convergence"
 title: "Converge the synchronous pool-checkout seams onto the async checkout"
 status: active
 created: 2026-09-16
-updated: 2026-09-16
+updated: 2026-09-24
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -13,6 +13,7 @@ related-rfcs:
   - "0073-permanent-connection-checkout-disallowed"
   - "0147-execution-context-at-thread-spawn-sites"
   - "0150-sync-schema-reflection-readers"
+priority: 4
 ---
 
 # RFC 0152 — Converge the synchronous pool-checkout seams onto the async checkout

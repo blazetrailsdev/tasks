@@ -3,7 +3,7 @@ rfc: "0151-activesupport-autoload-slot-registry"
 title: "Converge zero-import slots onto ActiveSupport::Autoload"
 status: active
 created: 2026-09-15
-updated: 2026-09-15
+updated: 2026-09-24
 owner: "@deanmarano"
 packages:
   - activesupport
@@ -17,6 +17,7 @@ packages:
 clusters:
   - autoload
   - load-order-cycles
+priority: 4
 ---
 
 # RFC 0151 — Converge zero-import slots onto ActiveSupport::Autoload

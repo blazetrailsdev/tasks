@@ -3,7 +3,7 @@ rfc: "0153-naming-residue-ratchet-and-burndown"
 title: "Ratchet the call-argument naming residue, then burn it down to the gate flip"
 status: active
 created: 2026-09-16
-updated: 2026-09-16
+updated: 2026-09-24
 owner: "@deanmarano"
 packages:
   - activerecord
@@ -26,6 +26,7 @@ related-rfcs:
   - "0117-arel-extra-surface-burndown"
   - "0123-blocked-convergence-holding"
   - "0126-fidelity-tooling-continuation"
+priority: 4
 ---
 
 # RFC 0153 — Ratchet the call-argument naming residue, then burn it down to the gate flip
