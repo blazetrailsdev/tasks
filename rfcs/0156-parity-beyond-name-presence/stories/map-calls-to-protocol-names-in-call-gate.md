@@ -1,6 +1,6 @@
 ---
 title: "Map calls to inspect/dup/to_h/to_a in the call gate, per enrolled package"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Converge and enroll globalid, i18n, rack, rack-session in no-js-rendering-in-rails-messages"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

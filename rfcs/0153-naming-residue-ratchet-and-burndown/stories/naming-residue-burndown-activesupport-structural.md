@@ -1,6 +1,6 @@
 ---
 title: "naming-residue-burndown-activesupport-structural"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["call-args-recorder-self-call-receiver-as-argument"]
 deps-rfc: []
 est-loc: null
 priority: 45
-pr: null
-claim: null
-assignee: null
+pr: trails#8051
+claim: "2026-09-24T18:26:42Z"
+assignee: "naming-residue-burndown-activesupport-structural"
 blocked-by: null
 closed-reason: null
 ---

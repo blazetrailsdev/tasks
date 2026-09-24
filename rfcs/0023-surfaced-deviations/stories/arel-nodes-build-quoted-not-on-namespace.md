@@ -1,7 +1,7 @@
 ---
 title: "Arel::Nodes.build_quoted is public in Rails but absent from trails' Nodes namespace"
-status: draft
-updated: 2026-08-25
+status: in-progress
+updated: 2026-09-24
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8050
+claim: "2026-09-24T18:45:36Z"
+assignee: "arel-nodes-build-quoted-not-on-namespace"
 blocked-by: null
 closed-reason: null
 ---

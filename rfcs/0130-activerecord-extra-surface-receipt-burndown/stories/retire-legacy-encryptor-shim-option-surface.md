@@ -1,17 +1,17 @@
 ---
 title: "encryptor: takes the Encryptor contract only; retire LegacyEncryptorShim"
-status: draft
-updated: 2026-09-23
+status: in-progress
+updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 2
+pr: trails#8052
+claim: "2026-09-24T18:29:09Z"
+assignee: "adapter-foreign-key-test-loads-fk-test-has-pk-fixture"
 blocked-by: null
 closed-reason: null
 ---

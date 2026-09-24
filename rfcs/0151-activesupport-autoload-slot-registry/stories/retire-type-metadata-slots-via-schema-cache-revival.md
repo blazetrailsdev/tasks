@@ -1,6 +1,6 @@
 ---
 title: "Retire type-metadata-slots.ts and SqlTypeMetadata.fromJSON: schema-cache revives metadata like Column"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 19
 pr: null
 claim: null
 assignee: null

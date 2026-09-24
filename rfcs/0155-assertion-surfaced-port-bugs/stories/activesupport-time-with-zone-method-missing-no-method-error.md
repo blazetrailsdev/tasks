@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone method_missing proxy returns undefined/TypeError instead of NoMethodError"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

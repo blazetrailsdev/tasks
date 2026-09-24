@@ -1,6 +1,6 @@
 ---
 title: "assert-nothing-raised-does-not-register-with-vitest"
-status: claimed
+status: done
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: trails#7930
 claim: "2026-09-24T17:59:05Z"
 assignee: "aes256-gcm-inspect-not-rails-format"
 blocked-by: null

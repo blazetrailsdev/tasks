@@ -1,6 +1,6 @@
 ---
 title: "Core-class asJson ports drop Rails' as_json(options = nil) parameter"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

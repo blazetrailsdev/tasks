@@ -1,6 +1,6 @@
 ---
 title: "Converge connection-adapters-slot.ts onto the ConnectionAdapters autoload namespace"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 18
 pr: null
 claim: null
 assignee: null

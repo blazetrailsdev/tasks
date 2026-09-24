@@ -1,6 +1,6 @@
 ---
 title: "Base lacks eql (core.rb:637 alias eql? ==); converge relation uniq/&/| onto ruby-compat uniq"
-status: draft
+status: in-progress
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#8052
+claim: "2026-09-24T18:29:09Z"
+assignee: "adapter-foreign-key-test-loads-fk-test-has-pk-fixture"
 blocked-by: null
 closed-reason: null
 ---

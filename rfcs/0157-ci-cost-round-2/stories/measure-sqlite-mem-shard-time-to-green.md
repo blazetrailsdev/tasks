@@ -1,7 +1,7 @@
 ---
 title: "Measure main time-to-green before/after sharding sqlite-mem-tests (RFC 0028 protocol)"
-status: draft
-updated: 2026-09-23
+status: closed
+updated: 2026-09-24
 rfc: "0157-ci-cost-round-2"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "don't need to measure, it's ok"
 ---
 
 ## Context

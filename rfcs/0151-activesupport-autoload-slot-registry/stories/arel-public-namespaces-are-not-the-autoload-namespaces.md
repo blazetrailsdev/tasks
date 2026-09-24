@@ -1,6 +1,6 @@
 ---
 title: "Arel's public Nodes/Visitors namespaces are separate objects from the Autoload namespaces readers resolve against"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 12
-pr: null
-claim: null
-assignee: null
+pr: trails#8050
+claim: "2026-09-24T18:25:11Z"
+assignee: "arel-public-namespaces-are-not-the-autoload-namespaces"
 blocked-by: null
 closed-reason: null
 ---

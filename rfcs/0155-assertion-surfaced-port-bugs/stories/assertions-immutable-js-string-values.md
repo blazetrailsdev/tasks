@@ -1,6 +1,6 @@
 ---
 title: "assertions-immutable-js-string-values"
-status: claimed
+status: blocked
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-24T17:59:05Z"
 assignee: "aes256-gcm-inspect-not-rails-format"
-blocked-by: null
+blocked-by: "needs a mutable Ruby String carrier (ruby-mutable-string-carrier): the eight parks assert String identity across dup, unfrozen cast results and in-place <</replace, none expressible with JS string primitives; ratifying is not an outcome"
 closed-reason: null
 ---
 

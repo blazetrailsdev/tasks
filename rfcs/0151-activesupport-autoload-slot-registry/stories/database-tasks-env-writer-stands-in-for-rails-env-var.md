@@ -1,6 +1,6 @@
 ---
 title: "database-tasks-env-writer-stands-in-for-rails-env-var"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 15
-pr: null
-claim: null
-assignee: null
+pr: trails#8050
+claim: "2026-09-24T18:25:11Z"
+assignee: "arel-public-namespaces-are-not-the-autoload-namespaces"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "SQLite3Adapter#ensureConnected is a trails-only lazy open that bypasses with_raw_connection"
-status: draft
+status: in-progress
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 2
+pr: trails#8052
+claim: "2026-09-24T18:29:09Z"
+assignee: "adapter-foreign-key-test-loads-fk-test-has-pk-fixture"
 blocked-by: null
 closed-reason: null
 ---

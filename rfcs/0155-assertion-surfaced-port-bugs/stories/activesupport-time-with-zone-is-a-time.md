@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone is not an instance of Time (is_a? / kind_of?)"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

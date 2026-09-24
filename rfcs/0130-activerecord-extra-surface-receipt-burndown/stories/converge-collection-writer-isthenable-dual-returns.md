@@ -1,6 +1,6 @@
 ---
 title: "converge-collection-writer-isthenable-dual-returns"
-status: draft
+status: blocked
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Story's own gate: cannot converge until the constructor's sync replace arm (CollectionAssociation#syncWrite, collection-association.ts:53, via base.ts _dispatchAssociationAttrs) is settled by sync-collection-mass-assignment-refuses-rails-replace (RFC 0155), which is ready/unclaimed as of 2026-09-24. isThenable still present on origin/main df293821ad (collection-association.ts:202,265,293)."
 closed-reason: null
 ---
 

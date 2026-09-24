@@ -1,14 +1,14 @@
 ---
 title: "Inline the ruby bodies still extracted as named helpers (0119 remainder)"
-status: draft
-updated: 2026-09-23
+status: ready
+updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

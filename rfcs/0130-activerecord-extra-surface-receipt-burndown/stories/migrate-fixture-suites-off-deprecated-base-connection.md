@@ -1,7 +1,7 @@
 ---
 title: "migrate-fixture-suites-off-deprecated-base-connection"
-status: draft
-updated: 2026-09-23
+status: closed
+updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone / superseded. Test-body Base.connection reads were migrated to leaseConnection by trails#8020 (adapter-test-leases-connection-as-rails-does) and trails#8027 (test-bodies-lease-connection-per-test): on origin/main df293821ad, git grep -E 'Base\\.connection([^A-Za-z_]|$)' over packages/activerecord/src/**/*.test.ts hits only relation/load-async.test.ts:62 (was ~63 files). The remaining ask — drop the fixtures() default lease getter (test-fixtures.ts:757) — is owned, with the empirically measured 27-file residual, by fixtures-default-lease-getter-retires-with-its-dependents; its claimer should also pick up load-async.test.ts:62."
 ---
 
 ## Context

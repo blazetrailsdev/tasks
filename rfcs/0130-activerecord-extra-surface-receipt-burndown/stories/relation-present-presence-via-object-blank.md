@@ -1,6 +1,6 @@
 ---
 title: "relation-present-presence-via-object-blank"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

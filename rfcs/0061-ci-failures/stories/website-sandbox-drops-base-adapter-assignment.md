@@ -1,6 +1,6 @@
 ---
 title: "website-sandbox-drops-base-adapter-assignment"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0061-ci-failures"
 cluster: null

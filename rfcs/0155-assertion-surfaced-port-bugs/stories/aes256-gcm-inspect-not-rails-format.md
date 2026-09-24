@@ -1,6 +1,6 @@
 ---
 title: "aes256-gcm-inspect-not-rails-format"
-status: claimed
+status: in-progress
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: trails#8045
 claim: "2026-09-24T17:59:05Z"
 assignee: "aes256-gcm-inspect-not-rails-format"
 blocked-by: null

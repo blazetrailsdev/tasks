@@ -1,6 +1,6 @@
 ---
 title: "Sanitization: sanitize_sql_hash_for_assignment calls type_for_attribute; sanitize_sql_array takes ary"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 100
-pr: null
-claim: null
-assignee: null
+pr: trails#8049
+claim: "2026-09-24T18:37:31Z"
+assignee: "sanitization-signatures-onto-rails"
 blocked-by: null
 closed-reason: null
 ---

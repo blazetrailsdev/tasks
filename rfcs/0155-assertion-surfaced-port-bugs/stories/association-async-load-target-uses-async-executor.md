@@ -1,6 +1,6 @@
 ---
 title: "association-async-load-target-uses-async-executor"
-status: claimed
+status: blocked
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-24T17:44:04Z"
 assignee: "activesupport-time-with-zone-subnanosecond-fractions"
-blocked-by: null
+blocked-by: "needs a lazy ActiveRecord::Promise port (activerecord/lib/active_record/promise.rb), which is unported: Rails' find_target(async: true) stores sc.execute(async: true)'s Promise (statement_cache.rb:149-150 -> querying.rb:59-64, FutureResult#then) in @target, and Association#target (association.rb:53-58) consumes .value at the reader, which is when the FutureResult's EventBuffer flushes the async: true event. trails' FutureResult#then is an eager JS thenable, so any async_find_by_sql chain consumes the result (and publishes the event) before the reader is read. Converge after port-promise-complete-for-async-loaded-arms lands the Promise class (value/pending?/lazy then)."
 closed-reason: null
 ---
 

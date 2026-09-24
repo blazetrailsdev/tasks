@@ -1,6 +1,6 @@
 ---
 title: "update_columns / destroy_row delegate to the class _update_record / _delete_record instead of inlining them"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 80
-pr: null
-claim: null
-assignee: null
+pr: trails#8048
+claim: "2026-09-24T18:23:26Z"
+assignee: "connection-handling-dispatches-through-connection-pool"
 blocked-by: null
 closed-reason: null
 ---

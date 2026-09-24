@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone cannot keep a Float sub-nanosecond fraction (xmlschema(12))"
-status: claimed
+status: in-progress
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8044
 claim: "2026-09-24T17:44:04Z"
 assignee: "activesupport-time-with-zone-subnanosecond-fractions"
 blocked-by: null
