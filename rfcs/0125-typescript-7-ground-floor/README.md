@@ -730,6 +730,24 @@ fear, not a measurement; the real thing is a 15-file allowlist.
   upstream and one is blocked on the missing build API (§ "Root-level tooling
   consumers"). They keep a scoped 5.9.3 alias, and none of it is published or
   under the shipped DX.
+- **Migrating `activerecord-cli`'s build mode off the TS 5.x solution
+  builder** (added 2026-09-23, `scope-activerecord-cli-build-mode-ts5-seam`).
+  `trails-tsc --build` is `createArSolutionBuilder`
+  (`activerecord-cli/src/tsc-wrapper/ar-program.ts`), a delegation to
+  `trails-tsc`'s `createTrailsSolutionBuilder` — the same missing
+  programmatic `--build` as the first bullet, under the published bin this
+  RFC's § "A correction worth surfacing" puts in the shipped DX. It is a third
+  permitted, scoped 5.x resolution, bounded to **one seam in one file**:
+  `createArSolutionBuilder` carries
+  `@noRailsEquivalent CONVERGEABLE port-trails-tsc-to-ts7-api` at its
+  declaration, and it adds no new 5.x to the tree, because the 5.x it reaches
+  is `trails-tsc`'s own `typescript-5@npm:typescript@5.9.3` dependency (no
+  longer a `^5.0.0` peer satisfied by the consumer's bare `typescript`).
+  Everything else in `activerecord-cli` moves to the 7.1 API under
+  `port-tsc-wrapper-to-ts7-api`, its bare `typescript` dependency is the 7.x
+  line, and no 5.x object crosses out of `ar-program.ts`. This is not #59's
+  split: it is one build-mode entry point whose 5.x closes with
+  `port-trails-tsc-to-ts7-api`, not a package-wide peer.
 - **Re-proposing #59's split.** That split was permanent, load-bearing, and sat
   under the shipped DX. This RFC puts the entire shipped DX on TS 7 and leaves a
   5.x dependency only in a package whose blocked feature is not yet a product.
@@ -798,7 +816,8 @@ stable on 2026-11-24. Every story branches from `main` and stands alone.
 
 4. **Flip the build.**
    - `flip-build-to-ts7` — pin `typescript` at the 7.1 line;
-     `@blazetrails/trails-tsc` keeps an aliased 5.x for `trails-tsc-views`.
+     `@blazetrails/trails-tsc` keeps an aliased 5.x for `trails-tsc-views`
+     and for `activerecord-cli`'s build-mode seam (§ Non-goals).
      The root dev tooling keeps a scoped 5.9.3 alias: typescript-eslint,
      typedoc and `scripts/` (§ "Root-level tooling consumers").
      `account-for-root-ts5-api-consumers` records that decision.
@@ -825,7 +844,8 @@ stable on 2026-11-24. Every story branches from `main` and stands alone.
   `@blazetrails/trailties/template-builder/testing` returns diagnostics
   equivalent to 5.9.3's for valid, syntactically-invalid, and Ruby input.
 - **The 5.x residue is contained.** `pnpm why typescript` resolves 5.x only
-  under `@blazetrails/trails-tsc`; no batch `tsc --build` on 5.x remains in CI
+  under `@blazetrails/trails-tsc` (which `activerecord-cli`'s build-mode seam
+  reaches) and the root dev tooling's alias; no batch `tsc --build` on 5.x remains in CI
   or hooks.
 - **No unexplained type regression.** The `.d.ts` delta versus the last 5.9.3
   build stays within the 14 files enumerated in § spike, each reviewed — plus

@@ -94,7 +94,12 @@ is expected to be inert — confirm it rather than assume it (RFC open question 
       5.x resolution is the root dev tooling's scoped 5.9.3 alias:
       typescript-eslint's and typedoc's peers, and the `scripts/` parity tooling
       (RFC § "Root-level tooling consumers"). `scripts/` import that alias by
-      its alias name and never as bare `typescript`.
+      its alias name and never as bare `typescript`. The third is
+      `activerecord-cli`'s build-mode seam — `createArSolutionBuilder` in
+      `tsc-wrapper/ar-program.ts`, receipted
+      `@noRailsEquivalent CONVERGEABLE port-trails-tsc-to-ts7-api` — which
+      resolves 5.x only through `trails-tsc`'s own alias (RFC § Non-goals,
+      `scope-activerecord-cli-build-mode-ts5-seam`).
       typescript-eslint's and typedoc's peers are moved by a root `.pnpmfile.cjs`
       `readPackage` hook, not by `pnpm.overrides` or `packageExtensions`,
       neither of which reaches a peer (RFC § "Root-level tooling consumers").
@@ -126,13 +131,17 @@ A flip that leaves 5.x resolving for any package **other than**
 `@blazetrails/trails-tsc` does not close this story. `trails-tsc`'s aliased 5.x
 is expected and scoped (RFC § Non-goals), and so is the root dev tooling's
 alias (typescript-eslint, typedoc and `scripts/`; RFC § "Root-level tooling
-consumers").
-Anything beyond those two is the split this RFC is avoiding.
+consumers"), and so is `activerecord-cli`'s build-mode solution-builder seam —
+one function in `tsc-wrapper/ar-program.ts`, reaching 5.x only through
+`trails-tsc`'s alias, with `activerecord-cli`'s own `typescript` dependency on
+the 7.x line (RFC § Non-goals).
+Anything beyond those three is the split this RFC is avoiding. In particular a
+bare `typescript: ^5.x` in `activerecord-cli/package.json` does not qualify.
 
 ## Verification
 
 ```bash
-pnpm why typescript            # expect 7.x everywhere except trails-tsc's and the root dev tooling's 5.9.3 alias
+pnpm why typescript            # expect 7.x everywhere except trails-tsc's (reached by activerecord-cli's build seam) and the root dev tooling's 5.9.3 alias
 pnpm build && pnpm typecheck
 pnpm test:types:virtualized
 pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:extra:gate
