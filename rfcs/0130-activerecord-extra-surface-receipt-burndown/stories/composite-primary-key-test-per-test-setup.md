@@ -1,6 +1,6 @@
 ---
 title: "CompositePrimaryKeyTest: non-transactional, per-test lease/create/drop as Rails"
-status: ready
+status: in-progress
 updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#8020
+claim: "2026-09-23T23:32:19Z"
+assignee: "adapter-test-leases-connection-as-rails-does"
 blocked-by: null
 closed-reason: null
 ---

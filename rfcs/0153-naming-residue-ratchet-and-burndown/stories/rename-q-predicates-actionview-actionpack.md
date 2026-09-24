@@ -1,6 +1,6 @@
 ---
 title: "Rename the actionview / actionpack Q predicates (contentFor, inheritViewContextClass, supportsPath, strictLocals, key, routeDefined, …)"
-status: ready
+status: claimed
 updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 33
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-23T23:57:04Z"
+assignee: "naming-burndown-activerecord-remaining"
 blocked-by: null
 closed-reason: null
 ---

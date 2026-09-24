@@ -1,6 +1,6 @@
 ---
 title: "Converge the cold-path ConnectionNotEstablished raise in Base.connection / Migration#connection onto the awaited lease"
-status: ready
+status: claimed
 updated: 2026-09-23
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: 50
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-23T23:31:54Z"
+assignee: "converge-cold-connection-reader-raise-onto-awaited-lease"
 blocked-by: null
 closed-reason: null
 ---

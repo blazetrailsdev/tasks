@@ -1,7 +1,7 @@
 ---
 title: "Module#delegate private: option, nil-receiver methods and source_location are unported (9 parked tests)"
-status: ready
-updated: 2026-09-22
+status: blocked
+updated: 2026-09-23
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-23T23:33:09Z"
+assignee: "activesupport-delegate-private-and-ruby-method-semantics"
+blocked-by: "Language shortcoming, ratified in CLAUDE.md § 'Method visibility is not a runtime fact in JS': the 5 private-delegate tests need respond_to?(m) and respond_to?(m, true) to differ, and basicObjRespondTo's pub cannot be read. source_location (module_test.rb:365,370) has no JS Method#source_location; arity -1 (module_test.rb:650) cannot be expressed by Function.length. The nil-receiver tests (module_test.rb:341,346) are already unskipped and green on main."
 closed-reason: null
 ---
 

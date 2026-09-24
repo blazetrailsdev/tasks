@@ -1,6 +1,6 @@
 ---
 title: "adapter.test.ts leases its connection as adapter_test.rb does"
-status: ready
+status: in-progress
 updated: 2026-09-23
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: trails#8020
+claim: "2026-09-23T23:32:19Z"
+assignee: "adapter-test-leases-connection-as-rails-does"
 blocked-by: null
 closed-reason: null
 ---

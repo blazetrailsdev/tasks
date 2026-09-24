@@ -1,6 +1,6 @@
 ---
 title: "Port activerecord-cli's tsc-wrapper to the TS 7 API"
-status: blocked
+status: ready
 updated: 2026-09-23
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 250
 priority: 3
 pr: null
-claim: "2026-09-23T16:44:44Z"
-assignee: "port-tsc-wrapper-to-ts7-api"
-blocked-by: "Build mode (trails-tsc --build) and the public createArSolutionBuilder (ar-program.ts, exported via ./tsc) go through trails-tsc's createTrailsSolutionBuilder = ts.createSolutionBuilder, which has no TS 7 equivalent (typescript@7.1.0-dev.20260920.1 dist/api has no solution-builder API) — the same blocker as port-trails-tsc-to-ts7-api. cli.test.ts's composite --build tests must pass unchanged, so dropping the 5.x import and keeping them green are jointly unsatisfiable. The activerecord half of the old reason is gone: trails#8003 moved type-virtualization (walk, collectBaseDescendants, auto-import) onto the 7.1 API."
+claim: null
+assignee: null
+blocked-by: null
 ---
 
 ## Context

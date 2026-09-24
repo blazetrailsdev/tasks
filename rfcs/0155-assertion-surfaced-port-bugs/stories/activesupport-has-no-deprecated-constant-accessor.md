@@ -1,7 +1,7 @@
 ---
 title: "activesupport-has-no-deprecated-constant-accessor"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-23
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8018
+claim: "2026-09-23T23:33:09Z"
+assignee: "activesupport-delegate-private-and-ruby-method-semantics"
 blocked-by: null
 closed-reason: null
 ---

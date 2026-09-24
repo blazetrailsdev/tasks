@@ -1,6 +1,6 @@
 ---
 title: "Rename the rack / ruby-compat / trailties Q names (NullLogger family, compareByIdentity, lstat!, File.size?, sessionStore)"
-status: ready
+status: claimed
 updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 70
 priority: 34
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-23T23:57:04Z"
+assignee: "naming-burndown-activerecord-remaining"
 blocked-by: null
 closed-reason: null
 ---
