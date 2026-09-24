@@ -1,7 +1,7 @@
 ---
 title: "Stop extra-surface and naming-taxonomy crediting the Q spelling; ban new *Q predicates"
-status: ready
-updated: 2026-09-23
+status: in-progress
+updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: []
@@ -16,9 +16,9 @@ deps:
 deps-rfc: []
 est-loc: 80
 priority: 35
-pr: null
-claim: null
-assignee: null
+pr: trails#8025
+claim: "2026-09-24T12:22:00Z"
+assignee: "retire-q-suffix-crediting-in-extra-surface-and-naming"
 blocked-by: null
 closed-reason: null
 ---

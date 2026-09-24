@@ -1,6 +1,6 @@
 ---
 title: "Call-args recorder pairs a Ruby `raise X.new(...)` with an unrelated TS `new` (activerecord migrationsStatus)"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8025
+claim: "2026-09-24T12:22:00Z"
+assignee: "retire-q-suffix-crediting-in-extra-surface-and-naming"
 blocked-by: null
 closed-reason: null
 ---

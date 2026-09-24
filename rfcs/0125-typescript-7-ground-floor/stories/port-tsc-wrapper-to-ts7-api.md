@@ -1,7 +1,7 @@
 ---
 title: "Port activerecord-cli's tsc-wrapper to the TS 7 API"
-status: ready
-updated: 2026-09-23
+status: in-progress
+updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: ["activerecord-cli"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8024
+claim: "2026-09-24T12:21:09Z"
+assignee: "port-tsc-wrapper-to-ts7-api"
 blocked-by: null
 ---
 

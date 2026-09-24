@@ -1,6 +1,6 @@
 ---
 title: "Compile CI's pnpm build with tsgo side-by-side ahead of the TS 7 flip"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
