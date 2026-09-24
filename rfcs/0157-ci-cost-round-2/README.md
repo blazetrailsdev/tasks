@@ -1,9 +1,9 @@
 ---
 rfc: "0157-ci-cost-round-2"
 title: "CI cost, round 2 — the costs RFC 0028 created or could not reach"
-status: draft
+status: closed
 created: 2026-09-23
-updated: 2026-09-23
+updated: 2026-09-24
 owner: "@deanmarano"
 packages: []
 clusters:
