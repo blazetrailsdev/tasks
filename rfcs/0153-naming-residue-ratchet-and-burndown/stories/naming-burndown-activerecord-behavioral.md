@@ -5,7 +5,12 @@ updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: ["activerecord"]
-deps: ["naming-rows-recorder-shape-activerecord"]
+deps:
+  [
+    "naming-rows-recorder-shape-activerecord",
+    "call-args-receiver-as-argument-local-and-core-ext",
+    "missing-rails-name-receipt-on-mixin-object-function-unmatched",
+  ]
 deps-rfc: []
 est-loc: 250
 priority: null
@@ -18,7 +23,7 @@ closed-reason: null
 
 ## Context
 
-RFC 0153 wave W5 follow-up, split from `naming-burndown-activerecord-remaining`. That story's PR closed 21 of activerecord's 31 convergeable naming rows. The six rows below each need a behavior change, not a rename, so the story is `activerecord`'s last naming work before it can join `NAMING_ENROLLED_PACKAGES` (`scripts/api-compare/lint-call-args.ts`). The recorder rows are in the sibling story `naming-rows-recorder-shape-activerecord`.
+RFC 0153 wave W5 follow-up, split from `naming-burndown-activerecord-remaining`. That story's PR closed 21 of activerecord's 31 convergeable naming rows. The six rows below each need a behavior change, not a rename, so the story is `activerecord`'s last naming work before it can join `NAMING_ENROLLED_PACKAGES` (`scripts/api-compare/lint-call-args.ts`). The recorder rows are in `naming-rows-recorder-shape-activerecord` and `call-args-receiver-as-argument-local-and-core-ext`. Enrollment also needs `missing-rails-name-receipt-on-mixin-object-function-unmatched`, because four already-receipted rows do not register their receipts.
 
 | TS file / method                                            | Rails                                                                                                                 | Divergence to converge                                                                                                                                                                                                                  |
 | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -31,6 +36,6 @@ RFC 0153 wave W5 follow-up, split from `naming-burndown-activerecord-remaining`.
 
 ## Acceptance criteria
 
-- [ ] Each row converges to the Rails argument. `pnpm parity:api:calls:args:report` shows 0 `burndown` / `module-mixin-receiver` rows for activerecord once `naming-rows-recorder-shape-activerecord` has also landed.
+- [ ] Each row converges to the Rails argument. `pnpm parity:api:calls:args:report` shows 0 `burndown` / `module-mixin-receiver` rows for activerecord once the three stories in `deps` have landed.
 - [ ] `activerecord` is added to `NAMING_ENROLLED_PACKAGES`, and `pnpm parity:api:calls:args` is green with it enrolled.
 - [ ] No row is receipted.
