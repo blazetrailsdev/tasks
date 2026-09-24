@@ -3,7 +3,7 @@ rfc: "0155-assertion-surfaced-port-bugs"
 title: "Port bugs surfaced by assertion convergence — RFC 0132's overflow bucket"
 status: active
 created: 2026-09-18
-updated: 2026-09-18
+updated: 2026-09-24
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -19,7 +19,7 @@ related-rfcs:
   - "0132-ar-closure-assertion-parity"
   - "0105-ar-deps-test-parity-100"
   - "0122-arel-assertion-parity"
-priority: 6
+priority: 3
 ---
 
 # RFC 0155 — port bugs surfaced by assertion convergence
