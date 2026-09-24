@@ -1,6 +1,6 @@
 ---
 title: "TouchLater#touch_later: move no_touching guard to NoTouching#touch_later, drop readonly guard"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 90
 pr: null
 claim: null
 assignee: null

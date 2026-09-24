@@ -1,7 +1,7 @@
 ---
 title: "Stop pnpm 12 rewriting the packageManagerDependencies lockfile document"
-status: ready
-updated: 2026-09-16
+status: claimed
+updated: 2026-09-24
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T16:59:06Z"
+assignee: "pnpm12-lockfile-package-manager-document-churn"
 blocked-by: null
 closed-reason: null
 ---

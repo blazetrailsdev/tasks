@@ -1,6 +1,6 @@
 ---
 title: "Track and retire the .pnpmfile.cjs TS 5.9.3 peer hook per consumer"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null

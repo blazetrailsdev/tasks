@@ -1,7 +1,7 @@
 ---
 title: "compare-owner-on-both-seats-reads-seat-neutral"
-status: ready
-updated: 2026-09-23
+status: in-progress
+updated: 2026-09-24
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8039
+claim: "2026-09-24T16:15:15Z"
+assignee: "association-scope-cache-keys-on-reflection"
 blocked-by: null
 closed-reason: null
 ---

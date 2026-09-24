@@ -1,7 +1,7 @@
 ---
 title: "Reach select-alias attributes through a Rails-named attribute method, not defineDynamicSelectReaders"
-status: ready
-updated: 2026-09-23
+status: claimed
+updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T16:13:07Z"
+assignee: "converge-invented-association-scope-and-key-helpers"
 blocked-by: null
 closed-reason: null
 ---

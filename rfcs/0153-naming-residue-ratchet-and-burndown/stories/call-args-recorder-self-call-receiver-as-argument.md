@@ -1,6 +1,6 @@
 ---
 title: "Call-args recorder emits a bare self-call receiver as a positional argument"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 42
-pr: null
-claim: null
-assignee: null
+pr: trails#8038
+claim: "2026-09-24T16:14:07Z"
+assignee: "missing-rails-name-receipt-on-mixin-object-function-unmatched"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "database-tasks-env-writer-stands-in-for-rails-env-var"
 status: ready
-updated: 2026-09-23
+updated: 2026-09-24
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
 packages: []

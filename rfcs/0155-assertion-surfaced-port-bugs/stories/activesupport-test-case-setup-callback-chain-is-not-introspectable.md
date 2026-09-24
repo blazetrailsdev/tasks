@@ -1,7 +1,7 @@
 ---
 title: "activesupport-test-case-setup-callback-chain-is-not-introspectable"
-status: ready
-updated: 2026-09-22
+status: claimed
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T16:59:06Z"
+assignee: "pnpm12-lockfile-package-manager-document-churn"
 blocked-by: null
 closed-reason: null
 ---

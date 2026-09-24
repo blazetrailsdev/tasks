@@ -1,6 +1,6 @@
 ---
 title: "Make the build-freshness guard's tsc --dry oracle fail closed, then move it to a TS 7 build API"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null

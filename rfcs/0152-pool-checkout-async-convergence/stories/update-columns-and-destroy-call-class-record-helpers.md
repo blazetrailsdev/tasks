@@ -1,6 +1,6 @@
 ---
 title: "update_columns / destroy_row delegate to the class _update_record / _delete_record instead of inlining them"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 80
 pr: null
 claim: null
 assignee: null

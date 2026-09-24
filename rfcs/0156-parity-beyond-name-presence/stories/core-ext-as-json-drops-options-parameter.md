@@ -1,7 +1,7 @@
 ---
 title: "Core-class asJson ports drop Rails' as_json(options = nil) parameter"
-status: ready
-updated: 2026-09-23
+status: claimed
+updated: 2026-09-24
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T16:43:54Z"
+assignee: "gate-or-retire-the-branch-name-story-fallback"
 blocked-by: null
 closed-reason: null
 ---

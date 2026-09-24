@@ -1,6 +1,6 @@
 ---
 title: "Base.connection's pool.active_connection arm returns nil like Rails; drop the non-null assertion"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 70
 pr: null
 claim: null
 assignee: null

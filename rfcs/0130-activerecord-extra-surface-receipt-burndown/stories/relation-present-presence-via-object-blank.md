@@ -1,6 +1,6 @@
 ---
 title: "relation-present-presence-via-object-blank"
-status: ready
+status: claimed
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T16:13:07Z"
+assignee: "converge-invented-association-scope-and-key-helpers"
 blocked-by: null
 closed-reason: null
 ---
