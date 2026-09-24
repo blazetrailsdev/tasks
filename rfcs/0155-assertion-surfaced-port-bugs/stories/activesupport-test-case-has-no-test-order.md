@@ -1,7 +1,7 @@
 ---
 title: "activesupport-test-case-has-no-test-order"
-status: in-progress
-updated: 2026-09-23
+status: done
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

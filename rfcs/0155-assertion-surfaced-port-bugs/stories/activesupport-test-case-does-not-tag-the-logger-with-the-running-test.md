@@ -1,7 +1,7 @@
 ---
 title: "activesupport-test-case-does-not-tag-the-logger-with-the-running-test"
-status: in-progress
-updated: 2026-09-23
+status: done
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "Converge remaining activerecord naming residue and enroll activerecord"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

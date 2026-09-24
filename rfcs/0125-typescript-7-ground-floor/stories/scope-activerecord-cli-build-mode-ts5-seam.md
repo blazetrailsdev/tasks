@@ -1,7 +1,7 @@
 ---
 title: "Scope activerecord-cli's solution-builder 5.x to one seam so the flip can land"
-status: in-progress
-updated: 2026-09-23
+status: done
+updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: ["activerecord-cli", "trails-tsc"]
