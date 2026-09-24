@@ -1,6 +1,6 @@
 ---
 title: "Inline the bound-sql-literal value block into both Rails bodies"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0023-surfaced-deviations"
 cluster: null

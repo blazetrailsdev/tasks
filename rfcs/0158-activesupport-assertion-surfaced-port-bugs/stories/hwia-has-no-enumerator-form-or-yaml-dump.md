@@ -1,7 +1,7 @@
 ---
 title: "hwia-has-no-enumerator-form-or-yaml-dump"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8063
+claim: "2026-09-24T22:24:17Z"
+assignee: "deprecation-proxy-cannot-intercept-object-prototype-methods"
 blocked-by: null
 closed-reason: null
 ---

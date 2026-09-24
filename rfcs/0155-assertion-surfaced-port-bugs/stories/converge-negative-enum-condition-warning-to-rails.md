@@ -1,6 +1,6 @@
 ---
 title: "detect_negative_enum_conditions! warns with a trails-only message, no logger guard, and an invented camelCase arm"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

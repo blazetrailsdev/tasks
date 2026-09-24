@@ -1,6 +1,6 @@
 ---
 title: "deprecation-behavior-does-not-accept-callable-objects"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

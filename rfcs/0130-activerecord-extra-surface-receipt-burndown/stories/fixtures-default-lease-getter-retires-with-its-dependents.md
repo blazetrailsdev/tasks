@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 4
-pr: trails#8054
+pr: trails#8061
 claim: "2026-09-24T21:46:41Z"
 assignee: "fixtures-default-lease-getter-retires-with-its-dependents"
 blocked-by: null

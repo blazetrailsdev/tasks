@@ -1,6 +1,6 @@
 ---
 title: "Type::Date#cast_value's middle arm is a closed instanceof list, not Rails' respond_to?(:to_date)"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "logger-default-simple-formatter-and-nonstring-inspect"
-status: ready
-updated: 2026-09-22
+status: claimed
+updated: 2026-09-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T22:44:14Z"
+assignee: "deprecation-silence-and-allow-restore-before-an-async-block-settles"
 blocked-by: null
 closed-reason: null
 ---

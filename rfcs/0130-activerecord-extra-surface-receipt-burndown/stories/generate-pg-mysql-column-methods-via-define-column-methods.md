@@ -1,6 +1,6 @@
 ---
 title: "generate-pg-mysql-column-methods-via-define-column-methods"
-status: claimed
+status: done
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: trails#8061
 claim: "2026-09-24T21:46:41Z"
 assignee: "fixtures-default-lease-getter-retires-with-its-dependents"
 blocked-by: null

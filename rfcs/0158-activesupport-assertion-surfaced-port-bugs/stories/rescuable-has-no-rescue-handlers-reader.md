@@ -1,7 +1,7 @@
 ---
 title: "rescuable-has-no-rescue-handlers-reader"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8062
+claim: "2026-09-24T22:11:22Z"
+assignee: "converge-date-and-time-calculations-to-this-typed-mixin"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "sanitize-sql-alias-of-for-conditions"
-status: claimed
+status: done
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8060
 claim: "2026-09-24T21:48:41Z"
 assignee: "sanitization-replace-bind-variable-relation-check"
 blocked-by: null
