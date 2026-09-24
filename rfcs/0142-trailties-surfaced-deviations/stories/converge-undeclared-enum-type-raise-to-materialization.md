@@ -2,7 +2,7 @@
 title: "Raise Undeclared attribute type from the enum decorate_attributes block, not the serialize path"
 status: draft
 updated: 2026-08-20
-rfc: "0023-surfaced-deviations"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages:
   - "activerecord"
