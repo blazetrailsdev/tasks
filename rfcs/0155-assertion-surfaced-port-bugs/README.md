@@ -138,3 +138,11 @@ This RFC is a standing bucket for as long as 0132 is burning down, and it
 closes when both are true: 0132 is closed, and no parked test in the tree points
 at a story here. 0158 closes on its own condition; neither waits on the other. It is not a permanent register — a row in it is a test that is
 currently not running, which is exactly the debt it exists to make countable.
+
+## Changelog
+
+- 2026-09-18: created as RFC 0132's overflow bucket (tasks#141).
+- 2026-09-24: split. The 76 stories whose fix lands in `activesupport` or
+  `date` moved to `0158-activesupport-assertion-surfaced-port-bugs`, and 169
+  stay here (126 open). The routing rule is § "Which bucket: 0155 or 0158".
+  The analysis of the seam is in 0158 § "Alternatives considered".
