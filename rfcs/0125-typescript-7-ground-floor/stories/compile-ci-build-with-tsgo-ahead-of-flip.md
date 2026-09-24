@@ -1,7 +1,7 @@
 ---
 title: "Compile CI's pnpm build with tsgo side-by-side ahead of the TS 7 flip"
-status: draft
-updated: 2026-09-23
+status: in-progress
+updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8023
+claim: "2026-09-24T02:05:58Z"
+assignee: "compile-ci-build-with-tsgo-ahead-of-flip"
 blocked-by: null
 closed-reason: null
 ---
