@@ -1,6 +1,6 @@
 ---
 title: "Inline normalizeBoundValue and emitJoinPlan into their Rails callers"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

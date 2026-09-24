@@ -1,6 +1,6 @@
 ---
 title: "converge-fixture-raw-adapter-arm-onto-pool-walk"
-status: ready
+status: done
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8054
+claim: "2026-09-24T20:04:09Z"
+assignee: "converge-fixture-raw-adapter-arm-onto-pool-walk"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Converge the adapter/schema/result helper surface #7836 left receipted"
-status: claimed
+status: done
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 3
-pr: null
+pr: trails#8053
 claim: "2026-09-24T19:49:58Z"
 assignee: "converge-adapter-schema-and-result-helper-surface-remainder"
 blocked-by: null

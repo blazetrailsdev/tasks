@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone#to_time without preserve_timezone: deprecation, class and identity"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Time#floor(ndigits) / Time#ceil(ndigits) unported on packages/date Time"
-status: ready
-updated: 2026-09-22
+status: done
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["activesupport-time-sec-fraction-rational"]
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8054
+claim: "2026-09-24T20:04:09Z"
+assignee: "converge-fixture-raw-adapter-arm-onto-pool-walk"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Converge the model mixin plumbing #7836 left receipted"
-status: ready
+status: claimed
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T20:44:11Z"
+assignee: "converge-model-mixin-plumbing-surface-remainder"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "assertCalledWith mock messages: format args via inspect like minitest (JSON.stringify crashes on records)"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
