@@ -1,6 +1,6 @@
 ---
 title: "Converge the last six activerecord naming rows that need behaviour changes, then enroll activerecord in the naming gate"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -13,10 +13,10 @@ deps:
   ]
 deps-rfc: []
 est-loc: 250
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 46
+pr: trails#8029
+claim: "2026-09-24T13:05:50Z"
+assignee: "naming-burndown-activerecord-behavioral"
 blocked-by: null
 closed-reason: null
 ---

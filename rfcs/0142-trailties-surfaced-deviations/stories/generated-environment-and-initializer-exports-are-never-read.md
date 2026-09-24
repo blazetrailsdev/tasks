@@ -1,7 +1,7 @@
 ---
 title: "Generated config/environments and filter-parameter-logging export values nothing reads, so they configure nothing"
-status: draft
-updated: 2026-09-23
+status: in-progress
+updated: 2026-09-24
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8026
+claim: "2026-09-24T13:25:40Z"
+assignee: "generated-environment-and-initializer-exports-are-never-read"
 blocked-by: null
 closed-reason: null
 ---

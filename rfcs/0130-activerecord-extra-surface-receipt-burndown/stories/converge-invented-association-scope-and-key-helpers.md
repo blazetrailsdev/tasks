@@ -1,7 +1,7 @@
 ---
 title: "converge-invented-association-scope-and-key-helpers"
-status: ready
-updated: 2026-09-23
+status: claimed
+updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T13:40:32Z"
+assignee: "adapter-class-sync-retires-with-eager-adapter-resolution"
 blocked-by: null
 closed-reason: null
 ---

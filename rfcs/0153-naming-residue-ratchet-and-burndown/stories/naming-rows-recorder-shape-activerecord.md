@@ -1,6 +1,6 @@
 ---
 title: "Call-args recorder pairs a Ruby `raise X.new(...)` with an unrelated TS `new` (activerecord migrationsStatus)"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

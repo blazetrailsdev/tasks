@@ -1,18 +1,18 @@
 ---
 title: "Move the pin to 7.1 stable and re-check the trails-tsc gaps"
 status: blocked
-updated: 2026-08-26
+updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: ["trails-tsc", "activerecord-cli"]
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null
-blocked-by: "TypeScript 7.1 stable — scheduled 2026-11-10 (microsoft/TypeScript#63703). As of 2026-08-25 the latest release is 7.0.2 and 7.1 exists only as nightlies, so neither half of this story is actionable: there is no stable 7.1 to move the pin onto, and the API surface does not settle until 7.1 beta on 2026-09-09."
+blocked-by: "TypeScript 7.1 stable — scheduled 2026-11-24, beta 2026-10-06 (microsoft/TypeScript#63703, re-fetched 2026-09-23). latest is still 7.0.2 and 7.1 ships only as next nightlies, so neither half is actionable yet."
 ---
 
 ## Context

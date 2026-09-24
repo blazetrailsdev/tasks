@@ -1,7 +1,7 @@
 ---
 title: "Flip the pinned typescript to 7.x and drop TypeScript 5.x"
-status: blocked
-updated: 2026-09-23
+status: claimed
+updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages:
@@ -18,11 +18,11 @@ deps:
   ]
 deps-rfc: []
 est-loc: 110
-priority: null
+priority: 4
 pr: null
-claim: "2026-09-23T18:25:51Z"
-assignee: "flip-build-to-ts7"
-blocked-by: "Waits on dep port-tsc-wrapper-to-ts7-api (unblocked 2026-09-23 by scope-activerecord-cli-build-mode-ts5-seam, trails#8019 / tasks#168: activerecord-cli's createArSolutionBuilder is a scoped 5.x seam reached via trails-tsc's own typescript-5 alias). Prerequisite (2), the root classic-API consumers, was resolved by account-for-root-ts5-api-consumers."
+claim: "2026-09-24T13:32:21Z"
+assignee: "auto-import-relative-specifier-parity-test"
+blocked-by: null
 ---
 
 ## Context

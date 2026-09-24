@@ -1,7 +1,7 @@
 ---
 title: "defineColumnMethods writes to the abstract TableDefinition prototype, not the receiver"
-status: ready
-updated: 2026-09-23
+status: in-progress
+updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 8
-pr: null
-claim: null
-assignee: null
+pr: trails#8031
+claim: "2026-09-24T13:23:13Z"
+assignee: "database-selector-session-typed-against-the-rack-session"
 blocked-by: null
 closed-reason: null
 ---

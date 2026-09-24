@@ -1,6 +1,6 @@
 ---
 title: "Restore tsconfig-merge's parse-error rejection on the TS 7.1 API"
-status: draft
+status: claimed
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T13:32:21Z"
+assignee: "auto-import-relative-specifier-parity-test"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,18 +1,18 @@
 ---
 title: "Measure editor language-service latency on activerecord (TS 5.9.3 vs TS 7)"
-status: ready
-updated: 2026-09-23
+status: blocked
+updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Deliberately postponed (RFC 0125 Rollout §5): the TSE language-service plugin is not wired into any tsconfig plugins array or editor config, and TS 7.1's LanguageService has no plugin hosting. Parked with the views pipeline; revisit with recheck-ts7-api-surface at 7.1 stable (2026-11-24)."
 ---
 
 ## Context

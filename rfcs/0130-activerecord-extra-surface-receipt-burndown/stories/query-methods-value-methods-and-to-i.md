@@ -1,7 +1,7 @@
 ---
 title: "Run the value-method loop in QueryMethods' module body and port to_i through ruby-compat"
-status: ready
-updated: 2026-09-23
+status: claimed
+updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: 8
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T13:35:28Z"
+assignee: "point-value-converges-onto-active-record-point"
 blocked-by: null
 closed-reason: null
 ---

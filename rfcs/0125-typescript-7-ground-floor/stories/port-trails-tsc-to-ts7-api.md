@@ -1,14 +1,14 @@
 ---
 title: "Port trails-tsc to the TS 7 API (the split-env blocker)"
 status: blocked
-updated: 2026-08-26
+updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: ["trails-tsc"]
 deps: ["recheck-ts7-api-surface"]
 deps-rfc: []
 est-loc: 600
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

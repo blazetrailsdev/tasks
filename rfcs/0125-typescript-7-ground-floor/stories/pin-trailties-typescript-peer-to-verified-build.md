@@ -1,17 +1,17 @@
 ---
 title: "Pin trailties' typescript peer to the verified 7.1 nightly"
-status: draft
-updated: 2026-09-23
+status: claimed
+updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 5
-priority: null
+priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T13:32:21Z"
+assignee: "auto-import-relative-specifier-parity-test"
 blocked-by: null
 closed-reason: null
 ---

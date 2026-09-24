@@ -1,7 +1,7 @@
 ---
 title: "Gate the naming class once the burndown has drained it"
 status: blocked
-updated: 2026-09-23
+updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: []
@@ -20,9 +20,9 @@ est-loc: 80
 pr: null
 claim: "2026-08-11T01:14:36Z"
 assignee: "arel-collector-argument-order-convergence"
-blocked-by: "Re-checked 2026-09-23 on trails b040d60164: still live. Precondition is zero in-closure convergeable naming rows; measured 92 (activesupport 23, activerecord 69: connection-adapters 26, relation 15, remaining 28). Owner is now RFC 0153 (the stale 'needs a new naming-wave RFC' text is superseded); the drain is encoded as deps on W1-W5 (W1 done via trails#7956). Unblock once W2-W5 merge and activesupport + activerecord are in NAMING_ENROLLED_PACKAGES. Body criterion 2 still describes seeding baseline rows; RFC 0153 Rollout step 3 prose amendment (receipts, not baseline) is pending."
+blocked-by: "Re-checked 2026-09-24 on trails 5debb0f743: still live. W1-W5 all merged (trails#7956, #8005, #8011, #8022), but NAMING_ENROLLED_PACKAGES (scripts/api-compare/lint-call-args.ts:101) is still activemodel, activerecord-test-support, arel, globalid, i18n — activesupport and activerecord are not enrolled. Their enrollment moved to the split follow-ups naming-residue-burndown-activesupport-structural (13 activesupport rows) and naming-burndown-activerecord-behavioral (6 activerecord rows + recorder/receipt fixes). Unblock once both merge and both packages are enrolled. Body criterion 2 still describes seeding baseline rows; RFC 0153 Rollout step 3 prose amendment (receipts, not baseline) is pending."
 closed-reason: null
-priority: 14
+priority: 50
 ---
 
 ## Context

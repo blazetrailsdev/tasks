@@ -1,6 +1,6 @@
 ---
 title: "Port activerecord-cli's tsc-wrapper to the TS 7 API"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra

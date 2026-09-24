@@ -1,6 +1,6 @@
 ---
 title: "TouchLater#touch_later: call add_to_transaction, drop the connection probe and early return"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8030
+claim: "2026-09-24T13:26:46Z"
+assignee: "converge-migration-connection-cold-arm-onto-awaited-lease"
 blocked-by: null
 closed-reason: null
 ---

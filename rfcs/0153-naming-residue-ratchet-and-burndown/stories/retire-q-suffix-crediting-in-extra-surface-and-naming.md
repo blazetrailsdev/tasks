@@ -1,6 +1,6 @@
 ---
 title: "Stop extra-surface and naming-taxonomy crediting the Q spelling; ban new *Q predicates"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

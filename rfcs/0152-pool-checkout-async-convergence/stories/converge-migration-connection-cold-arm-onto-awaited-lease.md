@@ -1,7 +1,7 @@
 ---
 title: "converge-migration-connection-cold-arm-onto-awaited-lease"
-status: ready
-updated: 2026-09-23
+status: in-progress
+updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8030
+claim: "2026-09-24T13:26:46Z"
+assignee: "converge-migration-connection-cold-arm-onto-awaited-lease"
 blocked-by: null
 closed-reason: null
 ---

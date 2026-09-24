@@ -1,7 +1,7 @@
 ---
 title: "A model cannot override timestamp_attributes_for_update: timestamp.ts calls the module function, not the class"
-status: draft
-updated: 2026-09-23
+status: in-progress
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8028
+claim: "2026-09-24T13:29:52Z"
+assignee: "model-cannot-override-timestamp-attributes-for-update"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Store accessors module is a real included Module; delete module-carrier"
-status: ready
-updated: 2026-09-23
+status: in-progress
+updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 8
-pr: null
-claim: null
-assignee: null
+pr: trails#8027
+claim: "2026-09-24T13:07:19Z"
+assignee: "test-bodies-lease-connection-per-test"
 blocked-by: null
 closed-reason: null
 ---
