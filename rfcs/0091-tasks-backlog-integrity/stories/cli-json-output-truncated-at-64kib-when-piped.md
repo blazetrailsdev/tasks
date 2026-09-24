@@ -4,7 +4,7 @@ status: draft
 updated: 2026-09-24
 rfc: "0091-tasks-backlog-integrity"
 cluster: null
-packages: ["tasks"]
+packages: []
 deps: []
 deps-rfc: []
 est-loc: 30
