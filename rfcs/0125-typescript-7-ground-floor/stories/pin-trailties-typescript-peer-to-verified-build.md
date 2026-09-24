@@ -1,6 +1,6 @@
 ---
 title: "Pin trailties' typescript peer to the verified 7.1 nightly"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null

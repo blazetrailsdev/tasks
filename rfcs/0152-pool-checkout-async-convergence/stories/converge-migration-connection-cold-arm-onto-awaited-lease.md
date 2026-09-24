@@ -1,6 +1,6 @@
 ---
 title: "converge-migration-connection-cold-arm-onto-awaited-lease"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null

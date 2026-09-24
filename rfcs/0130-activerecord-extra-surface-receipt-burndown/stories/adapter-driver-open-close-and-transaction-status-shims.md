@@ -1,6 +1,6 @@
 ---
 title: "Retire the adapter whenClosed / async-open / transactionStatus driver shims"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 9
-pr: null
-claim: null
-assignee: null
+pr: trails#8036
+claim: "2026-09-24T15:31:05Z"
+assignee: "adapter-driver-open-close-and-transaction-status-shims"
 blocked-by: null
 closed-reason: null
 ---

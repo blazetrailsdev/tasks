@@ -1,6 +1,6 @@
 ---
 title: "Test bodies read a per-test leased connection, not Base.connection (reserved-word, schema-dumper, migration, primary-keys)"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

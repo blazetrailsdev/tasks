@@ -1,6 +1,6 @@
 ---
 title: "Sanitization: quote inside with_connection per branch, fold _sanitizeSqlArray/quoterFor"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null

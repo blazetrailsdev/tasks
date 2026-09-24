@@ -1,6 +1,6 @@
 ---
 title: "build-freshness-guard-ts7-build-api"
-status: draft
+status: blocked
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "TS 7.1 exposes no programmatic solution builder / up-to-date API; waits on recheck-ts7-api-surface (TS 7.1 stable, 2026-11-24)"
 closed-reason: null
 ---
 

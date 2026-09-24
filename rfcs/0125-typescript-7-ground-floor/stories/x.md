@@ -1,6 +1,6 @@
 ---
 title: "x"
-status: draft
+status: closed
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "created by mistake (stray empty tasks new invocation from trails#8035's worker); no work"
 ---
 
 ## Context

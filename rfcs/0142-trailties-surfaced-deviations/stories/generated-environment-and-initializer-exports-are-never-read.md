@@ -1,6 +1,6 @@
 ---
 title: "Generated config/environments and filter-parameter-logging export values nothing reads, so they configure nothing"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

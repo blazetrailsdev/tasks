@@ -1,6 +1,6 @@
 ---
 title: "Store accessors module is a real included Module; delete module-carrier"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

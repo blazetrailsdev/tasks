@@ -1,6 +1,6 @@
 ---
 title: "Track and retire the .pnpmfile.cjs TS 5.9.3 peer hook per consumer"
-status: draft
+status: in-progress
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8035
+claim: "2026-09-24T15:32:22Z"
+assignee: "build-freshness-guard-fail-closed-oracle"
 blocked-by: null
 closed-reason: null
 ---

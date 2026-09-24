@@ -1,6 +1,6 @@
 ---
 title: "A model cannot override timestamp_attributes_for_update: timestamp.ts calls the module function, not the class"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

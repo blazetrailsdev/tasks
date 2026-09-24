@@ -1,6 +1,6 @@
 ---
 title: "Serialize SqlTypeMetadata through the Column encode_with path, not toJSON"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

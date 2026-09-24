@@ -1,6 +1,6 @@
 ---
 title: "Restore tsconfig-merge's parse-error rejection on the TS 7.1 API"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null

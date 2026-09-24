@@ -1,6 +1,6 @@
 ---
 title: "TouchLater#touch_later: call add_to_transaction, drop the connection probe and early return"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null

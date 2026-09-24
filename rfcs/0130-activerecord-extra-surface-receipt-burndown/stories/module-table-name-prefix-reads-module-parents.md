@@ -1,6 +1,6 @@
 ---
 title: "Resolve a namespace's table-name prefix/suffix through module_parents, not a string registry"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

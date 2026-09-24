@@ -1,6 +1,6 @@
 ---
 title: "Stop a discarded pool before tryToCheckoutNewConnection so its _connections guard can go"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null

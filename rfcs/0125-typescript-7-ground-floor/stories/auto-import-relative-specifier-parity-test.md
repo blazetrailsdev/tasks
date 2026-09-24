@@ -1,6 +1,6 @@
 ---
 title: "Check in a path.relative parity test for auto-import's relative specifier"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
