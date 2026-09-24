@@ -1,6 +1,6 @@
 ---
 title: "Arel's public Nodes/Visitors namespaces are separate objects from the Autoload namespaces readers resolve against"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "ConnectionHandling resolves its pool via this.connectionPool(); drop HABTM's _connectionSpecificationName override"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null

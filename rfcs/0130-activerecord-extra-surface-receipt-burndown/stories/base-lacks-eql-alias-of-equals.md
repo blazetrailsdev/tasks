@@ -1,6 +1,6 @@
 ---
 title: "Base lacks eql (core.rb:637 alias eql? ==); converge relation uniq/&/| onto ruby-compat uniq"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "backtrace-cleaner-has-no-default-gem-and-stdlib-silencers"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

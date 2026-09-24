@@ -1,6 +1,6 @@
 ---
 title: "SQLite3Adapter#ensureConnected is a trails-only lazy open that bypasses with_raw_connection"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

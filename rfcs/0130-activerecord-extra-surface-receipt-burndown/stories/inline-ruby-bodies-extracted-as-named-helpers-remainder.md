@@ -1,6 +1,6 @@
 ---
 title: "Inline the ruby bodies still extracted as named helpers (0119 remainder)"
-status: ready
+status: claimed
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T19:49:58Z"
+assignee: "converge-adapter-schema-and-result-helper-surface-remainder"
 blocked-by: null
 closed-reason: null
 ---

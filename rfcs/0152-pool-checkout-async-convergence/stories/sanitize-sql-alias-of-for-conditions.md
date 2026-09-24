@@ -1,6 +1,6 @@
 ---
 title: "sanitize-sql-alias-of-for-conditions"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null

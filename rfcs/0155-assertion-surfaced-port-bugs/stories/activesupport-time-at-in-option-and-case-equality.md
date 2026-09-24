@@ -1,6 +1,6 @@
 ---
 title: "Time.at(seconds, in:) and Time.=== override are unported"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

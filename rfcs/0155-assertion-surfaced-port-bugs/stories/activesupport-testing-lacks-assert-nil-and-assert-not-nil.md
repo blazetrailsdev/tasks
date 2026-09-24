@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport::Testing::Assertions has no assertNil / assertNotNil, so assert_not_nil ports as .not.toBeNull() and passes on undefined"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

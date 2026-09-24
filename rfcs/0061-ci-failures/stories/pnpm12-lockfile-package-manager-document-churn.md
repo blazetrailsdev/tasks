@@ -1,6 +1,6 @@
 ---
 title: "Stop pnpm 12 rewriting the packageManagerDependencies lockfile document"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0061-ci-failures"
 cluster: null

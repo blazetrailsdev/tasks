@@ -1,6 +1,6 @@
 ---
 title: "Arel::Nodes.build_quoted is public in Rails but absent from trails' Nodes namespace"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0023-surfaced-deviations"
 cluster: null

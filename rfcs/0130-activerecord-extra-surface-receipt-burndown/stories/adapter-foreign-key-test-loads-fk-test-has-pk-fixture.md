@@ -1,6 +1,6 @@
 ---
 title: "AdapterForeignKeyTest loads fixtures :fk_test_has_pk as adapter_test.rb:346 does"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

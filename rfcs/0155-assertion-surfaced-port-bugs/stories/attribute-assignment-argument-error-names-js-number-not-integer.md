@@ -1,6 +1,6 @@
 ---
 title: "attribute-assignment-argument-error-names-js-number-not-integer"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

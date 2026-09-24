@@ -1,6 +1,6 @@
 ---
 title: "naming-residue-burndown-activesupport-structural"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

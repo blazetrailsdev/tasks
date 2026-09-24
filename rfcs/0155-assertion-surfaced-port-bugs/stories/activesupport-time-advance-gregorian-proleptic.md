@@ -1,6 +1,6 @@
 ---
 title: "Time#advance across the 1582 calendar reform does not match Rails"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
