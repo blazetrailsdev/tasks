@@ -17,6 +17,7 @@ clusters:
   - "comparers"
 related-rfcs:
   - "0155-assertion-surfaced-port-bugs"
+  - "0158-activesupport-assertion-surfaced-port-bugs"
   - "0132-ar-closure-assertion-parity"
   - "0126-fidelity-tooling-continuation"
   - "0127-fidelity-tooling-signals-and-hygiene"
@@ -36,6 +37,11 @@ activerecord. The audit in [`audit-20260920.md`](audit-20260920.md) explains the
 contradiction and sorts the 180 by defect shape. This RFC files the tooling that
 audit found to be buildable. Together the stories catch about 40 of the 180 and make about 6 more visible.
 About 61 have no possible tool, and this RFC does not chase them.
+
+Since 2026-09-24, the stories whose fix lands in activesupport or date live in
+`0158-activesupport-assertion-surfaced-port-bugs`, split off from 0155. Their
+slugs did not change, so the "0155 story" citations in this RFC and its audit
+still name the right stories. Only the directory moved.
 
 ## Motivation
 

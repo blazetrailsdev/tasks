@@ -1,21 +1,20 @@
 ---
 rfc: "0155-assertion-surfaced-port-bugs"
-title: "Port bugs surfaced by assertion convergence — RFC 0132's overflow bucket"
+title: "Port bugs surfaced by assertion convergence — RFC 0132's overflow bucket (non-ActiveSupport)"
 status: active
 created: 2026-09-18
 updated: 2026-09-24
 owner: "@deanmarano"
 packages:
   - "activerecord"
-  - "activesupport"
   - "activemodel"
-  - "date"
   - "globalid"
   - "sqlite3"
   - "ruby-compat"
 clusters:
   - "surfaced-bugs"
 related-rfcs:
+  - "0158-activesupport-assertion-surfaced-port-bugs"
   - "0132-ar-closure-assertion-parity"
   - "0105-ar-deps-test-parity-100"
   - "0122-arel-assertion-parity"
@@ -67,6 +66,30 @@ assertions or its body to Rails. Typically one of:
   the behaviour, file it there and say so; this bucket is the default, not a
   monopoly. Same for a package's `<package>-surfaced-deviations` bucket when the
   finding is a deviation register entry rather than a bug.
+- **A fix that lands in `packages/activesupport/src/` or `packages/date/src/`
+  goes to `0158-activesupport-assertion-surfaced-port-bugs`** — see § "Which
+  bucket" below.
+
+## Which bucket: 0155 or 0158
+
+As of 2026-09-24 this RFC is split by one question: **which package's `src/`
+does the fix land in?**
+
+| Fix lands in                                                     | File it in                                                                 |
+| ---------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `activesupport` or `date` (incl. `activesupport/src/testing/`)   | `0158-activesupport-assertion-surfaced-port-bugs`                          |
+| `activerecord`, `activemodel`, `globalid`, `rack`, anything else | here, `0155-assertion-surfaced-port-bugs`                                  |
+| `ruby-compat`                                                    | `0154-ruby-compat-surfaced-deviations` if it owns the primitive, else here |
+| not established yet                                              | wherever the parked test's package points; moving later is a markdown edit |
+
+The parked test's package does not decide it: an ActiveRecord test blocked on
+`assertRaises` or `assertNotCalled` is an ActiveSupport fix and goes to 0158.
+A story that spans both (an AR file remainder that is also waiting on an
+ActiveSupport helper) stays with the file that owns the remainder.
+
+The 78 stories matching the first row — done ones included, so each package's
+prior art sits beside its open work — moved to 0158 on 2026-09-24, leaving 170
+here. Slugs did not change, so `BLOCKED:` lines and citations still resolve.
 
 ## How a story gets here
 
@@ -75,6 +98,8 @@ Rails `file:line` already in front of them:
 
 ```bash
 pnpm tasks new 0155-assertion-surfaced-port-bugs <slug> --body-file <path>
+# or, for an activesupport / date fix:
+pnpm tasks new 0158-activesupport-assertion-surfaced-port-bugs <slug> --body-file <path>
 ```
 
 The body carries `## Context` (both sides' `file:line`, what Rails does, what
@@ -111,5 +136,13 @@ So a story here carries, at minimum:
 
 This RFC is a standing bucket for as long as 0132 is burning down, and it
 closes when both are true: 0132 is closed, and no parked test in the tree points
-at a story here. It is not a permanent register — a row in it is a test that is
+at a story here. 0158 closes on its own condition; neither waits on the other. It is not a permanent register — a row in it is a test that is
 currently not running, which is exactly the debt it exists to make countable.
+
+## Changelog
+
+- 2026-09-18: created as RFC 0132's overflow bucket (tasks#141).
+- 2026-09-24: split. The 78 stories whose fix lands in `activesupport` or
+  `date` moved to `0158-activesupport-assertion-surfaced-port-bugs`, and 170
+  stay here (122 open). The routing rule is § "Which bucket: 0155 or 0158".
+  The analysis of the seam is in 0158 § "Alternatives considered".
