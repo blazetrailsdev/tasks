@@ -87,8 +87,8 @@ The parked test's package does not decide it: an ActiveRecord test blocked on
 A story that spans both (an AR file remainder that is also waiting on an
 ActiveSupport helper) stays with the file that owns the remainder.
 
-The 76 stories matching the first row — done ones included, so each package's
-prior art sits beside its open work — moved to 0158 on 2026-09-24, leaving 169
+The 78 stories matching the first row — done ones included, so each package's
+prior art sits beside its open work — moved to 0158 on 2026-09-24, leaving 170
 here. Slugs did not change, so `BLOCKED:` lines and citations still resolve.
 
 ## How a story gets here
@@ -142,7 +142,7 @@ currently not running, which is exactly the debt it exists to make countable.
 ## Changelog
 
 - 2026-09-18: created as RFC 0132's overflow bucket (tasks#141).
-- 2026-09-24: split. The 76 stories whose fix lands in `activesupport` or
-  `date` moved to `0158-activesupport-assertion-surfaced-port-bugs`, and 169
-  stay here (126 open). The routing rule is § "Which bucket: 0155 or 0158".
+- 2026-09-24: split. The 78 stories whose fix lands in `activesupport` or
+  `date` moved to `0158-activesupport-assertion-surfaced-port-bugs`, and 170
+  stay here (122 open). The routing rule is § "Which bucket: 0155 or 0158".
   The analysis of the seam is in 0158 § "Alternatives considered".

@@ -26,8 +26,8 @@ priority: 3
 This RFC holds bugs in ported ActiveSupport code that were found by converging
 a test's assertions onto Rails, and that are fixed in `packages/activesupport/src/`
 or `packages/date/src/`. It was split out of
-`0155-assertion-surfaced-port-bugs` on 2026-09-24 and took 76 of 0155's 245
-stories with it. 48 of them are still open. Filing works exactly as it does in
+`0155-assertion-surfaced-port-bugs` on 2026-09-24 and took 78 of 0155's 248
+stories with it. 45 of them are still open. Filing works exactly as it does in
 0155: park the test, file the bug and move on. The destination is decided by
 one question: **which package's `src/` does the fix land in?**
 
@@ -40,8 +40,8 @@ share by package was lopsided:
 
 | Package the fix lands in             | Stories | Open |
 | ------------------------------------ | ------- | ---- |
-| activerecord, activemodel and others | 169     | 126  |
-| activesupport + date                 | 76      | 48   |
+| activerecord, activemodel and others | 170     | 122  |
+| activesupport + date                 | 78      | 45   |
 
 ActiveSupport had nowhere else to go:
 
@@ -52,9 +52,9 @@ ActiveSupport had nowhere else to go:
   ruby-compat (0154) each have a `<package>-surfaced-deviations` bucket.
   activesupport does not.
 
-So these 76 stories were all of activesupport's open convergence backlog,
+So these 78 stories were all of activesupport's open convergence backlog,
 filed next to ActiveRecord work they have nothing in common with. Someone
-working on `TimeWithZone` or `Deprecation` had to filter a 245-row RFC to find
+working on `TimeWithZone` or `Deprecation` had to filter a 248-row RFC to find
 their own work.
 
 ## Design
@@ -134,7 +134,8 @@ This is 0155's definition, unchanged:
 
 ## Alternatives considered
 
-I read all 245 stories in 0155 before choosing a split. For each story I
+I read all 245 stories in 0155 before choosing a split. Three more were filed
+while this PR was open, and the same rule placed them. For each story I
 collected the trails `src/` and `*.test.ts` paths, the Rails path and the DB
 status.
 
@@ -172,76 +173,40 @@ status.
 This RFC is a bucket, not a sequence, so the groups below can be worked in any
 order. They are listed by how many other stories each one unblocks. The counts
 cover every story, and only open story IDs are listed. Status is from the DB
-as of 2026-09-24.
+as of 2026-09-24, after rebasing onto main.
 
-1. **`ActiveSupport::Testing` and the Minitest assertion helpers.** 22
-   stories, 11 open. These go first because a helper bug parks tests in every
-   package.
-   - In progress: `assert-called-with-mock-messages-use-inspect`,
-     `assert-difference-wraps-errors-in-unexpected-error`
-   - Ready: `minitest-assertion-helpers-carry-false-norailsequivalent-receipts`,
-     `port-activesupport-testing-stream-capture`,
-     `shared-assert-not-called-watches-class-construction`,
-     `testing-deprecation-helpers-do-not-require-a-deprecator`
-   - Draft: `activesupport-assert-match-drops-respond-to-and-last-match`,
-     `activesupport-callable-to-source-string-returns-string-not-callable`,
-     `assert-deprecated-two-arg-form-drops-the-block`,
-     `assert-nil-helper-sweep-remaining-packages`,
-     `tagged-logger-does-not-memoize-rails-logger`
-2. **`Time`, `Date`, `DateTime`, `Duration` and `TimeWithZone`.** 26 stories,
-   15 open.
-   - In progress: `activesupport-time-with-zone-subnanosecond-fractions`,
-     `activesupport-time-with-zone-to-time-preserve-timezone-deprecation`
-   - Ready: `activesupport-time-floor-ceil-ndigits`,
-     `converge-date-and-time-calculations-to-this-typed-mixin`,
-     `date-civil-does-not-reject-extra-arguments`,
-     `date-in-time-zone-return-type-includes-time`,
-     `duration-sum-guard-is-an-instanceof-list-not-acts-like`,
-     `duration-test-env-tz-zero-and-integer-division`,
-     `time-weekday-helpers-return-instant-not-time`
-   - Draft: `instanceof-time-sites-assume-twz-is-not-a-time`,
-     `time-instanceof-dispatch-arms-now-admit-time-with-zone`,
-     `time-with-zone-rejects-tzinfo-timezone-zone`
-   - Blocked: `activesupport-time-new-timezone-object-argument`,
-     `activesupport-time-to-datetime-start-and-to-time`,
-     `time-date-class-methods-allocate-receiver-subclass`
-3. **`Deprecation`, deprecation proxies and `Module#deprecate`.** 10 stories,
-   8 open.
-   - Ready: `deprecated-constant-proxy-does-not-raise-on-a-missing-child-constant`,
-     `deprecated-constant-proxy-is-not-transparent-to-equality`,
-     `deprecation-behavior-does-not-accept-callable-objects`,
-     `deprecation-callstack-blame-has-no-eval-file-attribution`,
-     `deprecation-proxies-do-not-require-a-deprecator`,
-     `deprecation-proxy-cannot-intercept-object-prototype-methods`,
-     `deprecation-silence-and-allow-restore-before-an-async-block-settles`
+1. **`ActiveSupport::Testing` and the Minitest assertion helpers.** 22 stories, 9 open.
+   These go first because a helper bug parks tests in every package.
+   - Ready: `minitest-assertion-helpers-carry-false-norailsequivalent-receipts`, `port-activesupport-testing-stream-capture`, `shared-assert-not-called-watches-class-construction`, `testing-deprecation-helpers-do-not-require-a-deprecator`
+   - Draft: `activesupport-assert-match-drops-respond-to-and-last-match`, `activesupport-callable-to-source-string-returns-string-not-callable`, `assert-deprecated-two-arg-form-drops-the-block`, `assert-nil-helper-sweep-remaining-packages`, `tagged-logger-does-not-memoize-rails-logger`
+2. **`Time`, `Date`, `DateTime`, `Duration` and `TimeWithZone`.** 28 stories, 14 open.
+   - Claimed: `date-civil-does-not-reject-extra-arguments`, `date-in-time-zone-return-type-includes-time`
+   - Ready: `converge-date-and-time-calculations-to-this-typed-mixin`, `duration-sum-guard-is-an-instanceof-list-not-acts-like`, `duration-test-env-tz-zero-and-integer-division`, `time-weekday-helpers-return-instant-not-time`
+   - Draft: `delete-legacy-time-ext-floor-ceil-helpers`, `instanceof-time-sites-assume-twz-is-not-a-time`, `time-instanceof-dispatch-arms-now-admit-time-with-zone`, `time-subsec-drops-subnano-residual`, `time-with-zone-rejects-tzinfo-timezone-zone`
+   - Blocked: `activesupport-time-new-timezone-object-argument`, `activesupport-time-to-datetime-start-and-to-time`, `time-date-class-methods-allocate-receiver-subclass`
+3. **`Deprecation`, deprecation proxies and `Module#deprecate`.** 10 stories, 8 open.
+   - Claimed: `deprecated-constant-proxy-does-not-raise-on-a-missing-child-constant`, `deprecated-constant-proxy-is-not-transparent-to-equality`, `deprecation-callstack-blame-has-no-eval-file-attribution`
+   - Ready: `deprecation-behavior-does-not-accept-callable-objects`, `deprecation-proxies-do-not-require-a-deprecator`, `deprecation-proxy-cannot-intercept-object-prototype-methods`, `deprecation-silence-and-allow-restore-before-an-async-block-settles`
    - Draft: `activesupport-deprecation-tests-bypass-module-deprecate`
 4. **Logger, `BroadcastLogger`, `TaggedLogging`, Notifications, Callbacks and
    Rescuable.** 10 stories, 7 open.
-   - Ready: `logger-default-simple-formatter-and-nonstring-inspect`,
-     `notifications-subscribe-overloads-reject-rails-shaped-callbacks`,
-     `notifications-timed-subscriber-arity-and-event-cpu-allocations`,
-     `rescuable-has-no-rescue-handlers-reader`,
-     `reset-callbacks-does-not-remove-from-descendants`,
-     `tagged-logging-proxy-is-not-a-formatter-extension`
+   - Ready: `logger-default-simple-formatter-and-nonstring-inspect`, `notifications-subscribe-overloads-reject-rails-shaped-callbacks`, `notifications-timed-subscriber-arity-and-event-cpu-allocations`, `rescuable-has-no-rescue-handlers-reader`, `reset-callbacks-does-not-remove-from-descendants`, `tagged-logging-proxy-is-not-a-formatter-extension`
    - Draft: `logger-add-evaluates-block-message`
 5. **Core extensions: HWIA, `OrderedOptions`, `Enumerable`, `Chars`,
    `delegate` and the cache lookup.** 8 stories, 7 open.
-   - Ready: `cache-lookup-store-has-no-mem-cache-or-redis-store`,
-     `enumerable-sum-index-with-and-excluding-port-gaps`,
-     `hwia-has-no-enumerator-form-or-yaml-dump`,
-     `hwia-test-enumerator-and-yaml-remainder`,
-     `ordered-options-key-does-not-tell-symbol-from-string`
+   - Claimed: `cache-lookup-store-has-no-mem-cache-or-redis-store`
+   - Ready: `enumerable-sum-index-with-and-excluding-port-gaps`, `hwia-has-no-enumerator-form-or-yaml-dump`, `hwia-test-enumerator-and-yaml-remainder`, `ordered-options-key-does-not-tell-symbol-from-string`
    - Draft: `chars-length-counts-utf16-units`
    - Blocked: `activesupport-delegate-private-and-ruby-method-semantics`
 
 ## Verification
 
-- **Open stories reach 0**, down from 48 at the split, apart from new stories
+- **Open stories reach 0**, down from 45 at merge time, apart from new stories
   filed by later convergence work. Measure with
   `pnpm tasks list --rfc 0158-activesupport-assertion-surfaced-port-bugs`.
 - **No parked test points at an open story here.** Measure with
   `grep -rhoE "BLOCKED: [a-z0-9-]+" packages/` in trails, intersected with
-  this RFC's open slugs. At the split, 24 of the 76 slugs are cited that way.
+  this RFC's open slugs. At merge time, 21 of the 78 slugs are cited that way.
 - **Each un-parked file keeps or improves its assertion count.** Check with
   `pnpm parity:test -- --assertions`, as in the definition of done.
 
@@ -271,6 +236,10 @@ each open row is a test that is not running.
 
 ## Changelog
 
+- 2026-09-24: while the PR was open, two stories were filed in 0155 whose
+  fix lands in `packages/date` (`time-subsec-drops-subnano-residual`) and
+  in `packages/activesupport` (`delete-legacy-time-ext-floor-ceil-helpers`).
+  Both moved here too, bringing the total to 78.
 - 2026-09-24: split from `0155-assertion-surfaced-port-bugs`. Moved 76
   stories: 28 done, 29 ready, 11 draft, 4 blocked and 4 in progress. Every
   story slug is unchanged.
