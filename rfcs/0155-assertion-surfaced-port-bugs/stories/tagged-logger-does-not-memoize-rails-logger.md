@@ -2,7 +2,7 @@
 title: "testing/tagged-logging taggedLogger() drops the @tagged_logger ||= memo"
 status: draft
 updated: 2026-09-24
-rfc: "0151-activesupport-autoload-slot-registry"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
