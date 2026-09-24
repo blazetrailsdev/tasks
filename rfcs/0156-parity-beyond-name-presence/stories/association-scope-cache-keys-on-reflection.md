@@ -1,6 +1,6 @@
 ---
 title: "AssociationReflection#associationScopeCache keys on the reflection, not a name string"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

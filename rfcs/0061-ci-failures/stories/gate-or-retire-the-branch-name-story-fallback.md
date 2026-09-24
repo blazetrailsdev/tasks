@@ -1,6 +1,6 @@
 ---
 title: "Gate or retire post-merge-findings' branch-name story fallback"
-status: claimed
+status: in-progress
 updated: 2026-09-24
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: trails#8041
 claim: "2026-09-24T16:43:54Z"
 assignee: "gate-or-retire-the-branch-name-story-fallback"
 blocked-by: null

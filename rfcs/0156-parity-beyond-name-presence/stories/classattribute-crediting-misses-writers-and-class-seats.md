@@ -1,6 +1,6 @@
 ---
 title: "classAttribute crediting misses writers and class-level seats"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

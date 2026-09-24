@@ -1,6 +1,6 @@
 ---
 title: "activesupport: tse/util imports NotImplementedError via cache/store, closing a TDZ cycle that breaks message-pack entry imports"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null

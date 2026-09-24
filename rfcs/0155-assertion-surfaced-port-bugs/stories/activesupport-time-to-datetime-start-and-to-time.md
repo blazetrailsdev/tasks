@@ -1,7 +1,7 @@
 ---
 title: "Time#to_datetime has no start; Time#to_time returns a Temporal"
-status: ready
-updated: 2026-09-22
+status: blocked
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-24T17:14:05Z"
+assignee: "website-sandbox-drops-base-adapter-assignment"
+blocked-by: "Time#toDatetime (packages/date/src/time.ts:1308) builds the owned DateTime then returns its .toDatetime() Temporal, the same shape as every date constructor (DateTime.civil, date.ts:6044), so the test's DateTime.civil(...) == Time#to_datetime comparison is Temporal-vs-Temporal. Returning a DateTime with Ruby's start (time.c time_to_datetime -> Date::ITALY) needs date-parse-returns-temporal-not-the-owned-date-class (0023, 300 LOC) first: converging only Time#toDatetime breaks the civil comparison."
 closed-reason: null
 ---
 

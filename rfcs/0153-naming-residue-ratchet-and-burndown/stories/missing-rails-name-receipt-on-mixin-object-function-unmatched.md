@@ -1,6 +1,6 @@
 ---
 title: "@missingRailsName receipts on a function that is also a mixin-object member never register"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

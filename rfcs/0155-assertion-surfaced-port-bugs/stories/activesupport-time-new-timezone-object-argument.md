@@ -1,7 +1,7 @@
 ---
 title: "Time.new(..., zone) does not accept a TimeZone object (advance, change preserves fractional seconds)"
-status: ready
-updated: 2026-09-22
+status: blocked
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-24T17:14:05Z"
+assignee: "website-sandbox-drops-base-adapter-assignment"
+blocked-by: "date's Time seats a zone only as a Temporal IANA id (#timeZoneId, packages/date/src/time.ts #atInstant). Ruby's tz-object protocol (vendor/ruby/time.c zone_timelocal/zone_localtime:2388-2435, find_timezone:2438) keeps the object on the Time and calls local_to_utc/utc_to_local for every field and arithmetic re-resolution (+ 0, change's zone.respond_to?(:utc_to_local) arm, calculations.rb:147). ActiveSupport::TimeZone exposes no IANA identifier through that protocol, so supporting it needs a zone-object seat mode in time.ts beyond this story's 150 LOC; needs its own design story."
 closed-reason: null
 ---
 

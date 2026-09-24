@@ -1,6 +1,6 @@
 ---
 title: "Call-args recorder emits a bare self-call receiver as a positional argument"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

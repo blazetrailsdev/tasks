@@ -1,6 +1,6 @@
 ---
 title: "Call gate credits a Ruby call ported as its ruby-compat export"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

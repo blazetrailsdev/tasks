@@ -1,7 +1,7 @@
 ---
 title: "assertDifference/assertNoDifference rewrap errors in UnexpectedError; habtm_destroy_order matches by message"
-status: ready
-updated: 2026-09-22
+status: claimed
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T17:44:04Z"
+assignee: "activesupport-time-with-zone-subnanosecond-fractions"
 blocked-by: null
 closed-reason: null
 ---

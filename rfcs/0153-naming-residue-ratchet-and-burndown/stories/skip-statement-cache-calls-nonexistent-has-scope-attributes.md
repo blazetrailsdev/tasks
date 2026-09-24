@@ -1,6 +1,6 @@
 ---
 title: "Association#isSkipStatementCache calls a nonexistent hasScopeAttributes, so the scope_attributes? arm is always false"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

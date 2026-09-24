@@ -1,7 +1,7 @@
 ---
 title: "attribute-from-database-forgetting-assignment-returns-self"
-status: ready
-updated: 2026-09-22
+status: claimed
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T17:59:05Z"
+assignee: "aes256-gcm-inspect-not-rails-format"
 blocked-by: null
 closed-reason: null
 ---

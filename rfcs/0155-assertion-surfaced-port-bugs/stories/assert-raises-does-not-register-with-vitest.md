@@ -1,7 +1,7 @@
 ---
 title: "assert-raises-does-not-register-with-vitest"
-status: ready
-updated: 2026-09-22
+status: done
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7930
+claim: "2026-09-24T17:44:04Z"
+assignee: "activesupport-time-with-zone-subnanosecond-fractions"
 blocked-by: null
 closed-reason: null
 ---

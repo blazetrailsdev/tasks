@@ -1,6 +1,6 @@
 ---
 title: "class-update-converges-onto-persistence-classmethods"
-status: draft
+status: done
 updated: 2026-09-24
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8039
+claim: "2026-09-24T17:04:00Z"
+assignee: "class-update-converges-onto-persistence-classmethods"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Autoload Fixture and raise Fixture::FixtureError, not ActiveRecord.FixtureError"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null

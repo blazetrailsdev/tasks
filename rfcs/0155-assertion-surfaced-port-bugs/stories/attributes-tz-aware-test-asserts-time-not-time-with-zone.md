@@ -1,7 +1,7 @@
 ---
 title: "time zone aware attribute asserts Time where Rails asserts TimeWithZone"
-status: ready
-updated: 2026-09-22
+status: claimed
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T17:59:05Z"
+assignee: "aes256-gcm-inspect-not-rails-format"
 blocked-by: null
 closed-reason: null
 ---

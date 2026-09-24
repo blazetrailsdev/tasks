@@ -1,6 +1,6 @@
 ---
 title: "Map calls to inspect/dup/to_h/to_a in the call gate, per enrolled package"
-status: claimed
+status: in-progress
 updated: 2026-09-24
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8041
 claim: "2026-09-24T16:43:54Z"
 assignee: "gate-or-retire-the-branch-name-story-fallback"
 blocked-by: null

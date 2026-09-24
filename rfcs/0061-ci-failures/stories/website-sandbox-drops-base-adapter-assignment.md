@@ -1,7 +1,7 @@
 ---
 title: "website-sandbox-drops-base-adapter-assignment"
-status: ready
-updated: 2026-09-16
+status: in-progress
+updated: 2026-09-24
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8043
+claim: "2026-09-24T17:14:05Z"
+assignee: "website-sandbox-drops-base-adapter-assignment"
 blocked-by: null
 closed-reason: null
 ---
