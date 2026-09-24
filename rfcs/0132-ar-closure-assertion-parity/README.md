@@ -17,6 +17,7 @@ clusters:
   - enforcement
 related-rfcs:
   - "0155-assertion-surfaced-port-bugs"
+  - "0158-activesupport-assertion-surfaced-port-bugs"
   - "0105-ar-deps-test-parity-100"
   - "0122-arel-assertion-parity"
   - "0025-fidelity-verification-tooling"
@@ -160,11 +161,13 @@ for the third):
   `decimal-cast-value-to-s-fallback`,
   `globalid-locator-single-argument-deprecation` and
   `type-registry-variadic-lookup-forwarding` — stay in this directory as the
-  record of that work; everything after them goes to 0155.
+  record of that work; everything after them goes to 0155 — or, for a fix in
+  `packages/activesupport/src/` or `packages/date/src/`, to its 2026-09-24
+  split `0158-activesupport-assertion-surfaced-port-bugs`.
 - **tooling false positive** — a further mapping or extractor gap goes into
   `assertion-kinds.ts` or the extractor with its own justification, not into a
-  per-file workaround. Assertion tooling stays in THIS RFC; 0155 is for
-  production `src/`.
+  per-file workaround. Assertion tooling stays in THIS RFC; 0155 (and 0158 for
+  activesupport / date) is for production `src/`.
 
 ## A converged assertion that fails is a story, not a detour
 
@@ -212,8 +215,10 @@ So, when the mirrored assertion fails:
    the bucket that exists so this RFC stops growing a tail of production stories
    it cannot close — **not** this RFC, which owns the assertion axis and not the
    behaviours it uncovers. If an active RFC already owns that behaviour, file it
-   there instead and say so; 0155 is the default, not a monopoly. Capture the
-   trails and Rails `file:line` already in front of you.
+   there instead and say so; 0155 is the default, not a monopoly. A fix that
+   lands in `packages/activesupport/src/` or `packages/date/src/` goes to
+   `0158-activesupport-assertion-surfaced-port-bugs` instead (0155 § "Which
+   bucket"). Capture the trails and Rails `file:line` already in front of you.
 4. **Move on to the next file.**
 
 Judgement on size: a one-line production fix you are already sure of is not
@@ -318,7 +323,8 @@ All four came up in trails#7864 and all four have a settled answer:
   against `vendor/rails` and the canonical models IS the work of this RFC, not a
   change of scope. Expect it; do not escalate it.
 - **You found a production bug.** Park the test and file it in
-  `0155-assertion-surfaced-port-bugs` — see the section above. Do not fix it
+  `0155-assertion-surfaced-port-bugs` (or `0158-…` for an activesupport / date
+  fix) — see the section above. Do not fix it
   here, however small it looks.
 - **A deep-dive came out inconclusive.** Park that one test, put what you
   learned — including that it is inconclusive — in the filed story, and move on.
