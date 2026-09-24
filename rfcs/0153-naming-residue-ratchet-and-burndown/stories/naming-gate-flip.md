@@ -12,6 +12,8 @@ deps:
     "naming-burndown-activerecord-connection-adapters",
     "naming-residue-burndown-activerecord-relation",
     "naming-burndown-activerecord-remaining",
+    "naming-residue-burndown-activesupport-structural",
+    "naming-burndown-activerecord-behavioral",
   ]
 deps-rfc: []
 est-loc: 80

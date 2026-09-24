@@ -5,7 +5,7 @@ updated: 2026-09-23
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: []
-deps: []
+deps: ["call-args-recorder-self-call-receiver-as-argument"]
 deps-rfc: []
 est-loc: null
 priority: null
