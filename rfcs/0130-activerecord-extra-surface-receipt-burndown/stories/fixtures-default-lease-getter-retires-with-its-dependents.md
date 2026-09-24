@@ -1,6 +1,6 @@
 ---
 title: "fixtures() drops its default leaseConnection getter once its 27 dependents lease per test"
-status: ready
+status: done
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#8054
+claim: "2026-09-24T21:46:41Z"
+assignee: "fixtures-default-lease-getter-retires-with-its-dependents"
 blocked-by: null
 closed-reason: null
 ---

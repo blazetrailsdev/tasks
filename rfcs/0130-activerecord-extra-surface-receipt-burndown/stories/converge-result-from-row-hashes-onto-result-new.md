@@ -1,6 +1,6 @@
 ---
 title: "Converge Result.fromRowHashes onto Result.new and a Result-holding query cache"
-status: claimed
+status: done
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#8055
 claim: "2026-09-24T20:44:11Z"
 assignee: "converge-model-mixin-plumbing-surface-remainder"
 blocked-by: null

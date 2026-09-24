@@ -1,6 +1,6 @@
 ---
 title: "x"
-status: draft
+status: closed
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,5 +13,5 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "filed by mistake (stray empty tasks new invocation); no work"
 ---

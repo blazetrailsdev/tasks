@@ -1,7 +1,7 @@
 ---
 title: "CollectionProxy#scope memoization converges on Rails reset_scope semantics"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8058
+claim: "2026-09-24T21:02:32Z"
+assignee: "inline-bound-value-and-join-plan-helpers"
 blocked-by: null
 closed-reason: null
 ---

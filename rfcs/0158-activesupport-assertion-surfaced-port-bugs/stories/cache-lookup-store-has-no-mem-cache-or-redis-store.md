@@ -1,7 +1,7 @@
 ---
 title: "cache-lookup-store-has-no-mem-cache-or-redis-store"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8057
+claim: "2026-09-24T21:04:10Z"
+assignee: "cache-lookup-store-has-no-mem-cache-or-redis-store"
 blocked-by: null
 closed-reason: null
 ---

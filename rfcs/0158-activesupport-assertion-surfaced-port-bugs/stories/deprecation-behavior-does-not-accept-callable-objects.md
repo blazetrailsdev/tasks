@@ -1,7 +1,7 @@
 ---
 title: "deprecation-behavior-does-not-accept-callable-objects"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8059
+claim: "2026-09-24T21:24:13Z"
+assignee: "assert-equal-port-does-not-dispatch-ruby-equality"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "ctor-mass-assign-collection-ids-unsupported"
-status: ready
-updated: 2026-09-22
+status: blocked
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-24T21:03:36Z"
+assignee: "move-mysql-foreign-keys-onto-abstract-mysql-adapter"
+blocked-by: "blocked on sync-collection-mass-assignment-refuses-rails-replace: Model.new is permanently sync (RFC 0087) and Rails' ids_writer (collection_association.rb ids_writer) runs a klass.where lookup at assignment time; CollectionAssociation#syncIdsWrite refuses it, and parking the work is banned. createBang reaches the refusal through new this(mergedAttrs)."
 closed-reason: null
 ---
 

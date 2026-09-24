@@ -1,6 +1,6 @@
 ---
 title: "datetime-attribute-rejects-ruby-datetime-values"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

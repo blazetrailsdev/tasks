@@ -1,6 +1,6 @@
 ---
 title: "Sanitization: replace_bind_variable checks ActiveRecord::Relation === value, not a toSql/toArray duck type"
-status: ready
+status: claimed
 updated: 2026-09-24
 rfc: "0152-pool-checkout-async-convergence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T21:48:41Z"
+assignee: "sanitization-replace-bind-variable-relation-check"
 blocked-by: null
 closed-reason: null
 ---

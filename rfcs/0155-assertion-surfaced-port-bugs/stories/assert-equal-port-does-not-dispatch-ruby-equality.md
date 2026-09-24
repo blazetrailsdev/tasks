@@ -1,6 +1,6 @@
 ---
 title: "assert-equal-port-does-not-dispatch-ruby-equality"
-status: draft
+status: in-progress
 updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8059
+claim: "2026-09-24T21:24:13Z"
+assignee: "assert-equal-port-does-not-dispatch-ruby-equality"
 blocked-by: null
 closed-reason: null
 ---

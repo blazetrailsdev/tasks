@@ -1,7 +1,7 @@
 ---
 title: "deprecated-constant-proxy-is-not-transparent-to-equality"
-status: ready
-updated: 2026-09-22
+status: blocked
+updated: 2026-09-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
-blocked-by: null
+pr: trails#8059
+claim: "2026-09-24T21:03:36Z"
+assignee: "move-mysql-foreign-keys-onto-abstract-mysql-adapter"
+blocked-by: "blocked on assert-equal-port-does-not-dispatch-ruby-equality: vitest toEqual (trails' assert_equal port) never dispatches Ruby ==, so no valueOf/toPrimitive seat can equate a Proxy with a string target; the proxy's respondTo also throws on a primitive target."
 closed-reason: null
 ---
 

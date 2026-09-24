@@ -1,6 +1,6 @@
 ---
 title: "Move MySQL foreignKeys onto AbstractMysqlAdapter"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8056
+claim: "2026-09-24T21:03:36Z"
+assignee: "move-mysql-foreign-keys-onto-abstract-mysql-adapter"
 blocked-by: null
 closed-reason: null
 ---

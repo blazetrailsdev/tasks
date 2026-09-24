@@ -1,6 +1,6 @@
 ---
 title: "Inline normalizeBoundValue and emitJoinPlan into their Rails callers"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8058
+claim: "2026-09-24T21:02:32Z"
+assignee: "inline-bound-value-and-join-plan-helpers"
 blocked-by: null
 closed-reason: null
 ---
