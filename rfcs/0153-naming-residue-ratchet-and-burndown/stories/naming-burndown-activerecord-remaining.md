@@ -1,7 +1,7 @@
 ---
 title: "Converge remaining activerecord naming residue and enroll activerecord"
-status: claimed
-updated: 2026-09-23
+status: in-progress
+updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: ["activerecord"]
@@ -9,7 +9,7 @@ deps: ["naming-receipt-enrollment-gate", "naming-residue-burndown-activerecord-r
 deps-rfc: []
 est-loc: 200
 priority: 13
-pr: null
+pr: trails#8022
 claim: "2026-09-23T23:57:04Z"
 assignee: "naming-burndown-activerecord-remaining"
 blocked-by: null

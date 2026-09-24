@@ -1,6 +1,6 @@
 ---
 title: "naming-rows-recorder-shape-activerecord"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
