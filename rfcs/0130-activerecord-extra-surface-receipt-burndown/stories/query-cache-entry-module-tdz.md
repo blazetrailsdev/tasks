@@ -1,6 +1,6 @@
 ---
 title: "query-cache.ts as entry module hits QueryCacheMixin TDZ via abstract-adapter include"
-status: claimed
+status: in-progress
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 8
-pr: null
+pr: trails#8033
 claim: "2026-09-24T13:35:28Z"
 assignee: "point-value-converges-onto-active-record-point"
 blocked-by: null

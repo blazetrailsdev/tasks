@@ -1,6 +1,6 @@
 ---
 title: "define-association-accessors-into-generated-association-methods"
-status: claimed
+status: ready
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 9
 pr: null
-claim: "2026-09-24T13:40:32Z"
-assignee: "adapter-class-sync-retires-with-eager-adapter-resolution"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

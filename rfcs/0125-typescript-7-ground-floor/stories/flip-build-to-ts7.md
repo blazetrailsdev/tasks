@@ -1,6 +1,6 @@
 ---
 title: "Flip the pinned typescript to 7.x and drop TypeScript 5.x"
-status: claimed
+status: in-progress
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
@@ -19,7 +19,7 @@ deps:
 deps-rfc: []
 est-loc: 110
 priority: 4
-pr: null
+pr: trails#8032
 claim: "2026-09-24T13:32:21Z"
 assignee: "auto-import-relative-specifier-parity-test"
 blocked-by: null

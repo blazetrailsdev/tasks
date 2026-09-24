@@ -1,6 +1,6 @@
 ---
 title: "Pin trailties' typescript peer to the verified 7.1 nightly"
-status: claimed
+status: in-progress
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 5
 priority: 3
-pr: null
+pr: trails#8032
 claim: "2026-09-24T13:32:21Z"
 assignee: "auto-import-relative-specifier-parity-test"
 blocked-by: null
