@@ -1,6 +1,6 @@
 ---
 title: "Route every vendor path construction through vendor/sources.ts"
-status: claimed
+status: done
 updated: 2026-09-25
 rfc: "0159-versioned-vendor-layout"
 cluster: vendor
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 1
-pr: null
+pr: trails#8100
 claim: "2026-09-25T18:49:27Z"
 assignee: "route-vendor-path-construction-through-sources-ts"
 blocked-by: null

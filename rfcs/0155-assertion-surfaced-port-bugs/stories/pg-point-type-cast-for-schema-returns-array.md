@@ -1,6 +1,6 @@
 ---
 title: "OID::Point#type_cast_for_schema returns [x, y]; credit ActiveRecord::Point members"
-status: ready
+status: claimed
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T19:40:38Z"
+assignee: "eager-load-namespaces-without-eager-load-bang"
 blocked-by: null
 closed-reason: null
 ---

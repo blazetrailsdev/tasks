@@ -1,6 +1,6 @@
 ---
 title: "Records have no method_missing carrier for undefined names"
-status: claimed
+status: blocked
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: trails#8101
 claim: "2026-09-25T18:51:40Z"
 assignee: "initialize-cache-skips-lookup-store-so-generated-cache-store-is-omitted"
-blocked-by: null
+blocked-by: "no carrier within budget: a Proxy as the last prototype of the root class (get-only / get+set traps), measured best-of-5 on Node 24 against the same 4-class chain without it: miss read 48x/50x, construction 3.7x/5.9x (OrdinarySet of a not-yet-own property walks into the trap), late own-prop write 6.1x/9.7x; hits ~1.0x reader, 1.8x own field. A raising get trap also fires on JS-routine misses Ruby never sees (await reads then, vitest toEqual reads asymmetricMatch/$$typeof, framework typeof record.x === 'function' probes), so it needs an invented allowlist. Unblocks only if V8 stops deopting proxy-tailed prototype chains or TC39 adds a non-Proxy missing-property hook."
 closed-reason: null
 ---
 

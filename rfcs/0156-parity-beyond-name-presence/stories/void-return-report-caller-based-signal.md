@@ -1,6 +1,6 @@
 ---
 title: "Narrow the void-return report to Rails callers that read the return value"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

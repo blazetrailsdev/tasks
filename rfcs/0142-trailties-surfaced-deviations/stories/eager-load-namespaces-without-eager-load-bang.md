@@ -1,6 +1,6 @@
 ---
 title: "eager-load-namespaces-without-eager-load-bang"
-status: ready
+status: claimed
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T19:40:38Z"
+assignee: "eager-load-namespaces-without-eager-load-bang"
 blocked-by: null
 closed-reason: null
 ---

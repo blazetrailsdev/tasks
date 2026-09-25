@@ -1,6 +1,6 @@
 ---
 title: "Developer habtm projects_extended_by_name* use extend: where Rails uses an extending scope"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8103
+claim: "2026-09-25T19:20:45Z"
+assignee: "trails-actions-insert-at-marker-instead-of-rails-sentinel"
 blocked-by: null
 closed-reason: null
 ---

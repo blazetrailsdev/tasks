@@ -1,6 +1,6 @@
 ---
 title: "trails-actions-insert-at-marker-instead-of-rails-sentinel"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8103
+claim: "2026-09-25T19:20:45Z"
+assignee: "trails-actions-insert-at-marker-instead-of-rails-sentinel"
 blocked-by: null
 closed-reason: null
 ---

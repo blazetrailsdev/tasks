@@ -1,6 +1,6 @@
 ---
 title: "Converge mismatched_foreign_key_details regex and options-building to Rails"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

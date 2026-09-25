@@ -1,6 +1,6 @@
 ---
 title: "collectionProxyFor returns the memoized proxy without the reader's reset_scope"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8101
 claim: "2026-09-25T18:51:40Z"
 assignee: "initialize-cache-skips-lookup-store-so-generated-cache-store-is-omitted"
 blocked-by: null

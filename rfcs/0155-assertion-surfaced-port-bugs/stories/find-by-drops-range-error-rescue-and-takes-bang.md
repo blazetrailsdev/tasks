@@ -1,6 +1,6 @@
 ---
 title: "find_by / find_by! mirror finder_methods.rb:111-119 (no RangeError rescue, take!)"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8103
+claim: "2026-09-25T19:20:45Z"
+assignee: "trails-actions-insert-at-marker-instead-of-rails-sentinel"
 blocked-by: null
 closed-reason: null
 ---

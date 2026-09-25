@@ -1,6 +1,6 @@
 ---
 title: "active_record_encryption.configuration runs its arms inline; Rails wraps them in on_load(:active_record_encryption)"
-status: ready
+status: done
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "missing-arm"
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8102
+claim: "2026-09-25T19:25:33Z"
+assignee: "converge-encryption-configuration-onto-active-record-encryption-load-hook"
 blocked-by: null
 closed-reason: null
 ---
