@@ -242,3 +242,11 @@ the story that implements it, not a preference to re-litigate there.
   story, and the RFC 0025 relationship section. Dropped
   `rails-find-prints-versioned-paths` — its 27 literals are path construction, so
   Phase 0 covers them. Recorded `vendor/.gitignore` as depth-independent.
+- 2026-09-25: body-hash floor decision (`pin-the-body-hash-floor-before-the-first-bump`):
+  **take the whole-surface `--pin-all` floor now**, not a named subset. A subset
+  (pairs a convergence story already verified) would leave every other ported body
+  reporting no drift on the bump, which is the failure the story exists to close;
+  the floor is cheapest while `v8.0.2` is still the tree every port was written
+  against. Seeded 10,714 pins; each records the upstream `ref` it was taken at
+  (`v8.0.2` for the rails packages, the gem's own tag for the rest), and re-pinning
+  is now a step of every bump.

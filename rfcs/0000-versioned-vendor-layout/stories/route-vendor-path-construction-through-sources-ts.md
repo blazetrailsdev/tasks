@@ -55,13 +55,19 @@ guessing.
 - `vendor/sources.ts` exposes whatever those callers need (a gem-subdir resolver
   and/or named well-known dirs such as the AR test schema, fixtures and models
   dirs), each with a test in `vendor/sources.test.ts`.
-- `scripts/rails-find/core.ts`'s two maps and `GREP_SCOPE` derive from `SOURCES`;
-  its 13 package keys keep their current spellings and `core.test.ts` passes with
-  no test-name change.
+- `scripts/rails-find/core.ts`'s two maps and `GREP_SCOPE` derive from `SOURCES`
+  (the `testPathsManifest` / `libPathsManifest` answers, unfiltered); its 13
+  existing package keys keep their current spellings and `core.test.ts` passes
+  with no test-name change. The hand-kept maps had drifted — no rows for `i18n`,
+  `rack-session`, `rack-test`, `sqlite3`, `activerecord-test-support` or `date`,
+  all vendored and in both manifests — so deriving them also adds those keys.
+  Filtering back to 13 would re-create the hand-kept list this story removes.
 - `extract-ruby-models.rb` receives its dirs the way `extract-ruby-api.rb` already
   receives `LIB_PATHS_JSON` — by env var from the registry — and its `:144`
   `delete_prefix` is derived from the same value, not rebuilt.
-- `pnpm parity:api`, `parity:test`, `parity:fixtures`, `parity:schema`,
-  `pnpm rails:find <query>` and `pnpm test:deps` all produce byte-identical output
-  to main.
+- `pnpm parity:api`, `parity:test`, `parity:fixtures`, `parity:schema` and
+  `pnpm test:deps` all produce byte-identical output to main.
+- `pnpm rails:find` differs from main only by hits in the packages the derived
+  maps newly cover, and the match counts and per-mode capping those hits move.
+  Every path it prints for an existing package is byte-identical.
 - No path depth changes in this story.
