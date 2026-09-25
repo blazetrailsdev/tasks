@@ -51,6 +51,11 @@ Rails reaches each body off a real `Association` / reflection object:
 
 - Each helper above is folded into the Rails method on the association /
   reflection object that owns its body, and its receipt is deleted with it.
+- Folding `scope` removes its local `CompositePrimaryKeyMismatchError`
+  construction and throw (the one left after trails#8074 cleared
+  `association-scope.ts`). Rails' `Association#scope` (`association.rb:107`)
+  raises nothing, and `check_validity!` (`reflection.rb:618-628`, called from
+  `Association#initialize`, `association.rb:42`) is the only raise site.
 - Split across as many PRs as the LOC ceiling needs; one file per PR is a
   natural cut.
 - `pnpm parity:api:extra --package activerecord` total strictly drops.
