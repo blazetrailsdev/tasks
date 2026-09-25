@@ -28,12 +28,12 @@ It also snapshots with `peekCallbackChain` / `getCallbackChains` and `chain.clea
 
 ## Converged shape
 
-- Move `resetCallbacks(klass, kind, block)` beside the other `ActiveRecord::TestCase` ports in `packages/activerecord/src/testing/` (`sql-capture.ts` already hosts `capture_sql` from `test_case.rb:89-102`), with Rails' parameter names (`klass`, `kind`).
+- Move `resetCallbacks(klass, kind, block)` beside the other `ActiveRecord::TestCase` ports in `packages/activerecord/src/support/` (`with-db-warnings-action.ts` and `with-postgresql-datetime-type.ts` already host `test_case.rb` helpers), with Rails' parameter names (`klass`, `kind`). `src/support/` is the `activerecord-test-support` compare package, which pairs against Rails' test helpers (`scripts/api-compare/config.ts:103-116`). `src/testing/` is part of the rowless `activerecord` population, where `resetCallbacks` pairs with `ActiveSupport::Callbacks::ClassMethods#reset_callbacks` as a moved name and fails `parity:api:extra:gate`.
 - Snapshot and restore through the `_${kind}Callbacks` class-attribute reader/writer, mirroring `test_case.rb:180-190`.
 - Drop it from `callbacks.ts` and from the `index.ts` public barrel. Update the test importers (`grep -rn "resetCallbacks" packages/activerecord/src --include=*.test.ts`).
 
 ## Acceptance criteria
 
 - `packages/activerecord/src/callbacks.ts` no longer defines `resetCallbacks`, and `index.ts` no longer exports it.
-- The test-case helper lives in `packages/activerecord/src/testing/` and mirrors `test_case.rb:179-191`.
+- The test-case helper lives in `packages/activerecord/src/support/` and mirrors `test_case.rb:179-191`.
 - All importing tests pass. `parity:api:extra:gate` and `parity:api:calls` stay green.
