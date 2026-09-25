@@ -1,6 +1,6 @@
 ---
 title: "SchemaDumperTest timestamps cases call createTable directly instead of a Migration with up/down"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8112
+claim: "2026-09-25T22:02:05Z"
+assignee: "assertions-has-many-associations-remainder-13"
 blocked-by: null
 closed-reason: null
 ---

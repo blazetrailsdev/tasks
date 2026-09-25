@@ -1,6 +1,6 @@
 ---
 title: "configFor reads only config/database and config.x is unported, so apps read settings straight from env"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#8112
+claim: "2026-09-25T22:02:05Z"
+assignee: "assertions-has-many-associations-remainder-13"
 blocked-by: null
 closed-reason: null
 ---

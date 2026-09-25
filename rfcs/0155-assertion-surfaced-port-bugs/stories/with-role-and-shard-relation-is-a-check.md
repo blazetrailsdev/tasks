@@ -1,6 +1,6 @@
 ---
 title: "ConnectionHandling: with_role_and_shard checks is_a? ActiveRecord::Relation and returns the relation, not a load/toArray duck type"
-status: ready
+status: claimed
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T22:32:07Z"
+assignee: "bound-sql-literal-enumerable-arm-is-a-closed-type-list"
 blocked-by: null
 closed-reason: null
 ---

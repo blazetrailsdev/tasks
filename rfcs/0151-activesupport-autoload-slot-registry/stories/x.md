@@ -1,6 +1,6 @@
 ---
 title: "x"
-status: draft
+status: closed
 updated: 2026-09-25
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -13,5 +13,5 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "created in error by a stray tasks new invocation; no work"
 ---

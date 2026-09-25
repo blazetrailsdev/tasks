@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat has no runtime method-visibility carrier (Module#private / public_send)"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8113
 claim: "2026-09-25T21:47:29Z"
 assignee: "activemodel-error-message-nil-raw-type-cast-to-string"
 blocked-by: null

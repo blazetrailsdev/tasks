@@ -1,7 +1,7 @@
 ---
 title: "The Web Crypto adapter cannot serve digest, HMAC or cipher"
-status: ready
-updated: 2026-09-06
+status: claimed
+updated: 2026-09-25
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 320
 priority: 49
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T22:47:03Z"
+assignee: "canonical-schema-convert-remaining-t-references"
 blocked-by: null
 closed-reason: null
 ---

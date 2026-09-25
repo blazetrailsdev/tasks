@@ -1,7 +1,7 @@
 ---
 title: "Converge activerecord's dropped block arms flagged by parity:api:blocks"
-status: ready
-updated: 2026-09-23
+status: claimed
+updated: 2026-09-25
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T22:32:07Z"
+assignee: "bound-sql-literal-enumerable-arm-is-a-closed-type-list"
 blocked-by: null
 closed-reason: null
 ---

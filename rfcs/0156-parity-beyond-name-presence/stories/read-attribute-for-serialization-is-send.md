@@ -1,7 +1,7 @@
 ---
 title: "Converge read_attribute_for_serialization to Rails' alias of send"
-status: ready
-updated: 2026-09-23
+status: blocked
+updated: 2026-09-25
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-25T22:32:07Z"
+assignee: "bound-sql-literal-enumerable-arm-is-a-closed-type-list"
+blocked-by: "A pure send port recurses forever for an attribute named toJSON: reader generation skips names the class already answers (CLAUDE.md § Generated attribute readers are properties), so send reaches Model#toJSON -> serializableHash -> send again. That breaks serialization.trails.test.ts 'attribute named toJSON does not shadow Model#toJSON'. Needs a decision on the skipped-reader case before converging."
 closed-reason: null
 ---
 

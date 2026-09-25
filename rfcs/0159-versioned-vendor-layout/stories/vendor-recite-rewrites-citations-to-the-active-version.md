@@ -1,6 +1,6 @@
 ---
 title: "vendor:recite rewrites citations to the active version"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0159-versioned-vendor-layout"
 cluster: vendor

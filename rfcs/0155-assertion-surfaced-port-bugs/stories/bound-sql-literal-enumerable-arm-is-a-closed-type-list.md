@@ -1,6 +1,6 @@
 ---
 title: "bound-sql-literal-enumerable-arm-is-a-closed-type-list"
-status: ready
+status: claimed
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T22:32:07Z"
+assignee: "bound-sql-literal-enumerable-arm-is-a-closed-type-list"
 blocked-by: null
 closed-reason: null
 ---

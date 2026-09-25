@@ -1,6 +1,6 @@
 ---
 title: "Version the MRI citation lint and its resolver"
-status: claimed
+status: done
 updated: 2026-09-25
 rfc: "0159-versioned-vendor-layout"
 cluster: vendor
@@ -10,7 +10,7 @@ deps: [nest-vendored-clones-under-a-version-directory]
 deps-rfc: []
 est-loc: 150
 priority: 2
-pr: null
+pr: trails#8111
 claim: "2026-09-25T21:02:26Z"
 assignee: "version-the-mri-citation-lint-and-its-resolver"
 blocked-by: null

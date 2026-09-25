@@ -1,6 +1,6 @@
 ---
 title: "pirates fixture 2.weeks.ago is a UTC Instant, not to_fs(:db); preserves-existing-fixture-data flips near UTC midnight"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8114
+claim: "2026-09-25T22:17:02Z"
+assignee: "base-inspect-singleton-class-arm"
 blocked-by: null
 closed-reason: null
 ---
