@@ -1,7 +1,7 @@
 ---
 title: "_callableToSourceString returns a rendered String and strips return/; where Rails returns the callable"
-status: draft
-updated: 2026-09-23
+status: blocked
+updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport"]
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Converged shape needs rbObjAsString's Proc arm first: 0154 rb-obj-as-string-has-no-proc-arm is still draft, and origin/main packages/ruby-compat/src/object.ts rbObjAsString (:337) has no typeof-function arm. _callableToSourceString (testing/assertions.ts:345-361) still returns rbAnyToS and strips return/;. Unblock when that 0154 story lands."
 closed-reason: null
 ---
 

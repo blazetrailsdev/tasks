@@ -1,6 +1,6 @@
 ---
 title: "PG translate_exception: no-connection errors raise ConnectionNotEstablished"
-status: in-progress
+status: blocked
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: trails#8075
 claim: "2026-09-25T01:44:13Z"
 assignee: "nested-through-polymorphic-accessor-fidelity"
-blocked-by: null
+blocked-by: "node-pg has no counterpart to libpq's post-send_query CONNECTION_BAD state: after pg_terminate_backend the idle client marks itself unqueryable, so the FIRST query and every later one get the same 'Client has encountered a connection error and is not queryable' (pg/lib/client.js:676-680). Rails maps the first (libpq 'server closed the connection unexpectedly\\n') to ConnectionFailed and adapter_test.rb's remote-disconnect tests depend on it; mapping that message to ConnectionNotEstablished reds 4 adapter.test.ts tests on PG (trails#8075 CI). translate_exception's arms are restructured to Rails' shape in trails#8075; the NotEstablished assertion needs a driver-level signal node-pg does not expose."
 closed-reason: null
 ---
 

@@ -1,14 +1,14 @@
 ---
 title: "time-date-class-methods-allocate-receiver-subclass"
 status: blocked
-updated: 2026-09-16
+updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 2
+priority: null
 pr: null
 claim: "2026-09-16T13:48:25Z"
 assignee: "globalid-locator-single-argument-deprecation"

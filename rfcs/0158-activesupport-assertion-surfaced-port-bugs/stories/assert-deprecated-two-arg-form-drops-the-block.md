@@ -1,7 +1,7 @@
 ---
 title: "assertDeprecated(deprecator, block) drops the block; port Rails' two-argument form"
-status: draft
-updated: 2026-09-24
+status: in-progress
+updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8079
+claim: "2026-09-25T03:24:24Z"
+assignee: "activesupport-assert-match-drops-respond-to-and-last-match"
 blocked-by: null
 closed-reason: null
 ---

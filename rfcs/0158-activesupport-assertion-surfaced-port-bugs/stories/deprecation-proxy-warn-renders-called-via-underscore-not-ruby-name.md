@@ -1,7 +1,7 @@
 ---
 title: "Deprecation proxy warn renders called via underscore, not the Ruby method name"
-status: draft
-updated: 2026-09-24
+status: claimed
+updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T03:44:16Z"
+assignee: "activesupport-has-no-psych-emitter-for-to-yaml"
 blocked-by: null
 closed-reason: null
 ---

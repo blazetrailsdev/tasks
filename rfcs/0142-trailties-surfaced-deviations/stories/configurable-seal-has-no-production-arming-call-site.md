@@ -1,6 +1,6 @@
 ---
 title: "Railtie::Configurable's inheritance seal is never armed outside tests, so the raise is inert in a booted app"
-status: claimed
+status: closed
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-09-25T02:09:41Z"
 assignee: "converge-config-target-version-to-two-arms"
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise falsified by vendor/rails: Rails::Railtie::Configurable (railtie/configurable.rb) is included/extended nowhere in railties — railtie.rb:187-189 says the module is no longer required for Railtie subclasses and Engine/Application do not extend it. Rails arms the seal only when a user explicitly extends Configurable, so trails having no production sealAgainstInheritance call site is faithful."
 ---
 
 ## Context

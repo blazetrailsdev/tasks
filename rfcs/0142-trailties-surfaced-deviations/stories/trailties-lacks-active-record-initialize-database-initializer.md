@@ -1,6 +1,6 @@
 ---
 title: "trailties has no active_record.initialize_database initializer"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 25
-pr: null
+pr: trails#8077
 claim: "2026-09-25T02:09:41Z"
 assignee: "converge-config-target-version-to-two-arms"
 blocked-by: null

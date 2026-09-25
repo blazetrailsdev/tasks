@@ -1,6 +1,6 @@
 ---
 title: "converge-trailtie-subclasses-to-direct-children"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 20
-pr: null
+pr: trails#8077
 claim: "2026-09-25T02:09:41Z"
 assignee: "converge-config-target-version-to-two-arms"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "assert_difference/assert_changes failure messages render object.num where Rails renders @object.num"
-status: draft
+status: blocked
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-25T03:24:24Z"
+assignee: "activesupport-assert-match-drops-respond-to-and-last-match"
+blocked-by: 'Rails'' expected message renders the String expression "@object.num" verbatim (test_case_test.rb:51-58), which assert_difference evals against block.binding (testing/assertions.rb:113,122). JS has no binding/eval of Ruby source, so the String arm cannot be ported, and ''@'' is not a legal JS identifier character, so no closure''s source (_callableToSourceString) can render `@object.num`. The value tokens differ by a language shortcoming; converging needs either a value-receipt shape in scripts/test-compare/assertion-receipts.ts (receipts today only drop/re-kind an assertion) or a comparer normalization of Ruby @ivar vs TS this.ivar — a tooling decision, not a port fix.'
 closed-reason: null
 ---
 

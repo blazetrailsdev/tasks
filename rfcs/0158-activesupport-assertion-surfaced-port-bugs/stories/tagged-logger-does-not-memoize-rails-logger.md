@@ -1,7 +1,7 @@
 ---
 title: "testing/tagged-logging taggedLogger() drops the @tagged_logger ||= memo"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

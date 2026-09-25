@@ -1,6 +1,6 @@
 ---
 title: "Port the railtie encrypt_fixtures arm and emit the active_record_fixture_set load hook"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "missing-arm"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 24
-pr: null
+pr: trails#8077
 claim: "2026-09-25T02:09:41Z"
 assignee: "converge-config-target-version-to-two-arms"
 blocked-by: null

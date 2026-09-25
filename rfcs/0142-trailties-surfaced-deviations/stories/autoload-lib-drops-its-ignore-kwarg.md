@@ -1,6 +1,6 @@
 ---
 title: "autoload-lib-drops-its-ignore-kwarg"
-status: claimed
+status: blocked
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 30
-pr: null
+pr: trails#8077
 claim: "2026-09-25T02:09:41Z"
 assignee: "converge-config-target-version-to-two-arms"
-blocked-by: null
+blocked-by: "No receiver for the ignored paths: configuration.rb:479-480 hands Array.wrap(ignore).map { lib.join(_1) } only to Rails.autoloaders.main.ignore (Zeitwerk), which trails does not have (CLAUDE.md 'Trails has no autoloader'), and trails' only eager scan (finisher.ts loadControllers) walks app/controllers, never lib — so a computed ignoredAbspaths would be dead. The AC's @missingRailsCall ignore receipt cannot register: the call gate emits no row for the unported Zeitwerk call, so the tag reds as STALE. Unblocks when trails grows a lib eager-load scan (or the call gate scores the Zeitwerk call)."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "QueryAttribute accepts a nil name as Rails does"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#8076
 claim: "2026-09-25T02:04:15Z"
 assignee: "port-ruby-method-arity-for-globalid-locator"
 blocked-by: null

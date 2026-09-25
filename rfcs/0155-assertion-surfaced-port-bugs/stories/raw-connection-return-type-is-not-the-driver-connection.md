@@ -1,6 +1,6 @@
 ---
 title: "rawConnection() is declared Promise<AbstractAdapter|null> but returns the driver connection"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8076
 claim: "2026-09-25T02:04:15Z"
 assignee: "port-ruby-method-arity-for-globalid-locator"
 blocked-by: null

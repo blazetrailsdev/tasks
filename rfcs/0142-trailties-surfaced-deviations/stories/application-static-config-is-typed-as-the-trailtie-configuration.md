@@ -1,6 +1,6 @@
 ---
 title: "Application.config (static) is typed as the trailtie Configuration, so the generated loadDefaults call does not typecheck"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 30
-pr: null
+pr: trails#8077
 claim: "2026-09-25T02:09:41Z"
 assignee: "converge-config-target-version-to-two-arms"
 blocked-by: null

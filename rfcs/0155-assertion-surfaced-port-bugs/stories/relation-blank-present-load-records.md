@@ -1,7 +1,7 @@
 ---
 title: "relation-blank-present-load-records"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8078
+claim: "2026-09-25T03:11:52Z"
+assignee: "assertions-mysql-legacy-migration-engine-innodb-option"
 blocked-by: null
 closed-reason: null
 ---
