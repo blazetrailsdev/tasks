@@ -99,7 +99,7 @@ any ref.
    upgrade both run. The bulk rewrite is not a hand edit.
 5. **A citation is not the same as code that matches one.**
    `eslint/ruby-compat-needs-mri-citation.mjs:36` matches citations with
-   `/vendor\/ruby\/([A-Za-z0-9_./+-]+):(\d+)/g` and *resolves* each one against
+   `/vendor\/ruby\/([A-Za-z0-9_./+-]+):(\d+)/g` and _resolves_ each one against
    the clone — it reports a cited file the pinned checkout does not contain and a
    line past the file's end (`:167-169`). Its character class admits `.` and `/`,
    so a versioned citation matches with `rel = "v3.3.11/rational.c"` and
@@ -120,12 +120,12 @@ pins the normalized Rails body digest per name-matched pair, so a bump turns a
 changed upstream body into a DRIFT report (`lint-body-pins.ts`, run as the
 "Body-pins gate" CI step). The two do not overlap and neither replaces the other:
 
-| | body pins | versioned citations |
-| --- | --- | --- |
-| Granularity | one matched method pair | any path, at a line |
-| Detects | the Ruby body *changed* | the path names a *different version* |
-| Covers | `parity:api`-matched pairs only | unmatched surface, comments, docs, MRI C, test schema, fixtures |
-| State today | `body-pins.json` is `[]` — ORGANIC policy, `--pin-all` floor deferred | 1,546 citations, none versioned |
+|             | body pins                                                             | versioned citations                                             |
+| ----------- | --------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Granularity | one matched method pair                                               | any path, at a line                                             |
+| Detects     | the Ruby body _changed_                                               | the path names a _different version_                            |
+| Covers      | `parity:api`-matched pairs only                                       | unmatched surface, comments, docs, MRI C, test schema, fixtures |
+| State today | `body-pins.json` is `[]` — ORGANIC policy, `--pin-all` floor deferred | 1,546 citations, none versioned                                 |
 
 Body pins are the precise instrument and citations are the coverage. The gap this
 RFC closes for RFC 0025 is that **the pin floor was deferred and the tree it would
@@ -134,7 +134,7 @@ upgrade prep — story `pin-the-body-hash-floor-before-the-first-bump`.
 
 ## Non-goals
 
-- Bumping any `ref`. Rails 8.1 is a separate RFC that *uses* this one.
+- Bumping any `ref`. Rails 8.1 is a separate RFC that _uses_ this one.
 - Vendoring more sources, or changing which directories a source exposes.
 - Committing the clones. They stay gitignored: `vendor/.gitignore` is `*` plus an
   allowlist of the tracked registry files, which is depth-independent and needs no
@@ -192,7 +192,7 @@ upgrade prep — story `pin-the-body-hash-floor-before-the-first-bump`.
   naming a non-active version.
 - `pnpm vendor:recite` is idempotent: a second run is a no-op diff.
 - `pnpm lint` is clean after each sweep — in particular
-  `blazetrailsdev/ruby-compat-needs-mri-citation` still *resolves* every rewritten
+  `blazetrailsdev/ruby-compat-needs-mri-citation` still _resolves_ every rewritten
   MRI citation to an existing file and an in-range line, which is the arm the
   version segment would otherwise break silently.
 - `pnpm tsx scripts/api-compare/lint-body-pins.ts` is green with a non-empty

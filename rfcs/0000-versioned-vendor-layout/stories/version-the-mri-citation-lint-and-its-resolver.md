@@ -19,7 +19,7 @@ closed-reason: null
 
 ## Context
 
-`eslint/ruby-compat-needs-mri-citation.mjs` is the one rule that *resolves* a
+`eslint/ruby-compat-needs-mri-citation.mjs` is the one rule that _resolves_ a
 citation rather than just requiring one: it requires a
 `vendor/ruby/<file>:<line>` citation plus a `@noRailsEquivalent PERMANENT`
 receipt on every ruby-compat export (`:158`), and reports a cited file the pinned

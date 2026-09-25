@@ -32,7 +32,7 @@ between them), `scripts/test-compare/`, `scripts/schema-compare/compare.ts`,
 `CLAUDE.md` (7) and `CONTRIBUTING.md` (3).
 
 `scripts/rails-find/core.ts`'s 27 occurrences are **not** in scope: they are
-path *construction*, converged onto the registry by
+path _construction_, converged onto the registry by
 `route-vendor-path-construction-through-sources-ts`, so they carry the version
 automatically. Same for the other constructions that story fixes. The lint and
 fixture files on the codemod's exclusion list

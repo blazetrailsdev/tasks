@@ -29,7 +29,7 @@ floor is deferred (`body-pins.ts:40-43`). `scripts/api-compare/body-pins.json` i
 
 That deferral was safe while the vendored tree never moved. It is the thing to
 revisit now: a bump with an empty manifest reports no drift at all, so every
-ported body reads as unaffected and there is no worklist. Taking the floor *before*
+ported body reads as unaffected and there is no worklist. Taking the floor _before_
 the bump is the cheapest it will ever be — the current tree is the de-facto
 baseline every existing port was written against.
 
