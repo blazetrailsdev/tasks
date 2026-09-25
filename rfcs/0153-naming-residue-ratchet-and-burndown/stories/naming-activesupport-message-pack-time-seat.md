@@ -1,6 +1,6 @@
 ---
 title: "MessagePack type 7 is Ruby Time, so write_time_with_zone passes twz.utc"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

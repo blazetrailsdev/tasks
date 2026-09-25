@@ -1,6 +1,6 @@
 ---
 title: "asyncPluck/asyncPick/asyncIds go through async.<op>; pluck/ids take Rails' @async arm"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 5
-pr: null
+pr: trails#8082
 claim: "2026-09-25T02:10:13Z"
 assignee: "async-pluck-pick-ids-take-async-arm"
 blocked-by: null

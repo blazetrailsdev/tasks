@@ -1,6 +1,6 @@
 ---
 title: "naming-enroll-activerecord"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

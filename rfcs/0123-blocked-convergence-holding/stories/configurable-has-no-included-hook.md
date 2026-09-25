@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport::Configurable is a Concern but has no included hook, so every site spells it twice"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0123-blocked-convergence-holding"
 cluster: null

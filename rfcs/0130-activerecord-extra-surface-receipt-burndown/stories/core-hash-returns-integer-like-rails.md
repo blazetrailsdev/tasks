@@ -1,6 +1,6 @@
 ---
 title: "Core#hash returns an Integer (core.rb:641-649), not a string/Symbol token; rbHash([record]) throws"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: trails#8082
+claim: "2026-09-25T13:29:29Z"
+assignee: "core-hash-returns-integer-like-rails"
 blocked-by: null
 closed-reason: null
 ---

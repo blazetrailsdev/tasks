@@ -1,6 +1,6 @@
 ---
 title: "instanceof RubyTime dispatch arms route TimeWithZone to Time's own implementation"
-status: blocked
+status: in-progress
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: trails#8080
 claim: "2026-09-25T03:44:16Z"
 assignee: "activesupport-has-no-psych-emitter-for-to-yaml"
-blocked-by: "integration.ts:39,83 and postgresql/oid/range.ts:145 are converged by trails#8079 (open, instanceof-time-sites-assume-twz-is-not-a-time); every other listed site is audited against Rails in trails#8080's body. Close once #8079 merges."
+blocked-by: null
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "nested-through: read public accessors, not association(...).target, in the 3 preload tests this story skipped"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

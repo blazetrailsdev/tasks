@@ -1,6 +1,6 @@
 ---
 title: "Port Engine's add_fixture_paths initializer and fixtures_in_root_and_not_in_vendor_or_dot_dir?"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0123-blocked-convergence-holding"
 cluster: null

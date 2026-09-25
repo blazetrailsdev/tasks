@@ -1,6 +1,6 @@
 ---
 title: "AssociationScope raises CompositePrimaryKeyMismatchError at two sites Rails does not have"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0123-blocked-convergence-holding"
 cluster: null

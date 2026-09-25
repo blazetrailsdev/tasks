@@ -1,6 +1,6 @@
 ---
 title: "Application.config (static) is typed as the trailtie Configuration, so the generated loadDefaults call does not typecheck"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

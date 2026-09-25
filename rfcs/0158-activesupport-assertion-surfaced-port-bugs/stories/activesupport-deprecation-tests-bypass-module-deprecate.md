@@ -1,6 +1,6 @@
 ---
 title: "deprecation tests call deprecateMethods where Rails calls Module#deprecate"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

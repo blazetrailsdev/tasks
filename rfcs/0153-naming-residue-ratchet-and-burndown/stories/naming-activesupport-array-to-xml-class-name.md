@@ -1,6 +1,6 @@
 ---
 title: "Array#to_xml's first.class.name against rbObjClass, which answers the class name"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Logger#add evaluates a block message; BroadcastLogger#log is add's alias"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "spell-date-and-time-calculations-include-in-time-and-date-files"
-status: ready
+status: claimed
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T13:53:42Z"
+assignee: "chars-length-counts-utf16-units"
 blocked-by: null
 closed-reason: null
 ---

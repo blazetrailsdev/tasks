@@ -1,6 +1,6 @@
 ---
 title: "SQLite3Adapter#connect is one new_client body; delete connectAsync/driverIsAsync"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#8082
+claim: "2026-09-25T13:29:26Z"
+assignee: "sqlite3-connect-single-body-via-new-client"
 blocked-by: null
 closed-reason: null
 ---

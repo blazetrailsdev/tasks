@@ -1,6 +1,6 @@
 ---
 title: "Delete Base#_associationCache(name); rename the cache field to _associationCache"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#8082
+claim: "2026-09-25T13:29:34Z"
+assignee: "converge-association-cache-reader-onto-association-instance-get"
 blocked-by: null
 closed-reason: null
 ---
