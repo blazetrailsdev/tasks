@@ -1,9 +1,9 @@
 ---
 rfc: "0142-trailties-surfaced-deviations"
 title: "trailties surfaced deviations — boot, railties and the generators"
-status: draft
+status: active
 created: 2026-09-08
-updated: 2026-09-09
+updated: 2026-09-25
 owner: "@deanmarano"
 packages:
   - "trailties"
