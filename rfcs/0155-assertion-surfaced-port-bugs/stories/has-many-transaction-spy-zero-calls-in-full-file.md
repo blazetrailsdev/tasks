@@ -1,7 +1,7 @@
 ---
 title: "Comment.transaction spy records 0 calls for association proxy transaction inside has_many test file"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8070
+claim: "2026-09-25T00:24:15Z"
+assignee: "time-weekday-helpers-return-instant-not-time"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Burn down the receipt-audit populations for activerecord, then gate them"
-status: in-progress
-updated: 2026-09-24
+status: done
+updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []

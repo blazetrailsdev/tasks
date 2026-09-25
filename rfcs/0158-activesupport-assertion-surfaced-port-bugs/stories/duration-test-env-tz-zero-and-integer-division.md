@@ -1,7 +1,7 @@
 ---
 title: "duration_test: with_env_tz, zero? delegation and Integer division inspect"
-status: in-progress
-updated: 2026-09-24
+status: done
+updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

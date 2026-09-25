@@ -1,7 +1,7 @@
 ---
 title: "has_many block extension builds a real extension module (define_extensions)"
-status: ready
-updated: 2026-09-22
+status: claimed
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T00:44:14Z"
+assignee: "datetime-attribute-rejects-ruby-datetime-values"
 blocked-by: null
 closed-reason: null
 ---

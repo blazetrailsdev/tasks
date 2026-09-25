@@ -1,7 +1,7 @@
 ---
 title: "MessagePack type 7 is Ruby Time, so write_time_with_zone passes twz.utc"
-status: ready
-updated: 2026-09-24
+status: claimed
+updated: 2026-09-25
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: ["activesupport", "date"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: 49
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T00:03:48Z"
+assignee: "naming-enroll-activerecord"
 blocked-by: null
 closed-reason: null
 ---

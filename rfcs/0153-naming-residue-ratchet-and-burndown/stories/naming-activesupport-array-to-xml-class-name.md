@@ -1,7 +1,7 @@
 ---
 title: "Array#to_xml's first.class.name against rbObjClass, which answers the class name"
-status: ready
-updated: 2026-09-24
+status: claimed
+updated: 2026-09-25
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: ["activesupport", "ruby-compat"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: 48
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T00:03:48Z"
+assignee: "naming-enroll-activerecord"
 blocked-by: null
 closed-reason: null
 ---
