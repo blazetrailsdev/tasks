@@ -14,6 +14,8 @@ deps:
     "naming-burndown-activerecord-remaining",
     "naming-residue-burndown-activesupport-structural",
     "naming-burndown-activerecord-behavioral",
+    "naming-enroll-activerecord",
+    "naming-enroll-activesupport",
   ]
 deps-rfc: []
 est-loc: 80
