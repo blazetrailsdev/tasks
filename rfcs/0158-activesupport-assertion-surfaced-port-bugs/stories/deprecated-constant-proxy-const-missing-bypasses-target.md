@@ -2,7 +2,7 @@
 title: "DeprecatedConstantProxy#const_missing resolves by path instead of target.const_get"
 status: draft
 updated: 2026-09-25
-rfc: "0155-assertion-surfaced-port-bugs"
+rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []

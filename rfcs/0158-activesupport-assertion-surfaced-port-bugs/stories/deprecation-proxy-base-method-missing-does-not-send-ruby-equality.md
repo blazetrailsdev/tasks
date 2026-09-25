@@ -2,7 +2,7 @@
 title: "DeprecationProxy#method_missing does not send Ruby == to its target"
 status: draft
 updated: 2026-09-24
-rfc: "0155-assertion-surfaced-port-bugs"
+rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
