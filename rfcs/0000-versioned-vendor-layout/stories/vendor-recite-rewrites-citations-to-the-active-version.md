@@ -8,7 +8,7 @@ packages:
   - activerecord
 deps: [nest-vendored-clones-under-a-version-directory]
 deps-rfc: []
-est-loc: 180
+est-loc: 220
 priority: 3
 pr: null
 claim: null
@@ -44,9 +44,17 @@ version from the same helper the resolvers use.
   helper; no second list of gem names exists.
 - `--check` reports without writing and exits non-zero when anything would
   change, so the gate story can reuse it.
-- It does not touch paths inside `vendor/` itself, and does not rewrite a
-  `vendor/sources.lock.json` ref or a `vendor/README.md` example that documents
-  the layout rather than citing a body.
+- It rewrites **citations only**, never code that matches or builds a citation. An
+  explicit, commented exclusion list covers at least:
+  `eslint/ruby-compat-needs-mri-citation.mjs` (its `CITATION` regex at `:36` and
+  its four message templates at `:158-169`),
+  `eslint/ruby-compat-needs-mri-citation.test.mjs`,
+  `scripts/api-compare/jsdoc-tag-line.test.ts`, everything under `vendor/`
+  (`sources.ts`, `sources.test.ts`, `README.md`, the lockfile), and
+  `scripts/parity/legacy-script-names.ts`'s `SKIPPED_PATHS` prefix. Adding a file
+  to that list requires a one-line reason beside it.
+- Rewriting one of those files is caught by a test: the codemod's own fixtures
+  include a regex-bearing file and assert it is left alone.
 - A second run is a no-op diff (idempotent), covered by a test over a fixture
   tree with all three input shapes: unversioned, correctly versioned, stale.
 - No citations are swept in this story.

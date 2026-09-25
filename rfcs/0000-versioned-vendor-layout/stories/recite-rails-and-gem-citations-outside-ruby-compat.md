@@ -31,8 +31,14 @@ between them), `scripts/test-compare/`, `scripts/schema-compare/compare.ts`,
 `packages/activesupport/src`, `packages/rack-test/src`, `docs/`, plus trails'
 `CLAUDE.md` (7) and `CONTRIBUTING.md` (3).
 
-`scripts/rails-find/core.ts` holds 24 and is deliberately **excluded** here: its
-citations are output strings, handled by `rails-find-prints-versioned-paths`.
+`scripts/rails-find/core.ts`'s 27 occurrences are **not** in scope: they are
+path *construction*, converged onto the registry by
+`route-vendor-path-construction-through-sources-ts`, so they carry the version
+automatically. Same for the other constructions that story fixes. The lint and
+fixture files on the codemod's exclusion list
+(`eslint/ruby-compat-needs-mri-citation.mjs`,
+`scripts/api-compare/jsdoc-tag-line.test.ts`) are out of scope too — they are
+handled by `version-the-mri-citation-lint-and-its-resolver`.
 
 ## Acceptance criteria
 
@@ -43,6 +49,10 @@ citations are output strings, handled by `rails-find-prints-versioned-paths`.
   against.
 - The diff is `pnpm vendor:recite` output plus any hand fix it could not make,
   each listed in the PR body.
-- Tests asserting on a `vendor/...` path string (e.g. `scripts/api-compare/ar-closure.test.ts`)
-  pass without a name change.
+- The `.prettierignore` comments at `:27,30` that cite the copied Rails fixture
+  files are swept too, and `scripts/db-init/{mysql,postgres}/*.sql`'s Rakefile
+  citations.
+- Tests asserting on a `vendor/...` path string pass without a name change (the
+  fixtures in `ar-closure.test.ts` and friends were already moved by the layout
+  story).
 - `pnpm parity:api` / `parity:test` deltas are zero.

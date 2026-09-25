@@ -6,9 +6,9 @@ rfc: "0000-versioned-vendor-layout"
 cluster: vendor
 packages:
   - activerecord
-deps: []
+deps: [route-vendor-path-construction-through-sources-ts]
 deps-rfc: []
-est-loc: 220
+est-loc: 300
 priority: 1
 pr: null
 claim: null
@@ -36,6 +36,19 @@ must not swallow the tracked files under `vendor/`. `scripts/start-worktree.sh:2
 symlinks `vendor/<name>` per source after validating main's clone HEAD against the
 new worktree's `vendor/sources.lock.json`.
 
+About 40 committed assertions hardcode the current depth and move with it:
+`vendor/sources.test.ts` has 23 `endsWith("vendor/<source>/…")` checks
+(`:73-75,100-102,132,162-164,192-194,255,260,272,320-325,351-353`),
+`scripts/api-compare/ar-closure.test.ts` writes 9 fake-tree paths (`:7,22-45`),
+and one each sits in `scripts/rails-find/core.test.ts:59,80,106,123`,
+`scripts/schema-compare/compare.test.ts:541`,
+`scripts/ci-suite-coverage.test.ts:1102` and
+`scripts/api-compare/story-skip-conflicts.test.ts:18`. These are fixtures, not
+citations, so they are hand-updated here rather than by the codemod.
+
+`vendor/.gitignore` is `*` plus an allowlist of the tracked registry files, so it
+is depth-independent and must NOT be changed.
+
 MRI's ref is the tag `v3_3_11` (`vendor/sources.lock.json`), so the version
 directory name is derived from the ref rather than copied from it — see RFC Open
 question 1.
@@ -53,6 +66,9 @@ question 1.
   HEAD-vs-lockfile validation, and its per-source fetch fallback still works.
 - `pnpm vendor:fetch` on a clean checkout yields `vendor/rails/v8.0.2/`,
   `vendor/ruby/v3.3.11/` and nine siblings.
+- The ~40 path assertions above are updated by hand and no test name changes.
+- `vendor/.gitignore` is untouched, and the PR body says why.
 - `pnpm parity:api`, `parity:test`, `parity:fixtures` and `parity:schema` deltas
-  are zero.
+  are zero, and `pnpm rails:find <query>` prints versioned paths (its maps come
+  from the registry as of the previous story, so this needs no edit there).
 - No citation is rewritten in this story.

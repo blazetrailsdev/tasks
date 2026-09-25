@@ -11,6 +11,7 @@ deps:
   - recite-ruby-compat-citations-g-m-against-mri-v3-3-11
   - recite-ruby-compat-citations-n-z-against-mri-v3-3-11
   - recite-rails-and-gem-citations-outside-ruby-compat
+  - version-the-mri-citation-lint-and-its-resolver
 deps-rfc: []
 est-loc: 140
 priority: 5
@@ -29,6 +30,14 @@ at the next ref bump. `pnpm vendor:recite --check` already answers both question
 this wires it into CI as a `scripts/` test in the shape the repo's other
 mechanical guards use (`scripts/non-transactional-row-writes.test.ts`,
 `scripts/rails-file-structure-collisions.test.ts`).
+
+It sits **beside** `eslint/ruby-compat-needs-mri-citation.mjs` rather than
+replacing it (RFC Open question 4): that rule resolves an MRI citation to a real
+file and an in-range line, which needs a fetched tree and so runs only in the
+`rails-comparison` job; this gate checks the version segment for all eleven
+sources from the lockfile alone. Neither subsumes the other, and the overlap on
+ruby-compat's version segment is intentional redundancy, not duplication to
+remove.
 
 Per RFC Open question 2 the stale arm is red, not report-only: that is what turns
 a ref bump into a finite worklist. Note that the Unit Tests CI job has no

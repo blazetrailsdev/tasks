@@ -54,7 +54,20 @@ any ref.
 - **The path already lies once.** `vendor/ruby/` is MRI `v3_3_11`, a different
   release cadence from Rails' `v8.0.2`, and the two are indistinguishable in a
   path.
-- **The resolver is already central,** so the mechanism is cheap:
+- **Twelve scripts bypass the registry and hardcode the path,** so the layout
+  cannot move without them. `scripts/rails-find/core.ts:37-78` holds 27 literals
+  (two package→path maps plus `GREP_SCOPE`), and
+  `scripts/api-compare/ar-closure.ts:124,128`,
+  `scripts/build-rails-error-manifest.ts:93`,
+  `scripts/fixtures-compare/compare.ts:20`,
+  `scripts/fixtures-compare/extract-ruby-models.rb:10,11,144`,
+  `scripts/generate-fixture-parity-map.ts:34`,
+  `scripts/schema-compare/compare.ts:46` and
+  `scripts/test-deps/rails-test-deps.ts:23` each build their own
+  `path.join(ROOT, "vendor/rails", …)`. Each is a second spelling of what
+  `vendor/sources.ts` already answers, and each breaks at the depth change —
+  before any citation is touched.
+- **The resolver is otherwise central,** so the rest of the mechanism is cheap:
   `resolvePath` / `vendoredRoot` / `libPathsManifest` / `testPathsManifest` /
   `libEntryFilesManifest` in `vendor/sources.ts` and `destFor` in
   `vendor/fetch.ts` are the only places that join `VENDOR_DIR` to a source name.
@@ -80,18 +93,51 @@ any ref.
    `pnpm vendor:recite` rewrites every tracked citation from whatever version it
    names to the active one, and is the tool the initial sweep and every future
    upgrade both run. The bulk rewrite is not a hand edit.
-5. **A gate keeps it true.** A `scripts/` test fails on a tracked citation whose
+5. **A citation is not the same as code that matches one.**
+   `eslint/ruby-compat-needs-mri-citation.mjs:36` matches citations with
+   `/vendor\/ruby\/([A-Za-z0-9_./+-]+):(\d+)/g` and *resolves* each one against
+   the clone — it reports a cited file the pinned checkout does not contain and a
+   line past the file's end (`:167-169`). Its character class admits `.` and `/`,
+   so a versioned citation matches with `rel = "v3.3.11/rational.c"` and
+   resolution silently fails against every ruby-compat export. The rule, its
+   fixtures (`ruby-compat-needs-mri-citation.test.mjs:31`) and
+   `scripts/api-compare/jsdoc-tag-line.test.ts:78` are logic, not prose, and the
+   codemod must not touch them.
+6. **A gate keeps it true.** A `scripts/` test fails on a tracked citation whose
    version segment is missing, or names a version that is not the active one — so
    an unversioned citation cannot land, and after a bump the sweep is not optional.
-6. **`rails:find` prints versioned paths,** since its output is what agents paste
+7. **`rails:find` prints versioned paths,** since its output is what agents paste
    into the citations the gate then checks.
+
+## Relationship to RFC 0025 (body pins)
+
+`scripts/api-compare/body-pins.ts` already answers a neighbouring question: it
+pins the normalized Rails body digest per name-matched pair, so a bump turns a
+changed upstream body into a DRIFT report (`lint-body-pins.ts`, run as the
+"Body-pins gate" CI step). The two do not overlap and neither replaces the other:
+
+| | body pins | versioned citations |
+| --- | --- | --- |
+| Granularity | one matched method pair | any path, at a line |
+| Detects | the Ruby body *changed* | the path names a *different version* |
+| Covers | `parity:api`-matched pairs only | unmatched surface, comments, docs, MRI C, test schema, fixtures |
+| State today | `body-pins.json` is `[]` — ORGANIC policy, `--pin-all` floor deferred | 1,546 citations, none versioned |
+
+Body pins are the precise instrument and citations are the coverage. The gap this
+RFC closes for RFC 0025 is that **the pin floor was deferred and the tree it would
+pin against is about to move**, so pinning the current surface is itself
+upgrade prep — story `pin-the-body-hash-floor-before-the-first-bump`.
 
 ## Non-goals
 
 - Bumping any `ref`. Rails 8.1 is a separate RFC that *uses* this one.
 - Vendoring more sources, or changing which directories a source exposes.
-- Committing the clones. They stay gitignored (`.prettierignore`'s `vendor/*/`
-  becomes `vendor/*/*/`; ci.yml's cache `path: vendor/*/` follows).
+- Committing the clones. They stay gitignored: `vendor/.gitignore` is `*` plus an
+  allowlist of the tracked registry files, which is depth-independent and needs no
+  change. `.prettierignore`'s `vendor/*/` becomes `vendor/*/*/` and ci.yml's cache
+  `path: vendor/*/` follows, because those two are globs rather than an allowlist.
+  `scripts/parity/legacy-script-names.ts:87`'s `path.join("vendor", "rails")` skip
+  is a prefix and keeps working.
 - Any parity-gate semantics. The comparers see the same tree at a deeper path.
 
 ## Alternatives considered
@@ -112,17 +158,22 @@ any ref.
 
 ## Rollout
 
-1. **Phase 1 — layout:** `nest-vendored-clones-under-a-version-directory`.
-2. **Phase 2 — coexistence:** `fetch-a-candidate-version-beside-the-active-one`.
-3. **Phase 3 — codemod:** `vendor-recite-rewrites-citations-to-the-active-version`.
-4. **Phase 4 — sweeps, parallel after Phase 3:**
+1. **Phase 0 — one resolver:** `route-vendor-path-construction-through-sources-ts`.
+   Nothing else can move until the twelve bypassing scripts read the registry.
+2. **Phase 1 — layout:** `nest-vendored-clones-under-a-version-directory`.
+3. **Phase 2, in parallel:**
+   - `fetch-a-candidate-version-beside-the-active-one` (coexistence)
+   - `version-the-mri-citation-lint-and-its-resolver` (the eslint rule, which must
+     accept the versioned form before any ruby-compat sweep lands)
+   - `pin-the-body-hash-floor-before-the-first-bump` (independent of the layout)
+4. **Phase 3 — codemod:** `vendor-recite-rewrites-citations-to-the-active-version`.
+5. **Phase 4 — sweeps, parallel, disjoint files:**
    - `recite-ruby-compat-citations-{a-f,g-m,n-z}-against-mri-v3-3-11` (the
      1,266-line MRI half, split three ways by file basename to stay under the
      per-PR ceiling)
    - `recite-rails-and-gem-citations-outside-ruby-compat`
-5. **Phase 5 — keep it true:** `gate-unversioned-and-stale-vendor-citations`,
-   `rails-find-prints-versioned-paths`.
-6. **Phase 6 — the point:** `document-the-upstream-upgrade-procedure`.
+6. **Phase 5 — keep it true:** `gate-unversioned-and-stale-vendor-citations`.
+7. **Phase 6 — the point:** `document-the-upstream-upgrade-procedure`.
 
 ## Verification
 
@@ -136,6 +187,14 @@ any ref.
 - The citation gate is red on a deliberately unversioned citation and on one
   naming a non-active version.
 - `pnpm vendor:recite` is idempotent: a second run is a no-op diff.
+- `pnpm lint` is clean after each sweep — in particular
+  `blazetrailsdev/ruby-compat-needs-mri-citation` still *resolves* every rewritten
+  MRI citation to an existing file and an in-range line, which is the arm the
+  version segment would otherwise break silently.
+- `pnpm tsx scripts/api-compare/lint-body-pins.ts` is green with a non-empty
+  `body-pins.json`, and reports DRIFT (not STALE) when pointed at a candidate tree.
+- `git grep -n 'vendor/rails"' -- scripts eslint` returns nothing: no script
+  rebuilds a vendor path outside `vendor/sources.ts`.
 
 ## Open questions
 
@@ -151,9 +210,21 @@ any ref.
    costs nothing and makes a hand-typed path work. Recommendation: no — a second
    spelling of the same tree is a second thing to keep honest, and the gate would
    have to exempt it.
-4. **Disk cost of coexistence.** ~53 MiB per source clone. Recommendation:
+4. **Does the citation gate subsume `ruby-compat-needs-mri-citation`'s resolve
+   arm, or sit beside it?** The eslint rule already resolves MRI citations to a
+   line; the new gate checks the version segment on every source. Recommendation:
+   beside — the rule needs a fetched tree and runs in the `rails-comparison` job,
+   the gate reads only the lockfile and must pass in Unit Tests, which has no
+   `vendor/`.
+5. **Disk cost of coexistence.** ~53 MiB per source clone. Recommendation:
    `--prune` plus a line in the upgrade doc; no automatic GC.
 
 ## Changelog
 
 - 2026-09-25: initial draft.
+- 2026-09-25: analysis pass. Added Phase 0 (twelve scripts rebuild the vendor path
+  from a literal and break before any sweep), the MRI-citation lint story (its
+  `CITATION` regex silently mis-resolves a versioned path), the body-hash floor
+  story, and the RFC 0025 relationship section. Dropped
+  `rails-find-prints-versioned-paths` — its 27 literals are path construction, so
+  Phase 0 covers them. Recorded `vendor/.gitignore` as depth-independent.
