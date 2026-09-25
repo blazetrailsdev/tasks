@@ -1,7 +1,7 @@
 ---
 title: "tagged-logging-proxy-is-not-a-formatter-extension"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8066
+claim: "2026-09-24T23:04:12Z"
+assignee: "duration-test-env-tz-zero-and-integer-division"
 blocked-by: null
 closed-reason: null
 ---

@@ -20,9 +20,9 @@ est-loc: 80
 pr: null
 claim: "2026-08-11T01:14:36Z"
 assignee: "arel-collector-argument-order-convergence"
-blocked-by: "Re-checked 2026-09-24 on trails 5debb0f743: still live. W1-W5 all merged (trails#7956, #8005, #8011, #8022), but NAMING_ENROLLED_PACKAGES (scripts/api-compare/lint-call-args.ts:101) is still activemodel, activerecord-test-support, arel, globalid, i18n — activesupport and activerecord are not enrolled. Their enrollment moved to the split follow-ups naming-residue-burndown-activesupport-structural (13 activesupport rows) and naming-burndown-activerecord-behavioral (6 activerecord rows + recorder/receipt fixes). Unblock once both merge and both packages are enrolled. Body criterion 2 still describes seeding baseline rows; RFC 0153 Rollout step 3 prose amendment (receipts, not baseline) is pending."
+blocked-by: "Re-checked 2026-09-24 on trails 5fe97345d9: still live. All waves merged incl. naming-burndown-activerecord-behavioral (trails#8029) and naming-residue-burndown-activesupport-structural (trails#8051), but NAMING_ENROLLED_PACKAGES (scripts/api-compare/lint-call-args.ts:101) is still activemodel, activerecord-test-support, arel, globalid, i18n. Enrollment moved to naming-enroll-activerecord and naming-enroll-activesupport (now deps; the latter waits on 4 activesupport row stories). Unblock once both merge. Body criterion 2 still describes seeding baseline rows; RFC 0153 Rollout step 3 prose amendment (receipts, not baseline) is pending."
 closed-reason: null
-priority: 50
+priority: 60
 ---
 
 ## Context

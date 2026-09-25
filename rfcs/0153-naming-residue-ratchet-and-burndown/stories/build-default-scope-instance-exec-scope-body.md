@@ -1,6 +1,6 @@
 ---
 title: "build-default-scope-instance-exec-scope-body"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 70
 pr: null
 claim: null
 assignee: null

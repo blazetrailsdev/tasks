@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone#to_time passes the TimeZone object to getlocal"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["activesupport", "date"]
 deps: ["time-zone-returns-zone-object-not-abbreviation"]
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 51
 pr: null
 claim: null
 assignee: null

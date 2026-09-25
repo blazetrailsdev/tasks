@@ -1,7 +1,7 @@
 ---
 title: "errors_test inspect builds its expected string from objects[0], not Errors#first"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-24
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8065
+claim: "2026-09-24T23:24:18Z"
+assignee: "hwia-test-enumerator-and-yaml-remainder"
 blocked-by: null
 closed-reason: null
 ---

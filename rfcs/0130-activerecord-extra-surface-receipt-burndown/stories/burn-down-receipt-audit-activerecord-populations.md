@@ -1,6 +1,6 @@
 ---
 title: "Burn down the receipt-audit populations for activerecord, then gate them"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#8067
+claim: "2026-09-24T23:43:54Z"
+assignee: "burn-down-receipt-audit-activerecord-populations"
 blocked-by: null
 closed-reason: null
 ---

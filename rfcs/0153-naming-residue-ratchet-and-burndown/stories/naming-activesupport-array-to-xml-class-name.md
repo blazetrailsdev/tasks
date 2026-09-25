@@ -1,6 +1,6 @@
 ---
 title: "Array#to_xml's first.class.name against rbObjClass, which answers the class name"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["activesupport", "ruby-compat"]
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 48
 pr: null
 claim: null
 assignee: null

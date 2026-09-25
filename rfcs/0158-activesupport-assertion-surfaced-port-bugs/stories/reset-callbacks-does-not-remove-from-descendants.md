@@ -1,7 +1,7 @@
 ---
 title: "reset-callbacks-does-not-remove-from-descendants"
-status: ready
-updated: 2026-09-22
+status: claimed
+updated: 2026-09-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-24T23:44:14Z"
+assignee: "reset-callbacks-does-not-remove-from-descendants"
 blocked-by: null
 closed-reason: null
 ---

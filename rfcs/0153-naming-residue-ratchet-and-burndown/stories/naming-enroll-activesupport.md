@@ -1,6 +1,6 @@
 ---
 title: "Enroll activesupport in NAMING_ENROLLED_PACKAGES"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -14,7 +14,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 10
-priority: null
+priority: 52
 pr: null
 claim: null
 assignee: null

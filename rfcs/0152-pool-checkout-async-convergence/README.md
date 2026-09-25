@@ -1,7 +1,7 @@
 ---
 rfc: "0152-pool-checkout-async-convergence"
 title: "Converge the synchronous pool-checkout seams onto the async checkout"
-status: active
+status: closed
 created: 2026-09-16
 updated: 2026-09-24
 owner: "@deanmarano"

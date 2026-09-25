@@ -1,6 +1,6 @@
 ---
 title: "logger-default-simple-formatter-and-nonstring-inspect"
-status: claimed
+status: done
 updated: 2026-09-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8064
 claim: "2026-09-24T22:44:14Z"
 assignee: "deprecation-silence-and-allow-restore-before-an-async-block-settles"
 blocked-by: null

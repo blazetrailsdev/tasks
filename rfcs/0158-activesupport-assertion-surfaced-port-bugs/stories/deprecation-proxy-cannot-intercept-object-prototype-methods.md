@@ -1,6 +1,6 @@
 ---
 title: "deprecation-proxy-cannot-intercept-object-prototype-methods"
-status: in-progress
+status: done
 updated: 2026-09-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

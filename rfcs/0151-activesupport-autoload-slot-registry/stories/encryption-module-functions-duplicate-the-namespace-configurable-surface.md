@@ -1,6 +1,6 @@
 ---
 title: "encryption.ts forwarding functions duplicate the Configurable surface now on the Encryption namespace"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 21
-pr: null
-claim: null
-assignee: null
+pr: trails#8068
+claim: "2026-09-24T23:47:57Z"
+assignee: "converge-connection-adapters-slot-onto-namespace"
 blocked-by: null
 closed-reason: null
 ---

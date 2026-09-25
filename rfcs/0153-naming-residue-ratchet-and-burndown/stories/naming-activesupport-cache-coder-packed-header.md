@@ -1,6 +1,6 @@
 ---
 title: "Cache::Coder packs its header with pack(PACKED_TEMPLATE), so load passes byteslice to load_version"
-status: draft
+status: ready
 updated: 2026-09-24
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["activesupport", "ruby-compat"]
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 50
 pr: null
 claim: null
 assignee: null

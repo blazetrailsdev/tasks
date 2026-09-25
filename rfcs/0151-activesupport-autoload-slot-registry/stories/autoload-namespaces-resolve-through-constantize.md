@@ -1,6 +1,6 @@
 ---
 title: "Autoload namespaces resolve through constantize (ActiveRecord, ActiveRecord::Migration)"
-status: ready
+status: in-progress
 updated: 2026-09-24
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 20
-pr: null
-claim: null
-assignee: null
+pr: trails#8068
+claim: "2026-09-24T23:47:57Z"
+assignee: "converge-connection-adapters-slot-onto-namespace"
 blocked-by: null
 closed-reason: null
 ---
