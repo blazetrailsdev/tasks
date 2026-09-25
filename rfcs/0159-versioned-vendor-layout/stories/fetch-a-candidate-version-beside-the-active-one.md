@@ -2,7 +2,7 @@
 title: "Fetch a candidate version beside the active one"
 status: ready
 updated: 2026-09-25
-rfc: "0000-versioned-vendor-layout"
+rfc: "0159-versioned-vendor-layout"
 cluster: vendor
 packages:
   - activerecord

@@ -2,7 +2,7 @@
 title: "Route every vendor path construction through vendor/sources.ts"
 status: claimed
 updated: 2026-09-25
-rfc: "0000-versioned-vendor-layout"
+rfc: "0159-versioned-vendor-layout"
 cluster: vendor
 packages:
   - activerecord

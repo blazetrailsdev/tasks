@@ -1,14 +1,14 @@
 ---
-title: "Recite ruby-compat citations against MRI v3.3.11 (n-z)"
+title: "Recite ruby-compat citations against MRI v3.3.11 (g-m)"
 status: ready
 updated: 2026-09-25
-rfc: "0000-versioned-vendor-layout"
+rfc: "0159-versioned-vendor-layout"
 cluster: vendor
 packages:
   - ruby-compat
 deps: [vendor-recite-rewrites-citations-to-the-active-version]
 deps-rfc: []
-est-loc: 396
+est-loc: 480
 priority: 4
 pr: null
 claim: null
@@ -22,8 +22,8 @@ closed-reason: null
 The `vendor/ruby/` sweep is 1,266 citation lines across 162 tracked
 `packages/ruby-compat/` files — `src/io.ts` alone has 104, `src/hash.ts` 86,
 `src/file.ts` 85 — so it is split three ways by file basename initial to stay
-under the per-PR ceiling. This slice is the files whose basename starts n through z
-(68 files, ~396 lines): e.g. `src/comparable.ts`, `src/file-utils.ts`,
+under the per-PR ceiling. This slice is the files whose basename starts g through m
+(44 files, ~480 lines): e.g. `src/comparable.ts`, `src/file-utils.ts`,
 `src/hash.ts`, `src/io.ts`, `src/kernel-format.ts`, `src/range.ts`,
 `src/rational.ts`, `src/tempfile.ts`, `src/string/method-table.ts`,
 `src/uri/generic.ts`, whichever fall in range, plus `NOTICE` and `README.md`

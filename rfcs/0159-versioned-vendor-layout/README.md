@@ -1,5 +1,5 @@
 ---
-rfc: "0000-versioned-vendor-layout"
+rfc: "0159-versioned-vendor-layout"
 title: "Nest vendored upstream sources under a version directory"
 status: active
 created: 2026-09-25
@@ -23,11 +23,7 @@ clusters:
 priority: 3
 ---
 
-<!-- Unnumbered until merge: `rfc:` stays 0000-versioned-vendor-layout and the H1
-     below stays number-free. `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — Nest vendored upstream sources under a version directory
+# RFC 0159 — Nest vendored upstream sources under a version directory
 
 ## Summary
 
