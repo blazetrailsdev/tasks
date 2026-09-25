@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat has no runtime method-visibility carrier (Module#private / public_send)"
-status: claimed
+status: ready
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-09-25T19:40:38Z"
-assignee: "eager-load-namespaces-without-eager-load-bang"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

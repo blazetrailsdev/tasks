@@ -1,6 +1,6 @@
 ---
 title: "Constructor collection arm: ForeignAssociation#foreign_key_present? makes new-owner-with-PK replace I/O-bearing (RFC 0087 premise falsified)"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

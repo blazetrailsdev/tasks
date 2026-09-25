@@ -1,6 +1,6 @@
 ---
 title: "belongs_to touch after_destroy passes an empty Hash behind an invented guard instead of changes_to_save"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

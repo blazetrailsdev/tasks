@@ -1,6 +1,6 @@
 ---
 title: "initialize-cache-skips-lookup-store-so-generated-cache-store-is-omitted"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

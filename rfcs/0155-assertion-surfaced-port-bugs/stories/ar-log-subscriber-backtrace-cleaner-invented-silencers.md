@@ -1,6 +1,6 @@
 ---
 title: "AR LogSubscriber backtrace_cleaner is a plain class_attribute BacktraceCleaner.new"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

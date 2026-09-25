@@ -1,6 +1,6 @@
 ---
 title: "Emitted auth controllers cast to any at every concern call site"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "generators"
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8106
+claim: "2026-09-25T20:17:05Z"
+assignee: "authentication-generator-emits-the-mailer-unconditionally"
 blocked-by: null
 closed-reason: null
 ---

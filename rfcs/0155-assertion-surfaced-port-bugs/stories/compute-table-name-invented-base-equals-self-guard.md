@@ -1,6 +1,6 @@
 ---
 title: 'computeTableName: delete invented base === this → "" arm (model_schema.rb:606-620)'
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

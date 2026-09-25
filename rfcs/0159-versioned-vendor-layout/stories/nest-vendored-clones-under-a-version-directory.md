@@ -1,6 +1,6 @@
 ---
 title: "Nest vendored clones under a version directory"
-status: ready
+status: done
 updated: 2026-09-25
 rfc: "0159-versioned-vendor-layout"
 cluster: vendor
@@ -10,9 +10,9 @@ deps: [route-vendor-path-construction-through-sources-ts]
 deps-rfc: []
 est-loc: 300
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8105
+claim: "2026-09-25T20:02:02Z"
+assignee: "nest-vendored-clones-under-a-version-directory"
 blocked-by: null
 closed-reason: null
 ---

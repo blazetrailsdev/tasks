@@ -1,6 +1,6 @@
 ---
 title: "Generated new/edit actions render explicitly where Rails' are empty"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "generators"
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8107
+claim: "2026-09-25T20:32:03Z"
+assignee: "converge-db-system-change-database-config-to-a-template"
 blocked-by: null
 closed-reason: null
 ---

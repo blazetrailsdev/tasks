@@ -1,6 +1,6 @@
 ---
 title: "vendor:recite rewrites citations to the active version"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0159-versioned-vendor-layout"
 cluster: vendor
@@ -10,9 +10,9 @@ deps: [nest-vendored-clones-under-a-version-directory]
 deps-rfc: []
 est-loc: 220
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8108
+claim: "2026-09-25T20:47:26Z"
+assignee: "fetch-a-candidate-version-beside-the-active-one"
 blocked-by: null
 closed-reason: null
 ---
