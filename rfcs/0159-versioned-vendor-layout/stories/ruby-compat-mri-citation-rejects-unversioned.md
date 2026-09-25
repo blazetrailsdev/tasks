@@ -42,8 +42,6 @@ and every individual sweep slice.
 - After all three ruby-compat recite slices have merged, an unversioned
   `vendor/ruby/<file>:<line>` citation is an error in
   `ruby-compat-needs-mri-citation`, whose message names `pnpm vendor:recite`.
-- The rule's header comment about the transitional unversioned arm, and its
-  reference to this story, are removed.
 - `ruby-compat-needs-mri-citation.test.mjs`'s "Unversioned still resolves" valid
   case moves to `invalid` with the new messageId; the no-vendor-tree tester still
   reports nothing.
