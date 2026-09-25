@@ -1,6 +1,6 @@
 ---
 title: "Association scopes take (owner) with this=relation, as instance_exec(owner, &scope)"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 9
-pr: null
-claim: null
-assignee: null
+pr: trails#8099
+claim: "2026-09-25T18:11:42Z"
+assignee: "generated-environments-omit-namespaced-framework-settings"
 blocked-by: null
 closed-reason: null
 ---

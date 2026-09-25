@@ -1,6 +1,6 @@
 ---
 title: "Trails.env omits the RACK_ENV (NODE_ENV) arm of Rails.env"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

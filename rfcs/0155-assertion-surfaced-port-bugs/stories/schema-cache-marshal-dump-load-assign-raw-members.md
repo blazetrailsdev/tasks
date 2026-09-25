@@ -1,6 +1,6 @@
 ---
 title: "SchemaCache#marshal_dump/#marshal_load assign raw members, no per-column conversion"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

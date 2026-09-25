@@ -1,6 +1,6 @@
 ---
 title: "Relation#merge's declared type doesn't accept the hash form HashMerger already supports"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

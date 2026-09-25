@@ -1,7 +1,7 @@
 ---
 title: "Timestamp ClassMethods *_in_model are not dispatched through the model class"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

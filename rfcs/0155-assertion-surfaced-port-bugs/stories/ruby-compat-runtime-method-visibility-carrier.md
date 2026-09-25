@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat has no runtime method-visibility carrier (Module#private / public_send)"
-status: draft
-updated: 2026-09-23
+status: ready
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["ruby-compat", "activemodel", "activerecord"]

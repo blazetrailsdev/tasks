@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Visitor test model omits visitor.rb's attr_reader :password_confirmation"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

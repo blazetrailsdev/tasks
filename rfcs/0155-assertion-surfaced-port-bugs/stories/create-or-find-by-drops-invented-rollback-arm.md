@@ -1,6 +1,6 @@
 ---
 title: "create_or_find_by: relation transaction, no invented RecordNotSaved arm"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

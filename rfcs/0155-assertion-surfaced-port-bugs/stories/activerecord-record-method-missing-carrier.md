@@ -1,7 +1,7 @@
 ---
 title: "Records have no method_missing carrier for undefined names"
-status: draft
-updated: 2026-09-23
+status: claimed
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T18:51:40Z"
+assignee: "initialize-cache-skips-lookup-store-so-generated-cache-store-is-omitted"
 blocked-by: null
 closed-reason: null
 ---

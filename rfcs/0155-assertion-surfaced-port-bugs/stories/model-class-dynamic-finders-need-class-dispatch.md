@@ -1,6 +1,6 @@
 ---
 title: "Model.find_by_<attr> is unreachable on the model class until a relation call defines it"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

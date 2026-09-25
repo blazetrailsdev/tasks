@@ -1,7 +1,7 @@
 ---
 title: "Base.inspect's table_exists? arm is ported as a columnsHash-empty check"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

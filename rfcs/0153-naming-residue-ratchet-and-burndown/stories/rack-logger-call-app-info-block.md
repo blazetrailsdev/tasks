@@ -1,6 +1,6 @@
 ---
 title: "rack-logger-call-app-info-block"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null

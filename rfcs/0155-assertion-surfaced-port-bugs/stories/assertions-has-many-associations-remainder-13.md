@@ -1,7 +1,7 @@
 ---
 title: "assertions-has-many-associations-remainder-13"
-status: draft
-updated: 2026-09-22
+status: ready
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

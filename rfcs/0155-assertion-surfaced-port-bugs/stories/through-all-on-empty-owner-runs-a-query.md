@@ -1,6 +1,6 @@
 ---
 title: "through-all-on-empty-owner-runs-a-query"
-status: blocked
+status: closed
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -12,8 +12,8 @@ priority: null
 pr: trails#8096
 claim: "2026-09-25T16:51:41Z"
 assignee: "generated-environments-omit-namespaced-framework-settings"
-blocked-by: "trails#8096 ports both tests in Rails' shape (the relation is returned unloaded, so the 0-query arm holds); the no_joins arm's 1 query happens at scope build in Rails (disable_joins_association_scope.rb:25) but at load in trails, so un-skipping waits on converge-djar-deferred-chain-walk-mode"
-closed-reason: null
+blocked-by: null
+closed-reason: "trails#8096 (merged 2026-09-25) ported both tests in Rails' shape; the 0-query arm now holds. The two remaining it.skip tests (has-many-through-disable-joins-associations.test.ts:193,207 'empty on disable joins through' / '... using custom foreign key') now carry 'BLOCKED: ... converge-djar-deferred-chain-walk-mode' (0023), not this story: the no_joins arm's 1 query happens at load, not scope build (disable_joins_association_scope.rb:25), which is exactly that 0023 story's deferred chain-walk mode. git grep 'through-all-on-empty-owner' origin/main -- packages finds no pointer. Remaining work is owned there."
 ---
 
 ## Context

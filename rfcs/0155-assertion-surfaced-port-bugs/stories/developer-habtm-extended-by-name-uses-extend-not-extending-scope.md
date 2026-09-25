@@ -1,6 +1,6 @@
 ---
 title: "Developer habtm projects_extended_by_name* use extend: where Rails uses an extending scope"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "sqlite-readonly-memory-and-strict-false"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "schema_format uses ts/js/sql where Rails has :ruby/:sql; schema_dump default is schema.ts"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

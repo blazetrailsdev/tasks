@@ -1,7 +1,7 @@
 ---
 title: "ruby-mutable-string-carrier"
-status: draft
-updated: 2026-09-24
+status: blocked
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "RFC-sized, per its own body: switching Type::String#cast_value's return type touches every :string/:text read, === comparison, Map key, JSON.stringify and typeof==='string' bind/quote consumer across activemodel/activerecord. Its first AC is a design (RFC or RFC section) the RFC owner must commission; not spawnable as a single story."
 closed-reason: null
 ---
 

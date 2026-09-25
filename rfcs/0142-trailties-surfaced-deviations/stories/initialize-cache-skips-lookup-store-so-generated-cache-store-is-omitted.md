@@ -1,6 +1,6 @@
 ---
 title: "initialize-cache-skips-lookup-store-so-generated-cache-store-is-omitted"
-status: ready
+status: claimed
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T18:51:40Z"
+assignee: "initialize-cache-skips-lookup-store-so-generated-cache-store-is-omitted"
 blocked-by: null
 closed-reason: null
 ---

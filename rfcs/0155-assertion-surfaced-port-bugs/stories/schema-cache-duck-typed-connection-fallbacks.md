@@ -1,6 +1,6 @@
 ---
 title: "SchemaCache duck-types the pool and connection where Rails calls with_connection unconditionally"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

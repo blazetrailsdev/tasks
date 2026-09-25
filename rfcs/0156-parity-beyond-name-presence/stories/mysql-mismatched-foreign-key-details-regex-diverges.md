@@ -1,7 +1,7 @@
 ---
 title: "Converge mismatched_foreign_key_details regex and options-building to Rails"
-status: ready
-updated: 2026-09-23
+status: in-progress
+updated: 2026-09-25
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8099
+claim: "2026-09-25T18:11:42Z"
+assignee: "generated-environments-omit-namespaced-framework-settings"
 blocked-by: null
 closed-reason: null
 ---

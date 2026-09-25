@@ -1,6 +1,6 @@
 ---
 title: "migration-compatibility-v5-0-v4-2"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

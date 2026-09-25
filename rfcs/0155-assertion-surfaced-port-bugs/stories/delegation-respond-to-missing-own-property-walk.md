@@ -1,6 +1,6 @@
 ---
 title: "Delegation#respond_to_missing? carries an invented own-property walk instead of super || model.respond_to?"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

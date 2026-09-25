@@ -1,7 +1,7 @@
 ---
 title: "OID::Point#type_cast_for_schema returns [x, y]; credit ActiveRecord::Point members"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "ConnectionHandling: with_role_and_shard checks is_a? ActiveRecord::Relation and returns the relation, not a load/toArray duck type"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "find_by / find_by! mirror finder_methods.rb:111-119 (no RangeError rescue, take!)"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

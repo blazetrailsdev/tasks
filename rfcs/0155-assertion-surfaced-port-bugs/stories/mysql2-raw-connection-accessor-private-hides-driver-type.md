@@ -1,6 +1,6 @@
 ---
 title: "Mysql2Adapter#_rawConnection is private, so rawConnection() is typed unknown"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

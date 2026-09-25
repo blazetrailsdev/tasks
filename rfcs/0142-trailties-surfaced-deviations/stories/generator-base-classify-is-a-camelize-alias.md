@@ -1,6 +1,6 @@
 ---
 title: "generators/base.ts classify is a camelize alias; Rails' .classify call sites lose singularization"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
