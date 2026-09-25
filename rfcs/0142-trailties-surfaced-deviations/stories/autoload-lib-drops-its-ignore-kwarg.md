@@ -1,14 +1,14 @@
 ---
 title: "autoload-lib-drops-its-ignore-kwarg"
-status: draft
-updated: 2026-09-16
+status: ready
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "paths.test.ts's describe is Rails::Paths, so all 11 matched tests score WRONG DESCRIBE"
-status: draft
-updated: 2026-09-04
+status: ready
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

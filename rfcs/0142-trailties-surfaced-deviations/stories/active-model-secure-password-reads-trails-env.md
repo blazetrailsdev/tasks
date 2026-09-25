@@ -1,14 +1,14 @@
 ---
 title: "active-model-secure-password-reads-trails-env"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

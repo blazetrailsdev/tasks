@@ -1,6 +1,6 @@
 ---
 title: "naming-enroll-activerecord"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 47
-pr: null
+pr: trails#8071
 claim: "2026-09-25T00:03:48Z"
 assignee: "naming-enroll-activerecord"
 blocked-by: null

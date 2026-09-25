@@ -1,7 +1,7 @@
 ---
 title: "Rewrite CLAUDE.md § Call-time constant resolution for the ActiveSupport::Autoload shape"
 status: blocked
-updated: 2026-09-24
+updated: 2026-09-25
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: autoload
 packages: []
@@ -14,7 +14,7 @@ deps:
   - "converge-activerecord-support-db-slots"
 deps-rfc: []
 est-loc: 60
-priority: 22
+priority: 28
 pr: null
 claim: null
 assignee: null

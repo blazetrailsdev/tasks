@@ -1,14 +1,14 @@
 ---
 title: "Core#hash returns an Integer (core.rb:641-649), not a string/Symbol token; rbHash([record]) throws"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 100
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

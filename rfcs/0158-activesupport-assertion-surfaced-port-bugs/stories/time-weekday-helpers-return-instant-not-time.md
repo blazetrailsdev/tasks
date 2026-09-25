@@ -1,6 +1,6 @@
 ---
 title: "Time#next_weekday / #prev_weekday answer an Instant on the weekend branch"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

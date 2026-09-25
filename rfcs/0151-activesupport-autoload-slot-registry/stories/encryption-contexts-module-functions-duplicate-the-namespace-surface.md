@@ -1,14 +1,14 @@
 ---
 title: "encryption-contexts-module-functions-duplicate-the-namespace-surface"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-25
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 25
 pr: null
 claim: null
 assignee: null

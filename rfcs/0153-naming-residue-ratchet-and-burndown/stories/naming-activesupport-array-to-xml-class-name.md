@@ -1,6 +1,6 @@
 ---
 title: "Array#to_xml's first.class.name against rbObjClass, which answers the class name"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 48
-pr: null
+pr: trails#8071
 claim: "2026-09-25T00:03:48Z"
 assignee: "naming-enroll-activerecord"
 blocked-by: null

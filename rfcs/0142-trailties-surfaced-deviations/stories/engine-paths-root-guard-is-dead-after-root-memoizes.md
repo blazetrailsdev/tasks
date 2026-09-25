@@ -1,14 +1,14 @@
 ---
 title: "Engine#paths' root guard and Application#initialize's bootRoot fallback are dead now that root() memoizes into config.root"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

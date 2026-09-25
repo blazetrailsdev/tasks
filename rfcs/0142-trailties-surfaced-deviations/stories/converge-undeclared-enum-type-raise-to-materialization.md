@@ -1,7 +1,7 @@
 ---
 title: "Raise Undeclared attribute type from the enum decorate_attributes block, not the serialize path"
-status: draft
-updated: 2026-08-20
+status: closed
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#6793 (3476294766, 2026-08-20, on main). origin/main packages/activerecord/src/enum.ts:235-242 raises 'Undeclared attribute type for enum' inside the decorateAttributes block keyed on 'subtype === defaultValue()', matching enum.rb:239-246. git grep '_enumsPendingTypeCheck|assertEnumTypeDeclared|isDecoratorReplay' over packages/activerecord/src returns nothing on origin/main."
 ---
 
 ## Context

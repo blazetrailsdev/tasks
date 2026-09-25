@@ -1,14 +1,14 @@
 ---
 title: "Generated ApplicationRecord omits primary_abstract_class"
-status: draft
-updated: 2026-09-15
+status: ready
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

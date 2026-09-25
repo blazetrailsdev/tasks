@@ -1,14 +1,14 @@
 ---
 title: "The controller generator singularizes with classify where Rails camelizes"
-status: draft
-updated: 2026-09-09
+status: ready
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

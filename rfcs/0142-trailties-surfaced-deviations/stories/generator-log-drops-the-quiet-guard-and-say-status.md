@@ -1,14 +1,14 @@
 ---
 title: "Generators' log drops options.quiet? and say_status, formatting the status line inline"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

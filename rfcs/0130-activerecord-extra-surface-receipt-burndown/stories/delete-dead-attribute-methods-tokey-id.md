@@ -1,14 +1,14 @@
 ---
 title: "Delete dead toKey/id duplicates in attribute-methods.ts"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

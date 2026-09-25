@@ -1,14 +1,14 @@
 ---
 title: "Delete Base#_associationCache(name); rename the cache field to _associationCache"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

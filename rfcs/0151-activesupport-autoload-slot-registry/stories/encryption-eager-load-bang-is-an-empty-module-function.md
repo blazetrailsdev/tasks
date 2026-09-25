@@ -1,6 +1,6 @@
 ---
 title: "encryption-eager-load-bang-is-an-empty-module-function"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 24
 pr: null
 claim: null
 assignee: null

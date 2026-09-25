@@ -1,14 +1,14 @@
 ---
 title: "Port rails/test_help for applications: the generated test helper is a stub with no boot, schema, fixtures or app routes"
-status: draft
-updated: 2026-09-23
+status: ready
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 55
 pr: null
 claim: null
 assignee: null

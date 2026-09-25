@@ -1,7 +1,7 @@
 ---
 title: "redis-cache-store-remaining-operations"
-status: draft
-updated: 2026-09-24
+status: closed
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by cache-store-async-over-npm-clients: trails#8057 closed; the Redis store is to be ported async over an npm client from the beginning"
 ---
 
 ## Context

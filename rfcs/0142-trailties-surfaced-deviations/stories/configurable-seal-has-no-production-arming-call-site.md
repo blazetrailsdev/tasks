@@ -1,14 +1,14 @@
 ---
 title: "Railtie::Configurable's inheritance seal is never armed outside tests, so the raise is inert in a booted app"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 30
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "Pair QueryCacheRegistry with query_cache.rb so parity:api compares it"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

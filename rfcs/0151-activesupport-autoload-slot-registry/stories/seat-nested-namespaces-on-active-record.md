@@ -1,6 +1,6 @@
 ---
 title: "Seat Associations/ConnectionAdapters/Encryption namespaces on ActiveRecord so constantize resolves them"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: null
+priority: 22
 pr: null
 claim: null
 assignee: null

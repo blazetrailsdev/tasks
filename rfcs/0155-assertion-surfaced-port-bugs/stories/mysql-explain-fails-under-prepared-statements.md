@@ -1,7 +1,7 @@
 ---
 title: "mysql-explain tests fail under MYSQL_PREPARED_STATEMENTS"
-status: ready
-updated: 2026-09-22
+status: done
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7944
+claim: "2026-09-25T01:04:13Z"
+assignee: "migration-test-inline-adapter-branches"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,14 +1,14 @@
 ---
 title: "generated-environments-omit-namespaced-framework-settings"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 40
 pr: null
 claim: null
 assignee: null

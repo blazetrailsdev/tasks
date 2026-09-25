@@ -1,7 +1,7 @@
 ---
 title: "assert_valid_deferrable: use inspect, not JSON.stringify"
-status: in-progress
-updated: 2026-09-24
+status: done
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

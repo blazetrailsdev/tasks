@@ -1,6 +1,6 @@
 ---
 title: "Converge the Migration namespace object onto the ActiveRecord::Migration class (Compatibility autoload)"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 23
 pr: null
 claim: null
 assignee: null

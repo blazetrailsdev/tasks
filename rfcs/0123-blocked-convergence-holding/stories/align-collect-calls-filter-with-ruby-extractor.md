@@ -1,6 +1,6 @@
 ---
 title: "collectCalls records _private()/Klass() names the Ruby extractor drops"
-status: claimed
+status: closed
 updated: 2026-09-25
 rfc: "0123-blocked-convergence-holding"
 cluster: api-compare
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-09-25T00:49:11Z"
 assignee: "tighten-assertion-mark-after-0132"
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise falsified by measurement (2026-09-24, trails 6b98fe98b0): applying the call_site_name filter to the compared tsCalls in compare.ts (after reachedSameFileMethods/effectiveTsCalls) adds 42 NEW call-mismatch rows and retires none. A TS-only name in tsCalls never produces a row on its own (significantMissingCalls only reports missing RUBY calls), so the filter can only remove credits — and the `_` half removes legitimate ones: conventions.ts sanctions `_foo`/`_isFoo` as the private spelling of Ruby `foo`/`foo?` (actionview log-subscriber.ts renderPartial -> this._debug credits Ruby debug; activesupport subscriber.ts _addEventSubscriber/_invalidEvent credit add_event_subscriber/invalid_event?; time-with-zone.ts, strong-parameters.ts, output-safety.ts similar). The capitalised-name half alone leaves call-mismatches.json byte-identical (8600 compared / 242 mismatched either way). Nothing to converge."
 ---
 
 > Re-filed from RFC 0084 on 2026-08-14 when 0084 was superseded by RFC 0106

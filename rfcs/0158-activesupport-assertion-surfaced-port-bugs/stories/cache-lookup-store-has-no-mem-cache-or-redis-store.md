@@ -1,7 +1,7 @@
 ---
 title: "cache-lookup-store-has-no-mem-cache-or-redis-store"
-status: in-progress
-updated: 2026-09-24
+status: blocked
+updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: trails#8057
 claim: "2026-09-24T21:04:10Z"
 assignee: "cache-lookup-store-has-no-mem-cache-or-redis-store"
-blocked-by: null
+blocked-by: "blocked on cache-store-async-over-npm-clients: MemCacheStore/RedisCacheStore must wrap npm clients and be async from the beginning; the cache Store is sync today (trails#8057 closed)"
 closed-reason: null
 ---
 

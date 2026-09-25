@@ -1,18 +1,18 @@
 ---
 title: "Retire idsName: constructor dispatch resolves the ids writer via the generated method"
-status: blocked
-updated: 2026-09-24
+status: ready
+updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: 8
+priority: 7
 pr: null
-claim: "2026-09-24T13:35:28Z"
-assignee: "point-value-converges-onto-active-record-point"
-blocked-by: "Depends on define-association-accessors-into-generated-association-methods: Builder::Association.define_accessors installs readers/writers on model.prototype, not model.generated_association_methods (builder/association.rb:95-100), so the #{k}= ids writer cannot be told apart from attribute writers without re-deriving the name"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

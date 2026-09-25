@@ -1,14 +1,14 @@
 ---
 title: "trails server is hardcoded to development and ignores the environment"
-status: draft
-updated: 2026-09-06
+status: ready
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
 packages: ["trailties"]
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 25
 pr: null
 claim: null
 assignee: null
