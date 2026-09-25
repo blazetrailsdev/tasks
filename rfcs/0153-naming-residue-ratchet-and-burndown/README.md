@@ -18,6 +18,7 @@ packages:
   - rack
   - ruby-compat
   - trailties
+  - date
 clusters:
   - naming-residue
 related-rfcs:
