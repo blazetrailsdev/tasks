@@ -1,6 +1,6 @@
 ---
 title: "Core#hash returns an Integer (core.rb:641-649), not a string/Symbol token; rbHash([record]) throws"
-status: claimed
+status: ready
 updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: 6
 pr: null
-claim: "2026-09-25T02:10:13Z"
-assignee: "async-pluck-pick-ids-take-async-arm"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
