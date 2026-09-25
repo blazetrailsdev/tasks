@@ -1,14 +1,14 @@
 ---
 title: "Normalize generator dir spellings and port the targeted Generators.lookup"
 status: ready
-updated: 2026-09-04
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "generators"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 50
+priority: 3
 pr: null
 claim: null
 assignee: null

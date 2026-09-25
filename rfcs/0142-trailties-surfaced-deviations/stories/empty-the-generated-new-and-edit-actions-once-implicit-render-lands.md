@@ -1,14 +1,14 @@
 ---
 title: "Generated new/edit actions render explicitly where Rails' are empty"
 status: ready
-updated: 2026-09-04
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "generators"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: 50
+priority: 3
 pr: null
 claim: null
 assignee: null

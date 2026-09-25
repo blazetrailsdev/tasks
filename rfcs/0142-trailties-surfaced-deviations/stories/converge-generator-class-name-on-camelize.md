@@ -1,6 +1,6 @@
 ---
 title: "The controller generator singularizes with classify where Rails camelizes"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "action_controller.set_configs ports only its two routing lines"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"

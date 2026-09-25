@@ -1,7 +1,7 @@
 ---
 title: "pluck-multi-column-on-joined-relation-returns-flat-column"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["sqlite3-perform-query-positional-result"]
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8089
+claim: "2026-09-25T15:56:34Z"
+assignee: "pluck-multi-column-on-joined-relation-returns-flat-column"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Dump the canonical pool in the last two hand-built-SchemaSource schema dumper cases"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8089
+claim: "2026-09-25T15:11:37Z"
+assignee: "schema-dumper-cases-dump-a-hand-built-schema-source"
 blocked-by: null
 closed-reason: null
 ---

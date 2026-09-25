@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 30
+priority: 5
 pr: null
 claim: "2026-09-25T14:19:29Z"
 assignee: "converge-generator-class-name-on-camelize"

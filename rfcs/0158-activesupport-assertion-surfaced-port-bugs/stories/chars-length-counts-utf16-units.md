@@ -1,6 +1,6 @@
 ---
 title: "Chars#length counts UTF-16 units where String#length counts characters"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

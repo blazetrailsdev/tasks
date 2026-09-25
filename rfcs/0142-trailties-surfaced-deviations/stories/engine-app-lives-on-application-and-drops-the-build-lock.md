@@ -1,6 +1,6 @@
 ---
 title: "Engine#app is declared on Application and drops @app_build_lock (engine.rb:515-524)"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 40
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#8090
+claim: "2026-09-25T15:51:34Z"
+assignee: "engine-app-lives-on-application-and-drops-the-build-lock"
 blocked-by: null
 closed-reason: null
 ---

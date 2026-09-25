@@ -1,14 +1,14 @@
 ---
 title: "migration_template takes a source template PATH and expands it through find_in_source_paths"
 status: ready
-updated: 2026-09-06
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: 52
+priority: 3
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "Retire idsName: constructor dispatch resolves the ids writer via the generated method"
-status: ready
+status: claimed
 updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T15:39:53Z"
+assignee: "query-cache-registry-unpaired-in-parity-api"
 blocked-by: null
 closed-reason: null
 ---

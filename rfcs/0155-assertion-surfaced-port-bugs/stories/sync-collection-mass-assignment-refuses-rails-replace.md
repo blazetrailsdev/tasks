@@ -1,7 +1,7 @@
 ---
 title: "Mass-assigned collection replace refuses three Rails call sites instead of performing them"
-status: ready
-updated: 2026-09-15
+status: blocked
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-25T15:31:38Z"
+assignee: "sqlite-pragma-error-parity"
+blocked-by: "Needs synchronous DB I/O from a synchronous constructor. Rails' ForeignAssociation#foreign_key_present? (foreign_association.rb:5-11) makes find_target? true for a new has_many owner with its PK set, so new Firm({id:5, clients:[...]}) runs load_target's query plus delete_or_destroy (collection_association.rb:242-256, :392-397) inside Model.new. RFC 0087 fixes Model.new as permanently synchronous; its Open Questions premise that foreign_key_present? is overridden only by BelongsTo is falsified by foreign_association.rb:5. The story's proposed park-and-drain-on-save shape is the pattern retire-the-parked-promise-pattern (RFC 0087, done) deleted. Unblocks only by an RFC decision reopening 0087's constructor arm; syncWrite's loud refusal stays the floor meanwhile."
 closed-reason: null
 ---
 

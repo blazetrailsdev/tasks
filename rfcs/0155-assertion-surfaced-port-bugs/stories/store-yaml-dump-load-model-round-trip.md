@@ -1,7 +1,7 @@
 ---
 title: "store-yaml-dump-load-model-round-trip"
-status: ready
-updated: 2026-09-22
+status: blocked
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-25T15:11:37Z"
+assignee: "schema-dumper-cases-dump-a-hand-built-schema-source"
+blocked-by: "needs psych-object-protocol-for-record-yaml-round-trip: YAML.dump/unsafe_load of a record is Psych's !ruby/object + encode_with/init_with protocol (core.rb:498-502,587-591), which trails lacks entirely (activesupport/yaml is bare npm parse/stringify; yaml_serialization_test.rb is PERMANENT-SKIP for the same gap; sibling relation-to-yaml-psych-dump hits it too)"
 closed-reason: null
 ---
 

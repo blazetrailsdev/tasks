@@ -1,6 +1,6 @@
 ---
 title: "relations-array-to-yaml-xml"
-status: in-progress
+status: closed
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#8086
 claim: "2026-09-25T14:31:42Z"
 assignee: "relation-find-by-bang-no-arguments"
 blocked-by: null
-closed-reason: null
+closed-reason: "Split: to_xml half converged in trails#8086 (Relation#toXml delegates to Array#to_xml); to_yaml half needs a Psych emitter and is tracked as relation-to-yaml-psych-dump."
 ---
 
 ## Context

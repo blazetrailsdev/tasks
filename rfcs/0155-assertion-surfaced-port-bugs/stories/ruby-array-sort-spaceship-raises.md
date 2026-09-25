@@ -1,6 +1,6 @@
 ---
 title: "Port Array#sort over <=> raising ArgumentError for base_test comparison tests"
-status: claimed
+status: done
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8087
 claim: "2026-09-25T14:51:41Z"
 assignee: "reset-callbacks-test-helper-ships-in-production-callbacks"
 blocked-by: null

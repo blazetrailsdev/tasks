@@ -1,6 +1,6 @@
 ---
 title: "has_secure_token ignores ActiveRecord.generate_secure_token_on; loadDefaults 7.1 writes the colon spelling"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

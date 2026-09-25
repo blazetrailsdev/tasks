@@ -1,6 +1,6 @@
 ---
 title: "paths.test.ts's describe is Rails::Paths, so all 11 matched tests score WRONG DESCRIBE"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
