@@ -179,34 +179,55 @@ setters are deleted, and so no single PR exceeds the LOC ceiling:
 
 ## Open questions
 
-None. The constructor arm was the candidate question and is resolved: **`new
-Foo({ account: x })` keeps assigning in memory, synchronously, and needs no
-awaitable form.**
+None open. The constructor arm was the candidate question. It was first
+answered with a false premise, corrected here (RFC 0155,
+`constructor-arm-foreign-key-present-premise-falsified`).
 
-A constructor's owner is unpersisted by definition, and every path Rails can
-reach from there is in-memory:
+**Superseded premise.** This section used to say every path `new Foo({...})`
+can reach is in-memory, because `foreign_key_present?` "defaults to false and
+is overridden only by `BelongsToAssociation`". That is false.
+`ActiveRecord::Associations::ForeignAssociation#foreign_key_present?`
+(`activerecord/lib/active_record/associations/foreign_association.rb:5-11`)
+returns `owner.attribute_present?(reflection.active_record_primary_key)`, and
+both `HasManyAssociation` (`has_many_association.rb:12`) and
+`HasOneAssociation` (`has_one_association.rb:7`) include it. So `find_target?`
+(`!loaded? && (!owner.new_record? || foreign_key_present?) && klass`,
+`association.rb:320-322`) is **true for a new owner whose primary key is set**.
 
-- `save &&= owner.persisted?` (`has_one_association.rb:66`) is false, so
-  `replace` opens no transaction and saves no record.
-- `remove_target!`'s nullify save is gated on `target.persisted? &&
-owner.persisted?` (`:108`).
-- `find_target?` is `!loaded? && (!owner.new_record? || foreign_key_present?) &&
-klass` (`association.rb:320-322`); for has_one / has_many on a new owner both
-  disjuncts are false (`foreign_key_present?` defaults to false and is
-  overridden only by `BelongsToAssociation`, where the FK lives on the owner),
-  so `load_target` issues no query.
+The constructor arm therefore splits in two:
 
-Rails' `new` is synchronous _because_ everything it can reach is in-memory, so
-an async `Model.new` would be a deviation rather than a convergence — and it
-would force `await` onto every construction in the codebase to buy nothing.
-`Model.new` / `Model.build` already exist as statics (`base.ts`), and
-`parity:api` maps Ruby `new` / `initialize` to `constructor`
-(`scripts/api-compare/conventions.ts:699`), so no naming work is outstanding
-either.
+- **New owner, primary key unset** — in-memory, as before. `find_target?` is
+  false, `save &&= owner.persisted?` (`has_one_association.rb:66`) is false,
+  and `remove_target!`'s nullify save is gated on `owner.persisted?` (`:108`).
+- **New owner, primary key set** — I/O-bearing. `Firm.new(id: 5, clients: [...])`
+  reaches `CollectionAssociation#replace` (`collection_association.rb:242-256`),
+  whose `load_target` (`:244`) is a query (`association.rb:190`) and whose
+  `delete_or_destroy` (`:392-397`) deletes any already-persisted record the
+  diff removes, in a transaction. `Account.new(id: 5, firm: f)`'s has_one
+  counterpart runs `load_target` too (`has_one_association.rb:62`).
 
-This arm is also not an instance of the split this RFC removes: `new Foo({...})`
-has one behavior always, with no dependence on the owner's persistence state,
-because the owner cannot be persisted.
+**Converged shape for the I/O-bearing arm.** `Model.new` stays synchronous —
+a JS constructor cannot await, and an async `new` would force `await` onto
+every construction — and park/drain is retired
+(`retire-the-parked-promise-pattern`). So this RFC's thesis applies unchanged:
+one surface, always awaited, and a synchronous surface that owes I/O
+**raises** and names the awaitable spelling.
+
+- The awaitable surface that performs Rails' replace is the one every other
+  arm already uses: `setAttributes` for mass assignment and the association
+  writer (`setClients` / `collection.replace`) for a single association. On a
+  new owner with its primary key set, both run `load_target` and
+  `delete_or_destroy` exactly as `collection_association.rb:242-256` does.
+  `new Firm({ id: 5 })` followed by `await firm.setAttributes({ clients })`
+  is the trails spelling of `Firm.new(id: 5, clients: [...])`.
+- The synchronous arms — the constructor and `assignAttributes` — keep
+  `CollectionPersistedAssignmentError`'s loud refusal on that arm and on every
+  other arm that owes I/O. They never schedule the work and never drop it.
+
+That settles `sync-collection-mass-assignment-refuses-rails-replace`: its
+acceptance criteria are met by the awaitable surface performing the replace
+on all three arms, and by the synchronous arms refusing, not by making the
+constructor do I/O.
 
 ## Changelog
 
