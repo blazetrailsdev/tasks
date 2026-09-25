@@ -1,6 +1,6 @@
 ---
 title: "encryption-contexts-module-functions-duplicate-the-namespace-surface"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null

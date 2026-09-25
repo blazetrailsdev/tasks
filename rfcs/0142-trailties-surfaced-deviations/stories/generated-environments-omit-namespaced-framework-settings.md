@@ -1,6 +1,6 @@
 ---
 title: "generated-environments-omit-namespaced-framework-settings"
-status: claimed
+status: ready
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: "2026-09-25T16:51:41Z"
-assignee: "generated-environments-omit-namespaced-framework-settings"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

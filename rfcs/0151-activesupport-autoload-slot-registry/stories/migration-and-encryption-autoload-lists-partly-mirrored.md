@@ -1,6 +1,6 @@
 ---
 title: "Migration and Encryption autoload lists are only partly mirrored (CommandRecorder…, NullEncryptor…)"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 29
 pr: null
 claim: null
 assignee: null

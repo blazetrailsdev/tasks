@@ -1,6 +1,6 @@
 ---
 title: "Generators' log drops options.quiet? and say_status, formatting the status line inline"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

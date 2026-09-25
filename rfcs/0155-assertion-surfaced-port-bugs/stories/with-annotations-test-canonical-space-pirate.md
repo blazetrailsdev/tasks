@@ -1,7 +1,7 @@
 ---
 title: "WithAnnotationsTest: use canonical SpacePirate instead of bespoke SpacePirateAnnotated"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8097
+claim: "2026-09-25T17:31:41Z"
+assignee: "widen-relation-merge-hash-overload"
 blocked-by: null
 closed-reason: null
 ---

@@ -14,7 +14,7 @@ deps:
   - "converge-activerecord-support-db-slots"
 deps-rfc: []
 est-loc: 60
-priority: 28
+priority: 30
 pr: null
 claim: null
 assignee: null

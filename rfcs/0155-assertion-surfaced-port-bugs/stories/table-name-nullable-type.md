@@ -1,6 +1,6 @@
 ---
 title: "Type ModelSchema.table_name as string | null (nil for Base/abstract)"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

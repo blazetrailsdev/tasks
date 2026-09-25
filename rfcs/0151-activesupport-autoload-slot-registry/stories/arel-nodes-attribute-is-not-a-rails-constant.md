@@ -1,6 +1,6 @@
 ---
 title: "arel-nodes-attribute-is-not-a-rails-constant"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null

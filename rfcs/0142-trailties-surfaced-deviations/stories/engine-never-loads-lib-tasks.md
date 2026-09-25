@@ -1,6 +1,6 @@
 ---
 title: "Engine never loads lib/tasks, so generated and hand-written app tasks are dead code"
-status: ready
+status: blocked
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: 4
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-25T17:31:41Z"
+assignee: "widen-relation-merge-hash-overload"
+blocked-by: "trails has no Rake (Rake::DSL/TaskManager/RakeCommand, rake not vendored): lib/tasks files have nothing to register into and the CLI nothing to dispatch; needs port-rake-dsl-task-manager-for-app-tasks first"
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "UniquenessValidator: raise ArgumentError with Rails' message for non-callable :conditions"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
+pr: trails#8096
 claim: "2026-09-25T16:51:41Z"
 assignee: "generated-environments-omit-namespaced-framework-settings"
 blocked-by: null

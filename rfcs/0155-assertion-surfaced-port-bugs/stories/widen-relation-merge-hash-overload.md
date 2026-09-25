@@ -1,7 +1,7 @@
 ---
 title: "Relation#merge's declared type doesn't accept the hash form HashMerger already supports"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8097
+claim: "2026-09-25T17:31:41Z"
+assignee: "widen-relation-merge-hash-overload"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Trails.env omits the RACK_ENV (NODE_ENV) arm of Rails.env"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8096
+claim: "2026-09-25T16:51:41Z"
+assignee: "generated-environments-omit-namespaced-framework-settings"
 blocked-by: null
 closed-reason: null
 ---

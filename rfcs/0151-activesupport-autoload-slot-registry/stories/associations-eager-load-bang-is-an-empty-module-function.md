@@ -1,6 +1,6 @@
 ---
 title: "Associations.eager_load! is an empty module function; ActiveRecord.eager_load! skips super/ConnectionAdapters"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 28
 pr: null
 claim: null
 assignee: null

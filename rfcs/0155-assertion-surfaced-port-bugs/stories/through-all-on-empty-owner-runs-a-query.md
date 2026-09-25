@@ -1,6 +1,6 @@
 ---
 title: "through-all-on-empty-owner-runs-a-query"
-status: claimed
+status: blocked
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8096
 claim: "2026-09-25T16:51:41Z"
 assignee: "generated-environments-omit-namespaced-framework-settings"
-blocked-by: null
+blocked-by: "trails#8096 ports both tests in Rails' shape (the relation is returned unloaded, so the 0-query arm holds); the no_joins arm's 1 query happens at scope build in Rails (disable_joins_association_scope.rb:25) but at load in trails, so un-skipping waits on converge-djar-deferred-chain-walk-mode"
 closed-reason: null
 ---
 
