@@ -66,7 +66,8 @@ guessing.
   receives `LIB_PATHS_JSON` — by env var from the registry — and its `:144`
   `delete_prefix` is derived from the same value, not rebuilt.
 - `pnpm parity:api`, `parity:test`, `parity:fixtures`, `parity:schema` and
-  `pnpm test:deps` all produce byte-identical output to main. `pnpm rails:find
-<query>` prints every line main prints, byte-identical, plus any hits in the
-  packages the derived maps newly cover.
+  `pnpm test:deps` all produce byte-identical output to main.
+- `pnpm rails:find` differs from main only by hits in the packages the derived
+  maps newly cover, and the match counts and per-mode capping those hits move.
+  Every path it prints for an existing package is byte-identical.
 - No path depth changes in this story.
