@@ -1,6 +1,6 @@
 ---
 title: "assertEmpty/assertRespondTo bodies skip Minitest's respond_to pre-check and include_all"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8080
 claim: "2026-09-25T03:44:16Z"
 assignee: "activesupport-has-no-psych-emitter-for-to-yaml"
 blocked-by: null

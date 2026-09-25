@@ -1,6 +1,6 @@
 ---
 title: "spell-date-and-time-calculations-include-in-time-and-date-files"
-status: claimed
+status: ready
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-09-25T03:44:16Z"
-assignee: "activesupport-has-no-psych-emitter-for-to-yaml"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
