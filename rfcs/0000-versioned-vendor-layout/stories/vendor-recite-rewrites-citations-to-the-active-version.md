@@ -26,7 +26,7 @@ expectations. `packages/ruby-compat/src` holds 107 of the files and 1,363 of the
 `rack-test` (10), `rack-session` (8), `i18n` (5), `date` (4), `globalid` (4) and
 `did_you_mean` (2). Verbatim inventory:
 
-```
+```sh
 git ls-files -z | xargs -0 grep -IlE "vendor/(rails|ruby|rack|rack-session|rack-test|i18n|minitest|sqlite3|date|globalid|did_you_mean)/"
 ```
 

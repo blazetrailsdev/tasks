@@ -29,7 +29,7 @@ under the per-PR ceiling. This slice is the files whose basename starts n throug
 `src/uri/generic.ts`, whichever fall in range, plus `NOTICE` and `README.md`
 when they do. Enumerate the exact slice with:
 
-```
+```sh
 git ls-files -z 'packages/ruby-compat/*' | xargs -0 grep -IlE "vendor/ruby/"
 ```
 
