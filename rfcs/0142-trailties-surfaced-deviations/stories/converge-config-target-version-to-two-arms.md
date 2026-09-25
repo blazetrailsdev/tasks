@@ -1,7 +1,7 @@
 ---
 title: "converge-config-target-version-to-two-arms"
-status: ready
-updated: 2026-09-04
+status: claimed
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 20
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T02:09:41Z"
+assignee: "converge-config-target-version-to-two-arms"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Converge PG lookup_cast_type_from_column's verify! guard out of build_fixture_sql"
-status: claimed
+status: blocked
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-25T01:44:13Z"
 assignee: "nested-through-polymorphic-accessor-fidelity"
-blocked-by: null
+blocked-by: "lookupCastTypeFromColumn is synchronous by contract (AbstractAdapter#lookupCastTypeFromColumn returns ValueType; sync callers model-schema.ts:841 loadSchemaBang, type-caster/connection.ts:26 withConnectionSync, postgresql/quoting.ts:138 quoteDefaultExpression, schema dumpers) while verify! (postgresql/quoting.rb:190) must connect + load the type map asynchronously. Moving the guard into the method needs either an async lookupCastTypeFromColumn (the cascade CLAUDE.md § Schema reflection rejects) or an unratified ValueType|Promise dual return; TS2416 rejects a Promise-returning override. Unblock via a ratified decision on one of those shapes."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "association-helpers-extracted-for-the-collection-proxy-remainder"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8074
 claim: "2026-09-25T00:49:11Z"
 assignee: "tighten-assertion-mark-after-0132"
 blocked-by: null

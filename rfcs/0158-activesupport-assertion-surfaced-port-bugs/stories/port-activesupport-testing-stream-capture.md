@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveSupport::Testing::Stream so tests stop hand-rolling stderr capture"
-status: in-progress
-updated: 2026-09-24
+status: done
+updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

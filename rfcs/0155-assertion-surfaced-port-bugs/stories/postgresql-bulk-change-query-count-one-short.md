@@ -1,7 +1,7 @@
 ---
 title: "postgresql-bulk-change-query-count-one-short"
-status: ready
-updated: 2026-09-22
+status: blocked
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-25T02:04:15Z"
+assignee: "port-ruby-method-arity-for-globalid-locator"
+blocked-by: 'The missing PG query in both tests is Rails'' PostgreSQL#lookup_cast_type regtype round-trip: visit_ChangeColumnDefinition (postgresql/schema_creation.rb:98-104) calls quote_default_expression(default, ColumnDefinition); a ColumnDefinition does not respond_to?(:array?) so it takes super (abstract/quoting.rb:157-163), whose lookup_cast_type(column.sql_type) runs query_value("SELECT ...::regtype::oid", "SCHEMA") (postgresql/quoting.rb:194-197) — the ''one for columns'' query. trails'' lookupCastType resolves from the warmed _regtypeOids map with no query. That is exactly pg-lookup-cast-type-resolves-only-warmed-type-names (blocked: sync quoteDefaultExpression cannot await a regtype query). Unblocks when that story does.'
 closed-reason: null
 ---
 

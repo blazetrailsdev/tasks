@@ -1,7 +1,7 @@
 ---
 title: "errors_test inspect builds its expected string from objects[0], not Errors#first"
-status: in-progress
-updated: 2026-09-24
+status: done
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

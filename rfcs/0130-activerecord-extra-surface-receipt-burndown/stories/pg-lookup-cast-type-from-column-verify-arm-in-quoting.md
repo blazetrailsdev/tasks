@@ -1,6 +1,6 @@
 ---
 title: "pg-lookup-cast-type-from-column-verify-arm-in-quoting"
-status: ready
+status: claimed
 updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T02:10:13Z"
+assignee: "async-pluck-pick-ids-take-async-arm"
 blocked-by: null
 closed-reason: null
 ---

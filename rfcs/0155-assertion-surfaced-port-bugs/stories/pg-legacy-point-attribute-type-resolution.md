@@ -1,6 +1,6 @@
 ---
 title: "pg-legacy-point-attribute-type-resolution"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8075
 claim: "2026-09-25T01:44:13Z"
 assignee: "nested-through-polymorphic-accessor-fidelity"
 blocked-by: null

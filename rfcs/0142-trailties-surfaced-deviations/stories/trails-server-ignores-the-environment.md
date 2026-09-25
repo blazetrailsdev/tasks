@@ -1,6 +1,6 @@
 ---
 title: "trails server is hardcoded to development and ignores the environment"
-status: ready
+status: claimed
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 25
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T02:09:41Z"
+assignee: "converge-config-target-version-to-two-arms"
 blocked-by: null
 closed-reason: null
 ---

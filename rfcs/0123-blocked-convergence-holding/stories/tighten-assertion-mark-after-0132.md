@@ -1,6 +1,6 @@
 ---
 title: "Lift the assertion-mark freeze and reseed once"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0123-blocked-convergence-holding"
 cluster: enforcement
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 10
-pr: null
+pr: trails#8074
 claim: "2026-09-25T00:49:11Z"
 assignee: "tighten-assertion-mark-after-0132"
 blocked-by: null
