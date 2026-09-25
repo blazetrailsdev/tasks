@@ -1,7 +1,7 @@
 ---
 rfc: "0000-versioned-vendor-layout"
 title: "Nest vendored upstream sources under a version directory"
-status: draft
+status: active
 created: 2026-09-25
 updated: 2026-09-25
 owner: "@deanmarano"
@@ -23,7 +23,11 @@ clusters:
 priority: 3
 ---
 
-# RFC 0000 — Nest vendored upstream sources under a version directory
+<!-- Unnumbered until merge: `rfc:` stays 0000-versioned-vendor-layout and the H1
+     below stays number-free. `scripts/finalize-rfc.mjs` swaps 0000 for the
+     assigned number at merge. -->
+
+# RFC — Nest vendored upstream sources under a version directory
 
 ## Summary
 
@@ -198,30 +202,40 @@ upgrade prep — story `pin-the-body-hash-floor-before-the-first-bump`.
 
 ## Open questions
 
-1. **Normalize the version directory name, or use the ref verbatim?** MRI's ref is
-   the tag `v3_3_11`. Recommendation: normalize to `v3.3.11` — the directory is
-   read by humans far more often than it is matched against a tag, and the
-   normalization is one function with a test. The lockfile keeps the verbatim ref.
-2. **Is a stale citation red or merely reported?** Recommendation: red, scoped per
-   source — that is what turns an upgrade into a finite, attributable worklist.
-   The risk is that the Rails 8.1 PR then carries a ~1,500-line mechanical diff;
-   mitigated by the codemod, and by the sweep being its own commit.
-3. **Does a `current` symlink ship anyway, alongside versioned citations?** It
-   costs nothing and makes a hand-typed path work. Recommendation: no — a second
-   spelling of the same tree is a second thing to keep honest, and the gate would
-   have to exempt it.
-4. **Does the citation gate subsume `ruby-compat-needs-mri-citation`'s resolve
-   arm, or sit beside it?** The eslint rule already resolves MRI citations to a
-   line; the new gate checks the version segment on every source. Recommendation:
-   beside — the rule needs a fetched tree and runs in the `rails-comparison` job,
-   the gate reads only the lockfile and must pass in Unit Tests, which has no
-   `vendor/`.
-5. **Disk cost of coexistence.** ~53 MiB per source clone. Recommendation:
-   `--prune` plus a line in the upgrade doc; no automatic GC.
+All five are resolved; the RFC is `active`. Each resolution is an instruction to
+the story that implements it, not a preference to re-litigate there.
+
+1. **Normalize the version directory name, or use the ref verbatim?**
+   **Resolved: normalize.** MRI's ref is the tag `v3_3_11`; the directory is
+   `v3.3.11`. The directory is read by humans far more often than it is matched
+   against a tag, the normalization is one function with a test, and
+   `vendor/sources.lock.json` keeps the verbatim ref as the fetch input.
+2. **Is a stale citation red or merely reported?**
+   **Resolved: red, per source.** That is what turns a bump into a finite,
+   attributable worklist, and it is the whole reason citations carry a version at
+   all. Consequence accepted: the Rails 8.1 PR carries a ~1,500-line mechanical
+   commit, produced by `pnpm vendor:recite` and committed separately from any
+   hand-written change.
+3. **Does a `current` symlink ship anyway, alongside versioned citations?**
+   **Resolved: no.** A second spelling of the same tree is a second thing to keep
+   honest, and the citation gate would have to exempt it — which would also exempt
+   an unversioned citation that happens to resolve.
+4. **Does the citation gate subsume `ruby-compat-needs-mri-citation`'s resolve arm?**
+   **Resolved: it sits beside it.** The eslint rule resolves a citation to a real
+   file and an in-range line, needs a fetched tree, and runs in the
+   `rails-comparison` job; the gate checks the version segment for all eleven
+   sources from the lockfile alone and must pass in Unit Tests, which has no
+   `vendor/`. The overlap on ruby-compat's version segment is intentional
+   redundancy.
+5. **Disk cost of coexistence.** **Resolved: manual `--prune`, no automatic GC.**
+   ~53 MiB per clone, and a candidate is present only during an upgrade. An
+   automatic prune would delete the tree the upgrade is diffing against, which is
+   the one thing coexistence exists to prevent.
 
 ## Changelog
 
 - 2026-09-25: initial draft.
+- 2026-09-25: all five open questions resolved; status draft → active.
 - 2026-09-25: analysis pass. Added Phase 0 (twelve scripts rebuild the vendor path
   from a literal and break before any sweep), the MRI-citation lint story (its
   `CITATION` regex silently mis-resolves a versioned path), the body-hash floor

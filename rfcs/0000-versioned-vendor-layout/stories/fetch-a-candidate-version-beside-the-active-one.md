@@ -1,6 +1,6 @@
 ---
 title: "Fetch a candidate version beside the active one"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0000-versioned-vendor-layout"
 cluster: vendor

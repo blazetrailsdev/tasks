@@ -1,6 +1,6 @@
 ---
 title: "Recite rails and gem citations outside ruby-compat"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0000-versioned-vendor-layout"
 cluster: vendor

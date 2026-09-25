@@ -1,6 +1,6 @@
 ---
 title: "Recite ruby-compat citations against MRI v3.3.11 (n-z)"
-status: draft
+status: ready
 updated: 2026-09-25
 rfc: "0000-versioned-vendor-layout"
 cluster: vendor
