@@ -1,6 +1,6 @@
 ---
 title: "model-generator-has-secure-password"
-status: ready
+status: done
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "generators"
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8110
+claim: "2026-09-25T21:32:24Z"
+assignee: "model-generator-has-secure-password"
 blocked-by: null
 closed-reason: null
 ---
