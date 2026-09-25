@@ -13,5 +13,5 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "created by mistake (empty body, no work); duplicate of nothing"
+closed-reason: "Empty stub created by a mistyped tasks new; no work."
 ---

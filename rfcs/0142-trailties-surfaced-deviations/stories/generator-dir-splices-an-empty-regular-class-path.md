@@ -1,6 +1,6 @@
 ---
 title: "generator_dir passes regular_class_path to File.join the way Rails does, Array-splicing an empty one"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8093
+claim: "2026-09-25T16:11:42Z"
+assignee: "enum-raises-undeclared-type-on-an-unreflected-cold-model"
 blocked-by: null
 closed-reason: null
 ---

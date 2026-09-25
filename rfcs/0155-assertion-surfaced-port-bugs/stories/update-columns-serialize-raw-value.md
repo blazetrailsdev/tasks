@@ -1,7 +1,7 @@
 ---
 title: "update_columns serializes the raw value like Rails"
-status: ready
-updated: 2026-09-22
+status: done
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8022
+claim: "2026-09-25T16:51:41Z"
+assignee: "generated-environments-omit-namespaced-framework-settings"
 blocked-by: null
 closed-reason: null
 ---

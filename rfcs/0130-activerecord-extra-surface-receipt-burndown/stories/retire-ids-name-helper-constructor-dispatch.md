@@ -1,6 +1,6 @@
 ---
 title: "Retire idsName: constructor dispatch resolves the ids writer via the generated method"
-status: claimed
+status: blocked
 updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -12,7 +12,7 @@ priority: 7
 pr: null
 claim: "2026-09-25T15:39:53Z"
 assignee: "query-cache-registry-unpaired-in-parity-api"
-blocked-by: null
+blocked-by: 'Blocked on sync-collection-mass-assignment-refuses-rails-replace. Rails'' constructor reaches the ids writer via public_send("#{k}=") (active_model/attribute_assignment.rb), which runs ids_writer''s query in line (collection_association.rb:61-83). trails'' Model.new must refuse without I/O (CollectionIdsAssignmentError via syncIdsWrite, which needs the association NAME). The generated `#{singular}_ids=` closure (builder/collection_association.rb:69-75) is the only record of the key->association mapping, and calling it starts idsWriter''s async query before any refusal can fire. rbObjRespondTo can''t tell it apart from an attribute writer either (attribute_methods/write.rb generates name= too). So base.ts can''t find the owner without re-deriving singularize(name)+''Ids''. It converges once the constructor may await: dispatch every key through _assignAttribute, and idsName folds back into defineReaders/defineWriters.'
 closed-reason: null
 ---
 

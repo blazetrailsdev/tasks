@@ -1,6 +1,6 @@
 ---
 title: "Dump the canonical pool in the last two hand-built-SchemaSource schema dumper cases"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

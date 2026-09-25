@@ -1,6 +1,6 @@
 ---
 title: "message-pack-serializer-load-unpacker-block"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 72
-pr: null
+pr: trails#8091
 claim: "2026-09-25T15:40:17Z"
 assignee: "naming-activesupport-cache-coder-packed-header"
 blocked-by: null

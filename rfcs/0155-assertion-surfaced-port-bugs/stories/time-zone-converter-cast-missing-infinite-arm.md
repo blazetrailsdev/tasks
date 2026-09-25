@@ -1,6 +1,6 @@
 ---
 title: "time-zone-converter-cast-missing-infinite-arm"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

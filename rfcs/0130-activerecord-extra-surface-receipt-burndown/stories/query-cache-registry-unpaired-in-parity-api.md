@@ -1,6 +1,6 @@
 ---
 title: "Pair QueryCacheRegistry with query_cache.rb so parity:api compares it"
-status: claimed
+status: done
 updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 7
-pr: null
+pr: trails#8092
 claim: "2026-09-25T15:39:53Z"
 assignee: "query-cache-registry-unpaired-in-parity-api"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Arel visitors resolve Nodes through the ESM barrel, not the Autoload namespace"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 27
-pr: null
-claim: null
-assignee: null
+pr: trails#8094
+claim: "2026-09-25T16:19:00Z"
+assignee: "seat-nested-namespaces-on-active-record"
 blocked-by: null
 closed-reason: null
 ---

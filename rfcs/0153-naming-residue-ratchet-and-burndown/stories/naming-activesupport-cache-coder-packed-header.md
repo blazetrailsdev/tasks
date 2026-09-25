@@ -1,6 +1,6 @@
 ---
 title: "Cache::Coder packs its header with pack(PACKED_TEMPLATE), so load passes byteslice to load_version"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 50
-pr: null
+pr: trails#8091
 claim: "2026-09-25T15:40:17Z"
 assignee: "naming-activesupport-cache-coder-packed-header"
 blocked-by: null
