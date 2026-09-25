@@ -1,6 +1,6 @@
 ---
 title: "DateAndTime::Calculations past?/future?/before?/after? compare a Time by date, not instant"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8083
 claim: "2026-09-25T13:53:42Z"
 assignee: "chars-length-counts-utf16-units"
 blocked-by: null

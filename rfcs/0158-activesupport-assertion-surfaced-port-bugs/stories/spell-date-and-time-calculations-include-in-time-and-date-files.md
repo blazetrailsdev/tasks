@@ -1,6 +1,6 @@
 ---
 title: "spell-date-and-time-calculations-include-in-time-and-date-files"
-status: claimed
+status: blocked
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-25T13:53:42Z"
 assignee: "chars-length-counts-utf16-units"
-blocked-by: null
+blocked-by: "Premise falsified: include() is an eval-time read, so a namespace seat (call-time) cannot serve it. Moving include(RubyTime/RubyDate, DateAndTimeCalculations) into core-ext/time/calculations.ts and core-ext/date/calculations.ts builds, but plain-node import of dist/core-ext/date-and-time/calculations.js and dist/index.js throws 'DAYS_INTO_WEEK is not defined' from time/calculations.js:14's include: DAT's own eager imports (date/calculations, date-time/calculations, time-ext, time-with-zone) ALL lead back to time/ and date/calculations, so they evaluate while DAT is in TDZ. Unblocks when DAT's JS-Date/Temporal receiver arms (the '// boundary:' dispatch) converge onto RubyDate/RubyTime so DAT no longer imports those modules (Rails' date_and_time/calculations.rb requires only object/try and date_time/conversions)."
 closed-reason: null
 ---
 

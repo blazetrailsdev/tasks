@@ -1,7 +1,7 @@
 ---
 title: "relations-extract-associated"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8086
+claim: "2026-09-25T14:31:42Z"
+assignee: "relation-find-by-bang-no-arguments"
 blocked-by: null
 closed-reason: null
 ---

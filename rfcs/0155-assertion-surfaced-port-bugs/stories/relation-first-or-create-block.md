@@ -1,7 +1,7 @@
 ---
 title: "relation-first-or-create-block"
-status: ready
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8085
+claim: "2026-09-25T14:11:37Z"
+assignee: "time-subsec-drops-subnano-residual"
 blocked-by: null
 closed-reason: null
 ---

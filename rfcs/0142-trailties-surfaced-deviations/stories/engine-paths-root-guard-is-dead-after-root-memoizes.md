@@ -1,6 +1,6 @@
 ---
 title: "Engine#paths' root guard and Application#initialize's bootRoot fallback are dead now that root() memoizes into config.root"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: trails#8084
+claim: "2026-09-25T14:19:29Z"
+assignee: "converge-generator-class-name-on-camelize"
 blocked-by: null
 closed-reason: null
 ---

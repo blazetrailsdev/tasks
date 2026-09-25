@@ -1,7 +1,7 @@
 ---
 title: "Retire syncAssociationInstance's singular arm; association(name) memoizes only"
-status: ready
-updated: 2026-09-22
+status: done
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8082
+claim: "2026-09-25T14:31:42Z"
+assignee: "relation-find-by-bang-no-arguments"
 blocked-by: null
 closed-reason: null
 ---

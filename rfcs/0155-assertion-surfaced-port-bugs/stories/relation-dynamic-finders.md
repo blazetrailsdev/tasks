@@ -1,6 +1,6 @@
 ---
 title: "relation-dynamic-finders"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8083
 claim: "2026-09-25T13:53:42Z"
 assignee: "chars-length-counts-utf16-units"
 blocked-by: null

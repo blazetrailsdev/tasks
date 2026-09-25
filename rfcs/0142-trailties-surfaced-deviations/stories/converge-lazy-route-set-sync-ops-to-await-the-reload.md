@@ -1,7 +1,7 @@
 ---
 title: "converge-lazy-route-set-sync-ops-to-await-the-reload"
-status: ready
-updated: 2026-09-04
+status: blocked
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: 30
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-25T14:19:29Z"
+assignee: "converge-generator-class-name-on-camelize"
+blocked-by: "RouteSet#recognize_path/generate_extras/draw and the url helpers are synchronous Rails APIs overridden by LazyRouteSet; TS2416 rejects a Promise-returning override of recognizePath/generateExtras, and making them async in actionpack cascades through url_for/polymorphic_url like to_sql. The reload is async only because RoutesReloader loads config/routes.ts via import(), which has no sync form in ESM. Unblock path: split the routes-file load into an awaited prefetch at set_routes_reloader_hook plus a sync draw so execute_unless_loaded can run synchronously (routes-reloader.ts:44, lazy_route_set.rb:12-104)."
 closed-reason: null
 ---
 

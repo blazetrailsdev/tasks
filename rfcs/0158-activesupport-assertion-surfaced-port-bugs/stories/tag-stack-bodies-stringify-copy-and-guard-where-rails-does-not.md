@@ -1,6 +1,6 @@
 ---
 title: "TagStack push/pop/tags stringify, copy and guard where tagged_logging.rb does not"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

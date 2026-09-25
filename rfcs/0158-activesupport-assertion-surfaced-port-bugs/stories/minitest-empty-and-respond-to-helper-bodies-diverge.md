@@ -1,6 +1,6 @@
 ---
 title: "assertEmpty/assertRespondTo bodies skip Minitest's respond_to pre-check and include_all"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

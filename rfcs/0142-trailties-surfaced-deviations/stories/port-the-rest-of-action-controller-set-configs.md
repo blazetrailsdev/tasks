@@ -1,7 +1,7 @@
 ---
 title: "action_controller.set_configs ports only its two routing lines"
-status: ready
-updated: 2026-09-04
+status: in-progress
+updated: 2026-09-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: trails#8084
+claim: "2026-09-25T14:19:29Z"
+assignee: "converge-generator-class-name-on-camelize"
 blocked-by: null
 closed-reason: null
 ---

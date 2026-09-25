@@ -1,7 +1,7 @@
 ---
 title: "SchemaCache spells one Ruby nil as both null and undefined"
-status: ready
-updated: 2026-09-22
+status: claimed
+updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-25T14:51:41Z"
+assignee: "reset-callbacks-test-helper-ships-in-production-callbacks"
 blocked-by: null
 closed-reason: null
 ---

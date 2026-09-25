@@ -1,6 +1,6 @@
 ---
 title: "Time#subsec drops the sub-nanosecond residual"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8085
+claim: "2026-09-25T14:11:37Z"
+assignee: "time-subsec-drops-subnano-residual"
 blocked-by: null
 closed-reason: null
 ---

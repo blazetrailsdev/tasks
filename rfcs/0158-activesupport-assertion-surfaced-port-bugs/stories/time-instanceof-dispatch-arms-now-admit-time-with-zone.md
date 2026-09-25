@@ -1,6 +1,6 @@
 ---
 title: "instanceof RubyTime dispatch arms route TimeWithZone to Time's own implementation"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Delete Base#_associationCache(name); rename the cache field to _associationCache"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null

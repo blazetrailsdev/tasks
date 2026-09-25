@@ -1,6 +1,6 @@
 ---
 title: "asyncPluck/asyncPick/asyncIds go through async.<op>; pluck/ids take Rails' @async arm"
-status: in-progress
+status: done
 updated: 2026-09-25
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 cluster: null
