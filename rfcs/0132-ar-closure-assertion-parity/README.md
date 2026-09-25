@@ -99,27 +99,22 @@ mark file and are not this RFC's problem.
 
 - **NEVER rename or reword a test name.** Names are how `parity:test` matches.
   If a test's behaviour does not fit its name, the implementation changes.
-- The mark file is **FROZEN for the duration of this RFC**, by
+- The mark file was **FROZEN for the duration of this RFC**, by
   `scripts/test-compare/assertion-mismatch-mark.freeze` (trails PR). A story
-  here converges assertions and leaves `assertion-mismatch-mark.json`
-  untouched: no `pnpm parity:test:assertions:reseed` — the reseed script
-  refuses while the marker exists — and no hand-edit in either direction.
-  Every story in this RFC lands in the same handful of package rows, so a
-  per-story write serializes the whole RFC on three integers; and because
-  `--write` rewrites every package in the artifact, one reflexive reseed also
-  tightens packages outside this RFC in a diff nobody reviewed. The mark stays
-  only-shrink, and the slack is green: a mark above the measurement is exactly
-  what this ratchet passes. `tighten-assertion-mark-after-0132` deletes the
-  marker and reseeds once, at the end.
-- **The freeze suspends ENFORCEMENT on ground already converged.** Until it is
-  lifted, a story that regresses assertions an earlier story converged sits
-  inside the accumulated slack and CI stays green. It is not invisible: while
-  the marker is up, every gate run prints the slack per package and per counter
-  — the protection currently suspended — and those numbers should only ever
-  fall. A counter that RISES between two runs is a regression the gate
-  deliberately let through, and the reviewer of the converging PR is who catches
-  it. That is the price paid for parallelism, and it is why the freeze is scoped
-  to this RFC and lifted with it.
+  here converged assertions and left `assertion-mismatch-mark.json` untouched:
+  no `pnpm parity:test:assertions:reseed` — the reseed script refused while the
+  marker existed — and no hand-edit in either direction. Every story in this
+  RFC landed in the same handful of package rows, so a per-story write would
+  have serialized the whole RFC on three integers; and because `--write`
+  rewrites every package in the artifact, one reflexive reseed would also have
+  tightened packages outside this RFC in a diff nobody reviewed.
+  `tighten-assertion-mark-after-0132` deleted the marker and reseeded once, at
+  the end.
+- **The freeze suspended ENFORCEMENT on ground already converged.** While it
+  was up, a story that regressed assertions an earlier story converged sat
+  inside the accumulated slack and CI stayed green; every gate run printed that
+  slack per package and per counter. That was the price paid for parallelism,
+  and it is why the freeze was scoped to this RFC and lifted with it.
 - `assertion-kinds.ts` moves **every** package's numbers. Any change to it
   reports its effect on all marks in the file, before and after.
 - A mapping rule is not a way to make a real divergence disappear. Each rule
@@ -354,11 +349,11 @@ is hard rather than report-only for all eight, so they cannot regress.
 Parked tests (above) are outside those counters by construction, and each is
 owned by a story elsewhere; they do not hold this RFC open.
 
-Reaching that state is `tighten-assertion-mark-after-0132`'s job: the counters
-fall to zero across the RFC's stories while the mark sits frozen above them, and
-the closing story is what writes the zeros in and deletes
-`assertion-mismatch-mark.freeze`. The RFC is not done while that marker exists,
-whatever the measured counters say.
+`tighten-assertion-mark-after-0132` lifted the freeze: it deleted
+`assertion-mismatch-mark.freeze` and reseeded the mark to the measurement once
+every story here was done or closed. The residue left in activerecord and
+activesupport at that point is owned by `flip-assertion-mismatch-gate-to-hard-zero`
+(RFC 0123), which writes the zeros in.
 
 ## Relationship to RFC 0105
 
