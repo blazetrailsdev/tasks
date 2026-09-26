@@ -1,6 +1,6 @@
 ---
 title: "Port test_rails_local_assigns_and_strict_locals (reserved-word strict local read via local_assigns)"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null

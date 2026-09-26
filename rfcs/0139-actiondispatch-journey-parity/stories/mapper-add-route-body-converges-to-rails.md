@@ -1,6 +1,6 @@
 ---
 title: "Mapper#addRoute's body is a trails invention; converge onto add_route with path_for_action / name_for_action"
-status: claimed
+status: in-progress
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8160
 claim: "2026-09-26T19:41:59Z"
 assignee: "mapper-add-route-body-converges-to-rails"
 blocked-by: null
