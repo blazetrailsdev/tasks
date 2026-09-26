@@ -2,7 +2,7 @@
 title: "converge-same-name-second-owner-call-rows"
 status: draft
 updated: 2026-09-25
-rfc: "0130-activerecord-extra-surface-receipt-burndown"
+rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
 deps: []
