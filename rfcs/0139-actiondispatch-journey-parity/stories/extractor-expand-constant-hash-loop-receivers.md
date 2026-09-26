@@ -1,6 +1,6 @@
 ---
 title: "Expand CONST hash loop receivers in the Ruby test extractor"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "port-endpoint-engine-check-via-slot"
-status: claimed
+status: in-progress
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8144
 claim: "2026-09-26T02:47:02Z"
 assignee: "port-endpoint-engine-check-via-slot"
 blocked-by: null

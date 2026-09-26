@@ -1,6 +1,6 @@
 ---
 title: "Template#render returns _run's result verbatim and nil for the buffer arm"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null

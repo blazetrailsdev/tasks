@@ -1,6 +1,6 @@
 ---
 title: "Application credentials/secret_key_base read resolveEnv() instead of Trails.env; credentials_defaults key path not independent"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

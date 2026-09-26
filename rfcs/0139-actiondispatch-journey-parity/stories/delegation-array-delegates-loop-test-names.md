@@ -1,6 +1,6 @@
 ---
 title: "Port ARRAY_DELEGATES test_delegates_*_to_Array loop under Rails names"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 90
 pr: null
 claim: null
 assignee: null

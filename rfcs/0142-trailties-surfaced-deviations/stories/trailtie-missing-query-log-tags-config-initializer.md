@@ -1,6 +1,6 @@
 ---
 title: "ActiveRecord trailtie lacks active_record.query_log_tags_config; loadDefaults 7.1 writes ':sqlcommenter'"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

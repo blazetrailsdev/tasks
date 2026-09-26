@@ -1,6 +1,6 @@
 ---
 title: "Journey extra-surface residue: Node#each, MatchData#[], TransitionTable to_json, index re-exports"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

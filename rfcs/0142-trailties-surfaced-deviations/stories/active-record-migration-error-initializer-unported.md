@@ -1,6 +1,6 @@
 ---
 title: "Port the active_record.migration_error initializer (page_load inserts CheckPending)"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

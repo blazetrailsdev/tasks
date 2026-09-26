@@ -1,6 +1,6 @@
 ---
 title: "Journey parity residue and the assertion mark back to zero"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

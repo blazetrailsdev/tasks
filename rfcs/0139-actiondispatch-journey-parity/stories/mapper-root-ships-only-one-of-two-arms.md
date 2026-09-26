@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 75
 pr: null
 claim: "2026-09-26T02:32:09Z"
 assignee: "mapper-root-ships-only-one-of-two-arms"

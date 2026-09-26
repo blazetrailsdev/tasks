@@ -1,7 +1,7 @@
 ---
 title: "Recite rails and gem citations outside ruby-compat"
-status: ready
-updated: 2026-09-25
+status: in-progress
+updated: 2026-09-26
 rfc: "0159-versioned-vendor-layout"
 cluster: vendor
 packages:
@@ -14,9 +14,9 @@ deps: [vendor-recite-rewrites-citations-to-the-active-version]
 deps-rfc: []
 est-loc: 260
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#8146
+claim: "2026-09-26T13:51:48Z"
+assignee: "recite-rails-and-gem-citations-outside-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---

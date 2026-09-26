@@ -1,6 +1,6 @@
 ---
 title: "ActiveRecord trailtie pushes no eager-load namespace; ActiveRecord.eagerLoadBang lacks the active_record.rb override"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Formatter#possibles reads :___routes with ?? where Rails uses fetch-with-block"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
