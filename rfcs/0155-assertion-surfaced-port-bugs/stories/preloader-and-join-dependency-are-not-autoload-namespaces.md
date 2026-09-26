@@ -2,7 +2,7 @@
 title: "preloader-and-join-dependency-are-not-autoload-namespaces"
 status: draft
 updated: 2026-09-25
-rfc: "0151-activesupport-autoload-slot-registry"
+rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
