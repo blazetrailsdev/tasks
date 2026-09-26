@@ -1,6 +1,6 @@
 ---
 title: "CachingClassMethods.cacheStore is typed narrower than cache_store= accepts"
-status: claimed
+status: in-progress
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8143
 claim: "2026-09-26T10:47:08Z"
 assignee: "template-compiled-flag-is-a-container-not-a-boolean"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Template#compile!'s @compiled is a boolean, not the container it compiled into"
-status: claimed
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8143
 claim: "2026-09-26T10:47:08Z"
 assignee: "template-compiled-flag-is-a-container-not-a-boolean"
 blocked-by: null
