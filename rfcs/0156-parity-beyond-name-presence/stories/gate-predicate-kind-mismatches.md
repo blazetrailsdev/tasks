@@ -1,6 +1,6 @@
 ---
 title: "Gate predicateKindMismatches with an only-shrink mark"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["classattribute-crediting-misses-writers-and-class-seats"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8115
 claim: "2026-09-25T22:47:03Z"
 assignee: "canonical-schema-convert-remaining-t-references"
 blocked-by: null

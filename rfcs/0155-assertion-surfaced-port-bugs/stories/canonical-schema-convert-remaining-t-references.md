@@ -1,6 +1,6 @@
 ---
 title: "canonical-schema-convert-remaining-t-references"
-status: claimed
+status: in-progress
 updated: 2026-09-25
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8115
 claim: "2026-09-25T22:47:03Z"
 assignee: "canonical-schema-convert-remaining-t-references"
 blocked-by: null

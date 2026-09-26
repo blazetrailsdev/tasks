@@ -1,6 +1,6 @@
 ---
 title: "Migration and Encryption autoload lists are only partly mirrored (CommandRecorder…, NullEncryptor…)"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0151-activesupport-autoload-slot-registry"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 29
-pr: null
-claim: null
-assignee: null
+pr: trails#8118
+claim: "2026-09-25T23:17:02Z"
+assignee: "datetime-civil-sub-minute-offset-loses-instant-on-cast"
 blocked-by: null
 closed-reason: null
 ---

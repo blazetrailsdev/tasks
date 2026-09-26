@@ -1,7 +1,7 @@
 ---
 title: "Entry_#copy_file is copyFileSync, dropping Ruby's source-mode create and IO.copy_stream"
-status: ready
-updated: 2026-09-16
+status: in-progress
+updated: 2026-09-25
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8117
+claim: "2026-09-25T23:02:07Z"
+assignee: "create-record-awaits-async-block"
 blocked-by: null
 closed-reason: null
 ---

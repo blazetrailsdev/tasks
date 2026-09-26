@@ -1,7 +1,7 @@
 ---
 title: "instrument_fragment_cache takes the receiver as a leading argument and invents two fallbacks"
-status: ready
-updated: 2026-09-16
+status: in-progress
+updated: 2026-09-25
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8120
+claim: "2026-09-25T23:47:05Z"
+assignee: "instrument-fragment-cache-takes-host-not-this"
 blocked-by: null
 closed-reason: null
 ---

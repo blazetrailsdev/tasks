@@ -1,6 +1,6 @@
 ---
 title: "callerLocations never sets Location#absolute_path"
-status: ready
+status: in-progress
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8118
+claim: "2026-09-25T23:17:02Z"
+assignee: "datetime-civil-sub-minute-offset-loses-instant-on-cast"
 blocked-by: null
 closed-reason: null
 ---

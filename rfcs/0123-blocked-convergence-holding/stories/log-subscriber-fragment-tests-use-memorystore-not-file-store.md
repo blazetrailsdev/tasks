@@ -1,7 +1,7 @@
 ---
 title: "log-subscriber-fragment-tests-use-memorystore-not-file-store"
-status: ready
-updated: 2026-09-16
+status: in-progress
+updated: 2026-09-25
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8118
+claim: "2026-09-25T23:17:02Z"
+assignee: "datetime-civil-sub-minute-offset-loses-instant-on-cast"
 blocked-by: null
 closed-reason: null
 ---

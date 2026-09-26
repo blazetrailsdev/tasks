@@ -1,7 +1,7 @@
 ---
 title: "MemCacheStore descends from CacheStore, so its three includes cannot splice as Rails' do"
-status: ready
-updated: 2026-09-16
+status: in-progress
+updated: 2026-09-25
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8117
+claim: "2026-09-25T23:02:07Z"
+assignee: "create-record-awaits-async-block"
 blocked-by: null
 closed-reason: null
 ---

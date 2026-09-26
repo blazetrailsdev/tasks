@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat stdout is a write-only WriteStream, not Ruby's $stdout IO"
-status: ready
-updated: 2026-09-16
+status: in-progress
+updated: 2026-09-25
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8118
+claim: "2026-09-25T23:17:02Z"
+assignee: "datetime-civil-sub-minute-offset-loses-instant-on-cast"
 blocked-by: null
 closed-reason: null
 ---
