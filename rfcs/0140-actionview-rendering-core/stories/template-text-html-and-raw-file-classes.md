@@ -45,7 +45,8 @@ they are individually trivial and collectively easy to get subtly wrong, because
 which members each one answers differs.
 
 `template/handlers/builder.rb` is NOT in this story; it belongs to
-`port-html-builder-and-ruby-template-handlers` (RFC 0104, ready).
+`port-html-builder-and-ruby-template-handlers` (this RFC, in progress in
+trails#8135).
 
 ## Converged shape
 

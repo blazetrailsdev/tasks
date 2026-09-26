@@ -179,7 +179,7 @@ entering `tree`, so `DependencyTracker` is simply never reached, and an absent
 or stale manifest falls back to computing.
 
 This RFC does **not** own that. `decide-fate-of-the-unconsumed-aot-views-manifest`
-(RFC 0104, ready, 90 loc) already owns the question of whether the AOT manifest
+(this RFC, done in trails#7649, 90 loc) owns the question of whether the AOT manifest
 is consumed at runtime at all, and its second option — "wire a production-mode
 resolver over the manifest, with an explicit `@noRailsEquivalent PERMANENT`
 receipt and a benchmark" — is exactly this decision. A digest manifest is a
@@ -203,17 +203,17 @@ their parents, where they remain the record of what those RFCs accomplished.
 The table below is the subset with dependency edges onto stories filed here. The
 full rehome list lives in the PR that files this RFC.
 
-| Story (all rehomed into 0140)                                | From | Status         | Bearing                                                                                                                                     |
-| ------------------------------------------------------------ | ---- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `actionview-digestor-is-a-stub-not-a-dependency-tree-digest` | 0123 | ready, 400 loc | **Owns the digest tree.** Its own text says `RenderParser` "may warrant its own story"; this RFC answers that. Depends on stories 1-2 here. |
-| `port-resolver-caching-and-cache-template-loading`           | 0104 | ready          | Owns `Resolver.caching` + `Base.cacheTemplateLoading` + the trailtie initializer. `cache-expiry-view-reloader` depends on it.               |
-| `decide-fate-of-the-unconsumed-aot-views-manifest`           | 0104 | ready, 90 loc  | Owns the build-time digest question above.                                                                                                  |
-| `port-unbound-template-for-resolver-binding`                 | 0104 | ready, 140 loc | Owns `unbound_template.rb` (11 methods). Excluded here.                                                                                     |
-| `port-template-sources-file-for-lazy-resolver-sources`       | 0104 | ready          | Owns `template/sources/file.rb` (2). Excluded here.                                                                                         |
-| `port-html-builder-and-ruby-template-handlers`               | 0104 | ready, 120 loc | Owns `handlers/builder.rb` (5) + `handlers/html.rb` (1). The likely first reader of `RubyTracker`.                                          |
-| `back-template-types-with-the-mime-registry`                 | 0104 | ready, 200 loc | Owns `template/types.rb` (6 missing).                                                                                                       |
-| `template-error-backtrace-locations`                         | 0104 | ready, 120 loc | Owns part of `template/error.rb` (13 missing).                                                                                              |
-| `rails-test-name-parity-rollout-actionview`                  | 0127 | draft          | Adjacent to `enroll-actionview-in-parity-test`; once both are here, one absorbs the other rather than seeding the same mark twice.          |
+| Story (all rehomed into 0140)                                | From | Status                             | Bearing                                                                                                                                     |
+| ------------------------------------------------------------ | ---- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `actionview-digestor-is-a-stub-not-a-dependency-tree-digest` | 0123 | ready, 400 loc                     | **Owns the digest tree.** Its own text says `RenderParser` "may warrant its own story"; this RFC answers that. Depends on stories 1-2 here. |
+| `port-resolver-caching-and-cache-template-loading`           | 0104 | ready                              | Owns `Resolver.caching` + `Base.cacheTemplateLoading` + the trailtie initializer. `cache-expiry-view-reloader` depends on it.               |
+| `decide-fate-of-the-unconsumed-aot-views-manifest`           | 0104 | done (trails#7649), 90 loc         | Owns the build-time digest question above.                                                                                                  |
+| `port-unbound-template-for-resolver-binding`                 | 0104 | in progress (trails#8134), 140 loc | Owns `unbound_template.rb` (11 methods). Excluded here.                                                                                     |
+| `port-template-sources-file-for-lazy-resolver-sources`       | 0104 | ready                              | Owns `template/sources/file.rb` (2). Excluded here.                                                                                         |
+| `port-html-builder-and-ruby-template-handlers`               | 0104 | in progress (trails#8135), 120 loc | Owns `handlers/builder.rb` (5) + `handlers/html.rb` (1). The likely first reader of `RubyTracker`.                                          |
+| `back-template-types-with-the-mime-registry`                 | 0104 | done (trails#8129), 200 loc        | Owns `template/types.rb` (6 missing).                                                                                                       |
+| `template-error-backtrace-locations`                         | 0104 | in progress, 120 loc               | Owns part of `template/error.rb` (13 missing).                                                                                              |
+| `rails-test-name-parity-rollout-actionview`                  | 0127 | draft                              | Adjacent to `enroll-actionview-in-parity-test`; once both are here, one absorbs the other rather than seeding the same mark twice.          |
 
 ### Layouts and the TSE compiler are in scope
 
@@ -242,7 +242,8 @@ alongside `actionview` in this RFC's packages.
 - **`RenderParser` and `RubyTracker`** — deferred to
   `render-parser-and-ruby-tracker-when-a-handler-needs-them`, filed here as a
   draft gated on a registered reader.
-- **Build-time digest precomputation** — owned by RFC 0104's AOT manifest story.
+- **Build-time digest precomputation** — owned by
+  `decide-fate-of-the-unconsumed-aot-views-manifest` (this RFC, done in trails#7649).
 - **Enrolling actionview in the extra-surface or param-name gates.** Those are
   RFC 0120's and RFC 0128's calls to make.
 
@@ -280,8 +281,8 @@ alongside `actionview` in this RFC's packages.
 
 - `pnpm parity:api --package actionview` shows every file named in the Rollout
   at 100%, and the package's method figure rises from 495/921 to roughly
-  708/921 (76.9%) once RFC 0123's digestor story and the RFC 0104 stories above
-  land alongside.
+  708/921 (76.9%) once RFC 0123's digestor story and the stories rehomed from
+  RFC 0104 above land alongside.
 - `dependency_tracker.rb`, `dependency_tracker/erb_tracker.rb` and
   `dependency_tracker/wildcard_resolver.rb` report 0 missing.
 - `pnpm parity:api:extra --package actionview` lists no new name from these
