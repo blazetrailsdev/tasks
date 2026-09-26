@@ -100,10 +100,10 @@ when someone owns them. They are not this story's precondition.
    packages**, resolved from `ar-closure.ts` rather than a hand-written list so
    a moved `require` moves the gate. `--report` keeps its per-class breakdown
    for every package.
-2. The in-closure residue is seeded into the existing shards as `kind: "args"`
-   rows, each carrying its CLASS's shared reviewed reason from
-   `scripts/api-compare/naming-taxonomy.ts` — never the seeded placeholder, and
-   never a bespoke sentence per row.
+2. Every in-closure permanent row carries a `@missingRailsName` receipt, with
+   its reason in its CLASS's `NAMING_CLASSES` entry
+   (`scripts/api-compare/naming-taxonomy.ts`) — never a baseline row and never
+   a bespoke sentence per row (RFC 0153 §4, superseding the seeded-row form).
    2b. No `burndown` or `module-mixin-receiver` row **in an AR-closure package**
    is seeded. Those converge (by renaming and by rewiring to the `this`-typed
    mixin idiom respectively); baselining them would ratify convergeable
