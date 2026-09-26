@@ -648,3 +648,14 @@ mechanism. This README is authoritative wherever they disagree.
   `naming-residue-mark` story and `naming-gate-flip` criterion 2 were already
   updated; neither is. Restated both as explicit, ordered post-merge actions,
   with the `tasks close` verb for the DB-owned status.
+- 2026-09-26: `naming-gate-flip` landed (trails, measured on `cc587dab6a`).
+  In-closure convergeable (`burndown` + `module-mixin-receiver`) is 0; the 90
+  in-closure permanent rows (activerecord 60, activesupport 19, activemodel 6,
+  i18n 4, globalid 1) all carry `@missingRailsName` receipts. The gated set is
+  now `NAMING_ENROLLED_PACKAGES` ∪ the packages `ar-closure.ts` resolves, so
+  `date` joined with no rows and a moved `require` moves the gate. **Handed
+  off, report-only and ungated:** 197 out-of-closure naming rows — 170
+  convergeable (actiondispatch 75, actionview 39, actioncontroller 33, rack 15,
+  trailties 5, rack-test 2, rack-session 1) and 27 permanent (actionview 11,
+  actioncontroller 7, actiondispatch 4, rack-test 2, trailties 2, rack 1). They
+  want waves under an actionpack-family RFC (§5); this RFC does not own them.
