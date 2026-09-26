@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Gated by design (RFC 0140 Design/Non-goals): not claimable until a trails handler registers RubyTracker. On origin/main 70e9552 nothing does — dependency-tracker.ts registers only TSETracker, and the likely first reader port-html-builder-and-ruby-template-handlers is still unlanded (handlers/builder.ts absent)."
+blocked-by: "Gated by design (RFC 0140 Design/Non-goals): not claimable until a trails handler registers RubyTracker. Re-checked on origin/main 298d771dc9: dependency-tracker.ts:45 registers only TSETracker; port-html-builder-and-ruby-template-handlers landed in trails#8135 (Html + :ruby handlers) but shipped no Builder handler (template/handlers/ has html/raw/tse only) and registers no RubyTracker, so the gate is still live."
 closed-reason: null
 ---
 

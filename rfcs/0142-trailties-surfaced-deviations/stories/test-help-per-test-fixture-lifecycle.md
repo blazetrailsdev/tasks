@@ -1,6 +1,6 @@
 ---
 title: "Run test_help's hooks per test: ActiveSupport::TestCase instance lifecycle, ActionDispatch.test_app, boot-app e2e"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

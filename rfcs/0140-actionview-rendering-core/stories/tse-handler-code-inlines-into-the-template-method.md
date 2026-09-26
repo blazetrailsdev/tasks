@@ -1,6 +1,6 @@
 ---
 title: "Tse handler wraps template code in a nested function instead of inlining it into the method"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

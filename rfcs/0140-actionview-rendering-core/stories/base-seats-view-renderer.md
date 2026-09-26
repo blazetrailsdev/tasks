@@ -1,6 +1,6 @@
 ---
 title: "Base seats @view_renderer (base.rb:249) — async renderers read view.viewRenderer"
-status: draft
+status: closed
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8140 (47ac0ed7e4): origin/main packages/actionview/src/base.ts:201 seats 'this.viewRenderer = new Renderer(this.lookupContext!)' (base.rb:249) and :140 declares the field. Residual AC (inRenderingContext swap/restore of viewRenderer per base.rb:293-305, attr_reader shape — which also forces partial-renderer.trails.test.ts:25's Object.assign seat out) is owned by view-renderer-is-a-writable-field-not-attr-reader."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "lookup-context-register-detail-default-accessors"
-status: draft
+status: closed
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate: AC1 (defaultLocale/defaultVariants/defaultHandlers + setters falling back through them) is register-detail-defines-default-readers (same RFC, more precise, flipped ready). AC2 (findTemplate as find) was delivered by trails#8140 — lookup-context.ts:311 has find's signature and delegates; only the wrapper-vs-prototype-alias spelling remains, which is cosmetic."
 ---
 
 ## Context

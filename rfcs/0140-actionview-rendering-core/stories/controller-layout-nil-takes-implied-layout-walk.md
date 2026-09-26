@@ -1,6 +1,6 @@
 ---
 title: "controller-layout-nil-takes-implied-layout-walk"
-status: draft
+status: closed
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Subsumed by controller-layout-resolves-through-layouts-module (same RFC): that story ports _write_layout_method''s generated _layout (nil -> find_all(_implied_layout_name, ...) || super walk, String, false), replaces the static layout field (still ''static layout: string | false = "application"'' at actionpack base.ts:218 on origin/main), and ports layout_test.rb cases verbatim — a superset of this story''s ACs.'
 ---
 
 ## Context

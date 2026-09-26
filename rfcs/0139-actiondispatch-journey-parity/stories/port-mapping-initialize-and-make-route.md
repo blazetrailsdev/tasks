@@ -8,7 +8,7 @@ packages: []
 deps: ["mapper-mapping-is-instantiated-per-route"]
 deps-rfc: []
 est-loc: null
-priority: 60
+priority: null
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::DevCaching and the dev:cache command"
-status: claimed
+status: in-progress
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: null
+pr: trails#8150
 claim: "2026-09-26T16:47:07Z"
 assignee: "operator-pins-never-reach-class-level-operators"
 blocked-by: null

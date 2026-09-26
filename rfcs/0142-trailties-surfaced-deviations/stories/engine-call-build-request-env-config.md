@@ -1,6 +1,6 @@
 ---
 title: "Engine#call, env_config and build_request (engine.rb:533-541,747-753)"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

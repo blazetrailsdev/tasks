@@ -1,6 +1,6 @@
 ---
 title: "variants lookup detail uses the :symbol string spelling like formats"
-status: draft
+status: closed
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8141 (6143f680f6): PathParser#parse yields ':<variant>' (resolver.ts:281), resolver.trails.test.ts:116-118 match with variants: [':phone'], and template/digestor.test.ts:440-441 'variants' passes [':iphone'] as Rails passes [:iphone]."
 ---
 
 ## Context

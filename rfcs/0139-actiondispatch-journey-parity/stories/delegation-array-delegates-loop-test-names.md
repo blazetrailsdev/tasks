@@ -1,6 +1,6 @@
 ---
 title: "Port ARRAY_DELEGATES test_delegates_*_to_Array loop under Rails names"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -8,10 +8,10 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: 90
-pr: null
-claim: null
-assignee: null
+priority: null
+pr: trails#8153
+claim: "2026-09-26T17:22:02Z"
+assignee: "port-resolver-caching-and-cache-template-loading"
 blocked-by: null
 closed-reason: null
 ---

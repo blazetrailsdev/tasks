@@ -1,6 +1,6 @@
 ---
 title: "LookupContext#find_template is an alias of find, not a formats-taking findAll[0]"
-status: draft
+status: closed
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8140 (47ac0ed7e4): origin/main lookup-context.ts:311 findTemplate(name, prefixes, partial, keys, options) has find's signature and delegates to find (raises MissingTemplate); template-renderer.ts:76 and :160 call it with Rails' (name, prefixes, false, keys, details) and no re-raise; the streaming renderer no longer does its own lookup. Only cosmetic residual: wrapper method vs prototype alias."
 ---
 
 ## Context

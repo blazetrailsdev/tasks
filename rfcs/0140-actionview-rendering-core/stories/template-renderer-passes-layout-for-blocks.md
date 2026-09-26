@@ -1,6 +1,6 @@
 ---
 title: "TemplateRenderer passes Rails' _layout_for blocks to template and layout render"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

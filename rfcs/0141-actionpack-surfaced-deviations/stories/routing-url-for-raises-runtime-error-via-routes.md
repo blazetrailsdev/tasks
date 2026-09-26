@@ -1,6 +1,6 @@
 ---
 title: "Routing UrlFor raises RuntimeError via _routes, not an invented requireRoutes Error"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

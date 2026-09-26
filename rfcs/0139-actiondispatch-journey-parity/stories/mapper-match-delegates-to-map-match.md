@@ -1,6 +1,6 @@
 ---
 title: "Mapper#match computes via and adds routes itself where Rails delegates to map_match"
-status: ready
+status: claimed
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: 40
+priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T17:42:02Z"
+assignee: "journey-route-matches-else-arm-is-case-equality"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "tokenizeLine diverges from ERB::Util.tokenize (trimmed CODE, comment tags, <%% width)"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

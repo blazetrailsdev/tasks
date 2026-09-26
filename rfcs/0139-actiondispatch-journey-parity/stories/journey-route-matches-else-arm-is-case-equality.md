@@ -1,6 +1,6 @@
 ---
 title: "Journey::Route#matches' else arm is case equality, not identity"
-status: ready
+status: claimed
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: 10
+priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T17:42:02Z"
+assignee: "journey-route-matches-else-arm-is-case-equality"
 blocked-by: null
 closed-reason: null
 ---

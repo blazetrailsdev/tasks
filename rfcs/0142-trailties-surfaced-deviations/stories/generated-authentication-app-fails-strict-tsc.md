@@ -1,6 +1,6 @@
 ---
 title: "Generated authentication app fails tsc --strict on framework types"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: trails#8152
+claim: "2026-09-26T17:02:02Z"
+assignee: "port-action-view-layouts-behind-rendering-stubs"
 blocked-by: null
 closed-reason: null
 ---

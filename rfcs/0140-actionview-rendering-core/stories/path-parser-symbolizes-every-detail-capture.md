@@ -1,6 +1,6 @@
 ---
 title: "PathParser#parse leaves locale, handler and variant bare strings"
-status: draft
+status: closed
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8141 (6143f680f6, 'Template detail values are Ruby Symbols'): origin/main template/resolver.ts PathParser#parse (:275-281) spells locale/handler/variant as ':'-prefixed Symbols alongside format; handlers detail is TemplateHandlers.extensions() (Symbols) and the locale default stringToSym's each value (lookup-context.ts:24-33)."
 ---
 
 ## Context

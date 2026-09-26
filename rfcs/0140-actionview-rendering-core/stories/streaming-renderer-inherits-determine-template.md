@@ -1,6 +1,6 @@
 ---
 title: "StreamingTemplateRenderer inherits render/determine_template instead of its own lookup"
-status: draft
+status: closed
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Delivered by trails#8135 (4756bffbe8): origin/main streaming-template-renderer.ts:47-66 overrides only renderTemplate (inherits render/determineTemplate); git log -S''Use renderStream()'' shows #8135 removed the render throw, and ''git grep -nE "renderStream|findAll|Missing template"'' on that file finds nothing.'
 ---
 
 ## Context

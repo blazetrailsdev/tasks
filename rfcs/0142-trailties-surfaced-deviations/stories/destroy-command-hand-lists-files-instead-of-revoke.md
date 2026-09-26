@@ -1,6 +1,6 @@
 ---
 title: "trails destroy hand-lists files instead of invoking generators with behavior: :revoke"
-status: claimed
+status: ready
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: 6
 pr: null
-claim: "2026-09-26T16:47:07Z"
-assignee: "operator-pins-never-reach-class-level-operators"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

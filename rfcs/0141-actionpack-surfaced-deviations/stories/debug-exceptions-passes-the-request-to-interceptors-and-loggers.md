@@ -1,6 +1,6 @@
 ---
 title: "DebugExceptions passes ActionDispatch::Request, not the Rack env, to logging and the HTML render"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

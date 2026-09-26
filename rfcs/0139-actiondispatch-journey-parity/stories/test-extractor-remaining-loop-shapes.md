@@ -1,6 +1,6 @@
 ---
 title: "Test extractors: Object.keys().join titles, each_with_index mlhs, cross-file constant receivers"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -8,10 +8,10 @@ packages: ["actionpack"]
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: 20
-pr: null
-claim: null
-assignee: null
+priority: null
+pr: trails#8153
+claim: "2026-09-26T17:22:02Z"
+assignee: "port-resolver-caching-and-cache-template-loading"
 blocked-by: null
 closed-reason: null
 ---

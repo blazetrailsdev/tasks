@@ -1,6 +1,6 @@
 ---
 title: "UploadedFile#initialize drops the UTF-8 re-encode arms for filename and headers"
-status: ready
+status: blocked
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-26T17:22:02Z"
+assignee: "port-resolver-caching-and-cache-template-loading"
+blocked-by: "ruby-compat has no String#encode/encode! or String#encoding port (grep packages/ruby-compat/src: only forceEncoding exists, string/force-encoding.ts:19), and a JS string carries no encoding tag, so upload.rb:39-43,52-56's encode!(UTF_8) cannot tell a SHIFT_JIS/ASCII-8BIT receiver from a UTF-8 one and uploaded_file_test.rb:26-56's encoding.to_s assertion has nothing to read. Needs a String#encode + encoding-tag design in ruby-compat first (or a byte-string-in contract for UploadedFileOptions.filename/head from the rack multipart parser)."
 closed-reason: null
 ---
 

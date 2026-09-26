@@ -1,6 +1,6 @@
 ---
 title: "registerDetail defines default_<name> readers, as lookup_context.rb:24 does"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -8,7 +8,7 @@ packages: ["actionview"]
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null
