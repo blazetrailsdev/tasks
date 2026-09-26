@@ -48,6 +48,6 @@ isolation, but #8140 merged first.
 - [ ] The default-layout proc walks the class chain, branching per class on
       String / `false` / `null` as `_write_layout_method` does.
 - [ ] Port `layout_test.rb`'s `LayoutAutoDiscoveryTest` (`application layout is
-    default when no controller match`, `controller name layout name match`)
+default when no controller match`, `controller name layout name match`)
       and `abstract/layouts_test.rb`'s implied-child and grandchild cases, with
       Rails' names verbatim.
