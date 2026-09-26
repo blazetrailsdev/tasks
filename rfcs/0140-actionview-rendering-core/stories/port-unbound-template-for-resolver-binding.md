@@ -1,6 +1,6 @@
 ---
 title: "Resolvers bind templates eagerly and drop locals; UnboundTemplate is unported"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8134
+claim: "2026-09-26T03:32:04Z"
+assignee: "mapper-mapping-is-instantiated-per-route"
 blocked-by: null
 closed-reason: null
 ---

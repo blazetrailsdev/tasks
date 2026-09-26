@@ -1,6 +1,6 @@
 ---
 title: "LookupContext and PathParser hardcode the locale detail instead of reading I18n"
-status: ready
+status: claimed
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T03:47:03Z"
+assignee: "mapper-url-option-constraints-seed-defaults"
 blocked-by: null
 closed-reason: null
 ---

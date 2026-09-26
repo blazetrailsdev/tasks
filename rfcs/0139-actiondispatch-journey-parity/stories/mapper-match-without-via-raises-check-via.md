@@ -1,6 +1,6 @@
 ---
 title: "Mapper#match defaults a missing via to :all where Rails' check_via raises"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8132
+claim: "2026-09-26T03:02:03Z"
+assignee: "journey-extra-surface-residue"
 blocked-by: null
 closed-reason: null
 ---

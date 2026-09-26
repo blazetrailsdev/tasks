@@ -1,6 +1,6 @@
 ---
 title: "Enrol actionview in parity:test"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null

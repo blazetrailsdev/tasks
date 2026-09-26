@@ -1,6 +1,6 @@
 ---
 title: "Mapper::Mapping is static-only; Rails instantiates one per route"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8134
+claim: "2026-09-26T03:32:04Z"
+assignee: "mapper-mapping-is-instantiated-per-route"
 blocked-by: null
 closed-reason: null
 ---

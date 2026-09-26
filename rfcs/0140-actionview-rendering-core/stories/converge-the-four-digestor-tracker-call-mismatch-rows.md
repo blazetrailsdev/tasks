@@ -1,6 +1,6 @@
 ---
 title: "Converge the four call-set rows PR 7628 added to actionview's exclude tree"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8132
+claim: "2026-09-26T03:02:03Z"
+assignee: "journey-extra-surface-residue"
 blocked-by: null
 closed-reason: null
 ---

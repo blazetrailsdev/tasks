@@ -1,6 +1,6 @@
 ---
 title: "actionview-tests-cannot-import-action-dispatch"
-status: ready
+status: done
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8129
 claim: null
 assignee: null
 blocked-by: null

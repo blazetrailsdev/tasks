@@ -1,6 +1,6 @@
 ---
 title: "Port the 12 remaining TemplateDigestorTest tests (logging, variants, format fallback, caching-off)"
-status: ready
+status: claimed
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T03:47:03Z"
+assignee: "mapper-url-option-constraints-seed-defaults"
 blocked-by: null
 closed-reason: null
 ---

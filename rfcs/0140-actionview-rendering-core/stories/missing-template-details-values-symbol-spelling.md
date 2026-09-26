@@ -1,6 +1,6 @@
 ---
 title: "MissingTemplate details values inspect as Ruby Symbols"
-status: ready
+status: claimed
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T03:56:03Z"
+assignee: "mapper-mapping-is-instantiated-per-route"
 blocked-by: null
 closed-reason: null
 ---

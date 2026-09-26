@@ -1,6 +1,6 @@
 ---
 title: "Inline#compile drops ObjectSpace.define_finalizer, leaking every compiled inline template"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8133
+claim: "2026-09-26T03:17:05Z"
+assignee: "journey-route-matches-sends-request-methods"
 blocked-by: null
 closed-reason: null
 ---

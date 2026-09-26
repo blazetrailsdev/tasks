@@ -1,6 +1,6 @@
 ---
 title: "Routing::Route#match duplicates match_head_routes' HEAD fallback"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

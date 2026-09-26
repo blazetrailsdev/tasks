@@ -1,6 +1,6 @@
 ---
 title: "MissingTemplate takes Rails' (paths, path, prefixes, partial, details) constructor"
-status: ready
+status: done
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7711
+claim: "2026-09-26T03:02:03Z"
+assignee: "journey-extra-surface-residue"
 blocked-by: null
 closed-reason: null
 ---
