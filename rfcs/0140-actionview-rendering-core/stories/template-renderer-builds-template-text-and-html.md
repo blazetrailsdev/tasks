@@ -1,6 +1,6 @@
 ---
 title: "determineTemplate builds invented Body/Plain/HtmlTemplate instead of Template::Text/HTML"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 10
-pr: null
-claim: null
-assignee: null
+pr: trails#8156
+claim: "2026-09-26T18:22:02Z"
+assignee: "named-route-helpers-camelcase-multiword-names"
 blocked-by: null
 closed-reason: null
 ---

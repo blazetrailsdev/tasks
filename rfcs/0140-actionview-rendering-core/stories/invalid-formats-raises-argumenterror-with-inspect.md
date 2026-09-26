@@ -1,6 +1,6 @@
 ---
 title: "LookupContext#formats= raises a bare Error without inspecting values"
-status: claimed
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 10
-pr: null
+pr: trails#8154
 claim: "2026-09-26T17:42:02Z"
 assignee: "journey-route-matches-else-arm-is-case-equality"
 blocked-by: null

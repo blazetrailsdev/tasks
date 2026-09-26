@@ -1,6 +1,6 @@
 ---
 title: "Scaffold views are hand-written HTML, not Rails' erb scaffold templates"
-status: ready
+status: blocked
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 250
 priority: 6
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-26T18:02:02Z"
+assignee: "mapper-root-ships-only-one-of-two-arms"
+blocked-by: "Rails' scaffold templates call link_to, button_to and form_with (erb/scaffold/templates/*.erb.tt), none of which trails' actionview defines; needs port-url-helper-link-to-and-button-to and port-form-helper-form-with first"
 closed-reason: null
 ---
 

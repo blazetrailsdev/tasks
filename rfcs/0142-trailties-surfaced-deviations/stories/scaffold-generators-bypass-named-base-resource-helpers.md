@@ -1,6 +1,6 @@
 ---
 title: "Scaffold generators derive names ad hoc instead of NamedBase + ResourceHelpers"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

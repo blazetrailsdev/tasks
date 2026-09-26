@@ -1,6 +1,6 @@
 ---
 title: "Port test_rails_local_assigns_and_strict_locals (reserved-word strict local read via local_assigns)"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 10
-pr: null
-claim: null
-assignee: null
+pr: trails#8157
+claim: "2026-09-26T18:42:05Z"
+assignee: "port-mapping-initialize-and-make-route"
 blocked-by: null
 closed-reason: null
 ---

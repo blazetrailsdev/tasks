@@ -1,6 +1,6 @@
 ---
 title: "registerDetail defines default_<name> readers, as lookup_context.rb:24 does"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 10
-pr: null
-claim: null
-assignee: null
+pr: trails#8155
+claim: "2026-09-26T18:02:02Z"
+assignee: "mapper-root-ships-only-one-of-two-arms"
 blocked-by: null
 closed-reason: null
 ---

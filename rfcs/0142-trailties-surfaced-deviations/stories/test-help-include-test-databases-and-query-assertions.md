@@ -1,6 +1,6 @@
 ---
 title: "test_help: include TestDatabases and QueryAssertions as modules"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#8157
+claim: "2026-09-26T18:42:05Z"
+assignee: "port-mapping-initialize-and-make-route"
 blocked-by: null
 closed-reason: null
 ---

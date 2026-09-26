@@ -1,6 +1,6 @@
 ---
 title: "StreamingTemplateRenderer#delayed_render splits on a sentinel instead of driving StreamingFlow"
-status: ready
+status: blocked
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: 10
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-26T18:22:02Z"
+assignee: "named-route-helpers-camelcase-multiword-names"
+blocked-by: "Premise falsified: the prescribed async continuation needs the layout body to suspend at yield, but compiled TSE templates are synchronous (Template#render -> Base#_run -> compiled.call returns a string, packages/actionview/src/base.ts:223-260) and ruby-compat Fiber (fiber.ts) has no Fiber.yield. StreamingFlow#get's Fiber.yield (flows.rb:43-58) and append!'s fiber.resume (flows.rb:63-66) have no sync JS analogue; converging needs async template compilation first (no story exists for it yet)."
 closed-reason: null
 ---
 

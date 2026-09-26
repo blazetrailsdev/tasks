@@ -1,6 +1,6 @@
 ---
 title: "Framework controllers skip Rails::ApplicationController, and InfoController's path is info not rails/info"
-status: claimed
+status: in-progress
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 5
-pr: null
+pr: trails#8154
 claim: "2026-09-26T17:42:02Z"
 assignee: "journey-route-matches-else-arm-is-case-equality"
 blocked-by: null

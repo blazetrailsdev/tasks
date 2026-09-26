@@ -1,6 +1,6 @@
 ---
 title: "Controller layout resolves through ActionView::Layouts (_implied_layout_name, _layout_for_option, conditions)"
-status: ready
+status: done
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-action-view-layouts-behind-rendering-stubs"]
 deps-rfc: []
 est-loc: 350
 priority: 4
-pr: null
+pr: trails#8152
 claim: null
 assignee: null
 blocked-by: null

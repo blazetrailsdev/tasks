@@ -1,6 +1,6 @@
 ---
 title: "LookupContext#locale= never writes I18n.config.locale"
-status: ready
+status: done
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["lookup-context-locale-detail-follows-i18n"]
 deps-rfc: []
 est-loc: 40
 priority: 10
-pr: null
-claim: null
-assignee: null
+pr: trails#8147
+claim: "2026-09-26T18:02:02Z"
+assignee: "mapper-root-ships-only-one-of-two-arms"
 blocked-by: null
 closed-reason: null
 ---

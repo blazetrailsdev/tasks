@@ -1,6 +1,6 @@
 ---
 title: "Template#spot highlights to end of line instead of the failing node's span"
-status: ready
+status: blocked
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: 20
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-26T18:42:05Z"
+assignee: "port-mapping-initialize-and-make-route"
+blocked-by: "TS 7.1's typescript/unstable/ast ships no in-process parser (only scanner.js + node types); parsing goes through the Go API server in typescript/unstable/sync, which spawns a child process. Porting spot's parse into actionview would need node:child_process and a new runtime dep on typescript for @blazetrails/actionview — both barred for runtime package code. Needs an in-process JS parser decision (e.g. tse-compiler growing an expression parser) first."
 closed-reason: null
 ---
 
