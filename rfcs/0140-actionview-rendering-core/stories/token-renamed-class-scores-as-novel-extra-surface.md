@@ -1,7 +1,7 @@
 ---
 title: "A token-renamed class (ERBTracker -> TSETracker) scores as novel extra surface"
-status: draft
-updated: 2026-09-09
+status: ready
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []

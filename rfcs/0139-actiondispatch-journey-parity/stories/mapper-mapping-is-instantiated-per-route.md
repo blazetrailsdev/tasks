@@ -1,6 +1,6 @@
 ---
 title: "Mapper::Mapping is static-only; Rails instantiates one per route"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

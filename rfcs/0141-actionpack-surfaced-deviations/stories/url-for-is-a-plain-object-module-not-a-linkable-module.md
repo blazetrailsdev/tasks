@@ -1,7 +1,7 @@
 ---
 title: "url-for-is-a-plain-object-module-not-a-linkable-module"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

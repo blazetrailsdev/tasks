@@ -1,6 +1,6 @@
 ---
 title: "extract_parameterized_parts invents a fifth arm"
-status: claimed
+status: in-progress
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8127
 claim: "2026-09-26T01:32:03Z"
 assignee: "api-compare-extractor-blind-to-class-expression-members"
 blocked-by: null

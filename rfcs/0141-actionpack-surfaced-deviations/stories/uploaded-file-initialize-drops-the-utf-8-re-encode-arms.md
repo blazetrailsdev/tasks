@@ -1,7 +1,7 @@
 ---
 title: "UploadedFile#initialize drops the UTF-8 re-encode arms for filename and headers"
-status: draft
-updated: 2026-09-06
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "wire-parameter-encoding-onto-metal-action-encoding-template"
-status: draft
-updated: 2026-09-11
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

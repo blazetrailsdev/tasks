@@ -1,14 +1,14 @@
 ---
 title: "assignParameters pre-seeds the request_parameters cache Rails leaves the body to fill"
 status: ready
-updated: 2026-09-06
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: 36
+priority: null
 pr: null
 claim: null
 assignee: null

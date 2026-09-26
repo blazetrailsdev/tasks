@@ -1,7 +1,7 @@
 ---
 title: "A controller's render partial: does not split the prefix out of the name"
-status: draft
-updated: 2026-09-06
+status: ready
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []

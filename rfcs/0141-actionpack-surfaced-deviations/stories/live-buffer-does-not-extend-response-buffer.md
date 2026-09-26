@@ -1,7 +1,7 @@
 ---
 title: "Live::Buffer is a hand-rolled duplicate of Response::Buffer instead of extending it"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []

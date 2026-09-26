@@ -1,7 +1,7 @@
 ---
 title: "Port CacheExpiry::ViewReloader and the resolver hook it registers into"
 status: ready
-updated: 2026-09-08
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: ["port-resolver-caching-and-cache-template-loading"]
 deps-rfc: []
 est-loc: 250
-priority: 12
+priority: null
 pr: null
 claim: null
 assignee: null

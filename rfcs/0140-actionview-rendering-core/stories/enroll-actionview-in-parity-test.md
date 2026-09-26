@@ -1,7 +1,7 @@
 ---
 title: "Enrol actionview in parity:test"
-status: ready
-updated: 2026-09-08
+status: in-progress
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages:
@@ -9,10 +9,10 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: 40
-pr: null
-claim: null
-assignee: null
+priority: null
+pr: trails#8129
+claim: "2026-09-26T02:08:02Z"
+assignee: "back-template-types-with-the-mime-registry"
 blocked-by: null
 closed-reason: null
 ---

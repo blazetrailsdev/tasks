@@ -1,14 +1,14 @@
 ---
 title: "Mapper keeps scopeStack beside _scope where Rails has one @scope chain"
 status: ready
-updated: 2026-09-06
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 320
-priority: 54
+priority: null
 pr: null
 claim: null
 assignee: null

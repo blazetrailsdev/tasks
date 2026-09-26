@@ -1,6 +1,6 @@
 ---
 title: "MatchData#[] drops its invented range and zero guards"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8128
+claim: "2026-09-26T02:02:04Z"
+assignee: "journey-match-data-index-invented-guards"
 blocked-by: null
 closed-reason: null
 ---

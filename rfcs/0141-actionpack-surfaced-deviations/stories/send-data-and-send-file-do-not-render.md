@@ -1,14 +1,14 @@
 ---
 title: "send_data does not render and send_file reads the file into memory instead of installing the stream"
 status: ready
-updated: 2026-09-04
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: 30
+priority: null
 pr: null
 claim: null
 assignee: null

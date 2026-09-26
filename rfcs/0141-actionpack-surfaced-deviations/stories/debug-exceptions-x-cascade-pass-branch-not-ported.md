@@ -1,7 +1,7 @@
 ---
 title: "DebugExceptions#call drops the X-Cascade == pass arm that raises RoutingError"
-status: draft
-updated: 2026-09-05
+status: closed
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "http-middleware"
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Delivered by trails#7684 (738fc22495, merged 2026-09-11): origin/main debug-exceptions.ts:188 has ''if (headers[X_CASCADE] === "pass")'', closes the body via typeof close guard and raises RoutingError with rbInspect(PATH_INFO); debug-exceptions.test.ts:233,245 cover ''raise an exception on cascade pass'' and body close.'
 ---
 
 ## Context

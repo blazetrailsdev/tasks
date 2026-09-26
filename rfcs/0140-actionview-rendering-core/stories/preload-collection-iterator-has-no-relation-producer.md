@@ -1,7 +1,7 @@
 ---
 title: "PreloadCollectionIterator is unreachable: no Relation answers preloadAssociations"
-status: draft
-updated: 2026-09-09
+status: ready
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []

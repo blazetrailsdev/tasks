@@ -1,6 +1,6 @@
 ---
 title: "mapper-drops-its-own-routes-buffer"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8130
+claim: "2026-09-26T02:17:05Z"
+assignee: "mapper-drops-its-own-routes-buffer"
 blocked-by: null
 closed-reason: null
 ---

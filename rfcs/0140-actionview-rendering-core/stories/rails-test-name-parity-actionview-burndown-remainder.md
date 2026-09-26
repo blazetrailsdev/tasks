@@ -1,7 +1,7 @@
 ---
 title: "rails-test-name-parity-actionview-burndown-remainder"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []

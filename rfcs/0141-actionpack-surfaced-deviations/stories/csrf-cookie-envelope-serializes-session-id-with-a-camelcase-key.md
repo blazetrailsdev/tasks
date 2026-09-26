@@ -1,7 +1,7 @@
 ---
 title: "The CSRF cookie envelope serializes the session id under publicId where Rails writes public_id"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

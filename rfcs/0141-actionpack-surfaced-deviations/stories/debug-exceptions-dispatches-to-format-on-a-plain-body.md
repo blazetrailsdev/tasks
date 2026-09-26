@@ -1,7 +1,7 @@
 ---
 title: "DebugExceptions#renderForApiRequest invokes to_<format> on a plain body, not a helper that installs toJson/toXml"
-status: draft
-updated: 2026-09-15
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

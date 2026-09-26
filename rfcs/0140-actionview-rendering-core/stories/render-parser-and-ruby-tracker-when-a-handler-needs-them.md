@@ -1,7 +1,7 @@
 ---
 title: "Port RenderParser and RubyTracker once a handler registers them"
-status: draft
-updated: 2026-09-08
+status: blocked
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages:
@@ -9,11 +9,11 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: 90
+priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Gated by design (RFC 0140 Design/Non-goals): not claimable until a trails handler registers RubyTracker. On origin/main 70e9552 nothing does — dependency-tracker.ts registers only TSETracker, and the likely first reader port-html-builder-and-ruby-template-handlers is still unlanded (handlers/builder.ts absent)."
 closed-reason: null
 ---
 

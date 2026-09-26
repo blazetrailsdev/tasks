@@ -1,14 +1,14 @@
 ---
 title: "LookupContext and PathParser hardcode the locale detail instead of reading I18n"
 status: ready
-updated: 2026-09-04
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: 40
+priority: null
 pr: null
 claim: null
 assignee: null

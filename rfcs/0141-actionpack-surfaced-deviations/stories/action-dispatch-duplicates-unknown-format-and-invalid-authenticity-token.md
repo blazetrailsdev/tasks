@@ -1,7 +1,7 @@
 ---
 title: "action-dispatch redeclares UnknownFormat and InvalidAuthenticityToken beside the ActionController ports"
-status: draft
-updated: 2026-09-10
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,14 +1,14 @@
 ---
 title: "Port Mime::AllType as a subclass singleton with a nil symbol"
 status: ready
-updated: 2026-09-04
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: 30
+priority: null
 pr: null
 claim: null
 assignee: null

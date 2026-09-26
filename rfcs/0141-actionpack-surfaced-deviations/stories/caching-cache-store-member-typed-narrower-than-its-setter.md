@@ -1,6 +1,6 @@
 ---
 title: "CachingClassMethods.cacheStore is typed narrower than cache_store= accepts"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

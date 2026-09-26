@@ -1,6 +1,6 @@
 ---
 title: "OID::Array#typeCastForSchema uses an invented JSON fallback instead of subtype.type_cast_for_schema"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8130
+claim: "2026-09-26T02:17:05Z"
+assignee: "mapper-drops-its-own-routes-buffer"
 blocked-by: null
 closed-reason: null
 ---

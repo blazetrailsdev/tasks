@@ -1,14 +1,14 @@
 ---
 title: "Metal#body / #setHeader / #getHeader are invented surface; Rails has response_body and headers"
 status: ready
-updated: 2026-09-04
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 30
+priority: null
 pr: null
 claim: null
 assignee: null

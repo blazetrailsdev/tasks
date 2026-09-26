@@ -1,14 +1,14 @@
 ---
 title: "PathSet#find raises MissingTemplate so find_template callers need no re-raise"
 status: ready
-updated: 2026-09-06
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: 50
+priority: null
 pr: null
 claim: null
 assignee: null

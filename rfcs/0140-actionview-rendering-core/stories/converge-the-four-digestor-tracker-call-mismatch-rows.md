@@ -1,7 +1,7 @@
 ---
 title: "Converge the four call-set rows PR 7628 added to actionview's exclude tree"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []

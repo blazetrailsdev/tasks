@@ -1,6 +1,6 @@
 ---
 title: "ActiveRecord trailtie pushes no eager-load namespace; ActiveRecord.eagerLoadBang lacks the active_record.rb override"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#8131
+claim: "2026-09-26T02:32:09Z"
+assignee: "mapper-root-ships-only-one-of-two-arms"
 blocked-by: null
 closed-reason: null
 ---

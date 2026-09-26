@@ -1,14 +1,14 @@
 ---
 title: "expires_in/fresh_when compose the cache-control header instead of merging into the one response.cache_control hash"
 status: ready
-updated: 2026-09-04
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 320
-priority: 30
+priority: null
 pr: null
 claim: null
 assignee: null

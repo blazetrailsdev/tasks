@@ -1,14 +1,14 @@
 ---
 title: "Integration::Session#process splits host with an invented IPv6 helper"
 status: ready
-updated: 2026-09-04
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "test-harness"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 30
+priority: null
 pr: null
 claim: null
 assignee: null

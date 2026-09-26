@@ -1,7 +1,7 @@
 ---
 title: "beforeAction/afterAction/aroundAction accept only functions, not the method names Rails registers"
-status: draft
-updated: 2026-09-23
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]

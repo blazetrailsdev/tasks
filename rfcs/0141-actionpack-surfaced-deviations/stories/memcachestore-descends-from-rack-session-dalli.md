@@ -1,6 +1,6 @@
 ---
 title: "MemCacheStore descends from CacheStore; converge onto a ported Rack::Session::Dalli"
-status: draft
+status: blocked
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Blocked on an unported subsystem: the dalli gem (rack/session/dalli.rb) is not vendored and there is no Rack::Session::Dalli port or npm memcached client wrapper to extend. RFC 0141's charter routes unported-subsystem deviations to RFC 0123; consider rehoming."
 closed-reason: null
 ---
 

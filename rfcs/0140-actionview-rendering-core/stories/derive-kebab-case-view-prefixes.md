@@ -1,7 +1,7 @@
 ---
 title: "Derive kebab-case view prefixes, so apps need no snake_case exception in app/views"
-status: draft
-updated: 2026-09-09
+status: closed
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: ["actionview", "actionpack", "trailties"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: trails#7651 (merged 2026-09-09) did NOT add a kebab-case localPrefixes fallback as this story's 'Landed' section claims — it went the Rails-faithful way, making the generator underscore the view dir (controller-paths.ts: viewBase = underscore(...)) and leaving Action View untouched. On origin/main 70e9552 view-paths.ts:83-84 localPrefixes still returns [this.controllerPath()]; there is no underscored fallback to remove, and removing Rails' spelling would move away from fidelity."
 ---
 
 ## Context

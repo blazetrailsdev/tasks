@@ -1,7 +1,7 @@
 ---
 title: "permit_value has four arms where Rails has five: the explicit_arrays arm is missing and explicitArrays is threaded nowhere"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: missing-arm
 packages: ["actionpack"]

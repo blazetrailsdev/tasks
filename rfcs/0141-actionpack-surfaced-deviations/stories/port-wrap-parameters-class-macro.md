@@ -1,14 +1,14 @@
 ---
 title: "wrap_parameters names the wrapping helper, not Rails' class macro — the macro's four arms are unported"
 status: ready
-updated: 2026-09-04
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: 30
+priority: null
 pr: null
 claim: null
 assignee: null

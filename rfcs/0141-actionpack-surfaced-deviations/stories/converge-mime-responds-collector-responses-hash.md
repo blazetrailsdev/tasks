@@ -1,7 +1,7 @@
 ---
 title: "converge-mime-responds-collector-responses-hash"
-status: draft
-updated: 2026-09-13
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "actionview-dependency-tracker-ruby-tracker-and-render-parser-are-unported"
-status: draft
-updated: 2026-09-08
+status: closed
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of render-parser-and-ruby-tracker-when-a-handler-needs-them (same RFC), which owns RubyTracker + RenderParser with the settled design (acorn, dynamic import, Ripper SKIP_GROUPS) and the reader gate. This story's third AC is also stale: origin/main 70e9552 scripts/api-compare/call-mismatches-exclude/actionview/dependency-tracker/tse-tracker.json no longer carries the render_dependencies call/new rows (only add_static_dependency/new and explicit_dependencies/flatten); render_dependencies now lives in scripts/api-compare/body-pins.json:13130 — the claimer of the gated story should retire that pin."
 ---
 
 ## Context

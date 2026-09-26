@@ -1,17 +1,17 @@
 ---
 title: "LookupContext sheds its invented render/find* surface onto the renderers"
-status: ready
-updated: 2026-09-04
+status: claimed
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 320
-priority: 40
+priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T02:47:02Z"
+assignee: "port-endpoint-engine-check-via-slot"
 blocked-by: null
 closed-reason: null
 ---

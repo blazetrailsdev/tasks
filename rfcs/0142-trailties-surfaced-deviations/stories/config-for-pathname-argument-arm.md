@@ -1,6 +1,6 @@
 ---
 title: "configFor drops config_for's Pathname argument arm"
-status: ready
+status: blocked
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: 5
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-26T02:32:09Z"
+assignee: "mapper-root-ships-only-one-of-two-arms"
+blocked-by: "Blocked on converge-engine-configuration-root-pathname-new, which owns the trails Pathname decision (port Ruby's Pathname from vendor/ruby/v3.3.11/ext/pathname vs. declaring the path adapter the rendering). No trails package defines a Pathname. A URL spelling would also need a fileURLToPath on ruby-compat's PathAdapter (fs-adapter.ts:122 has only pathToFileURL) to run Rails' yaml.exist? check (application.rb:289-290). Deciding the path-object type inside configFor alone would fork that decision."
 closed-reason: null
 ---
 

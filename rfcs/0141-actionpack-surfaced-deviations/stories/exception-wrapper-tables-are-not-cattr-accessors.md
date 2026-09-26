@@ -1,7 +1,7 @@
 ---
 title: "ExceptionWrapper's four tables are module-private, not cattr_accessors the railties merge into"
-status: draft
-updated: 2026-09-10
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

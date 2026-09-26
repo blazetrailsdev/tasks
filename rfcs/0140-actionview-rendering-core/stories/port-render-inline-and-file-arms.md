@@ -1,14 +1,14 @@
 ---
 title: "render inline: returns raw source and render file: raises an invented error"
 status: ready
-updated: 2026-09-04
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 160
-priority: 40
+priority: null
 pr: null
 claim: null
 assignee: null

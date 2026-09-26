@@ -1,14 +1,14 @@
 ---
 title: "assignParameters duplicates Rails' single rack.input tail into both arms, with divergent length math"
 status: ready
-updated: 2026-09-06
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: 37
+priority: null
 pr: null
 claim: null
 assignee: null

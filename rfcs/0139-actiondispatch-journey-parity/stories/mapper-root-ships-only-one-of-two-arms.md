@@ -1,6 +1,6 @@
 ---
 title: "mapper-root-ships-only-one-of-two-arms"
-status: ready
+status: blocked
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-26T02:32:09Z"
+assignee: "mapper-root-ships-only-one-of-two-arms"
+blocked-by: "Blocked on mapper-keeps-two-parallel-scope-chains. Rails' path_scope(parent_resource.path) (mapper.rb:1747) merges onto @scope[:path], which inside a resources block is the OUTER path. trails' pathScope pushes currentPrefix()+path onto scopeStack, whose top inside resources() is already basePath/:singular_id, so the arm cannot be ported without double-appending. Also: trails' resources() never enters withScopeLevel('resources'), so @scope.resources? is never true. The story premise that root-in-resources is behaviourally right is falsified: mapper.test.ts pins '/products/:product_id(.:format)' named product_root, where Rails' test_root_works_in_the_resources_scope (routing_test.rb:1953) gives /products and products_root_path."
 closed-reason: null
 ---
 

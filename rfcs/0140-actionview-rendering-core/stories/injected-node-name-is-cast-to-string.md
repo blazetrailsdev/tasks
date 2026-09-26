@@ -1,7 +1,7 @@
 ---
 title: "Injected#name is cast to string though a nested dependency reaches it at runtime"
-status: draft
-updated: 2026-09-08
+status: claimed
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T02:47:02Z"
+assignee: "port-endpoint-engine-check-via-slot"
 blocked-by: null
 closed-reason: null
 ---

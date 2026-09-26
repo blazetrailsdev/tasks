@@ -1,14 +1,14 @@
 ---
 title: "action-controller-cookies-returns-the-request-cookie-jar"
 status: ready
-updated: 2026-09-04
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 30
+priority: null
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "A missing helper constant raises without a did-you-mean suggestion"
-status: draft
-updated: 2026-09-06
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []

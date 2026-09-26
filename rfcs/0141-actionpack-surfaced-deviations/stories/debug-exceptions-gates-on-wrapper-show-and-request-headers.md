@@ -1,7 +1,7 @@
 ---
 title: "DebugExceptions gates on wrapper.show?(request) and request headers, not constructor flags"
-status: draft
-updated: 2026-09-11
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

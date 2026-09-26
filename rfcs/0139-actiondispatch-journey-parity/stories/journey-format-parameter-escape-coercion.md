@@ -1,6 +1,6 @@
 ---
 title: "Format::Parameter#escape stops coercing its value"
-status: claimed
+status: done
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8126
 claim: "2026-09-26T01:47:01Z"
 assignee: "converge-constraints-callable-resolution-to-proc-call"
 blocked-by: null

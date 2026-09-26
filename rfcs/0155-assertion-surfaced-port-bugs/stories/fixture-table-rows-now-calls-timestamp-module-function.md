@@ -1,6 +1,6 @@
 ---
 title: "TableRows#build_table_rows_from calls currentTimeFromProperTimezone instead of Rails' inline default_timezone check"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8131
+claim: "2026-09-26T02:32:09Z"
+assignee: "mapper-root-ships-only-one-of-two-arms"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Hash URL-option constraints never seed the route's defaults"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

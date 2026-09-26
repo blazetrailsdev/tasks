@@ -1,7 +1,7 @@
 ---
 title: "port-action-view-layouts-behind-rendering-stubs"
-status: draft
-updated: 2026-07-30
+status: ready
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages:

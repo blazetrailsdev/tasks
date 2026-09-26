@@ -1,7 +1,7 @@
 ---
 title: "url-for-parameters-keys-cross-into-camelcase-options"
-status: draft
-updated: 2026-09-23
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

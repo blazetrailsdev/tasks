@@ -1,6 +1,6 @@
 ---
 title: "resources/resource routes drop the scope's constraints blocks"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

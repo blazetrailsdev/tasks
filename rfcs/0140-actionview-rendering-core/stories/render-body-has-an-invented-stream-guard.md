@@ -1,7 +1,7 @@
 ---
 title: "Renderer#renderBody has an invented :stream guard and non-streaming fallback"
-status: draft
-updated: 2026-09-09
+status: ready
+updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "route-set-static-route-leaks-controller-action-into-query"
-status: draft
-updated: 2026-09-22
+status: ready
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

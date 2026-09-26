@@ -1,14 +1,14 @@
 ---
 title: "Metal#dispatch assigns params eagerly; Rails memoizes them lazily in #params"
 status: ready
-updated: 2026-09-04
+updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: 30
+priority: null
 pr: null
 claim: null
 assignee: null
