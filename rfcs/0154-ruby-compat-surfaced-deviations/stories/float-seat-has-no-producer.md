@@ -1,7 +1,7 @@
 ---
 title: "No Float cast produces the boxed Float seat, so whole-valued Float attributes still render as Integers"
-status: ready
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8121
+claim: "2026-09-26T00:02:02Z"
+assignee: "float-seat-has-no-producer"
 blocked-by: null
 closed-reason: null
 ---

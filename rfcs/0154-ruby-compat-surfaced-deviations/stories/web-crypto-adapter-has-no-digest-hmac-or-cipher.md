@@ -1,7 +1,7 @@
 ---
 title: "The Web Crypto adapter cannot serve digest, HMAC or cipher"
-status: in-progress
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

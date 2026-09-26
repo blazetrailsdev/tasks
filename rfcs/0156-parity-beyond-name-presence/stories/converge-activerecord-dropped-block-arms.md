@@ -1,7 +1,7 @@
 ---
 title: "Converge activerecord's dropped block arms flagged by parity:api:blocks"
-status: in-progress
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

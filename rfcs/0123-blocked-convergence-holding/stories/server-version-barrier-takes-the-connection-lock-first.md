@@ -1,7 +1,7 @@
 ---
 title: "the server_version barrier acquires the connection lock first, which Rails does not"
-status: ready
-updated: 2026-09-16
+status: blocked
+updated: 2026-09-26
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-26T00:17:11Z"
+assignee: "server-version-barrier-takes-the-connection-lock-first"
+blocked-by: "Precondition unmet and its route closed: the story is only safe once an adapter is leased to one logical flow, and that route (abstract-adapter-lock-defaults-to-monitor-not-nulllock) was closed as ratified (CLAUDE.md 'The adapter lock defaults to a monitor, not NullLock', trails#7831), so the adapter lock stays a real monitor where Rails' unpinned lock is NullLock (abstract_adapter.rb:157,181-191). Verified 2026-09-25: the Rails-shaped bodies (pool_config.rb:39-40, connection_pool.rb:30-31) deadlock two arms: pool-config.trails.test.ts 'a first probe holding the connection lock completes while disconnect! holds the monitor' (probe holds adapter lock -> waits PoolConfig monitor; disconnect! holds monitor -> waits adapter lock) and pool-server-version.trails.test.ts 'resolves while another flow holds the pool's barrier and waits on the adapter lock' (NullPool mutex vs adapter lock). Also: the AC's sqlite3 'a query issued from configureConnection...' arm is now vacuous: its verifyBang() (added in #7653) warms the memo so the barrier is never entered. Current state also differs from the story text: NullPool no longer takes connection.lock (#7779 isMonOwned bypass) and PoolConfig carries _serverVersionInFlight (#7750). Needs a design decision (accept Rails' deadlock with a real lock, or a per-flow lease) before it can converge."
 closed-reason: null
 ---
 

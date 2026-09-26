@@ -1,7 +1,7 @@
 ---
 title: "Port MRI initialize attributes for KeyError, NoMethodError, FrozenError"
-status: in-progress
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

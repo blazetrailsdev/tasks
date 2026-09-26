@@ -1,7 +1,7 @@
 ---
 title: "configFor reads only config/database and config.x is unported, so apps read settings straight from env"
-status: in-progress
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]

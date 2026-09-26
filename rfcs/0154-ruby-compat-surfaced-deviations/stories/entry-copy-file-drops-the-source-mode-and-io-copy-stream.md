@@ -1,7 +1,7 @@
 ---
 title: "Entry_#copy_file is copyFileSync, dropping Ruby's source-mode create and IO.copy_stream"
-status: in-progress
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

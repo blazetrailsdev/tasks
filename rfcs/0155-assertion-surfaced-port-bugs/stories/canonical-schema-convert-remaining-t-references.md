@@ -1,7 +1,7 @@
 ---
 title: "canonical-schema-convert-remaining-t-references"
-status: in-progress
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

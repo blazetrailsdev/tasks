@@ -1,7 +1,7 @@
 ---
 title: "callerLocations never sets Location#absolute_path"
-status: in-progress
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

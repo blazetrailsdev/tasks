@@ -1,7 +1,7 @@
 ---
 title: "binmode-write-emits-latin1-where-mri-emits-the-strings-own-bytes"
-status: in-progress
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: ["ruby-compat", "activerecord"]

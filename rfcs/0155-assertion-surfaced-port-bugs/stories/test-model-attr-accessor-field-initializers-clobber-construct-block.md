@@ -1,7 +1,7 @@
 ---
 title: "Test models port attr_accessor as initialized class fields that clobber constructor-block writes"
-status: in-progress
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

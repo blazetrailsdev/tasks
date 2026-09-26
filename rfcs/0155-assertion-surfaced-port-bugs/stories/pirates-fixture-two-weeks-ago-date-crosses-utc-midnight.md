@@ -1,7 +1,7 @@
 ---
 title: "pirates fixture 2.weeks.ago is a UTC Instant, not to_fs(:db); preserves-existing-fixture-data flips near UTC midnight"
-status: in-progress
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

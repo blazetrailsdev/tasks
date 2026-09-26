@@ -1,7 +1,7 @@
 ---
 title: "update/update! must call assignAttributes, not setAttributes (carried from RFC 0087)"
-status: ready
-updated: 2026-09-16
+status: blocked
+updated: 2026-09-26
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-26T00:02:02Z"
+assignee: "float-seat-has-no-producer"
+blocked-by: "The surviving I/O is Rails' own, not trails': HasOneAssociation#replace saves the record on a persisted owner (activerecord/lib/active_record/associations/has_one_association.rb:59-84, record.save at :76) and CollectionAssociation#ids_writer queries klass.where(pk => ids) then replace (collection_association.rb:65-84). Neither can be removed. Ruby runs both inside a synchronous assign_attributes (returns nil, activemodel/attribute_assignment.rb:28-36); JS has no synchronous await, so a void assignAttributes cannot complete them. Parking the promise for save to drain is banned. Converges only if assignAttributes may return a promise, which activemodel forbidden-attributes-protection.test.ts:57 (a ported Rails test asserting undefined) rules out."
 closed-reason: null
 ---
 

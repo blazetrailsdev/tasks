@@ -1,7 +1,7 @@
 ---
 title: "SchemaDumper.dump defaults its stream to a StringIO where Rails defaults to $stdout"
-status: blocked
-updated: 2026-09-15
+status: in-progress
+updated: 2026-09-26
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 66
-pr: null
-claim: "2026-09-15T12:12:37Z"
-assignee: "io-set-encoding-by-bom-never-runs-so-the-mark-is-not-stripped"
-blocked-by: "ruby-compat has no IO-shaped $stdout: process-adapter.ts:52 exports stdout as a WriteStream with write only, but SchemaDumper writes via stream.puts/print (schema-dumper.ts:325,443-449), and IO's constructor is protected (io.ts:520). Needs a port of $stdout as IO (io.c rb_stdout / prep_stdio) first."
+pr: trails#8122
+claim: "2026-09-26T00:47:01Z"
+assignee: "datetime-civil-sub-minute-offset-loses-instant-on-cast"
+blocked-by: null
 closed-reason: null
 ---
 

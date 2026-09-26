@@ -1,7 +1,7 @@
 ---
 title: "Retire the sqlite _statementLock queue once execute routes through with_raw_connection"
-status: in-progress
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
