@@ -1,6 +1,6 @@
 ---
 title: "action-dispatch redeclares UnknownFormat and InvalidAuthenticityToken beside the ActionController ports"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8138
+claim: "2026-09-26T09:32:02Z"
+assignee: "template-render-returns-the-run-result-verbatim"
 blocked-by: null
 closed-reason: null
 ---

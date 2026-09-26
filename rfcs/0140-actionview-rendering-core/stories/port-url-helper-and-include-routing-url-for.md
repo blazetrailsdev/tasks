@@ -1,6 +1,6 @@
 ---
 title: "UrlHelper is unported, so nothing includes RoutingUrlFor or defines _back_url"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8137
+claim: "2026-09-26T09:17:04Z"
+assignee: "port-mapping-initialize-and-make-route"
 blocked-by: null
 closed-reason: null
 ---

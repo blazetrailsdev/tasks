@@ -1,6 +1,6 @@
 ---
 title: "assignParameters duplicates Rails' single rack.input tail into both arms, with divergent length math"
-status: ready
+status: blocked
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-26T09:32:02Z"
+assignee: "template-render-returns-the-run-result-verbatim"
+blocked-by: "blocked on raw-post-byte-form-body-parses-as-utf8: a literal StringIO.new(b(data)) tail mojibakes non-ASCII JSON params (rawPost byte form not decoded as UTF-8) and double-encodes the already-binary multipart body (JS strings carry no ASCII-8BIT tag), probe café -> cafÃ© / cafÃƒÂ©"
 closed-reason: null
 ---
 

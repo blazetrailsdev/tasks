@@ -1,6 +1,6 @@
 ---
 title: "RFC 0140's prose still cites nine stories as RFC 0104's after rehoming them in"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: tasks#182
+claim: "2026-09-26T09:17:04Z"
+assignee: "port-mapping-initialize-and-make-route"
 blocked-by: null
 closed-reason: null
 ---

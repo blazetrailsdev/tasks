@@ -1,6 +1,6 @@
 ---
 title: "A token-renamed class (ERBTracker -> TSETracker) scores as novel extra surface"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8138
+claim: "2026-09-26T09:32:02Z"
+assignee: "template-render-returns-the-run-result-verbatim"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "CollectionCaching's cache key is a String where Rails uses combined_fragment_cache_key's Array"
-status: claimed
+status: ready
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-09-26T02:47:02Z"
-assignee: "port-endpoint-engine-check-via-slot"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

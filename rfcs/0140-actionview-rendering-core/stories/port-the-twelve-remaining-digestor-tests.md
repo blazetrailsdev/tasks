@@ -1,6 +1,6 @@
 ---
 title: "Port the 12 remaining TemplateDigestorTest tests (logging, variants, format fallback, caching-off)"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8136
+claim: "2026-09-26T09:02:05Z"
+assignee: "port-mapper-app-name-from-class-name"
 blocked-by: null
 closed-reason: null
 ---
