@@ -1,6 +1,6 @@
 ---
 title: "route-set-generate-delegates-to-journey-formatter"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8164
+claim: "2026-09-26T22:02:00Z"
+assignee: "route-set-generate-delegates-to-journey-formatter"
 blocked-by: null
 closed-reason: null
 ---

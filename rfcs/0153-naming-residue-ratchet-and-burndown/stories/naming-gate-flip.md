@@ -1,7 +1,7 @@
 ---
 title: "Gate the naming class once the burndown has drained it"
-status: blocked
-updated: 2026-09-24
+status: ready
+updated: 2026-09-26
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: []
@@ -20,9 +20,9 @@ deps:
 deps-rfc: []
 est-loc: 80
 pr: null
-claim: "2026-08-11T01:14:36Z"
-assignee: "arel-collector-argument-order-convergence"
-blocked-by: "Re-checked 2026-09-24 on trails 5fe97345d9: still live. All waves merged incl. naming-burndown-activerecord-behavioral (trails#8029) and naming-residue-burndown-activesupport-structural (trails#8051), but NAMING_ENROLLED_PACKAGES (scripts/api-compare/lint-call-args.ts:101) is still activemodel, activerecord-test-support, arel, globalid, i18n. Enrollment moved to naming-enroll-activerecord and naming-enroll-activesupport (now deps; the latter waits on 4 activesupport row stories). Unblock once both merge. Body criterion 2 still describes seeding baseline rows; RFC 0153 Rollout step 3 prose amendment (receipts, not baseline) is pending."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 priority: 60
 ---

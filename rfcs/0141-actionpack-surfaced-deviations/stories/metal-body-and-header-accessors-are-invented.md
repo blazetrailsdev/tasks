@@ -1,6 +1,6 @@
 ---
 title: "Metal#body / #setHeader / #getHeader are invented surface; Rails has response_body and headers"
-status: ready
+status: claimed
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T22:22:05Z"
+assignee: "action-controller-cookies-returns-the-request-cookie-jar"
 blocked-by: null
 closed-reason: null
 ---

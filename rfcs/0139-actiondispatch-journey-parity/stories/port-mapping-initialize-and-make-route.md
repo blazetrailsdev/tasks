@@ -1,6 +1,6 @@
 ---
 title: "port-mapping-initialize-and-make-route"
-status: in-progress
+status: blocked
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: trails#8162
 claim: "2026-09-26T21:02:02Z"
 assignee: "port-mapping-initialize-and-make-route"
-blocked-by: null
+blocked-by: "AC1 shipped in trails#8162 and AC2 in trails#8160; AC3 (drop addRouteToSet's Mapping.build) needs resources routed through collection/new/member: mapper-resources-hand-builds-canonical-routes"
 closed-reason: null
 ---
 
