@@ -1,17 +1,17 @@
 ---
 title: "Port Mapping#app's StaticDispatcher and blocks.any? arms"
-status: ready
-updated: 2026-09-04
+status: claimed
+updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: 30
+priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T01:47:01Z"
+assignee: "converge-constraints-callable-resolution-to-proc-call"
 blocked-by: null
 closed-reason: null
 ---

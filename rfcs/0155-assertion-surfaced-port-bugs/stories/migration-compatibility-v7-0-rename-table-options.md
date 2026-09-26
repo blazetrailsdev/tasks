@@ -1,7 +1,7 @@
 ---
 title: "migration-compatibility-v7-0-rename-table-options"
-status: ready
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8124
+claim: "2026-09-26T01:16:58Z"
+assignee: "migration-compatibility-v7-0-rename-table-options"
 blocked-by: null
 closed-reason: null
 ---

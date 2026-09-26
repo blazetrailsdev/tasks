@@ -1,14 +1,14 @@
 ---
 title: "migration_template takes a source template PATH and expands it through find_in_source_paths"
 status: blocked
-updated: 2026-09-25
+updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: 3
+priority: 6
 pr: null
 claim: "2026-09-25T16:31:39Z"
 assignee: "generated-app-typechecks-with-tsc-not-trails-tsc"

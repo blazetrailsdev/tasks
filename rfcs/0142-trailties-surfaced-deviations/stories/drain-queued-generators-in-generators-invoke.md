@@ -1,14 +1,14 @@
 ---
 title: "drain-queued-generators-in-generators-invoke"
 status: blocked
-updated: 2026-09-25
+updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "generators"
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 3
+priority: 6
 pr: null
 claim: "2026-09-25T21:17:24Z"
 assignee: "drain-queued-generators-in-generators-invoke"

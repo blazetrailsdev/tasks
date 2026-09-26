@@ -1,7 +1,7 @@
 ---
 title: "acceptsNestedAttributesFor is a free function taking the model where Rails is a ClassMethods method"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

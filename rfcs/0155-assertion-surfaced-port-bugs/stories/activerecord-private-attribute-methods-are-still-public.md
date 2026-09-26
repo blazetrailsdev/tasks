@@ -1,7 +1,7 @@
 ---
 title: "activerecord-private-attribute-methods-are-still-public"
 status: blocked
-updated: 2026-09-23
+updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-23T14:33:22Z"
 assignee: "activemodel-respond-to-cannot-hide-private-methods"
-blocked-by: "blocked on ruby-compat-runtime-method-visibility-carrier; direct-access NoMethodError arms need a further decision (no caller context on JS property access)"
+blocked-by: "Visibility carrier half landed (trails#8113, ruby-compat/src/object.ts methodVisibilities); still blocked: the direct-access NoMethodError arms need an RFC-owner decision (no caller context on JS property access). Parks remain at activerecord/src/attribute-methods.test.ts:759,1719,1740."
 closed-reason: null
 ---
 

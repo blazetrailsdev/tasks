@@ -1,9 +1,9 @@
 ---
 rfc: "0130-activerecord-extra-surface-receipt-burndown"
 title: "Burn activerecord's untagged extra surface — 342 novel names, then 396 moved-not-novel — to zero so the package leaves the extra-surface mark file entirely"
-status: active
+status: closed
 created: 2026-08-30
-updated: 2026-09-11
+updated: 2026-09-26
 owner: "@deanmarano"
 packages:
   - activerecord

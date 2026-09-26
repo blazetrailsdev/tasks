@@ -1,14 +1,14 @@
 ---
 title: "Engine never loads lib/tasks, so generated and hand-written app tasks are dead code"
 status: blocked
-updated: 2026-09-25
+updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 4
+priority: 7
 pr: null
 claim: "2026-09-25T17:31:41Z"
 assignee: "widen-relation-merge-hash-overload"

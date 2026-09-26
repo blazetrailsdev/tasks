@@ -1,14 +1,14 @@
 ---
 title: "test_help: include TestDatabases and QueryAssertions as modules"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties", "activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

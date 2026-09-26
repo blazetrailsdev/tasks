@@ -1,7 +1,7 @@
 ---
 title: "OID::Array#typeCastForSchema uses an invented JSON fallback instead of subtype.type_cast_for_schema"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "ActiveRecord.eager_load! omits Locking/Scoping/AttributeMethods: make them Autoload namespaces"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

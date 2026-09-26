@@ -1,7 +1,7 @@
 ---
 title: "Generated test helper omits parallelize(workers:): port it or SKIP_GROUPS it"
-status: draft
-updated: 2026-09-25
+status: closed
+updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties", "activesupport"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise resolved by the AC's own second arm, which already holds on origin/main: scripts/parity/conventions.ts:1093-1112 SKIP_GROUPS 'parallelize' / 'parallelize_setup' / 'parallelize_teardown' (test_case.rb) plus the testing/parallelization.rb group, reason 'vitest is the runner in trails: it owns worker parallelism, so none of these has a port to point at'. With parallelize deliberately unported, the generated test/test-helper.ts omitting test_helper.rb.tt:7-11's parallelize line is the recorded consequence, not an open deviation."
 ---
 
 ## Context

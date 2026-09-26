@@ -1,7 +1,7 @@
 ---
 title: "activemodel-respond-to-cannot-hide-private-methods"
-status: blocked
-updated: 2026-09-23
+status: closed
+updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-09-23T14:33:22Z"
 assignee: "activemodel-respond-to-cannot-hide-private-methods"
-blocked-by: "blocked on ruby-compat-runtime-method-visibility-carrier (no runtime visibility fact for basicObjRespondTo's pub)"
-closed-reason: null
+blocked-by: null
+closed-reason: "Delivered by trails#8113 (d2375eb398): ruby-compat/src/object.ts grew the methodVisibilities carrier (setMethodVisibility/methodEntryVisi) that basicObjRespondTo honours for pub; on origin/main activemodel/src/attribute-methods.test.ts:422 'should not interfere with respond_to? if the attribute has a private/protected method' is it() (un-parked) and git grep finds no BLOCKED: activemodel-respond-to-cannot-hide-private-methods."
 ---
 
 ## Context

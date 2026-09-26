@@ -1,7 +1,7 @@
 ---
 title: "test-model-remaining-ivar-field-initializers"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

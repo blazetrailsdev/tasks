@@ -1,7 +1,7 @@
 ---
 title: "Expand CONST hash loop receivers in the Ruby test extractor"
-status: draft
-updated: 2026-09-08
+status: claimed
+updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T01:32:03Z"
+assignee: "api-compare-extractor-blind-to-class-expression-members"
 blocked-by: null
 closed-reason: null
 ---

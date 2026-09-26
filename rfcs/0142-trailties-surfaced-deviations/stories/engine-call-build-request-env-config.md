@@ -1,14 +1,14 @@
 ---
 title: "Engine#call, env_config and build_request (engine.rb:533-541,747-753)"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

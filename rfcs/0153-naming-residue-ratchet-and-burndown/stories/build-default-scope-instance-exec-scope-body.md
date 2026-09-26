@@ -1,7 +1,7 @@
 ---
 title: "build-default-scope-instance-exec-scope-body"
-status: ready
-updated: 2026-09-25
+status: done
+updated: 2026-09-26
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 70
-pr: null
-claim: null
-assignee: null
+pr: trails#8125
+claim: "2026-09-26T01:20:57Z"
+assignee: "build-default-scope-instance-exec-scope-body"
 blocked-by: null
 closed-reason: null
 ---

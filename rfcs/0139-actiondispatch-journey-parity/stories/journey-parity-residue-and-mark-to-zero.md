@@ -1,7 +1,7 @@
 ---
 title: "Journey parity residue and the assertion mark back to zero"
-status: ready
-updated: 2026-09-08
+status: claimed
+updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: ["actionpack"]
@@ -24,10 +24,10 @@ deps:
   ]
 deps-rfc: []
 est-loc: 200
-priority: 90
+priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T01:32:03Z"
+assignee: "api-compare-extractor-blind-to-class-expression-members"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,18 +1,18 @@
 ---
 title: "passwords-mailer-resolves-against-a-ported-actionmailer"
-status: draft
-updated: 2026-09-25
+status: blocked
+updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "No ActionMailer port: packages/ has no actionmailer package on origin/main (ls packages/), and the story's AC is phrased 'once ActionMailer is ported'. Porting ActionMailer is an explicit non-goal of this RFC (README § Non-goals; owner RFC 0123). Unblocks when @blazetrails/actionmailer exists."
 closed-reason: null
 ---
 

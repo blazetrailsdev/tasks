@@ -1,7 +1,7 @@
 ---
 title: "ActionDispatch::Routing::Route is a trails invention; fold it into Journey::Route, Mapper::Mapping and RouteSet"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []

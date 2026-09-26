@@ -1,14 +1,14 @@
 ---
 title: "Run test_help's hooks per test: ActiveSupport::TestCase instance lifecycle, ActionDispatch.test_app, boot-app e2e"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties", "activesupport", "actionpack"]
 deps: []
 deps-rfc: []
 est-loc: 350
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

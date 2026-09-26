@@ -1,7 +1,7 @@
 ---
 title: "port-mapper-app-name-from-class-name"
-status: draft
-updated: 2026-09-05
+status: ready
+updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []

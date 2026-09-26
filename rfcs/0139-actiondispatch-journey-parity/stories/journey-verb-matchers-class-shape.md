@@ -1,7 +1,7 @@
 ---
 title: "VerbMatchers builds a class per verb, as Rails does"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []

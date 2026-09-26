@@ -1,14 +1,14 @@
 ---
 title: "Retire the six mapper.ts homonym call-baseline rows"
 status: ready
-updated: 2026-09-04
+updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 30
+priority: null
 pr: null
 claim: null
 assignee: null
