@@ -1,6 +1,6 @@
 ---
 title: "Canonical-schema reference probe hand-computes the FK table instead of ReferenceDefinition#foreignTableName"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

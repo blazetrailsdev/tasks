@@ -1,6 +1,6 @@
 ---
 title: "renderStream drops Rails' supports_streaming? half of the guard"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null

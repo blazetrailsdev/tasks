@@ -1,6 +1,6 @@
 ---
 title: "SchemaReflection#loadCache compares schemaVersion outside with_connection instead of new_cache.version(connection)"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

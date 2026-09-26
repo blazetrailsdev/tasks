@@ -1,6 +1,6 @@
 ---
 title: "ActiveRecord railtie has no active_record.backtrace_cleaner initializer (railtie.rb:101-102)"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

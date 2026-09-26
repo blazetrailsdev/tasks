@@ -1,6 +1,6 @@
 ---
 title: "Collapse the two spellings of ViewPaths' formats/locale delegation to one"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "connects_to passes owner_name: self and sets connection_class per key (connection_handling.rb:98-105)"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

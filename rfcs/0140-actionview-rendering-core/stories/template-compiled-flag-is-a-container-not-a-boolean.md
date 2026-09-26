@@ -1,6 +1,6 @@
 ---
 title: "Template#compile!'s @compiled is a boolean, not the container it compiled into"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "assign_parameters' :json arm encodes with JSON.stringify, not ActiveSupport::JSON.encode"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
