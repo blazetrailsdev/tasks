@@ -5,7 +5,12 @@ updated: 2026-09-08
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  [
+    "route-verb-all-sentinel-vs-empty-string",
+    "routing-route-duplicates-head-fallback",
+    "route-set-generate-delegates-to-journey-formatter",
+  ]
 deps-rfc: []
 est-loc: 400
 priority: null

@@ -16,6 +16,11 @@ deps:
     "journey-parser-and-scanner-test-parity",
     "journey-missing-api-methods",
     "journey-call-parity-baselines-to-zero",
+    "api-compare-extractor-blind-to-class-expression-members",
+    "formatter-possibles-fetch-default-is-a-nullish-coalesce",
+    "journey-format-parameter-escape-coercion",
+    "journey-match-data-index-invented-guards",
+    "journey-verb-matchers-class-shape",
   ]
 deps-rfc: []
 est-loc: 200
