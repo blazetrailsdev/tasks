@@ -1,6 +1,6 @@
 ---
 title: "Run test_help's hooks per test: ActiveSupport::TestCase instance lifecycle, ActionDispatch.test_app, boot-app e2e"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#8149
+claim: "2026-09-26T16:32:02Z"
+assignee: "normalize-erb-in-test-compare-descriptions"
 blocked-by: null
 closed-reason: null
 ---

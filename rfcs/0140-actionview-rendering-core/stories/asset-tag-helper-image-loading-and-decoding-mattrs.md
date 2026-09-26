@@ -1,6 +1,6 @@
 ---
 title: "asset-tag-helper-image-loading-and-decoding-mattrs"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8148
+claim: "2026-09-26T16:22:10Z"
+assignee: "asset-tag-helper-image-loading-and-decoding-mattrs"
 blocked-by: null
 closed-reason: null
 ---

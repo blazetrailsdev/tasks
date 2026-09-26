@@ -1,6 +1,6 @@
 ---
 title: "DebugExceptions gates on wrapper.show?(request) and request headers, not constructor flags"
-status: ready
+status: blocked
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-26T16:22:10Z"
+assignee: "asset-tag-helper-image-loading-and-decoding-mattrs"
+blocked-by: "Gating on request headers needs something to put action_dispatch.show_exceptions / show_detailed_exceptions into the env. trailties has no Engine#call/build_request/env_config (engine-call-build-request-env-config, claimed elsewhere) and no Application#env_config (port-application-env-config-for-action-dispatch-keys). Without them every exception in a booted app escapes: application.test.ts 'renders the dev error page through DebugExceptions rather than an ad-hoc catch' goes red. Unblock once both land."
 closed-reason: null
 ---
 

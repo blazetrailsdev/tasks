@@ -1,6 +1,6 @@
 ---
 title: "Engine#call, env_config and build_request (engine.rb:533-541,747-753)"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#8149
+claim: "2026-09-26T16:32:02Z"
+assignee: "normalize-erb-in-test-compare-descriptions"
 blocked-by: null
 closed-reason: null
 ---

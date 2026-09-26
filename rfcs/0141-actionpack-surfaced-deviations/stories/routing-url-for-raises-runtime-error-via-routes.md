@@ -1,6 +1,6 @@
 ---
 title: "Routing UrlFor raises RuntimeError via _routes, not an invented requireRoutes Error"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8147
+claim: "2026-09-26T16:22:41Z"
+assignee: "lookup-context-locale-detail-follows-i18n"
 blocked-by: null
 closed-reason: null
 ---

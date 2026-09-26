@@ -1,6 +1,6 @@
 ---
 title: "Model and migration generators parse through GeneratedAttribute.parse"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#8147
+claim: "2026-09-26T16:22:41Z"
+assignee: "lookup-context-locale-detail-follows-i18n"
 blocked-by: null
 closed-reason: null
 ---

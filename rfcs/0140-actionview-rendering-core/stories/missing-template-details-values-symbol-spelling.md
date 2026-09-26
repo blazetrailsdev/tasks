@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: trails#8134
+pr: trails#8141
 claim: "2026-09-26T10:17:09Z"
 assignee: "missing-template-details-values-symbol-spelling"
 blocked-by: null

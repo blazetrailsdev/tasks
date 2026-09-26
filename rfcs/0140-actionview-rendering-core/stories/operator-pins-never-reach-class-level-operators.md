@@ -1,6 +1,6 @@
 ---
 title: "operator-pins-never-reach-class-level-operators"
-status: ready
+status: claimed
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T16:47:07Z"
+assignee: "operator-pins-never-reach-class-level-operators"
 blocked-by: null
 closed-reason: null
 ---

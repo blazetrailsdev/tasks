@@ -1,6 +1,6 @@
 ---
 title: "lookup-context-locale-detail-follows-i18n"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8147
+claim: "2026-09-26T16:22:41Z"
+assignee: "lookup-context-locale-detail-follows-i18n"
 blocked-by: null
 closed-reason: null
 ---
