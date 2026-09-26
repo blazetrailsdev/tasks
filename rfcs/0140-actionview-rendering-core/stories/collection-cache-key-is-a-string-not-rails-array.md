@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: trails#8144
+pr: trails#8140
 claim: "2026-09-26T10:02:04Z"
 assignee: "collection-cache-key-is-a-string-not-rails-array"
 blocked-by: null
