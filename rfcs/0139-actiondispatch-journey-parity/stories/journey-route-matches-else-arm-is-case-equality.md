@@ -1,6 +1,6 @@
 ---
 title: "Journey::Route#matches' else arm is case equality, not identity"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

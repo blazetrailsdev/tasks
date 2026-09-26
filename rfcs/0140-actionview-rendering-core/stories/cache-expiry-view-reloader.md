@@ -1,6 +1,6 @@
 ---
 title: "Port CacheExpiry::ViewReloader and the resolver hook it registers into"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,9 +10,9 @@ deps: ["port-resolver-caching-and-cache-template-loading"]
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8159
+claim: "2026-09-26T19:22:03Z"
+assignee: "cache-expiry-view-reloader"
 blocked-by: null
 closed-reason: null
 ---

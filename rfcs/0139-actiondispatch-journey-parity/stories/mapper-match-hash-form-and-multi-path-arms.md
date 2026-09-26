@@ -1,6 +1,6 @@
 ---
 title: "mapper-match-hash-form-and-multi-path-arms"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

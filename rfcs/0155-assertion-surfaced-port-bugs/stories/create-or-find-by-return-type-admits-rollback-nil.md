@@ -1,6 +1,6 @@
 ---
 title: "createOrFindBy's return type hides Rails' nil-on-rollback behind an as-T cast"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8158
+claim: "2026-09-26T19:02:03Z"
+assignee: "create-or-find-by-return-type-admits-rollback-nil"
 blocked-by: null
 closed-reason: null
 ---

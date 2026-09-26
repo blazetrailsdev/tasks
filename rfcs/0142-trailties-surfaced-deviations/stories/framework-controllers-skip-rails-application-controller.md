@@ -1,6 +1,6 @@
 ---
 title: "Framework controllers skip Rails::ApplicationController, and InfoController's path is info not rails/info"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

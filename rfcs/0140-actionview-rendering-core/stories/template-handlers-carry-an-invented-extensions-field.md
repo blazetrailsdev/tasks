@@ -1,6 +1,6 @@
 ---
 title: "Template handlers carry an invented extensions field"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 10
-pr: null
-claim: null
-assignee: null
+pr: trails#8158
+claim: "2026-09-26T19:02:03Z"
+assignee: "create-or-find-by-return-type-admits-rollback-nil"
 blocked-by: null
 closed-reason: null
 ---
