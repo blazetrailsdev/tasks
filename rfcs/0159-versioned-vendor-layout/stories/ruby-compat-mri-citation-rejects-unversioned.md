@@ -1,13 +1,18 @@
 ---
-title: "ruby-compat-mri-citation-rejects-unversioned"
+title: "ruby-compat MRI citation lint rejects unversioned citations"
 status: draft
 updated: 2026-09-25
 rfc: "0159-versioned-vendor-layout"
-cluster: null
-packages: []
-deps: []
+cluster: vendor
+packages:
+  - ruby-compat
+deps:
+  - recite-ruby-compat-citations-a-f-against-mri-v3-3-11
+  - recite-ruby-compat-citations-g-m-against-mri-v3-3-11
+  - recite-ruby-compat-citations-n-z-against-mri-v3-3-11
+  - version-the-mri-citation-lint-and-its-resolver
 deps-rfc: []
-est-loc: null
+est-loc: 30
 priority: null
 pr: null
 claim: null
@@ -37,8 +42,6 @@ and every individual sweep slice.
 - After all three ruby-compat recite slices have merged, an unversioned
   `vendor/ruby/<file>:<line>` citation is an error in
   `ruby-compat-needs-mri-citation`, whose message names `pnpm vendor:recite`.
-- The rule's header comment about the transitional unversioned arm, and its
-  reference to this story, are removed.
 - `ruby-compat-needs-mri-citation.test.mjs`'s "Unversioned still resolves" valid
   case moves to `invalid` with the new messageId; the no-vendor-tree tester still
   reports nothing.
