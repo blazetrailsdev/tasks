@@ -27,8 +27,8 @@ Rails log shows, plus `log_rendering_start` and the
 `ActionView::Base.logger` seam.
 
 It is in this slice rather than deferred because it is the consumer that proves
-the instrumentation is actually emitted — `actionview-instrumentation` (RFC
-0104, ready) is the producer half, and a producer with no subscriber is
+the instrumentation is actually emitted — `actionview-instrumentation` (this
+RFC, done in trails#7649) is the producer half, and a producer with no subscriber is
 untested surface.
 
 Depends on the instrumentation story landing first; claim it after.

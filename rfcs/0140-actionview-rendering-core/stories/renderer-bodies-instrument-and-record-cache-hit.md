@@ -39,7 +39,7 @@ either notification, so no `cache_hit` is ever recorded and
 `ViewContext#viewRenderer.cacheHits` — declared in
 `abstract-renderer.ts` precisely for this — has no writer.
 
-`actionview-instrumentation` (RFC 0104) covers the same gap in `template.ts`
+`actionview-instrumentation` (this RFC, done in trails#7649) covered the same gap in `template.ts`
 (`instrument_render_template` / `instrument`) and is scoped to that file; this
 is the renderer half. Surfaced in PR #7373.
 

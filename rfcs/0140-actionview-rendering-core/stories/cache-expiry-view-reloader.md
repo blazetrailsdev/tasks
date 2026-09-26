@@ -51,7 +51,7 @@ finds nothing — and `ViewReloader` itself.
 
 This story is the dev arm only. `Resolver.caching`, `Base.cacheTemplateLoading`
 and the `action_view.caching` initializer are
-`port-resolver-caching-and-cache-template-loading` (RFC 0104, ready), which this
+`port-resolver-caching-and-cache-template-loading` (this RFC, ready), which this
 depends on: without it there is no `enable_caching` to branch on.
 
 ## Converged shape

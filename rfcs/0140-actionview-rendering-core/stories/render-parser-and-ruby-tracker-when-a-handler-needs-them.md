@@ -37,7 +37,7 @@ gems whose handlers compile to Ruby. trails' default path is `TSETracker`
 
 So the gate on this story is: **a trails handler exists that compiles to code
 the regex tracker cannot scan.** The likely first candidate is
-`port-html-builder-and-ruby-template-handlers` (RFC 0104, ready) — if the
+`port-html-builder-and-ruby-template-handlers` (this RFC, in progress in trails#8135) — if the
 builder handler ships and needs digest tracking, this becomes real. Until then
 it is an unread code path with a parser dependency attached, which is exactly
 what `port-resolver-caching-and-cache-template-loading` was deliberately
