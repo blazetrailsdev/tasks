@@ -1,6 +1,6 @@
 ---
 title: "Hash URL-option constraints never seed the route's defaults"
-status: claimed
+status: in-progress
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8135
 claim: "2026-09-26T03:47:03Z"
 assignee: "mapper-url-option-constraints-seed-defaults"
 blocked-by: null

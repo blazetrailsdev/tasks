@@ -1,6 +1,6 @@
 ---
 title: "Renderer#renderBody has an invented :stream guard and non-streaming fallback"
-status: claimed
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8135
 claim: "2026-09-26T03:47:03Z"
 assignee: "mapper-url-option-constraints-seed-defaults"
 blocked-by: null
