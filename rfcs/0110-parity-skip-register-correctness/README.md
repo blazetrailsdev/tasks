@@ -1,9 +1,9 @@
 ---
 rfc: "0110-parity-skip-register-correctness"
 title: "Skip registers suppress ported surface instead of crediting it"
-status: draft
+status: closed
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-09-26
 owner: "@deanmarano"
 packages:
   - "activerecord"
