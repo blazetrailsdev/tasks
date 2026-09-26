@@ -41,6 +41,9 @@ dist, PR trails#8106) reports errors in code trails itself emits
 ## Acceptance criteria
 
 - `tsc --strict` over a freshly generated authentication app reports no errors
-  outside `app/mailers` (covered by `passwords-mailer-resolves-against-a-ported-actionmailer`).
+  other than those caused by the unported mailer (covered by
+  `passwords-mailer-resolves-against-a-ported-actionmailer`) — including the one
+  that surfaces at the `PasswordsMailer.reset(user).deliverLater()` call site in
+  `app/controllers/passwords_controller`, since the mailer's `reset` is `unknown`.
 - Each fix lands on the framework type that is wrong, not as a cast in the template.
 - A test type-checks the generated output, not just `parseTs` syntax.
