@@ -1,6 +1,6 @@
 ---
 title: "Injected#name is cast to string though a nested dependency reaches it at runtime"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null

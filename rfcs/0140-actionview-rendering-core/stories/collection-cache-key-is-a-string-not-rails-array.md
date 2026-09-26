@@ -1,6 +1,6 @@
 ---
 title: "CollectionCaching's cache key is a String where Rails uses combined_fragment_cache_key's Array"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
