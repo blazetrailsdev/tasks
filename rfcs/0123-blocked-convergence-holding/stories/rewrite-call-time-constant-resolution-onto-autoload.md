@@ -2,7 +2,7 @@
 title: "Rewrite CLAUDE.md § Call-time constant resolution for the ActiveSupport::Autoload shape"
 status: blocked
 updated: 2026-09-25
-rfc: "0151-activesupport-autoload-slot-registry"
+rfc: "0123-blocked-convergence-holding"
 cluster: autoload
 packages: []
 deps:
