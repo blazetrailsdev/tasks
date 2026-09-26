@@ -5,7 +5,7 @@ updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
-deps: []
+deps: ["template-renderer-passes-layout-for-blocks"]
 deps-rfc: []
 est-loc: null
 priority: null

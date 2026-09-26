@@ -5,7 +5,7 @@ updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
-deps: []
+deps: ["lookup-context-locale-detail-follows-i18n"]
 deps-rfc: []
 est-loc: 40
 priority: null
