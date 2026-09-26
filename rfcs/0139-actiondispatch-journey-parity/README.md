@@ -1,9 +1,9 @@
 ---
 rfc: "0139-actiondispatch-journey-parity"
 title: "ActionDispatch Journey to 100% on every parity axis"
-status: draft
+status: active
 created: 2026-09-07
-updated: 2026-09-09
+updated: 2026-09-26
 owner: "@deanmarano"
 packages:
   - "actionpack"
