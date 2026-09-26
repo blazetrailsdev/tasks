@@ -1,6 +1,6 @@
 ---
 title: "The virtualized .tse TypeScript emits a bare yield, so a layout's file does not parse"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8142
+claim: "2026-09-26T10:32:03Z"
+assignee: "virtualized-tse-emits-a-bare-yield-that-does-not-type-check"
 blocked-by: null
 closed-reason: null
 ---

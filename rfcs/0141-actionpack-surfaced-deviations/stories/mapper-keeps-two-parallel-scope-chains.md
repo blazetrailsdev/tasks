@@ -1,6 +1,6 @@
 ---
 title: "Mapper keeps scopeStack beside _scope where Rails has one @scope chain"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8142
+claim: "2026-09-26T10:32:03Z"
+assignee: "virtualized-tse-emits-a-bare-yield-that-does-not-type-check"
 blocked-by: null
 closed-reason: null
 ---

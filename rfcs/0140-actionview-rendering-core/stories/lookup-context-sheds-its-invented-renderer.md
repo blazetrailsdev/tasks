@@ -1,6 +1,6 @@
 ---
 title: "LookupContext sheds its invented render/find* surface onto the renderers"
-status: claimed
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: null
-claim: "2026-09-26T02:47:02Z"
-assignee: "port-endpoint-engine-check-via-slot"
+pr: trails#8140
+claim: "2026-09-26T10:02:04Z"
+assignee: "collection-cache-key-is-a-string-not-rails-array"
 blocked-by: null
 closed-reason: null
 ---

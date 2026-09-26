@@ -1,6 +1,6 @@
 ---
 title: "Headers#env_name invents four arms where Rails has one HTTP_HEADER regex guard"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8141
+claim: "2026-09-26T10:17:09Z"
+assignee: "missing-template-details-values-symbol-spelling"
 blocked-by: null
 closed-reason: null
 ---

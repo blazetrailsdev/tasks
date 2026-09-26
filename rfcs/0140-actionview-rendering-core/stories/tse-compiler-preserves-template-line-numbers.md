@@ -1,6 +1,6 @@
 ---
 title: "Tse compiler emits line-number-aligned source so template errors report template lines"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8141
+claim: "2026-09-26T10:17:09Z"
+assignee: "missing-template-details-values-symbol-spelling"
 blocked-by: null
 closed-reason: null
 ---
