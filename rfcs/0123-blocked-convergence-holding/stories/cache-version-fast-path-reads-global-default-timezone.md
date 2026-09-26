@@ -2,7 +2,7 @@
 title: "can_use_fast_cache_version? reads the global default_timezone, not the connection's"
 status: blocked
 updated: 2026-09-23
-rfc: "0130-activerecord-extra-surface-receipt-burndown"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
