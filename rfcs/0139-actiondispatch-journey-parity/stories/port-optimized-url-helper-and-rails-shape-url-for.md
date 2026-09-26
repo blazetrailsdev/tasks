@@ -1,6 +1,6 @@
 ---
 title: "port-optimized-url-helper-and-rails-shape-url-for"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8163
+claim: "2026-09-26T21:22:04Z"
+assignee: "port-optimized-url-helper-and-rails-shape-url-for"
 blocked-by: null
 closed-reason: null
 ---

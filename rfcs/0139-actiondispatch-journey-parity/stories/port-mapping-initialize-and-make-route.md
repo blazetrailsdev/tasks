@@ -1,6 +1,6 @@
 ---
 title: "port-mapping-initialize-and-make-route"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["mapper-mapping-is-instantiated-per-route"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8162
+claim: "2026-09-26T21:02:02Z"
+assignee: "port-mapping-initialize-and-make-route"
 blocked-by: null
 closed-reason: null
 ---

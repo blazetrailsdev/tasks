@@ -1,6 +1,6 @@
 ---
 title: "resources/resource routes drop the scope's constraints blocks"
-status: ready
+status: done
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8134
+claim: "2026-09-26T21:42:02Z"
+assignee: "resources-routes-carry-scope-constraint-blocks"
 blocked-by: null
 closed-reason: null
 ---
