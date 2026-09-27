@@ -6,7 +6,11 @@ rfc: "0142-trailties-surfaced-deviations"
 cluster: generators
 packages:
   - trailties
-deps: [app-generator-writes-an-eslint-config-instead-of-rubocop-yml, app-base-declares-a-skip-eslint-class-option]
+deps:
+  [
+    app-generator-writes-an-eslint-config-instead-of-rubocop-yml,
+    app-base-declares-a-skip-eslint-class-option,
+  ]
 deps-rfc: []
 est-loc: 140
 priority: 3

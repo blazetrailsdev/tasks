@@ -58,7 +58,7 @@ yet), or a self-contained flat config.
 - The generated app gets an ESLint config at the conventional flat-config path and
   a `bin/eslint` binstub in the shape `createBinFiles` already uses for
   `bin/trails` — no new template mechanism.
-- The decision on config *content* is recorded in the PR body: extend a published
+- The decision on config _content_ is recorded in the PR body: extend a published
   trails config, or emit a self-contained one. If it needs a package that does not
   exist, that package is a separate story, not an empty stub here (CLAUDE.md
   forbids placeholder files).

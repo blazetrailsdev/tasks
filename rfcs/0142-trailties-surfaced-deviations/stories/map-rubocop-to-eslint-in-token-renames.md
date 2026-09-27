@@ -40,14 +40,14 @@ hand-picked TS name that the table does not produce is a bug, not a preference.
 Adding `rubocop: "eslint"` makes the whole surface credit at the name a trails dev
 would write:
 
-| Ruby | TS |
-| --- | --- |
-| `apply_rubocop_autocorrect_after_generate!` | `applyEslintAutocorrectAfterGenerateBang` |
-| `skip_rubocop?` | the `Skip` union's `Eslint` arm (`generators/app-base.ts:5-18`) |
-| `create_rubocop_file` | `createEslintFile` |
-| `rubocop` (the `build(:rubocop)` action) | `eslint` |
-| `templates/rubocop.yml.tt` | the generated ESLint config |
-| `bin/rubocop.tt` | `bin/eslint` |
+| Ruby                                        | TS                                                              |
+| ------------------------------------------- | --------------------------------------------------------------- |
+| `apply_rubocop_autocorrect_after_generate!` | `applyEslintAutocorrectAfterGenerateBang`                       |
+| `skip_rubocop?`                             | the `Skip` union's `Eslint` arm (`generators/app-base.ts:5-18`) |
+| `create_rubocop_file`                       | `createEslintFile`                                              |
+| `rubocop` (the `build(:rubocop)` action)    | `eslint`                                                        |
+| `templates/rubocop.yml.tt`                  | the generated ESLint config                                     |
+| `bin/rubocop.tt`                            | `bin/eslint`                                                    |
 
 This story is the mapping only. The behaviour ports are
 `port-apply-rubocop-autocorrect-after-generate`,
