@@ -1,6 +1,6 @@
 ---
 title: "RouteSet#generate_url_helpers returns an invented UrlHelpersModule instead of Rails' proxy-backed module"
-status: in-progress
+status: done
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

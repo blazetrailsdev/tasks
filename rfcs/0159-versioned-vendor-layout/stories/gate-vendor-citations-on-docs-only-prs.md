@@ -1,6 +1,6 @@
 ---
 title: "Gate vendor citations on docs-only PRs"
-status: draft
+status: in-progress
 updated: 2026-09-27
 rfc: "0159-versioned-vendor-layout"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8188
+claim: "2026-09-27T16:36:09Z"
+assignee: "gate-vendor-citations-on-docs-only-prs"
 blocked-by: null
 closed-reason: null
 ---

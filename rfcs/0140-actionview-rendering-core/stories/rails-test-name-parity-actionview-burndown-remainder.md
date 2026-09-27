@@ -1,6 +1,6 @@
 ---
 title: "rails-test-name-parity-actionview-burndown-remainder"
-status: ready
+status: claimed
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-27T16:38:11Z"
+assignee: "port-the-rest-of-asset-tag-helper-and-asset-url-helper"
 blocked-by: null
 closed-reason: null
 ---
