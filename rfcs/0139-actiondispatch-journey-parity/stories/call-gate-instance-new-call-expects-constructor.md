@@ -1,14 +1,14 @@
 ---
 title: "call gate reads an instance recv.new(...) call as a constructor"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

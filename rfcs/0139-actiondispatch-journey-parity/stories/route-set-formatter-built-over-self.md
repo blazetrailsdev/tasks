@@ -1,14 +1,14 @@
 ---
 title: "RouteSet#formatter is Journey::Formatter.new(self); drop the bridge adapter, per-add_route cache clear and Route#pathFor raise site"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []
 deps: ["routing-route-class-has-no-rails-counterpart"]
 deps-rfc: []
 est-loc: 140
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

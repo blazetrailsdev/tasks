@@ -1,9 +1,9 @@
 ---
 rfc: "0153-naming-residue-ratchet-and-burndown"
 title: "Ratchet the call-argument naming residue, then burn it down to the gate flip"
-status: active
+status: closed
 created: 2026-09-16
-updated: 2026-09-24
+updated: 2026-09-27
 owner: "@deanmarano"
 packages:
   - activerecord

@@ -1,14 +1,14 @@
 ---
 title: "url-for-optimize-routes-generation-never-reaches-route-set-predicate"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

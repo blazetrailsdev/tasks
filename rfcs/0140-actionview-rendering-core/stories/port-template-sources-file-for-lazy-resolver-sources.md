@@ -1,7 +1,7 @@
 ---
 title: "port-template-sources-file-for-lazy-resolver-sources"
-status: ready
-updated: 2026-09-26
+status: done
+updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8172
+claim: "2026-09-27T01:22:02Z"
+assignee: "port-template-sources-file-for-lazy-resolver-sources"
 blocked-by: null
 closed-reason: null
 ---

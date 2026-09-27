@@ -1,7 +1,7 @@
 ---
 title: "ActionController::MiddlewareStack#build carries an invented non-string arm and drops action.to_s"
-status: in-progress
-updated: 2026-09-26
+status: done
+updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Mapper#addRoute's body is a trails invention; converge onto add_route with path_for_action / name_for_action"
-status: in-progress
-updated: 2026-09-26
+status: done
+updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []

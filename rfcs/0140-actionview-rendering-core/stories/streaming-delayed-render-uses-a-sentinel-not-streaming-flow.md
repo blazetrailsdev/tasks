@@ -1,7 +1,7 @@
 ---
 title: "StreamingTemplateRenderer#delayed_render splits on a sentinel instead of driving StreamingFlow"
-status: blocked
-updated: 2026-09-26
+status: ready
+updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: "2026-09-26T18:22:02Z"
-assignee: "named-route-helpers-camelcase-multiword-names"
-blocked-by: "Still live on origin/main: compiled TSE templates are synchronous (Base#_run -> compiled.call returns a string) and ruby-compat Fiber has no Fiber.yield; no StreamingFlow in packages/actionview/src. Async compilation is now tracked as compiled-templates-cannot-suspend-for-streaming-flow (encoded as a dep); unblock when it lands."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

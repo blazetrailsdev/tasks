@@ -1,7 +1,7 @@
 ---
 title: "Recite ruby-compat citations against MRI v3.3.11 (g-m)"
-status: ready
-updated: 2026-09-25
+status: in-progress
+updated: 2026-09-27
 rfc: "0159-versioned-vendor-layout"
 cluster: vendor
 packages:
@@ -10,9 +10,9 @@ deps: [vendor-recite-rewrites-citations-to-the-active-version]
 deps-rfc: []
 est-loc: 480
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#8173
+claim: "2026-09-27T01:51:26Z"
+assignee: "recite-ruby-compat-citations-g-m-against-mri-v3-3-11"
 blocked-by: null
 closed-reason: null
 ---
