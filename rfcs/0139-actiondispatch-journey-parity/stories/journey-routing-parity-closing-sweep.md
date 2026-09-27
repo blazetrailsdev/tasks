@@ -1,6 +1,6 @@
 ---
 title: "RFC 0139 closing sweep: re-measure every axis, converge Mapping#intern and the invented route-set/index/url-for residue"
-status: claimed
+status: done
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -25,7 +25,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 20
-pr: null
+pr: trails#8192
 claim: "2026-09-27T20:57:25Z"
 assignee: "journey-routing-parity-closing-sweep"
 blocked-by: null

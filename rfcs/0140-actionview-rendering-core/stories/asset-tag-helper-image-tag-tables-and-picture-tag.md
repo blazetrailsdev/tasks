@@ -1,6 +1,6 @@
 ---
 title: "Enroll image_tag's Rails tables and port AssetTagHelper#picture_tag"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "content_tag/tag take a bound view; simple_format, javascript_tag and debug send them to self"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null

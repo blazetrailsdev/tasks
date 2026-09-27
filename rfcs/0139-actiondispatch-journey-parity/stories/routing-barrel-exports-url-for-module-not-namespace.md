@@ -1,6 +1,6 @@
 ---
 title: "routing-barrel-exports-url-for-module-not-namespace"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining mail_to / sms_to / phone_to / current_page? UrlHelperTest cases"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port Template#encode! so Sources::File can read with binread"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "port-form-builder-submit-and-submit-tag"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null

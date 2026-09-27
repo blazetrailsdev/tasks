@@ -1,6 +1,6 @@
 ---
 title: "Async TSE render awaits only whole top-level expressions, so a nested yield read does not suspend the layout"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null

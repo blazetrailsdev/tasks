@@ -1,6 +1,6 @@
 ---
 title: "streaming_render_test.rb (FiberedTest) has no trails port"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port AssetTagHelper#preload_link_tag and resolve_link_as"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null

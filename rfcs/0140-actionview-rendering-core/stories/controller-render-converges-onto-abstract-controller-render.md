@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Base#render handles json/plain/html/body in sync arms instead of AbstractController::Rendering#render"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null

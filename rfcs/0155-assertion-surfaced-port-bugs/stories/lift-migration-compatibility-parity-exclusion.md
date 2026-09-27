@@ -1,7 +1,7 @@
 ---
 title: "Lift the stale won't-do exclusion of migration/compatibility.rb and compatibility_test.rb"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-27
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

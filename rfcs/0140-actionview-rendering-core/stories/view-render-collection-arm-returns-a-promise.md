@@ -1,6 +1,6 @@
 ---
 title: "<%= render collection: %> in a template gets a Promise from the async CollectionRenderer"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null

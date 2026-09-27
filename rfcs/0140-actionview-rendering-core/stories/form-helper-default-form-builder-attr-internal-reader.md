@@ -1,6 +1,6 @@
 ---
 title: "FormHelper default_form_builder attr_internal reader"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
