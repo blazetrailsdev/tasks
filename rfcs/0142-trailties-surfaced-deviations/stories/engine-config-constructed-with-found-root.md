@@ -5,7 +5,7 @@ updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps: ["engine-called-from-never-seated"]
 deps-rfc: []
 est-loc: null
 priority: 4

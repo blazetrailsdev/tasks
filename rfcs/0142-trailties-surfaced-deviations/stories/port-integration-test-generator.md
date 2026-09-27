@@ -5,7 +5,7 @@ updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
-deps: []
+deps: ["port-generators-hook-for-and-app-generators-options"]
 deps-rfc: []
 est-loc: 150
 priority: 6
