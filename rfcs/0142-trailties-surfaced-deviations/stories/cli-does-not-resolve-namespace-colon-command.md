@@ -1,6 +1,6 @@
 ---
 title: "trails CLI does not resolve namespace:command (dev:cache, db:migrate) as Rails::Command.invoke does"
-status: ready
+status: claimed
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-27T22:39:57Z"
+assignee: "map-rubocop-to-eslint-in-token-renames"
 blocked-by: null
 closed-reason: null
 ---

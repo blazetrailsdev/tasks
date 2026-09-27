@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::Command::Base's Thor class surface onto command/base.ts"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "route-set-recognize-routing-test-rewrite-and-delete"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "ActionView trailtie: port railtie.rb:74-80 config.action_view send loop"
-status: ready
+status: claimed
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-27T22:39:57Z"
+assignee: "map-rubocop-to-eslint-in-token-renames"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "routing-barrel-exports-url-for-module-not-namespace"
-status: ready
+status: in-progress
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8196
+claim: "2026-09-27T22:42:23Z"
+assignee: "route-set-recognize-converges-onto-rails-seats"
 blocked-by: null
 closed-reason: null
 ---

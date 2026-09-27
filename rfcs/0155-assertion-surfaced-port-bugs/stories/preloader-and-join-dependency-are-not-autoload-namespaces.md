@@ -1,6 +1,6 @@
 ---
 title: "preloader-and-join-dependency-are-not-autoload-namespaces"
-status: in-progress
+status: done
 updated: 2026-09-27
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

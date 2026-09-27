@@ -1,7 +1,7 @@
 ---
 title: "Routes accept an unregistered controller name and 404 at dispatch instead of failing at boot"
-status: draft
-updated: 2026-09-06
+status: ready
+updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
 packages: []
