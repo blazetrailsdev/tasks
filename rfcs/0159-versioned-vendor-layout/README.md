@@ -1,9 +1,9 @@
 ---
 rfc: "0159-versioned-vendor-layout"
 title: "Nest vendored upstream sources under a version directory"
-status: active
+status: closed
 created: 2026-09-25
-updated: 2026-09-25
+updated: 2026-09-27
 owner: "@deanmarano"
 packages:
   - activerecord

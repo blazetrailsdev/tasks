@@ -1,6 +1,6 @@
 ---
 title: "StreamingTemplateRenderer#delayed_render splits on a sentinel instead of driving StreamingFlow"
-status: in-progress
+status: done
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
