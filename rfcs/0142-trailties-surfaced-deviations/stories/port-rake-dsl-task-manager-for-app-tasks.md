@@ -1,7 +1,7 @@
 ---
 title: "port-rake-dsl-task-manager-for-app-tasks"
 status: ready
-updated: 2026-09-26
+updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

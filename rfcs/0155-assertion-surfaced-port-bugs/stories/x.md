@@ -1,7 +1,7 @@
 ---
 title: "x"
 status: closed
-updated: 2026-09-25
+updated: 2026-09-26
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -13,5 +13,5 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "Empty stub created by a mistyped tasks new; no work."
+closed-reason: "Created by mistake (stray 'tasks new' invocation with no body); not a real story."
 ---

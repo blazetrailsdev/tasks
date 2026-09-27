@@ -1,6 +1,6 @@
 ---
 title: "Mapper::Scope lives in trails-only routing/scope.ts; move it into mapper.ts and port Scope#each"
-status: ready
+status: done
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["routing-route-class-has-no-rails-counterpart"]
 deps-rfc: []
 est-loc: 200
 priority: 8
-pr: null
-claim: null
-assignee: null
+pr: trails#8179
+claim: "2026-09-27T13:00:31Z"
+assignee: "route-set-formatter-built-over-self"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "port-remaining-action-controller-set-configs-lines"
 status: ready
-updated: 2026-09-25
+updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

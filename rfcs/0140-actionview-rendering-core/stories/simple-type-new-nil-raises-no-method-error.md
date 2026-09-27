@@ -1,6 +1,6 @@
 ---
 title: "simple-type-new-nil-raises-no-method-error"
-status: in-progress
+status: done
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null

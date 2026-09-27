@@ -1,7 +1,7 @@
 ---
 title: "engine-config-constructed-with-found-root"
-status: ready
-updated: 2026-09-25
+status: blocked
+updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: 4
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-27T13:02:53Z"
+assignee: "cold-model-construction-raises-through-alias-attribute-and-default-scope"
+blocked-by: "No non-test Engine/Application in trails sets calledFrom: Rails fills it in Engine.inherited from caller_locations (railties/lib/rails/engine.rb:361-370), which has no JS hook. Constructing config with findRoot(calledFrom) (engine.rb:553) would make find_root_with_flag raise 'Could not find root path' on every Engine config read. Needs a calledFrom source (e.g. import.meta.url passed at registration) first."
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "migration-generator-remove-reference-drops-foreign-key"
-status: ready
-updated: 2026-09-26
+status: done
+updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#8147
+claim: "2026-09-27T13:02:53Z"
+assignee: "cold-model-construction-raises-through-alias-attribute-and-default-scope"
 blocked-by: null
 closed-reason: null
 ---
