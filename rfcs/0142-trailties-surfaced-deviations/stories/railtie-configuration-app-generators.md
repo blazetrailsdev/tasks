@@ -68,3 +68,6 @@ port.
 - [ ] No stub returning `undefined` remains on `Railtie::Configuration`.
 - [ ] `apply_rubocop_autocorrect_after_generate!` is either ported or its
       omission is recorded with a receipt naming the `process.*` hard rule.
+      (Deferred to `port-apply-rubocop-autocorrect-after-generate`, where the
+      open "what does it spawn" question is now resolved: ESLint, via the
+      `rubocop` → `eslint` token rename — `map-rubocop-to-eslint-in-token-renames`.)
