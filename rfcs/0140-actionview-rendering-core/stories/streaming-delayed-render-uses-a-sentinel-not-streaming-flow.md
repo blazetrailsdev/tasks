@@ -1,6 +1,6 @@
 ---
 title: "StreamingTemplateRenderer#delayed_render splits on a sentinel instead of driving StreamingFlow"
-status: claimed
+status: in-progress
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8191
 claim: "2026-09-27T16:38:11Z"
 assignee: "port-the-rest-of-asset-tag-helper-and-asset-url-helper"
 blocked-by: null
