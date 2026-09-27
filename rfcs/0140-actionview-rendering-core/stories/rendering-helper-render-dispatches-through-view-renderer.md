@@ -1,7 +1,7 @@
 ---
 title: "RenderingHelper#render dispatches through view_renderer, not renderPartialSync + currentFormat"
-status: ready
-updated: 2026-09-26
+status: in-progress
+updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8168
+claim: "2026-09-27T00:02:01Z"
+assignee: "execution-wrapper-run-drops-async-to-run-callbacks"
 blocked-by: null
 closed-reason: null
 ---

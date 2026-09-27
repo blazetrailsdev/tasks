@@ -1,7 +1,7 @@
 ---
 title: "in-rendering-context-yields-view-renderer"
-status: ready
-updated: 2026-09-26
+status: blocked
+updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
-blocked-by: null
+pr: trails#8169
+claim: "2026-09-27T00:22:02Z"
+assignee: "in-rendering-context-yields-view-renderer"
+blocked-by: "AC2 (Base#render through the yielded Renderer) needs an async Base#render: Renderer#render/renderPartial are async (CollectionRenderer preload, collection cache) while compiled templates call render synchronously — blocked on compiled-templates-cannot-suspend-for-streaming-flow. AC1 (yield @view_renderer) shipped in trails#8169."
 closed-reason: null
 ---
 

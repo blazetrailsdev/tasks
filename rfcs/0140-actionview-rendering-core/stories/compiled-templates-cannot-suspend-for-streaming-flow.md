@@ -1,7 +1,7 @@
 ---
 title: "Compiled templates render synchronously, so StreamingFlow cannot suspend the layout at yield"
-status: claimed
-updated: 2026-09-26
+status: in-progress
+updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#8167
 claim: "2026-09-26T23:42:00Z"
 assignee: "compiled-templates-cannot-suspend-for-streaming-flow"
 blocked-by: null

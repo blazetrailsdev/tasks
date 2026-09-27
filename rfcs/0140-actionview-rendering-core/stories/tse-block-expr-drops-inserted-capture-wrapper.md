@@ -1,6 +1,6 @@
 ---
 title: "tse-block-expr-drops-inserted-capture-wrapper"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null

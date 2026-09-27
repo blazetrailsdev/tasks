@@ -1,7 +1,7 @@
 ---
 title: "Port the remaining layout_test.rb cases (LayoutAutoDiscoveryTest, status, symlink)"
-status: ready
-updated: 2026-09-26
+status: in-progress
+updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8170
+claim: "2026-09-27T00:42:01Z"
+assignee: "port-action-view-render-to-body-into-the-controller"
 blocked-by: null
 closed-reason: null
 ---
