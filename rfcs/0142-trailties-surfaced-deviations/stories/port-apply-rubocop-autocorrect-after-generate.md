@@ -1,11 +1,11 @@
 ---
 title: "port-apply-rubocop-autocorrect-after-generate"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps: ["railtie-configuration-app-generators"]
 deps-rfc: []
 est-loc: null
 priority: null

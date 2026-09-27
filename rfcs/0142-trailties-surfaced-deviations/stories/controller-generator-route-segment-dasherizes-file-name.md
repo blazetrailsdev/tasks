@@ -1,6 +1,6 @@
 ---
 title: "ControllerGenerator routes use a dasherized segment where Rails uses file_name"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

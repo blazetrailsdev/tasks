@@ -1,6 +1,6 @@
 ---
 title: "encryption-configuration-reads-credentials-and-configures-unconditionally"
-status: ready
+status: in-progress
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#8183
+claim: "2026-09-27T14:08:06Z"
+assignee: "encryption-configuration-reads-credentials-and-configures-unconditionally"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "RouteSet#add_route drops the dynamic-segment deprecations; default_env hand-parses instead of Http::URL.full_url_for"
-status: ready
+status: in-progress
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["routing-route-class-has-no-rails-counterpart"]
 deps-rfc: []
 est-loc: 110
 priority: 11
-pr: null
-claim: null
-assignee: null
+pr: trails#8184
+claim: "2026-09-27T14:07:20Z"
+assignee: "route-set-url-helper-nesting-config-struct-and-missing-members"
 blocked-by: null
 closed-reason: null
 ---

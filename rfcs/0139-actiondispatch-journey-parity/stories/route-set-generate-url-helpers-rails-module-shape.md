@@ -1,6 +1,6 @@
 ---
 title: "RouteSet#generate_url_helpers returns an invented UrlHelpersModule instead of Rails' proxy-backed module"
-status: ready
+status: in-progress
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["routing-route-class-has-no-rails-counterpart"]
 deps-rfc: []
 est-loc: 250
 priority: 12
-pr: null
-claim: null
-assignee: null
+pr: trails#8185
+claim: "2026-09-27T14:10:11Z"
+assignee: "route-set-generate-url-helpers-rails-module-shape"
 blocked-by: null
 closed-reason: null
 ---

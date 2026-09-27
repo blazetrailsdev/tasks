@@ -1,11 +1,15 @@
 ---
 title: "port-generators-hook-for-and-app-generators-options"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  [
+    "railtie-configuration-app-generators",
+    "port-generators-options-and-aliases-for-class-option-defaults",
+  ]
 deps-rfc: []
 est-loc: null
 priority: null

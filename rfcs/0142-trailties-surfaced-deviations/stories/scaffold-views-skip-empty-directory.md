@@ -1,7 +1,7 @@
 ---
 title: "Scaffold writes views without empty_directory, so revoke leaves app/views/<plural>/ behind"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Rails::BacktraceCleaner reads Rails.root lazily in its filter instead of an invented setRoot (backtrace_cleaner.rb:14-16)"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

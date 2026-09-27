@@ -1,14 +1,14 @@
 ---
 title: "Run vendor/fetch.test.ts's coexistence tests in CI"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-09-27
 rfc: "0159-versioned-vendor-layout"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

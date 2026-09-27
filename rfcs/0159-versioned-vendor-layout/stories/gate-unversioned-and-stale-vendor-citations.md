@@ -1,7 +1,7 @@
 ---
 title: "Gate unversioned and stale vendor citations"
-status: ready
-updated: 2026-09-25
+status: in-progress
+updated: 2026-09-27
 rfc: "0159-versioned-vendor-layout"
 cluster: vendor
 packages:
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: 140
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#8181
+claim: "2026-09-27T14:09:01Z"
+assignee: "gate-unversioned-and-stale-vendor-citations"
 blocked-by: null
 closed-reason: null
 ---

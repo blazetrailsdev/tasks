@@ -1,7 +1,7 @@
 ---
 title: "Route drift.ts and schema-compare test vendor paths through vendor/sources.ts"
-status: draft
-updated: 2026-09-25
+status: closed
+updated: 2026-09-27
 rfc: "0159-versioned-vendor-layout"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Premise gone, delivered by trails#8105 (aa0d1b49f6). On origin/main, scripts/api-compare/drift.ts:143 is ''const baseSource = vendoredRoot(RAILS!.name)'', and scripts/schema-compare/compare.test.ts:541 now reads the versioned ''vendor/rails/v8.0.2/activerecord/test/schema/schema.rb'', so neither breaks at the depth change. That literal is a tracked citation-shaped path that pnpm vendor:recite rewrites at every bump (compare.test.ts is not in EXCLUDED), the same as ar-closure.test.ts and the other versioned literals in scripts/. git grep ''vendor/rails"'' -- scripts eslint returns nothing, which meets the RFC''s Verification bullet.'
 ---
 
 ## Context

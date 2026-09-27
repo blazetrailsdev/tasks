@@ -1,7 +1,7 @@
 ---
 title: "Replace _enumsPendingTypeCheck/assertEnumTypeDeclared with Rails' decorate-block subtype gate"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#6793 (3476294766): origin/main packages/activerecord/src/enum.ts:237-243 raises 'Undeclared attribute type for enum' inside the decorateAttributes block on 'subtype === defaultValue()' (enum.rb:239-248). git grep '_enumsPendingTypeCheck|assertEnumTypeDeclared' over packages/activerecord/src on origin/main (4c5755a0af) returns nothing. Duplicate of closed converge-undeclared-enum-type-raise-to-materialization."
 ---
 
 ## Context

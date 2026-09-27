@@ -1,6 +1,6 @@
 ---
 title: "RouteSet: nest UrlHelper/OptimizedUrlHelper, port NamedRouteCollection#each, merge_defaults and the Config struct"
-status: ready
+status: in-progress
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["routing-route-class-has-no-rails-counterpart"]
 deps-rfc: []
 est-loc: 180
 priority: 10
-pr: null
-claim: null
-assignee: null
+pr: trails#8184
+claim: "2026-09-27T14:07:20Z"
+assignee: "route-set-url-helper-nesting-config-struct-and-missing-members"
 blocked-by: null
 closed-reason: null
 ---
