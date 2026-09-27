@@ -59,6 +59,10 @@ ported. `rbModPrivate` keys visibility on a class prototype, and a ruby-compat
 - `generateUrlHelpers`' `included` block is only
   `redefine_singleton_method(:_routes) { routes }`, and `proxyClass` has no
   `defaultUrlOptions` field.
-- `_url_for_modules` is included for a view context class, and view `urlFor`
-  goes through `RoutingUrlFor`.
-- `_generatePathsByDefault` is private on the url_helpers module.
+- UrlFor's `include(*_url_for_modules) if respond_to?(:_url_for_modules)` arm
+  is ported.
+
+Out of scope: the ancestry order `_url_for_modules` lands in and
+`private :_generate_paths_by_default` are
+`url-for-module-private-initialize-and-url-for-modules-order`. The railtie's
+wrapper `Module` is `url-for-is-a-plain-object-module-not-a-linkable-module`.
