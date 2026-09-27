@@ -5,7 +5,7 @@ updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []
-deps: []
+deps: ["routing-route-class-has-no-rails-counterpart"]
 deps-rfc: []
 est-loc: 140
 priority: null
