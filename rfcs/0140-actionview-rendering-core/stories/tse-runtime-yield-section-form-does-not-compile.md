@@ -1,6 +1,6 @@
 ---
 title: "tse-runtime-yield-section-form-does-not-compile"
-status: claimed
+status: in-progress
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["template-renderer-passes-layout-for-blocks"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8177
 claim: "2026-09-27T02:27:48Z"
 assignee: "port-the-rest-of-asset-tag-helper-and-asset-url-helper"
 blocked-by: null

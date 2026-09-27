@@ -1,6 +1,6 @@
 ---
 title: "Simulator#memos hand-drives a regexp where Rails scans with StringScanner (last Journey call row)"
-status: ready
+status: in-progress
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#8178
+claim: "2026-09-27T03:06:59Z"
+assignee: "journey-verb-matchers-all-unpaired-by-api-compare"
 blocked-by: null
 closed-reason: null
 ---

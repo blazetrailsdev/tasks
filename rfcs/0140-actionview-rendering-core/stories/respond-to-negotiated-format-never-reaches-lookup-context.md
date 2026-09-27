@@ -1,6 +1,6 @@
 ---
 title: "respond-to-negotiated-format-never-reaches-lookup-context"
-status: claimed
+status: ready
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-09-27T02:27:48Z"
-assignee: "port-the-rest-of-asset-tag-helper-and-asset-url-helper"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
