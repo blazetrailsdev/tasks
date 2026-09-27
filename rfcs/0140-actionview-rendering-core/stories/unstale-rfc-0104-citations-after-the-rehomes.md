@@ -1,7 +1,7 @@
 ---
 title: "RFC 0140's prose still cites nine stories as RFC 0104's after rehoming them in"
-status: in-progress
-updated: 2026-09-26
+status: done
+updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
