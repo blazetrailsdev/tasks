@@ -1,6 +1,6 @@
 ---
 title: "ActionController::UrlFor#url_options is unported, so controller *_url helpers ignore the request"
-status: claimed
+status: in-progress
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: trails#8165
 claim: "2026-09-26T22:22:05Z"
 assignee: "action-controller-cookies-returns-the-request-cookie-jar"
 blocked-by: null

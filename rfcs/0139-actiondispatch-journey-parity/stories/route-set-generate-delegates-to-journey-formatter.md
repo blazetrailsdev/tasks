@@ -1,6 +1,6 @@
 ---
 title: "route-set-generate-delegates-to-journey-formatter"
-status: in-progress
+status: done
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

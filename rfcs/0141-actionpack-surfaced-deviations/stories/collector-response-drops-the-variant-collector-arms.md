@@ -1,6 +1,6 @@
 ---
 title: "collector-response-drops-the-variant-collector-arms"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8166
+claim: "2026-09-26T23:02:04Z"
+assignee: "collector-response-drops-the-variant-collector-arms"
 blocked-by: null
 closed-reason: null
 ---

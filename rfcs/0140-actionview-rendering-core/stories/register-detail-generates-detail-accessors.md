@@ -1,6 +1,6 @@
 ---
 title: "register_detail module_evals the <name> / <name>= accessors (lookup_context.rb:25-33)"
-status: draft
+status: claimed
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T23:42:00Z"
+assignee: "compiled-templates-cannot-suspend-for-streaming-flow"
 blocked-by: null
 closed-reason: null
 ---

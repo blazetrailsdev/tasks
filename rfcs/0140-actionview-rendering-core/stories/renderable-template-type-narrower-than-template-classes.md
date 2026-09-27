@@ -1,6 +1,6 @@
 ---
 title: "RenderableTemplate's format/render types are narrower than Template::HTML/Renderable, forcing casts"
-status: draft
+status: claimed
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T23:40:16Z"
+assignee: "routing-route-class-has-no-rails-counterpart"
 blocked-by: null
 closed-reason: null
 ---

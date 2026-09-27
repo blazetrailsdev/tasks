@@ -1,6 +1,6 @@
 ---
 title: "RenderingHelper#render dispatches through view_renderer, not renderPartialSync + currentFormat"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null

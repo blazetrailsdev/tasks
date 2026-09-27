@@ -1,6 +1,6 @@
 ---
 title: "in-rendering-context-yields-view-renderer"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null

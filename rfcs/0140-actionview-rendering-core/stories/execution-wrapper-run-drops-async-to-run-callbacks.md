@@ -1,6 +1,6 @@
 ---
 title: "ExecutionWrapper#run drops async to_run callbacks, so ViewReloader#execute is never awaited"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null

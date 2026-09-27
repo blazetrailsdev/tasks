@@ -1,6 +1,6 @@
 ---
 title: "ActionDispatch::Routing::Route is a trails invention; fold it into Journey::Route, Mapper::Mapping and RouteSet"
-status: ready
+status: claimed
 updated: 2026-09-26
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-26T23:40:16Z"
+assignee: "routing-route-class-has-no-rails-counterpart"
 blocked-by: null
 closed-reason: null
 ---

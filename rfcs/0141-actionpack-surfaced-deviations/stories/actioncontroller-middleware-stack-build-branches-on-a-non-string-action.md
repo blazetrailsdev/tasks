@@ -1,6 +1,6 @@
 ---
 title: "ActionController::MiddlewareStack#build carries an invented non-string arm and drops action.to_s"
-status: claimed
+status: in-progress
 updated: 2026-09-26
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: trails#8165
 claim: "2026-09-26T22:22:05Z"
 assignee: "action-controller-cookies-returns-the-request-cookie-jar"
 blocked-by: null

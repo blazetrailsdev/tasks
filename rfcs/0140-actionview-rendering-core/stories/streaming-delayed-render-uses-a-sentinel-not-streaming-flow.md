@@ -8,11 +8,11 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 10
+priority: null
 pr: null
 claim: "2026-09-26T18:22:02Z"
 assignee: "named-route-helpers-camelcase-multiword-names"
-blocked-by: "Premise falsified: the prescribed async continuation needs the layout body to suspend at yield, but compiled TSE templates are synchronous (Template#render -> Base#_run -> compiled.call returns a string, packages/actionview/src/base.ts:223-260) and ruby-compat Fiber (fiber.ts) has no Fiber.yield. StreamingFlow#get's Fiber.yield (flows.rb:43-58) and append!'s fiber.resume (flows.rb:63-66) have no sync JS analogue; converging needs async template compilation first (no story exists for it yet)."
+blocked-by: "Still live on origin/main: compiled TSE templates are synchronous (Base#_run -> compiled.call returns a string) and ruby-compat Fiber has no Fiber.yield; no StreamingFlow in packages/actionview/src. Async compilation is now tracked as compiled-templates-cannot-suspend-for-streaming-flow (encoded as a dep); unblock when it lands."
 closed-reason: null
 ---
 

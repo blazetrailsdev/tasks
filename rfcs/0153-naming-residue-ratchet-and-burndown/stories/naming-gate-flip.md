@@ -1,6 +1,6 @@
 ---
 title: "Gate the naming class once the burndown has drained it"
-status: ready
+status: in-progress
 updated: 2026-09-26
 rfc: "0153-naming-residue-ratchet-and-burndown"
 cluster: null
@@ -19,9 +19,9 @@ deps:
   ]
 deps-rfc: []
 est-loc: 80
-pr: null
-claim: null
-assignee: null
+pr: trails#8166
+claim: "2026-09-26T23:02:04Z"
+assignee: "collector-response-drops-the-variant-collector-arms"
 blocked-by: null
 closed-reason: null
 priority: 60

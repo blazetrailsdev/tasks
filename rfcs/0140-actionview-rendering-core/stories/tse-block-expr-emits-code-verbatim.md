@@ -1,6 +1,6 @@
 ---
 title: "Tse emitter keeps block-expression code verbatim so translate_location anchors it"
-status: draft
+status: ready
 updated: 2026-09-26
 rfc: "0140-actionview-rendering-core"
 cluster: null
