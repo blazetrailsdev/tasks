@@ -5,7 +5,7 @@ updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: ["actionview"]
-deps: []
+deps: ["asset-url-helper-video-audio-font-path-and-url"]
 deps-rfc: []
 est-loc: 250
 priority: null

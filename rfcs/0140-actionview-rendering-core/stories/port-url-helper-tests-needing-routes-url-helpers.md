@@ -5,7 +5,7 @@ updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
-deps: []
+deps: ["url-for-included-hook-includes-url-for-modules"]
 deps-rfc: []
 est-loc: 500
 priority: null

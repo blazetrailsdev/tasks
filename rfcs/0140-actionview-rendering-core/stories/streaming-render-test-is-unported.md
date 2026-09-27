@@ -5,7 +5,11 @@ updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
-deps: ["streaming-delayed-render-uses-a-sentinel-not-streaming-flow"]
+deps:
+  [
+    "streaming-delayed-render-uses-a-sentinel-not-streaming-flow",
+    "streaming-async-body-awaits-only-whole-expressions",
+  ]
 deps-rfc: []
 est-loc: 300
 priority: null
