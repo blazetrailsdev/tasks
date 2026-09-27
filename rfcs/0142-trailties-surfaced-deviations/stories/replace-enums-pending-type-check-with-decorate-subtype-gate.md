@@ -2,7 +2,7 @@
 title: "Replace _enumsPendingTypeCheck/assertEnumTypeDeclared with Rails' decorate-block subtype gate"
 status: draft
 updated: 2026-08-13
-rfc: "0023-surfaced-deviations"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages:
   - "activerecord"
