@@ -1,6 +1,6 @@
 ---
 title: "call gate reads an instance recv.new(...) call as a constructor"
-status: ready
+status: done
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#8176
+claim: "2026-09-27T02:10:36Z"
+assignee: "mapper-verb-helpers-via-map-method-args"
 blocked-by: null
 closed-reason: null
 ---

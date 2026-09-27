@@ -1,7 +1,7 @@
 ---
 title: "Request's ENV_METHODS readers are unported, so callers inline env reads"
-status: in-progress
-updated: 2026-09-26
+status: done
+updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

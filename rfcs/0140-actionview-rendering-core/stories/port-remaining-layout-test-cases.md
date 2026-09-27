@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining layout_test.rb cases (LayoutAutoDiscoveryTest, status, symlink)"
-status: in-progress
+status: done
 updated: 2026-09-27
 rfc: "0140-actionview-rendering-core"
 cluster: null
