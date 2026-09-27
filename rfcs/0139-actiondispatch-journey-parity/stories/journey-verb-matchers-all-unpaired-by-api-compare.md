@@ -1,6 +1,6 @@
 ---
 title: "Journey::Route::VerbMatchers::All's call/verb never pair (journey/route.rb 33/35)"
-status: in-progress
+status: done
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
