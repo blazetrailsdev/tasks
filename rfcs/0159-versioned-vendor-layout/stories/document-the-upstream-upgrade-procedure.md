@@ -1,7 +1,7 @@
 ---
 title: "Document the upstream upgrade procedure"
-status: ready
-updated: 2026-09-25
+status: in-progress
+updated: 2026-09-27
 rfc: "0159-versioned-vendor-layout"
 cluster: vendor
 packages:
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: trails#8187
+claim: "2026-09-27T15:17:50Z"
+assignee: "run-vendor-fetch-coexistence-tests-in-ci"
 blocked-by: null
 closed-reason: null
 ---

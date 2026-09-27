@@ -1,6 +1,6 @@
 ---
 title: "ActionDispatch::Routing::UrlFor is a namespace, not a Concern, so its included block never reaches a url_helpers includer"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

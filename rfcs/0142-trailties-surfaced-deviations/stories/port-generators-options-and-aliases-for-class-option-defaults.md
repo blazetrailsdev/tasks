@@ -1,6 +1,6 @@
 ---
 title: "port-generators-options-and-aliases-for-class-option-defaults"
-status: in-progress
+status: done
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

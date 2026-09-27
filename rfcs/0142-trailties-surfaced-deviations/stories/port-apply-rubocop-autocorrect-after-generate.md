@@ -11,7 +11,7 @@ deps:
   - map-rubocop-to-eslint-in-token-renames
 deps-rfc: []
 est-loc: 180
-priority: 2
+priority: null
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "RouteSet#add_route drops the dynamic-segment deprecations; default_env hand-parses instead of Http::URL.full_url_for"
-status: in-progress
+status: done
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

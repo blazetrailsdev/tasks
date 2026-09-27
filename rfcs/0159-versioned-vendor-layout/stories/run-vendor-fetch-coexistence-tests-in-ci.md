@@ -1,6 +1,6 @@
 ---
 title: "Run vendor/fetch.test.ts's coexistence tests in CI"
-status: ready
+status: in-progress
 updated: 2026-09-27
 rfc: "0159-versioned-vendor-layout"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8187
+claim: "2026-09-27T15:17:50Z"
+assignee: "run-vendor-fetch-coexistence-tests-in-ci"
 blocked-by: null
 closed-reason: null
 ---

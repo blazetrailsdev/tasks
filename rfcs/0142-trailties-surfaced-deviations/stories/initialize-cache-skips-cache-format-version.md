@@ -1,6 +1,6 @@
 ---
 title: "initialize-cache-skips-cache-format-version"
-status: in-progress
+status: done
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

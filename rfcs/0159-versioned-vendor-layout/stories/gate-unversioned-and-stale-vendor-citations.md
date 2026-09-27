@@ -1,6 +1,6 @@
 ---
 title: "Gate unversioned and stale vendor citations"
-status: in-progress
+status: done
 updated: 2026-09-27
 rfc: "0159-versioned-vendor-layout"
 cluster: vendor

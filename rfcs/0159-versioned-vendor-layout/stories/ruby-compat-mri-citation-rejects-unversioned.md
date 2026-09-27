@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat MRI citation lint rejects unversioned citations"
-status: ready
+status: in-progress
 updated: 2026-09-27
 rfc: "0159-versioned-vendor-layout"
 cluster: vendor
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 30
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#8187
+claim: "2026-09-27T15:17:50Z"
+assignee: "run-vendor-fetch-coexistence-tests-in-ci"
 blocked-by: null
 closed-reason: null
 ---

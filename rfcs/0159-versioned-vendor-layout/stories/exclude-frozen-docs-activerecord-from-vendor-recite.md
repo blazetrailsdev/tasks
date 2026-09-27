@@ -1,6 +1,6 @@
 ---
 title: "Exclude frozen docs/activerecord from vendor:recite"
-status: ready
+status: done
 updated: 2026-09-27
 rfc: "0159-versioned-vendor-layout"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: 4
-pr: null
+pr: trails#8181
 claim: null
 assignee: null
 blocked-by: null

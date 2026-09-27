@@ -1,6 +1,6 @@
 ---
 title: "Generated controllers extend ActionController.Base, not ApplicationController"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: generators
