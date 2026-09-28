@@ -1,6 +1,6 @@
 ---
 title: "action-view-railtie-logger-and-collection-caching-initializers"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

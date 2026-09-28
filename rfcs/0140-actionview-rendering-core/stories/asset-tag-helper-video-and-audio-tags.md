@@ -1,6 +1,6 @@
 ---
 title: "Port AssetTagHelper#video_tag, #audio_tag and multiple_sources_tag_builder"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null

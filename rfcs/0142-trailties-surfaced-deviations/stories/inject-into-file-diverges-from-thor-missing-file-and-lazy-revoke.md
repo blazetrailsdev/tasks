@@ -1,6 +1,6 @@
 ---
 title: "injectIntoFile raises ENOENT instead of Thor's missing-file error and revokes greedily"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

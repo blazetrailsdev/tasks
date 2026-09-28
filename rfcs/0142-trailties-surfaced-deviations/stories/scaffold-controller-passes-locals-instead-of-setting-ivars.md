@@ -1,6 +1,6 @@
 ---
 title: "scaffold-controller-passes-locals-instead-of-setting-ivars"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

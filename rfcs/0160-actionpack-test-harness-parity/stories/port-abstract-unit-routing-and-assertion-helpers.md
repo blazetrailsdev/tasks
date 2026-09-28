@@ -1,6 +1,6 @@
 ---
 title: "Port abstract_unit.rb's routing helpers, resource controllers and cookie/header assertions"
-status: ready
+status: done
 updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["port-actionpack-abstract-unit-test-support"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8222
+claim: "2026-09-28T17:23:56Z"
+assignee: "port-abstract-unit-routing-and-assertion-helpers"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port routing_assertions_test.rb and Assertions::RoutingAssertions#with_routing"
-status: ready
+status: claimed
 updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-28T17:39:23Z"
+assignee: "port-routing-assertions-test-and-with-routing"
 blocked-by: null
 closed-reason: null
 ---

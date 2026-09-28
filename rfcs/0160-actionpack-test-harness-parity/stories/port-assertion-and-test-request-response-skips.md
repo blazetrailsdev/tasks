@@ -1,6 +1,6 @@
 ---
 title: "Port the skipped assertion, TestRequest, TestResponse and runner tests"
-status: ready
+status: in-progress
 updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["port-actionpack-abstract-unit-test-support"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8223
+claim: "2026-09-28T17:33:56Z"
+assignee: "port-assertion-and-test-request-response-skips"
 blocked-by: null
 closed-reason: null
 ---

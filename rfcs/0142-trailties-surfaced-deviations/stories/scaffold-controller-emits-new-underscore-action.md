@@ -1,6 +1,6 @@
 ---
 title: "Scaffold generators emit the new action as new_, so GET /posts/new 404s"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: generators
