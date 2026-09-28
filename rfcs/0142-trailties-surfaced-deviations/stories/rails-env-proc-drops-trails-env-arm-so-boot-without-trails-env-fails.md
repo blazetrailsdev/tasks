@@ -1,7 +1,7 @@
 ---
 title: "RAILS_ENV() drops the Rails.env arm, so booting an app without TRAILS_ENV resolves default_env"
-status: in-progress
-updated: 2026-09-27
+status: done
+updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: boot
 packages: ["activerecord", "trailties"]

@@ -1,7 +1,7 @@
 ---
 title: "enroll-rack-test-in-protocol-definition-scoring"
-status: ready
-updated: 2026-09-23
+status: claimed
+updated: 2026-09-28
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-28T11:44:27Z"
+assignee: "enroll-actiondispatch-in-protocol-definition-scoring"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port the core of actionpack's test/abstract_unit.rb as the shared test harness"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "QueryLogs keeps instance state and lazy handlers where Rails precomputes @handlers on the module"
-status: ready
-updated: 2026-09-27
+status: claimed
+updated: 2026-09-28
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-28T11:43:44Z"
+assignee: "psych-object-protocol-for-record-yaml-round-trip"
 blocked-by: null
 closed-reason: null
 ---

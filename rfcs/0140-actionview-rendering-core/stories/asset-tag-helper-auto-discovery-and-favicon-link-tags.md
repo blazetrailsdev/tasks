@@ -1,6 +1,6 @@
 ---
 title: "Port AssetTagHelper#auto_discovery_link_tag and #favicon_link_tag"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null

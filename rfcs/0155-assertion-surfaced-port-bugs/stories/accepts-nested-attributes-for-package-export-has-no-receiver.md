@@ -1,6 +1,6 @@
 ---
 title: "index.ts re-exports the this-typed acceptsNestedAttributesFor as a receiverless package function"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

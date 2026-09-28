@@ -1,7 +1,7 @@
 ---
 title: "Migration generators write via createFile and branch on revoke instead of migration_template/CreateMigration"
-status: in-progress
-updated: 2026-09-27
+status: done
+updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

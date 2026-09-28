@@ -1,6 +1,6 @@
 ---
 title: "datetime-to-time-truncates-sub-minute-offset"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

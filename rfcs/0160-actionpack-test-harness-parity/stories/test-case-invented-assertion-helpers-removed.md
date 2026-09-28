@@ -1,6 +1,6 @@
 ---
 title: "Remove TestCase's invented assert helpers and metal/testing's recycle"
-status: ready
+status: in-progress
 updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8211
+claim: "2026-09-28T11:36:15Z"
+assignee: "port-actionpack-view-and-helper-test-fixtures"
 blocked-by: null
 closed-reason: null
 ---

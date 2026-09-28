@@ -1,6 +1,6 @@
 ---
 title: "DebugExceptions#log_error gates on statusCode < 500 instead of wrapper.rescue_response?"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

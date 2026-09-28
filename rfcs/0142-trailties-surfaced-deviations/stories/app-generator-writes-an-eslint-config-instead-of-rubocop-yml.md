@@ -1,6 +1,6 @@
 ---
 title: "App generator writes an ESLint config where Rails writes .rubocop.yml"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: generators
