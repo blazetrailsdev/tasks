@@ -5,7 +5,12 @@ updated: 2026-09-27
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: ["actionpack"]
-deps: ["port-actionpack-abstract-unit-test-support", "cookie-jar-and-flash-missing-members"]
+deps:
+  [
+    "port-actionpack-abstract-unit-test-support",
+    "cookie-jar-and-flash-missing-members",
+    "port-abstract-unit-routing-and-assertion-helpers",
+  ]
 deps-rfc: []
 est-loc: 400
 priority: null

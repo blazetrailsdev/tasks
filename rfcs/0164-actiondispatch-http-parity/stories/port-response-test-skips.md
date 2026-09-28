@@ -9,6 +9,7 @@ deps:
   [
     "response-invented-iterators-buffer-and-missing-members",
     "port-actionpack-abstract-unit-test-support",
+    "port-abstract-unit-routing-and-assertion-helpers",
   ]
 deps-rfc: []
 est-loc: 400

@@ -58,7 +58,7 @@ The harness subsystems themselves:
 | Methods              | `testing/assertions/routing.rb`                                 | 9/10         |
 | Arity mismatches     | `test_case.rb`, `metal/testing.rb`                              | 3            |
 | Extra surface, novel | `test-case.ts`, `metal/testing.ts`                              | 5            |
-| Call baseline rows   | `actioncontroller/test-case.json` + `actiondispatch/testing/**` | 11           |
+| Call baseline rows   | `actioncontroller/test-case.json` + `actiondispatch/testing/**` | 10           |
 
 Tests (`parity:test`), per Rails file this RFC owns:
 
@@ -121,7 +121,7 @@ twin of this is already filed as `remove-invented-integration-test-assertions`
 | `remove-invented-integration-test-assertions`                  | 0141 | ready  | Integration's invented `assert*`; not restated                      |
 | `integration-test-extends-active-support-test-case`            | 0141 | draft  | The `IntegrationTest < TestCase` inheritance row                    |
 | `test-case-process-rebuilds-the-request-instead-of-reusing-it` | 0141 | ready  | `process` body; `test-case-missing-methods-and-arity` depends on it |
-| `integration-process-splits-host-with-invented-ipv6-helper`    | 0141 | ready  | `Integration::Session#process` body                                 |
+| `integration-process-splits-host-with-invented-ipv6-helper`    | 0141 | done   | `Integration::Session#process` body                                 |
 | `test-process-session-typed-as-a-plain-hash`                   | 0023 | draft  | `TestProcess#session` typing                                        |
 
 ## Non-goals
@@ -145,6 +145,7 @@ twin of this is already filed as `remove-invented-integration-test-assertions`
 ## Rollout
 
 1. Foundation — `port-actionpack-abstract-unit-test-support`,
+   `port-abstract-unit-routing-and-assertion-helpers`,
    `port-actionpack-view-and-helper-test-fixtures`
 2. API — `test-case-missing-methods-and-arity`,
    `integration-session-delegated-readers-and-host-bang`,
@@ -181,3 +182,5 @@ twin of this is already filed as `remove-invented-integration-test-assertions`
 ## Changelog
 
 - 2026-09-27: initial RFC
+- 2026-09-27: split `port-abstract-unit-routing-and-assertion-helpers` out of the harness story (534 Ruby lines were too much for one PR) and pointed its seven consumers at it.
+- 2026-09-27: re-measured on trails `main` @ `2558bb83f4`: `test-case.json` fell to 2 rows; `integration-process-splits-host-with-invented-ipv6-helper` landed; `testing/test-request.ts`'s moved constructor added to the residue story.

@@ -5,7 +5,7 @@ updated: 2026-09-27
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
-deps: ["port-mapping-initialize-and-make-route"]
+deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
@@ -29,5 +29,8 @@ closed-reason: null
 
 ## Acceptance criteria
 
-- The 10 stubs are real tests with Rails' bodies, including `FakeSet`.
+- The 10 stubs are real tests with Rails' bodies, including `FakeSet`. A test
+  that needs the unfinished `Mapping#initialize` stays `it.skip` with
+  `port-mapping-initialize-and-make-route` (blocked in RFC 0123) as its reason,
+  so the rest do not wait on it.
 - Both files report complete with 0 skipped.

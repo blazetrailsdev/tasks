@@ -1,5 +1,5 @@
 ---
-title: "Close RFC 0164 (HTTP) — call baselines, arm-throw row and residue"
+title: "Close RFC 0164 — call baselines, arm-throw row and residue"
 status: draft
 updated: 2026-09-27
 rfc: "0164-actiondispatch-http-parity"

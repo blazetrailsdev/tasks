@@ -24,13 +24,13 @@ The sibling RFCs:
 
 | RFC  | Subsystem                                             | Stories |
 | ---- | ----------------------------------------------------- | ------- |
-| 0160 | Test harness — `abstract_unit`, TestCase, Integration | 13      |
+| 0160 | Test harness — `abstract_unit`, TestCase, Integration | 14      |
 | 0161 | ActionController rendering                            | 14      |
 | 0162 | ActionController metal and AbstractController         | 25      |
 | 0163 | ActionDispatch routing (beyond Journey)               | 19      |
 | 0164 | ActionDispatch HTTP                                   | 15      |
 | 0165 | ActionDispatch middleware                             | 12      |
-| 0166 | ActionDispatch system testing                         | 7       |
+| 0166 | ActionDispatch system testing                         | 8       |
 | 0167 | This RFC — measurement and gates                      | 13      |
 
 plus RFC 0139 (Journey, nearly closed) and RFC 0141
@@ -84,7 +84,8 @@ Five of those measurements are wrong, in both directions:
    `inspector_test.rb:287` and `request_test.rb:1040` are reported as misplaced
    actioncontroller tests.
 
-Corrected, actiondispatch is 1649/1758 methods and 1045/1637 tests (63.8%), and
+Corrected, actiondispatch is 1649/1758 methods (1651/1758 on `main` @
+`2558bb83f4`, after `build_instrumented` landed) and 1045/1637 tests (63.8%), and
 actioncontroller 708/1945 tests (36.4%).
 
 **Gates.** actionpack is enrolled in none of the ratchets that hold other
@@ -187,3 +188,4 @@ None.
 ## Changelog
 
 - 2026-09-27: initial RFC
+- 2026-09-27: re-measured on trails `main` @ `2558bb83f4`: actiondispatch 1651/1780 methods; the five measurement defects all reproduce; sibling story counts updated (0160: 14, 0166: 8).

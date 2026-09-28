@@ -9,6 +9,7 @@ deps:
   [
     "port-actionpack-abstract-unit-test-support",
     "delete-invented-action-dispatch-respond-to-and-csrf-modules",
+    "port-abstract-unit-routing-and-assertion-helpers",
   ]
 deps-rfc: []
 est-loc: 400

@@ -1,5 +1,5 @@
 ---
-title: "Close RFC 0165 (middleware) — call baselines to zero"
+title: "Close RFC 0165 — middleware and log-subscriber call baselines to zero"
 status: draft
 updated: 2026-09-27
 rfc: "0165-actiondispatch-middleware-parity"
@@ -30,7 +30,11 @@ After the member stories, these rows remain under
 `ssl.json` (5), `public-exceptions.json` (3), `debug-exceptions.json` (2),
 `host-authorization.json` (2), `show-exceptions.json` (2), `stack.json` (2), and
 one each in `actionable-exceptions`, `debug-locks`, `exception-wrapper`,
-`executor`, `remote-ip` and `request-id` — 22 rows.
+`executor`, `remote-ip` and `request-id` — 22 rows — plus 2 in
+`actiondispatch/log-subscriber.json`, both on `LogSubscriber#redirect`
+(`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/log_subscriber.rb:7-19`): an
+omitted `env` call and a `round` argument shape (`event.duration.round`, `:15`).
+No other RFC owns `log_subscriber.rb`.
 
 ## Acceptance criteria
 

@@ -156,6 +156,18 @@ them and does not restate them:
 | `respond-to-negotiated-format-never-reaches-lookup-context` (0140)                                                 | `respond_to` → lookup context                                  |
 | `burn-down-and-enroll-abstractcontroller` (0120)                                                                   | abstractcontroller's extra-surface gate                        |
 
+### Prior-art status (trails `main` @ `2558bb83f4`)
+
+Already landed: `action-callbacks-invented-name-option-shadows-symbol-filter-dedup`,
+`append-action-aliases-missing`, `converge-metal-status-setter-onto-response-status`,
+`converge-mime-responds-collector-responses-hash` and
+`respond-to-negotiated-format-never-reaches-lookup-context`. Blocked:
+`helper-name-error-has-no-did-you-mean` (on RFC 0154's
+`port-did-you-mean-correctable-onto-name-error`). `append-action-aliases-missing`
+put the aliases on `abstract-controller/base.ts:237`; Rails defines them in
+`callbacks.rb:252`, so the three rows still read missing —
+`abstract-controller-class-attributes-and-helper-resolution` moves them.
+
 ## Non-goals
 
 - **Rendering modules** (`metal/rendering.rb`, `renderers.rb`, `streaming.rb`,
@@ -216,3 +228,4 @@ None.
 ## Changelog
 
 - 2026-09-27: initial RFC
+- 2026-09-27: re-measured on trails `main` @ `2558bb83f4`: `metal/status-codes.ts` is gone; a new inheritance row (`MimeResponds::Collector < AbstractCollector`) folded into `metal-and-abstract-base-missing-methods`; recorded landed prior art; `append_*_action` rows re-scoped after `append-action-aliases-missing` put them on `base.ts`; `port-helper-test` no longer waits on the blocked did-you-mean story.

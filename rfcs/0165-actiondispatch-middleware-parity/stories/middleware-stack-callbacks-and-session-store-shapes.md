@@ -5,11 +5,7 @@ updated: 2026-09-27
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: ["actionpack"]
-deps:
-  [
-    "middleware-stack-build-instrumented-and-instrumentation-proxy-not-ported",
-    "middleware-stack-use-drops-rails-block-argument",
-  ]
+deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
@@ -22,10 +18,10 @@ closed-reason: null
 
 ## Context
 
-- `middleware/stack.rb`: `pnpm parity:api` scores `Middleware#call`
-  declaration-only; `parity:api:extra` scores `get` and `length` on
-  `middleware/stack.ts` as moved. `build_instrumented` is RFC 0141's
-  `middleware-stack-build-instrumented-and-instrumentation-proxy-not-ported`.
+- `middleware/stack.rb` measures 28/28 since RFC 0141's
+  `middleware-stack-build-instrumented-and-instrumentation-proxy-not-ported`
+  landed, but `parity:api:extra` still scores `get` and `length` on
+  `middleware/stack.ts` as moved.
 - `middleware/callbacks.rb`: Rails' `class Callbacks` (`:9`) has no superclass
   and `include ActiveSupport::Callbacks` (`:10`) then `define_callbacks :call`.
   trails declares `class CallbacksBase extends CallbacksMixin() {}` and

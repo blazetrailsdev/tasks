@@ -1,5 +1,5 @@
 ---
-title: "Close RFC 0160 (test harness) — call baselines and residue to zero"
+title: "Close RFC 0160 — call baselines and residue to zero"
 status: draft
 updated: 2026-09-27
 rfc: "0160-actionpack-test-harness-parity"
@@ -28,10 +28,10 @@ closed-reason: null
 
 ## Context
 
-After the other stories land, eleven call baseline rows remain on files this RFC
+After the other stories land, ten call baseline rows remain on files this RFC
 owns, under `scripts/api-compare/call-mismatches-exclude/`:
 
-- `actioncontroller/test-case.json` — 3
+- `actioncontroller/test-case.json` — 2
 - `actiondispatch/testing/assertions/response.json` — 2
 - `actiondispatch/testing/test-response.json` — 2
 - `actiondispatch/testing/assertion-response.json` — 1
@@ -42,6 +42,9 @@ owns, under `scripts/api-compare/call-mismatches-exclude/`:
 Each row says the trails body omits, or passes different arguments to, a call
 the Rails body makes.
 
+`pnpm parity:api:extra --package actiondispatch` also scores the constructor on
+`packages/actionpack/src/action-dispatch/testing/test-request.ts` as moved.
+
 ## Acceptance criteria
 
 - Each row is converged by making the TS body call what Rails calls, then
@@ -50,4 +53,6 @@ the Rails body makes.
 - A row that cannot converge carries a `@missingRailsCall … — PERMANENT` or
   `@missingRailsArgs … — PERMANENT` receipt only where CLAUDE.md already ratifies
   the shortcoming. Anything else is filed as a story before this one closes.
+- `testing/test-request.ts`'s constructor is relocated or removed so the file has
+  no moved name.
 - Every Verification bullet in the RFC README holds.

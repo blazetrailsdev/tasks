@@ -1,5 +1,5 @@
 ---
-title: "Port actionpack's test/abstract_unit.rb as the shared test harness"
+title: "Port the core of actionpack's test/abstract_unit.rb as the shared test harness"
 status: draft
 updated: 2026-09-27
 rfc: "0160-actionpack-test-harness-parity"
@@ -7,7 +7,7 @@ cluster: null
 packages: ["actionpack"]
 deps: []
 deps-rfc: []
-est-loc: 450
+est-loc: 300
 priority: null
 pr: null
 claim: null
@@ -41,14 +41,12 @@ The Rails pieces, in source order:
 - the `ActionController::API` / `Base` / `TestCase` reopenings (`:220-244`) and
   `::ApplicationController` (`:246`)
 - the silenced `DebugExceptions#stderr_logger` (`:249-258`)
-- `ActionDispatch::RoutingVerbs` (`:260-303`)
-- `RoutingTestHelpers` and `TestSet` (`:305-349`)
-- `ResourcesController`, `CommentsController`, `AccountsController`,
-  `ImagesController` (`:351-358`)
-- `CookieAssertions` (`:366-483`) and `HeadersAssertions` (`:485-516`)
 
-The `DrivenBy*` system-test classes (`:518-533`) belong to the system-testing
-RFC and are out of scope.
+The rest of the file is split off so this PR stays reviewable:
+`RoutingVerbs`, `RoutingTestHelpers` / `TestSet`, the `ResourcesController`
+family, `CookieAssertions` and `HeadersAssertions` (`:260-516`) are
+`port-abstract-unit-routing-and-assertion-helpers`; the `DrivenBy*`
+system-test classes (`:518-533`) belong to RFC 0166.
 
 ## Acceptance criteria
 

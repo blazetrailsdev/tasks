@@ -10,6 +10,7 @@ deps:
     "port-actionpack-abstract-unit-test-support",
     "integration-session-delegated-readers-and-host-bang",
     "integration-process-splits-host-with-invented-ipv6-helper",
+    "port-abstract-unit-routing-and-assertion-helpers",
   ]
 deps-rfc: []
 est-loc: 450

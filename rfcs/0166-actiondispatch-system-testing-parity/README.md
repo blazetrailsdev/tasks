@@ -114,6 +114,7 @@ arm rather than the whole of `Driver`.
 ## Rollout
 
 1. Dependencies — `vendor-capybara-and-port-its-driver-and-server-registry`,
+   `port-capybara-dsl-and-minitest-assertions-modules`,
    `port-system-testing-browser-over-selenium-webdriver`
 2. Convergence — `converge-driver-onto-capybara-registration`,
    `converge-server-and-system-test-case-onto-capybara`
@@ -143,3 +144,5 @@ arm rather than the whole of `Driver`.
 ## Changelog
 
 - 2026-09-27: initial RFC
+- 2026-09-27: split `port-capybara-dsl-and-minitest-assertions-modules` out of the vendoring story so each fits one PR.
+- 2026-09-27: re-measured on trails `main` @ `2558bb83f4`; no change to this RFC's rows.

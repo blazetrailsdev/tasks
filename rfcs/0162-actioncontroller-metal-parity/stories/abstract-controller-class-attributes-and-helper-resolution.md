@@ -40,14 +40,22 @@ closed-reason: null
 - **Four call baseline rows** in
   `scripts/api-compare/call-mismatches-exclude/abstractcontroller/helpers.json`.
 
-`append_*_action` (`callbacks.rb`) is `append-action-aliases-missing` (RFC 0141).
-Abstractcontroller's extra-surface burn-down and gate enrollment are
-`burn-down-and-enroll-abstractcontroller` (RFC 0120).
+- **Three `append_*_action` rows.** Rails defines them as
+  `alias_method :"append_#{callback}_action", :"#{callback}_action"`
+  (`callbacks.rb:252`) inside the `[:before, :after, :around].each` loop in
+  `ClassMethods` (`:230-253`). RFC 0141's `append-action-aliases-missing`
+  added them as `static appendBeforeAction = beforeAction` on
+  `packages/actionpack/src/abstract-controller/base.ts:237`, so they still read
+  missing on `callbacks.rb`.
+  Abstractcontroller's extra-surface burn-down and gate enrollment are
+  `burn-down-and-enroll-abstractcontroller` (RFC 0120).
 
 ## Acceptance criteria
 
 - The four seats use `classAttribute()` / `mattrAccessor` at their Rails
   declaration sites.
+- The `append_*_action` aliases are defined beside the `*_action` class methods
+  in `abstract-controller/callbacks.ts`, not on `base.ts`.
 - The three helper-resolution methods exist with Rails' bodies, and the five
   arity rows are gone: the methods are `this`-typed class methods.
 - `helpers.json` is empty and its mark tightened.

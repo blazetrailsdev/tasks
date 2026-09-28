@@ -41,10 +41,11 @@ RFC 0141: the `Resource` / `SingletonResource` classes
 `route_source_locations` / `backtrace_cleaner` / `route_source_location`
 (`mapper.rb:26-27,378`; `mapping-make-route-source-location`). One arity row:
 `define_generate_prefix(app, name)` (`mapper.rb:670`) takes a third
-`mountPath` in trails (`routing/mapper.ts:1522`). Extra surface: `journeyRecognize`
-on the invented `routing/journey-bridge.ts`; moved names on `routing/inspector.ts`
-(`app`, `inspect`, `verb`), `routing/redirection.ts` (`template`) and
-`routing/route-set.ts` (`recognize`). Call baseline rows:
+`mountPath` in trails (`routing/mapper.ts:1522`). Extra surface: moved names on `routing/inspector.ts` (`app`, `inspect`,
+`verb`) and `routing/redirection.ts` (`template`). (`routing/journey-bridge.ts`
+and `route-set.ts`'s moved `recognize` were removed by RFC 0139's
+`route-set-recognize-routing-test-rewrite-and-delete` after the first
+measurement.) Call baseline rows:
 `actiondispatch/routing/polymorphic-routes.json` 4, `routing/redirection.json` 2,
 `routing/url-for.json` 1.
 
@@ -82,10 +83,9 @@ Three shapes dominate:
 
 ### Order behind RFC 0139's last stories
 
-`route-set-recognize-routing-test-rewrite-and-delete` (0139, in progress)
-rewrites `dispatch/routing.test.ts`'s 266 `routes.recognize` call sites onto
-Rails' seats. Every story that edits that file depends on it, so the rewrite
-lands once. `port-mapping-initialize-and-make-route` (rehomed to RFC 0123 on
+`route-set-recognize-routing-test-rewrite-and-delete` (0139, landed after the
+first measurement) rewrote `dispatch/routing.test.ts`'s 266 `routes.recognize` call sites onto
+Rails' seats. Every story that edits that file depends on it. `port-mapping-initialize-and-make-route` (rehomed to RFC 0123 on
 2026-09-27, blocked on
 `mapper-resources-hand-builds-canonical-routes`) finishes `Mapping#initialize`;
 the resources stories depend on the 0141 story that unblocks it.
@@ -112,7 +112,7 @@ name, `"foo"` is. The same goes for the describe path. Nothing is reworded.
 | `mapping-make-route-source-location`                                                                                                                                                                              | 0141 | `route_source_locations`; the inspector tests depend on it         |
 | `port-url-for-integration-test`                                                                                                                                                                                   | 0141 | All 87 `url_for_integration_test.rb` tests — not restated          |
 | `route-set-static-route-leaks-controller-action-into-query`                                                                                                                                                       | 0141 | `url_for` on static routes                                         |
-| `mapper-add-route-name-option-alias`, `mapper-route-dsl-ignores-on-option`, `mapper-scope-include-enumerable-drop-symbol-iterator`, `mapping-build-conditions-public-method-defined`                              | 0141 | Mapper DSL arms the ported tests will exercise                     |
+| `mapper-add-route-name-option-alias` (closed), `mapper-route-dsl-ignores-on-option`, `mapper-scope-include-enumerable-drop-symbol-iterator`, `mapping-build-conditions-public-method-defined`                     | 0141 | Mapper DSL arms the ported tests will exercise                     |
 | `url-for-concern-included-block`, `url-for-is-a-plain-object-module-not-a-linkable-module`, `url-for-parameters-keys-cross-into-camelcase-options`, `url-for-module-private-initialize-and-url-for-modules-order` | 0141 | `Routing::UrlFor`                                                  |
 | `converge-journey-mapping-onto-ported-mapper-mapping`                                                                                                                                                             | 0023 | `Mapping`                                                          |
 
@@ -159,7 +159,7 @@ name, `"foo"` is. The same goes for the describe path. Nothing is reworded.
   `action_dispatch/routing/*.rb` row at 100% (with RFC 0141's mapper stories
   landed) and no routing arity row.
 - `pnpm parity:api:extra --package actiondispatch` lists no file under
-  `routing/`; `routing/journey-bridge.ts` no longer exists.
+  `routing/`.
 - No row remains under `call-mismatches-exclude/actiondispatch/routing/`.
 - `pnpm parity:test` reports every file in the tests table with 0 skipped,
   0 missing and 0 wrong describe.
@@ -171,3 +171,4 @@ None.
 ## Changelog
 
 - 2026-09-27: initial RFC
+- 2026-09-27: re-measured on trails `main` @ `2558bb83f4`: `routing/journey-bridge.ts` and `route-set.ts`'s moved `recognize` are gone (RFC 0139 landed its rewrite), so `routing-invented-surface-and-generate-prefix-arity` shrank; `port-mapper-and-concerns-test-skips` no longer hard-waits on the blocked `Mapping#initialize` story.

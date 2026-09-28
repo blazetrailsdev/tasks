@@ -5,7 +5,8 @@ updated: 2026-09-27
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
-deps: ["port-actionpack-abstract-unit-test-support"]
+deps:
+  ["port-actionpack-abstract-unit-test-support", "port-abstract-unit-routing-and-assertion-helpers"]
 deps-rfc: []
 est-loc: 350
 priority: null

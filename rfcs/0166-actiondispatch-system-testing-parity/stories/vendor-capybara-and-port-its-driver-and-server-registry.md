@@ -7,7 +7,7 @@ cluster: null
 packages: ["actionpack"]
 deps: []
 deps-rfc: []
-est-loc: 500
+est-loc: 450
 priority: null
 pr: null
 claim: null
@@ -39,14 +39,13 @@ Rails pins `capybara (3.40.0)` (`vendor/rails/v8.0.2/Gemfile.lock:160`).
 - Capybara 3.40.0 is a vendored source (`vendor/sources.ts`, procedure in
   `vendor/README.md`).
 - A new `capybara` package ports, at Ruby names from `lib/capybara.rb` and
-  `lib/capybara/config.rb` / `session_config.rb`: `register_driver`, `drivers`,
-  `current_driver` / `current_driver=`, `default_driver`, `javascript_driver`,
+  `lib/capybara/config.rb` / `session_config.rb`: `register_driver`, `drivers`, `current_driver` / `current_driver=`, `default_driver`, `javascript_driver`,
   `use_default_driver`, `register_server`, `servers`, `server` / `server=`,
-  `always_include_port`, `app_host`, `server_host`, `server_port`; and
-  `Capybara::DSL` / `Capybara::Minitest::Assertions` as modules
-  `SystemTestCase` can include, with only the members its own body calls.
+  `always_include_port`, `app_host`, `server_host`, `server_port`. The
+  `Capybara::DSL` / `Capybara::Minitest::Assertions` modules are
+  `port-capybara-dsl-and-minitest-assertions-modules`.
 - The package is registered everywhere a new package needs to be (workspace,
   tsconfig references, CI, the parity package list); `parity:api` compares it
   against the vendored lib.
-- If this does not fit one PR, ship vendoring plus the registry here and file the
-  DSL / assertions modules as a follow-up in this RFC.
+- If the registry does not fit beside the vendoring and package setup, ship the
+  vendoring and package here and file the registry remainder in this RFC.

@@ -1,5 +1,5 @@
 ---
-title: "Close RFC 0163 (routing) — residue to zero"
+title: "Close RFC 0163 — residue to zero"
 status: draft
 updated: 2026-09-27
 rfc: "0163-actiondispatch-routing-parity"

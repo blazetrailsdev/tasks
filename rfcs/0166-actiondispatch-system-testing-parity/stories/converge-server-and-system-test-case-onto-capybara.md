@@ -9,6 +9,7 @@ deps:
   [
     "vendor-capybara-and-port-its-driver-and-server-registry",
     "integration-test-extends-active-support-test-case",
+    "port-capybara-dsl-and-minitest-assertions-modules",
   ]
 deps-rfc: []
 est-loc: 350

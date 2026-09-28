@@ -14,7 +14,7 @@ clusters: []
 
 ## Summary
 
-Take `action_dispatch/middleware/**` — `Cookies` and its jars, `Flash`,
+Take `action_dispatch/middleware/**` and `action_dispatch/log_subscriber.rb` — `Cookies` and its jars, `Flash`,
 `DebugExceptions` / `DebugView` / `ExceptionWrapper` / `ShowExceptions` /
 `PublicExceptions` / `ActionableExceptions`, `MiddlewareStack`, `Callbacks`,
 `Executor`, `Reloader`, `RemoteIp`, `RequestId`, `SSL`, `AssumeSSL`,
@@ -38,7 +38,6 @@ trails `main` @ `114cf8364c`, after `pnpm build` and
 | `cookies.rb`           | 46/55   | `key?`, `has_key?`, `update` (`:361`), `update_cookies_from_jar` (`:366`), `to_header` (`:373`), `clear` (`:425`), `always_write_cookie` (`:441`, 2), `escape` (`:444`) |
 | `flash.rb`             | 23/27   | `key?`, `merge!`, `now_is_loaded?`, `stringify_array` (`:305`)                                                                                                          |
 | `debug_exceptions.rb`  | 15/17   | `render_for_browser_request` (`:78`), `create_template` (`:116`)                                                                                                        |
-| `stack.rb`             | 26/28   | `build_instrumented` (`:47`); `call` declaration-only                                                                                                                   |
 | `debug_view.rb`        | 7/8     | `render` (`:48`)                                                                                                                                                        |
 | `exception_wrapper.rb` | 60/61   | `spot` (`:239`)                                                                                                                                                         |
 | `remote_ip.rb`         | 7/8     | `filter_proxies` (`:191`)                                                                                                                                               |
@@ -59,7 +58,9 @@ invented `session/resolve-store.ts`); moved names on `cookies.ts` (7),
 `flash.ts` (2), `remote-ip.ts`, `server-timing.ts`, `session/cache-store.ts`
 and `exception-wrapper.ts` (1 each).
 
-**Call baselines:** 27 rows under `call-mismatches-exclude/actiondispatch/middleware/`:
+**Call baselines:** 27 rows under `call-mismatches-exclude/actiondispatch/middleware/`,
+plus 2 in `actiondispatch/log-subscriber.json` (`LogSubscriber#redirect`,
+`action_dispatch/log_subscriber.rb:7-19`):
 `ssl.json` 5, `flash.json` 4, `public-exceptions.json` 3,
 `debug-exceptions.json` 2, `host-authorization.json` 2,
 `show-exceptions.json` 2, `stack.json` 2, and one each in
@@ -110,6 +111,13 @@ and stays unready until it lands.
 | `cache-store-async-over-npm-clients`                                                                                                                                                                                                                       | 0158 | the cache store `CacheStore` needs    |
 | `cookiejar-parse-shadows-rails-parse-methods`, `camelcase-rack-cookie-header-option-keys`, `converge-live-response-before-committed-onto-cookie-jar`, `converge-blocked-hosts-onto-request-readers`, `session-inspect-loaded-arm-drops-instance-variables` | 0023 | cookies, host authorization, session  |
 
+### Prior-art status (trails `main` @ `2558bb83f4`)
+
+Already landed: `middleware-stack-build-instrumented-and-instrumentation-proxy-not-ported`
+(so `stack.rb` now measures 28/28) and `middleware-stack-use-drops-rails-block-argument`.
+Blocked: `debug-exceptions-gates-on-wrapper-show-and-request-headers` and
+`memcachestore-descends-from-rack-session-dalli`.
+
 ## Non-goals
 
 - **`class Request` reopenings** in `cookies.rb` / `flash.rb` — RFC 0164's
@@ -141,7 +149,8 @@ and stays unready until it lands.
   at 100%, with no arity or inheritance row.
 - `pnpm parity:api:extra --package actiondispatch` lists no file under
   `middleware/`; `session/resolve-store.ts` no longer exists.
-- No row remains under `call-mismatches-exclude/actiondispatch/middleware/`.
+- No row remains under `call-mismatches-exclude/actiondispatch/middleware/` or in
+  `actiondispatch/log-subscriber.json`.
 - `pnpm parity:test --package actiondispatch` reports every file in the tests
   table complete.
 
@@ -152,3 +161,4 @@ None.
 ## Changelog
 
 - 2026-09-27: initial RFC
+- 2026-09-27: re-measured on trails `main` @ `2558bb83f4`: `stack.rb` is 28/28 (RFC 0141 landed `build_instrumented`), so the stack row left the table; took ownership of `action_dispatch/log_subscriber.rb`'s two call rows, which no RFC covered; recorded prior-art status.

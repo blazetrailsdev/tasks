@@ -10,6 +10,7 @@ deps:
     "mapper-resources-hand-builds-canonical-routes",
     "mapper-resources-uses-activesupport-inflector",
     "port-actionpack-abstract-unit-test-support",
+    "port-abstract-unit-routing-and-assertion-helpers",
   ]
 deps-rfc: []
 est-loc: 450

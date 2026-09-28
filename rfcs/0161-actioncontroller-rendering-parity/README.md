@@ -108,6 +108,13 @@ for `ApiRendering#render_to_body` (`api/api_rendering.rb:13`). Each folds back.
 | `live-buffer-queue-is-not-a-blocking-sized-queue`             | 0141 | `Live::Buffer`; the live tests depend on it                                                       |
 | `api-redirect-to-override-and-head-response-are-invented`     | 0141 | `api.ts` moved names                                                                              |
 
+### Prior-art status (trails `main` @ `2558bb83f4`)
+
+Already landed: `abstract-normalize-render-self-dispatches-process-variant`,
+`controller-render-inline-renders-the-action-template`;
+`action-controller-normalize-options-does-not-call-super` was closed. They stay
+listed because the ported tests are what verify them.
+
 ## Non-goals
 
 - **`ActionView::Rendering` and the view renderer.** That is RFC 0140.
@@ -123,7 +130,7 @@ for `ApiRendering#render_to_body` (`api/api_rendering.rb:13`). Each folds back.
 - **Porting the render tests before the render path converges.** They would
   pass against the hand-written dispatcher, which is exactly the thing RFC 0140
   is deleting; each would then be re-verified. Waiting costs nothing, since the
-  dependency is already `ready`.
+  dependency is filed and `ready`.
 
 ## Rollout
 
@@ -158,3 +165,4 @@ None.
 ## Changelog
 
 - 2026-09-27: initial RFC
+- 2026-09-27: re-measured on trails `main` @ `2558bb83f4`; no change to this RFC's rows. Recorded prior-art stories that have since landed.

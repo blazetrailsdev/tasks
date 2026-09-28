@@ -5,7 +5,11 @@ updated: 2026-09-27
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
 packages: ["actionpack"]
-deps: ["vendor-capybara-and-port-its-driver-and-server-registry"]
+deps:
+  [
+    "vendor-capybara-and-port-its-driver-and-server-registry",
+    "port-capybara-dsl-and-minitest-assertions-modules",
+  ]
 deps-rfc: []
 est-loc: 200
 priority: null
