@@ -1,7 +1,7 @@
 ---
 title: "ar db:* with no TRAILS_ENV resolves default_env, not the documented development"
-status: in-progress
-updated: 2026-09-27
+status: done
+updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["activerecord-cli", "activerecord"]

@@ -1,7 +1,7 @@
 ---
 title: "assign_parameters' GET branch compares requestMethod instead of calling get?, and tests query_string truthiness instead of blank?"
-status: claimed
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: trails#8203
 claim: "2026-09-27T23:57:35Z"
 assignee: "abstract-normalize-render-self-dispatches-process-variant"
 blocked-by: null

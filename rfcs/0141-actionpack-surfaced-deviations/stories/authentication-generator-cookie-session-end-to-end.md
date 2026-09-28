@@ -1,7 +1,7 @@
 ---
 title: "authentication-generator-cookie-session-end-to-end"
-status: claimed
-updated: 2026-09-27
+status: ready
+updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-09-27T23:57:35Z"
-assignee: "abstract-normalize-render-self-dispatches-process-variant"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

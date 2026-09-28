@@ -1,7 +1,7 @@
 ---
 title: "trails console evaluates each line in a new vm realm, so where({...}) rejects hash literals"
-status: in-progress
-updated: 2026-09-27
+status: done
+updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: boot
 packages: ["trailties"]

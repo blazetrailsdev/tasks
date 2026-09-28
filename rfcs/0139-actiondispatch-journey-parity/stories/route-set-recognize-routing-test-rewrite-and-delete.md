@@ -1,7 +1,7 @@
 ---
 title: "route-set-recognize-routing-test-rewrite-and-delete"
-status: in-progress
-updated: 2026-09-27
+status: done
+updated: 2026-09-28
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "MiddlewareStack#use/unshift/insert drop Rails' &block; three @missingRailsArgs PERMANENT receipts are wrong"
-status: claimed
-updated: 2026-09-27
+status: done
+updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "http-middleware"
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8202
 claim: "2026-09-27T23:51:25Z"
 assignee: "converge-metal-status-setter-onto-response-status"
 blocked-by: null

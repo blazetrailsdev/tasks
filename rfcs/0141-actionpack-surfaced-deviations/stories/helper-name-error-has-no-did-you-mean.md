@@ -1,7 +1,7 @@
 ---
 title: "A missing helper constant raises without a did-you-mean suggestion"
-status: claimed
-updated: 2026-09-27
+status: blocked
+updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-27T23:51:25Z"
 assignee: "converge-metal-status-setter-onto-response-status"
-blocked-by: null
+blocked-by: "needs port-did-you-mean-correctable-onto-name-error: trails NameError has no detailedMessage; DidYouMean::Correctable/NameErrorCheckers/ClassNameChecker/Formatter (vendor/did_you_mean/v1.6.3/lib/did_you_mean/core_ext/name_error.rb, spell_checkers/name_error_checkers*.rb, formatter.rb) are registered unported"
 closed-reason: null
 ---
 
