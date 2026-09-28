@@ -1,6 +1,6 @@
 ---
 title: "score-hash-eql-through-rbhash-rbequal"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Time#getlocal / #atInstant truncate a sub-minute fixed offset through of2str"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

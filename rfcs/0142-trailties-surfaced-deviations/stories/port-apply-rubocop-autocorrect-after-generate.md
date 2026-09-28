@@ -1,7 +1,7 @@
 ---
 title: "Port apply_rubocop_autocorrect_after_generate! as the ESLint autocorrect pass"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: generators
 packages:
@@ -12,9 +12,9 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8216
+claim: "2026-09-28T13:11:25Z"
+assignee: "port-apply-rubocop-autocorrect-after-generate"
 blocked-by: null
 closed-reason: null
 ---

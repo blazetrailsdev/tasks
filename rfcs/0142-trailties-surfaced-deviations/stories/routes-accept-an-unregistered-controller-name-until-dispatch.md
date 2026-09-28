@@ -1,7 +1,7 @@
 ---
 title: "Routes accept an unregistered controller name and 404 at dispatch instead of failing at boot"
-status: ready
-updated: 2026-09-27
+status: closed
+updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "boot"
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-28T13:11:25Z"
+assignee: "port-apply-rubocop-autocorrect-after-generate"
 blocked-by: null
-closed-reason: null
+closed-reason: 'Premise falsified: the motivating case already raises at draw time. Mapper#checkControllerAndAction -> translateController (packages/actionpack/src/action-dispatch/routing/mapper.ts:593-653) ports actionpack/lib/action_dispatch/routing/mapper.rb:307-351, so get(''index'', to: ''readModels#index'') raises ArgumentError "''readModels'' is not a supported controller name..." exactly as Rails does (verified 2026-09-28). The remaining arm — a well-formed but absent controller (to: ''nope#index'') 404ing at dispatch — is Rails'' own behavior (Request#controller_class_for raises MissingController at dispatch); a boot-time walk would be invented behavior with no Rails counterpart.'
 ---
 
 ## Context

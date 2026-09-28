@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc types an enum attribute as its column and declares scopes only as statics"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8216
+claim: "2026-09-28T13:11:25Z"
+assignee: "port-apply-rubocop-autocorrect-after-generate"
 blocked-by: null
 closed-reason: null
 ---
