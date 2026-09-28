@@ -1,6 +1,6 @@
 ---
 title: "append_before_action / append_after_action / append_around_action aliases are missing"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

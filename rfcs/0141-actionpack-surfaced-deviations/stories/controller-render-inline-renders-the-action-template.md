@@ -1,6 +1,6 @@
 ---
 title: "ActionController render(inline:) renders the action template instead of the inline source"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

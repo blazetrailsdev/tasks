@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Rendering#_normalize_options does not continue to the ActionView/Layouts _normalize_options"
-status: draft
+status: closed
 updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "premise false: ActionView 8.0.2 defines no _normalize_options; AC super reaches the AbstractController identity (abstract_controller/rendering.rb:88-90), which trails' return already equals"
 ---
 
 ## Context

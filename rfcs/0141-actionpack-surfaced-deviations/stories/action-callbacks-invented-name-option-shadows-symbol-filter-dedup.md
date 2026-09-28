@@ -1,6 +1,6 @@
 ---
 title: "Action callbacks carry an invented name: option (_trailsName) where Rails dedups and skips by the Symbol filter"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

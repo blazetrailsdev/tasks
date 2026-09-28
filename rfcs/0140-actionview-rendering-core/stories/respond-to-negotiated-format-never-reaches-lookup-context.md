@@ -1,7 +1,7 @@
 ---
 title: "respond-to-negotiated-format-never-reaches-lookup-context"
-status: in-progress
-updated: 2026-09-27
+status: done
+updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []

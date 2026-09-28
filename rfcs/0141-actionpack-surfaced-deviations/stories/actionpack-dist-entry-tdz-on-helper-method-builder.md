@@ -1,6 +1,6 @@
 ---
 title: "actionpack-dist-entry-tdz-on-helper-method-builder"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

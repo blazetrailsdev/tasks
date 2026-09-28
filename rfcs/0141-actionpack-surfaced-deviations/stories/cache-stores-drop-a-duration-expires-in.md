@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport cache stores drop a Duration expires_in (rate_limit within: 3.minutes never expires)"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "assign_parameters' GET branch compares requestMethod instead of calling get?, and tests query_string truthiness instead of blank?"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

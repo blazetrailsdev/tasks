@@ -1,6 +1,6 @@
 ---
 title: "AbstractController::Rendering#_normalize_render self-dispatches _process_variant"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
