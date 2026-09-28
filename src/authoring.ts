@@ -26,21 +26,22 @@ import { loadAll as loadAllUntyped } from "../scripts/lib.mjs";
 import { validateStoryFile as validateStoryFileUntyped } from "../scripts/validate-lib.mjs";
 import type { StoryStatus } from "./models/index.js";
 
-interface LoadedRfc {
+export interface LoadedRfc {
   dir: string;
   frontmatter: Record<string, unknown> | null;
   error?: string;
 }
-interface LoadedStory {
+export interface LoadedStory {
   id: string;
   rfc: string;
   file: string;
+  frontmatter?: Record<string, unknown> | null;
 }
-const loadAll = loadAllUntyped as (
+export const loadAll = loadAllUntyped as (
   rfcsRoot: string,
   opts: { parseStory: (file: string) => boolean },
 ) => { rfcs: LoadedRfc[]; stories: LoadedStory[]; unparsed: LoadedStory[] };
-const validateStoryFile = validateStoryFileUntyped as (args: {
+export const validateStoryFile = validateStoryFileUntyped as (args: {
   rfcs: LoadedRfc[];
   story: LoadedStory;
   others: LoadedStory[];
@@ -196,16 +197,38 @@ export function widenRfcDeclarations(
   wanted: { packages: string[]; cluster: string | null },
 ): string | null {
   const { rfcs } = loadAll(join(dir, "rfcs"), { parseStory: () => false });
+  const widening = planRfcWidening(rfcs, rfcSlug, {
+    packages: wanted.packages,
+    clusters: wanted.cluster != null ? [wanted.cluster] : [],
+  });
+  return applyRfcWidening(dir, rfcSlug, widening);
+}
+
+export interface RfcWidening {
+  packages: string[];
+  clusters: string[];
+}
+
+/** The string items of a frontmatter list, or none when it is not a list. */
+export const stringList = (v: unknown): string[] =>
+  Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
+
+/**
+ * The names `wanted` adds to `rfcSlug`'s README, with nothing written yet —
+ * `tasks rehome` validates the moved stories against the widened lists before
+ * it touches the tree. Refuses (`VerbExit`) a name no RFC declares.
+ */
+export function planRfcWidening(
+  rfcs: LoadedRfc[],
+  rfcSlug: string,
+  wanted: RfcWidening,
+): RfcWidening {
   const rfc = rfcs.find((r) => r.dir === rfcSlug);
   // An unparseable README is not ours to rewrite; assertValidateClean reports it.
-  if (!rfc || rfc.error || rfc.frontmatter == null) return null;
-  const listOf = (fm: Record<string, unknown> | null, key: string): string[] => {
-    const v = fm?.[key];
-    return Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
-  };
-  const missing = (key: string, names: string[]) => {
-    const declared = listOf(rfc.frontmatter, key);
-    const known = new Set(rfcs.flatMap((r) => listOf(r.frontmatter, key)));
+  if (!rfc || rfc.error || rfc.frontmatter == null) return { packages: [], clusters: [] };
+  const missing = (key: keyof RfcWidening, names: string[]) => {
+    const declared = stringList(rfc.frontmatter?.[key]);
+    const known = new Set(rfcs.flatMap((r) => stringList(r.frontmatter?.[key])));
     const absent = [...new Set(names)].filter((n) => !declared.includes(n));
     const unknown = absent.filter((n) => !known.has(n));
     if (unknown.length > 0) {
@@ -218,18 +241,19 @@ export function widenRfcDeclarations(
     }
     return absent;
   };
-  const packages = missing("packages", wanted.packages);
-  const clusters = missing("clusters", wanted.cluster != null ? [wanted.cluster] : []);
-  if (packages.length === 0 && clusters.length === 0) return null;
+  return {
+    packages: missing("packages", wanted.packages),
+    clusters: missing("clusters", wanted.clusters),
+  };
+}
 
+/** Write a planned widening onto the README. Returns its path when it changed. */
+export function applyRfcWidening(dir: string, rfcSlug: string, w: RfcWidening): string | null {
+  if (w.packages.length === 0 && w.clusters.length === 0) return null;
   const readme = join("rfcs", rfcSlug, "README.md");
-  appendFrontmatterListItems(join(dir, readme), "packages", packages);
-  appendFrontmatterListItems(join(dir, readme), "clusters", clusters);
-  for (const [key, names] of [
-    ["packages", packages],
-    ["clusters", clusters],
-  ] as const) {
-    if (names.length > 0) console.log(`declared ${key} ${names.join(", ")} on ${readme}`);
+  for (const key of ["packages", "clusters"] as const) {
+    appendFrontmatterListItems(join(dir, readme), key, w[key]);
+    if (w[key].length > 0) console.log(`declared ${key} ${w[key].join(", ")} on ${readme}`);
   }
   return readme;
 }

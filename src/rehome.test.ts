@@ -21,6 +21,30 @@ function git(args: string[]): string {
   return execFileSync("git", args, { cwd: dir, encoding: "utf8" }).trim();
 }
 
+function readme(rfc: string, packages: string[], clusters: string[]): void {
+  const list = (xs: string[]) => (xs.length ? xs.map((x) => `\n  - "${x}"`).join("") : " []");
+  writeFileSync(
+    join(dir, "rfcs", rfc, "README.md"),
+    `---\nrfc: "${rfc}"\ntitle: "T"\nstatus: active\ncreated: 2026-09-01\nupdated: 2026-09-01\n` +
+      `owner: "@o"\npackages:${list(packages)}\nclusters:${list(clusters)}\n---\n`,
+  );
+}
+
+/** Add a story under 0001-from, on disk and in the DB, as a committed file. */
+async function seedStory(
+  id: string,
+  opts: { cluster?: string; packages?: string[]; estLoc?: number } = {},
+): Promise<void> {
+  const rel = storyPath("0001-from", id);
+  writeFileSync(
+    join(dir, rel),
+    buildStoryContent("0001-from", id, { date: "2026-09-02", status: "draft", ...opts }),
+  );
+  git(["add", "-A"]);
+  git(["commit", "-q", "-m", id]);
+  await Story.create({ id, rfc_id: "0001-from", status: "draft", file_path: rel });
+}
+
 function storyPath(rfc: string, id: string): string {
   return join("rfcs", rfc, "stories", `${id}.md`);
 }
@@ -90,6 +114,50 @@ describe("rehome", () => {
       code: 1,
     });
     expect(existsSync(join(dir, storyPath("0001-from", "s1")))).toBe(true);
+  });
+
+  describe("against pnpm validate's story rules", () => {
+    beforeEach(() => {
+      // 0001-from declares what its stories use; 0123-holding declares neither.
+      readme("0001-from", ["ruby-compat"], ["autoload"]);
+      readme("0123-holding", ["activerecord"], ["schema"]);
+      git(["add", "-A"]);
+      git(["commit", "-q", "-m", "readmes"]);
+    });
+
+    it("widens the destination with a known cluster and package, staged with the move", async () => {
+      await seedStory("s-known", { cluster: "autoload", packages: ["ruby-compat"] });
+
+      await rehome(["s-known"], "0123-holding", { commit: false });
+
+      const dest = readFileSync(join(dir, "rfcs", "0123-holding", "README.md"), "utf8");
+      expect(dest).toContain('packages:\n  - "activerecord"\n  - "ruby-compat"\n');
+      expect(dest).toContain('clusters:\n  - "schema"\n  - "autoload"\n');
+      expect(git(["diff", "--cached", "--name-only"]).split("\n")).toContain(
+        "rfcs/0123-holding/README.md",
+      );
+    });
+
+    it("refuses the whole batch, touching nothing, when one story's cluster is unknown", async () => {
+      await seedStory("s-known", { cluster: "autoload" });
+      await seedStory("s-typo", { cluster: "autolaod" });
+
+      await expect(
+        rehome(["s-known", "s-typo"], "0123-holding", { commit: false }),
+      ).rejects.toMatchObject({ code: 1 });
+
+      expect(git(["status", "--porcelain"])).toBe("");
+    });
+
+    it("refuses a story that fails validate's story rules", async () => {
+      await seedStory("s-huge", { estLoc: 5000 });
+
+      await expect(rehome(["s-huge"], "0123-holding", { commit: false })).rejects.toMatchObject({
+        code: 1,
+      });
+
+      expect(git(["status", "--porcelain"])).toBe("");
+    });
   });
 
   it("closes the source RFC when the move leaves only terminal stories behind", async () => {
