@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Base#render handles json/plain/html/body in sync arms instead of AbstractController::Rendering#render"
-status: claimed
+status: in-progress
 updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#8212
 claim: "2026-09-28T11:37:49Z"
 assignee: "asset-url-helper-video-audio-font-path-and-url"
 blocked-by: null

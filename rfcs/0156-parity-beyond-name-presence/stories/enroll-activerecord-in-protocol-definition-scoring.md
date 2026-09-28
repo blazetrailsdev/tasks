@@ -1,6 +1,6 @@
 ---
 title: "enroll-activerecord-in-protocol-definition-scoring"
-status: claimed
+status: in-progress
 updated: 2026-09-28
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8214
 claim: "2026-09-28T11:44:27Z"
 assignee: "enroll-actiondispatch-in-protocol-definition-scoring"
 blocked-by: null

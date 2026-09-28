@@ -1,6 +1,6 @@
 ---
 title: "relation-enumerable-array-delegates"
-status: claimed
+status: in-progress
 updated: 2026-09-28
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8213
 claim: "2026-09-28T11:43:44Z"
 assignee: "psych-object-protocol-for-record-yaml-round-trip"
 blocked-by: null

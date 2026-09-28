@@ -1,6 +1,6 @@
 ---
 title: "Port AssetUrlHelper video/audio/font *_path and *_url with their aliases"
-status: claimed
+status: in-progress
 updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: trails#8212
 claim: "2026-09-28T11:37:49Z"
 assignee: "asset-url-helper-video-audio-font-path-and-url"
 blocked-by: null
