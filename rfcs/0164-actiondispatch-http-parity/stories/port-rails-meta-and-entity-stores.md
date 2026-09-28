@@ -30,7 +30,7 @@ test: "stuff is deep duped") has no trails file.
 
 **Scope is the Rails file and its test only.** Vendoring the rack-cache gem
 and porting its base classes moved to their own RFC,
-`0000-rack-cache-gem-port` (rack-cache 1.17.0, pinned at
+`rack-cache-gem-port` (rack-cache 1.17.0, pinned at
 `vendor/rails/v8.0.2/Gemfile.lock:434`). This story depends on
 `port-rack-cache-storage`, which transitively brings in the vendored source,
 `@blazetrails/rack-cache`, `MetaStore` / `EntityStore` with their `Heap`
@@ -43,7 +43,7 @@ What the port needs from that package:
   (`rack-cache/v1.17.0/lib/rack/cache/meta_store.rb:172-182`), and
   `RailsEntityStore#write` calls the private `slurp` (`entity_store.rb:14-23`).
   The gem stories record both as `@internal` and reachable from a subclass.
-- **Async.** The gem's store methods are async (RFC `0000-rack-cache-gem-port`,
+- **Async.** The gem's store methods are async (the `rack-cache-gem-port` RFC,
   "Async from the start"), so these overrides are async too. They `await`
   `@store.read` / `write` / `exist?`, which works whether or not
   `0158-activesupport-assertion-surfaced-port-bugs/cache-store-async-over-npm-clients`

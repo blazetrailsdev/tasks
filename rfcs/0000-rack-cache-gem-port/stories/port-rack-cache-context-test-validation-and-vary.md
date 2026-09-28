@@ -5,7 +5,7 @@ updated: 2026-09-28
 rfc: "0000-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]
-deps: ["port-rack-cache-context"]
+deps: ["port-rack-cache-context-test-harness"]
 deps-rfc: []
 est-loc: 400
 priority: 30
@@ -22,7 +22,7 @@ The last third of `vendor/rack-cache/v1.17.0/test/context_test.rb` (1,033 lines,
 `describe Rack::Cache::Context`, `:5`). The file is split across three
 stories by line range so each fits a PR. This one ports **`:673-1033`, 13 cases**,
 into `packages/rack-cache/src/context.test.ts`, using the `CacheContextHelpers`
-harness that `port-rack-cache-context` ported (`test/test_helper.rb:78-187`).
+harness that `port-rack-cache-context-test-harness` ported (`test/test_helper.rb:78-187`).
 Its top-level `before` / `after` (`:6-7`) are `setup_cache_context` /
 `teardown_cache_context`.
 

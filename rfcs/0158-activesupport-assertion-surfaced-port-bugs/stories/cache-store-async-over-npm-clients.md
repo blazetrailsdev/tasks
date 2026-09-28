@@ -71,6 +71,12 @@ import the stores for `lookupStore` registration and is the public
 `@blazetrails/activesupport/cache` entry, so a class-body read of it TDZs
 (verified in #8057). Host it in `cache/store.ts`.
 
+The memcached client is shared with a second consumer. RFC
+the `rack-cache-gem-port` RFC's `port-rack-cache-memcache-stores` wraps one for
+`Rack::Cache::MetaStore::Dalli` / `EntityStore::Dalli`, and whichever story
+lands first picks it (that RFC's Open question 1). Use the same client, so
+trails declares one memcached peer.
+
 This is multi-PR work. Split it into child stories: Store + Memory/File/Null
 async; the actionview/actionpack consumers; MemCacheStore; RedisCacheStore.
 

@@ -12,7 +12,7 @@ deps:
     "port-rack-cache-entity-store-base-heap-and-noop",
   ]
 deps-rfc: []
-est-loc: 450
+est-loc: 600
 priority: 30
 pr: null
 claim: null

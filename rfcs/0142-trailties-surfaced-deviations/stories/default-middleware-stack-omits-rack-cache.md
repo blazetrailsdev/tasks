@@ -36,8 +36,8 @@ trails' `packages/trailties/src/application/default-middleware-stack.ts`
 (`packages/trailties/src/trailties/action-dispatch.ts:27,78`), and it is typed
 `boolean`, where Rails accepts `false`, `true` or an options Hash.
 
-**Prerequisites, now tracked.** `Rack::Cache` itself is RFC
-`0000-rack-cache-gem-port` (`@blazetrails/rack-cache`, rack-cache 1.17.0).
+**Prerequisites, now tracked.** `Rack::Cache` itself is the
+`rack-cache-gem-port` RFC (`@blazetrails/rack-cache`, rack-cache 1.17.0).
 This story depends on `port-rack-cache-context`, which ports `Rack::Cache.new`
 and `Context`. The `rails:/` stores are
 `0164-actiondispatch-http-parity/port-rails-meta-and-entity-stores`, a

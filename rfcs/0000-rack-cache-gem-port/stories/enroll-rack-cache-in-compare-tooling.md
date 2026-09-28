@@ -60,10 +60,12 @@ to flatten the tests.
 `blazetrails/rails-private-jsdoc --fix` in this PR (RFC Open question 3), so
 the manifest addition does not leave the `rails-comparison` job red.
 
-Day-one baseline: `parity:api` reports `rack-cache` against 158 public methods
-with 1 ported (`VERSION`, from the skeleton), and `parity:test` reports
-`rack-cache: 10 files, 226 tests` with the skeleton's version test extra or
-credited. That number is honest, not a regression.
+Day-one baseline: `parity:api` reports `rack-cache` against 158 public methods,
+minus the skipped files and classes, with only what the skeleton ported.
+`parity:test` reports `rack-cache: 10 files, 226 tests` with none credited.
+The Ruby suite has no `version_test.rb`, so the skeleton's `version.test.ts`
+reads as a trails-only extra, as `packages/rack-test/src/version.test.ts` does.
+Both numbers are honest, not a regression. Record them in the PR body.
 
 ## Acceptance criteria
 

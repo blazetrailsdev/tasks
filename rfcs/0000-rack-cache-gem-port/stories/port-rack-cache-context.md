@@ -1,5 +1,5 @@
 ---
-title: "Port Rack::Cache::Context and Rack::Cache.new, with the test_helper harness"
+title: "Port Rack::Cache::Context and Rack::Cache.new"
 status: draft
 updated: 2026-09-28
 rfc: "0000-rack-cache-gem-port"
@@ -12,7 +12,7 @@ deps:
     "port-rack-cache-meta-store-base-and-heap",
   ]
 deps-rfc: []
-est-loc: 480
+est-loc: 450
 priority: 30
 pr: null
 claim: null
@@ -71,20 +71,17 @@ concurrent request on the shared prototype cannot interleave with it. Keep
 `call!` is `callBang` under the bang rule in `docs/ruby-ts-conventions.md`,
 and `convert_head_to_get!` becomes `convertHeadToGetBang`.
 
-**The test harness.** `test/test_helper.rb` (218 lines) defines
-`CacheContextHelpers` (`:78-187`): `FakeApp` (`:79-103`), `setup_cache_context`
-(`:121`), `teardown_cache_context`, `respond_with`, `cache_config`,
-`request(method, uri, opts)` over `Rack::MockRequest`, and `get` / `head` /
-`post`. It also defines `create_temp_directory` / `create_temp_file`
-(`:196-213`), which `port-rack-cache-disk-stores` may already have ported. Port
-it once, as package test support. The three context-test stories and
-`cache_test.rb` all use it. `Rack::MockRequest` is
-`packages/rack/src/mock-request.ts`.
+**The test harness is not in this PR.** `test/test_helper.rb`'s
+`CacheContextHelpers` is `port-rack-cache-context-test-harness`, which the three
+`context_test.rb` stories depend on. `cache_test.rb` does not use it: its only
+fixture is a local `dumb_app` (`test/cache_test.rb:4-7`).
 
 Tests in this PR: `test/cache_test.rb` (36 lines, 4 cases:
 `Rack::Cache.new` returns a middleware, takes and sets options, and runs its
-block) → `packages/rack-cache/src/cache.test.ts`. The 51 `context_test.rb` cases
-are split across three stories that depend on this one.
+block) → `packages/rack-cache/src/cache.test.ts`. Its `'rack-cache.foo'` case
+(`:19-23`) is `Options#option_name`'s Symbol arm reached through `new`. The 51
+`context_test.rb` cases are split across three stories that depend on the
+harness story.
 
 ## Acceptance criteria
 
@@ -92,11 +89,9 @@ are split across three stories that depend on this one.
       `Context` with every member above at its Ruby name and Ruby visibility,
       `include`ing `Options`.
 - [ ] `call` clones per request under Ruby's `run_once` / `multithread` rule.
-- [ ] The test_helper harness is ported as reusable test support.
 - [ ] `cache.test.ts` ports the 4 cases with Rails-identical names.
 - [ ] `pnpm parity:api` reports `cache.rb` and `context.rb` complete, and the call
       and call-args gates add no row.
 
-If this exceeds the PR ceiling, move the test_helper harness into
-`port-rack-cache-context-test-pass-and-revalidate` rather than splitting
-`Context`.
+If this exceeds the PR ceiling, split `cache.test.ts` out rather than
+splitting `Context`.

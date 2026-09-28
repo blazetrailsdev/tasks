@@ -246,18 +246,18 @@ Src mirrors the gem under the module root:
 
 ### The test suite
 
-| Ruby test file          | cases | story                                                                                                                                                                                                        |
-| ----------------------- | ----: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `cache_control_test.rb` |    27 | `port-rack-cache-cache-control-request-and-headers`                                                                                                                                                          |
-| `request_test.rb`       |     3 | `port-rack-cache-cache-control-request-and-headers`                                                                                                                                                          |
-| `response_test.rb`      |    37 | `port-rack-cache-response`                                                                                                                                                                                   |
-| `key_test.rb`           |    11 | `port-rack-cache-key`                                                                                                                                                                                        |
-| `options_test.rb`       |    10 | `port-rack-cache-options`                                                                                                                                                                                    |
-| `meta_store_test.rb`    |    38 | `port-rack-cache-meta-store-base-and-heap` (34), `port-rack-cache-memcache-stores` (4 `options parsing`: 2 Dalli ported, 2 MemCached stubbed)                                                                |
-| `entity_store_test.rb`  |    30 | `port-rack-cache-entity-store-base-heap-and-noop` (23), `port-rack-cache-disk-stores` (3), `port-rack-cache-memcache-stores` (4: 2 Dalli ported, 2 MemCached stubbed)                                        |
-| `storage_test.rb`       |    15 | `port-rack-cache-storage` (12), `port-rack-cache-memcache-stores` (3, `MemCache Store URIs`)                                                                                                                 |
-| `cache_test.rb`         |     4 | `port-rack-cache-context`                                                                                                                                                                                    |
-| `context_test.rb`       |    51 | `port-rack-cache-context-test-pass-and-revalidate` (`:1-452`, 23), `port-rack-cache-context-test-fetch-and-freshness` (`:455-672`, 15), `port-rack-cache-context-test-validation-and-vary` (`:673-1033`, 13) |
+| Ruby test file          | cases | story                                                                                                                                                                                                                                                                                              |
+| ----------------------- | ----: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cache_control_test.rb` |    27 | `port-rack-cache-cache-control-request-and-headers`                                                                                                                                                                                                                                                |
+| `request_test.rb`       |     3 | `port-rack-cache-cache-control-request-and-headers`                                                                                                                                                                                                                                                |
+| `response_test.rb`      |    37 | `port-rack-cache-response`                                                                                                                                                                                                                                                                         |
+| `key_test.rb`           |    11 | `port-rack-cache-key`                                                                                                                                                                                                                                                                              |
+| `options_test.rb`       |    10 | `port-rack-cache-options`                                                                                                                                                                                                                                                                          |
+| `meta_store_test.rb`    |    38 | `port-rack-cache-meta-store-base-and-heap` (34), `port-rack-cache-memcache-stores` (4 `options parsing`: 2 Dalli ported, 2 MemCached stubbed)                                                                                                                                                      |
+| `entity_store_test.rb`  |    30 | `port-rack-cache-entity-store-base-heap-and-noop` (23), `port-rack-cache-disk-stores` (3), `port-rack-cache-memcache-stores` (4: 2 Dalli ported, 2 MemCached stubbed)                                                                                                                              |
+| `storage_test.rb`       |    15 | `port-rack-cache-storage` (12), `port-rack-cache-memcache-stores` (3, `MemCache Store URIs`)                                                                                                                                                                                                       |
+| `cache_test.rb`         |     4 | `port-rack-cache-context`                                                                                                                                                                                                                                                                          |
+| `context_test.rb`       |    51 | `port-rack-cache-context-test-pass-and-revalidate` (`:1-452`, 23), `port-rack-cache-context-test-fetch-and-freshness` (`:455-672`, 15), `port-rack-cache-context-test-validation-and-vary` (`:673-1033`, 13). `port-rack-cache-context-test-harness` ports `:19` and `:455` first, as smoke cases. |
 
 The store suites are shared examples. `RackCacheMetaStoreImplementation`
 (`test/meta_store_test.rb:5-355`) is `include`d into the `Heap` (`:366`), `Disk`
@@ -272,8 +272,10 @@ TS port skips them the same way when no memcached server answers at
 (`.github/workflows/ci.yml`), and adding one is not part of this RFC.
 
 `test/test_helper.rb` (218 lines) is the harness every context test uses:
-`setup_cache_context`, `respond_with`, `cache_config`, `get`/`head`/`post`,
-`create_temp_directory`. It is ported once, in `port-rack-cache-context`.
+`setup_cache_context`, `respond_with`, `cache_config`, `get`/`head`/`post`
+(`CacheContextHelpers`, `:78-187`). It is ported once, in
+`port-rack-cache-context-test-harness`, with two smoke cases. Its temp-dir
+helpers (`:190-218`) land earlier, with `port-rack-cache-disk-stores`.
 
 ### Tooling enrollment
 
@@ -354,8 +356,9 @@ The same registration points RFC 0137 enumerated, each already carrying
    key, entity store), then `port-rack-cache-disk-stores`, then
    `port-rack-cache-storage`, then `port-rack-cache-memcache-stores`.
 6. **Middleware.** `port-rack-cache-options` (deps: key, storage), then
-   `port-rack-cache-context` (deps: options, response, meta store), then its
-   three test stories, which can run in parallel:
+   `port-rack-cache-context` (deps: options, response, meta store), then
+   `port-rack-cache-context-test-harness`, then three test stories, which can
+   run in parallel:
    `port-rack-cache-context-test-pass-and-revalidate`,
    `port-rack-cache-context-test-fetch-and-freshness` and
    `port-rack-cache-context-test-validation-and-vary`.
@@ -370,7 +373,7 @@ vendor → skeleton → enroll ─┬→ cache-control/request/headers → respo
                   └→ ci     ├→ key ──────────────────────────────────────┤
                             └→ entity-store base/heap/noop ──────────────┴→ meta-store base/heap
                                 → disk → storage ─┬→ memcache
-                                                  ├→ options → context → 3 × context tests
+                                                  ├→ options → context → harness → 3 × context tests
                                                   └→ [0164] rails meta/entity stores
                                                         → [0142] default middleware stack (also deps: context)
 ```

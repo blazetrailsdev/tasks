@@ -7,7 +7,7 @@ cluster: null
 packages: ["rack-cache"]
 deps: ["port-rack-cache-cache-control-request-and-headers"]
 deps-rfc: []
-est-loc: 420
+est-loc: 520
 priority: 30
 pr: null
 claim: null
@@ -49,9 +49,11 @@ spelling.
 
 `date`, `expires` and `last_modified` parse HTTP dates (`Time.httpdate`).
 `now` is a wall-clock `Time`. Use the trails `Time` / `httpdate` ports that
-`packages/rack/src/conditional-get.ts` already uses, not `Date.parse`. The
-suite stubs the clock, so check how `test/response_test.rb` freezes `now` before
-choosing the seam.
+`packages/rack/src/conditional-get.ts` already uses, not `Date.parse`. The suite
+does not stub the clock. It builds second-truncated fixtures with
+`Time.httpdate(Time.now.httpdate)` and one hour either side
+(`test/response_test.rb:4-9`), so `httpdate` must round-trip at one-second
+resolution.
 
 Tests: `test/response_test.rb` (215 lines, 37 cases) →
 `packages/rack-cache/src/response.test.ts`.
