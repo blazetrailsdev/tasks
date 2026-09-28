@@ -1,6 +1,6 @@
 ---
 title: "GeneratedAttribute.dangerous_name? asks ActiveRecord::Base, not a hardcoded set that rejects type"
-status: ready
+status: in-progress
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8198
+claim: "2026-09-27T23:04:27Z"
+assignee: "engine-called-from-never-seated"
 blocked-by: null
 closed-reason: null
 ---

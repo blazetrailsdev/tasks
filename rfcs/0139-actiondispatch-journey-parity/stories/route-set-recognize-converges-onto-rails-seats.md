@@ -1,6 +1,6 @@
 ---
 title: "route-set-recognize-converges-onto-rails-seats"
-status: in-progress
+status: done
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null

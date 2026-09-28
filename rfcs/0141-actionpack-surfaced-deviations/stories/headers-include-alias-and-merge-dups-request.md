@@ -1,7 +1,7 @@
 ---
 title: "Headers lacks the include? alias and merge builds a fresh Request instead of dup"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "converge-metal-status-setter-onto-response-status"
-status: ready
-updated: 2026-09-26
+status: claimed
+updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-27T23:51:25Z"
+assignee: "converge-metal-status-setter-onto-response-status"
 blocked-by: null
 closed-reason: null
 ---

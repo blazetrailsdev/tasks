@@ -1,7 +1,7 @@
 ---
 title: "Port url_for_integration_test.rb's 87-case each_with_index table"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

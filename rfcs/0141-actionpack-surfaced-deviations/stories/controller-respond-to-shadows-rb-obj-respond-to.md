@@ -1,6 +1,6 @@
 ---
 title: "controller-respond-to-shadows-rb-obj-respond-to"
-status: draft
+status: claimed
 updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-27T23:57:35Z"
+assignee: "abstract-normalize-render-self-dispatches-process-variant"
 blocked-by: null
 closed-reason: null
 ---

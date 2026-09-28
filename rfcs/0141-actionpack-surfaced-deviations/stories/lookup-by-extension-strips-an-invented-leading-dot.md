@@ -1,7 +1,7 @@
 ---
 title: "Mime::Type.lookup_by_extension strips an invented leading dot"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "A controller's urlFor reaches the url_helpers module singleton instead of ActionDispatch::Routing::UrlFor#url_for"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

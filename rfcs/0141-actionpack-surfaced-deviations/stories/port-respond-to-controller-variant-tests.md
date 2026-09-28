@@ -1,6 +1,6 @@
 ---
 title: "Port Rails' respond_to_test variant arms (inline, block, any) as controller tests"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

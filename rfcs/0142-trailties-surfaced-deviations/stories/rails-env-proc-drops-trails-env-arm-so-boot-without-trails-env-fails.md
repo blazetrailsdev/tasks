@@ -1,6 +1,6 @@
 ---
 title: "RAILS_ENV() drops the Rails.env arm, so booting an app without TRAILS_ENV resolves default_env"
-status: ready
+status: in-progress
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: boot
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8201
+claim: "2026-09-27T23:44:14Z"
+assignee: "migration-generators-bypass-migration-template"
 blocked-by: null
 closed-reason: null
 ---

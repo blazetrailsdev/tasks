@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Base.templateResolver / _resolveTemplate has no Rails counterpart"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

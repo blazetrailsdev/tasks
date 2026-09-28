@@ -1,6 +1,6 @@
 ---
 title: "route-set-recognize-routing-test-rewrite-and-delete"
-status: ready
+status: in-progress
 updated: 2026-09-27
 rfc: "0139-actiondispatch-journey-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8199
+claim: "2026-09-27T23:11:18Z"
+assignee: "route-set-recognize-routing-test-rewrite-and-delete"
 blocked-by: null
 closed-reason: null
 ---

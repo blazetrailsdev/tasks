@@ -1,7 +1,7 @@
 ---
 title: "Mapper route DSL validates on: but never dispatches it (decomposed_match's send(on) arm)"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "ExceptionWrapper#backtrace is rebuilt per read and stringifies non-template Locations"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

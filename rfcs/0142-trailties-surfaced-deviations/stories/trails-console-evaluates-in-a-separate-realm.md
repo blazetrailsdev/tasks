@@ -1,6 +1,6 @@
 ---
 title: "trails console evaluates each line in a new vm realm, so where({...}) rejects hash literals"
-status: ready
+status: in-progress
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: boot
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8200
+claim: "2026-09-27T23:46:19Z"
+assignee: "scaffold-views-skip-empty-directory"
 blocked-by: null
 closed-reason: null
 ---

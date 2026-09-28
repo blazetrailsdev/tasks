@@ -1,6 +1,6 @@
 ---
 title: "ControllerGenerator routes use a dasherized segment where Rails uses file_name"
-status: claimed
+status: in-progress
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#8197
 claim: "2026-09-27T22:39:57Z"
 assignee: "map-rubocop-to-eslint-in-token-renames"
 blocked-by: null

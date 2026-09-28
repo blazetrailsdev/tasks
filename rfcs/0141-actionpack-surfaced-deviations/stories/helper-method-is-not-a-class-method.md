@@ -1,6 +1,6 @@
 ---
 title: "helper_method is a free function, so Cookies' defined?(helper_method) guard is unportable and API omits Cookies"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

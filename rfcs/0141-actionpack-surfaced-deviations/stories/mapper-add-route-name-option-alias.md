@@ -1,7 +1,7 @@
 ---
 title: "Mapper#addRoute accepts an invented name: alias for :as (mapper.rb:2052-2056)"
-status: draft
-updated: 2026-09-26
+status: closed
+updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8160 (70c3e661ec, Mapper#add_route converges on path_for_action/name_for_action): Mapper#addRoute (routing/mapper.ts:1754-1763 on origin/main 114cf8364c) reads only options.as via fetch(options,'as',true) + nameForAction, mirroring mapper.rb:2052-2056. git grep 'options.name' / 'asGiven' in routing/mapper.ts returns nothing."
 ---
 
 ## Context

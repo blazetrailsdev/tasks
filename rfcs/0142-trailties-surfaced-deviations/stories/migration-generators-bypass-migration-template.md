@@ -1,6 +1,6 @@
 ---
 title: "Migration generators write via createFile and branch on revoke instead of migration_template/CreateMigration"
-status: ready
+status: in-progress
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8201
+claim: "2026-09-27T23:44:14Z"
+assignee: "migration-generators-bypass-migration-template"
 blocked-by: null
 closed-reason: null
 ---

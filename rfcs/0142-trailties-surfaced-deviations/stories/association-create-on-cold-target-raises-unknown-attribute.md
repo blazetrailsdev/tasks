@@ -1,6 +1,6 @@
 ---
 title: "owner.assoc.createBang on a not-yet-reflected target model raises UnknownAttributeError"
-status: claimed
+status: in-progress
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: boot
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8197
 claim: "2026-09-27T22:39:57Z"
 assignee: "map-rubocop-to-eslint-in-token-renames"
 blocked-by: null

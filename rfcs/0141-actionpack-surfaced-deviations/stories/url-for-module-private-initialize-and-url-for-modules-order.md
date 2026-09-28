@@ -1,6 +1,6 @@
 ---
 title: "UrlFor module: private _generate_paths_by_default and _url_for_modules ancestry order"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

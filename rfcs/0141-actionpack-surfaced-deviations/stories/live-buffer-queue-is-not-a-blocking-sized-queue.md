@@ -1,6 +1,6 @@
 ---
 title: "Live::Buffer's queue is a plain array: no SizedQueue, monitor or condition variable"
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

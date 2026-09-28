@@ -1,6 +1,6 @@
 ---
 title: "Rails::BacktraceCleaner reads Rails.root lazily in its filter instead of an invented setRoot (backtrace_cleaner.rb:14-16)"
-status: claimed
+status: in-progress
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8197
 claim: "2026-09-27T22:39:57Z"
 assignee: "map-rubocop-to-eslint-in-token-renames"
 blocked-by: null

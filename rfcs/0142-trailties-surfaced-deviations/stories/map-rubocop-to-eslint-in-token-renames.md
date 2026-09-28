@@ -1,6 +1,6 @@
 ---
 title: "Map `rubocop` → `eslint` in the parity token renames"
-status: claimed
+status: in-progress
 updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: generators
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: null
+pr: trails#8197
 claim: "2026-09-27T22:39:57Z"
 assignee: "map-rubocop-to-eslint-in-token-renames"
 blocked-by: null

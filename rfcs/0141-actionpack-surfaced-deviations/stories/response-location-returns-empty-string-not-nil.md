@@ -1,6 +1,6 @@
 ---
 title: 'Response#location returns "" where Rails'' get_header returns nil'
-status: draft
+status: ready
 updated: 2026-09-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
