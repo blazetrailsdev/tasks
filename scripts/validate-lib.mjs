@@ -127,6 +127,148 @@ export function checkDepGraph({ storyIds, rfcIds, depsOf, depsRfcOf, seeds }) {
 // settled.
 const isTerminal = (status) => status === "done" || status === "closed";
 
+// Every rule that judges one story file on its own, given its parent RFC and
+// whether its id is already taken elsewhere. Shared by the whole-tree
+// validate() below and validateStoryFile(), the CLI's authoring guard, so the
+// guard runs exactly the rules CI runs.
+function checkStory(s, { parent, duplicate, err }) {
+  if (s.lines > MAX_LINES) err(s.file, `exceeds ${MAX_LINES}-line cap (${s.lines})`);
+  if (duplicate) err(s.file, `duplicate story id "${s.id}"`);
+  const fm = s.frontmatter ?? {};
+  for (const key of ["title", "status", "rfc", "cluster", "deps", "est-loc", "claim"]) {
+    if (fm[key] === undefined) err(s.file, `missing required frontmatter: ${key}`);
+  }
+  // claim must be the unclaimed sentinel (null) or a claim timestamp (string).
+  // Absence is caught above; a present-but-mistyped claim would make the CLI's
+  // claimState misread the story (a missing claim reads as already-claimed).
+  if (fm.claim !== undefined && fm.claim !== null && typeof fm.claim !== "string") {
+    err(s.file, `claim must be null or a timestamp string`);
+  }
+  if (fm.status && !STORY_STATUSES.includes(fm.status)) {
+    err(s.file, `invalid status "${fm.status}" — expected one of ${STORY_STATUSES.join(", ")}`);
+  }
+  if (fm.rfc && fm.rfc !== s.rfc)
+    err(s.file, `rfc field "${fm.rfc}" must match parent dir "${s.rfc}"`);
+  if (parent && fm.cluster) {
+    const clusters = parent.frontmatter?.clusters ?? [];
+    if (!clusters.includes(fm.cluster)) {
+      err(
+        s.file,
+        `cluster "${fm.cluster}" not declared in ${s.rfc}/README.md clusters: [${clusters.join(", ")}]`,
+      );
+    }
+  }
+  // packages: optional, and when present must name packages the parent RFC
+  // already declares — same containment rule as `cluster` above. Absent means
+  // "inherit the RFC's list" (that fallback is a display concern, not stored).
+  if (fm.packages !== undefined && fm.packages !== null) {
+    if (!Array.isArray(fm.packages)) err(s.file, `packages must be an array`);
+    else if (fm.packages.some((p) => typeof p !== "string"))
+      err(s.file, `packages must be an array of strings`);
+    else if (parent) {
+      const declared = parent.frontmatter?.packages ?? [];
+      for (const p of fm.packages) {
+        if (!declared.includes(p)) {
+          err(
+            s.file,
+            `package "${p}" not declared in ${s.rfc}/README.md packages: [${declared.join(", ")}]`,
+          );
+        }
+      }
+    }
+  }
+  if (fm.deps && !Array.isArray(fm.deps)) err(s.file, `deps must be an array`);
+  if (fm["deps-rfc"] && !Array.isArray(fm["deps-rfc"])) err(s.file, `deps-rfc must be an array`);
+  if (fm["est-loc"] !== null && fm["est-loc"] !== undefined) {
+    if (!Number.isInteger(fm["est-loc"])) err(s.file, `est-loc must be integer or null`);
+    else if (fm["est-loc"] > MAX_EST_LOC && !isTerminal(fm.status))
+      err(s.file, `est-loc ${fm["est-loc"]} exceeds the ${MAX_EST_LOC} LOC per-PR ceiling`);
+  }
+  // priority: optional integer; lower = higher ready-queue priority (absent = unprioritized)
+  if (fm.priority != null && (!Number.isInteger(fm.priority) || fm.priority < 0)) {
+    err(s.file, `priority must be a non-negative integer or absent`);
+  }
+  // pr: `repo#N` — the same shape as src/pr-ref.ts's PR_REF_RE. A bare
+  // number is refused: it cannot say which repo's PR it is.
+  if (
+    fm.pr != null &&
+    !(typeof fm.pr === "string" && /^[a-z0-9][a-z0-9._-]*#[1-9]\d*$/.test(fm.pr))
+  ) {
+    err(s.file, `pr must be repo#N, e.g. trails#7228 (got ${JSON.stringify(fm.pr)})`);
+  }
+  for (const key of ["created", "updated"]) {
+    if (fm[key] != null && !isYmdDate(fm[key])) {
+      err(s.file, `${key} must be a YYYY-MM-DD date (got ${JSON.stringify(fm[key])})`);
+    }
+  }
+
+  // Cross-field lifecycle invariants. Each field is already validated in
+  // isolation above (type/enum); here we enforce their *joint* validity so a
+  // hand-edit, crashed agent, or `--force` flip can't leave a story in a
+  // self-contradictory state that the per-field checks wave through. The
+  // shape mirrors exactly what the CLI's lifecycle verbs stamp (claim sets
+  // claim+assignee; in-progress/done stamp pr; block stamps blocked-by; the
+  // unblock path clears claim/assignee/pr/blocked-by back to the ready shape).
+  //
+  // `ready` with un-`done` deps is deliberately NOT an error: the CLI treats
+  // `ready` as "specified and open for pickup" and filters *claimability* by
+  // dep status (scripts/tasks/cli.ts `ready()`), so a ready story whose deps
+  // are still open is legal — it just won't surface in the ready queue yet.
+  // `done` with a null `pr` is likewise legal: a story can be completed
+  // before anyone reaches it (no PR of its own), the validate-clean path the
+  // CLI's done-without-PR escape hatch records.
+  switch (fm.status) {
+    case "draft":
+    case "ready":
+      for (const key of ["claim", "assignee", "pr"]) {
+        if (fm[key] != null)
+          err(
+            s.file,
+            `status: ${fm.status} must have null ${key} (got ${JSON.stringify(fm[key])})`,
+          );
+      }
+      break;
+    case "claimed":
+      if (!fm.claim) err(s.file, `status: claimed requires a claim timestamp`);
+      if (!fm.assignee) err(s.file, `status: claimed requires an assignee`);
+      break;
+    case "in-progress":
+      if (!fm.claim) err(s.file, `status: in-progress requires a claim timestamp`);
+      if (!fm.assignee) err(s.file, `status: in-progress requires an assignee`);
+      if (fm.pr == null) err(s.file, `status: in-progress requires a pr`);
+      break;
+    case "blocked":
+      if (!fm["blocked-by"]) err(s.file, `status: blocked requires blocked-by`);
+      break;
+    // `closed` is terminal for a story that will never ship code (superseded /
+    // abandoned / won't-do). Closing REQUIRES a reason, the way `blocked`
+    // requires `blocked-by`; the `closed-reason` cross-check below rejects it
+    // on any non-closed story.
+    case "closed":
+      if (!fm["closed-reason"]) err(s.file, `status: closed requires closed-reason`);
+      break;
+    // `done` is intentionally not shape-constrained: it may carry a full
+    // claim/assignee/pr (normally worked) or have them all null (completed
+    // before anyone reached it — the done-without-PR path), so requiring
+    // either would reject a legitimate state. Only `blocked-by` is policed
+    // for done, by the cross-status check below.
+    case "done":
+      break;
+  }
+  if (fm.status !== "blocked" && fm["blocked-by"] != null) {
+    err(
+      s.file,
+      `blocked-by is set but status is "${fm.status}" — only blocked stories carry blocked-by`,
+    );
+  }
+  if (fm.status !== "closed" && fm["closed-reason"] != null) {
+    err(
+      s.file,
+      `closed-reason is set but status is "${fm.status}" — only closed stories carry closed-reason`,
+    );
+  }
+}
+
 export function validate({ rfcs, stories }) {
   const errors = [];
   const err = (file, msg) => errors.push(`${relPath(file)}: ${msg}`);
@@ -198,143 +340,8 @@ export function validate({ rfcs, stories }) {
       err(s.file, `failed to parse: ${s.error}`);
       continue;
     }
-    if (s.lines > MAX_LINES) err(s.file, `exceeds ${MAX_LINES}-line cap (${s.lines})`);
-    if (seenIds.has(s.id)) err(s.file, `duplicate story id "${s.id}"`);
+    checkStory(s, { parent: rfcById.get(s.rfc), duplicate: seenIds.has(s.id), err });
     seenIds.add(s.id);
-    const fm = s.frontmatter ?? {};
-    for (const key of ["title", "status", "rfc", "cluster", "deps", "est-loc", "claim"]) {
-      if (fm[key] === undefined) err(s.file, `missing required frontmatter: ${key}`);
-    }
-    // claim must be the unclaimed sentinel (null) or a claim timestamp (string).
-    // Absence is caught above; a present-but-mistyped claim would make the CLI's
-    // claimState misread the story (a missing claim reads as already-claimed).
-    if (fm.claim !== undefined && fm.claim !== null && typeof fm.claim !== "string") {
-      err(s.file, `claim must be null or a timestamp string`);
-    }
-    if (fm.status && !STORY_STATUSES.includes(fm.status)) {
-      err(s.file, `invalid status "${fm.status}" — expected one of ${STORY_STATUSES.join(", ")}`);
-    }
-    if (fm.rfc && fm.rfc !== s.rfc)
-      err(s.file, `rfc field "${fm.rfc}" must match parent dir "${s.rfc}"`);
-    const parent = rfcById.get(s.rfc);
-    if (parent && fm.cluster) {
-      const clusters = parent.frontmatter?.clusters ?? [];
-      if (!clusters.includes(fm.cluster)) {
-        err(
-          s.file,
-          `cluster "${fm.cluster}" not declared in ${s.rfc}/README.md clusters: [${clusters.join(", ")}]`,
-        );
-      }
-    }
-    // packages: optional, and when present must name packages the parent RFC
-    // already declares — same containment rule as `cluster` above. Absent means
-    // "inherit the RFC's list" (that fallback is a display concern, not stored).
-    if (fm.packages !== undefined && fm.packages !== null) {
-      if (!Array.isArray(fm.packages)) err(s.file, `packages must be an array`);
-      else if (fm.packages.some((p) => typeof p !== "string"))
-        err(s.file, `packages must be an array of strings`);
-      else if (parent) {
-        const declared = parent.frontmatter?.packages ?? [];
-        for (const p of fm.packages) {
-          if (!declared.includes(p)) {
-            err(
-              s.file,
-              `package "${p}" not declared in ${s.rfc}/README.md packages: [${declared.join(", ")}]`,
-            );
-          }
-        }
-      }
-    }
-    if (fm.deps && !Array.isArray(fm.deps)) err(s.file, `deps must be an array`);
-    if (fm["deps-rfc"] && !Array.isArray(fm["deps-rfc"])) err(s.file, `deps-rfc must be an array`);
-    if (fm["est-loc"] !== null && fm["est-loc"] !== undefined) {
-      if (!Number.isInteger(fm["est-loc"])) err(s.file, `est-loc must be integer or null`);
-      else if (fm["est-loc"] > MAX_EST_LOC && !isTerminal(fm.status))
-        err(s.file, `est-loc ${fm["est-loc"]} exceeds the ${MAX_EST_LOC} LOC per-PR ceiling`);
-    }
-    // priority: optional integer; lower = higher ready-queue priority (absent = unprioritized)
-    if (fm.priority != null && (!Number.isInteger(fm.priority) || fm.priority < 0)) {
-      err(s.file, `priority must be a non-negative integer or absent`);
-    }
-    // pr: `repo#N` — the same shape as src/pr-ref.ts's PR_REF_RE. A bare
-    // number is refused: it cannot say which repo's PR it is.
-    if (
-      fm.pr != null &&
-      !(typeof fm.pr === "string" && /^[a-z0-9][a-z0-9._-]*#[1-9]\d*$/.test(fm.pr))
-    ) {
-      err(s.file, `pr must be repo#N, e.g. trails#7228 (got ${JSON.stringify(fm.pr)})`);
-    }
-    for (const key of ["created", "updated"]) {
-      if (fm[key] != null && !isYmdDate(fm[key])) {
-        err(s.file, `${key} must be a YYYY-MM-DD date (got ${JSON.stringify(fm[key])})`);
-      }
-    }
-
-    // Cross-field lifecycle invariants. Each field is already validated in
-    // isolation above (type/enum); here we enforce their *joint* validity so a
-    // hand-edit, crashed agent, or `--force` flip can't leave a story in a
-    // self-contradictory state that the per-field checks wave through. The
-    // shape mirrors exactly what the CLI's lifecycle verbs stamp (claim sets
-    // claim+assignee; in-progress/done stamp pr; block stamps blocked-by; the
-    // unblock path clears claim/assignee/pr/blocked-by back to the ready shape).
-    //
-    // `ready` with un-`done` deps is deliberately NOT an error: the CLI treats
-    // `ready` as "specified and open for pickup" and filters *claimability* by
-    // dep status (scripts/tasks/cli.ts `ready()`), so a ready story whose deps
-    // are still open is legal — it just won't surface in the ready queue yet.
-    // `done` with a null `pr` is likewise legal: a story can be completed
-    // before anyone reaches it (no PR of its own), the validate-clean path the
-    // CLI's done-without-PR escape hatch records.
-    switch (fm.status) {
-      case "draft":
-      case "ready":
-        for (const key of ["claim", "assignee", "pr"]) {
-          if (fm[key] != null)
-            err(
-              s.file,
-              `status: ${fm.status} must have null ${key} (got ${JSON.stringify(fm[key])})`,
-            );
-        }
-        break;
-      case "claimed":
-        if (!fm.claim) err(s.file, `status: claimed requires a claim timestamp`);
-        if (!fm.assignee) err(s.file, `status: claimed requires an assignee`);
-        break;
-      case "in-progress":
-        if (!fm.claim) err(s.file, `status: in-progress requires a claim timestamp`);
-        if (!fm.assignee) err(s.file, `status: in-progress requires an assignee`);
-        if (fm.pr == null) err(s.file, `status: in-progress requires a pr`);
-        break;
-      case "blocked":
-        if (!fm["blocked-by"]) err(s.file, `status: blocked requires blocked-by`);
-        break;
-      // `closed` is terminal for a story that will never ship code (superseded /
-      // abandoned / won't-do). Closing REQUIRES a reason, the way `blocked`
-      // requires `blocked-by`; the `closed-reason` cross-check below rejects it
-      // on any non-closed story.
-      case "closed":
-        if (!fm["closed-reason"]) err(s.file, `status: closed requires closed-reason`);
-        break;
-      // `done` is intentionally not shape-constrained: it may carry a full
-      // claim/assignee/pr (normally worked) or have them all null (completed
-      // before anyone reached it — the done-without-PR path), so requiring
-      // either would reject a legitimate state. Only `blocked-by` is policed
-      // for done, by the cross-status check below.
-      case "done":
-        break;
-    }
-    if (fm.status !== "blocked" && fm["blocked-by"] != null) {
-      err(
-        s.file,
-        `blocked-by is set but status is "${fm.status}" — only blocked stories carry blocked-by`,
-      );
-    }
-    if (fm.status !== "closed" && fm["closed-reason"] != null) {
-      err(
-        s.file,
-        `closed-reason is set but status is "${fm.status}" — only closed stories carry closed-reason`,
-      );
-    }
     storyById.set(s.id, s);
   }
 
@@ -376,6 +383,43 @@ export function validate({ rfcs, stories }) {
       );
     }
   }
+
+  return { errors };
+}
+
+// validate()'s story rules, scoped to ONE story file: the guard `tasks new`
+// runs on the file it just wrote, before committing it, so a story that would
+// red `pnpm validate` on main is refused instead of pushed.
+//
+// `others` is every other story file as `{ id }` (loadAll's `unparsed`): the
+// duplicate-id and dep-reference checks need their ids, never their bodies,
+// which is what keeps this cheap next to a whole-tree validate(). Returns bare
+// messages — the caller knows which file they are about.
+export function validateStoryFile({ rfcs, story, others }) {
+  const errors = [];
+  const err = (_file, msg) => errors.push(msg);
+  if (story.error) {
+    err(story.file, `failed to parse: ${story.error}`);
+    return { errors };
+  }
+  const parent = rfcs.find((r) => r.dir === story.rfc && !r.error);
+  checkStory(story, { parent, duplicate: others.some((o) => o.id === story.id), err });
+
+  // A file no other story depends on cannot close a cycle, so walking only its
+  // own edges is complete; a self-dep is the one cycle it can form.
+  const deps = Array.isArray(story.frontmatter?.deps) ? story.frontmatter.deps : [];
+  const depsRfc = Array.isArray(story.frontmatter?.["deps-rfc"])
+    ? story.frontmatter["deps-rfc"]
+    : [];
+  const { refViolations, cycles } = checkDepGraph({
+    storyIds: new Set([story.id, ...others.map((o) => o.id)]),
+    rfcIds: new Set(rfcs.filter((r) => !r.error).map((r) => r.dir)),
+    depsOf: (id) => (id === story.id ? deps : []),
+    depsRfcOf: (id) => (id === story.id ? depsRfc : []),
+    seeds: [story.id],
+  });
+  for (const { dep, kind } of refViolations) err(story.file, `${kind} "${dep}" does not exist`);
+  for (const cycle of cycles) err(story.file, `dep cycle detected: ${cycle.join(" → ")}`);
 
   return { errors };
 }

@@ -135,3 +135,37 @@ export function setFrontmatterList(file: string, key: string, items: string[]): 
   }
   writeFileSync(file, open + lines.join("\n") + close + body);
 }
+
+// Appends items to a **list-valued** frontmatter key, keeping every existing
+// line — the RFC READMEs annotate their `packages:` / `clusters:` blocks with
+// indented `#` comments, which setFrontmatterList's rewrite would refuse. A
+// block list gains its new items after its last indented line; an inline flow
+// list (`packages: []`, `clusters: [a, b]`) is re-rendered as a block, since
+// the flow form has nowhere to put an item without re-quoting the others; an
+// absent key is appended to the frontmatter.
+export function appendFrontmatterListItems(file: string, key: string, items: string[]): void {
+  if (items.length === 0) return;
+  const { open, lines, close, body } = splitFrontmatter(file);
+  const added = items.map((it) => `  - ${JSON.stringify(it)}`);
+  const idx = lines.findIndex((l) => new RegExp(`^${key}:(\\s|$)`).test(l));
+  if (idx === -1) {
+    lines.push(`${key}:`, ...added);
+  } else {
+    const inline = lines[idx].slice(key.length + 1).trim();
+    if (inline.startsWith("[")) {
+      // Package and cluster names are bare scalars, so a split is a full parse.
+      const existing = inline
+        .replace(/^\[|\]$/g, "")
+        .split(",")
+        .map((it) => it.trim().replace(/^(["'])(.*)\1$/, "$2"))
+        .filter(Boolean)
+        .map((it) => `  - ${JSON.stringify(it)}`);
+      lines.splice(idx, 1, `${key}:`, ...existing, ...added);
+    } else {
+      let end = idx + 1;
+      while (end < lines.length && /^[ \t]/.test(lines[end])) end++;
+      lines.splice(end, 0, ...added);
+    }
+  }
+  writeFileSync(file, open + lines.join("\n") + close + body);
+}

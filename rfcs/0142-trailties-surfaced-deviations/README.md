@@ -10,6 +10,11 @@ packages:
   # The two encryption boot stories carried in at the sunset of
   # 0113-branch-and-guard-parity (2026-09-09) also touch activerecord/src/encryption.
   - "activerecord"
+  # The boot/generator stories whose fix lands in the `ar` CLI, the generated
+  # test_helper's ActiveSupport::TestCase, and actionpack's integration harness.
+  - "activerecord-cli"
+  - "activesupport"
+  - "actionpack"
 clusters:
   - "boot"
   - "generators"

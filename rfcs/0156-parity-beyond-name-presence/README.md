@@ -10,6 +10,8 @@ packages:
   - "activemodel"
   - "activesupport"
   - "arel"
+  # The parity tooling itself lives in trails' scripts/.
+  - "scripts"
 clusters:
   - "denominator"
   - "call-gate"

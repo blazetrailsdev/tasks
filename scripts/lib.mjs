@@ -47,12 +47,17 @@ export function parseFrontmatter(filePath) {
   };
 }
 
-export function loadAll() {
+// `rfcsRoot` lets a caller load a tree other than this checkout's (the CLI's
+// scratch worktree). `parseStory(file)` false skips parsing that story file:
+// it is listed in `unparsed` as `{ id, rfc, file }` instead of `stories`, which
+// is all the cross-story checks (duplicate ids, dep references) need of it.
+export function loadAll(rfcsRoot = RFCS_ROOT, { parseStory = () => true } = {}) {
   const rfcs = [];
   const stories = [];
-  for (const name of readdirSync(RFCS_ROOT)) {
+  const unparsed = [];
+  for (const name of readdirSync(rfcsRoot)) {
     if (!RFC_DIR_RE.test(name)) continue;
-    const rfcDir = join(RFCS_ROOT, name);
+    const rfcDir = join(rfcsRoot, name);
     if (!statSync(rfcDir).isDirectory()) continue;
     const readme = join(rfcDir, "README.md");
     let rfcEntry = null;
@@ -82,6 +87,10 @@ export function loadAll() {
       if (!STORY_FILE_RE.test(fname)) continue;
       const file = join(storiesDir, fname);
       const id = fname.slice(0, -3);
+      if (!parseStory(file)) {
+        unparsed.push({ id, rfc: name, file });
+        continue;
+      }
       try {
         const { frontmatter, body, lines } = parseFrontmatter(file);
         stories.push({ id, rfc: name, file, frontmatter, body, lines });
@@ -98,7 +107,7 @@ export function loadAll() {
       }
     }
   }
-  return { rfcs, stories };
+  return { rfcs, stories, unparsed };
 }
 
 export function firstHeading(body) {
