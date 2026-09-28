@@ -45,12 +45,16 @@ development environment — which only means anything once
 - The generated CI workflow's lint job runs ESLint with a GitHub-annotating
   formatter, gated on the skip flag, in the same position in the file as Rails'.
 - The generated dependency manifest declares ESLint (and the config package, if
-  the sibling story chose one) under the same skip gate, with a comment mirroring
-  Rails' "Omakase Ruby styling" line at the trails equivalent.
+  the sibling story chose one) under the same skip gate. Rails' "Omakase Ruby
+  styling" comment (`Gemfile.tt:64`) has no carrier: the manifest is
+  `package.json`, and JSON has no comment syntax.
 - The generated development environment carries the commented-out
-  `applyEslintAutocorrectAfterGenerateBang` line, and trails' test-app setup
-  strips it the way `abstract_unit.rb:151` does.
+  `applyEslintAutocorrectAfterGenerateBang` line. Stripping it from test apps the
+  way `abstract_unit.rb:151` does needs an isolation test-app builder, which is
+  story `isolation-test-app-builder-strips-eslint-autocorrect-line`.
 - Rails' `test_inclusion_of_rubocop` (`app_generator_test.rb:612-614`) and
   `test_rubocop_is_skipped_if_required` (`:618-623`) are ported with verbatim test
-  names.
+  names, as spelled by the sanctioned `rubocop` → `eslint` token rename
+  (`scripts/parity/conventions.ts:45-51`): "inclusion of eslint" and "eslint is
+  skipped if required".
 - Generating an app and running its own lint script passes end to end.
