@@ -1,6 +1,6 @@
 ---
 title: "Port integration_test.rb's Session and IntegrationProcessTest tests"
-status: ready
+status: done
 updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8227
+claim: "2026-09-28T18:04:39Z"
+assignee: "port-integration-test-session-and-process"
 blocked-by: null
 closed-reason: null
 ---

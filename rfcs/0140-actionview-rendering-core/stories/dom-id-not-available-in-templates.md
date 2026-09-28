@@ -1,6 +1,6 @@
 ---
 title: "dom_id / dom_class are not reachable from templates (FormHelper does not include RecordIdentifier)"
-status: ready
+status: done
 updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8225
+claim: "2026-09-28T18:12:29Z"
+assignee: "dom-id-not-available-in-templates"
 blocked-by: null
 closed-reason: null
 ---

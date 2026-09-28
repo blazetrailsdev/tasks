@@ -1,6 +1,6 @@
 ---
 title: "Generated CI workflow and manifest run ESLint, not RuboCop"
-status: claimed
+status: in-progress
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: generators
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 140
 priority: 3
-pr: null
+pr: trails#8226
 claim: "2026-09-28T17:56:44Z"
 assignee: "generated-ci-and-manifest-run-eslint-not-rubocop"
 blocked-by: null

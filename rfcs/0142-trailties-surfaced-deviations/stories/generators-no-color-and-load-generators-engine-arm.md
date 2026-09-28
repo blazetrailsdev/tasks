@@ -1,6 +1,6 @@
 ---
 title: "generators-no-color-and-load-generators-engine-arm"
-status: draft
+status: closed
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of generators-configure-bang-api-only-no-color-fallbacks-templates, which stays open for no_color! and the ENGINE_PATH arm (trails#8226 review)"
 ---
 
 # Generators: no_color! and load_generators' ENGINE_PATH arm

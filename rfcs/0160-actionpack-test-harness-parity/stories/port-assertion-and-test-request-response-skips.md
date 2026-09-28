@@ -1,6 +1,6 @@
 ---
 title: "Port the skipped assertion, TestRequest, TestResponse and runner tests"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "engine-config-constructed-with-found-root"
-status: claimed
+status: ready
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 4
 pr: null
-claim: "2026-09-28T17:56:44Z"
-assignee: "generated-ci-and-manifest-run-eslint-not-rubocop"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

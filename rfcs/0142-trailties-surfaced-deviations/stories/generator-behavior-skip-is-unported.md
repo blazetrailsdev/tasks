@@ -1,6 +1,6 @@
 ---
 title: "Thor's behavior: :skip is unported on GeneratorBase"
-status: claimed
+status: in-progress
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 6
-pr: null
+pr: trails#8226
 claim: "2026-09-28T17:56:44Z"
 assignee: "generated-ci-and-manifest-run-eslint-not-rubocop"
 blocked-by: null
