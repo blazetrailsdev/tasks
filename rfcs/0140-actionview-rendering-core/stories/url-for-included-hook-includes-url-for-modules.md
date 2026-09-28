@@ -58,9 +58,12 @@ In trails:
 - Including `routes.urlHelpers()` into a class that answers `_urlForModules`
   includes `RoutingUrlFor` into it, per `url_for.rb:108`, through the
   `included` symbol hook from `@blazetrails/ruby-compat`.
-- A controller's view context class answers `urlFor(":back")` and
-  `urlFor({ controller, action })` through `RoutingUrlFor`, with `onlyPath`
-  defaulting to true (`routing_url_for.rb:139-143`).
+- A controller's view context class answers `urlFor({ controller, action })`
+  through `RoutingUrlFor`, with `onlyPath` defaulting to true
+  (`routing_url_for.rb:139-143`). Its `urlFor(":back")` from a dispatched
+  controller is blocked by the `respond_to` / `respond_to?` spelling collision
+  in `rbObjRespondTo`, and is an acceptance criterion of
+  `controller-respond-to-shadows-rb-obj-respond-to`.
 - The `UrlHelperTest` cases that include `routes.url_helpers`
   (`actionview/test/template/url_helper_test.rb:23-50`) can build their host
   that way.
