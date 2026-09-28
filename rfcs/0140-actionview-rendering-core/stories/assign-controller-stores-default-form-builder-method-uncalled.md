@@ -1,6 +1,6 @@
 ---
 title: "assign-controller-stores-default-form-builder-method-uncalled"
-status: ready
+status: in-progress
 updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8230
+claim: "2026-09-28T20:41:37Z"
+assignee: "assign-controller-stores-default-form-builder-method-uncalled"
 blocked-by: null
 closed-reason: null
 ---

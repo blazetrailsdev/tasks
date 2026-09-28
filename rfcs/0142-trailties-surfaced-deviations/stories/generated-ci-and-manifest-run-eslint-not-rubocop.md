@@ -1,6 +1,6 @@
 ---
 title: "Generated CI workflow and manifest run ESLint, not RuboCop"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: generators

@@ -1,7 +1,7 @@
 ---
 title: "Schema-cache dump restores the Column subclass without a class coder key"
-status: draft
-updated: 2026-09-16
+status: in-progress
+updated: 2026-09-28
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8229
+claim: "2026-09-28T20:54:47Z"
+assignee: "schema-cache-dump-restores-column-subclass-without-a-class-key"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Thor's behavior: :skip is unported on GeneratorBase"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

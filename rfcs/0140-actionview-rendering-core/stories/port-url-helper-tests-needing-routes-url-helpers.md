@@ -1,7 +1,7 @@
 ---
 title: "Port the UrlHelperTest cases that need include routes.url_helpers and the Workshop/Session models"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["url-for-included-hook-includes-url-for-modules"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8230
+claim: "2026-09-28T20:41:37Z"
+assignee: "assign-controller-stores-default-form-builder-method-uncalled"
 blocked-by: null
 closed-reason: null
 ---

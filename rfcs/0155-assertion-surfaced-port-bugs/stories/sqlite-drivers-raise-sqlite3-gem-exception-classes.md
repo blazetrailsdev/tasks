@@ -1,6 +1,6 @@
 ---
 title: "SQLite drivers raise the sqlite3 gem's exception classes (status2klass)"
-status: ready
+status: in-progress
 updated: 2026-09-28
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8231
+claim: "2026-09-28T20:44:11Z"
+assignee: "psych-object-protocol-for-record-yaml-round-trip"
 blocked-by: null
 closed-reason: null
 ---
