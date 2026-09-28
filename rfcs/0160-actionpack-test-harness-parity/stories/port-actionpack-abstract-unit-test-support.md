@@ -1,7 +1,7 @@
 ---
 title: "Port the core of actionpack's test/abstract_unit.rb as the shared test harness"
-status: draft
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8210
+claim: "2026-09-28T02:14:25Z"
+assignee: "integration-session-delegated-readers-and-host-bang"
 blocked-by: null
 closed-reason: null
 ---

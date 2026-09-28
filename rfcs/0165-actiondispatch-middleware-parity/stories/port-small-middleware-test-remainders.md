@@ -1,7 +1,7 @@
 ---
 title: "Port the small middleware test remainders and converge their hand-rolled apps"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: ["actionpack"]

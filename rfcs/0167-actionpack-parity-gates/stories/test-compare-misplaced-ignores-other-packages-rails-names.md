@@ -1,7 +1,7 @@
 ---
 title: "Stop reporting a test as misplaced when its name belongs to another package's Rails file"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]

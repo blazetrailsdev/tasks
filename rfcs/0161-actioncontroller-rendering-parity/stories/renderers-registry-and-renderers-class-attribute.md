@@ -1,7 +1,7 @@
 ---
 title: "Port Renderers.add / remove / use_renderers and the _renderers class attribute"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: ["actionpack"]

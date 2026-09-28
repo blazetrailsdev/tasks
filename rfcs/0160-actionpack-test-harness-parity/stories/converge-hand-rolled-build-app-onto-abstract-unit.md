@@ -1,7 +1,7 @@
 ---
 title: "Converge the hand-rolled test apps onto the abstract_unit harness"
-status: draft
-updated: 2026-09-27
+status: ready
+updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: ["actionpack"]

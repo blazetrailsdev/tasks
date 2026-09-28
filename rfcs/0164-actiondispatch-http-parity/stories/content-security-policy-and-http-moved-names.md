@@ -1,7 +1,7 @@
 ---
 title: "Remove ContentSecurityPolicy's invented readers and the HTTP files' moved names"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: ["actionpack"]

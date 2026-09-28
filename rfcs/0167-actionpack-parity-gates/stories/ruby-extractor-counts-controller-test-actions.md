@@ -1,7 +1,7 @@
 ---
 title: "Stop counting controller actions named test_* as Rails tests"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]

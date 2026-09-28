@@ -1,6 +1,6 @@
 ---
 title: "ActionController render(stream: true) is ignored — Streaming#_process_options unported"
-status: ready
+status: in-progress
 updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8209
+claim: "2026-09-28T02:00:53Z"
+assignee: "authentication-generator-cookie-session-end-to-end"
 blocked-by: null
 closed-reason: null
 ---

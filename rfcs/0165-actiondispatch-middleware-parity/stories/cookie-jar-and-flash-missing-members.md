@@ -1,7 +1,7 @@
 ---
 title: "Port CookieJar's and Flash's missing members and seat the Flash class"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: ["actionpack"]

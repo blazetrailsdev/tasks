@@ -1,7 +1,7 @@
 ---
 title: "Remove the invented names on action-controller's barrel, header-utils and params-wrapper root"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]

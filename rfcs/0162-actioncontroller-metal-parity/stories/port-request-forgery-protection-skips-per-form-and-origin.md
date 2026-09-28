@@ -1,7 +1,7 @@
 ---
 title: "Port request_forgery_protection_test.rb's skipped shared-module and strategy tests"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]

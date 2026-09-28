@@ -1,7 +1,7 @@
 ---
 title: "Port new_base bare_metal, base and middleware tests"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]

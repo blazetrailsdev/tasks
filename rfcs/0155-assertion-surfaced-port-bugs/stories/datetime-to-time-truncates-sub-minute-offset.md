@@ -1,7 +1,7 @@
 ---
 title: "datetime-to-time-truncates-sub-minute-offset"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8206
+claim: "2026-09-28T02:09:50Z"
+assignee: "accepts-nested-attributes-for-package-export-has-no-receiver"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Resolve a bare constant in the API extractor lexically, not by first match"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]

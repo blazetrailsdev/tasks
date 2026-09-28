@@ -1,7 +1,7 @@
 ---
 title: "Port live_stream_test.rb's SSE, stream-write and send_stream tests (lines 1-527)"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: ["actionpack"]

@@ -1,7 +1,7 @@
 ---
 title: "Port AssetTagHelper#preload_link_tag and resolve_link_as"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: ["actionview"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8208
+claim: "2026-09-28T02:24:22Z"
+assignee: "asset-tag-helper-javascript-include-tag"
 blocked-by: null
 closed-reason: null
 ---

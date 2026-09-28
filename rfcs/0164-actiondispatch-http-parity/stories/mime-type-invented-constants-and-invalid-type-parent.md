@@ -1,7 +1,7 @@
 ---
 title: "Remove Mime's invented constants and hooks; seat InvalidType under InvalidMimeType"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: ["actionpack"]

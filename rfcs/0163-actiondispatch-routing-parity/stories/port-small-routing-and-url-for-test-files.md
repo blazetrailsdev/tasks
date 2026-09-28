@@ -1,7 +1,7 @@
 ---
 title: "Port the one-test routing files and url_for_test.rb's 6 skips"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]

@@ -1,7 +1,7 @@
 ---
 title: "Fold ConditionalGet's and the etag modules' invented helpers into Rails' shape"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]

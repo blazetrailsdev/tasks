@@ -1,7 +1,7 @@
 ---
 title: "Enroll image_tag's Rails tables and port AssetTagHelper#picture_tag"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: ["actionview"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8207
+claim: "2026-09-28T02:16:48Z"
+assignee: "asset-tag-helper-image-tag-tables-and-picture-tag"
 blocked-by: null
 closed-reason: null
 ---

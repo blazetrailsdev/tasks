@@ -1,7 +1,7 @@
 ---
 title: "Port routing_assertions_test.rb and Assertions::RoutingAssertions#with_routing"
-status: draft
-updated: 2026-09-27
+status: ready
+updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: ["actionpack"]

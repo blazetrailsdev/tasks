@@ -1,7 +1,7 @@
 ---
 title: "Port integration_test.rb's application, URL-option and request-encoder tests"
-status: draft
-updated: 2026-09-27
+status: ready
+updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: ["actionpack"]

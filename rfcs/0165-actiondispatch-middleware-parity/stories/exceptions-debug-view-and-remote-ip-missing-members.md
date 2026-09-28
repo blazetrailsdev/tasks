@@ -1,7 +1,7 @@
 ---
 title: "Port the exception middleware's missing members, DebugView's parent and three arity rows"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: ["actionpack"]

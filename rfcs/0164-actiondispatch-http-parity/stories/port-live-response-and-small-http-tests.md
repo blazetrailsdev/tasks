@@ -1,7 +1,7 @@
 ---
 title: "Port live_response_test.rb and the remaining single HTTP tests"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: ["actionpack"]

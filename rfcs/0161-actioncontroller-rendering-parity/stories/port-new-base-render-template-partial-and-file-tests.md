@@ -1,7 +1,7 @@
 ---
 title: "Port new_base render_template, render_partial, render_file and render tests"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: ["actionpack"]

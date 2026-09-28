@@ -1,7 +1,7 @@
 ---
 title: "Port AssetTagHelper#auto_discovery_link_tag and #favicon_link_tag"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: ["actionview"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8204
+claim: "2026-09-28T02:07:53Z"
+assignee: "asset-tag-helper-auto-discovery-and-favicon-link-tags"
 blocked-by: null
 closed-reason: null
 ---

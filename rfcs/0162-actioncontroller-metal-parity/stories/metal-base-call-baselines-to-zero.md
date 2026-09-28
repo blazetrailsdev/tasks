@@ -1,7 +1,7 @@
 ---
 title: "Converge ActionController::Base's 18 call baseline rows"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]

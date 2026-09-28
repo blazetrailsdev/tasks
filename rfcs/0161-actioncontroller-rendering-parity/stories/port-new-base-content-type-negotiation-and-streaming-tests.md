@@ -1,7 +1,7 @@
 ---
 title: "Port new_base content_type, content_negotiation, render_implicit_action and render_streaming tests"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: ["actionpack"]

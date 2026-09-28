@@ -1,7 +1,7 @@
 ---
 title: "Re-describe screenshot_helper_test.rb under its Rails class and converge ScreenshotHelper's call rows"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
 packages: ["actionpack"]

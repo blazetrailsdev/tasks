@@ -1,7 +1,7 @@
 ---
 title: "Converge Response's invented iterators and buffer, and port its missing members"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: ["actionpack"]

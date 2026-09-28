@@ -1,7 +1,7 @@
 ---
 title: "Port mem_cache_store_test.rb once MemCacheStore descends from Rack::Session::Dalli"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: ["actionpack"]

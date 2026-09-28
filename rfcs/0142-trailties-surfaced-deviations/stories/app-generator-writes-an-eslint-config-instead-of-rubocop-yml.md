@@ -1,7 +1,7 @@
 ---
 title: "App generator writes an ESLint config where Rails writes .rubocop.yml"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: generators
 packages:
@@ -10,9 +10,9 @@ deps: [map-rubocop-to-eslint-in-token-renames]
 deps-rfc: []
 est-loc: 220
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8205
+claim: "2026-09-28T02:08:21Z"
+assignee: "app-base-declares-a-skip-eslint-class-option"
 blocked-by: null
 closed-reason: null
 ---

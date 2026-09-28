@@ -1,7 +1,7 @@
 ---
 title: "Port dispatch/routing_test.rb's skipped tests from TestRackAppRouteGeneration to the end"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]

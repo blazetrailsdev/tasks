@@ -1,7 +1,7 @@
 ---
 title: "Port render_test.rb's etag, render-class, head and http_cache_forever tests"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]

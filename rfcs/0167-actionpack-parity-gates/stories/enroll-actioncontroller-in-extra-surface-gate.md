@@ -1,7 +1,7 @@
 ---
 title: "Enroll actioncontroller in the extra-surface gate at novel 0"
 status: draft
-updated: 2026-09-27
+updated: 2026-09-28
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
