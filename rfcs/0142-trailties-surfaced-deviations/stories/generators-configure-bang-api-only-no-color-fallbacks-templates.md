@@ -35,6 +35,19 @@ Also unported: the `ENGINE_PATH` arm of `Rails::Command::Actions#load_generators
 `Rails::Generators.namespace = engine.railtie_namespace`, `engine.load_generators`);
 `loadGenerators` in `packages/trailties/src/command/actions.ts` ports the application arm only.
 
+### Progress (trails#8226)
+
+trails#8226 landed `apiOnlyBang`, `fallbacks`, `templatesPath`, `invokeFallbacksFor` and the
+three-argument `findByNamespace(name, base, context)`, and `configureBang` calls them in Rails'
+order. What remains:
+
+- `no_color!` (`generators.rb:70`, `command/behavior.rb:12-14`). This needs a Thor shell seat
+  (`Thor::Base.shell`, `Shell::Basic` / `Shell::Color`) that `GeneratorBase#say` / `#sayStatus`
+  actually color through. Today they take a color and ignore it.
+- The `ENGINE_PATH` arm of `loadGenerators` (`command/actions.rb:36-40`). This needs an
+  `ENGINE_ROOT` seat, the `Generators.namespace` mattr (`generators.rb:27`) and
+  `Engine#railtieNamespace`.
+
 ## Acceptance criteria
 
 - `Generators` gains `apiOnlyBang`, `noColorBang` (or its Thor-shell equivalent), `fallbacks()`
