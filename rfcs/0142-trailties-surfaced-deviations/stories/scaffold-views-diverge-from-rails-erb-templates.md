@@ -1,6 +1,6 @@
 ---
 title: "Scaffold views are hand-written HTML, not Rails' erb scaffold templates"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
