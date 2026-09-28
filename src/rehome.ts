@@ -29,6 +29,14 @@ import { editFrontmatter } from "./frontmatter.js";
 import { pushMain } from "./export.js";
 import { ingest } from "./ingest.js";
 import { closeRfcIfComplete } from "./rfc-close.js";
+import {
+  applyRfcWidening,
+  loadAll,
+  planRfcWidening,
+  stringList,
+  validateStoryFile,
+  type RfcWidening,
+} from "./authoring.js";
 
 export interface RehomeResult {
   moved: { id: string; from: string; to: string }[];
@@ -107,6 +115,8 @@ export async function rehome(
   }
   if (planned.length === 0) return { moved: [], committed: false };
 
+  const widening = assertMovesValidate(tasksDir, planned, toRfc);
+
   for (const m of planned) {
     mkdirSync(dirname(join(tasksDir, m.to)), { recursive: true });
     git(["mv", "--", m.from, m.to]);
@@ -116,6 +126,8 @@ export async function rehome(
     git(["add", "--", m.to]);
     console.log(`rehomed ${m.id} -> ${toRfc}`);
   }
+  const readme = applyRfcWidening(tasksDir, toRfc, widening);
+  if (readme) git(["add", "--", readme]);
 
   let committed = false;
   if (opts.commit !== false) {
@@ -136,4 +148,66 @@ export async function rehome(
   }
 
   return { moved: planned, committed };
+}
+
+/**
+ * `pnpm validate`'s story rules, run against each story as it will look under
+ * `toRfc` — BEFORE anything moves, so a refusal leaves the tree untouched and
+ * the batch stays all-or-nothing. The same guard `tasks new` runs
+ * (assertValidateClean); a rehome that skipped it moved a story whose
+ * `cluster:` its new RFC did not declare, and main went red.
+ *
+ * A moved story keeps its `cluster:` and `packages:`. A name some RFC already
+ * declares is widened onto the destination README, as `tasks new` does; the
+ * returned widening is applied once the moves are made.
+ */
+function assertMovesValidate(
+  tasksDir: string,
+  planned: { id: string; from: string; to: string }[],
+  toRfc: string,
+): RfcWidening {
+  const sources = new Set(planned.map((m) => join(tasksDir, m.from)));
+  const { rfcs, stories, unparsed } = loadAll(join(tasksDir, "rfcs"), {
+    parseStory: (file: string) => sources.has(file),
+  });
+  const widening = planRfcWidening(rfcs, toRfc, {
+    packages: stories.flatMap((s) => stringList(s.frontmatter?.packages)),
+    clusters: stories.flatMap((s) =>
+      typeof s.frontmatter?.cluster === "string" ? [s.frontmatter.cluster] : [],
+    ),
+  });
+  const widened = rfcs.map((r) =>
+    r.dir === toRfc && r.frontmatter
+      ? {
+          ...r,
+          frontmatter: {
+            ...r.frontmatter,
+            packages: [...stringList(r.frontmatter.packages), ...widening.packages],
+            clusters: [...stringList(r.frontmatter.clusters), ...widening.clusters],
+          },
+        }
+      : r,
+  );
+  const arrived = stories.map((s) => ({
+    ...s,
+    rfc: toRfc,
+    file: join(tasksDir, "rfcs", toRfc, "stories", `${s.id}.md`),
+    frontmatter: s.frontmatter && { ...s.frontmatter, rfc: toRfc },
+  }));
+
+  const failures = arrived.flatMap((story) =>
+    validateStoryFile({
+      rfcs: widened,
+      story,
+      others: [...unparsed, ...arrived.filter((o) => o !== story)],
+    }).errors.map((e) => `  rfcs/${toRfc}/stories/${story.id}.md: ${e}`),
+  );
+  if (failures.length > 0) {
+    console.error(
+      `error: after the move, these would fail \`pnpm validate\` — nothing rehomed.\n\n` +
+        failures.join("\n"),
+    );
+    throw new VerbExit(1);
+  }
+  return widening;
 }
