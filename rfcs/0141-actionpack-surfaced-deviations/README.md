@@ -20,7 +20,6 @@ related-rfcs:
   - "0142-trailties-surfaced-deviations"
   - "0139-actiondispatch-journey-parity"
   - "0140-actionview-rendering-core"
-priority: 2
 ---
 
 # RFC 0141 — actionpack surfaced deviations
