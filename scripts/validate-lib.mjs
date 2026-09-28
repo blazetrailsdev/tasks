@@ -128,12 +128,12 @@ export function checkDepGraph({ storyIds, rfcIds, depsOf, depsRfcOf, seeds }) {
 const isTerminal = (status) => status === "done" || status === "closed";
 
 // Every rule that judges one story file on its own, given its parent RFC and
-// whether its id is already taken elsewhere. Shared by the whole-tree
+// the file already holding its id, if another one does. Shared by the whole-tree
 // validate() below and validateStoryFile(), the CLI's authoring guard, so the
 // guard runs exactly the rules CI runs.
-function checkStory(s, { parent, duplicate, err }) {
+function checkStory(s, { parent, duplicateOf, err }) {
   if (s.lines > MAX_LINES) err(s.file, `exceeds ${MAX_LINES}-line cap (${s.lines})`);
-  if (duplicate) err(s.file, `duplicate story id "${s.id}"`);
+  if (duplicateOf) err(s.file, `duplicate story id "${s.id}" (already used by ${duplicateOf})`);
   const fm = s.frontmatter ?? {};
   for (const key of ["title", "status", "rfc", "cluster", "deps", "est-loc", "claim"]) {
     if (fm[key] === undefined) err(s.file, `missing required frontmatter: ${key}`);
@@ -334,14 +334,14 @@ export function validate({ rfcs, stories }) {
   }
 
   const storyById = new Map();
-  const seenIds = new Set();
+  const seenIds = new Map();
   for (const s of stories) {
     if (s.error) {
       err(s.file, `failed to parse: ${s.error}`);
       continue;
     }
-    checkStory(s, { parent: rfcById.get(s.rfc), duplicate: seenIds.has(s.id), err });
-    seenIds.add(s.id);
+    checkStory(s, { parent: rfcById.get(s.rfc), duplicateOf: seenIds.get(s.id), err });
+    if (!seenIds.has(s.id)) seenIds.set(s.id, relPath(s.file));
     storyById.set(s.id, s);
   }
 
@@ -391,7 +391,7 @@ export function validate({ rfcs, stories }) {
 // runs on the file it just wrote, before committing it, so a story that would
 // red `pnpm validate` on main is refused instead of pushed.
 //
-// `others` is every other story file as `{ id }` (loadAll's `unparsed`): the
+// `others` is every other story file as `{ id, rfc }` (loadAll's `unparsed`): the
 // duplicate-id and dep-reference checks need their ids, never their bodies,
 // which is what keeps this cheap next to a whole-tree validate(). Returns bare
 // messages — the caller knows which file they are about.
@@ -403,7 +403,9 @@ export function validateStoryFile({ rfcs, story, others }) {
     return { errors };
   }
   const parent = rfcs.find((r) => r.dir === story.rfc && !r.error);
-  checkStory(story, { parent, duplicate: others.some((o) => o.id === story.id), err });
+  const dup = others.find((o) => o.id === story.id);
+  const duplicateOf = dup && `rfcs/${dup.rfc}/stories/${dup.id}.md`;
+  checkStory(story, { parent, duplicateOf, err });
 
   // A file no other story depends on cannot close a cycle, so walking only its
   // own edges is complete; a self-dep is the one cycle it can form.

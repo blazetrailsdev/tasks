@@ -3,7 +3,7 @@
  * refuse whenever someone had that checkout on a branch, and agents fell back
  * to hand-authoring story files.
  */
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
@@ -28,6 +28,8 @@ clusters: ["boot"]
 
 # B
 `;
+
+const body = "## Context\n\nSomething at src/x.ts:1.\n\n## Acceptance criteria\n\n- It works.\n";
 
 let dir: string;
 let origin: string;
@@ -81,7 +83,7 @@ describe("newStory", () => {
   it("lands on origin/main even when the main checkout is on another branch", async () => {
     git(dir, ["checkout", "-q", "-b", "someone-elses-branch"]);
 
-    const r = await newStory("0001-a", "story-one", { title: "S1" });
+    const r = await newStory("0001-a", "story-one", { title: "S1", body });
 
     expect(r).toEqual({ path: "rfcs/0001-a/stories/story-one.md", committed: true });
     expect(git(origin, ["show", "main:rfcs/0001-a/stories/story-one.md"])).toContain('title: "S1"');
@@ -93,18 +95,41 @@ describe("newStory", () => {
   });
 
   it("refuses a slug that already exists on main", async () => {
-    await newStory("0001-a", "story-one");
-    await expect(newStory("0001-a", "story-one")).rejects.toMatchObject({ code: 1 });
+    await newStory("0001-a", "story-one", { body });
+    await expect(newStory("0001-a", "story-one", { body })).rejects.toMatchObject({ code: 1 });
+  });
+
+  it.each([
+    ["no body", undefined],
+    ["the template's bare headings", "## Context\n\n## Acceptance criteria\n\n## Verification\n"],
+  ])("refuses a story with %s", async (_what, empty) => {
+    await expect(newStory("0001-a", "story-one", { body: empty })).rejects.toMatchObject({
+      code: 1,
+    });
+    expect(git(origin, ["log", "--format=%s", "main"])).toBe("seed");
+  });
+
+  it("files a heading-only stub under allowEmpty", async () => {
+    const r = await newStory("0001-a", "story-one", { allowEmpty: true });
+    expect(r.committed).toBe(true);
   });
 
   it.each(["x", "zz", "Story-One", "single"])("refuses the degenerate slug %j", async (slug) => {
-    await expect(newStory("0001-a", slug)).rejects.toMatchObject({ code: 1 });
+    await expect(newStory("0001-a", slug, { body })).rejects.toMatchObject({ code: 1 });
     expect(git(origin, ["log", "--format=%s", "main"])).toBe("seed");
   });
 
   it("refuses a story that fails pnpm validate: an id another RFC already uses", async () => {
-    await newStory("0001-a", "story-one");
-    await expect(newStory("0002-b", "story-one")).rejects.toMatchObject({ code: 1 });
+    await newStory("0001-a", "story-one", { body });
+    const error = vi.spyOn(console, "error").mockImplementation(() => {});
+    try {
+      await expect(newStory("0002-b", "story-one", { body })).rejects.toMatchObject({ code: 1 });
+      expect(error.mock.calls.flat().join("\n")).toContain(
+        'duplicate story id "story-one" (already used by rfcs/0001-a/stories/story-one.md)',
+      );
+    } finally {
+      error.mockRestore();
+    }
     expect(git(origin, ["ls-tree", "-r", "--name-only", "main", "rfcs/0002-b"])).toBe(
       "rfcs/0002-b/README.md",
     );
@@ -112,7 +137,7 @@ describe("newStory", () => {
 
   it("refuses a story that fails pnpm validate: a dep that does not exist", async () => {
     await expect(
-      newStory("0002-b", "story-two", { deps: ["no-such-story"] }),
+      newStory("0002-b", "story-two", { deps: ["no-such-story"], body }),
     ).rejects.toMatchObject({ code: 1 });
     expect(git(origin, ["log", "--format=%s", "main"])).toBe("seed");
   });
@@ -121,6 +146,7 @@ describe("newStory", () => {
     const r = await newStory("0002-b", "story-two", {
       packages: ["activerecord", "ruby-compat"],
       cluster: "autoload",
+      body,
     });
 
     expect(r.committed).toBe(true);
@@ -139,7 +165,7 @@ describe("newStory", () => {
 
   it("refuses to widen onto the RFC a package no RFC declares", async () => {
     await expect(
-      newStory("0002-b", "story-two", { packages: ["rubby-compat"] }),
+      newStory("0002-b", "story-two", { packages: ["rubby-compat"], body }),
     ).rejects.toMatchObject({ code: 1 });
     expect(git(origin, ["log", "--format=%s", "main"])).toBe("seed");
   });

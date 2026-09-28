@@ -64,6 +64,15 @@ export interface NewStoryOpts {
 }
 
 /**
+ * Does `body` say nothing — absent, empty, or only headings? A title-only stub
+ * is a story someone has to re-derive from scratch later, and every stray
+ * `x.md` on main was one: the template's four empty headings and nothing else.
+ */
+export function isEmptyBody(body: string | undefined): boolean {
+  return (body ?? "").split("\n").every((line) => line.trim() === "" || /^#{1,6}\s/.test(line));
+}
+
+/**
  * Render a story file.
  *
  * Ported from the old CLI's buildStoryContent so new files are identical in
@@ -236,12 +245,20 @@ export function widenRfcDeclarations(
 export async function newStory(
   rfcSlug: string,
   storySlug: string,
-  opts: Partial<Omit<NewStoryOpts, "date">> & { commit?: boolean } = {},
+  opts: Partial<Omit<NewStoryOpts, "date">> & { commit?: boolean; allowEmpty?: boolean } = {},
 ): Promise<NewStoryResult> {
   if (!STORY_SLUG_RE.test(storySlug)) {
     console.error(
       `error: "${storySlug}" is not a story slug — a slug is kebab-case of at least two\n` +
         `  words (e.g. relation-or-drops-bind-params). Check the arguments: tasks new <rfc> <slug>.`,
+    );
+    throw new VerbExit(1);
+  }
+  if (!opts.allowEmpty && isEmptyBody(opts.body)) {
+    console.error(
+      `error: "${storySlug}" has no body — pass --body-file with a ## Context (the file:line\n` +
+        `  you are looking at) and at least one ## Acceptance criteria bullet. A heading-only\n` +
+        `  stub is re-derived from scratch by whoever picks it up; --allow-empty overrides.`,
     );
     throw new VerbExit(1);
   }

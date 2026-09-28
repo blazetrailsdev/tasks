@@ -55,7 +55,7 @@ Read:
 Author:
   new <rfc> <slug> [--title T] [--status S] [--cluster C] [--est-loc N]
                    [--body-file F]
-                   [--deps a,b] [--packages a,b] [--priority N] [--no-commit]
+                   [--deps a,b] [--packages a,b] [--priority N] [--no-commit] [--allow-empty]
 
 Mutate:
   claim <id...> [--assignee NAME]
@@ -285,6 +285,7 @@ async function main(): Promise<number> {
         deps: csv("deps"),
         packages: csv("packages"),
         commit: flags["no-commit"] !== true,
+        allowEmpty: flags["allow-empty"] === true,
       });
       console.log(
         r.committed
