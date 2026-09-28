@@ -31,10 +31,11 @@ instantiate `get_builder_class` (`app_generator.rb:606-608`: `::AppBuilder` if t
 one, else `Rails::AppBuilder`) and `public_send` if it responds. That is the documented extension
 point for overriding app generation.
 
-trails has none of it. Every builder method lives on `AppGenerator`
-(`packages/trailties/src/generators/app-generator.ts`: `eslint()`, `dockerfiles`, `databaseYml()`,
-`cifiles()`, ...) and each `create*` step calls it directly. Surfaced by review on trails#8226
-(`cifiles` added in the existing shape).
+trails#8226 ported the skeleton for `cifiles` only: `ActionMethods` (the `template`,
+`empty_directory` and `create_file` delegators), `AppBuilder#cifiles`, `AppBase#builder` /
+`#build`, and `AppGenerator#getBuilderClass`, which honors a `TopLevel.AppBuilder` override.
+Every other builder method (`eslint()`, `dockerfiles`, `databaseYml()`, ...) still lives on
+`AppGenerator` (`packages/trailties/src/generators/app-generator.ts`) and is called directly.
 
 ## Acceptance criteria
 
