@@ -19,7 +19,32 @@ import { Rfc } from "./models/index.js";
 import { resolveTasksDir } from "./db-path.js";
 import { VerbExit } from "./db.js";
 import { pushMain } from "./export.js";
+import { appendFrontmatterListItems } from "./frontmatter.js";
+// @ts-expect-error — ported JS module, no type declarations
+import { loadAll as loadAllUntyped } from "../scripts/lib.mjs";
+// @ts-expect-error — ported JS module, no type declarations
+import { validateStoryFile as validateStoryFileUntyped } from "../scripts/validate-lib.mjs";
 import type { StoryStatus } from "./models/index.js";
+
+interface LoadedRfc {
+  dir: string;
+  frontmatter: Record<string, unknown> | null;
+  error?: string;
+}
+interface LoadedStory {
+  id: string;
+  rfc: string;
+  file: string;
+}
+const loadAll = loadAllUntyped as (
+  rfcsRoot: string,
+  opts: { parseStory: (file: string) => boolean },
+) => { rfcs: LoadedRfc[]; stories: LoadedStory[]; unparsed: LoadedStory[] };
+const validateStoryFile = validateStoryFileUntyped as (args: {
+  rfcs: LoadedRfc[];
+  story: LoadedStory;
+  others: LoadedStory[];
+}) => { errors: string[] };
 
 /** Escape for a YAML double-quoted scalar: backslash first, then quote. */
 const MARKDOWNLINT = join(import.meta.dirname, "..", "node_modules", ".bin", "markdownlint-cli2");
@@ -36,6 +61,15 @@ export interface NewStoryOpts {
   priority?: number | null;
   body?: string;
   date: string;
+}
+
+/**
+ * Does `body` say nothing — absent, empty, or only headings? A title-only stub
+ * is a story someone has to re-derive from scratch later, and every stray
+ * `x.md` on main was one: the template's four empty headings and nothing else.
+ */
+export function isEmptyBody(body: string | undefined): boolean {
+  return (body ?? "").split("\n").every((line) => line.trim() === "" || /^#{1,6}\s/.test(line));
 }
 
 /**
@@ -110,6 +144,97 @@ export function assertMarkdownlintClean(abs: string, rel: string, cwd: string): 
 }
 
 /**
+ * `pnpm validate`'s story rules, run against the file just written — the same
+ * `validateStoryFile` that shares its rules with the whole-tree validate(), so
+ * this guard cannot drift from CI. Every `new:` commit that turned main red
+ * failed one of them: a duplicate `x` slug, a `--packages` entry the RFC does
+ * not declare. Same contract as assertMarkdownlintClean: `abs` is deleted and a
+ * `VerbExit` thrown on failure.
+ *
+ * Only `abs` is parsed. Every other story file is listed, not read, which is
+ * all the duplicate-id and dep-reference checks need.
+ */
+export function assertValidateClean(abs: string, rel: string, cwd: string): void {
+  const { rfcs, stories, unparsed } = loadAll(join(cwd, "rfcs"), {
+    parseStory: (file: string) => file === abs,
+  });
+  const [story] = stories;
+  const { errors } = story
+    ? validateStoryFile({ rfcs, story, others: unparsed })
+    : { errors: [`not a story file validate would load`] };
+  if (errors.length === 0) return;
+  rmSync(abs);
+  console.error(
+    `error: ${rel} fails \`pnpm validate\` — story not written.\n\n` +
+      errors.map((e) => `  ${e}`).join("\n"),
+  );
+  throw new VerbExit(1);
+}
+
+/**
+ * A slug is a story's permanent id and its filename. `x`, `zz` and `t` all
+ * reached main as stories — seven `x.md` alone, each a duplicate id that reds
+ * `pnpm validate` — and every real slug in the tree is kebab-case of at least
+ * two words, so a slug that is not is a typo, not a story.
+ */
+export const STORY_SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)+$/;
+
+/**
+ * Declare the story's `--packages` / `--cluster` on its RFC README when the RFC
+ * does not yet, rather than refuse. Both lists are markdown-owned, so widening
+ * them is ordinary authoring and lands in the same commit as the story;
+ * refusing would only push agents back to hand-authoring the file.
+ *
+ * Only a name some RFC already declares is widened: that is the repo's own
+ * package and cluster vocabulary, versioned with it. Anything else is a typo
+ * until proven otherwise, and is refused. Returns the README path when it
+ * changed.
+ */
+export function widenRfcDeclarations(
+  dir: string,
+  rfcSlug: string,
+  wanted: { packages: string[]; cluster: string | null },
+): string | null {
+  const { rfcs } = loadAll(join(dir, "rfcs"), { parseStory: () => false });
+  const rfc = rfcs.find((r) => r.dir === rfcSlug);
+  // An unparseable README is not ours to rewrite; assertValidateClean reports it.
+  if (!rfc || rfc.error || rfc.frontmatter == null) return null;
+  const listOf = (fm: Record<string, unknown> | null, key: string): string[] => {
+    const v = fm?.[key];
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
+  };
+  const missing = (key: string, names: string[]) => {
+    const declared = listOf(rfc.frontmatter, key);
+    const known = new Set(rfcs.flatMap((r) => listOf(r.frontmatter, key)));
+    const absent = [...new Set(names)].filter((n) => !declared.includes(n));
+    const unknown = absent.filter((n) => !known.has(n));
+    if (unknown.length > 0) {
+      console.error(
+        `error: ${key === "packages" ? "package" : "cluster"} ${unknown.map((n) => `"${n}"`).join(", ")} not declared by ${rfcSlug}, nor by any\n` +
+          `  other RFC — not a known name, so not widened onto the RFC. Check the spelling;\n` +
+          `  a genuinely new one is declared on rfcs/${rfcSlug}/README.md first.`,
+      );
+      throw new VerbExit(1);
+    }
+    return absent;
+  };
+  const packages = missing("packages", wanted.packages);
+  const clusters = missing("clusters", wanted.cluster != null ? [wanted.cluster] : []);
+  if (packages.length === 0 && clusters.length === 0) return null;
+
+  const readme = join("rfcs", rfcSlug, "README.md");
+  appendFrontmatterListItems(join(dir, readme), "packages", packages);
+  appendFrontmatterListItems(join(dir, readme), "clusters", clusters);
+  for (const [key, names] of [
+    ["packages", packages],
+    ["clusters", clusters],
+  ] as const) {
+    if (names.length > 0) console.log(`declared ${key} ${names.join(", ")} on ${readme}`);
+  }
+  return readme;
+}
+
+/**
  * Create a story: write the file, commit it, and let ingest create the row.
  *
  * `status` defaults to draft. `ready` is honored only when the parent RFC is
@@ -120,8 +245,24 @@ export function assertMarkdownlintClean(abs: string, rel: string, cwd: string): 
 export async function newStory(
   rfcSlug: string,
   storySlug: string,
-  opts: Partial<Omit<NewStoryOpts, "date">> & { commit?: boolean } = {},
+  opts: Partial<Omit<NewStoryOpts, "date">> & { commit?: boolean; allowEmpty?: boolean } = {},
 ): Promise<NewStoryResult> {
+  if (!STORY_SLUG_RE.test(storySlug)) {
+    console.error(
+      `error: "${storySlug}" is not a story slug — a slug is kebab-case of at least two\n` +
+        `  words (e.g. relation-or-drops-bind-params). Check the arguments: tasks new <rfc> <slug>.`,
+    );
+    throw new VerbExit(1);
+  }
+  if (!opts.allowEmpty && isEmptyBody(opts.body)) {
+    console.error(
+      `error: "${storySlug}" has no body — pass --body-file with a ## Context (the file:line\n` +
+        `  you are looking at) and at least one ## Acceptance criteria bullet. A heading-only\n` +
+        `  stub is re-derived from scratch by whoever picks it up; --allow-empty overrides.`,
+    );
+    throw new VerbExit(1);
+  }
+
   const rfc = await Rfc.findBy({ id: rfcSlug });
   if (!rfc) {
     console.error(`error: no such RFC "${rfcSlug}"`);
@@ -176,9 +317,14 @@ export async function newStory(
       console.error(`error: ${rel} already exists`);
       throw new VerbExit(1);
     }
+    const readme = widenRfcDeclarations(dir, rfcSlug, {
+      packages: opts.packages ?? [],
+      cluster: opts.cluster ?? null,
+    });
     mkdirSync(dirname(abs), { recursive: true });
     writeFileSync(abs, content);
     assertMarkdownlintClean(abs, rel, dir);
+    assertValidateClean(abs, rel, dir);
 
     if (opts.commit === false) {
       // Nothing to land; hand back a copy the caller can inspect, since the
@@ -188,7 +334,7 @@ export async function newStory(
     }
     const git = (args: string[]): string =>
       execFileSync("git", args, { cwd: dir, encoding: "utf8" }).trim();
-    git(["add", "--", rel]);
+    git(["add", "--", rel, ...(readme ? [readme] : [])]);
     git(["commit", "-q", "-m", `new: ${rfcSlug}/${storySlug}`]);
     // Push, or the story exists only in a worktree that is about to vanish.
     pushMain(git, "tasks new");

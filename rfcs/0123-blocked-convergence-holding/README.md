@@ -16,6 +16,9 @@ clusters:
   - "api-compare"
   - "test-placement"
   - "enforcement"
+  # Carried in with rewrite-call-time-constant-resolution-onto-autoload,
+  # rehomed from 0151-activesupport-autoload-slot-registry (2026-09-25).
+  - "autoload"
 related-rfcs:
   - "0078-sti-schema-reflection-fidelity"
   - "0096-naming-identifier-burndown"

@@ -10,6 +10,9 @@ packages:
   - "tse-compiler"
   - "actionpack"
   - "trailties"
+  # collection-by-cache-keys-keys-by-identity-not-eql: the eql?-keyed Hash the
+  # collection cache needs is built in ruby-compat.
+  - "ruby-compat"
 clusters: []
 priority: 2
 ---

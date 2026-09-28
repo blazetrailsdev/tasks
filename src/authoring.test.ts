@@ -6,11 +6,11 @@
  * actually caused the recurrence this fixes: a bare ``` fence, and a line
  * starting `#NNNN` misread as a heading.
  */
-import { existsSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { assertMarkdownlintClean, buildStoryContent } from "./authoring.js";
+import { assertMarkdownlintClean, assertValidateClean, buildStoryContent } from "./authoring.js";
 import { VerbExit } from "./db.js";
 
 const REPO_ROOT = join(import.meta.dirname, "..");
@@ -75,6 +75,63 @@ describe("assertMarkdownlintClean (the tasks-new markdownlint gate)", () => {
       }
       expect(thrown).toBeInstanceOf(VerbExit);
       expect((thrown as VerbExit).code).toBe(1);
+      expect(existsSync(abs)).toBe(false);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+});
+
+/**
+ * `assertValidateClean` runs validate's story rules against the one file
+ * `newStory` just wrote. A tree with a second RFC already holding `x` is the
+ * shape that put seven `x.md` duplicates on main.
+ */
+describe("assertValidateClean (the tasks-new validate gate)", () => {
+  function tree(): string {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-validate-gate-"));
+    for (const rfc of ["0001-a", "0002-b"]) {
+      mkdirSync(join(dir, "rfcs", rfc, "stories"), { recursive: true });
+      writeFileSync(
+        join(dir, "rfcs", rfc, "README.md"),
+        `---\nrfc: "${rfc}"\ntitle: "T"\nstatus: active\ncreated: 2026-09-01\n` +
+          `updated: 2026-09-01\nowner: "@o"\npackages: ["activerecord"]\nclusters: []\n---\n`,
+      );
+    }
+    writeFileSync(
+      join(dir, "rfcs", "0001-a", "stories", "x.md"),
+      buildStoryContent("0001-a", "x", { date: "2026-09-01" }),
+    );
+    return dir;
+  }
+  const write = (dir: string, slug: string, opts: { packages?: string[] } = {}) => {
+    const rel = join("rfcs", "0002-b", "stories", `${slug}.md`);
+    writeFileSync(
+      join(dir, rel),
+      buildStoryContent("0002-b", slug, { ...opts, date: "2026-09-01" }),
+    );
+    return { abs: join(dir, rel), rel };
+  };
+
+  it("leaves a story that validates clean in place", () => {
+    const dir = tree();
+    try {
+      const { abs, rel } = write(dir, "story-one", { packages: ["activerecord"] });
+      expect(() => assertValidateClean(abs, rel, dir)).not.toThrow();
+      expect(existsSync(abs)).toBe(true);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  it.each([
+    ["an id another RFC already uses", "x", {}],
+    ["a package its RFC does not declare", "story-one", { packages: ["activesupport"] }],
+  ])("deletes the file and throws VerbExit(1) for %s", (_what, slug, opts) => {
+    const dir = tree();
+    try {
+      const { abs, rel } = write(dir, slug, opts);
+      expect(() => assertValidateClean(abs, rel, dir)).toThrow(VerbExit);
       expect(existsSync(abs)).toBe(false);
     } finally {
       rmSync(dir, { recursive: true, force: true });

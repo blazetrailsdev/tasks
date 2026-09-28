@@ -7,6 +7,9 @@ updated: 2026-09-28
 owner: "@deanmarano"
 packages:
   - "actionpack"
+  # delegation-array-delegates-loop-test-names: activerecord's delegation tests,
+  # surfaced by this RFC's extract-ruby-tests.rb work (trails#8127).
+  - "activerecord"
 clusters: []
 priority: 2
 ---

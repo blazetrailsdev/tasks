@@ -41,3 +41,17 @@ may declare neither.
   `widenRfcDeclarations`. An unknown name is refused.
 - `src/rehome.test.ts` covers the refuse arm and the widen arm, and both fail
   on the pre-change `rehome.ts`.
+
+## Definition of done
+
+Refusing a move is not the whole fix. A rehome whose only failure is an
+undeclared-but-known cluster or package must still land, widened, because a
+sunset RFC's drafts need a home, and refusing them sends agents back to
+hand-editing story files.
+
+## Verification
+
+```sh
+pnpm vitest run src/rehome.test.ts
+pnpm validate   # still 0 after a rehome into an RFC lacking the story's cluster
+```
