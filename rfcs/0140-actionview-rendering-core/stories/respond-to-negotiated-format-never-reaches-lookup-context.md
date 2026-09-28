@@ -44,8 +44,11 @@ converge together.
 
 - `Collector#negotiateFormat` returns the negotiated `MimeType`, as
   `collector.rb`'s `negotiate_format` does; no `symbolToS` flattening.
-- `ActionView::Rendering#_process_format` is ported (`super`, then
-  `lookup_context.formats = [format.to_sym] if format.to_sym`) and mixed into
+- `ActionView::Rendering#_process_format` is ported
+  (`lookup_context.formats = [format.to_sym] if format.to_sym`) and mixed into
   the controller, so `respond_to`'s negotiated format narrows template lookup.
+  Its `super` into `AbstractController::Rendering#_process_format` needs a
+  module ancestry the controller's prototype-assigned rendering methods do not
+  have yet; that is `actionview-rendering-methods-have-no-super-chain`.
 - A cover: a `respond_to` block with `format.json` renders the `.json`
   template when both `.html` and `.json` templates exist.
