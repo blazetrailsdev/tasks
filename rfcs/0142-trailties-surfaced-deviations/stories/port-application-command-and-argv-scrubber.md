@@ -28,9 +28,8 @@ with `ARGVScrubber.new(args).prepare!`, and `ARGVScrubber#handle_version_request
 (`railties/lib/rails/generators/rails/app/app_generator.rb:641-647`) prints
 `"Rails #{Rails::VERSION::STRING}"` and exits.
 
-trails has no `application` command and no `ARGVScrubber`, so `VersionCommand#perform`
-(`packages/trailties/src/commands/version.ts`) prints `Trails ${VERSION}` itself and carries
-`@missingRailsCall invoke — CONVERGEABLE port-application-command-and-argv-scrubber`.
+trails has no `application` command and no `ARGVScrubber`, so there is nothing for a ported
+`VersionCommand#perform` (`port-help-and-version-commands-for-split-namespace`) to delegate to.
 `new` (`packages/trailties/src/commands/new.ts`) is the trails entry to `AppGenerator`.
 
 ## Acceptance criteria
@@ -38,5 +37,5 @@ trails has no `application` command and no `ARGVScrubber`, so `VersionCommand#pe
 - `ARGVScrubber` (`prepare!`, `handle_version_request!`, `handle_invalid_command!`,
   `handle_rails_rc!`) is ported beside `AppGenerator`, and an `application` command runs
   `AppGenerator.start(new ARGVScrubber(args).prepareBang())`.
-- `VersionCommand#perform` is `invoke("application", ["--version"])`; the receipt is removed and
-  `invoke("-v")` still prints `Trails <VERSION>`.
+- `invoke("application", ["--version"])` prints `Trails <VERSION>` through
+  `handle_version_request!`.

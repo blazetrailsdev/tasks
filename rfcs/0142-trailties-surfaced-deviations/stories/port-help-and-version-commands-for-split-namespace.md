@@ -5,9 +5,9 @@ updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps: [port-application-command-and-argv-scrubber]
 deps-rfc: []
-est-loc: 90
+est-loc: 160
 priority: 6
 pr: null
 claim: "2026-09-28T17:56:44Z"
@@ -39,6 +39,18 @@ listing) and `VersionCommand` (prints `Trails <VERSION>`) as commander commands
 under `commands/help.ts` and `commands/version.ts`, and register them in
 `createProgram`. `invoke("")`, `invoke("--help")` and `invoke("-v")` then
 resolve through `find_by_namespace` as Rails does.
+
+### Findings from a first attempt (trails#8226, withdrawn)
+
+- `VersionCommand#perform` must be `Rails::Command.invoke :application, [ "--version" ]`
+  (`version_command.rb:7`), not a printed constant. That needs `ApplicationCommand` and
+  `ARGVScrubber` first, hence the dep on `port-application-command-and-argv-scrubber`.
+- `help` says `class_usage`, the full `railties/lib/rails/commands/help/USAGE` with Trails
+  substitutions: `generate`, `console`, `server`, `test`, `test:system`, `dbconsole`, and the
+  `plugin new` line under `<% unless engine? -%>`. Do not add `new`.
+- `help_extended` prints `Rails::Command.printing_commands` (`command.rb:114-118`), which
+  flat-maps each command's `printing_commands` (`command/base.rb:76-80`): namespaced names such
+  as `db:migrate`, not just root commands.
 
 ## Acceptance criteria
 
