@@ -38,7 +38,7 @@ are sync generators, and `RackBody[Symbol.asyncIterator]` just walks them.
 The streamed `Body#each` is async, because the Fiber-driven
 `delayedRender` awaits template rendering. So
 `ActionController::Base#renderToBody` (`packages/actionpack/src/action-controller/base.ts`)
-drains the Body into an array, through `_drainStreamingBody`, before
+drains the Body into an array, through `drainStreamingBody`, before
 `AbstractController::Rendering#render` assigns `responseBody`
 (trails#8212 collapsed the former `renderAsync` into `render`). The page is
 rendered through the streaming renderer, but it is sent in one piece.
@@ -48,7 +48,7 @@ rendered through the streaming renderer, but it is sent in one piece.
 - `ActionDispatch::Response` accepts a body whose `each` is async and
   passes it through `RackBody`'s async iterator chunk by chunk.
 - `render` assigns the streamed Body as `metal.rb:234-242` does, with
-  no drain: `_drainStreamingBody` and its `@noRailsEquivalent CONVERGEABLE`
+  no drain: `drainStreamingBody` and its `@noRailsEquivalent CONVERGEABLE`
   receipt pointing at this story are removed.
 - A test shows the first chunk (the layout head, before `yield`) reaching
   the rack body before the template body has finished rendering.
