@@ -1,9 +1,9 @@
 ---
 rfc: "0160-actionpack-test-harness-parity"
 title: "ActionPack test harness — abstract_unit, TestCase and Integration to parity"
-status: draft
+status: active
 created: 2026-09-27
-updated: 2026-09-27
+updated: 2026-09-28
 owner: "@deanmarano"
 packages:
   - "actionpack"
