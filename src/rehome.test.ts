@@ -13,6 +13,10 @@ import { migrate } from "./migrator.js";
 import { Rfc, Story } from "./models/index.js";
 import { rehome } from "./rehome.js";
 import { buildStoryContent } from "./authoring.js";
+// @ts-expect-error — ported JS module, no type declarations
+import { loadAll } from "../scripts/lib.mjs";
+// @ts-expect-error — ported JS module, no type declarations
+import { validate } from "../scripts/validate-lib.mjs";
 
 let dir: string;
 const prevTasksDir = process.env.TASKS_DIR;
@@ -125,17 +129,23 @@ describe("rehome", () => {
       git(["commit", "-q", "-m", "readmes"]);
     });
 
-    it("widens the destination with a known cluster and package, staged with the move", async () => {
+    it("widens the destination with a known cluster and package, in the move's commit", async () => {
       await seedStory("s-known", { cluster: "autoload", packages: ["ruby-compat"] });
 
-      await rehome(["s-known"], "0123-holding", { commit: false });
+      await rehome(["s-known"], "0123-holding");
 
+      expect(
+        git(["show", "--name-only", "--no-renames", "--format=", "HEAD"]).split("\n").sort(),
+      ).toEqual([
+        "rfcs/0001-from/stories/s-known.md",
+        "rfcs/0123-holding/README.md",
+        "rfcs/0123-holding/stories/s-known.md",
+      ]);
       const dest = readFileSync(join(dir, "rfcs", "0123-holding", "README.md"), "utf8");
       expect(dest).toContain('packages:\n  - "activerecord"\n  - "ruby-compat"\n');
       expect(dest).toContain('clusters:\n  - "schema"\n  - "autoload"\n');
-      expect(git(["diff", "--cached", "--name-only"]).split("\n")).toContain(
-        "rfcs/0123-holding/README.md",
-      );
+      // The story's own verification: the whole-tree validate CI runs is clean.
+      expect(validate(loadAll(join(dir, "rfcs"))).errors).toEqual([]);
     });
 
     it("refuses the whole batch, touching nothing, when one story's cluster is unknown", async () => {
