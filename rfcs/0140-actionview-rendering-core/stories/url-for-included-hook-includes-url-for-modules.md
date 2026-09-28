@@ -66,4 +66,6 @@ In trails:
   `controller-respond-to-shadows-rb-obj-respond-to`.
 - The `UrlHelperTest` cases that include `routes.url_helpers`
   (`actionview/test/template/url_helper_test.rb:23-50`) can build their host
-  that way.
+  that way. `url for does not escape urls` (`:65-67`) also needs Symbol values
+  to `to_param` without their colon, which is
+  `url-for-query-symbol-values-to-param`.
