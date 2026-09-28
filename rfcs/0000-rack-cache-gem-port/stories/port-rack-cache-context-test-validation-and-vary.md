@@ -1,5 +1,5 @@
 ---
-title: "Port context_test.rb cases 39-51: validation, HEAD, POST invalidation, Vary and failure handling"
+title: "Port context_test.rb:673-1033 (13 cases): validation, HEAD, POST invalidation, Vary and failure handling"
 status: draft
 updated: 2026-09-28
 rfc: "0000-rack-cache-gem-port"
@@ -20,7 +20,8 @@ closed-reason: null
 
 The last third of `vendor/rack-cache/v1.17.0/test/context_test.rb` (1,033 lines, 51 cases,
 `describe Rack::Cache::Context`, `:5`). The file is split across three
-stories by line range so each fits a PR. This one ports **`:673-1033`, 13 cases**,
+stories by line range so each fits a PR. This one ports **`:673-1033`**, 13 cases, none of them harness smoke cases. The
+**count of record for this story is 13**,
 into `packages/rack-cache/src/context.test.ts`, using the `CacheContextHelpers`
 harness that `port-rack-cache-context-test-harness` ported (`test/test_helper.rb:78-187`).
 Its top-level `before` / `after` (`:6-7`) are `setup_cache_context` /

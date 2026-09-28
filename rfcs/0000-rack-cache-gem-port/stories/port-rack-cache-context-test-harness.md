@@ -60,6 +60,9 @@ so the ported cases read like the Ruby.
 - [ ] Two `context_test.rb` smoke cases are ported against it in
       `context.test.ts`, proving the harness drives `Context` end to end:
       `:455` "fetches response from backend when cache misses" and `:19`
-      "passes on non-GET/HEAD requests". Their ranges' stories then skip them.
+      "passes on non-GET/HEAD requests". These 2 cases are this story's count
+      of record. `port-rack-cache-context-test-pass-and-revalidate` (22) and
+      `port-rack-cache-context-test-fetch-and-freshness` (14) exclude them, so
+      the four stories total 51.
 - [ ] `pnpm parity:api:extra --package rack-cache` reports no new extra from
       the harness.

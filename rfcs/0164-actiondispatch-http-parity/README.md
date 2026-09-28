@@ -204,6 +204,6 @@ rack-cache at the version Rails' `Gemfile.lock` pins (`rack-cache (1.17.0)`,
 
 - 2026-09-27: initial RFC
 - 2026-09-27: re-measured on trails `main` @ `2558bb83f4`; no change to this RFC's rows.
-- 2026-09-28: Open question 1 resolved. The rack-cache gem moved to RFC
-  the `rack-cache-gem-port` RFC, and `port-rails-meta-and-entity-stores` was
+- 2026-09-28: Open question 1 resolved. The rack-cache gem moved to the
+  `rack-cache-gem-port` RFC, and `port-rails-meta-and-entity-stores` was
   narrowed to the Rails subclasses.

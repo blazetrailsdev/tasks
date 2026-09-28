@@ -1,5 +1,5 @@
 ---
-title: "Port context_test.rb cases 1-23: pass, invalidate, private requests, 304s, reload and revalidate"
+title: "Port context_test.rb:1-452 (22 cases): pass, invalidate, private requests, 304s, reload and revalidate"
 status: draft
 updated: 2026-09-28
 rfc: "0000-rack-cache-gem-port"
@@ -20,7 +20,9 @@ closed-reason: null
 
 The first third of `vendor/rack-cache/v1.17.0/test/context_test.rb` (1,033 lines, 51 cases,
 `describe Rack::Cache::Context`, `:5`). The file is split across three
-stories by line range so each fits a PR. This one ports **`:1-452`, 23 cases**,
+stories by line range so each fits a PR. This one ports **`:1-452`**: 23 cases in the range, of which `:19` is
+already ported as a smoke case by `port-rack-cache-context-test-harness`. The
+**count of record for this story is 22**,
 into `packages/rack-cache/src/context.test.ts`, using the `CacheContextHelpers`
 harness that `port-rack-cache-context-test-harness` ported (`test/test_helper.rb:78-187`).
 Its top-level `before` / `after` (`:6-7`) are `setup_cache_context` /
@@ -42,9 +44,9 @@ ported as the same loop.
 
 ## Acceptance criteria
 
-- [ ] All 23 cases in `:1-452` are ported with Rails-identical names and
-      assertions. One of them already landed as a smoke case in
-      `port-rack-cache-context-test-harness`, so this PR adds 22.
+- [ ] The remaining 22 cases in `:1-452` (all but `:19`) are ported with
+      Rails-identical names and assertions.
 - [ ] Any `Context` fix they need lands in the same PR, and
       `pnpm parity:api:calls` / `:calls:args` stay green.
-- [ ] `pnpm parity:test` credits the 23 cases.
+- [ ] `pnpm parity:test` credits these 22 cases. With the harness story's
+      `:19`, the range is fully credited.

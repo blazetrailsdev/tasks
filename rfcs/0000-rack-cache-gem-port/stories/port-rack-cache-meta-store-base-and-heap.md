@@ -90,6 +90,16 @@ file's 38. The file's own `before` builds a `mock_request` / `mock_response` /
 - [ ] `pnpm parity:api` reports the base and Heap members complete, and the call
       gates add no row.
 
-If this exceeds the PR ceiling, split the shared test cases at
-`test/meta_store_test.rb:277` (the Vary block) into a follow-up story, rather
-than splitting the class.
+**Pre-agreed split, if the PR would pass the ceiling.** Split on the shared
+module's own section markers, and never split the class:
+
+- **This PR:** `MetaStore` (`meta_store.rb:23-197`) and `Heap` (`:199-232`) in
+  full, the `mock_request` / `mock_response` / `slurp` harness
+  (`test/meta_store_test.rb:11-44`), "has not implemented" (`:358-364`), and the
+  12 "Low-level implementation methods" cases (`:52-123`). Count of record: 13.
+- **Follow-up story `port-rack-cache-meta-store-shared-lookup-cases`** (file it
+  with `pnpm tasks new`, depending on this one): the 21 cases under "Abstract
+  methods", "Vary", "Age" and "TTL" (`:125-355`). `lookup` / `store` /
+  `invalidate` land in this PR anyway, because the Heap class needs them.
+  `port-rack-cache-disk-stores` must then depend on the follow-up too, so the
+  Disk describe re-runs the complete shared module.

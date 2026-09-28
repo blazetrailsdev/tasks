@@ -65,3 +65,12 @@ Tests: `test/response_test.rb` (215 lines, 37 cases) →
 - [ ] `response.test.ts` ports all 37 cases with Rails-identical names.
 - [ ] `pnpm parity:api` reports `response.rb` complete, and the call and
       call-args gates add no row.
+
+**Pre-agreed split, if the PR would pass the ceiling.** Port the whole class
+here, and split only the tests, at `test/response_test.rb:115`:
+
+- **This PR:** `:1-114`, 18 cases: string status, `to_a`, `#cache_control`,
+  `#validateable?`, `#date`, `#max_age`, `#private=`.
+- **Follow-up story `port-rack-cache-response-expiry-and-vary-cases`** (file it
+  with `pnpm tasks new`, depending on this one): `:115-215`, 19 cases:
+  `#expire!`, `#ttl`, `#vary`, `#vary_header_names`, `#expires`.
