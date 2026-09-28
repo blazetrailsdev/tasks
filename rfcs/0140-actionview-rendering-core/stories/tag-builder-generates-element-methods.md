@@ -1,7 +1,7 @@
 ---
 title: "TagBuilder generates element methods via define_element; the Proxy keeps only method_missing"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8235
+claim: "2026-09-28T22:31:02Z"
+assignee: "generated-app-pnpm-test-finds-no-tests"
 blocked-by: null
 closed-reason: null
 ---

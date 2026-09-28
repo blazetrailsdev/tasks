@@ -1,7 +1,7 @@
 ---
 title: "helper_method is a free function, so Cookies' defined?(helper_method) guard is unportable and API omits Cookies"
-status: ready
-updated: 2026-09-27
+status: claimed
+updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-28T22:48:37Z"
+assignee: "generated-db-ts-connect-resolves-default-env"
 blocked-by: null
 closed-reason: null
 ---

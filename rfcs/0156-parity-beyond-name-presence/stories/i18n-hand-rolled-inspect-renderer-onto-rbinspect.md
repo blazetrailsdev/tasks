@@ -1,7 +1,7 @@
 ---
 title: "i18n hand-rolls Ruby inspect in exceptions.ts and fallbacks.ts instead of rbInspect"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-28
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

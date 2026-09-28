@@ -1,7 +1,7 @@
 ---
 title: "Port the remaining string-URL button_to / link_to / to_form_params UrlHelperTest cases"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8234
+claim: "2026-09-28T22:07:51Z"
+assignee: "default-middleware-stack-omits-rack-layer-and-flash"
 blocked-by: null
 closed-reason: null
 ---

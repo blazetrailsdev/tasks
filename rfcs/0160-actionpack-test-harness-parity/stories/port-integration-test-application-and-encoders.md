@@ -1,6 +1,6 @@
 ---
 title: "Port integration_test.rb's application, URL-option and request-encoder tests"
-status: claimed
+status: done
 updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-integration-test-session-and-process"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#8233
 claim: "2026-09-28T21:36:54Z"
 assignee: "ar-typecheck-requires-unexported-package-json"
 blocked-by: null

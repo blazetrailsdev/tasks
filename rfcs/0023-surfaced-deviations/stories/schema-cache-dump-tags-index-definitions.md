@@ -1,6 +1,6 @@
 ---
 title: "schema-cache-dump-tags-index-definitions"
-status: draft
+status: closed
 updated: 2026-09-28
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "moved to 0123-blocked-convergence-holding/schema-cache-dump-revives-index-definition-from-ruby-object-tag (0023 is retired)"
 ---
 
 ## Context

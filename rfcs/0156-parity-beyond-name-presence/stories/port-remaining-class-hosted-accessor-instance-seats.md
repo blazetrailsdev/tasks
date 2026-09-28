@@ -1,6 +1,6 @@
 ---
 title: "port-remaining-class-hosted-accessor-instance-seats"
-status: draft
+status: ready
 updated: 2026-09-28
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Schema-cache dump restores the Column subclass without a class coder key"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0123-blocked-convergence-holding"
 cluster: null

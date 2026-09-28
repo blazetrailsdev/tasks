@@ -1,7 +1,7 @@
 ---
 title: "find_target's statement-cache execute drops the set_inverse_instance/set_strict_loading block"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-28
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "generated-app-pnpm-test-finds-no-tests"
-status: ready
+status: in-progress
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8235
+claim: "2026-09-28T22:31:02Z"
+assignee: "generated-app-pnpm-test-finds-no-tests"
 blocked-by: null
 closed-reason: null
 ---

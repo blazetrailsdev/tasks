@@ -1,7 +1,7 @@
 ---
 title: "Error.fullMessage: respond_to?(:i18n_scope) and unguarded human_attribute_name"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-28
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

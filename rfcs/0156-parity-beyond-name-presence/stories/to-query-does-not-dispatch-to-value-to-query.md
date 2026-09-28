@@ -1,7 +1,7 @@
 ---
 title: "to-query-does-not-dispatch-to-value-to-query"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-09-28
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

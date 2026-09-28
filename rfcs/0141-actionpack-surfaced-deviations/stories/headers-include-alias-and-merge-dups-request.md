@@ -1,7 +1,7 @@
 ---
 title: "Headers lacks the include? alias and merge builds a fresh Request instead of dup"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8234
+claim: "2026-09-28T22:07:51Z"
+assignee: "default-middleware-stack-omits-rack-layer-and-flash"
 blocked-by: null
 closed-reason: null
 ---

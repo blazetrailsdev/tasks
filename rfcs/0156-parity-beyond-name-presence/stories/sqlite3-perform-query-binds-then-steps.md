@@ -1,7 +1,7 @@
 ---
 title: "sqlite3 perform_query binds before the column_count branch and steps the non-reader arm"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-09-28
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

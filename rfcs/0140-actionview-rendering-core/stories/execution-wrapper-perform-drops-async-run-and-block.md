@@ -1,6 +1,6 @@
 ---
 title: "ExecutionWrapper.perform drops an async to_run and completes before an async block"
-status: claimed
+status: done
 updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8233
 claim: "2026-09-28T21:36:54Z"
 assignee: "ar-typecheck-requires-unexported-package-json"
 blocked-by: null
