@@ -1,6 +1,6 @@
 ---
 title: "Port apply_rubocop_autocorrect_after_generate! as the ESLint autocorrect pass"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: generators

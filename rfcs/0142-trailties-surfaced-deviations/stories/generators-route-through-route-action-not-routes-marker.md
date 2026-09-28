@@ -1,6 +1,6 @@
 ---
 title: "generators-route-through-route-action-not-routes-marker"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

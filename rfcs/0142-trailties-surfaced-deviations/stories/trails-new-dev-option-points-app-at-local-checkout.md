@@ -1,6 +1,6 @@
 ---
 title: "Port rails new --dev: trails new --dev links the app to the local trails checkout"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: generators

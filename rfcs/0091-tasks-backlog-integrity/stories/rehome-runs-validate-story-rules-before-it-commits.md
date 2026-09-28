@@ -1,6 +1,6 @@
 ---
 title: "tasks rehome runs validate's story rules before it commits"
-status: draft
+status: in-progress
 updated: 2026-09-28
 rfc: "0091-tasks-backlog-integrity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: tasks#191
+claim: "2026-09-28T16:39:37Z"
+assignee: "rehome-runs-validate-story-rules-before-it-commits"
 blocked-by: null
 closed-reason: null
 ---

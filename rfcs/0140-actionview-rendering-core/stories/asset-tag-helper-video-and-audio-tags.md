@@ -1,7 +1,7 @@
 ---
 title: "Port AssetTagHelper#video_tag, #audio_tag and multiple_sources_tag_builder"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: ["actionview"]
@@ -9,9 +9,9 @@ deps: ["asset-url-helper-video-audio-font-path-and-url"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8220
+claim: "2026-09-28T16:29:17Z"
+assignee: "add-flash-types-defines-no-reader-or-helper"
 blocked-by: null
 closed-reason: null
 ---

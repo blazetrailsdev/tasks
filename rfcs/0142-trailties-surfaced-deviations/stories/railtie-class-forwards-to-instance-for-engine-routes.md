@@ -1,6 +1,6 @@
 ---
 title: "railtie-class-forwards-to-instance-for-engine-routes"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Scaffold generators emit the new action as new_, so GET /posts/new 404s"
-status: ready
+status: in-progress
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: generators
@@ -8,10 +8,10 @@ packages: ["trailties"]
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 5
+pr: trails#8221
+claim: "2026-09-28T16:27:29Z"
+assignee: "scaffold-controller-passes-locals-instead-of-setting-ivars"
 blocked-by: null
 closed-reason: null
 ---

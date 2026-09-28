@@ -1,6 +1,6 @@
 ---
 title: "Converge the hand-rolled test apps onto the abstract_unit harness"
-status: ready
+status: in-progress
 updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["port-actionpack-abstract-unit-test-support"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8220
+claim: "2026-09-28T16:29:17Z"
+assignee: "add-flash-types-defines-no-reader-or-helper"
 blocked-by: null
 closed-reason: null
 ---

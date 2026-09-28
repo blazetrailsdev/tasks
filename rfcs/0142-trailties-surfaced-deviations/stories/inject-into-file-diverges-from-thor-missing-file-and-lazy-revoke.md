@@ -1,6 +1,6 @@
 ---
 title: "injectIntoFile raises ENOENT instead of Thor's missing-file error and revokes greedily"
-status: draft
+status: in-progress
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 5
+pr: trails#8221
+claim: "2026-09-28T16:27:29Z"
+assignee: "scaffold-controller-passes-locals-instead-of-setting-ivars"
 blocked-by: null
 closed-reason: null
 ---

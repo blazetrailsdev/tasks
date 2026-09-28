@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc types an enum attribute as its column and declares scopes only as statics"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

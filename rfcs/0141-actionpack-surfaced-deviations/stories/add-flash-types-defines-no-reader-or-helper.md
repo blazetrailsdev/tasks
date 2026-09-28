@@ -1,6 +1,6 @@
 ---
 title: "add_flash_types defines no notice/alert reader or helper_method, so <%= notice %> raises"
-status: ready
+status: in-progress
 updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: ["actionpack"]
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#8220
+claim: "2026-09-28T16:29:17Z"
+assignee: "add-flash-types-defines-no-reader-or-helper"
 blocked-by: null
 closed-reason: null
 ---

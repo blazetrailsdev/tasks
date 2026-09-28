@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::Command::HelpCommand / VersionCommand so split_namespace's help/version arms resolve"
-status: draft
+status: ready
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

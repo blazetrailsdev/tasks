@@ -1,7 +1,7 @@
 ---
 title: "tasks new refuses a slug used by any RFC and a story with no body"
-status: draft
-updated: 2026-09-22
+status: in-progress
+updated: 2026-09-28
 rfc: "0091-tasks-backlog-integrity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: tasks#190
+claim: "2026-09-28T16:11:54Z"
+assignee: "tasks-new-refuses-cross-rfc-slug-and-empty-body"
 blocked-by: null
 closed-reason: null
 ---

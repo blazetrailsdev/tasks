@@ -1,6 +1,6 @@
 ---
 title: "named-base.test.ts Rails-named tests assert non-Rails bodies"
-status: draft
+status: ready
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null
