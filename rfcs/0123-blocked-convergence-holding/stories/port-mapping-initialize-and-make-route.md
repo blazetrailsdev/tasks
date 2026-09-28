@@ -2,7 +2,7 @@
 title: "port-mapping-initialize-and-make-route"
 status: blocked
 updated: 2026-09-26
-rfc: "0139-actiondispatch-journey-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: ["mapper-mapping-is-instantiated-per-route"]
