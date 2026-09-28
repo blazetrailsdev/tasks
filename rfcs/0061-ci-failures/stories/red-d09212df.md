@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Tests (1) failing on main @d09212df"
-status: ready
+status: closed
 updated: 2026-09-28
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-28T21:37:34Z"
+assignee: "red-d09212df"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: 4 subprocess-spawning parity dump tests (scripts/parity/pipeline/query/node/{ar_dump,dump}.test.ts) timed out at the 5000ms vitest default on a slow runner (5.0-5.6s; ~2.5s on the prior green run, ~3s locally). d09212df only touched trailties, which those arel/AR dump scripts do not load; the step passes locally on main."
 ---
 
 ## Context

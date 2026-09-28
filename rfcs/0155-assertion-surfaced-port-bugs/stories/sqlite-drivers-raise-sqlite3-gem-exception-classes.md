@@ -1,6 +1,6 @@
 ---
 title: "SQLite drivers raise the sqlite3 gem's exception classes (status2klass)"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

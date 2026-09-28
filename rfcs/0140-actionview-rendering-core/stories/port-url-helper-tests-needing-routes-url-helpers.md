@@ -1,6 +1,6 @@
 ---
 title: "Port the UrlHelperTest cases that need include routes.url_helpers and the Workshop/Session models"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null

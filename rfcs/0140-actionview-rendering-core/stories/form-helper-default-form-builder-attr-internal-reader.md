@@ -1,7 +1,7 @@
 ---
 title: "FormHelper default_form_builder attr_internal reader"
-status: ready
-updated: 2026-09-27
+status: claimed
+updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-28T21:36:54Z"
+assignee: "ar-typecheck-requires-unexported-package-json"
 blocked-by: null
 closed-reason: null
 ---

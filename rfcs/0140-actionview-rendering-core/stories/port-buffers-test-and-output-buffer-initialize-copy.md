@@ -1,7 +1,7 @@
 ---
 title: "Port buffers_test.rb (SharedBufferTests, can be duped) and OutputBuffer#initialize_copy"
-status: ready
-updated: 2026-09-27
+status: claimed
+updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: ["actionview"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-28T21:37:23Z"
+assignee: "console-prompts-before-models-load"
 blocked-by: null
 closed-reason: null
 ---

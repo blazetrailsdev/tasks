@@ -1,6 +1,6 @@
 ---
 title: "url-for-symbol-arms-use-js-symbol-and-route-for-snake-case"
-status: draft
+status: done
 updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8230
+claim: "2026-09-28T21:07:30Z"
+assignee: "url-for-symbol-arms-use-js-symbol-and-route-for-snake-case"
 blocked-by: null
 closed-reason: null
 ---

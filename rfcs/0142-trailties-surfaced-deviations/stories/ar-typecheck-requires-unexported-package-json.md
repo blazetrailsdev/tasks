@@ -1,6 +1,6 @@
 ---
 title: "ar-typecheck-requires-unexported-package-json"
-status: ready
+status: claimed
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-28T21:36:54Z"
+assignee: "ar-typecheck-requires-unexported-package-json"
 blocked-by: null
 closed-reason: null
 ---
