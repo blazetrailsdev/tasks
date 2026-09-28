@@ -1,6 +1,6 @@
 ---
 title: "Port AssetUrlHelper video/audio/font *_path and *_url with their aliases"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
