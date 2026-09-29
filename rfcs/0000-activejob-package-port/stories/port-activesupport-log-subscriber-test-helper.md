@@ -19,49 +19,34 @@ closed-reason: null
 ## Context
 
 `vendor/rails/v8.0.2/activejob/test/cases/logging_test.rb:19` does
-`include ActiveSupport::LogSubscriber::TestHelper`. trails has not ported that
-module. `vendor/rails/v8.0.2/activesupport/lib/active_support/log_subscriber/test_helper.rb`
-(106 lines) has no file under `packages/activesupport/src/`, even though it is
-counted in activesupport's `parity:api` population, not unported
-(`scripts/parity/unported-files/activesupport.ts:84-85`). Instead, three test
-files each hand-roll a `MockLogger`: `packages/activesupport/src/log-subscriber.test.ts:10`,
-`packages/activerecord/src/log-subscriber.test.ts` and
+`include ActiveSupport::LogSubscriber::TestHelper`. trails has not ported it:
+`vendor/rails/v8.0.2/activesupport/lib/active_support/log_subscriber/test_helper.rb`
+(106 lines) has no file under `packages/activesupport/src/`, though it is
+counted (not unported) in activesupport's population
+(`scripts/parity/unported-files/activesupport.ts:84-85`). Three test files each
+hand-roll a `MockLogger` instead: `packages/activesupport/src/log-subscriber.test.ts:10`,
+`packages/activerecord/src/log-subscriber.test.ts`,
 `packages/actionview/src/log-subscriber.trails.test.ts`.
 
-The module:
+The module: `setup` / `teardown` (`:38-52`); `MockLogger` (`:54-89`) with
+`initialize(level = DEBUG)`, `method_missing(level, message = nil)`
+(`:66-72`), `logged(level)`, `flush`, and a `#{severity.downcase}?`
+predicate per severity (`:84`); `wait` (`:92-94`); `set_logger` (`:101-103`).
 
-- `setup` / `teardown` (`:38-52`): swap in a `MockLogger`, attach the
-  subscriber, and restore.
-- `MockLogger` (`:54-89`): `initialize(level = DEBUG)`, and `logged(level)`
-  and `flush`, plus a `#{severity.downcase}?` predicate per severity (`:84`).
-  It records messages by level through **`method_missing(level, message =
-nil)`** (`:66-72`).
-- `wait` (`:92-94`) and `set_logger` (`:101-103`).
+This is the first consumer. Moving the three local copies onto it is a
+follow-up: file it as a story in this RFC from the PR.
 
-**`MockLogger#method_missing` needs a decision recorded in CLAUDE.md.** The
-table in § "Ruby protocol methods with a different JS mechanism" lists this
-file as `nothing (no file)`. Porting it moves the row. The recommendation is
-typed forwarders, one per `Logger::Severity` name
-(`debug`/`info`/`warn`/`error`/`fatal`/`unknown`), each a
-`this.methodMissing(name, …)` call, as `migration.ts` does. A logger's
-callers call only those six names, so a Proxy would add a per-read cost for no
-reach. Update the CLAUDE.md row in the trails PR.
+## Fidelity traps (predicted at authoring)
 
-This is the first consumer. Moving the three hand-rolled copies onto the port
-is a follow-up: file it as a story in this RFC from the PR, and do not do it
-here.
+- [ ] **`MockLogger#method_missing`.** The CLAUDE.md table (§ "Ruby protocol methods with a different JS mechanism") lists this file as `nothing (no file)`. Recommendation: typed forwarders, one per `Logger::Severity` name, each a `this.methodMissing(name, …)` call as `migration.ts` does; callers use only those six names, so a Proxy adds a per-read cost for no reach.
+- [ ] **Severity predicates** (`debug?` …) are `isDebug` …, generated from the severity list, not hand-written.
 
 ## Acceptance criteria
 
-- [ ] `packages/activesupport/src/log-subscriber/test-helper.ts` ports every
-      member above, and `log_subscriber/test_helper.rb` reads complete in
-      `parity:api`.
-- [ ] A test attaches a subscriber, logs at two levels, and reads them back
-      through `logged(level)`.
-- [ ] The CLAUDE.md `method_missing` table row for `log_subscriber/test_helper.rb`
-      names the shape chosen.
-- [ ] The follow-up story for the three local `MockLogger`s is filed.
+- [ ] `packages/activesupport/src/log-subscriber/test-helper.ts` ports every member, and `log_subscriber/test_helper.rb` reads complete in `parity:api`.
+- [ ] A test attaches a subscriber, logs at two levels and reads them back through `logged(level)`.
+- [ ] The CLAUDE.md `method_missing` table row for `log_subscriber/test_helper.rb` names the chosen shape, and the follow-up story is filed.
 
 ## Definition of done
 
-Porting `MockLogger` without updating the CLAUDE.md `method_missing` row does not close this story, and neither does rewriting the three existing `MockLogger` copies in the same PR.
+Porting `MockLogger` without updating the CLAUDE.md row, or rewriting the three existing copies in this PR, does not close this story.

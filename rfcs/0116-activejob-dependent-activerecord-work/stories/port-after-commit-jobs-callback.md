@@ -5,7 +5,7 @@ updated: 2026-08-21
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null
 packages: ["activerecord"]
-deps: ["port-activejob-enqueuing-execution-and-inline-adapter"]
+deps: ["port-activejob-enqueuing-and-configured-job"]
 deps-rfc: []
 est-loc: 140
 priority: null

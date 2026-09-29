@@ -225,7 +225,7 @@ story closed on 2026-08-21; it is repointed at this RFC's capstone.
 
 0. **Prerequisite (not owned here):** the ActiveJob package RFC
    (`activejob-package-port`, filed 2026-09-29) lands
-   `port-activejob-enqueuing-execution-and-inline-adapter` (`perform_later`)
+   `port-activejob-enqueuing-and-configured-job` (`perform_later`)
    and `port-activejob-test-helper-performed-assertions` (`TestHelper`, which
    transitively brings in `Arguments`, `Core`, `QueueAdapter` and
    `TestAdapter`). The stories below carry those ids in `deps`, so the ready
@@ -247,7 +247,7 @@ story closed on 2026-08-21; it is repointed at this RFC's capstone.
 
 All three are `draft` and stay that way until Rollout step 0 is satisfied.
 `jobruntime-instrument-drops-both-super-delegations`, filed later, depends on
-the ActiveJob RFC's `port-activejob-instrumentation-and-log-subscriber`.
+the ActiveJob RFC's `port-activejob-instrumentation`.
 
 ## Verification
 
@@ -276,7 +276,7 @@ the ActiveJob RFC's `port-activejob-instrumentation-and-log-subscriber`.
    observable, say so at the call site rather than porting the `class_eval`;
    if it is, port it. Deferred to that story, not to `active`.
 2. **Is `AsyncAdapter` in scope for the prerequisite?** Resolved by the
-   ActiveJob RFC: yes. `port-activejob-test-and-async-adapters` ports it,
+   ActiveJob RFC: yes. `port-activejob-async-adapter` ports it,
    because Rails' railtie defaults every non-test environment to `:async`
    (`activejob/lib/active_job/railtie.rb:57`). It is not a dependency of any
    story here, since `TestAdapter` alone satisfies every test above.

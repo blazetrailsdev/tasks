@@ -5,7 +5,7 @@ updated: 2026-09-04
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null
 packages: []
-deps: ["port-activejob-instrumentation-and-log-subscriber"]
+deps: ["port-activejob-instrumentation"]
 deps-rfc: []
 est-loc: 90
 priority: null
@@ -88,7 +88,7 @@ not `runtimeBefore` (CLAUDE.md: a local keeps the Rails identifier, camelCased).
 
 The host is `ActiveJob::Instrumentation#instrument`
 (`vendor/rails/v8.0.2/activejob/lib/active_job/instrumentation.rb:35-45`). It
-is ported by `port-activejob-instrumentation-and-log-subscriber` in the
+is ported by `port-activejob-instrumentation` in the
 ActiveJob package RFC (`activejob-package-port`), and this story `deps` on it.
 Once that story lands, the `super` is a real one: the AR railtie's
 `ActiveSupport.on_load(:active_job) { include ActiveRecord::Railties::JobRuntime }`

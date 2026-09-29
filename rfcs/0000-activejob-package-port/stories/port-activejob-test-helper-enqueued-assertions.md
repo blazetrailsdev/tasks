@@ -1,13 +1,13 @@
 ---
-title: "Port TestHelper's setup/teardown and enqueued-job assertions, and ActiveJob::TestCase"
+title: "Port TestHelper's setup/teardown and enqueued-job assertions, ActiveJob::TestCase, and test_case_test.rb"
 status: draft
 updated: 2026-09-29
 rfc: "0000-activejob-package-port"
 cluster: null
 packages: ["activejob"]
-deps: ["port-activejob-test-and-async-adapters"]
+deps: ["port-activejob-test-adapter", "port-activejob-test-fixture-jobs"]
 deps-rfc: []
-est-loc: 550
+est-loc: 400
 priority: 3
 pr: null
 claim: null
@@ -18,74 +18,61 @@ closed-reason: null
 
 ## Context
 
-`vendor/rails/v8.0.2/activejob/lib/active_job/test_helper.rb` is 770 lines,
-mostly RDoc. It is split across two stories. This one ports the machinery and
-the **enqueued** half:
+`vendor/rails/v8.0.2/activejob/lib/active_job/test_helper.rb` (770 lines, mostly RDoc), split across two stories. This
+one ports:
 
-- `TestQueueAdapter` (`:15-35`): `class_attribute :_test_adapter`, a
-  `queue_adapter` override, `disable_test_adapter` and
-  `enable_test_adapter`. It is included into `Base` by
-  `ActiveSupport.on_load(:active_job)` (`:37-39`). That is a load hook, not a
-  static include, so loading the test helper patches `Base`.
-- `before_setup` / `after_teardown` (`:41-64`), wired through activesupport's
-  `beforeSetup` / `afterTeardown`
-  (`packages/activesupport/src/testing/setup-and-teardown.ts:19,23`), and
+- `TestQueueAdapter` (`:15-35`): `class_attribute :_test_adapter`, `queue_adapter`
+  override, `disable_test_adapter`, `enable_test_adapter`; included into `Base`
+  by `ActiveSupport.on_load(:active_job)` (`:37-39`).
+- `before_setup` / `after_teardown` (`:41-64`), wired through
+  `packages/activesupport/src/testing/setup-and-teardown.ts:19,23`, and
   `queue_adapter_for_test` (`:66-67`).
-- `assert_enqueued_jobs` (`:122-139`), `assert_no_enqueued_jobs`
-  (`:186-190`) and `assert_enqueued_with` (`:406-452`). The last builds the
-  "No enqueued job found with …" / "Potential matches:" message from Ruby
-  `inspect` (`:440-448`). Render it with `rbInspect`, because
-  `test_helper_test.rb:739-740` asserts on it.
-- `queue_adapter` (`:661-664`) and the shared private helpers
+- `assert_enqueued_jobs` (`:122-139`), `assert_no_enqueued_jobs` (`:186-190`),
+  `assert_enqueued_with` (`:406-452`).
+- `queue_adapter` (`:661-663`) and the shared private helpers
   `require_active_job_test_adapter!`, `using_test_adapter?`,
-  `clear_enqueued_jobs`, `clear_performed_jobs`, `jobs_with`,
-  `filter_as_proc`, `enqueued_jobs_with`, `prepare_args_for_assertion`,
+  `clear_enqueued_jobs`, `clear_performed_jobs`, `jobs_with`, `filter_as_proc`,
+  `enqueued_jobs_with`, `prepare_args_for_assertion`,
   `deserialize_args_for_assertion`, `instantiate_job`,
-  `queue_adapter_changed_jobs` and `validate_option` (`:666-769`).
-  `performed_jobs_with` and `flush_enqueued_jobs` belong to the performed
-  story.
+  `queue_adapter_changed_jobs`, `validate_option` (`:666-768`).
 
-`lib/active_job/test_case.rb` (11 lines) is `class TestCase <
-ActiveSupport::TestCase`, `include TestHelper`, and
-`run_load_hooks(:active_job_test_case, self)`. It builds on
+`vendor/rails/v8.0.2/activejob/lib/active_job/test_case.rb` (11 lines): `TestCase < ActiveSupport::TestCase`, `include
+TestHelper`, `run_load_hooks(:active_job_test_case, self)`, over
 `packages/activesupport/src/test-case.ts:53`.
 
-Every block-taking assertion is `async` and awaits its block (RFC "Async
-shape"), like `assertDifference`. The `only:` / `except:` / `queue:` options
-are kwargs: port them as an options bag, keeping Ruby's `nil`-versus-absent
-semantics (CLAUDE.md "kwargs").
+Every block-taking assertion is `async` and awaits its block, as `assertDifference`
+does (`packages/activesupport/src/testing/assertions.ts:183`). The Rails
+`test_helper_test.rb` cases are the five `port-activejob-test-helper-test-*`
+stories.
 
-Tests, from `test/cases/test_helper_test.rb` (`EnqueuedJobsTest` is inside `if
-adapter_is?(:test)`, `:39`, so these run in the `test` lane):
+`vendor/rails/v8.0.2/activejob/test/cases/test_case_test.rb`: 3 cases, as `parity:test` names them:
 
-- the `DoNotPerformEnqueuedJobs` concern (`:17-35`), as a shared helper;
-- `EnqueuedJobsTest` cases 1–24 (`:40-292`, through
-  `test_assert_enqueued_jobs_with_except_option_and_too_few_sent`);
-- `QueueAdapterTest` (`:809-825`, 1), `OverrideQueueAdapterTest`
-  (`:2185-2195`, 1) and `InheritedJobTest` (`:2197-2201`, 1, with the
-  `inherited_job` / `queue_adapter_job` fixtures);
-- `test/cases/test_case_test.rb`'s remaining 2 cases, including the adapter
-  `case` in `test_set_test_adapter` (`:22-51`). Port all eleven `when` arms.
-  The gem-adapter arms read their constants from the `QueueAdapters`
-  namespace at call time, and no trails lane reaches them.
+- [ ] `:18` ActiveJobTestCaseTest — "include helper"
+- [ ] `:22` ActiveJobTestCaseTest — "set test adapter"
+- [ ] `:53` ActiveJobTestCaseTest — "does not perform enqueued jobs by default"
 
-**Unported:** `QueueAdapterJobTest#test_queue_adapter_is_is_inline_adapter_because_it_is_set_on_the_job_class`
-(`:2203-2213`) drives `Zeitwerk.with_loader`. Add a per-test entry to
-`scripts/parity/unported-files/activejob.ts` citing CLAUDE.md § "Trails has no
-autoloader".
+`test_set_test_adapter` (`:22-51`) is an eleven-arm `case` over adapter names.
+Port all eleven arms; the gem-adapter arms read their constants from the
+`QueueAdapters` namespace at call time, and no trails lane reaches them.
 
-`port-activejob-test-helper-test-enqueued-jobs` ports `EnqueuedJobsTest`
-cases 25–76.
+## Fidelity traps (predicted at authoring)
+
+- [ ] **`queue_adapter_changed_jobs`** (`:759-763`) walks `ActiveJob::Base.descendants` and keeps classes whose singleton class defines its own `_queue_adapter`. trails has no `inherited`: `DescendantsTracker.registerSubclass` is called only where trails records a subclass (`packages/activesupport/src/callbacks.ts:964`, `activerecord/src/inheritance.ts:142`). Prove that a job class whose only customization is `self.queue_adapter = :inline` (`InheritedJob`, `QueueAdapterJob`) is found, and read "defines its own `_queue_adapter`" as an own-property check on the class.
+- [ ] **`{{ job:, args:, at:, queue:, priority: }}.compact`** (`:409`) drops `nil`s; a matcher value that responds to `call` is invoked (`:428-429`), otherwise compared with Ruby `==` (`rbEqual`, deep for Arrays/Hashes, record equality for models).
+- [ ] **`enqueued_jobs - original_enqueued_jobs`** (`:418`) is Ruby `Array#-` (hash/eql? equality), not identity.
+- [ ] **The failure message** interpolates `#{{expected}}` (Ruby `Hash#inspect`, `rbInspect`), `job["job_class"]` names and `matching_class.join("\n")` (`:440-447`).
+- [ ] **`job.fetch(:queue, job_class.queue_name)`** (`:697`) is a stored-value `fetch`, not `??`; **`queue.to_s`** strips a Symbol's colon.
+- [ ] **`prepare_args_for_assertion`**: a Symbol `:queue` becomes a String (`:734-736`); an `at:` that `acts_like?(:time)` becomes a `±1` second range matcher (`:738-741`).
+- [ ] **`Time.at(new_job[:at])`** (`:747`, `:754`) from float seconds; `payload.key?(:at)` (`:754`) is key presence, not truthiness.
+- [ ] **Bang arm.** `require_active_job_test_adapter!` raises `ArgumentError` "#{{method}} requires the Active Job test adapter, you're using #{{queue_adapter.class.name}}." (`:668`).
+- [ ] **`validate_option`** (`:767`) raises `ArgumentError` with the message ``Cannot specify both `:only` and `:except` options.`` when `only && except`, which is Ruby truthiness.
+- [ ] **`before_setup` / `after_teardown` call `super`**, and `after_teardown` runs after the test's own teardown.
 
 ## Acceptance criteria
 
-- [ ] `test_helper.rb`'s members above and `test_case.rb` read complete in
-      `parity:api`.
-- [ ] The 29 cases above pass in the `test` lane and are skipped by the guard
-      in the `inline` / `async` lanes, as in Rails.
-- [ ] A class that sets its own `queue_adapter` (`InheritedJob`) keeps it, and
-      every other class gets a fresh `TestAdapter` per test.
+- [ ] Every member above and `test_case.rb` read complete in `parity:api`.
+- [ ] The 3 `test_case_test.rb` cases pass in their lanes.
 
 ## Definition of done
 
-Deleting the `if adapter_is?(:test)` guard so the cases run in the `inline` lane does not close this story. They run in the `test` lane from `port-activejob-test-and-async-adapters`.
+Deleting an `adapter_is?(:test)` guard so cases run in the `inline` lane does not close this story.

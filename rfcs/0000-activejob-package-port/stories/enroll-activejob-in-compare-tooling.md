@@ -19,11 +19,10 @@ closed-reason: null
 ## Context
 
 Today `pnpm parity:api --package activejob` fails with `unknown package
-"activejob"`, because `vendor/sources.ts` has no activejob entry under the
-`rails` source (`:107-149` lists activemodel, activesupport, actionpack,
-actionview and trailties). Measured over the vendored tree, the extractors
-report `activejob: 39 classes, 29 modules, 247 public methods (72 internal)`
-and `416 tests across 22 files`.
+"activejob"`: `vendor/sources.ts` has no activejob entry under the `rails`
+source (`:107-149`). Measured over the vendored tree, the extractors report
+`activejob: 39 classes, 29 modules, 247 public methods (72 internal)` and
+`416 tests across 22 files`.
 
 Registrations (RFC "Tooling enrollment"). `pnpm parity:test` passes without
 number 4, so a green local compare does not prove it:
@@ -39,13 +38,12 @@ number 4, so a green local compare does not prove it:
    maps `cases/queue_naming_test.rb` → `queue-naming.test.ts` and
    `serializers/time_with_zone_serializer_test.rb` →
    `serializers/time-with-zone-serializer.test.ts` before adding a package arm.
-4. A sorted `0/0/0` `activejob` row in
-   `scripts/test-compare/assertion-mismatch-mark.json`, hand-added. **Do not
-   reseed**: a reseed moves every package's counters.
+4. A sorted, hand-added `0/0/0` `activejob` row in
+   `scripts/test-compare/assertion-mismatch-mark.json`. Do not reseed.
 5. `eslint.config.mjs` and `eslint/rails-private-jsdoc.config.mjs`: add
-   `packages/activejob` to the `rails-private-jsdoc` enrollment, in sync, and
-   mirror the root config's `ignores` into the second file.
-   Per RFC Open question 2, run the autofix here.
+   `packages/activejob` to the `rails-private-jsdoc` enrollment in both, and
+   mirror the root config's `ignores` into the second. Run the autofix here
+   (RFC Open question 2).
 
 **The non-ports.** Add `scripts/parity/unported-files/activejob.ts`
 (`ACTIVEJOB_UNPORTED_FILES`, spread into `index.ts` beside
@@ -54,32 +52,23 @@ number 4, so a green local compare does not prove it:
 - `pattern` for each of `queue_adapters/backburner_adapter.rb`,
   `delayed_job_adapter.rb`, `queue_classic_adapter.rb`, `resque_adapter.rb`,
   `sidekiq_adapter.rb`, `sneakers_adapter.rb` and `sucker_punch_adapter.rb`
-  (`vendor/rails/v8.0.2/activejob/lib/active_job/queue_adapters/`, 389 lines,
-  29 public methods);
+  (389 lines, 29 public methods);
 - `testFile: "cases/delayed_job_adapter_test.rb"` (3 cases) and
   `testFile: "integration/queuing_test.rb"` (15 cases, driven by
   `test/support/integration/adapters/*.rb`);
 - a per-test entry for `cases/adapter_test.rb` naming its two
-  `if adapter_is?(:sucker_punch)` cases (`:10-35`). The file's first case,
-  `"should load #{ENV['AJ_ADAPTER']} adapter"`, is ported.
+  `if adapter_is?(:sucker_punch)` cases (`:10-35`).
 
-The `reason` is the RFC's Non-goals wording: each adapter is a shim over a Ruby
-gem's client with no Node counterpart, and a real backend is its own RFC over
-an npm client, async from its first PR. Do not use `SKIP_GROUPS`, which is
-member-level.
+Each `reason` is the RFC's Non-goals wording. `SKIP_GROUPS` is member-level and
+is not used.
 
 ## Acceptance criteria
 
-- [ ] `pnpm parity:api --package activejob` prints a row, with the seven
-      adapter files reported as unported rather than missing.
-- [ ] `pnpm parity:test` prints an activejob block with 396 counted cases.
-      The 20 gem-adapter cases are excluded.
-- [ ] `pnpm parity:test:assertions` is green with the hand-added row, and no
-      other package's row changes.
-- [ ] The `rails-private-jsdoc` enrollment lists `packages/activejob` in both
-      configs.
-- [ ] `vendor/sources.test.ts` is green.
+- [ ] `pnpm parity:api --package activejob` prints a row, with the seven adapter files reported as unported rather than missing.
+- [ ] `pnpm parity:test` prints an activejob block counting 396 cases; the 20 gem-adapter cases are excluded. (The Zeitwerk entry that brings the RFC's total to 395 is added by `port-activejob-test-helper-test-enqueued-part-2`.)
+- [ ] `pnpm parity:test:assertions` is green with the hand-added row, and no other package's row changes.
+- [ ] Both `rails-private-jsdoc` configs list `packages/activejob`, and `vendor/sources.test.ts` is green.
 
 ## Definition of done
 
-Running `parity:test:assertions:reseed` does not close this story, and neither does a `SKIP_GROUPS` entry for an adapter's methods. The non-ports are file-level and live in `unported-files/activejob.ts`. After this story `parity:test` counts 396 cases. The Zeitwerk entry that brings it to the RFC's 395 is added by `port-activejob-test-helper-enqueued-assertions`.
+Running `parity:test:assertions:reseed`, or a `SKIP_GROUPS` entry for an adapter's methods, does not close this story.
