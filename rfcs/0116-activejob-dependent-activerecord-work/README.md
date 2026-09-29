@@ -223,10 +223,15 @@ story closed on 2026-08-21; it is repointed at this RFC's capstone.
 
 ## Rollout
 
-0. **Prerequisite (not owned here):** an ActiveJob RFC exists and has landed
-   `Arguments`, `Core`, `Enqueuing`, `Execution`, `QueueAdapter`, `TestAdapter`
-   and `TestHelper`. Until then every story below stays `draft`; promoting one
-   before that is what this RFC exists to prevent.
+0. **Prerequisite (not owned here):** the ActiveJob package RFC
+   (`activejob-package-port`, filed 2026-09-29) lands
+   `port-activejob-enqueuing-execution-and-inline-adapter` (`perform_later`)
+   and `port-activejob-test-helper-performed-assertions` (`TestHelper`, which
+   transitively brings in `Arguments`, `Core`, `QueueAdapter` and
+   `TestAdapter`). The stories below carry those ids in `deps`, so the ready
+   queue orders them. This RFC flips to `active` once both are `done`. Until
+   then every story below stays `draft`. Promoting one earlier is what this
+   RFC exists to prevent.
 1. `port-after-commit-jobs-callback` — replace the empty stub with the Rails
    body (F1). Depends only on `perform_later` existing.
 2. `port-destroy-association-async-job` — the 27-line job plus its 5-test and
@@ -241,6 +246,8 @@ story closed on 2026-08-21; it is repointed at this RFC's capstone.
 - `port-destroy-association-async-test-and-flip-models` (F2 + F3)
 
 All three are `draft` and stay that way until Rollout step 0 is satisfied.
+`jobruntime-instrument-drops-both-super-delegations`, filed later, depends on
+the ActiveJob RFC's `port-activejob-instrumentation-and-log-subscriber`.
 
 ## Verification
 
@@ -268,14 +275,17 @@ All three are `draft` and stay that way until Rollout step 0 is satisfied.
    instance (`association.ts:1071`). Settled at story 1: if the placement is not
    observable, say so at the call site rather than porting the `class_eval`;
    if it is, port it. Deferred to that story, not to `active`.
-2. **Is `AsyncAdapter` in scope for the prerequisite?** `TestAdapter` alone
-   satisfies every test above. Including `AsyncAdapter` (68 lines) is what makes
-   `:destroy_async` usable by an actual trails app, which may or may not be a
-   goal at that point. Deferred to the ActiveJob RFC — it is that RFC's scope
-   decision, not this one's.
+2. **Is `AsyncAdapter` in scope for the prerequisite?** Resolved by the
+   ActiveJob RFC: yes. `port-activejob-test-and-async-adapters` ports it,
+   because Rails' railtie defaults every non-test environment to `:async`
+   (`activejob/lib/active_job/railtie.rb:57`). It is not a dependency of any
+   story here, since `TestAdapter` alone satisfies every test above.
 
 ## Changelog
 
 - 2026-08-21: initial RFC, filed from the starved-RFC triage that closed
   `0106/destroy-async-test-port-and-model-flip` and
   `0106/port-activejob-test-helper-for-destroy-association-async`.
+- 2026-09-29: Rollout step 0 names the ActiveJob package RFC's stories, and
+  the four stories here carry them in `deps`. Open question 2 is resolved
+  there.

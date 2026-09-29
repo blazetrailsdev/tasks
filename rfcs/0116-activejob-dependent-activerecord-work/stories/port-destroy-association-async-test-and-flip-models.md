@@ -5,7 +5,12 @@ updated: 2026-08-21
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null
 packages: ["activerecord"]
-deps: ["port-after-commit-jobs-callback", "port-destroy-association-async-job"]
+deps:
+  [
+    "port-after-commit-jobs-callback",
+    "port-destroy-association-async-job",
+    "port-activejob-test-helper-performed-assertions",
+  ]
 deps-rfc: []
 est-loc: 400
 priority: null
