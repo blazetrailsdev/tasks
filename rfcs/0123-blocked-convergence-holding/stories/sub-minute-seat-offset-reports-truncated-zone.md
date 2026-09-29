@@ -1,6 +1,6 @@
 ---
 title: "toZonedDateTime's sub-minute seat reports the truncated offset and wall-clock-derived results"
-status: ready
+status: claimed
 updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-29T19:19:01Z"
+assignee: "scaffold-controller-test-emits-empty-placeholders"
 blocked-by: null
 closed-reason: null
 ---

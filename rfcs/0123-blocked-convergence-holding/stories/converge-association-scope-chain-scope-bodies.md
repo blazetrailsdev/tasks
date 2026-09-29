@@ -1,6 +1,6 @@
 ---
 title: "AssociationScope last/next_chain_scope: Rails locals, zip shape, no aliased_table fallback chain"
-status: ready
+status: in-progress
 updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8250
+claim: "2026-09-29T19:05:03Z"
+assignee: "scaffold-controller-fails-trails-tsc-on-a-fresh-app"
 blocked-by: null
 closed-reason: null
 ---

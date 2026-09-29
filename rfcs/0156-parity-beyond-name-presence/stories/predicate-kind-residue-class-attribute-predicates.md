@@ -1,7 +1,7 @@
 ---
 title: "Burn down the 29 class_attribute predicates in predicate-kind-mark.json"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-09-29
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8250
+claim: "2026-09-29T19:05:03Z"
+assignee: "scaffold-controller-fails-trails-tsc-on-a-fresh-app"
 blocked-by: null
 closed-reason: null
 ---

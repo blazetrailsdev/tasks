@@ -1,6 +1,6 @@
 ---
 title: "association-helpers-extracted-for-the-collection-proxy-remainder-3"
-status: draft
+status: ready
 updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null

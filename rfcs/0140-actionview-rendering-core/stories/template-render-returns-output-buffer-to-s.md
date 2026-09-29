@@ -1,7 +1,7 @@
 ---
 title: "template-render-returns-output-buffer-to-s"
-status: ready
-updated: 2026-09-27
+status: claimed
+updated: 2026-09-29
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-29T19:33:03Z"
+assignee: "template-render-returns-output-buffer-to-s"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "converge-call-rows-unmasked-by-resolved-interface-params"
-status: draft
+status: in-progress
 updated: 2026-09-29
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8248
+claim: "2026-09-29T19:42:33Z"
+assignee: "converge-call-rows-unmasked-by-resolved-interface-params"
 blocked-by: null
 closed-reason: null
 ---

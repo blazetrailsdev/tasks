@@ -1,6 +1,6 @@
 ---
 title: "Seed _default_attributes' columns inside with_connection instead of a best-effort connection probe"
-status: claimed
+status: in-progress
 updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: trails#8249
 claim: "2026-09-29T18:51:12Z"
 assignee: "port-form-helper-tags-text-field-family"
 blocked-by: null

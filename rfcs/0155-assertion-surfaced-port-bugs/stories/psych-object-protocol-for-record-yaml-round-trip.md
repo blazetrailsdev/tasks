@@ -1,7 +1,7 @@
 ---
 title: "psych-object-protocol-for-record-yaml-round-trip"
-status: ready
-updated: 2026-09-28
+status: claimed
+updated: 2026-09-29
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-29T19:47:09Z"
+assignee: "psych-object-protocol-for-record-yaml-round-trip"
 blocked-by: null
 closed-reason: null
 ---

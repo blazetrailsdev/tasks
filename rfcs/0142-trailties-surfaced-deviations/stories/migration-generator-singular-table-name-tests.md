@@ -1,7 +1,7 @@
 ---
 title: "Port the three migration generator singular-table-name tests"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#8250
+claim: "2026-09-29T19:05:03Z"
+assignee: "scaffold-controller-fails-trails-tsc-on-a-fresh-app"
 blocked-by: null
 closed-reason: null
 ---
