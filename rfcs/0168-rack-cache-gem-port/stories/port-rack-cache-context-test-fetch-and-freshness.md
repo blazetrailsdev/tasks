@@ -2,7 +2,7 @@
 title: "Port context_test.rb:455-672 (14 cases): fetch, cacheability and freshness hits"
 status: draft
 updated: 2026-09-28
-rfc: "0000-rack-cache-gem-port"
+rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]
 deps: ["port-rack-cache-context-test-harness"]

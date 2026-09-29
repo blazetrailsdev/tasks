@@ -1,5 +1,5 @@
 ---
-rfc: "0000-rack-cache-gem-port"
+rfc: "0168-rack-cache-gem-port"
 title: "@blazetrails/rack-cache: vendor the rack-cache gem and port it as its own package"
 status: draft
 created: 2026-09-28
@@ -20,7 +20,7 @@ related-rfcs:
 priority: 30
 ---
 
-# RFC — `@blazetrails/rack-cache`
+# RFC 0168 — `@blazetrails/rack-cache`
 
 ## Summary
 

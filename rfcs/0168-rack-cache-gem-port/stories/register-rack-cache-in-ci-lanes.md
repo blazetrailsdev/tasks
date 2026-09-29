@@ -2,7 +2,7 @@
 title: "Register rack-cache in the CI lanes"
 status: draft
 updated: 2026-09-28
-rfc: "0000-rack-cache-gem-port"
+rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]
 deps: ["rack-cache-package-skeleton"]

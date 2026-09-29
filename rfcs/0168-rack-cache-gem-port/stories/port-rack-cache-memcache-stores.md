@@ -2,7 +2,7 @@
 title: "Port the Dalli memcache meta and entity stores over an npm memcached client, async"
 status: draft
 updated: 2026-09-28
-rfc: "0000-rack-cache-gem-port"
+rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]
 deps: ["port-rack-cache-storage"]
