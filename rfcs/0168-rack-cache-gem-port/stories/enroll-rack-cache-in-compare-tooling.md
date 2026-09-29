@@ -1,7 +1,7 @@
 ---
 title: "Enroll rack-cache in parity:api and parity:test"
 status: draft
-updated: 2026-09-28
+updated: 2026-09-29
 rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]

@@ -1,7 +1,7 @@
 ---
 title: "generated-db-ts-connect-resolves-default-env"
-status: in-progress
-updated: 2026-09-28
+status: done
+updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Vendor the rack-cache gem at v1.17.0 so every Rack::Cache citation resolves"
 status: draft
-updated: 2026-09-28
+updated: 2026-09-29
 rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: []

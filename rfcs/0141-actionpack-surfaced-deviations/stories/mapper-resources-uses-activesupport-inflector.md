@@ -1,7 +1,7 @@
 ---
 title: "Mapper#resources singularizes through the ActiveSupport inflector"
-status: in-progress
-updated: 2026-09-28
+status: done
+updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

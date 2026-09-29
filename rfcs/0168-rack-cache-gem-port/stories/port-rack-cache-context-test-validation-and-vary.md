@@ -1,7 +1,7 @@
 ---
 title: "Port context_test.rb:673-1033 (13 cases): validation, HEAD, POST invalidation, Vary and failure handling"
 status: draft
-updated: 2026-09-28
+updated: 2026-09-29
 rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]

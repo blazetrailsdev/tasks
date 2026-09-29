@@ -1,7 +1,7 @@
 ---
 title: "Port Rack::Cache::CacheControl, Rack::Cache::Request and Rack::Cache::Headers"
 status: draft
-updated: 2026-09-28
+updated: 2026-09-29
 rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]
