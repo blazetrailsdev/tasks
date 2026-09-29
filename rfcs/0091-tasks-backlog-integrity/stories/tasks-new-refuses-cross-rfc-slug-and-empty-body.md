@@ -1,7 +1,7 @@
 ---
 title: "tasks new refuses a slug used by any RFC and a story with no body"
-status: in-progress
-updated: 2026-09-28
+status: done
+updated: 2026-09-29
 rfc: "0091-tasks-backlog-integrity"
 cluster: null
 packages: []

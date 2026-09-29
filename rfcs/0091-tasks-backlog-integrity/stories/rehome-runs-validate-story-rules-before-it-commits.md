@@ -1,7 +1,7 @@
 ---
 title: "tasks rehome runs validate's story rules before it commits"
-status: in-progress
-updated: 2026-09-28
+status: done
+updated: 2026-09-29
 rfc: "0091-tasks-backlog-integrity"
 cluster: null
 packages: []

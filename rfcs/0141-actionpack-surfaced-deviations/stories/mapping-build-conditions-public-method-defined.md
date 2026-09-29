@@ -1,7 +1,7 @@
 ---
 title: "Mapping#build_conditions tests public_method_defined?, not prototype membership"
-status: in-progress
-updated: 2026-09-28
+status: done
+updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

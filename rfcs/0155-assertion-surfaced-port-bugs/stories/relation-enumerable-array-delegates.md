@@ -1,7 +1,7 @@
 ---
 title: "relation-enumerable-array-delegates"
-status: in-progress
-updated: 2026-09-28
+status: done
+updated: 2026-09-29
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
