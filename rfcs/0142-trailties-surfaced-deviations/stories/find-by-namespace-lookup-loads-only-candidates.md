@@ -41,4 +41,11 @@ registers in `hiddenCommands()`.
 - `findByNamespace` searches `Base` subclasses by `namespace()` for commands
   ported onto `Base`, and falls back to the Commander program only for commands
   not yet ported.
-- The `@missingRailsCall lookup — PERMANENT` receipt is removed.
+- `findByNamespace` / `invokeRake` are synchronous again, with no `import("./cli.js")`.
+  trails#8247 made them async only to break the eager command.ts -> cli.ts ->
+  commands/\*.ts -> command/base.ts -> command.ts cycle. The converged shape seats
+  `Rails::Command` (its `hidden_commands` ivar and `HELP_MAPPINGS`) on a
+  zero-import namespace object, as CLAUDE.md § "Call-time constant resolution"
+  describes, so command/base.ts no longer imports command.ts.
+- The `@missingRailsCall lookup — CONVERGEABLE find-by-namespace-lookup-loads-only-candidates`
+  receipt on `findByNamespace` is removed.
