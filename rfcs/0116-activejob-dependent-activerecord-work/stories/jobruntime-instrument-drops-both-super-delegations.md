@@ -5,7 +5,7 @@ updated: 2026-09-04
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null
 packages: []
-deps: []
+deps: ["port-activejob-instrumentation"]
 deps-rfc: []
 est-loc: 90
 priority: null
@@ -86,12 +86,16 @@ not `runtimeBefore` (CLAUDE.md: a local keeps the Rails identifier, camelCased).
 
 ## Blocked-on
 
-trails has no ActiveJob package, so there is no host whose `instrument` this
-can delegate to yet. This story is likely gated on
-`0116-activejob-dependent-activerecord-work` landing a host; file it now so the
-divergence is tracked rather than re-derived, and converge it when a host
-exists. If it cannot converge before then, `pnpm tasks block` it with that
-blocker rather than closing it.
+The host is `ActiveJob::Instrumentation#instrument`
+(`vendor/rails/v8.0.2/activejob/lib/active_job/instrumentation.rb:35-45`). It
+is ported by `port-activejob-instrumentation` in the
+ActiveJob package RFC (`activejob-package-port`), and this story `deps` on it.
+Once that story lands, the `super` is a real one: the AR railtie's
+`ActiveSupport.on_load(:active_job) { include ActiveRecord::Railties::JobRuntime }`
+(`vendor/rails/v8.0.2/activerecord/lib/active_record/railtie.rb:271-273`)
+includes the module into `ActiveJob::Base` above `Instrumentation`. Port that
+`on_load` in `packages/trailties/src/trailties/active-record.ts` in this story
+too. The ActiveJob RFC lists it under its Non-goals as this story's work.
 
 ## Acceptance criteria
 
