@@ -289,9 +289,10 @@ Rails runs the suite once per adapter. `rake test` is `test:default`, which
 runs `test:<adapter>` for every entry in `ACTIVEJOB_ADAPTERS`
 (`vendor/rails/v8.0.2/activejob/Rakefile:5,8-17`), and each run sets
 `ENV["AJ_ADAPTER"]` (`test/helper.rb:9`) and loads `test/adapters/<adapter>.rb`.
-The difference is observable. `EnqueuedJobsTest` and `PerformedJobsTest`, 200
-of `test_helper_test.rb`'s 215 cases, sit inside `if adapter_is?(:test)`
-(`test/cases/test_helper_test.rb:39,828`). `NotTestAdapterTest` is
+The difference is observable. `EnqueuedJobsTest` (76 cases, `:38-808`) and
+`PerformedJobsTest` (126 cases, `:827-2114`), 202 of `test_helper_test.rb`'s
+215 cases, sit inside `if adapter_is?(:test)`
+(`test/cases/test_helper_test.rb:39,828`). The other 13 are outside the guard. `NotTestAdapterTest` is
 `unless adapter_is?(:test)` (`:2116`). `async_adapter_test.rb` runs only under
 `async` (`Rakefile:38-41`), and three `logging_test.rb` blocks are
 `unless adapter_is?(:inline, :sneakers)` (`:216,247,293`).
@@ -302,7 +303,7 @@ is one vitest invocation with the env var set, whose setup file ports
 `test/adapters/<adapter>.rb`. The `adapter_is?` guards are ported as-is. The
 skeleton registers the `inline` lane. `port-activejob-test-and-async-adapters`
 adds `test` and `async`. A lane that never runs a guarded block would leave
-200 ported cases green without executing them. The Verification section
+202 ported cases green without executing them. The Verification section
 checks for that.
 
 ### Tooling enrollment
@@ -491,9 +492,10 @@ convergence stories filed into this RFC as review surfaces them.
 - `pnpm parity:test` credits all 395 portable cases. The 20 gem-adapter
   cases and the one Zeitwerk case read as unported.
 - CI runs the activejob suite in the `inline`, `test` and `async` lanes. In
-  the `test` lane, the `EnqueuedJobsTest` / `PerformedJobsTest` cases execute
-  rather than skip, and a lane's skipped count matches its `adapter_is?`
-  guards.
+  the `test` lane, all 202 `EnqueuedJobsTest` / `PerformedJobsTest` cases
+  (76 + 126) execute rather than skip. In the `inline` and `async` lanes those
+  202 skip, and `NotTestAdapterTest`'s 8 run. Each lane's skipped count
+  matches its `adapter_is?` guards.
 - `pnpm parity:test` credits the 6 cases of
   `railties/test/generators/job_generator_test.rb` in trailties.
 - `packages/trailties/src/generators/app-base.ts` has no `skipActiveJob` row
