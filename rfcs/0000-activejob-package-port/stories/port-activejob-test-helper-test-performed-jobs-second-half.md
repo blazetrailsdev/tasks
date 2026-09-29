@@ -34,8 +34,17 @@ It is independent of `…-first-half`. Both depend only on the lib stories and
 can run in parallel. Keep `def test_x` names. The failure-message cases use
 `rbInspect`, as in `port-activejob-test-helper-test-enqueued-jobs`.
 
+If the port runs past 600 LOC, the agreed split point is
+`test_assert_no_performed_jobs_without_block_with_except_and_queue_options`
+(`:1802`): cases 71–98 (`:1523-1801`) and 99–126 (`:1802-2112`). File the tail
+as a sibling story in this RFC.
+
 ## Acceptance criteria
 
 - [ ] 56 cases ported under their Rails names, passing in the `test` lane.
 - [ ] With the first half and the performed-assertions story,
       `PerformedJobsTest` is at 126/126 in `parity:test`.
+
+## Definition of done
+
+Renaming a test or weakening an assertion does not close this story. A case that fails on a lib bug is fixed in the same PR. If the fix is over budget, the case may be skipped only with a skip reason naming a story filed in this RFC for the bug.

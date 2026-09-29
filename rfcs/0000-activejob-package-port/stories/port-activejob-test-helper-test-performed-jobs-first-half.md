@@ -41,6 +41,15 @@ needs the exceptions story. The `rescue_job` fixture lands with
 Pure test ports: a failure is a lib bug to fix in this PR. Keep `def test_x`
 names.
 
+If the port runs past 600 LOC, the agreed split point is
+`test_assert_performed_jobs_with_except_option_as_proc` (`:1250`): cases 19–44
+(`:997-1249`) and 45–70 (`:1250-1522`). File the tail as a sibling story in
+this RFC.
+
 ## Acceptance criteria
 
 - [ ] 52 cases ported under their Rails names, passing in the `test` lane.
+
+## Definition of done
+
+Renaming a test or weakening an assertion does not close this story. A case that fails on a lib bug is fixed in the same PR. If the fix is over budget, the case may be skipped only with a skip reason naming a story filed in this RFC for the bug.

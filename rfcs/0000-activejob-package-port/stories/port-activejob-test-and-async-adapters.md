@@ -72,8 +72,9 @@ Tests:
   (`:52-54`);
 - every case already ported by earlier stories, re-run in the two new lanes.
   Fix any failure that appears only in one lane in this PR. A failure in one
-  lane only means a Rails arm was dropped
-  (`project_rails_test_adapter_conditional_dropped_in_port`).
+  lane only usually means a port dropped an `adapter_is?` arm the Rails test
+  has. If a lane surfaces more than this story's budget, file each failure as
+  a story in this RFC with its Rails `file:line`.
 
 ## Acceptance criteria
 
@@ -82,3 +83,7 @@ Tests:
 - [ ] Two concurrent `AsyncAdapter` jobs see separate execution contexts.
 - [ ] `ImmediateExecutor` and `ScheduledTask` live in ruby-compat with
       receipts, and `pnpm parity:api:extra:gate` is green.
+
+## Definition of done
+
+Registering only one of the two new lanes does not close this story, and neither does removing an `adapter_is?` guard so a case runs in the `inline` lane.

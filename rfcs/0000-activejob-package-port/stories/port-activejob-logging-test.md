@@ -30,7 +30,7 @@ cases. It is the specification for `LogSubscriber`'s message formats and for
 - `include ActiveJob::TestHelper` (`:18`), for `perform_enqueued_jobs` (27
   uses). That is why it depends on the performed-assertions story;
 - `include ActiveSupport::LogSubscriber::TestHelper` (`:19`), which
-  `port-activejob-instrumentation-and-log-subscriber` ports;
+  `port-activesupport-log-subscriber-test-helper` ports;
 - `models/person` (`:15`), for the `gid://aj/Person/123` cases
   (`:87-105`), from the GlobalID story;
 - `rescue_job`, `retry_job`, `abort_before_enqueue_job` and
@@ -62,3 +62,7 @@ If the port runs past 600 LOC, the agreed split point is
 - [ ] The `inline` lane runs 45 minus the guarded cases, and the `test` lane
       runs all 45.
 - [ ] No assertion regex is weaker than its Ruby source.
+
+## Definition of done
+
+Renaming a test or weakening an assertion does not close this story. A case that fails on a lib bug is fixed in the same PR. If the fix is over budget, the case may be skipped only with a skip reason naming a story filed in this RFC for the bug.

@@ -85,3 +85,7 @@ cases 25–76.
       in the `inline` / `async` lanes, as in Rails.
 - [ ] A class that sets its own `queue_adapter` (`InheritedJob`) keeps it, and
       every other class gets a fresh `TestAdapter` per test.
+
+## Definition of done
+
+Deleting the `if adapter_is?(:test)` guard so the cases run in the `inline` lane does not close this story. They run in the `test` lane from `port-activejob-test-and-async-adapters`.

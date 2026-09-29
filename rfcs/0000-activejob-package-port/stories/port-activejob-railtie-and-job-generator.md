@@ -105,3 +105,7 @@ and the `EnqueueAfterTransactionCommit` include.
       `job_generator_test.rb`'s 6 cases pass under their Rails names.
 - [ ] `app-generator.test.ts` snapshots are updated deliberately, and the PR
       body lists the changed paths.
+
+## Definition of done
+
+Keeping the invented `export class ApplicationJob { queueAs = "default"; }` in `app-generator.ts` does not close this story, and neither does removing `skipActionMailer` / `skipActiveStorage` along with `skipActiveJob`.

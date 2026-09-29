@@ -79,3 +79,7 @@ Tests:
 - [ ] `useZone` no longer throws on an async block, and both it and
       `withLocale` restore on settle. Their existing sync tests stay green.
 - [ ] The 11 Rails cases pass in the `inline` lane.
+
+## Definition of done
+
+Catching `useZone`'s async-block error, or awaiting the body outside `useZone` / `withLocale` so the zone is never set during the job, does not close this story.

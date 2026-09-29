@@ -25,8 +25,8 @@ actionview and trailties). Measured over the vendored tree, the extractors
 report `activejob: 39 classes, 29 modules, 247 public methods (72 internal)`
 and `416 tests across 22 files`.
 
-Registrations (RFC "Tooling enrollment";
-`project_test_compare_enrollment_needs_four_registrations`):
+Registrations (RFC "Tooling enrollment"). `pnpm parity:test` passes without
+number 4, so a green local compare does not prove it:
 
 1. `vendor/sources.ts`: `{ name: "activejob", libPath:
 "activejob/lib/active_job", testPath: "activejob/test" }`, plus
@@ -44,7 +44,7 @@ Registrations (RFC "Tooling enrollment";
    reseed**: a reseed moves every package's counters.
 5. `eslint.config.mjs` and `eslint/rails-private-jsdoc.config.mjs`: add
    `packages/activejob` to the `rails-private-jsdoc` enrollment, in sync, and
-   mirror any `ignores` (`project_rails_private_jsdoc_config_ignores_must_mirror_root`).
+   mirror the root config's `ignores` into the second file.
    Per RFC Open question 2, run the autofix here.
 
 **The non-ports.** Add `scripts/parity/unported-files/activejob.ts`
@@ -79,3 +79,7 @@ member-level.
 - [ ] The `rails-private-jsdoc` enrollment lists `packages/activejob` in both
       configs.
 - [ ] `vendor/sources.test.ts` is green.
+
+## Definition of done
+
+Running `parity:test:assertions:reseed` does not close this story, and neither does a `SKIP_GROUPS` entry for an adapter's methods. The non-ports are file-level and live in `unported-files/activejob.ts`. After this story `parity:test` counts 396 cases. The Zeitwerk entry that brings it to the RFC's 395 is added by `port-activejob-test-helper-enqueued-assertions`.

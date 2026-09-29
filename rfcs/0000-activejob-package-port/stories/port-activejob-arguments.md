@@ -56,8 +56,8 @@ follows directly (RFC "GlobalID arguments"). Do not add a receipt for them.
   already uses for Ruby kwargs.
 - `when ActiveSupport::HashWithIndifferentAccess` is activesupport's
   `HashWithIndifferentAccess`. The `permitted?` / `to_h` duck-type arm
-  (`:102-103`) uses `rbObjRespondTo`, never `typeof x.m === "function"`
-  (`project_typeof_method_guard_reads_as_a_call_in_call_gate`).
+  (`:102-103`) uses `rbObjRespondTo`, never `typeof x.m === "function"`.
+  The call-parity gate reads that probe as a call to `m`.
 - `argument.class == String` (`:76`) keeps the subclass arm: a String subclass
   goes through `Serializers.serialize`.
 
@@ -81,3 +81,7 @@ key errors.
 primitive arguments: …"`, `"Only string and symbol hash keys may be
 serialized as job arguments, but …"`, and so on).
 - [ ] `Arguments.deserialize` returns a promise.
+
+## Definition of done
+
+A `@missingRailsCall` or `@missingRailsArgs` receipt for the GlobalID arm does not close this story. The arm is filed work, not a deviation. A sync `Arguments.deserialize` does not close it either.

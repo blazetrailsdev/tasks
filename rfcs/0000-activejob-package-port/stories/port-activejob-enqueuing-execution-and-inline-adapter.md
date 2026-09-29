@@ -101,3 +101,7 @@ instrumentation"` (`:88-104`), which goes to
       process without the gem raises. It does not return a stub.
 - [ ] `await HelloJob.performLater("x", (job) => …)` awaits an async block
       before it resolves.
+
+## Definition of done
+
+A sync `perform_now` with an async twin, or a `perform_later` that fires its block without awaiting it, does not close this story. Stub gem adapters for `QueueAdapters.lookup` do not close it either.

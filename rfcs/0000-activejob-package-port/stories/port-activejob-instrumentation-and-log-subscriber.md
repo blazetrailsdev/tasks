@@ -7,7 +7,7 @@ cluster: null
 packages: ["activejob", "activesupport"]
 deps: ["port-activejob-callbacks-timezones-and-translation"]
 deps-rfc: []
-est-loc: 600
+est-loc: 450
 priority: 3
 pr: null
 claim: null
@@ -70,19 +70,9 @@ Tests:
   `port-activejob-exceptions-retry-and-discard`;
 - `test/cases/queuing_test.rb` `"perform_all_later instrumentation"` (`:88-104`).
 
-`logging_test.rb` is its own story (`port-activejob-logging-test`). It
-`include ActiveSupport::LogSubscriber::TestHelper` (`test/cases/logging_test.rb:19`),
-which trails has not ported:
-`vendor/rails/v8.0.2/activesupport/lib/active_support/log_subscriber/test_helper.rb`
-(106 lines, `MockLogger`, `set_logger`, `wait`) has no file under
-`packages/activesupport/src/`. Instead, `packages/activesupport/src/log-subscriber.test.ts:10`,
-`packages/activerecord/src/log-subscriber.test.ts` and
-`packages/actionview/src/log-subscriber.trails.test.ts` each hand-roll a
-`MockLogger`. Port it here as
-`packages/activesupport/src/log-subscriber/test-helper.ts`. The file is
-counted, not unported (`scripts/parity/unported-files/activesupport.ts:84-85`),
-and this is its first consumer. Moving those three local copies onto it is
-a follow-up story, filed from this PR. It is not part of this PR.
+`logging_test.rb` is its own story (`port-activejob-logging-test`). The
+`ActiveSupport::LogSubscriber::TestHelper` it needs is
+`port-activesupport-log-subscriber-test-helper`.
 
 ## Acceptance criteria
 
@@ -93,5 +83,7 @@ a follow-up story, filed from this PR. It is not part of this PR.
 - [ ] A `perform.active_job` event's duration covers an awaited `perform`
       body.
 - [ ] The three cases above pass.
-- [ ] `ActiveSupport::LogSubscriber::TestHelper` is ported with a test, and
-      `log_subscriber/test_helper.rb` reads complete for activesupport.
+
+## Definition of done
+
+Collapsing `Logging#perform_now`, `Instrumentation#perform_now` and `Execution#perform_now` into one body does not close this story, and neither does an event that finishes before the awaited `perform`.

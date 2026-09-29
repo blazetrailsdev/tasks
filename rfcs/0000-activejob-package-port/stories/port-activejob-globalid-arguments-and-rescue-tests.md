@@ -71,3 +71,7 @@ DeserializationError"` (`:308-311`), which the exceptions story left for here.
 - [ ] `arguments.rb` reads complete in `parity:api`, with no
       `@missingRailsCall` for the GlobalID members.
 - [ ] The 10 Rails cases above pass under their Rails names.
+
+## Definition of done
+
+A duck-typed `typeof arg.toGlobalId === "function"` check in activejob does not close this story. Membership comes from globalid's `Identification`.

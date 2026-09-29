@@ -74,3 +74,7 @@ functional duration"` (`:213-217`).
 - [ ] The data-list case round-trips every element of `:51-77`.
 - [ ] A Symbol argument round-trips as `":a"`, and a string `"a"` stays a
       string.
+
+## Definition of done
+
+Modelling a Ruby Symbol as a JS `Symbol` does not close this story, and neither does a `SymbolSerializer` that matches every string.

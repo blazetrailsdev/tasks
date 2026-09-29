@@ -80,3 +80,7 @@ it (`:205-383`, minus `:308`). File the tail as a sibling story.
       asserts the serialized job data.
 - [ ] `exceptions_test.rb`'s 29 cases and the three `instrumentation_test.rb`
       cases pass under their Rails names.
+
+## Definition of done
+
+An `exception_executions` key built with JS `join` / `String(array)` does not close this story. It is serialized job data and must match Rails byte for byte.

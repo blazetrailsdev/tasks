@@ -39,9 +39,9 @@ Story 1 of the RFC. There is no `packages/activejob`. Model it on
   `ActiveSupport::Deprecation.new` as `ActiveJob.deprecator`.
 - `src/index.ts` exporting them.
 
-Registrations. Each missing one reds a different lane
-(`project_new_package_subpath_needs_four_registrations`,
-`project_new_package_needs_ci_yml_and_guard_fixture`):
+Registrations. Each one that is missing turns a different CI lane red, one
+round at a time, and `pnpm typecheck` stays green locally through all of them
+because husky leaves a built `dist/`:
 
 - root `tsconfig.json` reference;
 - `vitest.config.ts`: both alias entries, with the trailing-slash subpath
@@ -80,3 +80,7 @@ lands with `port-activejob-enqueuing-execution-and-inline-adapter`.
       `pnpm typecheck`.
 - [ ] A plain-node import of the built `packages/activejob/dist/index.js`,
       used as the entry module, succeeds.
+
+## Definition of done
+
+A `@blazetrails/activerecord` dependency in `packages/activejob/package.json` does not close this story, and neither does an empty `src/index.ts`.

@@ -62,3 +62,7 @@ Cases 19–126 of `PerformedJobsTest` are
 - [ ] After `await performEnqueuedJobs(async () => { …; await x; … })`, the
       adapter's six settings are restored, and they were not restored before
       the block settled.
+
+## Definition of done
+
+A `perform_enqueued_jobs` that restores the adapter's settings before its block settles does not close this story.

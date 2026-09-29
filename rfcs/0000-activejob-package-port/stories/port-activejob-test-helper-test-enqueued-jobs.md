@@ -42,8 +42,17 @@ The failure-message cases assert Ruby `inspect` output, for example
 which renders under Ruby 3.3.11's `Hash#inspect`. Build the expected strings
 with `rbInspect`, not hand-typed JS object text.
 
+If the port runs past 600 LOC, the agreed split point is
+`test_assert_no_enqueued_jobs_and_perform_now` (`:542`): cases 25–50
+(`:293-541`) and 51–76 (`:542-806`). File the tail as a sibling story in this
+RFC.
+
 ## Acceptance criteria
 
 - [ ] 52 cases ported under their Rails names, passing in the `test` lane.
 - [ ] Together with the enqueued-assertions story, `EnqueuedJobsTest` is at
       76/76 in `parity:test`.
+
+## Definition of done
+
+Renaming a test or weakening an assertion does not close this story. A case that fails on a lib bug is fixed in the same PR. If the fix is over budget, the case may be skipped only with a skip reason naming a story filed in this RFC for the bug.

@@ -82,3 +82,7 @@ perform_now"` / `"… perform_later"` cases (`:151-161`) go to the enqueuing
 - [ ] The 24 cases above pass under their Rails names.
 - [ ] A plain-node import of the built `dist/base.js` as the entry module
       succeeds, so there is no TDZ cycle through `namespaces.ts`.
+
+## Definition of done
+
+A hand-rolled `inherited` hook or copy-on-first-write `class_attribute` does not close this story. Use `classAttribute()`.

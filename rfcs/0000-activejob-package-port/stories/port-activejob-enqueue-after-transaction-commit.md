@@ -67,3 +67,7 @@ fixture.
 - [ ] The 4 cases pass in all three lanes.
 - [ ] A `.trails.test.ts` in activerecord shows a job enqueued inside a real
       transaction on a canonical model enqueues only after commit.
+
+## Definition of done
+
+Importing `@blazetrails/activerecord` into activejob does not close this story, and neither does a `TopLevel.ActiveRecord?.` guard that Rails does not have.
