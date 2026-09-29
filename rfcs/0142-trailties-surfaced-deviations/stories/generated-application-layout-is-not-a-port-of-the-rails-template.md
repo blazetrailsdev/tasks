@@ -1,6 +1,6 @@
 ---
 title: "generated-application-layout-is-not-a-port-of-the-rails-template"
-status: claimed
+status: in-progress
 updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#8255
 claim: "2026-09-29T18:17:43Z"
 assignee: "generated-application-layout-is-not-a-port-of-the-rails-template"
 blocked-by: null

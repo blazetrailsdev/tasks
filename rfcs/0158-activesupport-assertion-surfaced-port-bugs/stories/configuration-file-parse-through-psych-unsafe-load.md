@@ -1,6 +1,6 @@
 ---
 title: "configuration-file-parse-through-psych-unsafe-load"
-status: draft
+status: ready
 updated: 2026-09-29
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

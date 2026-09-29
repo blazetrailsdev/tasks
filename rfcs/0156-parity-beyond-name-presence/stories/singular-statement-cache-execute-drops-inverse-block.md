@@ -1,6 +1,6 @@
 ---
 title: "find_target's statement-cache execute drops the set_inverse_instance/set_strict_loading block"
-status: claimed
+status: in-progress
 updated: 2026-09-29
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8255
 claim: "2026-09-29T18:17:43Z"
 assignee: "generated-application-layout-is-not-a-port-of-the-rails-template"
 blocked-by: null

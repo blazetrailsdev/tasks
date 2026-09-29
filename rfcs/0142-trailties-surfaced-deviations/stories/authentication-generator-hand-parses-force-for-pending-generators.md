@@ -1,6 +1,6 @@
 ---
 title: "AuthenticationGenerator hand-parses --force instead of dispatching pending generators through generate"
-status: in-progress
+status: done
 updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

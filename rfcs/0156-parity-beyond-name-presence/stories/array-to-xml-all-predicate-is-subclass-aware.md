@@ -1,6 +1,6 @@
 ---
 title: "Array#to_xml's all?(first.class) is is_a?, not class-name equality"
-status: in-progress
+status: done
 updated: 2026-09-29
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

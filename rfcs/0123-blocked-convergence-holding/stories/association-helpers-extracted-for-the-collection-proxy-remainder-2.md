@@ -1,6 +1,6 @@
 ---
 title: "Fold the remaining extracted association helpers into their Rails methods"
-status: claimed
+status: done
 updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#8251
 claim: "2026-09-29T19:33:03Z"
 assignee: "template-render-returns-output-buffer-to-s"
 blocked-by: null

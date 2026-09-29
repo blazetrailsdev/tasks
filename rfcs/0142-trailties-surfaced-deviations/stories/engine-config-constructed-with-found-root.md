@@ -1,7 +1,7 @@
 ---
 title: "engine-config-constructed-with-found-root"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["engine-called-from-never-seated"]
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#8252
+claim: "2026-09-29T20:01:07Z"
+assignee: "engine-config-constructed-with-found-root"
 blocked-by: null
 closed-reason: null
 ---

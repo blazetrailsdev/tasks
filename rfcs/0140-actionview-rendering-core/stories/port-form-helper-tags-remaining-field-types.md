@@ -1,6 +1,6 @@
 ---
 title: "port-form-helper-tags-remaining-field-types"
-status: draft
+status: closed
 updated: 2026-09-29
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "folded into trails#8249 after the LOC ceiling was waived"
 ---
 
 ## Context

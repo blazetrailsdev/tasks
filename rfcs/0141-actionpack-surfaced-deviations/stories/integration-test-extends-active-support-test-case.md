@@ -1,6 +1,6 @@
 ---
 title: "IntegrationTest < ActiveSupport::TestCase (integration.rb:651)"
-status: claimed
+status: in-progress
 updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#8253
 claim: "2026-09-29T19:19:01Z"
 assignee: "scaffold-controller-test-emits-empty-placeholders"
 blocked-by: null

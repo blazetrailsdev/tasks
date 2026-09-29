@@ -1,6 +1,6 @@
 ---
 title: "psych-scalar-and-tag-visitors"
-status: draft
+status: ready
 updated: 2026-09-29
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

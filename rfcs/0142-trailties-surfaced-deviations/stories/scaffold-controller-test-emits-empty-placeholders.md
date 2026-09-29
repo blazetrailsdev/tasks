@@ -1,6 +1,6 @@
 ---
 title: "scaffold-controller-test-emits-empty-placeholders"
-status: claimed
+status: in-progress
 updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#8253
 claim: "2026-09-29T19:19:01Z"
 assignee: "scaffold-controller-test-emits-empty-placeholders"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Split Base#redirectTo into Redirecting#redirect_to and Flash#redirect_to; port add_flash_types"
-status: in-progress
+status: done
 updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

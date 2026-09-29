@@ -1,7 +1,7 @@
 ---
 title: "call-gate-credits-ruby-new-only-as-constructor"
-status: draft
-updated: 2026-09-05
+status: in-progress
+updated: 2026-09-29
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8253
+claim: "2026-09-29T20:44:53Z"
+assignee: "call-gate-credits-ruby-new-only-as-constructor"
 blocked-by: null
 closed-reason: null
 ---
