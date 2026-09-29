@@ -1,6 +1,6 @@
 ---
 title: "generated-db-ts-connect-resolves-default-env"
-status: claimed
+status: in-progress
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#8236
 claim: "2026-09-28T22:48:37Z"
 assignee: "generated-db-ts-connect-resolves-default-env"
 blocked-by: null

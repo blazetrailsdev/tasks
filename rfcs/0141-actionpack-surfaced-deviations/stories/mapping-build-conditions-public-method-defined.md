@@ -1,7 +1,7 @@
 ---
 title: "Mapping#build_conditions tests public_method_defined?, not prototype membership"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8238
+claim: "2026-09-28T23:32:29Z"
+assignee: "live-buffer-queue-is-not-a-blocking-sized-queue"
 blocked-by: null
 closed-reason: null
 ---

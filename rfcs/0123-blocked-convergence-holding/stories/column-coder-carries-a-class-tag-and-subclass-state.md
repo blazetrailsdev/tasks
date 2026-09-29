@@ -1,7 +1,7 @@
 ---
 title: "MySQL::Column carries an encode_with override mysql/column.rb does not define"
-status: ready
-updated: 2026-09-16
+status: done
+updated: 2026-09-28
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["schema-cache-dump-restores-column-subclass-without-a-class-key"]
 deps-rfc: []
 est-loc: 20
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8229
+claim: "2026-09-28T23:22:06Z"
+assignee: "port-action-controller-request-forgery-protection-initializer"
 blocked-by: null
 closed-reason: null
 ---

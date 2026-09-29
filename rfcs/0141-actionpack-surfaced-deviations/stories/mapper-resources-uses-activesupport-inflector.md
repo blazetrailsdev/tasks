@@ -1,7 +1,7 @@
 ---
 title: "Mapper#resources singularizes through the ActiveSupport inflector"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8237
+claim: "2026-09-28T23:22:06Z"
+assignee: "port-action-controller-request-forgery-protection-initializer"
 blocked-by: null
 closed-reason: null
 ---

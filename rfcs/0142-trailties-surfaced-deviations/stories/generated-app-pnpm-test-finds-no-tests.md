@@ -1,6 +1,6 @@
 ---
 title: "generated-app-pnpm-test-finds-no-tests"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

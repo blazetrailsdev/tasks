@@ -1,6 +1,6 @@
 ---
 title: "TagBuilder generates element methods via define_element; the Proxy keeps only method_missing"
-status: in-progress
+status: done
 updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null

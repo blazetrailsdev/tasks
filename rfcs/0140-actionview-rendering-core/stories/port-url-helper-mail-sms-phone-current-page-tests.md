@@ -1,7 +1,7 @@
 ---
 title: "Port the remaining mail_to / sms_to / phone_to / current_page? UrlHelperTest cases"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8239
+claim: "2026-09-28T23:39:40Z"
+assignee: "port-url-helper-mail-sms-phone-current-page-tests"
 blocked-by: null
 closed-reason: null
 ---

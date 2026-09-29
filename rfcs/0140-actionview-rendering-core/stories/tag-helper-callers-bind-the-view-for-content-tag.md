@@ -1,6 +1,6 @@
 ---
 title: "content_tag/tag take a bound view; simple_format, javascript_tag and debug send them to self"
-status: claimed
+status: in-progress
 updated: 2026-09-28
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8236
 claim: "2026-09-28T22:48:37Z"
 assignee: "generated-db-ts-connect-resolves-default-env"
 blocked-by: null
