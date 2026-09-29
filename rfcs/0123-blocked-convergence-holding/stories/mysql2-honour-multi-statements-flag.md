@@ -1,14 +1,14 @@
 ---
 title: "mysql2-honour-multi-statements-flag"
 status: blocked
-updated: 2026-09-15
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 20
+priority: null
 pr: null
 claim: "2026-09-15T23:26:23Z"
 assignee: "binaries-fixture-data-from-flowers-asset"

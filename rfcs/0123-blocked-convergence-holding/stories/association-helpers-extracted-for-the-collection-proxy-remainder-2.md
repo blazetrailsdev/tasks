@@ -1,7 +1,7 @@
 ---
 title: "Fold the remaining extracted association helpers into their Rails methods"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]

@@ -1,7 +1,7 @@
 ---
 title: "Converge IsolatedExecutionState tests on Enumerator#next"
 status: blocked
-updated: 2026-09-22
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-22T16:05:43Z"
 assignee: "converge-isolated-execution-state-tests-on-enumerator-next"
-blocked-by: "depends on port-a-minimal-enumerator-for-to-enum-arms (draft): ruby-compat has no Enumerator yet"
+blocked-by: "Re-verified 2026-09-29: ruby-compat now has an Enumerator (packages/ruby-compat/src/enumerator.ts, via trails#8063) but only the to_enum shape (constructor(obj, meth, args) + each) — no block-form constructor, no yielder, no #next, and nothing resumes a Fiber. port-a-minimal-enumerator-for-to-enum-arms (RFC 0023) is still draft. Unblock when Enumerator#next runs its block on a ruby-compat Fiber."
 closed-reason: null
 ---
 

@@ -1,14 +1,14 @@
 ---
 title: "Retire idsName: constructor dispatch resolves the ids writer via the generated method"
 status: blocked
-updated: 2026-09-25
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: 7
+priority: null
 pr: null
 claim: "2026-09-25T15:39:53Z"
 assignee: "query-cache-registry-unpaired-in-parity-api"

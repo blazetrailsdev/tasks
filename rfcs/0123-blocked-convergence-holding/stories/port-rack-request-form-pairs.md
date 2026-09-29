@@ -1,14 +1,14 @@
 ---
 title: "port-rack-request-form-pairs"
 status: blocked
-updated: 2026-09-02
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 25
+priority: null
 pr: null
 claim: "2026-09-02T18:45:08Z"
 assignee: "converge-env-for-symbol-opts-onto-colon-spelling"

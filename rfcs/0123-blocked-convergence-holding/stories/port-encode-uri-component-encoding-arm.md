@@ -1,14 +1,14 @@
 ---
 title: "Port _encode_uri_component's enc transcode arm"
 status: blocked
-updated: 2026-09-06
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: 38
+priority: null
 pr: null
 claim: null
 assignee: null

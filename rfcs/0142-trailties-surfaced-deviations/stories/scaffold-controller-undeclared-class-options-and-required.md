@@ -1,6 +1,6 @@
 ---
 title: "ScaffoldControllerGenerator: declare :helper/:api/:skip_routes class options; enforce Thor required"
-status: claimed
+status: in-progress
 updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 6
-pr: null
+pr: trails#8248
 claim: "2026-09-29T16:20:48Z"
 assignee: "delete-invented-action-dispatch-respond-to-and-csrf-modules"
 blocked-by: null

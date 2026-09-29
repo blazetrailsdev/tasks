@@ -1,14 +1,14 @@
 ---
 title: "Port Engine's add_mailer_preview_paths and restore add_view_paths' action_mailer arm"
 status: blocked
-updated: 2026-09-05
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: 20
+priority: null
 pr: null
 claim: "2026-09-05T00:22:11Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"

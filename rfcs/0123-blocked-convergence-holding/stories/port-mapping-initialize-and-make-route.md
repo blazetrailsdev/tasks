@@ -1,7 +1,7 @@
 ---
 title: "port-mapping-initialize-and-make-route"
 status: blocked
-updated: 2026-09-26
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: trails#8162
 claim: "2026-09-26T21:02:02Z"
 assignee: "port-mapping-initialize-and-make-route"
-blocked-by: "AC1 shipped in trails#8162 and AC2 in trails#8160; AC3 (drop addRouteToSet's Mapping.build) needs resources routed through collection/new/member: mapper-resources-hand-builds-canonical-routes"
+blocked-by: "AC1 shipped in trails#8162, AC2 in trails#8160; dep mapper-mapping-is-instantiated-per-route is done (trails#8134). AC3 (drop addRouteToSet's Mapping.build — still at origin/main mapper.ts:1798,1824) waits only on mapper-resources-hand-builds-canonical-routes (RFC 0141, ready/unclaimed 2026-09-29). Unblock when that lands."
 closed-reason: null
 ---
 

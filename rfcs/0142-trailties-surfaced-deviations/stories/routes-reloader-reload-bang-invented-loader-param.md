@@ -1,6 +1,6 @@
 ---
 title: "routes-reloader-reload-bang-invented-loader-param"
-status: draft
+status: in-progress
 updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8246
+claim: "2026-09-29T18:58:38Z"
+assignee: "routes-reloader-reload-bang-invented-loader-param"
 blocked-by: null
 closed-reason: null
 ---

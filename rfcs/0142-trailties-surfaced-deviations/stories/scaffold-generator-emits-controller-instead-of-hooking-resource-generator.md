@@ -1,7 +1,7 @@
 ---
 title: "scaffold-generator-emits-controller-instead-of-hooking-resource-generator"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["port-generators-hook-for-and-app-generators-options"]
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8245
+claim: "2026-09-29T18:27:22Z"
+assignee: "scaffold-generator-emits-controller-instead-of-hooking-resource-generator"
 blocked-by: null
 closed-reason: null
 ---

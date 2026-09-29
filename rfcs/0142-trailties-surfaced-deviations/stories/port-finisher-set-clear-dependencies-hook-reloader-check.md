@@ -1,7 +1,7 @@
 ---
 title: "port-finisher-set-clear-dependencies-hook-reloader-check"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8246
+claim: "2026-09-29T18:29:30Z"
+assignee: "port-finisher-set-clear-dependencies-hook-reloader-check"
 blocked-by: null
 closed-reason: null
 ---

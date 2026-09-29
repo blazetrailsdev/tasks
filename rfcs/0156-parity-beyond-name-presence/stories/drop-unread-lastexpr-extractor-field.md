@@ -1,7 +1,7 @@
 ---
 title: "Drop the unread lastExpr field from the Ruby API extractor"
-status: ready
-updated: 2026-09-28
+status: claimed
+updated: 2026-09-29
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: ["scripts"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-29T18:17:43Z"
+assignee: "generated-application-layout-is-not-a-port-of-the-rails-template"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "sync-reads-of-async-reflection-retire-with-rfc-0073"
 status: blocked
-updated: 2026-09-23
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -13,11 +13,11 @@ deps:
   ]
 deps-rfc: []
 est-loc: 60
-priority: 60
+priority: null
 pr: null
 claim: "2026-09-04T17:20:47Z"
 assignee: "sync-reads-of-async-reflection-retire-with-rfc-0073"
-blocked-by: "RFC 0152 rollout step 4 capstone. Steps 1 (converge-sync-connection-lease-per-checkout-verify) and 2 (converge-connection-pool-lifecycle-exclusive-access-async) are done; still waits on step 3 (connection-leasing-queue-internal-poll-carries-a-promise-arm, now ready). Also waits on the schema-cache CLAUDE.md section for the internalSchemaCache re-citation. Live CONVERGEABLE receipts remain on origin/main (e.g. acquireConnectionSync, connection-pool.ts:518)."
+blocked-by: "Re-verified 2026-09-29 on origin/main: steps 1-2 done (trails#8007, #7846); step 3 connection-leasing-queue-internal-poll-carries-a-promise-arm is BLOCKED (not ready as previously noted) on sync-acquire-cannot-complete-reap-before-retry, itself blocked. The schema-cache CLAUDE.md section has landed (trails#7831), so the internalSchemaCache re-cite AC is now doable, but leaseConnectionSync (connection-pool.ts:383), acquireConnectionSync (:521) and the relation.ts:463/682/969 + query-methods.ts:1236 with_connection receipts still wait on the pool chain."
 closed-reason: null
 ---
 

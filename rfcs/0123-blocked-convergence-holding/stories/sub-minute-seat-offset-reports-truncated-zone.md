@@ -1,7 +1,7 @@
 ---
 title: "toZonedDateTime's sub-minute seat reports the truncated offset and wall-clock-derived results"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

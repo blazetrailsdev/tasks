@@ -1,7 +1,7 @@
 ---
 title: "time-accepts-duck-typed-zone-objects"
-status: draft
-updated: 2026-09-25
+status: closed
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8122 (merged 2026-09-26): Time#getlocal ports MRI's tzobj arm (maybeTzobjP / #zoneLocaltime, time.c:2415) and Time#zone answers the seated object; TimeWithZone#toTime is now getlocal(this.timeZone) (origin/main time-with-zone.ts:422); 'to time with preserve timezone using zone' asserts expect(time.zone).toBe(timeZone) (core-ext/time-with-zone.test.ts:1105). The Time.new(..., zone) / zone_timelocal residue of AC1 is owned by activesupport-time-new-timezone-object-argument (RFC 0158)."
 ---
 
 ## Context

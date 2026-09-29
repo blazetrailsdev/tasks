@@ -1,7 +1,7 @@
 ---
 title: "converge-sync-eager-builders-async-to-sql"
-status: blocked
-updated: 2026-08-27
+status: closed
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: 5
 pr: null
 claim: "2026-08-17T22:06:05Z"
 assignee: "converge-lock-value-stores-locks-not-clause-string"
-blocked-by: "Re-verified against origin/main 2026-08-24: blocker still live, and wider than written. Relation#toSql is still declared `toSql(): string` (relation.ts:1915) and the sync eager builders are all still present (_applyEagerJoinDependency relation.ts:1974, _buildEagerOperandManager :1924, _materializeDeferredDistinctPkPredicates :1857, and relation/predicate-builder/deferred-distinct-pk-in.ts). The call-site count in the body has DRIFTED UPWARD: toSql() is now read by 683 test and 31 non-test call sites (body says 412/16), so the sync-to-async flip is a bigger PR than when filed. Still needs an async toSql (or a sync query seam) plus its own three-lane adapter run; does not fit this RFC's 700 LOC ceiling and wants its own RFC."
-closed-reason: null
+blocked-by: null
+closed-reason: "Ratified by trails#7834: CLAUDE.md 'Relation is evaluated by an async query' keeps toSql(): string and its sync eager builders PERMANENT and ratifies DeferredIdsIn/NotIn (deferred-distinct-pk-in.ts), and says 'do not file a story to remove them or to make toSql async'. AC1's 'documented, single-sited language-shortcoming deviation' arm is that section; the delete-the-helpers ACs are contradicted by it. origin/main relation.ts:1081-1083 carries @missingRailsCall apply_join_dependency/with_connection — PERMANENT on toSql; _applyEagerJoinDependency/_buildEagerOperandManager no longer exist."
 ---
 
 ## Context

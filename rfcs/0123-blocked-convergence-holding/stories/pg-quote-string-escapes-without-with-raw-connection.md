@@ -1,14 +1,14 @@
 ---
 title: "PostgreSQL quote_string escapes without taking with_raw_connection's lease"
 status: blocked
-updated: 2026-09-15
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: 60
+priority: null
 pr: null
 claim: "2026-09-15T12:36:32Z"
 assignee: "relation-exec-main-query-with-connection"

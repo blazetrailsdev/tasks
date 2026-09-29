@@ -1,7 +1,7 @@
 ---
 title: "port-form-helper-tags-text-field-family"
-status: ready
-updated: 2026-09-28
+status: claimed
+updated: 2026-09-29
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-29T18:51:12Z"
+assignee: "port-form-helper-tags-text-field-family"
 blocked-by: null
 closed-reason: null
 ---

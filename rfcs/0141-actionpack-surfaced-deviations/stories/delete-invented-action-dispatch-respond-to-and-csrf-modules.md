@@ -1,6 +1,6 @@
 ---
 title: "Delete the invented action-dispatch respond-to and RequestForgeryProtection modules"
-status: claimed
+status: in-progress
 updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#8248
 claim: "2026-09-29T16:20:48Z"
 assignee: "delete-invented-action-dispatch-respond-to-and-csrf-modules"
 blocked-by: null

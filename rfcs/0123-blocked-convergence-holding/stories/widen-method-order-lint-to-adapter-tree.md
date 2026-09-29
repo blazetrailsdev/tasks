@@ -1,7 +1,7 @@
 ---
 title: "Widen rails-file-structure-method-order to the connection-adapter tree"
-status: blocked
-updated: 2026-09-16
+status: ready
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: "2026-08-31T16:43:30Z"
-assignee: "async-overrides-of-synchronous-rails-adapter-methods"
-blocked-by: "Rescoped 2026-09-16 to ONE waived-ceiling PR (tasks#132, pending merge); the slice requirement that blocked it is being removed from the ACs. Remaining precondition is a quiet window: no open PR touching packages/activerecord/src/connection-adapters/** when it is opened."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

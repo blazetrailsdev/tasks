@@ -1,14 +1,14 @@
 ---
 title: "base-constructor-calls-init-internals-not-activemodel"
 status: blocked
-updated: 2026-09-02
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 6
+priority: null
 pr: null
 claim: "2026-09-02T00:37:12Z"
 assignee: "actionview-partial-renderer-bodies-pass-rails-arguments"

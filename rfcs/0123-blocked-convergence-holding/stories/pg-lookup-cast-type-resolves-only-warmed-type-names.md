@@ -1,14 +1,14 @@
 ---
 title: "PG lookup_cast_type resolves only warmed type names, where Rails queries regtype live"
 status: blocked
-updated: 2026-08-29
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 2
+priority: null
 pr: null
 claim: "2026-08-29T14:04:19Z"
 assignee: "pg-quote-binary-column-is-invented-dead-surface"

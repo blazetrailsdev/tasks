@@ -1,7 +1,7 @@
 ---
 title: "i18n hand-rolls Ruby inspect in exceptions.ts and fallbacks.ts instead of rbInspect"
-status: ready
-updated: 2026-09-28
+status: claimed
+updated: 2026-09-29
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-29T18:17:43Z"
+assignee: "generated-application-layout-is-not-a-port-of-the-rails-template"
 blocked-by: null
 closed-reason: null
 ---

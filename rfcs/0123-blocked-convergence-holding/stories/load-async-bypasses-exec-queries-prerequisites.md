@@ -1,14 +1,14 @@
 ---
 title: "loadAsync issues its query before execQueries' trails-only prerequisites"
 status: blocked
-updated: 2026-08-27
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: 7
+priority: null
 pr: trails#6906
 claim: "2026-08-23T11:12:29Z"
 assignee: "wave-5g-head-sweep"

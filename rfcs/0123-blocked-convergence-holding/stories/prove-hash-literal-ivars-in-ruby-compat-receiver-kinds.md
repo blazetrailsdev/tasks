@@ -1,7 +1,7 @@
 ---
 title: "prove-hash-literal-ivars-in-ruby-compat-receiver-kinds"
-status: blocked
-updated: 2026-09-15
+status: ready
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Admitting hash-literal ivars surfaces the mime_responds.rb:250,280-282 ruby-compat row, whose convergence is converge-mime-responds-collector-responses-hash (RFC 0141, still draft); AC requires no new baseline rows. Unblock when that story lands."
+blocked-by: null
 closed-reason: null
 ---
 

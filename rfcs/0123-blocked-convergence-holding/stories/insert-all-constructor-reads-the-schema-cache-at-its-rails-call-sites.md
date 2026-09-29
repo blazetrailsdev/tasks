@@ -1,14 +1,14 @@
 ---
 title: "insert-all-constructor-reads-the-schema-cache-at-its-rails-call-sites"
 status: blocked
-updated: 2026-09-11
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 49
+priority: null
 pr: null
 claim: "2026-09-11T15:29:18Z"
 assignee: "time-coercion-operator-methods-onto-time-class"

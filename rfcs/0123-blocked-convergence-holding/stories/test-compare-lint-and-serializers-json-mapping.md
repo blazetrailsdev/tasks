@@ -1,7 +1,7 @@
 ---
 title: "activemodel: cases/lint_test.rb sits outside the test-compare population"
 status: blocked
-updated: 2026-09-06
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: test-placement
 packages: ["activemodel"]
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-02T22:05:40Z"
 assignee: "type-value-split-and-name-property-burndown"
-blocked-by: "Still blocked, re-verified 2026-09-06 against origin/main. Scope remains the lint half only (serializers half satisfied; activemodel 56/56 files). vendor/rails/activemodel/test/cases/lint_test.rb still defines no test methods — the six tests live in lib/active_model/lint.rb, outside every scanned test dir. The gate is still the only-shrink assertion ratchet: scripts/test-compare/extract-ts-core.ts still folds SAME-FILE helpers only, so the TS mirror extracts zero assertions against the six Ruby tests' 2/2/2/2/7/2, raising activemodel's assertionCount mismatch by 6. Headroom has SHRUNK further since the last reason was written: the committed mark in scripts/test-compare/assertion-mismatch-mark.json is now activemodel.assertionCount 277 (was 281, originally 286). Unblocks on exactly one of: cross-file helper folding in extract-ts-core.ts (the real fix), or converging six-plus of activemodel's existing count mismatches and enrolling in the same PR."
+blocked-by: "Re-verified 2026-09-29: still blocked, and the second escape route is now gone. scripts/test-compare/assertion-mismatch-mark.json has activemodel at 0/0/0 (hard zero), so there are no existing activemodel count mismatches left to converge to make headroom; the only unblock is cross-file helper folding in scripts/test-compare/extract-ts-core.ts (still same-file only), since lint_test.rb's six tests live in lib/active_model/lint.rb."
 closed-reason: null
 ---
 

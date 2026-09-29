@@ -1,7 +1,7 @@
 ---
 title: "Schema-cache dump revives IndexDefinition from its ruby/object tag"
-status: draft
-updated: 2026-09-28
+status: claimed
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-29T18:51:12Z"
+assignee: "port-form-helper-tags-text-field-family"
 blocked-by: null
 closed-reason: null
 ---

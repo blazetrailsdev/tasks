@@ -1,7 +1,7 @@
 ---
 title: "port-with-connection-acquisition-seam-for-the-arel-reader"
-status: blocked
-updated: 2026-08-27
+status: closed
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: 4
 pr: trails#6928
 claim: "2026-08-23T17:39:45Z"
 assignee: "converge-excluding-deferred-ids-marker-to-eager-materialization"
-blocked-by: "Re-verified against origin/main 2026-08-24: blocker still live. ConnectionPool#withConnection is still `async` (connection-adapters/abstract/connection-pool.ts:961 — the story body's :1008 anchor has drifted), so no synchronous with_connection seam is expressible; a sync seam could only serve an already-leased connection, which is exactly what Relation#_conn() (relation.ts:1142) returns. The reader is now spelled `arel(aliases?): SelectManager` (relation.ts:3381 — the body still calls it `toArel`, renamed since the body was written) and is still synchronous, read inline by 31 non-test call sites. Unblocks only when toSql/arel and their callers go async, or a sync query seam lands — neither fits this RFC's 700 LOC PR ceiling; this wants its own RFC."
-closed-reason: null
+blocked-by: null
+closed-reason: "Ratified/delivered: CLAUDE.md 'Relation is evaluated by an async query' (trails#7834) settles that a sync with_connection seam can only serve an already-leased connection — 'the settled shape, not a gap'. The reader now is exactly that shape: origin/main relation/query-methods.ts:1237-1240 arel() = (this._arel ??= connectionPool().withConnectionSync((c) => this.buildArel(c, aliases))), memoized like @arel ||=. Its remaining @missingRailsCall with_connection receipt is owned by sync-reads-of-async-reflection-retire-with-rfc-0073."
 ---
 
 ## Context

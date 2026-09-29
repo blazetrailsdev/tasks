@@ -1,7 +1,7 @@
 ---
 title: "Delete AbstractAdapter#internalSchemaCache once its last sync reader goes"
-status: blocked
-updated: 2026-09-05
+status: closed
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-09-05T19:46:50Z"
 assignee: "rack-deflater-call-diverges-from-rails-case-arms"
-blocked-by: "prerequisite retire-schema-cache-sync-readers-after-checkout-flip (RFC 0073) is still 'ready' — the sync getCached* peeks in model-schema.ts, attribute-methods/primary-key.ts, insert-all.ts and test-fixtures/with-transactional-fixtures.ts all still read internalSchemaCache, so the accessor cannot be deleted yet"
-closed-reason: null
+blocked-by: null
+closed-reason: "Premise gone: prerequisite retire-schema-cache-sync-readers-after-checkout-flip was closed as ratified (CLAUDE.md 'Schema reflection peeks at a warm cache', trails#7831), so the sync readers of internalSchemaCache stay by design and the getter will not be deleted. The getter's receipt on origin/main (abstract-adapter.ts:1246) now points at sync-reads-of-async-reflection-retire-with-rfc-0073, whose AC re-cites internalSchemaCache PERMANENT against that section — that story owns the remaining work."
 ---
 
 ## Context

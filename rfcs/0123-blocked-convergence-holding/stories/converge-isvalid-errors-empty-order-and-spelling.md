@@ -1,7 +1,7 @@
 ---
 title: "Converge Validations#isValid onto Rails' errors.empty? && output order and spelling"
-status: draft
-updated: 2026-09-18
+status: in-progress
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8247
+claim: "2026-09-29T18:37:12Z"
+assignee: "port-form-builder-submit-and-submit-tag"
 blocked-by: null
 closed-reason: null
 ---

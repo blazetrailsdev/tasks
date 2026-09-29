@@ -1,14 +1,14 @@
 ---
 title: "Port Engine's add_locales initializer (needs config.i18n.railties_load_path)"
 status: blocked
-updated: 2026-09-04
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: 20
+priority: null
 pr: null
 claim: "2026-09-04T20:50:46Z"
 assignee: "async-overrides-of-synchronous-rails-adapter-methods"

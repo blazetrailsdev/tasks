@@ -1,7 +1,7 @@
 ---
 title: "Flip the assertion-mismatch gate from ratchet to hard zero"
 status: blocked
-updated: 2026-09-23
+updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: enforcement
 packages:
@@ -66,7 +66,7 @@ deps:
   - "assertions-activesupport-module-class-third-pass"
 deps-rfc: []
 est-loc: 200
-priority: 9
+priority: null
 pr: null
 claim: null
 assignee: null
