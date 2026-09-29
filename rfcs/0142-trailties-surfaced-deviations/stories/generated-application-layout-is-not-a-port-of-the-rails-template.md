@@ -1,7 +1,7 @@
 ---
 title: "generated-application-layout-is-not-a-port-of-the-rails-template"
-status: ready
-updated: 2026-09-28
+status: claimed
+updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-29T15:39:32Z"
+assignee: "generated-application-layout-is-not-a-port-of-the-rails-template"
 blocked-by: null
 closed-reason: null
 ---

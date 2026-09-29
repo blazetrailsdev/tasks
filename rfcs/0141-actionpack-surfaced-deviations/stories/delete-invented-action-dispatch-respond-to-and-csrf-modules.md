@@ -1,7 +1,7 @@
 ---
 title: "Delete the invented action-dispatch respond-to and RequestForgeryProtection modules"
 status: ready
-updated: 2026-09-28
+updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

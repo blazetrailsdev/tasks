@@ -1,7 +1,7 @@
 ---
 title: "parity:api does not credit Mime's object-literal singleton methods"
-status: ready
-updated: 2026-09-27
+status: claimed
+updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-29T15:39:32Z"
+assignee: "generated-application-layout-is-not-a-port-of-the-rails-template"
 blocked-by: null
 closed-reason: null
 ---

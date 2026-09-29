@@ -1,7 +1,7 @@
 ---
 title: "ar-new-project-fails-its-own-typecheck"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8241
+claim: "2026-09-29T15:30:30Z"
+assignee: "ar-new-project-fails-its-own-typecheck"
 blocked-by: null
 closed-reason: null
 ---

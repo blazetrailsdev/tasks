@@ -1,7 +1,7 @@
 ---
 title: "port-action-controller-request-forgery-protection-initializer"
-status: ready
-updated: 2026-09-28
+status: claimed
+updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-29T15:58:59Z"
+assignee: "port-action-controller-request-forgery-protection-initializer"
 blocked-by: null
 closed-reason: null
 ---

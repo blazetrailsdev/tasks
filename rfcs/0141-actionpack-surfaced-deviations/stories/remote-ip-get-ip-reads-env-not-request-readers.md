@@ -1,7 +1,7 @@
 ---
 title: "RemoteIp::GetIp#calculate_ip reads env directly instead of @req.remote_addr/client_ip/x_forwarded_for"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8241
+claim: "2026-09-29T15:30:30Z"
+assignee: "ar-new-project-fails-its-own-typecheck"
 blocked-by: null
 closed-reason: null
 ---
