@@ -53,9 +53,9 @@ Two divergences from the Rails body, both fixable in the same edit:
    the kind of thing a later refactor (e.g. adding a side-effecting getter)
    could silently start depending on the wrong way.
 2. **Spelling.** Ruby calls `errors.empty?`, the direct analogue of trails'
-   OWN `get empty(): boolean` on `Errors`
-   (`packages/activemodel/src/errors.ts:31`). TS instead negates the `any`
-   getter (`errors.ts:271`) — `!this.errors.any` — which is why the call gate
+   OWN `isEmpty(): boolean` on `Errors` (`packages/activemodel/src/errors.ts`;
+   a predicate is `isX` under `docs/ruby-ts-conventions.md`). TS instead
+   negates `isAny()` — `!this.errors.isAny()` — which is why the call gate
    flags a missing `empty?` rather than crediting an existing equivalent: the
    port never calls the method the comparator's alias tables would recognize.
 
@@ -63,16 +63,16 @@ Two divergences from the Rails body, both fixable in the same edit:
 
 ```ts
 const result = await _superIsValid.call(this, effectiveContext);
-return this.errors.empty && result;
+return this.errors.isEmpty() && result;
 ```
 
-Matches Rails' order and calls the `empty` getter that already exists for
+Matches Rails' order and calls the `isEmpty` predicate that already exists for
 exactly this purpose.
 
 ## Acceptance criteria
 
 - `isValid` (`packages/activerecord/src/validations.ts`) reordered to
-  `this.errors.empty && result`, matching `validations.rb:69-73` line for
+  `this.errors.isEmpty() && result`, matching `validations.rb:69-73` line for
   line.
 - The `activerecord/validations.json` baseline row for `valid? / empty?` is
   removed (hand-edit via `serializeBaseline`, not a reseed).

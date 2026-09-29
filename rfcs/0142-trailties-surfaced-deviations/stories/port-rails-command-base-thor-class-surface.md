@@ -40,9 +40,13 @@ the newline only when the message does not end in whitespace (thor 1.3.2
 
 ## Converged shape
 
-- `Command::Base` carries `hideCommandBang`, `classOption`, `desc`, `namespace`,
-  `commandName` and `perform` with the Rails names and control flow from
-  `base.rb`.
+- `Command::Base` carries `hideCommandBang`, `classOption`, `namespace`,
+  `commandName`, `executable` and `perform` with the Rails names and control
+  flow from `base.rb`.
+- `desc` (`base.rb:34-40`) and `banner` (`base.rb:86-95`) are out of scope:
+  `desc`'s no-usage arm is `class_usage`, which needs a USAGE file read plus a
+  TSE render, and `banner`'s command arm is Thor's `formatted_usage`. Both move
+  to `port-rails-command-base-usage-and-banner`.
 - `UnusedRoutesCommand` declares `hideCommandBang()` and its two `classOption`s
   in a `static {}` block, as the Ruby class body does. The Commander wiring in
   `unused-routes.ts` is derived from them, not hand-written.
