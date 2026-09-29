@@ -1,13 +1,13 @@
 ---
-title: "association-helpers-extracted-for-the-collection-proxy-remainder-3"
+title: "Fold the last extracted association helpers (alias tracker, has_many scope, through build_record)"
 status: ready
 updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 400
 priority: null
 pr: null
 claim: null
