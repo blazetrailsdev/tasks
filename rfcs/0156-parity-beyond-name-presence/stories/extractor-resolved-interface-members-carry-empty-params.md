@@ -1,7 +1,7 @@
 ---
 title: "Extractor emits resolved interface (declaredIn) members with params: []"
-status: ready
-updated: 2026-09-28
+status: claimed
+updated: 2026-09-29
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-29T16:20:48Z"
+assignee: "delete-invented-action-dispatch-respond-to-and-csrf-modules"
 blocked-by: null
 closed-reason: null
 ---

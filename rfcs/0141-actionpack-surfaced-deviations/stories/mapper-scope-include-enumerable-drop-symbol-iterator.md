@@ -1,6 +1,6 @@
 ---
 title: "Mapper::Scope includes Enumerable; shallowNestingDepth uses find_all; drop [Symbol.iterator]"
-status: in-progress
+status: done
 updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

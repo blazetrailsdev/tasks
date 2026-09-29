@@ -1,6 +1,6 @@
 ---
 title: "Array#to_xml's all?(first.class) is is_a?, not class-name equality"
-status: claimed
+status: in-progress
 updated: 2026-09-29
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8244
 claim: "2026-09-29T15:58:59Z"
 assignee: "port-action-controller-request-forgery-protection-initializer"
 blocked-by: null

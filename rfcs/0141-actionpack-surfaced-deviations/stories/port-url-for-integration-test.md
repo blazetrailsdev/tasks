@@ -1,6 +1,6 @@
 ---
 title: "Port url_for_integration_test.rb's 87-case each_with_index table"
-status: claimed
+status: done
 updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8243
 claim: "2026-09-29T15:39:32Z"
 assignee: "generated-application-layout-is-not-a-port-of-the-rails-template"
 blocked-by: null

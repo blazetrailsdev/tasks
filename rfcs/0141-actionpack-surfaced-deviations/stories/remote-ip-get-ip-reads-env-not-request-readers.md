@@ -1,6 +1,6 @@
 ---
 title: "RemoteIp::GetIp#calculate_ip reads env directly instead of @req.remote_addr/client_ip/x_forwarded_for"
-status: in-progress
+status: done
 updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

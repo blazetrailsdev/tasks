@@ -1,6 +1,6 @@
 ---
 title: "AuthenticationGenerator hand-parses --force instead of dispatching pending generators through generate"
-status: claimed
+status: in-progress
 updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 6
-pr: null
+pr: trails#8244
 claim: "2026-09-29T15:58:59Z"
 assignee: "port-action-controller-request-forgery-protection-initializer"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Split Base#redirectTo into Redirecting#redirect_to and Flash#redirect_to; port add_flash_types"
-status: claimed
+status: in-progress
 updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8244
 claim: "2026-09-29T15:58:59Z"
 assignee: "port-action-controller-request-forgery-protection-initializer"
 blocked-by: null

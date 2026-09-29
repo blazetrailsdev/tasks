@@ -1,7 +1,7 @@
 ---
 title: "Error.fullMessage: respond_to?(:i18n_scope) and unguarded human_attribute_name"
-status: ready
-updated: 2026-09-28
+status: claimed
+updated: 2026-09-29
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-29T16:20:48Z"
+assignee: "delete-invented-action-dispatch-respond-to-and-csrf-modules"
 blocked-by: null
 closed-reason: null
 ---
