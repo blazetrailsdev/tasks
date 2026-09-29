@@ -129,9 +129,13 @@ way, into `middleware/cookies.ts`'s `Request` reopening.
 
 `RailsMetaStore < Rack::Cache::MetaStore` and `RailsEntityStore <
 Rack::Cache::EntityStore` (`http/rack_cache.rb:12,36`) subclass a gem that is
-not vendored. Porting them follows the `rack` / `rack-session` / `rack-test`
-precedent: vendor the gem at the version Rails' `Gemfile.lock` pins (`rack-cache (1.17.0)`, `vendor/rails/v8.0.2/Gemfile.lock:434`), then port
-the two base classes the subclasses need. See Open questions.
+not vendored. The gem itself now has its own RFC, `rack-cache-gem-port`,
+which follows the `rack` / `rack-session` / `rack-test` precedent. It vendors
+rack-cache at the version Rails' `Gemfile.lock` pins (`rack-cache (1.17.0)`,
+`vendor/rails/v8.0.2/Gemfile.lock:434`) and ports it as
+`@blazetrails/rack-cache`. This RFC keeps only the two Rails subclasses:
+`port-rails-meta-and-entity-stores` depends on that RFC's
+`port-rack-cache-storage`.
 
 ### Prior art folded in by reference
 
@@ -191,13 +195,15 @@ the two base classes the subclasses need. See Open questions.
 
 ## Open questions
 
-1. **Vendor rack-cache?** Recommendation: yes, as a new source in
-   `vendor/sources.ts` (the procedure in `vendor/README.md`), and port only
-   `Rack::Cache::MetaStore` / `EntityStore` and what they reach. The
-   `port-rails-meta-and-entity-stores` story makes the call on scope and files
-   a follow-up if the base classes do not fit one PR.
+1. **Vendor rack-cache?** _Resolved:_ yes, as its own package under the
+   `rack-cache-gem-port` RFC, not as base classes inside actionpack.
+   `port-rails-meta-and-entity-stores` is narrowed to `http/rack_cache.rb` and
+   its test, and it depends on that RFC.
 
 ## Changelog
 
 - 2026-09-27: initial RFC
 - 2026-09-27: re-measured on trails `main` @ `2558bb83f4`; no change to this RFC's rows.
+- 2026-09-28: Open question 1 resolved. The rack-cache gem moved to the
+  `rack-cache-gem-port` RFC, and `port-rails-meta-and-entity-stores` was
+  narrowed to the Rails subclasses.
