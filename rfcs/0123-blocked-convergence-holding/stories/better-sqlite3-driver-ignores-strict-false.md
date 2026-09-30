@@ -2,7 +2,7 @@
 title: "better-sqlite3 driver ignores strict: false (built SQLITE_DQS=0), so every connection is strict"
 status: blocked
 updated: 2026-09-25
-rfc: "0155-assertion-surfaced-port-bugs"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
