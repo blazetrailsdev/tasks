@@ -40,3 +40,10 @@ and a `@missingRailsCall template` receipt was rejected in review of trails#8226
   context, then `create_file destination, nil, config`; an optional block post-processes the content.
 - The migration generator's in-line render goes through it (or through the same helper
   `migration_template` calls), not a second copy.
+- `TestUnit::Generators::ModelGenerator#create_test_file` and `#create_fixture_file`
+  (`railties/lib/rails/generators/test_unit/model/model_generator.rb:15-17,21-25`) call
+  `template "unit_test.rb", …` / `template "fixtures.yml", …`; trails'
+  `packages/trailties/src/generators/test-unit/model/model-generator.ts` renders
+  `TEMPLATES.*` through `createFile` under a `@missingRailsCall template — CONVERGEABLE`
+  receipt citing this story. Both go through the ported `template` and the receipts
+  are deleted; otherwise closing this story reds `stale-story-references`.
