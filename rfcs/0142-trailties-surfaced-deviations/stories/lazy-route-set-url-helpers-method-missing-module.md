@@ -36,6 +36,15 @@ Today this is masked because `action_controller.set_configs` calls `app.routes()
 `make_routes_lazy` runs (see `action-controller-railtie-initializer-order-drags-set-configs-before-env`).
 Fixing that order exposes it.
 
+Design constraint: Rails' `method_missing` re-sends synchronously after
+`reload_routes_unless_loaded`, but trails' `Application#reloadRoutesUnlessLoaded` is async
+(it dynamically imports `config/routes.ts`; `LazyRouteSet#call` awaits it, the other
+overrides fire it with `void`). A synchronous Proxy trap cannot load and re-send in the same
+call, so the port has to load before the helper module is read, for example by awaiting the
+reload in `IntegrationTest` setup before the constructor's `include(klass, routes.urlHelpers())`.
+Decide and cite this against CLAUDE.md § "Relation is evaluated by an async query" / the
+no-synchronous-await rulings.
+
 ## Acceptance criteria
 
 - [ ] A named-route helper read off `LazyRouteSet#urlHelpers()` / path helpers before routes load triggers `reloadRoutesUnlessLoaded` and answers, per `lazy_route_set.rb:92-110` (a Proxy is the settled JS shape for this `method_missing`; see the CLAUDE.md table).
