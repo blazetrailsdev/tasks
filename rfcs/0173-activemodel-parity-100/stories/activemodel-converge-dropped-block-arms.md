@@ -5,7 +5,11 @@ updated: 2026-09-30
 rfc: "0173-activemodel-parity-100"
 cluster: arms
 packages: ["activemodel"]
-deps: ["attribute-set-fetch-value-tests-uninitialized-instead-of-yielding"]
+deps:
+  [
+    "parity-100-rehome-postponed-rfc-dependencies",
+    "attribute-set-fetch-value-tests-uninitialized-instead-of-yielding",
+  ]
 deps-rfc: []
 est-loc: 300
 priority: null

@@ -5,7 +5,7 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: arms
 packages: ["activerecord"]
-deps: ["pg-translate-exception-respond-to-result"]
+deps: ["parity-100-rehome-postponed-rfc-dependencies", "pg-translate-exception-respond-to-result"]
 deps-rfc: []
 est-loc: 250
 priority: null

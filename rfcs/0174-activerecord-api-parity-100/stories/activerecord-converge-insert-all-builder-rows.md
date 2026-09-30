@@ -5,7 +5,8 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args
 packages: ["activerecord"]
-deps: ["port-insert-all-extract-types-from-columns-on"]
+deps:
+  ["parity-100-rehome-postponed-rfc-dependencies", "port-insert-all-extract-types-from-columns-on"]
 deps-rfc: []
 est-loc: 200
 priority: null

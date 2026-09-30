@@ -104,26 +104,45 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
 - **Close-out pins zero.** The last story re-measures and turns each remaining ratchet into a hard zero
   (rowless extra-surface, empty baselines, marks at 0) so the package cannot regress.
 
+### Gating: why `status: active`, and why `deps-rfc` is empty
+
+- **`active` from birth.** `claimable()` (`src/ranking.ts`) surfaces a story only when its own RFC is
+  `active`, its status is `ready`, and every `deps` entry is `done` or `closed`. So `active` makes the
+  **13** stories here with no dependencies claimable at merge. Every other story stays out of
+  `tasks ready` until its own dependencies land. Landing the RFC as `draft` would hold back those
+  13 stories and gate nothing the `deps` edges do not already gate.
+- **Postponed-RFC dependencies go through one rehome story.** 4 stories here depend on stories in
+  RFCs 0023, 0025 or 0082, which are `postponed`, so their stories are never claimable. Each of those
+  4 stories also depends on `parity-100-rehome-postponed-rfc-dependencies` (in RFC 0174, `priority: 1`).
+  That story rehomes them into these RFCs after merge, so the ordering is in the data.
+- **Draft-RFC dependencies** — by RFC: 0120 (1), 0127 (2), 0170 (3). A story depending on a story in a `draft` RFC waits
+  for that story to be `done`, and that cannot happen before its RFC goes `active`. The gate is therefore
+  the story-level `deps` edge, applied transitively.
+- **`deps-rfc` is left empty on purpose.** It means "until that RFC is **closed**" (`claimable()`:
+  `s.deps_rfc.some((d) => rfcStatus.get(d) !== "closed")`), not "until it is active". Setting it to a draft
+  RFC would hold a story until that entire RFC finished, long after the one story it needs has landed.
+  Existing uses (`0019-canonical-schema-burndown`, `0063-async-validation-chain`) are that whole-RFC case.
+
 ### Existing stories this RFC depends on
 
-| Existing story                                                            | RFC  | Status  | Needed by                                                                                |
-| ------------------------------------------------------------------------- | ---- | ------- | ---------------------------------------------------------------------------------------- |
-| `ruby-object-clone-dup-has-no-settled-trails-spelling`                    | 0023 | draft   | `activemodel-score-core-object-freeze-and-initialize-clone`                              |
-| `delete-attribute-set-yaml-codec`                                         | 0170 | draft   | `activemodel-audit-permanent-receipts-subdirs`, `activemodel-burn-extra-surface-to-zero` |
-| `override-of-inherited-rails-member-scores-moved`                         | 0120 | draft   | `activemodel-burn-extra-surface-to-zero`                                                 |
-| `moves-counts-a-mixin-member-declared-on-the-host-interface-as-misplaced` | 0127 | draft   | `activemodel-converge-moves-residue`                                                     |
-| `attribute-set-fetch-value-tests-uninitialized-instead-of-yielding`       | 0082 | draft   | `activemodel-converge-dropped-block-arms`                                                |
-| `clusivity-check-validity-duck-types-delimiter`                           | 0082 | draft   | `activemodel-duck-type-instanceof-to-respond-to`                                         |
-| `ruby-mutable-string-carrier`                                             | 0155 | blocked | `activemodel-unskip-attribute-and-type-mutation-tests`                                   |
-| `ruby-compat-marshal-core-types`                                          | 0154 | draft   | `activemodel-port-marshal-and-yaml-error-tests`                                          |
-| `psych-load-and-safe-load`                                                | 0170 | draft   | `activemodel-port-marshal-and-yaml-error-tests`                                          |
-| `port-hash-eql-rows-surfaced-by-scoring`                                  | 0156 | ready   | `activemodel-parity-100-close-out`                                                       |
-| `port-non-accessor-rows-from-level-keyed-set`                             | 0156 | ready   | `activemodel-parity-100-close-out`                                                       |
-| `port-remaining-class-hosted-accessor-instance-seats`                     | 0156 | ready   | `activemodel-parity-100-close-out`                                                       |
-| `attribute-set-to-h-alias-unported`                                       | 0082 | draft   | `activemodel-parity-100-close-out`                                                       |
-| `inline-is-mass-assignment-empty-into-assign-attributes`                  | 0023 | draft   | `activemodel-parity-100-close-out`                                                       |
-| `rails-test-name-parity-rollout-activemodel`                              | 0127 | draft   | `activemodel-parity-100-close-out`                                                       |
-| `test-compare-lint-and-serializers-json-mapping`                          | 0123 | blocked | `activemodel-parity-100-close-out`                                                       |
+| Existing story                                                            | RFC (status)     | Story status | Needed by                                                                                |
+| ------------------------------------------------------------------------- | ---------------- | ------------ | ---------------------------------------------------------------------------------------- |
+| `ruby-object-clone-dup-has-no-settled-trails-spelling`                    | 0023 (postponed) | draft        | `activemodel-score-core-object-freeze-and-initialize-clone`                              |
+| `delete-attribute-set-yaml-codec`                                         | 0170 (draft)     | draft        | `activemodel-audit-permanent-receipts-subdirs`, `activemodel-burn-extra-surface-to-zero` |
+| `override-of-inherited-rails-member-scores-moved`                         | 0120 (draft)     | draft        | `activemodel-burn-extra-surface-to-zero`                                                 |
+| `moves-counts-a-mixin-member-declared-on-the-host-interface-as-misplaced` | 0127 (draft)     | draft        | `activemodel-converge-moves-residue`                                                     |
+| `attribute-set-fetch-value-tests-uninitialized-instead-of-yielding`       | 0082 (postponed) | draft        | `activemodel-converge-dropped-block-arms`                                                |
+| `clusivity-check-validity-duck-types-delimiter`                           | 0082 (postponed) | draft        | `activemodel-duck-type-instanceof-to-respond-to`                                         |
+| `ruby-mutable-string-carrier`                                             | 0155 (active)    | blocked      | `activemodel-unskip-attribute-and-type-mutation-tests`                                   |
+| `ruby-compat-marshal-core-types`                                          | 0154 (active)    | draft        | `activemodel-port-marshal-and-yaml-error-tests`                                          |
+| `psych-load-and-safe-load`                                                | 0170 (draft)     | draft        | `activemodel-port-marshal-and-yaml-error-tests`                                          |
+| `port-hash-eql-rows-surfaced-by-scoring`                                  | 0156 (active)    | ready        | `activemodel-parity-100-close-out`                                                       |
+| `port-non-accessor-rows-from-level-keyed-set`                             | 0156 (active)    | ready        | `activemodel-parity-100-close-out`                                                       |
+| `port-remaining-class-hosted-accessor-instance-seats`                     | 0156 (active)    | ready        | `activemodel-parity-100-close-out`                                                       |
+| `attribute-set-to-h-alias-unported`                                       | 0082 (postponed) | draft        | `activemodel-parity-100-close-out`                                                       |
+| `inline-is-mass-assignment-empty-into-assign-attributes`                  | 0023 (postponed) | draft        | `activemodel-parity-100-close-out`                                                       |
+| `rails-test-name-parity-rollout-activemodel`                              | 0127 (draft)     | draft        | `activemodel-parity-100-close-out`                                                       |
+| `test-compare-lint-and-serializers-json-mapping`                          | 0123 (active)    | blocked      | `activemodel-parity-100-close-out`                                                       |
 
 ## Stories
 
@@ -187,6 +206,9 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
 5. **Pins and arms** — `activemodel-verify-and-pin-protocol-bodies`, `activemodel-converge-dropped-block-arms`, `activemodel-converge-missing-control-flow-arms`, `activemodel-converge-invented-control-flow-arms-type`, `activemodel-converge-invented-control-flow-arms-rest`, `activemodel-duck-type-instanceof-to-respond-to`
 6. **Tests** — `activemodel-map-railtie-test-onto-trailtie`, `activemodel-unskip-attribute-and-type-mutation-tests`, `activemodel-port-marshal-and-yaml-error-tests`, `activemodel-relocate-ts-only-tests-to-trails-siblings`
 7. **Close-out** — `activemodel-parity-100-close-out`
+
+Before any of this: `parity-100-rehome-postponed-rfc-dependencies` (RFC 0174) runs after merge and rehomes
+the postponed-RFC stories several stories here depend on (§ "Gating").
 
 ## Verification
 

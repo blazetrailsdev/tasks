@@ -5,7 +5,11 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface
 packages: ["activerecord"]
-deps: ["add-constraints-guards-constraints-call-and-lambda-type"]
+deps:
+  [
+    "parity-100-rehome-postponed-rfc-dependencies",
+    "add-constraints-guards-constraints-call-and-lambda-type",
+  ]
 deps-rfc: []
 est-loc: 200
 priority: null

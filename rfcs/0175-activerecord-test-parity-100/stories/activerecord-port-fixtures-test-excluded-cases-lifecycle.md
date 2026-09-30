@@ -7,6 +7,7 @@ cluster: unported-tests
 packages: ["activerecord"]
 deps:
   [
+    "parity-100-rehome-postponed-rfc-dependencies",
     "activerecord-test-fixtures-method-missing-accessors",
     "port-test-fixtures-class-attribute-declarations",
   ]

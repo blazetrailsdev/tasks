@@ -5,7 +5,12 @@ updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: unported-tests
 packages: ["activerecord"]
-deps: ["rational-value-quoting-analogue", "ruby-mutable-string-carrier"]
+deps:
+  [
+    "parity-100-rehome-postponed-rfc-dependencies",
+    "rational-value-quoting-analogue",
+    "ruby-mutable-string-carrier",
+  ]
 deps-rfc: []
 est-loc: 550
 priority: null

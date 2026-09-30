@@ -7,6 +7,7 @@ cluster: skips
 packages: ["activemodel"]
 deps:
   [
+    "parity-100-rehome-postponed-rfc-dependencies",
     "arel-score-core-object-names-nil-and-case-then",
     "ruby-object-clone-dup-has-no-settled-trails-spelling",
   ]

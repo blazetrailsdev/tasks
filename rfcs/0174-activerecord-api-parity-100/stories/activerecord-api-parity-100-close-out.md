@@ -130,7 +130,7 @@ deps:
     "activerecord-burn-rails-error-parity-exclude-associations-relation-encryption-tasks",
     "activerecord-burn-rails-error-parity-exclude-rest",
     "activerecord-burn-rails-callback-invocations-exclude",
-    "activerecord-rehome-0023-parity-dependencies",
+    "parity-100-rehome-postponed-rfc-dependencies",
     "port-hash-eql-rows-surfaced-by-scoring",
     "port-remaining-class-hosted-accessor-instance-seats",
     "port-non-accessor-rows-from-level-keyed-set",

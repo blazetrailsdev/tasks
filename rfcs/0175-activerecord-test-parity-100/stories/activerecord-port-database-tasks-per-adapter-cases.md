@@ -5,7 +5,11 @@ updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests
 packages: ["activerecord"]
-deps: ["test-extractor-expands-hash-and-const-define-method-loops"]
+deps:
+  [
+    "parity-100-rehome-postponed-rfc-dependencies",
+    "test-extractor-expands-hash-and-const-define-method-loops",
+  ]
 deps-rfc: []
 est-loc: 550
 priority: null

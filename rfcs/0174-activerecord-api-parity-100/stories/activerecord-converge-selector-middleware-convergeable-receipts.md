@@ -5,7 +5,7 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts
 packages: ["activerecord"]
-deps: ["converge-shard-selector-lock-fetch"]
+deps: ["parity-100-rehome-postponed-rfc-dependencies", "converge-shard-selector-lock-fetch"]
 deps-rfc: []
 est-loc: 200
 priority: null

@@ -5,7 +5,8 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: excluded-files
 packages: ["activerecord"]
-deps: ["port-promise-complete-for-async-loaded-arms"]
+deps:
+  ["parity-100-rehome-postponed-rfc-dependencies", "port-promise-complete-for-async-loaded-arms"]
 deps-rfc: []
 est-loc: 250
 priority: null

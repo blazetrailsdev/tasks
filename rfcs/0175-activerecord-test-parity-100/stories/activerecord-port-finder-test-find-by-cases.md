@@ -5,7 +5,7 @@ updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests
 packages: ["activerecord"]
-deps: ["port-finder-aggregate-find-by-cluster"]
+deps: ["parity-100-rehome-postponed-rfc-dependencies", "port-finder-aggregate-find-by-cluster"]
 deps-rfc: []
 est-loc: 450
 priority: null

@@ -100,38 +100,57 @@ spawn sites) and RFC 0148 (`catch`/`throw`) are closed; ruby-compat has `Delegat
 re-reads its entries' reasons against today's carriers and ports what is now portable. What survives is
 either ratified (§ "Trails has no autoloader") or blocked with a named blocker.
 
+### Gating: why `status: active`, and why `deps-rfc` is empty
+
+- **`active` from birth.** `claimable()` (`src/ranking.ts`) surfaces a story only when its own RFC is
+  `active`, its status is `ready`, and every `deps` entry is `done` or `closed`. So `active` makes the
+  **15** stories here with no dependencies claimable at merge. Every other story stays out of
+  `tasks ready` until its own dependencies land. Landing the RFC as `draft` would hold back those
+  15 stories and gate nothing the `deps` edges do not already gate.
+- **Postponed-RFC dependencies go through one rehome story.** 13 stories here depend on stories in
+  RFCs 0023, 0025 or 0082, which are `postponed`, so their stories are never claimable. Each of those
+  13 stories also depends on `parity-100-rehome-postponed-rfc-dependencies` (in RFC 0174, `priority: 1`).
+  That story rehomes them into these RFCs after merge, so the ordering is in the data.
+- **Draft-RFC dependencies** — by RFC: 0127 (3), 0170 (4). A story depending on a story in a `draft` RFC waits
+  for that story to be `done`, and that cannot happen before its RFC goes `active`. The gate is therefore
+  the story-level `deps` edge, applied transitively.
+- **`deps-rfc` is left empty on purpose.** It means "until that RFC is **closed**" (`claimable()`:
+  `s.deps_rfc.some((d) => rfcStatus.get(d) !== "closed")`), not "until it is active". Setting it to a draft
+  RFC would hold a story until that entire RFC finished, long after the one story it needs has landed.
+  Existing uses (`0019-canonical-schema-burndown`, `0063-async-validation-chain`) are that whole-RFC case.
+
 ### Existing stories this RFC depends on
 
-| Existing story                                               | RFC  | Status  | Needed by                                                                                                                           |
-| ------------------------------------------------------------ | ---- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `port-finder-aggregate-find-by-cluster`                      | 0023 | draft   | `activerecord-port-finder-test-find-by-cases`, `activerecord-test-parity-100-close-out`                                             |
-| `port-finder-find-without-primary-key-onto-matey`            | 0023 | draft   | `activerecord-port-finder-test-remaining-cases`                                                                                     |
-| `test-extractor-expands-hash-and-const-define-method-loops`  | 0025 | draft   | `activerecord-port-database-tasks-per-adapter-cases`, `activerecord-unskip-relation-delegation-tests`                               |
-| `i18n-validation-test-uses-ad-hoc-topic-models`              | 0023 | draft   | `activerecord-port-i18n-validation-uniqueness-and-associated-cases`                                                                 |
-| `database-statements-exec-insert-test`                       | 0023 | draft   | `activerecord-port-adapter-and-migrator-missing-cases`                                                                              |
-| `converge-delegated-classes-onto-rails-literal-list`         | 0082 | draft   | `activerecord-unskip-relation-delegation-tests`                                                                                     |
-| `psych-load-and-safe-load`                                   | 0170 | draft   | `activerecord-unskip-remaining-matched-skips`, `activerecord-assertion-kind-and-value-residue-to-zero`                              |
-| `activerecord-private-attribute-methods-are-still-public`    | 0155 | blocked | `activerecord-unskip-remaining-matched-skips`                                                                                       |
-| `association-async-load-target-uses-async-executor`          | 0155 | blocked | `activerecord-unskip-remaining-matched-skips`                                                                                       |
-| `string-encoding-tag-carrier-for-force-encoding-and-b`       | 0154 | draft   | `activerecord-assertion-kind-and-value-residue-to-zero`                                                                             |
-| `drop-stale-deadlock-unported-file-exclusions`               | 0127 | draft   | `activerecord-port-thread-excluded-tests-transactions-and-scoping`                                                                  |
-| `ruby-compat-marshal-core-types`                             | 0154 | draft   | `activerecord-port-marshal-excluded-tests`                                                                                          |
-| `yaml-column-safe-coder-through-psych`                       | 0170 | draft   | `activerecord-port-yaml-excluded-tests`                                                                                             |
-| `schema-cache-dump-and-load-through-psych`                   | 0170 | draft   | `activerecord-port-yaml-excluded-tests`                                                                                             |
-| `relation-to-yaml-psych-dump`                                | 0155 | blocked | `activerecord-port-yaml-excluded-tests`                                                                                             |
-| `psych-load-file-family`                                     | 0170 | draft   | `activerecord-port-fixtures-test-excluded-cases-files-and-paths`                                                                    |
-| `port-fixtures-test-rb-fixture-declarations`                 | 0023 | draft   | `activerecord-port-fixtures-test-excluded-cases-files-and-paths`, `activerecord-burn-expected-fixtures-and-fixture-parity-excludes` |
-| `port-test-fixtures-class-attribute-declarations`            | 0023 | draft   | `activerecord-port-fixtures-test-excluded-cases-lifecycle`                                                                          |
-| `audit-load-async-surface-portability`                       | 0023 | draft   | `activerecord-port-async-query-excluded-tests`                                                                                      |
-| `rational-value-quoting-analogue`                            | 0082 | draft   | `activerecord-port-misc-excluded-tests`                                                                                             |
-| `ruby-mutable-string-carrier`                                | 0155 | blocked | `activerecord-port-misc-excluded-tests`                                                                                             |
-| `test-schema-parrots-timestamp-precision-0`                  | 0023 | draft   | `activerecord-fixture-parity-diffs-and-unported-fixture-schemas`, `activerecord-test-parity-100-close-out`                          |
-| `test-schema-port-parrots-toys-integer-column`               | 0023 | draft   | `activerecord-fixture-parity-diffs-and-unported-fixture-schemas`, `activerecord-test-parity-100-close-out`                          |
-| `prune-stale-lint-ratchet-allowlists`                        | 0127 | draft   | `activerecord-burn-no-standalone-associations-exclude`                                                                              |
-| `port-remaining-migration-compatibility-test-cases`          | 0155 | ready   | `activerecord-test-parity-100-close-out`                                                                                            |
-| `rails-test-name-parity-rollout-activerecord`                | 0127 | draft   | `activerecord-test-parity-100-close-out`                                                                                            |
-| `flip-assertion-mismatch-gate-to-hard-zero`                  | 0123 | blocked | `activerecord-test-parity-100-close-out`                                                                                            |
-| `finder-find-with-string-ports-findbysql-not-string-id-cast` | 0023 | draft   | `activerecord-test-parity-100-close-out`                                                                                            |
+| Existing story                                               | RFC (status)     | Story status | Needed by                                                                                                                           |
+| ------------------------------------------------------------ | ---------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `port-finder-aggregate-find-by-cluster`                      | 0023 (postponed) | draft        | `activerecord-port-finder-test-find-by-cases`, `activerecord-test-parity-100-close-out`                                             |
+| `port-finder-find-without-primary-key-onto-matey`            | 0023 (postponed) | draft        | `activerecord-port-finder-test-remaining-cases`                                                                                     |
+| `test-extractor-expands-hash-and-const-define-method-loops`  | 0025 (postponed) | draft        | `activerecord-port-database-tasks-per-adapter-cases`, `activerecord-unskip-relation-delegation-tests`                               |
+| `i18n-validation-test-uses-ad-hoc-topic-models`              | 0023 (postponed) | draft        | `activerecord-port-i18n-validation-uniqueness-and-associated-cases`                                                                 |
+| `database-statements-exec-insert-test`                       | 0023 (postponed) | draft        | `activerecord-port-adapter-and-migrator-missing-cases`                                                                              |
+| `converge-delegated-classes-onto-rails-literal-list`         | 0082 (postponed) | draft        | `activerecord-unskip-relation-delegation-tests`                                                                                     |
+| `psych-load-and-safe-load`                                   | 0170 (draft)     | draft        | `activerecord-unskip-remaining-matched-skips`, `activerecord-assertion-kind-and-value-residue-to-zero`                              |
+| `activerecord-private-attribute-methods-are-still-public`    | 0155 (active)    | blocked      | `activerecord-unskip-remaining-matched-skips`                                                                                       |
+| `association-async-load-target-uses-async-executor`          | 0155 (active)    | blocked      | `activerecord-unskip-remaining-matched-skips`                                                                                       |
+| `string-encoding-tag-carrier-for-force-encoding-and-b`       | 0154 (active)    | draft        | `activerecord-assertion-kind-and-value-residue-to-zero`                                                                             |
+| `drop-stale-deadlock-unported-file-exclusions`               | 0127 (draft)     | draft        | `activerecord-port-thread-excluded-tests-transactions-and-scoping`                                                                  |
+| `ruby-compat-marshal-core-types`                             | 0154 (active)    | draft        | `activerecord-port-marshal-excluded-tests`                                                                                          |
+| `yaml-column-safe-coder-through-psych`                       | 0170 (draft)     | draft        | `activerecord-port-yaml-excluded-tests`                                                                                             |
+| `schema-cache-dump-and-load-through-psych`                   | 0170 (draft)     | draft        | `activerecord-port-yaml-excluded-tests`                                                                                             |
+| `relation-to-yaml-psych-dump`                                | 0155 (active)    | blocked      | `activerecord-port-yaml-excluded-tests`                                                                                             |
+| `psych-load-file-family`                                     | 0170 (draft)     | draft        | `activerecord-port-fixtures-test-excluded-cases-files-and-paths`                                                                    |
+| `port-fixtures-test-rb-fixture-declarations`                 | 0023 (postponed) | draft        | `activerecord-port-fixtures-test-excluded-cases-files-and-paths`, `activerecord-burn-expected-fixtures-and-fixture-parity-excludes` |
+| `port-test-fixtures-class-attribute-declarations`            | 0023 (postponed) | draft        | `activerecord-port-fixtures-test-excluded-cases-lifecycle`                                                                          |
+| `audit-load-async-surface-portability`                       | 0023 (postponed) | draft        | `activerecord-port-async-query-excluded-tests`                                                                                      |
+| `rational-value-quoting-analogue`                            | 0082 (postponed) | draft        | `activerecord-port-misc-excluded-tests`                                                                                             |
+| `ruby-mutable-string-carrier`                                | 0155 (active)    | blocked      | `activerecord-port-misc-excluded-tests`                                                                                             |
+| `test-schema-parrots-timestamp-precision-0`                  | 0023 (postponed) | draft        | `activerecord-fixture-parity-diffs-and-unported-fixture-schemas`, `activerecord-test-parity-100-close-out`                          |
+| `test-schema-port-parrots-toys-integer-column`               | 0023 (postponed) | draft        | `activerecord-fixture-parity-diffs-and-unported-fixture-schemas`, `activerecord-test-parity-100-close-out`                          |
+| `prune-stale-lint-ratchet-allowlists`                        | 0127 (draft)     | draft        | `activerecord-burn-no-standalone-associations-exclude`                                                                              |
+| `port-remaining-migration-compatibility-test-cases`          | 0155 (active)    | ready        | `activerecord-test-parity-100-close-out`                                                                                            |
+| `rails-test-name-parity-rollout-activerecord`                | 0127 (draft)     | draft        | `activerecord-test-parity-100-close-out`                                                                                            |
+| `flip-assertion-mismatch-gate-to-hard-zero`                  | 0123 (active)    | blocked      | `activerecord-test-parity-100-close-out`                                                                                            |
+| `finder-find-with-string-ports-findbysql-not-string-id-cast` | 0023 (postponed) | draft        | `activerecord-test-parity-100-close-out`                                                                                            |
 
 ## Stories
 
@@ -206,6 +225,9 @@ either ratified (§ "Trails has no autoloader") or blocked with a named blocker.
 3. **TS-only tests** — `activerecord-relocate-ts-only-tests-root-part-1`, `activerecord-relocate-ts-only-tests-root-part-2`, `activerecord-relocate-ts-only-tests-relation`, `activerecord-relocate-ts-only-tests-adapters-postgresql`, `activerecord-relocate-ts-only-tests-encryption`, `activerecord-relocate-ts-only-tests-associations`, `activerecord-relocate-ts-only-tests-connection-adapters`, `activerecord-relocate-ts-only-tests-smaller-dirs`
 4. **Schema, fixtures and lint registers** — `activerecord-delete-dead-invented-schema-tables`, `activerecord-converge-clients-firms-invented-tables-onto-companies`, `activerecord-converge-targets-invented-table`, `activerecord-converge-remaining-invented-tables`, `activerecord-fixture-parity-diffs-and-unported-fixture-schemas`, `activerecord-burn-no-standalone-associations-exclude`, `activerecord-burn-canonical-rebuild-and-row-write-excludes`, `activerecord-burn-expected-fixtures-and-fixture-parity-excludes`
 5. **Close-out** — `activerecord-test-parity-100-close-out`
+
+Before any of this: `parity-100-rehome-postponed-rfc-dependencies` (RFC 0174) runs after merge and rehomes
+the postponed-RFC stories several stories here depend on (§ "Gating").
 
 ## Verification
 

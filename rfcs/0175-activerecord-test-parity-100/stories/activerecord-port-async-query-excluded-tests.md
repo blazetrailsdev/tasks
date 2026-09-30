@@ -5,7 +5,12 @@ updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: unported-tests
 packages: ["activerecord"]
-deps: ["audit-load-async-surface-portability", "activerecord-port-promise"]
+deps:
+  [
+    "parity-100-rehome-postponed-rfc-dependencies",
+    "audit-load-async-surface-portability",
+    "activerecord-port-promise",
+  ]
 deps-rfc: []
 est-loc: 550
 priority: null

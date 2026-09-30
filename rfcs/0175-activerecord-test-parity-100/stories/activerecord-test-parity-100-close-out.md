@@ -7,6 +7,7 @@ cluster: closeout
 packages: ["activerecord"]
 deps:
   [
+    "parity-100-rehome-postponed-rfc-dependencies",
     "activerecord-port-finder-test-find-by-cases",
     "activerecord-port-finder-test-remaining-cases",
     "activerecord-port-database-tasks-per-adapter-cases",

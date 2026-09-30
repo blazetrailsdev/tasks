@@ -98,15 +98,34 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
 - **Close-out pins zero.** The last story re-measures and turns each remaining ratchet into a hard zero
   (rowless extra-surface, empty baselines, marks at 0) so the package cannot regress.
 
+### Gating: why `status: active`, and why `deps-rfc` is empty
+
+- **`active` from birth.** `claimable()` (`src/ranking.ts`) surfaces a story only when its own RFC is
+  `active`, its status is `ready`, and every `deps` entry is `done` or `closed`. So `active` makes the
+  **3** stories here with no dependencies claimable at merge. Every other story stays out of
+  `tasks ready` until its own dependencies land. Landing the RFC as `draft` would hold back those
+  3 stories and gate nothing the `deps` edges do not already gate.
+- **Postponed-RFC dependencies go through one rehome story.** 3 stories here depend on stories in
+  RFCs 0023, 0025 or 0082, which are `postponed`, so their stories are never claimable. Each of those
+  3 stories also depends on `parity-100-rehome-postponed-rfc-dependencies` (in RFC 0174, `priority: 1`).
+  That story rehomes them into these RFCs after merge, so the ordering is in the data.
+- **Draft-RFC dependencies** — by RFC: 0120 (2), 0127 (1). A story depending on a story in a `draft` RFC waits
+  for that story to be `done`, and that cannot happen before its RFC goes `active`. The gate is therefore
+  the story-level `deps` edge, applied transitively.
+- **`deps-rfc` is left empty on purpose.** It means "until that RFC is **closed**" (`claimable()`:
+  `s.deps_rfc.some((d) => rfcStatus.get(d) !== "closed")`), not "until it is active". Setting it to a draft
+  RFC would hold a story until that entire RFC finished, long after the one story it needs has landed.
+  Existing uses (`0019-canonical-schema-burndown`, `0063-async-validation-chain`) are that whole-RFC case.
+
 ### Existing stories this RFC depends on
 
-| Existing story                                                            | RFC  | Status | Needed by                                                                                                         |
-| ------------------------------------------------------------------------- | ---- | ------ | ----------------------------------------------------------------------------------------------------------------- |
-| `arel-node-dup-missing`                                                   | 0023 | draft  | `arel-port-bound-sql-literal-inspect-and-node-initialize-copy`, `arel-audit-permanent-receipts-against-claude-md` |
-| `ruby-compat-hash-keys-by-identity-not-eql`                               | 0154 | draft  | `arel-visitor-dispatch-cache-and-visit-rescue-arm`                                                                |
-| `override-of-inherited-rails-member-scores-moved`                         | 0120 | draft  | `arel-burn-moved-extra-surface-nodes`, `arel-burn-moved-extra-surface-managers-collectors-namespaces`             |
-| `moves-counts-a-mixin-member-declared-on-the-host-interface-as-misplaced` | 0127 | draft  | `arel-converge-moves-residue`                                                                                     |
-| `arel-homogeneous-in-valuetype-vs-activemodel-type`                       | 0025 | draft  | `arel-deps-lint-to-zero`                                                                                          |
+| Existing story                                                            | RFC (status)     | Story status | Needed by                                                                                                         |
+| ------------------------------------------------------------------------- | ---------------- | ------------ | ----------------------------------------------------------------------------------------------------------------- |
+| `arel-node-dup-missing`                                                   | 0023 (postponed) | draft        | `arel-port-bound-sql-literal-inspect-and-node-initialize-copy`, `arel-audit-permanent-receipts-against-claude-md` |
+| `ruby-compat-hash-keys-by-identity-not-eql`                               | 0154 (active)    | draft        | `arel-visitor-dispatch-cache-and-visit-rescue-arm`                                                                |
+| `override-of-inherited-rails-member-scores-moved`                         | 0120 (draft)     | draft        | `arel-burn-moved-extra-surface-nodes`, `arel-burn-moved-extra-surface-managers-collectors-namespaces`             |
+| `moves-counts-a-mixin-member-declared-on-the-host-interface-as-misplaced` | 0127 (draft)     | draft        | `arel-converge-moves-residue`                                                                                     |
+| `arel-homogeneous-in-valuetype-vs-activemodel-type`                       | 0025 (postponed) | draft        | `arel-deps-lint-to-zero`                                                                                          |
 
 ## Stories
 
@@ -155,6 +174,9 @@ None. Every axis in this RFC can reach 100% without a new CLAUDE.md ratification
 3. **Placement** — `arel-burn-moved-extra-surface-nodes`, `arel-burn-moved-extra-surface-managers-collectors-namespaces`, `arel-converge-moves-residue`
 4. **Arms** — `arel-converge-missing-control-flow-arms`, `arel-converge-invented-control-flow-arms`
 5. **Close-out** — `arel-parity-100-close-out`
+
+Before any of this: `parity-100-rehome-postponed-rfc-dependencies` (RFC 0174) runs after merge and rehomes
+the postponed-RFC stories several stories here depend on (§ "Gating").
 
 ## Verification
 

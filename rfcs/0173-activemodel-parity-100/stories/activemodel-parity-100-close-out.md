@@ -7,6 +7,7 @@ cluster: closeout
 packages: ["activemodel"]
 deps:
   [
+    "parity-100-rehome-postponed-rfc-dependencies",
     "activemodel-port-type-value-limit-precision-scale-and-registry-copy",
     "activemodel-dirty-init-attributes-arity",
     "activemodel-port-version-and-gem-version",

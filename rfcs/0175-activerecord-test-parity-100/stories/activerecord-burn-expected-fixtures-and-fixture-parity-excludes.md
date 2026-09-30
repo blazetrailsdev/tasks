@@ -5,7 +5,7 @@ updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: lint-registers
 packages: ["activerecord"]
-deps: ["port-fixtures-test-rb-fixture-declarations"]
+deps: ["parity-100-rehome-postponed-rfc-dependencies", "port-fixtures-test-rb-fixture-declarations"]
 deps-rfc: []
 est-loc: 250
 priority: null

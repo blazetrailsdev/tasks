@@ -5,7 +5,8 @@ updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests
 packages: ["activerecord"]
-deps: ["i18n-validation-test-uses-ad-hoc-topic-models"]
+deps:
+  ["parity-100-rehome-postponed-rfc-dependencies", "i18n-validation-test-uses-ad-hoc-topic-models"]
 deps-rfc: []
 est-loc: 300
 priority: null

@@ -5,7 +5,11 @@ updated: 2026-09-30
 rfc: "0172-arel-parity-100"
 cluster: api-surface
 packages: ["arel"]
-deps: ["arel-homogeneous-in-valuetype-vs-activemodel-type"]
+deps:
+  [
+    "parity-100-rehome-postponed-rfc-dependencies",
+    "arel-homogeneous-in-valuetype-vs-activemodel-type",
+  ]
 deps-rfc: []
 est-loc: 40
 priority: null

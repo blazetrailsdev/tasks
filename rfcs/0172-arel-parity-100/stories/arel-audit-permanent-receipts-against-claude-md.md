@@ -5,7 +5,7 @@ updated: 2026-09-30
 rfc: "0172-arel-parity-100"
 cluster: receipts
 packages: ["arel"]
-deps: ["arel-node-dup-missing"]
+deps: ["parity-100-rehome-postponed-rfc-dependencies", "arel-node-dup-missing"]
 deps-rfc: []
 est-loc: 300
 priority: null

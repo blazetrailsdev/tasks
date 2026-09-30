@@ -5,7 +5,8 @@ updated: 2026-09-30
 rfc: "0173-activemodel-parity-100"
 cluster: arms
 packages: ["activemodel"]
-deps: ["clusivity-check-validity-duck-types-delimiter"]
+deps:
+  ["parity-100-rehome-postponed-rfc-dependencies", "clusivity-check-validity-duck-types-delimiter"]
 deps-rfc: []
 est-loc: 120
 priority: null

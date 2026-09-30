@@ -5,7 +5,7 @@ updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests
 packages: ["activerecord"]
-deps: ["database-statements-exec-insert-test"]
+deps: ["parity-100-rehome-postponed-rfc-dependencies", "database-statements-exec-insert-test"]
 deps-rfc: []
 est-loc: 350
 priority: null

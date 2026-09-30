@@ -5,7 +5,12 @@ updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: schema-fixtures
 packages: ["activerecord"]
-deps: ["test-schema-parrots-timestamp-precision-0", "test-schema-port-parrots-toys-integer-column"]
+deps:
+  [
+    "parity-100-rehome-postponed-rfc-dependencies",
+    "test-schema-parrots-timestamp-precision-0",
+    "test-schema-port-parrots-toys-integer-column",
+  ]
 deps-rfc: []
 est-loc: 500
 priority: null

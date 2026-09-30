@@ -7,6 +7,7 @@ cluster: skipped-tests
 packages: ["activerecord"]
 deps:
   [
+    "parity-100-rehome-postponed-rfc-dependencies",
     "converge-delegated-classes-onto-rails-literal-list",
     "test-extractor-expands-hash-and-const-define-method-loops",
   ]

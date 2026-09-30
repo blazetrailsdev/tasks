@@ -7,6 +7,7 @@ cluster: unported-tests
 packages: ["activerecord"]
 deps:
   [
+    "parity-100-rehome-postponed-rfc-dependencies",
     "activerecord-unexclude-and-measure-fixtures-rb",
     "psych-load-file-family",
     "port-fixtures-test-rb-fixture-declarations",

@@ -5,7 +5,7 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args
 packages: ["activerecord"]
-deps: ["load-from-sql-iterates-indexed-rows"]
+deps: ["parity-100-rehome-postponed-rfc-dependencies", "load-from-sql-iterates-indexed-rows"]
 deps-rfc: []
 est-loc: 150
 priority: null
