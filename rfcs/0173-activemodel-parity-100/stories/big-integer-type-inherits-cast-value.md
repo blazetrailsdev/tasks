@@ -2,7 +2,7 @@
 title: "BigIntegerType drops its invented castValue and inherits Type::Integer#cast_value"
 status: draft
 updated: 2026-09-30
-rfc: "0155-assertion-surfaced-port-bugs"
+rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
 deps: []
