@@ -1,6 +1,6 @@
 ---
 title: "port-remaining-action-controller-set-configs-lines"
-status: claimed
+status: in-progress
 updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: trails#8264
 claim: "2026-09-30T03:59:48Z"
 assignee: "port-remaining-action-controller-set-configs-lines"
 blocked-by: null
