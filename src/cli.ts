@@ -40,6 +40,7 @@ import {
 import { newStory } from "./authoring.js";
 import { rehome } from "./rehome.js";
 import { rfcStatusSet } from "./rfc-status.js";
+import { setDeps } from "./set-deps.js";
 import { normalizePrRef, PR_REF_USAGE } from "./pr-ref.js";
 import type { StoryStatus } from "./models/index.js";
 
@@ -70,6 +71,9 @@ Mutate:
   priority <id> <n|clear>
   rehome <id...> --to <rfc> [--reason R] [--no-commit]
   rfc-status <rfc> <draft|active|postponed|closed> [--reason R] [--no-commit]
+  set-deps <id> <csv> | set-deps <id> [--add a,b] [--remove a,b]   [--no-commit]
+  set-deps-rfc <id> (same forms as set-deps, for deps-rfc)
+                                   (checks references + cycles; csv "" clears)
 
 Sync:
   ingest                           git -> DB (markdown-owned fields)
@@ -405,6 +409,31 @@ async function main(): Promise<number> {
         reason: str(flags, "reason"),
         commit: flags["no-commit"] !== true,
       });
+      break;
+    }
+    // deps / deps-rfc are markdown-owned, so this rewrites frontmatter and
+    // commits (see set-deps.ts). `pos[1] === ""` is an explicit clear; only a
+    // missing csv with neither --add nor --remove is a usage error.
+    case "set-deps":
+    case "set-deps-rfc": {
+      const id = pos[0];
+      const list = (v: string): string[] =>
+        v
+          .split(",")
+          .map((x) => x.trim())
+          .filter(Boolean);
+      const add = str(flags, "add");
+      const remove = str(flags, "remove");
+      const csv = pos[1];
+      if (!id || (csv === undefined) === (add === null && remove === null)) return usage();
+      await setDeps(
+        id,
+        cmd === "set-deps" ? "deps" : "deps-rfc",
+        csv !== undefined
+          ? { set: list(csv) }
+          : { add: add === null ? [] : list(add), remove: remove === null ? [] : list(remove) },
+        { commit: flags["no-commit"] !== true },
+      );
       break;
     }
     case "priority": {
