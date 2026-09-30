@@ -2,7 +2,7 @@
 title: "Delete enumTypeOf; tests read Model.typeForAttribute as Rails does"
 status: draft
 updated: 2026-09-30
-rfc: "0155-assertion-surfaced-port-bugs"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps: []
