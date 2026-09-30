@@ -1,6 +1,6 @@
 ---
 title: "scaffold-controller-route-helpers-fail-trails-tsc"
-status: draft
+status: in-progress
 updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#8260
+claim: "2026-09-30T02:49:48Z"
+assignee: "scaffold-controller-route-helpers-fail-trails-tsc"
 blocked-by: null
 closed-reason: null
 ---

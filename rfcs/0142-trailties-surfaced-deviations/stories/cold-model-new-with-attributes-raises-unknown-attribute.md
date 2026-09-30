@@ -1,6 +1,6 @@
 ---
 title: "cold-model-new-with-attributes-raises-unknown-attribute"
-status: draft
+status: in-progress
 updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#8258
+claim: "2026-09-30T02:21:48Z"
+assignee: "cold-model-new-with-attributes-raises-unknown-attribute"
 blocked-by: null
 closed-reason: null
 ---

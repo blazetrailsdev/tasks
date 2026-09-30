@@ -1,6 +1,6 @@
 ---
 title: "rack-set-cookie-header-same-site-rejects-symbol-spelling"
-status: draft
+status: in-progress
 updated: 2026-09-30
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#8259
+claim: "2026-09-30T02:35:49Z"
+assignee: "rack-set-cookie-header-same-site-rejects-symbol-spelling"
 blocked-by: null
 closed-reason: null
 ---
