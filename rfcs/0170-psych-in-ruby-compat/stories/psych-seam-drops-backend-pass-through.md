@@ -1,7 +1,7 @@
 ---
 title: "Remove the npm parse/stringify pass-through from the Psych seam's public surface"
 status: draft
-updated: 2026-09-29
+updated: 2026-09-30
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat"]

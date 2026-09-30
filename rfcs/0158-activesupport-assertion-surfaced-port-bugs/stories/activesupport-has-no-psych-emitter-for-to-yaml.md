@@ -1,6 +1,6 @@
 ---
 title: "activesupport-has-no-psych-emitter-for-to-yaml"
-status: claimed
+status: done
 updated: 2026-09-30
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["move-activesupport-yaml-into-ruby-compat-psych", "psych-object-to-yaml"]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8273
 claim: "2026-09-30T09:21:48Z"
 assignee: "activesupport-has-no-psych-emitter-for-to-yaml"
 blocked-by: null

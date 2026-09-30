@@ -1,7 +1,7 @@
 ---
 title: "ControllerGenerator extends GeneratorBase where Rails' is a NamedBase; add_routes takes parameters"
-status: ready
-updated: 2026-09-28
+status: blocked
+updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -14,9 +14,9 @@ deps-rfc: []
 est-loc: 120
 priority: 6
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-30T13:06:35Z"
+assignee: "anonymous-migration-class-name-is-empty-string-not-nil"
+blocked-by: "needs Thor::Actions#template (thor-actions-template-is-unported) and the hook targets Tse/TestUnit ControllerGenerator + hookable HelperGenerator (controller-generator-hook-targets-are-unported); #8226 review rejected a NamedBase conversion without them"
 closed-reason: null
 ---
 

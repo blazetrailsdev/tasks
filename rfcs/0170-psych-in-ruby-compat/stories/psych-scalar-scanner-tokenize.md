@@ -1,7 +1,7 @@
 ---
 title: "Port Psych::ScalarScanner#tokenize and route ToRuby plain scalars through it"
 status: draft
-updated: 2026-09-29
+updated: 2026-09-30
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat"]

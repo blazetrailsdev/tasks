@@ -1,6 +1,6 @@
 ---
 title: "MySQL bigint registers Rails' Type::Integer(limit: 8); delete MysqlBigInteger"
-status: ready
+status: in-progress
 updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8276
+claim: "2026-09-30T13:28:27Z"
+assignee: "mysql-bigint-registers-rails-type-integer"
 blocked-by: null
 closed-reason: null
 ---

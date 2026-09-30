@@ -1,6 +1,6 @@
 ---
 title: "psych-yamltree-remaining-visitors"
-status: draft
+status: closed
 updated: 2026-09-30
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of psych-scalar-and-tag-visitors, which already covers the remaining YAMLTree visitors after #8254"
 ---
 
 ## Context

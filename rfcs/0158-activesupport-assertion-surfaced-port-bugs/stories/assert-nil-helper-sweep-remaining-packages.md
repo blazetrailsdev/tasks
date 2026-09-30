@@ -1,6 +1,6 @@
 ---
 title: "Sweep remaining toBeNull ports of assert_nil / assert_not_nil onto assertNil / assertNotNil"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Move activesupport/src/yaml.ts into ruby-compat as Psych (pure move) and delete the ./yaml subpath"
 status: draft
-updated: 2026-09-29
+updated: 2026-09-30
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages:

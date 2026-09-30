@@ -1,6 +1,6 @@
 ---
 title: "integer-type-range-ivar"
-status: draft
+status: in-progress
 updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8276
+claim: "2026-09-30T13:58:22Z"
+assignee: "integer-type-range-ivar"
 blocked-by: null
 closed-reason: null
 ---

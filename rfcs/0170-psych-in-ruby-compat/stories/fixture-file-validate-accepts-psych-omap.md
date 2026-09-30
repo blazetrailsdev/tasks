@@ -1,7 +1,7 @@
 ---
 title: "FixtureSet::File#validate: accept YAML::Omap as Rails does"
 status: draft
-updated: 2026-09-29
+updated: 2026-09-30
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activerecord"]

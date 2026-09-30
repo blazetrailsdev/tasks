@@ -1,7 +1,7 @@
 ---
 title: "I18n Backend::Base#load_yml through YAML.unsafe_load_file; drop i18n's own yaml resolution"
 status: draft
-updated: 2026-09-29
+updated: 2026-09-30
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["i18n"]

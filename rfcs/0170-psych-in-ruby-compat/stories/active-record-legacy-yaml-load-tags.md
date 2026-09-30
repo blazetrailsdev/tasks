@@ -1,7 +1,7 @@
 ---
 title: "Register ActiveRecord's legacy YAML load_tags (active_record.rb:570-573)"
 status: draft
-updated: 2026-09-29
+updated: 2026-09-30
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activerecord"]

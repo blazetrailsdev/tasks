@@ -1,6 +1,6 @@
 ---
 title: "Converge stylesheetLinkTag's truthiness guards and uniq onto Rails; enroll its no-request/streaming tests"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null

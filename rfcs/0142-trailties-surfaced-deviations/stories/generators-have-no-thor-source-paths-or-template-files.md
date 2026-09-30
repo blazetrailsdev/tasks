@@ -1,6 +1,6 @@
 ---
 title: "Generators have no Thor source_paths / find_in_source_paths or template files"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

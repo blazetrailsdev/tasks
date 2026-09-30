@@ -1,7 +1,7 @@
 ---
 title: "Replace Psych's top-level await with a synchronous libyaml seam; delete the website yaml stub"
 status: draft
-updated: 2026-09-29
+updated: 2026-09-30
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat", "activesupport", "website"]

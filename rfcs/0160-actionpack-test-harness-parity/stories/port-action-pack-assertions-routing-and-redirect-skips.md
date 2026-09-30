@@ -1,7 +1,7 @@
 ---
 title: "port-action-pack-assertions-routing-and-redirect-skips"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []

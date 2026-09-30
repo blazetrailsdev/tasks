@@ -1,6 +1,6 @@
 ---
 title: "mime-all-is-not-an-all-type"
-status: draft
+status: in-progress
 updated: 2026-09-30
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8277
+claim: "2026-09-30T13:46:11Z"
+assignee: "mime-all-is-not-an-all-type"
 blocked-by: null
 closed-reason: null
 ---

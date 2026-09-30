@@ -1,6 +1,6 @@
 ---
 title: "DelegationRelationTest omits the ARRAY_DELEGATES loop over Comment.all"
-status: ready
+status: in-progress
 updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8277
+claim: "2026-09-30T13:06:35Z"
+assignee: "anonymous-migration-class-name-is-empty-string-not-nil"
 blocked-by: null
 closed-reason: null
 ---

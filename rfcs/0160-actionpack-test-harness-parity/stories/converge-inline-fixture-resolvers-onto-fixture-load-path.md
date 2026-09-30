@@ -1,7 +1,7 @@
 ---
 title: "Converge respond_to and trails tests' inline FixtureResolvers onto FIXTURE_LOAD_PATH"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []

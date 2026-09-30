@@ -1,7 +1,7 @@
 ---
 title: "CI smoke: a YAML-free trails app boots with the yaml package unresolvable"
 status: draft
-updated: 2026-09-29
+updated: 2026-09-30
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat", "activerecord", "trailties", "i18n"]

@@ -1,7 +1,7 @@
 ---
 title: "Devcontainer generator: emit compose.yaml through to_yaml, not JSON"
 status: draft
-updated: 2026-09-29
+updated: 2026-09-30
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["trailties"]

@@ -1,6 +1,6 @@
 ---
 title: "Restore tasks set-deps / set-deps-rfc (lost in the tasks-next rewrite)"
-status: draft
+status: in-progress
 updated: 2026-09-30
 rfc: "0091-tasks-backlog-integrity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: tasks#202
+claim: "2026-09-30T13:25:53Z"
+assignee: "restore-set-deps-verb"
 blocked-by: null
 closed-reason: null
 ---

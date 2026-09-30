@@ -1,6 +1,6 @@
 ---
 title: "Mime::Type / NullType ? predicates go through method_missing"
-status: ready
+status: in-progress
 updated: 2026-09-30
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8277
+claim: "2026-09-30T13:32:24Z"
+assignee: "mime-type-predicates-through-method-missing"
 blocked-by: null
 closed-reason: null
 ---

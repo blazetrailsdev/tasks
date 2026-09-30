@@ -1,6 +1,6 @@
 ---
 title: "Widen rails-file-structure-method-order to the connection-adapter tree"
-status: blocked
+status: claimed
 updated: 2026-09-30
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-30T01:21:41Z"
 assignee: "attribute-set-accepts-lazy-attribute-hash"
-blocked-by: "no quiet window: open draft trails#8254 touches ~40 files under packages/activerecord/src/connection-adapters/** (postgresql/oid/*, sqlite3-adapter.ts); the AC requires no open PR on that tree"
+blocked-by: null
 closed-reason: null
 ---
 
