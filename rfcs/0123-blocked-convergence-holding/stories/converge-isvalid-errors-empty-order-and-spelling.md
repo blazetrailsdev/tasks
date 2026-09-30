@@ -1,7 +1,7 @@
 ---
 title: "Converge Validations#isValid onto Rails' errors.empty? && output order and spelling"
-status: in-progress
-updated: 2026-09-29
+status: done
+updated: 2026-09-30
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]

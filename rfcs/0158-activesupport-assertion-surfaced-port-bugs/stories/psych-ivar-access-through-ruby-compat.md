@@ -1,6 +1,6 @@
 ---
 title: "Psych dump_ivars/init_with read and write ivars through ruby-compat accessors"
-status: draft
+status: blocked
 updated: 2026-09-30
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-30T01:41:11Z"
+assignee: "mysql-bigint-registers-rails-type-integer"
+blocked-by: "depends on trails#8254 (unmerged): yaml.ts dumpIvars/ToRuby.initWith exist only in that PR, nothing to converge on main"
 closed-reason: null
 ---
 

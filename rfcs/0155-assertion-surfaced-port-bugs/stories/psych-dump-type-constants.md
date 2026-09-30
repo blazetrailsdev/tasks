@@ -1,6 +1,6 @@
 ---
 title: "psych-dump-type-constants"
-status: claimed
+status: in-progress
 updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8254
 claim: "2026-09-30T00:40:51Z"
 assignee: "psych-object-protocol-for-record-yaml-round-trip"
 blocked-by: null
