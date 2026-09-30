@@ -1,7 +1,7 @@
 ---
 title: "QueryLogs.querySourceLocation hand-parses the stack where Rails asks the backtrace cleaner"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

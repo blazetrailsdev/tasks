@@ -1,6 +1,6 @@
 ---
 title: "Owner#blocks memoizes lazily as owner.rb:25-27 (no eager _blocks field)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "scaffold-generates-no-model-fixtures"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

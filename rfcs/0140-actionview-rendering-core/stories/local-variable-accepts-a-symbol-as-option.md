@@ -1,6 +1,6 @@
 ---
 title: "local-variable-accepts-a-symbol-as-option"
-status: ready
+status: done
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#8267
+claim: "2026-09-30T12:09:48Z"
+assignee: "local-variable-accepts-a-symbol-as-option"
 blocked-by: null
 closed-reason: null
 ---

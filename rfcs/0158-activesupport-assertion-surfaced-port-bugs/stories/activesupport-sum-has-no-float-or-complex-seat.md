@@ -1,7 +1,7 @@
 ---
 title: "activesupport-sum-has-no-float-or-complex-seat"
-status: ready
-updated: 2026-09-25
+status: in-progress
+updated: 2026-09-30
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8271
+claim: "2026-09-30T12:23:53Z"
+assignee: "activesupport-sum-has-no-float-or-complex-seat"
 blocked-by: null
 closed-reason: null
 ---

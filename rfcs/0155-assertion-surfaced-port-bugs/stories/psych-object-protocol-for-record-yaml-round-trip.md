@@ -1,7 +1,7 @@
 ---
 title: "psych-object-protocol-for-record-yaml-round-trip"
-status: in-progress
-updated: 2026-09-29
+status: done
+updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

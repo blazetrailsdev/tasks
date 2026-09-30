@@ -1,7 +1,7 @@
 ---
 title: "rails-model-generator-hooks-orm-active-record-model"
-status: draft
-updated: 2026-09-29
+status: in-progress
+updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8270
+claim: "2026-09-30T12:30:12Z"
+assignee: "rails-model-generator-hooks-orm-active-record-model"
 blocked-by: null
 closed-reason: null
 ---

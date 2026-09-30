@@ -1,6 +1,6 @@
 ---
 title: "Generators have no Thor source_paths / find_in_source_paths or template files"
-status: claimed
+status: in-progress
 updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: trails#8269
 claim: "2026-09-30T02:11:55Z"
 assignee: "generators-have-no-thor-source-paths-or-template-files"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "expo-sqlite-driver-raises-sqlite3-gem-exception-classes"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

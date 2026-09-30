@@ -1,6 +1,6 @@
 ---
 title: "base-render-returns-nil-body-and-rejects-thenables"
-status: claimed
+status: in-progress
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: trails#8268
 claim: "2026-09-30T10:03:51Z"
 assignee: "base-render-returns-nil-body-and-rejects-thenables"
 blocked-by: null

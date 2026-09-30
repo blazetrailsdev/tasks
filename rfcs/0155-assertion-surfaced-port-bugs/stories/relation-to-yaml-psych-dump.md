@@ -1,7 +1,7 @@
 ---
 title: "relation-to-yaml-psych-dump"
 status: blocked
-updated: 2026-09-25
+updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Needs psych-object-protocol-for-record-yaml-round-trip (Psych !ruby/object emitter + Core#encode_with dispatch; also 0158/activesupport-has-no-psych-emitter-for-to-yaml decides the emitter's home). No trails surface drives encode_with on origin/main (only per-class encodeWith on Column/SchemaCache/Locking); relations.test.ts:200 it.skip('to yaml') stays parked until that lands."
+blocked-by: "psych-object-protocol-for-record-yaml-round-trip landed (trails#8254, merged 2026-09-30: core.ts encodeWith, yaml.ts dumpIvars/initWith), but there is still no Psych emitter for Relation#to_yaml / Array#to_yaml; its home is being decided by 0158/activesupport-has-no-psych-emitter-for-to-yaml (claimed 2026-09-30, no PR yet). relations.test.ts:200 'to yaml' and yaml-serialization.test.ts 'active record relation serialization' stay parked until that lands."
 closed-reason: null
 ---
 

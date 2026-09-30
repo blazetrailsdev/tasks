@@ -1,6 +1,6 @@
 ---
 title: "psych-dump-type-constants"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

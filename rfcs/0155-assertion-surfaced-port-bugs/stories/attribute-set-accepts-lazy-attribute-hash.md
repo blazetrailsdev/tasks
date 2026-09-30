@@ -1,6 +1,6 @@
 ---
 title: "attribute-set-accepts-lazy-attribute-hash"
-status: blocked
+status: ready
 updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-09-30T01:21:41Z"
-assignee: "attribute-set-accepts-lazy-attribute-hash"
-blocked-by: "waits on trails#8254 (psych-object-protocol-for-record-yaml-round-trip, open draft): it adds the rails_v1_mysql.yml fixture, LazyAttributeHash revival, and the 'deserializing rails v1 mysql yaml' body (skipped as BLOCKED on this story), and it edits attribute-set.ts too"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

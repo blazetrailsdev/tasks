@@ -1,6 +1,6 @@
 ---
 title: "TagBuilder owns content_tag_string / tag_options / tag_option as instance methods"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null

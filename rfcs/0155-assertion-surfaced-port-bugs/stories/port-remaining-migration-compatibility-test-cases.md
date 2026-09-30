@@ -1,7 +1,7 @@
 ---
 title: "port-remaining-migration-compatibility-test-cases"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

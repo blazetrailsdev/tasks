@@ -1,7 +1,7 @@
 ---
 title: "Sweep remaining toBeNull ports of assert_nil / assert_not_nil onto assertNil / assertNotNil"
-status: ready
-updated: 2026-09-25
+status: in-progress
+updated: 2026-09-30
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8272
+claim: "2026-09-30T12:37:50Z"
+assignee: "assert-nil-helper-sweep-remaining-packages"
 blocked-by: null
 closed-reason: null
 ---

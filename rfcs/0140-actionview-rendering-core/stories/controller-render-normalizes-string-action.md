@@ -1,6 +1,6 @@
 ---
 title: 'ActionView::Rendering#_normalize_args string/Symbol arm: render("new") renders the action'
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null

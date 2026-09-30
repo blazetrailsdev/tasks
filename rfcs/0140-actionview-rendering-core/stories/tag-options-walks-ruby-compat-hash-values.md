@@ -1,6 +1,6 @@
 ---
 title: "tag_options expands a ruby-compat Hash under data:/aria: (tag_helper.rb:248-290)"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null

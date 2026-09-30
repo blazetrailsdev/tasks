@@ -1,6 +1,6 @@
 ---
 title: "MySQL bigint registers Rails' Type::Integer(limit: 8); delete MysqlBigInteger"
-status: blocked
+status: ready
 updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: "2026-09-30T01:41:11Z"
-assignee: "mysql-bigint-registers-rails-type-integer"
-blocked-by: "depends on trails#8254 (unmerged): its dumpTags.set(MysqlBigInteger, ...) and the MariaDB yaml round-trip test live only there; deleting MysqlBigInteger now breaks that open PR and must ship bundled with psych-ivar-access-through-ruby-compat"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

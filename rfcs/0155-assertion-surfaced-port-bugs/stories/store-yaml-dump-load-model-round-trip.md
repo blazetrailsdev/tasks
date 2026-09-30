@@ -1,7 +1,7 @@
 ---
 title: "store-yaml-dump-load-model-round-trip"
-status: blocked
-updated: 2026-09-25
+status: closed
+updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-09-25T15:11:37Z"
 assignee: "schema-dumper-cases-dump-a-hand-built-schema-source"
-blocked-by: "needs psych-object-protocol-for-record-yaml-round-trip: YAML.dump/unsafe_load of a record is Psych's !ruby/object + encode_with/init_with protocol (core.rb:498-502,587-591), which trails lacks entirely (activesupport/yaml is bare npm parse/stringify; yaml_serialization_test.rb is PERMANENT-SKIP for the same gap; sibling relation-to-yaml-psych-dump hits it too)"
-closed-reason: null
+blocked-by: null
+closed-reason: "Delivered by trails#8254 (psych-object-protocol-for-record-yaml-round-trip, merged 2026-09-30): origin/main packages/activerecord/src/store.test.ts 'dump, load and dump again a model' is unskipped and does two YAML.dump/YAML.unsafeLoad round trips asserting john.equals(...) each time, as store_test.rb:327-335."
 ---
 
 ## Context
