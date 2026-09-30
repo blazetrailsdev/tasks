@@ -1,13 +1,13 @@
 ---
-title: "assert-nil-helper-home-below-activesupport-for-gem-ports"
+title: "Give Minitest assert_nil / refute_nil a home date, i18n, rack and rack-session can import"
 status: draft
 updated: 2026-09-30
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
-packages: []
+packages: ["date", "i18n", "rack", "rack-session"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 350
 priority: null
 pr: null
 claim: null
