@@ -5,7 +5,8 @@ updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - lazy-route-set-url-helpers-method-missing-module
 deps-rfc: []
 est-loc: null
 priority: 1
