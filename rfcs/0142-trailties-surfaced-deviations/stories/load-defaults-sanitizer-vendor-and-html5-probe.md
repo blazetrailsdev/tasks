@@ -1,7 +1,7 @@
 ---
 title: "load-defaults-sanitizer-vendor-and-html5-probe"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#8263
+claim: "2026-09-30T03:31:47Z"
+assignee: "load-defaults-sanitizer-vendor-and-html5-probe"
 blocked-by: null
 closed-reason: null
 ---

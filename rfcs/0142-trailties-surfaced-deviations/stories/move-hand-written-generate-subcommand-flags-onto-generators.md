@@ -1,7 +1,7 @@
 ---
 title: "move-hand-written-generate-subcommand-flags-onto-generators"
-status: ready
-updated: 2026-09-28
+status: claimed
+updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T03:45:47Z"
+assignee: "move-hand-written-generate-subcommand-flags-onto-generators"
 blocked-by: null
 closed-reason: null
 ---
