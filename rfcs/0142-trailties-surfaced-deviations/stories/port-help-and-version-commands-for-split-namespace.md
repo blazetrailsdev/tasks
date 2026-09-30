@@ -4,8 +4,9 @@ status: ready
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
-packages: []
-deps: [port-application-command-and-argv-scrubber]
+packages: ["trailties"]
+deps:
+  ["port-application-command-and-argv-scrubber", "vendor-thor-and-port-command-base-thor-surface"]
 deps-rfc: []
 est-loc: 160
 priority: 6
@@ -58,3 +59,7 @@ resolve through `find_by_namespace` as Rails does.
   VersionCommand, and `invoke("")` / `invoke("-h")` through HelpCommand.
 - The ported `railties/test/commands/help_test.rb` / `version_test.rb` cases (if any)
   pass under their Rails names.
+
+## Thor port (the Thor-port RFC this story is rehomed into)
+
+Depends on the Thor port through `vendor-thor-and-port-command-base-thor-surface`.

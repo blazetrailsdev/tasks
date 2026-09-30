@@ -4,10 +4,10 @@ status: draft
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
-packages: []
-deps: []
+packages: ["trailties"]
+deps: ["vendor-thor-and-port-command-base-thor-surface", "trails-new-reaches-app-generator-start"]
 deps-rfc: []
-est-loc: null
+est-loc: 400
 priority: null
 pr: null
 claim: null
@@ -39,3 +39,7 @@ trails has no `application` command and no `ARGVScrubber`, so there is nothing f
   `AppGenerator.start(new ARGVScrubber(args).prepareBang())`.
 - `invoke("application", ["--version"])` prints `Trails <VERSION>` through
   `handle_version_request!`.
+
+## Thor port (the Thor-port RFC this story is rehomed into)
+
+Depends on the Thor port: `ApplicationCommand` is a `Rails::Command::Base` (a Thor), and `AppGenerator.start` is `Thor::Base.start`. Estimated at 400.

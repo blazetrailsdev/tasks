@@ -4,8 +4,13 @@ status: draft
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
-packages: []
-deps: []
+packages: ["trailties"]
+deps:
+  [
+    "port-thor-actions-module",
+    "port-thor-file-manipulation-edits",
+    "converge-generator-base-file-actions-onto-thor-actions",
+  ]
 deps-rfc: []
 est-loc: 150
 priority: null
@@ -45,3 +50,7 @@ Port `inside` and `chmod` as Thor actions on `GeneratorBase`, with the ruby-comp
 - `ActionMethods` has delegates for `inside`, `chmod` and `shebang`. With the source-paths story, it has all nine.
 - `inside("dir") { … }` scopes generated paths to `dir` and restores the destination root afterwards,
   including when the block returns a promise.
+
+## Thor port (the Thor-port RFC this story is rehomed into)
+
+`inside` is ported by `port-thor-actions-module` (over `ruby-compat-fileutils-cd-block-restores-on-settle`), and `chmod` by `port-thor-file-manipulation-edits` (over `ruby-compat-async-fs-verbs-for-thor-actions`). What remains here is the `ActionMethods` delegates.

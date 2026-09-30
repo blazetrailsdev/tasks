@@ -4,10 +4,10 @@ status: ready
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
-packages: []
-deps: []
+packages: ["trailties"]
+deps: ["split-app-generator-into-thor-commands"]
 deps-rfc: []
-est-loc: null
+est-loc: 300
 priority: 7
 pr: null
 claim: null
@@ -41,3 +41,7 @@ so the two do not line up yet.
 - `skipDocker` and the other hand-written `new.ts` switches that Rails declares as `class_option`s
   (`app_base.rb:40-120`) become class options.
 - The post-generation steps `new.ts` runs (git init, install) keep working.
+
+## Thor port (the Thor-port RFC this story is rehomed into)
+
+With the Thor port, `AppGenerator.start` is `Thor::Base.start` and parses every `AppBase` `class_option` through `Thor::Options`, so this story is the `new.ts` side of `split-app-generator-into-thor-commands`. Estimated at 300.
