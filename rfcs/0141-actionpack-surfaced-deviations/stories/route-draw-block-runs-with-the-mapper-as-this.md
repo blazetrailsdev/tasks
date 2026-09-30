@@ -1,6 +1,6 @@
 ---
 title: "route-draw-block-runs-with-the-mapper-as-this"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

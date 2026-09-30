@@ -1,6 +1,6 @@
 ---
 title: "persistence-save-and-update-return-boolean-or-undefined"
-status: ready
+status: closed
 updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8306
+claim: "2026-09-30T22:30:29Z"
+assignee: "persistence-save-and-update-return-boolean-or-undefined"
 blocked-by: null
-closed-reason: null
+closed-reason: "premise falsified: Rails Transactions#save/save! (transactions.rb:360-366) wrap with_transaction_returning_status, which returns nil when a callback raises ActiveRecord::Rollback (:408-421); the existing boolean|undefined / true|undefined types are faithful. Reverted in trails#8306."
 ---
 
 ## Context

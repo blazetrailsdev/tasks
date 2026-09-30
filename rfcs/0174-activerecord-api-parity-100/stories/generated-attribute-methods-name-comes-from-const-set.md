@@ -1,6 +1,6 @@
 ---
 title: "GeneratedAttributeMethods takes its name from const_set, not a post-construction stamp"
-status: ready
+status: claimed
 updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T22:50:28Z"
+assignee: "relation-count-type-is-a-union-even-when-ungrouped"
 blocked-by: null
 closed-reason: null
 ---

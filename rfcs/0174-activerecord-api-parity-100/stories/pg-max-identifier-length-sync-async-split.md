@@ -1,6 +1,6 @@
 ---
 title: "PG max_identifier_length is split across a sync reader and an async warmer"
-status: ready
+status: claimed
 updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T22:50:28Z"
+assignee: "relation-count-type-is-a-union-even-when-ungrouped"
 blocked-by: null
 closed-reason: null
 ---

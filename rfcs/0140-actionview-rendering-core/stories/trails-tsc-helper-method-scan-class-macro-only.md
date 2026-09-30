@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: collect helperMethod names only from class-level macro positions"
-status: ready
+status: in-progress
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8306
+claim: "2026-09-30T22:30:29Z"
+assignee: "persistence-save-and-update-return-boolean-or-undefined"
 blocked-by: null
 closed-reason: null
 ---
