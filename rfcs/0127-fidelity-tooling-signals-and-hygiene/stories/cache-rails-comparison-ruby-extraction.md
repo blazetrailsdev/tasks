@@ -1,6 +1,6 @@
 ---
 title: "Cache the rails-comparison Ruby extraction outputs keyed on vendored refs + extractor hashes"
-status: draft
+status: in-progress
 updated: 2026-09-30
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8294
+claim: "2026-09-30T18:41:20Z"
+assignee: "cache-rails-comparison-ruby-extraction"
 blocked-by: null
 closed-reason: null
 ---

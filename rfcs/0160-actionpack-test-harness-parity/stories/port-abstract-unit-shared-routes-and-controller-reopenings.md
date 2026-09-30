@@ -1,6 +1,6 @@
 ---
 title: "port-abstract-unit-shared-routes-and-controller-reopenings"
-status: draft
+status: in-progress
 updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8295
+claim: "2026-09-30T18:37:15Z"
+assignee: "port-abstract-unit-shared-routes-and-controller-reopenings"
 blocked-by: null
 closed-reason: null
 ---

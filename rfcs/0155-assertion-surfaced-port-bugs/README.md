@@ -1,9 +1,9 @@
 ---
 rfc: "0155-assertion-surfaced-port-bugs"
 title: "Port bugs surfaced by assertion convergence — RFC 0132's overflow bucket (non-ActiveSupport)"
-status: active
+status: closed
 created: 2026-09-18
-updated: 2026-09-24
+updated: 2026-09-30
 owner: "@deanmarano"
 packages:
   - "activerecord"

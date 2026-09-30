@@ -1,6 +1,6 @@
 ---
 title: "Converge Clusivity#check_validity! onto respond_to? duck tests"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0173-activemodel-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "TSE <%% / %%> literals diverge from Erubi's % indicator"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

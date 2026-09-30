@@ -1,6 +1,6 @@
 ---
 title: "port-integration-runner-module-and-runner-tests"
-status: ready
+status: blocked
 updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-30T18:01:15Z"
+assignee: "port-integration-runner-module-and-runner-tests"
+blocked-by: "Integration::Runner#create_session builds a separate Integration::Session (integration.rb:356-367) and its delegators forward to it (:370-384); trails has no Session class — IntegrationTest IS the session and integrationSession returns this. Needs integration-runner-merged-into-session to split them first."
 closed-reason: null
 ---
 

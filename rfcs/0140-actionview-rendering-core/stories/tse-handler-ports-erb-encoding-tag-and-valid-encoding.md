@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: 7
+priority: 9
 pr: null
 claim: "2026-09-30T09:49:52Z"
 assignee: "actionview-rendering-methods-have-no-super-chain"

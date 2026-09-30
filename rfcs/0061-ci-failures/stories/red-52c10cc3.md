@@ -1,6 +1,6 @@
 ---
 title: "Unit Tests failing on main @52c10cc3"
-status: ready
+status: closed
 updated: 2026-09-30
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T18:58:06Z"
+assignee: "red-52c10cc3"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: time-travel.test.ts 'time helper travel' crossed a second boundary between Time.now() and travel() (known flake, also seen on #8011; test omits Rails' Time.stub(:now, Time.now)). 52c10cc3 touched no activesupport time code; passes locally."
 ---
 
 ## Context

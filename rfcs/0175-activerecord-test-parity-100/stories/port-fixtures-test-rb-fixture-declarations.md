@@ -1,6 +1,6 @@
 ---
 title: "Port fixtures_test.rb's fixture declarations and drop fixtures.test.ts from the expected-fixtures ratchet"
-status: ready
+status: in-progress
 updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8292
+claim: "2026-09-30T18:23:22Z"
+assignee: "tag-helper-drops-output-safety-wrappers"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "ActionView::Helpers modules are flattened namespaces; Base copies helpers instead of include Helpers"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

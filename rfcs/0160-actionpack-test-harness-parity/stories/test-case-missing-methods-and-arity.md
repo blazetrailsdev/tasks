@@ -1,6 +1,6 @@
 ---
 title: "Port ActionController::TestCase's nine missing methods and fix its arity rows"
-status: ready
+status: in-progress
 updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8290
+claim: "2026-09-30T18:01:15Z"
+assignee: "port-integration-runner-module-and-runner-tests"
 blocked-by: null
 closed-reason: null
 ---

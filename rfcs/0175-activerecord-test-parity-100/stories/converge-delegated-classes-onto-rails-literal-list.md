@@ -1,6 +1,6 @@
 ---
 title: "Converge delegatedClasses() onto Rails' literal delegated_classes list"
-status: ready
+status: done
 updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8037
+claim: "2026-09-30T18:01:15Z"
+assignee: "port-integration-runner-module-and-runner-tests"
 blocked-by: null
 closed-reason: null
 ---

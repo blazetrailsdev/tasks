@@ -1,7 +1,7 @@
 ---
 title: "TEST_SCHEMA omits the canonical parrots.integer / toys.integer columns"
-status: ready
-updated: 2026-07-27
+status: in-progress
+updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8292
+claim: "2026-09-30T18:23:22Z"
+assignee: "tag-helper-drops-output-safety-wrappers"
 blocked-by: null
 closed-reason: null
 ---

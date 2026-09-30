@@ -1,6 +1,6 @@
 ---
 title: "Arel nodes have no dup(), so Rails' mutation tests are ported as a weaker twin comparison"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0172-arel-parity-100"
 cluster: null

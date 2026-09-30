@@ -1,17 +1,17 @@
 ---
 title: "url-for-query-symbol-values-to-param"
-status: draft
-updated: 2026-09-27
+status: in-progress
+updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 2
+pr: trails#8297
+claim: "2026-09-30T18:51:21Z"
+assignee: "url-for-query-symbol-values-to-param"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Ruby alias to_h is unported on AttributeSet because parity:api does not count alias targets"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0173-activemodel-parity-100"
 cluster: null

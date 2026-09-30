@@ -1,7 +1,7 @@
 ---
 title: "TEST_SCHEMA parrots timestamps omit schema.rb's precision: 0; ratchet OPTION_DEBT_CEILING to 0"
-status: ready
-updated: 2026-07-27
+status: done
+updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8290
+claim: "2026-09-30T18:01:15Z"
+assignee: "port-integration-runner-module-and-runner-tests"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "LazyAttributeHash#deep_dup is dup + instance_variable_set(:@delegate_hash); port initialize_dup"
-status: draft
+status: closed
 updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Landed on origin/main (93ed8c54a3): packages/activemodel/src/attribute-set/builder.ts:198-206 — deepDup is this.dup() then copy._delegateHash = transformValues(delegateHash(), attr.dup()) (builder.rb:118-122), and initializeDup re-copies _delegateHash (builder.rb:124-127), called from dup() at :296; @delegate_hash declared via rbDeclareIvar at :301. Shipped with trails#8276/#8279."
 ---
 
 ## Context
