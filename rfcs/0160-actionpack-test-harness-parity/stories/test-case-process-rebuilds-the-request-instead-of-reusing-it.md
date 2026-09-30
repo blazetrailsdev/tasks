@@ -2,7 +2,7 @@
 title: "ActionController::TestCase#process rebuilds the request instead of reusing the one Rails dispatches"
 status: ready
 updated: 2026-09-26
-rfc: "0141-actionpack-surfaced-deviations"
+rfc: "0160-actionpack-test-harness-parity"
 cluster: "test-harness"
 packages: []
 deps: []

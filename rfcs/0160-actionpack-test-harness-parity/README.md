@@ -8,7 +8,8 @@ priority: 2
 owner: "@deanmarano"
 packages:
   - "actionpack"
-clusters: []
+clusters:
+  - "test-harness"
 ---
 
 # RFC 0160 — ActionPack test harness: abstract_unit, TestCase and Integration to parity
