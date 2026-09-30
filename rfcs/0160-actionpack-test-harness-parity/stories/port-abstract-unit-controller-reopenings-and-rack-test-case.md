@@ -49,8 +49,16 @@ CLAUDE.md § "Trails has no autoloader" records that trails has none.
 
 ## Acceptance criteria
 
-- Each piece above is in `packages/actionpack/src/test-helpers/abstract-unit.ts`
-  at its Rails name, in Rails source order.
-- It ships with its first consumer: at least one `controller/new_base/*_test.rb`
-  port (e.g. `render_plain_test.rb`) on `Rack::TestCase`, and at least one
-  `ActionController::TestCase` port that relies on `SharedRoutes`.
+- `Rack::TestCase` (`abstract_unit.rb:178-218`) and `::ApplicationController`
+  (`:246`) are in `packages/actionpack/src/test-helpers/abstract-unit.ts` at
+  their Rails names, in Rails source order.
+- It ships with its first consumer: a `controller/new_base/render_plain_test.rb`
+  port on `Rack::TestCase`.
+
+## Split out
+
+`SharedRoutes#before_setup` (`:77-87`) and the `ActionController::API` / `Base` /
+`TestCase` reopenings (`:220-244`) have no consumer yet. Rails'
+`TestCase#process` reads `@routes` (`action_controller/test_case.rb:606-610`),
+and trails' `TestCase#process` does not. They moved to
+`port-abstract-unit-shared-routes-and-controller-reopenings`.

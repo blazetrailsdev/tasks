@@ -56,9 +56,14 @@ this story:
 
 ## Acceptance criteria
 
-- Each helper above is folded into the Rails method that owns its body, and
-  its receipt is deleted with it.
+- `throughBuildRecord` is folded into `ThroughAssociation#build_record`
+  (`through_association.rb:116-129`), and its receipt is deleted with it.
 - `ThroughAssociation` is mixed in with `include()` so `build_record`'s
   `super` chain matches Rails.
-- Split across as many PRs as the LOC ceiling needs; one file per PR is a
-  natural cut.
+
+## Split out
+
+The `alias-tracker.ts` helpers (`aliasedArelTableFor` /
+`aliasedArelTableForReflection`) and `has-many-association.ts` `scope` moved to
+`association-helpers-extracted-for-the-collection-proxy-remainder-4`, following
+the one-file-per-PR cut this story named.
