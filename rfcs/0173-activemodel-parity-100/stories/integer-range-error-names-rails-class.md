@@ -2,7 +2,7 @@
 title: "Integer RangeError message names the Rails class (self.class), not the JS class"
 status: draft
 updated: 2026-09-30
-rfc: "0155-assertion-surfaced-port-bugs"
+rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
 deps: []
