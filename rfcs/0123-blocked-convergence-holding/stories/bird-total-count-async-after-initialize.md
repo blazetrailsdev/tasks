@@ -2,7 +2,7 @@
 title: "bird-total-count-async-after-initialize"
 status: blocked
 updated: 2026-09-24
-rfc: "0155-assertion-surfaced-port-bugs"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
