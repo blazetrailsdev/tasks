@@ -5,7 +5,7 @@ updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
-deps: []
+deps: ["move-activesupport-yaml-into-ruby-compat-psych", "psych-object-to-yaml"]
 deps-rfc: []
 est-loc: null
 priority: null
@@ -38,8 +38,17 @@ block-less arms).
 
 ## Acceptance criteria
 
-- [ ] Decide the home of Psych's `Object#to_yaml` / `YAMLTree` in trails
-      (ruby-compat, as Ruby stdlib) and port the `visit_Hash` ivars arm it needs.
+- [ ] Port the `visit_Hash` ivars arm (`!ruby/hash-with-ivars:<Class>`,
+      `visit_Hash` → `visit_hash_subclass`, `vendor/ruby/v3.3.11/ext/psych/lib/psych/visitors/yaml_tree.rb:326-337,425-450`) in
+      ruby-compat's `YAMLTree`. The home is decided by RFC 0000-psych-in-ruby-compat,
+      and `Object#to_yaml` is `toYaml` from `psych-object-to-yaml`.
 - [ ] The parked test runs unskipped with Rails' two `assert_includes` and
       their values; `hash_with_indifferent_access_test.rb` has no count / kind /
       value mismatch left from it.
+
+## Home (RFC 0000-psych-in-ruby-compat)
+
+Psych moves out of `packages/activesupport/src/yaml.ts` into
+`packages/ruby-compat/src/psych*.ts` (layout: RFC Design §1) in
+`move-activesupport-yaml-into-ruby-compat-psych`. Write this story's code there, as `Psych` namespace
+members, and not in activesupport.

@@ -6,7 +6,12 @@ rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
   - "activesupport"
-deps: []
+deps:
+  [
+    "psych-libyaml-seam-without-top-level-await",
+    "psych-load-and-safe-load-with-restricted-class-loader",
+    "psych-object-to-yaml",
+  ]
 deps-rfc: []
 est-loc: 120
 priority: null
@@ -85,3 +90,19 @@ source rather than route around it" move may apply here.
 - The Website `build:sw` and the cjs test-compare build both still pass — verify
   with `pnpm --filter @blazetrails/website exec svelte-kit sync && pnpm --filter @blazetrails/website build:sw`, not just vitest.
 - `pnpm parity:api` / `pnpm parity:test` deltas non-negative.
+
+## Update (RFC 0000-psych-in-ruby-compat)
+
+Option 2's shape is settled by that RFC's libyaml seam
+(`psych-libyaml-seam-without-top-level-await`): Psych resolves `yaml`
+synchronously on first use, so the entry becomes
+`(yaml) => { try { return YAML.load(yaml) } catch … }` with no priming step.
+
+Additional criteria:
+
+- [ ] The rescue is Ruby's `rescue` modifier, which catches `StandardError`
+      only. `LoadError` (no backend) must propagate, not be swallowed into
+      returning the input.
+- [ ] Port the FORMATTING `"yaml"` entry (`xml_mini.rb:62`,
+      `Proc.new { |yaml| yaml.to_yaml }`) through `toYaml`. It is absent from
+      `xml-mini.ts` today.
