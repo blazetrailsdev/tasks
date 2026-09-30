@@ -1,6 +1,6 @@
 ---
 title: "actionview-rendering-methods-have-no-super-chain"
-status: claimed
+status: in-progress
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#8266
 claim: "2026-09-30T09:49:52Z"
 assignee: "actionview-rendering-methods-have-no-super-chain"
 blocked-by: null

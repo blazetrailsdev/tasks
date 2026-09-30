@@ -1,6 +1,6 @@
 ---
 title: "assertDomEqual is string equality, not rails-dom-testing DOM equality"
-status: ready
+status: claimed
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 15
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T10:03:51Z"
+assignee: "base-render-returns-nil-body-and-rejects-thenables"
 blocked-by: null
 closed-reason: null
 ---
