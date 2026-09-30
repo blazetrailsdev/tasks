@@ -5,7 +5,8 @@ updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - integration-runner-merged-into-session
 deps-rfc: []
 est-loc: null
 priority: null
