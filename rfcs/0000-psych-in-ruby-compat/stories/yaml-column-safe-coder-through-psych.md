@@ -40,7 +40,8 @@ Fidelity traps (predicted):
       (`active-record.ts:54`), but a Ruby Symbol is a `":name"` string. Check
       that `ClassLoader::Restricted` sees what Rails permits.
 - [ ] Take the `Psych::VERSION >= 5.1` and `respond_to?(:unsafe_load)` arms
-      (`:14,32`). `Psych.VERSION` is `"5.1.2"`.
+      (`:14,32`) unconditionally. Vendored Psych is 5.1.2 (`versions.rb`), so
+      no `Psych.VERSION` export is needed (RFC §4).
 
 ## Acceptance criteria
 

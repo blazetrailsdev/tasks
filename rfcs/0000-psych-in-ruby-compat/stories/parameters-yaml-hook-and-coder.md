@@ -22,7 +22,7 @@ closed-reason: null
 (`hook_into_yaml_loading` writes `YAML.load_tags["!ruby/hash-with-ivars:ActionController::Parameters"]`
 and `["!ruby/hash:ActionController::Parameters"]`, called at class-body
 end), `:1068-1084` `init_with` (the legacy `!ruby/hash:` and
-`hash-with-ivars` shapes) and `:1086-1100` `encode_with`. trails'
+`hash-with-ivars` shapes) and `:1086-1088` `encode_with`. trails'
 `static hookIntoYamlLoading(): void {}`
 (`packages/actionpack/src/action-controller/metal/strong-parameters.ts:115`) is
 an empty body, and `initWith` / `encodeWith` are absent.

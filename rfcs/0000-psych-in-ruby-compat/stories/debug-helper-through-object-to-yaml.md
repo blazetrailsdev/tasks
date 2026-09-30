@@ -32,8 +32,7 @@ to `inspect`.
 
 - [ ] `debug` calls `toYaml(object)`. The fallback arm catches StandardError
       descendants only and re-raises `LoadError`.
-- [ ] `Marshal.dump` carries `@missingRailsCall … — CONVERGEABLE <story>`
-      against a filed Marshal story, or `PERMANENT` if none can exist.
+- [ ] `Marshal.dump` carries `@missingRailsCall … — CONVERGEABLE ruby-compat-has-no-marshal-for-schema-cache-and-debug`.
 - [ ] `debug-helper.test.ts` stays green, plus a case for the `LoadError`
       propagation.
 

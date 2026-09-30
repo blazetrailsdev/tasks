@@ -39,10 +39,15 @@ bullet. It is not in `psych-scalar-and-tag-visitors`, which covers tag arms.
       times, and `:symbol` (a `":name"` string).
 - [ ] `ToRuby` resolves plain, untagged, unquoted scalars through it. Quoted
       scalars stay Strings.
-- [ ] Time and Date results are ruby-compat / `@blazetrails/date` values only
-      if ruby-compat can reach them without a workspace dep. Otherwise
-      `parseTime` answers the JS `Date` and the gap is filed with its
-      `file:line` before merge.
+- [ ] Dates resolve as Psych resolves them: through `ClassLoader#date`
+      (`class_loader.rb:9,39-44`, `load 'Date'` → `rbPathToClass("Date")`).
+      So ruby-compat takes no dependency on `@blazetrails/date`, which seats
+      `Date` in the constant table. With nothing seated, the load raises
+      `ArgumentError "undefined class/module Date"` as MRI would with `date`
+      unrequired. `parseTime` answers the class `rbPathToClass("Time")`
+      resolves. If nothing seats `Time`, ruby-compat's own time primitive is
+      used if one exists; otherwise it raises, and the ported test for that
+      arm is `BLOCKED:` on a story filed in `0154-ruby-compat-surfaced-deviations`.
 - [ ] A table test mirrors `vendor/ruby/v3.3.11/test/psych/test_scalar_scanner.rb` cases.
 
 ## Verification

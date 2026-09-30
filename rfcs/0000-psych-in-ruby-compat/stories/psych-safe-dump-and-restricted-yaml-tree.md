@@ -1,5 +1,5 @@
 ---
-title: "Port Psych.safe_dump / RestrictedYAMLTree and Psych.dump's io and options arms"
+title: "Port Psych.safe_dump / RestrictedYAMLTree and Psych.dump's options arm"
 status: draft
 updated: 2026-09-29
 rfc: "0000-psych-in-ruby-compat"
@@ -18,9 +18,11 @@ closed-reason: null
 
 ## Context
 
-`vendor/ruby/v3.3.11/ext/psych/lib/psych.rb:505-525` `dump(o, io = nil, options = {})`: the io arm
-writes and returns the io; options are `indentation`, `line_width`,
-`canonical`, `header`. `:578-593` `safe_dump`. `RestrictedYAMLTree`
+`vendor/ruby/v3.3.11/ext/psych/lib/psych.rb:505-525` `dump(o, io = nil, options = {})`. Options are `indentation`, `line_width`,
+`canonical` and `header`. The one Rails caller passing options is
+`devcontainer_generator.rb:146` (via `to_yaml(indentation: 4)`, from
+`compose.yaml.tt:41`). No Rails caller passes `io`, so that arm is not
+ported (README rule 1). `:578-593` `safe_dump`. `RestrictedYAMLTree`
 (`psych/visitors/yaml_tree.rb:540-577`) raises
 `DisallowedClass("dump", name)` for an unpermitted class and
 `BadAlias` when `aliases: false` would need an alias. #8254's `dump` covers
@@ -36,10 +38,11 @@ hand-rolls the restriction today.
       runs `RestrictedYAMLTree#accept` (`:565-576`): Array, Hash, String,
       Integer, Float, true/false/nil and permitted classes pass. Others raise
       `DisallowedClass` "Tried to dump unspecified class: <name>".
-- [ ] `Psych.dump(o, io)` writes into an IO that answers `write` (ruby-compat
-      `StringIO` / `File`) and returns it. The options bag is honoured as far
-      as the backend supports it; any unsupported option raises rather than
-      being dropped silently.
+- [ ] `Psych.dump(o, options)` honours `indentation` (the only option a
+      caller passes). Any option the backend cannot honour raises
+      `ArgumentError` rather than being dropped silently. The `io` position
+      stays in the signature (so parameter names match Rails) and raises
+      `NotImplementedError` when it is non-nil.
 - [ ] A scalar document dumps as `"--- str\n"` (Psych's inline marker). That
       is `yaml-scalar-dump-document-marker-spacing`'s criterion, now owned by
       the emitter. Collections dump as `"---\n- ok\n"`.

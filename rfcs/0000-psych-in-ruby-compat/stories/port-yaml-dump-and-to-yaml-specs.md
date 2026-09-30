@@ -35,7 +35,7 @@ Enrollment needs four registrations (memory: test:compare enrollment).
 - [ ] Examples for surface trails does not port (OpenStruct, File, Struct,
       Syck) are `PERMANENT-SKIP` with the reason. Examples for surface that is
       pending `psych-scalar-and-tag-visitors` are `BLOCKED:` on it.
-- [ ] `pnpm parity:test` delta ≥ +15 for ruby-compat.
+- [ ] `pnpm parity:test` delta ≥ +18 for ruby-compat.
 
 ## Verification
 

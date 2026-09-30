@@ -179,16 +179,32 @@ C extension, reached only through its seam.
 ### 4. Psych surface (names)
 
 `docs/ruby-ts-conventions.md` camelCases a Ruby method and keeps a constant's
-spelling, so Psych's surface is: `Psych.load`, `Psych.safeLoad`,
-`Psych.unsafeLoad`, `Psych.loadFile`, `Psych.safeLoadFile`,
-`Psych.unsafeLoadFile`, `Psych.dump`, `Psych.safeDump`, `Psych.loadTags`,
-`Psych.dumpTags`, `Psych.domainTypes`, `Psych.addTag`, `Psych.addBuiltinType`,
-`Psych.addDomainType`, `Psych.removeType`, `Psych.VERSION` (`"5.1.2"`,
-`versions.rb`), the exception classes, `Psych.Coder`, `Psych.Omap`, and
-`YAML = Psych`. Kwargs (`permitted_classes:`, `aliases:`,
-`symbolize_names:`, `freeze:`, `filename:`, `fallback:`, `strict_integer:`)
-are one camelCased options bag, with `fallback:`'s `nil`-vs-absent distinction
-kept (`psych.rb:271,322,368`). `Object#to_yaml` is `toYaml(o, options)`, with a
+spelling. Rule 1 cuts the list to what a Rails body trails ports actually
+calls:
+
+| export                                                                                                   | caller                                                                                                      |
+| -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `Psych.load`                                                                                             | `xml_mini.rb:83`                                                                                            |
+| `Psych.safeLoad` / `Psych.unsafeLoad`                                                                    | `yaml_column.rb:35-41`, `schema_cache.rb:236`, `encrypted_configuration.rb:118`, `configuration_file.rb:32` |
+| `Psych.loadFile` / `Psych.unsafeLoadFile`                                                                | `change_generator.rb:124`; `configuration_file.rb:26`, i18n `base.rb:264`                                   |
+| `Psych.dump` / `Psych.safeDump`                                                                          | `yaml_column.rb:17-23`, `schema_cache.rb:411`, `database_statements.rb:521`, via `to_yaml`                  |
+| `Psych.loadTags` / `Psych.dumpTags`                                                                      | `strong_parameters.rb:1063-1064`, `time_with_zone.rb:608-609`, `active_record.rb:570-573`                   |
+| `Psych.addBuiltinType` (+ the `domainTypes` table it writes)                                             | `ordered_hash.rb:5`                                                                                         |
+| `Psych.Exception`, `SyntaxError`, `BadAlias`, `AliasesNotEnabled`, `AnchorNotDefined`, `DisallowedClass` | raised by the above; rescued at `configuration_file.rb:37`, `encrypted_configuration.rb:42,122`             |
+| `Psych.Coder`, `Psych.Omap`, `Psych.ClassLoader`, `Psych.ScalarScanner`                                  | the visitors; `fixture_set/file.rb:77` (`YAML::Omap`)                                                       |
+| `toYaml` (`Object#to_yaml`)                                                                              | `debug_helper.rb:30`, `xml_mini.rb:62`, both generators                                                     |
+| `YAML`                                                                                                   | every `YAML.` spelling above; `serialization.rb:214` (`coder == ::YAML`)                                    |
+
+Not ported, for want of a caller: `safe_load_file`, `add_tag`,
+`add_domain_type`, `remove_type`, `Psych::VERSION` (Rails' `>= 5.1` /
+`respond_to?(:unsafe_load)` checks at `yaml_column.rb:14,32` are class-body
+arm selection, and the port takes the modern arms), and `dump`'s `io`
+argument (every Rails caller writes the returned String). Each function keeps
+Psych's full kwargs as one camelCased options bag (`permitted_classes:`,
+`permitted_symbols:`, `aliases:`, `symbolize_names:`, `freeze:`, `filename:`,
+`fallback:`, `strict_integer:`), because parameter names are gated. The
+distinction between `fallback:` being `nil` and being absent is kept
+(`psych.rb:271,322,368`). `Object#to_yaml` is `toYaml(o, options)`, with a
 `RUBY_COMPAT_EXPORTS` row `["Object#to_yaml", "toYaml"]`.
 
 npm-shaped `parse` / `stringify` are **not** Psych names — `Psych.parse`
@@ -221,7 +237,7 @@ YAML-coded column.
 | `activemodel/src/attribute-set/codecs/yaml.ts` `yamlCodec`                | none (trails invention, no non-test caller)                                                                               | —                                                                                                   | Deleted, not given an alternative: `YAMLEncoder` + Psych is Rails' path.                                                                                                                                                                      | `delete-attribute-set-yaml-codec`                                                                                                            |
 | Psych object protocol: record / relation `to_yaml`                        | `core.rb:498-502,587-591`, `relation.rb:348`                                                                              | opt-in                                                                                              | None: it IS the YAML format.                                                                                                                                                                                                                  | #8254, `psych-dump-type-constants`, `relation-to-yaml-psych-dump`                                                                            |
 | devcontainer / db:system:change generators, `compose.yaml`                | `devcontainer_generator.rb:146-150`, `change_generator.rb:120-145`                                                        | opt-in (generate time)                                                                              | trails writes JSON into `compose.yaml` (valid YAML) and reads it back with `JSON.parse`, which fails on a hand-edited block-style file. Converged onto Psych; no alternative kept.                                                            | `devcontainer-generator-dumps-compose-yaml-through-to-yaml`, `change-generator-edits-compose-yaml-through-psych-load-file`                   |
-| tag registrations: Parameters, TimeWithZone, AR legacy names, OrderedHash | `strong_parameters.rb:1059-1100`, `time_with_zone.rb:174-181,608-609`, `active_record.rb:570-573`, `ordered_hash.rb:5-31` | **hot** (module load)                                                                               | n/a: they only write Psych's tables, which need no backend (§3).                                                                                                                                                                              | `parameters-yaml-hook-and-coder`, `time-with-zone-yaml-tags-and-coder`, `active-record-legacy-yaml-load-tags`, `ordered-hash-omap-yaml-type` |
+| tag registrations: Parameters, TimeWithZone, AR legacy names, OrderedHash | `strong_parameters.rb:1059-1088`, `time_with_zone.rb:174-181,608-609`, `active_record.rb:570-573`, `ordered_hash.rb:5-31` | **hot** (module load)                                                                               | n/a: they only write Psych's tables, which need no backend (§3).                                                                                                                                                                              | `parameters-yaml-hook-and-coder`, `time-with-zone-yaml-tags-and-coder`, `active-record-legacy-yaml-load-tags`, `ordered-hash-omap-yaml-type` |
 
 Unaffected: `core-ext/hash/conversions.ts` (`DISALLOWED_TYPES` is a string
 list), `source-annotation-extractor.ts` (registers a comment regex for `.yml`),
@@ -258,9 +274,10 @@ avoids with `SECRET_KEY_BASE`.
 - **A JSON schema-cache dump.** Rails' non-YAML format is Marshal. A `.json`
   arm would be an invented format. See Q3.
 - **Porting Marshal** for the schema cache's `.dump` arm or `debug`'s
-  `Marshal.dump(object)` probe (`debug_helper.rb:29`). Marshal is its own port;
-  `debug-helper-through-object-to-yaml` carries `@missingRailsCall` for the
-  probe.
+  `Marshal.dump(object)` probe (`debug_helper.rb:29`). Marshal is its own port,
+  filed as `0154-ruby-compat-surfaced-deviations/ruby-compat-has-no-marshal-for-schema-cache-and-debug`.
+  The two stories that meet it carry `@missingRailsCall … — CONVERGEABLE`
+  receipts pointing there.
 - **JSON fixtures.** `.ts` fixture modules already give a YAML-free fixture
   format. A third format adds nothing.
 - **`to_yaml` removal via `undef`** (`type/serialized.rb:6`,
@@ -335,9 +352,11 @@ avoids with `SECRET_KEY_BASE`.
   `LoadError` "cannot load such file -- yaml".
 - No module reachable from any package root contains a top-level `await`
   (guard in `scripts/test-deps/yaml-optional-dependency.test.ts`).
-- `parity:test` for ruby-compat: +≥40 from `spec/ruby/library/yaml`
-  (`dump_spec.rb` 8, `to_yaml_spec.rb` 21, `shared/load.rb` 15, less
-  PERMANENT-SKIPs).
+- `parity:test` for ruby-compat: ≥ +30 from `spec/ruby/library/yaml`: ≥ +18
+  from `port-yaml-dump-and-to-yaml-specs` (`dump_spec.rb` 8 +
+  `to_yaml_spec.rb` 21, less OpenStruct/File/Struct skips) and ≥ +12 from
+  `port-yaml-load-and-load-file-specs` (`shared/load.rb` 15 +
+  `load_file_spec.rb` 1).
 - `@missingRailsCall … CONVERGEABLE` tags naming `unsafe_load`, `safe_load`,
   `safe_dump`, `dump` or `to_yaml` in `packages/*/src`: **0**.
 
@@ -371,3 +390,5 @@ avoids with `SECRET_KEY_BASE`.
 ## Changelog
 
 - 2026-09-29: initial RFC
+- 2026-09-29: self-review: §4 surface cut to Rails-called exports (rule 1),
+  parity floor reconciled with the spec stories, Marshal filed in 0154

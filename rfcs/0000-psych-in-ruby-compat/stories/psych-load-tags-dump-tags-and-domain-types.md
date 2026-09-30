@@ -1,5 +1,5 @@
 ---
-title: "Port Psych.load_tags / dump_tags / domain_types and add_tag / add_builtin_type / add_domain_type / remove_type"
+title: "Port Psych.load_tags / dump_tags / domain_types and add_builtin_type"
 status: draft
 updated: 2026-09-29
 rfc: "0000-psych-in-ruby-compat"
@@ -18,8 +18,8 @@ closed-reason: null
 
 ## Context
 
-`vendor/ruby/v3.3.11/ext/psych/lib/psych.rb:676-692` (`add_domain_type`, `add_builtin_type`,
-`remove_type`, `add_tag`) and `:697-738` (the `load_tags` / `dump_tags` /
+`vendor/ruby/v3.3.11/ext/psych/lib/psych.rb:676-692` (`add_builtin_type` `:682-686`. `add_domain_type`,
+`remove_type` and `add_tag` have no Rails caller and are not ported) and `:697-738` (the `load_tags` / `dump_tags` /
 `domain_types` accessors). Readers: `ToRuby` `@load_tags`
 (`to_ruby.rb:27,52,134,166-167`) and `YAMLTree` `Psych.dump_tags[o.class]`
 (`yaml_tree.rb:153,377,499`). Rails writes them at module load:
@@ -37,8 +37,10 @@ stories depend on it.
       `Psych.domainTypes`, with the setters Ruby's `attr_accessor` gives. They
       are reachable and writable **without the backend** (RFC §3). A test runs
       with the adapter unregistered.
-- [ ] `addTag`, `addBuiltinType`, `addDomainType` and `removeType` are ported,
-      and `ToRuby` / `YAMLTree` consult the tables at the Rails lines above.
+- [ ] `addBuiltinType` is ported, writing `domainTypes` under
+      `tag:yaml.org,2002:<type>` as `psych.rb:682-686` does. `ToRuby` /
+      `YAMLTree` consult the tables at the Rails lines above, and `ToRuby`
+      consults `domainTypes` in `ToRuby#accept` (`to_ruby.rb:28,35-50`).
 - [ ] Tests and README rows are added.
 
 ## Verification

@@ -37,9 +37,8 @@ through `encode_with` (`SchemaCache#encode_with`, `Column#encode_with`,
       every npm `yaml` type import are deleted.
 - [ ] Each of the nine classes is registered under its Ruby constant name
       (`registerConstant`), so `rbModName` / `rbPathToClass` answer it.
-- [ ] A `.dump` filename keeps today's behaviour, with a
-      `@missingRailsCall` for `Marshal` receipted `CONVERGEABLE` against a
-      story filed for the Marshal arm.
+- [ ] A `.dump` filename keeps today's behaviour, and the `Marshal.load` /
+      `Marshal.dump` calls carry `@missingRailsCall … — CONVERGEABLE ruby-compat-has-no-marshal-for-schema-cache-and-debug`.
 - [ ] `schema-cache.test.ts` (including the Rails-generated YAML fixtures)
       stays green. Dump output is byte-compared against a Rails-produced file
       if one exists under `test-helpers/support`.

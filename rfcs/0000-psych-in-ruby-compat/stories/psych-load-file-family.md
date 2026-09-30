@@ -1,5 +1,5 @@
 ---
-title: "Port Psych.load_file / safe_load_file / unsafe_load_file"
+title: "Port Psych.load_file / unsafe_load_file"
 status: draft
 updated: 2026-09-29
 rfc: "0000-psych-in-ruby-compat"
@@ -20,7 +20,8 @@ closed-reason: null
 
 `vendor/ruby/v3.3.11/ext/psych/lib/psych.rb:647-674`: each opens the file `'r:bom|utf-8'` and passes
 `filename:` plus `fallback: false` (`unsafe_load_file`) or
-`fallback: nil` (`safe_load_file` / `load_file`). Callers:
+`fallback: nil` (`load_file`). `safe_load_file` (`:658`) has no Rails
+caller and is not ported. Callers:
 `vendor/rails/v8.0.2/activesupport/lib/active_support/configuration_file.rb:26`
 (`YAML.unsafe_load_file(@content_path, **options)`), i18n
 `vendor/i18n/v1.14.8/lib/i18n/backend/base.rb:264`
@@ -30,7 +31,7 @@ closed-reason: null
 
 ## Acceptance criteria
 
-- [ ] The three functions read through ruby-compat `File`, strip a UTF-8 BOM,
+- [ ] The two functions read through ruby-compat `File`, strip a UTF-8 BOM,
       forward `filename` (it shows up in `SyntaxError` messages) and use the
       per-function `fallback` defaults above. `unsafe_load_file` of an empty
       file returns `false`.
