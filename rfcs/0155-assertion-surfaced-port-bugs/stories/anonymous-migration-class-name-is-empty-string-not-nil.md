@@ -1,6 +1,6 @@
 ---
 title: "anonymous-migration-class-name-is-empty-string-not-nil"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "attribute-set-accepts-lazy-attribute-hash"
-status: claimed
+status: in-progress
 updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8279
 claim: "2026-09-30T14:39:34Z"
 assignee: "attribute-set-accepts-lazy-attribute-hash"
 blocked-by: null

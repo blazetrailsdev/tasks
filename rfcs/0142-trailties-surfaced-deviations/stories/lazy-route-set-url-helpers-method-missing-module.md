@@ -1,6 +1,6 @@
 ---
 title: "lazy-route-set-url-helpers-method-missing-module"
-status: draft
+status: done
 updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8280
+claim: "2026-09-30T15:25:31Z"
+assignee: "lazy-route-set-url-helpers-method-missing-module"
 blocked-by: null
 closed-reason: null
 ---

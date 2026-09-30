@@ -1,6 +1,6 @@
 ---
 title: "Widen rails-file-structure-method-order to the connection-adapter tree"
-status: claimed
+status: in-progress
 updated: 2026-09-30
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8279
 claim: "2026-09-30T01:21:41Z"
 assignee: "attribute-set-accepts-lazy-attribute-hash"
 blocked-by: null

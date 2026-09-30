@@ -1,6 +1,6 @@
 ---
 title: "Mime::Type / NullType ? predicates go through method_missing"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "action-controller-set-configs-never-reaches-base"
-status: claimed
+status: blocked
 updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ priority: 1
 pr: null
 claim: "2026-09-30T14:42:47Z"
 assignee: "action-controller-set-configs-never-reaches-base"
-blocked-by: null
+blocked-by: "Root cause measured: action-controller.ts declares set_configs before deprecator (Rails railtie.rb:22 declares deprecator first); initializable.rb:90's implicit after: makes deprecator (before: load_environment_config) drag set_configs ahead of load_environment_config, so the on_load block replays with config/environments/test.ts not yet loaded. Reordering to Rails' order fixes allowForgeryProtection and logger, but moves the first app.routes() after make_routes_lazy; LazyRouteSet has no method_missing_module (lazy_route_set.rb:92-110) and its reload is async, so the scaffold goes from 4/7 to 0/7 (t.postsUrl is not a function). Helper modules are live: once routes load, an already-built IntegrationTest answers postsUrl. Blocked on lazy-route-set-url-helpers-method-missing-module. Duplicate: action-controller-railtie-initializer-order-drags-set-configs-before-env (draft)."
 closed-reason: null
 ---
 
