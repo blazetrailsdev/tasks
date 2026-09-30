@@ -1,6 +1,6 @@
 ---
 title: "action-controller-set-configs-never-reaches-base"
-status: ready
+status: claimed
 updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T14:42:47Z"
+assignee: "action-controller-set-configs-never-reaches-base"
 blocked-by: null
 closed-reason: null
 ---
