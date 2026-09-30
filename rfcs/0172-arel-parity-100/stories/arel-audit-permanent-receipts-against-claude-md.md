@@ -1,6 +1,6 @@
 ---
 title: "arel: audit the 15 PERMANENT receipts — each cites a ratified CLAUDE.md section or converges"
-status: ready
+status: done
 updated: 2026-09-30
 rfc: "0172-arel-parity-100"
 cluster: receipts
@@ -9,9 +9,9 @@ deps: ["parity-100-rehome-postponed-rfc-dependencies", "arel-node-dup-missing"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8298
+claim: "2026-09-30T19:05:22Z"
+assignee: "arel-audit-permanent-receipts-against-claude-md"
 blocked-by: null
 closed-reason: null
 ---

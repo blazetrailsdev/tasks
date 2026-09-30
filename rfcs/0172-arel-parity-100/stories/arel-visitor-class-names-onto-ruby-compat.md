@@ -1,6 +1,6 @@
 ---
 title: "arel: resolve object.class / Module#name through ruby-compat, delete ruby-class.ts and temporal-tag.ts"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0172-arel-parity-100"
 cluster: receipts

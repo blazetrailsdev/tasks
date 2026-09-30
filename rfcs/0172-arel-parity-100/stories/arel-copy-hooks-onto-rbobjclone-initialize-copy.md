@@ -1,6 +1,6 @@
 ---
 title: "arel: port initialize_copy at its Rails name and copy through rbObjClone / rbObjDup"
-status: draft
+status: in-progress
 updated: 2026-09-30
 rfc: "0172-arel-parity-100"
 cluster: receipts
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8302
+claim: "2026-09-30T19:33:24Z"
+assignee: "arel-copy-hooks-onto-rbobjclone-initialize-copy"
 blocked-by: null
 closed-reason: null
 ---

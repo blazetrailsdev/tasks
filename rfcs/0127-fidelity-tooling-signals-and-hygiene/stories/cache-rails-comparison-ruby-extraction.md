@@ -1,6 +1,6 @@
 ---
 title: "Cache the rails-comparison Ruby extraction outputs keyed on vendored refs + extractor hashes"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null

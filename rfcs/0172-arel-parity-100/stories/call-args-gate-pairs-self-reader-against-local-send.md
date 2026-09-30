@@ -1,6 +1,6 @@
 ---
 title: "call-args gate: a receiverless Ruby self-reader steals a TS send to a local (arel crud.rb offset)"
-status: draft
+status: in-progress
 updated: 2026-09-30
 rfc: "0172-arel-parity-100"
 cluster: receipts
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8302
+claim: "2026-09-30T19:33:24Z"
+assignee: "arel-copy-hooks-onto-rbobjclone-initialize-copy"
 blocked-by: null
 closed-reason: null
 ---

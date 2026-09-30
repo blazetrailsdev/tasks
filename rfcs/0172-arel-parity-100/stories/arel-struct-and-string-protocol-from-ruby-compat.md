@@ -1,6 +1,6 @@
 ---
 title: "arel: inherit Attribute's Struct and SqlLiteral's String protocol from ruby-compat"
-status: draft
+status: in-progress
 updated: 2026-09-30
 rfc: "0172-arel-parity-100"
 cluster: receipts
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8300
+claim: "2026-09-30T19:19:18Z"
+assignee: "arel-converge-freeform-no-rails-equivalent-receipts"
 blocked-by: null
 closed-reason: null
 ---
