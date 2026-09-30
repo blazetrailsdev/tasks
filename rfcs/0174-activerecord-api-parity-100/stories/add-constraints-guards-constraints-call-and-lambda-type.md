@@ -2,7 +2,7 @@
 title: "addConstraints guards reflection.constraints() and the lambda type where Rails guards neither"
 status: draft
 updated: 2026-08-22
-rfc: "0023-surfaced-deviations"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages:
   - "activerecord"

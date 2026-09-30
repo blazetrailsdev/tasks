@@ -2,7 +2,7 @@
 title: "_loadFromSql iterates indexedRows, not toArray()"
 status: draft
 updated: 2026-08-23
-rfc: "0023-surfaced-deviations"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages:
   - "activerecord"

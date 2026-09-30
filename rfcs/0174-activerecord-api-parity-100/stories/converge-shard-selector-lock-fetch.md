@@ -2,7 +2,7 @@
 title: "ShardSelector: options.fetch(:lock, true) is key-presence, not ?? true"
 status: draft
 updated: 2026-08-14
-rfc: "0082-ruby-ts-idiom-conversion-classes"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps: []

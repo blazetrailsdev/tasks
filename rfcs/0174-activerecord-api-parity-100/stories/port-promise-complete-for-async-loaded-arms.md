@@ -2,7 +2,7 @@
 title: "Port Promise::Complete and close the @async arms that drop it (ids' loaded? arm)"
 status: ready
 updated: 2026-08-24
-rfc: "0023-surfaced-deviations"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages:
   - "activerecord"

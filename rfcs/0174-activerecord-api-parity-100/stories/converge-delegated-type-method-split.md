@@ -2,7 +2,7 @@
 title: "Restore Rails' direction between delegatedType and defineDelegatedTypeMethods"
 status: draft
 updated: 2026-07-28
-rfc: "0023-surfaced-deviations"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages:
   - "activerecord"

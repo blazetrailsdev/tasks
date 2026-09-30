@@ -2,7 +2,7 @@
 title: "Converge PostgreSQLAdapter#translate_exception's respond_to?(:result) guard"
 status: draft
 updated: 2026-09-22
-rfc: "0082-ruby-ts-idiom-conversion-classes"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps: []

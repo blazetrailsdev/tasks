@@ -2,7 +2,7 @@
 title: "Disambiguate the two exported association() functions"
 status: draft
 updated: 2026-08-02
-rfc: "0023-surfaced-deviations"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages:
   - "activerecord"

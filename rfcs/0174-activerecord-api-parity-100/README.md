@@ -8,6 +8,7 @@ owner: "@deanmarano"
 packages:
   - "activerecord"
   - "ruby-compat"
+  - "activesupport"
 clusters:
   - api-surface
   - arms
