@@ -5,7 +5,9 @@ updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: ["actionpack"]
-deps: ["test-case-process-rebuilds-the-request-instead-of-reusing-it"]
+deps:
+  - test-case-process-rebuilds-the-request-instead-of-reusing-it
+  - test-case-check-required-ivars-and-setup-callback
 deps-rfc: []
 est-loc: 250
 priority: null
