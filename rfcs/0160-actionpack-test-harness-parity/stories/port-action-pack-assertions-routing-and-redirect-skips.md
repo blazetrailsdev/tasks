@@ -5,7 +5,7 @@ updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []
-deps: []
+deps: ["test-case-missing-methods-and-arity", "port-routing-assertions-test-and-with-routing"]
 deps-rfc: []
 est-loc: null
 priority: null

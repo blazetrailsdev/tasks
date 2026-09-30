@@ -15,6 +15,12 @@ deps:
     "port-routing-assertions-test-and-with-routing",
     "port-assertion-and-test-request-response-skips",
     "remove-invented-integration-test-assertions",
+    "port-action-pack-assertions-routing-and-redirect-skips",
+    "port-integration-runner-module-and-runner-tests",
+    "port-integration-test-encoders-file-upload-and-page-dump",
+    "port-routing-assertions-shared-tests-module",
+    "port-abstract-unit-controller-reopenings-and-rack-test-case",
+    "converge-inline-fixture-resolvers-onto-fixture-load-path",
   ]
 deps-rfc: []
 est-loc: 200

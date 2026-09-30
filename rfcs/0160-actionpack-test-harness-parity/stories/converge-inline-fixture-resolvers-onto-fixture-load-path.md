@@ -5,7 +5,7 @@ updated: 2026-09-28
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []
-deps: []
+deps: ["port-abstract-unit-controller-reopenings-and-rack-test-case"]
 deps-rfc: []
 est-loc: 120
 priority: null
