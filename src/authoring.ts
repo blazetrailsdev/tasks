@@ -24,6 +24,8 @@ import { appendFrontmatterListItems } from "./frontmatter.js";
 import { loadAll as loadAllUntyped } from "../scripts/lib.mjs";
 // @ts-expect-error — ported JS module, no type declarations
 import { validateStoryFile as validateStoryFileUntyped } from "../scripts/validate-lib.mjs";
+// @ts-expect-error — ported JS module, no type declarations
+import { checkDepGraph as checkDepGraphUntyped } from "../scripts/validate-lib.mjs";
 import type { StoryStatus } from "./models/index.js";
 
 export interface LoadedRfc {
@@ -46,6 +48,16 @@ export const validateStoryFile = validateStoryFileUntyped as (args: {
   story: LoadedStory;
   others: LoadedStory[];
 }) => { errors: string[] };
+export const checkDepGraph = checkDepGraphUntyped as (args: {
+  storyIds: Set<string>;
+  rfcIds: Set<string>;
+  depsOf: (id: string) => string[];
+  depsRfcOf?: (id: string) => string[];
+  seeds: Iterable<string>;
+}) => {
+  refViolations: { from: string; dep: string; kind: "dep" | "deps-rfc" }[];
+  cycles: string[][];
+};
 
 /** Escape for a YAML double-quoted scalar: backslash first, then quote. */
 const MARKDOWNLINT = join(import.meta.dirname, "..", "node_modules", ".bin", "markdownlint-cli2");
