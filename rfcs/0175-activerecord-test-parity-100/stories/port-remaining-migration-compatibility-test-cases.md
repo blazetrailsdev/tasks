@@ -2,7 +2,7 @@
 title: "port-remaining-migration-compatibility-test-cases"
 status: ready
 updated: 2026-09-30
-rfc: "0155-assertion-surfaced-port-bugs"
+rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
 deps: []
