@@ -1,6 +1,6 @@
 ---
 title: "I18nValidationTest builds ad-hoc Topic models where Rails uses replied_topic"
-status: ready
+status: claimed
 updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T21:11:51Z"
+assignee: "action-controller-render-is-untyped"
 blocked-by: null
 closed-reason: null
 ---

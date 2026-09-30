@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc-type-checks-tse-templates"
-status: ready
+status: done
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#8296
 claim: null
 assignee: null
 blocked-by: null

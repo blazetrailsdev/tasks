@@ -1,6 +1,6 @@
 ---
 title: "draw-blocks-stop-taking-the-mapper-argument"
-status: draft
+status: in-progress
 updated: 2026-09-30
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8304
+claim: "2026-09-30T21:11:33Z"
+assignee: "draw-blocks-stop-taking-the-mapper-argument"
 blocked-by: null
 closed-reason: null
 ---

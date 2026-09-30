@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: async Kernel#system and Open3.capture2e for Thor's run"
-status: claimed
+status: in-progress
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
+pr: trails#8305
 claim: "2026-09-30T20:53:19Z"
 assignee: "action-controller-redirect-to-is-untyped"
 blocked-by: null
