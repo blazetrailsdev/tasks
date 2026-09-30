@@ -2,7 +2,7 @@
 title: "AttributeSet#fetch_value type-tests Uninitialized instead of forwarding the block to Attribute#value"
 status: draft
 updated: 2026-09-20
-rfc: "0082-ruby-ts-idiom-conversion-classes"
+rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
 deps: []

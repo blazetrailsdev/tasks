@@ -2,7 +2,7 @@
 title: "Converge Clusivity#check_validity! onto respond_to? duck tests"
 status: draft
 updated: 2026-09-22
-rfc: "0082-ruby-ts-idiom-conversion-classes"
+rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
 deps: []

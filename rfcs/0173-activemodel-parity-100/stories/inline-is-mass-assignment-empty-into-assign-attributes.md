@@ -2,7 +2,7 @@
 title: "isMassAssignmentEmpty is invented surface; Rails inlines the guard as attribute_assignment.rb:32"
 status: draft
 updated: 2026-08-26
-rfc: "0023-surfaced-deviations"
+rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
 deps: []
