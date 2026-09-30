@@ -2,7 +2,7 @@
 title: "Converge delegatedClasses() onto Rails' literal delegated_classes list"
 status: draft
 updated: 2026-08-29
-rfc: "0082-ruby-ts-idiom-conversion-classes"
+rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
 deps: []

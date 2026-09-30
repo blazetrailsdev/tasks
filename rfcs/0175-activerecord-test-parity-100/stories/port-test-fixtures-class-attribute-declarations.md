@@ -2,7 +2,7 @@
 title: "Port test_fixtures.rb's eight class_attribute declarations"
 status: ready
 updated: 2026-08-26
-rfc: "0023-surfaced-deviations"
+rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: ["activerecord"]
 deps: []

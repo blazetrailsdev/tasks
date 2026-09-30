@@ -2,7 +2,7 @@
 title: "Split load_async_test.rb whole-file exclusion: enroll portable surface cases"
 status: draft
 updated: 2026-08-13
-rfc: "0023-surfaced-deviations"
+rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages:
   - "activerecord"

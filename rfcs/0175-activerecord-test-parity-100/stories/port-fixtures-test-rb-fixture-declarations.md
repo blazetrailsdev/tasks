@@ -2,7 +2,7 @@
 title: "Port fixtures_test.rb's fixture declarations and drop fixtures.test.ts from the expected-fixtures ratchet"
 status: draft
 updated: 2026-07-27
-rfc: "0023-surfaced-deviations"
+rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages:
   - "activerecord"

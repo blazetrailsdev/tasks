@@ -2,7 +2,7 @@
 title: "TEST_SCHEMA parrots timestamps omit schema.rb's precision: 0; ratchet OPTION_DEBT_CEILING to 0"
 status: ready
 updated: 2026-07-27
-rfc: "0023-surfaced-deviations"
+rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages:
   - "activerecord"

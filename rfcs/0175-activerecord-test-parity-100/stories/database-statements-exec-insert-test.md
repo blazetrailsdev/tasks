@@ -2,7 +2,7 @@
 title: "Port database_statements_test.rb's test_exec_insert (last_inserted_id has no coverage)"
 status: draft
 updated: 2026-07-28
-rfc: "0023-surfaced-deviations"
+rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages:
   - "activerecord"

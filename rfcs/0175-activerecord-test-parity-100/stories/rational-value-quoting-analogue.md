@@ -2,7 +2,7 @@
 title: "Port a Rational analogue so bind-parameter suites pin 0/1"
 status: ready
 updated: 2026-07-28
-rfc: "0082-ruby-ts-idiom-conversion-classes"
+rfc: "0175-activerecord-test-parity-100"
 cluster: null
 deps: []
 deps-rfc: []

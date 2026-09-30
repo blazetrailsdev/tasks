@@ -2,7 +2,7 @@
 title: "port-finder-aggregate-find-by-cluster"
 status: ready
 updated: 2026-07-27
-rfc: "0023-surfaced-deviations"
+rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages:
   - "activerecord"
