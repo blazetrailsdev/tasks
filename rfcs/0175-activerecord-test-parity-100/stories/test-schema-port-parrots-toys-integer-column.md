@@ -1,6 +1,6 @@
 ---
 title: "TEST_SCHEMA omits the canonical parrots.integer / toys.integer columns"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

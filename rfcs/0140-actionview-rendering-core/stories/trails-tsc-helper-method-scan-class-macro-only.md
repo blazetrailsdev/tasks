@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: collect helperMethod names only from class-level macro positions"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

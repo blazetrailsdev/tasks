@@ -1,6 +1,6 @@
 ---
 title: "ShardSelector: options.fetch(:lock, true) is key-presence, not ?? true"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

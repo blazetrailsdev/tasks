@@ -1,6 +1,6 @@
 ---
 title: "arel: give the 7 free-form @noRailsEquivalent receipts a legal shape or delete the surface they excuse"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0172-arel-parity-100"
 cluster: receipts

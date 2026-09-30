@@ -1,6 +1,6 @@
 ---
 title: "tag-helper.ts re-exports raw/safeJoin/toSentence wrappers that TagHelper's include OutputSafetyHelper (tag_helper.rb:18) already provides"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null

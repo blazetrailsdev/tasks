@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: a bare name no local, helper or global answers is an error once every render site is resolved"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

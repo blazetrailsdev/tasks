@@ -1,6 +1,6 @@
 ---
 title: "port-abstract-unit-shared-routes-and-controller-reopenings"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Port test_fixtures.rb's eight class_attribute declarations"
-status: ready
-updated: 2026-08-26
+status: done
+updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7655
+claim: "2026-09-30T20:53:19Z"
+assignee: "action-controller-redirect-to-is-untyped"
 blocked-by: null
 closed-reason: null
 ---

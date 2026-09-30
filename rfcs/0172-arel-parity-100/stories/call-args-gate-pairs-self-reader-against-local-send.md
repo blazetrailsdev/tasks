@@ -1,6 +1,6 @@
 ---
 title: "call-args gate: a receiverless Ruby self-reader steals a TS send to a local (arel crud.rb offset)"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0172-arel-parity-100"
 cluster: receipts

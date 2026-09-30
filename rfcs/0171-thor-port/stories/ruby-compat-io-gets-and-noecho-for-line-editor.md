@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: async $stdin.gets and IO#noecho for Thor::LineEditor::Basic"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

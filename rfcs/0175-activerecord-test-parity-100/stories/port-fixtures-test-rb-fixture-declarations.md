@@ -1,6 +1,6 @@
 ---
 title: "Port fixtures_test.rb's fixture declarations and drop fixtures.test.ts from the expected-fixtures ratchet"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

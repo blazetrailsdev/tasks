@@ -1,6 +1,6 @@
 ---
 title: "action-controller-test-case-inherits-active-support-test-case"
-status: draft
+status: closed
 updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by active-support-test-case-carries-setup-and-teardown-instance-side; the superclass half shipped in trails#8295"
 ---
 
 ## Context

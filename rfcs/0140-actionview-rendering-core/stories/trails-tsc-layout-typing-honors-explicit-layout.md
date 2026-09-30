@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: type layouts from explicit layout()/render layout: choices, not only the implied name"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

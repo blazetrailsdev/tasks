@@ -1,6 +1,6 @@
 ---
 title: "action-controller-redirect-to-is-untyped"
-status: draft
+status: claimed
 updated: 2026-09-30
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T20:53:19Z"
+assignee: "action-controller-redirect-to-is-untyped"
 blocked-by: null
 closed-reason: null
 ---

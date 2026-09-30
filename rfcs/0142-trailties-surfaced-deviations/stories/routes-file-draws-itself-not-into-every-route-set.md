@@ -1,7 +1,7 @@
 ---
 title: "Routes files draw into their own route set; drop the drawRoutes export fan-out"
-status: draft
-updated: 2026-09-29
+status: done
+updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8303
+claim: "2026-09-30T20:05:01Z"
+assignee: "routes-file-draws-itself-not-into-every-route-set"
 blocked-by: null
 closed-reason: null
 ---
