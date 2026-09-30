@@ -1,7 +1,7 @@
 ---
 title: "Seed _default_attributes' columns inside with_connection instead of a best-effort connection probe"
-status: in-progress
-updated: 2026-09-29
+status: done
+updated: 2026-09-30
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

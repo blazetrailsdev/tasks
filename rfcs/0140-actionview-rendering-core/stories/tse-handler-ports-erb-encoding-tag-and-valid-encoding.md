@@ -1,17 +1,17 @@
 ---
 title: "Tse#call ports ERB's ENCODING_TAG strip and valid_encoding (WrongEncodingError for invalid bytes)"
-status: draft
-updated: 2026-09-28
+status: claimed
+updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T09:49:52Z"
+assignee: "actionview-rendering-methods-have-no-super-chain"
 blocked-by: null
 closed-reason: null
 ---

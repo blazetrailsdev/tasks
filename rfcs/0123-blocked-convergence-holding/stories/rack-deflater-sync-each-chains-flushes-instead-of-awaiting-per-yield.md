@@ -1,7 +1,7 @@
 ---
 title: "Rack::Deflater sync generic-body path chains flushes instead of awaiting per yield"
-status: in-progress
-updated: 2026-09-29
+status: done
+updated: 2026-09-30
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

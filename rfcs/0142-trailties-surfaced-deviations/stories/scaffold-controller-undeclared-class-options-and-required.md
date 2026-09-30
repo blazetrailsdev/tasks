@@ -1,7 +1,7 @@
 ---
 title: "ScaffoldControllerGenerator: declare :helper/:api/:skip_routes class options; enforce Thor required"
-status: in-progress
-updated: 2026-09-29
+status: done
+updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

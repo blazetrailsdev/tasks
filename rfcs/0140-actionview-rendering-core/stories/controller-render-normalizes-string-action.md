@@ -1,17 +1,17 @@
 ---
 title: 'ActionView::Rendering#_normalize_args string/Symbol arm: render("new") renders the action'
-status: draft
-updated: 2026-09-28
+status: claimed
+updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T09:49:52Z"
+assignee: "actionview-rendering-methods-have-no-super-chain"
 blocked-by: null
 closed-reason: null
 ---

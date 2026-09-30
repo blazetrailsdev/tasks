@@ -1,7 +1,7 @@
 ---
 title: "finish-moving-generator-tests-onto-testing-assertions"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#8265
+claim: "2026-09-30T09:07:52Z"
+assignee: "finish-moving-generator-tests-onto-testing-assertions"
 blocked-by: null
 closed-reason: null
 ---

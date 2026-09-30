@@ -1,7 +1,7 @@
 ---
 title: "engine-config-constructed-with-found-root"
-status: in-progress
-updated: 2026-09-29
+status: done
+updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

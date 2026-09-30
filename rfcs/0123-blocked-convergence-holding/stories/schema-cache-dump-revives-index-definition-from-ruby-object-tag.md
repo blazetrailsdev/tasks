@@ -1,7 +1,7 @@
 ---
 title: "Schema-cache dump revives IndexDefinition from its ruby/object tag"
-status: in-progress
-updated: 2026-09-29
+status: done
+updated: 2026-09-30
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

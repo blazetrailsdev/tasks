@@ -1,14 +1,14 @@
 ---
 title: "base-render-returns-nil-body-and-rejects-thenables"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "activesupport-has-no-psych-emitter-for-to-yaml"
-status: ready
-updated: 2026-09-25
+status: claimed
+updated: 2026-09-30
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T09:21:48Z"
+assignee: "activesupport-has-no-psych-emitter-for-to-yaml"
 blocked-by: null
 closed-reason: null
 ---

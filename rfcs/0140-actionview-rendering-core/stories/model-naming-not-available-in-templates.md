@@ -1,17 +1,17 @@
 ---
 title: "convertToModel / modelNameFromRecordOrClass not reachable from templates (FormHelper does not include ModelNaming)"
-status: draft
-updated: 2026-09-28
+status: claimed
+updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T09:49:52Z"
+assignee: "actionview-rendering-methods-have-no-super-chain"
 blocked-by: null
 closed-reason: null
 ---

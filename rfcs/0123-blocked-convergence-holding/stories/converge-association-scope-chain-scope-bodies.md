@@ -1,7 +1,7 @@
 ---
 title: "AssociationScope last/next_chain_scope: Rails locals, zip shape, no aliased_table fallback chain"
-status: in-progress
-updated: 2026-09-29
+status: done
+updated: 2026-09-30
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]

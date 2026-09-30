@@ -1,7 +1,7 @@
 ---
 title: "Burn down the 29 class_attribute predicates in predicate-kind-mark.json"
-status: in-progress
-updated: 2026-09-29
+status: done
+updated: 2026-09-30
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

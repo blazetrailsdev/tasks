@@ -1,14 +1,14 @@
 ---
 title: "Converge stylesheetLinkTag's truthiness guards and uniq onto Rails; enroll its no-request/streaming tests"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 14
 pr: null
 claim: null
 assignee: null

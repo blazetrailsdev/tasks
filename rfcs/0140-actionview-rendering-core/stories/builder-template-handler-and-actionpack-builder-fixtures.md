@@ -1,7 +1,7 @@
 ---
 title: "builder-template-handler-and-actionpack-builder-fixtures"
-status: draft
-updated: 2026-09-28
+status: closed
+updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by its own 'otherwise' arm: trails#8135 (4756bffbe8, 2026-09-26) recorded template/handlers/builder.rb in scripts/parity/unported-files/actionview.ts with the reason (builder gem's XmlMarkup is neither vendored nor a trails package; trails takes no third-party runtime deps, so Handlers.extended registers only four handlers). The story body's 'neither registered nor recorded in SKIP_GROUPS' missed that register entry. With the port ruled out, the .builder fixtures have no handler to render them."
 ---
 
 ## Context

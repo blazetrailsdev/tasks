@@ -1,6 +1,6 @@
 ---
 title: "Tags::Base includes TagHelper and FormTagHelper (tags/base.rb:7)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

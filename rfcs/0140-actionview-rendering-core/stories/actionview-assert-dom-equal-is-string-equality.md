@@ -1,14 +1,14 @@
 ---
 title: "assertDomEqual is string equality, not rails-dom-testing DOM equality"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 15
 pr: null
 claim: null
 assignee: null
