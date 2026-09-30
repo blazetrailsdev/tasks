@@ -5,7 +5,7 @@ updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
-deps: []
+deps: ["move-activesupport-yaml-into-ruby-compat-psych"]
 deps-rfc: []
 est-loc: null
 priority: null
@@ -64,3 +64,10 @@ Also surfaced while porting `yaml_serialization_test.rb`:
 - [ ] The `BLOCKED: psych-dump-type-constants` skips in
       `packages/activerecord/src/yaml-serialization.test.ts` run unskipped
       (or are re-filed with a specific blocker).
+
+## Home (the psych-in-ruby-compat RFC)
+
+Psych moves out of `packages/activesupport/src/yaml.ts` into
+`packages/ruby-compat/src/psych*.ts` (layout: RFC Design §1) in
+`move-activesupport-yaml-into-ruby-compat-psych`. Write this story's code there, as `Psych` namespace
+members, and not in activesupport.

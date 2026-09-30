@@ -6,7 +6,7 @@ rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
   - "activerecord"
-deps: []
+deps: ["psych-safe-dump-and-restricted-yaml-tree", "yaml-column-safe-coder-through-psych"]
 deps-rfc: []
 est-loc: 40
 priority: null
@@ -43,3 +43,11 @@ root is a scalar) inside SafeCoder#dump.
 - `SafeCoder#dump("str")` returns `"--- str\n"`, matching Ruby `YAML.dump`.
 - Collection dumps (`"---\n- ok\n"`) unchanged.
 - Round-trip load unchanged; serialized-attribute/store/persistence suites green.
+
+## Update (the psych-in-ruby-compat RFC)
+
+Do not post-process inside `SafeCoder#dump`. Once `yaml-column-safe-coder-through-psych`
+routes the dump through `YAML.dump` / `YAML.safeDump`, the inline marker is the
+emitter's job, and `psych-safe-dump-and-restricted-yaml-tree` owns it. This
+story's remaining work is the persistence-test literals
+(`"--- Have a nice day\n"`) that assert it.

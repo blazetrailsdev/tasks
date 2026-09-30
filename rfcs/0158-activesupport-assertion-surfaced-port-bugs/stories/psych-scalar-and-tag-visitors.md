@@ -5,7 +5,8 @@ updated: 2026-09-29
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
-deps: []
+deps:
+  ["move-activesupport-yaml-into-ruby-compat-psych", "psych-load-tags-dump-tags-and-domain-types"]
 deps-rfc: []
 est-loc: null
 priority: null
@@ -33,8 +34,11 @@ tables are not ported, and each gap currently falls through silently:
   and `visit_Array` subclasses. A trails `Time` / `DateTime` / `TimeWithZone`
   currently falls to `visit_Object` and dumps its internal fields as
   `!ruby/object:…`.
-- `Psych.dump_tags` / `Psych.load_tags`: Rails registers `load_tags` for its
-  legacy class names at `activerecord/lib/active_record.rb:570-572`.
+- (`Psych.dump_tags` / `Psych.load_tags` moved to
+  `psych-load-tags-dump-tags-and-domain-types`, and the
+  `active_record.rb:570-573` registrations moved to
+  `active-record-legacy-yaml-load-tags`, both in the psych-in-ruby-compat RFC.
+  This story consults those tables; it does not create them.)
 - `emit_coder`'s `:scalar`, `:seq` and `:object` arms and `Coder#represent_*`
   (`psych/coder.rb`); only `:map` is ported. `Relation#encode_with`
   (`relation.rb:348`, `coder.represent_seq`) needs `:seq`.
@@ -51,3 +55,10 @@ tables are not ported, and each gap currently falls through silently:
 - [ ] `to yaml with time with zone should not raise exception`
       (`yaml-serialization.test.ts`) dumps `written_on` as a timestamp scalar,
       not an ivar mapping.
+
+## Home (the psych-in-ruby-compat RFC)
+
+Psych moves out of `packages/activesupport/src/yaml.ts` into
+`packages/ruby-compat/src/psych*.ts` (layout: RFC Design §1) in
+`move-activesupport-yaml-into-ruby-compat-psych`. Write this story's code there, as `Psych` namespace
+members, and not in activesupport.

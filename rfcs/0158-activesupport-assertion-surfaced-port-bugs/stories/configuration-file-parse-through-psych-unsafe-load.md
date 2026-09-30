@@ -5,7 +5,14 @@ updated: 2026-09-29
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
-deps: []
+deps:
+  [
+    "move-activesupport-yaml-into-ruby-compat-psych",
+    "psych-load-file-family",
+    "psych-scalar-scanner-tokenize",
+    "psych-syntax-error-and-exception-hierarchy",
+    "psych-libyaml-seam-without-top-level-await",
+  ]
 deps-rfc: []
 est-loc: null
 priority: null
@@ -39,7 +46,9 @@ not yet:
   `database.yml`'s `<<: *default`.
 - the load options `parse` forwards (`symbolize_names:`, `aliases:`, …).
 - Psych scalar resolution (`ScalarScanner`) for the plain scalars config files
-  hold, matching what `yaml.parse` answers today.
+  hold. Now its own story, `psych-scalar-scanner-tokenize`. Note that Psych
+  answers `yes` / `on` as `true` where `yaml.parse` answers a String, so
+  converging changes results; the tests should say which answer is Rails'.
 
 ## Acceptance criteria
 
@@ -47,3 +56,16 @@ not yet:
       Rails does, and the `@missingRailsCall unsafe_load — CONVERGEABLE` tag
       on it is removed.
 - [ ] Existing `configuration-file` tests stay green.
+
+## Home (the psych-in-ruby-compat RFC)
+
+Psych moves out of `packages/activesupport/src/yaml.ts` into
+`packages/ruby-compat/src/psych*.ts` (layout: RFC Design §1) in
+`move-activesupport-yaml-into-ruby-compat-psych`. Write this story's code there, as `Psych` namespace
+members, and not in activesupport.
+
+Also (RFC matrix): `configuration_file.rb:37` rescues `Psych::SyntaxError`
+(`psych-syntax-error-and-exception-hierarchy`), and `configuration-file.ts:2`'s
+static `from "yaml"` import goes away with this convergence. Two stories depend
+on this one: `database-configuration-reads-config-database-yml` and
+`config-for-reads-yml-through-configuration-file`.
