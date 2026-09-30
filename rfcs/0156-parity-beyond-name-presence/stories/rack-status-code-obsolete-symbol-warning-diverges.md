@@ -1,7 +1,7 @@
 ---
 title: "Rack Utils#status_code warns when Rails is silent and renders the Symbol with JSON.stringify"
-status: in-progress
-updated: 2026-09-29
+status: done
+updated: 2026-09-30
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

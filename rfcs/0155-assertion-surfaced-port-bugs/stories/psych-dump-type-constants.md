@@ -1,7 +1,7 @@
 ---
 title: "psych-dump-type-constants"
-status: ready
-updated: 2026-09-29
+status: claimed
+updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T00:40:51Z"
+assignee: "psych-object-protocol-for-record-yaml-round-trip"
 blocked-by: null
 closed-reason: null
 ---

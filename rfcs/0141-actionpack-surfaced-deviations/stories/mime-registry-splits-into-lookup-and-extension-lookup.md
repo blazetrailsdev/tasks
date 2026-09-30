@@ -1,7 +1,7 @@
 ---
 title: "Mime registry collapses Rails' LOOKUP and EXTENSION_LOOKUP into one map, and register/register_alias diverge with it"
-status: in-progress
-updated: 2026-09-29
+status: done
+updated: 2026-09-30
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "http-middleware"
 packages: []

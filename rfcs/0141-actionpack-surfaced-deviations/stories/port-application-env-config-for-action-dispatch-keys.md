@@ -1,7 +1,7 @@
 ---
 title: "Port Rails::Application#env_config so request envs carry the action_dispatch cookie keys"
-status: in-progress
-updated: 2026-09-29
+status: done
+updated: 2026-09-30
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "http-middleware"
 packages: []
