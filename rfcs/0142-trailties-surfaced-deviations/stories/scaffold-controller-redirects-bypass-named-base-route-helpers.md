@@ -1,6 +1,6 @@
 ---
 title: "Scaffold controller hand-builds redirect/location paths instead of NamedBase route helpers"
-status: in-progress
+status: done
 updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

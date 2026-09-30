@@ -1,6 +1,6 @@
 ---
 title: "call-gate-credits-ruby-new-only-as-constructor"
-status: in-progress
+status: done
 updated: 2026-09-29
 rfc: "0025-fidelity-verification-tooling"
 cluster: null

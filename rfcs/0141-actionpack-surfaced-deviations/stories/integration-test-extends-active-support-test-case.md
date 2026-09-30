@@ -1,6 +1,6 @@
 ---
 title: "IntegrationTest < ActiveSupport::TestCase (integration.rb:651)"
-status: in-progress
+status: done
 updated: 2026-09-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

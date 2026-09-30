@@ -1,6 +1,6 @@
 ---
 title: "scaffold-controller-test-emits-empty-placeholders"
-status: in-progress
+status: done
 updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
