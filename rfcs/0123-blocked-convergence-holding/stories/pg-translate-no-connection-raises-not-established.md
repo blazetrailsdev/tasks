@@ -2,7 +2,7 @@
 title: "PG translate_exception: no-connection errors raise ConnectionNotEstablished"
 status: blocked
 updated: 2026-09-25
-rfc: "0155-assertion-surfaced-port-bugs"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
