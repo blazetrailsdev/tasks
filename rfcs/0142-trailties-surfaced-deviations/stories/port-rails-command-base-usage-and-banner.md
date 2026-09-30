@@ -4,10 +4,10 @@ status: draft
 updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
-packages: []
-deps: []
+packages: ["trailties"]
+deps: ["vendor-thor-and-port-command-base-thor-surface"]
 deps-rfc: []
-est-loc: null
+est-loc: 300
 priority: null
 pr: null
 claim: null
@@ -41,3 +41,7 @@ and has no USAGE file.
   control flow; `resolve_path` reads the filesystem through ruby-compat's async fs.
 - `printing_commands` feeds `Rails::Command.printing_commands`
   (`railties/lib/rails/command.rb:116-118`), which skips `hiddenCommands()`.
+
+## Thor port (the Thor-port RFC this story is rehomed into)
+
+Depends on the Thor port: `banner` needs `Thor::Command#formatted_usage` (`vendor/thor/v1.3.2/lib/thor/command.rb:42-64`), and `desc`'s super arm is `Thor.desc` (`vendor/thor/v1.3.2/lib/thor.rb:54-64`). Estimated at 300.

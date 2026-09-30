@@ -4,10 +4,10 @@ status: draft
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
-packages: []
-deps: []
+packages: ["trailties"]
+deps: ["rebase-generator-base-onto-thor-group"]
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
@@ -36,3 +36,7 @@ also no shared shell passed down through `config` for a child generator to inden
   config, carries `padding`, and `sayStatus` indents by it.
 - `_invokeForClassMethod` wraps its body in `withPadding`, and a test asserts that a hooked
   generator's status lines are indented one level deeper.
+
+## Thor port (the Thor-port RFC this story is rehomed into)
+
+`rebase-generator-base-onto-thor-group` deletes trails' `_invokeForClassMethod` in favor of `Thor::Group#_invoke_for_class_method` (`vendor/thor/v1.3.2/lib/thor/group.rb:276-291`), which wraps in `with_padding`. This story is what remains: a hooked generator shares its parent's shell through `_shared_configuration` (`vendor/thor/v1.3.2/lib/thor/shell.rb:77-79`), and a test asserts its status lines are indented one level deeper. Estimated at 120.

@@ -4,10 +4,14 @@ status: ready
 updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
-packages: []
-deps: []
+packages: ["trailties"]
+deps:
+  [
+    "vendor-thor-and-port-command-base-thor-surface",
+    "find-by-namespace-lookup-loads-only-candidates",
+  ]
 deps-rfc: []
-est-loc: null
+est-loc: 300
 priority: 6
 pr: null
 claim: null
@@ -44,3 +48,7 @@ whether or not it is inside an app, with no `exec_app` step. As a result:
   instead of raising.
 - `generate.ts` calls `bootApplicationBang()` and `loadGenerators()` unconditionally, as
   `generate_command.rb:21-22` does, and the `APP_PATH` guard is removed.
+
+## Thor port (the Thor-port RFC this story is rehomed into)
+
+Part of retiring commander: `retire-commander-cli-onto-rails-command-invoke` depends on it. Estimated at 300.

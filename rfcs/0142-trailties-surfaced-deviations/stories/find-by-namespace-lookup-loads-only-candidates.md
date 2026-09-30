@@ -4,10 +4,10 @@ status: draft
 updated: 2026-09-29
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
-packages: []
-deps: []
+packages: ["trailties"]
+deps: ["vendor-thor-and-port-command-base-thor-surface"]
 deps-rfc: []
-est-loc: null
+est-loc: 350
 priority: null
 pr: null
 claim: null
@@ -49,3 +49,7 @@ registers in `hiddenCommands()`.
   describes, so command/base.ts no longer imports command.ts.
 - The `@missingRailsCall lookup — CONVERGEABLE find-by-namespace-lookup-loads-only-candidates`
   receipt on `findByNamespace` is removed.
+
+## Thor port (the Thor-port RFC this story is rehomed into)
+
+Depends on the Thor port. `subclasses` registration follows RFC decision 5 (registration at `methodAdded` / `namespace`), and the commander fallback in the acceptance criteria is deleted by `retire-commander-cli-onto-rails-command-invoke`. Estimated at 350.
