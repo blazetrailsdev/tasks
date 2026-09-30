@@ -22,7 +22,7 @@ Rails defines `db:*` as Rake tasks in
 `vendor/rails/v8.0.2/activerecord/lib/active_record/railties/databases.rake` (626 lines), over
 `ActiveRecord::Tasks::DatabaseTasks`. trails defines them as commander subcommands in
 `packages/trailties/src/commands/db.ts` (992 lines) over the same `DatabaseTasks` port. Commander cannot be retired while
-they live there. This part moves: environment:set/check, abort_if_pending_migrations, seed(:replant), truncate_all, prepare, reset, setup, schema:dump/load, schema:cache:dump/clear, test:load_schema/prepare (`db.ts:600-990`).
+they live there. This part moves: `db:environment:set` (`db.ts:615`), `db:environment:check` (`db.ts:632`), `db:abort_if_pending_migrations` (`db.ts:649`), `db:seed` (`db.ts:710`), `db:seed:replant` (`db.ts:720`), `db:truncate_all` (`db.ts:734`), `db:prepare` (`db.ts:746`), `db:test:load_schema` (`db.ts:789`), `db:test:prepare` (`db.ts:796`), `db:reset` (`db.ts:855`), `db:setup` (`db.ts:868`), `db:schema:dump` (`db.ts:880`), `db:schema:load` (`db.ts:897`), `db:schema:cache:dump` (`db.ts:945`), `db:schema:cache:clear` (`db.ts:969`) (15 tasks).
 
 ## Acceptance criteria
 

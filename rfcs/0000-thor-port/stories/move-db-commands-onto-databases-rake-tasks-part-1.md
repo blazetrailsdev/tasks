@@ -22,7 +22,7 @@ Rails defines `db:*` as Rake tasks in
 `vendor/rails/v8.0.2/activerecord/lib/active_record/railties/databases.rake` (626 lines), over
 `ActiveRecord::Tasks::DatabaseTasks`. trails defines them as commander subcommands in
 `packages/trailties/src/commands/db.ts` (992 lines) over the same `DatabaseTasks` port. Commander cannot be retired while
-they live there. This part moves: create / drop / migrate / rollback / forward / version / migrate:up / migrate:down / migrate:redo / migrate:status (`db.ts:539-700,803-870`).
+they live there. This part moves: `db:migrate` (`db.ts:539`), `db:rollback` (`db.ts:564`), `db:forward` (`db.ts:583`), `db:version` (`db.ts:602`), `db:migrate:up` (`db.ts:672`), `db:migrate:down` (`db.ts:691`), `db:create` (`db.ts:803`), `db:drop` (`db.ts:809`), `db:migrate:status` (`db.ts:815`), `db:migrate:redo` (`db.ts:825`) (10 tasks).
 
 ## Acceptance criteria
 

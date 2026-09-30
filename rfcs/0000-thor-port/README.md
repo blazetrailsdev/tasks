@@ -15,7 +15,6 @@ clusters:
 related-rfcs:
   - "0142-trailties-surfaced-deviations"
   - "0149-bare-keyed-option-hashes"
-  - "0151-activesupport-autoload-slot-registry"
 priority: 2
 ---
 
@@ -45,11 +44,11 @@ trails#8269 vendored thor v1.3.2 (`vendor/thor/v1.3.2`, the version railties 8.0
 of `Thor::Actions`. Every other gap so far has surfaced as a one-off deviation story in
 `0142-trailties-surfaced-deviations`.
 
-This RFC replaces that drip with one ordered plan: port Thor file by file, port its RSpec suite,
-then converge trailties' generators and commands onto the port, delete the bespoke copies, and
+This RFC replaces that drip with one ordered plan. First, make CI for a thor-only diff minimal and
+fast (§ "Design" 0). Then port Thor file by file, port its RSpec suite, and converge trailties' generators and commands onto the port, delete the bespoke copies, and
 retire commander.
 
-**Size: 79 stories, 30,930 est-loc.** 65 are new, and 14 are existing 0142 stories that this RFC
+**Size: 81 stories, 31,730 est-loc.** 67 are new, and 14 are existing 0142 stories that this RFC
 re-specs and rehomes (§ "Existing stories"). Every story is at most 650 est-loc (the PR ceiling
 is 700). The thor spec suite has 868 cases; 791 are portable, and each is assigned by name to
 exactly one story.
@@ -101,23 +100,45 @@ the enrollment: parity:test has no nested pseudo-package today, so that part is 
 
 ### What the convergence covers
 
-| trailties today                                                                  | Rails / Thor                                                                        | stories                                                                                                                                                                                                                                               |
-| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `generators/base.ts` dispatch / invoke / invocations / hook plumbing / `say*`    | `Thor::Group`, `Thor::Invocation`, `Thor::Shell`                                    | `rebase-generator-base-onto-thor-group`, `generator-invoke-for-class-method-with-padding`                                                                                                                                                             |
-| `generators/base.ts` constructor + inline switch parser, `run(name, attributes)` | `Thor::Base#initialize`, `argument`                                                 | `generator-base-thor-initialize-arguments-and-options-parse`                                                                                                                                                                                          |
-| `generators/base.ts` `createFile` / `emptyDirectory` / `appendToFile` / … (sync) | `Thor::Actions`                                                                     | `converge-generator-base-file-actions-onto-thor-actions`                                                                                                                                                                                              |
-| `generators/named-base.ts`, `generators/actions/create-migration.ts`             | `NamedBase` (`argument :name`, `template` override), `CreateMigration < CreateFile` | `converge-named-base-onto-thor-argument-and-template-override`, `converge-create-migration-onto-thor-create-file`                                                                                                                                     |
-| `generators/actions.ts`, `generators/trails-actions.ts` (`spawnSync`)            | `Rails::Generators::Actions` over Thor's `run` / `in_root` / `inject_into_file`     | `converge-rails-generators-actions-onto-thor-actions`, `action-methods-inside-chmod-shebang-delegates-unported`                                                                                                                                       |
-| 25 generator classes, each one `run(...)`                                        | one public method per step, `hook_for` interleaved                                  | `split-*` (4), `generators-run-hooks-after-run-not-in-declaration-order`, `trails-new-reaches-app-generator-start`, `generator-dispatch-help-mappings-arm`                                                                                            |
-| `command/base.ts` `classOption` / `dispatch` / `help` / `say`                    | `Rails::Command::Base < Thor`                                                       | `vendor-thor-and-port-command-base-thor-surface`, `port-rails-command-base-usage-and-banner`                                                                                                                                                          |
-| `command.ts` `findByNamespace` / `invoke` / `invokeRake` over `createProgram()`  | `Rails::Command.invoke`, `find_by_namespace`, `RakeCommand`                         | `find-by-namespace-lookup-loads-only-candidates`, `port-rails-command-rake-command`                                                                                                                                                                   |
-| 14 commander `commands/*.ts`                                                     | `rails/commands/*/*_command.rb`, `databases.rake`, `framework.rake`                 | `port-*-onto-rails-command-base` (6), `move-db-commands-onto-databases-rake-tasks-part-1/2`, `move-app-template-command-onto-framework-rake-task`, `port-application-command-and-argv-scrubber`, `port-help-and-version-commands-for-split-namespace` |
-| `cli.ts` `createProgram()`, `bin.ts`, `commander` dependency                     | `rails/cli.rb`, `rails/commands.rb`, `AppLoader`                                    | `trails-cli-has-no-app-loader-exec-app`, `retire-commander-cli-onto-rails-command-invoke`                                                                                                                                                             |
+| trailties today                                                                                  | Rails / Thor                                                                        | stories                                                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `generators/base.ts` dispatch / invoke / invocations / hook plumbing / `say*`                    | `Thor::Group`, `Thor::Invocation`, `Thor::Shell`                                    | `rebase-generator-base-onto-thor-group`, `generator-invoke-for-class-method-with-padding`                                                                                                                                                             |
+| `generators/base.ts` constructor + inline switch parser, `run(name, attributes)`                 | `Thor::Base#initialize`, `argument`                                                 | `generator-base-thor-initialize-arguments-and-options-parse`                                                                                                                                                                                          |
+| `generators/base.ts` `createFile` / `emptyDirectory` / `appendToFile` / … (sync)                 | `Thor::Actions`                                                                     | `converge-generator-base-file-actions-onto-thor-actions`                                                                                                                                                                                              |
+| `generators/named-base.ts`, `generators/actions/create-migration.ts`                             | `NamedBase` (`argument :name`, `template` override), `CreateMigration < CreateFile` | `converge-named-base-onto-thor-argument-and-template-override`, `converge-create-migration-onto-thor-create-file`                                                                                                                                     |
+| `generators/actions.ts`, `generators/trails-actions.ts` (`spawnSync`)                            | `Rails::Generators::Actions` over Thor's `run` / `in_root` / `inject_into_file`     | `converge-rails-generators-actions-onto-thor-actions`, `action-methods-inside-chmod-shebang-delegates-unported`                                                                                                                                       |
+| 26 generator classes, each one `run(...)` (plus `NamedBase`, `AppBase`, `Tse::Generators::Base`) | one public method per step, `hook_for` interleaved                                  | `split-*` (4), `generators-run-hooks-after-run-not-in-declaration-order`, `trails-new-reaches-app-generator-start`, `generator-dispatch-help-mappings-arm`                                                                                            |
+| `command/base.ts` `classOption` / `dispatch` / `help` / `say`                                    | `Rails::Command::Base < Thor`                                                       | `vendor-thor-and-port-command-base-thor-surface`, `port-rails-command-base-usage-and-banner`                                                                                                                                                          |
+| `command.ts` `findByNamespace` / `invoke` / `invokeRake` over `createProgram()`                  | `Rails::Command.invoke`, `find_by_namespace`, `RakeCommand`                         | `find-by-namespace-lookup-loads-only-candidates`, `port-rails-command-rake-command`                                                                                                                                                                   |
+| 14 commander `commands/*.ts`                                                                     | `rails/commands/*/*_command.rb`, `databases.rake`, `framework.rake`                 | `port-*-onto-rails-command-base` (6), `move-db-commands-onto-databases-rake-tasks-part-1/2`, `move-app-template-command-onto-framework-rake-task`, `port-application-command-and-argv-scrubber`, `port-help-and-version-commands-for-split-namespace` |
+| `cli.ts` `createProgram()`, `bin.ts`, `commander` dependency                                     | `rails/cli.rb`, `rails/commands.rb`, `AppLoader`                                    | `trails-cli-has-no-app-loader-exec-app`, `retire-commander-cli-onto-rails-command-invoke`                                                                                                                                                             |
 
 ## Design
 
 Each decision below is ratified by a CLAUDE.md section, which the implementing story adds, so
 later stories cite it instead of re-deriving it.
+
+### 0. CI first: a thor-only diff runs a minimal lane
+
+Phases 1–5 are about 45 PRs that touch only `packages/trailties/src/thor/**` and the thor rows of
+the parity registers. Today each one runs the whole trailties suite, all of Unit Tests, both DX-type
+lanes, and a Rails API/Test Comparison job that fetches and extracts every vendored source and runs
+about 30 global ratchets. The AR and DB lanes are already skipped. The two
+`ci-thor-only-diffs-*` stories come first, and `port-thor-errors-nested-context-and-version`
+(the root of the lib chain) depends on them:
+
+- `ci-thor-only-diffs-run-minimal-test-lanes`: a `thor_only` gate, computed by a checked-in
+  `scripts/ci/` script because the inline `filter` step is at GitHub's size limit. Under it,
+  Trailties Tests becomes `vitest related` over the changed Thor files (Thor tests plus every
+  trailties test that imports them, so a break in `generators/base.ts` is still caught), the DX
+  lanes skip, and Unit Tests keeps only the tree-scanning guards.
+- `ci-thor-only-diffs-scope-rails-comparison-to-thor`: the comparison job fetches, extracts and
+  compares the thor source only, and each ratchet runs `--package thor` or stays unscoped with a
+  recorded reason. A partial artifact must never make another package's rows read as STALE.
+
+A diff with any non-thor path runs exactly today's matrix, so phases 6–7 get no shortcut.
+Alternatives: `paths-ignore` (skips checks the aggregator requires, and cannot run the selected
+subset) and a separate thor workflow (duplicates setup and splits the required-check set).
 
 ### 1. `method_added` / `desc`: commands register through an explicit `methodAdded`
 
@@ -342,11 +363,26 @@ listed as in progress (`generators-have-no-thor-source-paths-or-template-files`,
 `move-hand-written-generate-subcommand-flags-onto-generators`) are `done`. Their code is the
 starting point of `port-thor-actions-module` and the generator phase.
 
+## Alternatives considered
+
+- **Keep the drip.** File each Thor gap as a 0142 deviation story when a generator needs it. That
+  is the status quo: about 20 Thor-shaped 0142 stories, each converging one call site onto a local
+  copy, with a second copy in `command/base.ts`. It never deletes `generators/base.ts`' stand-ins
+  or commander.
+- **Port only what railties calls.** Thor's parser, dispatch, help and actions are one call graph.
+  `Options#parse`, `Base#initialize`, `Group#dispatch` and `CreateFile` reach almost every file
+  under `lib/thor`. The unreached remainder is exactly the Non-goals list.
+- **Keep commander and map Thor options onto it.** Help text, `--no-` / `--skip-` switches,
+  `check_unknown_options!`, `stop_on_unknown_option!`, exclusive / at-least-one relations and
+  `-abc` clustering all differ from Thor's, and every railties command test asserts Thor's output.
+- **A `@blazetrails/thor` package.** See decision 3.
+- **Per-decision alternatives** are listed under each decision in § "Design".
+
 ## Rollout
 
 | phase                                                                    | stories |    est-loc |
 | ------------------------------------------------------------------------ | ------: | ---------: |
-| 0. Enrollment and ruby-compat prerequisites                              |       6 |      1,750 |
+| 0. Minimal thor CI lane, enrollment, ruby-compat prerequisites           |       8 |      2,550 |
 | 1. Parser, command and Thor::Base                                        |      10 |      4,050 |
 | 2. Shell                                                                 |       5 |      1,800 |
 | 3. Thor, Invocation, Group                                               |       4 |      1,550 |
@@ -354,12 +390,13 @@ starting point of `port-thor-actions-module` and the generator phase.
 | 5. Spec fixtures and RSpec ports                                         |      15 |      6,500 |
 | 6. Generators converge onto Thor::Group / Thor::Actions                  |      15 |      6,570 |
 | 7. Commands converge onto Rails::Command::Base < Thor; commander retired |      17 |      6,110 |
-| **Total**                                                                |  **79** | **30,930** |
+| **Total**                                                                |  **81** | **31,730** |
 
-Order: **parser → base / command → group / invocation → shell → actions → consumer convergence**,
+Order: **thor-only CI lane → parser → base / command → group / invocation → shell → actions → consumer convergence**,
 as the dependency graph enforces:
 
 ```text
+ci: thor-only test lanes → ci: scoped comparison → errors (both gate the lib chain's root)
 enroll ─→ errors ─┬→ argument/arguments → option ─┬→ options parser ─┐
                   ├→ HWIA ─────────────────────────┘                 │
                   └→ shell module ─┬→ printers, color                │
@@ -385,10 +422,12 @@ Phases 1–4 are mostly independent within a phase: the shell (2) and the parser
 parallel from `port-thor-errors-nested-context-and-version`, and the spec ports (5) start as soon
 as their lib story and fixtures land. Phases 6 and 7 can run in parallel once phase 3 is done.
 
-### 0. Enrollment and ruby-compat prerequisites
+### 0. Minimal thor CI lane, enrollment, ruby-compat prerequisites
 
 | story                                               | est-loc | spec cases |
 | --------------------------------------------------- | ------: | ---------: |
+| `ci-thor-only-diffs-run-minimal-test-lanes`         |     350 |            |
+| `ci-thor-only-diffs-scope-rails-comparison-to-thor` |     450 |            |
 | `enroll-thor-specs-in-parity-test`                  |     400 |            |
 | `ruby-compat-async-fs-verbs-for-thor-actions`       |     400 |            |
 | `ruby-compat-fileutils-cd-block-restores-on-settle` |     250 |            |
@@ -519,21 +558,28 @@ The goal is an estimate we can check against actuals, so the method is written d
   (the ceiling counts additions + deletions): `generators/base.ts` loses ~600 lines across three
   stories, and `commands/db.ts` (992 lines) moves across two. Generator splits are sized by
   generator count and file size, with ~40–120 lines of test churn per generator.
+- **CI stories:** workflow and gate-script lines plus `ci-suite-coverage.test.ts` cases (~40 per
+  scenario), and per-ratchet `--package` plumbing for the comparison job.
 - **Rehomed stories** were re-estimated on the same basis. Seven had no estimate before.
+- **Outside this RFC's total:** the three 0142 stories it depends on
+  (`generator-base-name-derived-from-bare-js-class-name` 120,
+  `port-app-builder-and-build-dispatch` unestimated, and
+  `port-rake-dsl-task-manager-for-app-tasks` unestimated). The last two are the largest external
+  risk to the schedule.
 - **Not in the estimate:** review-round rework and CI-flake reruns. Growth would come from
   spec cases that expose port bugs, which should be filed as stories under this RFC with the
   Ruby `file:line`.
 
 To compare later: count stories under this RFC (not superseded) and sum shipped PR LOC
-(additions + deletions, same exclusions as the ceiling), against **79 / 30,930**.
+(additions + deletions, same exclusions as the ceiling), against **81 / 31,730**.
 
 ## Seed completeness
 
 Every Thor lib file is either assigned to a story or listed as a non-port. Every one of the 791
 portable spec cases is assigned by name to exactly one story. Every trailties file that fakes
 Thor (`generators/base.ts`, `command/base.ts`, `generators/actions.ts`, `trails-actions.ts`,
-`named-base.ts`, `actions/create-migration.ts`, `cli.ts`, `command.ts`, `bin.ts`, the 14
-`commands/*.ts`, and the 25 generator classes) has a converging story. A story added later is a
+`named-base.ts`, `app-base.ts`, `tse.ts`, `actions/create-migration.ts`, `cli.ts`, `command.ts`,
+`bin.ts`, the 14 `commands/*.ts`, and the 26 generator classes) has a converging story. A story added later is a
 spec miss. Note it as one in the new story's Context, citing the Thor or Rails line this authoring
 missed.
 
@@ -556,15 +602,20 @@ missed.
 ## Open questions
 
 1. **Does the explicit-`methodAdded` shape need a codemod for app-authored generators?**
-   `thor-command-registration-lint-rule`'s autofix is that codemod for in-repo code. For
-   `trails g generator`, the generated template emits the static block (`split-authentication-benchmark-script-task-and-generator-generators-into-thor-commands`).
-2. **Should `db:*` move to Rake here, or in its own RFC?** It is here because commander cannot
-   be retired without it. `databases.rake` is 626 lines, and the two stories are the least
-   certain estimate in this RFC.
-3. **Does the website need a browser `LineEditor`?** `file_collision` and `ask` in a browser
-   generator run need an adapter. For now the browser adapter answers EOF (Thor's yes), which
-   matches today's always-force behavior.
+   Recommendation: no separate codemod. `thor-command-registration-lint-rule`'s autofix covers
+   in-repo code, and `trails g generator`'s template emits the static block
+   (`split-authentication-benchmark-script-task-and-generator-generators-into-thor-commands`).
+   Resolved there.
+2. **Should `db:*` move to Rake here, or in its own RFC?** Recommendation: here. Commander
+   cannot be retired without it, and the move re-wraps existing `DatabaseTasks` calls rather than
+   porting new behavior. If `port-rake-dsl-task-manager-for-app-tasks` (0142) is re-scoped into
+   its own RFC, the two `move-db-*` stories follow it. Resolved at `port-rails-command-rake-command`.
+3. **Does the website need a browser `LineEditor`?** Recommendation: not in this RFC. The browser
+   process adapter answers `gets` with EOF, which Thor treats as "yes" (`basic.rb:218-220`), and
+   that matches today's always-force behavior. A real browser prompt is deferred to a website
+   story if one is ever wanted. Resolved in `ruby-compat-io-gets-and-noecho-for-line-editor`.
 
 ## Changelog
 
-- 2026-09-30: initial RFC (79 stories: 65 new, 14 rehomed from 0142; 30,930 est-loc).
+- 2026-09-30: initial RFC (81 stories: 67 new, 14 rehomed from 0142; 31,730 est-loc), with the
+  thor-only CI lane first.

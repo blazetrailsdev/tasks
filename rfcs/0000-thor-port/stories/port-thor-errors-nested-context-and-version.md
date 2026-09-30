@@ -5,7 +5,12 @@ updated: 2026-09-30
 rfc: "0000-thor-port"
 cluster: null
 packages: ["trailties"]
-deps: ["enroll-thor-specs-in-parity-test"]
+deps:
+  [
+    "enroll-thor-specs-in-parity-test",
+    "ci-thor-only-diffs-run-minimal-test-lanes",
+    "ci-thor-only-diffs-scope-rails-comparison-to-thor",
+  ]
 deps-rfc: []
 est-loc: 250
 priority: 2

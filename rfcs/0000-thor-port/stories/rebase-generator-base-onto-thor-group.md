@@ -41,6 +41,10 @@ the Group half of Thor:
 `hookFor` / `removeHookFor` / `classOption` (Rails' override, `base.rb:174-236`) stay, and call
 `super`'s Thor implementations.
 
+The generator base classes move with it: `NamedBase` (`packages/trailties/src/generators/named-base.ts`), `AppBase`
+(`packages/trailties/src/generators/app-base.ts`) and `Tse::Generators::Base` (`packages/trailties/src/generators/tse.ts`, the port of
+`vendor/rails/v8.0.2/railties/lib/rails/generators/erb.rb`).
+
 ## Acceptance criteria
 
 - [ ] `class GeneratorBase extends Thor.Group` with `include(Thor.Actions)`, and the members
