@@ -8,6 +8,10 @@ owner: "@deanmarano"
 packages:
   - "activesupport"
   - "date"
+  - "activerecord"
+  - "i18n"
+  - "rack"
+  - "rack-session"
 clusters:
   - "surfaced-bugs"
 related-rfcs:

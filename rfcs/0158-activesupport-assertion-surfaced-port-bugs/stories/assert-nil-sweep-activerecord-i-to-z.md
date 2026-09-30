@@ -1,13 +1,13 @@
 ---
-title: "assert-nil-sweep-activerecord-i-to-z"
+title: "Sweep activerecord i–z test files' toBeNull ports of assert_nil onto assertNil / assertNotNil"
 status: draft
 updated: 2026-09-30
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
-packages: []
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 620
 priority: null
 pr: null
 claim: null
