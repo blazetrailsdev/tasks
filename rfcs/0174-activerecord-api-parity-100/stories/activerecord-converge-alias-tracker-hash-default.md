@@ -26,3 +26,9 @@ port passes a proc to the `AliasTracker` constructor because "a JS Map has no de
 ## Acceptance criteria
 
 - [ ] `create` builds `new Hash(0)` from ruby-compat and `AliasTracker` reads it as Rails does; the row is deleted and the shard mark tightened.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

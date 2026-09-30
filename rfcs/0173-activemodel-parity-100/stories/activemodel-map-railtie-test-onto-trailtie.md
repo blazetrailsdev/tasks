@@ -30,3 +30,9 @@ implements in trailties (`packages/trailties/src/trailties/active-model.ts`, wit
 
 - [ ] The five cases are ported (or moved) under Rails' names and credited by `parity:test` — via a `scripts/test-compare` file mapping for `activemodel/test/cases/railtie_test.rb` → the trailties test file if that is where the railtie lives, never by renaming the tests.
 - [ ] `pnpm parity:test` activemodel **56/56 files** and 1012/1020 before the skipped cases.
+
+## Verification
+
+```bash
+pnpm parity:test --package activemodel --missing && pnpm parity:test:assertions
+```

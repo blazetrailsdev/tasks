@@ -37,3 +37,9 @@ Each is a guard or normalization Rails writes inline in the method named in the 
 - [ ] Each of the 5 declarations converges onto the Rails shape its receipt names (the helper folded back into the Rails method, the slot read through the Rails accessor, the method renamed to Rails' name), and the receipt is deleted with it.
 - [ ] Where one site genuinely cannot converge in this story, it is filed as its own story in this RFC and its receipt re-tagged `CONVERGEABLE <that-story>` — never left as prose, never PERMANENT.
 - [ ] `pnpm parity:api:extra:gate` stays rowless; `:calls` and `:calls:args` green.
+
+## Verification
+
+```bash
+pnpm parity:api:extra:gate && pnpm parity:api:receipts:gate && pnpm parity:api:reasons && pnpm parity:api:calls:args
+```

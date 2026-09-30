@@ -28,3 +28,9 @@ keeps an `initialize` method its constructor delegates to. Same gap as
 ## Acceptance criteria
 
 - [ ] ruby-compat can prepend a module `initialize` into a class's construction, `EncryptedFixtures` uses it, and `SCOPED_SKIP_GROUPS[15]` is deleted.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:calls
+```

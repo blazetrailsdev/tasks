@@ -27,3 +27,9 @@ ports the missing memo; this story finishes the rows.
 ## Acceptance criteria
 
 - [ ] Both bodies match Rails' calls and argument lists; rows deleted, shard removed.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

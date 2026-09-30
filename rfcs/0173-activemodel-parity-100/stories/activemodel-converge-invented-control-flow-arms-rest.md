@@ -79,3 +79,9 @@ closed-reason: null
 
 - [ ] Real invented guards removed; false positives fixed in the extractor with a test.
 - [ ] `pnpm parity:api:arms:report --package=activemodel` shows 0 rows; `pnpm parity:api:returns` shows no activemodel pair.
+
+## Verification
+
+```bash
+pnpm parity:api --calls && pnpm parity:api:arms:report --package=activemodel && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:returns
+```

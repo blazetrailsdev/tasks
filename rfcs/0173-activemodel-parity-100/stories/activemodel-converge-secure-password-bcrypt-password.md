@@ -37,3 +37,9 @@ client is async.
 - [ ] `bcrypt.ts` exposes `BCrypt::Password` (`new`, `create`, `is_password?`/`==`, `salt`, `cost`) over the npm client, mirroring `bcrypt-ruby`'s `lib/bcrypt/password.rb` shape.
 - [ ] `secure-password.ts` calls `BCrypt::Password.new(digest)` where Rails does and raises what Rails raises; the call row is deleted and `pnpm parity:api:arms:throws:tighten` takes `activemodel.total` 1 → 0.
 - [ ] `packages/activemodel/src/secure-password.test.ts` green.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

@@ -28,3 +28,9 @@ actionpack), so the reason is stale. `vendor/rails/v8.0.2/activerecord/lib/activ
 
 - [ ] `ControllerRuntime` is ported (in the activerecord file the conventions map it to) and included into ActionController::Base by trailties' activerecord railtie as `active_record/railtie.rb` does.
 - [ ] The unported entry is deleted; `controller_runtime_test.rb` is enrolled and green.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:calls
+```

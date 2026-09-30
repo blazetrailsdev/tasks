@@ -28,3 +28,9 @@ casting; CLAUDE.md § "Schema reflection peeks at a warm cache" scopes which syn
 ## Acceptance criteria
 
 - [ ] The body follows Rails through the settled sync shape available after RFC 0152 (a `withConnection` lease where the caller is async, or the ratified warm-cache peek) — name which in the PR; row deleted.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

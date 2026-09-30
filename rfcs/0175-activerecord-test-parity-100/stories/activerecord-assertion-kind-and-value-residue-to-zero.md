@@ -34,3 +34,9 @@ activerecord's row.
 
 - [ ] Each case asserts with Rails' assertion kind and value.
 - [ ] The activerecord row in `assertion-mismatch-mark.json` reads `assertionCount 0, kind 0, value 0`.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm parity:test:assertions
+```

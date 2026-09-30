@@ -50,3 +50,9 @@ Most are module members reported once per including host (`validations.ts` → `
 
 - [ ] After the RFC 0127 moves fix, every activemodel row `pnpm parity:api:moves` still reports is relocated to the file mirroring its defining `.rb`.
 - [ ] `pnpm parity:api:moves` reports 0 activemodel rows.
+
+## Verification
+
+```bash
+pnpm parity:api:extra --package activemodel && pnpm parity:api:moves && pnpm parity:api:extra:gate && pnpm lint --fix
+```

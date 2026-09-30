@@ -49,3 +49,9 @@ the measurement fault `moves-counts-a-mixin-member-declared-on-the-host-interfac
 
 - [ ] After the RFC 0127 moves fix lands, `pnpm parity:api:moves` reports **0** arel rows; any row it still reports is relocated in this story.
 - [ ] If `gate-the-wrong-file-moves-population` has landed, arel's moves mark is written at 0.
+
+## Verification
+
+```bash
+pnpm parity:api:extra --package arel && pnpm parity:api:moves && pnpm parity:api:extra:gate && pnpm lint --fix
+```

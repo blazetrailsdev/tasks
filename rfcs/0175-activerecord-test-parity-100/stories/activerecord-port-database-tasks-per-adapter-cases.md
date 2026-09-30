@@ -56,3 +56,9 @@ The 8 `trilogy *` cases need a TrilogyAdapter (`activerecord-port-trilogy-adapte
 
 - [ ] Each case is ported with Rails' name, driving `DatabaseTasks` against the adapter-specific task class as Rails does.
 - [ ] `database_tasks_test.rb` missing count falls to the 8 trilogy cases.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm parity:test:assertions
+```

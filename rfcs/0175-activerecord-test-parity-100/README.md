@@ -34,7 +34,7 @@ related-rfcs:
 priority: 2
 ---
 
-# RFC — activerecord tests, assertions, fixtures and schema at 100%
+# RFC 0175 — activerecord tests, assertions, fixtures and schema at 100%
 
 ## Summary
 
@@ -83,8 +83,12 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
   with a unit test instead of editing a correct port, and depend on the tooling story that owns the fault.
 - **One owner per row.** Prior-art stories in other RFCs are wired as `deps`, not re-authored
   (§ "Existing stories"). Every CONVERGEABLE receipt that already names a story counts as covered.
-- **Each story is one PR.** `est-loc` ≤ 650 against the 700 ceiling; files do not overlap between stories
-  except where a `deps` edge orders them.
+- **Each story is one PR.** `est-loc` ≤ 650 against the 700 ceiling. Where two stories rewrite the same
+  method bodies, a `deps` edge orders them. The receipt audits and the report-driven stories (arms,
+  moves, pins) touch many files lightly; each lists its exact sites, so a conflict is a rebase, not a
+  redesign.
+- **Every story names its axis.** Acceptance criteria state the number the story moves and the rows,
+  marks or entries it deletes; each story ends with the `## Verification` commands that prove it.
 - **Close-out pins zero.** The last story re-measures and turns each remaining ratchet into a hard zero
   (rowless extra-surface, empty baselines, marks at 0) so the package cannot regress.
 
@@ -108,6 +112,7 @@ either ratified (§ "Trails has no autoloader") or blocked with a named blocker.
 | `converge-delegated-classes-onto-rails-literal-list`         | 0082 | draft   | `activerecord-unskip-relation-delegation-tests`                                                                                     |
 | `psych-load-and-safe-load`                                   | 0170 | draft   | `activerecord-unskip-remaining-matched-skips`, `activerecord-assertion-kind-and-value-residue-to-zero`                              |
 | `activerecord-private-attribute-methods-are-still-public`    | 0155 | blocked | `activerecord-unskip-remaining-matched-skips`                                                                                       |
+| `association-async-load-target-uses-async-executor`          | 0155 | blocked | `activerecord-unskip-remaining-matched-skips`                                                                                       |
 | `string-encoding-tag-carrier-for-force-encoding-and-b`       | 0154 | draft   | `activerecord-assertion-kind-and-value-residue-to-zero`                                                                             |
 | `drop-stale-deadlock-unported-file-exclusions`               | 0127 | draft   | `activerecord-port-thread-excluded-tests-transactions-and-scoping`                                                                  |
 | `ruby-compat-marshal-core-types`                             | 0154 | draft   | `activerecord-port-marshal-excluded-tests`                                                                                          |

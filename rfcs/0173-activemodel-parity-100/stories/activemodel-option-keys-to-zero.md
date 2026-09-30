@@ -32,3 +32,9 @@ declared-type artifact (the extractor reads the options _type_). Decide per key.
 
 - [ ] Every extra key is either removed from the body (the Rails body does not read it) or shown to be an options-type artifact and fixed in `scripts/api-compare/options-keys.ts` with a test.
 - [ ] `options-key-mismatches.json` lists no activemodel pair.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

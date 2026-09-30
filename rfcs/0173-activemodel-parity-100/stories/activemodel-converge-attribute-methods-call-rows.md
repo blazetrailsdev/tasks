@@ -37,3 +37,9 @@ can be tested before the descriptor branch just as Rails tests it before `send`.
 - [ ] Each body makes the call Rails makes (`hasKey`/`include?` through ruby-compat, the `CALL_COMPILABLE_REGEXP.test` guard with its arm, `fetch(aliases, name, block(itself))`).
 - [ ] The three rows are deleted from the shard (the shard file removed), and `pnpm parity:api:calls:tighten activemodel/attribute-methods.json` narrows the mark.
 - [ ] `pnpm parity:api:calls` green; activemodel + activerecord attribute-method tests green.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

@@ -32,3 +32,9 @@ Missing Rails cases in model/association test files (`pnpm parity:test --package
 
 - [ ] Each case ported under Rails' name onto canonical models/fixtures; divergences converged.
 - [ ] Every file above reads 0 missing.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm parity:test:assertions
+```

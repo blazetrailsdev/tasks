@@ -30,3 +30,9 @@ is stale, so `DynamicMatchers`, `Method`, `FindBy`, `FindByBang` and their membe
 - [ ] The `dynamic_matchers.rb` entry is deleted from the unported register (and its row from `unported-files/baseline.json`, which is only-shrink).
 - [ ] Every member `parity:api` then reports missing is ported in `packages/activerecord/src/dynamic-matchers.ts` (or the file the conventions map it to), and new call/args rows are converged, not baselined.
 - [ ] `finder_test.rb`'s dynamic-finder cases stay green.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:calls
+```

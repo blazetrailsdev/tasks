@@ -39,3 +39,9 @@ Their reason ("Ruby Marshal binary format has no JS equivalent") falls once ruby
 ## Acceptance criteria
 
 - [ ] `marshal_serialization_test.rb` is enrolled and every case above is ported with Rails' body; entries deleted.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm vitest run scripts/parity/unported-files.test.ts scripts/parity/unported-live-test.test.ts
+```

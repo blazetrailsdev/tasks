@@ -26,3 +26,9 @@ reached by `self`.
 ## Acceptance criteria
 
 - [ ] `instantiateInstanceOf` is a `this`-typed class method on the model (private per `rails-private-jsdoc`), and `_loadFromSql` calls it; row deleted.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

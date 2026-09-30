@@ -55,3 +55,9 @@ either an invented guard to delete or an extractor false positive to fix in `scr
 
 - [ ] Real invented guards removed; false positives fixed in the extractor with a test.
 - [ ] The report shows 0 activemodel invented rows under `type/`.
+
+## Verification
+
+```bash
+pnpm parity:api --calls && pnpm parity:api:arms:report --package=activemodel && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:returns
+```

@@ -36,7 +36,7 @@ related-rfcs:
 priority: 2
 ---
 
-# RFC — activemodel at 100% on every parity axis
+# RFC 0173 — activemodel at 100% on every parity axis
 
 ## Summary
 
@@ -95,8 +95,12 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
   with a unit test instead of editing a correct port, and depend on the tooling story that owns the fault.
 - **One owner per row.** Prior-art stories in other RFCs are wired as `deps`, not re-authored
   (§ "Existing stories"). Every CONVERGEABLE receipt that already names a story counts as covered.
-- **Each story is one PR.** `est-loc` ≤ 650 against the 700 ceiling; files do not overlap between stories
-  except where a `deps` edge orders them.
+- **Each story is one PR.** `est-loc` ≤ 650 against the 700 ceiling. Where two stories rewrite the same
+  method bodies, a `deps` edge orders them. The receipt audits and the report-driven stories (arms,
+  moves, pins) touch many files lightly; each lists its exact sites, so a conflict is a rebase, not a
+  redesign.
+- **Every story names its axis.** Acceptance criteria state the number the story moves and the rows,
+  marks or entries it deletes; each story ends with the `## Verification` commands that prove it.
 - **Close-out pins zero.** The last story re-measures and turns each remaining ratchet into a hard zero
   (rowless extra-surface, empty baselines, marks at 0) so the package cannot regress.
 

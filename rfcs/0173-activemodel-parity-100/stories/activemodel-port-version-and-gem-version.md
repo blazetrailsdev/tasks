@@ -33,3 +33,9 @@ deleting it if they are not ported yet).
 
 - [ ] `ActiveModel.version` is ported in the file mirroring `version.rb`, returning the same `Gem::Version` `gem_version` returns.
 - [ ] The `/version.rb` unported entry no longer matches activemodel (scoped away or deleted); `pnpm parity:api` activemodel `excluded file 0`, matched +1.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

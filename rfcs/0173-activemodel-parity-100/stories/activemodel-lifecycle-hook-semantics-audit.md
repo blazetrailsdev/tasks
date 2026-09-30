@@ -39,3 +39,9 @@ documented equivalent.
 - [ ] Each `included`/`extended` body above is ported through the symbol-keyed callback (`Symbol.for("@blazetrails/ruby-compat:included")` / `extended`) and exercised by a test.
 - [ ] Each `inherited` body's observable effect (a subclass does not see its parent's memo) is carried by an own-property guard, with a test per hook mirroring the Rails behaviour it protects.
 - [ ] The PR body maps each hook to its trails carrier; any hook with no carrier is filed as its own story.
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conventions.test.ts
+```

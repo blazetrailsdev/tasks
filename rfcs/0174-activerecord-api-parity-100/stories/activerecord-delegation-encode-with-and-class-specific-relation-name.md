@@ -30,3 +30,9 @@ closed-reason: null
 
 - [ ] Both are ported in `relation/delegation.ts`; the generated relation subclasses answer `name` as Rails does.
 - [ ] `relation/delegation.rb` scores 47/47.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

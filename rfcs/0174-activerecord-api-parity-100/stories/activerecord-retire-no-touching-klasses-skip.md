@@ -28,3 +28,9 @@ Rails' thread-local array: `NoTouching.klasses` (`vendor/rails/v8.0.2/activereco
 
 - [ ] `klasses` is ported over `IsolatedExecutionState` with Rails' push/pop discipline, and the depth map is deleted.
 - [ ] `SKIP_GROUPS[7]` is deleted; `no_touching.rb` scores 100%; `touch_later_test.rb` / `no_touching` tests green.
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conventions.test.ts
+```

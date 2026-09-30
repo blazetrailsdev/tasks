@@ -34,3 +34,9 @@ closed-reason: null
 - [ ] Each hook body is mapped to its trails carrier (symbol-keyed callback, own-property memo guard, or the `define`-time registration) in the PR body, with a test per hook proving the Rails-observable effect.
 - [ ] Any hook with no carrier is ported, or filed as its own story in this RFC with the Rails `file:line`.
 - [ ] `scoping/named.rb`'s `singleton_method_added` warning is ported (a scope colliding with a class method logs as Rails does).
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conventions.test.ts
+```

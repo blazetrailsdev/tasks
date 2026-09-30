@@ -47,3 +47,9 @@ The rest (`and`/`or`/`not` on `Binary`, `nullsFirst`/`nullsLast` on `Ascending`/
 
 - [ ] After `override-of-inherited-rails-member-scores-moved` lands, re-run `pnpm parity:api:extra --package arel` and relocate every remaining node-file moved name onto the file mirroring the `.rb` that defines it (through `include()` where Rails `include`s).
 - [ ] `pnpm parity:api:extra:tighten` narrows `arel.total` by the rows burned; nothing is receipted.
+
+## Verification
+
+```bash
+pnpm parity:api:extra --package arel && pnpm parity:api:moves && pnpm parity:api:extra:gate && pnpm lint --fix
+```

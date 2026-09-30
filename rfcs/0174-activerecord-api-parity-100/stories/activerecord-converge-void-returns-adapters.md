@@ -33,3 +33,9 @@ and whose port returns void (RFC 0156, report-only). The connection-adapter half
 ## Acceptance criteria
 
 - [ ] Each method returns Rails' value (the `execute` result, the created definition, the enumerator/pool, …) with Rails' type; `pnpm parity:api:returns` lists none of these pairs.
+
+## Verification
+
+```bash
+pnpm parity:api --calls && pnpm parity:api:arms:report --package=activerecord && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:returns
+```

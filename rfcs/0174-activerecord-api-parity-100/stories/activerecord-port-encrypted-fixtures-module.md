@@ -29,3 +29,9 @@ prepended onto `Fixture`.
 - [ ] `packages/activerecord/src/encryption/encrypted-fixtures.ts` holds the module with Rails' three methods, prepended onto `Fixture`; the inline copy in the fixture-creation path is deleted.
 - [ ] The unported entry is deleted; `encrypted_fixtures.rb` scores 100% except `initialize` (blocked story).
 - [ ] `encryption/encrypted_fixtures_test.rb` stays green.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:calls
+```

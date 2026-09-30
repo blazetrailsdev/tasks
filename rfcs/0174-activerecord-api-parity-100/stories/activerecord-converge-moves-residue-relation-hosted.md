@@ -42,3 +42,9 @@ host — e.g. `relation/query-methods.ts → relation.ts (125)` is `QueryMethods
 
 - [ ] After the RFC 0127 fix, every row in these pairs that `pnpm parity:api:moves` still reports is relocated to the file mirroring its defining `.rb`, or split into its own story when a pair exceeds this story.
 - [ ] `pnpm parity:api:moves` reports 0 activerecord rows for these pairs.
+
+## Verification
+
+```bash
+pnpm parity:api:extra --package activerecord && pnpm parity:api:moves && pnpm parity:api:extra:gate && pnpm lint --fix
+```

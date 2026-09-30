@@ -26,3 +26,9 @@ close-out has a single dependency per axis.
 ## Acceptance criteria
 
 - [ ] `arel-homogeneous-in-valuetype-vs-activemodel-type` is done and `pnpm parity:api:deps` shows `Dependency Lint -- arel -> activemodel` with 0 ref mismatches.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

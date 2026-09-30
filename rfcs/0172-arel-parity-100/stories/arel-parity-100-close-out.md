@@ -50,3 +50,9 @@ ratchet into a hard zero for arel so it cannot regress:
 - [ ] `pnpm parity:api:arms:report --package=arel`, `parity:api:moves`, `parity:api:deps` show no arel rows.
 - [ ] Every remaining arel receipt is `PERMANENT` and cited against its CLAUDE.md section in the PR body.
 - [ ] RFC 0172's README `status` flips to `closed` with the final table.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api --calls && pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:pins && pnpm parity:api:receipts:gate && pnpm parity:test && pnpm parity:test:assertions
+```

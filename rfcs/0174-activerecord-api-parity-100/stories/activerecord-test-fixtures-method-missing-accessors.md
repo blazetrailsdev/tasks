@@ -29,3 +29,9 @@ unreachable.
 
 - [ ] The row is decided per class as CLAUDE.md requires: a Proxy or typed-accessor carrier for `TestFixtures`, with the CLAUDE.md table row updated in the same PR.
 - [ ] The `fixtures_test.rb` cases that go through the dispatch pass with Rails' bodies.
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conventions.test.ts
+```

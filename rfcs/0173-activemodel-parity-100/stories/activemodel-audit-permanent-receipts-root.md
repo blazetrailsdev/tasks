@@ -84,3 +84,9 @@ Sections that can ratify an activemodel receipt: § "Generated attribute readers
 - [ ] The PR body tables each receipt against the CLAUDE.md section that ratifies it.
 - [ ] Each receipt with no ratifying section converges in this story, or is split into its own story (`pnpm tasks new 0173-activemodel-parity-100 <slug> --body-file …`, citing the Rails `file:line`) and re-tagged `CONVERGEABLE <slug>` in the same PR.
 - [ ] `pnpm parity:api:receipts:gate`, `:calls`, `:calls:args` green.
+
+## Verification
+
+```bash
+pnpm parity:api:extra:gate && pnpm parity:api:receipts:gate && pnpm parity:api:reasons && pnpm parity:api:calls:args
+```

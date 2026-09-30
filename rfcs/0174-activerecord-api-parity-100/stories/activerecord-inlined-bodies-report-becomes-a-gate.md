@@ -3,7 +3,7 @@ title: "tooling: gate parity:api:extra's inlined-module-bodies report at zero fo
 status: ready
 updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
-cluster: tooling
+cluster: placement
 packages: ["activerecord"]
 deps:
   [
@@ -38,3 +38,9 @@ and arel/activemodel once they go rowless).
 
 - [ ] `parity:api:extra:gate` fails when a rowless package reports an inlined-from body, with a test.
 - [ ] CLAUDE.md step 4 mentions the inlined dimension in one sentence.
+
+## Verification
+
+```bash
+pnpm parity:api:extra --package activerecord && pnpm parity:api:moves && pnpm parity:api:extra:gate && pnpm lint --fix
+```

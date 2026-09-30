@@ -29,3 +29,9 @@ counterpart runs callbacks the port does not: `callbacks.ts#createOrUpdate` (`_r
 
 - [ ] Each fires the callback chain Rails fires, through `runCallbacks("<event>")`, and leaves the exclude list.
 - [ ] `eslint/rails-callback-invocations-exclude.json` is empty and deleted with its registration.
+
+## Verification
+
+```bash
+pnpm lint
+```

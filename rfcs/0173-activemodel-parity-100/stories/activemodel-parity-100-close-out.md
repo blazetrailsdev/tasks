@@ -63,3 +63,9 @@ blocked) brings `lint_test.rb` into the population and must land before the test
 - [ ] `pnpm parity:test` activemodel 100% with 0 skipped, 0 extra, all files; `parity:test:assertions` 0/0/0.
 - [ ] `parity:api:arms:report`, `:moves`, `:returns`, `:duck-types`, option keys: no activemodel rows.
 - [ ] Every remaining activemodel receipt is PERMANENT and tabled against its CLAUDE.md section in the PR body.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api --calls && pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:pins && pnpm parity:api:receipts:gate && pnpm parity:test && pnpm parity:test:assertions
+```

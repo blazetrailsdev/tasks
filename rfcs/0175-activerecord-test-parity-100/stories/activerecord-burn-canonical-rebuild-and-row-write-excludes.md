@@ -55,3 +55,9 @@ Two test-infrastructure registers, both only-shrink:
 
 - [ ] Each file uses `fixtures({ ... })` / the canonical rebuild the rule expects, or its Rails twin's own non-transactional setup, and leaves its register.
 - [ ] Both registers are empty (and their registrations removed).
+
+## Verification
+
+```bash
+pnpm lint
+```

@@ -26,3 +26,9 @@ parameter. Both depend on `activerecord-port-promise` for `Promise.wrap`.
 ## Acceptance criteria
 
 - [ ] `execute(params, connection, allowRetry, async)` ports both arms; both rows deleted; the shard keeps only the second-owner `initialize → map` row owned by `converge-same-name-second-owner-call-rows`.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

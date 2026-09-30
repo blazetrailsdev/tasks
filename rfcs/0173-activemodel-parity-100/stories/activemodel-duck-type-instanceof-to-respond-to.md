@@ -31,3 +31,9 @@ CLAUDE.md § "Ruby protocol methods with a different JS mechanism": `respond_to?
 
 - [ ] The two bodies test `rbObjRespondTo(value, "...")` where Rails tests `respond_to?`.
 - [ ] `pnpm parity:api:duck-types` lists no activemodel pair once the RFC 0082 story lands.
+
+## Verification
+
+```bash
+pnpm parity:api --calls && pnpm parity:api:arms:report --package=activemodel && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:returns
+```

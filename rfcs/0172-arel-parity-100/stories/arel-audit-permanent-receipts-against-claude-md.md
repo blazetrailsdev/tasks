@@ -50,3 +50,9 @@ covers is a deviation to converge; `clone-support.ts` in particular is also flag
 - [ ] The PR body tables every receipt above against the CLAUDE.md section that ratifies it.
 - [ ] Every receipt with no ratifying section is converged (the declaration removed or the call restored), or — if the convergence exceeds this story — split into its own story in this RFC with `pnpm tasks new 0172-arel-parity-100 <slug> --body-file …` and re-tagged `CONVERGEABLE <slug>` in the same PR.
 - [ ] `pnpm parity:api:extra:gate`, `pnpm parity:api:calls:args` and `pnpm parity:api:receipts:gate` green.
+
+## Verification
+
+```bash
+pnpm parity:api:extra:gate && pnpm parity:api:receipts:gate && pnpm parity:api:reasons && pnpm parity:api:calls:args
+```

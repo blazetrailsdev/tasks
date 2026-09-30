@@ -34,3 +34,9 @@ unported for the same reason. Yet trails ports the subsystem: `packages/activere
 - [ ] Every missing member is ported, or — when the measured gap exceeds this story — filed as its own story in this RFC (grouped by `FixtureSet` class/instance methods) with the Rails `file:line`.
 - [ ] `FixtureError` / `FormatError` leave `rails-error-parity-unported.json` and are ported with Rails' hierarchy.
 - [ ] Surfaced call/args rows are converged or filed; none are baselined.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:calls
+```

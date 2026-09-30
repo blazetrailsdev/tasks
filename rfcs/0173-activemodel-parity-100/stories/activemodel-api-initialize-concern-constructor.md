@@ -32,3 +32,9 @@ splice a module's `initialize` into a class's construction (the same gap as
 
 - [ ] ruby-compat's `include()` (or a sibling) can run a module's `initialize` inside the host's construction, in Ruby's ancestor order, and `ActiveModel::API` uses it.
 - [ ] `SCOPED_SKIP_GROUPS[14]` is deleted and `api.rb#initialize` is scored.
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conventions.test.ts
+```

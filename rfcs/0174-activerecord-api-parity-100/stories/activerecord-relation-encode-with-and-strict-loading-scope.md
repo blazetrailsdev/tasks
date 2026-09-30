@@ -34,3 +34,9 @@ plain Ruby.
 - [ ] `StrictLoadingScope` is ported in `relation.ts` with both singleton methods, and the create paths use it where Rails does.
 - [ ] `Relation#encodeWith` represents the loaded records as a sequence through ruby-compat Psych's coder.
 - [ ] `relation.rb` scores 409/409.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

@@ -30,3 +30,9 @@ value a port can return.
 - [ ] `=~` and `!~` get spellings in `OPERATOR_SPELLING_BY_FQN` (with the `scripts/` test that asserts the unmapped set updated — see the memory note on that test) and are ported on `Name` as delegations to its string, answering the Integer offset / its negation.
 - [ ] `SCOPED_SKIP_GROUPS[0]` is deleted; `docs/ruby-ts-conventions.md` regenerated.
 - [ ] `pnpm parity:api` activemodel denominator `scoped skip` 1 → 0 for naming.rb.
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conventions.test.ts
+```

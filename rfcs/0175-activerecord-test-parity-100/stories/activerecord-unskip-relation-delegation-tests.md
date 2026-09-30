@@ -35,3 +35,9 @@ TS-only suite. `ruby-extractor-emits-mixin-tests-per-includer` and
 - [ ] The generated cases are ported with Rails' generated names (a `for … of` loop over the same constant list), none skipped.
 - [ ] The 160 TS-only tests are deleted where they duplicate a Rails case, else moved to `delegation.trails.test.ts`.
 - [ ] `relation/delegation_test.rb` 49/49 with 0 skipped and 0 extra.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm parity:test:assertions
+```

@@ -30,3 +30,9 @@ Ruby core semantics ruby-compat already ports; the gated exclude
 - [ ] Both `fetch` excludes are converged onto ruby-compat `fetch` and removed from the exclude file.
 - [ ] Every candidate is classified in the PR body (real duplicate → converged here or filed; shape-only false positive → report fix with a test).
 - [ ] The report lists no real activerecord duplicate.
+
+## Verification
+
+```bash
+pnpm vitest run scripts/api-compare scripts/parity
+```

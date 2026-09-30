@@ -32,3 +32,9 @@ The reasons say Ruby Marshal / Psych have no JS equivalent — no longer true: r
 
 - [ ] The three cases are ported with Rails' bodies and their unported entries deleted.
 - [ ] `ActiveModel::Errors` / `Attribute` round-trip through ruby-compat Marshal and Psych as Rails does.
+
+## Verification
+
+```bash
+pnpm parity:test --package activemodel --missing && pnpm parity:test:assertions
+```

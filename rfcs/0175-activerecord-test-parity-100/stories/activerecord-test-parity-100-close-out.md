@@ -75,3 +75,9 @@ table rather than depended on: `activerecord-fork-excluded-tests` (no process fo
 - [ ] `assertion-mismatch-mark.json` activerecord 0/0/0; `pnpm parity:fixtures` diff 0, schema 143/143, erb-allowed 0; `pnpm parity:schema` baselined 0, option divergences 0, shape warnings 0.
 - [ ] The unported register holds no activerecord test entry except ratified § "Trails has no autoloader" cases and the blocked fork/trilogy rows.
 - [ ] The four eslint/test registers above hold no activerecord entry.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api --calls && pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:pins && pnpm parity:api:receipts:gate && pnpm parity:test && pnpm parity:test:assertions
+```

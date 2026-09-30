@@ -31,3 +31,9 @@ aligns from the right).
 - [ ] `initAttributes` takes `(other)` and reaches the next implementation through the class-module `include()`/`prepend()` super chain CLAUDE.md § "Module mixins" settles.
 - [ ] `pnpm parity:api` activemodel arity **452/452**; `pnpm parity:api:params` green.
 - [ ] `packages/activemodel/src/dirty.test.ts` green, and the AR `dirty.test.ts` suites that reach it green on SQLite.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

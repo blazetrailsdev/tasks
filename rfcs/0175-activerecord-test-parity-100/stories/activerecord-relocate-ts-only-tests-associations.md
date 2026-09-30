@@ -41,3 +41,9 @@ This story's files (extras per file):
 
 - [ ] Each extra is (a) a Rails test under a drifted name or describe path → matched to Rails' name/path (never renaming a Rails-named test); (b) a duplicate of a ported Rails test → deleted; or (c) genuinely TS-only → moved to the `.trails.test.ts` sibling unchanged.
 - [ ] The files above report 0 extra in `pnpm parity:test`.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --sort-extra --min-extra=1
+```

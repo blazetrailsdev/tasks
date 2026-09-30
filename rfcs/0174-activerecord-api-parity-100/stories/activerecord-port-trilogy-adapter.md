@@ -32,3 +32,9 @@ second `Mysql2Adapter` wearing Rails' name, not a port.
 
 - [ ] A JS client exposing trilogy's API exists (published binding, or a wire-protocol client with trilogy's error classes), `TrilogyAdapter` wraps it, and both exclusions are deleted.
 - [ ] The eight trilogy `database_tasks_test.rb` cases are ported.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:calls
+```

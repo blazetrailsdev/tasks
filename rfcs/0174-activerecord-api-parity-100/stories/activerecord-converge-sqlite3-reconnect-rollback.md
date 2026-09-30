@@ -27,3 +27,9 @@ The gem-backed convention is to give the wrapped handle the gem's method.
 ## Acceptance criteria
 
 - [ ] The trails sqlite3 driver wrapper exposes `rollback` (issuing `ROLLBACK` when in a transaction, as the gem's `Database#rollback` does), and `reconnect` calls it; row deleted; all sqlite driver lanes green.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

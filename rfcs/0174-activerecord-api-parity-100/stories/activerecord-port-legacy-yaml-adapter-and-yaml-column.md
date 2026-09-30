@@ -29,3 +29,9 @@ exclusions and port whatever `parity:api` then reports.
 
 - [ ] `LegacyYamlAdapter.convert` is ported with Rails' version arms.
 - [ ] Both unported entries are deleted; both files score 100%; `pnpm parity:skips:stories` no longer lists them.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:calls
+```

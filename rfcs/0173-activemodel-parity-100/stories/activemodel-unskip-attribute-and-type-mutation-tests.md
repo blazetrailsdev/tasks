@@ -36,3 +36,9 @@ Six hinge on Ruby's mutable `String` (in-place `<<` changing an attribute value)
 - [ ] The two dup cases are un-skipped and pass with Rails' assertions.
 - [ ] The six mutation cases are un-skipped once `ruby-mutable-string-carrier` lands, with Rails' bodies.
 - [ ] `pnpm parity:test` activemodel skipped **0**.
+
+## Verification
+
+```bash
+pnpm parity:test --package activemodel --missing && pnpm parity:test:assertions
+```

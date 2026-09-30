@@ -54,3 +54,9 @@ accessor / instance property, decided by `activerecord-test-fixtures-method-miss
 ## Acceptance criteria
 
 - [ ] Each case ported with Rails' body over the ported `TestFixtures` API; entries deleted.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm vitest run scripts/parity/unported-files.test.ts scripts/parity/unported-live-test.test.ts
+```

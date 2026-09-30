@@ -29,3 +29,9 @@ Two value-protocol misses under `type/`:
 
 - [ ] Both ported in their mirroring files; `dup()` on the registry calls `initializeCopy`.
 - [ ] `type/adapter_specific_registry.rb` and `type/serialized.rb` score 100%.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

@@ -26,3 +26,9 @@ closed-reason: null
 ## Acceptance criteria
 
 - [ ] Each file declares exactly Rails' fixture sets and leaves the exclude; both files are empty.
+
+## Verification
+
+```bash
+pnpm lint
+```

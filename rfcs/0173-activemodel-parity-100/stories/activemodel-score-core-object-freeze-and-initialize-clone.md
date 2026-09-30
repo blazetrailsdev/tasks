@@ -38,3 +38,9 @@ settled-spelling question for `clone`/`dup`; this story depends on it rather tha
 - [ ] `freeze` and `initialize_clone` are removed from `SKIP_GROUPS[0]` for scoring (they stay in the call-mapping exclusions only if the call gate would red on unrelated packages — say which in the PR).
 - [ ] Each of the four is ported in its mirroring file with Rails' body; `record.freeze()` on an ActiveModel object freezes the attribute set as Rails does, with a test.
 - [ ] `pnpm parity:api` activemodel `global skip` 13 → 9 (the lifecycle hooks and `method_missing` rows CLAUDE.md ratifies remain).
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conventions.test.ts
+```

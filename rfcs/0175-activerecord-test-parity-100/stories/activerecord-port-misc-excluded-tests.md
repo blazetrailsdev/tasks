@@ -64,3 +64,9 @@ per-object subclass") for `core_test.rb`; actionpack's `ActionController::Parame
 
 - [ ] Each case is ported with Rails' body and its entry deleted, or — where its carrier story is still open — its reason is rewritten to name that story.
 - [ ] `base_test.rb`'s 16-test mixed entry is split per reason first.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm vitest run scripts/parity/unported-files.test.ts scripts/parity/unported-live-test.test.ts
+```

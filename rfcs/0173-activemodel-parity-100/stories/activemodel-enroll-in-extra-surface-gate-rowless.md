@@ -28,3 +28,9 @@ failing if a row is re-added (CLAUDE.md, "Before you open the PR" step 4).
 - [ ] `activemodel` joins `GATED_PACKAGES` as rowless; no row in `extra-surface-mark.json`.
 - [ ] `scripts/api-compare/extra-surface-mark.test.ts` (or the ratchet's tests) cover the enrollment.
 - [ ] `pnpm parity:api:extra:gate` prints `activemodel novel 0/0, total 0/0 (rowless)`.
+
+## Verification
+
+```bash
+pnpm parity:api:extra --package activemodel && pnpm parity:api:moves && pnpm parity:api:extra:gate && pnpm lint --fix
+```

@@ -46,3 +46,9 @@ names through `constantize` over the seated namespaces (§ "Call-time constant r
 
 - [ ] Each exclusion's reason is rewritten to cite § "Trails has no autoloader" (ratified residue), or the case is ported and its entry deleted.
 - [ ] `modules_test.rb`'s five cases are ported over `constantize` with namespaced canonical models.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm vitest run scripts/parity/unported-files.test.ts scripts/parity/unported-live-test.test.ts
+```

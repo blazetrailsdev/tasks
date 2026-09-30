@@ -31,3 +31,9 @@ that Rails' does not. RFC 0113 measured the `if` token ~70% non-real at repo sca
 - [ ] Every real invented guard is removed so the body matches Rails' control flow.
 - [ ] Every false positive is fixed in `scripts/api-compare/` (skeleton extraction) with a unit test, not by editing the port; the fix's effect on the other packages is recorded in the PR body.
 - [ ] The invented-direction report shows 0 activerecord rows in these files.
+
+## Verification
+
+```bash
+pnpm parity:api --calls && pnpm parity:api:arms:report --package=activerecord && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:returns
+```

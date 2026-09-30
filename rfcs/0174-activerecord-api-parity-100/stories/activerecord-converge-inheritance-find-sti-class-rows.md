@@ -35,3 +35,9 @@ The CONVERGEABLE prose receipts in the same file are `activerecord-converge-inhe
 - [ ] `discriminateClassForRecord` calls `findStiClass(record[inheritanceColumn])` as Rails does; `findStiClassForRow` is deleted.
 - [ ] `subclassFromAttributes` calls `this.findStiClass(subclassName)` on the class.
 - [ ] Both rows deleted; `inheritance.ts` shard removed; STI tests green on all adapters.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

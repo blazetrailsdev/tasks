@@ -34,3 +34,9 @@ readonly_attributes.rb, core.rb (`_destroy_association_async_job`).
 - [ ] Each is declared through `classAttribute()` in the file mirroring its `.rb`, with Rails' default and `instance_writer`/`instance_predicate` options.
 - [ ] `SKIP_GROUPS[10]` is deleted; the 12 names are scored and matched.
 - [ ] Every reader of the old static fields goes through the class attribute; STI subclass isolation tests green.
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conventions.test.ts
+```

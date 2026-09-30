@@ -28,3 +28,9 @@ the unscoped entry narrow.
 
 - [ ] `ActiveRecord.version` is ported on the `ActiveRecord` module (`active-record.ts`) returning `gem_version`.
 - [ ] The `/version.rb` entry no longer matches activerecord; `parity:api` excluded files 13 → 12.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:calls
+```

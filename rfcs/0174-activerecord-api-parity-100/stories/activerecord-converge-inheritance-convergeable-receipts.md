@@ -5,7 +5,7 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts
 packages: ["activerecord"]
-deps: []
+deps: ["activerecord-converge-inheritance-find-sti-class-rows"]
 deps-rfc: []
 est-loc: 350
 priority: null
@@ -37,3 +37,9 @@ Each extracts a piece of `Inheritance::ClassMethods` Rails writes inline or on `
 - [ ] Each of the 5 declarations converges onto the Rails shape its receipt names (the helper folded back into the Rails method, the slot read through the Rails accessor, the method renamed to Rails' name), and the receipt is deleted with it.
 - [ ] Where one site genuinely cannot converge in this story, it is filed as its own story in this RFC and its receipt re-tagged `CONVERGEABLE <that-story>` — never left as prose, never PERMANENT.
 - [ ] `pnpm parity:api:extra:gate` stays rowless; `:calls` and `:calls:args` green.
+
+## Verification
+
+```bash
+pnpm parity:api:extra:gate && pnpm parity:api:receipts:gate && pnpm parity:api:reasons && pnpm parity:api:calls:args
+```

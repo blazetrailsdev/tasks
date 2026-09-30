@@ -28,3 +28,9 @@ normalizer in `scripts/api-compare/literals.ts` compares source spellings instea
 
 - [ ] `literals.ts` decodes Ruby double-quoted escapes (`\\`, `\001`, …) before comparing, with tests for all three reported rows.
 - [ ] `literal-mismatches.json` reports 0 activerecord rows (and the other two resolve or are real).
+
+## Verification
+
+```bash
+pnpm vitest run scripts/api-compare scripts/parity
+```

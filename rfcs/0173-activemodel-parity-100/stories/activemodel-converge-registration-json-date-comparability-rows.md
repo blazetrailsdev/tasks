@@ -37,3 +37,9 @@ The remaining activemodel call-gate rows, one per file:
 - [ ] Each body makes Rails' call with Rails' arguments; the 3 `calls` rows and 1 `args` row are deleted from their shards and the marks tightened.
 - [ ] If the `merge!` receiver-as-first-argument shape is a gate artifact, fix it in `scripts/api-compare/receiver-as-first-arg.ts` with a test instead of changing the port.
 - [ ] activemodel `pnpm parity:api:calls` rows 7 → 0 and shape rows 1 → 0 once `activemodel-converge-attribute-methods-call-rows` and `activemodel-converge-secure-password-bcrypt-password` land.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

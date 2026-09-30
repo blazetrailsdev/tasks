@@ -52,3 +52,9 @@ The subdirectory half of activemodel's PERMANENT receipts (see
 
 - [ ] Same as `activemodel-audit-permanent-receipts-root`: each receipt is tabled against its ratifying CLAUDE.md section, or converged, or split into a filed story and re-tagged `CONVERGEABLE <slug>`.
 - [ ] `attribute-set/codecs/*` receipts are resolved together with `delete-attribute-set-yaml-codec` (RFC 0170) — a receipt on a file that story deletes is not audited, it is deleted.
+
+## Verification
+
+```bash
+pnpm parity:api:extra:gate && pnpm parity:api:receipts:gate && pnpm parity:api:reasons && pnpm parity:api:calls:args
+```

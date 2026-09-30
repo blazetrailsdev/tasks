@@ -29,3 +29,9 @@ resolution"), and `Encryption.eagerLoadBang` shows the settled shape.
 
 - [ ] `Associations.eagerLoadBang` is ported on the `Associations` namespace with Rails' body and order.
 - [ ] `pnpm parity:api` activerecord misses −1; a test proves every `eager_autoload` constant is seated after the call.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

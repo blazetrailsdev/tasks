@@ -3,12 +3,12 @@ title: "tasks: rehome the retired-RFC-0023 stories the parity-100 RFCs depend on
 status: ready
 updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
-cluster: closeout
+cluster: tooling
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
@@ -52,3 +52,9 @@ RFC's PR merges, from the main tasks checkout.
 
 - [ ] Each story above is rehomed with `tasks rehome <id...> --to <the parity-100 RFC that depends on it> --reason "parity-100 dependency"`, and promoted with `tasks status-set <id> ready` unless it is blocked.
 - [ ] `pnpm validate` green on main afterwards; the rehomed stories appear in `tasks ready`.
+
+## Verification
+
+```bash
+pnpm vitest run scripts/api-compare scripts/parity
+```

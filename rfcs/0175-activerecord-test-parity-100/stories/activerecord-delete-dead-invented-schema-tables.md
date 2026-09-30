@@ -29,3 +29,9 @@ files themselves (`support/canonical-schema.ts`, `test-helpers/test-schema.ts`):
 
 - [ ] All listed tables are deleted from both schema files and from `invented-baseline.json` (only-shrink, by hand).
 - [ ] `pnpm parity:schema` baselined 74 → 12; canonical-schema tests green.
+
+## Verification
+
+```bash
+pnpm parity:schema && pnpm parity:fixtures
+```

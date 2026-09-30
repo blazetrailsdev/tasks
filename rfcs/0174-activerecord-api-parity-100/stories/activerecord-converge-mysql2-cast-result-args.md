@@ -27,3 +27,9 @@ map. The port passes a third column-types argument derived from the npm driver's
 
 - [ ] `castResult` passes Rails' two arguments; the type information reaches casting through the adapter's type map as in Rails (fix the type map if the MySQL lane shows a gap).
 - [ ] Row deleted; MySQL and MariaDB lanes green.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

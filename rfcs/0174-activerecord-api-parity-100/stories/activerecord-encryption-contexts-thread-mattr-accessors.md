@@ -34,3 +34,9 @@ the execution-context store (memory: `Thread.new` is `withExecutionContext`).
 
 - [ ] `defaultContext` (reader) and `customContexts` (thread-local accessor over `IsolatedExecutionState`) are declared with ActiveSupport's `mattrReader` / `threadMattrAccessor` in `contexts.ts`, and `with_encryption_context` / `without_encryption` use them as `contexts.rb` does.
 - [ ] `encryption.rb` and `encryption/contexts.rb` score 100%.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

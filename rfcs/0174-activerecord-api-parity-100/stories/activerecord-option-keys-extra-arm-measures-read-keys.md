@@ -30,3 +30,9 @@ The axis cannot reach zero honestly until it measures keys the body _reads_
 - [ ] `options-keys.ts` collects TS keys from the body's reads (destructuring, `options.x`, `fetch`/`hasKey` calls), not from the declared parameter type, with unit tests over a `**options` pass-through.
 - [ ] After the fix, every remaining activerecord `extraInTs` pair is a real invented arm; each is converged here or filed as its own story in this RFC.
 - [ ] Report counts for activerecord, activemodel and arel are recorded before/after in the PR body.
+
+## Verification
+
+```bash
+pnpm vitest run scripts/api-compare scripts/parity
+```

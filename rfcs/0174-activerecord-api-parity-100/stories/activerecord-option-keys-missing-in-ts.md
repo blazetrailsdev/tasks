@@ -33,3 +33,9 @@ does **not** read an option key Rails reads (the likely-real arm):
 - [ ] Each body reads the keys Rails reads, with Rails' defaults and `fetch` semantics.
 - [ ] The `base.ts` copy of `defineDelegatedTypeMethods` is deleted (one Rails method, one TS method).
 - [ ] `options-key-mismatches.json` `withMissingInTs` lists no activerecord pair.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

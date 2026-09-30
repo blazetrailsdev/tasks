@@ -3,7 +3,7 @@ title: "tooling: gate the missing if/loop/try/rescue arms per package once a pac
 status: ready
 updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
-cluster: tooling
+cluster: arms
 packages: ["activerecord"]
 deps: ["audit-loop-try-rescue-arm-strata-for-gating"]
 deps-rfc: []
@@ -28,3 +28,9 @@ turns the missing-direction count into a per-package only-shrink mark the moment
 
 - [ ] A missing-arm mark (all four tokens) gates enrolled packages, with `--tighten` and no reseed, and tests.
 - [ ] arel and activemodel are enrolled at 0 once their missing-arm stories land; activerecord joins at 0 last.
+
+## Verification
+
+```bash
+pnpm parity:api --calls && pnpm parity:api:arms:report --package=activerecord && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:returns
+```

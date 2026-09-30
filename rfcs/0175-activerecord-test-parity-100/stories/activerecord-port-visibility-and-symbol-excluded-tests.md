@@ -40,3 +40,9 @@ Two reasons in the register that CLAUDE.md has since settled:
 
 - [ ] Each case is ported with Rails' body through `rbModPrivate` / `send` / `publicSend` and `":name"` symbols; entries deleted.
 - [ ] Any case that turns on `topic.title` raising (not `send`) stays with `activerecord-private-attribute-methods-are-still-public` (RFC 0155) and names it.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm vitest run scripts/parity/unported-files.test.ts scripts/parity/unported-live-test.test.ts
+```

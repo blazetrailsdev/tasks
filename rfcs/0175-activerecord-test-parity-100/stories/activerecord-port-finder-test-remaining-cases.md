@@ -41,3 +41,9 @@ The rest of `finder_test.rb`'s missing cases (`vendor/rails/v8.0.2/activerecord/
 
 - [ ] Each case ported under Rails' name, onto canonical models/fixtures, with Rails' assertion kinds.
 - [ ] `pnpm parity:test` shows `finder_test.rb` 261/261 once `activerecord-port-finder-test-find-by-cases` also lands.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm parity:test:assertions
+```

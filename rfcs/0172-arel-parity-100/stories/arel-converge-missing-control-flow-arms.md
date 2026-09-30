@@ -39,3 +39,9 @@ report-only per RFC 0113, so nothing stops these regressing):
 - [ ] Each pair's branches match its Rails body: same guards, same order, same early returns (CLAUDE.md § "Control flow").
 - [ ] `pnpm parity:api:arms:report --package=arel --direction=missing` reports **0** rows.
 - [ ] Rails tests that exercise the restored branch are ported or already green.
+
+## Verification
+
+```bash
+pnpm parity:api --calls && pnpm parity:api:arms:report --package=arel && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:returns
+```

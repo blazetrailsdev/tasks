@@ -34,3 +34,9 @@ cases (`LockWaitTimeout`, `QueryCanceled`) raise on lock timeouts and need two c
 
 - [ ] Each case ported with Rails' adapter gates (`itIfSupports` / `currentAdapter`); divergences converged.
 - [ ] Every file above reads 0 missing.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm parity:test:assertions
+```

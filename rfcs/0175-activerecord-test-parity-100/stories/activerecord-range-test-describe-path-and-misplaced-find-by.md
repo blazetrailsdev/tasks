@@ -29,3 +29,9 @@ in `relations.trails.test.ts` but its Rails home is `relations_test.rb` → `rel
 - [ ] `range.test.ts` nests its cases under Rails' class describe path; the 40 extras move to `range.trails.test.ts` or are deleted as duplicates.
 - [ ] The misplaced case moves to `relations.test.ts`.
 - [ ] `pnpm parity:test` activerecord wrong describe **0**, misplaced **0**.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm parity:test:assertions
+```

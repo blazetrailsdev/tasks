@@ -29,3 +29,9 @@ closed-reason: null
 ## Acceptance criteria
 
 - [ ] Each body asks what Rails asks; `pnpm parity:api:duck-types` lists no activerecord pair once the RFC 0082 story lands.
+
+## Verification
+
+```bash
+pnpm parity:api --calls && pnpm parity:api:arms:report --package=activerecord && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:returns
+```

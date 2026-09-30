@@ -46,3 +46,9 @@ RFC 0170 (Psych in ruby-compat) removes the reason: `yaml-column-safe-coder-thro
 ## Acceptance criteria
 
 - [ ] Every case above and `yaml_column_test.rb` ported with Rails' bodies; entries deleted.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm vitest run scripts/parity/unported-files.test.ts scripts/parity/unported-live-test.test.ts
+```

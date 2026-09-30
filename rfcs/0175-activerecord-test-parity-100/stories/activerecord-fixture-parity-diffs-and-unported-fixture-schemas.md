@@ -38,3 +38,9 @@ closed-reason: null
 - [ ] Every fixture set's table is in the canonical schema (or the comparer follows `model_class`), schema ported 143/143.
 - [ ] The three ERB fixtures are generated through TSE with Rails' row counts; erb-allowed 0.
 - [ ] `pnpm parity:fixtures`: diff 0, erb-allowed 0.
+
+## Verification
+
+```bash
+pnpm parity:schema && pnpm parity:fixtures
+```

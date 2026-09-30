@@ -29,3 +29,9 @@ after the `--pin-all` floor: `attribute.rb` (`encode_with`, `init_with`, `initia
 
 - [ ] Each pair is verified line-for-line against its Rails body and fixed where it diverges.
 - [ ] `body-pins.ts --pin <ruby-file>` per file with a `reason` naming this story; activemodel pins **100%**.
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins
+```

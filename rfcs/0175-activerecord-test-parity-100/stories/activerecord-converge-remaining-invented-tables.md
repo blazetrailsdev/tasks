@@ -34,3 +34,9 @@ Rails models `Firm` / `Client` are STI subclasses of `Company` on `companies`
 
 - [ ] Each test is ported onto the canonical table and model Rails' own test uses (or, for a trails-only test, the nearest canonical model), and the invented table is deleted from both schema files and the baseline.
 - [ ] `pnpm parity:schema` baselined count drops by the tables removed; touched tests green on all adapters.
+
+## Verification
+
+```bash
+pnpm parity:schema && pnpm parity:fixtures
+```

@@ -33,3 +33,9 @@ RFC 0156's `converge-activerecord-dropped-block-arms-remainder` is the activerec
 
 - [ ] Each method takes Rails' block as a trailing function parameter and ports the block arm's control flow.
 - [ ] `pnpm parity:api:blocks:tighten` narrows activemodel's mark 7 → **0**.
+
+## Verification
+
+```bash
+pnpm parity:api --calls && pnpm parity:api:arms:report --package=activemodel && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:returns
+```

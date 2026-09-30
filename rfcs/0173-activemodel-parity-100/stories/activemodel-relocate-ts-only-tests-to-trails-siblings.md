@@ -31,3 +31,9 @@ convention file that no Rails test consumed: `validations/acceptance-validation.
 - [ ] Each extra is moved to the `.trails.test.ts` sibling, or — where it is a Rails test under a drifted name — matched to the Rails name via its describe path (never renaming a Rails-named test).
 - [ ] Duplicates of a Rails test already ported are deleted.
 - [ ] `pnpm parity:test` activemodel `extra (TS only)` **0**.
+
+## Verification
+
+```bash
+pnpm parity:test --package activemodel --missing && pnpm parity:test:assertions
+```

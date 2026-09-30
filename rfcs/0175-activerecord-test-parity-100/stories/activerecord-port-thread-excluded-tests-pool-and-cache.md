@@ -40,3 +40,9 @@ hazard CLAUDE.md § "The adapter lock defaults to a monitor" describes. This sto
 
 - [ ] Each case is ported with Rails' body, each `Thread.new {{ … }}` spelled `withExecutionContext(async () => …)`, and passes on the adapter lanes Rails runs it on; its unported entry is deleted.
 - [ ] A case that genuinely needs preemption (a busy-wait no JS scheduler can interleave) is split into its own story with the specific blocker, not left in the register with a generic GVL reason.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm vitest run scripts/parity/unported-files.test.ts scripts/parity/unported-live-test.test.ts
+```

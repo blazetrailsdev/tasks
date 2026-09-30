@@ -52,3 +52,9 @@ only-shrink exclude holds **90** activerecord entries:
 ## Acceptance criteria
 
 - [ ] Each test moves onto canonical models (`test-helpers/models/`) mirroring the Rails test it ports, and its entry is removed; the file is deleted when empty.
+
+## Verification
+
+```bash
+pnpm lint
+```

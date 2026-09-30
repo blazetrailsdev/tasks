@@ -33,3 +33,9 @@ A blocking `value` is the one piece JS cannot express; it maps onto the ratified
 - [ ] `ActiveRecord::Promise` and `Promise::Complete` are ported in `packages/activerecord/src/promise.ts`; `async_*` methods return it; `value` is async and `then` follows the thenable shape CLAUDE.md ratifies.
 - [ ] The unported entry is deleted; `promise.rb` scores 100%.
 - [ ] `SKIP_GROUPS[0]`'s `promise.rb#then` / `#class` hits resolve with it (see `activerecord-score-core-object-protocol-names`).
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:calls
+```

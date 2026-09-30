@@ -28,3 +28,9 @@ client of that codec, not a separate format.
 
 - [ ] `packages/activerecord/src/message-pack.ts` ports `Extensions`, `Encoder` and `Decoder` onto the ActiveSupport MessagePack port; `message_pack_test.rb` is enrolled.
 - [ ] The unported entry is deleted; `message_pack.rb` scores 100%.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:calls
+```

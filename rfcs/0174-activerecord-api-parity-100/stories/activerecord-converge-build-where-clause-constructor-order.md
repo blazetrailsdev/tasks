@@ -5,7 +5,7 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args
 packages: ["activerecord"]
-deps: []
+deps: ["activerecord-relocate-query-methods-bodies-inlined-in-relation"]
 deps-rfc: []
 est-loc: 150
 priority: null
@@ -26,3 +26,9 @@ clause early and mutates it.
 ## Acceptance criteria
 
 - [ ] The body is restructured to Rails' order (build predicates, collect references, construct last); row deleted.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

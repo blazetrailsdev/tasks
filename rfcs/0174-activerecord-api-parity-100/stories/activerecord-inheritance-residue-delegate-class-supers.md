@@ -5,7 +5,11 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface
 packages: ["activerecord"]
-deps: ["api-compare-nulls-a-delegateclass-superclass"]
+deps:
+  [
+    "activerecord-deduplicable-deduplicated-and-unary-minus",
+    "api-compare-nulls-a-delegateclass-superclass",
+  ]
 deps-rfc: []
 est-loc: 250
 priority: null
@@ -38,3 +42,9 @@ is empty, so all 8 are live):
 - [ ] After `api-compare-nulls-a-delegateclass-superclass`, the two `TypeMetadata` classes are ruby-compat `DelegateClass(SqlTypeMetadata)` subclasses carrying only their own members.
 - [ ] `OID::DateTime`'s parent is referenced as `Type.DateTime` (or the import renamed) so the chain reads as Rails'.
 - [ ] `pnpm parity:api` activerecord inheritance **217/217**.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

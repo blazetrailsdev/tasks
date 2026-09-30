@@ -195,3 +195,9 @@ in the final table rather than depended on; several prior-art stories in other R
 - [ ] Report-only axes read 0 for activerecord: arms (both directions), moves, returns, duck-types, deps, option keys, literals, structural duplicates.
 - [ ] `rails-error-parity-exclude.json` and `rails-callback-invocations-exclude.json` hold no activerecord file.
 - [ ] Every remaining receipt is PERMANENT and tabled against its CLAUDE.md section, or CONVERGEABLE naming an open story listed in the table.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api --calls && pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:pins && pnpm parity:api:receipts:gate && pnpm parity:test && pnpm parity:test:assertions
+```

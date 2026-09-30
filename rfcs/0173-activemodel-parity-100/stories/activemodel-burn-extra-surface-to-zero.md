@@ -53,3 +53,9 @@ is ActiveSupport's `Object#deep_dup` overridden per class — the relocation or 
 - [ ] Every name above is relocated to the file mirroring its defining `.rb`, deleted, or credited by a scorer fix with a test (`override-of-inherited-rails-member-scores-moved`, RFC 0120).
 - [ ] The `serialize_cast_value.rb` constructor body lives in `type/serialize-cast-value.ts`, included into `Value`.
 - [ ] `pnpm parity:api:extra --package activemodel` reports novel 0, total 0, no inlined bodies.
+
+## Verification
+
+```bash
+pnpm parity:api:extra --package activemodel && pnpm parity:api:moves && pnpm parity:api:extra:gate && pnpm lint --fix
+```

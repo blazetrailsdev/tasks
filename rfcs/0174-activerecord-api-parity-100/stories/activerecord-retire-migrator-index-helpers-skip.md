@@ -35,3 +35,9 @@ nothing to do with the Migrator:
 - [ ] `Migrator` stores `@target_version` / `@direction` and ports `target` / `start` / `finish` with Rails' bodies.
 - [ ] `SKIP_GROUPS[9]` is deleted; every definition above is scored, ported where missing, and pinned.
 - [ ] `pnpm parity:api` activerecord global skip −11; matched rises by the same count.
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conventions.test.ts
+```

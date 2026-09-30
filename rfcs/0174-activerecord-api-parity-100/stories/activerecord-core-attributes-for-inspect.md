@@ -29,3 +29,9 @@ trails' `inspect` (`packages/activerecord/src/core.ts:53`) renders every attribu
 - [ ] `attributesForInspect` is a `classAttribute` with Rails' `:all` default (spelled `":all"`, the Ruby-Symbol convention), and `inspect` honours it exactly as `core.rb` does.
 - [ ] The `core_test.rb` cases around `attributes_for_inspect` are ported or confirmed green.
 - [ ] `core.rb` scores 114/114.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

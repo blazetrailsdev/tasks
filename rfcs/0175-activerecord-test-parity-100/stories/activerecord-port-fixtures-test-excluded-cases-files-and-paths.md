@@ -54,3 +54,9 @@ measured under `activerecord-unexclude-and-measure-fixtures-rb` (RFC 0174).
 ## Acceptance criteria
 
 - [ ] `FixtureSet.create_fixtures` and `fixtures :all` load `.yml` files from `fixture_paths` as Rails does, the Rails `test/fixtures/**/*.yml` inputs are vendored or mirrored for these cases, and each case is ported; entries deleted.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm vitest run scripts/parity/unported-files.test.ts scripts/parity/unported-live-test.test.ts
+```

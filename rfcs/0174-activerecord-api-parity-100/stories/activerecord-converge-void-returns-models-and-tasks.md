@@ -30,3 +30,9 @@ The non-adapter half of `pnpm parity:api:returns`' activerecord pairs:
 ## Acceptance criteria
 
 - [ ] Each returns Rails' value; `pnpm parity:api:returns` lists no activerecord pair once `activerecord-converge-void-returns-adapters` also lands.
+
+## Verification
+
+```bash
+pnpm parity:api --calls && pnpm parity:api:arms:report --package=activerecord && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:returns
+```

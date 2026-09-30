@@ -50,3 +50,9 @@ closed-reason: null
 - [ ] Each pair's branches match its Rails body (CLAUDE.md § "Control flow"): same guards, order, early returns.
 - [ ] The missing-direction report shows 0 activerecord rows in these files.
 - [ ] Tests exercising the restored branches are ported or already green.
+
+## Verification
+
+```bash
+pnpm parity:api --calls && pnpm parity:api:arms:report --package=activerecord && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:returns
+```

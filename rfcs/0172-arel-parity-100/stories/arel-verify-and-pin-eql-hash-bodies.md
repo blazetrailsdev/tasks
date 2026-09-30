@@ -34,3 +34,9 @@ defeats it.
 - [ ] Each pair's TS `eql` / `hash` is checked line-for-line against its Rails body (same fields, same order, `hash` over the same tuple `==` compares) and fixed where it diverges.
 - [ ] `pnpm tsx scripts/api-compare/body-pins.ts --pin <ruby-file>` per file, with a `reason` naming this story.
 - [ ] `pnpm parity:api` arel pins: 711/759 → **759/759**; `pnpm parity:api:pins` green.
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins
+```

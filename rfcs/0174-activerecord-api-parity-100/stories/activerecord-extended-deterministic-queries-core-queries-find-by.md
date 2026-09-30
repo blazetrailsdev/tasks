@@ -29,3 +29,9 @@ covers `RelationQueries` but not `CoreQueries`.
 - [ ] `CoreQueries` is ported as a class module prepended onto the model class (ruby-compat `prepend()`), with `findBy` expanding encrypted args as Rails does.
 - [ ] The `extended_deterministic_queries_test.rb` cases that go through `Model.find_by` pass with Rails' assertions.
 - [ ] The file scores 13/13.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

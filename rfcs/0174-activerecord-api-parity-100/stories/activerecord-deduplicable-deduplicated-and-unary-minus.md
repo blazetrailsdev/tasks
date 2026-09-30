@@ -37,3 +37,9 @@ Three measurements point at the same shape in `connection_adapters/deduplicable.
 - [ ] `-@` gets an `OPERATOR_SPELLING_BY_FQN` entry for `Deduplicable` and `SCOPED_SKIP_GROUPS[11]` is deleted.
 - [ ] `pnpm parity:api:extra --package activerecord` lists no `inlined-from connection_adapters/deduplicable.rb` row.
 - [ ] `deduplicable.rb` scores 100%; `pnpm parity:api:extra:gate` stays rowless.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

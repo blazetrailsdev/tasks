@@ -34,3 +34,9 @@ The register still excludes async-query tests whose own reasons say "SOURCE NOW 
 
 - [ ] Every portable case is enrolled with Rails' body; `FutureResult`/`Promise` assertions ported; entries deleted.
 - [ ] Cases asserting a background thread pool's scheduling use `withExecutionContext` like the Thread stories.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm vitest run scripts/parity/unported-files.test.ts scripts/parity/unported-live-test.test.ts
+```

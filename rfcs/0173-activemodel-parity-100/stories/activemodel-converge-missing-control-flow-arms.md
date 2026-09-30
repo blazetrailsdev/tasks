@@ -36,3 +36,9 @@ closed-reason: null
 
 - [ ] Each pair's branches match its Rails body (CLAUDE.md § "Control flow").
 - [ ] The report shows 0 activemodel missing rows.
+
+## Verification
+
+```bash
+pnpm parity:api --calls && pnpm parity:api:arms:report --package=activemodel && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:returns
+```

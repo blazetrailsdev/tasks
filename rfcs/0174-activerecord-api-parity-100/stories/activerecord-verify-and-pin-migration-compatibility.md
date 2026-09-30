@@ -32,3 +32,9 @@ The other 17 unpinned activerecord pairs are `migration/compatibility.rb` member
 ## Acceptance criteria
 
 - [ ] All `compatibility.rb` pairs verified and pinned; activerecord pins **100%** once `activerecord-verify-and-pin-protocol-bodies` also lands.
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins
+```

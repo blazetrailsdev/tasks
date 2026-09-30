@@ -31,3 +31,9 @@ settles with a `..._rest: unknown[]` on the base. `add-constraints-guards-constr
 
 - [ ] `_addConstraintsDj` is renamed to the `addConstraints` override with Rails' five parameters, the base `AssociationScope#addConstraints` takes `..._rest: unknown[]` per CLAUDE.md § "Override arity".
 - [ ] `pnpm parity:api` activerecord arity **3731/3731**; `pnpm parity:api:params` green.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

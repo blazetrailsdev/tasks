@@ -36,3 +36,9 @@ closed-reason: null
 
 - [ ] Each reference goes through the Rails constant (`Arel::Nodes::SqlLiteral`, `ActiveModel::Type::SerializeCastValue`, `ActiveSupport::Benchmark`, …) — no local stand-in.
 - [ ] `pnpm parity:api:deps` shows 0 ref mismatches and 0 ✗ for activerecord's three sections.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

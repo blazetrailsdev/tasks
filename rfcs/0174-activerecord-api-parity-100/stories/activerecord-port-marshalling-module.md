@@ -29,3 +29,9 @@ Marshal (`ruby-compat-marshal-core-types`, RFC 0154), so the reason no longer ho
 
 - [ ] `packages/activerecord/src/marshalling.ts` ports the module; `Base` gains `_marshal_dump_7_1` / `marshal_load` through `Methods` when `format_version` is 7.1, as Rails does.
 - [ ] The unported entry is deleted and `marshalling.rb` scores 100%.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:calls
+```

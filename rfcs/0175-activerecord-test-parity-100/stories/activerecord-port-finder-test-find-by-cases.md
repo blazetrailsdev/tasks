@@ -48,3 +48,9 @@ these need; `finder-find-with-string-ports-findbysql-not-string-id-cast` fixes a
 
 - [ ] Each case is ported under Rails' name and describe path onto canonical models/fixtures, with Rails' assertion kinds.
 - [ ] Behaviour a ported case shows diverging is converged, not skipped.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm parity:test:assertions
+```

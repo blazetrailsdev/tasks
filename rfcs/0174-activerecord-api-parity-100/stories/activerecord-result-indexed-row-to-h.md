@@ -26,3 +26,9 @@ is where `to_h` gets called.
 ## Acceptance criteria
 
 - [ ] `IndexedRow#toH` is ported with Rails' body; `result.rb` scores 28/28.
+
+## Verification
+
+```bash
+pnpm build && pnpm parity:api && pnpm parity:api:calls && pnpm parity:api:calls:args
+```

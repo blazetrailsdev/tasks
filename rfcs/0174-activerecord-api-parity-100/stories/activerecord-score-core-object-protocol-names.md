@@ -38,3 +38,9 @@ Rails' body.
 - [ ] `freeze`, `to_ary`, `nil?`, `initialize_clone` are scored for activerecord and ported with Rails' bodies.
 - [ ] `then` stays skipped only through a scoped, CLAUDE.md-cited entry for `relation.rb` / `future_result.rb` (and `promise.rb` if its port lands the same shape).
 - [ ] `pnpm parity:api` activerecord global skip falls by the scored names.
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conventions.test.ts
+```

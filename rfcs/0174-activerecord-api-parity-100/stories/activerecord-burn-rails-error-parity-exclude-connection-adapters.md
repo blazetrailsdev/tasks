@@ -51,3 +51,9 @@ activerecord files. This story takes the connection-adapters group:
 - [ ] Every bare `Error` / wrong-class throw in these files raises Rails' class with Rails' message, and each file is removed from `rails-error-parity-exclude.json`.
 - [ ] Files under `test-helpers/` / `support/` that mirror Rails `test/` code raise what the Rails test helper raises.
 - [ ] `pnpm lint` green with the files removed.
+
+## Verification
+
+```bash
+pnpm lint
+```

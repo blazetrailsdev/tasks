@@ -63,3 +63,9 @@ invented guard to delete or an extractor false positive to fix in `scripts/api-c
 - [ ] Every real invented guard is removed so the body matches Rails' control flow.
 - [ ] Every false positive is fixed in the skeleton extractor (`scripts/api-compare/report-arms.ts` / `call-args.ts`) with a unit test, not by editing the port.
 - [ ] `pnpm parity:api:arms:report --package=arel` reports **0** arel rows in either direction.
+
+## Verification
+
+```bash
+pnpm parity:api --calls && pnpm parity:api:arms:report --package=arel && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:returns
+```

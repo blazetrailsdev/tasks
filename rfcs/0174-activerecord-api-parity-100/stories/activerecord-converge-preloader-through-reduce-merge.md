@@ -30,3 +30,9 @@ its own empty-array guard.
 
 - [ ] ruby-compat gains `Enumerable#inject`/`reduce` (`vendor/ruby/v3.3.11/enum.c` `enum_inject`) with the Symbol-argument arm and `nil` for an empty receiver, with ruby-compat unit tests and a PERMANENT receipt per the package's rule 2.
 - [ ] Both call sites call it with `":merge"`; rows deleted, mark tightened.
+
+## Verification
+
+```bash
+pnpm parity:api:calls && pnpm parity:api:calls:args
+```

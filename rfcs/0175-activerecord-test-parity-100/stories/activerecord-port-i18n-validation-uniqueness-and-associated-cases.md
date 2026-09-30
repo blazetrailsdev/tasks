@@ -41,3 +41,9 @@ closed-reason: null
 
 - [ ] All twelve ported under Rails' generated names with Rails' `assert_equal` on the generated message.
 - [ ] `i18n_validation_test.rb` 14/14.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm parity:test:assertions
+```

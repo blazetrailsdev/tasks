@@ -42,3 +42,9 @@ fork hooks directly.
 ## Acceptance criteria
 
 - [ ] The fork-tracker hooks (`ActiveSupport::ForkTracker.after_fork`, `discard_pools!`) are exercised by trails-sibling tests, and each Rails case stays excluded with this story named as its blocker.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm vitest run scripts/parity/unported-files.test.ts scripts/parity/unported-live-test.test.ts
+```

@@ -5,7 +5,7 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: skips
 packages: ["activerecord"]
-deps: []
+deps: ["activerecord-converge-schema-load-and-primary-key-convergeable-receipts"]
 deps-rfc: []
 est-loc: 350
 priority: null
@@ -32,3 +32,9 @@ command runner.
 - [ ] `SKIP_GROUPS[8]` is deleted. The four `load_schema!` definitions are scored against their TS ports (`loadSchemaBang`), and their call sets converge or are filed.
 - [ ] `CheckPending#any_schema_needs_update?` / `db_configs_in_current_env` / `load_schema!` are ported in `migration.ts` over trailties' root and runner.
 - [ ] `pnpm parity:api` activerecord global skip −6.
+
+## Verification
+
+```bash
+pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conventions.test.ts
+```

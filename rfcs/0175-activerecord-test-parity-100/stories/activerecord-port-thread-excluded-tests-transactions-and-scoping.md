@@ -40,3 +40,9 @@ siblings are ported.
 ## Acceptance criteria
 
 - [ ] Same as the pool-and-cache half: Rails' bodies over `withExecutionContext`, unported entries deleted, and any genuinely-unschedulable case split out with its specific blocker.
+
+## Verification
+
+```bash
+pnpm parity:test --package activerecord --missing && pnpm vitest run scripts/parity/unported-files.test.ts scripts/parity/unported-live-test.test.ts
+```
