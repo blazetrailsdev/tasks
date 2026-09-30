@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T14:39:34Z"
+assignee: "attribute-set-accepts-lazy-attribute-hash"
 blocked-by: null
 closed-reason: null
 ---
