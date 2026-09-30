@@ -74,6 +74,15 @@ export async function setDeps(
     throw new VerbExit(1);
   }
 
+  const git = (args: string[]): string =>
+    execFileSync("git", args, { cwd: tasksDir, encoding: "utf8" }).trim();
+  // Staging the file below would sweep an uncommitted edit to it into this
+  // commit, so refuse rather than publish someone's in-flight work.
+  if (git(["status", "--porcelain", "--", rel]) !== "") {
+    console.error(`error: ${rel} has uncommitted changes in ${tasksDir} — nothing changed.`);
+    throw new VerbExit(1);
+  }
+
   // Read every story from the files, not the DB: the check is the one
   // `pnpm validate` runs on main, so it has to see what main's files say.
   const { rfcs, stories } = loadAll(join(tasksDir, "rfcs"), { parseStory: () => true });
@@ -120,8 +129,6 @@ export async function setDeps(
   console.log(`set ${id} ${key} = [${to.join(", ")}]`);
   if (opts.commit === false) return { from, to, committed: false };
 
-  const git = (args: string[]): string =>
-    execFileSync("git", args, { cwd: tasksDir, encoding: "utf8" }).trim();
   // Stage only the story file — never `git add -A` (see rehome).
   git(["add", "--", rel]);
   git(["commit", "-q", "-m", `${cmd}: ${id}`]);

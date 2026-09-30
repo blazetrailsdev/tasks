@@ -148,6 +148,15 @@ describe("set-deps", () => {
     });
   });
 
+  it("refuses a story file with uncommitted edits in the main worktree", async () => {
+    const head = git(["rev-parse", "HEAD"]);
+    const dirty = read("b") + "\nin-flight\n";
+    writeFileSync(join(dir, storyPath("b")), dirty);
+    await expect(setDeps("b", "deps", { add: ["c"] })).rejects.toMatchObject({ code: 1 });
+    expect(read("b")).toBe(dirty);
+    expect(git(["rev-parse", "HEAD"])).toBe(head);
+  });
+
   it("refuses an unknown story id", async () => {
     await expect(setDeps("nope", "deps", { set: [] })).rejects.toMatchObject({ code: 1 });
   });

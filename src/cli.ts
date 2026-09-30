@@ -432,7 +432,9 @@ async function main(): Promise<number> {
         csv !== undefined
           ? { set: list(csv) }
           : { add: add === null ? [] : list(add), remove: remove === null ? [] : list(remove) },
-        { commit: flags["no-commit"] !== true },
+        // `--no-commit ""` hands the clearing "" to the flag as its value, so
+        // presence — not `=== true` — is what asks for no commit.
+        { commit: flags["no-commit"] === undefined },
       );
       break;
     }
