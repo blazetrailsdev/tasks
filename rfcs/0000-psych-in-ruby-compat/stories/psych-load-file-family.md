@@ -5,7 +5,7 @@ updated: 2026-09-29
 rfc: "0000-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat"]
-deps: ["psych-load-and-safe-load-with-restricted-class-loader"]
+deps: ["psych-load-and-safe-load"]
 deps-rfc: []
 est-loc: 120
 priority: null

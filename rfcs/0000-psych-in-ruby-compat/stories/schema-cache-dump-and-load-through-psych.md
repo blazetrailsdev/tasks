@@ -6,7 +6,11 @@ rfc: "0000-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activerecord"]
 deps:
-  ["move-activesupport-yaml-into-ruby-compat-psych", "psych-load-tags-dump-tags-and-domain-types"]
+  [
+    "move-activesupport-yaml-into-ruby-compat-psych",
+    "psych-load-tags-dump-tags-and-domain-types",
+    "psych-libyaml-seam-without-top-level-await",
+  ]
 deps-rfc: []
 est-loc: 250
 priority: null

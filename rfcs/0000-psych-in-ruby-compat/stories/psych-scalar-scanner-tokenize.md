@@ -5,7 +5,11 @@ updated: 2026-09-29
 rfc: "0000-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat"]
-deps: ["move-activesupport-yaml-into-ruby-compat-psych"]
+deps:
+  [
+    "move-activesupport-yaml-into-ruby-compat-psych",
+    "psych-restricted-class-loader-and-no-alias-ruby",
+  ]
 deps-rfc: []
 est-loc: 300
 priority: null
@@ -40,7 +44,7 @@ bullet. It is not in `psych-scalar-and-tag-visitors`, which covers tag arms.
 - [ ] `ToRuby` resolves plain, untagged, unquoted scalars through it. Quoted
       scalars stay Strings.
 - [ ] Dates resolve as Psych resolves them: through `ClassLoader#date`
-      (`class_loader.rb:9,39-44`, `load 'Date'` → `rbPathToClass("Date")`).
+      (`class_loader.rb:9,36-43`, `load 'Date'` → `rbPathToClass("Date")`).
       So ruby-compat takes no dependency on `@blazetrails/date`, which seats
       `Date` in the constant table. With nothing seated, the load raises
       `ArgumentError "undefined class/module Date"` as MRI would with `date`

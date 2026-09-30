@@ -10,6 +10,7 @@ deps:
     "psych-load-file-family",
     "psych-object-to-yaml",
     "devcontainer-generator-dumps-compose-yaml-through-to-yaml",
+    "psych-libyaml-seam-without-top-level-await",
   ]
 deps-rfc: []
 est-loc: 80

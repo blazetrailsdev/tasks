@@ -5,7 +5,7 @@ updated: 2026-09-29
 rfc: "0000-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activerecord"]
-deps: ["psych-omap"]
+deps: ["psych-omap", "configuration-file-parse-through-psych-unsafe-load"]
 deps-rfc: []
 est-loc: 40
 priority: null

@@ -11,6 +11,7 @@ deps:
     "psych-load-file-family",
     "psych-scalar-scanner-tokenize",
     "psych-syntax-error-and-exception-hierarchy",
+    "psych-libyaml-seam-without-top-level-await",
   ]
 deps-rfc: []
 est-loc: null
@@ -56,7 +57,7 @@ not yet:
       on it is removed.
 - [ ] Existing `configuration-file` tests stay green.
 
-## Home (RFC 0000-psych-in-ruby-compat)
+## Home (the psych-in-ruby-compat RFC)
 
 Psych moves out of `packages/activesupport/src/yaml.ts` into
 `packages/ruby-compat/src/psych*.ts` (layout: RFC Design §1) in

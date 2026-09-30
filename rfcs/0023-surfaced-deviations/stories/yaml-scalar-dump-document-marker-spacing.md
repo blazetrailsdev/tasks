@@ -44,7 +44,7 @@ root is a scalar) inside SafeCoder#dump.
 - Collection dumps (`"---\n- ok\n"`) unchanged.
 - Round-trip load unchanged; serialized-attribute/store/persistence suites green.
 
-## Update (RFC 0000-psych-in-ruby-compat)
+## Update (the psych-in-ruby-compat RFC)
 
 Do not post-process inside `SafeCoder#dump`. Once `yaml-column-safe-coder-through-psych`
 routes the dump through `YAML.dump` / `YAML.safeDump`, the inline marker is the

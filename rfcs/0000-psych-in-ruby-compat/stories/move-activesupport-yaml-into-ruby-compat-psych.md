@@ -17,7 +17,7 @@ packages:
 deps:
   ["ruby-compat-constant-table-and-path2class", "psych-object-protocol-for-record-yaml-round-trip"]
 deps-rfc: []
-est-loc: 450
+est-loc: 320
 priority: null
 pr: null
 claim: null
@@ -57,6 +57,19 @@ Rails anchors for the names: `vendor/ruby/v3.3.11/ext/psych/lib/psych.rb` (`unsa
 `:505`), `psych/exception.rb:23` (`DisallowedClass`), `psych/coder.rb:9`,
 `psych/visitors/yaml_tree.rb:15`, `psych/visitors/to_ruby.rb:14`,
 `vendor/ruby/v3.3.11/lib/yaml.rb:20` (`YAML = Psych`).
+
+## Why this is one PR
+
+The package.json move, the subpath deletion and the importer updates cannot
+trail the file move. pnpm resolves `yaml` only from a package that declares it,
+so ruby-compat's moved code fails to import without the `optionalDependencies`
+entry. The `./yaml` export would point at a deleted `dist/yaml.js`. Every
+importer would stop compiling. Only the README rule-4 wording and table rows
+could split off, and they are docs (LOC-exempt). Sizing: `git mv` of
+`yaml.ts` into `psych.ts` counts only the changed lines. The four files split
+off it add about 150 lines (#8254's 209 lines of visitors, minus what stays in
+`psych.ts`). Importers, package.json, the website, the guard test and the lint
+alias add about 90 lines each way. That comes to about 320.
 
 ## Acceptance criteria
 

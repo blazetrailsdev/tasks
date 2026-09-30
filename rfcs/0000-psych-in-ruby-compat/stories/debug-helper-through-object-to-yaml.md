@@ -5,7 +5,7 @@ updated: 2026-09-29
 rfc: "0000-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["actionview"]
-deps: ["psych-object-to-yaml"]
+deps: ["psych-object-to-yaml", "psych-libyaml-seam-without-top-level-await"]
 deps-rfc: []
 est-loc: 60
 priority: null

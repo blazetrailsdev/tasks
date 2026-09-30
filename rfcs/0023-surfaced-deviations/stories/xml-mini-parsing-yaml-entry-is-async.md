@@ -7,11 +7,7 @@ cluster: null
 packages:
   - "activesupport"
 deps:
-  [
-    "psych-libyaml-seam-without-top-level-await",
-    "psych-load-and-safe-load-with-restricted-class-loader",
-    "psych-object-to-yaml",
-  ]
+  ["psych-libyaml-seam-without-top-level-await", "psych-load-and-safe-load", "psych-object-to-yaml"]
 deps-rfc: []
 est-loc: 120
 priority: null
@@ -91,7 +87,7 @@ source rather than route around it" move may apply here.
   with `pnpm --filter @blazetrails/website exec svelte-kit sync && pnpm --filter @blazetrails/website build:sw`, not just vitest.
 - `pnpm parity:api` / `pnpm parity:test` deltas non-negative.
 
-## Update (RFC 0000-psych-in-ruby-compat)
+## Update (the psych-in-ruby-compat RFC)
 
 Option 2's shape is settled by that RFC's libyaml seam
 (`psych-libyaml-seam-without-top-level-await`): Psych resolves `yaml`

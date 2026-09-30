@@ -65,7 +65,7 @@ Also surfaced while porting `yaml_serialization_test.rb`:
       `packages/activerecord/src/yaml-serialization.test.ts` run unskipped
       (or are re-filed with a specific blocker).
 
-## Home (RFC 0000-psych-in-ruby-compat)
+## Home (the psych-in-ruby-compat RFC)
 
 Psych moves out of `packages/activesupport/src/yaml.ts` into
 `packages/ruby-compat/src/psych*.ts` (layout: RFC Design §1) in

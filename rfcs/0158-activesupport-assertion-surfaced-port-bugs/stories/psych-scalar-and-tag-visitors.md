@@ -37,7 +37,7 @@ tables are not ported, and each gap currently falls through silently:
 - (`Psych.dump_tags` / `Psych.load_tags` moved to
   `psych-load-tags-dump-tags-and-domain-types`, and the
   `active_record.rb:570-573` registrations moved to
-  `active-record-legacy-yaml-load-tags`, both in RFC 0000-psych-in-ruby-compat.
+  `active-record-legacy-yaml-load-tags`, both in the psych-in-ruby-compat RFC.
   This story consults those tables; it does not create them.)
 - `emit_coder`'s `:scalar`, `:seq` and `:object` arms and `Coder#represent_*`
   (`psych/coder.rb`); only `:map` is ported. `Relation#encode_with`
@@ -56,7 +56,7 @@ tables are not ported, and each gap currently falls through silently:
       (`yaml-serialization.test.ts`) dumps `written_on` as a timestamp scalar,
       not an ivar mapping.
 
-## Home (RFC 0000-psych-in-ruby-compat)
+## Home (the psych-in-ruby-compat RFC)
 
 Psych moves out of `packages/activesupport/src/yaml.ts` into
 `packages/ruby-compat/src/psych*.ts` (layout: RFC Design §1) in

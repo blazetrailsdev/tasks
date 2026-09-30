@@ -45,6 +45,9 @@ CommonJS build, so Node can resolve it synchronously.
       types, so no emitted `.d.ts` under `ruby-compat/dist/psych*` mentions
       `yaml`.
 - [ ] Psych's Ruby-level tables (load/dump tags) never touch the seam.
+- [ ] No API a `psych-*` story uses changes. The adapter interface the move
+      created keeps its shape; only how it resolves its backend changes.
+      Phase-2 stories may therefore land before this one (RFC §6).
 - [ ] Website: `yaml-stub.ts` and both Vite plugins / aliases are deleted. The
       website entry imports `yaml` and calls `registerPsychAdapter`.
 - [ ] `scripts/test-deps/yaml-optional-dependency.test.ts` covers every

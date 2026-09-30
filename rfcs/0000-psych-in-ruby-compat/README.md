@@ -47,7 +47,11 @@ This RFC:
    place MRI's C extension boundary sits (`psych.rb:13` `require 'psych.so'`) —
    resolved synchronously without top-level await, so an app that never
    touches YAML runs without the package, and touching YAML without it raises
-   Ruby's `LoadError` (`lib/yaml.rb:3-18`);
+   Ruby's `LoadError` (`lib/yaml.rb:3-18`). Under the recommended
+   `optionalDependencies` declaration (Q1) the package is still installed by
+   default, so "runs without it" means an install with `--omit=optional` (or
+   a host that never installed it) works. It does not mean the default
+   install drops it;
 3. converges every YAML consumer onto the Psych name Rails calls, and records,
    per consumer, whether a JSON/TS alternative exists in Rails, exists as a
    receipted trails invention, or does not make sense;
@@ -268,6 +272,23 @@ avoids with `SECRET_KEY_BASE`.
 - `relation-to-yaml-psych-dump` and `store-yaml-dump-load-model-round-trip`
   are blocked on #8254 only; the move does not change that, so they are left
   alone.
+- **If #8254 stalls or is reshaped.** The move's dependency on it is about
+  conflicts, not content: the move relocates whatever `activesupport/src/yaml.ts`
+  holds when it is claimed. So if #8254 is closed or rescoped,
+  `psych-object-protocol-for-record-yaml-round-trip` is re-filed or closed and
+  both foundation stories drop it from `deps`. The constant-table story's only
+  coupling is #8254's one `./inflector.js` import line, so that story may also
+  go first by agreement with #8254's author, who then rebases one import.
+- **The seam is on every consumer's path, not every surface story's.** Phase 2
+  stories build Psych's Ruby layer against the adapter interface the move
+  creates, and the seam story changes only how that interface resolves its
+  backend (RFC §3). It must change no API a phase-2 story uses, which is an
+  acceptance criterion of the seam story. Every phase-3/4 story that reaches
+  the backend depends on the seam, so no consumer ships on the TLA'd adapter.
+- **References to this RFC from other RFCs' stories are number-free** ("the
+  psych-in-ruby-compat RFC"). `scripts/finalize-rfc.mjs` rewrites `0000-` ids
+  only inside this RFC's own directory (`:67-76`), so a numbered reference
+  written elsewhere now would go stale at merge.
 
 ## Non-goals
 
@@ -310,7 +331,8 @@ avoids with `SECRET_KEY_BASE`.
 1. **Foundation** — `ruby-compat-constant-table-and-path2class`,
    `move-activesupport-yaml-into-ruby-compat-psych` (the pure move),
    `psych-libyaml-seam-without-top-level-await`, `yaml-absent-install-smoke`.
-2. **Psych surface** — `psych-load-and-safe-load-with-restricted-class-loader`,
+2. **Psych surface** — `psych-restricted-class-loader-and-no-alias-ruby`,
+   `psych-load-and-safe-load`,
    `psych-safe-dump-and-restricted-yaml-tree`,
    `psych-syntax-error-and-exception-hierarchy`, `psych-load-file-family`,
    `psych-scalar-scanner-tokenize`, `psych-load-tags-dump-tags-and-domain-types`,
@@ -390,5 +412,7 @@ avoids with `SECRET_KEY_BASE`.
 ## Changelog
 
 - 2026-09-29: initial RFC
+- 2026-09-29: review round 1: seam deps on every consumer, #8254 fallback,
+  number-free external refs, move / load / Marshal re-sized
 - 2026-09-29: self-review: §4 surface cut to Rails-called exports (rule 1),
   parity floor reconciled with the spec stories, Marshal filed in 0154

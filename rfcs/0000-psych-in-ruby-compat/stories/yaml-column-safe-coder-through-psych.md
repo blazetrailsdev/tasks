@@ -7,8 +7,9 @@ cluster: fidelity
 packages: ["activerecord"]
 deps:
   [
-    "psych-load-and-safe-load-with-restricted-class-loader",
+    "psych-load-and-safe-load",
     "psych-safe-dump-and-restricted-yaml-tree",
+    "psych-libyaml-seam-without-top-level-await",
   ]
 deps-rfc: []
 est-loc: 220

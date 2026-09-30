@@ -5,7 +5,12 @@ updated: 2026-09-29
 rfc: "0000-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activesupport"]
-deps: ["psych-syntax-error-and-exception-hierarchy", "psych-scalar-scanner-tokenize"]
+deps:
+  [
+    "psych-syntax-error-and-exception-hierarchy",
+    "psych-scalar-scanner-tokenize",
+    "psych-libyaml-seam-without-top-level-await",
+  ]
 deps-rfc: []
 est-loc: 100
 priority: null

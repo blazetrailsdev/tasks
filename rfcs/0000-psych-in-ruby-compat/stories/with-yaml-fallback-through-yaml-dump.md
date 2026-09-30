@@ -5,7 +5,8 @@ updated: 2026-09-29
 rfc: "0000-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activerecord"]
-deps: ["move-activesupport-yaml-into-ruby-compat-psych"]
+deps:
+  ["move-activesupport-yaml-into-ruby-compat-psych", "psych-libyaml-seam-without-top-level-await"]
 deps-rfc: []
 est-loc: 40
 priority: null

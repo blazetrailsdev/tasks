@@ -1,13 +1,18 @@
 ---
-title: "ruby-compat has no Marshal: schema cache .dump arm and DebugHelper#debug's Marshal.dump probe"
+title: "Wire Marshal into the schema cache .dump arm and DebugHelper#debug's probe (TYPE_USRMARSHAL, singleton-method errors)"
 status: draft
 updated: 2026-09-29
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: ["ruby-compat", "activerecord"]
-deps: ["schema-cache-dump-and-load-through-psych", "debug-helper-through-object-to-yaml"]
+deps:
+  [
+    "ruby-compat-marshal-core-types",
+    "schema-cache-dump-and-load-through-psych",
+    "debug-helper-through-object-to-yaml",
+  ]
 deps-rfc: []
-est-loc: 400
+est-loc: 200
 priority: null
 pr: null
 claim: null
@@ -18,7 +23,7 @@ closed-reason: null
 
 ## Context
 
-Surfaced while authoring RFC 0000-psych-in-ruby-compat, whose Non-goals leave
+Surfaced while authoring the psych-in-ruby-compat RFC, whose Non-goals leave
 Marshal out. Two Rails call sites need Ruby's `Marshal`
 (`vendor/ruby/v3.3.11/marshal.c:2555` `rb_define_module("Marshal")`, dump
 `:1207` `marshal_dump`, load `:2434` `marshal_load`), and trails has no port:
@@ -35,6 +40,8 @@ Marshal out. Two Rails call sites need Ruby's `Marshal`
   calls `Marshal.dump(object)` first, as a probe that raises for
   singleton-method objects and so routes them to the `inspect` fallback.
 
+Core types are `ruby-compat-marshal-core-types`. This story adds the
+user-marshal and singleton arms and makes the two calls.
 `packages/activesupport/src/cache/coder.ts` carries a Marshal stand-in for
 cache entries, not a Marshal port. Check it before starting, and converge it
 here if it is a partial copy.
@@ -44,17 +51,17 @@ ruby-compat-has-no-marshal-for-schema-cache-and-debug` pointing here.
 
 ## Acceptance criteria
 
-- [ ] `packages/ruby-compat/src/marshal.ts` exports a `Marshal` namespace with
-      `dump` / `load` for the types a schema cache holds: nil, true/false,
-      Integer, String, Symbol (a `":name"` string), Array, Hash, and user
-      objects through `marshal_dump` / `marshal_load` (`TYPE_USRMARSHAL`).
-      It raises `TypeError` "no \_dump_data is defined for class …" for
-      anything else, which is the arm `debug`'s probe relies on. It has
-      citations and README rows.
-- [ ] Bytes match MRI 4.8 format for those types. The test fixtures are
-      produced by the `ruby` on PATH.
-- [ ] Both `@missingRailsCall … CONVERGEABLE` tags above are removed and their
-      calls are made.
+- [ ] `Marshal` (from `ruby-compat-marshal-core-types`) gains `TYPE_USRMARSHAL`
+      (`marshal.c` `w_object`'s `marshal_dump` arm; `r_object`'s
+      `marshal_load` arm). `SchemaCache` round-trips through its ported
+      `marshalDump` / `marshalLoad`, and a `.dump` file written by Rails
+      (checked in under `test-helpers/support`) loads.
+- [ ] `Marshal.dump` raises `TypeError` "singleton can't be dumped" for an
+      object with singleton methods (`rbObjSingletonClass`, CLAUDE.md), which
+      is the arm `debug`'s probe relies on (`debug_helper.rb:29-35`).
+- [ ] `SchemaCache._loadFrom` / `#dumpTo` take the `.dump` arm, and `debug`
+      calls `Marshal.dump(object)`. Both `@missingRailsCall … CONVERGEABLE`
+      receipts pointing here are removed.
 
 ## Verification
 
