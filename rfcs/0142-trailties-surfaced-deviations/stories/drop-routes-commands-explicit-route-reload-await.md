@@ -5,7 +5,8 @@ updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - converge-lazy-route-set-sync-ops-to-await-the-reload
 deps-rfc: []
 est-loc: 10
 priority: null
