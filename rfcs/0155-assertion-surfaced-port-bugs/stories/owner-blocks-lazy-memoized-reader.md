@@ -1,6 +1,6 @@
 ---
 title: "Owner#blocks memoizes lazily as owner.rb:25-27 (no eager _blocks field)"
-status: ready
+status: claimed
 updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 15
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T16:46:26Z"
+assignee: "port-abstract-unit-controller-reopenings-and-rack-test-case"
 blocked-by: null
 closed-reason: null
 ---

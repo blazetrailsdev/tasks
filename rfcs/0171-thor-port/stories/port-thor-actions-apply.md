@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Actions#apply over a template module (dynamic import in place of instance_eval), and route app:template through it"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

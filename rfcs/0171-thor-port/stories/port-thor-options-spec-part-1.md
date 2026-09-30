@@ -1,6 +1,6 @@
 ---
 title: "Port parser/options_spec.rb, part 1 (to_switches and the first half of #parse)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

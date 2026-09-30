@@ -1,6 +1,6 @@
 ---
 title: "Split the authentication / benchmark / script / task / generator generators into Rails' Thor commands"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

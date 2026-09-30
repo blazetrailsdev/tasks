@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: FileUtils.cd(dir) { } that restores the working directory when an async block settles"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "trails-routes-command-shows-no-routes-under-lazy-route-set"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

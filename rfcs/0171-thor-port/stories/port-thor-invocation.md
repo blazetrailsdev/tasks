@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Invocation (invoke, invoke_command, invoke_all, shared configuration) and ratify the async dispatch cascade"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

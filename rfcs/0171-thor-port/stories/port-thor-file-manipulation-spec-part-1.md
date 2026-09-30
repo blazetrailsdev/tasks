@@ -1,6 +1,6 @@
 ---
 title: "Port actions/file_manipulation_spec.rb, part 1 (chmod, copy_file, link_file, get, template)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "action-controller-railtie-initializer-order-drags-set-configs-before-env"
-status: draft
+status: done
 updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8281
+claim: "2026-09-30T16:13:14Z"
+assignee: "action-controller-railtie-initializer-order-drags-set-configs-before-env"
 blocked-by: null
 closed-reason: null
 ---

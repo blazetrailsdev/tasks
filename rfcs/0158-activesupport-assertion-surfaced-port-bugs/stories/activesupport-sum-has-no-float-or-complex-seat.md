@@ -1,6 +1,6 @@
 ---
 title: "activesupport-sum-has-no-float-or-complex-seat"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

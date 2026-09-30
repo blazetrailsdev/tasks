@@ -1,6 +1,6 @@
 ---
 title: "Port base_spec.rb (initialize, argument, class options and help, namespace, group, commands, start, attr_*)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port Thor.dispatch, command-name resolution and the help screens (Thor.help, command_help, Thor#help)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

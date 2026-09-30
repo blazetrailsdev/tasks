@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Group (invoke / invoke_from_option generated commands, class_options_help, dispatch, _invoke_for_class_method)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Command, HiddenCommand and DynamicCommand (run, formatted_usage, arity and visibility arms)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

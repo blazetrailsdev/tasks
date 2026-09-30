@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::LineEditor (Basic) and Shell::Basic#ask / yes? / no? (async)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

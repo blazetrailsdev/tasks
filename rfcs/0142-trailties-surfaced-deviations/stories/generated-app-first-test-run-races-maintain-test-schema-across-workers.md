@@ -1,6 +1,6 @@
 ---
 title: "generated-app-first-test-run-races-maintain-test-schema-across-workers"
-status: draft
+status: claimed
 updated: 2026-09-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T16:55:17Z"
+assignee: "generated-app-first-test-run-races-maintain-test-schema-across-workers"
 blocked-by: null
 closed-reason: null
 ---

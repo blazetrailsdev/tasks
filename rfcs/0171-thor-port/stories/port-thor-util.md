@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Util (namespace lookup, snake/camel case, ruby_command, escape_globs)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

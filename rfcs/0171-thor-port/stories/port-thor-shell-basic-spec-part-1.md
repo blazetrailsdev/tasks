@@ -1,6 +1,6 @@
 ---
 title: "Port shell/basic_spec.rb, part 1 (padding, indent, ask, yes?, no?, say, say_error)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

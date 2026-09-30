@@ -1,6 +1,6 @@
 ---
 title: "Port Thor's file-editing actions (chmod, prepend / append_to_file, inject_into_class / module, gsub_file, (un)comment_lines, remove_file)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

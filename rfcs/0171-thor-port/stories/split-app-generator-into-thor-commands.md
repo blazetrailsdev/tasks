@@ -1,6 +1,6 @@
 ---
 title: "Split AppBase / AppGenerator into Rails' Thor commands (create_root_files … finish_template)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

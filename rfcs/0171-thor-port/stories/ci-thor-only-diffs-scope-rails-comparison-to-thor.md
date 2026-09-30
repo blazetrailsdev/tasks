@@ -1,6 +1,6 @@
 ---
 title: "CI: a thor-only diff runs Rails API/Test Comparison for the thor package only"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

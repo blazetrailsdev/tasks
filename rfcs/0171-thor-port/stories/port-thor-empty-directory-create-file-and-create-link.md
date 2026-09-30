@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Actions::EmptyDirectory, CreateFile and CreateLink (conflict check, pretend, encoded filenames)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

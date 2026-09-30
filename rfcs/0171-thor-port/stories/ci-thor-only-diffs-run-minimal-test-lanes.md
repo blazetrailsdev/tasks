@@ -1,6 +1,6 @@
 ---
 title: "CI: a thor-only diff runs only the Thor tests, the trailties tests that import Thor, and the tree-scanning unit guards"
-status: draft
+status: claimed
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T16:55:17Z"
+assignee: "generated-app-first-test-run-races-maintain-test-schema-across-workers"
 blocked-by: null
 closed-reason: null
 ---

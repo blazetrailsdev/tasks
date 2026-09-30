@@ -1,6 +1,6 @@
 ---
 title: "Retire commander: bin/trails dispatches through Rails::Command.invoke (cli.rb), and the dependency is removed"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

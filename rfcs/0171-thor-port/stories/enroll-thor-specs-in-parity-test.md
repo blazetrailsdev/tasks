@@ -1,6 +1,6 @@
 ---
 title: "Enroll Thor's RSpec suite in parity:test as a nested pseudo-package, and record Thor's non-ports"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

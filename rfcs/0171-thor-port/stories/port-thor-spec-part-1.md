@@ -1,6 +1,6 @@
 ---
 title: "Port thor_spec.rb, part 1 (method_option, default_command, stop_on_unknown_option!, check_unknown_options!, disable_required_check!, map, desc, method_options)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

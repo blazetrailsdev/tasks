@@ -1,7 +1,7 @@
 ---
 title: "Fold the last extracted association helpers (alias tracker, has_many scope, through build_record)"
-status: ready
-updated: 2026-09-29
+status: claimed
+updated: 2026-09-30
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T16:46:26Z"
+assignee: "port-abstract-unit-controller-reopenings-and-rack-test-case"
 blocked-by: null
 closed-reason: null
 ---

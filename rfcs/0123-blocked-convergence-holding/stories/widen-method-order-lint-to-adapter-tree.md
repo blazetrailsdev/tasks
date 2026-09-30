@@ -1,6 +1,6 @@
 ---
 title: "Widen rails-file-structure-method-order to the connection-adapter tree"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0123-blocked-convergence-holding"
 cluster: null

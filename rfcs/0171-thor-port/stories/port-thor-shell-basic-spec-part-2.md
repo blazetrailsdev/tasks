@@ -1,6 +1,6 @@
 ---
 title: "Port shell/basic_spec.rb, part 2 (print_wrapped, say_status, print_in_columns, print_table, file_collision)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

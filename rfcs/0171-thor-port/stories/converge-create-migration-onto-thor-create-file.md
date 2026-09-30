@@ -1,6 +1,6 @@
 ---
 title: "Converge CreateMigration onto a subclass of the ported Thor::Actions::CreateFile"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

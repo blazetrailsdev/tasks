@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Base's command registry, explicit method_added registration, subclass registry, namespace and start"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

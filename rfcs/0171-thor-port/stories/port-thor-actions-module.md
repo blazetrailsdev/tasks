@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Actions' instance half (behavior, destination stack, inside / in_root, run, run_ruby_script, thor)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

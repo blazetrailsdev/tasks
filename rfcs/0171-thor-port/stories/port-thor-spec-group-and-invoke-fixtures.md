@@ -1,6 +1,6 @@
 ---
 title: "Port Thor's group.thor and invoke.thor fixtures"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

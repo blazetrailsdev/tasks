@@ -1,6 +1,6 @@
 ---
 title: "Port actions_spec.rb (initialize, accessors, inside, in_root, apply, run, run_ruby_script, thor)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

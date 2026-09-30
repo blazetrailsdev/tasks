@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Actions#insert_into_file / inject_into_file and Actions::InjectIntoFile (Ruby regex semantics)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

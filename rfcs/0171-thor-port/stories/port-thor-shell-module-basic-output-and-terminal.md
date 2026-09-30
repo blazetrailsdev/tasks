@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Shell (delegation, with_padding) and Shell::Basic's output half, plus Shell::Terminal"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

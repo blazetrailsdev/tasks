@@ -1,6 +1,6 @@
 ---
 title: "Port parser/options_spec.rb, part 2 (the rest of #parse: repeatable, hash, array, numeric, enum, exclusive, at-least-one)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

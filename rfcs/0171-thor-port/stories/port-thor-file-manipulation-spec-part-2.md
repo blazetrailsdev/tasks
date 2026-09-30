@@ -1,6 +1,6 @@
 ---
 title: "Port actions/file_manipulation_spec.rb, part 2 (when changing existent files, when adjusting comments)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

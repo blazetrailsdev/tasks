@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::Command::RakeCommand so non-Thor namespaces (db:*, app:template) dispatch to Rake tasks"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

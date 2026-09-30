@@ -1,6 +1,6 @@
 ---
 title: "Port register_spec.rb, subcommand_spec.rb and sort_spec.rb"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null

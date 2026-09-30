@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Base's option / argument DSL and #initialize (class_option, argument, exclusive / at-least-one, from_superclass)"
-status: draft
+status: ready
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null
