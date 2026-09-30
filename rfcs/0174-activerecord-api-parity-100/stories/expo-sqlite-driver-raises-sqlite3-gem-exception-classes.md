@@ -2,7 +2,7 @@
 title: "expo-sqlite-driver-raises-sqlite3-gem-exception-classes"
 status: ready
 updated: 2026-09-30
-rfc: "0155-assertion-surfaced-port-bugs"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps: []
