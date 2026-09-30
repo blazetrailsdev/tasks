@@ -1,6 +1,6 @@
 ---
 title: "Psych dump_ivars/init_with read and write ivars through ruby-compat accessors"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

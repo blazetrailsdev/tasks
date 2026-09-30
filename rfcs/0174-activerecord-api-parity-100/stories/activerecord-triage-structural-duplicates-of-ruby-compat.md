@@ -1,6 +1,6 @@
 ---
 title: "activerecord: triage the 131 structural duplicates of ruby-compat exports"
-status: ready
+status: done
 updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: tooling
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8285
+claim: "2026-09-30T17:09:22Z"
+assignee: "parity-100-rehome-postponed-rfc-dependencies"
 blocked-by: null
 closed-reason: null
 ---

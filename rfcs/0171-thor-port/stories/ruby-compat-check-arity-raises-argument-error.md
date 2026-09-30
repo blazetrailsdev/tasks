@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: rbCheckArity raises Ruby's 'wrong number of arguments' ArgumentError"
-status: claimed
+status: done
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 2
-pr: null
+pr: trails#8284
 claim: "2026-09-30T16:55:17Z"
 assignee: "generated-app-first-test-run-races-maintain-test-schema-across-workers"
 blocked-by: null

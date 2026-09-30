@@ -1,7 +1,7 @@
 ---
 title: "I18nValidationTest builds ad-hoc Topic models where Rails uses replied_topic"
-status: draft
-updated: 2026-08-24
+status: ready
+updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "Split load_async_test.rb whole-file exclusion: enroll portable surface cases"
-status: draft
-updated: 2026-08-13
+status: claimed
+updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T17:49:22Z"
+assignee: "converge-inline-fixture-resolvers-onto-fixture-load-path"
 blocked-by: null
 closed-reason: null
 ---

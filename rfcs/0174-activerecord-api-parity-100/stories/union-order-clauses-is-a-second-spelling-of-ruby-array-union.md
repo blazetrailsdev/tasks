@@ -1,7 +1,7 @@
 ---
 title: "unionOrderClauses is a second, differently-equal spelling of Ruby Array#|"
-status: draft
-updated: 2026-08-22
+status: ready
+updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

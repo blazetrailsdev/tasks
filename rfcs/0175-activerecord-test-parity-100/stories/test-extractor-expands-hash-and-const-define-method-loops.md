@@ -1,7 +1,7 @@
 ---
 title: "Expand hash-literal and same-file-constant define_method loops in the test extractor"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

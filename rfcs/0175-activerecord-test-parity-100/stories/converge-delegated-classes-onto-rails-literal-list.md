@@ -1,7 +1,7 @@
 ---
 title: "Converge delegatedClasses() onto Rails' literal delegated_classes list"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "GeneratedAttributeMethods takes its name from const_set, not a post-construction stamp"
-status: draft
-updated: 2026-08-12
+status: ready
+updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages:

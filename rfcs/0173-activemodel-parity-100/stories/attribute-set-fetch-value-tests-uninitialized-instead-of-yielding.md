@@ -1,7 +1,7 @@
 ---
 title: "AttributeSet#fetch_value type-tests Uninitialized instead of forwarding the block to Attribute#value"
-status: draft
-updated: 2026-09-20
+status: claimed
+updated: 2026-09-30
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T17:49:22Z"
+assignee: "converge-inline-fixture-resolvers-onto-fixture-load-path"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "isMassAssignmentEmpty is invented surface; Rails inlines the guard as attribute_assignment.rb:32"
-status: draft
-updated: 2026-08-26
+status: claimed
+updated: 2026-09-30
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T17:49:22Z"
+assignee: "converge-inline-fixture-resolvers-onto-fixture-load-path"
 blocked-by: null
 closed-reason: null
 ---

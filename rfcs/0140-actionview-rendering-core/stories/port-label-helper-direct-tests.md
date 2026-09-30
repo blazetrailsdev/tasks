@@ -1,6 +1,6 @@
 ---
 title: "port-label-helper-direct-tests"
-status: ready
+status: done
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 13
-pr: null
-claim: null
-assignee: null
+pr: trails#8287
+claim: "2026-09-30T17:11:47Z"
+assignee: "tse-trim-markers-diverge-from-erubi"
 blocked-by: null
 closed-reason: null
 ---

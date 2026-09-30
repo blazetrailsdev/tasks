@@ -1,7 +1,7 @@
 ---
 title: "Ruby Object#clone / #dup has no settled trails spelling; each call site open-codes it"
-status: draft
-updated: 2026-08-21
+status: ready
+updated: 2026-09-30
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages:

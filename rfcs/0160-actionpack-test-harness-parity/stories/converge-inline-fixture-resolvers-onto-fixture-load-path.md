@@ -1,6 +1,6 @@
 ---
 title: "Converge respond_to and trails tests' inline FixtureResolvers onto FIXTURE_LOAD_PATH"
-status: ready
+status: claimed
 updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T17:49:22Z"
+assignee: "converge-inline-fixture-resolvers-onto-fixture-load-path"
 blocked-by: null
 closed-reason: null
 ---

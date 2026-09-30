@@ -1,6 +1,6 @@
 ---
 title: "Fold the last extracted association helpers (alias tracker, has_many scope, through build_record)"
-status: claimed
+status: done
 updated: 2026-09-30
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#8282
 claim: "2026-09-30T16:46:26Z"
 assignee: "port-abstract-unit-controller-reopenings-and-rack-test-case"
 blocked-by: null

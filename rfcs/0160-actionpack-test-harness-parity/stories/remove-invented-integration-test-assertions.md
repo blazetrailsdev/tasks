@@ -1,7 +1,7 @@
 ---
 title: "Remove integration.ts's four invented assertion helpers"
-status: ready
-updated: 2026-09-26
+status: done
+updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: "test-harness"
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8286
+claim: "2026-09-30T17:06:57Z"
+assignee: "port-integration-runner-module-and-runner-tests"
 blocked-by: null
 closed-reason: null
 ---

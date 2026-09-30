@@ -1,7 +1,7 @@
 ---
 title: "PG max_identifier_length is split across a sync reader and an async warmer"
-status: draft
-updated: 2026-08-16
+status: ready
+updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages:

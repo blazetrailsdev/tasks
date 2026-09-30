@@ -1,7 +1,7 @@
 ---
 title: "Port ActionController::TestCase's nine missing methods and fix its arity rows"
 status: ready
-updated: 2026-09-28
+updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: ["actionpack"]

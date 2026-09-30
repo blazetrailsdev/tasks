@@ -1,6 +1,6 @@
 ---
 title: "port-abstract-unit-controller-reopenings-and-rack-test-case"
-status: claimed
+status: done
 updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8282
 claim: "2026-09-30T16:46:26Z"
 assignee: "port-abstract-unit-controller-reopenings-and-rack-test-case"
 blocked-by: null

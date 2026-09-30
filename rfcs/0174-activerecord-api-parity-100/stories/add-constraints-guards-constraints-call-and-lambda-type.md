@@ -1,7 +1,7 @@
 ---
 title: "addConstraints guards reflection.constraints() and the lambda type where Rails guards neither"
-status: draft
-updated: 2026-08-22
+status: ready
+updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages:

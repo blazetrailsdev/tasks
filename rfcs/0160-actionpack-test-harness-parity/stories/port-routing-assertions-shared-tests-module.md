@@ -1,6 +1,6 @@
 ---
 title: "port-routing-assertions-shared-tests-module"
-status: ready
+status: done
 updated: 2026-09-30
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8286
+claim: "2026-09-30T17:06:57Z"
+assignee: "port-integration-runner-module-and-runner-tests"
 blocked-by: null
 closed-reason: null
 ---

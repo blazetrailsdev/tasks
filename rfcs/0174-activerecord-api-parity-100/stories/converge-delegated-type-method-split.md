@@ -1,7 +1,7 @@
 ---
 title: "Restore Rails' direction between delegatedType and defineDelegatedTypeMethods"
-status: draft
-updated: 2026-07-28
+status: ready
+updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages:

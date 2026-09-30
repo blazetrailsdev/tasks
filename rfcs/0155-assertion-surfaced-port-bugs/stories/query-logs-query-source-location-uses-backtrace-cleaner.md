@@ -1,6 +1,6 @@
 ---
 title: "QueryLogs.querySourceLocation hand-parses the stack where Rails asks the backtrace cleaner"
-status: claimed
+status: done
 updated: 2026-09-30
 rfc: "0155-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8282
 claim: "2026-09-30T16:46:26Z"
 assignee: "port-abstract-unit-controller-reopenings-and-rack-test-case"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Disambiguate the two exported association() functions"
-status: draft
-updated: 2026-08-02
+status: ready
+updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages:
