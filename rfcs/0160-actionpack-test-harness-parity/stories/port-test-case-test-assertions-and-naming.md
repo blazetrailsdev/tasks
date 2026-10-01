@@ -1,6 +1,6 @@
 ---
 title: "Port test_case_test.rb's request-reset, upload and class-naming tests (lines 750-1294)"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

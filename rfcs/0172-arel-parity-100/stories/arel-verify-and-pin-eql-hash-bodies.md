@@ -1,6 +1,6 @@
 ---
 title: "arel: verify and pin the 48 eql?/hash pairs matched since the body-pin floor"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: pins

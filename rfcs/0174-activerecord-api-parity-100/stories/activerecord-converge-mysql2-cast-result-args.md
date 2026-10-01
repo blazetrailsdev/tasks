@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2 DatabaseStatements#cast_result builds Result.new(fields, rows) (args row)"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args

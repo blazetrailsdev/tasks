@@ -1,6 +1,6 @@
 ---
 title: "activerecord: burn expected-fixtures-exclude (3) and test-fixture-parity-exclude (1)"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: lint-registers

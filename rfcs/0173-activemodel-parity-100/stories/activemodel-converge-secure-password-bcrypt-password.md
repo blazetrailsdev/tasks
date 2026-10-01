@@ -1,7 +1,7 @@
 ---
 title: "activemodel: SecurePassword reaches a BCrypt::Password object (call row + arm-throw mark)"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: calls-args
 packages: ["activemodel"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-01T15:55:05Z"
+assignee: "activemodel-converge-secure-password-bcrypt-password"
 blocked-by: null
 closed-reason: null
 ---

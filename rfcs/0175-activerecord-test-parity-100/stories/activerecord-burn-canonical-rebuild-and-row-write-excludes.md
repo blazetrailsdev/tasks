@@ -1,6 +1,6 @@
 ---
 title: "activerecord: burn require-canonical-rebuild-exclude (17) and non-transactional-row-writes (9)"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: lint-registers

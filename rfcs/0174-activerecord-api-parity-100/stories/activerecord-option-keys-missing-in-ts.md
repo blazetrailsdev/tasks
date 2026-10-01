@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the option keys activerecord ports never read (delegated_type, add_column_options!)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["parity-100-rehome-postponed-rfc-dependencies", "converge-delegated-type-
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8333
+claim: "2026-10-01T15:36:09Z"
+assignee: "activemodel-converge-registration-json-date-comparability-rows"
 blocked-by: null
 closed-reason: null
 ---

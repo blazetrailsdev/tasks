@@ -1,7 +1,7 @@
 ---
 title: "activemodel: converge the call rows in attribute-registration, serializers/json, type/date and the comparability args row"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: calls-args
 packages: ["activemodel"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8333
+claim: "2026-10-01T15:36:09Z"
+assignee: "activemodel-converge-registration-json-date-comparability-rows"
 blocked-by: null
 closed-reason: null
 ---

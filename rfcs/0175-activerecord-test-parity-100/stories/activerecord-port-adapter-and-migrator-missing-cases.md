@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port the 8 missing adapter / migrator cases"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests
@@ -9,7 +9,7 @@ deps: ["parity-100-rehome-postponed-rfc-dependencies", "database-statements-exec
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#8331
 claim: "2026-10-01T14:54:59Z"
 assignee: "activerecord-port-adapter-and-migrator-missing-cases"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "activemodel: verify and pin the 18 value-protocol pairs matched since the body-pin floor"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: pins
