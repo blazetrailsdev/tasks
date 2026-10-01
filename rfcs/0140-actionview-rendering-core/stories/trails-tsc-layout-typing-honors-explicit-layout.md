@@ -31,15 +31,15 @@ So a controller that has its own `layouts/posts` but declares `layout("applicati
 
 In the checker pass, a controller's layout set is:
 
-1. string literals passed to its class-level `layout(...)` calls, found along its superclass chain (the nearest call wins, as `class_attribute` inheritance does);
-2. plus every `layout: "<name>"` string literal in its own `render(...)` calls;
-3. and only when neither applies, the implied-name fallback that exists today.
+1. the string literal passed to its class-level `this.layout(...)` call, found along its superclass chain (the nearest call wins, as `class_attribute` inheritance does);
+2. the implied-name fallback that exists today, when there is no class-level call, when the call passes `null`, or when it carries `only:` / `except:` conditions (the `else` arm of `_write_layout_method`'s `_layout`, `layouts.rb:319-323`);
+3. plus every `layout: "<name>"` string literal in its `render(...)` calls. A per-render layout is added to 1 and 2, never substituted for them: `_layout_for_option` (`layouts.rb:388-413`) resolves the layout of that one render, and the controller's other actions keep its class-level or implied layout.
 
 `layout(false)` / `layout: false` contribute nothing. A symbol/method layout (`layout(":method")` or a function), or a non-literal value, makes the controller contribute to every layout, since the static choice is unknown.
 
 ## Acceptance criteria
 
-- [ ] A controller with `static { layout(this, "application") }` and its own `layouts/posts.html.tse` contributes its members to `layouts/application`, not `layouts/posts`.
-- [ ] A `render("show", { layout: "admin" })` in a controller adds that controller to `layouts/admin`.
+- [ ] A controller with `static { this.layout("application") }` and its own `layouts/posts.html.tse` contributes its members to `layouts/application`, not `layouts/posts`.
+- [ ] A `render("show", { layout: "admin" })` in a controller adds that controller to `layouts/admin`, and leaves it in its class-level or implied layout.
 - [ ] `layout(false)` removes the controller from every layout.
 - [ ] Each case has a test in `packages/trails-tsc/src/build-views.test.ts`.
