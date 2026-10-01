@@ -10,6 +10,7 @@ packages:
   - ruby-compat
   # move-db-commands-onto-databases-rake-tasks-part-{1,2} port activerecord's databases.rake.
   - activerecord
+  - "scripts"
 clusters:
   - fidelity
 related-rfcs:
