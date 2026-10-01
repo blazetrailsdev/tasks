@@ -5,7 +5,8 @@ updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - active-support-test-case-carries-setup-and-teardown-instance-side
 deps-rfc: []
 est-loc: 60
 priority: null
