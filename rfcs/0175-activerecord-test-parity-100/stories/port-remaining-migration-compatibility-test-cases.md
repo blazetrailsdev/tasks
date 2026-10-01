@@ -1,17 +1,17 @@
 ---
 title: "port-remaining-migration-compatibility-test-cases"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 2
+pr: trails#8342
+claim: "2026-10-01T17:35:01Z"
+assignee: "port-remaining-migration-compatibility-test-cases"
 blocked-by: null
 closed-reason: null
 ---

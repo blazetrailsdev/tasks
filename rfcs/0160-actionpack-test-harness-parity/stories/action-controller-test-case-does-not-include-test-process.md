@@ -1,6 +1,6 @@
 ---
 title: "ActionController::TestCase does not include ActionDispatch::TestProcess"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8339
 claim: "2026-10-01T16:56:27Z"
 assignee: "red-fcbc702b"
 blocked-by: null

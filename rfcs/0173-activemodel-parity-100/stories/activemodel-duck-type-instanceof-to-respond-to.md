@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Error#generate_message and Type::Decimal#cast_value duck-type as Rails does"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: arms

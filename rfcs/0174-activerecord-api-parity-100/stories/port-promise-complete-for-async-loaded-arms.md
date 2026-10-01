@@ -1,7 +1,7 @@
 ---
 title: "Port Promise::Complete and close the @async arms that drop it (ids' loaded? arm)"
-status: ready
-updated: 2026-08-24
+status: in-progress
+updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8342
+claim: "2026-10-01T17:35:01Z"
+assignee: "port-remaining-migration-compatibility-test-cases"
 blocked-by: null
 closed-reason: null
 ---

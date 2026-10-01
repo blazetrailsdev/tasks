@@ -1,6 +1,6 @@
 ---
 title: "routing-assertions-method-missing-delegates-to-controller"
-status: ready
+status: in-progress
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8341
+claim: "2026-10-01T17:10:27Z"
+assignee: "active-support-test-case-carries-setup-and-teardown-instance-side"
 blocked-by: null
 closed-reason: null
 ---

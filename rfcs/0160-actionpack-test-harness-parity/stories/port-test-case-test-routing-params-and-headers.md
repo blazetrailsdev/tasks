@@ -1,6 +1,6 @@
 ---
 title: "port-test-case-test-routing-params-and-headers"
-status: ready
+status: in-progress
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8340
+claim: "2026-10-01T17:12:32Z"
+assignee: "port-test-case-test-routing-params-and-headers"
 blocked-by: null
 closed-reason: null
 ---

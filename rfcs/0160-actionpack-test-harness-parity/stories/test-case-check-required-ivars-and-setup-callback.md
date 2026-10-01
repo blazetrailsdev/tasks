@@ -1,6 +1,6 @@
 ---
 title: "test-case-check-required-ivars-and-setup-callback"
-status: ready
+status: claimed
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-01T17:15:02Z"
+assignee: "test-case-check-required-ivars-and-setup-callback"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "arel: burn the 14 moved extras on managers, collectors, table and namespaces"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: placement
 packages: ["arel"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 260
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-01T17:54:57Z"
+assignee: "arel-burn-moved-extra-surface-managers-collectors-namespaces"
 blocked-by: null
 closed-reason: null
 ---

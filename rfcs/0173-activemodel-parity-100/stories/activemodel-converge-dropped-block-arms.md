@@ -1,6 +1,6 @@
 ---
 title: "activemodel: port the 7 dropped block arms (parity:api:blocks mark 7)"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: arms

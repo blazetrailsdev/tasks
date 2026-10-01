@@ -1,7 +1,7 @@
 ---
 title: "_loadFromSql iterates indexedRows, not toArray()"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8340
+claim: "2026-10-01T17:12:32Z"
+assignee: "port-test-case-test-routing-params-and-headers"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port the 8 missing adapter / migrator cases"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests

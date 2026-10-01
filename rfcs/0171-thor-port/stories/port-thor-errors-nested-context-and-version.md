@@ -1,7 +1,7 @@
 ---
 title: "Port thor/error.rb (with both DidYouMean SpellCheckers), nested_context.rb and version.rb"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8341
+claim: "2026-10-01T17:10:27Z"
+assignee: "active-support-test-case-carries-setup-and-teardown-instance-side"
 blocked-by: null
 closed-reason: null
 ---

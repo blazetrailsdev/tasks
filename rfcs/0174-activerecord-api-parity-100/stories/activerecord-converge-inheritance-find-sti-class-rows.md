@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Inheritance's find_sti_class call rows (discriminate_class_for_record, subclass_from_attributes)"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args

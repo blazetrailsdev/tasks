@@ -1,7 +1,7 @@
 ---
 title: "extra-surface scores a trails-only subclass's override of an inherited Rails member as moved"
-status: draft
-updated: 2026-09-03
+status: done
+updated: 2026-10-01
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8338
+claim: "2026-10-01T17:22:08Z"
+assignee: "override-of-inherited-rails-member-scores-moved"
 blocked-by: null
 closed-reason: null
 ---

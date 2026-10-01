@@ -1,6 +1,6 @@
 ---
 title: "activerecord: parity:fixtures — the 6 DIFF files, 30 unported fixture schemas and 3 ERB fixtures"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: schema-fixtures
