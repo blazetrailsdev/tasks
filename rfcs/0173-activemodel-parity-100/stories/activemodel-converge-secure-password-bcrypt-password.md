@@ -1,5 +1,5 @@
 ---
-title: "activemodel: SecurePassword reaches a BCrypt::Password object (call row + arm-throw mark)"
+title: "activemodel: SecurePassword reaches a BCrypt::Password object (call row)"
 status: claimed
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
@@ -25,7 +25,10 @@ Two activemodel residues live in `packages/activemodel/src/secure-password.ts`:
   `is_password?` / reads `.salt`; the port calls one-shot `bcrypt.compareSync` / `bcrypt.getSalt`
   because the npm client exposes no Password object.
 - **arm-throw mark 1** (`scripts/api-compare/arm-throw-mark.json` `activemodel.byFile["secure-password.ts"]`):
-  a Rails raise the port does not make.
+  a Rails raise the port does not make. Measured in trails#8336: the row is `has_secure_password`'s
+  `require "bcrypt"` / `rescue LoadError` / `warn` / `raise` (`secure_password.rb:117-125`), which has
+  nothing to raise from while the bcrypt port is a static import inside activemodel. It is split out
+  to `activemodel-secure-password-require-bcrypt-load-error-arm`, which depends on the gem-package move.
 
 `packages/activemodel/src/bcrypt.ts` already wraps the npm client (its PERMANENT receipts are audited by
 `activemodel-audit-permanent-receipts-root`). Memory note: gem-backed ports wrap the npm client
@@ -35,7 +38,7 @@ client is async.
 ## Acceptance criteria
 
 - [ ] `bcrypt.ts` exposes `BCrypt::Password` (`new`, `create`, `is_password?`/`==`, `salt`, `cost`) over the npm client, mirroring `bcrypt-ruby`'s `lib/bcrypt/password.rb` shape.
-- [ ] `secure-password.ts` calls `BCrypt::Password.new(digest)` where Rails does and raises what Rails raises; the call row is deleted and `pnpm parity:api:arms:throws:tighten` takes `activemodel.total` 1 → 0.
+- [ ] `secure-password.ts` calls `BCrypt::Password.new(digest)` where Rails does and raises what Rails raises from it (`BCrypt::Errors::InvalidHash` for a digest that is not a bcrypt hash); the call row is deleted. The arm-throw mark is `activemodel-secure-password-require-bcrypt-load-error-arm`'s.
 - [ ] `packages/activemodel/src/secure-password.test.ts` green.
 
 ## Verification
