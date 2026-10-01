@@ -7,6 +7,7 @@ updated: 2026-09-30
 owner: "@deanmarano"
 packages:
   - "activemodel"
+  - "ruby-compat"
 clusters:
   - api-surface
   - arms
