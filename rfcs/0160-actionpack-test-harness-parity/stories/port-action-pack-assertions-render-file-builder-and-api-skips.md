@@ -5,7 +5,8 @@ updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: ["actionpack"]
-deps: []
+deps:
+  - api-redirect-to-override-and-head-response-are-invented
 deps-rfc: []
 est-loc: 120
 priority: null
