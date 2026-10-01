@@ -53,6 +53,11 @@ trailties copies in `generators/actions/create-migration.ts`.
       time.
 - [ ] **Return values**: `invoke!` returns `given_destination` (not the absolute path), which
       railties' `create_migration` and `copy_file`'s `mode: :preserve` read.
+- [ ] **Async fs forms** (from `ruby-compat-async-fs-verbs-for-thor-actions`, trails#8318).
+      `File.symlink` / `File.link` are `File.symlinkAsync` / `File.linkAsync`, `File.identical?`
+      is `File.isIdenticalAsync`, `File.symlink?` is `File.isSymlinkAsync`, and
+      `FileUtils.rm_rf` is `FileUtils.rmRfAsync`. The website's in-memory adapter raises
+      `NotImplementedError` for the two link calls.
 
 ## Acceptance criteria
 
