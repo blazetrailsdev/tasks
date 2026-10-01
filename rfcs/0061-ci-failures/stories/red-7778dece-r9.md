@@ -1,6 +1,6 @@
 ---
 title: "Lint failing on main @7778dece"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0061-ci-failures"
 cluster: null
