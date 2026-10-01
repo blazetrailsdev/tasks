@@ -5,7 +5,8 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface
 packages: ["activerecord"]
-deps: []
+deps:
+  - set-lock-thread-thread-arm-and-thread-load-interlock-aware-monitor
 deps-rfc: []
 est-loc: 400
 priority: null
