@@ -1,13 +1,13 @@
 ---
-title: "attr-names-and-build-mangled-name-open-code-unpack1-h"
+title: "AttrNames.define_attribute_accessor_method never const_sets the ATTR_ constant it yields"
 status: draft
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: null
-packages: []
+packages: ["activemodel"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
@@ -19,49 +19,35 @@ closed-reason: null
 ## Context
 
 Surfaced porting `AttrNames.define_attribute_accessor_method`'s `yield` arm
-(`activemodel-converge-dropped-block-arms`).
+(`activemodel-converge-dropped-block-arms`, trails#8335).
 
-Rails mangles a name that cannot be `def`ined with `String#unpack1("h*")`, in two places:
+Rails' `else` arm (`vendor/rails/v8.0.2/activemodel/lib/active_model/attribute_methods.rb:577-589`):
 
-- `ClassMethods#build_mangled_name`
-  (`vendor/rails/v8.0.2/activemodel/lib/active_model/attribute_methods.rb:445-453`):
-  `mangled_name = :"__temp__#{name.unpack1("h*")}"`.
-- `AttrNames.define_attribute_accessor_method` (`attribute_methods.rb:577-589`), whose `else` arm is
-
-  ```ruby
-  safe_name = attr_name.unpack1("h*")
-  const_name = "ATTR_#{safe_name}"
-  const_set(const_name, attr_name) unless const_defined?(const_name)
-  temp_method_name = "__temp__#{safe_name}#{'=' if writer}"
-  attr_name_expr = "::ActiveModel::AttributeMethods::AttrNames::#{const_name}"
-  yield temp_method_name, attr_name_expr
-  ```
-
-trails open-codes the hex in both bodies (`packages/activemodel/src/attribute-methods.ts`,
-`AttrNames.defineAttributeAccessorMethod` and `ClassMethods.buildMangledName`):
-
-```ts
-Array.from(name)
-  .map((c) => c.charCodeAt(0).toString(16).padStart(2, "0"))
-  .join("");
+```ruby
+safe_name = attr_name.unpack1("h*")
+const_name = "ATTR_#{safe_name}"
+const_set(const_name, attr_name) unless const_defined?(const_name)
+temp_method_name = "__temp__#{safe_name}#{'=' if writer}"
+attr_name_expr = "::ActiveModel::AttributeMethods::AttrNames::#{const_name}"
+yield temp_method_name, attr_name_expr
 ```
 
-That differs from `h*` twice over: `h` is LOW nibble first (`"a".unpack1("h*") # => "16"`,
-trails yields `"61"`), and it walks UTF-16 code units where Ruby walks bytes. ruby-compat's
-`unpack1` (`packages/ruby-compat/src/array.ts`) answers only `C`, `l`, `E` and `@`, returns
-`number | null`, and raises `unknown_directive` for `h`.
+trails#8335 converged the `unpack1("h*")` half (ruby-compat's `unpack1` answers `h`, and both
+`defineAttributeAccessorMethod` and `buildMangledName` call it). The `const_set` line is still
+missing from `AttrNames.defineAttributeAccessorMethod`
+(`packages/activemodel/src/attribute-methods.ts`): it yields an `attrNameExpr` naming a constant
+that is never set.
 
-`defineAttributeAccessorMethod` also drops `const_set(const_name, attr_name) unless
-const_defined?(const_name)`: it yields `attrNameExpr` naming a constant that is never set. No
-caller reads the expression (the generated bodies close over the name instead of `module_eval`ing
-source), so nothing observes the gap today.
+Nothing observes the gap today. All four callers' blocks take only `tempMethodName`, because the
+generated bodies close over the attribute name instead of `module_eval`ing source.
+
+The blocker is the receiver. `AttrNames` is a TS `namespace`, and `rbModConstSet`
+(`packages/ruby-compat/src/include.ts`) takes a `Module`, a class, or `{ readonly name: string }`
+(TS2345 when handed `typeof AttrNames`). Rails' `AttrNames` is a plain `module`
+(`attribute_methods.rb:560`). There is also no `const_defined?` port in ruby-compat.
 
 ## Acceptance criteria
 
-- [ ] ruby-compat's `unpack1` answers the `h` directive (`vendor/ruby/v3.3.11/pack.c`, the `'h'`
-      case of `pack_unpack_internal`), with a trails test pinning `"a".unpack1("h*") == "16"` and a
-      multi-byte name.
-- [ ] `buildMangledName` and `AttrNames.defineAttributeAccessorMethod` call it where Rails calls
-      `unpack1("h*")`; neither open-codes the hex.
+- [ ] `AttrNames` is a receiver `rbModConstSet` accepts, with no cast at the call site.
 - [ ] `defineAttributeAccessorMethod` sets `ATTR_<safe_name>` on `AttrNames` unless it is already
-      defined, as `attribute_methods.rb:584` does.
+      defined, as `attribute_methods.rb:584` does, with a trails test reading the constant back.
