@@ -2,7 +2,7 @@
 title: "Tse#call ports ERB's ENCODING_TAG strip and valid_encoding (WrongEncodingError for invalid bytes)"
 status: blocked
 updated: 2026-09-30
-rfc: "0140-actionview-rendering-core"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
