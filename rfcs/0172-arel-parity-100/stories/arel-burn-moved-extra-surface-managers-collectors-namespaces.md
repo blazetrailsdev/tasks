@@ -42,7 +42,7 @@ the `[no Rails counterpart]` file mapping in `scripts/parity/conventions.ts`, no
 ## Acceptance criteria
 
 - [ ] Each name above is relocated to the file mirroring its defining `.rb`, credited by a scorer fix (`override-of-inherited-rails-member-scores-moved`, or a `RUBY_FILE_TS_OVERRIDES` mapping for `namespaces.ts`/`index.ts`), or deleted.
-- [ ] arel's extra-surface `total` reaches **0**, and `pnpm parity:api:extra:tighten` writes it.
+- [ ] arel's extra-surface `total` drops by the 14 names above (**34 → 20**), and `pnpm parity:api:extra:tighten` writes it. The 20 that remain are the `nodes/` rows owned by `arel-burn-moved-extra-surface-nodes`; `total` reaches **0** when that story lands, whichever of the two merges second.
 
 ## Verification
 
