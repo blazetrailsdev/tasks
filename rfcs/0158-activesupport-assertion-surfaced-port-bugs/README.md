@@ -12,6 +12,7 @@ packages:
   - "i18n"
   - "rack"
   - "rack-session"
+  - "actionpack"
 clusters:
   - "surfaced-bugs"
 related-rfcs:
