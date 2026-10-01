@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Argument and Thor::Arguments (the positional parser)"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 450
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-01T19:55:42Z"
+assignee: "port-thor-argument-and-arguments"
 blocked-by: null
 closed-reason: null
 ---

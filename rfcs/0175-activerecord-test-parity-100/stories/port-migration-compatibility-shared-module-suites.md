@@ -1,6 +1,6 @@
 ---
 title: "port-migration-compatibility-shared-module-suites"
-status: draft
+status: closed
 updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by port-the-15-remaining-migration-compatibility-cases: trails#8342 ported the PostgreSQL cases and the LegacyPrimaryKey suite this story's text still lists as missing."
 ---
 
 ## Context

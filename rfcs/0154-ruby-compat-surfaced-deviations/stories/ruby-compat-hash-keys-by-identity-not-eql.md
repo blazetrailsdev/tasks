@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat Hash compares keys by identity where Ruby's Hash uses hash/eql?"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

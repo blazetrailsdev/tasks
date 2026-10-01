@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: type the locals of template, collection/object and helper-module render sites instead of falling back to any"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null

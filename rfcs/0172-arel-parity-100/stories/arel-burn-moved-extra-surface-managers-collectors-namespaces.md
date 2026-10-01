@@ -1,6 +1,6 @@
 ---
 title: "arel: burn the 14 moved extras on managers, collectors, table and namespaces"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: placement

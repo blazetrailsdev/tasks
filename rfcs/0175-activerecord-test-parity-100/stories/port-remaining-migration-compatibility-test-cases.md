@@ -1,6 +1,6 @@
 ---
 title: "port-remaining-migration-compatibility-test-cases"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
