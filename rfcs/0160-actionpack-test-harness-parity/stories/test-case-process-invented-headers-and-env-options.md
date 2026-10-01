@@ -5,7 +5,8 @@ updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: ["actionpack"]
-deps: []
+deps:
+  - test-case-check-required-ivars-and-setup-callback
 deps-rfc: []
 est-loc: 250
 priority: null
