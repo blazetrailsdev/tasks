@@ -20,7 +20,9 @@ closed-reason: null
 
 Found while verifying trails#8318. Nine tests under `packages/website/src/lib/frontiers` fail on
 `main` (reproduced with `main`'s own `vfs-generator.ts`, after `pnpm build` and
-`svelte-kit sync`), and the `Website` CI job is skipped on PRs, so nothing reports them:
+`svelte-kit sync`), and the `Website` CI job is skipped on PRs, so nothing reports them. vitest
+counts 9 failed tests in 4 files; the per-file figures below count its `FAIL` entries, which
+include failed `describe` blocks:
 
 - `tutorials/generator-fixtures.test.ts` (6): `TypeError: Cannot read properties of undefined
 (reading 'includes')` at `NamedBase#assignNamesBang`
