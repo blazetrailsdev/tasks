@@ -1,15 +1,15 @@
 ---
-title: "ruby-compat-marshal-load-core-types"
+title: "Port Marshal.load for core types and plain ivar objects into ruby-compat"
 status: draft
 updated: 2026-10-01
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
-packages: []
+packages: ["ruby-compat"]
 deps:
   - ruby-compat-marshal-core-types
   - ruby-compat-constant-table-and-path2class
 deps-rfc: []
-est-loc: null
+est-loc: 700
 priority: null
 pr: null
 claim: null
