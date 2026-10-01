@@ -32,6 +32,13 @@ prose promises, for:
 
 Each extracts a piece of `Inheritance::ClassMethods` Rails writes inline or on `Base`.
 
+Surfaced by the trails#8336 review: `subclassFromAttributes` (the callerless Rails-named method the
+last receipt's `subclassFromAttributesForNew` folds back into) still carries invented guards — an
+`if (!attrs) return null`, `toH` / `toObject` duck-typing, and no Hash check — where
+`vendor/rails/v8.0.2/activerecord/lib/active_record/inheritance.rb:331-340` is
+`attrs = attrs.to_h if attrs.respond_to?(:permitted?)`, `if attrs.is_a?(Hash)`, `subclass_name.present?`.
+trails#8336 converged only its `find_sti_class` call; the guards converge with the fold.
+
 ## Acceptance criteria
 
 - [ ] Each of the 5 declarations converges onto the Rails shape its receipt names (the helper folded back into the Rails method, the slot read through the Rails accessor, the method renamed to Rails' name), and the receipt is deleted with it.
