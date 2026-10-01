@@ -1,6 +1,6 @@
 ---
 title: "port-test-case-test-routing-params-and-headers"
-status: draft
+status: ready
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

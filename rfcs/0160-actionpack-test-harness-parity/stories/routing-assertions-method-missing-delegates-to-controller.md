@@ -1,6 +1,6 @@
 ---
 title: "routing-assertions-method-missing-delegates-to-controller"
-status: draft
+status: ready
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc: buildViews uses async fs and its callers await it"
-status: draft
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-01T16:56:27Z"
+assignee: "red-fcbc702b"
 blocked-by: null
 closed-reason: null
 ---

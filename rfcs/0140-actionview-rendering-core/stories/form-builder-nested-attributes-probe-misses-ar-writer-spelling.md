@@ -1,6 +1,6 @@
 ---
 title: "form-builder-nested-attributes-probe-misses-ar-writer-spelling"
-status: draft
+status: ready
 updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port the form_for / fields_for / fields tests of form_helper_test.rb"
-status: draft
+status: ready
 updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null

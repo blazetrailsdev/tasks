@@ -1,6 +1,6 @@
 ---
 title: "activemodel: the two option-key mismatches (as_json, set_options_for_callback)"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: calls-args

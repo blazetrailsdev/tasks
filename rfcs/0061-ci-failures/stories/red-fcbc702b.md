@@ -1,6 +1,6 @@
 ---
 title: "Lint failing on main @fcbc702b"
-status: ready
+status: done
 updated: 2026-10-01
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#8334
+claim: "2026-10-01T16:56:27Z"
+assignee: "red-fcbc702b"
 blocked-by: null
 closed-reason: null
 ---

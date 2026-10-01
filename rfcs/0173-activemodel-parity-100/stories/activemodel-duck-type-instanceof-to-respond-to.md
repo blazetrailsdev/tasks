@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Error#generate_message and Type::Decimal#cast_value duck-type as Rails does"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: arms
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8335
 claim: "2026-10-01T15:35:00Z"
 assignee: "activemodel-converge-dropped-block-arms"
 blocked-by: null

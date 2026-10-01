@@ -1,6 +1,6 @@
 ---
 title: "Lint, Active Record SQLite Tests (1) failing on main @fcbc702b"
-status: ready
+status: in-progress
 updated: 2026-10-01
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#8334
+claim: "2026-10-01T16:02:41Z"
+assignee: "red-fcbc702b-r10"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "unported-live-test guard is red on main for 10 stale exclusions and inert in CI"
-status: draft
+status: closed
 updated: 2026-10-01
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of unported-live-test-guard-is-red-with-vendor-populated (filed 2026-09-30, same RFC); that story lists 8 offenders, the guard now prints 10 — add fixtures_test.rb FixturesWithoutInstantiationTest 'visibility of accessor method' (fixtures.test.ts:587)"
 ---
 
 ## Context

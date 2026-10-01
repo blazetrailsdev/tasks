@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the option keys activerecord ports never read (delegated_type, add_column_options!)"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args

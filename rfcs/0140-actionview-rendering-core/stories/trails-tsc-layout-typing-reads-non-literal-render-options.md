@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: read a per-render layout from non-literal render options and layout.call(this, ...)"
-status: draft
+status: claimed
 updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-01T16:56:27Z"
+assignee: "red-fcbc702b"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "port-action-pack-assertions-render-file-builder-and-api-skips"
-status: draft
+status: blocked
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "4 of the 6 stubs cannot be ported today. (a) test_with_routing_works_with_api_only_controllers waits on 0141's api-redirect-to-override-and-head-response-are-invented, still draft; API still includes only StrongParameters (action-controller/api.ts:59). (b) The three 'rendering xml ...' tests wait on 0140's builder-template-handler-and-actionpack-builder-fixtures, which CLOSED as will-not-port (trails#8135 recorded template/handlers/builder.rb in scripts/parity/unported-files/actionview.ts; no builder handler will exist), so the story's 'replace with the Rails body once its blocker lands' is unattainable for them and the body needs a scope decision (permanent skip receipt vs. a builder port). Only the two render_file tests (vendor README.rdoc into packages/actionpack) are actionable now."
 closed-reason: null
 ---
 

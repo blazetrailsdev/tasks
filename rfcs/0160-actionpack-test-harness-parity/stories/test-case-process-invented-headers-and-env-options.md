@@ -1,6 +1,6 @@
 ---
 title: "test-case-process-invented-headers-and-env-options"
-status: draft
+status: ready
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

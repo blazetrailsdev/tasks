@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Inheritance's find_sti_class call rows (discriminate_class_for_record, subclass_from_attributes)"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8336
 claim: "2026-10-01T15:55:05Z"
 assignee: "activemodel-converge-secure-password-bcrypt-password"
 blocked-by: null

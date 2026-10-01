@@ -1,6 +1,6 @@
 ---
 title: "activemodel: converge the call rows in attribute-registration, serializers/json, type/date and the comparability args row"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: calls-args

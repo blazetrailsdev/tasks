@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: name the enclosing tag for a diagnostic inside a multi-line <% %>"
-status: draft
+status: ready
 updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null

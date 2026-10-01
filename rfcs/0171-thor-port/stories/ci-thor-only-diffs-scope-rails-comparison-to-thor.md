@@ -1,7 +1,7 @@
 ---
 title: "CI: a thor-only diff runs Rails API/Test Comparison for the thor package only"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["ci-thor-only-diffs-run-minimal-test-lanes"]
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8337
+claim: "2026-10-01T16:04:05Z"
+assignee: "ci-thor-only-diffs-scope-rails-comparison-to-thor"
 blocked-by: null
 closed-reason: null
 ---
