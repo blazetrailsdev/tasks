@@ -1,6 +1,6 @@
 ---
 title: "test-case-process-invented-headers-and-env-options"
-status: ready
+status: in-progress
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8361
+claim: "2026-10-01T22:42:01Z"
+assignee: "test-case-process-invented-headers-and-env-options"
 blocked-by: null
 closed-reason: null
 ---

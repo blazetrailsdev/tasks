@@ -1,7 +1,7 @@
 ---
 title: "InsertAll::Builder never ports extract_types_from_columns_on — no types memo, and the unknown-column raise sits elsewhere"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#7121
+claim: "2026-10-01T22:21:58Z"
+assignee: "active-support-test-case-carries-setup-and-teardown-instance-side"
 blocked-by: null
 closed-reason: null
 ---

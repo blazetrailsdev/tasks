@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Shell (delegation, with_padding) and Shell::Basic's output half, plus Shell::Terminal"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-errors-nested-context-and-version"]
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8360
+claim: "2026-10-01T22:02:00Z"
+assignee: "set-lock-thread-thread-arm-and-thread-load-interlock-aware-monitor"
 blocked-by: null
 closed-reason: null
 ---

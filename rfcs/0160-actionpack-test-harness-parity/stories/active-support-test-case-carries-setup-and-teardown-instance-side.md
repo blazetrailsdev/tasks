@@ -1,6 +1,6 @@
 ---
 title: "active-support-test-case-carries-setup-and-teardown-instance-side"
-status: ready
+status: in-progress
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8362
+claim: "2026-10-01T22:21:58Z"
+assignee: "active-support-test-case-carries-setup-and-teardown-instance-side"
 blocked-by: null
 closed-reason: null
 ---
