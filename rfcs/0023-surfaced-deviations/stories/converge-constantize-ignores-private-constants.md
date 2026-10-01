@@ -1,7 +1,7 @@
 ---
 title: "constantize must ignore private constants, as Object.const_get does"
-status: draft
-updated: 2026-07-28
+status: closed
+updated: 2026-10-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Already shipped, not a visibility decision: constantize-resolves-private-constants-by-scoped-name (RFC 0113, trails#7718) made constantize/safeConstantize ignore the private mark and removed middleOptions' anonymousClass, and private-constant-mark-is-write-only-after-constantize-ignores-it (RFC 0113) deleted the mark and its tests. Verified on main: no privateConstant/_privateConstants in packages/*/src, and middleOptions is line-for-line has_and_belongs_to_many.rb:71-78."
 ---
 
 ## Context

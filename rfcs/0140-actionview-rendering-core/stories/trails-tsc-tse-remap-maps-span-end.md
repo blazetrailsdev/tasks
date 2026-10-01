@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc: map a .tse diagnostic's end through the source map, not the shim span length"
-status: claimed
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 1
-pr: null
+pr: trails#8315
 claim: "2026-09-30T21:11:51Z"
 assignee: "action-controller-render-is-untyped"
 blocked-by: null

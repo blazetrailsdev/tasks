@@ -1,6 +1,6 @@
 ---
 title: "error-inspect-renders-receiver-class-name"
-status: draft
+status: in-progress
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8313
+claim: "2026-10-01T01:20:28Z"
+assignee: "error-inspect-renders-receiver-class-name"
 blocked-by: null
 closed-reason: null
 ---

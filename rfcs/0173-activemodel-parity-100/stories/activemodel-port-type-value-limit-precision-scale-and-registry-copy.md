@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Type::Value's limit / precision / scale readers and Type::Registry#initialize_copy"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: api-surface

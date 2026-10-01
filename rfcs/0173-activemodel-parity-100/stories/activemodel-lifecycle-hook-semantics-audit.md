@@ -1,6 +1,6 @@
 ---
 title: "activemodel: every included / extended / inherited hook's behaviour is carried (7 skipped hooks)"
-status: claimed
+status: done
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: skips
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#8314
 claim: "2026-10-01T00:30:26Z"
 assignee: "arel-score-core-object-names-nil-and-case-then"
 blocked-by: null

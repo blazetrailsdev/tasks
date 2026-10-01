@@ -1,6 +1,6 @@
 ---
 title: "activemodel: verify and pin the 18 value-protocol pairs matched since the body-pin floor"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: pins
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8313
 claim: "2026-10-01T00:39:41Z"
 assignee: "arel-verify-and-pin-eql-hash-bodies"
 blocked-by: null

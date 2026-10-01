@@ -1,6 +1,6 @@
 ---
 title: "arel: port BoundSqlLiteral#inspect and the Comment / Window initialize_copy bodies"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: api-surface

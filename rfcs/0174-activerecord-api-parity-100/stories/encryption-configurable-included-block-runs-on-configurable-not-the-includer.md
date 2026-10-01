@@ -1,6 +1,6 @@
 ---
 title: "encryption-configurable-included-block-runs-on-configurable-not-the-includer"
-status: draft
+status: closed
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of encryption-configurable-included-block-runs-on-the-module-not-the-includer"
 ---
 
 ## Context

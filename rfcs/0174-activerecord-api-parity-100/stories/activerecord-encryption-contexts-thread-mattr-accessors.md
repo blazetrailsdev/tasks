@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Encryption::Contexts default_context / custom_contexts thread_mattr_accessors"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface

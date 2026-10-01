@@ -1,7 +1,7 @@
 ---
 title: "action-controller-render-is-untyped"
-status: claimed
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#8315
 claim: "2026-09-30T21:11:51Z"
 assignee: "action-controller-render-is-untyped"
 blocked-by: null

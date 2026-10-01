@@ -1,7 +1,7 @@
 ---
 title: "config_accessor is private in Rails; trails' configAccessor is publicly callable"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-10-01
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Owner decision landed by trails#8317: no JS runtime privates (CLAUDE.md § "Method visibility is compile-time only"). The story''s only acceptance criterion is un-skipping configurable_test.rb:123-129, assert_raises NoMethodError on a private class method, which needs run-time visibility; nothing else in it survives (placement is config-accessor-belongs-in-configurable-not-module-ext). The test is a permanent skip.'
 ---
 
 ## Context

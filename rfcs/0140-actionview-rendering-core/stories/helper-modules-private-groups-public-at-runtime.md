@@ -1,7 +1,7 @@
 ---
 title: "Helper modules' Rails-private groups (active_model_helper.rb:39, tag_helper.rb:574, form_tag_helper.rb:985) are public at runtime"
-status: in-progress
-updated: 2026-09-30
+status: closed
+updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: trails#8309
 claim: "2026-09-30T23:24:46Z"
 assignee: "test-case-fixtures-class-method-is-untyped"
 blocked-by: null
-closed-reason: null
+closed-reason: 'Owner decision landed by trails#8317: no JS runtime privates (CLAUDE.md § "Method visibility is compile-time only"). There is no rbModPrivate or visibility side table to record the helper modules'' private groups in; they stay TS-private/@internal and public at run time by design.'
 ---
 
 ## Context

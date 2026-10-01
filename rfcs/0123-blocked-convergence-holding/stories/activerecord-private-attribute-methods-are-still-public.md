@@ -1,7 +1,7 @@
 ---
 title: "activerecord-private-attribute-methods-are-still-public"
-status: blocked
-updated: 2026-09-26
+status: closed
+updated: 2026-10-01
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-09-23T14:33:22Z"
 assignee: "activemodel-respond-to-cannot-hide-private-methods"
-blocked-by: "Visibility carrier half landed (trails#8113, ruby-compat/src/object.ts methodVisibilities); still blocked: the direct-access NoMethodError arms need an RFC-owner decision (no caller context on JS property access). Parks remain at activerecord/src/attribute-methods.test.ts:759,1719,1740."
-closed-reason: null
+blocked-by: null
+closed-reason: 'Owner decision landed by trails#8317: no JS runtime privates (CLAUDE.md § "Method visibility is compile-time only"). trails carries no method visibility at run time, so the four access-control tests (attribute_methods_test.rb:998-1033) are permanently unportable: parked as PERMANENT-SKIP citing that section and registered in scripts/parity/unported-files.'
 ---
 
 ## Context

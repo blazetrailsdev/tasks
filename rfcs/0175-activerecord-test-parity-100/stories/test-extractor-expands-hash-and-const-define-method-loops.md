@@ -1,7 +1,7 @@
 ---
 title: "Expand hash-literal and same-file-constant define_method loops in the test extractor"
-status: claimed
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#8315
 claim: "2026-09-30T21:11:51Z"
 assignee: "action-controller-render-is-untyped"
 blocked-by: null

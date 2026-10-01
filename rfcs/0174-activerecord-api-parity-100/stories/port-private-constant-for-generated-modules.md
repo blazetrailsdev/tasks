@@ -1,7 +1,7 @@
 ---
 title: "port-private-constant-for-generated-modules"
-status: draft
-updated: 2026-09-30
+status: closed
+updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Owner decision landed by trails#8317: no JS runtime privates (CLAUDE.md § "Method visibility is compile-time only"). private_constant is not ported: no run-time constant-visibility carrier is added, and nothing in trails would read one.'
 ---
 
 ## Context
