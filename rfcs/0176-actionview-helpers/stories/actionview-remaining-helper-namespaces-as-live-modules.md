@@ -2,7 +2,7 @@
 title: "actionview-remaining-helper-namespaces-as-live-modules"
 status: ready
 updated: 2026-10-01
-rfc: "0140-actionview-rendering-core"
+rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
 deps: []
