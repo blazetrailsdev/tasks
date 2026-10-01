@@ -13,6 +13,8 @@ packages:
   # through an activerecord call site.
   - "activerecord"
   - "date"
+  - "actionpack"
+  - "activemodel"
 clusters:
   - "mri-relocation"
   - "measurement"

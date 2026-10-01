@@ -2,7 +2,7 @@
 title: "Unify the eight divergent Ruby class-name message helpers onto one ActiveSupport pair"
 status: draft
 updated: 2026-08-21
-rfc: "0023-surfaced-deviations"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages:
   - "actionpack"
