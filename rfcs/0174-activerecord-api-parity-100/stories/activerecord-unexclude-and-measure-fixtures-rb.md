@@ -1,14 +1,14 @@
 ---
 title: "activerecord: score fixtures.rb — FixtureSet, Fixture and FixtureSet::File are ported but unmeasured"
 status: ready
-updated: 2026-09-30
+updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: excluded-files
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 500
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

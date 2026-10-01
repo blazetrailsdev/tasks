@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat Hash compares keys by identity where Ruby's Hash uses hash/eql?"
-status: draft
-updated: 2026-09-23
+status: in-progress
+updated: 2026-10-01
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8344
+claim: "2026-10-01T18:06:48Z"
+assignee: "ruby-compat-hash-keys-by-identity-not-eql"
 blocked-by: null
 closed-reason: null
 ---

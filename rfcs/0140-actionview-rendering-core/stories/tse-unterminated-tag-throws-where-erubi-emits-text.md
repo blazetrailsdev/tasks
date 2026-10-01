@@ -1,6 +1,6 @@
 ---
 title: "TSE throws on an unterminated tag where Erubi emits it as text"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null

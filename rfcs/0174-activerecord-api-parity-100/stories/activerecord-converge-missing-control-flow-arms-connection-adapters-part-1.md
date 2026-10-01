@@ -1,14 +1,14 @@
 ---
 title: "activerecord: restore the 30 dropped Rails branches in connection-adapters part 1 (report-arms missing rows)"
 status: ready
-updated: 2026-09-30
+updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: arms
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 600
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

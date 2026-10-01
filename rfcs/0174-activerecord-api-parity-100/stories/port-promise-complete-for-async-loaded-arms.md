@@ -1,6 +1,6 @@
 ---
 title: "Port Promise::Complete and close the @async arms that drop it (ids' loaded? arm)"
-status: in-progress
+status: blocked
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: trails#8342
 claim: "2026-10-01T17:35:01Z"
 assignee: "port-remaining-migration-compatibility-test-cases"
-blocked-by: null
+blocked-by: "Maintainer decision 2026-10-01 (trails#8342): do not port ActiveRecord::Promise; async readers return native promises. promise.rb stays on the unported-files list."
 closed-reason: null
 ---
 

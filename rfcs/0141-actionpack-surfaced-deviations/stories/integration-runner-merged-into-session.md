@@ -1,14 +1,14 @@
 ---
 title: "integration-runner-merged-into-session"
 status: draft
-updated: 2026-09-28
+updated: 2026-10-01
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "Port Marshal.dump / Marshal.load for core types and plain ivar objects into ruby-compat"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-01
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

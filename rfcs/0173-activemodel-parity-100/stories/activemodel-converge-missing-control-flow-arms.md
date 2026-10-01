@@ -1,14 +1,14 @@
 ---
 title: "activemodel: restore the 11 dropped Rails branches (report-arms missing rows)"
 status: ready
-updated: 2026-09-30
+updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: arms
 packages: ["activemodel"]
 deps: ["activemodel-converge-secure-password-bcrypt-password"]
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

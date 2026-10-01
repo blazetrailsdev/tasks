@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: read a per-render layout from non-literal render options and layout.call(this, ...)"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null

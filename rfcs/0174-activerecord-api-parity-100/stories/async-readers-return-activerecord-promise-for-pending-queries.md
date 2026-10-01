@@ -1,6 +1,6 @@
 ---
 title: "async-readers-return-activerecord-promise-for-pending-queries"
-status: draft
+status: closed
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Maintainer decision 2026-10-01 (trails#8342): ActiveRecord::Promise is not ported; async readers return native promises."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "Port thor/error.rb (with both DidYouMean SpellCheckers), nested_context.rb and version.rb"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0171-thor-port"
 cluster: null

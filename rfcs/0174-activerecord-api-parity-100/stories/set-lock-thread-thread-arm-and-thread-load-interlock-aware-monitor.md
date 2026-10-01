@@ -1,6 +1,6 @@
 ---
 title: "set-lock-thread-thread-arm-and-thread-load-interlock-aware-monitor"
-status: draft
+status: ready
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

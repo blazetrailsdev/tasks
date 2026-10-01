@@ -1,6 +1,6 @@
 ---
 title: "arel: burn the 14 moved extras on managers, collectors, table and namespaces"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: placement
@@ -9,7 +9,7 @@ deps: ["override-of-inherited-rails-member-scores-moved"]
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: trails#8345
 claim: "2026-10-01T17:54:57Z"
 assignee: "arel-burn-moved-extra-surface-managers-collectors-namespaces"
 blocked-by: null

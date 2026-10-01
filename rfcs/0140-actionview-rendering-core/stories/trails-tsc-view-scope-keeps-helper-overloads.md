@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: a bare helper in a .tse view keeps every overload, not OmitThisParameter's last"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8343
 claim: "2026-10-01T17:15:02Z"
 assignee: "test-case-check-required-ivars-and-setup-callback"
 blocked-by: null
