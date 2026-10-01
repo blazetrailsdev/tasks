@@ -1,6 +1,6 @@
 ---
 title: "ActiveRecord::TestFixtures is a class module, so before_setup cannot call super"
-status: draft
+status: done
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8355
+claim: "2026-10-01T21:02:31Z"
+assignee: "test-fixtures-is-a-live-module-so-before-setup-reaches-super"
 blocked-by: null
 closed-reason: null
 ---

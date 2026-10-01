@@ -1,6 +1,6 @@
 ---
 title: "arel: burn the 21 moved extras declared on nodes/ files"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: placement
@@ -9,7 +9,7 @@ deps: ["override-of-inherited-rails-member-scores-moved"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#8356
 claim: "2026-10-01T20:15:03Z"
 assignee: "arel-burn-moved-extra-surface-nodes"
 blocked-by: null

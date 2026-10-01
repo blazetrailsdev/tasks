@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: createTsePlugin still virtualizes .tse without the view scope"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0035-tsserver-editor-plugin"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Move the registered-constant table into ruby-compat and port rb_path_to_class / rb_mod_name"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity

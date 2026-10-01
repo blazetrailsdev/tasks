@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: two-build tests need explicit timeouts; dev test name is stale"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0061-ci-failures"
 cluster: null

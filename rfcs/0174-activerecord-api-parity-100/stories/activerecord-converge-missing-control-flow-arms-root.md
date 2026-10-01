@@ -1,6 +1,6 @@
 ---
 title: "activerecord: restore the 30 dropped Rails branches in root (report-arms missing rows)"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: arms
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: 1
-pr: null
+pr: trails#8357
 claim: "2026-10-01T20:43:05Z"
 assignee: "activerecord-converge-missing-control-flow-arms-root"
 blocked-by: null
