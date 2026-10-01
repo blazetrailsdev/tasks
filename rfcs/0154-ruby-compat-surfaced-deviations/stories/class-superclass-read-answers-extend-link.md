@@ -20,20 +20,31 @@ closed-reason: null
 
 Ruby's `Class#superclass` (`vendor/ruby/v3.3.11/object.c:2191-2210` `rb_class_superclass`) skips the iclasses that `include` / `extend` splice into the ancestry and answers the next real class. So `Class.new(ActiveRecord::Base) { extend SomeModule }.superclass` is `ActiveRecord::Base`.
 
-trails reads `superclass` as `Object.getPrototypeOf(klass)`. ruby-compat's `Module#extendObject` (`packages/ruby-compat/src/include.ts`, the `Object.setPrototypeOf(obj, link)` arm) splices a link into a class receiver's static prototype chain, so after a `Module` is extended onto a model class `Object.getPrototypeOf(klass)` is that link, not the superclass. The link inherits every static from the real superclass, so it passes for a class and the wrong answer is silent:
+ruby-compat's `Module#extendObject` (`packages/ruby-compat/src/include.ts`) splices a link into a class receiver's static prototype chain, so after a `Module` is extended onto a model class `Object.getPrototypeOf(klass)` is that link, not the superclass. The link inherits every static from the real superclass, so it passes for a class and the wrong answer is silent.
 
-- `defineAttributeMethods` (`packages/activerecord/src/attribute-methods.ts:318`, Rails `attribute_methods.rb:111` `superclass.define_attribute_methods unless base_class?`) calls `defineAttributeMethods` with the link as receiver, which then calls `loadSchema` with `this` = the link.
-- `setBaseClass` (`packages/activerecord/src/inheritance.ts`, Rails `inheritance.rb:340-355`) compares the link against `ActiveRecord.Base`, misses, and recurses into `baseClass.call(link)`, so a direct subclass of `Base` does not answer itself as `base_class`.
-- `generateAliasAttributes` (`attribute-methods.ts:340`, Rails `attribute_methods.rb:128`) has the same read.
+trails#8323 added the port, `rbClassSuperclass` (`packages/ruby-compat/src/object.ts`, with its test in `object.trails.test.ts`), and converted the seven reads in `inheritance.ts` and `attribute-methods.ts` that Rails spells `superclass`: `define_attribute_methods` (`attribute_methods.rb:111`), `generate_alias_attributes` (`:128`), `instance_method_already_implemented?` (`:170`), `method_defined_within?` (`:187`), `set_base_class`, `descends_from_active_record?` (`inheritance.rb:85`) and `registerSubclass`.
 
-Found while porting `schema_loading_test.rb` (`vendor/rails/v8.0.2/activerecord/test/cases/schema_loading_test.rb:5-17`): its `SchemaLoadCounter` Concern has a `ClassMethods#load_schema!` that calls `super`. Written as a `Module` (`mod.defineMethod` + `mod.superMethod`), `superMethod` answered `undefined` because the receiver it was handed was the link itself. `packages/activerecord/src/schema-loading.test.ts` therefore ships `ClassMethods` as a plain object (which `extend()` copies onto the class as own statics, no link) and spells `super` as `Object.getPrototypeOf(this).loadSchemaBang.call(this)`.
+This story is the rest. Each of these still reads `Object.getPrototypeOf(<class>)` where Rails reads `superclass` (line numbers as of trails#8323):
 
-## Converged shape
-
-ruby-compat gains the port of `rb_class_superclass` (a function that walks `Object.getPrototypeOf` past singleton / include links to the next real class), and activerecord's `superclass` reads go through it.
+- `model-schema.ts:270`
+- `store.ts:65`
+- `persistence.ts:145`
+- `scoping.ts:78`
+- `scoping/default.ts:77`
+- `connection-handling.ts:387`
+- `relation/delegation.ts:91`
+- `core.ts:398`
+- `base.ts:685`
+- `migration.ts:1145`
+- `translation.ts:14`
+- `no-touching.ts:18`
+- `validations/uniqueness.ts:147`
+- `associations.ts:118`, `:164`
+- `associations/builder/has-and-belongs-to-many.ts:31-34`
+- `reflection.ts:816-823`
+- `inheritance.ts` `isStiSubclass` / `getStiBase`, and `attribute-methods.ts` `isDangerousClassMethod` / `frameworkBase`: ancestor walks that read an inherited static or test an own property, so a link does not change today's answer. Convert them only where the Rails body they mirror says `superclass`.
 
 ## Acceptance criteria
 
-- A ruby-compat test: a class with a `Module` extended onto it answers its real superclass, cited to `object.c:2191`.
-- `defineAttributeMethods`, `generateAliasAttributes`, `setBaseClass` and the other `Object.getPrototypeOf(<class>)`-as-`superclass` reads in `packages/activerecord/src` use it.
-- `schema-loading.test.ts`'s `SchemaLoadCounter.ClassMethods` becomes a `Module` whose `loadSchemaBang` calls `mod.superMethod(this, "loadSchemaBang")`, and its three tests stay green.
+- Every read above is checked against its Rails body. One that Rails spells `superclass` uses `rbClassSuperclass`; one that is a plain ancestor walk is left and noted in the PR body.
+- A test extends a `Module` onto a model class and exercises at least one converted read from each file touched.
