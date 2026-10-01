@@ -53,7 +53,35 @@ each blocked on harness that is not ported yet:
   tests (`:504-517`) render `test/hello_xml_world.builder`, which waits on
   0140's `builder-template-handler-and-actionpack-builder-fixtures`.
 
+`assert_redirected_to` with hash URL options, and the `with_routing` tests, need
+`process` to build the request through the routes: `setup_request`
+(`action_controller/test_case.rb:598-617`) calls `@routes.generate_extras` and
+`@request.assign_parameters`, and `check_required_ivars` (`:685-693`) raises when
+`@routes` is unset. Rails sets no default `@routes` in `test_case.rb`; each suite
+sets it (`actionpack/test/abstract_unit.rb:80`, `railties/lib/rails/test_help.rb:37`).
+So every test that builds an `ActionController::TestCase` sets `routes` as its
+Rails test does:
+
+- `packages/actionpack/src/action-controller/controller/test-case.test.ts`,
+  `log-subscriber.test.ts`, `rate-limiting.test.ts`,
+  `request-forgery-protection.test.ts`, `mime/respond-to.test.ts`,
+  `flash.test.ts`, `flash-hash.test.ts`, `integration.test.ts`
+- `packages/actionpack/src/action-controller/test-case.test.ts`,
+  `test-case.trails.test.ts`, `metal/request-forgery-protection.trails.test.ts`,
+  `metal/etag-with-flash.ts`
+- `packages/actionpack/src/action-dispatch/middleware/flash.ts`,
+  `testing/assertions/response.test.ts`,
+  `assertions/response-assertions.test.ts`
+- `packages/actionview/src/actionpack/controller/render.test.ts`, `layout.test.ts`
+- `packages/trailties/src/info-controller.test.ts`, `health-controller.test.ts`,
+  `welcome-controller.test.ts`, `application-controller.trails.test.ts`,
+  `boot-app-test-help.trails.test.ts`
+
 ## Acceptance criteria
+
+- `TestCase#setupRequest` calls `routes.generateExtras` and
+  `TestRequest#assignParameters`, `checkRequiredIvars` is ported and called
+  first in `process`, and every `TestCase` consumer above sets `routes`.
 
 - `TestCase#assertRedirectedTo` is replaced by the `ResponseAssertions` port
   (mixed in, not wrapped), and `normalize_argument_to_redirection` reaches the

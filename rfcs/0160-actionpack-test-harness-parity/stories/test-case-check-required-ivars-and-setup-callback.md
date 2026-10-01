@@ -46,7 +46,7 @@ test's setup method."` when `@routes`, `@controller`, `@request` or `@response` 
 
 ## Acceptance criteria
 
-- `check_required_ivars` is ported at its Rails name and called first in `process`, and the
-  actionpack suite stays green.
+- `check_required_ivars`: shipped by trails#8322, with the `setupRequest` convergence it
+  depended on. Items 2 and 3 remain.
 - `setupControllerRequestAndResponse` runs as a `setup` callback, not from the constructor.
 - `test_case.rb` reports 60/60 in `pnpm parity:api --package actioncontroller`.
