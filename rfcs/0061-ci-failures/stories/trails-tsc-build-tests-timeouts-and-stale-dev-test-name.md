@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: two-build tests need explicit timeouts; dev test name is stale"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
+pr: trails#8352
 claim: "2026-10-01T20:42:33Z"
 assignee: "trails-tsc-build-tests-timeouts-and-stale-dev-test-name"
 blocked-by: null

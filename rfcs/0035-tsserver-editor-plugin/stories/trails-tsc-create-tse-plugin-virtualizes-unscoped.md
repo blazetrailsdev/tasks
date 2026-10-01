@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: createTsePlugin still virtualizes .tse without the view scope"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0035-tsserver-editor-plugin"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8352
 claim: "2026-10-01T20:42:33Z"
 assignee: "trails-tsc-build-tests-timeouts-and-stale-dev-test-name"
 blocked-by: null

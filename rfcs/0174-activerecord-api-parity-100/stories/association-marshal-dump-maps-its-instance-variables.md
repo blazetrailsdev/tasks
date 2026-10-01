@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Association#marshal_dump / marshal_load round-trip every instance variable"
-status: draft
+status: in-progress
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8353
+claim: "2026-10-01T20:51:42Z"
+assignee: "association-marshal-dump-maps-its-instance-variables"
 blocked-by: null
 closed-reason: null
 ---
