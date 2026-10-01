@@ -39,6 +39,10 @@ file_destination[0..-4], config, &@block)`, and the rest through `copy_file`. Bo
       directory is the destination root itself.
 - [ ] **`config[:exclude_pattern]`** is a Ruby Regexp and `recursive: false` stops at one level.
 - [ ] **`Util.escape_globs`** before globbing (the `app{1}` fixture).
+- [ ] **Async glob** (from `ruby-compat-async-fs-verbs-for-thor-actions`, trails#8318).
+      `Dir.glob(lookup, File::FNM_DOTMATCH)` is `Dir.globAsync(lookup, File.FNM_DOTMATCH)`. As in
+      MRI it answers `.` for the first directory read (`vendor/ruby/v3.3.11/dir.c:2705-2713`),
+      which `execute!`'s `next if File.directory?(file_source)` skips.
 
 ## Acceptance criteria
 

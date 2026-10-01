@@ -41,9 +41,25 @@ no async:
 
 ## Acceptance criteria
 
-- [ ] Each verb is an optional async `FsAdapter` member, implemented by the node adapter and
-      by the in-memory adapter the website uses. Each follows the Ruby semantics it stands for:
-      `rm_rf` ignores a missing path, and glob's `FNM_DOTMATCH` includes dotfiles but not `.`/`..`.
-- [ ] ruby-compat exposes them at their Ruby spellings (`FileUtils.chmodR`, `File.isIdentical`,
-      `File.isSymlink`, `Dir.glob(pattern, File.FNM_DOTMATCH)`) as async forms, next to the
-      existing sync ones, with `.trails.test.ts` cases on both adapters.
+- [ ] `symlink`, `link` and `chmod` are optional async `FsAdapter` members, implemented by the
+      node adapter. The in-memory adapter the website uses stores path and text only, so it has
+      none of the three: `File.symlinkAsync` / `File.linkAsync` raise `NotImplementedError`
+      there, as MRI does on a platform without the syscall
+      (`vendor/ruby/v3.3.11/file.c:3069,3099`), and `chmod` is a no-op.
+- [ ] Glob and recursive remove are not adapter members. They walk through the adapter's
+      existing `readdir` / `lstat` / `exists` / `unlink` / `rmdir`, which the in-memory adapter
+      implements, so each has one implementation.
+- [ ] Each follows the Ruby semantics it stands for. `rm_rf` ignores a missing path and, under
+      `force`, skips an entry it cannot remove and continues
+      (`vendor/ruby/v3.3.11/lib/fileutils.rb:1449-1456`). Glob's `FNM_DOTMATCH` includes
+      dotfiles and never `..`; it does include `.` for the first directory read, as MRI does:
+      `Dir.glob("g/*", File::FNM_DOTMATCH)` answers `g/.` (`vendor/ruby/v3.3.11/dir.c:2705-2713`).
+- [ ] ruby-compat exposes the async forms with an `Async` suffix, next to the sync ones, with
+      `.trails.test.ts` cases on both adapters. A sync static cannot simply become async:
+      `Dir.glob` is called from constructors (`activerecord/src/fixtures.ts:280`,
+      `activesupport/src/file-update-checker.ts:28`). The members the dependent Thor stories
+      call are `File.isIdenticalAsync`, `File.isSymlinkAsync`, `File.symlinkAsync`,
+      `File.linkAsync`, `File.chmodAsync`, `Dir.childrenAsync`,
+      `Dir.globAsync(pattern, File.FNM_DOTMATCH)`, `FileUtils.rmRAsync`, `FileUtils.rmRfAsync`,
+      `FileUtils.removeEntryAsync` and `FileUtils.chmodRAsync(mode, list)` (Integer mode only).
+      Binary write with a permission is the adapter's existing `writeFile(path, bytes, { mode })`.

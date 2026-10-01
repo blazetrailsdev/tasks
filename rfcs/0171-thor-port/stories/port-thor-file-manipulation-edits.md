@@ -39,6 +39,9 @@ closed-reason: null
 - [ ] **`inject_into_class`**' regex `/class #{klass}\n|class #{klass} .*\n/` is written for
       Ruby source. For a TS class declaration (`export class Foo extends Bar {`), the second
       alternative matches too. Assert that on a generated TS file.
+- [ ] **Async fs forms** (from `ruby-compat-async-fs-verbs-for-thor-actions`, trails#8318).
+      `FileUtils.chmod_R` is `FileUtils.chmodRAsync(mode, list)` (Integer mode only),
+      `FileUtils.rm_rf` is `FileUtils.rmRfAsync`, and `File.symlink?` is `File.isSymlinkAsync`.
 
 ## Acceptance criteria
 
