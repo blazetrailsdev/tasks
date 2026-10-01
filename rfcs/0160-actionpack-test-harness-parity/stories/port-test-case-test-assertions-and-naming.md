@@ -1,6 +1,6 @@
 ---
 title: "Port test_case_test.rb's request-reset, upload and class-naming tests (lines 750-1294)"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-test-case-test-requests-and-params", "port-actionpack-view-and-help
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#8329
 claim: "2026-10-01T13:55:03Z"
 assignee: "port-test-case-test-assertions-and-naming"
 blocked-by: null

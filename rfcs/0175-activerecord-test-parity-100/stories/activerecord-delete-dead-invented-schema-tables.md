@@ -1,7 +1,7 @@
 ---
 title: "activerecord: delete the 62 invented canonical-schema tables nothing uses"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: schema-fixtures
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8330
+claim: "2026-10-01T14:15:01Z"
+assignee: "activerecord-delete-dead-invented-schema-tables"
 blocked-by: null
 closed-reason: null
 ---
