@@ -60,7 +60,8 @@ open remainder, so that 0140 can close on the goal it declared.
 `pnpm parity:api --package actionview --files` at trails `8f2186e9db` reports
 actionview at **1173/1479 methods (79.3%)**, 80 of 96 files. (Measured with
 `API_COMPARE_ALLOW_STALE_BUILD=1` from a checkout whose `dist` was stale, so
-treat the totals as indicative and re-measure before sizing stories.)
+the totals are indicative. Re-measuring from a fresh build is the first step of
+Rollout phase 1.)
 
 The helper rows that are not at 100%:
 
@@ -85,7 +86,7 @@ The helper rows that are not at 100%:
 That is 192 missing methods in compared helper files. Every other compared
 helper file is at 100%.
 
-### The exclusion register hides more, and three of its entries are stale
+### The exclusion register hides more, and two of its helper entries are stale
 
 `scripts/parity/unported-files/actionview.ts` removes these helper files from
 the comparison entirely, so they appear in no row above:
@@ -103,12 +104,24 @@ The last two are excluded for reasons that are no longer true.
 `packages/actionview/src/helpers/asset-tag-helper.ts` is a port of
 `asset_tag_helper.rb`, yet the register still says "nothing under it is
 ported" and "no trails view layer". Until those entries are removed the
-headline figure neither credits nor checks either file. (`/layouts.rb` is
-excluded on the same stale reasoning; that one is RFC 0140's to remove.)
+headline figure neither credits nor checks either file.
+
+(The register's `/layouts.rb` entry is stale in the same way, since
+`packages/actionview/src/layouts.ts` exists. Layouts are RFC 0140's scope, so
+that entry is not counted here. No 0140 story covers it yet; the 2026-10-01
+refine report flags it for filing there.)
 
 The other entries share `FORM_HELPER_REASON`, "trails ports no view layer",
 which stopped being true when `form_helper.rb` reached 81%. Removing them is
 what turns the select and collection helpers into counted debt.
+
+Removing entries **lowers the headline figure before it raises it**, because
+hidden files become counted. By `def` count in the Rails source, the nine
+genuinely unported files add about 49 methods to the missing column
+(`form_options_helper.rb` alone is 27), and the two stale entries add about 16
+that should mostly match on arrival. So the working baseline is roughly
+**192 + 49 = 241 missing helper methods**, to be replaced by the measured
+figure in phase 1.
 
 ### Unported Rails test files
 
@@ -140,17 +153,37 @@ constraints carry over from the work done under RFC 0140:
 
 ## Stories
 
-Rehomed in at filing. Nothing new is filed by this RFC yet.
+This RFC files no new stories. The seven below were rehomed by
+`pnpm tasks rehome ... --to 0176-actionview-helpers` on tasks `main` on
+2026-10-01, after this RFC was merged and numbered (`ca549f1bf`,
+`283a05198`, `06aafd5ec`).
 
-| Story                                                            | From | Status at rehome |
-| ---------------------------------------------------------------- | ---- | ---------------- |
-| `actionview-remaining-helper-namespaces-as-live-modules`         | 0140 | ready            |
-| `form-builder-nested-attributes-probe-misses-ar-writer-spelling` | 0140 | ready            |
-| `port-form-helper-test-form-for-and-fields-for-suite`            | 0140 | ready            |
-| `dom-assertions-fragment-parses-with-nokogiri-html4`             | 0140 | blocked          |
-| `port-action-view-csp-helper`                                    | 0141 | draft            |
-| `port-action-view-csrf-helper-and-generated-layout-meta-tags`    | 0141 | draft            |
-| `move-number-with-delimiter-to-actionview`                       | 0023 | draft            |
+| Story                                                            | From | Status before the move |
+| ---------------------------------------------------------------- | ---- | ---------------------- |
+| `actionview-remaining-helper-namespaces-as-live-modules`         | 0140 | ready                  |
+| `form-builder-nested-attributes-probe-misses-ar-writer-spelling` | 0140 | ready                  |
+| `port-form-helper-test-form-for-and-fields-for-suite`            | 0140 | ready                  |
+| `dom-assertions-fragment-parses-with-nokogiri-html4`             | 0140 | blocked                |
+| `port-action-view-csp-helper`                                    | 0141 | draft                  |
+| `port-action-view-csrf-helper-and-generated-layout-meta-tags`    | 0141 | draft                  |
+| `move-number-with-delimiter-to-actionview`                       | 0023 | draft                  |
+
+**The draft gate applies to all seven, with no exemption.** A story under a
+non-active RFC never surfaces in the ready queue, so the three that are `ready`
+in RFC 0140 stopped being claimable when they moved, and stay that way until
+this RFC is flipped to `active`. That is intended: the owner asked for a draft
+home, and activation is the owner's call. Two of the three
+(`actionview-remaining-helper-namespaces-as-live-modules`,
+`form-builder-nested-attributes-probe-misses-ar-writer-spelling`) depend on
+nothing unfiled, so the cost of the gate is exactly those two stories waiting.
+
+**What this does for RFC 0140.** After the move 0140 holds no open helper
+story. It still cannot close: three rendering-core stories are blocked
+(`render-parser-and-ruby-tracker-when-a-handler-needs-them`,
+`template-spot-spans-the-failing-node`,
+`tse-handler-ports-erb-encoding-tag-and-valid-encoding`) and seven `tse` /
+`trails-tsc` stories are open. The move makes 0140's open set match its stated
+goal; it does not finish it.
 
 Helper stories deliberately left where they are, because their parent RFC owns
 the reason they exist:
@@ -169,8 +202,10 @@ this RFC goes active.
    `FormHelper#checkbox` / `#radio_button` / `#file_field` methods that
    construct them. `port-form-helper-tags-remaining-field-types` (0140) was
    closed as "folded into trails#8249", but that PR's description says these
-   three "are not included", and the parity rows above show all four files at 0. `FormBuilder.field_helpers` already lists `fileField`, `checkbox` and
-   `radioButton`. The `form_for` suite story names this as its dependency.
+   three "are not included". The parity rows above show all four files at
+   zero, while `FormBuilder.field_helpers` already lists `fileField`,
+   `checkbox` and `radioButton`. The `form_for` suite story names the closed
+   story as its dependency, so most of that suite waits on this gap.
 2. **`form_options_helper.rb` and the select / collection `Tags`**, with
    `form_options_helper_test.rb`, `form_collections_helper_test.rb` and the
    i18n variant. Starts with deleting the register entries.
@@ -198,23 +233,50 @@ this RFC goes active.
 
 ## Rollout
 
-Not sequenced yet. The likely order, to be confirmed when stories are filed:
+Phases 3 to 5 have no stories yet; they name the gap each will be filed from.
 
-1. Structure: `actionview-remaining-helper-namespaces-as-live-modules`, and
-   remove the stale register entries so the measurement is honest.
-2. Form fields: checkbox / radio / file tags, then the `form_for` suite.
-3. Selects and collections: `form_options_helper.rb` and its `Tags`.
-4. Dates: `date_helper.rb` and the date/time select `Tags`.
-5. Small files: `csp_helper`, `csrf_helper`, `translation_helper`, the
-   `atom_feed_helper` decision.
+1. **Measure and structure.**
+   - Re-run `pnpm parity:api --package actionview --files` from a fresh
+     `pnpm build` and replace the indicative figures in this README.
+   - `actionview-remaining-helper-namespaces-as-live-modules`
+   - `move-number-with-delimiter-to-actionview`. Its body predates
+     actionview's own `numberWithDelimiter`; what is left is the activesupport
+     side. Re-scope before it goes ready.
+   - Gap 8 (stale register entries), then record the post-removal baseline.
+2. **Form fields.**
+   - `form-builder-nested-attributes-probe-misses-ar-writer-spelling`, first,
+     because Open question 1 decides what the `fields_for` tests assert.
+   - Gap 1 (checkbox / radio / file tags).
+   - `port-form-helper-test-form-for-and-fields-for-suite`. Its `text_field` /
+     `textarea` / `label` / `hidden_field` portion is shippable today, which is
+     why it is `ready`; the rest follows Gap 1, as its own text says.
+   - Gap 4 (the remaining `form_helper.rb` and `form_tag_helper.rb` methods).
+3. **Selects and collections.** Gap 2.
+4. **Dates.** Gap 3.
+5. **Small files.**
+   - `port-action-view-csp-helper`
+   - `port-action-view-csrf-helper-and-generated-layout-meta-tags`
+   - Gaps 5, 6 and 7.
+
+Outside the sequence: `dom-assertions-fragment-parses-with-nokogiri-html4`
+stays blocked until Open question 2 is answered. No phase waits on it, since
+the suites pass against the tokenizer today.
 
 ## Verification
 
-- `pnpm parity:api --package actionview --files` shows every `helpers/**` row
-  at 100%, with no helper file left in
-  `scripts/parity/unported-files/actionview.ts` unless it carries a reason that
-  is true of the tree.
-- `pnpm parity:test --package actionview` lists no unported helper test file.
+Baseline at filing: 192 missing methods across 15 compared helper files, 11
+helper files hidden by the register, 8 Rails helper test files unported.
+
+- `pnpm parity:api --package actionview --files` reports **0 missing** on every
+  `helpers/**` row. From the indicative baseline that is 192 to 0 in compared
+  files, and about 241 to 0 once the register entries are removed.
+- `scripts/parity/unported-files/actionview.ts` holds **0 helper entries**,
+  down from 11, or each survivor carries a reason that is true of the tree
+  (`atom_feed_helper.rb` may become one, per Gap 6).
+- The 8 unported helper test files listed under Motivation reach **0**, and
+  `form_helper_test.rb:1599-4140` has all 168 tests ported.
+- The post-removal baseline measured in phase 1 is written into this section in
+  place of "about 241".
 
 ## Open questions
 
@@ -230,5 +292,9 @@ Not sequenced yet. The likely order, to be confirmed when stories are filed:
 
 ## Changelog
 
-- 2026-10-01: filed as a draft during the RFC 0140 refine; rehomed 4 open
-  stories in from RFC 0140, 2 from RFC 0141 and 1 from RFC 0023.
+- 2026-10-01: filed as a draft during the RFC 0140 refine (tasks#216) and
+  numbered 0176.
+- 2026-10-01: 7 stories rehomed in by verb on `main` (4 from RFC 0140, 2 from
+  RFC 0141, 1 from RFC 0023). Review follow-up: Rollout mapped story by story,
+  Verification given a baseline, the draft gate on the three `ready` stories
+  stated, and RFC 0141's routing table pointed here.

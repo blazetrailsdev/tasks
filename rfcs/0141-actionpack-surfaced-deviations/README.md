@@ -3,7 +3,7 @@ rfc: "0141-actionpack-surfaced-deviations"
 title: "actionpack surfaced deviations — the package's standing convergence bucket"
 status: active
 created: 2026-09-08
-updated: 2026-09-26
+updated: 2026-10-01
 priority: 5
 owner: "@deanmarano"
 packages:
@@ -85,6 +85,7 @@ Out of scope, because another active RFC owns them:
 | ------------------------------------------------------------------- | -------- |
 | `action_dispatch/journey/**` and the routing layer feeding it       | RFC 0139 |
 | ActionView rendering core, and anything in `packages/actionview/**` | RFC 0140 |
+| `action_view/helpers/**` (draft RFC, so not yet schedulable)        | RFC 0176 |
 | Repo-wide arm/guard parity as a measured axis                       | RFC 0113 |
 | Repo-wide error-class and message parity ledgers                    | RFC 0111 |
 | A deviation blocked on an unported subsystem                        | RFC 0123 |
@@ -174,6 +175,8 @@ unique acceptance criteria were folded into its survivor first:
   story here may retire a row it converges, never widen one.
 - **Absorbing the ActionView helper campaign.** The two asset-helper stories
   from 0104 went to RFC 0140 as seeds; helpers are `packages/actionview/**`.
+  Since 2026-10-01 the campaign has its own draft home,
+  `0176-actionview-helpers`, and new helper stories route there.
 
 ## Alternatives considered
 
@@ -247,3 +250,7 @@ None. Two were resolved before filing, both by the RFC owner on 2026-09-08:
   with their clusters; RFC 0104 closed. Filed `status: active`, changed to
   `draft` here at the owner's direction, so the bucket does not surface in a
   ready queue until it is flipped back.
+- 2026-10-01: routing table gains a row for `0176-actionview-helpers`, the
+  draft home for the helper campaign. `port-action-view-csp-helper` and
+  `port-action-view-csrf-helper-and-generated-layout-meta-tags` were rehomed
+  there the same day.
