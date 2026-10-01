@@ -2,7 +2,7 @@
 title: "trails-tsc: createTsePlugin still virtualizes .tse without the view scope"
 status: draft
 updated: 2026-10-01
-rfc: "0140-actionview-rendering-core"
+rfc: "0035-tsserver-editor-plugin"
 cluster: null
 packages: ["trails-tsc"]
 deps: []
