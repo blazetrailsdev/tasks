@@ -38,7 +38,7 @@ scope.
 ## Acceptance criteria
 
 - [ ] `assignDefaultValue` reads `fetch(this.values, name, rbBlock(() => {
-    valuePresent = false; }))`, matching `builder.rb:167-168`, with
+valuePresent = false; }))`, matching `builder.rb:167-168`, with
       `let valuePresent: boolean = true`.
 - [ ] No behaviour change: a stored `null` stays present, an absent key falls to
       the `types.key?` arm.
