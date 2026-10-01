@@ -1,5 +1,5 @@
 ---
-rfc: "0000-actionview-helpers"
+rfc: "0176-actionview-helpers"
 title: "ActionView helpers — the helper half to parity"
 status: draft
 created: 2026-10-01
@@ -22,7 +22,7 @@ related-rfcs:
   - "0170-psych-in-ruby-compat"
 ---
 
-# RFC — ActionView helpers
+# RFC 0176 — ActionView helpers
 
 ## Summary
 
