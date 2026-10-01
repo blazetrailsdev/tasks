@@ -8,6 +8,8 @@ priority: 2
 owner: "@deanmarano"
 packages:
   - "actionpack"
+  - "activerecord"
+  - "trailties"
 clusters:
   - "test-harness"
 ---
