@@ -1,6 +1,6 @@
 ---
 title: "Port test_case_test.rb's request, params and process tests (lines 223-750)"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

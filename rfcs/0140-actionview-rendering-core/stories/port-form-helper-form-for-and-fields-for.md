@@ -1,7 +1,7 @@
 ---
 title: "port-form-helper-form-for-and-fields-for"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: trails#8327
+claim: "2026-10-01T13:36:55Z"
+assignee: "port-form-helper-form-for-and-fields-for"
 blocked-by: null
 closed-reason: null
 ---

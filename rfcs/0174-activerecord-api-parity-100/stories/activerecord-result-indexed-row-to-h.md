@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Result::IndexedRow#to_h"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface

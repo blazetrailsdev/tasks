@@ -1,6 +1,6 @@
 ---
 title: "port-test-case-test-url-options-reset"
-status: draft
+status: done
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8322
+claim: "2026-10-01T13:19:18Z"
+assignee: "port-test-case-test-url-options-reset"
 blocked-by: null
 closed-reason: null
 ---

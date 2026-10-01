@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2 DatabaseStatements#cast_result builds Result.new(fields, rows) (args row)"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#8324
 claim: "2026-10-01T12:40:03Z"
 assignee: "activemodel-converge-attribute-methods-call-rows"
 blocked-by: null

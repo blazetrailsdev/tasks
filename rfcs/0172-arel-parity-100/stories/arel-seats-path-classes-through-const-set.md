@@ -1,6 +1,6 @@
 ---
 title: "arel-seats-path-classes-through-const-set"
-status: draft
+status: closed
 updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "done inside trails#8320: every seated arel class is pathed with rbSetClassPathString and rbModName carries no inherited-cbase arm"
 ---
 
 ## Context

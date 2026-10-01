@@ -1,6 +1,6 @@
 ---
 title: "activerecord: sort the 29 autoload / constant-lookup exclusions into ratified and portable"
-status: claimed
+status: done
 updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: unported-tests
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#8323
 claim: "2026-10-01T12:55:02Z"
 assignee: "activerecord-audit-autoload-and-constant-lookup-excluded-tests"
 blocked-by: null

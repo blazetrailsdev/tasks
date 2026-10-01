@@ -1,6 +1,6 @@
 ---
 title: "activemodel: audit the 50 PERMANENT receipts in top-level src files"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: receipts

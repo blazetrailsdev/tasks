@@ -1,7 +1,7 @@
 ---
 title: "activerecord: burn require-canonical-rebuild-exclude (17) and non-transactional-row-writes (9)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: lint-registers
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8325
+claim: "2026-10-01T13:15:02Z"
+assignee: "activerecord-burn-canonical-rebuild-and-row-write-excludes"
 blocked-by: null
 closed-reason: null
 ---

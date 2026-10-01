@@ -1,7 +1,7 @@
 ---
 title: "activerecord: burn expected-fixtures-exclude (3) and test-fixture-parity-exclude (1)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: lint-registers
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["parity-100-rehome-postponed-rfc-dependencies", "port-fixtures-test-rb-fi
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8326
+claim: "2026-10-01T13:35:08Z"
+assignee: "activerecord-burn-expected-fixtures-and-fixture-parity-excludes"
 blocked-by: null
 closed-reason: null
 ---
