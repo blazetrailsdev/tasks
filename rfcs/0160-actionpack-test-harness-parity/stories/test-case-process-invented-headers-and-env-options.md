@@ -42,10 +42,15 @@ the controller class where Rails resolves it from `tests` /
 tests over a `PostsController` that exercise them; they belong in
 `test-case.trails.test.ts`.
 
+The controller-class constructor argument is already gone on main; what is left
+is `constructor(name?: string)`. Moving the `PostsController` block is ~375
+lines counted twice, which does not fit one PR beside the caller rewrite, so
+the move and the `name?` constructor are
+`test-case-test-trails-only-block-moves-out-of-rails-named-file`.
+
 ## Acceptance criteria
 
 - `process` takes Rails' eight keywords only; each `headers:` / `env:` caller
   sets the header on `request` before the call, as its Rails test does.
-- `responseBody`, `parsedBody`, `reset` and the constructor argument are removed
-  or carry a receipt, and the trails-only tests move out of the Rails-named
-  test file.
+- `responseBody`, `parsedBody` and `reset` are removed, with the tests that
+  exist only to exercise them.
