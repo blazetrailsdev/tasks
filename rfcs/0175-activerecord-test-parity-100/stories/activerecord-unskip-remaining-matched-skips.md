@@ -28,8 +28,9 @@ closed-reason: null
 - `attribute_methods_test.rb` (6) — "attribute keys on a new instance", "undeclared attribute method does not
   affect respond_to? and method_missing", "attribute predicates respect access control", "non-attribute read
   and write", "attribute readers respect access control", "attribute writers respect access control".
-  The access-control trio is `activerecord-private-attribute-methods-are-still-public` (RFC 0155, blocked);
-  the `method_missing` one ports the assertions CLAUDE.md § "Records are not Proxies" says do not depend on the hook.
+  The access-control trio is permanently unportable (CLAUDE.md § "Method visibility is compile-time
+  only"): trails#8317 moved it, with "bulk updates respect access control", into the unported register
+  under `PERMANENT-SKIP:` lines, so it is no longer counted among the matched skips. The `method_missing` one ports the assertions CLAUDE.md § "Records are not Proxies" says do not depend on the hook.
 - `associations/has_many_through_disable_joins_associations_test.rb` (2) — "empty on disable joins through",
   "… using custom foreign key".
 - `migration_test.rb` (2) — "changing columns", "changing column null with default".
@@ -47,8 +48,8 @@ not among the 64; the `unported-tests` stories own them.)
 
 ## Acceptance criteria
 
-- [ ] Every skip is removed and the case passes with Rails' body, except the three access-control cases while RFC 0155's story is blocked (each keeps a structured skip annotation naming it).
-- [ ] `pnpm parity:test` activerecord skipped **0** (3 while blocked).
+- [ ] Every counted skip is removed and the case passes with Rails' body. The four access-control cases are not counted: they stay `it.skip` under `PERMANENT-SKIP:` and in the unported register.
+- [ ] `pnpm parity:test` activerecord skipped **0**.
 
 ## Verification
 

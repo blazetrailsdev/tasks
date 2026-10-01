@@ -86,7 +86,9 @@ harness story.
 ## Acceptance criteria
 
 - [ ] `src/cache.ts` ports `Rack::Cache.new`, and `src/context.ts` ports
-      `Context` with every member above at its Ruby name and Ruby visibility,
+      `Context` with every member above at its Ruby name, its private members
+      carrying the TS `private` keyword and `@internal` (compile-time only: CLAUDE.md
+      "Method visibility is compile-time only"),
       `include`ing `Options`.
 - [ ] `call` clones per request under Ruby's `run_once` / `multithread` rule.
 - [ ] `cache.test.ts` ports the 4 cases with Rails-identical names.

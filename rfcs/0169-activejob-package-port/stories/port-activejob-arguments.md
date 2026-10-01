@@ -59,7 +59,7 @@ Tests: none of its own. `argument_serialization_test.rb` and
 - [ ] **`key.inspect`** in both hash-key messages (`:163`, `:167`) is `rbInspect`, so a Symbol key renders `:foo`.
 - [ ] **Singleton.** `ObjectSerializer`'s class-level `serialize?` / `serialize` / `deserialize` delegate to `instance`; `Serializers.serialize` calls them on the class (`serializers.rb:31`). Keep the delegation shape rather than instantiating per call.
 - [ ] **`_additional_serializers +=`** (`serializers.rb:56`) replaces the `Set` rather than mutating it, and `detect` (`:31`) is insertion-ordered: custom serializers registered later are tried after the defaults.
-- [ ] **`OBJECT_SERIALIZER_KEY` is not private** (it is missing from `private_constant`, `:68-69`) because `serializers.rb:40` reads `Arguments::OBJECT_SERIALIZER_KEY`; the other four keys are private.
+- [ ] **`OBJECT_SERIALIZER_KEY` is exported; the other four keys are not.** `private_constant` (`:68-69`) is not ported (CLAUDE.md § "Method visibility is compile-time only"). The four keys it names stay module-local; `OBJECT_SERIALIZER_KEY` is missing from it because `serializers.rb:40` reads `Arguments::OBJECT_SERIALIZER_KEY`, so it is the one seated on `Arguments`.
 
 ## Acceptance criteria
 

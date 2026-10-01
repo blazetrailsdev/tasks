@@ -1,5 +1,5 @@
 ---
-title: "mapper-build-conditions-keeps-request-private-method-constraints"
+title: 'Mapping#build_conditions keeps a constraint named after a private Request method (public_method_defined? reads "defined")'
 status: draft
 updated: 2026-10-01
 rfc: "0141-actionpack-surfaced-deviations"

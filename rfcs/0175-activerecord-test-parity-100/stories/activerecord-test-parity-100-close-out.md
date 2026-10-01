@@ -67,14 +67,16 @@ closed-reason: null
 The last story of RFC 0175. Re-measure (`pnpm parity:test`, `parity:test:assertions`, `parity:fixtures`,
 `parity:schema`) and record the final table against the RFC's § "Baseline". Blocked residue named in the
 table rather than depended on: `activerecord-fork-excluded-tests` (no process fork), the trilogy cases
-(`activerecord-port-trilogy-adapter`, RFC 0174), and the three access-control cases while
-`activerecord-private-attribute-methods-are-still-public` is blocked.
+(`activerecord-port-trilogy-adapter`, RFC 0174). The four `attribute_methods_test.rb`
+access-control cases and the "…proxy should not respond to private methods" cases are not blocked
+residue: they are permanently unportable under CLAUDE.md § "Method visibility is compile-time
+only" and stay in the unported register.
 
 ## Acceptance criteria
 
-- [ ] `pnpm parity:test` activerecord: 100% of scored tests, 0 skipped (3 while blocked), 0 wrong describe, 0 misplaced, 0 extra, 353/353 files.
+- [ ] `pnpm parity:test` activerecord: 100% of scored tests, 0 skipped, 0 wrong describe, 0 misplaced, 0 extra, 353/353 files.
 - [ ] `assertion-mismatch-mark.json` activerecord 0/0/0; `pnpm parity:fixtures` diff 0, schema 143/143, erb-allowed 0; `pnpm parity:schema` baselined 0, option divergences 0, shape warnings 0.
-- [ ] The unported register holds no activerecord test entry except ratified § "Trails has no autoloader" cases and the blocked fork/trilogy rows.
+- [ ] The unported register holds no activerecord test entry except ratified § "Trails has no autoloader" and § "Method visibility is compile-time only" cases and the blocked fork/trilogy rows.
 - [ ] The four eslint/test registers above hold no activerecord entry.
 
 ## Verification

@@ -75,7 +75,7 @@ each rests on. This story takes the 50 in top-level `packages/activemodel/src/*.
 - `validations.ts:419` `@noRailsEquivalent` — `export interface ConditionalOptions {`
 
 Sections that can ratify an activemodel receipt: § "Generated attribute readers are properties",
-§ "Serialization's dual sync/async hash", § "Method visibility is a side table", § "Override arity",
+§ "Serialization's dual sync/async hash", § "Method visibility is compile-time only", § "Override arity",
 § "Module mixins", § "Ruby protocol methods with a different JS mechanism". `bcrypt.ts` and
 `gem-version.ts` are wrappers a gem port owns, not language shortcomings.
 

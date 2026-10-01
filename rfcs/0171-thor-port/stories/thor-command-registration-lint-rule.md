@@ -27,8 +27,9 @@ class's static block. In Ruby, forgetting is impossible: the VM fires `method_ad
 
 - [ ] `blazetrails/thor-command-registration` flags a public, non-accessor, non-static method
       of a class whose `extends` chain reaches `Thor` or `Thor.Group` and that the class's static
-      blocks never pass to `methodAdded` (directly or inside `noCommands`). Private or protected
-      methods, and methods recorded with `rbModPrivate`, are exempt.
+      blocks never pass to `methodAdded` (directly or inside `noCommands`). TS-`private` or
+      `protected` methods are exempt: they are Thor's private methods, which are never
+      commands (CLAUDE.md § "Method visibility is compile-time only").
 - [ ] Autofix appends `this.methodAdded("<name>")` in definition order, which is Ruby's
       `method_added` order and so Thor::Group's `invoke_all` order.
 - [ ] It runs over `packages/trailties/src/**`. The rule's own tests cover a subclass of a

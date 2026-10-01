@@ -57,9 +57,9 @@ Private: `persist_request` (`:138-142`, keeps only `/[0-9A-Z_]/` keys whose valu
 (`test/meta_store_test.rb:358-364`) asserts exactly that. Port the raise from
 ruby-compat, not a TS `abstract`.
 
-`private` / `protected` here are Ruby visibility. Mark them `@internal` and keep
-the TS keyword beside it as the type-checker's view (CLAUDE.md "Method
-visibility is a side table"). **Rails' `RailsMetaStore` overrides `read` /
+`private` / `protected` here are Ruby visibility. They port as the TS keyword
+plus `@internal` and nothing is recorded at run time (CLAUDE.md "Method
+visibility is compile-time only"). **Rails' `RailsMetaStore` overrides `read` /
 `write` from another package** (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/http/rack_cache.rb:21-31`),
 so a TS `protected` must still admit that override.
 
@@ -82,7 +82,8 @@ file's 38. The file's own `before` builds a `mock_request` / `mock_response` /
 ## Acceptance criteria
 
 - [ ] `src/meta-store.ts` ports `MetaStore`, `Heap` and the `HEAP` / `MEM`
-      constants, async, with Ruby visibility recorded and the abstract trio
+      constants, async, with Ruby's private / protected members carrying the TS
+      keyword and `@internal`, and the abstract trio
       raising `NotImplementedError`.
 - [ ] The purge warning fires once per process, not once per instance.
 - [ ] `meta-store.test.ts` ports the 34 cases with Rails-identical names, and the
