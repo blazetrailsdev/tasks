@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Encryption::Contexts default_context / custom_contexts thread_mattr_accessors"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8312
+claim: "2026-10-01T00:10:26Z"
+assignee: "arel-port-bound-sql-literal-inspect-and-node-initialize-copy"
 blocked-by: null
 closed-reason: null
 ---

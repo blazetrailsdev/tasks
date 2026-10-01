@@ -1,7 +1,7 @@
 ---
 title: "arel: port BoundSqlLiteral#inspect and the Comment / Window initialize_copy bodies"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: api-surface
 packages: ["arel"]
@@ -9,9 +9,9 @@ deps: ["parity-100-rehome-postponed-rfc-dependencies", "arel-node-dup-missing"]
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8312
+claim: "2026-10-01T00:10:26Z"
+assignee: "arel-port-bound-sql-literal-inspect-and-node-initialize-copy"
 blocked-by: null
 closed-reason: null
 ---

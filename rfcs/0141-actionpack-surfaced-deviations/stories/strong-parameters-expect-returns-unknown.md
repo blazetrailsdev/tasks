@@ -1,7 +1,7 @@
 ---
 title: "strong-parameters-expect-returns-unknown"
-status: in-progress
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

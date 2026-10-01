@@ -1,7 +1,7 @@
 ---
 title: "Enroll Thor's RSpec suite in parity:test as a nested pseudo-package, and record Thor's non-ports"
-status: claimed
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
+pr: trails#8311
 claim: "2026-09-30T23:50:31Z"
 assignee: "arel-homogeneous-in-valuetype-vs-activemodel-type"
 blocked-by: null

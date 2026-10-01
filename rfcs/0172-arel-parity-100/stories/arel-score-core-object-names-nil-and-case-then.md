@@ -1,7 +1,7 @@
 ---
 title: "arel: score Ruby `nil?` and `Case#then`, which arel ports but SKIP_GROUPS hides"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: skips
 packages: ["arel"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-01T00:30:26Z"
+assignee: "arel-score-core-object-names-nil-and-case-then"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Type::Value's limit / precision / scale readers and Type::Registry#initialize_copy"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: api-surface
 packages: ["activemodel"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8312
+claim: "2026-10-01T00:10:26Z"
+assignee: "arel-port-bound-sql-literal-inspect-and-node-initialize-copy"
 blocked-by: null
 closed-reason: null
 ---

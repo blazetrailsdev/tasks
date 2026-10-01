@@ -1,7 +1,7 @@
 ---
 title: "arel: verify and pin the 48 eql?/hash pairs matched since the body-pin floor"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: pins
 packages: ["arel"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-01T00:39:41Z"
+assignee: "arel-verify-and-pin-eql-hash-bodies"
 blocked-by: null
 closed-reason: null
 ---

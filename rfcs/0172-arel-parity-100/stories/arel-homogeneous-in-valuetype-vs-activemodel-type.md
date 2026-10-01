@@ -1,13 +1,13 @@
 ---
 title: "arel HomogeneousIn#procForBinds references ValueType where Rails references ActiveModel::Type, leaving one lint-deps mismatch"
-status: claimed
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 25
-pr: null
+pr: trails#8311
 claim: "2026-09-30T23:50:31Z"
 assignee: "arel-homogeneous-in-valuetype-vs-activemodel-type"
 blocked-by: null

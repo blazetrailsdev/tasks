@@ -1,7 +1,7 @@
 ---
 title: "TSE <%% / %%> literals diverge from Erubi's % indicator"
-status: claimed
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 3
-pr: null
+pr: trails#8311
 claim: "2026-09-30T23:50:31Z"
 assignee: "arel-homogeneous-in-valuetype-vs-activemodel-type"
 blocked-by: null
