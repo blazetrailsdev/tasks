@@ -1,7 +1,7 @@
 ---
 title: "arel: resolve object.class / Module#name through ruby-compat, delete ruby-class.ts and temporal-tag.ts"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: receipts
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8320
+claim: "2026-10-01T12:17:34Z"
+assignee: "arel-visitor-class-names-onto-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---

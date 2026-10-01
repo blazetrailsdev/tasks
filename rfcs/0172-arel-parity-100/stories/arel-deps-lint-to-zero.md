@@ -1,7 +1,7 @@
 ---
 title: "arel: parity:api:deps arel → activemodel reaches zero ref mismatches"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: api-surface
 packages: ["arel"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8311
+claim: "2026-10-01T12:15:00Z"
+assignee: "arel-deps-lint-to-zero"
 blocked-by: null
 closed-reason: null
 ---

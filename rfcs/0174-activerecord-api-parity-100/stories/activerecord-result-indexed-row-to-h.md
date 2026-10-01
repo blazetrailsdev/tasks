@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Result::IndexedRow#to_h"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8319
+claim: "2026-10-01T12:15:00Z"
+assignee: "arel-deps-lint-to-zero"
 blocked-by: null
 closed-reason: null
 ---

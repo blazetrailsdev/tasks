@@ -1,6 +1,6 @@
 ---
 title: "Restore Rails' direction between delegatedType and defineDelegatedTypeMethods"
-status: ready
+status: done
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#6901
+claim: "2026-10-01T12:09:57Z"
+assignee: "red-26ed9b2d"
 blocked-by: null
 closed-reason: null
 ---

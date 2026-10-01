@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: async FsAdapter verbs Thor's file actions need (symlink, link, chmod, rm -rf, glob, identical?)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8318
+claim: "2026-10-01T12:09:57Z"
+assignee: "red-26ed9b2d"
 blocked-by: null
 closed-reason: null
 ---

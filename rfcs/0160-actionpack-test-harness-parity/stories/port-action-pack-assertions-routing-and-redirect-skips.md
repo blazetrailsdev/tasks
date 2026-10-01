@@ -1,7 +1,7 @@
 ---
 title: "port-action-pack-assertions-routing-and-redirect-skips"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["test-case-missing-methods-and-arity", "port-routing-assertions-test-and-
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8322
+claim: "2026-10-01T12:10:35Z"
+assignee: "port-action-pack-assertions-routing-and-redirect-skips"
 blocked-by: null
 closed-reason: null
 ---

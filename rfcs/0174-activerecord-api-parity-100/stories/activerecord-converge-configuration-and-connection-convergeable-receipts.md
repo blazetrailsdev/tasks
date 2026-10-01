@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the CONVERGEABLE receipts in database-configurations.ts, connection-handling.ts, connection-adapters.ts"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8320
+claim: "2026-10-01T12:17:34Z"
+assignee: "arel-visitor-class-names-onto-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---

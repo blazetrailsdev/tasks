@@ -1,7 +1,7 @@
 ---
 title: "activemodel: audit the 50 PERMANENT receipts in top-level src files"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
 packages: ["activemodel"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8321
+claim: "2026-10-01T12:35:02Z"
+assignee: "activemodel-audit-permanent-receipts-root"
 blocked-by: null
 closed-reason: null
 ---
