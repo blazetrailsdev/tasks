@@ -1,6 +1,6 @@
 ---
 title: "Enroll Thor's RSpec suite in parity:test as a nested pseudo-package, and record Thor's non-ports"
-status: ready
+status: claimed
 updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T23:50:31Z"
+assignee: "arel-homogeneous-in-valuetype-vs-activemodel-type"
 blocked-by: null
 closed-reason: null
 ---

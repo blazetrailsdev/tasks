@@ -1,6 +1,6 @@
 ---
 title: "TSE <%% / %%> literals diverge from Erubi's % indicator"
-status: ready
+status: claimed
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-09-30T23:50:31Z"
+assignee: "arel-homogeneous-in-valuetype-vs-activemodel-type"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Base.new merges scope attributes by spreading the raw argument, so a scoped new(params) spreads a Parameters instance"
-status: draft
+status: closed
 updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "fixed in trails#8308 (merge sanitizes first); remaining convergence tracked by base-new-and-create-merge-scope-for-create-into-attributes"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "Port test_fixtures.rb's eight class_attribute declarations"
-status: in-progress
+status: done
 updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

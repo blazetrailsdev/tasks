@@ -1,6 +1,6 @@
 ---
 title: "_loadFromSql iterates indexedRows, not toArray()"
-status: claimed
+status: ready
 updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: "2026-09-30T22:50:28Z"
-assignee: "relation-count-type-is-a-union-even-when-ungrouped"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

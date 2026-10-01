@@ -1,6 +1,6 @@
 ---
 title: "relation-count-type-is-a-union-even-when-ungrouped"
-status: claimed
+status: in-progress
 updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#8307
 claim: "2026-09-30T22:50:28Z"
 assignee: "relation-count-type-is-a-union-even-when-ungrouped"
 blocked-by: null

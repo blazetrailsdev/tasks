@@ -1,6 +1,6 @@
 ---
 title: "DomAssertions#fragment is a regex tokenizer, not Nokogiri::HTML4::DocumentFragment (dom_assertions.rb:131)"
-status: ready
+status: blocked
 updated: 2026-09-30
 rfc: "0140-actionview-rendering-core"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 200
 priority: 7
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-09-30T23:30:33Z"
+assignee: "test-fixture-accessors-are-untyped"
+blocked-by: "libxml2-wasm (0.7.1 pinned, 0.7.2 latest) is built without libxml2's HTML module: its raw bindings export _xmlCtxtReadMemory but no htmlReadMemory/htmlCreateMemoryParserCtxt, so Nokogiri::HTML4::DocumentFragment cannot be backed by it. Needs either a custom libxml2 wasm build with LIBXML_HTML_ENABLED or a decision to wrap an npm HTML parser (see html5-sanitizer-vendor-over-nokogiri-html5 / request-encoder-html-response-parser-returns-raw-body, which propose parse5); both exceed the no-new-runtime-deps rule of the bundle it was claimed in."
 closed-reason: null
 ---
 
