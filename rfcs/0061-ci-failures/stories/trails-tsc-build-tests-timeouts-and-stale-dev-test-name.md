@@ -2,7 +2,7 @@
 title: "trails-tsc: two-build tests need explicit timeouts; dev test name is stale"
 status: draft
 updated: 2026-10-01
-rfc: "0140-actionview-rendering-core"
+rfc: "0061-ci-failures"
 cluster: null
 packages: []
 deps: []
