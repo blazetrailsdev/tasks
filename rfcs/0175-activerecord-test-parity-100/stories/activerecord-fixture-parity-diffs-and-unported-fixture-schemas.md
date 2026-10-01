@@ -40,8 +40,17 @@ closed-reason: null
 ## Acceptance criteria
 
 - [ ] The six DIFF files match Rails' rows and attributes.
-- [ ] Every fixture set's table is in the canonical schema (or the comparer follows `model_class`), schema ported 143/143.
-- [ ] The three ERB fixtures are generated through TSE with Rails' row counts; erb-allowed 0.
+- [ ] The comparer resolves each fixture set's table as `FixtureSet#initialize` does (`fixtures.rb:713-722`),
+      and every set whose table a Rails `test/schema/*.rb` file declares is in the canonical schema: schema
+      ported N/N over those sets. A set whose table no schema file declares — the test creates it
+      (`reserved_words/*`, `virtual_columns`, `other_topics`) or Rails never loads the set
+      (`all/namespaced/accounts`, `naked/yml/courses_with_invalid_key`) — is reported as
+      `schema:no-rails-table` and has nothing to port; adding those tables would be invented schema that
+      `parity:schema` rejects.
+- [ ] The comparer renders the three ERB fixtures' Rails templates through the TSE compiler and compares
+      them row for row with Rails' row counts (65536 / 1001 / 20); erb-allowed 0. The TS fixture modules
+      stay as loops: rendering and YAML-parsing 65536 rows at module load would cost every worker that
+      imports the fixtures registry.
 - [ ] `pnpm parity:fixtures`: diff 0, erb-allowed 0.
 
 ## Verification
