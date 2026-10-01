@@ -108,20 +108,26 @@ headline figure neither credits nor checks either file.
 
 (The register's `/layouts.rb` entry is stale in the same way, since
 `packages/actionview/src/layouts.ts` exists. Layouts are RFC 0140's scope, so
-that entry is not counted here. No 0140 story covers it yet; the 2026-10-01
-refine report flags it for filing there.)
+that entry is not counted here. It is tracked in RFC 0140's Verification
+section, which now requires the entry to be gone.)
 
 The other entries share `FORM_HELPER_REASON`, "trails ports no view layer",
 which stopped being true when `form_helper.rb` reached 81%. Removing them is
 what turns the select and collection helpers into counted debt.
 
 Removing entries **lowers the headline figure before it raises it**, because
-hidden files become counted. By `def` count in the Rails source, the nine
-genuinely unported files add about 49 methods to the missing column
-(`form_options_helper.rb` alone is 27), and the two stale entries add about 16
-that should mostly match on arrival. So the working baseline is roughly
-**192 + 49 = 241 missing helper methods**, to be replaced by the measured
-figure in phase 1.
+hidden files become counted. The eleven entries are removed in three places,
+each by the gap that owns the file:
+
+| Entries                                               | Owner | `def`s in Rails | Effect on removal       |
+| ----------------------------------------------------- | ----- | --------------- | ----------------------- |
+| `helpers.rb`, `helpers/asset_tag_helper.rb`           | Gap 8 | 16              | mostly matched, phase 1 |
+| `helpers/form_options_helper.rb` and the seven `Tags` | Gap 2 | 45              | all missing, phase 3    |
+| `helpers/translation_helper.rb`                       | Gap 5 | 4               | all missing, phase 5    |
+
+So the total to burn is roughly **192 + 49 = 241 missing helper methods**, but
+no single measurement shows 241: the 49 appear only as phases 3 and 5 remove
+their entries.
 
 ### Unported Rails test files
 
@@ -175,7 +181,25 @@ this RFC is flipped to `active`. That is intended: the owner asked for a draft
 home, and activation is the owner's call. Two of the three
 (`actionview-remaining-helper-namespaces-as-live-modules`,
 `form-builder-nested-attributes-probe-misses-ar-writer-spelling`) depend on
-nothing unfiled, so the cost of the gate is exactly those two stories waiting.
+nothing unfiled.
+
+The third, `port-form-helper-test-form-for-and-fields-for-suite`, is `ready`
+with `deps: []` on purpose, and is not blocked by Gap 1. Its acceptance
+criteria are written as a split: port the tests "whose field helpers are
+already ported" (`text_field`, `textarea`, `label`, `hidden_field`) and
+register the rest "as follow-up stories naming the helper each waits on". A
+claimer can ship that first slice today without the checkbox / radio / file
+tags. What Gap 1 gates is the follow-ups that slice files, and those should
+take a `deps` edge on the Gap 1 story when they are created.
+
+### Activation
+
+Before this RFC is flipped to `active`:
+
+1. File the Gap 1 story (`Tags::CheckBox` / `RadioButton` / `FileField` /
+   `Checkable`), so the `form_for` suite's follow-ups have an id to depend on.
+2. Re-scope `move-number-with-delimiter-to-actionview` (see Rollout phase 1).
+3. File stories for the remaining gaps, or mark the ones being deferred.
 
 **What this does for RFC 0140.** After the move 0140 holds no open helper
 story. It still cannot close: three rendering-core stories are blocked
@@ -205,22 +229,27 @@ this RFC goes active.
    three "are not included". The parity rows above show all four files at
    zero, while `FormBuilder.field_helpers` already lists `fileField`,
    `checkbox` and `radioButton`. The `form_for` suite story names the closed
-   story as its dependency, so most of that suite waits on this gap.
+   story as its dependency, so most of that suite waits on this gap. Filing
+   this story is a precondition for activating the RFC (see Activation).
 2. **`form_options_helper.rb` and the select / collection `Tags`**, with
    `form_options_helper_test.rb`, `form_collections_helper_test.rb` and the
-   i18n variant. Starts with deleting the register entries.
+   i18n variant. Owns removing the eight register entries for these files,
+   as its first step.
 3. **`date_helper.rb`'s remaining 41 methods** and `Tags::DateSelect`,
    `DatetimeSelect`, `TimeSelect`, with `date_helper_i18n_test.rb`.
 4. **`form_tag_helper.rb`'s remaining 30 methods** and `form_helper.rb`'s
    remaining 37.
-5. **`translation_helper.rb`** and `translation_helper_test.rb`.
+5. **`translation_helper.rb`** and `translation_helper_test.rb`. Owns
+   removing that file's register entry.
 6. **`atom_feed_helper.rb`.** It drives `Builder::XmlMarkup`, and the
    `builder` handler is a recorded non-port (`template/handlers/builder.rb` in
    the register), so this may be a receipt rather than a port. Decide first.
 7. **`controller_helper.rb` at 2/12.** Ten delegators report missing; check
    whether that is a naming mismatch against `installControllerDelegates`
    before treating it as unported surface.
-8. **The stale register entries** for `helpers.rb` and `asset_tag_helper.rb`.
+8. **The two stale register entries**, `helpers.rb` and
+   `helpers/asset_tag_helper.rb`, and nothing else in the register. Both files
+   are ported, so removal should credit them rather than add debt.
 
 ## Non-goals
 
@@ -242,21 +271,25 @@ Phases 3 to 5 have no stories yet; they name the gap each will be filed from.
    - `move-number-with-delimiter-to-actionview`. Its body predates
      actionview's own `numberWithDelimiter`; what is left is the activesupport
      side. Re-scope before it goes ready.
-   - Gap 8 (stale register entries), then record the post-removal baseline.
-2. **Form fields.**
+   - Gap 8 (the two stale register entries), then re-measure. The expected
+     result is the compared-file figure, about 192 missing, with `helpers.rb`
+     and `asset_tag_helper.rb` newly counted and mostly matched.
+2. **Form fields.** In this order:
    - `form-builder-nested-attributes-probe-misses-ar-writer-spelling`, first,
      because Open question 1 decides what the `fields_for` tests assert.
+   - `port-form-helper-test-form-for-and-fields-for-suite`, first slice only:
+     the tests that need no unported field helper. Does not wait on Gap 1.
    - Gap 1 (checkbox / radio / file tags).
-   - `port-form-helper-test-form-for-and-fields-for-suite`. Its `text_field` /
-     `textarea` / `label` / `hidden_field` portion is shippable today, which is
-     why it is `ready`; the rest follows Gap 1, as its own text says.
+   - The suite's follow-up stories, each depending on Gap 1.
    - Gap 4 (the remaining `form_helper.rb` and `form_tag_helper.rb` methods).
-3. **Selects and collections.** Gap 2.
+3. **Selects and collections.** Gap 2, which removes its eight register
+   entries first and records the missing count they add (about 45).
 4. **Dates.** Gap 3.
 5. **Small files.**
    - `port-action-view-csp-helper`
    - `port-action-view-csrf-helper-and-generated-layout-meta-tags`
-   - Gaps 5, 6 and 7.
+   - Gap 5, which removes the `translation_helper.rb` entry (about 4).
+   - Gaps 6 and 7.
 
 Outside the sequence: `dom-assertions-fragment-parses-with-nokogiri-html4`
 stays blocked until Open question 2 is answered. No phase waits on it, since
@@ -268,15 +301,17 @@ Baseline at filing: 192 missing methods across 15 compared helper files, 11
 helper files hidden by the register, 8 Rails helper test files unported.
 
 - `pnpm parity:api --package actionview --files` reports **0 missing** on every
-  `helpers/**` row. From the indicative baseline that is 192 to 0 in compared
-  files, and about 241 to 0 once the register entries are removed.
+  `helpers/**` row. The total burned is about 241: the 192 visible today, plus
+  about 45 that become visible in phase 3 and about 4 in phase 5.
+- The phase 1 re-measure replaces "192" above with the figure from a fresh
+  build. Phases 3 and 5 each record the count their entry removal adds, in
+  place of "about 45" and "about 4".
 - `scripts/parity/unported-files/actionview.ts` holds **0 helper entries**,
-  down from 11, or each survivor carries a reason that is true of the tree
-  (`atom_feed_helper.rb` may become one, per Gap 6).
+  down from 11: 2 after phase 1 are gone, 8 more after phase 3, the last after
+  phase 5. A survivor must carry a reason that is true of the tree
+  (`atom_feed_helper.rb` may become a new one, per Gap 6).
 - The 8 unported helper test files listed under Motivation reach **0**, and
   `form_helper_test.rb:1599-4140` has all 168 tests ported.
-- The post-removal baseline measured in phase 1 is written into this section in
-  place of "about 241".
 
 ## Open questions
 
@@ -297,4 +332,6 @@ helper files hidden by the register, 8 Rails helper test files unported.
 - 2026-10-01: 7 stories rehomed in by verb on `main` (4 from RFC 0140, 2 from
   RFC 0141, 1 from RFC 0023). Review follow-up: Rollout mapped story by story,
   Verification given a baseline, the draft gate on the three `ready` stories
-  stated, and RFC 0141's routing table pointed here.
+  stated, and RFC 0141's routing table pointed here. Register-entry removal
+  split by owning gap; activation preconditions listed; the stale
+  `/layouts.rb` entry recorded in RFC 0140's Verification.

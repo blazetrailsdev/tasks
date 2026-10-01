@@ -3,7 +3,7 @@ rfc: "0140-actionview-rendering-core"
 title: "ActionView rendering core — the non-helper half to parity"
 status: active
 created: 2026-09-08
-updated: 2026-09-26
+updated: 2026-10-01
 owner: "@deanmarano"
 packages:
   - "actionview"
@@ -296,6 +296,12 @@ alongside `actionview` in this RFC's packages.
 - `render_parser/ripper_render_parser.rb` carries a `SKIP_GROUPS` entry with its
   reason and no longer counts as 33 missing methods.
 - No new runtime dependency appears in `packages/actionview/package.json`.
+- `scripts/parity/unported-files/actionview.ts` no longer lists `/layouts.rb`.
+  Its reason ("no trails template renderer") stopped being true when
+  `port-action-view-layouts-behind-rendering-stubs` landed
+  `packages/actionview/src/layouts.ts`, and while the entry stands,
+  `layouts.rb` is neither credited nor checked. No story owns the removal yet
+  (found at the 2026-10-01 refine); it needs one before this RFC closes.
 
 ## Open questions
 
@@ -318,3 +324,7 @@ alongside `actionview` in this RFC's packages.
 - 2026-09-09: rehomed 4 more open stories in from RFC 0104 at its sunset —
   controller-side `render_to_body`, partial prefixes, and the two asset-helper
   seeds for the helpers campaign this RFC anticipates.
+- 2026-10-01: refine. 41 of this RFC's 173 stories were helper work; the 4
+  still open were rehomed to the new draft RFC 0176 (`0176-actionview-helpers`).
+  The done and closed helper stories stay here as the record. Added the stale
+  `/layouts.rb` register entry to Verification.
