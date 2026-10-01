@@ -37,7 +37,10 @@ spec helper's `capture("stdout", async () => ...)`. A case that cannot run under
 
 `vendor/thor/v1.3.2/spec/group_spec.rb`:
 
-- `command > allows to use private methods from parent class as commands` (`:5`)
+- `command > allows to use private methods from parent class as commands` (`:5`) — ports
+  through `public_command`, which calls `methodAdded` for each name. The parent's methods
+  are TS-`private` and unregistered; nothing is read at run time (CLAUDE.md § "Method
+  visibility is compile-time only").
 - `#start > invokes all the commands under the Thor group` (`:12`)
 - `#start > uses argument's default value` (`:16`)
 - `#start > invokes all the commands in the Thor group and its parents` (`:20`)

@@ -228,11 +228,11 @@ each open row is a test that is not running.
    bucket?** Every other core package has one. Deferred: nothing in this split
    needs it, and deviation-register entries are a non-goal here. It can be
    decided when the first activesupport deviation-register entry needs a home.
-2. **`activesupport-delegate-private-and-ruby-method-semantics` is blocked on a
-   shortcoming that CLAUDE.md ratifies** (§ "Method visibility is not a runtime
-   fact in JS"). That block may be permanent. Deferred to whoever next triages
-   the story: close it against the ratified section, or narrow it to the
-   `nil`-receiver and `source_location` arms that could still converge.
+2. **`activesupport-delegate-private-and-ruby-method-semantics` was narrowed.**
+   Its five private-delegate tests are permanently unportable under CLAUDE.md
+   § "Method visibility is compile-time only" (trails#8317). The story now
+   covers only the `source_location` and arity `-1` arms, and stays blocked on
+   those.
 3. **Should `cache-lookup-store-has-no-mem-cache-or-redis-store` move to 0101?**
    Deferred: 0101 is postponed, and the story is a lookup-store bug found by a
    converged assertion, so it stays here under the Non-goals rule until 0101

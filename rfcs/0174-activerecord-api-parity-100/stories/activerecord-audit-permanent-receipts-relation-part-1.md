@@ -71,7 +71,7 @@ that the cheap path to `novel: 0` was tagging rather than deleting. This story a
 Ratified sections that can back an activerecord receipt: § "Generated attribute readers are
 properties", § "Serialization's dual sync/async hash", § "`Relation` is evaluated by an async query",
 § "Override arity", § "Call-time constant resolution", § "The pool monitor guards only sections that span
-an `await`", § "Method visibility is a side table", § "Schema reflection peeks at a warm cache" (the peek
+an `await`", § "Method visibility is compile-time only", § "Schema reflection peeks at a warm cache" (the peek
 only — its scope boundary excludes every synchronous lease), § "The adapter lock defaults to a monitor",
 § "Records are not Proxies", § "Ruby protocol methods with a different JS mechanism", § "`inherited` is
 deferred", § "`singleton_class` is a per-object subclass", § "A create path awaits its block", § "Trails has

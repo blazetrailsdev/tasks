@@ -27,8 +27,10 @@ through `rbFPublicSend`. `HelperMethodBuilder` still hand-rolls Rails' `public_s
   `target[method]`, raises an invented `ArgumentError("undefined route helper …")`, and then calls
   `helper.call(target, …)`. Rails raises `NoMethodError` from `public_send`.
 - `handle_string_call` / `handle_class_call` / `handle_model_call` (`polymorphic_routes.rb:258-289`)
-  are `target.public_send(...)`. trails does `(target[m] as …).call(target)` (`:~283`, `:~292`, `:~308`).
-  That bypasses the visibility check and reaches a private helper Rails would refuse.
+  are `target.public_send(...)`. trails does `(target[m] as …).call(target)` (`:~283`, `:~292`, `:~308`),
+  so a missing helper is a JS `TypeError` rather than `NoMethodError`, and a receiver's `method_missing` is
+  never reached. (`rbFPublicSend` dispatches a defined method exactly as `rbFSend` does — CLAUDE.md §
+  "Method visibility is compile-time only" — so this is about the call name and the error, not visibility.)
 
 ## Acceptance criteria
 

@@ -47,10 +47,6 @@ is not a Concern. Two consequences:
 - `trailties/src/trailties/action-view.ts` flattens UrlFor into a `Module` for
   `RoutingUrlFor` the same way.
 
-Separately, `private :_generate_paths_by_default` (`route_set.rb:628`) is not
-ported. `rbModPrivate` keys visibility on a class prototype, and a ruby-compat
-`Module` has only its carrier.
-
 ## Acceptance criteria
 
 - UrlFor is a Concern module value with its `included` block, and a Concern
@@ -62,7 +58,6 @@ ported. `rbModPrivate` keys visibility on a class prototype, and a ruby-compat
 - UrlFor's `include(*_url_for_modules) if respond_to?(:_url_for_modules)` arm
   is ported.
 
-Out of scope: the ancestry order `_url_for_modules` lands in and
-`private :_generate_paths_by_default` are
+Out of scope: the ancestry order `_url_for_modules` lands in is
 `url-for-module-private-initialize-and-url-for-modules-order`. The railtie's
 wrapper `Module` is `url-for-is-a-plain-object-module-not-a-linkable-module`.

@@ -34,9 +34,19 @@ closed-reason: null
       generator step awaits actions). `run` awaits it inside the `rescue`, so an `ArgumentError`
       or `NoMethodError` raised asynchronously reaches the handler arms.
 - [ ] **Visibility.** `public_method?` / `private_method?` read `instance.public_methods` /
-      `private_methods`. A TS `private` has no runtime residue, so these go through ruby-compat's
-      visibility side table (`rbModPrivate`, CLAUDE.md § "Method visibility is a side table").
-      A private command raises `UndefinedCommandError` (`command_spec.rb:70`).
+      `private_methods`. trails carries no method visibility at run time (CLAUDE.md § "Method
+      visibility is compile-time only"), so `public_method?` answers "the instance defines the
+      name" and `private_method?` answers `false`. What keeps a Thor-private method from being
+      a command is the explicit `methodAdded` registration
+      (`port-thor-base-command-registry-method-added-and-start`): a TS-`private` / `protected`
+      or unregistered method is never in `all_commands`, so dispatch reaches it only through
+      `DynamicCommand`, whose `instance.methods` arm (`:142-148`) refuses any defined name
+      with `handle_no_command_error`. Do not add a visibility table or a per-class private
+      list to make `private_method?` answer.
+- [ ] **`command_spec.rb:70`** builds a bare `Class.new` with `private :can_has` and runs a
+      hand-made `Command` against it, with no Thor registry in play. It turns on run-time
+      visibility alone: keep the Rails-converged body as `it.skip` under a `PERMANENT-SKIP:`
+      line citing CLAUDE.md § "Method visibility is compile-time only".
 - [ ] **Arity.** Call `rbCheckArity` (from `ruby-compat-check-arity-raises-argument-error`)
       before the send, so the `rescue ArgumentError` arm fires where Ruby's VM would.
       `arity = instance.method(name).arity` is `rbObjMethod(...).arity()`.
@@ -57,7 +67,8 @@ for:`), and `formatted_usage` concatenates with `" ".dup` (mutable Strings), whi
 ## Acceptance criteria
 
 - [ ] `command.rb` reads complete in `parity:api --package thor`.
-- [ ] `vendor/thor/v1.3.2/spec/command_spec.rb` (10) is ported.
+- [ ] `vendor/thor/v1.3.2/spec/command_spec.rb` is ported: 9 live, and `:70` parked as a
+      permanent skip (see the trap above).
 
 ## Cases to port (10)
 
@@ -72,4 +83,4 @@ for:`), and `formatted_usage` concatenates with `" ".dup` (mutable Strings), whi
 - `#dynamic > does not invoke an existing method` (`:48`)
 - `#dup > dup options hash` (`:56`)
 - `#run > runs a command by calling a method in the given instance` (`:64`)
-- `#run > raises an error if the method to be invoked is private` (`:70`)
+- `#run > raises an error if the method to be invoked is private` (`:70`) — permanent skip

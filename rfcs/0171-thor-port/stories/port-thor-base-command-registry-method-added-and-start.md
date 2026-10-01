@@ -35,8 +35,14 @@ The other half of `vendor/thor/v1.3.2/lib/thor/base.rb`:
 - **`method_added` is fired explicitly** at the position of the Ruby `def`: a class's
   `static {}` block calls `this.methodAdded("install")` after that command's `desc` /
   `method_option` calls. The ported `methodAdded` body is line-for-line: the
-  `initialize → initialize_added` arm, `public_method_defined?` (via the visibility side table),
+  `initialize → initialize_added` arm, `public_method_defined?` (`rbModPublicMethodDefined`,
+  which answers "defined": CLAUDE.md § "Method visibility is compile-time only"),
   `no_commands?`, `create_command`, `is_thor_reserved_word?`, `register_klass_file`.
+- **A Thor-private method is one that is never registered.** Ruby's `method_added` fires
+  for a private `def` too and `public_method_defined?` drops it. trails has no run-time
+  visibility to read, so the registration itself is the mechanism: a TS-`private` /
+  `protected` method is not passed to `methodAdded`, and an unregistered method is not a
+  command. `thor-command-registration-lint-rule` enforces the public half.
 - **`no_commands`** is ported verbatim over `NestedContext`. A helper is declared as
   `this.noCommands(() => this.methodAdded("helper"))`, the same shape as Ruby's
   `no_commands do def helper; end end`.
@@ -68,8 +74,8 @@ which ratifies decisions 1, 2 and 5 with the alternatives from the RFC.
       command added to a parent after the child first read `all_commands` still appears. Keep the
       merge; do not memoize the result.
 - [ ] **`public_command`** redefines each name as `def name(*); super end`. In TS it
-      re-exposes a parent's method on the subclass prototype and records it public in the
-      visibility table.
+      re-exposes a parent's method on the subclass prototype and calls `methodAdded(name)`,
+      as the Ruby `def` fires `method_added`. There is no visibility record to update.
 - [ ] **`print_options`' padding** is `aliases_for_usage.size.max.to_i` (`nil.to_i` is 0).
 
 ## Acceptance criteria

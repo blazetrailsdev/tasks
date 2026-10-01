@@ -43,7 +43,10 @@ spec helper's `capture("stdout", async () => ...)`. A case that cannot run under
 - `#start > raises an error if the wrong number of params are provided` (`:470`)
 - `#start > raises an error if the invoked command does not exist` (`:492`)
 - `#start > calls method_missing if an unknown method is passed in` (`:496`)
-- `#start > does not call a private method no matter what` (`:500`)
+- `#start > does not call a private method no matter what` (`:500`) — ports as written:
+  `what` is TS-`private` and never registered, so it reaches `DynamicCommand`, whose
+  `instance.methods` arm answers `Could not find command "what"`. No run-time visibility
+  is read (CLAUDE.md § "Method visibility is compile-time only").
 - `#start > uses command default options` (`:504`)
 - `#start > raises when an exception happens within the command call` (`:509`)
 - `#start > invokes a command` (`:514`)

@@ -52,6 +52,14 @@ ivars, anonymous `Class.new(ActiveRecord::TestCase)`, cache resets, `FixtureClas
 The instantiated-fixture cases read `@first` ivars Rails assigns per row; trails' carrier is the fixture
 accessor / instance property, decided by `activerecord-test-fixtures-method-missing-accessors` (RFC 0174).
 
+Two of these read as visibility cases and are not. "visibility of accessor method"
+(`fixtures_test.rb:770-773`) asserts `respond_to?(:topics, false)` against `TestFixtures`'
+`respond_to_missing?(name, include_private)`, whose argument still flows through `rbObjRespondTo`'s
+`priv`; it is already live in `fixtures.test.ts` (trails#8310), so its entry is retired rather
+than ported. "fixture method and private alias" (`:624-628`) only CALLS the private
+`active_record_fixture` alias. Neither needs method visibility at run time, which trails does not
+carry (CLAUDE.md § "Method visibility is compile-time only").
+
 ## Acceptance criteria
 
 - [ ] Each case ported with Rails' body over the ported `TestFixtures` API; entries deleted.
