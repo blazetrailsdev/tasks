@@ -1,7 +1,7 @@
 ---
 title: "load-defaults-sanitizer-vendor-and-html5-probe"
-status: in-progress
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

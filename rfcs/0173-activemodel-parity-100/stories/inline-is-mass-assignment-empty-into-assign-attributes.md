@@ -1,7 +1,7 @@
 ---
 title: "isMassAssignmentEmpty is invented surface; Rails inlines the guard as attribute_assignment.rb:32"
-status: in-progress
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []

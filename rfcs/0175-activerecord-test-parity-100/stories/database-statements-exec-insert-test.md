@@ -1,7 +1,7 @@
 ---
 title: "Port database_statements_test.rb's test_exec_insert (last_inserted_id has no coverage)"
-status: in-progress
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages:

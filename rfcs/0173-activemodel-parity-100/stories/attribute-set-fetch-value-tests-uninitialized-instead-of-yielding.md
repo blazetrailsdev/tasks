@@ -1,7 +1,7 @@
 ---
 title: "AttributeSet#fetch_value type-tests Uninitialized instead of forwarding the block to Attribute#value"
-status: in-progress
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "test-fixture-accessors-are-untyped"
-status: in-progress
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

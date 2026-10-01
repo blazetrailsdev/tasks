@@ -1,7 +1,7 @@
 ---
 title: "finder.test 'find with string' ports findBySql smoke, not Rails' string-id cast assertion"
-status: in-progress
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: async Kernel#system and Open3.capture2e for Thor's run"
-status: in-progress
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["ruby-compat"]

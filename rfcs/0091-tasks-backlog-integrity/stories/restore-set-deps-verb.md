@@ -1,7 +1,7 @@
 ---
 title: "Restore tasks set-deps / set-deps-rfc (lost in the tasks-next rewrite)"
-status: in-progress
-updated: 2026-09-30
+status: done
+updated: 2026-10-01
 rfc: "0091-tasks-backlog-integrity"
 cluster: null
 packages: []
