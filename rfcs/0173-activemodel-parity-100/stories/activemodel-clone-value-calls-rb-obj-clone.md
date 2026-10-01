@@ -1,6 +1,6 @@
 ---
 title: "activemodel-clone-value-calls-rb-obj-clone"
-status: draft
+status: blocked
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "rbObjClone cannot copy a value whose class keeps state in #private fields: Object.create(proto) plus an own-descriptor copy installs none of them, and JS offers no way to copy a private slot from outside its class. ruby-compat's Hash (hash.ts #frozen/#identhash/#default) and @blazetrails/date's Date (date.ts) are both attribute values and both come out broken, silently, so ForcedMutationTracker#clone_value's rescue TypeError, NoMethodError (attribute_mutation_tracker.rb:147) never fires. Date/Map/Set/typed arrays/Temporal are fixable in rbObjAlloc through their own constructors (measured on trails#8348); #private classes are not. Needs a per-class copy protocol decided first."
 closed-reason: null
 ---
 

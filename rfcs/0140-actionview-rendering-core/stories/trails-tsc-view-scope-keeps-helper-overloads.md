@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: a bare helper in a .tse view keeps every overload, not OmitThisParameter's last"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0140-actionview-rendering-core"
 cluster: null

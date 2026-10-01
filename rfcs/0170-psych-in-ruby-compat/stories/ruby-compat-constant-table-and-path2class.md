@@ -1,7 +1,7 @@
 ---
 title: "Move the registered-constant table into ruby-compat and port rb_path_to_class / rb_mod_name"
-status: draft
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat", "activesupport", "activerecord", "trailties"]
@@ -9,9 +9,9 @@ deps: ["psych-object-protocol-for-record-yaml-round-trip"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8350
+claim: "2026-10-01T20:41:03Z"
+assignee: "ruby-compat-constant-table-and-path2class"
 blocked-by: null
 closed-reason: null
 ---

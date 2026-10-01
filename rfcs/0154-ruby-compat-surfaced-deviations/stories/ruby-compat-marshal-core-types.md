@@ -1,6 +1,6 @@
 ---
 title: "Port Marshal.dump for core types and plain ivar objects into ruby-compat"
-status: claimed
+status: in-progress
 updated: 2026-10-01
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: 1
-pr: null
+pr: trails#8349
 claim: "2026-10-01T19:58:59Z"
 assignee: "ruby-compat-marshal-core-types"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "DisableJoinsAssociationRelation carries a trails-only deferred chain-walk mode Rails has no second arm for"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

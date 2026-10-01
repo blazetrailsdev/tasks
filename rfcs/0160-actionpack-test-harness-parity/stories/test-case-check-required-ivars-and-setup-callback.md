@@ -1,6 +1,6 @@
 ---
 title: "test-case-check-required-ivars-and-setup-callback"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
