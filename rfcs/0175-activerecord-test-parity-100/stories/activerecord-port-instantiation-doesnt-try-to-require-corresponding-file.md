@@ -5,7 +5,8 @@ updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - discriminate-class-for-record-should-call-find-sti-class
 deps-rfc: []
 est-loc: 70
 priority: null
