@@ -9,6 +9,7 @@ packages:
   - "activerecord"
   - "ruby-compat"
   - "activesupport"
+  - "actionpack"
 clusters:
   - api-surface
   - arms
