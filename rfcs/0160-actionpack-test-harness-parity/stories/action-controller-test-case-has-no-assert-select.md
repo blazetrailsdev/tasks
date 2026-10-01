@@ -5,7 +5,8 @@ updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: ["actionpack"]
-deps: []
+deps:
+  - dom-assertions-fragment-parses-with-nokogiri-html4
 deps-rfc: []
 est-loc: 150
 priority: null
