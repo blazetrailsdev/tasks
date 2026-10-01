@@ -45,4 +45,7 @@ model classes, no `registerModel` inside the describe, no `seedAssociationCache`
 
 - [ ] No ad-hoc `Topic` subclass or invented registry name remains in
       `i18n-validation.test.ts`.
-- [ ] Test names are unchanged; `pnpm parity:test` delta non-negative.
+- [ ] The two generated families are named by Rails' own `COMMON_CASES` template
+      (`i18n_validation_test.rb:38-68`, six cases each), replacing the two
+      trailing-space names that match no Rails test; the other test names are
+      unchanged, and `pnpm parity:test` delta is non-negative.
