@@ -5,7 +5,9 @@ updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
-deps: ["thor-actions-template-is-unported"]
+deps:
+  - thor-actions-template-is-unported
+  - ruby-compat-async-fs-verbs-for-thor-actions
 deps-rfc: []
 est-loc: 350
 priority: 2
