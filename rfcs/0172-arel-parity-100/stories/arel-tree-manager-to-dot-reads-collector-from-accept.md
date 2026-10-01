@@ -5,7 +5,8 @@ updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - arel-dot-accept-requires-collector
 deps-rfc: []
 est-loc: 15
 priority: null
