@@ -8,6 +8,7 @@ packages: ["ruby-compat", "activerecord"]
 deps:
   [
     "ruby-compat-marshal-core-types",
+    "ruby-compat-marshal-load-core-types",
     "schema-cache-dump-and-load-through-psych",
     "debug-helper-through-object-to-yaml",
   ]
@@ -40,7 +41,8 @@ Marshal out. Two Rails call sites need Ruby's `Marshal`
   calls `Marshal.dump(object)` first, as a probe that raises for
   singleton-method objects and so routes them to the `inspect` fallback.
 
-Core types are `ruby-compat-marshal-core-types`. This story adds the
+Core types are `ruby-compat-marshal-core-types` (`Marshal.dump`) and
+`ruby-compat-marshal-load-core-types` (`Marshal.load`). This story adds the
 user-marshal and singleton arms and makes the two calls.
 `packages/activesupport/src/cache/coder.ts` carries a Marshal stand-in for
 cache entries, not a Marshal port. Check it before starting, and converge it

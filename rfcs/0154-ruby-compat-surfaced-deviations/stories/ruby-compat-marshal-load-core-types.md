@@ -1,15 +1,15 @@
 ---
-title: "ruby-compat-marshal-load-core-types"
+title: "Port Marshal.load for core types and plain ivar objects into ruby-compat"
 status: draft
 updated: 2026-10-01
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
-packages: []
+packages: ["ruby-compat"]
 deps:
   - ruby-compat-marshal-core-types
   - ruby-compat-constant-table-and-path2class
 deps-rfc: []
-est-loc: null
+est-loc: 700
 priority: null
 pr: null
 claim: null
@@ -59,8 +59,11 @@ Decisions already taken on the dump side, which the load side has to match:
   `r_leave` (`marshal.c:1693`), `r_post_proc` and `partial_objects` are not
   ported. Neither are the arms `w_object` does not write: `TYPE_USRMARSHAL`
   (owned by `ruby-compat-has-no-marshal-for-schema-cache-and-debug`),
-  `TYPE_USERDEF`, `TYPE_DATA`, `TYPE_UCLASS`, `TYPE_EXTENDED`, Regexp, Struct,
-  Class and Module. They take `r_object_for`'s `default:` arm.
+  `TYPE_USERDEF`, `TYPE_DATA`, `TYPE_EXTENDED`, Regexp, Struct, Class and
+  Module. They take `r_object_for`'s `default:` arm.
+- The dump side writes `TYPE_UCLASS` (`w_uclass`, `marshal.c:590`) for an
+  Array or Hash subclass and for a `compare_by_identity` Hash
+  (`marshal.c:1074-1077`). The WIP branch predates that and does not read it.
 
 ## Acceptance criteria
 
@@ -70,6 +73,9 @@ Decisions already taken on the dump side, which the load side has to match:
       `TYPE_ARRAY`, `TYPE_HASH`, `TYPE_HASH_DEF` and `TYPE_OBJECT`
       (`rbPathToClass`, then `Object.create(klass.prototype)` and
       `rbObjIvarSet`).
+- [ ] `TYPE_UCLASS` (`marshal.c:1935-1960`), including the
+      `compare_by_identity` Hash arm, so the `array subclass` and
+      `hash compare_by_identity` fixtures load.
 - [ ] MRI's errors, with MRI's messages: `TypeError` "incompatible marshal
       file format (can't be read)…" and "instance of IO needed";
       `ArgumentError` "marshal data too short", "dump format error
