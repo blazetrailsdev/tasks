@@ -1,5 +1,5 @@
 ---
-title: "activemodel: SecurePassword reaches a BCrypt::Password object (call row + arm-throw mark)"
+title: "activemodel: SecurePassword reaches a BCrypt::Password object (call row)"
 status: claimed
 updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
