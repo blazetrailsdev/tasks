@@ -2,7 +2,7 @@
 title: "port-action-view-csrf-helper-and-generated-layout-meta-tags"
 status: draft
 updated: 2026-09-28
-rfc: "0141-actionpack-surfaced-deviations"
+rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
 deps: []
