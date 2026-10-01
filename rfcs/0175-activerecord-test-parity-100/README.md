@@ -31,7 +31,7 @@ related-rfcs:
   - "0172-arel-parity-100"
   - "0173-activemodel-parity-100"
   - "0174-activerecord-api-parity-100"
-priority: 2
+priority: 3
 ---
 
 # RFC 0175 — activerecord tests, assertions, fixtures and schema at 100%
