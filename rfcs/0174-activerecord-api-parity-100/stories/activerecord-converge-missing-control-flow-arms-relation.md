@@ -37,7 +37,11 @@ closed-reason: null
 ## Acceptance criteria
 
 - [ ] Each pair's branches match its Rails body (CLAUDE.md § "Control flow"): same guards, order, early returns.
-- [ ] The missing-direction report shows 0 activerecord rows in these files.
+- [ ] The missing-direction report shows 0 activerecord rows in these files, except the rows no port can clear:
+      `relation/calculations.ts#pluck` (Rails' two `if @async … Promise::Complete.new` arms,
+      `relation/calculations.rb:293-297,302-306`; trails uses native promises), and the `uniq` / `concat`
+      fold false positives owned by `arms-report-fold-credits-idiom-arms-by-presence` (`buildArel`,
+      `structurallyIncompatibleValuesFor`, `buildJoinBuckets`, `executeGroupedCalculation`).
 - [ ] Tests exercising the restored branches are ported or already green.
 
 ## Verification
