@@ -40,6 +40,15 @@ The fallback's only caller was the invented `Dot#compile`, deleted by
 `arel-burn-moved-extra-surface-managers-collectors-namespaces`; every remaining
 caller (`tree-manager.ts` `toDot`, the dot tests) passes a collector.
 
+Tried in trails#8345 and backed out: an override spelled
+`accept<C extends { append(str: string): C }>(object: Nodes.Node, collector: C): C`
+fails `TS2416` against `Visitor#accept`'s overload list
+(`packages/arel/src/visitors/visitor.ts`), whose one-argument overload
+`accept(object: unknown): unknown` a two-required-parameter override cannot
+satisfy. Rails' base is `def accept(object, collector = nil)`
+(`arel/visitors/visitor.rb`), so the fix has to start at the base overloads,
+which `ToSql#compile`'s callers rely on for the `C` return type.
+
 ## Acceptance criteria
 
 - [ ] `Dot#accept(object, collector)` requires the collector and is `visit(object)` then `collector.append(this.toDot())`, returning what `<<` returns, as `dot.rb:28-31`.
