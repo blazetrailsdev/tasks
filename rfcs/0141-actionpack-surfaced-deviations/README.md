@@ -8,6 +8,7 @@ priority: 5
 owner: "@deanmarano"
 packages:
   - "actionpack"
+  - "trailties"
 clusters:
   - "action-controller"
   - "test-harness"
