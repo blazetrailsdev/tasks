@@ -1,16 +1,11 @@
 ---
-title: "activerecord: un-skip the 18 matched-but-skipped cases outside delegation_test.rb"
+title: "activerecord: un-skip the 15 matched-but-skipped cases outside delegation_test.rb"
 status: ready
 updated: 2026-09-30
 rfc: "0175-activerecord-test-parity-100"
 cluster: skipped-tests
 packages: ["activerecord"]
-deps:
-  [
-    "psych-load-and-safe-load",
-    "activerecord-private-attribute-methods-are-still-public",
-    "association-async-load-target-uses-async-executor",
-  ]
+deps: ["psych-load-and-safe-load", "association-async-load-target-uses-async-executor"]
 deps-rfc: []
 est-loc: 450
 priority: null
@@ -23,11 +18,11 @@ closed-reason: null
 
 ## Context
 
-`pnpm parity:test --package activerecord` counts **64 skipped**; outside `relation/delegation_test.rb` (46):
+`pnpm parity:test --package activerecord` counted **64 skipped** at authoring (61 once trails#8317
+registers the access-control trio as unportable); outside `relation/delegation_test.rb` (46):
 
-- `attribute_methods_test.rb` (6) — "attribute keys on a new instance", "undeclared attribute method does not
-  affect respond_to? and method_missing", "attribute predicates respect access control", "non-attribute read
-  and write", "attribute readers respect access control", "attribute writers respect access control".
+- `attribute_methods_test.rb` (3) — "attribute keys on a new instance", "undeclared attribute method does not
+  affect respond_to? and method_missing", "non-attribute read and write".
   The access-control trio is permanently unportable (CLAUDE.md § "Method visibility is compile-time
   only"): trails#8317 moved it, with "bulk updates respect access control", into the unported register
   under `PERMANENT-SKIP:` lines, so it is no longer counted among the matched skips. The `method_missing` one ports the assertions CLAUDE.md § "Records are not Proxies" says do not depend on the hook.
