@@ -2,7 +2,7 @@
 title: "Template#spot highlights to end of line instead of the failing node's span"
 status: blocked
 updated: 2026-09-26
-rfc: "0140-actionview-rendering-core"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
