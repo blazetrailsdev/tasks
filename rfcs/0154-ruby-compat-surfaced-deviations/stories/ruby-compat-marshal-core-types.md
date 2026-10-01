@@ -7,7 +7,7 @@ cluster: null
 packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
-est-loc: 780
+est-loc: 700
 priority: 1
 pr: null
 claim: "2026-10-01T19:58:59Z"
