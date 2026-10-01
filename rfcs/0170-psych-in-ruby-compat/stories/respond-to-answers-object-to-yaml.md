@@ -5,7 +5,8 @@ updated: 2026-09-30
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
 packages: []
-deps: []
+deps:
+  - psych-object-to-yaml
 deps-rfc: []
 est-loc: null
 priority: null
