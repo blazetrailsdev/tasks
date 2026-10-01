@@ -5,7 +5,8 @@ updated: 2026-10-01
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - test-fixtures-is-a-live-module-so-before-setup-reaches-super
 deps-rfc: []
 est-loc: null
 priority: null
