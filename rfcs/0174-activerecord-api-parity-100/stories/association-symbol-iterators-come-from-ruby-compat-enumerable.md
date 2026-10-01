@@ -5,7 +5,8 @@ updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts
 packages: ["activerecord", "ruby-compat"]
-deps: []
+deps:
+  - errors-symbol-iterator-comes-from-ruby-compat-enumerable
 deps-rfc: []
 est-loc: 100
 priority: null
