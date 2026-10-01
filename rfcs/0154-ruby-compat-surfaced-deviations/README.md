@@ -15,6 +15,7 @@ packages:
   - "date"
   - "actionpack"
   - "activemodel"
+  - "trailties"
 clusters:
   - "mri-relocation"
   - "measurement"
