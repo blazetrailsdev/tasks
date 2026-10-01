@@ -48,7 +48,8 @@ and runs them statically from `activesupport/src/testing/autorun.ts`. Both subcl
 theirs on the prototype instead.
 
 `ActionController::TestCase::Behavior` (`test_case.rb:370-694`, `include Behavior` at `:696`)
-is also unported: its methods sit in the TestCase class body.
+is also unported: its methods sit in the TestCase class body. Extracting it moves the whole class
+body, so it is its own story: `action-controller-test-case-behavior-module-is-unported`.
 
 ## Acceptance criteria
 
@@ -59,7 +60,6 @@ is also unported: its methods sit in the TestCase class body.
 - The class-body `beforeSetup` / `afterTeardown` in `action-controller/test-case.ts` are deleted.
   `IntegrationTest#beforeSetup` becomes `Runner#before_setup` (`@app = nil; super`) and its
   `afterTeardown` is deleted.
-- `ActionController::TestCase::Behavior` exists and is included at `test_case.rb:696`.
 - `include(ActionController::TestCase, ActionDispatch::SharedRoutes)`
   (`packages/actionpack/src/test-helpers/abstract-unit.ts`) still runs before the inherited
   `beforeSetup`, and every actionpack, activesupport and trailties test file stays green.
