@@ -11,6 +11,7 @@ packages:
   - "arel"
   - "activesupport"
   - "ruby-compat"
+  - "actionview"
 clusters:
   - "schema"
   - "api-compare"

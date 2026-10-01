@@ -2,7 +2,7 @@
 title: "Port RenderParser and RubyTracker once a handler registers them"
 status: blocked
 updated: 2026-09-26
-rfc: "0140-actionview-rendering-core"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages:
   - "actionview"
