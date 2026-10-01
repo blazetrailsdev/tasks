@@ -9,6 +9,7 @@ packages:
   - "activemodel"
   - "ruby-compat"
   - "activerecord"
+  - "i18n"
 clusters:
   - api-surface
   - arms
