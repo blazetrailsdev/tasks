@@ -1,6 +1,6 @@
 ---
 title: "activerecord: model, migration and task methods return what Rails callers read (void-returns report)"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms

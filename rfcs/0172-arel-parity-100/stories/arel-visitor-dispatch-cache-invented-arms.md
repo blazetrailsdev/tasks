@@ -1,6 +1,6 @@
 ---
 title: "arel: Visitor.dispatch_cache has three arms Rails does not"
-status: claimed
+status: in-progress
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: arms
@@ -9,7 +9,7 @@ deps: ["core-classes-have-no-class-object-visitor-keys-by-name"]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8424
 claim: "2026-10-02T21:38:14Z"
 assignee: "arel-visitor-dispatch-cache-invented-arms"
 blocked-by: null

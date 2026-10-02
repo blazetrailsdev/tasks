@@ -1,6 +1,6 @@
 ---
 title: "Converge ThroughAssociation#stale_state onto Rails' array shape"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0023-surfaced-deviations"
 cluster: null

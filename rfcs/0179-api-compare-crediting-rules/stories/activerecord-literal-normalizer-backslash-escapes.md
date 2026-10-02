@@ -1,6 +1,6 @@
 ---
 title: "tooling: the literal comparer double-counts Ruby backslash escapes (sanitize_sql_like escape_character)"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: reports

@@ -1,6 +1,6 @@
 ---
 title: "activemodel: TimeValue#user_input_in_time_zone inlines every receiver's in_time_zone instead of sending it"
-status: claimed
+status: in-progress
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: arms
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8424
 claim: "2026-10-02T21:38:14Z"
 assignee: "arel-visitor-dispatch-cache-invented-arms"
 blocked-by: null

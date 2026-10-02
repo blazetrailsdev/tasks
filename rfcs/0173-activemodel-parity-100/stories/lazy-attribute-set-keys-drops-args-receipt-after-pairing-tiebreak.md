@@ -1,6 +1,6 @@
 ---
 title: "LazyAttributeSet#keys drops its @missingRailsArgs receipt once pairCallSites breaks the tie"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["pair-call-sites-breaks-ties-by-receiver-name"]
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8422
+claim: "2026-10-02T22:26:33Z"
+assignee: "activemodel-converge-invented-control-flow-arms-rest-residue"
 blocked-by: null
 closed-reason: null
 ---

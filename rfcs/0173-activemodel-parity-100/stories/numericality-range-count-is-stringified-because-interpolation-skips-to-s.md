@@ -1,6 +1,6 @@
 ---
 title: "numericality: the RANGE_CHECKS count is pre-stringified because I18n interpolation skips to_s"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null

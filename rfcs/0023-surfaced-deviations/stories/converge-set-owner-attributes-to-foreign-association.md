@@ -1,7 +1,7 @@
 ---
 title: "Port set_owner_attributes from ForeignAssociation instead of the has_one-only hand-rolled zip"
-status: draft
-updated: 2026-08-11
+status: done
+updated: 2026-10-02
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: trails#8417
 claim: null
 assignee: null
 blocked-by: null

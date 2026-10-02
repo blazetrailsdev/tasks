@@ -1,7 +1,7 @@
 ---
 title: "parity: the include-graph walk resolves an include() edge onto a ruby-compat Module"
-status: draft
-updated: 2026-10-01
+status: closed
+updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set
 packages: ["activerecord"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: trails#8417 (3d07d2a9f3) moved ThroughAssociation#build_record to a top-level function in associations/through-association.ts, so the extractor credits it in its own file, and deleted the stale '@missingRailsCall map' receipt on HasManyThroughAssociation#buildRecord — the only receipt this story clears. On origin/main @ cc4a0a4a6f, 'git grep -F call-gate-credits-a-module-include-edge-to-its-includer -- packages' returns 0 hits and has-many-through-association.ts carries no @missingRailsCall. The include-graph Module-resolution rule has no remaining receipt to justify it; refile in 0179 if a new one appears."
 ---
 
 ## Context

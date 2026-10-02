@@ -1,6 +1,6 @@
 ---
 title: "activemodel: LazyAttributeSet sends key?/keys/each_key/fetch to values on one path, Hash or IndexedRow"
-status: draft
+status: in-progress
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8422
+claim: "2026-10-02T22:26:30Z"
+assignee: "lazy-attribute-set-values-sends-reach-indexed-row-on-one-path"
 blocked-by: null
 closed-reason: null
 ---

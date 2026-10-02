@@ -1,7 +1,7 @@
 ---
 title: "activemodel: burn parity:api:moves' 150 include-chain relocations to zero"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: placement
 packages: ["activemodel"]
@@ -9,9 +9,9 @@ deps: ["moves-counts-a-mixin-member-declared-on-the-host-interface-as-misplaced"
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8423
+claim: "2026-10-02T22:01:55Z"
+assignee: "activemodel-converge-moves-residue"
 blocked-by: null
 closed-reason: null
 ---
