@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: arms
 packages: ["activemodel", "activesupport"]
-deps: []
+deps:
+  - activemodel-converge-invented-control-flow-arms-type
 deps-rfc: []
 est-loc: 150
 priority: null
