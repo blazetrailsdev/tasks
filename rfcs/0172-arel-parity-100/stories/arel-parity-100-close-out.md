@@ -19,6 +19,12 @@ deps:
     "arel-converge-missing-control-flow-arms",
     "arel-converge-invented-control-flow-arms",
     "arel-deps-lint-to-zero",
+    "arel-attribute-and-sql-literal-are-not-nodes",
+    "activerecord-node-guards-admit-attribute-and-sql-literal",
+    "arel-mixin-hosts-take-the-arel-node-union",
+    "arel-build-quoted-names-the-sql-literal-arm",
+    "arel-to-sql-comparison-visitors-share-an-invented-visit-binary-op",
+    "arel-remaining-nil-sends-read-ruby-compat-is-nil",
   ]
 deps-rfc: []
 est-loc: 120
