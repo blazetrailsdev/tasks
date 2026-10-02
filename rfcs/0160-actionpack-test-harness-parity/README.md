@@ -10,6 +10,7 @@ packages:
   - "actionpack"
   - "activerecord"
   - "trailties"
+  - "activesupport"
 clusters:
   - "test-harness"
 ---
