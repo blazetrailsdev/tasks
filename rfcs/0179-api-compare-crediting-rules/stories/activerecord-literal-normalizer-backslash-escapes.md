@@ -2,8 +2,8 @@
 title: "tooling: the literal comparer double-counts Ruby backslash escapes (sanitize_sql_like escape_character)"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
-cluster: tooling
+rfc: "0179-api-compare-crediting-rules"
+cluster: reports
 packages: ["activerecord"]
 deps: []
 deps-rfc: []

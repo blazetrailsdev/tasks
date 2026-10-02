@@ -41,6 +41,7 @@ related-rfcs:
   - "0173-activemodel-parity-100"
   - "0175-activerecord-test-parity-100"
   - "0178-activerecord-arms-parity-100"
+  - "0179-api-compare-crediting-rules"
 priority: 2
 ---
 
@@ -92,8 +93,8 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
 | `parity:api:moves`                                                         | 947                                                                                                     | 0                             | mostly include-chain double counting                                                                                    | `activerecord-converge-moves-residue-*`                                                                                   |
 | `parity:api:returns` / `:duck-types`                                       | 51 / 8                                                                                                  | 0                             | adapters, schema statements, tasks                                                                                      | RFC 0178                                                                                                                  |
 | `parity:api:deps`                                                          | → arel 3+1, → activemodel 10+1, → activesupport 7 ✗                                                     | 0                             | `insert-all.ts`, `attributes.ts`, `migration.ts`, …                                                                     | `activerecord-deps-lint-to-zero`                                                                                          |
-| option keys (advisory)                                                     | 46 (3 likely-real)                                                                                      | 0                             | schema definitions/statements                                                                                           | `activerecord-option-keys-*`                                                                                              |
-| literals (advisory)                                                        | 1                                                                                                       | 0                             | `sanitization.rb` `escape_character` (normalizer fault)                                                                 | `activerecord-literal-normalizer-backslash-escapes`                                                                       |
+| option keys (advisory)                                                     | 46 (3 likely-real)                                                                                      | 0                             | schema definitions/statements                                                                                           | `activerecord-option-keys-missing-in-ts`; the extractor fault is in RFC 0179                                              |
+| literals (advisory)                                                        | 1                                                                                                       | 0                             | `sanitization.rb` `escape_character` (normalizer fault)                                                                 | RFC 0179                                                                                                                  |
 | protocol-call enrollment                                                   | activerecord not in `PROTOCOL_CALL_ENROLLED_PACKAGES` (46 rows)                                         | enrolled                      | —                                                                                                                       | `enroll-activerecord-in-protocol-call-mapping` (RFC 0156)                                                                 |
 | structural duplicates (report) / `no-ruby-compat-reimplementation-exclude` | 131 / 2                                                                                                 | 0 / 0                         | —                                                                                                                       | `activerecord-triage-structural-duplicates-of-ruby-compat`                                                                |
 | `rails-error-parity-exclude.json`                                          | 74 activerecord files                                                                                   | 0                             | all directories                                                                                                         | `activerecord-burn-rails-error-parity-exclude-*`                                                                          |
@@ -273,8 +274,6 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
 | `activerecord-verify-and-pin-protocol-bodies`                                         | 250     | pins           |
 | `activerecord-verify-and-pin-migration-compatibility`                                 | 150     | pins           |
 | `activerecord-option-keys-missing-in-ts`                                              | 150     | calls-args     |
-| `activerecord-option-keys-extra-arm-measures-read-keys`                               | 250     | tooling        |
-| `activerecord-literal-normalizer-backslash-escapes`                                   | 120     | tooling        |
 | `activerecord-relocate-query-methods-bodies-inlined-in-relation`                      | 600     | placement      |
 | `activerecord-relocate-callbacks-bodies-inlined-in-base`                              | 450     | placement      |
 | `activerecord-relocate-pg-schema-statements-bodies-inlined-in-adapter`                | 550     | placement      |
@@ -327,6 +326,27 @@ edge on each moved story it already named. After the split merges, those edges a
 `deps-rfc` edge on RFC 0178 (`tasks set-deps-rfc`), which is the whole-RFC case § "Gating" describes: the
 close-out waits until 0178 is closed, including stories filed there later.
 
+## Split: RFC 0179
+
+As of 2026-10-02 a story whose fix is a rule in the comparer itself is owned by
+`0179-api-compare-crediting-rules`: the call-set gate, the call-argument gate, the extra-surface scorer and
+the advisory reports (option keys, literals, structural duplicates), all under `scripts/api-compare/`. 20
+stories moved there. Slugs did not change, so every `CONVERGEABLE <story-id>` receipt in trails still
+resolves.
+
+| The story's first acceptance criterion changes                                                  | File it in |
+| ----------------------------------------------------------------------------------------------- | ---------- |
+| the comparer (`scripts/api-compare/`, `scripts/parity/`), so a correct port stops being flagged | RFC 0179   |
+| the arms, void-return or duck-type extractor                                                    | RFC 0178   |
+| a port under `packages/*/src`, a skip group, an exclude file or a baseline row                  | here       |
+
+This is the principle "Measurement faults are fixed in the tool" given its own backlog. A story that both
+ports and re-scores (`compatibility-module-members-unmeasured-by-parity-api`, the two
+`*-score-against-the-*-gem` stories) stays here, because its first criterion is the port.
+
+`activerecord-api-parity-100-close-out` named two of the moved stories in `deps`. As with RFC 0178, those
+edges are replaced after merge by one `deps-rfc` edge on RFC 0179.
+
 ## Non-goals
 
 - **Rewriting the parity tools' scoring model.** Where a tool is wrong, the owning story fixes that one
@@ -351,7 +371,7 @@ close-out waits until 0178 is closed, including stories filed there later.
 
 ## Rollout
 
-1. **Rehome and tooling** — `activerecord-option-keys-extra-arm-measures-read-keys`, `activerecord-literal-normalizer-backslash-escapes`, `activerecord-triage-structural-duplicates-of-ruby-compat`, `parity-100-rehome-postponed-rfc-dependencies`
+1. **Rehome and tooling** — `activerecord-triage-structural-duplicates-of-ruby-compat`, `parity-100-rehome-postponed-rfc-dependencies` (the two comparer-fault stories moved to RFC 0179 on 2026-10-02)
 2. **API surface** — `activerecord-port-associations-eager-load-bang`, `activerecord-deduplicable-deduplicated-and-unary-minus`, `activerecord-core-attributes-for-inspect`, `activerecord-encryption-contexts-thread-mattr-accessors`, `activerecord-extended-deterministic-queries-core-queries-find-by`, `activerecord-relation-encode-with-and-strict-loading-scope`, `activerecord-delegation-encode-with-and-class-specific-relation-name`, `activerecord-result-indexed-row-to-h`, `activerecord-type-registry-copy-and-serialized-inspect`, `activerecord-inheritance-residue-delegate-class-supers`, `activerecord-disable-joins-association-scope-add-constraints-arity`, `activerecord-deps-lint-to-zero`
 3. **Excluded files and skips** — `activerecord-port-version-and-gem-version`, `activerecord-unexclude-dynamic-matchers`, `activerecord-unexclude-and-measure-fixtures-rb`, `activerecord-fixture-initialize-prepend-constructor`, `activerecord-port-encrypted-fixtures-module`, `activerecord-port-marshalling-module`, `activerecord-port-message-pack-module`, `activerecord-port-promise`, `activerecord-port-railties-controller-runtime`, `activerecord-port-legacy-yaml-adapter-and-yaml-column`, `activerecord-port-trilogy-adapter`, `activerecord-retire-migrator-index-helpers-skip`, `activerecord-retire-check-pending-skip`, `activerecord-retire-class-attribute-slot-skip`, `activerecord-retire-no-touching-klasses-skip`, `activerecord-score-core-object-protocol-names`, `activerecord-lifecycle-hook-semantics-audit`, `activerecord-test-fixtures-method-missing-accessors`
 4. **Calls and args** — `activerecord-converge-alias-tracker-hash-default`, `activerecord-converge-preloader-through-reduce-merge`, `activerecord-converge-inheritance-find-sti-class-rows`, `activerecord-converge-insert-all-builder-rows`, `activerecord-converge-mysql2-cast-result-args`, `activerecord-converge-load-from-sql-instantiate-instance-of`, `activerecord-converge-build-where-clause-constructor-order`, `activerecord-converge-statement-cache-execute-async-arm`, `activerecord-converge-type-caster-connection-with-connection`, `activerecord-converge-sqlite3-reconnect-rollback`, `activerecord-option-keys-missing-in-ts`
@@ -381,3 +401,7 @@ row at target on a clean build, with the named blocked residue: `activerecord-po
   `0178-activerecord-arms-parity-100`: 53 stories, 45 of them open (17,848 est-loc). 266 stay here,
   219 of them open (39,465 est-loc). The routing rule is § "Split: RFC 0178"; the analysis of the seam
   is in 0178 § "Alternatives considered".
+- 2026-10-02: second split. 20 comparer-rule stories (2,850 est-loc, all open) moved to
+  `0179-api-compare-crediting-rules`; 246 stay here, 198 of them open (36,555 est-loc). The routing rule is
+  § "Split: RFC 0179". `activerecord-api-parity-100-close-out`'s `deps` list was rewritten from a wrapped
+  flow sequence to a block list, with no entry changed, because `tasks set-deps` refuses the wrapped form.

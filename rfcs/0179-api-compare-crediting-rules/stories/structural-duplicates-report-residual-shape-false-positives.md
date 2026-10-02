@@ -1,13 +1,13 @@
 ---
-title: "structural-duplicates-report-residual-shape-false-positives"
+title: "parity: the structural-duplicates report still matches four residual shapes that are not ruby-compat reimplementations"
 status: draft
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0179-api-compare-crediting-rules"
+cluster: reports
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: null
 claim: null

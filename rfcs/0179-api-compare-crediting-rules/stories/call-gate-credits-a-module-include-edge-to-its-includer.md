@@ -2,8 +2,8 @@
 title: "parity: the include-graph walk resolves an include() edge onto a ruby-compat Module"
 status: draft
 updated: 2026-10-01
-rfc: "0174-activerecord-api-parity-100"
-cluster: receipts
+rfc: "0179-api-compare-crediting-rules"
+cluster: call-set
 packages: ["activerecord"]
 deps: []
 deps-rfc: []

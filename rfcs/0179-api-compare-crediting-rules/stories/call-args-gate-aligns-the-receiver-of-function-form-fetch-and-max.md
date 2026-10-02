@@ -2,8 +2,8 @@
 title: "parity: the call-argument gate aligns the receiver of function-form fetch and max"
 status: draft
 updated: 2026-10-02
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0179-api-compare-crediting-rules"
+cluster: call-args
 packages: []
 deps: []
 deps-rfc: []
