@@ -32,6 +32,7 @@ related-rfcs:
   - "0170-psych-in-ruby-compat"
   - "0173-activemodel-parity-100"
   - "0174-activerecord-api-parity-100"
+  - "0178-activerecord-arms-parity-100"
   - "0175-activerecord-test-parity-100"
 priority: 2
 ---

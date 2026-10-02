@@ -31,6 +31,7 @@ related-rfcs:
   - "0172-arel-parity-100"
   - "0173-activemodel-parity-100"
   - "0174-activerecord-api-parity-100"
+  - "0178-activerecord-arms-parity-100"
 priority: 3
 ---
 
@@ -43,7 +44,7 @@ zero. What is left: 138 missing and 64 skipped Rails tests, 46 wrong-describe an
 assertion kind/value mismatches, 1,007 TS-only tests sitting in Rails-named files, ~200 Rails tests
 excluded through the unported register, 6 fixture diffs and 30 unported fixture schemas, 74 invented
 schema tables, and four test-infrastructure lint registers. **38 stories, 16,384 est-loc.**
-Sibling of RFCs 0172, 0173, 0174 (source-side).
+Sibling of RFCs 0172, 0173, 0174 (source-side). RFC 0178 was split out of 0174 on 2026-10-02 (arms, void returns, duck-type guards).
 
 ## Motivation
 
@@ -208,7 +209,7 @@ either ratified (§ "Trails has no autoloader") or blocked with a named blocker.
 - **Other packages.** activesupport, actionpack, trailties and ruby-compat have their own parity RFCs;
   ruby-compat work appears here only where an activerecord/activemodel/arel row needs a carrier.
 
-- **activerecord's source-side axes.** RFC 0174.
+- **activerecord's source-side axes.** RFCs 0174 and 0178.
 
 ## Alternatives considered
 
