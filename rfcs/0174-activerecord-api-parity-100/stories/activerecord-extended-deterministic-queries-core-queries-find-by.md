@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port ExtendedDeterministicQueries::CoreQueries#find_by"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface

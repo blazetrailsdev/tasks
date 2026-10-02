@@ -1,6 +1,6 @@
 ---
 title: "arel-select-manager-ctx-ivar-and-initialize-copy"
-status: ready
+status: done
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8375
+claim: "2026-10-02T02:01:54Z"
+assignee: "arel-select-manager-ctx-ivar-and-initialize-copy"
 blocked-by: null
 closed-reason: null
 ---

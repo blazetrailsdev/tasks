@@ -1,6 +1,6 @@
 ---
 title: "ActionController::TestCase::Behavior is unported: its methods sit in the TestCase class body"
-status: ready
+status: claimed
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 650
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-02T02:41:57Z"
+assignee: "action-controller-test-case-behavior-module-is-unported"
 blocked-by: null
 closed-reason: null
 ---

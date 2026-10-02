@@ -1,6 +1,6 @@
 ---
 title: "Lint failing on main @b03ec13f"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#8377
+claim: "2026-10-02T02:10:09Z"
+assignee: "red-b03ec13f"
 blocked-by: null
 closed-reason: null
 ---

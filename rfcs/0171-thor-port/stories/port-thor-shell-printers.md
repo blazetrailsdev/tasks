@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Shell::ColumnPrinter, TablePrinter and WrappedPrinter"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-02
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-shell-module-basic-output-and-terminal"]
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8375
+claim: "2026-10-02T02:01:54Z"
+assignee: "arel-select-manager-ctx-ivar-and-initialize-copy"
 blocked-by: null
 closed-reason: null
 ---

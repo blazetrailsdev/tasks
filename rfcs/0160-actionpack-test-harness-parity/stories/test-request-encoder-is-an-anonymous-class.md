@@ -1,6 +1,6 @@
 ---
 title: "actionpack: TestRequest::ENCODER is an anonymous class, not an exported Encoder"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "arel: TreeManager#to_dot reassigns the collector from Dot#accept, with no dot local"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8376
+claim: "2026-10-02T02:28:17Z"
+assignee: "arel-select-manager-union-resolves-through-const-get"
 blocked-by: null
 closed-reason: null
 ---

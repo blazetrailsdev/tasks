@@ -1,6 +1,6 @@
 ---
 title: "SetupAndTeardown / TestsWithoutAssertions after_teardown take a test parameter Rails does not have and drop super"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

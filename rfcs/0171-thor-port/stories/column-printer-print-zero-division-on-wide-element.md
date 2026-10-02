@@ -1,6 +1,6 @@
 ---
 title: "ColumnPrinter#print raises ZeroDivisionError for an element wider than the terminal"
-status: draft
+status: done
 updated: 2026-10-02
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8375
 claim: null
 assignee: null
 blocked-by: null

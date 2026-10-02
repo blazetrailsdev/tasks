@@ -1,6 +1,6 @@
 ---
 title: "arel: restore the 10 Rails branches arel ports drop (report-arms missing rows)"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: arms

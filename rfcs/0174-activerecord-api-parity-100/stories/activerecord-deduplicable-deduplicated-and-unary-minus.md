@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Deduplicable#deduplicated, the -@ alias, and the six inlined deduplicable bodies"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface

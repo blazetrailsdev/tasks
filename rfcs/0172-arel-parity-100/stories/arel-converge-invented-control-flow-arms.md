@@ -1,7 +1,7 @@
 ---
 title: "arel: remove or credit the 34 invented branches in arel bodies (report-arms invented rows)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: arms
 packages: ["arel"]
@@ -9,9 +9,9 @@ deps: ["arel-converge-missing-control-flow-arms"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8378
+claim: "2026-10-02T02:21:54Z"
+assignee: "arel-converge-invented-control-flow-arms"
 blocked-by: null
 closed-reason: null
 ---

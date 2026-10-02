@@ -1,6 +1,6 @@
 ---
 title: "TestCase#process and Integration::Session dispose the html document where Rails assigns nil"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
