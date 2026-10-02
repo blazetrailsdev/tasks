@@ -403,15 +403,15 @@ dashboard from models like every other page, and the SSE stream carries change
 notifications rather than being the only route to the state. Without phase B,
 phase F's "trailmap is the dashboard" is not reachable.
 
-| Phase                        | What                                                                                                                                                                               | Exit criterion                                           |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| **A. Freeze**                | No move, no delete. Go keeps serving everything; trailmap runs beside it.                                                                                                          | The six cutover stories stay `blocked`.                  |
-| **B. Fleet state to tables** | ringo's thirteen JSON state files become ringo-owned tables in trailmap's database, under an enforced per-table ownership rule.                                                    | Every file dual-writing against a table that matches it. |
-| **C. Read-only parity**      | Every task-domain page ringo serves is served by trailmap and gated against ringo's output over the whole database — including the root dashboard, which phase B makes renderable. | Each page's gate green in CI.                            |
-| **D. Tmux reading**          | The pane and session surface: archive index, transcripts, the terminal replay, live streaming.                                                                                     | Rendered pane matches Go's over a corpus of real logs.   |
-| **E. Beyond parity**         | Surface ringo never had — search, dependency graphs. Purpose is framework yield, not features.                                                                                     | Trails stories filed per surface.                        |
-| **F. Soak**                  | trailmap **is** the dashboard on the public hostname; Go still serves loopback, webhooks and SSE.                                                                                  | Two weeks, no unfixed incident, explicit owner sign-off. |
-| **G. Cutover**               | Domain move completion, CLI as HTTP client, authoring and ingest, export, the database move, stripping the tasks repo, deleting the published JSON and the Go read model.          | —                                                        |
+| Phase                        | What                                                                                                                                                                               | Exit criterion                                            |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| **A. Freeze**                | No move, no delete. Go keeps serving everything; trailmap runs beside it.                                                                                                          | The six cutover stories stay `blocked`.                   |
+| **B. Fleet state to tables** | ringo's thirteen JSON state files become ringo-owned tables in trailmap's database, under an enforced per-table ownership rule.                                                    | Every file dual-writing against a table that matches it.  |
+| **C. Read-only parity**      | Every task-domain page ringo serves is served by trailmap and gated against ringo's output over the whole database — including the root dashboard, which phase B makes renderable. | Each page's gate green in CI.                             |
+| **D. Tmux reading**          | The pane and session surface: archive index, transcripts, the terminal replay, live streaming.                                                                                     | The pane replay is ringo's own, loaded and rebuilt in CI. |
+| **E. Beyond parity**         | Surface ringo never had — search, dependency graphs. Purpose is framework yield, not features.                                                                                     | Trails stories filed per surface.                         |
+| **F. Soak**                  | trailmap **is** the dashboard on the public hostname; Go still serves loopback, webhooks and SSE.                                                                                  | Two weeks, no unfixed incident, explicit owner sign-off.  |
+| **G. Cutover**               | Domain move completion, CLI as HTTP client, authoring and ingest, export, the database move, stripping the tasks repo, deleting the published JSON and the Go read model.          | —                                                         |
 
 **No story in phases A–F deletes anything.** Phase B moves state into tables,
 but every source file dual-writes through a soak and is deleted by a later
@@ -429,6 +429,31 @@ read-model retirement. What changed is when it starts, not what it does.
 
 Then, as its own RFC: trailmap hosts the content repo, the receive hook becomes
 the gate, and the interim validation split collapses.
+
+### Run pure computation, do not port it
+
+The rule everywhere else in this RFC is that a rewrite proves itself against
+the thing it replaces: port, then gate. That rule has one exception, added
+after the markdown renderer had been ported and gated and the pane replay was
+next in line.
+
+ringo's `core` package holds the part of ringo that is pure computation —
+bytes or strings in, HTML or numbers out, standard library only. trailmap
+vendors it compiled for WASI and **executes** it. Where a piece of ringo is
+that shape, trailmap runs it rather than writing it again:
+
+- A second implementation has to be kept equal to the first for as long as
+  both exist. One implementation cannot drift from itself, so there is no gate
+  to build and none to keep green.
+- It costs the proving ground nothing. A terminal emulator in TypeScript
+  exercises no part of trails. The response that streams its output does, and
+  that part is still written here.
+
+The exception is narrow. It does not cover anything with a handler, a query or
+a template in it — those are what trailmap exists to rebuild — and it is not a
+reason to move logic INTO `core` to avoid porting it. The markdown helper
+stays a gated port: it is done, and it is called from views on every request,
+where a synchronous module call is the wrong cost.
 
 ### What is deliberately out of the build-out
 
@@ -452,12 +477,12 @@ surface the proving ground is for.
   endpoint in scope. This is the same shape as the ready-queue equivalence gate
   that already made the domain move safe (`scripts/equivalence.ts`) — that gate
   is the precedent, and every page repeats it.
-- **Phase D.** The pane renderer agrees with `webhook/paneterm.go` byte for
-  byte over a committed corpus of **real** captured logs, including at least
-  one full-length agent session. Unit tests prove the cases ringo's tests name;
-  only the corpus proves the 4 MB inline-repaint input the fleet actually
-  produces. A tolerated difference needs a named reason in the gate's source,
-  never a silenced assertion.
+- **Phase D.** The pane renderer is not ported, so there is nothing to gate:
+  trailmap runs ringo's `core.RenderPaneLog` from `vendor/ringo/core.wasm`.
+  What is verified instead is that the binary is the source — CI rebuilds it
+  from the vendored Go and compares bytes — and, once, that the WASI build
+  agrees with a native build over real captured logs. See "Run pure
+  computation, do not port it" above.
 - **Phase E.** Framework stories filed, with the reproduction that found them.
   This is the deliverable, not a side effect: a phase E story that files
   nothing has been built around the framework rather than on it, and should say
