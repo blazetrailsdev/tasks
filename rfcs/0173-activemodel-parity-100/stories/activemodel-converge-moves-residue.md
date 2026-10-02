@@ -1,6 +1,6 @@
 ---
 title: "activemodel: burn parity:api:moves' 150 include-chain relocations to zero"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: placement

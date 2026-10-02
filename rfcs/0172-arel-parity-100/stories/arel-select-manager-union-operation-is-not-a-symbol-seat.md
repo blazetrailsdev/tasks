@@ -1,6 +1,6 @@
 ---
 title: "arel: SelectManager#union reads operation.to_s with no Symbol arm; operation is not a Symbol-discriminating seat"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: arms

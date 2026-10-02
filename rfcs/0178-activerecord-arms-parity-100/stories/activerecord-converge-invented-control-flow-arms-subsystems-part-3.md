@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove or credit the 19 invented branches in subsystems part 3"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
