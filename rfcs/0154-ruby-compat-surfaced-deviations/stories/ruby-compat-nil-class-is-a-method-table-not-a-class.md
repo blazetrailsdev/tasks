@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - core-classes-have-no-class-object-visitor-keys-by-name
 deps-rfc: []
 est-loc: 90
 priority: null
