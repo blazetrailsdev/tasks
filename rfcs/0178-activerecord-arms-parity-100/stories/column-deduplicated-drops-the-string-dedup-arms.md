@@ -1,5 +1,5 @@
 ---
-title: "column-deduplicated-drops-the-string-dedup-arms"
+title: "activerecord: Column#deduplicated drops four String dedup arms and ends in freeze where Rails calls super"
 status: draft
 updated: 2026-10-01
 rfc: "0178-activerecord-arms-parity-100"
@@ -7,7 +7,7 @@ cluster: arms
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: null
 claim: null

@@ -27,7 +27,8 @@ This RFC holds activerecord's residue on the three report-only **body-shape** ax
 (`pnpm parity:api:arms:report`), void returns (`pnpm parity:api:returns`) and duck-type guards
 (`pnpm parity:api:duck-types`). It was split out of `0174-activerecord-api-parity-100` on 2026-10-02 and
 took the 53 stories of 0174's `arms` cluster with it. 45 of them are open, at 17,848 est-loc. One more
-story was filed with the split (§ "Blocked"), so the RFC opens with 54 stories and 46 open. The
+story was filed with the split (§ "Blocked") and two unestimated ones were sized, so the RFC opens with
+54 stories, 46 of them open, at 18,448 est-loc. The
 destination of a story is decided by one question: **which report does the row it deletes come from?**
 
 ## Motivation
@@ -115,7 +116,7 @@ These are 0174's, unchanged:
   (RFC 0127, draft), which measures the noise floor. It is the last story here: activerecord joins the
   missing-arm gate at 0.
 - `activerecord-duck-type-instanceof-to-respond-to` depends on `pg-translate-exception-respond-to-result`,
-  which is blocked (see § "Blocked").
+  which is blocked on `pg-driver-errors-carry-a-result-at-the-raw-connection-boundary` (see § "Blocked").
 - The three extractor stories have no dependencies. Each one that lands shrinks the row lists of the
   stories behind it, so they are worth taking early.
 
@@ -131,8 +132,9 @@ These are 0174's, unchanged:
 
 ### After merge
 
-Two dependency edits name something that does not exist on main until this RFC merges, and
-`tasks set-deps` / `tasks set-deps-rfc` refuse a dangling reference. They run once it has merged:
+Three dependency edits name something that does not exist on main until this RFC merges, and
+`tasks set-deps` / `tasks set-deps-rfc` refuse a dangling reference. They run once it has merged. The 43
+slugs are the entries of the close-out's `deps` whose story file is under this RFC's `stories/`:
 
 ```bash
 tasks set-deps-rfc activerecord-api-parity-100-close-out --add 0178-activerecord-arms-parity-100
@@ -197,12 +199,12 @@ open est-loc, and every `deps` edge that crosses the cluster boundary in either 
 
 Status is from the DB as of 2026-10-02. Done stories are listed with their PR.
 
-1. **Extractor and fold faults.** 3 stories, 3 open, 260 est-loc. These go first because each one removes
+1. **Extractor and fold faults.** 3 stories, 3 open, 460 est-loc. These go first because each one removes
    rows from the stories below.
    - Draft: `arms-extractor-reads-a-kwargs-rebinding-guard`,
      `arms-report-fold-credits-idiom-arms-by-presence`,
      `arms-report-idiom-fold-and-catch-all-else-manufacture-missing-arms`
-2. **Missing arms.** 8 stories, 3 open, 850 est-loc.
+2. **Missing arms.** 8 stories, 3 open, 1,000 est-loc.
    - Ready: `activerecord-converge-missing-control-flow-arms-connection-adapters-part-2`
    - Draft: `column-deduplicated-drops-the-string-dedup-arms`,
      `composite-primary-key-predicate-reads-the-primary-key-setter-ivar`
@@ -248,14 +250,14 @@ All 54, by Rollout group. Status is DB-owned and is not repeated here: `pnpm tas
 | ---------------------------------------------------------------------------------------- | ------- | ------------- |
 | `arms-extractor-reads-a-kwargs-rebinding-guard`                                          | 140     | extractor     |
 | `arms-report-fold-credits-idiom-arms-by-presence`                                        | 120     | extractor     |
-| `arms-report-idiom-fold-and-catch-all-else-manufacture-missing-arms`                     | —       | extractor     |
+| `arms-report-idiom-fold-and-catch-all-else-manufacture-missing-arms`                     | 200     | extractor     |
 | `activerecord-converge-missing-control-flow-arms-associations`                           | 360     | missing arms  |
 | `activerecord-converge-missing-control-flow-arms-connection-adapters-part-1`             | 600     | missing arms  |
 | `activerecord-converge-missing-control-flow-arms-connection-adapters-part-2`             | 600     | missing arms  |
 | `activerecord-converge-missing-control-flow-arms-relation`                               | 432     | missing arms  |
 | `activerecord-converge-missing-control-flow-arms-root`                                   | 600     | missing arms  |
 | `activerecord-converge-missing-control-flow-arms-subsystems`                             | 600     | missing arms  |
-| `column-deduplicated-drops-the-string-dedup-arms`                                        | —       | missing arms  |
+| `column-deduplicated-drops-the-string-dedup-arms`                                        | 150     | missing arms  |
 | `composite-primary-key-predicate-reads-the-primary-key-setter-ivar`                      | 250     | missing arms  |
 | `activerecord-converge-invented-control-flow-arms-associations-part-1`                   | 560     | invented arms |
 | `activerecord-converge-invented-control-flow-arms-associations-part-2`                   | 554     | invented arms |
@@ -330,11 +332,13 @@ None is open. Each was resolved before the RFC went `active`.
    not move rows between the open ones. Each story re-measures its own files first (§ "Principles"), and one whose rows
    are all gone is closed with `tasks close` and that reason.
 3. **Should the five unclustered stories get `cluster: arms`?** Resolved: yes, set in this split. Those five
-   files differ from main by their `rfc:` and `cluster:` lines; the other 48 by `rfc:` alone.
+   files differ from main by their `rfc:` and `cluster:` lines (two of them also by `title:` and `est-loc:`);
+   the other 48 by `rfc:` alone.
 
 ## Changelog
 
 - 2026-10-02: created by splitting the `arms` cluster out of `0174-activerecord-api-parity-100`. 53
   stories moved (8 done, 35 ready, 9 draft, 1 blocked). Each moved story changes only its `rfc:` line,
-  and the five that were unclustered also take `cluster: arms`. One story was filed with the split:
+  and the five that were unclustered also take `cluster: arms`. Two of those five had a slug for a title
+  and no `est-loc`; both are set. One story was filed with the split:
   `pg-driver-errors-carry-a-result-at-the-raw-connection-boundary`.

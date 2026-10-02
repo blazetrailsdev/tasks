@@ -1,5 +1,5 @@
 ---
-title: "arms-report-idiom-fold-and-catch-all-else-manufacture-missing-arms"
+title: "api-compare: the idiom fold and an uncounted catch-all else manufacture missing arms the port already has"
 status: draft
 updated: 2026-10-01
 rfc: "0178-activerecord-arms-parity-100"
@@ -7,7 +7,7 @@ cluster: arms
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null
