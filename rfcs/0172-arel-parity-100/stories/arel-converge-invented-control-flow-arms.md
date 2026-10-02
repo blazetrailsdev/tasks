@@ -9,9 +9,9 @@ deps:
   - arel-converge-missing-control-flow-arms
   - ruby-compat-float-answers-infinite-for-arel-bind-and-quoted
   - arel-case-then-thenable-guard-is-an-invented-arm
-  - arel-table-initialize-as-to-s-through-rb-obj-as-string
   - arel-visitor-dispatch-cache-invented-arms
   - dot-visit-keys-seen-by-an-invented-key-and-counter-id
+  - arel-table-as-is-not-a-symbol-seat
 deps-rfc: []
 est-loc: 350
 priority: null
