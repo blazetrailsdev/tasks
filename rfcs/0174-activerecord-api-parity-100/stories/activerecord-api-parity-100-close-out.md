@@ -170,6 +170,7 @@ deps:
   - pg-quote-string-escapes-without-with-raw-connection
 deps-rfc:
   - 0178-activerecord-arms-parity-100
+  - 0179-api-compare-crediting-rules
 est-loc: 200
 priority: null
 pr: null
