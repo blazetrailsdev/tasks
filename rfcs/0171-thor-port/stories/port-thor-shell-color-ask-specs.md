@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0171-thor-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-thor-line-editor-and-ask
 deps-rfc: []
 est-loc: 80
 priority: null
