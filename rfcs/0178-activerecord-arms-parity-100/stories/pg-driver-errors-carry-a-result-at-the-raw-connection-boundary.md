@@ -60,26 +60,40 @@ guard can be a duck test.
 
 ## Converged shape
 
-The adapter stamps an error raised by the driver with a `result` at the places it crosses into trails, so
-the error answers `rbObjRespondTo(exception, "result")` exactly when the pg gem's would:
+**The stamp mutates the caught error in place. It does not wrap it.** The pg gem's `result` is an ivar
+on the error object itself (`PG::Error#initialize(msg = nil, connection: nil, result: nil)` sets
+`@result`, pg 1.6.3 `lib/pg/exceptions.rb:9-14`), and Rails hands that same object on as the `cause` of
+the translated error. So the adapter defines a non-enumerable `result` property on the error node-pg
+raised and re-throws that same object. Identity, `instanceof pg.DatabaseError`, `.code`, `.message` and
+the stack are unchanged, so every existing `instanceof` and `cause` read elsewhere keeps working. A
+wrapper would break those and would change what `cause` is.
 
-- `PostgreSQLAdapter.newClient` (`postgresql-adapter.ts:241`), Rails' `new_client`
-  (`postgresql_adapter.rb:56-71`), which rescues `::PG::Error`;
-- `performQuery` (`packages/activerecord/src/connection-adapters/postgresql/database-statements.ts:298`);
-- `prepareStatement` (`postgresql-adapter.ts:1268`).
+The stamp is applied where a driver error crosses into trails. These are the three sites the blocked
+story's `blocked-by` calls `connect`, `performQuery` and `prepare()`:
+
+| `blocked-by` name | trails site                                                                                            | Rails                                                    |
+| ----------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
+| `connect`         | `PostgreSQLAdapter.newClient` (`postgresql-adapter.ts:241`), which `connect` (`:1282`) awaits          | `new_client`, `postgresql_adapter.rb:56-71`              |
+| `performQuery`    | `performQuery` (`packages/activerecord/src/connection-adapters/postgresql/database-statements.ts:298`) | `perform_query`, `postgresql/database_statements.rb:135` |
+| `prepare()`       | the module-level `prepare` (`postgresql-adapter.ts:210`), which `prepareStatement` (`:1268`) calls     | `prepare_statement`, `postgresql_adapter.rb:920`         |
 
 `result` is nil for a connection-level error and answers `errorField` for a server error, reading the
 SQLSTATE node-pg holds in `.code`. Where the pg gem's own class is what Rails tests
-(`exception.is_a?(PG::ConnectionBad)`, `postgresql_adapter.rb:808`), the stamp says so, and the message
+(`exception.is_a?(PG::ConnectionBad)`, `postgresql_adapter.rb:808`), the stamp records it, and the message
 tests in `_isConnectionError` move to the one place that classifies a raw driver error.
 
-The pg gem is not vendored under `vendor/`. Cite the gem's `PG::Error#result` from its source when
-porting, and add the source to `vendor/` if the body is mirrored rather than wrapped.
+**Vendoring the pg gem is out of scope, and the estimate does not include it.** This story wraps node-pg;
+it mirrors no pg gem body, so the one fact it needs from the gem (`PG::Error` carries `result`) is cited
+by gem version and path as above. If review asks for a vendored citation, adding the pg source to
+`vendor/` (`vendor/sources.ts`, the lock file, `vendor/README.md` § "Upgrading a source") is filed as its
+own story and this one takes a `deps` edge on it. It is not folded in here.
 
 ## Acceptance criteria
 
 - [ ] An error raised by node-pg through `newClient`, `performQuery` or `prepareStatement` answers
       `result`; an `Error` raised anywhere else does not.
+- [ ] The stamped error is the object node-pg raised (`===`), still `instanceof pg.DatabaseError` where it
+      was, with `result` non-enumerable.
 - [ ] `result` is nil for a connection-level failure and gives the SQLSTATE through `errorField` for a
       server error, with a test for each arm against a real connection.
 - [ ] No message-substring classification of a driver error is left outside the stamping site.

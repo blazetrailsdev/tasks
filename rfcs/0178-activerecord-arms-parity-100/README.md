@@ -26,9 +26,9 @@ priority: 2
 This RFC holds activerecord's residue on the three report-only **body-shape** axes: the arms report
 (`pnpm parity:api:arms:report`), void returns (`pnpm parity:api:returns`) and duck-type guards
 (`pnpm parity:api:duck-types`). It was split out of `0174-activerecord-api-parity-100` on 2026-10-02 and
-took the 53 stories of 0174's `arms` cluster with it. 45 of them are open, at 17,848 est-loc. One more
-story was filed with the split (§ "Blocked") and two unestimated ones were sized, so the RFC opens with
-54 stories, 46 of them open, at 18,448 est-loc. The
+took the 53 stories of 0174's `arms` cluster with it. 45 of them are open, at 17,848 est-loc. Two
+stories were filed with the split (§ "Blocked", § "Ordering") and two unestimated ones were sized, so
+the RFC opens with 55 stories, 47 of them open, at 18,898 est-loc. The
 destination of a story is decided by one question: **which report does the row it deletes come from?**
 
 ## Motivation
@@ -110,11 +110,28 @@ These are 0174's, unchanged:
 ### Ordering
 
 - Each invented-arm story depends on the missing-arm story of the same area, so the branch structure is
-  restored before invented guards are removed. Five of those six missing-arm stories are done, so 31
-  invented-arm stories are claimable now.
-- `activerecord-gate-report-only-arm-tokens` depends on `audit-loop-try-rescue-arm-strata-for-gating`
-  (RFC 0127, draft), which measures the noise floor. It is the last story here: activerecord joins the
-  missing-arm gate at 0.
+  restored before invented guards are removed. Five of those six missing-arm stories are done, so of the
+  35 open invented-arm stories the 31 seeded ones are `ready` and claimable now. The other 4 are `draft`
+  leftovers filed on 2026-10-01 and 2026-10-02.
+- `activerecord-gate-report-only-arm-tokens` is the last story here: activerecord joins the missing-arm
+  gate at 0. Its `deps` hold it there. It depends on `audit-loop-try-rescue-arm-strata-for-gating`
+  (RFC 0127, draft), which measures the noise floor, and on every open story that owns a row of the
+  missing-direction report. On 2026-10-02 that report has 38 pairs, owned as follows:
+
+  | Pairs | Owner                                                                                 |
+  | ----- | ------------------------------------------------------------------------------------- |
+  | 18    | `activerecord-converge-missing-control-flow-arms-connection-adapters-part-2`          |
+  | 15    | `activerecord-converge-missing-control-flow-arms-residue` (filed with this split)     |
+  | 1     | `column-deduplicated-drops-the-string-dedup-arms`                                     |
+  | 1     | `composite-primary-key-predicate-reads-the-primary-key-setter-ivar`                   |
+  | 1     | `arms-report-idiom-fold-and-catch-all-else-manufacture-missing-arms`                  |
+  | 1     | `quoted-date-usec-arm-is-relocated-into-sql-datetime` (RFC 0174)                      |
+  | 1     | `record-native-promise-decision-and-retire-promise-complete-rows` (RFC 0174, `pluck`) |
+
+  `arms-report-fold-credits-idiom-arms-by-presence` is a dependency too: it owns no pair of today's 38
+  outright, but it removes fold-manufactured `-if` / `-loop` rows the residue story routes to it.
+  `arms-extractor-reads-a-kwargs-rebinding-guard` is not: it changes the invented direction only.
+
 - `activerecord-duck-type-instanceof-to-respond-to` depends on `pg-translate-exception-respond-to-result`,
   which is blocked on `pg-driver-errors-carry-a-result-at-the-raw-connection-boundary` (see § "Blocked").
 - The three extractor stories have no dependencies. Each one that lands shrinks the row lists of the
@@ -125,14 +142,17 @@ These are 0174's, unchanged:
 - **`active` from birth**, for 0174's reason: `claimable()` surfaces a story only when its own RFC is
   `active`. 33 stories here were claimable in 0174 and stay claimable.
 - **Edges out of this RFC:** `audit-loop-try-rescue-arm-strata-for-gating` (RFC 0127) and
-  `parity-100-rehome-postponed-rfc-dependencies` (RFC 0174, done). There are no others.
+  `parity-100-rehome-postponed-rfc-dependencies` (RFC 0174, done), from the stories as they moved. The gate
+  story adds two: `quoted-date-usec-arm-is-relocated-into-sql-datetime` and
+  `record-native-promise-decision-and-retire-promise-complete-rows` (both RFC 0174, draft), which own a
+  missing-arm row each. There are no others.
 - **Edges into this RFC:** `activerecord-api-parity-100-close-out` (RFC 0174) only. It names 43 of these
   stories in `deps`. After this split merges, those are replaced by one `deps-rfc` edge on this RFC, so the
   0174 close-out waits for everything here, including stories filed later.
 
 ### After merge
 
-Three dependency edits name something that does not exist on main until this RFC merges, and
+Four dependency edits name something that does not exist on main until this RFC merges, and
 `tasks set-deps` / `tasks set-deps-rfc` refuse a dangling reference. They run once it has merged. The 43
 slugs are the entries of the close-out's `deps` whose story file is under this RFC's `stories/`:
 
@@ -140,9 +160,11 @@ slugs are the entries of the close-out's `deps` whose story file is under this R
 tasks set-deps-rfc activerecord-api-parity-100-close-out --add 0178-activerecord-arms-parity-100
 tasks set-deps activerecord-api-parity-100-close-out --remove <the 43 moved slugs it names>
 tasks set-deps pg-translate-exception-respond-to-result --add pg-driver-errors-carry-a-result-at-the-raw-connection-boundary
+tasks set-deps activerecord-gate-report-only-arm-tokens --add activerecord-converge-missing-control-flow-arms-residue
 ```
 
-Until then the close-out's 43 story-level edges gate it exactly as they did in 0174.
+Until then the close-out's 43 story-level edges gate it exactly as they did in 0174, and the gate story is
+held by its other eight dependencies (set on main with `tasks set-deps` on 2026-10-02).
 
 ## Blocked
 
@@ -172,7 +194,10 @@ I listed all 319 stories in 0174 from the DB and computed, for each cluster, the
 open est-loc, and every `deps` edge that crosses the cluster boundary in either direction.
 
 - **Split out the `arms` cluster (chosen).** 40 open stories at 17,218 est-loc, 8 done (17%), none claimed
-  or in a PR. One mechanism. One edge to another open 0174 story
+  or in a PR. These are the cluster's own figures, used here so the comparison with the other clusters is
+  like for like. The Summary's 45 open and 17,848 add the 5 unclustered stories that moved with it (three
+  of them estimated, at 630). The opening 47 and 18,898 then add the two unestimated stories sized in the
+  split (350) and the two filed with it (700). One mechanism. One edge to another open 0174 story
   (`pg-translate-exception-respond-to-result`, which only an arms story depends on, so it moved too), one
   edge to RFC 0127, and no inbound edge except the close-out. No trails source cites any moved slug.
 - **Split out `receipts`** (59 open, 13,460 est-loc): rejected. It is three unrelated things under one
@@ -204,16 +229,17 @@ Status is from the DB as of 2026-10-02. Done stories are listed with their PR.
    - Draft: `arms-extractor-reads-a-kwargs-rebinding-guard`,
      `arms-report-fold-credits-idiom-arms-by-presence`,
      `arms-report-idiom-fold-and-catch-all-else-manufacture-missing-arms`
-2. **Missing arms.** 8 stories, 3 open, 1,000 est-loc.
+2. **Missing arms.** 9 stories, 4 open, 1,450 est-loc.
    - Ready: `activerecord-converge-missing-control-flow-arms-connection-adapters-part-2`
-   - Draft: `column-deduplicated-drops-the-string-dedup-arms`,
+   - Draft: `activerecord-converge-missing-control-flow-arms-residue`,
+     `column-deduplicated-drops-the-string-dedup-arms`,
      `composite-primary-key-predicate-reads-the-primary-key-setter-ivar`
    - Done: `activerecord-converge-missing-control-flow-arms-root` (trails#8357),
      `activerecord-converge-missing-control-flow-arms-connection-adapters-part-1` (trails#8351),
      `activerecord-converge-missing-control-flow-arms-associations` (trails#8353),
      `activerecord-converge-missing-control-flow-arms-relation` (trails#8354),
      `activerecord-converge-missing-control-flow-arms-subsystems` (trails#8358)
-3. **Invented arms.** 37 stories, 35 open, 15,908 est-loc. All share the slug prefix
+3. **Invented arms.** 37 stories, 35 open (31 ready, 4 draft), 15,908 est-loc. All share the slug prefix
    `activerecord-converge-invented-control-flow-arms-` unless written out in full.
    - Ready, root files: `root-a-f-part-1`, `-part-2`, `-part-3`, `root-g-p-part-1`, `-part-2`, `-part-3`,
      `root-q-z-part-1`, `-part-2`, `-part-3`
@@ -239,11 +265,12 @@ Status is from the DB as of 2026-10-02. Done stories are listed with their PR.
    - Blocked on it: `pg-translate-exception-respond-to-result`
    - Ready, waiting on the blocked story: `activerecord-duck-type-instanceof-to-respond-to`
 6. **Gate.** 1 story, 200 est-loc.
-   - Ready, waiting on RFC 0127: `activerecord-gate-report-only-arm-tokens`
+   - Ready, waiting on RFC 0127 and on every missing-arm owner (§ "Ordering"):
+     `activerecord-gate-report-only-arm-tokens`
 
 ## Stories
 
-All 54, by Rollout group. Status is DB-owned and is not repeated here: `pnpm tasks list --rfc
+All 55, by Rollout group. Status is DB-owned and is not repeated here: `pnpm tasks list --rfc
 0178-activerecord-arms-parity-100`.
 
 | Story                                                                                    | est-loc | Group         |
@@ -254,6 +281,7 @@ All 54, by Rollout group. Status is DB-owned and is not repeated here: `pnpm tas
 | `activerecord-converge-missing-control-flow-arms-associations`                           | 360     | missing arms  |
 | `activerecord-converge-missing-control-flow-arms-connection-adapters-part-1`             | 600     | missing arms  |
 | `activerecord-converge-missing-control-flow-arms-connection-adapters-part-2`             | 600     | missing arms  |
+| `activerecord-converge-missing-control-flow-arms-residue`                                | 450     | missing arms  |
 | `activerecord-converge-missing-control-flow-arms-relation`                               | 432     | missing arms  |
 | `activerecord-converge-missing-control-flow-arms-root`                                   | 600     | missing arms  |
 | `activerecord-converge-missing-control-flow-arms-subsystems`                             | 600     | missing arms  |
@@ -326,11 +354,13 @@ None is open. Each was resolved before the RFC went `active`.
 1. **Who stamps node-pg driver errors with a result carrier?** Resolved: filed here as
    `pg-driver-errors-carry-a-result-at-the-raw-connection-boundary`. The duck-type report scores the row it
    unblocks, so the routing table sends it here.
-2. **Do the 31 open invented-arm stories still match the report?** Resolved: not re-cut. They were seeded
-   from the 903-pair list of 2026-09-30 and the report is at 824, because the two done invented-arm stories
-   and the missing-arm stories removed rows. Each story body lists its own `file#method` rows, so a landed story does
-   not move rows between the open ones. Each story re-measures its own files first (§ "Principles"), and one whose rows
-   are all gone is closed with `tasks close` and that reason.
+2. **Do the 35 open invented-arm stories still match the report?** Resolved: not re-cut. The 31 `ready`
+   ones were seeded from the 903-pair list of 2026-09-30 and the report is at 824, because the two done
+   invented-arm stories and the missing-arm stories removed rows. Each story body lists its own
+   `file#method` rows, so a landed story does not move rows between the open ones. The 4 `draft` leftovers
+   were filed on 2026-10-01 and 2026-10-02 from rows a landed PR left behind, so their lists are current
+   today. All 35 re-measure their own files first (§ "Principles"), and one whose rows are all gone is
+   closed with `tasks close` and that reason.
 3. **Should the five unclustered stories get `cluster: arms`?** Resolved: yes, set in this split. Those five
    files differ from main by their `rfc:` and `cluster:` lines (two of them also by `title:` and `est-loc:`);
    the other 48 by `rfc:` alone.
@@ -340,5 +370,7 @@ None is open. Each was resolved before the RFC went `active`.
 - 2026-10-02: created by splitting the `arms` cluster out of `0174-activerecord-api-parity-100`. 53
   stories moved (8 done, 35 ready, 9 draft, 1 blocked). Each moved story changes only its `rfc:` line,
   and the five that were unclustered also take `cluster: arms`. Two of those five had a slug for a title
-  and no `est-loc`; both are set. One story was filed with the split:
-  `pg-driver-errors-carry-a-result-at-the-raw-connection-boundary`.
+  and no `est-loc`; both are set. Two stories were filed with the split:
+  `pg-driver-errors-carry-a-result-at-the-raw-connection-boundary` and
+  `activerecord-converge-missing-control-flow-arms-residue`. The gate story took a `deps` edge on every
+  open owner of a missing-arm row.
