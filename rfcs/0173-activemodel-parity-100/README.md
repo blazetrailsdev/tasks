@@ -10,6 +10,7 @@ packages:
   - "ruby-compat"
   - "activerecord"
   - "i18n"
+  - "activesupport"
 clusters:
   - api-surface
   - arms
