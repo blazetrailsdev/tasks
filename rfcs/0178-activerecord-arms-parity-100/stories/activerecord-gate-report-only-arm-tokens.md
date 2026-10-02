@@ -14,6 +14,7 @@ deps:
   - arms-report-fold-credits-idiom-arms-by-presence
   - quoted-date-usec-arm-is-relocated-into-sql-datetime
   - record-native-promise-decision-and-retire-promise-complete-rows
+  - activerecord-converge-missing-control-flow-arms-residue
 deps-rfc: []
 est-loc: 200
 priority: null
