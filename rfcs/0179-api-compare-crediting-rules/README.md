@@ -46,6 +46,9 @@ After RFC 0178 took the arms cluster, RFC 0174 held 266 stories. 20 of them are 
 | comparer-rule stories                   | 20      | 20   | 2,850        |
 | everything else                         | 246     | 198  | 36,555       |
 
+The 2,850 is the DB's figure. One of the 20 had no estimate and is sized at 150 in this split, which gives
+the 3,000 the Summary and § "Rollout" use.
+
 They differ from the rest of 0174 in three ways:
 
 - **The diff lands in `scripts/`.** Eight of them name `compare.ts`, four `call-args.ts`, four
@@ -149,8 +152,9 @@ rebases on the first:
 
 `tasks set-deps-rfc` refuses an RFC that is not on main yet, so these run once this has merged. They
 replace the 0174 close-out's two story-level edges with one edge on this RFC, and finish the same cleanup
-for RFC 0178, which `tasks set-deps` refused while the close-out's `deps` was a wrapped flow sequence
-(this split rewrites it as a block list):
+for RFC 0178, which `tasks set-deps` refused while the close-out's `deps` was a wrapped flow sequence.
+That refusal is tracked as `set-deps-refuses-a-prettier-wrapped-flow-sequence` (RFC 0091); this split
+rewrites the list as a block list so the verb works today:
 
 ```bash
 tasks set-deps-rfc activerecord-api-parity-100-close-out --add 0179-api-compare-crediting-rules
