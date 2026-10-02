@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-args
 packages: ["activerecord", "actionpack", "actionview", "activesupport"]
-deps: []
+deps:
+  - call-args-gate-aligns-the-receiver-of-a-function-form-hash-merge
 deps-rfc: []
 est-loc: 150
 priority: null
