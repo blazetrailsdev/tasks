@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Float answers infinite? so BindParam#infinite? and Quoted#infinite? lose their Infinity arms"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: arms

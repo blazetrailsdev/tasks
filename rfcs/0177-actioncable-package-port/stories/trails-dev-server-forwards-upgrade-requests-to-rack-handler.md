@@ -1,7 +1,7 @@
 ---
 title: "trails server's Vite dev path forwards upgrade requests to the Rack handler"
 status: draft
-updated: 2026-10-01
+updated: 2026-10-02
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["trailties"]

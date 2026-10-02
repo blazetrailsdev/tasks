@@ -1,6 +1,6 @@
 ---
 title: "activemodel: TimeValue#user_input_in_time_zone inlines every receiver's in_time_zone instead of sending it"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: arms

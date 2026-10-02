@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: Concurrent::TimerTask and Concurrent::AtomicFixnum"
 status: draft
-updated: 2026-10-01
+updated: 2026-10-02
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["ruby-compat"]

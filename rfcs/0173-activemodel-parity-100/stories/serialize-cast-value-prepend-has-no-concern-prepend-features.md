@@ -1,6 +1,6 @@
 ---
 title: "SerializeCastValue is a class module, so prepend skips Concern#prepend_features"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null

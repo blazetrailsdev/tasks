@@ -1,7 +1,7 @@
 ---
 title: "AttrNames.define_attribute_accessor_method never const_sets the ATTR_ constant it yields"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activemodel"]

@@ -1,6 +1,6 @@
 ---
 title: "arel: signatures take the arel_node? union (Node | Attribute | SqlLiteral) (~500 LOC, types only)"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null

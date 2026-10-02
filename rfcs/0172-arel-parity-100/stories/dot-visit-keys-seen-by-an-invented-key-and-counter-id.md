@@ -1,6 +1,6 @@
 ---
 title: "arel: Dot#visit keys seen by a hand-built key and numbers nodes from a counter where Rails uses object_id"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null

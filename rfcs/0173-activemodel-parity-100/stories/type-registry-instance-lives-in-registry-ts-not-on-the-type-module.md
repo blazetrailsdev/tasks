@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Type's registry instance is a constant in type/registry.ts, not Type's own attr_accessor"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activemodel"]

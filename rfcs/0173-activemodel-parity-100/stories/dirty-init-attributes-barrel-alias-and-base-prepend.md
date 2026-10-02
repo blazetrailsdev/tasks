@@ -1,7 +1,7 @@
 ---
 title: "activemodel: delete the dirtyInitAttributes barrel alias and Base's hand-written prepend"
-status: draft
-updated: 2026-10-01
+status: closed
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
 packages: ["activemodel", "activerecord"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8368 (7a37a9253d, activemodel-dirty-init-attributes-arity): its diff deletes 'initAttributes as dirtyInitAttributes' from packages/activemodel/src/index.ts and 'prepend(Base.prototype, { initAttributes: dirtyInitAttributes as PrependMethod })' from packages/activerecord/src/base.ts. On origin/main ea4bfa7591, 'git grep dirtyInitAttributes origin/main -- packages scripts' is empty; init_attributes reaches Base through include(Base, AMDirty), whose included hook does include(base, InitAttributes) (dirty.ts:38)."
 ---
 
 ## Context

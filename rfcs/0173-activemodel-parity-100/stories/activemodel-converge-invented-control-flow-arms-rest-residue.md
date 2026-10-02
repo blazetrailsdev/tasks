@@ -1,6 +1,6 @@
 ---
 title: "activemodel: converge the 20 invented-arm rows the arms-rest story left"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: arms

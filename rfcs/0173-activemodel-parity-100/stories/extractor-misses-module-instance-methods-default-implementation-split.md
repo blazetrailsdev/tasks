@@ -1,6 +1,6 @@
 ---
 title: "extractor does not see a Module instance's methods, so DefaultImplementation is split in two"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Rack::Handler::Node offers rack.hijack on HTTP upgrade requests"
 status: draft
-updated: 2026-10-01
+updated: 2026-10-02
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["rack", "ruby-compat"]

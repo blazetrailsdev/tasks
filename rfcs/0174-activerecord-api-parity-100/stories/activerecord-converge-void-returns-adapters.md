@@ -1,7 +1,7 @@
 ---
 title: "activerecord: adapter/schema-statement methods return what Rails callers read (void-returns report)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: arms
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8398
+claim: "2026-10-02T13:42:01Z"
+assignee: "arel-case-then-thenable-guard-is-an-invented-arm"
 blocked-by: null
 closed-reason: null
 ---

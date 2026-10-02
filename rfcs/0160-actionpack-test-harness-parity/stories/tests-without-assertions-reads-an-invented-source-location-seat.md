@@ -1,6 +1,6 @@
 ---
 title: "TestsWithoutAssertions#after_teardown reads an invented sourceLocation seat where Rails calls method(name).source_location"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

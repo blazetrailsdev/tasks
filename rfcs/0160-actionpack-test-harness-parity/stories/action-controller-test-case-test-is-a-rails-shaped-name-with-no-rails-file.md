@@ -1,6 +1,6 @@
 ---
 title: "Fold action-controller/test-case.test.ts (no Rails counterpart) into test-case.trails.test.ts"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

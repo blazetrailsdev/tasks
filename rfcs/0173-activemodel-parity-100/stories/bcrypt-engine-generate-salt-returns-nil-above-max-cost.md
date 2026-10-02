@@ -1,7 +1,7 @@
 ---
 title: "activemodel: BCrypt::Engine.generate_salt answers nil above MAX_COST, where the client clamps"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activemodel"]

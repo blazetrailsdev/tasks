@@ -1,7 +1,7 @@
 ---
 title: "object-literal-mixin-methods-carry-no-skeleton"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []

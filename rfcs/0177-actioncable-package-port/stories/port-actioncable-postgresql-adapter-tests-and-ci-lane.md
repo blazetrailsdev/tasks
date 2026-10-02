@@ -1,7 +1,7 @@
 ---
 title: "Port subscription_adapter/postgresql_test.rb and run it against PostgreSQL in CI"
 status: draft
-updated: 2026-10-01
+updated: 2026-10-02
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable", "scripts"]

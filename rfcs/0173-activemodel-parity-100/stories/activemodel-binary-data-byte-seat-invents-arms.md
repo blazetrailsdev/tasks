@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Binary::Data#initialize and #== re-derive to_s / b / == over a Uint8Array seat"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: arms

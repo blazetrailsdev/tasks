@@ -1,7 +1,7 @@
 ---
 title: "activerecord: audit the 34 PERMANENT receipts in encryption/, database-configurations/, tasks/, type*/, migration/, and the other subdirectories (part 1)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8396
+claim: "2026-10-02T13:01:59Z"
+assignee: "activerecord-audit-permanent-receipts-subsystems-part-1"
 blocked-by: null
 closed-reason: null
 ---

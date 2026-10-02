@@ -1,6 +1,6 @@
 ---
 title: "arel: Case#then carries a thenable guard Rails does not have"
-status: draft
+status: in-progress
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: arms
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8398
+claim: "2026-10-02T13:42:01Z"
+assignee: "arel-case-then-thenable-guard-is-an-invented-arm"
 blocked-by: null
 closed-reason: null
 ---

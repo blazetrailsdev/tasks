@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Lint::Tests call assert_respond_to / assert / assert_kind_of / assert_equal as lint.rb does"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
 packages: ["activemodel"]

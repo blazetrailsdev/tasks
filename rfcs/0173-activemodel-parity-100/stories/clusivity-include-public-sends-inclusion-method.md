@@ -1,7 +1,7 @@
 ---
 title: "Clusivity#include? public_sends inclusion_method instead of hand-rolled instanceof membership"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []

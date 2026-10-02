@@ -1,6 +1,6 @@
 ---
 title: "activemodel: AttributeMutationTracker#changed? compares with Ruby == (rbEqual), not ==="
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null

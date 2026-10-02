@@ -1,6 +1,6 @@
 ---
 title: "setup_controller_request_and_response falls back to the class under test when building the TestRequest"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

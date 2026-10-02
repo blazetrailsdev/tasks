@@ -1,6 +1,6 @@
 ---
 title: "arel-mixin-includes-into-class-bodies"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null

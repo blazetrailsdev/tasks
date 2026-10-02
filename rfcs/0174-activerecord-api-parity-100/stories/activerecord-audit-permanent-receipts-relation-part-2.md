@@ -1,6 +1,6 @@
 ---
 title: "activerecord: audit the 42 PERMANENT receipts in relation.ts and relation/ (part 2)"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts

@@ -1,6 +1,6 @@
 ---
 title: "arel: value.nil? is hand-rolled at three sites because ruby-compat has no nil? send"
-status: draft
+status: closed
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by arel-remaining-nil-sends-read-ruby-compat-is-nil: trails#8397 ships the nil? send itself"
 ---
 
 ## Context

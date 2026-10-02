@@ -1,7 +1,7 @@
 ---
 title: "activemodel: inline generate_method and take parameters: as a kwarg in attribute_method_prefix/suffix"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
 packages: ["activemodel"]

@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Railtie's action_controller.test_case initializer is unported, so executor_around_each_request is never set"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

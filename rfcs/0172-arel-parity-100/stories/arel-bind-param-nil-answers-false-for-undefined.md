@@ -1,6 +1,6 @@
 ---
 title: "arel: BindParam#nil? answers false for an undefined value where Rails has only nil"
-status: draft
+status: in-progress
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8397
+claim: "2026-10-02T13:21:59Z"
+assignee: "arel-bind-param-nil-answers-false-for-undefined"
 blocked-by: null
 closed-reason: null
 ---

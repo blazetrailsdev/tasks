@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport::Testing::ConstantLookup is a namespace, so TestCase::Behavior cannot include it"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "activemodel: AttributeMethods resolve_attribute_name fetches on super (name.to_s)"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []

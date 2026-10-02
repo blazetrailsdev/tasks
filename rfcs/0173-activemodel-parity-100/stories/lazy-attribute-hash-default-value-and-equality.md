@@ -1,7 +1,7 @@
 ---
 title: "LazyAttributeHash#assign_default_value answers nil for an unknown name"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []

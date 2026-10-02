@@ -1,6 +1,6 @@
 ---
 title: "arel: Casted/Quoted#nil?, ToSql's right.nil? and Predications#open_ended? hand-roll the nil? send"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null

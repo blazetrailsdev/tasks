@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Shell::Color (ANSI constants, set_color, NO_COLOR / TERM=dumb)"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0171-thor-port"
 cluster: null

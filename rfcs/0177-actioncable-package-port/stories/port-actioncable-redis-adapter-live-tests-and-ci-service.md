@@ -1,7 +1,7 @@
 ---
 title: "Run the Redis adapter's live tests in CI: common suite, channel prefix and reconnections"
 status: draft
-updated: 2026-10-01
+updated: 2026-10-02
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable", "scripts"]

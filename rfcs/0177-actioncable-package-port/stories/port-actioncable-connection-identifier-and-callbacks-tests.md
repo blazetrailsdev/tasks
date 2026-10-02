@@ -1,7 +1,7 @@
 ---
 title: "Port connection/identifier_test.rb, multiple_identifiers_test.rb, string_identifier_test.rb and callbacks_test.rb"
 status: draft
-updated: 2026-10-01
+updated: 2026-10-02
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]

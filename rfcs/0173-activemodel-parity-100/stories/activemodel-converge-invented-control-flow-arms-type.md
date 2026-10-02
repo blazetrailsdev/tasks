@@ -1,6 +1,6 @@
 ---
 title: "activemodel: remove or credit the 29 invented branches under type/"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: arms

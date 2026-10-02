@@ -1,6 +1,6 @@
 ---
 title: "arel: SelectManager#union spells operation.to_s as a conditional because rbObjAsString keeps a Symbol's colon"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: arms

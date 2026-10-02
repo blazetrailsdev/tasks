@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Option (switch naming, usage, type/default validation)"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0171-thor-port"
 cluster: null

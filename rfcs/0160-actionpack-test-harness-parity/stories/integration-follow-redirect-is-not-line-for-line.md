@@ -1,6 +1,6 @@
 ---
 title: "IntegrationTest#followRedirectBang diverges from follow_redirect!; invented redirectUrl getter (~120 LOC)"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

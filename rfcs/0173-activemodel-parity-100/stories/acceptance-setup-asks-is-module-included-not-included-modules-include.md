@@ -1,7 +1,7 @@
 ---
 title: "activemodel: AcceptanceValidator#setup! asks isModuleIncluded where Rails asks included_modules.include?"
-status: draft
-updated: 2026-10-01
+status: in-progress
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activemodel", "ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8397
+claim: "2026-10-02T13:21:59Z"
+assignee: "arel-bind-param-nil-answers-false-for-undefined"
 blocked-by: null
 closed-reason: null
 ---
