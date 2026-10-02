@@ -37,19 +37,15 @@ Symbol/String arm and the legacy `(foreground, bold)` arm), and protected
 ## Acceptance criteria
 
 - [ ] `color.rb` reads complete in `parity:api --package thor`, less `LCSDiff`.
-- [ ] `vendor/thor/v1.3.2/spec/shell/color_spec.rb`'s 24 portable cases are ported. The one diff case that needs
-      `diff-lcs` reads as unported, with the same reason as `lcs_diff.rb`.
+- [ ] `vendor/thor/v1.3.2/spec/shell/color_spec.rb`'s 18 `#say` / `#say_status` / `#set_color` cases are ported.
+      The six `#ask` cases (`:15-60`) stub `Thor::LineEditor.readline` and call `Basic#ask`, which
+      `port-thor-line-editor-and-ask` ports; they are `port-thor-shell-color-ask-specs`. The one
+      diff case that needs `diff-lcs` reads as unported, with the same reason as `lcs_diff.rb`.
 
-## Cases to port (24)
+## Cases to port (18)
 
 `vendor/thor/v1.3.2/spec/shell/color_spec.rb`:
 
-- `#ask > sets the color if specified and tty?` (`:16`)
-- `#ask > does not set the color if specified and NO_COLOR is set to a non-empty value` (`:24`)
-- `#ask > sets the color when NO_COLOR is ignored because the environment variable is nil` (`:33`)
-- `#ask > sets the color when NO_COLOR is ignored because the environment variable is an empty-string` (`:42`)
-- `#ask > handles an Array of colors` (`:51`)
-- `#ask > supports the legacy color syntax` (`:56`)
 - `#say > set the color if specified and tty?` (`:63`)
 - `#say > does not set the color if output is not a tty` (`:71`)
 - `#say > does not set the color if NO_COLOR is set to any value that is not an empty string` (`:80`)
