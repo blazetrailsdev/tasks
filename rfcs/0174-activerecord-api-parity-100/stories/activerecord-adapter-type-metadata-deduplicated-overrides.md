@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - activerecord-inheritance-residue-delegate-class-supers
 deps-rfc: []
 est-loc: 80
 priority: null
