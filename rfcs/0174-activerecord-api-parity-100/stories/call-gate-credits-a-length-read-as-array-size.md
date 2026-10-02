@@ -47,6 +47,12 @@ a Ruby-side rule cannot tell an Array from a Relation, whose `size` runs a query
 can: a trails `Relation#size` / `#length` is an awaited method CALL, so a `.length` property
 READ in the paired TS body is never a dropped query trigger.
 
+The `activerecord-audit-permanent-receipts-root-a-m` audit (trails#8393) re-tagged a fifth receipt
+onto this story: `vendor/rails/v8.0.2/activerecord/lib/active_record/migration.rb:1296`
+`pending_migration_versions.size > 0` (`needs_migration?`), ported in
+`packages/activerecord/src/migration.ts` `needsMigration` as
+`(await this.pendingMigrationVersions()).length > 0`.
+
 ## Acceptance criteria
 
 - [ ] The call gate credits Ruby `size` (and `length`) for a body whose paired TS body reads a `.length` property, only for a property read and never for a `length()` / `size()` call, with unit tests for the read, the call, and a body with neither (which must still flag). A site the Ruby-side proof already drops is unaffected.

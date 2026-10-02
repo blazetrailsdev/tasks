@@ -51,6 +51,13 @@ The TS bodies read `this._stack.length`, `this._stack.at(-1)`, `this._queue.leng
 `prove-hash-literal-ivars-in-ruby-compat-receiver-kinds` (RFC 0123) is the Hash-literal twin of the
 ivar half; the mechanism (`hash_typed_ivars`) is the one to widen.
 
+The `activerecord-audit-permanent-receipts-root-a-m` audit (trails#8393) re-tagged one more receipt
+onto this story, the same ivar case outside `connection_adapters/abstract/`:
+`vendor/rails/v8.0.2/activerecord/lib/active_record/asynchronous_queries_tracker.rb:50` `@stack.last`
+(`current_session`), where `@stack = []` in `initialize` (`asynchronous_queries_tracker.rb:46`) is
+never reassigned. The TS body is `currentSession` in
+`packages/activerecord/src/asynchronous-queries-tracker.ts`, which reads `this.#stack[this.#stack.length - 1]`.
+
 A danger case must stay flagged: an ivar a Relation or association can be assigned to
 (`@records`, `@target`) is not provably an Array, so the proof requires every assignment to the ivar
 in the class body to be an Array literal (or an `Array(...)` / `[]`-rooted chain), not merely one.
