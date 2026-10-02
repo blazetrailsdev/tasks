@@ -1,6 +1,6 @@
 ---
 title: "arel: Table#initialize reads as.to_s with no Symbol arm; as is not a Symbol-discriminating seat"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: arms
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8419
+claim: "2026-10-02T20:01:56Z"
+assignee: "arel-table-as-is-not-a-symbol-seat"
 blocked-by: null
 closed-reason: null
 ---

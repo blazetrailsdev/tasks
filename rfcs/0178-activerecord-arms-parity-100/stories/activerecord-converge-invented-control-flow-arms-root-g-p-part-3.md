@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove or credit the 33 invented branches in root-g-p part 3"
-status: claimed
+status: in-progress
 updated: 2026-10-02
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
@@ -9,7 +9,7 @@ deps: ["activerecord-converge-missing-control-flow-arms-root"]
 deps-rfc: []
 est-loc: 278
 priority: null
-pr: null
+pr: trails#8418
 claim: "2026-10-02T19:32:05Z"
 assignee: "arel-select-manager-union-operation-is-not-a-symbol-seat"
 blocked-by: null

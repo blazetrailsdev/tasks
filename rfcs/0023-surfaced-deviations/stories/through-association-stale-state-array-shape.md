@@ -1,7 +1,7 @@
 ---
 title: "Converge ThroughAssociation#stale_state onto Rails' array shape"
-status: draft
-updated: 2026-08-20
+status: in-progress
+updated: 2026-10-02
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8417
+claim: "2026-10-02T20:37:12Z"
+assignee: "through-association-stale-state-array-shape"
 blocked-by: null
 closed-reason: null
 ---

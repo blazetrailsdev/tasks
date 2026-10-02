@@ -1,7 +1,7 @@
 ---
 title: "activerecord: model, migration and task methods return what Rails callers read (void-returns report)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8419
+claim: "2026-10-02T20:01:56Z"
+assignee: "arel-table-as-is-not-a-symbol-seat"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Date/DateTime cast_value pre-convert the DateTime seat because it answers no send"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null

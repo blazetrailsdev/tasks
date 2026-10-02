@@ -1,7 +1,7 @@
 ---
 title: "activerecord: remove or credit the 15 invented branches in tasks part 2"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["activerecord-converge-missing-control-flow-arms-subsystems"]
 deps-rfc: []
 est-loc: 170
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8419
+claim: "2026-10-02T20:01:56Z"
+assignee: "arel-table-as-is-not-a-symbol-seat"
 blocked-by: null
 closed-reason: null
 ---

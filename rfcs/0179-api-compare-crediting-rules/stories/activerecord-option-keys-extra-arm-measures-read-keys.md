@@ -1,7 +1,7 @@
 ---
 title: "tooling: option-keys' extra-in-TS arm reads the options TYPE, so 43 activerecord pairs are noise"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: reports
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8420
+claim: "2026-10-02T20:31:54Z"
+assignee: "activerecord-literal-normalizer-backslash-escapes"
 blocked-by: null
 closed-reason: null
 ---

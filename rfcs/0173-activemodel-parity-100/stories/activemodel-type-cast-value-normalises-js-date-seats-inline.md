@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Date/DateTime/Time cast_value normalise JS Date and Temporal seats inline, inventing arms"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: arms
