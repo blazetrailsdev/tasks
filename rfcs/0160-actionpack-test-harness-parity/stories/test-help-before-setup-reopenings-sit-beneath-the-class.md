@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-integration-runner-module-and-runner-tests
 deps-rfc: []
 est-loc: 50
 priority: null
