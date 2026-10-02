@@ -93,11 +93,22 @@ installed with `moduleEval`.
   `test_case.rb:696`.
 - `Behavior.ClassMethods` holds `tests`, `controllerClass` / its writer and
   `determineDefaultControllerClass`; they are no longer `TestCase` statics.
-- The `included do` block (`test_case.rb:632-638`) holds the two `include`s, the
+- The `included do` block (`test_case.rb:596-602`) holds `include
+ActionController::TemplateAssertions`, the members of `ActionDispatch::Assertions`, the
   `class_attribute :_controller_class`, the `setup` registration and the load hook, in
-  Rails' order.
-- Every instance method of `test_case.rb:413-693` is a member of `Behavior`, in Rails'
-  order, and the `TestCase` class body holds only `executor_around_each_request`.
+  Rails' order. `ActionDispatch::Assertions` is not a module in trails, so its members are
+  installed one by one, as `IntegrationTest` installs them; making that one `include` is
+  `action-dispatch-assertions-is-not-an-includable-module`.
+- `Behavior` includes `ActionDispatch::TestProcess` (`test_case.rb:373`).
+  `include ActiveSupport::Testing::ConstantLookup` (`:374`) is
+  `constant-lookup-is-a-namespace-not-a-concern`, and `include
+Rails::Dom::Testing::Assertions` (`:375`) is
+  `action-controller-test-case-has-no-assert-select`.
+- Every instance method of `test_case.rb:439-693` is a member of `Behavior`, in Rails'
+  order. The `TestCase` class body holds `executor_around_each_request`, the type-only
+  `response` / `request` declarations for `attr_reader :response, :request` (`:377`; a
+  module link cannot hold an instance data property, and `parity:api` scores an interface
+  member as declaration-only), and the name-optional constructor its callers rely on.
 - `include(ActionControllerTestCase, SharedRoutes)`
   (`packages/actionpack/src/test-helpers/abstract-unit.ts`) still runs before the
   inherited `beforeSetup`, and trailties' `test_help` `before_setup` reopening
