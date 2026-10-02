@@ -7,6 +7,7 @@ updated: 2026-08-25
 owner: "@deanmarano"
 packages:
   - "activesupport"
+  - "trailties"
 clusters: []
 priority: 3
 ---
