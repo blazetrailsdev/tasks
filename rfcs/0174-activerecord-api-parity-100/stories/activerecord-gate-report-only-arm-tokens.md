@@ -5,7 +5,15 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: arms
 packages: ["activerecord"]
-deps: ["audit-loop-try-rescue-arm-strata-for-gating"]
+deps:
+  - audit-loop-try-rescue-arm-strata-for-gating
+  - activerecord-converge-missing-control-flow-arms-connection-adapters-part-2
+  - column-deduplicated-drops-the-string-dedup-arms
+  - composite-primary-key-predicate-reads-the-primary-key-setter-ivar
+  - arms-report-idiom-fold-and-catch-all-else-manufacture-missing-arms
+  - arms-report-fold-credits-idiom-arms-by-presence
+  - quoted-date-usec-arm-is-relocated-into-sql-datetime
+  - record-native-promise-decision-and-retire-promise-complete-rows
 deps-rfc: []
 est-loc: 200
 priority: null
