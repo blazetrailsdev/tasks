@@ -1,6 +1,6 @@
 ---
 title: "activerecord: retire SKIP_GROUPS' class_attribute storage-slot entry (_reflections, _counter_cache_columns, _attr_readonly, …)"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: skips

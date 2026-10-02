@@ -1,6 +1,6 @@
 ---
 title: "activerecord: audit the 39 PERMANENT receipts in connection-adapters/abstract/"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts

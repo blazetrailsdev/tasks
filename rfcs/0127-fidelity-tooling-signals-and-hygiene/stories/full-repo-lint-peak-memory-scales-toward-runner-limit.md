@@ -1,6 +1,6 @@
 ---
 title: "Full-repo lint peaks at 8.2 GB in one process; the heap limit has been bumped twice"
-status: draft
+status: closed
 updated: 2026-10-02
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of full-lint-heap-footprint-grows-with-the-tree (same RFC), filed moments earlier; this body's peak-RSS measurements (6.7 GB OOM at 6144, 8.2 GB at 10240/12288) are the only addition."
 ---
 
 ## Context

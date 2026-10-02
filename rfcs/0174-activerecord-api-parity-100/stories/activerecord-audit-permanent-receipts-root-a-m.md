@@ -1,7 +1,7 @@
 ---
 title: "activerecord: audit the 45 PERMANENT receipts in top-level src files a–m"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8393
+claim: "2026-10-02T12:21:56Z"
+assignee: "activerecord-audit-permanent-receipts-root-a-m"
 blocked-by: null
 closed-reason: null
 ---

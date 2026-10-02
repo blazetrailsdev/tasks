@@ -1,6 +1,6 @@
 ---
 title: "activemodel: port ActiveModel::Name's =~ / !~ delegation instead of scoping them out"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: skips
