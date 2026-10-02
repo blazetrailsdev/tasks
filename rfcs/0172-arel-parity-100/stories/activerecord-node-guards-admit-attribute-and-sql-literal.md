@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - arel-attribute-and-sql-literal-are-not-nodes
 deps-rfc: []
 est-loc: 180
 priority: null
