@@ -24,8 +24,19 @@ individual captured file, and a pane's rendered scrollback. These are the
 read paths that make the session archive useful; the archive index
 (`serve-the-session-archive-index`) is just the way in.
 
-Phase C of RFC 0136, and it depends on `port-the-pane-terminal-emulator` for
-the pane route.
+Phase D of RFC 0136, and it depends on `port-the-pane-terminal-emulator` for
+the pane route. That story no longer ports anything: it loads ringo's own
+replay from `vendor/ringo/core.wasm`, so `/sessions/pane` is ringo's renderer
+behind a trailmap response.
+
+### The replay blocks the event loop
+
+`renderPaneLog` runs synchronously, at roughly 110 ms per megabyte of log.
+Measured over ringo's archive, the median pane log is 2 MB (0.2 s), the 90th
+percentile 10.6 MB (1.1 s) and the largest 104 MB (10 s). Called straight from
+a controller, every other request waits behind it. ringo's own handler caps
+the output at 20,000 lines, which bounds memory and not time: the whole log is
+still replayed.
 
 ### trailmap reads, ringo arms
 
@@ -50,8 +61,14 @@ dokku app does not have mounted today.
 - All three routes serve in trailmap, read-only, matching ringo's output.
 - Filename handling on `/sessions/file` is as strict as ringo's — no
   separators, no dotfiles, no traversal — with a test proving each refusal.
-- `/sessions/pane` renders through the ported emulator, not a second
-  implementation.
+- `/sessions/pane` renders through `lib/ringo-core.ts`'s `renderPaneLog`, not a
+  second implementation.
+- **`/sessions/pane` does not stall other requests.** Either bound the bytes
+  replayed, or run the replay off the main thread. Say in the PR which, and
+  the measured time the event loop is held on the largest log in the archive.
+  Off-thread needs a worker, and trails has no adapter for one: if that is the
+  route, the adapter is a story against trails, filed with the reproduction,
+  not a `node:worker_threads` import in trailmap.
 - Large transcripts are streamed or bounded rather than buffered whole; say in
   the PR which, and what the measured worst case is.
 - trailmap arms no pipes; `/sessions/pane` reads the log file ringo's
