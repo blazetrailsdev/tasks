@@ -28,7 +28,7 @@ The axis cannot reach zero honestly until it measures keys the body _reads_
 ## Acceptance criteria
 
 - [ ] `options-keys.ts` collects TS keys from the body's reads (destructuring, `options.x`, `fetch`/`hasKey` calls), not from the declared parameter type, with unit tests over a `**options` pass-through.
-- [ ] After the fix, every remaining activerecord `extraInTs` pair is a real invented arm; each is converged here or filed as its own story in this RFC.
+- [ ] After the fix, every remaining activerecord `extraInTs` pair is a real invented arm; each is converged here or filed as its own story in `0174-activerecord-api-parity-100` (a real invented key is a port fix; RFC 0179 § "Where a story goes") and named in the PR body.
 - [ ] Report counts for activerecord, activemodel and arel are recorded before/after in the PR body.
 
 ## Verification

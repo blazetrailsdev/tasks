@@ -112,8 +112,12 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
 - **Blocked, not ratified.** Where a story hits a gap CLAUDE.md does not ratify, it is filed `blocked`
   with the concrete blocker (see § "Blocked"), never re-worded into a PERMANENT receipt.
 - **Measurement faults are fixed in the tool.** Several report-only axes are mostly noise today (moves'
-  include-chain rows, the `if` arm token, option keys' declared-type keys). Those stories fix the extractor
-  with a unit test instead of editing a correct port, and depend on the tooling story that owns the fault.
+  include-chain rows, the `if` arm token, option keys' declared-type keys). The fix is in the extractor,
+  with a unit test, never an edit to a correct port. The fault story is filed in the RFC that owns the
+  tool: `0179-api-compare-crediting-rules` for the call-set gate, the call-argument gate, the extra-surface
+  scorer and the advisory reports, `0178-activerecord-arms-parity-100` for the arms, void-return and
+  duck-type extractors, and RFC 0127 for moves. A port story here whose rows the fault inflates takes a
+  `deps` edge on that fault story.
 - **One owner per row.** Prior-art stories in other RFCs are wired as `deps`, not re-authored
   (§ "Existing stories"). Every CONVERGEABLE receipt that already names a story counts as covered.
 - **Each story is one PR.** `est-loc` ≤ 650 against the 700 ceiling. Where two stories rewrite the same

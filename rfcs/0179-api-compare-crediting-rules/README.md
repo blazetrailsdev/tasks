@@ -64,15 +64,17 @@ They differ from the rest of 0174 in three ways:
 
 Measured 2026-10-02 on trails `main` @ `c0f89d7927`.
 
-| What                                                                      | Now                                        | Target    |
-| ------------------------------------------------------------------------- | ------------------------------------------ | --------- |
-| receipts in `packages/` that cite one of these stories                    | 53 in 32 files                             | 0         |
-| of which `@missingRailsCall` / `@missingRailsArgs` / `@noRailsEquivalent` | 38 / 11 / 4                                | 0         |
-| option-keys report, activerecord `extraInTs` pairs                        | 46, about 3 of them real (0174's baseline) | real only |
-| literals report, activerecord rows                                        | 1, a normalizer fault (0174's baseline)    | 0         |
-| structural-duplicates report, activerecord candidates                     | 9, all shape-only (the story's own count)  | 0         |
+| What                                                                      | Now                                       | Target                    |
+| ------------------------------------------------------------------------- | ----------------------------------------- | ------------------------- |
+| receipts in `packages/` that cite one of these stories                    | 53 in 32 files                            | 0                         |
+| of which `@missingRailsCall` / `@missingRailsArgs` / `@noRailsEquivalent` | 38 / 11 / 4                               | 0                         |
+| option-keys report, activerecord `extraInTs`-only pairs                   | 43 of 46 pairs (0174's baseline)          | none from a declared type |
+| literals report, activerecord rows                                        | 1, a normalizer fault (0174's baseline)   | 0                         |
+| structural-duplicates report, activerecord candidates                     | 9, all shape-only (the story's own count) | 0                         |
 
-The first row is `git grep -F -f <slugs> -- packages | wc -l` over the 20 slugs. The option-keys and
+The first row is `git grep -F -f <slugs> -- packages | wc -l` over the 20 slugs. The other 3 option-keys pairs
+had a key missing in TS and were converged by `activerecord-option-keys-missing-in-ts` (RFC 0174, done).
+How many of the 43 are real invented keys is not known until the extractor reads the body. The option-keys and
 literals figures were measured for 0174 on 2026-09-30 @ `ea7d456048` and were not re-run for this split.
 
 ## Design
@@ -235,8 +237,12 @@ Status is from the DB as of 2026-10-02. The groups can be worked in parallel, su
 - **The gates stay green with no row added:** `pnpm parity:api:calls`, `pnpm parity:api:calls:args`,
   `pnpm parity:api:extra:gate` and `pnpm parity:api:receipts:gate`.
 - **The three reports list no activerecord false positive:** the literals report has 0 activerecord rows,
-  the structural-duplicates report has 0 activerecord candidates, and every remaining option-keys
-  `extraInTs` pair is a real invented key with its own story.
+  the structural-duplicates report has 0 activerecord candidates, and the option-keys report lists no
+  `extraInTs` key that comes from the declared parameter type rather than a read in the body. Any pair
+  still listed has been triaged as a real invented key by
+  `activerecord-option-keys-extra-arm-measures-read-keys`, which converges it in its own PR or files it in
+  `0174-activerecord-api-parity-100` and names the story in its PR body. Converging those filed stories is
+  0174's work; this RFC does not wait on it.
 - `pnpm tasks list --rfc 0179-api-compare-crediting-rules` shows no open story.
 
 ## End condition
