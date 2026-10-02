@@ -12,6 +12,7 @@ packages:
   - "actionpack"
   - "activemodel"
   - "trailties"
+  - "actionview"
 clusters:
   - api-surface
   - arms
