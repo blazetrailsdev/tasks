@@ -33,20 +33,21 @@ This RFC holds stories whose fix is a rule in the comparer under `scripts/api-co
 port. Each one names a body that already does what Rails does and is still flagged, so it carries a receipt
 (`@missingRailsCall`, `@missingRailsArgs`, `@noRailsEquivalent`) for a call it makes or a name Rails has.
 The story teaches the gate to credit the port and deletes the receipts. It was split out of
-`0174-activerecord-api-parity-100` on 2026-10-02 with 20 stories, all open, at 3,000 est-loc. The
+`0174-activerecord-api-parity-100` on 2026-10-02 with 22 stories. 20 are open, at 3,000 est-loc;
+2 were closed with no work done. The
 destination of a story is decided by one question: **does its first acceptance criterion change the
 comparer or the port?**
 
 ## Motivation
 
-After RFC 0178 took the arms cluster, RFC 0174 held 266 stories. 20 of them are not activerecord work:
+After RFC 0178 took the arms cluster, RFC 0174 held 266 stories. 22 of them are not activerecord work:
 
 | Slice of 0174 (2026-10-02, from the DB) | Stories | Open | Open est-loc |
 | --------------------------------------- | ------- | ---- | ------------ |
-| comparer-rule stories                   | 20      | 20   | 2,850        |
-| everything else                         | 246     | 198  | 36,555       |
+| comparer-rule stories                   | 22      | 20   | 2,850        |
+| everything else                         | 244     | 198  | 36,555       |
 
-The 2,850 is the DB's figure. One of the 20 had no estimate and is sized at 150 in this split, which gives
+The 2,850 is the DB's figure. One of the 20 open stories had no estimate and is sized at 150 in this split, which gives
 the 3,000 the Summary and § "Rollout" use.
 
 They differ from the rest of 0174 in three ways:
@@ -72,7 +73,7 @@ Measured 2026-10-02 on trails `main` @ `c0f89d7927`.
 | literals report, activerecord rows                                        | 1, a normalizer fault (0174's baseline)   | 0                         |
 | structural-duplicates report, activerecord candidates                     | 9, all shape-only (the story's own count) | 0                         |
 
-The first row is `git grep -F -f <slugs> -- packages | wc -l` over the 20 slugs. The other 3 option-keys pairs
+The first row is `git grep -F -f <slugs> -- packages | wc -l` over the 20 open slugs. The other 3 option-keys pairs
 had a key missing in TS and were converged by `activerecord-option-keys-missing-in-ts` (RFC 0174, done).
 How many of the 43 are real invented keys is not known until the extractor reads the body. The option-keys and
 literals figures were measured for 0174 on 2026-09-30 @ `ea7d456048` and were not re-run for this split.
@@ -85,12 +86,12 @@ literals figures were measured for 0174 on 2026-09-30 @ `ea7d456048` and were no
 `scripts/parity/`) so that a port which already matches Rails stops being flagged. It covers four
 mechanisms, which are this RFC's clusters:
 
-| Cluster     | Mechanism                                                                             | Stories |
-| ----------- | ------------------------------------------------------------------------------------- | ------- |
-| `call-set`  | the call-set gate (`pnpm parity:api:calls`): which TS forms count as a Ruby call      | 11      |
-| `call-args` | the call-argument gate (`pnpm parity:api:calls:args`): receiver alignment and pairing | 4       |
-| `surface`   | the extra-surface scorer (`pnpm parity:api:extra:gate`) and the owner-seat rule       | 2       |
-| `reports`   | advisory reports: option keys, literals, structural duplicates                        | 3       |
+| Cluster     | Mechanism                                                                             | Stories      |
+| ----------- | ------------------------------------------------------------------------------------- | ------------ |
+| `call-set`  | the call-set gate (`pnpm parity:api:calls`): which TS forms count as a Ruby call      | 12 (11 open) |
+| `call-args` | the call-argument gate (`pnpm parity:api:calls:args`): receiver alignment and pairing | 5 (4 open)   |
+| `surface`   | the extra-surface scorer (`pnpm parity:api:extra:gate`) and the owner-seat rule       | 2            |
+| `reports`   | advisory reports: option keys, literals, structural duplicates                        | 3            |
 
 ### Where a story goes
 
@@ -184,7 +185,8 @@ tasks set-deps activerecord-api-parity-100-close-out --remove <the 43 slugs now 
 
 ## Alternatives considered
 
-- **A new active RFC for the comparer-rule stories (chosen).** 20 stories, no `deps` edge out, one in from
+- **A new active RFC for the comparer-rule stories (chosen).** 22 stories (20 open), no
+  `deps` edge out, one in from
   RFC 0173 and two from the 0174 close-out. One mechanism family, one directory.
 - **Rehome them into `0127-fidelity-tooling-signals-and-hygiene`**: rejected. 0127 is `draft`, and
   `claimable()` surfaces a story only when its own RFC is `active`, so the two ready stories would stop
@@ -205,12 +207,14 @@ tasks set-deps activerecord-api-parity-100-close-out --remove <the 43 slugs now 
 
 Status is from the DB as of 2026-10-02. The groups can be worked in parallel, subject to § "Ordering".
 
-1. **Call-argument gate.** 4 stories, 500 est-loc. First, because RFC 0173 waits on the pairing story.
+1. **Call-argument gate.** 5 stories, 4 open, 500 est-loc. First, because RFC 0173 waits on the pairing story.
    - Draft: `pair-call-sites-breaks-ties-by-receiver-name`,
      `call-args-gate-aligns-the-receiver-of-a-function-form-hash-merge`,
      `call-args-gate-aligns-the-receiver-of-function-form-fetch-and-max`,
      `call-args-gate-aligns-the-receiver-of-function-form-prepend`
-2. **Call-set gate.** 11 stories, 1,610 est-loc.
+   - Closed, moot before any work (trails#8392 added `last` to `RECEIVER_AS_FIRST_ARG`):
+     `call-args-gate-reads-an-explicit-self-receiver-as-a-simple-receiver`
+2. **Call-set gate.** 12 stories, 11 open, 1,610 est-loc.
    - Draft, Array `size` / `last`: `call-gate-credits-a-length-read-as-array-size`,
      `call-gate-proves-array-literal-ivars-and-kernel-array-receivers`,
      `call-gate-proves-where-clause-predicates-an-array-for-size`
@@ -222,6 +226,7 @@ Status is from the DB as of 2026-10-02. The groups can be worked in parallel, su
    - Draft, resolution: `call-gate-credits-a-module-include-edge-to-its-includer`,
      `call-gate-credits-a-ruby-compat-import-renamed-around-a-module-homonym`,
      `call-gate-generate-method-set-has-claim-and-heredoc-order`
+   - Closed as a duplicate (§ "Open questions" 1): `call-gate-reads-literal-rbfsend-as-a-call`
 3. **Surface.** 2 stories, 370 est-loc.
    - Draft: `comparator-reads-a-module-named-const-as-the-instance-seat`,
      `extra-surface-credits-a-cross-package-extend-edge-to-its-extender`
@@ -232,7 +237,7 @@ Status is from the DB as of 2026-10-02. The groups can be worked in parallel, su
 
 ## Verification
 
-- **No receipt in trails cites a story here.** `git grep -F -f <the 20 slugs> -- packages | wc -l` reaches 0,
+- **No receipt in trails cites a story here.** `git grep -F -f <the 20 open slugs> -- packages | wc -l` reaches 0,
   down from 53.
 - **The gates stay green with no row added:** `pnpm parity:api:calls`, `pnpm parity:api:calls:args`,
   `pnpm parity:api:extra:gate` and `pnpm parity:api:receipts:gate`.
@@ -260,7 +265,8 @@ None is open. Each was resolved before the RFC went `active`.
    `call-gate-credits-rb-f-send-of-a-literal-name-as-that-call` both credit a literal-name `rbFSend` /
    `rbFPublicSend` as a call to that name, and both delete the `@missingRailsCall limit` receipt on
    `DisableJoinsAssociationRelation#first`. Resolved: the first was closed as a duplicate with `tasks close`
-   on 2026-10-02 and stays in 0174. The second is the one trails cites, and it moved here.
+   on 2026-10-02, before the split. The second is the one trails cites. Both moved here, so the closed one
+   sits beside the story that replaced it.
 2. **Should the 18 drafts be marked ready?** Resolved: not by this split. `status` is DB-owned and a move
    does not change it; marking one ready is `tasks status-set <id> ready`. The first to mark is
    `pair-call-sites-breaks-ties-by-receiver-name` (50 est-loc), because the RFC 0173 story in § "Gating"
@@ -271,7 +277,7 @@ None is open. Each was resolved before the RFC went `active`.
 
 ## Changelog
 
-- 2026-10-02: created by splitting the comparer-rule stories out of `0174-activerecord-api-parity-100`. 20
-  stories moved (2 ready, 18 draft). Each moved story changes its `rfc:` and `cluster:` lines.
+- 2026-10-02: created by splitting the comparer-rule stories out of `0174-activerecord-api-parity-100`. 22
+  stories moved (2 ready, 18 draft, 2 closed). Each moved story changes its `rfc:` and `cluster:` lines.
   `structural-duplicates-report-residual-shape-false-positives` also takes a title and an `est-loc` of 150,
   which is why the RFC opens at 3,000 est-loc against the DB's 2,850.

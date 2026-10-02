@@ -334,8 +334,8 @@ close-out waits until 0178 is closed, including stories filed there later.
 
 As of 2026-10-02 a story whose fix is a rule in the comparer itself is owned by
 `0179-api-compare-crediting-rules`: the call-set gate, the call-argument gate, the extra-surface scorer and
-the advisory reports (option keys, literals, structural duplicates), all under `scripts/api-compare/`. 20
-stories moved there. Slugs did not change, so every `CONVERGEABLE <story-id>` receipt in trails still
+the advisory reports (option keys, literals, structural duplicates), all under `scripts/api-compare/`. 22
+stories moved there, 20 of them open. Slugs did not change, so every `CONVERGEABLE <story-id>` receipt in trails still
 resolves.
 
 | The story's first acceptance criterion changes                                                  | File it in |
@@ -405,7 +405,7 @@ row at target on a clean build, with the named blocked residue: `activerecord-po
   `0178-activerecord-arms-parity-100`: 53 stories, 45 of them open (17,848 est-loc). 266 stay here,
   219 of them open (39,465 est-loc). The routing rule is § "Split: RFC 0178"; the analysis of the seam
   is in 0178 § "Alternatives considered".
-- 2026-10-02: second split. 20 comparer-rule stories (2,850 est-loc, all open) moved to
-  `0179-api-compare-crediting-rules`; 246 stay here, 198 of them open (36,555 est-loc). The routing rule is
+- 2026-10-02: second split. 22 comparer-rule stories (20 open, 2,850 est-loc) moved to
+  `0179-api-compare-crediting-rules`; 244 stay here, 198 of them open (36,555 est-loc). The routing rule is
   § "Split: RFC 0179". `activerecord-api-parity-100-close-out`'s `deps` list was rewritten from a wrapped
   flow sequence to a block list, with no entry changed, because `tasks set-deps` refuses the wrapped form.

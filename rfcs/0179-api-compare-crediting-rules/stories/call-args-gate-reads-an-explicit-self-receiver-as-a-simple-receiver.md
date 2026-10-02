@@ -2,8 +2,8 @@
 title: "parity: the call-args gate reads an explicit-self receiver (self.foo.last) as a simple receiver"
 status: closed
 updated: 2026-10-02
-rfc: "0174-activerecord-api-parity-100"
-cluster: receipts
+rfc: "0179-api-compare-crediting-rules"
+cluster: call-args
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
