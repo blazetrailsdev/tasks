@@ -1,6 +1,6 @@
 ---
 title: "Mapper#mount: target_as, the Hash argument arm, ArgumentError, and the invented _mountedApps map"
-status: draft
+status: done
 updated: 2026-10-02
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8407
 claim: null
 assignee: null
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "arel: the Predications/Expressions/Math mixin hosts take the arel_node? union, not Node"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null

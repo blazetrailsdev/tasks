@@ -1,6 +1,6 @@
 ---
 title: "activerecord: instanceof Node guards admit an Attribute and a SqlLiteral"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null

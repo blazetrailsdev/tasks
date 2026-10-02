@@ -1,6 +1,6 @@
 ---
 title: "Integer RangeError message names the Rails class (self.class), not the JS class"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8411
+claim: "2026-10-02T17:22:05Z"
+assignee: "tests-without-assertions-reads-an-invented-source-location-seat"
 blocked-by: null
 closed-reason: null
 ---

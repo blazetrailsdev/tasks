@@ -1,6 +1,6 @@
 ---
 title: "activemodel: ActiveModel.version / gem_version / VERSION are not exported from the package entry"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null

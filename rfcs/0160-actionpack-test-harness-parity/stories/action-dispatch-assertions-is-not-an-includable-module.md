@@ -1,6 +1,6 @@
 ---
 title: "ActionDispatch::Assertions is not a module: TestCase::Behavior and IntegrationTest install its members by hand"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

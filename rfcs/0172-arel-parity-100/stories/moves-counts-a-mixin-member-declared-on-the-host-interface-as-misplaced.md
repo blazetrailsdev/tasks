@@ -1,7 +1,7 @@
 ---
 title: "parity:api:moves scores a correctly-moved mixin member as misplaced because the host interface declares its signature"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
 packages: []

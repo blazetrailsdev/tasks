@@ -1,6 +1,6 @@
 ---
 title: "activerecord: aggregate_column, construct_relation_for_exists and append_constraints test arel_node? where Rails does not"
-status: draft
+status: closed
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of activerecord-node-guards-admit-attribute-and-sql-literal, which already lists these sites with their Rails shapes"
 ---
 
 ## Context

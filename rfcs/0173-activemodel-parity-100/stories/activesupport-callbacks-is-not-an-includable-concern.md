@@ -1,6 +1,6 @@
 ---
 title: "activesupport: Callbacks is not an includable Concern, so include ActiveSupport::Callbacks is two calls at each of three sites"
-status: claimed
+status: blocked
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,10 +10,10 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8409
 claim: "2026-10-02T16:41:58Z"
 assignee: "arel-attribute-and-sql-literal-are-not-nodes"
-blocked-by: null
+blocked-by: "trails#8409 made Callbacks includable and the three includers one call; the included-do body (extend DescendantsTracker, class_attribute :__callbacks) has no seat until activesupport-callbacks-chains-are-not-the-callbacks-class-attribute converts the chain storage"
 closed-reason: null
 ---
 

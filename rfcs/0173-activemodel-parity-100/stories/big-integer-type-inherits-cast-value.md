@@ -1,6 +1,6 @@
 ---
 title: "BigIntegerType drops its invented castValue and inherits Type::Integer#cast_value"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null

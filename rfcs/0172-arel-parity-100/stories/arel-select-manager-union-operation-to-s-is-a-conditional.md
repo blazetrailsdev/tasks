@@ -1,6 +1,6 @@
 ---
 title: "arel: SelectManager#union spells operation.to_s as a conditional because rbObjAsString keeps a Symbol's colon"
-status: ready
+status: closed
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: arms
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by arel-select-manager-union-operation-is-not-a-symbol-seat. Operator decision 2026-10-02: union's operation is not a Symbol-discriminating seat (select_manager.rb:198-207 has no Symbol branch), so union(:all, other) ports as union('all', other) and the isSymbol arm goes; the body's converged shape waited on rbObjAsString stripping a Symbol's colon, which is rejected as unsafe"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "mapper-define-generate-prefix-diverges"
-status: draft
-updated: 2026-09-28
+status: in-progress
+updated: 2026-10-02
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8410
+claim: "2026-10-02T17:27:49Z"
+assignee: "mapper-define-generate-prefix-diverges"
 blocked-by: null
 closed-reason: null
 ---

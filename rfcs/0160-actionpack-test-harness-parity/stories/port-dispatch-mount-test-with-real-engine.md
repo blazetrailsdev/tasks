@@ -1,6 +1,6 @@
 ---
 title: "Port test/dispatch/mount_test.rb with AppWithRoutes as a real Rails::Engine"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

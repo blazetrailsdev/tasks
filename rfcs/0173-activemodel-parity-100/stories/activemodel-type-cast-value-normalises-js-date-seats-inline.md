@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Date/DateTime/Time cast_value normalise JS Date and Temporal seats inline, inventing arms"
-status: ready
+status: claimed
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: arms
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-02T17:42:02Z"
+assignee: "activemodel-binary-data-byte-seat-invents-arms"
 blocked-by: null
 closed-reason: null
 ---

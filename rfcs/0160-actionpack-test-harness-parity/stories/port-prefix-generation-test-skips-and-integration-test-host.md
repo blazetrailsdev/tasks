@@ -1,6 +1,6 @@
 ---
 title: "Port prefix_generation_test.rb's skipped tests, fixtures and verify_redirect on IntegrationTest"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8410
+claim: "2026-10-02T17:01:58Z"
+assignee: "port-prefix-generation-test-skips-and-integration-test-host"
 blocked-by: null
 closed-reason: null
 ---

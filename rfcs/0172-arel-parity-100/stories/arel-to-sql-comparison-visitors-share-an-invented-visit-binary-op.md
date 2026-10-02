@@ -1,6 +1,6 @@
 ---
 title: "arel: ToSql's four comparison visitors share an invented visitBinaryOp where Rails inlines the tail"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null

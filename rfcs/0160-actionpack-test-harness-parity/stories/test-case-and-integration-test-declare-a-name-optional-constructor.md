@@ -1,6 +1,6 @@
 ---
 title: "ActionController::TestCase and IntegrationTest declare a name-optional constructor Rails does not have"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

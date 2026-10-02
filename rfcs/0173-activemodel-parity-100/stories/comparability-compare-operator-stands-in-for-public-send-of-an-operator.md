@@ -1,6 +1,6 @@
 ---
 title: "activemodel: compareOperator stands in for value.public_send(COMPARE_CHECKS[option], option_value)"
-status: claimed
+status: in-progress
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8409
 claim: "2026-10-02T16:41:58Z"
 assignee: "arel-attribute-and-sql-literal-are-not-nodes"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "TestsWithoutAssertions#after_teardown reads an invented sourceLocation seat where Rails calls method(name).source_location"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8411
+claim: "2026-10-02T17:22:05Z"
+assignee: "tests-without-assertions-reads-an-invented-source-location-seat"
 blocked-by: null
 closed-reason: null
 ---
