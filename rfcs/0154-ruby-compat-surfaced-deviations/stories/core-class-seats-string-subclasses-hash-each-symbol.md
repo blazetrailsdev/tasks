@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: String's subclasses descend from the String seat, Hash includes Enumerable over a real each, and Symbol is decided"
-status: draft
+status: closed
 updated: 2026-10-02
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "shipped in trails#8416: stringSuperclass extends the String seat, Hash#each plus include(Hash, Enumerable), Symbol recorded as unseatable in ruby-compat's README"
 ---
 
 ## Context

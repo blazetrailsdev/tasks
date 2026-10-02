@@ -1,7 +1,7 @@
 ---
 title: "activerecord: burn parity:api:moves' rest relocations (31 methods) to zero"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: placement
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["moves-counts-a-mixin-member-declared-on-the-host-interface-as-misplaced"
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8417
+claim: "2026-10-02T19:01:58Z"
+assignee: "arel-converge-moves-residue"
 blocked-by: null
 closed-reason: null
 ---

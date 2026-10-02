@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Date/DateTime cast_value pre-convert the DateTime seat because it answers no send"
-status: draft
+status: in-progress
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8413
+claim: "2026-10-02T19:39:10Z"
+assignee: "activemodel-cast-value-pre-converts-the-datetime-seat"
 blocked-by: null
 closed-reason: null
 ---

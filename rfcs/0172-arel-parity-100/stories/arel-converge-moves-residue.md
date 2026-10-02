@@ -1,7 +1,7 @@
 ---
 title: "arel: burn parity:api:moves' 66 include-chain relocations to zero"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: placement
 packages: ["arel"]
@@ -9,9 +9,9 @@ deps: ["moves-counts-a-mixin-member-declared-on-the-host-interface-as-misplaced"
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8412
+claim: "2026-10-02T19:01:58Z"
+assignee: "arel-converge-moves-residue"
 blocked-by: null
 closed-reason: null
 ---

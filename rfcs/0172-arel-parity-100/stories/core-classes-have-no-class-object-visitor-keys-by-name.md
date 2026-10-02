@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: seat class objects for the core classes so Object#class answers a class, and retire arel Visitor's name-keyed dispatch"
-status: claimed
+status: in-progress
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#8416
 claim: "2026-10-02T18:41:59Z"
 assignee: "arel-build-quoted-names-the-sql-literal-arm"
 blocked-by: null

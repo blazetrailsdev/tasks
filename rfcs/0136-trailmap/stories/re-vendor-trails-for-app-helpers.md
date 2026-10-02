@@ -1,6 +1,6 @@
 ---
 title: "Re-vendor trails for working app/helpers, and make TRAILS_PIN true"
-status: claimed
+status: in-progress
 updated: 2026-10-02
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: null
+pr: trailmap#30
 claim: "2026-10-02T18:26:25Z"
 assignee: "re-vendor-trails-for-app-helpers"
 blocked-by: null

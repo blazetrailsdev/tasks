@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: rbObjClass answers the class and rbObjClassname the name; seat Symbol, String's subclasses and Hash#each"
-status: draft
+status: closed
 updated: 2026-10-02
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rename shipped in trails#8416; the remaining seats are core-class-seats-string-subclasses-hash-each-symbol"
 ---
 
 ## Context

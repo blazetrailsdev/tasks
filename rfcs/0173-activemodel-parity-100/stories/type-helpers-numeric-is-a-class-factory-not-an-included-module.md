@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Type::Helpers::Numeric is a class factory (applyNumericMixin), not an included module"
-status: claimed
+status: blocked
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -11,10 +11,10 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: trails#8416
 claim: "2026-10-02T18:41:59Z"
 assignee: "arel-build-quoted-names-the-sql-literal-arm"
-blocked-by: null
+blocked-by: "module-super-method-resolves-on-every-call: Module#superMethod costs 133 ns per call against 6 ns for a native super, so Numeric#cast as an included module is 3-6x slower (measured on trails#8416, which dropped this half on review)"
 closed-reason: null
 ---
 

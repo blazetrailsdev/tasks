@@ -1,6 +1,6 @@
 ---
 title: "arel: SelectManager#union reads operation.to_s with no Symbol arm; operation is not a Symbol-discriminating seat"
-status: ready
+status: claimed
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: arms
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 25
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-02T19:32:05Z"
+assignee: "arel-select-manager-union-operation-is-not-a-symbol-seat"
 blocked-by: null
 closed-reason: null
 ---
