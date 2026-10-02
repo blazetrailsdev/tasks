@@ -3,7 +3,7 @@ title: "arms-report-idiom-fold-and-catch-all-else-manufacture-missing-arms"
 status: draft
 updated: 2026-10-01
 rfc: "0178-activerecord-arms-parity-100"
-cluster: null
+cluster: arms
 packages: []
 deps: []
 deps-rfc: []

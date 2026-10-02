@@ -3,7 +3,7 @@ title: "column-deduplicated-drops-the-string-dedup-arms"
 status: draft
 updated: 2026-10-01
 rfc: "0178-activerecord-arms-parity-100"
-cluster: null
+cluster: arms
 packages: []
 deps: []
 deps-rfc: []

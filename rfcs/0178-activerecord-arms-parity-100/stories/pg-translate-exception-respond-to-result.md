@@ -3,7 +3,7 @@ title: "Converge PostgreSQLAdapter#translate_exception's respond_to?(:result) gu
 status: blocked
 updated: 2026-09-30
 rfc: "0178-activerecord-arms-parity-100"
-cluster: null
+cluster: arms
 packages: []
 deps: []
 deps-rfc: []

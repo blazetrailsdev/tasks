@@ -26,7 +26,8 @@ priority: 2
 This RFC holds activerecord's residue on the three report-only **body-shape** axes: the arms report
 (`pnpm parity:api:arms:report`), void returns (`pnpm parity:api:returns`) and duck-type guards
 (`pnpm parity:api:duck-types`). It was split out of `0174-activerecord-api-parity-100` on 2026-10-02 and
-took the 53 stories of 0174's `arms` cluster with it. 45 of them are open, at 17,848 est-loc. The
+took the 53 stories of 0174's `arms` cluster with it. 45 of them are open, at 17,848 est-loc. One more
+story was filed with the split (§ "Blocked"), so the RFC opens with 54 stories and 46 open. The
 destination of a story is decided by one question: **which report does the row it deletes come from?**
 
 ## Motivation
@@ -121,19 +122,33 @@ These are 0174's, unchanged:
 ### Gating
 
 - **`active` from birth**, for 0174's reason: `claimable()` surfaces a story only when its own RFC is
-  `active`. 32 stories here were claimable in 0174 and stay claimable.
+  `active`. 33 stories here were claimable in 0174 and stay claimable.
 - **Edges out of this RFC:** `audit-loop-try-rescue-arm-strata-for-gating` (RFC 0127) and
   `parity-100-rehome-postponed-rfc-dependencies` (RFC 0174, done). There are no others.
 - **Edges into this RFC:** `activerecord-api-parity-100-close-out` (RFC 0174) only. It names 43 of these
   stories in `deps`. After this split merges, those are replaced by one `deps-rfc` edge on this RFC, so the
   0174 close-out waits for everything here, including stories filed later.
 
+### After merge
+
+Two dependency edits name something that does not exist on main until this RFC merges, and
+`tasks set-deps` / `tasks set-deps-rfc` refuse a dangling reference. They run once it has merged:
+
+```bash
+tasks set-deps-rfc activerecord-api-parity-100-close-out --add 0178-activerecord-arms-parity-100
+tasks set-deps activerecord-api-parity-100-close-out --remove <the 43 moved slugs it names>
+tasks set-deps pg-translate-exception-respond-to-result --add pg-driver-errors-carry-a-result-at-the-raw-connection-boundary
+```
+
+Until then the close-out's 43 story-level edges gate it exactly as they did in 0174.
+
 ## Blocked
 
 - `pg-translate-exception-respond-to-result`: node-pg errors share no class, marker or result carrier, so
   one duck test at `postgresql_adapter.rb:802`'s position cannot separate a driver error from any other
-  `Error`. Converging needs the adapter to stamp driver errors with a result carrier at the raw-connection
-  boundary first. That prerequisite has no story yet (see § "Open questions").
+  `Error`. Its prerequisite is `pg-driver-errors-carry-a-result-at-the-raw-connection-boundary`, filed with
+  this split from the story's own `blocked-by`. The story stays `blocked` until that lands; unblocking is a
+  `tasks` verb, not an edit here.
 
 ## Non-goals
 
@@ -217,11 +232,74 @@ Status is from the DB as of 2026-10-02. Done stories are listed with their PR.
 4. **Void returns.** 2 stories, 1 open, 300 est-loc.
    - Ready: `activerecord-converge-void-returns-models-and-tasks`
    - Done: `activerecord-converge-void-returns-adapters` (trails#8398)
-5. **Duck-type guards.** 2 stories, 2 open, 330 est-loc.
-   - Ready, waiting on its dependency: `activerecord-duck-type-instanceof-to-respond-to`
-   - Blocked: `pg-translate-exception-respond-to-result`
+5. **Duck-type guards.** 3 stories, 3 open, 580 est-loc.
+   - Draft: `pg-driver-errors-carry-a-result-at-the-raw-connection-boundary`
+   - Blocked on it: `pg-translate-exception-respond-to-result`
+   - Ready, waiting on the blocked story: `activerecord-duck-type-instanceof-to-respond-to`
 6. **Gate.** 1 story, 200 est-loc.
    - Ready, waiting on RFC 0127: `activerecord-gate-report-only-arm-tokens`
+
+## Stories
+
+All 54, by Rollout group. Status is DB-owned and is not repeated here: `pnpm tasks list --rfc
+0178-activerecord-arms-parity-100`.
+
+| Story                                                                                    | est-loc | Group         |
+| ---------------------------------------------------------------------------------------- | ------- | ------------- |
+| `arms-extractor-reads-a-kwargs-rebinding-guard`                                          | 140     | extractor     |
+| `arms-report-fold-credits-idiom-arms-by-presence`                                        | 120     | extractor     |
+| `arms-report-idiom-fold-and-catch-all-else-manufacture-missing-arms`                     | —       | extractor     |
+| `activerecord-converge-missing-control-flow-arms-associations`                           | 360     | missing arms  |
+| `activerecord-converge-missing-control-flow-arms-connection-adapters-part-1`             | 600     | missing arms  |
+| `activerecord-converge-missing-control-flow-arms-connection-adapters-part-2`             | 600     | missing arms  |
+| `activerecord-converge-missing-control-flow-arms-relation`                               | 432     | missing arms  |
+| `activerecord-converge-missing-control-flow-arms-root`                                   | 600     | missing arms  |
+| `activerecord-converge-missing-control-flow-arms-subsystems`                             | 600     | missing arms  |
+| `column-deduplicated-drops-the-string-dedup-arms`                                        | —       | missing arms  |
+| `composite-primary-key-predicate-reads-the-primary-key-setter-ivar`                      | 250     | missing arms  |
+| `activerecord-converge-invented-control-flow-arms-associations-part-1`                   | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-associations-part-2`                   | 554     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-associations-part-3`                   | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-associations-part-4`                   | 542     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-associations-part-5`                   | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-connection-adapters-abstract-part-1`   | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-connection-adapters-abstract-part-2`   | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-connection-adapters-abstract-part-3`   | 380     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-connection-adapters-mysql-sqlite3`     | 356     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-connection-adapters-postgresql-part-1` | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-connection-adapters-postgresql-part-2` | 374     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-connection-adapters-root-part-1`       | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-connection-adapters-root-part-2`       | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-connection-adapters-root-part-3`       | 140     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-encryption-part-1`                     | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-encryption-part-2`                     | 374     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-relation-part-1`                       | 536     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-relation-part-2`                       | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-relation-part-3`                       | 254     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-root-a-f-part-1`                       | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-root-a-f-part-2`                       | 536     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-root-a-f-part-3`                       | 542     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-root-g-p-part-1`                       | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-root-g-p-part-2`                       | 542     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-root-g-p-part-3`                       | 278     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-root-q-z-part-1`                       | 554     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-root-q-z-part-2`                       | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-root-q-z-part-3`                       | 458     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-subsystems-part-1`                     | 560     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-subsystems-part-2`                     | 518     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-subsystems-part-3`                     | 194     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-tasks-part-1`                          | 536     | invented arms |
+| `activerecord-converge-invented-control-flow-arms-tasks-part-2`                          | 170     | invented arms |
+| `activerecord-sqlite3-new-client-is-one-async-body-with-timeout-in-configure-connection` | 220     | invented arms |
+| `activerecord-statement-pool-threads-pending-dealloc-through-ternaries`                  | 200     | invented arms |
+| `association-query-value-and-polymorphic-array-value-carry-invented-arms`                | 300     | invented arms |
+| `time-zone-conversion-infinite-arms-inline-the-rails-expression`                         | 30      | invented arms |
+| `activerecord-converge-void-returns-adapters`                                            | 400     | void returns  |
+| `activerecord-converge-void-returns-models-and-tasks`                                    | 300     | void returns  |
+| `activerecord-duck-type-instanceof-to-respond-to`                                        | 250     | duck types    |
+| `pg-driver-errors-carry-a-result-at-the-raw-connection-boundary`                         | 250     | duck types    |
+| `pg-translate-exception-respond-to-result`                                               | 80      | duck types    |
+| `activerecord-gate-report-only-arm-tokens`                                               | 200     | gate          |
 
 ## Verification
 
@@ -241,18 +319,22 @@ waits on that, and re-measures the same axes when it pins the package at zero.
 
 ## Open questions
 
-1. **Who stamps node-pg driver errors with a result carrier?**
-   `pg-translate-exception-respond-to-result` is blocked on it and its `blocked-by` says to file it as its
-   own story. It has not been filed. It belongs here if it is scored by the duck-type report, and in 0174
-   if it is an adapter port.
-2. **Do the 31 invented-arm stories still match the report?** They were seeded from the 903-pair list of
-   2026-09-30 and the report is at 824. The per-story row lists were not re-cut in this split. Each story
-   re-measures (§ "Principles"), and a story whose rows are all gone is closed with that as the reason.
-3. **Should the five unclustered stories get `cluster: arms`?** `cluster` is a markdown-owned field.
-   This split changed only each story's `rfc:` line, so that a state-sync commit on main cannot conflict
-   with a moved file. Setting the cluster is a follow-up edit.
+None is open. Each was resolved before the RFC went `active`.
+
+1. **Who stamps node-pg driver errors with a result carrier?** Resolved: filed here as
+   `pg-driver-errors-carry-a-result-at-the-raw-connection-boundary`. The duck-type report scores the row it
+   unblocks, so the routing table sends it here.
+2. **Do the 31 open invented-arm stories still match the report?** Resolved: not re-cut. They were seeded
+   from the 903-pair list of 2026-09-30 and the report is at 824, because the two done invented-arm stories
+   and the missing-arm stories removed rows. Each story body lists its own `file#method` rows, so a landed story does
+   not move rows between the open ones. Each story re-measures its own files first (§ "Principles"), and one whose rows
+   are all gone is closed with `tasks close` and that reason.
+3. **Should the five unclustered stories get `cluster: arms`?** Resolved: yes, set in this split. Those five
+   files differ from main by their `rfc:` and `cluster:` lines; the other 48 by `rfc:` alone.
 
 ## Changelog
 
 - 2026-10-02: created by splitting the `arms` cluster out of `0174-activerecord-api-parity-100`. 53
-  stories moved (8 done, 35 ready, 9 draft, 1 blocked). Each moved story changes only its `rfc:` line.
+  stories moved (8 done, 35 ready, 9 draft, 1 blocked). Each moved story changes only its `rfc:` line,
+  and the five that were unclustered also take `cluster: arms`. One story was filed with the split:
+  `pg-driver-errors-carry-a-result-at-the-raw-connection-boundary`.

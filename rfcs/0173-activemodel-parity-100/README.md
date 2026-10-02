@@ -36,6 +36,7 @@ related-rfcs:
   - "0170-psych-in-ruby-compat"
   - "0172-arel-parity-100"
   - "0174-activerecord-api-parity-100"
+  - "0178-activerecord-arms-parity-100"
   - "0175-activerecord-test-parity-100"
 priority: 2
 ---
@@ -49,7 +50,7 @@ What remains is spread across a dozen axes: 17 name misses, one arity mismatch, 
 row, 76 PERMANENT and 1 CONVERGEABLE receipt, 25 extra-surface names in a package the extra gate does not
 yet cover, 18 unpinned bodies, 7 dropped blocks, 1 missing raise, 91 arm rows, 150 moves, two scoped
 skips, 8 skipped + 5 missing tests and 32 TS-only tests. **27 stories, 6,410 est-loc.**
-Sibling of RFCs 0172, 0174, 0175.
+Sibling of RFCs 0172, 0174, 0175. RFC 0178 was split out of 0174 on 2026-10-02 (arms, void returns, duck-type guards).
 
 ## Motivation
 

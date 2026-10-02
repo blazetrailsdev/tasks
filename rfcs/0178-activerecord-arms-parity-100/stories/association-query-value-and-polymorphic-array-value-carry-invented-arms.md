@@ -3,7 +3,7 @@ title: "activerecord: AssociationQueryValue and PolymorphicArrayValue carry arms
 status: draft
 updated: 2026-10-02
 rfc: "0178-activerecord-arms-parity-100"
-cluster: null
+cluster: arms
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
