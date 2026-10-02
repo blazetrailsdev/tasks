@@ -170,7 +170,8 @@ deps:
     "port-multibyte-chars-and-string-mb-chars",
     "pg-quote-string-escapes-without-with-raw-connection",
   ]
-deps-rfc: []
+deps-rfc:
+  - 0178-activerecord-arms-parity-100
 est-loc: 200
 priority: null
 pr: null
