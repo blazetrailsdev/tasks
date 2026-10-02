@@ -10,6 +10,7 @@ packages:
   - "ruby-compat"
   - "activesupport"
   - "actionpack"
+  - "activemodel"
 clusters:
   - api-surface
   - arms
