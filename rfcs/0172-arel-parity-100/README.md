@@ -7,6 +7,8 @@ updated: 2026-09-30
 owner: "@deanmarano"
 packages:
   - "arel"
+  - "ruby-compat"
+  - "activerecord"
 clusters:
   - api-surface
   - arms
