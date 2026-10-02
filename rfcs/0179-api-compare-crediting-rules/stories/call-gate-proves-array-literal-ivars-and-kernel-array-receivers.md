@@ -1,6 +1,6 @@
 ---
 title: "parity: the call gate proves Array-literal ivars and Kernel#Array receivers for size / last"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set

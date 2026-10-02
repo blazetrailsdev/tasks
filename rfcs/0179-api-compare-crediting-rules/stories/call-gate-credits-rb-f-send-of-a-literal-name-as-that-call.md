@@ -1,6 +1,6 @@
 ---
 title: 'parity: rbFSend(recv, "name", …) with a literal name is a call to name'
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set

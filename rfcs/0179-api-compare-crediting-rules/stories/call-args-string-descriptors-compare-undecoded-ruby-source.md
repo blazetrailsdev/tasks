@@ -1,6 +1,6 @@
 ---
 title: "tooling: the call-argument comparer still compares a Ruby string's source text, not its value"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: null

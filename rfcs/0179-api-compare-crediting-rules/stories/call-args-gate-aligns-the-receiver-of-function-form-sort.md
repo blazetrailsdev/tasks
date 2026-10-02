@@ -1,6 +1,6 @@
 ---
 title: "parity: the call-argument gate aligns the receiver of function-form sort; Thor required_options sorts by byte"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: null

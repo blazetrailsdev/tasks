@@ -1,7 +1,7 @@
 ---
 title: "parity: an argument-less Hash.new / Array.new is a literal, not an omitted call"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set
 packages: ["activerecord"]

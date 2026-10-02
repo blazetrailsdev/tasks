@@ -1,6 +1,6 @@
 ---
 title: "tooling: option-keys unions same-named bodies in a file on both sides, masking per-owner findings"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "tooling: the TS option-key collector reads the last param and follows copies; the Ruby one does neither"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: null

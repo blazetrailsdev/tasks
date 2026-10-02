@@ -1,6 +1,6 @@
 ---
 title: "api-compare: a const named after the Rails module is the instance seat, so timestamp/persistence/normalization drop InstanceMethods"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: surface

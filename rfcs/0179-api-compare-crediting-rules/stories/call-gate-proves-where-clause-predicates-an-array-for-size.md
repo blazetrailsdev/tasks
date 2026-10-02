@@ -1,6 +1,6 @@
 ---
 title: "parity: the call gate proves WhereClause#predicates an Array for size"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set

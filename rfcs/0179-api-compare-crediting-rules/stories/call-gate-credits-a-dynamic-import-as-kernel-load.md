@@ -1,6 +1,6 @@
 ---
 title: "parity: a dynamic import() of a file is Kernel#load, not an omitted call"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set
