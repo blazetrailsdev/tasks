@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - arel-signatures-take-the-arel-node-union
 deps-rfc: []
 est-loc: 600
 priority: null
