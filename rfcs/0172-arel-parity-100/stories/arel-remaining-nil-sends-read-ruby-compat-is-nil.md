@@ -1,6 +1,6 @@
 ---
 title: "arel: Casted/Quoted#nil?, ToSql's right.nil? and Predications#open_ended? hand-roll the nil? send"
-status: ready
+status: done
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8412
+claim: "2026-10-02T18:02:01Z"
+assignee: "arel-mixin-hosts-take-the-arel-node-union"
 blocked-by: null
 closed-reason: null
 ---

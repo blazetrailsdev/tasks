@@ -1,6 +1,6 @@
 ---
 title: "activemodel: LengthValidator treats a function as responding to length; WithValidator normalises the method id Rails passes through"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8415
+claim: "2026-10-02T18:22:00Z"
+assignee: "activerecord-node-guards-admit-attribute-and-sql-literal"
 blocked-by: null
 closed-reason: null
 ---

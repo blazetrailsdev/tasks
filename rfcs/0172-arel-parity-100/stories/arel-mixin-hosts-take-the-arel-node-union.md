@@ -1,6 +1,6 @@
 ---
 title: "arel: the Predications/Expressions/Math mixin hosts take the arel_node? union, not Node"
-status: ready
+status: done
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8412
+claim: "2026-10-02T18:02:01Z"
+assignee: "arel-mixin-hosts-take-the-arel-node-union"
 blocked-by: null
 closed-reason: null
 ---

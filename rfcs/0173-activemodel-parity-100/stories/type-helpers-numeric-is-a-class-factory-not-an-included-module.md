@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Type::Helpers::Numeric is a class factory (applyNumericMixin), not an included module"
-status: ready
+status: claimed
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-02T18:41:59Z"
+assignee: "arel-build-quoted-names-the-sql-literal-arm"
 blocked-by: null
 closed-reason: null
 ---

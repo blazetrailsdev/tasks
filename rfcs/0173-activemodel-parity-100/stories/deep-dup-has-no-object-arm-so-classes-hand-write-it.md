@@ -1,6 +1,6 @@
 ---
 title: "activesupport deepDup lacks Object#deep_dup's duplicable arm, so Attribute and Error hand-write it"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null

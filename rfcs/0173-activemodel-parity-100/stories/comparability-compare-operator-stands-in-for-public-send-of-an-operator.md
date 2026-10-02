@@ -1,6 +1,6 @@
 ---
 title: "activemodel: compareOperator stands in for value.public_send(COMPARE_CHECKS[option], option_value)"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null

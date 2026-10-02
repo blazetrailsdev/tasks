@@ -1,7 +1,7 @@
 ---
 title: "parity: the call gate credits rbFSend / rbFPublicSend with a literal mid as a call to that name"
-status: draft
-updated: 2026-10-01
+status: closed
+updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of call-gate-credits-rb-f-send-of-a-literal-name-as-that-call: same rule (a literal-mid rbFSend / rbFPublicSend is a call to that name), same receipt (DisableJoinsAssociationRelation#first @missingRailsCall limit); the other is the one trails cites"
 ---
 
 ## Context

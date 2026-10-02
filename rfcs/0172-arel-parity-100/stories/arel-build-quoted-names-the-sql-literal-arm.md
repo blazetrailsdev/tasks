@@ -1,6 +1,6 @@
 ---
 title: "arel: buildQuoted names the SqlLiteral arm (casted.rb:50)"
-status: draft
+status: done
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8409
+claim: "2026-10-02T18:41:59Z"
+assignee: "arel-build-quoted-names-the-sql-literal-arm"
 blocked-by: null
 closed-reason: null
 ---

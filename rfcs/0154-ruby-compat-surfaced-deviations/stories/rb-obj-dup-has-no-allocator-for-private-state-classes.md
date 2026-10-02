@@ -1,6 +1,6 @@
 ---
 title: "rbObjDup has no class allocator, so a class with #private state or a Proxy dups into a broken copy"
-status: draft
+status: closed
 updated: 2026-10-02
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: trails#8411 added the rb_define_alloc_func seat itself; the remaining classes are filed as classes-with-private-state-declare-an-rb-obj-dup-allocator"
 ---
 
 ## Context

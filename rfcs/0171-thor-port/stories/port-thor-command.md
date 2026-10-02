@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Command, HiddenCommand and DynamicCommand (run, formatted_usage, arity and visibility arms)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-option", "ruby-compat-check-arity-raises-argument-error"]
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8414
+claim: "2026-10-02T18:29:39Z"
+assignee: "port-thor-command"
 blocked-by: null
 closed-reason: null
 ---

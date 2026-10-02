@@ -1,6 +1,6 @@
 ---
 title: "TestsWithoutAssertions warning prints line 0: the runner's test method has no first_lineno"
-status: draft
+status: closed
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: trails#8411 fixed the naming and collision halves; refiled as runner-test-method-has-no-first-lineno"
 ---
 
 ## Context

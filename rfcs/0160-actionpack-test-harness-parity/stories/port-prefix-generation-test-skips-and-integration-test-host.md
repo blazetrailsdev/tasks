@@ -1,6 +1,6 @@
 ---
 title: "Port prefix_generation_test.rb's skipped tests, fixtures and verify_redirect on IntegrationTest"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

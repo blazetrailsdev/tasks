@@ -1,6 +1,6 @@
 ---
 title: "activerecord: instanceof Node guards admit an Attribute and a SqlLiteral"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8415
+claim: "2026-10-02T18:22:00Z"
+assignee: "activerecord-node-guards-admit-attribute-and-sql-literal"
 blocked-by: null
 closed-reason: null
 ---
