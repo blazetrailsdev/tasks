@@ -1,7 +1,7 @@
 ---
 title: "activerecord: move the 13 Core bodies inlined into base.ts back to core.ts"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: placement
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["activerecord-core-attributes-for-inspect"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8383
+claim: "2026-10-02T03:41:55Z"
+assignee: "activemodel-enroll-in-extra-surface-gate-rowless"
 blocked-by: null
 closed-reason: null
 ---

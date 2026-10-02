@@ -1,6 +1,6 @@
 ---
 title: "mapper-rails-app-duck-types-railtie-name"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8381
+claim: "2026-10-02T03:01:57Z"
+assignee: "mapper-rails-app-duck-types-railtie-name"
 blocked-by: null
 closed-reason: null
 ---

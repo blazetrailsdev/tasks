@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Core#initialize body is inlined in Base's constructor"
-status: draft
+status: blocked
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Core#initialize (core.rb:470-482) wraps super: a function in core.ts cannot call super(), JS forbids this before super() returns, and ruby-compat's module [initialize] hook runs above ActiveModel::API#initialize rather than around it. Same wall as base-constructor-calls-init-internals-not-activemodel."
 closed-reason: null
 ---
 

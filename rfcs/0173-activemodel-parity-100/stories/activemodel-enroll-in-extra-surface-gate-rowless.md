@@ -1,7 +1,7 @@
 ---
 title: "activemodel: enroll in parity:api:extra:gate as a rowless package"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: placement
 packages: ["activemodel"]
@@ -9,9 +9,9 @@ deps: ["activemodel-burn-extra-surface-to-zero"]
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8383
+claim: "2026-10-02T03:41:55Z"
+assignee: "activemodel-enroll-in-extra-surface-gate-rowless"
 blocked-by: null
 closed-reason: null
 ---

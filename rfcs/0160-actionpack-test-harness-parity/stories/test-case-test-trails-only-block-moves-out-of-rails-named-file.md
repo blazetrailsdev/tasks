@@ -1,6 +1,6 @@
 ---
 title: "Move the trails-only PostsController tests out of controller/test-case.test.ts; drop TestCase's optional-name constructor"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8382
+claim: "2026-10-02T03:22:00Z"
+assignee: "test-case-test-trails-only-block-moves-out-of-rails-named-file"
 blocked-by: null
 closed-reason: null
 ---
