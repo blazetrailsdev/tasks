@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port Core.attributes_for_inspect (class_attribute)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8363
+claim: "2026-10-01T23:01:57Z"
+assignee: "arel-visitor-dispatch-cache-and-visit-rescue-arm"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "arel: port Visitor's identity-keyed dispatch cache and #visit's NoMethodError rescue arm"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0172-arel-parity-100"
 cluster: api-surface
 packages: ["arel"]
@@ -9,9 +9,9 @@ deps: ["ruby-compat-hash-keys-by-identity-not-eql"]
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8363
+claim: "2026-10-01T23:01:57Z"
+assignee: "arel-visitor-dispatch-cache-and-visit-rescue-arm"
 blocked-by: null
 closed-reason: null
 ---

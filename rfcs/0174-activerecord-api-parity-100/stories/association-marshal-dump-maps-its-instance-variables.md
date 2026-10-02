@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Association#marshal_dump / marshal_load round-trip every instance variable"
-status: in-progress
+status: done
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts

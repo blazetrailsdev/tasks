@@ -1,7 +1,7 @@
 ---
 title: "activemodel: audit the 26 PERMANENT receipts under attribute-set/, type/, validations/"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-01
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
 packages: ["activemodel"]
@@ -9,9 +9,9 @@ deps: ["delete-attribute-set-yaml-codec"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8365
+claim: "2026-10-01T23:21:54Z"
+assignee: "activemodel-audit-permanent-receipts-subdirs"
 blocked-by: null
 closed-reason: null
 ---
