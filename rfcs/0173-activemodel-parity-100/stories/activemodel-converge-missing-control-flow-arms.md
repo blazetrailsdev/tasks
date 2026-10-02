@@ -1,7 +1,7 @@
 ---
 title: "activemodel: restore the 11 dropped Rails branches (report-arms missing rows)"
-status: in-progress
-updated: 2026-10-01
+status: done
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: arms
 packages: ["activemodel"]

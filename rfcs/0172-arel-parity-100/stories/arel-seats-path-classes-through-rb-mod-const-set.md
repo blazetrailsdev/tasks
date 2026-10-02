@@ -1,6 +1,6 @@
 ---
 title: "arel: path a seated class by its constant binding (rbModConstSet), not a separate rbSetClassPathString call"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null

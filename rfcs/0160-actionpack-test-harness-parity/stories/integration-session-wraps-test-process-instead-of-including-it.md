@@ -1,6 +1,6 @@
 ---
 title: "Integration::Session re-declares TestProcess members instead of including the module"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

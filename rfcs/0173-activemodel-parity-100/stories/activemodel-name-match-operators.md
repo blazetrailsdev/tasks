@@ -1,7 +1,7 @@
 ---
 title: "activemodel: port ActiveModel::Name's =~ / !~ delegation instead of scoping them out"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: skips
 packages: ["activemodel"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8384
+claim: "2026-10-02T09:01:56Z"
+assignee: "activemodel-name-match-operators"
 blocked-by: null
 closed-reason: null
 ---

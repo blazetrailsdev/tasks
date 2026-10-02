@@ -1,7 +1,7 @@
 ---
 title: "activemodel: score and port freeze / initialize_clone, hidden by SKIP_GROUPS[0]"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: skips
 packages: ["activemodel"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8385
+claim: "2026-10-02T09:21:55Z"
+assignee: "activemodel-score-core-object-freeze-and-initialize-clone"
 blocked-by: null
 closed-reason: null
 ---

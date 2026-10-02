@@ -1,7 +1,7 @@
 ---
 title: "Lint, Active Record SQLite Tests (1) failing on main @fcbc702b"
-status: in-progress
-updated: 2026-10-01
+status: done
+updated: 2026-10-02
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

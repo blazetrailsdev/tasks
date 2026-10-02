@@ -1,7 +1,7 @@
 ---
 title: "activemodel: remove or credit the 51 invented branches outside type/"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: arms
 packages: ["activemodel"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-02T09:41:56Z"
+assignee: "activemodel-converge-invented-control-flow-arms-rest"
 blocked-by: null
 closed-reason: null
 ---
