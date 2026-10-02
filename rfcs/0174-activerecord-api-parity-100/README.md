@@ -11,6 +11,7 @@ packages:
   - "activesupport"
   - "actionpack"
   - "activemodel"
+  - "trailties"
 clusters:
   - api-surface
   - arms
