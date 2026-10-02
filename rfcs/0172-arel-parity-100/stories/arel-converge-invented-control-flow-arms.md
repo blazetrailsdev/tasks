@@ -12,6 +12,7 @@ deps:
   - arel-visitor-dispatch-cache-invented-arms
   - dot-visit-keys-seen-by-an-invented-key-and-counter-id
   - arel-table-as-is-not-a-symbol-seat
+  - arel-select-manager-union-operation-is-not-a-symbol-seat
 deps-rfc: []
 est-loc: 350
 priority: null
