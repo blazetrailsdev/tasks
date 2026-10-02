@@ -1,7 +1,7 @@
 ---
 title: "Superseded: gate the pane renderer against ringo's"
-status: ready
-updated: 2026-09-09
+status: closed
+updated: 2026-10-02
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by trailmap#27: trailmap loads ringo's own core.RenderPaneLog from vendor/ringo/core.wasm, so there is one renderer and nothing to diff. The binary-is-the-source check runs in CI (scripts/build-ringo-wasm.sh --check, trailmap#26); the torn-tail cases are unit tests in test/lib/ringo-core.test.ts."
 ---
 
 ## Context

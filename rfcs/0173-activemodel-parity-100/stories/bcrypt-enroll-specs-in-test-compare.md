@@ -1,6 +1,6 @@
 ---
 title: "bcrypt: enroll the gem's specs in test-compare and port the null-byte arm"
-status: draft
+status: closed
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "enrollment, specify support and the null-byte arm shipped in trails#8402; the rest is bcrypt-bc-crypt-hashes-bytes"
 ---
 
 ## Context

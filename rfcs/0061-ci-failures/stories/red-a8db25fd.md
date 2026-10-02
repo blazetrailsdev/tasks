@@ -1,6 +1,6 @@
 ---
 title: "Lint failing on main @a8db25fd"
-status: ready
+status: closed
 updated: 2026-10-02
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-02T15:58:01Z"
+assignee: "red-a8db25fd"
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a new break: Lint at a8db25fd failed on the single error inherited from #8400 (where-clause.ts:158 no-unnecessary-type-assertion), already fixed on main by #8404 (0b98904c6e), which merged right after a8db25fd. a8db25fd (#8396) added no lint errors of its own."
 ---
 
 ## Context

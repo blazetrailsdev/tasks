@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove or credit the 50 invented branches in connection-adapters-abstract part 3"
-status: claimed
+status: in-progress
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: arms
@@ -9,7 +9,7 @@ deps: ["activerecord-converge-missing-control-flow-arms-connection-adapters-part
 deps-rfc: []
 est-loc: 380
 priority: null
-pr: null
+pr: trails#8403
 claim: "2026-10-02T14:41:55Z"
 assignee: "ruby-compat-float-answers-infinite-for-arel-bind-and-quoted"
 blocked-by: null

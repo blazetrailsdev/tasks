@@ -1,6 +1,6 @@
 ---
 title: "ActionDispatch::Assertions is not a module: TestCase::Behavior and IntegrationTest install its members by hand"
-status: ready
+status: claimed
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-02T15:41:59Z"
+assignee: "action-dispatch-assertions-is-not-an-includable-module"
 blocked-by: null
 closed-reason: null
 ---

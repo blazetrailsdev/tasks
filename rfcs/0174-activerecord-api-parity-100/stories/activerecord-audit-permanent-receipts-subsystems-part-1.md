@@ -1,6 +1,6 @@
 ---
 title: "activerecord: audit the 34 PERMANENT receipts in encryption/, database-configurations/, tasks/, type*/, migration/, and the other subdirectories (part 1)"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts

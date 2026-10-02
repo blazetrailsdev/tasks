@@ -1,6 +1,6 @@
 ---
 title: "Fold action-controller/test-case.test.ts (no Rails counterpart) into test-case.trails.test.ts"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8401
+claim: "2026-10-02T15:01:54Z"
+assignee: "action-controller-test-case-test-is-a-rails-shaped-name-with-no-rails-file"
 blocked-by: null
 closed-reason: null
 ---

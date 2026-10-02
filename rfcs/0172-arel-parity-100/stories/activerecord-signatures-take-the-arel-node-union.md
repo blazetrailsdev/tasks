@@ -1,6 +1,6 @@
 ---
 title: "activerecord: signatures take the arel_node? union (~600 LOC, types only)"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8405
+claim: "2026-10-02T15:22:00Z"
+assignee: "activerecord-signatures-take-the-arel-node-union"
 blocked-by: null
 closed-reason: null
 ---

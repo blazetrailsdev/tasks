@@ -1,6 +1,6 @@
 ---
 title: "activemodel: ActiveModel.version / gem_version / VERSION are not exported from the package entry"
-status: ready
+status: claimed
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-02T15:41:59Z"
+assignee: "action-dispatch-assertions-is-not-an-includable-module"
 blocked-by: null
 closed-reason: null
 ---

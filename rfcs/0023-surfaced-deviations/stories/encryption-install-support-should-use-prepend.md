@@ -1,7 +1,7 @@
 ---
 title: "ExtendedDeterministicUniquenessValidator.install_support should prepend rather than swap the prototype method"
-status: draft
-updated: 2026-08-22
+status: closed
+updated: 2026-10-02
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: the body already calls prepend(); the remaining invented shape (targets parameter, _installed flag) is encryption-install-support-takes-no-targets-and-no-installed-flag and the args row is call-args-gate-aligns-the-receiver-of-function-form-prepend"
 ---
 
 ## Context

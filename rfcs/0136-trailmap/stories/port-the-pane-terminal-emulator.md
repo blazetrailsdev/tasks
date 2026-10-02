@@ -1,6 +1,6 @@
 ---
 title: "Run ringo's pane terminal replay in trailmap, loaded rather than ported"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0136-trailmap"
 cluster: null
