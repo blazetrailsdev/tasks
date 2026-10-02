@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activemodel"]
-deps: []
+deps:
+  - ar-read-attribute-for-validation-is-not-send
 deps-rfc: []
 est-loc: 80
 priority: null
