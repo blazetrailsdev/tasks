@@ -2,7 +2,7 @@
 title: "parity:api:moves scores a correctly-moved mixin member as misplaced because the host interface declares its signature"
 status: draft
 updated: 2026-09-03
-rfc: "0127-fidelity-tooling-signals-and-hygiene"
+rfc: "0172-arel-parity-100"
 cluster: null
 packages: []
 deps: []
