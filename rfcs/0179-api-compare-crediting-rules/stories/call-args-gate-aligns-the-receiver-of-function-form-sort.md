@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: null
 packages: []
-deps: []
+deps:
+  - call-args-gate-aligns-the-receiver-of-a-function-form-hash-merge
 deps-rfc: []
 est-loc: 120
 priority: null
