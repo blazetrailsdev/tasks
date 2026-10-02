@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts
 packages: ["activerecord"]
-deps: []
+deps:
+  - quoted-date-usec-arm-is-relocated-into-sql-datetime
 deps-rfc: []
 est-loc: 300
 priority: null
