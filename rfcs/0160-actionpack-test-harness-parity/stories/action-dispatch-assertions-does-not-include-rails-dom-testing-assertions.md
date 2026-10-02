@@ -5,7 +5,9 @@ updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - action-controller-test-case-has-no-assert-select
+  - dom-assertions-fragment-parses-with-nokogiri-html4
 deps-rfc: []
 est-loc: 180
 priority: null
