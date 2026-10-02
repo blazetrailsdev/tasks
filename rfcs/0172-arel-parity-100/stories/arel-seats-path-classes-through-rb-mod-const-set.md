@@ -1,6 +1,6 @@
 ---
 title: "arel: path a seated class by its constant binding (rbModConstSet), not a separate rbSetClassPathString call"
-status: claimed
+status: in-progress
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#8370
 claim: "2026-10-02T00:53:25Z"
 assignee: "arel-attribute-and-sql-literal-are-not-nodes"
 blocked-by: null

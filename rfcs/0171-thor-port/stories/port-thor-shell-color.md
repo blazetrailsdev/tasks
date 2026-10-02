@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Shell::Color (ANSI constants, set_color, NO_COLOR / TERM=dumb)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-shell-module-basic-output-and-terminal"]
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8374
+claim: "2026-10-02T01:41:55Z"
+assignee: "arel-mixin-includes-into-class-bodies"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "SetupAndTeardown / TestsWithoutAssertions after_teardown take a test parameter Rails does not have and drop super"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8373
+claim: "2026-10-02T01:22:05Z"
+assignee: "arel-dot-accept-requires-collector"
 blocked-by: null
 closed-reason: null
 ---

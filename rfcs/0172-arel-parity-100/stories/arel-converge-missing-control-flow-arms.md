@@ -1,7 +1,7 @@
 ---
 title: "arel: restore the 10 Rails branches arel ports drop (report-arms missing rows)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: arms
 packages: ["arel"]
@@ -9,9 +9,9 @@ deps: ["arel-visitor-dispatch-cache-and-visit-rescue-arm"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8371
+claim: "2026-10-02T01:01:54Z"
+assignee: "arel-converge-missing-control-flow-arms"
 blocked-by: null
 closed-reason: null
 ---

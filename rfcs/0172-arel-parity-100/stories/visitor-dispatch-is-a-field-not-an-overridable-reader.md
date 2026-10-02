@@ -1,6 +1,6 @@
 ---
 title: "arel: Visitor#dispatch is a field where Rails has an overridable attr_reader; port 'can define a dispatch method' as written"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8373
+claim: "2026-10-02T01:22:05Z"
+assignee: "arel-dot-accept-requires-collector"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activemodel: railtie_test.rb's 5 cases are credited (0/5 today)"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: tests

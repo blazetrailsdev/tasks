@@ -1,6 +1,6 @@
 ---
 title: "arel-attribute-and-sql-literal-are-not-nodes"
-status: claimed
+status: ready
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-02T00:53:25Z"
-assignee: "arel-attribute-and-sql-literal-are-not-nodes"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

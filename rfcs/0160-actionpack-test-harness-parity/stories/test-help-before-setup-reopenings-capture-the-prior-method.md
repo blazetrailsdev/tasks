@@ -1,6 +1,6 @@
 ---
 title: "test_help's before_setup reopenings capture the prior method instead of calling super"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8373
+claim: "2026-10-02T01:22:05Z"
+assignee: "arel-dot-accept-requires-collector"
 blocked-by: null
 closed-reason: null
 ---

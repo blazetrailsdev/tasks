@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Dirty#init_attributes takes Rails' one argument (arity 451/452)"
-status: claimed
+status: in-progress
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: api-surface
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8368
 claim: "2026-10-02T00:39:41Z"
 assignee: "activemodel-dirty-init-attributes-arity"
 blocked-by: null

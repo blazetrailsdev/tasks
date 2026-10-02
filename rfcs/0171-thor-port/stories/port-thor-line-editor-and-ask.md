@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::LineEditor (Basic) and Shell::Basic#ask / yes? / no? (async)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8372
+claim: "2026-10-02T01:27:39Z"
+assignee: "port-thor-line-editor-and-ask"
 blocked-by: null
 closed-reason: null
 ---

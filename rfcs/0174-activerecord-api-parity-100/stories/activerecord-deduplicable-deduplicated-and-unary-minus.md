@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Deduplicable#deduplicated, the -@ alias, and the six inlined deduplicable bodies"
-status: claimed
+status: in-progress
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8368
 claim: "2026-10-02T00:39:41Z"
 assignee: "activemodel-dirty-init-attributes-arity"
 blocked-by: null

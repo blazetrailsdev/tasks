@@ -1,6 +1,6 @@
 ---
 title: "arel-mixin-includes-into-class-bodies"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8374
+claim: "2026-10-02T01:41:55Z"
+assignee: "arel-mixin-includes-into-class-bodies"
 blocked-by: null
 closed-reason: null
 ---

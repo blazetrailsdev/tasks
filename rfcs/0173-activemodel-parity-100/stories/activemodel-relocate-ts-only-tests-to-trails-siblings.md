@@ -1,6 +1,6 @@
 ---
 title: "activemodel: the 32 TS-only tests in Rails-named files move to .trails.test.ts siblings"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: tests
