@@ -1,6 +1,6 @@
 ---
 title: "activerecord: audit the 39 PERMANENT receipts in connection-adapters/abstract/"
-status: claimed
+status: in-progress
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: trails#8389
 claim: "2026-10-02T10:55:34Z"
 assignee: "activerecord-audit-permanent-receipts-ca-abstract"
 blocked-by: null

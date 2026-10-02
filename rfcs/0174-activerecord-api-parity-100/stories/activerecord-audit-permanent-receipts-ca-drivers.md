@@ -1,7 +1,7 @@
 ---
 title: "activerecord: audit the 49 PERMANENT receipts in connection-adapters/{postgresql,mysql,sqlite3}/ and sqlite/"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8390
+claim: "2026-10-02T11:01:56Z"
+assignee: "activerecord-audit-permanent-receipts-ca-drivers"
 blocked-by: null
 closed-reason: null
 ---
