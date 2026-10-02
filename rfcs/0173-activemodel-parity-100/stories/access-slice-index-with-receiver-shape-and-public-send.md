@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Access#slice / #values_at call index_with and public_send as Rails does"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: receipts

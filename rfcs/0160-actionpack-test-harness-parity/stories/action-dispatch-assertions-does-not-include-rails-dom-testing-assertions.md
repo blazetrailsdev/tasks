@@ -1,6 +1,6 @@
 ---
 title: "ActionDispatch::Assertions does not include Rails::Dom::Testing::Assertions: the ported DomAssertions half is not a module and not reachable from actionpack"
-status: draft
+status: blocked
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -14,7 +14,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Review of trails#8406 rejected a DomAssertions-only aggregate as not Rails' module: rails-dom-testing assertions.rb:9-12 includes SelectorAssertions too (assert_dom / css_select), and assert_dom_equal takes html_version through to fragment (assertions/dom_assertions.rb:35-38,132-135), which picks Nokogiri::HTML4 or HTML5 (lib/rails/dom/testing.rb:19-30). trails has no HTML parser (blocks dom-assertions-fragment-parses-with-nokogiri-html4 and action-controller-test-case-has-no-assert-select). Also needs a maintainer decision on where the gem lives: review wants the modules at the gem's paths and seated at Rails::Dom::Testing::Assertions, and trails has no package or namespace object for that gem. The story's 'does not wait on SelectorAssertions' criterion is superseded by this."
 closed-reason: null
 ---
 

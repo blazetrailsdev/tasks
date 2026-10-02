@@ -1,6 +1,6 @@
 ---
 title: "activemodel: methods that thread super_ as a first parameter take Rails' parameter list"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8408
+claim: "2026-10-02T16:02:00Z"
+assignee: "autorun-seats-every-task-error-as-unexpected-error"
 blocked-by: null
 closed-reason: null
 ---

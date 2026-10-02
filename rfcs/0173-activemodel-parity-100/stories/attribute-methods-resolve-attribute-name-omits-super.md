@@ -1,6 +1,6 @@
 ---
 title: "activemodel: AttributeMethods resolve_attribute_name fetches on super (name.to_s)"
-status: ready
+status: claimed
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-02T16:41:58Z"
+assignee: "arel-attribute-and-sql-literal-are-not-nodes"
 blocked-by: null
 closed-reason: null
 ---

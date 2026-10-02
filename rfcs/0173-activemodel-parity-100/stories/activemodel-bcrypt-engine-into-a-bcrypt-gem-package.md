@@ -1,6 +1,6 @@
 ---
 title: "activemodel: BCrypt::Engine moves out of activemodel into a bcrypt gem port"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: receipts

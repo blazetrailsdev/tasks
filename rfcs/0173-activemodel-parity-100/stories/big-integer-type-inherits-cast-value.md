@@ -1,6 +1,6 @@
 ---
 title: "BigIntegerType drops its invented castValue and inherits Type::Integer#cast_value"
-status: claimed
+status: in-progress
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#8406
 claim: "2026-10-02T15:41:59Z"
 assignee: "action-dispatch-assertions-is-not-an-includable-module"
 blocked-by: null

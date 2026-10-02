@@ -1,6 +1,6 @@
 ---
 title: "bcrypt: __bc_crypt hashes bytes ($2x$ salts, raw-byte secrets, the byteslice line)"
-status: draft
+status: closed
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "operator decision on trails#8402: packages/bcrypt keeps bcryptjs for good; no crypt_blowfish.c port. The hashable vectors and the eslint/mark rollouts shipped in trails#8402."
 ---
 
 ## Context

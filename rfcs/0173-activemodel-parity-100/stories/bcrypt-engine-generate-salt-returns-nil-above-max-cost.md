@@ -1,6 +1,6 @@
 ---
 title: "activemodel: BCrypt::Engine.generate_salt answers nil above MAX_COST, where the client clamps"
-status: ready
+status: closed
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by bcrypt-generate-salt-reaches-bc-salt, which carries its acceptance criterion against packages/bcrypt"
 ---
 
 ## Context

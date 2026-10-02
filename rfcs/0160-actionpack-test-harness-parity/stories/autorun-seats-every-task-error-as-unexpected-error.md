@@ -1,6 +1,6 @@
 ---
 title: "autorun seats every vitest task error as UnexpectedError; Minitest keeps an Assertion as itself"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8408
+claim: "2026-10-02T16:02:00Z"
+assignee: "autorun-seats-every-task-error-as-unexpected-error"
 blocked-by: null
 closed-reason: null
 ---
