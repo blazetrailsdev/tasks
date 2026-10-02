@@ -1,7 +1,7 @@
 ---
 title: "TestFixtures#before_setup / #after_teardown call super without the optional-call guard"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []

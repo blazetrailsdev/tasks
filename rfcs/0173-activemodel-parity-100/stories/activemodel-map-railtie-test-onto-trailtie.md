@@ -1,7 +1,7 @@
 ---
 title: "activemodel: railtie_test.rb's 5 cases are credited (0/5 today)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: tests
 packages: ["activemodel"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8367
+claim: "2026-10-02T00:41:54Z"
+assignee: "activemodel-map-railtie-test-onto-trailtie"
 blocked-by: null
 closed-reason: null
 ---

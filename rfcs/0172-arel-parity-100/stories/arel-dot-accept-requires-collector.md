@@ -1,7 +1,7 @@
 ---
 title: "arel-dot-accept-requires-collector"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
 packages: []

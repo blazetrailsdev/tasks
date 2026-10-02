@@ -1,7 +1,7 @@
 ---
 title: "activemodel: audit the 26 PERMANENT receipts under attribute-set/, type/, validations/"
-status: in-progress
-updated: 2026-10-01
+status: done
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
 packages: ["activemodel"]

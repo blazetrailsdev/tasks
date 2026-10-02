@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport::TestCase composes before_setup / after_teardown by hand instead of inheriting them"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

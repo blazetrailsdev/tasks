@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port ExtendedDeterministicQueries::CoreQueries#find_by"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-02T00:39:41Z"
+assignee: "activemodel-dirty-init-attributes-arity"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Move the trails-only PostsController tests out of controller/test-case.test.ts; drop TestCase's optional-name constructor"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []

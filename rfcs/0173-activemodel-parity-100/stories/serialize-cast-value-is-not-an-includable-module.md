@@ -1,7 +1,7 @@
 ---
 title: "serialize-cast-value-is-not-an-includable-module"
-status: draft
-updated: 2026-10-01
+status: done
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8366
 claim: null
 assignee: null
 blocked-by: null

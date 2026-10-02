@@ -1,6 +1,6 @@
 ---
 title: "test_help's before_setup reopenings capture the prior method instead of calling super"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null

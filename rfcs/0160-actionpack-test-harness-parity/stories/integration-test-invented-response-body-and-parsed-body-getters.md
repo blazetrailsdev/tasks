@@ -1,7 +1,7 @@
 ---
 title: "Remove IntegrationTest's invented responseBody / parsedBody getters"
-status: draft
-updated: 2026-10-01
+status: claimed
+updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-02T00:53:25Z"
+assignee: "arel-attribute-and-sql-literal-are-not-nodes"
 blocked-by: null
 closed-reason: null
 ---

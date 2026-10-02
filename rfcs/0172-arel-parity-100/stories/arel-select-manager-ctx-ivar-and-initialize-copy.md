@@ -1,7 +1,7 @@
 ---
 title: "arel-select-manager-ctx-ivar-and-initialize-copy"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
 packages: []

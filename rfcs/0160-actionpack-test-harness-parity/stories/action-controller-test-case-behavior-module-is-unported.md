@@ -1,7 +1,7 @@
 ---
 title: "ActionController::TestCase::Behavior is unported: its methods sit in the TestCase class body"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []

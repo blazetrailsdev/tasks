@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Shell (delegation, with_padding) and Shell::Basic's output half, plus Shell::Terminal"
-status: in-progress
-updated: 2026-10-01
+status: done
+updated: 2026-10-02
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]

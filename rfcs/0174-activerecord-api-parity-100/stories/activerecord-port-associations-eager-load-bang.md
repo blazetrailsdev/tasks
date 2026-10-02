@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port Associations.eager_load!"
-status: in-progress
-updated: 2026-10-01
+status: done
+updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface
 packages: ["activerecord"]

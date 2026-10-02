@@ -1,7 +1,7 @@
 ---
 title: "activemodel: burn extra surface (novel 1, moved 24) to zero"
-status: claimed
-updated: 2026-10-01
+status: done
+updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: placement
 packages: ["activemodel"]
@@ -9,7 +9,7 @@ deps: ["delete-attribute-set-yaml-codec", "override-of-inherited-rails-member-sc
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#8366
 claim: "2026-10-01T23:42:02Z"
 assignee: "activemodel-burn-extra-surface-to-zero"
 blocked-by: null

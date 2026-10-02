@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::CoreExt::HashWithIndifferentAccess, with its method_missing predicates as a Proxy"
-status: in-progress
-updated: 2026-10-01
+status: done
+updated: 2026-10-02
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]

@@ -1,6 +1,6 @@
 ---
 title: "arel: Visitor#dispatch is a field where Rails has an overridable attr_reader; port 'can define a dispatch method' as written"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null

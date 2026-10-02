@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat has no Module#ancestors / Module#instance_method for a class receiver"
-status: draft
+status: done
 updated: 2026-10-02
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: trails#8366
 claim: null
 assignee: null
 blocked-by: null

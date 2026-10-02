@@ -1,7 +1,7 @@
 ---
 title: "arel: burn the 21 moved extras declared on nodes/ files"
-status: in-progress
-updated: 2026-10-01
+status: done
+updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: placement
 packages: ["arel"]

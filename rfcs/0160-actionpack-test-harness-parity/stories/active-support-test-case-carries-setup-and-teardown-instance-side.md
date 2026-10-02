@@ -1,7 +1,7 @@
 ---
 title: "active-support-test-case-carries-setup-and-teardown-instance-side"
-status: in-progress
-updated: 2026-10-01
+status: done
+updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
 packages: []

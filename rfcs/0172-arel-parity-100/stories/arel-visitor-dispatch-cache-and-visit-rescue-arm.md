@@ -1,7 +1,7 @@
 ---
 title: "arel: port Visitor's identity-keyed dispatch cache and #visit's NoMethodError rescue arm"
-status: in-progress
-updated: 2026-10-01
+status: done
+updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: api-surface
 packages: ["arel"]
