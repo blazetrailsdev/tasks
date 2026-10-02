@@ -7,6 +7,7 @@ cluster: null
 packages: ["activemodel"]
 deps:
   - activemodel-converge-invented-control-flow-arms-type
+  - module-super-method-resolves-on-every-call
 deps-rfc: []
 est-loc: 180
 priority: null
