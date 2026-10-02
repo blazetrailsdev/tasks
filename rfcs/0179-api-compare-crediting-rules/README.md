@@ -52,7 +52,8 @@ the 3,000 the Summary and § "Rollout" use.
 They differ from the rest of 0174 in three ways:
 
 - **The diff lands in `scripts/`.** Eight of them name `compare.ts`, four `call-args.ts`, four
-  `extract-ruby-api.rb` and three `receiver-as-first-arg.ts`. An agent working one needs the comparer's tests and no database.
+  `extract-ruby-api.rb` and three `receiver-as-first-arg.ts`. An agent working one needs the comparer's
+  tests and no database.
 - **They are not activerecord's.** A crediting rule applies to every package the gate reads. Three of the
   stories already name actionpack, actionview or activesupport receipts they clear.
 - **They were filed across two clusters and none.** 10 sat in `receipts`, 2 in `tooling` and 8 had no
@@ -131,8 +132,11 @@ rebases on the first:
 - `compare.ts#significantCallsForReceivers`: `call-gate-credits-a-length-read-as-array-size`,
   `call-gate-proves-array-literal-ivars-and-kernel-array-receivers`,
   `call-gate-proves-where-clause-predicates-an-array-for-size`. All three concern `size` / `last` on an
-  Array. The first credits the TS `.length` read; the other two extend the Ruby-side Array proof. Either
-  route may clear a receipt the other names, so each re-checks its receipt list before starting.
+  Array. The first credits the TS `.length` read; the other two extend the Ruby-side Array proof. Their
+  receipt lists do not intersect today (`relation/batches.ts`, `calculations.ts`, `finder-methods.ts` and
+  `migration.ts`; `connection-adapters/abstract/` and `asynchronous-queries-tracker.ts`;
+  `relation/where-clause.ts`), but a broader proof in one can clear a receipt another names, so each
+  re-checks its list before starting.
 - `call-args.ts#alignBuiltinReceiver`: the three `call-args-gate-aligns-the-receiver-of-*` stories, and
   the second criterion of `call-gate-credits-a-ruby-compat-import-renamed-around-a-module-homonym`.
 - `call-args.ts#pairCallSites`: `pair-call-sites-breaks-ties-by-receiver-name` alone. A story in RFC 0173
@@ -252,7 +256,9 @@ None is open. Each was resolved before the RFC went `active`.
    `DisableJoinsAssociationRelation#first`. Resolved: the first was closed as a duplicate with `tasks close`
    on 2026-10-02 and stays in 0174. The second is the one trails cites, and it moved here.
 2. **Should the 18 drafts be marked ready?** Resolved: not by this split. `status` is DB-owned and a move
-   does not change it; marking one ready is `tasks status-set <id> ready`. Each draft has a Rails `file:line`, acceptance criteria and an estimate.
+   does not change it; marking one ready is `tasks status-set <id> ready`. The first to mark is
+   `pair-call-sites-breaks-ties-by-receiver-name` (50 est-loc), because the RFC 0173 story in § "Gating"
+   cannot start until it is done. Each draft has a Rails `file:line`, acceptance criteria and an estimate.
 3. **Do the three Array `size` stories overlap?** Resolved: they stay separate. One credits the TS
    `.length` read and two extend the Ruby-side Array proof, and their receipt lists do not intersect today.
    § "Ordering" has each re-check its list first.
