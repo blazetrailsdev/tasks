@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
-deps: []
+deps:
+  - dom-assertions-fragment-parses-with-nokogiri-html4
 deps-rfc: []
 est-loc: 120
 priority: null
