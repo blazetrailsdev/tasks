@@ -187,6 +187,36 @@ the postponed-RFC stories several stories here depend on (§ "Gating").
 target on a clean build, `extra-surface-mark.json` without an arel row (rowless), and no arel row in any
 report-only axis.
 
+## Final
+
+Measured 2026-10-02 on trails `main` @ `084c94bc3f` plus the close-out PR, after a clean `pnpm build` and
+`API_COMPARE_FORCE=1 pnpm parity:api --calls`.
+
+| Axis                                                                  | Final                                     |
+| --------------------------------------------------------------------- | ----------------------------------------- |
+| `parity:api` methods                                                  | 1052/1052 (100%)                          |
+| files / inheritance / arity / params                                  | 74/74, 69/69, 782/782, 656/656            |
+| denominator: global skip / scoped skip                                | 0 / 0                                     |
+| body pins                                                             | 836/836 (100%)                            |
+| `parity:api:calls` baseline rows                                      | 0 (no `call-mismatches-exclude/arel/`)    |
+| `parity:api:calls:args` shape rows                                    | 0                                         |
+| naming rows / `@missingRailsName`                                     | 0 / 3 PERMANENT (`visitors/dot.ts`)       |
+| `parity:api:params` mark                                              | 0                                         |
+| `parity:api:predicates`                                               | 0                                         |
+| `parity:api:extra:gate`                                               | rowless: novel 0, total 0, inlined-from 0 |
+| `@noRailsEquivalent` / `@missingRailsArgs` / `@missingRailsCall`      | 0 / 0 / 0                                 |
+| `parity:api:arms:throws` mark                                         | 0                                         |
+| `parity:api:blocks` mark                                              | 0                                         |
+| arms report (if/loop/try/rescue)                                      | 0 mismatched pairs (391 compared)         |
+| `parity:api:moves`                                                    | 0                                         |
+| `parity:api:deps` (arel → activemodel)                                | 4/4, 0 ref mismatches                     |
+| `parity:test`                                                         | 739/739, 59/59 files                      |
+| `parity:test:assertions`                                              | 0/0/0                                     |
+| unported files / scoped skips / arity excludes / inheritance excludes | 0 / 0 / 0 / 0                             |
+
+The arms report's short-circuit projection (`or` / `and` multisets, which the arm verdicts do not read)
+still lists 41 arel pairs. They belong to `arel-short-circuit-projection-residue` in RFC 0156.
+
 ## Open questions
 
 1. **Should `Case#then` stay a thenable-shaped overload?** Resolved: yes — scored through a scoped entry,
@@ -197,3 +227,4 @@ report-only axis.
 ## Changelog
 
 - 2026-09-30: initial RFC (13 stories, 2,830 est-loc).
+- 2026-10-02: close-out — § "Final" records every axis at target.
