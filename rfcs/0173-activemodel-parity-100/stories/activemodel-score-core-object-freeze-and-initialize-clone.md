@@ -1,6 +1,6 @@
 ---
 title: "activemodel: score and port freeze / initialize_clone, hidden by SKIP_GROUPS[0]"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: skips

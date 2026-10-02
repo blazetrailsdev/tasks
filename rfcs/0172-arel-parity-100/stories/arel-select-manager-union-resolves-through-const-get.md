@@ -1,6 +1,6 @@
 ---
 title: "arel-select-manager-union-resolves-through-const-get"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: remove or credit the 10 invented branches in connection-adapters-root part 3"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: arms
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["activerecord-converge-missing-control-flow-arms-connection-adapters-part
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8387
+claim: "2026-10-02T10:01:57Z"
+assignee: "activemodel-converge-invented-control-flow-arms-type"
 blocked-by: null
 closed-reason: null
 ---

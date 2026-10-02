@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 13 Core bodies inlined into base.ts back to core.ts"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: placement

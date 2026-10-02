@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port NoTouching.klasses and retire its SKIP_GROUPS entry"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: skips
