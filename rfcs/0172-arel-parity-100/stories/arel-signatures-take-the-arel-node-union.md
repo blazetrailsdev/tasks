@@ -22,7 +22,7 @@ closed-reason: null
 (`vendor/rails/v8.0.2/activerecord/lib/arel/attributes/attribute.rb:5`,
 `< Struct.new :relation, :name`) and `Arel::Nodes::SqlLiteral`
 (`vendor/rails/v8.0.2/activerecord/lib/arel/nodes/sql_literal.rb:5`, `< String`)
-off the `Node` superclass. It was attempted in trails PR 8368's session and
+off the `Node` superclass. It was attempted in trails PR 8370's session and
 released: swapping both superclasses produces 778 `tsc` errors, and clearing
 them is a signature change in roughly 60 arel files and 250 `Nodes.Node` type
 sites in activerecord — over 1,200 LOC with the swap itself. The swap is small;
