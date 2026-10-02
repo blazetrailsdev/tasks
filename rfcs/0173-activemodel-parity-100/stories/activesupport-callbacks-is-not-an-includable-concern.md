@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - activesupport-callbacks-chains-are-not-the-callbacks-class-attribute
 deps-rfc: []
 est-loc: 250
 priority: null
