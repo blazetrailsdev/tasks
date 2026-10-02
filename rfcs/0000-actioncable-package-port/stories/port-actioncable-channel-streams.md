@@ -3,7 +3,7 @@ title: "Port Channel::Streams"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps:
   [
@@ -46,7 +46,7 @@ completion through the success callback. The posted task awaits
 `stop_all_streams` call `pubsub.unsubscribe` directly in Rails, so in trails
 they return its promise; `stop_all_streams` is an `on_unsubscribe` callback,
 and `runCallbacks` awaits a promise-returning callback
-(`packages/activesupport/src/callbacks.ts:1230`).
+(`runCallbacks`, `packages/activesupport/src/callbacks.ts:1236-1275`).
 
 ## Rails files owned by this story
 
@@ -75,3 +75,12 @@ and `runCallbacks` awaits a promise-returning callback
 ## Definition of done
 
 A `coder = ActiveSupport.JSON` default parameter on `streamFrom` does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/channel/streams.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

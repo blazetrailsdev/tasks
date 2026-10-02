@@ -3,7 +3,7 @@ title: "ruby-compat: Concurrent::TimerTask and Concurrent::AtomicFixnum"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
@@ -55,3 +55,10 @@ different classes and neither story covers the other.
 ## Definition of done
 
 A bare `setInterval` in `stream-event-loop.ts`, or a plain number field for the confirmation counter, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/ruby-compat/src -t 'TimerTask|AtomicFixnum'
+pnpm parity:api:extra:gate
+```

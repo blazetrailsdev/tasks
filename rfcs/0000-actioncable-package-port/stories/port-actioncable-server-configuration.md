@@ -3,7 +3,7 @@ title: "Port Server::Configuration and pubsub_adapter"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["actioncable-class-names-round-trip-through-constantize"]
 deps-rfc: []
@@ -21,7 +21,7 @@ closed-reason: null
 own; `subscription_adapter/common.rb:18` and `server/health_check_test.rb`
 drive it.
 
-- Seventeen `attr_accessor`s in five lines (`:15-20`).
+- Fourteen `attr_accessor`s in six lines (`:15-20`).
 - `initialize` (`:22-35`): `@log_tags = []`, `@connection_class = -> {
 ActionCable::Connection::Base }`, `@worker_pool_size = 4`,
   `@disable_request_forgery_protection = false`,
@@ -56,3 +56,12 @@ ActionCable::Connection::Base }`, `@worker_pool_size = 4`,
 ## Definition of done
 
 A static import of every adapter from `configuration.ts` does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/server/configuration.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

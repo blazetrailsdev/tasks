@@ -3,7 +3,7 @@ title: "Port Connection::ClientSocket and Connection::WebSocket over the npm web
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-connection-stream"]
 deps-rfc: []
@@ -93,3 +93,12 @@ ActionCable::INTERNAL[:protocols])` builds a `ClientSocket` only when
 ## Definition of done
 
 Using `ws`, or passing a Node `IncomingMessage` through the Rack env, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/connection/client-socket.trails.test.ts packages/actioncable/src/connection/web-socket.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

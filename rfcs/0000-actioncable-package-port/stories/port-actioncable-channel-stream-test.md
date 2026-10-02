@@ -3,7 +3,7 @@ title: "Port channel/stream_test.rb"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps:
   [
@@ -68,3 +68,10 @@ It defines `ChatChannel`, `SymbolChannel`, `DummyEncoder` and the
 ## Definition of done
 
 A skipped or renamed case, or a fake connection where Rails uses the real class, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/channel/stream.test.ts
+pnpm parity:test && pnpm parity:test:assertions   # every case listed above credited; actioncable mark stays 0
+```

@@ -3,7 +3,7 @@ title: "Port RemoteConnections and RemoteConnection"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps:
   [
@@ -59,3 +59,12 @@ closed-reason: null
 ## Definition of done
 
 A `RemoteConnection` that re-implements `connection_identifier` in place of including `Identification` does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/remote-connections.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

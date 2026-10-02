@@ -3,7 +3,7 @@ title: "Port connection/client_socket_test.rb and connection/stream_test.rb"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-connection-base", "port-actioncable-test-stubs-and-test-helper"]
 deps-rfc: []
@@ -50,3 +50,10 @@ of a `Socket.pair` (`client_socket_test.rb:71-77`) or `File.open(File::NULL,
 ## Definition of done
 
 A `PERMANENT-SKIP` on any of the four does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/connection/client-socket.test.ts packages/actioncable/src/connection/stream.test.ts
+pnpm parity:test && pnpm parity:test:assertions   # every case listed above credited; actioncable mark stays 0
+```

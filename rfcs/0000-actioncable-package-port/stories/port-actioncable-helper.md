@@ -3,7 +3,7 @@ title: "Port Helpers::ActionCableHelper#action_cable_meta_tag"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-server-connections-and-base"]
 deps-rfc: []
@@ -55,3 +55,12 @@ ActionView (`engine.rb:19-23`); that wiring is
 ## Definition of done
 
 Building the tag by string concatenation does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/helpers/action-cable-helper.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

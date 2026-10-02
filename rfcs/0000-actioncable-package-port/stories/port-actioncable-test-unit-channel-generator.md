@@ -3,7 +3,7 @@ title: "Port TestUnit::Generators::ChannelGenerator"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["trailties"]
 deps: ["actioncable-package-skeleton"]
 deps-rfc: []
@@ -58,3 +58,9 @@ generators yet, add this one to the story that does, so it is not left behind.
 ## Definition of done
 
 Folding the test file into the channel generator's own steps does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/trailties/src/generators/test-unit/channel
+```

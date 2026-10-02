@@ -3,7 +3,7 @@ title: "Port ActionCable::TestHelper and ActionCable::TestCase"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps:
   ["port-actioncable-inline-async-and-test-adapters", "port-actioncable-test-stubs-and-test-helper"]
@@ -43,7 +43,7 @@ This story also moves `wait_for_async`, `run_in_eventmachine` and
 `ActionCable.server.broadcast`, which returns a promise, and
 `new_broadcasts_from` re-broadcasts the old and new messages. So the four
 assertions are async, as `assertDifference` already is
-(`packages/activesupport/src/testing/assertions.ts:183`); the no-block arms
+(`packages/activesupport/src/testing/assertions.ts:243`); the no-block arms
 return a promise too, since one method has one return type.
 
 ## Rails files owned by this story
@@ -89,3 +89,13 @@ return a promise too, since one method has one return type.
 ## Definition of done
 
 An `assertBroadcasts` that clears the adapter's array in place does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/test-helper.trails.test.ts packages/actioncable/src/test-case.trails.test.ts packages/actioncable/src/test-helper.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+pnpm parity:test && pnpm parity:test:assertions   # every case listed above credited; actioncable mark stays 0
+```

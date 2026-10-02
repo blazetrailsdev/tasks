@@ -53,7 +53,7 @@ selector loop on its own thread) and `websocket-driver`. The second has an npm
 package by the same author with the same driver API. The first is replaced by
 Node's own event loop. **How much parity that costs is decided here, before any
 socket story is written** (§ "Parity plan"): 3 of 45 files are bound to
-the runtime, they keep their file, class and method names, and 3 to 5 private
+the runtime, they keep their file, class and method names, and 3 to 5
 methods have nothing to port.
 
 One prerequisite lies outside the package and blocks the end-to-end tests:
@@ -61,7 +61,7 @@ trails' Rack handler cannot hand a socket to an application
 (`packages/rack/src/handler/node.ts:70` sets `rack.hijack?` to `false` and
 the server has no `upgrade` listener). That is the root story.
 
-**Size: 55 stories, 17,720 est-loc**, every story at most 550 est-loc
+**Size: 56 stories, 17,920 est-loc**, every story at most 550 est-loc
 (the tasks-repo ceiling is 700). Every file under `actioncable/lib` (45
 `.rb`, 7 generator templates, 1 `USAGE`) and every one of the 41 Ruby test
 files is owned by exactly one story (two test files are split by case). Every
@@ -165,14 +165,14 @@ Gemspec dependencies (`actioncable.gemspec:35-40`): `activesupport`,
 | `subscription_adapter/channel_prefix.rb`                                |    30 | 1 shared | `port-actioncable-inline-async-and-test-adapters`                                                                            |
 | `subscription_adapter/common.rb`                                        |   131 | 8 shared | `port-actioncable-inline-async-and-test-adapters`                                                                            |
 | `subscription_adapter/inline_test.rb`                                   |    19 |    0 own | `port-actioncable-inline-async-and-test-adapters`                                                                            |
-| `subscription_adapter/postgresql_test.rb`                               |    87 |        3 | `port-actioncable-postgresql-adapter`                                                                                        |
+| `subscription_adapter/postgresql_test.rb`                               |    87 |        3 | `port-actioncable-postgresql-adapter-tests-and-ci-lane`                                                                      |
 | `subscription_adapter/redis_test.rb`                                    |   152 |        3 | `port-actioncable-redis-adapter` (2), `port-actioncable-redis-adapter-live-tests-and-ci-service` (1 + included)              |
 | `subscription_adapter/subscriber_map_test.rb`                           |    19 |        1 | `port-actioncable-subscriber-map-base-adapter-and-channel-prefix`                                                            |
 | `subscription_adapter/test_adapter_test.rb`                             |    47 |        3 | `port-actioncable-inline-async-and-test-adapters`                                                                            |
 | `test_helper.rb`                                                        |    41 |        — | `port-actioncable-test-stubs-and-test-helper`                                                                                |
 | `test_helper_test.rb`                                                   |   141 |       13 | `port-actioncable-test-helper-and-test-case`                                                                                 |
 | `worker_test.rb`                                                        |    46 |        2 | `port-actioncable-server-worker`                                                                                             |
-| `railties/test/generators/channel_generator_test.rb` (trailties)        |   153 |       13 | `port-actioncable-channel-generator`                                                                                         |
+| `railties/test/generators/channel_generator_test.rb` (trailties)        |   172 |       13 | `port-actioncable-channel-generator`                                                                                         |
 | `railties/test/application/configuration_test.rb:3632,4265` (trailties) |       |        2 | `port-actioncable-engine`                                                                                                    |
 
 ### What already exists in trails
@@ -222,6 +222,7 @@ Action Cable or adds hijack support. Adjacent stories, none duplicated here:
 | `0169/register-activejob-constants-for-class-name-round-trip`                   | draft  | Same class-name question for jobs. Whichever lands first picks the mechanism.                                               |
 | `0169/eager-load-app-jobs-in-finisher`                                          | draft  | Same scan for `app/jobs`; share the helper.                                                                                 |
 | `0169/port-activejob-enqueue-after-transaction-commit`                          | draft  | Seats `TopLevel.ActiveRecord`, which `Server::Worker` and the PostgreSQL adapter read.                                      |
+| `0169/port-activejob-logging`                                                   | draft  | Carries the same `TaggedLogging#tagged` async-block convergence. Whichever lands first does it.                             |
 | `0142/trails-server-adapts-application-to-function-rack-app`                    | draft  | Edits `commands/server.ts` around `Handler.Node.run`; no overlap with the upgrade path.                                     |
 | `0142/authentication-generator-skip-action-cable-replaces-defined-engine-check` | done   | Already reads `TopLevel.ActionCable?.Engine`; the engine story makes it true.                                               |
 | `0104/generator-scaffolds-unported-subsystems`                                  | done   | Added `skipActionCable: true`; `trails-new-scaffolds-action-cable-by-default` removes it.                                   |
@@ -381,9 +382,12 @@ and the four `on_*` socket callbacks, `MessageBuffer`, `SubscriberMap`,
 `ClientSocket`, and every reader.
 
 Blocks that wrap awaited work restore or complete on settle:
-`Notifications.instrument` (already handles a promise-returning block),
-`TaggedLogging#tagged` and `Executor.wrap` (each checked, and converged if
-needed, by the story that first passes it an async block).
+`Notifications.instrument`
+(`packages/activesupport/src/notifications/instrumenter.ts:176`) and
+`Executor.wrap` (`execution-wrapper.ts:99-125`) already defer to a
+promise-returning block. `TaggedLogging#tagged` does not: it pops its tags in
+a `finally` (`tagged-logging.ts:62-70`), and
+`port-actioncable-connection-tagged-logger-proxy` converges it.
 
 The Rails-facing calls this turns into promises are listed under Open
 question 3. None could stay synchronous: there is no synchronous Redis
@@ -407,11 +411,11 @@ the Redis listener's subscription lock do, and are.
 
 ### Subscription adapters
 
-| Adapter                   | trails                                                                                                                                                         |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Inline`, `Async`, `Test` | Pure code. `port-actioncable-inline-async-and-test-adapters`, with the shared adapter test suites.                                                             |
-| `PostgreSQL`              | `LISTEN` / `NOTIFY` on an un-pooled raw `pg.Client`, whose `notification` event replaces the `wait_for_notify(1)` poll. `port-actioncable-postgresql-adapter`. |
-| `Redis`                   | Over one npm Redis client, an optional peer shared with the cache store (Open question 4). `port-actioncable-redis-adapter` and its live-test story.           |
+| Adapter                   | trails                                                                                                                                                                                         |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Inline`, `Async`, `Test` | Pure code. `port-actioncable-inline-async-and-test-adapters`, with the shared adapter test suites.                                                                                             |
+| `PostgreSQL`              | `LISTEN` / `NOTIFY` on an un-pooled raw `pg.Client`, whose `notification` event replaces the `wait_for_notify(1)` poll. `port-actioncable-postgresql-adapter` and its tests-and-CI-lane story. |
+| `Redis`                   | Over one npm Redis client, an optional peer shared with the cache store (Open question 4). `port-actioncable-redis-adapter` and its live-test story.                                           |
 
 Never an empty `TopLevel` seat for an application to fill: trails#8057 was
 closed for that.
@@ -464,18 +468,18 @@ every framework generator is, and its test is in trailties' population.
 
 ### Work outside `packages/actioncable`
 
-| Package           | Change                                                                                                                                         | Story                                                                                                                                                                                       |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| rack, ruby-compat | `rack.hijack` on upgrade; `upgrade` on the `HttpServer` adapter                                                                                | `rack-handler-node-offers-rack-hijack-on-upgrade`                                                                                                                                           |
-| trailties         | Vite dev path forwards upgrades                                                                                                                | `trails-dev-server-forwards-upgrade-requests-to-rack-handler`                                                                                                                               |
-| ruby-compat       | `ThreadPoolExecutor` shutdown surface, `global_io_executor`                                                                                    | `ruby-compat-thread-pool-executor-shutdown-and-task-counts`                                                                                                                                 |
-| ruby-compat       | `TimerTask`, `AtomicFixnum`                                                                                                                    | `ruby-compat-concurrent-timer-task-and-atomic-fixnum`                                                                                                                                       |
-| (CLAUDE.md)       | The ratified section                                                                                                                           | `ratify-node-event-loop-stands-in-for-the-nio4r-selector`                                                                                                                                   |
-| activesupport     | `TopLevel.ActionCable` seat and type; the class-name reader if the mechanism needs it; `tagged` / `Executor.wrap` with an async block, checked | `port-actioncable-namespace-and-internal-constants`, `actioncable-class-names-round-trip-through-constantize`, `port-actioncable-connection-tagged-logger-proxy`, `port-actioncable-engine` |
-| activerecord      | `TopLevel.ActiveRecord` seat if 0169 has not landed it; a public route to an un-pooled raw connection                                          | `port-actioncable-server-worker`, `port-actioncable-postgresql-adapter`                                                                                                                     |
-| actionpack        | `MountOptions` accepts `internal` / `anchor`; `TestRequest` subclass with writable `session` / `cookie_jar`                                    | `port-actioncable-engine`, `port-actioncable-connection-test-case`                                                                                                                          |
-| trailties         | Engine, generators, `NamedBase#js_template`, `app/channels` scan, `trails new`                                                                 | the five trailties stories in phase 9                                                                                                                                                       |
-| scripts           | Enrollment, gates, unported-files, skip groups, CI Redis service                                                                               | `enroll-actioncable-in-compare-tooling-and-parity-gates`, `port-actioncable-redis-adapter-live-tests-and-ci-service`                                                                        |
+| Package           | Change                                                                                                              | Story                                                                                                                                                                         |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| rack, ruby-compat | `rack.hijack` on upgrade; `upgrade` on the `HttpServer` adapter                                                     | `rack-handler-node-offers-rack-hijack-on-upgrade`                                                                                                                             |
+| trailties         | Vite dev path forwards upgrades                                                                                     | `trails-dev-server-forwards-upgrade-requests-to-rack-handler`                                                                                                                 |
+| ruby-compat       | `ThreadPoolExecutor` shutdown surface, `global_io_executor`                                                         | `ruby-compat-thread-pool-executor-shutdown-and-task-counts`                                                                                                                   |
+| ruby-compat       | `TimerTask`, `AtomicFixnum`                                                                                         | `ruby-compat-concurrent-timer-task-and-atomic-fixnum`                                                                                                                         |
+| (CLAUDE.md)       | The ratified section                                                                                                | `ratify-node-event-loop-stands-in-for-the-nio4r-selector`                                                                                                                     |
+| activesupport     | `TopLevel.ActionCable` seat and type; the class-name reader if the mechanism needs it; `tagged` restoring on settle | `port-actioncable-namespace-and-internal-constants`, `actioncable-class-names-round-trip-through-constantize`, `port-actioncable-connection-tagged-logger-proxy`              |
+| activerecord      | `TopLevel.ActiveRecord` seat if 0169 has not landed it; a public route to an un-pooled raw connection               | `port-actioncable-server-worker`, `port-actioncable-postgresql-adapter`                                                                                                       |
+| actionpack        | `MountOptions` accepts `internal` / `anchor`                                                                        | `port-actioncable-engine`                                                                                                                                                     |
+| trailties         | Engine and its `rails/all` entry, generators, `NamedBase#js_template`, `app/channels` scan, `trails new`            | the five trailties stories in phase 9                                                                                                                                         |
+| scripts           | Enrollment, gates, unported-files, skip groups, CI PostgreSQL lane and Redis service                                | `enroll-actioncable-in-compare-tooling-and-parity-gates`, `port-actioncable-postgresql-adapter-tests-and-ci-lane`, `port-actioncable-redis-adapter-live-tests-and-ci-service` |
 
 ## Non-goals
 
@@ -532,15 +536,15 @@ every framework generator is, and its test is in trailties' population.
 | ----------------------------------------------------------------------- | ------: | ---------: |
 | 0. Outside the package: rack hijack, dev server, ruby-compat, CLAUDE.md |       5 |      1,220 |
 | 1. Package, enrollment, namespace, class names                          |       4 |      1,050 |
-| 2. Runtime primitives: logger proxy, worker, event loop                 |       3 |        750 |
+| 2. Runtime primitives: logger proxy, worker, event loop                 |       3 |        800 |
 | 3. Server and pub/sub core, in-process adapters, test stubs             |       6 |      1,900 |
 | 4. Channel                                                              |       7 |      2,600 |
 | 5. Connection and socket layer                                          |      12 |      3,750 |
 | 6. Test helpers and TestCase classes                                    |       5 |      1,850 |
 | 7. End-to-end client tests                                              |       2 |        800 |
-| 8. PostgreSQL and Redis adapters                                        |       3 |      1,500 |
-| 9. Engine, generators, `trails new`, browser client, close-out          |       8 |      2,300 |
-| **Total**                                                               |  **55** | **17,720** |
+| 8. PostgreSQL and Redis adapters                                        |       4 |      1,600 |
+| 9. Engine, generators, `trails new`, browser client, close-out          |       8 |      2,350 |
+| **Total**                                                               |  **56** | **17,920** |
 
 **Dependency roots** (no deps, startable in parallel):
 `rack-handler-node-offers-rack-hijack-on-upgrade`, `ruby-compat-thread-pool-executor-shutdown-and-task-counts`, `ruby-compat-concurrent-timer-task-and-atomic-fixnum`, `ratify-node-event-loop-stands-in-for-the-nio4r-selector`, `actioncable-package-skeleton`.
@@ -580,8 +584,8 @@ channel base + stubs ─→ channel base/rejection tests, naming/broadcasting/ti
 connection base + stubs ─→ 4 connection test stories, server tests, channel stream test
 adapters + stubs ─→ test helper ─→ channel test case ─→ its test;  connection test case ─→ its test
 rack hijack + connection base + channel base + adapters ─→ client test (4) ─→ client test (4) (← remote connections)
-adapters ─→ postgresql;  adapters ─→ redis ─→ redis live tests + CI service
-server base ─→ helper ─→ engine (← channel base, connection base) ─→ app/channels scan (← class names) ─┐
+adapters ─→ postgresql ─→ its tests + CI lane;  adapters ─→ redis ─→ redis live tests + CI service
+server base ─→ helper ─→ engine (← channel base, connection base, adapters, rack hijack) ─→ app/channels scan (← class names) ─┐
 skeleton ─→ test-unit generator ─→ channel generator ───────────────────────────────────────────────────┴→ trails new
 client test ─→ browser client interop
 everything ─→ close-out
@@ -610,7 +614,7 @@ everything ─→ close-out
 
 | story                                             | est-loc | Rails cases |
 | ------------------------------------------------- | ------: | ----------: |
-| `port-actioncable-connection-tagged-logger-proxy` |     150 |             |
+| `port-actioncable-connection-tagged-logger-proxy` |     200 |             |
 | `port-actioncable-server-worker`                  |     300 |           2 |
 | `port-actioncable-connection-stream-event-loop`   |     300 |             |
 
@@ -675,7 +679,8 @@ everything ─→ close-out
 
 | story                                                      | est-loc | Rails cases |
 | ---------------------------------------------------------- | ------: | ----------: |
-| `port-actioncable-postgresql-adapter`                      |     550 |           3 |
+| `port-actioncable-postgresql-adapter`                      |     350 |             |
+| `port-actioncable-postgresql-adapter-tests-and-ci-lane`    |     300 |           3 |
 | `port-actioncable-redis-adapter`                           |     550 |           2 |
 | `port-actioncable-redis-adapter-live-tests-and-ci-service` |     400 |           1 |
 
@@ -684,7 +689,7 @@ everything ─→ close-out
 | story                                                    | est-loc | Rails cases |
 | -------------------------------------------------------- | ------: | ----------: |
 | `port-actioncable-helper`                                |     150 |             |
-| `port-actioncable-engine`                                |     450 |             |
+| `port-actioncable-engine`                                |     500 |             |
 | `eager-load-app-channels-in-finisher`                    |     250 |             |
 | `port-actioncable-test-unit-channel-generator`           |     150 |             |
 | `port-actioncable-channel-generator`                     |     550 |          13 |
@@ -707,7 +712,7 @@ everything ─→ close-out
   RFC with the Rails `file:line`.
 
 To compare later: count stories under this RFC and sum shipped PR LOC
-(additions + deletions, the ceiling's exclusions) against **55 / 17,720**.
+(additions + deletions, the ceiling's exclusions) against **56 / 17,920**.
 `actioncable-close-out` writes the comparison into the Changelog.
 
 ## Seed completeness
@@ -819,4 +824,4 @@ silently.
 
 ## Changelog
 
-- 2026-10-01: initial RFC (55 stories, 17,720 est-loc).
+- 2026-10-01: initial RFC (56 stories, 17,920 est-loc).

@@ -3,7 +3,7 @@ title: "Port SubscriptionAdapter::SubscriberMap, Base and ChannelPrefix, with th
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-namespace-and-internal-constants"]
 deps-rfc: []
@@ -71,3 +71,13 @@ declared promise-returning here, in the first adapter PR. The Rails bodies are
 ## Definition of done
 
 A synchronous `broadcast` on `Base` "until Redis lands" does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/subscription-adapter/subscriber-map.trails.test.ts packages/actioncable/src/subscription-adapter/base.trails.test.ts packages/actioncable/src/subscription-adapter/channel-prefix.trails.test.ts packages/actioncable/src/subscription-adapter/subscriber-map.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+pnpm parity:test && pnpm parity:test:assertions   # every case listed above credited; actioncable mark stays 0
+```

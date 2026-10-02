@@ -3,7 +3,7 @@ title: "Port Channel::Base"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-channel-streams", "ruby-compat-concurrent-timer-task-and-atomic-fixnum"]
 deps-rfc: []
@@ -57,7 +57,7 @@ async and await the user method. `transmit`, `reject`,
 - [ ] **Action names on the wire (RFC Open question 7).** `extract_action` turns the client's string into a method name. Rails clients send `get_latest`; the trails method is `getLatest`. Decide the mapping here, in one place, with `processable_action?` and `action_signature` reading the same spelling, and record it at `extract_action`.
 - [ ] **`extract_action`**: `(data["action"].presence || :receive).to_sym`. An empty or blank action dispatches `receive` (`base_test.rb:167`). Use `presence`, not `||`.
 - [ ] **`processable_action?` returns nil, not false, when rejected** (`… unless subscription_rejected?`). It is only tested for truthiness.
-- [ ] **`method(action).arity == 1`** decides whether `data` is passed. `def speak(data)` has arity 1; `def speak(data = {})` has arity -1 and is called with no argument; `def speak(*args)` likewise. Use ruby-compat's `Method#arity` (`packages/ruby-compat/src/method.ts:62`), not `fn.length`, which reports 0 for a defaulted parameter and 0 for a rest parameter but is not the same function.
+- [ ] **`method(action).arity == 1`** decides whether `data` is passed. `def speak(data)` has arity 1; `def speak(data = {})` has arity -1 and is called with no argument; `def speak(*args)` likewise. Use ruby-compat's `Method#arity` (`packages/ruby-compat/src/method.ts:62`), not `fn.length`: `length` stops counting at the first defaulted parameter and ignores a rest parameter, so it cannot tell `(data, extra = 1)` (Ruby arity -2) from `(data)` (arity 1).
 - [ ] **`public_send action`** is `rbFPublicSend`.
 - [ ] **`rescue Exception => exception; rescue_with_handler(exception) || raise`**: an unhandled error re-raises out of `dispatch_action` and so out of the `instrument` block. Await the action inside the `begin`.
 - [ ] **`subscribe_to_channel` order**: run the `subscribe` callbacks around `subscribed`; then `reject_subscription if subscription_rejected?`; then `ensure_confirmation_sent`. A `before_subscribe` that calls `reject` still lets the chain finish.
@@ -79,3 +79,12 @@ async and await the user method. `transmit`, `reject`,
 ## Definition of done
 
 Treating every prototype method as an action, or `fn.length === 1` for the arity rule, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/channel/base.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

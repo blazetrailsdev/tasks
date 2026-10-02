@@ -3,7 +3,7 @@ title: "Port Connection::Callbacks and Connection::InternalChannel"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-connection-identification-and-authorization"]
 deps-rfc: []
@@ -61,3 +61,12 @@ callback]` onto `@_internal_subscriptions`, and posts
 ## Definition of done
 
 `message.reconnect ?? true` does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/connection/callbacks.trails.test.ts packages/actioncable/src/connection/internal-channel.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

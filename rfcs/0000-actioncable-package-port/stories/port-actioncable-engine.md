@@ -3,12 +3,18 @@ title: "Port ActionCable::Engine into trailties"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
-packages: ["trailties", "actioncable"]
+cluster: fidelity
+packages: ["trailties", "actioncable", "actionpack"]
 deps:
-  ["port-actioncable-helper", "port-actioncable-channel-base", "port-actioncable-connection-base"]
+  [
+    "port-actioncable-helper",
+    "port-actioncable-channel-base",
+    "port-actioncable-connection-base",
+    "port-actioncable-inline-async-and-test-adapters",
+    "rack-handler-node-offers-rack-hijack-on-upgrade",
+  ]
 deps-rfc: []
-est-loc: 450
+est-loc: 500
 pr: null
 claim: null
 assignee: null
@@ -40,6 +46,15 @@ current environment") and the `ActionCable.deprecator` assertion inside
 Port the first if its file is ported in trailties, add the assertion to the
 second, and say in the PR which of the three already exist.
 
+**`rails/all`.** `vendor/rails/v8.0.2/railties/lib/rails/all.rb:12` requires
+`action_cable/engine` between `active_job/railtie` and
+`action_mailbox/engine`. trailties' port
+(`packages/trailties/src/all.ts`) imports each railtie module in that
+order; add `./trailties/action-cable.js` at its Rails position, so a booted
+app loads the engine. Rails wraps each require in `rescue LoadError`; the
+package is a plain dependency of trailties, so the import is unconditional,
+and an app that skips Action Cable does so through its own framework list.
+
 Once the engine is seated on `TopLevel.ActionCable`, the authentication
 generator's `TopLevel.ActionCable?.Engine !== undefined` check
 (`packages/trailties/src/generators/rails/authentication/authentication-generator.ts:55`)
@@ -57,7 +72,8 @@ turns true.
 - [ ] **The config file.** Rails reads `config/cable.yml`; `trails new` writes `config/cable.ts` (`packages/trailties/src/generators/app-generator.ts:600-606`). Use whatever `config_for` resolves for the app's other config files, and keep the path registered under `"config/cable"`.
 - [ ] **The `connection_class` wrapper** captures the previous lambda: `-> { "ApplicationCable::Connection".safe_constantize || previous_connection_class.call }`. It is evaluated per request, so a reloaded class is picked up.
 - [ ] **`set_work_hooks`** (`:73-96`): `Worker.set_callback :work, :around, prepend: true` wrapping in `app.executor.wrap(source: "application.action_cable")` and running `inner.call` only `unless stopping?` (the block's `self` is the worker); the same `wrap` lambda on `Channel::Base`'s `:subscribe` and `:unsubscribe`; and `app.reloader.before_class_unload { ActionCable.server.restart }`.
-- [ ] **`executor.wrap` must cover the awaited work.** `ExecutionWrapper.wrap` (`packages/activesupport/src/execution-wrapper.ts:99`) has to hold its `complete` until an async `inner.call` settles, or the executor's hooks (query cache, connection release) finish before the channel action does.
+- [ ] **`executor.wrap` must cover the awaited work.** `ExecutionWrapper.wrap` (`packages/activesupport/src/execution-wrapper.ts:99-125`) already defers `complete!` until a thenable block settles. Pass it the promise `inner.call` returns (do not `void` it), and assert in a test that the executor's `complete` hook runs after an async channel action finishes.
+- [ ] **A halted worker returns nothing.** `unless stopping?; inner.call; end` leaves the around callback without calling `inner`, which halts the `:work` chain: the posted task is dropped silently.
 - [ ] **`restart` returns a promise**; `before_class_unload` must await it or the reload races the old connections closing.
 - [ ] **The `routes` initializer** runs in `after_initialize`, skips when `mount_path` is nil, and `app.routes.prepend { mount ActionCable.server => path, internal: true, anchor: true }` (`packages/actionpack/src/action-dispatch/routing/route-set.ts:964`, `mapper.ts:1490`). trails' `mount` takes the path as `at:`; `MountOptions` (`mapper.ts:2251-2254`) must accept `internal` and `anchor`.
 - [ ] **The health check** is `->(env) { Rails::HealthController.action(:show).call(env) }` (`packages/trailties/src/health-controller.ts:4`).
@@ -68,6 +84,7 @@ turns true.
 ## Acceptance criteria
 
 - [ ] `engine.rb` reads complete in `parity:api` at its trailties path, with all eight initializers under their Rails names.
+- [ ] `packages/trailties/src/all.ts` imports the engine at its `rails/all` position.
 - [ ] A booted fixture app answers a WebSocket upgrade at `/cable` with a welcome message, and `config.action_cable.mount_path = nil` removes the route.
 - [ ] The two railties cases are ported or extended as described.
 - [ ] A plain-node import of the built engine module as the entry module succeeds.
@@ -75,3 +92,12 @@ turns true.
 ## Definition of done
 
 An engine that wires the server without the executor wrap, or one that reads the cable config after the first request, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/trailties/src/trailties/action-cable.test.ts packages/trailties/src/all.trails.test.ts
+pnpm build && node -e "import('./packages/trailties/dist/trailties/action-cable.js')"
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # engine.rb at 100%
+pnpm parity:test   # the two railties cases credited for trailties
+```

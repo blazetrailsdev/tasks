@@ -3,7 +3,7 @@ title: "Port Connection::StreamEventLoop (timer, post, attach, detach, stop)"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps:
   [
@@ -80,3 +80,12 @@ citing the section.
 ## Definition of done
 
 An `attach` that never reaches `stream.receive`, or a body for `spawn` / `run` / `wakeup`, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/connection/stream-event-loop.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

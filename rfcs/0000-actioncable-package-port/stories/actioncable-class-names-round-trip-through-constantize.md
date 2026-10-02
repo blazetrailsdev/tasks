@@ -3,7 +3,7 @@ title: "Channel and connection classes carry their Ruby constant names and resol
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable", "activesupport"]
 deps: ["port-actioncable-namespace-and-internal-constants"]
 deps-rfc: []
@@ -66,3 +66,10 @@ starting.
 ## Definition of done
 
 Deriving `channel_name` from the bare JS class name does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src -t 'constant'
+pnpm vitest run packages/activesupport/src/inflector.test.ts
+```

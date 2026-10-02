@@ -3,7 +3,7 @@ title: "ruby-compat ThreadPoolExecutor: shutdown, shuttingdown?, <<, name: and t
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
@@ -69,3 +69,11 @@ Whichever of the two lands second builds on the other's `shutdown`.
 ## Definition of done
 
 A second executor class written inside `packages/actioncable` does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/ruby-compat/src/thread-pool-executor.trails.test.ts
+pnpm vitest run packages/activerecord/src -t 'async'   # the existing pool's consumers
+pnpm parity:api:extra:gate
+```

@@ -3,7 +3,7 @@ title: "Port channel/naming_test.rb, broadcasting_test.rb and periodic_timers_te
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-channel-base", "port-actioncable-test-stubs-and-test-helper"]
 deps-rfc: []
@@ -53,3 +53,10 @@ closed-reason: null
 ## Definition of done
 
 A skipped or renamed case does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/channel/naming.test.ts packages/actioncable/src/channel/broadcasting.test.ts packages/actioncable/src/channel/periodic-timers.test.ts
+pnpm parity:test && pnpm parity:test:assertions   # every case listed above credited; actioncable mark stays 0
+```

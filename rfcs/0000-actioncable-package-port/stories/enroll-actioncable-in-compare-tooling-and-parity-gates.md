@@ -3,7 +3,7 @@ title: "Enroll actioncable in parity:api / parity:test and in every parity gate 
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable", "scripts"]
 deps: ["actioncable-package-skeleton"]
 deps-rfc: []
@@ -105,3 +105,13 @@ Check `rubyToConventionTs` maps `connection/base_test.rb` →
 ## Definition of done
 
 A mark seeded above zero "to tighten later", or a gate left for a follow-up story, does not close this story.
+
+## Verification
+
+```bash
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable
+pnpm parity:test && pnpm parity:test:assertions
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:parents
+pnpm vitest run vendor/sources.test.ts scripts
+pnpm lint
+```

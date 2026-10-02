@@ -3,7 +3,7 @@ title: "Prove the published @rails/actioncable client talks to a trails server, 
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable", "scripts"]
 deps: ["port-actioncable-client-test-harness-and-client-cases"]
 deps-rfc: []
@@ -66,3 +66,10 @@ This story does two things:
 ## Definition of done
 
 A hand-written client that sends the same JSON, in place of the published package, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src -t 'published client'
+pnpm parity:test   # javascript_package_test.rb unported, with its reason
+```

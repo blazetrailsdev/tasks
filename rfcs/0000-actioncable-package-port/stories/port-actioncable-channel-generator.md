@@ -3,7 +3,7 @@ title: "Port Rails::Generators::ChannelGenerator and its templates"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["trailties"]
 deps: ["port-actioncable-test-unit-channel-generator"]
 deps-rfc: []
@@ -80,7 +80,7 @@ not add a stand-in.
 
 ## Fidelity traps (predicted at authoring)
 
-- [ ] **`js_template`** (`:61`) is `Rails::Generators::NamedBase#js_template`; trailties has none (`grep -rn jsTemplate packages/trailties/src` is empty). Port it on `NamedBase` at its Rails name.
+- [ ] **`js_template`** (`:61`) is `Rails::Generators::NamedBase#js_template` (`vendor/rails/v8.0.2/railties/lib/rails/generators/named_base.rb:29-31`, `template(source + ".js", destination + ".js")`); trailties has none (`grep -rn jsTemplate packages/trailties/src` is empty). Port it on `NamedBase` at its Rails name, in this story.
 - [ ] **`create_shared_channel_files` returns unless `behavior == :invoke`**: `destroy` must not remove `application_cable/channel` and `connection`. "revoking" asserts they survive.
 - [ ] **The two shared files are `copy_file`d from `.rb.tt` sources by absolute path**, not rendered.
 - [ ] **`first_setup_required?`** is `!root.join("app/javascript/channels/index.js").exist?`, read before the file is created; "first setup only happens once" runs the generator twice.
@@ -102,3 +102,10 @@ not add a stand-in.
 ## Definition of done
 
 A generator that writes the JavaScript files unconditionally, or one built on a stand-in for a Thor action, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/trailties/src/generators/rails/channel packages/trailties/src/generators/named-base.test.ts
+pnpm parity:test && pnpm parity:test:assertions   # channel_generator_test.rb 13 of 13 for trailties
+```

@@ -3,7 +3,7 @@ title: "Port SubscriptionAdapter::Redis over an npm Redis client, with its conne
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-inline-async-and-test-adapters"]
 deps-rfc: []
@@ -88,3 +88,13 @@ need a live server are in
 ## Definition of done
 
 A `TopLevel.Redis` seat with nothing behind it, or a second Redis client beside the cache store's, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/subscription-adapter/redis.trails.test.ts packages/actioncable/src/subscription-adapter/redis.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+pnpm parity:test && pnpm parity:test:assertions   # every case listed above credited; actioncable mark stays 0
+```

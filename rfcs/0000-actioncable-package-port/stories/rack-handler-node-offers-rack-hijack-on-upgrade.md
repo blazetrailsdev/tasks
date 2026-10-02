@@ -3,7 +3,7 @@ title: "Rack::Handler::Node offers rack.hijack on HTTP upgrade requests"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["rack", "ruby-compat"]
 deps: []
 deps-rfc: []
@@ -67,7 +67,7 @@ Prior art checked (`grep -rli hijack rfcs`, `tasks touching
 packages/rack/src/handler/node.ts`): no story adds hijack or an upgrade
 listener. `0142/trails-server-adapts-application-to-function-rack-app` (draft)
 edits `commands/server.ts` around the same `Handler.Node.run` call and does
-not overlap. `0147`'s closed `request-context-minted-at-server-spawn-not-executor`
+not overlap. `0147/request-context-minted-at-server-spawn-not-executor` (done)
 is why `service` runs in a `Thread` (`:59`); the upgrade path does the same.
 
 ## Fidelity traps (predicted at authoring)
@@ -90,3 +90,11 @@ is why `service` runs in a `Thread` (`:59`); the upgrade path does the same.
 ## Definition of done
 
 Setting `rack.hijack?` to true without an `upgrade` listener, or an `upgrade` listener that bypasses the Rack app, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/rack/src/handler packages/rack/src/lint.test.ts
+pnpm vitest run packages/ruby-compat/src   # the http adapter's upgrade registration
+pnpm parity:api:extra:gate   # ruby-compat is gated
+```

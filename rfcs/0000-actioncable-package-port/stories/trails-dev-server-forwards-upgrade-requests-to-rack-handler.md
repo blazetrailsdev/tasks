@@ -3,7 +3,7 @@ title: "trails server's Vite dev path forwards upgrade requests to the Rack hand
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["trailties"]
 deps: ["rack-handler-node-offers-rack-hijack-on-upgrade"]
 deps-rfc: []
@@ -52,3 +52,9 @@ This story registers an `upgrade` listener on `server.httpServer` in
 ## Definition of done
 
 A second WebSocket server inside the plugin (one that never calls the Rack app) does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/trailties/src/server
+```

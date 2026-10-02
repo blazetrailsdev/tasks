@@ -3,7 +3,7 @@ title: "Port channel/base_test.rb and channel/rejection_test.rb"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-channel-base", "port-actioncable-test-stubs-and-test-helper"]
 deps-rfc: []
@@ -75,3 +75,10 @@ names, since `channel_class` payloads and log lines assert
 ## Definition of done
 
 A skipped or renamed case does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/channel/base.test.ts packages/actioncable/src/channel/rejection.test.ts
+pnpm parity:test && pnpm parity:test:assertions   # every case listed above credited; actioncable mark stays 0
+```

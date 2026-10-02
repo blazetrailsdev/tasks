@@ -3,7 +3,7 @@ title: "Port connection/base_test.rb, authorization_test.rb and cross_site_forge
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-connection-base", "port-actioncable-test-stubs-and-test-helper"]
 deps-rfc: []
@@ -65,3 +65,10 @@ server.
 ## Definition of done
 
 A skipped or renamed case does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/connection/base.test.ts packages/actioncable/src/connection/authorization.test.ts packages/actioncable/src/connection/cross-site-forgery.test.ts
+pnpm parity:test && pnpm parity:test:assertions   # every case listed above credited; actioncable mark stays 0
+```

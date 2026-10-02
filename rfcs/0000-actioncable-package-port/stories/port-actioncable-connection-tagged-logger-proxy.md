@@ -3,11 +3,11 @@ title: "Port Connection::TaggedLoggerProxy"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
-packages: ["actioncable"]
+cluster: fidelity
+packages: ["actioncable", "activesupport"]
 deps: ["port-actioncable-namespace-and-internal-constants"]
 deps-rfc: []
-est-loc: 150
+est-loc: 200
 pr: null
 claim: null
 assignee: null
@@ -39,7 +39,7 @@ connection test build one. It lands early because `Server::Worker` calls
 
 - [ ] **`logger.respond_to?(:tagged)`** ports as `rbObjRespondTo`, not `typeof logger.tagged === "function"`: the call gate reads the latter as a call to `tagged`.
 - [ ] **`tags - logger.formatter.current_tags`** is array difference, and keeps duplicates in `tags` that are not in `current_tags`.
-- [ ] **`tagged` with an async block.** `Worker#with_database_connections` passes the work block through `tag`. If that block returns a promise, the tags must stay pushed until it settles. Check `TaggedLogging#tagged` (`packages/activesupport/src/tagged-logging.ts:157`) does that, and converge it here if it pops on return.
+- [ ] **`tagged` with an async block pops too early today.** `Worker#with_database_connections` passes the work block through `tag`, and that block returns a promise. `TaggedFormatter#tagged` (`packages/activesupport/src/tagged-logging.ts:62-70`) pops the tags in a `finally`, so they are gone as soon as the block returns, before the awaited work logs anything. Converge it in this story so the pop waits for the promise to settle, with a regression test that fails on the baseline. `0169/port-activejob-logging` (draft) carries the same check; if it has landed first, the convergence is done and this story only adds the test through `tag`.
 - [ ] **The block form of a severity call** (`logger.debug { "…" }`) is lazy: the block must not run when the level is above the severity.
 - [ ] **The six methods are generated in one loop.** Port the loop, not six hand-written bodies.
 - [ ] **`add_tags` reassigns `@tags`**; a caller holding the old array does not see new tags.
@@ -52,3 +52,12 @@ connection test build one. It lands early because `Server::Worker` calls
 ## Definition of done
 
 Six copy-pasted severity methods do not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/connection/tagged-logger-proxy.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

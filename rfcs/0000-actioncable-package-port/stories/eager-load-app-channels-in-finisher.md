@@ -3,7 +3,7 @@ title: "Load and register an application's app/channels classes"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["trailties"]
 deps: ["port-actioncable-engine", "actioncable-class-names-round-trip-through-constantize"]
 deps-rfc: []
@@ -56,3 +56,9 @@ jobs story has landed, share its scan helper.
 ## Definition of done
 
 Asking applications to register their channels by hand does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/trailties/src/application
+```

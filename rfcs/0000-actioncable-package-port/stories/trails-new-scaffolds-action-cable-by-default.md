@@ -3,7 +3,7 @@ title: "trails new stops skipping Action Cable and scaffolds real cable files"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["trailties"]
 deps:
   [
@@ -56,6 +56,7 @@ dependencies.
 - [ ] **Solid Cable is not ported.** `solid_cable:install` (`app_base.rb:750`) and the Solid arm of `cable_gemfile_entry` stay behind `skip_solid`; do not emit a Solid Cable config.
 - [ ] **The app generator tests assert on generated file lists.** `app_generator_test.rb` and `shared_generator_tests.rb` have cable cases; port the ones this change turns on and say in the PR which were already ported behind the skip.
 - [ ] **The website's in-browser generator** runs the same code; check it still builds.
+- [ ] **Environment files.** Rails' generated `config/environments/production.rb` carries commented `config.action_cable.mount_path`, `.url` and `.allowed_request_origins` lines, emitted unless Action Cable is skipped. `0142/generated-environments-omit-namespaced-framework-settings` (done) set the pattern for namespaced settings; add the cable lines the same way.
 
 ## Acceptance criteria
 
@@ -66,3 +67,10 @@ dependencies.
 ## Definition of done
 
 Generated `export class Channel {}` placeholders do not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/trailties/src/generators/app-generator.test.ts packages/trailties/src/generators/app-base.test.ts
+pnpm parity:test   # trailties delta non-negative
+```

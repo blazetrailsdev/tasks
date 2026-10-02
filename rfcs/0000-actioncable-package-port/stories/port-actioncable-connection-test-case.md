@@ -3,7 +3,7 @@ title: "Port Connection::TestCase, TestConnection, TestCookieJar and Assertions"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-connection-base", "port-actioncable-test-helper-and-test-case"]
 deps-rfc: []
@@ -70,3 +70,12 @@ connection but no rejection was made", &block)`.
 ## Definition of done
 
 A `connect` that builds a real connection over a fake server does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/connection/test-case.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

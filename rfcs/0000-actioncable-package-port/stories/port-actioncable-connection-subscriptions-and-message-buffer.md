@@ -3,7 +3,7 @@ title: "Port Connection::Subscriptions and Connection::MessageBuffer"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["actioncable-class-names-round-trip-through-constantize"]
 deps-rfc: []
@@ -53,7 +53,7 @@ worker pool.
 - [ ] **`execute_command` logs after rescuing**, whether or not a handler took the error, and does not re-raise. `e.backtrace.first(5).join(" | ")`.
 - [ ] **`add` decodes the identifier with `with_indifferent_access`**, and passes the raw `id_key` string as the channel's identifier and the decoded hash as its params.
 - [ ] **`return if subscriptions.key?(id_key)`**: a duplicate subscribe is silently ignored.
-- [ ] **`ActionCable::Channel::Base > subscription_klass`** is strict: `Base` itself is refused (`subscriptions_test.rb:69`, "subscribe command with Base channel"), and a non-class constant makes `>` return nil.
+- [ ] **`ActionCable::Channel::Base > subscription_klass`** is strict: `Base` itself is refused (`subscriptions_test.rb:69`, "subscribe command with Base channel"). An unrelated class or module makes `>` return nil, which takes the else arm; a constant that is not a Module at all makes it raise `TypeError`, which `execute_command`'s rescue logs.
 - [ ] **`id_options[:channel].safe_constantize`** on a missing key calls `safe_constantize` on nil and raises `NoMethodError`, which the rescue in `execute_command` logs ("subscribe command without an identifier" covers the neighbouring case where `identifier` is absent and JSON decoding raises).
 - [ ] **`unsubscribe_from_all` iterates the hash while `remove_subscription` deletes from it.** Ruby raises on adding a key during iteration, not on delete. Iterate over a stable view and await each removal in order; a `Promise.all` would run the `unsubscribed` hooks concurrently.
 - [ ] **`find` raises a plain `RuntimeError`** with "Unable to find subscription with identifier: …".
@@ -70,3 +70,12 @@ worker pool.
 ## Definition of done
 
 `Promise.all` in `unsubscribe_from_all` does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/connection/subscriptions.trails.test.ts packages/actioncable/src/connection/message-buffer.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

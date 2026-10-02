@@ -3,7 +3,7 @@ title: "Port Action Cable's test stubs and test/test_helper.rb, with the first t
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-server-connections-and-base"]
 deps-rfc: []
@@ -88,3 +88,10 @@ story moves them onto the real class.
 ## Definition of done
 
 A `waitForAsync` that is a fixed `setTimeout`, or a `TestServer` with a fake event loop, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/subscription-adapter/base.test.ts packages/actioncable/src/server/broadcasting.test.ts
+pnpm parity:test && pnpm parity:test:assertions
+```

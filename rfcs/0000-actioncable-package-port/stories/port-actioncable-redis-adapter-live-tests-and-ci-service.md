@@ -3,7 +3,7 @@ title: "Run the Redis adapter's live tests in CI: common suite, channel prefix a
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable", "scripts"]
 deps: ["port-actioncable-redis-adapter"]
 deps-rfc: []
@@ -55,3 +55,11 @@ Rails' CI provides it (`redis_test.rb:13`).
 ## Definition of done
 
 A mocked Redis client in place of the service does not close this story.
+
+## Verification
+
+```bash
+REDIS_URL=redis://localhost:6379/1 pnpm vitest run packages/actioncable/src/subscription-adapter/redis.test.ts
+pnpm parity:test && pnpm parity:test:assertions
+pnpm vitest run scripts/ci-suite-coverage.test.ts
+```

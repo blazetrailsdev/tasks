@@ -1,13 +1,13 @@
 ---
-title: "Port SubscriptionAdapter::PostgreSQL over LISTEN / NOTIFY, with its tests"
+title: "Port SubscriptionAdapter::PostgreSQL over LISTEN / NOTIFY"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable", "activerecord"]
 deps: ["port-actioncable-inline-async-and-test-adapters"]
 deps-rfc: []
-est-loc: 550
+est-loc: 350
 pr: null
 claim: null
 assignee: null
@@ -17,9 +17,10 @@ closed-reason: null
 
 ## Context
 
-`vendor/rails/v8.0.2/actioncable/lib/action_cable/subscription_adapter/postgresql.rb` (133 lines), with
-`vendor/rails/v8.0.2/actioncable/test/subscription_adapter/postgresql_test.rb` (87 lines: 3 own cases, plus
-the common suite's 8 and the channel-prefix case).
+`vendor/rails/v8.0.2/actioncable/lib/action_cable/subscription_adapter/postgresql.rb` (133 lines). Its Rails test needs
+a PostgreSQL service and is ported in
+`port-actioncable-postgresql-adapter-tests-and-ci-lane`; this story ships
+the lib with a `.trails.test.ts` over a recording raw connection.
 
 - `prepend ChannelPrefix` (`:12`).
 - `broadcast` (`:19-23`): on a pooled connection,
@@ -45,22 +46,9 @@ activerecord; add it as one here too. `ActiveRecord::Base` is named at call
 time: `TopLevel.ActiveRecord`, with no `@blazetrails/activerecord`
 dependency.
 
-**CI.** These tests need PostgreSQL. Add the actioncable PostgreSQL test file
-to a lane that already has the service (the PG lanes of the AR suite), and
-make sure `skip "Couldn't connect to PostgreSQL"` (`postgresql_test.rb:29`)
-does not turn a missing service into a green run.
-
 ## Rails files owned by this story
 
 - `vendor/rails/v8.0.2/actioncable/lib/action_cable/subscription_adapter/postgresql.rb`
-
-## Rails tests owned by this story
-
-- `vendor/rails/v8.0.2/actioncable/test/subscription_adapter/postgresql_test.rb`:
-  - [ ] `clear active record connections adapter still works` (`:45`)
-  - [ ] `default subscription connection identifier` (`:68`)
-  - [ ] `custom subscription connection identifier` (`:75`)
-- `vendor/rails/v8.0.2/actioncable/test/subscription_adapter/postgresql_test.rb` also includes the shared suite from `subscription_adapter/common.rb` and `channel_prefix.rb`; every included case runs under this class.
 
 ## Fidelity traps (predicted at authoring)
 
@@ -75,16 +63,22 @@ does not turn a missing service into a green run.
 - [ ] **`Thread.current.abort_on_exception = true`**: an error in the listener must not be swallowed.
 - [ ] **`invoke_callback` posts to the event loop**, with zsuper inside the block.
 - [ ] **`NOTIFY` payload limit** is 8000 bytes in PostgreSQL; Rails does not guard it, so neither does the port.
-- [ ] **The two identifier cases** query `pg_stat_activity` for `application_name` and expect `"ActionCable-PID-#{$$}"` and `"hello-world-42"`.
-- [ ] **The test's `setup`** reads the AR test database config when the activerecord test tree is present, and skips when it cannot connect.
 
 ## Acceptance criteria
 
-- [ ] `postgresql.rb` reads complete in `parity:api`; any call with no Node counterpart (`wait_for_notify`) is receipted `PERMANENT` at the call site, and nothing is baselined.
-- [ ] The 3 own cases, the common suite's 8 and the channel-prefix case run against a real PostgreSQL in CI and are credited in `parity:test`.
+- [ ] `postgresql.rb` reads complete in `parity:api`; any call with no Node counterpart (`wait_for_notify`) is receipted `PERMANENT` at the call site, citing the CLAUDE.md section from `ratify-node-event-loop-stands-in-for-the-nio4r-selector` or a reason of its own, and nothing is baselined.
 - [ ] `pg` is an optional peer of actioncable; resolving another adapter does not import it.
-- [ ] Two adapters on two servers with different `channel_prefix` values do not see each other's messages.
+- [ ] A `.trails.test.ts` over a recording raw connection covers: the exact `NOTIFY` / `LISTEN` / `UNLISTEN` / `SET application_name` SQL text; a 101-character channel hashed to SHA1; commands executed in queue order with the success callback posted after its `LISTEN`; `shutdown` resolving after the listener ends and the connection is disconnected; the `verify!` raise.
 
 ## Definition of done
 
-A listener that opens a pooled connection, or a CI run in which these cases skip, does not close this story.
+A listener that opens a pooled connection does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/subscription-adapter/postgresql.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

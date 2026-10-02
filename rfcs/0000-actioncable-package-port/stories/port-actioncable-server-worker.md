@@ -3,8 +3,8 @@ title: "Port Server::Worker and Worker::ActiveRecordConnectionManagement"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
-packages: ["actioncable"]
+cluster: fidelity
+packages: ["actioncable", "activerecord"]
 deps:
   [
     "port-actioncable-namespace-and-internal-constants",
@@ -67,6 +67,7 @@ in a ruby-compat `Thread`, so the file ports line for line and
 - [ ] **`defined?(ActiveRecord::Base)` is evaluated once, at include time.** Read `TopLevel.ActiveRecord?.Base` there (CLAUDE.md § "Call-time constant resolution"); `0169/port-activejob-enqueue-after-transaction-commit` seats it. If it is not seated yet, seat it from activerecord in this story. Do not add an `@blazetrails/activerecord` dependency.
 - [ ] **`e.backtrace.join("\n")`**: a JS error may have no stack.
 - [ ] **The private `logger` reads `ActionCable.server.logger`**, the global server, not the connection's logger.
+- [ ] **`worker_test.rb` extends `ActionCable::TestCase` but uses none of its helpers.** It lands before the suite's test helper; port it on `ActiveSupport::TestCase` semantics alone and do not pull the stubs story forward.
 
 ## Acceptance criteria
 
@@ -77,3 +78,13 @@ in a ruby-compat `Thread`, so the file ports line for line and
 ## Definition of done
 
 Replacing the executor with a bare `queueMicrotask` or `Promise.resolve().then` does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/server/worker.trails.test.ts packages/actioncable/src/server/worker/active-record-connection-management.trails.test.ts packages/actioncable/src/worker.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+pnpm parity:test && pnpm parity:test:assertions   # every case listed above credited; actioncable mark stays 0
+```

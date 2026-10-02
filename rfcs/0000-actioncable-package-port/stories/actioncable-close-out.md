@@ -3,7 +3,7 @@ title: "Close out the Action Cable port: verify every file, case and gate agains
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable", "trailties", "scripts"]
 deps:
   [
@@ -11,7 +11,7 @@ deps:
     "trails-dev-server-forwards-upgrade-requests-to-rack-handler",
     "actioncable-browser-client-interop-and-non-port-record",
     "port-actioncable-client-test-disconnect-and-restart-cases",
-    "port-actioncable-postgresql-adapter",
+    "port-actioncable-postgresql-adapter-tests-and-ci-lane",
     "port-actioncable-redis-adapter-live-tests-and-ci-service",
     "port-actioncable-channel-base-and-rejection-tests",
     "port-actioncable-channel-naming-broadcasting-and-periodic-timers-tests",
@@ -74,3 +74,12 @@ line by line against `main` and fixes or files what does not hold.
 ## Definition of done
 
 Raising a mark, adding a baseline row, or rewording a receipt to make a gate pass does not close this story.
+
+## Verification
+
+```bash
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable
+pnpm parity:test && pnpm parity:test:assertions
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+grep -rnE '@(missingRailsCall|missingRailsArgs|noRailsEquivalent)' packages/actioncable/src | grep -v PERMANENT   # expect no output
+```

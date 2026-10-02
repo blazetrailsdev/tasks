@@ -3,7 +3,7 @@ title: "Port client_test.rb's harness and its first four cases against a real se
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps:
   [
@@ -77,3 +77,10 @@ This story ports the harness (`:1-200`) and the first four cases:
 ## Definition of done
 
 Driving `Connection::Base` directly, or mocking the handler, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/client.test.ts
+pnpm parity:test && pnpm parity:test:assertions   # every case listed above credited; actioncable mark stays 0
+```

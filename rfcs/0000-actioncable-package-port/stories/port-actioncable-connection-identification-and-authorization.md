@@ -3,7 +3,7 @@ title: "Port Connection::Identification and Connection::Authorization"
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-namespace-and-internal-constants"]
 deps-rfc: []
@@ -58,3 +58,12 @@ closed-reason: null
 ## Definition of done
 
 `identifiers` as a shared mutable array does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/connection/identification.trails.test.ts packages/actioncable/src/connection/authorization.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

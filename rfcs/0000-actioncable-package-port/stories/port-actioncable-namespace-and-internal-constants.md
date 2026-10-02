@@ -3,7 +3,7 @@ title: "Port lib/action_cable.rb: the ActionCable namespace, INTERNAL and Action
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable", "activesupport"]
 deps: ["enroll-actioncable-in-compare-tooling-and-parity-gates"]
 deps-rfc: []
@@ -66,3 +66,12 @@ widen the type to the real namespace.
 ## Definition of done
 
 A zero-import slot module where a namespace `autoload` works, or a guard on an autoload read Rails does not guard, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/action-cable.trails.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+```

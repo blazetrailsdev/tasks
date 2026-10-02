@@ -3,7 +3,7 @@ title: "Port connection/identifier_test.rb, multiple_identifiers_test.rb, string
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-connection-base", "port-actioncable-test-stubs-and-test-helper"]
 deps-rfc: []
@@ -55,3 +55,10 @@ and `callbacks_test.rb` (100, 3).
 ## Definition of done
 
 A skipped or renamed case does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/connection/identifier.test.ts packages/actioncable/src/connection/multiple-identifiers.test.ts packages/actioncable/src/connection/string-identifier.test.ts packages/actioncable/src/connection/callbacks.test.ts
+pnpm parity:test && pnpm parity:test:assertions   # every case listed above credited; actioncable mark stays 0
+```

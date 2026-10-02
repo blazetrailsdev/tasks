@@ -3,7 +3,7 @@ title: "Port the Inline, Async and Test subscription adapters and the shared ada
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-server-connections-and-base"]
 deps-rfc: []
@@ -89,3 +89,13 @@ cases of its own. The PostgreSQL and Redis stories include both suites.
 ## Definition of done
 
 Copying the eight common cases into each adapter's test file does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/subscription-adapter/inline.trails.test.ts packages/actioncable/src/subscription-adapter/async.trails.test.ts packages/actioncable/src/subscription-adapter/test.trails.test.ts packages/actioncable/src/subscription-adapter/async.test.ts packages/actioncable/src/subscription-adapter/inline.test.ts packages/actioncable/src/subscription-adapter/test-adapter.test.ts
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable   # each owned file at 100%
+pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate
+pnpm lint
+pnpm parity:test && pnpm parity:test:assertions   # every case listed above credited; actioncable mark stays 0
+```

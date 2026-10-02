@@ -3,7 +3,7 @@ title: "Create packages/actioncable as a published workspace package and wire it
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps: []
 deps-rfc: []
@@ -85,3 +85,11 @@ in trails#7453) and confirm each line still exists:
 ## Definition of done
 
 An empty `src/index.ts`, or an `@blazetrails/activerecord` dependency, does not close this story.
+
+## Verification
+
+```bash
+pnpm build && node -e "import('./packages/actioncable/dist/index.js')"
+pnpm vitest run packages/actioncable scripts/ci-suite-coverage.test.ts
+pnpm test:types && pnpm test:types:virtualized
+```

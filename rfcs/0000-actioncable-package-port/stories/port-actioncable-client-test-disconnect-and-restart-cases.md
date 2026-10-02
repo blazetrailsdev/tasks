@@ -3,7 +3,7 @@ title: "Port client_test.rb's unsubscribe, remote disconnect and server restart 
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
+cluster: fidelity
 packages: ["actioncable"]
 deps:
   ["port-actioncable-client-test-harness-and-client-cases", "port-actioncable-remote-connections"]
@@ -46,3 +46,10 @@ the only Rails coverage of `RemoteConnections`.
 ## Definition of done
 
 A skipped or renamed case does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run packages/actioncable/src/client.test.ts
+pnpm parity:test && pnpm parity:test:assertions   # every case listed above credited; actioncable mark stays 0
+```

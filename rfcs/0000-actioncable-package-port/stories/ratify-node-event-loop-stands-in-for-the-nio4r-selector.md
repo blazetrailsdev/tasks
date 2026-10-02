@@ -3,8 +3,8 @@ title: "CLAUDE.md: Node's event loop stands in for Action Cable's nio4r selector
 status: draft
 updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
-cluster: null
-packages: []
+cluster: fidelity
+packages: ["actioncable"]
 deps: []
 deps-rfc: []
 est-loc: 120
@@ -92,3 +92,10 @@ one call.
 ## Definition of done
 
 A section that blesses dropping `Server::Worker`'s executor, or one with no file list, does not close this story.
+
+## Verification
+
+```bash
+pnpm vitest run scripts/vendor-citations.test.ts
+grep -n 'nio4r' CLAUDE.md   # the section, its file list, and the Open question 5 answer
+```
