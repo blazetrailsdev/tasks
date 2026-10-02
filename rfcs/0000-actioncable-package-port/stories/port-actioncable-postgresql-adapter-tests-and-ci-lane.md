@@ -36,6 +36,7 @@ lanes of the AR suite) and the AR test database config the Rails test reads
 
 ## Fidelity traps (predicted at authoring)
 
+- [ ] **The PostgreSQL step is one of actioncable's own tests** and must run under `actioncable_only` (`ci-actioncable-only-diffs-run-minimal-test-lanes`), not only in the full matrix.
 - [ ] **`skip "Couldn't connect to PostgreSQL"`** (`:29`) must not turn a missing service into a green run in CI. Skip locally; fail in the lane that claims to have the service.
 - [ ] **The test's `setup`** establishes `ActiveRecord::Base`'s connection from the AR test config (`arunit`) and `teardown` calls `connection_handler.clear_all_connections!`. The test file may import activerecord; the package may not.
 - [ ] **"clear active record connections adapter still works"** subclasses the adapter to expose `active?` (`!@listener.nil?`), broadcasts, calls `clear_reloadable_connections!`, and asserts the listener is still there: the subscription connection is not pooled.

@@ -5,7 +5,11 @@ updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable", "scripts"]
-deps: ["actioncable-package-skeleton"]
+deps:
+  [
+    "actioncable-package-skeleton",
+    "ci-actioncable-only-diffs-scope-rails-comparison-to-actioncable",
+  ]
 deps-rfc: []
 est-loc: 350
 pr: null
@@ -100,6 +104,7 @@ Check `rubyToConventionTs` maps `connection/base_test.rb` →
 - [ ] Every gate in the list runs for actioncable and is green at zero: `parity:api:calls`, `parity:api:calls:args`, `parity:api:params`, `parity:api:predicates`, `parity:api:extra:gate`, `parity:api:arms:throws`, `parity:api:blocks`, `parity:api:parents`, `parity:test:assertions`.
 - [ ] No baseline row, exclude shard or non-zero mark exists for actioncable.
 - [ ] `unported-files/actioncable.ts` and the `SCOPED_SKIP_GROUPS` entry exist with reasons.
+- [ ] The scoped comparison job from `ci-actioncable-only-diffs-scope-rails-comparison-to-actioncable` is proven end to end: on a scratch branch, an actioncable-only diff that deletes a ported method, and one that adds an extra public name, each red it. The result is recorded in the PR body.
 - [ ] `parity:api` / `parity:test` deltas for every other package are non-negative.
 
 ## Definition of done
@@ -109,6 +114,7 @@ A mark seeded above zero "to tighten later", or a gate left for a follow-up stor
 ## Verification
 
 ```bash
+# on a scratch branch: delete a ported method and add an extra public name under packages/actioncable; the scoped comparison job must go red
 API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api --package actioncable
 pnpm parity:test && pnpm parity:test:assertions
 pnpm parity:api:calls && pnpm parity:api:calls:args && pnpm parity:api:params && pnpm parity:api:predicates && pnpm parity:api:extra:gate && pnpm parity:api:arms:throws && pnpm parity:api:blocks && pnpm parity:api:parents

@@ -44,6 +44,7 @@ Rails' CI provides it (`redis_test.rb:13`).
 - [ ] **`AlternateConfiguration#cable_config`** deletes `:url` and parses `REDIS_URL` for host and port, defaulting to `127.0.0.1:6379`, with `db: 12`.
 - [ ] **`cable_config` has `driver: "ruby"`**, a redis-rb option with no npm counterpart; the connector drops it.
 - [ ] **A missing service must fail the lane**, not skip the file.
+- [ ] **The Redis step is one of actioncable's own tests** and must run under `actioncable_only` (`ci-actioncable-only-diffs-run-minimal-test-lanes`), not only in the full matrix.
 - [ ] **Changing a lane's `run:` line** can break `scripts/ci-suite-coverage.test.ts`'s fixture literals.
 
 ## Acceptance criteria

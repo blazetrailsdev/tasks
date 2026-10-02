@@ -5,7 +5,11 @@ updated: 2026-10-01
 rfc: "0000-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable", "activesupport"]
-deps: ["enroll-actioncable-in-compare-tooling-and-parity-gates"]
+deps:
+  [
+    "enroll-actioncable-in-compare-tooling-and-parity-gates",
+    "ci-actioncable-only-diffs-run-minimal-test-lanes",
+  ]
 deps-rfc: []
 est-loc: 200
 pr: null

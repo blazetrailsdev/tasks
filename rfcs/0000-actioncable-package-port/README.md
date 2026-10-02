@@ -3,7 +3,7 @@ rfc: "0000-actioncable-package-port"
 title: "@blazetrails/actioncable: port Action Cable, with its socket layer over Node"
 status: draft
 created: 2026-10-01
-updated: 2026-10-01
+updated: 2026-10-02
 owner: "@deanmarano"
 packages:
   - actioncable
@@ -61,7 +61,7 @@ trails' Rack handler cannot hand a socket to an application
 (`packages/rack/src/handler/node.ts:70` sets `rack.hijack?` to `false` and
 the server has no `upgrade` listener). That is the root story.
 
-**Size: 56 stories, 17,920 est-loc**, every story at most 550 est-loc
+**Size: 58 stories, 18,720 est-loc**, every story at most 550 est-loc
 (the tasks-repo ceiling is 700). Every file under `actioncable/lib` (45
 `.rb`, 7 generator templates, 1 `USAGE`) and every one of the 41 Ruby test
 files is owned by exactly one story (two test files are split by case). Every
@@ -216,18 +216,19 @@ Grepped across `rfcs/` for `hijack`, `action.?cable`, `websocket`,
 `packages/trailties/src/server/dev-server.ts`. No story ports any part of
 Action Cable or adds hijack support. Adjacent stories, none duplicated here:
 
-| Story                                                                           | Status | Relation                                                                                                                    |
-| ------------------------------------------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
-| `0158/cache-store-async-over-npm-clients`                                       | ready  | Names the Redis client candidates and has not picked. One client for both (Open question 4).                                |
-| `0169/port-ruby-compat-concurrent-immediate-executor-and-scheduled-task`        | draft  | Adds `ImmediateExecutor` / `ScheduledTask` beside `ThreadPoolExecutor`. Different classes; both touch `shutdown`.           |
-| `0169/register-activejob-constants-for-class-name-round-trip`                   | draft  | Same class-name question for jobs. Whichever lands first picks the mechanism.                                               |
-| `0169/eager-load-app-jobs-in-finisher`                                          | draft  | Same scan for `app/jobs`; share the helper.                                                                                 |
-| `0169/port-activejob-enqueue-after-transaction-commit`                          | draft  | Seats `TopLevel.ActiveRecord`, which `Server::Worker` and the PostgreSQL adapter read.                                      |
-| `0169/port-activejob-logging`                                                   | draft  | Carries the same `TaggedLogging#tagged` async-block convergence. Whichever lands first does it.                             |
-| `0142/trails-server-adapts-application-to-function-rack-app`                    | draft  | Edits `commands/server.ts` around `Handler.Node.run`; no overlap with the upgrade path.                                     |
-| `0142/authentication-generator-skip-action-cable-replaces-defined-engine-check` | done   | Already reads `TopLevel.ActionCable?.Engine`; the engine story makes it true.                                               |
-| `0104/generator-scaffolds-unported-subsystems`                                  | done   | Added `skipActionCable: true`; `trails-new-scaffolds-action-cable-by-default` removes it.                                   |
-| RFC 0171 (Thor)                                                                 | active | Converging generators onto `Thor::Group`. The two generator stories are written against whatever shape exists when claimed. |
+| Story                                                                                                      | Status | Relation                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
+| `0158/cache-store-async-over-npm-clients`                                                                  | ready  | Names the Redis client candidates and has not picked. One client for both (Open question 4).                                |
+| `0169/port-ruby-compat-concurrent-immediate-executor-and-scheduled-task`                                   | draft  | Adds `ImmediateExecutor` / `ScheduledTask` beside `ThreadPoolExecutor`. Different classes; both touch `shutdown`.           |
+| `0169/register-activejob-constants-for-class-name-round-trip`                                              | draft  | Same class-name question for jobs. Whichever lands first picks the mechanism.                                               |
+| `0169/eager-load-app-jobs-in-finisher`                                                                     | draft  | Same scan for `app/jobs`; share the helper.                                                                                 |
+| `0169/port-activejob-enqueue-after-transaction-commit`                                                     | draft  | Seats `TopLevel.ActiveRecord`, which `Server::Worker` and the PostgreSQL adapter read.                                      |
+| `0169/port-activejob-logging`                                                                              | draft  | Carries the same `TaggedLogging#tagged` async-block convergence. Whichever lands first does it.                             |
+| `0142/trails-server-adapts-application-to-function-rack-app`                                               | draft  | Edits `commands/server.ts` around `Handler.Node.run`; no overlap with the upgrade path.                                     |
+| `0142/authentication-generator-skip-action-cable-replaces-defined-engine-check`                            | done   | Already reads `TopLevel.ActionCable?.Engine`; the engine story makes it true.                                               |
+| `0104/generator-scaffolds-unported-subsystems`                                                             | done   | Added `skipActionCable: true`; `trails-new-scaffolds-action-cable-by-default` removes it.                                   |
+| `0171/ci-thor-only-diffs-run-minimal-test-lanes`, `0171/ci-thor-only-diffs-scope-rails-comparison-to-thor` | done   | The `thor_only` gate and the scoped comparison job. The two CI stories here generalize them.                                |
+| RFC 0171 (Thor)                                                                                            | active | Converging generators onto `Thor::Group`. The two generator stories are written against whatever shape exists when claimed. |
 
 ## Design
 
@@ -265,6 +266,45 @@ engine lives at `packages/trailties/src/trailties/action-cable.ts` beside
 has no autoloader"). Framework-internal constant resolution uses the
 `namespaces.ts` `Autoload` shape: six namespace objects, each class seating
 itself with `rbModConstSet` in its defining module.
+
+### CI: an actioncable-only diff runs a minimal lane
+
+About 35 of the stories touch only `packages/actioncable/**`. Without
+scoping, each of those PRs runs all of Unit Tests, both DX-type lanes, and a
+Rails API/Test Comparison job that fetches and extracts every vendored source
+and runs every ratchet over every package. RFC 0171 fixed this for Thor with
+two stories, both done (trails#8284, trails#8337), which left a `thor_only`
+gate (`scripts/ci/thor-only.sh`) and a scoped `rails-comparison-thor` job
+in `.github/workflows/ci.yml`.
+
+Two root stories generalize that to Action Cable, and the lib chain waits for
+them:
+
+- `ci-actioncable-only-diffs-run-minimal-test-lanes`: an
+  `actioncable_only` flag, set when every changed path is under
+  `packages/actioncable/**` (or is its unported-files register). Under it,
+  the actioncable tests run, trailties tests are selected by import with
+  `vitest related`, the DX lanes skip, and Unit Tests keeps only the
+  tree-scanning guards. `port-actioncable-namespace-and-internal-constants`
+  depends on it.
+- `ci-actioncable-only-diffs-scope-rails-comparison-to-actioncable`: the
+  comparison job extracts and compares actioncable only, with each ratchet
+  scoped or listed as unscoped with the reason.
+  `enroll-actioncable-in-compare-tooling-and-parity-gates` depends on it
+  and proves it end to end with a seeded regression.
+
+Both generalize the thor scripts to a package list instead of copying them. A
+diff with any path outside the set runs today's matrix unchanged, so the
+stories that touch a shared register (enrollment, skip groups, CLAUDE.md, the
+rack and ruby-compat prerequisites, everything in trailties) get no shortcut.
+The package's own gate, `ACTIONCABLE_PKGS_RE`, comes from
+`actioncable-package-skeleton`; it lists the package and its dependencies,
+so an actioncable-only diff does not run the ActionPack suite.
+
+Alternatives: `paths-ignore` (skips checks the aggregator requires and
+cannot run a selected subset), a separate actioncable workflow (duplicates
+setup and splits the required-check set), and copying the two thor scripts
+(a third package would then need a third copy).
 
 ### Parity plan
 
@@ -469,18 +509,19 @@ every framework generator is, and its test is in trailties' population.
 
 ### Work outside `packages/actioncable`
 
-| Package           | Change                                                                                                              | Story                                                                                                                                                                         |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| rack, ruby-compat | `rack.hijack` on upgrade; `upgrade` on the `HttpServer` adapter                                                     | `rack-handler-node-offers-rack-hijack-on-upgrade`                                                                                                                             |
-| trailties         | Vite dev path forwards upgrades                                                                                     | `trails-dev-server-forwards-upgrade-requests-to-rack-handler`                                                                                                                 |
-| ruby-compat       | `ThreadPoolExecutor` shutdown surface, `global_io_executor`                                                         | `ruby-compat-thread-pool-executor-shutdown-and-task-counts`                                                                                                                   |
-| ruby-compat       | `TimerTask`, `AtomicFixnum`                                                                                         | `ruby-compat-concurrent-timer-task-and-atomic-fixnum`                                                                                                                         |
-| (CLAUDE.md)       | The ratified section                                                                                                | `ratify-node-event-loop-stands-in-for-the-nio4r-selector`                                                                                                                     |
-| activesupport     | `TopLevel.ActionCable` seat and type; the class-name reader if the mechanism needs it; `tagged` restoring on settle | `port-actioncable-namespace-and-internal-constants`, `actioncable-class-names-round-trip-through-constantize`, `port-actioncable-connection-tagged-logger-proxy`              |
-| activerecord      | `TopLevel.ActiveRecord` seat if 0169 has not landed it; a public route to an un-pooled raw connection               | `port-actioncable-server-worker`, `port-actioncable-postgresql-adapter`                                                                                                       |
-| actionpack        | `MountOptions` accepts `internal` / `anchor`                                                                        | `port-actioncable-engine`                                                                                                                                                     |
-| trailties         | Engine and its `rails/all` entry, generators, `NamedBase#js_template`, `app/channels` scan, `trails new`            | the five trailties stories in phase 9                                                                                                                                         |
-| scripts           | Enrollment, gates, unported-files, skip groups, CI PostgreSQL lane and Redis service                                | `enroll-actioncable-in-compare-tooling-and-parity-gates`, `port-actioncable-postgresql-adapter-tests-and-ci-lane`, `port-actioncable-redis-adapter-live-tests-and-ci-service` |
+| Package                      | Change                                                                                                              | Story                                                                                                                                                                         |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| scripts, `.github/workflows` | `actioncable_only` gate; scoped comparison job                                                                      | `ci-actioncable-only-diffs-run-minimal-test-lanes`, `ci-actioncable-only-diffs-scope-rails-comparison-to-actioncable`                                                         |
+| rack, ruby-compat            | `rack.hijack` on upgrade; `upgrade` on the `HttpServer` adapter                                                     | `rack-handler-node-offers-rack-hijack-on-upgrade`                                                                                                                             |
+| trailties                    | Vite dev path forwards upgrades                                                                                     | `trails-dev-server-forwards-upgrade-requests-to-rack-handler`                                                                                                                 |
+| ruby-compat                  | `ThreadPoolExecutor` shutdown surface, `global_io_executor`                                                         | `ruby-compat-thread-pool-executor-shutdown-and-task-counts`                                                                                                                   |
+| ruby-compat                  | `TimerTask`, `AtomicFixnum`                                                                                         | `ruby-compat-concurrent-timer-task-and-atomic-fixnum`                                                                                                                         |
+| (CLAUDE.md)                  | The ratified section                                                                                                | `ratify-node-event-loop-stands-in-for-the-nio4r-selector`                                                                                                                     |
+| activesupport                | `TopLevel.ActionCable` seat and type; the class-name reader if the mechanism needs it; `tagged` restoring on settle | `port-actioncable-namespace-and-internal-constants`, `actioncable-class-names-round-trip-through-constantize`, `port-actioncable-connection-tagged-logger-proxy`              |
+| activerecord                 | `TopLevel.ActiveRecord` seat if 0169 has not landed it; a public route to an un-pooled raw connection               | `port-actioncable-server-worker`, `port-actioncable-postgresql-adapter`                                                                                                       |
+| actionpack                   | `MountOptions` accepts `internal` / `anchor`                                                                        | `port-actioncable-engine`                                                                                                                                                     |
+| trailties                    | Engine and its `rails/all` entry, generators, `NamedBase#js_template`, `app/channels` scan, `trails new`            | the five trailties stories in phase 9                                                                                                                                         |
+| scripts                      | Enrollment, gates, unported-files, skip groups, CI PostgreSQL lane and Redis service                                | `enroll-actioncable-in-compare-tooling-and-parity-gates`, `port-actioncable-postgresql-adapter-tests-and-ci-lane`, `port-actioncable-redis-adapter-live-tests-and-ci-service` |
 
 ## Non-goals
 
@@ -533,22 +574,22 @@ every framework generator is, and its test is in trailties' population.
 
 ## Rollout
 
-| phase                                                                   | stories |    est-loc |
-| ----------------------------------------------------------------------- | ------: | ---------: |
-| 0. Outside the package: rack hijack, dev server, ruby-compat, CLAUDE.md |       5 |      1,220 |
-| 1. Package, enrollment, namespace, class names                          |       4 |      1,050 |
-| 2. Runtime primitives: logger proxy, worker, event loop                 |       3 |        800 |
-| 3. Server and pub/sub core, in-process adapters, test stubs             |       6 |      1,900 |
-| 4. Channel                                                              |       7 |      2,600 |
-| 5. Connection and socket layer                                          |      12 |      3,750 |
-| 6. Test helpers and TestCase classes                                    |       5 |      1,850 |
-| 7. End-to-end client tests                                              |       2 |        800 |
-| 8. PostgreSQL and Redis adapters                                        |       4 |      1,600 |
-| 9. Engine, generators, `trails new`, browser client, close-out          |       8 |      2,350 |
-| **Total**                                                               |  **56** | **17,920** |
+| phase                                                                               | stories |    est-loc |
+| ----------------------------------------------------------------------------------- | ------: | ---------: |
+| 0. Outside the package: CI scoping, rack hijack, dev server, ruby-compat, CLAUDE.md |       7 |      2,020 |
+| 1. Package, enrollment, namespace, class names                                      |       4 |      1,050 |
+| 2. Runtime primitives: logger proxy, worker, event loop                             |       3 |        800 |
+| 3. Server and pub/sub core, in-process adapters, test stubs                         |       6 |      1,900 |
+| 4. Channel                                                                          |       7 |      2,600 |
+| 5. Connection and socket layer                                                      |      12 |      3,750 |
+| 6. Test helpers and TestCase classes                                                |       5 |      1,850 |
+| 7. End-to-end client tests                                                          |       2 |        800 |
+| 8. PostgreSQL and Redis adapters                                                    |       4 |      1,600 |
+| 9. Engine, generators, `trails new`, browser client, close-out                      |       8 |      2,350 |
+| **Total**                                                                           |  **58** | **18,720** |
 
 **Dependency roots** (no deps, startable in parallel):
-`rack-handler-node-offers-rack-hijack-on-upgrade`, `ruby-compat-thread-pool-executor-shutdown-and-task-counts`, `ruby-compat-concurrent-timer-task-and-atomic-fixnum`, `ratify-node-event-loop-stands-in-for-the-nio4r-selector`, `actioncable-package-skeleton`.
+`ci-actioncable-only-diffs-run-minimal-test-lanes`, `ci-actioncable-only-diffs-scope-rails-comparison-to-actioncable`, `rack-handler-node-offers-rack-hijack-on-upgrade`, `ruby-compat-thread-pool-executor-shutdown-and-task-counts`, `ruby-compat-concurrent-timer-task-and-atomic-fixnum`, `ratify-node-event-loop-stands-in-for-the-nio4r-selector`, `actioncable-package-skeleton`.
 
 The suggested ordering put the whole socket layer after the "socket-free core".
 The source does not allow that, in two places:
@@ -569,9 +610,11 @@ adapters, the server, `TestHelper` and `Channel::TestCase`.
 ```text
 [roots] rack hijack ─→ dev server upgrade
         rc: executor, rc: timer/atomic, CLAUDE.md section
-        skeleton ─→ enroll ─→ namespace ─┬→ class names
-                                          ├→ tagged logger proxy ─→ worker (← rc: executor)
-                                          └→ event loop (← rc: executor, rc: timer, CLAUDE.md)
+        ci: scoped comparison ─┐
+        skeleton ─────────────┴→ enroll ─┐
+        ci: minimal test lanes ──────────┴→ namespace ─┬→ class names
+                                                        ├→ tagged logger proxy ─→ worker (← rc: executor)
+                                                        └→ event loop (← rc: executor, rc: timer, CLAUDE.md)
 class names ─→ configuration ─┐
 namespace ─→ subscriber map + base adapter ─→ server broadcasting ─┤
 worker + event loop ──────────────────────────────────────────────┴→ server base ─┬→ inline/async/test adapters
@@ -592,15 +635,17 @@ client test ─→ browser client interop
 everything ─→ close-out
 ```
 
-### 0. Outside the package: rack hijack, dev server, ruby-compat, CLAUDE.md
+### 0. Outside the package: CI scoping, rack hijack, dev server, ruby-compat, CLAUDE.md
 
-| story                                                         | est-loc | Rails cases |
-| ------------------------------------------------------------- | ------: | ----------: |
-| `rack-handler-node-offers-rack-hijack-on-upgrade`             |     400 |             |
-| `trails-dev-server-forwards-upgrade-requests-to-rack-handler` |     200 |             |
-| `ruby-compat-thread-pool-executor-shutdown-and-task-counts`   |     250 |             |
-| `ruby-compat-concurrent-timer-task-and-atomic-fixnum`         |     250 |             |
-| `ratify-node-event-loop-stands-in-for-the-nio4r-selector`     |     120 |             |
+| story                                                             | est-loc | Rails cases |
+| ----------------------------------------------------------------- | ------: | ----------: |
+| `ci-actioncable-only-diffs-run-minimal-test-lanes`                |     350 |             |
+| `ci-actioncable-only-diffs-scope-rails-comparison-to-actioncable` |     450 |             |
+| `rack-handler-node-offers-rack-hijack-on-upgrade`                 |     400 |             |
+| `trails-dev-server-forwards-upgrade-requests-to-rack-handler`     |     200 |             |
+| `ruby-compat-thread-pool-executor-shutdown-and-task-counts`       |     250 |             |
+| `ruby-compat-concurrent-timer-task-and-atomic-fixnum`             |     250 |             |
+| `ratify-node-event-loop-stands-in-for-the-nio4r-selector`         |     120 |             |
 
 ### 1. Package, enrollment, namespace, class names
 
@@ -707,13 +752,14 @@ everything ─→ close-out
   vitest matchers). Each story lists its cases, so a count can be compared per
   story.
 - **Infra stories** (rack, dev server, ruby-compat, CI service, enrollment):
-  sized from the trails files they touch and the tests they need.
+  sized from the trails files they touch and the tests they need. The two CI
+  scoping stories take the est-loc of their RFC 0171 counterparts (350, 450).
 - **Not in the estimate:** review-round rework and CI reruns. Growth would come
   from a Rails case exposing a port bug in another package; file it under this
   RFC with the Rails `file:line`.
 
 To compare later: count stories under this RFC and sum shipped PR LOC
-(additions + deletions, the ceiling's exclusions) against **56 / 17,920**.
+(additions + deletions, the ceiling's exclusions) against **58 / 18,720**.
 `actioncable-close-out` writes the comparison into the Changelog.
 
 ## Seed completeness
@@ -757,6 +803,10 @@ citing the Rails line this authoring missed.
 - `trails new` generates a cable config and `application_cable` classes; the
   generated app answers a WebSocket at `/cable` under both `trails server`
   paths; `trails g channel chat speak` writes a channel and its test.
+- An actioncable-only PR runs the scoped comparison job and the minimal test
+  lanes, and a PR touching any other path runs today's full matrix; the
+  before/after wall-clock is recorded in the first lib PR after the CI
+  stories.
 - `parity:api` / `parity:test` deltas for every other package are
   non-negative at every step.
 
@@ -831,3 +881,6 @@ silently.
 ## Changelog
 
 - 2026-10-01: initial RFC (56 stories, 17,920 est-loc).
+- 2026-10-02: owner direction: added two root CI-scoping stories, generalizing
+  RFC 0171's thor-only gate and scoped comparison job to Action Cable
+  (58 stories, 18,720 est-loc).
