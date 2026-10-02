@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Access#slice / #values_at call index_with and public_send as Rails does"
-status: ready
+status: claimed
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-02T14:42:18Z"
+assignee: "access-slice-index-with-receiver-shape-and-public-send"
 blocked-by: null
 closed-reason: null
 ---

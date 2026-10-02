@@ -1,6 +1,6 @@
 ---
 title: "parity: the call-args gate reads an explicit-self receiver (self.foo.last) as a simple receiver"
-status: draft
+status: closed
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "moot before any work: trails#8392 added last to RECEIVER_AS_FIRST_ARG, so the one receipt this story owned (contexts.ts currentCustomContext) flags nothing and was deleted in trails#8396"
 ---
 
 ## Context

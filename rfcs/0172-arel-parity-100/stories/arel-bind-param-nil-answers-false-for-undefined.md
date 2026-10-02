@@ -1,6 +1,6 @@
 ---
 title: "arel: BindParam#nil? answers false for an undefined value where Rails has only nil"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null

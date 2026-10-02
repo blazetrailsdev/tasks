@@ -1,6 +1,6 @@
 ---
 title: "activemodel's four open-coded Object#dup sites onto rbObjDup/rbObjClone"
-status: ready
+status: done
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8399
+claim: "2026-10-02T14:02:12Z"
+assignee: "arel-remaining-nil-sends-read-ruby-compat-is-nil"
 blocked-by: null
 closed-reason: null
 ---

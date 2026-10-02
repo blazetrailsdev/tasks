@@ -1,6 +1,6 @@
 ---
 title: "arel: ToSql#unboundable? is split into a boolean and an invented unboundableSign helper"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null

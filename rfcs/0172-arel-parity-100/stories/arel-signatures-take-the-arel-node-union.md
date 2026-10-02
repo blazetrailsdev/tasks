@@ -1,6 +1,6 @@
 ---
 title: "arel: signatures take the arel_node? union (Node | Attribute | SqlLiteral) (~500 LOC, types only)"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8400
+claim: "2026-10-02T14:21:55Z"
+assignee: "arel-signatures-take-the-arel-node-union"
 blocked-by: null
 closed-reason: null
 ---

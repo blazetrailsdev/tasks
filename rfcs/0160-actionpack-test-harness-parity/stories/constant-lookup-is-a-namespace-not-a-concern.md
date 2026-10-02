@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport::Testing::ConstantLookup is a namespace, so TestCase::Behavior cannot include it"
-status: ready
+status: done
 updated: 2026-10-02
 rfc: "0160-actionpack-test-harness-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8399
+claim: "2026-10-02T14:02:12Z"
+assignee: "arel-remaining-nil-sends-read-ruby-compat-is-nil"
 blocked-by: null
 closed-reason: null
 ---

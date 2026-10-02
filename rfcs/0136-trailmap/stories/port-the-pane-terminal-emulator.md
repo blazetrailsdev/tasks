@@ -1,7 +1,7 @@
 ---
 title: "Run ringo's pane terminal replay in trailmap, loaded rather than ported"
-status: ready
-updated: 2026-09-09
+status: in-progress
+updated: 2026-10-02
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trailmap#27
+claim: "2026-10-02T14:42:50Z"
+assignee: "port-the-pane-terminal-emulator"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: adapter/schema-statement methods return what Rails callers read (void-returns report)"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0174-activerecord-api-parity-100"
 cluster: arms

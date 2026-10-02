@@ -1,6 +1,6 @@
 ---
 title: "arel: Casted/Quoted#nil?, ToSql's right.nil? and Predications#open_ended? hand-roll the nil? send"
-status: ready
+status: blocked
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-02T14:02:12Z"
+assignee: "arel-remaining-nil-sends-read-ruby-compat-is-nil"
+blocked-by: "Needs ruby-compat isNil, which only exists in trails#8397 (still OPEN, unmerged). That PR also edits predications.ts and to-sql.ts, so this cannot ship from main without stacking. Unblock when trails#8397 merges."
 closed-reason: null
 ---
 
