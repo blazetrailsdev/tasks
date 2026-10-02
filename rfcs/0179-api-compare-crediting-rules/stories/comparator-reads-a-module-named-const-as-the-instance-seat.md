@@ -2,8 +2,8 @@
 title: "api-compare: a const named after the Rails module is the instance seat, so timestamp/persistence/normalization drop InstanceMethods"
 status: draft
 updated: 2026-10-02
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0179-api-compare-crediting-rules"
+cluster: surface
 packages: ["activerecord"]
 deps: []
 deps-rfc: []

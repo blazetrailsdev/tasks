@@ -2,8 +2,8 @@
 title: "parity: the call gate proves Array-literal ivars and Kernel#Array receivers for size / last"
 status: draft
 updated: 2026-10-02
-rfc: "0174-activerecord-api-parity-100"
-cluster: receipts
+rfc: "0179-api-compare-crediting-rules"
+cluster: call-set
 packages: ["activerecord"]
 deps: []
 deps-rfc: []

@@ -11,6 +11,7 @@ clusters:
   - arms
 related-rfcs:
   - "0174-activerecord-api-parity-100"
+  - "0179-api-compare-crediting-rules"
   - "0113-branch-and-guard-parity"
   - "0127-fidelity-tooling-signals-and-hygiene"
   - "0156-parity-beyond-name-presence"
@@ -86,6 +87,7 @@ This table is repeated in 0174 § "Split: RFC 0178".
 | `parity:api:arms:report`, `parity:api:returns` or `parity:api:duck-types`        | here                               |
 | the extractor or fold behind those three reports (`scripts/api-compare/`)        | here                               |
 | `parity:api:arms:throws`, `:blocks`, `:parents` (gated, owned by RFCs 0127/0156) | `0174-activerecord-api-parity-100` |
+| a call-set, call-argument, extra-surface or advisory-report rule in the comparer | `0179-api-compare-crediting-rules` |
 | any other activerecord source-side axis                                          | `0174-activerecord-api-parity-100` |
 
 A story that deletes rows on two axes goes where its first acceptance criterion points. A story that a

@@ -2,8 +2,8 @@
 title: "parity: the call gate credits a ruby-compat import renamed around a module-level homonym"
 status: draft
 updated: 2026-10-02
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0179-api-compare-crediting-rules"
+cluster: call-set
 packages: []
 deps: []
 deps-rfc: []

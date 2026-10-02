@@ -2,8 +2,8 @@
 title: "parity: the extra-surface scorer follows a cross-package extend edge to the extender"
 status: draft
 updated: 2026-10-02
-rfc: "0174-activerecord-api-parity-100"
-cluster: receipts
+rfc: "0179-api-compare-crediting-rules"
+cluster: surface
 packages: ["activerecord"]
 deps: []
 deps-rfc: []

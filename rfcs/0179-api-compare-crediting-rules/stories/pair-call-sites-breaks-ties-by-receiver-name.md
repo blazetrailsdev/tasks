@@ -2,8 +2,8 @@
 title: "pairCallSites breaks a same-name tie by the Ruby receiver's name, not source order"
 status: draft
 updated: 2026-10-01
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0179-api-compare-crediting-rules"
+cluster: call-args
 packages: []
 deps: []
 deps-rfc: []
