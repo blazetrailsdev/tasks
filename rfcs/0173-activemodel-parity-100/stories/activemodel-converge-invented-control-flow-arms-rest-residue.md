@@ -1,6 +1,6 @@
 ---
 title: "activemodel: converge the 20 invented-arm rows the arms-rest story left"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: arms
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8422
+claim: "2026-10-02T21:02:05Z"
+assignee: "activemodel-converge-invented-control-flow-arms-rest-residue"
 blocked-by: null
 closed-reason: null
 ---

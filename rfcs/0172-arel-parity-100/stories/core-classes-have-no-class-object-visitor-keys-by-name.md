@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: seat class objects for the core classes so Object#class answers a class, and retire arel Visitor's name-keyed dispatch"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: null
