@@ -85,6 +85,7 @@ turns true.
 - [ ] **The health check** is `->(env) { Rails::HealthController.action(:show).call(env) }` (`packages/trailties/src/health-controller.ts:4`).
 - [ ] **The `asset` initializer** appends to `app.config.assets.precompile` only if `app.config.respond_to?(:assets)`. trails has no Sprockets; port the guard, which is then false.
 - [ ] **`deprecators[:action_cable]`** is the bare-keyed `actionCable` per RFC 0149.
+- [ ] **CI gate.** trailties imports actioncable from this story on, so add `actioncable` to `TRAILTIES_PKGS_RE` (`.github/workflows/ci.yml:119`) here.
 - [ ] **`Rails.env.development?`** is `TopLevel.Trails!.env`.
 
 ## Acceptance criteria

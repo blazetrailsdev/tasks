@@ -58,9 +58,16 @@ in trails#7453) and confirm each line still exists:
   `packages/activerecord/virtualized-dx-tests/tsconfig.json` `paths`;
 - `packages/activesupport/src/cache/file-store-lock-worker-hooks.trails.mjs`:
   confirm it resolves the new package generically;
-- `.github/workflows/ci.yml`: an actioncable path in `AP_PKGS_RE` (`:117`)
-  and `TRAILTIES_PKGS_RE` (`:119`), `packages/actioncable` in a
-  `pnpm vitest run` step, and the coverage package list. Update
+- `.github/workflows/ci.yml`: a gate of its own for the package,
+  `ACTIONCABLE_PKGS_RE`, beside `RACK_PKGS_RE` (`:122`), matching
+  `packages/actioncable` and the packages it depends on (activesupport,
+  actionpack, rack, ruby-compat), with a `set_gate` line (`:290-295`) and
+  a `pnpm vitest run packages/actioncable` step it controls; plus the
+  coverage package list. **Do not add actioncable to `AP_PKGS_RE`
+  (`:117`)**: actionpack does not depend on it, and doing so would run the
+  ActionPack suite on every actioncable-only diff. It joins
+  `TRAILTIES_PKGS_RE` (`:119`) in `port-actioncable-engine`, when
+  trailties first imports it, not here. Update
   `scripts/ci-suite-coverage.test.ts`'s fixture literals if the edited
   `run:` line is one they `.replace()`.
 
@@ -74,6 +81,7 @@ in trails#7453) and confirm each line still exists:
 
 - [ ] **`ActionCable.deprecator` is memoized** (`@deprecator ||=`), one instance for the process. The engine registers that same instance in `app.deprecators`.
 - [ ] **A missing `ci.yml` lane fails `scripts/ci-suite-coverage.test.ts` in Unit Tests**, not in the lane you forgot.
+- [ ] **The gate lists dependencies, not dependents.** A change to activesupport must run the actioncable tests; a change to actioncable must not run activesupport's.
 
 ## Acceptance criteria
 
