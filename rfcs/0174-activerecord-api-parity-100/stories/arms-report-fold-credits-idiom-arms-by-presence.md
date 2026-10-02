@@ -1,13 +1,13 @@
 ---
-title: "arms-report-fold-credits-idiom-arms-by-presence"
+title: "api-compare: the arms fold credits a Ruby uniq/concat with an arm whenever the port has any if/loop"
 status: draft
 updated: 2026-10-01
 rfc: "0174-activerecord-api-parity-100"
-cluster: null
-packages: []
+cluster: arms
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
@@ -18,11 +18,11 @@ closed-reason: null
 
 ## Context
 
-`pnpm parity:api:arms:report --package=activerecord --direction=missing` still lists five `relation/`
+`pnpm parity:api:arms:report --package=activerecord --direction=missing` still lists four `relation/`
 pairs after `activerecord-converge-missing-control-flow-arms-relation` converged every branch those
-bodies had dropped. Each remaining row is produced by the fold, not by the port. Two causes:
+bodies had dropped. Each remaining row is produced by the fold, not by the port. One cause:
 
-**1. An idiom lowering is chosen by token PRESENCE, not by count.**
+**An idiom lowering is chosen by token PRESENCE, not by count.**
 `skeletonIdiomLowering` (`scripts/api-compare/enumerable-idioms.ts:297-309`) takes the longest
 alternative whose tokens the counterpart stream `includes`. A body with any unrelated `if` or `loop`
 therefore credits every Ruby `uniq` / `concat` with an arm, even where the port names the call itself
@@ -45,14 +45,7 @@ purpose, so a plain count budget is not the fix. The narrower rule that does not
 counterpart names the idiom's own call (`ref:uniq` for Ruby `uniq`), that call IS the port and the
 lowering is the empty alternative, one Ruby reach per TS reach.
 
-**2. A TS call to a ported `each` is not folded.** Ruby `join_dependency.each(&block)` folds to
-`loop` (`enumerable-idioms.ts:238`); its line-for-line port `joinDependency.each(block)` stays
-`ref:each`, because only `forEach` folds on the TS side (`compare.ts:392,455`).
-
-- `relation/query-methods.ts#eachJoinDependencies` — `-loop`
-  (`query_methods.rb:1729-1733`).
-
-A sixth row, `relation/calculations.ts#pluck` `-if`, is not tool noise: it is Rails' two
+A fifth row, `relation/calculations.ts#pluck` `-if`, is not tool noise: it is Rails' two
 `if @async … Promise::Complete.new` arms (`calculations.rb:293-297,302-306`), which trails does not
 port because it uses native promises.
 
@@ -60,5 +53,4 @@ port because it uses native promises.
 
 - [ ] A Ruby idiom reach whose counterpart names the same call folds to its empty alternative,
       one reach per reach, with a `fold-skeleton-tokens.test.ts` case; the `filter_map` test stays green.
-- [ ] A TS `ref:each` folds to `loop`, with a test.
-- [ ] The five pairs above leave the missing-direction report, and the report's total moves only down.
+- [ ] The four pairs above leave the missing-direction report, and the report's total moves only down.
