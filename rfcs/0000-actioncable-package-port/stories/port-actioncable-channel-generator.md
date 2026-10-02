@@ -63,7 +63,7 @@ not add a stand-in.
 
 ## Rails tests owned by this story
 
-- `vendor/rails/v8.0.2/railties/test/generators/channel_generator_test.rb`:
+- `vendor/rails/v8.0.2/railties/test/generators/channel_generator_test.rb` (trailties' `parity:test` population):
   - [ ] `shared channel files are created`
   - [ ] `specific channel files are created under importmap`
   - [ ] `specific channel files are created under node`

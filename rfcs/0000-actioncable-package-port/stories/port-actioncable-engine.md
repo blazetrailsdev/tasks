@@ -64,6 +64,12 @@ turns true.
 
 - `vendor/rails/v8.0.2/actioncable/lib/action_cable/engine.rb`
 
+## Rails tests owned by this story
+
+- `vendor/rails/v8.0.2/railties/test/application/configuration_test.rb` (trailties' `parity:test` population):
+  - [ ] `ActionCable.server.config.cable is set when missing configuration for the current environment (:3632)`
+  - [ ] `Rails.application.deprecators includes framework deprecators (:4265; the ActionCable.deprecator assertion at :4269)`
+
 ## Fidelity traps (predicted at authoring)
 
 - [ ] **`on_load(:action_cable)` blocks run with `self` as the Configuration** (`server/base.rb:107` passes `Base.config`). `self.logger ||= ::Rails.logger`, `self.cable = …`, `self.connection_class = …` and `send("#{k}=", v)` are all configuration writers.
@@ -86,7 +92,7 @@ turns true.
 - [ ] `engine.rb` reads complete in `parity:api` at its trailties path, with all eight initializers under their Rails names.
 - [ ] `packages/trailties/src/all.ts` imports the engine at its `rails/all` position.
 - [ ] A booted fixture app answers a WebSocket upgrade at `/cable` with a welcome message, and `config.action_cable.mount_path = nil` removes the route.
-- [ ] The two railties cases are ported or extended as described.
+- [ ] Both `configuration_test.rb` cases listed above are credited in `parity:test` for trailties: the first ported, the second carrying its `ActionCable.deprecator` assertion.
 - [ ] A plain-node import of the built engine module as the entry module succeeds.
 
 ## Definition of done

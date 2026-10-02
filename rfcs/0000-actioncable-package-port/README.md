@@ -65,8 +65,9 @@ the server has no `upgrade` listener). That is the root story.
 (the tasks-repo ceiling is 700). Every file under `actioncable/lib` (45
 `.rb`, 7 generator templates, 1 `USAGE`) and every one of the 41 Ruby test
 files is owned by exactly one story (two test files are split by case). Every
-one of the 171 extracted test cases, the 9 shared-module cases and the 13
-railties generator cases is listed by name in the story that ports it.
+one of the 171 extracted test cases, the 9 shared-module cases, the 13
+railties generator cases and the 2 railties `configuration_test.rb` cases is
+listed by name in the story that ports it.
 
 ## Motivation
 
@@ -689,7 +690,7 @@ everything ─→ close-out
 | story                                                    | est-loc | Rails cases |
 | -------------------------------------------------------- | ------: | ----------: |
 | `port-actioncable-helper`                                |     150 |             |
-| `port-actioncable-engine`                                |     500 |             |
+| `port-actioncable-engine`                                |     500 |           2 |
 | `eager-load-app-channels-in-finisher`                    |     250 |             |
 | `port-actioncable-test-unit-channel-generator`           |     150 |             |
 | `port-actioncable-channel-generator`                     |     550 |          13 |
@@ -722,7 +723,11 @@ owned by exactly one story.
 Every Ruby file under `actioncable/test` is owned by exactly one story, except
 `client_test.rb` and `subscription_adapter/redis_test.rb`, which are split by
 case. All 171 extracted cases are assigned by name exactly once, as are the 9
-shared-module cases and the 13 railties generator cases. The script that
+shared-module cases, the 13 railties `channel_generator_test.rb` cases
+(`port-actioncable-channel-generator`) and the 2 railties
+`configuration_test.rb` cases (`port-actioncable-engine`): 195 in all, of
+which 185 are portable, non-shared cases (the Rollout tables' "Rails cases"
+column sums to that). The script that
 generated the story files asserts each of those statements against the vendored
 tree and the extractor's output, and asserts that no slug collides with an
 existing story.
@@ -736,7 +741,8 @@ citing the Rails line this authoring missed.
   the members in `SCOPED_SKIP_GROUPS`.
 - `pnpm parity:test` credits all 170 portable extracted cases and the shared
   cases under each including class; `javascript_package_test.rb` reads as
-  unported with its reason. trailties credits the 13 channel generator cases.
+  unported with its reason. trailties credits the 13 `channel_generator_test.rb`
+  cases and the 2 `configuration_test.rb` cases (`:3632`, `:4265`).
 - Every parity gate is green for actioncable at zero, with no baseline row,
   exclude shard or mark above 0, and actioncable is in `ROWLESS_PACKAGES`.
 - Every receipt under `packages/actioncable/src` is `PERMANENT`, sits in a
