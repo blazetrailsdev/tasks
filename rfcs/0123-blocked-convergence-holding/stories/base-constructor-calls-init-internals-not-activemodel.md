@@ -1,7 +1,7 @@
 ---
 title: "base-constructor-calls-init-internals-not-activemodel"
-status: blocked
-updated: 2026-09-29
+status: done
+updated: 2026-10-03
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8439
 claim: "2026-09-02T00:37:12Z"
 assignee: "actionview-partial-renderer-bodies-pass-rails-arguments"
-blocked-by: "JS requires super() to run before any `this` access, so ActiveRecord's Core#initialize (core.rb:475) cannot call init_internals BEFORE ActiveModel::API#initialize's assign_attributes (api.rb:80-84) the way Ruby does. In trails the AM constructor performs the attribute assignment, and every AR attribute write needs the _attributes object that _Core.initInternals installs, so moving the call into base.ts's constructor body (the earliest point after super()) would run assignment against uninitialised internals. The prepend chain already dispatches on the instance, so the AR layers do run; only the calling layer is wrong, and no settled TS idiom relocates work ahead of super()."
+blocked-by: null
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Attribute#initialize_dup hand-rolls @value.dup in a dupValue helper Rails does not have"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

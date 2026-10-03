@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Attribute#value_for_database memo ivar keeps its Rails name"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: receipts

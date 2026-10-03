@@ -1,6 +1,6 @@
 ---
 title: "parity: the extra-surface scorer follows a cross-package extend edge to the extender"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: surface

@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Type::String#cast_value's ::String.new(value) has no JS carrier and no ratifying section"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

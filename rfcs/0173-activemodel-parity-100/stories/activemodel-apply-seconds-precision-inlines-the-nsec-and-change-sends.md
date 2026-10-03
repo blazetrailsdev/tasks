@@ -1,6 +1,6 @@
 ---
 title: "activemodel: TimeValue#apply_seconds_precision inlines every seat's nsec and change instead of sending them"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

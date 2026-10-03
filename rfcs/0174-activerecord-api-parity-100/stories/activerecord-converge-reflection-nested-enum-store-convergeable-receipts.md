@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the CONVERGEABLE receipts in reflection.ts, nested-attributes.ts, enum.ts, store.ts"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts

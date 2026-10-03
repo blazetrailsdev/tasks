@@ -1,6 +1,6 @@
 ---
 title: "activemodel: the Model constructor calls init_internals and needs a no-op root Rails does not have"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-10-03T11:55:23Z"
-assignee: "bcrypt-generate-salt-reaches-bc-salt"
+claim: "2026-10-03T12:55:20Z"
+assignee: "apply-seconds-precision-raises-range-error-for-a-non-integer-precision"
 blocked-by: null
 closed-reason: null
 ---

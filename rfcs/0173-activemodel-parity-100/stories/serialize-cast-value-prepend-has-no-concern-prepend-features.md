@@ -1,6 +1,6 @@
 ---
 title: "SerializeCastValue is a class module, so prepend skips Concern#prepend_features"
-status: claimed
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: trails#8444
 claim: "2026-10-03T11:55:23Z"
 assignee: "bcrypt-generate-salt-reaches-bc-salt"
 blocked-by: null

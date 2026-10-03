@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Errors' [Symbol.iterator] is derived by ruby-compat's Enumerable from each"
-status: ready
-updated: 2026-10-02
+status: done
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
 packages: ["activemodel", "ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8445
+claim: "2026-10-03T12:25:20Z"
+assignee: "errors-symbol-iterator-comes-from-ruby-compat-enumerable"
 blocked-by: null
 closed-reason: null
 ---
