@@ -17,6 +17,7 @@ packages:
   - "activemodel"
   - "trailties"
   - "arel"
+  - "rack"
 clusters:
   - "mri-relocation"
   - "measurement"
