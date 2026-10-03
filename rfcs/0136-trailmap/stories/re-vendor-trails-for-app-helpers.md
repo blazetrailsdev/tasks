@@ -1,7 +1,7 @@
 ---
 title: "Re-vendor trails for working app/helpers, and make TRAILS_PIN true"
-status: in-progress
-updated: 2026-10-02
+status: done
+updated: 2026-10-03
 rfc: "0136-trailmap"
 cluster: null
 packages: []

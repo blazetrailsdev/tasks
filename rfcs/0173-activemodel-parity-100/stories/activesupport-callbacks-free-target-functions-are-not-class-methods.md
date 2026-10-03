@@ -1,6 +1,6 @@
 ---
 title: "activesupport: the free target-taking callback functions and CallbacksMixin stand in for Callbacks::ClassMethods"
-status: ready
+status: in-progress
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8453
+claim: "2026-10-03T18:35:22Z"
+assignee: "activesupport-callbacks-free-target-functions-are-not-class-methods"
 blocked-by: null
 closed-reason: null
 ---

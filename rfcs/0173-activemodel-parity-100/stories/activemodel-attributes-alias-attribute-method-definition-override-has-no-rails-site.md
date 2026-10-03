@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Attributes' alias_attribute_method_definition override has no Rails site and no receipt form"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

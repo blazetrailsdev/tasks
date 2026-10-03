@@ -1,7 +1,7 @@
 ---
 title: "Reconcile trailmap's kebab view directories with the underscored ones trails now generates"
-status: draft
-updated: 2026-09-09
+status: done
+updated: 2026-10-03
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#30
+claim: "2026-10-03T18:08:05Z"
+assignee: "reconcile-view-directory-spelling-with-trails"
 blocked-by: null
 closed-reason: null
 ---

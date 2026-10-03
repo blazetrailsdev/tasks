@@ -1,9 +1,9 @@
 ---
 rfc: "0179-api-compare-crediting-rules"
 title: "api-compare crediting rules: stop the gates flagging a correct port — split from RFC 0174"
-status: active
+status: closed
 created: 2026-10-02
-updated: 2026-10-02
+updated: 2026-10-03
 owner: "@deanmarano"
 packages:
   - "activerecord"

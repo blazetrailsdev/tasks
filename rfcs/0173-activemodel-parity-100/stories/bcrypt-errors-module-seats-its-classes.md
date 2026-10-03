@@ -1,6 +1,6 @@
 ---
 title: "bcrypt: BCrypt::Errors is a named module whose error classes are const_set under it"
-status: ready
+status: in-progress
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8454
+claim: "2026-10-03T18:47:05Z"
+assignee: "bcrypt-errors-module-seats-its-classes"
 blocked-by: null
 closed-reason: null
 ---
