@@ -1,7 +1,7 @@
 ---
 title: "parity: the structural-duplicates report still matches four residual shapes that are not ruby-compat reimplementations"
-status: ready
-updated: 2026-10-02
+status: claimed
+updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: reports
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-03T03:55:19Z"
+assignee: "structural-duplicates-report-residual-shape-false-positives"
 blocked-by: null
 closed-reason: null
 ---

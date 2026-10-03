@@ -1,6 +1,6 @@
 ---
 title: 'parity: rbFSend(recv, "name", …) with a literal name is a call to name'
-status: claimed
+status: in-progress
 updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8436
 claim: "2026-10-03T02:55:22Z"
 assignee: "call-gate-credits-argumentless-hash-new-as-a-literal"
 blocked-by: null

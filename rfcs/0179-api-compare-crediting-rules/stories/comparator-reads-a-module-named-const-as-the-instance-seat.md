@@ -1,7 +1,7 @@
 ---
 title: "api-compare: a const named after the Rails module is the instance seat, so timestamp/persistence/normalization drop InstanceMethods"
-status: ready
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: surface
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8437
+claim: "2026-10-03T03:25:19Z"
+assignee: "comparator-reads-a-module-named-const-as-the-instance-seat"
 blocked-by: null
 closed-reason: null
 ---
