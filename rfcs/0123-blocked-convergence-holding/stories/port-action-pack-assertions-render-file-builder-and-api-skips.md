@@ -2,7 +2,7 @@
 title: "port-action-pack-assertions-render-file-builder-and-api-skips"
 status: blocked
 updated: 2026-10-01
-rfc: "0160-actionpack-test-harness-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["actionpack"]
 deps:
