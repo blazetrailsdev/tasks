@@ -1,6 +1,6 @@
 ---
 title: "callbacks-update-callbacks-reads-its-own-descendants"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0023-surfaced-deviations"
 cluster: null

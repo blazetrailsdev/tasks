@@ -1,6 +1,6 @@
 ---
 title: "activemodel: define_model_callbacks sends _define_*_model_callback; macros drop extractMacroOptions"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: receipts

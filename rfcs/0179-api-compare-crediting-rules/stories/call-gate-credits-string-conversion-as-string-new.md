@@ -1,6 +1,6 @@
 ---
 title: "parity: String.new(x) is the String(x) conversion call, not an omitted new"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set

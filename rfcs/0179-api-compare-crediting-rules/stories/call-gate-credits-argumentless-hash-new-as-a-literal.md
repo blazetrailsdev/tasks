@@ -1,6 +1,6 @@
 ---
 title: "parity: an argument-less Hash.new / Array.new is a literal, not an omitted call"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set

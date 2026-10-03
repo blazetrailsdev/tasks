@@ -1,6 +1,6 @@
 ---
 title: "activemodel: AttributeMethods' construction-time initInternals resurrection has no Rails counterpart"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: receipts

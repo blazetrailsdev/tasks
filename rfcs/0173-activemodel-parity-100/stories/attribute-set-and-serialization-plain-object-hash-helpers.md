@@ -1,6 +1,6 @@
 ---
 title: "activemodel: frozenErrorRaisingStore and safeSet go when the Hash stand-in holds frozen state and any key"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: receipts

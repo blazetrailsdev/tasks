@@ -1,6 +1,6 @@
 ---
 title: "activemodel: apply_seconds_precision raises RangeError for a non-Integer precision where Rails does Float arithmetic"
-status: claimed
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8446
 claim: "2026-10-03T12:55:20Z"
 assignee: "apply-seconds-precision-raises-range-error-for-a-non-integer-precision"
 blocked-by: null
