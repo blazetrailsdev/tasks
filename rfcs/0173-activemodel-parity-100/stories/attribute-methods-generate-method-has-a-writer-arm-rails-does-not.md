@@ -1,6 +1,6 @@
 ---
 title: "activemodel: define_attribute_method_pattern builds generate_method in one expression"
-status: claimed
+status: in-progress
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: trails#8455
 claim: "2026-10-03T18:46:13Z"
 assignee: "activesupport-callbacks-is-a-plain-object-not-a-concern-module"
 blocked-by: null
