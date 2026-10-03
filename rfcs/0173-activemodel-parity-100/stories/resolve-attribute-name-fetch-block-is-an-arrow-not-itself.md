@@ -1,6 +1,6 @@
 ---
 title: "activemodel: resolve_attribute_name's &:itself block is an inline identity arrow"
-status: ready
+status: blocked
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-03T09:25:23Z"
+assignee: "activemodel-binary-data-hex-open-codes-unpack1"
+blocked-by: "No second itself call site: across vendor/ the only other one is actionview/lib/action_view/test_case.rb:149 (:itself.to_proc), which has no trails port, so the story's own gate (export Kernel#itself only if a second site takes it) is not met. Unblocks when action_view/test_case.rb is ported."
 closed-reason: null
 ---
 

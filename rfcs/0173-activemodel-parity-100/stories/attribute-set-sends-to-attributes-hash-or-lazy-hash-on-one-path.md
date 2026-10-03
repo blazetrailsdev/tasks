@@ -1,6 +1,6 @@
 ---
 title: "activemodel: AttributeSet sends key?/each_key/fetch to @attributes on one path, Hash or LazyAttributeHash"
-status: ready
+status: in-progress
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8439
+claim: "2026-10-03T09:25:23Z"
+assignee: "activemodel-binary-data-hex-open-codes-unpack1"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Base.allocate sets and deletes four class-level flags per loaded row; Class#allocate mutates nothing"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

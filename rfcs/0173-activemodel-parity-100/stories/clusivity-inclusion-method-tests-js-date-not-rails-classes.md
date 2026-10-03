@@ -1,6 +1,6 @@
 ---
 title: "Clusivity#inclusion_method tests the JS Date and number where Rails names Numeric, Time, DateTime, Date"
-status: ready
+status: in-progress
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8439
+claim: "2026-10-03T09:25:23Z"
+assignee: "activemodel-binary-data-hex-open-codes-unpack1"
 blocked-by: null
 closed-reason: null
 ---

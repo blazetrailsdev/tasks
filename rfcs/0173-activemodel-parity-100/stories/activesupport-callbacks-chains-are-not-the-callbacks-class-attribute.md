@@ -1,6 +1,6 @@
 ---
 title: "activesupport: callback chains are not the __callbacks class attribute, so Callbacks' included do body has no seat"
-status: ready
+status: claimed
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-03T09:55:19Z"
+assignee: "activesupport-callbacks-chains-are-not-the-callbacks-class-attribute"
 blocked-by: null
 closed-reason: null
 ---

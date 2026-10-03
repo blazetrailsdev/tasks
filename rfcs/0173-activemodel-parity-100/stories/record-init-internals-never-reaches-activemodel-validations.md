@@ -1,6 +1,6 @@
 ---
 title: "activerecord: a record's init_internals never reaches ActiveModel::Validations#init_internals"
-status: draft
+status: blocked
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Base extends Model, and Model's API include puts the ActiveModel::Validations link above Model.prototype, so every module Base includes (Core's root among them) sits beneath it in a record's ancestry. Core#init_internals calls no super (core.rb:834), so nothing beneath it can reach a link above it, and include() skips a module already in the superclass ancestry (class.c:1281), so Base cannot re-include Validations after Core as activerecord/validations.rb does. Unblocks when Base includes ActiveModel::API's modules itself instead of inheriting them from Model."
 closed-reason: null
 ---
 
