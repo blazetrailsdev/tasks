@@ -53,5 +53,5 @@ own flags (`becomes-constructs-via-new-instead-of-allocate`), and
 
 - [ ] `allocate` sets and deletes no property on the class; `static _allocating` is gone.
 - [ ] A loaded record still builds no default attribute set, takes no STI dispatch and runs no initialize callback from the allocation (the trails#8428 tests keep passing).
-- [ ] A test: `allocate` leaves the class's own properties unchanged, and the allocation slot is restored, whether the constructor returns or throws.
-- [ ] Loading 11,531 rows of trailmap's `Story` is at or below `7cece02d`'s ~1.0 s.
+- [ ] A test: `allocate` adds no class state of its own while it constructs (only the constructor's own `_suppressInitializeCallback` handling, which every `new` does, may change), and leaves the class's own properties unchanged and the allocation slot restored, whether the constructor returns or throws.
+- [ ] Loading 11,531 rows of trailmap's `Story` is no slower than it was before trails#8399/#8428 by more than the constructor's remaining class write. Removing that write, and reaching `7cece02d`'s ~1.0 s, is `initialize-callbacks-are-suppressed-by-mutating-the-class`.
