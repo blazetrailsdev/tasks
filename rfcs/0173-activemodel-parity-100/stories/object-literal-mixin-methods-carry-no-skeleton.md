@@ -1,7 +1,7 @@
 ---
 title: "object-literal-mixin-methods-carry-no-skeleton"
-status: ready
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8448
+claim: "2026-10-03T16:07:12Z"
+assignee: "lazy-attribute-hash-default-value-and-equality"
 blocked-by: null
 closed-reason: null
 ---

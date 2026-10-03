@@ -1,7 +1,7 @@
 ---
 title: "validators-inherited-snapshot-is-copy-on-first-write"
-status: ready
-updated: 2026-10-02
+status: blocked
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-03T16:07:12Z"
+assignee: "lazy-attribute-hash-default-value-and-equality"
+blocked-by: "No class-definition hook in JS: Validations::ClassMethods#inherited (activemodel/lib/active_model/validations.rb:287-291) snapshots the parent's _validators when the subclass is DEFINED. Evaluating 'class Child extends Parent' runs no code on Parent (only a Proxy 'prototype' get trap could observe it, and classes are not Proxies), and the parent keeps no list of subclasses to snapshot into at its own later write, so the snapshot moment is unrecoverable. The copy-on-write in validations/with.ts already keeps child writes out of the parent; only the timing of a parent write made after the subclass is defined and before the subclass's first own write differs. Converging needs an invented registration step (decorator / explicit register call) on every model, which CLAUDE.md § 'inherited is deferred to own-property memo guards' rejects."
 closed-reason: null
 ---
 

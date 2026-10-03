@@ -1,6 +1,6 @@
 ---
 title: "activerecord: callbacks.ts and transactions.ts export Callbacks / Transactions in place of InstanceMethods"
-status: draft
+status: in-progress
 updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8447
+claim: "2026-10-03T16:08:09Z"
+assignee: "call-gate-credits-concurrent-array-new"
 blocked-by: null
 closed-reason: null
 ---

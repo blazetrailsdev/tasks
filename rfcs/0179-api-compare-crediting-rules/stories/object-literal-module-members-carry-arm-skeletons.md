@@ -1,6 +1,6 @@
 ---
 title: "api-compare: object-literal module members carry skeletons, keyed by owner"
-status: draft
+status: ready
 updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: null
