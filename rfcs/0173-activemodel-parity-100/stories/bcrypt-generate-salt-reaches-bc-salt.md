@@ -1,6 +1,6 @@
 ---
 title: "bcrypt: Engine.generate_salt reaches __bc_salt with OpenSSL random bytes, and answers nil above MAX_COST"
-status: ready
+status: claimed
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-03T11:55:23Z"
+assignee: "bcrypt-generate-salt-reaches-bc-salt"
 blocked-by: null
 closed-reason: null
 ---

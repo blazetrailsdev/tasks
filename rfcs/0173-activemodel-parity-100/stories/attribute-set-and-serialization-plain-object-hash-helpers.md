@@ -1,6 +1,6 @@
 ---
 title: "activemodel: frozenErrorRaisingStore and safeSet go when the Hash stand-in holds frozen state and any key"
-status: claimed
+status: in-progress
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#8442
 claim: "2026-10-03T10:55:20Z"
 assignee: "attribute-methods-construction-time-resurrection-has-no-rails-site"
 blocked-by: null

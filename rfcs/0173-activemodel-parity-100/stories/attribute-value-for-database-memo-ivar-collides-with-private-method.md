@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Attribute#value_for_database memo ivar keeps its Rails name"
-status: ready
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
 packages: ["activemodel"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8443
+claim: "2026-10-03T11:25:20Z"
+assignee: "attribute-methods-inline-generate-method-and-affix-parameters"
 blocked-by: null
 closed-reason: null
 ---
