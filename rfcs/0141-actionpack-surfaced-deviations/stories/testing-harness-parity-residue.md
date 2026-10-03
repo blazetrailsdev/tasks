@@ -2,7 +2,7 @@
 title: "Close RFC 0160 — call baselines and residue to zero"
 status: ready
 updated: 2026-09-28
-rfc: "0160-actionpack-test-harness-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]
 deps:
