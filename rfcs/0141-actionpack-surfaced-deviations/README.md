@@ -9,6 +9,7 @@ owner: "@deanmarano"
 packages:
   - "actionpack"
   - "trailties"
+  - "actionview"
 clusters:
   - "action-controller"
   - "test-harness"
