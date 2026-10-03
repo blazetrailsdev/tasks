@@ -1,6 +1,6 @@
 ---
 title: "parity: the call-argument gate aligns the receiver of function-form sort; Thor required_options sorts by byte"
-status: claimed
+status: in-progress
 updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8434
 claim: "2026-10-03T01:55:21Z"
 assignee: "call-args-gate-aligns-the-receiver-of-function-form-sort"
 blocked-by: null

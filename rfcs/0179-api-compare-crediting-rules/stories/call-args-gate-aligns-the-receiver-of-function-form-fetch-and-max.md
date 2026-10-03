@@ -1,6 +1,6 @@
 ---
 title: "parity: the call-argument gate aligns the receiver of function-form max"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-args

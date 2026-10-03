@@ -1,6 +1,6 @@
 ---
 title: "parity: the call-args gate aligns the receiver of a function-form Module#prepend / include / extend"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-args

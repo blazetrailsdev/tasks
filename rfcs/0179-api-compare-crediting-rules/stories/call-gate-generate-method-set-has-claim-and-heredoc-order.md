@@ -1,7 +1,7 @@
 ---
 title: "parity: the call gate's has claim and heredoc-blind order stream flag generate_method"
-status: ready
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8435
+claim: "2026-10-03T02:25:21Z"
+assignee: "call-gate-credits-a-ruby-compat-import-renamed-around-a-module-homonym"
 blocked-by: null
 closed-reason: null
 ---

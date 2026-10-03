@@ -1,7 +1,7 @@
 ---
 title: 'parity: rbFSend(recv, "name", …) with a literal name is a call to name'
-status: ready
-updated: 2026-10-02
+status: claimed
+updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-03T02:55:22Z"
+assignee: "call-gate-credits-argumentless-hash-new-as-a-literal"
 blocked-by: null
 closed-reason: null
 ---

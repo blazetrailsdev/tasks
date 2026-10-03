@@ -1,6 +1,6 @@
 ---
 title: "activemodel: TimeValue#apply_seconds_precision inlines every seat's nsec and change instead of sending them"
-status: claimed
+status: in-progress
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8434
 claim: "2026-10-03T01:55:21Z"
 assignee: "call-args-gate-aligns-the-receiver-of-function-form-sort"
 blocked-by: null
