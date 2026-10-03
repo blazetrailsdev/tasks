@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 Rails runs a record's initialize callbacks from Active Record itself, at the end of each construction path:
-`vendor/rails/v8.0.2/activerecord/lib/active_record/core.rb:481` (`initialize`), `:517` (`init_with_attributes`) and `:553` (`initialize_dup`), all `_run_initialize_callbacks`. The callback is Active Record's (`callbacks.rb:415`, `define_model_callbacks :initialize, :find, :touch, only: :after`). `ActiveModel::API#initialize` (`vendor/rails/v8.0.2/activemodel/lib/active_model/api.rb:47`) runs no callbacks.
+`vendor/rails/v8.0.2/activerecord/lib/active_record/core.rb:481` (`initialize`), `:517` (`init_with_attributes`) and `:553` (`initialize_dup`), all `_run_initialize_callbacks`. The callback is Active Record's (`callbacks.rb:415`, `define_model_callbacks :initialize, :find, :touch, only: :after`). `ActiveModel::API#initialize` (`vendor/rails/v8.0.2/activemodel/lib/active_model/api.rb:80-84`: `assign_attributes(attributes) if attributes; super()`) runs no callbacks.
 
 trails runs them from activemodel's `Model` constructor (`packages/activemodel/src/model.ts`): `runCallbacks(this, "initialize")` unless the class's `_suppressInitializeCallback` is `true`. So Active Record's constructor (`packages/activerecord/src/base.ts`) sets that flag on the class around every `super(attrs)` and restores it — with `delete` when the class had no own value — and then runs the callbacks itself, after its STI, scope-attribute and association work. Every `new` and every `allocate` therefore writes and deletes a property on the class object.
 
