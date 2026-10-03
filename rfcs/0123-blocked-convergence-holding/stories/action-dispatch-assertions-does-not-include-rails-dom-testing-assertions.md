@@ -2,7 +2,7 @@
 title: "ActionDispatch::Assertions does not include Rails::Dom::Testing::Assertions: the ported DomAssertions half is not a module and not reachable from actionpack"
 status: blocked
 updated: 2026-10-02
-rfc: "0160-actionpack-test-harness-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
