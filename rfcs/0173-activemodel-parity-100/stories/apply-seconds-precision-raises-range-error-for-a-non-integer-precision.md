@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activemodel"]
-deps: []
+deps:
+  - activemodel-apply-seconds-precision-inlines-the-nsec-and-change-sends
 deps-rfc: []
 est-loc: 80
 priority: null
