@@ -15,6 +15,7 @@ packages:
   - "activerecord-cli"
   - "activesupport"
   - "actionpack"
+  - "rack"
 clusters:
   - "boot"
   - "generators"
