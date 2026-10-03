@@ -2,7 +2,7 @@
 title: "TestsWithoutAssertions warning prints line 0, and the fixtures harness still names its test case by the bare title"
 status: draft
 updated: 2026-10-02
-rfc: "0160-actionpack-test-harness-parity"
+rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport", "activerecord"]
 deps: []
