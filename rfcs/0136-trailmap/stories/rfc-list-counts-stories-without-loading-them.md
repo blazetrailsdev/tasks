@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the RFC list loads every story record to count statuses"
-status: draft
+status: done
 updated: 2026-10-03
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#31
+claim: "2026-10-03T20:02:14Z"
+assignee: "rfc-list-counts-stories-without-loading-them"
 blocked-by: null
 closed-reason: null
 ---

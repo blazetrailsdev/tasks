@@ -1,6 +1,6 @@
 ---
 title: "parity: the call gate reads Array#prepend as Module#prepend, so __update_callbacks carries a PERMANENT receipt for unshift"
-status: ready
+status: claimed
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-03T20:52:08Z"
+assignee: "call-gate-reads-array-prepend-as-module-prepend"
 blocked-by: null
 closed-reason: null
 ---

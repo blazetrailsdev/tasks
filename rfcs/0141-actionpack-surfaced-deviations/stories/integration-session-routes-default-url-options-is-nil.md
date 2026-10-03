@@ -1,6 +1,6 @@
 ---
 title: "actionpack: an integration session's routes answer a nil default_url_options, so reverse_merge! tolerates nil"
-status: draft
+status: done
 updated: 2026-10-03
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8455
 claim: null
 assignee: null
 blocked-by: null
