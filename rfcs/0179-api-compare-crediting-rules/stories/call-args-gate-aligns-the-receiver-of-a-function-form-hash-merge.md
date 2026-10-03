@@ -1,7 +1,7 @@
 ---
 title: "parity: the call-args gate aligns the receiver of a function-form Hash#merge"
-status: in-progress
-updated: 2026-10-02
+status: done
+updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-args
 packages: ["activerecord", "actionpack"]

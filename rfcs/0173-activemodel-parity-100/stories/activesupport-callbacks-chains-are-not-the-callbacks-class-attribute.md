@@ -1,7 +1,7 @@
 ---
 title: "activesupport: callback chains are not the __callbacks class attribute, so Callbacks' included do body has no seat"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []

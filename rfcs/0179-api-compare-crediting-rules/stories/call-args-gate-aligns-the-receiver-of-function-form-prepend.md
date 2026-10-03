@@ -1,7 +1,7 @@
 ---
 title: "parity: the call-args gate aligns the receiver of a function-form Module#prepend / include / extend"
-status: ready
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-args
 packages: ["activerecord", "actionpack", "actionview", "activesupport"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8432
+claim: "2026-10-03T01:25:21Z"
+assignee: "call-args-gate-aligns-the-receiver-of-function-form-fetch-and-max"
 blocked-by: null
 closed-reason: null
 ---

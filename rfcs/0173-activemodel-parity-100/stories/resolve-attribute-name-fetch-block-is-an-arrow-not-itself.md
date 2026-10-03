@@ -1,7 +1,7 @@
 ---
 title: "activemodel: resolve_attribute_name's &:itself block is an inline identity arrow"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []

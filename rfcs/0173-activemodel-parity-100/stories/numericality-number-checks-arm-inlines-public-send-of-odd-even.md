@@ -1,7 +1,7 @@
 ---
 title: "activemodel: NumericalityValidator's NUMBER_CHECKS arm hand-writes value.to_i.public_send(:odd?/:even?)"
-status: draft
-updated: 2026-10-02
+status: closed
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8422 (f7ec7379fe): numericality.ts NUMBER_CHECKS arm is now rbFPublicSend(toI(value), NUMBER_CHECKS[option]); ruby-compat object.ts:677-679 answers isOdd/isEven for number/bigint. git grep 'num % 2n' on origin/main: no hits."
 ---
 
 ## Context

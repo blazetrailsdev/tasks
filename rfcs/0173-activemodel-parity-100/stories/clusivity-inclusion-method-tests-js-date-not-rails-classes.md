@@ -1,7 +1,7 @@
 ---
 title: "Clusivity#inclusion_method tests the JS Date and number where Rails names Numeric, Time, DateTime, Date"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activemodel"]

@@ -1,7 +1,7 @@
 ---
 title: "activesupport: define_callbacks does not generate _run_<name>_callbacks, so Validations::Callbacks hand-writes and includes it"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []

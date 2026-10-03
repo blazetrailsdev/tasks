@@ -1,6 +1,6 @@
 ---
 title: "activemodel: attribute_method_patterns_cache is a Concurrent::Map with initial_capacity"
-status: claimed
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8431
 claim: "2026-10-03T00:43:04Z"
 assignee: "activemodel-ruby-classpath-carriers-onto-rb-mod-name"
 blocked-by: null

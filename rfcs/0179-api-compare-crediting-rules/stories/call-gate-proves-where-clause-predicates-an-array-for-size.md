@@ -1,6 +1,6 @@
 ---
 title: "parity: the call gate proves WhereClause#predicates an Array for size"
-status: in-progress
+status: closed
 updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set
@@ -13,7 +13,7 @@ pr: trails#8430
 claim: "2026-10-03T00:42:12Z"
 assignee: "call-gate-credits-a-dynamic-import-as-kernel-load"
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by trails#8430: the .length-read credit (receiver-name tied) clears WhereClause#invert's predicates.size receipt; no Ruby-side predicates proof is needed"
 ---
 
 ## Context

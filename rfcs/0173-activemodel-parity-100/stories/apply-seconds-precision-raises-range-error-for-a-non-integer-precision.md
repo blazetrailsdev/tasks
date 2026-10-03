@@ -1,7 +1,7 @@
 ---
 title: "activemodel: apply_seconds_precision raises RangeError for a non-Integer precision where Rails does Float arithmetic"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activemodel"]

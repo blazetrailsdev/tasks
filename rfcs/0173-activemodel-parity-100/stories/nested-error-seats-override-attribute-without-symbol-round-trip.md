@@ -1,6 +1,6 @@
 ---
 title: "activemodel: NestedError seats override_options.fetch(:attribute) with no symbolToS(toSym(...)) round trip"
-status: draft
+status: ready
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

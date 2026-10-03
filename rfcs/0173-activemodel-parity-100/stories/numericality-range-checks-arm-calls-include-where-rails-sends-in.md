@@ -1,7 +1,7 @@
 ---
 title: "activemodel: NumericalityValidator's RANGE_CHECKS arm calls range.include? where Rails sends value.in?"
-status: draft
-updated: 2026-10-02
+status: closed
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8422 (f7ec7379fe): numericality.ts RANGE_CHECKS arm is now rbFPublicSend(value, RANGE_CHECKS[option], range) — receiver/arg no longer swapped, no direct range.isInclude call. Only a type-cast 'range' alias of optionValue remains (cosmetic)."
 ---
 
 ## Context

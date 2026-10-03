@@ -1,7 +1,7 @@
 ---
 title: 'activemodel: Binary::Data#hex open-codes unpack1("H*") over the Uint8Array seat'
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []

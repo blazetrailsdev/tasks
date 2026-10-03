@@ -1,7 +1,7 @@
 ---
 title: "activemodel: LazilyDefineAttributes#define_on and attribute_method? still walk prototypes through inspectAccessor"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activemodel", "ruby-compat"]

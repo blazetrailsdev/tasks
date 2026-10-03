@@ -1,7 +1,7 @@
 ---
 title: "activemodel: TimeValue#apply_seconds_precision inlines every seat's nsec and change instead of sending them"
-status: draft
-updated: 2026-10-02
+status: claimed
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-03T01:55:21Z"
+assignee: "call-args-gate-aligns-the-receiver-of-function-form-sort"
 blocked-by: null
 closed-reason: null
 ---

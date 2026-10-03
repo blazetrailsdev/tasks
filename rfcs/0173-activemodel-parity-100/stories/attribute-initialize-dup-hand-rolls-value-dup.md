@@ -1,7 +1,7 @@
 ---
 title: "Attribute#initialize_dup hand-rolls @value.dup in a dupValue helper Rails does not have"
-status: draft
-updated: 2026-10-02
+status: claimed
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activemodel"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-03T01:55:21Z"
+assignee: "call-args-gate-aligns-the-receiver-of-function-form-sort"
 blocked-by: null
 closed-reason: null
 ---

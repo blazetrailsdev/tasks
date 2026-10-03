@@ -1,6 +1,6 @@
 ---
 title: "activemodel: AttributeMethodPattern holds Rails' @regex / @method_name with no camelJoined re-casing"
-status: draft
+status: claimed
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-03T01:55:21Z"
+assignee: "call-args-gate-aligns-the-receiver-of-function-form-sort"
 blocked-by: null
 closed-reason: null
 ---

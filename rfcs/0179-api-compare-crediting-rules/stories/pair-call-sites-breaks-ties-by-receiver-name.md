@@ -1,7 +1,7 @@
 ---
 title: "pairCallSites breaks a same-name tie by the Ruby receiver's name, not source order"
-status: in-progress
-updated: 2026-10-02
+status: done
+updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-args
 packages: []

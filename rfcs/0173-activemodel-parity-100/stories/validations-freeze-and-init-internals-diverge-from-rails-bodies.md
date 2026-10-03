@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Validations#freeze calls Object.freeze where Rails calls super; init_internals omits @errors = nil"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activemodel"]

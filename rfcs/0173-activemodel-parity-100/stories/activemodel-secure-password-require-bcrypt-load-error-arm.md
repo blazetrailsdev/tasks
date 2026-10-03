@@ -1,6 +1,6 @@
 ---
 title: "activemodel: has_secure_password raises LoadError when the bcrypt gem port is not loaded (arm-throw mark 1 → 0)"
-status: claimed
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: calls-args
@@ -9,7 +9,7 @@ deps: ["activemodel-bcrypt-engine-into-a-bcrypt-gem-package"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8431
 claim: "2026-10-03T00:43:04Z"
 assignee: "activemodel-ruby-classpath-carriers-onto-rb-mod-name"
 blocked-by: null
