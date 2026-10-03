@@ -1,6 +1,6 @@
 ---
 title: "activemodel: define_call's property and method shapes share one MethodSet cache entry across classes"
-status: draft
+status: ready
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

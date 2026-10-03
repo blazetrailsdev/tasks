@@ -1,6 +1,6 @@
 ---
 title: "activesupport: callbacks.trails.test.ts builds classes that include Callbacks, not plain-object targets"
-status: draft
+status: claimed
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 650
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-03T21:58:32Z"
+assignee: "activesupport-callbacks-trails-test-builds-classes-not-plain-object-targets"
 blocked-by: null
 closed-reason: null
 ---

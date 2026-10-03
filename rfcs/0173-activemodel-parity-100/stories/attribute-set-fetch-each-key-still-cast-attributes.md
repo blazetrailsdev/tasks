@@ -1,6 +1,6 @@
 ---
 title: "activemodel: AttributeSet#fetch / keys / accessed still cast attributes; fetch, eachKey and hasKey take the receiver type"
-status: draft
+status: ready
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

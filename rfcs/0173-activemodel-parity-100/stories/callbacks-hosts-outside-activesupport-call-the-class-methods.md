@@ -1,6 +1,6 @@
 ---
 title: "activemodel/activerecord/trailties/actionpack: callback hosts include Callbacks and call the class methods"
-status: draft
+status: ready
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

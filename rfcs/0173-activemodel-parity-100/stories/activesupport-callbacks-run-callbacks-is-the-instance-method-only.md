@@ -1,6 +1,6 @@
 ---
 title: "activesupport: delete the free target-taking callback functions and CallbacksMixin; run_callbacks is the instance method only"
-status: draft
+status: ready
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

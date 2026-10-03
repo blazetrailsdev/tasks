@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat/date: @blazetrails/date DateTime is a kind of rbCDate but not of rbCDateTime"
-status: draft
+status: ready
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activemodel: LazyAttributeSet/LazyAttributeHash read types, casted_values and default_attributes by bare index"
-status: claimed
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8456
 claim: "2026-10-03T20:52:08Z"
 assignee: "call-gate-reads-array-prepend-as-module-prepend"
 blocked-by: null

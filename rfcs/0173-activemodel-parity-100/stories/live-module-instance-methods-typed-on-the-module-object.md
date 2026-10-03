@@ -1,6 +1,6 @@
 ---
 title: "activesupport: a live Module's instance methods are typed as properties of the module object"
-status: draft
+status: ready
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

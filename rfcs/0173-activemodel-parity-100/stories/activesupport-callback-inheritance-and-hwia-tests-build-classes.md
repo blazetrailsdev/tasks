@@ -1,6 +1,6 @@
 ---
 title: "activesupport: callback-inheritance and hwia-extended callback tests build the Rails class hierarchies"
-status: draft
+status: done
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8457
+claim: "2026-10-03T21:10:01Z"
+assignee: "activesupport-callback-inheritance-and-hwia-tests-build-classes"
 blocked-by: null
 closed-reason: null
 ---
