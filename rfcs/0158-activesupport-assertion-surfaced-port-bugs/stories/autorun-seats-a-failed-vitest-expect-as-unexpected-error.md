@@ -2,7 +2,7 @@
 title: "autorun seats a failed vitest expect as UnexpectedError; Minitest keeps a failed assertion as an Assertion"
 status: draft
 updated: 2026-10-02
-rfc: "0160-actionpack-test-harness-parity"
+rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport"]
 deps: []
