@@ -12,6 +12,7 @@ packages:
   - "activesupport"
   - "ruby-compat"
   - "actionview"
+  - "actionpack"
 clusters:
   - "schema"
   - "api-compare"
