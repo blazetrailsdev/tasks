@@ -1,6 +1,6 @@
 ---
 title: "activesupport: Callbacks is a plain-object module, so its included hook guards a re-include that Concern#append_features refuses"
-status: draft
+status: ready
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

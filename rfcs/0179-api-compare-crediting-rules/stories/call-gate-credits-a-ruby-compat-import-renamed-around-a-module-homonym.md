@@ -1,6 +1,6 @@
 ---
 title: "parity: the call gate credits a ruby-compat import renamed around a module-level homonym"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set

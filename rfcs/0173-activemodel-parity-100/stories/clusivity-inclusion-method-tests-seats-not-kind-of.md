@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Clusivity#inclusion_method tests nine value seats where Rails names four classes; ruby-compat has no kind_of?"
-status: draft
+status: ready
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

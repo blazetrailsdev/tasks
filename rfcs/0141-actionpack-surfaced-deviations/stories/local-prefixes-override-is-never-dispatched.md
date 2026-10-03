@@ -1,6 +1,6 @@
 ---
 title: "actionview/actionpack: a controller's local_prefixes override is never dispatched, and no controller base class is abstract (view_paths.rb:23-29,72-77)"
-status: draft
+status: done
 updated: 2026-10-03
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8450
+claim: "2026-10-03T17:29:20Z"
+assignee: "local-prefixes-override-is-never-dispatched"
 blocked-by: null
 closed-reason: null
 ---

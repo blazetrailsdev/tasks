@@ -1,6 +1,6 @@
 ---
 title: "activemodel: LazyAttributeSet/LazyAttributeHash read types, casted_values and default_attributes by bare index"
-status: draft
+status: ready
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activemodel: define_attribute_method_pattern builds generate_method in one expression"
-status: draft
+status: ready
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

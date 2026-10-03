@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove or credit the 80 invented branches in associations part 1"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms

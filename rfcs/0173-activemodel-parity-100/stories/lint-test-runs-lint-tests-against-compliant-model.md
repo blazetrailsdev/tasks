@@ -1,6 +1,6 @@
 ---
 title: "activemodel: LintTest runs Lint::Tests against CompliantModel under the Rails test names"
-status: draft
+status: ready
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null

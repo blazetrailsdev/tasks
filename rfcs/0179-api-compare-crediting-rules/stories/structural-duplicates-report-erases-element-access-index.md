@@ -1,6 +1,6 @@
 ---
 title: "parity: the structural-duplicates report erases an element access's index, and 12 non-activerecord candidates are untriaged"
-status: ready
+status: claimed
 updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-03T17:49:17Z"
+assignee: "object-literal-module-members-carry-arm-skeletons"
 blocked-by: null
 closed-reason: null
 ---

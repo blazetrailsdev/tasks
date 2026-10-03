@@ -1,6 +1,6 @@
 ---
 title: "parity: invoking a lambda-valued member is Proc#call, not an omitted call"
-status: in-progress
+status: done
 updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set
