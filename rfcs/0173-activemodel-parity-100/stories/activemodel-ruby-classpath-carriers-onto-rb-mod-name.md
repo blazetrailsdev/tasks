@@ -5,7 +5,8 @@ updated: 2026-10-02
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
 packages: ["activemodel", "ruby-compat"]
-deps: []
+deps:
+  - model-namespace-reads-the-constant-path-not-a-module-name-static
 deps-rfc: []
 est-loc: 200
 priority: null
