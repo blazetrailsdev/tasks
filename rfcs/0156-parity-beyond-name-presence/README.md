@@ -12,6 +12,7 @@ packages:
   - "arel"
   # The parity tooling itself lives in trails' scripts/.
   - "scripts"
+  - "actionview"
 clusters:
   - "denominator"
   - "call-gate"
