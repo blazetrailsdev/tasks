@@ -25,6 +25,8 @@ deps:
     "arel-build-quoted-names-the-sql-literal-arm",
     "arel-to-sql-comparison-visitors-share-an-invented-visit-binary-op",
     "arel-remaining-nil-sends-read-ruby-compat-is-nil",
+    "arel-short-circuit-extractor-folds",
+    "arel-short-circuit-port-leftovers",
   ]
 deps-rfc: []
 est-loc: 120
