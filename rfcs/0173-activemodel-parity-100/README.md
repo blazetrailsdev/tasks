@@ -11,6 +11,8 @@ packages:
   - "activerecord"
   - "i18n"
   - "activesupport"
+  - "trailties"
+  - "actionpack"
 clusters:
   - api-surface
   - arms
