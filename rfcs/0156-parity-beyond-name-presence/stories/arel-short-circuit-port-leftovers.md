@@ -2,7 +2,7 @@
 title: "arel: 14 bodies carry a short-circuit their Rails body does not (default params, rtest, invented fallbacks)"
 status: ready
 updated: 2026-10-02
-rfc: "0172-arel-parity-100"
+rfc: "0156-parity-beyond-name-presence"
 cluster: arms
 packages: ["arel"]
 deps: []

@@ -17,6 +17,7 @@ clusters:
   - "call-gate"
   - "lints"
   - "comparers"
+  - "arms"
 related-rfcs:
   - "0155-assertion-surfaced-port-bugs"
   - "0158-activesupport-assertion-surfaced-port-bugs"

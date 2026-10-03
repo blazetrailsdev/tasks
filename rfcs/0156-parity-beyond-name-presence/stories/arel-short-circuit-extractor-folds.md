@@ -2,7 +2,7 @@
 title: "parity: the arms report's short-circuit projection misreads 26 faithful arel rows (eql narrowing, when-lists, String/Symbol)"
 status: ready
 updated: 2026-10-02
-rfc: "0172-arel-parity-100"
+rfc: "0156-parity-beyond-name-presence"
 cluster: arms
 packages: ["arel"]
 deps: []
