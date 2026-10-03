@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Type::String#cast_value's ::String.new(value) has no JS carrier and no ratifying section"
-status: ready
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activemodel"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8441
+claim: "2026-10-03T10:25:22Z"
+assignee: "attribute-method-pattern-drops-camel-joined-recasing"
 blocked-by: null
 closed-reason: null
 ---

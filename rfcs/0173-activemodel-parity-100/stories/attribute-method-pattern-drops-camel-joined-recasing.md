@@ -1,6 +1,6 @@
 ---
 title: "activemodel: AttributeMethodPattern holds Rails' @regex / @method_name with no camelJoined re-casing"
-status: ready
+status: blocked
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-03T10:25:22Z"
+assignee: "attribute-method-pattern-drops-camel-joined-recasing"
+blocked-by: "Needs a decision on the PUBLIC spelling of generated attribute methods before it can converge. With Rails-spelled patterns (attribute_methods.rb:476-493: prefix 'restore_', suffix '_changed?') and one Ruby-name -> TS-property translation, no single rule reproduces today's names: (1) predicates are spelled three ways today -- 'title?' (quoted literal), titleChanged (bare camel), isSavedChangeToTitle (is-prefix, because saved_change_to_title also exists); (2) a snake_case attribute keeps its name verbatim today (author_nameChanged, isSavedChangeToAuthor_name), which a translation of the joined Ruby name 'author_name_changed?' cannot produce -- it yields authorNameChanged, while the reader stays author_name; (3) method_missing / respond_to? receive TS names and match against the Rails regex, which needs the inverse translation. Any uniform rule renames ~400 call sites (146 *Changed, 115 *BeforeTypeCast, 75 *ForDatabase, 27 *PreviouslyChanged, 16 isSavedChangeTo*/isWillSaveChangeTo*, the 'x?' query readers) plus the generated model typings, far over the PR ceiling and a user-facing API break. AC3 already holds on main: parity:api:arms:report --package=activemodel lists no AttributeMethodPattern row. Unblock by choosing the rule (predicate spelling; whether the attribute segment is camelized) and splitting the rename into per-suffix stories."
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "callbacks-update-callbacks-reads-its-own-descendants"
-status: draft
-updated: 2026-08-23
+status: in-progress
+updated: 2026-10-03
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8440
+claim: "2026-10-03T10:26:40Z"
+assignee: "callbacks-update-callbacks-reads-its-own-descendants"
 blocked-by: null
 closed-reason: null
 ---

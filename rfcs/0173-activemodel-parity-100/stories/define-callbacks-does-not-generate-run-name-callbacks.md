@@ -1,6 +1,6 @@
 ---
 title: "activesupport: define_callbacks does not generate _run_<name>_callbacks, so Validations::Callbacks hand-writes and includes it"
-status: ready
+status: in-progress
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8441
+claim: "2026-10-03T10:25:22Z"
+assignee: "attribute-method-pattern-drops-camel-joined-recasing"
 blocked-by: null
 closed-reason: null
 ---

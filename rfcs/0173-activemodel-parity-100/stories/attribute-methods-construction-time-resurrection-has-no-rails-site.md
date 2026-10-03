@@ -1,7 +1,7 @@
 ---
 title: "activemodel: AttributeMethods' construction-time initInternals resurrection has no Rails counterpart"
-status: ready
-updated: 2026-10-02
+status: claimed
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
 packages: ["activemodel"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-03T10:55:20Z"
+assignee: "attribute-methods-construction-time-resurrection-has-no-rails-site"
 blocked-by: null
 closed-reason: null
 ---
