@@ -2,7 +2,7 @@
 title: "RoutingAssertions#setup does not call super: trails has no Minitest::Test#setup and the lifecycle never sends instance setup"
 status: draft
 updated: 2026-10-02
-rfc: "0160-actionpack-test-harness-parity"
+rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
