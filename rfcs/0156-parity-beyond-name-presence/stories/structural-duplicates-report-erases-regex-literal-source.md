@@ -2,7 +2,7 @@
 title: "parity: the structural-duplicates report erases a regex literal's source"
 status: draft
 updated: 2026-10-03
-rfc: "0179-api-compare-crediting-rules"
+rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
 deps: []
