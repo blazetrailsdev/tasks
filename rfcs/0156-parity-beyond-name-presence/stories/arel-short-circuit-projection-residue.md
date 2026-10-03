@@ -1,6 +1,6 @@
 ---
 title: "arel: converge the 41 short-circuit projection rows the arm verdicts do not read"
-status: draft
+status: ready
 updated: 2026-10-02
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

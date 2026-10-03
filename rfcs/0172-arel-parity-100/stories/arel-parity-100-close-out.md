@@ -1,7 +1,7 @@
 ---
 title: "arel: verify every parity axis at 100% and pin each gate at zero"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: closeout
 packages: ["arel"]
@@ -29,9 +29,9 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8425
+claim: "2026-10-02T23:22:03Z"
+assignee: "arel-parity-100-close-out"
 blocked-by: null
 closed-reason: null
 ---

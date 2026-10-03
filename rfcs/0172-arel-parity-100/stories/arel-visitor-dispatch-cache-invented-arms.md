@@ -1,6 +1,6 @@
 ---
 title: "arel: Visitor.dispatch_cache has three arms Rails does not"
-status: in-progress
+status: done
 updated: 2026-10-02
 rfc: "0172-arel-parity-100"
 cluster: arms

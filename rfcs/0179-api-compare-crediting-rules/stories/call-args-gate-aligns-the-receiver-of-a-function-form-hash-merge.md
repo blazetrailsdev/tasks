@@ -1,6 +1,6 @@
 ---
 title: "parity: the call-args gate aligns the receiver of a function-form Hash#merge"
-status: ready
+status: in-progress
 updated: 2026-10-02
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-args
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8426
+claim: "2026-10-02T23:01:56Z"
+assignee: "call-args-gate-aligns-the-receiver-of-a-function-form-hash-merge"
 blocked-by: null
 closed-reason: null
 ---
