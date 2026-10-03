@@ -2,7 +2,7 @@
 title: "ActionController::TestRequest.create drops the Rails.application.env_config merge and the indifferent cookie hash"
 status: draft
 updated: 2026-10-02
-rfc: "0160-actionpack-test-harness-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
