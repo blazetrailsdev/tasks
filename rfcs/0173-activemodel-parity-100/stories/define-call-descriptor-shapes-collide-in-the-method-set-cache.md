@@ -1,6 +1,6 @@
 ---
 title: "activemodel: define_call's property and method shapes share one MethodSet cache entry across classes"
-status: ready
+status: claimed
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-03T22:56:10Z"
+assignee: "class-methods-validates-with-appends-as-rails-does"
 blocked-by: null
 closed-reason: null
 ---

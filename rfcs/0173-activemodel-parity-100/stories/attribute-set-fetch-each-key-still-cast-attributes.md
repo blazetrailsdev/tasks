@@ -1,6 +1,6 @@
 ---
 title: "activemodel: AttributeSet#fetch / keys / accessed still cast attributes; fetch, eachKey and hasKey take the receiver type"
-status: ready
+status: in-progress
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8459
+claim: "2026-10-03T22:42:43Z"
+assignee: "attribute-set-fetch-each-key-still-cast-attributes"
 blocked-by: null
 closed-reason: null
 ---
