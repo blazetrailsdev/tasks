@@ -2,7 +2,7 @@
 title: "test_help's before_setup reopenings are modules beneath the class, so Runner#before_setup runs first"
 status: ready
 updated: 2026-10-02
-rfc: "0160-actionpack-test-harness-parity"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps:
