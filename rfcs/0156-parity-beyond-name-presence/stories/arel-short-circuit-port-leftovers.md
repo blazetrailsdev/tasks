@@ -1,7 +1,7 @@
 ---
 title: "arel: 14 bodies carry a short-circuit their Rails body does not (default params, rtest, invented fallbacks)"
-status: ready
-updated: 2026-10-02
+status: done
+updated: 2026-10-03
 rfc: "0156-parity-beyond-name-presence"
 cluster: arms
 packages: ["arel"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8429
+claim: "2026-10-03T00:02:05Z"
+assignee: "arel-short-circuit-extractor-folds"
 blocked-by: null
 closed-reason: null
 ---

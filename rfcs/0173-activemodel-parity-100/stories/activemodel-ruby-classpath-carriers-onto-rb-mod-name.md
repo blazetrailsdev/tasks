@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Attribute's [rubyNamespace] statics and Model.moduleName read the classpath from rb_mod_name"
 status: ready
-updated: 2026-10-02
+updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
 packages: ["activemodel", "ruby-compat"]

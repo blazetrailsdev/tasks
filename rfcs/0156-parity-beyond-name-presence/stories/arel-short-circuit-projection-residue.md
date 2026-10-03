@@ -1,7 +1,7 @@
 ---
 title: "arel: converge the 41 short-circuit projection rows the arm verdicts do not read"
-status: ready
-updated: 2026-10-02
+status: closed
+updated: 2026-10-03
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: ["arel"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by arel-short-circuit-extractor-folds (26 faithful rows: eql instanceof narrowing x17, when-list as || chain x6, String/Symbol on one JS type x3) and arel-short-circuit-port-leftovers (14 real rows: ?? for Ruby defaults, hand-rolled truthiness, invented fallbacks); the 41st row, visitor.ts#dispatchCache -or, went with arel-visitor-dispatch-cache-invented-arms (trails#8424). Same 41 rows split by per-row verdict (operator decision 2026-10-02)"
 ---
 
 ## Context

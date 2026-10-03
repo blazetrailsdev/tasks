@@ -1,9 +1,9 @@
 ---
 rfc: "0172-arel-parity-100"
 title: "arel at 100% on every parity axis"
-status: active
+status: closed
 created: 2026-09-30
-updated: 2026-09-30
+updated: 2026-10-03
 owner: "@deanmarano"
 packages:
   - "arel"

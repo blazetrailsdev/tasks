@@ -1,7 +1,7 @@
 ---
 title: "arel: remove or credit the 34 invented branches in arel bodies (report-arms invented rows)"
-status: in-progress
-updated: 2026-10-02
+status: done
+updated: 2026-10-03
 rfc: "0172-arel-parity-100"
 cluster: arms
 packages: ["arel"]

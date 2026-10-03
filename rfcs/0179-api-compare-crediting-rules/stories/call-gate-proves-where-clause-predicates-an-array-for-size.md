@@ -1,7 +1,7 @@
 ---
 title: "parity: the call gate proves WhereClause#predicates an Array for size"
-status: ready
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: call-set
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8430
+claim: "2026-10-03T00:42:12Z"
+assignee: "call-gate-credits-a-dynamic-import-as-kernel-load"
 blocked-by: null
 closed-reason: null
 ---

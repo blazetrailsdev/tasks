@@ -1,6 +1,6 @@
 ---
 title: "activerecord: a loaded record builds and discards the default attribute set (init_with_attributes order, allocate)"
-status: draft
+status: done
 updated: 2026-10-03
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8428
+claim: "2026-10-03T00:21:12Z"
+assignee: "load-path-builds-the-default-attribute-set-it-discards"
 blocked-by: null
 closed-reason: null
 ---

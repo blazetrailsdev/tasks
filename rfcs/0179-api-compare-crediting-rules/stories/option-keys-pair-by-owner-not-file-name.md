@@ -1,7 +1,7 @@
 ---
 title: "tooling: option-keys unions same-named bodies in a file on both sides, masking per-owner findings"
-status: in-progress
-updated: 2026-10-02
+status: done
+updated: 2026-10-03
 rfc: "0179-api-compare-crediting-rules"
 cluster: null
 packages: ["activerecord"]
