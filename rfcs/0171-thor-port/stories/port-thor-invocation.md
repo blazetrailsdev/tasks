@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Invocation (invoke, invoke_command, invoke_all, shared configuration) and ratify the async dispatch cascade"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8503
+claim: "2026-10-04T22:17:42Z"
+assignee: "activesupport-before-call-async-terminator-escapes-sync-strict"
 blocked-by: null
 closed-reason: null
 ---

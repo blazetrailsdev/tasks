@@ -1,6 +1,6 @@
 ---
 title: "activesupport: Before#call lets a promise-returning custom terminator through a sync-strict chain"
-status: ready
+status: done
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8503
+claim: "2026-10-04T22:17:42Z"
+assignee: "activesupport-before-call-async-terminator-escapes-sync-strict"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activemodel: final per-axis verification once the arms residue and lint_test land"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: closeout

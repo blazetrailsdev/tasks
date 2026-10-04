@@ -1,6 +1,6 @@
 ---
 title: "activemodel: define_method_attribute's reader raises through missing_attribute, not an inline throw"
-status: draft
+status: in-progress
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8504
+claim: "2026-10-04T22:27:18Z"
+assignee: "define-method-attribute-raises-through-missing-attribute"
 blocked-by: null
 closed-reason: null
 ---

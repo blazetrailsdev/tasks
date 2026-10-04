@@ -1,6 +1,6 @@
 ---
 title: "activemodel: model_name probes use_relative_model_naming? as isUseRelativeModelNaming"
-status: ready
+status: in-progress
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8503
+claim: "2026-10-04T22:17:42Z"
+assignee: "activesupport-before-call-async-terminator-escapes-sync-strict"
 blocked-by: null
 closed-reason: null
 ---
