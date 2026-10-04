@@ -9,6 +9,7 @@ deps:
   [
     "vendor-thor-and-port-command-base-thor-surface",
     "generator-base-thor-initialize-arguments-and-options-parse",
+    "thor-cli-names-are-kebab-case-accept-snake-case-input",
   ]
 deps-rfc: []
 est-loc: 300
@@ -43,6 +44,8 @@ config)` (`vendor/rails/v8.0.2/railties/lib/rails/command.rb:45-72`):
       `no_commands` helpers use the `noCommands` shape.
 - [ ] **`--help`** reaches `Rails::Command::Base.help` / `Thor.help`, not commander's help.
 
+Command and generator names follow RFC 0171 decision 6 ("Command and generator names are kebab-case on the command line", `thor-cli-names-are-kebab-case-accept-snake-case-input`). `rails generate` resolves a generator through `Rails::Generators.find_by_namespace`, which that story extends to accept both `scaffold_controller` and `scaffold-controller`.
+
 ## Acceptance criteria
 
 - [ ] Each command is a `Base` subclass in the file `parity:api` maps its `.rb` to
@@ -50,3 +53,4 @@ config)` (`vendor/rails/v8.0.2/railties/lib/rails/command.rb:45-72`):
       `createProgram()` no longer registers it.
 - [ ] Each command's railties test (`vendor/rails/v8.0.2/railties/test/commands/<name>_test.rb`, where
       one exists) keeps or grows its matched count.
+- [ ] `trails generate scaffold_controller` and `trails generate scaffold-controller` both reach the scaffold controller generator, and `trails destroy` resolves the same way (RFC 0171 decision 6).

@@ -35,6 +35,8 @@ trails has no `application` command and no `ARGVScrubber`, so there is nothing f
 `VersionCommand#perform` (`port-help-and-version-commands-for-split-namespace`) to delegate to.
 `new` (`packages/trailties/src/commands/new.ts`) is the trails entry to `AppGenerator`.
 
+Command names follow RFC 0171 decision 6 ("Command and generator names are kebab-case on the command line", `thor-cli-names-are-kebab-case-accept-snake-case-input`): a multi-word command registers and lists in kebab-case, and its snake_case spelling still dispatches. That story lands the conversion and the `normalizeCommandName` fold; this story uses them and does not re-derive either.
+
 ## Acceptance criteria
 
 - `ARGVScrubber` (`prepare!`, `handle_version_request!`, `handle_invalid_command!`,
@@ -42,6 +44,7 @@ trails has no `application` command and no `ARGVScrubber`, so there is nothing f
   `AppGenerator.start(new ARGVScrubber(args).prepareBang())`.
 - `invoke("application", ["--version"])` prints `Trails <VERSION>` through
   `handle_version_request!`.
+- [ ] Every multi-word command or namespace this story registers is kebab-case in `help` and usage output, and its snake_case spelling still dispatches (RFC 0171 decision 6). A ported railties assertion on snake_case output text asserts the kebab spelling, with an `assertion-receipts.ts` row citing the decision.
 
 ## Thor port (the Thor-port RFC this story is rehomed into)
 

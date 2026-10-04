@@ -6,7 +6,11 @@ rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
 deps:
-  ["port-application-command-and-argv-scrubber", "vendor-thor-and-port-command-base-thor-surface"]
+  [
+    "port-application-command-and-argv-scrubber",
+    "vendor-thor-and-port-command-base-thor-surface",
+    "thor-cli-names-are-kebab-case-accept-snake-case-input",
+  ]
 deps-rfc: []
 est-loc: 160
 priority: 6
@@ -53,12 +57,15 @@ resolve through `find_by_namespace` as Rails does.
   flat-maps each command's `printing_commands` (`command/base.rb:76-80`): namespaced names such
   as `db:migrate`, not just root commands.
 
+Namespace lookup follows RFC 0171 decision 6 ("Command and generator names are kebab-case on the command line", `thor-cli-names-are-kebab-case-accept-snake-case-input`): `find_by_namespace` folds `_` into `-` before it matches, so `split_namespace`'s help and version arms resolve whichever spelling the user typed. The command list `HelpCommand` prints shows the kebab spelling.
+
 ## Acceptance criteria
 
 - `invoke("-v")` / `invoke("--version")` print the version through the ported
   VersionCommand, and `invoke("")` / `invoke("-h")` through HelpCommand.
 - The ported `railties/test/commands/help_test.rb` / `version_test.rb` cases (if any)
   pass under their Rails names.
+- [ ] The command list `help` prints shows multi-word commands in kebab-case, and a snake_case spelling of a listed command still dispatches (RFC 0171 decision 6).
 
 ## Thor port (the Thor-port RFC this story is rehomed into)
 

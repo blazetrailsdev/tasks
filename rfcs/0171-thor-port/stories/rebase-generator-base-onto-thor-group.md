@@ -11,6 +11,7 @@ deps:
     "port-thor-shell-module-basic-output-and-terminal",
     "thor-command-registration-lint-rule",
     "generator-base-name-derived-from-bare-js-class-name",
+    "thor-cli-names-are-kebab-case-accept-snake-case-input",
   ]
 deps-rfc: []
 est-loc: 600
@@ -45,6 +46,8 @@ The generator base classes move with it: `NamedBase` (`packages/trailties/src/ge
 (`packages/trailties/src/generators/app-base.ts`) and `Tse::Generators::Base` (`packages/trailties/src/generators/tse.ts`, the port of
 `vendor/rails/v8.0.2/railties/lib/rails/generators/erb.rb`).
 
+Generator namespaces follow RFC 0171 decision 6 ("Command and generator names are kebab-case on the command line", `thor-cli-names-are-kebab-case-accept-snake-case-input`): a generator's namespace is `rails:scaffold-controller`. `Thor::Util.snakeCase` stays a faithful port, and the kebab conversion is the one site that story adds. The hard-coded `scaffoldController: "scaffold_controller"` in `packages/trailties/src/generators.ts:71` follows it.
+
 ## Acceptance criteria
 
 - [ ] `class GeneratorBase extends Thor.Group` with `include(Thor.Actions)`, and the members
@@ -60,3 +63,4 @@ config)` as `vendor/rails/v8.0.2/railties/lib/rails/generators.rb` does.
       removed, and tests capture stdout as the Rails tests do.
 - [ ] `parity:api:extra --package trailties` drops by the deleted members, and their receipts go
       with them.
+- [ ] A generator rebased onto `Thor::Group` derives its namespace through the kebab conversion `thor-cli-names-are-kebab-case-accept-snake-case-input` adds, and does not hard-code a snake_case name (RFC 0171 decision 6).
