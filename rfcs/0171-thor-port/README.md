@@ -194,18 +194,29 @@ context, and the lint rule accepts the helper as declared. `argument` and the `a
 as an implicit non-command, would leave the lint rule unable to tell a forgotten command from a
 helper.
 
-### 3. Package home: keep the `trailties/src/thor` pseudo-package
+### 3. Package home: `@blazetrails/thor`
 
-Thor is a separate gem in Ruby, and a `@blazetrails/thor` package would mirror that. It would
-cost the new-package registrations: the four subpath registrations, `ci.yml`, the guard fixture,
-the lock-worker resolve hook, `vendor/sources.ts` / api-compare / test-compare re-rooting, and
-moving the three files #8269 landed. Thor has exactly one consumer (trailties). The
-pseudo-package is already enrolled in api-compare (`PACKAGE_DIR_OVERRIDES.thor = "trailties"`,
-`PACKAGE_SRC_SUBDIR.thor = "thor"`). **Recommendation: keep it.** The two things a separate
-package would enforce are enforced directly:
-`enroll-thor-specs-in-parity-test` adds an import-boundary lint (`src/thor/**` imports only
-ruby-compat and did-you-mean, never `../` outside `thor/`), and a separate parity:test block.
-Splitting later is mechanical if a second consumer appears.
+Thor is a separate gem in Ruby, and it is a separate package in trails: `packages/thor`,
+published as `@blazetrails/thor`, depending only on `@blazetrails/ruby-compat` and
+`@blazetrails/did-you-mean`. trailties depends on it as railties depends on the thor gem.
+
+This decision originally kept Thor as a pseudo-package at `packages/trailties/src/thor`, because
+Thor had one consumer and "splitting later is mechanical if a second consumer appears". There
+is a second consumer: `@blazetrails/activerecord-cli`, whose `ar` CLI has a hand-rolled
+dispatcher, help string and option handling (`packages/activerecord-cli/src/cli.ts`). It cannot
+use Thor while Thor lives in trailties, because trailties depends on activerecord-cli
+(`packages/trailties/package.json`; `generators/app-generator.ts` adds it to new apps), and
+importing back would close a cycle. Moving `ar` onto Thor is a separate decision; this one only
+makes it possible.
+
+The split is cheapest now. Every Thor story that lands under `trailties/src/thor` is one more
+file to move, and moving a ported file stales its body pins. The cost is the new-package
+registrations: `pnpm-workspace.yaml` and the root `tsconfig.json`, the `vitest.config.ts`
+aliases, the dx-tests and virtualized-dx-tests `paths`, `ci.yml` (lane, package regex, and the
+`ci-suite-coverage` fixture), and re-rooting the pseudo-package seams in api-compare
+(`PACKAGE_DIR_OVERRIDES.thor`, `PACKAGE_SRC_SUBDIR.thor`), test-compare (`NESTED_PACKAGES`,
+`packageSrcDir("thor")`) and the eslint `files` globs. `extract-thor-into-its-own-package` owns
+it. The import-boundary lint stays, now enforcing the package's dependency list.
 
 ### 4. Async: prompts, file actions and dispatch are async
 
@@ -409,7 +420,8 @@ starting point of `port-thor-actions-module` and the generator phase.
 - **Keep commander and map Thor options onto it.** Help text, `--no-` / `--skip-` switches,
   `check_unknown_options!`, `stop_on_unknown_option!`, exclusive / at-least-one relations and
   `-abc` clustering all differ from Thor's, and every railties command test asserts Thor's output.
-- **A `@blazetrails/thor` package.** See decision 3.
+- **Keeping Thor as a trailties pseudo-package.** Rejected once activerecord-cli became a second
+  consumer that cannot import trailties. See decision 3.
 - **Per-decision alternatives** are listed under each decision in § "Design".
 
 ## Rollout
