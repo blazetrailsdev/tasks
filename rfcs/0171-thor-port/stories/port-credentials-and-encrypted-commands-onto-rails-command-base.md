@@ -40,6 +40,8 @@ config)` (`vendor/rails/v8.0.2/railties/lib/rails/command.rb:45-72`):
       `no_commands` helpers use the `noCommands` shape.
 - [ ] **`--help`** reaches `Rails::Command::Base.help` / `Thor.help`, not commander's help.
 
+Command names follow RFC 0171 decision 6 ("Command and generator names are kebab-case on the command line", `thor-cli-names-are-kebab-case-accept-snake-case-input`): a multi-word command registers and lists in kebab-case, and its snake_case spelling still dispatches. That story lands the conversion and the `normalizeCommandName` fold; this story uses them and does not re-derive either.
+
 ## Acceptance criteria
 
 - [ ] Each command is a `Base` subclass in the file `parity:api` maps its `.rb` to
@@ -47,3 +49,4 @@ config)` (`vendor/rails/v8.0.2/railties/lib/rails/command.rb:45-72`):
       `createProgram()` no longer registers it.
 - [ ] Each command's railties test (`vendor/rails/v8.0.2/railties/test/commands/<name>_test.rb`, where
       one exists) keeps or grows its matched count.
+- [ ] Every multi-word command or namespace this story registers is kebab-case in `help` and usage output, and its snake_case spelling still dispatches (RFC 0171 decision 6). A ported railties assertion on snake_case output text asserts the kebab spelling, with an `assertion-receipts.ts` row citing the decision.

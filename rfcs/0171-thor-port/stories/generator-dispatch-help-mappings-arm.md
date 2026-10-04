@@ -9,6 +9,7 @@ deps:
   [
     "rebase-generator-base-onto-thor-group",
     "port-generate-and-destroy-commands-onto-rails-command-base",
+    "thor-cli-names-are-kebab-case-accept-snake-case-input",
   ]
 deps-rfc: []
 est-loc: 350
@@ -37,11 +38,14 @@ templates). trails has neither Thor `argument` declarations nor USAGE files. Tod
 `packages/trailties/src/commands/generate.ts`, so the dispatch arm is reachable only through
 `Generators.invoke(ns, ["--help"], …)`.
 
+Generator names follow RFC 0171 decision 6 ("Command and generator names are kebab-case on the command line", `thor-cli-names-are-kebab-case-accept-snake-case-input`): the `trails g` listing (`sorted_groups` / `print_list`, `generators.rb:196-232,285-289`) and `CorrectableNameError` suggestions show `scaffold-controller`, not `scaffold_controller`.
+
 ## Acceptance criteria
 
 - `GeneratorBase.banner` / `desc` / `help` are ported from `generators/base.rb` and Thor's
   `group.rb:29-35`, and `dispatch` gains the `HELP_MAPPINGS` arm.
 - `commands/generate.ts` routes `--help` through that arm instead of `addHelpText`.
+- [ ] `trails g --help` and `trails g <name> --help` show generator names in kebab-case, and a ported assertion on snake_case listing text asserts the kebab spelling, with an `assertion-receipts.ts` row citing RFC 0171 decision 6.
 
 ## Thor port (the Thor-port RFC this story is rehomed into)
 

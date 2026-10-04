@@ -10,6 +10,7 @@ deps:
     "vendor-thor-and-port-command-base-thor-surface",
     "port-rake-dsl-task-manager-for-app-tasks",
     "find-by-namespace-lookup-loads-only-candidates",
+    "thor-cli-names-are-kebab-case-accept-snake-case-input",
   ]
 deps-rfc: []
 est-loc: 300
@@ -32,8 +33,11 @@ the app's tasks and invokes the task. In Rails, `bin/rails db:migrate`, `db:*` a
 re-enters commander. `port-rake-dsl-task-manager-for-app-tasks` (0142) ports the Rake DSL
 this needs.
 
+RFC 0171 decision 6 ("Command and generator names are kebab-case on the command line", `thor-cli-names-are-kebab-case-accept-snake-case-input`) folds `_` into `-` for Thor command and namespace lookup only. A Rake task is not a Thor command, so the fold must not reach the Rake fallback: `Rails::Command.invoke` (`command.rb:56-69`) hands `full_namespace` to `invoke_rake` as the user typed it, and an underscored task name such as `active_storage:install` must arrive unchanged.
+
 ## Acceptance criteria
 
 - [ ] `RakeCommand` is a `Base` subclass at `commands/rake.ts` with `rake_command.rb`'s members,
       and `invokeRake` dispatches to it.
 - [ ] `printing_commands` lists rake tasks with descriptions, as `rake_command.rb` does.
+- [ ] A namespace no Thor command claims reaches Rake with the user's spelling unchanged. A test covers an underscored task name passing through to Rake (RFC 0171 decision 6).

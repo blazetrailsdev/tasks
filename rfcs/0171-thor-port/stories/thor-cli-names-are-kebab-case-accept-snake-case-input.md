@@ -61,3 +61,6 @@ whichever spelling the port has at that point.
       spelling, each with a receipt row in `scripts/test-compare/assertion-receipts.ts` citing
       the decision. Test names are not changed.
 - [ ] Trails tests cover both input spellings, for one command and one generator.
+- [ ] The fold applies only to Thor command and namespace lookup. `Rails::Command.invoke`
+      (`command.rb:56-69`) still hands `full_namespace` to `invoke_rake` as typed, so an
+      underscored Rake task name (`active_storage:install`) is never rewritten.

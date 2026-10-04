@@ -37,12 +37,15 @@ closed-reason: null
 still has no description, because Rails' `UnusedRoutesCommand` declares none
 and has no USAGE file.
 
+Usage text follows RFC 0171 decision 6 ("Command and generator names are kebab-case on the command line", `thor-cli-names-are-kebab-case-accept-snake-case-input`): `banner` and `formatted_usage` print the kebab-case command and namespace. Rails' own banner tests assert snake_case text, and each one ported here asserts the kebab spelling instead.
+
 ## Acceptance criteria
 
 - The members above exist on `command/base.ts` at their Rails names with Rails'
   control flow; `resolve_path` reads the filesystem through ruby-compat's async fs.
 - `printing_commands` feeds `Rails::Command.printing_commands`
   (`railties/lib/rails/command.rb:116-118`), which skips `hiddenCommands()`.
+- [ ] `banner` and the USAGE render show multi-word commands and namespaces in kebab-case. Each ported Rails assertion on snake_case usage text asserts the kebab spelling, with an `assertion-receipts.ts` row citing RFC 0171 decision 6. Test names are not changed.
 
 ## Thor port (the Thor-port RFC this story is rehomed into)
 
