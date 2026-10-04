@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove or credit the 80 invented branches in connection-adapters-abstract part 2"
-status: claimed
+status: in-progress
 updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
@@ -9,7 +9,7 @@ deps: ["activerecord-converge-missing-control-flow-arms-connection-adapters-part
 deps-rfc: []
 est-loc: 560
 priority: null
-pr: null
+pr: trails#8484
 claim: "2026-10-04T14:45:06Z"
 assignee: "activerecord-converge-invented-control-flow-arms-connection-adapters-abstract-part-2"
 blocked-by: null

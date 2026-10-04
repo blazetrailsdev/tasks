@@ -1,7 +1,7 @@
 ---
 title: "activerecord: remove or credit the 46 invented branches in connection-adapters-mysql-sqlite3"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["activerecord-converge-missing-control-flow-arms-connection-adapters-part
 deps-rfc: []
 est-loc: 356
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8485
+claim: "2026-10-04T15:09:40Z"
+assignee: "activerecord-converge-invented-control-flow-arms-connection-adapters-mysql-sqlite3"
 blocked-by: null
 closed-reason: null
 ---

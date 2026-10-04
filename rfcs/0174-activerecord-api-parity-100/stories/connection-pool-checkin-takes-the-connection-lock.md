@@ -1,6 +1,6 @@
 ---
 title: "activerecord: ConnectionPool#checkin runs under conn.lock.synchronize"
-status: draft
+status: blocked
 updated: 2026-10-04
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Tried in trails#8482 and backed out: conn.lock.synchronize is async, so checkin under it returns a promise, and the synchronous lease (withConnectionSync / acquireConnectionSync) and the executor's CompleteHook#before both need checkin finished before they return. Red on every lane: 'Cannot lease connection, it is already leased by the current thread' in model-schema-sync-load.trails.test.ts. Blocked until the synchronous lease is retired (RFC 0073) and the executor hook chain awaits a thenable complete."
 closed-reason: null
 ---
 
