@@ -5,7 +5,11 @@ updated: 2026-09-30
 rfc: "0173-activemodel-parity-100"
 cluster: tests
 packages: ["activemodel"]
-deps: ["ruby-compat-marshal-core-types", "psych-load-and-safe-load"]
+deps:
+  - ruby-compat-marshal-core-types
+  - psych-load-and-safe-load
+  - ruby-compat-marshal-load-core-types
+  - errors-psych-loaded-symbol-attribute-does-not-match-added-attribute
 deps-rfc: []
 est-loc: 200
 priority: null
