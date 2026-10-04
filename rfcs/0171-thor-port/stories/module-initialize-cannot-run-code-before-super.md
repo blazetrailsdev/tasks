@@ -1,6 +1,6 @@
 ---
 title: "A module initialize cannot run code before super, so Thor::Actions' force / skip option rewrite arrives after the parse"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null

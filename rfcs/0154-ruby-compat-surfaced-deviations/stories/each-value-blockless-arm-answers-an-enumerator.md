@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: eachValue with no block answers an Enumerator, not an array"
-status: draft
+status: done
 updated: 2026-10-04
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8491
 claim: null
 assignee: null
 blocked-by: null

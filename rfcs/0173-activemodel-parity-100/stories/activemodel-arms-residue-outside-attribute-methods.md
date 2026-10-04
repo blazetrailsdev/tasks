@@ -1,6 +1,6 @@
 ---
 title: "activemodel: converge the 14 remaining report-arms rows outside attribute-methods.ts"
-status: ready
+status: in-progress
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: arms
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8502
+claim: "2026-10-04T21:44:18Z"
+assignee: "activemodel-arms-residue-outside-attribute-methods"
 blocked-by: null
 closed-reason: null
 ---

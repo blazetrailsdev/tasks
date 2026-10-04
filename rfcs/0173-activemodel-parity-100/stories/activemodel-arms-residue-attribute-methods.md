@@ -1,6 +1,6 @@
 ---
 title: "activemodel: converge the 14 remaining report-arms rows in attribute-methods.ts"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: arms
