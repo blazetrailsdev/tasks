@@ -1,7 +1,7 @@
 ---
 title: "activemodel: ClassMethods.validatesWith appends to _validators as Rails does"
-status: in-progress
-updated: 2026-10-03
+status: done
+updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activemodel"]

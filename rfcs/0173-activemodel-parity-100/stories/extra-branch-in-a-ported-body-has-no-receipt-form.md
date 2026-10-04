@@ -1,7 +1,7 @@
 ---
 title: "parity: an extra branch or call inside a ported body has no receipt form (define_call's reader arm)"
-status: in-progress
-updated: 2026-10-03
+status: done
+updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []

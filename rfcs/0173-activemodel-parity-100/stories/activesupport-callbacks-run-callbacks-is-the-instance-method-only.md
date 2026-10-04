@@ -1,7 +1,7 @@
 ---
 title: "activesupport: delete the free target-taking callback functions and CallbacksMixin; run_callbacks is the instance method only"
-status: ready
-updated: 2026-10-03
+status: in-progress
+updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activesupport"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8466
+claim: "2026-10-04T00:08:31Z"
+assignee: "activesupport-callbacks-run-callbacks-is-the-instance-method-only"
 blocked-by: null
 closed-reason: null
 ---

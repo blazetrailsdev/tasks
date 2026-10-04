@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Base's option / argument DSL and #initialize (class_option, argument, exclusive / at-least-one, from_superclass)"
-status: in-progress
-updated: 2026-10-03
+status: done
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
