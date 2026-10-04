@@ -1,7 +1,7 @@
 ---
 title: "activerecord: remove or credit the 76 invented branches in relation part 1"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 536
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-04T18:39:39Z"
+assignee: "activerecord-converge-invented-control-flow-arms-relation-part-1"
 blocked-by: null
 closed-reason: null
 ---

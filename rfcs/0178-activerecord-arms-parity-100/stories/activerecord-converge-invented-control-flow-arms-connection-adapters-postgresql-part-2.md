@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove or credit the 49 invented branches in connection-adapters-postgresql part 2"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms

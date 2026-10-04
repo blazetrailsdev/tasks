@@ -1,6 +1,6 @@
 ---
 title: "activerecord: a model's namespace is its constant path, not a moduleName static"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts

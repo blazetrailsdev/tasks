@@ -1,6 +1,6 @@
 ---
 title: "activerecord: habtm through_model's left association takes no foreign key"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
