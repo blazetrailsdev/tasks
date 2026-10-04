@@ -1,7 +1,7 @@
 ---
 title: "activesupport: Callbacks is not an includable Concern, so include ActiveSupport::Callbacks is two calls at each of three sites"
-status: blocked
-updated: 2026-10-02
+status: closed
+updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
@@ -13,8 +13,8 @@ priority: null
 pr: trails#8409
 claim: "2026-10-02T16:41:58Z"
 assignee: "arel-attribute-and-sql-literal-are-not-nodes"
-blocked-by: "trails#8409 made Callbacks includable and the three includers one call; the included-do body (extend DescendantsTracker, class_attribute :__callbacks) has no seat until activesupport-callbacks-chains-are-not-the-callbacks-class-attribute converts the chain storage"
-closed-reason: null
+blocked-by: null
+closed-reason: "Delivered by trails#8409 (three includers are one call) + trails#8455 (Callbacks is a Module extended with Concern; included body ported). On origin/main: packages/activesupport/src/callbacks.ts:1154-1166 is 'new Module()' / 'extend(Callbacks, Concern)' / 'Concern.included.call(Callbacks, ...)' doing extend DescendantsTracker + classAttribute __callbacks; 'include(base, ASCallbacks)' at activemodel/src/callbacks.ts:24, validations/callbacks.ts:62 and 'include(Engine, ASCallbacks)' at trailties/src/engine.ts:417; git grep 'ASCallbacks.InstanceMethods' finds nothing. The blocker dep activesupport-callbacks-chains-are-not-the-callbacks-class-attribute is done (trails#8440)."
 ---
 
 ## Context

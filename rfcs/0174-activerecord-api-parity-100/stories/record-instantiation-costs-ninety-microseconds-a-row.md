@@ -1,7 +1,7 @@
 ---
 title: "activerecord: instantiating a loaded row costs ~90 µs whatever is selected"
-status: draft
-updated: 2026-10-03
+status: in-progress
+updated: 2026-10-04
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8472
+claim: "2026-10-04T01:39:23Z"
+assignee: "record-instantiation-costs-ninety-microseconds-a-row"
 blocked-by: null
 closed-reason: null
 ---

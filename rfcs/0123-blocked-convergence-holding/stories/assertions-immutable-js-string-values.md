@@ -1,7 +1,7 @@
 ---
 title: "assertions-immutable-js-string-values"
-status: blocked
-updated: 2026-09-24
+status: closed
+updated: 2026-10-04
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-09-24T17:59:05Z"
 assignee: "aes256-gcm-inspect-not-rails-format"
-blocked-by: "needs a mutable Ruby String carrier (ruby-mutable-string-carrier): the eight parks assert String identity across dup, unfrozen cast results and in-place <</replace, none expressible with JS string primitives; ratifying is not an outcome"
-closed-reason: null
+blocked-by: null
+closed-reason: 'Decision recorded by the RFC owner in trails#8467, CLAUDE.md § "Ruby Strings are JS string primitives (no mutable String carrier)": four of the eight tests now run their mutation-independent assertions with receipts in assertion-receipts.ts, four are PERMANENT-SKIP citing the section; activemodel assertion ratchet stays 0/0/0.'
 ---
 
 ## Context

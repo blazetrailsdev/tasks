@@ -1,7 +1,7 @@
 ---
 title: "Port hash and eql? on Attribute, Error and Type::Value"
-status: draft
-updated: 2026-10-03
+status: done
+updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: api-surface
 packages: ["activemodel"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8468
+claim: "2026-10-04T01:11:32Z"
+assignee: "activemodel-port-hash-and-eql-on-attribute-error-and-type-value"
 blocked-by: null
 closed-reason: null
 ---

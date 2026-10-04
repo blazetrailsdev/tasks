@@ -1,7 +1,7 @@
 ---
 title: "activesupport: SetupAndTeardown.prepended extends ClassMethods; setup/teardown are not hand-assigned on TestCase"
-status: in-progress
-updated: 2026-10-03
+status: done
+updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: ["activesupport"]

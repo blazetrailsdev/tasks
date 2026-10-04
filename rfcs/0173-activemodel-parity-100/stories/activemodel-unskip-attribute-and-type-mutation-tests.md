@@ -1,7 +1,7 @@
 ---
 title: "activemodel: un-skip the 8 matched-but-skipped tests"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: tests
 packages: ["activemodel"]
@@ -9,9 +9,9 @@ deps: ["ruby-mutable-string-carrier", "activemodel-verify-and-pin-protocol-bodie
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8467
+claim: "2026-10-04T01:31:00Z"
+assignee: "activemodel-unskip-attribute-and-type-mutation-tests"
 blocked-by: null
 closed-reason: null
 ---

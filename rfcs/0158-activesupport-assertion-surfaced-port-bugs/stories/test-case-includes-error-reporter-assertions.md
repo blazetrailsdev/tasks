@@ -1,6 +1,6 @@
 ---
 title: "activesupport: TestCase includes ErrorReporterAssertions; assertErrorReported is not a moved static"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

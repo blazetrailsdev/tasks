@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Column and SqlTypeMetadata declare Deduplicable's members by hand instead of through Included<>"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

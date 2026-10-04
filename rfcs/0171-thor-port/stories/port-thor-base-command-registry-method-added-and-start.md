@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Base's command registry, explicit method_added registration, subclass registry, namespace and start"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-base-options-and-arguments-dsl"]
 deps-rfc: []
 est-loc: 500
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8469
+claim: "2026-10-04T01:05:44Z"
+assignee: "port-thor-base-command-registry-method-added-and-start"
 blocked-by: null
 closed-reason: null
 ---

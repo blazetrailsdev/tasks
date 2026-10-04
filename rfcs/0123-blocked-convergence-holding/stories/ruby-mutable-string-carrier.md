@@ -1,7 +1,7 @@
 ---
 title: "ruby-mutable-string-carrier"
-status: blocked
-updated: 2026-09-25
+status: closed
+updated: 2026-10-04
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "RFC-sized, per its own body: switching Type::String#cast_value's return type touches every :string/:text read, === comparison, Map key, JSON.stringify and typeof==='string' bind/quote consumer across activemodel/activerecord. Its first AC is a design (RFC or RFC section) the RFC owner must commission; not spawnable as a single story."
-closed-reason: null
+blocked-by: null
+closed-reason: 'Ratified, not built, by decision of the RFC owner: trails#8467 adds CLAUDE.md § "Ruby Strings are JS string primitives (no mutable String carrier)". A Ruby String is a JS string primitive everywhere; there is no mutable String carrier.'
 ---
 
 ## Context

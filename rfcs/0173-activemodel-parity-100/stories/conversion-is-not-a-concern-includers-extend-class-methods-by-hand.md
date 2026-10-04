@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Conversion is not a Concern, so includers extend its ClassMethods by hand"
-status: draft
-updated: 2026-10-03
+status: in-progress
+updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8471
+claim: "2026-10-04T01:31:00Z"
+assignee: "activemodel-unskip-attribute-and-type-mutation-tests"
 blocked-by: null
 closed-reason: null
 ---

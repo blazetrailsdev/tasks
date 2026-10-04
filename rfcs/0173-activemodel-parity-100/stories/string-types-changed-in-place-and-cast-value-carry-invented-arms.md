@@ -1,6 +1,6 @@
 ---
 title: "StringType#isChangedInPlace and ImmutableStringType#castValue carry arms and freeze calls Rails does not have"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "activemodel: AttributeSet#fetch re-derives Hash#fetch's arm; an undefined default raises and a function default is called"
-status: draft
-updated: 2026-10-03
+status: in-progress
+updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8470
+claim: "2026-10-04T01:18:08Z"
+assignee: "activesupport-run-callbacks-invoke-before-after-take-env-only"
 blocked-by: null
 closed-reason: null
 ---
