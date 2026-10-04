@@ -36,6 +36,6 @@ Also in scope: `packages/trailties/src/thor/actions.ts` `sourcePathsForSearch` s
 ## Acceptance criteria
 
 - [ ] `findAndRefreshTask` is the same function as `findAndRefreshCommand` on `ClassMethods`, and `parity:api
-    --package thor` credits `find_and_refresh_task`.
+--package thor` credits `find_and_refresh_task`.
 - [ ] Any `*_task` alias still missing after the command-registry story is seated the same way.
 - [ ] `actions.ts` dispatches `from_superclass` through `this`, with the bare `fromSuperclass` import dropped.
