@@ -23,8 +23,8 @@ callback the proc it is itself running: `current.expand_call_template(env, invok
 takes no arguments and closes over `next_sequence`, which the body advances before the call (`:125`) and
 restores in `ensure` (`:130`).
 
-`runCallbacks` (`packages/activesupport/src/callbacks.ts`) passes a fresh closure instead,
-`() => invokeSequence(nextSequence, null, tracker)`, and `invokeSequence` takes `(start, resume, proceed)`:
+`runCallbacks` (`packages/activesupport/src/callbacks.ts`) passes a bound copy instead,
+`invokeSequence.bind(null, current.nested!, null, tracker)`, and `invokeSequence` takes `(start, resume, proceed)`:
 the sequence to start at, the suspension state an awaited filter resumes from, and the tracker that lets the
 around callback observe the nested promise. The Rails shape restores `next_sequence` as soon as the callback
 returns, so an around callback that calls its block after an `await` would re-enter at `current` rather than
