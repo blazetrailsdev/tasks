@@ -5,7 +5,8 @@ updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - mysql2-adapter-initialize-sets-found-rows-on-config-flags
 deps-rfc: []
 est-loc: 450
 priority: null
