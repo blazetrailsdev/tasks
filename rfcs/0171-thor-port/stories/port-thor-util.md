@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Util (namespace lookup, snake/camel case, ruby_command, escape_globs)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-base-command-registry-method-added-and-start"]
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8489
+claim: "2026-10-04T16:08:08Z"
+assignee: "port-thor-util"
 blocked-by: null
 closed-reason: null
 ---

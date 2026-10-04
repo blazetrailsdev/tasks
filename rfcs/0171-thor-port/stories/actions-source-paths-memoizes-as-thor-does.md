@@ -1,6 +1,6 @@
 ---
 title: "thor: Actions.sourcePaths memoizes as actions.rb does"
-status: ready
+status: in-progress
 updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8489
+claim: "2026-10-04T16:08:08Z"
+assignee: "port-thor-util"
 blocked-by: null
 closed-reason: null
 ---

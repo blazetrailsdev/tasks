@@ -1,7 +1,7 @@
 ---
 title: "activemodel: port the 3 unported-register tests (Marshal / Rails-6 YAML errors)"
-status: ready
-updated: 2026-09-30
+status: blocked
+updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: tests
 packages: ["activemodel"]
@@ -14,9 +14,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-04T16:08:54Z"
+assignee: "activemodel-port-marshal-and-yaml-error-tests"
+blocked-by: "Marshal.load does not exist (ruby-compat Marshal is dump-only; ruby-compat-marshal-load-core-types is draft), which both Marshal tests need; the YAML test loads but fails on Error#attribute spelling (':name' from Psych vs 'name' from add) — errors-psych-loaded-symbol-attribute-does-not-match-added-attribute"
 closed-reason: null
 ---
 

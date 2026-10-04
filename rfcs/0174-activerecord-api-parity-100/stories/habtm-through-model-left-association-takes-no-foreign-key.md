@@ -1,6 +1,6 @@
 ---
 title: "activerecord: habtm through_model's left association takes no foreign key"
-status: draft
+status: in-progress
 updated: 2026-10-04
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8488
+claim: "2026-10-04T16:58:37Z"
+assignee: "habtm-through-model-left-association-takes-no-foreign-key"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Migration#copy loops for a free version number"
-status: draft
+status: closed
 updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Filed with a wrong premise: the loop at migration.rb:1077 strips magic comments, it does not pick a version. Refiled as migration-copy-strips-magic-comments-in-a-loop."
 ---
 
 ## Context

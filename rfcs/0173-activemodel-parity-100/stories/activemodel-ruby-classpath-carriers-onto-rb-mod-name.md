@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Attribute's [rubyNamespace] statics and Model.moduleName read the classpath from rb_mod_name"
-status: ready
-updated: 2026-10-03
+status: in-progress
+updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: receipts
 packages: ["activemodel", "ruby-compat"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8488
+claim: "2026-10-04T16:09:34Z"
+assignee: "activemodel-ruby-classpath-carriers-onto-rb-mod-name"
 blocked-by: null
 closed-reason: null
 ---

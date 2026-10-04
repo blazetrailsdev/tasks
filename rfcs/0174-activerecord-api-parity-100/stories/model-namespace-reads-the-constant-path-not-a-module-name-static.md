@@ -1,7 +1,7 @@
 ---
 title: "activerecord: a model's namespace is its constant path, not a moduleName static"
-status: draft
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-04
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8488
+claim: "2026-10-04T16:31:07Z"
+assignee: "model-namespace-reads-the-constant-path-not-a-module-name-static"
 blocked-by: null
 closed-reason: null
 ---
