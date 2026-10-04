@@ -256,6 +256,42 @@ every existing generator. Writing `options.skipGit` for `options.skip_git?` lose
 truthiness, because `""` would be false. activesupport's HWIA is a different class with a
 different surface.
 
+#### Command and generator names are kebab-case on the command line
+
+A switch is not the only identifier a user types. A command name and a generator namespace are
+too, and the same rule applies to them: **a trails identifier is camelCase, and the text the
+user types or reads is kebab-case, converted at one site.**
+
+- **Registered and listed in kebab-case.** A command method `fooBar` registers as the command
+  `foo-bar`, and a generator namespace is `rails:scaffold-controller`, not Thor's
+  `snake_case` output `rails:scaffold_controller` (`vendor/thor/v1.3.2/lib/thor/util.rb:43-47`).
+  Help text, `rails generate` / `rails g` listings (`railties/lib/rails/generators.rb:196-232`),
+  usage banners and `CorrectableNameError` suggestions all show the kebab spelling.
+- **snake_case is still accepted on input.** `rails g scaffold_controller` and
+  `rails foo_bar` resolve to the same class and command, so a Rails user's habits keep working.
+  Thor's `normalize_command_name` (`vendor/thor/v1.3.2/lib/thor.rb:605-620`) already folds the
+  other spelling into the canonical one (`meth.to_s.tr("-", "_") # treat foo-bar as foo_bar`).
+  trails keeps that fold and reverses its direction, `_` to `-`, and applies it to namespace
+  lookup as well (`Rails::Command.find_by_namespace`, `command.rb:90-99`;
+  `Rails::Generators.find_by_namespace`, `generators.rb:234-256`). Rails' generator lookup has
+  no fold, so accepting `scaffold-controller` there is a new arm.
+- **A Ruby name never leaks.** Without this rule `createCommand` keys `commands()` by the TS
+  method name, so `fooBar` would surface as `fooBar`. That spelling is wrong under both Ruby's
+  convention and the CLI's.
+
+Both the reversed fold and the generator lookup fold are deviations from the Ruby body. Each
+carries an `@inventedArm` receipt pointing at this decision. Ported Rails and Thor tests that
+assert snake_case text in help or usage output assert the kebab spelling, each with a row in
+`scripts/test-compare/assertion-receipts.ts` citing this decision. Ruby-side identifiers are
+unaffected: a generator's `hook_for :template_engine` is still `hookFor("templateEngine")`, and
+its switch is still `--template-engine`.
+
+Alternatives considered: snake_case on the command line, matching Rails' help output byte for
+byte. It keeps every help-text assertion as it is, but it is not the CLI convention a JS user
+expects (npm, git and most Node CLIs use kebab-case subcommands), and the CLI is the most
+visible surface trails has. Kebab-only input would break Rails users' habits for no gain,
+because accepting both spellings costs one normalization.
+
 ### 7. `apply`: a template is a module
 
 `Thor::Actions#apply` `instance_eval`s a Ruby template file against the generator
