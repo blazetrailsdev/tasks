@@ -7,6 +7,7 @@ updated: 2026-10-02
 owner: "@deanmarano"
 packages:
   - "activerecord"
+  - "ruby-compat"
 clusters:
   - arms
 related-rfcs:
