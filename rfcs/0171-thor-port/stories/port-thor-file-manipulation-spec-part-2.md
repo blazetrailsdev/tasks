@@ -5,7 +5,10 @@ updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
-deps: ["port-thor-file-manipulation-edits", "port-thor-spec-group-and-invoke-fixtures"]
+deps:
+  - port-thor-file-manipulation-edits
+  - port-thor-spec-group-and-invoke-fixtures
+  - port-thor-inject-into-file
 deps-rfc: []
 est-loc: 350
 priority: 2
