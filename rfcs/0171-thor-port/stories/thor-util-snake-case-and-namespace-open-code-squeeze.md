@@ -1,6 +1,6 @@
 ---
 title: "Thor::Util snake_case and namespace_from_thor_class call a ruby-compat squeeze and to_s, not regex and a typeof arm"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null

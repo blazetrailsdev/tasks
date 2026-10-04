@@ -1,7 +1,7 @@
 ---
 title: "Option#normalize_aliases open-codes Kernel#Array; port rb_Array to ruby-compat"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: []

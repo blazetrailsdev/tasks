@@ -1,7 +1,7 @@
 ---
 title: "Port Rails::Generators::Base banner / desc / help over Thor::Group's help, and route `trails g <name> --help` through it"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]

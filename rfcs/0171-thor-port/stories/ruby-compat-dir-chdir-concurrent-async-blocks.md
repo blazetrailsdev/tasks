@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: Dir.chdir raises on interleaved async chdir blocks (chdir_thread)"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: []

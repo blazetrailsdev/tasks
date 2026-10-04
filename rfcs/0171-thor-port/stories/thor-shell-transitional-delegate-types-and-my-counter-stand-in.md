@@ -1,7 +1,7 @@
 ---
 title: "Thor::Shell's loose delegate types, MyCounter stand-in and optional Base.shell"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: []

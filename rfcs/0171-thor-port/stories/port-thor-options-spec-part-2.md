@@ -1,7 +1,7 @@
 ---
 title: "Port parser/options_spec.rb, part 2 (the rest of #parse: repeatable, hash, array, numeric, enum, exclusive, at-least-one)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-options-parser"]
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8481
+claim: "2026-10-04T14:46:07Z"
+assignee: "port-thor-options-spec-part-2"
 blocked-by: null
 closed-reason: null
 ---

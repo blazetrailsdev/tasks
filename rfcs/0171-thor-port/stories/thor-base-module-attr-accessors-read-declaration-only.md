@@ -1,6 +1,6 @@
 ---
 title: "Thor::Base options / parent_options / args are real accessors on the module, not interface declarations"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null

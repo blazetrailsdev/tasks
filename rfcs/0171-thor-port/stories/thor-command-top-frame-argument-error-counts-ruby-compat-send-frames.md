@@ -1,7 +1,7 @@
 ---
 title: "Thor::Command#handle_argument_error? counts rbFSend's frames, so a body's own top-frame ArgumentError is re-raised"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: []

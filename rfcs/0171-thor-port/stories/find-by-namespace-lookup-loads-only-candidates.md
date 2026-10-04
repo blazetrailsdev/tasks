@@ -1,7 +1,7 @@
 ---
 title: "find-by-namespace-lookup-loads-only-candidates"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]

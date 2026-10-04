@@ -1,7 +1,7 @@
 ---
 title: "Port parser/options_spec.rb, part 1 (to_switches and the first half of #parse)"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-options-parser"]
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8480
+claim: "2026-10-04T14:19:28Z"
+assignee: "port-thor-options-spec-part-1"
 blocked-by: null
 closed-reason: null
 ---

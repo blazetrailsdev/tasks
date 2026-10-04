@@ -1,7 +1,7 @@
 ---
 title: "Split the controller / helper / resource / scaffold generator family into Rails' Thor commands, so hooks run in declaration order"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]

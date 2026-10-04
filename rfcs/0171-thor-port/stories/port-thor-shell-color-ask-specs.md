@@ -1,7 +1,7 @@
 ---
 title: "Port the six #ask cases of Thor::Shell::Color's spec"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: []

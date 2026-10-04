@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove or credit the 77 invented branches in associations part 4"
-status: claimed
+status: in-progress
 updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
@@ -9,7 +9,7 @@ deps: ["activerecord-converge-missing-control-flow-arms-associations"]
 deps-rfc: []
 est-loc: 542
 priority: null
-pr: null
+pr: trails#8479
 claim: "2026-10-04T13:27:53Z"
 assignee: "activerecord-converge-invented-control-flow-arms-associations-part-4"
 blocked-by: null

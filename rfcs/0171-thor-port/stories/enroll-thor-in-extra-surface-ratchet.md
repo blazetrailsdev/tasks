@@ -1,7 +1,7 @@
 ---
 title: "Enroll thor in the extra-surface ratchet and run it scoped in the thor comparison job"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: []

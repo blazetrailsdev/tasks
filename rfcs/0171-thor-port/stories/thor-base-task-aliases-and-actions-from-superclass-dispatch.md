@@ -1,6 +1,6 @@
 ---
 title: "Seat Thor::Base's find_and_refresh_task alias and dispatch from_superclass through this in thor/actions.ts"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null

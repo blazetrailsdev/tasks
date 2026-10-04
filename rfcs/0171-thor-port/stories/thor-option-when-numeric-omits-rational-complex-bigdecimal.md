@@ -1,7 +1,7 @@
 ---
 title: "Option.parse and validate_default_type!'s when Numeric omit Rational, Complex and BigDecimal"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: []

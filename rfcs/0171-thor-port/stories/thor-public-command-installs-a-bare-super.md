@@ -1,6 +1,6 @@
 ---
 title: "Thor public_command installs a bare super, with no invented guard or NoMethodError"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null

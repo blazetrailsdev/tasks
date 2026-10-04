@@ -1,7 +1,7 @@
 ---
 title: "Map RSpec predicate and chained matchers onto assertion kinds for the Thor specs"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: []

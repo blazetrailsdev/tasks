@@ -1,6 +1,6 @@
 ---
 title: "Thor exit_condition spec hosts on the real Thor class, not a test-local stand-in"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null

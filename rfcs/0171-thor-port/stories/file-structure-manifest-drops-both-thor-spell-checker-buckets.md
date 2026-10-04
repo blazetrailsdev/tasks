@@ -1,7 +1,7 @@
 ---
 title: "The file-structure manifest drops both thor SpellChecker buckets (EXPECTED_UNRESOLVED_COLLISIONS row)"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["scripts"]

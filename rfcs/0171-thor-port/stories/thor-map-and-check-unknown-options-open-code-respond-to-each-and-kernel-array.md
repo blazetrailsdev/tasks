@@ -1,6 +1,6 @@
 ---
 title: "Thor.map and check_unknown_options! call respond_to?(:each) and Kernel#Array through ruby-compat"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null

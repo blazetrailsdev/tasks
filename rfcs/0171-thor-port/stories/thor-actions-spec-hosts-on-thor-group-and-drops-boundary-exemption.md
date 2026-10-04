@@ -1,7 +1,7 @@
 ---
 title: "Host thor/actions.test.ts on Thor::Group and drop the import-boundary test exemption"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: []

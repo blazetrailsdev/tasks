@@ -1,7 +1,7 @@
 ---
 title: "Arguments#parse_numeric's is_a?(Numeric) omits Rational, Complex and BigDecimal; port a ruby-compat Numeric kind-of test"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: []
