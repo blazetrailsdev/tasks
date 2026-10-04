@@ -1,6 +1,6 @@
 ---
 title: "activemodel: ClassMethods.validatesWith appends to _validators as Rails does"
-status: claimed
+status: in-progress
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8460
 claim: "2026-10-03T22:56:10Z"
 assignee: "class-methods-validates-with-appends-as-rails-does"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Options (the switch parser that replaces commander)"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-03
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-option", "port-thor-core-ext-hash-with-indifferent-access"]
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8462
+claim: "2026-10-03T23:13:27Z"
+assignee: "port-thor-options-parser"
 blocked-by: null
 closed-reason: null
 ---

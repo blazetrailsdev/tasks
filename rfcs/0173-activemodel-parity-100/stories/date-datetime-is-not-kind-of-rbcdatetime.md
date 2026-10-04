@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat/date: @blazetrails/date DateTime is a kind of rbCDate but not of rbCDateTime"
-status: claimed
+status: blocked
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8460
 claim: "2026-10-03T22:56:10Z"
 assignee: "class-methods-validates-with-appends-as-rails-does"
-blocked-by: null
+blocked-by: "AC1 premise is false: @blazetrails/date DateTime.now returns a Temporal value (toDatetime), a ZonedDateTime of which rbObjClass reads as Time; and one class object per Ruby class needs a decision on where the class lives, since ruby-compat cannot import @blazetrails/date and seating rbCDateTime from date.ts is load-order dependent (review of trails#8460). Remainder described in date-classes-are-one-class-object-per-ruby-class."
 closed-reason: null
 ---
 

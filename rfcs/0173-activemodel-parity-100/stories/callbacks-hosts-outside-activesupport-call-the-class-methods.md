@@ -1,6 +1,6 @@
 ---
 title: "activemodel/activerecord/trailties/actionpack: callback hosts include Callbacks and call the class methods"
-status: claimed
+status: in-progress
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#8461
 claim: "2026-10-03T22:54:59Z"
 assignee: "callbacks-hosts-outside-activesupport-call-the-class-methods"
 blocked-by: null

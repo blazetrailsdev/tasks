@@ -1,6 +1,6 @@
 ---
 title: "activesupport: SetupAndTeardown.prepended extends ClassMethods; setup/teardown are not hand-assigned on TestCase"
-status: ready
+status: in-progress
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8463
+claim: "2026-10-03T23:36:44Z"
+assignee: "setup-and-teardown-prepended-extends-class-methods"
 blocked-by: null
 closed-reason: null
 ---

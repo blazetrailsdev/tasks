@@ -1,6 +1,6 @@
 ---
 title: "parity: an extra branch or call inside a ported body has no receipt form (define_call's reader arm)"
-status: ready
+status: in-progress
 updated: 2026-10-03
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8465
+claim: "2026-10-03T23:19:02Z"
+assignee: "extra-branch-in-a-ported-body-has-no-receipt-form"
 blocked-by: null
 closed-reason: null
 ---

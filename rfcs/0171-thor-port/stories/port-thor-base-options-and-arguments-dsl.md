@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Base's option / argument DSL and #initialize (class_option, argument, exclusive / at-least-one, from_superclass)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-03
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-options-parser", "port-thor-command"]
 deps-rfc: []
 est-loc: 500
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8464
+claim: "2026-10-03T23:36:09Z"
+assignee: "port-thor-base-options-and-arguments-dsl"
 blocked-by: null
 closed-reason: null
 ---
