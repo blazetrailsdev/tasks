@@ -1,6 +1,6 @@
 ---
 title: "api-compare: classAttribute inside a top-level Module#included block is credited to no entity"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null

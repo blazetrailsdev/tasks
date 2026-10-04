@@ -1,6 +1,6 @@
 ---
 title: "AbstractController class attributes, helper module resolution and helpers.rb arity"
-status: ready
+status: in-progress
 updated: 2026-10-04
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8498
+claim: "2026-10-04T19:06:27Z"
+assignee: "abstract-controller-class-attributes-and-helper-resolution"
 blocked-by: null
 closed-reason: null
 ---

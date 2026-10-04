@@ -1,6 +1,6 @@
 ---
 title: "activemodel: a Psych-loaded Errors has unset ivars and a ':name' attribute that does not match add('name')"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null

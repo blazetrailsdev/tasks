@@ -1,6 +1,6 @@
 ---
 title: "activerecord: EXTENDED_TYPE_MAPS is a Concurrent::Map read through compute_if_absent"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts

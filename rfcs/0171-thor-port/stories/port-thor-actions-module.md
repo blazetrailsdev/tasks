@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Actions' instance half (behavior, destination stack, inside / in_root, run, run_ruby_script, thor)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8495
+claim: "2026-10-04T19:03:50Z"
+assignee: "port-thor-actions-module"
 blocked-by: null
 closed-reason: null
 ---

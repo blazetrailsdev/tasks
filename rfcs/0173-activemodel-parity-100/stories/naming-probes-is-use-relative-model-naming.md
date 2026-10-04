@@ -1,6 +1,6 @@
 ---
 title: "activemodel: model_name probes use_relative_model_naming? as isUseRelativeModelNaming"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null

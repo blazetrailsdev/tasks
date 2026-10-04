@@ -1,6 +1,6 @@
 ---
 title: "activesupport: Before#call lets a promise-returning custom terminator through a sync-strict chain"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null

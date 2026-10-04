@@ -1,6 +1,6 @@
 ---
 title: "activerecord: encrypted binary clear text rides as bytes with the encoding header"
-status: draft
+status: done
 updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#8492
 claim: null
 assignee: null
 blocked-by: null

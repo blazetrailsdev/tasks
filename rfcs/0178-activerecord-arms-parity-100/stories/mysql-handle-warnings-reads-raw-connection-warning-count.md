@@ -1,6 +1,6 @@
 ---
 title: "activerecord: MySQL handle_warnings reads @raw_connection.warning_count, not a SHOW COUNT(*) WARNINGS helper"
-status: draft
+status: closed
 updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of warning-count-seam-splits-one-rails-attribute-read (blocked), which already owns the warningCount helper"
 ---
 
 ## Context

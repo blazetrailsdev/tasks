@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Actions#run, #run_ruby_script and #thor"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null

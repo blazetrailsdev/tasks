@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Tests (1) failing on main @550ce6d7"
-status: ready
+status: closed
 updated: 2026-10-04
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-04T19:51:20Z"
+assignee: "red-550ce6d7"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infrastructure, not code: Active Record SQLite Tests (1) ran on self-hosted runner debian-arm64-2 and died in 12s with 'ENOSPC: no space left on device, mkdir /tmp/.../ssr' (vitest could not create its temp dir) before any test executed. Runner disk is full; needs /tmp cleared on debian-arm64-2, then a re-run."
 ---
 
 ## Context
