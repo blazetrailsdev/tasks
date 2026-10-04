@@ -2,7 +2,7 @@
 title: "activemodel-clone-value-calls-rb-obj-clone"
 status: blocked
 updated: 2026-10-01
-rfc: "0173-activemodel-parity-100"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

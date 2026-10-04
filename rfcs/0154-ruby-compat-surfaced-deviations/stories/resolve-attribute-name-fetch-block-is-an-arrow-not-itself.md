@@ -2,7 +2,7 @@
 title: "activemodel: resolve_attribute_name's &:itself block is an inline identity arrow"
 status: blocked
 updated: 2026-10-03
-rfc: "0173-activemodel-parity-100"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
