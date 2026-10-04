@@ -1,6 +1,6 @@
 ---
 title: "ESLint rule: every public method of a Thor / Thor::Group subclass is registered through methodAdded"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null

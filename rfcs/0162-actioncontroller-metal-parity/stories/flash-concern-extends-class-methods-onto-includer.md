@@ -1,6 +1,6 @@
 ---
 title: "Flash's ClassMethods are Base statics, so including Flash into a Metal subclass throws"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

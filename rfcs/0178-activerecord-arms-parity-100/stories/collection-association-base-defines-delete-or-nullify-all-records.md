@@ -1,6 +1,6 @@
 ---
 title: "CollectionAssociation defines delete_or_nullify_all_records bodies Rails leaves to its subclasses"
-status: draft
+status: closed
 updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of collection-association-delete-or-nullify-all-records-base-default"
 ---
 
 ## Context
