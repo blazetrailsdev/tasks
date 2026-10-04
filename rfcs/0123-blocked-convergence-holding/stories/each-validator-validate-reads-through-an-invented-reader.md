@@ -2,7 +2,7 @@
 title: "activemodel: EachValidator#validate sends read_attribute_for_validation instead of an invented fallback reader"
 status: blocked
 updated: 2026-10-02
-rfc: "0173-activemodel-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activemodel"]
 deps:

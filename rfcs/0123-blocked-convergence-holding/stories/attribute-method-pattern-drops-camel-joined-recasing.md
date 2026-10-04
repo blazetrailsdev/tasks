@@ -2,7 +2,7 @@
 title: "activemodel: AttributeMethodPattern holds Rails' @regex / @method_name with no camelJoined re-casing"
 status: blocked
 updated: 2026-10-03
-rfc: "0173-activemodel-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activemodel"]
 deps: []

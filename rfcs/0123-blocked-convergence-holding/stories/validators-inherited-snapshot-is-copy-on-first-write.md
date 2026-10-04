@@ -2,7 +2,7 @@
 title: "validators-inherited-snapshot-is-copy-on-first-write"
 status: blocked
 updated: 2026-10-03
-rfc: "0173-activemodel-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
