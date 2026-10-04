@@ -2,7 +2,7 @@
 title: "activesupport: run_callbacks passes invoke_before / invoke_after env only"
 status: draft
 updated: 2026-10-04
-rfc: "0173-activemodel-parity-100"
+rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport"]
 deps: []
