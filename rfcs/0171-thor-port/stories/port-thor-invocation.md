@@ -58,6 +58,8 @@ with the alternatives from the RFC.
       "is a descendant of (or is) the module". Use the ancestry check, not `instanceof`.
 - [ ] **`stored_config.merge(_shared_configuration).merge!(config)`**: `_shared_configuration`
       is extended by Shell (`shell:`) and Actions (`destination_root:`) through `super`.
+      `port-thor-actions-module` no longer waits on this story; if it landed first, assert the
+      composed hash here.
 
 ## Acceptance criteria
 

@@ -7,7 +7,7 @@ cluster: null
 packages: ["trailties"]
 deps:
   [
-    "port-thor-invocation",
+    "port-thor-util",
     "port-thor-shell-module-basic-output-and-terminal",
     "ruby-compat-fileutils-cd-block-restores-on-settle",
     "ruby-compat-kernel-system-and-open3-capture2e",
@@ -37,6 +37,11 @@ closed-reason: null
 - `run` (`:248-277`), `run_ruby_script` (`:285-288`), `thor` (`:308-319`);
 - protected `_shared_configuration` (adds `destination_root:`) and `_cleanup_options_and_set`
   (`:329-338`).
+
+This story does not wait on `port-thor-invocation`. Its only coupling to Invocation is
+`_shared_configuration`, whose base definition is Invocation's. Port Actions' override as
+`super.merge!(destination_root:)` over whatever `super` resolves to today; whichever of the two
+stories lands second asserts the composed result.
 
 `relative_to_original_destination_root` today reads a `cwd` field
 (`thor/actions.ts`, `Pick<ActionsHost, "cwd">`). With the destination stack ported, it reads

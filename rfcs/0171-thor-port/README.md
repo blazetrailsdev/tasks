@@ -476,8 +476,8 @@ as their lib story and fixtures land. Phases 6 and 7 can run in parallel once ph
 | `port-thor-empty-directory-create-file-and-create-link` |     400 |            |
 | `thor-actions-template-is-unported` (rehomed from 0142) |     450 |            |
 | `port-thor-directory-action`                            |     350 |         20 |
-| `port-thor-inject-into-file`                            |     450 |         23 |
-| `port-thor-file-manipulation-edits`                     |     300 |            |
+| `port-thor-inject-into-file`                            |     520 |         23 |
+| `port-thor-file-manipulation-edits`                     |     230 |            |
 
 ### 5. Spec fixtures and RSpec ports
 

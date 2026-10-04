@@ -7,7 +7,7 @@ cluster: null
 packages: ["trailties"]
 deps: ["port-thor-empty-directory-create-file-and-create-link"]
 deps-rfc: []
-est-loc: 450
+est-loc: 520
 priority: 2
 pr: null
 claim: null
@@ -23,6 +23,12 @@ closed-reason: null
 EmptyDirectory` with `initialize` (`:39-50`), `invoke!` (`:52-72`), `revoke!` (`:74-86`), and
 protected `say_status` (`:90-108`, `:prepend` / `:append` / `:insert` from the flag), `content`,
 `replacement_present?` and `replace!` (`:120-127`).
+
+Also the four `insert_into_file` wrappers in `vendor/thor/v1.3.2/lib/thor/actions/file_manipulation.rb`:
+`prepend_to_file` / `prepend_file` (`:170-175`), `append_to_file` / `append_file`
+(`:192-197`), `inject_into_class` (`:216-220`) and `inject_into_module` (`:239-243`). They
+moved here from `port-thor-file-manipulation-edits` so that story can land without this one.
+Rails calls `append_to_file` 12 times and `inject_into_class` once.
 
 trailties has a copy in `GeneratorBase`'s `appendToFile` / `revokeInjection`
 (`packages/trailties/src/generators/base.ts:892-913`) and in `generators/trails-actions.ts`.
@@ -46,10 +52,16 @@ converged part of that copy.
 - [ ] **Missing file**: `raise Thor::Error, "The file #{destination} does not appear to exist"`
       unless pretending.
 - [ ] **`data.is_a?(Proc) ? data.call : data`** is evaluated eagerly in `initialize`.
+- [ ] **`config[:after] = /\A/`** in `prepend_to_file` (and the other wrappers' defaults)
+      mutates the caller's hash (`args << config`).
+- [ ] **`inject_into_class`**' regex `/class #{klass}\n|class #{klass} .*\n/` is written for
+      Ruby source. For a TS class declaration (`export class Foo extends Bar {`), the second
+      alternative matches too. Assert that on a generated TS file.
 
 ## Acceptance criteria
 
-- [ ] `inject_into_file.rb` reads complete in `parity:api --package thor`.
+- [ ] `inject_into_file.rb` and the four wrappers above read complete in
+      `parity:api --package thor`.
 - [ ] `vendor/thor/v1.3.2/spec/actions/inject_into_file_spec.rb` (23) is ported.
 
 ## Cases to port (23)
