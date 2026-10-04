@@ -1,9 +1,9 @@
 ---
 rfc: "0162-actioncontroller-metal-parity"
 title: "ActionController metal and AbstractController — the non-rendering modules to parity"
-status: draft
+status: active
 created: 2026-09-27
-updated: 2026-09-27
+updated: 2026-10-04
 owner: "@deanmarano"
 packages:
   - "actionpack"
