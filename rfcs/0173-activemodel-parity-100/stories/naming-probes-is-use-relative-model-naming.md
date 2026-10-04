@@ -5,7 +5,8 @@ updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - model-name-constructor-drops-the-string-klass-arm
 deps-rfc: []
 est-loc: 80
 priority: null
