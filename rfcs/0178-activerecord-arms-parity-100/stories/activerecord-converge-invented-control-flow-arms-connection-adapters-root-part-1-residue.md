@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove the invented branches left in the root connection adapters (part 1 residue)"
-status: draft
+status: closed
 updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by mysql2-adapter-initialize-discard-and-configure-take-rails-control-flow; the other rows were converged or receipted in trails#8490"
 ---
 
 ## Context

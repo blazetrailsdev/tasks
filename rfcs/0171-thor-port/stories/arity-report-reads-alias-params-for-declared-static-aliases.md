@@ -1,6 +1,6 @@
 ---
 title: "parity:api arity report reads aliasParams for a declared static alias"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null

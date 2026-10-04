@@ -1,6 +1,6 @@
 ---
 title: "thor: Actions.sourcePaths memoizes as actions.rb does"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null

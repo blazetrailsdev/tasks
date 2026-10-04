@@ -1,7 +1,7 @@
 ---
 title: "activerecord: remove or credit the 80 invented branches in encryption part 1"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 560
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-04T17:39:40Z"
+assignee: "activerecord-converge-invented-control-flow-arms-encryption-part-1"
 blocked-by: null
 closed-reason: null
 ---
