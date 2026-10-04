@@ -1,7 +1,7 @@
 ---
 title: "validators-inherited-snapshot-is-copy-on-first-write"
 status: blocked
-updated: 2026-10-03
+updated: 2026-10-04
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-10-03T16:07:12Z"
 assignee: "lazy-attribute-hash-default-value-and-equality"
-blocked-by: "No class-definition hook in JS: Validations::ClassMethods#inherited (activemodel/lib/active_model/validations.rb:287-291) snapshots the parent's _validators when the subclass is DEFINED. Evaluating 'class Child extends Parent' runs no code on Parent (only a Proxy 'prototype' get trap could observe it, and classes are not Proxies), and the parent keeps no list of subclasses to snapshot into at its own later write, so the snapshot moment is unrecoverable. The copy-on-write in validations/with.ts already keeps child writes out of the parent; only the timing of a parent write made after the subclass is defined and before the subclass's first own write differs. Converging needs an invented registration step (decorator / explicit register call) on every model, which CLAUDE.md § 'inherited is deferred to own-property memo guards' rejects."
+blocked-by: 'No class-definition hook in JS: Validations::ClassMethods#inherited (activemodel/lib/active_model/validations.rb:287-291) snapshots the parent''s _validators when the subclass is DEFINED. Evaluating ''class Child extends Parent'' runs no code on Parent (only a Proxy ''prototype'' get trap could observe it, and classes are not Proxies), and the parent keeps no list of subclasses to snapshot into at its own later write, so the snapshot moment is unrecoverable. Since trails#8473 the copy runs from the _validators reader Validations.included installs (packages/activemodel/src/validations.ts), at a subclass''s first READ, superclass chain first; only a parent write made after the subclass is defined and before the subclass''s first _validators read differs (pinned by validations.trails.test.ts, "a subclass''s first _validators read copies parent validators added since it was defined"). Converging needs an invented registration step (decorator / explicit register call) on every model, which CLAUDE.md § ''inherited is deferred to own-property memo guards'' rejects.'
 closed-reason: null
 ---
 

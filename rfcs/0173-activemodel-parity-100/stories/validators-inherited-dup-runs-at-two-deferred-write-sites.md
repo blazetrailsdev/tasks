@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Validations.inherited's _validators dup runs at two deferred write sites"
-status: claimed
+status: done
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8473
 claim: "2026-10-04T01:59:42Z"
 assignee: "validators-inherited-dup-runs-at-two-deferred-write-sites"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "activesupport: run_callbacks passes invoke_sequence itself to expand_call_template"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activemodel: AttributeSet#fetch re-derives Hash#fetch's arm; an undefined default raises and a function default is called"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null

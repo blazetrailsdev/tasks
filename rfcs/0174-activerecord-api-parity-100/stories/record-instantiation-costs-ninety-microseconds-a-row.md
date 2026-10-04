@@ -1,6 +1,6 @@
 ---
 title: "activerecord: instantiating a loaded row costs ~90 µs whatever is selected"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

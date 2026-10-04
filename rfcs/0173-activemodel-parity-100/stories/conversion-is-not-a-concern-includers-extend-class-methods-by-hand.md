@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Conversion is not a Concern, so includers extend its ClassMethods by hand"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null

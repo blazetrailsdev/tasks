@@ -1,7 +1,7 @@
 ---
 title: "Port caching_test.rb's 32 skipped fragment and collection caching tests"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-04
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]

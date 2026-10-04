@@ -1,7 +1,7 @@
 ---
 title: "Port the missing redirect, send_file, required_params and metal tests"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-04
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]

@@ -1,7 +1,7 @@
 ---
 title: "Port Thor's class DSL (desc, long_desc, map, method_option(s), subcommand, register, check / stop / disable flags)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-base-command-registry-method-added-and-start"]
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8475
+claim: "2026-10-04T02:11:59Z"
+assignee: "port-thor-class-dsl"
 blocked-by: null
 closed-reason: null
 ---

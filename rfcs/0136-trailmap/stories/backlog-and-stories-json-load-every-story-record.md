@@ -1,7 +1,7 @@
 ---
 title: "trailmap: /backlog and /stories.json take 2-3 s loading every story record"
-status: draft
-updated: 2026-10-03
+status: done
+updated: 2026-10-04
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#33
+claim: "2026-10-04T02:10:43Z"
+assignee: "backlog-and-stories-json-load-every-story-record"
 blocked-by: null
 closed-reason: null
 ---

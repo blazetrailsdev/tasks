@@ -1,6 +1,6 @@
 ---
 title: 'activerecord: has_many dependent: "delete" is Rails'' :delete_all'
-status: draft
+status: in-progress
 updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8474
+claim: "2026-10-04T02:40:47Z"
+assignee: "has-many-dependent-delete-is-not-a-rails-option"
 blocked-by: null
 closed-reason: null
 ---
