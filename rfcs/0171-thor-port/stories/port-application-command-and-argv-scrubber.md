@@ -5,7 +5,10 @@ updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
-deps: ["vendor-thor-and-port-command-base-thor-surface", "trails-new-reaches-app-generator-start"]
+deps:
+  - vendor-thor-and-port-command-base-thor-surface
+  - trails-new-reaches-app-generator-start
+  - thor-cli-names-are-kebab-case-accept-snake-case-input
 deps-rfc: []
 est-loc: 400
 priority: null
