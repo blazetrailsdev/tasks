@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Builder::BelongsTo.define_callbacks calls super; Association.extensions is the base class's list"
-status: draft
-updated: 2026-10-02
+status: done
+updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8474
 claim: null
 assignee: null
 blocked-by: null

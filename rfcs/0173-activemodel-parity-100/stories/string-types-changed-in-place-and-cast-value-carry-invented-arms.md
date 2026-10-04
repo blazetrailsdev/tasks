@@ -1,6 +1,6 @@
 ---
 title: "StringType#isChangedInPlace and ImmutableStringType#castValue carry arms and freeze calls Rails does not have"
-status: ready
+status: in-progress
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8477
+claim: "2026-10-04T12:06:50Z"
+assignee: "string-types-changed-in-place-and-cast-value-carry-invented-arms"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activesupport: TestCase includes ErrorReporterAssertions; assertErrorReported is not a moved static"
-status: ready
+status: in-progress
 updated: 2026-10-04
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8477
+claim: "2026-10-04T12:06:50Z"
+assignee: "string-types-changed-in-place-and-cast-value-carry-invented-arms"
 blocked-by: null
 closed-reason: null
 ---

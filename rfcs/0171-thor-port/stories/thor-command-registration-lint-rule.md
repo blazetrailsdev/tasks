@@ -1,7 +1,7 @@
 ---
 title: "ESLint rule: every public method of a Thor / Thor::Group subclass is registered through methodAdded"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-base-command-registry-method-added-and-start"]
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8477
+claim: "2026-10-04T12:06:50Z"
+assignee: "string-types-changed-in-place-and-cast-value-carry-invented-arms"
 blocked-by: null
 closed-reason: null
 ---

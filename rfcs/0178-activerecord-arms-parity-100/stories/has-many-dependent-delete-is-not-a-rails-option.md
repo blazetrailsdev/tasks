@@ -1,6 +1,6 @@
 ---
 title: 'activerecord: has_many dependent: "delete" is Rails'' :delete_all'
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port Thor's class DSL (desc, long_desc, map, method_option(s), subcommand, register, check / stop / disable flags)"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
