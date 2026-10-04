@@ -67,7 +67,8 @@ Mutate:
   record-spawn --rfc R --source S [--pane P]      (RFC-scoped, e.g. a refine)
   block <id> <reason|--reason R>
   close <id> <reason|--reason R>
-  status-set <id> <status>
+  status-set <id...> <status> [--from STATUS]   (the last positional is the status;
+                                   --from refuses the batch unless every id is in STATUS)
   priority <id> <n|clear>
   rehome <id...> --to <rfc> [--reason R] [--no-commit]
   rfc-status <rfc> <draft|active|postponed|closed> [--reason R] [--no-commit]
@@ -384,8 +385,15 @@ async function main(): Promise<number> {
       break;
     }
     case "status-set": {
+      // The status is the LAST positional so a batch of ids can precede it.
+      // statusSet checks it against the real statuses, so a forgotten status
+      // (`status-set a b`) is an error rather than `b` taken as one.
       if (pos.length < 2) return usage();
-      await statusSet(pos[0], pos[1] as StoryStatus);
+      const from = flags.from;
+      if (from === true) return usage();
+      await statusSet([...new Set(pos.slice(0, -1))], pos[pos.length - 1] as StoryStatus, {
+        from: (from as StoryStatus | undefined) ?? null,
+      });
       break;
     }
     // Moving a story between RFCs is a markdown act (see rehome.ts): the file

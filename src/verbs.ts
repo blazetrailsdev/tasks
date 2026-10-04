@@ -24,7 +24,7 @@
  * affected-row count IS the race resolution.
  */
 import { Base } from "@blazetrails/activerecord";
-import { Event, Story, type StoryStatus } from "./models/index.js";
+import { Event, Story, STORY_STATUSES, type StoryStatus } from "./models/index.js";
 import { VerbExit } from "./db.js";
 
 /** ISO seconds, matching the `claim:` format the old CLI wrote. */
@@ -101,6 +101,15 @@ function requireFound(ids: string[], found: Story[]): void {
   const missing = ids.filter((id) => !have.has(id));
   if (missing.length) {
     console.error(`error: story not found: ${missing.join(", ")}`);
+    throw new VerbExit(1);
+  }
+}
+
+function requireStatus(value: string, what: string): void {
+  if (!(STORY_STATUSES as readonly string[]).includes(value)) {
+    console.error(
+      `error: ${what} must be one of ${STORY_STATUSES.join(", ")} (got ${JSON.stringify(value)})`,
+    );
     throw new VerbExit(1);
   }
 }
@@ -310,16 +319,42 @@ export async function close(id: string, reason: string): Promise<void> {
 }
 
 /**
- * Set a story's status directly, clearing whatever the old status owned — see
- * clearedBy above.
+ * Set the status of one or more stories directly, clearing whatever the old
+ * status owned — see clearedBy above.
+ *
+ * All-or-nothing across ids, like claim: an unknown id, or a story outside
+ * `from`, refuses the batch before anything is written.
+ *
+ * `from` is the guard a bulk move needs. Without it `status-set a b c ready`
+ * would quietly pull an in-progress or done story back into the queue, and
+ * clearedBy would drop its claim and PR on the way.
  */
-export async function statusSet(id: string, status: StoryStatus): Promise<void> {
+export async function statusSet(
+  ids: string[],
+  status: StoryStatus,
+  opts: { from?: StoryStatus | null } = {},
+): Promise<void> {
+  requireStatus(status, "status");
+  const from = opts.from ?? null;
+  if (from !== null) requireStatus(from, "--from");
   await Base.transaction(async () => {
-    const [s] = await findAll([id]);
-    requireFound([id], s ? [s] : []);
-    await s.update({ status, ...clearedBy(status), updated_on: today() });
-    await record("status", id, { detail: { arg: status } });
-    console.log(`status ${status}: ${id}`);
+    const found = await findAll(ids);
+    requireFound(ids, found);
+    if (from !== null) {
+      const off = found.filter((s) => s.status !== from);
+      if (off.length) {
+        console.error(
+          `error: not ${from}, nothing changed: ${off.map((s) => `${s.id} (${s.status})`).join(", ")}`,
+        );
+        throw new VerbExit(1);
+      }
+    }
+    const byId = new Map(found.map((s) => [s.id, s]));
+    for (const id of ids) {
+      await byId.get(id)!.update({ status, ...clearedBy(status), updated_on: today() });
+      await record("status", id, { detail: { arg: status } });
+      console.log(`status ${status}: ${id}`);
+    }
   });
 }
 

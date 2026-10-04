@@ -47,8 +47,8 @@ describe("rfc auto-close", () => {
   });
 
   it("fires from `status` too, not just the tracking verbs", async () => {
-    await statusSet("s1", "done");
-    await statusSet("s2", "closed");
+    await statusSet(["s1"], "done");
+    await statusSet(["s2"], "closed");
     expect(await rfcStatus()).toBe("closed");
   });
 
@@ -80,7 +80,7 @@ describe("rfc auto-close", () => {
   it("closes once: a repeat of the landing verb does not re-fire the event", async () => {
     await markTracking(["s1", "s2"], "done", "trails#10");
     await markTracking(["s1"], "done", "trails#10");
-    await statusSet("s2", "done");
+    await statusSet(["s2"], "done");
     expect((await Event.where({ verb: "rfc-close" }).count()) as number).toBe(1);
   });
 
