@@ -2,7 +2,7 @@
 title: "generator-invoke-for-class-method-with-padding"
 status: draft
 updated: 2026-09-28
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
 deps: ["rebase-generator-base-onto-thor-group"]

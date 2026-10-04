@@ -2,7 +2,7 @@
 title: "Port Rails::Command::HelpCommand / VersionCommand so split_namespace's help/version arms resolve"
 status: ready
 updated: 2026-09-28
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
 deps:

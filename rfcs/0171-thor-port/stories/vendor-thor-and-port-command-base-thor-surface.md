@@ -2,7 +2,7 @@
 title: "Rebase Rails::Command::Base onto the Thor port (Base < Thor, Error < Thor::Error, Behavior's Thor::Base.shell) and delete its stand-ins"
 status: draft
 updated: 2026-09-29
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
 deps:

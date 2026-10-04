@@ -2,7 +2,7 @@
 title: "Port Thor::Actions copy_file / link_file / get / template (TSE render, capture / concat) and route the migration generator's in-line render through it"
 status: draft
 updated: 2026-09-30
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
 deps:

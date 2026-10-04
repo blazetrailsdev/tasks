@@ -2,7 +2,7 @@
 title: "Port Shell::Basic#file_collision (Ynaqdhm menu, diff, merge tool) and wire CreateFile#force_on_collision? to it"
 status: draft
 updated: 2026-09-28
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
 deps:

@@ -2,7 +2,7 @@
 title: "GeneratorBase is constructed by Thor::Base#initialize: Thor::Options parse, argument accessors, zero-arg commands"
 status: draft
 updated: 2026-09-28
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
 deps:

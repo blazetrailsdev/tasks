@@ -2,7 +2,7 @@
 title: "port-application-command-and-argv-scrubber"
 status: draft
 updated: 2026-09-28
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
 deps: ["vendor-thor-and-port-command-base-thor-surface", "trails-new-reaches-app-generator-start"]

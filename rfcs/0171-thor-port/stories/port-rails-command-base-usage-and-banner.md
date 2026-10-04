@@ -2,7 +2,7 @@
 title: "port-rails-command-base-usage-and-banner"
 status: draft
 updated: 2026-09-29
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
 deps: ["vendor-thor-and-port-command-base-thor-surface"]
