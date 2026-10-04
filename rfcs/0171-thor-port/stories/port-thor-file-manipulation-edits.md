@@ -5,7 +5,9 @@ updated: 2026-09-30
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
-deps: ["port-thor-inject-into-file", "ruby-compat-async-fs-verbs-for-thor-actions"]
+deps:
+  - ruby-compat-async-fs-verbs-for-thor-actions
+  - port-thor-actions-module
 deps-rfc: []
 est-loc: 300
 priority: 2
