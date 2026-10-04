@@ -181,7 +181,7 @@ describe("statusSet clears the fields the old status owned", () => {
     await block("s1", "the premise was wrong");
     expect((await Story.findBy({ id: "s1" }))!.blocked_by).toBe("the premise was wrong");
 
-    await statusSet("s1", "ready");
+    await statusSet(["s1"], "ready");
 
     const s = await Story.findBy({ id: "s1" });
     expect(s!.status).toBe("ready");
@@ -192,13 +192,13 @@ describe("statusSet clears the fields the old status owned", () => {
 
   it("keeps blocked_by when the status stays blocked", async () => {
     await block("s1", "waiting on the seam");
-    await statusSet("s1", "blocked");
+    await statusSet(["s1"], "blocked");
     expect((await Story.findBy({ id: "s1" }))!.blocked_by).toBe("waiting on the seam");
   });
 
   it("drops a stale claim when a story is moved to ready", async () => {
     await claim(["s2"], "someone-else");
-    await statusSet("s2", "ready");
+    await statusSet(["s2"], "ready");
 
     const s = await Story.findBy({ id: "s2" });
     expect(s!.assignee).toBeNull();
@@ -239,7 +239,7 @@ describe("a status move clears what the old status owned", () => {
 
   it("drops both when a story is released back to the queue", async () => {
     await close("s1", "not worth doing");
-    await statusSet("s1", "blocked");
+    await statusSet(["s1"], "blocked");
     await claim(["s2"], "agent-a");
     await release(["s2"]);
     const s2 = await Story.findBy({ id: "s2" });
@@ -259,18 +259,85 @@ describe("a status move clears what the old status owned", () => {
   // check, and only fixable through this path since `pr` is DB-owned.
   it("drops a stale pr when a story moves back to ready", async () => {
     await markTracking(["s1"], "in-progress", "trails#42");
-    await statusSet("s1", "ready");
+    await statusSet(["s1"], "ready");
     expect((await Story.findBy({ id: "s1" }))!.pr).toBeNull();
   });
 
   it("drops a stale pr when a story moves to draft", async () => {
     await markTracking(["s1"], "in-progress", "trails#42");
-    await statusSet("s1", "draft");
+    await statusSet(["s1"], "draft");
     expect((await Story.findBy({ id: "s1" }))!.pr).toBeNull();
   });
 
   it("keeps pr when the story ships", async () => {
     await markTracking(["s1"], "done", "trails#42");
     expect((await Story.findBy({ id: "s1" }))!.pr).toBe("trails#42");
+  });
+});
+
+describe("statusSet over several ids", () => {
+  beforeEach(async () => {
+    await Story.where({ id: ["s1", "s2"] }).updateAll({ status: "draft" });
+  });
+
+  const statuses = async () =>
+    (await Story.order("id").toArray()).map((s) => `${s.id}:${s.status}`).join(" ");
+  const events = () => Event.where({ verb: "status" }).count();
+
+  it("moves every listed story, with one event each", async () => {
+    await statusSet(["s1", "s2"], "ready");
+    expect(await statuses()).toBe("s1:ready s2:ready");
+    expect(await Event.where({ story_id: "s1", verb: "status" }).count()).toBe(1);
+    expect(await Event.where({ story_id: "s2", verb: "status" }).count()).toBe(1);
+  });
+
+  it("writes a repeated id once", async () => {
+    await statusSet([...new Set(["s1", "s1", "s2"])], "ready");
+    expect(await statuses()).toBe("s1:ready s2:ready");
+    expect(await events()).toBe(2);
+  });
+
+  it("is all-or-nothing: one unknown id refuses the whole batch", async () => {
+    await expect(statusSet(["s1", "nope", "s2"], "ready")).rejects.toMatchObject({ code: 1 });
+    expect(await statuses()).toBe("s1:draft s2:draft");
+    expect(await events()).toBe(0);
+  });
+
+  // `status-set s1 s2` with the status forgotten reaches here as ids ["s1"],
+  // status "s2" — it must not be written as a status.
+  it("refuses a status that is not a real one", async () => {
+    await expect(statusSet(["s1"], "s2" as never)).rejects.toMatchObject({ code: 1 });
+    await expect(statusSet(["s1", "s2"], "reddy" as never)).rejects.toMatchObject({ code: 1 });
+    expect(await statuses()).toBe("s1:draft s2:draft");
+    expect(await events()).toBe(0);
+  });
+
+  it("--from moves the batch when every story is in that status", async () => {
+    await statusSet(["s1", "s2"], "ready", { from: "draft" });
+    expect(await statuses()).toBe("s1:ready s2:ready");
+  });
+
+  it("--from refuses the whole batch when one story is elsewhere", async () => {
+    await markTracking(["s2"], "in-progress", "trails#9");
+    await expect(statusSet(["s1", "s2"], "ready", { from: "draft" })).rejects.toMatchObject({
+      code: 1,
+    });
+    expect(await statuses()).toBe("s1:draft s2:in-progress");
+    // The guard exists to protect exactly this: the claim and PR survive.
+    expect((await Story.findBy({ id: "s2" }))!.pr).toBe("trails#9");
+    expect(await events()).toBe(0);
+  });
+
+  it("refuses a --from that is not a real status", async () => {
+    await expect(statusSet(["s1"], "ready", { from: "drafty" as never })).rejects.toMatchObject({
+      code: 1,
+    });
+    expect(await statuses()).toBe("s1:draft s2:draft");
+  });
+
+  it("a single id behaves as before", async () => {
+    await statusSet(["s1"], "ready");
+    expect(await statuses()).toBe("s1:ready s2:draft");
+    expect(await events()).toBe(1);
   });
 });
