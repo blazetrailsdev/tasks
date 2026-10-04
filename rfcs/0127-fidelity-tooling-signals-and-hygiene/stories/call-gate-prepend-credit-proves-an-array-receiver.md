@@ -2,7 +2,7 @@
 title: "parity: the unshift credit for Array#prepend accepts any local or expression receiver"
 status: draft
 updated: 2026-10-03
-rfc: "0173-activemodel-parity-100"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []
