@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SQLite3Adapter.new_client is one rescued body; busy timeout belongs to configure_connection"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: ["activerecord"]

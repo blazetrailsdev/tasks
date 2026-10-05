@@ -1,7 +1,7 @@
 ---
 title: "activemodel: ActiveModel::API#initialize joins the host constructor chain (blocked on a constructor hook)"
 status: blocked
-updated: 2026-09-30
+updated: 2026-10-05
 rfc: "0123-blocked-convergence-holding"
 cluster: skips
 packages: ["activemodel"]
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "TS language: a class constructor chain is fixed at `extends` time; ruby-compat include()/prepend() copy prototype members and cannot install or wrap a constructor, and CLAUDE.md ratifies no alternative. Needs a ruby-compat construction hook designed first."
+blocked-by: "TS language: a class body must carry its own constructor, and include() cannot install one. The construction hook this story waited on exists (ruby-compat initializeIncludedModules, trails#7590; ActiveModel::API#initialize calls it at activemodel api.ts:21-25 and Model's constructor enters initialize since trails#8439), so what remains is Model's hand-written constructor (@missingRailsCall assign_attributes, model.ts:122) and the api.rb initialize entry in SCOPED_SKIP_GROUPS (scripts/parity/conventions.ts:858-873). Deleting those needs either a CLAUDE.md ratification of the module-initialize spelling or a scorer that maps a module's initialize to something other than a constructor; neither is decided."
 closed-reason: null
 ---
 

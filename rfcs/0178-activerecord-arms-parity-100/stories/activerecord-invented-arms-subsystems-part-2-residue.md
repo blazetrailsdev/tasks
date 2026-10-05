@@ -1,6 +1,6 @@
 ---
 title: "activerecord: residue of invented arms beside subsystems part 2 (_createRecord, UnsignedInteger#maxValue, TypeMap#lookup default)"
-status: draft
+status: ready
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

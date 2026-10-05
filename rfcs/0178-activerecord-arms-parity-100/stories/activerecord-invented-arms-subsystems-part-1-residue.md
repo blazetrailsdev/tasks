@@ -1,6 +1,6 @@
 ---
 title: "activerecord: converge the invented arms left in database-config, time-zone cast and fixture-set"
-status: draft
+status: ready
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

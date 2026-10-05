@@ -1,6 +1,6 @@
 ---
 title: "activerecord: converge the invented branches left in root-q-z part 2 (relation load path, one?, to_sql)"
-status: draft
+status: ready
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

@@ -1,9 +1,9 @@
 ---
 rfc: "0173-activemodel-parity-100"
 title: "activemodel at 100% on every parity axis"
-status: active
+status: closed
 created: 2026-09-30
-updated: 2026-09-30
+updated: 2026-10-05
 owner: "@deanmarano"
 packages:
   - "activemodel"

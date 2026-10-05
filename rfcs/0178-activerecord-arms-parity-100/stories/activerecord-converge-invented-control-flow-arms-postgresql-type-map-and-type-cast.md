@@ -1,7 +1,7 @@
 ---
 title: "activerecord: PG TypeMapInitializer#run, lookup_cast_type_from_column and type_cast drop their invented arms"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
