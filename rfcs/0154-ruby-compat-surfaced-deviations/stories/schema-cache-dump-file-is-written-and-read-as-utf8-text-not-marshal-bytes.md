@@ -1,6 +1,6 @@
 ---
 title: "SchemaCache .dump files are written and read as UTF-8 text, not Marshal's bytes"
-status: draft
+status: in-progress
 updated: 2026-10-05
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8520
+claim: "2026-10-05T02:10:51Z"
+assignee: "schema-cache-dump-file-is-written-and-read-as-utf8-text-not-marshal-bytes"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Wire Marshal into the schema cache .dump arm and DebugHelper#debug's probe (TYPE_USRMARSHAL, singleton-method errors)"
-status: draft
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-05
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: ["ruby-compat", "activerecord"]
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8520
+claim: "2026-10-05T02:02:29Z"
+assignee: "ruby-compat-has-no-marshal-for-schema-cache-and-debug"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove or credit the 77 invented branches in root-a-f part 3"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
