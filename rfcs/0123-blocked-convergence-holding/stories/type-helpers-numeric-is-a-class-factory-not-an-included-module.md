@@ -2,7 +2,7 @@
 title: "activemodel: Type::Helpers::Numeric is a class factory (applyNumericMixin), not an included module"
 status: blocked
 updated: 2026-10-02
-rfc: "0173-activemodel-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activemodel"]
 deps:
