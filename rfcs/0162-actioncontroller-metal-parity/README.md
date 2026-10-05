@@ -7,7 +7,8 @@ updated: 2026-10-04
 owner: "@deanmarano"
 packages:
   - "actionpack"
-clusters: []
+clusters:
+  - "action-controller"
 ---
 
 # RFC 0162 — ActionController metal and AbstractController: the non-rendering modules to parity

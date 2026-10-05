@@ -2,7 +2,7 @@
 title: "send_data does not render and send_file reads the file into memory instead of installing the stream"
 status: ready
 updated: 2026-09-26
-rfc: "0141-actionpack-surfaced-deviations"
+rfc: "0162-actioncontroller-metal-parity"
 cluster: "action-controller"
 packages: []
 deps: []

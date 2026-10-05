@@ -2,7 +2,7 @@
 title: "Port ActionController::Helpers#helpers, the controller helper proxy"
 status: ready
 updated: 2026-09-26
-rfc: "0141-actionpack-surfaced-deviations"
+rfc: "0162-actioncontroller-metal-parity"
 cluster: "action-controller"
 packages: []
 deps: []

@@ -2,7 +2,7 @@
 title: "expires_in/fresh_when compose the cache-control header instead of merging into the one response.cache_control hash"
 status: ready
 updated: 2026-09-26
-rfc: "0141-actionpack-surfaced-deviations"
+rfc: "0162-actioncontroller-metal-parity"
 cluster: "action-controller"
 packages: []
 deps: []
