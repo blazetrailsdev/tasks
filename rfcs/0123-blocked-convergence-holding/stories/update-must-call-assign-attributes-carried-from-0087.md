@@ -2,7 +2,7 @@
 title: "update/update! must call assignAttributes, not setAttributes (carried from RFC 0087)"
 status: blocked
 updated: 2026-09-26
-rfc: "0173-activemodel-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
