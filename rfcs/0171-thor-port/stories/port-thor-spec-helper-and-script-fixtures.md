@@ -1,7 +1,7 @@
 ---
 title: "Port Thor's spec helper and the Thor fixtures (script, enum, command, subcommand, help, verbose) plus the fixture file tree"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-dispatch-and-help"]
 deps-rfc: []
 est-loc: 600
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8553
+claim: "2026-10-05T19:09:45Z"
+assignee: "port-thor-spec-helper-and-script-fixtures"
 blocked-by: null
 closed-reason: null
 ---

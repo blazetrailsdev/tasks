@@ -1,7 +1,7 @@
 ---
 title: "activerecord: preserve_original_encrypted's column check waits for reflection through invented bookkeeping"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: ["activerecord"]

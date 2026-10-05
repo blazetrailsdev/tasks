@@ -1,7 +1,7 @@
 ---
 title: "api-compare: the idiom fold and an uncounted catch-all else manufacture missing arms the port already has"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: timestamp / integration / attribute_method? module bodies take Rails' control flow"
-status: draft
-updated: 2026-10-03
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: ["activerecord"]

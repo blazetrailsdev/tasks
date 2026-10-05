@@ -1,7 +1,7 @@
 ---
 title: "Port controller/helper_test.rb"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8552
+claim: "2026-10-05T19:21:32Z"
+assignee: "port-helper-test"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PG reconnect resets the raw connection and update_typemap_for_default_timezone rebuilds the timestamp decoder"
-status: draft
+status: ready
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

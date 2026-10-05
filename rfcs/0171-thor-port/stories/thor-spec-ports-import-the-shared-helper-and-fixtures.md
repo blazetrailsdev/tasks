@@ -1,6 +1,6 @@
 ---
 title: "Converge the ported Thor specs onto the shared spec helper and script fixtures"
-status: draft
+status: closed
 updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by thor-vitest-setup-applies-the-spec-helper: its context claimed no setup file can work, which is false"
 ---
 
 ## Context

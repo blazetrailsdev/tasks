@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Preloader LoaderRecords#keys_to_load compares composite keys by identity"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SQLiteDatabaseTasks takes extra_flags as required; run_cmd and run_cmd_error are private methods"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []

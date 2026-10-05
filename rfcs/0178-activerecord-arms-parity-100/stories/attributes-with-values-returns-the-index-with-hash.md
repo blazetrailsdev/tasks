@@ -1,7 +1,7 @@
 ---
 title: "activerecord: attributes_with_values returns the index_with hash"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []

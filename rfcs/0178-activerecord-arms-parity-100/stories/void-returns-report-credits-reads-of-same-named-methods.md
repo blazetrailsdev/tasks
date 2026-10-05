@@ -1,7 +1,7 @@
 ---
 title: "api-compare: the void-returns report credits a read to every same-named method"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []

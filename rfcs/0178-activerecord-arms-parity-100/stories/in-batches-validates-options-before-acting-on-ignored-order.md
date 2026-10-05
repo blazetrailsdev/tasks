@@ -1,7 +1,7 @@
 ---
 title: "activerecord: in_batches validates its options before acting on the ignored order"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []

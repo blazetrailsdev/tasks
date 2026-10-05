@@ -1,7 +1,7 @@
 ---
 title: "activerecord: LoaderQuery#load_records_in_batch omits loader.run"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []

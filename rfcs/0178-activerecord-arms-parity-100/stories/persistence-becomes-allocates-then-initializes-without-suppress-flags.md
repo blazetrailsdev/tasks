@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Persistence#becomes is allocate plus initialize, with no suppress-flag try/restore"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: ["activerecord"]

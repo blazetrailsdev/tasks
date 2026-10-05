@@ -1,7 +1,7 @@
 ---
 title: "activerecord: deterministic_encrypted_attributes answers an Array, not a Set"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: ["activerecord"]

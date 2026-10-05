@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SchemaDumper#check_constraints_in_create gates on supports_check_constraints? at the caller"
-status: draft
+status: ready
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

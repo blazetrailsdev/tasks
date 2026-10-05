@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port Kernel#Array and converge the insert-all / to_param arms that open-code it"
-status: draft
+status: ready
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: AssociationQueryValue and PolymorphicArrayValue carry arms Rails does not have"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: ["activerecord"]

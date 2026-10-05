@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SchemaCache._load_from reads YAML through Psych.unsafe_load with no rescue"
-status: draft
+status: ready
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

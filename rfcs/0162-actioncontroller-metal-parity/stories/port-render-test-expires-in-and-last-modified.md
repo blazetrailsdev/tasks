@@ -1,7 +1,7 @@
 ---
 title: "Port render_test.rb's TestController, ExpiresInRenderTest and LastModifiedRenderTest"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8554
+claim: "2026-10-05T19:39:33Z"
+assignee: "port-render-test-expires-in-and-last-modified"
 blocked-by: null
 closed-reason: null
 ---

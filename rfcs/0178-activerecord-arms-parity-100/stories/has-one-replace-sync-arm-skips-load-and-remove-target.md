@@ -1,7 +1,7 @@
 ---
 title: "HasOne#replace's save=false arm is a second body that skips load_target and remove_target!"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: attribute-methods-initialize-generated-modules-deferral-guards"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []

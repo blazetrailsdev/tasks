@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SchemaDumper statement builders wrap trailing options without an invented arm"
-status: draft
+status: ready
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

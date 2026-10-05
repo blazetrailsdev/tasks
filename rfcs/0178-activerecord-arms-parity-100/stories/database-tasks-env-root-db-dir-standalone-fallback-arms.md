@@ -1,6 +1,6 @@
 ---
 title: "activerecord: DatabaseTasks env / root / db_dir drop their standalone fallback arms"
-status: draft
+status: ready
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

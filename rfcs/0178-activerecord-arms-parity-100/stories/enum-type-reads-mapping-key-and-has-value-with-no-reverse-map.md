@@ -1,6 +1,6 @@
 ---
 title: "activerecord: EnumType reads mapping.key / has_value? with no reverse map"
-status: draft
+status: ready
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

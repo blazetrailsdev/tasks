@@ -1,7 +1,7 @@
 ---
 title: "composite_primary_key? reads @composite_primary_key, written by primary_key="
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: []

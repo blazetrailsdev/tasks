@@ -1,6 +1,6 @@
 ---
 title: "activerecord: tasks run_cmd goes through Kernel.system with the parent's stdio"
-status: draft
+status: ready
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: PG newClient rescues driver errors only; is_cached_plan_failure? reads through result"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
