@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Actions#apply over a template module (dynamic import in place of instance_eval), and route app:template through it"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-actions-module"]
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8505
+claim: "2026-10-04T23:02:50Z"
+assignee: "port-thor-actions-apply"
 blocked-by: null
 closed-reason: null
 ---

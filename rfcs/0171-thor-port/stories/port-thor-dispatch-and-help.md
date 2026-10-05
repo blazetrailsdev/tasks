@@ -1,7 +1,7 @@
 ---
 title: "Port Thor.dispatch, command-name resolution and the help screens (Thor.help, command_help, Thor#help)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-class-dsl", "port-thor-util", "port-thor-shell-printers"]
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8509
+claim: "2026-10-04T23:29:34Z"
+assignee: "port-thor-dispatch-and-help"
 blocked-by: null
 closed-reason: null
 ---

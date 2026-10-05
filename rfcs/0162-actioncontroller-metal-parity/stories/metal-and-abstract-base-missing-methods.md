@@ -1,6 +1,6 @@
 ---
 title: "Port Metal#response_code / #to_a, AbstractController::Base's instance readers and allow_browser; seat Collector's module"
-status: ready
+status: in-progress
 updated: 2026-10-04
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8507
+claim: "2026-10-04T23:17:22Z"
+assignee: "action-controller-config-seats-onto-activesupport-primitives"
 blocked-by: null
 closed-reason: null
 ---

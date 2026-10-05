@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Errors#normalize_arguments and include? omit Rails' attribute.to_sym"
-status: draft
+status: ready
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null

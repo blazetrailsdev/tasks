@@ -1,7 +1,7 @@
 ---
 title: "Port Psych.load / Psych.safe_load entry points and their options"
-status: draft
-updated: 2026-09-30
+status: blocked
+updated: 2026-10-04
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat"]
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "dep psych-restricted-class-loader-and-no-alias-ruby is still draft/unclaimed: origin/main has no Psych::ClassLoader, ClassLoader::Restricted, Visitors::NoAliasRuby or AliasesNotEnabled, and ToRuby takes no (scanner, class_loader, symbolize_names:, freeze:), so psych.rb:323-336 cannot be wired. Also needs a ScalarScanner class with strict_integer: (psych-scalar-scanner-tokenize, draft) and Psych.parse."
 closed-reason: null
 ---
 

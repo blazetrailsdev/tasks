@@ -1,6 +1,6 @@
 ---
 title: "Port the rest of filters_test.rb"
-status: ready
+status: claimed
 updated: 2026-10-04
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-04T23:57:36Z"
+assignee: "port-filters-test-remainder"
 blocked-by: null
 closed-reason: null
 ---

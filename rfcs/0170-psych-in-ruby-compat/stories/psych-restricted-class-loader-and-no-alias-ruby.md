@@ -1,7 +1,7 @@
 ---
 title: "Port Psych::ClassLoader, ClassLoader::Restricted, NoAliasRuby and the alias exceptions"
-status: draft
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-04
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8508
+claim: "2026-10-04T23:40:32Z"
+assignee: "psych-restricted-class-loader-and-no-alias-ruby"
 blocked-by: null
 closed-reason: null
 ---

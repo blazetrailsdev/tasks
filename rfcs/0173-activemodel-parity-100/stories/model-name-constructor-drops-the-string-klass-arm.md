@@ -1,6 +1,6 @@
 ---
 title: "activemodel: ModelName's constructor takes a class, not a String"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null

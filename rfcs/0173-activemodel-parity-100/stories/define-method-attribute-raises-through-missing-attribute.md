@@ -1,6 +1,6 @@
 ---
 title: "activemodel: define_method_attribute's reader raises through missing_attribute, not an inline throw"
-status: in-progress
+status: done
 updated: 2026-10-04
 rfc: "0173-activemodel-parity-100"
 cluster: null
