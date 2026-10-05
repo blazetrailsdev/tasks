@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove or credit the 73 invented branches in subsystems part 2"
-status: claimed
+status: in-progress
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
@@ -9,7 +9,7 @@ deps: ["activerecord-converge-missing-control-flow-arms-subsystems"]
 deps-rfc: []
 est-loc: 518
 priority: null
-pr: null
+pr: trails#8547
 claim: "2026-10-05T17:39:46Z"
 assignee: "activerecord-converge-invented-control-flow-arms-subsystems-part-2"
 blocked-by: null

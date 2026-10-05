@@ -1,6 +1,6 @@
 ---
 title: "Thor::Arguments regexes break lines on \\r / U+2028 where Ruby breaks on \\n only"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Host thor/actions.test.ts on Thor::Group and drop the import-boundary test exemption"
-status: in-progress
+status: closed
 updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#8544
 claim: "2026-10-05T17:09:39Z"
 assignee: "attribute-method-prefix-pops-a-trailing-null-as-the-keywords"
 blocked-by: null
-closed-reason: null
+closed-reason: "actions.test.ts rehosted on Thor::Group in trails#8544; the ignores removal (AC3) continues as thor-specs-drop-activesupport-test-helper-imports"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "Build & Type Check failing on main @fb0b067f"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0061-ci-failures"
 cluster: null

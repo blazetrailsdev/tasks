@@ -1,6 +1,6 @@
 ---
 title: "activemodel: AttributeSet's Attributes type and cast_types / values_* returns declare Record where a Marshal-loaded set holds a Hash"
-status: draft
+status: done
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8546
+claim: "2026-10-05T18:06:59Z"
+assignee: "attribute-set-hash-returns-admit-a-marshal-loaded-hash"
 blocked-by: null
 closed-reason: null
 ---

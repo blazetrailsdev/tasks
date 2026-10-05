@@ -1,6 +1,6 @@
 ---
 title: "Port ActionController::Helpers#helpers, the controller helper proxy"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: "action-controller"

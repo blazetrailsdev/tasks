@@ -1,6 +1,6 @@
 ---
 title: "Thor::Base's eight aliased class methods are declared where the call gate compares them"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null

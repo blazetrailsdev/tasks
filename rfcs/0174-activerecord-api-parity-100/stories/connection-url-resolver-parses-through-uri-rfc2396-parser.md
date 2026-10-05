@@ -1,6 +1,6 @@
 ---
 title: "activerecord: ConnectionUrlResolver parses through ruby-compat's URI::RFC2396_Parser"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts

@@ -1,6 +1,6 @@
 ---
 title: "expires_in/fresh_when compose the cache-control header instead of merging into the one response.cache_control hash"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: "action-controller"

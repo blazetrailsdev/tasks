@@ -1,6 +1,6 @@
 ---
 title: "Thor::Base basename and start read $PROGRAM_NAME and ARGV from ruby-compat, not argv[1] and argv.slice(2)"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null

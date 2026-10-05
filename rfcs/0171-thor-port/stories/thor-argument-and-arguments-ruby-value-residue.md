@@ -1,6 +1,6 @@
 ---
 title: "Converge Thor::Argument / Arguments residue: =~ on a non-String, to_f, banner ||, predicate value, parse_ name"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
