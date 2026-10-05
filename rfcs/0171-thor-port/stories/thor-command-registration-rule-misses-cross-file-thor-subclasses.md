@@ -5,7 +5,8 @@ updated: 2026-10-04
 rfc: "0171-thor-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - rebase-generator-base-onto-thor-group
 deps-rfc: []
 est-loc: 60
 priority: null
