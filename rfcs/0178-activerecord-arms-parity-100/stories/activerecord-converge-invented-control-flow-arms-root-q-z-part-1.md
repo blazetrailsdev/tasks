@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove or credit the 79 invented branches in root-q-z part 1"
-status: claimed
+status: in-progress
 updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
@@ -9,7 +9,7 @@ deps: ["activerecord-converge-missing-control-flow-arms-root"]
 deps-rfc: []
 est-loc: 554
 priority: null
-pr: null
+pr: trails#8527
 claim: "2026-10-05T12:39:38Z"
 assignee: "activerecord-converge-invented-control-flow-arms-root-q-z-part-1"
 blocked-by: null

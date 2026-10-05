@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Marshal cannot round-trip Rational, Date or a Temporal.PlainDate (compat table, allocator, Date seat)"
-status: draft
+status: in-progress
 updated: 2026-10-05
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8529
+claim: "2026-10-05T13:41:13Z"
+assignee: "marshal-cannot-round-trip-rational-or-date"
 blocked-by: null
 closed-reason: null
 ---

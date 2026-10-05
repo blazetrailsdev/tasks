@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Attribute dumps @_value / @_has_value where Rails dumps @value; LazyAttributeHash.marshalLoad is a static"
-status: draft
+status: closed
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of attribute-value-ivars-are-not-rails-ivar-names and lazy-attribute-hash-marshal-load-is-a-static, filed minutes earlier"
 ---
 
 ## Context

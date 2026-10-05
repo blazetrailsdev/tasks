@@ -1,6 +1,6 @@
 ---
 title: "rbObjAsString / toS of a class answers its source text, not rb_mod_to_s"
-status: draft
+status: in-progress
 updated: 2026-10-05
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8526
+claim: "2026-10-05T13:28:59Z"
+assignee: "rb-obj-as-string-of-a-class-answers-its-source-text"
 blocked-by: null
 closed-reason: null
 ---

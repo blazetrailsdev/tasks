@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Relation subclasses inherit clone; no per-class override forwarding constructor arguments"
-status: draft
-updated: 2026-10-01
+status: in-progress
+updated: 2026-10-05
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8527
+claim: "2026-10-05T13:21:58Z"
+assignee: "relation-subclasses-inherit-clone-without-overrides"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Restructure HttpAuthentication into Basic, Digest and Token, and port Token"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

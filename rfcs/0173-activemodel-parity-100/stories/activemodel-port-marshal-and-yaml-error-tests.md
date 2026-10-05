@@ -1,6 +1,6 @@
 ---
 title: "activemodel: port the 3 unported-register tests (Marshal / Rails-6 YAML errors)"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: tests

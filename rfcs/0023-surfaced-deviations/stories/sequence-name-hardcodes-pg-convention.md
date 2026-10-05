@@ -1,7 +1,7 @@
 ---
 title: "sequence_name hard-codes the PostgreSQL convention instead of reset_sequence_name"
-status: draft
-updated: 2026-08-24
+status: done
+updated: 2026-10-05
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8524
 claim: null
 assignee: null
 blocked-by: null

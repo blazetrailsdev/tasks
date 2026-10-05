@@ -1,7 +1,7 @@
 ---
 title: "activemodel: cases/lint_test.rb sits outside the test-compare population"
-status: blocked
-updated: 2026-09-29
+status: done
+updated: 2026-10-05
 rfc: "0123-blocked-convergence-holding"
 cluster: test-placement
 packages: ["activemodel"]
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8465
 claim: "2026-09-02T22:05:40Z"
 assignee: "type-value-split-and-name-property-burndown"
-blocked-by: "Re-verified 2026-09-29: still blocked, and the second escape route is now gone. scripts/test-compare/assertion-mismatch-mark.json has activemodel at 0/0/0 (hard zero), so there are no existing activemodel count mismatches left to converge to make headroom; the only unblock is cross-file helper folding in scripts/test-compare/extract-ts-core.ts (still same-file only), since lint_test.rb's six tests live in lib/active_model/lint.rb."
+blocked-by: null
 closed-reason: null
 ---
 

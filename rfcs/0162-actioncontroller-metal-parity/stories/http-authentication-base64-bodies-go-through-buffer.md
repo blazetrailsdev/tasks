@@ -1,6 +1,6 @@
 ---
 title: "HttpAuthentication's Base64 bodies go through Buffer, not ruby-compat Base64"
-status: draft
+status: closed
 updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "done in trails#8523: Base64.decode64 added to ruby-compat and the four Base64 bodies call it; the key-bytes form is recorded in the PR body"
 ---
 
 ## Context

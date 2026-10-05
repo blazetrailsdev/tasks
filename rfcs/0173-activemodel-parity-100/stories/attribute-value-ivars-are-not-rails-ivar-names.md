@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Attribute holds @value / @value_before_type_cast under other ivar names, plus an invented @_has_value"
-status: draft
+status: ready
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null

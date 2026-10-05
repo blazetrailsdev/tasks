@@ -1,6 +1,6 @@
 ---
 title: "activemodel: register the four String-identity tests in the unported register"
-status: draft
+status: done
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: tests
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8530
+claim: "2026-10-05T13:48:51Z"
+assignee: "activemodel-register-string-identity-tests-as-unported"
 blocked-by: null
 closed-reason: null
 ---

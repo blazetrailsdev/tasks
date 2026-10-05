@@ -1,7 +1,7 @@
 ---
 title: "activemodel: final per-axis verification once the arms residue and lint_test land"
-status: ready
-updated: 2026-10-04
+status: blocked
+updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: closeout
 packages: ["activemodel"]
@@ -15,9 +15,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-05T13:39:33Z"
+assignee: "activemodel-parity-100-final-verification"
+blocked-by: "attributes-marshal-round-trip-needs-usrmarshal-arm (ready, itself waiting on marshal-cannot-dump-a-date-rational-is-unseated): parity:test reads 1036/1041 with 5 skipped at trails 1530abf4e6, and the fifth, 'attributes with proc defaults can be marshalled' (attributes.test.ts:201), is not a String-identity skip. Every other criterion measured met: arms report lists only Model#constructor, lint_test.rb is in the population at 6/6, and the 12-step verification line exits 0. set-deps refuses this file's multi-line deps array, so the dependency is recorded here."
 closed-reason: null
 ---
 
