@@ -5,7 +5,10 @@ updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: ["activerecord"]
-deps: ["activerecord-converge-missing-control-flow-arms-subsystems"]
+deps:
+  - activerecord-converge-missing-control-flow-arms-subsystems
+  - activerecord-invented-arms-subsystems-part-1-residue
+  - fixture-set-file-ts-fixture-module-registry-has-no-rails-counterpart
 deps-rfc: []
 est-loc: 560
 priority: null
