@@ -1,6 +1,6 @@
 ---
 title: "Date's #sf is stored as a Rational always, where set_to_complex stores it through canon"
-status: draft
+status: closed
 updated: 2026-10-05
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "body cites PR 8532, which was closed unmerged; refiled as date-sf-store-is-not-canonicalized"
 ---
 
 ## Context

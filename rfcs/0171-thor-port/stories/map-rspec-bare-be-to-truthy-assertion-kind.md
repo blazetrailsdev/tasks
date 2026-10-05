@@ -1,7 +1,7 @@
 ---
 title: "Map RSpec's bare be matcher to truthy; converge command_spec's dup options hash onto toBeTruthy"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8538
+claim: "2026-10-05T15:39:48Z"
+assignee: "arms-extractor-reads-a-block-re-forward-guard"
 blocked-by: null
 closed-reason: null
 ---

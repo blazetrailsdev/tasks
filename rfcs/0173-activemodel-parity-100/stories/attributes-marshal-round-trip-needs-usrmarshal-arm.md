@@ -1,6 +1,6 @@
 ---
 title: "activemodel: port 'attributes with proc defaults can be marshalled' once Marshal has the marshal_dump / TYPE_USRMARSHAL arm"
-status: ready
+status: done
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -12,7 +12,7 @@ deps:
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8529
 claim: null
 assignee: null
 blocked-by: null

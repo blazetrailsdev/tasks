@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat/date: Marshal.load of a Date raises on its #private fields (no allocator)"
-status: draft
+status: done
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8529
+claim: "2026-10-05T15:05:13Z"
+assignee: "marshal-load-cannot-allocate-a-date"
 blocked-by: null
 closed-reason: null
 ---

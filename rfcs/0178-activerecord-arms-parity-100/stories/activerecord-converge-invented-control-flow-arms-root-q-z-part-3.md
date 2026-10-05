@@ -1,7 +1,7 @@
 ---
 title: "activerecord: remove or credit the 63 invented branches in root-q-z part 3"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["activerecord-converge-missing-control-flow-arms-root"]
 deps-rfc: []
 est-loc: 458
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8536
+claim: "2026-10-05T15:09:34Z"
+assignee: "activerecord-converge-invented-control-flow-arms-root-q-z-part-3"
 blocked-by: null
 closed-reason: null
 ---

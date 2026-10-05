@@ -1,6 +1,6 @@
 ---
 title: "trailmap: Story#setPriority is taken for the priority= writer on the next trails pin"
-status: draft
+status: done
 updated: 2026-10-05
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#34
+claim: "2026-10-05T15:34:44Z"
+assignee: "priority-verb-is-read-as-the-priority-writer"
 blocked-by: null
 closed-reason: null
 ---

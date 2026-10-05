@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Actions#run, #run_ruby_script and #thor"
-status: ready
-updated: 2026-10-04
+status: done
+updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["ruby-compat-kernel-system-and-open3-capture2e"]
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8533
+claim: "2026-10-05T15:02:44Z"
+assignee: "port-thor-actions-run-run-ruby-script-and-thor"
 blocked-by: null
 closed-reason: null
 ---

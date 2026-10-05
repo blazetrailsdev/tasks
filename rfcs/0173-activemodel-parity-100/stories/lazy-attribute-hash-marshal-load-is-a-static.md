@@ -1,6 +1,6 @@
 ---
 title: "activemodel: LazyAttributeHash.marshalLoad is a static; Rails' marshal_load re-initializes the instance"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null

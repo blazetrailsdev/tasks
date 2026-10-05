@@ -1,7 +1,7 @@
 ---
 title: "parity: the arms extractor reads a leading kwargs rebinding guard as no arm"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: arms
 packages: []

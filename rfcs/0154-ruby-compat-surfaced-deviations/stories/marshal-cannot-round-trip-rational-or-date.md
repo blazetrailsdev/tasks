@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Marshal cannot round-trip Rational, Date or a Temporal.PlainDate (compat table, allocator, Date seat)"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

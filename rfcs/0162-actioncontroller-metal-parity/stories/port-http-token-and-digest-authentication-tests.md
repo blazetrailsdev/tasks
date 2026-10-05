@@ -1,7 +1,7 @@
 ---
 title: "Port http_token_authentication_test.rb and http_digest_authentication_test.rb"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8537
+claim: "2026-10-05T15:43:42Z"
+assignee: "port-http-token-and-digest-authentication-tests"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat/date: Marshal.dump of a Date raises 'undefined class/module Rational'"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: closeout
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: trails#8532
+pr: trails#8529
 claim: "2026-10-05T14:39:34Z"
 assignee: "marshal-cannot-dump-a-date-rational-is-unseated"
 blocked-by: null

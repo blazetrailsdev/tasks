@@ -1,7 +1,7 @@
 ---
 title: "parity: the arms extractor reads a captured block's spread-forward as no arm"
-status: draft
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8538
+claim: "2026-10-05T15:39:48Z"
+assignee: "arms-extractor-reads-a-block-re-forward-guard"
 blocked-by: null
 closed-reason: null
 ---
