@@ -39,8 +39,14 @@ and `hook_for` is `invoke_from_option` (`base.rb:174-202`). trailties' copy:
       `this.methodAdded(name)` **at declaration time**, so a hook declared between two steps runs
       between them in `invoke_all` (the `ResourceGenerator` order; see the rehomed
       `generators-run-hooks-after-run-not-in-declaration-order`).
-- [ ] **`name.to_s.gsub(/\W/, "_")`** builds the method name. In trails the result
-      (`_invoke_from_option_test_framework`) is camelCased by the conventions table.
+- [ ] **`name.to_s.gsub(/\W/, "_")`** builds the method name, and the interpolated name is kept
+      verbatim. Only the identifier's own words are camelCased: `_invoke_#{name}` is
+      `_invoke_${name}` and `_invoke_from_option_#{name}` is `_invokeFromOption_${name}`, so
+      `_invoke_from_option_test_framework` is `_invokeFromOption_test_framework`. Camel-casing the
+      name as well (`_invokeFromOptionTestFramework`, this story's first spelling) merges names
+      Thor keeps apart: `invoke "Foo", "foo"` defines `_invoke_Foo` and `_invoke_foo`
+      (`vendor/thor/v1.3.2/lib/thor/group.rb:64-65,123-124`), and both would be `_invokeFoo`, losing
+      one hook. Raised in review of trails#8526.
 - [ ] **`verbose` defaults**: `options.fetch(:verbose, true)` for `invoke` and
       `fetch(:verbose, :white)` for `invoke_from_option`. The latter is a color, passed to
       `say_status` as `log_status`.
