@@ -1,6 +1,6 @@
 ---
 title: "activemodel: a cast attribute read still builds a closure and a block wrapper on a cache hit"
-status: draft
+status: closed
 updated: 2026-10-05
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of attribute-reads-allocate-a-block-on-every-cache-hit, which trails#8540 leaves open; measurements are in that PR body"
 ---
 
 ## Context

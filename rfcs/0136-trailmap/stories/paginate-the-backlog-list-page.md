@@ -1,7 +1,7 @@
 ---
 title: "Bound /backlog's response — the done tab renders 6,597 rows and 8.8 MB"
-status: ready
-updated: 2026-09-09
+status: done
+updated: 2026-10-05
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trailmap#36
+claim: "2026-10-05T16:30:37Z"
+assignee: "paginate-the-backlog-list-page"
 blocked-by: null
 closed-reason: null
 ---

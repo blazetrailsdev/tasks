@@ -1,6 +1,6 @@
 ---
 title: "parity: the arms extractor reads a leading kwargs rebinding guard as no arm"
-status: ready
+status: done
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: arms
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8539
+claim: "2026-10-05T16:09:41Z"
+assignee: "arms-extractor-reads-a-kwargs-rebinding-guard"
 blocked-by: null
 closed-reason: null
 ---

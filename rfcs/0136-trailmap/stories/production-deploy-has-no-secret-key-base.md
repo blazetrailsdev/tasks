@@ -1,7 +1,7 @@
 ---
 title: "trailmap: every deploy since #30 fails, production has no secret_key_base"
-status: draft
-updated: 2026-10-03
+status: in-progress
+updated: 2026-10-05
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trailmap#35
+claim: "2026-10-05T16:18:07Z"
+assignee: "production-deploy-has-no-secret-key-base"
 blocked-by: null
 closed-reason: null
 ---

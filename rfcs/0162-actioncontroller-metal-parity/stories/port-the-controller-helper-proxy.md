@@ -1,7 +1,7 @@
 ---
 title: "Port ActionController::Helpers#helpers, the controller helper proxy"
-status: ready
-updated: 2026-09-26
+status: claimed
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: "action-controller"
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-05T16:59:22Z"
+assignee: "model-response-cache-control-hash-for-expires-in-and-fresh-when"
 blocked-by: null
 closed-reason: null
 ---

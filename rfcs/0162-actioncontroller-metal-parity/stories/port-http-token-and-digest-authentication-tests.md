@@ -1,6 +1,6 @@
 ---
 title: "Port http_token_authentication_test.rb and http_digest_authentication_test.rb"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

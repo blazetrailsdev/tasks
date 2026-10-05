@@ -1,6 +1,6 @@
 ---
 title: "activemodel: LazyAttributeHash / AttributeSet hash-typed members declare Record where a Marshal-loaded instance holds a Hash"
-status: draft
+status: claimed
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-05T16:39:40Z"
+assignee: "lazy-attribute-hash-ivar-types-admit-a-marshal-loaded-hash"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activemodel: every attribute read allocates a block, reads are 7x slower than at 9e17ddc98d"
-status: draft
+status: in-progress
 updated: 2026-10-05
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8540
+claim: "2026-10-05T16:28:21Z"
+assignee: "attribute-reads-allocate-a-block-on-every-cache-hit"
 blocked-by: null
 closed-reason: null
 ---

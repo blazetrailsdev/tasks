@@ -1,6 +1,6 @@
 ---
 title: "parity: the arms extractor reads a captured block's spread-forward as no arm"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null

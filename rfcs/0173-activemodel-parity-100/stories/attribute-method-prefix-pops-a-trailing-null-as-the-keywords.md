@@ -1,6 +1,6 @@
 ---
 title: "activemodel: attribute_method_prefix pops a trailing null as the keywords"
-status: draft
+status: ready
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null
