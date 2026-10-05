@@ -41,6 +41,12 @@ Both depend on `expires_in` / `fresh_when` merging into one
 `model-response-cache-control-hash-for-expires-in-and-fresh-when` (RFC 0141)
 converges.
 
+trails#8543 created `controller/render.test.ts` with a `TestController` holding
+only the `expires_in` / `expires_now` actions, and ported `ExpiresInRenderTest`'s
+18 conditional-GET tests (`:421-514`). Left for this story: the rest of
+`TestController`, `ExpiresInRenderTest`'s five `dynamic_render` tests
+(`:382-419`), and all of `LastModifiedRenderTest`.
+
 ## Acceptance criteria
 
 - `controller/render.test.ts` holds `TestController` and both classes, every
