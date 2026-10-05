@@ -45,5 +45,5 @@ raise ArgumentError.
       `read_sign`, `read_num`, `skip_ws`, `parse_rat` and `string_to_r_strict`
       at their MRI names, with the ArgumentError message above.
 - [ ] `ScalarScanner#parseTime` calls `rational(\`0.${md[2]}\`)`as
-   `scalar_scanner.rb:123` does, and the digit-string construction is gone.
+`scalar_scanner.rb:123` does, and the digit-string construction is gone.
 - [ ] `rational.trails.test.ts` covers the MRI answers listed above.
