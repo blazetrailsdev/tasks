@@ -52,5 +52,7 @@ And the data tree the action specs read: `doc/` (including `%file_name%.rb.tt`,
 
 - [ ] Every fixture above exists, and each class answers its Ruby namespace
       (`MyScript.namespace() === "my_script"`, `Scripts::MyDefaults` → `default` where declared).
-- [ ] The helper is a module the spec ports import, and the vitest setup for `src/thor/`
-      applies its globals.
+- [ ] The helper is a module the spec ports import. Applying it to every `src/thor/` test
+      through a vitest setup is split out to `thor-vitest-setup-applies-the-spec-helper`: it
+      needs existing spec ports converged onto the shared fixtures, which does not fit this
+      story's PR.
