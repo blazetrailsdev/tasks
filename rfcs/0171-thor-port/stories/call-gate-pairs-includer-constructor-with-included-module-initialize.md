@@ -42,18 +42,17 @@ misses are `options`, `options=`, `parent_options`, `parent_options=`, `args`, `
 `(ThorBase as ...)[initialize] = function`, at `base.ts:205`, which the extractor does not record
 as `[initialize]`, unlike a `static [initialize]` class member.
 
-The seven rows are receipted on `Group`'s constructor with
-`@missingRailsCall <call> — CONVERGEABLE call-gate-pairs-includer-constructor-with-included-module-initialize`.
+trails#8526 (`port-thor-group`) shipped the comparer half: `includerConstructorIsInitializeSeat`
+(`scripts/api-compare/compare.ts`) reads a constructor that calls `initializeIncludedModules` and
+nothing else as the include seam, so `Group`'s constructor carries no receipt. What remains is the
+extractor half.
 
 ## Acceptance criteria
 
-- [ ] An `initialize` that reaches a bucket through an included module is not call-compared
-      against the includer's constructor when that constructor is the
-      `initializeIncludedModules` chain seat; it is compared against the module's own
-      `[initialize]` hook, in the module's own file.
 - [ ] The extractor records an assigned `mod[initialize] = function` hook (thor's `base.ts`,
-      `invocation.ts`, `shell.ts`, `actions.ts`) as `[initialize]`, so `base.rb`'s `initialize`
-      credits and its body is call-compared there.
-- [ ] The seven `@missingRailsCall` tags on `Group`'s constructor are deleted and
-      `pnpm parity:api:calls` is green without them.
-- [ ] A `scripts/api-compare` test covers the includer-constructor case.
+      `invocation.ts`, `shell.ts`, `actions.ts`) as `[initialize]`, so `base.rb`'s, `invocation.rb`'s
+      and `shell.rb`'s `initialize` credit and each body is call-compared in its own file.
+- [ ] `mixinMethodCreditedToOwnFile` offers the `[initialize]` hook as a candidate, so the seam for
+      an includer's constructor is the general mixin arm and `includerConstructorIsInitializeSeat`
+      can be deleted.
+- [ ] A `scripts/api-compare` test covers the assigned-hook form.
