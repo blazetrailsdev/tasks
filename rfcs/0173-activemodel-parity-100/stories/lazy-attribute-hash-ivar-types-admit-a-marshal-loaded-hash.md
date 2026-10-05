@@ -36,7 +36,10 @@ The rest of `packages/activemodel/src/attribute-set/builder.ts` still declares a
   (`rb_hash_transform_values`, `vendor/ruby/v3.3.11/hash.c:3366`), so `deepDup`'s
   `copy._delegateHash = transformValues(...)` stores one too.
 - `AttributeSet`'s `Attributes` type (`packages/activemodel/src/attribute-set.ts`) and its
-  `toHash` / `transformValues` consumers.
+  `toHash` / `transformValues` consumers. Widening these reaches `attributeTypes()` and its
+  readers across activemodel and activerecord, so they are split into
+  `attribute-set-hash-returns-admit-a-marshal-loaded-hash`. `LazyAttributeSet`'s `_attributes`
+  goes with them, because the base type holds it at `Record`.
 
 The run-time behaviour is correct (every read goes through `hashAref` / `hashAset` / `fetch` /
 `hasKey` / `keys`, which have Map arms); the declared types are wrong on the loaded path, so a
@@ -44,9 +47,11 @@ caller indexing `delegateHash()["name"]` on a loaded hash type-checks and reads 
 
 ## Acceptance criteria
 
-- [ ] Every hash-typed field, parameter and return in `attribute-set/builder.ts` and
-      `attribute-set.ts` that a Marshal-loaded instance fills with a `Hash` declares
-      `Record<string, T> | Hash<string, T>`, with no cast added to satisfy a consumer.
+- [ ] Every hash-typed field, parameter and return in `attribute-set/builder.ts` that a
+      Marshal-loaded instance fills with a `Hash` declares `Record<string, T> | Hash<string, T>`,
+      with no cast added to satisfy a consumer. `LazyAttributeSet`'s `_attributes` is the one
+      exception, left to `attribute-set-hash-returns-admit-a-marshal-loaded-hash` with
+      `attribute-set.ts`.
 - [ ] No bare `hash[key]` / `Object.keys(hash)` read of one of those values remains in
       activemodel `src/` (tests included: `builder-defaults.trails.test.ts` indexes
       `restored.delegateHash()["score"]`).
