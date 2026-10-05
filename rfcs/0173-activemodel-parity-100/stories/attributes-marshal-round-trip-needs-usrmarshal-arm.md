@@ -7,6 +7,7 @@ cluster: null
 packages: []
 deps:
   - ruby-compat-has-no-marshal-for-schema-cache-and-debug
+  - marshal-cannot-round-trip-rational-or-date
 deps-rfc: []
 est-loc: 80
 priority: null
