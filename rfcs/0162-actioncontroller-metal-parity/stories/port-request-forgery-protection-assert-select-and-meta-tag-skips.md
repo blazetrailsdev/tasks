@@ -5,7 +5,9 @@ updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - action-controller-test-case-has-no-assert-select
+  - port-action-view-csrf-helper-and-generated-layout-meta-tags
 deps-rfc: []
 est-loc: 200
 priority: null
