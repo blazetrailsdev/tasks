@@ -8,6 +8,7 @@ packages: []
 deps:
   - ruby-compat-has-no-marshal-for-schema-cache-and-debug
   - marshal-cannot-round-trip-rational-or-date
+  - marshal-cannot-dump-a-date-rational-is-unseated
 deps-rfc: []
 est-loc: 80
 priority: null
