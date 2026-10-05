@@ -13,6 +13,7 @@ packages:
   - "activesupport"
   - "trailties"
   - "actionpack"
+  - "date"
 clusters:
   - api-surface
   - arms
