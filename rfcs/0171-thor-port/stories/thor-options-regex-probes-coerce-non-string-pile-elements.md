@@ -25,8 +25,21 @@ closed-reason: null
 
 `RegExp#test` stringifies its argument, so an Array `["-a"]` or the Integer `-5` in the pile tests as `"-a"` / `"-5"`. In Ruby 3.3 `Object#=~` is gone: `-5 =~ /re/` and `-5 !~ /re/` raise `NoMethodError`, and `["-a"] =~ /re/` raises too. Non-String pile elements are reachable: `parse_array` / `parse_hash` / `parse_numeric` shift an Array, Hash or Numeric straight off the pile (`arguments.rb:98,117,139`), and the `.trails` test already parses a literal `true`.
 
+## MRI results
+
+Ruby 3.3.11, `ruby -I vendor/thor/v1.3.2/lib`, a `Thor::Options` with one `:string` option `foo` (trails#8557):
+
+| pile element | `parse(["--bar", el])` (`options.rb:126`, `peek !~ /^-/`)         | `parse([el]); check_unknown!` (`options.rb:172`, `str =~ ...`) |
+| ------------ | ----------------------------------------------------------------- | -------------------------------------------------------------- |
+| `-5`         | `NoMethodError: undefined method '=~' for an instance of Integer` | same                                                           |
+| `["-a"]`     | `NoMethodError: undefined method '=~' for an instance of Array`   | same                                                           |
+| `true`       | `NoMethodError: undefined method '=~' for true`                   | same                                                           |
+| `{"a"=>1}`   | `NoMethodError: undefined method '=~' for an instance of Hash`    | same                                                           |
+
+`parse([el])` alone does not raise for any of them: the element is not a String, so `parsing_options?` sends it to `@extra` through the `else` arm (`options.rb:132`) with no match. `nil =~ /re/` is `nil` (`NilClass#=~`), and `peek &&` guards the `:126` site against it.
+
 ## Acceptance criteria
 
-- [ ] Confirm against MRI (`ruby -I vendor/thor/v1.3.2/lib`) what each site does for an Integer, an Array and `true` in the pile, and record the result in the story.
+- [x] Confirm against MRI (`ruby -I vendor/thor/v1.3.2/lib`) what each site does for an Integer, an Array and `true` in the pile, and record the result in the story.
 - [ ] Both sites answer what MRI answers for a non-String element, through the ruby-compat `=~` dispatch (or `rbFSend`) rather than a cast.
 - [ ] `options.trails.test.ts` covers each site with a non-String element.
