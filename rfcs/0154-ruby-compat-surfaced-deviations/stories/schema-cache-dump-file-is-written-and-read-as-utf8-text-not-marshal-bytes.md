@@ -1,6 +1,6 @@
 ---
 title: "SchemaCache .dump files are written and read as UTF-8 text, not Marshal's bytes"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activemodel: port the 3 unported-register tests (Marshal / Rails-6 YAML errors)"
-status: blocked
+status: in-progress
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: tests
@@ -14,10 +14,10 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: trails#8516
+pr: trails#8525
 claim: "2026-10-04T16:08:54Z"
 assignee: "activemodel-port-marshal-and-yaml-error-tests"
-blocked-by: "2 of 3 tests ported (#8504, #8516); 'attributes with proc defaults can be marshalled' is parked BLOCKED on attributes-marshal-round-trip-needs-usrmarshal-arm, which needs ruby-compat-has-no-marshal-for-schema-cache-and-debug"
+blocked-by: null
 closed-reason: null
 ---
 

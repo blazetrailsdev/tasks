@@ -1,6 +1,6 @@
 ---
 title: "Converge HttpAuthentication's Base64, split and credentials-hash bodies"
-status: draft
+status: closed
 updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by http-authentication-base64-bodies-go-through-buffer: the split and credentials-hash items were converged in trails#8523"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Group (invoke / invoke_from_option generated commands, class_options_help, dispatch, _invoke_for_class_method)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-invocation", "port-thor-dispatch-and-help"]
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8526
+claim: "2026-10-05T12:42:07Z"
+assignee: "port-thor-group"
 blocked-by: null
 closed-reason: null
 ---

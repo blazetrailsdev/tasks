@@ -1,7 +1,7 @@
 ---
 title: "Port Thor's file-editing actions (chmod, gsub_file, (un)comment_lines, remove_file)"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 230
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8521
+claim: "2026-10-05T12:13:23Z"
+assignee: "port-thor-file-manipulation-edits"
 blocked-by: null
 closed-reason: null
 ---

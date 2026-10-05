@@ -1,6 +1,6 @@
 ---
 title: "Port request_forgery_protection_test.rb's skipped per-form-token and token-storage tests"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

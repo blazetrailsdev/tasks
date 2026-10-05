@@ -1,7 +1,7 @@
 ---
 title: "Restructure HttpAuthentication into Basic, Digest and Token, and port Token"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8523
+claim: "2026-10-05T12:15:22Z"
+assignee: "restructure-http-authentication-into-basic-digest-and-token"
 blocked-by: null
 closed-reason: null
 ---

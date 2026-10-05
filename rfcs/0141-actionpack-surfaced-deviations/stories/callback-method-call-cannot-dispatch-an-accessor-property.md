@@ -1,6 +1,6 @@
 ---
 title: "Callbacks MethodCall raises NoMethodError for a condition naming an accessor property"
-status: draft
+status: done
 updated: 2026-10-05
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8518
 claim: null
 assignee: null
 blocked-by: null

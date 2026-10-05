@@ -1,7 +1,7 @@
 ---
 title: "Port the rest of mime/respond_to_test.rb and mime/accept_format_test.rb"
-status: ready
-updated: 2026-10-04
+status: done
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8522
+claim: "2026-10-05T12:13:46Z"
+assignee: "port-respond-to-test-remainder-and-accept-format"
 blocked-by: null
 closed-reason: null
 ---
