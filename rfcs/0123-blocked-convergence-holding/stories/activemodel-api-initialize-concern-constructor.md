@@ -2,7 +2,7 @@
 title: "activemodel: ActiveModel::API#initialize joins the host constructor chain (blocked on a constructor hook)"
 status: blocked
 updated: 2026-09-30
-rfc: "0173-activemodel-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: skips
 packages: ["activemodel"]
 deps: []
