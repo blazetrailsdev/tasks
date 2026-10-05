@@ -5,7 +5,8 @@ updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - ruby-compat-has-no-marshal-for-schema-cache-and-debug
 deps-rfc: []
 est-loc: 80
 priority: null
