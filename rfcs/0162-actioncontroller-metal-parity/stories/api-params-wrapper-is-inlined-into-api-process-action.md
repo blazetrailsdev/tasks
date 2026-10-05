@@ -5,7 +5,8 @@ updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - params-wrapper-process-action-is-inlined-into-base
 deps-rfc: []
 est-loc: 80
 priority: null
