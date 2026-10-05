@@ -1,7 +1,7 @@
 ---
 title: "activemodel: verify every parity axis at 100% and pin each gate at zero"
-status: in-progress
-updated: 2026-10-04
+status: done
+updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: closeout
 packages: ["activemodel"]

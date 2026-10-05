@@ -1,7 +1,7 @@
 ---
 title: "activerecord: remove or credit the 80 invented branches in connection-adapters-root part 1"
-status: in-progress
-updated: 2026-10-04
+status: done
+updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: ["activerecord"]

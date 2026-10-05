@@ -1,6 +1,6 @@
 ---
 title: "Port new_base bare_metal, base and middleware tests"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

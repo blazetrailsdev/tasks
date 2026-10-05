@@ -1,7 +1,7 @@
 ---
 title: "Port request_forgery_protection_test.rb's skipped per-form-token and token-storage tests"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: ["port-request-forgery-protection-skips-per-form-and-origin"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8518
+claim: "2026-10-05T01:32:20Z"
+assignee: "port-request-forgery-protection-skips-token-storage"
 blocked-by: null
 closed-reason: null
 ---
