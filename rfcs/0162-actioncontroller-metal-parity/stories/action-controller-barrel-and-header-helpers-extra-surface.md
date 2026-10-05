@@ -47,4 +47,9 @@ Rails counterpart:
 - `index.ts` exports only Rails-named constants.
 - `viewRuntime` lives in `metal/instrumentation.ts`.
 - `pnpm parity:api:extra --package actioncontroller` lists no novel name in any
-  of these files.
+  of these files, apart from `viewRuntime` under `metal/instrumentation.ts`.
+  The Ruby extractor does not model `attr_internal`
+  (`scripts/api-compare/extract-ruby-api.rb:985-989` handles only `attr_reader`
+  / `attr_writer` / `attr_accessor`), so the name is absent from
+  `rails-api.json` in whichever file declares it;
+  `ruby-extractor-is-blind-to-attr-internal` (RFC 0167) removes that row.
