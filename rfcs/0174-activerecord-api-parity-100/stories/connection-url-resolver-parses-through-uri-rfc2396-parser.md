@@ -1,7 +1,7 @@
 ---
 title: "activerecord: ConnectionUrlResolver parses through ruby-compat's URI::RFC2396_Parser"
-status: draft
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-05
 rfc: "0174-activerecord-api-parity-100"
 cluster: receipts
 packages: ["activerecord", "ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8542
+claim: "2026-10-05T17:09:45Z"
+assignee: "connection-url-resolver-parses-through-uri-rfc2396-parser"
 blocked-by: null
 closed-reason: null
 ---

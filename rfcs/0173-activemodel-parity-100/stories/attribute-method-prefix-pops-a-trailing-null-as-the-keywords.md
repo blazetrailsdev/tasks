@@ -1,6 +1,6 @@
 ---
 title: "activemodel: attribute_method_prefix pops a trailing null as the keywords"
-status: ready
+status: in-progress
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8544
+claim: "2026-10-05T17:09:39Z"
+assignee: "attribute-method-prefix-pops-a-trailing-null-as-the-keywords"
 blocked-by: null
 closed-reason: null
 ---

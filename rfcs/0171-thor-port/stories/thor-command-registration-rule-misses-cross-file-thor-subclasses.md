@@ -1,7 +1,7 @@
 ---
 title: "thor-command-registration: name the generator bases so cross-file Thor subclasses are checked"
 status: ready
-updated: 2026-10-04
+updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Dir.chdir raises on interleaved async chdir blocks (chdir_thread)"
-status: claimed
+status: done
 updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8541
 claim: "2026-10-05T16:39:40Z"
 assignee: "lazy-attribute-hash-ivar-types-admit-a-marshal-loaded-hash"
 blocked-by: null

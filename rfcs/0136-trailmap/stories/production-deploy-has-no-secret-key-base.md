@@ -1,6 +1,6 @@
 ---
 title: "trailmap: every deploy since #30 fails, production has no secret_key_base"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0136-trailmap"
 cluster: null

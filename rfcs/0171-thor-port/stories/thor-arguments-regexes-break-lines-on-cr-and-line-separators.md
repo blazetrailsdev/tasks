@@ -1,7 +1,7 @@
 ---
 title: "Thor::Arguments regexes break lines on \\r / U+2028 where Ruby breaks on \\n only"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8544
+claim: "2026-10-05T17:09:39Z"
+assignee: "attribute-method-prefix-pops-a-trailing-null-as-the-keywords"
 blocked-by: null
 closed-reason: null
 ---

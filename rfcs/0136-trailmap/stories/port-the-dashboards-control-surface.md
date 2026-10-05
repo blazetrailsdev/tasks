@@ -1,7 +1,7 @@
 ---
 title: "Port the fleet dashboard's control surface: usage, spawn loop, broadcast, asks and row buttons"
-status: ready
-updated: 2026-09-09
+status: done
+updated: 2026-10-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionview", "actionpack"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 6
-pr: null
+pr: trailmap#37
 claim: null
 assignee: null
 blocked-by: null

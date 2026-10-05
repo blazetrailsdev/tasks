@@ -1,6 +1,6 @@
 ---
 title: "Port ActionController::Helpers#helper_attr"
-status: claimed
+status: in-progress
 updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: "action-controller"
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8543
 claim: "2026-10-05T16:59:22Z"
 assignee: "model-response-cache-control-hash-for-expires-in-and-fresh-when"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "activemodel: every attribute read allocates a block, reads are 7x slower than at 9e17ddc98d"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
