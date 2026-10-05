@@ -1,6 +1,6 @@
 ---
 title: "rbObjAsString / toS of a class answers its source text, not rb_mod_to_s"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

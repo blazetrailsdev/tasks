@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Attribute holds @value / @value_before_type_cast under other ivar names, plus an invented @_has_value"
-status: ready
+status: in-progress
 updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8531
+claim: "2026-10-05T14:09:37Z"
+assignee: "attribute-value-ivars-are-not-rails-ivar-names"
 blocked-by: null
 closed-reason: null
 ---
