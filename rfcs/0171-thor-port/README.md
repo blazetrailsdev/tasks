@@ -547,6 +547,24 @@ as their lib story and fixtures land. Phases 6 and 7 can run in parallel once ph
 | `port-thor-file-manipulation-spec-part-1`              |     350 |         33 |
 | `port-thor-file-manipulation-spec-part-2`              |     350 |         43 |
 
+Two RSpec matchers have no canonical assertion kind and stay unmapped in `RSPEC_MAP`
+(`scripts/test-compare/assertion-kinds.ts`). A port keeps the pair at one unmapped assertion on
+each side by spelling them this way:
+
+- `expect(x).to receive(:y)`, with any `.with(...)` / `.and_return(z)` chain, is the token
+  `expect_to_receive` (`expect_not_to_receive` when negated). Port it as a `vi.spyOn(x, "y")`
+  where the Ruby line sits, with `.mockReturnValue(z)` for `and_return`, and one
+  `expect(spy).toHaveBeenCalledWith(...)`, `toHaveBeenCalled()` or `.not.toHaveBeenCalled()`
+  after the act. `toHaveBeenCalled*` is unmapped in `TRAILS_MAP`.
+- `expect { ... }.to output(expected).to_stdout` / `.to_stderr` is the token `expect_to_output`
+  (`expect_not_to_output` when negated). Port it as one call to a spec helper named
+  `expectToOutput` / `expectNotToOutput`, written over the spec helper's `capture`; the
+  comparer reads the callee as `expect_to_output`. An `expect(await capture(...)).toMatch(...)`
+  scores a mapped `match` against nothing and reds the `thor` row.
+
+An RSpec predicate matcher (`be_required`, `not_to be_identical`) maps to `truthy` / `falsy`, so
+its port is `expect(x.isRequired()).toBe(true)` or the `assertPredicate` it already mirrors.
+
 ### 6. Generators converge onto Thor::Group / Thor::Actions
 
 | story                                                                                    | est-loc | spec cases |
