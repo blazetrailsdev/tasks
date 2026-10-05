@@ -10,6 +10,7 @@ deps:
   - psych-load-and-safe-load
   - ruby-compat-marshal-load-core-types
   - errors-psych-loaded-symbol-attribute-does-not-match-added-attribute
+  - attributes-marshal-round-trip-needs-usrmarshal-arm
 deps-rfc: []
 est-loc: 200
 priority: null
