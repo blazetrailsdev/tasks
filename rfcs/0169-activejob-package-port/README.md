@@ -1,9 +1,9 @@
 ---
 rfc: "0169-activejob-package-port"
 title: "@blazetrails/activejob: port ActiveJob with its in-process adapters"
-status: draft
+status: active
 created: 2026-09-29
-updated: 2026-09-29
+updated: 2026-10-05
 owner: "@deanmarano"
 packages:
   - activejob
