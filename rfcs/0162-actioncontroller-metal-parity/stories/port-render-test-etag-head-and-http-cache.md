@@ -34,6 +34,9 @@ The rest of `vendor/rails/v8.0.2/actionpack/test/controller/render_test.rb`:
 | `HttpCacheForeverTest` (`:1010`)          | 4                                                     |
 | `HttpCacheNoStoreTest` (`:1056`)          | 9                                                     |
 
+trails#8543 already ported `HttpCacheForeverTest` and `HttpCacheNoStoreTest`
+into `controller/render.test.ts`; this story takes the other nine classes.
+
 `LiveTestController#test_action` (`:980`) is a controller action the extractor
 counts as a test; RFC 0167's `ruby-extractor-counts-controller-test-actions`
 drops it.
