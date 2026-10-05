@@ -5,7 +5,8 @@ updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - pg-driver-errors-carry-a-result-at-the-raw-connection-boundary
 deps-rfc: []
 est-loc: 120
 priority: null
