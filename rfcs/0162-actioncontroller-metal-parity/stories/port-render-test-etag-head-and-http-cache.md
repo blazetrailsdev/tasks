@@ -1,7 +1,7 @@
 ---
 title: "Port render_test.rb's etag, render-class, head and http_cache_forever tests"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: ["port-render-test-expires-in-and-last-modified", "conditional-get-and-eta
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8557
+claim: "2026-10-05T22:32:17Z"
+assignee: "port-render-test-etag-head-and-http-cache"
 blocked-by: null
 closed-reason: null
 ---

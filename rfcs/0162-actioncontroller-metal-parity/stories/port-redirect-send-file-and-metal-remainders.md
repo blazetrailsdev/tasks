@@ -1,7 +1,7 @@
 ---
 title: "Port the missing redirect, send_file, required_params and metal tests"
-status: ready
-updated: 2026-10-04
+status: closed
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -15,11 +15,11 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8556
+claim: "2026-10-05T22:26:59Z"
+assignee: "action-controller-barrel-and-header-helpers-extra-surface"
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: metal_test.rb half shipped in trails#8556; redirect, send_file and required_params halves re-filed with full context as port-redirect-send-file-and-required-params-through-test-case"
 ---
 
 ## Context

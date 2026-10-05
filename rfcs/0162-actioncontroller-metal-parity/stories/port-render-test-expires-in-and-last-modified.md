@@ -1,6 +1,6 @@
 ---
 title: "Port render_test.rb's TestController, ExpiresInRenderTest and LastModifiedRenderTest"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

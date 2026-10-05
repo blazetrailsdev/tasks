@@ -1,6 +1,6 @@
 ---
 title: "Parameters#fetch reads its default through Array#fetch"
-status: draft
+status: closed
 updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "shipped in trails#8558: ruby-compat aryFetch ports rb_ary_fetch and Parameters#fetch calls it"
 ---
 
 ## Context

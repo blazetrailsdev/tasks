@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the smoke boot accepts a corrupted asset as long as it answers 200"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0136-trailmap"
 cluster: null

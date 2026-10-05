@@ -1,7 +1,7 @@
 ---
 title: "Remove the invented names on action-controller's barrel, header-utils and params-wrapper root"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8556
+claim: "2026-10-05T22:26:59Z"
+assignee: "action-controller-barrel-and-header-helpers-extra-surface"
 blocked-by: null
 closed-reason: null
 ---

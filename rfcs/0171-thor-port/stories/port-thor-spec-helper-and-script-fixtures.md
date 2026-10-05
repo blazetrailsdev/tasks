@@ -1,6 +1,6 @@
 ---
 title: "Port Thor's spec helper and the Thor fixtures (script, enum, command, subcommand, help, verbose) plus the fixture file tree"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Thor::Options regex probes coerce a non-String pile element where Ruby raises"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8557
+claim: "2026-10-05T22:32:17Z"
+assignee: "port-render-test-etag-head-and-http-cache"
 blocked-by: null
 closed-reason: null
 ---
