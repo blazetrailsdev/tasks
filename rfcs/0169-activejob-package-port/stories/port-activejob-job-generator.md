@@ -1,7 +1,7 @@
 ---
 title: "Port `rails g job` as `trails g job`, replace the invented ApplicationJob stub, with job_generator_test.rb"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["trailties"]

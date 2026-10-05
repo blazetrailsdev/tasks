@@ -1,7 +1,7 @@
 ---
 title: "Port TestHelper's setup/teardown and enqueued-job assertions, ActiveJob::TestCase, and test_case_test.rb"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]

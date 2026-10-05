@@ -1,7 +1,7 @@
 ---
 title: "send_data does not render and send_file reads the file into memory instead of installing the stream"
-status: ready
-updated: 2026-09-26
+status: done
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: "action-controller"
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8535
+claim: "2026-10-05T20:09:34Z"
+assignee: "port-wrap-parameters-class-macro"
 blocked-by: null
 closed-reason: null
 ---

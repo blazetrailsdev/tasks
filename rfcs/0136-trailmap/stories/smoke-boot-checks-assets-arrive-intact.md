@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the smoke boot accepts a corrupted asset as long as it answers 200"
-status: draft
+status: in-progress
 updated: 2026-10-05
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#38
+claim: "2026-10-05T20:14:43Z"
+assignee: "smoke-boot-checks-assets-arrive-intact"
 blocked-by: null
 closed-reason: null
 ---

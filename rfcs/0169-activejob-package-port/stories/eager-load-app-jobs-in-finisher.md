@@ -1,7 +1,7 @@
 ---
 title: "Load and register app/jobs classes in the finisher so job_class constantizes in a booted app"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["trailties"]

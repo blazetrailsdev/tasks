@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveJob::Timezones and ActiveJob::Translation with timezones_test.rb and translation_test.rb"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]

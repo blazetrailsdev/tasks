@@ -1,7 +1,7 @@
 ---
 title: "Port QueueAdapters::AsyncAdapter over ruby-compat's executors, with async_adapter_test.rb and the AJ_ADAPTER=async lane"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]

@@ -1,7 +1,7 @@
 ---
 title: "Port queuing_test.rb, queue_adapter_test.rb and adapter_test.rb's portable case (19 cases)"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]

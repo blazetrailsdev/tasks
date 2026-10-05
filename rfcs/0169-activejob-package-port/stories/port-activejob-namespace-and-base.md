@@ -1,7 +1,7 @@
 ---
 title: "Port active_job.rb (the ActiveJob namespace with its Autoload seats) and base.rb"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]

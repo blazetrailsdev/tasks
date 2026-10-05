@@ -1,7 +1,7 @@
 ---
 title: "Port exceptions_test.rb cases 1\u201316 (:25-203)"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]

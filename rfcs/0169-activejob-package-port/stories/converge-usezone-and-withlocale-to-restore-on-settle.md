@@ -1,7 +1,7 @@
 ---
 title: "Make Time.use_zone (useZone) and I18n.with_locale (withLocale) restore when an async block settles"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activesupport", "i18n"]

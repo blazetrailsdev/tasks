@@ -1,7 +1,7 @@
 ---
 title: "Mirror activejob/test/jobs, models/person and support/stubs as canonical fixtures, registered under their Ruby names"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]

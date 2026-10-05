@@ -1,7 +1,7 @@
 ---
 title: "Serve the task-domain /spawnloop/* reads as JSON, gated against ringo"
-status: ready
-updated: 2026-09-09
+status: blocked
+updated: 2026-10-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
@@ -12,7 +12,7 @@ priority: 5
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Four of its six endpoints (config, crons, velocity, velocity/week) return ringo-only state and the other two (rfcs, backlog) carry ringo-only fields (marks, stalled, enabled, max_loc), so byte-identical output needs that state in a database trailmap reads first: move-the-work-queues-into-the-database, move-tracker-state-into-the-database, move-deploys-and-sweeps-into-the-database."
 closed-reason: null
 ---
 

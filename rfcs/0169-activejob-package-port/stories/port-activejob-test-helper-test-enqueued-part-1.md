@@ -1,7 +1,7 @@
 ---
 title: "Port test_helper_test.rb EnqueuedJobsTest cases 1\u201338 (:40-432)"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]

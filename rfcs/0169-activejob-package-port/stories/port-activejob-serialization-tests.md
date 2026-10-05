@@ -1,7 +1,7 @@
 ---
 title: "Port job_serialization_test.rb, serializers_test.rb and time_with_zone_serializer_test.rb (17 cases)"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]
