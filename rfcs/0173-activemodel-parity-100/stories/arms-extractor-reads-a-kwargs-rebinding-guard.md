@@ -2,7 +2,7 @@
 title: "parity: the arms extractor reads a leading kwargs rebinding guard as no arm"
 status: draft
 updated: 2026-10-02
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0173-activemodel-parity-100"
 cluster: arms
 packages: []
 deps: []
