@@ -1,7 +1,7 @@
 ---
 title: "Port request_forgery_protection_test.rb's skipped shared-module and strategy tests"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8515
+claim: "2026-10-05T00:47:38Z"
+assignee: "port-request-forgery-protection-skips-per-form-and-origin"
 blocked-by: null
 closed-reason: null
 ---

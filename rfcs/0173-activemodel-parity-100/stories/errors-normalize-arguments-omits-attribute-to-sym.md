@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Errors#normalize_arguments and include? omit Rails' attribute.to_sym"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0173-activemodel-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8512
+claim: "2026-10-05T00:46:36Z"
+assignee: "errors-normalize-arguments-omits-attribute-to-sym"
 blocked-by: null
 closed-reason: null
 ---

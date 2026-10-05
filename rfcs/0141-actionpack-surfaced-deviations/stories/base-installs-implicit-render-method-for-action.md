@@ -1,7 +1,7 @@
 ---
 title: "ActionController::Base installs ImplicitRender#method_for_action (template-only actions)"
-status: draft
-updated: 2026-09-28
+status: done
+updated: 2026-10-05
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8510
 claim: null
 assignee: null
 blocked-by: null

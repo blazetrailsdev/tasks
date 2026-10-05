@@ -1,7 +1,7 @@
 ---
 title: "Port Psych::ScalarScanner#tokenize and route ToRuby plain scalars through it"
-status: draft
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-05
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8511
+claim: "2026-10-05T00:49:47Z"
+assignee: "psych-scalar-scanner-tokenize"
 blocked-by: null
 closed-reason: null
 ---

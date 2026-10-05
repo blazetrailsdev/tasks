@@ -1,7 +1,7 @@
 ---
 title: "Port new_base bare_metal, base and middleware tests"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8513
+claim: "2026-10-05T00:41:43Z"
+assignee: "port-new-base-bare-metal-base-and-middleware-tests"
 blocked-by: null
 closed-reason: null
 ---

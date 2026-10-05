@@ -1,7 +1,7 @@
 ---
 title: "Port Metal#response_code / #to_a, AbstractController::Base's instance readers and allow_browser; seat Collector's module"
-status: in-progress
-updated: 2026-10-04
+status: done
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]

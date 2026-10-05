@@ -1,7 +1,7 @@
 ---
 title: "port-request-forgery-protection-per-form-token-and-meta-tag-tests"
-status: claimed
-updated: 2026-10-04
+status: done
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8510
 claim: "2026-10-04T23:57:36Z"
 assignee: "port-filters-test-remainder"
 blocked-by: null

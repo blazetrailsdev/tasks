@@ -1,7 +1,7 @@
 ---
 title: "Port Thor.dispatch, command-name resolution and the help screens (Thor.help, command_help, Thor#help)"
-status: in-progress
-updated: 2026-10-04
+status: done
+updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]

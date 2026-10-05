@@ -1,7 +1,7 @@
 ---
 title: "Declare ActionController's config seats with classAttribute / mattrAccessor"
-status: in-progress
-updated: 2026-10-04
+status: done
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]

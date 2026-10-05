@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Actions::EmptyDirectory, CreateFile and CreateLink (conflict check, pretend, encoded filenames)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-actions-module", "ruby-compat-async-fs-verbs-for-thor-actions"
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8514
+claim: "2026-10-05T00:39:09Z"
+assignee: "port-thor-empty-directory-create-file-and-create-link"
 blocked-by: null
 closed-reason: null
 ---
