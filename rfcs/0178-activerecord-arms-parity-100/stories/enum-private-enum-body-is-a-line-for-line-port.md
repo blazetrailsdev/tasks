@@ -5,7 +5,8 @@ updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - enum-type-reads-mapping-key-and-has-value-with-no-reverse-map
 deps-rfc: []
 est-loc: 450
 priority: null
