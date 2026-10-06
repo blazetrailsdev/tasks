@@ -2,7 +2,7 @@
 title: "BigDecimal MaxPrec follows MRI outside literal parsing (_dump prefix)"
 status: draft
 updated: 2026-10-06
-rfc: "0041-activesupport-messagepack-ext"
+rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
 deps: []

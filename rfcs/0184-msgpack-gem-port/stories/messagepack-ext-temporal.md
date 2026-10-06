@@ -2,7 +2,7 @@
 title: "MessagePack ext types 5-8,10 DateTime/Date/Time/TimeWithZone/Duration (nanosecond-faithful temporal reps)"
 status: ready
 updated: 2026-07-27
-rfc: "0041-activesupport-messagepack-ext"
+rfc: "0184-msgpack-gem-port"
 cluster: null
 deps: []
 deps-rfc: []

@@ -2,7 +2,7 @@
 title: "MessagePack::Serializer checks packers/unpackers out of a Factory#pool, not the Factory"
 status: in-progress
 updated: 2026-10-06
-rfc: "0041-activesupport-messagepack-ext"
+rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
 deps: []
