@@ -1,16 +1,16 @@
 ---
 title: "Rack::Handler::Node offers rack.hijack on HTTP upgrade requests"
-status: draft
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-06
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["rack", "ruby-compat"]
 deps: []
 deps-rfc: []
 est-loc: 400
-pr: null
-claim: null
-assignee: null
+pr: trails#8566
+claim: "2026-10-06T01:20:54Z"
+assignee: "rack-handler-node-offers-rack-hijack-on-upgrade"
 blocked-by: null
 closed-reason: null
 ---

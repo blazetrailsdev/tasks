@@ -1,6 +1,6 @@
 ---
 title: "Replace the invented Flash, Rescue, ParameterEncoding and RateLimit registries with Rails' state"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

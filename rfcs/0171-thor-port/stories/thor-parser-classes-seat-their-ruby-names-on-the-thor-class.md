@@ -1,6 +1,6 @@
 ---
 title: "Seat Thor parser class paths on the Thor class, including Option and Options"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0171-thor-port"
 cluster: null

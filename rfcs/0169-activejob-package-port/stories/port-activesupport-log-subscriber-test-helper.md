@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveSupport::LogSubscriber::TestHelper (MockLogger, set_logger, wait)"
-status: claimed
+status: done
 updated: 2026-10-06
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: null
+pr: trails#8565
 claim: "2026-10-06T00:38:29Z"
 assignee: "enroll-activejob-in-compare-tooling"
 blocked-by: null

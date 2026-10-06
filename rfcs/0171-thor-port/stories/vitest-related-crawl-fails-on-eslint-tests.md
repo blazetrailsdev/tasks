@@ -1,6 +1,6 @@
 ---
 title: "vitest related fails from the root config (eslint/*.test.mjs bare import); retire vitest.trailties.config.ts"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0171-thor-port"
 cluster: null
