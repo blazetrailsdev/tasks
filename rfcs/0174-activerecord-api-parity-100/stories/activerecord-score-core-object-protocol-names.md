@@ -7,6 +7,7 @@ cluster: skips
 packages: ["activerecord"]
 deps:
   - arel-score-core-object-names-nil-and-case-then
+  - record-native-promise-decision-and-retire-promise-complete-rows
 deps-rfc: []
 est-loc: 300
 priority: null
