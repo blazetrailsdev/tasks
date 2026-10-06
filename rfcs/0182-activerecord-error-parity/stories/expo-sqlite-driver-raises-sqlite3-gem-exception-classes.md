@@ -1,13 +1,13 @@
 ---
-title: "expo-sqlite-driver-raises-sqlite3-gem-exception-classes"
+title: "activerecord: the expo-sqlite driver raises the sqlite3 gem's exception classes"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0182-activerecord-error-parity"
+cluster: errors
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null

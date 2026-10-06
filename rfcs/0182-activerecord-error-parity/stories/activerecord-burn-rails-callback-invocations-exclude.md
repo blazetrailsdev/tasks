@@ -2,7 +2,7 @@
 title: "activerecord: the 5 methods exempted from rails-callback-invocations fire Rails' callbacks"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0182-activerecord-error-parity"
 cluster: errors
 packages: ["activerecord"]
 deps: ["converge-activerecord-dropped-block-arms-remainder"]

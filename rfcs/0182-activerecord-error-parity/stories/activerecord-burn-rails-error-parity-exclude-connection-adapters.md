@@ -2,7 +2,7 @@
 title: "activerecord: raise Rails' error classes in the 20 connection-adapters files grandfathered by rails-error-parity"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0182-activerecord-error-parity"
 cluster: errors
 packages: ["activerecord"]
 deps: ["retire-dead-error-parity-disables-and-stale-arm-throw-marks"]

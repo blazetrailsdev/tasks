@@ -1,13 +1,13 @@
 ---
-title: "sqlite3-new-client-rescues-cantopen-not-enoent"
+title: "activerecord: SQLite3Adapter.new_client rescues Errno::ENOENT, not CantOpenException"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0182-activerecord-error-parity"
+cluster: errors
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null

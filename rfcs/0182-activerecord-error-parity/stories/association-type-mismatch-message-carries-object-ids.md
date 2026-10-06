@@ -2,8 +2,8 @@
 title: "activerecord: AssociationTypeMismatch takes Rails' message, object ids included"
 status: draft
 updated: 2026-10-03
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0182-activerecord-error-parity"
+cluster: errors
 packages: []
 deps: []
 deps-rfc: []

@@ -2,8 +2,8 @@
 title: "activerecord: a failed migration's StandardError carries the rescued exception's backtrace"
 status: draft
 updated: 2026-10-05
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0182-activerecord-error-parity"
+cluster: errors
 packages: []
 deps: []
 deps-rfc: []

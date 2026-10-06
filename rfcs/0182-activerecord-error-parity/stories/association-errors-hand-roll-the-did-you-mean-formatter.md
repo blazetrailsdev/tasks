@@ -2,8 +2,8 @@
 title: "Association errors hand-roll DidYouMean.formatter.message_for"
 status: draft
 updated: 2026-10-01
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0182-activerecord-error-parity"
+cluster: errors
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
