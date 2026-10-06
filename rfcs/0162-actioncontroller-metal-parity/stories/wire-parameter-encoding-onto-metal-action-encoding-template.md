@@ -1,7 +1,7 @@
 ---
 title: "wire-parameter-encoding-onto-metal-action-encoding-template"
-status: ready
-updated: 2026-09-26
+status: in-progress
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8560
+claim: "2026-10-05T23:09:35Z"
+assignee: "wire-parameter-encoding-onto-metal-action-encoding-template"
 blocked-by: null
 closed-reason: null
 ---

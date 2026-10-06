@@ -1,7 +1,7 @@
 ---
 title: "Seat Thor::Base's find_and_refresh_task alias and dispatch from_superclass through this in thor/actions.ts"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8561
+claim: "2026-10-05T23:39:34Z"
+assignee: "port-params-wrapper-tests"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Make Time.use_zone (useZone) and I18n.with_locale (withLocale) restore when an async block settles"
-status: ready
+status: done
 updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8559
+claim: "2026-10-05T23:00:28Z"
+assignee: "activejob-package-skeleton"
 blocked-by: null
 closed-reason: null
 ---

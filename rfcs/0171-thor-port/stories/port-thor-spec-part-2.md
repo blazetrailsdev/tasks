@@ -1,7 +1,7 @@
 ---
 title: "Port thor_spec.rb, part 2 (#start, #help, subcommands, edge cases)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-dispatch-and-help", "port-thor-spec-helper-and-script-fixtures
 deps-rfc: []
 est-loc: 500
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8560
+claim: "2026-10-05T23:09:35Z"
+assignee: "wire-parameter-encoding-onto-metal-action-encoding-template"
 blocked-by: null
 closed-reason: null
 ---

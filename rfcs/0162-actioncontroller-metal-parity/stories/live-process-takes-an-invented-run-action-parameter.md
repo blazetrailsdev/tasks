@@ -1,6 +1,6 @@
 ---
 title: "Live#process takes an invented runAction parameter and dispatches new_controller_thread statically"
-status: draft
+status: in-progress
 updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8557
+claim: "2026-10-05T23:18:04Z"
+assignee: "live-process-takes-an-invented-run-action-parameter"
 blocked-by: null
 closed-reason: null
 ---

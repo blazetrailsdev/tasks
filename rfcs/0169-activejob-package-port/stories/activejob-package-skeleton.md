@@ -1,6 +1,6 @@
 ---
 title: "Create packages/activejob as a published workspace package and wire it into CI"
-status: ready
+status: done
 updated: 2026-10-05
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8559
+claim: "2026-10-05T23:00:28Z"
+assignee: "activejob-package-skeleton"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Remove the invented names on action-controller's barrel, header-utils and params-wrapper root"
-status: in-progress
+status: done
 updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

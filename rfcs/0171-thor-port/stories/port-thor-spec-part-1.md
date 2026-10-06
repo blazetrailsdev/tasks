@@ -1,6 +1,6 @@
 ---
 title: "Port thor_spec.rb, part 1 (method_option, default_command, stop_on_unknown_option!, check_unknown_options!, disable_required_check!, map, desc, method_options)"
-status: in-progress
+status: ready
 updated: 2026-10-05
 rfc: "0171-thor-port"
 cluster: null
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: 2
-pr: trails#8558
-claim: "2026-10-05T22:39:35Z"
-assignee: "strong-parameters-fetch-raises-keyerror-not-parameter-missing"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

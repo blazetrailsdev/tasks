@@ -1,7 +1,7 @@
 ---
 title: "Port params_wrapper_test.rb and api/params_wrapper_test.rb under Rails names"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-05
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8561
+claim: "2026-10-05T23:39:34Z"
+assignee: "port-params-wrapper-tests"
 blocked-by: null
 closed-reason: null
 ---
