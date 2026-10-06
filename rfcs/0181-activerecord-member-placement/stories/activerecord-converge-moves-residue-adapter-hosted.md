@@ -1,6 +1,6 @@
 ---
 title: "activerecord: burn parity:api:moves' adapter-hosted relocations (318 methods) to zero"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0181-activerecord-member-placement"
 cluster: placement

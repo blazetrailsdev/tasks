@@ -1,6 +1,6 @@
 ---
 title: "MessagePack ext types 3 Rational + 4 Complex (need JS numeric value classes)"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0041-activesupport-messagepack-ext"
 cluster: null

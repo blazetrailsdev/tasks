@@ -1,6 +1,6 @@
 ---
 title: "Parameters' eleven alias_method names are delegating wrappers, two of them inverted"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

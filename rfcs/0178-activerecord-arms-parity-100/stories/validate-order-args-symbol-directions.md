@@ -1,6 +1,6 @@
 ---
 title: "activerecord: validate_order_args rejects Symbol directions Rails' VALID_DIRECTIONS accepts"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

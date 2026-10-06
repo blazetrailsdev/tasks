@@ -1,6 +1,6 @@
 ---
 title: "actionview: csrf_meta_tags is not ported, and a view calling it compiles then 500s"
-status: draft
+status: in-progress
 updated: 2026-10-06
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8587
+claim: "2026-10-06T16:54:46Z"
+assignee: "port-action-view-csrf-helper"
 blocked-by: null
 closed-reason: null
 ---

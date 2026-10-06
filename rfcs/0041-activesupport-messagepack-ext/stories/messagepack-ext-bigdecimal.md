@@ -1,16 +1,16 @@
 ---
 title: "MessagePack ext type 2 BigDecimal (_dump/_load Marshal-style codec)"
-status: ready
-updated: 2026-07-27
+status: in-progress
+updated: 2026-10-06
 rfc: "0041-activesupport-messagepack-ext"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8586
+claim: "2026-10-06T16:24:45Z"
+assignee: "message-pack-serializer-pool-and-packer-block"
 blocked-by: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "AbstractController#process underscores the action because callers still pass the JS method name"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

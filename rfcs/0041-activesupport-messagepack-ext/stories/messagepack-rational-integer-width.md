@@ -1,6 +1,6 @@
 ---
 title: "message-pack narrows the shared Rational's bigint parts to Number at the packer seam"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0041-activesupport-messagepack-ext"
 cluster: null

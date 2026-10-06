@@ -1,6 +1,6 @@
 ---
 title: "activerecord: burn parity:api:moves' relation-hosted relocations (300 methods) to zero"
-status: claimed
+status: done
 updated: 2026-10-06
 rfc: "0181-activerecord-member-placement"
 cluster: placement
@@ -9,7 +9,7 @@ deps: ["moves-counts-a-mixin-member-declared-on-the-host-interface-as-misplaced"
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: trails#8585
 claim: "2026-10-06T15:58:42Z"
 assignee: "activerecord-converge-moves-residue-relation-hosted"
 blocked-by: null

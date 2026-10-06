@@ -1,6 +1,6 @@
 ---
 title: "MessagePack::Serializer#load raises RuntimeError, and the encryption serializer rescues RuntimeError"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0041-activesupport-messagepack-ext"
 cluster: null

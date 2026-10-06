@@ -1,7 +1,7 @@
 ---
 title: "trailmap: the deployed fleet page cannot reach ringo's event stream or its control endpoints"
-status: draft
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-06
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trailmap#40
+claim: "2026-10-06T16:45:13Z"
+assignee: "deployed-fleet-page-cannot-reach-ringos-event-stream"
 blocked-by: null
 closed-reason: null
 ---

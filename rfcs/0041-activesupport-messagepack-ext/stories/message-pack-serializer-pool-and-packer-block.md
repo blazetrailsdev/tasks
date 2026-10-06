@@ -1,6 +1,6 @@
 ---
 title: "MessagePack::Serializer checks packers/unpackers out of a Factory#pool, not the Factory"
-status: ready
+status: in-progress
 updated: 2026-10-06
 rfc: "0041-activesupport-messagepack-ext"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8586
+claim: "2026-10-06T16:24:45Z"
+assignee: "message-pack-serializer-pool-and-packer-block"
 blocked-by: null
 closed-reason: null
 ---
