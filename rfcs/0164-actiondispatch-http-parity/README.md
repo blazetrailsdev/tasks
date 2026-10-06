@@ -7,6 +7,7 @@ updated: 2026-09-27
 owner: "@deanmarano"
 packages:
   - "actionpack"
+  - "ruby-compat"
 clusters: []
 ---
 
