@@ -1,7 +1,7 @@
 ---
 title: "activerecord: validate_order_args rejects Symbol directions Rails' VALID_DIRECTIONS accepts"
-status: ready
-updated: 2026-10-05
+status: claimed
+updated: 2026-10-06
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-06T13:09:39Z"
+assignee: "abstract-controller-helpers-module-and-caching-instance-halves"
 blocked-by: null
 closed-reason: null
 ---

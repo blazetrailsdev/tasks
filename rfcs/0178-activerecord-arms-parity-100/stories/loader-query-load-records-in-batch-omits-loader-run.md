@@ -1,7 +1,7 @@
 ---
 title: "activerecord: LoaderQuery#load_records_in_batch omits loader.run"
-status: ready
-updated: 2026-10-05
+status: claimed
+updated: 2026-10-06
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-06T13:39:34Z"
+assignee: "action-name-is-underscored-at-each-template-lookup-site"
 blocked-by: null
 closed-reason: null
 ---

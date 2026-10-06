@@ -1,6 +1,6 @@
 ---
 title: "docs/trailties/trailties-thor-port.md contradicts the merged Thor port"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0171-thor-port"
 cluster: null

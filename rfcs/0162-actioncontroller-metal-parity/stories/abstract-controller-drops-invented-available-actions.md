@@ -1,6 +1,6 @@
 ---
 title: "Delete AbstractController::Base#availableActions in favour of the Rails action_methods reader"
-status: claimed
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#8571
 claim: "2026-10-06T12:39:40Z"
 assignee: "abstract-controller-drops-invented-available-actions"
 blocked-by: null

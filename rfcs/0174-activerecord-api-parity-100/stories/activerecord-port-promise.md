@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port ActiveRecord::Promise (un-exclude promise.rb)"
-status: ready
-updated: 2026-09-30
+status: closed
+updated: 2026-10-06
 rfc: "0174-activerecord-api-parity-100"
 cluster: excluded-files
 packages: ["activerecord"]
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Maintainer decision 2026-10-01 (trails#8342): ActiveRecord::Promise is not ported; async readers return native promises. Its two dependants now wait on record-native-promise-decision-and-retire-promise-complete-rows."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "parse_formatted_parameters rescues every thrown value, not only StandardError"
-status: draft
+status: done
 updated: 2026-10-06
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8569
+claim: "2026-10-06T13:12:05Z"
+assignee: "parse-formatted-parameters-rescues-every-thrown-value"
 blocked-by: null
 closed-reason: null
 ---

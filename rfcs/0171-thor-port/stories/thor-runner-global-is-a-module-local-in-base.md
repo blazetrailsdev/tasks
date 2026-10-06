@@ -1,7 +1,7 @@
 ---
 title: "Thor $thor_runner is seated where thor.rb defines it, not a module-local const in base.ts"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-06
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8572
+claim: "2026-10-06T13:37:24Z"
+assignee: "action-controller-rescue-includes-activesupport-rescuable"
 blocked-by: null
 closed-reason: null
 ---

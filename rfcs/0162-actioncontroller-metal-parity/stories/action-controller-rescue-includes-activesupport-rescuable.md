@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Rescue includes ActiveSupport::Rescuable; Base drops its hand-rolled rescue handlers"
-status: ready
+status: in-progress
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8572
+claim: "2026-10-06T13:37:24Z"
+assignee: "action-controller-rescue-includes-activesupport-rescuable"
 blocked-by: null
 closed-reason: null
 ---

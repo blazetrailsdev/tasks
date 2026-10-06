@@ -1,6 +1,6 @@
 ---
 title: "AbstractController::Helpers' _helpers accessors, helper module include and Caching/Fragments instance halves take Rails' shapes"
-status: ready
+status: claimed
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-06T13:09:39Z"
+assignee: "abstract-controller-helpers-module-and-caching-instance-halves"
 blocked-by: null
 closed-reason: null
 ---
