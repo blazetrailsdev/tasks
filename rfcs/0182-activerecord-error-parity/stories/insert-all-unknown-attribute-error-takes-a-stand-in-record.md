@@ -1,7 +1,7 @@
 ---
 title: "InsertAll raises UnknownAttributeError with a stand-in object where Rails passes model.new"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: errors
 packages: []

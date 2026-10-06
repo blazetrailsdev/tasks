@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port ActiveRecord::MessagePack (un-exclude message_pack.rb)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: excluded-files
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["message-pack-serializer-pool-and-packer-block"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8589
+claim: "2026-10-06T18:04:49Z"
+assignee: "activerecord-port-message-pack-module"
 blocked-by: null
 closed-reason: null
 ---

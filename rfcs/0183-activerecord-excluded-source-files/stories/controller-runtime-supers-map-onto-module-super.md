@@ -1,6 +1,6 @@
 ---
 title: "activerecord: ControllerRuntime reaches super through Module#superMethod, not a captured-supers WeakMap"
-status: draft
+status: ready
 updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: null

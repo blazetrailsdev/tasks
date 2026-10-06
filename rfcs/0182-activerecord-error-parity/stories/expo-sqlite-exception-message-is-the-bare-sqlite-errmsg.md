@@ -1,6 +1,6 @@
 ---
 title: "activerecord: an expo-sqlite exception's message is the bare SQLite errmsg"
-status: draft
+status: ready
 updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: null

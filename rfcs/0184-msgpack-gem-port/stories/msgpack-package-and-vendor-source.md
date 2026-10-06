@@ -1,6 +1,6 @@
 ---
 title: "Create @blazetrails/msgpack over @msgpack/msgpack, and vendor msgpack-ruby"
-status: ready
+status: in-progress
 updated: 2026-10-06
 rfc: "0184-msgpack-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8591
+claim: "2026-10-06T18:09:31Z"
+assignee: "msgpack-package-and-vendor-source"
 blocked-by: null
 closed-reason: null
 ---

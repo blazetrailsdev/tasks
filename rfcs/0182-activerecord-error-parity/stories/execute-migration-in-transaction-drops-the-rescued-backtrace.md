@@ -1,7 +1,7 @@
 ---
 title: "activerecord: a failed migration's StandardError carries the rescued exception's backtrace"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: errors
 packages: []

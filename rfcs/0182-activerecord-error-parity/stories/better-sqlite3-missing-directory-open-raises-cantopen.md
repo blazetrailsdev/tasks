@@ -1,6 +1,6 @@
 ---
 title: "activerecord: a better-sqlite3 open under a missing directory raises SQLite3::CantOpenException"
-status: draft
+status: ready
 updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: null

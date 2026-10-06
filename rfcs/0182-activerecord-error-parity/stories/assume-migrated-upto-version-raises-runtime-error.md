@@ -1,7 +1,7 @@
 ---
 title: "activerecord: assume_migrated_upto_version raises RuntimeError and keeps Rails' versions local"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: errors
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: expo-sqlite exec raises the sqlite3 gem's exception classes"
-status: draft
+status: ready
 updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: null

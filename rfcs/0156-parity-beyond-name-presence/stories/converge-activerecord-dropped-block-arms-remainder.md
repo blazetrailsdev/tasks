@@ -1,7 +1,7 @@
 ---
 title: "converge-activerecord-dropped-block-arms-remainder"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-10-06
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8590
+claim: "2026-10-06T18:07:06Z"
+assignee: "converge-activerecord-dropped-block-arms-remainder"
 blocked-by: null
 closed-reason: null
 ---
