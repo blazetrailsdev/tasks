@@ -5,7 +5,8 @@ updated: 2026-10-06
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - msgpack-repoint-activesupport-onto-the-package
 deps-rfc: []
 est-loc: 60
 priority: null
