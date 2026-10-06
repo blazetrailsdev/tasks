@@ -1,7 +1,7 @@
 ---
 title: "Port active_job.rb (the ActiveJob namespace with its Autoload seats) and base.rb"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-06
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]
@@ -9,9 +9,9 @@ deps: ["enroll-activejob-in-compare-tooling"]
 deps-rfc: []
 est-loc: 250
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8568
+claim: "2026-10-06T12:41:07Z"
+assignee: "port-activejob-namespace-and-base"
 blocked-by: null
 closed-reason: null
 ---

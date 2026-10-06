@@ -1,6 +1,6 @@
 ---
 title: "The action name is underscored at each template lookup site instead of being Rails' name"
-status: draft
+status: ready
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

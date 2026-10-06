@@ -1,7 +1,7 @@
 ---
 title: "HttpAuthentication::Basic login_procedure types its nil-able arguments as String"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

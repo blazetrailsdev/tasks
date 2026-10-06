@@ -1,7 +1,7 @@
 ---
 title: "Include ConditionalGet / EtagWithTemplateDigest / EtagWithFlash into Base as modules; fresh_when goes through combine_etags"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

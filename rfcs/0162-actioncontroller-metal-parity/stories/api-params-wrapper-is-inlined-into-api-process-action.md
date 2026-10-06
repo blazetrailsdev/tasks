@@ -1,7 +1,7 @@
 ---
 title: "ActionController::API wires ParamsWrapper inline instead of including the module"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

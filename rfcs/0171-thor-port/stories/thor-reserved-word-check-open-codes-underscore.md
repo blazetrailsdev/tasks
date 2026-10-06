@@ -1,7 +1,7 @@
 ---
 title: "is_thor_reserved_word? compares the word as Rails does, without an inline snake_case conversion"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-06
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8570
+claim: "2026-10-06T12:29:47Z"
+assignee: "port-base-flash-and-log-subscriber-skips"
 blocked-by: null
 closed-reason: null
 ---

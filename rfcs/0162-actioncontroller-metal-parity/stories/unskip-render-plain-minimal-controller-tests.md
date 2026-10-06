@@ -1,6 +1,6 @@
 ---
 title: "Un-skip render_plain_test.rb's two MinimalController tests now Rendering is includable"
-status: draft
+status: ready
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

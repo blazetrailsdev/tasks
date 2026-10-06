@@ -1,7 +1,7 @@
 ---
 title: "helper_method forwarders dispatch through controller.send, with the property arm receipted"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

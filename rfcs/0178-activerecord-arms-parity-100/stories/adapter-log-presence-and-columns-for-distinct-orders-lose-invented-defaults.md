@@ -1,7 +1,7 @@
 ---
 title: "activerecord: adapter log and MySQL columns_for_distinct lose their invented nil defaults"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-06
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8570
+claim: "2026-10-06T12:29:47Z"
+assignee: "port-base-flash-and-log-subscriber-skips"
 blocked-by: null
 closed-reason: null
 ---

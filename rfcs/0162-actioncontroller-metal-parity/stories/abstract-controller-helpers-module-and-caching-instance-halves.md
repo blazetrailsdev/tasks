@@ -1,7 +1,7 @@
 ---
 title: "AbstractController::Helpers' _helpers accessors, helper module include and Caching/Fragments instance halves take Rails' shapes"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "send_data hands data to render unchanged; the response body carries a Buffer byte-exact"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

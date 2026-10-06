@@ -1,7 +1,7 @@
 ---
 title: "fresh_when's relation arm awaits maximum(:updated_at); expires_now/no_store use Hash#replace"
-status: draft
-updated: 2026-10-05
+status: claimed
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-06T12:39:40Z"
+assignee: "abstract-controller-drops-invented-available-actions"
 blocked-by: null
 closed-reason: null
 ---

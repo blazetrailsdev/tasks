@@ -1,7 +1,7 @@
 ---
 title: "Metal#response= stores true in @_response_body and accepts a Rack response"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

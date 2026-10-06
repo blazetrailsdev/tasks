@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Rendering keeps duplicate free functions and has no ClassMethods; Instrumentation and Renderers are not modules"
-status: draft
+status: ready
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

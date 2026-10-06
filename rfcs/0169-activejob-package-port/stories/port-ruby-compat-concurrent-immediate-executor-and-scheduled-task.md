@@ -1,7 +1,7 @@
 ---
 title: "Port Concurrent::ImmediateExecutor and Concurrent::ScheduledTask to ruby-compat"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-06
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8568
+claim: "2026-10-06T12:41:07Z"
+assignee: "port-activejob-namespace-and-base"
 blocked-by: null
 closed-reason: null
 ---

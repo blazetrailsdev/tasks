@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Base includes its modules out of base.rb's MODULES order"
-status: draft
+status: claimed
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-06T12:39:40Z"
+assignee: "abstract-controller-drops-invented-available-actions"
 blocked-by: null
 closed-reason: null
 ---

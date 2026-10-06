@@ -1,7 +1,7 @@
 ---
 title: "Port request_forgery_protection_test.rb's assert_select and csrf_meta_tags skips"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Port the small unported metal test files"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8569
+claim: "2026-10-06T12:33:24Z"
+assignee: "port-small-metal-test-files"
 blocked-by: null
 closed-reason: null
 ---

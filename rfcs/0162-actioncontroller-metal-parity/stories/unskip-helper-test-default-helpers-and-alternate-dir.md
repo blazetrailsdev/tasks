@@ -1,7 +1,7 @@
 ---
 title: "Un-skip helper_test's default-helpers and alternate-helper-dir tests and drop the global helpers-path scaffolding"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

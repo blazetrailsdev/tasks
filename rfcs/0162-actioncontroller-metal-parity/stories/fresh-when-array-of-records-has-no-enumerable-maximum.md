@@ -1,7 +1,7 @@
 ---
 title: "fresh_when's try(:maximum, :updated_at) finds no Enumerable#maximum on an Array of records"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

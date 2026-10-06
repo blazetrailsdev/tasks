@@ -1,6 +1,6 @@
 ---
 title: "Port controller/parameter_encoding_test.rb"
-status: draft
+status: ready
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

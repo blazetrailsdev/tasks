@@ -1,7 +1,7 @@
 ---
 title: "Options#_default_wrap_model guards delete_at(-2) by hand and exits its loop through an extra break"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

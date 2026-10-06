@@ -1,7 +1,7 @@
 ---
 title: "helper_method forwarders are not attributed to the helper_method call site"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
