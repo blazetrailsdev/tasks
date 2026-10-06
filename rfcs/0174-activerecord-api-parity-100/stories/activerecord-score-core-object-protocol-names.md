@@ -5,7 +5,8 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: skips
 packages: ["activerecord"]
-deps: ["arel-score-core-object-names-nil-and-case-then", "activerecord-port-promise"]
+deps:
+  - arel-score-core-object-names-nil-and-case-then
 deps-rfc: []
 est-loc: 300
 priority: null
