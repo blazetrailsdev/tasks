@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the 5 methods exempted from rails-callback-invocations fire Rails' callbacks"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: errors
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["converge-activerecord-dropped-block-arms-remainder"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8595
+claim: "2026-10-06T20:03:11Z"
+assignee: "activerecord-burn-rails-callback-invocations-exclude"
 blocked-by: null
 closed-reason: null
 ---

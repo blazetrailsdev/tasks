@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Tests (1) failing on main @bdb0d2c0"
-status: ready
+status: closed
 updated: 2026-10-06
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-06T20:13:06Z"
+assignee: "red-bdb0d2c0"
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a code failure: self-hosted runner debian-arm64-2 lost communication with the server mid 'vitest run packages/activerecord/' (annotation on job 112473830579; no test output, log blob absent). Same job passed on the PR run for #8593 (run 37520410264)."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: assume_migrated_upto_version raises RuntimeError and keeps Rails' versions local"
-status: ready
+status: done
 updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: errors
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8595
+claim: "2026-10-06T20:03:11Z"
+assignee: "activerecord-burn-rails-callback-invocations-exclude"
 blocked-by: null
 closed-reason: null
 ---

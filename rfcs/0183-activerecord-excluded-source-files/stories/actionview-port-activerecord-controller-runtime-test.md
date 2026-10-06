@@ -1,6 +1,6 @@
 ---
 title: "actionview: port test/activerecord/controller_runtime_test.rb and the active_record_unit harness"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: null

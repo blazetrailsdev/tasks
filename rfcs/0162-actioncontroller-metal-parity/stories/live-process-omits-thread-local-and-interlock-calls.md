@@ -1,6 +1,6 @@
 ---
 title: "Live#process omits Rails' thread-local, interlock and execution-state calls"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

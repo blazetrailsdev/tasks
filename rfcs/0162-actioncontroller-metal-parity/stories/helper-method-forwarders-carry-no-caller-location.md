@@ -1,6 +1,6 @@
 ---
 title: "helper_method forwarders are not attributed to the helper_method call site"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Create @blazetrails/msgpack over @msgpack/msgpack, and vendor msgpack-ruby"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0184-msgpack-gem-port"
 cluster: null

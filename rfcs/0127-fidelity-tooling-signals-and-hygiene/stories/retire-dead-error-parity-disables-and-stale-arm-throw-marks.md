@@ -1,7 +1,7 @@
 ---
 title: "Retire three dead rails-error-parity disables and tighten three stale arm-throw marks"
-status: draft
-updated: 2026-09-08
+status: done
+updated: 2026-10-06
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8561
 claim: null
 assignee: null
 blocked-by: null
