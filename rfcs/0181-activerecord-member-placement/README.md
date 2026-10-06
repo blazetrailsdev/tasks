@@ -108,7 +108,9 @@ These are 0174's, unchanged:
 
 - The eight `activerecord-relocate-*` stories precede `activerecord-inlined-bodies-report-becomes-a-gate`,
   which precedes `activerecord-converge-moves-residue-base-hosted`: the inlined bodies are a subset of the
-  base-hosted moves.
+  base-hosted moves. The gate also waits on
+  `activerecord-core-initialize-body-inlined-in-base-constructor` (blocked), which owns the one row no relocate story
+  can clear.
 - `activerecord-relocate-query-methods-bodies-inlined-in-relation` is the largest single move (55 of the 154) and is wanted by `activerecord-converge-build-where-clause-constructor-order` (RFC 0174), so it goes
   first.
 - `base.ts` is rewritten by most of these stories. They are not ordered by `deps`; the second PR rebases.
@@ -156,8 +158,12 @@ These are 0174's, unchanged:
 - `activerecord-core-initialize-body-inlined-in-base-constructor`: `Core#initialize` (`core.rb:470-482`)
   wraps `super`. A function in `core.ts` cannot call `super()`, JS forbids `this` before `super()` returns,
   and ruby-compat's module `[initialize]` hook runs above `ActiveModel::API#initialize`, not around it. It is
-  the same wall as `base-constructor-calls-init-internals-not-activemodel` (RFC 0123). While it is blocked,
-  one inlined-from row remains and the gate story names it.
+  the same wall as `base-constructor-calls-init-internals-not-activemodel` (RFC 0123). `activerecord-inlined-bodies-report-becomes-a-gate` takes a `deps` edge on it in this split, so the gate
+  cannot land while the row exists: there is no exception to the zero. The path to removing the row is the
+  ruby-compat construction hook that `activemodel-api-initialize-concern-constructor` (RFC 0123) is blocked
+  on; when that exists, `Core#initialize` can wrap `super` from `core.ts` and this story is unblocked with
+  `tasks status-set`. Until then this RFC stays open and the 0174 close-out waits on it, which is the
+  "blocked, not ratified" principle applied.
 
 ## Non-goals
 
@@ -207,11 +213,12 @@ Status is from the DB as of 2026-10-06.
 
 Each on a clean `pnpm build` followed by `API_COMPARE_FORCE=1 pnpm parity:api --calls`:
 
-- `pnpm parity:api:extra --package activerecord` lists no `inlined-from` row, down from 40, except the
-  blocked `Core#initialize` row, and activerecord's inlined-from bucket is pinned at 0 as arel's is.
+- `pnpm parity:api:extra --package activerecord` lists no `inlined-from` row, down from 40, and
+  activerecord's inlined-from bucket is pinned at 0 as arel's is. There is no exception: the gate story
+  depends on the blocked `Core#initialize` story (§ "Blocked").
 - `pnpm parity:api:moves` lists no activerecord member, down from 154.
 - `pnpm parity:api:extra:gate` stays rowless for activerecord.
-- `pnpm tasks list --rfc 0181-activerecord-member-placement` shows no open story except the blocked one.
+- `pnpm tasks list --rfc 0181-activerecord-member-placement` shows no open story.
 
 ## End condition
 

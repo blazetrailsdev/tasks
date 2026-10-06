@@ -3,7 +3,7 @@ title: "test_databases_test: assign Rails' plain configuration hash instead of a
 status: draft
 updated: 2026-10-01
 rfc: "0175-activerecord-test-parity-100"
-cluster: null
+cluster: missing-tests
 packages: []
 deps: []
 deps-rfc: []

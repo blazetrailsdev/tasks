@@ -30,7 +30,8 @@ closed-reason: null
 - `Relation#then`, `FutureResult#then`, `Promise#then`, `Promise#class`
 
 `then` on Relation is ratified (CLAUDE.md § "`Relation` is evaluated by an async query" — `applyThenable`),
-and `Promise#then`/`#class` belong to `activerecord-port-promise`. The rest translate directly: a Ruby
+and `Promise#then`/`#class` belonged to `activerecord-port-promise`, which is closed (trails#8342: `promise.rb`
+is not ported); `record-native-promise-decision-and-retire-promise-complete-rows` decides those two names. The rest translate directly: a Ruby
 `to_ary` is `toAry()` (JS never calls a method by that name), `nil?` is `isNil`
 (`arel-score-core-object-names-nil-and-case-then` adds the mapping), `freeze` is `Object.freeze` plus
 Rails' body.

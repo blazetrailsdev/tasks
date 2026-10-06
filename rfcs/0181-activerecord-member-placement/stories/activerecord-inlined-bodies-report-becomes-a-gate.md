@@ -7,6 +7,7 @@ cluster: placement
 packages: ["activerecord"]
 deps:
   [
+    "activerecord-core-initialize-body-inlined-in-base-constructor",
     "activerecord-relocate-query-methods-bodies-inlined-in-relation",
     "activerecord-relocate-callbacks-bodies-inlined-in-base",
     "activerecord-relocate-pg-schema-statements-bodies-inlined-in-adapter",

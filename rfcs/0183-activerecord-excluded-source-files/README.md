@@ -34,7 +34,7 @@ priority: 2
 comparison by `scripts/parity/unported-files/`. This RFC holds the work of taking each one off that list by
 porting it, or by measuring a port that already exists. It was split out of
 `0174-activerecord-api-parity-100` on 2026-10-06 with the 11 stories of 0174's `excluded-files` cluster plus
-the 3 unclustered stories about `promise.rb`. **14 stories, 12 open, 2,930 est-loc**, 3 of them blocked. The
+the 3 unclustered stories about `promise.rb`. **14 stories, 11 open, 2,680 est-loc**, 3 of them blocked. The
 destination of a story is decided by one question: **is the `.rb` it ports on the unported-files list?**
 
 ## Motivation
@@ -49,20 +49,20 @@ they read better as their own list than as rows 12 to 22 of a 301-story backlog.
 Measured 2026-10-06 on trails `main` @ `53cf6a5875`, from `scripts/parity/unported-files/`. 0174's baseline
 of 2026-09-30 was 13 excluded source files (152 defs).
 
-| Excluded `.rb`                            | Story                                                   | State                    |
-| ----------------------------------------- | ------------------------------------------------------- | ------------------------ |
-| `fixtures.rb`                             | `activerecord-unexclude-and-measure-fixtures-rb`        | done, off the list       |
-| `fixtures.rb#initialize` (scoped skip)    | `activerecord-fixture-initialize-prepend-constructor`   | blocked                  |
-| `encryption/encrypted_fixtures.rb`        | `activerecord-port-encrypted-fixtures-module`           | ready                    |
-| `version.rb` (and `gem_version.rb`)       | `activerecord-port-version-and-gem-version`             | ready                    |
-| `dynamic_matchers.rb`                     | `activerecord-unexclude-dynamic-matchers`               | ready                    |
-| `marshalling.rb`                          | `activerecord-port-marshalling-module`                  | ready, waits on RFC 0154 |
-| `message_pack.rb`                         | `activerecord-port-message-pack-module`                 | ready, waits on RFC 0041 |
-| `legacy_yaml_adapter.rb`                  | `activerecord-port-legacy-yaml-adapter-and-yaml-column` | ready, waits on RFC 0170 |
-| `railties/controller_runtime.rb`          | `activerecord-port-railties-controller-runtime`         | ready                    |
-| `promise.rb`                              | the three `promise.rb` stories (§ "Open questions" 1)   | decided: not ported      |
-| `trilogy_adapter.rb`, `adapters/trilogy/` | `activerecord-port-trilogy-adapter`                     | blocked                  |
-| `destroy_association_async_job.rb`        | `port-destroy-association-async-job` (RFC 0116)         | not in this RFC          |
+| Excluded `.rb`                            | Story                                                             | State                    |
+| ----------------------------------------- | ----------------------------------------------------------------- | ------------------------ |
+| `fixtures.rb`                             | `activerecord-unexclude-and-measure-fixtures-rb`                  | done, off the list       |
+| `fixtures.rb#initialize` (scoped skip)    | `activerecord-fixture-initialize-prepend-constructor`             | blocked                  |
+| `encryption/encrypted_fixtures.rb`        | `activerecord-port-encrypted-fixtures-module`                     | ready                    |
+| `version.rb` (and `gem_version.rb`)       | `activerecord-port-version-and-gem-version`                       | ready                    |
+| `dynamic_matchers.rb`                     | `activerecord-unexclude-dynamic-matchers`                         | ready                    |
+| `marshalling.rb`                          | `activerecord-port-marshalling-module`                            | ready, waits on RFC 0154 |
+| `message_pack.rb`                         | `activerecord-port-message-pack-module`                           | ready, waits on RFC 0041 |
+| `legacy_yaml_adapter.rb`                  | `activerecord-port-legacy-yaml-adapter-and-yaml-column`           | ready, waits on RFC 0170 |
+| `railties/controller_runtime.rb`          | `activerecord-port-railties-controller-runtime`                   | ready                    |
+| `promise.rb`                              | `record-native-promise-decision-and-retire-promise-complete-rows` | decided: not ported      |
+| `trilogy_adapter.rb`, `adapters/trilogy/` | `activerecord-port-trilogy-adapter`                               | blocked                  |
+| `destroy_association_async_job.rb`        | `port-destroy-association-async-job` (RFC 0116)                   | not in this RFC          |
 
 Target: the list holds no activerecord source file except the blocked and decided ones, each named in
 0174's close-out table.
@@ -124,13 +124,13 @@ These are 0174's, unchanged:
 ### Gating
 
 - **`active` from birth**, for 0174's reason: `claimable()` surfaces a story only when its own RFC is
-  `active`. The 8 `ready` stories here were claimable in 0174 and stay claimable.
+  `active`. The 7 `ready` stories here were claimable in 0174 and stay claimable.
 - **Edges out of this RFC:** the four above, plus `activerecord-fixture-initialize-prepend-constructor` on
   `activemodel-api-initialize-concern-constructor` (RFC 0123). The one edge into RFC 0174 is on a done story.
 - **Edges into this RFC, open:** `activerecord-converge-statement-cache-execute-async-arm` and
-  `activerecord-score-core-object-protocol-names` (both RFC 0174) wait on `activerecord-port-promise`.
-  `activerecord-gate-report-only-arm-tokens` (RFC 0178) waits on
-  `record-native-promise-decision-and-retire-promise-complete-rows`.
+  `activerecord-score-core-object-protocol-names` (both RFC 0174) and `activerecord-gate-report-only-arm-tokens`
+  (RFC 0178) wait on `record-native-promise-decision-and-retire-promise-complete-rows`. The two 0174 stories waited on
+  `activerecord-port-promise` until 2026-10-06, when they were re-pointed with `tasks set-deps`.
 - **Edges into this RFC from the 0174 close-out.** `activerecord-api-parity-100-close-out` named these
   stories one by one in `deps`. This split replaces those entries with one `deps-rfc` edge on
   `0183-activerecord-excluded-source-files`, the whole-RFC case 0174 § "Gating" describes: the close-out waits until this RFC is
@@ -203,12 +203,10 @@ these seams on 2026-10-02, for reasons that no longer hold:
 
 Status is from the DB as of 2026-10-06.
 
-1. **`promise.rb`: record the decision.** 4 stories, 3 open, 550 est-loc. Only the draft is work to do; `activerecord-port-promise`
-   is `ready` but asks for the port the decision rejected (§ "Open questions" 1) and should not be claimed.
-   - Ready: `activerecord-port-promise`
+1. **`promise.rb`: record the decision.** 4 stories, 2 open, 300 est-loc. The draft is the only work to do.
    - Draft: `record-native-promise-decision-and-retire-promise-complete-rows`
    - Blocked: `port-promise-complete-for-async-loaded-arms`
-   - Closed: `async-readers-return-activerecord-promise-for-pending-queries`
+   - Closed: `activerecord-port-promise`, `async-readers-return-activerecord-promise-for-pending-queries`
 2. **Fixtures.** 3 stories, 2 open, 400 est-loc.
    - Ready: `activerecord-port-encrypted-fixtures-module`
    - Blocked: `activerecord-fixture-initialize-prepend-constructor`
@@ -232,19 +230,22 @@ This RFC closes when every Verification line holds.
 
 ## Open questions
 
-1. **`activerecord-port-promise` contradicts a decision already made.** It is `ready` and asks for a port
-   of `promise.rb`. On trails#8342 (2026-10-01) the maintainer decided `ActiveRecord::Promise` is not
-   ported, a complete port was reverted, and `port-promise-complete-for-async-loaded-arms` was blocked with
-   that reason. `record-native-promise-decision-and-retire-promise-complete-rows` exists to write the
-   decision down and retire the baseline rows. **Not resolved by this split**, because `status` is
-   DB-owned: until someone runs `tasks close activerecord-port-promise` (after re-pointing the two 0174
-   stories that depend on it), it stays claimable, and an agent that claims it will rebuild rejected work.
-   Do `record-native-promise-decision-and-retire-promise-complete-rows` first.
+1. **`activerecord-port-promise` contradicted a decision already made.** Resolved on 2026-10-06. The story
+   asked for a port of `promise.rb`; on trails#8342 (2026-10-01) the maintainer decided
+   `ActiveRecord::Promise` is not ported and a complete port was reverted. The two 0174 stories that
+   depended on it (`activerecord-converge-statement-cache-execute-async-arm`,
+   `activerecord-score-core-object-protocol-names`) were re-pointed at
+   `record-native-promise-decision-and-retire-promise-complete-rows` with `tasks set-deps`, and the port
+   story was closed with `tasks close` and the decision as its reason. No trails file cites it. Nothing in
+   this RFC now asks for the port: when the decision story closes
+   `port-promise-complete-for-async-loaded-arms`, no story is released by it.
 2. **Does `promise.rb` stay on the unported list for good?** Follows from 1: yes, as a decided entry with
    the decision cited in its `reason`, which the decision story's criteria cover.
 
 ## Changelog
 
 - 2026-10-06: created by splitting the `excluded-files` cluster out of `0174-activerecord-api-parity-100`.
-  14 stories moved (1 done, 8 ready, 1 draft, 3 blocked, 1 closed). The 11 clustered ones change only their
+  14 stories moved (1 done, 7 ready, 1 draft, 3 blocked, 2 closed). The 11 clustered ones change only their
   `rfc:` line; the 3 `promise.rb` stories also take `cluster: excluded-files`.
+- 2026-10-06 (review): `activerecord-port-promise` closed with the trails#8342 decision as its reason, after
+  its two dependants in RFC 0174 were re-pointed at the decision story. 11 open, 2,680 est-loc.

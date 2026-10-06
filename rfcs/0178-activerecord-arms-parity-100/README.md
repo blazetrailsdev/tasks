@@ -32,7 +32,8 @@ This RFC holds activerecord's residue on the three report-only **body-shape** ax
 (`pnpm parity:api:duck-types`). It was split out of `0174-activerecord-api-parity-100` on 2026-10-02 and
 took the 53 stories of 0174's `arms` cluster with it. 45 of them are open, at 17,848 est-loc. Two
 stories were filed with the split (§ "Blocked", § "Ordering") and two unestimated ones were sized, so
-the RFC opens with 55 stories, 47 of them open, at 18,898 est-loc. The
+the RFC opened with 55 stories, 47 of them open, at 18,898 est-loc. A 56th,
+`quoted-date-usec-arm-is-relocated-into-sql-datetime` (150), moved in from RFC 0174 on 2026-10-06. The
 destination of a story is decided by one question: **which report does the row it deletes come from?**
 
 ## Motivation
@@ -234,9 +235,10 @@ Status is from the DB as of 2026-10-02. Done stories are listed with their PR.
    - Draft: `arms-extractor-reads-a-kwargs-rebinding-guard`,
      `arms-report-fold-credits-idiom-arms-by-presence`,
      `arms-report-idiom-fold-and-catch-all-else-manufacture-missing-arms`
-2. **Missing arms.** 9 stories, 4 open, 1,450 est-loc.
+2. **Missing arms.** 10 stories, 5 open, 1,600 est-loc.
    - Ready: `activerecord-converge-missing-control-flow-arms-connection-adapters-part-2`
    - Draft: `activerecord-converge-missing-control-flow-arms-residue`,
+     `quoted-date-usec-arm-is-relocated-into-sql-datetime` (moved in 2026-10-06),
      `column-deduplicated-drops-the-string-dedup-arms`,
      `composite-primary-key-predicate-reads-the-primary-key-setter-ivar`
    - Done: `activerecord-converge-missing-control-flow-arms-root` (trails#8357),
@@ -275,7 +277,8 @@ Status is from the DB as of 2026-10-02. Done stories are listed with their PR.
 
 ## Stories
 
-All 55, by Rollout group. Status is DB-owned and is not repeated here: `pnpm tasks list --rfc
+The 55 the RFC opened with and the one moved in on 2026-10-06, by Rollout group. Stories filed here since
+are not tabled. Status is DB-owned and is not repeated here: `pnpm tasks list --rfc
 0178-activerecord-arms-parity-100`.
 
 | Story                                                                                    | est-loc | Group         |
@@ -291,6 +294,7 @@ All 55, by Rollout group. Status is DB-owned and is not repeated here: `pnpm tas
 | `activerecord-converge-missing-control-flow-arms-root`                                   | 600     | missing arms  |
 | `activerecord-converge-missing-control-flow-arms-subsystems`                             | 600     | missing arms  |
 | `column-deduplicated-drops-the-string-dedup-arms`                                        | 150     | missing arms  |
+| `quoted-date-usec-arm-is-relocated-into-sql-datetime`                                    | 150     | missing arms  |
 | `composite-primary-key-predicate-reads-the-primary-key-setter-ivar`                      | 250     | missing arms  |
 | `activerecord-converge-invented-control-flow-arms-associations-part-1`                   | 560     | invented arms |
 | `activerecord-converge-invented-control-flow-arms-associations-part-2`                   | 554     | invented arms |
