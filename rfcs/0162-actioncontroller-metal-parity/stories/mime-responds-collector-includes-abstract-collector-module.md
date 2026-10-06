@@ -1,6 +1,6 @@
 ---
 title: "MimeResponds::Collector includes AbstractController::Collector as a module, with Rails' method_missing"
-status: ready
+status: in-progress
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8578
+claim: "2026-10-06T14:39:43Z"
+assignee: "head-is-a-module-included-by-conditional-get-not-a-metal-method"
 blocked-by: null
 closed-reason: null
 ---

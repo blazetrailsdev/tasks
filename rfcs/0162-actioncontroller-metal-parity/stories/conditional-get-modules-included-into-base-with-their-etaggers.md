@@ -1,6 +1,6 @@
 ---
 title: "Include ConditionalGet / EtagWithTemplateDigest / EtagWithFlash into Base as modules; fresh_when goes through combine_etags"
-status: ready
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8571
+claim: "2026-10-06T14:01:48Z"
+assignee: "conditional-get-modules-included-into-base-with-their-etaggers"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Un-skip render_plain_test.rb's two MinimalController tests now Rendering is includable"
-status: ready
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8575
+claim: "2026-10-06T14:01:48Z"
+assignee: "conditional-get-modules-included-into-base-with-their-etaggers"
 blocked-by: null
 closed-reason: null
 ---

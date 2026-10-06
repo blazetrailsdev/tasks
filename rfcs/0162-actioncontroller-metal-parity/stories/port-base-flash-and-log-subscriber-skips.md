@@ -1,6 +1,6 @@
 ---
 title: "Port the skipped tests in base_test.rb, flash_test.rb and log_subscriber_test.rb"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

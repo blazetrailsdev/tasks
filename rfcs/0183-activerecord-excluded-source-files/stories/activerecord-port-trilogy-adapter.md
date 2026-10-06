@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port TrilogyAdapter (un-exclude trilogy_adapter.rb and adapters/trilogy)"
-status: blocked
-updated: 2026-09-30
+status: closed
+updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: excluded-files
 packages: ["activerecord"]
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "No JS/npm client for the trilogy C library exists; wrapping mysql2's npm driver under Rails' TrilogyAdapter name would invent a second Mysql2Adapter. Needs a trilogy-compatible JS client (ecosystem blocker, not a CLAUDE.md-ratified shortcoming)."
-closed-reason: null
+blocked-by: null
+closed-reason: 'Out of scope, permanently: Trilogy has no Node client and will not be ported. Ratified in trails CLAUDE.md § "Trilogy is out of scope" (trails#8579); the unported-files rows for trilogy_adapter.rb and adapters/trilogy are PERMANENT, not burndown debt. Do not re-file.'
 ---
 
 ## Context

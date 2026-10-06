@@ -1,6 +1,6 @@
 ---
 title: "action-controller-rendering-is-not-an-includable-module"
-status: draft
+status: closed
 updated: 2026-10-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "ActionController::Rendering is an includable Module since trails#8557 and trails#8575 removed the last code citations; remaining work is tracked by rendering-module-keeps-duplicate-free-functions-and-no-class-methods"
 ---
 
 ## Context

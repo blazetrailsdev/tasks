@@ -1,6 +1,6 @@
 ---
 title: "Type callback-object filters; dispatch CSRF private methods through this"
-status: ready
+status: in-progress
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8576
+claim: "2026-10-06T14:01:14Z"
+assignee: "callback-object-filter-type-and-csrf-private-dispatch"
 blocked-by: null
 closed-reason: null
 ---

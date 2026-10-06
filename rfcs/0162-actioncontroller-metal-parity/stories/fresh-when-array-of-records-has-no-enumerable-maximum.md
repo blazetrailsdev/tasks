@@ -1,6 +1,6 @@
 ---
 title: "fresh_when's try(:maximum, :updated_at) finds no Enumerable#maximum on an Array of records"
-status: ready
+status: in-progress
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8577
+claim: "2026-10-06T14:09:41Z"
+assignee: "fresh-when-array-of-records-has-no-enumerable-maximum"
 blocked-by: null
 closed-reason: null
 ---

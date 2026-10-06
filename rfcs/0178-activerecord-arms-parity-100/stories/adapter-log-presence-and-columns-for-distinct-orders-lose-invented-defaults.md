@@ -1,6 +1,6 @@
 ---
 title: "activerecord: adapter log and MySQL columns_for_distinct lose their invented nil defaults"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

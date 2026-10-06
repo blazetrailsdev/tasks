@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port Railties::ControllerRuntime (un-exclude railties/controller_runtime.rb)"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: excluded-files
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-06T14:54:01Z"
+assignee: "activerecord-port-railties-controller-runtime"
 blocked-by: null
 closed-reason: null
 ---

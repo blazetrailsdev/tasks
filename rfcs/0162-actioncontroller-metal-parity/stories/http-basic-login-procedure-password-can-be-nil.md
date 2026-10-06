@@ -1,6 +1,6 @@
 ---
 title: "HttpAuthentication::Basic login_procedure types its nil-able arguments as String"
-status: claimed
+status: in-progress
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8573
 claim: "2026-10-06T13:39:34Z"
 assignee: "action-name-is-underscored-at-each-template-lookup-site"
 blocked-by: null

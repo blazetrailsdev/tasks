@@ -1,7 +1,7 @@
 ---
 title: "activerecord: withRoleAndShard loads an async block's Relation without an invented arm"
-status: ready
-updated: 2026-10-05
+status: blocked
+updated: 2026-10-06
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-06T14:01:48Z"
+assignee: "conditional-get-modules-included-into-base-with-their-etaggers"
+blocked-by: "No settled repo-wide idiom exists for a sync body receiving a promised block value (every site open-codes instanceof Promise; rbEnsure's eProc gets no value). withRoleAndShard cannot go async: connectedTo with a sync block returns its value synchronously (connection-handling.trails.test.ts) and nested sync connectedTo tests read the stack right after. Needs the repo owner to ratify the arm in CLAUDE.md (AC option 2) or to sanction a new ruby-compat helper."
 closed-reason: null
 ---
 
