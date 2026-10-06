@@ -1,9 +1,9 @@
 ---
 rfc: "0174-activerecord-api-parity-100"
-title: "activerecord source at 100% on every parity axis"
+title: "activerecord source at 100% on the name, skip, call and pin axes, and the close-out for every source-side axis"
 status: active
 created: 2026-09-30
-updated: 2026-10-02
+updated: 2026-10-06
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -17,11 +17,7 @@ clusters:
   - api-surface
   - calls-args
   - closeout
-  - errors
-  - excluded-files
   - pins
-  - placement
-  - receipts
   - skips
   - tooling
 related-rfcs:
@@ -42,64 +38,88 @@ related-rfcs:
   - "0175-activerecord-test-parity-100"
   - "0178-activerecord-arms-parity-100"
   - "0179-api-compare-crediting-rules"
+  - "0180-activerecord-receipt-parity"
+  - "0181-activerecord-member-placement"
+  - "0182-activerecord-error-parity"
+  - "0183-activerecord-excluded-source-files"
 priority: 2
 ---
 
-# RFC 0174 — activerecord source at 100% on every parity axis
+# RFC 0174 — activerecord source at 100%: names, skips, calls, pins, and the close-out
 
 ## Summary
 
-activerecord is the largest port and carries most of the residue: 58 name misses, 8 inheritance and 1
-arity mismatch, 13 excluded source files, 45 non-ratified skipped definitions, 61 call/args baseline
-rows, ~60 CONVERGEABLE receipts that name no story, 417 PERMANENT receipts nobody has checked against
-CLAUDE.md, 76 unpinned bodies, 128 module bodies inlined into their hosts, 947 moves, ~1,030 arm rows,
-51 void returns, 74 files grandfathered by `rails-error-parity`. This RFC covers the **source-side**
-axes; RFC 0175 covers tests, assertions, fixtures and schema. RFC 0178 covers control-flow arms, void
-returns and duck-type guards (split out 2026-10-02, § "Split: RFC 0178"). **At seeding: 127 stories, 46,290
-est-loc.**
+activerecord is the largest port and carried most of the source-side residue. This RFC was seeded on
+2026-09-30 with every source-side axis and seven RFCs have been split out of it since (§ "Changelog"). **What it
+holds now:**
 
-Note: there is no `activerecord-surfaced-deviations` bucket — activerecord's surfaced deviations still
-live in the retired RFC 0023 (319 activerecord drafts). The ones RFCs 0172–0175 depend on, together with
-those in the postponed RFCs 0025 and 0082, are rehomed by `parity-100-rehome-postponed-rfc-dependencies`.
+- **`api-surface`**: name misses, inheritance and arity mismatches, and the `parity:api:deps` lint.
+- **`skips`**: the non-ratified `SKIP_GROUPS` / `SCOPED_SKIP_GROUPS` entries.
+- **`calls-args`**: the `parity:api:calls` and `:calls:args` baseline rows, and option keys.
+- **`pins`**: the unpinned bodies.
+- **`tooling`** and the unclustered surfaced deviations: 131 stories that name a wrong body and no register.
+- **`closeout`**: `activerecord-api-parity-100-close-out`, the one story that re-measures **every**
+  source-side axis and pins each gate at zero. It waits on each split-out RFC through one `deps-rfc` edge.
+
+**As of 2026-10-06: 166 stories, 127 open, 15,275 est-loc.** The other source-side axes are owned by:
+
+| Axis                                                              | RFC                                         |
+| ----------------------------------------------------------------- | ------------------------------------------- |
+| tests, assertions, fixtures, schema                               | `0175-activerecord-test-parity-100`         |
+| control-flow arms, void returns, duck-type guards                 | `0178-activerecord-arms-parity-100`         |
+| comparer crediting rules                                          | `0179-api-compare-crediting-rules` (closed) |
+| deviation receipts (PERMANENT audits, CONVERGEABLE convergence)   | `0180-activerecord-receipt-parity`          |
+| inlined module bodies and moves                                   | `0181-activerecord-member-placement`        |
+| error class, message and raise site; the two eslint exclude files | `0182-activerecord-error-parity`            |
+| excluded source files                                             | `0183-activerecord-excluded-source-files`   |
+
+Note: there is no `activerecord-surfaced-deviations` bucket. The unclustered stories here are that
+bucket in practice (§ "Open questions" 1). The retired RFC 0023 still holds 319 activerecord drafts; the
+ones RFCs 0172–0175 depend on, together with those in the postponed RFCs 0025 and 0082, were rehomed by
+`parity-100-rehome-postponed-rfc-dependencies` (done).
 
 ## Motivation
 
 ### Baseline
 
+This is the seeding baseline, kept whole because the close-out re-measures every row of it. The "Stories"
+column names the RFC that owns a row where it is no longer this one; each of those RFCs carries a baseline
+re-measured on the day it was split out.
+
 Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, with `pnpm parity:api` (+ `--calls`), `parity:api:calls`, `:calls:args`, `:params`, `:predicates`, `:extra`/`:extra:gate`, `:arms:throws`, `:arms:report`, `:blocks`, `:parents`, `:pins`, `:receipts:gate`, `:moves`, `:returns`, `:duck-types`, `:deps`, `parity:structural-duplicates:report`, `parity:test` (+ `--missing`), `parity:test:assertions`, `parity:fixtures`, `parity:schema`, and a grep of `@noRailsEquivalent` / `@missingRailsCall` / `@missingRailsArgs` / `@missingRailsName` receipts in `packages/<pkg>/src`.
 
-| Axis                                                                       | Now                                                                                                     | Target                        | Where the residue lives                                                                                                 | Stories                                                                                                                   |
-| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `parity:api` methods                                                       | 6789/6847 (99.2%)                                                                                       | 100%                          | 23 files; largest `migration/compatibility.rb` 18, `postgresql_adapter.rb` 6, `encryption/contexts.rb` 6                | `api-surface` cluster + RFC 0156/0155 deps                                                                                |
-| files                                                                      | 288/288                                                                                                 | hold                          | —                                                                                                                       | —                                                                                                                         |
-| inheritance                                                                | 209/217                                                                                                 | 100%                          | 5 `DelegateClass` supers, 2 `TypeMetadata`, `OID::DateTime`                                                             | `activerecord-inheritance-residue-delegate-class-supers`                                                                  |
-| arity                                                                      | 3730/3731                                                                                               | 100%                          | `disable_joins_association_scope.rb#add_constraints`                                                                    | `activerecord-disable-joins-association-scope-add-constraints-arity`                                                      |
-| params / predicates                                                        | 2480/2480, 0                                                                                            | hold                          | —                                                                                                                       | —                                                                                                                         |
-| excluded source files                                                      | 13 (152 defs)                                                                                           | trilogy only (blocked)        | `unported-files/unscoped.ts`                                                                                            | `excluded-files` cluster, `port-destroy-association-async-job` (RFC 0116)                                                 |
-| global skip (non-ratified)                                                 | `SKIP_GROUPS` 0/7/8/9/10: 45 defs incl. `ModelSchema.load_schema!`, `Association#target`                | 0                             | `scripts/parity/conventions.ts`                                                                                         | `skips` cluster                                                                                                           |
-| global skip (ratified hooks)                                               | 31 (`method_missing` family 17, lifecycle hooks 14)                                                     | ratified only, bodies audited | `SKIP_GROUPS[3]`/`[4]`/`[5]`                                                                                            | `activerecord-lifecycle-hook-semantics-audit`, `activerecord-test-fixtures-method-missing-accessors`                      |
-| scoped skip                                                                | `SCOPED_SKIP_GROUPS[11]` (`-@`, 5 files) and `[15]` (`Fixture#initialize`, 2 files)                     | 0                             | `SCOPED_SKIP_GROUPS[11]`, `[15]`                                                                                        | `activerecord-deduplicable-deduplicated-and-unary-minus`, `activerecord-fixture-initialize-prepend-constructor` (blocked) |
-| body pins                                                                  | 4468/4544 (76)                                                                                          | 100%                          | 59 protocol defs + 17 `compatibility.rb`                                                                                | `pins` cluster                                                                                                            |
-| `parity:api:calls` rows                                                    | 53 (133 unreviewed repo-wide)                                                                           | 0                             | 30 shards                                                                                                               | 10 stories + `converge-same-name-second-owner-call-rows`, `burn-down-rfc0126-repairing-surfaced-call-rows`                |
-| `parity:api:calls:args` shape rows                                         | 8                                                                                                       | 0                             | alias-tracker, preloader/through ×2, mysql2, inheritance, insert-all, calculations ×2                                   | `calls-args` cluster                                                                                                      |
-| naming rows                                                                | 0 (60 `@missingRailsName` PERMANENT)                                                                    | ratified only                 | —                                                                                                                       | PERMANENT audits                                                                                                          |
-| `parity:api:extra:gate`                                                    | rowless (novel 0 / total 0)                                                                             | hold                          | —                                                                                                                       | —                                                                                                                         |
-| extra: inlined module bodies (report-only)                                 | 128                                                                                                     | 0, then gated                 | `base.ts` ← callbacks/core/persistence/…, `relation.ts` ← query_methods, `postgresql-adapter.ts` ← pg schema_statements | `placement` cluster, `activerecord-inlined-bodies-report-becomes-a-gate`                                                  |
-| CONVERGEABLE receipts naming a story                                       | 44                                                                                                      | converge via their stories    | 20 stories in RFCs 0023/0082/0123/0155                                                                                  | close-out deps                                                                                                            |
-| CONVERGEABLE receipts naming **no** story                                  | 60                                                                                                      | 0                             | `command-recorder.ts` 18, `test-adapter.ts`, `inheritance.ts`, `model-schema.ts`, …                                     | `activerecord-converge-*-convergeable-receipts`                                                                           |
-| PERMANENT receipts                                                         | 417 (136 `@noRailsEquivalent`, 194 `@missingRailsCall`, 27 `@missingRailsArgs`, 60 `@missingRailsName`) | ratified only                 | all directories                                                                                                         | 10 `activerecord-audit-permanent-receipts-*`                                                                              |
-| `parity:api:arms:throws` / `:blocks` / `:parents`                          | 0 / 9 / 3                                                                                               | 0 / 0 / 0                     | blocks: `relation/batches.rb`, `base.rb`, …; parents: `Base`, `Calculations`, `InstanceMethods`                         | `converge-activerecord-dropped-block-arms-remainder`, `burn-down-the-ambiguous-parent-remainder`                          |
-| arms report                                                                | 129 missing / 903 invented pairs (2,109 invented tokens)                                                | 0                             | everywhere                                                                                                              | RFC 0178 (`0178-activerecord-arms-parity-100`)                                                                            |
-| `parity:api:moves`                                                         | 947                                                                                                     | 0                             | mostly include-chain double counting                                                                                    | `activerecord-converge-moves-residue-*`                                                                                   |
-| `parity:api:returns` / `:duck-types`                                       | 51 / 8                                                                                                  | 0                             | adapters, schema statements, tasks                                                                                      | RFC 0178                                                                                                                  |
-| `parity:api:deps`                                                          | → arel 3+1, → activemodel 10+1, → activesupport 7 ✗                                                     | 0                             | `insert-all.ts`, `attributes.ts`, `migration.ts`, …                                                                     | `activerecord-deps-lint-to-zero`                                                                                          |
-| option keys (advisory)                                                     | 46 (3 likely-real)                                                                                      | 0                             | schema definitions/statements                                                                                           | `activerecord-option-keys-missing-in-ts`; the extractor fault is in RFC 0179                                              |
-| literals (advisory)                                                        | 1                                                                                                       | 0                             | `sanitization.rb` `escape_character` (normalizer fault)                                                                 | RFC 0179                                                                                                                  |
-| protocol-call enrollment                                                   | activerecord not in `PROTOCOL_CALL_ENROLLED_PACKAGES` (46 rows)                                         | enrolled                      | —                                                                                                                       | `enroll-activerecord-in-protocol-call-mapping` (RFC 0156)                                                                 |
-| structural duplicates (report) / `no-ruby-compat-reimplementation-exclude` | 131 / 2                                                                                                 | 0 / 0                         | —                                                                                                                       | `activerecord-triage-structural-duplicates-of-ruby-compat`                                                                |
-| `rails-error-parity-exclude.json`                                          | 74 activerecord files                                                                                   | 0                             | all directories                                                                                                         | `activerecord-burn-rails-error-parity-exclude-*`                                                                          |
-| `rails-callback-invocations-exclude.json`                                  | 5                                                                                                       | 0                             | `callbacks.ts`, `core.ts`, `transactions.ts`                                                                            | `activerecord-burn-rails-callback-invocations-exclude`                                                                    |
-| `arity-exclude.json` / `inheritance-exclude.json`                          | 0 / 0                                                                                                   | hold                          | —                                                                                                                       | `promote-arity-mismatches-to-ratchet` (RFC 0127) gates it                                                                 |
+| Axis                                                                       | Now                                                                                                     | Target                        | Where the residue lives                                                                                                 | Stories                                                                                                                             |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `parity:api` methods                                                       | 6789/6847 (99.2%)                                                                                       | 100%                          | 23 files; largest `migration/compatibility.rb` 18, `postgresql_adapter.rb` 6, `encryption/contexts.rb` 6                | `api-surface` cluster + RFC 0156/0155 deps                                                                                          |
+| files                                                                      | 288/288                                                                                                 | hold                          | —                                                                                                                       | —                                                                                                                                   |
+| inheritance                                                                | 209/217                                                                                                 | 100%                          | 5 `DelegateClass` supers, 2 `TypeMetadata`, `OID::DateTime`                                                             | `activerecord-inheritance-residue-delegate-class-supers`                                                                            |
+| arity                                                                      | 3730/3731                                                                                               | 100%                          | `disable_joins_association_scope.rb#add_constraints`                                                                    | `activerecord-disable-joins-association-scope-add-constraints-arity`                                                                |
+| params / predicates                                                        | 2480/2480, 0                                                                                            | hold                          | —                                                                                                                       | —                                                                                                                                   |
+| excluded source files                                                      | 13 (152 defs)                                                                                           | trilogy only (blocked)        | `unported-files/unscoped.ts`                                                                                            | RFC 0183, `port-destroy-association-async-job` (RFC 0116)                                                                           |
+| global skip (non-ratified)                                                 | `SKIP_GROUPS` 0/7/8/9/10: 45 defs incl. `ModelSchema.load_schema!`, `Association#target`                | 0                             | `scripts/parity/conventions.ts`                                                                                         | `skips` cluster                                                                                                                     |
+| global skip (ratified hooks)                                               | 31 (`method_missing` family 17, lifecycle hooks 14)                                                     | ratified only, bodies audited | `SKIP_GROUPS[3]`/`[4]`/`[5]`                                                                                            | `activerecord-lifecycle-hook-semantics-audit`, `activerecord-test-fixtures-method-missing-accessors`                                |
+| scoped skip                                                                | `SCOPED_SKIP_GROUPS[11]` (`-@`, 5 files) and `[15]` (`Fixture#initialize`, 2 files)                     | 0                             | `SCOPED_SKIP_GROUPS[11]`, `[15]`                                                                                        | `activerecord-deduplicable-deduplicated-and-unary-minus`, `activerecord-fixture-initialize-prepend-constructor` (RFC 0183, blocked) |
+| body pins                                                                  | 4468/4544 (76)                                                                                          | 100%                          | 59 protocol defs + 17 `compatibility.rb`                                                                                | `pins` cluster                                                                                                                      |
+| `parity:api:calls` rows                                                    | 53 (133 unreviewed repo-wide)                                                                           | 0                             | 30 shards                                                                                                               | 10 stories + `converge-same-name-second-owner-call-rows`, `burn-down-rfc0126-repairing-surfaced-call-rows`                          |
+| `parity:api:calls:args` shape rows                                         | 8                                                                                                       | 0                             | alias-tracker, preloader/through ×2, mysql2, inheritance, insert-all, calculations ×2                                   | `calls-args` cluster                                                                                                                |
+| naming rows                                                                | 0 (60 `@missingRailsName` PERMANENT)                                                                    | ratified only                 | —                                                                                                                       | RFC 0180                                                                                                                            |
+| `parity:api:extra:gate`                                                    | rowless (novel 0 / total 0)                                                                             | hold                          | —                                                                                                                       | —                                                                                                                                   |
+| extra: inlined module bodies (report-only)                                 | 128                                                                                                     | 0, then gated                 | `base.ts` ← callbacks/core/persistence/…, `relation.ts` ← query_methods, `postgresql-adapter.ts` ← pg schema_statements | RFC 0181                                                                                                                            |
+| CONVERGEABLE receipts naming a story                                       | 44                                                                                                      | converge via their stories    | 20 stories in RFCs 0023/0082/0123/0155                                                                                  | close-out deps; RFC 0180 for the ones it owns                                                                                       |
+| CONVERGEABLE receipts naming **no** story                                  | 60                                                                                                      | 0                             | `command-recorder.ts` 18, `test-adapter.ts`, `inheritance.ts`, `model-schema.ts`, …                                     | RFC 0180                                                                                                                            |
+| PERMANENT receipts                                                         | 417 (136 `@noRailsEquivalent`, 194 `@missingRailsCall`, 27 `@missingRailsArgs`, 60 `@missingRailsName`) | ratified only                 | all directories                                                                                                         | RFC 0180                                                                                                                            |
+| `parity:api:arms:throws` / `:blocks` / `:parents`                          | 0 / 9 / 3                                                                                               | 0 / 0 / 0                     | blocks: `relation/batches.rb`, `base.rb`, …; parents: `Base`, `Calculations`, `InstanceMethods`                         | `converge-activerecord-dropped-block-arms-remainder`, `burn-down-the-ambiguous-parent-remainder`                                    |
+| arms report                                                                | 129 missing / 903 invented pairs (2,109 invented tokens)                                                | 0                             | everywhere                                                                                                              | RFC 0178 (`0178-activerecord-arms-parity-100`)                                                                                      |
+| `parity:api:moves`                                                         | 947                                                                                                     | 0                             | mostly include-chain double counting                                                                                    | RFC 0181                                                                                                                            |
+| `parity:api:returns` / `:duck-types`                                       | 51 / 8                                                                                                  | 0                             | adapters, schema statements, tasks                                                                                      | RFC 0178                                                                                                                            |
+| `parity:api:deps`                                                          | → arel 3+1, → activemodel 10+1, → activesupport 7 ✗                                                     | 0                             | `insert-all.ts`, `attributes.ts`, `migration.ts`, …                                                                     | `activerecord-deps-lint-to-zero`                                                                                                    |
+| option keys (advisory)                                                     | 46 (3 likely-real)                                                                                      | 0                             | schema definitions/statements                                                                                           | `activerecord-option-keys-missing-in-ts`; the extractor fault is in RFC 0179                                                        |
+| literals (advisory)                                                        | 1                                                                                                       | 0                             | `sanitization.rb` `escape_character` (normalizer fault)                                                                 | RFC 0179                                                                                                                            |
+| protocol-call enrollment                                                   | activerecord not in `PROTOCOL_CALL_ENROLLED_PACKAGES` (46 rows)                                         | enrolled                      | —                                                                                                                       | `enroll-activerecord-in-protocol-call-mapping` (RFC 0156)                                                                           |
+| structural duplicates (report) / `no-ruby-compat-reimplementation-exclude` | 131 / 2                                                                                                 | 0 / 0                         | —                                                                                                                       | `activerecord-triage-structural-duplicates-of-ruby-compat`                                                                          |
+| `rails-error-parity-exclude.json`                                          | 74 activerecord files                                                                                   | 0                             | all directories                                                                                                         | RFC 0182                                                                                                                            |
+| `rails-callback-invocations-exclude.json`                                  | 5                                                                                                       | 0                             | `callbacks.ts`, `core.ts`, `transactions.ts`                                                                            | RFC 0182                                                                                                                            |
+| `arity-exclude.json` / `inheritance-exclude.json`                          | 0 / 0                                                                                                   | hold                          | —                                                                                                                       | `promote-arity-mismatches-to-ratchet` (RFC 0127) gates it                                                                           |
 
 ## Design
 
@@ -115,7 +135,7 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
   include-chain rows, the `if` arm token, option keys' declared-type keys). The fix is in the extractor,
   with a unit test, never an edit to a correct port. The fault story is filed in the RFC that owns the
   tool: `0179-api-compare-crediting-rules` for the call-set gate, the call-argument gate, the extra-surface
-  scorer and the advisory reports, `0178-activerecord-arms-parity-100` for the arms, void-return and
+  scorer and the advisory reports (closed on 2026-10-03; a new one goes to RFC 0127), `0178-activerecord-arms-parity-100` for the arms, void-return and
   duck-type extractors, and RFC 0127 for moves. A port story here whose rows the fault inflates takes a
   `deps` edge on that fault story.
 - **One owner per row.** Prior-art stories in other RFCs are wired as `deps`, not re-authored
@@ -133,8 +153,8 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
 
 - `arel-score-core-object-names-nil-and-case-then` (RFC 0172) adds the `nil?` mapping every later
   `SKIP_GROUPS[0]` story uses, so `activerecord-score-core-object-protocol-names` depends on it.
-- The eight `activerecord-relocate-*` stories precede `activerecord-inlined-bodies-report-becomes-a-gate`,
-  which precedes the base-hosted moves story (the inlined bodies are a subset of the base-hosted moves).
+- The placement, receipt, error and excluded-file stories are ordered in RFCs 0181, 0180, 0182 and 0183.
+  Seven open `deps` edges cross between those RFCs and this one; each RFC's § "Gating" lists its own.
 - The arms, void-return and duck-type stories are ordered in RFC 0178 § "Ordering".
 - `parity-100-rehome-postponed-rfc-dependencies` runs first after merge (see § "Gating").
 
@@ -158,6 +178,9 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
   Existing uses (`0019-canonical-schema-burndown`, `0063-async-validation-chain`) are that whole-RFC case.
 
 ### Existing stories this RFC depends on
+
+As seeded. A "Needed by" story that has since moved is now in RFC 0180, 0181, 0182 or 0183; slugs did not
+change, so each still resolves.
 
 | Existing story                                                            | RFC (status)     | Story status | Needed by                                                                                                                                                                                                        |
 | ------------------------------------------------------------------------- | ---------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -216,95 +239,53 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
 
 ## Stories
 
-| Story                                                                                 | est-loc | Cluster        |
-| ------------------------------------------------------------------------------------- | ------- | -------------- |
-| `activerecord-port-associations-eager-load-bang`                                      | 80      | api-surface    |
-| `activerecord-deduplicable-deduplicated-and-unary-minus`                              | 250     | api-surface    |
-| `activerecord-core-attributes-for-inspect`                                            | 100     | api-surface    |
-| `activerecord-encryption-contexts-thread-mattr-accessors`                             | 180     | api-surface    |
-| `activerecord-extended-deterministic-queries-core-queries-find-by`                    | 100     | api-surface    |
-| `activerecord-relation-encode-with-and-strict-loading-scope`                          | 180     | api-surface    |
-| `activerecord-delegation-encode-with-and-class-specific-relation-name`                | 120     | api-surface    |
-| `activerecord-result-indexed-row-to-h`                                                | 60      | api-surface    |
-| `activerecord-type-registry-copy-and-serialized-inspect`                              | 100     | api-surface    |
-| `activerecord-inheritance-residue-delegate-class-supers`                              | 250     | api-surface    |
-| `activerecord-disable-joins-association-scope-add-constraints-arity`                  | 200     | api-surface    |
-| `activerecord-port-version-and-gem-version`                                           | 80      | excluded-files |
-| `activerecord-unexclude-dynamic-matchers`                                             | 150     | excluded-files |
-| `activerecord-unexclude-and-measure-fixtures-rb`                                      | 500     | excluded-files |
-| `activerecord-fixture-initialize-prepend-constructor` (blocked)                       | 250     | excluded-files |
-| `activerecord-port-encrypted-fixtures-module`                                         | 150     | excluded-files |
-| `activerecord-port-marshalling-module`                                                | 250     | excluded-files |
-| `activerecord-port-message-pack-module`                                               | 350     | excluded-files |
-| `activerecord-port-promise`                                                           | 250     | excluded-files |
-| `activerecord-port-railties-controller-runtime`                                       | 250     | excluded-files |
-| `activerecord-port-legacy-yaml-adapter-and-yaml-column`                               | 250     | excluded-files |
-| `activerecord-port-trilogy-adapter` (blocked)                                         | 650     | excluded-files |
-| `activerecord-retire-migrator-index-helpers-skip`                                     | 350     | skips          |
-| `activerecord-retire-check-pending-skip`                                              | 350     | skips          |
-| `activerecord-retire-class-attribute-slot-skip`                                       | 350     | skips          |
-| `activerecord-retire-no-touching-klasses-skip`                                        | 120     | skips          |
-| `activerecord-score-core-object-protocol-names`                                       | 300     | skips          |
-| `activerecord-lifecycle-hook-semantics-audit`                                         | 450     | skips          |
-| `activerecord-test-fixtures-method-missing-accessors`                                 | 300     | skips          |
-| `activerecord-converge-alias-tracker-hash-default`                                    | 100     | calls-args     |
-| `activerecord-converge-preloader-through-reduce-merge`                                | 120     | calls-args     |
-| `activerecord-converge-inheritance-find-sti-class-rows`                               | 250     | calls-args     |
-| `activerecord-converge-insert-all-builder-rows`                                       | 200     | calls-args     |
-| `activerecord-converge-mysql2-cast-result-args`                                       | 200     | calls-args     |
-| `activerecord-converge-load-from-sql-instantiate-instance-of`                         | 150     | calls-args     |
-| `activerecord-converge-build-where-clause-constructor-order`                          | 150     | calls-args     |
-| `activerecord-converge-statement-cache-execute-async-arm`                             | 200     | calls-args     |
-| `activerecord-converge-type-caster-connection-with-connection`                        | 120     | calls-args     |
-| `activerecord-converge-sqlite3-reconnect-rollback`                                    | 100     | calls-args     |
-| `activerecord-converge-command-recorder-inverse-table-methods`                        | 400     | receipts       |
-| `activerecord-converge-test-infra-convergeable-receipts`                              | 450     | receipts       |
-| `activerecord-converge-inheritance-convergeable-receipts`                             | 350     | receipts       |
-| `activerecord-converge-schema-load-and-primary-key-convergeable-receipts`             | 500     | receipts       |
-| `activerecord-converge-configuration-and-connection-convergeable-receipts`            | 250     | receipts       |
-| `activerecord-converge-reflection-nested-enum-store-convergeable-receipts`            | 300     | receipts       |
-| `activerecord-converge-selector-middleware-convergeable-receipts`                     | 200     | receipts       |
-| `activerecord-converge-dumper-adapter-sqlite-encryption-convergeable-receipts`        | 350     | receipts       |
-| `activerecord-audit-permanent-receipts-root-a-m`                                      | 500     | receipts       |
-| `activerecord-audit-permanent-receipts-root-n-z`                                      | 500     | receipts       |
-| `activerecord-audit-permanent-receipts-relation-part-1`                               | 500     | receipts       |
-| `activerecord-audit-permanent-receipts-relation-part-2`                               | 500     | receipts       |
-| `activerecord-audit-permanent-receipts-associations`                                  | 500     | receipts       |
-| `activerecord-audit-permanent-receipts-subsystems-part-1`                             | 500     | receipts       |
-| `activerecord-audit-permanent-receipts-subsystems-part-2`                             | 500     | receipts       |
-| `activerecord-audit-permanent-receipts-ca-root`                                       | 500     | receipts       |
-| `activerecord-audit-permanent-receipts-ca-abstract`                                   | 500     | receipts       |
-| `activerecord-audit-permanent-receipts-ca-drivers`                                    | 500     | receipts       |
-| `activerecord-verify-and-pin-protocol-bodies`                                         | 250     | pins           |
-| `activerecord-verify-and-pin-migration-compatibility`                                 | 150     | pins           |
-| `activerecord-option-keys-missing-in-ts`                                              | 150     | calls-args     |
-| `activerecord-relocate-query-methods-bodies-inlined-in-relation`                      | 600     | placement      |
-| `activerecord-relocate-callbacks-bodies-inlined-in-base`                              | 450     | placement      |
-| `activerecord-relocate-pg-schema-statements-bodies-inlined-in-adapter`                | 550     | placement      |
-| `activerecord-relocate-core-bodies-inlined-in-base`                                   | 400     | placement      |
-| `activerecord-relocate-persistence-model-schema-counter-cache-bodies`                 | 450     | placement      |
-| `activerecord-relocate-remaining-base-hosted-inlined-bodies`                          | 450     | placement      |
-| `activerecord-relocate-adapter-hosted-inlined-bodies`                                 | 350     | placement      |
-| `activerecord-relocate-relation-type-and-association-inlined-bodies`                  | 300     | placement      |
-| `activerecord-inlined-bodies-report-becomes-a-gate`                                   | 150     | placement      |
-| `activerecord-converge-moves-residue-base-hosted`                                     | 500     | placement      |
-| `activerecord-converge-moves-residue-relation-hosted`                                 | 500     | placement      |
-| `activerecord-converge-moves-residue-adapter-hosted`                                  | 500     | placement      |
-| `activerecord-converge-moves-residue-rest`                                            | 300     | placement      |
-| `activerecord-deps-lint-to-zero`                                                      | 400     | api-surface    |
-| `activerecord-triage-structural-duplicates-of-ruby-compat`                            | 400     | tooling        |
-| `activerecord-burn-rails-error-parity-exclude-root`                                   | 600     | errors         |
-| `activerecord-burn-rails-error-parity-exclude-connection-adapters`                    | 600     | errors         |
-| `activerecord-burn-rails-error-parity-exclude-associations-relation-encryption-tasks` | 600     | errors         |
-| `activerecord-burn-rails-error-parity-exclude-rest`                                   | 420     | errors         |
-| `activerecord-burn-rails-callback-invocations-exclude`                                | 250     | errors         |
-| `parity-100-rehome-postponed-rfc-dependencies`                                        | 20      | tooling        |
-| `activerecord-api-parity-100-close-out`                                               | 200     | closeout       |
+The seeded stories that are still here. The 131 unclustered stories filed since are not tabled:
+`pnpm tasks list --rfc 0174-activerecord-api-parity-100`.
+
+| Story                                                                  | est-loc | Cluster     |
+| ---------------------------------------------------------------------- | ------- | ----------- |
+| `activerecord-port-associations-eager-load-bang`                       | 80      | api-surface |
+| `activerecord-deduplicable-deduplicated-and-unary-minus`               | 250     | api-surface |
+| `activerecord-core-attributes-for-inspect`                             | 100     | api-surface |
+| `activerecord-encryption-contexts-thread-mattr-accessors`              | 180     | api-surface |
+| `activerecord-extended-deterministic-queries-core-queries-find-by`     | 100     | api-surface |
+| `activerecord-relation-encode-with-and-strict-loading-scope`           | 180     | api-surface |
+| `activerecord-delegation-encode-with-and-class-specific-relation-name` | 120     | api-surface |
+| `activerecord-result-indexed-row-to-h`                                 | 60      | api-surface |
+| `activerecord-type-registry-copy-and-serialized-inspect`               | 100     | api-surface |
+| `activerecord-inheritance-residue-delegate-class-supers`               | 250     | api-surface |
+| `activerecord-disable-joins-association-scope-add-constraints-arity`   | 200     | api-surface |
+| `activerecord-retire-migrator-index-helpers-skip`                      | 350     | skips       |
+| `activerecord-retire-check-pending-skip`                               | 350     | skips       |
+| `activerecord-retire-class-attribute-slot-skip`                        | 350     | skips       |
+| `activerecord-retire-no-touching-klasses-skip`                         | 120     | skips       |
+| `activerecord-score-core-object-protocol-names`                        | 300     | skips       |
+| `activerecord-lifecycle-hook-semantics-audit`                          | 450     | skips       |
+| `activerecord-test-fixtures-method-missing-accessors`                  | 300     | skips       |
+| `activerecord-converge-alias-tracker-hash-default`                     | 100     | calls-args  |
+| `activerecord-converge-preloader-through-reduce-merge`                 | 120     | calls-args  |
+| `activerecord-converge-inheritance-find-sti-class-rows`                | 250     | calls-args  |
+| `activerecord-converge-insert-all-builder-rows`                        | 200     | calls-args  |
+| `activerecord-converge-mysql2-cast-result-args`                        | 200     | calls-args  |
+| `activerecord-converge-load-from-sql-instantiate-instance-of`          | 150     | calls-args  |
+| `activerecord-converge-build-where-clause-constructor-order`           | 150     | calls-args  |
+| `activerecord-converge-statement-cache-execute-async-arm`              | 200     | calls-args  |
+| `activerecord-converge-type-caster-connection-with-connection`         | 120     | calls-args  |
+| `activerecord-converge-sqlite3-reconnect-rollback`                     | 100     | calls-args  |
+| `activerecord-verify-and-pin-protocol-bodies`                          | 250     | pins        |
+| `activerecord-verify-and-pin-migration-compatibility`                  | 150     | pins        |
+| `activerecord-option-keys-missing-in-ts`                               | 150     | calls-args  |
+| `activerecord-deps-lint-to-zero`                                       | 400     | api-surface |
+| `activerecord-triage-structural-duplicates-of-ruby-compat`             | 400     | tooling     |
+| `parity-100-rehome-postponed-rfc-dependencies`                         | 20      | tooling     |
+| `activerecord-api-parity-100-close-out`                                | 200     | closeout    |
 
 ## Blocked
 
-- `activerecord-fixture-initialize-prepend-constructor` — TS language: a JS class constructor cannot be wrapped after definition; ruby-compat prepend() wraps prototype methods only, and CLAUDE.md ratifies no constructor-splicing mechanism. Blocked with activemodel-api-initialize-concern-constructor on a ruby-compat construction hook.
-- `activerecord-port-trilogy-adapter` — No JS/npm client for the trilogy C library exists; wrapping mysql2's npm driver under Rails' TrilogyAdapter name would invent a second Mysql2Adapter. Needs a trilogy-compatible JS client (ecosystem blocker, not a CLAUDE.md-ratified shortcoming).
+The two stories this section named, `activerecord-fixture-initialize-prepend-constructor` and
+`activerecord-port-trilogy-adapter`, moved to RFC 0183 with their blockers (its § "Blocked"). The blocked
+stories still here are unclustered surfaced deviations; `pnpm tasks list --rfc
+0174-activerecord-api-parity-100 --status blocked` lists them with their blockers.
 
 ## Split: RFC 0178
 
@@ -321,9 +302,10 @@ did not change, so every `deps` entry and citation still resolves.
 | `parity:api:arms:throws`, `:blocks`, `:parents` (gated, owned by RFCs 0127/0156) | here       |
 | any other axis in § "Baseline"                                                   | here       |
 
-A story that deletes rows on two axes goes where its first acceptance criterion points. A story another
-story here depends on stays here: `quoted-date-usec-arm-is-relocated-into-sql-datetime` names an arms row
-and did not move, because `sql-datetime-formatters-fold-into-quoted-date-and-quoted-time` depends on it.
+A story that deletes rows on two axes goes where its first acceptance criterion points.
+`quoted-date-usec-arm-is-relocated-into-sql-datetime` names an arms row and at first stayed here, because
+`sql-datetime-formatters-fold-into-quoted-date-and-quoted-time` depended on it. That story moved to RFC 0180
+on 2026-10-06, so the arms story moved to RFC 0178 on the same day.
 
 `activerecord-api-parity-100-close-out` still re-measures those three axes. It keeps a story-level `deps`
 edge on each moved story it already named. After the split merges, those edges are replaced by one
@@ -345,11 +327,48 @@ resolves.
 | a port under `packages/*/src`, a skip group, an exclude file or a baseline row                  | here       |
 
 This is the principle "Measurement faults are fixed in the tool" given its own backlog. A story that both
-ports and re-scores (`compatibility-module-members-unmeasured-by-parity-api`, the two
-`*-score-against-the-*-gem` stories) stays here, because its first criterion is the port.
+ports and re-scores (`compatibility-module-members-unmeasured-by-parity-api`) stays here, because its first
+criterion is the port. The two `*-score-against-the-*-gem` stories stayed for the same reason until
+2026-10-06, when they moved to RFC 0180 because trails receipts name them.
 
 `activerecord-api-parity-100-close-out` named two of the moved stories in `deps`. As with RFC 0178, those
 edges are replaced after merge by one `deps-rfc` edge on RFC 0179.
+
+## Split: RFCs 0180 to 0183
+
+As of 2026-10-06 four more axes have their own RFC. 132 stories moved, done ones included, so the prior
+art sits beside the open work. Slugs did not change, so every `deps` entry and every
+`CONVERGEABLE <story-id>` receipt in trails still resolves.
+
+| RFC                                       | Owns                                                             | Stories | Open | Open est-loc |
+| ----------------------------------------- | ---------------------------------------------------------------- | ------- | ---- | ------------ |
+| `0180-activerecord-receipt-parity`        | PERMANENT audits, CONVERGEABLE receipts, audit findings          | 89      | 73   | 15,370       |
+| `0181-activerecord-member-placement`      | inlined module bodies, `parity:api:moves`                        | 16      | 14   | 5,370        |
+| `0182-activerecord-error-parity`          | error class / message / raise site, the two eslint exclude files | 13      | 13   | 3,060        |
+| `0183-activerecord-excluded-source-files` | `.rb` files on `scripts/parity/unported-files/`                  | 14      | 12   | 2,930        |
+
+| The story's first acceptance criterion                                                                                                   | File it in |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| moves a member into the file mirroring the `.rb` that defines it (`inlined-from`, `parity:api:moves`)                                    | RFC 0181   |
+| changes an error class, message or raise site, or deletes an error-parity / callback-invocations exclude row                             | RFC 0182   |
+| ports or un-excludes a `.rb` listed in `scripts/parity/unported-files/`                                                                  | RFC 0183   |
+| deletes a receipt in `packages/activerecord/src`; or a `CONVERGEABLE <story-id>` receipt names the story; or a receipt audit surfaced it | RFC 0180   |
+| deletes a row of the arms, void-return or duck-type report                                                                               | RFC 0178   |
+| changes a test file, test model, fixture or the test schema                                                                              | RFC 0175   |
+| any other activerecord source-side axis                                                                                                  | here       |
+
+The rows are read top to bottom and the first match wins.
+
+Three stories went to RFCs that already existed, by the same table:
+`quoted-date-usec-arm-is-relocated-into-sql-datetime` to RFC 0178 (it owns a row of the missing-arm
+report), and `test-databases-tests-mirror-rails-hash-configurations` and
+`admin-test-models-derive-table-name-from-the-module-prefix` to RFC 0175 (each changes a test file or a
+test model). Nothing went to RFC 0179: it is closed, and a story in a closed RFC is never claimable.
+
+`activerecord-api-parity-100-close-out` named 46 of the moved stories in `deps`. Those entries are
+replaced by four `deps-rfc` edges, one per new RFC, which is the whole-RFC case § "Gating" describes. The
+edit is in the split's own diff: the RFCs exist in the same commit, so nothing is owed after merge. The
+close-out now holds 71 story-level `deps` and six `deps-rfc` edges (0178, 0179, 0180, 0181, 0182, 0183).
 
 ## Non-goals
 
@@ -377,24 +396,28 @@ edges are replaced after merge by one `deps-rfc` edge on RFC 0179.
 
 1. **Rehome and tooling** — `activerecord-triage-structural-duplicates-of-ruby-compat`, `parity-100-rehome-postponed-rfc-dependencies` (the two comparer-fault stories moved to RFC 0179 on 2026-10-02)
 2. **API surface** — `activerecord-port-associations-eager-load-bang`, `activerecord-deduplicable-deduplicated-and-unary-minus`, `activerecord-core-attributes-for-inspect`, `activerecord-encryption-contexts-thread-mattr-accessors`, `activerecord-extended-deterministic-queries-core-queries-find-by`, `activerecord-relation-encode-with-and-strict-loading-scope`, `activerecord-delegation-encode-with-and-class-specific-relation-name`, `activerecord-result-indexed-row-to-h`, `activerecord-type-registry-copy-and-serialized-inspect`, `activerecord-inheritance-residue-delegate-class-supers`, `activerecord-disable-joins-association-scope-add-constraints-arity`, `activerecord-deps-lint-to-zero`
-3. **Excluded files and skips** — `activerecord-port-version-and-gem-version`, `activerecord-unexclude-dynamic-matchers`, `activerecord-unexclude-and-measure-fixtures-rb`, `activerecord-fixture-initialize-prepend-constructor`, `activerecord-port-encrypted-fixtures-module`, `activerecord-port-marshalling-module`, `activerecord-port-message-pack-module`, `activerecord-port-promise`, `activerecord-port-railties-controller-runtime`, `activerecord-port-legacy-yaml-adapter-and-yaml-column`, `activerecord-port-trilogy-adapter`, `activerecord-retire-migrator-index-helpers-skip`, `activerecord-retire-check-pending-skip`, `activerecord-retire-class-attribute-slot-skip`, `activerecord-retire-no-touching-klasses-skip`, `activerecord-score-core-object-protocol-names`, `activerecord-lifecycle-hook-semantics-audit`, `activerecord-test-fixtures-method-missing-accessors`
+3. **Skips** — `activerecord-retire-migrator-index-helpers-skip`, `activerecord-retire-check-pending-skip`, `activerecord-retire-class-attribute-slot-skip`, `activerecord-retire-no-touching-klasses-skip`, `activerecord-score-core-object-protocol-names`, `activerecord-lifecycle-hook-semantics-audit`, `activerecord-test-fixtures-method-missing-accessors`. Excluded files moved to RFC 0183 on 2026-10-06.
 4. **Calls and args** — `activerecord-converge-alias-tracker-hash-default`, `activerecord-converge-preloader-through-reduce-merge`, `activerecord-converge-inheritance-find-sti-class-rows`, `activerecord-converge-insert-all-builder-rows`, `activerecord-converge-mysql2-cast-result-args`, `activerecord-converge-load-from-sql-instantiate-instance-of`, `activerecord-converge-build-where-clause-constructor-order`, `activerecord-converge-statement-cache-execute-async-arm`, `activerecord-converge-type-caster-connection-with-connection`, `activerecord-converge-sqlite3-reconnect-rollback`, `activerecord-option-keys-missing-in-ts`
-5. **Receipts** — `activerecord-converge-command-recorder-inverse-table-methods`, `activerecord-converge-test-infra-convergeable-receipts`, `activerecord-converge-inheritance-convergeable-receipts`, `activerecord-converge-schema-load-and-primary-key-convergeable-receipts`, `activerecord-converge-configuration-and-connection-convergeable-receipts`, `activerecord-converge-reflection-nested-enum-store-convergeable-receipts`, `activerecord-converge-selector-middleware-convergeable-receipts`, `activerecord-converge-dumper-adapter-sqlite-encryption-convergeable-receipts`, `activerecord-audit-permanent-receipts-root-a-m`, `activerecord-audit-permanent-receipts-root-n-z`, `activerecord-audit-permanent-receipts-relation-part-1`, `activerecord-audit-permanent-receipts-relation-part-2`, `activerecord-audit-permanent-receipts-associations`, `activerecord-audit-permanent-receipts-subsystems-part-1`, `activerecord-audit-permanent-receipts-subsystems-part-2`, `activerecord-audit-permanent-receipts-ca-root`, `activerecord-audit-permanent-receipts-ca-abstract`, `activerecord-audit-permanent-receipts-ca-drivers`
-6. **Pins and error parity** — `activerecord-verify-and-pin-protocol-bodies`, `activerecord-verify-and-pin-migration-compatibility`, `activerecord-burn-rails-error-parity-exclude-root`, `activerecord-burn-rails-error-parity-exclude-connection-adapters`, `activerecord-burn-rails-error-parity-exclude-associations-relation-encryption-tasks`, `activerecord-burn-rails-error-parity-exclude-rest`, `activerecord-burn-rails-callback-invocations-exclude`
-7. **Placement** — `activerecord-relocate-query-methods-bodies-inlined-in-relation`, `activerecord-relocate-callbacks-bodies-inlined-in-base`, `activerecord-relocate-pg-schema-statements-bodies-inlined-in-adapter`, `activerecord-relocate-core-bodies-inlined-in-base`, `activerecord-relocate-persistence-model-schema-counter-cache-bodies`, `activerecord-relocate-remaining-base-hosted-inlined-bodies`, `activerecord-relocate-adapter-hosted-inlined-bodies`, `activerecord-relocate-relation-type-and-association-inlined-bodies`, `activerecord-inlined-bodies-report-becomes-a-gate`, `activerecord-converge-moves-residue-base-hosted`, `activerecord-converge-moves-residue-relation-hosted`, `activerecord-converge-moves-residue-adapter-hosted`, `activerecord-converge-moves-residue-rest`
+5. **Receipts** — moved to RFC 0180 on 2026-10-06; see its § "Rollout".
+6. **Pins** — `activerecord-verify-and-pin-protocol-bodies`, `activerecord-verify-and-pin-migration-compatibility`. Error parity moved to RFC 0182 on 2026-10-06.
+7. **Placement** — moved to RFC 0181 on 2026-10-06; see its § "Rollout".
 8. **Arms** — moved to RFC 0178 (`0178-activerecord-arms-parity-100`) on 2026-10-02; see its § "Rollout".
-9. **Close-out** — `activerecord-api-parity-100-close-out` (waits on RFC 0178; see § "Split: RFC 0178")
+9. **Close-out** — `activerecord-api-parity-100-close-out` (waits on RFCs 0178, 0179 and 0180 to 0183 through `deps-rfc`)
 
 ## Verification
 
 `activerecord-api-parity-100-close-out`'s acceptance criteria are the verification — every § "Baseline"
 row at target on a clean build, with the named blocked residue: `activerecord-port-trilogy-adapter`
-(no JS trilogy client) and `activerecord-fixture-initialize-prepend-constructor` (constructor splicing).
+(no JS trilogy client) and `activerecord-fixture-initialize-prepend-constructor` (constructor splicing),
+both now in RFC 0183. The close-out is the single re-measuring gate for RFCs 0178 and 0180 to 0183 as well:
+none of them has a close-out of its own.
 
 ## Open questions
 
-1. **Should activerecord's surfaced deviations get their own bucket RFC?** Deferred: outside this RFC; the
-   rehome story moves only the 0023 stories these RFCs depend on.
+1. **Should activerecord's surfaced deviations get their own bucket RFC?** Still deferred, and now the
+   largest thing here: 131 unclustered stories, 106 of them open (10,635 est-loc), share no register and no
+   mechanism. The 2026-10-06 split routed out the ones a receipt, a placement report, an error rule or the
+   unported list owns, and left the rest.
 2. **Is the `then` skip on `Relation`/`FutureResult` ratified?** Resolved: yes, by § "`Relation` is evaluated
    by an async query"; it survives as a scoped, cited entry.
 
@@ -409,3 +432,9 @@ row at target on a clean build, with the named blocked residue: `activerecord-po
   `0179-api-compare-crediting-rules`; 244 stay here, 198 of them open (36,555 est-loc). The routing rule is
   § "Split: RFC 0179". `activerecord-api-parity-100-close-out`'s `deps` list was rewritten from a wrapped
   flow sequence to a block list, with no entry changed, because `tasks set-deps` refuses the wrapped form.
+- 2026-10-06: third split, four RFCs at once. 132 stories moved: 89 to `0180-activerecord-receipt-parity`
+  (the `receipts` cluster and 30 unclustered stories), 16 to `0181-activerecord-member-placement`, 13 to
+  `0182-activerecord-error-parity` and 14 to `0183-activerecord-excluded-source-files`. Three more went to
+  RFCs that already existed: one to 0178 and two to 0175. 166 stay here, 127 of them open (15,275 est-loc).
+  The routing rule is § "Split: RFCs 0180 to 0183". The close-out's 46 story-level `deps` on moved stories
+  became four `deps-rfc` edges in the same diff. Summary and title re-scoped to what remains.

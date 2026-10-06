@@ -2,7 +2,7 @@
 title: "test_databases_test: assign Rails' plain configuration hash instead of a spied stub"
 status: draft
 updated: 2026-10-01
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
 deps: []

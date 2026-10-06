@@ -1,13 +1,13 @@
 ---
-title: "quoted-date-usec-arm-is-relocated-into-sql-datetime"
+title: "activerecord: Quoting#quoted_date owns its usec arm instead of relocating it into sql-datetime.ts"
 status: draft
 updated: 2026-10-01
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0178-activerecord-arms-parity-100"
+cluster: arms
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: null
 claim: null

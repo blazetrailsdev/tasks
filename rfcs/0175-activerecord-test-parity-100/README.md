@@ -3,7 +3,7 @@ rfc: "0175-activerecord-test-parity-100"
 title: "activerecord tests, assertions, fixtures and schema at 100%"
 status: active
 created: 2026-09-30
-updated: 2026-09-30
+updated: 2026-10-06
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -32,6 +32,10 @@ related-rfcs:
   - "0173-activemodel-parity-100"
   - "0174-activerecord-api-parity-100"
   - "0178-activerecord-arms-parity-100"
+  - "0180-activerecord-receipt-parity"
+  - "0181-activerecord-member-placement"
+  - "0182-activerecord-error-parity"
+  - "0183-activerecord-excluded-source-files"
 priority: 3
 ---
 
@@ -243,3 +247,8 @@ blocked residue: the fork-based tests (`activerecord-fork-excluded-tests`) and t
 ## Changelog
 
 - 2026-09-30: initial RFC (38 stories, 16,384 est-loc).
+- 2026-10-06: two stories moved here from RFC 0174 when it was split into RFCs 0180 to 0183, because
+  each changes a test file or a test model and no port:
+  `test-databases-tests-mirror-rails-hash-configurations` (120) and
+  `admin-test-models-derive-table-name-from-the-module-prefix` (60, `cluster: schema-fixtures`). Slugs did
+  not change.
