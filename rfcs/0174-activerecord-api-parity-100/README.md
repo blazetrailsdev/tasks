@@ -95,7 +95,7 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
 | inheritance                                                                | 209/217                                                                                                 | 100%                                      | 5 `DelegateClass` supers, 2 `TypeMetadata`, `OID::DateTime`                                                             | `activerecord-inheritance-residue-delegate-class-supers`                                                                            |
 | arity                                                                      | 3730/3731                                                                                               | 100%                                      | `disable_joins_association_scope.rb#add_constraints`                                                                    | `activerecord-disable-joins-association-scope-add-constraints-arity`                                                                |
 | params / predicates                                                        | 2480/2480, 0                                                                                            | hold                                      | —                                                                                                                       | —                                                                                                                                   |
-| excluded source files                                                      | 13 (152 defs)                                                                                           | trilogy (blocked), `promise.rb` (decided) | `unported-files/unscoped.ts`                                                                                            | RFC 0183, `port-destroy-association-async-job` (RFC 0116)                                                                           |
+| excluded source files                                                      | 13 (152 defs)                                                                                           | trilogy (decided), `promise.rb` (decided) | `unported-files/unscoped.ts`                                                                                            | RFC 0183, `port-destroy-association-async-job` (RFC 0116)                                                                           |
 | global skip (non-ratified)                                                 | `SKIP_GROUPS` 0/7/8/9/10: 45 defs incl. `ModelSchema.load_schema!`, `Association#target`                | 0                                         | `scripts/parity/conventions.ts`                                                                                         | `skips` cluster                                                                                                                     |
 | global skip (ratified hooks)                                               | 31 (`method_missing` family 17, lifecycle hooks 14)                                                     | ratified only, bodies audited             | `SKIP_GROUPS[3]`/`[4]`/`[5]`                                                                                            | `activerecord-lifecycle-hook-semantics-audit`, `activerecord-test-fixtures-method-missing-accessors`                                |
 | scoped skip                                                                | `SCOPED_SKIP_GROUPS[11]` (`-@`, 5 files) and `[15]` (`Fixture#initialize`, 2 files)                     | 0                                         | `SCOPED_SKIP_GROUPS[11]`, `[15]`                                                                                        | `activerecord-deduplicable-deduplicated-and-unary-minus`, `activerecord-fixture-initialize-prepend-constructor` (RFC 0183, blocked) |
@@ -284,7 +284,8 @@ The seeded stories that are still here. The 131 unclustered stories filed since 
 ## Blocked
 
 The two stories this section named, `activerecord-fixture-initialize-prepend-constructor` and
-`activerecord-port-trilogy-adapter`, moved to RFC 0183 with their blockers (its § "Blocked"). The blocked
+`activerecord-port-trilogy-adapter`, moved to RFC 0183; the trilogy one is closed, decided not ported
+(trails CLAUDE.md § "Trilogy is out of scope"), and the other keeps its blocker. The blocked
 stories still here are unclustered surfaced deviations; `pnpm tasks list --rfc
 0174-activerecord-api-parity-100 --status blocked` lists them with their blockers.
 
@@ -408,10 +409,11 @@ close-out now holds 71 story-level `deps` and six `deps-rfc` edges (0178, 0179, 
 ## Verification
 
 `activerecord-api-parity-100-close-out`'s acceptance criteria are the verification — every § "Baseline"
-row at target on a clean build, with the named blocked residue: `activerecord-port-trilogy-adapter`
-(no JS trilogy client) and `activerecord-fixture-initialize-prepend-constructor` (constructor splicing),
-both now in RFC 0183, and one decided exclusion: `promise.rb` (trails#8342), which stays on the unported
-list with the decision cited in its entry. The close-out is the single re-measuring gate for RFCs 0178 and 0180 to 0183 as well:
+row at target on a clean build, with the named blocked residue:
+`activerecord-fixture-initialize-prepend-constructor` (constructor splicing), now in RFC 0183, and two
+decided exclusions: trilogy (`activerecord-port-trilogy-adapter`, closed — trails CLAUDE.md § "Trilogy is
+out of scope") and `promise.rb` (trails#8342). Both stay on the unported list with the decision cited in
+their entries. The close-out is the single re-measuring gate for RFCs 0178 and 0180 to 0183 as well:
 none of them has a close-out of its own.
 
 ## Open questions
