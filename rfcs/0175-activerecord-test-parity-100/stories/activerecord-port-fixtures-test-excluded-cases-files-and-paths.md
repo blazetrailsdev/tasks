@@ -50,7 +50,7 @@ loading `.yml` from `fixture_paths`, `fixtures :all` directory scans, `create_fi
 
 trails' canonical fixtures are TS modules (`packages/activerecord/src/test-helpers/fixtures/`), but the
 Rails API under test is the YAML loader — which RFC 0170 (Psych) makes portable. `fixtures.rb` becomes
-measured under `activerecord-unexclude-and-measure-fixtures-rb` (RFC 0174).
+measured under `activerecord-unexclude-and-measure-fixtures-rb` (RFC 0183).
 
 ## Acceptance criteria
 

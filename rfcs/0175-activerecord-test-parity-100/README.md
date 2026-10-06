@@ -3,7 +3,7 @@ rfc: "0175-activerecord-test-parity-100"
 title: "activerecord tests, assertions, fixtures and schema at 100%"
 status: active
 created: 2026-09-30
-updated: 2026-09-30
+updated: 2026-10-06
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -32,6 +32,10 @@ related-rfcs:
   - "0173-activemodel-parity-100"
   - "0174-activerecord-api-parity-100"
   - "0178-activerecord-arms-parity-100"
+  - "0180-activerecord-receipt-parity"
+  - "0181-activerecord-member-placement"
+  - "0182-activerecord-error-parity"
+  - "0183-activerecord-excluded-source-files"
 priority: 3
 ---
 
@@ -43,7 +47,8 @@ RFCs 0016 and 0030 took activerecord's test-name coverage to 97.6%, and 0132 its
 zero. What is left: 138 missing and 64 skipped Rails tests, 46 wrong-describe and 1 misplaced, 4
 assertion kind/value mismatches, 1,007 TS-only tests sitting in Rails-named files, ~200 Rails tests
 excluded through the unported register, 6 fixture diffs and 30 unported fixture schemas, 74 invented
-schema tables, and four test-infrastructure lint registers. **38 stories, 16,384 est-loc.**
+schema tables, and four test-infrastructure lint registers. **38 stories, 16,384 est-loc at seeding; 40 tabled since 2026-10-06 (16,564), when two moved in from RFC 0174.**
+Stories filed here since seeding are not tabled: `pnpm tasks list --rfc 0175-activerecord-test-parity-100`.
 Sibling of RFCs 0172, 0173, 0174 (source-side). RFC 0178 was split out of 0174 on 2026-10-02 (arms, void returns, duck-type guards).
 
 ## Motivation
@@ -190,6 +195,8 @@ either ratified (§ "Trails has no autoloader") or blocked with a named blocker.
 | `activerecord-converge-targets-invented-table`                       | 450     | schema-fixtures |
 | `activerecord-converge-remaining-invented-tables`                    | 450     | schema-fixtures |
 | `activerecord-fixture-parity-diffs-and-unported-fixture-schemas`     | 500     | schema-fixtures |
+| `admin-test-models-derive-table-name-from-the-module-prefix`         | 60      | schema-fixtures |
+| `test-databases-tests-mirror-rails-hash-configurations`              | 120     | missing-tests   |
 | `activerecord-burn-no-standalone-associations-exclude`               | 500     | lint-registers  |
 | `activerecord-burn-canonical-rebuild-and-row-write-excludes`         | 450     | lint-registers  |
 | `activerecord-burn-expected-fixtures-and-fixture-parity-excludes`    | 250     | lint-registers  |
@@ -220,10 +227,10 @@ either ratified (§ "Trails has no autoloader") or blocked with a named blocker.
 
 ## Rollout
 
-1. **Missing and skipped tests** — `activerecord-port-finder-test-find-by-cases`, `activerecord-port-finder-test-remaining-cases`, `activerecord-port-database-tasks-per-adapter-cases`, `activerecord-port-i18n-validation-uniqueness-and-associated-cases`, `activerecord-port-model-and-association-missing-cases`, `activerecord-port-adapter-and-migrator-missing-cases`, `activerecord-unskip-relation-delegation-tests`, `activerecord-unskip-remaining-matched-skips`, `activerecord-range-test-describe-path-and-misplaced-find-by`, `activerecord-assertion-kind-and-value-residue-to-zero`
+1. **Missing and skipped tests** — `activerecord-port-finder-test-find-by-cases`, `activerecord-port-finder-test-remaining-cases`, `activerecord-port-database-tasks-per-adapter-cases`, `activerecord-port-i18n-validation-uniqueness-and-associated-cases`, `activerecord-port-model-and-association-missing-cases`, `activerecord-port-adapter-and-migrator-missing-cases`, `activerecord-unskip-relation-delegation-tests`, `activerecord-unskip-remaining-matched-skips`, `activerecord-range-test-describe-path-and-misplaced-find-by`, `activerecord-assertion-kind-and-value-residue-to-zero`, `test-databases-tests-mirror-rails-hash-configurations`
 2. **Unported register** — `activerecord-port-thread-excluded-tests-pool-and-cache`, `activerecord-port-thread-excluded-tests-transactions-and-scoping`, `activerecord-fork-excluded-tests`, `activerecord-port-marshal-excluded-tests`, `activerecord-port-yaml-excluded-tests`, `activerecord-port-fixtures-test-excluded-cases-files-and-paths`, `activerecord-port-fixtures-test-excluded-cases-lifecycle`, `activerecord-port-visibility-and-symbol-excluded-tests`, `activerecord-audit-autoload-and-constant-lookup-excluded-tests`, `activerecord-port-async-query-excluded-tests`, `activerecord-port-misc-excluded-tests`
 3. **TS-only tests** — `activerecord-relocate-ts-only-tests-root-part-1`, `activerecord-relocate-ts-only-tests-root-part-2`, `activerecord-relocate-ts-only-tests-relation`, `activerecord-relocate-ts-only-tests-adapters-postgresql`, `activerecord-relocate-ts-only-tests-encryption`, `activerecord-relocate-ts-only-tests-associations`, `activerecord-relocate-ts-only-tests-connection-adapters`, `activerecord-relocate-ts-only-tests-smaller-dirs`
-4. **Schema, fixtures and lint registers** — `activerecord-delete-dead-invented-schema-tables`, `activerecord-converge-clients-firms-invented-tables-onto-companies`, `activerecord-converge-targets-invented-table`, `activerecord-converge-remaining-invented-tables`, `activerecord-fixture-parity-diffs-and-unported-fixture-schemas`, `activerecord-burn-no-standalone-associations-exclude`, `activerecord-burn-canonical-rebuild-and-row-write-excludes`, `activerecord-burn-expected-fixtures-and-fixture-parity-excludes`
+4. **Schema, fixtures and lint registers** — `activerecord-delete-dead-invented-schema-tables`, `activerecord-converge-clients-firms-invented-tables-onto-companies`, `activerecord-converge-targets-invented-table`, `activerecord-converge-remaining-invented-tables`, `activerecord-fixture-parity-diffs-and-unported-fixture-schemas`, `activerecord-burn-no-standalone-associations-exclude`, `activerecord-burn-canonical-rebuild-and-row-write-excludes`, `activerecord-burn-expected-fixtures-and-fixture-parity-excludes`, `admin-test-models-derive-table-name-from-the-module-prefix`
 5. **Close-out** — `activerecord-test-parity-100-close-out`
 
 Before any of this: `parity-100-rehome-postponed-rfc-dependencies` (RFC 0174) runs after merge and rehomes
@@ -243,3 +250,9 @@ blocked residue: the fork-based tests (`activerecord-fork-excluded-tests`) and t
 ## Changelog
 
 - 2026-09-30: initial RFC (38 stories, 16,384 est-loc).
+- 2026-10-06: two stories moved here from RFC 0174 when it was split into RFCs 0180 to 0183, because
+  each changes a test file or a test model and no port:
+  `test-databases-tests-mirror-rails-hash-configurations` (120) and
+  `admin-test-models-derive-table-name-from-the-module-prefix` (60, `cluster: schema-fixtures`); the first
+  takes `cluster: missing-tests`. Both are in § "Stories" and § "Rollout". Slugs did
+  not change.

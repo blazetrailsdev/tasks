@@ -32,7 +32,7 @@ ruby-compat-has-no-marshal-for-schema-cache-and-debug`", and "Each of the nine
   classes is registered under its Ruby constant name" — both are done.
 - `debug-helper-through-object-to-yaml` (RFC 0170) has "`Marshal.dump` carries
   `@missingRailsCall … — CONVERGEABLE ruby-compat-has-no-marshal-for-schema-cache-and-debug`".
-- `schema-cache-load-from-ports-the-marshal-and-yaml-load-arms` (RFC 0174) lists
+- `schema-cache-load-from-ports-the-marshal-and-yaml-load-arms` (RFC 0180) lists
   "The `.dump` (Marshal) arm is absent" and "The `@missingRailsCall load`
   receipt is deleted"; both are done. Its YAML-arm and `try` / `catch` items
   remain. The YAML arm now reads bytes through `File.binread` and

@@ -3,7 +3,7 @@ rfc: "0178-activerecord-arms-parity-100"
 title: "activerecord control-flow arms, void returns and duck-type guards at zero — split from RFC 0174"
 status: active
 created: 2026-10-02
-updated: 2026-10-02
+updated: 2026-10-06
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -13,6 +13,8 @@ clusters:
 related-rfcs:
   - "0174-activerecord-api-parity-100"
   - "0179-api-compare-crediting-rules"
+  - "0180-activerecord-receipt-parity"
+  - "0183-activerecord-excluded-source-files"
   - "0113-branch-and-guard-parity"
   - "0127-fidelity-tooling-signals-and-hygiene"
   - "0156-parity-beyond-name-presence"
@@ -30,7 +32,8 @@ This RFC holds activerecord's residue on the three report-only **body-shape** ax
 (`pnpm parity:api:duck-types`). It was split out of `0174-activerecord-api-parity-100` on 2026-10-02 and
 took the 53 stories of 0174's `arms` cluster with it. 45 of them are open, at 17,848 est-loc. Two
 stories were filed with the split (§ "Blocked", § "Ordering") and two unestimated ones were sized, so
-the RFC opens with 55 stories, 47 of them open, at 18,898 est-loc. The
+the RFC opened with 55 stories, 47 of them open, at 18,898 est-loc. A 56th,
+`quoted-date-usec-arm-is-relocated-into-sql-datetime` (150), moved in from RFC 0174 on 2026-10-06. The
 destination of a story is decided by one question: **which report does the row it deletes come from?**
 
 ## Motivation
@@ -91,9 +94,9 @@ This table is repeated in 0174 § "Split: RFC 0178".
 | a call-set, call-argument, extra-surface or advisory-report rule in the comparer | `0179-api-compare-crediting-rules` |
 | any other activerecord source-side axis                                          | `0174-activerecord-api-parity-100` |
 
-A story that deletes rows on two axes goes where its first acceptance criterion points. A story that a
-story in 0174 depends on stays in 0174: `quoted-date-usec-arm-is-relocated-into-sql-datetime` names an arms
-row and did not move, because `sql-datetime-formatters-fold-into-quoted-date-and-quoted-time` depends on it.
+A story that deletes rows on two axes goes where its first acceptance criterion points. `quoted-date-usec-arm-is-relocated-into-sql-datetime` names an arms row and at first stayed in 0174, because
+`sql-datetime-formatters-fold-into-quoted-date-and-quoted-time` depended on it. That story moved to RFC 0180
+on 2026-10-06, and the arms story moved here on the same day.
 
 ### Principles
 
@@ -128,8 +131,8 @@ These are 0174's, unchanged:
   | 1     | `column-deduplicated-drops-the-string-dedup-arms`                                     |
   | 1     | `composite-primary-key-predicate-reads-the-primary-key-setter-ivar`                   |
   | 1     | `arms-report-idiom-fold-and-catch-all-else-manufacture-missing-arms`                  |
-  | 1     | `quoted-date-usec-arm-is-relocated-into-sql-datetime` (RFC 0174)                      |
-  | 1     | `record-native-promise-decision-and-retire-promise-complete-rows` (RFC 0174, `pluck`) |
+  | 1     | `quoted-date-usec-arm-is-relocated-into-sql-datetime`                                 |
+  | 1     | `record-native-promise-decision-and-retire-promise-complete-rows` (RFC 0183, `pluck`) |
 
   `arms-report-fold-credits-idiom-arms-by-presence` is a dependency too: it owns no pair of today's 38
   outright, but it removes fold-manufactured `-if` / `-loop` rows the residue story routes to it.
@@ -146,9 +149,9 @@ These are 0174's, unchanged:
   `active`. 33 stories here were claimable in 0174 and stay claimable.
 - **Edges out of this RFC:** `audit-loop-try-rescue-arm-strata-for-gating` (RFC 0127) and
   `parity-100-rehome-postponed-rfc-dependencies` (RFC 0174, done), from the stories as they moved. The gate
-  story adds two: `quoted-date-usec-arm-is-relocated-into-sql-datetime` and
-  `record-native-promise-decision-and-retire-promise-complete-rows` (both RFC 0174, draft), which own a
-  missing-arm row each. There are no others.
+  story adds two, which own a missing-arm row each: `quoted-date-usec-arm-is-relocated-into-sql-datetime`
+  (here since 2026-10-06) and `record-native-promise-decision-and-retire-promise-complete-rows` (RFC 0183
+  since 2026-10-06). Both are draft. There are no others.
 - **Edges into this RFC:** `activerecord-api-parity-100-close-out` (RFC 0174) only. It names 43 of these
   stories in `deps`. After this split merges, those are replaced by one `deps-rfc` edge on this RFC, so the
   0174 close-out waits for everything here, including stories filed later.
@@ -232,9 +235,10 @@ Status is from the DB as of 2026-10-02. Done stories are listed with their PR.
    - Draft: `arms-extractor-reads-a-kwargs-rebinding-guard`,
      `arms-report-fold-credits-idiom-arms-by-presence`,
      `arms-report-idiom-fold-and-catch-all-else-manufacture-missing-arms`
-2. **Missing arms.** 9 stories, 4 open, 1,450 est-loc.
+2. **Missing arms.** 10 stories, 5 open, 1,600 est-loc.
    - Ready: `activerecord-converge-missing-control-flow-arms-connection-adapters-part-2`
    - Draft: `activerecord-converge-missing-control-flow-arms-residue`,
+     `quoted-date-usec-arm-is-relocated-into-sql-datetime` (moved in 2026-10-06),
      `column-deduplicated-drops-the-string-dedup-arms`,
      `composite-primary-key-predicate-reads-the-primary-key-setter-ivar`
    - Done: `activerecord-converge-missing-control-flow-arms-root` (trails#8357),
@@ -273,7 +277,8 @@ Status is from the DB as of 2026-10-02. Done stories are listed with their PR.
 
 ## Stories
 
-All 55, by Rollout group. Status is DB-owned and is not repeated here: `pnpm tasks list --rfc
+The 55 the RFC opened with and the one moved in on 2026-10-06, by Rollout group. Stories filed here since
+are not tabled. Status is DB-owned and is not repeated here: `pnpm tasks list --rfc
 0178-activerecord-arms-parity-100`.
 
 | Story                                                                                    | est-loc | Group         |
@@ -289,6 +294,7 @@ All 55, by Rollout group. Status is DB-owned and is not repeated here: `pnpm tas
 | `activerecord-converge-missing-control-flow-arms-root`                                   | 600     | missing arms  |
 | `activerecord-converge-missing-control-flow-arms-subsystems`                             | 600     | missing arms  |
 | `column-deduplicated-drops-the-string-dedup-arms`                                        | 150     | missing arms  |
+| `quoted-date-usec-arm-is-relocated-into-sql-datetime`                                    | 150     | missing arms  |
 | `composite-primary-key-predicate-reads-the-primary-key-setter-ivar`                      | 250     | missing arms  |
 | `activerecord-converge-invented-control-flow-arms-associations-part-1`                   | 560     | invented arms |
 | `activerecord-converge-invented-control-flow-arms-associations-part-2`                   | 554     | invented arms |
@@ -377,3 +383,7 @@ None is open. Each was resolved before the RFC went `active`.
   `pg-driver-errors-carry-a-result-at-the-raw-connection-boundary` and
   `activerecord-converge-missing-control-flow-arms-residue`. The gate story took a `deps` edge on every
   open owner of a missing-arm row.
+- 2026-10-06: `quoted-date-usec-arm-is-relocated-into-sql-datetime` moved here from RFC 0174, with
+  `cluster: arms`, a title and an `est-loc` of 150. Its dependant moved to RFC 0180 in the same split, so
+  the reason it had stayed in 0174 was gone. `record-native-promise-decision-and-retire-promise-complete-rows`,
+  which the gate story depends on, is now in RFC 0183.

@@ -33,7 +33,7 @@ The register still excludes async-query tests whose own reasons say "SOURCE NOW 
   reason: select_all(async: true) returns a FutureResult::Complete from the thread-backed load_async infrastructure, which is excluded (see the future_result.rb entry).
 
 `audit-load-async-surface-portability` (RFC 0023) splits the whole-file exclusion; `ActiveRecord::Promise`
-(`activerecord-port-promise`, RFC 0174) is the return type these tests assert.
+(`activerecord-port-promise`, RFC 0183) is the return type these tests assert.
 
 ## Acceptance criteria
 

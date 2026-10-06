@@ -67,7 +67,7 @@ closed-reason: null
 The last story of RFC 0175. Re-measure (`pnpm parity:test`, `parity:test:assertions`, `parity:fixtures`,
 `parity:schema`) and record the final table against the RFC's § "Baseline". Blocked residue named in the
 table rather than depended on: `activerecord-fork-excluded-tests` (no process fork), the trilogy cases
-(`activerecord-port-trilogy-adapter`, RFC 0174). The four `attribute_methods_test.rb`
+(`activerecord-port-trilogy-adapter`, RFC 0183). The four `attribute_methods_test.rb`
 access-control cases and the "…proxy should not respond to private methods" cases are not blocked
 residue: they are permanently unportable under CLAUDE.md § "Method visibility is compile-time
 only" and stay in the unported register.

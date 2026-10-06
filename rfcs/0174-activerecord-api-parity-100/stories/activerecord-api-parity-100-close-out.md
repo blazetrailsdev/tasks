@@ -17,15 +17,6 @@ deps:
   - activerecord-type-registry-copy-and-serialized-inspect
   - activerecord-inheritance-residue-delegate-class-supers
   - activerecord-disable-joins-association-scope-add-constraints-arity
-  - activerecord-port-version-and-gem-version
-  - activerecord-unexclude-dynamic-matchers
-  - activerecord-unexclude-and-measure-fixtures-rb
-  - activerecord-port-encrypted-fixtures-module
-  - activerecord-port-marshalling-module
-  - activerecord-port-message-pack-module
-  - activerecord-port-promise
-  - activerecord-port-railties-controller-runtime
-  - activerecord-port-legacy-yaml-adapter-and-yaml-column
   - activerecord-retire-migrator-index-helpers-skip
   - activerecord-retire-check-pending-skip
   - activerecord-retire-class-attribute-slot-skip
@@ -43,47 +34,11 @@ deps:
   - activerecord-converge-statement-cache-execute-async-arm
   - activerecord-converge-type-caster-connection-with-connection
   - activerecord-converge-sqlite3-reconnect-rollback
-  - activerecord-converge-command-recorder-inverse-table-methods
-  - activerecord-converge-test-infra-convergeable-receipts
-  - activerecord-converge-inheritance-convergeable-receipts
-  - activerecord-converge-schema-load-and-primary-key-convergeable-receipts
-  - activerecord-converge-configuration-and-connection-convergeable-receipts
-  - activerecord-converge-reflection-nested-enum-store-convergeable-receipts
-  - activerecord-converge-selector-middleware-convergeable-receipts
-  - activerecord-converge-dumper-adapter-sqlite-encryption-convergeable-receipts
-  - activerecord-audit-permanent-receipts-root-a-m
-  - activerecord-audit-permanent-receipts-root-n-z
-  - activerecord-audit-permanent-receipts-relation-part-1
-  - activerecord-audit-permanent-receipts-relation-part-2
-  - activerecord-audit-permanent-receipts-associations
-  - activerecord-audit-permanent-receipts-subsystems-part-1
-  - activerecord-audit-permanent-receipts-subsystems-part-2
-  - activerecord-audit-permanent-receipts-ca-root
-  - activerecord-audit-permanent-receipts-ca-abstract
-  - activerecord-audit-permanent-receipts-ca-drivers
   - activerecord-verify-and-pin-protocol-bodies
   - activerecord-verify-and-pin-migration-compatibility
   - activerecord-option-keys-missing-in-ts
-  - activerecord-relocate-query-methods-bodies-inlined-in-relation
-  - activerecord-relocate-callbacks-bodies-inlined-in-base
-  - activerecord-relocate-pg-schema-statements-bodies-inlined-in-adapter
-  - activerecord-relocate-core-bodies-inlined-in-base
-  - activerecord-relocate-persistence-model-schema-counter-cache-bodies
-  - activerecord-relocate-remaining-base-hosted-inlined-bodies
-  - activerecord-relocate-adapter-hosted-inlined-bodies
-  - activerecord-relocate-relation-type-and-association-inlined-bodies
-  - activerecord-inlined-bodies-report-becomes-a-gate
-  - activerecord-converge-moves-residue-base-hosted
-  - activerecord-converge-moves-residue-relation-hosted
-  - activerecord-converge-moves-residue-adapter-hosted
-  - activerecord-converge-moves-residue-rest
   - activerecord-deps-lint-to-zero
   - activerecord-triage-structural-duplicates-of-ruby-compat
-  - activerecord-burn-rails-error-parity-exclude-root
-  - activerecord-burn-rails-error-parity-exclude-connection-adapters
-  - activerecord-burn-rails-error-parity-exclude-associations-relation-encryption-tasks
-  - activerecord-burn-rails-error-parity-exclude-rest
-  - activerecord-burn-rails-callback-invocations-exclude
   - parity-100-rehome-postponed-rfc-dependencies
   - port-hash-eql-rows-surfaced-by-scoring
   - port-remaining-class-hosted-accessor-instance-seats
@@ -110,7 +65,6 @@ deps:
   - generated-attribute-methods-name-comes-from-const-set
   - update-must-call-assign-attributes-carried-from-0087
   - union-order-clauses-is-a-second-spelling-of-ruby-array-union
-  - pg-max-identifier-length-sync-async-split
   - pg-lookup-cast-type-resolves-only-warmed-type-names
   - disambiguate-association-vs-collection-proxy-accessor
   - base-constructor-calls-init-internals-not-activemodel
@@ -126,6 +80,10 @@ deps:
 deps-rfc:
   - 0178-activerecord-arms-parity-100
   - 0179-api-compare-crediting-rules
+  - 0180-activerecord-receipt-parity
+  - 0181-activerecord-member-placement
+  - 0182-activerecord-error-parity
+  - 0183-activerecord-excluded-source-files
 est-loc: 200
 priority: null
 pr: null
@@ -138,14 +96,14 @@ closed-reason: null
 ## Context
 
 The last story of RFC 0174. Re-measure on a clean build (`pnpm build`, then the `parity:*` commands) and
-record the final table against the RFC's § "Baseline". Two stories are blocked on non-ratified gaps
+record the final table against the RFC's § "Baseline". `promise.rb` stays excluded by decision, not by a blocker. Two stories are blocked on non-ratified gaps
 (`activerecord-port-trilogy-adapter`, `activerecord-fixture-initialize-prepend-constructor`) and are named
 in the final table rather than depended on; several prior-art stories in other RFCs are blocked too
 (RFC 0123) and are listed as the remaining residue if still open.
 
 ## Acceptance criteria
 
-- [ ] `pnpm parity:api` activerecord: methods, files, inheritance, arity, params, pins at 100%; excluded files only trilogy (while blocked); global skip only the CLAUDE.md-ratified names; scoped skip only `fixtures.rb#initialize` (while blocked).
+- [ ] `pnpm parity:api` activerecord: methods, files, inheritance, arity, params, pins at 100%; excluded files only trilogy (while blocked) and `promise.rb` (decided not ported on trails#8342; its unported-files entry cites the decision `record-native-promise-decision-and-retire-promise-complete-rows` records); global skip only the CLAUDE.md-ratified names; scoped skip only `fixtures.rb#initialize` (while blocked).
 - [ ] `call-mismatches-exclude/activerecord/` holds no shard; `parity:api:calls`, `:calls:args`, `:params`, `:predicates`, `:extra:gate` (rowless, no inlined bodies), `:arms:throws`, `:blocks`, `:pins`, `:parents`, `:receipts:gate` green at 0.
 - [ ] Report-only axes read 0 for activerecord: arms (both directions), moves, returns, duck-types, deps, option keys, literals, structural duplicates.
 - [ ] `rails-error-parity-exclude.json` and `rails-callback-invocations-exclude.json` hold no activerecord file.
