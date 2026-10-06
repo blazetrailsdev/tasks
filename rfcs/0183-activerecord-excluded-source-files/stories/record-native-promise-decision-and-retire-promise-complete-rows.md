@@ -1,6 +1,6 @@
 ---
 title: "Record the native-promise decision for ActiveRecord::Promise and retire the rows and story that still ask for the port"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: excluded-files

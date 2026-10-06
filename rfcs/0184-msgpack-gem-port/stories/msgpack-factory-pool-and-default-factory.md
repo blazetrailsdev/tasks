@@ -1,6 +1,6 @@
 ---
 title: "msgpack: Factory, Factory::Pool and DefaultFactory on the package"
-status: claimed
+status: done
 updated: 2026-10-06
 rfc: "0184-msgpack-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 650
 priority: 0
-pr: null
+pr: trails#8598
 claim: "2026-10-06T20:50:58Z"
 assignee: "msgpack-factory-pool-and-default-factory"
 blocked-by: null

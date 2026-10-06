@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Builder::Association.check_dependent_options raises Rails' message"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: errors

@@ -1,7 +1,7 @@
 ---
 title: "Port Promise::Complete and close the @async arms that drop it (ids' loaded? arm)"
-status: blocked
-updated: 2026-10-01
+status: closed
+updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: excluded-files
 packages:
@@ -13,8 +13,8 @@ priority: null
 pr: trails#8342
 claim: "2026-10-01T17:35:01Z"
 assignee: "port-remaining-migration-compatibility-test-cases"
-blocked-by: "Maintainer decision 2026-10-01 (trails#8342): do not port ActiveRecord::Promise; async readers return native promises. promise.rb stays on the unported-files list."
-closed-reason: null
+blocked-by: null
+closed-reason: "ActiveRecord::Promise is not ported: the native JS promise is its port (CLAUDE.md § ActiveRecord::Promise is the native promise, trails#8594); the parity extractor drops the Promise.new / Promise::Complete.new / Promise.wrap sites"
 ---
 
 ## Context

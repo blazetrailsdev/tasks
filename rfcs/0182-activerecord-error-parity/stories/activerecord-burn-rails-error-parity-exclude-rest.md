@@ -1,7 +1,7 @@
 ---
 title: "activerecord: raise Rails' error classes in the 14 rest files grandfathered by rails-error-parity"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: errors
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["retire-dead-error-parity-disables-and-stale-arm-throw-marks"]
 deps-rfc: []
 est-loc: 420
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8601
+claim: "2026-10-06T21:54:56Z"
+assignee: "activerecord-burn-rails-error-parity-exclude-rest"
 blocked-by: null
 closed-reason: null
 ---
