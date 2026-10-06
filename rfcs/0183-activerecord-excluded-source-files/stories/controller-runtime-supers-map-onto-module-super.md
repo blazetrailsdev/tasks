@@ -5,7 +5,8 @@ updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: null
 packages: []
-deps: []
+deps:
+  - rescue-and-instrumentation-process-action-chain-through-super
 deps-rfc: []
 est-loc: 200
 priority: null
