@@ -239,8 +239,9 @@ the postponed-RFC stories several stories here depend on (§ "Gating").
 ## Verification
 
 `activerecord-test-parity-100-close-out`'s acceptance criteria are the verification, with the named
-blocked residue: the fork-based tests (`activerecord-fork-excluded-tests`). The trilogy cases are
-decided not ported (trails CLAUDE.md § "Trilogy is out of scope"), not residue.
+blocked residue: the fork-based tests (`activerecord-fork-excluded-tests`). `trilogy_adapter_test.rb` is
+decided not ported (trails CLAUDE.md § "Trilogy is out of scope"), not residue; the `trilogy *`
+`database_tasks_test.rb` cases are in scope and port with their siblings.
 
 ## Open questions
 
