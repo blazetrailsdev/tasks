@@ -17,6 +17,7 @@ packages:
   - "actionpack"
   - "rack"
   - "ruby-compat"
+  - "actionview"
 clusters:
   - "boot"
   - "generators"
