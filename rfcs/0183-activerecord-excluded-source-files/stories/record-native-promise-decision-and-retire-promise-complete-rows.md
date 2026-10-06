@@ -26,7 +26,7 @@ readers return native JS promises. A complete port had been written and was reve
 The ledger still says the opposite in three places, so the next agent to read it will build the
 port again:
 
-- `port-promise-complete-for-async-loaded-arms` (RFC 0174) asks for `Promise::Complete` in `ids`'
+- `port-promise-complete-for-async-loaded-arms` (RFC 0183) asks for `Promise::Complete` in `ids`'
   `loaded?` arm (`relation/calculations.rb:374-383`). It is blocked with the decision as its
   reason, not closed, because closing it would stale the citations below.
 - `scripts/api-compare/call-mismatches-exclude/activerecord/statement-cache.json`: the `execute` /

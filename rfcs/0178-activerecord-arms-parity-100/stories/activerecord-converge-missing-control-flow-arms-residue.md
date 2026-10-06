@@ -24,8 +24,8 @@ trails `main` @ `5659ce9eb3`. 23 of them have an owner whose acceptance criteria
 `column-deduplicated-drops-the-string-dedup-arms`,
 `composite-primary-key-predicate-reads-the-primary-key-setter-ivar`,
 `arms-report-idiom-fold-and-catch-all-else-manufacture-missing-arms` (`withinNewTransaction`),
-`quoted-date-usec-arm-is-relocated-into-sql-datetime` (RFC 0174, `quotedDate`) and
-`record-native-promise-decision-and-retire-promise-complete-rows` (RFC 0174, `calculations.ts#pluck`).
+`quoted-date-usec-arm-is-relocated-into-sql-datetime` (this RFC, `quotedDate`) and
+`record-native-promise-decision-and-retire-promise-complete-rows` (RFC 0183, `calculations.ts#pluck`).
 
 The other 15 are below. The five area missing-arm stories are done and did not take them. 11 are named
 by an open invented-arm story, but those stories' criteria are about the `+` tokens, and RFC 0178

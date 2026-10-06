@@ -203,7 +203,8 @@ these seams on 2026-10-02, for reasons that no longer hold:
 
 Status is from the DB as of 2026-10-06.
 
-1. **`promise.rb`: record the decision.** 4 stories, 3 open, 550 est-loc.
+1. **`promise.rb`: record the decision.** 4 stories, 3 open, 550 est-loc. Only the draft is work to do; `activerecord-port-promise`
+   is `ready` but asks for the port the decision rejected (§ "Open questions" 1) and should not be claimed.
    - Ready: `activerecord-port-promise`
    - Draft: `record-native-promise-decision-and-retire-promise-complete-rows`
    - Blocked: `port-promise-complete-for-async-loaded-arms`

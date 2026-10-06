@@ -50,7 +50,7 @@ result-shape adaptation lives behind the gem's method names. RFC `0021-mysql-raw
 prior art for that boundary; check its stories before building.
 
 `connection-adapters/mysql/schema-statements.ts#indexes` (`+loop +if`) is the other remaining row in these
-files and is owned by `mysql-schema-statements-indexes-ports-the-rails-body` (RFC 0174), not by this story.
+files and is owned by `mysql-schema-statements-indexes-ports-the-rails-body` (RFC 0180), not by this story.
 
 ## Acceptance criteria
 

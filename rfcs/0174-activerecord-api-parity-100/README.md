@@ -158,7 +158,7 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
 - The arms, void-return and duck-type stories are ordered in RFC 0178 § "Ordering".
 - `parity-100-rehome-postponed-rfc-dependencies` runs first after merge (see § "Gating").
 
-### Gating: why `status: active`, and why `deps-rfc` is empty
+### Gating: why `status: active`, and where `deps-rfc` is used
 
 - **`active` from birth.** `claimable()` (`src/ranking.ts`) surfaces a story only when its own RFC is
   `active`, its status is `ready`, and every `deps` entry is `done` or `closed`. So `active` makes the
@@ -172,7 +172,8 @@ Measured 2026-09-30 on trails `main` @ `ea7d456048` after a clean `pnpm build`, 
 - **Draft-RFC dependencies** — by RFC: 0041 (1), 0116 (1), 0120 (2), 0127 (10), 0170 (4). A story depending on a story in a `draft` RFC waits
   for that story to be `done`, and that cannot happen before its RFC goes `active`. The gate is therefore
   the story-level `deps` edge, applied transitively.
-- **`deps-rfc` is left empty on purpose.** It means "until that RFC is **closed**" (`claimable()`:
+- **`deps-rfc` is left empty on every story but the close-out.** The close-out carries one edge per
+  split-out RFC (0178, 0179, 0180 to 0183), because it does wait for each of them to finish entirely. `deps-rfc` means "until that RFC is **closed**" (`claimable()`:
   `s.deps_rfc.some((d) => rfcStatus.get(d) !== "closed")`), not "until it is active". Setting it to a draft
   RFC would hold a story until that entire RFC finished, long after the one story it needs has landed.
   Existing uses (`0019-canonical-schema-burndown`, `0063-async-validation-chain`) are that whole-RFC case.

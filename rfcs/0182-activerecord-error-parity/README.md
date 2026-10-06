@@ -114,8 +114,7 @@ These are 0174's, unchanged:
   `active`. The 7 `ready` stories here were claimable in 0174 and stay claimable.
 - **Edges out of this RFC:** the two above, to RFC 0127 (draft, so those four stories wait on 0127's
   activation) and RFC 0156. There are no edges to another 0174-family RFC.
-- **Edges into this RFC:** the 0174 close-out only.
-- **Edges into this RFC from the 0174 close-out.** `activerecord-api-parity-100-close-out` named these
+- **Edges into this RFC:** the 0174 close-out only. `activerecord-api-parity-100-close-out` named these
   stories one by one in `deps`. This split replaces those entries with one `deps-rfc` edge on
   `0182-activerecord-error-parity`, the whole-RFC case 0174 § "Gating" describes: the close-out waits until this RFC is
   closed, including stories filed here later. The edit is in the split's own diff, so nothing is owed

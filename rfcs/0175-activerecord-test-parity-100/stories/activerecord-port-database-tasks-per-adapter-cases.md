@@ -54,7 +54,7 @@ trilogy:
 - "check dump filename for ruby format with non primary databases"
 - "check dump filename for sql format with non primary databases"
 
-The 8 `trilogy *` cases need a TrilogyAdapter (`activerecord-port-trilogy-adapter`, RFC 0174, blocked).
+The 8 `trilogy *` cases need a TrilogyAdapter (`activerecord-port-trilogy-adapter`, RFC 0183, blocked).
 
 ## Acceptance criteria
 

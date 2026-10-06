@@ -41,7 +41,7 @@ All five `connection-adapters/abstract/*.ts -> connection-adapters/abstract-adap
 Stories written against the old population now cite numbers that no longer exist:
 
 - `gate-the-wrong-file-moves-population` (RFC 0127) is titled for 1413 misplaced methods.
-- `activerecord-converge-moves-residue-adapter-hosted` (RFC 0174) is titled for 318 adapter-hosted methods, most
+- `activerecord-converge-moves-residue-adapter-hosted` (RFC 0181) is titled for 318 adapter-hosted methods, most
   of which were these false positives.
 - `activerecord-converge-moves-residue-base-hosted`, `-relation-hosted`, `-rest`,
   `activemodel-converge-moves-residue` and `arel-converge-moves-residue` carry counts from the same measurement.

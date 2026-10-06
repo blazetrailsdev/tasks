@@ -111,7 +111,7 @@ These are 0174's, unchanged:
   base-hosted moves.
 - `activerecord-relocate-query-methods-bodies-inlined-in-relation` is the largest single move (55 of the 154) and is wanted by `activerecord-converge-build-where-clause-constructor-order` (RFC 0174), so it goes
   first.
-- `base.ts` is rewritten by five of these stories. They are not ordered by `deps`; the second PR rebases.
+- `base.ts` is rewritten by most of these stories. They are not ordered by `deps`; the second PR rebases.
 
 ### Gating
 

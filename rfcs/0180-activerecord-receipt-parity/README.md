@@ -70,8 +70,7 @@ Measured 2026-10-06 on trails `main` @ `53cf6a5875`, by `git grep` over `package
 | of which name a story in RFC 0178 / 0123 / 0023 / 0183 / 0154                                                    | 44                                | 67 / 37 / 4 / 2 / 1    | converge via those stories |
 | of which carry prose and name no story                                                                           | 60                                | 30                     | 0                          |
 
-PERMANENT fell and CONVERGEABLE rose because the audits moved receipts from the first to the second. The
-`@inventedArm` tag did not exist at 0174's baseline. The 30 story-less receipts are owned by the
+PERMANENT fell and CONVERGEABLE rose because the audits moved receipts from the first to the second. 0174's baseline did not count `@inventedArm`. The 30 story-less receipts are owned by the
 `convergeable` cluster; the 57 `@missingRailsName` PERMANENT receipts are the naming pairs
 `classifyPair` files as permanent and are checked by the audits.
 
@@ -139,7 +138,7 @@ These are 0174's, unchanged:
   and `pg-constraint-export-name-on-schema-dump-matches-through-regexp-match-p` wait on
   `export-name-on-schema-dump-matches-through-a-stateless-regexp-match-p`;
   `create-record-passes-returning-columns-unconditionally` waits on
-  `mysql-returning-column-values-ports-the-super-arm`. Each pair shares one ruby-compat primitive.
+  `mysql-returning-column-values-ports-the-super-arm`. The first two groups each share one ruby-compat primitive.
 - Many `findings` add a ruby-compat primitive (`Hash#select!`, `Regexp#match?`, `String#insert`,
   `Kernel#sleep`). Two stories that need the same primitive are ordered by a `deps` edge when the second
   is marked ready.
@@ -270,7 +269,9 @@ All 89. Status is DB-owned and is not repeated here: `pnpm tasks list --rfc 0180
 ## Non-goals
 
 - **Crediting rules in the comparer.** A body that already matches Rails and is still flagged is a
-  comparer fault. RFC 0179, which held those, is closed; a new one is filed in RFC 0127.
+  comparer fault. RFC 0179 held those and closed on 2026-10-03 with all 31 of its stories done or closed. A new one is
+  filed in `0127-fidelity-tooling-signals-and-hygiene`; because 0127 is `draft`, a story here that waits on
+  it is not claimable until 0127 is activated, and § "Gating" must then list the edge.
 - **Receipts in other packages.** arel and activemodel are rowless; the other packages have their own RFCs.
 - **Ratifying new CLAUDE.md sections.** An audit that finds a genuine language shortcoming files the story
   `blocked`; deciding to ratify is a separate, explicit decision.
@@ -335,7 +336,9 @@ unratified receipts: a new one is filed here with `pnpm tasks new 0180-activerec
 None is open.
 
 1. **Should the 66 drafts be marked ready?** Resolved: not by this split. `status` is DB-owned and a move
-   does not change it; marking one ready is `tasks status-set <id> ready`.
+   does not change it; marking one ready is `tasks status-set <id> ready`. Every draft has a Rails `file:line`, acceptance
+   criteria and an estimate of at most 600, so each can be marked as it is. Until some are, the claimable work
+   here is the one open audit and the five `convergeable` stories.
 2. **Two unsized stories.** Resolved: `delete-collection-proxy-for-inline-association-reader` (600) and
    `load-async-disabled-arm-calls-load-and-dedupes-in-flight-load` (300) had a slug for a title and no
    `est-loc`. Both are set in this split, which is why the RFC opens at 15,370 est-loc against the DB's 14,470.
