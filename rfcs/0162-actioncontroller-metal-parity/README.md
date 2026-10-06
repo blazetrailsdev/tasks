@@ -7,6 +7,8 @@ updated: 2026-10-04
 owner: "@deanmarano"
 packages:
   - "actionpack"
+  - "actionview"
+  - "activemodel"
 clusters:
   - "action-controller"
 priority: 2
