@@ -1,6 +1,6 @@
 ---
 title: "render_test.rb's TestController lacks its head_* actions, fake_models' Customer and LabellingFormBuilder"
-status: ready
+status: in-progress
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8603
+claim: "2026-10-06T22:33:12Z"
+assignee: "expo-sqlite-exec-raises-sqlite3-gem-exception-classes"
 blocked-by: null
 closed-reason: null
 ---

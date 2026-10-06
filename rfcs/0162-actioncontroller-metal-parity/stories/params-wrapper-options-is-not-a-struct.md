@@ -1,6 +1,6 @@
 ---
 title: "ParamsWrapper::Options is a hand-rolled class with its own toH, not a Struct with super readers"
-status: ready
+status: in-progress
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8603
+claim: "2026-10-06T22:33:12Z"
+assignee: "expo-sqlite-exec-raises-sqlite3-gem-exception-classes"
 blocked-by: null
 closed-reason: null
 ---

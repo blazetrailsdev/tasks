@@ -1,6 +1,6 @@
 ---
 title: "DatabaseConfig#new_connection invents a still-loading arm Rails does not have"
-status: draft
+status: ready
 updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: null
