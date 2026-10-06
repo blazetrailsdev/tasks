@@ -1,9 +1,9 @@
 ---
 rfc: "0041-activesupport-messagepack-ext"
 title: "ActiveSupport MessagePack ext-type registry (Ruby interchange fidelity)"
-status: draft
+status: active
 created: 2026-06-21
-updated: 2026-07-27
+updated: 2026-10-06
 owner: "@deanmarano"
 packages:
   - "activesupport"
