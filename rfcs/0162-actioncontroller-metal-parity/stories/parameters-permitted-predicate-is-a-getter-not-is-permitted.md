@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 `ActionController::Parameters#permitted?`
-(`vendor/rails/v8.0.2/actionpack/lib/action_controller/metal/strong_parameters.rb:587-589`)
+(`vendor/rails/v8.0.2/actionpack/lib/action_controller/metal/strong_parameters.rb:445-447`)
 is a public predicate. trails ports it as an `@internal` getter,
 `get permitted(): boolean`
 (`packages/actionpack/src/action-controller/metal/strong-parameters.ts:171`),
