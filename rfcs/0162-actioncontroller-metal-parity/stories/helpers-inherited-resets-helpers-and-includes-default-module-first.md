@@ -5,7 +5,8 @@ updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-action-controller-helpers-and-the-inherited-hook
 deps-rfc: []
 est-loc: 80
 priority: null
