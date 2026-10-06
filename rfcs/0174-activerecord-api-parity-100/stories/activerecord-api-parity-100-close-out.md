@@ -96,14 +96,16 @@ closed-reason: null
 ## Context
 
 The last story of RFC 0174. Re-measure on a clean build (`pnpm build`, then the `parity:*` commands) and
-record the final table against the RFC's § "Baseline". `promise.rb` stays excluded by decision, not by a blocker. Two stories are blocked on non-ratified gaps
-(`activerecord-port-trilogy-adapter`, `activerecord-fixture-initialize-prepend-constructor`) and are named
+record the final table against the RFC's § "Baseline". `promise.rb` and trilogy stay excluded by
+decision, not by a blocker (`activerecord-port-trilogy-adapter` is closed; trails CLAUDE.md § "Trilogy is
+out of scope"). One story is blocked on a non-ratified gap
+(`activerecord-fixture-initialize-prepend-constructor`) and is named
 in the final table rather than depended on; several prior-art stories in other RFCs are blocked too
 (RFC 0123) and are listed as the remaining residue if still open.
 
 ## Acceptance criteria
 
-- [ ] `pnpm parity:api` activerecord: methods, files, inheritance, arity, params, pins at 100%; excluded files only trilogy (while blocked) and `promise.rb` (decided not ported on trails#8342; its unported-files entry cites the decision `record-native-promise-decision-and-retire-promise-complete-rows` records); global skip only the CLAUDE.md-ratified names; scoped skip only `fixtures.rb#initialize` (while blocked).
+- [ ] `pnpm parity:api` activerecord: methods, files, inheritance, arity, params, pins at 100%; excluded files only trilogy (decided not ported; trails CLAUDE.md § "Trilogy is out of scope") and `promise.rb` (decided not ported on trails#8342; its unported-files entry cites the decision `record-native-promise-decision-and-retire-promise-complete-rows` records); global skip only the CLAUDE.md-ratified names; scoped skip only `fixtures.rb#initialize` (while blocked).
 - [ ] `call-mismatches-exclude/activerecord/` holds no shard; `parity:api:calls`, `:calls:args`, `:params`, `:predicates`, `:extra:gate` (rowless, no inlined bodies), `:arms:throws`, `:blocks`, `:pins`, `:parents`, `:receipts:gate` green at 0.
 - [ ] Report-only axes read 0 for activerecord: arms (both directions), moves, returns, duck-types, deps, option keys, literals, structural duplicates.
 - [ ] `rails-error-parity-exclude.json` and `rails-callback-invocations-exclude.json` hold no activerecord file.

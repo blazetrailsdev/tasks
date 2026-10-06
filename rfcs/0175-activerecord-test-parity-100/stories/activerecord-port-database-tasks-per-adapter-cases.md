@@ -54,12 +54,14 @@ trilogy:
 - "check dump filename for ruby format with non primary databases"
 - "check dump filename for sql format with non primary databases"
 
-The 8 `trilogy *` cases need a TrilogyAdapter (`activerecord-port-trilogy-adapter`, RFC 0183, blocked).
+The 7 `trilogy *` cases (the `trilogy` row of `ADAPTERS_TASKS`) are permanently unported: trilogy is
+decided not ported (trails CLAUDE.md § "Trilogy is out of scope", `activerecord-port-trilogy-adapter`,
+RFC 0183, closed), and they carry an `unported-files` row saying so.
 
 ## Acceptance criteria
 
 - [ ] Each case is ported with Rails' name, driving `DatabaseTasks` against the adapter-specific task class as Rails does.
-- [ ] `database_tasks_test.rb` missing count falls to the 8 trilogy cases.
+- [ ] `database_tasks_test.rb` missing count falls to 0, the 7 trilogy cases being excluded by their `unported-files` row.
 
 ## Verification
 

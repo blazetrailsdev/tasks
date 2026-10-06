@@ -61,7 +61,7 @@ of 2026-09-30 was 13 excluded source files (152 defs).
 | `legacy_yaml_adapter.rb`                  | `activerecord-port-legacy-yaml-adapter-and-yaml-column`           | ready, waits on RFC 0170 |
 | `railties/controller_runtime.rb`          | `activerecord-port-railties-controller-runtime`                   | ready                    |
 | `promise.rb`                              | `record-native-promise-decision-and-retire-promise-complete-rows` | decided: not ported      |
-| `trilogy_adapter.rb`, `adapters/trilogy/` | `activerecord-port-trilogy-adapter`                               | blocked                  |
+| `trilogy_adapter.rb`, `adapters/trilogy/` | `activerecord-port-trilogy-adapter`                               | decided: not ported      |
 | `destroy_association_async_job.rb`        | `port-destroy-association-async-job` (RFC 0116)                   | not in this RFC          |
 
 Target: the list holds no activerecord source file except the blocked and decided ones, each named in
@@ -162,9 +162,11 @@ These are 0174's, unchanged:
   definition; ruby-compat's `prepend()` wraps prototype methods only, and CLAUDE.md ratifies no
   constructor-splicing mechanism. Blocked with `activemodel-api-initialize-concern-constructor` on a
   ruby-compat construction hook.
-- `activerecord-port-trilogy-adapter`: no JS/npm client for the trilogy C library exists; wrapping mysql2's
-  npm driver under Rails' `TrilogyAdapter` name would invent a second `Mysql2Adapter`. It needs a
-  trilogy-compatible JS client. This is an ecosystem blocker, not a CLAUDE.md-ratified shortcoming.
+- `activerecord-port-trilogy-adapter`: **decided 2026-10-06, not ported, permanently** (closed). No JS/npm
+  client for the trilogy C library exists, and wrapping mysql2's npm driver under Rails' `TrilogyAdapter`
+  name would invent a second `Mysql2Adapter`. MySQL goes through `Mysql2Adapter`; trails CLAUDE.md
+  § "Trilogy is out of scope" (trails#8579) is the ratification, and the exclusions are permanent.
+  Do not re-file it.
 - `port-promise-complete-for-async-loaded-arms`: maintainer decision of 2026-10-01 (trails#8342):
   `ActiveRecord::Promise` is not ported and the `async_*` readers return native promises. It is blocked
   and not closed because trails cites it 4 times, and closing a cited story reds `stale-story-references`.
@@ -213,12 +215,12 @@ Status is from the DB as of 2026-10-06.
    - Done: `activerecord-unexclude-and-measure-fixtures-rb` (trails#8359)
 3. **The other files.** 7 stories, 7 open, 1,980 est-loc.
    - Ready: `activerecord-port-legacy-yaml-adapter-and-yaml-column`, `activerecord-port-marshalling-module`, `activerecord-port-message-pack-module`, `activerecord-port-railties-controller-runtime`, `activerecord-port-version-and-gem-version`, `activerecord-unexclude-dynamic-matchers`
-   - Blocked: `activerecord-port-trilogy-adapter`
+   - Decided not ported: `activerecord-port-trilogy-adapter`
 
 ## Verification
 
 - `scripts/parity/unported-files/` matches no activerecord source file except `trilogy_adapter.rb` /
-  `adapters/trilogy/` (blocked), `promise.rb` (decided) and `destroy_association_async_job.rb` (RFC 0116).
+  `adapters/trilogy/` (decided), `promise.rb` (decided) and `destroy_association_async_job.rb` (RFC 0116).
 - `pnpm parity:api` scores activerecord's files and methods at 100% with those entries removed.
 - `SCOPED_SKIP_GROUPS` holds no `Fixture#initialize` entry, or the story is still blocked and named in
   0174's close-out table.
