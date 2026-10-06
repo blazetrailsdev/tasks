@@ -1,6 +1,6 @@
 ---
 title: "helper_method forwarders are not attributed to the helper_method call site"
-status: ready
+status: in-progress
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8593
+claim: "2026-10-06T19:03:14Z"
+assignee: "marshalling-methods-bodies-are-not-arm-compared"
 blocked-by: null
 closed-reason: null
 ---

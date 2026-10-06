@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port ActiveRecord::MessagePack (un-exclude message_pack.rb)"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: excluded-files

@@ -1,6 +1,6 @@
 ---
 title: "actionview: port test/activerecord/controller_runtime_test.rb and the active_record_unit harness"
-status: claimed
+status: in-progress
 updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#8592
 claim: "2026-10-06T18:33:17Z"
 assignee: "actionview-port-activerecord-controller-runtime-test"
 blocked-by: null

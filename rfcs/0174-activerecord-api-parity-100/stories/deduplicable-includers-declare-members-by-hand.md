@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Column and SqlTypeMetadata declare Deduplicable's members by hand instead of through Included<>"
-status: claimed
+status: in-progress
 updated: 2026-10-06
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8592
 claim: "2026-10-06T18:33:17Z"
 assignee: "actionview-port-activerecord-controller-runtime-test"
 blocked-by: null

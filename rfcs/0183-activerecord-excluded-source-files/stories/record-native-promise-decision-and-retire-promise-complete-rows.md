@@ -1,6 +1,6 @@
 ---
 title: "Record the native-promise decision for ActiveRecord::Promise and retire the rows and story that still ask for the port"
-status: ready
+status: in-progress
 updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: excluded-files
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8594
+claim: "2026-10-06T19:33:09Z"
+assignee: "record-native-promise-decision-and-retire-promise-complete-rows"
 blocked-by: null
 closed-reason: null
 ---
