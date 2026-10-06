@@ -9,6 +9,7 @@ packages:
   - "activerecord"
   - "ruby-compat"
   - "trailties"
+  - "actionview"
 clusters:
   - excluded-files
 related-rfcs:
