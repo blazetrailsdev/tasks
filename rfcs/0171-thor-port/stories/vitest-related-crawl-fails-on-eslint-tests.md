@@ -1,7 +1,7 @@
 ---
 title: "vitest related fails from the root config (eslint/*.test.mjs bare import); retire vitest.trailties.config.ts"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-06
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8564
+claim: "2026-10-06T00:39:41Z"
+assignee: "metal-invented-registries-fold-into-rails-state"
 blocked-by: null
 closed-reason: null
 ---

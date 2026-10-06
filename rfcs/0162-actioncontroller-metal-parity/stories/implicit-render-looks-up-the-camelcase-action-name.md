@@ -1,7 +1,7 @@
 ---
 title: "Implicit render looks up the camelCase action name as the template name"
-status: draft
-updated: 2026-10-05
+status: done
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8557
+claim: "2026-10-06T00:10:35Z"
+assignee: "implicit-render-looks-up-the-camelcase-action-name"
 blocked-by: null
 closed-reason: null
 ---

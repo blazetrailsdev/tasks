@@ -1,7 +1,7 @@
 ---
 title: "Enroll activejob in parity:api and parity:test, and record the gem adapters as unported"
-status: ready
-updated: 2026-10-05
+status: claimed
+updated: 2026-10-06
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-06T00:38:29Z"
+assignee: "enroll-activejob-in-compare-tooling"
 blocked-by: null
 closed-reason: null
 ---

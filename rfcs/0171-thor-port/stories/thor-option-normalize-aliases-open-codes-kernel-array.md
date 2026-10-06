@@ -1,7 +1,7 @@
 ---
 title: "Option#normalize_aliases open-codes Kernel#Array; port rb_Array to ruby-compat"
-status: ready
-updated: 2026-10-04
+status: done
+updated: 2026-10-06
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8563
+claim: "2026-10-06T00:09:34Z"
+assignee: "strong-parameters-missing-methods-and-invented-surface"
 blocked-by: null
 closed-reason: null
 ---

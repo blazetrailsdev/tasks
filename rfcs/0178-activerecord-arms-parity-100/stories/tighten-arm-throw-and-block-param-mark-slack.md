@@ -1,7 +1,7 @@
 ---
 title: "parity: tighten the arm-throw and block-param marks sitting above current"
-status: in-progress
-updated: 2026-10-05
+status: done
+updated: 2026-10-06
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []

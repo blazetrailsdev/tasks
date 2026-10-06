@@ -1,7 +1,7 @@
 ---
 title: "Port Parameters' missing members and remove its invented ones"
-status: ready
-updated: 2026-10-04
+status: done
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: ["strong-parameters-fetch-raises-keyerror-not-parameter-missing"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8563
+claim: "2026-10-06T00:09:34Z"
+assignee: "strong-parameters-missing-methods-and-invented-surface"
 blocked-by: null
 closed-reason: null
 ---

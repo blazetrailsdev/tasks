@@ -1,7 +1,7 @@
 ---
 title: "Port thor_spec.rb, part 2 (#start, #help, subcommands, edge cases)"
-status: in-progress
-updated: 2026-10-05
+status: done
+updated: 2026-10-06
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]

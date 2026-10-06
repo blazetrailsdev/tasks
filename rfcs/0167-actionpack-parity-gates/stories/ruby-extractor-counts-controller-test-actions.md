@@ -1,7 +1,7 @@
 ---
 title: "Stop counting controller actions named test_* as Rails tests"
-status: draft
-updated: 2026-09-28
+status: done
+updated: 2026-10-06
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8557
+claim: "2026-10-06T00:10:41Z"
+assignee: "ruby-extractor-counts-controller-test-actions"
 blocked-by: null
 closed-reason: null
 ---

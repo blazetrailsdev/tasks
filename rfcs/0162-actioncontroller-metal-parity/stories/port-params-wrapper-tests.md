@@ -1,7 +1,7 @@
 ---
 title: "Port params_wrapper_test.rb and api/params_wrapper_test.rb under Rails names"
-status: in-progress
-updated: 2026-10-05
+status: done
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]

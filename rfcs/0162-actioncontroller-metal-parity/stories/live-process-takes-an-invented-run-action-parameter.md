@@ -1,7 +1,7 @@
 ---
 title: "Live#process takes an invented runAction parameter and dispatches new_controller_thread statically"
-status: in-progress
-updated: 2026-10-05
+status: done
+updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
