@@ -36,5 +36,11 @@ no trails file:
 ## Acceptance criteria
 
 - Each file exists at its convention path and ports every Rails test in order.
-- All eight report complete in `pnpm parity:test --package actioncontroller`
-  (apart from the phantom rows RFC 0167 (gates) removes).
+- A test that cannot run on the current port is parked `it.skip` under a
+  `BLOCKED: <story-id>` line with its Rails body kept, and is owned by
+  `unpark-small-metal-test-file-remainders`. As shipped in trails PR 8569 that is
+  seven tests across `show_exceptions_test.rb`, `webservice_test.rb` and
+  `parameters_integration_test.rb`.
+- The other five files report complete in
+  `pnpm parity:test --package actioncontroller` (apart from the phantom rows
+  RFC 0167 (gates) removes).
