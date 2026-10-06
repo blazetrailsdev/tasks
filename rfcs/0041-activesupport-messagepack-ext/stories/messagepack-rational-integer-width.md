@@ -1,7 +1,7 @@
 ---
 title: "message-pack narrows the shared Rational's bigint parts to Number at the packer seam"
-status: draft
-updated: 2026-08-30
+status: in-progress
+updated: 2026-10-06
 rfc: "0041-activesupport-messagepack-ext"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8584
+claim: "2026-10-06T15:47:21Z"
+assignee: "message-pack-serializer-load-raises-runtime-error"
 blocked-by: null
 closed-reason: null
 ---

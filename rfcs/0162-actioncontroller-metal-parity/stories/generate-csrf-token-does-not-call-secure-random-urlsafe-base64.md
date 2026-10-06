@@ -1,6 +1,6 @@
 ---
 title: "generate_csrf_token calls SecureRandom.urlsafe_base64; port FreeCookieControllerTest's stub"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

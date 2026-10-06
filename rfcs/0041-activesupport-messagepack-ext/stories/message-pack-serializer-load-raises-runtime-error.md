@@ -1,7 +1,7 @@
 ---
 title: "MessagePack::Serializer#load raises RuntimeError, and the encryption serializer rescues RuntimeError"
-status: draft
-updated: 2026-09-25
+status: in-progress
+updated: 2026-10-06
 rfc: "0041-activesupport-messagepack-ext"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8584
+claim: "2026-10-06T15:47:21Z"
+assignee: "message-pack-serializer-load-raises-runtime-error"
 blocked-by: null
 closed-reason: null
 ---

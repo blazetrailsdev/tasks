@@ -1,6 +1,6 @@
 ---
 title: "Thor $thor_runner is seated where thor.rb defines it, not a module-local const in base.ts"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0171-thor-port"
 cluster: null

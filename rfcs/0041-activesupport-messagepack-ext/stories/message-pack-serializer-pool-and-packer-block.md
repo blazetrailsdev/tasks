@@ -1,7 +1,7 @@
 ---
 title: "MessagePack::Serializer checks packers/unpackers out of a Factory#pool, not the Factory"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-10-06
 rfc: "0041-activesupport-messagepack-ext"
 cluster: null
 packages: []

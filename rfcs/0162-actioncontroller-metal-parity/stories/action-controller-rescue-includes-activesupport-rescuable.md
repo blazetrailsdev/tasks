@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Rescue includes ActiveSupport::Rescuable; Base drops its hand-rolled rescue handlers"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

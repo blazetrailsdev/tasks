@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Head is a module included by ConditionalGet and friends, not a Metal method"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

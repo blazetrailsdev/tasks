@@ -1,6 +1,6 @@
 ---
 title: "activerecord: score dynamic_matchers.rb — the exclusion predates the ported Proxy"
-status: claimed
+status: done
 updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: excluded-files
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8581
 claim: "2026-10-06T14:54:01Z"
 assignee: "activerecord-port-railties-controller-runtime"
 blocked-by: null

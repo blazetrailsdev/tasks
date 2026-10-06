@@ -1,7 +1,7 @@
 ---
 title: "activerecord: burn parity:api:moves' relation-hosted relocations (300 methods) to zero"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-06
 rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-06T15:58:42Z"
+assignee: "activerecord-converge-moves-residue-relation-hosted"
 blocked-by: null
 closed-reason: null
 ---

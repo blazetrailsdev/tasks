@@ -1,6 +1,6 @@
 ---
 title: "AbstractController#process underscores the action because callers still pass the JS method name"
-status: draft
+status: in-progress
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8573
+claim: "2026-10-06T15:16:54Z"
+assignee: "process-normalizes-camelcase-action-names-callers-not-swept"
 blocked-by: null
 closed-reason: null
 ---

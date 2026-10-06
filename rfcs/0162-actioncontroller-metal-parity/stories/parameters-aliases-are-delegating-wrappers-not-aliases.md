@@ -1,6 +1,6 @@
 ---
 title: "Parameters' eleven alias_method names are delegating wrappers, two of them inverted"
-status: ready
+status: in-progress
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8584
+claim: "2026-10-06T15:47:21Z"
+assignee: "message-pack-serializer-load-raises-runtime-error"
 blocked-by: null
 closed-reason: null
 ---

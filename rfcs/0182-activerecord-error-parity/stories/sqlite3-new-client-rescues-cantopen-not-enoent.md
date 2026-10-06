@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SQLite3Adapter.new_client rescues Errno::ENOENT, not CantOpenException"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: errors
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8582
+claim: "2026-10-06T15:09:45Z"
+assignee: "expo-sqlite-driver-raises-sqlite3-gem-exception-classes"
 blocked-by: null
 closed-reason: null
 ---

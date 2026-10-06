@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port ActiveRecord::Marshalling (un-exclude marshalling.rb)"
-status: claimed
+status: done
 updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: excluded-files
@@ -9,7 +9,7 @@ deps: ["ruby-compat-marshal-core-types"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8580
 claim: "2026-10-06T14:52:14Z"
 assignee: "activerecord-port-encrypted-fixtures-module"
 blocked-by: null

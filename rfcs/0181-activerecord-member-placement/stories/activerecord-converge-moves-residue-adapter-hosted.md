@@ -1,7 +1,7 @@
 ---
 title: "activerecord: burn parity:api:moves' adapter-hosted relocations (318 methods) to zero"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-06
 rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["moves-counts-a-mixin-member-declared-on-the-host-interface-as-misplaced"
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8583
+claim: "2026-10-06T15:22:39Z"
+assignee: "activerecord-converge-moves-residue-adapter-hosted"
 blocked-by: null
 closed-reason: null
 ---
