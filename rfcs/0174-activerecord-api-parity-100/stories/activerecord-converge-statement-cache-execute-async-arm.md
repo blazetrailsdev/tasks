@@ -5,7 +5,8 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args
 packages: ["activerecord"]
-deps: []
+deps:
+  - record-native-promise-decision-and-retire-promise-complete-rows
 deps-rfc: []
 est-loc: 200
 priority: null
