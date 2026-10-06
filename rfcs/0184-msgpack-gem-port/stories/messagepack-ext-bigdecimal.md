@@ -1,6 +1,6 @@
 ---
 title: "MessagePack ext type 2 BigDecimal (_dump/_load Marshal-style codec)"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0184-msgpack-gem-port"
 cluster: null

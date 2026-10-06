@@ -1,6 +1,6 @@
 ---
 title: "MessagePack::Serializer checks packers/unpackers out of a Factory#pool, not the Factory"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0184-msgpack-gem-port"
 cluster: null

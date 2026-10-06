@@ -1,6 +1,6 @@
 ---
 title: "Lint failing on main @caed13c8"
-status: ready
+status: closed
 updated: 2026-10-06
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-06T17:17:01Z"
+assignee: "red-caed13c8"
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a new break: the Lint red at caed13c8 is the same 14 no-unnecessary-type-assertion errors on _helpers! in four actionpack test files introduced by #8574 (bd056201); caed13c8 (#8586) touched none of them. Already fixed on main by trails#8588 (b3cb32fffa), the next commit."
 ---
 
 ## Context
