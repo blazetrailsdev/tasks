@@ -16,6 +16,7 @@ packages:
   - "activesupport"
   - "actionpack"
   - "rack"
+  - "ruby-compat"
 clusters:
   - "boot"
   - "generators"
