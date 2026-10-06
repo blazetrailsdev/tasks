@@ -2,8 +2,8 @@
 title: "Port Promise::Complete and close the @async arms that drop it (ids' loaded? arm)"
 status: blocked
 updated: 2026-10-01
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0183-activerecord-excluded-source-files"
+cluster: excluded-files
 packages:
   - "activerecord"
 deps: []

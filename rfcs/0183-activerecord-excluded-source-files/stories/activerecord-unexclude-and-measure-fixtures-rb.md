@@ -2,7 +2,7 @@
 title: "activerecord: score fixtures.rb — FixtureSet, Fixture and FixtureSet::File are ported but unmeasured"
 status: done
 updated: 2026-10-01
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0183-activerecord-excluded-source-files"
 cluster: excluded-files
 packages: ["activerecord"]
 deps: []

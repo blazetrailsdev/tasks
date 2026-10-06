@@ -2,7 +2,7 @@
 title: "activerecord: port ActiveRecord::MessagePack (un-exclude message_pack.rb)"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0183-activerecord-excluded-source-files"
 cluster: excluded-files
 packages: ["activerecord"]
 deps: ["message-pack-serializer-pool-and-packer-block"]

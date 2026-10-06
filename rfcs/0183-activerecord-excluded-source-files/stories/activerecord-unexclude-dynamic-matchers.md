@@ -2,7 +2,7 @@
 title: "activerecord: score dynamic_matchers.rb — the exclusion predates the ported Proxy"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0183-activerecord-excluded-source-files"
 cluster: excluded-files
 packages: ["activerecord"]
 deps: []
