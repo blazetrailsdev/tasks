@@ -2,8 +2,8 @@
 title: "activerecord: Core#initialize body is inlined in Base's constructor"
 status: blocked
 updated: 2026-10-02
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0181-activerecord-member-placement"
+cluster: placement
 packages: []
 deps: []
 deps-rfc: []

@@ -2,7 +2,7 @@
 title: "activerecord: move the remaining module bodies inlined into base.ts (token_for, readonly_attributes, nested_attributes, …)"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
 deps:

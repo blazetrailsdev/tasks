@@ -1,13 +1,13 @@
 ---
-title: "activerecord: move the Timezone, Delegation, FinderMethods and association-module bodies inlined into their hosts"
+title: "activerecord: move the 17 Callbacks bodies inlined into base.ts back to callbacks.ts"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: 300
+est-loc: 450
 priority: null
 pr: null
 claim: null
@@ -22,13 +22,9 @@ closed-reason: null
 module member whose TS body sits on an including class's file instead of the file mirroring the module
 (the mirror image of `moved`). It is report-only today, so nothing stops it growing; CLAUDE.md
 § "Decomposition" and § "Module mixins" require the body in the module's file, reached through
-`include()` / `this`-typed functions. This story takes 10:
+`include()` / `this`-typed functions. This story takes 17:
 
-- `type/internal/timezone.rb` → `type/date-time.ts#constructor`, `type/date.ts#constructor`, `type/time.ts#constructor`
-- `relation/delegation.rb` → `relation.ts#_create`, `relation.ts#name`, `relation.ts#unscoped`
-- `relation/finder_methods.rb` → `relation.ts#_take`, `relation.ts#applyJoinDependency`
-- `associations/through_association.rb` → `associations/has-many-through-association.ts#buildRecord`
-- `associations/foreign_association.rb` → `associations/has-one-association.ts#setOwnerAttributes`
+- `callbacks.rb` → `base.ts#_createOrUpdate`, `base.ts#afterCreate`, `base.ts#afterDestroy`, `base.ts#afterFind`, `base.ts#afterInitialize`, `base.ts#afterSave`, `base.ts#afterTouch`, `base.ts#afterUpdate`, `base.ts#aroundCreate`, `base.ts#aroundDestroy`, `base.ts#aroundSave`, `base.ts#aroundUpdate`, `base.ts#beforeCreate`, `base.ts#beforeDestroy`, `base.ts#beforeSave`, `base.ts#beforeUpdate`, `base.ts#destroy`
 
 ## Acceptance criteria
 

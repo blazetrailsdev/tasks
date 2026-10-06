@@ -1,13 +1,13 @@
 ---
-title: "activerecord: move the 17 Callbacks bodies inlined into base.ts back to callbacks.ts"
+title: "activerecord: move the 29 QueryMethods bodies inlined into relation.ts back to relation/query-methods.ts"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: 450
+est-loc: 600
 priority: null
 pr: null
 claim: null
@@ -22,9 +22,9 @@ closed-reason: null
 module member whose TS body sits on an including class's file instead of the file mirroring the module
 (the mirror image of `moved`). It is report-only today, so nothing stops it growing; CLAUDE.md
 § "Decomposition" and § "Module mixins" require the body in the module's file, reached through
-`include()` / `this`-typed functions. This story takes 17:
+`include()` / `this`-typed functions. This story takes 29:
 
-- `callbacks.rb` → `base.ts#_createOrUpdate`, `base.ts#afterCreate`, `base.ts#afterDestroy`, `base.ts#afterFind`, `base.ts#afterInitialize`, `base.ts#afterSave`, `base.ts#afterTouch`, `base.ts#afterUpdate`, `base.ts#aroundCreate`, `base.ts#aroundDestroy`, `base.ts#aroundSave`, `base.ts#aroundUpdate`, `base.ts#beforeCreate`, `base.ts#beforeDestroy`, `base.ts#beforeSave`, `base.ts#beforeUpdate`, `base.ts#destroy`
+- `relation/query_methods.rb` → `relation.ts#_arel`, `relation.ts#annotateValues`, `relation.ts#createWithValue`, `relation.ts#distinctValue`, `relation.ts#eagerLoadValues`, `relation.ts#extendingValues`, `relation.ts#extensions`, `relation.ts#fromClause`, `relation.ts#groupValues`, `relation.ts#havingClause`, `relation.ts#includesValues`, `relation.ts#joinsValues`, `relation.ts#leftOuterJoinsValues`, `relation.ts#limitValue`, `relation.ts#lockValue`, `relation.ts#offsetValue`, `relation.ts#optimizerHintsValues`, `relation.ts#orderValues`, `relation.ts#preloadValues`, `relation.ts#readonlyValue`, `relation.ts#referencesValues`, `relation.ts#reorderingValue`, `relation.ts#reverseOrderValue`, `relation.ts#selectValues`, `relation.ts#skipQueryCacheValue`, `relation.ts#strictLoadingValue`, `relation.ts#unscopeValues`, `relation.ts#whereClause`, `relation.ts#withValues`
 
 ## Acceptance criteria
 

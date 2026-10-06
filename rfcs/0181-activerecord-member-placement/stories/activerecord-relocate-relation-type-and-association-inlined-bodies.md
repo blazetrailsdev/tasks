@@ -1,17 +1,17 @@
 ---
-title: "activerecord: move the 13 Core bodies inlined into base.ts back to core.ts"
-status: done
-updated: 2026-10-02
-rfc: "0174-activerecord-api-parity-100"
+title: "activerecord: move the Timezone, Delegation, FinderMethods and association-module bodies inlined into their hosts"
+status: ready
+updated: 2026-09-30
+rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
-deps: ["activerecord-core-attributes-for-inspect"]
+deps: []
 deps-rfc: []
-est-loc: 400
+est-loc: 300
 priority: null
-pr: trails#8383
-claim: "2026-10-02T03:41:55Z"
-assignee: "activemodel-enroll-in-extra-surface-gate-rowless"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
@@ -22,9 +22,13 @@ closed-reason: null
 module member whose TS body sits on an including class's file instead of the file mirroring the module
 (the mirror image of `moved`). It is report-only today, so nothing stops it growing; CLAUDE.md
 § "Decomposition" and § "Module mixins" require the body in the module's file, reached through
-`include()` / `this`-typed functions. This story takes 13:
+`include()` / `this`-typed functions. This story takes 10:
 
-- `core.rb` → `base.ts#_connectionClass`, `base.ts#_destroyAssociationAsyncJob`, `base.ts#_filterAttributes`, `base.ts#_strictLoadingMode`, `base.ts#belongsToRequiredByDefault`, `base.ts#constructor`, `base.ts#enumerateColumnsInSelectStatements`, `base.ts#hasManyInversing`, `base.ts#readonly`, `base.ts#runCommitCallbacksOnFirstSavedInstancesInTransaction`, `base.ts#shardSelector`, `base.ts#strictLoading`, `base.ts#strictLoadingByDefault`
+- `type/internal/timezone.rb` → `type/date-time.ts#constructor`, `type/date.ts#constructor`, `type/time.ts#constructor`
+- `relation/delegation.rb` → `relation.ts#_create`, `relation.ts#name`, `relation.ts#unscoped`
+- `relation/finder_methods.rb` → `relation.ts#_take`, `relation.ts#applyJoinDependency`
+- `associations/through_association.rb` → `associations/has-many-through-association.ts#buildRecord`
+- `associations/foreign_association.rb` → `associations/has-one-association.ts#setOwnerAttributes`
 
 ## Acceptance criteria
 

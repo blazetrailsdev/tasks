@@ -1,17 +1,17 @@
 ---
-title: "activerecord: burn parity:api:moves' relation-hosted relocations (300 methods) to zero"
-status: ready
-updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+title: "activerecord: burn parity:api:moves' rest relocations (31 methods) to zero"
+status: done
+updated: 2026-10-02
+rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
 deps: ["moves-counts-a-mixin-member-declared-on-the-host-interface-as-misplaced"]
 deps-rfc: []
-est-loc: 500
+est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8417
+claim: "2026-10-02T19:01:58Z"
+assignee: "arel-converge-moves-residue"
 blocked-by: null
 closed-reason: null
 ---
@@ -23,20 +23,18 @@ wrong file" (`scripts/api-compare/moves.ts`). Most are module members reported a
 host — e.g. `relation/query-methods.ts → relation.ts (125)` is `QueryMethods` correctly living in
 `query-methods.ts` — which is the measurement fault
 `moves-counts-a-mixin-member-declared-on-the-host-interface-as-misplaced` (RFC 0127) fixes; RFC 0127's
-`gate-the-wrong-file-moves-population` then ratchets it. This story owns the relation-hosted pairs (300 methods):
+`gate-the-wrong-file-moves-population` then ratchets it. This story owns the rest pairs (31 methods):
 
-- `relation/query-methods.ts` → `relation.ts` (125)
-- `relation.ts` → `relation/query-methods.ts` (55)
-- `relation/finder-methods.ts` → `relation.ts` (41)
-- `relation/calculations.ts` → `relation.ts` (26)
-- `relation/delegation.ts` → `relation.ts` (23)
-- `relation/batches.ts` → `relation.ts` (14)
-- `relation/spawn-methods.ts` → `relation.ts` (6)
-- `explain.ts` → `relation.ts` (3)
-- `relation.ts` → `relation/delegation.ts` (2)
-- `relation.ts` → `signed-id.ts` (2)
-- `relation.ts` → `token-for.ts` (2)
-- `relation.ts` → `relation/finder-methods.ts` (1)
+- `encryption/configurable.ts` → `encryption.ts` (12)
+- `encryption/contexts.ts` → `encryption.ts` (8)
+- `attribute-methods/primary-key.ts` → `attribute-methods.ts` (3)
+- `attribute-methods/read.ts` → `attribute-methods.ts` (2)
+- `associations/has-many-association.ts` → `associations/foreign-association.ts` (1)
+- `associations/has-many-through-association.ts` → `associations/through-association.ts` (1)
+- `attribute-methods/write.ts` → `attribute-methods.ts` (1)
+- `attribute-methods/dirty.ts` → `attribute-methods.ts` (1)
+- `attribute-methods.ts` → `attribute-methods/dirty.ts` (1)
+- `type/date.ts` → `type/internal/timezone.ts` (1)
 
 ## Acceptance criteria
 

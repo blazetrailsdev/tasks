@@ -1,17 +1,17 @@
 ---
-title: "activerecord: move the 29 QueryMethods bodies inlined into relation.ts back to relation/query-methods.ts"
-status: ready
-updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+title: "activerecord: move the 13 Core bodies inlined into base.ts back to core.ts"
+status: done
+updated: 2026-10-02
+rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
-deps: []
+deps: ["activerecord-core-attributes-for-inspect"]
 deps-rfc: []
-est-loc: 600
+est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8383
+claim: "2026-10-02T03:41:55Z"
+assignee: "activemodel-enroll-in-extra-surface-gate-rowless"
 blocked-by: null
 closed-reason: null
 ---
@@ -22,9 +22,9 @@ closed-reason: null
 module member whose TS body sits on an including class's file instead of the file mirroring the module
 (the mirror image of `moved`). It is report-only today, so nothing stops it growing; CLAUDE.md
 § "Decomposition" and § "Module mixins" require the body in the module's file, reached through
-`include()` / `this`-typed functions. This story takes 29:
+`include()` / `this`-typed functions. This story takes 13:
 
-- `relation/query_methods.rb` → `relation.ts#_arel`, `relation.ts#annotateValues`, `relation.ts#createWithValue`, `relation.ts#distinctValue`, `relation.ts#eagerLoadValues`, `relation.ts#extendingValues`, `relation.ts#extensions`, `relation.ts#fromClause`, `relation.ts#groupValues`, `relation.ts#havingClause`, `relation.ts#includesValues`, `relation.ts#joinsValues`, `relation.ts#leftOuterJoinsValues`, `relation.ts#limitValue`, `relation.ts#lockValue`, `relation.ts#offsetValue`, `relation.ts#optimizerHintsValues`, `relation.ts#orderValues`, `relation.ts#preloadValues`, `relation.ts#readonlyValue`, `relation.ts#referencesValues`, `relation.ts#reorderingValue`, `relation.ts#reverseOrderValue`, `relation.ts#selectValues`, `relation.ts#skipQueryCacheValue`, `relation.ts#strictLoadingValue`, `relation.ts#unscopeValues`, `relation.ts#whereClause`, `relation.ts#withValues`
+- `core.rb` → `base.ts#_connectionClass`, `base.ts#_destroyAssociationAsyncJob`, `base.ts#_filterAttributes`, `base.ts#_strictLoadingMode`, `base.ts#belongsToRequiredByDefault`, `base.ts#constructor`, `base.ts#enumerateColumnsInSelectStatements`, `base.ts#hasManyInversing`, `base.ts#readonly`, `base.ts#runCommitCallbacksOnFirstSavedInstancesInTransaction`, `base.ts#shardSelector`, `base.ts#strictLoading`, `base.ts#strictLoadingByDefault`
 
 ## Acceptance criteria
 

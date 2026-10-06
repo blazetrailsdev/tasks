@@ -1,13 +1,13 @@
 ---
-title: "activerecord: move the Persistence / ModelSchema / CounterCache bodies inlined into base.ts"
+title: "activerecord: move the database/schema-statement bodies inlined into the adapter classes"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
-deps: ["activerecord-converge-schema-load-and-primary-key-convergeable-receipts"]
+deps: []
 deps-rfc: []
-est-loc: 450
+est-loc: 350
 priority: null
 pr: null
 claim: null
@@ -22,11 +22,14 @@ closed-reason: null
 module member whose TS body sits on an including class's file instead of the file mirroring the module
 (the mirror image of `moved`). It is report-only today, so nothing stops it growing; CLAUDE.md
 § "Decomposition" and § "Module mixins" require the body in the module's file, reached through
-`include()` / `this`-typed functions. This story takes 14:
+`include()` / `this`-typed functions. This story takes 8:
 
-- `persistence.rb` → `base.ts#_destroyed`, `base.ts#_destroyRow`, `base.ts#_instantiate`, `base.ts#_newRecord`, `base.ts#_previouslyNewRecord`, `base.ts#createOrUpdate`
-- `model_schema.rb` → `base.ts#_ignoredColumns`, `base.ts#_protectedEnvironments`, `base.ts#_sequenceName`, `base.ts#_tableName`
-- `counter_cache.rb` → `base.ts#_counterCacheColumns`, `base.ts#counterCachedAssociationNames`, `base.ts#is_counterCacheColumns`, `base.ts#isCounterCachedAssociationNames`
+- `connection_adapters/sqlite3/schema_statements.rb` → `connection-adapters/sqlite3-adapter.ts#createTableDefinition`, `connection-adapters/sqlite3-adapter.ts#schemaCreation`
+- `connection_adapters/abstract/database_statements.rb` → `connection-adapters/abstract-adapter.ts#_transactionManager`, `connection-adapters/abstract-adapter.ts#constructor`
+- `connection_adapters/postgresql/database_statements.rb` → `connection-adapters/postgresql-adapter.ts#_cancelAnyRunningQuery`
+- `connection_adapters/mysql/schema_statements.rb` → `connection-adapters/abstract-mysql-adapter.ts#removeForeignKey`
+- `connection_adapters/mysql/database_statements.rb` → `connection-adapters/abstract-mysql-adapter.ts#_maxAllowedPacket`
+- `connection_adapters/abstract/query_cache.rb` → `connection-adapters/abstract-adapter.ts#_queryCache`
 
 ## Acceptance criteria
 

@@ -2,7 +2,7 @@
 title: "activerecord: burn parity:api:moves' adapter-hosted relocations (318 methods) to zero"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
 deps: ["moves-counts-a-mixin-member-declared-on-the-host-interface-as-misplaced"]

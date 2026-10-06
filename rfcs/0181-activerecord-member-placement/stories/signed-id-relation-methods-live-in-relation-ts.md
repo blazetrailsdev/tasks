@@ -1,13 +1,13 @@
 ---
-title: "signed-id-relation-methods-live-in-relation-ts"
+title: "activerecord: SignedId::RelationMethods lives in signed-id.ts, not the Relation class body"
 status: draft
 updated: 2026-10-01
-rfc: "0174-activerecord-api-parity-100"
-cluster: null
+rfc: "0181-activerecord-member-placement"
+cluster: placement
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null

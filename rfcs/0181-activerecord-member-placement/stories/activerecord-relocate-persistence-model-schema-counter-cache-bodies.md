@@ -1,13 +1,13 @@
 ---
-title: "activerecord: move the 16 PostgreSQL SchemaStatements bodies inlined into postgresql-adapter.ts"
+title: "activerecord: move the Persistence / ModelSchema / CounterCache bodies inlined into base.ts"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
-deps: []
+deps: ["activerecord-converge-schema-load-and-primary-key-convergeable-receipts"]
 deps-rfc: []
-est-loc: 550
+est-loc: 450
 priority: null
 pr: null
 claim: null
@@ -22,9 +22,11 @@ closed-reason: null
 module member whose TS body sits on an including class's file instead of the file mirroring the module
 (the mirror image of `moved`). It is report-only today, so nothing stops it growing; CLAUDE.md
 § "Decomposition" and § "Module mixins" require the body in the module's file, reached through
-`include()` / `this`-typed functions. This story takes 16:
+`include()` / `this`-typed functions. This story takes 14:
 
-- `connection_adapters/postgresql/schema_statements.rb` → `connection-adapters/postgresql-adapter.ts#addColumnForAlter`, `connection-adapters/postgresql-adapter.ts#addIndex`, `connection-adapters/postgresql-adapter.ts#addIndexOpclass`, `connection-adapters/postgresql-adapter.ts#addIndexOptions`, `connection-adapters/postgresql-adapter.ts#addOptionsForIndexColumns`, `connection-adapters/postgresql-adapter.ts#changeColumnNullForAlter`, `connection-adapters/postgresql-adapter.ts#createAlterTable`, `connection-adapters/postgresql-adapter.ts#createSchemaDumper`, `connection-adapters/postgresql-adapter.ts#createTableDefinition`, `connection-adapters/postgresql-adapter.ts#foreignTableExists`, `connection-adapters/postgresql-adapter.ts#foreignTables`, `connection-adapters/postgresql-adapter.ts#indexName`, `connection-adapters/postgresql-adapter.ts#referenceNameForTable`, `connection-adapters/postgresql-adapter.ts#removeIndex`, `connection-adapters/postgresql-adapter.ts#renameTable`, `connection-adapters/postgresql-adapter.ts#schemaCreation`
+- `persistence.rb` → `base.ts#_destroyed`, `base.ts#_destroyRow`, `base.ts#_instantiate`, `base.ts#_newRecord`, `base.ts#_previouslyNewRecord`, `base.ts#createOrUpdate`
+- `model_schema.rb` → `base.ts#_ignoredColumns`, `base.ts#_protectedEnvironments`, `base.ts#_sequenceName`, `base.ts#_tableName`
+- `counter_cache.rb` → `base.ts#_counterCacheColumns`, `base.ts#counterCachedAssociationNames`, `base.ts#is_counterCacheColumns`, `base.ts#isCounterCachedAssociationNames`
 
 ## Acceptance criteria
 

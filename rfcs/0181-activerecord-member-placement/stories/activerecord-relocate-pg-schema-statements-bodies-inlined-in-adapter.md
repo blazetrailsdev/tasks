@@ -1,13 +1,13 @@
 ---
-title: "activerecord: move the database/schema-statement bodies inlined into the adapter classes"
+title: "activerecord: move the 16 PostgreSQL SchemaStatements bodies inlined into postgresql-adapter.ts"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: 350
+est-loc: 550
 priority: null
 pr: null
 claim: null
@@ -22,14 +22,9 @@ closed-reason: null
 module member whose TS body sits on an including class's file instead of the file mirroring the module
 (the mirror image of `moved`). It is report-only today, so nothing stops it growing; CLAUDE.md
 § "Decomposition" and § "Module mixins" require the body in the module's file, reached through
-`include()` / `this`-typed functions. This story takes 8:
+`include()` / `this`-typed functions. This story takes 16:
 
-- `connection_adapters/sqlite3/schema_statements.rb` → `connection-adapters/sqlite3-adapter.ts#createTableDefinition`, `connection-adapters/sqlite3-adapter.ts#schemaCreation`
-- `connection_adapters/abstract/database_statements.rb` → `connection-adapters/abstract-adapter.ts#_transactionManager`, `connection-adapters/abstract-adapter.ts#constructor`
-- `connection_adapters/postgresql/database_statements.rb` → `connection-adapters/postgresql-adapter.ts#_cancelAnyRunningQuery`
-- `connection_adapters/mysql/schema_statements.rb` → `connection-adapters/abstract-mysql-adapter.ts#removeForeignKey`
-- `connection_adapters/mysql/database_statements.rb` → `connection-adapters/abstract-mysql-adapter.ts#_maxAllowedPacket`
-- `connection_adapters/abstract/query_cache.rb` → `connection-adapters/abstract-adapter.ts#_queryCache`
+- `connection_adapters/postgresql/schema_statements.rb` → `connection-adapters/postgresql-adapter.ts#addColumnForAlter`, `connection-adapters/postgresql-adapter.ts#addIndex`, `connection-adapters/postgresql-adapter.ts#addIndexOpclass`, `connection-adapters/postgresql-adapter.ts#addIndexOptions`, `connection-adapters/postgresql-adapter.ts#addOptionsForIndexColumns`, `connection-adapters/postgresql-adapter.ts#changeColumnNullForAlter`, `connection-adapters/postgresql-adapter.ts#createAlterTable`, `connection-adapters/postgresql-adapter.ts#createSchemaDumper`, `connection-adapters/postgresql-adapter.ts#createTableDefinition`, `connection-adapters/postgresql-adapter.ts#foreignTableExists`, `connection-adapters/postgresql-adapter.ts#foreignTables`, `connection-adapters/postgresql-adapter.ts#indexName`, `connection-adapters/postgresql-adapter.ts#referenceNameForTable`, `connection-adapters/postgresql-adapter.ts#removeIndex`, `connection-adapters/postgresql-adapter.ts#renameTable`, `connection-adapters/postgresql-adapter.ts#schemaCreation`
 
 ## Acceptance criteria
 
