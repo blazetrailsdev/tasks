@@ -5,7 +5,9 @@ updated: 2026-10-06
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: ["activesupport", "activerecord", "msgpack"]
-deps: ["msgpack-package-and-vendor-source"]
+deps:
+  - msgpack-package-and-vendor-source
+  - msgpack-factory-pool-and-default-factory
 deps-rfc: []
 est-loc: 400
 priority: null
