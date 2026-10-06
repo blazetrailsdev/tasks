@@ -1,7 +1,7 @@
 ---
 rfc: "0041-activesupport-messagepack-ext"
 title: "ActiveSupport MessagePack ext-type registry (Ruby interchange fidelity)"
-status: active
+status: closed
 created: 2026-06-21
 updated: 2026-10-06
 owner: "@deanmarano"
@@ -10,8 +10,25 @@ packages:
 clusters: []
 related-rfcs:
   - "0023-surfaced-deviations"
+  - "0184-msgpack-gem-port"
 priority: 5
 ---
+
+## Superseded by RFC 0184
+
+Closed 2026-10-06 in favour of `0184-msgpack-gem-port`. This RFC scoped only
+`ActiveSupport::MessagePack::Extensions`' ext registry, but the **msgpack gem**
+underneath it is unported — `packages/activesupport/src/message-pack/factory.ts`
+is a hand-rolled stand-in for `MessagePack::Factory` / `Packer` / `Unpacker`.
+Because `extensions.rb` is written against the gem API, gem-surface work kept
+landing here with nowhere else to go (`message-pack-serializer-pool-and-packer-block`
+is `Factory#pool`; `message-pack-unpacker-raises-one-invented-error-class` is the
+gem's `UnpackError` / `MalformedFormatError` / `UnknownExtTypeError` hierarchy).
+
+0184 ports the gem as `@blazetrails/msgpack` over `@msgpack/msgpack`, the way
+`packages/bcrypt` wraps `bcryptjs`, and carries the ext registry as its phase 2.
+Seven open stories were rehomed there; the four below are done or closed and stay
+as this RFC's record.
 
 ## Summary
 
