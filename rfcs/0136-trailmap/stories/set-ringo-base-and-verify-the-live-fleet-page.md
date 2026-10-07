@@ -1,7 +1,7 @@
 ---
 title: "trailmap: set RINGO_BASE and verify the fleet page through nginx and SSO"
-status: draft
-updated: 2026-10-06
+status: done
+updated: 2026-10-07
 rfc: "0136-trailmap"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "rack: static files with non-ASCII bytes are served corrupted and truncated"
-status: draft
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-07
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["rack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#8634
+claim: "2026-10-07T14:56:10Z"
+assignee: "static-files-with-non-ascii-bytes-are-served-corrupted-and-truncated"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Helpers' all_application_helpers reads the class's helpers_path; helper_method's accessor arm and Fragments' respond_to? converge"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8624
+claim: "2026-10-07T14:29:42Z"
+assignee: "action-controller-helpers-all-application-helpers-and-helper-method-accessor-arm"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Testing has no constant; Functional is a plain object"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8632
+claim: "2026-10-07T14:29:42Z"
+assignee: "action-controller-helpers-all-application-helpers-and-helper-method-accessor-arm"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,16 +1,16 @@
 ---
 title: "MessagePack ext types 5-8,10 DateTime/Date/Time/TimeWithZone/Duration (nanosecond-faithful temporal reps)"
-status: ready
-updated: 2026-07-27
+status: done
+updated: 2026-10-07
 rfc: "0184-msgpack-gem-port"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8630
+claim: "2026-10-07T14:22:56Z"
+assignee: "messagepack-ext-temporal"
 blocked-by: null
 ---
 

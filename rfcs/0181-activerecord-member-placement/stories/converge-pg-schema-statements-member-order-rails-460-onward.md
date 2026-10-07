@@ -1,6 +1,6 @@
 ---
 title: "postgresql/schema-statements.ts: put class members from Rails :460 on in Rails source order"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8631
+claim: "2026-10-07T14:26:30Z"
+assignee: "converge-pg-schema-statements-member-order-rails-460-onward"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: port Kernel#sleep; AbstractAdapter#backoff calls it"
-status: draft
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["ruby-compat", "activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8635
+claim: "2026-10-07T14:56:49Z"
+assignee: "adapter-backoff-sleeps-through-a-ruby-compat-kernel-sleep"
 blocked-by: null
 closed-reason: null
 ---
