@@ -1,7 +1,7 @@
 ---
 title: "activerecord: current_time_from_proper_timezone reads default_timezone from the connection with_connection yields"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]

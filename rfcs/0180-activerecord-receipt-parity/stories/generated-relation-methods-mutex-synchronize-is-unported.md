@@ -1,7 +1,7 @@
 ---
 title: "activerecord: GeneratedRelationMethods ports MUTEX.synchronize once Mutex#synchronize releases synchronously"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: []

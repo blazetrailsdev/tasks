@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: first accepts a Set; MySQL build_insert_sql reads insert.keys.first without a spread"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["ruby-compat", "activerecord"]

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PG transaction statements, perform_query and unescape_bytea take Rails' control flow at the pg client boundary"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

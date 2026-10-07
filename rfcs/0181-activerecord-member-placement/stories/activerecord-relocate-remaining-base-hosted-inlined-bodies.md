@@ -1,7 +1,7 @@
 ---
 title: "activerecord: move the remaining module bodies inlined into base.ts (token_for, readonly_attributes, nested_attributes, …)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8657
+claim: "2026-10-07T19:34:15Z"
+assignee: "activerecord-relocate-remaining-base-hosted-inlined-bodies"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: _create_record passes returning_columns unconditionally"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]

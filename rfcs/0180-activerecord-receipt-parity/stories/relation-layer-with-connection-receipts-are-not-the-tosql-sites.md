@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the four relation-layer with_connection receipts are not toSql's, and need their own owner"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable

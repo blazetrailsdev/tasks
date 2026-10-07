@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: port ObjectSpace::WeakMap; PoolConfig::INSTANCES walks it with each_key"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["ruby-compat", "activerecord"]

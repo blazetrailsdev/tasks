@@ -1,6 +1,6 @@
 ---
 title: "actionpack: the action name is underscored at six file-backed lookups Rails passes it to unchanged"
-status: draft
+status: closed
 updated: 2026-10-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8654
+claim: "2026-10-07T19:07:44Z"
+assignee: "action-name-is-underscored-at-six-file-backed-lookups"
 blocked-by: null
-closed-reason: null
+closed-reason: "ratified per owner (trails#8654): template file names and lazy locale keys are the action's name in kebab-case; the conversion at the six sites stays, in that spelling. Not converged onto Rails."
 ---
 
 ## Context

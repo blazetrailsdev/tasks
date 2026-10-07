@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the Node inspect hook on ConnectionPool / AbstractAdapter / Aes256Gcm comes from one ruby-compat seam"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord", "ruby-compat"]

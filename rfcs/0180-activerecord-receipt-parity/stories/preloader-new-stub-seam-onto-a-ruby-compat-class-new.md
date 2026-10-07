@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Preloader.new's stub seam is one ruby-compat Class#new, not a per-class static"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord", "ruby-compat", "activesupport"]

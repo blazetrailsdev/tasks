@@ -1,7 +1,7 @@
 ---
 title: "activerecord: validates_size_of is an alias of validates_length_of, not a second body"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]

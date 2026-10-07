@@ -1,6 +1,6 @@
 ---
 title: "msgpack: each constant is seated on MessagePack by its defining module"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0184-msgpack-gem-port"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Relation#load_async calls load in its disabled arm and dedupes an in-flight load"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: []

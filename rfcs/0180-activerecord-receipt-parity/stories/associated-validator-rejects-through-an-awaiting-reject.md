@@ -1,6 +1,6 @@
 ---
 title: "activerecord: AssociatedValidator#validate_each rejects through an awaiting reject"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

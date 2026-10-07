@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Locking::Optimistic's instance methods fold into the Optimistic module (extractor keeps a merged interface member's seat)"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]

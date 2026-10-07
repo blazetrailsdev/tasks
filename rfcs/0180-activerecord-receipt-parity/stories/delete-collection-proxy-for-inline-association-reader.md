@@ -1,7 +1,7 @@
 ---
 title: "activerecord: delete collectionProxyFor; callers read association(name).reader inline"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: []

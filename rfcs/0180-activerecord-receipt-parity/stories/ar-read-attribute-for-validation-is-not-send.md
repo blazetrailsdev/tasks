@@ -1,7 +1,7 @@
 ---
 title: "AR readAttributeForValidation is a 5-branch resolver where Rails aliases send"
-status: draft
-updated: 2026-08-24
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages:

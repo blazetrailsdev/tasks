@@ -1,7 +1,7 @@
 ---
 title: "activerecord: find_cmd_and_exec ends in Kernel#exec through the process adapter"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["ruby-compat", "activerecord"]

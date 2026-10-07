@@ -1,6 +1,6 @@
 ---
 title: "activerecord: withConnectionSync is a synchronous lease that no CLAUDE.md section ratifies"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable

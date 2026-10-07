@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the 9 CONVERGEABLE test-infrastructure receipts (test-adapter, sql-capture, fixtures)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8656
+claim: "2026-10-07T19:34:01Z"
+assignee: "activerecord-converge-test-infra-convergeable-receipts"
 blocked-by: null
 closed-reason: null
 ---

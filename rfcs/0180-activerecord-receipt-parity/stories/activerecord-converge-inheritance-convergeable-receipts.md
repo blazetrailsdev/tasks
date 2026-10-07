@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the 5 CONVERGEABLE receipts in inheritance.ts"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable

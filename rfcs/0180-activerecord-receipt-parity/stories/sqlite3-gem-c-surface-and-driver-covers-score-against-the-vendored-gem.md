@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the sqlite3 gem's C surface and the sqlite driver file covers score against the vendored gem"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Delegation.create forwards its arguments so target_scope can call AssociationRelation.create"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]

@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: port Regexp.union; build_read_query_regexp and table_structure_sql call it"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["ruby-compat", "activerecord"]

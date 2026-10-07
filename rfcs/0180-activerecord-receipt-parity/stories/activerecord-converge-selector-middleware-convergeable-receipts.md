@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the 4 CONVERGEABLE receipts in middleware/database-selector.ts and shard-selector.ts"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["parity-100-rehome-postponed-rfc-dependencies", "converge-shard-selector-
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8655
+claim: "2026-10-07T19:13:46Z"
+assignee: "activerecord-converge-selector-middleware-convergeable-receipts"
 blocked-by: null
 closed-reason: null
 ---

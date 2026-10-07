@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the PG::Connection wrapper scores against the pg gem"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: DerivedSecretKeyProvider derives its keys without a fabricated receiver"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

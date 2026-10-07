@@ -1,6 +1,6 @@
 ---
 title: "activerecord: internalSchemaCache is the sync twin of the ported SchemaReflection#cache, not a ratified peek"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable

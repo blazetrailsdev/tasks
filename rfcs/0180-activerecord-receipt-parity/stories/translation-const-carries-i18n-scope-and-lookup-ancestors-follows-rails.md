@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Translation carries i18n_scope, and lookup_ancestors compares against ActiveRecord::Base"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]
