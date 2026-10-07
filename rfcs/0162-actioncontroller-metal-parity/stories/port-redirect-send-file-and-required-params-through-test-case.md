@@ -1,7 +1,7 @@
 ---
 title: "Port the missing redirect, send_file and required_params tests through their Rails controllers"
-status: ready
-updated: 2026-10-06
+status: in-progress
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8619
+claim: "2026-10-07T10:03:12Z"
+assignee: "port-redirect-send-file-and-required-params-through-test-case"
 blocked-by: null
 closed-reason: null
 ---

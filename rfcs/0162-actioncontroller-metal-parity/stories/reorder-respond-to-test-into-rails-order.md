@@ -1,7 +1,7 @@
 ---
 title: "Reorder respond-to.test.ts into respond_to_test.rb order"
-status: ready
-updated: 2026-10-06
+status: in-progress
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8620
+claim: "2026-10-07T10:33:12Z"
+assignee: "reorder-respond-to-test-into-rails-order"
 blocked-by: null
 closed-reason: null
 ---

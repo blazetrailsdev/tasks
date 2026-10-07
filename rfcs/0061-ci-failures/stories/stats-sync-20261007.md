@@ -1,6 +1,6 @@
 ---
 title: "trails stats sync cron failing: [ELIFECYCLE] Command failed with exit code 2."
-status: ready
+status: closed
 updated: 2026-10-07
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-07T10:30:34Z"
+assignee: "stats-sync-20261007"
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a sync bug: main @ a752976d did not compile (duplicate TopLevel import in activerecord/src/migration.ts, a merge of two sibling PRs), so prestats:sync's tsc build failed. Fix is owned by trails#8616 (story red-a752976d). Wrapper alerted as designed. stats.db backfilled by hand: PR 8619, run 37589874813 (a752976d), compare rows through PR 8615."
 ---
 
 ## Context
