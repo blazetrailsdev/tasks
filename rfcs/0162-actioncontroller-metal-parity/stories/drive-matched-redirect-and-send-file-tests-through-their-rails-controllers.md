@@ -1,6 +1,6 @@
 ---
 title: "Drive the already-matched redirect tests through their Rails controllers"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 610
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8644
+claim: "2026-10-07T17:03:11Z"
+assignee: "drive-matched-redirect-and-send-file-tests-through-their-rails-controllers"
 blocked-by: null
 closed-reason: null
 ---

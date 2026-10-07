@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Instrumentation#redirect_to does not reach super; AbstractController::Logger is not a Concern; add_renderer lives in deprecator.ts"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8643
+claim: "2026-10-07T16:33:20Z"
+assignee: "default-helper-module-raises-for-binding-named-controller-class"
 blocked-by: null
 closed-reason: null
 ---

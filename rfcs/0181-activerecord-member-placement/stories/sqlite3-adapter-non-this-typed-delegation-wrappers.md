@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-adapter.ts: replace the remaining non-this-typed delegation wrappers with the mixin functions"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8642
+claim: "2026-10-07T16:26:20Z"
+assignee: "data-source-sql-kwargs-only-first-position-arm"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "log_subscriber_test.rb: all 34 tests run Rails' bodies through LogSubscriber::TestHelper"
-status: ready
+status: in-progress
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8645
+claim: "2026-10-07T17:33:12Z"
+assignee: "helper-test-blocked-markers-name-closed-stories-and-module-ancestors"
 blocked-by: null
 closed-reason: null
 ---

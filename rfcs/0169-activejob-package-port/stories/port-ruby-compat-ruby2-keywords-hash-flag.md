@@ -1,7 +1,7 @@
 ---
 title: "Port Hash.ruby2_keywords_hash? / Hash.ruby2_keywords_hash to ruby-compat"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-07
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8649
+claim: "2026-10-07T17:49:40Z"
+assignee: "port-ruby-compat-ruby2-keywords-hash-flag"
 blocked-by: null
 closed-reason: null
 ---

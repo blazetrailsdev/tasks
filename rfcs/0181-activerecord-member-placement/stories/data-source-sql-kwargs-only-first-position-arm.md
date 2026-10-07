@@ -1,6 +1,6 @@
 ---
 title: "activerecord: dataSourceSql drops the kwargs-in-first-position arm Rails' data_source_sql does not have"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8642
+claim: "2026-10-07T16:26:20Z"
+assignee: "data-source-sql-kwargs-only-first-position-arm"
 blocked-by: null
 closed-reason: null
 ---

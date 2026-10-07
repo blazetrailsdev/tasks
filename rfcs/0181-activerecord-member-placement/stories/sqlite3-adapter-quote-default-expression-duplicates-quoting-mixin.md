@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-adapter.ts: quoteDefaultExpression is a second body for the SQLite3::Quoting mixin function"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "default_helper_module! raises NameError for a controller class JS named after a lowercase binding"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8643
+claim: "2026-10-07T16:33:20Z"
+assignee: "default-helper-module-raises-for-binding-named-controller-class"
 blocked-by: null
 closed-reason: null
 ---

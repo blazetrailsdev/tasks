@@ -1,6 +1,6 @@
 ---
 title: "define_helpers_module seats the module as the HelperMethods constant, not a WeakMap"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8574
+claim: "2026-10-07T16:26:20Z"
+assignee: "data-source-sql-kwargs-only-first-position-arm"
 blocked-by: null
 closed-reason: null
 ---

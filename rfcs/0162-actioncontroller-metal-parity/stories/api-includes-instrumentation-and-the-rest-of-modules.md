@@ -1,6 +1,6 @@
 ---
 title: "ActionController::API includes Instrumentation and the rest of MODULES, with Redirecting as a module"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

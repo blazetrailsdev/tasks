@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the CONVERGEABLE receipts in schema-dumper, abstract-mysql-adapter, encryptable-record, sqlite/"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8646
+claim: "2026-10-07T17:39:11Z"
+assignee: "activerecord-converge-dumper-adapter-sqlite-encryption-convergeable-receipts"
 blocked-by: null
 closed-reason: null
 ---

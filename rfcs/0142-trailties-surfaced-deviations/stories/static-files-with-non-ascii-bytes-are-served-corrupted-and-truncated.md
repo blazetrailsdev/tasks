@@ -1,6 +1,6 @@
 ---
 title: "rack: static files with non-ASCII bytes are served corrupted and truncated"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

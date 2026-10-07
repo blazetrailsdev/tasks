@@ -1,6 +1,6 @@
 ---
 title: "helper_test's skipped tests name closed stories; default helpers only needs Module#ancestors"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8624
+claim: "2026-10-07T17:33:12Z"
+assignee: "helper-test-blocked-markers-name-closed-stories-and-module-ancestors"
 blocked-by: null
 closed-reason: null
 ---
