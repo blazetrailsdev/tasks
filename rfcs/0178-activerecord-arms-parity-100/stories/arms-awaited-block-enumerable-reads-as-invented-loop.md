@@ -1,6 +1,6 @@
 ---
 title: "arms report: an awaited collect / any? block reads as an invented loop"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SignedId::RelationMethods lives in signed-id.ts, not the Relation class body"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: []

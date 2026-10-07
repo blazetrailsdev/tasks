@@ -1,6 +1,6 @@
 ---
 title: "NullPool#checkout and its ConnectionNotEstablished message have no Rails counterpart"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null

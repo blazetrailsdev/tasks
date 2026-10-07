@@ -1,7 +1,7 @@
 ---
 title: "MessagePack::Bigint and Symbol ext helpers, and oversized_integer_extension (fixes silent BigInt truncation)"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: ["msgpack"]

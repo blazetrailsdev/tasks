@@ -1,6 +1,6 @@
 ---
 title: "The bare-raise scan behind rails-error-parity is class-blind, line-based and covers four packages"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null

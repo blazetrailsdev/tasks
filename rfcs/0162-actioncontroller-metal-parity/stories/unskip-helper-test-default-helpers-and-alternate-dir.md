@@ -1,7 +1,7 @@
 ---
 title: "Un-skip helper_test's default-helpers and alternate-helper-dir tests and drop the global helpers-path scaffolding"
-status: ready
-updated: 2026-10-06
+status: claimed
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-07T11:33:13Z"
+assignee: "unskip-helper-test-default-helpers-and-alternate-dir"
 blocked-by: null
 closed-reason: null
 ---

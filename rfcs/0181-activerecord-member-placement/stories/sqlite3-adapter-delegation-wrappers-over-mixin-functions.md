@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-adapter.ts: replace class-body delegation wrappers with the mixin functions themselves"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
 packages: []

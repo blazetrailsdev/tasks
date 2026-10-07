@@ -1,7 +1,7 @@
 ---
 title: "msgpack: IO-backed buffers, unpacker options and the remaining Packer/Unpacker C surface"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "verify_authenticity_token and its private siblings are private on ActionController::Base"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

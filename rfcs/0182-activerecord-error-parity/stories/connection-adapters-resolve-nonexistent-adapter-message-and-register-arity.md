@@ -1,6 +1,6 @@
 ---
 title: "ConnectionAdapters.resolve's nonexistent-adapter message and register's parameter list differ from Rails"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null

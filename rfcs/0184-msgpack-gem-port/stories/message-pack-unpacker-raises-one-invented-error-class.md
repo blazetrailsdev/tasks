@@ -1,7 +1,7 @@
 ---
 title: "MessagePack unpacker raises one invented MessagePackError where the gem raises MalformedFormatError / UnknownExtTypeError"
-status: draft
-updated: 2026-10-06
+status: in-progress
+updated: 2026-10-07
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8623
+claim: "2026-10-07T11:41:05Z"
+assignee: "big-decimal-max-prec-outside-literal-parse"
 blocked-by: null
 closed-reason: null
 ---

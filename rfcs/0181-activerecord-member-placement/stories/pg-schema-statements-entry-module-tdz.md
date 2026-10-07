@@ -1,7 +1,7 @@
 ---
 title: "postgresql/schema-statements.ts throws TDZ as an entry module (schema-definitions imports the adapter at run time)"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
 packages: []

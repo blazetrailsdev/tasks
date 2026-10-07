@@ -1,6 +1,6 @@
 ---
 title: "permissions_policy clones the request's policy and assigns it back; drop buildPermissionsPolicy"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

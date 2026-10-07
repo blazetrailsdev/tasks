@@ -1,7 +1,7 @@
 ---
 title: "ActionController::Parameters names its hash _data where Rails has @parameters"
-status: ready
-updated: 2026-10-06
+status: done
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8621
+claim: "2026-10-07T11:03:12Z"
+assignee: "strong-parameters-hash-field-is-data-not-parameters"
 blocked-by: null
 closed-reason: null
 ---

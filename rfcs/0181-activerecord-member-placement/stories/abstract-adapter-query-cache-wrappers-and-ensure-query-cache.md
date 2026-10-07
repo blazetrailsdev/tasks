@@ -1,6 +1,6 @@
 ---
 title: "activerecord: AbstractAdapter's QueryCache wrappers and invented _ensureQueryCache converge onto the included module"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null

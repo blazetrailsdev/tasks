@@ -1,7 +1,7 @@
 ---
 title: "activerecord: PG TypeMapInitializer#run, lookup_cast_type_from_column and type_cast drop their invented arms"
-status: ready
-updated: 2026-10-05
+status: done
+updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8621
+claim: "2026-10-07T11:03:12Z"
+assignee: "strong-parameters-hash-field-is-data-not-parameters"
 blocked-by: null
 closed-reason: null
 ---

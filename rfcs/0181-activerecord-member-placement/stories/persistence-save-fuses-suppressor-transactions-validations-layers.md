@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Persistence#save fuses the Suppressor, Transactions and Validations save layers and writes the STI column inline"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
 packages: []

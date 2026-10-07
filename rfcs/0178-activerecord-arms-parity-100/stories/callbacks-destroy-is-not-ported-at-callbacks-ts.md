@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Callbacks#destroy lives in Base#_destroyRow and persistence.ts, not callbacks.ts"
-status: ready
-updated: 2026-10-05
+status: done
+updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8609
+claim: "2026-10-07T11:33:13Z"
+assignee: "unskip-helper-test-default-helpers-and-alternate-dir"
 blocked-by: null
 closed-reason: null
 ---

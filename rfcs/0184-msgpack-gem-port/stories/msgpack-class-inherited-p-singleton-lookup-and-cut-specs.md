@@ -1,7 +1,7 @@
 ---
 title: "msgpack: Module#<= and rb_class_of for the ext registry, -0.0, and the spec ports cut from the package PR"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []

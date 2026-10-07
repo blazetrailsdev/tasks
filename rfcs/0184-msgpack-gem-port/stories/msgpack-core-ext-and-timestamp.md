@@ -1,7 +1,7 @@
 ---
 title: "msgpack core_ext to_msgpack, and the gem's Time / timestamp ext type -1"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: ["msgpack"]

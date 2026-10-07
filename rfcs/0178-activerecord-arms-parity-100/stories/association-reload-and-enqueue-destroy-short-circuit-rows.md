@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Association#reload and #enqueue_destroy_association take Rails' short-circuits"
-status: ready
-updated: 2026-10-05
+status: claimed
+updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-07T11:33:13Z"
+assignee: "unskip-helper-test-default-helpers-and-alternate-dir"
 blocked-by: null
 closed-reason: null
 ---
