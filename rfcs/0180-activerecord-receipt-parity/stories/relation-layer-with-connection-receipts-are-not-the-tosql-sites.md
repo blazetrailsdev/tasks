@@ -48,6 +48,21 @@ The section also explicitly defers the synchronous _lease_ itself to
 § "Schema reflection peeks at a warm cache"'s scope boundary, which names
 `withConnectionSync` as staying CONVERGEABLE.
 
+**Prior decision on `arel`, do not re-litigate blind.**
+`port-with-connection-acquisition-seam-for-the-arel-reader` (RFC 0123) was
+CLOSED as "Ratified/delivered", reasoning that CLAUDE.md § "`Relation` is
+evaluated by an async query" (trails#7834) settles that a sync `with_connection`
+seam "can only serve an already-leased connection — 'the settled shape, not a
+gap'", and that `arel()`'s memoized `withConnectionSync` IS that shape. That
+close explicitly parked the surviving `@missingRailsCall with_connection`
+receipt on `sync-reads-of-async-reflection-retire-with-rfc-0073` rather than
+removing it, so the receipt stayed CONVERGEABLE and this story inherits only its
+ownership. Weigh that reasoning before converging `arel`: the section's sentence
+is written about the lease `withConnectionSync` hands `toSql`, and whether it
+generalises to `arel` is the open question, not a settled no. If it does
+generalise, `arel`'s receipt becomes `PERMANENT` against that section and the
+other three still need work.
+
 `loadAsync` is additionally touched by
 `load-async-disabled-arm-calls-load-and-dedupes-in-flight-load` (RFC 0180),
 whose diff keeps this receipt in place — it converges the `load` call, not the

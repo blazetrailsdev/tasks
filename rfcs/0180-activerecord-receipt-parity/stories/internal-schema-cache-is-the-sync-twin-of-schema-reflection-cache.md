@@ -53,6 +53,16 @@ the section's Scope boundary explicitly declines to bless the sync twins of
 async reflection. It was briefly promoted to `PERMANENT` against that section in
 trails#8651 and reverted in the same PR once `SchemaReflection#cache` was found.
 
+**This supersedes a closed story whose premise is falsified.**
+`delete-the-internal-schema-cache-accessor` (RFC 0123) was closed with
+"Premise gone: ... the sync readers of internalSchemaCache stay by design and
+the getter will not be deleted", on the basis that the owning story's AC
+"re-cites internalSchemaCache PERMANENT against that section". Both halves are
+now wrong: the PERMANENT re-cite was reverted in trails#8651, and the getter has
+a Rails counterpart to converge onto. That closed-reason is DB-owned and left as
+it is; this story carries the corrected premise. Do not cite it to close this
+one.
+
 ## Acceptance criteria
 
 - `internalSchemaCache`'s callers reach the cache through the ported
