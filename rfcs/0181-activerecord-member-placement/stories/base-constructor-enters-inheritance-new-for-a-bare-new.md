@@ -5,7 +5,8 @@ updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
 packages: []
-deps: []
+deps:
+  - inheritance-class-methods-new-body-is-fused-into-base-constructor
 deps-rfc: []
 est-loc: 300
 priority: null
