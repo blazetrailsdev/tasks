@@ -20,6 +20,7 @@ clusters:
   - pins
   - skips
   - tooling
+  - "excluded-files"
 related-rfcs:
   - "0023-surfaced-deviations"
   - "0082-ruby-ts-idiom-conversion-classes"

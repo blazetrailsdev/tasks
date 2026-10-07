@@ -2,7 +2,7 @@
 title: "activerecord: un-exclude legacy_yaml_adapter.rb and coders/yaml_column.rb once Psych lands"
 status: ready
 updated: 2026-09-30
-rfc: "0183-activerecord-excluded-source-files"
+rfc: "0174-activerecord-api-parity-100"
 cluster: excluded-files
 packages: ["activerecord"]
 deps: ["yaml-column-safe-coder-through-psych", "active-record-legacy-yaml-load-tags"]
