@@ -1,6 +1,6 @@
 ---
 title: "The bare-raise scan behind rails-error-parity is class-blind, line-based and covers four packages"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8625
+claim: "2026-10-07T12:03:12Z"
+assignee: "bare-raise-scan-is-class-blind-line-based-and-four-packages-wide"
 blocked-by: null
 closed-reason: null
 ---

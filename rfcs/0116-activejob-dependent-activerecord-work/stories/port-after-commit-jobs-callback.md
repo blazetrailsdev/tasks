@@ -1,7 +1,7 @@
 ---
 title: "Port add_after_commit_jobs_callback — the drain that runs _after_commit_jobs on commit"
-status: draft
-updated: 2026-08-21
+status: done
+updated: 2026-10-07
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null
 packages: ["activerecord"]
@@ -9,7 +9,7 @@ deps: ["port-activejob-enqueuing-and-configured-job"]
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: trails#8624
 claim: null
 assignee: null
 blocked-by: null

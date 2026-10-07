@@ -1,6 +1,6 @@
 ---
 title: "MessagePack::Serializer#message_pack_pool sizes the pool with ENV.fetch; port the RAILS_MAX_THREADS test"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0184-msgpack-gem-port"
 cluster: null

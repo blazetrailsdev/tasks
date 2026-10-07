@@ -1,6 +1,6 @@
 ---
 title: "activerecord: AbstractAdapter's QueryCache wrappers and invented _ensureQueryCache converge onto the included module"
-status: ready
+status: in-progress
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8626
+claim: "2026-10-07T12:33:14Z"
+assignee: "migration-command-line-messages-print-the-trails-spelling-and-rails-env-arms"
 blocked-by: null
 closed-reason: null
 ---

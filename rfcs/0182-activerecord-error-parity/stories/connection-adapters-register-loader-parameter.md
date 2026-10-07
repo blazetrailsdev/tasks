@@ -1,6 +1,6 @@
 ---
 title: "ConnectionAdapters.register keeps a fourth loader parameter Rails does not have"
-status: draft
+status: done
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8625
+claim: "2026-10-07T12:41:06Z"
+assignee: "connection-adapters-register-loader-parameter"
 blocked-by: null
 closed-reason: null
 ---

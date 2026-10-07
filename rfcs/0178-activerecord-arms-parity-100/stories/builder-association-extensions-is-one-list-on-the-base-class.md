@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Builder::Association.extensions is one list on the base class"
-status: claimed
+status: done
 updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8624
 claim: "2026-10-07T11:33:13Z"
 assignee: "unskip-helper-test-default-helpers-and-alternate-dir"
 blocked-by: null

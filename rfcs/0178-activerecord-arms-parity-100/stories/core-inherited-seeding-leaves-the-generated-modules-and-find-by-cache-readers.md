@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Core's inherited seeding leaves generatedAssociationMethods and cachedFindByStatement"
-status: ready
-updated: 2026-10-05
+status: blocked
+updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
-blocked-by: null
+pr: trails#8626
+claim: "2026-10-07T12:33:14Z"
+assignee: "migration-command-line-messages-print-the-trails-spelling-and-rails-env-arms"
+blocked-by: "Needs one owner-decided mechanism for Base's inherited chain (active-record-base-inherited-chain-needs-one-deferred-dispatch); a Core-only first-read trigger was tried in trails#8626 and backed out in review"
 closed-reason: null
 ---
 
