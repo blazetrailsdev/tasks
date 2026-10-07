@@ -39,8 +39,9 @@ if [[ -z "${TMUX_PANE:-}" ]]; then
 fi
 
 # Resolve the btwhooks container IP the same way the other skills do.
-DOCKER_INSPECT_ERR="$(docker inspect btwhooks.web.1 --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' 2>&1 1>/tmp/.rrd-ip.$$ || true)"
-CONTAINER_IP="$(cat /tmp/.rrd-ip.$$ 2>/dev/null || true)"
+DOCKER_INSPECT_ERR="$(docker inspect btwhooks.web.1 --format '{{range $k, $v := .NetworkSettings.Networks}}{{$k}}={{$v.IPAddress}}{{"\n"}}{{end}}' 2>&1 1>/tmp/.rrd-ip.$$ || true)"
+# The container can be on several networks (bridge + fleet); one IP, bridge first.
+CONTAINER_IP="$(awk -F= '$1 == "bridge" { print $2; found = 1; exit } { if (!first) first = $2 } END { if (!found && first) print first }' /tmp/.rrd-ip.$$ 2>/dev/null || true)"
 rm -f /tmp/.rrd-ip.$$
 if [[ -z "$CONTAINER_IP" ]]; then
   echo "rfc-refine-done: btwhooks.web.1 container not found, skipping cleanup" >&2
