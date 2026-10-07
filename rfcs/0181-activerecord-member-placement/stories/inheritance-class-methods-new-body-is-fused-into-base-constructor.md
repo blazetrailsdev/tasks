@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Inheritance::ClassMethods#new lives in inheritance.ts; its body leaves Base's constructor"
-status: ready
+status: in-progress
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8659
+claim: "2026-10-07T20:04:16Z"
+assignee: "inheritance-class-methods-new-body-is-fused-into-base-constructor"
 blocked-by: null
 closed-reason: null
 ---

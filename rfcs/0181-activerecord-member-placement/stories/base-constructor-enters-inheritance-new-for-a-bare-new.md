@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Base's constructor enters Inheritance::ClassMethods#new for a bare new Klass"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "trailmap: restore camelCase route targets once trails#8640 is vendored"
-status: draft
+status: done
 updated: 2026-10-07
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#41
+claim: "2026-10-07T20:25:56Z"
+assignee: "restore-camelcase-route-targets-after-the-trails-bump"
 blocked-by: null
 closed-reason: null
 ---

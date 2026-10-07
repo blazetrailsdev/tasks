@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the remaining module bodies inlined into base.ts (token_for, readonly_attributes, nested_attributes, …)"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement
