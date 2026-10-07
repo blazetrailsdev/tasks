@@ -22,7 +22,7 @@ Rails' `data_source_sql(name = nil, type: nil)` (`vendor/rails/v8.0.2/activereco
 
 trails ports that call as `this.dataSourceSql({ type: "BASE TABLE" })`, which `parity:api:calls:args` matches against Rails' kwargs-only call. So every `dataSourceSql` takes its first parameter as `string | null | { type?: string }` and carries an `if (typeof name === "object")` arm that moves it into `options`, an arm Rails' method does not have:
 
-- `packages/activerecord/src/connection-adapters/sqlite3/schema-statements.ts` (`dataSourceSql`, receipted `@inventedArm if` against this story in trails#8638)
+- `packages/activerecord/src/connection-adapters/sqlite3/schema-statements.ts` (`dataSourceSql`, unreceipted: `parity:api:arms:throws` reports the declaration as not compared, so an `@inventedArm` tag there is stale)
 - `packages/activerecord/src/connection-adapters/postgresql/schema-statements.ts` (`dataSourceSql`, unreceipted)
 - `packages/activerecord/src/connection-adapters/abstract-mysql-adapter.ts` (`dataSourceSql`, unreceipted, and a wrapper over `mysql/schema-statements.ts`)
 
@@ -31,5 +31,4 @@ Rewriting the call sites to `dataSourceSql(undefined, { type })` was tried in tr
 ## Acceptance criteria
 
 - [ ] No `dataSourceSql` body carries the kwargs-in-first-position arm, and each signature is `(name, { type })` as Rails' `(name = nil, type: nil)`.
-- [ ] The `@inventedArm if` receipt on SQLite's `dataSourceSql` is deleted.
 - [ ] `pnpm parity:api:calls:args` stays green with no new baseline row.
