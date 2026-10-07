@@ -134,35 +134,42 @@ semantic that has exactly one reviewed lowering:
 
 ### Passes, in order
 
-1. Parse and build: a Ruby subprocess dumps Prism (the `prism` gem bundled
+1. Parse and build (`codegen-ir-and-prism-bridge`): a Ruby subprocess dumps Prism (the `prism` gem bundled
    with Ruby 3.3; no npm dependency returns), the builder desugars, resolves
    locals, marks tail positions, inserts `Truthy`, records each block's
    `self` kind.
-2. Gem index: every class, module, def, macro, ivar and constant, before any
+2. Gem index (`codegen-ir-and-prism-bridge`): every class, module, def, macro, ivar and constant, before any
    body.
-3. Constant resolution: lexical nesting and ancestors; then namespace-object
+3. Constant resolution (`codegen-constants-and-skeleton`): lexical nesting and ancestors; then namespace-object
    walk, `rubyFileToTs` convention, unique export name. Ambiguous or missing
    declines its uses. Output is a per-file import plan.
-4. Skeleton emission: every gem file as a TypeScript declaration in a virtual
+4. Skeleton emission (`codegen-constants-and-skeleton`): every gem file as a TypeScript declaration in a virtual
    FS, so every gem class is a real type before any body is lowered.
-5. Receiver and call resolution against a live checker: IR intrinsic, then
+5. Receiver and call resolution (`codegen-call-resolver-and-report`) against a live checker: IR intrinsic, then
    member lookup by checker (gem and trails alike), then `operatorSpelling`,
    then the core dispatch table, then decline. Includes the Concern shape.
-6. Async propagation: a fixpoint over resolved call edges only. Seeds are
+6. Async propagation (`codegen-lowering-mixins-super-async`): a fixpoint over resolved call edges only. Seeds are
    calls whose resolved signature returns `Promise`/`PromiseLike`. A def
    containing a decline is async-undetermined and emitted as inferred so far.
-7. Lowering: one function per node kind; names from `conventions.ts`, paths
+7. Lowering (`codegen-lowering-and-first-output`, then
+   `codegen-lowering-mixins-super-async`): one function per node kind; names from `conventions.ts`, paths
    from `rubyFileToTs`.
-8. Decline emission and the typecheck loop: emit, run the checker, map every
+8. Decline emission and the typecheck loop (`codegen-lowering-and-first-output`):
+   emit, run the checker, map every
    diagnostic to its statement, re-emit it as a decline, repeat; a def that
    still fails has its body declined whole. That is what makes "every emitted
    file typechecks" true by construction.
 
 ### Types
 
-The checker does the inference. Bodies are lowered statement by statement
-into the virtual file and the checker is asked for each receiver's type and
-each call's resolved signature. `self` is `this` in a class and a
+The checker does the inference. Resolution needs lowered bodies, not only
+the skeleton: a local, a block parameter or a chained receiver has a type
+only once the expression that produces it exists in TypeScript. So the
+resolver story carries a **probe lowering**, the expression subset
+(literals, locals, member access, calls with arguments, blocks as arrows)
+that is enough to place a receiver in the virtual file and ask the checker
+for its type and the call's resolved signature. The full statement lowering
+(control flow, rescue, the semantic nodes) comes later and reuses it. `self` is `this` in a class and a
 `this:`-typed host interface in a module. A call whose receiver is `any`,
 `unknown`, an uninstantiated type parameter or the error type is declined;
 there is no name-based fallback.
@@ -222,11 +229,22 @@ Owner decision, 2026-10-07: this RFC is to be delivered working, not shipped
 small. The retired generator was built as ceiling-sized slices and never
 produced a running whole. Its stories are therefore cut as working
 increments, each ending with a tool that runs end to end over activejob, at
-roughly 1,000 to 2,200 lines each. `max-est-loc: 2500` in this README's
-frontmatter lifts the validator's cap for them, and the worker prompt's
-"Hard rules" `PR_MAX_LOC` must be set to match when these stories are
-spawned; a PR for one of them cites this section and is not split to fit the
-default ceiling.
+roughly 900 to 2,100 lines each. `max-est-loc: 2500` in this README's
+frontmatter lifts the validator's cap for them.
+
+The worker's own ceiling lives outside this repo: btwhooks fills the "Hard
+rules" `PR_MAX_LOC` into every spawn prompt. **The owner sets it to 2500 for
+spawns on this RFC before the first story is spawned** (Rollout item 0), and
+each story's Context repeats that precondition. A worker that finds the
+default 700 in its prompt stops and reports rather than splitting the story;
+a PR for one of these stories cites this section.
+
+The estimates are firm within the 2,500 cap. If a story overruns it, the
+split line is pre-agreed in that story's Context rather than invented under
+pressure: for the resolver story, the resolution-report CLI and checkpoint
+apart from the resolver; for the first lowering story, the decline loop and
+driver apart from node lowering. The remainder is filed as a follow-up story
+against this RFC, not merged under the cap.
 
 ## Non-goals
 
@@ -258,21 +276,49 @@ default ceiling.
 
 ## Rollout
 
-1. `codegen-ir-and-prism-bridge`.
-2. `codegen-hint-pipeline`. The recorder, the validator and the model pass
-   need only the IR's gem index, so this lands before the resolver and gives
-   it the sidecar its checkpoint is measured with.
-3. `codegen-resolver-and-resolution-report`. Carries the kill criterion:
-   under 85% of activejob call sites resolved with the generated sidecar plus
-   review of flagged entries only, and the owner postpones the RFC here.
-4. `codegen-lowering-and-first-output`.
-5. `codegen-lowering-mixins-super-async`.
-6. `codegen-pilot-activejob-generation-run`, which publishes the report and
+0. Prerequisite, owner: set btwhooks' `PR_MAX_LOC` to 2500 for spawns on
+   this RFC. No story is spawned before it.
+1. `codegen-ir-and-prism-bridge`: the IR and the gem index.
+2. `codegen-constants-and-skeleton`: constant resolution, the import planner
+   and the skeleton over a virtual program. The hint validator's vocabulary
+   gate needs the constant mapping, so this precedes the hint pipeline.
+3. `codegen-hint-pipeline`: the sidecar the checkpoint is measured with.
+4. `codegen-call-resolver-and-report`: probe lowering, the call resolver and
+   the resolution report. Carries the kill criterion (below).
+5. `codegen-lowering-and-first-output`.
+6. `codegen-lowering-mixins-super-async`.
+7. `codegen-pilot-activejob-generation-run`, which publishes the report and
    the `codegen/activejob` branch RFC 0169's open stories may start from.
+
+### The kill criterion
+
+Measured at the end of `codegen-call-resolver-and-report`, by
+`pnpm codegen:resolve activejob` over `lib/active_job/**` minus the seven
+external adapters, with the committed sidecar.
+
+- **The bar is 85% of call sites resolved. It is a target, not a measured
+  threshold.** The spikes measured activestorage, not activejob, and with a
+  spike resolver that lacked three things this RFC's resolver has:
+  overload and generic instantiation from `getResolvedSignature`,
+  `operatorSpelling`, and the Concern shape. Their best gem-wide figure was
+  80.6% resolved with trace plus model hints; `blob.rb` alone reached
+  91.8%. activejob's no-hint baseline is 56.7% resolved. 85% is where a
+  one-shot run leaves an agent finishing fewer than one statement in six,
+  which is the point at which generation is cheaper than a hand port.
+- **A flagged sidecar entry counts as resolved only after review.** The gate
+  is measured with validated entries only; a second figure with flagged
+  entries included is reported for information and does not count.
+- **On failure:** the resolver story is still `done` (it delivered the
+  report and the number), the number goes into this README's Verification,
+  and the owner runs `tasks rfc-status 0000-ruby-ts-codegen postponed` with
+  the figure as the reason. The three stories after it stay `draft`; a
+  postponed RFC downgrades any `ready` story to `draft` in the index, so no
+  `blocked-by` is set and nothing is closed. Reactivating the RFC restores
+  them.
 
 ## Seed completeness
 
-Six stories, 8,300 est-loc of tool and tests against the 9,173 deleted
+Seven stories, 8,500 est-loc of tool and tests against the 9,173 deleted
 with the second attempt. Each is a working increment with its own CLI and its
 own measured output. A story added later is a spec miss; note which Rails
 construct or trails shape the authoring missed in its Context.
@@ -282,16 +328,21 @@ construct or trails shape the authoring missed in its Context.
 - `codegen-ir-and-prism-bridge`: `pnpm codegen:ir` builds a complete IR for every `.rb` under
   `activejob/lib` and `activestorage/{app,lib}` with zero unhandled node
   kinds, asserted by a test.
+- `codegen-constants-and-skeleton`: the skeleton of every activejob file
+  typechecks as a declaration tree, and the activestorage constant figure
+  (459 of 467 classified) is reproduced.
 - `codegen-hint-pipeline`: `pnpm codegen:hints:check activejob` reports zero gate violations
   on the committed sidecar.
-- `codegen-resolver-and-resolution-report`: `pnpm codegen:resolve activejob` reports at least 85% of call sites
+- `codegen-call-resolver-and-report`: `pnpm codegen:resolve activejob` reports at least 85% of call sites
   resolved with that sidecar; the no-hint baseline is 43.3% unresolved.
 - `codegen-lowering-and-first-output`: `tsc` passes on the emitted activejob tree, asserted by a test that
   runs the generator and the checker.
 - `codegen-lowering-mixins-super-async`: the marker count on activejob falls by at least the share mixins,
   `super` and awaits held in the previous story's report, recorded before and after.
-- `codegen-pilot-activejob-generation-run`: an audit report with per-file decline counts, and zero `declined(`
-  on any file whose RFC 0169 story is `done`.
+- `codegen-pilot-activejob-generation-run`: an audit report with per-file decline counts, every
+  `lib/active_job` file accounted for as generated, skipped (twin exists)
+  or excluded (external adapter), and no emitted path colliding with a file
+  already in `packages/activejob/src`.
 
 ## Open questions
 
@@ -300,4 +351,14 @@ construct or trails shape the authoring missed in its Context.
   `codegen-lowering-and-first-output` confirms.
 - Whether per-statement checker queries over 218 defs are fast enough with a
   language-service host. One cold program over twelve packages' declarations
-  took about 11 seconds in the spike; `codegen-resolver-and-resolution-report` measures the incremental cost.
+  took about 11 seconds in the spike; `codegen-call-resolver-and-report` measures the incremental cost.
+
+## Changelog
+
+- 2026-10-07: created, with the six-story seed and `max-est-loc: 2500`.
+- 2026-10-07: review on tasks PR 254: the resolver story split into
+  `codegen-constants-and-skeleton` and `codegen-call-resolver-and-report`,
+  the latter carrying a probe lowering so the checkpoint is measurable; the
+  gem index assigned to the IR story; the `PR_MAX_LOC` prerequisite and the
+  pre-agreed split lines added; the kill criterion's bar, flagged-entry
+  rule and failure mechanics stated; the pilot's checks made falsifiable.

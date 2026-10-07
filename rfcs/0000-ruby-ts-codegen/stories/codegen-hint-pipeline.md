@@ -4,8 +4,8 @@ status: draft
 updated: 2026-10-07
 rfc: "0000-ruby-ts-codegen"
 cluster: tooling
-packages: []
-deps: ["codegen-ir-and-prism-bridge"]
+packages: ["scripts"]
+deps: ["codegen-constants-and-skeleton"]
 deps-rfc: []
 est-loc: 1000
 priority: null
@@ -42,8 +42,10 @@ fourth spikes showed it can be generated:
   against the trace's 18.6%.
 
 The validator holds three gates, all exercised in the fourth spike: every
-type name is in a closed vocabulary (gem classes, constants the resolver can
-map, core types); every key names a def and parameter that exists; every
+type name is in a closed vocabulary (gem classes from the gem index,
+constants `codegen-constants-and-skeleton`'s resolver can map, core types),
+which is why that story precedes this one; every key names a def and parameter that exists (the gem index from
+`codegen-ir-and-prism-bridge`); every
 hint covers every class the trace observed. A hint that fails the third gate
 goes to review with both answers shown. The checker catches an over-wide
 hint downstream (`io` hinted as `IO | File | StringIO | Tempfile` failed on
@@ -58,6 +60,11 @@ from gems already on the host, with Rails taken by `path:` from a copy of the
 vendored tree so nothing under `vendor/` is written to. This story uses the
 same shape and writes it down in `scripts/codegen/trace/README.md`, since the
 next gem's trace run repeats it.
+
+**Precondition (every story in this RFC):** btwhooks' `PR_MAX_LOC` is set
+to 2500 for spawns on this RFC (README "The LOC ceiling is lifted", Rollout
+item 0). A worker whose prompt still says 700 stops and reports; it does not
+split this story.
 
 ## Acceptance criteria
 

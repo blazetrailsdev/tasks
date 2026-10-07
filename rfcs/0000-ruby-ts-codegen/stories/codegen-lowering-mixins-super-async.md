@@ -4,7 +4,7 @@ status: draft
 updated: 2026-10-07
 rfc: "0000-ruby-ts-codegen"
 cluster: tooling
-packages: []
+packages: ["scripts"]
 deps: ["codegen-lowering-and-first-output"]
 deps-rfc: []
 est-loc: 1300
@@ -54,6 +54,11 @@ reports every caller that used the value synchronously. On activejob the
 cascade lands in `enqueuing.rb`, `execution.rb` and `callbacks.rb`
 (`perform_now`, `enqueue`, `execute`), which RFC 0169's Design already
 treats as async.
+
+**Precondition (every story in this RFC):** btwhooks' `PR_MAX_LOC` is set
+to 2500 for spawns on this RFC (README "The LOC ceiling is lifted", Rollout
+item 0). A worker whose prompt still says 700 stops and reports; it does not
+split this story.
 
 ## Acceptance criteria
 

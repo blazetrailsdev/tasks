@@ -4,7 +4,7 @@ status: draft
 updated: 2026-10-07
 rfc: "0000-ruby-ts-codegen"
 cluster: tooling
-packages: []
+packages: ["scripts"]
 deps: []
 deps-rfc: []
 est-loc: 1600
@@ -51,6 +51,11 @@ Prior art to read first: the retired handlers at `311bff350c^`
 covered and the ones it dropped (nested `ClassNode`/`ModuleNode` inside a
 class body, 10,823 nodes across 62 files, was its largest hole).
 
+**Precondition (every story in this RFC):** btwhooks' `PR_MAX_LOC` is set
+to 2500 for spawns on this RFC (README "The LOC ceiling is lifted", Rollout
+item 0). A worker whose prompt still says 700 stops and reports; it does not
+split this story.
+
 ## Acceptance criteria
 
 - [ ] `scripts/codegen/` is a new `scripts/` test directory and is
@@ -71,6 +76,12 @@ class body, 10,823 nodes across 62 files, was its largest hole).
 - [ ] Tail positions are marked through `if`, `unless`, `case`, `begin` and
       `rescue` arms; `Truthy` is inserted at every condition position; the
       semantic nodes above are produced where their Ruby form occurs.
+- [ ] The gem index (pass 2 of the README's Design): over a whole gem, every
+      class and module with its superclass and includes, every def with its
+      parameters and `file:line`, every class-body macro, ivar write and
+      constant, queryable by fully qualified name. `pnpm codegen:ir --index
+<gem>` prints it; a test asserts activejob's 71 classes and modules and
+      218 defs.
 - [ ] `pnpm codegen:ir <file.rb>` prints the IR as JSON; golden tests cover
       one file per Ruby construct family (`blob.rb`, `arguments.rb`,
       `callbacks.rb`, `exceptions.rb`, `disk_service.rb`).

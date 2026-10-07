@@ -4,8 +4,8 @@ status: draft
 updated: 2026-10-07
 rfc: "0000-ruby-ts-codegen"
 cluster: tooling
-packages: []
-deps: ["codegen-resolver-and-resolution-report"]
+packages: ["scripts"]
+deps: ["codegen-call-resolver-and-report"]
 deps-rfc: []
 est-loc: 2100
 priority: null
@@ -25,7 +25,8 @@ TypeScript tree that passes `tsc`, with mixins, `super` and awaits still
 declined (`codegen-lowering-mixins-super-async` lowers those).
 
 Lowering is one function per IR node kind, reading the IR and the side
-tables from `codegen-resolver-and-resolution-report`. Names come from `rubyMethodToTs` and locals keep the
+tables from `codegen-call-resolver-and-report`, and extends that story's
+probe lowering to statements. Names come from `rubyMethodToTs` and locals keep the
 Rails identifier camelCased; paths from `rubyFileToTs`. The semantic nodes
 lower by the rules in the README's Design table; each rule has a test.
 Idioms worth calling out because the retired generator got them wrong:
@@ -54,6 +55,16 @@ The driver is one-shot: it writes the tree, runs prettier, and prints the
 report (per-file resolution buckets, decline counts by reason, the ruby-compat
 wanted list). It skips any file whose trails twin already exists in the
 target package, so a done RFC 0169 story is never overwritten.
+
+**Pre-agreed split line** if this story overruns 2,500: the decline helper,
+the diagnostic-driven re-emit loop and the driver go to a follow-up story
+filed against this RFC; node lowering with its unit tests ships here, and
+the `tsc` guarantee moves to the follow-up.
+
+**Precondition (every story in this RFC):** btwhooks' `PR_MAX_LOC` is set
+to 2500 for spawns on this RFC (README "The LOC ceiling is lifted", Rollout
+item 0). A worker whose prompt still says 700 stops and reports; it does not
+split this story.
 
 ## Acceptance criteria
 
