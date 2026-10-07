@@ -2,7 +2,7 @@
 title: "parity:test does not expand MessagePackSharedSerializerTests into the two serializer test classes"
 status: draft
 updated: 2026-10-07
-rfc: "0023-surfaced-deviations"
+rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
 deps: []
