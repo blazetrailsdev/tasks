@@ -1,5 +1,5 @@
 ---
-title: "actionpack: an application has to name its actions underscored; the method's camelCase spelling should resolve"
+title: "actionpack: an action is named by its method, in the method's spelling and no other"
 status: in-progress
 updated: 2026-10-07
 rfc: "0141-actionpack-surfaced-deviations"
@@ -45,6 +45,20 @@ What trailmap had to do meanwhile, which is the finding: four route targets and 
 changed to `next_bundle`, `in_progress`, `record_spawn`, `status_set`, and CLAUDE.md gained a
 paragraph explaining why camelCase "everywhere" has this exception.
 
+## Decision (owner, 2026-10-07)
+
+The options below were put to the owner, who took none of them as written:
+first "they should only map to their match", then "let's only support
+camelcase". One spelling, the method's. An action is named `nextBundle` in a
+route, a test, a callback list and `action_name`; `next_bundle` names no action
+unless a method is literally called that; nothing on the dispatch path
+converts a spelling. This reverses the action-name half of trails#8573.
+
+What stays in Rails' spelling is what lives in a file: a template's name and a
+lazy-lookup locale key. The action name is underscored at those sites only.
+
+The options are kept below as the record of what was considered.
+
 ## Options to decide between
 
 1. **Resolve the spelling at the boundary the application writes, not in `process`.** The routing
@@ -65,8 +79,8 @@ Whichever is taken has to answer `foo-bar`: the old normalization also turned `-
 
 ## Acceptance criteria
 
-- [ ] A route `to: "stories#nextBundle"` and one `to: "stories#next_bundle"` both reach `StoriesController#nextBundle`, and `action_name` is `next_bundle` in both.
-- [ ] `ActionController::TestCase`'s `get("nextBundle")` and `get("next_bundle")` both dispatch.
-- [ ] The Rails-named tests swept in trails#8573 are untouched and pass.
-- [ ] `docs/ruby-ts-conventions.md` states the rule; the deviation carries its receipt.
-- [ ] trailmap can restore camelCase route targets and delete the CLAUDE.md paragraph.
+- [ ] `action_methods` answers the method names as declared; `process("nextBundle")` dispatches and `process("next_bundle")` raises `ActionNotFound` when only `nextBundle` is defined.
+- [ ] A route `to: "stories#nextBundle"` reaches `StoriesController#nextBundle`, and `action_name` is `nextBundle`.
+- [ ] A camelCase action finds its underscored template and its underscored lazy-lookup locale key; each conversion carries its receipt.
+- [ ] `CLAUDE.md` states the rule and that the owner ratified it.
+- [ ] trailmap can restore camelCase route targets and delete its CLAUDE.md paragraph.
