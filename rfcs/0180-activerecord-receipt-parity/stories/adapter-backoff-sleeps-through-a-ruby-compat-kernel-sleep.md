@@ -1,13 +1,13 @@
 ---
-title: "ruby-compat: port Kernel#sleep; AbstractAdapter#backoff calls it"
+title: "parity: Kernel#sleep is credited by the promise-settling setTimeout; AbstractAdapter#backoff's receipt retires"
 status: in-progress
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
-packages: ["ruby-compat", "activerecord"]
+packages: ["activerecord"]
 deps: []
 deps-rfc: []
-est-loc: 120
+est-loc: 40
 priority: null
 pr: trails#8635
 claim: "2026-10-07T14:56:49Z"
@@ -22,18 +22,23 @@ Surfaced by the `activerecord-audit-permanent-receipts-ca-root` audit: the recei
 
 `AbstractAdapter#backoff` (`vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/abstract_adapter.rb:1078-1080`) is `sleep 0.1 * counter` (`Kernel#sleep`, `vendor/ruby/v3.3.11/process.c:5055` `rb_f_sleep`).
 
-`packages/activerecord/src/connection-adapters/abstract-adapter.ts`'s `backoff` is `new Promise((resolve) => setTimeout(resolve, 100 * counter))` and carries `@missingRailsCall sleep`. The timer is open-coded, the unit is milliseconds where Rails' argument is seconds, and nothing names the call. ruby-compat has no `sleep`; two activesupport cache behaviors (`cache/behaviors/cache-store-coder-behavior.ts`, `cache-increment-decrement-behavior.ts`) open-code the same promise for a Rails `sleep`.
+`packages/activerecord/src/connection-adapters/abstract-adapter.ts`'s `backoff` is `new Promise((resolve) => setTimeout(resolve, 100 * counter))` and carries `@missingRailsCall sleep`.
 
-A sleep in JS has to be awaited, so the port returns a promise. That is the only difference from the Ruby call, and it belongs in one ruby-compat export.
+**This story was respec'd on 2026-10-07 (Dean, in conversation).** It previously called for a ruby-compat `Kernel#sleep` port that `backoff` would call. That mechanism is rejected: the receipt converges by teaching the call gate the native form instead, which is what `NATIVE_FORM_ANALOGUES` (`scripts/api-compare/enumerable-idioms.ts`) already does for `load` → `import(x)`, `call` → `()`, `size` → `.length` and `prepend` → `.unshift`. A `Kernel#sleep` port would add MRI surface whose only distinguishing behaviour — `value`-returning suspension — has no synchronous JS form, for a call set of one production site.
+
+Do not file a follow-up to add `rbFSleep`.
 
 ## Acceptance criteria
 
-- [ ] ruby-compat exports the `Kernel#sleep` port (seconds in, a promise out), cited to `process.c:5055`, with its row in the ruby-compat call table and a fake-timer unit test.
-- [ ] `backoff` is `sleep(0.1 * counter)`; the `@missingRailsCall sleep` receipt is deleted.
-- [ ] `pnpm parity:api:calls` and `pnpm parity:api:calls:ruby-compat` green; the two activesupport cache behaviors call the export too.
+- [ ] `NATIVE_FORM_ANALOGUES` carries a `sleep` row keyed to the one-shot suspension `new Promise((resolve) => setTimeout(resolve, ms))`, with `receivers: "implicit-self"` — the one shape `Kernel#sleep` takes (`rb_define_global_function`, `process.c:9125`), so an `x.sleep` site still flags.
+- [ ] The mark is NOT every `setTimeout`. A timer that schedules work (a deadline, a retry, a bare callback) is not a suspension and credits nothing: `Reaper#spawn_thread`'s `setTimeout(tick, frequency * 1000)` must not satisfy a Rails `sleep`.
+- [ ] `setInterval` credits nothing — it repeats where `sleep` suspends once.
+- [ ] `backoff`'s `@missingRailsCall sleep` receipt is deleted, and its interval keeps Rails' `0.1 * counter` legible at the call site, since no call-argument row compares it once the Ruby call leaves significance.
+- [ ] Unit tests pin the table row, the extractor discriminator, and both negative cases. A regression check shows the row is load-bearing: with it removed, `backoff` flags `sleep → sleep|_sleep`.
+- [ ] `pnpm parity:api:calls`, `pnpm parity:api:calls:args` and `pnpm parity:api:extra:gate` green, with no `sleep` row anywhere in `call-mismatches.json` and `staleTags` at 0.
 
 ## Verification
 
 ```bash
-pnpm parity:api:calls && pnpm parity:api:calls:ruby-compat
+API_COMPARE_FORCE=1 pnpm parity:api --calls && pnpm parity:api:calls
 ```
