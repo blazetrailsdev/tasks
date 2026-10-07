@@ -1,6 +1,6 @@
 ---
 title: "API lacks Redirecting's raise_on_open_redirects accessor and the UrlFor / Instrumentation initialize chain"
-status: claimed
+status: in-progress
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8636
 claim: "2026-10-07T14:33:30Z"
 assignee: "pg-schema-statements-entry-module-tdz"
 blocked-by: null

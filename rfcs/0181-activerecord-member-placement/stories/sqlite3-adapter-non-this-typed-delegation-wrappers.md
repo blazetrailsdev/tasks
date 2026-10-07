@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-adapter.ts: replace the remaining non-this-typed delegation wrappers with the mixin functions"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null

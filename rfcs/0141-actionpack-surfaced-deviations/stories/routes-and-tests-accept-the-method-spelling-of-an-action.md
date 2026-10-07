@@ -1,6 +1,6 @@
 ---
 title: "actionpack: an application has to name its actions underscored; the method's camelCase spelling should resolve"
-status: draft
+status: in-progress
 updated: 2026-10-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8640
+claim: "2026-10-07T15:59:57Z"
+assignee: "routes-and-tests-accept-the-method-spelling-of-an-action"
 blocked-by: null
 closed-reason: null
 ---

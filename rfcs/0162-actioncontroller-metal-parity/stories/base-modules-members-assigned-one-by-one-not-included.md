@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Base copies Layouts, Renderers, Streaming, DataStreaming, Instrumentation, FormBuilder and CSP members instead of including the modules"
-status: ready
+status: in-progress
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8639
+claim: "2026-10-07T15:33:12Z"
+assignee: "base-modules-members-assigned-one-by-one-not-included"
 blocked-by: null
 closed-reason: null
 ---

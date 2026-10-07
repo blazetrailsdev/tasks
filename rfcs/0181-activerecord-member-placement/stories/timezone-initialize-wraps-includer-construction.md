@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Timezone#initialize wraps the includer's construction instead of running at Value's super site"
-status: ready
+status: in-progress
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8638
+claim: "2026-10-07T15:03:12Z"
+assignee: "sqlite3-adapter-delegation-wrappers-over-mixin-functions"
 blocked-by: null
 closed-reason: null
 ---

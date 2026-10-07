@@ -1,6 +1,6 @@
 ---
 title: "ActionController::API includes Instrumentation and the rest of MODULES, with Redirecting as a module"
-status: claimed
+status: in-progress
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#8636
 claim: "2026-10-07T14:33:30Z"
 assignee: "pg-schema-statements-entry-module-tdz"
 blocked-by: null

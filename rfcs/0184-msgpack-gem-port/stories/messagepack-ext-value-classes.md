@@ -1,16 +1,16 @@
 ---
 title: "MessagePack ext types 11,13-16 Range/URI/IPAddr/Pathname/Regexp (need value classes + Ruby-faithful to_s)"
-status: ready
-updated: 2026-07-27
+status: done
+updated: 2026-10-07
 rfc: "0184-msgpack-gem-port"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8637
+claim: "2026-10-07T15:04:32Z"
+assignee: "messagepack-ext-value-classes"
 blocked-by: null
 ---
 

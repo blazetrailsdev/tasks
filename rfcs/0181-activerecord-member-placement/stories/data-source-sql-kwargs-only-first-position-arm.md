@@ -1,6 +1,6 @@
 ---
 title: "activerecord: dataSourceSql drops the kwargs-in-first-position arm Rails' data_source_sql does not have"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
