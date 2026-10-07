@@ -30,24 +30,33 @@ it is keyed by that name: `errors.add(reflection.name)` in `validate_collection_
 `save_collection_association` (`vendor/rails/v8.0.2/activerecord/lib/active_record/autosave_association.rb:451`).
 `humanize("publishedBooks")` is `"Publishedbooks"`.
 
-`packages/activemodel/src/error.ts` `Error.fullMessage` therefore calls `underscore` on the name before
-`humanize` (trails#8663), so a full message reads "Published books is invalid". It carries no receipt:
-`fullMessage` is an uncompared pair, and `pnpm parity:api:arms:throws` reds an `@inventedArm` on a
-declaration no skeleton row is written for. `packages/activemodel/src/translation.ts`
-`humanAttributeName` keeps Rails' body, so `humanAttributeName("publishedBooks")` and a
-`%{attribute}` interpolation still read "Publishedbooks". Before that, one
-autosave site underscored the reflection name before `errors.add`, which keyed the error by a name
-no member answers (`read_attribute_for_validation` is `send`, `validations.rb:437`).
+So a full message for an error on a multi-word association reads "Publishedbooks is invalid" where
+Rails reads "Published books is invalid", and `humanAttributeName("publishedBooks")` and a
+`%{attribute}` interpolation read "Publishedbooks". `packages/activemodel/src/error.ts`
+`Error.fullMessage` and `packages/activemodel/src/translation.ts` `humanAttributeName` are Rails'
+bodies; the difference is the name's spelling.
+
+Before trails#8663 one autosave site underscored the reflection name before `errors.add`, so that one
+path read "Published books". The key it produced names no member, and `read_attribute_for_validation`
+is `send` (`validations.rb:437`), so trails#8663 made it `errors.add(reflection.name)`, as Rails has it.
+`packages/activerecord/src/autosave-association.test.ts` "rollbacks whole transaction and raises
+ActiveRecord::RecordInvalid when associations fail to #save! due to uniqueness validation failure"
+expects the member's spelling, "Validation failed: Publishedbooks is invalid", where Rails'
+`autosave_association_test.rb` expects "Validation failed: Published books is invalid".
+
+An `underscore` before `humanize` in `Error.fullMessage` was tried in trails#8663 and removed in
+review: `fullMessage` is an uncompared pair, so `pnpm parity:api:arms:throws` reds an `@inventedArm`
+receipt on it, and the call cannot be cited at its site.
 
 Not decided, and the owner's to decide:
 
 - whether an i18n lookup key for a camelCase attribute (`activerecord.attributes.author.publishedBooks`,
   `errors.models.author.attributes.publishedBooks.invalid`) keeps the member's spelling or takes the
   snake_case one a Rails locale file has;
-- whether the `underscore` before `humanize` is then a ratified shape (as CLAUDE.md § "An action's
-  name is its method's name" ratifies it for action names) or is removed by a different one.
+- where the conversion to the Rails spelling then lives (CLAUDE.md § "An action's name is its method's
+  name" ratifies an `underscore` at each site that turns an action name into a file name or locale key).
 
 ## Acceptance criteria
 
 - [ ] The spelling of a camelCase attribute name in a human name and in an i18n lookup key is decided and recorded.
-- [ ] The `underscore` call in `error.ts` `Error.fullMessage` is either converged away or cited against that decision, and `humanAttributeName` answers the same human name `fullMessage` does.
+- [ ] A full message and `humanAttributeName` for a camelCase association name read as Rails' do for the snake_case one, and the autosave test above expects Rails' string again.
