@@ -35,10 +35,10 @@ Sites on trails `deb7897894`:
 Each reaches the adapter through `ConnectionPool#withConnectionSync` where the
 Rails body wraps the work in `with_connection`:
 
-- `Relation#load_async` — `vendor/rails/v8.0.2/activerecord/lib/active_record/relation.rb:1137-1150`
-- `Relation#exec_main_query` — `vendor/rails/v8.0.2/activerecord/lib/active_record/relation.rb:1152-1167`
-- `FinderMethods#apply_join_dependency` — `vendor/rails/v8.0.2/activerecord/lib/active_record/relation/finder_methods.rb:594-620`
-- `QueryMethods#arel` — `vendor/rails/v8.0.2/activerecord/lib/active_record/relation/query_methods.rb:1724-1726`
+- `Relation#load_async` — `vendor/rails/v8.0.2/activerecord/lib/active_record/relation.rb:1138-1152`, `with_connection` at `:1139`
+- `Relation#exec_main_query` — `vendor/rails/v8.0.2/activerecord/lib/active_record/relation.rb:1423-1452`, `model.with_connection` TWICE, at `:1436` (the `eager_loading?` arm) and `:1449`
+- `FinderMethods#apply_join_dependency` — `vendor/rails/v8.0.2/activerecord/lib/active_record/relation/finder_methods.rb:457-478`, `model.with_connection` at `:474`
+- `QueryMethods#arel` — `vendor/rails/v8.0.2/activerecord/lib/active_record/relation/query_methods.rb:1594-1596`: `@arel ||= with_connection { |c| build_arel(c, aliases) }`
 
 **These are NOT covered by the landed CLAUDE.md § "`Relation` is evaluated by an
 async query".** That section ratifies `Relation#toSql` and the synchronous eager
