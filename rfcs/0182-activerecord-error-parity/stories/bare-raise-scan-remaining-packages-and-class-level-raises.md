@@ -1,6 +1,6 @@
 ---
 title: "Bare-raise scan: enroll the remaining packages and classify class-level raises"
-status: draft
+status: in-progress
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8628
+claim: "2026-10-07T13:33:13Z"
+assignee: "bare-raise-scan-remaining-packages-and-class-level-raises"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Base still wraps eleven Core class methods instead of carrying them from core.ts"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8627
+claim: "2026-10-07T13:03:11Z"
+assignee: "activerecord-base-delegation-wrappers-over-core-class-methods"
 blocked-by: null
 closed-reason: null
 ---

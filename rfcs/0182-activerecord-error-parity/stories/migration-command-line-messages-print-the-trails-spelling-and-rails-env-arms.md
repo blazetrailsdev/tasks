@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PendingMigrationError, NoEnvironmentInSchemaError and load_schema messages print the trails command line with Rails' env arms"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null

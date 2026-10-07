@@ -1,6 +1,6 @@
 ---
 title: "activerecord: a record built against a cold schema cache saves a row and gets no id"
-status: draft
+status: closed
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise changed: trails#8626 kept the schema warm on the save path, so the no-id insert never shipped; superseded by save-chain-schema-warm-and-cold-built-records"
 ---
 
 ## Context
