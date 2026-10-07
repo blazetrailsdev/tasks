@@ -1,6 +1,6 @@
 ---
 title: "ParamsWrapper::ClassMethods and its class_attribute are wired by hand on Base and API, not handed over by Concern"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

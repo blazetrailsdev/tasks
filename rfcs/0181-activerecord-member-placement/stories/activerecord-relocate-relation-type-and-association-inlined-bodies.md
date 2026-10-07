@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the Timezone, Delegation, FinderMethods and association-module bodies inlined into their hosts"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement

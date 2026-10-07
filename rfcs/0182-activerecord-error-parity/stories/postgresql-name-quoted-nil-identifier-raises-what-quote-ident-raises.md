@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PostgreSQL::Name#quoted raises what PG quote_ident raises for a nil identifier"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null

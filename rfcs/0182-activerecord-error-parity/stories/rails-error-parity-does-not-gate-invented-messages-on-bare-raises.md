@@ -1,6 +1,6 @@
 ---
 title: "rails-error-parity passes a ported class raised with an invented message where Rails raises it bare"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null

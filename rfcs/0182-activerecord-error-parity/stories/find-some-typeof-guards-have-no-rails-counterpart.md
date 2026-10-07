@@ -1,6 +1,6 @@
 ---
 title: "activerecord: find_some / find_some_ordered hand-roll MRI's coercion errors behind typeof guards Rails does not have"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null

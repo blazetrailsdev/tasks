@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 29 QueryMethods bodies inlined into relation.ts back to relation/query-methods.ts"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement

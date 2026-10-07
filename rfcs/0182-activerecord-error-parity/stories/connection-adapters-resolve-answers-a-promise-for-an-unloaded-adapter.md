@@ -1,6 +1,6 @@
 ---
 title: "ConnectionAdapters.resolve answers a Promise for an unloaded adapter"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null
