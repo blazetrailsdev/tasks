@@ -1,6 +1,6 @@
 ---
 title: "activerecord: find_some / find_some_ordered hand-roll MRI's coercion errors behind typeof guards Rails does not have"
-status: ready
+status: claimed
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-07T02:09:26Z"
+assignee: "environment-mismatch-error-message-matches-rails"
 blocked-by: null
 closed-reason: null
 ---

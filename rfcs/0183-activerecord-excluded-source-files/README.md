@@ -1,9 +1,9 @@
 ---
 rfc: "0183-activerecord-excluded-source-files"
 title: "activerecord excluded source files: port or measure every .rb on the unported list — split from RFC 0174"
-status: active
+status: closed
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-10-07
 owner: "@deanmarano"
 packages:
   - "activerecord"

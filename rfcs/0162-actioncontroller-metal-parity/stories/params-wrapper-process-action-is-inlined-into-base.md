@@ -1,6 +1,6 @@
 ---
 title: "ParamsWrapper#process_action is inlined into Base#processAction with a request guard and a params rebuild"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
