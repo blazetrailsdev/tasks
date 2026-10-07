@@ -77,6 +77,8 @@ deps:
   - mysql-quote-string-escapes-without-with-raw-connection
   - port-multibyte-chars-and-string-mb-chars
   - pg-quote-string-escapes-without-with-raw-connection
+  - activerecord-port-legacy-yaml-adapter-and-yaml-column
+  - activerecord-fixture-initialize-prepend-constructor
 deps-rfc:
   - 0178-activerecord-arms-parity-100
   - 0179-api-compare-crediting-rules
