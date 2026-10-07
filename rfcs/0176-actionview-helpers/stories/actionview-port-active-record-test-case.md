@@ -2,7 +2,7 @@
 title: "actionview: port ActiveRecordTestCase, SQLCounter and the remaining active_record_unit fixtures"
 status: draft
 updated: 2026-10-06
-rfc: "0183-activerecord-excluded-source-files"
+rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
 deps: []
