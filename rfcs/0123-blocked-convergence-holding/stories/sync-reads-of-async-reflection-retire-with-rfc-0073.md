@@ -33,37 +33,46 @@ Arming that flag does not retire the twins, because JS cannot block a sync reade
 on a checkout. The twins go when the pool seams converge (the sibling stories
 under the same RFC), or they are ratified.
 
-Citations on trails `0236d460b2`:
+Citations on trails `deb7897894`, after the re-scope below:
 
 - `@noRailsEquivalent CONVERGEABLE`:
-  - `connection-adapters/abstract/connection-pool.ts:269` `adapterReady`
-  - `:394` `leaseConnectionSync`
-  - `:415` `withConnectionSync`
-  - `:672` `discardBangDraining`
-  - `:791` `drainPendingCloses`
-  - `connection-adapters/abstract-adapter.ts:1269` `internalSchemaCache`
-- `@missingRailsCall with_connection`: `relation.ts:454,672,994` and
-  `relation/query-methods.ts:1298`.
-- `@missingRailsArgs where_sql`: `relation/finder-methods.ts:339`.
+  - `connection-adapters/abstract/connection-pool.ts:779` `acquireConnectionSync`
 
-Two of these fall under CLAUDE.md sections instead of convergence:
+That is the whole remaining surface. The other citations left this story:
 
-- `internalSchemaCache` belongs to the schema-cache sync readers. Those are to
-  be ratified in a trails CLAUDE.md section that has not landed yet, so its
-  receipt is re-cited when that section merges, not before.
-- The `relation*` sites belong to § "`Relation` is evaluated by an async query".
+- **Retired** with the two merged deps (trails#8007, #7846): `leaseConnectionSync`,
+  `adapterReady`, `discardBangDraining`, `drainPendingCloses`, and the
+  `@missingRailsArgs where_sql` at `relation/finder-methods.ts`. All five members
+  are gone from the tree.
+- **Re-cited `PERMANENT`**: `internalSchemaCache`
+  (`connection-adapters/abstract-adapter.ts`), against the CLAUDE.md section
+  § "Schema reflection peeks at a warm cache", which landed as trails#7831.
+- **Re-pointed** to `with-connection-sync-is-a-lease-no-claude-md-section-ratifies`
+  (RFC 0180): `withConnectionSync`. This story's old AC said to re-cite it
+  `PERMANENT` against § "`Relation` is evaluated by an async query", which is
+  not possible — that section and § "Schema reflection peeks at a warm cache"
+  both explicitly decline to ratify a synchronous lease, the latter naming
+  `withConnectionSync` in its scope boundary.
+- **Re-pointed** to
+  `relation-layer-with-connection-receipts-are-not-the-tosql-sites` (RFC 0180):
+  the four `@missingRailsCall with_connection` sites, now `relation.ts:477`
+  (`loadAsync`), `relation.ts:699` (`execMainQuery`),
+  `relation/finder-methods.ts:500` (`applyJoinDependency`) and
+  `relation/query-methods.ts:1134` (`arel`). The old AC sent them to
+  § "`Relation` is evaluated by an async query", but that section ratifies
+  `toSql`'s omitted calls, and `toSql`'s own receipts are already `PERMANENT` at
+  `relation.ts:1057-1058`. None of the four is `toSql`.
+
+`acquireConnectionSync` alone still waits on the pool-checkout chain:
+`connection-leasing-queue-internal-poll-carries-a-promise-arm` ->
+`sync-acquire-cannot-complete-reap-before-retry`, where RFC 0152 open question 2
+was answered no (`poll()` stays synchronous for `acquireConnectionSync`,
+`connection-pool.ts:526,531`).
 
 ## Acceptance criteria
 
-- Each pool member above is deleted as its seam converges, together with its
-  receipt: `leaseConnectionSync` with the lease story, and `discardBangDraining`
-  and `drainPendingCloses` with the exclusive-access story.
-- `adapterReady` is either converged onto an eagerly registered adapter class, or
-  filed as its own activerecord surfaced-deviations story with its receipt
-  re-cited there (RFC Open question 3).
-- Each site covered by a ratified CLAUDE.md section is re-cited `PERMANENT`
-  against that section. `withConnectionSync` and the `relation*` sites go to the
-  Relation section, and `internalSchemaCache` to the schema-cache section.
+- `acquireConnectionSync` is deleted together with its receipt as the
+  pool-checkout seam converges.
 - `git grep "CONVERGEABLE sync-reads-of-async-reflection-retire-with-rfc-0073"`
   returns 0 hits.
 - No new sync twin is added beside an async reader.
