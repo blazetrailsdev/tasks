@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Base's constructor enters Inheritance::ClassMethods#new for a bare new Klass"
-status: ready
+status: in-progress
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8659
+claim: "2026-10-07T21:15:54Z"
+assignee: "inheritance-class-methods-new-body-is-fused-into-base-constructor"
 blocked-by: null
 closed-reason: null
 ---

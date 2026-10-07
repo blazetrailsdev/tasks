@@ -1,6 +1,6 @@
 ---
 title: "activerecord: attributes_with_values returns the index_with hash"
-status: claimed
+status: done
 updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8660
 claim: "2026-10-07T20:34:16Z"
 assignee: "base-constructor-enters-inheritance-new-for-a-bare-new"
 blocked-by: null

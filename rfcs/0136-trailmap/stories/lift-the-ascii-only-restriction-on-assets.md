@@ -1,7 +1,7 @@
 ---
 title: "trailmap: lift the ASCII-only restriction on assets once trails serves static files intact"
-status: draft
-updated: 2026-10-05
+status: done
+updated: 2026-10-07
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#42
+claim: "2026-10-07T21:04:55Z"
+assignee: "lift-the-ascii-only-restriction-on-assets"
 blocked-by: null
 closed-reason: null
 ---

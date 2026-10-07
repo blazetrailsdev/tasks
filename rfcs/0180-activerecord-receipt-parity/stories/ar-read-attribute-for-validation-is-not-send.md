@@ -1,6 +1,6 @@
 ---
 title: "AR readAttributeForValidation is a 5-branch resolver where Rails aliases send"
-status: ready
+status: claimed
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-07T21:34:18Z"
+assignee: "ar-read-attribute-for-validation-is-not-send"
 blocked-by: null
 closed-reason: null
 ---

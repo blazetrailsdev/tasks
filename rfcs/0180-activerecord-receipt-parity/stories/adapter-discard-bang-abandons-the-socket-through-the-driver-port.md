@@ -1,6 +1,6 @@
 ---
 title: "activerecord: discard! abandons the socket through each driver's own method"
-status: ready
+status: in-progress
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8661
+claim: "2026-10-07T21:04:17Z"
+assignee: "adapter-discard-bang-abandons-the-socket-through-the-driver-port"
 blocked-by: null
 closed-reason: null
 ---

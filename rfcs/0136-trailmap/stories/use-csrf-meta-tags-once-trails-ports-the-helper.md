@@ -1,7 +1,7 @@
 ---
 title: "trailmap: replace the dashboard's hand-passed CSRF token with csrf_meta_tags"
-status: draft
-updated: 2026-10-06
+status: in-progress
+updated: 2026-10-07
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#43
+claim: "2026-10-07T21:07:30Z"
+assignee: "use-csrf-meta-tags-once-trails-ports-the-helper"
 blocked-by: null
 closed-reason: null
 ---

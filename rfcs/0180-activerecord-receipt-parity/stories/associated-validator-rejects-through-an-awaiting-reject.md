@@ -1,6 +1,6 @@
 ---
 title: "activerecord: AssociatedValidator#validate_each rejects through an awaiting reject"
-status: claimed
+status: done
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8660
 claim: "2026-10-07T20:34:16Z"
 assignee: "base-constructor-enters-inheritance-new-for-a-bare-new"
 blocked-by: null
