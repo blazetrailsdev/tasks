@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-adapter.ts: quoteDefaultExpression is a second body for the SQLite3::Quoting mixin function"
-status: ready
+status: in-progress
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8652
+claim: "2026-10-07T18:33:29Z"
+assignee: "sqlite3-adapter-quote-default-expression-duplicates-quoting-mixin"
 blocked-by: null
 closed-reason: null
 ---

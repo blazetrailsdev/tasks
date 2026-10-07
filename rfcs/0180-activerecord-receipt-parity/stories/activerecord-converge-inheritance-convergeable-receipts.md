@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the 5 CONVERGEABLE receipts in inheritance.ts"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["activerecord-converge-inheritance-find-sti-class-rows"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8653
+claim: "2026-10-07T18:51:05Z"
+assignee: "activerecord-converge-inheritance-convergeable-receipts"
 blocked-by: null
 closed-reason: null
 ---

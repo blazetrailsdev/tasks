@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SignedId::RelationMethods lives in signed-id.ts, not the Relation class body"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8585
+claim: "2026-10-07T18:03:15Z"
+assignee: "signed-id-relation-methods-live-in-relation-ts"
 blocked-by: null
 closed-reason: null
 ---

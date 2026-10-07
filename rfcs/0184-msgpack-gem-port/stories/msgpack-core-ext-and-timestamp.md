@@ -1,6 +1,6 @@
 ---
 title: "msgpack core_ext to_msgpack, and the gem's Time / timestamp ext type -1"
-status: ready
+status: in-progress
 updated: 2026-10-07
 rfc: "0184-msgpack-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["msgpack-package-and-vendor-source"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8650
+claim: "2026-10-07T18:16:51Z"
+assignee: "msgpack-constants-seated-by-their-defining-module"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port Hash.ruby2_keywords_hash? / Hash.ruby2_keywords_hash to ruby-compat"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0169-activejob-package-port"
 cluster: null

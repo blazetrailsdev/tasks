@@ -1,7 +1,7 @@
 ---
 title: "activerecord: DerivedSecretKeyProvider derives its keys without a fabricated receiver"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8652
+claim: "2026-10-07T18:33:29Z"
+assignee: "sqlite3-adapter-quote-default-expression-duplicates-quoting-mixin"
 blocked-by: null
 closed-reason: null
 ---

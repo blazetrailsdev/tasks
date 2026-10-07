@@ -1,7 +1,7 @@
 ---
 title: "sync-reads-of-async-reflection-retire-with-rfc-0073"
 status: blocked
-updated: 2026-09-29
+updated: 2026-10-07
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -17,7 +17,7 @@ priority: null
 pr: null
 claim: "2026-09-04T17:20:47Z"
 assignee: "sync-reads-of-async-reflection-retire-with-rfc-0073"
-blocked-by: "Re-verified 2026-09-29 on origin/main: steps 1-2 done (trails#8007, #7846); step 3 connection-leasing-queue-internal-poll-carries-a-promise-arm is BLOCKED (not ready as previously noted) on sync-acquire-cannot-complete-reap-before-retry, itself blocked. The schema-cache CLAUDE.md section has landed (trails#7831), so the internalSchemaCache re-cite AC is now doable, but leaseConnectionSync (connection-pool.ts:383), acquireConnectionSync (:521) and the relation.ts:463/682/969 + query-methods.ts:1236 with_connection receipts still wait on the pool chain."
+blocked-by: "Narrowed 2026-10-07 (trails#8651): only acquireConnectionSync (connection-pool.ts:779) still cites this story. The other six citations left it, all still CONVERGEABLE - nothing was ratified. withConnectionSync -> with-connection-sync-is-a-lease-no-claude-md-section-ratifies; the four relation-layer with_connection sites (loadAsync, execMainQuery, applyJoinDependency, arel) -> relation-layer-with-connection-receipts-are-not-the-tosql-sites; internalSchemaCache -> internal-schema-cache-is-the-sync-twin-of-schema-reflection-cache (all RFC 0180). internalSchemaCache was briefly promoted to PERMANENT in trails#8651 and REVERTED in the same PR: Rails has a counterpart, the private SchemaReflection#cache(pool) (schema_cache.rb:106-108), already ported async at schema-cache.ts:177-181, so the getter is its sync twin with Rails' load_cache(pool) arm dropped - an omitted query, not a warm-memo peek, which CLAUDE.md section 'Schema reflection peeks at a warm cache' does not ratify. Remaining blocker unchanged: connection-leasing-queue-internal-poll-carries-a-promise-arm -> sync-acquire-cannot-complete-reap-before-retry."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Give ActiveJob's classes their Ruby constant names so job_class / _aj_serialized round-trip through constantize"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0169-activejob-package-port"
 cluster: null

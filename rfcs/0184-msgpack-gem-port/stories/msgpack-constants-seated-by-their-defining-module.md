@@ -1,6 +1,6 @@
 ---
 title: "msgpack: each constant is seated on MessagePack by its defining module"
-status: ready
+status: in-progress
 updated: 2026-10-07
 rfc: "0184-msgpack-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8650
+claim: "2026-10-07T18:16:51Z"
+assignee: "msgpack-constants-seated-by-their-defining-module"
 blocked-by: null
 closed-reason: null
 ---

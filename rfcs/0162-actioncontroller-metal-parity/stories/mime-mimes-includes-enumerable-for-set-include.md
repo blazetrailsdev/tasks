@@ -1,6 +1,6 @@
 ---
 title: "Mime::Mimes includes Enumerable, so Collector#method_missing asks SET.include? directly"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

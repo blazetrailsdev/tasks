@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the CONVERGEABLE receipts in schema-dumper, abstract-mysql-adapter, encryptable-record, sqlite/"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable

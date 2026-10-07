@@ -1,6 +1,6 @@
 ---
 title: "rbObjClass answers String for a Uint8Array subclass, so a String-subclass ext type is never found"
-status: draft
+status: done
 updated: 2026-10-07
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8647
+claim: "2026-10-07T18:03:39Z"
+assignee: "rb-obj-class-reads-a-uint8array-subclass-as-plain-string"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "actionpack: an action is named by its method, in the method's spelling and no other"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
