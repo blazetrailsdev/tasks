@@ -66,8 +66,8 @@ constant: `ClassMethods#deserialize` raises the `NameError` from
 
 ## Acceptance criteria
 
-- [ ] The chosen mechanism is written in the package README and at the one reader every `self.class.name` site uses.
-- [ ] `constantize("ActiveJob::Serializers::ObjectSerializer")`, `…::QueueAdapters::InlineAdapter` and `ActiveJob::DeserializationError` resolve.
+- [ ] The chosen mechanism is written in the package README, naming the one reader every `self.class.name` site uses (ruby-compat's `rbModName`, which replaced `registeredConstantName`).
+- [ ] `constantize("ActiveJob::Base")` resolves and `rbModName(Base)` is `"ActiveJob::Base"`. The serializers, adapters and error classes are not ported when this story runs (`port-activejob-arguments`, which ports `DeserializationError`, depends on it), so each is seated by the story that ports its file, following the README rule; `activejob-namespace-load-paths-and-eager-load-complete` checks the seats landed.
 - [ ] A test round-trips a registered job class name through `constantize`, and an unregistered one raises `NameError`.
 
 ## Definition of done
