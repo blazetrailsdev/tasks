@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Core#initialize body is inlined in Base's constructor"
-status: blocked
-updated: 2026-10-02
+status: closed
+updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Core#initialize (core.rb:470-482) wraps super: a function in core.ts cannot call super(), JS forbids this before super() returns, and ruby-compat's module [initialize] hook runs above ActiveModel::API#initialize rather than around it. Same wall as base-constructor-calls-init-internals-not-activemodel."
-closed-reason: null
+blocked-by: null
+closed-reason: "Blocker cleared and the work landed in trails#8439 (4c3898e0f0): core.ts carries Core#initialize as the function constructor, wrapping super via SuperMethods.superMethod(this, 'initialize') and registered with mod.defineMethod('initialize', constructor); Model's constructor reaches it through this.initialize. On origin/main babd453afa a fresh parity:api:extra --package activerecord no longer lists 'base.ts constructor inlined-from core.rb (initialize)', and base.ts carries no @missingRailsCall init_internals tag (sibling base-constructor-calls-init-internals-not-activemodel is done, same PR). The callback tail still in Base's constructor is owned by RFC 0174 drafts core-initialize-runs-initialize-internals-callback-after-assign-attributes and initialize-callbacks-are-suppressed-by-mutating-the-class."
 ---
 
 ## Context

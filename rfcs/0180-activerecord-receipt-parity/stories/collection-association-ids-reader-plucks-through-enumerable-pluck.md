@@ -1,6 +1,6 @@
 ---
 title: "activerecord: ids_reader is three Enumerable#pluck arms, and pluck sends [] to a record"
-status: ready
+status: in-progress
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8665
+claim: "2026-10-07T23:04:17Z"
+assignee: "collection-association-ids-reader-plucks-through-enumerable-pluck"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Base's constructor enters Inheritance::ClassMethods#new for a bare new Klass"
-status: in-progress
+status: closed
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
@@ -14,7 +14,7 @@ pr: trails#8659
 claim: "2026-10-07T21:15:54Z"
 assignee: "inheritance-class-methods-new-body-is-fused-into-base-constructor"
 blocked-by: null
-closed-reason: null
+closed-reason: "Owner decision on trails#8659: records are built with the JS new expression only and static Klass.new is deleted, so the constructor re-entry arm and _instantiation slot this story owned never ship. Recorded in CLAUDE.md § A record is built with new Klass only."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "msgpack: port the rest of factory_spec.rb"
-status: ready
+status: in-progress
 updated: 2026-10-07
 rfc: "0184-msgpack-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8667
+claim: "2026-10-07T23:41:59Z"
+assignee: "msgpack-factory-spec-remaining-tests"
 blocked-by: null
 closed-reason: null
 ---

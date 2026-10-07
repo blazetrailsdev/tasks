@@ -1,6 +1,6 @@
 ---
 title: "activerecord: DatabaseConfig#validate! makes no adapter load call"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

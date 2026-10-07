@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Inheritance::ClassMethods#new lives in inheritance.ts; its body leaves Base's constructor"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null

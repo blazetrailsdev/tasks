@@ -1,6 +1,6 @@
 ---
 title: "activerecord: ForeignAssociation is a module of instance methods, not a class with a static"
-status: ready
+status: in-progress
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8666
+claim: "2026-10-07T23:34:20Z"
+assignee: "connection-handler-pool-manager-map-onto-concurrent-map"
 blocked-by: null
 closed-reason: null
 ---

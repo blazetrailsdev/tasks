@@ -1,9 +1,9 @@
 ---
 rfc: "0181-activerecord-member-placement"
 title: "activerecord member placement: every body in the file that mirrors its .rb — split from RFC 0174"
-status: active
+status: closed
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-10-07
 owner: "@deanmarano"
 packages:
   - "activerecord"

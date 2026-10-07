@@ -1,6 +1,6 @@
 ---
 title: "activerecord: JoinPart and CollectionProxy take [Symbol.iterator] from ruby-compat's Enumerable"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings

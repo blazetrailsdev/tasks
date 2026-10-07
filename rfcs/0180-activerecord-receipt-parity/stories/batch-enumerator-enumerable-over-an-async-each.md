@@ -1,6 +1,6 @@
 ---
 title: "activerecord: BatchEnumerator includes an Enumerable derived from its async each (sum, to_a, iteration)"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings

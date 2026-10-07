@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Persistence#becomes is allocate + initialize; the two suppress statics leave Base"
-status: draft
+status: closed
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of persistence-becomes-allocates-then-initializes-without-suppress-flags (RFC 0178, ready), filed without checking the backlog first."
 ---
 
 ## Context
