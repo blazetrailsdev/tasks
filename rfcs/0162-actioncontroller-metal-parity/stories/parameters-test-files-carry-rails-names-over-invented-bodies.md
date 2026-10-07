@@ -32,10 +32,20 @@ rest: `accessors.test.ts`, `equality.test.ts`, `mutators.test.ts`,
 `mass-assignment-empty.test.ts`, `nested-parameters-permit.test.ts`,
 `parameters-expect.test.ts`, `parameters-permit.test.ts`.
 
+Seven rewrites do not fit one PR, so this story is narrowed to
+`equality.test.ts`, `mutators.test.ts` and `nested-parameters-permit.test.ts`.
+The rest is owned by
+`parameters-accessors-test-carries-rails-names-over-invented-bodies`,
+`parameters-permit-test-carries-rails-names-over-invented-bodies` and
+`parameters-expect-test-carries-rails-names-over-invented-bodies` (which also
+takes `mass-assignment-empty.test.ts`).
+
 ## Acceptance criteria
 
-- [ ] Each listed file is rewritten from its Rails counterpart: the same
-      `setup` fixture, the same statements and the same assertions per test.
+- [ ] `equality.test.ts`, `mutators.test.ts` and
+      `nested-parameters-permit.test.ts` are rewritten from their Rails
+      counterparts: the same `setup` fixture, the same statements and the same
+      assertions per test.
 - [ ] A test whose Rails assertions fail against the port is parked `it.skip`
       under a `BLOCKED:` line naming a filed story, with the Rails body kept.
 - [ ] `pnpm parity:test:assertions` stays green and the actioncontroller
