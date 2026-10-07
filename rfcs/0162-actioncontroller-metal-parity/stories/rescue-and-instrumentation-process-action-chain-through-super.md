@@ -1,7 +1,7 @@
 ---
 title: "Rescue and Instrumentation process_action are module methods chained through super, not a hand-written nest in Base"
-status: in-progress
-updated: 2026-10-06
+status: done
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

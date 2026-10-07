@@ -1,6 +1,6 @@
 ---
 title: "activerecord: quote/typeCast JS Date guard arms have no Rails counterpart"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null

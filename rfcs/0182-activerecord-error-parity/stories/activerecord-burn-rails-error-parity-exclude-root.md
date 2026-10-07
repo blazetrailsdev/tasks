@@ -1,7 +1,7 @@
 ---
 title: "activerecord: raise Rails' error classes in the 20 root files grandfathered by rails-error-parity"
-status: in-progress
-updated: 2026-10-06
+status: done
+updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: errors
 packages: ["activerecord"]

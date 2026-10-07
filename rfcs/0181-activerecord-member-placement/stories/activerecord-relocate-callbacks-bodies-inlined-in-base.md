@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 17 Callbacks bodies inlined into base.ts back to callbacks.ts"
-status: claimed
+status: done
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#8609
 claim: "2026-10-07T00:58:48Z"
 assignee: "activerecord-relocate-callbacks-bodies-inlined-in-base"
 blocked-by: null

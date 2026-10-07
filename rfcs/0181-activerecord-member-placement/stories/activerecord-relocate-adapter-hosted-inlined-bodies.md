@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the database/schema-statement bodies inlined into the adapter classes"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement

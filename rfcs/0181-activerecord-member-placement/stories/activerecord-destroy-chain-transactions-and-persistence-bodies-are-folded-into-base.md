@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Transactions#destroy and Persistence#destroy are folded into persistence.ts destroy and Base#_destroyRow"
-status: draft
+status: done
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8609
+claim: "2026-10-07T01:20:14Z"
+assignee: "activerecord-destroy-chain-transactions-and-persistence-bodies-are-folded-into-base"
 blocked-by: null
 closed-reason: null
 ---

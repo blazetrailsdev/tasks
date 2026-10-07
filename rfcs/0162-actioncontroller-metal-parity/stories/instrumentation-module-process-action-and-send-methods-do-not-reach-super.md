@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Instrumentation: process_action, send_file, send_data and redirect_to do not reach super; Logger is not a Concern"
-status: draft
+status: closed
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by instrumentation-redirect-to-does-not-reach-super-and-logger-is-not-a-concern; process_action/send_file/send_data converged in trails#8606"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: delete the PolymorphicReflection / RuntimeReflection className overrides Rails does not define"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null
