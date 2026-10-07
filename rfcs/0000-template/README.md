@@ -6,6 +6,7 @@ created: YYYY-MM-DD
 updated: YYYY-MM-DD
 owner: "@deanmarano"
 packages: []
+# max-est-loc: 2500   # optional: lifts the 700 est-loc ceiling for this RFC's stories (say why in prose)
 clusters:
   - cluster-name-1
   - cluster-name-2

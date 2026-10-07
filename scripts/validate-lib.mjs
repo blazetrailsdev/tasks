@@ -26,6 +26,18 @@ export const MAX_LINES = 2000;
 // LOC sweep (PR #7195) and the ceiling has nothing left to say about it.
 export const MAX_EST_LOC = 700;
 
+// An RFC may lift that ceiling for its own stories with `max-est-loc: N` in its
+// README frontmatter. It is an owner decision recorded where the stories live,
+// for an RFC whose stories are cut as working increments rather than
+// ceiling-sized slices (the first one: the Ruby-to-TS generator, "delivered
+// working more than shipped small", 2026-10-07). The override has to be
+// honoured by the worker's PR ceiling too — the RFC README says so in its own
+// section — or the story still cannot ship as one PR.
+export function estLocCeiling(parent) {
+  const override = parent?.frontmatter?.["max-est-loc"];
+  return Number.isInteger(override) && override > MAX_EST_LOC ? override : MAX_EST_LOC;
+}
+
 // Numeric-prefix pairs that legitimately share a four-digit prefix and predate
 // the duplicate-prefix guard below. Each entry is the shared prefix; the two
 // dirs were finalized concurrently before finalize-rfc.mjs serialized number
@@ -181,8 +193,12 @@ function checkStory(s, { parent, duplicateOf, err }) {
   if (fm["deps-rfc"] && !Array.isArray(fm["deps-rfc"])) err(s.file, `deps-rfc must be an array`);
   if (fm["est-loc"] !== null && fm["est-loc"] !== undefined) {
     if (!Number.isInteger(fm["est-loc"])) err(s.file, `est-loc must be integer or null`);
-    else if (fm["est-loc"] > MAX_EST_LOC && !isTerminal(fm.status))
-      err(s.file, `est-loc ${fm["est-loc"]} exceeds the ${MAX_EST_LOC} LOC per-PR ceiling`);
+    else if (fm["est-loc"] > estLocCeiling(parent) && !isTerminal(fm.status))
+      err(
+        s.file,
+        `est-loc ${fm["est-loc"]} exceeds the ${estLocCeiling(parent)} LOC per-PR ceiling` +
+          (estLocCeiling(parent) > MAX_EST_LOC ? ` (${s.rfc} max-est-loc)` : ""),
+      );
   }
   // priority: optional integer; lower = higher ready-queue priority (absent = unprioritized)
   if (fm.priority != null && (!Number.isInteger(fm.priority) || fm.priority < 0)) {
@@ -293,6 +309,11 @@ export function validate({ rfcs, stories }) {
     }
     if (fm.clusters && !Array.isArray(fm.clusters)) err(r.file, `clusters must be an array`);
     if (fm.packages && !Array.isArray(fm.packages)) err(r.file, `packages must be an array`);
+    if (fm["max-est-loc"] != null) {
+      if (!Number.isInteger(fm["max-est-loc"]) || fm["max-est-loc"] <= MAX_EST_LOC) {
+        err(r.file, `max-est-loc must be an integer above the ${MAX_EST_LOC} default ceiling`);
+      }
+    }
     for (const key of ["created", "updated"]) {
       if (fm[key] != null && !isYmdDate(fm[key])) {
         err(r.file, `${key} must be a YYYY-MM-DD date (got ${JSON.stringify(fm[key])})`);

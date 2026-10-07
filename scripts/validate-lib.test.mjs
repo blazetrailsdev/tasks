@@ -355,6 +355,31 @@ test("est-loc above the ceiling is legal once the story is done", () => {
   );
 });
 
+test("an RFC's max-est-loc lifts the ceiling for its own stories", () => {
+  expectClean(
+    validate({
+      rfcs: [rfc({}, { "max-est-loc": 2500 })],
+      stories: [story({}, { "est-loc": 2200 })],
+    }).errors,
+  );
+});
+
+test("a story above its RFC's max-est-loc is rejected, naming the override", () => {
+  const { errors } = validate({
+    rfcs: [rfc({}, { "max-est-loc": 2500 })],
+    stories: [story({}, { "est-loc": 2600 })],
+  });
+  expectError(errors, "exceeds the 2500 LOC per-PR ceiling (0001-alpha max-est-loc)");
+});
+
+test("max-est-loc at or below the default ceiling is rejected", () => {
+  const { errors } = validate({
+    rfcs: [rfc({}, { "max-est-loc": MAX_EST_LOC })],
+    stories: [story()],
+  });
+  expectError(errors, `max-est-loc must be an integer above the ${MAX_EST_LOC} default ceiling`);
+});
+
 test("est-loc above the ceiling is legal once the story is closed", () => {
   expectClean(
     validate({
