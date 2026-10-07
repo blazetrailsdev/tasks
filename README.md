@@ -24,6 +24,11 @@ cannot conflict.
 | **Markdown** | `title`, `rfc`, `cluster`, `deps`, `deps-rfc`, `est-loc`, `packages`, body prose          | humans/agents via PR     |
 | **DB**       | `status`, `pr`, `claim`, `assignee`, `blocked-by`, `closed-reason`, `updated`, `priority` | the CLI's mutation verbs |
 
+- **`est-loc` is capped** at `MAX_EST_LOC` (700, `scripts/validate-lib.mjs`),
+  the per-PR ceiling workers are given. An RFC whose stories are deliberately
+  cut as working increments larger than one ceiling-sized PR may lift it for
+  its own stories with `max-est-loc: N` in its README frontmatter; the README
+  must then also say so in prose, since the worker's PR ceiling has to follow.
 - **`tasks ingest`** (git → DB) upserts only markdown-owned columns. It is the
   sole creator and deleter of rows. Frontmatter `status` and `priority` are
   honored **on insert only**, as birth seeds — never as sync values.
