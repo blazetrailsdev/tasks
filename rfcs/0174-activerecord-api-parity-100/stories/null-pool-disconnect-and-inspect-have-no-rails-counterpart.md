@@ -2,7 +2,7 @@
 title: "NullPool#disconnect and #inspect have no Rails counterpart"
 status: draft
 updated: 2026-10-07
-rfc: "0182-activerecord-error-parity"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps: []
