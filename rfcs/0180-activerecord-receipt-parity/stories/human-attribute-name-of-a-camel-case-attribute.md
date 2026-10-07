@@ -1,6 +1,6 @@
 ---
 title: "activemodel: human_attribute_name and its i18n keys for a camelCase attribute name"
-status: draft
+status: closed
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "refiled as human-attribute-name-underscores-a-camel-case-attribute with a corrected body"
 ---
 
 ## Context

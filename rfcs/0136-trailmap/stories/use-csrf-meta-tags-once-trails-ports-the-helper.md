@@ -1,6 +1,6 @@
 ---
 title: "trailmap: replace the dashboard's hand-passed CSRF token with csrf_meta_tags"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0136-trailmap"
 cluster: null

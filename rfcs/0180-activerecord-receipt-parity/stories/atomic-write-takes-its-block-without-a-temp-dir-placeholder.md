@@ -1,6 +1,6 @@
 ---
 title: "activesupport: File.atomic_write takes its block without a temp_dir placeholder"
-status: ready
+status: done
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8662
+claim: "2026-10-07T22:04:17Z"
+assignee: "atomic-write-takes-its-block-without-a-temp-dir-placeholder"
 blocked-by: null
 closed-reason: null
 ---

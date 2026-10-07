@@ -1,6 +1,6 @@
 ---
 title: "activerecord: JoinPart and CollectionProxy take [Symbol.iterator] from ruby-compat's Enumerable"
-status: claimed
+status: in-progress
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: trails#8663
 claim: "2026-10-07T21:34:18Z"
 assignee: "ar-read-attribute-for-validation-is-not-send"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Delegation.create forwards its arguments so target_scope can call AssociationRelation.create"
-status: claimed
+status: done
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#8449
 claim: "2026-10-07T21:34:18Z"
 assignee: "ar-read-attribute-for-validation-is-not-send"
 blocked-by: null

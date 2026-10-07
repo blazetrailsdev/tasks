@@ -1,6 +1,6 @@
 ---
 title: "activerecord: _enum's undeclared-type raise does not read a cold-schema replay flag"
-status: ready
+status: blocked
 updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-07T22:34:15Z"
+assignee: "batch-enumerator-enumerable-over-an-async-each"
+blocked-by: "Converged shape measured and falsified (2026-10-07). With _defaultAttributes skipping applyPendingAttributeModifications over a cold schema and the decorator on Rails' single condition, enum.test.ts and enum-cold-schema.trails.test.ts are green, but every model that declares attribute() and is constructed before its schema is warm loses the declared attribute: 18 tests red in attribute-methods.trails.test.ts and attributes.test.ts alone (UnknownAttributeError: unknown attribute 'title' for Legacy; _defaultAttributes 'replays user pending queue'), and 162 files under packages/ hold an ad-hoc 'class X extends Base' with a declared attribute, 76 of them in activerecord/src with no fixtures() warm. The replay skip cannot be told apart per modification: apply_pending_attribute_modifications (attribute_registration.rb) has no seam between a PendingType/PendingDefault, which cold callers need, and the enum's PendingDecorator. Unblocks when cold construction of a declared-attribute model has a decided answer (warm first, or raise), or a shape is chosen that withholds only decorators over a cold schema."
 closed-reason: null
 ---
 
