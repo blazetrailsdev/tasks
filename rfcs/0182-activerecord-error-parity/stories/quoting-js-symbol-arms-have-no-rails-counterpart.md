@@ -1,6 +1,6 @@
 ---
 title: "activerecord: quote/typeCast JS Symbol arms have no Rails counterpart"
-status: ready
+status: done
 updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8600
 claim: null
 assignee: null
 blocked-by: null

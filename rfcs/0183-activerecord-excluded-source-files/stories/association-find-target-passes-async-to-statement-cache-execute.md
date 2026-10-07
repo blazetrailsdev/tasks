@@ -1,6 +1,6 @@
 ---
 title: "Association#find_target passes async: through to StatementCache#execute"
-status: draft
+status: in-progress
 updated: 2026-10-06
 rfc: "0183-activerecord-excluded-source-files"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8605
+claim: "2026-10-06T23:33:11Z"
+assignee: "association-find-target-passes-async-to-statement-cache-execute"
 blocked-by: null
 closed-reason: null
 ---

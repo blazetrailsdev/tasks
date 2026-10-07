@@ -1,6 +1,6 @@
 ---
 title: "Rescue and Instrumentation process_action are module methods chained through super, not a hand-written nest in Base"
-status: draft
+status: in-progress
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8606
+claim: "2026-10-06T23:54:42Z"
+assignee: "rescue-and-instrumentation-process-action-chain-through-super"
 blocked-by: null
 closed-reason: null
 ---

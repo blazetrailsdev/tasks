@@ -1,6 +1,6 @@
 ---
 title: "Metal#response= stores true in @_response_body and accepts a Rack response"
-status: ready
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8604
+claim: "2026-10-06T23:03:13Z"
+assignee: "database-config-new-connection-invents-a-still-loading-arm"
 blocked-by: null
 closed-reason: null
 ---

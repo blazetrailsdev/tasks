@@ -1,6 +1,6 @@
 ---
 title: "activerecord: raise Rails' error classes in the 20 associations-relation-encryption-tasks files grandfathered by rails-error-parity"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0182-activerecord-error-parity"
 cluster: errors

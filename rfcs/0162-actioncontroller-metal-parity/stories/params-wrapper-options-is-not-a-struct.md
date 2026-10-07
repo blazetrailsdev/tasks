@@ -1,6 +1,6 @@
 ---
 title: "ParamsWrapper::Options is a hand-rolled class with its own toH, not a Struct with super readers"
-status: in-progress
+status: done
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

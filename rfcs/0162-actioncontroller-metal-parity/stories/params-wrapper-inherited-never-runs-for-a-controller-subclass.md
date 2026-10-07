@@ -1,6 +1,6 @@
 ---
 title: "ParamsWrapper's inherited body never runs, so a controller subclass keeps its parent's wrapper klass and name"
-status: ready
+status: in-progress
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8605
+claim: "2026-10-06T23:33:11Z"
+assignee: "association-find-target-passes-async-to-statement-cache-execute"
 blocked-by: null
 closed-reason: null
 ---

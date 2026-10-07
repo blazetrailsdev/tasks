@@ -1,6 +1,6 @@
 ---
 title: "ActionController::API includes Rescue"
-status: draft
+status: in-progress
 updated: 2026-10-06
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8606
+claim: "2026-10-06T23:57:32Z"
+assignee: "action-controller-api-includes-rescue"
 blocked-by: null
 closed-reason: null
 ---
