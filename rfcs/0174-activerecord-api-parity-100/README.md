@@ -21,6 +21,7 @@ clusters:
   - skips
   - tooling
   - "excluded-files"
+  - "placement"
 related-rfcs:
   - "0023-surfaced-deviations"
   - "0082-ruby-ts-idiom-conversion-classes"

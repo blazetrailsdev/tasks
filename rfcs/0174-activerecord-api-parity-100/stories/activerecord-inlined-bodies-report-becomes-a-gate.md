@@ -2,7 +2,7 @@
 title: "tooling: gate parity:api:extra's inlined-module-bodies report at zero for activerecord"
 status: ready
 updated: 2026-09-30
-rfc: "0181-activerecord-member-placement"
+rfc: "0174-activerecord-api-parity-100"
 cluster: placement
 packages: ["activerecord"]
 deps:

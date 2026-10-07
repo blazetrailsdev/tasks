@@ -2,7 +2,7 @@
 title: "activerecord: move the Persistence / ModelSchema / CounterCache bodies inlined into base.ts"
 status: ready
 updated: 2026-09-30
-rfc: "0181-activerecord-member-placement"
+rfc: "0174-activerecord-api-parity-100"
 cluster: placement
 packages: ["activerecord"]
 deps: ["activerecord-converge-schema-load-and-primary-key-convergeable-receipts"]

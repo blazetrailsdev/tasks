@@ -2,7 +2,7 @@
 title: "activerecord: burn parity:api:moves' base-hosted relocations (298 methods) to zero"
 status: ready
 updated: 2026-09-30
-rfc: "0181-activerecord-member-placement"
+rfc: "0174-activerecord-api-parity-100"
 cluster: placement
 packages: ["activerecord"]
 deps:
