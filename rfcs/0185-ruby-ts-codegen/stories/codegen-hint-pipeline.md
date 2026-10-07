@@ -2,7 +2,7 @@
 title: "Hint pipeline: sidecar format and validator, TracePoint recorder, model hint pass, and the activejob sidecar"
 status: draft
 updated: 2026-10-07
-rfc: "0000-ruby-ts-codegen"
+rfc: "0185-ruby-ts-codegen"
 cluster: tooling
 packages: ["scripts"]
 deps: ["codegen-constants-and-skeleton"]

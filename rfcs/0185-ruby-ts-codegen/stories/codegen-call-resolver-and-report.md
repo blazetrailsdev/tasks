@@ -2,7 +2,7 @@
 title: "Probe lowering, checker-backed call resolver and the resolution report CLI, carrying the kill criterion"
 status: draft
 updated: 2026-10-07
-rfc: "0000-ruby-ts-codegen"
+rfc: "0185-ruby-ts-codegen"
 cluster: tooling
 packages: ["scripts"]
 deps: ["codegen-constants-and-skeleton", "codegen-hint-pipeline"]
@@ -96,7 +96,7 @@ split this story.
       only, at least 85% of `activejob/lib` call sites (external adapters
       excluded) resolve. Below that, the number goes into the RFC README's
       Verification section, this story is still `done`, and the owner runs
-      `tasks rfc-status 0000-ruby-ts-codegen postponed` with the figure as
+      `tasks rfc-status 0185-ruby-ts-codegen postponed` with the figure as
       the reason; the three later stories stay `draft`. The bar and its
       basis are in the README's "The kill criterion".
 

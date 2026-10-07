@@ -2,7 +2,7 @@
 title: "IR node set, Prism bridge and IR builder, with an IR dump CLI over activejob"
 status: draft
 updated: 2026-10-07
-rfc: "0000-ruby-ts-codegen"
+rfc: "0185-ruby-ts-codegen"
 cluster: tooling
 packages: ["scripts"]
 deps: []

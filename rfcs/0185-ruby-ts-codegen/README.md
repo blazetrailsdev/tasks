@@ -1,5 +1,5 @@
 ---
-rfc: "0000-ruby-ts-codegen"
+rfc: "0185-ruby-ts-codegen"
 title: "ruby-ts-codegen: an IR-based Ruby-to-TypeScript generator, piloted on activejob"
 status: draft
 created: 2026-10-07
@@ -18,7 +18,7 @@ related-rfcs:
 priority: 5
 ---
 
-# RFC — ruby-ts-codegen
+# RFC 0185 — ruby-ts-codegen
 
 ## Summary
 
@@ -310,7 +310,7 @@ external adapters, with the committed sidecar.
   entries included is reported for information and does not count.
 - **On failure:** the resolver story is still `done` (it delivered the
   report and the number), the number goes into this README's Verification,
-  and the owner runs `tasks rfc-status 0000-ruby-ts-codegen postponed` with
+  and the owner runs `tasks rfc-status 0185-ruby-ts-codegen postponed` with
   the figure as the reason. The three stories after it stay `draft`; a
   postponed RFC downgrades any `ready` story to `draft` in the index, so no
   `blocked-by` is set and nothing is closed. Reactivating the RFC restores

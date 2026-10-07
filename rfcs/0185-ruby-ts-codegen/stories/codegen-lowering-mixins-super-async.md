@@ -2,7 +2,7 @@
 title: "Lowering for mixins, macros, super and the async fixpoint: the marker count falls"
 status: draft
 updated: 2026-10-07
-rfc: "0000-ruby-ts-codegen"
+rfc: "0185-ruby-ts-codegen"
 cluster: tooling
 packages: ["scripts"]
 deps: ["codegen-lowering-and-first-output"]

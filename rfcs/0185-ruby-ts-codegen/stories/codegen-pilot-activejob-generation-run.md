@@ -2,7 +2,7 @@
 title: "Pilot generation run over activejob: the report and the codegen/activejob branch"
 status: draft
 updated: 2026-10-07
-rfc: "0000-ruby-ts-codegen"
+rfc: "0185-ruby-ts-codegen"
 cluster: tooling
 packages: ["scripts"]
 deps: ["codegen-lowering-mixins-super-async"]

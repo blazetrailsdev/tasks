@@ -2,7 +2,7 @@
 title: "Lowering for expressions and control flow, the decline machinery and the one-shot driver: first typechecking output"
 status: draft
 updated: 2026-10-07
-rfc: "0000-ruby-ts-codegen"
+rfc: "0185-ruby-ts-codegen"
 cluster: tooling
 packages: ["scripts"]
 deps: ["codegen-call-resolver-and-report"]
