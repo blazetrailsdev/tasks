@@ -11,7 +11,7 @@ packages:
   - "activemodel"
 clusters:
   - "action-controller"
-priority: 2
+priority: 3
 ---
 
 # RFC 0162 — ActionController metal and AbstractController: the non-rendering modules to parity
