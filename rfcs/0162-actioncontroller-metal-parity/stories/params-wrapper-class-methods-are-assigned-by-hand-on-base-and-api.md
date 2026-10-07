@@ -1,6 +1,6 @@
 ---
 title: "ParamsWrapper::ClassMethods and its class_attribute are wired by hand on Base and API, not handed over by Concern"
-status: draft
+status: in-progress
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8613
+claim: "2026-10-07T02:37:34Z"
+assignee: "params-wrapper-class-methods-are-assigned-by-hand-on-base-and-api"
 blocked-by: null
 closed-reason: null
 ---

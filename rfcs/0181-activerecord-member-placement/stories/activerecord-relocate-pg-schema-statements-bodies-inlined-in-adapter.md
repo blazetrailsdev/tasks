@@ -1,7 +1,7 @@
 ---
 title: "activerecord: move the 16 PostgreSQL SchemaStatements bodies inlined into postgresql-adapter.ts"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 550
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8583
+claim: "2026-10-07T02:33:20Z"
+assignee: "activerecord-relocate-pg-schema-statements-bodies-inlined-in-adapter"
 blocked-by: null
 closed-reason: null
 ---

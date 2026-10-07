@@ -1,6 +1,6 @@
 ---
 title: "ActionController::API wires ParamsWrapper inline instead of including the module"
-status: claimed
+status: in-progress
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8613
 claim: "2026-10-07T02:11:50Z"
 assignee: "api-params-wrapper-is-inlined-into-api-process-action"
 blocked-by: null

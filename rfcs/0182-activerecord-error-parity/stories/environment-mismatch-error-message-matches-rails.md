@@ -1,6 +1,6 @@
 ---
 title: "activerecord: EnvironmentMismatchError carries Rails' message and its Rails.env arm"
-status: claimed
+status: in-progress
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8611
 claim: "2026-10-07T02:09:26Z"
 assignee: "environment-mismatch-error-message-matches-rails"
 blocked-by: null

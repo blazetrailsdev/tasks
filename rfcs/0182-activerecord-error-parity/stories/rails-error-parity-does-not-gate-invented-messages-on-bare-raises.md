@@ -1,6 +1,6 @@
 ---
 title: "rails-error-parity passes a ported class raised with an invented message where Rails raises it bare"
-status: claimed
+status: in-progress
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8612
 claim: "2026-10-07T02:03:10Z"
 assignee: "connection-adapters-resolve-answers-a-promise-for-an-unloaded-adapter"
 blocked-by: null
