@@ -44,9 +44,17 @@ That is the whole remaining surface. The other citations left this story:
   `adapterReady`, `discardBangDraining`, `drainPendingCloses`, and the
   `@missingRailsArgs where_sql` at `relation/finder-methods.ts`. All five members
   are gone from the tree.
-- **Re-cited `PERMANENT`**: `internalSchemaCache`
-  (`connection-adapters/abstract-adapter.ts`), against the CLAUDE.md section
-  § "Schema reflection peeks at a warm cache", which landed as trails#7831.
+- **Re-pointed** to
+  `internal-schema-cache-is-the-sync-twin-of-schema-reflection-cache` (RFC 0180):
+  `internalSchemaCache` (`connection-adapters/abstract-adapter.ts`). It was
+  briefly promoted to `PERMANENT` against § "Schema reflection peeks at a warm
+  cache" in trails#8651 and reverted in the same PR: Rails has a counterpart
+  after all — the private `SchemaReflection#cache(pool)`
+  (`vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/schema_cache.rb:106-108`),
+  already ported async at `connection-adapters/schema-cache.ts:177-181`. The
+  getter is its synchronous twin with Rails' `load_cache(pool)` arm dropped,
+  which is an omitted query rather than a warm-memo peek, so that section does
+  not ratify it.
 - **Re-pointed** to `with-connection-sync-is-a-lease-no-claude-md-section-ratifies`
   (RFC 0180): `withConnectionSync`. This story's old AC said to re-cite it
   `PERMANENT` against § "`Relation` is evaluated by an async query", which is
