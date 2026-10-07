@@ -1,7 +1,7 @@
 ---
 title: "activerecord: move the Timezone, Delegation, FinderMethods and association-module bodies inlined into their hosts"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8615
+claim: "2026-10-07T03:33:09Z"
+assignee: "activerecord-relocate-relation-type-and-association-inlined-bodies"
 blocked-by: null
 closed-reason: null
 ---

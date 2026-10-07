@@ -1,7 +1,7 @@
 ---
 title: "activerecord: move the 29 QueryMethods bodies inlined into relation.ts back to relation/query-methods.ts"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8614
+claim: "2026-10-07T03:03:12Z"
+assignee: "activerecord-relocate-query-methods-bodies-inlined-in-relation"
 blocked-by: null
 closed-reason: null
 ---
