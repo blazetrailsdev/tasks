@@ -5,7 +5,7 @@ updated: 2026-10-07
 rfc: "0000-ruby-ts-codegen"
 cluster: tooling
 packages: []
-deps: [codegen-ir-and-prism-bridge]
+deps: ["codegen-ir-and-prism-bridge", "codegen-hint-pipeline"]
 deps-rfc: []
 est-loc: 2200
 priority: null
@@ -45,7 +45,8 @@ Three pieces, in dependency order:
    candidates (`rubyMethodToTs`), `operatorSpelling(fqn, op)` from
    `scripts/api-compare/operator-order-spelling.ts` for operator methods,
    the core dispatch table (seeded here with the rows the pilot corpus
-   needs; story 4 adds rows as lowering demands them), then decline. Member kind
+   needs; `codegen-lowering-and-first-output` adds rows as lowering demands
+   them), then decline. Member kind
    (method, accessor, property) and the signature come from
    `getResolvedSignature`, which also instantiates overloads and generics the
    spike could not (`Blob.create!` came back as `InstanceType<T>[]`).
@@ -81,9 +82,10 @@ or the error type is declined; there is no name fallback.
       `Blob.create!` typed as the instance, not `InstanceType<T>[]`.
 - [ ] A receiver typed `any`/`unknown` declines; a test proves no name
       fallback fires.
-- [ ] **Checkpoint.** With the story 3 sidecar, at least 85% of
-      `activejob/lib` call sites resolve. Below that, this story records the
-      number in the RFC's Verification section and the RFC stops; the
+- [ ] **Checkpoint.** With the hint-pipeline story's committed activejob
+      sidecar, at least 85% of `activejob/lib` call sites resolve. Below
+      that, this story records the number in the RFC's Verification section
+      and the owner postpones the RFC (`tasks rfc-status … postponed`); the
       remaining stories are not started.
 - [ ] Incremental checker cost per statement is measured and recorded (the
       spike's cold program over twelve packages took about 11 seconds).

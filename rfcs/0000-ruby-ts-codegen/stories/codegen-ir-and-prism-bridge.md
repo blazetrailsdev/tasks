@@ -53,6 +53,12 @@ class body, 10,823 nodes across 62 files, was its largest hole).
 
 ## Acceptance criteria
 
+- [ ] `scripts/codegen/` is a new `scripts/` test directory and is
+      registered where the repo expects one: the Unit Tests package regex,
+      the comparison regex and the path list in `.github/workflows/ci.yml`
+      (the three registrations the retirement story of the previous
+      generator removed). The compiler API is imported as `typescript-5`,
+      never bare `typescript`, per the repo's scripts rule.
 - [ ] `scripts/codegen/ir/` defines the node set from the README's Design as
       TypeScript types with a discriminant, an id and a `loc`.
 - [ ] `scripts/codegen/prism-dump.rb` emits Prism as JSON for a file list and

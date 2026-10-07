@@ -5,7 +5,7 @@ updated: 2026-10-07
 rfc: "0000-ruby-ts-codegen"
 cluster: tooling
 packages: []
-deps: [codegen-lowering-mixins-super-async]
+deps: ["codegen-lowering-mixins-super-async"]
 deps-rfc: []
 est-loc: 100
 priority: null
@@ -29,7 +29,7 @@ Sneakers, Sucker Punch, queue_classic; RFC 0169 non-goals) and
 `lib/rails/generators`, and skips any file whose trails twin already exists
 in `packages/activejob/src` so the done 0169 stories (`namespace-and-base`,
 the skeleton, and whatever has landed by then) are never overwritten. It
-uses the story 3 sidecar.
+uses the sidecar `codegen-hint-pipeline` committed.
 
 Expectations to check against, from the spike: `arguments.rb`,
 `log_subscriber.rb`, `railtie.rb` and `test_helper.rb` decline most, which

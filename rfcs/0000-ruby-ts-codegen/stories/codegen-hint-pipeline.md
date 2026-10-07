@@ -5,7 +5,7 @@ updated: 2026-10-07
 rfc: "0000-ruby-ts-codegen"
 cluster: tooling
 packages: []
-deps: [codegen-ir-and-prism-bridge]
+deps: ["codegen-ir-and-prism-bridge"]
 deps-rfc: []
 est-loc: 1000
 priority: null
@@ -55,8 +55,9 @@ activejob has no schema.
 
 The trace run needs a bundle. The spike built one in a scratch directory
 from gems already on the host, with Rails taken by `path:` from a copy of the
-vendored tree so nothing under `vendor/` is written to; the same shape is
-used here and documented in the story's README section.
+vendored tree so nothing under `vendor/` is written to. This story uses the
+same shape and writes it down in `scripts/codegen/trace/README.md`, since the
+next gem's trace run repeats it.
 
 ## Acceptance criteria
 

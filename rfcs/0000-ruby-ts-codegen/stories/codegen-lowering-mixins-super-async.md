@@ -5,7 +5,7 @@ updated: 2026-10-07
 rfc: "0000-ruby-ts-codegen"
 cluster: tooling
 packages: []
-deps: [codegen-lowering-and-first-output]
+deps: ["codegen-lowering-and-first-output"]
 deps-rfc: []
 est-loc: 1300
 priority: null
@@ -18,10 +18,10 @@ closed-reason: null
 
 ## Context
 
-Story 4 declines every `include`/`extend`, `class_attribute`, `delegate`,
+`codegen-lowering-and-first-output` declines every `include`/`extend`, `class_attribute`, `delegate`,
 `attr_*`, `super` and every call that should carry an `await`. This story
 lowers them, and is measured by how far the activejob marker count falls
-against story 4's recorded baseline.
+against that story's recorded baseline.
 
 **Mixins and macros.** `include M` lowers to `include()` with `Included<>`
 on the type side, `extend M` to `extend()` with `Extended<>`; a Concern's
@@ -65,7 +65,8 @@ treats as async.
 - [ ] The async fixpoint runs over resolved edges, inserts `await`, lowers
       `each`-with-await to `for...of`, and declines the two hard stops; a
       test shows `ActiveJob::Base.perform_now` and `enqueue` come out async.
-- [ ] The story 4 test (generate activejob, run `tsc`) still passes.
+- [ ] The `codegen-lowering-and-first-output` test (generate activejob, run
+      `tsc`) still passes.
 - [ ] The marker count on activejob is recorded before and after, by reason,
       and the `include`/`extend`/`class_attribute`/`delegate`/`super`/
       `await` reasons are at or near zero after.

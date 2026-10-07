@@ -51,7 +51,7 @@ IR. Prism AST went straight to `ts.factory` in one pass, so method-versus-
 property and await decisions were taken from name tables (`port-symbols.ts`,
 `async-source.ts`) rather than from the receiver.
 
-Four spikes run on 2026-10-06 (audit reports `codegen-ir-plan-*.md` under
+Four spikes run on 2026-10-06 and 2026-10-07 (audit reports `codegen-ir-plan-*.md` under
 `~/.btwhooks/data/github/blazetrailsdev/trails/audits/`) measured whether those
 gaps can now be closed:
 
@@ -259,42 +259,45 @@ default ceiling.
 ## Rollout
 
 1. `codegen-ir-and-prism-bridge`.
-2. `codegen-resolver-and-resolution-report` and `codegen-hint-pipeline`, in
-   parallel. The resolver story carries the kill criterion: under 85% of
-   activejob call sites resolved with the generated sidecar plus review of
-   flagged entries only, and the RFC stops here.
-3. `codegen-lowering-and-first-output`.
-4. `codegen-lowering-mixins-super-async`.
-5. `codegen-pilot-activejob-generation-run`, which publishes the report and
+2. `codegen-hint-pipeline`. The recorder, the validator and the model pass
+   need only the IR's gem index, so this lands before the resolver and gives
+   it the sidecar its checkpoint is measured with.
+3. `codegen-resolver-and-resolution-report`. Carries the kill criterion:
+   under 85% of activejob call sites resolved with the generated sidecar plus
+   review of flagged entries only, and the owner postpones the RFC here.
+4. `codegen-lowering-and-first-output`.
+5. `codegen-lowering-mixins-super-async`.
+6. `codegen-pilot-activejob-generation-run`, which publishes the report and
    the `codegen/activejob` branch RFC 0169's open stories may start from.
 
 ## Seed completeness
 
-Six stories, about 8,200 lines of tool and tests against the 9,173 deleted
+Six stories, 8,300 est-loc of tool and tests against the 9,173 deleted
 with the second attempt. Each is a working increment with its own CLI and its
 own measured output. A story added later is a spec miss; note which Rails
 construct or trails shape the authoring missed in its Context.
 
 ## Verification
 
-- Story 1: `pnpm codegen:ir` builds a complete IR for every `.rb` under
+- `codegen-ir-and-prism-bridge`: `pnpm codegen:ir` builds a complete IR for every `.rb` under
   `activejob/lib` and `activestorage/{app,lib}` with zero unhandled node
   kinds, asserted by a test.
-- Story 2: `pnpm codegen:resolve activejob` reports at least 85% of call sites
-  resolved with the story 3 sidecar; the no-hint baseline is 43.3%
-  unresolved.
-- Story 4: `tsc` passes on the emitted activejob tree, asserted by a test that
+- `codegen-hint-pipeline`: `pnpm codegen:hints:check activejob` reports zero gate violations
+  on the committed sidecar.
+- `codegen-resolver-and-resolution-report`: `pnpm codegen:resolve activejob` reports at least 85% of call sites
+  resolved with that sidecar; the no-hint baseline is 43.3% unresolved.
+- `codegen-lowering-and-first-output`: `tsc` passes on the emitted activejob tree, asserted by a test that
   runs the generator and the checker.
-- Story 5: the marker count on activejob falls by at least the share mixins,
-  `super` and awaits held in the story 4 report, recorded before and after.
-- Story 6: an audit report with per-file decline counts, and zero `declined(`
+- `codegen-lowering-mixins-super-async`: the marker count on activejob falls by at least the share mixins,
+  `super` and awaits held in the previous story's report, recorded before and after.
+- `codegen-pilot-activejob-generation-run`: an audit report with per-file decline counts, and zero `declined(`
   on any file whose RFC 0169 story is `done`.
 
 ## Open questions
 
 - Whether the `declined` helper file trips `parity:api:extra` in the
   generated package. It has no Rails-matched file, so it should not count;
-  story 4 confirms.
+  `codegen-lowering-and-first-output` confirms.
 - Whether per-statement checker queries over 218 defs are fast enough with a
   language-service host. One cold program over twelve packages' declarations
-  took about 11 seconds in the spike; story 2 measures the incremental cost.
+  took about 11 seconds in the spike; `codegen-resolver-and-resolution-report` measures the incremental cost.

@@ -5,7 +5,7 @@ updated: 2026-10-07
 rfc: "0000-ruby-ts-codegen"
 cluster: tooling
 packages: []
-deps: [codegen-resolver-and-resolution-report, codegen-hint-pipeline]
+deps: ["codegen-resolver-and-resolution-report"]
 deps-rfc: []
 est-loc: 2100
 priority: null
@@ -22,10 +22,10 @@ Decision 3 of this RFC: every emitted file typechecks, and statements the
 generator cannot resolve are declined with an explicit marker. This story
 delivers the first end-to-end run: `pnpm codegen activejob` emits a
 TypeScript tree that passes `tsc`, with mixins, `super` and awaits still
-declined (story 5 lowers those).
+declined (`codegen-lowering-mixins-super-async` lowers those).
 
 Lowering is one function per IR node kind, reading the IR and the side
-tables from story 2. Names come from `rubyMethodToTs` and locals keep the
+tables from `codegen-resolver-and-resolution-report`. Names come from `rubyMethodToTs` and locals keep the
 Rails identifier camelCased; paths from `rubyFileToTs`. The semantic nodes
 lower by the rules in the README's Design table; each rule has a test.
 Idioms worth calling out because the retired generator got them wrong:
@@ -71,7 +71,7 @@ target package, so a done RFC 0169 story is never overwritten.
       into a temp directory and runs `tsc` on the result with the repo's
       strict options; it passes.
 - [ ] The report's decline counts by reason are recorded in the PR body as
-      the baseline story 5 is measured against.
+      the baseline `codegen-lowering-mixins-super-async` is measured against.
 - [ ] The `declined` helper file is confirmed not to count toward
       `parity:api:extra` (it has no Rails-matched file); if it does, the
       story records how it is excluded.
