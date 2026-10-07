@@ -2,7 +2,7 @@
 title: "activerecord: Fixture#initialize runs EncryptedFixtures' prepended initialize (blocked on a constructor hook)"
 status: blocked
 updated: 2026-09-30
-rfc: "0183-activerecord-excluded-source-files"
+rfc: "0123-blocked-convergence-holding"
 cluster: excluded-files
 packages: ["activerecord"]
 deps: ["activemodel-api-initialize-concern-constructor"]
