@@ -79,6 +79,9 @@ deps:
   - pg-quote-string-escapes-without-with-raw-connection
   - activerecord-port-legacy-yaml-adapter-and-yaml-column
   - activerecord-fixture-initialize-prepend-constructor
+  - activerecord-relocate-persistence-model-schema-counter-cache-bodies
+  - activerecord-inlined-bodies-report-becomes-a-gate
+  - activerecord-converge-moves-residue-base-hosted
 deps-rfc:
   - 0178-activerecord-arms-parity-100
   - 0179-api-compare-crediting-rules
