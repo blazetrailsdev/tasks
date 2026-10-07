@@ -2,7 +2,7 @@
 title: "rails-error-parity's $! exemption is keyed by package and bare class name"
 status: draft
 updated: 2026-10-07
-rfc: "0182-activerecord-error-parity"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []
