@@ -30,10 +30,12 @@ it is keyed by that name: `errors.add(reflection.name)` in `validate_collection_
 `save_collection_association` (`vendor/rails/v8.0.2/activerecord/lib/active_record/autosave_association.rb:451`).
 `humanize("publishedBooks")` is `"Publishedbooks"`.
 
-`packages/activemodel/src/translation.ts` `humanAttributeName` and
-`packages/activemodel/src/error.ts` `Error.fullMessage` therefore call `underscore` on the name before
-`humanize` (trails#8663). Neither carries a receipt: both declarations are uncompared pairs, and
-`pnpm parity:api:arms:throws` reds an `@inventedArm` on a declaration no skeleton row is written for. Before that, one
+`packages/activemodel/src/error.ts` `Error.fullMessage` therefore calls `underscore` on the name before
+`humanize` (trails#8663), so a full message reads "Published books is invalid". It carries no receipt:
+`fullMessage` is an uncompared pair, and `pnpm parity:api:arms:throws` reds an `@inventedArm` on a
+declaration no skeleton row is written for. `packages/activemodel/src/translation.ts`
+`humanAttributeName` keeps Rails' body, so `humanAttributeName("publishedBooks")` and a
+`%{attribute}` interpolation still read "Publishedbooks". Before that, one
 autosave site underscored the reflection name before `errors.add`, which keyed the error by a name
 no member answers (`read_attribute_for_validation` is `send`, `validations.rb:437`).
 
@@ -48,4 +50,4 @@ Not decided, and the owner's to decide:
 ## Acceptance criteria
 
 - [ ] The spelling of a camelCase attribute name in a human name and in an i18n lookup key is decided and recorded.
-- [ ] The two `underscore` calls in `translation.ts` and `error.ts` are either converged away or cited against that decision.
+- [ ] The `underscore` call in `error.ts` `Error.fullMessage` is either converged away or cited against that decision, and `humanAttributeName` answers the same human name `fullMessage` does.
