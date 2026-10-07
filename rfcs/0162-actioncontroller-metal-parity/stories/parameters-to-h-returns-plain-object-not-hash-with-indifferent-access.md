@@ -1,6 +1,6 @@
 ---
 title: "Parameters#to_h returns a plain object, not a HashWithIndifferentAccess"
-status: draft
+status: closed
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of parameters-to-h-returns-a-plain-object-not-hash-with-indifferent-access"
 ---
 
 ## Context

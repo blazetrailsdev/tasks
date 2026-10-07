@@ -1,7 +1,7 @@
 ---
 title: "Port controller/parameter_encoding_test.rb"
-status: ready
-updated: 2026-10-06
+status: done
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8569
+claim: "2026-10-07T09:33:13Z"
+assignee: "permissions-policy-macro-clones-and-assigns-the-request-policy"
 blocked-by: null
 closed-reason: null
 ---

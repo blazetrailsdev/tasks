@@ -1,7 +1,7 @@
 ---
 title: "verify_authenticity_token and its private siblings are private on ActionController::Base"
-status: ready
-updated: 2026-10-06
+status: in-progress
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8618
+claim: "2026-10-07T09:33:13Z"
+assignee: "permissions-policy-macro-clones-and-assigns-the-request-policy"
 blocked-by: null
 closed-reason: null
 ---

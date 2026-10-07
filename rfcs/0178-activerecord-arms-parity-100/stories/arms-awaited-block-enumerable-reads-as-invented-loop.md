@@ -1,7 +1,7 @@
 ---
 title: "arms report: an awaited collect / any? block reads as an invented loop"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8618
+claim: "2026-10-07T09:33:13Z"
+assignee: "permissions-policy-macro-clones-and-assigns-the-request-policy"
 blocked-by: null
 closed-reason: null
 ---

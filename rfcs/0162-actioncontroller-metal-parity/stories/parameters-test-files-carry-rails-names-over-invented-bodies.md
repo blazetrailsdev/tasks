@@ -1,7 +1,7 @@
 ---
 title: "controller/parameters tests carry Rails names over invented bodies"
-status: ready
-updated: 2026-10-06
+status: in-progress
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8617
+claim: "2026-10-07T09:03:10Z"
+assignee: "parameters-test-files-carry-rails-names-over-invented-bodies"
 blocked-by: null
 closed-reason: null
 ---
