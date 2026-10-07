@@ -5,7 +5,8 @@ updated: 2026-10-05
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - active-record-base-inherited-chain-needs-one-deferred-dispatch
 deps-rfc: []
 est-loc: 60
 priority: null
