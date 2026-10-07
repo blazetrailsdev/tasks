@@ -57,11 +57,19 @@ gap'", and that `arel()`'s memoized `withConnectionSync` IS that shape. That
 close explicitly parked the surviving `@missingRailsCall with_connection`
 receipt on `sync-reads-of-async-reflection-retire-with-rfc-0073` rather than
 removing it, so the receipt stayed CONVERGEABLE and this story inherits only its
-ownership. Weigh that reasoning before converging `arel`: the section's sentence
-is written about the lease `withConnectionSync` hands `toSql`, and whether it
-generalises to `arel` is the open question, not a settled no. If it does
-generalise, `arel`'s receipt becomes `PERMANENT` against that section and the
-other three still need work.
+ownership. **That close over-read the section, and the section's own words say so.** Read
+at CLAUDE.md:805-827, it enumerates exactly four members — `Relation#toSql`,
+`_buildEagerOperandManager`, `_applyEagerJoinDependency`,
+`_materializeDeferredDistinctPkPredicates`, "all `relation.ts`" — and `arel`
+lives in `query-methods.ts`, so it is not among them. It then closes: "This
+ratifies the sync builders and `toSql`'s sync surface **only**", and the
+section's final paragraph grants `PERMANENT` to "**`toSql`'s** omitted
+`apply_join_dependency` / `with_connection` calls". The "settled shape, not a
+gap" sentence the close leaned on is about whether a sync seam is expressible
+for `toSql`, not a blanket ratification of every caller that uses one. So
+`arel`'s omitted `with_connection` is **not** ratified, and converging it is in
+scope for this story. Do not promote it to `PERMANENT` against that section
+without amending the section itself.
 
 `loadAsync` is additionally touched by
 `load-async-disabled-arm-calls-load-and-dedupes-in-flight-load` (RFC 0180),
