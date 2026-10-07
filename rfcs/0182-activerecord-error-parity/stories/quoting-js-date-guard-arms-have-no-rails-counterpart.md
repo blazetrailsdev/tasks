@@ -1,7 +1,7 @@
 ---
 title: "activerecord: quote/typeCast JS Date guard arms have no Rails counterpart"
-status: ready
-updated: 2026-10-06
+status: in-progress
+updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8607
+claim: "2026-10-07T00:03:13Z"
+assignee: "quoting-js-date-guard-arms-have-no-rails-counterpart"
 blocked-by: null
 closed-reason: null
 ---

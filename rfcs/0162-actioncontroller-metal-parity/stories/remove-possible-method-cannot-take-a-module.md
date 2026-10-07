@@ -1,6 +1,6 @@
 ---
 title: "removePossibleMethod cannot take a Module, so Renderers.remove inlines it"
-status: draft
+status: closed
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged in trails#8607: removePossibleMethod takes a Module and Renderers.remove calls it"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: residue of invented arms beside subsystems part 2 (_createRecord, UnsignedInteger#maxValue, TypeMap#lookup default)"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8607
+claim: "2026-10-07T00:03:13Z"
+assignee: "quoting-js-date-guard-arms-have-no-rails-counterpart"
 blocked-by: null
 closed-reason: null
 ---

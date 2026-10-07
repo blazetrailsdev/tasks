@@ -1,7 +1,7 @@
 ---
 title: "activerecord: move the database/schema-statement bodies inlined into the adapter classes"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: placement
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8608
+claim: "2026-10-07T00:33:13Z"
+assignee: "activerecord-relocate-adapter-hosted-inlined-bodies"
 blocked-by: null
 closed-reason: null
 ---

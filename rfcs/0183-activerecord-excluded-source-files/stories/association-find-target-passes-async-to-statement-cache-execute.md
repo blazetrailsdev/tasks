@@ -1,7 +1,7 @@
 ---
 title: "Association#find_target passes async: through to StatementCache#execute"
-status: in-progress
-updated: 2026-10-06
+status: done
+updated: 2026-10-07
 rfc: "0183-activerecord-excluded-source-files"
 cluster: null
 packages: []

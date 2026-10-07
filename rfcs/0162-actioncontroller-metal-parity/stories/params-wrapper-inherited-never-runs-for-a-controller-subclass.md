@@ -1,7 +1,7 @@
 ---
 title: "ParamsWrapper's inherited body never runs, so a controller subclass keeps its parent's wrapper klass and name"
-status: in-progress
-updated: 2026-10-06
+status: done
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
