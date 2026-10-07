@@ -1,7 +1,7 @@
 ---
 title: "define_helpers_module seats the module as the HelperMethods constant, not a WeakMap"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove the four invented branches left in relation batches and delegation (part 1 residue)"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

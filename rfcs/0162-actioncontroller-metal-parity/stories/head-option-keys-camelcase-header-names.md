@@ -1,7 +1,7 @@
 ---
 title: "Head#head turns a camelCase option key into Rails' dashed header name"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

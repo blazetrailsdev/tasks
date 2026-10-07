@@ -1,7 +1,7 @@
 ---
 title: "Parameters#permitted? is ported as a getter, not isPermitted"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack", "actionview", "activemodel"]

@@ -1,7 +1,7 @@
 ---
 title: "ActionController::Helpers' all_application_helpers reads the class's helpers_path; helper_method's accessor arm and Fragments' respond_to? converge"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "Bare-raise scan: enroll the remaining packages and classify class-level raises"
-status: in-progress
+status: done
 updated: 2026-10-07
 rfc: "0182-activerecord-error-parity"
 cluster: null

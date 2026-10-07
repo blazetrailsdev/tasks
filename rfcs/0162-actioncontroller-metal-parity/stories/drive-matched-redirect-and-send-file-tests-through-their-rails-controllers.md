@@ -1,6 +1,6 @@
 ---
 title: "Drive the already-matched redirect and send_file tests through their Rails controllers"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

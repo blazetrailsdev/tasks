@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SQLiteDatabaseTasks takes extra_flags as required; run_cmd and run_cmd_error are private methods"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-07
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8629
+claim: "2026-10-07T14:03:11Z"
+assignee: "converge-pg-schema-statements-member-order-to-rails"
 blocked-by: null
 closed-reason: null
 ---

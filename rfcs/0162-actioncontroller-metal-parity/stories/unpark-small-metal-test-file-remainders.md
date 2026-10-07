@@ -1,7 +1,7 @@
 ---
 title: "Un-park the seven tests the small metal test file port left blocked"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: ["actionpack"]

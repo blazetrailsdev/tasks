@@ -1,7 +1,7 @@
 ---
 title: "ActionController::Base includes ActionController::Helpers as one Concern instead of wiring its halves by hand"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

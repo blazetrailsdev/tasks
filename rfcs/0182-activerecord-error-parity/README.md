@@ -1,9 +1,9 @@
 ---
 rfc: "0182-activerecord-error-parity"
 title: "activerecord error parity: Rails' error class, message and raise site — split from RFC 0174"
-status: active
+status: closed
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-10-07
 owner: "@deanmarano"
 packages:
   - "activerecord"

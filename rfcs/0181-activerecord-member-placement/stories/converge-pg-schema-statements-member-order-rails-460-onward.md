@@ -1,6 +1,6 @@
 ---
 title: "postgresql/schema-statements.ts: put class members from Rails :460 on in Rails source order"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0181-activerecord-member-placement"
 cluster: null

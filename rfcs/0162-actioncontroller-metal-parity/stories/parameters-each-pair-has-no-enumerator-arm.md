@@ -1,7 +1,7 @@
 ---
 title: "Parameters#each_pair, #each_value and #each_key have no to_enum arm"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

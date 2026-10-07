@@ -1,7 +1,7 @@
 ---
 title: "The helpers inherited hook fires only from ActionController::Base's constructor, never for an API controller that includes Helpers"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

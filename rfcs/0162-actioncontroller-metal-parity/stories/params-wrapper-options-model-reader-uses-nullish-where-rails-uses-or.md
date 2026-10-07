@@ -1,7 +1,7 @@
 ---
 title: "ParamsWrapper::Options#model uses ?? where Rails uses ||, so a false slot is returned as the model"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

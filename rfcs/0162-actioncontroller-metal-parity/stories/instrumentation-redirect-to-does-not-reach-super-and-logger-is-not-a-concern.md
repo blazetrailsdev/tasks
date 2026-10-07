@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Instrumentation#redirect_to does not reach super; AbstractController::Logger is not a Concern; add_renderer lives in deprecator.ts"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

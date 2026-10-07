@@ -1,6 +1,6 @@
 ---
 title: "API lacks Redirecting's raise_on_open_redirects accessor and the UrlFor / Instrumentation initialize chain"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

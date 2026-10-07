@@ -1,7 +1,7 @@
 ---
 title: "AbstractController::Helpers inherited resets _helpers and includes the default helper module beneath class-body helpers"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

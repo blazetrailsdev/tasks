@@ -1,7 +1,7 @@
 ---
 title: "ActionController::Base copies Layouts, Renderers, Streaming, DataStreaming, Instrumentation, FormBuilder and CSP members instead of including the modules"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

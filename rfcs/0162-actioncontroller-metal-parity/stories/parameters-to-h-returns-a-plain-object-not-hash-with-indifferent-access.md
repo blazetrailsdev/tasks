@@ -1,6 +1,6 @@
 ---
 title: "Parameters#to_h / #to_unsafe_h return a plain object, not HashWithIndifferentAccess"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

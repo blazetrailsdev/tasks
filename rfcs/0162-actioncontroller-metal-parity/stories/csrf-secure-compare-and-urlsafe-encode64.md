@@ -1,7 +1,7 @@
 ---
 title: "CSRF token compares call fixed_length_secure_compare; encode_csrf_token calls Base64.urlsafe_encode64"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

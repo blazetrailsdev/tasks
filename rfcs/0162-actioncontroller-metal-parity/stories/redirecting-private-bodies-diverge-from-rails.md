@@ -1,6 +1,6 @@
 ---
 title: "Redirecting's url-host, location and guard bodies diverge from Rails"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

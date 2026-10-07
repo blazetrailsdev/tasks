@@ -1,7 +1,7 @@
 ---
 title: "Audit tests for camelCase action names the failure-driven sweep could not see"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

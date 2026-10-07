@@ -1,6 +1,6 @@
 ---
 title: "Parameters convert_value_to_parameters, delete and _deep_transform_keys_in_object are not the Rails bodies"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

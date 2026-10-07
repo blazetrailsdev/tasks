@@ -1,7 +1,7 @@
 ---
 title: "helper_test's skipped tests name closed stories; default helpers only needs Module#ancestors"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Metal carries Rendering's private instance methods as invented statics"
-status: draft
+status: ready
 updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
