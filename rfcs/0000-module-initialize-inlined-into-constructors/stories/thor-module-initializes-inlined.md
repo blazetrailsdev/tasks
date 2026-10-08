@@ -2,7 +2,7 @@
 title: "trailties: Thor::Base, Actions, Invocation and Shell initialize are inlined into Thor and Thor::Group"
 status: draft
 updated: 2026-10-08
-rfc: "0186-module-initialize-inlined-into-constructors"
+rfc: "0000-module-initialize-inlined-into-constructors"
 cluster: conversion
 packages: ["trailties"]
 deps:
@@ -23,7 +23,7 @@ closed-reason: null
 
 ## Context
 
-RFC 0186 § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
+This RFC § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
 
 Rails definitions in scope:
 

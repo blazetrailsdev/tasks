@@ -2,7 +2,7 @@
 title: "activerecord: Base includes ActiveModel::API's modules itself instead of extending Model"
 status: draft
 updated: 2026-10-08
-rfc: "0186-module-initialize-inlined-into-constructors"
+rfc: "0000-module-initialize-inlined-into-constructors"
 cluster: conversion
 packages: ["activerecord", "activemodel"]
 deps: ["activemodel-inlines-api-attributes-and-serialize-cast-value-initialize"]

@@ -1,10 +1,10 @@
 ---
-title: "activejob: Core#initialize is inlined into Base's constructor"
+title: "activesupport: Messages::Rotator#initialize is inlined into each rotatable class's constructor"
 status: draft
 updated: 2026-10-08
-rfc: "0186-module-initialize-inlined-into-constructors"
+rfc: "0000-module-initialize-inlined-into-constructors"
 cluster: conversion
-packages: ["activejob"]
+packages: ["activesupport"]
 deps:
   [
     "parity-api-credits-module-initialize-through-inlined-from",
@@ -12,7 +12,7 @@ deps:
     "inlined-from-staleness-gate-both-directions",
   ]
 deps-rfc: []
-est-loc: 120
+est-loc: 150
 priority: null
 pr: null
 claim: null
@@ -23,15 +23,15 @@ closed-reason: null
 
 ## Context
 
-RFC 0186 § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
+This RFC § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
 
 Rails definitions in scope:
 
-- `ActiveJob::Core#initialize` (`vendor/rails/v8.0.2/activejob/lib/active_job/core.rb:93`)
+- `ActiveSupport::Messages::Rotator#initialize` (`vendor/rails/v8.0.2/activesupport/lib/active_support/messages/rotator.rb:6`)
 
 How each is ported today has not been read: it may run through `initializeIncludedModules`, be an exported `initialize` function a constructor calls, already be inlined by hand, or sit in an unported file. Start by reading each site and its includers.
 
-RFC 0169 (`activejob-package-port`) and RFC 0185 (`ruby-ts-codegen`, piloted on activejob) both touch this package. If `core.rb` is not ported when this is picked up, fold the rule into that port and close this story against it.
+Rails installs `Rotator` with `prepend`. `scripts/parity/conventions.ts:843-857` records that trails ports it as an exported `initialize` function each rotatable class calls from its constructor.
 
 ## Acceptance criteria
 
@@ -40,3 +40,4 @@ RFC 0169 (`activejob-package-port`) and RFC 0185 (`ruby-ts-codegen`, piloted on 
 - A module in an unported file is left alone and named in the PR body.
 - The package is enrolled in the missing-tag arm of the staleness gate in this PR.
 - Where one module's body lands in more than one constructor, the PR body states how many.
+- The `messages/rotator.rb` `initialize` entry in `SCOPED_SKIP_GROUPS` is deleted.

@@ -1,10 +1,10 @@
 ---
-title: "rack: Request::Env#initialize is inlined into Request's constructor"
+title: "activejob: Core#initialize is inlined into Base's constructor"
 status: draft
 updated: 2026-10-08
-rfc: "0186-module-initialize-inlined-into-constructors"
+rfc: "0000-module-initialize-inlined-into-constructors"
 cluster: conversion
-packages: ["rack"]
+packages: ["activejob"]
 deps:
   [
     "parity-api-credits-module-initialize-through-inlined-from",
@@ -12,7 +12,7 @@ deps:
     "inlined-from-staleness-gate-both-directions",
   ]
 deps-rfc: []
-est-loc: 100
+est-loc: 120
 priority: null
 pr: null
 claim: null
@@ -23,15 +23,15 @@ closed-reason: null
 
 ## Context
 
-RFC 0186 § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
+This RFC § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
 
 Rails definitions in scope:
 
-- `Rack::Request::Env#initialize` (`vendor/rack/v3.1.14/lib/rack/request.rb:86`)
+- `ActiveJob::Core#initialize` (`vendor/rails/v8.0.2/activejob/lib/active_job/core.rb:93`)
 
 How each is ported today has not been read: it may run through `initializeIncludedModules`, be an exported `initialize` function a constructor calls, already be inlined by hand, or sit in an unported file. Start by reading each site and its includers.
 
-This cites the vendored Rack. `bump-vendored-rack-anchor-to-3-2` (RFC 0141) moves that anchor; whichever lands second re-checks the line.
+RFC 0169 (`activejob-package-port`) and RFC 0185 (`ruby-ts-codegen`, piloted on activejob) both touch this package. If `core.rb` is not ported when this is picked up, fold the rule into that port and close this story against it.
 
 ## Acceptance criteria
 

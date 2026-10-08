@@ -2,7 +2,7 @@
 title: "parity: an @inlinedFrom with no module initialize, or an includer with no tag, is red"
 status: draft
 updated: 2026-10-08
-rfc: "0186-module-initialize-inlined-into-constructors"
+rfc: "0000-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]
 deps:
@@ -22,9 +22,9 @@ closed-reason: null
 
 ## Context
 
-RFC 0186 § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
+This RFC § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
 
-`rails-api.json` records each class's `includes` and each module's instance methods, so both directions are computable: a tag naming a module that defines no `initialize`, and a class whose Rails counterpart includes or prepends a module with an `initialize` but whose TS constructor has no tag for it. 38 modules define one (RFC 0186 § Baseline).
+`rails-api.json` records each class's `includes` and each module's instance methods, so both directions are computable: a tag naming a module that defines no `initialize`, and a class whose Rails counterpart includes or prepends a module with an `initialize` but whose TS constructor has no tag for it. 38 modules define one (this RFC § Baseline).
 
 ## Acceptance criteria
 

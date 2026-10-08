@@ -1,10 +1,10 @@
 ---
-title: "activemodel: API, Attributes and SerializeCastValue initialize are inlined into their includers' constructors"
+title: "activerecord: DatabaseStatements, QueryCache and ConnectionPoolConfiguration initialize are inlined"
 status: draft
 updated: 2026-10-08
-rfc: "0186-module-initialize-inlined-into-constructors"
+rfc: "0000-module-initialize-inlined-into-constructors"
 cluster: conversion
-packages: ["activemodel"]
+packages: ["activerecord"]
 deps:
   [
     "parity-api-credits-module-initialize-through-inlined-from",
@@ -23,17 +23,17 @@ closed-reason: null
 
 ## Context
 
-RFC 0186 § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
+This RFC § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
 
 Rails definitions in scope:
 
-- `ActiveModel::API#initialize` (`vendor/rails/v8.0.2/activemodel/lib/active_model/api.rb:80`)
-- `ActiveModel::Attributes#initialize` (`vendor/rails/v8.0.2/activemodel/lib/active_model/attributes.rb:106`)
-- `ActiveModel::Type::SerializeCastValue#initialize` (`vendor/rails/v8.0.2/activemodel/lib/active_model/type/serialize_cast_value.rb:41`)
+- `ActiveRecord::ConnectionAdapters::DatabaseStatements#initialize` (`vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:6`)
+- `ActiveRecord::ConnectionAdapters::QueryCache#initialize` (`vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:196`)
+- `ActiveRecord::ConnectionAdapters::QueryCache::ConnectionPoolConfiguration#initialize` (`vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:117`)
 
 How each is ported today has not been read: it may run through `initializeIncludedModules`, be an exported `initialize` function a constructor calls, already be inlined by hand, or sit in an unported file. Start by reading each site and its includers.
 
-trails sites: `packages/activemodel/src/api.ts:21-27` (the exported `initialize` and its `defineMethod`), `attributes.ts:71`, `type/value.ts:46`, and `Model`'s constructor at `model.ts:122`, which carries `@missingRailsCall assign_attributes — CONVERGEABLE activemodel-api-initialize-concern-constructor`.
+trails sites: `abstract-adapter.ts:912` and `abstract/connection-pool.ts:299` call `initializeIncludedModules`. `connection-pool.ts` also `prepend`s `checkoutAndVerify` from `ConnectionPoolConfiguration`; that is a method prepend and is out of scope.
 
 ## Acceptance criteria
 
@@ -42,6 +42,3 @@ trails sites: `packages/activemodel/src/api.ts:21-27` (the exported `initialize`
 - A module in an unported file is left alone and named in the PR body.
 - The package is enrolled in the missing-tag arm of the staleness gate in this PR.
 - Where one module's body lands in more than one constructor, the PR body states how many.
-- `Model`'s constructor is `API#initialize`'s body, and the `@missingRailsCall assign_attributes` receipt is deleted.
-- The `api.rb` `initialize` entry in `SCOPED_SKIP_GROUPS` is deleted.
-- `activemodel-api-initialize-concern-constructor` (RFC 0123) is closed by this PR.

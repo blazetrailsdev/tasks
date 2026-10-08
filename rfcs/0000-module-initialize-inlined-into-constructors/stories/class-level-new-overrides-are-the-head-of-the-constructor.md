@@ -2,7 +2,7 @@
 title: "class-level new overrides are the constructor: own self.new ported directly, ClassMethods#new inlined and tagged"
 status: draft
 updated: 2026-10-08
-rfc: "0186-module-initialize-inlined-into-constructors"
+rfc: "0000-module-initialize-inlined-into-constructors"
 cluster: conversion
 packages: ["activerecord", "activesupport", "actionpack", "actionview", "rack-test", "did-you-mean"]
 deps:
@@ -23,7 +23,7 @@ closed-reason: null
 
 ## Context
 
-RFC 0186 § Design, rules 3 and 4. A class's own `def self.new` is the
+This RFC § Design, rules 3 and 4. A class's own `def self.new` is the
 constructor: a direct port with no tag, whose `super` is the rest of the
 constructor. A `new` defined on a `ClassMethods` module the class extends is
 owned by a different Ruby module, so it is inlined at the head of the

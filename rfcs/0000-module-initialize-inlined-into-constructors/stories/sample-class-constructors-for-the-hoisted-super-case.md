@@ -2,7 +2,7 @@
 title: "audit: sample class constructors whose Rails initialize works on self before super"
 status: draft
 updated: 2026-10-08
-rfc: "0186-module-initialize-inlined-into-constructors"
+rfc: "0000-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]
 deps: ["claude-md-section-for-inlined-module-initialize"]
@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-RFC 0186 rule 1 sanctions hoisting `super()` to the first line when the parent's body does not read what the child set up before Ruby's `super`. 885 Rails classes in `rails-api.json` define `initialize`; how many do work on `self` before `super`, and how trails spells each today, is not known.
+This RFC rule 1 sanctions hoisting `super()` to the first line when the parent's body does not read what the child set up before Ruby's `super`. 885 Rails classes in `rails-api.json` define `initialize`; how many do work on `self` before `super`, and how trails spells each today, is not known.
 
 ## Acceptance criteria
 

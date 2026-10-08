@@ -2,7 +2,7 @@
 title: "audit: sort Rails' inherited hooks into bodies written elsewhere and bodies replaced by another mechanism"
 status: draft
 updated: 2026-10-08
-rfc: "0186-module-initialize-inlined-into-constructors"
+rfc: "0000-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]
 deps: ["claude-md-section-for-inlined-module-initialize"]
@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-RFC 0186 holds `inherited` as a candidate third entry for `@inlinedFrom`'s
+This RFC holds `inherited` as a candidate third entry for `@inlinedFrom`'s
 closed list. JS has no hook that fires when a subclass is defined (trails
 CLAUDE.md § "`inherited` is deferred to own-property memo guards"), so each
 Rails `inherited` body is deferred somewhere else.

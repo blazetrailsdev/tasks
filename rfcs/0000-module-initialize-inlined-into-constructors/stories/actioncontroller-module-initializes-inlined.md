@@ -1,10 +1,10 @@
 ---
-title: "activerecord: DatabaseStatements, QueryCache and ConnectionPoolConfiguration initialize are inlined"
+title: "actionpack: Instrumentation, RequestForgeryProtection and UrlFor initialize are inlined into Metal's subclasses"
 status: draft
 updated: 2026-10-08
-rfc: "0186-module-initialize-inlined-into-constructors"
+rfc: "0000-module-initialize-inlined-into-constructors"
 cluster: conversion
-packages: ["activerecord"]
+packages: ["actionpack"]
 deps:
   [
     "parity-api-credits-module-initialize-through-inlined-from",
@@ -23,17 +23,17 @@ closed-reason: null
 
 ## Context
 
-RFC 0186 § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
+This RFC § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
 
 Rails definitions in scope:
 
-- `ActiveRecord::ConnectionAdapters::DatabaseStatements#initialize` (`vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:6`)
-- `ActiveRecord::ConnectionAdapters::QueryCache#initialize` (`vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:196`)
-- `ActiveRecord::ConnectionAdapters::QueryCache::ConnectionPoolConfiguration#initialize` (`vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:117`)
+- `ActionController::Instrumentation#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_controller/metal/instrumentation.rb:23`)
+- `ActionController::RequestForgeryProtection#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_controller/metal/request_forgery_protection.rb:366`)
+- `ActionController::UrlFor#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_controller/metal/url_for.rb:32`)
 
 How each is ported today has not been read: it may run through `initializeIncludedModules`, be an exported `initialize` function a constructor calls, already be inlined by hand, or sit in an unported file. Start by reading each site and its includers.
 
-trails sites: `abstract-adapter.ts:912` and `abstract/connection-pool.ts:299` call `initializeIncludedModules`. `connection-pool.ts` also `prepend`s `checkoutAndVerify` from `ConnectionPoolConfiguration`; that is a method prepend and is out of scope.
+trails site: `action-controller/metal.ts:144` calls `initializeIncludedModules`. `Metal#initialize` is `metal.rb:210-217`. `Base` and `API` include different module lists, so the two constructors inline different chains.
 
 ## Acceptance criteria
 

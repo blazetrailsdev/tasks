@@ -2,7 +2,7 @@
 title: "parity:api:calls compares a tagged constructor against the union of the inlined Rails initialize bodies"
 status: draft
 updated: 2026-10-08
-rfc: "0186-module-initialize-inlined-into-constructors"
+rfc: "0000-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]
 deps: ["extractor-reads-inlined-from-tags-on-constructors"]
@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-RFC 0186 § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
+This RFC § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
 
 Today the call gate pairs a TS constructor with the Rails class's own `initialize` only. `Model`'s constructor carries `@missingRailsCall assign_attributes` (`packages/activemodel/src/model.ts:122`) although the call is made, because it is made in an `initialize` function the gate does not pair. The argument gate (`parity:api:calls:args`) shares the artifact.
 

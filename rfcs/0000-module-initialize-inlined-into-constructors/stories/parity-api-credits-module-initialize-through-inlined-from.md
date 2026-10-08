@@ -2,7 +2,7 @@
 title: "parity:api credits a module's initialize through an @inlinedFrom constructor; the three skip entries go"
 status: draft
 updated: 2026-10-08
-rfc: "0186-module-initialize-inlined-into-constructors"
+rfc: "0000-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]
 deps: ["extractor-reads-inlined-from-tags-on-constructors"]
@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-RFC 0186 § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
+This RFC § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
 
 Three `initialize` definitions are in `SCOPED_SKIP_GROUPS` because a module's `initialize` has no TS member to pair with (`scripts/parity/conventions.ts:843-891`): `ActiveSupport::Messages::Rotator#initialize` (`messages/rotator.rb:6-12`), `ActiveModel::API#initialize` (`api.rb:78-81` as cited there), and `ActiveRecord::Fixture#initialize` with `EncryptedFixtures` (`fixtures.rb:817-820`, `encryption/encrypted_fixtures.rb:6-11`). Each names a `tsMirrorName: "initialize"`.
 
