@@ -1,6 +1,6 @@
 ---
 title: "activerecord: delete the model registry writers; models seat as constants where they are defined"
-status: ready
+status: in-progress
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8697
+claim: "2026-10-08T22:03:15Z"
+assignee: "model-registry-writers-are-deleted-models-seat-as-constants"
 blocked-by: null
 closed-reason: null
 ---

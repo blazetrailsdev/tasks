@@ -1,6 +1,6 @@
 ---
 title: "HasOne#replace's save=false arm is a second body that skips load_target and remove_target!"
-status: claimed
+status: blocked
 updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-10-08T21:33:16Z"
 assignee: "connection-adapters-load-is-an-awaited-require-split-from-resolve"
-blocked-by: null
+blocked-by: "Waits on reopen-rfc-0087-constructor-arm-for-association-io-at-assignment (owner ruling 2026-10-08): one Rails-shaped replace must await load_target and remove_target!, but RFC 0087 keeps a synchronous path into replace from the constructor, assignAttributes and build on a new owner. Re-cut once the design says how those callers reach replace."
 closed-reason: null
 ---
 
