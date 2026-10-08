@@ -2,7 +2,7 @@
 title: "activerecord: i18n generate-message validation test builds the canonical Topic"
 status: draft
 updated: 2026-10-07
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
 deps: []
