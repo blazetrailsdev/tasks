@@ -41,4 +41,4 @@ pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conven
 
 ## Owner decision (2026-10-08 blocked-story triage)
 
-"No initialize methods; constructor inheritance has to get inlined." A module's `initialize` body is inlined into the constructor of the class that includes it. Open point to confirm with the owner: whether that means `Model`'s constructor must make the `assign_attributes` call `model.ts:122` receipts as missing (a convergence), or that the missing call is permanent.
+There are no `initialize` methods: the chain is written as constructors. The constructor makes the call. `Model`'s constructor becomes `API#initialize`'s body (`api.rb:80-84`), `if (attributes != null) this.assignAttributes(attributes)`, tagged `@inlinedFrom ActiveModel::API#initialize`, and the `@missingRailsCall assign_attributes` receipt at `model.ts:122` is deleted, not made permanent. What is permanent is only that a module has no `initialize` member. The rule, the tag and the parity-script changes are RFC 0186 (`module-initialize-inlined-into-constructors`); this story is carried out there.

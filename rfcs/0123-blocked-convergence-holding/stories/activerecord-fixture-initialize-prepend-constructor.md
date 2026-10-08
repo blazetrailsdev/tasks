@@ -37,4 +37,4 @@ pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:ca
 
 ## Owner decision (2026-10-08 blocked-story triage)
 
-"No initialize methods; constructor inheritance has to get inlined." The prepended `initialize` is inlined into the class's constructor. See the open point recorded on `activemodel-api-initialize-concern-constructor`.
+There are no `initialize` methods: the prepended `EncryptedFixtures#initialize` (`encryption/encrypted_fixtures.rb:6-11`) is inlined into `Fixture`'s constructor at its Ruby position and tagged `@inlinedFrom`. The rule, the tag and the parity-script changes are RFC 0186 (`module-initialize-inlined-into-constructors`); this story is carried out there.
