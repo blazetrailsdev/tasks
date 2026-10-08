@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Quoting#quoted_date owns its usec arm instead of relocating it into sql-datetime.ts"
-status: draft
-updated: 2026-10-01
+status: closed
+updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of sql-datetime-formatters-fold-into-quoted-date-and-quoted-time (RFC 0180), whose criteria include the usec arm"
 ---
 
 ## Context

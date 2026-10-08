@@ -1,6 +1,6 @@
 ---
 title: 'trailmap: gate:lists is red — /backlog prints "~0 LOC" for an est-loc of 0, ringo prints nothing'
-status: draft
+status: done
 updated: 2026-10-08
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trailmap#46
+claim: "2026-10-08T20:25:01Z"
+assignee: "backlog-row-prints-a-zero-est-loc-ringo-omits"
 blocked-by: null
 closed-reason: null
 ---

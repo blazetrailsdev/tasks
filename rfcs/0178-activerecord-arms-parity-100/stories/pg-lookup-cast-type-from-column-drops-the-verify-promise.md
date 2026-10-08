@@ -1,7 +1,7 @@
 ---
 title: "PG lookup_cast_type_from_column drops verify!'s promise, so a never-connected adapter cannot answer"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []

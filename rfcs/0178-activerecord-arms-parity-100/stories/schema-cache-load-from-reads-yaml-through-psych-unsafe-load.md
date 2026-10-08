@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SchemaCache._load_from reads YAML through Psych.unsafe_load with no rescue"
-status: ready
-updated: 2026-10-05
+status: closed
+updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of schema-cache-load-from-ports-the-marshal-and-yaml-load-arms (RFC 0180), whose criteria cover this body"
 ---
 
 ## Context
