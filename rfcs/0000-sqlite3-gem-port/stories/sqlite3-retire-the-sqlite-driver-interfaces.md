@@ -32,7 +32,9 @@ closed-reason: null
 `SqliteDriverCapabilities` (`:147`) and `SqliteDriver` (`:156`). `parity:api:extra --package
 sqlite3` excludes "64 novel `interface` declaration name(s) and member(s)" by kind, which is this.
 
-After the engine and adapter stories nothing implements or calls them.
+After the engine and adapter stories nothing implements or calls them. `deps` lists every story
+that touches the seam directly, not only the leaves: the five engines, the three adapter call-site
+stories and the busy-handler story.
 `SqliteDriverCapabilities` (`inProcessSync`, `streaming`, `loadExtension`,
 `concurrentStatements`, `foreignKeysOnByDefault`, `immediateTransactions`) is read by the
 adapter to branch on the client; the gem has no such object.

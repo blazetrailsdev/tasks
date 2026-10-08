@@ -222,8 +222,30 @@ statement inside the block; a uniformly async wrapper gives it up on every engin
 caller depends on the statement, and not only the block entry, having completed is not something
 this RFC could establish by reading. It is open question 1 and is not resolved here.
 
-The stories are written for the strict reading, with the `Database`/`Statement` story carrying the
-measurement that answers the question before anything is converted.
+The stories are sized for the strict reading. What each answer changes, so the total is checkable
+once the question is answered:
+
+| story                                               | strict async (as filed) | union `T \| Promise<T>` | what differs                                                             |
+| --------------------------------------------------- | ----------------------- | ----------------------- | ------------------------------------------------------------------------ |
+| `sqlite3-statement-class-carries-the-gem-surface`   | 500                     | 400                     | no sync-caller audit to act on                                           |
+| `sqlite3-database-class-carries-the-gem-surface`    | 550                     | 450                     | `prepare`'s block form needs no settle-deferred `ensure` on sync engines |
+| `sqlite3-better-sqlite3-engine`                     | 400                     | 300                     | no promise wrapper around a sync client                                  |
+| `sqlite3-node-sqlite-engine`                        | 350                     | 250                     | same                                                                     |
+| `sqlite3-libsql-engines`                            | 500                     | 400                     | same, for local and replica                                              |
+| `sqlite3-website-sql-js-engine`                     | 250                     | 200                     | same                                                                     |
+| `sqlite3-adapter-new-client-is-database-new`        | 300                     | 200                     | the `openSync` arm and the pending-open test stay as they are            |
+| `sqlite3-adapter-perform-query-reads-the-gem-names` | 350                     | 300                     | `encoding` keeps its sync answer                                         |
+| **RFC total**                                       | **5,740**               | **5,040**               |                                                                          |
+
+`sqlite3-expo-sqlite-engine` and the other eight stories are the same size under either answer.
+
+**The measurement is a gate.** `sqlite3-statement-class-carries-the-gem-surface` produces two
+numbers before it converts anything: the `sqlite-mem` lane's wall time with promise-returning
+`step` / `prepare` on better-sqlite3, and the list of callers that rely on a sync engine finishing
+inside an un-awaited `lock.synchronize`. No story downstream of it (`Database`, the five engines,
+`new_client`, `perform_query`, `configure_connection`) is claimed until those numbers are in its PR
+and open question 1 is answered against them. The `deps` chain already enforces the order; this
+paragraph is what makes it a decision point and not only a sequence.
 
 ### Registration cost
 
@@ -292,6 +314,19 @@ subclasses, not the gem, and is untouched.
 
 ## Rollout
 
+**Blocked on the pg gem wrapper RFC for one story.** `sqlite3-enroll-the-c-extension-surface`
+needs `c-ext-method-table-extractor-arm`, which is defined in the pg gem wrapper RFC
+(`pg-gem-port`, tasks#260) and exists on neither this branch nor `main`. Everything else in this
+RFC, including the rest of phase 1, has no dependency on that RFC. `related-rfcs` and `deps`
+cannot name it: `validate` rejects two `0000-` directories on one branch and rejects a dependency
+that does not resolve. So the step is stated here: **when both RFCs are numbered, run
+`tasks set-deps sqlite3-enroll-the-c-extension-surface --add c-ext-method-table-extractor-arm`
+and add the pg RFC's number to this README's `related-rfcs`.**
+
+If the C arm lands differently from what the enroll story assumes, or hits its kill criterion:
+the enroll story is edited or blocked, the 3 `exception.c` receipts stay `CONVERGEABLE` on it,
+and this RFC's other 16 stories are unaffected. § Verification's first bullet then holds in its "without it" form.
+
 1. Package: `sqlite3-lift-the-nested-port-into-a-package`,
    `sqlite3-enroll-the-c-extension-surface`, `sqlite3-constants-and-fork-safety-ports`.
 2. Classes: `sqlite3-database-class-carries-the-gem-surface`,
@@ -309,11 +344,14 @@ subclasses, not the gem, and is untouched.
 
 - `ls packages/activerecord/src/sqlite` fails; `grep -n "sqlite3" scripts/api-compare/config.ts`
   shows no `PACKAGE_DIR_OVERRIDES` / `PACKAGE_SRC_SUBDIR` row.
-- `pnpm parity:api` prints `sqlite3` with `files: 7/7` (3/7 today) and `Database` / `Statement`
-  rows for all 20 methods in the split table.
+- With the C arm: `pnpm parity:api` prints `sqlite3` with every enrolled file matched (3/7 today)
+  and `Database` / `Statement` rows for all 20 methods in the split table. Without it (the fallback
+  in § Rollout): every enrolled `lib/sqlite3/*.rb` file is matched, the 11 Ruby-defined methods have
+  rows, and the 9 C-defined ones are named in the enroll story as still unscored.
 - `grep -rn "sqlite3-gem-c-surface-and-driver-covers" packages/` returns nothing (9 today).
 - `grep -n "interface Sqlite\|interface SyncSqlite" packages/activerecord/src/sqlite-adapter.ts`
-  returns nothing (6 today).
+  returns nothing (7 today: `SqliteStatement`, `SqliteConnection`, `SyncSqliteStatement`,
+  `SyncSqliteConnection`, `SqliteOpenConfig`, `SqliteDriverCapabilities`, `SqliteDriver`).
 - `sqlite3/database-statements.ts`'s `performQuery` has no `@missingRailsCall` and no call-gate row
   for `execute_batch2`, `reset!`, `column_count`, `to_a`.
 
@@ -343,4 +381,5 @@ subclasses, not the gem, and is untouched.
 ## Changelog
 
 - 2026-10-08: initial draft
+- 2026-10-08: review round 1 (tasks#261): busy-handler and `new_client` added to the deps of the stories that need them; the 0180 retag story depends on the lift and names receipts by symbol; § Async lists est-loc under each answer to open question 1 and makes the measurement a gate; § Rollout states the pg RFC dependency and the fallback; interface count corrected to 7
 - 2026-10-08: self-review round 1: corrected the `errors.ts` receipt split (3 C ports, 2 invented helpers); sections regrouped under `## Design` to match the template

@@ -30,6 +30,8 @@ definitions), `statement.c:681-701` (18), `sqlite3.c:158-206` (constants, `libve
 
 ## Acceptance criteria
 
+- [ ] Before any work: `c-ext-method-table-extractor-arm` is `done`, and this story's criteria are re-read against the arm as it actually landed. Where the arm differs from what is assumed below (cross-file class merge; a row kind for plain C functions), this story's criteria are edited by markdown PR first.
+
 - [ ] The `sqlite3` source sets `extPath: "ext/sqlite3"`; `database.c` + `lib/sqlite3/database.rb` map onto `database.ts`, `statement.c` + `statement.rb` onto `statement.ts`, `sqlite3.c` onto `constants.ts`.
 - [ ] `backup.c`, `aggregator.c` and every Ruby file with no TS counterpart are `unported-files` rows with the rule-1 reason; each unported method in an enrolled file is a scoped skip. The package's denominator is RFC 0000-sqlite3-gem-port's surface table.
 - [ ] For `status2klass` / `rbSqlite3Raise` / `rbSqlite3RaiseWithSql`: the C arm gains a declared-function row kind for non-`static` C functions a source lists by name, OR they become private helpers of the `Statement` / `Database` methods that call them in C and so leave the measured surface. Pick the one that needs no receipt and say which in the PR body.
@@ -48,3 +50,8 @@ Also depends on `c-ext-method-table-extractor-arm` in the pg gem wrapper RFC (`p
 story does not exist on this branch, so the edge is not in `deps:`; add it with
 `tasks set-deps sqlite3-enroll-the-c-extension-surface --add c-ext-method-table-extractor-arm` once
 both RFCs are merged and numbered. Do not claim this story before that one is done.
+
+Why the edge is prose and not frontmatter: `scripts/validate.mjs` rejects a `deps` or `deps-rfc`
+entry that does not resolve on the branch, and `blocked-by` is DB-owned (a hand-typed value is
+ignored by ingest and fails the owned-fields guard). The machine-visible form is the
+`tasks set-deps` call above, which the pg RFC's README lists as a required step at numbering time.

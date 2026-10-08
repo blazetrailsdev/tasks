@@ -5,7 +5,8 @@ updated: 2026-10-08
 rfc: "0000-sqlite3-gem-port"
 cluster: migration
 packages: ["activerecord", "sqlite3"]
-deps: ["sqlite3-adapter-new-client-is-database-new"]
+deps:
+  ["sqlite3-adapter-new-client-is-database-new", "sqlite3-busy-handler-has-no-client-counterpart"]
 deps-rfc: []
 est-loc: 300
 priority: null
@@ -36,7 +37,7 @@ Related, check status: `sqlite-configure-connection-pragmas-precede-check-versio
 - [ ] `reconnect` and `configureConnection` are `sqlite3_adapter.rb:810-848` branch for branch, including the `timeout` / `retries` arms and their deprecation path if Rails 8.0.2 has one there.
 - [ ] `timeout` is no longer an open-time option; `Database#busyHandlerTimeout=` sets it after open as Rails does.
 - [ ] The pragma loop uses `rbModMethodDefined`-shaped lookup on `SQLite3.Pragmas` and `rbFPublicSend` on the connection, as `:839-840`.
-- [ ] `retries` follows `sqlite3-busy-handler-has-no-client-counterpart`.
+- [ ] The `retries` arm calls `rawConnection.busyHandler((count) => count <= retries)` as `:829-833` does. What that call does on each engine was settled by `sqlite3-busy-handler-has-no-client-counterpart`, a dependency of this story; this story adds no engine behaviour of its own.
 - [ ] `pnpm parity:api:calls` and `:args` green for both methods.
 
 ## Verification
