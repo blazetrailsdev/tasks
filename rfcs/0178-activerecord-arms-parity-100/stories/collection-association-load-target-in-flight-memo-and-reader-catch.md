@@ -1,7 +1,7 @@
 ---
 title: "activerecord: CollectionAssociation#load_target in-flight memo and #reader catch are arms Rails lacks"
-status: ready
-updated: 2026-10-05
+status: blocked
+updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-08T15:05:12Z"
+assignee: "migration-compatibility-find-stringifies-the-version-in-one-call"
+blocked-by: "Needs a repo-owner decision, not an agent one. Converging loadTarget/reader to collection_association.rb:35-44,272-279 reds five trails tests (has-many-mid-flight-reassignment x4, collection-association-reader-proxy x1): two loads started on one holder in one async context both merge, and a replace landing mid-load is overwritten by the load's merge; reader is a sync getter so its stale reload cannot be awaited. The only other outcome the story offers is ratifying the in-flight memo in CLAUDE.md as PERMANENT, which only the owner can ratify. Receipts stay CONVERGEABLE against this story."
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Relation drops presence; activesupport's presence answers a thenable unevaluated"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8683
+claim: "2026-10-08T15:35:09Z"
+assignee: "mysql2-adapter-initialize-sets-found-rows-on-config-flags"
 blocked-by: null
 closed-reason: null
 ---

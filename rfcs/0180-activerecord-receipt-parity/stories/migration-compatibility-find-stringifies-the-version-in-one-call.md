@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Migration::Compatibility.find stringifies the version in one call"
-status: ready
-updated: 2026-10-07
+status: blocked
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
 packages: []
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
-blocked-by: null
+pr: trails#8682
+claim: "2026-10-08T15:05:12Z"
+assignee: "migration-compatibility-find-stringifies-the-version-in-one-call"
+blocked-by: 'Hits the story''s own third criterion. Rails'' find is version.to_s over a Float OR a String (compatibility.rb:6-8), and review on trails#8682 requires find("8.0") to stay "8.0" at run time. A JS number cannot carry Float-ness (8.0 === 8), so the generic to_s port (rbObjAsString) renders 8 as "8", and ruby-compat''s flo_to_s (numeric.c:1059, tried on #8682 as an exported floToS) renders 8 as "8.0" but turns the String "8.0" into "Infinity". Any single call that does both dispatches on typeof inside, which is the same arm relocated. Needs an owner decision on how a Float literal reaches Migration.get / Schema.get (boxed seat, number-only API, or keep the receipted arm).'
 closed-reason: null
 ---
 

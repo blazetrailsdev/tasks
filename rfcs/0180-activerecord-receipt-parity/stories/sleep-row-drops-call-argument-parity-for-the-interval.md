@@ -1,7 +1,7 @@
 ---
 title: "parity: a native-form row drops call-argument parity for its interval (sleep)"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8682
+claim: "2026-10-08T15:05:12Z"
+assignee: "migration-compatibility-find-stringifies-the-version-in-one-call"
 blocked-by: null
 closed-reason: null
 ---

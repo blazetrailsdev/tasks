@@ -1,7 +1,7 @@
 ---
 title: "activerecord: deterministic_encrypted_attributes answers an Array, not a Set"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8682
+claim: "2026-10-08T15:05:12Z"
+assignee: "migration-compatibility-find-stringifies-the-version-in-one-call"
 blocked-by: null
 closed-reason: null
 ---
