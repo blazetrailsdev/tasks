@@ -366,6 +366,13 @@ story branches from `main` after its dependencies merge.
 
 ## Rollout
 
+**At numbering time, one cross-RFC edge must be wired by hand.** The sqlite3 gem wrapper RFC
+(`sqlite3-gem-port`, tasks#261) has a story, `sqlite3-enroll-the-c-extension-surface`, that depends
+on this RFC's `c-ext-method-table-extractor-arm`. `validate` rejects a dependency that does not
+resolve on the branch, so neither PR can carry it. When both are merged and numbered, run
+`tasks set-deps sqlite3-enroll-the-c-extension-surface --add c-ext-method-table-extractor-arm`
+and add each RFC's number to the other's `related-rfcs`.
+
 1. Scoring: `c-ext-method-table-extractor-arm`.
 2. Package: `pg-package-and-vendor-source`, `pg-enroll-the-c-extension-surface`.
 3. Result and coders: `pg-result-moves-to-the-package`, `pg-array-coders-move-to-the-package`,
@@ -420,4 +427,5 @@ story branches from `main` after its dependencies merge.
 ## Changelog
 
 - 2026-10-08: initial draft
+- 2026-10-08: § Rollout states the cross-RFC edge to wire at numbering time (from tasks#261's review)
 - 2026-10-08: self-review round 1: located the two unverified call sites; verified `server_version` against node-pg 8.19's source; split the type-map story in two (every story now at or under 600 est-loc); sections regrouped under `## Design` to match the template
