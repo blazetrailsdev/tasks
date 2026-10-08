@@ -1,7 +1,7 @@
 ---
 rfc: "0186-pg-gem-port"
 title: "pg: a @blazetrails/pg gem wrapper over node-pg"
-status: draft
+status: postponed
 created: 2026-10-08
 updated: 2026-10-08
 owner: "@deanmarano"
