@@ -1,6 +1,6 @@
 ---
 title: "msgpack: Buffer#read / #read_all and the cruby buffer specs"
-status: draft
+status: ready
 updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null

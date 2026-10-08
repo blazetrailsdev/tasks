@@ -1,7 +1,7 @@
 ---
 title: "MessagePack Duration: an integral Float value/part dumps as a msgpack integer where Ruby writes float64"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []

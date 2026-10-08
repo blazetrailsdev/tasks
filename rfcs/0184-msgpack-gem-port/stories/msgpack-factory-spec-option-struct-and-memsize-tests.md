@@ -1,6 +1,6 @@
 ---
 title: "msgpack: factory_spec.rb's unpacker-option, Struct#to_a and memsize tests"
-status: draft
+status: ready
 updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null

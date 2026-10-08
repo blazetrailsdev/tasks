@@ -1,6 +1,6 @@
 ---
 title: "activerecord: MessagePack::Extensions.install registers through the gem's register_type shape"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null

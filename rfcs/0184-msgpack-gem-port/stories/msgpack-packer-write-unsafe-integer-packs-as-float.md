@@ -1,7 +1,7 @@
 ---
 title: "msgpack: Packer#write packs a whole number past 2**53 as float64"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []

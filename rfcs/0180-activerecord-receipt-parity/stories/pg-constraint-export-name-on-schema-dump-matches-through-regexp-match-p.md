@@ -1,7 +1,7 @@
 ---
 title: "activerecord: PostgreSQL constraint export_name_on_schema_dump? matches through the stateless Regexp#match?"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["export-name-on-schema-dump-matches-through-a-stateless-regexp-match-p"]
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8679
+claim: "2026-10-08T13:34:16Z"
+assignee: "generated-relation-methods-mutex-synchronize-is-unported"
 blocked-by: null
 closed-reason: null
 ---

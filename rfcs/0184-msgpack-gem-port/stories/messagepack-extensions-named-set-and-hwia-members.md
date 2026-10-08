@@ -1,7 +1,7 @@
 ---
 title: "MessagePack Extensions: write_set/read_set and write/read_hash_with_indifferent_access as named members"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []

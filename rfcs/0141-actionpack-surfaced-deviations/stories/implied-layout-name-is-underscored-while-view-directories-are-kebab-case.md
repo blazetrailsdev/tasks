@@ -1,6 +1,6 @@
 ---
 title: "Implied layout name follows the kebab-case view directory rule"
-status: draft
+status: in-progress
 updated: 2026-10-08
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8678
+claim: "2026-10-08T13:47:59Z"
+assignee: "implied-layout-name-is-underscored-while-view-directories-are-kebab-case"
 blocked-by: null
 closed-reason: null
 ---

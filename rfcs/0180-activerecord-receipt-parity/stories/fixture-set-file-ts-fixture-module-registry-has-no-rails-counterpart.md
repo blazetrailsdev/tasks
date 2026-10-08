@@ -1,7 +1,7 @@
 ---
 title: "activerecord: FixtureSet::File's TS fixture-module registry has no Rails counterpart"
-status: ready
-updated: 2026-10-07
+status: blocked
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-08T13:04:13Z"
+assignee: "fixture-set-file-ts-fixture-module-registry-has-no-rails-counterpart"
+blocked-by: "RFC 0170's optional-yaml constraint: its yaml-absent-install-smoke story requires a YAML-free AR boot to load a .ts fixture with yaml unresolvable, and its consumer table keeps File.registerModule as the YAML-free fixture format. Deleting the registry makes ConfigurationFile.parse (npm yaml) the only fixture path, so the two cannot both hold; owner must pick. Scope is also ~10x the 600 est-loc: the registry carries all 149 canonical fixture modules (391 test files via fixtures([names]), label types from RegistryData) plus 139 test files passing inline data via fixtures({key:[model,data]}), all of which would need checked-in .yml files."
 closed-reason: null
 ---
 

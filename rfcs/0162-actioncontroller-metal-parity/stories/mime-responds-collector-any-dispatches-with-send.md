@@ -1,7 +1,7 @@
 ---
 title: "MimeResponds::Collector#any dispatches each type with send, not an index read through a cast"
-status: ready
-updated: 2026-10-07
+status: done
+updated: 2026-10-08
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8677
+claim: "2026-10-08T13:26:12Z"
+assignee: "helpers-inherited-hook-never-fires-for-api-controllers-with-helpers"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: build_explain_clause joins Symbol options through Array#join instead of a hand-written colon strip"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

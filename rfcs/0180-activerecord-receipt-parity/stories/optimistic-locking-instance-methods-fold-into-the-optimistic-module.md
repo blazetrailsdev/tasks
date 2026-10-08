@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Locking::Optimistic's instance methods fold into the Optimistic module (extractor keeps a merged interface member's seat)"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8679
+claim: "2026-10-08T13:34:16Z"
+assignee: "generated-relation-methods-mutex-synchronize-is-unported"
 blocked-by: null
 closed-reason: null
 ---

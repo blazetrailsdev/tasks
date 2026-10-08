@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the last invented tables (catalog_*, content_pages, admin_regions, hot_accounts, orgs, teams, orphans) and admin_users.region_id"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-08
 rfc: "0175-activerecord-test-parity-100"
 cluster: schema-fixtures
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["activerecord-delete-dead-invented-schema-tables"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8676
+claim: "2026-10-08T13:41:44Z"
+assignee: "activerecord-converge-clients-firms-invented-tables-onto-companies"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "render treats a plain array as a collection, as Rails does"
-status: draft
+status: in-progress
 updated: 2026-10-08
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8678
+claim: "2026-10-08T13:48:02Z"
+assignee: "plain-array-is-not-rendered-as-a-collection"
 blocked-by: null
 closed-reason: null
 ---

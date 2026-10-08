@@ -1,7 +1,7 @@
 ---
 title: "activerecord: tests on invented clients / firms tables move onto Rails' companies STI table"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-08
 rfc: "0175-activerecord-test-parity-100"
 cluster: schema-fixtures
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["activerecord-delete-dead-invented-schema-tables"]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8676
+claim: "2026-10-08T13:29:01Z"
+assignee: "activerecord-converge-clients-firms-invented-tables-onto-companies"
 blocked-by: null
 closed-reason: null
 ---

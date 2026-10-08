@@ -1,6 +1,6 @@
 ---
 title: "msgpack: StackError, skip, Hash maps and Decoder#pos need a read loop the engine hides"
-status: draft
+status: ready
 updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null

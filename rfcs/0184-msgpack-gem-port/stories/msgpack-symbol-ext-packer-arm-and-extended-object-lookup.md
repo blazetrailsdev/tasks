@@ -1,7 +1,7 @@
 ---
 title: "msgpack: Factory has_symbol_ext_type, the packer's T_SYMBOL arm, and the extended-object spec"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []

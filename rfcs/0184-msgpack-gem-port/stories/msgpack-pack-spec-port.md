@@ -1,7 +1,7 @@
 ---
 title: "msgpack: port pack_spec.rb"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []

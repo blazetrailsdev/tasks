@@ -1,6 +1,6 @@
 ---
 title: "activerecord: expo-sqlite statement columns() answers the prepared column names"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

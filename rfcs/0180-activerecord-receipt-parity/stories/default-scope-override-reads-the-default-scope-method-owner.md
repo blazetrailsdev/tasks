@@ -1,6 +1,6 @@
 ---
 title: "activerecord: default_scope override detection reads the method owner in line; hasDefaultScopeOverride is deleted"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
