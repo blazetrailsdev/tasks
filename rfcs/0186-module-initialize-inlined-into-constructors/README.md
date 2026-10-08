@@ -130,8 +130,8 @@ field such as `history = []` overwrites whatever the hook set.
 
 ```ts
 /**
- * @inlinedFrom ActiveRecord::Core#initialize
- * @inlinedFrom ActiveModel::API#initialize
+ * @inlinedFrom ActiveRecord::Core#initialize vendor/rails/v8.0.2/activerecord/lib/active_record/core.rb:471-482
+ * @inlinedFrom ActiveModel::API#initialize vendor/rails/v8.0.2/activemodel/lib/active_model/api.rb:80-84
  */
 constructor(attributes = null) { … }
 ```
@@ -141,8 +141,16 @@ constructor(attributes = null) { … }
   in place.
 - One tag per inlined segment, in chain order. The order of the tags is the
   order of the segments.
-- The value is a Ruby `Module#initialize` and nothing else: no prose, no
-  story id, no `PERMANENT`. The `file:line` resolves from `rails-api.json`.
+- The value is a Ruby `Module#initialize` followed by its versioned source
+  citation, `vendor/<source>/<version>/<file>:<first>-<last>`, the span of the
+  `def`. Nothing else: no prose, no story id, no `PERMANENT`.
+- The Ruby name is the key. The citation is derived from `rails-api.json` and
+  verified against it, so it is never maintained by hand: a tag whose citation
+  does not match the active vendored version is red, and an autofix rewrites
+  it, the way `pnpm vendor:recite` rewrites other vendor citations. A vendor
+  bump therefore touches these tags mechanically.
+- The citation is for the reader. It does not detect a changed Rails body;
+  that stays the job of the body pins (`parity:api:pins`).
 - It is valid only for `initialize`, and only on a constructor. arel's
   `inlined-from` bucket names the general case (a module member whose body
   sits on an including class's file) and pins it at 0; this tag is the receipt
@@ -253,5 +261,7 @@ opts in.
 ## Changelog
 
 - 2026-10-08: drafted from the blocked-story triage session.
+- 2026-10-08: the marker carries the versioned `file:first-last` citation,
+  derived and autofixed, at the owner's direction.
 - 2026-10-08: owner ruled that `Base` stops extending `Model` and includes
   API's modules itself; moved from Open questions into Design.

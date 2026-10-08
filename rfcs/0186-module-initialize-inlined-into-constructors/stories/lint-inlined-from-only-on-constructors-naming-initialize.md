@@ -28,3 +28,4 @@ arel's `inlined-from` bucket names the general case (a module member whose body 
 - It reports a value that does not end in `#initialize`, and a value followed by prose.
 - `no-freeform-comments` leaves a well-formed tag alone; its test file covers it.
 - The rule is registered in `eslint.config.mjs` and mirrored into `eslint/rails-private-jsdoc.config.mjs` if that config's ignores require it.
+- The accepted shape is the name followed by one versioned vendor citation; `no-freeform-comments` admits that shape and nothing after it.

@@ -32,3 +32,5 @@ RFC 0186 § Design: a module's `initialize` is inlined into the constructor of e
 - The missing-tag direction is enrolled per package through an only-grow set, empty at merge.
 - The gate runs in the `rails-comparison` CI job and has a `pnpm` script named under `parity:api:`.
 - CLAUDE.md § "Before you open the PR" gains the gate in the step that covers ported method bodies.
+- A tag whose citation differs from the `def` span `rails-api.json` gives for that module at the active vendored version is red, and a `--fix` mode rewrites it.
+- `scripts/vendor-citations.test.ts` and `pnpm vendor:recite` treat the tag's citation like any other versioned vendor citation.

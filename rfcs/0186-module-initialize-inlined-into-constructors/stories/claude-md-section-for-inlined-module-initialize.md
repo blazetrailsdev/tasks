@@ -28,3 +28,4 @@ CLAUDE.md § "Module mixins" covers methods and the `included` / `extended` hook
 - It states that a parent constructor never calls an overridable hook, with the class-field reason.
 - It defines `@inlinedFrom`: where it goes, its one valid value shape, and that it is not a licence for arel's `inlined-from` bucket.
 - It cites `api.rb:80-84`, `core.rb:471-477` and `base.rb:283` as the worked example.
+- It states that the tag's citation is derived and autofixed, never hand-edited, and that body pins, not the citation, detect a changed Rails body.
