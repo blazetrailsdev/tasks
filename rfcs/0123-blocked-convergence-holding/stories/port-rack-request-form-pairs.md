@@ -5,7 +5,8 @@ updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: []
+deps:
+  - bump-vendored-rack-anchor-to-3-2
 deps-rfc: []
 est-loc: null
 priority: null
