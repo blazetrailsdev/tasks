@@ -5,7 +5,8 @@ updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - pg-gem-result-and-array-coders-score-against-the-pg-gem
 deps-rfc: []
 est-loc: 350
 priority: null
