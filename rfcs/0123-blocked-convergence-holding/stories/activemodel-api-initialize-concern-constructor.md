@@ -38,3 +38,7 @@ splice a module's `initialize` into a class's construction (the same gap as
 ```bash
 pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conventions.test.ts
 ```
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+"No initialize methods; constructor inheritance has to get inlined." A module's `initialize` body is inlined into the constructor of the class that includes it. Open point to confirm with the owner: whether that means `Model`'s constructor must make the `assign_attributes` call `model.ts:122` receipts as missing (a convergence), or that the missing call is permanent.

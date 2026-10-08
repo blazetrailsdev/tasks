@@ -34,3 +34,7 @@ keeps an `initialize` method its constructor delegates to. Same gap as
 ```bash
 pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:calls
 ```
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+"No initialize methods; constructor inheritance has to get inlined." The prepended `initialize` is inlined into the class's constructor. See the open point recorded on `activemodel-api-initialize-concern-constructor`.

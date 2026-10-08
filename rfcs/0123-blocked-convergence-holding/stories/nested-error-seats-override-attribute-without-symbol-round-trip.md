@@ -43,3 +43,7 @@ The conversion exists because trails spells an attribute's Symbol two ways: bare
       `attribute: "title"`.
 - [ ] Whichever side changes (`Error#attribute`'s spelling, or the `to_sym` send for an
       attribute name), the decision is applied repo-wide, not only in `nested-error.ts`.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+`Error#attribute` is colon-spelled repo-wide (`":title"`), porting `errors.rb:204,496`. Do the whole rename in one PR; the LOC ceiling is lifted for it. That covers the `errors.*` call sites and the `messages` / `details` / `to_hash` keys.

@@ -45,3 +45,7 @@ those through each class's `initialize_copy`.
       at its Rails call).
 - [ ] `forceChange` on a `Date`, array and plain-object attribute is covered by a
       test that fails on the current `dupValue` deep copy where Rails is shallow.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+ruby-compat's `Hash` and `@blazetrails/date`'s `Date` implement `initializeCopy` (Ruby's `initialize_copy`), which runs inside the class and can copy its own `#private` fields; `rbObjAlloc` builds the blank through the constructor. No class moves off `#private` fields.

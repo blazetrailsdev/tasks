@@ -43,3 +43,7 @@ trails' `executeBatch` (`mysql2/database-statements.ts:98-125`) also treats
 - Both cases are ported at their Rails names in
   `packages/activerecord/src/fixtures.test.ts`, gated to Mysql2/Trilogy.
 - Their row is deleted from `scripts/parity/unported-files/unscoped.ts`.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+Before this is ratified as a driver limit, try sending COM_SET_OPTION through a custom mysql2 command class (`connection.addCommand`). Ratify only if that fails, and record what was tried.

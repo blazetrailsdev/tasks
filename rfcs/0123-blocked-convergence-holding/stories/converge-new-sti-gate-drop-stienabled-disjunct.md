@@ -84,3 +84,7 @@ STI dispatch was UNCHANGED: `inheritance.test.ts` stays green, including
 database-row dispatch paths this tree exercises do NOT in fact depend on the
 `stiEnabled` sentinel, which is direct evidence that the disjunct is reading a
 trails-invented signal rather than a load-bearing one.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+Constructing a model over a cold schema raises. Rewrite this story around that rule: with a cold `new` an error, the `!stiEnabled` disjunct has no cold window to cover and can go. Not decided: the error class, and whether sync readers other than `new` keep answering `undefined`.

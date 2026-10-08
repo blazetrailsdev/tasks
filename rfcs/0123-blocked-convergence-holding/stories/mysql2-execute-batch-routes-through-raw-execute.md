@@ -101,3 +101,7 @@ it is unused because nothing can act on a false answer.
 - [ ] The `ER_PARSE_ERROR` repro above passes: a two-statement `executeBatch`
       succeeds on the MariaDB lane.
 - [ ] MariaDB and MySQL lanes green.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+Before this is ratified as a driver limit, try sending COM_SET_OPTION through a custom mysql2 command class (`connection.addCommand`). Ratify only if that fails, and record what was tried.

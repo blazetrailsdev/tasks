@@ -56,3 +56,7 @@ schema load.
       call site with a Rails cite.
 - [ ] A test covers `defineAttribute` before schema load surviving the load.
 - [ ] `pnpm parity:api:calls` / `:args` add zero rows; parity deltas non-negative.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+Constructing a model over a cold schema raises. Rewrite this story around that rule: `_defaultAttributes` can then no longer be memoized before the columns land, so the trails-only reset in `applyColumnsHash` can go.
