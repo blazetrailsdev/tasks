@@ -5,7 +5,9 @@ updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: ["mapper-mapping-is-instantiated-per-route"]
+deps:
+  - mapper-mapping-is-instantiated-per-route
+  - mapper-resources-hand-builds-canonical-routes
 deps-rfc: []
 est-loc: null
 priority: null
