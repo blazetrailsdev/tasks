@@ -1,6 +1,6 @@
 ---
 title: "activerecord: encryption/encoding-helpers.ts folds into String#encode and bare header reads"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings

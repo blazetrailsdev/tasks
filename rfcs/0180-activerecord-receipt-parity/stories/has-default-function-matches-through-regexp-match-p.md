@@ -1,7 +1,7 @@
 ---
 title: "activerecord: has_default_function? matches through the ruby-compat Regexp#match? port, without a null guard"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["export-name-on-schema-dump-matches-through-a-stateless-regexp-match-p"]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8680
+claim: "2026-10-08T14:05:09Z"
+assignee: "has-default-function-matches-through-regexp-match-p"
 blocked-by: null
 closed-reason: null
 ---

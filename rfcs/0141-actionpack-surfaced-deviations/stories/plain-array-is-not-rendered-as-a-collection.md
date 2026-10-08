@@ -1,6 +1,6 @@
 ---
 title: "render treats a plain array as a collection, as Rails does"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

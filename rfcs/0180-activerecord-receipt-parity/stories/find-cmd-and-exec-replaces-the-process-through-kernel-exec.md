@@ -1,6 +1,6 @@
 ---
 title: "activerecord: find_cmd_and_exec ends in Kernel#exec through the process adapter"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings

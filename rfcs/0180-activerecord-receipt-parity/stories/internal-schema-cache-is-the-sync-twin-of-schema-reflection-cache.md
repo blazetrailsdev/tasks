@@ -1,7 +1,7 @@
 ---
 title: "activerecord: internalSchemaCache is the sync twin of the ported SchemaReflection#cache, not a ratified peek"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8681
+claim: "2026-10-08T14:35:12Z"
+assignee: "internal-schema-cache-is-the-sync-twin-of-schema-reflection-cache"
 blocked-by: null
 closed-reason: null
 ---

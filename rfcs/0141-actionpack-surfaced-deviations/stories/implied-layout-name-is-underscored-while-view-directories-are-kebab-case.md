@@ -1,6 +1,6 @@
 ---
 title: "Implied layout name follows the kebab-case view directory rule"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

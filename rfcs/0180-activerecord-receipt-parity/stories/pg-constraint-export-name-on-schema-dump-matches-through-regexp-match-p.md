@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PostgreSQL constraint export_name_on_schema_dump? matches through the stateless Regexp#match?"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings

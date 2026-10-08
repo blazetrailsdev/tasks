@@ -1,7 +1,7 @@
 ---
 title: "activerecord: withConnectionSync is a synchronous lease that no CLAUDE.md section ratifies"
-status: ready
-updated: 2026-10-07
+status: blocked
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable
 packages: ["activerecord"]
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-08T14:35:12Z"
+assignee: "internal-schema-cache-is-the-sync-twin-of-schema-reflection-cache"
+blocked-by: "withConnectionSync (connection-pool.ts:734) survives, receipt cites this story. Not deletable while Relation#toSql is a ratified sync String API (CLAUDE.md section 'Relation is evaluated by an async query'). trails#8681 retired three call paths (loadSchemaFromCacheSync and cachedTableExists now peek pool.schemaReflection.loadedCache with no lease; quotedTableName is adapter_class.quote_table_name, model_schema.rb:285). Remaining callers after #8681, each forced by a synchronous Rails-facing reader: relation.ts:467 (Relation#toSql, ratified); relation.ts:710,722 (execMainQuery) and relation.ts:1059, relation/finder-methods.ts:537 (applyJoinDependency), relation/query-methods.ts:1138 (arel) - owned by relation-layer-with-connection-receipts-are-not-the-tosql-sites; relation/finder-methods.ts:384 (sync finder block); sanitization.ts:62,66,72,145 (sanitize_sql quoting, sync String API); attributes.ts:61 (_default_attributes, read by the sync constructor); base.ts:2741 (Base.withConnectionSync forwarder); associations/alias-tracker.ts:25 (AliasTracker.create, built under sync arel); associations/join-dependency.ts:125 (table alias length under sync arel); type-caster/connection.ts:28 (type_for_attribute under sync arel); model-schema.ts:36 reflectionAdapter, reached from :86 buildPkWhere (sync predicate), :627 loadSchemaFromAdapter's adapter-identity check, :651 warmColumnsHashSync (sync fake-adapter seed). Unblocks when those readers stop needing a connection synchronously."
 closed-reason: null
 ---
 
