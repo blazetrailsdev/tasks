@@ -10,6 +10,7 @@ packages:
   - "actionpack"
   - "trailties"
   - "actionview"
+  - "rack"
 clusters:
   - "action-controller"
   - "test-harness"
