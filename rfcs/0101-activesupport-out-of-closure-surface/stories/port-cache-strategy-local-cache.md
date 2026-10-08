@@ -5,7 +5,8 @@ updated: 2026-08-13
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
-deps: []
+deps:
+  - cache-lookup-store-has-no-mem-cache-or-redis-store
 deps-rfc: []
 est-loc: 400
 priority: null
