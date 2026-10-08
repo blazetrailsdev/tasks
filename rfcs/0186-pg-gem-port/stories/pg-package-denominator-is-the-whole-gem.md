@@ -2,7 +2,7 @@
 title: "parity: the pg package's denominator is the whole gem, not the surface Rails calls"
 status: draft
 updated: 2026-10-08
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
 deps: []
