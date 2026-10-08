@@ -5,7 +5,8 @@ updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
 packages: []
-deps: []
+deps:
+  - recheck-ts7-api-surface
 deps-rfc: []
 est-loc: null
 priority: null
