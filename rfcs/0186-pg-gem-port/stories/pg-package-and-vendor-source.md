@@ -1,5 +1,5 @@
 ---
-title: "Create @blazetrails/pg over node-pg and vendor ruby-pg: the namespace, constants and error classes"
+title: "Create @blazetrails/pg over node-pg: the namespace, constants and error classes"
 status: draft
 updated: 2026-10-08
 rfc: "0186-pg-gem-port"
@@ -19,8 +19,10 @@ closed-reason: null
 ## Context
 
 `vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/postgresql_adapter.rb:3-4` is `gem "pg", "~> 1.1"; require "pg"`, resolved to `pg (1.5.9)` by
-`vendor/rails/v8.0.2/Gemfile.lock:412`. The gem is not vendored (`vendor/sources.ts` has no `pg`
-source) and trails has no package for it.
+`vendor/rails/v8.0.2/Gemfile.lock:412`. trails#8687 vendored the gem (`vendor/sources.ts` source
+`pg`, `libPath: "lib/pg"`) and enrolled `pg` as an api-compare package nested at
+`packages/activerecord/src/pg/` (`PACKAGE_SRC_SUBDIR` in `scripts/api-compare/config.ts`). There is
+no `packages/pg` yet.
 
 This story creates `packages/pg` shaped like `packages/msgpack` (trails#8591) and lands the parts
 with no I/O: the `PG` namespace, `PG::Constants` and the error classes.
@@ -42,13 +44,14 @@ items 1 to 6 and 8.
 
 ## Acceptance criteria
 
-- [ ] `vendor/sources.ts` gains source `pg` (`https://github.com/ged/ruby-pg.git`, ref `v1.5.9`, package `pg`, `libPath: "lib/pg"`, `libEntryFile: "lib/pg.rb"`, `testPath: "spec/pg"`), with a comment citing `Gemfile.lock:412`; `vendor/sources.lock.json` and `vendor/sources.test.ts`'s lists are updated; `pnpm vendor:fetch` populates `vendor/pg/v1.5.9/`.
+- [ ] The existing `pg` source in `vendor/sources.ts` gains `libEntryFile: "lib/pg.rb"` and `testPath: "spec/pg"`; `vendor/sources.lock.json` and `vendor/sources.test.ts`'s lists are updated. No `extPath`: the C surface is unscored (RFC § Scoring).
+- [ ] `pg` leaves `PACKAGE_SRC_SUBDIR`: api-compare reads it from `packages/pg/src`. `packages/activerecord/src/pg/connection.ts` stays where it is until `pg-connection-exec-surface-moves-to-the-package`, so until then its members are unscored.
 - [ ] `packages/pg` exists as `@blazetrails/pg`: `package.json` (`type: module`, `exports: {"."}`, `files: [dist]`, `build: tsc`, `pg` under `peerDependencies` with `peerDependenciesMeta.pg.optional: true`, `@blazetrails/ruby-compat` the only workspace dependency), `tsconfig.json`, `README.md` stating rule 1 (only what trails calls) with the surface table.
 - [ ] `src/namespaces.ts`, `src/pg.ts` (`PG::Constants` with exactly ten constants: the eight above, which Rails names, plus `PQTRANS_ACTIVE` (`ext/pg.c:424`) and `CONNECTION_BAD` (`ext/pg.c:369`), which Rails does not name but `transaction_status` and `status` return), `src/exceptions.ts` (`Error`, `ServerError`, `UnableToSend`, `ConnectionBad`, `FeatureNotSupported`, with `connection` / `result` readers), `src/index.ts`.
 - [ ] Every registration in RFC § "Registration cost" items 1 to 6 and 8 is made; `pnpm vitest run scripts/ vendor/` and `pnpm parity:test:assertions` are green. The `assertion-mismatch-mark.json` row is added by hand.
 - [ ] `packages/activerecord/src/connection-adapters/postgresql-adapter.ts:144-150` and `packages/activerecord/src/connection-adapters/postgresql/database-statements.ts:253-255` import the constants from the package; the local consts are deleted. The README's surface table lists `PQTRANS_ACTIVE` and `CONNECTION_BAD` with the method that returns each, per rule 1.
 - [ ] CI: the package's tests run on the PostgreSQL lane, not Leaf Tests, from this first PR, because everything after this story needs a server. `.github/workflows/ci.yml` and `scripts/ci-suite-coverage.test.ts`'s fixture literals are updated together.
-- [ ] `pnpm parity:api` prints a `pg` row. The package is not added to `GATED_PACKAGES` yet.
+- [ ] `pnpm parity:api` prints a `pg` row. The package is not added to `GATED_PACKAGES`, in this story or a later one.
 
 ## Verification
 
@@ -58,5 +61,5 @@ pnpm vitest run packages/pg scripts/ vendor/ && pnpm parity:api
 
 ## Notes
 
-`PG::Error` is defined in both C and Ruby. Until `c-ext-method-table-extractor-arm` lands, only
-the Ruby half scores; do not receipt the C half in the meantime, leave it as reported extra.
+`PG::Error` is defined in both C and Ruby. Only the Ruby half scores. Do not receipt the C half:
+it is reported extra in an ungated package, as msgpack's C surface is.
