@@ -5,7 +5,8 @@ updated: 2026-09-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []
-deps: []
+deps:
+  - port-did-you-mean-correctable-onto-name-error
 deps-rfc: []
 est-loc: 80
 priority: null
