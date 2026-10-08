@@ -5,7 +5,10 @@ updated: 2026-10-05
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
-deps: []
+deps:
+  - move-the-work-queues-into-the-database
+  - move-tracker-state-into-the-database
+  - move-deploys-and-sweeps-into-the-database
 deps-rfc: []
 est-loc: 250
 priority: 5
