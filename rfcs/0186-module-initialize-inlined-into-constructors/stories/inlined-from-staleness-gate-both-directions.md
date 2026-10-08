@@ -33,4 +33,4 @@ RFC 0186 § Design: a module's `initialize` is inlined into the constructor of e
 - The gate runs in the `rails-comparison` CI job and has a `pnpm` script named under `parity:api:`.
 - CLAUDE.md § "Before you open the PR" gains the gate in the step that covers ported method bodies.
 - A tag whose citation differs from the `def` span `rails-api.json` gives for that module at the active vendored version is red, and a `--fix` mode rewrites it.
-- The citation has no `vendor/` prefix, so `scripts/vendor-citations.test.ts` and `pnpm vendor:recite` do not match it; this gate is its only checker, and a vendor `ref` bump is covered by a test that the gate reds on the old version.
+- `pnpm vendor:recite` and `scripts/vendor-citations.test.ts` learn the tag: they prepend `vendor/` to its path to resolve it, rewrite a stale version in place without adding the prefix, and a test covers a `ref` bump.

@@ -146,11 +146,12 @@ constructor(attributes = null) { … }
   The path is relative to `vendor/` and does not spell it. Nothing else: no
   prose, no story id, no `PERMANENT`.
 - The Ruby name is the key. The citation is derived from `rails-api.json` and
-  verified against it, so it is never maintained by hand: a tag whose citation
-  does not match the active vendored version is red, and the gate's `--fix`
-  rewrites it. Because the path does not start with `vendor/`,
-  `pnpm vendor:recite` and `scripts/vendor-citations.test.ts` do not see it;
-  this gate owns it. A vendor bump touches these tags mechanically.
+  verified against it, so it is never maintained by hand. The tooling adds the
+  `vendor/` prefix back when it resolves the path, so the existing citation
+  machinery covers the tag: `pnpm vendor:recite` rewrites a stale version and
+  `scripts/vendor-citations.test.ts` fails CI on one it would rewrite. The
+  staleness gate checks the line span against the manifest and its `--fix`
+  rewrites it. A vendor bump touches these tags mechanically.
 - The citation is for the reader. It does not detect a changed Rails body;
   that stays the job of the body pins (`parity:api:pins`).
 - It is valid only for `initialize`, and only on a constructor. arel's
