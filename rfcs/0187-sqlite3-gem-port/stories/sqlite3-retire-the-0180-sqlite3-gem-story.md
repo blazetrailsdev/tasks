@@ -19,8 +19,9 @@ closed-reason: null
 ## Context
 
 `sqlite3-gem-c-surface-and-driver-covers-score-against-the-vendored-gem` (RFC 0180, ready) has
-four acceptance criteria; RFC 0187-sqlite3-gem-port § "Migration" steps 2 and 4 are those
-criteria. 9 receipts name it, identified here by symbol because this story runs after the lift moves the
+four acceptance criteria. RFC 0187-sqlite3-gem-port § "Migration" step 4 covers the driver
+covers; the criteria that score the C surface are dropped, because no C extractor arm is built
+(RFC 0186-pg-gem-port § "Scoring"). 9 receipts name it, identified here by symbol because this story runs after the lift moves the
 files: in `errors.ts`, the receipts on `status2klass`, `nativeStatus`, `sqlite3Errmsg`,
 `rbSqlite3Raise` and `rbSqlite3RaiseWithSql`; and the file-level cover that opens each of
 `better-sqlite3.ts`, `libsql.ts`, `node-sqlite.ts`, `expo-sqlite.ts`. Find them with
@@ -29,8 +30,8 @@ Closing a story cited in code reds `stale-refs`.
 
 ## Acceptance criteria
 
-- [ ] In one trails PR the 9 receipts are retagged, story id only, nothing else on the line changed. `status2klass`, `rbSqlite3Raise` and `rbSqlite3RaiseWithSql` become `@noRailsEquivalent CONVERGEABLE sqlite3-enroll-the-c-extension-surface`. `nativeStatus` and `sqlite3Errmsg` become `CONVERGEABLE sqlite3-better-sqlite3-engine` (the first engine story; each later engine story takes its own branch out). Each file cover becomes `CONVERGEABLE <that file's engine story>`, keeping its `MOVED-BY-SHORT-NAME:` list.
-- [ ] A receipt that names the story which will delete it is the normal lifecycle, not a contradiction: `CONVERGEABLE <id>` means "`<id>` removes this". The retag changes who owns the removal; the enroll and engine stories still delete the tags.
+- [ ] In one trails PR the 9 receipts leave the 0180 story. The three on `status2klass`, `rbSqlite3Raise` and `rbSqlite3RaiseWithSql` are deleted: `packages/sqlite3` is ungated, so they stay as unreceipted extra surface under their C names. The other six are retagged, story id only, nothing else on the line changed. `nativeStatus` and `sqlite3Errmsg` become `CONVERGEABLE sqlite3-better-sqlite3-engine` (the first engine story; each later engine story takes its own branch out). Each file cover becomes `CONVERGEABLE <that file's engine story>`, keeping its `MOVED-BY-SHORT-NAME:` list.
+- [ ] A receipt that names the story which will delete it is the normal lifecycle, not a contradiction: `CONVERGEABLE <id>` means "`<id>` removes this". The retag changes who owns the removal; the engine stories still delete the tags.
 - [ ] After it merges, the 0180 story is closed with `tasks close <id> "superseded by RFC <n>-sqlite3-gem-port"` and RFC 0180's README row for it is removed by markdown PR.
 - [ ] `stale-refs` green on `main`.
 

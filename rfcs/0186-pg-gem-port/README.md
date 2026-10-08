@@ -110,6 +110,11 @@ RFC does not build one (owner decision, 2026-10-08). `packages/pg` takes the msg
 - The C-defined methods keep their gem names and are reported by `pnpm parity:api:extra --package pg`
   as extra surface. They carry no receipt and no citation.
 - `pg` is not added to `GATED_PACKAGES`, so no ratchet reads that surface.
+- **The denominator is what activerecord calls, and nothing else** (owner, 2026-10-08). A gem file
+  with no member in the surface tables (`basic_type_registry.rb`, `tuple.rb`, the binary coders) is
+  an `UNPORTED_FILES` row; a Ruby-defined method in an enrolled file that activerecord does not call
+  is a `SCOPED_SKIP_GROUPS` entry. Both carry the reason "not called by activerecord". The `pg` row
+  then reads N/N over the Ruby-defined methods of the surface tables, where it reads 1/89 today.
 
 What checks the wrapper instead is the PostgreSQL adapter's own suite, which already passes, and
 the gem specs ported under open question 6. A misnamed C-defined method is caught by the adapter
@@ -384,8 +389,8 @@ receipt-removing stories above that touch them and only closes stories nothing c
 ## Rollout
 
 **RFC 0187 (`sqlite3-gem-port`) planned to consume this RFC's extractor arm.** That story is
-closed here, so `sqlite3-enroll-the-c-extension-surface` has nothing to build on and RFC 0187 needs
-the same decision made for it.
+closed here, and RFC 0187 took the same decision: its `sqlite3-enroll-the-c-extension-surface` is
+closed too, and no edge runs between the two RFCs.
 
 This is the authoritative order. Within a phase, stories with no `deps` edge between them can run
 in parallel; across phases the `deps` graph is what binds, and a phase number is not a dependency.
@@ -416,8 +421,9 @@ Three stories rehomed here from other RFCs are not in this order and bind only t
 
 - `grep -rn "noRailsEquivalent" packages/activerecord/src/connection-adapters/postgresql/pg-*.ts packages/activerecord/src/connection-adapters/postgresql/oid/array.ts`
   returns nothing (20 today), and both `pg-*.ts` files are gone.
-- `pnpm parity:api` prints a `pg` row sourced from `packages/pg`, with no missing Ruby-defined
-  method among those in the surface tables. `PACKAGE_SRC_SUBDIR` has no `pg` entry.
+- `pnpm parity:api` prints a `pg` row sourced from `packages/pg` whose denominator is the
+  Ruby-defined methods of the surface tables and whose missing count is 0. `PACKAGE_SRC_SUBDIR` has
+  no `pg` entry.
 - `grep -rn "from \"pg\"" packages/activerecord/src --include=*.ts` returns only test files.
 - `pg-translate-exception-respond-to-result` is unblocked and done.
 
@@ -455,3 +461,4 @@ Three stories rehomed here from other RFCs are not in this order and bind only t
 - 2026-10-08: § Rollout states the cross-RFC edge to wire at numbering time (from tasks#261's review)
 - 2026-10-08: self-review round 1: located the two unverified call sites; verified `server_version` against node-pg 8.19's source; split the type-map story in two (every story now at or under 600 est-loc); sections regrouped under `## Design` to match the template
 - 2026-10-08: owner decision: the package stays, the C extractor arm and PGlite go. § Scoring now takes the msgpack shape (Ruby `def`s scored, C surface unscored and ungated); stories `c-ext-method-table-extractor-arm`, `ruby-extractor-reads-c-defined-gem-methods`, `pg-enroll-the-c-extension-surface` and `pg-pglite-engine` closed; open questions 3 and 4 resolved; § Motivation notes what trails#8687 already landed
+- 2026-10-08: owner decision: the score's denominator is the methods activerecord calls; uncalled gem files and methods are unported-files rows and scoped skips

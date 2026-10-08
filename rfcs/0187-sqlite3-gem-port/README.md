@@ -36,8 +36,8 @@ workspace package, the gem's two central classes, and any scoring of its C half.
 So this RFC is a **lift and a rename**, not a port from nothing. It moves `src/sqlite/` to
 `packages/sqlite3` (`@blazetrails/sqlite3`), replaces the trails-invented driver seam
 (`SqliteDriver` / `SqliteConnection` / `SqliteStatement`, `packages/activerecord/src/sqlite-adapter.ts`)
-with `SQLite3::Database` and `SQLite3::Statement` under the gem's method names, and enrolls
-`ext/sqlite3/*.c` through the extractor arm RFC 0186 (`pg-gem-port`) builds.
+with `SQLite3::Database` and `SQLite3::Statement` under the gem's method names. The gem's C half
+stays unscored, as RFC 0186 (`pg-gem-port`) decided for pg: no extractor arm is built.
 
 One constraint collides with the code as it stands and is put to the owner rather than resolved
 here: see "Async" and open question 1.
@@ -73,7 +73,9 @@ The three reasons for a package, tested:
    `column_count.zero?`, `step`, `columns`, `to_a`, `close`, `changes`; trails'
    `sqlite3/database-statements.ts:206-239` is `exec`, `prepare`, `bindParams`, `!stmt.reader`,
    `step`, `columns().map(c => c.name)`, `toA`, `close`, `changes`, `lastInsertRowId`.
-2. **One home, receipts gone.** The home exists. The 9 receipts go only with the C arm, as for pg.
+2. **One home, receipts gone.** The home exists. The 9 receipts go because `packages/sqlite3` is
+   ungated, as msgpack is: nothing there asks for one, so each is deleted by the story that
+   reaches its member (§ Migration).
 3. **A second client.** Already true and the strongest of the three: six clients implement the seam
    today. The package does not create that property; it gives the seam the gem's names and puts
    the clients behind them.
@@ -88,8 +90,17 @@ the seam. **It should be a package.** What is not obviously right is the async c
 
 ### Scoring
 
-RFC 0186 (`pg-gem-port`) § "Scoring" has the measurements and the decision; this RFC consumes its
-`c-ext-method-table-extractor-arm` story and adds no tooling of its own.
+RFC 0186 (`pg-gem-port`) § "Scoring" has the measurements and the decision (owner, 2026-10-08):
+no C extractor arm. `parity:api` scores `lib/sqlite3/*.rb`; a method the gem defines in C keeps its
+gem name, is reported by `pnpm parity:api:extra --package sqlite3` as extra surface, and carries no
+receipt. `sqlite3` is not added to `GATED_PACKAGES`. What checks the C half is the SQLite adapter
+suite and the driver `*.trails.test.ts` suites.
+
+**The denominator is what activerecord calls, and nothing else** (owner, 2026-10-08). Of the 74
+methods missing today (229/303), one that activerecord does not call is not ported: its file is an
+`UNPORTED_FILES` row or the method a `SCOPED_SKIP_GROUPS` entry, with the reason "not called by
+activerecord". Story `sqlite3-score-only-what-activerecord-calls` does this. A method already
+ported and matched stays scored; nothing is deleted to shrink the count.
 
 The split for this gem, of the methods `sqlite3_adapter.rb` and `sqlite3/*.rb` call:
 
@@ -103,7 +114,7 @@ The split for this gem, of the methods `sqlite3_adapter.rb` and `sqlite3/*.rb` c
 The Ruby half is thinner than the count suggests: every one of those Ruby methods bottoms out in a
 private C method (`open_v2` `database.c:962`, `exec_batch` `:990`, `disable_quirk_mode` `:976`,
 `Statement#prepare` `statement.c:701`, `bind_param` `:683`, `column_name` `:689`, `done?` `:687`),
-and those are where an npm client differs. The C arm scores them as private rows.
+and those are where an npm client differs. They are private to the engines and unscored.
 
 `SQLite3::Constants::Open::SHAREDCACHE` is C (`ext/sqlite3/sqlite3.c:158`); the exception classes
 are Ruby (`lib/sqlite3/errors.rb:4-87`) raised from C (`ext/sqlite3/exception.c:3-122`).
@@ -258,7 +269,7 @@ Smaller than pg's, because the vendor source and most parity enrollments exist.
    `PACKAGE_DIR_OVERRIDES` (`:46`) and `sqlite3: "sqlite"` from `PACKAGE_SRC_SUBDIR` (`:110`);
    `receipt-audit.ts:200`'s nested-package note; every `call-mismatches-exclude/`, pins and mark
    shard keyed `sqlite3/...` moves with its file (115 pins today).
-4. `vendor/sources.ts`: the `sqlite3` entry gains `extPath: "ext/sqlite3"` and `testPath: "test"`,
+4. `vendor/sources.ts`: the `sqlite3` entry gains `testPath: "test"`,
    and its comment stops saying the ports live in activerecord; `vendor/sources.test.ts` lists.
 5. `scripts/test-compare/` (the four registrations) if the gem's `test/` is enrolled: see open
    question 4.
@@ -276,8 +287,9 @@ Smaller than pg's, because the vendor source and most parity enrollments exist.
 
 1. `sqlite3-lift-the-nested-port-into-a-package`: a move. No receipt changes; the four file covers
    and five `errors.ts` receipts move with their files.
-2. `sqlite3-enroll-the-c-extension-surface`: removes `status2klass`, `rbSqlite3Raise`,
-   `rbSqlite3RaiseWithSql` (3 receipts), which become scored rows against `exception.c`.
+2. `sqlite3-retire-the-0180-sqlite3-gem-story`: deletes the 3 receipts on `status2klass`,
+   `rbSqlite3Raise`, `rbSqlite3RaiseWithSql`. They port `exception.c` under its C names and stay
+   as unscored, unreceipted extra surface.
 3. `sqlite3-database-class-carries-the-gem-surface` and
    `sqlite3-statement-class-carries-the-gem-surface`: the two classes over the engine interface.
 4. One story per engine converting it from `SqliteDriver` to the engine interface; each removes
@@ -286,9 +298,10 @@ Smaller than pg's, because the vendor source and most parity enrollments exist.
 6. `sqlite3-retire-the-sqlite-driver-interfaces`: `sqlite-adapter.ts` loses the seam.
 
 **The RFC 0180 story** `sqlite3-gem-c-surface-and-driver-covers-score-against-the-vendored-gem`
-(ready): proposed `tasks close` as superseded when this RFC goes active. Its four criteria are
-steps 2 and 4. The 9 receipts naming it are retagged onto those stories in the same change, since
-closing a story cited in code reds `stale-refs`.
+(ready): proposed `tasks close` as superseded when this RFC goes active. Its criteria that score
+the C surface are dropped with the extractor arm; the rest are step 4. Of the 9 receipts naming it,
+3 are deleted and 6 are retagged onto the engine stories in the same change, since closing a story
+cited in code reds `stale-refs`.
 `sqlite-driver-adapter-subclasses-carry-file-level-covers` (0180) concerns the `*-adapter.ts`
 subclasses, not the gem, and is untouched.
 
@@ -300,12 +313,15 @@ subclasses, not the gem, and is untouched.
 - **Fixing `strict: false` on better-sqlite3.** The blocked story stays blocked on upstream; the
   wrapper is where its fix will go.
 - **mysql2, Trilogy, `ActiveRecord::Promise`.**
-- **New tooling.** The C arm is RFC 0186 (`pg-gem-port`)'s.
+- **New tooling, and scoring the C half.** No extractor arm and no citation lint, here or in
+  RFC 0186 (`pg-gem-port`).
 
 ## Alternatives considered
 
-- **Leave it nested and only enroll the C.** Cheapest (two stories). Keeps the shape RFC 0184 says
-  is being undone, and keeps the browser path importing activerecord for the seam.
+- **Leave it nested.** Cheapest. Keeps the shape RFC 0184 says is being undone, and keeps the
+  browser path importing activerecord for the seam.
+- **Enroll `ext/sqlite3/*.c` through a C extractor arm.** The original plan. Rejected by the owner
+  with the arm itself (RFC 0186 § "Alternatives considered"): scoring only, no behaviour change.
 - **Each client implements `Database` / `Statement` directly, no engine interface.** Six copies of
   `bind_params`, `each` and the error mapping; the current state under new names.
 - **Keep `T | Promise<T>`.** What the code does now. It is the honest type of a wrapper over
@@ -314,18 +330,11 @@ subclasses, not the gem, and is untouched.
 
 ## Rollout
 
-**One story depends on RFC 0186.** `sqlite3-enroll-the-c-extension-surface` needs
-`c-ext-method-table-extractor-arm`, which RFC 0186 (`pg-gem-port`) defines. The edge is in that
-story's `deps` (wired with `tasks set-deps` on 2026-10-08, once both RFCs were numbered; the two
-draft PRs could not carry it). Everything else in this RFC, including the rest of phase 1, has no
-dependency on RFC 0186.
-
-If the C arm lands differently from what the enroll story assumes, or hits its kill criterion:
-the enroll story is edited or blocked, the 3 `exception.c` receipts stay `CONVERGEABLE` on it,
-and this RFC's other 16 stories are unaffected. § Verification's first bullet then holds in its "without it" form.
+No story here depends on RFC 0186. `sqlite3-enroll-the-c-extension-surface` was the one edge; it
+is closed with the extractor arm it needed.
 
 1. Package: `sqlite3-lift-the-nested-port-into-a-package`,
-   `sqlite3-enroll-the-c-extension-surface`, `sqlite3-constants-and-fork-safety-ports`.
+   `sqlite3-constants-and-fork-safety-ports`.
 2. Classes: `sqlite3-database-class-carries-the-gem-surface`,
    `sqlite3-statement-class-carries-the-gem-surface`.
 3. Engines: `sqlite3-better-sqlite3-engine`, `sqlite3-node-sqlite-engine`,
@@ -334,17 +343,17 @@ and this RFC's other 16 stories are unaffected. § Verification's first bullet t
    `sqlite3-adapter-new-client-is-database-new`,
    `sqlite3-adapter-configure-connection-calls-the-gem-setters`,
    `sqlite3-busy-handler-has-no-client-counterpart`.
-5. Close-out: `sqlite3-retire-the-sqlite-driver-interfaces`,
+5. Close-out: `sqlite3-score-only-what-activerecord-calls`,
+   `sqlite3-retire-the-sqlite-driver-interfaces`,
    `sqlite3-gem-tests-enroll-in-parity-test`, `sqlite3-retire-the-0180-sqlite3-gem-story`.
 
 ## Verification
 
 - `ls packages/activerecord/src/sqlite` fails; `grep -n "sqlite3" scripts/api-compare/config.ts`
   shows no `PACKAGE_DIR_OVERRIDES` / `PACKAGE_SRC_SUBDIR` row.
-- With the C arm: `pnpm parity:api` prints `sqlite3` with every enrolled file matched (3/7 today)
-  and `Database` / `Statement` rows for all 20 methods in the split table. Without it (the fallback
-  in § Rollout): every enrolled `lib/sqlite3/*.rb` file is matched, the 11 Ruby-defined methods have
-  rows, and the 9 C-defined ones are named in the enroll story as still unscored.
+- `pnpm parity:api` prints `sqlite3` with a missing count of 0: the 11 Ruby-defined methods in the
+  split table have rows, every gem method activerecord does not call is skipped or its file listed
+  unported, and the 9 C-defined ones are unscored.
 - `grep -rn "sqlite3-gem-c-surface-and-driver-covers" packages/` returns nothing (9 today).
 - `grep -n "interface Sqlite\|interface SyncSqlite" packages/activerecord/src/sqlite-adapter.ts`
   returns nothing (7 today: `SqliteStatement`, `SqliteConnection`, `SyncSqliteStatement`,
@@ -372,8 +381,8 @@ and this RFC's other 16 stories are unaffected. § Verification's first bullet t
 5. **`Database#execute`, `#get_first_value`, `#last_insert_row_id`.** Gem methods Rails' adapter
    never calls but trails' seam has. Keep each only where a non-adapter call site is named, or
    drop all three and have the adapter issue `SELECT last_insert_rowid()` as Rails does?
-6. **Order against pg.** This RFC needs only one story from the pg RFC (the C arm), and its first
-   story needs none. Run the lift first, in parallel with pg's scoring story?
+6. **Order against pg.** Resolved 2026-10-08: there is no ordering. With the C arm gone this RFC
+   needs nothing from RFC 0186.
 
 ## Changelog
 
@@ -381,3 +390,5 @@ and this RFC's other 16 stories are unaffected. § Verification's first bullet t
 - 2026-10-08: numbered 0187; the dependency on RFC 0186's extractor story is wired in `deps` and `related-rfcs`, and the prose that asked for it is replaced
 - 2026-10-08: review round 1 (tasks#261): busy-handler and `new_client` added to the deps of the stories that need them; the 0180 retag story depends on the lift and names receipts by symbol; § Async lists est-loc under each answer to open question 1 and makes the measurement a gate; § Rollout states the pg RFC dependency and the fallback; interface count corrected to 7
 - 2026-10-08: self-review round 1: corrected the `errors.ts` receipt split (3 C ports, 2 invented helpers); sections regrouped under `## Design` to match the template
+- 2026-10-08: owner decision, following RFC 0186: no C extractor arm. The package stays and its C half is unscored and ungated; `sqlite3-enroll-the-c-extension-surface` closed; the 3 `exception.c` receipts are deleted by the 0180 retire story instead of retagged; open question 6 resolved
+- 2026-10-08: owner decision: the score's denominator is the methods activerecord calls; story `sqlite3-score-only-what-activerecord-calls` added

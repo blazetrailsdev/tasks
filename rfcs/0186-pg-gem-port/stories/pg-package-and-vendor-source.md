@@ -51,7 +51,8 @@ items 1 to 6 and 8.
 - [ ] Every registration in RFC § "Registration cost" items 1 to 6 and 8 is made; `pnpm vitest run scripts/ vendor/` and `pnpm parity:test:assertions` are green. The `assertion-mismatch-mark.json` row is added by hand.
 - [ ] `packages/activerecord/src/connection-adapters/postgresql-adapter.ts:144-150` and `packages/activerecord/src/connection-adapters/postgresql/database-statements.ts:253-255` import the constants from the package; the local consts are deleted. The README's surface table lists `PQTRANS_ACTIVE` and `CONNECTION_BAD` with the method that returns each, per rule 1.
 - [ ] CI: the package's tests run on the PostgreSQL lane, not Leaf Tests, from this first PR, because everything after this story needs a server. `.github/workflows/ci.yml` and `scripts/ci-suite-coverage.test.ts`'s fixture literals are updated together.
-- [ ] `pnpm parity:api` prints a `pg` row. The package is not added to `GATED_PACKAGES`, in this story or a later one.
+- [ ] The `pg` row's denominator is what activerecord calls (RFC § Scoring). Every `lib/pg/**/*.rb` file with no member in the RFC's surface tables is an `UNPORTED_FILES` row, and every Ruby-defined method in an enrolled file that activerecord does not call is a `SCOPED_SKIP_GROUPS` entry in `scripts/parity/conventions.ts`, each with the reason "not called by activerecord". Check `SCOPED_SKIP_GROUPS` for an existing entry before adding one.
+- [ ] `pnpm parity:api` prints a `pg` row whose missing methods are only ones a later story in this RFC ports; the PR body prints the row. The package is not added to `GATED_PACKAGES`, in this story or a later one.
 
 ## Verification
 
