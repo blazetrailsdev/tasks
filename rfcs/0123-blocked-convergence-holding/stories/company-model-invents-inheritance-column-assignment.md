@@ -5,7 +5,8 @@ updated: 2026-08-27
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: []
+deps:
+  - converge-new-sti-gate-drop-stienabled-disjunct
 deps-rfc: []
 est-loc: 90
 priority: null
