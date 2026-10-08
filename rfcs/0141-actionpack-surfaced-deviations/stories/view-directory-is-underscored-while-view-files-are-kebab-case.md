@@ -1,6 +1,6 @@
 ---
 title: "actionview: a controller's view directory is underscored while its view files are kebab-case"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
