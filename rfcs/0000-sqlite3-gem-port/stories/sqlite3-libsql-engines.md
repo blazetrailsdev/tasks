@@ -27,7 +27,7 @@ replica drivers are synchronous (`libsql`'s better-sqlite3-compatible API); the 
 not. `libsqlReplicaDriver` adds `sync()`, which the gem has no method for.
 
 Blocked: `libsql-remote-adapter-memory-placeholder-and-concurrency-override` (RFC 0123). Open
-stories in RFC 0010's `adapter-test-fidelity` cluster (`libsql-local-driver`,
+stories in RFC 0038 (`turso-libsql-adapter`) (`libsql-local-driver`,
 `libsql-remote-mode`, `libsql-embedded-replica`, `libsql-replica-auto-sync`) touch the same
 file; check their status before claiming and rebase onto whichever is in flight.
 

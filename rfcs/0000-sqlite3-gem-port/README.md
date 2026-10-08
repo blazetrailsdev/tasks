@@ -48,13 +48,13 @@ here: see "Async" and open question 1.
 
 `packages/activerecord/src/sqlite/` today:
 
-| file                                                                 | lines | what it is                                                                                                                                           |
-| -------------------------------------------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `pragmas.ts`                                                         | 690   | `SQLite3::Pragmas`, a faithful port of `lib/sqlite3/pragmas.rb`                                                                                      |
-| `errors.ts`                                                          | 252   | `lib/sqlite3/errors.rb` plus `ext/sqlite3/exception.c`'s `status2klass` / `rb_sqlite3_raise` (4 receipts) and an invented `nativeStatus` (1 receipt) |
-| `database.ts`                                                        | 5     | `SQLite3::Database.quote` and nothing else                                                                                                           |
-| `better-sqlite3.ts`, `libsql.ts`, `node-sqlite.ts`, `expo-sqlite.ts` | 1,385 | one `SqliteDriver` per npm client, each under a **file-level** `@noRailsEquivalent CONVERGEABLE` cover                                               |
-| `sqlite-uri.ts`                                                      | 43    | two helpers, 2 receipts onto another story                                                                                                           |
+| file                                                                 | lines | what it is                                                                                                                                                                                             |
+| -------------------------------------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `pragmas.ts`                                                         | 690   | `SQLite3::Pragmas`, a faithful port of `lib/sqlite3/pragmas.rb`                                                                                                                                        |
+| `errors.ts`                                                          | 252   | `lib/sqlite3/errors.rb` plus `ext/sqlite3/exception.c`'s `status2klass` / `rb_sqlite3_raise` / `rb_sqlite3_raise_with_sql` (3 receipts) and the invented `nativeStatus` / `sqlite3Errmsg` (2 receipts) |
+| `database.ts`                                                        | 5     | `SQLite3::Database.quote` and nothing else                                                                                                                                                             |
+| `better-sqlite3.ts`, `libsql.ts`, `node-sqlite.ts`, `expo-sqlite.ts` | 1,385 | one `SqliteDriver` per npm client, each under a **file-level** `@noRailsEquivalent CONVERGEABLE` cover                                                                                                 |
+| `sqlite-uri.ts`                                                      | 43    | two helpers, 2 receipts onto another story                                                                                                                                                             |
 
 and, outside it, `packages/website/src/lib/frontiers/sql-js-driver.ts`, a sixth driver over `sql.js`
 for the in-browser sandbox.
@@ -86,7 +86,9 @@ nested `PACKAGE_SRC_SUBDIR` shape is "not preferred and is being undone", and on
 a browser bundle that wants `sql.js` should not resolve activerecord's `better-sqlite3` peer to get
 the seam. **It should be a package.** What is not obviously right is the async constraint, below.
 
-## Scoring
+## Design
+
+### Scoring
 
 the pg gem wrapper RFC (`pg-gem-port`) § "Scoring" has the measurements and the decision; this RFC consumes its
 `c-ext-method-table-extractor-arm` story and adds no tooling of its own.
@@ -108,7 +110,7 @@ and those are where an npm client differs. The C arm scores them as private rows
 `SQLite3::Constants::Open::SHAREDCACHE` is C (`ext/sqlite3/sqlite3.c:158`); the exception classes
 are Ruby (`lib/sqlite3/errors.rb:4-87`) raised from C (`ext/sqlite3/exception.c:3-122`).
 
-## The surface
+### The surface
 
 Rails paths are under `vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/`;
 gem paths under `vendor/sqlite3/v2.6.0/`; trails paths under `packages/activerecord/src/`.
@@ -149,7 +151,7 @@ is named for it in the package README.
 gem counterpart: the gem returns Ruby Integers of any size. It stays as engine-private behaviour,
 decided in `sqlite3-statement-class-carries-the-gem-surface`.
 
-## Package shape
+### Package shape
 
 `packages/sqlite3/`, `@blazetrails/sqlite3`, mirroring `lib/sqlite3/`:
 
@@ -188,7 +190,7 @@ decided in `sqlite3-statement-class-carries-the-gem-surface`.
   `ConfigurationError` from activerecord today (`sqlite/better-sqlite3.ts:4`); that edge is cut in
   the lift story, since a gem cannot raise a Rails error.
 
-### Async
+#### Async
 
 The gem is synchronous. Of the six clients, four are synchronous (better-sqlite3, the local
 `libsql` package, `node:sqlite`, `sql.js`) and two are not (expo-sqlite, libsql remote). The seam
@@ -198,8 +200,8 @@ today answers `T | Promise<T>` from every I/O member and offers `openSync` besid
 `each`, `close`, `rollback` and `encoding` return `Promise` on every engine. What that costs:
 
 - `SQLite3Adapter.new_client` loses its synchronous arm (`sqlite3-adapter.ts:168-169`). Every
-  SQLite connect becomes a pending open, the state the memory
-  `sqlite3-active-must-stay-false-while-an-open-is-pending` records as fragile, on the adapter the
+  SQLite connect becomes a pending open, the state
+  in which `active?` must keep answering false (a past regression on this adapter), on the adapter the
   whole default test lane runs on.
 - `encoding` (`sqlite3-adapter.ts:388-394`) loses its synchronous answer on sync engines and
   returns the UTF-8 fallback until first use, the behaviour
@@ -223,7 +225,7 @@ this RFC could establish by reading. It is open question 1 and is not resolved h
 The stories are written for the strict reading, with the `Database`/`Statement` story carrying the
 measurement that answers the question before anything is converted.
 
-## Registration cost
+### Registration cost
 
 Smaller than pg's, because the vendor source and most parity enrollments exist.
 
@@ -248,7 +250,7 @@ Smaller than pg's, because the vendor source and most parity enrollments exist.
    `test-setup-worker-db.ts:4`, `cases/helper.ts:1`, `support/template-global-setup.ts:4`,
    `support/sqlite-template.ts:2`.
 
-## Migration
+### Migration
 
 1. `sqlite3-lift-the-nested-port-into-a-package`: a move. No receipt changes; the four file covers
    and five `errors.ts` receipts move with their files.
@@ -257,7 +259,7 @@ Smaller than pg's, because the vendor source and most parity enrollments exist.
 3. `sqlite3-database-class-carries-the-gem-surface` and
    `sqlite3-statement-class-carries-the-gem-surface`: the two classes over the engine interface.
 4. One story per engine converting it from `SqliteDriver` to the engine interface; each removes
-   that file's cover (4 receipts) and `nativeStatus` folds into the engines (1 receipt).
+   that file's cover (4 receipts) and `nativeStatus` / `sqlite3Errmsg` fold into the engines (2 receipts).
 5. `sqlite3-adapter-perform-query-reads-the-gem-names` and the other adapter call-site stories.
 6. `sqlite3-retire-the-sqlite-driver-interfaces`: `sqlite-adapter.ts` loses the seam.
 
@@ -341,3 +343,4 @@ subclasses, not the gem, and is untouched.
 ## Changelog
 
 - 2026-10-08: initial draft
+- 2026-10-08: self-review round 1: corrected the `errors.ts` receipt split (3 C ports, 2 invented helpers); sections regrouped under `## Design` to match the template
