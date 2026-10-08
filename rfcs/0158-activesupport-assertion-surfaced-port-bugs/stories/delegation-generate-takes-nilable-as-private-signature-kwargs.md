@@ -2,7 +2,7 @@
 title: "activesupport: Delegation.generate takes Rails' nilable / as / private / signature kwargs"
 status: draft
 updated: 2026-10-08
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
