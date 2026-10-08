@@ -1,7 +1,7 @@
 ---
 title: "Converge PG lookup_cast_type_from_column's verify! guard out of build_fixture_sql"
-status: blocked
-updated: 2026-09-25
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -13,8 +13,8 @@ priority: null
 pr: null
 claim: "2026-09-25T01:44:13Z"
 assignee: "nested-through-polymorphic-accessor-fidelity"
-blocked-by: "lookupCastTypeFromColumn is synchronous by contract (AbstractAdapter#lookupCastTypeFromColumn returns ValueType; sync callers model-schema.ts:841 loadSchemaBang, type-caster/connection.ts:26 withConnectionSync, postgresql/quoting.ts:138 quoteDefaultExpression, schema dumpers) while verify! (postgresql/quoting.rb:190) must connect + load the type map asynchronously. Moving the guard into the method needs either an async lookupCastTypeFromColumn (the cascade CLAUDE.md § Schema reflection rejects) or an unratified ValueType|Promise dual return; TS2416 rejects a Promise-returning override. Unblock via a ratified decision on one of those shapes."
-closed-reason: null
+blocked-by: null
+closed-reason: "PERMANENT: lookupCastTypeFromColumn is synchronous and cannot await verify!; packages/activerecord/CLAUDE.md § 'Adapter facts are prewarmed and peeked' ratifies the body and buildFixtureSql's warm step, receipted @inventedArm if / verifyBang — PERMANENT (trails#8695)."
 ---
 
 ## Context

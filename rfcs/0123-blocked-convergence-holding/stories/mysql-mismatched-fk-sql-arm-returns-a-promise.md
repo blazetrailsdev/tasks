@@ -1,7 +1,7 @@
 ---
 title: "mismatchedForeignKey's sql-present arm returns a Promise where abstract_mysql_adapter.rb merges details synchronously"
-status: blocked
-updated: 2026-09-29
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -13,8 +13,8 @@ priority: null
 pr: null
 claim: "2026-09-11T02:25:50Z"
 assignee: "mysql-mismatched-fk-sql-arm-returns-a-promise"
-blocked-by: "Re-verified 2026-09-29: still live. mismatchedForeignKey (origin/main abstract-mysql-adapter.ts:1049-1068) still returns MismatchedForeignKey | Promise via mismatchedForeignKeyDetails().then(...). RFC 0076 (the previously named unblocker) is now closed without delivering an awaitable translate_exception path, so no owner exists for it; a sync PK-column read would still regress the reachable queryParser arm and Rails' column_for is uncached."
-closed-reason: null
+blocked-by: null
+closed-reason: "PERMANENT: mismatched_foreign_key's primary-key column is a query on a table known only from the failed statement, so there is no fact to warm; packages/activerecord/CLAUDE.md § 'Adapter facts are prewarmed and peeked' ratifies the value-or-promise return, receipted @inventedArm then — PERMANENT (trails#8695)."
 ---
 
 ## Context

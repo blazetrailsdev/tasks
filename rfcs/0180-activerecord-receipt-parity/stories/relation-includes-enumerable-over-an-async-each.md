@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Relation includes an Enumerable derived from its async each, so CollectionProxy drops its [Symbol.iterator]"
-status: claimed
+status: in-progress
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#8695
 claim: "2026-10-08T20:49:01Z"
 assignee: "adapter-facts-section-does-not-cover-verify-or-mismatched-foreign-key"
 blocked-by: null

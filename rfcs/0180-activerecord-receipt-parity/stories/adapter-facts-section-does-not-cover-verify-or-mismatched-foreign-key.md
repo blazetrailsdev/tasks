@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the adapter-facts section does not cover lookup_cast_type_from_column's verify! or mismatched_foreign_key"
-status: claimed
+status: in-progress
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8695
 claim: "2026-10-08T20:49:01Z"
 assignee: "adapter-facts-section-does-not-cover-verify-or-mismatched-foreign-key"
 blocked-by: null

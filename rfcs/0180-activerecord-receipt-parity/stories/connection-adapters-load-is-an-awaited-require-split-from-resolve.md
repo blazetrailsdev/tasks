@@ -1,6 +1,6 @@
 ---
 title: "activerecord: ConnectionAdapters.load is an awaited require split out of resolve"
-status: ready
+status: claimed
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-08T21:33:16Z"
+assignee: "connection-adapters-load-is-an-awaited-require-split-from-resolve"
 blocked-by: null
 closed-reason: null
 ---

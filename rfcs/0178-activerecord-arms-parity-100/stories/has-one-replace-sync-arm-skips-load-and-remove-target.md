@@ -1,7 +1,7 @@
 ---
 title: "HasOne#replace's save=false arm is a second body that skips load_target and remove_target!"
-status: ready
-updated: 2026-10-05
+status: claimed
+updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-08T21:33:16Z"
+assignee: "connection-adapters-load-is-an-awaited-require-split-from-resolve"
 blocked-by: null
 closed-reason: null
 ---
