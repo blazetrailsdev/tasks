@@ -5,7 +5,8 @@ updated: 2026-09-24
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: []
+deps:
+  - reopen-rfc-0087-constructor-arm-for-association-io-at-assignment
 deps-rfc: []
 est-loc: 30
 priority: null
