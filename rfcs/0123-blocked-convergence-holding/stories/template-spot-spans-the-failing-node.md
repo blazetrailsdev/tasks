@@ -5,7 +5,8 @@ updated: 2026-09-26
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: []
+deps:
+  - tse-compiler-in-process-expression-parser-for-template-spot
 deps-rfc: []
 est-loc: 150
 priority: null
