@@ -53,6 +53,6 @@ pnpm parity:api && pnpm test:types && pnpm test:types:virtualized
 
 ## Notes
 
-`git mv` so history follows. `git diff --name-only` hides a rename's delete half (memory); use
+`git mv` so history follows. `git diff --name-only` hides a rename's delete half; use
 `--name-status` when checking the diff. Moving a ported method stales body pins: run
 `pnpm parity:api:pins`.

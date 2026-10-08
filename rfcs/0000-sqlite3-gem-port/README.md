@@ -237,7 +237,9 @@ once the question is answered:
 | `sqlite3-adapter-perform-query-reads-the-gem-names` | 350                     | 300                     | `encoding` keeps its sync answer                                         |
 | **RFC total**                                       | **5,740**               | **5,040**               |                                                                          |
 
-`sqlite3-expo-sqlite-engine` and the other eight stories are the same size under either answer.
+`sqlite3-expo-sqlite-engine` and the other eight stories are the same size under either answer. The union
+column is an estimate made at authoring time, not a measurement; the gate below is what replaces it
+with one.
 
 **The measurement is a gate.** `sqlite3-statement-class-carries-the-gem-surface` produces two
 numbers before it converts anything: the `sqlite-mem` lane's wall time with promise-returning

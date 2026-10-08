@@ -47,7 +47,7 @@ Related, check status first: `sqlite3-connection-parameters-carry-trails-driver-
 - [ ] `newClient` is `new SQLite3.Database(String(config.database), config)` plus Rails' rescue; the option translation in `:156-165` moves into `Database`'s constructor, which reads the gem's option names.
 - [ ] How the engine reaches `Database.new` without becoming an invented parameter Rails lacks: it rides in `config` under the key the driver subclasses already set, and the constructor's read of it is the one receipted deviation. Trails-only options (`authToken`, `syncUrl`, `remoteUrl`, `driverOptions`) are read by the engine from that same hash, not by `Database`.
 - [ ] `SqliteOpenConfig` is deleted.
-- [ ] Whether the sync `openSync` arm survives follows RFC 0000-sqlite3-gem-port open question 1; if it goes, `active?` still answers false while an open is pending (memory: `project_sqlite3_active_must_stay_false_while_open_pending`) and a test pins it.
+- [ ] Whether the sync `openSync` arm survives follows RFC 0000-sqlite3-gem-port open question 1; if it goes, `active?` still answers false while an open is pending (a past regression: the adapter reported active before the handle existed) and a test pins it.
 - [ ] `pnpm parity:api:calls` and `:args` green for `new_client`; converged rows deleted by hand.
 
 ## Verification
