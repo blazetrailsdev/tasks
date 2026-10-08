@@ -38,3 +38,7 @@ splice a module's `initialize` into a class's construction (the same gap as
 ```bash
 pnpm parity:api && pnpm parity:api:pins && pnpm vitest run scripts/parity/conventions.test.ts
 ```
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+There are no `initialize` methods: the chain is written as constructors. The constructor makes the call. `Model`'s constructor becomes `API#initialize`'s body (`api.rb:80-84`), `if (attributes != null) this.assignAttributes(attributes)`, tagged `@inlinedFrom ActiveModel::API#initialize`, and the `@missingRailsCall assign_attributes` receipt at `model.ts:122` is deleted, not made permanent. What is permanent is only that a module has no `initialize` member. The rule, the tag and the parity-script changes are RFC 0186 (`module-initialize-inlined-into-constructors`); this story is carried out there.

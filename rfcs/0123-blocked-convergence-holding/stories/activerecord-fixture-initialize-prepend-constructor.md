@@ -34,3 +34,7 @@ keeps an `initialize` method its constructor delegates to. Same gap as
 ```bash
 pnpm build && pnpm parity:api && pnpm parity:skips:stories && pnpm parity:api:calls
 ```
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+There are no `initialize` methods: the prepended `EncryptedFixtures#initialize` (`encryption/encrypted_fixtures.rb:6-11`) is inlined into `Fixture`'s constructor at its Ruby position and tagged `@inlinedFrom`. The rule, the tag and the parity-script changes are RFC 0186 (`module-initialize-inlined-into-constructors`); this story is carried out there.

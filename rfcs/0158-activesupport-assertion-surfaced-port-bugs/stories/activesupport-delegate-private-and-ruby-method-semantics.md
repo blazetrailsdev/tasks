@@ -32,3 +32,7 @@ Settled, and no longer part of this story:
 
 - Decide per bullet: converge, or keep the story blocked on the specific language blocker (`Method#source_location`; `Method#arity`'s `-1`).
 - Un-skip each converged test and remove its `BLOCKED:` line. No test here is to be converged by adding a run-time visibility carrier.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+The arity -1 arm is ratified as permanent (trails CLAUDE.md § "Runtime facts Node does not expose"): drop that assertion with a row in `scripts/test-compare/assertion-receipts.ts`. The `source_location` arm stays open: try it over V8 frames, as the backtrace tests were ported in trails#8414.

@@ -55,3 +55,7 @@ receipts in trails#8066 made these `assertRaises` bodies comparable.
   the comparer is shown to be wrong about the value, with the Ruby `file:line`.
 - `pnpm parity:test:assertions` reads activesupport `assertion-value-mismatch`
   0, and the mark is lowered with `pnpm parity:test:assertions:reseed`.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+The assertion comparer normalizes Ruby `@ivar` against TS `this.ivar`, repo-wide. No value-receipt shape is added.

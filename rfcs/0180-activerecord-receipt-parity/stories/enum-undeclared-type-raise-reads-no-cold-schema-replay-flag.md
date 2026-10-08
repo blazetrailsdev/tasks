@@ -5,7 +5,8 @@ updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]
-deps: []
+deps:
+  - cold-schema-construction-raises-decide-the-error-and-its-scope
 deps-rfc: []
 est-loc: 200
 priority: null
@@ -58,3 +59,7 @@ is warm and rely on the replay having run.
 - [ ] `isReplayingOverColdSchema` and its flag are deleted; `_enum`'s decorator raises on `subtype === defaultValue()` alone.
 - [ ] `packages/activerecord/src/enum.test.ts` and the trails cold-schema enum tests stay green, or the cold-construction callers are listed with the blocker.
 - [ ] `pnpm parity:api:extra:gate` and `pnpm parity:api:receipts:gate` stay green.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+Constructing a model over a cold schema raises. That is the "decided answer" this story's blocked reason asks for ("warm first, or raise"). Rewrite it around that rule; the 76 ad-hoc `class X extends Base` test models built with no warm step need one.

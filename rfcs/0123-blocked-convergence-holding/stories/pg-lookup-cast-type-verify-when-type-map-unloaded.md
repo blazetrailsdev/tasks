@@ -5,7 +5,8 @@ updated: 2026-09-25
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: []
+deps:
+  - adapter-facts-section-does-not-cover-verify-or-mismatched-foreign-key
 deps-rfc: []
 est-loc: 60
 priority: null
