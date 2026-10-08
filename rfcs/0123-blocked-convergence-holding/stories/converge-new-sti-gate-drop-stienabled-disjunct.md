@@ -5,7 +5,8 @@ updated: 2026-08-27
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: []
+deps:
+  - cold-schema-construction-raises-decide-the-error-and-its-scope
 deps-rfc: []
 est-loc: 120
 priority: null
