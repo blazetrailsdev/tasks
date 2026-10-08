@@ -5,7 +5,8 @@ updated: 2026-09-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
-deps: []
+deps:
+  - date-parse-returns-temporal-not-the-owned-date-class
 deps-rfc: []
 est-loc: 80
 priority: null
