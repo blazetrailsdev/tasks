@@ -2,7 +2,7 @@
 title: "activerecord: Result's iterator comes from ruby-compat Enumerable, and cast_values asks columns.one?"
 status: ready
 updated: 2026-10-07
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: findings
 packages: ["activerecord", "ruby-compat"]
 deps: ["errors-symbol-iterator-comes-from-ruby-compat-enumerable"]

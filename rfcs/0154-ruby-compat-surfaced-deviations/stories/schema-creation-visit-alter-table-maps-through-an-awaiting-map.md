@@ -2,7 +2,7 @@
 title: "activerecord: SchemaCreation#visit_AlterTable maps its visitors through an awaiting map"
 status: ready
 updated: 2026-10-07
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: findings
 packages: ["activerecord"]
 deps: ["preloader-through-records-by-owner-map-awaits-each-loader"]

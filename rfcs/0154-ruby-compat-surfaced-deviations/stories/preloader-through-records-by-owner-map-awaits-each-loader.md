@@ -2,7 +2,7 @@
 title: "activerecord: Preloader::ThroughAssociation maps its loaders through an awaiting map"
 status: ready
 updated: 2026-10-07
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: findings
 packages: ["activerecord", "ruby-compat"]
 deps: []
