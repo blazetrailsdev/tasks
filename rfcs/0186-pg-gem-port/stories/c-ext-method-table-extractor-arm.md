@@ -1,6 +1,6 @@
 ---
 title: "api-compare: read a vendored gem's C method table (rb_define_*) into the Ruby manifest"
-status: draft
+status: closed
 updated: 2026-10-08
 rfc: "0186-pg-gem-port"
 cluster: scoring
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "owner decision 2026-10-08: RFC 0186 keeps the package and scores it like msgpack; no C extractor arm is built"
 ---
 
 ## Context

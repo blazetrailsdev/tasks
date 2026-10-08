@@ -1,6 +1,6 @@
 ---
 title: "activerecord: test-adapter.ts's three pool-configuration helpers fold into the inline pool setup Rails writes"
-status: ready
+status: blocked
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "parked by owner 2026-10-08: test-helper relocation across many call sites with no behaviour change; resume on an owner decision"
 closed-reason: null
 ---
 

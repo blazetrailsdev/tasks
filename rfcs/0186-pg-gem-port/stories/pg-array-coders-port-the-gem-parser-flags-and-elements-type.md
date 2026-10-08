@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PG array coders port the gem's parser, flags and elements_type"
-status: draft
+status: closed
 updated: 2026-10-08
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded: trails#8690 met every criterion but rb_check_frozen, which is pg-coder-writers-check-frozen"
 ---
 
 ## Context

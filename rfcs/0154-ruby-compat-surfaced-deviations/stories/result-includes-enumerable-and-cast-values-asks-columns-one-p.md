@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Result's iterator comes from ruby-compat Enumerable, and cast_values asks columns.one?"
-status: ready
-updated: 2026-10-07
+status: blocked
+updated: 2026-10-08
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: findings
 packages: ["activerecord", "ruby-compat"]
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "parked by owner 2026-10-08: clears a receipt with no behaviour change; resume on an owner decision"
 closed-reason: null
 ---
 

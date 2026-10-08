@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: enroll ext/sqlite3/*.c through the C arm; exception.c's three ports lose their receipts"
-status: draft
+status: closed
 updated: 2026-10-08
 rfc: "0187-sqlite3-gem-port"
 cluster: package
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "owner decision 2026-10-08: no C extractor arm is built (RFC 0186); the sqlite3 C surface stays unscored"
 ---
 
 ## Context

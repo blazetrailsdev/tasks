@@ -1,6 +1,6 @@
 ---
 title: "pg: a PGlite engine behind PG::Connection, for an in-browser PostgreSQL"
-status: draft
+status: closed
 updated: 2026-10-08
 rfc: "0186-pg-gem-port"
 cluster: connection
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "owner decision 2026-10-08: PGlite is out of RFC 0186; an in-browser PostgreSQL is its own RFC when the website needs one"
 ---
 
 ## Context
