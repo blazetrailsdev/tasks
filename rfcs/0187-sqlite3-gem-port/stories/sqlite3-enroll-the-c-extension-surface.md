@@ -48,12 +48,6 @@ pnpm parity:api && pnpm parity:api:extra --package sqlite3
 
 ## Notes
 
-Also depends on `c-ext-method-table-extractor-arm` in the pg gem wrapper RFC (`pg-gem-port`). That
-story does not exist on this branch, so the edge is not in `deps:`; add it with
-`tasks set-deps sqlite3-enroll-the-c-extension-surface --add c-ext-method-table-extractor-arm` once
-both RFCs are merged and numbered. Do not claim this story before that one is done.
-
-Why the edge is prose and not frontmatter: `scripts/validate.mjs` rejects a `deps` or `deps-rfc`
-entry that does not resolve on the branch, and `blocked-by` is DB-owned (a hand-typed value is
-ignored by ingest and fails the owned-fields guard). The machine-visible form is the
-`tasks set-deps` call above, which the pg RFC's README lists as a required step at numbering time.
+`c-ext-method-table-extractor-arm` (RFC 0186) is in `deps`. Do not claim this story before that
+one is done: its criteria assume the C arm as that story specifies it, and the first criterion
+re-reads them against what landed.

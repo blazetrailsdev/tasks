@@ -19,6 +19,7 @@ related-rfcs:
   - "0180-activerecord-receipt-parity"
   - "0094-sqlite3-adapter-construction-fidelity"
   - "0184-msgpack-gem-port"
+  - "0186-pg-gem-port"
 ---
 
 # RFC 0187 — sqlite3 gem wrapper
@@ -36,7 +37,7 @@ So this RFC is a **lift and a rename**, not a port from nothing. It moves `src/s
 `packages/sqlite3` (`@blazetrails/sqlite3`), replaces the trails-invented driver seam
 (`SqliteDriver` / `SqliteConnection` / `SqliteStatement`, `packages/activerecord/src/sqlite-adapter.ts`)
 with `SQLite3::Database` and `SQLite3::Statement` under the gem's method names, and enrolls
-`ext/sqlite3/*.c` through the extractor arm the pg gem wrapper RFC (`pg-gem-port`) builds.
+`ext/sqlite3/*.c` through the extractor arm RFC 0186 (`pg-gem-port`) builds.
 
 One constraint collides with the code as it stands and is put to the owner rather than resolved
 here: see "Async" and open question 1.
@@ -87,7 +88,7 @@ the seam. **It should be a package.** What is not obviously right is the async c
 
 ### Scoring
 
-the pg gem wrapper RFC (`pg-gem-port`) § "Scoring" has the measurements and the decision; this RFC consumes its
+RFC 0186 (`pg-gem-port`) § "Scoring" has the measurements and the decision; this RFC consumes its
 `c-ext-method-table-extractor-arm` story and adds no tooling of its own.
 
 The split for this gem, of the methods `sqlite3_adapter.rb` and `sqlite3/*.rb` call:
@@ -299,7 +300,7 @@ subclasses, not the gem, and is untouched.
 - **Fixing `strict: false` on better-sqlite3.** The blocked story stays blocked on upstream; the
   wrapper is where its fix will go.
 - **mysql2, Trilogy, `ActiveRecord::Promise`.**
-- **New tooling.** The C arm is the pg gem wrapper RFC (`pg-gem-port`)'s.
+- **New tooling.** The C arm is RFC 0186 (`pg-gem-port`)'s.
 
 ## Alternatives considered
 
@@ -313,14 +314,11 @@ subclasses, not the gem, and is untouched.
 
 ## Rollout
 
-**Blocked on the pg gem wrapper RFC for one story.** `sqlite3-enroll-the-c-extension-surface`
-needs `c-ext-method-table-extractor-arm`, which is defined in the pg gem wrapper RFC
-(`pg-gem-port`, tasks#260) and exists on neither this branch nor `main`. Everything else in this
-RFC, including the rest of phase 1, has no dependency on that RFC. `related-rfcs` and `deps`
-cannot name it: `validate` rejects two `0000-` directories on one branch and rejects a dependency
-that does not resolve. So the step is stated here: **when both RFCs are numbered, run
-`tasks set-deps sqlite3-enroll-the-c-extension-surface --add c-ext-method-table-extractor-arm`
-and add the pg RFC's number to this README's `related-rfcs`.**
+**One story depends on RFC 0186.** `sqlite3-enroll-the-c-extension-surface` needs
+`c-ext-method-table-extractor-arm`, which RFC 0186 (`pg-gem-port`) defines. The edge is in that
+story's `deps` (wired with `tasks set-deps` on 2026-10-08, once both RFCs were numbered; the two
+draft PRs could not carry it). Everything else in this RFC, including the rest of phase 1, has no
+dependency on RFC 0186.
 
 If the C arm lands differently from what the enroll story assumes, or hits its kill criterion:
 the enroll story is edited or blocked, the 3 `exception.c` receipts stay `CONVERGEABLE` on it,
@@ -380,5 +378,6 @@ and this RFC's other 16 stories are unaffected. § Verification's first bullet t
 ## Changelog
 
 - 2026-10-08: initial draft
+- 2026-10-08: numbered 0187; the dependency on RFC 0186's extractor story is wired in `deps` and `related-rfcs`, and the prose that asked for it is replaced
 - 2026-10-08: review round 1 (tasks#261): busy-handler and `new_client` added to the deps of the stories that need them; the 0180 retag story depends on the lift and names receipts by symbol; § Async lists est-loc under each answer to open question 1 and makes the measurement a gate; § Rollout states the pg RFC dependency and the fallback; interface count corrected to 7
 - 2026-10-08: self-review round 1: corrected the `errors.ts` receipt split (3 C ports, 2 invented helpers); sections regrouped under `## Design` to match the template

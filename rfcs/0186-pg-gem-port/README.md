@@ -20,6 +20,7 @@ related-rfcs:
   - "0180-activerecord-receipt-parity"
   - "0184-msgpack-gem-port"
   - "0013-pg-rawconn-convergence"
+  - "0187-sqlite3-gem-port"
 ---
 
 # RFC 0186 — pg gem wrapper
@@ -365,7 +366,7 @@ receipt-removing stories above that touch them and only closes stories nothing c
 
 ## Non-goals
 
-- **The sqlite3 gem.** Its wrapper is a separate RFC (`sqlite3-gem-port`, tasks#261). § Scoring
+- **The sqlite3 gem.** Its wrapper is a separate RFC (RFC 0187, `sqlite3-gem-port`). § Scoring
   measures sqlite3 only as evidence of what the extractor does with C today.
 - **Enrolling msgpack or date through the C arm.** The arm is built so they can set `extPath`;
   doing it is a story for RFC 0184 (msgpack) and a decision for `date` (`compareApi: false` today),
@@ -395,12 +396,9 @@ receipt-removing stories above that touch them and only closes stories nothing c
 
 ## Rollout
 
-**At numbering time, one cross-RFC edge must be wired by hand.** The sqlite3 gem wrapper RFC
-(`sqlite3-gem-port`, tasks#261) has a story, `sqlite3-enroll-the-c-extension-surface`, that depends
-on this RFC's `c-ext-method-table-extractor-arm`. `validate` rejects a dependency that does not
-resolve on the branch, so neither PR can carry it. When both are merged and numbered, run
-`tasks set-deps sqlite3-enroll-the-c-extension-surface --add c-ext-method-table-extractor-arm`
-and add each RFC's number to the other's `related-rfcs`.
+**One story in RFC 0187 depends on this RFC.** `sqlite3-enroll-the-c-extension-surface`
+(RFC 0187, `sqlite3-gem-port`) has `c-ext-method-table-extractor-arm` in its `deps`, wired with
+`tasks set-deps` on 2026-10-08 once both RFCs were numbered.
 
 This is the authoritative order for all 18 stories. Within a phase, stories with no `deps` edge
 between them can run in parallel; across phases the `deps` graph is what binds, and a phase
@@ -469,6 +467,7 @@ number is not a dependency.
 ## Changelog
 
 - 2026-10-08: initial draft
+- 2026-10-08: numbered 0186; RFC 0187's dependency on the extractor story is wired, and the prose that asked for it is replaced
 - 2026-10-08: review round 1 (tasks#260): method count corrected to 39 C of 48 and defined; constants stated as 8 + 2; § Rollout made the authoritative order and § Migration reduced to receipt removal; receipts are no longer retagged; live status of the 0180 story moved to the PR description; sqlite3, msgpack and date added to Non-goals; the blocked termination story re-attributed from `status` to the raised error after re-reading `postgresql_adapter.rb:804-818`
 - 2026-10-08: § Rollout states the cross-RFC edge to wire at numbering time (from tasks#261's review)
 - 2026-10-08: self-review round 1: located the two unverified call sites; verified `server_version` against node-pg 8.19's source; split the type-map story in two (every story now at or under 600 est-loc); sections regrouped under `## Design` to match the template
