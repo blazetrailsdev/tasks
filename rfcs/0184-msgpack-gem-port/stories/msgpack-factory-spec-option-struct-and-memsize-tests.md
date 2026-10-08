@@ -5,7 +5,9 @@ updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - msgpack-packer-unpacker-remaining-c-surface
+  - msgpack-symbol-ext-packer-arm-and-extended-object-lookup
 deps-rfc: []
 est-loc: 200
 priority: null
