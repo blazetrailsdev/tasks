@@ -40,7 +40,7 @@ which yields a row Hash.
 - [ ] `packages/pg/src/result.ts` is `PG.Result` with exactly: `fields`, `values`, `ntuples`, `getvalue`, `ftype`, `fmod`, `cmdTuples`, `clear`, `each`, `mapTypesBang`, and `Enumerable` mixed in through ruby-compat (not an `Array` superclass, no `[Symbol.species]`).
 - [ ] `packages/activerecord/src/connection-adapters/postgresql/pg-result.ts` is deleted; every importer names `PG.Result` from `@blazetrails/pg`.
 - [ ] Call sites that indexed or spread the result as an array are rewritten onto the gem method Rails uses at that line; list each in the PR body with its Rails `file:line`.
-- [ ] `mapTypesBang` takes the gem's type-map object once `pg-type-maps-and-text-decoders-move-to-the-package` lands; until then it keeps the `Map<number, fn>` parameter and says so in a `CONVERGEABLE` receipt naming that story.
+- [ ] `mapTypesBang` takes the gem's type-map object once `pg-type-maps-and-text-encoders-move-to-the-package` lands; until then it keeps the `Map<number, fn>` parameter and says so in a `CONVERGEABLE` receipt naming that story.
 - [ ] The 12 receipts are gone; `pnpm parity:api:extra:gate` and `pnpm parity:api:receipts:gate` are green with no mark widened.
 
 ## Verification

@@ -5,11 +5,7 @@ updated: 2026-10-08
 rfc: "0000-pg-gem-port"
 cluster: package
 packages: ["pg", "scripts"]
-deps:
-  [
-    "pg-connection-session-setters-move-to-the-package",
-    "pg-type-maps-and-text-decoders-move-to-the-package",
-  ]
+deps: ["pg-connection-session-setters-move-to-the-package", "pg-text-decoders-move-to-the-package"]
 deps-rfc: []
 est-loc: 600
 priority: null

@@ -74,7 +74,9 @@ Four blocked stories are the npm client's shape leaking into the adapter. They a
 the method they concern in the surface table; the wrapper is where each is fixed or proven
 unfixable, once, instead of per adapter body.
 
-## Scoring: what `parity:api` does with a C extension today
+## Design
+
+### Scoring: what `parity:api` does with a C extension today
 
 Measured on `origin/main` at `e8f1bb88fa`, after `pnpm build`:
 
@@ -129,7 +131,7 @@ The pg gem needs two gem-specific macros in the table, both one-line patterns:
 `pg_define_coder("Integer", fn, base, module)` (`ext/pg_text_decoder.c:992`) and
 `define_error_class("FeatureNotSupported", NULL)` (`ext/errorcodes.def:49`).
 
-### The measured split
+#### The measured split
 
 Gem source: `ged/ruby-pg` at tag `v1.5.9` (`afe2f208f7d5`), the version
 `vendor/rails/v8.0.2/Gemfile.lock:412` resolves. Of the gem methods the adapter calls:
@@ -145,45 +147,45 @@ Every constant the adapter names (9) is C (`ext/pg.c`). Of the error classes, `P
 defined in both (`ext/pg_errors.c:78`, `lib/pg/exceptions.rb:9`); `PG::ConnectionBad`
 (`pg_errors.c:89`) and `PG::FeatureNotSupported` (`errorcodes.def:49`) are C.
 
-## The surface
+### The surface
 
 "Only what trails calls" (`packages/ruby-compat/README.md` rule 1): this table is the whole package.
 Rails paths are under `vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/`;
 gem paths are under `vendor/pg/v1.5.9/` once vendored; trails paths are under
 `packages/activerecord/src/connection-adapters/`.
 
-### `PG` and `PG::Connection`
+#### `PG` and `PG::Connection`
 
-| gem member                                        | Rails call site                                                          | gem definition                  | trails today                                                                         | node-pg                                                                |
-| ------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
-| `PG.connect`                                      | `postgresql_adapter.rb:58`                                               | Ruby `lib/pg.rb:62`             | `postgresql-adapter.ts:244-245` `new pg.Client`                                      | `new Client(config)` + `connect()`                                     |
-| `Connection.conndefaults_hash`                    | `postgresql_adapter.rb:330`                                              | Ruby `lib/pg/connection.rb:337` | a hard-coded allowlist behind `_sliceValidConnParams` (`postgresql-adapter.ts:1509`) | none; `pg-connection-string` defaults are the nearest                  |
-| `Connection.quote_ident`                          | `postgresql/quoting.rb:47`, `postgresql/utils.rb:24,26`                  | C `ext/pg_connection.c:4489`    | inline lambda `postgresql/utils.ts:20`; `quoting.ts`                                 | `escapeIdentifier` (same output for a string)                          |
-| `Connection.unescape_bytea`                       | `postgresql/oid/bytea.rb:11`                                             | C `pg_connection.c:4487`        | `postgresql/pg-connection.ts:99`                                                     | none; hand-decoded                                                     |
-| `#escape_bytea`                                   | `postgresql/quoting.rb:71`                                               | C `pg_connection.c:4560`        | inline `postgresql/quoting.ts:50-53`, takes no connection                            | none; hand-encoded                                                     |
-| `#unescape_bytea`                                 | `postgresql/quoting.rb:78`                                               | C `pg_connection.c:4561`        | `pg-connection.ts:99`, installed `:150`                                              | none                                                                   |
-| `#escape`                                         | `postgresql/quoting.rb:129`                                              | C alias `pg_connection.c:4557`  | open-coded in `quoteString`, receipt `postgresql/quoting.ts:111`                     | none (`escapeLiteral` adds the quotes)                                 |
-| `#exec_params`                                    | `postgresql/database_statements.rb:162`                                  | C `pg_connection.c:4541`        | `pg-connection.ts:79-91`                                                             | `query({text, values, rowMode})`                                       |
-| `#async_exec`                                     | `postgresql/database_statements.rb:160`                                  | C alias `pg_connection.c:4547`  | `pg-connection.ts:71-77`                                                             | `query(text)`                                                          |
-| `#query`                                          | `postgresql_adapter.rb:313,351,376,378`                                  | C alias `pg_connection.c:4548`  | `rawConnection.query(...)` straight on node-pg (`postgresql-adapter.ts:659`)         | same name, different result type                                       |
-| `#prepare`                                        | `postgresql_adapter.rb:925`                                              | C `pg_connection.c:4542`        | `pg-connection.ts:32-52`, a hand-built submittable                                   | no public API; `connection.parse`                                      |
-| `#exec_prepared`                                  | `postgresql/database_statements.rb:141`                                  | C `pg_connection.c:4543`        | `pg-connection.ts:54-69`                                                             | `query({name, text, values})`                                          |
-| `#get_last_result`                                | `postgresql_adapter.rb:930`                                              | C `pg_connection.c:4616`        | absent; `prepare` resolves on ReadyForQuery                                          | none                                                                   |
-| `#transaction_status`                             | `postgresql/database_statements.rb:128`, `postgresql_adapter.rb:375,850` | C `pg_connection.c:4519`        | assigned `postgresql-adapter.ts:1647-1658` from `_activeQuery` and ReadyForQuery     | none; private `_activeQuery`, `readyForQuery` event                    |
-| `#status`                                         | `postgresql_adapter.rb:313`                                              | C `pg_connection.c:4518`        | assigned `postgresql-adapter.ts:1659-1662` from `_ending` / `_ended`                 | none. **Blocked: `pg-translate-no-connection-raises-not-established`** |
-| `#cancel`                                         | `postgresql/database_statements.rb:130`                                  | Ruby `lib/pg/connection.rb:597` | assigned `:1663`, body `_cancel` `:1675-1701`                                        | none on `Client`; `new pg.Connection().cancel(pid, key)`               |
-| `#block`                                          | `postgresql/database_statements.rb:131`                                  | C `pg_connection.c:4610`        | assigned `:1664`, body `_blockUntilCommandSettles` `:1703`                           | none                                                                   |
-| `#finished?`                                      | `postgresql_adapter.rb:344`                                              | C `pg_connection.c:4499`        | absent; `active?` reads other state                                                  | private `_ended`                                                       |
-| `#close`                                          | `postgresql_adapter.rb:389`                                              | C alias `pg_connection.c:4504`  | `_rawConnection.end()` `:703`                                                        | `end()`                                                                |
-| `#socket_io`                                      | `postgresql_adapter.rb:396`                                              | C `pg_connection.c:4525`        | `pg-connection.ts:128-141`                                                           | `connection.stream`                                                    |
-| `#reset`                                          | `postgresql_adapter.rb:946`                                              | Ruby `lib/pg/connection.rb:575` | absent; reconnect builds a new client                                                | none; a `Client` cannot reconnect                                      |
-| `#server_version`                                 | `postgresql_adapter.rb:637`                                              | C `pg_connection.c:4522`        | `_serverVersion` `:1789`, a `SHOW` query                                             | `parameterStatus` message, not surfaced on `Client`                    |
-| `#set_client_encoding`                            | `postgresql_adapter.rb:960`                                              | C `pg_connection.c:4607`        | to be located by the story                                                           | `query("SET client_encoding")`                                         |
-| `#set_notice_receiver`                            | `postgresql_adapter.rb:966`                                              | C `pg_connection.c:4601`        | to be located by the story                                                           | `client.on("notice")`                                                  |
-| `#type_map_for_queries=`                          | `postgresql_adapter.rb:1090`                                             | C `pg_connection.c:4669`        | absent; binds cast in the adapter                                                    | per-query `types`                                                      |
-| `#type_map_for_results=`, `#type_map_for_results` | `postgresql_adapter.rb:1100,1141`                                        | C `pg_connection.c:4671-4672`   | `_typeMapForResults` `Map` on the adapter `:427`; `getTypeParser` closure `:570-622` | `types.getTypeParser`                                                  |
+| gem member                                        | Rails call site                                                          | gem definition                  | trails today                                                                                                               | node-pg                                                                                  |
+| ------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `PG.connect`                                      | `postgresql_adapter.rb:58`                                               | Ruby `lib/pg.rb:62`             | `postgresql-adapter.ts:244-245` `new pg.Client`                                                                            | `new Client(config)` + `connect()`                                                       |
+| `Connection.conndefaults_hash`                    | `postgresql_adapter.rb:330`                                              | Ruby `lib/pg/connection.rb:337` | a hard-coded allowlist behind `_sliceValidConnParams` (`postgresql-adapter.ts:1509`)                                       | none; `pg-connection-string` defaults are the nearest                                    |
+| `Connection.quote_ident`                          | `postgresql/quoting.rb:47`, `postgresql/utils.rb:24,26`                  | C `ext/pg_connection.c:4489`    | inline lambda `postgresql/utils.ts:20`; `quoting.ts`                                                                       | `escapeIdentifier` (same output for a string)                                            |
+| `Connection.unescape_bytea`                       | `postgresql/oid/bytea.rb:11`                                             | C `pg_connection.c:4487`        | `postgresql/pg-connection.ts:99`                                                                                           | none; hand-decoded                                                                       |
+| `#escape_bytea`                                   | `postgresql/quoting.rb:71`                                               | C `pg_connection.c:4560`        | inline `postgresql/quoting.ts:50-53`, takes no connection                                                                  | none; hand-encoded                                                                       |
+| `#unescape_bytea`                                 | `postgresql/quoting.rb:78`                                               | C `pg_connection.c:4561`        | `pg-connection.ts:99`, installed `:150`                                                                                    | none                                                                                     |
+| `#escape`                                         | `postgresql/quoting.rb:129`                                              | C alias `pg_connection.c:4557`  | open-coded in `quoteString`, receipt `postgresql/quoting.ts:111`                                                           | none (`escapeLiteral` adds the quotes)                                                   |
+| `#exec_params`                                    | `postgresql/database_statements.rb:162`                                  | C `pg_connection.c:4541`        | `pg-connection.ts:79-91`                                                                                                   | `query({text, values, rowMode})`                                                         |
+| `#async_exec`                                     | `postgresql/database_statements.rb:160`                                  | C alias `pg_connection.c:4547`  | `pg-connection.ts:71-77`                                                                                                   | `query(text)`                                                                            |
+| `#query`                                          | `postgresql_adapter.rb:313,351,376,378`                                  | C alias `pg_connection.c:4548`  | `rawConnection.query(...)` straight on node-pg (`postgresql-adapter.ts:659`)                                               | same name, different result type                                                         |
+| `#prepare`                                        | `postgresql_adapter.rb:925`                                              | C `pg_connection.c:4542`        | `pg-connection.ts:32-52`, a hand-built submittable                                                                         | no public API; `connection.parse`                                                        |
+| `#exec_prepared`                                  | `postgresql/database_statements.rb:141`                                  | C `pg_connection.c:4543`        | `pg-connection.ts:54-69`                                                                                                   | `query({name, text, values})`                                                            |
+| `#get_last_result`                                | `postgresql_adapter.rb:930`                                              | C `pg_connection.c:4616`        | absent; `prepare` resolves on ReadyForQuery                                                                                | none                                                                                     |
+| `#transaction_status`                             | `postgresql/database_statements.rb:128`, `postgresql_adapter.rb:375,850` | C `pg_connection.c:4519`        | assigned `postgresql-adapter.ts:1647-1658` from `_activeQuery` and ReadyForQuery                                           | none; private `_activeQuery`, `readyForQuery` event                                      |
+| `#status`                                         | `postgresql_adapter.rb:313`                                              | C `pg_connection.c:4518`        | assigned `postgresql-adapter.ts:1659-1662` from `_ending` / `_ended`                                                       | none. **Blocked: `pg-translate-no-connection-raises-not-established`**                   |
+| `#cancel`                                         | `postgresql/database_statements.rb:130`                                  | Ruby `lib/pg/connection.rb:597` | assigned `:1663`, body `_cancel` `:1675-1701`                                                                              | none on `Client`; `new pg.Connection().cancel(pid, key)`                                 |
+| `#block`                                          | `postgresql/database_statements.rb:131`                                  | C `pg_connection.c:4610`        | assigned `:1664`, body `_blockUntilCommandSettles` `:1703`                                                                 | none                                                                                     |
+| `#finished?`                                      | `postgresql_adapter.rb:344`                                              | C `pg_connection.c:4499`        | absent; `active?` reads other state                                                                                        | private `_ended`                                                                         |
+| `#close`                                          | `postgresql_adapter.rb:389`                                              | C alias `pg_connection.c:4504`  | `_rawConnection.end()` `:703`                                                                                              | `end()`                                                                                  |
+| `#socket_io`                                      | `postgresql_adapter.rb:396`                                              | C `pg_connection.c:4525`        | `pg-connection.ts:128-141`                                                                                                 | `connection.stream`                                                                      |
+| `#reset`                                          | `postgresql_adapter.rb:946`                                              | Ruby `lib/pg/connection.rb:575` | absent; reconnect builds a new client                                                                                      | none; a `Client` cannot reconnect                                                        |
+| `#server_version`                                 | `postgresql_adapter.rb:637`                                              | C `pg_connection.c:4522`        | `_serverVersion` `:1789`, a `SHOW` query                                                                                   | `parameterStatus` event on `client.connection`; `pg/lib/client.js` (8.19) never reads it |
+| `#set_client_encoding`                            | `postgresql_adapter.rb:960`                                              | C `pg_connection.c:4607`        | `SET client_encoding TO ...` through `escapeLiteral`, `postgresql-adapter.ts:1333`                                         | `query("SET client_encoding")`                                                           |
+| `#set_notice_receiver`                            | `postgresql_adapter.rb:966`                                              | C `pg_connection.c:4601`        | `removeAllListeners("notice")` + `on("notice")` pushing to `_noticeReceiverSqlWarnings`, `postgresql-adapter.ts:1343-1350` | `client.on("notice")`                                                                    |
+| `#type_map_for_queries=`                          | `postgresql_adapter.rb:1090`                                             | C `pg_connection.c:4669`        | absent; binds cast in the adapter                                                                                          | per-query `types`                                                                        |
+| `#type_map_for_results=`, `#type_map_for_results` | `postgresql_adapter.rb:1100,1141`                                        | C `pg_connection.c:4671-4672`   | `_typeMapForResults` `Map` on the adapter `:427`; `getTypeParser` closure `:570-622`                                       | `types.getTypeParser`                                                                    |
 
-### `PG::Result`
+#### `PG::Result`
 
 | gem member                            | Rails call site                                            | gem definition                             | trails today                                                                                    | node-pg                                                           |
 | ------------------------------------- | ---------------------------------------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
@@ -197,7 +199,7 @@ gem paths are under `vendor/pg/v1.5.9/` once vendored; trails paths are under
 | `#map_types!`                         | `database_statements.rb:16`                                | Ruby `lib/pg/result.rb:16`                 | `pg-result.ts:60`                                                                               | none                                                              |
 | `#error_field`, `#result_error_field` | `postgresql_adapter.rb:804,902-903,967-969`                | C `pg_result.c:1714-1715`                  | absent; the adapter reads `error.code`. **Blocked: `pg-translate-exception-respond-to-result`** | `DatabaseError` fields (`code`, `routine`, `severity`, `message`) |
 
-### Coders and type maps
+#### Coders and type maps
 
 | gem member                                                                                   | Rails call site                             | gem definition                                                | trails today                                                                              |
 | -------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
@@ -215,7 +217,7 @@ The decoder rows overlap the claimed RFC 0180 story
 `pg-and-mysql-wire-casts-register-where-rails-configures-the-driver`. This RFC's type-map story
 depends on it and takes whatever it leaves.
 
-### Constants and errors
+#### Constants and errors
 
 | gem member                                                                                     | Rails call site                                                          | gem definition                                                   | trails today                                                                                                        |
 | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -226,7 +228,7 @@ depends on it and takes whatever it leaves.
 | `PG::ConnectionBad`                                                                            | `postgresql_adapter.rb:808,947`                                          | C `pg_errors.c:89`                                               | absent; message matching                                                                                            |
 | `PG::FeatureNotSupported`                                                                      | `postgresql/database_statements.rb:142`                                  | C `ext/errorcodes.def:49-50` (SQLSTATE `0A000`)                  | `error.code === "0A000"`                                                                                            |
 
-### Blocked stories this surface concerns
+#### Blocked stories this surface concerns
 
 | blocked story                                                                     | method                                                        | what the wrapper changes                                                                                                                                                                                    |
 | --------------------------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -235,7 +237,7 @@ depends on it and takes whatever it leaves.
 | `pg-quote-string-escapes-without-with-raw-connection` (0123)                      | `Connection#escape`                                           | not unblocked: the blocker is the adapter's async `with_raw_connection` under a sync `quote`, not the gem method. See open question 2                                                                       |
 | `pg-max-identifier-length-sync-async-split`, `pg-lookup-cast-type-*` (0180, 0123) | none                                                          | not gem surface (`query_value` under a sync caller); untouched                                                                                                                                              |
 
-## Package shape
+### Package shape
 
 `packages/pg/`, `@blazetrails/pg`, files mirroring the gem as `packages/msgpack/src/` mirrors
 `lib/msgpack/`. A class the gem defines in both `ext/*.c` and `lib/pg/*.rb` is one TS file.
@@ -279,7 +281,7 @@ depends on it and takes whatever it leaves.
   `gem "pg"; require "pg"` arm. PGlite is a second implementation of the same internal interface,
   seeded as a draft story and gated on open question 4.
 
-## Registration cost
+### Registration cost
 
 From what trails#8591 (`packages/msgpack`) touched, plus the three memories written after it:
 
@@ -307,7 +309,7 @@ From what trails#8591 (`packages/msgpack`) touched, plus the three memories writ
 
 The package's specs need a PostgreSQL server, so its CI lane is the PG lane, not Leaf Tests.
 
-## Migration
+### Migration
 
 Order, with the receipts each step removes. Step numbers are story order, not PR stacking: each
 story branches from `main` after its dependencies merge.
@@ -323,7 +325,7 @@ story branches from `main` after its dependencies merge.
 7. `pg-connection-escaping-moves-to-the-package`: removes the 2 receipts in `pg-connection.ts`;
    deletes the file.
 8. `pg-errors-carry-result-and-connection`, `pg-connection-session-setters-move-to-the-package`,
-   `pg-type-maps-and-text-decoders-move-to-the-package`: no receipts; they converge bodies that are
+   `pg-type-maps-and-text-encoders-move-to-the-package`, `pg-text-decoders-move-to-the-package`: no receipts; they converge bodies that are
    open-coded without one.
 9. `pg-activerecord-loads-the-package-as-an-optional-peer`: activerecord stops importing `pg`.
 
@@ -367,7 +369,7 @@ story branches from `main` after its dependencies merge.
 1. Scoring: `c-ext-method-table-extractor-arm`.
 2. Package: `pg-package-and-vendor-source`, `pg-enroll-the-c-extension-surface`.
 3. Result and coders: `pg-result-moves-to-the-package`, `pg-array-coders-move-to-the-package`,
-   `pg-type-maps-and-text-decoders-move-to-the-package`.
+   `pg-type-maps-and-text-encoders-move-to-the-package`, `pg-text-decoders-move-to-the-package`.
 4. Connection: `pg-connection-exec-surface-moves-to-the-package`,
    `pg-connection-status-cancel-block-move-to-the-package`,
    `pg-connection-escaping-moves-to-the-package`,
@@ -418,3 +420,4 @@ story branches from `main` after its dependencies merge.
 ## Changelog
 
 - 2026-10-08: initial draft
+- 2026-10-08: self-review round 1: located the two unverified call sites; verified `server_version` against node-pg 8.19's source; split the type-map story in two (every story now at or under 600 est-loc); sections regrouped under `## Design` to match the template

@@ -1,5 +1,5 @@
 ---
-title: "pg: TypeMapByOid, TypeMapByClass and the text coders the adapter registers"
+title: "pg: the PG::TextDecoder classes the adapter registers, and add_pg_decoders"
 status: draft
 updated: 2026-10-08
 rfc: "0000-pg-gem-port"
@@ -12,7 +12,7 @@ deps:
     "pg-and-mysql-wire-casts-register-where-rails-configures-the-driver",
   ]
 deps-rfc: []
-est-loc: 650
+est-loc: 450
 priority: null
 pr: null
 claim: null
@@ -48,23 +48,19 @@ encoders `vendor/pg/v1.5.9/ext/pg_text_encoder.c:815,817`; `SimpleDecoder` `vend
 `vendor/pg/v1.5.9/lib/pg/text_decoder/date.rb:11`; `Coder#oid` `vendor/pg/v1.5.9/ext/pg_coder.c:570`;
 `type_map_for_queries=` `vendor/pg/v1.5.9/ext/pg_connection.c:4669`, `type_map_for_results=` / reader `:4671-4672`.
 
+The maps and encoders land in `pg-type-maps-and-text-encoders-move-to-the-package`; this story is
+the decoders and the two adapter methods that register them.
+
 ## Acceptance criteria
 
-- [ ] The package has `PG.TypeMapByClass` (`set`, the `[]=` port), `PG.TypeMapByOid` (`addCoder`), `PG.SimpleDecoder`, `PG.TextEncoder.Integer` / `.Boolean`, `PG.TextDecoder.Integer` / `.Float` / `.Numeric` / `.Boolean` / `.Bytea` / `.Timestamp` / `.TimestampUtc` / `.TimestampWithoutTimeZone` / `.TimestampWithTimeZone` / `.Date`, and `Coder#oid`.
-- [ ] `PG.Connection` has `typeMapForQueries=` (as `setTypeMapForQueries`, per the `x=` convention only if it must be awaited; a plain setter otherwise), `typeMapForResults` and its setter. The engine applies the result map through node-pg's per-query `types` and the query map to binds.
-- [ ] `addPgEncoders`, `updateTypemapForDefaultTimezone`, `addPgDecoders` and `constructCoder` are line-for-line the Rails methods; `MoneyDecoder extends PG.SimpleDecoder`.
-- [ ] `PG.Result#mapTypesBang` takes a `PG.TypeMapByOid`; the receipt left by `pg-result-moves-to-the-package` is removed.
-- [ ] The `getTypeParser` closure at `postgresql-adapter.ts:570-622` and the `OID_BYTEA` passthrough in the package engine are both gone or reduced to what node-pg needs to hand back raw text.
-- [ ] Each decoder returns what the gem's returns for the values Rails' own tests exercise; where a JS value type differs from Ruby's (Float vs Number, `Time` vs trails' time type) the story names the trails type and cites the existing decision, it does not invent one.
-- [ ] If this exceeds the PR ceiling, ship the type maps and encoders and file the decoders as a new story with `pnpm tasks new`.
+- [ ] The package has `PG.SimpleDecoder` and `PG.TextDecoder.Integer` / `.Float` / `.Numeric` / `.Boolean` / `.Bytea` / `.Timestamp` / `.TimestampUtc` / `.TimestampWithoutTimeZone` / `.TimestampWithTimeZone` / `.Date`, each with `decode(string, tuple = nil, field = nil)`.
+- [ ] `updateTypemapForDefaultTimezone`, `addPgDecoders` and `constructCoder` are `postgresql_adapter.rb:1093-1156` line for line; `MoneyDecoder extends PG.SimpleDecoder` (`:1158-1164`).
+- [ ] The `getTypeParser` closure at `postgresql-adapter.ts:570-622`, the adapter-local decoder subclasses the previous story left, and the `OID_BYTEA` passthrough in the package engine are gone or reduced to what node-pg needs to hand back raw text.
+- [ ] Each decoder returns what the gem's returns for the values Rails' own tests exercise. Where the JS value type differs from Ruby's (Float and Integer both `number`, `BigDecimal`, `Time`) the story names the trails type already used at that site today and keeps it; it does not introduce a new value type.
+- [ ] `pnpm parity:api:calls` green for the three methods; converged rows deleted by hand.
 
 ## Verification
 
 ```bash
 pnpm vitest run packages/pg packages/activerecord/src/connection-adapters/postgresql && pnpm parity:api:calls
 ```
-
-## Notes
-
-The dependency on the claimed 0180 story is deliberate: two stories rewriting the same closure
-in parallel conflict. If that story is closed without landing, drop the dep with `tasks set-deps`.
