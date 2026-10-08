@@ -5,7 +5,8 @@ updated: 2026-10-07
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]
-deps: []
+deps:
+  - cold-schema-construction-raises-decide-the-error-and-its-scope
 deps-rfc: []
 est-loc: 200
 priority: null
