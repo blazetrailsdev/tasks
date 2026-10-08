@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the last invented tables (catalog_*, content_pages, admin_regions, hot_accounts, orgs, teams, orphans) and admin_users.region_id"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0175-activerecord-test-parity-100"
 cluster: schema-fixtures

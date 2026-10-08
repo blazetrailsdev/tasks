@@ -1,6 +1,6 @@
 ---
 title: "activerecord: model class names resolve through constantize, not a string-keyed model registry"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings

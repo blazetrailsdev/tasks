@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: pp / PrettyPrint are Ruby stdlib; activerecord neither defines nor exports them"
-status: ready
-updated: 2026-10-07
+status: done
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord", "ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8684
+claim: "2026-10-08T16:05:08Z"
+assignee: "nodejs-inspect-custom-hooks-come-from-one-ruby-compat-seam"
 blocked-by: null
 closed-reason: null
 ---

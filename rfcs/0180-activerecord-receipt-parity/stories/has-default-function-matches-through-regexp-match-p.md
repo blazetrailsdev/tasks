@@ -1,6 +1,6 @@
 ---
 title: "activerecord: has_default_function? matches through the ruby-compat Regexp#match? port, without a null guard"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PostgreSQL ExplainPrettyPrinter#pp centers through String#center"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings

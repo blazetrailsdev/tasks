@@ -1,6 +1,6 @@
 ---
 title: "activerecord: tests on the invented targets table move onto canonical tables"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0175-activerecord-test-parity-100"
 cluster: schema-fixtures

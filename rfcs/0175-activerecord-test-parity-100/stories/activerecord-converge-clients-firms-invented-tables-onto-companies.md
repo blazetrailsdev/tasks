@@ -1,6 +1,6 @@
 ---
 title: "activerecord: tests on invented clients / firms tables move onto Rails' companies STI table"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0175-activerecord-test-parity-100"
 cluster: schema-fixtures
