@@ -37,8 +37,12 @@ directory under the same spelling: `layouts/admin/story-pages.html.tse`.
 
 ## Acceptance criteria
 
-- `_impliedLayoutName` returns the dasherized controller path, namespaces kept,
-  carrying `@inventedArm dasherize — PERMANENT`; `controllerPath()` is unchanged.
+- `_impliedLayoutName` returns the dasherized controller path, namespaces kept;
+  `controllerPath()` is unchanged. The deviation from `layouts.rb:345-347` is
+  recorded in `CLAUDE.md`. (Amended 2026-10-08: this criterion first required
+  an `@inventedArm dasherize — PERMANENT` tag. The arm-throw gate fails that
+  tag as stale because the comparison omits this declaration; the receipt is
+  tracked by `invented-arm-receipt-is-rejected-on-declarations-the-comparison-omits`.)
 - A multi-word controller with a layout at `layouts/<kebab-path>` renders
   inside it; a test covers a namespaced multi-word controller.
 - Fixture layouts with multi-word names are renamed with their references.
