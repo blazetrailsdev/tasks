@@ -1,7 +1,7 @@
 ---
 title: "activerecord: assign-attributes-pending-promise-chain-arms"
-status: ready
-updated: 2026-10-05
+status: blocked
+updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-08T12:23:18Z"
+assignee: "default-scope-override-reads-the-default-scope-method-owner"
+blocked-by: "No shape has Rails' arms only: _assign_attributes must run synchronously for new Foo({...}) (a JS constructor cannot await) AND sequence the promises HasOneAssociation#replace (has_one_association.rb:59-84, record.save at :76) and CollectionAssociation#ids_writer (collection_association.rb:65-84) return when reached from update/create, which Ruby runs in line inside the each (attribute_assignment.rb:9-19). JS has no synchronous await, so each continuation point (next pair, then assign_nested_parameter_attributes, then assign_multiparameter_attributes) needs a promise-or-value branch; an async body defers the scalar writes past sync readers, a generator plus two drivers or a sequencing helper only moves the same branches into invented surface, and starting the writers concurrently drops Rails' ordering. Same root blocker as update-must-call-assign-attributes-carried-from-0087: it converges only when association writers owe no I/O at assignment or assignAttributes may return a promise."
 closed-reason: null
 ---
 

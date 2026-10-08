@@ -1,7 +1,7 @@
 ---
 title: "ActiveSupport::MessagePack imports the gem package; delete the hand-rolled factory"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: ["activesupport", "activerecord", "msgpack"]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8674
+claim: "2026-10-08T12:23:42Z"
+assignee: "msgpack-repoint-activesupport-onto-the-package"
 blocked-by: null
 closed-reason: null
 ---

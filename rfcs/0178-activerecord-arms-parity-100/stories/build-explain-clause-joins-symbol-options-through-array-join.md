@@ -1,7 +1,7 @@
 ---
 title: "activerecord: build_explain_clause joins Symbol options through Array#join instead of a hand-written colon strip"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8673
+claim: "2026-10-08T12:23:18Z"
+assignee: "default-scope-override-reads-the-default-scope-method-owner"
 blocked-by: null
 closed-reason: null
 ---

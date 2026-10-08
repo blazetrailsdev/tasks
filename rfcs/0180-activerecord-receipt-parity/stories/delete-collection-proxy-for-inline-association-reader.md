@@ -1,7 +1,7 @@
 ---
 title: "activerecord: delete collectionProxyFor; callers read association(name).reader inline"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8672
+claim: "2026-10-08T12:24:57Z"
+assignee: "delete-collection-proxy-for-inline-association-reader"
 blocked-by: null
 closed-reason: null
 ---

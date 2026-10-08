@@ -1,6 +1,6 @@
 ---
 title: "activesupport: MessagePack::Extensions registers its String-payload unpackers by name, as extensions.rb does"
-status: draft
+status: closed
 updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "converged in trails#8674; Regexp#to_s stays a function because a JS RegExp's toString is JS's"
 ---
 
 ## Context

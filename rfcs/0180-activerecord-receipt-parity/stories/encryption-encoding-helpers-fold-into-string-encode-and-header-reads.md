@@ -1,7 +1,7 @@
 ---
 title: "activerecord: encryption/encoding-helpers.ts folds into String#encode and bare header reads"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord", "ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8675
+claim: "2026-10-08T12:34:24Z"
+assignee: "encryption-encoding-helpers-fold-into-string-encode-and-header-reads"
 blocked-by: null
 closed-reason: null
 ---
