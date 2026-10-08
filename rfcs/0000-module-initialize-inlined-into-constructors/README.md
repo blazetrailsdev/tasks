@@ -89,14 +89,21 @@ named `initialize`):
 
 Each conversion story lists its definitions with the Rails `file:line`.
 
+The table uses the manifest's package names. They map onto this RFC's
+`packages:` as `thor` → `trailties`, and `actiondispatch` and `actioncontroller`
+→ `actionpack`; the other eight are the same name.
+
 Class-level `new` overrides, from the same manifest: **13**. Ten are a class's
 or module's own `def self.new` (a direct port, no tag) and three arrive through
-a `ClassMethods` module (inlined; tagged when cross-file): `Inheritance::ClassMethods#new`,
-`Deduplicable::ClassMethods#new` and
-`ActionView::TestCase::Behavior::ClassMethods#new`. They sit in activerecord (4), activesupport (5),
+a `ClassMethods` module (inlined): `Inheritance::ClassMethods#new` and
+`Deduplicable::ClassMethods#new`, each defined in a different Ruby file from the
+class that extends it (tagged), and `ActionView::TestCase::Behavior::ClassMethods#new`,
+which shares `test_case.rb` with the `TestCase` that includes `Behavior`
+(inlined, untagged). They sit in activerecord (4), activesupport (5),
 actiondispatch (1), actionview (1), rack-test (1) and did-you-mean (1).
 `Inheritance::ClassMethods#new` (`inheritance.rb:56`) is the one CLAUDE.md
-already ratifies as living in `Base`'s constructor.
+already ratifies as living in `Base`'s constructor; `Base`'s conversion story
+owns it.
 
 On the trails side:
 
@@ -149,7 +156,10 @@ Ruby's `new` / `initialize` chain is written as JS constructors, by four rules.
    `initialize`), and it carries no tag: the parity scripts pair `Klass.new`
    with the constructor by convention. Where the Rails body returns a different
    object (`ActiveSupport::TimeZone.new` answers from a cache), the constructor
-   returns that object.
+   returns that object. A `new` defined on a module or a plain
+   object that is not a class in trails (`Fanout::Subscribers.new`,
+   `DidYouMean::NameErrorCheckers.new`) has no constructor to land in; see Open
+   question 2.
 4. **A `new` that arrives through a module is inlined.** When the override is
    defined on a `ClassMethods` module the class extends
    (`Inheritance::ClassMethods#new`), its body is written at the head of the
@@ -231,8 +241,10 @@ constructor(attributes = null) { … }
 - **Staleness, both ways.** A tag naming a module with no `initialize`, or a
   `def` in the constructor's own mirrored file, is red.
   A class whose Rails counterpart includes or prepends a module with an
-  `initialize`, and whose constructor has no tag for it, is red. The second
-  arm is enrolled per package as that package's conversion lands.
+  `initialize`, or extends a `ClassMethods` module with a `new`, and whose
+  constructor has no tag for it (when the `def` is in a different Ruby file),
+  is red. The second arm is enrolled per package as that package's conversion
+  lands.
 - **Lint.** `@inlinedFrom` on anything but a constructor, or citing a hook
   outside the closed list, is an error.
 
@@ -303,6 +315,31 @@ One PR per story. The tooling stories land before any conversion, with the
 staleness arm enrolled for no package, so nothing reds until a conversion
 opts in.
 
+1. Tooling: `extractor-reads-inlined-from-tags-on-constructors`, then
+   `lint-inlined-from-only-on-constructors-naming-initialize`.
+2. Gates: `parity-api-credits-module-initialize-through-inlined-from`, then
+   `call-gate-compares-a-tagged-constructor-against-the-inlined-bodies` and
+   `inlined-from-staleness-gate-both-directions`.
+3. Docs: `claude-md-section-for-inlined-module-initialize`.
+4. Serialized core: `activemodel-inlines-api-attributes-and-serialize-cast-value-initialize`,
+   then `activerecord-base-includes-activemodel-api-instead-of-extending-model`,
+   then `activerecord-core-initialize-is-bases-constructor`.
+5. Parallel conversions, in any order, once steps 1–3 land:
+   `actioncontroller-module-initializes-inlined`,
+   `actiondispatch-module-initializes-inlined`,
+   `actionview-module-initializes-inlined`, `activejob-core-initialize-inlined`,
+   `activerecord-adapter-modules-initialize-inlined`,
+   `activerecord-fixtures-timezone-and-controller-runtime-initialize-inlined`,
+   `activesupport-rotator-initialize-inlined`,
+   `i18n-backend-module-initializes-inlined`, `rack-request-env-initialize-inlined`,
+   `thor-module-initializes-inlined`, `trailties-generator-module-initializes-inlined`,
+   and the three `new` stories: `activerecord-class-level-new-overrides-are-constructors`,
+   `activesupport-class-level-new-overrides-are-constructors`,
+   `remaining-class-level-new-overrides-are-constructors`.
+6. Audits, any time after step 3: `sample-class-constructors-for-the-hoisted-super-case`,
+   `audit-inherited-hooks-for-an-inlined-from-entry`.
+7. Retire: `retire-initialize-included-modules-from-ruby-compat`, last.
+
 ## Verification
 
 - `pnpm parity:api:extra:gate`, `parity:api:calls`, `parity:api:calls:args`
@@ -310,6 +347,11 @@ opts in.
 - A plain-node import of the built `dist/` entry modules for any package whose
   constructors change, since vitest masks load-order faults.
 - The three blocked stories named in Motivation close or unblock.
+- Burndown: `initializeIncludedModules` call sites outside ruby-compat 11 → 0;
+  `defineMethod("initialize", …)` registrations 3 → 0; `initialize` entries in
+  `SCOPED_SKIP_GROUPS` 3 → 0; module `initialize` definitions (38) and class-level
+  `new` overrides (13) each either converted or named in a PR body as an
+  unported file.
 
 ## End condition
 
@@ -321,7 +363,18 @@ opts in.
 ## Open questions
 
 1. **A module `initialize` included into many classes** is duplicated in each.
-   Not counted yet; the conversion stories report it per module.
+   Deferred: each conversion story's PR body states the count for its modules
+   (an acceptance bullet in each), and
+   `retire-initialize-included-modules-from-ruby-compat` totals them and says
+   whether a shared helper is warranted.
+2. **A module-level `new` that is not a class's constructor**
+   (`ActiveSupport::Notifications::Fanout::Subscribers.new`,
+   `DidYouMean::NameErrorCheckers.new`). Recommendation: it stays a named
+   factory function with no tag, scored by the ordinary function pairing,
+   because there is no constructor to inline into. Deferred to
+   `remaining-class-level-new-overrides-are-constructors` and
+   `activesupport-class-level-new-overrides-are-constructors`, which each
+   record the shape chosen in the PR body.
 
 ## Changelog
 
@@ -340,3 +393,6 @@ opts in.
   derived and autofixed, with no `vendor/` prefix, at the owner's direction.
 - 2026-10-08: owner ruled that `Base` stops extending `Model` and includes
   API's modules itself; moved from Open questions into Design.
+- 2026-10-08: renumbered to the `0000-` placeholder after `main` assigned 0186 to
+  pg-gem-port; rollout phases name their stories, module-level `new` is an open
+  question, and the class-level `new` conversion is split per package.
