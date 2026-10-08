@@ -1,5 +1,5 @@
 ---
-title: "Story Markdown breaks wrapped list items and indented code blocks"
+title: "Story Markdown renders an indented code block as a paragraph"
 status: draft
 updated: 2026-10-08
 rfc: "0136-trailmap"
@@ -18,39 +18,36 @@ closed-reason: null
 
 ## Context
 
-A story page renders two ordinary Markdown shapes wrongly. Seen on
+A story page renders an indented code block (four leading spaces after a blank
+line) as a plain paragraph with its line breaks collapsed. Seen on
 `/story/drop-local-prefixes-override-after-trails-kebab-view-directories` in
 the production-mode screenshot taken for trailmap#44 (`screenshots/pr-44`,
-`story-show.png`):
+`story-show.png`). The story's source has
 
-1.  An indented code block (four leading spaces after a blank line) renders as
-    a plain paragraph with its line breaks collapsed. The story's source has
+    static localPrefixes(): string[] {
+      return [this.controllerPath().replace(/_/g, "-")];
+    }
 
-        static localPrefixes(): string[] {
-          return [this.controllerPath().replace(/_/g, "-")];
-        }
+and the page shows `static localPrefixes(): string[] { return […]; }` as
+running text. The renderer is `renderMarkdown` (`app/helpers/markdown-helper.ts`).
 
-    and the page shows `static localPrefixes(): string[] { return […]; }` as
-    running text.
+`pnpm gate:markdown` reports the document EQUIVALENT to ringo's rendering, so
+ringo's renderer (`webhook/markdown.go`) has the same fault and the gate holds
+trailmap to it. That is the same position as
+`support-lazy-continuation-in-the-markdown-renderer`, which covers the wrapped
+list items visible in the same screenshot and is blocked until ringo's renderer
+is retired. This story is the indented-code half and shares that block. (The
+slug still names both; the list half is that other story.)
 
-2.  A list item whose text wraps onto a continuation line indented two spaces
-    is cut at the wrap: the first line stays in the `<li>` and the rest becomes
-    a separate paragraph after the list. Both bullets under "The same PR changes
-    two things" and every bullet under "Acceptance criteria" show it.
-
-`pnpm gate:markdown` reports these documents EQUIVALENT to ringo's rendering,
-so ringo's renderer has the same two faults and the gate is holding trailmap to
-them. Story bodies are written wrapped at 80 columns and formatted by prettier
-in the tasks repo, so wrapped list items are the common case, not an edge.
+Story bodies filed with `pnpm tasks new --body-file` commonly quote code and
+error output as indented blocks, so this shows on real pages.
 
 ## Acceptance criteria
 
-- Decide and record whether the fix is made in the shared renderer (so ringo
-  and trailmap change together and the gate stays byte-equivalent) or in
-  trailmap with the gate's expectation moved; the story page must end up
-  correct either way.
-- A list item with a two-space-indented continuation line renders as one
-  `<li>` holding the whole sentence.
+- Blocked on the same condition as
+  `support-lazy-continuation-in-the-markdown-renderer`: ringo's renderer is
+  retired, or the fix is made in both and the gate stays byte-equivalent.
 - A four-space-indented block after a blank line renders as `<pre><code>` with
-  its line breaks kept.
-- Tests cover both shapes, taken from a real story body.
+  its line breaks and inner indentation kept; an indented continuation of a
+  list item is not mistaken for one.
+- A test covers it with a real story body.
