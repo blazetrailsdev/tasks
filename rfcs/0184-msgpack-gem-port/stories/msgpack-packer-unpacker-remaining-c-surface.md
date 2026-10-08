@@ -1,7 +1,7 @@
 ---
 title: "msgpack: IO-backed buffers, unpacker options and the remaining Packer/Unpacker C surface"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8671
+claim: "2026-10-08T01:20:58Z"
+assignee: "msgpack-packer-unpacker-remaining-c-surface"
 blocked-by: null
 closed-reason: null
 ---

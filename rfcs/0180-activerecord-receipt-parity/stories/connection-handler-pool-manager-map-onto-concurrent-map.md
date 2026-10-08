@@ -1,7 +1,7 @@
 ---
 title: "activerecord: ConnectionHandler's pool-manager map is a Concurrent::Map with initial_capacity"
-status: in-progress
-updated: 2026-10-07
+status: done
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord", "ruby-compat"]

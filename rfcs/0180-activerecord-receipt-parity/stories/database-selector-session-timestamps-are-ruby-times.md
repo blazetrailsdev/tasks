@@ -1,7 +1,7 @@
 ---
 title: "activerecord: DatabaseSelector::Resolver::Session converts timestamps through Time.at and Time.now"
-status: in-progress
-updated: 2026-10-07
+status: done
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]

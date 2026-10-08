@@ -1,6 +1,6 @@
 ---
 title: "activerecord: ConnectionUrlResolver#query_hash keys every query parameter by its symbol spelling (reaping_frequency, idle_timeout, … are dropped today)"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings

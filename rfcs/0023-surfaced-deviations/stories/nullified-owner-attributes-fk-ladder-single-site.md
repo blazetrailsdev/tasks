@@ -1,7 +1,7 @@
 ---
 title: "Converge the two nullifiedOwnerAttributes FK ladders onto ownerForeignKeyColumns"
-status: draft
-updated: 2026-08-21
+status: done
+updated: 2026-10-08
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8666
 claim: null
 assignee: null
 blocked-by: null
