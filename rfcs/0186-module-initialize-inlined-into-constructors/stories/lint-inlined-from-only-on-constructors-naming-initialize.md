@@ -29,3 +29,4 @@ arel's `inlined-from` bucket names the general case (a module member whose body 
 - `no-freeform-comments` leaves a well-formed tag alone; its test file covers it.
 - The rule is registered in `eslint.config.mjs` and mirrored into `eslint/rails-private-jsdoc.config.mjs` if that config's ignores require it.
 - The accepted shape is the name followed by one versioned citation with no `vendor/` prefix; `no-freeform-comments` admits that shape and nothing after it.
+- The hooks the tag may cite are a closed list in the rule: `Module#initialize`, and a class-level `new` (`Klass.new` or `Mod::ClassMethods#new`). Adding an entry is a reviewed change to that list.

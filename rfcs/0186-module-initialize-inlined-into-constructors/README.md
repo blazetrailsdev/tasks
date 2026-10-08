@@ -1,6 +1,6 @@
 ---
 rfc: "0186-module-initialize-inlined-into-constructors"
-title: "module initialize: inlined into constructors, marked @inlinedFrom, and scored by the parity gates"
+title: "module initialize and self.new: inlined into constructors, marked @inlinedFrom, and scored by the parity gates"
 status: draft
 created: 2026-10-08
 updated: 2026-10-08
@@ -30,7 +30,7 @@ related-rfcs:
 priority: 3
 ---
 
-# RFC 0186 — module `initialize`: inlined into constructors, marked `@inlinedFrom`, and scored by the parity gates
+# RFC 0186 — module `initialize` and `self.new`: inlined into constructors, marked `@inlinedFrom`, and scored by the parity gates
 
 ## Summary
 
@@ -50,7 +50,8 @@ inheritance is inlined.** This RFC carries that out in three parts:
 2. Parity-script changes that read the marker: credit, call parity and
    staleness.
 3. The conversions: 38 module-level `initialize` definitions across 11
-   packages, then the retirement of the chain walker.
+   packages and 13 class-level `new` overrides, then the retirement of the
+   chain walker.
 
 ## Motivation
 
@@ -85,6 +86,12 @@ named `initialize`):
 | **Total**        | **38**                          |
 
 Each conversion story lists its definitions with the Rails `file:line`.
+
+Class-level `new` overrides, from the same manifest (`def self.new`, and `new`
+on a `ClassMethods` module): **13**, in activerecord (4), activesupport (5),
+actiondispatch (1), actionview (1), rack-test (1) and did-you-mean (1).
+`Inheritance::ClassMethods#new` (`inheritance.rb:56`) is the one CLAUDE.md
+already ratifies as living in `Base`'s constructor.
 
 On the trails side:
 
@@ -122,6 +129,14 @@ Ruby's `initialize` chain is written as JS constructors, by two rules.
    constructor at the position Ruby's `super` occupies, line for line, and the
    constructor carries one `@inlinedFrom` tag for it.
 
+3. **A Rails `self.new` override is the head of the constructor.** JS has only
+   the `new` expression, so the override's body is written first in the
+   constructor, tagged, and its `super` is the rest of the constructor. Where
+   the Rails body returns a different object (`ActiveSupport::TimeZone.new`
+   answers from a cache), the constructor returns that object: a JS
+   constructor that returns an object hands it to the caller in place of
+   `this`.
+
 A parent constructor does not call an overridable hook to let a subclass run
 early. JS runs a subclass's field initializers after `super()` returns, so a
 field such as `history = []` overwrites whatever the hook set.
@@ -130,6 +145,7 @@ field such as `history = []` overwrites whatever the hook set.
 
 ```ts
 /**
+ * @inlinedFrom ActiveRecord::Inheritance::ClassMethods#new rails/v8.0.2/activerecord/lib/active_record/inheritance.rb:56-78
  * @inlinedFrom ActiveRecord::Core#initialize rails/v8.0.2/activerecord/lib/active_record/core.rb:471-482
  * @inlinedFrom ActiveModel::API#initialize rails/v8.0.2/activemodel/lib/active_model/api.rb:80-84
  */
@@ -154,10 +170,17 @@ constructor(attributes = null) { … }
   rewrites it. A vendor bump touches these tags mechanically.
 - The citation is for the reader. It does not detect a changed Rails body;
   that stays the job of the body pins (`parity:api:pins`).
-- It is valid only for `initialize`, and only on a constructor. arel's
-  `inlined-from` bucket names the general case (a module member whose body
-  sits on an including class's file) and pins it at 0; this tag is the receipt
-  for the one case the language forces and must not widen that.
+- It may cite a closed list of hooks, held by the lint: `initialize` on a
+  module, and a class-level `new` (`Klass.new`, or `Mod::ClassMethods#new`).
+  It is valid only on a constructor. arel's `inlined-from` bucket names the
+  general case (a module member whose body sits on an including class's file)
+  and pins it at 0; this tag is the receipt for the hooks the language forces
+  into the constructor and must not widen that.
+- `inherited` is a candidate third entry. JS has no class-definition hook, so
+  each `inherited` body is deferred elsewhere. Some are written out inside
+  another declaration, where a tag would be honest; others are replaced by a
+  different mechanism (the own-property memo guard), where it would not. An
+  audit story sorts the 32 Rails definitions before the list grows.
 
 ### Parity-script changes
 
@@ -172,8 +195,8 @@ constructor(attributes = null) { … }
   A class whose Rails counterpart includes or prepends a module with an
   `initialize`, and whose constructor has no tag for it, is red. The second
   arm is enrolled per package as that package's conversion lands.
-- **Lint.** `@inlinedFrom` on anything but a constructor, or naming anything
-  but `#initialize`, is an error.
+- **Lint.** `@inlinedFrom` on anything but a constructor, or citing a hook
+  outside the closed list, is an error.
 
 ### `Model` and `Base`
 
@@ -201,7 +224,7 @@ is not a subclass of `ActiveModel::Model`.
 3. CLAUDE.md section.
 4. activemodel conversion (`API`, `Attributes`, `SerializeCastValue`).
 5. `Base` includes API's modules; activerecord `Core`.
-6. The remaining packages, in any order.
+6. The remaining packages and the `new` overrides, in any order.
 7. Retire `initializeIncludedModules` and the `initialize` registry in
    ruby-compat.
 
@@ -220,6 +243,9 @@ so a later include of a module with an `initialize` cannot land untagged.
   case. Rule 1 is recorded; one story samples it, and a wider sweep is filed
   only if the sample finds drift.
 - Any change to how `included` / `extended` hooks run.
+- `method_missing` bodies in Proxy traps. Most keep a named `methodMissing`
+  the trap calls, which is already a scored declaration.
+- Tagging `inherited`. This RFC only audits it.
 
 ## Alternatives considered
 
@@ -264,6 +290,8 @@ opts in.
 ## Changelog
 
 - 2026-10-08: drafted from the blocked-story triage session.
+- 2026-10-08: class-level `new` overrides join the tag's closed list and the
+  conversions; `inherited` gets an audit story.
 - 2026-10-08: the marker carries the versioned `file:first-last` citation,
   derived and autofixed, with no `vendor/` prefix, at the owner's direction.
 - 2026-10-08: owner ruled that `Base` stops extending `Model` and includes
