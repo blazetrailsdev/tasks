@@ -6,12 +6,14 @@ rfc: "0123-blocked-convergence-holding"
 cluster: autoload
 packages: []
 deps:
-  - "converge-activerecord-association-slots-onto-autoload"
-  - "converge-activerecord-core-slots-onto-autoload"
-  - "converge-activemodel-and-actionview-slots-onto-autoload"
-  - "converge-activesupport-slots-onto-autoload"
-  - "converge-actionpack-rack-session-trailties-slots-onto-autoload"
-  - "converge-activerecord-support-db-slots"
+  - converge-activerecord-association-slots-onto-autoload
+  - converge-activerecord-core-slots-onto-autoload
+  - converge-activemodel-and-actionview-slots-onto-autoload
+  - converge-activesupport-slots-onto-autoload
+  - converge-actionpack-rack-session-trailties-slots-onto-autoload
+  - converge-activerecord-support-db-slots
+  - converge-reflection-slot-onto-the-activerecord-autoload-namespace
+  - converge-database-tasks-slot-onto-the-activerecord-tasks-autoload-namespace
 deps-rfc: []
 est-loc: 60
 priority: null
