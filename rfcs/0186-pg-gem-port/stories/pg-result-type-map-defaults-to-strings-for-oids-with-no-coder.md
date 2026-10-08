@@ -2,7 +2,7 @@
 title: "activerecord: PG result type map answers a String for an OID with no coder"
 status: draft
 updated: 2026-10-08
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
 deps: []

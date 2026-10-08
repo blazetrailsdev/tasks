@@ -2,7 +2,7 @@
 title: "parity: the Ruby extractor reads C-defined gem methods (pg, sqlite3)"
 status: draft
 updated: 2026-10-08
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
 deps: []

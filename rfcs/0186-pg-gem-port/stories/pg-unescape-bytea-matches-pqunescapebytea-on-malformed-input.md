@@ -2,7 +2,7 @@
 title: "activerecord: unescape_bytea matches PQunescapeBytea on malformed input"
 status: draft
 updated: 2026-10-07
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
 deps: []
