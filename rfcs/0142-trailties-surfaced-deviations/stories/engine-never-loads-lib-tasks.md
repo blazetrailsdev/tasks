@@ -5,7 +5,8 @@ updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
-deps: []
+deps:
+  - port-rake-dsl-task-manager-for-app-tasks
 deps-rfc: []
 est-loc: 150
 priority: 7
