@@ -2,7 +2,7 @@
 title: "activerecord: encryption serializers' load / decode_if_needed guards move into JSON.parse, feed_reference and Base64.strict_decode64"
 status: ready
 updated: 2026-10-05
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
