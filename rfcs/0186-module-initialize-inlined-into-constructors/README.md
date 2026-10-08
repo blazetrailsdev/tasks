@@ -180,7 +180,8 @@ is not a subclass of `ActiveModel::Model`.
   `Core`'s setup, so `Base` stops extending `Model` and includes API's modules
   itself, as Rails does. Its constructor is `Core#initialize` with
   `API#initialize`'s line at the `super` position. This is the largest single
-  change in the RFC and has its own story.
+  change in the RFC and has its own story. Ruled by the owner on
+  2026-10-08.
 
 ### Ordering
 
@@ -244,14 +245,13 @@ opts in.
 
 ## Open questions
 
-1. **`Base` stops extending `Model`.** Proposed in the 2026-10-08 session and
-   not explicitly ruled on. If it is refused, activerecord keeps the chain
-   walker for records and the End condition cannot be met for that package.
-2. **Tag name.** `@inlinedFrom` is used here, as the owner named it. It shares
+1. **Tag name.** `@inlinedFrom` is used here, as the owner named it. It shares
    a word with arel's debt bucket; `@inlinesInitialize` is the alternative.
-3. **A module `initialize` included into many classes** is duplicated in each.
+2. **A module `initialize` included into many classes** is duplicated in each.
    Not counted yet; the conversion stories report it per module.
 
 ## Changelog
 
 - 2026-10-08: drafted from the blocked-story triage session.
+- 2026-10-08: owner ruled that `Base` stops extending `Model` and includes
+  API's modules itself; moved from Open questions into Design.

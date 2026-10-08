@@ -24,7 +24,7 @@ That inheritance edge is why `Base`'s constructor cannot be written as Rails' ch
 
 The same edge blocks `record-init-internals-never-reaches-activemodel-validations` (RFC 0174): `Model`'s API include puts the `ActiveModel::Validations` link above `Model.prototype`, so `Core#init_internals` cannot reach it, and `include()` skips a module already in the superclass ancestry.
 
-Not ruled on by the owner as of 2026-10-08 (RFC 0186 Open question 1). Do not start before it is.
+Ruled by the owner on 2026-10-08: `Base` stops extending `Model` and includes API's modules itself, as Rails does.
 
 Unknown and to be measured first: every place that relies on a record being an `instanceof Model`, including type-level uses (`typeof Model` parameters, `extends Model` constraints). A runtime grep for `instanceof Model` in `packages/*/src` outside tests found none on 2026-10-08; the type-level uses were not counted.
 
