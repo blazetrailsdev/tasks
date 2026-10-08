@@ -15,6 +15,7 @@ clusters:
   - database-and-statement
   - drivers
   - migration
+  - "findings"
 related-rfcs:
   - "0180-activerecord-receipt-parity"
   - "0094-sqlite3-adapter-construction-fidelity"

@@ -2,7 +2,7 @@
 title: "activerecord: sqlite-uri helpers port @memory_database as Rails computes it"
 status: ready
 updated: 2026-10-07
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0187-sqlite3-gem-port"
 cluster: findings
 packages: ["activerecord"]
 deps: []
