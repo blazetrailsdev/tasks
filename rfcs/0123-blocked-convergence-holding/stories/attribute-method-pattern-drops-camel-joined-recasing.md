@@ -5,7 +5,8 @@ updated: 2026-10-03
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activemodel"]
-deps: []
+deps:
+  - camelize-db-columns-preference-and-attribute-method-naming-rule
 deps-rfc: []
 est-loc: 200
 priority: null
