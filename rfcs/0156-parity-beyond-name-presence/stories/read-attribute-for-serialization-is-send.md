@@ -35,3 +35,7 @@ The converged shape is `send`: read the member off `this`, calling it if it is a
 
 - [ ] The `readAttributeForSerialization` body is the `send` dispatch, with no attribute-store probing.
 - [ ] `serialization.test.ts` / `serialization.trails.test.ts` stay green on all lanes; a trails test covers a store value that shadows a method.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+Use the prototype structure: a name is serialized through `send` only when it is an own property, and a name that is merely inherited (`toJSON` from `Model`) is not included. To pin down here: which object generated attribute readers are own to.

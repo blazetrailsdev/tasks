@@ -37,3 +37,7 @@ Add HTML4 document-fragment parsing to `@blazetrails/nokogiri` (libxml2's `htmlR
 
 - `fragment` returns a Nokogiri-shaped HTML4 fragment, and `compareDoms` walks its nodes, `attribute_nodes` and `to_s` as `dom_assertions.rb:73-129` does.
 - The six migrated actionview suites and `dom-assertions.trails.test.ts` stay green.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+Wrap `parse5` as a runtime dependency of `@blazetrails/nokogiri` and back the HTML document classes with it. The custom libxml2 wasm build is not taken. This lifts the no-new-runtime-deps bar for this story only.

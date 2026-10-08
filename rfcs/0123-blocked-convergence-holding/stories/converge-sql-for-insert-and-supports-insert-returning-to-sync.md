@@ -83,3 +83,7 @@ rather than leaving the async spelling unexplained.
       RETURNING must fail on a baseline that drops the await).
 - [ ] If `primaryKey` cannot be made sync, the story is split and the residual
       is filed with the specific blocker — not ratified in place.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+Adapter facts are prewarmed asynchronously and peeked synchronously (trails CLAUDE.md § "Adapter facts are prewarmed and peeked"). Under that rule this story is convergeable: `supportsInsertReturning` becomes a peek at a fact warmed when the connection is configured, and `sqlForInsert` returns synchronously as Rails' does.

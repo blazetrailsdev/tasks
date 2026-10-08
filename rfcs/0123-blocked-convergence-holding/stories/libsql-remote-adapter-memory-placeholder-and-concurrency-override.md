@@ -55,3 +55,7 @@ override on `LibSQLRemoteAdapter` corrects the base adapter. Candidates:
 - [ ] `LibSQLRemoteAdapter` no longer overrides `supportsConcurrentConnections`.
 - [ ] `database` passed to `SQLite3Adapter` is not a placeholder standing in for the remote URL.
 - [ ] "does not expand or mkdir a libsql remote URL as a local path" stays green.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+`LibSQLRemoteAdapter` stops subclassing `SQLite3Adapter` and becomes its own adapter over `AbstractAdapter`, sharing SQLite's dialect modules by include, so `sqlite3_adapter.rb:102-121`'s initializer never runs for it. Remote transport stays.

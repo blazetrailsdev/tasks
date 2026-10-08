@@ -84,3 +84,7 @@ with that finding — not closed by re-justifying the seam.
       branch (it currently reaches that branch by stubbing `warningCount`, so it
       needs a new seam or a driver-level stub).
 - [ ] MySQL and MariaDB lanes green.
+
+## Owner decision (2026-10-08 blocked-story triage)
+
+Before this is ratified as a driver limit, try capturing `ResultSetHeader.warningStatus` through a custom mysql2 command class or a wrapped command. Ratify only if that fails, and record what was tried.
