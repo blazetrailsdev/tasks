@@ -1,10 +1,10 @@
 ---
-title: "actionpack: the five ActionDispatch module initialize bodies are inlined"
+title: "i18n: Chain::Implementation, KeyValue::Implementation and MissingTranslation::Base initialize are inlined"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
-packages: ["actionpack"]
+packages: ["i18n"]
 deps:
   [
     "parity-api-credits-module-initialize-through-inlined-from",
@@ -12,7 +12,7 @@ deps:
     "inlined-from-staleness-gate-both-directions",
   ]
 deps-rfc: []
-est-loc: 350
+est-loc: 200
 priority: null
 pr: null
 claim: null
@@ -27,15 +27,13 @@ This RFC § Design: a module's `initialize` is inlined into the constructor of e
 
 Rails definitions in scope:
 
-- `ActionDispatch::Http::FilterParameters#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/http/filter_parameters.rb:24`)
-- `ActionDispatch::Http::URL#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/http/url.rb:181`)
-- `ActionDispatch::Integration::Runner#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/testing/integration.rb:342`)
-- `ActionDispatch::Routing::UrlFor#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/routing/url_for.rb:111`)
-- `ActionDispatch::Session::Compatibility#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/middleware/session/abstract_store.rb:23`)
+- `I18n::Backend::Chain::Implementation#initialize` (`vendor/i18n/v1.14.8/lib/i18n/backend/chain.rb:27`)
+- `I18n::Backend::KeyValue::Implementation#initialize` (`vendor/i18n/v1.14.8/lib/i18n/backend/key_value.rb:75`)
+- `I18n::MissingTranslation::Base#initialize` (`vendor/i18n/v1.14.8/lib/i18n/exceptions.rb:52`)
 
 How each is ported today has not been read: it may run through `initializeIncludedModules`, be an exported `initialize` function a constructor calls, already be inlined by hand, or sit in an unported file. Start by reading each site and its includers.
 
-`Integration::Runner` is not split from `Session` in trails yet (`integration-runner-merged-into-session`, draft); if that has not landed, leave `Runner#initialize` and say so.
+These cite the vendored i18n gem.
 
 ## Acceptance criteria
 

@@ -1,10 +1,10 @@
 ---
-title: "activesupport: Messages::Rotator#initialize is inlined into each rotatable class's constructor"
+title: "actionview: the five ActionView module initialize bodies are inlined"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
-packages: ["activesupport"]
+packages: ["actionview"]
 deps:
   [
     "parity-api-credits-module-initialize-through-inlined-from",
@@ -12,7 +12,7 @@ deps:
     "inlined-from-staleness-gate-both-directions",
   ]
 deps-rfc: []
-est-loc: 150
+est-loc: 350
 priority: null
 pr: null
 claim: null
@@ -27,11 +27,15 @@ This RFC § Design: a module's `initialize` is inlined into the constructor of e
 
 Rails definitions in scope:
 
-- `ActiveSupport::Messages::Rotator#initialize` (`vendor/rails/v8.0.2/activesupport/lib/active_support/messages/rotator.rb:6`)
+- `ActionView::AbstractRenderer::ObjectRendering#initialize` (`vendor/rails/v8.0.2/actionview/lib/action_view/renderer/abstract_renderer.rb:37`)
+- `ActionView::Helpers::Tags::CollectionHelpers#initialize` (`vendor/rails/v8.0.2/actionview/lib/action_view/helpers/tags/collection_helpers.rb:30`)
+- `ActionView::Helpers::Tags::Placeholderable#initialize` (`vendor/rails/v8.0.2/actionview/lib/action_view/helpers/tags/placeholderable.rb:7`)
+- `ActionView::Layouts#initialize` (`vendor/rails/v8.0.2/actionview/lib/action_view/layouts.rb:361`)
+- `ActionView::Rendering#initialize` (`vendor/rails/v8.0.2/actionview/lib/action_view/rendering.rb:32`)
 
 How each is ported today has not been read: it may run through `initializeIncludedModules`, be an exported `initialize` function a constructor calls, already be inlined by hand, or sit in an unported file. Start by reading each site and its includers.
 
-Rails installs `Rotator` with `prepend`. `scripts/parity/conventions.ts:843-857` records that trails ports it as an exported `initialize` function each rotatable class calls from its constructor.
+trails sites: `actionview/src/base.ts:237` and `helpers/tags/base.ts:64` call `initializeIncludedModules`. `Layouts` and `Rendering` are included into controllers, so their bodies land in actionpack constructors; coordinate with `actioncontroller-module-initializes-inlined` on which PR touches `Metal`'s subclasses.
 
 ## Acceptance criteria
 
@@ -40,4 +44,3 @@ Rails installs `Rotator` with `prepend`. `scripts/parity/conventions.ts:843-857`
 - A module in an unported file is left alone and named in the PR body.
 - The package is enrolled in the missing-tag arm of the staleness gate in this PR.
 - Where one module's body lands in more than one constructor, the PR body states how many.
-- The `messages/rotator.rb` `initialize` entry in `SCOPED_SKIP_GROUPS` is deleted.

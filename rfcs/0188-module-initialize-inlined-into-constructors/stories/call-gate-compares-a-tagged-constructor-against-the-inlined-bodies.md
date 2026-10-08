@@ -2,7 +2,7 @@
 title: "parity:api:calls compares a tagged constructor against the union of the inlined Rails initialize bodies"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]
 deps: ["extractor-reads-inlined-from-tags-on-constructors"]

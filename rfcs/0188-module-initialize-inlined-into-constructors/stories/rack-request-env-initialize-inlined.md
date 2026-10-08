@@ -1,10 +1,10 @@
 ---
-title: "actionview: the five ActionView module initialize bodies are inlined"
+title: "rack: Request::Env#initialize is inlined into Request's constructor"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
-packages: ["actionview"]
+packages: ["rack"]
 deps:
   [
     "parity-api-credits-module-initialize-through-inlined-from",
@@ -12,7 +12,7 @@ deps:
     "inlined-from-staleness-gate-both-directions",
   ]
 deps-rfc: []
-est-loc: 350
+est-loc: 100
 priority: null
 pr: null
 claim: null
@@ -27,15 +27,11 @@ This RFC § Design: a module's `initialize` is inlined into the constructor of e
 
 Rails definitions in scope:
 
-- `ActionView::AbstractRenderer::ObjectRendering#initialize` (`vendor/rails/v8.0.2/actionview/lib/action_view/renderer/abstract_renderer.rb:37`)
-- `ActionView::Helpers::Tags::CollectionHelpers#initialize` (`vendor/rails/v8.0.2/actionview/lib/action_view/helpers/tags/collection_helpers.rb:30`)
-- `ActionView::Helpers::Tags::Placeholderable#initialize` (`vendor/rails/v8.0.2/actionview/lib/action_view/helpers/tags/placeholderable.rb:7`)
-- `ActionView::Layouts#initialize` (`vendor/rails/v8.0.2/actionview/lib/action_view/layouts.rb:361`)
-- `ActionView::Rendering#initialize` (`vendor/rails/v8.0.2/actionview/lib/action_view/rendering.rb:32`)
+- `Rack::Request::Env#initialize` (`vendor/rack/v3.1.14/lib/rack/request.rb:86`)
 
 How each is ported today has not been read: it may run through `initializeIncludedModules`, be an exported `initialize` function a constructor calls, already be inlined by hand, or sit in an unported file. Start by reading each site and its includers.
 
-trails sites: `actionview/src/base.ts:237` and `helpers/tags/base.ts:64` call `initializeIncludedModules`. `Layouts` and `Rendering` are included into controllers, so their bodies land in actionpack constructors; coordinate with `actioncontroller-module-initializes-inlined` on which PR touches `Metal`'s subclasses.
+This cites the vendored Rack. `bump-vendored-rack-anchor-to-3-2` (RFC 0141) moves that anchor; whichever lands second re-checks the line.
 
 ## Acceptance criteria
 

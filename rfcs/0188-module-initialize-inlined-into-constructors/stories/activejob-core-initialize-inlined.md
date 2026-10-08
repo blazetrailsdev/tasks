@@ -1,10 +1,10 @@
 ---
-title: "actionpack: Instrumentation, RequestForgeryProtection and UrlFor initialize are inlined into Metal's subclasses"
+title: "activejob: Core#initialize is inlined into Base's constructor"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
-packages: ["actionpack"]
+packages: ["activejob"]
 deps:
   [
     "parity-api-credits-module-initialize-through-inlined-from",
@@ -12,7 +12,7 @@ deps:
     "inlined-from-staleness-gate-both-directions",
   ]
 deps-rfc: []
-est-loc: 300
+est-loc: 120
 priority: null
 pr: null
 claim: null
@@ -27,13 +27,11 @@ This RFC § Design: a module's `initialize` is inlined into the constructor of e
 
 Rails definitions in scope:
 
-- `ActionController::Instrumentation#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_controller/metal/instrumentation.rb:23`)
-- `ActionController::RequestForgeryProtection#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_controller/metal/request_forgery_protection.rb:366`)
-- `ActionController::UrlFor#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_controller/metal/url_for.rb:32`)
+- `ActiveJob::Core#initialize` (`vendor/rails/v8.0.2/activejob/lib/active_job/core.rb:93`)
 
 How each is ported today has not been read: it may run through `initializeIncludedModules`, be an exported `initialize` function a constructor calls, already be inlined by hand, or sit in an unported file. Start by reading each site and its includers.
 
-trails site: `action-controller/metal.ts:144` calls `initializeIncludedModules`. `Metal#initialize` is `metal.rb:210-217`. `Base` and `API` include different module lists, so the two constructors inline different chains.
+RFC 0169 (`activejob-package-port`) and RFC 0185 (`ruby-ts-codegen`, piloted on activejob) both touch this package. If `core.rb` is not ported when this is picked up, fold the rule into that port and close this story against it.
 
 ## Acceptance criteria
 

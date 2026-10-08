@@ -1,10 +1,10 @@
 ---
-title: "actionpack, actionview, rack-test and did-you-mean: Flash, TestCase, Rack::Test::Session and DidYouMean new overrides"
+title: "activesupport: DeprecationProxy, TimeZone, Subscribers and TaggedLogging new overrides are constructors"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
-packages: ["actionpack", "actionview", "rack-test", "did-you-mean"]
+packages: ["activesupport"]
 deps:
   [
     "parity-api-credits-module-initialize-through-inlined-from",
@@ -12,7 +12,7 @@ deps:
     "inlined-from-staleness-gate-both-directions",
   ]
 deps-rfc: []
-est-loc: 200
+est-loc: 250
 priority: null
 pr: null
 claim: null
@@ -27,12 +27,13 @@ This RFC § Design, rules 3 and 4. A class's own `def self.new` is the construct
 
 Rails definitions in scope, from `rails-api.json`:
 
-- `ActionDispatch::Flash.new` (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/middleware/flash.rb:312`)
-- `ActionView::TestCase::Behavior::ClassMethods#new` (`vendor/rails/v8.0.2/actionview/lib/action_view/test_case.rb:187`)
-- `Rack::Test::Session.new` (`vendor/rack-test/v2.2.0/lib/rack/test.rb:57`)
-- `DidYouMean.new` (`vendor/did_you_mean/v1.6.3/lib/did_you_mean/spell_checkers/name_error_checkers.rb:6`)
+- `ActiveSupport::Deprecation::DeprecationProxy.new` (`vendor/rails/v8.0.2/activesupport/lib/active_support/deprecation/proxy_wrappers.rb:6`)
+- `ActiveSupport::Deprecation::DeprecatedConstantProxy.new` (`vendor/rails/v8.0.2/activesupport/lib/active_support/deprecation/proxy_wrappers.rb:121`)
+- `ActiveSupport::TimeZone.new` (`vendor/rails/v8.0.2/activesupport/lib/active_support/values/time_zone.rb:216`)
+- `ActiveSupport::Notifications::Fanout::Subscribers.new` (`vendor/rails/v8.0.2/activesupport/lib/active_support/notifications/fanout.rb:319`)
+- `ActiveSupport::TaggedLogging.new` (`vendor/rails/v8.0.2/activesupport/lib/active_support/tagged_logging.rb:121`)
 
-`ActionView::TestCase::Behavior::ClassMethods#new` is defined in `test_case.rb` alongside the `TestCase` that includes `Behavior` (`test_case.rb:447`): same file, so it is inlined at the head of `TestCase`'s constructor with no tag. The rest are the class's own `self.new`: direct ports, no tag. `DidYouMean::NameErrorCheckers.new` is a method on a plain object (`class << (NameErrorCheckers = Object.new)`), not a class: RFC Open question 2, record the shape chosen in the PR body. `action_view/test_case.rb` is unported as of 2026-10-08.
+All five are a module's or class's own `self.new`: direct ports, no tag. `TimeZone.new` answers from a cache and `TaggedLogging.new` returns an extended logger, so the constructor returns that object. `Fanout::Subscribers.new` is a module-level `new` (RFC Open question 2): record the shape chosen in the PR body.
 
 How each is ported today has not been read. Several are factories that return an object other than a fresh instance, and some may be ported as a static factory under another name.
 

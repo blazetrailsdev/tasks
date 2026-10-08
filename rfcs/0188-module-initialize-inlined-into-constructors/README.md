@@ -1,5 +1,5 @@
 ---
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 title: "module initialize and self.new: inlined into constructors, marked @inlinedFrom, and scored by the parity gates"
 status: draft
 created: 2026-10-08
@@ -32,7 +32,7 @@ related-rfcs:
 priority: 3
 ---
 
-# RFC — module `initialize` and `self.new`: inlined into constructors, marked `@inlinedFrom`, and scored by the parity gates
+# RFC 0188 — module `initialize` and `self.new`: inlined into constructors, marked `@inlinedFrom`, and scored by the parity gates
 
 ## Summary
 

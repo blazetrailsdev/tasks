@@ -1,10 +1,10 @@
 ---
-title: "rack: Request::Env#initialize is inlined into Request's constructor"
+title: "actionpack: the five ActionDispatch module initialize bodies are inlined"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
-packages: ["rack"]
+packages: ["actionpack"]
 deps:
   [
     "parity-api-credits-module-initialize-through-inlined-from",
@@ -12,7 +12,7 @@ deps:
     "inlined-from-staleness-gate-both-directions",
   ]
 deps-rfc: []
-est-loc: 100
+est-loc: 350
 priority: null
 pr: null
 claim: null
@@ -27,11 +27,15 @@ This RFC § Design: a module's `initialize` is inlined into the constructor of e
 
 Rails definitions in scope:
 
-- `Rack::Request::Env#initialize` (`vendor/rack/v3.1.14/lib/rack/request.rb:86`)
+- `ActionDispatch::Http::FilterParameters#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/http/filter_parameters.rb:24`)
+- `ActionDispatch::Http::URL#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/http/url.rb:181`)
+- `ActionDispatch::Integration::Runner#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/testing/integration.rb:342`)
+- `ActionDispatch::Routing::UrlFor#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/routing/url_for.rb:111`)
+- `ActionDispatch::Session::Compatibility#initialize` (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/middleware/session/abstract_store.rb:23`)
 
 How each is ported today has not been read: it may run through `initializeIncludedModules`, be an exported `initialize` function a constructor calls, already be inlined by hand, or sit in an unported file. Start by reading each site and its includers.
 
-This cites the vendored Rack. `bump-vendored-rack-anchor-to-3-2` (RFC 0141) moves that anchor; whichever lands second re-checks the line.
+`Integration::Runner` is not split from `Session` in trails yet (`integration-runner-merged-into-session`, draft); if that has not landed, leave `Runner#initialize` and say so.
 
 ## Acceptance criteria
 

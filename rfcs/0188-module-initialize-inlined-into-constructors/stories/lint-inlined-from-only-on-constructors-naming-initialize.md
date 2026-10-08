@@ -2,7 +2,7 @@
 title: "eslint: @inlinedFrom is valid only on a constructor and only names #initialize"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]
 deps: []

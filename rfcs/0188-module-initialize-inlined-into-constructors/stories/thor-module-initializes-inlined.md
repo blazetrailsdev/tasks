@@ -1,10 +1,10 @@
 ---
-title: "activerecord: EncryptedFixtures, Type::Internal::Timezone and ControllerRuntime initialize are inlined"
+title: "trailties: Thor::Base, Actions, Invocation and Shell initialize are inlined into Thor and Thor::Group"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
-packages: ["activerecord"]
+packages: ["trailties"]
 deps:
   [
     "parity-api-credits-module-initialize-through-inlined-from",
@@ -12,7 +12,7 @@ deps:
     "inlined-from-staleness-gate-both-directions",
   ]
 deps-rfc: []
-est-loc: 250
+est-loc: 400
 priority: null
 pr: null
 claim: null
@@ -27,13 +27,14 @@ This RFC § Design: a module's `initialize` is inlined into the constructor of e
 
 Rails definitions in scope:
 
-- `ActiveRecord::Encryption::EncryptedFixtures#initialize` (`vendor/rails/v8.0.2/activerecord/lib/active_record/encryption/encrypted_fixtures.rb:6`)
-- `ActiveRecord::Type::Internal::Timezone#initialize` (`vendor/rails/v8.0.2/activerecord/lib/active_record/type/internal/timezone.rb:7`)
-- `ActiveRecord::Railties::ControllerRuntime#initialize` (`vendor/rails/v8.0.2/activerecord/lib/active_record/railties/controller_runtime.rb:26`)
+- `Thor::Base#initialize` (`vendor/thor/v1.3.2/lib/thor/base.rb:53`)
+- `Thor::Actions#initialize` (`vendor/thor/v1.3.2/lib/thor/actions.rb:72`)
+- `Thor::Invocation#initialize` (`vendor/thor/v1.3.2/lib/thor/invocation.rb:23`)
+- `Thor::Shell#initialize` (`vendor/thor/v1.3.2/lib/thor/shell.rb:44`)
 
 How each is ported today has not been read: it may run through `initializeIncludedModules`, be an exported `initialize` function a constructor calls, already be inlined by hand, or sit in an unported file. Start by reading each site and its includers.
 
-`EncryptedFixtures` is prepended onto `Fixture` (`fixtures.rb:817-820`), so its body runs before the class's own. `Timezone` is included into several type classes; `ruby-compat/src/include.ts:766-771` describes how its `initialize` is spliced today. `normalization.ts:100` is a chain-walker call site in this package whose module is not in the list above; read it and say which Rails `initialize` it serves.
+These cite the vendored Thor, not Rails. trails sites: `thor/thor.ts:674` and `thor/group.ts:306` call `initializeIncludedModules(this, ...args)`. CLAUDE.md § "Thor dispatch is async" says these initializers do no I/O and stay synchronous. `Thor` and `Thor::Group` both include `Thor::Base`, so its body is written twice.
 
 ## Acceptance criteria
 
@@ -42,5 +43,3 @@ How each is ported today has not been read: it may run through `initializeInclud
 - A module in an unported file is left alone and named in the PR body.
 - The package is enrolled in the missing-tag arm of the staleness gate in this PR.
 - Where one module's body lands in more than one constructor, the PR body states how many.
-- The `fixtures.rb` / `encrypted_fixtures.rb` `initialize` entry in `SCOPED_SKIP_GROUPS` is deleted.
-- `activerecord-fixture-initialize-prepend-constructor` (RFC 0123) is closed by this PR.

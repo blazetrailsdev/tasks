@@ -1,18 +1,13 @@
 ---
-title: "i18n: Chain::Implementation, KeyValue::Implementation and MissingTranslation::Base initialize are inlined"
+title: "activerecord: Core#initialize is Base's constructor, with API#initialize inlined at its super"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
-packages: ["i18n"]
-deps:
-  [
-    "parity-api-credits-module-initialize-through-inlined-from",
-    "call-gate-compares-a-tagged-constructor-against-the-inlined-bodies",
-    "inlined-from-staleness-gate-both-directions",
-  ]
+packages: ["activerecord"]
+deps: ["activerecord-base-includes-activemodel-api-instead-of-extending-model"]
 deps-rfc: []
-est-loc: 200
+est-loc: 400
 priority: null
 pr: null
 claim: null
@@ -27,13 +22,11 @@ This RFC § Design: a module's `initialize` is inlined into the constructor of e
 
 Rails definitions in scope:
 
-- `I18n::Backend::Chain::Implementation#initialize` (`vendor/i18n/v1.14.8/lib/i18n/backend/chain.rb:27`)
-- `I18n::Backend::KeyValue::Implementation#initialize` (`vendor/i18n/v1.14.8/lib/i18n/backend/key_value.rb:75`)
-- `I18n::MissingTranslation::Base#initialize` (`vendor/i18n/v1.14.8/lib/i18n/exceptions.rb:52`)
+- `ActiveRecord::Core#initialize` (`vendor/rails/v8.0.2/activerecord/lib/active_record/core.rb:471`)
 
 How each is ported today has not been read: it may run through `initializeIncludedModules`, be an exported `initialize` function a constructor calls, already be inlined by hand, or sit in an unported file. Start by reading each site and its includers.
 
-These cite the vendored i18n gem.
+trails sites: `packages/activerecord/src/core.ts:765` (the exported `constructor` function, with an allocation arm receipted `@inventedArm if — PERMANENT`) and `core.ts:826` (`defineMethod("initialize", constructor)`). `Base`'s constructor also holds the body of `Inheritance::ClassMethods#new` (CLAUDE.md § "A record is built with `new Klass` only"); that stays.
 
 ## Acceptance criteria
 
@@ -42,3 +35,5 @@ These cite the vendored i18n gem.
 - A module in an unported file is left alone and named in the PR body.
 - The package is enrolled in the missing-tag arm of the staleness gate in this PR.
 - Where one module's body lands in more than one constructor, the PR body states how many.
+- `Base`'s constructor reads top to bottom as `Inheritance::ClassMethods#new`, then `Core#initialize` with `API#initialize`'s line at the `super` position, tagged in that order.
+- `record-init-internals-never-reaches-activemodel-validations` is re-checked and closed or re-pointed.

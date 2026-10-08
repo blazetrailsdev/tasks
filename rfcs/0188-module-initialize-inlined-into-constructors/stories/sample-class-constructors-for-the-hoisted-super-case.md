@@ -2,7 +2,7 @@
 title: "audit: sample class constructors whose Rails initialize works on self before super"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]
 deps: ["claude-md-section-for-inlined-module-initialize"]

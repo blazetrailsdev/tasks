@@ -2,7 +2,7 @@
 title: "docs: CLAUDE.md records the constructor rule, the hoisted super and @inlinedFrom"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: docs
 packages: ["scripts"]
 deps: ["lint-inlined-from-only-on-constructors-naming-initialize"]

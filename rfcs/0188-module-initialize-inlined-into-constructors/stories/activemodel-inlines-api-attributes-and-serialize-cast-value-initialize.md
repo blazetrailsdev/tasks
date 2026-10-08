@@ -1,10 +1,10 @@
 ---
-title: "trailties: the five Rails generator and command module initialize bodies are inlined"
+title: "activemodel: API, Attributes and SerializeCastValue initialize are inlined into their includers' constructors"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
-packages: ["trailties"]
+packages: ["activemodel"]
 deps:
   [
     "parity-api-credits-module-initialize-through-inlined-from",
@@ -27,15 +27,13 @@ This RFC § Design: a module's `initialize` is inlined into the constructor of e
 
 Rails definitions in scope:
 
-- `Rails::ActionMethods#initialize` (`vendor/rails/v8.0.2/railties/lib/rails/generators/rails/app/app_generator.rb:10`)
-- `Rails::Command::EnvironmentArgument#initialize` (`vendor/rails/v8.0.2/railties/lib/rails/command/environment_argument.rb:16`)
-- `Rails::Generators::Actions#initialize` (`vendor/rails/v8.0.2/railties/lib/rails/generators/actions.rb:10`)
-- `Rails::Generators::ModelHelpers#initialize` (`vendor/rails/v8.0.2/railties/lib/rails/generators/model_helpers.rb:26`)
-- `Rails::Generators::ResourceHelpers#initialize` (`vendor/rails/v8.0.2/railties/lib/rails/generators/resource_helpers.rb:17`)
+- `ActiveModel::API#initialize` (`vendor/rails/v8.0.2/activemodel/lib/active_model/api.rb:80`)
+- `ActiveModel::Attributes#initialize` (`vendor/rails/v8.0.2/activemodel/lib/active_model/attributes.rb:106`)
+- `ActiveModel::Type::SerializeCastValue#initialize` (`vendor/rails/v8.0.2/activemodel/lib/active_model/type/serialize_cast_value.rb:41`)
 
 How each is ported today has not been read: it may run through `initializeIncludedModules`, be an exported `initialize` function a constructor calls, already be inlined by hand, or sit in an unported file. Start by reading each site and its includers.
 
-trails site: `generators/named-base.ts:39` calls `initializeIncludedModules(this, [], this.options, …)`. `EnvironmentArgument` is unported as of 2026-10-08 (`trailties-dbconsole-command-has-no-consumer` needs it).
+trails sites: `packages/activemodel/src/api.ts:21-27` (the exported `initialize` and its `defineMethod`), `attributes.ts:71`, `type/value.ts:46`, and `Model`'s constructor at `model.ts:122`, which carries `@missingRailsCall assign_attributes — CONVERGEABLE activemodel-api-initialize-concern-constructor`.
 
 ## Acceptance criteria
 
@@ -44,3 +42,6 @@ trails site: `generators/named-base.ts:39` calls `initializeIncludedModules(this
 - A module in an unported file is left alone and named in the PR body.
 - The package is enrolled in the missing-tag arm of the staleness gate in this PR.
 - Where one module's body lands in more than one constructor, the PR body states how many.
+- `Model`'s constructor is `API#initialize`'s body, and the `@missingRailsCall assign_attributes` receipt is deleted.
+- The `api.rb` `initialize` entry in `SCOPED_SKIP_GROUPS` is deleted.
+- `activemodel-api-initialize-concern-constructor` (RFC 0123) is closed by this PR.

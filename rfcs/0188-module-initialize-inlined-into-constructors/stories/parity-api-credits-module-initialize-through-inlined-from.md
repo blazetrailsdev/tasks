@@ -2,7 +2,7 @@
 title: "parity:api credits a module's initialize through an @inlinedFrom constructor; the three skip entries go"
 status: draft
 updated: 2026-10-08
-rfc: "0000-module-initialize-inlined-into-constructors"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]
 deps: ["extractor-reads-inlined-from-tags-on-constructors"]
