@@ -2,7 +2,7 @@
 title: "activemodel: human_attribute_name and its i18n keys for a camelCase attribute name"
 status: draft
 updated: 2026-10-07
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
