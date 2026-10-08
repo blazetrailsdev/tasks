@@ -1,7 +1,7 @@
 ---
 rfc: "0187-sqlite3-gem-port"
 title: "sqlite3: lift the nested sqlite3 gem port out of activerecord into @blazetrails/sqlite3, and give the driver seam the gem's names"
-status: draft
+status: postponed
 created: 2026-10-08
 updated: 2026-10-08
 owner: "@deanmarano"
