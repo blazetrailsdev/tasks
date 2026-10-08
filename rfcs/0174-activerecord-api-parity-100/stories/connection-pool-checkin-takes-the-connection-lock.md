@@ -5,7 +5,8 @@ updated: 2026-10-04
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]
-deps: []
+deps:
+  - sync-acquire-cannot-complete-reap-before-retry
 deps-rfc: []
 est-loc: 200
 priority: null
