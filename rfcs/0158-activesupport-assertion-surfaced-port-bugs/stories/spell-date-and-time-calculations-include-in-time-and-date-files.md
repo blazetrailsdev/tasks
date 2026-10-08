@@ -5,7 +5,8 @@ updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
-deps: []
+deps:
+  - date-and-time-calculations-drops-eager-date-time-imports
 deps-rfc: []
 est-loc: 120
 priority: null
