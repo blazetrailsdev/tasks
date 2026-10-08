@@ -5,7 +5,8 @@ updated: 2026-09-26
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: []
+deps:
+  - design-a-per-flow-connection-lease
 deps-rfc: []
 est-loc: 90
 priority: null
