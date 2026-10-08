@@ -1,0 +1,34 @@
+---
+title: "parity: an @inlinedFrom with no module initialize, or an includer with no tag, is red"
+status: draft
+updated: 2026-10-08
+rfc: "0186-module-initialize-inlined-into-constructors"
+cluster: tooling
+packages: ["scripts"]
+deps:
+  [
+    "extractor-reads-inlined-from-tags-on-constructors",
+    "parity-api-credits-module-initialize-through-inlined-from",
+  ]
+deps-rfc: []
+est-loc: 250
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+RFC 0186 § Design: a module's `initialize` is inlined into the constructor of each class that includes or prepends it, at the position Ruby's `super` occupies, and the constructor carries one `@inlinedFrom Module#initialize` tag per segment in chain order.
+
+`rails-api.json` records each class's `includes` and each module's instance methods, so both directions are computable: a tag naming a module that defines no `initialize`, and a class whose Rails counterpart includes or prepends a module with an `initialize` but whose TS constructor has no tag for it. 38 modules define one (RFC 0186 § Baseline).
+
+## Acceptance criteria
+
+- A tag naming a module with no `initialize`, or a module the Rails class does not include or prepend, fails the gate.
+- The missing-tag direction is enrolled per package through an only-grow set, empty at merge.
+- The gate runs in the `rails-comparison` CI job and has a `pnpm` script named under `parity:api:`.
+- CLAUDE.md § "Before you open the PR" gains the gate in the step that covers ported method bodies.
