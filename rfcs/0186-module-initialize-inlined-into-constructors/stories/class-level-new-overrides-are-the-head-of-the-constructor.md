@@ -1,5 +1,5 @@
 ---
-title: "class-level new overrides are written as the head of the constructor and tagged @inlinedFrom"
+title: "class-level new overrides are the constructor: own self.new ported directly, ClassMethods#new inlined and tagged"
 status: draft
 updated: 2026-10-08
 rfc: "0186-module-initialize-inlined-into-constructors"
@@ -23,9 +23,13 @@ closed-reason: null
 
 ## Context
 
-RFC 0186 § Design, rule 3: a Rails `self.new` override is the head of the
-constructor, tagged `@inlinedFrom`, and its `super` is the rest of the
-constructor. JS has only the `new` expression (trails CLAUDE.md § "A record is
+RFC 0186 § Design, rules 3 and 4. A class's own `def self.new` is the
+constructor: a direct port with no tag, whose `super` is the rest of the
+constructor. A `new` defined on a `ClassMethods` module the class extends is
+owned by a different Ruby module, so it is inlined at the head of the
+constructor and tagged `@inlinedFrom`. Three of the thirteen below are that
+second kind: the two `ClassMethods#new` in activerecord and the one in
+actionview. JS has only the `new` expression (trails CLAUDE.md § "A record is
 built with `new Klass` only").
 
 Rails definitions in scope, from `rails-api.json`:
@@ -52,8 +56,11 @@ name, and `action_view/test_case.rb` is unported as of 2026-10-08.
 ## Acceptance criteria
 
 - Each listed override that is ported is the first segment of its class's
-  constructor, tagged `@inlinedFrom`, with no static `new` and no factory
-  under another name standing in for it.
+  constructor, with no static `new` and no factory under another name standing
+  in for it.
+- The three `ClassMethods#new` constructors carry `@inlinedFrom`; the ten own
+  `self.new` constructors carry no tag and are credited by the `Klass.new`
+  convention.
 - Where the Rails body returns a different object, the constructor returns it.
 - `Base`'s constructor carries the `Inheritance::ClassMethods#new` tag first,
   ahead of the `initialize` tags; coordinate with

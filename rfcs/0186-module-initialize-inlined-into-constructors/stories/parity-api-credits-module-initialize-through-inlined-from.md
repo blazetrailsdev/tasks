@@ -28,3 +28,4 @@ Three `initialize` definitions are in `SCOPED_SKIP_GROUPS` because a module's `i
 - The crediting rule is recorded where RFC 0179's crediting rules live, with a test.
 - The three skip entries are deleted in the PR that converts their module, not here; this story leaves them and proves the credit on a fixture.
 - `pnpm parity:api` totals are stated before and after, and the delta is non-negative.
+- `scripts/parity/conventions.ts` maps a class's own `self.new` to the TS constructor; where a class defines both `new` and `initialize`, the call gate compares the constructor against `new` then `initialize`. The regenerated `docs/ruby-ts-conventions.md` shows the rule.

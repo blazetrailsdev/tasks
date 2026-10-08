@@ -89,8 +89,11 @@ named `initialize`):
 
 Each conversion story lists its definitions with the Rails `file:line`.
 
-Class-level `new` overrides, from the same manifest (`def self.new`, and `new`
-on a `ClassMethods` module): **13**, in activerecord (4), activesupport (5),
+Class-level `new` overrides, from the same manifest: **13**. Ten are a class's
+or module's own `def self.new` (a direct port, no tag) and three arrive through
+a `ClassMethods` module (inlined, tagged): `Inheritance::ClassMethods#new`,
+`Deduplicable::ClassMethods#new` and
+`ActionView::TestCase::Behavior::ClassMethods#new`. They sit in activerecord (4), activesupport (5),
 actiondispatch (1), actionview (1), rack-test (1) and did-you-mean (1).
 `Inheritance::ClassMethods#new` (`inheritance.rb:56`) is the one CLAUDE.md
 already ratifies as living in `Base`'s constructor.
@@ -131,13 +134,20 @@ Ruby's `initialize` chain is written as JS constructors, by two rules.
    constructor at the position Ruby's `super` occupies, line for line, and the
    constructor carries one `@inlinedFrom` tag for it.
 
-3. **A Rails `self.new` override is the head of the constructor.** JS has only
-   the `new` expression, so the override's body is written first in the
-   constructor, tagged, and its `super` is the rest of the constructor. Where
-   the Rails body returns a different object (`ActiveSupport::TimeZone.new`
-   answers from a cache), the constructor returns that object: a JS
-   constructor that returns an object hands it to the caller in place of
-   `this`.
+3. **A Rails `self.new` override is the constructor.** This is a direct port,
+   not an inlining: Ruby's `Klass.new` and JS's `new Klass` are the same
+   operation, and `Class#new` is allocate-then-`initialize`, which is what a JS
+   constructor is. So a class's own `def self.new` is written first in its
+   constructor, its `super` is the rest of the constructor (the class's
+   `initialize`), and it carries no tag: the parity scripts pair `Klass.new`
+   with the constructor by convention. Where the Rails body returns a different
+   object (`ActiveSupport::TimeZone.new` answers from a cache), the constructor
+   returns that object.
+4. **A `new` that arrives through a module is inlined.** When the override is
+   defined on a `ClassMethods` module the class extends
+   (`Inheritance::ClassMethods#new`), its body comes from a different Ruby
+   owner, exactly as a module's `initialize` does. It is written at the head of
+   the constructor and tagged.
 
 A parent constructor does not call an overridable hook to let a subclass run
 early. JS runs a subclass's field initializers after `super()` returns, so a
@@ -173,11 +183,13 @@ constructor(attributes = null) { … }
 - The citation is for the reader. It does not detect a changed Rails body;
   that stays the job of the body pins (`parity:api:pins`).
 - It may cite a closed list of hooks, held by the lint: `initialize` on a
-  module, and a class-level `new` (`Klass.new`, or `Mod::ClassMethods#new`).
-  It is valid only on a constructor. arel's `inlined-from` bucket names the
-  general case (a module member whose body sits on an including class's file)
-  and pins it at 0; this tag is the receipt for the hooks the language forces
-  into the constructor and must not widen that.
+  module, and `new` on a `ClassMethods` module (`Mod::ClassMethods#new`). Both
+  are bodies owned by a module that the language forces into an including
+  class's constructor. A class's own `self.new` is not on the list: it is the
+  constructor, and needs no receipt. The tag is valid only on a constructor.
+  arel's `inlined-from` bucket names the general case (a module member whose
+  body sits on an including class's file) and pins it at 0; this tag must not
+  widen that.
 - `inherited` is a candidate third entry. JS has no class-definition hook, so
   each `inherited` body is deferred elsewhere. Some are written out inside
   another declaration, where a tag would be honest; others are replaced by a
@@ -186,6 +198,11 @@ constructor(attributes = null) { … }
 
 ### Parity-script changes
 
+- **`Klass.new` is the constructor.** `scripts/parity/conventions.ts` maps a
+  class's own `self.new` to the TS constructor, as it maps `initialize`. Where
+  a class defines both, the constructor is compared against `new` then
+  `initialize`, with `new`'s `super` consumed by `initialize`. No tag is
+  involved.
 - **Credit.** `parity:api` scores a module's `initialize` as covered when a
   constructor in the mirror of a file that includes the module carries the
   tag. The three `SCOPED_SKIP_GROUPS` entries go.
@@ -292,6 +309,9 @@ opts in.
 ## Changelog
 
 - 2026-10-08: drafted from the blocked-story triage session.
+- 2026-10-08: a class's own `self.new` is a direct port to the constructor,
+  scored by convention with no tag; only a `ClassMethods#new` is inlined and
+  tagged. Corrected at the owner's prompt.
 - 2026-10-08: class-level `new` overrides join the tag's closed list and the
   conversions; `inherited` gets an audit story.
 - 2026-10-08: the marker carries the versioned `file:first-last` citation,
