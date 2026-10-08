@@ -2,7 +2,7 @@
 title: "activerecord: count over an eager limited from relation runs the limited-ids query twice"
 status: draft
 updated: 2026-10-08
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps: []

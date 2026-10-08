@@ -2,7 +2,7 @@
 title: "activerecord: PostgreSQLAdapter runs statements on a raw connection it was handed"
 status: draft
 updated: 2026-10-07
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps: []
