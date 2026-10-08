@@ -28,5 +28,5 @@ Nothing reads the tag yet. The TS extractor under `scripts/api-compare/` already
 - Both `/** @inlinedFrom X#initialize */` and the multi-line form register; a test covers each.
 - The value is parsed as `Ruby::Module#initialize`; anything else is surfaced as a malformed tag, not dropped.
 - No gate consumes the list yet, and every existing gate's output is unchanged.
-- The versioned citation after the name (`vendor/<source>/<version>/<file>:<first>-<last>`) is parsed and recorded with the tag; a tag with no citation is surfaced as malformed.
+- The versioned citation after the name (`<source>/<version>/<file>:<first>-<last>`, relative to `vendor/` and not spelling it) is parsed and recorded with the tag; a tag with no citation is surfaced as malformed.
 - `rails-api.json` records only a method's first line today; the Ruby extractor (`scripts/api-compare/extract-ruby-api.rb`) also records the last line of each `initialize` `def`, so the span can be derived.
