@@ -34,3 +34,4 @@ RFC 0186 § Design: a module's `initialize` is inlined into the constructor of e
 - CLAUDE.md § "Before you open the PR" gains the gate in the step that covers ported method bodies.
 - A tag whose citation differs from the `def` span `rails-api.json` gives for that module at the active vendored version is red, and a `--fix` mode rewrites it.
 - `pnpm vendor:recite` and `scripts/vendor-citations.test.ts` learn the tag: they prepend `vendor/` to its path to resolve it, rewrite a stale version in place without adding the prefix, and a test covers a `ref` bump.
+- The missing-tag direction fires only for a `def` in a different Ruby file from the one the constructor's file mirrors; a same-file body needs no tag and a tag on one is red.

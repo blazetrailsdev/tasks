@@ -91,7 +91,7 @@ Each conversion story lists its definitions with the Rails `file:line`.
 
 Class-level `new` overrides, from the same manifest: **13**. Ten are a class's
 or module's own `def self.new` (a direct port, no tag) and three arrive through
-a `ClassMethods` module (inlined, tagged): `Inheritance::ClassMethods#new`,
+a `ClassMethods` module (inlined; tagged when cross-file): `Inheritance::ClassMethods#new`,
 `Deduplicable::ClassMethods#new` and
 `ActionView::TestCase::Behavior::ClassMethods#new`. They sit in activerecord (4), activesupport (5),
 actiondispatch (1), actionview (1), rack-test (1) and did-you-mean (1).
@@ -112,6 +112,15 @@ On the trails side:
 - 3 `initialize` entries in `SCOPED_SKIP_GROUPS`
   (`scripts/parity/conventions.ts:843-891`): `messages/rotator.rb`, `api.rb`,
   and `fixtures.rb` with `encryption/encrypted_fixtures.rb`.
+
+Same-file or cross-file, from a rough match of each module against the
+`includes` the manifest records (11 of the 41 did not resolve and file names
+collide across packages, so treat it as an estimate): about 29 have an includer
+in another file and need a tag there; a handful are same-file only or both
+(`ActionDispatch::Integration::Runner`, the two i18n `Implementation` modules,
+`I18n::MissingTranslation::Base`, `Rack::Request::Env`, `Thor::Base`,
+`ActionDispatch::Session::Compatibility`). A module with includers in both
+places is tagged only on the cross-file ones.
 
 Not measured: how each of the 38 is ported today. Some are already inlined by
 hand, some go through the chain walker, some sit in unported files. Each
@@ -145,9 +154,16 @@ Ruby's `initialize` chain is written as JS constructors, by two rules.
    returns that object.
 4. **A `new` that arrives through a module is inlined.** When the override is
    defined on a `ClassMethods` module the class extends
-   (`Inheritance::ClassMethods#new`), its body comes from a different Ruby
-   owner, exactly as a module's `initialize` does. It is written at the head of
-   the constructor and tagged.
+   (`Inheritance::ClassMethods#new`), its body is written at the head of the
+   constructor, as a module's `initialize` is written at its `super` position.
+
+**The tag follows the file, not the owner.** An inlined body is tagged only
+when its Rails `def` lives in a different Ruby file from the one the
+constructor's TS file mirrors. The tag exists to tell a reader which other file
+to open. A module defined in the same `.rb` as the class that includes it
+(`I18n::Backend::Chain::Implementation` in `backend/chain.rb`,
+`Rack::Request::Env` in `request.rb`) is inlined the same way and carries no
+tag; so does a class's own `self.new`, which is same-file by definition.
 
 A parent constructor does not call an overridable hook to let a subclass run
 early. JS runs a subclass's field initializers after `super()` returns, so a
@@ -183,13 +199,12 @@ constructor(attributes = null) { … }
 - The citation is for the reader. It does not detect a changed Rails body;
   that stays the job of the body pins (`parity:api:pins`).
 - It may cite a closed list of hooks, held by the lint: `initialize` on a
-  module, and `new` on a `ClassMethods` module (`Mod::ClassMethods#new`). Both
-  are bodies owned by a module that the language forces into an including
-  class's constructor. A class's own `self.new` is not on the list: it is the
-  constructor, and needs no receipt. The tag is valid only on a constructor.
-  arel's `inlined-from` bucket names the general case (a module member whose
-  body sits on an including class's file) and pins it at 0; this tag must not
-  widen that.
+  module, and `new` on a `ClassMethods` module (`Mod::ClassMethods#new`). It is
+  valid only on a constructor, and only for a `def` in a different Ruby file
+  from the one the constructor's file mirrors. A tag citing the constructor's
+  own mirrored file is redundant and is an error. arel's `inlined-from` bucket
+  names the general case (a module member whose body sits on an including
+  class's file) and pins it at 0; this tag must not widen that.
 - `inherited` is a candidate third entry. JS has no class-definition hook, so
   each `inherited` body is deferred elsewhere. Some are written out inside
   another declaration, where a tag would be honest; others are replaced by a
@@ -203,14 +218,19 @@ constructor(attributes = null) { … }
   a class defines both, the constructor is compared against `new` then
   `initialize`, with `new`'s `super` consumed by `initialize`. No tag is
   involved.
-- **Credit.** `parity:api` scores a module's `initialize` as covered when a
+- **Same-file bodies pair without a tag.** A module `initialize` or
+  `ClassMethods#new` defined in the Ruby file the constructor's file mirrors
+  is credited to that constructor and joins its call-parity union by
+  convention, in ancestor order.
+- **Credit.** `parity:api` scores a cross-file module's `initialize` as covered when a
   constructor in the mirror of a file that includes the module carries the
   tag. The three `SCOPED_SKIP_GROUPS` entries go.
 - **Call parity.** `parity:api:calls` and `parity:api:calls:args` compare a
   tagged constructor against the union of its own Rails `initialize` (when the
   class has one) and the tagged module bodies, in tag order, with each Rails
   `super` consumed by the next segment.
-- **Staleness, both ways.** A tag naming a module with no `initialize` is red.
+- **Staleness, both ways.** A tag naming a module with no `initialize`, or a
+  `def` in the constructor's own mirrored file, is red.
   A class whose Rails counterpart includes or prepends a module with an
   `initialize`, and whose constructor has no tag for it, is red. The second
   arm is enrolled per package as that package's conversion lands.
@@ -309,6 +329,9 @@ opts in.
 ## Changelog
 
 - 2026-10-08: drafted from the blocked-story triage session.
+- 2026-10-08: the tag follows the file: a body from the constructor's own
+  mirrored Ruby file is inlined untagged and paired by convention. At the
+  owner's direction.
 - 2026-10-08: a class's own `self.new` is a direct port to the constructor,
   scored by convention with no tag; only a `ClassMethods#new` is inlined and
   tagged. Corrected at the owner's prompt.

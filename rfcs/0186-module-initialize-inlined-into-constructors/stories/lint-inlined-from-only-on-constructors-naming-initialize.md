@@ -30,3 +30,4 @@ arel's `inlined-from` bucket names the general case (a module member whose body 
 - The rule is registered in `eslint.config.mjs` and mirrored into `eslint/rails-private-jsdoc.config.mjs` if that config's ignores require it.
 - The accepted shape is the name followed by one versioned citation with no `vendor/` prefix; `no-freeform-comments` admits that shape and nothing after it.
 - The hooks the tag may cite are a closed list in the rule: `Module#initialize` and `Mod::ClassMethods#new`. A class's own `Klass.new` is not on it and is an error to cite. Adding an entry is a reviewed change to that list.
+- A tag whose cited file is the Ruby file the constructor's own file mirrors is reported as redundant.

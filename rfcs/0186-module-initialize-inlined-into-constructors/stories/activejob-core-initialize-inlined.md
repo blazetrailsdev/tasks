@@ -36,7 +36,7 @@ RFC 0169 (`activejob-package-port`) and RFC 0185 (`ruby-ts-codegen`, piloted on 
 ## Acceptance criteria
 
 - Each listed `initialize` body is inlined into the constructor of every class that includes or prepends its module, at Ruby's `super` position, line for line.
-- Each such constructor carries the `@inlinedFrom` tags in chain order, and no `initialize` function or `defineMethod("initialize", …)` remains for these modules.
+- Each such constructor carries an `@inlinedFrom` tag, in chain order, for every segment whose Rails `def` is in a different Ruby file from the one the constructor's file mirrors; a same-file segment is inlined untagged. No `initialize` function or `defineMethod("initialize", …)` remains for these modules.
 - A module in an unported file is left alone and named in the PR body.
 - The package is enrolled in the missing-tag arm of the staleness gate in this PR.
 - Where one module's body lands in more than one constructor, the PR body states how many.

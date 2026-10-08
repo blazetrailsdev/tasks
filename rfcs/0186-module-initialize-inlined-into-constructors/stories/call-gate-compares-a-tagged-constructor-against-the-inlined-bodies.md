@@ -29,3 +29,4 @@ Today the call gate pairs a TS constructor with the Rails class's own `initializ
 - The call-argument gate reads the same union.
 - Tests cover: one module; two modules in order; a class `initialize` plus a module; a tag whose body's call is dropped (red).
 - Existing baselines are untouched; a row that becomes stale because of the union is deleted by hand in the conversion PR that causes it.
+- Same-file module bodies join the union by convention, in ancestor order, with no tag; a test covers a same-file module, a cross-file one, and a class with both.

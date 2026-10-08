@@ -58,7 +58,7 @@ name, and `action_view/test_case.rb` is unported as of 2026-10-08.
 - Each listed override that is ported is the first segment of its class's
   constructor, with no static `new` and no factory under another name standing
   in for it.
-- The three `ClassMethods#new` constructors carry `@inlinedFrom`; the ten own
+- The `ClassMethods#new` constructors carry `@inlinedFrom` where the `def` is in another Ruby file; the ten own
   `self.new` constructors carry no tag and are credited by the `Klass.new`
   convention.
 - Where the Rails body returns a different object, the constructor returns it.
@@ -70,3 +70,4 @@ name, and `action_view/test_case.rb` is unported as of 2026-10-08.
   body with the shape chosen for it, or filed if it needs a decision.
 - An override in an unported file is left alone and named in the PR body.
 - If the list exceeds one PR, it is split per package by filing stories.
+- A `ClassMethods#new` defined in the same Ruby file as the class that extends it carries no tag; `ActionView::TestCase::Behavior::ClassMethods#new` looks like that case and is to be checked.
