@@ -47,10 +47,10 @@ in `SCOPED_SKIP_GROUPS`.
 The owner ruled on 2026-10-08: **there are no `initialize` methods; constructor
 inheritance is inlined.** This RFC carries that out in three parts:
 
-1. A JSDoc marker, `@inlinedFrom`, that names the Ruby `initialize` each
-   segment of a constructor came from.
-2. Parity-script changes that read the marker: credit, call parity and
-   staleness.
+1. A JSDoc marker, `@inlinedFrom`, that names the Ruby body a segment of a
+   constructor came from when that body lives in another Ruby file.
+2. Parity-script changes: credit, call parity and staleness for tagged
+   bodies, and pairing by convention for same-file bodies and `Klass.new`.
 3. The conversions: 38 module-level `initialize` definitions across 11
    packages and 13 class-level `new` overrides, then the retirement of the
    chain walker.
@@ -130,7 +130,7 @@ conversion story starts by reading its sites.
 
 ### The rule
 
-Ruby's `initialize` chain is written as JS constructors, by two rules.
+Ruby's `new` / `initialize` chain is written as JS constructors, by four rules.
 
 1. **Rails class inherits from a class: use JS `super()`.** Statements before
    `super` that only compute arguments stay before it. Where Ruby does work on
@@ -140,9 +140,7 @@ Ruby's `initialize` chain is written as JS constructors, by two rules.
    the sanctioned spelling.
 2. **The next `initialize` up the chain belongs to a module, or the parent
    reads the child's setup: inline it.** The body is written into the
-   constructor at the position Ruby's `super` occupies, line for line, and the
-   constructor carries one `@inlinedFrom` tag for it.
-
+   constructor at the position Ruby's `super` occupies, line for line.
 3. **A Rails `self.new` override is the constructor.** This is a direct port,
    not an inlining: Ruby's `Klass.new` and JS's `new Klass` are the same
    operation, and `Class#new` is allocate-then-`initialize`, which is what a JS
@@ -183,9 +181,10 @@ constructor(attributes = null) { … }
 - It sits on the constructor's JSDoc. JSDoc attaches to declarations and the
   repo's comment lint strips prose inside bodies, so a block cannot be marked
   in place.
-- One tag per inlined segment, in chain order. The order of the tags is the
-  order of the segments.
-- The value is a Ruby `Module#initialize` followed by its versioned source
+- One tag per inlined segment that comes from another Ruby file, in chain
+  order. Same-file segments sit between them untagged.
+- The value is a Ruby `Module#initialize` or `Mod::ClassMethods#new` followed
+  by its versioned source
   citation, `<source>/<version>/<file>:<first>-<last>`, the span of the `def`.
   The path is relative to `vendor/` and does not spell it. Nothing else: no
   prose, no story id, no `PERMANENT`.
@@ -321,14 +320,14 @@ opts in.
 
 ## Open questions
 
-1. **Tag name.** `@inlinedFrom` is used here, as the owner named it. It shares
-   a word with arel's debt bucket; `@inlinesInitialize` is the alternative.
-2. **A module `initialize` included into many classes** is duplicated in each.
+1. **A module `initialize` included into many classes** is duplicated in each.
    Not counted yet; the conversion stories report it per module.
 
 ## Changelog
 
 - 2026-10-08: drafted from the blocked-story triage session.
+- 2026-10-08: tag name settled as `@inlinedFrom`, the owner's name for it
+  throughout.
 - 2026-10-08: the tag follows the file: a body from the constructor's own
   mirrored Ruby file is inlined untagged and paired by convention. At the
   owner's direction.
