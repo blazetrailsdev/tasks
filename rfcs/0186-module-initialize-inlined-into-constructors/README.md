@@ -17,6 +17,8 @@ packages:
   - "trailties"
   - "rack"
   - "i18n"
+  - "rack-test"
+  - "did-you-mean"
 clusters:
   - tooling
   - docs
