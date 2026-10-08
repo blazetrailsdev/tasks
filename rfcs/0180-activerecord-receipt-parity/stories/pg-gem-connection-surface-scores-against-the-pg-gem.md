@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the PG::Connection wrapper scores against the pg gem"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8687
+claim: "2026-10-08T17:05:11Z"
+assignee: "pg-gem-connection-surface-scores-against-the-pg-gem"
 blocked-by: null
 closed-reason: null
 ---

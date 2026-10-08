@@ -1,7 +1,7 @@
 ---
 title: "Port the integration_test generator"
-status: blocked
-updated: 2026-09-26
+status: ready
+updated: 2026-10-08
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: 6
 pr: null
-claim: "2026-09-26T18:02:02Z"
-assignee: "mapper-root-ships-only-one-of-two-arms"
-blocked-by: "integration_test_generator.rb is only hook_for :integration_tool, as: :integration; trails has no hook_for, Generators.options, app_generators or TestUnitRailtie integration_tool default — needs port-generators-hook-for-and-app-generators-options first"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "MessagePack Duration: an integral Float value/part dumps as a msgpack integer where Ruby writes float64"
-status: ready
+status: in-progress
 updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8688
+claim: "2026-10-08T17:33:33Z"
+assignee: "messagepack-duration-integral-float-value-dumps-as-integer"
 blocked-by: null
 closed-reason: null
 ---

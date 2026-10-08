@@ -1,6 +1,6 @@
 ---
 title: "activesupport loads without its optional msgpack peer, as Rails lazy-requires message_pack"
-status: draft
+status: closed
 updated: 2026-10-08
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of message-pack-loaded-at-call-time-so-msgpack-is-an-optional-peer (0184), filed the same day. Extra evidence: it blocks downstream bumps — trailmap#44 could not vendor trails e8f1bb88fa and pinned to c83105fc59."
 ---
 
 ## Context

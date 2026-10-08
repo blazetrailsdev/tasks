@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2Adapter#initialize sets FOUND_ROWS on @config[:flags] as Rails does"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings

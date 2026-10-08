@@ -1,6 +1,6 @@
 ---
 title: "activesupport: SerializerWithFallback loads ActiveSupport::MessagePack at call time, so msgpack is a real optional peer and LoadError is rescued"
-status: draft
+status: in-progress
 updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8689
+claim: "2026-10-08T17:50:52Z"
+assignee: "message-pack-loaded-at-call-time-so-msgpack-is-an-optional-peer"
 blocked-by: null
 closed-reason: null
 ---

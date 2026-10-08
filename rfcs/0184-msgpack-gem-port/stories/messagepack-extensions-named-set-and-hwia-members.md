@@ -1,6 +1,6 @@
 ---
 title: "MessagePack Extensions: write_set/read_set and write/read_hash_with_indifferent_access as named members"
-status: ready
+status: done
 updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8674
+claim: "2026-10-08T17:33:33Z"
+assignee: "messagepack-duration-integral-float-value-dumps-as-integer"
 blocked-by: null
 closed-reason: null
 ---

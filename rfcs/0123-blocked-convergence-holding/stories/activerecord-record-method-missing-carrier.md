@@ -1,7 +1,7 @@
 ---
 title: "Records have no method_missing carrier for undefined names"
-status: blocked
-updated: 2026-09-25
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]
@@ -12,8 +12,8 @@ priority: null
 pr: trails#8101
 claim: "2026-09-25T18:51:40Z"
 assignee: "initialize-cache-skips-lookup-store-so-generated-cache-store-is-omitted"
-blocked-by: "no carrier within budget: a Proxy as the last prototype of the root class (get-only / get+set traps), measured best-of-5 on Node 24 against the same 4-class chain without it: miss read 48x/50x, construction 3.7x/5.9x (OrdinarySet of a not-yet-own property walks into the trap), late own-prop write 6.1x/9.7x; hits ~1.0x reader, 1.8x own field. A raising get trap also fires on JS-routine misses Ruby never sees (await reads then, vitest toEqual reads asymmetricMatch/$$typeof, framework typeof record.x === 'function' probes), so it needs an invented allowlist. Unblocks only if V8 stops deopting proxy-tailed prototype chains or TC39 adds a non-Proxy missing-property hook."
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: a record cannot answer an undefined name through method_missing. The only JS hook is a Proxy, measured at 48x on a missed read and 3.7x to 5.9x on construction, and ruled out by trails CLAUDE.md § "Records are not Proxies".'
 ---
 
 ## Context

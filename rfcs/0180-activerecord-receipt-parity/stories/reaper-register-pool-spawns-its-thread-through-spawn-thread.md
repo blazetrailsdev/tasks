@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Reaper.register_pool spawns its thread through spawn_thread"
-status: claimed
+status: in-progress
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8686
 claim: "2026-10-08T16:35:11Z"
 assignee: "pg-and-mysql-wire-casts-register-where-rails-configures-the-driver"
 blocked-by: null

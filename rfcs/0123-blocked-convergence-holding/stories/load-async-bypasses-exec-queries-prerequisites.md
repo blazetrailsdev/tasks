@@ -1,7 +1,7 @@
 ---
 title: "loadAsync issues its query before execQueries' trails-only prerequisites"
-status: blocked
-updated: 2026-09-29
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: trails#6906
 claim: "2026-08-23T11:12:29Z"
 assignee: "wave-5g-head-sweep"
-blocked-by: "Re-verified against origin/main 2026-08-24: blocker still live. execMainQuery is still deliberately non-async (relation.ts:1125, with the FutureResult-adoption rationale in the doc comment at :1120-1124 — the body's :1115-1120 anchor has drifted by ~5 lines), so awaiting the prerequisites before execMainQuery(true) would still force every scheduled relation into the Promise arm and lose cancel universally. The hazard itself is unchanged and still latent: execQueries runs ensureSchemaLoaded + _materializeDeferredDistinctPkPredicates only on the foreground pass (relation.ts:1066; _materializeDeferredDistinctPkPredicates is still async at :1857). Unblocks only when both prerequisites leave the query path — schema warm before either entry point (RFC 0031 is closed, so this needs a new home) and distinct-PK materialization moved to where .where() puts it (finder_methods.rb:463-475)."
-closed-reason: null
+blocked-by: null
+closed-reason: 'FALSIFIED: the convergence route is closed. The story waits for deferred distinct-PK materialization to leave the query path, and trails CLAUDE.md § "Relation is evaluated by an async query" ratifies it there. The hazard is refiled as a bug in load-async-skips-schema-load-and-deferred-predicate-drain.'
 ---
 
 # `loadAsync` issues its query before `execQueries`' trails-only prerequisites

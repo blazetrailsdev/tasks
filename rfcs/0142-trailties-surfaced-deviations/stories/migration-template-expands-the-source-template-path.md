@@ -1,7 +1,7 @@
 ---
 title: "migration_template takes a source template PATH and expands it through find_in_source_paths"
-status: blocked
-updated: 2026-09-26
+status: ready
+updated: 2026-10-08
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 200
 priority: 6
 pr: null
-claim: "2026-09-25T16:31:39Z"
-assignee: "generated-app-typechecks-with-tsc-not-trails-tsc"
-blocked-by: "find_in_source_paths (thor/actions.rb:133-157) has nothing to stand on: trailties has no source_root/source_paths machinery, no template files, and thor is not vendored; AC forbids a stub. Blocked on generators-have-no-thor-source-paths-or-template-files"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

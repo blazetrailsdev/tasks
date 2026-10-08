@@ -1,7 +1,7 @@
 ---
 title: "activerecord: constraint name lookups read an undefined name kwarg as a present key"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8687
+claim: "2026-10-08T17:05:11Z"
+assignee: "pg-gem-connection-surface-scores-against-the-pg-gem"
 blocked-by: null
 closed-reason: null
 ---

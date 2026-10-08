@@ -1,7 +1,7 @@
 ---
 title: "relation-to-yaml-psych-dump"
-status: blocked
-updated: 2026-09-30
+status: ready
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "psych-object-protocol-for-record-yaml-round-trip landed (trails#8254, merged 2026-09-30: core.ts encodeWith, yaml.ts dumpIvars/initWith), but there is still no Psych emitter for Relation#to_yaml / Array#to_yaml; its home is being decided by 0158/activesupport-has-no-psych-emitter-for-to-yaml (claimed 2026-09-30, no PR yet). relations.test.ts:200 'to yaml' and yaml-serialization.test.ts 'active record relation serialization' stay parked until that lands."
+blocked-by: null
 closed-reason: null
 ---
 

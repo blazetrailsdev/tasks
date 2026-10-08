@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Persistence#reload re-syncs select-alias singleton readers Rails answers from method_missing"
-status: blocked
-updated: 2026-10-02
+status: closed
+updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Converging needs an undeclared attribute answered from the live @attributes at read time, which is method_missing on a record. CLAUDE.md § 'Records are not Proxies' rules that out on measured cost (attribute read 3.7x, internal field read 64x), so the readers must be installed, and reload replaces the @attributes they were installed for."
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: Rails answers a select-alias attribute from method_missing against the live @attributes, so reload needs no re-sync. trails records are not Proxies (CLAUDE.md § "Records are not Proxies"), so the readers are installed per record and Persistence#reload has to re-install them.'
 ---
 
 ## Context

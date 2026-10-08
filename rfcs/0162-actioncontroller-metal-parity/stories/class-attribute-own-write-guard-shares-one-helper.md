@@ -1,7 +1,7 @@
 ---
 title: "One helper for the class_attribute own-write guard the deferred inherited sites share"
-status: blocked
-updated: 2026-10-06
+status: closed
+updated: 2026-10-08
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: trails#8572
 claim: "2026-10-06T13:37:24Z"
 assignee: "action-controller-rescue-includes-activesupport-rescuable"
-blocked-by: "Review of trails#8572 rejected the helper as invented surface with no Rails counterpart, and the premise is contradicted for one of the three sites: Rails' set_callbacks spells the key itself (activesupport/lib/active_support/callbacks.rb:939, singleton_class.private_method_defined?(:__class_attr__callbacks, false)). Needs a decision on whether the two deferred-inherited sites (validations.ts _validators, metal.ts middlewareStack) may share a helper at all before it can be built."
-closed-reason: null
+blocked-by: null
+closed-reason: "FALSIFIED: review of trails#8572 rejected a shared own-write-guard helper as surface Rails does not have, and Rails' set_callbacks spells the key itself (callbacks.rb:939), so the premise that the three sites share one Rails shape is wrong."
 ---
 
 ## Context

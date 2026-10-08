@@ -1,7 +1,7 @@
 ---
 title: "DebugExceptions gates on wrapper.show?(request) and request headers, not constructor flags"
-status: blocked
-updated: 2026-09-27
+status: ready
+updated: 2026-10-08
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-09-26T16:22:10Z"
-assignee: "asset-tag-helper-image-loading-and-decoding-mattrs"
-blocked-by: "Half cleared: engine-call-build-request-env-config (0142) is done via trails#8149 (Engine#envConfig at trailties/src/engine.ts:171 on origin/main 114cf8364c). Still blocked on port-application-env-config-for-action-dispatch-keys (0141, ready, unclaimed): without Application#env_config seating action_dispatch.show_exceptions / show_detailed_exceptions, gating on request headers makes every booted-app exception escape (application.test.ts 'renders the dev error page through DebugExceptions rather than an ad-hoc catch'). Unblock when that story lands."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

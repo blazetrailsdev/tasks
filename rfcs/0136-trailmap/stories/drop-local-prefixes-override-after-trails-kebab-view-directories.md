@@ -1,6 +1,6 @@
 ---
 title: "Bump trails past #8670 and delete the localPrefixes override"
-status: draft
+status: done
 updated: 2026-10-08
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#44
+claim: "2026-10-08T17:08:14Z"
+assignee: "drop-local-prefixes-override-after-trails-kebab-view-directories"
 blocked-by: null
 closed-reason: null
 ---

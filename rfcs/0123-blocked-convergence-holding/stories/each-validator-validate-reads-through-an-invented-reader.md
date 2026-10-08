@@ -1,7 +1,7 @@
 ---
 title: "activemodel: EachValidator#validate sends read_attribute_for_validation instead of an invented fallback reader"
-status: blocked
-updated: 2026-10-02
+status: ready
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activemodel"]
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: "2026-10-02T18:02:01Z"
-assignee: "arel-mixin-hosts-take-the-arel-node-union"
-blocked-by: "Blocked on ar-read-attribute-for-validation-is-not-send. Deleting EachValidator's protected readAttributeForValidation (validator.ts:82-93) removes the hook ActiveRecord's UniquenessValidator overrides (activerecord/src/validations/uniqueness.ts:61-68) to read the foreign key of an UNLOADED association. Rails needs no such hook: read_attribute_for_validation is alias send (activemodel/lib/active_model/validations.rb:437), so validator.rb:152 loads the association and bind_attribute (relation.rb) reads its join primary key. trails' AR reader cannot send an async association reader, so with the helper deleted the unloaded value is undefined and three uniqueness-validation.test.ts tests go red: 'validate uniqueness with object arg', 'validate uniqueness on existing relation', 'uniqueness on custom relation primary key'. Moving the FK read into validateEach is not behaviour-preserving (validate's allow_nil skip runs first) and only relocates the deviation."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

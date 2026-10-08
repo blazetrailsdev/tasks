@@ -1,7 +1,7 @@
 ---
 title: "Converge schema invalidation onto Rails' push-only DescendantsTracker model (eager subclass registration, delete the per-read pull fallback)"
-status: blocked
-updated: 2026-08-27
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-08-18T18:14:58Z"
 assignee: "port-test-date-strftime-different-format"
-blocked-by: "Re-verified 2026-08-24 against origin/main. The OLD blocker reason is now factually wrong and was replaced: git grep for schemaStaleAgainstAncestors, _staleCheck, _schemaRevision, schemaEpoch and blazetrails/schema-memo-read-through-guard returns ZERO hits on origin/main — #6809 deleted all of them, and the story body already records that (ACs 2 and 3 are checked off). What is still genuinely blocked is the ORIGINAL open problem, unchanged: eager subclass registration. 'class X extends Y {}' offers no receiver-bearing hook — [[SetPrototypeOf]] fires on X before Y can see it, and a proxied-Base 'prototype' get trap fires before the class object exists — so registerSubclass (inheritance.ts:397) stays lazy, and Inheritance#subclasses (inheritance.ts:90) still unions two hand-filled registries where Rails delegates to the VM-maintained Class#subclasses (descendants_tracker.rb:97-100). AC1, AC4 and AC5 all hinge on that. Still needs an RFC 0078 owner decision on the second-best shape (proxied-Base get trap, codegen/lint-enforced registration at every extends, or ratifying the two-registry union). Worth a cheap check when unblocking: AC4 says the explicit registerSubclass(Circle) in model-schema-sync-load.test.ts may already be redundant after #6809's union."
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: `class X extends Y` fires no hook in JS, so a subclass cannot be registered when it is defined. trails CLAUDE.md § "inherited is deferred to own-property memo guards" ratifies lazy registration and rejects a decorator or explicit registration step, so `Inheritance#subclasses` cannot delegate to an eagerly maintained list.'
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: DisableJoinsAssociationRelation#load groups by record[key] with no composite arm"
-status: ready
-updated: 2026-10-05
+status: blocked
+updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-08T17:05:11Z"
+assignee: "pg-gem-connection-surface-scores-against-the-pg-gem"
+blocked-by: "Rails has no composite read to converge onto. On activerecord 8.0.2 / ruby 3.3.11, for a model with primary_key [:shop_id, :id], record[[:shop_id, :id]], record[['shop_id','id']] and read_attribute(['shop_id','id']) all return nil: read_attribute (attribute_methods/read.rb:29-34) calls attr_name.to_s on the Array and fetch_value misses. So disable_joins_association_relation.rb:28-30 groups every record under nil for an Array key and load returns []. One record.get(key) call would make disable-joins-composite-key.trails.test.ts fail; the Array.isArray arm is what makes composite keys work at all. Needs a maintainer decision: keep the arm (trails supports what Rails does not) or drop composite support with the test."
 closed-reason: null
 ---
 

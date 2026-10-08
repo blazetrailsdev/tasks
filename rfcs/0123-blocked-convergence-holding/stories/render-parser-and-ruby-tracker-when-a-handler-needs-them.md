@@ -1,7 +1,7 @@
 ---
 title: "Port RenderParser and RubyTracker once a handler registers them"
-status: blocked
-updated: 2026-09-26
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages:
@@ -13,8 +13,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Gated by design (RFC 0140 Design/Non-goals): not claimable until a trails handler registers RubyTracker. Re-checked on origin/main 298d771dc9: dependency-tracker.ts:45 registers only TSETracker; port-html-builder-and-ruby-template-handlers landed in trails#8135 (Html + :ruby handlers) but shipped no Builder handler (template/handlers/ has html/raw/tse only) and registers no RubyTracker, so the gate is still live."
-closed-reason: null
+blocked-by: null
+closed-reason: "FALSIFIED: RenderParser and RubyTracker parse Ruby template source, and trails has no handler that compiles Ruby source. The one that would have (Builder) was closed as will-not-port in trails#8135, so the gate this story waits on cannot open. Reopen if a Ruby-source template handler is ever added."
 ---
 
 ## Context

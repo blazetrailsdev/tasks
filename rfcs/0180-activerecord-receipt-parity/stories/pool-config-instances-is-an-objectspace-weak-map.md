@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: port ObjectSpace::WeakMap; PoolConfig::INSTANCES walks it with each_key"
-status: ready
-updated: 2026-10-07
+status: claimed
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["ruby-compat", "activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-08T17:35:15Z"
+assignee: "pg-gem-result-and-array-coders-score-against-the-pg-gem"
 blocked-by: null
 closed-reason: null
 ---

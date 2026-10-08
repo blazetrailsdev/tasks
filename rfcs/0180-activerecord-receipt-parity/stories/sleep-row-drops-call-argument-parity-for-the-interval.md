@@ -1,6 +1,6 @@
 ---
 title: "parity: a native-form row drops call-argument parity for its interval (sleep)"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

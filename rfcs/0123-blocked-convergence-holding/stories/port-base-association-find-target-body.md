@@ -1,7 +1,7 @@
 ---
 title: "Port Rails' Association#find_target body into the base findTarget stub"
-status: blocked
-updated: 2026-08-05
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages:
@@ -13,8 +13,8 @@ priority: null
 pr: null
 claim: "2026-08-05T02:45:04Z"
 assignee: "row-count-is-debt-not-seeded-reasons"
-blocked-by: "Not a body port: the Rails base find_target machinery does not exist in trails. `skip_statement_cache?` (association.rb:391) has no TS counterpart at all, and the three subclass findTarget overrides do not call a shared base body — each delegates to a standalone functional loader (singular-association.ts:444, has-many-association.ts:514, has-one-through-association.ts:732, plus has-many-through-association.ts) totalling ~3,300 LOC that never builds `scope`/statement-cache at all. `super.findTarget()` at has-many-through-association.ts:51 resolves to HasManyAssociation's override, not the base. Porting association.rb:248-270 into the base and routing subclasses through it means replacing that entire loader architecture across four files — far beyond the ~250 LOC estimate and beyond any single-PR ceiling. Needs to be re-cut as an epic: (1) add skipStatementCache?, (2) converge one loader at a time onto scope/associationScopeCache/getBindValues, (3) collapse into the base. Surfaced while shipping the rest of bundle row-count-is-debt-not-seeded-reasons."
-closed-reason: null
+blocked-by: null
+closed-reason: "FALSIFIED: Association#find_target is not a body port. trails has no skip_statement_cache? and its three subclass loaders (about 3,300 lines) never build the scope or statement cache. Re-cut as association-skip-statement-cache-and-find-target-loader-epic: add skip_statement_cache?, converge one loader at a time onto scope / association_scope_cache, then collapse into the base."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Drop or block the chain-receiver core call in XmlMini_Nokogiri#parse"
-status: blocked
-updated: 2026-08-18
+status: closed
+updated: 2026-10-08
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-08-18T13:06:46Z"
 assignee: "converge-request-session-initialize-and-options-readers"
-blocked-by: "No verdict exists that is both principled and narrow enough. The site is `raise doc.errors.first` (activesupport/lib/active_support/xml_mini/nokogiri.rb:28): the receiver of `first` is the CHAIN `doc.errors`, whose root is an inert local. Three candidate verdicts, all rejected:\n\n(1) Chain-rooted (\"a core method name whose receiver chain roots at an inert local is weak\") — the story rules this out and it is right to: it silences `relation.where(...).first`, `record.association(...).count`, `scope.merge(...).size` across activerecord, i.e. exactly the ported-collaborator calls the wide gate exists to see. It would drop far more than one row.\n\n(2) File-scoped (chain-rooted, but only inside `xml_mini/*.rb`, where the objects are third-party parser documents — Nokogiri/LibXML/REXML). This is not a verdict, it is the existing baseline row rewritten as a hard-coded path in extract-ruby-api.rb, and it silences MORE than the row does (`element.texts.join`, `doc.to_s.inspect`, `text_children.join.empty?` in rexml.rb/jdom.rb all stop being recorded). Moving a deviation from one register to another is not convergence.\n\n(3) Provenance-based (\"the chain root is a local assigned from a constant no scanned Rails file defines, so it is a gem object\"). This is the only principled shape, but the extractor has no global Rails-constant index (it carries only the per-file `@file_collection_constants` pre-pass), so it needs a whole-corpus constant-definition pass plus intra-body assignment tracking — a large, high-blast-radius change to the extractor to retire one baseline row, and it still mis-fires the moment a ported object is assigned from a foreign factory.\n\nThe row in scripts/api-compare/call-mismatches-exclude/activesupport/xml-mini/nokogiri.json already carries an accurate reviewed reason (\"Ruby core Enumerable#first on the parsed document, not a ported trails method\"), and the port (packages/activesupport/src/xml-mini/nokogiri.ts:118) spells it `doc.errors[0].message`, which is the faithful TS for it. Unblock if RFC 0108 ever grows a global constant-provenance index for other reasons — verdict (3) becomes cheap then."
-closed-reason: null
+blocked-by: null
+closed-reason: "FALSIFIED: no call-gate verdict can retire the `doc.errors.first` row in xml_mini/nokogiri.rb without also silencing ported-collaborator chains across activerecord; the row's reviewed reason (Ruby core Enumerable#first on a third-party parser document) is the accurate end state. Reopen only if the extractor gains a whole-corpus constant-provenance index."
 ---
 
 ## Context

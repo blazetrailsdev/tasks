@@ -1,7 +1,7 @@
 ---
 title: "Port _encode_uri_component's enc transcode arm"
-status: blocked
-updated: 2026-09-29
+status: ready
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Needs a String#encode transcoding seat in ruby-compat: origin/main has packages/ruby-compat/src/encoding.ts (Encoding registry/find/defaults only) and no packages/ruby-compat/src/string/encode*.ts, so common.rb:387-391's two encode! calls with invalid:/undef:/fallback: cannot be ported yet. Unblock once a transcoding seat lands."
+blocked-by: null
 closed-reason: null
 ---
 
