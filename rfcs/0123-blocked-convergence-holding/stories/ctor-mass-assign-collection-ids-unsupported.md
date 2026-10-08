@@ -5,7 +5,8 @@ updated: 2026-09-24
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: []
+deps:
+  - sync-collection-mass-assignment-refuses-rails-replace
 deps-rfc: []
 est-loc: 60
 priority: null
