@@ -1,7 +1,7 @@
 ---
 title: "assertions-uniqueness-singleton-and-forced-encoding-residue"
-status: blocked
-updated: 2026-09-23
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-09-22T01:48:02Z"
 assignee: "assertions-uniqueness-singleton-and-forced-encoding-residue"
-blocked-by: "Re-verified 2026-09-23: half the premise is falsified. (1) singleton_class is SETTLED since this was written — rbObjSingletonClass exists at packages/ruby-compat/src/object.ts:56 and CLAUDE.md now ratifies it repo-wide under 'singleton_class is a per-object subclass (rbObjSingletonClass)', including the guidance that class-level schema memos must not be read off a singleton class and that UniquenessValidator#initialize's @klass.superclass (uniqueness.rb:16) ports as-is. uniqueness_validation_test.rb no longer shows any assertion mismatch in parity:test --assertions, so this half has no live residue. (2) The forced-encoding half STILL blocks: encryption/encryptable_record_test.rb 'forced encoding for deterministic attributes will replace invalid characters' is a live value mismatch (trails 'Hello ??' vs Rails 'Hello \\uFFFD\\uFFFD'), and the blocker stands — JS strings carry no encoding tag, so force_encoding_if_needed's value.encoding != forced check (encryptor.rb:164-170) has no input, and the only binary carrier (Uint8Array) is stringified by ImmutableString#cast_value (activemodel type/immutable-string.ts:39). Needs a repo-wide binary-String convention. Retitle/rescope to the encoding half alone when picked up; it is 1 of the 11 counters blocking flip-assertion-mismatch-gate-to-hard-zero."
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: the singleton_class half is delivered and ratified. The remaining forced-encoding assertion needs an encoding tag on a JS string, which trails does not carry (CLAUDE.md § "Ruby Strings are JS string primitives", "A String has no encoding tag either").'
 ---
 
 ## Context

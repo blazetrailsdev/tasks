@@ -1,7 +1,7 @@
 ---
 title: "association-async-load-target-uses-async-executor"
 status: blocked
-updated: 2026-09-24
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-24T17:44:04Z"
 assignee: "activesupport-time-with-zone-subnanosecond-fractions"
-blocked-by: "needs a lazy ActiveRecord::Promise port (activerecord/lib/active_record/promise.rb), which is unported: Rails' find_target(async: true) stores sc.execute(async: true)'s Promise (statement_cache.rb:149-150 -> querying.rb:59-64, FutureResult#then) in @target, and Association#target (association.rb:53-58) consumes .value at the reader, which is when the FutureResult's EventBuffer flushes the async: true event. trails' FutureResult#then is an eager JS thenable, so any async_find_by_sql chain consumes the result (and publishes the event) before the reader is read. Converge after port-promise-complete-for-async-loaded-arms lands the Promise class (value/pending?/lazy then)."
+blocked-by: 'Re-triaged 2026-10-08. The old reason is stale: it waited on port-promise-complete-for-async-loaded-arms, which closed (ActiveRecord::Promise is not ported). Not shown to be permanent: review of trails#8685 found CLAUDE.md § "ActiveRecord::Promise is the native promise" does not cover it. Rails asserts the sql.active_record event is published when the reader is read inside `subscribed`, with payload[:async] == true (belongs_to_associations_test.rb:1851-1872). Needs an attempt at publishing the buffered event at the association reader without a lazy Promise#value, for example by not consuming the FutureResult until the reader reads it. Unblock by trying that; if it fails, record what was tried and ask the owner to ratify.'
 closed-reason: null
 ---
 

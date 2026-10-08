@@ -1,7 +1,7 @@
 ---
 title: "Module#delegate: source_location and arity -1 are unported (3 parked tests)"
-status: blocked
-updated: 2026-10-01
+status: ready
+updated: 2026-10-08
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-09-23T23:33:09Z"
-assignee: "activesupport-delegate-private-and-ruby-method-semantics"
-blocked-by: "Language shortcomings on the two remaining arms: source_location (module_test.rb:365,370) has no JS Method#source_location; arity -1 (module_test.rb:650) cannot be expressed by Function.length. The five private-delegate tests left this story with trails#8317 (CLAUDE.md § 'Method visibility is compile-time only': permanent skips); the nil-receiver tests (module_test.rb:341,346) are unskipped and green on main."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

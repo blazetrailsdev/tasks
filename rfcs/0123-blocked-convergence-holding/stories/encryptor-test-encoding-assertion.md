@@ -1,7 +1,7 @@
 ---
 title: "encryptor-test-encoding-assertion"
-status: blocked
-updated: 2026-09-24
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-09-24T21:24:13Z"
 assignee: "assert-equal-port-does-not-dispatch-ruby-equality"
-blocked-by: "A JS string carries no encoding tag and ruby-compat has no encoding-tagged String representation (string/force-encoding.ts transcodes and returns an untagged string), so Rails' decrypted_text.encoding (encryptor_test.rb:88) has nothing to read. The same gap is why trails' Cipher#encrypt/#decrypt omit cipher.rb:17 (headers.encoding = clean_text.encoding.name) and :27 (force_encoding): clean_text.encoding has no JS source. Unblocks when ruby-compat grows an encoding-tagged String seat."
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: a JS string has no encoding tag, so decrypted_text.encoding has nothing to read (trails CLAUDE.md § "Ruby Strings are JS string primitives", "A String has no encoding tag either").'
 ---
 
 ## Context

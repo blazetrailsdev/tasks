@@ -1,7 +1,7 @@
 ---
 title: "PG lookup_cast_type resolves only warmed type names, where Rails queries regtype live"
-status: blocked
-updated: 2026-09-29
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-08-29T14:04:19Z"
 assignee: "pg-quote-binary-column-is-invented-dead-surface"
-blocked-by: 'Gap 2 measured closed; gap 1 needs synchronous IO TS cannot do. Rails'' PostgreSQL#lookup_cast_type (postgresql/quoting.rb:194-197) is `super(query_value("SELECT #{quote(sql_type)}::regtype::oid", "SCHEMA").to_i)` — a live query. trails'' lookupCastType is synchronous because #7189 converged quote_default_expression to Rails'' String-returning body (abstract/quoting.rb:156-162); node''s pg client offers no synchronous query, so the regtype round-trip cannot be made at call time without un-converging #7189. Gap 2 (a native type absent from the warm-up) was measured against a live PG and has zero instances: every name in nativeDatabaseTypes() — interval and oid included — resolves to a non-ValueType, covered by the string registrations in postgresql/type-map-init.ts plus the trails-invented nativeTypeNamesQuery warm-up (Rails'' TypeMapInitializer#run, type_map_initializer.rb:19-34, has neither, because it does not need them). PR #PENDING adds `resolves every native database type name` to adapters/postgresql/postgresql-adapter.trails.test.ts to keep that closed. Gap 1 remains: `execute("CREATE TYPE probe_mood AS ENUM (...)")` then lookupCastType("probe_mood") returns ValueType where Rails returns OID::Enum. Warming on miss from an async caller does not fix it — lookupCastType''s callers include the sync quoteDefaultExpression, and a blanket reloadTypeMap before every schema_creation.accept is invented surface Rails has no counterpart for. Unblocks if lookupCastType may become async again, or if a raw-execute DDL sniffer is accepted.'
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: PostgreSQL lookup_cast_type cannot run its regtype query from the synchronous quote_default_expression. trails reads the type map warmed when the connection is configured; a type created after the warm-up resolves to ValueType (CLAUDE.md § "Adapter facts are prewarmed and peeked").'
 ---
 
 ## Context

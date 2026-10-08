@@ -1,7 +1,7 @@
 ---
 title: "notifications-event-allocations-has-no-js-allocation-counter"
-status: blocked
-updated: 2026-09-25
+status: closed
+updated: 2026-10-08
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Per the story's own AC fallback: JS exposes no monotonic allocated-object counter (v8.getHeapStatistics / process.memoryUsage report heap occupancy, which GC lowers). GC.stat(:total_allocated_objects) cannot be backed honestly, so Event#nowAllocations (notifications/instrumenter.ts:114) stays Rails' JRuby/TruffleRuby 0 arm and the 2 parked notifications.test.ts tests stay skipped. Language/runtime shortcoming."
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: JS has no monotonic allocated-object counter, so Notifications::Event#allocations answers 0, the definition Rails takes where GC.stat has no total_allocated_objects (trails CLAUDE.md § "Runtime facts Node does not expose").'
 ---
 
 ## Context

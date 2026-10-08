@@ -1,7 +1,7 @@
 ---
 title: "PG max_identifier_length is split across a sync reader and an async warmer"
-status: blocked
-updated: 2026-09-30
+status: closed
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages:
@@ -13,8 +13,8 @@ priority: null
 pr: null
 claim: "2026-09-30T22:50:28Z"
 assignee: "relation-count-type-is-a-union-even-when-ungrouped"
-blocked-by: "Sync caller cannot be made async: PG table_alias_length IS max_identifier_length (abstract/database_limits.rb:16-18), and JoinDependency#initialize reads it synchronously via AliasTracker.create (join_dependency.ts _baseTableAliasLength -> connection.tableAliasLength()) inside the sync toSql/_applyEagerJoinDependency builders that CLAUDE.md § 'Relation is evaluated by an async query' ratifies as sync; Calculations#column_alias_for's truncate (relation/calculations.ts:52) is a second sync reader. An async max_identifier_length therefore needs an async table_alias_length, which the ratified sync JoinDependency build cannot await."
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: PostgreSQL max_identifier_length cannot run its query at call time. It is table_alias_length, read inside the synchronous eager builders behind Relation#to_sql. trails warms it with an async step and peeks (CLAUDE.md § "Adapter facts are prewarmed and peeked").'
 ---
 
 # PG max_identifier_length is split across a sync reader and an async warmer

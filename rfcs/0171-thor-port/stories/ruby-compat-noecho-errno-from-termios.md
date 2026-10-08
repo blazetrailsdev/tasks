@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: noecho raises the real Errno from a failed termios call"
-status: blocked
-updated: 2026-10-05
+status: closed
+updated: 2026-10-08
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-10-05T16:39:40Z"
 assignee: "lazy-attribute-hash-ivar-types-admit-a-marshal-loaded-hash"
-blocked-by: "Needs a decision on a native termios binding (a third-party runtime dep), which the story forbids without one. No dependency-free route gives the exact errno: Node exposes termios only as setRawMode (clears ICANON/ISIG/ICRNL, not echo alone) and has no node:ffi on Node 24; stty(1) never reports the errno number, only strerror text that varies by libc (glibc 'Input/output error', musl 'I/O error') and locale, and BSD/macOS stty discards it on a failed tcgetattr (errx 'stdin isn't a terminal'). A strerror-text table would be an approximation with a bare SystemCallError fallback, not the real errno."
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: Node exposes termios only as setRawMode and stty never reports the errno number, so ruby-compat raises a bare SystemCallError where Ruby raises the specific Errno class. A native termios binding is not taken on (trails CLAUDE.md § "Runtime facts Node does not expose").'
 ---
 
 ## Context

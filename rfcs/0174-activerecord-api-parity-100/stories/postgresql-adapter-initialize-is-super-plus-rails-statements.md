@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PostgreSQLAdapter#initialize is super plus Rails' statements; drop the connection-string arm and the invented deprecation warning"
-status: draft
+status: ready
 updated: 2026-10-08
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

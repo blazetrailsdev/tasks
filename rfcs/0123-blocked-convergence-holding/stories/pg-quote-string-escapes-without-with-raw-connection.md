@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL quote_string escapes without taking with_raw_connection's lease"
-status: blocked
-updated: 2026-09-29
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-09-15T12:36:32Z"
 assignee: "relation-exec-main-query-with-connection"
-blocked-by: "quote_string is reached synchronously from Quoting#quote (abstract/quoting.ts:75,80,214), Sanitization %s (sanitization.ts:44) and the Arel visitor's sync compile (to_sql); taking with_raw_connection (async) requires making that whole quote/visitor chain awaitable, an RFC-sized change far over one PR's LOC ceiling — needs its own async-quote story first"
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: PostgreSQL quote_string cannot take with_raw_connection. It is reached synchronously from Quoting#quote, Sanitization and the Arel visitor behind Relation#to_sql, so it escapes in process (trails CLAUDE.md § "Adapter facts are prewarmed and peeked").'
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: reflection-slot.ts converges onto the ActiveRecord Autoload namespace"
-status: draft
+status: ready
 updated: 2026-10-08
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

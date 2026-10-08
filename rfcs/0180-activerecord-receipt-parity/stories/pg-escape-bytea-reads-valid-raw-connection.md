@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PostgreSQL escape_bytea escapes without reading valid_raw_connection"
-status: draft
+status: blocked
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "The story's own fallback criterion. escape_bytea (postgresql/quoting.rb:70-72) is reached from the synchronous quoted_binary under quote, and validRawConnection() answers a promise on an unverified connection, so the port cannot await it. Its sibling pg-quote-string-escapes-without-with-raw-connection was closed PERMANENT under CLAUDE.md section 'Adapter facts are prewarmed and peeked' (trails#8685), but that section names lookup_cast_type, max_identifier_length and quote_string only, not escape_bytea. Unblocks when the owner extends the section to escape_bytea or decides another shape. Body drift: on origin/main escapeBytea (postgresql/quoting.ts:50) is still the inline hex escaper; the Connection.escapeBytea form the body quotes is from the unmerged trails#8687."
 closed-reason: null
 ---
 

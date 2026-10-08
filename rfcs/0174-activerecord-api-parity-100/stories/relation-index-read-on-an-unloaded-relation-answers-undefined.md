@@ -1,6 +1,6 @@
 ---
 title: "activerecord: an index read on an unloaded relation goes through records, not a silent undefined"
-status: draft
+status: ready
 updated: 2026-10-08
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

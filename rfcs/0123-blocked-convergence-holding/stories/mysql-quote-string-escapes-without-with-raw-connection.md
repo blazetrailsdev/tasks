@@ -1,7 +1,7 @@
 ---
 title: "MySQL quote_string escapes without with_raw_connection's driver escape"
-status: blocked
-updated: 2026-09-23
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Same live blocker as pg-quote-string-escapes-without-with-raw-connection (RFC 0123, blocked): quoteString is reached synchronously from Quoting#quote, Sanitization and the Arel visitor's sync to_sql (abstract-mysql-adapter.ts:908 receipt still present on origin/main); taking async withRawConnection needs that whole chain awaitable — an RFC-sized async-quote change first."
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: MySQL quote_string cannot take with_raw_connection. It is reached synchronously from Quoting#quote, Sanitization and the Arel visitor behind Relation#to_sql, so it escapes in process against the warmed NO_BACKSLASH_ESCAPES state (trails CLAUDE.md § "Adapter facts are prewarmed and peeked").'
 ---
 
 ## Context

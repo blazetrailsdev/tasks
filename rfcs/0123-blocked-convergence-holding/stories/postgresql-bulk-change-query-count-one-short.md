@@ -1,7 +1,7 @@
 ---
 title: "postgresql-bulk-change-query-count-one-short"
 status: blocked
-updated: 2026-09-25
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-09-25T02:04:15Z"
 assignee: "port-ruby-method-arity-for-globalid-locator"
-blocked-by: 'The missing PG query in both tests is Rails'' PostgreSQL#lookup_cast_type regtype round-trip: visit_ChangeColumnDefinition (postgresql/schema_creation.rb:98-104) calls quote_default_expression(default, ColumnDefinition); a ColumnDefinition does not respond_to?(:array?) so it takes super (abstract/quoting.rb:157-163), whose lookup_cast_type(column.sql_type) runs query_value("SELECT ...::regtype::oid", "SCHEMA") (postgresql/quoting.rb:194-197) — the ''one for columns'' query. trails'' lookupCastType resolves from the warmed _regtypeOids map with no query. That is exactly pg-lookup-cast-type-resolves-only-warmed-type-names (blocked: sync quoteDefaultExpression cannot await a regtype query). Unblocks when that story does.'
+blocked-by: 'Re-triaged 2026-10-08. The missing query is PostgreSQL lookup_cast_type regtype round-trip, now ratified as permanent (CLAUDE.md § "Adapter facts are prewarmed and peeked"; pg-lookup-cast-type-resolves-only-warmed-type-names closed). So the PG query count will stay one short. Remaining work: the two tests at migration.test.ts:2393,2425 are skipped whole; run them with the PostgreSQL expected count receipted against that section, or show that only the PG arm differs. Not blocked on other work; needs that port.'
 closed-reason: null
 ---
 

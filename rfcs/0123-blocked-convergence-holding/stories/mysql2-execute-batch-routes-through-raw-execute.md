@@ -1,7 +1,7 @@
 ---
 title: "mysql2 executeBatch calls rawExecute per combined block, not execute"
-status: blocked
-updated: 2026-08-27
+status: ready
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: trails#6913
-claim: "2026-08-23T13:12:30Z"
-assignee: "converge-enable-query-cache-onto-the-block-value-return"
-blocked-by: "Body converged in PR #6913; the install is blocked on node-mysql2, which ships no command class for COM_SET_OPTION (lib/constants/commands.js:31 defines SET_OPTION: 0x1b, lib/commands/ has no set_option.js), so Rails' per-batch set_server_option (mysql2/database_statements.rb:41-45) is unsendable and a combined 'a;\\nb' fails ER_PARSE_ERROR on mariadb:11. See the story body for the repro and remaining criteria."
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

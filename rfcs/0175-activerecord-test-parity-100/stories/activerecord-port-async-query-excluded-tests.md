@@ -1,7 +1,7 @@
 ---
 title: "activerecord: enroll load_async_test.rb and asynchronous_queries_test.rb (source now ported)"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-08
 rfc: "0175-activerecord-test-parity-100"
 cluster: unported-tests
 packages: ["activerecord"]
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 550
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-08T18:46:01Z"
+assignee: "activerecord-port-async-query-excluded-tests"
 blocked-by: null
 closed-reason: null
 ---

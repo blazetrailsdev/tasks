@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Base.allocate is Class#allocate from ruby-compat, not a constructor run under suppress flags"
-status: blocked
-updated: 2026-10-07
+status: closed
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord", "ruby-compat"]
@@ -12,8 +12,8 @@ priority: null
 pr: trails#8661
 claim: "2026-10-07T21:04:17Z"
 assignee: "adapter-discard-bang-abandons-the-socket-through-the-driver-port"
-blocked-by: "Owner decision needed: an Object.create (rbObjAlloc) record runs no class-field initializer, so a model field like history = [] is unset on records loaded by find. Tried in trails#8661; TransactionCallbacksTest red on all three lanes. Decide whether loaded records may skip field initializers before converging."
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: a loaded record is built with JS new, not Object.create, so class-field initializers run (owner ruling 2026-10-08; trails CLAUDE.md § "A record is built with new Klass only"). Object.create was tried in trails#8661 and reddened TransactionCallbacksTest on all three adapters.'
 ---
 
 ## Context

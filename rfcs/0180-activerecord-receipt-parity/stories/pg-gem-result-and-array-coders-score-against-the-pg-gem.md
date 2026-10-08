@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PG::Result and the PG array coders score against the pg gem"
-status: claimed
+status: in-progress
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#8690
 claim: "2026-10-08T17:35:15Z"
 assignee: "pg-gem-result-and-array-coders-score-against-the-pg-gem"
 blocked-by: null

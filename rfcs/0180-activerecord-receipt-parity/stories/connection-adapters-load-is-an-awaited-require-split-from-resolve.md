@@ -1,7 +1,7 @@
 ---
 title: "activerecord: ConnectionAdapters.load is an awaited require split out of resolve"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
 packages: []

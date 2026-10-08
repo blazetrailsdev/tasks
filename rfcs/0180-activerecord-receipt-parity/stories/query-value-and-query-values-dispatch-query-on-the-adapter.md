@@ -1,7 +1,7 @@
 ---
 title: "activerecord: query_value and query_values dispatch query on the adapter"
-status: draft
-updated: 2026-10-07
+status: closed
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8686 (5293cd66aa): on origin/main queryValue and queryValues in connection-adapters/abstract/database-statements.ts:292,302 call this.query(...), so PostgreSQL's query override (postgresql/database-statements.ts:84) is what they dispatch to. git grep 'query.call(this' over that file returns nothing. The story's second criterion (a live-PG bytea read through queryValue) was not added by #8686; no defect remains for it to pin."
 ---
 
 ## Context

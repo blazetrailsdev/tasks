@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the PG text decoders and TypeMapByOid score against the pg gem"
-status: draft
+status: ready
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PG::Result is not an Array; execute returns the driver's raw result"
-status: draft
+status: ready
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

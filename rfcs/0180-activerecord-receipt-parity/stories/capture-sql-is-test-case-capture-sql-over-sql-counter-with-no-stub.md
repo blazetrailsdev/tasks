@@ -1,7 +1,7 @@
 ---
 title: "activerecord: captureSql is TestCase#capture_sql over SQLCounter, with execute stubbed in test setup"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable
 packages: ["activerecord"]

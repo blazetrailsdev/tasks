@@ -1,7 +1,7 @@
 ---
 title: "activerecord: test-adapter.ts's three pool-configuration helpers fold into the inline pool setup Rails writes"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable
 packages: ["activerecord"]

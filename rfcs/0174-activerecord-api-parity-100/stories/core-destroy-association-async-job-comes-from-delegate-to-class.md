@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Core's destroy_association_async_job instance reader comes from delegate ..., to: :class"
-status: draft
+status: ready
 updated: 2026-10-08
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

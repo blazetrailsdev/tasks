@@ -1,7 +1,7 @@
 ---
 title: "activemodel: human_attribute_name and its i18n keys for a camelCase attribute name"
-status: draft
-updated: 2026-10-07
+status: blocked
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Needs an owner decision the body itself lists as undecided: whether an i18n lookup key for a camelCase attribute keeps the member's spelling or takes Rails' snake_case one, and where the underscore then lives (an underscore in Error.fullMessage was tried on trails#8663 and removed in review). Still live on origin/main: autosave-association.test.ts:2766 expects 'Validation failed: Publishedbooks is invalid' where Rails expects 'Published books'."
 closed-reason: null
 ---
 

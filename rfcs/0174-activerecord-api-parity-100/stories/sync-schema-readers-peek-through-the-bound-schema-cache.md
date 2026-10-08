@@ -1,6 +1,6 @@
 ---
 title: "activerecord: sync schema readers peek through schema_cache (BoundSchemaReflection), not schemaReflection.loadedCache"
-status: draft
+status: ready
 updated: 2026-10-08
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

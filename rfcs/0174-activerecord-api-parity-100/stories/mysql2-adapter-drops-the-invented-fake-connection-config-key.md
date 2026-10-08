@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2Adapter drops the invented _fakeConnection config key"
-status: draft
+status: ready
 updated: 2026-10-08
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

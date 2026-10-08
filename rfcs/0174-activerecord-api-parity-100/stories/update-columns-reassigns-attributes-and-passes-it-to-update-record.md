@@ -1,7 +1,7 @@
 ---
 title: "activerecord: update_columns reassigns attributes and passes it to _update_record"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-08
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

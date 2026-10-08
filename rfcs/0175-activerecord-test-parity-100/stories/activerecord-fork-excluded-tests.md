@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the 15 fork()-based tests (blocked: Node has no process fork)"
-status: blocked
-updated: 2026-09-30
+status: closed
+updated: 2026-10-08
 rfc: "0175-activerecord-test-parity-100"
 cluster: unported-tests
 packages: ["activerecord"]
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Runtime shortcoming, not ratified in CLAUDE.md: Node has no fork() that copies the parent heap (child_process.fork starts a fresh process), so per-pid state after a fork cannot be reproduced. Needs a CLAUDE.md ratification decision or a fork-emulation design."
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: Node has no fork() that copies the parent heap; child_process.fork starts a fresh process, so the 15 Rails tests asserting on per-pid state after a fork are unportable (trails CLAUDE.md § "Runtime facts Node does not expose").'
 ---
 
 ## Context

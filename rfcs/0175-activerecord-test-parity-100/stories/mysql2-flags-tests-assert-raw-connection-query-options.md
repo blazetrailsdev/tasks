@@ -1,6 +1,6 @@
 ---
 title: "activerecord: mysql flags connection tests assert raw_connection.query_options[:flags] as Rails does"
-status: draft
+status: ready
 updated: 2026-10-08
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

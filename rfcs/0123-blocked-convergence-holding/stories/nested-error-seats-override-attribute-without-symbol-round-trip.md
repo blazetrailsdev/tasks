@@ -1,7 +1,7 @@
 ---
 title: "activemodel: NestedError seats override_options.fetch(:attribute) with no symbolToS(toSym(...)) round trip"
-status: blocked
-updated: 2026-10-03
+status: ready
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activemodel"]
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-10-03T12:55:20Z"
-assignee: "apply-seconds-precision-raises-range-error-for-a-non-integer-precision"
-blocked-by: "AC unreachable as written: import's single to_sym (errors.rb:157) answers ':title' for an attribute and NestedError's plain fetch seats it, so added('title') can only match if Error#attribute is colon-spelled repo-wide (port errors.rb:204,496). That reaches ~700 errors.* call sites plus messages/details/to_hash keys, which RFC 0149 keeps bare, so the symbolToS only moves to group_by_attribute. The other side needs a per-key arm in import, which #8422 removed. Needs a decision on Error#attribute's spelling before it can converge."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

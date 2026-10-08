@@ -1,7 +1,7 @@
 ---
 title: "sql_for_insert is async in trails because supports_insert_returning? and primary_key are; Rails' is sync"
-status: blocked
-updated: 2026-09-11
+status: ready
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: "2026-08-30T15:05:49Z"
-assignee: "biginteger-castvalue-declares-number-but-returns-bigint"
-blocked-by: "RFC 0146 Design §2: configureConnection must be awaited on the connect path (a Non-goal of RFC 0147)"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "better-sqlite3 driver ignores strict: false (built SQLITE_DQS=0), so every connection is strict"
-status: blocked
-updated: 2026-09-25
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-09-25T18:51:40Z"
 assignee: "initialize-cache-skips-lookup-store-so-generated-cache-store-is-omitted"
-blocked-by: "upstream: better-sqlite3 12.6.2 builds with SQLITE_DQS=0 (deps/defines.gypi:17) and its src/objects/database.cpp calls sqlite3_db_config only for ENABLE_LOAD_EXTENSION (:175) and DEFENSIVE (:177,:407) - no JS option reaches SQLITE_DBCONFIG_DQS_DDL/DML. Converging needs either an upstream better-sqlite3 option calling sqlite3_db_config(DQS_*) or a SQLITE_DQS=3 build shipped via nativeBinding, i.e. a prebuilt native addon this repo cannot vendor (no new third-party runtime deps)."
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: better-sqlite3 compiles with SQLITE_DQS=0 and no option reaches SQLITE_DBCONFIG_DQS_DDL / _DML, so strict: false cannot re-enable double-quoted string literals on that driver (trails CLAUDE.md § "Runtime facts Node does not expose").'
 ---
 
 ## Context

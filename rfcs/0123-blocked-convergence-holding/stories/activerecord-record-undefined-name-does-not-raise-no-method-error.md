@@ -1,7 +1,7 @@
 ---
 title: "activerecord-record-undefined-name-does-not-raise-no-method-error"
-status: blocked
-updated: 2026-09-23
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-09-23T14:33:22Z"
 assignee: "activemodel-respond-to-cannot-hide-private-methods"
-blocked-by: "blocked on activerecord-record-method-missing-carrier (Proxy cost, CLAUDE.md Records are not Proxies)"
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: an undefined name on a record is a compile-time type error, not a run-time NoMethodError, because records are not Proxies (trails CLAUDE.md § "Records are not Proxies"). The three Rails tests run their other assertions; the four assert_raise(NoMethodError) arms are receipted.'
 ---
 
 ## Context

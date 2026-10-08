@@ -1,7 +1,7 @@
 ---
 title: "Tse#call ports ERB's ENCODING_TAG strip and valid_encoding (WrongEncodingError for invalid bytes)"
-status: blocked
-updated: 2026-09-30
+status: closed
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: 9
 pr: null
 claim: "2026-09-30T09:49:52Z"
 assignee: "actionview-rendering-methods-have-no-super-chain"
-blocked-by: "JS strings carry no encoding tag. erb.rb:63-75 does source.b and valid_encoding reads string.encoding; Tse#call receives either a Unicode String (non-File source: Ruby UTF-8, .b = its UTF-8 bytes, default encoding UTF-8) or, to keep invalid bytes for WrongEncodingError, the undecoded byte-form Template#encodeBang would have to hand over in its handles_encoding? arm (File source: Ruby BINARY tagged default_external, .b = identity). The two are indistinguishable JS strings (U+00FC is 'ü' in one, byte 0xFC in the other), so .b and the default encoding cannot be computed without an encoding-tagged string carrier in ruby-compat or a Template->handler side channel Rails does not have. Needs that ruby-compat design decision first."
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: a JS string has no encoding tag, so the handler cannot compute source.b or the default encoding from a string that may be Unicode or byte-form (trails CLAUDE.md § "Ruby Strings are JS string primitives", "A String has no encoding tag either").'
 ---
 
 ## Context

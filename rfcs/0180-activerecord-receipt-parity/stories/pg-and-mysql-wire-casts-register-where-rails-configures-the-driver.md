@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PostgreSQL and MySQL wire casts register where Rails configures the driver"
-status: in-progress
+status: done
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings

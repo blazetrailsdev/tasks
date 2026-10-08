@@ -1,7 +1,7 @@
 ---
 title: "libsql-remote adapter passes a :memory: placeholder and overrides supportsConcurrentConnections"
-status: blocked
-updated: 2026-09-23
+status: ready
+updated: 2026-10-08
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: "2026-09-23T14:36:10Z"
-assignee: "libsql-remote-adapter-memory-placeholder-and-concurrency-override"
-blocked-by: "Neither converged shape exists. (1) A pure libsql remote connection has no local database, so there is no real file: URI or :memory: the connection uses (the local-file shape is LibSQLReplicaAdapter). (2) The driver seam is downstream of initialize: LibSQLRemoteAdapter extends SQLite3Adapter, so super() always runs sqlite3_adapter.rb:102-121's case, whose only non-path arms are '' (raises), ':memory:' (sets @memory_database) and /\\Afile:/ (local URI). Passing the URL itself hits the else arm and mkdirs 'libsql:'. Converging needs a decision: either LibSQLRemoteAdapter stops being a SQLite3Adapter subclass, or remote transport is dropped/moved to a replica-only config. Needs owner call."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
