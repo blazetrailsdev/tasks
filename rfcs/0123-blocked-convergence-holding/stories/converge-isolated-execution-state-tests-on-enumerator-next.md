@@ -5,7 +5,8 @@ updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-a-minimal-enumerator-for-to-enum-arms
 deps-rfc: []
 est-loc: 40
 priority: null
