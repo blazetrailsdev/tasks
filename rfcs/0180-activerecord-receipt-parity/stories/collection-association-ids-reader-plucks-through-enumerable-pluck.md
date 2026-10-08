@@ -1,7 +1,7 @@
 ---
 title: "activerecord: ids_reader is three Enumerable#pluck arms, and pluck sends [] to a record"
-status: in-progress
-updated: 2026-10-07
+status: done
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord", "activesupport"]

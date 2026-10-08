@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Encryption install_support takes no targets, keeps no installed flag, and prepends the modules themselves"
-status: in-progress
-updated: 2026-10-07
+status: done
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord", "ruby-compat", "trailties"]

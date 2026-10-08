@@ -1,7 +1,7 @@
 ---
 title: "activerecord: _create_record passes returning_columns unconditionally"
-status: ready
-updated: 2026-10-07
+status: done
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["mysql-returning-column-values-ports-the-super-arm"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8418
+claim: "2026-10-08T00:34:15Z"
+assignee: "create-record-passes-returning-columns-unconditionally"
 blocked-by: null
 closed-reason: null
 ---

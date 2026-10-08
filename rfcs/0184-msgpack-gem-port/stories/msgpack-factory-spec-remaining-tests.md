@@ -1,7 +1,7 @@
 ---
 title: "msgpack: port the rest of factory_spec.rb"
-status: in-progress
-updated: 2026-10-07
+status: done
+updated: 2026-10-08
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []

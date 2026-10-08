@@ -1,7 +1,7 @@
 ---
 title: "activerecord: PostgreSQL::SchemaDumper reads @connection without an any-typed accessor and existence guards"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8668
+claim: "2026-10-08T00:04:18Z"
+assignee: "connection-url-resolver-query-hash-camelizes-every-key"
 blocked-by: null
 closed-reason: null
 ---
