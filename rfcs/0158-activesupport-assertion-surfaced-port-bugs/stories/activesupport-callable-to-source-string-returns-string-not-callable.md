@@ -5,7 +5,8 @@ updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport"]
-deps: []
+deps:
+  - rb-obj-as-string-has-no-proc-arm
 deps-rfc: []
 est-loc: 40
 priority: null
