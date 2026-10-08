@@ -4,7 +4,8 @@ status: blocked
 updated: 2026-08-22
 rfc: "0123-blocked-convergence-holding"
 cluster: null
-deps: []
+deps:
+  - inline-has-many-module-private-find-target-loader
 deps-rfc: []
 est-loc: 120
 pr: null
