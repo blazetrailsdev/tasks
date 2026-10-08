@@ -5,7 +5,9 @@ updated: 2026-10-08
 rfc: "0187-sqlite3-gem-port"
 cluster: package
 packages: ["sqlite3", "scripts"]
-deps: ["sqlite3-lift-the-nested-port-into-a-package"]
+deps:
+  - sqlite3-lift-the-nested-port-into-a-package
+  - c-ext-method-table-extractor-arm
 deps-rfc: []
 est-loc: 250
 priority: null
