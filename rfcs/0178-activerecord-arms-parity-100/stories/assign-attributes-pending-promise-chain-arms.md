@@ -5,7 +5,8 @@ updated: 2026-10-08
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - reopen-rfc-0087-constructor-arm-for-association-io-at-assignment
 deps-rfc: []
 est-loc: 150
 priority: null
