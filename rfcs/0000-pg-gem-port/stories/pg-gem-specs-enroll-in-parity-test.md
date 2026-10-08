@@ -7,7 +7,7 @@ cluster: package
 packages: ["pg", "scripts"]
 deps: ["pg-connection-session-setters-move-to-the-package", "pg-text-decoders-move-to-the-package"]
 deps-rfc: []
-est-loc: 600
+est-loc: 500
 priority: null
 pr: null
 claim: null
@@ -30,8 +30,8 @@ story with that reason.
 
 - [ ] `scripts/test-compare/` enrolls `pg` (the four registrations: `compare.ts`, `extract-ts-tests.ts`, `generate-stubs.ts`, and the mark row by hand); every RSpec matcher the six spec files use is in `assertion-kinds.ts`.
 - [ ] The 13 spec files for unported surface are `unported-files` rows with the rule-1 reason; within the six ported files, an example for an unported method is a skip with the same reason, not a stub.
-- [ ] Examples for the 44 methods are ported under their RSpec names into `packages/pg/src/*.test.ts`; TS-only extras live in `*.trails.test.ts`.
-- [ ] The specs run on the PG CI lane; `scripts/ci-suite-coverage.test.ts` is green.
+- [ ] Examples for the wrapped methods (the surface table in `packages/pg/README.md`) are ported under their RSpec names into `packages/pg/src/*.test.ts`; TS-only extras live in `*.trails.test.ts`.
+- [ ] No CI lane work: the package has run on the PostgreSQL lane since `pg-package-and-vendor-source`. If the ported examples exceed the PR ceiling, ship `connection_spec.rb` and `result_spec.rb` and file the other four files as one new story with `pnpm tasks new`.
 - [ ] `pnpm parity:test` delta for every other package is zero.
 
 ## Verification

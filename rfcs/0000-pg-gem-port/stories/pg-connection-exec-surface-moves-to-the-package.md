@@ -44,7 +44,7 @@ quirks and stay private to the package.
 - [ ] `packages/pg/src/connection.ts` is `PG.Connection`, holding its node-pg client behind a private engine interface with one implementation (`src/engine/node-pg.ts`). `PG.connect(connParams)` returns `Promise<PG.Connection>` and rejects with `PG::ConnectionBad` on a failed connect.
 - [ ] Methods, each returning what the gem returns: `exec` / `asyncExec` / `query` (one body, the others aliases as in C), `execParams`, `prepare`, `execPrepared`, `getLastResult` (`Promise<PG.Result>`); `finish` / `close` (`Promise<void>`); `isFinished` (sync).
 - [ ] `prepare` sends Parse and returns; `getLastResult` is where the adapter awaits its completion, so `prepare_statement` reads as `vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/postgresql_adapter.rb:923-931` does (`prepare`, then `get_last_result` in the `ensure`-shaped arm).
-- [ ] `PostgreSQLAdapter.newClient` is `PG.connect(connParams)` with Rails' `rescue ::PG::Error` arms in Rails' order; `_rawConnection` is typed `PG.Connection`.
+- [ ] `PostgreSQLAdapter.newClient` is `PG.connect(connParams)` with Rails' `rescue ::PG::Error` arms in Rails' order; the `_rawConnection` field is typed `PG.Connection`. This story owns those two and nothing else of the adapter's node-pg types: the raw-client constructor overload (`postgresql-adapter.ts:541-562`), `_rawConnectionForTest` (`:1871`), `_pgClientOptions` (`:424`) and the `pg.ClientConfig` parameter types are left exactly as they are, with the overload wrapping the client it is handed. `pg-adapter-constructor-takes-a-pg-connection` removes them.
 - [ ] The four `rawConnection.query(...)` sites named above call `PG.Connection#query`, not node-pg's; `active?` reads `isFinished()` as `:344` does.
 - [ ] `pgConnection()`'s `prepare` / `execPrepared` / `asyncExec` / `execParams` entries and their bodies are deleted from `pg-connection.ts`. (`unescapeBytea` and `socketIo` leave in later stories; the file and its receipts go with the last of them.)
 - [ ] With the `pg` npm package unresolvable, `PG.connect` raises `LoadError`; a `*.trails.test.ts` pins it.
@@ -63,4 +63,4 @@ The adapter constructor still accepts a raw `pg.Client` after this story
 (`postgresql-adapter.ts:541-562`); it wraps one with the package's engine. Retiring that overload
 is `pg-adapter-constructor-takes-a-pg-connection`.
 Run the `prepared-statements` lane locally: a red there alone means a bind-path divergence
-(memory: `project_mysql2_driver_binds_were_a_second_invented_list`).
+(on MySQL the same symptom was the driver path building its own bind list instead of using `type_casted_binds`).

@@ -35,7 +35,7 @@ resolved to 1.5.9 (`vendor/rails/v8.0.2/Gemfile.lock:412`). trails carries the g
 calls in four places inside activerecord, with nothing to score it against. This RFC moves that
 surface into its own package, `@blazetrails/pg`, wrapping the `pg` npm client as `packages/bcrypt`
 wraps `bcryptjs` and `packages/msgpack` wraps `@msgpack/msgpack`, vendors the gem, and builds the one
-missing piece of tooling: an extractor arm that reads a gem's C method table, because 37 of the 44
+missing piece of tooling: an extractor arm that reads a gem's C method table, because 39 of the 48
 gem methods the adapter calls are defined in C.
 
 ## Motivation
@@ -102,14 +102,14 @@ Measured on `origin/main` at `e8f1bb88fa`, after `pnpm build`:
 **So no existing mechanism scores a TypeScript wrapper against a C-defined gem surface.** Two can be
 built:
 
-|                      | C-extension arm in the extractor                                     | ruby-compat citation model                                 |
-| -------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------- |
-| What it checks       | name, arity, visibility, owner class, aliases, superclass, constants | that a cited line exists                                   |
-| Receipts             | none: a C method is a scored row                                     | one `@noRailsEquivalent PERMANENT` per export, for ever    |
-| A misnamed method    | red (`missing` + `extra`)                                            | green                                                      |
-| What it cannot check | parameter names, call set, arms (there is no Ruby body)              | everything but the citation                                |
-| Cost                 | one `scripts/` story, est. 600 LOC, plus a per-gem macro table       | widen one lint rule's `files` and source root, est. 80 LOC |
-| Also fixes           | msgpack's 73 uncredited names, sqlite3's C surface                   | nothing else                                               |
+|                                        | C-extension arm in the extractor                                     | ruby-compat citation model                                 |
+| -------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------- |
+| What it checks                         | name, arity, visibility, owner class, aliases, superclass, constants | that a cited line exists                                   |
+| Receipts                               | none: a C method is a scored row                                     | one `@noRailsEquivalent PERMANENT` per export, for ever    |
+| A misnamed method                      | red (`missing` + `extra`)                                            | green                                                      |
+| What it cannot check                   | parameter names, call set, arms (there is no Ruby body)              | everything but the citation                                |
+| Cost                                   | one `scripts/` story, est. 600 LOC, plus a per-gem macro table       | widen one lint rule's `files` and source root, est. 80 LOC |
+| Also makes possible (not planned here) | msgpack's 73 uncredited names, sqlite3's C surface                   | nothing else                                               |
 
 **This RFC takes the extractor arm.** The citation model costs a seventh as much and delivers none
 of reason 2: the receipts stay, relabelled `PERMANENT`, on surface that is not permanent in the
@@ -136,14 +136,33 @@ The pg gem needs two gem-specific macros in the table, both one-line patterns:
 Gem source: `ged/ruby-pg` at tag `v1.5.9` (`afe2f208f7d5`), the version
 `vendor/rails/v8.0.2/Gemfile.lock:412` resolves. Of the gem methods the adapter calls:
 
-| class                   | defined in C | defined in Ruby                                          |
-| ----------------------- | ------------ | -------------------------------------------------------- |
-| `PG` / `PG::Connection` | 21           | 4 (`PG.connect`, `cancel`, `reset`, `conndefaults_hash`) |
-| `PG::Result`            | 10           | 1 (`map_types!`)                                         |
-| coders and type maps    | 6            | 2 (`Coder#initialize`, `TimestampUtc#initialize`)        |
-| **total**               | **37**       | **7**                                                    |
+| class                   | defined in C                                                                                   | defined in Ruby                                                                               |
+| ----------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `PG` / `PG::Connection` | 23                                                                                             | 4 (`PG.connect`, `cancel`, `reset`, `conndefaults_hash`)                                      |
+| `PG::Result`            | 10                                                                                             | 1 (`map_types!`)                                                                              |
+| coders and type maps    | 6 (`Coder#name`, `#oid`, `#encode`, `#decode`, `TypeMapByClass#[]=`, `TypeMapByOid#add_coder`) | 4 (`Coder#initialize`, `TimestampUtc#initialize`, `TimestampLocal#initialize`, `Date#decode`) |
+| **total**               | **39**                                                                                         | **9**                                                                                         |
 
-Every constant the adapter names (9) is C (`ext/pg.c`). Of the error classes, `PG::Error` is
+**What the 48 counts.** Methods only, one per row-member of the three surface tables below: 27 on
+`PG` / `PG::Connection` (a singleton and an instance method of the same name are two), 11 on
+`PG::Result`, 10 on the coders and type maps. It does not count classes, constants or error
+classes, which `parity:api` scores on other axes (files, inheritance, constants):
+
+- 21 classes and modules: `PG`, `PG::Constants`, `Connection`, `Result`, `Coder`, `SimpleDecoder`,
+  `TypeMapByClass`, `TypeMapByOid` (8), 3 text encoders, 7 C-defined text decoders, and 3
+  Ruby-defined decoder classes (`TimestampUtc`, `TimestampLocal`, `Date`).
+  `TimestampWithoutTimeZone` and `TimestampWithTimeZone` are constant aliases
+  (`lib/pg/text_decoder/timestamp.rb:27-28`), not classes.
+- 8 constants Rails names, all C (`ext/pg.c`), plus 2 that Rails does not name but the wrapped
+  methods return: `PQTRANS_ACTIVE` from `transaction_status` and `CONNECTION_BAD` from `status`
+  (`postgresql-adapter.ts:145,150` today). Ten in the package.
+- 5 error classes: the 3 Rails names (`PG::Error`, `ConnectionBad`, `FeatureNotSupported`) and
+  `ServerError` and `UnableToSend`, which the wrapper raises and the first of which is
+  `FeatureNotSupported`'s superclass.
+
+The 48 is a hand count from reading the gem, kept here to justify building the C arm. It is not
+the acceptance number: the mark `pg-enroll-the-c-extension-surface` commits from the extractor's
+own output is. Of the error classes, `PG::Error` is
 defined in both (`ext/pg_errors.c:78`, `lib/pg/exceptions.rb:9`); `PG::ConnectionBad`
 (`pg_errors.c:89`) and `PG::FeatureNotSupported` (`errorcodes.def:49`) are C.
 
@@ -172,7 +191,7 @@ gem paths are under `vendor/pg/v1.5.9/` once vendored; trails paths are under
 | `#exec_prepared`                                  | `postgresql/database_statements.rb:141`                                  | C `pg_connection.c:4543`        | `pg-connection.ts:54-69`                                                                                                   | `query({name, text, values})`                                                            |
 | `#get_last_result`                                | `postgresql_adapter.rb:930`                                              | C `pg_connection.c:4616`        | absent; `prepare` resolves on ReadyForQuery                                                                                | none                                                                                     |
 | `#transaction_status`                             | `postgresql/database_statements.rb:128`, `postgresql_adapter.rb:375,850` | C `pg_connection.c:4519`        | assigned `postgresql-adapter.ts:1647-1658` from `_activeQuery` and ReadyForQuery                                           | none; private `_activeQuery`, `readyForQuery` event                                      |
-| `#status`                                         | `postgresql_adapter.rb:313`                                              | C `pg_connection.c:4518`        | assigned `postgresql-adapter.ts:1659-1662` from `_ending` / `_ended`                                                       | none. **Blocked: `pg-translate-no-connection-raises-not-established`**                   |
+| `#status`                                         | `postgresql_adapter.rb:313`                                              | C `pg_connection.c:4518`        | assigned `postgresql-adapter.ts:1659-1662` from `_ending` / `_ended`                                                       | none                                                                                     |
 | `#cancel`                                         | `postgresql/database_statements.rb:130`                                  | Ruby `lib/pg/connection.rb:597` | assigned `:1663`, body `_cancel` `:1675-1701`                                                                              | none on `Client`; `new pg.Connection().cancel(pid, key)`                                 |
 | `#block`                                          | `postgresql/database_statements.rb:131`                                  | C `pg_connection.c:4610`        | assigned `:1664`, body `_blockUntilCommandSettles` `:1703`                                                                 | none                                                                                     |
 | `#finished?`                                      | `postgresql_adapter.rb:344`                                              | C `pg_connection.c:4499`        | absent; `active?` reads other state                                                                                        | private `_ended`                                                                         |
@@ -230,12 +249,12 @@ depends on it and takes whatever it leaves.
 
 #### Blocked stories this surface concerns
 
-| blocked story                                                                     | method                                                        | what the wrapper changes                                                                                                                                                                                    |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `pg-translate-exception-respond-to-result` (0178)                                 | `PG::Error#result`, `Result#error_field`, `PG::ConnectionBad` | the wrapper raises the gem's classes carrying a `PG::Result`; unblocks                                                                                                                                      |
-| `pg-translate-no-connection-raises-not-established` (0123)                        | `Connection#status` (`CONNECTION_BAD`)                        | the wrapper owns the socket events and can hold libpq's state; whether node-pg lets the first post-termination query surface distinctly is that story's upstream finding and is retested, not assumed fixed |
-| `pg-quote-string-escapes-without-with-raw-connection` (0123)                      | `Connection#escape`                                           | not unblocked: the blocker is the adapter's async `with_raw_connection` under a sync `quote`, not the gem method. See open question 2                                                                       |
-| `pg-max-identifier-length-sync-async-split`, `pg-lookup-cast-type-*` (0180, 0123) | none                                                          | not gem surface (`query_value` under a sync caller); untouched                                                                                                                                              |
+| blocked story                                                                     | method                                                        | what the wrapper changes                                                                                                                                                                                                                                                                                                                           |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pg-translate-exception-respond-to-result` (0178)                                 | `PG::Error#result`, `Result#error_field`, `PG::ConnectionBad` | the wrapper raises the gem's classes carrying a `PG::Result`; unblocks                                                                                                                                                                                                                                                                             |
+| `pg-translate-no-connection-raises-not-established` (0123)                        | the `PG::ConnectionBad` a query raises, and its message       | Rails tells a libpq failure from a pg-internal one by whether the message ends in a newline (`postgresql_adapter.rb:808-818`); node-pg gives one message for both. The wrapper owns the socket events, so it can raise the two messages libpq does. Retested by `pg-connection-status-reports-connection-bad-after-termination`, not assumed fixed |
+| `pg-quote-string-escapes-without-with-raw-connection` (0123)                      | `Connection#escape`                                           | not unblocked: the blocker is the adapter's async `with_raw_connection` under a sync `quote`, not the gem method. See open question 2                                                                                                                                                                                                              |
+| `pg-max-identifier-length-sync-async-split`, `pg-lookup-cast-type-*` (0180, 0123) | none                                                          | not gem surface (`query_value` under a sync caller); untouched                                                                                                                                                                                                                                                                                     |
 
 ### Package shape
 
@@ -283,7 +302,7 @@ depends on it and takes whatever it leaves.
 
 ### Registration cost
 
-From what trails#8591 (`packages/msgpack`) touched, plus the three memories written after it:
+From what trails#8591 (`packages/msgpack`) touched, plus the registrations that PR missed and its follow-ups added:
 
 1. `pnpm-workspace.yaml` (if not globbed), root `tsconfig.json` references, `packages/pg/package.json`,
    `packages/pg/tsconfig.json`, `packages/pg/README.md`, `pnpm-lock.yaml`.
@@ -309,38 +328,51 @@ From what trails#8591 (`packages/msgpack`) touched, plus the three memories writ
 
 The package's specs need a PostgreSQL server, so its CI lane is the PG lane, not Leaf Tests.
 
-### Migration
+### Migration: which step removes which receipt
 
-Order, with the receipts each step removes. Step numbers are story order, not PR stacking: each
-story branches from `main` after its dependencies merge.
+§ Rollout is the full ordered list of all 18 stories. This section covers only the steps that
+remove a `@noRailsEquivalent` receipt or delete an ad hoc carrier, because that is the migration
+proper. The order between them is the `deps` graph, not this list.
 
-1. `c-ext-method-table-extractor-arm`: no receipts; makes removal possible.
-2. `pg-package-and-vendor-source`: the package, constants and error classes. Removes the two local
-   constant blocks.
-3. `pg-result-moves-to-the-package`: removes the 12 receipts in `pg-result.ts`; deletes the file.
-4. `pg-array-coders-move-to-the-package`: removes the 6 receipts in `oid/array.ts`.
-5. `pg-connection-exec-surface-moves-to-the-package`: `new_client` is `PG.connect`.
-6. `pg-connection-status-cancel-block-move-to-the-package`: deletes
-   `_attachReadyForQueryListener`, `_cancel`, `_blockUntilCommandSettles`.
-7. `pg-connection-escaping-moves-to-the-package`: removes the 2 receipts in `pg-connection.ts`;
-   deletes the file.
-8. `pg-errors-carry-result-and-connection`, `pg-connection-session-setters-move-to-the-package`,
-   `pg-type-maps-and-text-encoders-move-to-the-package`, `pg-text-decoders-move-to-the-package`: no receipts; they converge bodies that are
-   open-coded without one.
-9. `pg-activerecord-loads-the-package-as-an-optional-peer`: activerecord stops importing `pg`.
+| story                                                   | removes                                                                                                                   |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `pg-package-and-vendor-source`                          | the two local constant blocks (`postgresql-adapter.ts:144-150`, `postgresql/database-statements.ts:253-255`); no receipts |
+| `pg-result-moves-to-the-package`                        | 12 receipts; `pg-result.ts`                                                                                               |
+| `pg-array-coders-move-to-the-package`                   | 6 receipts in `oid/array.ts`                                                                                              |
+| `pg-connection-exec-surface-moves-to-the-package`       | four of `pgConnection()`'s six entries; `new pg.Client` in `newClient`                                                    |
+| `pg-connection-status-cancel-block-move-to-the-package` | `_attachReadyForQueryListener`, `_cancel`, `_blockUntilCommandSettles`, `socketIo`                                        |
+| `pg-connection-escaping-moves-to-the-package`           | the last 2 receipts; `pg-connection.ts`                                                                                   |
 
-**The two RFC 0180 stories.** Proposed, not run:
+The other twelve stories remove no receipt. They are scoring (2), convergence of bodies that are
+open-coded without a receipt (5: errors, the termination retest, session setters, type maps,
+decoders), the adapter's remaining node-pg types (2), spec enrollment, the 0180 close-out, and
+PGlite.
 
-- `pg-gem-connection-surface-scores-against-the-pg-gem` is **claimed** as of 2026-10-08T17:05Z by an
-  agent of the same name. Its four acceptance criteria are steps 5 to 7 here. Proposal: release it
-  and `tasks close` it as superseded by this RFC before that agent opens a PR, or, if a PR is
-  already open, land it and re-scope steps 5 to 7 to a move. This needs Dean's call now; see open
-  question 1.
-- `pg-gem-result-and-array-coders-score-against-the-pg-gem` (ready): `tasks close` as superseded
-  when this RFC goes active; its criteria are steps 3 and 4. Closing a story cited in code reds
-  `stale-refs`, so the 18 receipts naming it are retagged onto steps 3 and 4 in the same change.
+**No receipt is retagged.** The 20 receipts keep naming the two RFC 0180 stories until the move
+story that owns each one deletes it. `pg-retire-the-0180-pg-gem-stories` runs after the three
+receipt-removing stories above that touch them and only closes stories nothing cites any more, so
+`stale-refs` never sees a closed id.
+
+**The two RFC 0180 stories**, proposed and not run:
+
+- `pg-gem-result-and-array-coders-score-against-the-pg-gem`: its criteria are the result and
+  array-coder stories here. While those are open it must not be claimed separately. At activation
+  the owner either `tasks block`s it with the reason "superseded by `<n>-pg-gem-port`, closes with
+  `pg-retire-the-0180-pg-gem-stories`", or leaves it and accepts the race.
+- `pg-gem-connection-surface-scores-against-the-pg-gem`: its criteria are the three connection
+  move stories here. If it is unclaimed at activation, same treatment. If work on it has landed or
+  is in review at activation, that work is kept: the three connection stories are re-read against
+  it and reduced to moving what it built into `packages/pg`, by markdown PR, before any is
+  claimed. Its live state is in this RFC's PR description, not here, because it will have changed
+  by merge. See open question 1.
 
 ## Non-goals
+
+- **The sqlite3 gem.** Its wrapper is a separate RFC (`sqlite3-gem-port`, tasks#261). § Scoring
+  measures sqlite3 only as evidence of what the extractor does with C today.
+- **Enrolling msgpack or date through the C arm.** The arm is built so they can set `extPath`;
+  doing it is a story for RFC 0184 (msgpack) and a decision for `date` (`compareApi: false` today),
+  not work planned here. The "also fixes" row in § Scoring's table is a consequence, not scope.
 
 - **The gem.** No `PG::Tuple`, `PG::BasicTypeRegistry`, `BasicTypeMapFor*`, binary coders, COPY,
   large objects, pipeline mode, or any `Connection` method outside the table.
@@ -373,26 +405,37 @@ resolve on the branch, so neither PR can carry it. When both are merged and numb
 `tasks set-deps sqlite3-enroll-the-c-extension-surface --add c-ext-method-table-extractor-arm`
 and add each RFC's number to the other's `related-rfcs`.
 
+This is the authoritative order for all 18 stories. Within a phase, stories with no `deps` edge
+between them can run in parallel; across phases the `deps` graph is what binds, and a phase
+number is not a dependency.
+
 1. Scoring: `c-ext-method-table-extractor-arm`.
-2. Package: `pg-package-and-vendor-source`, `pg-enroll-the-c-extension-surface`.
-3. Result and coders: `pg-result-moves-to-the-package`, `pg-array-coders-move-to-the-package`,
-   `pg-type-maps-and-text-encoders-move-to-the-package`, `pg-text-decoders-move-to-the-package`.
-4. Connection: `pg-connection-exec-surface-moves-to-the-package`,
-   `pg-connection-status-cancel-block-move-to-the-package`,
-   `pg-connection-escaping-moves-to-the-package`,
-   `pg-connection-session-setters-move-to-the-package`,
-   `pg-errors-carry-result-and-connection`,
-   `pg-connection-status-reports-connection-bad-after-termination`.
-5. Migration close-out: `pg-adapter-constructor-takes-a-pg-connection`,
-   `pg-activerecord-loads-the-package-as-an-optional-peer`, `pg-gem-specs-enroll-in-parity-test`,
-   `pg-retire-the-0180-pg-gem-stories`.
+2. Package: `pg-package-and-vendor-source` (includes the PG CI lane), then
+   `pg-enroll-the-c-extension-surface` (needs 1 and the package).
+3. Result and coders, each needing only the package: `pg-result-moves-to-the-package`,
+   `pg-array-coders-move-to-the-package`; then
+   `pg-type-maps-and-text-encoders-move-to-the-package` (needs both, and the claimed RFC 0180
+   wire-casts story), then `pg-text-decoders-move-to-the-package`. This phase does not depend on
+   phase 4 and can run beside it.
+4. Connection: `pg-connection-exec-surface-moves-to-the-package` (needs the result story), then in
+   parallel `pg-connection-status-cancel-block-move-to-the-package`,
+   `pg-connection-escaping-moves-to-the-package` (gated on open question 2),
+   `pg-errors-carry-result-and-connection`; then
+   `pg-connection-session-setters-move-to-the-package` (needs errors) and
+   `pg-connection-status-reports-connection-bad-after-termination` (needs status and errors).
+5. Close-out: `pg-adapter-constructor-takes-a-pg-connection`, then
+   `pg-activerecord-loads-the-package-as-an-optional-peer`;
+   `pg-gem-specs-enroll-in-parity-test` (gated on open question 6);
+   `pg-retire-the-0180-pg-gem-stories` (after the result, array-coder and escaping stories).
 6. Gated on open question 4: `pg-pglite-engine`.
 
 ## Verification
 
 - `grep -rn "noRailsEquivalent" packages/activerecord/src/connection-adapters/postgresql/pg-*.ts packages/activerecord/src/connection-adapters/postgresql/oid/array.ts`
   returns nothing (20 today), and both `pg-*.ts` files are gone.
-- `pnpm parity:api` prints a `pg` row at 44/44 methods with `files` complete, and
+- `pnpm parity:api` prints a `pg` row with every enrolled file matched and no missing method, at the
+  denominator `pg-enroll-the-c-extension-surface` records when it commits the package's mark (this
+  RFC's hand count predicts 48 methods; the extractor's number is the one that counts), and
   `pnpm parity:api:extra --package pg` reports 0 novel.
 - `grep -rn "from \"pg\"" packages/activerecord/src --include=*.ts` returns only test files.
 - `pg-translate-exception-respond-to-result` is unblocked and done.
@@ -401,9 +444,11 @@ and add each RFC's number to the other's `related-rfcs`.
 
 ## Open questions
 
-1. **The claimed 0180 story.** `pg-gem-connection-surface-scores-against-the-pg-gem` was claimed
-   today. Stop that agent and close the story as superseded, or let it land in place and have this
-   RFC move the result? Recommendation: stop it; its criterion 1 is this RFC.
+1. **The RFC 0180 connection story.** `pg-gem-connection-surface-scores-against-the-pg-gem` covers
+   the same ground as three stories here and was being worked when this RFC was drafted (state in
+   the PR description). Let it land in activerecord and have this RFC move the result into the
+   package, or stop it and do the work once, in the package? Whichever is answered, § Migration
+   already says what happens to the three stories.
 2. **`escape_bytea` and `escape` through `valid_raw_connection`.** Rails is
    `valid_raw_connection.escape_bytea(value)` (`quoting.rb:71`) and
    `with_raw_connection { |c| c.escape(s) }` (`quoting.rb:129`). In trails `validRawConnection()` is
@@ -420,12 +465,13 @@ and add each RFC's number to the other's `related-rfcs`.
 5. **`conndefaults_hash`.** libpq answers it from the installed client library. node-pg has no
    equivalent, so the wrapper would hold libpq 17's option list as a literal. Acceptable, or keep
    the adapter's allowlist with a receipt?
-6. **Spec port.** The gem's specs are RSpec against a live server. Port the examples for the 44
-   methods only (recommended, about 500 LOC), or skip `parity:test` for this package as `date`
+6. **Spec port.** The gem's specs are RSpec against a live server. Port the examples for the
+   wrapped methods only (recommended, about 500 LOC), or skip `parity:test` for this package as `date`
    skips `parity:api`?
 
 ## Changelog
 
 - 2026-10-08: initial draft
+- 2026-10-08: review round 1 (tasks#260): method count corrected to 39 C of 48 and defined; constants stated as 8 + 2; § Rollout made the authoritative order and § Migration reduced to receipt removal; receipts are no longer retagged; live status of the 0180 story moved to the PR description; sqlite3, msgpack and date added to Non-goals; the blocked termination story re-attributed from `status` to the raised error after re-reading `postgresql_adapter.rb:804-818`
 - 2026-10-08: § Rollout states the cross-RFC edge to wire at numbering time (from tasks#261's review)
 - 2026-10-08: self-review round 1: located the two unverified call sites; verified `server_version` against node-pg 8.19's source; split the type-map story in two (every story now at or under 600 est-loc); sections regrouped under `## Design` to match the template

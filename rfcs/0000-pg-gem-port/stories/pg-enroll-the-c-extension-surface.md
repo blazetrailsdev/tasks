@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-37 of the 44 gem methods the PostgreSQL adapter calls are defined in C (RFC 0000-pg-gem-port
+39 of the 48 gem methods the PostgreSQL adapter calls are defined in C (RFC 0000-pg-gem-port
 § "The measured split"). With only `libPath` enrolled, `packages/pg` scores 7 of them.
 
 Two definers are gem-specific and need rows in the macro table the C arm ships:
@@ -36,7 +36,7 @@ Two definers are gem-specific and need rows in the macro table the C arm ships:
 - [ ] `pnpm parity:api` scores `PG::Connection`, `PG::Result`, `PG::Coder` and the type maps from `ext/*.c`; `ext/pg_connection.c` and `lib/pg/connection.rb` are one file row mapped to `connection.ts`.
 - [ ] Every gem file with no TS counterpart (e.g. `pg_tuple.c`, `pg_copy_coder.c`, `basic_type_registry.rb`) is an `unported-files` row with the reason "not called by trails (rule 1)", so the denominator is the surface table and nothing else.
 - [ ] Every gem METHOD in an enrolled file that trails does not call is a scoped skip in `scripts/parity/conventions.ts` with the same reason, or the file is listed unported; the `pg` row's missing count is 0 or names only methods a later story in this RFC ports.
-- [ ] `pg` is added to `GATED_PACKAGES` with a mark equal to the measurement.
+- [ ] `pg` is added to `GATED_PACKAGES` with a mark equal to the measurement. The PR body prints the `pg` summary line and reconciles it with the RFC's hand count (48 methods, 21 classes and modules, 10 constants, 5 error classes); where the extractor's denominator differs, the RFC's § "The measured split" is corrected by markdown PR. This committed mark, not the hand count, is what the RFC's Verification refers to.
 
 ## Verification
 

@@ -5,9 +5,12 @@ updated: 2026-10-08
 rfc: "0000-pg-gem-port"
 cluster: migration
 packages: ["activerecord"]
-deps: []
+deps:
+  - "pg-result-moves-to-the-package"
+  - "pg-array-coders-move-to-the-package"
+  - "pg-connection-escaping-moves-to-the-package"
 deps-rfc: []
-est-loc: 40
+est-loc: 20
 priority: null
 pr: null
 claim: null
@@ -19,19 +22,25 @@ closed-reason: null
 ## Context
 
 RFC 0180 has two stories this RFC's migration replaces:
-`pg-gem-connection-surface-scores-against-the-pg-gem` (claimed 2026-10-08T17:05Z) and
-`pg-gem-result-and-array-coders-score-against-the-pg-gem` (ready). 20 receipts in
-`packages/activerecord/src/connection-adapters/postgresql/pg-connection.ts`, `pg-result.ts` and `oid/array.ts` name them, and closing a
-story cited in code reds `stale-refs`.
+`pg-gem-connection-surface-scores-against-the-pg-gem` and
+`pg-gem-result-and-array-coders-score-against-the-pg-gem`. 20 receipts name them (12 in
+`pg-result.ts`, 6 in `oid/array.ts`, 2 in `pg-connection.ts`, all under
+`packages/activerecord/src/connection-adapters/postgresql/`), and closing a story still cited in
+code reds `stale-refs`.
 
-Gated on RFC 0000-pg-gem-port open question 1 (what to do with the claimed one).
+No receipt is retagged. Each is deleted by the move story that owns it, which are this story's
+three dependencies. This story runs last and only closes what nothing cites any more.
 
 ## Acceptance criteria
 
-- [ ] In one trails PR, every receipt naming either story is retagged: `pg-result.ts`'s 12 onto `pg-result-moves-to-the-package`, `oid/array.ts`'s 6 onto `pg-array-coders-move-to-the-package`, `pg-connection.ts`'s 2 onto `pg-connection-escaping-moves-to-the-package`.
-- [ ] After that PR merges, both stories are closed with `tasks close <id> "superseded by RFC <n>-pg-gem-port"`, and RFC 0180's README table rows for them are removed (a markdown PR in the tasks repo).
-- [ ] `stale-refs` green on `main` afterwards.
+- [ ] `grep -rn "pg-gem-connection-surface-scores-against-the-pg-gem\|pg-gem-result-and-array-coders-score-against-the-pg-gem" packages/` returns nothing. If it returns anything, a dependency did not finish its job: reopen that story, do not retag here.
+- [ ] For each of the two stories that is not already `done` or `closed`: `tasks close <id> "superseded by RFC <n>-pg-gem-port"`. One that reached `done` on its own is left alone.
+- [ ] RFC 0180's README table rows for any story closed here are removed by markdown PR in the tasks repo.
+- [ ] `stale-refs` is green on trails `main` afterwards.
 
 ## Notes
 
-Run first if the owner answers open question 1 with "stop the claimed agent"; otherwise after that agent's PR merges.
+This story changes no trails source; its est-loc is the tasks-repo README edit. What happens to the
+two stories between activation and this point (block them so they are not claimed, or let work
+already in flight land) is RFC § "Migration" and open question 1, decided by the owner at
+activation.

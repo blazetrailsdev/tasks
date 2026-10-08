@@ -65,6 +65,8 @@ hide the receiver, as `SINGLETON_ALIAS(rb_cPGconn, "escape", "escape_string")` a
 `ext/pg_connection.c:4485` does) for more than the macro table can express, stop, record what
 broke, and `pnpm tasks block` this story citing RFC 0000-pg-gem-port open question 3.
 
-A new `scripts/` test directory needs three registrations (memory:
-`project_new_scripts_test_dir_needs_three_registrations`); put the tests beside the extractor.
+Put the tests in `scripts/api-compare/`, which is already registered. A new `scripts/<tool>/` test
+directory would need three registrations that `scripts/ci-suite-coverage.test.ts` asserts
+separately: the `other` project's `include` in `vitest.config.ts`, the `unit-tests` job's
+`pnpm vitest run` filter in `.github/workflows/ci.yml`, and the `UNIT_TESTS_PKGS_RE` alternation there.
 The Unit Tests job has no `vendor/`, so fixtures are checked in, not read from `vendor/`.
