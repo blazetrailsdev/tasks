@@ -2,7 +2,7 @@
 title: "Live#send_stream instruments send_stream.action_controller and tests a Ruby Symbol type"
 status: draft
 updated: 2026-10-07
-rfc: "0162-actioncontroller-metal-parity"
+rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: []
 deps: []
