@@ -2,7 +2,7 @@
 title: "Mime::Type#match? is isMatch with Rails' substring body; parse_data_with_trailing_star calls it"
 status: draft
 updated: 2026-10-07
-rfc: "0162-actioncontroller-metal-parity"
+rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: []
 deps: []

@@ -2,7 +2,7 @@
 title: "ResponseBuffer#body decodes a binary chunk as UTF-8 where Rails appends it"
 status: ready
 updated: 2026-10-07
-rfc: "0162-actioncontroller-metal-parity"
+rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: []
 deps: []
