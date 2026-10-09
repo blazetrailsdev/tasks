@@ -1,6 +1,6 @@
 ---
 title: "activerecord: nested-attributes assigners branch on a maybe-promise setAttributes and association read"
-status: ready
+status: claimed
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-09T21:39:52Z"
+assignee: "nested-attributes-maybe-promise-assignment-arms"
 blocked-by: null
 closed-reason: null
 ---

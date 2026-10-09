@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2 performQuery takes Rails' control flow over a gem-shaped raw connection"
-status: claimed
+status: in-progress
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#8728
 claim: "2026-10-09T20:55:38Z"
 assignee: "migration-proxy-load-migration-arms-need-a-kernel-load-port"
 blocked-by: null

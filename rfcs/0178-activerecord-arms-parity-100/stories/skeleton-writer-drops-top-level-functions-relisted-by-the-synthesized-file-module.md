@@ -1,6 +1,6 @@
 ---
 title: "api-compare: the skeleton writer drops ~500 top-level functions the synthesized file module re-lists"
-status: ready
+status: in-progress
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8729
+claim: "2026-10-09T21:09:37Z"
+assignee: "mysql2-perform-query-unboxes-the-float-carrier-in-the-ported-body"
 blocked-by: null
 closed-reason: null
 ---
