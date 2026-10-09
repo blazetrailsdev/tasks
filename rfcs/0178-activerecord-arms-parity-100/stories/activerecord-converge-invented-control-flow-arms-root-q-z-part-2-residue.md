@@ -1,5 +1,5 @@
 ---
-title: "activerecord: converge the invented branches left in root-q-z part 2 (relation load path, one?, to_sql)"
+title: "activerecord: converge the invented branches left in root-q-z part 2 (any? / one? / none?, to_sql, preload_associations, references to_s)"
 status: in-progress
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
@@ -34,8 +34,16 @@ found while reading it (Rails lines are `vendor/rails/v8.0.2/activerecord/lib/ac
 
 Not in the parent story's list but in the same report for this file: `relation.ts#constructor` (`+if` x11) and `relation.ts#initializeCopy` (`+loop`).
 
+## Scope narrowed (trails#8714)
+
+The four load-path rows above (`loadAsync`, `load`, `execQueries`, `reset`) are no longer this story's.
+They are one design question that needs the repo owner's ruling, and they moved, with the finding that
+blocks a plain removal, to `relation-load-path-and-references-to-s-invented-arms`. This story is the
+remaining six rows: `isNone`, `isAny`, `isOne`, `toSql`, `preloadAssociations` and
+`referencesEagerLoadedTables`. `constructor` and `initializeCopy` had already left the report.
+
 ## Acceptance criteria
 
-- [ ] Every real invented guard above is removed so the body matches Rails' control flow.
+- [ ] Every real invented guard in the six rows this story keeps is removed so the body matches Rails' control flow.
 - [ ] Every false positive is fixed in `scripts/api-compare/` with a unit test, and its effect on other packages is recorded in the PR body.
-- [ ] The invented-direction report shows 0 rows for these methods.
+- [ ] The invented-direction report shows 0 rows for those six methods.
