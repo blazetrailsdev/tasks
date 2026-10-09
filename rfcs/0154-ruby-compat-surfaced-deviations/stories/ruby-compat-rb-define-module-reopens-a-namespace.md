@@ -2,7 +2,7 @@
 title: "ruby-compat: rbDefineModule creates or reopens a top-level module; sharded test models use it"
 status: draft
 updated: 2026-10-09
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
