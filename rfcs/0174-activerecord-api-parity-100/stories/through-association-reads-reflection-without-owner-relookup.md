@@ -2,7 +2,7 @@
 title: "activerecord: ThroughAssociation source_reflection, ensure_mutable and ensure_not_nested read the reflection directly"
 status: ready
 updated: 2026-10-05
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps: []
