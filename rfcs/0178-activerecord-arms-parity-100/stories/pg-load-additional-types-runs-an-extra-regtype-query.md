@@ -1,7 +1,7 @@
 ---
 title: "activerecord: PG load_additional_types runs a fourth query and fills a regtype OID map Rails does not have"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8726
+claim: "2026-10-09T20:09:43Z"
+assignee: "core-inherited-seeding-leaves-the-generated-modules-and-find-by-cache-readers"
 blocked-by: null
 closed-reason: null
 ---

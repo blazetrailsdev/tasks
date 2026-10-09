@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Core's inherited seeding leaves generatedAssociationMethods and cachedFindByStatement"
-status: ready
+status: in-progress
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8726
+claim: "2026-10-09T20:09:43Z"
+assignee: "core-inherited-seeding-leaves-the-generated-modules-and-find-by-cache-readers"
 blocked-by: null
 closed-reason: null
 ---

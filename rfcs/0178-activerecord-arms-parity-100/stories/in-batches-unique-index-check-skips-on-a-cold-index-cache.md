@@ -1,6 +1,6 @@
 ---
 title: "activerecord: in_batches skips the unique-index check on a cold index cache and validates twice"
-status: ready
+status: blocked
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-09T20:09:43Z"
+assignee: "core-inherited-seeding-leaves-the-generated-modules-and-find-by-cache-readers"
+blocked-by: "Owner decision needed: ratify the cold index peek in packages/activerecord/CLAUDE.md § 'Schema reflection peeks at a warm cache' (receipts -> PERMANENT), or name another shape. Convergence is not reachable: Rails' own test (batches_test.rb:795-796) clears the schema cache before calling in_batches, so warming indexes in loadSchemaFromAdapter never serves it and the block arm must await schemaCache().indexes; the blockless arm returns its BatchEnumerator synchronously and cannot run that query, so on a cold cache it cannot raise at the call. 'Validate once' and 'raise at the call for both arms' cannot both hold."
 closed-reason: null
 ---
 

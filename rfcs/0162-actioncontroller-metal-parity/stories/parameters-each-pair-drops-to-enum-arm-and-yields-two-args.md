@@ -1,6 +1,6 @@
 ---
 title: "Parameters#each_pair drops the to_enum arm, bypasses @parameters.each_pair and yields two args"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

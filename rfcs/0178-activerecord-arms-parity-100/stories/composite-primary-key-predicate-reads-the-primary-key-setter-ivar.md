@@ -1,6 +1,6 @@
 ---
 title: "composite_primary_key? reads @composite_primary_key, written by primary_key="
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms

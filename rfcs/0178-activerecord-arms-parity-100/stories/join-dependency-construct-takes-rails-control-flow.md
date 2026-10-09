@@ -1,6 +1,6 @@
 ---
 title: "activerecord: JoinDependency#construct and #construct_model take Rails' control flow"
-status: claimed
+status: in-progress
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: trails#8724
 claim: "2026-10-09T19:39:37Z"
 assignee: "attribute-methods-initialize-generated-modules-deferral-guards"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "parity:api credits a module's initialize through an @inlinedFrom constructor; the three skip entries go"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-10-09
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]

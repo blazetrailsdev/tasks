@@ -1,6 +1,6 @@
 ---
 title: "activerecord: node-pg driver errors carry a result at the raw-connection boundary, as PG::Error does"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms

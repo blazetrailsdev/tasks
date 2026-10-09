@@ -1,6 +1,6 @@
 ---
 title: "activerecord: check_record_limit! branches on the collection type to read size"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

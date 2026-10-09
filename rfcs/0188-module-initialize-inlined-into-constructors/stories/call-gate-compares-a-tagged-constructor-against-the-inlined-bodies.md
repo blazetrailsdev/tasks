@@ -1,7 +1,7 @@
 ---
 title: "parity:api:calls compares a tagged constructor against the union of the inlined Rails initialize bodies"
-status: draft
-updated: 2026-10-08
+status: in-progress
+updated: 2026-10-09
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]
@@ -9,9 +9,9 @@ deps: ["extractor-reads-inlined-from-tags-on-constructors"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8727
+claim: "2026-10-09T20:36:02Z"
+assignee: "extractor-reads-inlined-from-tags-on-constructors"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: DatabaseTasks drops the invented _normalizeEnv / _errorToS helpers and load_schema's ensure covers its early return"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

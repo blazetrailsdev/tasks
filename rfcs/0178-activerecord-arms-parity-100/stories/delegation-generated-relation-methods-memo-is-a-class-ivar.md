@@ -1,6 +1,6 @@
 ---
 title: "activerecord: seat generated_relation_methods' memo as the class's own ivar, not a module WeakMap"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
