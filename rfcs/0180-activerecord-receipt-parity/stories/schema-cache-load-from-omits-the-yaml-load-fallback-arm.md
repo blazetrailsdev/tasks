@@ -5,7 +5,8 @@ updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - psych-load-and-safe-load
 deps-rfc: []
 est-loc: 120
 priority: null
