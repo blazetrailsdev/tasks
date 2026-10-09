@@ -2,7 +2,7 @@
 title: "activerecord: withConnectionSync is a synchronous lease that no CLAUDE.md section ratifies"
 status: blocked
 updated: 2026-10-08
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: convergeable
 packages: ["activerecord"]
 deps: []
