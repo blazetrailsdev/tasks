@@ -31,6 +31,13 @@ Narrowing the type to `string | null` was tried in trails#8717 and breaks six si
 `abstract-mysql-adapter.trails.test.ts:420`, `schema-cache.test.ts:44` and `column.ts`'s own
 `initWith` assignment.
 
+The value is not always a JS string either. SQLite's `extract_value_from_default` returns
+`[$1].pack("H*")` for a hex blob default, a binary String in Ruby, and the port returns a `Buffer`
+(`packages/activerecord/src/connection-adapters/sqlite3-adapter.ts`, `extractValueFromDefault`).
+Both adapters' `extractValueFromDefault` are typed `unknown`, so the narrowing also reaches
+`postgresql/schema-statements.ts`, `sqlite3/schema-statements.ts`, `sqlite3/column.trails.test.ts`
+and `support/fake-adapter.trails.test.ts`. Read `string | null` below as `string | Uint8Array | null`.
+
 ## Acceptance criteria
 
 - [ ] `Column#default` and the constructor's `default` parameter are `string | null`, in
