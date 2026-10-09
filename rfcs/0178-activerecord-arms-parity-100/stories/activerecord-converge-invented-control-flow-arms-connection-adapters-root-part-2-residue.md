@@ -1,6 +1,6 @@
 ---
 title: "activerecord: converge the driver-boundary rows left by connection-adapters-root part 2"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

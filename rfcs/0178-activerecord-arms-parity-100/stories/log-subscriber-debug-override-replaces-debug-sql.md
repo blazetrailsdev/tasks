@@ -1,7 +1,7 @@
 ---
 title: "activerecord: LogSubscriber overrides debug; debugSql and the exported debug function go"
-status: ready
-updated: 2026-10-05
+status: done
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8590
+claim: "2026-10-09T15:09:37Z"
+assignee: "activerecord-converge-invented-control-flow-arms-root-g-p-part-2-residue"
 blocked-by: null
 closed-reason: null
 ---

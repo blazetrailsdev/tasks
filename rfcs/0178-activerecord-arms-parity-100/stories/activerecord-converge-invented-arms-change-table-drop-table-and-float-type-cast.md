@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove the invented branches left in changeTable, dropTable and typeCast's boxed Float arm"
-status: draft
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8708
+claim: "2026-10-09T15:28:28Z"
+assignee: "activerecord-converge-invented-arms-change-table-drop-table-and-float-type-cast"
 blocked-by: null
 closed-reason: null
 ---

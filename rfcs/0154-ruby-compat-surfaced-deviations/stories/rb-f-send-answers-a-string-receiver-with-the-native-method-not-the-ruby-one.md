@@ -1,6 +1,6 @@
 ---
 title: "rb-f-send-answers-a-string-receiver-with-the-native-method-not-the-ruby-one"
-status: draft
+status: done
 updated: 2026-10-09
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8709
 claim: null
 assignee: null
 blocked-by: null

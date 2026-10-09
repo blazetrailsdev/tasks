@@ -1,6 +1,6 @@
 ---
 title: "activerecord: converge the invented arms left in database-config, time-zone cast and fixture-set"
-status: claimed
+status: in-progress
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#8712
 claim: "2026-10-09T14:39:53Z"
 assignee: "activerecord-converge-invented-control-flow-arms-root-g-p-part-1-residue"
 blocked-by: null

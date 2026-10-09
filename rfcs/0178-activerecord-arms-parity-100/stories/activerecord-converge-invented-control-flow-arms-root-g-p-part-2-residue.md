@@ -1,7 +1,7 @@
 ---
 title: "activerecord: converge the invented branches left in root-g-p part 2 (persistence save/destroy layering, model-schema, nested-attributes)"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8713
+claim: "2026-10-09T15:09:37Z"
+assignee: "activerecord-converge-invented-control-flow-arms-root-g-p-part-2-residue"
 blocked-by: null
 closed-reason: null
 ---

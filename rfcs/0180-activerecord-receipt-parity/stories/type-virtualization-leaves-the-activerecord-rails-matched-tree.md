@@ -1,6 +1,6 @@
 ---
 title: "activerecord: type-virtualization leaves the Rails-matched tree and drops its eleven receipts"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

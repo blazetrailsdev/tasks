@@ -1,7 +1,7 @@
 ---
 title: "nested attributes: restore the permitted? arm on the one-to-one assigner"
-status: draft
-updated: 2026-10-01
+status: in-progress
+updated: 2026-10-09
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8713
+claim: "2026-10-09T15:31:53Z"
+assignee: "nested-attributes-one-to-one-drops-permitted-arm"
 blocked-by: null
 closed-reason: null
 ---

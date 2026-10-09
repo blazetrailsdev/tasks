@@ -1,6 +1,6 @@
 ---
 title: "activerecord: whether a relation's each is synchronous is decided in withRecords, the relation handler and Association#loadTarget"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

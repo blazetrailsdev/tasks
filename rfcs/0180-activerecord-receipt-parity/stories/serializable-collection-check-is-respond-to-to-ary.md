@@ -1,6 +1,6 @@
 ---
 title: "activemodel: serializable_hash's collection check is three arms where Rails asks respond_to?(:to_ary)"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Migration#upOnly guards on an optional block Rails' up_only does not test"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

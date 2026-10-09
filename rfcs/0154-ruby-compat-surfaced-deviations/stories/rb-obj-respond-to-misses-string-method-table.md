@@ -1,7 +1,7 @@
 ---
 title: "rbObjRespondTo does not answer the STRING_METHOD_TABLE names rbFSend now dispatches"
-status: draft
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-09
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8712
+claim: "2026-10-09T15:30:53Z"
+assignee: "rb-obj-respond-to-misses-string-method-table"
 blocked-by: null
 closed-reason: null
 ---

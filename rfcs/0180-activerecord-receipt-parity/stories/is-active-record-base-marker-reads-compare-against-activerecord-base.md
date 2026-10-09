@@ -1,6 +1,6 @@
 ---
 title: "activerecord: _isActiveRecordBase marker reads compare against ActiveRecord::Base, and the marker is deleted"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

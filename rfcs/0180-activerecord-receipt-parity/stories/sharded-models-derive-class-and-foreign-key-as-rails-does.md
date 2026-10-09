@@ -1,6 +1,6 @@
 ---
 title: "sharded-models-derive-class-and-foreign-key-as-rails-does"
-status: draft
+status: in-progress
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8711
+claim: "2026-10-09T15:02:00Z"
+assignee: "sharded-models-derive-class-and-foreign-key-as-rails-does"
 blocked-by: null
 closed-reason: null
 ---
