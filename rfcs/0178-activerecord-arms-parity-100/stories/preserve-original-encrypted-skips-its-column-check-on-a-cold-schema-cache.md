@@ -1,6 +1,6 @@
 ---
 title: "preserve-original-encrypted-skips-its-column-check-on-a-cold-schema-cache"
-status: ready
+status: blocked
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-09T22:09:41Z"
+assignee: "preserve-original-encrypted-skips-its-column-check-on-a-cold-schema-cache"
+blocked-by: "owner decision: the acceptance criteria are jointly unsatisfiable as written. A class-body encrypts runs on a cold schema cache where columnNames() answers [] (activerecord CLAUDE.md, Schema reflection peeks at a warm cache), so the bare Rails guard raises for the canonical EncryptedBookThatIgnoresCase at import (criterion 3). Raising for a cold declaration therefore needs the guard re-entered at schema load, which needs either remembered per-class state or a second raise site (both ruled out by criterion 2): preserveOriginalEncrypted cannot simply be re-run, since it re-declares encrypts(original_name) and includes a second accessor module. Owner to choose: (a) a pending queue drained by load_schema! beside encryptable_record.rb:126-130, (b) split guard from body, or (c) ratify the cold arm PERMANENT."
 closed-reason: null
 ---
 

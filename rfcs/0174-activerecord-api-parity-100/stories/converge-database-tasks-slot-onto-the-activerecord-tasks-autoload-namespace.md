@@ -1,7 +1,7 @@
 ---
 title: "activerecord: tasks/database-tasks-slot.ts converges onto an ActiveRecord::Tasks Autoload namespace"
-status: ready
-updated: 2026-10-08
+status: in-progress
+updated: 2026-10-09
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8732
+claim: "2026-10-09T22:09:41Z"
+assignee: "preserve-original-encrypted-skips-its-column-check-on-a-cold-schema-cache"
 blocked-by: null
 closed-reason: null
 ---

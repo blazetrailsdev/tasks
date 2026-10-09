@@ -1,6 +1,6 @@
 ---
 title: "trails db create hangs on a Postgres database that already exists"
-status: draft
+status: in-progress
 updated: 2026-10-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8730
+claim: "2026-10-09T22:17:57Z"
+assignee: "db-create-hangs-on-an-existing-postgres-database"
 blocked-by: null
 closed-reason: null
 ---

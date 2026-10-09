@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Core's destroy_association_async_job instance reader comes from delegate ..., to: :class"
-status: ready
-updated: 2026-10-08
+status: in-progress
+updated: 2026-10-09
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8733
+claim: "2026-10-09T22:39:42Z"
+assignee: "relation-load-path-and-references-to-s-invented-arms"
 blocked-by: null
 closed-reason: null
 ---

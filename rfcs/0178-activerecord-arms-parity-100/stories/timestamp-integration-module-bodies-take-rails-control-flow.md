@@ -1,6 +1,6 @@
 ---
 title: "activerecord: timestamp / integration / attribute_method? module bodies take Rails' control flow"
-status: claimed
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8731
 claim: "2026-10-09T21:39:52Z"
 assignee: "nested-attributes-maybe-promise-assignment-arms"
 blocked-by: null

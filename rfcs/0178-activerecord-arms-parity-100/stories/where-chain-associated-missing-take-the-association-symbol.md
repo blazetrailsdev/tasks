@@ -1,7 +1,7 @@
 ---
 title: "activerecord: where.associated / where.missing take the association as a Symbol"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8733
+claim: "2026-10-09T22:39:42Z"
+assignee: "relation-load-path-and-references-to-s-invented-arms"
 blocked-by: null
 closed-reason: null
 ---

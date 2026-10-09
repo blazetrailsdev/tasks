@@ -1,6 +1,6 @@
 ---
 title: "activerecord: nested-attributes assigners branch on a maybe-promise setAttributes and association read"
-status: claimed
+status: blocked
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-10-09T21:39:52Z"
 assignee: "nested-attributes-maybe-promise-assignment-arms"
-blocked-by: null
+blocked-by: "Waits on reopen-rfc-0087-constructor-arm-for-association-io-at-assignment (owner ruling 2026-10-08), the same root as assign-attributes-pending-promise-chain-arms: the generated xAttributes= writer is reached synchronously from new Foo({...}) and assignAttributes, so its body cannot be async (an await defers scalar writes past sync readers and turns Rails' raises into rejections), and with setAttributes / the association read answering a promise only when I/O is owed, each continuation needs a promise-or-value branch. The trails PR for this bundle converged what does not depend on the design (options read unguarded, attributes[id].blank?/present?, Rails' if/elsif chain, raise_nested_attributes_record_not_found! as an instance method reading reflection.klass.name); the two @inventedArm if receipts stay CONVERGEABLE here."
 closed-reason: null
 ---
 

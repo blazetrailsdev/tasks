@@ -1,6 +1,6 @@
 ---
 title: "activerecord: setup_fixture_accessors drops the two is_a?(Symbol) conversion arms"
-status: ready
+status: in-progress
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8732
+claim: "2026-10-09T22:09:41Z"
+assignee: "preserve-original-encrypted-skips-its-column-check-on-a-cold-schema-cache"
 blocked-by: null
 closed-reason: null
 ---

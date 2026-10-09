@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SingularAssociation#reader and Association#reload branch on a promise-or-value load_target"
-status: draft
+status: blocked
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Waits on reopen-rfc-0087-constructor-arm-for-association-io-at-assignment (owner ruling 2026-10-08): the reader's value arm is what the synchronous constructor and assignAttributes paths read, so reader and reload converge only once that design says how association I/O owed at assignment completes, or the owner ratifies a value-or-promise reader."
 closed-reason: null
 ---
 

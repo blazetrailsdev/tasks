@@ -1,6 +1,6 @@
 ---
 title: "parity: call-args comparer files a kwarg-nested owner.class / owner.constructor pair as a shape row"
-status: draft
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8731
+claim: "2026-10-09T22:33:23Z"
+assignee: "call-args-comparer-classes-kwarg-nested-class-ref-as-shape"
 blocked-by: null
 closed-reason: null
 ---

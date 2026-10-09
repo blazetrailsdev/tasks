@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SQLite3 StatementPool#dealloc drops an async driver's close rejection"
-status: ready
+status: blocked
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-09T22:09:41Z"
+assignee: "preserve-original-encrypted-skips-its-column-check-on-a-cold-schema-cache"
+blocked-by: "owner decision: making the expo finalize failure reach an awaiting caller means StatementPool#[]=, #clear and #delete await dealloc (async set/clear/delete, awaited at sqlite3-adapter.ts _cachedStatement, postgresql-adapter.ts prepareStatement, and the pg/mysql2 database-statements delete sites). That reverses trails#8716, which made those three bodies call dealloc in line and pinned it with 'clear empties the pool before it returns when dealloc is still pending' (connection-adapters/statement-pool.test.ts): with an awaited dealloc the pool is not empty when clear returns and an over-limit set stores after a tick. Owner to choose: (a) async set/clear/delete and delete that test, or (b) ratify the dropped rejection in packages/activerecord/CLAUDE.md beside lookupCastTypeFromColumn (Adapter facts are prewarmed and peeked) and make the receipt PERMANENT."
 closed-reason: null
 ---
 

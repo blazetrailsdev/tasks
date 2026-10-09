@@ -1,6 +1,6 @@
 ---
 title: "relation-load-path-and-references-to-s-invented-arms"
-status: ready
+status: blocked
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-09T22:39:42Z"
+assignee: "relation-load-path-and-references-to-s-invented-arms"
+blocked-by: "Owner ruling needed before code (the story's first acceptance criterion): converge loadAsync/load/execQueries/reset onto Rails' bodies (loadAsync becomes async; drops the in-flight _loadResult dedupe and the reset _loadToken), or ratify the in-flight handle and token in packages/activerecord/CLAUDE.md and receipt them @inventedArm PERMANENT."
 closed-reason: null
 ---
 
