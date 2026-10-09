@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SQLite3 new_column_from_field is this-typed with Rails' reads and Column.new arguments"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8704
+claim: "2026-10-09T12:28:18Z"
+assignee: "sql-datetime-formatters-fold-into-quoted-date-and-quoted-time"
 blocked-by: null
 closed-reason: null
 ---

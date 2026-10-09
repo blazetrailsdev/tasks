@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SchemaCache._load_from ports the Marshal and YAML.unsafe_load arms"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: quoted_date takes Ruby-shaped receivers, not a Temporal union with private dispatch helpers"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

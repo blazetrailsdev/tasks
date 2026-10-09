@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Column#initialize takes default_function as its fifth positional parameter"
-status: draft
+status: in-progress
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8704
+claim: "2026-10-09T12:51:47Z"
+assignee: "sql-datetime-formatters-fold-into-quoted-date-and-quoted-time"
 blocked-by: null
 closed-reason: null
 ---

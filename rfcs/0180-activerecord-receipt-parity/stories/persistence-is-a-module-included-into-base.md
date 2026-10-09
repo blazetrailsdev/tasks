@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Persistence is a Module included into Base; ClassMethods#update calls all and find"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

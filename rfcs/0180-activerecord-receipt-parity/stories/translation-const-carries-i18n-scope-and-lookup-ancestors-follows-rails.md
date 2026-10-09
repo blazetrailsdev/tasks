@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Translation carries i18n_scope, and lookup_ancestors compares against ActiveRecord::Base"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8705
+claim: "2026-10-09T12:39:38Z"
+assignee: "translation-const-carries-i18n-scope-and-lookup-ancestors-follows-rails"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SchemaDumper.language is a mutable class static Rails has no seat for"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
