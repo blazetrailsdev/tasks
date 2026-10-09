@@ -1,7 +1,7 @@
 ---
 title: "activerecord: converge the 15 missing-arm pairs no missing-arm story names"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8717
+claim: "2026-10-09T17:39:39Z"
+assignee: "activerecord-converge-missing-control-flow-arms-residue"
 blocked-by: null
 closed-reason: null
 ---

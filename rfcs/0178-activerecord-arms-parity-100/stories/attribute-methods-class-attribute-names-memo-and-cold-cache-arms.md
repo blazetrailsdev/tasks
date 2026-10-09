@@ -1,6 +1,6 @@
 ---
 title: "activerecord: class-level attribute_names carries an invented memo test and cold-cache arm"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: TimeZoneConverter's infinite? arms inline value.respond_to?(:infinite?) && value.infinite?"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms

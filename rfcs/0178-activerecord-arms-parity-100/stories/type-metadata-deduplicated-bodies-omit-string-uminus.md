@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SqlTypeMetadata and MySQL::TypeMetadata deduplicated omit their String dedup lines"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

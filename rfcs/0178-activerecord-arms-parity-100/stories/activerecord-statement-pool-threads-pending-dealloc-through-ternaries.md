@@ -1,6 +1,6 @@
 ---
 title: "activerecord: StatementPool#[]=, #clear and #delete thread a pending dealloc through ternaries Rails does not have"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms

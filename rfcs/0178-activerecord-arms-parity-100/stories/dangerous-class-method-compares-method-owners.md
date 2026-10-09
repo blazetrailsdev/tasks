@@ -1,7 +1,7 @@
 ---
 title: "activerecord: dangerous-class-method-compares-method-owners"
-status: ready
-updated: 2026-10-05
+status: claimed
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-09T17:09:43Z"
+assignee: "active-record-base-inherited-chain-needs-one-deferred-dispatch"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: setup_fixture_accessors drops the two is_a?(Symbol) conversion arms"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
