@@ -15,6 +15,15 @@ deps:
   - quoted-date-usec-arm-is-relocated-into-sql-datetime
   - record-native-promise-decision-and-retire-promise-complete-rows
   - activerecord-converge-missing-control-flow-arms-residue
+  - pg-reconnect-resets-and-typemap-timezone-rebuilds-the-timestamp-decoder
+  - schema-cache-load-from-omits-the-yaml-load-fallback-arm
+  - enum-private-enum-body-is-a-line-for-line-port
+  - migration-copy-strips-magic-comments-in-a-loop
+  - migration-proxy-load-migration-arms-need-a-kernel-load-port
+  - reset-column-information-undefine-loop-reds-a-rails-test-without-method-missing
+  - setup-fixture-accessors-drops-the-symbol-conversion-arms
+  - mysql2-perform-query-takes-rails-control-flow-over-a-gem-shaped-raw-connection
+  - attribute-methods-class-attribute-names-memo-and-cold-cache-arms
 deps-rfc: []
 est-loc: 200
 priority: null
