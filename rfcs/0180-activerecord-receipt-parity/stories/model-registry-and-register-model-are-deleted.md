@@ -1,5 +1,5 @@
 ---
-title: "model-registry-and-register-model-are-deleted"
+title: "modelRegistry and the pending counter-cache deferral are deleted; registerModel wraps registerConstant"
 status: draft
 updated: 2026-10-08
 rfc: "0180-activerecord-receipt-parity"
@@ -28,9 +28,13 @@ What remains, all in `packages/activerecord/src/associations.ts` unless noted:
 - `registerModel` has ~1,900 references across test files, plus `activerecord-cli/src/generate-manifest.ts:221-231`, `trailties/src/application/finisher.ts:73`, `test-fixtures.ts:658-664`, `support/setup-second-pool.ts:42-45`, and a handful of canonical model files (`parrot.ts`, `person.ts`, `bird.ts`, `clothing-item.ts`, `membership.ts`, `company.ts`, `company-in-module.ts`).
 - `test-helpers/models/sharded/*.ts` duplicates `test-helpers/models/sharded.ts`, is imported by nothing, and is unseated; `Coder` in `admin/user.ts` and `admin/user-json.ts` is Rails' nested `Admin::User::Coder` and is unseated.
 
+## Scope decision
+
+Narrowed by the repo owner on trails#8701: this story ships the src convergence and keeps `registerModel` as a wrapper over `registerConstant`. Deleting `registerModel` and converting its ~1,800 test references, `generate-manifest.ts`, `finisher.ts`, `test-fixtures.ts` and `support/setup-second-pool.ts` is `register-model-wrapper-is-deleted-tests-seat-constants`.
+
 ## Acceptance criteria
 
-- [ ] The counter-cache flush no longer runs from `registerModel`, and the flush loop in `support/canonical-model-index.ts` is deleted.
-- [ ] `registerModel`, `registerModelConstant` and `modelRegistry` are deleted; a test model is seated with `rbModConstSet` / `registerConstant` where it is defined.
+- [ ] The pending counter-cache deferral is deleted: `addCounterCacheCallbacks` resolves the target once, as `associations/builder/belongs_to.rb:39-40` does, and the flush loop in `support/canonical-model-index.ts` is gone.
+- [ ] `registerModelConstant` and `modelRegistry` are deleted; `registerModel` only seats constants through `registerConstant`, and no canonical model file calls it.
 - [ ] `registerSubclass` in `inheritance.ts` no longer registers a constant.
 - [ ] `pnpm parity:api:extra:gate` and `pnpm parity:api:receipts:gate` stay green.
