@@ -2,7 +2,7 @@
 title: "activerecord: _enum's undeclared-type raise does not read a cold-schema replay flag"
 status: blocked
 updated: 2026-10-07
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: findings
 packages: ["activerecord"]
 deps:
