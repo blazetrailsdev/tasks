@@ -42,11 +42,21 @@ Both carry `@inventedArm … — CONVERGEABLE <this story>`. CLAUDE.md § "`inhe
 is deferred to own-property memo guards" ratifies the own-property guard for
 `ModelSchema` only.
 
+## Ruling (repo owner, 2026-10-09)
+
+`active-record-base-inherited-chain-needs-one-deferred-dispatch` settled the mechanism, and
+trails `packages/activerecord/CLAUDE.md` § "`inherited` is deferred to own-property memo guards"
+records it: every `inherited` link under `ActiveRecord::Base` is ported as the own-property
+guard. A reset ivar is answered only as an own property, and what a link seeds is seeded at the
+subclass's first read. No link is ported as a method and nothing dispatches the chain. This
+story is re-specified against that section; the criteria below replace the earlier ones.
+
 ## Acceptance criteria
 
-- [ ] Either both bodies take Rails' shape (the seeding moved to wherever the
-      repo settles `Core`'s `inherited`), or CLAUDE.md's `inherited` section is
-      extended by the repo owner to cover `core.rb:412-430` and the receipts
-      become `PERMANENT`.
+- [ ] `generatedAssociationMethods` and `cachedFindByStatement`
+      (`packages/activerecord/src/core.ts`) keep their first-read seeds, and their
+      `@inventedArm … — CONVERGEABLE <this story>` receipts become `@inventedArm … — PERMANENT`.
 - [ ] `pnpm parity:api:arms:throws` is green.
-- [ ] The two tests named above still pass.
+- [ ] `associations.test.ts` "association methods override attribute methods of same name" and
+      `fixtures.test.ts` "ignores belongs to symbols if association and foreign key are named
+      the same" still pass.
