@@ -1,7 +1,7 @@
 ---
 title: "activerecord: encryption serializers' headers_to_json is transform_values and dump raises ForbiddenClass bare"
-status: in-progress
-updated: 2026-10-08
+status: done
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []

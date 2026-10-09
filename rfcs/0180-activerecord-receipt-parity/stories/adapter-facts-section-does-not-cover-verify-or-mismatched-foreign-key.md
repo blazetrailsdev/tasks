@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the adapter-facts section does not cover lookup_cast_type_from_column's verify! or mismatched_foreign_key"
-status: in-progress
-updated: 2026-10-08
+status: done
+updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
 packages: ["activerecord"]

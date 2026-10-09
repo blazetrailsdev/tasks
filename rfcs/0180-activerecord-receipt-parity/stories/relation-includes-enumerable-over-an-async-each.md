@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Relation includes an Enumerable derived from its async each, so CollectionProxy drops its [Symbol.iterator]"
-status: in-progress
-updated: 2026-10-08
+status: done
+updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
 packages: []

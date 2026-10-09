@@ -1,7 +1,7 @@
 ---
 title: "activesupport: MessagePack::Serializer is a module extended onto ActiveSupport::MessagePack, not an instantiated class"
-status: in-progress
-updated: 2026-10-08
+status: done
+updated: 2026-10-09
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []

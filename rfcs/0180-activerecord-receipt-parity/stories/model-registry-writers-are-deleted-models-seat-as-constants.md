@@ -1,7 +1,7 @@
 ---
 title: "activerecord: delete the model registry writers; models seat as constants where they are defined"
-status: in-progress
-updated: 2026-10-08
+status: done
+updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
 packages: ["activerecord"]

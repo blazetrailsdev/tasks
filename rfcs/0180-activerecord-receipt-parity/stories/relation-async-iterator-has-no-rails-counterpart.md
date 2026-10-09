@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Relation drops [Symbol.asyncIterator]; call sites await the relation"
-status: ready
-updated: 2026-10-07
+status: closed
+updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-09T00:33:51Z"
+assignee: "relation-async-iterator-has-no-rails-counterpart"
 blocked-by: null
-closed-reason: null
+closed-reason: 'PERMANENT: Relation#[Symbol.asyncIterator] is kept by the repo owner''s ruling (2026-10-08): for await over a relation is a wanted feature. Its receipt is @noRailsEquivalent PERMANENT and packages/activerecord/CLAUDE.md § "Relation is evaluated by an async query" records it (trails#8699).'
 ---
 
 ## Context
