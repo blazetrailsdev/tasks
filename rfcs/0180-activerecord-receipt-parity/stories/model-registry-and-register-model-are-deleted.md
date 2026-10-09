@@ -1,6 +1,6 @@
 ---
 title: "modelRegistry and the pending counter-cache deferral are deleted; registerModel wraps registerConstant"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
