@@ -5,7 +5,8 @@ updated: 2026-10-09
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - active-record-base-inherited-chain-needs-one-deferred-dispatch
 deps-rfc: []
 est-loc: 120
 priority: null
