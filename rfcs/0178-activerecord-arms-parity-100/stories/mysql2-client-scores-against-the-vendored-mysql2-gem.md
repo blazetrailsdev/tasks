@@ -28,17 +28,14 @@ reads Rails' arms. The surface lives in
   `null`), `prepare(sql)` (a `Mysql2Statement`), `affectedRows`, `lastId`, `abandonResultsBang`,
   `setServerOption`, `queryOptions`, `readTimeout` and `automaticClose`.
 - `Mysql2Result` (`fields`, `size`, `toA`) and `Mysql2Statement` (`execute`, `affectedRows`, `close`).
-- `Mysql2.Client` holds the `MULTI_STATEMENTS` / `OPTION_MULTI_STATEMENTS_ON` /
-  `OPTION_MULTI_STATEMENTS_OFF` constants.
-
-`Mysql2Adapter.newClient` (`connection-adapters/mysql2-adapter.ts`) still translates the config for
-`mysql.createConnection` in line, where Rails is `::Mysql2::Client.new(config)`
-(`mysql2_adapter.rb:24-26`). Its `@inventedArm filter` / `if` receipts point here: the translation belongs
-behind a gem-shaped `Mysql2.Client.new`.
+- `Mysql2.Client` holds `new(config)`, which translates the config for `mysql.createConnection`, and the
+  `FOUND_ROWS` / `MULTI_STATEMENTS` / `OPTION_MULTI_STATEMENTS_ON` / `OPTION_MULTI_STATEMENTS_OFF`
+  constants. `Mysql2.Error` answers `instanceof` for an error the client raised.
 
 None of it is scored. The mysql2 gem is not vendored (`vendor/` has `pg` and `sqlite3`, no `mysql2`), so
-`parity:api` maps no Ruby file onto `mysql2-client.ts` and the three novel names carry
-`@noRailsEquivalent CONVERGEABLE` receipts pointing here. The names were written from memory of the gem's
+`parity:api` maps no Ruby file onto `mysql2-client.ts`. `Mysql2Result` and `Mysql2Statement` are exported
+interfaces over module-private classes, and the one exported function, `mysql2Client`, carries a
+`@noRailsEquivalent CONVERGEABLE` receipt pointing here. The names were written from memory of the gem's
 `lib/mysql2/client.rb`, `ext/mysql2/client.c`, `statement.c` and `result.c`, not checked against it.
 
 `packages/activerecord/src/pg/connection.ts` is the prior art: trails#8687 vendored the pg gem and scored
@@ -61,7 +58,6 @@ Known gaps to check against the gem once it is vendored:
 
 - [ ] The mysql2 gem is vendored under `vendor/mysql2/<version>/` and `mysql2-client.ts` is laid out and
       scored against it, as `pg/connection.ts` is against the pg gem.
-- [ ] The `@noRailsEquivalent CONVERGEABLE` receipts in `mysql2-client.ts` are gone, each name either
+- [ ] The `@noRailsEquivalent CONVERGEABLE` receipt in `mysql2-client.ts` is gone, each name either
       credited to a gem member or deleted.
 - [ ] `Client#warning_count` is ported and read where Rails reads it.
-- [ ] `newClient` is `Mysql2.Client.new(config)` plus Rails' rescue, with no `@inventedArm` receipt.
