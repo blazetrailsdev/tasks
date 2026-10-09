@@ -1,6 +1,6 @@
 ---
 title: "activerecord: ConnectionPool#adopt_connection awaits its lazy schema_cache.load!"
-status: draft
+status: closed
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: trails#8707 made adoptConnection await the load before merging; the only un-awaited adoption left is inside acquireConnectionSync, which sync-reads-of-async-reflection-retire-with-rfc-0073 already retires."
 ---
 
 ## Context

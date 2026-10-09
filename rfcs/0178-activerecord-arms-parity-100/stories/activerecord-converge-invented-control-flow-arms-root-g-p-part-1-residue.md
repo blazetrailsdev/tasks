@@ -1,7 +1,7 @@
 ---
 title: "activerecord: converge the invented branches left in root-g-p part 1 (inheritance, log-subscriber, migration)"
-status: ready
-updated: 2026-10-05
+status: claimed
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-09T14:39:53Z"
+assignee: "activerecord-converge-invented-control-flow-arms-root-g-p-part-1-residue"
 blocked-by: null
 closed-reason: null
 ---

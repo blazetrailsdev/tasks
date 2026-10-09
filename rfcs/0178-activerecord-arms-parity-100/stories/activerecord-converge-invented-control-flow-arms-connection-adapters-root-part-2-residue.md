@@ -1,7 +1,7 @@
 ---
 title: "activerecord: converge the driver-boundary rows left by connection-adapters-root part 2"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8710
+claim: "2026-10-09T14:09:43Z"
+assignee: "migration-up-only-guards-on-an-optional-block"
 blocked-by: null
 closed-reason: null
 ---

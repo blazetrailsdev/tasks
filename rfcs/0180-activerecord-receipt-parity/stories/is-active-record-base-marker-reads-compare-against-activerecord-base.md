@@ -1,6 +1,6 @@
 ---
 title: "activerecord: _isActiveRecordBase marker reads compare against ActiveRecord::Base, and the marker is deleted"
-status: claimed
+status: in-progress
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8708
 claim: "2026-10-09T13:39:39Z"
 assignee: "collection-proxy-each-synchrony-is-decided-in-three-places"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "sharded-test-models-are-defined-once-in-their-rails-files"
-status: ready
+status: in-progress
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8711
+claim: "2026-10-09T14:17:56Z"
+assignee: "pg-lookup-cast-type-from-column-floats-its-verify"
 blocked-by: null
 closed-reason: null
 ---

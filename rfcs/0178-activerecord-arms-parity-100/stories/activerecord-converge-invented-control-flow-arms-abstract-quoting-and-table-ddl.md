@@ -1,6 +1,6 @@
 ---
 title: "activerecord: remove the invented branches left in abstract quoting and create/change/drop table"
-status: claimed
+status: in-progress
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#8708
 claim: "2026-10-09T13:39:39Z"
 assignee: "collection-proxy-each-synchrony-is-decided-in-three-places"
 blocked-by: null

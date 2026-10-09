@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Persistence::ClassMethods#update / #update! live in persistence.ts, not as Base statics"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
