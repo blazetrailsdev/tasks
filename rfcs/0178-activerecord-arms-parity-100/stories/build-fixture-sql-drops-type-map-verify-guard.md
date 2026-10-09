@@ -1,7 +1,7 @@
 ---
 title: "activerecord: build_fixture_sql drops its typeMap verify guard and optional-host fallbacks"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8707
+claim: "2026-10-09T13:24:04Z"
+assignee: "type-virtualization-leaves-the-activerecord-rails-matched-tree"
 blocked-by: null
 closed-reason: null
 ---

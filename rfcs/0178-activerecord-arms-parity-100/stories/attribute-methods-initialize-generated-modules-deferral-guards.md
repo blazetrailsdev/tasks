@@ -1,7 +1,7 @@
 ---
 title: "activerecord: attribute-methods-initialize-generated-modules-deferral-guards"
-status: ready
-updated: 2026-10-05
+status: blocked
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-09T13:09:38Z"
+assignee: "persistence-class-methods-update-lives-in-persistence-ts"
+blocked-by: "Needs the owner-decided mechanism for Base's inherited chain (active-record-base-inherited-chain-needs-one-deferred-dispatch); that story re-specifies this one, and a single-module first-read trigger was already backed out in review of trails#8626"
 closed-reason: null
 ---
 

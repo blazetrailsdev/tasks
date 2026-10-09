@@ -1,7 +1,7 @@
 ---
 title: "activerecord: type-virtualization leaves the Rails-matched tree and drops its eleven receipts"
-status: ready
-updated: 2026-10-08
+status: in-progress
+updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8707
+claim: "2026-10-09T13:24:04Z"
+assignee: "type-virtualization-leaves-the-activerecord-rails-matched-tree"
 blocked-by: null
 closed-reason: null
 ---

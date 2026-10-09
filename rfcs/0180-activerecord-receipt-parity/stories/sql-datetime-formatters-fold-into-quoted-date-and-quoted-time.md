@@ -1,6 +1,6 @@
 ---
 title: "activerecord: sql-datetime.ts's formatters fold into Quoting#quoted_date / quoted_time"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings

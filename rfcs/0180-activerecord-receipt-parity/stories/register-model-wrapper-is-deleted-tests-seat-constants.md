@@ -1,6 +1,6 @@
 ---
 title: "activerecord: registerModel is ratified as the model seat and absorbs registerSubclass"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SchemaDumper.dump's format parameter rides an unratified PERMANENT @missingRailsArgs receipt"
-status: draft
+status: claimed
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-09T13:39:39Z"
+assignee: "collection-proxy-each-synchrony-is-decided-in-three-places"
 blocked-by: null
 closed-reason: null
 ---
