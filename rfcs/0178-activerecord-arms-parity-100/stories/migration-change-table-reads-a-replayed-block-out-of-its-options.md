@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Migration#changeTable reads a replayed block out of its options parameter"
-status: ready
+status: closed
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "RFC 0178 refine 2026-10-09: moves no parity needle. No migration.ts#changeTable / createTable / createJoinTable / dropTable row in the arms report (either direction), returns, duck-types or call-mismatches on main @ 9d5fb25bbf, and no receipt names the story. Reopen under 0174 if the replay block position is wanted for its own sake."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: converge the 15 missing-arm pairs no missing-arm story names"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms

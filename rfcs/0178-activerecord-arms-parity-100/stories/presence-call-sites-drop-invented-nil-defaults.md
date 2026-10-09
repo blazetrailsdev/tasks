@@ -1,6 +1,6 @@
 ---
 title: "presence call sites drop the ?? null they no longer need"
-status: ready
+status: closed
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "RFC 0178 refine 2026-10-09: moves no needle this RFC counts. Its only rows are +or short-circuit projection rows, which the 0178 README lists as a non-goal (the arm verdicts do not read or/and tokens), and two of its seven sites are outside activerecord (activemodel/errors.ts, actionview form-helper.ts). No receipt names the story."
 ---
 
 ## Context

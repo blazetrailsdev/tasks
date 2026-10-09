@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SQLite3Adapter.new_client is one rescued body; busy timeout belongs to configure_connection"
-status: ready
-updated: 2026-10-05
+status: done
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8719
+claim: "2026-10-09T18:09:42Z"
+assignee: "activerecord-sqlite3-new-client-is-one-async-body-with-timeout-in-configure-connection"
 blocked-by: null
 closed-reason: null
 ---

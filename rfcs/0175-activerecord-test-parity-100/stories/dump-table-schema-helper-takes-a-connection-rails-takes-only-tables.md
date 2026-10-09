@@ -1,6 +1,6 @@
 ---
 title: "activerecord: dumpTableSchema takes only table names, as dump_table_schema does"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PoolConfig#serverVersion synchronizes on the connection's lock where Rails takes the pool config's monitor"
-status: ready
+status: closed
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "RFC 0178 refine 2026-10-09: moves no parity needle. serverVersion already has Rails' control flow (trails#8710); the remaining difference is which monitor is named, which no report scores: no pool-config.ts#serverVersion row in arms (either direction), returns, duck-types or call-mismatches on main @ 9d5fb25bbf, and no receipt names the story."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SchemaDumper#check_constraints_in_create gates on supports_check_constraints? at the caller"
-status: ready
-updated: 2026-10-05
+status: closed
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8715 (8531daa85f, SchemaDumper reads its connection directly). On origin/main @ 9d5fb25bbf: git grep _hookHost packages/activerecord/src/schema-dumper.ts is empty, table gates on this.connection.supportsCheckConstraints() at :298 as schema_dumper.rb:210, and the invented-direction arms report has no schema-dumper.ts#checkConstraintsInCreate row."
 ---
 
 ## Context

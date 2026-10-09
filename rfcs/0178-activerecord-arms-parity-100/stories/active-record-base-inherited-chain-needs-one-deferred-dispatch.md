@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Base's inherited chain needs one deferred dispatch, decided in CLAUDE.md"
-status: claimed
+status: in-progress
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#8718
 claim: "2026-10-09T17:09:43Z"
 assignee: "active-record-base-inherited-chain-needs-one-deferred-dispatch"
 blocked-by: null

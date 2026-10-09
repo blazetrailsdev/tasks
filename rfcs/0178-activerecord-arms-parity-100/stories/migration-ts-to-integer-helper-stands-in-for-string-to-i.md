@@ -1,6 +1,6 @@
 ---
 title: "migration.ts toInteger helper stands in for String#to_i, which ruby-compat ports as toI"
-status: ready
+status: closed
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "RFC 0178 refine 2026-10-09: moves no parity needle. Swapping the module-private toInteger for ruby-compat toI deletes no arms, returns, duck-type or call row on main @ 9d5fb25bbf and no receipt names the story; its acceptance criteria are tests-pass-unchanged only."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SchemaDumper reads @connection directly and loses its invented branches"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

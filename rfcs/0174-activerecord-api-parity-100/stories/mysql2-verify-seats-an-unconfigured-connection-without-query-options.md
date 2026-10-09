@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2Adapter verify! seats an unconfigured raw connection without query_options"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Column#default is typed unknown where Rails holds a String or nil"
-status: ready
+status: claimed
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-09T18:39:41Z"
+assignee: "attribute-methods-class-attribute-names-memo-and-cold-cache-arms"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "parity: arm-throw and block-param gates pass with a mark above the current measurement"
-status: claimed
+status: in-progress
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8718
 claim: "2026-10-09T17:09:43Z"
 assignee: "active-record-base-inherited-chain-needs-one-deferred-dispatch"
 blocked-by: null

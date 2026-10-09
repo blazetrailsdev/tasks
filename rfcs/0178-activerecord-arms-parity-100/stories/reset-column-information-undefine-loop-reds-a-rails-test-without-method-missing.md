@@ -1,6 +1,6 @@
 ---
 title: "activerecord: reset_column_information's undefine_attribute_methods loop breaks live records without method_missing"
-status: draft
+status: blocked
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "owner decision: port the loop and skip the Rails assertion, or receipt the omission (Records are not Proxies)"
 closed-reason: null
 ---
 

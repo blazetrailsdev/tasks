@@ -1,6 +1,6 @@
 ---
 title: "activerecord: a subclass reads its parent's primary_key through the prototype chain"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

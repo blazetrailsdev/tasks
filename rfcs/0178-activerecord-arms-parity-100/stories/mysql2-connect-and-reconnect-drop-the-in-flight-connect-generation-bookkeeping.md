@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2Adapter connect / reconnect drop the in-flight connect generation bookkeeping"
-status: draft
+status: closed
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "RFC 0178 refine 2026-10-09: moves no parity needle. The story body states it: no arms row, no call row, and no receipt shape fits a field. Confirmed on main @ 9d5fb25bbf: no mysql2-adapter.ts#connect / reconnect / disconnectBang / discardBang row in arms (either direction), returns, duck-types or call-mismatches."
 ---
 
 ## Context
