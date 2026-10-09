@@ -2,7 +2,7 @@
 title: "activerecord: test-adapter.ts's three pool-configuration helpers fold into the inline pool setup Rails writes"
 status: blocked
 updated: 2026-10-08
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: convergeable
 packages: ["activerecord"]
 deps: []
