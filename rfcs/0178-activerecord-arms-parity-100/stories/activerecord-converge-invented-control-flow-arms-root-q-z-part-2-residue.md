@@ -1,6 +1,6 @@
 ---
 title: "activerecord: converge the invented branches left in root-q-z part 2 (relation load path, one?, to_sql)"
-status: claimed
+status: in-progress
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#8714
 claim: "2026-10-09T15:39:41Z"
 assignee: "activerecord-converge-invented-control-flow-arms-root-q-z-part-2-residue"
 blocked-by: null

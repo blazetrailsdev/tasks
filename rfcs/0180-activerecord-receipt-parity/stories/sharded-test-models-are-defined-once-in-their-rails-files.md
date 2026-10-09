@@ -1,6 +1,6 @@
 ---
 title: "sharded-test-models-are-defined-once-in-their-rails-files"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null

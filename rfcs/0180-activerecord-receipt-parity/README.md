@@ -1,9 +1,9 @@
 ---
 rfc: "0180-activerecord-receipt-parity"
 title: "activerecord receipts: every deviation receipt ratified or converged — split from RFC 0174"
-status: active
+status: closed
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-10-09
 owner: "@deanmarano"
 packages:
   - "activerecord"

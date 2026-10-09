@@ -1,6 +1,6 @@
 ---
 title: "activerecord: quoted_date takes Ruby-shaped receivers, not a Temporal union with private dispatch helpers"
-status: blocked
+status: ready
 updated: 2026-10-09
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: "2026-10-09T13:09:38Z"
-assignee: "persistence-class-methods-update-lives-in-persistence-ts"
-blocked-by: "Waiting on trails#8704 to merge: the story is specified against its rewrite of quotedDate / toFs / usec in abstract/quoting.ts and postgresql/quoting.ts, and 8704 is still an open draft editing those same functions"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

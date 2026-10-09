@@ -1,6 +1,6 @@
 ---
 title: "inheritance-compute-type-seeds-its-type-candidates-cache-in-line"
-status: draft
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8712
+claim: "2026-10-09T16:00:15Z"
+assignee: "inheritance-compute-type-seeds-its-type-candidates-cache-in-line"
 blocked-by: null
 closed-reason: null
 ---

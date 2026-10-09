@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SQLite3 StatementPool#dealloc drops an async driver's close rejection"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

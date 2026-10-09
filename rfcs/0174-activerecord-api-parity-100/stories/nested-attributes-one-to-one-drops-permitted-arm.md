@@ -1,6 +1,6 @@
 ---
 title: "nested attributes: restore the permitted? arm on the one-to-one assigner"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "rbObjRespondTo does not answer the STRING_METHOD_TABLE names rbFSend now dispatches"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
