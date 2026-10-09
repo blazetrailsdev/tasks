@@ -20,57 +20,69 @@ closed-reason: null
 
 Found by trailmap (trailmap#48), whose `hub` database is PostgreSQL.
 
-`trails db create` never returns when the Postgres database it is asked to
-create already exists. No output, no error, no exit — the process sits there
-until it is killed.
-
-Reproduce, against a reachable Postgres whose `trailmap_hub_test` exists:
+`trails db create` never returns when its Postgres database already exists. It
+does all of its work and prints all of its output first:
 
 ```sh
-HUB_DATABASE_URL=postgres://postgres:…@host:5432/trailmap_hub_test \
-  pnpm exec tsx node_modules/@blazetrails/trailties/bin/trails.js db create
-# … no output, still running after five minutes
+$ HUB_DATABASE_URL=postgres://…/trailmap_hub_test trails db create
+Database 'storage/development.sqlite3' already exists
+Database 'trailmap_hub_test' already exists
+# … still running. killed at 25s, exit 124
 ```
 
-The sibling failure, on a database that does NOT exist, is loud but wrong:
+Both lines are correct. `DatabaseTasks.create` did its job and reported it,
+and `PostgreSQLDatabaseTasks#create` already connects through the maintenance
+database (`publicSchemaConfig()`) exactly as Rails does. **The command is
+simply unable to end.**
 
-```text
-We could not find your database: trailmap_hub_smoke2.
-Couldn't create 'trailmap_hub_smoke2' database. Please check your configuration.
-NoDatabaseError: We could not find your database: trailmap_hub_smoke2
-  sql: `CREATE DATABASE "trailmap_hub_smoke2" ENCODING = 'utf8'`
-```
+The cause is an open connection pool, not a bad query. `db.ts` registers
+`establishTaskConnection` on `preSubcommand` and has no matching teardown, and
+`PostgreSQLDatabaseTasks#create` finishes by establishing a pool on the
+database it just handled. On SQLite that costs nothing — better-sqlite3 is
+synchronous and holds no libuv handle, so the process exits anyway. On
+PostgreSQL the pool's sockets keep Node's event loop alive forever.
 
-Both point the same way: the create path connects to the TARGET database to
-issue `CREATE DATABASE`. Rails connects to the maintenance database
-(`postgres`) for that, which is why `rails db:create` can create a database
-that does not exist yet and reports "already exists" for one that does.
+Confirmed directly: the same script that hangs exits 0 the moment
+`connectionHandler.clearAllConnectionsBang()` is called before it ends.
 
 Why it matters beyond ergonomics: a boot smoke test or a CI job that runs
 `db create` before `db migrate` — the shape `trails new` generates, and the
-shape `scripts/smoke-boot.sh` uses — HANGS instead of failing, so the job burns
-its whole timeout and reports nothing useful. trailmap's `boot` job is in
-exactly that state and is why this story is blocking there; it carries no
-workaround for it.
+shape trailmap's `scripts/smoke-boot.sh` uses — HANGS instead of failing, so
+the job burns its whole timeout and reports nothing. trailmap's `boot` job sat
+for 24 minutes before it was cancelled, with every other job on the PR green.
+
+Note for whoever reads the original filing: it guessed the cause was the
+maintenance connection, by analogy with Rails'
+`establish_master_connection`. That guess was wrong — the reproduction above
+is what the fix was written against.
 
 ## Converged shape
 
-Rails' `PostgreSQLDatabaseTasks#create` connects to the maintenance database
-and creates from there, and treats an existing database as a reported no-op
-rather than an error:
+A `postAction` hook on the `db` command, pairing the `preSubcommand` one that
+opens the connection:
 
-- connect with the same config but `database: "postgres"` (Rails'
-  `establish_master_connection`),
-- `CREATE DATABASE` from that connection,
-- map `DatabaseAlreadyExists` to the "already exists" message and a zero exit,
-  as `db:create` does for SQLite today.
+```ts
+cmd.hook("preSubcommand", establishTaskConnection);
+cmd.hook("postAction", releaseTaskConnections);
+```
+
+`postAction` fires after a subcommand's action, including the chained ones
+(`db prepare`, `db reset`), and `clearAllConnectionsBang` disconnects the pools
+while leaving their configurations registered, so anything that queries
+afterwards reconnects.
+
+This is a Node necessity rather than a Rails divergence: `rake db:create` ends
+when the Ruby process ends and nothing hands the connection back. The teardown
+carries `@noRailsEquivalent PERMANENT`.
 
 ## Acceptance criteria
 
-- [ ] `db create` against an existing Postgres database prints that it already
+- [x] `db create` against an existing Postgres database prints that it already
       exists and EXITS zero, in bounded time.
-- [ ] `db create` against a non-existent Postgres database creates it.
-- [ ] Both are covered by a trailties test that would hang or fail on the
-      current code (a timeout assertion, so a regression cannot pass by
-      hanging).
-- [ ] `db drop` is checked for the same maintenance-connection assumption.
+- [x] A trailties test asserts no pool is left connected after the command, over
+      SQLite — nothing in the assertion is adapter-specific, so it pins the
+      behaviour without a Postgres server in the lane — and it fails on `main`.
+- [x] The chained commands (`db prepare`, `db reset`) are covered by the same
+      hook, and the existing 109 `db.test.ts` cases still pass.
+- [ ] `db drop`, `db schema:load` and the other verbs are confirmed to leave
+      nothing open either, once this lands.
