@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-trails#PENDING (story `mysql2-perform-query-takes-rails-control-flow-over-a-gem-shaped-raw-connection`)
+trails#8728 (story `mysql2-perform-query-takes-rails-control-flow-over-a-gem-shaped-raw-connection`)
 gave the npm `mysql2` connection the Ruby gem's surface so `Mysql2::DatabaseStatements#perform_query`
 (`vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/mysql2/database_statements.rb:41-109`)
 reads Rails' arms. The surface lives in
@@ -28,8 +28,13 @@ reads Rails' arms. The surface lives in
   `null`), `prepare(sql)` (a `Mysql2Statement`), `affectedRows`, `lastId`, `abandonResultsBang`,
   `setServerOption`, `queryOptions`, `readTimeout` and `automaticClose`.
 - `Mysql2Result` (`fields`, `size`, `toA`) and `Mysql2Statement` (`execute`, `affectedRows`, `close`).
-- `Mysql2.Client` holds `new(config)` and the `FOUND_ROWS` / `MULTI_STATEMENTS` /
-  `OPTION_MULTI_STATEMENTS_ON` / `OPTION_MULTI_STATEMENTS_OFF` constants.
+- `Mysql2.Client` holds the `MULTI_STATEMENTS` / `OPTION_MULTI_STATEMENTS_ON` /
+  `OPTION_MULTI_STATEMENTS_OFF` constants.
+
+`Mysql2Adapter.newClient` (`connection-adapters/mysql2-adapter.ts`) still translates the config for
+`mysql.createConnection` in line, where Rails is `::Mysql2::Client.new(config)`
+(`mysql2_adapter.rb:24-26`). Its `@inventedArm filter` / `if` receipts point here: the translation belongs
+behind a gem-shaped `Mysql2.Client.new`.
 
 None of it is scored. The mysql2 gem is not vendored (`vendor/` has `pg` and `sqlite3`, no `mysql2`), so
 `parity:api` maps no Ruby file onto `mysql2-client.ts` and the three novel names carry
@@ -41,8 +46,6 @@ None of it is scored. The mysql2 gem is not vendored (`vendor/` has `pg` and `sq
 
 Known gaps to check against the gem once it is vendored:
 
-- `Mysql2::Result#free` is not ported, so `free_raw_result` (`mysql2/database_statements.rb:133-138`) omits
-  the `raw_result.free` call.
 - `Mysql2::Client#warning_count` is not on the client. `AbstractMysqlAdapter#warningCount`
   (`packages/activerecord/src/connection-adapters/abstract-mysql-adapter.ts`) still runs
   `SHOW COUNT(*) WARNINGS`, where Rails reads `@raw_connection.warning_count`
@@ -60,4 +63,5 @@ Known gaps to check against the gem once it is vendored:
       scored against it, as `pg/connection.ts` is against the pg gem.
 - [ ] The `@noRailsEquivalent CONVERGEABLE` receipts in `mysql2-client.ts` are gone, each name either
       credited to a gem member or deleted.
-- [ ] `Result#free` and `Client#warning_count` are ported and called where Rails calls them.
+- [ ] `Client#warning_count` is ported and read where Rails reads it.
+- [ ] `newClient` is `Mysql2.Client.new(config)` plus Rails' rescue, with no `@inventedArm` receipt.
