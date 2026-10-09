@@ -19,8 +19,8 @@ closed-reason: null
 ## Context
 
 Residue of `activerecord-converge-invented-control-flow-arms-root-q-z-part-2-residue`, which converged
-`relation.ts#isNone` / `#isAny` / `#isOne` / `#toSql` / `#preloadAssociations`. Five `relation.ts` rows are
-left in `pnpm parity:api:arms:report --package=activerecord --direction=invented`. Four are one design
+`relation.ts#isNone` / `#isAny` / `#isOne` / `#toSql` / `#preloadAssociations`. Four `relation.ts` rows are
+left in `pnpm parity:api:arms:report --package=activerecord --direction=invented`. They are one design
 question and cannot be converged one at a time (Rails lines are
 `vendor/rails/v8.0.2/activerecord/lib/active_record/relation.rb`):
 
@@ -49,22 +49,20 @@ story needs from the repo owner before code: converge onto Rails' body, or ratif
 in-flight handle in `packages/activerecord/CLAUDE.md` § "`Relation` is evaluated by an async query" and
 receipt them `@inventedArm … — PERMANENT`.
 
-The fifth row is separate:
+What reading the load path for trails#8714 found: the in-flight handle is not only there for the
+disabled `loadAsync` arm. `load` on a scheduled relation takes `@future_result` and clears it before its
+first await, so a second concurrent `load` (`Promise.all([rel.length(), rel.map(...)])`) sees
+`loaded?` true and `scheduled?` false and returns before the records are set. Ruby cannot interleave two
+`load` calls; JS can. So removing `_loadResult` outright breaks concurrent readers, and that arm is a
+candidate for ratification rather than removal. The bare `Promise<Result>` also needs a rejection
+handler while nobody awaits it, or a failed query is an unhandled rejection.
 
-- `relation.ts#referencesEagerLoadedTables` — `+if` — `relation.rb:1474-1489` is
-  `references_values.map(&:to_s)`. trails spells a Symbol reference `":posts"` (trails#6895), and the port
-  strips the colon with a ternary because ruby-compat's `rbObjAsString` returns a String unchanged. The
-  same `isSymbol(x) ? symbolToS(x) : x` ternary stands in for `to_s` at about ten other sites
-  (`actionpack/src/action-dispatch/journey/route.ts:212`, `activemodel/src/error.ts:237`, …). Teaching
-  `rbObjAsString` to strip a leading colon is not safe as it stands: `"::Foo"` and `":memory:"` are
-  Strings. It needs one ruby-compat `to_s` for a value that is a Symbol or a String, used at every such
-  site.
+`relation.ts#referencesEagerLoadedTables`, the fifth row the parent listed, is converged in trails#8714
+(`references_values.map(&:to_s)` through ruby-compat's `toS`).
 
 ## Acceptance criteria
 
 - [ ] The repo owner's ruling on the load path is recorded here before any code.
 - [ ] `loadAsync`, `load`, `execQueries` and `reset` either take Rails' control flow, or carry
       `@inventedArm … — PERMANENT` receipts against a ratified CLAUDE.md section.
-- [ ] `referencesEagerLoadedTables` is `this.referencesValues.map(...)` over one `to_s` call with no
-      branch, and `relation/symbol-references-eager-load.trails.test.ts` still passes.
-- [ ] The invented-direction report shows 0 `relation.ts` rows for these five methods.
+- [ ] The invented-direction report shows 0 `relation.ts` rows for these four methods.
