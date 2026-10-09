@@ -50,4 +50,9 @@ query to the connection before `loadAsync` returns.
 - [ ] The `await posts;` line is removed from `LoadAsyncNullExecutorTest` "load async from
       transaction", so the body matches `load_async_test.rb:324-336`, and the test passes on all
       three adapter lanes.
+- [ ] The `if (inMemoryDb()) await posts;` line is removed from `LoadAsyncTest` "load async from
+      transaction" in the same file, so the body matches `load_async_test.rb:65-79`. It was added by
+      trails#8725: with `ARCONN=sqlite3_mem` `asyncEnabled()` is false, so that test reaches the
+      null-executor arm too, and it runs only on the `Active Record SQLite :memory: Tests` lane
+      (push to main, or a PR labelled `run-sqlite-mem`). Verify on that lane.
 - [ ] No per-relation parking or drain registry on the transaction.
