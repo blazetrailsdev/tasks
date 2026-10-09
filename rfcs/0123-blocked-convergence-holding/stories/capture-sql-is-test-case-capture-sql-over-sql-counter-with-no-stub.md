@@ -2,7 +2,7 @@
 title: "activerecord: captureSql is TestCase#capture_sql over SQLCounter, with execute stubbed in test setup"
 status: blocked
 updated: 2026-10-08
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: convergeable
 packages: ["activerecord"]
 deps: []
