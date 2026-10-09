@@ -2,7 +2,7 @@
 title: "activerecord: save, destroy and the row writers resume through superMethod, not base.ts's closure list"
 status: draft
 updated: 2026-10-09
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps: []
