@@ -5,7 +5,8 @@ updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - persistence-class-methods-update-lives-in-persistence-ts
 deps-rfc: []
 est-loc: 250
 priority: null
