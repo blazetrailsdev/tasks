@@ -70,13 +70,22 @@ from `packages/activerecord/src/index.ts:82`.
 trails-only setup lines inside Rails-named tests, so they convert to `registerModel` like the rest,
 but the test names and assertions do not move (root CLAUDE.md, "NEVER rename or reword test names").
 
-### Open sub-question
+### Register always, as `inherited` does (Dean, 2026-10-09)
 
-Whether `registerModel(Foo)` should register the subclass for a **direct** `class Foo extends Base`,
-or keep the array form's `proto !== frameworkBase(m)` guard and register only genuine STI children.
-Rails' `inherited` fires for every subclass, so the faithful answer is to register always; the guard
-exists today only because the array form was the sole caller. Decide this in the implementing PR and
-record which way it went.
+`registerModel` registers the subclass for **every** model, including a direct
+`class Foo extends Base`. Rails' `inherited` fires for every subclass, so registering always is the
+faithful shape; the array form's guard exists only because it was the sole caller.
+
+So the guard `proto && proto !== Function.prototype && proto !== frameworkBase(m)`
+(`associations.ts:121-131`) is deleted outright rather than moved into the single-model path.
+`frameworkBase` walks to the class owning `_isActiveRecordBase`
+(`associations.ts:95-102`) — i.e. `ActiveRecord::Base` itself — so that guard was skipping
+registration exactly for direct children of `Base`, the case Rails registers.
+
+Nothing new is needed to protect the top of the chain: `rbClassSuperclass`
+(`packages/ruby-compat/src/object.ts:199-205`) answers `null` once the superclass is
+`Function.prototype`, and the absorbed body returns early on a null parent, so a `Base` receiver
+seats its constant and registers nothing.
 
 ### Ordering constraint
 
@@ -91,8 +100,9 @@ trails PR below is what makes this story closable, so it lands first.
       `inherited`, a JS `class` declaration does neither, so `registerModel` is the port of that
       pair rather than invented surface. It states that `registerModel` is the interface application
       and test code uses, and that its 1,796 call sites are correct as written.
-- [ ] `registerModel` registers the subclass in every form, not only the array form. The implementing
-      PR records whether a direct `extends Base` model registers too (see the open sub-question).
+- [ ] `registerModel` registers the subclass in every form, for every model, as `inherited` does —
+      a direct `class Foo extends Base` registers too, and the array form's
+      `proto !== frameworkBase(m)` guard is deleted rather than relocated.
 - [ ] The one-argument `registerSubclass` is gone from `inheritance.ts`, from the `index.ts:82`
       export and from all 93 call sites, which read `registerModel` instead. Its `@noRailsEquivalent`
       receipt goes with it.
