@@ -1,7 +1,7 @@
 ---
 title: "modelRegistry and the pending counter-cache deferral are deleted; registerModel wraps registerConstant"
-status: draft
-updated: 2026-10-08
+status: in-progress
+updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8701
+claim: "2026-10-09T01:18:41Z"
+assignee: "model-registry-and-register-model-are-deleted"
 blocked-by: null
 closed-reason: null
 ---

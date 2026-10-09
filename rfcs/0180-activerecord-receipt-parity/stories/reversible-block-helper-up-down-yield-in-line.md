@@ -1,7 +1,7 @@
 ---
 title: "activerecord: ReversibleBlockHelper#up / #down yield in line; no queued block list"
-status: ready
-updated: 2026-10-07
+status: done
+updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8700
+claim: "2026-10-09T01:00:23Z"
+assignee: "relation-layer-with-connection-receipts-are-not-the-tosql-sites"
 blocked-by: null
 closed-reason: null
 ---

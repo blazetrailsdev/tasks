@@ -1,7 +1,7 @@
 ---
 title: "activerecord: temporal-wire.ts's parsers fold into the OID and ActiveModel cast_value bodies"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: findings
 packages: ["activerecord", "activemodel"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8702
+claim: "2026-10-09T01:22:13Z"
+assignee: "temporal-wire-parsers-fold-into-the-oid-and-type-cast-bodies"
 blocked-by: null
 closed-reason: null
 ---

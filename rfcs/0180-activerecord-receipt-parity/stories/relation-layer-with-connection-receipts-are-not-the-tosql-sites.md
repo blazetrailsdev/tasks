@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the four relation-layer with_connection receipts are not toSql's, and need their own owner"
-status: ready
-updated: 2026-10-07
+status: blocked
+updated: 2026-10-09
 rfc: "0180-activerecord-receipt-parity"
 cluster: convergeable
 packages: ["activerecord"]
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-09T01:00:23Z"
+assignee: "relation-layer-with-connection-receipts-are-not-the-tosql-sites"
+blocked-by: "trails#8700 converged apply_join_dependency (finder-methods.ts now calls model.withConnection). Three sites remain on withConnectionSync, receipts cite this story. arel (relation/query-methods.ts:1136): read by the synchronous Relation#toSql (relation.ts:1076), ratified sync by CLAUDE.md section 'Relation is evaluated by an async query'. execMainQuery (relation.ts:708): with async:true it hands loadAsync a FutureResult, which is PromiseLike (future-result.ts:161), so the async ConnectionPool#withConnection (connection-pool.ts:397) would adopt it and reset's _futureResult.cancel() (relation.ts:465) would have nothing to cancel. loadAsync (relation.ts:482): a synchronous method returning the relation, callers read isScheduled at once; awaiting the lease makes it Promise-returning. Unblocks on an owner decision: whether loadAsync becomes async, and whether FutureResult stays thenable."
 closed-reason: null
 ---
 
