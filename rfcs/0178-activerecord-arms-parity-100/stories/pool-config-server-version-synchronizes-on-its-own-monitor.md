@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PoolConfig#serverVersion synchronizes on the connection's lock where Rails takes the pool config's monitor"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

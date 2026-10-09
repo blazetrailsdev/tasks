@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Migration#changeTable reads a replayed block out of its options parameter"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "migration.ts toInteger helper stands in for String#to_i, which ruby-compat ports as toI"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "migration-proxy-load-migration-arms-need-a-kernel-load-port"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

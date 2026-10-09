@@ -1,7 +1,7 @@
 ---
 title: "api-compare: the skeleton writer drops ~500 top-level functions the synthesized file module re-lists"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []

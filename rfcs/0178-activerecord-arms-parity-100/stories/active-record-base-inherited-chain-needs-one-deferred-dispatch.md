@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Base's inherited chain needs one deferred dispatch, decided in CLAUDE.md"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
