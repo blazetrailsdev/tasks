@@ -2,7 +2,7 @@
 title: "activerecord: Migration::Compatibility.find stringifies the version in one call"
 status: blocked
 updated: 2026-10-08
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
