@@ -1,6 +1,6 @@
 ---
 title: "activerecord: mysql2 and PostgreSQL discard! carry no connect-generation bookkeeping"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

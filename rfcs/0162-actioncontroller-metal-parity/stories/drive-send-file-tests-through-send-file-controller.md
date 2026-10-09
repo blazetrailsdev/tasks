@@ -1,7 +1,7 @@
 ---
 title: "Drive the SendFileTest tests through SendFileController (parked branch)"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-09
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

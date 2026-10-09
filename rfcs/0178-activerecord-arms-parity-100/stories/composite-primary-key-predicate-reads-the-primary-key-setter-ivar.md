@@ -1,7 +1,7 @@
 ---
 title: "composite_primary_key? reads @composite_primary_key, written by primary_key="
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: arms
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8722
+claim: "2026-10-09T19:09:36Z"
+assignee: "composite-primary-key-predicate-reads-the-primary-key-setter-ivar"
 blocked-by: null
 closed-reason: null
 ---

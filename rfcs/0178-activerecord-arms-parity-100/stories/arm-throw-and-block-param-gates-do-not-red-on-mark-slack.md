@@ -1,6 +1,6 @@
 ---
 title: "parity: arm-throw and block-param gates pass with a mark above the current measurement"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

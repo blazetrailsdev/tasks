@@ -1,7 +1,7 @@
 ---
 title: "Parameters#each_pair, #each_value and #each_key have no to_enum arm"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-09
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8723
+claim: "2026-10-09T19:45:47Z"
+assignee: "parameters-convert-value-delete-and-deep-transform-are-not-the-rails-bodies"
 blocked-by: null
 closed-reason: null
 ---

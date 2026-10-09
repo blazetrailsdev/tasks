@@ -1,7 +1,7 @@
 ---
 title: "log_subscriber_test setup writes cache_store and perform_caching on the controller instance"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-09
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

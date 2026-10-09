@@ -1,7 +1,7 @@
 ---
 title: "AbstractController::Logger and Callbacks are not Concern modules; Callbacks is included from AbstractController"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-09
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

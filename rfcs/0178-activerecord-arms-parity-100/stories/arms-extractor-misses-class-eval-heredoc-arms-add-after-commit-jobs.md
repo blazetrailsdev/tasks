@@ -1,6 +1,6 @@
 ---
 title: "arms report: a class_eval heredoc's arms are invisible on the Ruby side (addAfterCommitJobsCallback +or)"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

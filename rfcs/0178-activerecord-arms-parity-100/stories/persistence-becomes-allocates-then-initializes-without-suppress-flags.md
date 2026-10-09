@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Persistence#becomes is allocate plus initialize, with no suppress-flag try/restore"
-status: ready
-updated: 2026-10-05
+status: blocked
+updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Its converged shape (klass.allocate + initialize) was ruled out: dep base-allocate-comes-from-a-ruby-compat-rb-obj-alloc was closed PERMANENT on the owner ruling of 2026-10-08 (trails CLAUDE.md, A record is built with new Klass only; Object.create reddened TransactionCallbacksTest in trails#8661). The persistence.ts#becomes +try +if +if invented row is still live on main @ 9d5fb25bbf, so the story needs a re-cut (Rails-shaped body over new Klass, or a PERMANENT receipt) before it is claimable."
 closed-reason: null
 ---
 

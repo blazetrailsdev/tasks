@@ -1,6 +1,6 @@
 ---
 title: "parameters-transform-keys-and-values-have-no-enumerator-arm"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Redirecting, CSP, Layouts, Flash and Logging module bodies dispatch through self as Rails does"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-09
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
