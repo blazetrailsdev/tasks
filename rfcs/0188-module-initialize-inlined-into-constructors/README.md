@@ -1,9 +1,9 @@
 ---
 rfc: "0188-module-initialize-inlined-into-constructors"
 title: "module initialize and self.new: inlined into constructors, marked @inlinedFrom, and scored by the parity gates"
-status: draft
+status: active
 created: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-09
 owner: "@deanmarano"
 packages:
   - "scripts"
