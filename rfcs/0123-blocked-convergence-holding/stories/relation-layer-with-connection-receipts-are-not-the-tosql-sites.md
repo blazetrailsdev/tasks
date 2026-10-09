@@ -2,7 +2,7 @@
 title: "activerecord: the four relation-layer with_connection receipts are not toSql's, and need their own owner"
 status: blocked
 updated: 2026-10-09
-rfc: "0180-activerecord-receipt-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: convergeable
 packages: ["activerecord"]
 deps: []
