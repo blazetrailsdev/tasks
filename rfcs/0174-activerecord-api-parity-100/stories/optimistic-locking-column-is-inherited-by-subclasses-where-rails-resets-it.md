@@ -1,7 +1,7 @@
 ---
 title: "activerecord: a subclass inherits its parent's locking_column where Rails' inherited resets it"
-status: ready
-updated: 2026-10-09
+status: claimed
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-10T03:39:38Z"
+assignee: "schema-dumper-header-branches-on-the-ts-js-dump-language"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: OID::Hstore#cast is an invented override; Rails inherits Type::Value#cast"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8744
+claim: "2026-10-10T03:09:39Z"
+assignee: "mysql2-client-scores-against-the-vendored-mysql2-gem"
 blocked-by: null
 closed-reason: null
 ---

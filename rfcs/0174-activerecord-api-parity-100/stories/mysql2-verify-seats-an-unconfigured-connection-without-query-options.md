@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Mysql2Adapter verify! seats an unconfigured raw connection without query_options"
-status: ready
-updated: 2026-10-09
+status: in-progress
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8744
+claim: "2026-10-10T03:09:39Z"
+assignee: "mysql2-client-scores-against-the-vendored-mysql2-gem"
 blocked-by: null
 closed-reason: null
 ---
