@@ -40,3 +40,34 @@ parse `--json` through `| jq` or `| python3`.
   Or await `process.stdout.write("", resolve)` before `process.exit`.
 - A regression test pipes a `--json` listing of more than 64 KiB through a
   child process and parses it in full.
+
+## Impact observed in review (trails#8738, 2026-10-09)
+
+This degraded four consecutive fidelity-review passes on one PR. Each pass
+opened with "Story: could not resolve (`pnpm tasks list --json` emitted
+non-JSON on stdout, jq parse error)" and the reviewer fell back to reviewing
+against the PR description alone, with no story to check scope or acceptance
+criteria against.
+
+Note the reported diagnosis was **wrong** — "non-JSON on stdout" reads as prose
+or a log line leaking into the stream, when the stream is in fact valid JSON cut
+mid-token. Anyone who hits this goes looking for a stray `console.log`. That
+makes the misleading symptom part of the cost, and worth a word in whatever
+fixes it.
+
+Re-measured on the full unfiltered listing, which is far past the earlier
+68 KiB case:
+
+```console
+pnpm tasks list --json | wc -c   ->  65536, and 81920 on a repeat run
+pnpm tasks list --json > file    ->  10502968 bytes, parses clean
+```
+
+The cut varying between 64 KiB and 80 KiB across runs on identical input is
+worth keeping in the regression test's sights: an assertion on an exact
+truncation offset would be flaky, so assert that the document parses.
+
+One more acceptance criterion from that experience: a `--json` verb must exit
+**non-zero** if it could not write its payload in full. All four passes above
+saw exit status 0 on a truncated document, which is what let the failure look
+like malformed output rather than a broken pipe.
