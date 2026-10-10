@@ -1,6 +1,6 @@
 ---
 title: "activemodel: time casts answer a bare Temporal.Instant, so to_fs keeps an Instant seat and format_for_inspect a third clause"
-status: draft
+status: closed
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: trails#8742 dropped the Temporal.Instant to_fs seat and format_for_inspect's third clause with every activemodel type test and the activerecord inspect, cache-key and quoting tests green, so no cast reaches to_fs with a bare Instant. The range residue is filed as range-formats-db-keeps-a-helper-because-a-number-has-no-to-fs-seat."
 ---
 
 ## Context

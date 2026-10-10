@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SchemaReflection#cache runs under a synchronize Rails does not have"
-status: ready
-updated: 2026-10-09
+status: blocked
+updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-10T02:09:38Z"
+assignee: "enum-private-enum-body-is-a-line-for-line-port"
+blocked-by: "owner decision: SchemaReflection#cache awaits load_cache, so a bare ||= lets two cold callers each store a different SchemaCache, and Rails has no warm-before-handout point (adopt_connection warms only under lazily_load_schema_cache, connection_pool.rb). The story's pinned concurrent cold-call test cannot pass without the synchronize or an invented re-check arm; needs the repo owner to rule the synchronize PERMANENT in packages/activerecord/CLAUDE.md or name the warm site."
 closed-reason: null
 ---
 

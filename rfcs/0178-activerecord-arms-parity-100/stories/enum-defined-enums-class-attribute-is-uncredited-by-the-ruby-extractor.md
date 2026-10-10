@@ -1,6 +1,6 @@
 ---
 title: "parity: the Ruby extractor does not credit base.class_attribute in Enum.extended"
-status: draft
+status: in-progress
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8742
+claim: "2026-10-10T02:58:13Z"
+assignee: "enum-defined-enums-class-attribute-is-uncredited-by-the-ruby-extractor"
 blocked-by: null
 closed-reason: null
 ---

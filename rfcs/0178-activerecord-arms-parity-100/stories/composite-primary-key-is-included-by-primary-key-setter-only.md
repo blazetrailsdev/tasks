@@ -1,6 +1,6 @@
 ---
 title: "CompositePrimaryKey is included by primary_key= only, and its methods keep Rails' composite guard"
-status: claimed
+status: in-progress
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#8741
 claim: "2026-10-10T01:39:35Z"
 assignee: "composite-primary-key-is-included-by-primary-key-setter-only"
 blocked-by: null

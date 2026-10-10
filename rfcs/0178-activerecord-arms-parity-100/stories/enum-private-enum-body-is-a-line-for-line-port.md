@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port Enum#_enum line for line and move conflict detection into define_enum_methods"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8742
+claim: "2026-10-10T02:09:38Z"
+assignee: "enum-private-enum-body-is-a-line-for-line-port"
 blocked-by: null
 closed-reason: null
 ---

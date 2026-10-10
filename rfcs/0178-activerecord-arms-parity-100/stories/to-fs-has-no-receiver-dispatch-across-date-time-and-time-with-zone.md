@@ -1,7 +1,7 @@
 ---
 title: "activesupport: to_fs has no receiver dispatch; Time#to_fs carries two invented arms and quoting re-derives them"
-status: ready
-updated: 2026-10-09
+status: in-progress
+updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8742
+claim: "2026-10-10T02:09:38Z"
+assignee: "enum-private-enum-body-is-a-line-for-line-port"
 blocked-by: null
 closed-reason: null
 ---
