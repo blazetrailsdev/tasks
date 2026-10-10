@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Querying#_load_from_sql calls instantiate_instance_of (call row)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["parity-100-rehome-postponed-rfc-dependencies", "load-from-sql-iterates-i
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8746
+claim: "2026-10-10T09:09:37Z"
+assignee: "activerecord-converge-build-where-clause-constructor-order"
 blocked-by: null
 closed-reason: null
 ---

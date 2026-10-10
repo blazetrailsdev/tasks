@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Preloader::ThroughAssociation's .reduce(:merge) (2 args shape rows)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args
 packages: ["activerecord", "ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8747
+claim: "2026-10-10T09:39:33Z"
+assignee: "activerecord-converge-preloader-through-reduce-merge"
 blocked-by: null
 closed-reason: null
 ---

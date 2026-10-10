@@ -1,7 +1,7 @@
 ---
 title: "trails db create hangs on a Postgres database that already exists"
-status: in-progress
-updated: 2026-10-09
+status: done
+updated: 2026-10-10
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]

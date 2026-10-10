@@ -1,7 +1,7 @@
 ---
 title: "activerecord: TypeCaster::Connection#type_for_attribute leases through with_connection (call row)"
 status: ready
-updated: 2026-09-30
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args
 packages: ["activerecord"]
