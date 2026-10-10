@@ -18,9 +18,8 @@ closed-reason: null
 
 ## Context
 
-**Gate: do not promote or start this story until the RFC's open question 4 is
-answered.** It is filed so the site is not lost, and it is the one story in
-the RFC whose direction is not settled.
+Open question 4 was answered on 2026-10-10: the per-pid cache is a plain
+object. This story was held until then.
 
 `ActiveRecord::ConnectionAdapters::StatementPool`
 (`activerecord/lib/active_record/connection_adapters/statement_pool.rb:11`) is

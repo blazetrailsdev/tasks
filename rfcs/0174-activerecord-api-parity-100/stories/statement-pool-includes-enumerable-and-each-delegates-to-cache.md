@@ -44,3 +44,13 @@ which has `each`, so the body can be Rails' one line.
 - [ ] Callers and tests that pass a two-argument block still work, or are updated to the pair
       shape `Hash#each` yields.
 - [ ] `pnpm parity:api:calls`, `pnpm parity:api:params` and `pnpm parity:api:extra:gate` stay green.
+
+## Notes
+
+RFC `0190-native-js-hash-forms` open question 4 (resolved 2026-10-10) makes the
+per-pid cache a plain object again, as Rails' `{}` is
+(`native-hash-statement-pool-cache-is-a-plain-object`). `each(block)` as
+`this.cache.each(block)` holds only while the cache is a ruby-compat `Hash`.
+If that story has landed first, `each` is a `for…of` over
+`Object.entries(this.cache)` and the first criterion's second half no longer
+applies; `include(StatementPool, Enumerable)` is unaffected.

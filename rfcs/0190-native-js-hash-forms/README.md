@@ -319,7 +319,7 @@ proc. These features are permanent, and
 
 Five sites are string-keyed with none of those features. Four convert to a plain object in `native-hash-string-keyed-carriers-to-plain-objects`: `persistence.ts:657`,
 `actionpack/src/test-helpers/abstract-unit.ts:535`,
-`activemodel/src/attribute-mutation-tracker.ts:207` and `:211`. The fifth, `connection-adapters/statement-pool.ts:18`, is its own story, `native-hash-statement-pool-cache-is-a-plain-object`, and is not to be started until open question 4 is answered. A sixth
+`activemodel/src/attribute-mutation-tracker.ts:207` and `:211`. The fifth, `connection-adapters/statement-pool.ts:18`, is its own story, `native-hash-statement-pool-cache-is-a-plain-object`, which open question 4 settled as a plain object. A sixth
 candidate, `hash-with-indifferent-access.ts:581` (`HWIA#to_hash`), stays: Rails
 copies the receiver's default onto the result (`set_defaults(copy)`,
 `hash_with_indifferent_access.rb:376-381`), which needs the default seat.
@@ -422,7 +422,7 @@ and are unaffected.
 3. **Carrier and audit**, independent of phase 2:
    `native-hash-carrier-permanent-features-ratified`,
    `native-hash-hwia-consumer-audit`, and
-   `native-hash-string-keyed-carriers-to-plain-objects` (after `native-hash-merge-sites`), then `native-hash-statement-pool-cache-is-a-plain-object` (held until open question 4 is answered).
+   `native-hash-string-keyed-carriers-to-plain-objects` (after `native-hash-merge-sites`), then `native-hash-statement-pool-cache-is-a-plain-object` (open question 4 is resolved).
 
 The substitution stories are chained by `deps` so that no two that share a
 package are open at once: the three `key?` stories have disjoint packages and
@@ -504,29 +504,20 @@ Measured the same way as § "Motivation", from trails `main`:
 <!-- Every question here must be resolved or explicitly deferred (to a named
      follow-up RFC/story) before this RFC moves to `status: active`. -->
 
-1. **Does `h[k] !== undefined` credit `key?`?** It is the only native spelling
-   that reads `{ name: undefined }` as absent, which is how trails forwards an
-   absent keyword, and it is the shape `compare.ts:303-307` says the gate
-   cannot tell from a dropped guard. Recommendation: no. Those sites keep
-   `hasKey`, which is a feature the helper has and `in` does not.
-2. **Do `delete_if`, `keep_if` and `replace` stay on their helpers?** The
-   ruling's list of native forms does not name one for them, and
-   § "Per-name decisions" keeps all three (16 lines). Recommendation: keep.
-   If the answer is a hand-written loop, it is one more substitution story
-   and no gate work, since the lowering table already admits the loop.
+All resolved by the repo owner on 2026-10-10, each as recommended.
+
+1. **Does `h[k] !== undefined` credit `key?`?** Resolved: no. A site whose
+   object can carry `{ name: undefined }` keeps `hasKey`.
+2. **Do `delete_if`, `keep_if` and `replace` stay on their helpers?** Resolved:
+   yes. No substitution story is filed for them.
 3. **Should a value-using `delete` be split into a read and a `delete`
-   statement?** That would take `hashDelete` from about 76 residual sites to
-   near zero, at two statements per site and a changed evaluation order where
-   the call sat inside an expression. Recommendation: no. Ruby's `delete`
-   returns the value, JS's does not, and that is a feature Ruby has.
-4. **`StatementPool`'s inner cache: plain object or `Hash`?** Rails has `{}`
-   and `cache.each(&block)`. trails#8716 made it a `Hash`, and
-   `statement-pool-includes-enumerable-and-each-delegates-to-cache` builds on
-   that. Recommendation: plain object, per the ruling, with `each` as a
-   `for…of` over `Object.entries` (`each` is already in `NO_JS_CALL_FORM`).
-5. **Activation.** The RFC lands `draft`, and its stories `draft`. Flipping it
-   to `active` and promoting the stories is the owner's call once the
-   questions above are answered.
+   statement?** Resolved: no. The 76 value-using `hashDelete` sites stay.
+4. **`StatementPool`'s inner cache: plain object or `Hash`?** Resolved: plain
+   object, with `each` as a `for…of` over `Object.entries`.
+   `native-hash-statement-pool-cache-is-a-plain-object` is no longer held, and
+   `statement-pool-includes-enumerable-and-each-delegates-to-cache` carries a
+   note to that effect.
+5. **Activation.** Resolved: the RFC is `active` and its stories are `ready`.
 
 ## Changelog
 
@@ -542,3 +533,6 @@ Measured the same way as § "Motivation", from trails `main`:
   added for the 49 `merge` sites; `StatementPool`'s cache carved into its own
   story held behind open question 4; `hashDelete` counts reconciled to 94
   call sites (18 bare, 76 value-using); chain depth restated.
+- 2026-10-10: open questions 1-5 resolved as recommended (repo owner); RFC
+  activated. `activesupport-hash-utils-merge-retires-onto-ruby-compat-hash-merge`
+  and `port-ruby-enumerable-reject-delete-if-and-merge-bang` closed.
