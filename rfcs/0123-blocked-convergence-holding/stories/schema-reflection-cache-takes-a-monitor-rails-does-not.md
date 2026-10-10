@@ -2,7 +2,7 @@
 title: "activerecord: SchemaReflection#cache runs under a synchronize Rails does not have"
 status: blocked
 updated: 2026-10-10
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

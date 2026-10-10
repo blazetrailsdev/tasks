@@ -2,7 +2,7 @@
 title: "preserve-original-encrypted-skips-its-column-check-on-a-cold-schema-cache"
 status: blocked
 updated: 2026-10-09
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

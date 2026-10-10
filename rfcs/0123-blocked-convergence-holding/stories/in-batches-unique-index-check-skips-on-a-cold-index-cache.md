@@ -2,7 +2,7 @@
 title: "activerecord: in_batches skips the unique-index check on a cold index cache and validates twice"
 status: blocked
 updated: 2026-10-09
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

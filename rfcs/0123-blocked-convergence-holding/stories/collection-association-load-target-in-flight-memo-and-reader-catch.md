@@ -2,7 +2,7 @@
 title: "activerecord: CollectionAssociation#load_target in-flight memo and #reader catch are arms Rails lacks"
 status: blocked
 updated: 2026-10-08
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
