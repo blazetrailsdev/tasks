@@ -2,7 +2,7 @@
 title: "activerecord: Relation#initialize_copy carries a from relation's materialized limited ids"
 status: blocked
 updated: 2026-10-10
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
