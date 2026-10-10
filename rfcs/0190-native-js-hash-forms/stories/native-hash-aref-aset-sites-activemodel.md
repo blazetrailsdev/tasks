@@ -1,18 +1,17 @@
 ---
-title: "Hash#[] and Hash#[]= on a plain object are element access: activerecord, actionpack, activesupport, arel"
+title: "Hash#[] and Hash#[]= on a plain object are element access: activemodel"
 status: draft
 updated: 2026-10-10
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 cluster: substitution
-packages: [activerecord, actionpack, activesupport, arel]
+packages: [activemodel]
 deps:
   [
-    native-hash-delete-sites-actionpack-trailties-rack-test,
     native-hash-delete-sites-activerecord-activemodel-activesupport,
     native-hash-element-access-credits-aref-aset,
   ]
 deps-rfc: []
-est-loc: 200
+est-loc: 250
 priority: null
 pr: null
 claim: null
@@ -31,14 +30,11 @@ this story's dependencies have merged; before that the substitution is red on
 
 Count with `grep -rnE '(^|[^.A-Za-z_])hashAref\(' packages/<pkg>/src --include=*.ts`. The figures below are lines at trails `ddd629745a` (2026-10-10) and include `.hashAref(` method calls on ported classes, which are not helper calls and stay.
 
-| Package       | `hashAref` | `hashAset` |
-| ------------- | ---------- | ---------- |
-| activerecord  | 8          | 4          |
-| activesupport | 4          | 1          |
-| actionpack    | 3          | 3          |
-| arel          | 0          | 1          |
+| Package     | `hashAref` | `hashAset` |
+| ----------- | ---------- | ---------- |
+| activemodel | 13         | 16         |
 
-This story covers `hashAset(` as well as `hashAref(`; apply every criterion to both names. Test files hold 53 more `hashAref(` occurrences repo-wide, 20 in ruby-compat's own tests, which stay, and the rest in activemodel (9 files) and activerecord (3 files) tests, which ride with the story for their package.
+This story covers `hashAset(` as well as `hashAref(`; apply every criterion to both names.
 
 `hashAref` answers `null` for a miss, a `Hash`'s default, a non-Hash receiver's
 `get`, and refuses an inherited `Object.prototype` member (`hash.ts:406-424`).
@@ -49,6 +45,8 @@ property (`hash.ts:433-456`). A native `h[k]` answers `undefined` on a miss and
 when its receiver is statically a plain object, its key is a literal or
 otherwise cannot name a prototype member, and nothing downstream tells `null`
 from `undefined` (`x != null` does not; `x === null` and `rbInspect(x)` do).
+
+activemodel is where the dispatching arm is live: `LazyAttributeHash#get` / `#set` (`activemodel/lib/active_model/attribute_set/builder.rb:110-116`) are what `hashAref` / `hashAset` send to (`scripts/api-compare/operator-order-spelling.ts:79-90`). A site whose receiver is `Record | LazyAttributeHash` stays.
 
 ## Acceptance criteria
 

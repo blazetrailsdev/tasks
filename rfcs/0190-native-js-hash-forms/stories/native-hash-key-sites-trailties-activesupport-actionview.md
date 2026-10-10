@@ -2,7 +2,7 @@
 title: "key? on a plain object is `in` / Object.hasOwn: trailties, activesupport, actionview, ruby-compat"
 status: draft
 updated: 2026-10-10
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 cluster: substitution
 packages: [trailties, activesupport, actionview, ruby-compat]
 deps:

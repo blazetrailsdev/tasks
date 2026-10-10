@@ -2,7 +2,7 @@
 title: "Element access credits Hash#[] and Hash#[]= wherever hashAref / hashAset do"
 status: draft
 updated: 2026-10-10
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 cluster: gate
 packages: []
 deps: [native-hash-form-marks-in-ts-extractor]

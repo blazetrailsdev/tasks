@@ -2,7 +2,7 @@
 title: "A value-discarding Hash#delete is a `delete` statement: activerecord, activemodel, activesupport"
 status: draft
 updated: 2026-10-10
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 cluster: substitution
 packages: [activerecord, activemodel, activesupport]
 deps: [native-hash-merge-bang-sites-activerecord-activemodel-activesupport-trailties]

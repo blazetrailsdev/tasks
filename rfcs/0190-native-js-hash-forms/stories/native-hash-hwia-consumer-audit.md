@@ -2,7 +2,7 @@
 title: "Audit the 20 HashWithIndifferentAccess consumers against what Rails passes"
 status: draft
 updated: 2026-10-10
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 cluster: carrier-audit
 packages: [activesupport, activemodel, activerecord, actionpack, trailties]
 deps: []

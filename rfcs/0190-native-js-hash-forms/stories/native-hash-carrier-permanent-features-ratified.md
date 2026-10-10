@@ -2,7 +2,7 @@
 title: "Ratify which Hash carrier features are permanent, and that the carrier is not hash-convergence debt"
 status: draft
 updated: 2026-10-10
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 cluster: carrier-audit
 packages: [ruby-compat]
 deps: []

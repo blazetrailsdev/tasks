@@ -2,7 +2,7 @@
 title: "Comparator credits each_pair from an Object.entries loop; keep_if joins the loop lowering"
 status: draft
 updated: 2026-10-10
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 cluster: gate
 packages: []
 deps: [native-hash-form-marks-in-ts-extractor]

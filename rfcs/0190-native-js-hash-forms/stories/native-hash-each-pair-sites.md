@@ -2,7 +2,7 @@
 title: "Hash#each_pair on a plain object is a for…of over Object.entries: every package"
 status: draft
 updated: 2026-10-10
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 cluster: substitution
 packages: [actionpack, trailties, activerecord, activesupport, actionview, ruby-compat]
 deps:

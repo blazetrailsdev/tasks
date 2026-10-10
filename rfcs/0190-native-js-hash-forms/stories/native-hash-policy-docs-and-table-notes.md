@@ -2,7 +2,7 @@
 title: "Write the native-hash-forms rule into CLAUDE.md, the ruby-compat README and the parity table comments"
 status: draft
 updated: 2026-10-10
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 cluster: gate
 packages: [ruby-compat]
 deps: [native-hash-forms-credit-key-delete-merge]

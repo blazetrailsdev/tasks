@@ -2,7 +2,7 @@
 title: "Hash#merge on a plain object is an object spread: every package with a site"
 status: draft
 updated: 2026-10-10
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 cluster: substitution
 packages: [actionpack, activerecord, trailties, rack-test, actionview, activesupport]
 deps: [native-hash-each-pair-sites]

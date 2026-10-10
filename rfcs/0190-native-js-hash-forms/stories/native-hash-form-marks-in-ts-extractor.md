@@ -2,7 +2,7 @@
 title: "TS extractor marks the native hash forms: in / Object.hasOwn, delete, Object.assign, spread, Object.entries loop"
 status: draft
 updated: 2026-10-10
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 cluster: gate
 packages: []
 deps: []

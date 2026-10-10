@@ -1,10 +1,10 @@
 ---
-title: "key? on a plain object is `in` / Object.hasOwn: activerecord, activemodel"
+title: "key? on a plain object is `in` / Object.hasOwn: actionpack, rack, rack-session, i18n"
 status: draft
 updated: 2026-10-10
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 cluster: substitution
-packages: [activerecord, activemodel]
+packages: [actionpack, rack, rack-session, i18n]
 deps:
   [
     native-hash-forms-credit-key-delete-merge,
@@ -12,7 +12,7 @@ deps:
     native-hash-policy-docs-and-table-notes,
   ]
 deps-rfc: []
-est-loc: 300
+est-loc: 250
 priority: null
 pr: null
 claim: null
@@ -33,10 +33,10 @@ Count with `grep -rnE '(^|[^.A-Za-z_])hasKey\(' packages/<pkg>/src --include=*.t
 
 | Package      | Lines |
 | ------------ | ----- |
-| activerecord | 30    |
-| activemodel  | 11    |
-
-Test files add about 36 helper calls across the two packages, most of them in activemodel.
+| actionpack   | 23    |
+| rack         | 9     |
+| rack-session | 3     |
+| i18n         | 2     |
 
 `hasKey` reads a plain object's `undefined`-valued property as an absent key
 (`hash.ts:181-185`, `:194-196`), because a caller forwarding an absent keyword writes
@@ -46,7 +46,7 @@ receiver can be a `Map`, a `Hash`, or a class answering `isKey`
 (`ActiveRecord::Result::IndexedRow`, `hash.ts:177-181`); where the static type
 is one of those alone, call its own method (`map.has(k)`, `row.isKey(k)`).
 
-`values.key?(name)` in `AttributeSet::Builder` (`activemodel/lib/active_model/attribute_set/builder.rb:33`) is the dispatching case the helper documents and stays.
+`Rack::Headers#hasKey` (`packages/rack/src/headers.ts:52`) and `Request::Session#hasKey` are ported members (`scripts/parity/conventions.ts:1140-1156`) and are not touched.
 
 ## Acceptance criteria
 

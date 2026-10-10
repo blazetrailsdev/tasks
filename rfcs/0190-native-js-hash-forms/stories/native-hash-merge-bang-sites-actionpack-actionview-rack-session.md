@@ -2,7 +2,7 @@
 title: "merge! on a plain object is Object.assign: actionpack, actionview, rack-session"
 status: draft
 updated: 2026-10-10
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 cluster: substitution
 packages: [actionpack, actionview, rack-session]
 deps:

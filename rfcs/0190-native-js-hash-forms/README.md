@@ -1,5 +1,5 @@
 ---
-rfc: "0000-native-js-hash-forms"
+rfc: "0190-native-js-hash-forms"
 title: "Native JS hash forms: the call gates credit `in` / `delete` / `Object.assign` / element access as the Hash call they port, and the ruby-compat hash helpers shrink to what JS lacks"
 status: draft
 created: 2026-10-10
@@ -24,12 +24,7 @@ clusters:
   - carrier-audit
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
-     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
-
-# RFC — Native JS hash forms
+# RFC 0190 — Native JS hash forms
 
 ## Summary
 
