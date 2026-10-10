@@ -5,7 +5,8 @@ updated: 2026-09-30
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args
 packages: ["activerecord"]
-deps: []
+deps:
+  - with-connection-sync-is-a-lease-no-claude-md-section-ratifies
 deps-rfc: []
 est-loc: 120
 priority: null
