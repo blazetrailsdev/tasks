@@ -1,6 +1,6 @@
 ---
 title: "activerecord: adapterClass is typed as the adapter class, so quote_table_name needs no cast"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

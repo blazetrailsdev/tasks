@@ -1,6 +1,6 @@
 ---
 title: "activerecord: an optional positional before trailing options or a block is told apart with a typeof arm"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

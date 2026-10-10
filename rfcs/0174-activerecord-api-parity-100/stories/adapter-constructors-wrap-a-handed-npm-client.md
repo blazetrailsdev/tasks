@@ -1,6 +1,6 @@
 ---
 title: "adapter-constructors-wrap-a-handed-npm-client"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

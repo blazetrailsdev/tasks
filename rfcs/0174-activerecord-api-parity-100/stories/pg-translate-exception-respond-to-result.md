@@ -1,7 +1,7 @@
 ---
 title: "Converge PostgreSQLAdapter#translate_exception's respond_to?(:result) guard"
-status: blocked
-updated: 2026-09-30
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: arms
 packages: []
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: "2026-09-30T23:24:46Z"
-assignee: "test-case-fixtures-class-method-is-untyped"
-blocked-by: "node-pg errors share no class, marker or result carrier: pg/lib/client.js:180,678,685 raise bare Error for connection-level failures (Rails' PG::ConnectionBad, which responds to :result), and only pg-protocol's DatabaseError carries the SQLSTATE (as .code). A single duck test at postgresql_adapter.rb:802's position therefore cannot separate a driver error from any other Error; converging needs the adapter to stamp driver errors with a result carrier at the raw-connection boundary (prepare(), performQuery, connect) first — file that as its own story."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

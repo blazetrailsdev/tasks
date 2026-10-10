@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SchemaDumper statement builders wrap trailing options without an invented arm"
-status: blocked
-updated: 2026-10-09
+status: closed
+updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-10-09T20:09:43Z"
 assignee: "core-inherited-seeding-leaves-the-generated-modules-and-find-by-cache-readers"
-blocked-by: "Owner decision needed. indexes and indexesInCreate are already arm-free on main (index_parts always carries name:, so the braces are unconditional). foreignKeys and checkConstraintsInCreate can have zero options, and a TS call needs braces around trailing options exactly when there are any, where Ruby kwargs need none (schema_dumper.rb:341,290). Byte-identical output and no extra arm cannot both hold: the only arm-free spellings hide the same branch in filter/map or emit ', {}' for an option-less statement. Needs a ruling: ratify the brace arm as a kwargs language shortcoming (receipts -> PERMANENT), or accept the always-braced output."
-closed-reason: null
+blocked-by: null
+closed-reason: "PERMANENT: the repo owner ratified the brace arm on 2026-10-09 in trails packages/activerecord/CLAUDE.md § 'A dumped statement wraps its trailing options in braces' (a kwargs language shortcoming). On trails main @ ddd629745a the builders in schema-dumper.ts and postgresql/schema-dumper.ts carry '@inventedArm if — PERMANENT', no receipt names this story, and the invented-arm report lists no schema-dumper pair"
 ---
 
 ## Context

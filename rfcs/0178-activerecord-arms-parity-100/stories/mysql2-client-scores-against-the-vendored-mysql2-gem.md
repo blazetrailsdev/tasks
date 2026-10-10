@@ -1,6 +1,6 @@
 ---
 title: "mysql2-client-scores-against-the-vendored-mysql2-gem"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

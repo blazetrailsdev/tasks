@@ -1,9 +1,9 @@
 ---
 rfc: "0178-activerecord-arms-parity-100"
 title: "activerecord control-flow arms, void returns and duck-type guards at zero — split from RFC 0174"
-status: active
+status: closed
 created: 2026-10-02
-updated: 2026-10-06
+updated: 2026-10-10
 owner: "@deanmarano"
 packages:
   - "activerecord"

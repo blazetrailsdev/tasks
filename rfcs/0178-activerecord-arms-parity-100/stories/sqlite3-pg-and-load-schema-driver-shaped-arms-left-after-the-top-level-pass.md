@@ -1,6 +1,6 @@
 ---
 title: "activerecord: sqlite3 type_cast and perform_query, PG reset and load_schema keep driver-shaped arms"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
