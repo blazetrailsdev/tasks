@@ -1,7 +1,7 @@
 ---
 title: "log_subscriber_test setup writes cache_store and perform_caching on the controller instance"
-status: ready
-updated: 2026-10-09
+status: in-progress
+updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8757
+claim: "2026-10-10T15:29:04Z"
+assignee: "update-columns-reassigns-attributes-and-passes-it-to-update-record"
 blocked-by: null
 closed-reason: null
 ---

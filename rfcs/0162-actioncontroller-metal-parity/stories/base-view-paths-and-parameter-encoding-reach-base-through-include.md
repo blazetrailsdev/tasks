@@ -1,7 +1,7 @@
 ---
 title: "ViewPaths and ParameterEncoding reach ActionController::Base through include, not extend and class-body assignment"
-status: ready
-updated: 2026-10-09
+status: in-progress
+updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8757
+claim: "2026-10-10T15:29:04Z"
+assignee: "update-columns-reassigns-attributes-and-passes-it-to-update-record"
 blocked-by: null
 closed-reason: null
 ---

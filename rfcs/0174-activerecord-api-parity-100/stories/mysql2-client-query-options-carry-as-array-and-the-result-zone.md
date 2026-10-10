@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2 query_options carry :as and decide the result Time's zone"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

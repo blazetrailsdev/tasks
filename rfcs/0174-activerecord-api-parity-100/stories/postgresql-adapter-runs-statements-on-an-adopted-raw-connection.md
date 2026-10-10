@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PostgreSQLAdapter runs statements on a raw connection it was handed"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

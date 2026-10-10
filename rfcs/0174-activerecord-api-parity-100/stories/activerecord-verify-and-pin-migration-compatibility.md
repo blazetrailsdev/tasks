@@ -1,7 +1,7 @@
 ---
 title: "activerecord: verify and pin the 17 migration/compatibility.rb pairs"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: pins
 packages: ["activerecord"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8756
+claim: "2026-10-10T15:39:36Z"
+assignee: "activerecord-verify-and-pin-migration-compatibility"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel and ActiveRecord read Parameters#to_h as a Hash, not a deep plain object"
-status: draft
+status: ready
 updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
