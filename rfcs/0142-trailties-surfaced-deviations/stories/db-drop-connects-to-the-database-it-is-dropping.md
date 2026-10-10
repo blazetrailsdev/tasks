@@ -61,7 +61,7 @@ when it is done.
 
 - [ ] A Postgres task test drops an existing database and the command succeeds;
       it fails on the current code with `cannot drop the currently open
-    database`.
+database`.
 - [ ] `db drop` on a database that does not exist is a no-op that exits zero,
       as `IF EXISTS` implies and as Rails behaves.
 - [ ] `drop` leaves no pool behind: a `drop` followed by `create` and `migrate`
