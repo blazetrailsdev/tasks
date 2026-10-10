@@ -2,7 +2,7 @@
 title: "activerecord: nested-attributes assigners branch on a maybe-promise setAttributes and association read"
 status: blocked
 updated: 2026-10-09
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:

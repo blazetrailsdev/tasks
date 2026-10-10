@@ -2,7 +2,7 @@
 title: "activerecord: SingularAssociation#reader and Association#reload branch on a promise-or-value load_target"
 status: blocked
 updated: 2026-10-09
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
