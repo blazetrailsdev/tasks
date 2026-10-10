@@ -2,7 +2,7 @@
 title: "activerecord: Mysql2::Client takes the gem's layout (initialize, parse_flags_array, Statement, Result, Error)"
 status: draft
 updated: 2026-10-10
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps: []
