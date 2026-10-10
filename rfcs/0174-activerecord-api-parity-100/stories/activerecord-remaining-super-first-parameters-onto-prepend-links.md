@@ -5,7 +5,8 @@ updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - activerecord-super-first-parameters-onto-super-method
 deps-rfc: []
 est-loc: 400
 priority: null
