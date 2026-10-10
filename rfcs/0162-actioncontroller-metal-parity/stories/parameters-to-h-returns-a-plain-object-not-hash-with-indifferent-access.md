@@ -5,7 +5,8 @@ updated: 2026-10-07
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - mass-assignment-and-where-read-parameters-to-h-as-a-hash
 deps-rfc: []
 est-loc: 350
 priority: null
