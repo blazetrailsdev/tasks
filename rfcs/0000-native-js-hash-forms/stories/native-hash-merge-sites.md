@@ -62,14 +62,19 @@ calls on ported classes and are not helper sites.
       staying, with the reason and the Rails `file:line` the site ports.
 - [ ] Each replaced site was checked against its Rails body for the three
       differences above.
-- [ ] No test title changes: `git diff origin/main...HEAD -- '*.test.ts' |
-  grep -E '^[-+].*\b(it|test|describe)\('` is empty.
+- [ ] No test title changes: the command under Verification prints nothing.
 - [ ] An import of `merge` with no remaining use in its file is removed.
 - [ ] `pnpm parity:api:calls`, `:calls:args`, `:arms:throws` and
       `pnpm parity:api:extra:gate` green with no baseline row and no
       `@missingRailsCall` / `@missingRailsArgs` receipt added.
 - [ ] The touched test files pass.
 - [ ] The PR body gives the before and after counts.
+
+## Verification
+
+```bash
+git diff origin/main...HEAD -- '*.test.ts' | grep -E '^[-+].*\b(it|test|describe)\('
+```
 
 ## Definition of done
 
