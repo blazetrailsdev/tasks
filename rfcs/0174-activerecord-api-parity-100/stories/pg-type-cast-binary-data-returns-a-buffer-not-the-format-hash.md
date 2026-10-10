@@ -1,6 +1,6 @@
 ---
 title: "PG type_cast answers Binary::Data with a Buffer where Rails returns { value:, format: 1 }"
-status: claimed
+status: in-progress
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8745
 claim: "2026-10-10T03:39:38Z"
 assignee: "schema-dumper-header-branches-on-the-ts-js-dump-language"
 blocked-by: null

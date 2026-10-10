@@ -1,6 +1,6 @@
 ---
 title: "schema-dumper-header-branches-on-the-ts-js-dump-language"
-status: claimed
+status: in-progress
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8745
 claim: "2026-10-10T03:39:38Z"
 assignee: "schema-dumper-header-branches-on-the-ts-js-dump-language"
 blocked-by: null
