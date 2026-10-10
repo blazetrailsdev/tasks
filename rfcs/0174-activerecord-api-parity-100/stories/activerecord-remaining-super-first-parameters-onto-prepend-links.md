@@ -56,13 +56,10 @@ PR for `activerecord-super-first-parameters-onto-super-method` (trails#8764:
 - `attribute-methods/dirty.ts` `reload` (`attribute_methods/dirty.rb:51-58`),
   `callbacks.ts` `incrementBang` (`callbacks.rb:419-421`), `timestamp.ts`
   `_createRecord`.
-- Outside the parent's list, same shape: `encryption/encrypted-fixtures.ts`
-  `initialize(super_, fixture, modelClass)`,
-  `encryption/extended-deterministic-queries.ts` `where` / `isExists` /
-  `scopeForCreate` / `serialize`, `trailties/job-runtime.ts` `instrument`.
-  Each is a `prepend` of a plain object through `prepend.ts`'s wrapper; each
-  becomes a `Module` prepended through `@blazetrails/ruby-compat/include`'s
-  `prepend`, the way `ConnectionPoolConfiguration` now is.
+- Outside the parent's list, same shape: `trailties/job-runtime.ts`
+  `instrument(super_, operation, payload, block)`. It becomes a `Module`
+  prepended through `@blazetrails/ruby-compat/include`'s `prepend`, the way
+  `ConnectionPoolConfiguration` and encryption's prepended modules now are.
 
 A class method that calls `super.name()` and is moved to the origin would
 re-enter the prepended module (its `[[HomeObject]]` is still the class's

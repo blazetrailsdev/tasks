@@ -65,13 +65,22 @@ Also still threading `super_` and not listed by the parent story:
 `attribute-methods/dirty.ts` `reload`, `callbacks.ts` `incrementBang`,
 `timestamp.ts` `_createRecord`.
 
+## Scope
+
+Narrowed while in flight (trails#8765). `QueryCache#selectAll`,
+`initializeClone`, the `Associations` hook, `Dirty#reload`, `incrementBang` and
+`_createRecord` sit in files the open PR for
+`activerecord-super-first-parameters-onto-super-method` rewrites, and moved to
+`activerecord-remaining-super-first-parameters-onto-prepend-links`. This story
+is the prepend link and the modules Rails prepends onto a class.
+
 ## Acceptance criteria
 
 - [ ] `Module#prependFeatures` splices a link `superMethod` resolves through,
       with the class's own method reachable beneath it.
-- [ ] `checkoutAndVerify`, `validateEach`, `QueryCache#selectAll` and
-      `initializeClone` take Rails' parameter lists and call `superMethod`.
-- [ ] `Associations`' instance methods are included through the module itself
-      and the `static [included]` receipt is deleted.
-- [ ] `pnpm parity:api --arity` lists no activerecord row whose TS signature
-      opens with `super_`.
+- [ ] `ConnectionPoolConfiguration#checkoutAndVerify`,
+      `EncryptedUniquenessValidator#validateEach`, `RelationQueries#where` /
+      `isExists` / `scopeForCreate`, `ExtendedEncryptableType#serialize` and
+      `EncryptedFixtures#initialize` take Rails' parameter lists and call
+      `superMethod`.
+- [ ] `pnpm parity:api --arity` lists no row for those methods.
