@@ -1,6 +1,6 @@
 ---
 title: "activerecord: methods that thread super_ as a first parameter take Rails' parameter list"
-status: in-progress
+status: ready
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: trails#8764
-claim: "2026-10-10T19:09:47Z"
-assignee: "activerecord-pg-uuid-primary-key-default-lives-in-schema-creation"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

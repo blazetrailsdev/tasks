@@ -1,6 +1,6 @@
 ---
 title: "activerecord: migration/compatibility TableDefinition modules and JobRuntime#instrument take Rails' parameter lists instead of super_"
-status: draft
+status: ready
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
