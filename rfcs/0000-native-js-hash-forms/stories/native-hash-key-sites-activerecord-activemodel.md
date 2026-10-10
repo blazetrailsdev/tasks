@@ -5,7 +5,7 @@ updated: 2026-10-10
 rfc: "0000-native-js-hash-forms"
 cluster: substitution
 packages: [activerecord, activemodel]
-deps: [native-hash-forms-credit-key-delete-merge, native-hash-key-sites-actionpack-rack-i18n]
+deps: [native-hash-forms-credit-key-delete-merge]
 deps-rfc: []
 est-loc: 300
 priority: null
@@ -34,11 +34,11 @@ Count with `grep -rnE '(^|[^.A-Za-z_])hasKey\(' packages/<pkg>/src --include=*.t
 Test files add about 36 helper calls across the two packages, most of them in activemodel.
 
 `hasKey` reads a plain object's `undefined`-valued property as an absent key
-(`hash.ts:181-196`), because a caller forwarding an absent keyword writes
+(`hash.ts:181-185`, `:194-196`), because a caller forwarding an absent keyword writes
 `{ name: undefined }`. `in` and `Object.hasOwn` read it as present. A site
 whose object can arrive that way stays on `hasKey`. So does a site whose
 receiver can be a `Map`, a `Hash`, or a class answering `isKey`
-(`ActiveRecord::Result::IndexedRow`, `hash.ts:176-179`); where the static type
+(`ActiveRecord::Result::IndexedRow`, `hash.ts:177-181`); where the static type
 is one of those alone, call its own method (`map.has(k)`, `row.isKey(k)`).
 
 `values.key?(name)` in `AttributeSet::Builder` (`activemodel/lib/active_model/attribute_set/builder.rb:33`) is the dispatching case the helper documents and stays.
@@ -53,7 +53,7 @@ is one of those alone, call its own method (`map.has(k)`, `row.isKey(k)`).
       about what the receiver can be and what the site does with the result,
       not about the name.
 - [ ] No test title changes: `git diff origin/main...HEAD -- '*.test.ts' |
-  grep -E '^[-+].*\b(it|test|describe)\('` is empty.
+grep -E '^[-+].*\b(it|test|describe)\('` is empty.
 - [ ] An import of `hasKey` with no remaining use in its file is removed.
 - [ ] `pnpm parity:api:calls`, `:calls:args`, `:arms:throws` and
       `pnpm parity:api:extra:gate` green with no baseline row and no

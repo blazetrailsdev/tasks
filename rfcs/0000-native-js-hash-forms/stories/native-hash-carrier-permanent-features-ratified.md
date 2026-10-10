@@ -53,7 +53,7 @@ The fields (`hash.ts:986-993`): `#default`, `#defaultProc`, `#frozen`,
 - [ ] trails `CLAUDE.md` gets one pointer line under the bullet
       `native-hash-policy-docs-and-table-notes` adds; the detail lives in the
       README.
-- [ ] The class's JSDoc (`hash.ts:974-984`) cites the new README section.
+- [ ] The class's JSDoc (`hash.ts:976-984`) cites the new README section.
 - [ ] No code changes beyond the JSDoc.
 
 ## Definition of done

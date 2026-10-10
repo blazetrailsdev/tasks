@@ -42,7 +42,7 @@ So `h[k]` is probably already equivalent to `hashAref(h, k)` for every gate.
 - [ ] Where a gate moves, teach the comparer the equivalence so that
       `h[k]` ≡ `hashAref(h, k)` and `h[k] = v` ≡ `hashAset(h, k, v)` in the
       call set, the argument gate (`refKeysEqual`,
-      `scripts/api-compare/call-args.ts:262`) and the order stream. Comparer
+      `scripts/api-compare/call-args.ts:263`) and the order stream. Comparer
       tests pin each.
 - [ ] `h.k` (property access with a literal key) is covered as well as `h[k]`,
       since a port of `options[:public]` writes `options.public`.

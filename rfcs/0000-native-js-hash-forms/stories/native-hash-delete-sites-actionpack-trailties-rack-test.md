@@ -5,7 +5,11 @@ updated: 2026-10-10
 rfc: "0000-native-js-hash-forms"
 cluster: substitution
 packages: [actionpack, trailties, rack-test]
-deps: [native-hash-forms-credit-key-delete-merge]
+deps:
+  [
+    native-hash-merge-bang-sites-actionpack-actionview-rack-session,
+    native-hash-merge-bang-sites-activerecord-activemodel-activesupport-trailties,
+  ]
 deps-rfc: []
 est-loc: 250
 priority: null
@@ -52,7 +56,7 @@ raises `TypeError` in a module.
       about what the receiver can be and what the site does with the result,
       not about the name.
 - [ ] No test title changes: `git diff origin/main...HEAD -- '*.test.ts' |
-  grep -E '^[-+].*\b(it|test|describe)\('` is empty.
+grep -E '^[-+].*\b(it|test|describe)\('` is empty.
 - [ ] An import of `hashDelete` with no remaining use in its file is removed.
 - [ ] `pnpm parity:api:calls`, `:calls:args`, `:arms:throws` and
       `pnpm parity:api:extra:gate` green with no baseline row and no

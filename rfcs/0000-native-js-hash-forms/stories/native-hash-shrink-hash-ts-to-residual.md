@@ -5,20 +5,7 @@ updated: 2026-10-10
 rfc: "0000-native-js-hash-forms"
 cluster: substitution
 packages: [ruby-compat]
-deps:
-  [
-    native-hash-key-sites-actionpack-rack-i18n,
-    native-hash-key-sites-activerecord-activemodel,
-    native-hash-key-sites-trailties-activesupport-actionview,
-    native-hash-merge-bang-sites-actionpack-actionview-rack-session,
-    native-hash-merge-bang-sites-activerecord-activemodel-activesupport-trailties,
-    native-hash-delete-sites-actionview,
-    native-hash-delete-sites-actionpack-trailties-rack-test,
-    native-hash-delete-sites-activerecord-activemodel-activesupport,
-    native-hash-aref-aset-sites-activemodel,
-    native-hash-aref-aset-sites-activerecord-actionpack-activesupport-arel,
-    native-hash-each-pair-sites,
-  ]
+deps: [native-hash-each-pair-sites]
 deps-rfc: []
 est-loc: 400
 priority: null
@@ -60,7 +47,7 @@ This story runs last. It removes what is dead and nothing else.
 - [ ] `pnpm parity:api:extra:gate` green; run `pnpm parity:api:extra:tighten`
       if the ruby-compat mark moved down.
 - [ ] `pnpm vitest run packages/ruby-compat/src/hash.trails.test.ts
-  packages/ruby-compat/src/rb-hash.trails.test.ts` passes.
+packages/ruby-compat/src/rb-hash.trails.test.ts` passes.
 - [ ] The PR body states the before and after line counts of both files.
 
 ## Definition of done

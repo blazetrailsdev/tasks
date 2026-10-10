@@ -43,15 +43,18 @@ operator was "a shape the gate cannot tell from a dropped guard"), and
 
 - [ ] `NATIVE_FORM_ANALOGUES` gains rows for `key?`, `has_key?`, `include?`,
       `member?` (form `in`), `delete` (form `delete`), `merge!` and `update`
-      (form `assign`), and `merge` (form `spread`). Each is
-      `receivers: "explicit"` with `uncreditedKinds` of `self`, `ivar` and
-      `const`.
+      (form `assign`), and `merge` (form `spread`). Each is `receivers: "explicit"`. `key?` / `has_key?` set `uncreditedKinds` to `self` alone; `delete`, `merge!`, `update` and `merge` to `self` and `const`. An `ivar` receiver is admitted on a name match (RFC § "Answering `compare.ts:330-352`").
 - [ ] `include?` and `member?` credit from `@in` only where every recorded
       receiver kind is `hash`: on an Array or a Relation they are a different
       method (`ruby-compat.ts:114-116`).
 - [ ] `delete`, `merge` and `merge!` credit from a form only where no recorded
       kind disproves a Hash, the rule `rubyCompatAliases`
-      (`ruby-compat.ts:226-240`) already applies to the helper.
+      (`ruby-compat.ts:225-240`) already applies to the helper.
+- [ ] Before the rows are fixed, measure the receiver kinds (`callReceivers`) of
+      the Ruby sites paired with today's `hasKey` / `hashDelete` / `mergeBang` /
+      `merge` calls, per kind, and put the table in the PR body. Any helper
+      site whose Ruby receiver the rows would refuse is listed: it cannot be
+      substituted, and the substitution stories need to know.
 - [ ] `fetch` gets no row. A test pins that `h.k ?? d` does not credit
       `h.fetch(:k, d)`.
 - [ ] The reverse gate does not report a row for a call a native form credited.
@@ -60,7 +63,7 @@ operator was "a shape the gate cannot tell from a dropped guard"), and
 - [ ] Comparer tests, positive and negative, for each row:
   - `options.key?(:x)` with `"x" in options` credits; with no membership test
     flags; with `"x" in other` flags;
-  - `@options.key?(:x)` (ivar) with `"x" in this.options` flags;
+  - `@options.key?(:x)` (ivar) with `"x" in this.options` credits, and with `"x" in this.other` flags;
   - a bare `merge(other)` (no receiver) with a spread flags;
   - `relation.merge(other)` on an `ivar` / `expr` receiver with a spread flags.
 - [ ] `compare.ts:303-307` and `:330-331` are rewritten to say what is now

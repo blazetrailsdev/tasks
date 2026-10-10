@@ -5,7 +5,12 @@ updated: 2026-10-10
 rfc: "0000-native-js-hash-forms"
 cluster: substitution
 packages: [activerecord, actionpack, activesupport, arel]
-deps: [native-hash-forms-credit-key-delete-merge, native-hash-element-access-credits-aref-aset]
+deps:
+  [
+    native-hash-delete-sites-actionpack-trailties-rack-test,
+    native-hash-delete-sites-activerecord-activemodel-activesupport,
+    native-hash-element-access-credits-aref-aset,
+  ]
 deps-rfc: []
 est-loc: 200
 priority: null
@@ -33,7 +38,7 @@ Count with `grep -rnE '(^|[^.A-Za-z_])hashAref\(' packages/<pkg>/src --include=*
 | actionpack    | 3          | 3          |
 | arel          | 0          | 1          |
 
-This story covers `hashAset(` as well as `hashAref(`; apply every criterion to both names. Test files hold 53 more `hashAref(` occurrences repo-wide, nearly all in ruby-compat's own tests.
+This story covers `hashAset(` as well as `hashAref(`; apply every criterion to both names. Test files hold 53 more `hashAref(` occurrences repo-wide, 20 in ruby-compat's own tests, which stay, and the rest in activemodel (9 files) and activerecord (3 files) tests, which ride with the story for their package.
 
 `hashAref` answers `null` for a miss, a `Hash`'s default, a non-Hash receiver's
 `get`, and refuses an inherited `Object.prototype` member (`hash.ts:406-424`).
@@ -55,7 +60,7 @@ from `undefined` (`x != null` does not; `x === null` and `rbInspect(x)` do).
       about what the receiver can be and what the site does with the result,
       not about the name.
 - [ ] No test title changes: `git diff origin/main...HEAD -- '*.test.ts' |
-  grep -E '^[-+].*\b(it|test|describe)\('` is empty.
+grep -E '^[-+].*\b(it|test|describe)\('` is empty.
 - [ ] An import of `hashAref` with no remaining use in its file is removed.
 - [ ] `pnpm parity:api:calls`, `:calls:args`, `:arms:throws` and
       `pnpm parity:api:extra:gate` green with no baseline row and no

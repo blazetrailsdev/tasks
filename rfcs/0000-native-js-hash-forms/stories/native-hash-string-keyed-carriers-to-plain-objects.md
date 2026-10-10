@@ -5,7 +5,7 @@ updated: 2026-10-10
 rfc: "0000-native-js-hash-forms"
 cluster: carrier-audit
 packages: [activerecord, activemodel, actionpack]
-deps: [native-hash-element-access-credits-aref-aset]
+deps: [native-hash-each-pair-sites]
 deps-rfc: []
 est-loc: 250
 priority: null
@@ -24,13 +24,13 @@ iteration level. Most of its 58 non-test construction sites outside `hash.ts`
 use one of those. Five do not: they are keyed by strings and Rails has a plain
 `{}` there.
 
-| trails site                                                          | Rails                                                                        | What Rails builds                                                                                                                                 |
-| -------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `packages/activerecord/src/connection-adapters/statement-pool.ts:18` | `activerecord/lib/active_record/connection_adapters/statement_pool.rb:11`    | `Hash.new { \|h, pid\| h[pid] = {} }`: the OUTER hash needs the default proc and stays a `Hash`; the inner `{}`, keyed by SQL string, is the site |
-| `packages/activerecord/src/persistence.ts:657`                       | `activerecord/lib/active_record/persistence.rb:616`                          | `attributes.each_with_object({})` in `update_columns`                                                                                             |
-| `packages/actionpack/src/test-helpers/abstract-unit.ts:535`          | the `parse_set_cookies_headers` helper in `actionpack/test/abstract_unit.rb` | a `{}` keyed by cookie name; verify the line before editing                                                                                       |
-| `packages/activemodel/src/attribute-mutation-tracker.ts:207`         | `activemodel/lib/active_model/attribute_mutation_tracker.rb:163-165`         | `NullMutationTracker#changed_values` is `{}`                                                                                                      |
-| `packages/activemodel/src/attribute-mutation-tracker.ts:211`         | `attribute_mutation_tracker.rb:167-169`                                      | `NullMutationTracker#changes` is `{}`                                                                                                             |
+| trails site                                                          | Rails                                                                     | What Rails builds                                                                                                                                 |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `packages/activerecord/src/connection-adapters/statement-pool.ts:18` | `activerecord/lib/active_record/connection_adapters/statement_pool.rb:11` | `Hash.new { \|h, pid\| h[pid] = {} }`: the OUTER hash needs the default proc and stays a `Hash`; the inner `{}`, keyed by SQL string, is the site |
+| `packages/activerecord/src/persistence.ts:657`                       | `activerecord/lib/active_record/persistence.rb:616`                       | `attributes.each_with_object({})` in `update_columns`                                                                                             |
+| `packages/actionpack/src/test-helpers/abstract-unit.ts:535`          | `actionpack/test/abstract_unit.rb:394` `parse_set_cookies_headers`        | a hash keyed by cookie name; read the body first and leave the site if it is not a bare `{}`                                                      |
+| `packages/activemodel/src/attribute-mutation-tracker.ts:207`         | `activemodel/lib/active_model/attribute_mutation_tracker.rb:163-165`      | `NullMutationTracker#changed_values` is `{}`                                                                                                      |
+| `packages/activemodel/src/attribute-mutation-tracker.ts:211`         | `attribute_mutation_tracker.rb:167-169`                                   | `NullMutationTracker#changes` is `{}`                                                                                                             |
 
 A sixth candidate is NOT in scope:
 `packages/activesupport/src/hash-with-indifferent-access.ts:581`
@@ -67,4 +67,4 @@ before touching `statement-pool.ts`, and coordinate with whoever holds that
 story.
 
 `persistence.ts:658` is also an `eachPair` site in
-`native-hash-each-pair-sites`. Whichever story lands second rebases.
+`native-hash-each-pair-sites`. This story depends on that one, so the two never edit the line at once.

@@ -5,7 +5,7 @@ updated: 2026-10-10
 rfc: "0000-native-js-hash-forms"
 cluster: substitution
 packages: [activerecord, activemodel, activesupport]
-deps: [native-hash-forms-credit-key-delete-merge]
+deps: [native-hash-merge-bang-sites-activerecord-activemodel-activesupport-trailties]
 deps-rfc: []
 est-loc: 200
 priority: null
@@ -32,7 +32,7 @@ Count with `grep -rnE '(^|[^.A-Za-z_])hashDelete\(' packages/<pkg>/src --include
 | activemodel   | 2     |
 | activesupport | 2     |
 
-`@fixture_cache[fs_name].delete(f_name)` (`activerecord/lib/active_record/test_fixtures.rb:307`) is the case `scripts/parity/ruby-compat.ts:221-223` documents as crediting through `hashDelete` on an unproven receiver; check what its port's receiver is before touching it.
+`@fixture_cache[fs_name].delete(f_name)` (`activerecord/lib/active_record/test_fixtures.rb:309`) is the case `scripts/parity/ruby-compat.ts:221-223` documents as crediting through `hashDelete` on an unproven receiver; check what its port's receiver is before touching it.
 
 Ruby's `Hash#delete` returns the stored value (`rb_hash_delete_m`,
 `vendor/ruby/v3.3.11/hash.c:2441`); JS's `delete` answers a boolean. Across the
@@ -54,7 +54,7 @@ raises `TypeError` in a module.
       about what the receiver can be and what the site does with the result,
       not about the name.
 - [ ] No test title changes: `git diff origin/main...HEAD -- '*.test.ts' |
-  grep -E '^[-+].*\b(it|test|describe)\('` is empty.
+grep -E '^[-+].*\b(it|test|describe)\('` is empty.
 - [ ] An import of `hashDelete` with no remaining use in its file is removed.
 - [ ] `pnpm parity:api:calls`, `:calls:args`, `:arms:throws` and
       `pnpm parity:api:extra:gate` green with no baseline row and no

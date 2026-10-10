@@ -5,7 +5,13 @@ updated: 2026-10-10
 rfc: "0000-native-js-hash-forms"
 cluster: substitution
 packages: [actionpack, trailties, activerecord, activesupport, actionview, ruby-compat]
-deps: [native-hash-forms-credit-key-delete-merge, native-hash-each-pair-entries-loop-credit]
+deps:
+  [
+    native-hash-aref-aset-sites-activemodel,
+    native-hash-aref-aset-sites-activerecord-actionpack-activesupport-arel,
+    native-hash-delete-sites-actionview,
+    native-hash-each-pair-entries-loop-credit,
+  ]
 deps-rfc: []
 est-loc: 300
 priority: null
@@ -46,8 +52,7 @@ moving it into a loop body, where it would become one.
 
 `persistence.ts:658` (`update_columns`,
 `activerecord/lib/active_record/persistence.rb:616`) is also edited by
-`native-hash-string-keyed-carriers-to-plain-objects`; whichever lands second
-rebases.
+`native-hash-string-keyed-carriers-to-plain-objects`; which depends on this story.
 
 ## Acceptance criteria
 
@@ -59,7 +64,7 @@ rebases.
       about what the receiver can be and what the site does with the result,
       not about the name.
 - [ ] No test title changes: `git diff origin/main...HEAD -- '*.test.ts' |
-  grep -E '^[-+].*\b(it|test|describe)\('` is empty.
+grep -E '^[-+].*\b(it|test|describe)\('` is empty.
 - [ ] An import of `eachPair` with no remaining use in its file is removed.
 - [ ] `pnpm parity:api:calls`, `:calls:args`, `:arms:throws` and
       `pnpm parity:api:extra:gate` green with no baseline row and no

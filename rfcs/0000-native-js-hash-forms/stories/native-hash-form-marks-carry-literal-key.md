@@ -20,11 +20,11 @@ closed-reason: null
 
 `NATIVE_FORM_ANALOGUES`' own doc says "A row drops the Ruby call from
 significance, so nothing pairs its argument list by name"
-(`scripts/api-compare/enumerable-idioms.ts:249-256`). For the existing rows
+(`scripts/api-compare/enumerable-idioms.ts:254-260`). For the existing rows
 that costs little: `.length` has no argument. For the hash forms it costs the
 key. Today `hashDelete(options, "public")` is paired with
 `options.delete(:public)` by `parity:api:calls:args` (`refKeysEqual`,
-`scripts/api-compare/call-args.ts:255-262`), so a port that deletes the wrong
+`scripts/api-compare/call-args.ts:256-263`), so a port that deletes the wrong
 key is red. After `native-hash-forms-credit-key-delete-merge`,
 `delete options.public` credits the call and the key is unchecked.
 
@@ -50,6 +50,6 @@ the bulk of the substitution stories, though they do not depend on it.
 - [ ] Tests: `options.delete(:public)` with `delete options.public` passes;
       with `delete options.private` is a `shape` row;
       `options.key?(:only_path)` with `"onlyPath" in options` passes.
-- [ ] The doc paragraph at `enumerable-idioms.ts:249-256` is updated.
+- [ ] The doc paragraph at `enumerable-idioms.ts:254-260` is updated.
 - [ ] No row added to cover an existing body: any new row is a real key
       mismatch, and is fixed in the port or filed.

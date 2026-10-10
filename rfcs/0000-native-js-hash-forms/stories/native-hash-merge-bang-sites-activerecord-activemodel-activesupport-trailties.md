@@ -7,8 +7,8 @@ cluster: substitution
 packages: [activerecord, activemodel, activesupport, trailties, ruby-compat]
 deps:
   [
-    native-hash-forms-credit-key-delete-merge,
-    native-hash-merge-bang-sites-actionpack-actionview-rack-session,
+    native-hash-key-sites-activerecord-activemodel,
+    native-hash-key-sites-trailties-activesupport-actionview,
   ]
 deps-rfc: []
 est-loc: 300
@@ -65,7 +65,7 @@ call.
       about what the receiver can be and what the site does with the result,
       not about the name.
 - [ ] No test title changes: `git diff origin/main...HEAD -- '*.test.ts' |
-  grep -E '^[-+].*\b(it|test|describe)\('` is empty.
+grep -E '^[-+].*\b(it|test|describe)\('` is empty.
 - [ ] An import of `mergeBang` with no remaining use in its file is removed.
 - [ ] `pnpm parity:api:calls`, `:calls:args`, `:arms:throws` and
       `pnpm parity:api:extra:gate` green with no baseline row and no

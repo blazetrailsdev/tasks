@@ -36,7 +36,7 @@ writing the RFC checked every CONSTRUCTION site (`new HashWithIndifferentAccess`
 | `activemodel/src/attribute-mutation-tracker.ts:44,54`                             | `attribute_mutation_tracker.rb:19,27` `{}.with_indifferent_access`                                   | earned                                                                                        |
 | `activerecord/src/enum.ts:222`                                                    | `active_record/enum.rb:227`                                                                          | earned                                                                                        |
 | `activerecord/src/store.ts:304,306`                                               | `active_record/store.rb:287,289`                                                                     | earned                                                                                        |
-| `activesupport/src/message-pack/extensions.ts:355`                                | the HWIA extension type in `active_support/message_pack/extensions.rb`                               | earned; cite the line                                                                         |
+| `activesupport/src/message-pack/extensions.ts:355`                                | `active_support/message_pack/extensions.rb:242` `HashWithIndifferentAccess.new(unpacker.read)`       | earned                                                                                        |
 | `activesupport/src/parameter-filter.ts:125`                                       | `active_support/parameter_filter.rb:126` `params.class.new`                                          | earned: built only under an `instanceof` guard, so the class follows the input as Rails' does |
 | `trailties/src/thor/parser/options.ts:200`                                        | `Thor::CoreExt::HashWithIndifferentAccess.new(@assigns)` in thor's `parser/options.rb`               | earned, and it is Thor's class, not ActiveSupport's                                           |
 
@@ -60,9 +60,9 @@ file itself).
       its export, its namespace seat, its `with_indifferent_access` core-ext),
       or **unearned** (Rails passes a plain `Hash`).
 - [ ] Every row above is re-verified at its exact Rails line rather than taken
-      from this story, and the rows marked "cite the line" get one.
+      from this story, and the thor row gets its upstream line (thor is not vendored in trails).
 - [ ] `base.ts:1045`: identify the member and the Rails method it types
-      (`defined_enums`? `enum.rb:86` documents the mapping as an HWIA) and
+      (`static definedEnums`, a record of HWIAs; `enum.rb:86` documents the mapping as one) and
       confirm.
 - [ ] `admin/user.ts:30-33`: confirm against
       `activerecord/test/models/admin/user.rb` that each of `configs`,

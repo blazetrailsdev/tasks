@@ -5,7 +5,11 @@ updated: 2026-10-10
 rfc: "0000-native-js-hash-forms"
 cluster: substitution
 packages: [activemodel]
-deps: [native-hash-forms-credit-key-delete-merge, native-hash-element-access-credits-aref-aset]
+deps:
+  [
+    native-hash-delete-sites-activerecord-activemodel-activesupport,
+    native-hash-element-access-credits-aref-aset,
+  ]
 deps-rfc: []
 est-loc: 250
 priority: null
@@ -54,7 +58,7 @@ activemodel is where the dispatching arm is live: `LazyAttributeHash#get` / `#se
       about what the receiver can be and what the site does with the result,
       not about the name.
 - [ ] No test title changes: `git diff origin/main...HEAD -- '*.test.ts' |
-  grep -E '^[-+].*\b(it|test|describe)\('` is empty.
+grep -E '^[-+].*\b(it|test|describe)\('` is empty.
 - [ ] An import of `hashAref` with no remaining use in its file is removed.
 - [ ] `pnpm parity:api:calls`, `:calls:args`, `:arms:throws` and
       `pnpm parity:api:extra:gate` green with no baseline row and no

@@ -40,7 +40,8 @@ Object.entries(h))`. Today a port spells those as calls into
 `@blazetrails/ruby-compat` (`hasKey(h, k)`, `hashAref`, `hashAset`,
 `hashDelete`, `mergeBang`, `eachPair`), because the call gates only credit a
 Ruby `key?` / `delete` / `merge!` when the TS body makes a call of a mapped
-name. This RFC does three things, in order:
+name. There are about 336 such call sites in source. This RFC does three
+things, in order:
 
 1. **Gate.** Teach the TS extractor to record each native form as a marked
    form, and the comparator to credit the Ruby hash call a form ports. The call
@@ -51,6 +52,11 @@ name. This RFC does three things, in order:
 3. **Carrier and HWIA audit.** Convert the few string-keyed `new Hash()` sites
    to plain objects, ratify which `Hash` features are permanent, and inventory
    the `HashWithIndifferentAccess` consumers against what Rails passes.
+
+Not every site converts. A native form replaces a helper only where it does
+the same thing: most `hashDelete` sites use the value Ruby's `delete` returns
+and JS's does not, and `fetch` has no native form at all. Those keep the
+helper, and the RFC reports the residual rather than promising zero.
 
 The scope is the repo owner's ruling of 2026-10-10: "I don't want things to use
 hash or hashwithindifferentaccess unless specific features are necessary."
@@ -189,14 +195,23 @@ here would be `delete association[record]` for `association.delete(record)`,
 anyone writes, and none does anything on a `Relation`. `.length` and `[0]` are
 the natural JS for the dangerous rewrite; `delete x[k]` and `in` are not.
 
-**The receiver is checked anyway.** Each new row sets `receivers: "explicit"`
-with `uncreditedKinds` of `self`, `ivar` and `const`, the kinds
-`LENGTH_READ_UNCREDITED_RECEIVER_KINDS` already refuses
-(`enumerable-idioms.ts:293-297`), because those are where Rails holds a
-`Relation` or an association across a method boundary. A bare `merge(other)`
-inside `Relation` records no receiver and never credits. `delete` and `merge`
-and `merge!` additionally stay receiver-keyed on the ruby-compat side, as they
-are now.
+**The receiver is checked anyway.** Each new row sets `receivers: "explicit"`,
+so a bare call with no receiver never credits: a bare `merge(other)` inside
+`Relation` is `Relation#merge` and keeps flagging. Every Ruby site's receiver
+name must also match the name in a mark, so `@options.key?(:x)` is credited by
+`"x" in this.options` and not by `"x" in this.other`. `delete`, `merge` and
+`merge!` additionally refuse a `const` receiver and stay receiver-keyed on the
+ruby-compat side, as they are now, and `include?` / `member?` credit only on a
+receiver Ripper proved a hash.
+
+An `ivar` receiver IS admitted, unlike for `.length`
+(`LENGTH_READ_UNCREDITED_RECEIVER_KINDS`, `enumerable-idioms.ts:293-297`).
+That table refuses ivars because `@records.size` may be a `Relation`. Here the
+first point carries it: no port writes `"x" in this.records`. And refusing
+ivars would strand every `@options.key?` site on the helper. The gate story
+measures the receiver kinds of the Ruby sites behind today's helper calls and
+reports any the rows still refuse, so this is checked against the data before
+substitution starts.
 
 What the note's two MEASURED re-checks established (2026-08-08 and 2026-09-18)
 is that a receiver **token** cannot separate an Array from a Relation. This
@@ -411,11 +426,16 @@ and are unaffected.
 3. **Carrier and audit**, independent of phase 2:
    `native-hash-carrier-permanent-features-ratified`,
    `native-hash-hwia-consumer-audit`, and
-   `native-hash-string-keyed-carriers-to-plain-objects` (after the `[]` / `[]=`
-   gate story).
+   `native-hash-string-keyed-carriers-to-plain-objects` (after
+   `native-hash-each-pair-sites`).
 
-Stories in one phase that touch the same package are sequenced by their
-`deps`, not opened in parallel, so no two open PRs edit the same file.
+The substitution stories are chained by `deps` so that no two that share a
+package are open at once: the three `key?` stories have disjoint packages and
+run in parallel, each `merge!` story follows the `key?` stories it shares a
+package with, `delete` follows `merge!`, `[]` / `[]=` follows `delete`, and
+`each_pair`, which touches every package, runs last. The longest chain is five
+PRs deep. `native-hash-string-keyed-carriers-to-plain-objects` follows
+`each_pair`, because both edit `persistence.ts:657-661`.
 
 ## Verification
 
@@ -515,3 +535,6 @@ Measured the same way as § "Motivation", from trails `main`:
   native substitution; HWIA audited, not changed). Counts re-measured at
   trails `ddd629745a`: the 622 figure the request carried includes test files;
   the source population is 385 lines.
+- 2026-10-10: self-review pass. Substitution stories re-chained so no two
+  sharing a package are open at once; `ivar` receivers admitted for the hash
+  forms; line citations corrected; § "Existing stories this RFC changes" added.

@@ -5,7 +5,11 @@ updated: 2026-10-10
 rfc: "0000-native-js-hash-forms"
 cluster: substitution
 packages: [actionpack, actionview, rack-session]
-deps: [native-hash-forms-credit-key-delete-merge]
+deps:
+  [
+    native-hash-key-sites-actionpack-rack-i18n,
+    native-hash-key-sites-trailties-activesupport-actionview,
+  ]
 deps-rfc: []
 est-loc: 200
 priority: null
@@ -53,7 +57,7 @@ call.
       about what the receiver can be and what the site does with the result,
       not about the name.
 - [ ] No test title changes: `git diff origin/main...HEAD -- '*.test.ts' |
-  grep -E '^[-+].*\b(it|test|describe)\('` is empty.
+grep -E '^[-+].*\b(it|test|describe)\('` is empty.
 - [ ] An import of `mergeBang` with no remaining use in its file is removed.
 - [ ] `pnpm parity:api:calls`, `:calls:args`, `:arms:throws` and
       `pnpm parity:api:extra:gate` green with no baseline row and no

@@ -75,5 +75,5 @@ pnpm vitest run scripts/api-compare
 ## Notes
 
 The per-package TS cache is keyed by `packageFingerprint`
-(`extract-ts-api.ts:122-130`); bump whatever version it includes so a warm
+(`extract-ts-api.ts:189`, described at `:122-126`); bump whatever version it includes so a warm
 cache does not hide the new marks.
