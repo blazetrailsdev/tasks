@@ -5,7 +5,9 @@ updated: 2026-10-09
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - mime-responds-reaches-base-by-class-body-assignment-not-include
+  - base-view-paths-and-parameter-encoding-reach-base-through-include
 deps-rfc: []
 est-loc: 250
 priority: null
