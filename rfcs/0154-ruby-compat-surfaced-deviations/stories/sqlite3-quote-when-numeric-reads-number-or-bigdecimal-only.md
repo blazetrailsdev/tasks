@@ -2,7 +2,7 @@
 title: "activerecord: sqlite3 quote's when Numeric admits only a number or a BigDecimal"
 status: draft
 updated: 2026-10-10
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
