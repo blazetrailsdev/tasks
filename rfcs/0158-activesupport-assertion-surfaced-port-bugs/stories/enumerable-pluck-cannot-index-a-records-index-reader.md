@@ -2,7 +2,7 @@
 title: "activesupport/activerecord: Enumerable#pluck cannot send [] to a record, so records.pluck is open-coded"
 status: draft
 updated: 2026-10-01
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
