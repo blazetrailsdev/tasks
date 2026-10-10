@@ -1,7 +1,7 @@
 ---
 title: "activerecord: score the SKIP_GROUPS[0] names activerecord defines (freeze, to_ary, nil?, initialize_clone, then)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: skips
 packages: ["activerecord"]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8750
+claim: "2026-10-10T11:09:37Z"
+assignee: "activerecord-score-core-object-protocol-names"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Preloader LoaderRecords#keys_to_load compares composite keys by identity"
-status: ready
-updated: 2026-10-05
+status: claimed
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-10T11:39:39Z"
+assignee: "compatibility-module-members-unmeasured-by-parity-api"
 blocked-by: null
 closed-reason: null
 ---

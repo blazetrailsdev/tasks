@@ -1,6 +1,6 @@
 ---
 title: "activerecord: retire SKIP_GROUPS' target/start/finish entry, which hides Association#target and Transaction#start"
-status: claimed
+status: in-progress
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: skips
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#8749
 claim: "2026-10-10T10:39:32Z"
 assignee: "activerecord-lifecycle-hook-semantics-audit"
 blocked-by: null

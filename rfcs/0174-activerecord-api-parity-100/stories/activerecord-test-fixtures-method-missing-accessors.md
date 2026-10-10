@@ -1,7 +1,7 @@
 ---
 title: "activerecord: TestFixtures#method_missing / respond_to_missing? — decide and port the 'nothing' row"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: skips
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["activerecord-unexclude-and-measure-fixtures-rb"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8310
+claim: "2026-10-10T11:09:37Z"
+assignee: "activerecord-score-core-object-protocol-names"
 blocked-by: null
 closed-reason: null
 ---
