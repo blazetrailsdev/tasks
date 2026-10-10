@@ -1,5 +1,5 @@
 ---
-rfc: "0000-activerecord-surfaced-deviations"
+rfc: "0189-activerecord-surfaced-deviations"
 title: "activerecord surfaced deviations — the package's standing convergence bucket"
 status: draft
 created: 2026-10-10
@@ -26,10 +26,7 @@ related-rfcs:
   - "0023-surfaced-deviations"
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — activerecord surfaced deviations
+# RFC 0189 — activerecord surfaced deviations
 
 ## Summary
 
