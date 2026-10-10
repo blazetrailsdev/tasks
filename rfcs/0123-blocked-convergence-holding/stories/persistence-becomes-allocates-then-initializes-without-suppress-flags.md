@@ -2,7 +2,7 @@
 title: "activerecord: Persistence#becomes is allocate plus initialize, with no suppress-flag try/restore"
 status: blocked
 updated: 2026-10-09
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]
 deps: ["base-allocate-comes-from-a-ruby-compat-rb-obj-alloc"]
