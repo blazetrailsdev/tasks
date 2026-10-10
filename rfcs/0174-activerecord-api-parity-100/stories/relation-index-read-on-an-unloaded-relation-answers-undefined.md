@@ -1,7 +1,7 @@
 ---
 title: "activerecord: an index read on an unloaded relation goes through records, not a silent undefined"
-status: ready
-updated: 2026-10-08
+status: in-progress
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8755
+claim: "2026-10-10T13:09:37Z"
+assignee: "relation-index-read-on-an-unloaded-relation-answers-undefined"
 blocked-by: null
 closed-reason: null
 ---

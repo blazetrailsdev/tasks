@@ -1,7 +1,7 @@
 ---
 title: "activerecord: UniquenessValidator reads an association value through an override Rails does not have"
-status: ready
-updated: 2026-10-05
+status: done
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["ar-read-attribute-for-validation-is-not-send"]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8663
+claim: "2026-10-10T13:09:37Z"
+assignee: "relation-index-read-on-an-unloaded-relation-answers-undefined"
 blocked-by: null
 closed-reason: null
 ---

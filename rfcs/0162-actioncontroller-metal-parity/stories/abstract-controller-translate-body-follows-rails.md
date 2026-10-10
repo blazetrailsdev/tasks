@@ -1,7 +1,7 @@
 ---
 title: "AbstractController::Translation#translate follows Rails' single-call body"
-status: ready
-updated: 2026-10-09
+status: in-progress
+updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8755
+claim: "2026-10-10T13:09:37Z"
+assignee: "relation-index-read-on-an-unloaded-relation-answers-undefined"
 blocked-by: null
 closed-reason: null
 ---
