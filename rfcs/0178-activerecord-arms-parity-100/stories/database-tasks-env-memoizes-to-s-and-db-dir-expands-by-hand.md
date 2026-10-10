@@ -1,5 +1,5 @@
 ---
-title: "activerecord: DatabaseTasks#env memoizes Rails.env.to_s and #db_dir expands Path#first by hand"
+title: "activerecord: DatabaseTasks#env memoizes Rails.env.to_s"
 status: claimed
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
@@ -18,30 +18,34 @@ closed-reason: null
 
 ## Context
 
-Left over from trails#8721, which removed the standalone fallback arms from `DatabaseTasks`' three
-memoized readers. Rails' bodies are bare one-liners
-(`vendor/rails/v8.0.2/activerecord/lib/active_record/tasks/database_tasks.rb:83-85,99-105`):
+Left over from trails#8721, narrowed by trails#8740, which landed the `db_dir` half (it reads
+`Paths::Path#firstSync`; making `Path#first` itself synchronous is
+`paths-path-expanded-is-async-over-a-sync-dir-glob`).
+
+Rails' body is a bare one-liner
+(`vendor/rails/v8.0.2/activerecord/lib/active_record/tasks/database_tasks.rb:99-105`):
 
 ```ruby
-def db_dir = @db_dir ||= Rails.application.config.paths["db"].first
-def env    = @env ||= Rails.env
+def env = @env ||= Rails.env
 ```
 
-Two calls in the ports (`packages/activerecord/src/tasks/database-tasks.ts`) are still not Rails':
+The port (`packages/activerecord/src/tasks/database-tasks.ts`) is
+`this._env ??= TopLevel.Trails!.env.toString()` and carries
+`@inventedArm toString — CONVERGEABLE` against this story. Rails memoizes `Rails.env` itself, an
+`ActiveSupport::EnvironmentInquirer` (`railties/lib/rails.rb:75-77`), with no `to_s`.
 
-- `env` is `this._env ??= TopLevel.Trails!.env.toString()`. Rails memoizes `Rails.env` itself, an
-  `ActiveSupport::EnvironmentInquirer` (`railties/lib/rails.rb:75-77`), with no `to_s`.
-- `dbDir` is `File.expandPath(first(TopLevel.Trails!.application!.config.paths().get("db")!.toAry())!, TopLevel.Trails!.application!.config.root!)`.
-  Rails calls `Paths::Path#first`, which is `expanded.first` (`railties/lib/rails/paths.rb:143-145`).
-  trails' `Path#first` (`packages/trailties/src/paths.ts`) is async because `expanded` globs through
-  the async fs adapter, so the sync getter re-derives the expansion by hand and reads `root` itself.
-
-Neither is visible to the call gates: both are calls the TS body adds.
+trails#8740 tried the direct change. Typing `env` as `string | EnvironmentInquirer` failed typecheck
+at every reader that compares it (`env === "test"`), uses it as a computed key
+(`{ [DatabaseTasks.env]: ... }`) or passes it as `envName: string`, across
+`tasks/database-tasks.test.ts`, `connection-handling.test.ts`, `migration/pending-migrations.test.ts`
+and the `database-tasks-*.trails.test.ts` files. `EnvironmentInquirer` is an object in trails, where
+Ruby's is a `String` subclass that compares and hashes as its content.
 
 ## Acceptance criteria
 
-- [ ] `DatabaseTasks.env` memoizes `TopLevel.Trails!.env` with no `toString()`, or the added call
-      carries an `@inventedArm toString` receipt with its permanence token.
-- [ ] `DatabaseTasks.dbDir` reads the db path through `Paths::Path#first` (or a sync peek of it that
-      `paths.ts` owns), with no `File.expandPath` and no `config.root` read in `database-tasks.ts`.
+- [ ] `DatabaseTasks.env` memoizes `TopLevel.Trails!.env` with no `toString()`, and its readers compare
+      and key through the inquirer (`rbEqual` / `toString` at the reader that needs a primitive), or
+      the repo owner rules the call permanent against CLAUDE.md § "Ruby Strings are JS string
+      primitives" and the receipt reads `PERMANENT`.
+- [ ] The `@inventedArm toString — CONVERGEABLE` receipt naming this story is gone.
 - [ ] `tasks/database-tasks.test.ts` and `trailties/src/commands/db.test.ts` green.
