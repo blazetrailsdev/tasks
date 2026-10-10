@@ -2,7 +2,7 @@
 title: "activerecord: a record's init_internals never reaches ActiveModel::Validations#init_internals"
 status: blocked
 updated: 2026-10-03
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []
 deps: []
