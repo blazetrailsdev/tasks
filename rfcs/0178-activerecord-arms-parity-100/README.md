@@ -8,6 +8,7 @@ owner: "@deanmarano"
 packages:
   - "activerecord"
   - "ruby-compat"
+  - "arel"
 clusters:
   - arms
 related-rfcs:
