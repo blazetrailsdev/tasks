@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PostgreSQL connect and reconnect carry in-flight acquire bookkeeping Rails has none of"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

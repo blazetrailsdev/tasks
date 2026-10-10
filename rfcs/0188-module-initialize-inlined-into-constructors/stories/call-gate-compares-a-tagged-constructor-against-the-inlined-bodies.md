@@ -1,6 +1,6 @@
 ---
 title: "parity:api:calls compares a tagged constructor against the union of the inlined Rails initialize bodies"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling

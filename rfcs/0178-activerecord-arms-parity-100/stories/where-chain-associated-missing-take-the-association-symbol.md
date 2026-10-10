@@ -1,6 +1,6 @@
 ---
 title: "activerecord: where.associated / where.missing take the association as a Symbol"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

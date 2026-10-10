@@ -1,6 +1,6 @@
 ---
 title: "activerecord: count over an eager limited from relation runs the limited-ids query twice"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "api-compare: the TS extractor records @inlinedFrom tags on constructors, in order"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling

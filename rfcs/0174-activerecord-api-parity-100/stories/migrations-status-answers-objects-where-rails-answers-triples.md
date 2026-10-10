@@ -1,6 +1,6 @@
 ---
 title: "MigrationContext#migrationsStatus answers objects where Rails answers [status, version, name] triples"
-status: ready
+status: in-progress
 updated: 2026-10-09
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8734
+claim: "2026-10-09T23:09:51Z"
+assignee: "schema-dumper-header-branches-on-the-ts-js-dump-language"
 blocked-by: null
 closed-reason: null
 ---

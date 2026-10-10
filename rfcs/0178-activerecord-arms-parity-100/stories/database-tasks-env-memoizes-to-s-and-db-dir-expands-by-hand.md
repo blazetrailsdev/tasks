@@ -1,6 +1,6 @@
 ---
 title: "activerecord: DatabaseTasks#env memoizes Rails.env.to_s and #db_dir expands Path#first by hand"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

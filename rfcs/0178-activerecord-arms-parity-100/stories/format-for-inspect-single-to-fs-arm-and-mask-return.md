@@ -1,6 +1,6 @@
 ---
 title: "activerecord: format-for-inspect-single-to-fs-arm-and-mask-return"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

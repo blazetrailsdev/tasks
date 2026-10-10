@@ -1,6 +1,6 @@
 ---
 title: "activerecord: JoinDependency#construct and #construct_model take Rails' control flow"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

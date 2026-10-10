@@ -1,6 +1,6 @@
 ---
 title: "activerecord: converge or receipt the arm mismatches on top-level functions the skeleton writer newly compares"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

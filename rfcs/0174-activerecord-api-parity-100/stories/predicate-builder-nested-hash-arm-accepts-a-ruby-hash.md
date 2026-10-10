@@ -1,6 +1,6 @@
 ---
 title: "predicate-builder-nested-hash-arm-accepts-a-ruby-hash"
-status: draft
+status: closed
 updated: 2026-10-09
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: owner ruling 2026-10-09 on trails#8733 — a ported API accepts a plain JS object where Rails takes a Hash unless a Ruby-Hash-specific feature is needed, so PredicateBuilder keeps its plain-object arm and where.associated/missing converting index_with's result with Object.fromEntries is the intended shape."
 ---
 
 ## Context

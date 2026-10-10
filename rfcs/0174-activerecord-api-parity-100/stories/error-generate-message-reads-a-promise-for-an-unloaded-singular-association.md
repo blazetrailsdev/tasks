@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Error.generate_message's value is a promise for an unloaded singular association"
-status: ready
-updated: 2026-10-08
+status: blocked
+updated: 2026-10-09
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-09T23:09:51Z"
+assignee: "schema-dumper-header-branches-on-the-ts-js-dump-language"
+blocked-by: "Owner decision: Error#message is sync (error.rb:150-158) and the singular association reader is async, so Error.generate_message (error.rb:66) needs an arm Rails lacks. Rule on the shape: (a) peek the association and pass value nil for an unloaded target, starting no query, or (b) take the reader's promise, swallow its rejection and pass nil. Either needs a PERMANENT receipt against a ratified section."
 closed-reason: null
 ---
 

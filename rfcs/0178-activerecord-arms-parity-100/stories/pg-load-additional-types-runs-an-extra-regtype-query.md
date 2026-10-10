@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PG load_additional_types runs a fourth query and fills a regtype OID map Rails does not have"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

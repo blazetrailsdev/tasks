@@ -1,6 +1,6 @@
 ---
 title: "activerecord: HasManyAssociation#find_target is an override Rails does not have; collections load through Association#find_target"
-status: draft
+status: ready
 updated: 2026-10-09
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: FixtureSet::File#raw_rows rescues RuntimeError over the whole begin, not ConfigurationFile::FormatError around parse"
-status: in-progress
+status: done
 updated: 2026-10-09
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
