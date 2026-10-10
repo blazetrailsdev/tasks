@@ -2,7 +2,7 @@
 title: "body-pins-cover-only-the-first-def-of-a-multiply-defined-name"
 status: draft
 updated: 2026-10-10
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []
