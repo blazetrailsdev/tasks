@@ -7,6 +7,7 @@ cluster: null
 packages: ["activerecord"]
 deps:
   - activerecord-prepended-super-first-parameters-onto-super-method
+  - activerecord-compatibility-and-job-runtime-super-first-parameters
 deps-rfc: []
 est-loc: 400
 priority: null
