@@ -1,7 +1,7 @@
 ---
 title: "activerecord: parity:api:deps — activerecord's arel / activemodel / activesupport references match Rails'"
-status: ready
-updated: 2026-10-01
+status: in-progress
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface
 packages: ["activerecord"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8748
+claim: "2026-10-10T10:09:33Z"
+assignee: "activerecord-deps-lint-to-zero"
 blocked-by: null
 closed-reason: null
 ---

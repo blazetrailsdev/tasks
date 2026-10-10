@@ -1,7 +1,7 @@
 ---
 title: "activerecord: DisableJoinsAssociationScope#add_constraints keeps Rails' signature (arity 3730/3731)"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface
 packages: ["activerecord"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8343
+claim: "2026-10-10T10:09:33Z"
+assignee: "activerecord-deps-lint-to-zero"
 blocked-by: null
 closed-reason: null
 ---
