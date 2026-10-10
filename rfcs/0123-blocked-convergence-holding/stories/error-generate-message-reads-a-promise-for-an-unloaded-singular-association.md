@@ -2,7 +2,7 @@
 title: "activemodel: Error.generate_message's value is a promise for an unloaded singular association"
 status: blocked
 updated: 2026-10-09
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
