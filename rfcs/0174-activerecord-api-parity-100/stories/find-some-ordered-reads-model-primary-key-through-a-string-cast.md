@@ -2,7 +2,7 @@
 title: "activerecord: find_some_ordered reads model.primaryKey into a local and stringifies it for type_for_attribute"
 status: draft
 updated: 2026-10-10
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps: []

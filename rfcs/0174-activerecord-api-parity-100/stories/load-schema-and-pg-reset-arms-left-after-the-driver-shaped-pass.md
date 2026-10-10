@@ -2,7 +2,7 @@
 title: "load-schema-and-pg-reset-arms-left-after-the-driver-shaped-pass"
 status: draft
 updated: 2026-10-10
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps: []
