@@ -1,7 +1,7 @@
 ---
 title: "Delete enumTypeOf; tests read Model.typeForAttribute as Rails does"
-status: draft
-updated: 2026-09-30
+status: closed
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "landed: enumTypeOf no longer exists anywhere under packages/activerecord on trails origin/main 7bcc4d4996 (git grep -c enumTypeOf: 0 hits); last removal trails#8443 (11fed8c22c). Closed at the sunset triage of 0174-activerecord-api-parity-100."
 ---
 
 ## Context

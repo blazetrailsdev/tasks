@@ -1,6 +1,6 @@
 ---
 title: "load-async-null-executor-arm-floats-its-load-under-the-adapter-lock"
-status: draft
+status: ready
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

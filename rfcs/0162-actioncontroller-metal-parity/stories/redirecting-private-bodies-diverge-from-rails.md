@@ -1,7 +1,7 @@
 ---
 title: "Redirecting's url-host, location and guard bodies diverge from Rails"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8758
+claim: "2026-10-10T16:09:36Z"
+assignee: "base-included-modules-dispatch-privates-through-self"
 blocked-by: null
 closed-reason: null
 ---

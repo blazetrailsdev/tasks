@@ -1,6 +1,6 @@
 ---
 title: "activerecord: sqlite3 check_constraints balances parentheses by hand where Rails' regex recurses"
-status: draft
+status: claimed
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-10T16:39:42Z"
+assignee: "base-load-schema-primary-key-warm-arm-moves-to-primary-key-resolution"
 blocked-by: null
 closed-reason: null
 ---

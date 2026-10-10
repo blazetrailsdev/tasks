@@ -1,7 +1,7 @@
 ---
 title: "JoinAssociation#join_constraints: extract! the And's children in place; drop nodeReferencesTable and the rebuilt nodes"
-status: draft
-updated: 2026-10-02
+status: closed
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "landed in trails#8479 (e7d06dcd75): join-association.ts on origin/main 7bcc4d4996 calls extractBang(nodes.children, ...) in place and emits new Nodes.On(nodes) over the same And; nodeReferencesTable and the True/lone-child/And rebuild are gone (git grep nodeReferencesTable: 0 hits). Closed at the sunset triage of 0174-activerecord-api-parity-100."
 ---
 
 ## Context

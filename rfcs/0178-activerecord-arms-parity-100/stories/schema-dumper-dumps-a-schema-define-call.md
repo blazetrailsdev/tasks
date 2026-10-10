@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SchemaDumper dumps a Schema.define call, one header for ts and js"
-status: draft
+status: closed
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "landed in trails#8745 (54b00554f9): SchemaDumper#header on origin/main emits one 'await Schema.get(version).define({ params }, async (ctx) => {' call for ts and js, _format is gone from schema-dumper.ts, the only receipt left on header is '@inventedArm if — PERMANENT' (the define_params brace arm), and the PR closed schema-dumper-header-branches-on-the-ts-js-dump-language and moved DatabaseTasks.loadSchema, activerecord-cli and trailties to the new shape"
 ---
 
 ## Context

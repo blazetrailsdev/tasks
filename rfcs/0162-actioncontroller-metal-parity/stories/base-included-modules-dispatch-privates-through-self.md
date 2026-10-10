@@ -1,7 +1,7 @@
 ---
 title: "Redirecting, CSP, Layouts, Flash and Logging module bodies dispatch through self as Rails does"
-status: ready
-updated: 2026-10-09
+status: blocked
+updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
-blocked-by: null
+pr: trails#8758
+claim: "2026-10-10T16:09:36Z"
+assignee: "base-included-modules-dispatch-privates-through-self"
+blocked-by: "waiting on flash-reader-is-a-hand-written-getter-not-a-delegate-call: delegate :flash, to: :request needs Delegation.generate to emit an accessor for a String target; every other arm landed in trails#8758"
 closed-reason: null
 ---
 

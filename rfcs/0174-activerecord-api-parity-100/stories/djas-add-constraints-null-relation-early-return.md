@@ -1,7 +1,7 @@
 ---
 title: "DisableJoinsAssociationScope add-constraints keeps a non-Rails isNullRelation() early return"
-status: draft
-updated: 2026-09-30
+status: closed
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "landed: the isNullRelation() early return is gone from packages/activerecord/src/associations/disable-joins-association-scope.ts on trails origin/main 7bcc4d4996 (git grep: 0 hits); removed in trails#8343 (14f04defba). Closed at the sunset triage of 0174-activerecord-api-parity-100."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: load_schema's :ruby arm is a bare load(file)"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

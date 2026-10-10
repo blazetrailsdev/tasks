@@ -1,6 +1,6 @@
 ---
 title: "PG type_cast answers Binary::Data with a Buffer where Rails returns { value:, format: 1 }"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
