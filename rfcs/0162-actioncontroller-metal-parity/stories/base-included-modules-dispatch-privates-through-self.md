@@ -5,7 +5,8 @@ updated: 2026-10-09
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - flash-reader-is-a-hand-written-getter-not-a-delegate-call
 deps-rfc: []
 est-loc: 300
 priority: null
