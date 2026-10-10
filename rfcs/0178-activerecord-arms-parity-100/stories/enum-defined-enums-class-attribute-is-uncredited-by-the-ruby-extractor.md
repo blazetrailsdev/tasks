@@ -1,6 +1,6 @@
 ---
 title: "parity: the Ruby extractor does not credit base.class_attribute in Enum.extended"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

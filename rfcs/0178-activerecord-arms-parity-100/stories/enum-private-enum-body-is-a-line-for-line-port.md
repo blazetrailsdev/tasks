@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port Enum#_enum line for line and move conflict detection into define_enum_methods"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

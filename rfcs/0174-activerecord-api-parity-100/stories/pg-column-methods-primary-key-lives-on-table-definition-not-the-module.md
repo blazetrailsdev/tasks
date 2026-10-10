@@ -1,6 +1,6 @@
 ---
 title: "activerecord: ColumnMethods#primary_key is a class member, not a mixed-in module, so PG Table misses the uuid default"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

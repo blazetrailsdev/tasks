@@ -1,6 +1,6 @@
 ---
 title: "activerecord: InsertAll::Builder call + args rows (extract_types_from_columns_on, touch_model_timestamps_unless)"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args

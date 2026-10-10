@@ -1,6 +1,6 @@
 ---
 title: "activerecord: parity:api:deps — activerecord's arel / activemodel / activesupport references match Rails'"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: api-surface

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Querying#_load_from_sql calls instantiate_instance_of (call row)"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args

@@ -1,6 +1,6 @@
 ---
 title: "activesupport: to_fs has no receiver dispatch; Time#to_fs carries two invented arms and quoting re-derives them"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

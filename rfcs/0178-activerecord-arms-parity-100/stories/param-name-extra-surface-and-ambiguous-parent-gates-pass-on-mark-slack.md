@@ -1,6 +1,6 @@
 ---
 title: "parity: param-name, extra-surface and ambiguous-parent gates pass with a mark above the measurement"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

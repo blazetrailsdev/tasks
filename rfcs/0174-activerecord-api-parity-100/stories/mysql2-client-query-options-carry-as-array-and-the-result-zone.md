@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2 query_options carry :as and decide the result Time's zone"
-status: claimed
+status: in-progress
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8751
 claim: "2026-10-10T11:39:39Z"
 assignee: "compatibility-module-members-unmeasured-by-parity-api"
 blocked-by: null

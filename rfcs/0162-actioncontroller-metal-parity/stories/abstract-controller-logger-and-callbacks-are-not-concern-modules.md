@@ -1,7 +1,7 @@
 ---
 title: "AbstractController::Logger and Callbacks are not Concern modules; Callbacks is included from AbstractController"
-status: ready
-updated: 2026-10-09
+status: in-progress
+updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8754
+claim: "2026-10-10T12:39:39Z"
+assignee: "database-tasks-env-memoizes-to-s-and-db-dir-expands-by-hand"
 blocked-by: null
 closed-reason: null
 ---

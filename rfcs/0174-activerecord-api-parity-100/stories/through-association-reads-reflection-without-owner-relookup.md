@@ -1,7 +1,7 @@
 ---
 title: "activerecord: ThroughAssociation source_reflection, ensure_mutable and ensure_not_nested read the reflection directly"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8754
+claim: "2026-10-10T12:39:39Z"
+assignee: "database-tasks-env-memoizes-to-s-and-db-dir-expands-by-hand"
 blocked-by: null
 closed-reason: null
 ---

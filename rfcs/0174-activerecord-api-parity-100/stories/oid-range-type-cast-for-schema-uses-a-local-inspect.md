@@ -1,6 +1,6 @@
 ---
 title: "OID::Range#type_cast_for_schema uses a hand-written inspect instead of rbInspect"
-status: claimed
+status: in-progress
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8751
 claim: "2026-10-10T11:39:39Z"
 assignee: "compatibility-module-members-unmeasured-by-parity-api"
 blocked-by: null

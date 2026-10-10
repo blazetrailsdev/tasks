@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PG dealloc and cancel_any_running_query rescue only the driver error, as rescue PG::Error does"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

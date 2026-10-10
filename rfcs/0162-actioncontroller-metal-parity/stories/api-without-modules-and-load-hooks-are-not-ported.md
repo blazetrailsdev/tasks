@@ -1,7 +1,7 @@
 ---
 title: "API.without_modules ignores its arguments and api.rb's load hooks are not run; Base::MODULES is a name list"
 status: ready
-updated: 2026-10-09
+updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []

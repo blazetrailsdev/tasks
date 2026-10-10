@@ -1,6 +1,6 @@
 ---
 title: "activerecord: a subclass reads its parent's primary_key through the prototype chain"
-status: claimed
+status: in-progress
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8751
 claim: "2026-10-10T11:39:39Z"
 assignee: "compatibility-module-members-unmeasured-by-parity-api"
 blocked-by: null

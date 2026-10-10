@@ -1,6 +1,6 @@
 ---
 title: "activerecord: MySQL and PostgreSQL DatabaseTasks take extra_flags as required; run_cmd_error is a private method"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

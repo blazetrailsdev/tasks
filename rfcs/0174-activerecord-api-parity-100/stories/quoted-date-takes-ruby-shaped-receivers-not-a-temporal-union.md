@@ -1,7 +1,7 @@
 ---
 title: "activerecord: quoted_date takes Ruby-shaped receivers, not a Temporal union with private dispatch helpers"
-status: ready
-updated: 2026-10-09
+status: blocked
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-10T12:09:35Z"
+assignee: "migration-lacks-transaction-and-execute-forwarders"
+blocked-by: "Owner decision needed: the premise that @blazetrails/date's Date/DateTime carry isUtc/getutc/getlocal/usec/to_fs is false. trails spells Ruby Date as Temporal.PlainDate (activemodel/src/type/date.ts DateCastResult; date/src/date.ts Date#toDate) and DateTime as Temporal.PlainDateTime|ZonedDateTime, with to_fs/usec/utc?/getutc/localtime ported as FREE FUNCTIONS over those types (activesupport/src/core-ext/date/conversions.ts:21, date-time/conversions.ts:9,74, date-time/calculations.ts:204,219,238); Time has no toFs method either (core-ext/time/conversions.ts:52). So quotedDate cannot call 'the receiver's own' toFs for Time/Date/DateTime, and the private dispatchers exist because of that representation. Converging as written means either adding the AS core-ext methods to the date-package classes and switching AR's Date/DateTime cast values to them (repo-wide), or re-scoping the story to: drop JS Date + Temporal.Instant from the union, keep PlainDate/DateTime as the Date receivers, and dispatch through activesupport's exported free functions."
 closed-reason: null
 ---
 

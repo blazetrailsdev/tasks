@@ -1,7 +1,7 @@
 ---
 title: "migration-lacks-transaction-and-execute-forwarders"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8752
+claim: "2026-10-10T12:09:35Z"
+assignee: "migration-lacks-transaction-and-execute-forwarders"
 blocked-by: null
 closed-reason: null
 ---

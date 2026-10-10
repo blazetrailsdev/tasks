@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Relation#initialize_copy carries a from relation's materialized limited ids"
-status: ready
-updated: 2026-10-08
+status: blocked
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-10T12:39:39Z"
+assignee: "database-tasks-env-memoizes-to-s-and-db-dir-expands-by-hand"
+blocked-by: 'owner decision: may QueryMethods#build_subquery go async? Its this.except("optimizerHints").arel() copy (relation/query-methods.ts buildSubquery, relation/query_methods.rb build_subquery) is created and built in one synchronous expression, so it cannot be drained before its arel build; reached from buildCountSubquery''s relation.unscope(":order").buildSubquery(...) (relation/calculations.ts) and from relation.ts update_all/delete_all. Without the initializeCopy carry a limited count over an eager-loaded limited from relation sends IN (SELECT DISTINCT ... LIMIT ...), which MySQL rejects.'
 closed-reason: null
 ---
 

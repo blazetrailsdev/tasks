@@ -1,6 +1,6 @@
 ---
 title: "a model on a key-less table answers primaryKey 'id' after a reconnect, so its INSERT emits RETURNING id"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0023-surfaced-deviations"
 cluster: null

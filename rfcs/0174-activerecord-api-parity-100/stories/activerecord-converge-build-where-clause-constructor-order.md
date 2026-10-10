@@ -1,6 +1,6 @@
 ---
 title: "activerecord: QueryMethods#build_where_clause calls WhereClause.new last (order row)"
-status: claimed
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: calls-args
@@ -9,7 +9,7 @@ deps: ["activerecord-relocate-query-methods-bodies-inlined-in-relation"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8499
 claim: "2026-10-10T09:09:37Z"
 assignee: "activerecord-converge-build-where-clause-constructor-order"
 blocked-by: null

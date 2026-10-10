@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: trails#8740
-claim: "2026-10-10T01:33:30Z"
-assignee: "activerecord-arms-on-top-level-functions-the-skeleton-writer-newly-compares"
+pr: trails#8754
+claim: "2026-10-10T12:39:39Z"
+assignee: "database-tasks-env-memoizes-to-s-and-db-dir-expands-by-hand"
 blocked-by: null
 closed-reason: null
 ---
