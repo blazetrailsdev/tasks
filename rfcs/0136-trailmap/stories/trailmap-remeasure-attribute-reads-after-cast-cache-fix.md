@@ -2,7 +2,7 @@
 title: "trailmap: re-vendor trails and re-measure Story load and attribute reads after the cast-cache fix"
 status: draft
 updated: 2026-10-05
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: []
