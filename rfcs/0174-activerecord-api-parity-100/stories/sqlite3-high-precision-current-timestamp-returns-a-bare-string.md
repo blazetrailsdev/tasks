@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SQLite3 high_precision_current_timestamp returns a bare string, blocking InsertAll#timestamps_for_create"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

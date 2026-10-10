@@ -1,7 +1,7 @@
 ---
 title: "SQLite3Adapter#change_column_null calls quote(default) under Rails' guard, not quoteDefault / serializeDefaultForColumn"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

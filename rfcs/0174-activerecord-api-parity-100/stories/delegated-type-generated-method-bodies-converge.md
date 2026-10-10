@@ -1,7 +1,7 @@
 ---
 title: "delegated_type: #{role}_class/_name/build_#{role} bodies diverge from delegated_type.rb:246-256"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

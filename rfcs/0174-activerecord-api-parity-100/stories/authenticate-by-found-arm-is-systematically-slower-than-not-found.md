@@ -1,7 +1,7 @@
 ---
 title: "activerecord: authenticate_by's found arm runs ~0.2 ms slower than its not-found arm, leaving the timing test marginal"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

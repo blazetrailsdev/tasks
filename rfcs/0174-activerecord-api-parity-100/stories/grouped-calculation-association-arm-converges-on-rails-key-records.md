@@ -1,7 +1,7 @@
 ---
 title: "activerecord: converge executeGroupedCalculation's association arm onto Rails' key_ids / index_by"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

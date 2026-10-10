@@ -1,7 +1,7 @@
 ---
 title: "activerecord: JoinDependency#initialize, base_klass, reflections and join_root_alias take Rails' bodies"
-status: draft
-updated: 2026-10-09
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

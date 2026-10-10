@@ -1,7 +1,7 @@
 ---
 title: "ActiveRecord validators are constants of ActiveRecord::Validations, not statics of Base"
-status: draft
-updated: 2026-10-03
+status: in-progress
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8764
+claim: "2026-10-10T19:09:47Z"
+assignee: "activerecord-pg-uuid-primary-key-default-lives-in-schema-creation"
 blocked-by: null
 closed-reason: null
 ---

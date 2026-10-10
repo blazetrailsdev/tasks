@@ -1,6 +1,6 @@
 ---
 title: "ConnectionPool#with_connection: overlapping calls on an empty lease each check out a connection"
-status: draft
+status: ready
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

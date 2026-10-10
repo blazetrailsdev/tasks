@@ -1,6 +1,6 @@
 ---
 title: "mysql2-new-client-rescue-reads-resolved-config-keys"
-status: draft
+status: ready
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

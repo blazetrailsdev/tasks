@@ -1,6 +1,6 @@
 ---
 title: "activerecord: node-pg connect timeout and SASL failures are not PG::Error, so new_client lets them through"
-status: draft
+status: ready
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

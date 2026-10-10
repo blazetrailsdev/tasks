@@ -1,7 +1,7 @@
 ---
 title: "finder-methods.js TDZ-crashes as an entry module; ordered_relation should self-call model.query_constraints_list"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

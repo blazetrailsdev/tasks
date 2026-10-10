@@ -1,7 +1,7 @@
 ---
 title: "activerecord: split core.ts's merged reader/writer functions into Rails' two methods"
-status: draft
-updated: 2026-10-02
+status: done
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8506
+claim: "2026-10-10T18:39:36Z"
+assignee: "sqlite3-pg-and-load-schema-driver-shaped-arms-left-after-the-top-level-pass"
 blocked-by: null
 closed-reason: null
 ---

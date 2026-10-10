@@ -1,7 +1,7 @@
 ---
 title: "activerecord: isAssociationCached takes the record as an argument, so marshal_dump throws on a model with associations"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

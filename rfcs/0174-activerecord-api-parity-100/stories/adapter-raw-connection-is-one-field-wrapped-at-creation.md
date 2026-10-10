@@ -1,6 +1,6 @@
 ---
 title: "activerecord: @raw_connection is one field; the npm client is wrapped where it is created"
-status: draft
+status: in-progress
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8763
+claim: "2026-10-10T18:39:36Z"
+assignee: "sqlite3-pg-and-load-schema-driver-shaped-arms-left-after-the-top-level-pass"
 blocked-by: null
 closed-reason: null
 ---

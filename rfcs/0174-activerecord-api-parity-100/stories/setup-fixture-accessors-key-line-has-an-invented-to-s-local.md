@@ -1,6 +1,6 @@
 ---
 title: "activerecord: setup_fixture_accessors' key line calls to_s with no invented local"
-status: draft
+status: ready
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

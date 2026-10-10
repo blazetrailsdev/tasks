@@ -1,7 +1,7 @@
 ---
 title: "abstract remove_foreign_key reads to_table off the options hash before the if_exists guard"
-status: draft
-updated: 2026-10-02
+status: done
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8762
+claim: "2026-10-10T18:09:39Z"
+assignee: "abstract-adapter-checkout-checkin-callbacks-hand-roll-define-callbacks"
 blocked-by: null
 closed-reason: null
 ---

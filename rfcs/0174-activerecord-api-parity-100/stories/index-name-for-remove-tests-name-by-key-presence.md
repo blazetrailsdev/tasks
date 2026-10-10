@@ -1,7 +1,7 @@
 ---
 title: "activerecord: index_name_for_remove tests :name by key presence, not truthiness"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

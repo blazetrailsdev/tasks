@@ -1,7 +1,7 @@
 ---
 title: "activerecord: QueryCache#select_all tests arel.locked and compiles inside the cached arm"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]

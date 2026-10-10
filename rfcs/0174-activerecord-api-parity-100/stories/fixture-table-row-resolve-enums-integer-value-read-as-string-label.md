@@ -1,7 +1,7 @@
 ---
 title: "activerecord: TableRow#resolve_enums reads an Integer row value as a String enum label"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

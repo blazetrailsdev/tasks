@@ -1,7 +1,7 @@
 ---
 title: "activerecord: registering a model under an alias does not rename the class"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

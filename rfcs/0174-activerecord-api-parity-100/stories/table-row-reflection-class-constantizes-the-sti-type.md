@@ -1,7 +1,7 @@
 ---
 title: "activerecord: TableRow#reflection_class constantizes the row's type (rescue model_class), not find_sti_class"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]

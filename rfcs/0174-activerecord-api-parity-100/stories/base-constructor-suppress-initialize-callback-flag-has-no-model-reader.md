@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Base's _suppressInitializeCallback flag no longer has a Model reader"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]

@@ -1,6 +1,6 @@
 ---
 title: "migration-inherited-raise-on-direct-inheritance-has-no-carrier"
-status: draft
+status: ready
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

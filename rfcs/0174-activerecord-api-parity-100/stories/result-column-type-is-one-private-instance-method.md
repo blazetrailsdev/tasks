@@ -1,7 +1,7 @@
 ---
 title: "Result#column_type is one private instance method, not a host-param module function behind a #private wrapper"
-status: draft
-updated: 2026-10-03
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Relation#new holds the body and build is its alias, through scoping"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "adapter-constructors-wrap-a-handed-npm-client"
-status: draft
+status: in-progress
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8763
+claim: "2026-10-10T19:10:14Z"
+assignee: "adapter-constructors-wrap-a-handed-npm-client"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "ThroughAssociation bodies re-look-up the reflection and add guards through_association.rb does not have"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

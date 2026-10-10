@@ -1,7 +1,7 @@
 ---
 title: "Result: freeze columns, column_indexes and indexed_rows at build, as result.rb does"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

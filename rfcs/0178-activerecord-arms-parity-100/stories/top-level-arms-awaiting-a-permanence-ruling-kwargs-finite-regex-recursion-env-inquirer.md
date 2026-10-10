@@ -1,6 +1,6 @@
 ---
 title: "activerecord: connection.transaction and Arel.sql split and check keyword arguments by hand"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null

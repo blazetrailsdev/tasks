@@ -1,7 +1,7 @@
 ---
 title: "activerecord: sql.active_record payload keys are read under the spelling they are written (lock_wait is NaN in RuntimeRegistry)"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: ordered_relation and _order_columns follow finder_methods.rb line for line"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

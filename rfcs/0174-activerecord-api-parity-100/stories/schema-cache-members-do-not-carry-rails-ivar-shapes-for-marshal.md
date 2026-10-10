@@ -1,7 +1,7 @@
 ---
 title: "Column, SqlTypeMetadata and IndexDefinition do not carry Rails' ivar names and value types, so a Marshal schema cache does not interoperate"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

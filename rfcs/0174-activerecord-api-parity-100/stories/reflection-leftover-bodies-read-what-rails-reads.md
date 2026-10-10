@@ -1,7 +1,7 @@
 ---
 title: "activerecord: converge the remaining reflection.ts bodies that read something Rails does not"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

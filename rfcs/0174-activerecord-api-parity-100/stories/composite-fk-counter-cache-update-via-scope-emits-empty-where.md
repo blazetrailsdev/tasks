@@ -1,7 +1,7 @@
 ---
 title: "activerecord: composite-FK belongs_to counter cache emits WHERE () when the target is not loaded"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the pg/mysql2 timestamp wire cast round-trips Instant, BigInt and Rational per column"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

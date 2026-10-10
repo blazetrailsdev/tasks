@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the save chain's schema warm and records built against a cold schema cache"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

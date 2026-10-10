@@ -1,7 +1,7 @@
 ---
 title: "activerecord: ModelSchema.columnDefaults deep-dups on every read; Rails memoizes it (model_schema.rb:472-475)"
-status: draft
-updated: 2026-10-03
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]

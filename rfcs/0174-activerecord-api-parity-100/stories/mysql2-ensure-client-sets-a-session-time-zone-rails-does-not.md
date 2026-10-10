@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Mysql2Adapter sends SET time_zone on every new client; Rails sends none"
-status: draft
-updated: 2026-10-09
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

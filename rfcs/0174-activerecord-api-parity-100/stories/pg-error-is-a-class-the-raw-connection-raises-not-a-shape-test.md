@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PG::Error is a class the raw connection raises, not a shape test"
-status: draft
+status: ready
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

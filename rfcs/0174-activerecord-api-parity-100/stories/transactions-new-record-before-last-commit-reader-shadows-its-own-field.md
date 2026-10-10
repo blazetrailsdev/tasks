@@ -1,7 +1,7 @@
 ---
 title: "activerecord: _new_record_before_last_commit is a method shadowed by its own field, truthy before the first write"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

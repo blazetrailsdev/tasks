@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2::Client _query and Statement#execute honour the query options they are handed"
-status: draft
+status: ready
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

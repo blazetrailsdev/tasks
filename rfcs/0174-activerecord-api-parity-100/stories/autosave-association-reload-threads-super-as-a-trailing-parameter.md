@@ -1,7 +1,7 @@
 ---
 title: "AutosaveAssociation#reload threads its super as a trailing parameter and is wired by a hand-rolled defineProperty"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

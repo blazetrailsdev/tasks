@@ -1,7 +1,7 @@
 ---
 title: "activerecord: memoize arel_table and reset it where table_name= and reload_schema_from_cache do"
-status: draft
-updated: 2026-10-05
+status: done
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8627
+claim: "2026-10-10T19:39:39Z"
+assignee: "activerecord-prepended-super-first-parameters-onto-super-method"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: AbstractAdapter hand-rolls checkout/checkin callbacks Rails gets from define_callbacks"
-status: draft
-updated: 2026-10-03
+status: done
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8762
+claim: "2026-10-10T18:09:39Z"
+assignee: "abstract-adapter-checkout-checkin-callbacks-hand-roll-define-callbacks"
 blocked-by: null
 closed-reason: null
 ---

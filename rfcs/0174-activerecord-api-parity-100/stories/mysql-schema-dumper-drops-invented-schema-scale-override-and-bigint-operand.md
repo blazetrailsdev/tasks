@@ -1,7 +1,7 @@
 ---
 title: "activerecord: MySQL::SchemaDumper drops the invented schema_scale override and bigint operand"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

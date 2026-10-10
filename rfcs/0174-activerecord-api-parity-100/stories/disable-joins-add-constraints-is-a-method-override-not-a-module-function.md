@@ -1,6 +1,6 @@
 ---
 title: "activerecord: DisableJoinsAssociationScope#add_constraints is a method override, not a this-typed module function"
-status: draft
+status: ready
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

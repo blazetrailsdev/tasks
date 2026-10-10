@@ -1,7 +1,7 @@
 ---
 title: "activerecord: mysql2 cast's temporal arms raise the gem's Invalid date error and read the gem's db/app timezones"
-status: draft
-updated: 2026-10-09
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

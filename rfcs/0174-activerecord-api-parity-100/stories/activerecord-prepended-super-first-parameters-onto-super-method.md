@@ -1,6 +1,6 @@
 ---
 title: "activerecord: prepended and class-level super_ parameters need a prepend link before they can take Rails' parameter list"
-status: draft
+status: in-progress
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8765
+claim: "2026-10-10T19:39:39Z"
+assignee: "activerecord-prepended-super-first-parameters-onto-super-method"
 blocked-by: null
 closed-reason: null
 ---

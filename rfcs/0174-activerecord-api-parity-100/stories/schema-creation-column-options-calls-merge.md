@@ -1,7 +1,7 @@
 ---
 title: "schema_creation: column_options calls merge; retire the PERMANENT @missingRailsCall and the caller casts"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
