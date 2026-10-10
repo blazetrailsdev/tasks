@@ -63,9 +63,15 @@ so `self` inside the block is the mapper at every depth. Here the top level
 binds and every nesting below it does not, which is the worst version — the
 file works until the first nested block.
 
-trailmap captures the mapper (`const map = this`) and says why at the call
-site. That is a local spelling, not a shim: it does not reach into the
-framework, and it goes away on its own when the block is bound.
+trailmap writes the nested blocks as ARROW functions, which take `this`
+lexically from the enclosing `function ()` that `draw` bound, and says why at
+the call site. That is a local spelling, not a shim: it does not reach into
+the framework, and it stays correct once the block is bound.
+
+An earlier version captured the mapper (`const map = this`) instead. The alias
+was unnecessary — review of trailmap#48 pointed out that an arrow already has
+the right `this` — and it is gone, but either spelling is a way of writing
+around this defect rather than a reason not to fix it.
 
 ## Converged shape
 
