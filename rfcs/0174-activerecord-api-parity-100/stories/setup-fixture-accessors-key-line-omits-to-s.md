@@ -1,6 +1,6 @@
 ---
 title: "activerecord: setup_fixture_accessors' key line calls to_s where Rails does"
-status: draft
+status: closed
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: fixed in trails#8732 before merge; the key line reads the set name through to_s"
 ---
 
 ## Context

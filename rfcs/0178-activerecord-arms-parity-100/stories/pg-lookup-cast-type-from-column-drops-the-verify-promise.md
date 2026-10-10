@@ -1,7 +1,7 @@
 ---
 title: "PG lookup_cast_type_from_column drops verify!'s promise, so a never-connected adapter cannot answer"
-status: in-progress
-updated: 2026-10-09
+status: closed
+updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: trails#8728
 claim: "2026-10-09T20:55:38Z"
 assignee: "migration-proxy-load-migration-arms-need-a-kernel-load-port"
 blocked-by: null
-closed-reason: null
+closed-reason: 'PERMANENT: packages/activerecord/CLAUDE.md § "Adapter facts are prewarmed and peeked" ratifies that lookupCastTypeFromColumn keeps Rails'' line in a synchronous reader, cannot await verify!, and that a caller reaching it cold warms first. Its handler carries @inventedArm try — PERMANENT (trails#8728).'
 ---
 
 ## Context

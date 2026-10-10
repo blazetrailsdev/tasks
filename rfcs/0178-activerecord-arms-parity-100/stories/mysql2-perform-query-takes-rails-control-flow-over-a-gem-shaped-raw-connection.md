@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Mysql2 performQuery takes Rails' control flow over a gem-shaped raw connection"
-status: in-progress
-updated: 2026-10-09
+status: done
+updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []

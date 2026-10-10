@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Kernel#system reports an out: open failure as MRI does; rb_exec_getargs checks Hash type"
-status: draft
+status: closed
 updated: 2026-10-10
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: out: open failure already matches MRI (Errno::ENOENT, ruby 3.3.11); the Hash check and TypeError landed in trails#8732; the Array form moved to rb-exec-getargs-ports-rb-check-argv"
 ---
 
 ## Context

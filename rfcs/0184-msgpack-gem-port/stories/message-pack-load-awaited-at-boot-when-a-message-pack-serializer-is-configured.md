@@ -1,7 +1,7 @@
 ---
 title: "trailties: await the active_support/message_pack load at boot when a message_pack serializer is configured"
-status: draft
-updated: 2026-10-08
+status: done
+updated: 2026-10-10
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8736
+claim: "2026-10-10T00:08:43Z"
+assignee: "message-pack-load-awaited-at-boot-when-a-message-pack-serializer-is-configured"
 blocked-by: null
 closed-reason: null
 ---
