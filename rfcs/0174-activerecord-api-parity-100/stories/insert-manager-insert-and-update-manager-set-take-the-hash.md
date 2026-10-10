@@ -1,6 +1,6 @@
 ---
 title: "arel: InsertManager#insert and UpdateManager#set take the Hash ActiveRecord passes"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

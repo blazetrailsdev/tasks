@@ -1,6 +1,6 @@
 ---
 title: "AbstractController::Translation#translate follows Rails' single-call body"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: ThroughAssociation source_reflection, ensure_mutable and ensure_not_nested read the reflection directly"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

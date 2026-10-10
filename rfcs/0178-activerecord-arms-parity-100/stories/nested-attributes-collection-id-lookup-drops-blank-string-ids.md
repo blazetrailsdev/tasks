@@ -1,6 +1,6 @@
 ---
 title: "activerecord: nested-attributes collection id lookup drops blank-string ids Rails' filter_map keeps"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
