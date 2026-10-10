@@ -1,6 +1,6 @@
 ---
 title: "activerecord: connection.transaction and Arel.sql split and check keyword arguments by hand"
-status: ready
+status: in-progress
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8760
+claim: "2026-10-10T17:09:39Z"
+assignee: "load-async-null-executor-arm-floats-its-load-under-the-adapter-lock"
 blocked-by: null
 closed-reason: null
 ---

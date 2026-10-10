@@ -1,6 +1,6 @@
 ---
 title: "activerecord: sqlite3 quote asks finite? through a number-or-BigDecimal ternary"
-status: claimed
+status: done
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8759
 claim: "2026-10-10T16:39:42Z"
 assignee: "base-load-schema-primary-key-warm-arm-moves-to-primary-key-resolution"
 blocked-by: null

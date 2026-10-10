@@ -1,6 +1,6 @@
 ---
 title: "Parameters#permitted? is ported as a getter, not isPermitted"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

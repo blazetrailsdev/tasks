@@ -1,6 +1,6 @@
 ---
 title: "activerecord: update_columns reassigns attributes and passes it to _update_record"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

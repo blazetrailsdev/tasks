@@ -1,6 +1,6 @@
 ---
 title: "activerecord: an optional positional before trailing options or a block is told apart with a typeof arm"
-status: ready
+status: in-progress
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8761
+claim: "2026-10-10T17:39:38Z"
+assignee: "optional-positional-before-trailing-options-or-block-is-overloaded-on-typeof"
 blocked-by: null
 closed-reason: null
 ---

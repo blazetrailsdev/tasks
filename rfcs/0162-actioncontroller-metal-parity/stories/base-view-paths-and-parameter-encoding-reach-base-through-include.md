@@ -1,6 +1,6 @@
 ---
 title: "ViewPaths and ParameterEncoding reach ActionController::Base through include, not extend and class-body assignment"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

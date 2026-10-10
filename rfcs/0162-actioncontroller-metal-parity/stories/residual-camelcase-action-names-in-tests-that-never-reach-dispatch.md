@@ -1,7 +1,7 @@
 ---
 title: "Audit tests for camelCase action names the failure-driven sweep could not see"
-status: ready
-updated: 2026-10-07
+status: closed
+updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-10T17:09:39Z"
+assignee: "load-async-null-executor-arm-floats-its-load-under-the-adapter-lock"
 blocked-by: null
-closed-reason: null
+closed-reason: 'FALSIFIED: the premise (action_name is the Rails snake_case name, per trails#8573) was reversed by trails#8640. packages/actionpack/CLAUDE.md § "An action''s name is its method''s name" now rules that an action goes by its method''s camelCase name everywhere, so a camelCase action name in a test is the correct spelling and there is nothing to sweep.'
 ---
 
 ## Context

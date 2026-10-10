@@ -1,6 +1,6 @@
 ---
 title: "load-async-null-executor-arm-floats-its-load-under-the-adapter-lock"
-status: ready
+status: blocked
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-10T17:09:39Z"
+assignee: "load-async-null-executor-arm-floats-its-load-under-the-adapter-lock"
+blocked-by: "owner ruling on the lock-held floating load: loadAsync is synchronous and cannot await load, so the null-executor arm cannot be Rails' return load (relation.rb:1139); ratify c.lock.synchronize as PERMANENT in packages/activerecord/CLAUDE.md or name another shape"
 closed-reason: null
 ---
 

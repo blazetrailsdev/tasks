@@ -1,6 +1,6 @@
 ---
 title: "ParametersRequireTest carries Rails names over invented bodies"
-status: in-progress
+status: done
 updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

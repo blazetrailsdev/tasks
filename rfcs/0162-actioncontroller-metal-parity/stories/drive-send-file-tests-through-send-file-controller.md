@@ -1,7 +1,7 @@
 ---
 title: "Drive the SendFileTest tests through SendFileController (parked branch)"
-status: ready
-updated: 2026-10-09
+status: in-progress
+updated: 2026-10-10
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8760
+claim: "2026-10-10T17:09:39Z"
+assignee: "load-async-null-executor-arm-floats-its-load-under-the-adapter-lock"
 blocked-by: null
 closed-reason: null
 ---

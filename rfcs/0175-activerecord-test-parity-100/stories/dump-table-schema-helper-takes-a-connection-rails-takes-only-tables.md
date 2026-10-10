@@ -1,7 +1,7 @@
 ---
 title: "activerecord: dumpTableSchema takes only table names, as dump_table_schema does"
-status: ready
-updated: 2026-10-09
+status: in-progress
+updated: 2026-10-10
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8761
+claim: "2026-10-10T17:39:38Z"
+assignee: "optional-positional-before-trailing-options-or-block-is-overloaded-on-typeof"
 blocked-by: null
 closed-reason: null
 ---

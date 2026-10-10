@@ -1,6 +1,6 @@
 ---
 title: "activerecord: method_defined_within? branches on a Module receiver Rails does not"
-status: claimed
+status: done
 updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8759
 claim: "2026-10-10T16:39:42Z"
 assignee: "base-load-schema-primary-key-warm-arm-moves-to-primary-key-resolution"
 blocked-by: null
