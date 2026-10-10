@@ -2,7 +2,7 @@
 title: "activerecord: SchemaCache._load_from omits the YAML.respond_to?(:unsafe_load) guard and its YAML.load arm"
 status: ready
 updated: 2026-10-09
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
 deps:

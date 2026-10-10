@@ -2,7 +2,7 @@
 title: "activerecord: seven bodies test instanceof where Rails asks respond_to? / acts_like?"
 status: ready
 updated: 2026-09-30
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0174-activerecord-api-parity-100"
 cluster: arms
 packages: ["activerecord"]
 deps: ["parity-100-rehome-postponed-rfc-dependencies", "pg-translate-exception-respond-to-result"]

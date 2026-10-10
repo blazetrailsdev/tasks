@@ -2,7 +2,7 @@
 title: "tooling: gate the missing if/loop/try/rescue arms per package once a package reaches zero"
 status: ready
 updated: 2026-09-30
-rfc: "0178-activerecord-arms-parity-100"
+rfc: "0174-activerecord-api-parity-100"
 cluster: arms
 packages: ["activerecord"]
 deps:
