@@ -1,6 +1,6 @@
 ---
 title: "a model on a key-less table answers primaryKey 'id' after a reconnect, so its INSERT emits RETURNING id"
-status: draft
+status: in-progress
 updated: 2026-10-10
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8739
+claim: "2026-10-10T01:50:48Z"
+assignee: "keyless-table-insert-emits-returning-id"
 blocked-by: null
 closed-reason: null
 ---

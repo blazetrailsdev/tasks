@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SQLite3Adapter#initialize reads and writes @config[:database] in place of a filename local"
-status: ready
-updated: 2026-10-09
+status: claimed
+updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-10T01:33:30Z"
+assignee: "activerecord-arms-on-top-level-functions-the-skeleton-writer-newly-compares"
 blocked-by: null
 closed-reason: null
 ---

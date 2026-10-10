@@ -1,7 +1,7 @@
 ---
 title: "activerecord: tasks/database-tasks-slot.ts converges onto an ActiveRecord::Tasks Autoload namespace"
-status: in-progress
-updated: 2026-10-09
+status: done
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]

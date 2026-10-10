@@ -1,7 +1,7 @@
 ---
 title: "activerecord: DatabaseTasks#env memoizes Rails.env.to_s and #db_dir expands Path#first by hand"
-status: ready
-updated: 2026-10-09
+status: claimed
+updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-10T01:33:30Z"
+assignee: "activerecord-arms-on-top-level-functions-the-skeleton-writer-newly-compares"
 blocked-by: null
 closed-reason: null
 ---

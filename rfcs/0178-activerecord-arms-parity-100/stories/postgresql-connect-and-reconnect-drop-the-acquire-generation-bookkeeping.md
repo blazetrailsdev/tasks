@@ -1,7 +1,7 @@
 ---
 title: "activerecord: PostgreSQL connect and reconnect carry in-flight acquire bookkeeping Rails has none of"
-status: ready
-updated: 2026-10-09
+status: claimed
+updated: 2026-10-10
 rfc: "0178-activerecord-arms-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-10T01:39:35Z"
+assignee: "composite-primary-key-is-included-by-primary-key-setter-only"
 blocked-by: null
 closed-reason: null
 ---

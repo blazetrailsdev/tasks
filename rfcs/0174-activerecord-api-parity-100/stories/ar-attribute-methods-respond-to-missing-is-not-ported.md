@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port AttributeMethods#respond_to_missing? beside method_missing"
-status: in-progress
-updated: 2026-10-09
+status: done
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

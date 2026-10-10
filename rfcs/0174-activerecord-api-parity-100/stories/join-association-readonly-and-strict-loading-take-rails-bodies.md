@@ -1,7 +1,7 @@
 ---
 title: "activerecord: JoinAssociation#readonly? and #strict_loading? take Rails' bodies"
-status: in-progress
-updated: 2026-10-09
+status: done
+updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
