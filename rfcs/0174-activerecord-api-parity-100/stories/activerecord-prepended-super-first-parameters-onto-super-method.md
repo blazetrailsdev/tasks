@@ -5,7 +5,8 @@ updated: 2026-10-10
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - activerecord-compatibility-and-job-runtime-super-first-parameters
 deps-rfc: []
 est-loc: 400
 priority: null
