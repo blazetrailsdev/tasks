@@ -2,7 +2,7 @@
 title: "activerecord: ConnectionPool#checkin runs under conn.lock.synchronize"
 status: blocked
 updated: 2026-10-04
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]
 deps:
