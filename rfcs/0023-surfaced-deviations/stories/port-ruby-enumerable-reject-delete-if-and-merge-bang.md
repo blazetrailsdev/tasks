@@ -1,7 +1,7 @@
 ---
 title: "Port Ruby's reject / delete_if / merge! so compact_blank and deep_merge! call what Rails calls"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-10-10
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the four call-mismatch baseline rows this story exists to delete (compact_blank reject/delete_if, deep_merge! merge!) are no longer in call-mismatches-exclude/activesupport, and the primitives it asks to port into activesupport already exist in ruby-compat (reject, deleteIf, update). Verified at trails ddd629745a, 2026-10-10."
 ---
 
 ## Context

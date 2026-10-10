@@ -1,7 +1,7 @@
 ---
 title: "activesupport: hash-utils merge / mergeBang retire onto ruby-compat's Hash#merge / #update"
-status: draft
-updated: 2026-10-07
+status: closed
+updated: 2026-10-10
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by RFC 0190-native-js-hash-forms: a plain-object Hash#merge ports as an object spread, credited by the @spread native form, so importers are not moved onto ruby-compat's merge. Deleting activesupport's merge/mergeBang wrappers is carried by native-hash-merge-bang-sites-activerecord-activemodel-activesupport-trailties."
 ---
 
 ## Context
