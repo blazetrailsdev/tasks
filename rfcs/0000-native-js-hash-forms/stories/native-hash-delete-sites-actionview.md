@@ -34,7 +34,7 @@ actionview holds the largest share because the tag and form helpers pull options
 
 Ruby's `Hash#delete` returns the stored value (`rb_hash_delete_m`,
 `vendor/ruby/v3.3.11/hash.c:2441`); JS's `delete` answers a boolean. Across the
-repo 19 of the 97 `hashDelete(` call sites are a bare statement and 78 use the
+repo 18 of the 94 `hashDelete(` call sites are a bare statement and 76 use the
 value (`const pub = hashDelete(options, "public")`). Only the bare statements
 are candidates, unless RFC open question 3 is answered otherwise. Of those, a
 site stays when its receiver can be a `Map` / `Hash`, when it passes the block

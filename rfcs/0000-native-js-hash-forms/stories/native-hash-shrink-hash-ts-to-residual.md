@@ -5,7 +5,7 @@ updated: 2026-10-10
 rfc: "0000-native-js-hash-forms"
 cluster: substitution
 packages: [ruby-compat]
-deps: [native-hash-each-pair-sites]
+deps: [native-hash-merge-sites]
 deps-rfc: []
 est-loc: 400
 priority: null

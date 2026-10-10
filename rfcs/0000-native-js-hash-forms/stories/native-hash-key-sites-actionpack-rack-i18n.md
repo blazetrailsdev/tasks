@@ -5,7 +5,12 @@ updated: 2026-10-10
 rfc: "0000-native-js-hash-forms"
 cluster: substitution
 packages: [actionpack, rack, rack-session, i18n]
-deps: [native-hash-forms-credit-key-delete-merge]
+deps:
+  [
+    native-hash-forms-credit-key-delete-merge,
+    native-hash-form-marks-carry-literal-key,
+    native-hash-policy-docs-and-table-notes,
+  ]
 deps-rfc: []
 est-loc: 250
 priority: null

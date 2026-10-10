@@ -92,8 +92,9 @@ the 49 that are a method call on `Rack::Headers`, `Session`, HWIA and the like,
 which are ported Rails members and stay) plus about 41 in other packages' test
 files.
 
-`fetch` (about 100 call sites) and `merge` (about 66) are also hash helpers and
-are decided here (§ "Per-name decisions"), though `fetch` is not substituted.
+`fetch` (about 100 call sites) and `merge` are also hash helpers and are decided here (§ "Per-name decisions"). `merge` has 49 call lines in the 38 non-test files that import it from ruby-compat or activesupport, and gets its own substitution story. `fetch` is not substituted.
+
+Every count in this RFC is of call occurrences outside `hash.ts`. For `hashDelete` that is 94, of which 18 are a bare statement and 76 use the returned value.
 
 ### Why the helpers exist
 
@@ -133,7 +134,7 @@ those members and would not affect how a `hasKey(h, k)` call is credited.
   the prototype, an own `isKey` method and `instanceof Map` before it answers
   (`hash.ts:189-201`), on every option read.
 - The call form hides which sites need Ruby's semantics. `hashDelete` returns
-  the stored value; 78 of its 97 call sites use that value and 19 are a bare
+  the stored value; 76 of its 94 call sites use that value and 18 are a bare
   statement, and the two read the same.
 
 ## Design
@@ -234,7 +235,7 @@ export and its row, and the site keeps the call.
 | `key?` / `has_key?`     | `hasKey`               | `k in h` for a literal key on an object the port built or received as options; `Object.hasOwn(h, k)` for a computed key | The receiver may be a `Map`, a `Hash`, or a class answering `isKey` (the helper dispatches, `hash.ts:197-200`). The object can carry `{ name: undefined }` for an absent keyword, which `hasKey` reads as absent and `in` reads as present (`hash.ts:194-196`).           |
 | `[]`                    | `hashAref`             | `h[k]`                                                                                                                  | The site depends on a miss answering `null` rather than `undefined`, on a `Hash` default, on a non-Hash receiver's `get`, or reads a computed key that could name an `Object.prototype` member (`hash.ts:406-424`).                                                       |
 | `[]=`                   | `hashAset`             | `h[k] = v`                                                                                                              | The key is caller-supplied and could be `"__proto__"`; the receiver may be frozen and a test asserts `FrozenError`; the receiver may be a `Map` or answer `set` (`hash.ts:433-456`).                                                                                      |
-| `delete`                | `hashDelete`           | `delete h[k]`                                                                                                           | The removed **value is used**, which is 78 of 97 sites: `delete` in JS answers a boolean, so JS has no expression for Ruby's value-returning delete. Also the block arm and `FrozenError`.                                                                                |
+| `delete`                | `hashDelete`           | `delete h[k]`                                                                                                           | The removed **value is used**, which is 76 of 94 sites: `delete` in JS answers a boolean, so JS has no expression for Ruby's value-returning delete. Also the block arm and `FrozenError`.                                                                                |
 | `merge!` / `update`     | `mergeBang` / `update` | `Object.assign(h, other)`                                                                                               | A conflict block is passed, or either side may be a `Map` (`hash.ts:301-321`).                                                                                                                                                                                            |
 | `merge`                 | `merge`                | `{ ...h, ...other }`                                                                                                    | A conflict block is passed; the result must be ancestor-less so `__proto__` stays an ordinary key, which is what the helper returns (`hash.ts:939-941`).                                                                                                                  |
 | `each_pair`             | `eachPair`             | `for (const [k, v] of Object.entries(h))`                                                                               | The receiver may be a `Map` or answer its own `each`; the call's return value (the receiver) is used.                                                                                                                                                                     |
@@ -259,7 +260,7 @@ true, an answer Ruby never gives (`hash.ts:190-192`). The rule for a port is:
 
 ### Workstream 1: gate
 
-Six stories in cluster `gate`. Everything else depends on the second.
+Six stories in cluster `gate`. Every substitution story depends on the second, the fifth and the sixth.
 
 1. `native-hash-form-marks-in-ts-extractor`: the five marks.
 2. `native-hash-forms-credit-key-delete-merge`: the `NATIVE_FORM_ANALOGUES`
@@ -274,8 +275,10 @@ Six stories in cluster `gate`. Everything else depends on the second.
    `hashDelete(options, "public")` is checked against `:public` today, and
    `delete options.public` would not be. The mark carries a literal key and
    `parity:api:calls:args` compares it.
-6. `native-hash-policy-docs-and-table-notes`: the CLAUDE.md bullet, the
-   ruby-compat README, and the table comments.
+6. `native-hash-policy-docs-and-table-notes`: the CLAUDE.md bullet, the ruby-compat README, and the table comments.
+
+Stories 5 and 6 are not optional follow-ups: the first-wave substitution
+stories list both in `deps`.
 
 No row leaves `RUBY_COMPAT_EXPORTS` or `RECEIVER_KEYED_RUBY_COMPAT_EXPORTS`
 while a call of its helper remains: the residual sites still need the forward
@@ -283,8 +286,7 @@ credit. No `SKIP_GROUPS` entry changes. Nothing joins `NO_JS_CALL_FORM`.
 
 ### Workstream 2: substitution
 
-Eleven stories in cluster `substitution`, split by helper and package so each
-PR stays under the LOC ceiling, plus one that shrinks `hash.ts` afterwards.
+Twelve stories in cluster `substitution`, split by helper and package so each PR stays under the LOC ceiling, plus one that shrinks `hash.ts` afterwards. `merge` is one story, `native-hash-merge-sites`, because its 49 sites are spread thinly over 38 files.
 Each story:
 
 - Reads the Rails body for every site before changing it and decides native or
@@ -320,11 +322,9 @@ proc. These features are permanent, and
 - `FL_FREEZE` on the hash itself (`#frozen`);
 - the iteration level that makes a write during `each` raise (`#iterLev`).
 
-Five sites are string-keyed with none of those features and convert to a plain
-object in `native-hash-string-keyed-carriers-to-plain-objects`:
-`connection-adapters/statement-pool.ts:18`, `persistence.ts:657`,
+Five sites are string-keyed with none of those features. Four convert to a plain object in `native-hash-string-keyed-carriers-to-plain-objects`: `persistence.ts:657`,
 `actionpack/src/test-helpers/abstract-unit.ts:535`,
-`activemodel/src/attribute-mutation-tracker.ts:207` and `:211`. A sixth
+`activemodel/src/attribute-mutation-tracker.ts:207` and `:211`. The fifth, `connection-adapters/statement-pool.ts:18`, is its own story, `native-hash-statement-pool-cache-is-a-plain-object`, and is not to be started until open question 4 is answered. A sixth
 candidate, `hash-with-indifferent-access.ts:581` (`HWIA#to_hash`), stays: Rails
 copies the receiver's default onto the result (`set_defaults(copy)`,
 `hash_with_indifferent_access.rb:376-381`), which needs the default seat.
@@ -349,7 +349,7 @@ be accepted.
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `activesupport-hash-utils-merge-retires-onto-ruby-compat-hash-merge` (the `ruby-compat-surfaced-deviations` RFC)                                     | draft  | **Close as superseded.** It moves importers of activesupport's `{ ...hash, ...otherHash }` spread onto ruby-compat's `merge`. Under this RFC the spread is the port. What is left of it, deleting the activesupport `merge` / `mergeBang` wrappers (`hash-utils.ts:114-121`, 5 importing files), is folded into `native-hash-merge-bang-sites-activerecord-activemodel-activesupport-trailties`. |
 | `port-ruby-enumerable-reject-delete-if-and-merge-bang` (the retired `surfaced-deviations` RFC)                                                       | draft  | **Close, premise gone.** It exists to delete four baseline rows for `compact_blank` / `deep_merge!`; no `compact_blank` or `deep_merge` row is left under `call-mismatches-exclude/activesupport/`, and the primitives it asks to port into activesupport are in ruby-compat.                                                                                                                    |
-| `statement-pool-includes-enumerable-and-each-delegates-to-cache` (the `activerecord-api-parity-100` RFC)                                             | ready  | **Conflict, needs a ruling.** It relies on the per-pid cache being a `Hash` (trails#8716) so `each` is `this.cache.each(block)`. `native-hash-string-keyed-carriers-to-plain-objects` makes that cache a plain object, where Rails has `{}` (`statement_pool.rb:11`). Whichever is worked second rebases onto the other; see open question 4.                                                    |
+| `statement-pool-includes-enumerable-and-each-delegates-to-cache` (the `activerecord-api-parity-100` RFC)                                             | ready  | **Conflict, needs a ruling.** It relies on the per-pid cache being a `Hash` (trails#8716) so `each` is `this.cache.each(block)`. `native-hash-statement-pool-cache-is-a-plain-object` would make that cache a plain object, where Rails has `{}` (`statement_pool.rb:11`). The new story is held until open question 4 is answered and must reconcile the two before it starts.                  |
 | `ruby-hash-each-iterators-on-hash` (the `activesupport-out-of-closure-surface` RFC)                                                                  | draft  | **Keep, minus one paragraph.** `each*` on the `Hash` class is carrier work and stays. Its suggestion that three `Map`-backed sites "could converge if those maps were `Hash` instances" runs against the ruling and should be struck.                                                                                                                                                            |
 | `hash-readers-disagree-with-haskey-on-an-undefined-valued-key` (`ruby-compat-surfaced-deviations`)                                                   | draft  | **Keep; it gates open question 1.** Until one rule holds for an `undefined`-valued key, `in` and `hasKey` disagree on exactly the objects the substitution stories have to leave alone.                                                                                                                                                                                                          |
 | `hash-block-marker-and-own-method-probe-cost-a-quarter-of-attribute-reads` (`ruby-compat-surfaced-deviations`)                                       | draft  | **Keep, narrower.** Its `ownMethod` half shrinks with every substituted site; re-profile after the `[]` / `[]=` activemodel story before working it.                                                                                                                                                                                                                                             |
@@ -410,7 +410,7 @@ and are unaffected.
    `native-hash-element-access-credits-aref-aset`,
    `native-hash-form-marks-carry-literal-key`,
    `native-hash-policy-docs-and-table-notes`.
-2. **Substitution**, each story from `main` once its gate story has merged:
+2. **Substitution**, each story from `main` once its `deps` have merged. The three `key?` stories, which head every chain, depend on `native-hash-form-marks-carry-literal-key` and `native-hash-policy-docs-and-table-notes` as well as the crediting story, so no substitution PR opens before the argument gate checks a literal key and before the rule is written down:
    - `key?`: `native-hash-key-sites-actionpack-rack-i18n`,
      `native-hash-key-sites-activerecord-activemodel`,
      `native-hash-key-sites-trailties-activesupport-actionview`.
@@ -421,21 +421,29 @@ and are unaffected.
      `native-hash-delete-sites-activerecord-activemodel-activesupport`.
    - `[]` / `[]=`: `native-hash-aref-aset-sites-activemodel`,
      `native-hash-aref-aset-sites-activerecord-actionpack-activesupport-arel`.
-   - `each_pair`: `native-hash-each-pair-sites`.
+     - `each_pair`: `native-hash-each-pair-sites`.
+   - `merge`: `native-hash-merge-sites`.
    - Then `native-hash-shrink-hash-ts-to-residual`.
 3. **Carrier and audit**, independent of phase 2:
    `native-hash-carrier-permanent-features-ratified`,
    `native-hash-hwia-consumer-audit`, and
-   `native-hash-string-keyed-carriers-to-plain-objects` (after
-   `native-hash-each-pair-sites`).
+   `native-hash-string-keyed-carriers-to-plain-objects` (after `native-hash-merge-sites`), then `native-hash-statement-pool-cache-is-a-plain-object` (held until open question 4 is answered).
 
 The substitution stories are chained by `deps` so that no two that share a
 package are open at once: the three `key?` stories have disjoint packages and
 run in parallel, each `merge!` story follows the `key?` stories it shares a
-package with, `delete` follows `merge!`, `[]` / `[]=` follows `delete`, and
-`each_pair`, which touches every package, runs last. The longest chain is five
-PRs deep. `native-hash-string-keyed-carriers-to-plain-objects` follows
-`each_pair`, because both edit `persistence.ts:657-661`.
+package with, `delete` follows `merge!`, `[]` / `[]=` follows `delete`, then
+`each_pair` and `merge`, each of which touches every package that has a site,
+run one after the other. `native-hash-shrink-hash-ts-to-residual` and
+`native-hash-string-keyed-carriers-to-plain-objects` both follow `merge`; the
+second because it edits `persistence.ts:657-661`, an `each_pair` site.
+
+Counted from the first substitution PR, the longest chain is seven deep
+(`key?`, `merge!`, `delete`, `[]` / `[]=`, `each_pair`, `merge`, then the
+shrink story), behind three gate stories in sequence
+(`native-hash-form-marks-in-ts-extractor`,
+`native-hash-forms-credit-key-delete-merge`,
+`native-hash-form-marks-carry-literal-key`): ten PRs end to end.
 
 ## Verification
 
@@ -448,13 +456,13 @@ Measured the same way as § "Motivation", from trails `main`:
 - Non-test helper call lines fall from 385. No target count is set per helper,
   because the residual is whatever § "Per-name decisions" keeps; each
   substitution PR states its before and after counts and lists what stayed and
-  why. Expected order of magnitude: `hasKey` under 30, `mergeBang` under 15,
+  why. Expected order of magnitude: `hasKey` under 30, `mergeBang` under 15, `merge` under 15 of its 49,
   `hashAref` + `hashAset` under 20, `eachPair` under 10, and `hashDelete`
-  near 78 (the value-using sites).
+  near 76 (the value-using sites).
 - A comparer fixture proves the negative for each form: a Ruby body with
   `options.key?(:x)` paired with a TS body holding no membership test on
   `options` still flags, and one holding `"x" in other` still flags.
-- `new Hash` non-test sites outside `hash.ts` fall from 58 to 53.
+- `new Hash` non-test sites outside `hash.ts` fall from 58 to 54, or to 53 if open question 4 is answered "plain object".
 - `hash.ts` and `hash.trails.test.ts` are shorter than 1,490 and 1,264 lines.
 - The HWIA audit table is complete for all 20 files, and every finding is a
   filed story.
@@ -462,17 +470,14 @@ Measured the same way as § "Motivation", from trails `main`:
 ## Risks
 
 - **The gate sees less than it did.** A call records a callee and an argument
-  list. A form mark records a construct and a receiver name. Until
-  `native-hash-form-marks-carry-literal-key` lands, `delete options.public`
-  is not checked against `:public`. And a receiver-name match is weaker than a
+  list. A form mark records a construct and a receiver name. Without `native-hash-form-marks-carry-literal-key`, `delete options.public` would not be checked against `:public`, so every substitution chain depends on that story. And a receiver-name match is weaker than a
   callee: a body that tests `"a" in options` credits every `options.key?` site
   in the paired Ruby body, as one `hasKey` call credits them all today. The
   loss is the argument pairing, not the count.
 - **This reverses part of RFC 0129.** That RFC moved ports onto `hasKey` to
   make a population measurable. Moving them back onto `in` is only sound
   because the form is now marked. If the mark stories slip and substitution
-  starts anyway, the result is the pre-0129 state. The `deps` edges exist to
-  prevent that, and no substitution story may be opened against a red gate
+  starts anyway, the result is the pre-0129 state. The `deps` edges exist to prevent that: no substitution story is claimable until the marks, the credit and the literal-key check have merged, and no substitution story may be opened against a red gate
   with a baseline row.
 - **A mechanical sweep rewrites things it should not.** A regex over
   `hasKey(` also matches `Headers#hasKey`, `Session#hasKey`, and HWIA's own
@@ -490,12 +495,11 @@ Measured the same way as § "Motivation", from trails `main`:
   one.
 - **The residual may be large.** If most sites stay, the RFC delivers a
   smaller change than its framing suggests. `hashDelete` is already known to
-  keep about four fifths of its sites. That is the honest result of "unless
+  keep about four fifths (76 of 94) of its sites. That is the honest result of "unless
   specific features are necessary", and the verification section reports the
   residual rather than a target.
 - **Two spellings during the rollout.** Between the first substitution PR and
-  the last, the repo has both. The policy story lands before any of them so
-  the rule is written down while they coexist.
+  the last, the repo has both. `native-hash-policy-docs-and-table-notes` is a dependency of the three `key?` stories, and so of every substitution story, so the rule is written down before the first of them opens.
 - **Hot paths.** Replacing `hasKey` on option reads removes three probes per
   call. No story depends on that, and none should cite it without a benchmark
   taken outside vitest.
@@ -516,7 +520,7 @@ Measured the same way as § "Motivation", from trails `main`:
    If the answer is a hand-written loop, it is one more substitution story
    and no gate work, since the lowering table already admits the loop.
 3. **Should a value-using `delete` be split into a read and a `delete`
-   statement?** That would take `hashDelete` from about 78 residual sites to
+   statement?** That would take `hashDelete` from about 76 residual sites to
    near zero, at two statements per site and a changed evaluation order where
    the call sat inside an expression. Recommendation: no. Ruby's `delete`
    returns the value, JS's does not, and that is a feature Ruby has.
@@ -538,3 +542,8 @@ Measured the same way as § "Motivation", from trails `main`:
 - 2026-10-10: self-review pass. Substitution stories re-chained so no two
   sharing a package are open at once; `ivar` receivers admitted for the hash
   forms; line citations corrected; § "Existing stories this RFC changes" added.
+- 2026-10-10: review of tasks#268. The literal-key and policy stories became
+  dependencies of the first-wave substitution stories; `native-hash-merge-sites`
+  added for the 49 `merge` sites; `StatementPool`'s cache carved into its own
+  story held behind open question 4; `hashDelete` counts reconciled to 94
+  call sites (18 bare, 76 value-using); chain depth restated.
