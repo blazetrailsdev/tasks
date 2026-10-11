@@ -1,6 +1,6 @@
 ---
 title: "full-url-for-flattens-parameters-to-h-through-an-invented-coercion"
-status: draft
+status: done
 updated: 2026-10-11
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8771
 claim: null
 assignee: null
 blocked-by: null
