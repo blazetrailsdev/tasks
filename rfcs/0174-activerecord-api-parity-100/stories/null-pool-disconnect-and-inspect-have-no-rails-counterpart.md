@@ -1,6 +1,6 @@
 ---
 title: "NullPool#disconnect and #inspect have no Rails counterpart"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

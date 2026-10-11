@@ -1,6 +1,6 @@
 ---
 title: "djas-composite-key-arms-have-no-rails-counterpart"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

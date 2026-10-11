@@ -1,7 +1,7 @@
 ---
 title: "parity: an @inlinedFrom with no module initialize, or an includer with no tag, is red"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-10-11
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]

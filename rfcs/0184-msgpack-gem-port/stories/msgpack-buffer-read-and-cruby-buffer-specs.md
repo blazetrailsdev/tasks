@@ -1,7 +1,7 @@
 ---
 title: "msgpack: Buffer#read / #read_all and the cruby buffer specs"
-status: ready
-updated: 2026-10-08
+status: in-progress
+updated: 2026-10-11
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8793
+claim: "2026-10-11T19:09:36Z"
+assignee: "pin-connection-runs-verify-and-begin-under-an-invented-adapter-lock"
 blocked-by: null
 closed-reason: null
 ---

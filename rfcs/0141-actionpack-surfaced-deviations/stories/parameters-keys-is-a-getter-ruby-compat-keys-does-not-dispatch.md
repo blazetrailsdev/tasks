@@ -1,6 +1,6 @@
 ---
 title: "parameters-keys-is-a-getter-ruby-compat-keys-does-not-dispatch"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

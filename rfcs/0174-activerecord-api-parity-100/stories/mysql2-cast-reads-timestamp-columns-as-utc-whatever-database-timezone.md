@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2 cast reads TIMESTAMP columns as UTC whatever database_timezone says"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

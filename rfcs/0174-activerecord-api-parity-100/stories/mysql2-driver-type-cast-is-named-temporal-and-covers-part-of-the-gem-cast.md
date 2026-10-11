@@ -1,6 +1,6 @@
 ---
 title: "activerecord: mysql2 driver typeCast is named temporal and covers part of the gem's row cast"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

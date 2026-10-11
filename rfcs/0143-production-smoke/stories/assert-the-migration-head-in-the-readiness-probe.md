@@ -1,6 +1,6 @@
 ---
 title: "Assert the migration head in the readiness probe"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0143-production-smoke"
 cluster: null

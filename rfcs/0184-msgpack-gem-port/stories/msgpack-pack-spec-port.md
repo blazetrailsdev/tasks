@@ -1,7 +1,7 @@
 ---
 title: "msgpack: port pack_spec.rb"
-status: ready
-updated: 2026-10-08
+status: in-progress
+updated: 2026-10-11
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8794
+claim: "2026-10-11T19:39:40Z"
+assignee: "migration-inherited-raise-on-direct-inheritance-has-no-carrier"
 blocked-by: null
 closed-reason: null
 ---

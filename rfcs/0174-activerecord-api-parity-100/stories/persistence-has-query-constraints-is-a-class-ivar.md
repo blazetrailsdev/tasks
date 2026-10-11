@@ -1,6 +1,6 @@
 ---
 title: "activerecord: has_query_constraints? reads the class's own @has_query_constraints, which holds the list"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

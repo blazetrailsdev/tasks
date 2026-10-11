@@ -1,6 +1,6 @@
 ---
 title: "quoted-date-asks-acts-like-time-and-sends-to-the-value"
-status: draft
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8791
+claim: "2026-10-11T19:09:36Z"
+assignee: "quoted-date-asks-acts-like-time-and-sends-to-the-value"
 blocked-by: null
 closed-reason: null
 ---

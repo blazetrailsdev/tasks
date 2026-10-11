@@ -1,7 +1,7 @@
 ---
 title: "msgpack: StackError, skip, Hash maps and Decoder#pos need a read loop the engine hides"
-status: ready
-updated: 2026-10-08
+status: blocked
+updated: 2026-10-11
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-11T19:39:40Z"
+assignee: "migration-inherited-raise-on-direct-inheritance-has-no-carrier"
+blocked-by: "owner decision (RFC 0184 non-goals): port read_primitive (ext/msgpack/unpacker.c) as unpacker.ts's own read loop, or wait on an upstream @msgpack/msgpack public offset/depth/skip API. The non-goal 'no porting ext/msgpack/*.c' rules out the first until Dean amends it; ~600 LOC, so it also needs its own PR."
 closed-reason: null
 ---
 

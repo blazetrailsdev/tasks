@@ -1,7 +1,7 @@
 ---
 title: "parity:api:arms compares a tagged constructor's skeleton against the inlined Rails bodies"
-status: draft
-updated: 2026-10-09
+status: ready
+updated: 2026-10-11
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []

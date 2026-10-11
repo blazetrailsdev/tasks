@@ -1,6 +1,6 @@
 ---
 title: "Relation#new/create, Base.create, assignAttributes and association build reject a permitted Parameters at compile time"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

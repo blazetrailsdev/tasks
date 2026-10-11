@@ -1,6 +1,6 @@
 ---
 title: "Extract the deploy assertions into scripts/smoke-prod.sh"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0143-production-smoke"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "api-compare: the Ruby extractor records prepend edges and the inlined chain follows the class's ancestor order"
-status: draft
-updated: 2026-10-09
+status: ready
+updated: 2026-10-11
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []

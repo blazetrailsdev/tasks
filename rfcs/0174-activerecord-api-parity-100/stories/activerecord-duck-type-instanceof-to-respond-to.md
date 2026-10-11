@@ -1,6 +1,6 @@
 ---
 title: "activerecord: seven bodies test instanceof where Rails asks respond_to? / acts_like?"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: arms
