@@ -5,7 +5,11 @@ updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: unported-tests
 packages: ["activerecord"]
-deps: ["activerecord-port-marshalling-module", "ruby-compat-marshal-core-types"]
+deps:
+  - activerecord-port-marshalling-module
+  - ruby-compat-marshal-core-types
+  - activerecord-record-round-trips-marshal-6-1-format
+  - activerecord-load-rails-written-marshal-fixtures
 deps-rfc: []
 est-loc: 450
 priority: null
