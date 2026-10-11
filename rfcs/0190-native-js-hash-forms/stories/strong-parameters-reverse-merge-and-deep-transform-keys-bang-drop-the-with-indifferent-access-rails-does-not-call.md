@@ -5,7 +5,8 @@ updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []
-deps: []
+deps:
+  - parameters-to-h-returns-a-plain-object-not-hash-with-indifferent-access
 deps-rfc: []
 est-loc: null
 priority: null
