@@ -1,7 +1,7 @@
 ---
 title: "the production hub database is empty, so every owner and repository page 500s"
-status: in-progress
-updated: 2026-10-10
+status: done
+updated: 2026-10-11
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: trailmap#51
+pr: trailmap#52
 claim: "2026-10-10T23:35:08Z"
 assignee: "migrate-and-seed-the-production-hub-database"
 blocked-by: null

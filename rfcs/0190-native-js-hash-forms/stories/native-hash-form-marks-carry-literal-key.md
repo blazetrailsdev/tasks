@@ -1,7 +1,7 @@
 ---
 title: "Native hash form marks carry a literal key, and the argument gate compares it"
-status: draft
-updated: 2026-10-10
+status: ready
+updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: gate
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Shrink ruby-compat hash.ts to the arms that still have a caller"
-status: draft
-updated: 2026-10-10
+status: ready
+updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: substitution
 packages: [ruby-compat]

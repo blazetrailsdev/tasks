@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Type.registry folds attr_accessor's reader and writer into one function, and the write clears default_value"
-status: in-progress
-updated: 2026-10-10
+status: done
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

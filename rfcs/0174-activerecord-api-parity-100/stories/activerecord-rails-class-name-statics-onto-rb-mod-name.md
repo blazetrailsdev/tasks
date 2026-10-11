@@ -1,7 +1,7 @@
 ---
 title: "activerecord: _railsClassName statics and Core.inspect's Base literal read the classpath from rb_mod_name"
-status: in-progress
-updated: 2026-10-10
+status: done
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

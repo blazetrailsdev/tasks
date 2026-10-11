@@ -1,7 +1,7 @@
 ---
 title: "ActiveRecord validators are constants of ActiveRecord::Validations, not statics of Base"
-status: in-progress
-updated: 2026-10-10
+status: done
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

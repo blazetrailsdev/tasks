@@ -1,7 +1,7 @@
 ---
 title: "StatementPool's per-pid cache is a plain object, as Rails' `{}` is"
-status: draft
-updated: 2026-10-10
+status: ready
+updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: carrier-audit
 packages: [activerecord]
