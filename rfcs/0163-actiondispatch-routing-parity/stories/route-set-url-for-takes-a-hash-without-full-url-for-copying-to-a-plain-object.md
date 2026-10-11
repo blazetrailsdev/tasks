@@ -2,7 +2,7 @@
 title: "RouteSet#url_for takes the Hash full_url_for builds; drop the eachPair copy"
 status: draft
 updated: 2026-10-11
-rfc: "0162-actioncontroller-metal-parity"
+rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: []
 deps: []
