@@ -1,13 +1,13 @@
 ---
-title: "port-new-base-render-action-tests"
+title: "Port new_base/render_action_test.rb"
 status: ready
 updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
-packages: []
+packages: ["actionpack"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 420
 priority: null
 pr: null
 claim: null

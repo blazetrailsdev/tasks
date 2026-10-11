@@ -1,5 +1,5 @@
 ---
-title: "Port new_base/render_action_test.rb and render_layout_test.rb"
+title: "Port new_base/render_layout_test.rb"
 status: in-progress
 updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
@@ -12,7 +12,7 @@ deps:
     "controller-render-converges-onto-abstract-controller-render",
   ]
 deps-rfc: []
-est-loc: 400
+est-loc: 250
 priority: null
 pr: trails#8783
 claim: "2026-10-11T15:40:04Z"
@@ -23,7 +23,9 @@ closed-reason: null
 
 ## Context
 
-Neither file exists in trails (`pnpm parity:test --package actioncontroller`):
+Neither file exists in trails (`pnpm parity:test --package actioncontroller`).
+This story ports `render_layout_test.rb`; the two together exceed one PR's LOC
+ceiling, so `render_action_test.rb` is `port-new-base-render-action-tests`:
 
 - `vendor/rails/v8.0.2/actionpack/test/controller/new_base/render_action_test.rb`
   (314 lines, 23 tests): `RenderActionTest` (`:49`, 5), `RenderLayoutTest`
@@ -39,10 +41,10 @@ controllers declare views through `ActionView::FixtureResolver`.
 
 ## Acceptance criteria
 
-- `controller/new-base/render-action.test.ts` and `render-layout.test.ts` port
-  every test in Rails order, under the Rails module and class names, on the
-  harness's `Rack::TestCase`.
-- Both files report complete in `pnpm parity:test --package actioncontroller`.
+- `controller/new-base/render-layout.test.ts` ports every test in Rails order,
+  under the Rails module and class names, on the harness's `Rack::TestCase`.
+- The file reports every test matched or skipped in
+  `pnpm parity:test --package actioncontroller`.
 - A failing test means a port bug: fix it here if it is in a file this RFC owns,
   otherwise file it against the owning RFC and leave only that test skipped with
   the story id.

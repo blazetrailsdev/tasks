@@ -20,7 +20,7 @@ closed-reason: null
 
 The rest of `vendor/rails/v8.0.2/actionpack/test/controller/live_stream_test.rb`:
 
-- `LiveStreamTest` from Rails line 528 to `:665` — 16 tests (`:529-655`):
+- `LiveStreamTest` from Rails line 528 to `:665` — 15 tests (`:529-655`):
   thread-local and `IsolatedExecutionState` copy and reset into the live
   thread, the default header, `render_text` (`:579`), four exception-handling
   arms before and after
@@ -38,4 +38,7 @@ The thread tests pin `new_controller_thread` / `clean_up_thread_locals`
 - The tests above are ported in Rails order; `controller/base.test.ts` is not
   edited.
 - `pnpm parity:test --package actioncontroller` reports
-  `controller/live_stream_test.rb` 37/37.
+  `controller/live_stream_test.rb` with every test matched or permanently
+  skipped except `async stream`, `abort with full buffer` and
+  `ignore client disconnect` (`:457`, `:478`, `:506`), which are
+  `port-live-stream-test-latch-driven-tests`: 32 matched and 1 skipped of 37.
