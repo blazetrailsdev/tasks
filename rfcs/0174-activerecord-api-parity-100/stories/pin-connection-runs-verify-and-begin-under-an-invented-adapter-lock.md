@@ -54,6 +54,29 @@ window in step 2 is wide enough to hit deterministically.
 without a guard Rails does not have, the guard is ratified in `packages/activerecord/CLAUDE.md` by the
 repo owner and the receipt becomes `PERMANENT`.
 
+## Findings (2026-10-11)
+
+Measured on a branch with `pinConnectionBang` reduced to Rails' body:
+
+- **PostgreSQL was missing a Rails lock.** Rails' `active?`
+  (`vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/postgresql_adapter.rb:348-357`)
+  runs inside `@lock.synchronize`, and trails' `PostgreSQLAdapter#active` did not, so step 2 above
+  let B through. With that lock ported, the concurrent-pin test passes on PostgreSQL with no lock in
+  `pinConnectionBang`. That convergence shipped separately.
+- **MariaDB already passes.** `Mysql2Adapter#active` takes the lock as Rails' does
+  (`mysql2_adapter.rb:108-120`).
+- **SQLite still begins twice.** Rails' `active?` (`sqlite3_adapter.rb:210-215`) takes no lock, so
+  B's `verifyBang` answers true while A is inside `reset_transaction`'s block, and B begins on the
+  temporary `TransactionManager`. Traced: B's `beginTransaction` ran on a manager with one
+  transaction on its stack while the adapter's restored manager had none.
+
+So the remaining guard is SQLite-only. Giving `SQLite3Adapter#active` the adapter lock
+(`this.lock.synchronize(async () => this.isActive() ?? false)`) makes `pinConnectionBang` Rails' body
+and passes `connection-pool.trails.test.ts`, `adapters/sqlite3/**` and `transactions.test.ts` on
+SQLite, and the pool test on PostgreSQL and MariaDB. Rails has no such lock, so it needs the repo
+owner's ruling: either that lock, ratified under `packages/activerecord/CLAUDE.md` § "The adapter
+lock defaults to a monitor, not `NullLock`", or the lock in `pinConnectionBang` made `PERMANENT`.
+
 ## Acceptance criteria
 
 - [ ] `pinConnectionBang` makes no `synchronize` call, or the call is ratified and its receipt is
