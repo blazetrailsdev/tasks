@@ -1,6 +1,6 @@
 ---
 title: "controller/parameters/parameters-permit.test.ts carries Rails names over invented bodies"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

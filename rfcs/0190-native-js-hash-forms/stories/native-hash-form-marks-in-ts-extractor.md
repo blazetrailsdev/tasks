@@ -1,6 +1,6 @@
 ---
 title: "TS extractor marks the native hash forms: in / Object.hasOwn, delete, Object.assign, spread, Object.entries loop"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: gate

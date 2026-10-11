@@ -1,6 +1,6 @@
 ---
 title: "Ratify which Hash carrier features are permanent, and that the carrier is not hash-convergence debt"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: carrier-audit

@@ -1,6 +1,6 @@
 ---
 title: "Audit the 20 HashWithIndifferentAccess consumers against what Rails passes"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: carrier-audit
