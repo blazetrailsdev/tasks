@@ -1,7 +1,7 @@
 ---
 title: "trails db seed loads db/seeds.ts once per database and ignores seeds:"
-status: draft
-updated: 2026-10-09
+status: in-progress
+updated: 2026-10-11
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8768
+claim: "2026-10-11T01:34:20Z"
+assignee: "db-seed-runs-once-per-database"
 blocked-by: null
 closed-reason: null
 ---

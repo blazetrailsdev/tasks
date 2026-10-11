@@ -1,6 +1,6 @@
 ---
 title: "Ratify which Hash carrier features are permanent, and that the carrier is not hash-convergence debt"
-status: ready
+status: in-progress
 updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: carrier-audit
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8769
+claim: "2026-10-11T01:24:01Z"
+assignee: "native-hash-carrier-permanent-features-ratified"
 blocked-by: null
 closed-reason: null
 ---

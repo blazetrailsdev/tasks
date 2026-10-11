@@ -1,6 +1,6 @@
 ---
 title: "assert_not_kind_of has no trails helper, so its ports score as instanceOf"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null

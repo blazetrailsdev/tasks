@@ -1,7 +1,7 @@
 ---
 title: "parameters-transform-keys-and-values-have-no-enumerator-arm"
-status: ready
-updated: 2026-10-09
+status: in-progress
+updated: 2026-10-11
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8770
+claim: "2026-10-11T01:33:15Z"
+assignee: "parameters-permit-test-carries-rails-names-over-invented-bodies"
 blocked-by: null
 closed-reason: null
 ---

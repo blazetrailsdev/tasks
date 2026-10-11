@@ -1,7 +1,7 @@
 ---
 title: "trails db migrate loads the schema into an empty database and reports All migrations are up to date"
-status: draft
-updated: 2026-10-10
+status: in-progress
+updated: 2026-10-11
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8768
+claim: "2026-10-11T01:34:27Z"
+assignee: "db-migrate-reports-up-to-date-after-loading-a-schema"
 blocked-by: null
 closed-reason: null
 ---

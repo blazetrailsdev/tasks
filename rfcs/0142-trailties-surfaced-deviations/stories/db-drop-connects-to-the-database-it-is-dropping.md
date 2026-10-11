@@ -1,7 +1,7 @@
 ---
 title: "trails db drop connects to the database it is dropping, so Postgres refuses it"
-status: draft
-updated: 2026-10-10
+status: in-progress
+updated: 2026-10-11
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8768
+claim: "2026-10-11T01:34:16Z"
+assignee: "db-drop-connects-to-the-database-it-is-dropping"
 blocked-by: null
 closed-reason: null
 ---

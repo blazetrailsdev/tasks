@@ -1,7 +1,7 @@
 ---
 title: "scope and constraints call their block unbound, so this is undefined inside one"
-status: draft
-updated: 2026-10-09
+status: in-progress
+updated: 2026-10-11
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8766
+claim: "2026-10-11T01:26:11Z"
+assignee: "scope-and-constraints-call-their-block-unbound"
 blocked-by: null
 closed-reason: null
 ---

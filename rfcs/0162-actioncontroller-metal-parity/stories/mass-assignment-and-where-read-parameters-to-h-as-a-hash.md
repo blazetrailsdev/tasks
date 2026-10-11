@@ -1,7 +1,7 @@
 ---
 title: "ActiveModel and ActiveRecord read Parameters#to_h as a Hash, not a deep plain object"
-status: ready
-updated: 2026-10-10
+status: in-progress
+updated: 2026-10-11
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8767
+claim: "2026-10-11T01:21:07Z"
+assignee: "mass-assignment-and-where-read-parameters-to-h-as-a-hash"
 blocked-by: null
 closed-reason: null
 ---
