@@ -2,7 +2,7 @@
 title: "ruby-compat has no Kernel#URI seat, so _url_host_allowed? calls URI.parse"
 status: draft
 updated: 2026-10-10
-rfc: "0162-actioncontroller-metal-parity"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
