@@ -1,7 +1,7 @@
 ---
 title: "Seat AbstractController::Rendering's hooks and the _default_form_builder class attribute"
-status: draft
-updated: 2026-09-28
+status: claimed
+updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: ["actionpack"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-11T13:04:15Z"
+assignee: "abstract-rendering-hooks-and-default-form-builder"
 blocked-by: null
 closed-reason: null
 ---

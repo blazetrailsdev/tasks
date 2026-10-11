@@ -1,7 +1,7 @@
 ---
 title: "Fold the invented streaming and API-rendering helpers back into their Rails methods"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: ["actionpack"]

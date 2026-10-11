@@ -1,7 +1,7 @@
 ---
 title: "Port controller/content_type_test.rb under its Rails test names"
-status: draft
-updated: 2026-09-28
+status: claimed
+updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: ["actionpack"]
@@ -14,8 +14,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-11T13:04:15Z"
+assignee: "abstract-rendering-hooks-and-default-form-builder"
 blocked-by: null
 closed-reason: null
 ---

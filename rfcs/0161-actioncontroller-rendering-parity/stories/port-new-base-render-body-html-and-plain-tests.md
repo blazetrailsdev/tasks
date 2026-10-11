@@ -1,7 +1,7 @@
 ---
 title: "Port new_base render_body, render_html and render_plain tests"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: ["actionpack"]

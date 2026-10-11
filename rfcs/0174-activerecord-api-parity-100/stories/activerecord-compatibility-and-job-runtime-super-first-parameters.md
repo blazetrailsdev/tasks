@@ -1,7 +1,7 @@
 ---
 title: "activerecord: migration/compatibility TableDefinition modules and JobRuntime#instrument take Rails' parameter lists instead of super_"
-status: ready
-updated: 2026-10-10
+status: claimed
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-11T13:01:13Z"
+assignee: "activerecord-compatibility-and-job-runtime-super-first-parameters"
 blocked-by: null
 closed-reason: null
 ---
