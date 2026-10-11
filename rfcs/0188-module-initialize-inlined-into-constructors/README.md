@@ -29,7 +29,7 @@ related-rfcs:
   - "0154-ruby-compat-surfaced-deviations"
   - "0174-activerecord-api-parity-100"
   - "0179-api-compare-crediting-rules"
-priority: 3
+priority: 4
 ---
 
 # RFC 0188 — module `initialize` and `self.new`: inlined into constructors, marked `@inlinedFrom`, and scored by the parity gates
