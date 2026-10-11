@@ -68,13 +68,19 @@ configurations registered as a set.
 
 ## Converged shape
 
-`db seed` consults `hashConfig.seeds()` and loads the file for the
-configurations that say yes — in Rails' default shape, the primary alone.
+`db seed` loads the seed file once, whatever is configured, as Rails'
+`DatabaseTasks.load_seed` does. `seeds:` stays `db prepare`'s flag.
 
 ## Acceptance criteria
 
 - [ ] `trails db seed` with two databases configured loads `db/seeds.ts` once.
-- [ ] `seeds: false` on an entry keeps that database out of the seed run, and
-      `seeds: true` on a non-primary opts it back in.
+- [ ] `db seed` does not read `seeds:`. Rails' `db:seed` is
+      `DatabaseTasks.load_seed` (`databases.rake`, `task seed: :load_config`;
+      `tasks/database_tasks.rb`, `load_seed`), which hands the one file to the
+      seed loader and never consults `seeds?`. Only `prepare_all` reads it, to
+      decide whether a database it just initialized is seeded, and trails'
+      `prepareAll` already does. (Amended on trails#8768: this criterion
+      originally asked for `seeds: false` / `seeds: true` to filter `db seed`,
+      which contradicts Rails and would reintroduce the double load.)
 - [ ] A trailties test with a two-database config counts the loads, and fails
       on the current code.
