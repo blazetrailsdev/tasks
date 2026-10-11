@@ -5,7 +5,8 @@ updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - marshal-cannot-dump-a-plain-date-time-or-time-seat
 deps-rfc: []
 est-loc: 700
 priority: null
