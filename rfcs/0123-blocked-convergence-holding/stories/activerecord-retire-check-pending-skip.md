@@ -2,7 +2,7 @@
 title: "activerecord: retire SKIP_GROUPS' CheckPending entry, which hides ModelSchema.load_schema!"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: skips
 packages: ["activerecord"]
 deps: ["activerecord-converge-schema-load-and-primary-key-convergeable-receipts"]

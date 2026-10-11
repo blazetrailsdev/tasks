@@ -2,7 +2,7 @@
 title: "activerecord: verify every source-side parity axis at 100% and pin each gate at zero"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: closeout
 packages: ["activerecord"]
 deps:

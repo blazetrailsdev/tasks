@@ -2,7 +2,7 @@
 title: "activerecord: the CONVERGEABLE receipts in model-schema.ts, base.ts and attribute-methods/primary-key.ts"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: convergeable
 packages: ["activerecord"]
 deps: ["sync-reads-of-async-reflection-retire-with-rfc-0073"]
