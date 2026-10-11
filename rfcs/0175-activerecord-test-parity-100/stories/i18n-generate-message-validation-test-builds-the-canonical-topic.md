@@ -1,6 +1,6 @@
 ---
 title: "activerecord: i18n generate-message validation test builds the canonical Topic"
-status: claimed
+status: in-progress
 updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8796
 claim: "2026-10-11T20:09:45Z"
 assignee: "i18n-generate-message-validation-test-builds-the-canonical-topic"
 blocked-by: null

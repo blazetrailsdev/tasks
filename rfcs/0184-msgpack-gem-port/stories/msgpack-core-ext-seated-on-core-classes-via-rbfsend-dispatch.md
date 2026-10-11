@@ -1,6 +1,6 @@
 ---
 title: "msgpack core_ext: seat to_msgpack on the core class seats and dispatch it through rbFSend"
-status: claimed
+status: in-progress
 updated: 2026-10-11
 rfc: "0184-msgpack-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#8796
 claim: "2026-10-11T20:09:45Z"
 assignee: "i18n-generate-message-validation-test-builds-the-canonical-topic"
 blocked-by: null

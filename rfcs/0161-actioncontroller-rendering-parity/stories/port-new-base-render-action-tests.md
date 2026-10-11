@@ -1,6 +1,6 @@
 ---
 title: "Port new_base/render_action_test.rb"
-status: ready
+status: claimed
 updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 420
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-11T20:58:02Z"
+assignee: "port-new-base-render-action-tests"
 blocked-by: null
 closed-reason: null
 ---
