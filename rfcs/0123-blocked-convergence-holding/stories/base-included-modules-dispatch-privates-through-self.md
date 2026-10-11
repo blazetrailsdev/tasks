@@ -2,7 +2,7 @@
 title: "Redirecting, CSP, Layouts, Flash and Logging module bodies dispatch through self as Rails does"
 status: blocked
 updated: 2026-10-10
-rfc: "0162-actioncontroller-metal-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
