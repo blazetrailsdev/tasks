@@ -47,7 +47,18 @@ Facts established while writing it:
   word-boundary fix in `packages/actionview/src/layouts.ts`, which the parent
   story's PR landed.
 
+- The file below calls `t.assertBody(...)` / `t.assertStatus(...)` /
+  `t.assertResponse(...)` on a receiver. The assertion comparer counts only a
+  bare same-file call, so that form reddened the actioncontroller
+  assertion-count ratchet on trails#8783 (+8 per file). Before landing, give
+  each `describe` bare consts closing over `t`
+  (`const assertBody = (body: string): void => t.assertBody(body);`), as
+  `new-base/render-layout.test.ts` does.
+
 ## Acceptance criteria
+
+- `pnpm parity:test --package actioncontroller --assertions` stays at the
+  committed marks.
 
 - `controller/new-base/render-action.test.ts` ports every test of
   `render_action_test.rb` in Rails order, under the Rails module and class
