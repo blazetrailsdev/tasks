@@ -2,7 +2,7 @@
 title: "activerecord: Delegation#encode_with and ClassSpecificRelation.name"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0170-psych-in-ruby-compat"
 cluster: api-surface
 packages: ["activerecord"]
 deps: ["psych-object-to-yaml"]

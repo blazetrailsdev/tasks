@@ -17,6 +17,8 @@ packages:
   - website
 clusters:
   - fidelity
+  - "api-surface"
+  - "excluded-files"
 related-rfcs:
   - "0129-ruby-compat"
   - "0135-platform-adapters-in-ruby-compat"
