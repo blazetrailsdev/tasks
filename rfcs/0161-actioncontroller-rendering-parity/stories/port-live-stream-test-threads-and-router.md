@@ -1,6 +1,6 @@
 ---
 title: "Port live_stream_test.rb's thread-state, exception, thread, buffer and router tests"
-status: ready
+status: in-progress
 updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["port-live-stream-test-sse-and-streaming"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8783
+claim: "2026-10-11T15:40:04Z"
+assignee: "port-live-stream-test-threads-and-router"
 blocked-by: null
 closed-reason: null
 ---

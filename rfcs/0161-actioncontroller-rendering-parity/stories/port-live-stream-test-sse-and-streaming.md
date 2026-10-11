@@ -1,6 +1,6 @@
 ---
 title: "Port live_stream_test.rb's SSE, stream-write and send_stream tests (lines 1-527)"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null

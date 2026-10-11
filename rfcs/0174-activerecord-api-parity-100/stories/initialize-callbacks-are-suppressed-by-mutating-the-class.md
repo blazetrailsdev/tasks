@@ -1,7 +1,7 @@
 ---
 title: "activerecord/activemodel: Model's constructor runs initialize callbacks unless a class flag says not to, so every new and allocate writes and deletes it; Rails runs them from core.rb:481/517/553"
-status: ready
-updated: 2026-10-10
+status: claimed
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord", "activemodel"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-11T15:39:43Z"
+assignee: "database-tasks-database-configuration-is-a-plain-attr-accessor"
 blocked-by: null
 closed-reason: null
 ---

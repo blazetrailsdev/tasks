@@ -1,6 +1,6 @@
 ---
 title: "Write the native-hash-forms rule into CLAUDE.md, the ruby-compat README and the parity table comments"
-status: ready
+status: in-progress
 updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: gate
@@ -9,9 +9,9 @@ deps: [native-hash-forms-credit-key-delete-merge]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8782
+claim: "2026-10-11T15:39:43Z"
+assignee: "native-hash-form-marks-carry-literal-key"
 blocked-by: null
 closed-reason: null
 ---

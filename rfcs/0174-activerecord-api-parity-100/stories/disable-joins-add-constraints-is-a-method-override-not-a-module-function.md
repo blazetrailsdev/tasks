@@ -1,7 +1,7 @@
 ---
 title: "activerecord: DisableJoinsAssociationScope#add_constraints is a method override, not a this-typed module function"
-status: ready
-updated: 2026-10-10
+status: blocked
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-11T15:09:39Z"
+assignee: "authenticate-by-found-arm-is-systematically-slower-than-not-found"
+blocked-by: "owner ruling on root CLAUDE.md § Override arity: the method override was tried in trails#8781 and TypeScript rejects it (TS2416 at the declaration, TS2684 at every DisableJoinsAssociationScope.scope call site) because position 1 is Relation in the base and ChainEntry in the override"
 closed-reason: null
 ---
 

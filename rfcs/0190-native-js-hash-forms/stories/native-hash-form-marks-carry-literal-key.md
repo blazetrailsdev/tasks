@@ -1,6 +1,6 @@
 ---
 title: "Native hash form marks carry a literal key, and the argument gate compares it"
-status: ready
+status: in-progress
 updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: gate
@@ -9,9 +9,9 @@ deps: [native-hash-forms-credit-key-delete-merge]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8782
+claim: "2026-10-11T15:39:43Z"
+assignee: "native-hash-form-marks-carry-literal-key"
 blocked-by: null
 closed-reason: null
 ---

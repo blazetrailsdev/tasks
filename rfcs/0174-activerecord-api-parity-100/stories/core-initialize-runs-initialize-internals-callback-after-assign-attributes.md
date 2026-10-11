@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Core#initialize runs initialize_internals_callback after assign_attributes, from Base's constructor"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

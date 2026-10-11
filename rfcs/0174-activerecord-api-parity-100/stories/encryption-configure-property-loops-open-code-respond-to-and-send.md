@@ -1,7 +1,7 @@
 ---
 title: "Encryption::Configurable.configure open-codes its two respond_to?/send property loops"
-status: ready
-updated: 2026-10-10
+status: in-progress
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8781
+claim: "2026-10-11T15:09:39Z"
+assignee: "authenticate-by-found-arm-is-systematically-slower-than-not-found"
 blocked-by: null
 closed-reason: null
 ---

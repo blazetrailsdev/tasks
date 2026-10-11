@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Core#inspect_with_attributes interpolates constructor.name where Rails interpolates self.class"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "port-new-base-render-action-tests"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
