@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the remaining super_ parameters (QueryCache#select_all, initialize_clone, Associations, Dirty#reload, increment!) move onto prepend links"
-status: draft
-updated: 2026-10-10
+status: closed
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered on origin/main @ 11d3346c83: QueryCache#selectAll (abstract/query-cache.ts:319-365), Inheritance initializeClone (inheritance.ts:227, trails#8785), Dirty#reload (attribute-methods/dirty.ts:135), Callbacks#incrementBang (callbacks.ts:188) and trailties/job-runtime.ts instrument (trails#8773) all take Rails' parameter lists and call superMethod; associations.ts has no static [included] hook or SuperMethods receipt; git grep finds no super_ parameter in packages/activerecord/src. The one site left, Timestamp#_createRecord(superFn) (timestamp.ts:134), is part of the base.ts save-chain closure list that persistence-save-destroy-and-row-chains-resume-through-super-method owns by name."
 ---
 
 ## Context

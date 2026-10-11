@@ -1,6 +1,6 @@
 ---
 title: "parameters-keys-is-a-getter-ruby-compat-keys-does-not-dispatch"
-status: draft
+status: in-progress
 updated: 2026-10-11
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8786
+claim: "2026-10-11T18:04:13Z"
+assignee: "parameters-keys-is-a-getter-ruby-compat-keys-does-not-dispatch"
 blocked-by: null
 closed-reason: null
 ---

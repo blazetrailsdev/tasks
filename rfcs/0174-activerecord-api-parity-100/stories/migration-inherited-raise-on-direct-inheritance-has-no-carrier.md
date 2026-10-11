@@ -1,6 +1,6 @@
 ---
 title: "activerecord: a direct `extends Migration` raises, and in-repo migrations extend the versioned class"
-status: claimed
+status: ready
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-11T17:39:35Z"
-assignee: "migration-inherited-raise-on-direct-inheritance-has-no-carrier"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

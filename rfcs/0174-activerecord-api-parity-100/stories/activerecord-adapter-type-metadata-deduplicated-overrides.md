@@ -1,7 +1,7 @@
 ---
 title: "activerecord: MySQL/PostgreSQL TypeMetadata#deduplicated overrides"
-status: ready
-updated: 2026-10-10
+status: closed
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8752 (e69d154402): on origin/main @ 11d3346c83 both connection-adapters/mysql/type-metadata.ts:46 and postgresql/type-metadata.ts:51 define deduplicated() with Rails' body (__setobj__(__getobj__().deduplicate()), extra = strUminus(extra), then Deduplicable's deduplicated), extend DelegateClass(SqlTypeMetadata) and include(TypeMetadata, Deduplicable)."
 ---
 
 ## Context

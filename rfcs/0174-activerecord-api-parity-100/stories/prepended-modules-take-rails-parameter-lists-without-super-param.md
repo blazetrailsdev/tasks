@@ -1,7 +1,7 @@
 ---
 title: "activerecord: prepended module methods take Rails' parameter lists, reaching super through the ancestry instead of a super_ parameter"
-status: ready
-updated: 2026-10-10
+status: closed
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by the stories it was split into: trails#8765 (Module#prependFeatures splices a link over the class's origin), trails#8764 (init_internals / initialize_dup through superMethod), trails#8773 (compatibility modules, JobRuntime) and trails#8785 (class clone/dup). On origin/main @ 11d3346c83 git grep -E 'super_\\b' over packages/activerecord/src finds no parameter (only support/canonical-schema.ts text), and every row the story lists resumes through superMethod. Residue is not this story's rows: the save/destroy/row-writer continuation parameters (superFn) are owned by persistence-save-destroy-and-row-chains-resume-through-super-method, and ruby-compat prepend.ts still has callers (base.ts loadSchemaBang x2)."
 ---
 
 ## Context

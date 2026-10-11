@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Scoping#populate_with_current_scope_attributes is flat-copied onto Base and called through .call, not a Scoping module method"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

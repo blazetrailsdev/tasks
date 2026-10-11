@@ -1,6 +1,6 @@
 ---
 title: "activerecord: ColumnMethods defines define_column_methods once under ClassMethods, not as two statics"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

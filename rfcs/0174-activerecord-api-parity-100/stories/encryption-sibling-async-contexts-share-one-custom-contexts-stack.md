@@ -1,6 +1,6 @@
 ---
 title: "Sibling async with_encryption_context blocks share one custom_contexts stack and pop out of order"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

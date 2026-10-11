@@ -1,7 +1,7 @@
 ---
 title: "load-schema-and-pg-reset-arms-left-after-the-driver-shaped-pass"
-status: draft
-updated: 2026-10-10
+status: ready
+updated: 2026-10-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []

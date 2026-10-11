@@ -1,6 +1,6 @@
 ---
 title: "key? on a plain object is `in` / Object.hasOwn: activerecord, activemodel"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: substitution

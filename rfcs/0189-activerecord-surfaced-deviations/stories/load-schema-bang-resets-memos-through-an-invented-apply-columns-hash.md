@@ -1,6 +1,6 @@
 ---
 title: "activerecord: load_schema! resets ten memos through an invented applyColumnsHash; Rails resets only in reload_schema_from_cache"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

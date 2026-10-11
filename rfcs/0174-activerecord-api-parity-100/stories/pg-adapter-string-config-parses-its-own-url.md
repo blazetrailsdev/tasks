@@ -1,7 +1,7 @@
 ---
 title: "activerecord: PostgreSQLAdapter's string-config constructor parses the URL itself instead of ConnectionUrlResolver"
-status: ready
-updated: 2026-10-10
+status: closed
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8745
+claim: "2026-10-11T18:09:35Z"
+assignee: "mysql2-client-takes-the-gem-layout-initialize-flags-statement-result-error"
 blocked-by: null
-closed-reason: null
+closed-reason: 'Delivered by trails#8745 (54b00554f9): on origin/main @ 11d3346c83 PostgreSQLAdapter''s constructor (connection-adapters/postgresql-adapter.ts:497-520) has no string-config arm, builds conn params from this._config as postgresql_adapter.rb does, and git grep finds neither ''typeof config === "string"'' nor ''new URL('' in the file.'
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: preprocess_order_args' Hash arm is split in two and builds orderings through orderedNode"
-status: ready
-updated: 2026-10-10
+status: closed
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8424 (084c94bc3f): on origin/main @ 11d3346c83 preprocessOrderArgs (relation/query-methods.ts:1427-1470) has one isHash arm with Rails' nested-Hash branch then the key-class test, each ordering built by rbFPublicSend(column, rbFSend(dir, 'downcase')); git grep orderedNode in packages/ returns nothing."
 ---
 
 ## Context

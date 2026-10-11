@@ -1,7 +1,7 @@
 ---
 title: "activerecord: tests call adapterClass() quoting methods without a cast"
-status: draft
-updated: 2026-10-10
+status: ready
+updated: 2026-10-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []

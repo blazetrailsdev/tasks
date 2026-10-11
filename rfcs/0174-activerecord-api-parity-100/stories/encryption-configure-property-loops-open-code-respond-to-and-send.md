@@ -1,6 +1,6 @@
 ---
 title: "Encryption::Configurable.configure open-codes its two respond_to?/send property loops"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

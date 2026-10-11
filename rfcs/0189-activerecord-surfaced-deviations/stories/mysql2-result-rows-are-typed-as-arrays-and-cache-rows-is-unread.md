@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2 Result#to_a is typed as array rows only, and cache_rows is read by nothing"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2::Client takes the gem's layout (initialize, parse_flags_array, Statement, Result, Error)"
-status: ready
+status: in-progress
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8792
+claim: "2026-10-11T18:09:35Z"
+assignee: "mysql2-client-takes-the-gem-layout-initialize-flags-statement-result-error"
 blocked-by: null
 closed-reason: null
 ---

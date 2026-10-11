@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PostgreSQL remove_index tests :name by key presence and reads it through to_s"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

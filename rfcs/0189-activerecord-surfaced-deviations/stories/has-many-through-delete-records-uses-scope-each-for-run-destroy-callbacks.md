@@ -1,6 +1,6 @@
 ---
 title: "activerecord: has_many :through delete_records runs scope.each(&:_run_destroy_callbacks); Relation#each awaits its block"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

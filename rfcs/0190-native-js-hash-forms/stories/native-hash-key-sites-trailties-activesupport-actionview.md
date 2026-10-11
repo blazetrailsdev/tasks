@@ -1,6 +1,6 @@
 ---
 title: "key? on a plain object is `in` / Object.hasOwn: trailties, activesupport, actionview, ruby-compat"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: substitution

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: destroy! is typed Promise<this> but answers true on re-entry, as destroy || _raise_record_not_destroyed does"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

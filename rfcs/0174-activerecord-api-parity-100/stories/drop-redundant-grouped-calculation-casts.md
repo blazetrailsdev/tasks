@@ -1,6 +1,6 @@
 ---
 title: "Drop the calculation-result casts made redundant by Relation's grouped type"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

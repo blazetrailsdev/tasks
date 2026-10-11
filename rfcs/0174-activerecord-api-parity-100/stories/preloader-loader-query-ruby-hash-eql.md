@@ -1,7 +1,7 @@
 ---
 title: "preloader-loader-query-ruby-hash-eql"
-status: ready
-updated: 2026-10-10
+status: closed
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8479 (e7d06dcd75): on origin/main @ 11d3346c83 LoaderQuery#eql uses rbEqual and #hash is rbHash([associationKeyName, tableName, connectionSpecificationName, valuesForQueries()]) (associations/preloader/association.ts:287-304); Batch#groupAndLoadSimilar groups with ruby-compat groupBy on loader.loaderQuery(); git grep finds no JSON.stringify and no bigintDigits in associations/preloader/."
 ---
 
 # Preloader LoaderQuery#hash / #eql? use Ruby hash and ==, not JSON

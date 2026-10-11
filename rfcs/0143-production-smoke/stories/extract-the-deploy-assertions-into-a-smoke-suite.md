@@ -1,7 +1,7 @@
 ---
 title: "Extract the deploy assertions into scripts/smoke-prod.sh"
-status: draft
-updated: 2026-09-09
+status: in-progress
+updated: 2026-10-11
 rfc: "0143-production-smoke"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["split-the-health-endpoint-into-liveness-and-readiness"]
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trailmap#55
+claim: "2026-10-11T18:41:16Z"
+assignee: "extract-the-deploy-assertions-into-a-smoke-suite"
 blocked-by: null
 ---
 

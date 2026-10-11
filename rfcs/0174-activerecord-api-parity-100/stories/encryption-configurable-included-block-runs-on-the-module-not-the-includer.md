@@ -1,6 +1,6 @@
 ---
 title: "encryption-configurable-included-block-runs-on-the-module-not-the-includer"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

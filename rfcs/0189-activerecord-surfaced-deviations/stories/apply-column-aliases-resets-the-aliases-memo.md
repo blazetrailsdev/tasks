@@ -1,6 +1,6 @@
 ---
 title: "activerecord: apply_column_aliases resets the aliases memo; construct_join_dependency's join_type is optional"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

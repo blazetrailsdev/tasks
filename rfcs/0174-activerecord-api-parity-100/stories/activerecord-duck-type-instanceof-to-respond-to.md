@@ -1,7 +1,7 @@
 ---
 title: "activerecord: seven bodies test instanceof where Rails asks respond_to? / acts_like?"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: arms
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["parity-100-rehome-postponed-rfc-dependencies", "pg-translate-exception-r
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8791
+claim: "2026-10-11T18:39:35Z"
+assignee: "activerecord-duck-type-instanceof-to-respond-to"
 blocked-by: null
 closed-reason: null
 ---

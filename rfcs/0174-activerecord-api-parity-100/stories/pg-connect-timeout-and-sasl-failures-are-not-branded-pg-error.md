@@ -1,7 +1,7 @@
 ---
 title: "activerecord: node-pg connect timeout and SASL failures are not PG::Error, so new_client lets them through"
-status: ready
-updated: 2026-10-10
+status: in-progress
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8792
+claim: "2026-10-11T18:09:35Z"
+assignee: "mysql2-client-takes-the-gem-layout-initialize-flags-statement-result-error"
 blocked-by: null
 closed-reason: null
 ---

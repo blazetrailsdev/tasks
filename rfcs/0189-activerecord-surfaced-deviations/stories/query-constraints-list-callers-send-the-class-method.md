@@ -1,6 +1,6 @@
 ---
 title: "activerecord: query_constraints_list callers send the class method instead of .call on an imported function"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

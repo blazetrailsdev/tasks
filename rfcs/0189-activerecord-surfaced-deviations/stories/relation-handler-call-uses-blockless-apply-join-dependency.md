@@ -1,6 +1,6 @@
 ---
 title: "RelationHandler#call: blockless apply_join_dependency inline, no private helper"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

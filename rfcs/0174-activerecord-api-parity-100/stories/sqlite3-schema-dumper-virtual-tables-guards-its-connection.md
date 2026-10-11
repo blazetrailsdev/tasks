@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SQLite3 SchemaDumper#virtual_tables guards a connection Rails reads directly"
-status: ready
-updated: 2026-10-10
+status: closed
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8715 (8531daa85f, SchemaDumper reads its connection directly): on origin/main @ 11d3346c83 sqlite3/schema-dumper.ts#virtualTables reads 'await this.connection.virtualTables()' with no existence guard and no _adapter() call, and keeps the single 'if (virtualTables.length > 0)' arm around the sorted loop."
 ---
 
 ## Context
