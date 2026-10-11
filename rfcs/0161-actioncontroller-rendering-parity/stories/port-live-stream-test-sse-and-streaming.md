@@ -26,12 +26,18 @@ trails-only test with a colliding name, not a port.) This story takes:
 
 - `SSETest` (`:11-112`), 5 tests: `ActionController::Live::SSE` event, id,
   retry and multi-line writes
-- `LiveStreamTest` (`:113-665`) up to Rails line 527 — 13 tests (`:369-506`):
-  `set_cookie`, `write_to_stream`, `write_lines_to_stream`, the six
-  `send_stream` tests (instrumentation, options and three content-type arms),
-  `delayed_autoload_after_write_within_interlock_hook`, `async_stream`,
-  `infinite_test_buffer`, `abort_with_full_buffer` and
-  `ignore_client_disconnect`
+- `LiveStreamTest` (`:113-665`) up to `test_infinite_test_buffer` (`:473`),
+  10 tests (`:369-476`): `set_cookie`, `write_to_stream`,
+  `write_lines_to_stream`, the six `send_stream` tests (instrumentation,
+  options and three content-type arms),
+  `delayed_autoload_after_write_within_interlock_hook` and
+  `infinite_test_buffer`
+
+The three tests driven from a second thread through a
+`Concurrent::CountDownLatch` (`async_stream`, `abort_with_full_buffer`,
+`ignore_client_disconnect`, `:454-527`) are
+`port-live-stream-test-latch-driven-tests`: with them the port did not fit one
+PR.
 
 `Live` runs the action in a new thread in Rails (`metal/live.rb:377-392`,
 `new_controller_thread`); trails' analogue is
@@ -41,6 +47,5 @@ trails-only test with a colliding name, not a port.) This story takes:
 
 - `controller/live-stream.test.ts` ports the tests above in Rails order under
   `SSETest` and `LiveStreamTest`.
-- A test that needs the blocking sized queue waits on
-  `live-buffer-queue-is-not-a-blocking-sized-queue` rather than asserting
-  today's behavior.
+- `TestController` carries the actions these tests reach; the remaining
+  actions arrive with the stories whose tests call them.
