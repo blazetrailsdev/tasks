@@ -7,6 +7,7 @@ cluster: null
 packages: []
 deps:
   - activerecord-super-first-parameters-onto-super-method
+  - pg-mysql-timestamp-wire-cast-round-trips-instant-bigint-rational
 deps-rfc: []
 est-loc: 200
 priority: null
