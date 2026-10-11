@@ -25,11 +25,11 @@ and left out the three that drive the action from a second thread through a
 `Concurrent::CountDownLatch`, to stay inside the PR size ceiling
 (`vendor/rails/v8.0.2/actionpack/test/controller/live_stream_test.rb`):
 
-- `test_async_stream` (`:448-464`), action `blocking_stream` (`:186-193`)
-- `test_abort_with_full_buffer` (`:471-498`), action
-  `overfill_buffer_and_die` (`:293-315`)
-- `test_ignore_client_disconnect` (`:500-523`), action
-  `ignore_client_disconnect` (`:324-336`)
+- `test_async_stream` (`:454-471`), action `blocking_stream` (`:192-199`)
+- `test_abort_with_full_buffer` (`:478-504`), action
+  `overfill_buffer_and_die` (`:291-314`)
+- `test_ignore_client_disconnect` (`:506-527`), action
+  `ignore_client_disconnect` (`:323-336`)
 
 They also need `capture_log_output` (`:346-355`) and the controller's
 `latch` / `error_latch` accessors (`:124`).
