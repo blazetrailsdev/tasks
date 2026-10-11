@@ -1,6 +1,6 @@
 ---
 title: "activerecord: a record built before its schema loaded answers respond_to? false for a column"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

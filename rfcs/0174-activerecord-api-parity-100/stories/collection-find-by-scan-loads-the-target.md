@@ -1,6 +1,6 @@
 ---
 title: "activerecord: CollectionAssociation#find_by_scan scans load_target, not the in-memory target"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

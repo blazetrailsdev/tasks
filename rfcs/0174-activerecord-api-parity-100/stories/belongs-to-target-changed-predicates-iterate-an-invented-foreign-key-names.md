@@ -1,6 +1,6 @@
 ---
 title: "BelongsToAssociation's target_changed? predicates iterate an invented foreignKeyNames instead of one call with reflection.foreign_key"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

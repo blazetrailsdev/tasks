@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Base#destroy is typed Promise<this | false> but answers true on re-entry, as Callbacks#destroy does"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

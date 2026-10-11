@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Core#inspect_with_attributes interpolates constructor.name where Rails interpolates self.class"
-status: ready
-updated: 2026-10-10
+status: in-progress
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8778
+claim: "2026-10-11T14:09:36Z"
+assignee: "activerecord-prepended-super-first-parameters-onto-super-method"
 blocked-by: null
 closed-reason: null
 ---

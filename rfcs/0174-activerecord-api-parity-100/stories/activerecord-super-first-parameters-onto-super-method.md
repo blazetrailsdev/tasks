@@ -1,7 +1,7 @@
 ---
 title: "activerecord: methods that thread super_ as a first parameter take Rails' parameter list"
-status: ready
-updated: 2026-10-10
+status: done
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8764
+claim: "2026-10-11T14:39:40Z"
+assignee: "activerecord-super-first-parameters-onto-super-method"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: CommandRecorder's invert_ overrides mirror Rails' bodies (extract_options!, in-place mutation, args.size guards)"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

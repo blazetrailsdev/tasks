@@ -1,6 +1,6 @@
 ---
 title: "activerecord: belongs_to handle_dependency's destroy_async arm uses public_send and to_s"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

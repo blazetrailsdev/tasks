@@ -1,7 +1,7 @@
 ---
 title: "activerecord: composite-FK belongs_to counter cache emits WHERE () when the target is not loaded"
-status: ready
-updated: 2026-10-10
+status: closed
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-11T14:39:40Z"
+assignee: "activerecord-super-first-parameters-onto-super-method"
 blocked-by: null
-closed-reason: null
+closed-reason: 'FALSIFIED: Rails 8.0.2 does the same. Cpk::Book.create!(id: [7, 8], shop_id: 5, order_id: 6) with no target loaded (activerecord 8.0.2 gem, sqlite3) raises ActiveRecord::StatementInvalid: SQLite3::SQLException: near ")": syntax error: UPDATE "cpk_orders" SET "books_count" = COALESCE("books_count", 0) + ? WHERE (). owner._read_attribute(reflection.foreign_key) with an Array name answers nil (belongs_to_association.rb:114), so trails mirrors Rails here and nothing changes.'
 ---
 
 ## Context

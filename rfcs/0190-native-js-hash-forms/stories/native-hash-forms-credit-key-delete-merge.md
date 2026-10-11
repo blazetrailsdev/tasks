@@ -1,6 +1,6 @@
 ---
 title: "Comparator credits key? / delete / merge! / merge from a marked native form on a matching receiver"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: gate

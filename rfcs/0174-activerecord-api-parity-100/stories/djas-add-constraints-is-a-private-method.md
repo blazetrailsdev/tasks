@@ -1,7 +1,7 @@
 ---
 title: "activerecord: DisableJoinsAssociationScope#add_constraints is a #private method once parity:api credits #names"
-status: ready
-updated: 2026-10-10
+status: in-progress
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8780
+claim: "2026-10-11T14:39:40Z"
+assignee: "activerecord-super-first-parameters-onto-super-method"
 blocked-by: null
 closed-reason: null
 ---

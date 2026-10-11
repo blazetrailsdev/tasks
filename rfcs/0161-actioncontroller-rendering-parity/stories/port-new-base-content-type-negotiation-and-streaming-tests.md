@@ -1,6 +1,6 @@
 ---
 title: "Port new_base content_type, content_negotiation, render_implicit_action and render_streaming tests"
-status: ready
+status: in-progress
 updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8779
+claim: "2026-10-11T14:21:34Z"
+assignee: "port-live-stream-test-sse-and-streaming"
 blocked-by: null
 closed-reason: null
 ---
