@@ -19,14 +19,14 @@ closed-reason: null
 ## Context
 
 `ActionDispatch::Response::Buffer#write`
-(`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/http/response.rb:123-131`)
+(`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/http/response.rb:122-128`)
 ends in `@buf.push string`. For `ActionController::Live::Buffer` `@buf` is a
-`SizedQueue` (`action_controller/metal/live.rb:236-238`, `build_queue`), so a
+`SizedQueue` (`action_controller/metal/live.rb:255-257`, `build_queue`), so a
 write to a full queue blocks the controller thread until the reader pops, and
-`Live::Buffer#write` (`live.rb:159-176`) checks `connected?` only after that
+`Live::Buffer#write` (`live.rb:180-198`) checks `connected?` only after that
 push returns. A reader that aborts the body therefore makes the blocked write
 raise `ClientDisconnected`, which `Live#process` routes to `on_error`
-(`live.rb:288-303`).
+(`live.rb:292-303`).
 
 In trails `ResponseBuffer#write`
 (`packages/actionpack/src/action-dispatch/http/response.ts`, `write`) and
@@ -45,7 +45,7 @@ with `BLOCKED:` naming this story.
 ## Acceptance criteria
 
 - A `Live::Buffer#write` to a full queue waits for the push, and the
-  `connected?` check runs after it, as `live.rb:159-176` orders them. The
+  `connected?` check runs after it, as `live.rb:180-198` orders them. The
   callers that write to a live stream (`writeln`, `SSE#write`, `send_stream`
   blocks, `Live::Response#build_buffer`) await it.
 - `abort with full buffer` in `controller/live-stream.test.ts` is unskipped
