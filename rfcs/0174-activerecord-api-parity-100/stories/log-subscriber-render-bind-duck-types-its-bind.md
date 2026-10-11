@@ -1,6 +1,6 @@
 ---
 title: "LogSubscriber#render_bind duck-types its bind instead of Rails' three-arm case"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

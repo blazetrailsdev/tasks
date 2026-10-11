@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Mysql2::Client takes the gem's layout (initialize, parse_flags_array, Statement, Result, Error)"
 status: ready
-updated: 2026-10-10
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []

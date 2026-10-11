@@ -1,7 +1,7 @@
 ---
 title: "activerecord: has_query_constraints? reads the class's own @has_query_constraints, which holds the list"
-status: ready
-updated: 2026-10-10
+status: claimed
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-11T17:39:35Z"
+assignee: "migration-inherited-raise-on-direct-inheritance-has-no-carrier"
 blocked-by: null
 closed-reason: null
 ---

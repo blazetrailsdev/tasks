@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Persistence#increment / increment! read and write through self[] and public_send, not resolveAttributeAlias"
-status: ready
-updated: 2026-10-10
+status: claimed
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-11T17:39:35Z"
+assignee: "migration-inherited-raise-on-direct-inheritance-has-no-carrier"
 blocked-by: null
 closed-reason: null
 ---

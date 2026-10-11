@@ -1,6 +1,6 @@
 ---
 title: "Inheritance: a model class cannot be cloned, so initialize_clone is unreachable and ClassMethods#dup is unported"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

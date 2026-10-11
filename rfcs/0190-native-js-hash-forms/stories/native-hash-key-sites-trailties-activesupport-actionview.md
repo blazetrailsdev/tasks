@@ -1,6 +1,6 @@
 ---
 title: "key? on a plain object is `in` / Object.hasOwn: trailties, activesupport, actionview, ruby-compat"
-status: ready
+status: in-progress
 updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: substitution
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8788
+claim: "2026-10-11T17:25:59Z"
+assignee: "native-hash-key-sites-actionpack-rack-i18n"
 blocked-by: null
 closed-reason: null
 ---
