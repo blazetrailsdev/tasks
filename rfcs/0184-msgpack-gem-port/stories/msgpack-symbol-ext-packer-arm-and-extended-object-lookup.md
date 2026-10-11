@@ -1,7 +1,7 @@
 ---
 title: "msgpack: Factory has_symbol_ext_type, the packer's T_SYMBOL arm, and the extended-object spec"
-status: ready
-updated: 2026-10-08
+status: claimed
+updated: 2026-10-11
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-11T20:39:37Z"
+assignee: "arms-gate-compares-a-tagged-constructor-against-the-inlined-skeletons"
 blocked-by: null
 closed-reason: null
 ---

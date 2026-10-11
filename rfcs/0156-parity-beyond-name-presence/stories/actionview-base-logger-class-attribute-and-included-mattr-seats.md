@@ -1,6 +1,6 @@
 ---
 title: "actionview-base-logger-class-attribute-and-included-mattr-seats"
-status: draft
+status: closed
 updated: 2026-10-11
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the logger and erb_trim_mode= halves shipped in trails#8795; the remainder is refiled as mime-negotiation-ignore-accept-header-is-defined-on-the-includer"
 ---
 
 ## Context

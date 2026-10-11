@@ -1,7 +1,7 @@
 ---
 title: "parity:api:calls pairs a tagged constructor whose only Rails initialize comes from another package's module"
-status: draft
-updated: 2026-10-09
+status: claimed
+updated: 2026-10-11
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-11T20:39:37Z"
+assignee: "arms-gate-compares-a-tagged-constructor-against-the-inlined-skeletons"
 blocked-by: null
 closed-reason: null
 ---

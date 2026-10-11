@@ -1,6 +1,6 @@
 ---
 title: "port-remaining-class-hosted-accessor-instance-seats"
-status: claimed
+status: in-progress
 updated: 2026-10-11
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8795
 claim: "2026-10-11T19:40:52Z"
 assignee: "port-remaining-class-hosted-accessor-instance-seats"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "api-compare: an end-to-end compare test over a constructor carrying @inlinedFrom"
-status: draft
-updated: 2026-10-09
+status: claimed
+updated: 2026-10-11
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-11T20:09:45Z"
+assignee: "i18n-generate-message-validation-test-builds-the-canonical-topic"
 blocked-by: null
 closed-reason: null
 ---

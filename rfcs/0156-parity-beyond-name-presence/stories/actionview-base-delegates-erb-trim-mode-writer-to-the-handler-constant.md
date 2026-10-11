@@ -1,6 +1,6 @@
 ---
 title: "actionview-base-delegates-erb-trim-mode-writer-to-the-handler-constant"
-status: draft
+status: closed
 updated: 2026-10-11
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: converged in trails#8795 in the review round after it was filed"
 ---
 
 ## Context

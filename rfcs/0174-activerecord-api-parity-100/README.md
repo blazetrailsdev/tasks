@@ -1,9 +1,9 @@
 ---
 rfc: "0174-activerecord-api-parity-100"
 title: "activerecord source at 100% on the name, skip, call and pin axes, and the close-out for every source-side axis"
-status: active
+status: closed
 created: 2026-09-30
-updated: 2026-10-06
+updated: 2026-10-11
 owner: "@deanmarano"
 packages:
   - "activerecord"

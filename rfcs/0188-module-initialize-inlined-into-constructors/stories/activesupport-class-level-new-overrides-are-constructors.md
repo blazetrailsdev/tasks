@@ -1,7 +1,7 @@
 ---
 title: "activesupport: DeprecationProxy, TimeZone, Subscribers and TaggedLogging new overrides are constructors"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-10-11
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
 packages: ["activesupport"]
