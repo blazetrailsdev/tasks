@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port i18n_validation_test.rb's 12 validates_uniqueness_of / validates_associated cases"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests
 packages: ["activerecord"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8315
+claim: "2026-10-11T21:39:34Z"
+assignee: "activerecord-port-finder-test-remaining-cases"
 blocked-by: null
 closed-reason: null
 ---

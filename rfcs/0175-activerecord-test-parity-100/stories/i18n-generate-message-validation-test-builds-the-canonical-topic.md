@@ -1,6 +1,6 @@
 ---
 title: "activerecord: i18n generate-message validation test builds the canonical Topic"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

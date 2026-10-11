@@ -1,6 +1,6 @@
 ---
 title: "test-compare: a Ruby context name with an interpolation is not matched against the expanded TS describe"
-status: claimed
+status: in-progress
 updated: 2026-10-11
 rfc: "0184-msgpack-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8798
 claim: "2026-10-11T20:39:37Z"
 assignee: "arms-gate-compares-a-tagged-constructor-against-the-inlined-skeletons"
 blocked-by: null

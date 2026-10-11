@@ -1,6 +1,6 @@
 ---
 title: "msgpack core_ext: seat to_msgpack on the core class seats and dispatch it through rbFSend"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0184-msgpack-gem-port"
 cluster: null

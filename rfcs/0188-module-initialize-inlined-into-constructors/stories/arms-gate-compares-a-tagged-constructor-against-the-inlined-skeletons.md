@@ -1,6 +1,6 @@
 ---
 title: "parity:api:arms compares a tagged constructor's skeleton against the inlined Rails bodies"
-status: claimed
+status: in-progress
 updated: 2026-10-11
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: trails#8798
 claim: "2026-10-11T20:39:37Z"
 assignee: "arms-gate-compares-a-tagged-constructor-against-the-inlined-skeletons"
 blocked-by: null

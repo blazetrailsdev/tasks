@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port database_tasks_test.rb's 25 per-adapter and dump-filename cases"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests
 packages: ["activerecord"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 550
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8799
+claim: "2026-10-11T21:09:34Z"
+assignee: "activerecord-port-database-tasks-per-adapter-cases"
 blocked-by: null
 closed-reason: null
 ---

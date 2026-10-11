@@ -1,6 +1,6 @@
 ---
 title: "api-compare: an end-to-end compare test over a constructor carrying @inlinedFrom"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
