@@ -33,8 +33,11 @@ and the same on a timestamped table raises for `created_at`. Validations on such
 
 CLAUDE.md § "Schema reflection peeks at a warm cache" makes a cold `new` leave the model unloaded and names warming as an explicit async step.
 
+trails#8774 gave such a record its column attributes on the first `_attributes` read after the class loads: `Core`'s constructor calls the module-private `completeAttributesOnSchemaLoad` (`packages/activerecord/src/core.ts`), which installs an own `_attributes` accessor on a record built while `isSchemaLoaded` is false. Rails has no counterpart, since `_default_attributes` loads the schema in line (`vendor/rails/v8.0.2/activerecord/lib/active_record/core.rb:472`, `model_schema.rb:587-597`). The call carries `@inventedArm completeAttributesOnSchemaLoad — CONVERGEABLE save-chain-schema-warm-and-cold-built-records` on `constructor`; this story owns it.
+
 ## Acceptance criteria
 
 - [ ] A record built before its model's schema is loaded either gets its column attributes once the schema is warm, or its first persistence call fails loudly naming the cold schema.
 - [ ] The `ensureSchemaLoaded()` await in `base.ts`'s `save` / `saveBang` chain is gone, or carries a receipt against the CLAUDE.md section.
 - [ ] The reproduction above is a test, on SQLite, PG and MySQL, and `adapters/postgresql/enum.test.ts` stays green.
+- [ ] `completeAttributesOnSchemaLoad` and its receipt on `Core`'s `constructor` are gone: either a cold `new` can no longer leave a record without its columns, or the repo owner rules the accessor permanent and the receipt says `PERMANENT` against a CLAUDE.md section.
