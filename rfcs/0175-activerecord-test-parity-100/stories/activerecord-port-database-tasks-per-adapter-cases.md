@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port database_tasks_test.rb's 25 per-adapter and dump-filename cases"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests

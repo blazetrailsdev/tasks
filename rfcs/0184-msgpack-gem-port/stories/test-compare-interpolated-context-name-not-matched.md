@@ -1,6 +1,6 @@
 ---
 title: "test-compare: a Ruby context name with an interpolation is not matched against the expanded TS describe"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0184-msgpack-gem-port"
 cluster: null

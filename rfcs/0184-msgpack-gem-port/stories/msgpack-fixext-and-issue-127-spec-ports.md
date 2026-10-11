@@ -1,6 +1,6 @@
 ---
 title: "msgpack: port the fixext ext-format and issue #127 header spec groups"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0184-msgpack-gem-port"
 cluster: null

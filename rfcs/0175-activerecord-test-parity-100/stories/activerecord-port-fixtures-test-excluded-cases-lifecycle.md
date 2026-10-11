@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port the 16 fixtures_test.rb exclusions about fixture lifecycle and accessors"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: unported-tests
 packages: ["activerecord"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8801
+claim: "2026-10-11T22:09:35Z"
+assignee: "activerecord-port-fixtures-test-excluded-cases-lifecycle"
 blocked-by: null
 closed-reason: null
 ---

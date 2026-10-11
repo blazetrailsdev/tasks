@@ -1,6 +1,6 @@
 ---
 title: "Port new_base render_template, render_partial, render_file and render tests"
-status: ready
+status: claimed
 updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-11T22:32:20Z"
+assignee: "port-new-base-render-body-html-and-plain-tests"
 blocked-by: null
 closed-reason: null
 ---

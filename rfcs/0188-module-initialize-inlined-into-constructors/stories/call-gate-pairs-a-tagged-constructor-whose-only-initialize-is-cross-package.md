@@ -1,6 +1,6 @@
 ---
 title: "parity:api:calls pairs a tagged constructor whose only Rails initialize comes from another package's module"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null

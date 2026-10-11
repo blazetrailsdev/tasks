@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port finder_test.rb's 16 other missing cases"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests
