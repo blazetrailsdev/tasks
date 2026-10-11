@@ -2,7 +2,7 @@
 title: "activerecord: Encryption::Contexts' attributes are typed on the includer, not the module"
 status: draft
 updated: 2026-10-11
-rfc: "0156-parity-beyond-name-presence"
+rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

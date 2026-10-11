@@ -2,7 +2,7 @@
 title: "activerecord: Mysql2::Client is a class over the npm connection; every driver error is a Mysql2::Error"
 status: draft
 updated: 2026-10-11
-rfc: "0156-parity-beyond-name-presence"
+rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
