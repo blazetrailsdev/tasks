@@ -2,7 +2,7 @@
 title: "activerecord: inheritance 209/217 — DelegateClass supers and the OID::DateTime parent spelling"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0156-parity-beyond-name-presence"
 cluster: api-surface
 packages: ["activerecord"]
 deps:

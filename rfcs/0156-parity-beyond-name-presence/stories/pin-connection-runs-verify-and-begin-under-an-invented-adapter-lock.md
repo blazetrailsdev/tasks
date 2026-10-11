@@ -2,7 +2,7 @@
 title: "activerecord: SQLite3Adapter#active? takes the adapter lock, and pin_connection! drops its invented synchronize"
 status: ready
 updated: 2026-10-11
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: ["activerecord"]
 deps: []

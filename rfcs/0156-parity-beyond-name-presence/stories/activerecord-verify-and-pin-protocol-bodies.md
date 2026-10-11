@@ -2,7 +2,7 @@
 title: "activerecord: verify and pin the 59 protocol-definition pairs matched since the body-pin floor"
 status: ready
 updated: 2026-09-30
-rfc: "0174-activerecord-api-parity-100"
+rfc: "0156-parity-beyond-name-presence"
 cluster: pins
 packages: ["activerecord"]
 deps: ["port-hash-eql-rows-surfaced-by-scoring"]

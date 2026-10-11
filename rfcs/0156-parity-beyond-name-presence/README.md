@@ -19,6 +19,8 @@ clusters:
   - "lints"
   - "comparers"
   - "arms"
+  - "api-surface"
+  - "pins"
 related-rfcs:
   - "0155-assertion-surfaced-port-bugs"
   - "0158-activesupport-assertion-surfaced-port-bugs"
