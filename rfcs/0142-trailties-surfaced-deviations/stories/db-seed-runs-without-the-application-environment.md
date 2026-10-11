@@ -1,6 +1,6 @@
 ---
 title: "trails db seed loads no initializers, so a second database has no connection and the command never exits"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

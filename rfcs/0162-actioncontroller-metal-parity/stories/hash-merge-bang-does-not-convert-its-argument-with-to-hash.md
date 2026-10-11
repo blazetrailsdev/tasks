@@ -1,6 +1,6 @@
 ---
 title: "Hash#merge! does not convert its argument with to_hash, so Parameters is not implicitly a Hash"
-status: ready
+status: in-progress
 updated: 2026-10-11
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8771
+claim: "2026-10-11T03:11:23Z"
+assignee: "assert-not-kind-of-has-no-trails-helper"
 blocked-by: null
 closed-reason: null
 ---

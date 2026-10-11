@@ -1,6 +1,6 @@
 ---
 title: "trails db drop connects to the database it is dropping, so Postgres refuses it"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

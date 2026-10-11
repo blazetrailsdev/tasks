@@ -1,6 +1,6 @@
 ---
 title: "trails db migrate loads the schema into an empty database and reports All migrations are up to date"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

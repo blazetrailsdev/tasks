@@ -1,7 +1,7 @@
 ---
 title: "Parameters#to_h / #to_unsafe_h return a plain object, not HashWithIndifferentAccess"
-status: ready
-updated: 2026-10-10
+status: in-progress
+updated: 2026-10-11
 rfc: "0162-actioncontroller-metal-parity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8771
+claim: "2026-10-11T03:11:23Z"
+assignee: "assert-not-kind-of-has-no-trails-helper"
 blocked-by: null
 closed-reason: null
 ---

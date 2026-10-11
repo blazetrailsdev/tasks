@@ -1,6 +1,6 @@
 ---
 title: "trails db seed loads db/seeds.ts once per database and ignores seeds:"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "scope and constraints call their block unbound, so this is undefined inside one"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
