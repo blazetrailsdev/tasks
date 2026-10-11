@@ -2,7 +2,7 @@
 title: "ContentSecurityPolicy and PermissionsPolicy initialize_copy walk Map entries where Rails calls deep_dup"
 status: draft
 updated: 2026-10-10
-rfc: "0162-actioncontroller-metal-parity"
+rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: []
 deps: []
