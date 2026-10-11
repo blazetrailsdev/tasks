@@ -1,6 +1,6 @@
 ---
 title: "action-controller-rendering-modules-join-super-chain"
-status: claimed
+status: done
 updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8639
 claim: "2026-10-11T13:04:15Z"
 assignee: "abstract-rendering-hooks-and-default-form-builder"
 blocked-by: null

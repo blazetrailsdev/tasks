@@ -1,6 +1,6 @@
 ---
 title: "Element access credits Hash#[] and Hash#[]= wherever hashAref / hashAset do"
-status: ready
+status: in-progress
 updated: 2026-10-11
 rfc: "0190-native-js-hash-forms"
 cluster: gate
@@ -9,9 +9,9 @@ deps: [native-hash-form-marks-in-ts-extractor]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8775
+claim: "2026-10-11T13:26:32Z"
+assignee: "native-hash-each-pair-entries-loop-credit"
 blocked-by: null
 closed-reason: null
 ---

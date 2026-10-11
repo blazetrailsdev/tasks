@@ -1,6 +1,6 @@
 ---
 title: "Seat AbstractController::Rendering's hooks and the _default_form_builder class attribute"
-status: claimed
+status: done
 updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["controller-render-converges-onto-abstract-controller-render"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#8772
 claim: "2026-10-11T13:04:15Z"
 assignee: "abstract-rendering-hooks-and-default-form-builder"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: ColumnMethods runs define_column_methods from its included hook"
-status: claimed
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8773
 claim: "2026-10-11T13:01:13Z"
 assignee: "activerecord-compatibility-and-job-runtime-super-first-parameters"
 blocked-by: null

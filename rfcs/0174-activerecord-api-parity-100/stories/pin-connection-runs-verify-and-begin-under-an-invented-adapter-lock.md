@@ -1,6 +1,6 @@
 ---
 title: "activerecord: pin_connection! runs verify! and begin_transaction under an adapter lock Rails does not take"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

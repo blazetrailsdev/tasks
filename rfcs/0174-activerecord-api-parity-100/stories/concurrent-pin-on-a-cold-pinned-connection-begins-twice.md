@@ -1,7 +1,7 @@
 ---
 title: "activerecord: two overlapping pin_connection! calls on a cold connection begin a transaction twice"
-status: ready
-updated: 2026-10-10
+status: in-progress
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8776
+claim: "2026-10-11T13:39:39Z"
+assignee: "belongs-to-target-changed-predicates-iterate-an-invented-foreign-key-names"
 blocked-by: null
 closed-reason: null
 ---

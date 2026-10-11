@@ -1,6 +1,6 @@
 ---
 title: "Live#send_stream instruments send_stream.action_controller and tests a Ruby Symbol type"
-status: claimed
+status: done
 updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8772
 claim: "2026-10-11T13:04:15Z"
 assignee: "abstract-rendering-hooks-and-default-form-builder"
 blocked-by: null

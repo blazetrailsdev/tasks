@@ -1,7 +1,7 @@
 ---
 title: "activerecord: a record built before its schema loaded answers respond_to? false for a column"
-status: ready
-updated: 2026-10-10
+status: in-progress
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8774
+claim: "2026-10-11T13:09:44Z"
+assignee: "base-composite-primary-key-is-a-predicate-method-not-a-getter"
 blocked-by: null
 closed-reason: null
 ---

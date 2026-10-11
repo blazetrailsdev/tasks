@@ -1,7 +1,7 @@
 ---
 title: "Base.new and create merge scope_for_create into the caller's attributes; Rails assigns scope attributes only through populate_with_current_scope_attributes"
-status: ready
-updated: 2026-10-10
+status: done
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8659
+claim: "2026-10-11T13:09:44Z"
+assignee: "base-composite-primary-key-is-a-predicate-method-not-a-getter"
 blocked-by: null
 closed-reason: null
 ---
