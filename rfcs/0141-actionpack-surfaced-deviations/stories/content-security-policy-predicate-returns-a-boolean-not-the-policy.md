@@ -2,7 +2,7 @@
 title: "content-security-policy-predicate-returns-a-boolean-not-the-policy"
 status: draft
 updated: 2026-10-10
-rfc: "0162-actioncontroller-metal-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

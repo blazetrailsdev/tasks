@@ -2,7 +2,7 @@
 title: "mime-responds-reaches-base-by-class-body-assignment-not-include"
 status: draft
 updated: 2026-10-10
-rfc: "0162-actioncontroller-metal-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

@@ -2,7 +2,7 @@
 title: "PerFormTokensControllerTest reads the token through assert_select and Base64.urlsafe_decode64"
 status: ready
 updated: 2026-10-06
-rfc: "0162-actioncontroller-metal-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps:

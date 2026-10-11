@@ -2,7 +2,7 @@
 title: "flash-reader-is-a-hand-written-getter-not-a-delegate-call"
 status: draft
 updated: 2026-10-10
-rfc: "0162-actioncontroller-metal-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

@@ -2,7 +2,7 @@
 title: "Close RFC 0162 — remaining call baselines and residue"
 status: ready
 updated: 2026-10-04
-rfc: "0162-actioncontroller-metal-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]
 deps:

@@ -2,7 +2,7 @@
 title: "strong_parameters error classes extend Error, not ArgumentError / IndexError; InvalidParameterKey has an invented constructor"
 status: draft
 updated: 2026-10-11
-rfc: "0162-actioncontroller-metal-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
