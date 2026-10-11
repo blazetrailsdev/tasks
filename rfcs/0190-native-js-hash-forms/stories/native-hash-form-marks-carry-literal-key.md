@@ -37,14 +37,20 @@ the bulk of the substitution stories, though they do not depend on it.
 
 ## Acceptance criteria
 
-- [ ] The extractor's `@in` and `@delete` marks carry the key when it is a
-      string literal or an identifier property name
-      (`"public" in options`, `delete options.public`, `delete options["x"]`),
-      in a spelling `splitCalls` keeps apart from the receiver tail.
+- [ ] The TS extractor records each `in` / `Object.hasOwn` / `delete` form as
+      a site of its own in the call-argument stream (`@in`, `@delete`), with
+      the key as argument 1 and the receiver's trailing name as `recv`
+      (`"public" in options`, `delete options.public`, `delete options["x"]`).
+      The argument gate reads that stream and not the call set, so the
+      call-set marks (`@in:<recv>`, `@delete:<recv>`) stay as they are.
 - [ ] `parity:api:calls:args` compares that key with the Ruby call's first
       argument when it is a Symbol or String literal, using the camelCase
       translation the gate already applies to kwarg keys
       (`:only_path` ≡ `onlyPath`).
+- [ ] A String literal key is compared verbatim; only a Symbol is camelized,
+      and a Symbol also matches its colon spelling (`":params"`).
+- [ ] A Ruby site on a local receiver (`weak`) is compared where the body has
+      a form site on that receiver.
 - [ ] A mismatch is a `shape` row, baselined and gated like any other; a
       computed key on either side is not compared.
 - [ ] Tests: `options.delete(:public)` with `delete options.public` passes;
