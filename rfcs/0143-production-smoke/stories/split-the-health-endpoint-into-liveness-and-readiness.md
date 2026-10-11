@@ -1,7 +1,7 @@
 ---
 title: "Split the health endpoint into liveness and readiness"
-status: draft
-updated: 2026-09-09
+status: done
+updated: 2026-10-11
 rfc: "0143-production-smoke"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trailmap#54
+claim: "2026-10-11T16:12:17Z"
+assignee: "split-the-health-endpoint-into-liveness-and-readiness"
 blocked-by: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Mysql2 perform_query returns nil when the statement has no result set"
-status: ready
-updated: 2026-10-10
+status: done
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8728
+claim: "2026-10-11T16:39:40Z"
+assignee: "djas-composite-key-arms-have-no-rails-counterpart"
 blocked-by: null
 closed-reason: null
 ---

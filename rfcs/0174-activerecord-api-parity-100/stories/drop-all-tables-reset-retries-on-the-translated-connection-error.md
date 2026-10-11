@@ -1,6 +1,6 @@
 ---
 title: "activerecord: drop-all-tables retries on the translated connection error, not a message match"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null

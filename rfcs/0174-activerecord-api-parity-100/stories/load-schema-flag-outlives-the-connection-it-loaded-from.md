@@ -1,7 +1,7 @@
 ---
 title: 'activerecord: after re-establishing a connection the primary-key latch is lost but _schemaLoaded is kept, so an id-less table inserts RETURNING "id"'
-status: ready
-updated: 2026-10-10
+status: in-progress
+updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8785
+claim: "2026-10-11T16:09:39Z"
+assignee: "delegated-type-free-function-export-has-no-rails-counterpart"
 blocked-by: null
 closed-reason: null
 ---

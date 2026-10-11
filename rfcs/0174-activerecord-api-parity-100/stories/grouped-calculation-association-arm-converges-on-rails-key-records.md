@@ -1,6 +1,6 @@
 ---
 title: "activerecord: converge executeGroupedCalculation's association arm onto Rails' key_ids / index_by"
-status: claimed
+status: done
 updated: 2026-10-11
 rfc: "0174-activerecord-api-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8784
 claim: "2026-10-11T15:39:43Z"
 assignee: "database-tasks-database-configuration-is-a-plain-attr-accessor"
 blocked-by: null

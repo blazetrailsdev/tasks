@@ -1,6 +1,6 @@
 ---
 title: "Port live_stream_test.rb's thread-state, exception, thread, buffer and router tests"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
