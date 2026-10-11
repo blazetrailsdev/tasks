@@ -77,6 +77,20 @@ operator was "a shape the gate cannot tell from a dropped guard"), and
       goes STALE because a hand-written `in` is now credited is deleted by
       hand and the mark tightened with `pnpm parity:api:calls:tighten`.
 
+## Notes from the marks story (trails#8769)
+
+- `@in` is marked for every `in`, including feature probes that are not a
+  Ruby `key?` (`"then" in v`, `Symbol.iterator in v`). Crediting has to filter
+  these, by receiver kind or by the literal key
+  (`native-hash-form-marks-carry-literal-key`).
+- A body whose only names are hash forms records no call set, so the marks
+  moved no comparison. A port that is nothing but `return k in h` carries no
+  `@in` until `collectCalls` (`scripts/api-compare/extract-ts-api.ts`) stops
+  holding `hashForms` apart from `names`.
+- The missing-keyword guard is exempt only in its `in` spelling, the one
+  `isArgumentBindingGuard` recognises. `Object.hasOwn(kwargs, "name")` in that
+  position is marked.
+
 ## Definition of done
 
 A `NO_JS_CALL_FORM` entry for any of these names does not close this story.
