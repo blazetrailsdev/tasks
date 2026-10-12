@@ -11,6 +11,7 @@ packages:
   - trailties
   - activerecord
   - trails-tsc
+  - "activerecord-cli"
 clusters: []
 priority: 1
 ---
