@@ -1,6 +1,6 @@
 ---
 title: "eslint: expected-fixtures harvests fixtures([...] as const)"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port the 24 Thread/GVL-excluded pool, handler and cache tests over withExecutionContext"
-status: claimed
+status: done
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: unported-tests
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#8808
 claim: "2026-10-12T00:39:48Z"
 assignee: "activerecord-port-thread-excluded-tests-pool-and-cache"
 blocked-by: null

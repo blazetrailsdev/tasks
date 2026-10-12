@@ -1,7 +1,7 @@
 ---
 title: "connection-handlers sharding/multi-db tests: Rails setup, clean_up_connection_handler teardown"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8809
+claim: "2026-10-12T01:24:58Z"
+assignee: "activerecord-port-pool-tests-blocked-on-enumerator-interlock-and-sync-new-connection"
 blocked-by: null
 closed-reason: null
 ---
