@@ -60,3 +60,20 @@ and anything `harden-the-smoke-schedule-from-review` covers.
 
 `crontab -l` names the four entries, and `/crons` shows tier 0 and tier 1 with
 runs in the last minute.
+
+## Result
+
+Done on 2026-10-12, recorded with trailmap#69.
+
+- btwhooks `smoke-crons` (`31140dc`) is on `main` and deployed; `/crons` shows a
+  card for each of tiers 0, 1 and 2.
+- The four crontab entries are installed from
+  `~/github/blazetrailsdev/trailmap/scripts/smoke-cron.sh`.
+- `smoke-canary` exists and tier 2 passes 24 of 24, `tier2.cli-worktree`
+  included. `tier2.graphs-parity-data` passes too, though this story expected
+  it red.
+- **Stopping the app turned tier 0 red in 17 seconds.** `dokku ps:stop trailmap`
+  returned at 14:56:50; the 14:57:01 run logged `FAIL tier0.up-loopback /up
+answered 502, not 200`, written at 14:57:07. The app was started again at
+  14:57:11 and tiers 0 and 1 were green on their next runs. The worst case is
+  one 30-second cadence plus the run.
