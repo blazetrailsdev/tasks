@@ -5,7 +5,11 @@ updated: 2026-09-07
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
-deps: ["retire-the-go-read-model"]
+deps:
+  - retire-the-go-read-model
+  - land-the-ringo-read-model-deletion
+  - point-velocity-at-the-events-table
+  - soak-trailmap-as-the-fleet-dashboard
 deps-rfc: []
 est-loc: 120
 priority: 13
