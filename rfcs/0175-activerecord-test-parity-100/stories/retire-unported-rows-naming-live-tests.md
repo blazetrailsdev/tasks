@@ -1,6 +1,6 @@
 ---
 title: "Four unported-files rows name tests that are live in the mirroring TS file"
-status: draft
+status: ready
 updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: associations_test pretty_print test is ported; retire its unported-files row that says PP has no equivalent"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

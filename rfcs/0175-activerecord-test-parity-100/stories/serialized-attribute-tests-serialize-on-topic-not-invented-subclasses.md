@@ -1,7 +1,7 @@
 ---
 title: "activerecord: serialized-attribute tests call Topic.serialize as Rails does, not ~40 invented Topic subclasses"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: ["activerecord"]

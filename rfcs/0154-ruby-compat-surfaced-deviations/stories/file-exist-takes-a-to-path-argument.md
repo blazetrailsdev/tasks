@@ -1,6 +1,6 @@
 ---
 title: "file-exist-takes-a-to-path-argument"
-status: draft
+status: in-progress
 updated: 2026-10-11
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8803
+claim: "2026-10-11T23:14:32Z"
+assignee: "file-exist-takes-a-to-path-argument"
 blocked-by: null
 closed-reason: null
 ---

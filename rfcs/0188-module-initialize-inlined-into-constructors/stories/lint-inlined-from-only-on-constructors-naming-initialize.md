@@ -1,6 +1,6 @@
 ---
 title: "eslint: @inlinedFrom is valid only on a constructor and only names #initialize"
-status: ready
+status: done
 updated: 2026-10-11
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8805
+claim: "2026-10-11T23:08:00Z"
+assignee: "lint-inlined-from-only-on-constructors-naming-initialize"
 blocked-by: null
 closed-reason: null
 ---

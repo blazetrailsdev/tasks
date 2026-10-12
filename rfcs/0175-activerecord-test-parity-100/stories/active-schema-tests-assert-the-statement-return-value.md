@@ -1,7 +1,7 @@
 ---
 title: "activerecord: ActiveSchemaTest asserts the statement's return value, as Rails' stubbed execute lets it"
-status: draft
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8806
+claim: "2026-10-11T23:39:39Z"
+assignee: "active-schema-tests-assert-the-statement-return-value"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "parity:fixtures: extract-ruby-models qualifies a class nested in a class body"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the test helper seats DatabaseTasks env / root / db_dir globally where Rails' tests stub them"
-status: draft
-updated: 2026-10-09
+status: ready
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

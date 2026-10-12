@@ -1,7 +1,7 @@
 ---
 title: "activerecord: fixtures() naming one set in a second describe finds no rows (RecordNotFound in the fixture-cache loop)"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: ["activerecord"]

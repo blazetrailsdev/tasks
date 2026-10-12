@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port the Symbol-citing exclusions and the send halves of the visibility ones; re-point the rest at the ratified section"
-status: claimed
+status: in-progress
 updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: unported-tests
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#8802
 claim: "2026-10-11T22:39:35Z"
 assignee: "activerecord-port-marshal-excluded-tests"
 blocked-by: null

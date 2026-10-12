@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port the 16 fixtures_test.rb exclusions about fixture lifecycle and accessors"
-status: in-progress
+status: done
 updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: unported-tests

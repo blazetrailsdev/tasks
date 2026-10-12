@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port the 15 missing cases across has_many, base, eager, associations, array, quoting, mixin tests"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8804
+claim: "2026-10-11T23:09:44Z"
+assignee: "activerecord-port-model-and-association-missing-cases"
 blocked-by: null
 closed-reason: null
 ---

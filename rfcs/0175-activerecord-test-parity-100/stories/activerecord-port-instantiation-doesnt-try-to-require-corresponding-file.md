@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port inheritance_test's 'instantiation doesnt try to require corresponding file' once instantiate resolves the type through find_sti_class"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

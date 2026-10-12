@@ -1,7 +1,7 @@
 ---
 title: "CompatibilityTest teardown drops Rails' rescue nil, so a test run alone fails on a missing schema_migrations"
-status: draft
-updated: 2026-10-10
+status: ready
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

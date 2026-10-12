@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Marshal.load reads the Rails 6.1 and 7.1 marshal compatibility fixtures (4 parked cases)"
-status: draft
+status: closed
 updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "let's not do this, I don't care about this compat right now"
 ---
 
 ## Context

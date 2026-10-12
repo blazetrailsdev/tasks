@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Admin test models derive their table name from Admin.table_name_prefix"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: schema-fixtures
 packages: []

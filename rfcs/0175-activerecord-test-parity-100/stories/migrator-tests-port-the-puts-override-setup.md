@@ -1,7 +1,7 @@
 ---
 title: "Migrator test setup: port the Migration#puts override that silences output and counts messages"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-11
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
