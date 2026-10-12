@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Marshal dumps and loads a Set (unblocks the has-many-through marshal dump test)"
-status: ready
+status: in-progress
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8815
+claim: "2026-10-12T14:09:43Z"
+assignee: "retire-unported-rows-naming-live-tests"
 blocked-by: null
 closed-reason: null
 ---

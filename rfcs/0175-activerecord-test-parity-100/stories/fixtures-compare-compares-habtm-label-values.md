@@ -1,6 +1,6 @@
 ---
 title: "parity:fixtures: compare HABTM label lists instead of skipping them"
-status: claimed
+status: done
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8814
 claim: "2026-10-12T13:52:25Z"
 assignee: "activerecord-port-pool-tests-blocked-on-enumerator-interlock-and-sync-new-connection"
 blocked-by: null

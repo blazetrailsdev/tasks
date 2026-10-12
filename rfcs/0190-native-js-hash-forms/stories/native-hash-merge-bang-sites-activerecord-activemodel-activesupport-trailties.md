@@ -1,6 +1,6 @@
 ---
 title: "merge! on a plain object is Object.assign: activerecord, activemodel, activesupport, trailties"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0190-native-js-hash-forms"
 cluster: substitution

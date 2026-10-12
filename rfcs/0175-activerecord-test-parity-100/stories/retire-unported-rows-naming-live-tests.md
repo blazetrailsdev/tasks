@@ -1,7 +1,7 @@
 ---
 title: "Four unported-files rows name tests that are live in the mirroring TS file"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8815
+claim: "2026-10-12T14:09:43Z"
+assignee: "retire-unported-rows-naming-live-tests"
 blocked-by: null
 closed-reason: null
 ---

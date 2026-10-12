@@ -1,6 +1,6 @@
 ---
 title: "The PostgreSQL schema dumper emits t.jsonb, which the Schema.define block's generic TableDefinition rejects"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

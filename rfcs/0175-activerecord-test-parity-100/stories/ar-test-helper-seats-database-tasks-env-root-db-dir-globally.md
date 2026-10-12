@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: "2026-10-12T13:52:25Z"
-assignee: "activerecord-port-pool-tests-blocked-on-enumerator-interlock-and-sync-new-connection"
+claim: "2026-10-12T14:39:36Z"
+assignee: "ar-test-helper-seats-database-tasks-env-root-db-dir-globally"
 blocked-by: null
 closed-reason: null
 ---

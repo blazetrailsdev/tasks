@@ -1,6 +1,6 @@
 ---
 title: "parity:api keeps a cross-file ClassMethods#new row when its module file also defines initialize"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null

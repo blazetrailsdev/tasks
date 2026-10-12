@@ -1,6 +1,6 @@
 ---
 title: "docs: CLAUDE.md records the constructor rule, the hoisted super and @inlinedFrom"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: docs

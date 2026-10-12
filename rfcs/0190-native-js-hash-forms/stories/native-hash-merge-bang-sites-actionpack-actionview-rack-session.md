@@ -1,6 +1,6 @@
 ---
 title: "merge! on a plain object is Object.assign: actionpack, actionview, rack-session"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0190-native-js-hash-forms"
 cluster: substitution
