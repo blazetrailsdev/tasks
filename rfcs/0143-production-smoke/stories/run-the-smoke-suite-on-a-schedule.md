@@ -1,7 +1,7 @@
 ---
 title: "Run the smoke suite on a schedule on the box"
-status: draft
-updated: 2026-09-09
+status: done
+updated: 2026-10-12
 rfc: "0143-production-smoke"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["extract-the-deploy-assertions-into-a-smoke-suite"]
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trailmap#59
+claim: "2026-10-12T13:26:07Z"
+assignee: "run-the-smoke-suite-on-a-schedule"
 blocked-by: null
 ---
 

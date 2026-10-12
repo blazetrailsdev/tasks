@@ -1,7 +1,7 @@
 ---
 title: "Smoke the tasks CLI, not just the routes"
-status: draft
-updated: 2026-09-09
+status: done
+updated: 2026-10-12
 rfc: "0143-production-smoke"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: ["extract-the-deploy-assertions-into-a-smoke-suite"]
 deps-rfc: []
 est-loc: 220
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trailmap#59
+claim: "2026-10-12T13:26:10Z"
+assignee: "smoke-the-tasks-cli-not-just-the-routes"
 blocked-by: null
 ---
 

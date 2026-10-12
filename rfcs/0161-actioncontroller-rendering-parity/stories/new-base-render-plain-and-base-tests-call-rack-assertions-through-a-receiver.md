@@ -1,7 +1,7 @@
 ---
 title: "new_base render_plain and base tests call assert_body/assert_status through a receiver, so 16 tests score zero assertions"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: []

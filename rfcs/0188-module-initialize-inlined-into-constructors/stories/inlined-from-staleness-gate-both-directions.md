@@ -1,7 +1,7 @@
 ---
 title: "parity: an @inlinedFrom with no module initialize, or an includer with no tag, is red"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-12
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8810
+claim: "2026-10-12T13:36:32Z"
+assignee: "class-methods-new-beside-a-module-initialize-keeps-its-row"
 blocked-by: null
 closed-reason: null
 ---

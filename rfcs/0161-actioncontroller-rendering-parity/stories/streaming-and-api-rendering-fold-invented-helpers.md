@@ -1,7 +1,7 @@
 ---
 title: "Fold the invented streaming and API-rendering helpers back into their Rails methods"
-status: ready
-updated: 2026-10-11
+status: done
+updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: ["controller-render-converges-onto-abstract-controller-render"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8636
+claim: "2026-10-12T13:36:56Z"
+assignee: "renderer-normalize-env-and-moved-readers"
 blocked-by: null
 closed-reason: null
 ---

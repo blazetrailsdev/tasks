@@ -1,7 +1,7 @@
 ---
 title: "Port live_stream_test.rb's three CountDownLatch-driven tests (async_stream, abort_with_full_buffer, ignore_client_disconnect)"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: []

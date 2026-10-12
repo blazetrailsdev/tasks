@@ -1,7 +1,7 @@
 ---
 title: "strong-parameters-reverse-merge-and-deep-transform-keys-bang-drop-the-with-indifferent-access-rails-does-not-call"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []

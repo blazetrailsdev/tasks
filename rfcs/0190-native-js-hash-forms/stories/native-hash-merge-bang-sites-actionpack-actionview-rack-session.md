@@ -1,7 +1,7 @@
 ---
 title: "merge! on a plain object is Object.assign: actionpack, actionview, rack-session"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-12
 rfc: "0190-native-js-hash-forms"
 cluster: substitution
 packages: [actionpack, actionview, rack-session]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8811
+claim: "2026-10-12T13:37:56Z"
+assignee: "native-hash-merge-bang-sites-actionpack-actionview-rack-session"
 blocked-by: null
 closed-reason: null
 ---

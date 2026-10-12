@@ -1,7 +1,7 @@
 ---
 title: "Measure, then report, a dropped Hash#[] read: no call gate sees an element access on either side"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []

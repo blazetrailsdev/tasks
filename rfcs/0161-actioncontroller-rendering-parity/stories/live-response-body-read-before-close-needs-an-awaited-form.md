@@ -1,7 +1,7 @@
 ---
 title: "A live response body read before the stream closes raises; replace the test-local waitForStreamClose"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: []

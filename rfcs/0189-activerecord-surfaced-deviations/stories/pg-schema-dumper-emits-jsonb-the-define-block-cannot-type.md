@@ -1,6 +1,6 @@
 ---
 title: "The PostgreSQL schema dumper emits t.jsonb, which the Schema.define block's generic TableDefinition rejects"
-status: draft
+status: in-progress
 updated: 2026-10-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8812
+claim: "2026-10-12T13:55:14Z"
+assignee: "pg-schema-dumper-emits-jsonb-the-define-block-cannot-type"
 blocked-by: null
 closed-reason: null
 ---

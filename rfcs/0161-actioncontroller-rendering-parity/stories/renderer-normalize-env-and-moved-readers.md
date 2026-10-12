@@ -1,7 +1,7 @@
 ---
 title: "Port Renderer.normalize_env and converge Renderer's moved readers"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8813
+claim: "2026-10-12T13:36:56Z"
+assignee: "renderer-normalize-env-and-moved-readers"
 blocked-by: null
 closed-reason: null
 ---

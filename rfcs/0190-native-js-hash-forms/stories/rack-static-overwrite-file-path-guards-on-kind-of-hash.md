@@ -1,7 +1,7 @@
 ---
 title: "Rack::Static#overwrite_file_path guards on kind_of?(Hash), not on not-an-Array"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []

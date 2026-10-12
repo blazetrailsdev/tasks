@@ -1,7 +1,7 @@
 ---
 title: "Live#log_error reads ActionController::Base.logger, keeps the annotated_source_code arm and joins the backtrace"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: []

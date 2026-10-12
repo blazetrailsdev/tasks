@@ -1,7 +1,7 @@
 ---
 title: "Migrator test setup: port the Migration#puts override that silences output and counts messages"
-status: ready
-updated: 2026-10-11
+status: claimed
+updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-12T13:52:25Z"
+assignee: "activerecord-port-pool-tests-blocked-on-enumerator-interlock-and-sync-new-connection"
 blocked-by: null
 closed-reason: null
 ---
