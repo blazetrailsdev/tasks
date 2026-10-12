@@ -33,6 +33,13 @@ resets `_loaded` has no Rails counterpart either. The arm carries
 JS has no synchronous await, so the arm cannot be `return load`. Whether that makes the
 `synchronize` call permanent is the repo owner's ruling to make.
 
+Since trails#8820 the arm writes `_loaded = true` inside the locked block, after `load()` has
+started, and the block returns early when a reader's own load is already in flight. A relation
+scheduled while the adapter lock is held therefore reads `isLoaded === false` until its entry runs,
+where Rails' in-line `load` (`relation.rb:1139`) leaves `loaded?` true as `load_async` returns
+(`vendor/rails/v8.0.2/activerecord/test/cases/relation/load_async_test.rb:23`). Whatever shape replaces the arm has to
+close that window as well; the guard and the deferred write go with it.
+
 ## Acceptance criteria
 
 - [ ] Either the null-executor arm reaches Rails' `return load` shape with no `synchronize` call
