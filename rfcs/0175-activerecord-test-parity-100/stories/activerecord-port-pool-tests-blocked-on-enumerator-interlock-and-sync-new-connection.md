@@ -5,7 +5,8 @@ updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - activerecord-port-thread-excluded-tests-pool-and-cache
 deps-rfc: []
 est-loc: 250
 priority: null
