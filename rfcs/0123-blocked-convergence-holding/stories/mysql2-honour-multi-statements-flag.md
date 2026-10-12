@@ -1,6 +1,6 @@
 ---
 title: "mysql2-honour-multi-statements-flag"
-status: claimed
+status: in-progress
 updated: 2026-10-12
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8838
 claim: "2026-10-12T20:40:40Z"
 assignee: "converge-sql-for-insert-and-supports-insert-returning-to-sync"
 blocked-by: null

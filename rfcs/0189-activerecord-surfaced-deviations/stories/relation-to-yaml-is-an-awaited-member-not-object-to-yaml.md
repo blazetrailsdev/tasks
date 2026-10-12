@@ -1,6 +1,6 @@
 ---
 title: "Relation#toYaml is an awaited member that loads first; Rails' is Object#to_yaml"
-status: draft
+status: ready
 updated: 2026-10-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

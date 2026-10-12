@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 94 TS-only tests in Rails-named encryption test files to .trails siblings"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: extra-tests

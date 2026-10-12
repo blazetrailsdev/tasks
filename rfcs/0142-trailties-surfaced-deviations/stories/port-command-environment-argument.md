@@ -1,6 +1,6 @@
 ---
 title: "trailties: port Rails::Command::EnvironmentArgument and include it in DbconsoleCommand"
-status: ready
+status: closed
 updated: 2026-10-12
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: EnvironmentArgument was ported in trails#8838 itself"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "sqlForInsert peeks the schema cache's primary keys; Rails calls primary_key(table_ref)"
-status: draft
+status: ready
 updated: 2026-10-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
