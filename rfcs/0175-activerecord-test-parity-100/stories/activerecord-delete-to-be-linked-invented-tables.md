@@ -1,7 +1,7 @@
 ---
 title: "activerecord-delete-to-be-linked-invented-tables"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8807
+claim: "2026-10-12T00:09:36Z"
+assignee: "activerecord-delete-to-be-linked-invented-tables"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port the Symbol-citing exclusions and the send halves of the visibility ones; re-point the rest at the ratified section"
-status: in-progress
-updated: 2026-10-11
+status: done
+updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: unported-tests
 packages: ["activerecord"]

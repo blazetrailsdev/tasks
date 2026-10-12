@@ -1,6 +1,6 @@
 ---
 title: "activerecord: a Relation round-trips Marshal (3 parked 6.1 cases)"
-status: draft
+status: ready
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

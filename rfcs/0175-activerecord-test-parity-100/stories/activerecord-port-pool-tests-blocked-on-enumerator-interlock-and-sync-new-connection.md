@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port the five connection_pool_test.rb cases left behind by the Thread-excluded port (fairness, concurrent establishment, load interlock, fiber reentrency)"
-status: draft
+status: ready
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

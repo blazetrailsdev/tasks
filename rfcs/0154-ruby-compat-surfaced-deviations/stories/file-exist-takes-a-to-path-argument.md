@@ -1,7 +1,7 @@
 ---
 title: "file-exist-takes-a-to-path-argument"
-status: in-progress
-updated: 2026-10-11
+status: done
+updated: 2026-10-12
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

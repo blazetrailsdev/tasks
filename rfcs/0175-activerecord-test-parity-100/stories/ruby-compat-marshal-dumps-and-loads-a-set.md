@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Marshal dumps and loads a Set (unblocks the has-many-through marshal dump test)"
-status: draft
+status: ready
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

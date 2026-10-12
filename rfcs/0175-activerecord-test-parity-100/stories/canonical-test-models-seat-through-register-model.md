@@ -1,7 +1,7 @@
 ---
 title: "activerecord: canonical test models seat through registerModel, so each is in its superclass's subclasses"
-status: in-progress
-updated: 2026-10-11
+status: done
+updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
