@@ -96,7 +96,10 @@ trailmap re-vendors.
 - `console.log` in `app/` is replaced by `Trails.logger`.
 - `Base.transaction` in `app/` is replaced by `Story.transaction` /
   `ApplicationRecord.transaction`.
-- The three JSON array columns are declared with `serialize(..., { coder: JSON })`
-  and read as arrays, with `jsonArrayColumn` deleted. Otherwise a framework
-  story is filed naming exactly what `serialize` could not express.
+- The three JSON array columns are declared with `serialize` and read as
+  arrays, with `jsonArrayColumn` deleted. The coder is the application's own
+  (`load`/`dump`), not `coder: JSON`: `ActiveRecord::Coders::JSON.load`
+  (`coders/json.rb:11`) raises on text that is not JSON, in Rails and in
+  trails alike, so `coder: JSON, type: Array` cannot keep "an unparseable
+  value reads as `[]`". That is not a framework gap, so no story is filed.
 - `pnpm test`, `pnpm build` and `pnpm gate` pass unchanged.
