@@ -1,7 +1,7 @@
 ---
 title: "port-finder-aggregate-find-by-cluster"
 status: ready
-updated: 2026-07-27
+updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

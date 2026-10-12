@@ -1,14 +1,14 @@
 ---
 title: "Port the 15 remaining migration compatibility cases (shared-module suites, MySQL arms, inherited)"
 status: ready
-updated: 2026-10-11
+updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 450
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

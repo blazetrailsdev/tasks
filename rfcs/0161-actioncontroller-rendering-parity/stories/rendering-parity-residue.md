@@ -1,6 +1,6 @@
 ---
 title: "Close RFC 0161 — call baselines and residue to zero"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null

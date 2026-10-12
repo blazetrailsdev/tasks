@@ -1,7 +1,7 @@
 ---
 title: "Port prefix_generation_test.rb and url_generation_test.rb skips and describe paths"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-12
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]

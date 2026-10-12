@@ -1,7 +1,7 @@
 ---
 title: "Ported routing tests spell Rails' via: Symbols as bare Strings"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-12
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: []

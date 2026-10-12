@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 14 TS-only tests in encryption/extended-deterministic-queries.test.ts to the .trails sibling"
-status: draft
+status: in-progress
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 470
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8836
+claim: "2026-10-12T20:46:35Z"
+assignee: "activerecord-relocate-ts-only-tests-extended-deterministic-queries"
 blocked-by: null
 closed-reason: null
 ---

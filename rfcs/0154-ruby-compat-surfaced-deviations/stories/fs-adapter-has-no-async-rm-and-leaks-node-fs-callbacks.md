@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: FsAdapter has no async rm, and the node backend exposes node:fs's callback rm under that name"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

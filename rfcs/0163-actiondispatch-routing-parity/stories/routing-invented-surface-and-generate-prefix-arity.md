@@ -1,7 +1,7 @@
 ---
 title: "Relocate routing's moved names and fix define_generate_prefix's arity"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-12
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]

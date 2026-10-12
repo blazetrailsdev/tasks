@@ -1,14 +1,14 @@
 ---
 title: "activerecord: port finder_test.rb's 19 missing find_by / find by cases"
 status: ready
-updated: 2026-09-30
+updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests
 packages: ["activerecord"]
 deps: ["parity-100-rehome-postponed-rfc-dependencies", "port-finder-aggregate-find-by-cluster"]
 deps-rfc: []
 est-loc: 450
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

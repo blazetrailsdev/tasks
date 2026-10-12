@@ -1,6 +1,6 @@
 ---
 title: "trailties: port Rails::Command::EnvironmentArgument and include it in DbconsoleCommand"
-status: draft
+status: ready
 updated: 2026-10-12
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

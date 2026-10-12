@@ -1,7 +1,7 @@
 ---
 title: "Port controller/routing_test.rb lines 500-1005 (rest of LegacyRouteSetTests)"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-12
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]

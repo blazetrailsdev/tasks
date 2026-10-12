@@ -1,6 +1,6 @@
 ---
 title: "activerecord: a record round-trips Marshal under format 6.1 (5 parked cases)"
-status: ready
+status: done
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8834
+claim: "2026-10-12T20:03:49Z"
+assignee: "activerecord-record-round-trips-marshal-6-1-format"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port dispatch/routing_test.rb's skipped tests from TestAltApp to TestRouteDefaults"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-12
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]

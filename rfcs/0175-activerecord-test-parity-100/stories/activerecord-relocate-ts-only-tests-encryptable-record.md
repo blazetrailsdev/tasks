@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 17 TS-only tests in encryption/encryptable-record.test.ts to the .trails sibling"
-status: draft
+status: in-progress
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 490
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8836
+claim: "2026-10-12T20:46:29Z"
+assignee: "activerecord-relocate-ts-only-tests-encryptable-record"
 blocked-by: null
 closed-reason: null
 ---

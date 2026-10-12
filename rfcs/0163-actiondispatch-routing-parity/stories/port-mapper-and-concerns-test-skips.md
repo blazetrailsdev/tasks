@@ -1,7 +1,7 @@
 ---
 title: "Port mapper_test.rb's 9 skips and concerns_test.rb's 1 skip"
-status: draft
-updated: 2026-09-28
+status: in-progress
+updated: 2026-10-12
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8837
+claim: "2026-10-12T20:31:40Z"
+assignee: "port-controller-routing-test-legacy-route-set-part-1"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,9 +1,9 @@
 ---
 rfc: "0161-actioncontroller-rendering-parity"
 title: "ActionController rendering — Rendering, Renderers, Streaming and Live to parity"
-status: active
+status: closed
 created: 2026-09-27
-updated: 2026-10-11
+updated: 2026-10-12
 owner: "@deanmarano"
 packages:
   - "actionpack"

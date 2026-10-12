@@ -1,7 +1,7 @@
 ---
 title: "libsql-remote adapter passes a :memory: placeholder and overrides supportsConcurrentConnections"
-status: ready
-updated: 2026-10-08
+status: claimed
+updated: 2026-10-12
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-12T20:40:40Z"
+assignee: "converge-sql-for-insert-and-supports-insert-returning-to-sync"
 blocked-by: null
 closed-reason: null
 ---

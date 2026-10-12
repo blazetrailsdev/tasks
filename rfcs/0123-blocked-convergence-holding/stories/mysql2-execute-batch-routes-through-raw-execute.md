@@ -1,7 +1,7 @@
 ---
 title: "mysql2 executeBatch calls rawExecute per combined block, not execute"
-status: ready
-updated: 2026-10-08
+status: done
+updated: 2026-10-12
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8728
+claim: "2026-10-12T20:40:40Z"
+assignee: "converge-sql-for-insert-and-supports-insert-returning-to-sync"
 blocked-by: null
 closed-reason: null
 ---

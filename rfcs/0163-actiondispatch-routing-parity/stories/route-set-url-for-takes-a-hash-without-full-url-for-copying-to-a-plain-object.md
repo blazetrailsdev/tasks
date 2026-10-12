@@ -1,7 +1,7 @@
 ---
 title: "RouteSet#url_for takes the Hash full_url_for builds; drop the eachPair copy"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: []

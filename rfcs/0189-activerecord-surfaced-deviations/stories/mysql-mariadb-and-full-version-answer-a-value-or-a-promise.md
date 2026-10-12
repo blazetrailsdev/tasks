@@ -1,6 +1,6 @@
 ---
 title: "MySQL isMariadb and fullVersion answer a value or a promise; Rails' mariadb? and full_version are sync"
-status: draft
+status: ready
 updated: 2026-10-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

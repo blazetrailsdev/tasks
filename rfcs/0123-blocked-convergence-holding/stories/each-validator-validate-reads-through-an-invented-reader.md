@@ -1,7 +1,7 @@
 ---
 title: "activemodel: EachValidator#validate sends read_attribute_for_validation instead of an invented fallback reader"
-status: ready
-updated: 2026-10-08
+status: done
+updated: 2026-10-12
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activemodel"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8663
+claim: "2026-10-12T20:40:40Z"
+assignee: "converge-sql-for-insert-and-supports-insert-returning-to-sync"
 blocked-by: null
 closed-reason: null
 ---
