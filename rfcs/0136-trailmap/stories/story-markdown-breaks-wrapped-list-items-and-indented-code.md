@@ -5,7 +5,8 @@ updated: 2026-10-08
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: []
+deps:
+  - land-the-ringo-read-model-deletion
 deps-rfc: []
 est-loc: 120
 priority: null
