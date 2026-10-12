@@ -48,6 +48,9 @@ DatabaseAdapter`) is synchronous, so an override cannot await the latch. Rails' 
 
 ## Acceptance criteria
 
-- [ ] Each of the three is ported with Rails' body once its blocker is ported (or the
-      blocker is ruled permanent by the repo owner), and its register row is deleted.
+- [ ] `test_concurrent_connection_establishment` and `test_lock_thread_allow_fiber_reentrency`
+      are ported with Rails' body, and their register rows are deleted.
+- [ ] `test_full_pool_blocking_shares_load_interlock` is out of this story: its register row
+      points at `pool-test-full-pool-blocking-shares-load-interlock-needs-owner-ruling`, which
+      carries the `Interlock` / `ShareLock` decision (split out on trails#8818).
 - [ ] `pnpm vitest run scripts/parity/unported-files.test.ts` passes.
