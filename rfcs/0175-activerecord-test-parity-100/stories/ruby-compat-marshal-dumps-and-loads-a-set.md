@@ -40,10 +40,15 @@ members in a `#hash` private, so it is refused the same way, it has no
 `compareByIdentity`, and `Set` is not seated in the path table
 (`rbPathToClass("Set")`).
 
-After the split PR this is the only thing the dump of a record with a
-preloaded collection association still refuses: `Marshal.dump(await
-Post.includes(":firstBlueTags").first())` fails on
-`@_association_cache{firstTaggings}.@replaced_or_added_targets` alone.
+The Set is one of the things the dump of a record with a preloaded collection
+association refuses, and not the last. With it fixed (trails#8815),
+`Marshal.dump(await Post.includes(":firstBlueTags").first())` still raises
+`can't dump anonymous module` from `@_attributes.@types`: a Proxy over a plain
+object standing in for `Hash.new(Type.default_value)`
+(`packages/activemodel/src/attribute-registration.ts`, `attributeTypes`), whose
+`constructor` read answers a type. That and the unseated classes belong to
+`activerecord-record-round-trips-marshal-6-1-format`, which lists "marshal
+dump" among its five cases and depends on this story.
 
 ## Acceptance criteria
 
@@ -57,4 +62,5 @@ Post.includes(":firstBlueTags").first())` fails on
 - [ ] "marshal dump"
       (`associations/has_many_through_associations_test.rb:63-66`,
       `packages/activerecord/src/associations/has-many-through-associations.test.ts`)
-      is live with Rails' body and its `BLOCKED:` line names no story.
+      no longer names this story on its `BLOCKED:` line: it names
+      `activerecord-record-round-trips-marshal-6-1-format`, which makes it live.
