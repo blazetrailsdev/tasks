@@ -1,5 +1,5 @@
 ---
-title: "activerecord: Relation#encode_with and Relation::StrictLoadingScope"
+title: "activerecord: Relation#encode_with"
 status: ready
 updated: 2026-09-30
 rfc: "0170-psych-in-ruby-compat"
@@ -7,7 +7,7 @@ cluster: api-surface
 packages: ["activerecord"]
 deps: ["psych-object-to-yaml"]
 deps-rfc: []
-est-loc: 180
+est-loc: 60
 priority: null
 pr: null
 claim: null
@@ -18,22 +18,33 @@ closed-reason: null
 
 ## Context
 
-`relation.rb → relation.ts` scores 406/409. The misses:
+Narrowed on 2026-10-11. The `StrictLoadingScope` half moved to
+`relation-strict-loading-scope-class-and-class-specific-relation-name` (RFC 0156), which waits on
+nothing. This story keeps the one row that needs Psych.
 
-- `Relation#encode_with` (`vendor/rails/v8.0.2/activerecord/lib/active_record/relation.rb:348`) — `coder.represent_seq(nil, records)`,
-  how a relation dumps to YAML.
-- `Relation::StrictLoadingScope.empty_scope?` / `.strict_loading_value`
-  (`vendor/rails/v8.0.2/activerecord/lib/active_record/relation.rb`, the `StrictLoadingScope` module used by `Relation#_create*` to run the create
-  block under `strict_loading`).
+`Relation#encode_with` (`vendor/rails/v8.0.2/activerecord/lib/active_record/relation.rb:347-350`) is
 
-`encode_with` needs Psych's coder (RFC 0170, `psych-object-to-yaml`); the `StrictLoadingScope` pair is
-plain Ruby.
+```ruby
+def encode_with(coder)
+  coder.represent_seq(nil, records)
+end
+```
+
+so a relation dumps to YAML as the Array of its records. `coder` is a `Psych::Coder`, and
+`represent_seq` is its method. trails has no `representSeq` anywhere yet: ruby-compat's Psych coder
+arrives with `psych-object-to-yaml`, which is this story's dep. Do not port against a local structural
+interface standing in for the coder.
+
+Rails exercises it through `Bird.all.to_yaml`
+(`vendor/rails/v8.0.2/activerecord/test/cases/relations_test.rb:79-82`) and `[Topic.all].to_yaml`
+(`vendor/rails/v8.0.2/activerecord/test/cases/yaml_serialization_test.rb:49`).
 
 ## Acceptance criteria
 
-- [ ] `StrictLoadingScope` is ported in `relation.ts` with both singleton methods, and the create paths use it where Rails does.
-- [ ] `Relation#encodeWith` represents the loaded records as a sequence through ruby-compat Psych's coder.
-- [ ] `relation.rb` scores 409/409.
+- [ ] `Relation#encodeWith(coder)` in `packages/activerecord/src/relation.ts` is
+      `coder.representSeq(null, records)` against ruby-compat Psych's coder, at its Rails position.
+- [ ] "to yaml" in `relations.test.ts` runs Rails' body.
+- [ ] `relation.rb` has no missing `encode_with` row in `parity:api`.
 
 ## Verification
 
