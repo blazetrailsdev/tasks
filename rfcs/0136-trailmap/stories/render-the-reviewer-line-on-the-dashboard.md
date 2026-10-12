@@ -5,7 +5,9 @@ updated: 2026-09-08
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionview"]
-deps: ["move-reviewers-and-usage-into-the-database"]
+deps:
+  - move-reviewers-and-usage-into-the-database
+  - server-render-the-dashboards-pr-rows
 deps-rfc: []
 est-loc: 200
 priority: null
