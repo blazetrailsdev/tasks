@@ -5,7 +5,9 @@ updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionpack"]
-deps: ["port-the-pane-terminal-emulator"]
+deps:
+  - port-the-pane-terminal-emulator
+  - serve-the-session-archive-index
 deps-rfc: []
 est-loc: 250
 priority: 7
