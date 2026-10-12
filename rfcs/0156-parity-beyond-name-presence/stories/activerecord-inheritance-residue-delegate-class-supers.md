@@ -1,7 +1,7 @@
 ---
 title: "activerecord: inheritance 209/217 — DelegateClass supers and the OID::DateTime parent spelling"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-12
 rfc: "0156-parity-beyond-name-presence"
 cluster: api-surface
 packages: ["activerecord"]
@@ -14,8 +14,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-12T19:53:53Z"
+assignee: "activerecord-inheritance-residue-delegate-class-supers"
 blocked-by: null
 closed-reason: null
 ---

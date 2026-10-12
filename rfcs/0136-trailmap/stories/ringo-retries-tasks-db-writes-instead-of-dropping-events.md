@@ -1,6 +1,6 @@
 ---
 title: "ringo implements the write protocol's locked/migrating answer: ack after commit, retry on SQLITE_BUSY"
-status: claimed
+status: blocked
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trailmap#69
 claim: "2026-10-12T18:39:42Z"
 assignee: "deploy-the-smoke-schedule-on-the-box"
-blocked-by: null
+blocked-by: "Mechanism built, acceptance not met: ringo's write path (ack after commit, busy/schema retry with backoff) is on btwhooks main at 0eeb2e1 (webhook/taskswrite.go) with its lock test, but it has no caller and ringo owns no table. Two criteria need a ringo-owned table: a real delivery acked after its row commits, and the table in trailmap's tableOwners. Unblock when the first phase-B story gives ringo a table; that change opens tasksWriteDSN, calls AckAfterCommit from the handler and bumps the pin. Dropped from trailmap#69 on review."
 closed-reason: null
 ---
 

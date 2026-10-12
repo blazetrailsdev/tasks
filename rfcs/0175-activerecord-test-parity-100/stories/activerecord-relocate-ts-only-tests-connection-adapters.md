@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 60 TS-only tests in Rails-named connection-adapters test files to .trails siblings"
-status: claimed
+status: ready
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: extra-tests
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-10-12T18:53:05Z"
-assignee: "activerecord-relocate-ts-only-tests-associations"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

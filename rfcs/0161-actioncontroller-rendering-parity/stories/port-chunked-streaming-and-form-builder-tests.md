@@ -1,6 +1,6 @@
 ---
 title: "Port chunked_test.rb, streaming_test.rb and form_builder_test.rb"
-status: ready
+status: in-progress
 updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8832
+claim: "2026-10-12T19:45:29Z"
+assignee: "port-chunked-streaming-and-form-builder-tests"
 blocked-by: null
 closed-reason: null
 ---

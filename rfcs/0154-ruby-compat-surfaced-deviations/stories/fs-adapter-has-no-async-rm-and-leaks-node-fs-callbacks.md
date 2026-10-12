@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: FsAdapter has no async rm, and the node backend exposes node:fs's callback rm under that name"
-status: draft
+status: in-progress
 updated: 2026-10-12
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8831
+claim: "2026-10-12T19:42:24Z"
+assignee: "fs-adapter-has-no-async-rm-and-leaks-node-fs-callbacks"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "api-compare-nulls-a-delegateclass-superclass"
-status: draft
-updated: 2026-09-02
+status: done
+updated: 2026-10-12
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8829
+claim: "2026-10-12T19:32:16Z"
+assignee: "api-compare-nulls-a-delegateclass-superclass"
 blocked-by: null
 closed-reason: null
 ---

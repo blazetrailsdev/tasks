@@ -1,6 +1,6 @@
 ---
 title: "Show what a story blocks and what blocks it, transitively"
-status: claimed
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trailmap#69
 claim: "2026-10-12T18:39:42Z"
 assignee: "deploy-the-smoke-schedule-on-the-box"
 blocked-by: null

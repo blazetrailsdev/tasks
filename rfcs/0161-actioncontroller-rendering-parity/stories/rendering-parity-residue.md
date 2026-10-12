@@ -1,7 +1,7 @@
 ---
 title: "Close RFC 0161 — call baselines and residue to zero"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
 packages: ["actionpack"]
@@ -18,9 +18,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8832
+claim: "2026-10-12T19:45:29Z"
+assignee: "port-chunked-streaming-and-form-builder-tests"
 blocked-by: null
 closed-reason: null
 ---
