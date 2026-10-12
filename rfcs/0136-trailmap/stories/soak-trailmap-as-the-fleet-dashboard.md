@@ -5,7 +5,17 @@ updated: 2026-09-09
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: []
+deps:
+  - serve-the-audits-index
+  - serve-the-crons-page
+  - serve-the-deploys-page
+  - serve-the-session-archive-index
+  - serve-session-transcripts-and-files
+  - serve-the-spawnloop-json-endpoints
+  - server-render-the-dashboards-pr-rows
+  - render-the-reviewer-line-on-the-dashboard
+  - move-the-failure-records-into-the-database
+  - carry-the-spawn-loop-signals-onto-the-list-pages
 deps-rfc: []
 est-loc: 60
 priority: null
