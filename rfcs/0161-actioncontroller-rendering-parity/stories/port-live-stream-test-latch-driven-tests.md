@@ -1,6 +1,6 @@
 ---
 title: "Port live_stream_test.rb's three CountDownLatch-driven tests (async_stream, abort_with_full_buffer, ignore_client_disconnect)"
-status: ready
+status: done
 updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8821
+claim: "2026-10-12T16:13:56Z"
+assignee: "live-log-error-reads-base-logger-and-joins-the-backtrace"
 blocked-by: null
 closed-reason: null
 ---

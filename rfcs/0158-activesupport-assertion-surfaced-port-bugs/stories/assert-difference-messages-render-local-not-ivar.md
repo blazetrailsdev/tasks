@@ -1,6 +1,6 @@
 ---
 title: "assert_difference/assert_changes failure messages render object.num where Rails renders @object.num"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

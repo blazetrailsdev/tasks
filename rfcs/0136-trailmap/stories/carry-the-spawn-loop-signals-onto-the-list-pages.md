@@ -1,6 +1,6 @@
 ---
 title: "Decide the fate of the four ringo list-page signals the port dropped"
-status: ready
+status: in-progress
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#63
+claim: "2026-10-12T16:01:33Z"
+assignee: "backlog-rows-overflow-a-phone-screen"
 blocked-by: null
 closed-reason: null
 ---

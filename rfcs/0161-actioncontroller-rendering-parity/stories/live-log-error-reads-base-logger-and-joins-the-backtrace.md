@@ -1,6 +1,6 @@
 ---
 title: "Live#log_error reads ActionController::Base.logger, keeps the annotated_source_code arm and joins the backtrace"
-status: ready
+status: done
 updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8821
+claim: "2026-10-12T16:13:56Z"
+assignee: "live-log-error-reads-base-logger-and-joins-the-backtrace"
 blocked-by: null
 closed-reason: null
 ---

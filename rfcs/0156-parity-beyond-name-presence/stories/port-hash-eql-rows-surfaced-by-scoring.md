@@ -1,7 +1,7 @@
 ---
 title: "port-hash-eql-rows-surfaced-by-scoring"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-10-12
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8823
+claim: "2026-10-12T16:41:17Z"
+assignee: "port-hash-eql-rows-surfaced-by-scoring"
 blocked-by: null
 closed-reason: null
 ---

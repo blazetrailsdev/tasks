@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the dashboard's Claude and Codex usage bars"
-status: ready
+status: in-progress
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#65
+claim: "2026-10-12T16:39:44Z"
+assignee: "dashboard-queue-drain-and-poke"
 blocked-by: null
 closed-reason: null
 ---

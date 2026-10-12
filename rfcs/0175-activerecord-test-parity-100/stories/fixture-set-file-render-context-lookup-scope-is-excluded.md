@@ -1,6 +1,6 @@
 ---
 title: "fixture_set/file_test.rb: render context lookup scope is still excluded"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

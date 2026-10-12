@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /backlog rows run past the right edge at 390px"
-status: ready
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-12T16:01:33Z"
+assignee: "backlog-rows-overflow-a-phone-screen"
 blocked-by: null
 closed-reason: null
 ---

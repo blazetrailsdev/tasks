@@ -1,6 +1,6 @@
 ---
 title: "activerecord: relation/delegation_test.rb — 46 skipped matches and 160 TS-only tests"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: skipped-tests

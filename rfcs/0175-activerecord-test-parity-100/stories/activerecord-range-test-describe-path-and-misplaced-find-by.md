@@ -1,6 +1,6 @@
 ---
 title: "activerecord: postgresql/range_test.rb's 46 wrong-describe cases and relations' 1 misplaced case"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: skipped-tests

@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the dashboard's broadcast box"
-status: ready
+status: in-progress
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#64
+claim: "2026-10-12T16:09:43Z"
+assignee: "converge-trailmap-models-on-rails-model-conventions"
 blocked-by: null
 closed-reason: null
 ---

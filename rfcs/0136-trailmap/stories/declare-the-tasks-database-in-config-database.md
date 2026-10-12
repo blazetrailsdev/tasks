@@ -1,6 +1,6 @@
 ---
 title: "Declare the live tasks database in config/database.ts and retire the connecting initializer"
-status: ready
+status: blocked
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -14,9 +14,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-12T16:39:44Z"
+assignee: "dashboard-queue-drain-and-poke"
+blocked-by: "databaseTasks:false on primary makes trails db migrate treat hub as primary: it dumps the Postgres schema into db/schema.ts and would load db/schema.ts into a fresh hub. Same defect as db-database-flag-loads-primary-schema (RFC 0142, draft); needs that fixed in trails and re-vendored first. Verified on trailmap@ae5cd69: boot via active_record.initialize_database works both directions, tasks file sha unchanged."
 closed-reason: null
 ---
 

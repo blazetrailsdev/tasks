@@ -1,6 +1,6 @@
 ---
 title: "load_async returns an empty set for every call after the first in a process"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

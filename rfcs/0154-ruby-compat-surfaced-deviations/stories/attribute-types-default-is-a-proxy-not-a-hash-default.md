@@ -1,6 +1,6 @@
 ---
 title: "activemodel: attribute_types seats hash.default in a Proxy; hashAref re-reads the object to find it"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
