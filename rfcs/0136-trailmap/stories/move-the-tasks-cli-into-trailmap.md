@@ -5,7 +5,10 @@ updated: 2026-09-07
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
-deps: ["serve-the-read-verbs-as-json", "serve-the-mutation-verbs-as-json"]
+deps:
+  - serve-the-read-verbs-as-json
+  - serve-the-mutation-verbs-as-json
+  - soak-trailmap-as-the-fleet-dashboard
 deps-rfc: []
 est-loc: 250
 priority: 7
