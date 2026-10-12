@@ -1,6 +1,6 @@
 ---
 title: "port-hash-eql-rows-surfaced-by-scoring"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

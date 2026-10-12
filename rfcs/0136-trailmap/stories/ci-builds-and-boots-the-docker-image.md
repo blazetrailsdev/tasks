@@ -1,6 +1,6 @@
 ---
 title: "trailmap: CI never builds the image, so a broken Dockerfile is found by the deploy"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null

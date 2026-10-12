@@ -1,6 +1,6 @@
 ---
 title: "enforce repository visibility once there is a viewer to enforce it against"
-status: ready
+status: claimed
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-12T17:39:44Z"
+assignee: "enforce-repository-visibility-against-a-viewer"
 blocked-by: null
 closed-reason: null
 ---

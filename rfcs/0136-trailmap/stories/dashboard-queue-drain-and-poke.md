@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the dashboard's queue, drain and poke controls"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null

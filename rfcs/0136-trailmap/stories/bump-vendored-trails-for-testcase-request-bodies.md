@@ -1,6 +1,6 @@
 ---
 title: "Bump the vendored trails pin so controller tests can post a request body"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null

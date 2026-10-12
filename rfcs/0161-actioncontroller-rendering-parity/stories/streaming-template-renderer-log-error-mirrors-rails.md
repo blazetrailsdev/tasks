@@ -1,6 +1,6 @@
 ---
 title: "StreamingTemplateRenderer::Body#log_error logs exception.class, keeps respond_to?/to_s and joins Exception#backtrace"
-status: draft
+status: in-progress
 updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8824
+claim: "2026-10-12T17:13:59Z"
+assignee: "controller-class-render-is-typed-on-base"
 blocked-by: null
 closed-reason: null
 ---

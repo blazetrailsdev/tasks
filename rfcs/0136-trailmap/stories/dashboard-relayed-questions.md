@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the dashboard's relayed-questions panel"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null

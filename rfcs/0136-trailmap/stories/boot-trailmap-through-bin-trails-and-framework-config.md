@@ -1,6 +1,6 @@
 ---
 title: "Boot and configure trailmap through bin/trails and the framework's config surfaces"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null

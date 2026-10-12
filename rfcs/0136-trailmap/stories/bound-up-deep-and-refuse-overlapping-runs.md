@@ -1,6 +1,6 @@
 ---
 title: "Bound /up/deep and refuse overlapping runs: it stalls every other request while it ranks"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null

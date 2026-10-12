@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Relation::StrictLoadingScope is a class, and ClassSpecificRelation's ClassMethods define name"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0156-parity-beyond-name-presence"
 cluster: api-surface

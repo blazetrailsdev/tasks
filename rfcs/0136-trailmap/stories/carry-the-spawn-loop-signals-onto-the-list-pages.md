@@ -1,6 +1,6 @@
 ---
 title: "Decide the fate of the four ringo list-page signals the port dropped"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null

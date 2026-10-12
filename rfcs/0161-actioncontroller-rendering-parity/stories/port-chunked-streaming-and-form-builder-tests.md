@@ -1,6 +1,6 @@
 ---
 title: "Port chunked_test.rb, streaming_test.rb and form_builder_test.rb"
-status: draft
+status: ready
 updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null

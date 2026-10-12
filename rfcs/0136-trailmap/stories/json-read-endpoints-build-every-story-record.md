@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the JSON read endpoints still build every story record"
-status: ready
+status: in-progress
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#66
+claim: "2026-10-12T17:09:56Z"
+assignee: "adopt-framework-health-environments-and-config-x"
 blocked-by: null
 closed-reason: null
 ---
