@@ -1,6 +1,6 @@
 ---
 title: "Deploy the smoke schedule: ringo's cards, the crontab entries, the canary worktree"
-status: ready
+status: claimed
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-12T18:39:42Z"
+assignee: "deploy-the-smoke-schedule-on-the-box"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Converge trailmap's models on Rails model conventions: ApplicationRecord, inferred names, in-class callbacks, serialized JSON columns"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null

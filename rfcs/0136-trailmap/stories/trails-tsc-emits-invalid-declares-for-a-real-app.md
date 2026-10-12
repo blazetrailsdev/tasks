@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: enum labels, expression indexes and named primary keys emit wrong declares"
-status: draft
+status: in-progress
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8825
+claim: "2026-10-12T18:37:57Z"
+assignee: "trails-tsc-emits-invalid-declares-for-a-real-app"
 blocked-by: null
 closed-reason: null
 ---

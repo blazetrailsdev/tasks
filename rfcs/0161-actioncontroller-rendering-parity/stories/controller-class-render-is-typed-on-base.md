@@ -1,6 +1,6 @@
 ---
 title: "Type the class-level render delegate on Base so Controller.render needs no cast"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null

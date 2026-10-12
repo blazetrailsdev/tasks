@@ -1,6 +1,6 @@
 ---
 title: "Rendering hook bodies take Rails' shape; respond_to dispatches _set_rendered_content_type; rendered_format lives on ActionView::Rendering"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0161-actioncontroller-rendering-parity"
 cluster: null

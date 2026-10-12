@@ -1,6 +1,6 @@
 ---
 title: "Re-vendor trails for DebugExceptions' Rails format split (trails#7777) and decide the loopback API's error format"
-status: ready
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#68
+claim: "2026-10-12T18:09:47Z"
+assignee: "live-database-tests-never-run-in-ci-and-three-have-rotted"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "trailmap: build with trails-tsc and delete the 69 column declares a schema covers"
-status: draft
+status: closed
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of typecheck-trailmap-with-trails-tsc-and-drop-model-declares, which predates it; the measurements are in this story's body and in ~/github/blazetrailsdev/trailmap-trails-tsc-finding.md"
 ---
 
 ## Context

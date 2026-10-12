@@ -1,6 +1,6 @@
 ---
 title: "trailmap: read-models-controller.test.ts still builds its rack env by hand"
-status: ready
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#63
+claim: "2026-10-12T18:09:47Z"
+assignee: "live-database-tests-never-run-in-ci-and-three-have-rotted"
 blocked-by: null
 closed-reason: null
 ---

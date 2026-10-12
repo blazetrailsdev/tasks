@@ -1,6 +1,6 @@
 ---
 title: "the owner page counts open stories with one query per repository"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null

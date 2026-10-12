@@ -1,6 +1,6 @@
 ---
 title: "enforce repository visibility once there is a viewer to enforce it against"
-status: claimed
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: trailmap#67
 claim: "2026-10-12T17:39:44Z"
 assignee: "enforce-repository-visibility-against-a-viewer"
 blocked-by: null

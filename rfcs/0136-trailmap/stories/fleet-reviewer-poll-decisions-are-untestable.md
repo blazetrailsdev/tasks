@@ -1,6 +1,6 @@
 ---
 title: "The fleet page's reviewer-poll decisions live in dashboard.js, where no test can reach them"
-status: claimed
+status: done
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: trailmap#67
 claim: "2026-10-12T17:39:44Z"
 assignee: "enforce-repository-visibility-against-a-viewer"
 blocked-by: null

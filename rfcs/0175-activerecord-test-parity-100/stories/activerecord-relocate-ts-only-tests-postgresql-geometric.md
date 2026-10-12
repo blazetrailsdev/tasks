@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 22 TS-only tests in adapters/postgresql/geometric.test.ts to its .trails sibling"
-status: draft
+status: ready
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
