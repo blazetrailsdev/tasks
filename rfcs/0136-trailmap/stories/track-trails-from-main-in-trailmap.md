@@ -1,7 +1,7 @@
 ---
 title: "track-trails-from-main-in-trailmap"
-status: draft
-updated: 2026-09-09
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

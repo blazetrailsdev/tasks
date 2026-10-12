@@ -1,14 +1,14 @@
 ---
 title: "Strip blazetrailsdev/tasks to content: no src, bin, db or vendor"
 status: blocked
-updated: 2026-09-07
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
 deps: ["move-export-and-its-schedule-into-trailmap", "split-validation-between-tasks-and-trailmap"]
 deps-rfc: []
 est-loc: 150
-priority: 11
+priority: null
 pr: null
 claim: null
 assignee: null

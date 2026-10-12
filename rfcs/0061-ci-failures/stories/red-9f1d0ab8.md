@@ -1,6 +1,6 @@
 ---
 title: "Query Parity (diff) failing on main @9f1d0ab8"
-status: ready
+status: done
 updated: 2026-10-12
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#8817
+claim: "2026-10-12T15:27:04Z"
+assignee: "red-9f1d0ab8"
 blocked-by: null
 closed-reason: null
 ---

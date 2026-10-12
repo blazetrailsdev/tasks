@@ -1,7 +1,7 @@
 ---
 title: "Server-render the dashboard's PR rows from pr_states, and make SSE a change notification"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionview", "actionpack"]

@@ -1,7 +1,7 @@
 ---
 title: "activemodel: attribute_types seats hash.default in a Proxy; hashAref re-reads the object to find it"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-12
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8818
+claim: "2026-10-12T15:09:37Z"
+assignee: "activerecord-port-pool-tests-blocked-on-enumerator-interlock-and-sync-new-connection"
 blocked-by: null
 closed-reason: null
 ---

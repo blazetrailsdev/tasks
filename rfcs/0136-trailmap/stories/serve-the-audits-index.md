@@ -1,14 +1,14 @@
 ---
 title: "Serve /audits and the audit viewer, with ringo's filename validation"
 status: ready
-updated: 2026-09-09
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionpack"]
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: 5
+priority: null
 pr: null
 claim: null
 assignee: null

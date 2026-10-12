@@ -1,7 +1,7 @@
 ---
 title: 'trailmap: the RFC show page prints "0 loc" for an est-loc of 0, where /backlog now prints nothing'
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

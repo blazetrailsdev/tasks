@@ -1,7 +1,7 @@
 ---
 title: "SafeBuffer is not a String seat, so rbObjAsString accepts a to_s answer by toStr"
-status: draft
-updated: 2026-10-02
+status: done
+updated: 2026-10-12
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8813
+claim: "2026-10-12T15:11:22Z"
+assignee: "safe-buffer-is-not-a-string-seat-so-rb-obj-as-string-accepts-to-str"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Run the /graphs/parity gate in CI against vendored ringo and a fixture stats database"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

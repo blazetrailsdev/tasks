@@ -1,7 +1,7 @@
 ---
 title: "assert_difference/assert_changes failure messages render object.num where Rails renders @object.num"
-status: ready
-updated: 2026-10-08
+status: in-progress
+updated: 2026-10-12
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8818
+claim: "2026-10-12T15:09:37Z"
+assignee: "activerecord-port-pool-tests-blocked-on-enumerator-interlock-and-sync-new-connection"
 blocked-by: null
 closed-reason: null
 ---

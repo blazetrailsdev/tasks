@@ -1,6 +1,6 @@
 ---
 title: "load_async returns an empty set for every call after the first in a process"
-status: draft
+status: in-progress
 updated: 2026-10-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8820
+claim: "2026-10-12T15:52:15Z"
+assignee: "load-async-returns-an-empty-set-after-the-first-call"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "trailmap: read-models-controller.test.ts still builds its rack env by hand"
-status: draft
-updated: 2026-10-03
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

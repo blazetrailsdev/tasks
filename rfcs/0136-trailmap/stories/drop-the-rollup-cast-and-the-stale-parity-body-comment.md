@@ -1,7 +1,7 @@
 ---
 title: "Drop the unneeded Relation cast in dailyRollup and the stale parity-body.html comment"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

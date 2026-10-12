@@ -1,7 +1,7 @@
 ---
 title: "trailmap: CI did not start on two newly opened PRs until they were reopened"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "The fleet page's reviewer-poll decisions live in dashboard.js, where no test can reach them"
-status: draft
-updated: 2026-10-09
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

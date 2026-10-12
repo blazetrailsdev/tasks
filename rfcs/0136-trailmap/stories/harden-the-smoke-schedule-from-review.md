@@ -1,6 +1,6 @@
 ---
 title: "Fix the smoke schedule defects the trailmap#59 review found"
-status: draft
+status: ready
 updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null

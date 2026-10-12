@@ -1,6 +1,6 @@
 ---
 title: "connection_pool_test.rb: full pool blocking shares load interlock needs Dependencies.interlock ported or ruled permanent"
-status: draft
+status: blocked
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "owner decision: port ShareLock and Dependencies.interlock, or ratify the limit in CLAUDE.md"
 closed-reason: null
 ---
 

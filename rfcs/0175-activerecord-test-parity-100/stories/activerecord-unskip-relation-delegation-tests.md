@@ -1,7 +1,7 @@
 ---
 title: "activerecord: relation/delegation_test.rb — 46 skipped matches and 160 TS-only tests"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: skipped-tests
 packages: ["activerecord"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8819
+claim: "2026-10-12T15:39:33Z"
+assignee: "activerecord-range-test-describe-path-and-misplaced-find-by"
 blocked-by: null
 closed-reason: null
 ---

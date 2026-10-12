@@ -1,7 +1,7 @@
 ---
 title: "trailmap: re-vendor trails and re-measure Story load and attribute reads after the cast-cache fix"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

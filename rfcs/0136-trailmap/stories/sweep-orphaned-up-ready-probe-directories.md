@@ -1,7 +1,7 @@
 ---
 title: "Sweep /up/ready probe directories orphaned by a kill, gated on age"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

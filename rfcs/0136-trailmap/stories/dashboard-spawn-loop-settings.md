@@ -1,7 +1,7 @@
 ---
 title: "trailmap: the dashboard's spawn-loop settings panel"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

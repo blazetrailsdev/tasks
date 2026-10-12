@@ -1,6 +1,6 @@
 ---
 title: "activerecord: serialized-attribute tests call Topic.serialize as Rails does, not ~40 invented Topic subclasses"
-status: claimed
+status: done
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#8816
 claim: "2026-10-12T14:39:36Z"
 assignee: "ar-test-helper-seats-database-tasks-env-root-db-dir-globally"
 blocked-by: null

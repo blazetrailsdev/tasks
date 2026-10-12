@@ -1,7 +1,7 @@
 ---
 title: "Land the ringo read-model deletion: btwebooks has no reviewable remote"
 status: blocked
-updated: 2026-09-09
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Changes the live workflow: repoints ringo's loadIndex/rfccharts/event stream at trailmap's API and deletes tasksdb.go. Held until snapshot-the-show-page-equivalence-before-it-goes-circular has recorded the independent show-page fixture, and until btwebooks has a reviewable GitHub remote."
+blocked-by: "Half of the old reason has cleared: snapshot-the-show-page-equivalence-before-it-goes-circular is done (trailmap#21), so the ordering constraint is satisfied. Still live (re-checked 2026-10-12): deanmarano/btwebooks has only a dokku remote, so the retire-the-go-read-model branch cannot be reviewed as a PR and pushing it deploys. webhook/tasksdb.go is still on ringo main. Unblock when btwebooks gets a GitHub remote, or the owner accepts land-by-deploy."
 closed-reason: null
 ---
 

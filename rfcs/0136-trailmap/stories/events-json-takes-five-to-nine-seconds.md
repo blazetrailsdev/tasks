@@ -1,7 +1,7 @@
 ---
 title: "trailmap: /events.json takes 5-9 s and returns 10 MB"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

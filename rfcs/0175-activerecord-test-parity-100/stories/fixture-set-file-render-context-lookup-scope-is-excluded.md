@@ -1,6 +1,6 @@
 ---
 title: "fixture_set/file_test.rb: render context lookup scope is still excluded"
-status: ready
+status: in-progress
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8818
+claim: "2026-10-12T15:09:37Z"
+assignee: "activerecord-port-pool-tests-blocked-on-enumerator-interlock-and-sync-new-connection"
 blocked-by: null
 closed-reason: null
 ---

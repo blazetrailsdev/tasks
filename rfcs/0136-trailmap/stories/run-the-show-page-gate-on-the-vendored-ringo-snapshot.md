@@ -1,7 +1,7 @@
 ---
 title: "Move the show-page gate onto the vendored ringo snapshot so CI can run it"
-status: ready
-updated: 2026-09-09
+status: closed
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by snapshot-the-show-page-equivalence-before-it-goes-circular (trailmap#21): the show-page comparison runs in CI as the page-snapshot job (pnpm gate:snapshot and its --self-test in .github/workflows/ci.yml) with no ringo, no database and no tasks checkout; it survives the read-model deletion because it replays test/fixtures/ringo-show-pages*.ndjson; and the ringo-hides/trailmap-serves divergence is still counted (scripts/gate-page-snapshot.ts:156). All three acceptance criteria are met by a recording instead of a vendored Go harness."
 ---
 
 ## Context

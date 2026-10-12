@@ -1,7 +1,7 @@
 ---
 title: "/up/ready asserts the task-domain migration head but not the hub's"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

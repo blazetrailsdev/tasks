@@ -1,7 +1,7 @@
 ---
 title: "A CSS class collision breaks a page with every gate green; nothing but a screenshot can see it"
-status: draft
-updated: 2026-10-09
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

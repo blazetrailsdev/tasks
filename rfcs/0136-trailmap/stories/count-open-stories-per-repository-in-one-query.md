@@ -1,7 +1,7 @@
 ---
 title: "the owner page counts open stories with one query per repository"
-status: draft
-updated: 2026-10-10
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

@@ -1,14 +1,14 @@
 ---
 title: "Move tasks new and ingest into the app"
 status: blocked
-updated: 2026-09-07
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
 deps: ["move-the-tasks-cli-into-trailmap"]
 deps-rfc: []
 est-loc: 250
-priority: 9
+priority: null
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "trailmap: the pane page's polling loop has no automated test, and smoke-boot never requests the page"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

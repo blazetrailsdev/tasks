@@ -1,7 +1,7 @@
 ---
 title: "trailmap: the live-database tests are skipped in CI, and three fail when TASKS_DATABASE is set"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

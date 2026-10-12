@@ -1,7 +1,7 @@
 ---
 title: "Render the dashboard's reviewer line, from models rather than two browser fetches"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionview"]

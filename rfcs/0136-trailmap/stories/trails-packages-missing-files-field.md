@@ -1,7 +1,7 @@
 ---
 title: "trails-packages-missing-files-field"
-status: draft
-updated: 2026-09-09
+status: closed
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Delivered on trails origin/main: packages/{date,did-you-mean,globalid,i18n,ruby-compat}/package.json each declare files: ["dist"], and scripts/package-files-field.test.ts asserts every publishable package declares it. trailmap vendors all five at pin 873532aab6. The remaining ''tasks pin moves on its own'' criterion belongs to schedule-continuous-trails-tracking (tasks vendor/TRAILS_PIN is still 6bf0fbdede from 2026-08-26).'
 ---
 
 ## Context

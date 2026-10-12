@@ -1,7 +1,7 @@
 ---
 title: "trailmap: the fleet relay opens one ringo connection per viewer"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

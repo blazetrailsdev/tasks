@@ -1,7 +1,7 @@
 ---
 title: "Bump trails to main once activesupport loads without its optional msgpack peer"
-status: draft
-updated: 2026-10-08
+status: closed
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: the framework fix (message-pack-loaded-at-call-time-so-msgpack-is-an-optional-peer, trails#8689) merged and trailmap bumped past it in trailmap#49 and trailmap#56. vendor/TRAILS_PIN is 873532aab6, which contains trails#8689 (git merge-base --is-ancestor), and git ls-tree origin/main vendor/ shows no blazetrails-msgpack tarball."
 ---
 
 ## Context

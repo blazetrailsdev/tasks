@@ -1,7 +1,7 @@
 ---
 title: "FsAdapter.readFile is optional, forcing a dead guard at every async call site"
-status: ready
-updated: 2026-10-08
+status: closed
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#7646: FsAdapter.readFile is required on origin/main (packages/ruby-compat/src/fs-adapter.ts:98-99, no '?'), and the fix is inside trailmap's pin 873532aab6. The still-optional siblings (writeFile, mkdir) and the leftover guard are tracked by trailties-asyncfs-guard-still-checks-for-the-now-required-readfile."
 ---
 
 ## Context

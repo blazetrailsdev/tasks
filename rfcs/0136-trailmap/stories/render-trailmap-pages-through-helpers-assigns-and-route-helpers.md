@@ -1,7 +1,7 @@
 ---
 title: "Render trailmap's pages the Rails way: helpers in views, instance assigns, named-route helpers, asset tags"
-status: draft
-updated: 2026-09-23
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionview", "actionpack"]

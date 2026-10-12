@@ -1,7 +1,7 @@
 ---
 title: "Delete index.json, events.json and publishReadModels"
 status: blocked
-updated: 2026-09-07
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
@@ -12,7 +12,7 @@ deps:
   - soak-trailmap-as-the-fleet-dashboard
 deps-rfc: []
 est-loc: 120
-priority: 13
+priority: null
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "Story Markdown renders an indented code block as a paragraph"
-status: draft
-updated: 2026-10-08
+status: blocked
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Its own first acceptance criterion: blocked on the same condition as support-lazy-continuation-in-the-markdown-renderer. ringo's renderer (webhook/markdown.go) has the same fault and gate:markdown holds trailmap byte-equal to it, so the fix cannot land alone. Unblocks with land-the-ringo-read-model-deletion (now a dep), or if the fix is made in both renderers at once."
 closed-reason: null
 ---
 

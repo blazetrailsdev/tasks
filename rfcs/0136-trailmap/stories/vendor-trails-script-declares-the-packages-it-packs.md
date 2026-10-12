@@ -1,7 +1,7 @@
 ---
 title: "trailmap: vendor-trails.sh leaves a newly required @blazetrails package to be added by hand"
-status: draft
-updated: 2026-10-03
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

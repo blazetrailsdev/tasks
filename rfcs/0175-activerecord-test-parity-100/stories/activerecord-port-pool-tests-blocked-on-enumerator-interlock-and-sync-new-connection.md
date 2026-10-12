@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port the three connection_pool_test.rb cases left behind by the Thread-excluded port (concurrent establishment, load interlock, fiber reentrency)"
-status: ready
+status: in-progress
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8818
+claim: "2026-10-12T15:09:37Z"
+assignee: "activerecord-port-pool-tests-blocked-on-enumerator-interlock-and-sync-new-connection"
 blocked-by: null
 closed-reason: null
 ---

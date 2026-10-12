@@ -1,18 +1,18 @@
 ---
 title: "Stream a live pane over SSE — trails has no server-sent-events story"
-status: ready
-updated: 2026-09-09
+status: blocked
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionpack"]
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: 7
+priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Needs an owner ruling before it is scheduled (2026-10-12 refine). Its user-facing goal shipped another way: trailmap#45 serves a live pane at /panes/<n> by polling ringo's /pane/<n>/screen through fleet#screen, and trailmap#40 already holds a response open (rack.hijack WebSocket relay of ringo's /events). What is left is specifically an SSE tail of the pane log FILE. Decide: close as superseded, or keep as a framework-yield story for SSE in trails."
 closed-reason: null
 ---
 

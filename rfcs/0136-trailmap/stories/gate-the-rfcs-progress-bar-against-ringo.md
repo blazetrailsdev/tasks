@@ -1,7 +1,7 @@
 ---
 title: "Gate the /rfcs progress bar — the one row value no gate compares"
-status: draft
-updated: 2026-09-09
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

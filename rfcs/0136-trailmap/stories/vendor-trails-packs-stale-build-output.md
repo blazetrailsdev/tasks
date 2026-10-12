@@ -1,7 +1,7 @@
 ---
 title: "trailmap: vendor-trails.sh packs stale build output left in the trails checkout"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

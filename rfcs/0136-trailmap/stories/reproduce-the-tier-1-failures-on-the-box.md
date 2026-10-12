@@ -1,7 +1,7 @@
 ---
 title: "Reproduce the tier 1 failures on the box, not only in the self-test"
-status: draft
-updated: 2026-10-11
+status: blocked
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Operator-run, not for an unattended agent: one criterion takes sso:protect off the public vhost 'in a controlled window', which exposes a dashboard whose controls relay merge and spawn to ringo. The owner picks the window (2026-10-12 refine). The other two criteria (tier 1 green after trailmap#55's deploy; a COPY of tasks.db one migration behind) are safe; /up/ready migrations is already green on the box."
 closed-reason: null
 ---
 

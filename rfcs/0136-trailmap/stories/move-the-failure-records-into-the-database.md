@@ -1,7 +1,7 @@
 ---
 title: "Move the CI-failure and pull-failure records into the database"
-status: draft
-updated: 2026-09-07
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]

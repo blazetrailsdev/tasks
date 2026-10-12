@@ -1,7 +1,7 @@
 ---
 title: "Run the first live redeploy on the box and prove the loopback API answers"
-status: ready
-updated: 2026-10-08
+status: closed
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Delivered: the box has redeployed from main many times since trailmap#16 (trailmap#21 ''prove the redeploy''; every merge through trailmap#59). Verified 2026-10-12 on the box: curl http://127.0.0.1:8080/stories/ready answers 200 with the 67 KB ready queue, not {"error":"not_found"}; trailmap.web.1 was created 2026-10-12T13:36Z, so it is far off the PR #1 image; /up/ready is all-green. The public-vhost 302 is asserted on every deploy by scripts/smoke-prod.sh tier 1 (trailmap#55).'
 ---
 
 ## Context

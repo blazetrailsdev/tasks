@@ -1,7 +1,7 @@
 ---
 title: 'trailmap: the pane page calls every failed poll "ringo is unreachable", including tmux-down and no-such-endpoint'
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "inlined-chain-with-own-and-same-file-initialize-is-skipped-as-ambiguous"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []

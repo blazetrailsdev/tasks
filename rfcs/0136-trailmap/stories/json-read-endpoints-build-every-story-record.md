@@ -1,7 +1,7 @@
 ---
 title: "trailmap: the JSON read endpoints still build every story record"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

@@ -1,14 +1,14 @@
 ---
 title: "Decide the fate of the four ringo list-page signals the port dropped"
 status: ready
-updated: 2026-09-09
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: 6
+priority: null
 pr: null
 claim: null
 assignee: null

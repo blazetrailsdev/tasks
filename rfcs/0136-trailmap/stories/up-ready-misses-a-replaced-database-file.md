@@ -1,7 +1,7 @@
 ---
 title: "/up/ready stays green when tasks.db is replaced under the open connection"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []

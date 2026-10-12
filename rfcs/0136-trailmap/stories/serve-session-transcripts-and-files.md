@@ -1,7 +1,7 @@
 ---
 title: "Serve /sessions/transcript, /sessions/file and /sessions/pane"
 status: ready
-updated: 2026-09-09
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionpack"]
@@ -10,7 +10,7 @@ deps:
   - serve-the-session-archive-index
 deps-rfc: []
 est-loc: 250
-priority: 7
+priority: null
 pr: null
 claim: null
 assignee: null

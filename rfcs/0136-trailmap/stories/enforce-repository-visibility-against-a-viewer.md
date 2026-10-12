@@ -1,14 +1,14 @@
 ---
 title: "enforce repository visibility once there is a viewer to enforce it against"
-status: draft
-updated: 2026-10-10
+status: ready
+updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 220
-priority: 3
+priority: null
 pr: null
 claim: null
 assignee: null
