@@ -1,6 +1,6 @@
 ---
 title: "activerecord: callbacks_test habtm before_add owner is an anonymous Project subclass, not a bespoke registered class"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

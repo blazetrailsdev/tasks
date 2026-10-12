@@ -1,6 +1,6 @@
 ---
 title: "connection-handlers sharding/multi-db tests: Rails setup, clean_up_connection_handler teardown"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "cases/helper registers the abstract and fake adapters as helper.rb:45-46 does"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

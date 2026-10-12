@@ -1,6 +1,6 @@
 ---
 title: "A test-opened :memory: pool gets canonical tables through a sanctioned seam, not an inline copy"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
