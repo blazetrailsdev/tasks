@@ -5,7 +5,9 @@ updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trails-tsc"]
-deps: []
+deps:
+  - trails-tsc-emits-invalid-declares-for-a-real-app
+  - trails-tsc-reads-more-than-one-schema-file
 deps-rfc: []
 est-loc: 180
 priority: null
