@@ -30,3 +30,18 @@ Today the only protection is prose in `docs/deploy.md` ("never in parallel"). SQ
 - [ ] A second `/up/deep` arriving while one is in flight is refused or shares the first one's result, so overlapping canaries cannot stack
 - [ ] The bound is documented with the measurement it was chosen from
 - [ ] Decide, and record in the story, whether the ranking should yield to the event loop between its six queries; if that is a trails limitation, file it there
+
+## Decision: the ranking does not yield between its six queries
+
+Recorded from trailmap#63, measured 2026-10-12 against the live database
+(12,682 stories, 144 in the queue). One ranking is 0.7s warm and 1.1–1.3s cold.
+About 0.53s of that is ONE query — loading every story as a record — and the
+other five total 0.1s. A timer started beside the ranking never fired: SQLite
+is synchronous here, so the `await`s never return to the event loop.
+
+Yielding between the queries would therefore still stall the process for half
+a second at a stretch, so it was not done. It is not filed against trails: the
+cost is that one load, not a limit of the framework. What stops canaries
+stacking is the single-flight (`ProbesController#sharedQueue`); the 5s bound
+answers 503 but cannot interrupt a ranking in progress. The cheaper ranking,
+should `deep` ever need one, is `Story.rankingOutline` (0.1s, plucked columns).
