@@ -1,6 +1,6 @@
 ---
 title: "trails stats sync cron failing: [ELIFECYCLE] Command failed with exit code 2."
-status: ready
+status: closed
 updated: 2026-10-12
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-12T10:30:37Z"
+assignee: "stats-sync-20261012"
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a main failure: origin/main (7b390241a2) builds clean and pnpm stats:sync --latest exits 0. The cron runs in the default checkout, which was on local branch examples/perry-native; its example workspace pins @types/node ^22, installing a second @types/node (22.20.5, hoisted Oct 11 20:05) beside 25.3.5 and breaking the prestats tsc build. Backfilled from an origin/main worktree: stats.db reaches PR 8809, workflow run 38195075649, api/test compare rows for 7b390241a2."
 ---
 
 ## Context
