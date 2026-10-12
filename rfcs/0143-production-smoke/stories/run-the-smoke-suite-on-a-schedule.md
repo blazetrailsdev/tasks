@@ -24,7 +24,8 @@ binds to loopback and Actions cannot reach it.
 Ringo's cron surface is the cheap home today. Trailmap's own scheduler is the
 destination, and building one is proving-ground work — background jobs are
 framework surface nothing has made trails exercise. This story takes the cheap
-home and files the story that moves it.
+home and files the story that moves it:
+`move-the-smoke-schedule-into-trailmap`.
 
 ## Acceptance criteria
 
