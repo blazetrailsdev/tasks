@@ -29,11 +29,6 @@ stopped at the PR size ceiling. That PR exported Minitest's `Object#stub` as
 such as `DatabaseTasks.dbDir` and takes a value or a callable. The describes
 below still carry the old bodies:
 
-- `DatabaseTasksCheckProtectedEnvironmentsMultiDatabaseTest` (`:156-222`)
-  writes `ar_internal_metadata` and `schema_migrations` with raw SQL through
-  two `BetterSQLite3Adapter` handles, where Rails has
-  `with_multi_db_configurations(env)`, `establish_connection(:primary)` /
-  `(:secondary)` and `internal_metadata.create_table_and_set_flags(current_env)`.
 - `DatabaseTasksCreateCurrentThreeTierTest` (`:611-730`) spies on
   `Base.establishConnection` in `beforeEach`; Rails wraps each body in
   `with_stubbed_configurations_establish_connection` (`:722-729`).
@@ -52,26 +47,29 @@ below still carry the old bodies:
   `backupIntoConnection` ATTACH-and-copy helper where Rails uses
   `SQLite3::Backup`, and the `Migrate*` describes save and restore `VERBOSE` /
   `VERSION` / `SCOPE` in hooks where each Rails body does it in an `ensure`.
-- `DatabaseTasksPurgeCurrentTest`, `DatabaseTasksPurgeAllTest`, the
-  `charset current` / `collation current` tests and
-  `DatabaseTasksCheckSchemaFileMethods` use `vi.spyOn` and hook-level
+- `DatabaseTasksPurgeCurrentTest`, `DatabaseTasksPurgeAllTest` and the
+  `charset current` / `collation current` tests use `vi.spyOn` and hook-level
   configuration swaps.
 - `DatabaseTasksTruncateAllTest` (`:1300-1368`) seeds a temp SQLite file with
   raw SQL where Rails uses `fixtures :courses, :colleges`, `ARUnit2Model`'s
-  pool and `DatabaseTasks.stub(:root, nil)`. The file carries four
-  `eslint-disable-next-line blazetrails/require-table-teardown` lines for the
-  raw `CREATE TABLE`s in this test and the multi-database one.
-- The tests pass a plain string where Rails passes
-  `ActiveSupport::StringInquirer.new("test")`; `createCurrent` / `dropCurrent`
-  / `truncateAll` are typed `string | EnvironmentInquirer`.
+  pool and `DatabaseTasks.stub(:root, nil)`.
+- The `Drop*`, `TruncateAll*` and three-tier tests pass a plain string where
+  Rails passes `ActiveSupport::StringInquirer.new("test")`. trails#8867 passes
+  `new EnvironmentInquirer("test")` in `DatabaseTasksCreateCurrentTest`, since
+  `createCurrent` / `dropCurrent` / `truncateAll` are typed
+  `string | EnvironmentInquirer`
+  (`database-tasks-current-methods-reject-a-string-inquirer` widens them).
+
+trails#8867 already ported `DatabaseTasksCheckProtectedEnvironmentsMultiDatabaseTest`
+and `DatabaseTasksCheckSchemaFileMethods`; `stub` takes Minitest's `block_args`
+slot, so a call with none is `stub(object, name, value, undefined, block)`.
 
 ## Acceptance criteria
 
 - [ ] Each describe listed above has the Rails body line for line, with
-      `with_stubbed_configurations`, `with_multi_db_configurations`,
-      `assert_called_for_configs` and `capture_migration_output` ported under
-      their Rails names and bodies.
+      `with_stubbed_configurations`, `assert_called_for_configs` and
+      `capture_migration_output` ported under their Rails names and bodies.
 - [ ] No `vi.spyOn` on `DatabaseTasks` or `Base` remains in the file, and the
       file-level `TRAILS_ENV` `afterEach` is gone.
-- [ ] The four `require-table-teardown` disables are gone.
+- [ ] `truncate tables` creates no table with raw SQL.
 - [ ] Test names unchanged; `pnpm parity:test:assertions` stays green.
