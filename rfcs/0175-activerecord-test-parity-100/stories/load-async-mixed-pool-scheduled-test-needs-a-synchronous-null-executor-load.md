@@ -5,7 +5,8 @@ updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - load-async-null-executor-arm-floats-its-load-under-the-adapter-lock
 deps-rfc: []
 est-loc: null
 priority: null
