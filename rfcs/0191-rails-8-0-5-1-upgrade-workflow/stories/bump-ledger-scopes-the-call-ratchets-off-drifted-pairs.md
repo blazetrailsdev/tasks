@@ -2,7 +2,7 @@
 title: "The call, call-argument and ruby-compat-call ratchets skip a ledgered pair"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-0-5-1-upgrade-workflow"
+rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
 packages: [scripts]
 deps: [bump-ledger-tracks-drifted-pairs-and-the-body-pins-gate-reads-it]

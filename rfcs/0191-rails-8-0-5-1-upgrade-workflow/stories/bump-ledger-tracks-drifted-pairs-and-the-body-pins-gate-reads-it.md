@@ -2,7 +2,7 @@
 title: "The bump ledger: drifted and removed method pairs are tracked rows, and the body-pins gate reads them"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-0-5-1-upgrade-workflow"
+rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
 packages: [scripts]
 deps: [bump-dry-run-runs-the-gates-against-a-candidate-ref]

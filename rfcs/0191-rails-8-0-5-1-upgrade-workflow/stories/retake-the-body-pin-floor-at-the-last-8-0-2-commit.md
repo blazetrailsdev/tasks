@@ -2,7 +2,7 @@
 title: "Retake the body-pin floor so no matched Rails body is unpinned at the flip"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-0-5-1-upgrade-workflow"
+rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
 packages: [scripts, activerecord, activesupport, actionpack, actionview, activejob, trailties]
 deps:

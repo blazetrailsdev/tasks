@@ -2,7 +2,7 @@
 title: "Entry check: the data layer is at 100% on Rails 8.0.2 and every gate is green"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-0-5-1-upgrade-workflow"
+rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
 packages: [arel, activemodel, activerecord]
 deps: []

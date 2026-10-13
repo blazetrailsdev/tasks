@@ -2,7 +2,7 @@
 title: "Bump history is recorded in the stats DB: dry-run reports, flip events and the ledger's burn-down curve"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-0-5-1-upgrade-workflow"
+rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
 packages: [scripts]
 deps:

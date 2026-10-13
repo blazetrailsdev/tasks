@@ -2,7 +2,7 @@
 title: "Flip the rails ref to v8.0.5.1: lockfile, seeded ledger, recite, stale deletions, regenerated artifacts"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-0-5-1-upgrade-workflow"
+rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: flip
 packages:
   [

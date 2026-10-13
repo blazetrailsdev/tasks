@@ -2,7 +2,7 @@
 title: "Write the retrospective and scope the Rails 8.1 upgrade from the v8.0.5.1 base"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-0-5-1-upgrade-workflow"
+rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: close
 packages: [scripts]
 deps: [retire-the-rails-ledger-and-prune-v8-0-2]

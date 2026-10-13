@@ -1,5 +1,5 @@
 ---
-rfc: "0000-rails-8-0-5-1-upgrade-workflow"
+rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 title: "Rails 8.0.5.1 upgrade workflow: the first bump of the source of truth, the bump ledger that keeps main green, and the scoping of 8.1"
 status: draft
 created: 2026-10-13
@@ -33,12 +33,7 @@ related-rfcs:
   - "0025-fidelity-verification-tooling"
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
-     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
-
-# RFC — Rails 8.0.5.1 upgrade workflow
+# RFC 0191 — Rails 8.0.5.1 upgrade workflow
 
 ## Summary
 
