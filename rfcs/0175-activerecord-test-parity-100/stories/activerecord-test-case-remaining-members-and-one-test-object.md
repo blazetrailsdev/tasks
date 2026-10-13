@@ -38,8 +38,13 @@ closed-reason: null
 
 ## Acceptance criteria
 
-- [ ] `ActiveRecord::TestCase`'s remaining includes and methods are on the class at their Rails names, and
-      the free-function duplicates are deleted or delegate to nothing.
 - [ ] A vitest test under `fixtures()` has one test object: autorun instantiates the per-describe
       `ActiveRecord::TestCase` subclass, and fixture setup and teardown run through `beforeSetup` /
       `afterTeardown`.
+
+## Split
+
+The first criterion this story was filed with, the remaining includes and methods on the class with the
+free-function duplicates deleted, moved to `activerecord-test-case-remaining-members` on the owner's decision
+during trails#8868. Several of those Rails bodies read `self`, so their callers have to be
+`ActiveRecord::TestCase` instances, which only tests under `fixtures()` are.
