@@ -1,5 +1,5 @@
 ---
-title: "database-tasks-test-migration-and-version-bodies-match-rails"
+title: "activerecord: database-tasks.test.ts migration, target-version and register-task bodies match database_tasks_test.rb"
 status: draft
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 500
 priority: null
 pr: null
 claim: null
