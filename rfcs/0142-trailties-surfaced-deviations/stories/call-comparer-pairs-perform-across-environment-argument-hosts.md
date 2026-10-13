@@ -1,6 +1,6 @@
 ---
 title: "parity: the call comparer pairs DbconsoleCommand#perform with other EnvironmentArgument hosts' perform"
-status: draft
+status: ready
 updated: 2026-10-12
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

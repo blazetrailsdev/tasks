@@ -1,6 +1,6 @@
 ---
 title: "Port prefix_generation_test.rb and url_generation_test.rb skips and describe paths"
-status: ready
+status: done
 updated: 2026-10-12
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["port-actionpack-abstract-unit-test-support"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8839
+claim: "2026-10-12T23:03:26Z"
+assignee: "port-mount-and-custom-url-helpers-tests"
 blocked-by: null
 closed-reason: null
 ---

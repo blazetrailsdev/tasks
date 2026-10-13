@@ -1,6 +1,6 @@
 ---
 title: "Port mapper_test.rb's 9 skips and concerns_test.rb's 1 skip"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

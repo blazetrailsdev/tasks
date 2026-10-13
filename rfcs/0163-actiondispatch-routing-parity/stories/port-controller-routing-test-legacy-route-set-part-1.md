@@ -1,6 +1,6 @@
 ---
 title: "Port controller/routing_test.rb lines 1-499 (UriReserved and LegacyRouteSetTests)"
-status: in-progress
+status: done
 updated: 2026-10-12
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
