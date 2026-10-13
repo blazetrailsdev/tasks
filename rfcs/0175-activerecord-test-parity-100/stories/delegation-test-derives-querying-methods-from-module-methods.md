@@ -1,6 +1,6 @@
 ---
 title: "activerecord: QueryingMethodsDelegationTest holds a literal list where Rails derives it from public_instance_methods"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

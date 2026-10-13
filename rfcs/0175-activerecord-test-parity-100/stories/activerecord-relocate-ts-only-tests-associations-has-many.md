@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 7 TS-only tests in has-many-associations.test.ts to a .trails sibling"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

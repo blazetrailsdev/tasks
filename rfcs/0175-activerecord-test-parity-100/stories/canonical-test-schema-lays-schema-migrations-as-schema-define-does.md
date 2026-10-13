@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the canonical test schema lays schema_migrations as Schema.define does"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
