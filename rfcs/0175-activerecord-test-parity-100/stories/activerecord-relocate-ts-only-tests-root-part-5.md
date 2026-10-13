@@ -1,6 +1,6 @@
 ---
 title: "activerecord: clear the 21 TS-only extras in nine smaller Rails-named root test files"
-status: ready
+status: in-progress
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: extra-tests
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8852
+claim: "2026-10-13T11:42:24Z"
+assignee: "activerecord-relocate-ts-only-tests-root-part-5"
 blocked-by: null
 closed-reason: null
 ---
