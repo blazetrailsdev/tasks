@@ -1,6 +1,6 @@
 ---
 title: "parity: the comparer's guessed-mirror call-gate skip has no regression test"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

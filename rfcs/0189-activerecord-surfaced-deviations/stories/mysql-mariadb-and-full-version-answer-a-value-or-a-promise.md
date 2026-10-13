@@ -1,7 +1,7 @@
 ---
 title: "MySQL isMariadb and fullVersion answer a value or a promise; Rails' mariadb? and full_version are sync"
-status: ready
-updated: 2026-10-12
+status: closed
+updated: 2026-10-13
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the value-or-promise isMariadb never shipped; trails#8838 reverted supports_insert_returning? to async on the owner's ruling"
 ---
 
 ## Context

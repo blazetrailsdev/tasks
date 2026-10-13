@@ -1,7 +1,7 @@
 ---
 title: "Port the 15 remaining migration compatibility cases (shared-module suites, MySQL arms, inherited)"
-status: ready
-updated: 2026-10-12
+status: claimed
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 450
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-13T00:59:03Z"
+assignee: "port-finder-aggregate-find-by-cluster"
 blocked-by: null
 closed-reason: null
 ---

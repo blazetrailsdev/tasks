@@ -1,7 +1,7 @@
 ---
 title: "sqlForInsert peeks the schema cache's primary keys; Rails calls primary_key(table_ref)"
-status: ready
-updated: 2026-10-12
+status: closed
+updated: 2026-10-13
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the schema-cache peek never shipped; trails#8838 reverted sql_for_insert to its awaited primary_key call on the owner's ruling"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "prove-hash-literal-ivars-in-ruby-compat-receiver-kinds"
-status: in-progress
-updated: 2026-10-12
+status: done
+updated: 2026-10-13
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

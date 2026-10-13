@@ -1,7 +1,7 @@
 ---
 title: "parity: the call comparer pairs DbconsoleCommand#perform with other EnvironmentArgument hosts' perform"
-status: ready
-updated: 2026-10-12
+status: closed
+updated: 2026-10-13
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: fixed in trails#8838 itself; the four baseline rows never merged"
 ---
 
 ## Context

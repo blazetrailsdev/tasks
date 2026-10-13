@@ -1,7 +1,7 @@
 ---
 title: "Port _encode_uri_component's enc transcode arm"
-status: in-progress
-updated: 2026-10-12
+status: done
+updated: 2026-10-13
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
