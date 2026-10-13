@@ -7,8 +7,25 @@ updated: 2026-10-13
 owner: "@deanmarano"
 packages:
   - "ruby-compat"
+  - "activesupport"
+  - "activerecord"
+  - "actionpack"
+  - "trailties"
+  - "activemodel"
   - "actionview"
+  - "arel"
+  - "rack"
   - "msgpack"
+  - "i18n"
+  - "date"
+  - "rack-test"
+  - "activerecord-cli"
+  - "rack-session"
+  - "bcrypt"
+  - "activejob"
+  - "globalid"
+  - "html-sanitizer"
+  - "did-you-mean"
 clusters:
   - "measurement"
   - "findings"
@@ -28,6 +45,11 @@ packages pay it.
 This RFC scopes that to a measured burndown, and — equally the point — records
 that the same question answered **no** for `actionview` and **marginally** for
 `msgpack`, so nobody re-runs those experiments.
+
+The `packages` list above is broad because the migration touches every
+_consumer_ of the ruby-compat barrel. The packages whose own entry points are
+under examination are only three: `ruby-compat` (the target), plus `actionview`
+and `msgpack` (both measured, both answered no — see Design).
 
 ## Motivation
 
