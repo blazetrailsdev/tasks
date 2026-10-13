@@ -5,7 +5,8 @@ updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - activerecord-test-case-remaining-members
 deps-rfc: []
 est-loc: 700
 priority: null
