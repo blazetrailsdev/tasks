@@ -19,13 +19,13 @@ closed-reason: null
 ## Context
 
 Rails' `table_name_prefix` / `table_name_suffix` are class attributes defaulting
-to `""` (`vendor/rails/v8.0.2/activerecord/lib/active_record/model_schema.rb:163-170`)
+to `""` (`vendor/rails/v8.0.2/activerecord/lib/active_record/model_schema.rb:164-165`)
 and accept `nil`: `DatabaseTasksTruncateAllWithPrefixTest` /
 `WithSuffixTest` reset them with `ActiveRecord::Base.table_name_prefix = nil` /
 `table_name_suffix = nil`
 (`vendor/rails/v8.0.2/activerecord/test/cases/tasks/database_tasks_test.rb:1354-1356,1364-1366`).
 Every Rails reader interpolates the value (`"#{full_table_name_prefix}#{…}#{full_table_name_suffix}"`,
-`model_schema.rb:630-640`; `schema_migration.rb:49-51`; `internal_metadata.rb:31-33`),
+`model_schema.rb:615`; `schema_migration.rb:50`; `internal_metadata.rb:32`),
 and Ruby interpolates `nil` as `""`.
 
 trails types both `string` (`packages/activerecord/src/model-schema.ts:207,752`,
