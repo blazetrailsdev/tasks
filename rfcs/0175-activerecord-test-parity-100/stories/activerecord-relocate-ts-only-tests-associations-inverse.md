@@ -1,7 +1,7 @@
 ---
 title: "activerecord: move the one TS-only test in inverse-associations.test.ts to a .trails sibling"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

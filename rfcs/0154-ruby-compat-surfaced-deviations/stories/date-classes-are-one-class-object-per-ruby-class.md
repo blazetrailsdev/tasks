@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat/date: one class object per Ruby Date / DateTime / Time; DateTime.now is a DateTime"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-13
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8853
+claim: "2026-10-13T12:12:25Z"
+assignee: "activerecord-relocate-ts-only-tests-root-part-6"
 blocked-by: null
 closed-reason: null
 ---

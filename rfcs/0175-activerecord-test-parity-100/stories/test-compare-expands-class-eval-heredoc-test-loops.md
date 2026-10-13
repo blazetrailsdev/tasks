@@ -1,6 +1,6 @@
 ---
 title: "test-compare: expand class_eval heredoc loops that define test methods (relations_test.rb's 15 no-arguments tests)"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: move the 7 TS-only tests in has-many-associations.test.ts to a .trails sibling"
-status: draft
-updated: 2026-10-12
+status: claimed
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 380
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-13T12:42:25Z"
+assignee: "activerecord-delegation-records-test-array-respond-to"
 blocked-by: null
 closed-reason: null
 ---

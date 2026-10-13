@@ -1,6 +1,6 @@
 ---
 title: "activerecord: clear the 21 TS-only extras in nine smaller Rails-named root test files"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: extra-tests

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: DelegationRecordsTest is not ported — a JS array does not answer Ruby Array names to respond_to?"
-status: draft
-updated: 2026-10-12
+status: claimed
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-13T12:42:25Z"
+assignee: "activerecord-delegation-records-test-array-respond-to"
 blocked-by: null
 closed-reason: null
 ---

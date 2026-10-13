@@ -1,6 +1,6 @@
 ---
 title: "test-compare: add an --extra flag that lists each file's TS-only tests"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 11 TS-only tests in connection-handling.test.ts's four non-Rails describes to its .trails sibling"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

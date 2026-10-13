@@ -1,6 +1,6 @@
 ---
 title: "ActiveRecord::TestCase (cases/test_case.rb) and its create_fixtures have no shared port"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

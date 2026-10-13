@@ -1,7 +1,7 @@
 ---
 title: "activerecord: move the 20 TS-only tests in the has-many-through and has-one-through test files to .trails siblings"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

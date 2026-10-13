@@ -1,6 +1,6 @@
 ---
 title: 'require-table-teardown: accept a migrate("down") revert as the teardown of a change()-created table'
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

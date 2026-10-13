@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 20 TS-only tests in the mysql connection/explain, database-tasks and default-scoping test files to .trails siblings"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

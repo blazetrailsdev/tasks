@@ -1,7 +1,7 @@
 ---
 title: "connection-handlers-multi-db-test-rails-setup-and-inline-config-swap"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

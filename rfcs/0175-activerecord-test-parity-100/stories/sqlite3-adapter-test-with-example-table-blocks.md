@@ -1,7 +1,7 @@
 ---
 title: "postgresql adapter test: scope the example table with DdlHelper#with_example_table (~100 LOC)"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8853
+claim: "2026-10-13T12:12:25Z"
+assignee: "activerecord-relocate-ts-only-tests-root-part-6"
 blocked-by: null
 closed-reason: null
 ---

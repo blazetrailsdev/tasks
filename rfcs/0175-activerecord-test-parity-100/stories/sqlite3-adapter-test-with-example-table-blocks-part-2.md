@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-adapter-test-with-example-table-blocks-part-2"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

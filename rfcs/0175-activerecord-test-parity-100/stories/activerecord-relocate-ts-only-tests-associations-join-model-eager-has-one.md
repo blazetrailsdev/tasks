@@ -1,7 +1,7 @@
 ---
 title: "activerecord: move the 19 TS-only tests in join-model, eager and has-one-associations test files to .trails siblings"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

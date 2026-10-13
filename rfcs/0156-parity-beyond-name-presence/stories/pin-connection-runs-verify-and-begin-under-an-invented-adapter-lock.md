@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SQLite3Adapter#active? takes the adapter lock, and pin_connection! drops its invented synchronize"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

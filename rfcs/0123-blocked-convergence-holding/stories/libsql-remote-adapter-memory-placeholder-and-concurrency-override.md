@@ -1,6 +1,6 @@
 ---
 title: "libsql-remote adapter passes a :memory: placeholder and overrides supportsConcurrentConnections"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0123-blocked-convergence-holding"
 cluster: null

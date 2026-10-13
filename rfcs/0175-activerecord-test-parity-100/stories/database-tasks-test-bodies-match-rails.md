@@ -1,7 +1,7 @@
 ---
 title: "activerecord: database-tasks.test.ts bodies match database_tasks_test.rb"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
