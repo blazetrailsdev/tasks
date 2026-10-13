@@ -2,7 +2,7 @@
 title: "The bump ledger: drifted and removed method pairs are tracked rows, and the body-pins gate reads them"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-1-upgrade-workflow"
+rfc: "0000-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
 packages: [scripts]
 deps: [bump-dry-run-runs-the-gates-against-a-candidate-ref]
@@ -20,8 +20,9 @@ closed-reason: null
 
 RFC § 3 "The bump ledger". `lint-body-pins.ts` exits 1 on any DRIFT or STALE
 pin (`scripts/api-compare/lint-body-pins.ts:74-112`). For `rails` `v8.0.2` →
-`v8.1.4` that is 728 DRIFT and 125 STALE across 288 Ruby files, which is the
-burn-down's worklist and cannot be cleared in one PR. This story adds the
+`v8.0.5.1` that is 141 DRIFT and 12 STALE across 82 Ruby files (728 and 125
+across 288 for `v8.1.4`), which is the burn-down's worklist and cannot be
+cleared in one PR. This story adds the
 ledger and teaches the one gate that defines it. The other ratchets follow in
 `bump-ledger-scopes-the-call-ratchets-off-drifted-pairs` and
 `bump-ledger-scopes-the-signature-and-surface-ratchets-off-drifted-pairs`.

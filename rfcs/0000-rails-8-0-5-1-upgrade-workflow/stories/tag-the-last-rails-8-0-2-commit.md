@@ -2,7 +2,7 @@
 title: "Tag the last commit on main whose source of truth is Rails v8.0.2"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-1-upgrade-workflow"
+rfc: "0000-rails-8-0-5-1-upgrade-workflow"
 cluster: flip
 packages: [scripts]
 deps: [flip-the-rails-ref-to-v8-0-5-1]
@@ -29,7 +29,7 @@ agent's only on the owner's explicit go-ahead in that session.
 
 ## Acceptance criteria
 
-- [ ] The rehearsal flip PR (`v8.0.2` → `v8.0.5.1`) has merged. The commit to tag is its parent on `main`
+- [ ] The flip PR (`v8.0.2` → `v8.0.5.1`) has merged. The commit to tag is its parent on `main`
       (trails merges by squash only, so the flip commit has one parent), and `vendor/sources.ts` at
       that commit still reads `ref: "v8.0.2"`.
 - [ ] That commit's `main` CI run was green. If it was not, the commit is

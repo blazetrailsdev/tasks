@@ -2,7 +2,7 @@
 title: "The bump ledger covers matched tests whose Rails body changed"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-1-upgrade-workflow"
+rfc: "0000-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
 packages: [scripts]
 deps: [bump-ledger-tracks-drifted-pairs-and-the-body-pins-gate-reads-it]
@@ -18,13 +18,14 @@ closed-reason: null
 
 ## Context
 
-RFC § 3. The test side has no body pins. For `rails` `v8.0.2` → `v8.1.4` the
-flip reds two test gates: `compare.ts --gates --check` (7 activerecord
-gate-mismatches against a hard zero, `scripts/test-compare/compare.ts:103-113`)
-and the assertion-mismatch ratchet, where 19 package/dimension marks grow
-(activerecord count 0 → 33, kind 4 → 36; activesupport count 1 → 32; arel
-count, kind and value from 0). arel also moves 187 tests to new describe
-paths, which the test-name ratchet reads.
+RFC § 3 "The test half". The test side has no body pins. For `rails`
+`v8.0.2` → `v8.0.5.1` the flip reds two test gates: `compare.ts --gates
+--check` (1 activerecord gate-mismatch against a hard zero,
+`scripts/test-compare/compare.ts:103-113`) and the assertion-mismatch ratchet,
+where 7 package/dimension marks grow (actioncontroller count 92 → 99,
+activesupport kind 3 → 12). No test moves in this bump; `v8.1.4` moves 187
+arel tests to new describe paths, so the `moved` kind is built here and first
+used there.
 
 ## Acceptance criteria
 
@@ -35,11 +36,10 @@ paths, which the test-name ratchet reads.
       description that reappears under a new describe path, keyed by the new
       path. Only tests trails matches get a row.
 - [ ] The PR body gives the seed's size per package. The RFC's ceiling is
-      236 changed (activerecord 68, trailties 71, activesupport 39,
-      actioncontroller 22, actiondispatch 15, activejob 12, actionview 7,
-      activemodel 2) and 187 moved (arel); the matched subset is expected
-      near 150 changed.
-- [ ] Tests removed upstream (115) and added (1,239) get no row. The PR body
+      36 changed (activerecord 10, activesupport 9, actioncontroller 9,
+      trailties 5, and one each in actiondispatch, actionview and activejob)
+      and none moved.
+- [ ] Tests removed upstream (5) and added (112) get no row. The PR body
       states what each gate does with a removed test's TS port.
 - [ ] `lint-assertion-mismatches.ts` and the gate-mismatch check do not count
       a ledgered test. Every other test is counted as today.
@@ -48,7 +48,7 @@ paths, which the test-name ratchet reads.
 - [ ] A test row is stale, and red, once the matched TS test agrees with the
       new Rails test on every axis the ledger suspended.
 - [ ] The dry run with the ledger seeded reports both test gates green for
-      `rails` at `v8.1.4`.
+      `rails` at `v8.0.5.1`.
 
 ## Definition of done
 

@@ -2,7 +2,7 @@
 title: "Entry check: the data layer is at 100% on Rails 8.0.2 and every gate is green"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-1-upgrade-workflow"
+rfc: "0000-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
 packages: [arel, activemodel, activerecord]
 deps: []
@@ -32,7 +32,7 @@ The owner ruled on 2026-10-13 that RFC 0175 closes before the flip.
       recorded, since those go stale at the flip.
 - [ ] arel, activemodel and activerecord are at 100% of methods and of
       tests, and RFC 0175 is closed. The owner ruled on 2026-10-13 that
-      RFC 0175 finishes before the flip (RFC Open question 5), so this
+      RFC 0175 finishes before the flip (RFC § 4, criterion 4), so this
       story's `deps-rfc` edge stays.
 
 ## Definition of done

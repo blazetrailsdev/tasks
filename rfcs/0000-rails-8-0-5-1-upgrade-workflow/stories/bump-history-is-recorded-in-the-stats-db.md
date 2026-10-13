@@ -2,7 +2,7 @@
 title: "Bump history is recorded in the stats DB: dry-run reports, flip events and the ledger's burn-down curve"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-1-upgrade-workflow"
+rfc: "0000-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
 packages: [scripts]
 deps:
@@ -28,7 +28,7 @@ already holds per-merge-commit compare figures, for example
 `api_compare_stats` and `test_compare_stats` keyed on
 (`merge_commit_sha`, `package`) (`sync.ts:885-911`). It has nothing about a
 `ref` bump: what was predicted, when the flip landed, or how fast the ledger
-emptied. The first measurement of the 8.1.4 bump exists only as tables in the
+emptied. The first measurements of the 8.0.5.1 and 8.1.4 bumps exist only as tables in the
 RFC and in gitignored output files.
 
 The DB is the owner's and lives on one machine, so nothing writes to it but
@@ -56,9 +56,10 @@ logs, so a rebuilt DB has the same history.
       kind, rows), parsed from the summary line.
 - [ ] Existing DBs gain the tables through the same add-if-missing path
       `sync.ts` uses for its other late tables.
-- [ ] The 2026-10-13 measurement in RFC § 2 is backfilled as a report file
-      with `"method": "manual"`, transcribed from the RFC's tables, so the
-      first prediction is in the history.
+- [ ] The two 2026-10-13 measurements, `v8.0.5.1` in RFC § 2 and `v8.1.4`
+      in § 8, are backfilled as report files with `"method": "manual"`,
+      transcribed from the RFC's tables, so the first predictions are in the
+      history.
 - [ ] A query in the PR body returns, for one bump, predicted rows against
       rows at the flip and the days from flip to empty ledger.
 - [ ] Parser tests sit beside `parse-call-summaries.test.ts`.

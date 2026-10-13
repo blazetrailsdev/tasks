@@ -2,7 +2,7 @@
 title: "Each package.json records the upstream ref it mirrors, generated from the lockfile"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-1-upgrade-workflow"
+rfc: "0000-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
 packages:
   [
@@ -60,4 +60,5 @@ The run-time half already exists as the ported `gem_version.rb` constants.
 
 ## Notes
 
-No version number changes here; that is `adopt-the-ruled-version-scheme`.
+No version number changes here; the version scheme is deferred to the 8.1
+upgrade RFC (RFC § 6).

@@ -1,9 +1,9 @@
 ---
-title: "Rehearsal: build the burn-down story generator and generate the 8.0.5.1 stories"
+title: "Build the burn-down story generator and generate the 8.0.5.1 stories"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-1-upgrade-workflow"
-cluster: rehearsal
+rfc: "0000-rails-8-0-5-1-upgrade-workflow"
+cluster: post-flip
 packages: [scripts]
 deps: [flip-the-rails-ref-to-v8-0-5-1]
 deps-rfc: []
@@ -18,9 +18,11 @@ closed-reason: null
 
 ## Context
 
-RFC § 7, item 4. The generator is built here, on the small bump, and reused
-unchanged by `generate-the-rails-8-1-burn-down-stories`. The 8.0.5.1 work is
-on the order of 169 changed bodies and 46 added defs.
+RFC § 7, item 4. This RFC holds no porting stories. After the flip the work is 82 Ruby
+files with a drifted or stale pin (activerecord 35, activesupport 12, arel 11,
+actiondispatch 9, actionview 6, actioncontroller 5, trailties 3, activemodel
+1), 46 defs added and 22 removed upstream, and 112 tests added, 5 removed and
+36 changed in place. The generator is reused by the 8.1 upgrade.
 
 ## Acceptance criteria
 

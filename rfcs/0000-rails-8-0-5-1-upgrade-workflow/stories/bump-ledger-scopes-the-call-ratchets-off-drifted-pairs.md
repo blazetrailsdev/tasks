@@ -2,7 +2,7 @@
 title: "The call, call-argument and ruby-compat-call ratchets skip a ledgered pair"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-1-upgrade-workflow"
+rfc: "0000-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
 packages: [scripts]
 deps: [bump-ledger-tracks-drifted-pairs-and-the-body-pins-gate-reads-it]
@@ -18,11 +18,11 @@ closed-reason: null
 
 ## Context
 
-RFC § 3, ledger rule 3. Measured for `rails` `v8.0.2` → `v8.1.4`: 107 new
-call rows, 55 new argument-shape rows, 22 naming failures and 2 new
-ruby-compat-call rows, with 5 receipts the audit then finds suppressing
-nothing. All 183 new call and argument rows sit on a pair whose Ruby body
-changed: 168 on drifted pins, 13 on unpinned pairs, 2 on newly matched pairs.
+RFC § 3, ledger rule 3. Measured for `rails` `v8.0.2` → `v8.0.5.1`: 22 new
+call rows, 10 new argument-shape rows and 7 naming failures. All 39 sit on a
+pair whose Ruby body changed: 37 on drifted pins and 2 on unpinned pairs. The
+receipt audit and the ruby-compat-call ratchet stay green on this bump and go
+red on `v8.1.4` (5 receipts, 2 rows), so they are scoped here too.
 
 ## Acceptance criteria
 
@@ -35,8 +35,8 @@ changed: 168 on drifted pins, 13 on unpinned pairs, 2 on newly matched pairs.
 - [ ] Each lint prints how many rows it skipped for the ledger, so the
       suspended debt is visible in every CI log.
 - [ ] The dry run, with the ledger seeded, reports these gates green for
-      `rails` at `v8.1.4`, apart from rows on newly matched pairs, which it
-      lists for the flip PR to fix.
+      `rails` at `v8.0.5.1`, and lists any row on a newly matched pair for
+      the flip PR to fix.
 - [ ] Tests cover one skipped row and one still-counted row per lint.
 
 ## Definition of done

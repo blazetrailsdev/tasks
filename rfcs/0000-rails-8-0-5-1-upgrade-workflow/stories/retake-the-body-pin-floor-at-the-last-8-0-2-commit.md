@@ -2,7 +2,7 @@
 title: "Retake the body-pin floor so no matched Rails body is unpinned at the flip"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-1-upgrade-workflow"
+rfc: "0000-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
 packages: [scripts, activerecord, activesupport, actionpack, actionview, activejob, trailties]
 deps:
@@ -29,14 +29,14 @@ RFC § 4, criterion 2. The ledger is seeded from pin DRIFT, so a matched pair
 with no pin can change upstream without a row. 898 matched pairs under the
 `rails` source are unpinned on 2026-10-13: activerecord 178, activesupport 82,
 actiondispatch 92, actioncontroller 72, abstractcontroller 9, actionpackversion
-1, actionview 299, activejob 3, trailties 162. 77 of them change in v8.1.4 and
-carry 13 of the 183 new gate rows.
+1, actionview 299, activejob 3, trailties 162. 16 of them change in v8.0.5.1 and
+carry 2 of the 39 new gate rows (77 and 13 of 183 for v8.1.4).
 
 This is a second pass over RFC 0159's
 `pin-the-body-hash-floor-before-the-first-bump` (done, trails#8100), which
 pinned every pair matched on 2026-09-25. The 898 are pairs matched since by
-ports that did not pin their file. Once pinned, the 77 that change become
-DRIFT rows, so the ledger seed grows from 853 pair rows to about 930.
+ports that did not pin their file. Once pinned, the 16 that change become
+DRIFT rows, so the ledger seed grows from 153 pair rows to about 169.
 
 CONTRIBUTING.md "Body pins" defines a floor pin as "this is the tree we ported
 against", with no `reason`. That is true of every unpinned pair while `ref` is
@@ -52,7 +52,7 @@ still `v8.0.2`.
       activejob and trailties.
 - [ ] No existing pin's `reason` or digest changes; the diff only adds rows
       at `ref: v8.0.2`.
-- [ ] The dry run's unattributed residue for `rails` at `v8.1.4` is 0 rows on
+- [ ] The dry run's unattributed residue for `rails` at `v8.0.5.1` is 0 rows on
       unpinned pairs.
 
 ## Notes

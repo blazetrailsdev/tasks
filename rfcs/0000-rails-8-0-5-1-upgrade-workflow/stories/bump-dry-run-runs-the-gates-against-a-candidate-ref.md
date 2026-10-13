@@ -2,7 +2,7 @@
 title: "A bump dry run runs every parity gate against a candidate ref without moving the active one"
 status: draft
 updated: 2026-10-13
-rfc: "0000-rails-8-1-upgrade-workflow"
+rfc: "0000-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
 packages: [scripts]
 deps: []
@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-RFC § 2 "How the size was measured" and § 7. Scoping the Rails 8.1 bump took a
+RFC § 2 "How the size was measured" and § 7. Scoping these bumps took a
 hand-assembled dry run: `pnpm parity:api:drift --ref v8.1.4` extracts the
 candidate's Ruby API to `scripts/api-compare/output/rails-api@v8.1.4.json`
 (`scripts/api-compare/drift.ts:180-190`) but only diffs manifests. Its `ported`
@@ -51,12 +51,12 @@ these numbers today is a red `main`.
       are, and the matched tests whose assertion signature or gate changed.
 - [ ] It attributes every new call, call-argument, parameter, block, arm and
       extra-surface row to a seed row, and prints any it cannot attribute. For
-      `rails` at `v8.1.4` on 2026-10-13 that residue was 13 rows on unpinned
-      pairs and 2 on newly matched pairs.
+      `rails` at `v8.0.5.1` on 2026-10-13 that residue was 2 call rows on
+      unpinned pairs.
 - [ ] It prints the per-package tables of RFC § 2 (files, defs, pins, tests).
-- [ ] For `--source rails --ref v8.1.4` it reproduces 728 DRIFT and 125 STALE,
-      or the PR body explains the difference by commits merged since
-      `25cc7a1876`.
+- [ ] For `--source rails --ref v8.0.5.1` it reproduces 141 DRIFT and 12
+      STALE, and for `--ref v8.1.4` 728 and 125, or the PR body explains each
+      difference by commits merged since `25cc7a1876`.
 - [ ] Unit tests cover the manifest merge and the attribution, in a
       `scripts/` test directory registered wherever a new one must be.
 
