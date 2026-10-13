@@ -1,5 +1,5 @@
 ---
-title: "activerecord: move the 26 TS-only tests left in seven adapters/postgresql test files to .trails siblings"
+title: "activerecord: move the 20 TS-only tests left in six adapters/postgresql test files to .trails siblings"
 status: ready
 updated: 2026-10-12
 rfc: "0175-activerecord-test-parity-100"
@@ -25,12 +25,6 @@ These files in `packages/activerecord/src/adapters/postgresql/` still report ext
 `pnpm parity:test`. Every Rails test in each file is already matched (0 missing), so none is a Rails
 test under a drifted name:
 
-- `schema.test.ts`, 6: `schema test 1`, `schema test 2`, `schema test 3`,
-  `column exists honors search path`, `indexes report their validity` (all in `SchemaTest`), and
-  `table comment is dumped and round-trips via createTable` (`SchemaTableCommentTest`, which is left
-  with only its `afterEach` and no Rails counterpart, so the whole describe moves). The `SchemaTest`
-  five read the `test_schema` / `test_schema2` tables the file's `beforeAll` builds, so the sibling
-  needs that part of the setup.
 - `connection.test.ts`, 5: `non-default minMessages is applied to connection`,
   `disconnectBang closes the persistent connection`,
   `discardBang abandons the connection without closing the socket`,
@@ -51,13 +45,16 @@ test under a drifted name:
   `check all foreign keys valid inside a transaction uses savepoint`.
 - `infinity.test.ts`, 1: `updateColumns with infinity on a float column`.
 
-About 290 test lines move; with the per-file setup the PR is about 700 LOC.
+`schema.test.ts` (6 extras) was in this story and is split out to
+`activerecord-relocate-ts-only-tests-postgresql-schema-test`: with it the PR was about 940 LOC.
+
+About 225 test lines move; with the per-file setup the PR is about 700 LOC.
 
 ## Acceptance criteria
 
 - [ ] Each extra is a duplicate of a ported Rails test and is deleted, or is TS-only and moves unchanged to the `.trails.test.ts` sibling.
 - [ ] Setup left unused in the Rails-named file moves with the tests.
-- [ ] The seven files report 0 extra in `pnpm parity:test`.
+- [ ] The six files report 0 extra in `pnpm parity:test`.
 
 ## Verification
 
