@@ -1,0 +1,42 @@
+---
+title: "ruby-compat: dist/object.js and dist/marshal.js throw a classpaths TDZ as entry modules"
+status: draft
+updated: 2026-10-13
+rfc: "0154-ruby-compat-surfaced-deviations"
+cluster: null
+packages: []
+deps: []
+deps-rfc: []
+est-loc: 120
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+Found while verifying trails#8853's `object.ts` -> `variable.ts` import. After `pnpm build`, a
+plain-node import of `packages/ruby-compat/dist/object.js` or `dist/marshal.js` as the ENTRY module
+throws `ReferenceError: Cannot access 'classpaths' before initialization`, raised from
+`dist/include.js` (the `include(rbCTime, rbMComparable)` block at the foot of
+`packages/ruby-compat/src/include.ts`, which runs while `object.ts`'s module body is still
+suspended on its own imports). `dist/index.js`, `dist/include.js` and `dist/variable.js` import
+cleanly as entries. `object.js` with the #8853 import stripped throws the same error, so the cycle
+predates that PR: `object.ts` reaches `include.ts` through its string / hash imports, and
+`include.ts` reads `classpaths` and the `rbC*` seats from `object.ts` at module-eval time.
+
+CLAUDE.md, "Call-time constant resolution" requires both directions of a cycle to be verified with
+a plain-node import of the built modules as entry modules; a vitest run enters through the funnel
+module and masks the TDZ. `packages/ruby-compat/src/object.ts` documents the same hazard for
+`rbCNumeric` ("an `extends rbCNumeric` reads the binding before this module body has run whenever
+this module is entered first").
+
+## Acceptance criteria
+
+- [ ] Every module in `packages/ruby-compat/dist/` imports cleanly as a plain-node entry module,
+      `object.js` and `marshal.js` included.
+- [ ] A test or CI step imports each built ruby-compat module as an entry, so a new module-eval
+      read across the `object` / `include` cycle fails there.
