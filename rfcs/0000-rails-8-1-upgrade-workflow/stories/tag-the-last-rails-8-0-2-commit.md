@@ -5,7 +5,7 @@ updated: 2026-10-13
 rfc: "0000-rails-8-1-upgrade-workflow"
 cluster: flip
 packages: [scripts]
-deps: [flip-the-rails-ref-to-v8-1-4]
+deps: [flip-the-rails-ref-to-v8-0-5-1]
 deps-rfc: []
 est-loc: 0
 priority: null
@@ -29,7 +29,7 @@ agent's only on the owner's explicit go-ahead in that session.
 
 ## Acceptance criteria
 
-- [ ] The flip PR has merged. The commit to tag is its parent on `main`
+- [ ] The rehearsal flip PR (`v8.0.2` → `v8.0.5.1`) has merged. The commit to tag is its parent on `main`
       (trails merges by squash only, so the flip commit has one parent), and `vendor/sources.ts` at
       that commit still reads `ref: "v8.0.2"`.
 - [ ] That commit's `main` CI run was green. If it was not, the commit is
@@ -43,5 +43,5 @@ agent's only on the owner's explicit go-ahead in that session.
 
 ## Definition of done
 
-A lightweight tag, or a tag on a commit that already has `ref: "v8.1.4"`,
+A lightweight tag, or a tag on a commit whose `ref` is no longer `"v8.0.2"`,
 does not close this story.

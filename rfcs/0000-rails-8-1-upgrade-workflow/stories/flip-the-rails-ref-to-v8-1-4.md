@@ -18,7 +18,7 @@ packages:
   ]
 deps:
   [
-    retake-the-body-pin-floor-at-the-last-8-0-2-commit,
+    retire-the-rails-8-0-5-1-ledger-and-review-the-rehearsal,
     bump-dry-run-runs-the-gates-against-a-candidate-ref,
   ]
 deps-rfc: []
@@ -36,7 +36,10 @@ closed-reason: null
 RFC § 3 "What the flip PR contains", and vendor/README.md § "Upgrading a
 source (bumping `ref`)" steps 3 to 5. Target: `rails` `v8.1.4`,
 `c3466ea00d7121798e3aa3144ffdf7174b81d8cb`. This PR is mechanical throughout
-and ports nothing.
+and ports nothing. It is the second run of the procedure: the rehearsal flip
+to `v8.0.5.1` has closed, the base ref is `v8.0.5.1`, and the counts below
+are the 2026-10-13 figures measured from `v8.0.2`, superseded by the
+rehearsal's re-measurement.
 
 ## Acceptance criteria
 
@@ -45,6 +48,8 @@ One PR from `main`, in separate commits:
 - [ ] `ref: "v8.1.4"` at `vendor/sources.ts:78`, and
       `pnpm vendor:fetch --source rails` re-locks `vendor/sources.lock.json`
       to the SHA above.
+- [ ] The dry-run report from the `v8.0.5.1` base is committed under
+      `scripts/parity/bump-ledger/reports/`.
 - [ ] The ledger for `rails` is seeded from the dry run, and the ledger gate
       confirms the seed.
 - [ ] `pnpm vendor:recite` in its own commit (103 citations in 47 files on

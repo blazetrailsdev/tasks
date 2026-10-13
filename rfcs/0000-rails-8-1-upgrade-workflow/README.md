@@ -23,6 +23,7 @@ packages:
 clusters:
   - tooling
   - entry
+  - rehearsal
   - flip
   - post-flip
   - close
@@ -61,7 +62,10 @@ made possible by a **bump ledger**: a committed, only-shrink list of the ported
 units whose upstream definition changed, which scopes the per-unit ratchets off
 those units until each is re-verified. Three decisions are the repo owner's and
 are presented as recommendations: the ledger itself (Open question 1), the
-version scheme (2) and the release timing (3). Open question 5 is resolved.
+version scheme (2) and the release timing (3). The owner has ruled on two
+others: RFC 0175 closes first (5), and the whole procedure is rehearsed on
+`v8.0.5.1` before the 8.1 flip (4). Every dry run, flip and ledger count is
+kept in the stats DB (§ 7).
 
 ## Motivation
 
@@ -145,21 +149,51 @@ DRIFT list does not already name.
 
 ### 1. Target and scope
 
-**Decision: `rails` moves from `v8.0.2` to `v8.1.4`, in one step.** The tag was
+**Decision: `rails` moves from `v8.0.2` to `v8.1.4`, by way of `v8.0.5.1`.**
+The owner ruled on 2026-10-13 that the procedure is rehearsed on the last 8.0
+release first ("Two flips" below). The 8.1 tag was
 resolved with `git ls-remote --tags https://github.com/rails/rails 'v8.1*'`;
 `v8.1.4` is the highest, and `v8.1.3.1` / `v8.1.2.1` are the security releases
 it includes.
 
 Options considered:
 
-- **Stop at `v8.0.5.1` first.** The 8.0 line moved too: 169 method bodies
-  changed between `v8.0.2` and `v8.0.5.1` (against 917 to `v8.1.4`). Not chosen
-  as a required step, because most 8-0-stable changes are backports that the 8.1
-  diff already contains, and a body re-verified against 8.0.5.1 may be
-  re-verified again three weeks later. It is the right size for a rehearsal of
-  the ledger machinery, and is left as Open question 4.
+- **Go straight to `v8.1.4`.** One flip instead of two, and 8.1 sooner. Not
+  chosen: the first use of the ledger, the dry run and the flip PR would be on
+  about 930 pairs, with seven gates never exercised.
 - **Wait for 8.2.** No tag exists. Each release we skip makes the next diff
   larger and the burn-down longer.
+
+**Two flips.** `v8.0.5.1` (tagged 2026-07-29) is the last 8.0 release. From
+`v8.0.2`:
+
+| Package            | Bodies changed in 8.0.5.1 | Of those, identical in 8.1.4 |
+| ------------------ | ------------------------- | ---------------------------- |
+| activerecord       | 65                        | 51                           |
+| activesupport      | 39                        | 32                           |
+| actionview         | 18                        | 13                           |
+| arel               | 14                        | 12                           |
+| actiondispatch     | 14                        | 13                           |
+| trailties          | 11                        | 6                            |
+| actioncontroller   | 3                         | 2                            |
+| activejob          | 3                         | 2                            |
+| activemodel        | 1                         | 0                            |
+| abstractcontroller | 1                         | 1                            |
+| **Total**          | **169**                   | **132**                      |
+
+Of the other 37, 36 change again in 8.1.4 and one reverts to its 8.0.2 body.
+46 defs are added, 45 of which exist in 8.1.4. So 78% of the rehearsal's re-verification is work the 8.1 bump needs
+anyway, and it comes off the 8.1 seed; about 37 bodies are verified twice. The
+rehearsal also takes in three security releases. These are def-level counts
+from the manifests: no gate has been run against `v8.0.5.1`, and its pin drift
+(near 130 by proportion) and test changes come from its own dry run.
+
+The 8.1 flip does not open until the 8.0.5.1 ledger is empty, since two Rails
+ledgers at once is what the design avoids. Everything in § 2 and § 3 below is
+measured `v8.0.2` → `v8.1.4` and is re-measured from the `v8.0.5.1` base when
+the rehearsal closes
+(`retire-the-rails-8-0-5-1-ledger-and-review-the-rehearsal`). The rehearsal
+bumps no dependent source.
 
 **Dependent sources.** Rails' gemspec constraints did not change between the
 two tags (`rack >= 2.2.4`, `thor ~> 1.0, >= 1.2.2`, `i18n >= 1.6, < 2`,
@@ -553,8 +587,10 @@ remain, they are carried across the flip and no longer hold it.
 
 Recommended; branch policy is the owner's (Open question 6).
 
-- **Tag the last 8.0.2 commit.** An annotated tag `rails-8.0.2` on the
-  parent of the flip commit, placed once the flip has merged, with the parity
+- **Every Rails flip tags its parent `rails-<old>`.** The rehearsal flip's
+  parent gets `rails-8.0.2`, the complete data layer on the tree it was
+  ported against, and the 8.1.4 flip's parent gets `rails-8.0.5.1`, the last
+  8.0 commit. Each is an annotated tag placed once its flip has merged, with the parity
   summary in its message. trails allows squash merges only, so the flip
   commit has exactly one parent. Tagging after the merge removes the race in
   which another PR lands between a pre-placed tag and the flip. If that
@@ -578,11 +614,14 @@ Recommended; branch policy is the owner's (Open question 6).
 - **No release tag while a ledger has rows.** A release is cut from a commit
   where every ported body is verified against one Rails version.
 - **A Rails patch release (8.1.4 → 8.1.5) is the same procedure at a smaller
-  size.** No `rails-<old>` tag, no branch, no version-scheme change. Run the
+  size.** It tags its parent `rails-<old>` like any Rails flip, since the tag
+  is free and is how a later reader finds the commit. No branch, no
+  version-scheme change. Run the
   dry run; if the ledger seed and the fixes fit one PR, the bump is one story
   with no ledger file; if not, it seeds a ledger and burns down like a minor.
   For scale, 8.0.2 → 8.0.5.1 (three patches and three security releases) is
-  169 changed bodies, under a fifth of this bump. Patches are taken promptly:
+  169 changed bodies, under a fifth of the 8.1 bump, and it does need a
+  ledger. Patches are taken promptly:
   a security release is the one upstream change a published trails cannot sit
   behind.
 
@@ -677,6 +716,30 @@ feedback is worth a tarball RFC 0100 has not yet slimmed.
    end to end.
 4. A story generator: from a seeded ledger and the comparer's missing lists,
    one story per Ruby file, written into a new burn-down RFC.
+5. A history of every bump in the stats DB.
+
+#### History in the stats DB
+
+The owner asked on 2026-10-13 that this process be kept in the stats DB for
+later reference. The DB (`~/github/blazetrailsdev/stats.db`, filled by
+`pnpm stats:sync`) already records `parity:api` and `parity:test` figures per
+merge commit, so the parity curve across a flip is there today. What is
+missing is the bump itself. `bump-history-is-recorded-in-the-stats-db` adds:
+
+| Table                                                | One row per                       | Answers                                               |
+| ---------------------------------------------------- | --------------------------------- | ----------------------------------------------------- |
+| `vendor_bumps`                                       | source and ref pair               | when it flipped, which PR, which tag, when it closed  |
+| `vendor_bump_reports`, `vendor_bump_report_packages` | dry-run report, and package in it | what was predicted, and how the prediction moved      |
+| `vendor_bump_gate_results`                           | report and gate                   | which gates were predicted red, with counts           |
+| `bump_ledger_stats`                                  | merge commit, package and kind    | the burn-down curve: rows remaining after every merge |
+
+Nothing writes to the DB but the sync. The dry-run report is a JSON file
+committed by the flip PR, and the ledger gate prints a summary line in the
+`rails-comparison` log that the sync parses as it parses the compare
+summaries, so a rebuilt DB recovers the whole history from the repo and CI.
+Today's measurement is backfilled as the first report, marked as transcribed
+by hand. The rehearsal's retrospective reads its figures back out of these
+tables, which is the first use of them.
 
 The runbook, as it will be written into vendor/README.md § "Upgrading a
 source":
@@ -746,27 +809,38 @@ the targets in § 1. Two more:
 1. **Tooling, on 8.0.2.** `bump-dry-run-runs-the-gates-against-a-candidate-ref`,
    then `bump-ledger-tracks-drifted-pairs-and-the-body-pins-gate-reads-it`,
    `bump-ledger-scopes-the-call-ratchets-off-drifted-pairs`,
-   `bump-ledger-scopes-the-signature-and-surface-ratchets-off-drifted-pairs` and
-   `bump-ledger-scopes-the-test-ratchets-off-changed-rails-tests`.
+   `bump-ledger-scopes-the-signature-and-surface-ratchets-off-drifted-pairs`,
+   `bump-ledger-scopes-the-test-ratchets-off-changed-rails-tests` and
+   `bump-history-is-recorded-in-the-stats-db`.
    `record-the-mirrored-ref-in-each-package` is independent.
 2. **Entry.** `entry-check-data-layer-parity-is-closed-on-8-0-2`, then
    `retake-the-body-pin-floor-at-the-last-8-0-2-commit`.
-3. **Flip and tag.** `flip-the-rails-ref-to-v8-1-4`, then
-   `tag-the-last-rails-8-0-2-commit` on the flip commit's parent.
-4. **Post-flip.** `generate-the-rails-8-1-burn-down-stories`,
+3. **Rehearsal, 8.0.2 → 8.0.5.1.** `flip-the-rails-ref-to-v8-0-5-1`, then
+   `tag-the-last-rails-8-0-2-commit` on its parent and
+   `generate-the-rails-8-0-5-1-burn-down-stories`. The burn-down runs in the
+   generated RFC. `retire-the-rails-8-0-5-1-ledger-and-review-the-rehearsal`
+   closes it and re-measures the 8.1 bump.
+4. **Flip, 8.0.5.1 → 8.1.4.** `flip-the-rails-ref-to-v8-1-4`, then
+   `tag-the-last-rails-8-0-5-1-commit` on its parent.
+5. **Post-flip.** `generate-the-rails-8-1-burn-down-stories`,
    `reread-the-recited-rails-citations-against-v8-1-4` and
    `size-and-sequence-the-dependent-source-bumps` in parallel, then
    `document-the-minor-bump-runbook`, which waits for the generator.
-5. **Burn-down.** In the generated RFC, not here.
-6. **Close.** `retire-the-rails-ledger-and-prune-v8-0-2`, then, once the
+6. **Burn-down.** In the generated RFC, not here.
+7. **Close.** `retire-the-rails-ledger-and-prune-v8-0-2`, then, once the
    owner has ruled on Open question 2, `adopt-the-ruled-version-scheme`.
 
-Story clusters are the phase names: `tooling`, `entry`, `flip`, `post-flip`
-and `close`.
+Story clusters are the phase names: `tooling`, `entry`, `rehearsal`, `flip`,
+`post-flip` and `close`.
 
 ## Verification
 
-- Before the flip: the dry run on `main` reports **0** red gates on units
+- The rehearsal closes with an empty, deleted ledger at `v8.0.5.1`, a
+  retrospective in this RFC, and re-measured 8.1 figures replacing the ones
+  below.
+- The stats DB answers, for each of the two Rails bumps: rows predicted, rows
+  at the flip, and days from flip to empty ledger.
+- Before each flip: the dry run on `main` reports **0** red gates on units
   outside the ledger seed, and **0** unpinned matched bodies in the Rails
   packages (898 today).
 - The flip PR's CI is green, and so is the first unrelated PR merged after it.
@@ -802,11 +876,11 @@ and `close`.
 3. **Release timing.** (Owner.) Recommendation: no public release on 8.0.2;
    the first stable release follows the 8.1 burn-down and RFC 0100.
    Alternative: an `8.0.0-alpha` snapshot from the `rails-8.0.2` tag.
-4. **Rehearse on `v8.0.5.1` first?** 169 changed bodies. It would prove the
-   ledger on a fifth of the work and pick up three security releases a month
-   or more sooner, at the price of a second flip and some bodies verified
-   twice. Recommendation: no; go straight to `v8.1.4`, and let the first gem
-   bump (bcrypt-ruby, one file) be the rehearsal.
+4. **Rehearse on `v8.0.5.1` first?** **Resolved 2026-10-13: yes.** Measured
+   after the first draft: 132 of the 169 bodies that change in 8.0.5.1 are
+   identical in 8.1.4, so the repeated work is about 37 bodies, and the
+   bcrypt-ruby bump first proposed as the rehearsal is too small to need a
+   ledger at all. § 1 "Two flips".
 5. **Is closing RFC 0175 an entry criterion?** **Resolved 2026-10-13: yes.**
    The owner ruled that RFC 0175 finishes before the flip; it is being burned
    down now. Criterion 4 of § 4 is therefore a hard entry criterion, and the
@@ -826,6 +900,10 @@ and `close`.
 - 2026-10-13: initial RFC
 - 2026-10-13: Open question 5 resolved by the owner: RFC 0175 closes before
   the flip.
+- 2026-10-13: Open question 4 resolved by the owner: rehearse on `v8.0.5.1`.
+  Five stories added (three rehearsal stories, the `rails-8.0.5.1` tag, the
+  stats-DB history), the rollout re-sequenced, and every Rails flip now tags
+  its parent.
 - 2026-10-13: review round 1. Ledger seed restated post-floor (about 930
   pairs) and the test half sized; one disposition per gate; `mirrors`
   regenerated at the flip; entry criterion 4 made owner-ruled with a bound on

@@ -5,9 +5,9 @@ updated: 2026-10-13
 rfc: "0000-rails-8-1-upgrade-workflow"
 cluster: post-flip
 packages: [scripts]
-deps: [flip-the-rails-ref-to-v8-1-4]
+deps: [flip-the-rails-ref-to-v8-1-4, generate-the-rails-8-0-5-1-burn-down-stories]
 deps-rfc: []
-est-loc: 400
+est-loc: 150
 priority: null
 pr: null
 claim: null
@@ -18,8 +18,8 @@ closed-reason: null
 
 ## Context
 
-RFC § 7, item 4, and § 2. This RFC holds no porting stories. After the flip
-the work is: 288 Ruby files with a drifted or stale pin (activerecord 127,
+RFC § 7, item 4, and § 2. This RFC holds no porting stories. Measured from
+`v8.0.2` (the rehearsal's re-measurement replaces these), the work is: 288 Ruby files with a drifted or stale pin (activerecord 127,
 activesupport 47, actiondispatch 35, arel 20, trailties 17, actioncontroller
 14, actionview 13, activemodel 11, activerecord-test-support 4), 839 defs
 added and 227 removed upstream, 1,239 tests added and 115 removed, and 187
@@ -27,7 +27,9 @@ arel tests moved to new describe paths.
 
 ## Acceptance criteria
 
-- [ ] A script reads the seeded ledger and the comparers' missing lists and
+- [ ] The generator built by `generate-the-rails-8-0-5-1-burn-down-stories`
+      is run for `v8.0.5.1` → `v8.1.4`, and any change it needed is listed.
+      It reads the seeded ledger and the comparers' missing lists and
       writes story files, one per Ruby source file, each with: the ledger rows
       it owns, the `git diff --no-index` command for that file between
       `vendor/rails/v8.0.2/` and `vendor/rails/v8.1.4/`, the TS file, the
@@ -50,5 +52,4 @@ arel tests moved to new describe paths.
 
 ## Definition of done
 
-Hand-writing the stories does not close this story: the generator is what the
-next bump reuses.
+Hand-writing the stories does not close this story.
