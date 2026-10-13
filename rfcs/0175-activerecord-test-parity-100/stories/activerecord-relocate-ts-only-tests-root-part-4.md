@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 31 TS-only tests in query-logs, suppressor, enum, transaction-callbacks and json-serialization test files to .trails siblings"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: extra-tests
