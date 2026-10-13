@@ -5,7 +5,8 @@ updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - database-tasks-test-bodies-match-rails
 deps-rfc: []
 est-loc: 700
 priority: null
