@@ -1,6 +1,6 @@
 ---
 title: "port-finder-aggregate-find-by-cluster"
-status: claimed
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#8113
 claim: "2026-10-13T00:59:03Z"
 assignee: "port-finder-aggregate-find-by-cluster"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 6 TS-only tests left in adapters/postgresql/schema.test.ts to a .trails sibling"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

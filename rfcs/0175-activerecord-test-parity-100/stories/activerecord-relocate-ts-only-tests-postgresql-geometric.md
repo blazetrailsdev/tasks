@@ -1,7 +1,7 @@
 ---
 title: "activerecord: move the 22 TS-only tests in adapters/postgresql/geometric.test.ts to its .trails sibling"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 560
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8842
+claim: "2026-10-13T01:10:59Z"
+assignee: "activerecord-relocate-ts-only-tests-postgresql-geometric"
 blocked-by: null
 closed-reason: null
 ---
