@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SQLite3Adapter#active? takes the adapter lock, and pin_connection! drops its invented synchronize"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-13
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8847
+claim: "2026-10-13T09:12:28Z"
+assignee: "activerecord-relocate-ts-only-tests-predicate-builder"
 blocked-by: null
 closed-reason: null
 ---

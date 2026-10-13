@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 25 TS-only tests in relation/predicate-builder.test.ts to its .trails sibling"
-status: ready
+status: in-progress
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 590
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8847
+claim: "2026-10-13T09:12:28Z"
+assignee: "activerecord-relocate-ts-only-tests-predicate-builder"
 blocked-by: null
 closed-reason: null
 ---

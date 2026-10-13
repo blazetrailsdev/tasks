@@ -1,7 +1,7 @@
 ---
 title: 'require-table-teardown: accept a migrate("down") revert as the teardown of a change()-created table'
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8847
+claim: "2026-10-13T09:12:28Z"
+assignee: "activerecord-relocate-ts-only-tests-predicate-builder"
 blocked-by: null
 closed-reason: null
 ---
