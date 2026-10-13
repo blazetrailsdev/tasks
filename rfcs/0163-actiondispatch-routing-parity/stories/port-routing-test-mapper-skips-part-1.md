@@ -1,6 +1,6 @@
 ---
 title: "Port dispatch/routing_test.rb's skipped TestRoutingMapper tests, lines 31-1999"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

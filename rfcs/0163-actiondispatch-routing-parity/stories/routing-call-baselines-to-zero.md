@@ -1,6 +1,6 @@
 ---
 title: "Converge the routing call baseline rows"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

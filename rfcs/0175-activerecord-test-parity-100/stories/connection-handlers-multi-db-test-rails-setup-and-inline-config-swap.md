@@ -1,6 +1,6 @@
 ---
 title: "connection-handlers-multi-db-test-rails-setup-and-inline-config-swap"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

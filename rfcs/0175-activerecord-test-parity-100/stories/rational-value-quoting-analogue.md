@@ -1,16 +1,16 @@
 ---
 title: "Port a Rational analogue so bind-parameter suites pin 0/1"
-status: ready
-updated: 2026-07-28
+status: in-progress
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8872
+claim: "2026-10-13T21:05:22Z"
+assignee: "activerecord-test-fixtures-vitest-surface-leaves-rails-file"
 blocked-by: null
 closed-reason: null
 ---

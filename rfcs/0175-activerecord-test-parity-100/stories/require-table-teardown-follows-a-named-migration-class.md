@@ -1,6 +1,6 @@
 ---
 title: 'require-table-teardown: follow a named migration class to the instance its migrate("down") reverts'
-status: ready
+status: in-progress
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8872
+claim: "2026-10-13T21:05:22Z"
+assignee: "activerecord-test-fixtures-vitest-surface-leaves-rails-file"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "RouteOptions admits the default keys Rails' option hash admits (two casts in routing.test.ts)"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

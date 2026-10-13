@@ -1,7 +1,7 @@
 ---
 title: "Port dispatch/routing_test.rb's skipped tests from TestAltApp to TestRouteDefaults"
-status: ready
-updated: 2026-10-12
+status: claimed
+updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-13T21:42:23Z"
+assignee: "database-tasks-test-kernel-abort-and-register-task-bodies"
 blocked-by: null
 closed-reason: null
 ---

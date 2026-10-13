@@ -1,6 +1,6 @@
 ---
 title: "Module#delegate: source_location and arity -1 are unported (3 parked tests)"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
