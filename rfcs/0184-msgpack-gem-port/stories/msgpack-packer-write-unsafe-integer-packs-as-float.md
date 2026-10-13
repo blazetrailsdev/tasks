@@ -1,7 +1,7 @@
 ---
 title: "msgpack: Packer#write packs a whole number past 2**53 as float64"
-status: ready
-updated: 2026-10-08
+status: in-progress
+updated: 2026-10-13
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8846
+claim: "2026-10-13T03:42:25Z"
+assignee: "activerecord-relocate-ts-only-tests-mysql-tasks-scoping"
 blocked-by: null
 closed-reason: null
 ---

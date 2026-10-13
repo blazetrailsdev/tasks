@@ -1,6 +1,6 @@
 ---
 title: "activerecord: fixtures() naming one set in a second describe finds no rows (RecordNotFound in the fixture-cache loop)"
-status: claimed
+status: in-progress
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8844
 claim: "2026-10-13T02:48:07Z"
 assignee: "activerecord-relocate-ts-only-tests-postgresql-schema-test"
 blocked-by: null

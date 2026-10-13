@@ -1,7 +1,7 @@
 ---
 title: "libsql-remote adapter passes a :memory: placeholder and overrides supportsConcurrentConnections"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-13
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8846
+claim: "2026-10-13T03:42:25Z"
+assignee: "activerecord-relocate-ts-only-tests-mysql-tasks-scoping"
 blocked-by: null
 closed-reason: null
 ---

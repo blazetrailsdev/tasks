@@ -1,7 +1,7 @@
 ---
 title: "activerecord: move the 66 TS-only tests in Rails-named smaller-dirs test files to .trails siblings"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: extra-tests
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 324
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8845
+claim: "2026-10-13T03:12:23Z"
+assignee: "activerecord-relocate-ts-only-tests-relation"
 blocked-by: null
 closed-reason: null
 ---
