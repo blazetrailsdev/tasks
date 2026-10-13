@@ -31,10 +31,11 @@ the variable and nothing else, and `@blazetrails/date` caches the local zone id
 depends on ruby-compat, so `setEnv` cannot call it. `ActiveRecord::TestCase#withEnvTz`
 (`packages/activerecord/src/cases/test-case.ts`) therefore calls
 `resetLocalTimeZoneId()` after each `setEnv("TZ", ...)`, a call Rails' body
-does not make, under an `@inventedArm` receipt naming this story.
+does not make. The file is outside the arms gate's compared set, so the
+call carries no receipt.
 
 ## Acceptance criteria
 
 - [ ] Assigning or deleting `TZ` through `setEnv` resets the cached local zone,
       as `reset_by_modified_env` does.
-- [ ] `withEnvTz` is `setEnv` and the block only, and its receipt is deleted.
+- [ ] `withEnvTz` is `setEnv` and the block only.
