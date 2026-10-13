@@ -61,7 +61,7 @@ made possible by a **bump ledger**: a committed, only-shrink list of the ported
 units whose upstream definition changed, which scopes the per-unit ratchets off
 those units until each is re-verified. Three decisions are the repo owner's and
 are presented as recommendations: the ledger itself (Open question 1), the
-version scheme (2) and the release timing (3).
+version scheme (2) and the release timing (3). Open question 5 is resolved.
 
 ## Motivation
 
@@ -523,7 +523,7 @@ parity:api:pins:all` retakes the floor in one PR immediately before the
    with nothing landing in between; trails merges by squash only, so that
    commit is the flip commit's single parent and gets the tag.
 
-**Criterion 4, owner-ruled (recommended; Open question 5).** **The data layer is closed out: arel, activemodel and activerecord at 100%
+**Criterion 4, ruled by the owner on 2026-10-13 (Open question 5).** **The data layer is closed out: arel, activemodel and activerecord at 100%
 on `parity:api` and `parity:test`, and RFC 0175 closed.** Methods are there
 today; activerecord tests are 8801/8830. The reason is the tag:
 `rails-8.0.2` should mark a complete data layer, and the 0175 stories still
@@ -807,12 +807,10 @@ and `close`.
    or more sooner, at the price of a second flip and some bodies verified
    twice. Recommendation: no; go straight to `v8.1.4`, and let the first gem
    bump (bcrypt-ruby, one file) be the rehearsal.
-5. **Is closing RFC 0175 an entry criterion?** (Owner.) Recommendation: yes,
-   so the `rails-8.0.2` tag marks a complete data layer. The cost is the wait
-   bounded in § 4, criterion 4. Alternative: flip as soon as criteria 1 to 3
-   hold and carry 0175's open stories across, re-deriving their `file:line`
-   context against 8.1.4. The 29 unmatched activerecord tests would then be
-   ported against 8.1.4 directly.
+5. **Is closing RFC 0175 an entry criterion?** **Resolved 2026-10-13: yes.**
+   The owner ruled that RFC 0175 finishes before the flip; it is being burned
+   down now. Criterion 4 of § 4 is therefore a hard entry criterion, and the
+   alternative of carrying 0175's open stories across the flip is not taken.
 6. **Branch policy.** (Owner.) Recommendation: tags only; a
    `<major>-<minor>-stable` branch is cut lazily from the tag when a published
    line needs a fix. Alternative: cut `8-0-stable` at the flip so the 8.0.2
@@ -826,6 +824,8 @@ and `close`.
 ## Changelog
 
 - 2026-10-13: initial RFC
+- 2026-10-13: Open question 5 resolved by the owner: RFC 0175 closes before
+  the flip.
 - 2026-10-13: review round 1. Ledger seed restated post-floor (about 930
   pairs) and the test half sized; one disposition per gate; `mirrors`
   regenerated at the flip; entry criterion 4 made owner-ruled with a bound on
