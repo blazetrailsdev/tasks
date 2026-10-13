@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 22 TS-only tests in autosave-association.test.ts to its .trails sibling"
-status: ready
+status: claimed
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 700
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-13T17:54:06Z"
+assignee: "activerecord-relocate-ts-only-tests-autosave-association"
 blocked-by: null
 closed-reason: null
 ---
