@@ -1,6 +1,6 @@
 ---
 title: "connection-handlers-multi-db-test-rails-setup-and-inline-config-swap"
-status: ready
+status: in-progress
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8871
+claim: "2026-10-13T20:12:28Z"
+assignee: "connection-handlers-multi-db-test-rails-setup-and-inline-config-swap"
 blocked-by: null
 closed-reason: null
 ---

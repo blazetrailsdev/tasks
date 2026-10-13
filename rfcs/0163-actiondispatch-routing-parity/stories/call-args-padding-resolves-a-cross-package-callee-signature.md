@@ -1,6 +1,6 @@
 ---
 title: "call-args: nil padding resolves a callee signature declared in a dependency package (Redirect#call's instrument)"
-status: ready
+status: claimed
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-13T20:42:25Z"
+assignee: "activerecord-test-config-rb-constants-converge"
 blocked-by: null
 closed-reason: null
 ---

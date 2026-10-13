@@ -1,6 +1,6 @@
 ---
 title: "Port the nine TestRoutingMapper stubs left in routing_test.rb lines 31-1999"
-status: ready
+status: closed
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the nine tests were handled in trails#8868 itself once the LOC ceiling was waived; six are ported and the three that expose mapper gaps are owned by mapper-resources-takes-one-name-not-a-splat and mapper-symbol-path-arm-and-redirect-splat"
 ---
 
 ## Context

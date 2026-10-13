@@ -1,6 +1,6 @@
 ---
 title: "batches-and-calculations-carry-rails-private-sections"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

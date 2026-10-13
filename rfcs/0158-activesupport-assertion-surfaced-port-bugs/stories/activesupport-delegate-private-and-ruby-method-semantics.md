@@ -1,7 +1,7 @@
 ---
 title: "Module#delegate: source_location and arity -1 are unported (3 parked tests)"
-status: ready
-updated: 2026-10-08
+status: in-progress
+updated: 2026-10-13
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8871
+claim: "2026-10-13T20:12:28Z"
+assignee: "connection-handlers-multi-db-test-rails-setup-and-inline-config-swap"
 blocked-by: null
 closed-reason: null
 ---

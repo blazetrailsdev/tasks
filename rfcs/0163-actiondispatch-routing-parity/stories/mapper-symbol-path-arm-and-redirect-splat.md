@@ -1,6 +1,6 @@
 ---
 title: "Mapper: map_match's Symbol-path arm and redirect's splat (two skipped TestRoutingMapper tests)"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

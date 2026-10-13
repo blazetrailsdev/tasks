@@ -1,7 +1,7 @@
 ---
 title: "activemodel: NestedError seats override_options.fetch(:attribute) with no symbolToS(toSym(...)) round trip"
-status: ready
-updated: 2026-10-12
+status: claimed
+updated: 2026-10-13
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activemodel"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-13T20:42:25Z"
+assignee: "activerecord-test-config-rb-constants-converge"
 blocked-by: null
 closed-reason: null
 ---

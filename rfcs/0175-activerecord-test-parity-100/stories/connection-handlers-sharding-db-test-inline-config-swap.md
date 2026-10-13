@@ -1,6 +1,6 @@
 ---
 title: "activerecord: connection-handlers-sharding-db test carries Rails' inline config swap instead of withBaseConfigs"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

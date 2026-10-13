@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the remaining database-tasks.test.ts bodies match database_tasks_test.rb"
-status: ready
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8870
+claim: "2026-10-13T20:10:46Z"
+assignee: "database-tasks-test-remaining-bodies-match-rails"
 blocked-by: null
 closed-reason: null
 ---

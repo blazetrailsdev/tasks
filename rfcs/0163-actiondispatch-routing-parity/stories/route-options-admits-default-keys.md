@@ -1,6 +1,6 @@
 ---
 title: "RouteOptions admits the default keys Rails' option hash admits (two casts in routing.test.ts)"
-status: draft
+status: in-progress
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8868
+claim: "2026-10-13T20:45:43Z"
+assignee: "activerecord-test-case-remaining-members-and-one-test-object"
 blocked-by: null
 closed-reason: null
 ---

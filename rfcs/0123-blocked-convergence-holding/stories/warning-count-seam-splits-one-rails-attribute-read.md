@@ -1,7 +1,7 @@
 ---
 title: "handle_warnings' @raw_connection.warning_count read became a trails-only warningCount method"
-status: ready
-updated: 2026-10-08
+status: done
+updated: 2026-10-13
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8744
+claim: "2026-10-13T20:12:28Z"
+assignee: "connection-handlers-multi-db-test-rails-setup-and-inline-config-swap"
 blocked-by: null
 closed-reason: null
 ---

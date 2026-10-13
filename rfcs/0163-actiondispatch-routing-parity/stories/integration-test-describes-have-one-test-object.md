@@ -1,6 +1,6 @@
 ---
 title: "A describe porting an ActionDispatch::IntegrationTest subclass has one test object"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

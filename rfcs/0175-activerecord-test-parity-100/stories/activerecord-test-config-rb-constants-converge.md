@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port the rest of test/config.rb and read TEST_ROOT / FIXTURES_ROOT from it in tests"
-status: draft
+status: claimed
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-13T20:42:25Z"
+assignee: "activerecord-test-config-rb-constants-converge"
 blocked-by: null
 closed-reason: null
 ---
