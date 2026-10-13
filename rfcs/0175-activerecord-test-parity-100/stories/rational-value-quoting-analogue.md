@@ -1,6 +1,6 @@
 ---
 title: "Port a Rational analogue so bind-parameter suites pin 0/1"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

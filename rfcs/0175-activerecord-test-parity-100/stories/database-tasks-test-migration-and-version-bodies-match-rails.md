@@ -1,6 +1,6 @@
 ---
 title: "activerecord: database-tasks.test.ts migration, target-version and register-task bodies match database_tasks_test.rb"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

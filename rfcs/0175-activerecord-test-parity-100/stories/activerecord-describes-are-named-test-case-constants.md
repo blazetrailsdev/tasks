@@ -1,6 +1,6 @@
 ---
 title: "activerecord: each describe's test class is a named ActiveRecord::TestCase constant; describedClasses and topLevel are deleted"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

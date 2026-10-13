@@ -1,6 +1,6 @@
 ---
 title: "ActiveRecord::TestCase's remaining includes and methods are on the class"
-status: claimed
+status: in-progress
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#8875
 claim: "2026-10-13T21:12:25Z"
 assignee: "activerecord-test-case-remaining-members"
 blocked-by: null

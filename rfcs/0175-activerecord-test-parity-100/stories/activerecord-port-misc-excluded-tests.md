@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port the 23 remaining per-test exclusions (delegators, Rational, throw/catch, singleton class, …)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: unported-tests
 packages: ["activerecord"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 550
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8876
+claim: "2026-10-13T22:42:23Z"
+assignee: "activerecord-port-misc-excluded-tests"
 blocked-by: null
 closed-reason: null
 ---

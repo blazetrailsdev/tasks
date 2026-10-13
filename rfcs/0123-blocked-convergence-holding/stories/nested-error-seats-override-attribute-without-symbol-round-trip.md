@@ -1,6 +1,6 @@
 ---
 title: "activemodel: NestedError seats override_options.fetch(:attribute) with no symbolToS(toSym(...)) round trip"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0123-blocked-convergence-holding"
 cluster: null

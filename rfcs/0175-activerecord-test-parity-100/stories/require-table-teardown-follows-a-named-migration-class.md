@@ -1,6 +1,6 @@
 ---
 title: 'require-table-teardown: follow a named migration class to the instance its migrate("down") reverts'
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

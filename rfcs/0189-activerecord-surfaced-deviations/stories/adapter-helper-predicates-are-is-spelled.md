@@ -1,6 +1,6 @@
 ---
 title: "activerecord: AdapterHelper's predicates are spelled is*"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

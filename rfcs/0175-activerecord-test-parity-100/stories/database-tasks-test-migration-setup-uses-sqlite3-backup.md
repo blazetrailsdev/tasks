@@ -1,6 +1,6 @@
 ---
 title: "activerecord: DatabaseTasksMigrationTestCase copies the file database with a ported SQLite3::Backup"
-status: claimed
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8874
 claim: "2026-10-13T21:42:23Z"
 assignee: "database-tasks-test-kernel-abort-and-register-task-bodies"
 blocked-by: null

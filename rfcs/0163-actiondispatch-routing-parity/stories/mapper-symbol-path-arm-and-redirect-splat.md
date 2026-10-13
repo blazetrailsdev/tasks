@@ -1,6 +1,6 @@
 ---
 title: "Mapper: map_match's Symbol-path arm and redirect's splat (two skipped TestRoutingMapper tests)"
-status: claimed
+status: in-progress
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8875
 claim: "2026-10-13T21:12:25Z"
 assignee: "activerecord-test-case-remaining-members"
 blocked-by: null

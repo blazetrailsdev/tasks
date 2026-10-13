@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port the rest of test/config.rb and read TEST_ROOT / FIXTURES_ROOT from it in tests"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

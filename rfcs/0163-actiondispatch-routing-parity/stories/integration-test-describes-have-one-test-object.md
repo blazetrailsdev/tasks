@@ -1,6 +1,6 @@
 ---
 title: "A describe porting an ActionDispatch::IntegrationTest subclass has one test object"
-status: ready
+status: claimed
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-13T22:57:18Z"
+assignee: "integration-test-describes-have-one-test-object"
 blocked-by: null
 closed-reason: null
 ---

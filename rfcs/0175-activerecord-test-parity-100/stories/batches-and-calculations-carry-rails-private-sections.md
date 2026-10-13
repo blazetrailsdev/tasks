@@ -1,6 +1,6 @@
 ---
 title: "batches-and-calculations-carry-rails-private-sections"
-status: ready
+status: claimed
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-13T22:54:26Z"
+assignee: "activerecord-test-fixtures-vitest-surface-leaves-rails-file"
 blocked-by: null
 closed-reason: null
 ---
