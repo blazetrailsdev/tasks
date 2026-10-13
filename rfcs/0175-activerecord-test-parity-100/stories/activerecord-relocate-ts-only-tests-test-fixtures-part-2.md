@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the last 24 TS-only tests in test-fixtures.test.ts to its .trails sibling"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

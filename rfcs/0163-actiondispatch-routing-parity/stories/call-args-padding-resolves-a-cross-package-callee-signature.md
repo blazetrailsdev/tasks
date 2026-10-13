@@ -1,6 +1,6 @@
 ---
 title: "call-args: nil padding resolves a callee signature declared in a dependency package (Redirect#call's instrument)"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

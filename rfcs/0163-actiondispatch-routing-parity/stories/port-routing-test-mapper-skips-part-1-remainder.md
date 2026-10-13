@@ -1,6 +1,6 @@
 ---
 title: "Port the nine TestRoutingMapper stubs left in routing_test.rb lines 31-1999"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
