@@ -3,7 +3,7 @@ title: "Close out: the Rails ledger is empty and deleted, v8.0.2 is pruned, the 
 status: draft
 updated: 2026-10-13
 rfc: "0000-rails-8-1-upgrade-workflow"
-cluster: burn-down
+cluster: close
 packages: [scripts]
 deps:
   [

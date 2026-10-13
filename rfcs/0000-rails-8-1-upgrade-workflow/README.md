@@ -24,9 +24,8 @@ clusters:
   - tooling
   - entry
   - flip
-  - burn-down
-  - release
-  - docs
+  - post-flip
+  - close
 related-rfcs:
   - "0159-versioned-vendor-layout"
   - "0175-activerecord-test-parity-100"
@@ -126,7 +125,9 @@ stacked, PRs are small, and no baseline widens.
 
 ### Why the new rows cannot simply be fixed in the flip PR
 
-All 183 new call and call-argument rows were attributed to their matched pair:
+All 183 new call and call-argument rows were attributed to their matched pair
+(107 call rows, 55 argument-shape rows and 21 naming rows; the naming gate's
+22nd failure is a stale `@missingRailsName` receipt, not a row):
 
 | New rows on a pair whose…                   | Calls | Arguments |
 | ------------------------------------------- | ----- | --------- |
@@ -319,7 +320,9 @@ the new one:
   `rubyName`), with `kind: "drift"` (the body changed) or `kind: "removed"` (the
   pin is STALE: the method is gone or renamed upstream);
 - a matched test, keyed as test-compare keys it (`package`, Ruby file, test
-  path), where its assertion signature or gate changed.
+  path), with `kind: "changed"` (its extracted assertions or gate differ
+  between the refs) or `kind: "moved"` (the same description sits under a new
+  describe path). Sized in "The test half" below.
 
 Each row carries `from` and `to` refs and, once the burn-down RFC exists, the
 story id that owns it. The rules:
@@ -357,6 +360,76 @@ It needs the pin floor to be complete. 77 unpinned matched pairs change in
 this bump and 13 of the 183 new gate rows sit on them; with no pin there is no
 DRIFT row to seed from. Hence the entry criterion in § 4.
 
+**How many rows.** 728 DRIFT and 125 STALE are measured against today's pins.
+Both become ledger rows: DRIFT as `kind: "drift"`, STALE as `kind: "removed"`.
+Retaking the floor first pins the 77 changing pairs, which then drift too. So
+the pair seed at the flip is **about 930 rows** (853 + 77, plus any unpinned
+pair that upstream removed, which today's measurement cannot see). The dry run
+after the floor is retaken gives the exact figure, and that figure is what
+§ Verification checks.
+
+#### The test half
+
+Tests have no pins, so the test seed is computed from the two
+`rails-tests.json` manifests directly. Measured the same day:
+
+| Package          | Tests at the same path whose assertions or gate changed | Share of the package's tests trails matches |
+| ---------------- | ------------------------------------------------------- | ------------------------------------------- |
+| activerecord     | 68                                                      | 99.7%                                       |
+| trailties        | 71                                                      | 9%                                          |
+| activesupport    | 39                                                      | 90%                                         |
+| actioncontroller | 22                                                      | 85%                                         |
+| actiondispatch   | 15                                                      | 69%                                         |
+| activejob        | 12                                                      | 0%                                          |
+| actionview       | 7                                                       | 29%                                         |
+| activemodel      | 2                                                       | 100%                                        |
+| **Total**        | **236**                                                 |                                             |
+
+Only a matched test gets a row, so 236 is a ceiling for `changed` rows;
+weighting each package by its matched share puts the seed near 150. arel adds
+187 `moved` rows, some of which also changed (its assertion marks grow from 0
+with no same-path change). The exact matched subset needs the comparer's
+per-test output and is an acceptance criterion of
+`bump-ledger-scopes-the-test-ratchets-off-changed-rails-tests`.
+
+The 115 tests removed upstream and the 1,239 added get no row. A removed
+test's port becomes a TS-only extra, and a new test is a missing one; neither
+is counted by a ratchet the dry run saw go red. Whether the test-name ratchet
+counts either is part of Open question 7.
+
+#### Every gate, and what makes it green at the flip commit
+
+| Gate                                  | Disposition                      | Owned by                                                                  |
+| ------------------------------------- | -------------------------------- | ------------------------------------------------------------------------- |
+| Body-pins gate                        | ledger                           | `bump-ledger-tracks-drifted-pairs-and-the-body-pins-gate-reads-it`        |
+| Call-mismatches ratchet               | ledger                           | `bump-ledger-scopes-the-call-ratchets-off-drifted-pairs`                  |
+| Ratchet baseline reseed drift         | ledger                           | same                                                                      |
+| Call-argument ratchet (shape, naming) | ledger                           | same                                                                      |
+| Receipt audit gate                    | ledger                           | same                                                                      |
+| Ruby-compat call ratchet              | ledger                           | same                                                                      |
+| Missing-throw arm ratchet             | ledger                           | `bump-ledger-scopes-the-signature-and-surface-ratchets-off-drifted-pairs` |
+| Extra-surface ratchet                 | ledger (`removed` rows)          | same                                                                      |
+| Parameter-name ratchet                | ledger                           | same                                                                      |
+| Block-parameter ratchet               | ledger                           | same                                                                      |
+| Test comparison (gate-mismatch)       | ledger (test rows)               | `bump-ledger-scopes-the-test-ratchets-off-changed-rails-tests`            |
+| Assertion-mismatch ratchet            | ledger (test rows)               | same                                                                      |
+| Vendor citations                      | mechanical flip commit           | `flip-the-rails-ref-to-v8-1-4` (`vendor:recite`)                          |
+| Inlined-from citation spans           | mechanical flip commit           | same (`parity:api:inlined:fix`)                                           |
+| Rails-private JSDoc lint and artifact | mechanical flip commit           | same (regenerated manifest, the rule's autofix)                           |
+| Method-order lint (arel, activemodel) | mechanical flip commit           | same (regenerated manifest, `pnpm lint --fix`)                            |
+| Test-name ratchet                     | residual: `moved` rows, untested | `bump-ledger-scopes-the-test-ratchets-off-changed-rails-tests`            |
+| Fixtures and models comparison        | residual: not exercised          | `bump-dry-run-runs-the-gates-against-a-candidate-ref`                     |
+| Schema Parity, Query Parity           | residual: not exercised          | same                                                                      |
+
+A stale row or receipt on a ledgered pair is not reported while the pair is
+ledgered and is deleted by the burn-down story that re-verifies the pair. One
+on a pair outside the ledger is deleted by hand in the flip PR. The four
+"mechanical" rows marked as not exercised in § Motivation are expected to be
+mechanical because each has a generator or an autofix; the dry-run story
+confirms that or moves the row to residual. "`main` is green from the flip
+commit" holds when no residual row is left, which is what Open question 7
+tracks.
+
 #### What the flip PR contains
 
 One PR, mechanical throughout, in separate commits:
@@ -365,14 +438,17 @@ One PR, mechanical throughout, in separate commits:
    `vendor/sources.lock.json`.
 2. The seeded ledger.
 3. `pnpm vendor:recite` (103 citations, 47 files), as its own commit.
-4. Deletions the bump makes stale, by hand: 2 call rows, 3 argument rows, 5
-   `@missingRailsCall` tags and 2 `@inventedArm` receipts today, with the marks
-   tightened. No reseed.
+4. Deletions the bump makes stale on pairs outside the ledger, by hand, with
+   the marks tightened and no reseed. Today's stale set is 2 call rows, 3
+   argument rows, 5 `@missingRailsCall` tags, 1 `@missingRailsName` receipt and
+   2 `@inventedArm` receipts; the dry run says which of them sit on ledgered
+   pairs and so wait for the burn-down.
 5. Regenerated artifacts: the rails-private, deprecation, method-order and
    test-name manifests, the conventions doc and the schema-parity `Gemfile`.
 6. Version constants Rails states as literals: `gem_version.rb`'s `MAJOR`,
    `MINOR`, `TINY` in each package's `gem-version.ts`, and
    `ActionDispatch`'s `VERSION`.
+7. The regenerated `mirrors` fields (§ 6), if that check has landed.
 
 Anything a gate still reports after that, on a unit outside the ledger, is
 fixed in the flip PR. Today that is the 2 call rows on pairs an upstream
@@ -436,16 +512,30 @@ PR stops and the gap becomes a tooling story, not an exception.
 1. **The dry-run command and the ledger have merged**, and a dry run on
    current `main` reports no red gate on a unit outside the ledger.
 2. **Zero unpinned matched bodies in every package under the `rails`
-   source** (898 today). `pnpm parity:api:pins:all` retakes the floor in one PR
-   immediately before the flip. A floor pin claims only "this is the tree the
-   port was written against", which is true of every one of them.
-3. **Every gate is green on `main` at the commit the flip merges onto**, which
-   is the commit that gets the tag.
-4. **The data layer is closed out: arel, activemodel and activerecord at 100%
-   on `parity:api` and `parity:test`, and RFC 0175 closed** (recommended; Open
-   question 5). Methods are there today; activerecord tests are 8801/8830.
-   The reason is the tag: `rails-8.0.2` should mark a complete data layer, and
-   the 0175 stories still open cite 8.0.2 `file:line`.
+   source** (898 today). RFC 0159's `pin-the-body-hash-floor-before-the-first-bump`
+   took the whole-surface floor on 2026-09-25 (trails#8100); the 898 are pairs
+   matched since then by ports that did not pin their file. `pnpm
+parity:api:pins:all` retakes the floor in one PR immediately before the
+   flip. A floor pin claims only "this is the tree the port was written
+   against", which is true of every one of them.
+3. **Every gate is green on `main` at the commit the flip merges onto.** The
+   flip PR is rebased onto a `main` commit whose CI run is green and merges
+   with nothing landing in between; trails merges by squash only, so that
+   commit is the flip commit's single parent and gets the tag.
+
+**Criterion 4, owner-ruled (recommended; Open question 5).** **The data layer is closed out: arel, activemodel and activerecord at 100%
+on `parity:api` and `parity:test`, and RFC 0175 closed.** Methods are there
+today; activerecord tests are 8801/8830. The reason is the tag:
+`rails-8.0.2` should mark a complete data layer, and the 0175 stories still
+open cite 8.0.2 `file:line`.
+
+What waiting costs: RFC 0175 has 45 of 130 stories open (13,900 est-loc),
+2 of them blocked. It closed 82 in the 14 days since 2026-09-30, 52 of
+those in the last two. At the 14-day average that is about 8 more days;
+the five tooling stories of this RFC (about 2,350 est-loc) have to merge
+first in any case, so the wait added by criterion 4 is between zero and
+roughly a week. If the tooling is merged and only blocked 0175 stories
+remain, they are carried across the flip and no longer hold it.
 
 **Need not be true:**
 
@@ -465,12 +555,15 @@ Recommended; branch policy is the owner's (Open question 6).
 
 - **Tag the last 8.0.2 commit.** An annotated tag `rails-8.0.2` on the
   parent of the flip commit, placed once the flip has merged, with the parity
-  summary in its message. Tagging after the merge removes the race in which
-  another PR lands between a pre-placed tag and the flip. The
-  `rails-<version>` name is "the last commit whose source of truth was this
-  Rails version". Release tags, once there are releases, are
-  `v<trails-version>`, so the two namespaces never collide whichever version
-  scheme is chosen.
+  summary in its message. trails allows squash merges only, so the flip
+  commit has exactly one parent. Tagging after the merge removes the race in
+  which another PR lands between a pre-placed tag and the flip. If that
+  parent's own `main` CI run was red, it is tagged anyway and the message
+  records the run and the failing job: the name means "the last commit whose
+  source of truth was this Rails version", and the flip PR's green CI on that
+  same tree is the evidence that the red was not in what the tag describes.
+  Release tags, once there are releases, are `v<trails-version>`, so the two
+  namespaces never collide whichever version scheme is chosen.
 - **No stable branch until a backport needs one.** Nothing is published, so
   nothing can need a fix on the 8.0 line. A tag costs nothing and a branch can
   be cut from it at any later time. Creating `8-0-stable` now would add a
@@ -540,7 +633,11 @@ The owner's decision (Open question 2). Three schemes were asked for:
 - **The mirrored ref is recorded twice.** In each `package.json`, a generated
   `mirrors` field: `{ "source": "rails", "ref": "v8.1.4", "sha":
 "c3466ea00d71…" }`, written from `sources.lock.json` and checked in CI so it
-  cannot drift from the registry. And at run time, where Rails already puts
+  cannot drift from the registry. It is regenerated in the flip PR, so the
+  check is never off. `mirrors.ref` therefore means "the ref the gates measure
+  this package against". It does not claim every body is verified against
+  that ref; the absence of a ledger file for the source does, and that is the
+  condition a release is cut on (§ 5). And at run time, where Rails already puts
   it: the ported `gem_version.rb` constants, so `ActiveRecord.version` answers
   Rails' `8.1.4` and `Migration.current_version` answers `8.1`, whatever the
   npm patch counter says.
@@ -590,13 +687,13 @@ source":
    tables in the upgrade RFC.
 3. Check the entry criteria. Retake the pin floor for the source's packages.
 4. Open the flip PR: `ref`, lockfile, seeded ledger, recite, stale deletions,
-   regenerated artifacts, version constants.
+   regenerated artifacts, version constants, `mirrors` fields.
 5. For a minor: once it merges, tag its parent commit `rails-<old>`.
 6. Generate the burn-down stories and write their ids into the ledger rows.
 7. Burn down: re-verify, re-pin, delete the row. Port what is new. Delete what
    is gone.
 8. When the ledger is empty: delete it, re-read the rewritten citations,
-   `pnpm vendor:fetch --prune`, update the `mirrors` fields, close the RFC.
+   `pnpm vendor:fetch --prune`, close the RFC.
 9. Bump the dependent sources by the same steps, smallest first.
 
 Documents that change, in `document-the-minor-bump-runbook`:
@@ -656,13 +753,16 @@ the targets in § 1. Two more:
    `retake-the-body-pin-floor-at-the-last-8-0-2-commit`.
 3. **Flip and tag.** `flip-the-rails-ref-to-v8-1-4`, then
    `tag-the-last-rails-8-0-2-commit` on the flip commit's parent.
-4. **After the flip.** `generate-the-rails-8-1-burn-down-stories`,
-   `reread-the-recited-rails-citations-against-v8-1-4`,
-   `size-and-sequence-the-dependent-source-bumps` and
-   `document-the-minor-bump-runbook`, in parallel.
+4. **Post-flip.** `generate-the-rails-8-1-burn-down-stories`,
+   `reread-the-recited-rails-citations-against-v8-1-4` and
+   `size-and-sequence-the-dependent-source-bumps` in parallel, then
+   `document-the-minor-bump-runbook`, which waits for the generator.
 5. **Burn-down.** In the generated RFC, not here.
-6. **Close.** `retire-the-rails-ledger-and-prune-v8-0-2`. After the owner
-   rules on Open question 2, `adopt-the-ruled-version-scheme`.
+6. **Close.** `retire-the-rails-ledger-and-prune-v8-0-2`, then, once the
+   owner has ruled on Open question 2, `adopt-the-ruled-version-scheme`.
+
+Story clusters are the phase names: `tooling`, `entry`, `flip`, `post-flip`
+and `close`.
 
 ## Verification
 
@@ -670,8 +770,11 @@ the targets in § 1. Two more:
   outside the ledger seed, and **0** unpinned matched bodies in the Rails
   packages (898 today).
 - The flip PR's CI is green, and so is the first unrelated PR merged after it.
-- At the flip commit the Rails ledger holds the dry run's rows (853 pair rows
-  as measured today) and only shrinks from there. `git log -p` on the file
+- At the flip commit the Rails ledger holds exactly the rows the dry run
+  computes after the floor is retaken: about 930 pair rows (728 drift, 125
+  removed, and the 77 newly pinned pairs that change) and the test rows of
+  § 3 "The test half" (at most 236 changed and 187 moved). It only shrinks
+  from there. `git log -p` on the file
   shows no added row outside a lockfile `ref` change.
 - At close: the ledger file is gone, `pnpm parity:api:pins` reports 0 DRIFT
   and 0 STALE with `rails` at `v8.1.4`, `git grep 'vendor/rails/v8\.0\.2'` is
@@ -685,7 +788,8 @@ the targets in § 1. Two more:
      follow-up RFC/story) before this RFC moves to `status: active`. -->
 
 1. **Is the bump ledger acceptable?** (Owner.) It suspends the per-unit
-   ratchets on up to 853 pairs for the length of the burn-down, which is a new
+   ratchets on about 930 pairs and up to 423 tests for the length of the
+   burn-down, which is a new
    register in a repo whose rule is that registers only shrink.
    Recommendation: yes, because its rows are generated from two upstream tags
    and it is the only option that keeps `main` green without widening a
@@ -704,8 +808,9 @@ the targets in § 1. Two more:
    twice. Recommendation: no; go straight to `v8.1.4`, and let the first gem
    bump (bcrypt-ruby, one file) be the rehearsal.
 5. **Is closing RFC 0175 an entry criterion?** (Owner.) Recommendation: yes,
-   so the `rails-8.0.2` tag marks a complete data layer. Alternative: flip
-   now and carry 0175's open stories across, re-deriving their `file:line`
+   so the `rails-8.0.2` tag marks a complete data layer. The cost is the wait
+   bounded in § 4, criterion 4. Alternative: flip as soon as criteria 1 to 3
+   hold and carry 0175's open stories across, re-deriving their `file:line`
    context against 8.1.4. The 29 unmatched activerecord tests would then be
    ported against 8.1.4 directly.
 6. **Branch policy.** (Owner.) Recommendation: tags only; a
@@ -721,3 +826,8 @@ the targets in § 1. Two more:
 ## Changelog
 
 - 2026-10-13: initial RFC
+- 2026-10-13: review round 1. Ledger seed restated post-floor (about 930
+  pairs) and the test half sized; one disposition per gate; `mirrors`
+  regenerated at the flip; entry criterion 4 made owner-ruled with a bound on
+  the wait; tag placement on a squash merge; clusters renamed to the rollout
+  phases; RFC 0159's floor and procedure stories cited.

@@ -3,7 +3,7 @@ title: "Dry-run each dependent source Rails 8.1.4 moves and file one bump story 
 status: draft
 updated: 2026-10-13
 rfc: "0000-rails-8-1-upgrade-workflow"
-cluster: flip
+cluster: post-flip
 packages: [scripts, rack, rack-session, bcrypt, pg, sqlite3, trailties]
 deps: [flip-the-rails-ref-to-v8-1-4]
 deps-rfc: []

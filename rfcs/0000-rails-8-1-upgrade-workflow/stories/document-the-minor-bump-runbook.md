@@ -3,7 +3,7 @@ title: "Write the bump runbook into vendor/README.md, CONTRIBUTING.md and CLAUDE
 status: draft
 updated: 2026-10-13
 rfc: "0000-rails-8-1-upgrade-workflow"
-cluster: docs
+cluster: post-flip
 packages: [scripts]
 deps: [flip-the-rails-ref-to-v8-1-4, generate-the-rails-8-1-burn-down-stories]
 deps-rfc: []
@@ -18,13 +18,19 @@ closed-reason: null
 
 ## Context
 
-RFC § 7. vendor/README.md § "Upgrading a source (bumping `ref`)" is correct
-step by step, but written before the first real bump: its step 6 burns the
+RFC § 7. vendor/README.md § "Upgrading a source (bumping `ref`)" was written
+by RFC 0159's `document-the-upstream-upgrade-procedure` (done, trails#8187).
+This story amends that section; it does not replace it. The section is
+correct step by step, but was written before the first real bump: its step 6 burns the
 DRIFT list down with the gate red, and § "What the parity gates do across a
 bump" does not say which gates fail. This story is written after the flip so
 it records what happened, not what was planned. Docs-only.
 
 ## Acceptance criteria
+
+The three deltas against RFC 0159's text are the entry criteria and tag
+(new), step 6 and the gates section (rewritten for the ledger), and the dry
+run (replaces hand-running the drift report for scoping).
 
 - [ ] vendor/README.md § "Upgrading a source" carries the nine-step runbook of
       RFC § 7 with every command, the entry criteria, the dependent-source

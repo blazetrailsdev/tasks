@@ -32,6 +32,12 @@ actiondispatch 92, actioncontroller 72, abstractcontroller 9, actionpackversion
 1, actionview 299, activejob 3, trailties 162. 77 of them change in v8.1.4 and
 carry 13 of the 183 new gate rows.
 
+This is a second pass over RFC 0159's
+`pin-the-body-hash-floor-before-the-first-bump` (done, trails#8100), which
+pinned every pair matched on 2026-09-25. The 898 are pairs matched since by
+ports that did not pin their file. Once pinned, the 77 that change become
+DRIFT rows, so the ledger seed grows from 853 pair rows to about 930.
+
 CONTRIBUTING.md "Body pins" defines a floor pin as "this is the tree we ported
 against", with no `reason`. That is true of every unpinned pair while `ref` is
 still `v8.0.2`.

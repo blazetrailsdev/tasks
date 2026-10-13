@@ -3,7 +3,7 @@ title: "Each package.json records the upstream ref it mirrors, generated from th
 status: draft
 updated: 2026-10-13
 rfc: "0000-rails-8-1-upgrade-workflow"
-cluster: release
+cluster: tooling
 packages:
   [
     scripts,
@@ -51,7 +51,12 @@ The run-time half already exists as the ported `gem_version.rb` constants.
 - [ ] Packages with no upstream (ruby-compat, trails-tsc, tse-compiler) have
       no field, and the check says so explicitly instead of skipping them
       silently.
-- [ ] vendor/README.md's upgrade steps name the script.
+- [ ] The field's meaning is documented where it is generated: the ref the
+      gates measure the package against. It makes no claim that a burn-down
+      is finished; an existing bump ledger for the source says it is not.
+- [ ] vendor/README.md's upgrade steps name the script as part of the flip
+      PR, so a `ref` bump regenerates the fields in the same PR and the check
+      is never switched off.
 
 ## Notes
 

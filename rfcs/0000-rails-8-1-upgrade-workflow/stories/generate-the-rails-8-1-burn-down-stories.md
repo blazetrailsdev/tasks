@@ -3,7 +3,7 @@ title: "Generate the Rails 8.1 burn-down RFC: one story per drifted file, plus t
 status: draft
 updated: 2026-10-13
 rfc: "0000-rails-8-1-upgrade-workflow"
-cluster: burn-down
+cluster: post-flip
 packages: [scripts]
 deps: [flip-the-rails-ref-to-v8-1-4]
 deps-rfc: []

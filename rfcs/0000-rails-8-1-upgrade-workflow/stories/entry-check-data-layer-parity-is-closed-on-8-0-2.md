@@ -27,14 +27,21 @@ carries `deps-rfc` on it and drops that edge if the owner rules otherwise.
 ## Acceptance criteria
 
 - [ ] `API_COMPARE_FORCE=1 pnpm parity:api` and `pnpm parity:test` are run on
-      current `main` and the three packages' rows are pasted into the PR or
-      story notes.
-- [ ] arel, activemodel and activerecord are at 100% of methods and of tests,
-      or each shortfall is listed with the story that owns it and the owner
-      has accepted carrying it across the flip.
+      current `main` and the three packages' rows are recorded in the story.
 - [ ] The latest `main` CI run is green.
 - [ ] The count of open stories whose body cites a Rails `file:line` is
       recorded, since those go stale at the flip.
+- [ ] The owner's ruling on Open question 5 is recorded in the RFC, and one
+      branch below is applied.
+- [ ] **If closing RFC 0175 is required:** arel, activemodel and activerecord
+      are at 100% of methods and of tests, RFC 0175 is closed, and this
+      story's `deps-rfc` edge stays.
+- [ ] **If it is not required:** the `deps-rfc` edge is removed with
+      `tasks set-deps-rfc`, and each shortfall from 100% is listed with the
+      open story that owns it. Those stories are carried across the flip; this
+      story does not wait for them.
+- [ ] In either branch, if RFC 0175's only open stories are blocked ones when
+      this RFC's tooling has merged, they are listed and carried, per RFC § 4.
 
 ## Definition of done
 

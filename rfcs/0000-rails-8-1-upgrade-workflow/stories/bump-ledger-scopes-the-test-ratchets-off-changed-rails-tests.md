@@ -29,9 +29,18 @@ paths, which the test-name ratchet reads.
 ## Acceptance criteria
 
 - [ ] The ledger accepts test rows keyed as test-compare keys a Rails test
-      (`package`, Ruby file, test path), seeded from the diff of the two
-      `rails-tests.json` manifests: assertion count, kinds, values or gate
-      changed.
+      (`package`, Ruby file, test path). `kind: "changed"` is seeded from the
+      diff of the two `rails-tests.json` manifests (assertion count, kinds,
+      values or gate changed at the same path) and `kind: "moved"` from a
+      description that reappears under a new describe path, keyed by the new
+      path. Only tests trails matches get a row.
+- [ ] The PR body gives the seed's size per package. The RFC's ceiling is
+      236 changed (activerecord 68, trailties 71, activesupport 39,
+      actioncontroller 22, actiondispatch 15, activejob 12, actionview 7,
+      activemodel 2) and 187 moved (arel); the matched subset is expected
+      near 150 changed.
+- [ ] Tests removed upstream (115) and added (1,239) get no row. The PR body
+      states what each gate does with a removed test's TS port.
 - [ ] `lint-assertion-mismatches.ts` and the gate-mismatch check do not count
       a ledgered test. Every other test is counted as today.
 - [ ] The test-name ratchet either reads the ledger for a test whose describe

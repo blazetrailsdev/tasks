@@ -51,10 +51,12 @@ One PR from `main`, in separate commits:
       2026-10-13). The list from `pnpm vendor:recite --check`, taken before
       the rewrite, is attached to
       `reread-the-recited-rails-citations-against-v8-1-4`.
-- [ ] Rows and receipts the bump makes stale are deleted by hand and the
-      marks tightened with the `:tighten` scripts: on 2026-10-13, 2 call rows,
-      3 argument rows, 5 `@missingRailsCall` tags, 2 `@inventedArm` receipts.
-      No `--write`, no reseed.
+- [ ] Rows and receipts the bump makes stale on pairs outside the ledger are
+      deleted by hand and the marks tightened with the `:tighten` scripts.
+      The stale set on 2026-10-13 was 2 call rows, 3 argument rows, 5
+      `@missingRailsCall` tags, 1 `@missingRailsName` receipt and 2
+      `@inventedArm` receipts; those on ledgered pairs are left for the
+      burn-down. No `--write`, no reseed.
 - [ ] Regenerated and committed: `pnpm rails-privates:manifest`, the
       deprecation manifest, `pnpm parity:api:conventions`, the ESLint exclude
       baselines, and `scripts/parity/pipeline/schema/ruby/Gemfile` with its
@@ -62,6 +64,10 @@ One PR from `main`, in separate commits:
 - [ ] `MAJOR` / `MINOR` / `TINY` in each package's `gem-version.ts` and
       `VERSION` in `packages/actionpack/src/action-dispatch/index.ts` read
       8.1.4, with the tests that assert them.
+- [ ] If `record-the-mirrored-ref-in-each-package` has merged, its script is
+      re-run and the `mirrors` fields read `v8.1.4` with the new SHA.
+- [ ] The PR is rebased onto a `main` commit whose CI run is green and is
+      merged with nothing landing in between, so its parent can be tagged.
 - [ ] Every CI job is green. A red on a unit outside the ledger is fixed in
       this PR if the fix is mechanical; otherwise the PR stops and the gap is
       filed as a tooling story in this RFC.

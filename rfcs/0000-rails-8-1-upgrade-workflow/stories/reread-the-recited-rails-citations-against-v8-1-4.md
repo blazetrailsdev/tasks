@@ -3,7 +3,7 @@ title: "Re-read every recited Rails citation against the v8.1.4 tree"
 status: draft
 updated: 2026-10-13
 rfc: "0000-rails-8-1-upgrade-workflow"
-cluster: flip
+cluster: post-flip
 packages: [scripts, activesupport, activejob, arel]
 deps: [flip-the-rails-ref-to-v8-1-4]
 deps-rfc: []

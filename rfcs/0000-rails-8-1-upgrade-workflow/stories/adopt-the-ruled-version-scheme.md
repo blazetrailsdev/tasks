@@ -3,7 +3,7 @@ title: "Set package versions and release groups to the scheme the owner rules"
 status: draft
 updated: 2026-10-13
 rfc: "0000-rails-8-1-upgrade-workflow"
-cluster: release
+cluster: close
 packages:
   [
     scripts,
@@ -21,7 +21,7 @@ packages:
     pg,
     sqlite3,
   ]
-deps: [record-the-mirrored-ref-in-each-package]
+deps: [record-the-mirrored-ref-in-each-package, retire-the-rails-ledger-and-prune-v8-0-2]
 deps-rfc: []
 est-loc: 200
 priority: null
@@ -40,15 +40,20 @@ own patch counter, prerelease tags for maturity, gem ports following their own
 gem's `major.minor`, and packages with no upstream on plain semver. The
 alternative is (a), own semver from `0.x`.
 
-Blocked until the owner rules. Do not start on the recommendation alone.
+Blocked until the owner rules. Do not start on the recommendation alone. It
+also waits for the Rails ledger to be retired, so that the version it writes
+names a Rails every ported body is verified against.
 
 ## Acceptance criteria
 
 - [ ] The ruling is recorded in the RFC's Open questions with its date.
 - [ ] Under (b): the eight Rails-source packages are one fixed release group
-      at `8.1.0-alpha.0`; each gem port takes its gem's `major.minor` with a
+      at `<major>.<minor>.0-alpha.0`, where `major.minor` is read from their
+      `mirrors.ref` at the time (`8.1` if the story runs as sequenced); each
+      gem port takes the `major.minor` of its own `mirrors.ref` with a
       prerelease tag; no-upstream packages are unchanged. Under (a): the
-      versions and groups the ruling names.
+      versions and groups the ruling names, and no version is derived from a
+      ref.
 - [ ] A check fails when a Rails-source package's `major.minor` disagrees
       with its `mirrors.ref` (scheme (b) only), or when two packages of a
       fixed group differ.
