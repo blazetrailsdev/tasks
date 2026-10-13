@@ -1,6 +1,6 @@
 ---
 title: "activerecord: type the ActiveRecord::TestCase seat without pulling test models into the DX type programs"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the canonical test schema lays schema_migrations as Schema.define does"
-status: ready
+status: in-progress
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8860
+claim: "2026-10-13T14:12:27Z"
+assignee: "activerecord-relocate-ts-only-tests-associations-has-many"
 blocked-by: null
 closed-reason: null
 ---

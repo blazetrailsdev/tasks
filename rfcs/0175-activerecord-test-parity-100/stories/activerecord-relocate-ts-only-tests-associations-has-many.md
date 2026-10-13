@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 380
 priority: null
-pr: trails#8854
-claim: "2026-10-13T12:42:25Z"
-assignee: "activerecord-delegation-records-test-array-respond-to"
+pr: trails#8860
+claim: "2026-10-13T14:12:27Z"
+assignee: "activerecord-relocate-ts-only-tests-associations-has-many"
 blocked-by: null
 closed-reason: null
 ---

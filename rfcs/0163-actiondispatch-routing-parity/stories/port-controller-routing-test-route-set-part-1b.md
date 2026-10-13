@@ -1,6 +1,6 @@
 ---
 title: "Port controller/routing_test.rb's RouteSetTest, lines 1207-1490 (the 17 tests cut from part 1)"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

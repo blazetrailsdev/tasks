@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Enumerable carries group_by, and the Array table drops its groupBy entry"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

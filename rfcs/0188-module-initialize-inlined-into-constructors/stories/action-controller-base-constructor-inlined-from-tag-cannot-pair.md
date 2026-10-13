@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Base's constructor cannot carry @inlinedFrom ActionView::Rendering#initialize: the comparer pairs no Rails initialize"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "A value-discarding Hash#delete is a `delete` statement: actionview"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0190-native-js-hash-forms"
 cluster: substitution

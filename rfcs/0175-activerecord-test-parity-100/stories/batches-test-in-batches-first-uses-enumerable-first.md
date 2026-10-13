@@ -1,6 +1,6 @@
 ---
 title: "activerecord: batches.test.ts ports in_batches(...).first and reverse_each.first through Enumerable"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

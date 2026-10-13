@@ -1,6 +1,6 @@
 ---
 title: "actionpack: Instrumentation, RequestForgeryProtection and UrlFor initialize are inlined into Metal's subclasses"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion

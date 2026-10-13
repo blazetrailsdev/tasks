@@ -1,6 +1,6 @@
 ---
 title: "actionpack: the five ActionDispatch module initialize bodies are inlined"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion

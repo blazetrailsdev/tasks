@@ -1,7 +1,7 @@
 ---
 title: "Port controller/routing_test.rb's RouteSetTest, lines 1007-1205"
-status: ready
-updated: 2026-10-12
+status: done
+updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: ["port-controller-routing-test-legacy-route-set-part-1"]
 deps-rfc: []
 est-loc: 330
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8859
+claim: "2026-10-13T14:04:46Z"
+assignee: "port-controller-routing-test-legacy-route-set-part-2"
 blocked-by: null
 closed-reason: null
 ---
