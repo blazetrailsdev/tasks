@@ -40,6 +40,7 @@ sibling, and that list is only-shrink: remove each `as any` in a moved test inst
 ## Acceptance criteria
 
 - [ ] The 24 tests in the describes at `test-fixtures.test.ts:471-799` are in `test-fixtures.trails.test.ts`, unchanged apart from `any` removal, or deleted where one duplicates a test already in the sibling.
+- [ ] `makeAdapter`, `mockPool`, `makeModel` and `DOUBLE_ONLY_COLUMNS` are deleted from `test-fixtures.test.ts`, with every import only they used. Part 1 (trails#8865) copied them into the sibling because the describes this story moves still used them, and after it lands those describes sit 353 lines higher than the line numbers above.
 - [ ] Together with `activerecord-relocate-ts-only-tests-test-fixtures-part-1`, `test_fixtures_test.rb` reports 0 extra in `pnpm parity:test`.
 
 ## Verification
