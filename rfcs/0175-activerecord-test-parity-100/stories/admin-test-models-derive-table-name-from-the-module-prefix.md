@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Admin test models derive their table name from Admin.table_name_prefix"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: schema-fixtures
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8866
+claim: "2026-10-13T18:40:02Z"
+assignee: "activerecord-relocate-ts-only-tests-test-fixtures-part-2"
 blocked-by: null
 closed-reason: null
 ---

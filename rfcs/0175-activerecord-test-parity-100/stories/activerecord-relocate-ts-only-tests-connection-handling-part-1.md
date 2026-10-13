@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 32 TS-only tests in connection-handling.test.ts's ConnectionHandlingTest describe to its .trails sibling"
-status: ready
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8863
+claim: "2026-10-13T18:12:23Z"
+assignee: "activerecord-relocate-ts-only-tests-connection-handling-part-1"
 blocked-by: null
 closed-reason: null
 ---

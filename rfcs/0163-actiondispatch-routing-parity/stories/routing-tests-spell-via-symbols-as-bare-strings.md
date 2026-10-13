@@ -1,7 +1,7 @@
 ---
 title: "Ported routing tests spell Rails' via: Symbols as bare Strings"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8867
+claim: "2026-10-13T18:42:24Z"
+assignee: "database-tasks-test-bodies-match-rails"
 blocked-by: null
 closed-reason: null
 ---

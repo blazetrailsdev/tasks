@@ -1,6 +1,6 @@
 ---
 title: "Rack::Static#overwrite_file_path guards on kind_of?(Hash), not on not-an-Array"
-status: claimed
+status: done
 updated: 2026-10-13
 rfc: "0190-native-js-hash-forms"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#8862
 claim: "2026-10-13T17:54:06Z"
 assignee: "activerecord-relocate-ts-only-tests-autosave-association"
 blocked-by: null

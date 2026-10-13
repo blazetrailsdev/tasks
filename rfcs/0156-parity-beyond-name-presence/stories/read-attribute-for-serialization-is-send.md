@@ -1,6 +1,6 @@
 ---
 title: "Converge read_attribute_for_serialization to Rails' alias of send"
-status: claimed
+status: done
 updated: 2026-10-13
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8862
 claim: "2026-10-13T17:54:06Z"
 assignee: "activerecord-relocate-ts-only-tests-autosave-association"
 blocked-by: null

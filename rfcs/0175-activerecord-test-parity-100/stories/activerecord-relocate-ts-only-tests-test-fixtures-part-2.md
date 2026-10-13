@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the last 24 TS-only tests in test-fixtures.test.ts to its .trails sibling"
-status: ready
+status: in-progress
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 680
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8866
+claim: "2026-10-13T18:40:02Z"
+assignee: "activerecord-relocate-ts-only-tests-test-fixtures-part-2"
 blocked-by: null
 closed-reason: null
 ---
