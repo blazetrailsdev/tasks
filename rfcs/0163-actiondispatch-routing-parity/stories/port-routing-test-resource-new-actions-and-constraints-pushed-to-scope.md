@@ -5,7 +5,8 @@ updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - mapper-resources-hand-builds-canonical-routes
 deps-rfc: []
 est-loc: 120
 priority: null
