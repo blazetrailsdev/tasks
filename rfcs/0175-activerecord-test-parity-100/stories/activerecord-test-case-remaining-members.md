@@ -81,4 +81,8 @@ override is harness surface Rails does not have.
 - [ ] `ActiveRecord::TestCase`'s remaining includes and methods are on the
       class at their Rails names, and the free-function duplicates are deleted.
 - [ ] `after_teardown` runs `check_connection_leaks` after `super`.
-- [ ] `describedClasses` and `topLevel` are deleted with their receipts.
+
+Deleting `describedClasses` and `topLevel` needs every describe's class to be a
+named constant. That moved to
+`activerecord-describes-are-named-test-case-constants`, which their receipts
+name.
