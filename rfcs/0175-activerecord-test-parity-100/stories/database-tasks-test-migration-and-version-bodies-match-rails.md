@@ -55,13 +55,6 @@ stopped at the PR size ceiling. What is left in the file:
 - `captureStdoutAndStderr` is a `vi.spyOn` pair standing in for
   `DatabaseTasksSetupper#setup`'s `$stdout, @original_stdout = StringIO.new, $stdout` (`:26-32`).
 
-- `DatabaseTasksTruncateAllWithPrefixTest` and
-  `DatabaseTasksTruncateAllWithSuffixTest` (`:1349-1367`) are not ported.
-  They subclass `DatabaseTasksTruncateAllTest`, whose trails body now uses the
-  real fixtures and `ARUnit2Model`'s pool, and set
-  `ActiveRecord::Base.table_name_prefix = "p_"` / `table_name_suffix = "_s"`
-  in `setup` and `nil` in `teardown`.
-
 ## Acceptance criteria
 
 - [ ] Each describe listed above has the Rails body line for line, with
@@ -70,7 +63,5 @@ stopped at the PR size ceiling. What is left in the file:
 - [ ] `backupIntoConnection` is gone: the setup is `SQLite3::Backup`'s three
       calls against a ported backup primitive, or the story is blocked on the
       driver work with that named.
-- [ ] The prefix and suffix describes run `truncate tables` with the
-      prefix / suffix set, sharing the `DatabaseTasksTruncateAllTest` body.
 - [ ] No `vi.` call and no `process.` reference remains in the file.
 - [ ] Test names unchanged; `pnpm parity:test:assertions` stays green.
