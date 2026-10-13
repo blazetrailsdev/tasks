@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the 6 TS-only tests left in adapters/postgresql/schema.test.ts to a .trails sibling"
-status: ready
+status: claimed
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-13T02:48:07Z"
+assignee: "activerecord-relocate-ts-only-tests-postgresql-schema-test"
 blocked-by: null
 closed-reason: null
 ---
