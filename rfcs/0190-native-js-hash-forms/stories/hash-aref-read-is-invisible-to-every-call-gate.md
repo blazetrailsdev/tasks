@@ -1,7 +1,7 @@
 ---
 title: "Measure, then report, a dropped Hash#[] read: no call gate sees an element access on either side"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-13
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8855
+claim: "2026-10-13T13:13:45Z"
+assignee: "hash-aref-read-is-invisible-to-every-call-gate"
 blocked-by: null
 closed-reason: null
 ---

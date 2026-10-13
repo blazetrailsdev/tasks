@@ -1,6 +1,6 @@
 ---
 title: "activerecord: migrator test setups read schema_migration / internal_metadata off the pool and load migrations through MigrationContext"
-status: ready
+status: claimed
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-13T13:42:25Z"
+assignee: "activerecord-relocate-ts-only-tests-associations-join-model-eager-has-one"
 blocked-by: null
 closed-reason: null
 ---

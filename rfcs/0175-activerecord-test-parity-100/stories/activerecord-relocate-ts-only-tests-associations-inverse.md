@@ -1,6 +1,6 @@
 ---
 title: "activerecord: move the one TS-only test in inverse-associations.test.ts to a .trails sibling"
-status: ready
+status: in-progress
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8857
+claim: "2026-10-13T13:12:24Z"
+assignee: "activerecord-relocate-ts-only-tests-associations-inverse"
 blocked-by: null
 closed-reason: null
 ---

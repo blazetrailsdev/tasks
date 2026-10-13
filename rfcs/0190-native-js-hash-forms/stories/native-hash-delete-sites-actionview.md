@@ -1,7 +1,7 @@
 ---
 title: "A value-discarding Hash#delete is a `delete` statement: actionview"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-13
 rfc: "0190-native-js-hash-forms"
 cluster: substitution
 packages: [actionview]
@@ -9,9 +9,9 @@ deps: [native-hash-merge-bang-sites-actionpack-actionview-rack-session]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8855
+claim: "2026-10-13T13:13:45Z"
+assignee: "hash-aref-read-is-invisible-to-every-call-gate"
 blocked-by: null
 closed-reason: null
 ---

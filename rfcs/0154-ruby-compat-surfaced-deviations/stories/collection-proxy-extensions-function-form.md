@@ -1,6 +1,6 @@
 ---
 title: "CollectionProxy applies extensions one at a time, with a function arm Rails lacks"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

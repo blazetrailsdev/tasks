@@ -1,6 +1,6 @@
 ---
 title: "native-delete-at-each-block-tail-is-value-discarding"
-status: draft
+status: in-progress
 updated: 2026-10-13
 rfc: "0190-native-js-hash-forms"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8855
+claim: "2026-10-13T13:34:15Z"
+assignee: "native-delete-at-each-block-tail-is-value-discarding"
 blocked-by: null
 closed-reason: null
 ---

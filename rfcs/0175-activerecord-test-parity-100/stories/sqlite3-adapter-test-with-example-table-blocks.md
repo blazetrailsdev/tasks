@@ -1,6 +1,6 @@
 ---
 title: "postgresql adapter test: scope the example table with DdlHelper#with_example_table (~100 LOC)"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

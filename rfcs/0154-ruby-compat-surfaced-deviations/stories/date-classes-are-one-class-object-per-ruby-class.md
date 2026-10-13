@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat/date: one class object per Ruby Date / DateTime / Time; DateTime.now is a DateTime"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

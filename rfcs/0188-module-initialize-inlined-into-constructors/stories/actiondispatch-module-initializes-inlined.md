@@ -1,7 +1,7 @@
 ---
 title: "actionpack: the five ActionDispatch module initialize bodies are inlined"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-13
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
 packages: ["actionpack"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8856
+claim: "2026-10-13T13:07:42Z"
+assignee: "action-controller-base-constructor-inlined-from-tag-cannot-pair"
 blocked-by: null
 closed-reason: null
 ---
