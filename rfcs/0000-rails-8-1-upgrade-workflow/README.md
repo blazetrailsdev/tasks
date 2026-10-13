@@ -327,7 +327,7 @@ story id that owns it. The rules:
 1. **Seeded once, mechanically, by the flip PR.** The seed is the dry run's
    output for the two refs: the DRIFT and STALE lists and the changed-test
    list. It is derived from the two Ruby manifests, never from what a gate
-   happens to flag, and CI recomputes it.
+   happens to flag. CI recomputes it on the PR that changes the `ref`.
 2. **Only-shrink.** A row may be added only by a commit that also changes that
    source's `ref` in `sources.lock.json`. Any other growth is red.
 3. **A row scopes the per-unit ratchets off its unit, and nothing else.**
@@ -375,7 +375,8 @@ One PR, mechanical throughout, in separate commits:
    `ActionDispatch`'s `VERSION`.
 
 Anything a gate still reports after that, on a unit outside the ledger, is
-fixed in the flip PR. The dry run exists to make that set known, and empty,
+fixed in the flip PR. Today that is the 2 call rows on pairs an upstream
+rename newly matches. The dry run exists to make that set known, and small,
 before the PR is opened. The gates the dry run could not exercise (listed in
 § Motivation) are the risk; if one cannot be made green mechanically, the flip
 PR stops and the gap becomes a tooling story, not an exception.
@@ -436,9 +437,10 @@ PR stops and the gap becomes a tooling story, not an exception.
    current `main` reports no red gate on a unit outside the ledger.
 2. **Zero unpinned matched bodies in every package under the `rails`
    source** (898 today). `pnpm parity:api:pins:all` retakes the floor in one PR
-   immediately before the tag. A floor pin claims only "this is the tree the
+   immediately before the flip. A floor pin claims only "this is the tree the
    port was written against", which is true of every one of them.
-3. **Every gate is green on `main` at the commit to be tagged.**
+3. **Every gate is green on `main` at the commit the flip merges onto**, which
+   is the commit that gets the tag.
 4. **The data layer is closed out: arel, activemodel and activerecord at 100%
    on `parity:api` and `parity:test`, and RFC 0175 closed** (recommended; Open
    question 5). Methods are there today; activerecord tests are 8801/8830.
@@ -461,10 +463,12 @@ PR stops and the gap becomes a tooling story, not an exception.
 
 Recommended; branch policy is the owner's (Open question 6).
 
-- **Tag the last 8.0.2 commit.** An annotated tag `rails-8.0.2` on the `main`
-  commit immediately before the flip PR merges, with the parity summary in its
-  message. The `rails-<version>` name is "the last commit whose source of
-  truth was this Rails version". Release tags, once there are releases, are
+- **Tag the last 8.0.2 commit.** An annotated tag `rails-8.0.2` on the
+  parent of the flip commit, placed once the flip has merged, with the parity
+  summary in its message. Tagging after the merge removes the race in which
+  another PR lands between a pre-placed tag and the flip. The
+  `rails-<version>` name is "the last commit whose source of truth was this
+  Rails version". Release tags, once there are releases, are
   `v<trails-version>`, so the two namespaces never collide whichever version
   scheme is chosen.
 - **No stable branch until a backport needs one.** Nothing is published, so
@@ -585,9 +589,9 @@ source":
 2. Fetch the candidate beside the active version. Run the dry run. Put its
    tables in the upgrade RFC.
 3. Check the entry criteria. Retake the pin floor for the source's packages.
-4. For a minor: tag `rails-<old>` on the commit before the flip.
-5. Open the flip PR: `ref`, lockfile, seeded ledger, recite, stale deletions,
+4. Open the flip PR: `ref`, lockfile, seeded ledger, recite, stale deletions,
    regenerated artifacts, version constants.
+5. For a minor: once it merges, tag its parent commit `rails-<old>`.
 6. Generate the burn-down stories and write their ids into the ledger rows.
 7. Burn down: re-verify, re-pin, delete the row. Port what is new. Delete what
    is gone.
@@ -643,13 +647,15 @@ the targets in § 1. Two more:
 ## Rollout
 
 1. **Tooling, on 8.0.2.** `bump-dry-run-runs-the-gates-against-a-candidate-ref`,
-   then `bump-ledger-scopes-the-method-ratchets-off-drifted-pairs` and
+   then `bump-ledger-tracks-drifted-pairs-and-the-body-pins-gate-reads-it`,
+   `bump-ledger-scopes-the-call-ratchets-off-drifted-pairs`,
+   `bump-ledger-scopes-the-signature-and-surface-ratchets-off-drifted-pairs` and
    `bump-ledger-scopes-the-test-ratchets-off-changed-rails-tests`.
    `record-the-mirrored-ref-in-each-package` is independent.
 2. **Entry.** `entry-check-data-layer-parity-is-closed-on-8-0-2`, then
    `retake-the-body-pin-floor-at-the-last-8-0-2-commit`.
-3. **Tag and flip.** `tag-the-last-rails-8-0-2-commit`, then
-   `flip-the-rails-ref-to-v8-1-4`.
+3. **Flip and tag.** `flip-the-rails-ref-to-v8-1-4`, then
+   `tag-the-last-rails-8-0-2-commit` on the flip commit's parent.
 4. **After the flip.** `generate-the-rails-8-1-burn-down-stories`,
    `reread-the-recited-rails-citations-against-v8-1-4`,
    `size-and-sequence-the-dependent-source-bumps` and

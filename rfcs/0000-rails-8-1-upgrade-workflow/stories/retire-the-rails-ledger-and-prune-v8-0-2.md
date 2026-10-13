@@ -39,7 +39,6 @@ number; add that edge with `tasks set-deps-rfc` when it does.
 - [ ] `pnpm vendor:fetch --prune --source rails` is run in the main
       checkout, and the runbook names it as the step every other checkout
       runs.
-- [ ] The `mirrors` fields drop `"verifying": true`.
 - [ ] The RFC's Changelog records the dates of the tag, the flip and the
       close, and the final `parity:api` / `parity:test` rows.
 

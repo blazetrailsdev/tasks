@@ -8,7 +8,9 @@ packages: [scripts, activerecord, activesupport, actionpack, actionview, activej
 deps:
   [
     entry-check-data-layer-parity-is-closed-on-8-0-2,
-    bump-ledger-scopes-the-method-ratchets-off-drifted-pairs,
+    bump-ledger-tracks-drifted-pairs-and-the-body-pins-gate-reads-it,
+    bump-ledger-scopes-the-call-ratchets-off-drifted-pairs,
+    bump-ledger-scopes-the-signature-and-surface-ratchets-off-drifted-pairs,
     bump-ledger-scopes-the-test-ratchets-off-changed-rails-tests,
   ]
 deps-rfc: []
@@ -49,6 +51,6 @@ still `v8.0.2`.
 
 ## Notes
 
-Merge this as late as possible before the tag: a pair matched after it merges
+Merge this as late as possible before the flip: a pair matched after it merges
 is unpinned again. Pins for the non-Rails gems are out of scope; each gem's
 bump retakes its own floor.

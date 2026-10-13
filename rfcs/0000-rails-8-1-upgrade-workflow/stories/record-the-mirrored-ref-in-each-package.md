@@ -51,8 +51,6 @@ The run-time half already exists as the ported `gem_version.rb` constants.
 - [ ] Packages with no upstream (ruby-compat, trails-tsc, tse-compiler) have
       no field, and the check says so explicitly instead of skipping them
       silently.
-- [ ] While a bump ledger for a source has rows, the field for its packages
-      carries `"verifying": true`, and the check enforces that both ways.
 - [ ] vendor/README.md's upgrade steps name the script.
 
 ## Notes

@@ -5,7 +5,7 @@ updated: 2026-10-13
 rfc: "0000-rails-8-1-upgrade-workflow"
 cluster: tooling
 packages: [scripts]
-deps: [bump-ledger-scopes-the-method-ratchets-off-drifted-pairs]
+deps: [bump-ledger-tracks-drifted-pairs-and-the-body-pins-gate-reads-it]
 deps-rfc: []
 est-loc: 400
 priority: null

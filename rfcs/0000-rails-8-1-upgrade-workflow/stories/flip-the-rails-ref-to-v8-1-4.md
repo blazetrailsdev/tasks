@@ -16,7 +16,11 @@ packages:
     activejob,
     trailties,
   ]
-deps: [tag-the-last-rails-8-0-2-commit, bump-dry-run-runs-the-gates-against-a-candidate-ref]
+deps:
+  [
+    retake-the-body-pin-floor-at-the-last-8-0-2-commit,
+    bump-dry-run-runs-the-gates-against-a-candidate-ref,
+  ]
 deps-rfc: []
 est-loc: 500
 priority: null
