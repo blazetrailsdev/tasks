@@ -56,8 +56,29 @@ schema cache, resolve the registry's model classes and prime the fixture cache
 with `await fixture.find()`, because the fixture accessor is synchronous. That
 override is harness surface Rails does not have.
 
+## Findings from trails#8868
+
+- Several of the Rails bodies read `self`: `with_db_warnings_action` restores
+  `@original_db_warnings_action` (`test_case.rb:176`), `with_timezone_config`
+  calls `verify_default_timezone_config` (`:215`), and `assert_queries_match`
+  calls `_assert_nothing_raised_or_warn` (`:116`). So a caller has to be an
+  `ActiveRecord::TestCase` instance. Only a test under `fixtures()` is one
+  today; every other activerecord test gets an `ActiveSupport::TestCase`.
+  Making each test an `ActiveRecord::TestCase`, as Rails has it, turns on
+  `use_transactional_tests` for the whole suite.
+- `captureSql` and its `stub` option are owned by
+  `capture-sql-is-test-case-capture-sql-over-sql-counter-with-no-stub`, which
+  the owner parked on 2026-10-08 as a test-helper relocation across many call
+  sites, to resume on an owner decision. The same decision covers the
+  relocation here.
+- `describedClasses` and `topLevel` in `activesupport/src/testing/autorun.ts`
+  carry `@noRailsEquivalent CONVERGEABLE` receipts naming this story. They
+  exist because `fixtures()` builds an anonymous class per describe; they go
+  when a describe's class is the constant its suite is named after.
+
 ## Acceptance criteria
 
 - [ ] `ActiveRecord::TestCase`'s remaining includes and methods are on the
       class at their Rails names, and the free-function duplicates are deleted.
 - [ ] `after_teardown` runs `check_connection_leaks` after `super`.
+- [ ] `describedClasses` and `topLevel` are deleted with their receipts.
