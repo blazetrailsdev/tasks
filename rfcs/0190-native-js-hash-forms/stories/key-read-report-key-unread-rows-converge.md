@@ -5,7 +5,8 @@ updated: 2026-10-13
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-system-testing-browser-over-selenium-webdriver
 deps-rfc: []
 est-loc: 300
 priority: null
