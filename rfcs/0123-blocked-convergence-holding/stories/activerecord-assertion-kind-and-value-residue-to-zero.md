@@ -2,7 +2,7 @@
 title: "activerecord: the 3 assertion-kind and 1 assertion-value mismatches, and the mark to 0"
 status: ready
 updated: 2026-09-30
-rfc: "0175-activerecord-test-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: skipped-tests
 packages: ["activerecord"]
 deps: ["psych-load-and-safe-load", "string-encoding-tag-carrier-for-force-encoding-and-b"]
