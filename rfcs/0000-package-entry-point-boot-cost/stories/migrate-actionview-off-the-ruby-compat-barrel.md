@@ -8,7 +8,7 @@ packages: ["actionview", "ruby-compat"]
 deps: ["ruby-compat-wildcard-subpath-export"]
 deps-rfc: []
 est-loc: 110
-priority: 6
+priority: null
 pr: null
 claim: null
 assignee: null

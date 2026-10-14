@@ -8,7 +8,7 @@ packages: ["activerecord", "ruby-compat"]
 deps: ["ruby-compat-wildcard-subpath-export"]
 deps-rfc: []
 est-loc: 650
-priority: 2
+priority: null
 pr: null
 claim: null
 assignee: null

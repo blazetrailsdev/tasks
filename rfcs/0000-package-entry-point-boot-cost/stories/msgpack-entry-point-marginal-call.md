@@ -8,7 +8,7 @@ packages: ["msgpack"]
 deps: ["boot-graph-measurement-harness"]
 deps-rfc: []
 est-loc: 40
-priority: 9
+priority: null
 pr: null
 claim: null
 assignee: null

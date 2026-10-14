@@ -8,7 +8,7 @@ packages: ["arel", "ruby-compat"]
 deps: ["ruby-compat-wildcard-subpath-export"]
 deps-rfc: []
 est-loc: 110
-priority: 7
+priority: null
 pr: null
 claim: null
 assignee: null

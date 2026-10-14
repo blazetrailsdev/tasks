@@ -17,7 +17,7 @@ blocked-by: null
 
 ## Context
 
-`packages/ruby-compat/package.json` `exports` names `"."` plus 8 subpaths
+`packages/ruby-compat/package.json` `exports` names `"."` plus 7 subpaths
 (`./include`, `./method-missing-proxy`, `./name-error`, `./psych`,
 `./psych-adapter`, `./range`, `./yaml`) and has **no wildcard**. The package
 ships 147 `dist/*.js` files, so 139 of them are reachable only through the
@@ -40,7 +40,7 @@ shape in this repo, not a new convention.
 
 - [ ] `packages/ruby-compat/package.json` `exports` gains
       `"./*": { "types": "./dist/*.d.ts", "default": "./dist/*.js" }`
-- [ ] The 8 existing named subpaths and `"."` are left in place and unchanged
+- [ ] The 7 existing named subpaths and `"."` are left in place and unchanged
 - [ ] `import { Range } from "@blazetrails/ruby-compat/range"` and a
       previously-unreachable module both resolve and typecheck from another
       workspace package

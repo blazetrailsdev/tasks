@@ -8,7 +8,7 @@ packages: ["activesupport", "ruby-compat"]
 deps: ["ruby-compat-wildcard-subpath-export"]
 deps-rfc: []
 est-loc: 320
-priority: 1
+priority: null
 pr: null
 claim: null
 assignee: null

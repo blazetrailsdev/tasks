@@ -116,7 +116,7 @@ Three packages, three different answers, all measured:
 
 ### 1. `ruby-compat` — subpath exports, then call-site migration
 
-`exports` already names 8 subpaths and has no wildcard. Add `"./*"` (as
+`exports` already names `"."` plus 7 subpaths and has no wildcard. Add `"./*"` (as
 `actionview` already does) so every module is reachable without enumerating
 146 of them, then migrate call sites off the barrel in package-sized batches.
 
@@ -125,8 +125,8 @@ The barrel is a pure re-export hub with no side effects, which is why this is
 safe — a story that discovers a side effect must stop and report it.
 
 **1795 call sites cannot be one PR.** Batches are per consuming package, each
-a mechanical codemod plus its own measurement, ordered by boot weight:
-activesupport, activerecord, actionpack, trailties, actionview, arel,
+a mechanical codemod plus its own measurement: activesupport first (it is
+the foundation every other consumer loads), then by boot weight — activerecord, actionpack, trailties, actionview, arel,
 activemodel, then the tail.
 
 ### 2. `msgpack` — marginal, do it only if it falls out
@@ -215,15 +215,16 @@ subpath existing, and every Phase 2 story declares
 | 2     | `migrate-activerecord-off-the-ruby-compat-barrel` (605)                   |
 | 2     | `migrate-actionpack-off-the-ruby-compat-barrel` (219)                     |
 | 2     | `migrate-trailties-off-the-ruby-compat-barrel` (213)                      |
-| 2     | `migrate-activemodel-off-the-ruby-compat-barrel` (121)                    |
 | 2     | `migrate-actionview-off-the-ruby-compat-barrel` (95)                      |
 | 2     | `migrate-arel-off-the-ruby-compat-barrel` (90)                            |
+| 2     | `migrate-activemodel-off-the-ruby-compat-barrel` (121)                    |
 | 2     | `migrate-the-tail-packages-off-the-ruby-compat-barrel` (161 over 14 pkgs) |
 | 3     | `msgpack-entry-point-marginal-call`                                       |
 
-Phase 2 is ordered by boot weight rather than import count, so the heaviest
-boot contributors are measured first; `activerecord` is the largest batch and
-sits at the est-loc ceiling, so it may need splitting by subdirectory.
+Phase 2 starts with `activesupport`, the foundation every other consumer
+loads, then goes by boot weight rather than import count, so the heaviest boot
+contributors are measured first; `activerecord` is the largest batch and sits
+near the 700 est-loc ceiling, so it may need splitting by subdirectory.
 
 ## Verification
 
