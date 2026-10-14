@@ -1,7 +1,7 @@
 ---
 title: "activerecord: serialized-attribute tests pass MyObject as a Struct type and the remaining bodies match Rails"
-status: ready
-updated: 2026-10-13
+status: closed
+updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the LOC ceiling was waived on trails#8879, which ported the Struct MyObject, the Psych safe paths and every remaining body itself"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "test-compare: credit the tests a Rails test class inherits from a same-file superclass"
-status: ready
-updated: 2026-10-13
+status: in-progress
+updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8881
+claim: "2026-10-14T00:12:24Z"
+assignee: "ruby-compat-simple-delegator-for-delegated-ar-object-tests"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port controller/routing_test.rb's RouteSetTest lines 1500-1994 and RackMountIntegrationTests"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: ["port-controller-routing-test-route-set-part-1"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8881
+claim: "2026-10-14T00:12:24Z"
+assignee: "ruby-compat-simple-delegator-for-delegated-ar-object-tests"
 blocked-by: null
 closed-reason: null
 ---
