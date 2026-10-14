@@ -2,7 +2,7 @@
 title: "transactional-fixtures-deferred-pin-races-test-lease"
 status: draft
 updated: 2026-10-14
-rfc: "0175-activerecord-test-parity-100"
+rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
