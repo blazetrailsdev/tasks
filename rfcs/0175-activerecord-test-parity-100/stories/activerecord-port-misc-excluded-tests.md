@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port the 23 remaining per-test exclusions (delegators, Rational, throw/catch, singleton class, …)"
-status: in-progress
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: unported-tests

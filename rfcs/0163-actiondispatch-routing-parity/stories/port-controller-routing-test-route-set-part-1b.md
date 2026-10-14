@@ -1,6 +1,6 @@
 ---
 title: "Port controller/routing_test.rb's RouteSetTest, lines 1207-1490 (the 17 tests cut from part 1)"
-status: claimed
+status: done
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 330
 priority: null
-pr: null
+pr: trails#8877
 claim: "2026-10-13T22:57:18Z"
 assignee: "integration-test-describes-have-one-test-object"
 blocked-by: null

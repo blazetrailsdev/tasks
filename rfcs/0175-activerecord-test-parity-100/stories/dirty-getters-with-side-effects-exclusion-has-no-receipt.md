@@ -1,7 +1,7 @@
 ---
 title: "activerecord: dirty_test 'getters with side effects are allowed' is excluded with no ratified reason or story"
 status: draft
-updated: 2026-10-13
+updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

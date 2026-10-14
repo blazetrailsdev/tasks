@@ -1,6 +1,6 @@
 ---
 title: "Port test_resource_new_actions and test_resource_constraints_are_pushed_to_scope once Mapper#resources draws through collection/new/member"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

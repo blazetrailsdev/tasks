@@ -1,6 +1,6 @@
 ---
 title: "activerecord: serialized-attribute tests pass MyObject as a Struct type and the remaining bodies match Rails"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

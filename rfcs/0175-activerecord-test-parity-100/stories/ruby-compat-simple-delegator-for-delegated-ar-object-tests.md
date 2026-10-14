@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-simple-delegator-for-delegated-ar-object-tests"
-status: draft
+status: ready
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Port dispatch/routing_test.rb's skipped TestRoutingMapper tests, lines 2000-3249"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-13
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: ["port-routing-test-mapper-skips-part-1"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8879
+claim: "2026-10-13T23:12:23Z"
+assignee: "serialized-attribute-test-bodies-match-rails-arguments-and-assertions"
 blocked-by: null
 closed-reason: null
 ---

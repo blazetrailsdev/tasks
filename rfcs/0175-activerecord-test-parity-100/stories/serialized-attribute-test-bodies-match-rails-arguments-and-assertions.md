@@ -1,6 +1,6 @@
 ---
 title: "activerecord: serialized-attribute test bodies use Rails' serializer arguments, values and assertions"
-status: ready
+status: in-progress
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8879
+claim: "2026-10-13T23:12:23Z"
+assignee: "serialized-attribute-test-bodies-match-rails-arguments-and-assertions"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: connection-handlers-sharding-db test carries Rails' inline config swap instead of withBaseConfigs"
-status: claimed
+status: done
 updated: 2026-10-13
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 530
 priority: null
-pr: null
+pr: trails#8878
 claim: "2026-10-13T22:54:26Z"
 assignee: "activerecord-test-fixtures-vitest-surface-leaves-rails-file"
 blocked-by: null

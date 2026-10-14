@@ -1,6 +1,6 @@
 ---
 title: 'ruby-compat: setEnv("TZ") resets the cached local zone, as reset_by_modified_env does'
-status: ready
+status: in-progress
 updated: 2026-10-13
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8880
+claim: "2026-10-13T23:42:24Z"
+assignee: "batches-and-calculations-carry-rails-private-sections"
 blocked-by: null
 closed-reason: null
 ---
