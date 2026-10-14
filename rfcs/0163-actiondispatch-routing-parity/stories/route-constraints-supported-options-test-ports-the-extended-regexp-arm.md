@@ -1,6 +1,6 @@
 ---
 title: "RouteSetTest's supported-options test ports its second assert_nothing_raised arm"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

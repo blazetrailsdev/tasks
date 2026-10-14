@@ -1,6 +1,6 @@
 ---
 title: "redirect-takes-its-block-in-a-slot-of-its-own"
-status: draft
+status: done
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8896
 claim: null
 assignee: null
 blocked-by: null

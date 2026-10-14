@@ -1,6 +1,6 @@
 ---
 title: "Port the 24 tests SerializedAttributeTestWithYamlSafeLoad inherits"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

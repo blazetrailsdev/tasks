@@ -1,6 +1,6 @@
 ---
 title: "actionpack, actionview, rack-test and did-you-mean: Flash, TestCase, Rack::Test::Session and DidYouMean new overrides"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion

@@ -1,6 +1,6 @@
 ---
 title: "actionpack: controller-routing.test.ts's TS-only tests move to a .trails sibling"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

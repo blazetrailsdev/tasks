@@ -1,6 +1,6 @@
 ---
 title: "mapper-resources-resource-class-carries-param-and-as"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
