@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port Kernel#Array and converge the insert-all / to_param arms that open-code it"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-14
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8883
+claim: "2026-10-14T01:42:25Z"
+assignee: "sqlite3-adapter-test-with-example-table-blocks-part-2"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-adapter-test-with-example-table-blocks-part-2"
-status: ready
-updated: 2026-10-13
+status: in-progress
+updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8883
+claim: "2026-10-14T01:42:25Z"
+assignee: "sqlite3-adapter-test-with-example-table-blocks-part-2"
 blocked-by: null
 closed-reason: null
 ---

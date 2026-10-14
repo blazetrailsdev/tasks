@@ -1,7 +1,7 @@
 ---
 title: "activerecord: each describe's test class is a named ActiveRecord::TestCase constant; describedClasses and topLevel are deleted"
-status: ready
-updated: 2026-10-13
+status: claimed
+updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 700
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T01:31:42Z"
+assignee: "activerecord-describes-are-named-test-case-constants"
 blocked-by: null
 closed-reason: null
 ---

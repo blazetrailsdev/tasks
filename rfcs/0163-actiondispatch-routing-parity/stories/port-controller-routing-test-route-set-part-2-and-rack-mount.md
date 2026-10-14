@@ -1,6 +1,6 @@
 ---
 title: "Port controller/routing_test.rb's RouteSetTest lines 1500-1994 and RackMountIntegrationTests"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

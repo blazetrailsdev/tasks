@@ -1,6 +1,6 @@
 ---
 title: "test-compare: credit the tests a Rails test class inherits from a same-file superclass"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: 'ruby-compat: setEnv("TZ") resets the cached local zone, as reset_by_modified_env does'
-status: in-progress
-updated: 2026-10-13
+status: done
+updated: 2026-10-14
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
