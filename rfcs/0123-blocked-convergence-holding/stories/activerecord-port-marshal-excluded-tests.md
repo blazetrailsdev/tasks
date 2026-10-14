@@ -2,7 +2,7 @@
 title: "activerecord: port marshal_serialization_test.rb and the 6 Marshal-excluded cases"
 status: blocked
 updated: 2026-10-11
-rfc: "0175-activerecord-test-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: unported-tests
 packages: ["activerecord"]
 deps:
