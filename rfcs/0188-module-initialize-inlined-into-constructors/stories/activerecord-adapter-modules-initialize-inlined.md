@@ -1,6 +1,6 @@
 ---
 title: "activerecord: DatabaseStatements, QueryCache and ConnectionPoolConfiguration initialize are inlined"
-status: claimed
+status: ready
 updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-10-14T03:12:24Z"
-assignee: "activemodel-inlines-api-attributes-and-serialize-cast-value-initialize"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

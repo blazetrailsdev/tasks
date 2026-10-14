@@ -1,7 +1,7 @@
 ---
 title: "audit: sort Rails' inherited hooks into bodies written elsewhere and bodies replaced by another mechanism"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]
@@ -9,9 +9,9 @@ deps: ["claude-md-section-for-inlined-module-initialize"]
 deps-rfc: []
 est-loc: 0
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8887
+claim: "2026-10-14T09:42:22Z"
+assignee: "audit-inherited-hooks-for-an-inlined-from-entry"
 blocked-by: null
 closed-reason: null
 ---
