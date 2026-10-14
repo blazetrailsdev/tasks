@@ -2,7 +2,7 @@
 title: "activerecord: port coders/yaml_column_test.rb and the 23 YAML/Psych-excluded cases"
 status: ready
 updated: 2026-09-30
-rfc: "0175-activerecord-test-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: unported-tests
 packages: ["activerecord"]
 deps:
