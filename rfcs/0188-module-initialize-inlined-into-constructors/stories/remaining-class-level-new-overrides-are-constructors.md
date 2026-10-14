@@ -1,6 +1,6 @@
 ---
 title: "actionpack, actionview, rack-test and did-you-mean: Flash, TestCase, Rack::Test::Session and DidYouMean new overrides"
-status: claimed
+status: in-progress
 updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: "2026-10-14T03:42:25Z"
-assignee: "activerecord-fixtures-timezone-and-controller-runtime-initialize-inlined"
+pr: trails#8889
+claim: "2026-10-14T10:42:26Z"
+assignee: "activesupport-rotator-initialize-inlined"
 blocked-by: null
 closed-reason: null
 ---

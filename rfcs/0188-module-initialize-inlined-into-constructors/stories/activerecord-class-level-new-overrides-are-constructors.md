@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Deduplicable, TimeZoneConverter and LockingType new overrides are constructors"
-status: ready
+status: in-progress
 updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8888
+claim: "2026-10-14T10:12:26Z"
+assignee: "activerecord-adapter-modules-initialize-inlined"
 blocked-by: null
 closed-reason: null
 ---
