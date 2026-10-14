@@ -2,7 +2,7 @@
 title: "activerecord: port the 10 Thread-excluded transaction, scoping, locking and selector tests"
 status: ready
 updated: 2026-09-30
-rfc: "0175-activerecord-test-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: unported-tests
 packages: ["activerecord"]
 deps: ["drop-stale-deadlock-unported-file-exclusions"]
