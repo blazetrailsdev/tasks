@@ -1,6 +1,6 @@
 ---
 title: "RoutesProxy Proxy traps gate on respond_to_missing; extract_options! via extractOptionsBang"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

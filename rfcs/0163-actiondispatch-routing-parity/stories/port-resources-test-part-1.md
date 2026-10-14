@@ -1,6 +1,6 @@
 ---
 title: "Port controller/resources_test.rb lines 1-600 under the Rails test names"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
