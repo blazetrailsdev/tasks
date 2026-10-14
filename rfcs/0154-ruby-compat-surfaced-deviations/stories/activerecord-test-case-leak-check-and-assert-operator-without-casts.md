@@ -2,7 +2,7 @@
 title: "activerecord-test-case-leak-check-and-assert-operator-without-casts"
 status: draft
 updated: 2026-10-14
-rfc: "0175-activerecord-test-parity-100"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
