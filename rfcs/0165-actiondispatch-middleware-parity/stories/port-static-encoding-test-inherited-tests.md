@@ -5,7 +5,8 @@ updated: 2026-10-14
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: ["actionpack"]
-deps: []
+deps:
+  - port-static-test-remainder-and-public-fixtures
 deps-rfc: []
 est-loc: 300
 priority: null
