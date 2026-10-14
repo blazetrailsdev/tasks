@@ -2,7 +2,7 @@
 title: "activerecord: un-skip the 15 matched-but-skipped cases outside delegation_test.rb"
 status: ready
 updated: 2026-09-30
-rfc: "0175-activerecord-test-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: skipped-tests
 packages: ["activerecord"]
 deps: ["psych-load-and-safe-load", "association-async-load-target-uses-async-executor"]
