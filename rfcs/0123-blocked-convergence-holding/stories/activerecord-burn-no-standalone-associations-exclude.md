@@ -2,7 +2,7 @@
 title: "activerecord: burn eslint/no-standalone-associations-exclude.json (90 entries in 25 files)"
 status: ready
 updated: 2026-09-30
-rfc: "0175-activerecord-test-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: lint-registers
 packages: ["activerecord"]
 deps: ["prune-stale-lint-ratchet-allowlists"]
