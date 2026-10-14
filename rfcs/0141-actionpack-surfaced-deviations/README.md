@@ -1,9 +1,9 @@
 ---
 rfc: "0141-actionpack-surfaced-deviations"
 title: "actionpack surfaced deviations — the package's standing convergence bucket"
-status: draft
+status: active
 created: 2026-09-08
-updated: 2026-10-01
+updated: 2026-10-14
 priority: 5
 owner: "@deanmarano"
 packages:
