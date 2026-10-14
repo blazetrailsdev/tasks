@@ -2,7 +2,7 @@
 title: "connection_pool_test.rb: full pool blocking shares load interlock needs Dependencies.interlock ported or ruled permanent"
 status: blocked
 updated: 2026-10-12
-rfc: "0175-activerecord-test-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
