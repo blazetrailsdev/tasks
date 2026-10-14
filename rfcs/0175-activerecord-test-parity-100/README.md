@@ -1,9 +1,9 @@
 ---
 rfc: "0175-activerecord-test-parity-100"
 title: "activerecord tests, assertions, fixtures and schema at 100%"
-status: active
+status: closed
 created: 2026-09-30
-updated: 2026-10-06
+updated: 2026-10-14
 owner: "@deanmarano"
 packages:
   - "activerecord"

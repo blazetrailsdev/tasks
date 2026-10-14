@@ -1,6 +1,6 @@
 ---
 title: "Port Psych.load / Psych.safe_load entry points and their options"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity

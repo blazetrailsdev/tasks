@@ -1,6 +1,6 @@
 ---
 title: "Port Psych.load_tags / dump_tags / domain_types and add_builtin_type"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity

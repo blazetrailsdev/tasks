@@ -1,6 +1,6 @@
 ---
 title: "Psych.dump puts a tagged root mapping's tag on its own line, not on the --- line"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
