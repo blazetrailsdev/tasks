@@ -1,7 +1,7 @@
 ---
 title: "table_options is split across the adapter and an invented exported parseTableOptions helper, duplicating the comment-needed predicate"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main abstract-mysql-adapter.ts:757-789 tableOptions is one method mutating rawTableOptions through the charset splice, AUTO_INCREMENT strip and COMMENT strip (calling tableComment only when it fired), as abstract_mysql_adapter.rb:549-576; no parse helper."
 ---
 
 ## Context

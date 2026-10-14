@@ -1,7 +1,7 @@
 ---
 title: "nested build raises from _assign_attribute, not a bespoke known-key helper"
-status: draft
-updated: 2026-08-21
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#7596 (f51f7120ac, "drop four invented guards and fallbacks"): `git grep assertNestedAttributesAreKnown origin/main -- packages/activerecord` is empty.'
 ---
 
 ## Context

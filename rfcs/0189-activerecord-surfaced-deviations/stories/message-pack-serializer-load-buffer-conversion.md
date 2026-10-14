@@ -1,7 +1,7 @@
 ---
 title: "MessagePackMessageSerializer#load converts to Buffer at the call site instead of at the byte/string boundary"
-status: draft
-updated: 2026-08-23
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep latin1 origin/main -- packages/activerecord/src/encryption/message-pack-message-serializer.ts` is empty."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "dump_schema creates the schema file's dirname, where Rails creates db_dir"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main tasks/database-tasks.ts:512 `FileUtils.mkdirP(this.dbDir)`, as database_tasks.rb:437."
 ---
 
 # dump_schema creates the dirname of the schema file, where Rails creates db_dir

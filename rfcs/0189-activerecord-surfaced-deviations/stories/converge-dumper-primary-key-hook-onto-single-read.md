@@ -1,7 +1,7 @@
 ---
 title: "Converge the dumper's resolvePrimaryKeyColumns hook tree onto Rails' single primary_key(table) read"
-status: draft
-updated: 2026-08-05
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#7639 (b201a0334e): `git grep resolvePrimaryKeyColumns origin/main -- packages/activerecord` is empty; the per-adapter dumper hooks are gone."
 ---
 
 ## Context

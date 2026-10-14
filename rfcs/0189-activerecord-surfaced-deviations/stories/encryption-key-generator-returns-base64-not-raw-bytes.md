@@ -1,7 +1,7 @@
 ---
 title: "generate_random_key returns base64, blocking hex/secret from routing through it"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Duplicate of converge-encryption-key-generator-return-types-and-routing (this RFC), which owns the same base64-vs-raw-bytes return (origin/main encryption/key-generator.ts:22,31) plus the routing of generateRandomHexKey through generateRandomKey."
 ---
 
 ## Context

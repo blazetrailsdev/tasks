@@ -1,7 +1,7 @@
 ---
 title: "Base.logger is a plain accessor pair where Rails uses class_attribute, and three call sites keep a now-unforced level ?."
-status: draft
-updated: 2026-08-23
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -16,7 +16,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#7999 (4e9287fb5f): origin/main core.ts:79 `classAttribute.call(base, "logger", { instanceWriter: false })`, base.ts:908 is now only `declare static logger`; the static get/set pair over `_logger` is gone.'
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Remove validateColumnSize's double-registration guard, converge to Rails' body"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep 'typeof this.validatesLengthOf' origin/main -- packages/activerecord/src/encryption/encryptable-record.ts` is empty."
 ---
 
 # Remove validateColumnSize's double-registration guard, converge to Rails' body

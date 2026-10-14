@@ -1,7 +1,7 @@
 ---
 title: "Plumb associationForeignKey into the HABTM join model and join SQL"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main associations/builder/has-and-belongs-to-many.ts:110-117 derives the rhs foreign key as Rails' belongs_to_options does — `foreignKey(options.className)` when class_name is given, explicit `associationForeignKey` wins; the hard-coded `${singular(name)}_id` is gone."
 ---
 
 ## Context

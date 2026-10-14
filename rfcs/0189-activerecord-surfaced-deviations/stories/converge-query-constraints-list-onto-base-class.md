@@ -1,7 +1,7 @@
 ---
 title: "query_constraints_list walks the prototype chain instead of base_class?, and its composite-PK compare is always true"
-status: draft
-updated: 2026-08-19
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main persistence.ts:258-266 queryConstraintsList reads `this.isBaseClass() || !rbEqual(this.primaryKey, this.baseClass.primaryKey)` with an own-property memo, as persistence.rb:222-229; no prototype walk."
 ---
 
 # `query_constraints_list` walks the prototype chain instead of asking `base_class?` — and the composite-PK compare is wrong

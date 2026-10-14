@@ -1,7 +1,7 @@
 ---
 title: "writer_method's hash_from_multiparameter_assignment arm is not ported"
-status: draft
-updated: 2026-08-21
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#8055 (9e4495e704): origin/main aggregations.ts:116-121 ports the integer-keyed Hash arm (raise ArgumentError unless size == max key, then klass.new(*sorted values)), as aggregations.rb:266-271."
 ---
 
 ## Context

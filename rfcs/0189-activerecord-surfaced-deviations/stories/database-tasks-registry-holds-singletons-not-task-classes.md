@@ -1,7 +1,7 @@
 ---
 title: "@tasks holds handler singletons, so database_adapter_for cannot instantiate or forward *arguments"
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed (trails#6487 flipped the registry to task classes): origin/main mysql-database-tasks.ts:157-158, postgresql-database-tasks.ts:193 and sqlite-database-tasks.ts:126 register the task classes; the remaining registry-shape gap (Hash keyed by pattern, registered by constant name inside DatabaseTasks) is owned by database-tasks-registry-is-pattern-keyed-and-registered-by-name-in-database-tasks."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Converge the two type-map caches onto Rails' fetch_or_store shape"
-status: draft
-updated: 2026-08-21
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main type/type-map.ts:19 and type/hash-lookup-type-map.ts:13,24 both go through Concurrent::Map#fetchOrStore, as type_map.rb:18-22 and hash_lookup_type_map.rb:13-21."
 ---
 
 # Converge the two type-map caches onto Rails' `fetch_or_store` shape

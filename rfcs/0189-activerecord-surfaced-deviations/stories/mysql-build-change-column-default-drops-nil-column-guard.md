@@ -1,7 +1,7 @@
 ---
 title: "AbstractMysqlAdapter#buildChangeColumnDefaultDefinition drops Rails' nil-column guard"
-status: draft
-updated: 2026-08-28
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main connection-adapters/abstract-mysql-adapter.ts:547-555 buildChangeColumnDefaultDefinition has `const column = await this.columnFor(...); if (!column) return;`, abstract_mysql_adapter.rb:375's guard."
 ---
 
 # AbstractMysqlAdapter#buildChangeColumnDefaultDefinition drops Rails' nil-column guard

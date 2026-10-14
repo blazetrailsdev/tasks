@@ -1,7 +1,7 @@
 ---
 title: 'HashAccessor.prepare writes the string "{}" where Rails writes an empty Hash'
-status: draft
-updated: 2026-08-22
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main store.ts:102-107 HashAccessor.prepare writes `{}` when the value is nil/false, as store.rb:227-241; no JSON string is written."
 ---
 
 ## Context

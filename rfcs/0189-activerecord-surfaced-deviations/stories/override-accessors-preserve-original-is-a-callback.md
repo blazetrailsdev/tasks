@@ -1,7 +1,7 @@
 ---
 title: "override_accessors_to_preserve_original is a beforeSave hook, not an included module"
-status: draft
-updated: 2026-08-18
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main encryption/encryptable-record.ts:71-90 overrideAccessorsToPreserveOriginal includes an anonymous Module defining the reader that calls super and reads the original attribute, as encryptable_record.rb:109-124; it is no longer a beforeSave hook."
 ---
 
 # override_accessors_to_preserve_original is a beforeSave hook, not an included module

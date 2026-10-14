@@ -1,7 +1,7 @@
 ---
 title: "encryption-key-id-uses-sha256-not-sha1"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main encryption/key.ts:17 `first(Digest.SHA1.hexdigest(this.secret), 4)`, as key.rb:24-26."
 ---
 
 # `Encryption::Key#id` uses SHA-256/8 chars where Rails uses SHA-1/4

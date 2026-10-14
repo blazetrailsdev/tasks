@@ -1,7 +1,7 @@
 ---
 title: "belongs_to default hoisted ahead of before_validation queue (sync-chain deviation)"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -15,6 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#8474 (42f6028e0d): `git grep _runBelongsToDefaults origin/main -- packages/activerecord` is empty; builder/belongs-to.ts:42,135 registers the default as a before_validation callback calling association(name).default(...), as belongs_to.rb:103-106."
 ---
 
 ## Context

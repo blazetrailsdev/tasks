@@ -1,7 +1,7 @@
 ---
 title: "Middleware#build returns a closure, not the middleware instance"
-status: draft
-updated: 2026-10-06
+status: in-progress
+updated: 2026-10-14
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8913
+claim: "2026-10-14T19:21:09Z"
+assignee: "middleware-build-returns-a-closure-not-the-middleware-instance"
 blocked-by: null
 closed-reason: null
 ---

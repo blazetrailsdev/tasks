@@ -1,7 +1,7 @@
 ---
 title: "Rails' array-keyed hash entry (primary_key => id) has no trails spelling"
-status: draft
-updated: 2026-08-02
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep 'Array.isArray(primaryKey)' origin/main -- packages/activerecord/src/relation.ts packages/activerecord/src/token-for.ts` is empty — findByTokenFor no longer expands the composite key itself."
 ---
 
 ## Context

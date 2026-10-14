@@ -1,7 +1,7 @@
 ---
 title: "Converge encryption uniqueness previous-scheme query shape to Rails"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main encryption/extended-deterministic-uniqueness-validator.ts:25-27 loops `for (const type of encryptedType.previousTypes)` serializing one value per type inside Encryption.withoutEncryption; the ExtendedDeterministicQueries.installed gate is gone."
 ---
 
 ## Context

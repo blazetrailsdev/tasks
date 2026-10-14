@@ -1,7 +1,7 @@
 ---
 title: "CollectionProxy is built for declared singular names, which Rails never does"
-status: draft
-updated: 2026-08-18
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed via trails#7089 (6683fbd109, "retire model._associations for the reflection registry"): on origin/main the only CollectionProxy construction is CollectionAssociation#reader (`git grep -E ''new CollectionProxy|CollectionProxy.create'' origin/main -- packages/activerecord/src` → collection-association.ts:544 only), and collection-proxy.ts has no hasOne/hasOneThrough arms left.'
 ---
 
 ## Context

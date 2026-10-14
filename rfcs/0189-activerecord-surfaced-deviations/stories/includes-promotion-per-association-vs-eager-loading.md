@@ -1,7 +1,7 @@
 ---
 title: "includes promoted to JOIN per-association instead of Rails all-or-nothing eager_loading?"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep -E '_includesToPromoteFromReferences|promotedIncludes' origin/main -- packages/activerecord/src/relation.ts` is empty, and preloadAssociations(records) (relation.ts:1269) takes one argument — the per-association promotion and its extra parameter are gone."
 ---
 
 ## Context

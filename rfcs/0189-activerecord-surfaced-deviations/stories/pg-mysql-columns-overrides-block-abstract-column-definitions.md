@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL and MySQL keep columns overrides Rails lacks, with an inconsistent column_definitions/new_column_from_field pair"
-status: draft
-updated: 2026-08-24
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep -E '  (async )?columns\\(' origin/main -- packages/activerecord/src/connection-adapters/postgresql/schema-statements-class.ts packages/activerecord/src/connection-adapters/abstract-mysql-adapter.ts` is empty — PG and MySQL reach the abstract columns body."
 ---
 
 ## Context

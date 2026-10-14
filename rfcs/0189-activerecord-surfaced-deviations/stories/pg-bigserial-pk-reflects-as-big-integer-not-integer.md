@@ -1,7 +1,7 @@
 ---
 title: "A PostgreSQL bigserial primary key reflects as big_integer where Rails says integer"
-status: draft
-updated: 2026-08-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: ["activerecord"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep big_integer origin/main -- packages/activerecord/src/connection-adapters packages/activerecord/src/reflection.test.ts` is empty — PG no longer reflects a bigserial PK as big_integer."
 ---
 
 ## Context

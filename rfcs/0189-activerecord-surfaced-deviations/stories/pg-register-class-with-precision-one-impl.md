@@ -1,7 +1,7 @@
 ---
 title: "One register_class_with_precision, not two"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep registerClassWithPrecision origin/main -- packages/activerecord/src/connection-adapters/postgresql` is empty; the only port is AbstractAdapter.registerClassWithPrecision (abstract-adapter.ts:1579)."
 ---
 
 # One `register_class_with_precision`, not two

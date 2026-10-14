@@ -1,7 +1,7 @@
 ---
 title: "decompose-instantiate-onto-allocate-init-with-attributes"
-status: ready
-updated: 2026-08-24
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main persistence.ts:1095-1110 instantiateInstanceOf is `attributesBuilder().buildFromDatabase(...)` then `klass.allocate().initWithAttributes(attributes, false, block)`, and core.ts:412-430 initWithAttributes runs initInternals, the block, find and initialize callbacks as core.rb:509-520. (The new per-record defineAttributeMethod loop at :1105-1109 is a separate deviation if anyone wants to file it.)"
 ---
 
 ## Context

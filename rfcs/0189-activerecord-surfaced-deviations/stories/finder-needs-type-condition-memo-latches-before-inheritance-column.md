@@ -1,7 +1,7 @@
 ---
 title: "finder_needs_type_condition? memoizes true before consulting the inheritance column"
-status: draft
-updated: 2026-08-22
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main inheritance.ts:166-170 memoizes `!isDescendsFromActiveRecord()`, and isDescendsFromActiveRecord (:78-89) reads `columnsHash()` / `inheritanceColumn` on its final arm, as inheritance.rb:78-95."
 ---
 
 # `finder_needs_type_condition?` memoizes `true` before consulting the inheritance column

@@ -1,7 +1,7 @@
 ---
 title: "Destroy-callback belongs_to preload reads callback source text; Rails loads lazily at the dereference"
-status: draft
-updated: 2026-08-24
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Duplicate of drop-sync-belongs-to-reader-and-destroy-preload-shim (ready, this RFC), which owns deleting the same beforeOrAroundCallbackSources / _preloadBelongsToForDestroyCallbacks shim (origin/main base.ts:373, :1533, :2406)."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "mime-responds-reaches-base-by-class-body-assignment-not-include"
-status: draft
-updated: 2026-10-10
+status: in-progress
+updated: 2026-10-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8911
+claim: "2026-10-14T19:19:36Z"
+assignee: "debug-exceptions-gates-on-wrapper-show-and-request-headers"
 blocked-by: null
 closed-reason: null
 ---

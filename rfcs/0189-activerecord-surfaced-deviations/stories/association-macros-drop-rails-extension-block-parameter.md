@@ -1,7 +1,7 @@
 ---
 title: "Association macros drop Rails' &extension block parameter, so the block form of an association extension has no spelling"
-status: draft
-updated: 2026-08-23
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#8073 (7f8208e242, "has_many block extensions"): origin/main associations.ts:169-189 hasMany and hasAndBelongsToMany take `extension?: (mod: Module) => void` — exactly the two macros Rails gives `&extension` (vendor associations.rb:1302,1870; has_one :1498 and belongs_to :1689 take none).'
 ---
 
 ## Context

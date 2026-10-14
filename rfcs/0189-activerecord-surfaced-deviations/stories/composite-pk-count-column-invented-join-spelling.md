@@ -1,7 +1,7 @@
 ---
 title: "composite-pk-count-column-invented-join-spelling"
-status: draft
-updated: 2026-08-02
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Duplicate: the invented `aggregateTarget` columnName.join(",") helper (origin/main relation/calculations.ts:734, called :895) is owned by the newer, sharper story calculations-inlines-type-caster-try-and-drops-aggregate-target in this RFC, whose AC deletes it.'
 ---
 
 ## Context

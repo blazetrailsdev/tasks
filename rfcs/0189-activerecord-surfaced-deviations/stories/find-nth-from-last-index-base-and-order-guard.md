@@ -1,7 +1,7 @@
 ---
 title: "find_nth_from_last diverges from Rails on index base and the order/limit guard"
-status: draft
-updated: 2026-08-16
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main relation/finder-methods.ts:231-245 findNthFromLast is finder_methods.rb:621-633 — loaded → records[-index], ordered_relation with empty order or limit/offset → records[-index], else reverse_order.offset(index - 1).first."
 ---
 
 ## Context

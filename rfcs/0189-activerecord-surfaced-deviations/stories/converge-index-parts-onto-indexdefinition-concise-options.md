@@ -1,7 +1,7 @@
 ---
 title: "Drop the dumper's duplicate conciseOptions and read IndexDefinition directly"
-status: draft
-updated: 2026-08-02
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#8715 (8531daa85f): `git grep conciseOptions origin/main -- packages/activerecord/src/schema-dumper.ts` is empty."
 ---
 
 ## Context

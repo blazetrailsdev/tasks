@@ -1,7 +1,7 @@
 ---
 title: "Converge HasOneThroughAssociation#replace onto create_through_record"
-status: draft
-updated: 2026-08-20
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#7807 (b9f740a2f8, "converge has_one :through replace"): origin/main has-one-through-association.ts:50-56 replace calls `this.createThroughRecord(record, save)` then sets target.'
 ---
 
 ## Context

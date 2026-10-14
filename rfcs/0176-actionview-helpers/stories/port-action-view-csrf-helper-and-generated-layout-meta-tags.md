@@ -1,7 +1,7 @@
 ---
 title: "port-action-view-csrf-helper-and-generated-layout-meta-tags"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-14
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []

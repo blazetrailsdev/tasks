@@ -1,7 +1,7 @@
 ---
 title: "in_batches validates its options on first iteration, not at the call site (batches.rb:250)"
-status: draft
-updated: 2026-08-16
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main relation/batches.ts:145-146 inBatches calls ensureValidOptionsForBatchingBang(cursor, start, finish, order) eagerly as its second statement, as batches.rb:249-250."
 ---
 
 ## Context

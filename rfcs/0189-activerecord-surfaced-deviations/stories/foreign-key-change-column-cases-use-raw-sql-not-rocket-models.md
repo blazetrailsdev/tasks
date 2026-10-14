@@ -1,7 +1,7 @@
 ---
 title: "ForeignKeyChangeColumnTest cases drive rows with raw SQL instead of Rails' Rocket/Astronaut models"
-status: draft
-updated: 2026-07-29
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main migration/foreign-key.test.ts:66-75 declares the Rails Rocket (has_many :astronauts) and Astronaut models and drives the change-column cases through them; `git grep executeMutation origin/main -- packages/activerecord/src/migration/foreign-key.test.ts` is empty."
 ---
 
 ## Context

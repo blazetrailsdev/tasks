@@ -1,7 +1,7 @@
 ---
 title: "encrypt_attribute must call scheme_for inside the decorator block, not via a lazy getter"
-status: draft
-updated: 2026-08-21
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main encryption/encryptable-record.ts:237-249 encryptAttribute calls schemeFor(options) inside the decorateAttributes block, then builds EncryptedAttributeType with columnsHash()[name]?.default, as encryptable_record.rb:84-96; the call-mismatches-exclude/activerecord/encryption baseline no longer exists."
 ---
 
 ## Context

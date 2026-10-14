@@ -1,7 +1,7 @@
 ---
 title: "Base#inspect / pretty_print render unqualified class name for namespaced models"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main core.ts:912 inspectWithAttributes renders `#<${rbModToS(this.constructor)} ...>` (the qualified Module#to_s), and pretty-print.ts no longer exists; `git grep -E 'ctor.name|constructor.name' origin/main -- packages/activerecord/src/core.ts` is empty."
 ---
 
 ## Context

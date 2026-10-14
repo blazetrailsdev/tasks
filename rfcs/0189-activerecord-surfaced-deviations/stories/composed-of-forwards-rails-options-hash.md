@@ -1,7 +1,7 @@
 ---
 title: "composed_of takes a class-name String and forwards its own options hash to Reflection.create"
-status: draft
-updated: 2026-08-18
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#8715 (8531daa85f, "composed_of takes class_name as a String"): origin/main aggregations.ts:18 `className?: string`, :26 assertValidKeys, :37 `options.className ?? camelize(name)`; scripts/api-compare/call-mismatches-exclude/activerecord/aggregations.json no longer exists.'
 ---
 
 # composed_of cannot forward its options hash — ComposedOfOptions holds a class, not a class-name String

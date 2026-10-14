@@ -1,7 +1,7 @@
 ---
 title: "_createRecord narrows its attribute_names default where Rails narrows in attributes_for_create"
-status: draft
-updated: 2026-08-25
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in eefec34177 (RFC 0128 constructors): origin/main persistence.ts:1013-1018 `_createRecord(attributeNames = this.attributeNames(), ...)` then `attributesForCreate(attributeNames)`, as persistence.rb:918-942; the attributeTypes filter is gone."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "encrypt fixture rows through type_for_attribute, retiring the pending-encryptions walk"
-status: draft
-updated: 2026-08-21
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#7728 (7ae73ef779, "retire applyPendingEncryptions"): `git grep -E ''_pendingEncryptions|encryptFixtureRows'' origin/main -- packages/activerecord/src` is empty.'
 ---
 
 ## Context

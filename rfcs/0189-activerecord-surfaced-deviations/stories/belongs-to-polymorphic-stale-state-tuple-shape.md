@@ -1,7 +1,7 @@
 ---
 title: "belongs_to polymorphic staleState: converge JSON.stringify shim to Rails [fk, type] tuple"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#8449 (daba32dff7): origin/main belongs-to-polymorphic-association.ts:36-41 staleState returns `[foreignKey, owner.readAttribute(foreignType)]`; the JSON.stringify shape is gone."
 ---
 
 ## Context

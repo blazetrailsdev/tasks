@@ -1,7 +1,7 @@
 ---
 title: "get_primary_key drops Rails' table_exists? reflection branch"
-status: draft
-updated: 2026-07-29
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Duplicate: origin/main attribute-methods/primary-key.ts now has Rails' four-branch get_primary_key; the one residual — the third branch's table_exists?/primary_keys calls, tagged @missingRailsCall at :279,:288 — is owned by converge-get-primary-key-schema-cache-arm-to-table-exists in this RFC."
 ---
 
 # get_primary_key drops Rails' table_exists? reflection branch

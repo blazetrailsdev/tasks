@@ -1,7 +1,7 @@
 ---
 title: "Locking::Optimistic#increment! drops the locking-column bump and clear_attribute_change"
-status: draft
-updated: 2026-08-18
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main locking/optimistic.ts:73-84 incrementBang calls super then, when lockingEnabled, bumps the locking column and clearAttributeChange, as optimistic.rb:63-70."
 ---
 
 # Locking::Optimistic#increment! drops the entire locking arm

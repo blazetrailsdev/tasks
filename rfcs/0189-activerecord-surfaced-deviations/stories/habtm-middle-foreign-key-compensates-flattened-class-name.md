@@ -1,7 +1,7 @@
 ---
 title: "HABTM middle has_many passes an owner foreign key Rails derives"
-status: draft
-updated: 2026-08-21
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep _demodulizedName origin/main -- packages/activerecord/src/associations/builder/has-and-belongs-to-many.ts` is empty; middleOptions (:102-103) sets foreignKey only when the declaration supplied one, as has_and_belongs_to_many.rb:69-75."
 ---
 
 ## Context

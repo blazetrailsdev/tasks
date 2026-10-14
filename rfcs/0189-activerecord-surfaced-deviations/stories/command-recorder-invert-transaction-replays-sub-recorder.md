@@ -1,7 +1,7 @@
 ---
 title: "invert_transaction replays a sub-recorder instead of raising unconditionally"
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#7038 (21dba9ac23): origin/main migration/command-recorder.ts:388-399 invertTransaction builds a sub-recorder, reverts the block and returns a replaying proc, as command_recorder.rb:186-195; the IrreversibleMigration throw is gone."
 ---
 
 ## Context

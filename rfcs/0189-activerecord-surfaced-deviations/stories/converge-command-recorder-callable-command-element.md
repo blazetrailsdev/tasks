@@ -1,7 +1,7 @@
 ---
 title: "CommandRecorder commands carry a callable third element, as in Rails"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#7020 (8c205e30a3, "converge the command-recorder tuple"): origin/main migration/command-recorder.ts:61 `record(cmd, args, block?)` and :133-135 change_table records a callable `bulkChangeTable(tableName, commands)` block; the `{ cmd, args }` shape is gone.'
 ---
 
 ## Context

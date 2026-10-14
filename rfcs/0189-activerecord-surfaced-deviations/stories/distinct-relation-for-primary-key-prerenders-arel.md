@@ -1,7 +1,7 @@
 ---
 title: "distinct_relation_for_primary_key pre-renders arel where Rails passes the tree to select_rows"
-status: draft
-updated: 2026-08-11
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main connection-adapters/abstract/schema-statements.ts:1148 `this.selectRows(limited.arel(), "SQL")` passes the Arel tree, as schema_statements.rb does; the toSql pre-render is gone.'
 ---
 
 ## Context

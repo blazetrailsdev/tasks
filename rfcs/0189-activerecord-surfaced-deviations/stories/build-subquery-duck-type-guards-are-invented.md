@@ -1,7 +1,7 @@
 ---
 title: "build_subquery's except/arel duck-type guards are trails inventions"
-status: draft
-updated: 2026-08-22
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#8392 (ea4bfa7591): origin/main relation/query-methods.ts:1317-1326 buildSubquery opens with `this.except("optimizerHints").arel().as(subqueryAlias)` unguarded; `git grep ''Cannot build subquery'' origin/main -- packages/activerecord` is empty.'
 ---
 
 ## Context

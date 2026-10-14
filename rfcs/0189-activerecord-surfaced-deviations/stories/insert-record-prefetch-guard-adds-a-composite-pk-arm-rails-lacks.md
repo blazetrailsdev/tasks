@@ -1,7 +1,7 @@
 ---
 title: "_insert_record's prefetch guard adds a composite-PK exclusion Rails does not have"
-status: draft
-updated: 2026-08-23
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main persistence.ts:289 is `if (ctor.isPrefetchPrimaryKey() && primaryKey)` with no `!Array.isArray(primaryKey)` arm, as persistence.rb:242-247."
 ---
 
 ## Context

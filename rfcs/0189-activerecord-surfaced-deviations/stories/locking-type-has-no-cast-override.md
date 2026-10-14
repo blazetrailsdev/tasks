@@ -1,7 +1,7 @@
 ---
 title: "LockingType adds a cast() override Rails does not have"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main locking/optimistic.ts:12-24 LockingType extends DelegateClass(ValueType) and overrides only deserialize/serialize (toInt), as optimistic.rb:206-217; no cast override."
 ---
 
 ## Context

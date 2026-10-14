@@ -1,7 +1,7 @@
 ---
 title: "_load_from_sql collapses Rails' STI / homogeneous branch because it never sees the Result"
-status: draft
-updated: 2026-08-19
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in 9b1b04c67e ("converge _load_from_sql"): origin/main querying.ts:242-246 branches on `resultSet.includesColumn(this.inheritanceColumn)` and calls instantiateInstanceOf for the homogeneous arm (querying.rb:71-95).'
 ---
 
 # `_load_from_sql` collapses Rails' STI / homogeneous branch because it never sees the Result

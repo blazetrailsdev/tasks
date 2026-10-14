@@ -1,6 +1,6 @@
 ---
 title: "Port mime_type_test.rb's remainder and permissions_policy_test.rb under Rails names"
-status: ready
+status: claimed
 updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
@@ -14,8 +14,8 @@ deps-rfc: []
 est-loc: 300
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T19:53:30Z"
+assignee: "port-mime-type-and-permissions-policy-tests"
 blocked-by: null
 closed-reason: null
 ---

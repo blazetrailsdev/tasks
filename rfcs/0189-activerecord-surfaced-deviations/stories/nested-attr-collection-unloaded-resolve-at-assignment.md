@@ -1,7 +1,7 @@
 ---
 title: "Nested-attributes collection arm still only marks already-loaded records"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: same evidence as nested-attr-collection-existing-records-still-skips-unloaded — origin/main nested-attributes.ts:425-438 loads the unloaded collection's existing records via association.scope().where(pk => ids) at assignment."
 ---
 
 ## Context

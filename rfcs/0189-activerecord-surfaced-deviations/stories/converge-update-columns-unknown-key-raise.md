@@ -1,7 +1,7 @@
 ---
 title: "update_columns raises through the attribute set, not an invented pre-check"
-status: draft
-updated: 2026-08-21
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep -E 'UnknownAttributeError|Object.hasOwn\\(attributeTypes' origin/main -- packages/activerecord/src/persistence.ts` is empty — updateColumns' invented pre-check is gone."
 ---
 
 ## Context

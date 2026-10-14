@@ -1,7 +1,7 @@
 ---
 title: "Autosave callback macros take a closure where Rails passes the save-method name"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed (trails#8506, d2463138d8 area): origin/main autosave-association.ts:531-555 addAutosaveAssociationCallbacks takes Rails'' shape — `aroundSave(":aroundSaveCollectionAssociation")`, defineNonCyclicMethod(saveMethod, ...), `afterCreate(saveMethod)`/`afterUpdate(saveMethod)`/`beforeSave(saveMethod)` with the symbol-named method, as autosave_association.rb:189-213.'
 ---
 
 ## Context

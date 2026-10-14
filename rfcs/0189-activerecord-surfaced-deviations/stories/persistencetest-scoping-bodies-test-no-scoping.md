@@ -1,7 +1,7 @@
 ---
 title: "Three PersistenceTest bodies carry Rails names but test no scoping and no assert_difference"
-status: draft
-updated: 2026-08-09
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main persistence.test.ts:1181-1193 "destroy many" is Rails'' Client.find([2,3]) + assertDifference(-2) + frozen check, and :1361-1371 "class level destroy is affected by scoping" is Rails'' Topic.where("1=0").scoping { Topic.destroy(1) } body.'
 ---
 
 ## Context

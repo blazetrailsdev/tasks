@@ -1,7 +1,7 @@
 ---
 title: "registerTask(/postgres/) is wider than Rails' /postgresql/"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Duplicate: the `/postgres/` vs Rails `/postgresql/` pattern (origin/main tasks/postgresql-database-tasks.ts:193) is one of the three points owned by database-tasks-registry-is-pattern-keyed-and-registered-by-name-in-database-tasks in this RFC, which states "The PostgreSQL pattern is /postgresql/" as part of its converged shape.'
 ---
 
 ## Context

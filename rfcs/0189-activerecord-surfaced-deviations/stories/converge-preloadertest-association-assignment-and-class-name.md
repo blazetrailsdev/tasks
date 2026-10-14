@@ -1,7 +1,7 @@
 ---
 title: "Converge PreloaderTest's essay-category assignment and class-name reads onto Rails' form"
-status: draft
-updated: 2026-07-30
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main associations.test.ts:1055 `maryEssay.updateBang({ category: maryCategory })`, the faithful associations_test.rb:1345 form; the hand-written category_id write is gone."
 ---
 
 ## Context

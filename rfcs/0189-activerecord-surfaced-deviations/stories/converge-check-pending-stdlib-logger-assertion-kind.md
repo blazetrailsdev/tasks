@@ -1,7 +1,7 @@
 ---
 title: "Converge migration_test.rb's check-pending stdlib-logger assertion kind"
-status: draft
-updated: 2026-08-28
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#7870 (1a0b8f4bab): origin/main migration.test.ts:2062-2066 "check pending with stdlib logger" now asserts via assertNothingRaised(...).'
 ---
 
 ## Context

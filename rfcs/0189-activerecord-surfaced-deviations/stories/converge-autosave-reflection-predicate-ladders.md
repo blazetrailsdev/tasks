@@ -1,7 +1,7 @@
 ---
 title: "select the autosave callback branch with reflection predicates, not duck-typing ladders"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#8506 (d2463138d8): `git grep -E ''typeof reflection.isCollection|reflection.type === "hasMany"'' origin/main -- packages/activerecord/src/autosave-association.ts` is empty.'
 ---
 
 ## Context

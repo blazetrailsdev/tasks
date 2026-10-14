@@ -1,7 +1,7 @@
 ---
 title: "assign_nested_attributes_for_collection_association still skips an unloaded collection"
-status: draft
-updated: 2026-08-22
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main nested-attributes.ts:425-438 — `association.isLoaded() ? target : scope.where(pk => attributeIds)` queried at assignment, as nested_attributes.rb:510-515; the KNOWN LIMITATION comment is gone."
 ---
 
 # assign_nested_attributes_for_collection_association skips an unloaded collection

@@ -1,7 +1,7 @@
 ---
 title: "has_one_through: association(name).build skips the through-proxy load that build#{Name} runs"
-status: draft
-updated: 2026-08-03
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: has-one-through-association.ts no longer overrides loadDisplacedForBuild (`git grep loadDisplacedForBuild origin/main -- packages/activerecord/src/associations` → only singular-association.ts:40-46 and has-one-association.ts:88), so association(name).build and build#{Name} share SingularAssociation#build's path; the residual hook is tracked as has-one-replace-sync-arm-skips-load-and-remove-target."
 ---
 
 ## Context

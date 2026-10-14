@@ -1,6 +1,6 @@
 ---
 title: "DebugExceptions gates on wrapper.show?(request) and request headers, not constructor flags"
-status: draft
+status: in-progress
 updated: 2026-10-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8911
+claim: "2026-10-14T19:19:36Z"
+assignee: "debug-exceptions-gates-on-wrapper-show-and-request-headers"
 blocked-by: null
 closed-reason: null
 ---

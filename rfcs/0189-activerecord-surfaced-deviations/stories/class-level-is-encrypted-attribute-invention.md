@@ -1,7 +1,7 @@
 ---
 title: "Class-level isEncryptedAttribute is a trails invention; converge to encrypted_attributes membership"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#7729 (1d04eed76b): the class-level isEncryptedAttribute(klass, attr) is gone from encryption.ts; `git grep 'function isEncryptedAttribute(' origin/main -- packages` finds only the Rails instance predicate at encryption/encryptable-record.ts:143."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "composite-fk-cache-version-has-no-datetime-column"
-status: draft
-updated: 2026-08-17
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Not actionable toward Rails: the two invalid tests are already gone (`git grep 'cache_version over eagerLoad' origin/main -- packages` is empty; the .trails.test.ts file no longer exists), and the remaining ACs are conditional on Rails adding a datetime column to a cpk_* table, which vendor/rails v8.0.2 schema.rb:243-250 does not have. Nothing left that converges onto Rails."
 ---
 
 ## Context

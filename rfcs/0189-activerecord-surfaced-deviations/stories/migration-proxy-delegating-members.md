@@ -1,7 +1,7 @@
 ---
 title: "MigrationProxy carries Rails' delegated migrate/disable_ddl_transaction members"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main migration.ts:1420-1435 MigrationProxy has migrate/announce/write/disableDdlTransaction members delegating to the loaded migration, as migration.rb:1187."
 ---
 
 ## Context

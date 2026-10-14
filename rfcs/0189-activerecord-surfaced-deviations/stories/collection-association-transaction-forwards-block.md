@@ -1,7 +1,7 @@
 ---
 title: "CollectionAssociation#transaction forwards its block instead of re-wrapping it"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#8474 (42f6028e0d): origin/main collection-association.ts:218 `return (this.reflection.klass as any).transaction(block)`; `Promise.resolve(block())` is gone."
 ---
 
 ## Context

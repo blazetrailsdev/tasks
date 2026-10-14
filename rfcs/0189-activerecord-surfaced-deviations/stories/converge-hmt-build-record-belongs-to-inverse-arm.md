@@ -1,7 +1,7 @@
 ---
 title: "HasManyThroughAssociation#build_record drops the non-Rails belongs_to inverse arm"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#8251 (a85843f695): origin/main has-many-through-association.ts:139-169 buildRecord wires the through record onto only the collection and has_one inverse shapes, as has_many_through_association.rb:89-111."
 ---
 
 ## Context

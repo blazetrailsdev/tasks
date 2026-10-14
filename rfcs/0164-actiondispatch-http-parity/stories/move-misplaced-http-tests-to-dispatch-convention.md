@@ -1,6 +1,6 @@
 ---
 title: "Move the misplaced HTTP tests to their dispatch/ convention paths and port the stragglers"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null

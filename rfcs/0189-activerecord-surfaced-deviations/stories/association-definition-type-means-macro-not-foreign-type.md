@@ -1,7 +1,7 @@
 ---
 title: "AssociationDefinition.type holds the macro where Rails' reflection.type is the polymorphic column"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Premise gone: trails#7227 (3cdfb822f7, "retire the ad-hoc AssociationDefinition holders") — origin/main associations.ts:75 `AssociationDefinition` is now `(AssociationReflection | ThroughReflection) & {...}`; `git grep ''type: "belongsTo" | "hasOne"'' origin/main -- packages/activerecord/src/associations.ts` is empty.'
 ---
 
 ## Context

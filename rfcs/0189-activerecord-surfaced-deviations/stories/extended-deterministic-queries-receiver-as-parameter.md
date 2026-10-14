@@ -1,7 +1,7 @@
 ---
 title: "extended-deterministic-queries-receiver-as-parameter"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main encryption/extended-deterministic-queries.ts:20-21,110-118 RelationQueries/CoreQueries are Modules prepended/included onto Relation/Base whose methods read `this` and call `RelationQueries.superMethod(this, "where")`; the (original, receiver, args) static shape is gone.'
 ---
 
 ## Context

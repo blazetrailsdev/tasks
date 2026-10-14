@@ -1,7 +1,7 @@
 ---
 title: "JoinPart#extract_record takes an alias string where Rails takes column/alias pairs"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in 5e6b018e5d (fold JoinDependency#instantiateFromRows): origin/main join-dependency/join-part.ts:53-70 extractRecord(row, columnNamesWithAlias) is Rails' while-loop over column.name/column.alias (join_part.rb:47-67)."
 ---
 
 ## Context

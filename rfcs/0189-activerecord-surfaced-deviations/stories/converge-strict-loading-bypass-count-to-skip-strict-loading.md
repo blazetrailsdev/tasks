@@ -1,7 +1,7 @@
 ---
 title: "Converge the owner-level _strictLoadingBypassCount onto Rails' association-level @skip_strict_loading"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep -E '_strictLoadingBypassCount|_withoutStrictLoading' origin/main -- packages/activerecord/src` is empty."
 ---
 
 ## Context

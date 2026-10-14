@@ -1,7 +1,7 @@
 ---
 title: "Delete the dead, nested-through-divergent transaction() in through-association.ts"
-status: draft
-updated: 2026-08-20
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Premise gone: origin/main associations/through-association.ts:40-45 `transaction` is now exported and is Rails' body — `this.throughReflection().klass.transaction(block)` — with throughReflection (:48+) walking the nested chain as through_association.rb:10-23; it is neither dead nor divergent."
 ---
 
 ## Context

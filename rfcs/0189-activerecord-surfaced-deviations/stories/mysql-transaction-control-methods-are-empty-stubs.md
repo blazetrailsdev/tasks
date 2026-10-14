@@ -1,7 +1,7 @@
 ---
 title: "AbstractMysqlAdapter's five transaction-control methods are empty stubs; exec_restart_db_transaction is an unimplemented no-op behind a true supports? flag"
-status: draft
-updated: 2026-08-15
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main abstract-mysql-adapter.ts:352-397 begin/commit/exec_rollback_db_transaction call internalExecute("BEGIN"/"COMMIT"/"ROLLBACK", "TRANSACTION", ...) with Rails'' allowRetry/materializeTransactions flags, as abstract_mysql_adapter.rb:227-252.'
 ---
 
 ## Context

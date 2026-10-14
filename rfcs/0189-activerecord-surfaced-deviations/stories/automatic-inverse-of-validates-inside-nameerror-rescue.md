@@ -1,7 +1,7 @@
 ---
 title: "automatic_inverse_of validates candidates inside the NameError rescue Rails puts it outside"
-status: draft
-updated: 2026-08-18
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#8527 (8a34dbcc75): origin/main reflection.ts:678-695 rescues NameError around the _reflectOnAssociation lookups only and calls validInverseReflection after the try/catch, matching reflection.rb:762-777."
 ---
 
 # automatic_inverse_of validates candidates inside the NameError rescue Rails puts it outside

@@ -1,7 +1,7 @@
 ---
 title: "ShowExceptions#call gates on wrapper.show? (unset show_exceptions renders)"
-status: draft
-updated: 2026-09-28
+status: in-progress
+updated: 2026-10-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8911
+claim: "2026-10-14T19:56:05Z"
+assignee: "show-exceptions-call-gates-on-wrapper-show"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "HMT delete_records guards update_counter behind count > 0; Rails does not (has_many_through_association.rb:168-173)"
-status: draft
-updated: 2026-08-19
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep 'count > 0' origin/main -- packages/activerecord/src/associations/has-many-through-association.ts` is empty."
 ---
 
 # HMT delete_records guards update_counter behind `count > 0`; Rails does not

@@ -1,7 +1,7 @@
 ---
 title: "Enum subtype is inferred by name and looked up in a registry, not taken from the reflected column type"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep -E 'inferSubtype|subtypeInstance' origin/main -- packages/activerecord/src/enum.ts` is empty."
 ---
 
 ## Context

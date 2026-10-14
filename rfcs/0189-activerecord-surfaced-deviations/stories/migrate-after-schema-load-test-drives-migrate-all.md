@@ -1,7 +1,7 @@
 ---
 title: "Drive the schema-load migrate regression test through migrate_all/initialize_database"
-status: ready
-updated: 2026-09-04
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main tasks/database-tasks-migrate-after-schema-load.trails.test.ts:54,81 drives `DatabaseTasks.migrateAll()` after the schema load, the reported repro path."
 ---
 
 ## Context

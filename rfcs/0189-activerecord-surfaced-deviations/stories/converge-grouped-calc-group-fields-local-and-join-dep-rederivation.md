@@ -1,7 +1,7 @@
 ---
 title: "Converge executeGroupedCalculation's groupNodes local and eager re-derivation onto calculations.rb:515-525"
-status: draft
-updated: 2026-08-18
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: on origin/main relation/calculations.ts has no `groupNodes` local and applyJoinDependency is called only from calculate/pluck/ids (:393,:441,:523), not from executeGroupedCalculation."
 ---
 
 ## Context

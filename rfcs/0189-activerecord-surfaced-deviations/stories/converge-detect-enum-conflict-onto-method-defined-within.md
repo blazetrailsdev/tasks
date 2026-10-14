@@ -1,7 +1,7 @@
 ---
 title: "detect_enum_conflict! bypasses method_defined_within? on both arms"
-status: draft
-updated: 2026-08-22
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#7761 (47b7672f7a): origin/main enum.ts:329,340 detectEnumConflictBang calls isMethodDefinedWithin(methodName, ActiveRecord.Relation) / (..., _enumMethodsModule(), Module) as enum.rb:374-386; no @missingRailsCall left in enum.ts."
 ---
 
 ## Context

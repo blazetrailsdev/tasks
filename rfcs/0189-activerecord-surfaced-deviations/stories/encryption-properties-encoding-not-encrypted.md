@@ -1,7 +1,7 @@
 ---
 title: "Properties has an invented `encrypted` accessor where Rails has `encoding`"
-status: draft
-updated: 2026-08-18
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main encryption/properties.ts:38-43 DEFAULT_PROPERTIES carries `encoding: \"e\"` and there is no `encrypted` accessor (`git grep -E 'get encrypted\\(' origin/main -- packages/activerecord/src/encryption/properties.ts` is empty)."
 ---
 
 # Properties has an invented `encrypted` accessor where Rails has `encoding`

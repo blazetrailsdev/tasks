@@ -1,7 +1,7 @@
 ---
 title: 'charset_current/collation_current hardcode "primary" and drop Rails'' db_name parameter'
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main tasks/database-tasks.ts:297-321 charsetCurrent/collationCurrent take (envName = env, dbName = name), call configsFor({ envName, name: dbName }) then charset/collation, as database_tasks.rb:327-340."
 ---
 
 ## Context

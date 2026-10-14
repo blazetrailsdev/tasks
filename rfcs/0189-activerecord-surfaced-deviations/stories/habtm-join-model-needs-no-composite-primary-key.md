@@ -1,7 +1,7 @@
 ---
 title: "HABTM join model declares a composite primary key Rails does not"
-status: draft
-updated: 2026-08-21
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep 'joinModel.primaryKey' origin/main -- packages/activerecord/src/associations/builder/has-and-belongs-to-many.ts` is empty — the join model no longer gets a composite PK."
 ---
 
 ## Context

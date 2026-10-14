@@ -1,7 +1,7 @@
 ---
 title: '_delete_record issues an unnamed DELETE where Rails passes "#{self} Destroy"'
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main persistence.ts:369 `klass.withConnection((c) => c.delete(dm, \\`${klass.name} Destroy\\`))`, as persistence.rb:295-297."
 ---
 
 ## Context

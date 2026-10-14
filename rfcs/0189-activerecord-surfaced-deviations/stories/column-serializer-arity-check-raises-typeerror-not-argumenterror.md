@@ -1,7 +1,7 @@
 ---
 title: "ColumnSerializer#check_arity_of_constructor raises TypeError where Rails raises ArgumentError"
-status: draft
-updated: 2026-08-22
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -18,7 +18,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main coders/column-serializer.ts:83-84 rescues ArgumentError and raises `new ArgumentError(...)` (column_serializer.rb:53-56); no TypeError left in the file."
 ---
 
 ## Context

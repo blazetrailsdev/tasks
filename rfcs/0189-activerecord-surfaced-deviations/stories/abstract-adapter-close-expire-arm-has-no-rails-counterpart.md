@@ -1,7 +1,7 @@
 ---
 title: "Converge AbstractAdapter#close onto Rails' bare pool.checkin"
-status: draft
-updated: 2026-08-02
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed in trails#7779 (46ca0dfc9b, "converge AbstractAdapter#close"): origin/main abstract-adapter.ts:1541-1543 close() is now `this.pool.checkin(this)` alone; `git grep ''instanceof NullPool'' origin/main -- packages/activerecord/src/connection-adapters/abstract-adapter.ts` is empty.'
 ---
 
 ## Context

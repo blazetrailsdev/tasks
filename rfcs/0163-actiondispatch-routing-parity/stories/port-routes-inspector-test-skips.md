@@ -1,6 +1,6 @@
 ---
 title: "Port routing/inspector_test.rb's 16 skipped tests"
-status: ready
+status: in-progress
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["mapping-make-route-source-location", "routing-invented-surface-and-gener
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8912
+claim: "2026-10-14T19:41:04Z"
+assignee: "port-actionview-polymorphic-routes-test-part-2"
 blocked-by: null
 closed-reason: null
 ---

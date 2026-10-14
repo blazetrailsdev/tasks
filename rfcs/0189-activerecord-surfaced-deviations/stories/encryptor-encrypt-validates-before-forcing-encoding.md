@@ -1,7 +1,7 @@
 ---
 title: "Encryptor#encrypt validates the payload before forcing the encoding; Rails forces first"
-status: draft
-updated: 2026-08-23
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main encryption/encryptor.ts:49-61 encrypt forces encoding when cipherOptions.deterministic and then validatePayloadType, in encryptor.rb:49-52's order."
 ---
 
 ## Context
