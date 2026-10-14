@@ -5,7 +5,8 @@ updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-actionview-polymorphic-routes-test-part-1
 deps-rfc: []
 est-loc: null
 priority: null
