@@ -1,5 +1,5 @@
 ---
-title: "activerecord: each describe's test class is a named ActiveRecord::TestCase constant; describedClasses and topLevel are deleted"
+title: "activerecord: each vitest describe gets a Minitest describe class; every activerecord test is an ActiveRecord::TestCase; describedClasses and topLevel are deleted"
 status: claimed
 updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
@@ -8,7 +8,7 @@ packages: []
 deps:
   - activerecord-test-case-remaining-members
 deps-rfc: []
-est-loc: 700
+est-loc: 400
 priority: null
 pr: null
 claim: "2026-10-14T01:31:42Z"
@@ -19,60 +19,45 @@ closed-reason: null
 
 ## Context
 
-`activerecord-test-case-remaining-members` put `ActiveRecord::TestCase`'s
-remaining includes and methods on the class
-(`packages/activerecord/src/cases/test-case.ts`, mirroring
-`vendor/rails/v8.0.2/activerecord/test/cases/test_case.rb:21-295`) and moved
-every caller of a `test_case.rb` method onto the test object through
-`fixtures(...).self()`. Its third criterion did not ship: `describedClasses` and
-`topLevel` are still in `packages/activesupport/src/testing/autorun.ts`, and
-their `@noRailsEquivalent CONVERGEABLE` receipts now name this story.
-
-They exist because `fixtures()` (`packages/activerecord/src/test-fixtures.ts`,
+`fixtures()` (`packages/activerecord/src/test-helpers/use-fixtures.ts`,
 `testCaseClassFor`) builds an anonymous `ActiveRecord::TestCase` subclass per
-describe and registers it by suite object, and registers a file-level call under
-`topLevel`. They go when a describe's class is the constant its suite is named
-after, which `autorun.ts` already resolves with `safeConstantize(suite.name)`.
+describe and registers it in `describedClasses`, keyed by suite object, with a
+file-level call registered under `topLevel`. Both live in
+`packages/activesupport/src/testing/autorun.ts` with
+`@noRailsEquivalent CONVERGEABLE` receipts naming this story. Every describe
+that never calls `fixtures()` gets a bare `ActiveSupport::TestCase`, so 405
+activerecord test files run without `use_transactional_tests`
+(`vendor/rails/v8.0.2/activerecord/test/cases/test_case.rb:33`) or
+`check_connection_leaks` (`:35-38`), although Rails has every test class inherit
+`ActiveRecord::TestCase` (`:21`).
 
-Measured on trails main at the time of filing, in `packages/activerecord/src`:
+The original premise was to name every describe's class as a constant and have
+`safeConstantize(suite.name)` resolve it. The repo owner ruled that out on
+2026-10-14: trails stays in the vitest ecosystem, with `describe` / `it` as the
+base. A ~570-file codemod buys nothing a metric measures, and the ~950
+prose-named describes in `.trails` tests can't be constants anyway.
 
-- 898 `fixtures(` calls: 85 at file top level (the `topLevel` arm), 813 inside a
-  describe, 55 of those in a nested describe.
-- 1,636 top-level describes: 683 carry a constant-shaped name
-  (`BasicsTest`), 953 carry prose, which no constant can be named after.
-- Only a test under `fixtures()` is an `ActiveRecord::TestCase`; every other
-  activerecord test gets an `ActiveSupport::TestCase`. Rails has every one of
-  them inherit `ActiveRecord::TestCase` (`test_case.rb:21`), which turns on
-  `use_transactional_tests` (`:33`) and `check_connection_leaks` (`:35-38`)
-  for the whole suite.
-- The harness class `fixtures()` builds (`rootTestCase`) overrides
-  `beforeSetup` to warm the schema cache, resolve the registry's model classes
-  and prime the fixture cache with `await fixture.find()`, and tracks
-  `currentTestCase` for `self()`. None of that is Rails surface.
-
-Smaller gaps found while porting the class, all in
-`packages/activerecord/src/cases/test-case.ts`:
-
-- `check_connection_leaks` reads `conn.owner.backtrace` and calls
-  `conn.owner&.kill` (`test_case.rb:66-67`). ruby-compat's `Thread` has no
-  `backtrace` and its `Fiber` has no `kill`, so both go through a cast.
-- `assert_queries_match` calls `assert_operator` (`test_case.rb:123`); Minitest's
-  `assert_operator` is not ported, so the body calls `assert` with the
-  comparison inlined.
-- `LoadSchemaHelper#load_schema`
-  (`vendor/rails/v8.0.2/activerecord/test/support/load_schema_helper.rb:4-20`)
-  takes no argument; `support/load-schema-helper.ts`'s `loadSchema` takes the
-  adapter. `AdapterHelper#current_adapter?`
-  (`test/support/adapter_helper.rb:4-9`) asks `lease_connection.is_a?`;
-  `support/adapter-helper.ts` compares the test lane.
+The Ruby model for a vitest `describe` is Minitest's own `Kernel#describe`
+(`vendor/minitest/v5.27.0/lib/minitest/spec.rb:86-102`). Each block is a class
+created by `sclas.create(name, desc)` (`:275-286`) from the enclosing describe's
+class, or at the top from `spec_type(desc)` (`:165-173`), which searches the
+`TYPES` that `register_spec_type` (`:151-158`) prepends to. A prose description
+is fine there: the class is not a constant.
 
 ## Acceptance criteria
 
-- [ ] Each activerecord describe's test class is a named `ActiveRecord::TestCase`
-      subclass that `safeConstantize(suite.name)` resolves, and its fixtures are
-      declared on that class.
-- [ ] `describedClasses` and `topLevel` are deleted with their receipts.
-- [ ] Every activerecord test is an `ActiveRecord::TestCase`, with
-      `useTransactionalTests = false` only where the Rails class sets it.
-- [ ] `check_connection_leaks` reads `owner.backtrace` and calls `owner.kill`
-      with no cast, and `assert_queries_match` calls `assertOperator`.
+- [ ] `autorun.ts` ports `TYPES`, `register_spec_type`, `spec_type` and
+      `create`, and resolves each test's class through a `Kernel#describe` port
+      over the vitest suite chain. A suite named after a `TestCase` constant is
+      still that class. A file-level class sits under the top-level describes.
+- [ ] `describedClasses` and `topLevel` are deleted with their receipts, and
+      `fixtures()` declares on the describe's class.
+- [ ] `cases/helper.ts` registers activerecord's spec type, so every
+      activerecord test is an `ActiveRecord::TestCase`. A Rails-backed describe
+      sets `useTransactionalTests = false` only where its Rails class does. A
+      Rails-backed test that breaks under the transactional default is
+      converged to its Rails body, not opted out.
+- [ ] Out of scope: `check_connection_leaks`' `owner.backtrace` / `owner.kill`
+      casts and `assert_queries_match`'s inlined `assert_operator`. They wait on
+      ruby-compat `Thread#backtrace` / `Fiber#kill` and Minitest
+      `assert_operator`, filed separately.
