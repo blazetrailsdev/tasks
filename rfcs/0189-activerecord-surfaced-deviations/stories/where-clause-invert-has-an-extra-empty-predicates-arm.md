@@ -1,7 +1,7 @@
 ---
 title: "WhereClause#invert adds an empty-predicates branch Rails does not have"
-status: draft
-updated: 2026-08-18
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main relation/where-clause.ts:61-69 invert has Rails' two branches (single predicate → invertPredicate, else Not(ast)), as where_clause.rb:83-90."
 ---
 
 ## Context

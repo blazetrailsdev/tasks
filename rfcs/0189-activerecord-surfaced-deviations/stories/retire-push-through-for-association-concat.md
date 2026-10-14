@@ -1,7 +1,7 @@
 ---
 title: "Retire CollectionProxy#_pushThrough for proxy_association.concat"
-status: draft
-updated: 2026-08-13
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

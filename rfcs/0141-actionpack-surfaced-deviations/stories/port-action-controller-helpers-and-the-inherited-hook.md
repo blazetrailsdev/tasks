@@ -1,6 +1,6 @@
 ---
 title: "Fire ActionController::Railties::Helpers#inherited at class definition, not first construction"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"

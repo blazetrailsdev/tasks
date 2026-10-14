@@ -1,7 +1,7 @@
 ---
 title: "InternalMetadata#set accepts nil so record_environment needs no cast"
-status: draft
-updated: 2026-08-07
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

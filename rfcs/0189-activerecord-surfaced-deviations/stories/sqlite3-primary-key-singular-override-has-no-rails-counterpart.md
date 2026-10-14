@@ -1,7 +1,7 @@
 ---
 title: "SQLite3Adapter#primaryKey is a bespoke override; Rails has only primary_keys plus the abstract delegation"
-status: draft
-updated: 2026-08-25
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep -E '  (async )?primaryKey\\(' origin/main -- packages/activerecord/src/connection-adapters/sqlite3-adapter.ts` is empty — the bespoke singular override is gone."
 ---
 
 ## Context

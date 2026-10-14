@@ -1,7 +1,7 @@
 ---
 title: "initialize-database-retry-fails-after-creating-a-postgres-database"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []

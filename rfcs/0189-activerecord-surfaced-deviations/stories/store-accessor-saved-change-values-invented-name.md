@@ -1,7 +1,7 @@
 ---
 title: "store accessor savedChangeTo<Key>Values is an invented name with no Rails counterpart"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main store.ts:206-213 defines the value form as `savedChangeTo${cap}` (Rails' saved_change_to_#{key}); `git grep -E 'Values\\(\\)|Values`' origin/main -- packages/activerecord/src/store.ts` is empty."
 ---
 
 ## Context

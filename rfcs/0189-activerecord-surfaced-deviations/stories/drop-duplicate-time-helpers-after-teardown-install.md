@@ -1,7 +1,7 @@
 ---
 title: "Drop the duplicate TimeHelpers#after_teardown install in cases/helper.ts"
-status: draft
-updated: 2026-08-14
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

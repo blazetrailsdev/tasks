@@ -1,7 +1,7 @@
 ---
 title: "MigrationContext's collaborator type parameters and this-annotations have no Rails counterpart"
-status: draft
-updated: 2026-08-09
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

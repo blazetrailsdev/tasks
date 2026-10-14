@@ -1,7 +1,7 @@
 ---
 title: "OID::Array's subtype map is optional only to fit test doubles"
-status: draft
-updated: 2026-08-27
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "unscope!'s Symbol arm skips assert_modifiable! — a loaded relation mutates instead of raising ImmutableRelation"
-status: draft
-updated: 2026-08-20
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main relation/query-methods.ts:536-550 unscopeBang's Symbol arm calls `assertModifiableBang.call(this)` before `delete this._values[name]`, as query_methods.rb:821."
 ---
 
 ## Context

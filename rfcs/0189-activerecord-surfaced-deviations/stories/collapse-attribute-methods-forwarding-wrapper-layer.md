@@ -1,7 +1,7 @@
 ---
 title: "attribute-methods.ts forwards 24 this-typed wrappers to record-first ports Rails has as plain mixin methods"
-status: draft
-updated: 2026-08-22
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

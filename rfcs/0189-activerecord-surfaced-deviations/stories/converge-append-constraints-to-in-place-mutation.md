@@ -1,7 +1,7 @@
 ---
 title: "Converge appendConstraints onto Rails' in-place join mutation"
-status: draft
-updated: 2026-07-30
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

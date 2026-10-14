@@ -1,7 +1,7 @@
 ---
 title: "Mirror Rails' ProtectedParams stub shape (private store + delegation)"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: the stub is now packages/activerecord/src/support/stubs/strong-parameters.ts (Rails' path), holding parameters in a private #parameters and defining eachPair (:89-90) etc.; test-helpers/protected-params.ts no longer exists."
 ---
 
 ## Context

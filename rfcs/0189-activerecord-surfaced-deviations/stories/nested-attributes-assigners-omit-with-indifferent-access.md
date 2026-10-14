@@ -1,7 +1,7 @@
 ---
 title: "Nested-attributes assigners omit attributes.with_indifferent_access, so reject_if sees the caller's carrier"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []

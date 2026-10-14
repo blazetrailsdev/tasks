@@ -1,7 +1,7 @@
 ---
 title: "activerecord: DatabaseTasks registry is a pattern-keyed Hash whose built-in rows are registered by name in database_tasks.rb"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []

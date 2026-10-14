@@ -1,7 +1,7 @@
 ---
 title: "type_cast_pluck_values maps result.columns and never consults column.type_caster"
-status: draft
-updated: 2026-08-18
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

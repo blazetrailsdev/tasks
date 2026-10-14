@@ -1,7 +1,7 @@
 ---
 title: "Type::Internal::Timezone is imported, not mixed in — is_utc?/default_timezone unmatched on date/datetime/time"
-status: draft
-updated: 2026-07-29
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main type/date.ts:21 `include(Date, Timezone)` (type/internal/timezone.ts:10 is the module class), so default_timezone / is_utc? resolve as members of the temporal types; the standalone isUtc export is gone."
 ---
 
 ## Context

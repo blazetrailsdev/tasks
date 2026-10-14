@@ -1,7 +1,7 @@
 ---
 title: "Dispatch Base#association through reflection.association_class instead of the macro switch"
-status: draft
-updated: 2026-08-11
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

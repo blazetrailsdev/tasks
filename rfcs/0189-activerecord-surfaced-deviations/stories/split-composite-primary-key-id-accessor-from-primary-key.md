@@ -1,7 +1,7 @@
 ---
 title: "Split composite-PK id/id= arms out of PrimaryKey into CompositePrimaryKey"
-status: draft
-updated: 2026-07-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main attribute-methods/primary-key.ts:53-60 writeId is the single-key `_writeAttribute(pk, value)`, and the composite behaviour lives in the separate CompositePrimaryKey module (attribute-methods/composite-primary-key.ts:24), as Rails splits it."
 ---
 
 ## Context

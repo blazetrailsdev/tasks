@@ -1,7 +1,7 @@
 ---
 title: "SQLite3Adapter#configure_connection tests the pragma writer with method_defined?, not an own-property check"
-status: draft
-updated: 2026-10-11
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Duplicate of sqlite3-configure-connection-pragma-check-matches-set-helpers (ready, this RFC): both target the same `Object.hasOwn(Pragmas, setter)` check at origin/main sqlite3-adapter.ts:1067 vs Rails'' `SQLite3::Pragmas.method_defined?("#{pragma}=")`. The claimer of the surviving story should take this one''s converged shape (Pragmas as a ruby-compat Module, rbModMethodDefined + rbFPublicSend on the `name=` writer).'
 ---
 
 ## Context

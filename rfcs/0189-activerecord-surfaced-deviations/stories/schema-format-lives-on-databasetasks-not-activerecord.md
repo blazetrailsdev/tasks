@@ -1,7 +1,7 @@
 ---
 title: "ActiveRecord.schema_format lives on DatabaseTasks in trails"
-status: draft
-updated: 2026-08-07
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main active-record.ts:43,311-316 holds schemaFormat on the ActiveRecord module, and tasks/database-tasks.ts:490,505,541 default `format = schemaFormat()` from it, as database_tasks.rb:376/413/431."
 ---
 
 ## Context

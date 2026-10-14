@@ -1,7 +1,7 @@
 ---
 title: "Preloader::Association#loaded?/#target_for swallow every error in a bare catch"
-status: draft
-updated: 2026-08-19
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep catch origin/main -- packages/activerecord/src/associations/preloader/association.ts` is empty."
 ---
 
 # Preloader::Association#loaded? and #target_for swallow every error in a bare catch

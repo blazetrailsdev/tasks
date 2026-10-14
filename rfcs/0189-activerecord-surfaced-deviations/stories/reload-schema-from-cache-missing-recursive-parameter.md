@@ -1,7 +1,7 @@
 ---
 title: "reload_schema_from_cache dropped Rails' recursive parameter"
-status: draft
-updated: 2026-08-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main model-schema.ts:466 `reloadSchemaFromCache(this, recursive = true)`, recursing into subclasses only when recursive, as model_schema.rb:553-571."
 ---
 
 ## Context

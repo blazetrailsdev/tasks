@@ -1,7 +1,7 @@
 ---
 title: "strip-freeform-comments-ar-root-b"
-status: draft
-updated: 2026-08-23
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: same evidence as strip-freeform-comments-ar-associations-tests-rest — origin/main eslint.config.mjs:1000-1022 enrolls all of packages/activerecord in no-freeform-comments; the per-letter root slicing is finished."
 ---
 
 ## Context

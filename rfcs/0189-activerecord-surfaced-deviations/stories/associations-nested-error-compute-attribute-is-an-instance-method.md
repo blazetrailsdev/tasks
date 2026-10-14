@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Associations::NestedError#compute_attribute is an instance method with no stand-in receiver or underscore"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []

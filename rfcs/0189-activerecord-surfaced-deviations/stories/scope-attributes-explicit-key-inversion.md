@@ -1,7 +1,7 @@
 ---
 title: "Audit _applyScopeAttributes' explicit-key inversion against Rails"
-status: draft
-updated: 2026-08-01
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep -E '_applyScopeAttributes|_shouldApplyScopeAttributes' origin/main -- packages/activerecord/src` is empty; scope attributes are seeded by populateWithCurrentScopeAttributes from the initialize-internals callback (scoping.ts:103-123), Rails' order."
 ---
 
 ## Context

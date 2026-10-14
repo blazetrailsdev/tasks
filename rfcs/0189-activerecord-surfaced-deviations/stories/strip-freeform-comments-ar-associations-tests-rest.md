@@ -1,7 +1,7 @@
 ---
 title: "strip-freeform-comments-ar-associations-tests-rest"
-status: draft
-updated: 2026-08-28
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main eslint.config.mjs:1000-1022 enforces blazetrails/no-freeform-comments repo-wide; its ignores list no longer carries any packages/* row ("Every packages/* row left this list with the package sweep in story enroll-remaining-packages-in-no-freeform-comments"), so packages/activerecord/src/associations/**/*.test.ts is enrolled.'
 ---
 
 ## Context

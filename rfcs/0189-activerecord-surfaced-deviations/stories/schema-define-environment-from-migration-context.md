@@ -1,7 +1,7 @@
 ---
 title: "Schema#define stamps a bespoke environment chain instead of migration_context.current_environment"
-status: draft
-updated: 2026-08-24
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep -E 'info.environment|NODE_ENV' origin/main -- packages/activerecord/src/schema.ts` is empty."
 ---
 
 ## Context

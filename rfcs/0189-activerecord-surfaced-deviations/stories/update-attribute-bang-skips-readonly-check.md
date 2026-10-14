@@ -1,7 +1,7 @@
 ---
 title: "update-attribute-bang-skips-readonly-check"
-status: draft
-updated: 2026-07-31
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main persistence.ts:598-604 updateAttributeBang calls verifyReadonlyAttribute(name) before the write, as persistence.rb:552-558."
 ---
 
 ## Context

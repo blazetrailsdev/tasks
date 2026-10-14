@@ -1,7 +1,7 @@
 ---
 title: "test-databases.ts: eachDatabase claims a Rails counterpart that does not exist"
-status: draft
-updated: 2026-08-24
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep eachDatabase origin/main -- packages/activerecord/src/test-databases.ts` is empty."
 ---
 
 ## Context

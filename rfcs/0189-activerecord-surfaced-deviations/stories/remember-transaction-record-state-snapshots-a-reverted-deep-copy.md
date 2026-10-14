@@ -1,7 +1,7 @@
 ---
 title: "remember_transaction_record_state deep-dups and dirty-reverts the snapshot where Rails aliases @attributes"
-status: draft
-updated: 2026-08-20
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main transactions.ts:210-222 rememberTransactionRecordState stores the live `r._attributes` in the snapshot, as transactions.rb:440-450."
 ---
 
 ## Context

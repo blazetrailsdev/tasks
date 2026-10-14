@@ -1,7 +1,7 @@
 ---
 title: "StatementCache#execute drops Rails' async: arm (async_find_by_sql / Promise.wrap)"
-status: draft
-updated: 2026-08-22
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main statement-cache.ts:166-178 execute takes `{ allowRetry, async }` and calls asyncFindBySql on the async arm, as statement_cache.rb:144-155."
 ---
 
 ## Context

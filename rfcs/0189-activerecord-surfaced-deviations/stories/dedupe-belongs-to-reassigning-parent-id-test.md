@@ -1,7 +1,7 @@
 ---
 title: "Dedupe the Rails belongs_to test duplicated into a trails-only file"
-status: draft
-updated: 2026-08-23
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

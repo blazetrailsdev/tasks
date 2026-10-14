@@ -1,7 +1,7 @@
 ---
 title: "Preloader::Batch#loaders attr_reader is missing from the port"
-status: draft
-updated: 2026-08-22
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

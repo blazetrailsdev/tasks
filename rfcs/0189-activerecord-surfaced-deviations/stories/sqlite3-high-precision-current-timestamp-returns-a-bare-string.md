@@ -1,7 +1,7 @@
 ---
 title: "activerecord: SQLite3 high_precision_current_timestamp returns a bare string, blocking InsertAll#timestamps_for_create"
-status: ready
-updated: 2026-10-10
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main connection-adapters/sqlite3/database-statements.ts:75-80 defines the frozen HIGH_PRECISION_CURRENT_TIMESTAMP = Arel.sql("STRFTIME(''%Y-%m-%d %H:%M:%f'', ''NOW'')", { retryable: true }) and highPrecisionCurrentTimestamp returns it, and insert-all.ts:410-413 timestampsForCreate indexes the timestamp attributes with connection.highPrecisionCurrentTimestamp(), as insert_all.rb:221-223.'
 ---
 
 ## Context

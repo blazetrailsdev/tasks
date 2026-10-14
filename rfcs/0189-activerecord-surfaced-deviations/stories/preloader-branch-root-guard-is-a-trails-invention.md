@@ -1,7 +1,7 @@
 ---
 title: "Delete Branch#preloadedRecords' invented root guard and its bespoke Error"
-status: draft
-updated: 2026-08-20
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main associations/preloader/branch.ts:66-75 preloadedRecords is `@preloaded_records ||= loaders.flat_map(&:preloaded_records)` with no root special-case (branch.rb:68-70); the remaining ArgumentError at :45 is Rails' own initialize guard."
 ---
 
 ## Context

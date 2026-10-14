@@ -1,7 +1,7 @@
 ---
 title: "get_primary_key's schema-cache arm substitutes a lease-free cache read for table_exists?/primary_keys"
-status: draft
-updated: 2026-08-21
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

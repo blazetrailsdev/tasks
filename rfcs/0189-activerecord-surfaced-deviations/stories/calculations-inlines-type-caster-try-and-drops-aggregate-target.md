@@ -1,6 +1,6 @@
 ---
 title: "Calculations: column.try(:type_caster) is inline and aggregateTarget is gone"
-status: draft
+status: ready
 updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

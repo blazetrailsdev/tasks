@@ -1,7 +1,7 @@
 ---
 title: "Call set_inverse_instance on replace_on_target's inversing arm (collection_association.rb:466)"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: `git grep 'if (!inversing)' origin/main -- packages/activerecord/src/associations/collection-proxy.ts packages/activerecord/src/associations/collection-association.ts` is empty."
 ---
 
 ## Context

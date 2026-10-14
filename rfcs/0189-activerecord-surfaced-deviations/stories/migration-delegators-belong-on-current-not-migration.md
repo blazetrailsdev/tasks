@@ -1,7 +1,7 @@
 ---
 title: "migration-delegators-belong-on-current-not-migration"
-status: draft
-updated: 2026-09-02
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []

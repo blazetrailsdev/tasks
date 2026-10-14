@@ -1,7 +1,7 @@
 ---
 title: "SQLiteDatabaseTasks#establishConnection unwraps DatabaseConfig where Rails passes the object"
-status: draft
-updated: 2026-08-14
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main tasks/sqlite-database-tasks.ts:105-109 establishConnection passes the DatabaseConfig object itself to Base.establishConnection(config), as sqlite_database_tasks.rb:72-74."
 ---
 
 ## Context

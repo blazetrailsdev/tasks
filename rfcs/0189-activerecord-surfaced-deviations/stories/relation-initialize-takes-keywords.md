@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Relation#initialize takes Rails' keywords so Delegation.create forwards without unpacking"
-status: ready
-updated: 2026-10-10
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main relation.ts:366-374 Relation's constructor is `(model, { table = null, predicateBuilder = null, values = {} })`, Rails' relation.rb:77 keywords; `git grep 'const \\[kwargs\\]' origin/main -- packages/activerecord/src/relation/delegation.ts` is empty."
 ---
 
 ## Context

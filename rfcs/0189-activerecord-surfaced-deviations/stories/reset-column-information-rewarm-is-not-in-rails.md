@@ -1,7 +1,7 @@
 ---
 title: "resetColumnInformation's re-warm thenable and its 135 void markers have no Rails counterpart"
-status: draft
-updated: 2026-08-09
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

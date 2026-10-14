@@ -1,6 +1,6 @@
 ---
 title: "activerecord: AdapterHelper#current_adapter? asks the leased connection, not the test lane"
-status: draft
+status: ready
 updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

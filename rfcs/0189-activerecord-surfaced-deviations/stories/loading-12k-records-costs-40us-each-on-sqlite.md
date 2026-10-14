@@ -1,7 +1,7 @@
 ---
 title: "Loading records is ~5x the cost of plucking the same rows: 12.7k SQLite rows take 0.5s to instantiate"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: ["activerecord"]

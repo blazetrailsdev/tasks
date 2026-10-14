@@ -1,7 +1,7 @@
 ---
 title: "store_accessor takes an options object where Rails splats keys; local_stored_attributes has two TS names and no writer"
-status: draft
-updated: 2026-08-22
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

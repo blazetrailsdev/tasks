@@ -1,7 +1,7 @@
 ---
 title: "seed-fixtures-once-per-worker-under-transactional-fixtures"
-status: draft
-updated: 2026-08-29
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []

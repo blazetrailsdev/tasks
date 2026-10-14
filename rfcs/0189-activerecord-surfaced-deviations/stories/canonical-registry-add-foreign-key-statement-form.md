@@ -1,7 +1,7 @@
 ---
 title: "Give the canonical registry schema.rb's standalone add_foreign_key form (undo the students hoist)"
-status: draft
-updated: 2026-08-27
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []

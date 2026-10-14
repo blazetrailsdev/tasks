@@ -1,7 +1,7 @@
 ---
 title: "activerecord: pinConnectionBang takes a required lock_thread that admits a thread, as pin_connection! does"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []

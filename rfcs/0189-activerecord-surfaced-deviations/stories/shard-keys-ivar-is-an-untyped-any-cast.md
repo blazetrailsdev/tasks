@@ -1,6 +1,6 @@
 ---
 title: "connectsTo's @shard_keys is an untyped (x as any)._shardKeys; give it a declared field"
-status: draft
+status: ready
 updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

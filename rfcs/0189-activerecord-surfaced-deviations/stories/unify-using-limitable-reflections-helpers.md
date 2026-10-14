@@ -1,7 +1,7 @@
 ---
 title: "Collapse the four using_limitable_reflections? spellings into one helper"
-status: draft
-updated: 2026-08-02
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: of the three helpers only `_eagerJoinDependencyIsLimitable` (relation.ts:1177) remains; `git grep -E '_applyJoinDependencyIsLimitable|_eagerReflectionsAreLimitable|_joinsReflectionsAreLimitable' origin/main -- packages/activerecord/src/relation.ts` is empty."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "extract_node_value enumerates node classes where Rails duck-types respond_to?(:value_before_type_cast)"
-status: draft
-updated: 2026-08-26
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []

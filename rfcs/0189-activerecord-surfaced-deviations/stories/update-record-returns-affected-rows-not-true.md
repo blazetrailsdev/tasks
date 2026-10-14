@@ -1,7 +1,7 @@
 ---
 title: "Persistence#_update_record returns true where Rails returns affected_rows"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main persistence.ts:985-1003 _updateRecord returns affectedRows (0 or _updateRow's count) and sets _triggerUpdateCallback, as persistence.rb:900-916."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "ShardSelector#call does not build an ActionDispatch::Request"
-status: draft
-updated: 2026-08-25
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main middleware/shard-selector.ts:29 call builds `new TopLevel.ActionDispatch.Request(env)` before resolving, as shard_selector.rb:40-48."
 ---
 
 ## Context

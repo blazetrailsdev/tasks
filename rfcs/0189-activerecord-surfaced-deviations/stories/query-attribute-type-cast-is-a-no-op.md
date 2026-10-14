@@ -1,7 +1,7 @@
 ---
 title: "QueryAttribute#type_cast is a no-op in Rails; trails casts"
-status: ready
-updated: 2026-07-27
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main relation/query-attribute.ts:48-50 typeCast returns `value` unchanged, as query_attribute.rb:22-24."
 ---
 
 ## Context

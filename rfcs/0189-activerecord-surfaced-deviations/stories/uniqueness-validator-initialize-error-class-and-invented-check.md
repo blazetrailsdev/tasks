@@ -1,7 +1,7 @@
 ---
 title: "UniquenessValidator#initialize raises the wrong error class and adds a validation Rails does not have"
-status: draft
-updated: 2026-08-18
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main validations/uniqueness.ts:34-50 constructor raises ArgumentError with Rails' two messages (:conditions not callable, :scope format) and nothing else, as uniqueness.rb:6-18."
 ---
 
 # UniquenessValidator#initialize raises the wrong error class and adds a validation Rails does not have

@@ -1,7 +1,7 @@
 ---
 title: "store() guards serialize and hoists the coder to feed a trails-only _storeCoders registry"
-status: draft
-updated: 2026-08-22
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main store.ts:244-256 store calls `this.serialize(storeAttribute, { coder: new IndifferentCoder(...) })` unconditionally, then storeAccessor when accessors is given, as store.rb:106-110; `git grep -E 'storeCoders|missingRailsArgs' origin/main -- packages/activerecord/src/store.ts` is empty."
 ---
 
 ## Context

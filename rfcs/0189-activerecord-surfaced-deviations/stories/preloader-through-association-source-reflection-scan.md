@@ -1,7 +1,7 @@
 ---
 title: "Preloader::ThroughAssociation#source_reflection is a hand-rolled candidate scan Rails does not have"
-status: draft
-updated: 2026-08-18
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main associations/preloader/through-association.ts:219-221 sourceReflection is `this.reflection.sourceReflection`, the one-line delegation of through_association.rb:86-88."
 ---
 
 # Preloader::ThroughAssociation#source_reflection is a hand-rolled candidate scan Rails does not have

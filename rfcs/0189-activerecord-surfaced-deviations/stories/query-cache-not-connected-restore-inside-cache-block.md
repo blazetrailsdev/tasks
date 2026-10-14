@@ -1,7 +1,7 @@
 ---
 title: "query-cache not-connected test restores the pool outside the cache block, Rails restores inside"
-status: draft
-updated: 2026-07-27
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "De-flake RelationTest where with take memoization: unordered take() makes the id assertion PG-order-dependent"
-status: draft
-updated: 2026-08-12
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Fixed: origin/main relations.test.ts:2887-2896 asserts `expect(firstPost).not.toBe(thirdPost)` — object identity, Rails' `assert_not_same first_post, third_post` (relations_test.rb:2370-2380) — so it no longer depends on PG heap order via ids."
 ---
 
 ## Context

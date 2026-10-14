@@ -1,7 +1,7 @@
 ---
 title: "include() is unusable for a module of Rails-private members (ar-models plugin synthesizes a public Included<> merge)"
-status: draft
-updated: 2026-08-20
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

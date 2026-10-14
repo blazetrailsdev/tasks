@@ -1,7 +1,7 @@
 ---
 title: "Type.lookup drops Rails' positional constructor args"
-status: draft
-updated: 2026-08-19
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: origin/main type.ts:106-116 `lookup(...argsAndKwargs)` forwards positional args and kwargs to `registry().lookup(...args, { ...kwargs, adapter })`, as type.rb:41-43."
 ---
 
 ## Context

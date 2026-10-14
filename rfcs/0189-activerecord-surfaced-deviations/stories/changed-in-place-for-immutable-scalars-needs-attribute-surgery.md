@@ -1,7 +1,7 @@
 ---
 title: "changed_in_place? for an immutable JS scalar is reachable only by writing Attribute's private fields"
-status: draft
-updated: 2026-08-24
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

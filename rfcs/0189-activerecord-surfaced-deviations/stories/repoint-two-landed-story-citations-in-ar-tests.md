@@ -1,7 +1,7 @@
 ---
 title: "Re-point two source comments citing landed stories at their open trackers"
-status: draft
-updated: 2026-08-22
+status: closed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "rfc-refine 0189 (2026-10-14, trails origin/main 03da862b8a): Landed: neither stale citation remains — `git grep has-one-loaded-target-create-missing-remove-target origin/main -- packages/activerecord/src/associations/has-one-associations.test.ts` and `git grep install-executor-hooks-for-async-queries-tracker origin/main -- packages/activerecord/src/relation-load-async.trails.test.ts` are both empty."
 ---
 
 ## Context

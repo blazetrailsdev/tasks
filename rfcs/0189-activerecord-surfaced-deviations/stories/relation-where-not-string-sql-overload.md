@@ -1,7 +1,7 @@
 ---
 title: "Relation#whereNot / WhereChain#not accept no bare SQL string, unlike Rails' where.not"
-status: draft
-updated: 2026-08-02
+status: ready
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
