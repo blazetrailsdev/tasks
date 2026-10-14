@@ -1,6 +1,6 @@
 ---
 title: "Port routing/inspector_test.rb's 16 skipped tests"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port test_resource_new_actions and test_resource_constraints_are_pushed_to_scope once Mapper#resources draws through collection/new/member"
-status: ready
+status: in-progress
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8915
+claim: "2026-10-14T21:12:49Z"
+assignee: "port-resources-test-part-1"
 blocked-by: null
 closed-reason: null
 ---

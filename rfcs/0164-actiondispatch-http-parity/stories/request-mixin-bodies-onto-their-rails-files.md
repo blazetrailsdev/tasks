@@ -1,6 +1,6 @@
 ---
 title: "Move Request's and Response's inlined mixin bodies to the files that mirror their Rails modules"
-status: ready
+status: in-progress
 updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["http-config-seats-onto-mattr-accessor"]
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8916
+claim: "2026-10-14T21:26:00Z"
+assignee: "request-mixin-bodies-onto-their-rails-files"
 blocked-by: null
 closed-reason: null
 ---
