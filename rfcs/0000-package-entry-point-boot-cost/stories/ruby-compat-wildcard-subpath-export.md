@@ -20,8 +20,9 @@ blocked-by: null
 `packages/ruby-compat/package.json` `exports` names `"."` plus 7 subpaths
 (`./include`, `./method-missing-proxy`, `./name-error`, `./psych`,
 `./psych-adapter`, `./range`, `./yaml`) and has **no wildcard**. The package
-ships 147 `dist/*.js` files, so 139 of them are reachable only through the
-barrel.
+ships 147 `dist/*.js` files; with 8 `exports` entries, the other 139 files
+have no subpath of their own. (That 139 equals the barrel's loaded-module count
+below by coincidence — they are different quantities.)
 
 Measured cost of the barrel (loader-hook module count, median of three warm
 `await import()` runs):
@@ -60,7 +61,11 @@ node --input-type=module -e "import('@blazetrails/ruby-compat/name-error').then(
 
 ## Notes
 
-The barrel is a pure re-export hub: 146 exports, no side effects. If a
+The barrel is a pure re-export hub with no side effects. If a
 consumer's behaviour changes when it stops importing the barrel, that means a
 module had an import side effect — stop and report it, because it invalidates
 the premise of the whole RFC.
+
+The wildcard makes every `dist/*` file importable public surface. That is
+accepted, on the `actionview` precedent: these are internal workspace
+packages, and the barrel remains the documented entry point.

@@ -5,7 +5,7 @@ updated: 2026-10-13
 rfc: "0000-package-entry-point-boot-cost"
 cluster: "measurement"
 packages: ["msgpack"]
-deps: ["boot-graph-measurement-harness"]
+deps: ["boot-graph-measurement-harness", "migrate-the-tail-packages-off-the-ruby-compat-barrel"]
 deps-rfc: []
 est-loc: 40
 priority: null

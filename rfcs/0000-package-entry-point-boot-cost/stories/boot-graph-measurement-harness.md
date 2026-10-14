@@ -7,7 +7,7 @@ cluster: "measurement"
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 220
+est-loc: 320
 priority: null
 pr: null
 claim: null
@@ -38,6 +38,14 @@ Shipped counts come from counting `dist/**/*.js` per package.
 - [ ] Timings are reported as a median of N warm runs, not a single cold run
 - [ ] Runs in CI on the `examples/` app and prints the table in the job log
 - [ ] A documented, committed baseline file the script diffs against
+- [ ] CI **reports** the full per-package table and **fails only** when
+      ruby-compat's loaded count exceeds the baseline; other packages' ratios
+      are report-only
+- [ ] Emits a committed **binding → owning module → in-SCC?** map for every
+      barrel export of `ruby-compat`, which the Phase 2 codemods consume
+- [ ] Measures the **union** of ruby-compat subpaths the `examples/` app's
+      consumers need (per that map) and commits it as the RFC's ruby-compat
+      target, with the derived full-app target
 
 ## Definition of done
 

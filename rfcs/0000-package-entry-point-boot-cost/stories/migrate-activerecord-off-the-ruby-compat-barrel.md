@@ -5,7 +5,7 @@ updated: 2026-10-13
 rfc: "0000-package-entry-point-boot-cost"
 cluster: "findings"
 packages: ["activerecord", "ruby-compat"]
-deps: ["ruby-compat-wildcard-subpath-export"]
+deps: ["ruby-compat-wildcard-subpath-export", "boot-graph-measurement-harness"]
 deps-rfc: []
 est-loc: 650
 priority: null
@@ -30,11 +30,12 @@ re-export hub.
 ## Acceptance criteria
 
 - [ ] `grep -r 'from "@blazetrails/ruby-compat"' packages/activerecord/src` returns **0**
-- [ ] Every replaced import names the subpath that owns the binding; no import
-      is rewritten to a different binding
+- [ ] Every replaced import names the subpath the harness's binding map gives
+      for that binding; no import is rewritten to a different binding
 - [ ] `pnpm build`, lint and the full test suite are unchanged
 - [ ] The boot-graph harness reports the before/after module delta for this
-      package in the PR body
+      package in the PR body, and ruby-compat's loaded count does not rise
+      above the pre-batch baseline
 
 ## Definition of done
 

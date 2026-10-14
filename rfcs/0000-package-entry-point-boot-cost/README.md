@@ -26,6 +26,7 @@ packages:
   - "globalid"
   - "html-sanitizer"
   - "did-you-mean"
+  - "website"
 clusters:
   - "measurement"
   - "findings"
@@ -39,8 +40,15 @@ Importing one binding from `@blazetrails/ruby-compat` loads **139 modules and
 147ms**. Importing the same kind of binding through an existing subpath loads
 **54 modules and 66ms**; the thinnest existing subpath loads **5 modules and
 3ms**. The gap is the package's barrel entry point, which eagerly re-exports
-146 symbols, and `ruby-compat` sits at the bottom of the stack so all 22 other
-packages pay it.
+every module it names, and `ruby-compat` sits at the bottom of the stack: 20
+other workspace packages import its barrel (7 heavyweight consumers plus 13 in
+the tail story's table), so they all pay it.
+
+Three ruby-compat quantities recur below and are not interchangeable:
+**147 files** shipped as `dist/*.js`; **139 modules** loaded by importing the
+barrel (the barrel does not reach every file); and **8 `exports` entries**
+(`"."` plus 7 subpaths), which leave 147 − 8 = 139 files with no subpath of
+their own — the same number as the barrel's load count by coincidence only.
 
 This RFC scopes that to a measured burndown, and — equally the point — records
 that the same question answered **no** for `actionview` and **marginally** for
@@ -117,12 +125,20 @@ Three packages, three different answers, all measured:
 ### 1. `ruby-compat` — subpath exports, then call-site migration
 
 `exports` already names `"."` plus 7 subpaths and has no wildcard. Add `"./*"` (as
-`actionview` already does) so every module is reachable without enumerating
-146 of them, then migrate call sites off the barrel in package-sized batches.
+`actionview` already does) so every shipped file is reachable without
+enumerating each one, then migrate call sites off the barrel in package-sized batches.
 
 The barrel stays and keeps working; this is additive and behaviour-preserving.
 The barrel is a pure re-export hub with no side effects, which is why this is
 safe — a story that discovers a side effect must stop and report it.
+
+Entering the 28-module SCC (see Motivation) loads all of it, so a subpath
+import only wins if the module it names sits outside the SCC or the consumer
+already pays for the SCC. The Phase 1 harness therefore emits a
+**binding → owning module → SCC membership** map, and every Phase 2 codemod
+uses it to pick subpaths; each batch must also show its package's boot-graph
+module count did not rise (a ruby-compat count above the pre-batch baseline
+fails the batch).
 
 **1795 call sites cannot be one PR.** Batches are per consuming package, each
 a mechanical codemod plus its own measurement: activesupport first (it is
@@ -139,7 +155,7 @@ activemodel, then the tail.
 21 modules and ~48ms across **6 call sites**. Note 141 of those 162 modules are
 _not_ msgpack — the package ships 27 files and drags in ~135 from elsewhere.
 Its weight is its dependencies, so entry-point work is nearly irrelevant here.
-One story, lowest priority, and acceptable to close as not-worth-it.
+One story, sequenced last via Phase 3 and its deps, and acceptable to close as not-worth-it.
 
 ### 3. `actionview` — a measured dead end, recorded not scheduled
 
@@ -229,22 +245,30 @@ near the 700 est-loc ceiling, so it may need splitting by subdirectory.
 ## Verification
 
 - `@blazetrails/ruby-compat` is imported by **0** modules in the boot graph of
-  the `examples/` app; ruby-compat's boot contribution falls from **147 to ≤60**
-  modules (the SCC floor), a **≥59%** reduction.
-- Full-app boot falls from **1,284** to **≤1,200** resolved modules.
-- The harness from Phase 1 runs in CI and fails on a regression in any
-  package's loaded/shipped ratio.
+  the `examples/` app.
+- ruby-compat's boot contribution falls from **147** to the **target** the
+  Phase 1 harness fixes. That target is not assumed: 54 is `/range` alone and
+  `/include` alone is 58, so the harness story measures the **union** of
+  subpaths the app's consumers actually need (per the binding map) and commits
+  that figure as the target. The full-app module target is derived from it
+  (1,284 minus the measured saving), not set independently.
+- The harness from Phase 1 runs in CI, **reports** every package's
+  loaded/shipped ratio, and **gates only ruby-compat's** loaded count against
+  the committed baseline (see Open question 1).
 - No change to `pnpm build`, lint, or test outcomes at any step — every change
   in this RFC is behaviour-preserving.
 
 ## Open questions
 
 1. **Should the harness gate CI or only report?** A hard gate on a module count
-   is brittle against legitimate feature growth. Recommendation: report in CI
-   and gate only `ruby-compat`'s ratio, which should never rise.
+   is brittle against legitimate feature growth. **Resolved:** report in CI
+   and gate only `ruby-compat`'s loaded count, which should never rise. The
+   harness story's AC encodes this.
 2. **Does `msgpack` justify any work at all?** 21 modules over 6 call sites.
-   Recommendation: file it, priority last, and accept closing it as not-worth-it.
+   Recommendation: file it, sequence it last via Phase 3 deps, and accept closing it as not-worth-it.
 
 ## Changelog
 
 - 2026-10-13: initial RFC
+- 2026-10-14: review fixes — harness gate policy, measured union target,
+  binding→SCC map, explicit story deps, `website` consumer, count terminology
