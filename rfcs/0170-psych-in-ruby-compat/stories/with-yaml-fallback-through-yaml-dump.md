@@ -1,7 +1,7 @@
 ---
 title: "DatabaseStatements#with_yaml_fallback through YAML.dump"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-14
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activerecord"]

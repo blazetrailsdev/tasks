@@ -1,6 +1,6 @@
 ---
 title: "msgpack-packer-unpacker-remaining-specs-and-buffer-to-str"
-status: draft
+status: ready
 updated: 2026-10-14
 rfc: "0184-msgpack-gem-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "redirect-block-call-dispatches-a-proc-and-a-callable-alike"
-status: ready
+status: done
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8890
+claim: "2026-10-14T15:29:18Z"
+assignee: "path-redirect-holds-its-template-string-as-block"
 blocked-by: null
 closed-reason: null
 ---

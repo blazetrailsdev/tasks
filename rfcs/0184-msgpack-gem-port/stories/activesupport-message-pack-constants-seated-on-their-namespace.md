@@ -1,7 +1,7 @@
 ---
 title: "activesupport: MessagePack's Extensions, error classes and Serializer::SIGNATURE are seated on their namespace"
-status: draft
-updated: 2026-10-09
+status: ready
+updated: 2026-10-14
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []

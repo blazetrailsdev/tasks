@@ -1,7 +1,7 @@
 ---
 title: "Hash#[] and Hash#[]= on a plain object are element access: activemodel"
-status: ready
-updated: 2026-10-11
+status: closed
+updated: 2026-10-14
 rfc: "0190-native-js-hash-forms"
 cluster: substitution
 packages: [activemodel]
@@ -13,11 +13,11 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8903
+claim: "2026-10-14T15:21:45Z"
+assignee: "native-hash-aref-aset-sites-activemodel"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: every hashAref/hashAset site in scope keeps the helper under RFC 0190 § Per-name decisions (Hash/Map receiver, or caller-supplied key); per-site audit in trails#8903"
 ---
 
 ## Context

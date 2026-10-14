@@ -1,7 +1,7 @@
 ---
 title: "Port Psych.load_tags / dump_tags / domain_types and add_builtin_type"
-status: draft
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-14
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat"]
@@ -9,9 +9,9 @@ deps: ["move-activesupport-yaml-into-ruby-compat-psych"]
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8904
+claim: "2026-10-14T15:26:41Z"
+assignee: "psych-dump-puts-root-tag-on-its-own-line"
 blocked-by: null
 closed-reason: null
 ---

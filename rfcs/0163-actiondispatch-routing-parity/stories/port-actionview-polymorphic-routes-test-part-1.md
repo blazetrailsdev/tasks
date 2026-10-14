@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-14T14:33:43Z"
-assignee: "mapper-resources-route-through-resource-scope-block"
+claim: "2026-10-14T15:29:18Z"
+assignee: "path-redirect-holds-its-template-string-as-block"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: each vitest describe gets a Minitest describe class; every activerecord test is an ActiveRecord::TestCase; describedClasses and topLevel are deleted"
-status: claimed
+status: in-progress
 updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#8898
 claim: "2026-10-14T01:31:42Z"
 assignee: "activerecord-describes-are-named-test-case-constants"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Port mime_type_test.rb's remainder and permissions_policy_test.rb under Rails names"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: ["actionpack"]

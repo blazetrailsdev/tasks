@@ -1,7 +1,7 @@
 ---
 title: "mime-type-initialize-validates-mime-regexp"
-status: draft
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8899
+claim: "2026-10-14T15:11:21Z"
+assignee: "mime-type-initialize-validates-mime-regexp"
 blocked-by: null
 closed-reason: null
 ---

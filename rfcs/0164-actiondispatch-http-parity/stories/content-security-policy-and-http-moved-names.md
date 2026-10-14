@@ -1,7 +1,7 @@
 ---
 title: "Remove ContentSecurityPolicy's invented readers and the HTTP files' moved names"
-status: draft
-updated: 2026-09-28
+status: in-progress
+updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: ["headers-include-alias-and-merge-dups-request"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8899
+claim: "2026-10-14T15:11:15Z"
+assignee: "content-security-policy-and-http-moved-names"
 blocked-by: null
 closed-reason: null
 ---

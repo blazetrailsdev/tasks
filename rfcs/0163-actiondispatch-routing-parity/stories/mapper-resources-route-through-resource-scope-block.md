@@ -1,6 +1,6 @@
 ---
 title: "mapper-resources-route-through-resource-scope-block"
-status: claimed
+status: done
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8900
 claim: "2026-10-14T14:33:43Z"
 assignee: "mapper-resources-route-through-resource-scope-block"
 blocked-by: null

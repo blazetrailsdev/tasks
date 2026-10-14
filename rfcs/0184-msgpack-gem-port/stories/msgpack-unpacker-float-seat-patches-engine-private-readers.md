@@ -1,7 +1,7 @@
 ---
 title: "msgpack: Unpacker seats a Float by replacing the engine's private readF32/readF64 through a cast"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-10-14
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []

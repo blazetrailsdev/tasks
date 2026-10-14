@@ -1,7 +1,7 @@
 ---
 title: "Port Psych.load / Psych.safe_load entry points and their options"
-status: draft
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-14
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat"]
@@ -9,9 +9,9 @@ deps: ["psych-restricted-class-loader-and-no-alias-ruby"]
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8904
+claim: "2026-10-14T15:26:41Z"
+assignee: "psych-dump-puts-root-tag-on-its-own-line"
 blocked-by: null
 closed-reason: null
 ---

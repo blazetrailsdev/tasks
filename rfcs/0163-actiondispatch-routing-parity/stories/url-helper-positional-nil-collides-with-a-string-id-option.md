@@ -1,6 +1,6 @@
 ---
 title: "url-helper-positional-nil-collides-with-a-string-id-option"
-status: ready
+status: claimed
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T15:29:18Z"
+assignee: "path-redirect-holds-its-template-string-as-block"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: extend(obj, mod) includes into the object's singleton class, as rb_extend_object does"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-14
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []

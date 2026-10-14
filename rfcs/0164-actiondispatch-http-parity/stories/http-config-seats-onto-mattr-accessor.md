@@ -1,7 +1,7 @@
 ---
 title: "Declare the HTTP layer's config seats with mattrAccessor / cattrAccessor"
-status: draft
-updated: 2026-09-28
+status: in-progress
+updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8899
+claim: "2026-10-14T15:11:18Z"
+assignee: "http-config-seats-onto-mattr-accessor"
 blocked-by: null
 closed-reason: null
 ---

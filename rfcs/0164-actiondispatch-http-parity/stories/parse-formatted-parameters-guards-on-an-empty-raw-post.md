@@ -1,7 +1,7 @@
 ---
 title: "parse_formatted_parameters has an invented empty-raw_post guard"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: ["actionpack"]

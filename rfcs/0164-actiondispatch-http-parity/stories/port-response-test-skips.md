@@ -1,7 +1,7 @@
 ---
 title: "Port response_test.rb's 16 skipped tests and sort its 45 extra"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: ["actionpack"]

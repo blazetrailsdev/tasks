@@ -1,7 +1,7 @@
 ---
 title: "Converge or pair the 22 key-unread rows parity:api:key-reads lists"
-status: draft
-updated: 2026-10-13
+status: in-progress
+updated: 2026-10-14
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8905
+claim: "2026-10-14T15:30:10Z"
+assignee: "key-read-report-key-unread-rows-converge"
 blocked-by: null
 closed-reason: null
 ---
