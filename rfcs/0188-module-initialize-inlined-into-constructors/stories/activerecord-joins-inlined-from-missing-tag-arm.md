@@ -5,7 +5,10 @@ updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []
-deps: []
+deps:
+  - activerecord-core-initialize-is-bases-constructor
+  - activerecord-fixtures-timezone-and-controller-runtime-initialize-inlined
+  - activemodel-inlines-api-attributes-and-serialize-cast-value-initialize
 deps-rfc: []
 est-loc: 20
 priority: null
