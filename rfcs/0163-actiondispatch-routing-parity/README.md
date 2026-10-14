@@ -7,6 +7,7 @@ updated: 2026-10-12
 owner: "@deanmarano"
 packages:
   - "actionpack"
+  - "actionview"
 clusters: []
 ---
 
