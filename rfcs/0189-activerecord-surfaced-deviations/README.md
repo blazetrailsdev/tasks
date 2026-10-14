@@ -1,9 +1,9 @@
 ---
 rfc: "0189-activerecord-surfaced-deviations"
 title: "activerecord surfaced deviations — the package's standing convergence bucket"
-status: draft
+status: active
 created: 2026-10-10
-updated: 2026-10-10
+updated: 2026-10-14
 owner: "@deanmarano"
 packages:
   - "activerecord"
