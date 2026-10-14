@@ -1,14 +1,14 @@
 ---
 title: "Port routing/inspector_test.rb's 16 skipped tests"
 status: ready
-updated: 2026-10-12
+updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
 deps: ["mapping-make-route-source-location", "routing-invented-surface-and-generate-prefix-arity"]
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

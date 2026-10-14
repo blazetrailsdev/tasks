@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 600
-priority: null
+priority: 2
 pr: trails#8906
 claim: "2026-10-14T16:47:42Z"
 assignee: "path-redirect-holds-its-template-string-as-block"

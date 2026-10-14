@@ -1,6 +1,6 @@
 ---
 title: "mime-type-initialize-validates-mime-regexp"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null

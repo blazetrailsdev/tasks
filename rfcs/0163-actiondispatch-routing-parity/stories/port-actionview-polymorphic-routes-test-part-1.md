@@ -1,6 +1,6 @@
 ---
 title: "port-actionview-polymorphic-routes-test-part-1"
-status: ready
+status: claimed
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T17:46:22Z"
+assignee: "port-actionview-polymorphic-routes-test-part-1"
 blocked-by: null
 closed-reason: null
 ---

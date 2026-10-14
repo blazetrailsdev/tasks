@@ -1,7 +1,7 @@
 ---
 title: "mapper-resources-hand-builds-canonical-routes"
-status: ready
-updated: 2026-09-27
+status: done
+updated: 2026-10-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8900
+claim: "2026-10-14T17:46:46Z"
+assignee: "mapper-resources-hand-builds-canonical-routes"
 blocked-by: null
 closed-reason: null
 ---

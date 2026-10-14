@@ -1,7 +1,7 @@
 ---
 title: "UrlFor module: _url_for_modules ancestry order (url_helpers' _generate_paths_by_default must win over RoutingUrlFor's)"
-status: ready
-updated: 2026-09-27
+status: draft
+updated: 2026-10-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

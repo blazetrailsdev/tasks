@@ -1,7 +1,7 @@
 ---
 title: "Port test_resource_new_actions and test_resource_constraints_are_pushed_to_scope once Mapper#resources draws through collection/new/member"
 status: ready
-updated: 2026-10-13
+updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps:
   - mapper-resources-hand-builds-canonical-routes
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "Declare the HTTP layer's config seats with mattrAccessor / cattrAccessor"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null

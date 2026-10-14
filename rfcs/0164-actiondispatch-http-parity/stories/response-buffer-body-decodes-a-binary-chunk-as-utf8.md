@@ -1,14 +1,14 @@
 ---
 title: "ResponseBuffer#body decodes a binary chunk as UTF-8 where Rails appends it"
 status: ready
-updated: 2026-10-07
+updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

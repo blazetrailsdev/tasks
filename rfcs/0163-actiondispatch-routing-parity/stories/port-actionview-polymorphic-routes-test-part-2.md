@@ -9,7 +9,7 @@ deps:
   - port-actionview-polymorphic-routes-test-part-1
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

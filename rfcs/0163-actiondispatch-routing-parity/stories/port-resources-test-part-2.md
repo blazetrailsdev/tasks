@@ -1,14 +1,14 @@
 ---
 title: "Port controller/resources_test.rb lines 601-1471 under the Rails test names"
 status: ready
-updated: 2026-10-12
+updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
 deps: ["port-resources-test-part-1"]
 deps-rfc: []
 est-loc: 450
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

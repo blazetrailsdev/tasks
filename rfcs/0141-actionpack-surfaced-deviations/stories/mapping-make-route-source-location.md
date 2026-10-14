@@ -1,7 +1,7 @@
 ---
 title: "mapping-make-route-source-location"
-status: ready
-updated: 2026-09-27
+status: in-progress
+updated: 2026-10-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8907
+claim: "2026-10-14T17:47:29Z"
+assignee: "mapping-make-route-source-location"
 blocked-by: null
 closed-reason: null
 ---

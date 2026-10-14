@@ -1,6 +1,6 @@
 ---
 title: "Mime::Type#match? is isMatch with Rails' substring body; parse_data_with_trailing_star calls it"
-status: ready
+status: claimed
 updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T17:48:39Z"
+assignee: "mime-type-match-is-rails-substring-match-and-trailing-star-calls-it"
 blocked-by: null
 closed-reason: null
 ---

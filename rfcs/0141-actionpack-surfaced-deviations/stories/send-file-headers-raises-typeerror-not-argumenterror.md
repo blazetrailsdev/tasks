@@ -1,7 +1,7 @@
 ---
 title: "send_file_headers! raises TypeError where Rails raises ArgumentError"
-status: ready
-updated: 2026-09-26
+status: draft
+updated: 2026-10-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []

@@ -9,7 +9,7 @@ deps:
   ["port-actionpack-abstract-unit-test-support", "port-actionpack-view-and-helper-test-fixtures"]
 deps-rfc: []
 est-loc: 350
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null
