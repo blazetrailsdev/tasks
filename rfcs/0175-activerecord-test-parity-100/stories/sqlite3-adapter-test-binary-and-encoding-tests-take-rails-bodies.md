@@ -1,6 +1,6 @@
 ---
 title: "activerecord: sqlite3 adapter test's binary-column and encoding tests take Rails' bodies"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null

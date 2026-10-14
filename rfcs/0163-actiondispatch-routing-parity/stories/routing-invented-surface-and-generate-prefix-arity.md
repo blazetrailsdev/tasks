@@ -1,7 +1,7 @@
 ---
 title: "Relocate routing's moved names and fix define_generate_prefix's arity"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: ["route-set-recognize-routing-test-rewrite-and-delete"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8890
+claim: "2026-10-14T11:12:27Z"
+assignee: "inlined-chain-with-own-and-same-file-initialize-is-skipped-as-ambiguous"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: MySQL bind-parameter float case passes a Float and asserts Rails' '0.0'"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

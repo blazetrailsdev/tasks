@@ -1,6 +1,6 @@
 ---
 title: "activerecord: encryption serializers' load / decode_if_needed guards move into JSON.parse, feed_reference and Base64.strict_decode64"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

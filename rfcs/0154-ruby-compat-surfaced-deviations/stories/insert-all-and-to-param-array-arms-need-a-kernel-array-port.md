@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port Kernel#Array and converge the insert-all / to_param arms that open-code it"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

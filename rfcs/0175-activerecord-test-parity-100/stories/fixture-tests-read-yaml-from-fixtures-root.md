@@ -1,7 +1,7 @@
 ---
 title: "activerecord: fixture-set and fixtures tests read their .yml files from FIXTURES_ROOT, not fixture-set/test-data"
-status: draft
-updated: 2026-10-13
+status: closed
+updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Do not want"
 ---
 
 ## Context

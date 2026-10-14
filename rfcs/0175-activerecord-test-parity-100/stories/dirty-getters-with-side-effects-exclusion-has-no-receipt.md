@@ -1,6 +1,6 @@
 ---
 title: "activerecord: dirty_test 'getters with side effects are allowed' is excluded with no ratified reason or story"
-status: draft
+status: claimed
 updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T11:42:29Z"
+assignee: "dirty-getters-with-side-effects-exclusion-has-no-receipt"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "msgpack: Buffer#write flushes to its IO; cruby/buffer_spec.rb and the remaining packer/unpacker specs"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0184-msgpack-gem-port"
 cluster: null

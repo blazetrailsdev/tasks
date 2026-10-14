@@ -1,7 +1,7 @@
 ---
 title: "port-routing-test-namespace-controller-option-http-methods-invalid-urls"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: []

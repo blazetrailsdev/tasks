@@ -1,7 +1,7 @@
 ---
 title: "actionpack: controller-routing.test.ts's TS-only tests move to a .trails sibling"
-status: draft
-updated: 2026-10-13
+status: in-progress
+updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8891
+claim: "2026-10-14T11:33:03Z"
+assignee: "controller-routing-test-ts-only-tests-move-to-trails-sibling"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "TestRoutingMapper's hand-written tests become the Rails bodies; StubController seating is deleted"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: []

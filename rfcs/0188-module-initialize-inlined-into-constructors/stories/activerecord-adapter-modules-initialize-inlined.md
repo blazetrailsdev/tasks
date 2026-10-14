@@ -1,6 +1,6 @@
 ---
 title: "activerecord: DatabaseStatements, QueryCache and ConnectionPoolConfiguration initialize are inlined"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion

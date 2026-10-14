@@ -1,6 +1,6 @@
 ---
 title: "Redirection#redirect extracts options with extract_options! and raises ArgumentError"
-status: draft
+status: ready
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

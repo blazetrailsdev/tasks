@@ -1,6 +1,6 @@
 ---
 title: "Port actionview's polymorphic_routes_test.rb, including PolymorphicPathRoutesTest's inherited run"
-status: draft
+status: in-progress
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8891
+claim: "2026-10-14T11:33:03Z"
+assignee: "controller-routing-test-ts-only-tests-move-to-trails-sibling"
 blocked-by: null
 closed-reason: null
 ---

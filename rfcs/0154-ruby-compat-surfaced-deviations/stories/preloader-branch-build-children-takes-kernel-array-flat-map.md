@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Preloader::Branch#build_children is two flat_maps over Kernel#Array"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

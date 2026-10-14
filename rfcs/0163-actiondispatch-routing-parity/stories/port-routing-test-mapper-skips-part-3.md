@@ -1,7 +1,7 @@
 ---
 title: "Port dispatch/routing_test.rb's skipped TestRoutingMapper tests, lines 3250-3971"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: ["port-routing-test-mapper-skips-part-2"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8890
+claim: "2026-10-14T11:12:27Z"
+assignee: "inlined-chain-with-own-and-same-file-initialize-is-skipped-as-ambiguous"
 blocked-by: null
 closed-reason: null
 ---

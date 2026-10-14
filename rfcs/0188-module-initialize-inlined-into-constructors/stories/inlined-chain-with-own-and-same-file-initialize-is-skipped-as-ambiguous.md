@@ -1,7 +1,7 @@
 ---
 title: "inlined-chain-with-own-and-same-file-initialize-is-skipped-as-ambiguous"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8890
+claim: "2026-10-14T11:12:27Z"
+assignee: "inlined-chain-with-own-and-same-file-initialize-is-skipped-as-ambiguous"
 blocked-by: null
 closed-reason: null
 ---

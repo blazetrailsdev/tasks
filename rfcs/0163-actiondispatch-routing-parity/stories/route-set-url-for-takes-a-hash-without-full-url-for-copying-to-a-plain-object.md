@@ -1,7 +1,7 @@
 ---
 title: "RouteSet#url_for takes the Hash full_url_for builds; drop the eachPair copy"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8890
+claim: "2026-10-14T11:12:27Z"
+assignee: "inlined-chain-with-own-and-same-file-initialize-is-skipped-as-ambiguous"
 blocked-by: null
 closed-reason: null
 ---

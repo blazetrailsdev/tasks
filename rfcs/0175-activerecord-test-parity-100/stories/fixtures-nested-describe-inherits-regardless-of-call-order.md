@@ -1,7 +1,7 @@
 ---
 title: "A nested describe's fixtures() class inherits its parent's whichever is called first"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

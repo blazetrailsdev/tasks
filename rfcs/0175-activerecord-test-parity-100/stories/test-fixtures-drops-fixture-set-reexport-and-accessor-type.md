@@ -1,7 +1,7 @@
 ---
 title: "activerecord: test-fixtures.ts drops the FixtureSet re-export and seats FixtureSetAccessor outside the Rails file"
-status: draft
-updated: 2026-10-13
+status: claimed
+updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T11:42:29Z"
+assignee: "dirty-getters-with-side-effects-exclusion-has-no-receipt"
 blocked-by: null
 closed-reason: null
 ---

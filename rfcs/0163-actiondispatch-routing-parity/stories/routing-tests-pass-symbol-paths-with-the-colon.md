@@ -1,6 +1,6 @@
 ---
 title: "Routing tests pass Rails' Symbol paths with the colon so they take map_match's Symbol arm"
-status: draft
+status: claimed
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T11:42:29Z"
+assignee: "dirty-getters-with-side-effects-exclusion-has-no-receipt"
 blocked-by: null
 closed-reason: null
 ---

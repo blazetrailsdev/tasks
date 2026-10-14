@@ -1,6 +1,6 @@
 ---
 title: "test_databases_test: assign Rails' plain configuration hash instead of a spied stub"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests
