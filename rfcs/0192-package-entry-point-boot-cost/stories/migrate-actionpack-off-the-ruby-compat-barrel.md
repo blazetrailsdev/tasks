@@ -2,7 +2,7 @@
 title: "actionpack: migrate its 219 ruby-compat barrel imports to subpaths"
 status: draft
 updated: 2026-10-13
-rfc: "0000-package-entry-point-boot-cost"
+rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
 packages: ["actionpack", "ruby-compat"]
 deps: ["ruby-compat-wildcard-subpath-export", "boot-graph-measurement-harness"]

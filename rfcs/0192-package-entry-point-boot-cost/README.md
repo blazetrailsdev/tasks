@@ -1,5 +1,5 @@
 ---
-rfc: "0000-package-entry-point-boot-cost"
+rfc: "0192-package-entry-point-boot-cost"
 title: "Package entry-point shape and boot cost: what a consumer pays to import one binding"
 status: draft
 created: 2026-10-13
@@ -32,7 +32,7 @@ clusters:
   - "findings"
 ---
 
-# RFC — Package entry-point shape and boot cost
+# RFC 0192 — Package entry-point shape and boot cost
 
 ## Summary
 

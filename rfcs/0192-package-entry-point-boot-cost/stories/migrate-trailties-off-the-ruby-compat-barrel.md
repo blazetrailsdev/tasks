@@ -1,13 +1,13 @@
 ---
-title: "activesupport: migrate its 291 ruby-compat barrel imports to subpaths"
+title: "trailties: migrate its 213 ruby-compat barrel imports to subpaths"
 status: draft
 updated: 2026-10-13
-rfc: "0000-package-entry-point-boot-cost"
+rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
-packages: ["activesupport", "ruby-compat"]
+packages: ["trailties", "ruby-compat"]
 deps: ["ruby-compat-wildcard-subpath-export", "boot-graph-measurement-harness"]
 deps-rfc: []
-est-loc: 320
+est-loc: 240
 priority: null
 pr: null
 claim: null
@@ -17,7 +17,7 @@ blocked-by: null
 
 ## Context
 
-`packages/activesupport/src` has **291** `from "@blazetrails/ruby-compat"` barrel
+`packages/trailties/src` has **213** `from "@blazetrails/ruby-compat"` barrel
 imports. Each one costs the importing module the full 139-module barrel instead
 of the ~54-module core (or less for a thin leaf such as `name-error`, which is
 5 modules).
@@ -29,7 +29,7 @@ re-export hub.
 
 ## Acceptance criteria
 
-- [ ] `grep -r 'from "@blazetrails/ruby-compat"' packages/activesupport/src` returns **0**
+- [ ] `grep -r 'from "@blazetrails/ruby-compat"' packages/trailties/src` returns **0**
 - [ ] Every replaced import names the subpath the harness's binding map gives
       for that binding; no import is rewritten to a different binding
 - [ ] `pnpm build`, lint and the full test suite are unchanged
@@ -39,14 +39,14 @@ re-export hub.
 
 ## Definition of done
 
-A re-export shim inside `activesupport` that forwards to the barrel does not close this
+A re-export shim inside `trailties` that forwards to the barrel does not close this
 story — it relocates the cost rather than removing it.
 
 ## Verification
 
 ```bash
-grep -rc 'from "@blazetrails/ruby-compat"' packages/activesupport/src | grep -v ':0' ; # expect no output
-pnpm build && pnpm vitest run packages/activesupport
+grep -rc 'from "@blazetrails/ruby-compat"' packages/trailties/src | grep -v ':0' ; # expect no output
+pnpm build && pnpm vitest run packages/trailties
 ```
 
 ## Notes

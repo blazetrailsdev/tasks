@@ -2,7 +2,7 @@
 title: "The tail: migrate the remaining 14 packages' 161 ruby-compat barrel imports"
 status: draft
 updated: 2026-10-13
-rfc: "0000-package-entry-point-boot-cost"
+rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
 packages:
   [

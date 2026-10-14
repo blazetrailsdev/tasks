@@ -1,13 +1,13 @@
 ---
-title: "activemodel: migrate its 121 ruby-compat barrel imports to subpaths"
+title: "activerecord: migrate its 605 ruby-compat barrel imports to subpaths"
 status: draft
 updated: 2026-10-13
-rfc: "0000-package-entry-point-boot-cost"
+rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
-packages: ["activemodel", "ruby-compat"]
+packages: ["activerecord", "ruby-compat"]
 deps: ["ruby-compat-wildcard-subpath-export", "boot-graph-measurement-harness"]
 deps-rfc: []
-est-loc: 140
+est-loc: 650
 priority: null
 pr: null
 claim: null
@@ -17,7 +17,7 @@ blocked-by: null
 
 ## Context
 
-`packages/activemodel/src` has **121** `from "@blazetrails/ruby-compat"` barrel
+`packages/activerecord/src` has **605** `from "@blazetrails/ruby-compat"` barrel
 imports. Each one costs the importing module the full 139-module barrel instead
 of the ~54-module core (or less for a thin leaf such as `name-error`, which is
 5 modules).
@@ -29,7 +29,7 @@ re-export hub.
 
 ## Acceptance criteria
 
-- [ ] `grep -r 'from "@blazetrails/ruby-compat"' packages/activemodel/src` returns **0**
+- [ ] `grep -r 'from "@blazetrails/ruby-compat"' packages/activerecord/src` returns **0**
 - [ ] Every replaced import names the subpath the harness's binding map gives
       for that binding; no import is rewritten to a different binding
 - [ ] `pnpm build`, lint and the full test suite are unchanged
@@ -39,14 +39,14 @@ re-export hub.
 
 ## Definition of done
 
-A re-export shim inside `activemodel` that forwards to the barrel does not close this
+A re-export shim inside `activerecord` that forwards to the barrel does not close this
 story — it relocates the cost rather than removing it.
 
 ## Verification
 
 ```bash
-grep -rc 'from "@blazetrails/ruby-compat"' packages/activemodel/src | grep -v ':0' ; # expect no output
-pnpm build && pnpm vitest run packages/activemodel
+grep -rc 'from "@blazetrails/ruby-compat"' packages/activerecord/src | grep -v ':0' ; # expect no output
+pnpm build && pnpm vitest run packages/activerecord
 ```
 
 ## Notes

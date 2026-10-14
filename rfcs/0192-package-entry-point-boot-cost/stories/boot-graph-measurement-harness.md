@@ -2,7 +2,7 @@
 title: "A committed boot-graph harness: loaded-vs-shipped module ratios per package, reproducible and regression-visible"
 status: draft
 updated: 2026-10-13
-rfc: "0000-package-entry-point-boot-cost"
+rfc: "0192-package-entry-point-boot-cost"
 cluster: "measurement"
 packages: []
 deps: []
