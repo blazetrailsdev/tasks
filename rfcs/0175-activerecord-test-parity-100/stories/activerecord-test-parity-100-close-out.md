@@ -1,7 +1,7 @@
 ---
 title: "activerecord: verify every test-side parity axis at 100% and pin each gate at zero"
-status: ready
-updated: 2026-09-30
+status: closed
+updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: closeout
 packages: ["activerecord"]
@@ -59,7 +59,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "RFC 0175 sunset without reaching 100%: missing/skipped/extra/fixture/schema axes burned down (132 stories done, trails#8315..#8896), but activerecord's assertion mark is still kind 4 / value 1 and no-standalone-associations-exclude.json is still populated on origin/main; the remaining axes' stories were re-homed to 0123-blocked-convergence-holding"
 ---
 
 ## Context

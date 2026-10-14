@@ -1,6 +1,6 @@
 ---
 title: "activesupport: DeprecationProxy, TimeZone, Subscribers and TaggedLogging new overrides are constructors"
-status: claimed
+status: in-progress
 updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8897
 claim: "2026-10-14T09:12:24Z"
 assignee: "activesupport-class-level-new-overrides-are-constructors"
 blocked-by: null

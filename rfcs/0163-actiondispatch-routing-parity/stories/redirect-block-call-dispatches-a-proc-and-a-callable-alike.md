@@ -1,6 +1,6 @@
 ---
 title: "redirect-block-call-dispatches-a-proc-and-a-callable-alike"
-status: draft
+status: ready
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

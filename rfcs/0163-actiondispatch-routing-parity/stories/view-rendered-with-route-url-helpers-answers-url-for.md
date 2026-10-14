@@ -1,6 +1,6 @@
 ---
 title: "view-rendered-with-route-url-helpers-answers-url-for"
-status: draft
+status: ready
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
