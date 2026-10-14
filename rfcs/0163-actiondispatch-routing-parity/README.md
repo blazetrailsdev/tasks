@@ -8,6 +8,7 @@ owner: "@deanmarano"
 packages:
   - "actionpack"
   - "actionview"
+priority: 2
 clusters: []
 ---
 

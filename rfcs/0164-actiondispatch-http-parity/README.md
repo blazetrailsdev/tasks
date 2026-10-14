@@ -8,6 +8,7 @@ owner: "@deanmarano"
 packages:
   - "actionpack"
   - "ruby-compat"
+priority: 2
 clusters: []
 ---
 
