@@ -30,6 +30,7 @@ clusters:
   - "calls-args"
   - "skipped-tests"
   - "lint-registers"
+  - "unported-tests"
 related-rfcs:
   - "0078-sti-schema-reflection-fidelity"
   - "0096-naming-identifier-burndown"

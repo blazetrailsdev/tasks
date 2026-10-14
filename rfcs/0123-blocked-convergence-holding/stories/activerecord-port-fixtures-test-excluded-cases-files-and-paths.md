@@ -2,7 +2,7 @@
 title: "activerecord: port the 28 fixtures_test.rb exclusions about fixture files and paths"
 status: ready
 updated: 2026-09-30
-rfc: "0175-activerecord-test-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: unported-tests
 packages: ["activerecord"]
 deps:
