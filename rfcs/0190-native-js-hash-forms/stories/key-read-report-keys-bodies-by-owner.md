@@ -1,6 +1,6 @@
 ---
 title: "parity:api:key-reads keys a body by owner and splits the receiver-unread bucket"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0190-native-js-hash-forms"
 cluster: null

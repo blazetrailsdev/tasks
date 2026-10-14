@@ -1,6 +1,6 @@
 ---
 title: "routing-test-mapper-remaining-hand-written-tests-become-rails-bodies"
-status: draft
+status: closed
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of routing-test-mapper-hand-written-tests-become-rails-bodies, which stays open for the remaining tests after trails#8906 ported logout, login and the redirect tests"
 ---
 
 ## Context

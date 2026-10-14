@@ -1,6 +1,6 @@
 ---
 title: "TestRoutingMapper's hand-written tests become the Rails bodies; StubController seating is deleted"
-status: claimed
+status: in-progress
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,8 +9,8 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: "2026-10-14T15:29:18Z"
+pr: trails#8906
+claim: "2026-10-14T16:47:42Z"
 assignee: "path-redirect-holds-its-template-string-as-block"
 blocked-by: null
 closed-reason: null
