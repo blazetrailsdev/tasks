@@ -1,7 +1,7 @@
 ---
 title: "activerecord: EncryptedFixtures, Type::Internal::Timezone and ControllerRuntime initialize are inlined"
-status: ready
-updated: 2026-10-11
+status: claimed
+updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
 packages: ["activerecord"]
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T03:42:25Z"
+assignee: "activerecord-fixtures-timezone-and-controller-runtime-initialize-inlined"
 blocked-by: null
 closed-reason: null
 ---
