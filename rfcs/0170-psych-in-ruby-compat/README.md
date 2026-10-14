@@ -1,9 +1,9 @@
 ---
 rfc: "0170-psych-in-ruby-compat"
 title: "Psych in ruby-compat: move YAML out of activesupport, make `yaml` optional, and give each YAML site its Rails (or receipted) alternative"
-status: draft
+status: active
 created: 2026-09-29
-updated: 2026-09-29
+updated: 2026-10-14
 owner: "@deanmarano"
 packages:
   - ruby-compat
