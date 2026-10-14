@@ -1,6 +1,6 @@
 ---
 title: "activerecord: sqlite3 adapter test's binary-column and encoding tests take Rails' bodies"
-status: ready
+status: in-progress
 updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8885
+claim: "2026-10-14T02:12:30Z"
+assignee: "sqlite3-adapter-test-binary-and-encoding-tests-take-rails-bodies"
 blocked-by: null
 closed-reason: null
 ---

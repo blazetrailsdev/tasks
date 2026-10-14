@@ -1,7 +1,7 @@
 ---
 title: "msgpack: Buffer#write flushes to its IO; cruby/buffer_spec.rb and the remaining packer/unpacker specs"
-status: ready
-updated: 2026-10-13
+status: in-progress
+updated: 2026-10-14
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8885
+claim: "2026-10-14T02:12:30Z"
+assignee: "sqlite3-adapter-test-binary-and-encoding-tests-take-rails-bodies"
 blocked-by: null
 closed-reason: null
 ---

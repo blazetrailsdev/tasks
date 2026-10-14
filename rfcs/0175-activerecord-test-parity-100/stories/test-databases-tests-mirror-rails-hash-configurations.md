@@ -1,7 +1,7 @@
 ---
 title: "test_databases_test: assign Rails' plain configuration hash instead of a spied stub"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: missing-tests
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8886
+claim: "2026-10-14T02:42:22Z"
+assignee: "test-databases-tests-mirror-rails-hash-configurations"
 blocked-by: null
 closed-reason: null
 ---

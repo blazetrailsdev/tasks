@@ -1,7 +1,7 @@
 ---
 title: "activerecord: serialized-attribute test bodies use Rails' serializer arguments, values and assertions"
-status: in-progress
-updated: 2026-10-13
+status: done
+updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
 packages: []

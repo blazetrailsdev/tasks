@@ -1,7 +1,7 @@
 ---
 title: "Port dispatch/routing_test.rb's skipped TestRoutingMapper tests, lines 2000-3249"
-status: in-progress
-updated: 2026-10-13
+status: done
+updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
