@@ -1,6 +1,6 @@
 ---
 title: "mapping-make-route-source-location"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

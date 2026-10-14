@@ -1,6 +1,6 @@
 ---
 title: "Move the misplaced HTTP tests to their dispatch/ convention paths and port the stragglers"
-status: claimed
+status: in-progress
 updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
+pr: trails#8909
 claim: "2026-10-14T17:48:39Z"
 assignee: "mime-type-match-is-rails-substring-match-and-trailing-star-calls-it"
 blocked-by: null

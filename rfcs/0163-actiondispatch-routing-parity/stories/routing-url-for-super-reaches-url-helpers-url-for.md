@@ -1,6 +1,6 @@
 ---
 title: "routing-url-for-super-reaches-url-helpers-url-for"
-status: claimed
+status: done
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
+pr: trails#8908
 claim: "2026-10-14T17:46:22Z"
 assignee: "port-actionview-polymorphic-routes-test-part-1"
 blocked-by: null
