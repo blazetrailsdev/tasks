@@ -1,6 +1,6 @@
 ---
 title: "mapper-resources-route-through-resource-scope-block"
-status: draft
+status: ready
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null

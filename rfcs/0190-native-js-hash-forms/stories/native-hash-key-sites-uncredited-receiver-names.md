@@ -1,7 +1,7 @@
 ---
 title: "native-hash-key-sites-uncredited-receiver-names"
-status: ready
-updated: 2026-10-12
+status: done
+updated: 2026-10-14
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8893
+claim: "2026-10-14T12:01:05Z"
+assignee: "native-hash-delete-sites-activerecord-activemodel-activesupport"
 blocked-by: null
 closed-reason: null
 ---

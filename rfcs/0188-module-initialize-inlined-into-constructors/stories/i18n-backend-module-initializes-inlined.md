@@ -1,6 +1,6 @@
 ---
 title: "i18n: Chain::Implementation, KeyValue::Implementation and MissingTranslation::Base initialize are inlined"
-status: done
+status: in-progress
 updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: trails#8888
+pr: trails#8895
 claim: "2026-10-14T10:12:26Z"
 assignee: "activerecord-adapter-modules-initialize-inlined"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Port controller/routing_test.rb's last RouteSetTest test and RackMountIntegrationTests"
-status: claimed
+status: in-progress
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#8892
 claim: "2026-10-14T11:42:29Z"
 assignee: "dirty-getters-with-side-effects-exclusion-has-no-receipt"
 blocked-by: null

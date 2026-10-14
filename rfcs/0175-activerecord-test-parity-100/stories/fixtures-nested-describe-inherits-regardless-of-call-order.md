@@ -1,6 +1,6 @@
 ---
 title: "A nested describe's fixtures() class inherits its parent's whichever is called first"
-status: ready
+status: closed
 updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T12:12:40Z"
+assignee: "fixtures-nested-describe-inherits-regardless-of-call-order"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: vitest collects a nested describe's factory only after its parent's factory has returned (and awaited), so the parent's fixtures() always runs before the child's; a test with the inner describe written first passes on main unchanged."
 ---
 
 ## Context

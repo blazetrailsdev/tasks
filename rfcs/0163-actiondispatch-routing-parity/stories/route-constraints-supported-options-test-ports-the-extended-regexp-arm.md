@@ -1,6 +1,6 @@
 ---
 title: "RouteSetTest's supported-options test ports its second assert_nothing_raised arm"
-status: ready
+status: in-progress
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8896
+claim: "2026-10-14T12:12:40Z"
+assignee: "fixtures-nested-describe-inherits-regardless-of-call-order"
 blocked-by: null
 closed-reason: null
 ---

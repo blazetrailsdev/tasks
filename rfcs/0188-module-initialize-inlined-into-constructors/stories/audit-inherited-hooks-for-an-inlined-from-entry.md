@@ -1,6 +1,6 @@
 ---
 title: "audit: sort Rails' inherited hooks into bodies written elsewhere and bodies replaced by another mechanism"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling

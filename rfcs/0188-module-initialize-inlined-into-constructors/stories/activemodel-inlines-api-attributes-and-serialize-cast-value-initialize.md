@@ -1,6 +1,6 @@
 ---
 title: "activemodel: API, Attributes and SerializeCastValue initialize are inlined into their includers' constructors"
-status: claimed
+status: blocked
 updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
@@ -17,7 +17,7 @@ priority: null
 pr: null
 claim: "2026-10-14T03:12:24Z"
 assignee: "activemodel-inlines-api-attributes-and-serialize-cast-value-initialize"
-blocked-by: null
+blocked-by: "owner decision pending: API#initialize can only become Model's constructor once every ActiveModel::Attributes includer (~273 classes, all extends Model) gets its own constructor seeding @attributes before API's assign; owner chose (2026-10-14) to defer API+Attributes. SerializeCastValue#initialize shipped separately."
 closed-reason: null
 ---
 

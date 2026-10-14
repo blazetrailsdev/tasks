@@ -1,6 +1,6 @@
 ---
 title: "Nest the truncate-all prefix and suffix describes under DatabaseTasksTruncateAllTest"
-status: ready
+status: in-progress
 updated: 2026-10-14
 rfc: "0175-activerecord-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8896
+claim: "2026-10-14T12:12:40Z"
+assignee: "fixtures-nested-describe-inherits-regardless-of-call-order"
 blocked-by: null
 closed-reason: null
 ---

@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: trails#8889
+pr: trails#8895
 claim: "2026-10-14T10:42:26Z"
 assignee: "activesupport-rotator-initialize-inlined"
 blocked-by: null
