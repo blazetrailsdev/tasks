@@ -2,7 +2,7 @@
 title: "Pair assertion value tokens positionally instead of greedy strict-first matching"
 status: draft
 updated: 2026-08-24
-rfc: "0189-activerecord-surfaced-deviations"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages:
   - "activerecord"
