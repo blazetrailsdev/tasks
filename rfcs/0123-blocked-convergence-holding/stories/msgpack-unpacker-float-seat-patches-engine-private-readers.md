@@ -2,7 +2,7 @@
 title: "msgpack: Unpacker seats a Float by replacing the engine's private readF32/readF64 through a cast"
 status: blocked
 updated: 2026-10-15
-rfc: "0184-msgpack-gem-port"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
