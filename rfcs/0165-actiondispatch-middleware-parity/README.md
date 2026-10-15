@@ -1,9 +1,9 @@
 ---
 rfc: "0165-actiondispatch-middleware-parity"
 title: "ActionDispatch middleware — cookies, flash, exceptions, stack and session stores to parity"
-status: draft
+status: active
 created: 2026-09-27
-updated: 2026-09-27
+updated: 2026-10-15
 owner: "@deanmarano"
 packages:
   - "actionpack"
