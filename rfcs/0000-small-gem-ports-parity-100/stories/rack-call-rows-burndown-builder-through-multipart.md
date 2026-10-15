@@ -34,5 +34,6 @@ Related existing stories: `rack-multipart-parser-locals-abbreviated`, `rack-mult
 ## Acceptance criteria
 
 - [ ] Each TS body calls what the Ruby body calls, in Ruby's order.
+- [ ] This story also owns `directory.rb list_directory`'s two call-argument rows (`mime_type(extname)` shape, `fullEntry` naming) and deletes the args row in `directory.json`.
 - [ ] The matching shards (`builder.json`, `common-logger.json`, `directory.json`, `head.json`, `headers.json`, `lock.json`, `media-type.json`, `mime.json`, `mock-response.json`) lose their call rows by deletion, followed by `pnpm parity:api:calls:tighten`, never by a reseed.
 - [ ] None of the listed files has a row left in `output/call-mismatches.json`.

@@ -5,7 +5,7 @@ updated: 2026-10-15
 rfc: "0000-small-gem-ports-parity-100"
 cluster: rack-session
 packages: [rack-session]
-deps: []
+deps: [rack-session-port-encryptor, rack-session-port-cookie]
 deps-rfc: []
 est-loc: 200
 priority: null

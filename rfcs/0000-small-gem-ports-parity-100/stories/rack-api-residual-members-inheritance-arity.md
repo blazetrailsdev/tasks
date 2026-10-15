@@ -1,11 +1,11 @@
 ---
-title: "rack residual API: six missing members, two inheritance gaps, four arity rows, two unpinned bodies"
+title: "rack residual API: eight missing members, two inheritance gaps, four arity rows, two unpinned bodies"
 status: draft
 updated: 2026-10-15
 rfc: "0000-small-gem-ports-parity-100"
 cluster: rack-api
 packages: [rack]
-deps: []
+deps: [ruby-compat-errno-emfile]
 deps-rfc: []
 est-loc: 300
 priority: null
@@ -29,4 +29,5 @@ Remaining rack API gaps outside reloader, events and lint:
 
 - [ ] rack reports 100% methods on every file other than `reloader.rb`, `events.rb` and `lint.rb`, and inheritance reaches 43/43.
 - [ ] Arity is 337/337, and pins show 0 unpinned.
-- [ ] `EMFILE` comes from ruby-compat's `Errno` (filed in 0154 if it is missing there), not from a local class.
+- [ ] `MultipartPartLimitError` extends ruby-compat's `Errno.EMFILE` (added by `ruby-compat-errno-emfile`; verified absent from `packages/ruby-compat/src/errno.ts` on 2026-10-15), not a local class.
+- [ ] This story also owns the `show_exceptions pretty` `template()` call-argument row, which the `template` arity fix clears.

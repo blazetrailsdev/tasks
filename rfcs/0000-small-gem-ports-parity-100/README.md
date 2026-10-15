@@ -164,8 +164,8 @@ under this RFC instead of receipting the package.
   the trailties surfaced-deviations bucket).
 - **Gating these packages in `parity:api:extra:gate` or
   `NAMING_ENROLLED_PACKAGES`.** Enrolling a package is the last criterion of
-  the story that burns its surface to zero. It is not a separate decision
-  this RFC pre-commits.
+  the story that burns its surface to zero. It is not a separate decision: it happens only as the last acceptance criterion of
+  the story that burns that package's surface to zero, and nowhere else.
 
 ## Alternatives considered
 
@@ -180,7 +180,7 @@ under this RFC instead of receipting the package.
 
 1. Comparer fixes first, so package stories measure true residue:
    `extra-surface-skips-well-known-symbol-keyed-members`.
-2. rack API: `rack-port-reloader`, `rack-converge-events`,
+2. rack API: `ruby-compat-errno-emfile`, `rack-port-reloader`, `rack-converge-events`,
    `rack-port-lint-wrapper-checks`, `rack-api-residual-members-inheritance-arity`.
 3. rack calls and args: `rack-call-rows-burndown-builder-through-multipart`,
    `rack-call-rows-burndown-request-through-utils`,
@@ -230,3 +230,9 @@ ratified CLAUDE.md section. A skip with no such citation counts as a gap.
 ## Changelog
 
 - 2026-10-15: initial RFC
+- 2026-10-15: the repo owner ruled to port `Rack::Session::Cookie` /
+  `Encryptor`; this RFC supersedes `0133-rack-session-gem-port`'s non-goal
+  (0133 is closed, so it is recorded here)
+- 2026-10-15: review fixes: one owner per mismatch row, cross-story `deps`,
+  receipted i18n/globalid rows converge rather than stay, new
+  `ruby-compat-errno-emfile` story

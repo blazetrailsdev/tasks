@@ -5,7 +5,12 @@ updated: 2026-10-15
 rfc: "0000-small-gem-ports-parity-100"
 cluster: rack-tests
 packages: [rack]
-deps: []
+deps:
+  [
+    rack-spec-request-and-multipart-take-rails-bodies,
+    rack-spec-headers-response-utils-lint-take-rails-bodies,
+    port-rack-spec-request-test-proxy-request-inherited-examples,
+  ]
 deps-rfc: []
 est-loc: 600
 priority: null
@@ -23,4 +28,4 @@ closed-reason: null
 ## Acceptance criteria
 
 - [ ] 0 assertion-count, kind and value mismatches for these files.
-- [ ] rack test parity reaches 100%, with 0 TS-only tests in Rails-named files, once the two sibling test stories land.
+- [ ] rack test parity reaches 100%, with 0 TS-only tests in Rails-named files, with the deps stories done (the 97-test `spec_request.rb` gap is `port-rack-spec-request-test-proxy-request-inherited-examples`).
