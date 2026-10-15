@@ -1,9 +1,9 @@
 ---
 rfc: "0164-actiondispatch-http-parity"
 title: "ActionDispatch HTTP — Request, Response, Mime and params parsing to parity"
-status: active
+status: closed
 created: 2026-09-27
-updated: 2026-10-14
+updated: 2026-10-15
 owner: "@deanmarano"
 packages:
   - "actionpack"

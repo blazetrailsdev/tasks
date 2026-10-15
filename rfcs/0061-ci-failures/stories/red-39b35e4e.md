@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (2) failing on main @39b35e4e"
-status: ready
+status: closed
 updated: 2026-10-15
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T17:43:04Z"
+assignee: "red-39b35e4e"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: PostgreSQLAdapterTest 'translate no connection exception to not established' races pg_terminate_backend's async FATAL (57P01 surfaced as StatementInvalid); passes 5/5 locally on 39b35e4e, commit did not touch exception translation"
 ---
 
 ## Context

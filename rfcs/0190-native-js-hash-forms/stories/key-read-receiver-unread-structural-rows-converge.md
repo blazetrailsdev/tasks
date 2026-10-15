@@ -1,6 +1,6 @@
 ---
 title: "Converge the structural receiver-unread rows parity:api:key-reads still lists (~350 LOC)"
-status: draft
+status: claimed
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T17:31:57Z"
+assignee: "key-read-receiver-unread-structural-rows-converge"
 blocked-by: null
 closed-reason: null
 ---

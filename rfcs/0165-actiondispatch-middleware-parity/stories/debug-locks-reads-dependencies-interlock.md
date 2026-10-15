@@ -1,6 +1,6 @@
 ---
 title: "debug-locks-reads-dependencies-interlock"
-status: ready
+status: in-progress
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8943
+claim: "2026-10-15T17:34:17Z"
+assignee: "debug-locks-reads-dependencies-interlock"
 blocked-by: null
 closed-reason: null
 ---

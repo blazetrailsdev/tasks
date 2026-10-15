@@ -1,6 +1,6 @@
 ---
 title: "Hash#merge on a plain object is an object spread: every package with a site"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: substitution

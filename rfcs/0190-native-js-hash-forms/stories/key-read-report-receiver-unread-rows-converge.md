@@ -1,6 +1,6 @@
 ---
 title: "Converge the receiver-unread rows parity:api:key-reads lists"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: null
