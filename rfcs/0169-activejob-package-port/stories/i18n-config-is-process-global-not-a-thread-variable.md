@@ -1,6 +1,6 @@
 ---
 title: "Store I18n.config as a thread variable so concurrent with_locale blocks do not share a locale"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0169-activejob-package-port"
 cluster: null

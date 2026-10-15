@@ -1,6 +1,6 @@
 ---
 title: "Assign VERSION.STRING once and declare gemVersion first in activesupport, activemodel and activerecord"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0169-activejob-package-port"
 cluster: null

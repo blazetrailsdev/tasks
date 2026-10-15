@@ -1,6 +1,6 @@
 ---
 title: "credit-mattr-accessor-on-synthesized-file-module"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0169-activejob-package-port"
 cluster: null

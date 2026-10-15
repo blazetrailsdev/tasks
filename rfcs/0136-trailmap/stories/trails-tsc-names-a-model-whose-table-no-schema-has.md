@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: warn when a model's table is in no schema file"
-status: ready
+status: claimed
 updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 110
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T20:59:39Z"
+assignee: "trails-tsc-names-a-model-whose-table-no-schema-has"
 blocked-by: null
 closed-reason: null
 ---

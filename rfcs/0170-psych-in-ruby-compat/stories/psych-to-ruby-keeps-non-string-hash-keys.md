@@ -1,6 +1,6 @@
 ---
 title: "ToRuby revives every untagged mapping into a Hash, as revive_hash does, and converges its consumers"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: null

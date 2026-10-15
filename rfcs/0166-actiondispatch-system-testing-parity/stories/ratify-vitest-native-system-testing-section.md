@@ -1,6 +1,6 @@
 ---
 title: "Ratify 'System testing runs on Vitest' in actionpack CLAUDE.md"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null

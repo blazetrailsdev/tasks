@@ -1,6 +1,6 @@
 ---
 title: "Port cookies_test.rb's domain-option tests"
-status: claimed
+status: done
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-cookies-test-skips"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#8952
 claim: "2026-10-15T19:47:18Z"
 assignee: "cookie-jar-serializer-fallbacks-and-legacy-cbc-upgrade"
 blocked-by: null
