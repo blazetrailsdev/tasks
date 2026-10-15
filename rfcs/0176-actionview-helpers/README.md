@@ -57,56 +57,49 @@ making the helper files live `Module`s. That work was real and is done; it
 stays recorded in 0140 because only open stories move. What moves here is the
 open remainder, so that 0140 can close on the goal it declared.
 
-### Measured state, 2026-10-01
+### Measured state, 2026-10-15
 
-`pnpm parity:api --package actionview --files` at trails `8f2186e9db` reports
-actionview at **1173/1479 methods (79.3%)**, 80 of 96 files. (Measured with
-`API_COMPARE_ALLOW_STALE_BUILD=1` from a checkout whose `dist` was stale, so
-the totals are indicative. Re-measuring from a fresh build is the first step of
-Rollout phase 1.)
+`pnpm parity:api --package actionview --files` at trails `57c7c65ed0` (fresh
+build), with the stale helper and `layouts.rb` entries removed from the
+exclusion register: actionview at **1761/2429 methods (72.5%)**, 87 of 109
+files; own row 1173/1339 (87.6%). `layouts.rb` is at 37/40.
 
 The helper rows that are not at 100%:
 
-| Rails file                           | Matched | Missing |
-| ------------------------------------ | ------- | ------- |
-| `helpers/date_helper.rb`             | 21      | 41      |
-| `helpers/form_helper.rb`             | 154     | 37      |
-| `helpers/form_tag_helper.rb`         | 82      | 30      |
-| `helpers/tags/base.rb`               | 99      | 30      |
-| `helpers/tags/collection_helpers.rb` | 0       | 12      |
-| `helpers/controller_helper.rb`       | 2       | 10      |
-| `helpers/tags/date_select.rb`        | 0       | 9       |
-| `helpers/atom_feed_helper.rb`        | 0       | 5       |
-| `helpers/tags/check_box.rb`          | 0       | 5       |
-| `helpers/tags/radio_button.rb`       | 0       | 4       |
-| `helpers/tags/select_renderer.rb`    | 0       | 3       |
-| `helpers/csrf_helper.rb`             | 0       | 2       |
-| `helpers/tags/file_field.rb`         | 0       | 2       |
-| `helpers/csp_helper.rb`              | 0       | 1       |
-| `helpers/tags/checkable.rb`          | 0       | 1       |
+| Rails file                                  | Matched | Missing |
+| ------------------------------------------- | ------- | ------- |
+| `helpers.rb`                                | 214     | 87      |
+| `helpers/date_helper.rb`                    | 21      | 41      |
+| `helpers/form_helper.rb`                    | 155     | 36      |
+| `helpers/tags/collection_check_boxes.rb`    | 0       | 33      |
+| `helpers/tags/collection_radio_buttons.rb`  | 0       | 32      |
+| `helpers/form_tag_helper.rb`                | 83      | 29      |
+| `helpers/tags/base.rb`                      | 100     | 29      |
+| `helpers/tags/select.rb`                    | 0       | 27      |
+| `helpers/tags/collection_select.rb`         | 0       | 26      |
+| `helpers/tags/grouped_collection_select.rb` | 0       | 26      |
+| `helpers/tags/time_zone_select.rb`          | 0       | 26      |
+| `helpers/tags/weekday_select.rb`            | 0       | 26      |
+| `helpers/form_options_helper.rb`            | 0       | 21      |
+| `helpers/tags/collection_helpers.rb`        | 0       | 12      |
+| `helpers/translation_helper.rb`             | 0       | 12      |
+| `helpers/controller_helper.rb`              | 2       | 10      |
+| `helpers/tags/date_select.rb`               | 0       | 9       |
+| `helpers/atom_feed_helper.rb`               | 0       | 5       |
+| `helpers/tags/check_box.rb`                 | 0       | 5       |
+| `helpers/tags/radio_button.rb`              | 0       | 4       |
+| `helpers/tags/select_renderer.rb`           | 0       | 3       |
+| `helpers/tags/file_field.rb`                | 0       | 2       |
+| `helpers/tags/checkable.rb`                 | 0       | 1       |
 
-That is 192 missing methods in compared helper files. Every other compared
-helper file is at 100%.
+That is 502 missing methods in compared helper files. Every other compared
+helper file is at 100%, `helpers/asset_tag_helper.rb` included.
 
-### The exclusion register hides more, and two of its helper entries are stale
+### The exclusion register
 
-`scripts/parity/unported-files/actionview.ts` removes these helper files from
-the comparison entirely, so they appear in no row above:
-
-- `helpers/form_options_helper.rb`
-- `helpers/translation_helper.rb`
-- `helpers/tags/select.rb`, `collection_select.rb`,
-  `grouped_collection_select.rb`, `collection_check_boxes.rb`,
-  `collection_radio_buttons.rb`, `time_zone_select.rb`, `weekday_select.rb`
-- `helpers.rb`
-- `helpers/asset_tag_helper.rb`
-
-The last two are excluded for reasons that are no longer true.
-`packages/actionview/src/helpers.ts` is a port of `helpers.rb`, and
-`packages/actionview/src/helpers/asset-tag-helper.ts` is a port of
-`asset_tag_helper.rb`, yet the register still says "nothing under it is
-ported" and "no trails view layer". Until those entries are removed the
-headline figure neither credits nor checks either file.
+`scripts/parity/unported-files/actionview.ts` now excludes only
+`template/handlers/builder.rb` and `test_case.rb`. Every helper file, and
+`layouts.rb`, is compared.
 
 (The register's `/layouts.rb` entry is stale in the same way, since
 `packages/actionview/src/layouts.ts` exists. Layouts are RFC 0140's scope, so
