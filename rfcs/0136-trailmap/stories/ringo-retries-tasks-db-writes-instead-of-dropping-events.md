@@ -5,7 +5,8 @@ updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: []
+deps:
+  - move-tracker-state-into-the-database
 deps-rfc: []
 est-loc: 120
 priority: null
