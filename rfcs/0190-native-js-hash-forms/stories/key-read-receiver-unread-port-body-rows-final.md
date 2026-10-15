@@ -1,6 +1,6 @@
 ---
 title: "key-read-receiver-unread-port-body-rows-final"
-status: ready
+status: closed
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicate of key-read-receiver-unread-port-body-rows-remainder, which stays open for generate, pg reset and the driver selenium arm; its GID.build row converged in trails#8951"
 ---
 
 ## Context

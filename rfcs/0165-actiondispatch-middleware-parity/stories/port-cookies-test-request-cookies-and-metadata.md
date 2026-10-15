@@ -1,6 +1,6 @@
 ---
 title: "Port cookies_test.rb's request-cookie, expiry and metadata tests"
-status: ready
+status: in-progress
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["port-cookies-test-domain-options"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8955
+claim: "2026-10-15T21:14:47Z"
+assignee: "cookies-test-through-test-controller"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Shrink ruby-compat hash.ts to the arms that still have a caller"
-status: in-progress
+status: closed
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: substitution
@@ -13,7 +13,7 @@ pr: trails#8951
 claim: "2026-10-15T19:16:52Z"
 assignee: "key-read-receiver-unread-port-body-rows-remainder"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: after every substitution story merged, a coverage run over all 95 callers' tests plus a read of each arm found every arm of hasKey/hashAref/hashAset/hashDelete/update/merge/eachPair reached by a caller or mirroring an MRI branch (the caller table is in trails#8951); nothing was dead to remove"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: --schema accepts more than one file, for a multi-database app"
-status: claimed
+status: in-progress
 updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 1
-pr: null
+pr: trails#8954
 claim: "2026-10-15T20:59:39Z"
 assignee: "trails-tsc-names-a-model-whose-table-no-schema-has"
 blocked-by: null

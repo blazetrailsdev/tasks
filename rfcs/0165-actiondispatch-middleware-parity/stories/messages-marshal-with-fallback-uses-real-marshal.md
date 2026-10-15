@@ -1,6 +1,6 @@
 ---
 title: "messages-marshal-with-fallback-uses-real-marshal"
-status: draft
+status: ready
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
