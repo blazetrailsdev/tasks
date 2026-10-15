@@ -10,6 +10,7 @@ deps:
     "converge-server-onto-in-process-vite-dev-server",
     "converge-system-test-case-onto-test-case-with-page-and-expect-element",
     "port-actionpack-abstract-unit-test-support",
+    "converge-driver-selenium-arm-onto-webdriverio",
   ]
 deps-rfc: []
 est-loc: 250
