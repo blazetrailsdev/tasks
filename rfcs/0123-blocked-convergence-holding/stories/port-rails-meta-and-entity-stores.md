@@ -2,7 +2,7 @@
 title: "Port RailsMetaStore / RailsEntityStore (http/rack_cache.rb) over @blazetrails/rack-cache"
 status: ready
 updated: 2026-10-14
-rfc: "0164-actiondispatch-http-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["actionpack"]
 deps: ["port-rack-cache-storage"]
