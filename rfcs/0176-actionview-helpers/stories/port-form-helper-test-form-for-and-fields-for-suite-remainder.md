@@ -25,7 +25,7 @@ closed-reason: null
 false url/action, text_area alias, every `form_for_field_id*` / `form_for_field_name*`
 test (`:1734-1964`), `test_nested_fields_for`, `_field_id`, `_field_id_with_index_override`,
 `test_deep_nested_fields_for`, `_with_index_and_parent_fields`,
-`test_form_for_with_index_and_nested_fields_for`, `_with_index_on_both`, and the
+`test_form_for_with_index_and_nested_fields_for`, and the
 one-to-one / collection nested-attributes cases at `:3020-3064` and `:3160-3181`. The
 `Post` / `Comment` / `Author` fakes there now carry `author`, `name`, `save`,
 `relevances` and the `*_attributes=` writers of `test/lib/controller/fake_models.rb`.
@@ -36,6 +36,7 @@ Left out for the LOC ceiling, all using only already-ported helpers
 (`text_field`, `hidden_field`, `label`, `field_id`/`field_name`):
 
 - `form_helper_test.rb:2891` `test_nested_fields_for_with_nested_collections`,
+  `:2939` `test_nested_fields_for_with_index_on_both`,
   `:2953` `_with_auto_index`, `:2981` `_with_auto_index_on_both`,
   `:2995` `_with_index_and_auto_index`.
 - `:3066` and `:3085-3159`: the one-to-one `using_erb_and_inline_block`,
