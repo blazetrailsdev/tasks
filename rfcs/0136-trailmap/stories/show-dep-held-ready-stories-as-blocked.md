@@ -5,7 +5,8 @@ updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: []
+deps:
+  - bump-the-ringo-pin-to-carry-the-write-path-and-smoke-cards
 deps-rfc: []
 est-loc: 200
 priority: null
