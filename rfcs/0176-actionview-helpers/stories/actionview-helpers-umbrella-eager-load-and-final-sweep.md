@@ -5,7 +5,19 @@ updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
-deps: []
+deps:
+  - actionview-unported-register-drops-helper-entries
+  - port-form-helper-file-field-check-box-radio-button
+  - port-form-tag-helper-field-tag-methods
+  - form-helper-button-and-default-form-builder
+  - port-form-options-helper-and-select-tag
+  - port-collection-grouped-time-zone-weekday-select-tags
+  - port-collection-check-boxes-and-radio-buttons-tags
+  - port-date-helper-date-time-selector
+  - port-date-select-tags-and-time-tag
+  - port-translation-helper
+  - controller-helper-delegators-visible-to-parity
+  - port-atom-feed-helper
 deps-rfc: []
 est-loc: 60
 priority: null
