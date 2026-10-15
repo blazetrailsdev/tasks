@@ -1,7 +1,7 @@
 ---
 title: "I18n Backend::Base#load_yml through YAML.unsafe_load_file; drop i18n's own yaml resolution"
-status: ready
-updated: 2026-10-14
+status: in-progress
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["i18n"]
@@ -9,9 +9,9 @@ deps: ["psych-libyaml-seam-without-top-level-await", "psych-load-file-family"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8925
+claim: "2026-10-15T01:03:04Z"
+assignee: "activerecord-delegation-encode-with-and-class-specific-relation-name"
 blocked-by: null
 closed-reason: null
 ---

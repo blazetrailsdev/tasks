@@ -1,7 +1,7 @@
 ---
 title: "Close RFC 0165 — middleware and log-subscriber call baselines to zero"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: ["actionpack"]

@@ -1,7 +1,7 @@
 ---
 title: "Seat ActionDispatch::Cookies' env-key constants"
-status: draft
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8926
+claim: "2026-10-15T01:32:57Z"
+assignee: "action-dispatch-cookies-env-key-constants-are-string-literals"
 blocked-by: null
 closed-reason: null
 ---

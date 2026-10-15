@@ -1,6 +1,6 @@
 ---
 title: "inspector-routes-when-expanded-colocated-source-location"
-status: claimed
+status: blocked
 updated: 2026-10-15
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-15T00:59:48Z"
-assignee: "port-small-routing-and-url-for-test-files"
-blocked-by: null
+claim: null
+assignee: null
+blocked-by: "owner decision: where test/dispatch ports sit relative to src/action-dispatch, which Mapper#routeSourceLocation skips (mapper.rb:378-391)"
 closed-reason: null
 ---
 

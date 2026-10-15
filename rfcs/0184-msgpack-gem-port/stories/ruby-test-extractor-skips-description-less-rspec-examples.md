@@ -1,6 +1,6 @@
 ---
 title: "test-compare: the Ruby extractor drops description-less RSpec examples (it { is_expected })"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0184-msgpack-gem-port"
 cluster: null

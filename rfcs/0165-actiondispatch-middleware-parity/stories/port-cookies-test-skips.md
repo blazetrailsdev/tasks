@@ -1,7 +1,7 @@
 ---
 title: "Port cookies_test.rb's 27 skipped tests"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: ["actionpack"]

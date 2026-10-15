@@ -1,6 +1,6 @@
 ---
 title: "activesupport: Cache::SerializerWithFallback.[] returns the registered serializer; load is a member of each, as include SerializerWithFallback makes it"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0184-msgpack-gem-port"
 cluster: null

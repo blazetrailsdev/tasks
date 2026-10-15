@@ -1,6 +1,6 @@
 ---
 title: "port-actionview-direct-routes-test"
-status: claimed
+status: blocked
 updated: 2026-10-15
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-15T00:59:48Z"
-assignee: "port-small-routing-and-url-for-test-files"
-blocked-by: null
+claim: null
+assignee: null
+blocked-by: "owner decision: where ActionView::TestCase (actionview/lib/action_view/test_case.rb) lives — actionview cannot import ActionController::Base (actionpack depends on actionview)"
 closed-reason: null
 ---
 

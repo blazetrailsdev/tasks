@@ -1,7 +1,7 @@
 ---
 title: "Port the 35 tests StaticEncodingTest inherits from StaticTest"
-status: draft
-updated: 2026-10-14
+status: ready
+updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: ["actionpack"]

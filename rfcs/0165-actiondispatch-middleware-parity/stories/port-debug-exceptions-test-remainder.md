@@ -1,7 +1,7 @@
 ---
 title: "Port debug_exceptions_test.rb's 18 missing tests"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: ["actionpack"]

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: TableRow#resolve_sti_reflections and the _counter_cache_columns host type read the class_attribute slots at their declared types"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

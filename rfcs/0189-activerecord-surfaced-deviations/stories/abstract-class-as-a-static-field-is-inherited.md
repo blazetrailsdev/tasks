@@ -1,6 +1,6 @@
 ---
 title: "static abstractClass = true shadows the accessor and every subclass inherits it"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

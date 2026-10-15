@@ -1,6 +1,6 @@
 ---
 title: "active-record-module-config-lets-are-module-ivars"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

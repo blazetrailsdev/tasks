@@ -1,7 +1,7 @@
 ---
 title: "OrderedHash: port the !omap builtin type, to_yaml_type and encode_with"
-status: ready
-updated: 2026-10-14
+status: in-progress
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activesupport"]
@@ -9,9 +9,9 @@ deps: ["psych-omap", "psych-load-tags-dump-tags-and-domain-types"]
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8925
+claim: "2026-10-15T01:03:04Z"
+assignee: "activerecord-delegation-encode-with-and-class-specific-relation-name"
 blocked-by: null
 closed-reason: null
 ---

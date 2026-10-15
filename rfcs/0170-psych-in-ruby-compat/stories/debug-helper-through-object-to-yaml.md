@@ -1,7 +1,7 @@
 ---
 title: "DebugHelper#debug through toYaml, with Rails' rescue arm"
-status: ready
-updated: 2026-10-14
+status: in-progress
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["actionview"]
@@ -9,9 +9,9 @@ deps: ["psych-object-to-yaml", "psych-libyaml-seam-without-top-level-await"]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8925
+claim: "2026-10-15T01:03:04Z"
+assignee: "activerecord-delegation-encode-with-and-class-specific-relation-name"
 blocked-by: null
 closed-reason: null
 ---

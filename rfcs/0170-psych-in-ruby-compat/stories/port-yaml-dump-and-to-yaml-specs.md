@@ -1,7 +1,7 @@
 ---
 title: "Enroll spec/ruby/library/yaml dump_spec.rb and to_yaml_spec.rb for ruby-compat Psych"
-status: ready
-updated: 2026-10-14
+status: in-progress
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat"]
@@ -9,9 +9,9 @@ deps: ["psych-object-to-yaml", "psych-safe-dump-and-restricted-yaml-tree"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8925
+claim: "2026-10-15T01:03:04Z"
+assignee: "activerecord-delegation-encode-with-and-class-specific-relation-name"
 blocked-by: null
 closed-reason: null
 ---

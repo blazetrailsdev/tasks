@@ -1,6 +1,6 @@
 ---
 title: "Converge Response's invented iterators and buffer, and port its missing members"
-status: claimed
+status: in-progress
 updated: 2026-10-15
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["http-config-seats-onto-mattr-accessor", "response-location-returns-empty
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#8923
 claim: "2026-10-15T00:51:08Z"
 assignee: "request-test-remaining-skips-and-extras"
 blocked-by: null

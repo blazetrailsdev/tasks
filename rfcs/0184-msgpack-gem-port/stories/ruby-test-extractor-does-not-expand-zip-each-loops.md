@@ -1,6 +1,6 @@
 ---
 title: "test-compare: the Ruby extractor records a zip(...).each test loop as one case"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0184-msgpack-gem-port"
 cluster: null

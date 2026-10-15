@@ -1,6 +1,6 @@
 ---
 title: "ts-extractor-reads-rb-mod-define-method-seats"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0184-msgpack-gem-port"
 cluster: null

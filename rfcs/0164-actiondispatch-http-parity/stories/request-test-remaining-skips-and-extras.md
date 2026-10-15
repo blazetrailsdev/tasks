@@ -1,6 +1,6 @@
 ---
 title: "request-test-remaining-skips-and-extras"
-status: claimed
+status: in-progress
 updated: 2026-10-15
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8923
 claim: "2026-10-15T00:51:08Z"
 assignee: "request-test-remaining-skips-and-extras"
 blocked-by: null
