@@ -13,7 +13,7 @@ packages:
   - trails-tsc
   - "activerecord-cli"
 clusters: []
-priority: 1
+priority: 4
 ---
 
 # RFC 0136 — trailmap: one application owns the task domain
