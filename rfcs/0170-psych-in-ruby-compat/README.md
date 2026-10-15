@@ -5,6 +5,7 @@ status: active
 created: 2026-09-29
 updated: 2026-10-14
 owner: "@deanmarano"
+priority: 3
 packages:
   - ruby-compat
   - activesupport
