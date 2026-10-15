@@ -1,6 +1,6 @@
 ---
 title: "GetIp#calculate_ip appends remote_addr unconditionally"
-status: draft
+status: in-progress
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8939
+claim: "2026-10-15T15:34:30Z"
+assignee: "debug-locks-reads-dependencies-interlock"
 blocked-by: null
 closed-reason: null
 ---

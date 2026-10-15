@@ -1,6 +1,6 @@
 ---
 title: "Port static_test.rb's remainder over the public/ and 公共/ fixtures"
-status: ready
+status: in-progress
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["port-actionpack-abstract-unit-test-support"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8939
+claim: "2026-10-15T15:34:30Z"
+assignee: "debug-locks-reads-dependencies-interlock"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Hash#merge on a plain object is an object spread: every package with a site"
-status: ready
-updated: 2026-10-11
+status: claimed
+updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: substitution
 packages: [actionpack, activerecord, trailties, rack-test, actionview, activesupport]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T15:48:09Z"
+assignee: "key-read-report-receiver-unread-rows-converge"
 blocked-by: null
 closed-reason: null
 ---

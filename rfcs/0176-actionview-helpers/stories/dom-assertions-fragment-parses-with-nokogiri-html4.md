@@ -1,6 +1,6 @@
 ---
 title: "DomAssertions#fragment is a regex tokenizer, not Nokogiri::HTML4::DocumentFragment (dom_assertions.rb:131)"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null

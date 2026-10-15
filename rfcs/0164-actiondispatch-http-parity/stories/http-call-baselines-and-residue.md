@@ -19,7 +19,7 @@ deps-rfc: []
 est-loc: 350
 priority: 2
 pr: null
-claim: "2026-10-15T14:50:23Z"
+claim: "2026-10-15T15:55:17Z"
 assignee: "http-call-baselines-and-residue"
 blocked-by: null
 closed-reason: null

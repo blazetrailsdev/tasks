@@ -1,6 +1,6 @@
 ---
 title: "TS call extractor orders a callback argument's calls after its callee, as Ruby blocks"
-status: draft
+status: claimed
 updated: 2026-10-15
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T15:55:17Z"
+assignee: "http-call-baselines-and-residue"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "actionview: content_for converges onto capture_helper.rb's arms"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null

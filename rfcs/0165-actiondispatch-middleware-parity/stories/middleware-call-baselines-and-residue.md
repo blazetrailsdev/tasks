@@ -1,6 +1,6 @@
 ---
 title: "Close RFC 0165 — middleware and log-subscriber call baselines to zero"
-status: ready
+status: done
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -16,9 +16,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8937
+claim: "2026-10-15T15:06:47Z"
+assignee: "middleware-call-baselines-and-residue"
 blocked-by: null
 closed-reason: null
 ---

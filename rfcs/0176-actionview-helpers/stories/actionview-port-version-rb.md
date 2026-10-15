@@ -1,6 +1,6 @@
 ---
 title: "actionview: port ActionView.version and drop its version.rb exclusion row"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null

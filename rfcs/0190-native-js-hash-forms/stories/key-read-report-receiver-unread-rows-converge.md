@@ -1,7 +1,7 @@
 ---
 title: "Converge the receiver-unread rows parity:api:key-reads lists"
-status: draft
-updated: 2026-10-14
+status: claimed
+updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T15:48:09Z"
+assignee: "key-read-report-receiver-unread-rows-converge"
 blocked-by: null
 closed-reason: null
 ---

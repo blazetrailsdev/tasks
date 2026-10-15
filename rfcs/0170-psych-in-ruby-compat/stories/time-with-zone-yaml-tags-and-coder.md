@@ -1,7 +1,7 @@
 ---
 title: "TimeWithZone: YAML load/dump tags and init_with / encode_with"
-status: ready
-updated: 2026-10-14
+status: in-progress
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activesupport"]
@@ -9,9 +9,9 @@ deps: ["psych-load-tags-dump-tags-and-domain-types"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8938
+claim: "2026-10-15T15:36:14Z"
+assignee: "encrypted-configuration-deserialize-through-psych-unsafe-load"
 blocked-by: null
 closed-reason: null
 ---

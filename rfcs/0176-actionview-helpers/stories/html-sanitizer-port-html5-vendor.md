@@ -1,6 +1,6 @@
 ---
 title: "html-sanitizer: port Rails::HTML5::Sanitizer vendors now that Nokogiri::HTML5 is defined"
-status: draft
+status: done
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8933
 claim: null
 assignee: null
 blocked-by: null

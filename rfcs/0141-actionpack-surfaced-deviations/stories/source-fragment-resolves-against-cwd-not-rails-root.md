@@ -1,7 +1,7 @@
 ---
 title: "ExceptionWrapper#source_fragment resolves against Dir.pwd instead of Rails.root"
-status: draft
-updated: 2026-10-14
+status: done
+updated: 2026-10-15
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "http-middleware"
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: trails#8937
 claim: null
 assignee: null
 blocked-by: null

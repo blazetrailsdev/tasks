@@ -1,7 +1,7 @@
 ---
 title: "EncryptedConfiguration#deserialize through YAML.unsafe_load, rescuing Psych::SyntaxError"
 status: ready
-updated: 2026-10-14
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activesupport"]

@@ -1,7 +1,7 @@
 ---
 title: "build_column_serializer: port the `coder == ::YAML` arm"
-status: ready
-updated: 2026-10-14
+status: in-progress
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activerecord"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8938
+claim: "2026-10-15T15:36:14Z"
+assignee: "encrypted-configuration-deserialize-through-psych-unsafe-load"
 blocked-by: null
 closed-reason: null
 ---
