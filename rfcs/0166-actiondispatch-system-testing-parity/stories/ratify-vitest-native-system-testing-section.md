@@ -34,4 +34,13 @@ cite. The section text is drafted in the RFC README, § "The ratified section".
   Rails-fact-to-Vitest-carrier table and the test-code-runs-in-Node rule.
 - The root `CLAUDE.md` gains a one-paragraph pointer heading for it, like the
   other moved sections.
-- No code changes.
+- The screenshot save path the section names is real when it lands (repo
+  owner, 2026-10-15, trails#8948): `screenshots_dir` reads
+  `ScreenshotHelper.screenshotDirectory` (seeded from
+  `inject("screenshotDirectory")`, since Vitest does not serialize
+  `browser.screenshotDirectory` to workers and a test cannot change an
+  injected value), and `output_type` / `html_from_env?` read only the
+  `RAILS_SYSTEM_TESTING_SCREENSHOT*` variables Rails names, so the section's
+  table matches the code.
+- `TOKEN_RENAMES` gains `capybara` → `vitest`, so the Rails test name that
+  spells the library credits at the Vitest spelling.
