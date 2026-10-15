@@ -5,7 +5,11 @@ updated: 2026-10-06
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-activejob-enqueuing-and-configured-job
+  - port-activejob-enqueue-after-transaction-commit
+  - port-activejob-scalar-serializers
+  - port-activejob-arguments
 deps-rfc: []
 est-loc: 60
 priority: null
