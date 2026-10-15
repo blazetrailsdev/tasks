@@ -2,7 +2,7 @@
 title: "msgpack-packer-unpacker-gzip-io-specs-and-buffer-out-string"
 status: draft
 updated: 2026-10-15
-rfc: "0184-msgpack-gem-port"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
