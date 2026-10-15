@@ -38,17 +38,18 @@ read(filename) do |file|
 end
 ```
 
-`packages/activerecord/src/connection-adapters/schema-cache.ts`'s `_loadFrom` carries `@missingRailsCall load` and diverges in three ways:
+trails#8520 (story `ruby-compat-has-no-marshal-for-schema-cache-and-debug`)
+ported the `.dump` (Marshal) arm and deleted the `@missingRailsCall load`
+receipt; the YAML arm now reads bytes through `File.binread` and
+`forceEncoding(file, Encoding.UTF_8)`. `packages/activerecord/src/connection-adapters/schema-cache.ts`'s `_loadFrom` diverged in two further ways:
 
-- The `.dump` (Marshal) arm is absent, so a `schema_cache.dump` is parsed as YAML.
 - The YAML arm calls the npm `yaml` parser directly with a custom-tag table, then builds the cache by hand through `initWith`, where Rails' `YAML.unsafe_load` revives the `!ruby/object:ActiveRecord::ConnectionAdapters::SchemaCache` node itself. activesupport's `yaml.ts` already ports `ToRuby#init_with` revival.
 - The whole body sits in a `try` / `catch` that answers `null` for any error. Rails has no rescue here: a corrupt cache file raises.
 
 ## Acceptance criteria
 
 - [ ] `_loadFrom` has Rails' guard and both arms in Rails' order, with the YAML arm going through trails' `YAML.unsafe_load` port and no swallowing `catch`.
-- [ ] The Marshal arm is ported, or is blocked on a named Marshal story with the arm present and raising; it is not silently read as YAML.
-- [ ] The `@missingRailsCall load` receipt is deleted; `pnpm parity:api:calls` green with no new row.
+- [ ] `pnpm parity:api:calls` green with no new row.
 - [ ] `packages/activerecord/src/connection-adapters/schema-cache.test.ts` still passes, including the gzip and dump-reload cases.
 
 ## Verification

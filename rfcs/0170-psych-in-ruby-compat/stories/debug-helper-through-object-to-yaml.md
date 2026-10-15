@@ -23,6 +23,8 @@ closed-reason: null
 `<pre class="debug_dump">`, and `rescue` → `content_tag(:code,
 object.inspect, class: "debug_dump")`. trails
 (`packages/actionview/src/helpers/debug-helper.ts`) calls npm `stringify`.
+`Marshal.dump(object)` is already ported: trails#8520 (story
+`ruby-compat-has-no-marshal-for-schema-cache-and-debug`) made `debug` call it.
 
 Fidelity trap: a bare Ruby `rescue` catches `StandardError` only. `LoadError`
 is a `ScriptError`, so with `yaml` absent `debug` must **raise**, not fall back
@@ -32,7 +34,7 @@ to `inspect`.
 
 - [ ] `debug` calls `toYaml(object)`. The fallback arm catches StandardError
       descendants only and re-raises `LoadError`.
-- [ ] `Marshal.dump` carries `@missingRailsCall … — CONVERGEABLE ruby-compat-has-no-marshal-for-schema-cache-and-debug`.
+- [ ] `debug` keeps the `Marshal.dump(object)` call first, as `debug_helper.rb:29` does.
 - [ ] `debug-helper.test.ts` stays green, plus a case for the `LoadError`
       propagation.
 

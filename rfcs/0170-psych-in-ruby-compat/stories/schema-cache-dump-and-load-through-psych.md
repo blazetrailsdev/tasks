@@ -32,17 +32,18 @@ hand-builds npm `CollectionTag`s for nine `!ruby/object:` classes
 types. Psych does this generically once #8254's protocol exists: it dumps
 through `encode_with` (`SchemaCache#encode_with`, `Column#encode_with`,
 `IndexDefinition`, `SqlTypeMetadata`) and revives through `init_with` and
-`rbPathToClass`. The `.dump` Marshal arm is out of scope (RFC Non-goals).
+`rbPathToClass`. trails#8520 (story
+`ruby-compat-has-no-marshal-for-schema-cache-and-debug`) ported the `.dump`
+arm: `_loadFrom` / `dumpTo` call `Marshal.load` / `Marshal.dump`
+(`schema_cache.rb:232-233,408-409`), and the nine classes are registered under
+their Ruby constant names.
 
 ## Acceptance criteria
 
 - [ ] `dumpTo` writes `YAML.dump(this)` and `_loadFrom` reads
       `YAML.unsafeLoad(data)`. `RUBY_OBJECT_CLASSES`, `RUBY_OBJECT_TAGS` and
       every npm `yaml` type import are deleted.
-- [ ] Each of the nine classes is registered under its Ruby constant name
-      (`registerConstant`), so `rbModName` / `rbPathToClass` answer it.
-- [ ] A `.dump` filename keeps today's behaviour, and the `Marshal.load` /
-      `Marshal.dump` calls carry `@missingRailsCall … — CONVERGEABLE ruby-compat-has-no-marshal-for-schema-cache-and-debug`.
+- [ ] A `.dump` filename still goes through `Marshal.load` / `Marshal.dump`.
 - [ ] `schema-cache.test.ts` (including the Rails-generated YAML fixtures)
       stays green. Dump output is byte-compared against a Rails-produced file
       if one exists under `test-helpers/support`.
