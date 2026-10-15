@@ -46,5 +46,12 @@ passes `Marshal`.
 ## Acceptance criteria
 
 - The nine skipped tests run green with their Rails bodies.
+- Five more, ported on trails#8945 with Rails' bodies and real `Marshal`
+  fixtures but parked as `it.skip` because the jar's `MarshalWithFallback`
+  cannot read or write `Marshal.dump`, run green: `signed cookie using custom
+digest`, `signed cookie rotating secret and digest`, `encrypted cookie using
+hybrid serializer can migrate marshal dumped value to json`, `use
+authenticated cookie encryption uses legacy hmac aes cbc encryption when not
+enabled`, `encrypted cookie rotating secret`.
 - `MarshalWithFallback` dumps/loads through ruby-compat `Marshal`, and the
   cookie tests pass `Marshal` where Rails does.
