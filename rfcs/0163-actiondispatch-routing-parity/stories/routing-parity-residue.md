@@ -1,7 +1,7 @@
 ---
 title: "Close RFC 0163 — residue to zero"
-status: ready
-updated: 2026-10-14
+status: done
+updated: 2026-10-15
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
@@ -25,9 +25,9 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8928
+claim: "2026-10-15T12:23:47Z"
+assignee: "routing-parity-residue"
 blocked-by: null
 closed-reason: null
 ---

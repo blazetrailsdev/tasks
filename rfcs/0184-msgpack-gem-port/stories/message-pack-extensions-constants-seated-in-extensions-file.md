@@ -1,6 +1,6 @@
 ---
 title: "activesupport: MessagePack's Extensions and error classes are seated by extensions.ts, as extensions.rb:14-17 defines them"
-status: draft
+status: in-progress
 updated: 2026-10-15
 rfc: "0184-msgpack-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8930
+claim: "2026-10-15T12:26:10Z"
+assignee: "message-pack-extensions-constants-seated-in-extensions-file"
 blocked-by: null
 closed-reason: null
 ---

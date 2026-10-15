@@ -1,6 +1,6 @@
 ---
 title: "DebugHelper#debug through toYaml, with Rails' rescue arm"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity

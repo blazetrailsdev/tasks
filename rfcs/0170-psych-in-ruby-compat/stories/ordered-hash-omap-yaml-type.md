@@ -1,6 +1,6 @@
 ---
 title: "OrderedHash: port the !omap builtin type, to_yaml_type and encode_with"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity

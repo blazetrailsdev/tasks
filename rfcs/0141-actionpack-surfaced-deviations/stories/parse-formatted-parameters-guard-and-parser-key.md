@@ -1,6 +1,6 @@
 ---
 title: "parse_formatted_parameters adds a rawPost guard and a media-type key fallback Rails has neither of"
-status: ready
+status: done
 updated: 2026-10-15
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "http-middleware"
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8927
+claim: "2026-10-15T12:24:41Z"
+assignee: "parse-formatted-parameters-guard-and-parser-key"
 blocked-by: null
 closed-reason: null
 ---

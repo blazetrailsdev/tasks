@@ -1,7 +1,7 @@
 ---
 title: "The call gate names a (@h[k] ||= {}) receiver so Thor's assign_result! merge! is Object.assign"
-status: ready
-updated: 2026-10-14
+status: in-progress
+updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8929
+claim: "2026-10-15T12:23:10Z"
+assignee: "native-hash-each-pair-sites"
 blocked-by: null
 closed-reason: null
 ---

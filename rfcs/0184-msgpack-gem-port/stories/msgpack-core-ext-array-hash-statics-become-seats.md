@@ -1,6 +1,6 @@
 ---
 title: "msgpack: Array/Hash to_msgpack_with_packer are seats, not statics (core_ext.rb:67-85)"
-status: draft
+status: in-progress
 updated: 2026-10-15
 rfc: "0184-msgpack-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8930
+claim: "2026-10-15T12:26:10Z"
+assignee: "message-pack-extensions-constants-seated-in-extensions-file"
 blocked-by: null
 closed-reason: null
 ---

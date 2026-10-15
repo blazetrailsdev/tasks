@@ -1,7 +1,7 @@
 ---
 title: "Port response_test.rb's 16 skipped tests and sort its 45 extra"
-status: ready
-updated: 2026-10-14
+status: claimed
+updated: 2026-10-15
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: ["actionpack"]
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 400
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T12:24:15Z"
+assignee: "port-live-response-and-small-http-tests"
 blocked-by: null
 closed-reason: null
 ---

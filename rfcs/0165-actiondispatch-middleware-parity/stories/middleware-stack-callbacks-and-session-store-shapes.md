@@ -1,6 +1,6 @@
 ---
 title: "Converge MiddlewareStack, Callbacks and the session stores' invented shapes"
-status: ready
+status: in-progress
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8931
+claim: "2026-10-15T12:27:22Z"
+assignee: "middleware-stack-callbacks-and-session-store-shapes"
 blocked-by: null
 closed-reason: null
 ---

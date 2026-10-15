@@ -1,6 +1,6 @@
 ---
 title: "Enroll spec/ruby/library/yaml dump_spec.rb and to_yaml_spec.rb for ruby-compat Psych"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity

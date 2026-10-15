@@ -1,7 +1,7 @@
 ---
 title: "Hash#each_pair on a plain object is a for…of over Object.entries: every package"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: substitution
 packages: [actionpack, trailties, activerecord, activesupport, actionview, ruby-compat]
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8929
+claim: "2026-10-15T12:23:10Z"
+assignee: "native-hash-each-pair-sites"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "FlashHash#now is a two-argument method over a separate map, not a FlashNow view"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
