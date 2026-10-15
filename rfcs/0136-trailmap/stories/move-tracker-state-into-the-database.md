@@ -7,7 +7,6 @@ cluster: null
 packages: ["activerecord"]
 deps:
   - establish-the-shared-sqlite-write-protocol
-  - ringo-retries-tasks-db-writes-instead-of-dropping-events
 deps-rfc: []
 est-loc: 300
 priority: null
