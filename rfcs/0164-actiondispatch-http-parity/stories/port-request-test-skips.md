@@ -1,7 +1,7 @@
 ---
 title: "Port request_test.rb's 28 skipped tests and sort its 30 extra"
-status: claimed
-updated: 2026-10-14
+status: done
+updated: 2026-10-15
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: ["actionpack"]
@@ -9,7 +9,7 @@ deps: ["port-actionpack-abstract-unit-test-support", "request-mixin-bodies-onto-
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: null
+pr: trails#8920
 claim: "2026-10-14T23:53:08Z"
 assignee: "port-request-test-skips"
 blocked-by: null

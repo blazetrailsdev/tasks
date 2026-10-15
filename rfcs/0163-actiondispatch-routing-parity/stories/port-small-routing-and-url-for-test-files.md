@@ -1,7 +1,7 @@
 ---
 title: "Port the one-test routing files and url_for_test.rb's 6 skips"
-status: ready
-updated: 2026-10-14
+status: claimed
+updated: 2026-10-15
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: ["actionpack"]
@@ -14,8 +14,8 @@ deps-rfc: []
 est-loc: 350
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T00:59:48Z"
+assignee: "port-small-routing-and-url-for-test-files"
 blocked-by: null
 closed-reason: null
 ---

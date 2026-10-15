@@ -1,7 +1,7 @@
 ---
 title: "parity: the inlined-from staleness gate pairs a constructor with its Rails class the way compare.ts does"
-status: claimed
-updated: 2026-10-14
+status: done
+updated: 2026-10-15
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8919
 claim: "2026-10-14T23:57:42Z"
 assignee: "inlined-from-gate-pairs-constructors-as-compare-does"
 blocked-by: null

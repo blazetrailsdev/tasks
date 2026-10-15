@@ -1,7 +1,7 @@
 ---
 title: "Port Psych.load_file / unsafe_load_file"
-status: claimed
-updated: 2026-10-14
+status: done
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat"]
@@ -9,7 +9,7 @@ deps: ["psych-load-and-safe-load"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8918
 claim: "2026-10-14T23:53:55Z"
 assignee: "active-record-legacy-yaml-load-tags"
 blocked-by: null

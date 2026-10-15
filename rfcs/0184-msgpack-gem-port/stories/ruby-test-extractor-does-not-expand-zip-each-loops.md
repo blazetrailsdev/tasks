@@ -1,7 +1,7 @@
 ---
 title: "test-compare: the Ruby extractor records a zip(...).each test loop as one case"
-status: claimed
-updated: 2026-10-14
+status: in-progress
+updated: 2026-10-15
 rfc: "0184-msgpack-gem-port"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8922
 claim: "2026-10-14T23:49:36Z"
 assignee: "activesupport-message-pack-constants-seated-on-their-namespace"
 blocked-by: null

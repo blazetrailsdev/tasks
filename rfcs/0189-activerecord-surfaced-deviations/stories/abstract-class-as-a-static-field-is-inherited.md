@@ -1,7 +1,7 @@
 ---
 title: "static abstractClass = true shadows the accessor and every subclass inherits it"
-status: claimed
-updated: 2026-10-14
+status: in-progress
+updated: 2026-10-15
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: ["activerecord"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: null
+pr: trails#8921
 claim: "2026-10-14T23:58:37Z"
 assignee: "abstract-class-as-a-static-field-is-inherited"
 blocked-by: null

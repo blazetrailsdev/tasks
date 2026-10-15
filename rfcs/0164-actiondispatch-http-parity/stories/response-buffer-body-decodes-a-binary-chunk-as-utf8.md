@@ -1,7 +1,7 @@
 ---
 title: "ResponseBuffer#body decodes a binary chunk as UTF-8 where Rails appends it"
-status: claimed
-updated: 2026-10-14
+status: done
+updated: 2026-10-15
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 2
-pr: null
+pr: trails#8920
 claim: "2026-10-14T23:53:08Z"
 assignee: "port-request-test-skips"
 blocked-by: null

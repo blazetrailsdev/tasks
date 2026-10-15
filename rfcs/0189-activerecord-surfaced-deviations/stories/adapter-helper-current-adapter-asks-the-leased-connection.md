@@ -1,7 +1,7 @@
 ---
 title: "activerecord: AdapterHelper#current_adapter? asks the leased connection, not the test lane"
-status: claimed
-updated: 2026-10-14
+status: blocked
+updated: 2026-10-15
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-10-14T23:58:37Z"
 assignee: "abstract-class-as-a-static-field-is-inherited"
-blocked-by: null
+blocked-by: "owner decision: Rails' Base.lease_connection.is_a? is async in trails (connection-handling.ts:206 returns a Promise) while currentAdapter is read synchronously at collect time by ~29 skipIf/describe sites; ConnectionAdapters seats no adapter constants for const_get. Needs a ruling on the sync shape (peek the leased connection vs adapter_class) before porting."
 closed-reason: null
 ---
 

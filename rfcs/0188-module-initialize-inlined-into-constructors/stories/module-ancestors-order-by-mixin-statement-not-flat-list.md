@@ -1,7 +1,7 @@
 ---
 title: "parity: moduleAncestors orders an include chain by mixinOrder statements, first argument ahead of the second"
-status: claimed
-updated: 2026-10-14
+status: done
+updated: 2026-10-15
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8919
 claim: "2026-10-14T23:57:42Z"
 assignee: "inlined-from-gate-pairs-constructors-as-compare-does"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Port Psych.safe_dump / RestrictedYAMLTree and Psych.dump's options arm"
-status: claimed
-updated: 2026-10-14
+status: done
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["ruby-compat"]
@@ -9,7 +9,7 @@ deps: ["move-activesupport-yaml-into-ruby-compat-psych"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8918
 claim: "2026-10-14T23:53:55Z"
 assignee: "active-record-legacy-yaml-load-tags"
 blocked-by: null

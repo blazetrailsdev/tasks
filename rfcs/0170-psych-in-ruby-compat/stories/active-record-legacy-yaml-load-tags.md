@@ -1,7 +1,7 @@
 ---
 title: "Register ActiveRecord's legacy YAML load_tags (active_record.rb:570-573)"
 status: done
-updated: 2026-10-14
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activerecord"]
@@ -9,7 +9,7 @@ deps: ["psych-load-tags-dump-tags-and-domain-types"]
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: trails#8254
+pr: trails#8918
 claim: "2026-10-14T23:53:55Z"
 assignee: "active-record-legacy-yaml-load-tags"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "request-test-remaining-skips-and-extras"
-status: draft
+status: claimed
 updated: 2026-10-15
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T00:51:08Z"
+assignee: "request-test-remaining-skips-and-extras"
 blocked-by: null
 closed-reason: null
 ---
