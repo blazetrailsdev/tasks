@@ -2,7 +2,7 @@
 title: "msgpack: Factory has_symbol_ext_type, the packer's T_SYMBOL arm, and the extended-object spec"
 status: blocked
 updated: 2026-10-11
-rfc: "0184-msgpack-gem-port"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
