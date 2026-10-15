@@ -1,6 +1,6 @@
 ---
 title: "html-sanitizer: port the Parser/Scrubber/Serializer concerns so HTML4 and HTML5 vendors parse with their own fragment"
-status: draft
+status: ready
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null

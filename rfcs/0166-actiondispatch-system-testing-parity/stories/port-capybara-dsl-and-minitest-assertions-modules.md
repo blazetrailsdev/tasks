@@ -1,7 +1,7 @@
 ---
 title: "Port Capybara::DSL and Capybara::Minitest::Assertions as far as SystemTestCase reaches"
-status: draft
-updated: 2026-09-28
+status: closed
+updated: 2026-10-15
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
 packages: ["actionpack"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: repo-owner ruling 2026-10-15 — no third-party session library in trails; RFC 0166 rewritten onto Vitest/Vite/Playwright. Replaced by converge-system-test-case-onto-test-case-with-page-and-expect-element (Vitest page locators and expect.element)."
 ---
 
 ## Context

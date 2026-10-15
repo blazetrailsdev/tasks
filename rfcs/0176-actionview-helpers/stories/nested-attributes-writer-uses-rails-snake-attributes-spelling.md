@@ -1,6 +1,6 @@
 ---
 title: "nested-attributes-writer-uses-rails-snake-attributes-spelling"
-status: draft
+status: ready
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Point /graphs/velocity at the events table instead of the git log"
-status: ready
-updated: 2026-10-12
+status: blocked
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "All its work is in btwhooks (webhook/taskevents.go, TASKS_EVENTS_SOURCE), which has no GitHub remote; trailmap#68 claimed and released it. Held until retarget-the-velocity-story-at-ringo rewrites it or ringo gets a reviewable remote."
 closed-reason: null
 ---
 

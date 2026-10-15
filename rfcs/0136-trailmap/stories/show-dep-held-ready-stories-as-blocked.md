@@ -1,7 +1,7 @@
 ---
 title: "trailmap: show ready stories held on unfinished deps as blocked, as ringo does"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []

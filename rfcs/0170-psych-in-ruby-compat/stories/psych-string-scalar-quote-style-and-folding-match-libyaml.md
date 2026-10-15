@@ -1,6 +1,6 @@
 ---
 title: "Psych string scalars: single-quote style and 80-column folding match libyaml"
-status: draft
+status: in-progress
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8946
+claim: "2026-10-15T18:05:52Z"
+assignee: "encrypted-configuration-deserialize-through-psych-unsafe-load"
 blocked-by: null
 closed-reason: null
 ---

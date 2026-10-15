@@ -1,6 +1,6 @@
 ---
 title: "dom-testing-html-document-selector"
-status: draft
+status: closed
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Testing.htmlDocument and HTML5.Document shipped in trails#8947 itself."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "trailmap: the class-collision guard reads rendered class lists, not only source literals"
-status: draft
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#70
+claim: "2026-10-15T18:45:11Z"
+assignee: "trails-tsc-names-a-model-whose-table-no-schema-has"
 blocked-by: null
 closed-reason: null
 ---

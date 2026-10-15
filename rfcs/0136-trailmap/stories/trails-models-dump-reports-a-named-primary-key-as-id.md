@@ -1,7 +1,7 @@
 ---
 title: "trails-models-dump: a named primary key is reported as id"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord-cli"]

@@ -1,7 +1,7 @@
 ---
 title: "trailmap: 390px screenshots taken with Chrome's new headless mode are laid out wider and cropped"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []

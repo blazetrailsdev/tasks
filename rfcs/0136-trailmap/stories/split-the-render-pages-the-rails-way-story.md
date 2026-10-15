@@ -1,7 +1,7 @@
 ---
 title: "Split render-trailmap-pages-through-helpers-assigns-and-route-helpers: it measures about 700 lines, not 280"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []

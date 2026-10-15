@@ -1,7 +1,7 @@
 ---
 title: "trailmap: /up/deep and GET /stories/ready stall the process ~0.7s loading every story as a record"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []

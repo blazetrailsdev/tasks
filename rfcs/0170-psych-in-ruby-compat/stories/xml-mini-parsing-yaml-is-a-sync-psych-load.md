@@ -1,7 +1,7 @@
 ---
 title: "XmlMini PARSING['yaml'] is a synchronous YAML.load rescue yaml"
-status: draft
-updated: 2026-10-14
+status: ready
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
 packages: []

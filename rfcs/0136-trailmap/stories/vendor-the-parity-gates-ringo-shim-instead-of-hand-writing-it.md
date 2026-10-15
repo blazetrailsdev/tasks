@@ -1,7 +1,7 @@
 ---
 title: "Generate the parity gate's ringo shim from the pin instead of hand-writing envOr and parityHTML"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []

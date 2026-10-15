@@ -1,6 +1,6 @@
 ---
 title: "DomAssertions keeps html_version: and routes through Rails::Dom::Testing.html_document_fragment"
-status: draft
+status: in-progress
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8947
+claim: "2026-10-15T18:30:59Z"
+assignee: "key-read-receiver-unread-port-body-rows-converge"
 blocked-by: null
 closed-reason: null
 ---

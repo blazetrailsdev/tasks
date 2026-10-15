@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc: --schema accepts more than one file, for a multi-database app"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord-cli"]

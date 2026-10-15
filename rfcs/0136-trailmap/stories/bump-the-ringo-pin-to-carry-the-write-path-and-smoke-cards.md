@@ -1,7 +1,7 @@
 ---
 title: "Bump the vendored ringo pin to 0eeb2e1: the write path and the smoke cards"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []

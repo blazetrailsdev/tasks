@@ -1,7 +1,7 @@
 ---
 title: "trailmap: carry the over-LOC label and loop running/paused once the loop's configuration has a cheap home"
-status: draft
-updated: 2026-10-12
+status: blocked
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "No cheap named read of the loop config exists yet (ringo /spawnloop/config is 2s, /spawnloop/backlog 3MB); dashboard-spawn-loop-settings is done but gave none. Held on serve-the-spawnloop-json-endpoints."
 closed-reason: null
 ---
 

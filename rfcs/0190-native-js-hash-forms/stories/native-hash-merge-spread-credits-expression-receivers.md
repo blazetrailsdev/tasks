@@ -1,6 +1,6 @@
 ---
 title: "The merge spread credit pairs expression receivers; convert the eight sites left on the helper"
-status: claimed
+status: done
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8944
 claim: "2026-10-15T17:31:57Z"
 assignee: "key-read-receiver-unread-structural-rows-converge"
 blocked-by: null

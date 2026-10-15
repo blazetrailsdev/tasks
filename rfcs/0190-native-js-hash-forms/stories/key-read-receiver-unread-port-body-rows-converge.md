@@ -1,6 +1,6 @@
 ---
 title: "key-read-receiver-unread-port-body-rows-converge"
-status: draft
+status: in-progress
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8947
+claim: "2026-10-15T18:30:59Z"
+assignee: "key-read-receiver-unread-port-body-rows-converge"
 blocked-by: null
 closed-reason: null
 ---

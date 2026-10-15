@@ -1,6 +1,6 @@
 ---
 title: "Port mem_cache_store_test.rb once MemCacheStore descends from Rack::Session::Dalli"
-status: ready
+status: blocked
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Owner decision 2026-10-15: memcached work deferred for now; also waits on memcachestore-descends-from-rack-session-dalli"
 closed-reason: null
 ---
 

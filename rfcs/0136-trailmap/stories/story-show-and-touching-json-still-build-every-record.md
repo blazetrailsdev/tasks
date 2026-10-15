@@ -1,7 +1,7 @@
 ---
 title: "trailmap: /stories/:id, /stories/touching and /up/deep still build every story record"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []

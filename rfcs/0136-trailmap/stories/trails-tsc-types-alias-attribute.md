@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc: synthesize the member an aliasAttribute call defines"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord-cli"]

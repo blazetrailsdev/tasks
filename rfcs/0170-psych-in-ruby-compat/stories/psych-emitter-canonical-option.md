@@ -1,7 +1,7 @@
 ---
 title: "Psych.dump's canonical: true emits libyaml's canonical form"
-status: draft
-updated: 2026-10-14
+status: blocked
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "waits on psych-yaml-tree-answers-a-node-tree-emitted-by-node-yaml (story's own AC: lands with or after it; node yaml backend has no canonical style)"
 closed-reason: null
 ---
 

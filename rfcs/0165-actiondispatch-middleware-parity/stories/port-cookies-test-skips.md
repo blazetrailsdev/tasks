@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: trails#8943
+pr: trails#8945
 claim: "2026-10-15T17:34:17Z"
 assignee: "debug-locks-reads-dependencies-interlock"
 blocked-by: null

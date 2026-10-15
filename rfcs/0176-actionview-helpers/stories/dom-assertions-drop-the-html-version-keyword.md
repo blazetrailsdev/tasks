@@ -1,6 +1,6 @@
 ---
 title: "assertDomEqual / assertDomNotEqual drop html_version: fragment cannot select the HTML4 or HTML5 parser"
-status: ready
+status: in-progress
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8947
+claim: "2026-10-15T18:30:59Z"
+assignee: "key-read-receiver-unread-port-body-rows-converge"
 blocked-by: null
 closed-reason: null
 ---

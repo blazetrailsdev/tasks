@@ -1,7 +1,7 @@
 ---
 title: "trailmap: cover the spawn-loop panel's DOM wiring in the dashboard e2e harness"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []

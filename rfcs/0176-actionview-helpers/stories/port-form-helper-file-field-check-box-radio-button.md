@@ -1,6 +1,6 @@
 ---
 title: "port-form-helper-file-field-check-box-radio-button"
-status: draft
+status: ready
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null

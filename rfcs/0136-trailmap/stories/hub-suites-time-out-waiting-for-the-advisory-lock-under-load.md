@@ -1,7 +1,7 @@
 ---
 title: "trailmap: the hub suites time out in beforeAll waiting for the advisory lock on a loaded machine"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []

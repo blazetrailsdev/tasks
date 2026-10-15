@@ -1,9 +1,9 @@
 ---
 rfc: "0184-msgpack-gem-port"
 title: "msgpack: a @blazetrails/msgpack gem port over @msgpack/msgpack, and ActiveSupport::MessagePack's ext registry on top of it"
-status: active
+status: closed
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-10-15
 owner: "@deanmarano"
 packages:
   - activesupport
