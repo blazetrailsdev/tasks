@@ -5,7 +5,8 @@ updated: 2026-10-12
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: []
+deps:
+  - serve-the-spawnloop-json-endpoints
 deps-rfc: []
 est-loc: 80
 priority: null
