@@ -1,7 +1,7 @@
 ---
 title: "Converge or pair the 22 key-unread rows parity:api:key-reads lists"
-status: in-progress
-updated: 2026-10-14
+status: done
+updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []
