@@ -37,8 +37,7 @@ stubs the first and names the library in a test title (`:58`). Rails'
 ## Acceptance criteria
 
 - No third-party session-library name in either file or the test (the one
-  Rails test name that spells it follows the owner's answer to RFC 0166
-  open question 2): `screenshots_dir` reads
+  Rails test name that spells it is token-renamed by trails#8948): `screenshots_dir` reads
   Vitest's `browser.screenshotDirectory` setting, else `tmp/screenshots`;
   `output_type` reads `RAILS_SYSTEM_TESTING_SCREENSHOT` only; the
   `TRAILS_…_HTML` arm goes.

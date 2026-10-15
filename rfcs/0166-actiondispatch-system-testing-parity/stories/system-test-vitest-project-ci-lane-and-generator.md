@@ -32,8 +32,8 @@ entry point (Rails generates `test/application_system_test_case.rb`).
   and the `system` project; webkit and webdriverio are not installed by
   default.
 - trailties' app generator writes `test/application-system-test-case.ts`
-  subclassing `SystemTestCase` with `drivenBy("selenium", { using: "headless_chrome" })`,
-  mirroring Rails' template, plus the `system` project entry in the app's
+  subclassing `SystemTestCase` with `drivenBy("playwright")` until the selenium arm lands (Rails' template
+  says `:selenium, using: :headless_chrome`), plus the `system` project entry in the app's
   vitest config.
 - The devcontainer generator stops writing its third-party server-port variable
   (`packages/trailties/src/generators/rails/devcontainer/devcontainer-generator.ts:141,246`)

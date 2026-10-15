@@ -33,9 +33,9 @@ the browser the test's `page` fixture opens a context in. Arms:
 
 - `:playwright` — Playwright launch with `screen` / `viewport` from
   `screen_size`, as `driver.rb:62-70`.
-- `:selenium` — the WebDriver protocol through `webdriverio`, the package
-  behind Vitest's `webdriverio` provider, with `Browser#options` as its
-  capabilities and `screen_size` as window size.
+- `:selenium` — deferred to `converge-driver-selenium-arm-onto-webdriverio`;
+  here `register_selenium(app)` keeps its Rails slot and raises
+  `NotImplementedError`.
 - `:cuprite` — Chrome over CDP through Playwright's `chromium`, with
   `window_size`.
 - `:rack_test` — no browser: the `page` fixture is a `rack-test` session
@@ -52,8 +52,6 @@ the browser the test's `page` fixture opens a context in. Arms:
   `options[:browser] == :remote`.
 - `newContext` / `newPage` / `close` are removed from `Driver` (the page
   lifecycle belongs to `SetupAndTeardown`).
-- `webdriverio` is an optional peer dependency beside `playwright`, loaded
-  only by `register_selenium`.
 - The rows the convergence fixes are deleted from `driver.json`; any left
   carry a `@missingRailsCall … PERMANENT` receipt citing the ratified
   section.

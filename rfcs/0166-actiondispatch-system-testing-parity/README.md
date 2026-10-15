@@ -133,14 +133,17 @@ surface.
 `browser_options` / `register_*(app)` / `setup` line for line. The arms:
 
 - `:playwright` — Playwright launch, `screen` / `viewport` from `screen_size`.
-- `:selenium` — the WebDriver protocol through `webdriverio`, the package
-  behind Vitest's `webdriverio` provider, with `Browser#options` as
-  capabilities. Optional peer, loaded only by this arm.
+- `:selenium` — **deferred** (repo owner, 2026-10-15: Playwright first). Until
+  `converge-driver-selenium-arm-onto-webdriverio` lands, `register_selenium`
+  raises `NotImplementedError`. That story ports it onto `webdriverio`, the
+  package behind Vitest's `webdriverio` provider.
 - `:cuprite` — Chrome over CDP through Playwright's `chromium`.
 - `:rack_test` — no browser; `page` is a `rack-test` session against the app
   (trails already ports `rack-test`), and `supports_screenshot?` is false.
 
-`SystemTestCase` keeps Rails' default, `driven_by(:selenium)`.
+`SystemTestCase` keeps Rails' default, `driven_by(:selenium)`; until the
+selenium arm lands, test classes and the generated application test case
+call `drivenBy("playwright")`.
 
 ### Browser: launch options, not Selenium options
 
@@ -230,17 +233,13 @@ says so, and receipts are `PERMANENT`.
 
 ## Open questions
 
-1. **`:selenium` through `webdriverio` or through Playwright?** Recommendation:
-   `webdriverio`, so `:selenium` keeps meaning the WebDriver protocol and
-   `:remote` grids work; decided in `converge-driver-onto-vitest-native-drivers`.
+None open. Resolved 2026-10-15 by the repo owner:
 
-2. **A Rails test name that spells the library.** `screenshot_helper_test.rb`
-   has a test whose name names the library's save-path setting; trails'
-   test names are never reworded (they are how `parity:test` matches). Either
-   the owner ruling extends to that one string (a `conventions.ts` token
-   rename, as `erb` → `tse`, so the renamed name still credits), or the name
-   stays as the one quoted mention. Needs an owner decision before
-   `screenshot-helper-test-describe-and-helper-call-rows` lands.
+1. **`:selenium`** is deferred; Playwright first. Tracked by
+   `converge-driver-selenium-arm-onto-webdriverio`.
+2. **The Rails test name that spells the library** is renamed through a
+   `conventions.ts` token rename (`capybara` → `vitest`), as `erb` → `tse`
+   (trails#8948).
 
 ## Changelog
 
@@ -248,3 +247,5 @@ says so, and receipts are `PERMANENT`.
 - 2026-10-15: rewritten. Repo-owner ruling: no third-party session library. Redesigned on Vitest,
   Vite and Playwright with test code in Node; the five library-premised
   stories closed `FALSIFIED`, six new stories filed, three rewritten.
+- 2026-10-15: Playwright first; the `:selenium` arm deferred to its own story.
+  The library-named test name is token-renamed (trails#8948).
