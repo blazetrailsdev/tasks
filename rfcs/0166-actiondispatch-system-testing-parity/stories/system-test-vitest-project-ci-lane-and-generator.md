@@ -28,6 +28,10 @@ entry point (Rails generates `test/application_system_test_case.rb`).
 - A `system` Vitest project (root `vitest.config.ts`) matches
   `**/*.system.test.ts`, runs in `forks` with one browser per worker, and is
   excluded from the default unit projects.
+- The `system` project `provide`s `screenshotDirectory` from its
+  `browser.screenshotDirectory`, which seeds
+  `ScreenshotHelper.screenshotDirectory` through `inject` (trails#8948; Vitest
+  does not serialize that setting to workers).
 - CI gains a lane that runs `playwright install --with-deps chromium firefox`
   and the `system` project; webkit and webdriverio are not installed by
   default.
