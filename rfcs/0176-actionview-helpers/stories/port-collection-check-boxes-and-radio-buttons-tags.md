@@ -1,0 +1,28 @@
+---
+title: "Port Tags::CollectionHelpers, CollectionCheckBoxes, CollectionRadioButtons + form_collections_helper_test"
+status: ready
+updated: 2026-10-15
+rfc: "0176-actionview-helpers"
+cluster: null
+packages: ["actionview"]
+deps:
+  ["port-form-options-helper-and-select-tag", "port-form-helper-file-field-check-box-radio-button"]
+deps-rfc: []
+est-loc: 450
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+`Tags::CollectionHelpers` (12 defs incl. the inner `Builder`), `Tags::CollectionCheckBoxes` and `Tags::CollectionRadioButtons` (`vendor/rails/v8.0.2/actionview/lib/action_view/helpers/tags/`) are unported, along with `FormOptionsHelper#collection_check_boxes` / `collection_checkboxes` / `collection_radio_buttons`. Rails test `actionview/test/template/form_collections_helper_test.rb` is unported. Needs CheckBox/RadioButton tags and FormOptionsHelper first.
+
+## Acceptance criteria
+
+- [ ] `tags/collection-helpers.ts`, `collection-check-boxes.ts`, `collection-radio-buttons.ts` ported; FormBuilder exposes the collection methods.
+- [ ] `form_collections_helper_test.rb` ported.
+- [ ] parity rows for these three files at 0 missing.
