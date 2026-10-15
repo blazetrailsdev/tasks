@@ -1,6 +1,6 @@
 ---
 title: "Port live_response_test.rb and the remaining single HTTP tests"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0164-actiondispatch-http-parity"
 cluster: null

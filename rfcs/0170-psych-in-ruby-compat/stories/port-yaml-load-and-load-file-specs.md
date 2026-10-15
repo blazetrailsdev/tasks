@@ -1,6 +1,6 @@
 ---
 title: "Enroll spec/ruby/library/yaml load / unsafe_load / load_file / parse specs for ruby-compat Psych"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity

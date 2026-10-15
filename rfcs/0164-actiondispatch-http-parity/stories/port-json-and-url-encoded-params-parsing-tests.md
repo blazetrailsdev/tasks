@@ -1,7 +1,7 @@
 ---
 title: "Port json_params_parsing_test.rb and url_encoded_params_parsing_test.rb"
-status: ready
-updated: 2026-10-14
+status: claimed
+updated: 2026-10-15
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
 packages: ["actionpack"]
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 400
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T14:50:23Z"
+assignee: "http-call-baselines-and-residue"
 blocked-by: null
 closed-reason: null
 ---

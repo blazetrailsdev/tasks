@@ -1,6 +1,6 @@
 ---
 title: "db:system:change generator: edit compose.yaml through YAML.load_file / to_yaml"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity

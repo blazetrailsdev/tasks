@@ -1,6 +1,6 @@
 ---
 title: "Port Psych::Exception and Psych::SyntaxError; backend parse errors raise it"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity

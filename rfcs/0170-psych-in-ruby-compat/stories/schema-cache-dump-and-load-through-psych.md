@@ -1,6 +1,6 @@
 ---
 title: "SchemaCache#dump_to / _load_from through YAML.dump / YAML.unsafe_load; delete the hand-built !ruby/object tags"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity

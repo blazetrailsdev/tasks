@@ -1,6 +1,6 @@
 ---
 title: "rack-body-call-each-splat-and-block"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0164-actiondispatch-http-parity"
 cluster: null

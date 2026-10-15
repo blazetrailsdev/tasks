@@ -1,6 +1,6 @@
 ---
 title: "Three draft stories still ask for Marshal receipts and arms that trails#8520 already landed"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
