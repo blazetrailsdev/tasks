@@ -5,7 +5,8 @@ updated: 2026-10-15
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - with-routes-helpers-answers-the-wired-class-itself
 deps-rfc: []
 est-loc: 20
 priority: null
