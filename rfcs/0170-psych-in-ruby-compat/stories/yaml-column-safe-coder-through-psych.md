@@ -1,7 +1,7 @@
 ---
 title: "Converge YAMLColumn::SafeCoder onto YAML.dump / safe_dump / unsafe_load / safe_load"
-status: ready
-updated: 2026-10-14
+status: in-progress
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activerecord"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8958
+claim: "2026-10-15T22:14:49Z"
+assignee: "psych-yaml-tree-answers-a-node-tree-emitted-by-node-yaml"
 blocked-by: null
 closed-reason: null
 ---

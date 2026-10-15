@@ -1,6 +1,6 @@
 ---
 title: "Four string-keyed `new Hash()` sites become plain objects where Rails has a `{}`"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: carrier-audit

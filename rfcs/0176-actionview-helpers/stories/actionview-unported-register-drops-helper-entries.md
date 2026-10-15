@@ -1,6 +1,6 @@
 ---
 title: "actionview: drop the 12 stale helper/layouts entries from the unported-files register"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null

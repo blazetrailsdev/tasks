@@ -1,7 +1,7 @@
 ---
 title: "StatementPool's per-pid cache is a plain object, as Rails' `{}` is"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: carrier-audit
 packages: [activerecord]
@@ -9,9 +9,9 @@ deps: [native-hash-string-keyed-carriers-to-plain-objects]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8956
+claim: "2026-10-15T22:14:54Z"
+assignee: "native-hash-statement-pool-cache-is-a-plain-object"
 blocked-by: null
 closed-reason: null
 ---

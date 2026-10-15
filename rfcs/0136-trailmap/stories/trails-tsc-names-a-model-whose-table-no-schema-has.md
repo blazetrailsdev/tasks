@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: warn when a model's table is in no schema file"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null

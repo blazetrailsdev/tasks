@@ -1,6 +1,6 @@
 ---
 title: "Port the form_for / fields_for / fields tests of form_helper_test.rb"
-status: ready
+status: in-progress
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8957
+claim: "2026-10-15T22:11:06Z"
+assignee: "nested-attributes-writer-uses-rails-snake-attributes-spelling"
 blocked-by: null
 closed-reason: null
 ---

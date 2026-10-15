@@ -1,6 +1,6 @@
 ---
 title: "update_columns builds {} as Rails does; _update_record's transform_keys keeps Arel-attribute keys"
-status: draft
+status: in-progress
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8959
+claim: "2026-10-15T22:44:50Z"
+assignee: "update-columns-builds-plain-object-arel-boundary-rekeys"
 blocked-by: null
 closed-reason: null
 ---

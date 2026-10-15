@@ -1,6 +1,6 @@
 ---
 title: "XmlMini PARSING['yaml'] is a synchronous YAML.load rescue yaml"
-status: ready
+status: in-progress
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8957
+claim: "2026-10-15T22:11:06Z"
+assignee: "nested-attributes-writer-uses-rails-snake-attributes-spelling"
 blocked-by: null
 closed-reason: null
 ---

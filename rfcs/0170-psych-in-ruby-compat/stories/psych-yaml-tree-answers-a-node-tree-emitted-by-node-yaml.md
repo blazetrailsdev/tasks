@@ -1,6 +1,6 @@
 ---
 title: "YAMLTree#tree answers Psych's node tree and Node#yaml emits it through a ported Visitors::Emitter"
-status: ready
+status: in-progress
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8958
+claim: "2026-10-15T22:14:49Z"
+assignee: "psych-yaml-tree-answers-a-node-tree-emitted-by-node-yaml"
 blocked-by: null
 closed-reason: null
 ---

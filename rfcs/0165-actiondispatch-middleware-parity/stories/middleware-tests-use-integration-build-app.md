@@ -1,6 +1,6 @@
 ---
 title: "middleware-tests-use-integration-build-app"
-status: ready
+status: claimed
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T22:14:25Z"
+assignee: "cookies-test-through-test-controller"
 blocked-by: null
 closed-reason: null
 ---
