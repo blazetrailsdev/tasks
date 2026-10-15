@@ -2,7 +2,7 @@
 title: "msgpack: factory_spec.rb's unpacker-option, Struct#to_a and memsize tests"
 status: ready
 updated: 2026-10-08
-rfc: "0184-msgpack-gem-port"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
