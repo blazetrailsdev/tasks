@@ -2,7 +2,7 @@
 title: "Ruby extractor reads module_eval heredoc params so edit_/new_polymorphic_* arity rows clear"
 status: draft
 updated: 2026-10-15
-rfc: "0163-actiondispatch-routing-parity"
+rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
 deps: []
