@@ -1,7 +1,7 @@
 ---
 title: "Assign VERSION.STRING once and declare gemVersion first in activesupport, activemodel and activerecord"
-status: draft
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-15
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8949
+claim: "2026-10-15T19:34:58Z"
+assignee: "gem-version-string-is-a-recomputing-getter-declared-out-of-rails-order"
 blocked-by: null
 closed-reason: null
 ---

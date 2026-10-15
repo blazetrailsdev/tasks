@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the class-collision guard reads rendered class lists, not only source literals"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null

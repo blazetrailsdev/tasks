@@ -1,6 +1,6 @@
 ---
 title: "trailmap: adopt or decline the rest of the generated environment settings"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null

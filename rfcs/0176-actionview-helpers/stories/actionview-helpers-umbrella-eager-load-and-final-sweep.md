@@ -20,7 +20,7 @@ deps:
   - port-atom-feed-helper
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 21
 pr: null
 claim: null
 assignee: null

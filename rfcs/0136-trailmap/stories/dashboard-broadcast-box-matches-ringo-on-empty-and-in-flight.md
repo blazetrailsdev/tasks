@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the broadcast box focuses on an empty message and disables both buttons in flight"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null

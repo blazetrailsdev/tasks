@@ -1,6 +1,6 @@
 ---
 title: "assertDomEqual / assertDomNotEqual drop html_version: fragment cannot select the HTML4 or HTML5 parser"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null

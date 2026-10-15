@@ -1,6 +1,6 @@
 ---
 title: "DomAssertions keeps html_version: and routes through Rails::Dom::Testing.html_document_fragment"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null

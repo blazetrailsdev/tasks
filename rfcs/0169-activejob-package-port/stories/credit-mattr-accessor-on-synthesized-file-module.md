@@ -1,6 +1,6 @@
 ---
 title: "credit-mattr-accessor-on-synthesized-file-module"
-status: draft
+status: in-progress
 updated: 2026-10-15
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8949
+claim: "2026-10-15T19:48:50Z"
+assignee: "credit-mattr-accessor-on-synthesized-file-module"
 blocked-by: null
 closed-reason: null
 ---

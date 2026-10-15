@@ -1,7 +1,7 @@
 ---
 title: "Shrink ruby-compat hash.ts to the arms that still have a caller"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: substitution
 packages: [ruby-compat]
@@ -9,9 +9,9 @@ deps: [native-hash-merge-sites]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8951
+claim: "2026-10-15T19:16:52Z"
+assignee: "key-read-receiver-unread-port-body-rows-remainder"
 blocked-by: null
 closed-reason: null
 ---

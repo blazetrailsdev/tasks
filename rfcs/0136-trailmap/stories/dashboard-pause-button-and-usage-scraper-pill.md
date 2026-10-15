@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the dashboard's pause button and usage-scraper pill"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null

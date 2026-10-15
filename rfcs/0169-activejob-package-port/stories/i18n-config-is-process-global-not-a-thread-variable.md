@@ -1,7 +1,7 @@
 ---
 title: "Store I18n.config as a thread variable so concurrent with_locale blocks do not share a locale"
-status: draft
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-15
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8949
+claim: "2026-10-15T19:35:01Z"
+assignee: "i18n-config-is-process-global-not-a-thread-variable"
 blocked-by: null
 closed-reason: null
 ---

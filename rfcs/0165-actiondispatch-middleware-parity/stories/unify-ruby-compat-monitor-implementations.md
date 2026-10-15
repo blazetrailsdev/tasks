@@ -1,6 +1,6 @@
 ---
 title: "unify-ruby-compat-monitor-implementations"
-status: draft
+status: claimed
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T19:47:18Z"
+assignee: "cookie-jar-serializer-fallbacks-and-legacy-cbc-upgrade"
 blocked-by: null
 closed-reason: null
 ---

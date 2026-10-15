@@ -1,7 +1,7 @@
 ---
 title: "Four string-keyed `new Hash()` sites become plain objects where Rails has a `{}`"
-status: ready
-updated: 2026-10-11
+status: in-progress
+updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: carrier-audit
 packages: [activerecord, activemodel, actionpack]
@@ -9,9 +9,9 @@ deps: [native-hash-merge-sites]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8951
+claim: "2026-10-15T19:16:52Z"
+assignee: "key-read-receiver-unread-port-body-rows-remainder"
 blocked-by: null
 closed-reason: null
 ---

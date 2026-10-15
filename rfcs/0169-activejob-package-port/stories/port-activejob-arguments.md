@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveJob::Arguments, Serializers and ObjectSerializer (non-GlobalID arms)"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-15
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#8949
+claim: "2026-10-15T19:09:19Z"
+assignee: "port-activejob-arguments"
 blocked-by: null
 closed-reason: null
 ---

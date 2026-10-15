@@ -9,7 +9,7 @@ deps:
   ["port-form-options-helper-and-select-tag", "port-form-helper-file-field-check-box-radio-button"]
 deps-rfc: []
 est-loc: 450
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

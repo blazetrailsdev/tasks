@@ -1,6 +1,6 @@
 ---
 title: "Psych string scalars: single-quote style and 80-column folding match libyaml"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: null

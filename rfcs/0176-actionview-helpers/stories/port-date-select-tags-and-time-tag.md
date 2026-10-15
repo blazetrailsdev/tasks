@@ -8,7 +8,7 @@ packages: ["actionview"]
 deps: ["port-date-helper-date-time-selector", "port-form-options-helper-and-select-tag"]
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 12
 pr: null
 claim: null
 assignee: null

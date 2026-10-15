@@ -1,6 +1,6 @@
 ---
 title: "Ratify 'System testing runs on Vitest' in actionpack CLAUDE.md"
-status: draft
+status: in-progress
 updated: 2026-10-15
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 0
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8948
+claim: "2026-10-15T19:32:01Z"
+assignee: "ratify-vitest-native-system-testing-section"
 blocked-by: null
 closed-reason: null
 ---
