@@ -1,5 +1,5 @@
 ---
-title: "key-read-receiver-unread-structural-rows-converge"
+title: "Converge the structural receiver-unread rows parity:api:key-reads still lists (~350 LOC)"
 status: draft
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 350
 priority: null
 pr: null
 claim: null
@@ -19,20 +19,18 @@ closed-reason: null
 ## Context
 
 `key-read-report-receiver-unread-rows-converge` took `pnpm parity:api:key-reads`
-(`scripts/api-compare/report-key-reads.ts`) from 108 to 54 `receiver-unread` rows:
+(`scripts/api-compare/report-key-reads.ts`) from 108 to 43 `receiver-unread` rows:
 the plain renames (sqlite3/postgresql `add_column_options!`, `type_to_sql`'s
 `native`, `psql_env`, command-recorder inverts, cache `merged_options` /
 `retrieve_pool_options`, resolver named captures) were converged, and the report
 now follows a re-exported owner (`cache.ts` → `cache/store.ts`). What remains is
 structural, not a local rename:
 
-    6 actionview/helpers/number-helper.ts#escapeUnsafeOptions
     4 globalid/uri/gid.ts#build
     3 actionview/template/handlers/tse.ts#translateLocation
     2 trailties/generators/rails/devcontainer/devcontainer-generator.ts#dependencies
     2 thor/actions.ts#[initialize]
     2 pg/connection.ts#conndefaultsHash
-    2 actiondispatch/middleware/ssl.ts#httpsLocationFor
     1 trailties/generators/resource-helpers.ts#[initialize]
     1 trailties/generators/rails/devcontainer/devcontainer-generator.ts#volumes
     1 trailties/generators/rails/db/system/change/change-generator.ts#database
@@ -44,7 +42,6 @@ structural, not a local rename:
     1 thor/shell.ts#[initialize]
     1 thor/invocation.ts#[initialize]
     1 pg/connection.ts#reset
-    1 activesupport/messages/rotation-coordinator.ts#normalizeOptions
     1 activerecord/transactions.ts#rememberTransactionRecordState
     1 activerecord/transactions.ts#clearTransactionRecordState
     1 activerecord/reflection.ts#throughReflection
@@ -64,16 +61,10 @@ structural, not a local rename:
     1 actionview/helpers/capture-helper.ts#contentFor
     1 actiondispatch/testing/request-encoder.ts#encoder
     1 actiondispatch/system-testing/driver.ts#constructor
-    1 actiondispatch/middleware/ssl.ts#redirectToHttps
-    1 actiondispatch/middleware/ssl.ts#constructor
     1 actiondispatch/http/cache.ts#cacheControlHeaders
 
 Known shapes:
 
-- `actiondispatch/middleware/ssl.ts`: Rails keeps `@redirect` and reads
-  `@redirect[:host]` / `[:port]` / `[:body]` / `[:exclude]`
-  (`action_dispatch/middleware/ssl.rb:76-81,153-172`); the port splits it into
-  `redirectHost` / `redirectPort` / `redirectBody` / `redirectExclude` ivars.
 - `actionview/template/handlers/tse.ts#translateLocation` delegates to an invented
   `tse-translate-location.ts`; Rails' body is `handlers/erb.rb:43-61`.
 - `globalid/uri/gid.ts#build`: Rails builds a `parts` hash via
