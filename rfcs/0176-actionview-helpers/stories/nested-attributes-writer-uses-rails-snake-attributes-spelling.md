@@ -30,6 +30,12 @@ trails#8940 made `FormBuilder#nested_attributes_association?` and
 emitted field names are `post[commentsAttributes][0]` where Rails emits
 `post[comments_attributes][0]`, and the ported Rails expectations moved with them.
 
+## Ratification
+
+The repo owner ratified trails#8940's camelCase interim (form builder follows
+AR's `${association}Attributes=` writer) on 2026-10-15, pending this story's
+convergence.
+
 ## Acceptance criteria
 
 - AR's generated writer answers `#{association}_attributes=` (snake), and
