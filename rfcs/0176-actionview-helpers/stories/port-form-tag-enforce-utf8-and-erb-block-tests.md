@@ -1,7 +1,7 @@
 ---
 title: "Port the remaining form_tag tests (enforce_utf8, block in ERB)"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []

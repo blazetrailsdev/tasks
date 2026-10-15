@@ -1,7 +1,7 @@
 ---
 title: "port-action-view-csp-helper"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []

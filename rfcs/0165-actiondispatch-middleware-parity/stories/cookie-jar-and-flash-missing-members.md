@@ -1,6 +1,6 @@
 ---
 title: "Port CookieJar's and Flash's missing members and seat the Flash class"
-status: ready
+status: claimed
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T13:42:12Z"
+assignee: "cookie-jar-and-flash-missing-members"
 blocked-by: null
 closed-reason: null
 ---

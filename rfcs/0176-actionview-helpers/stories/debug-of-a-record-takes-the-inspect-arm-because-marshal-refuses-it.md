@@ -1,7 +1,7 @@
 ---
 title: "DebugHelper#debug renders inspect for a record: Marshal.dump refuses it where Rails dumps it"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "Port debug_exceptions_test.rb's 18 missing tests"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null

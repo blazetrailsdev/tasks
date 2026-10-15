@@ -1,6 +1,6 @@
 ---
 title: "The call gate names a (@h[k] ||= {}) receiver so Thor's assign_result! merge! is Object.assign"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "CookieJar.parse is invented surface shadowing three Rails parse methods"
-status: draft
-updated: 2026-08-17
+status: done
+updated: 2026-10-15
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#7599
 claim: null
 assignee: null
 blocked-by: null

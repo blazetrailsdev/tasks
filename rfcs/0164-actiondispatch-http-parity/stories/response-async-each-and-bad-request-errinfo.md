@@ -1,6 +1,6 @@
 ---
 title: "response-async-each-and-bad-request-errinfo"
-status: claimed
+status: ready
 updated: 2026-10-15
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-15T12:24:15Z"
-assignee: "port-live-response-and-small-http-tests"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

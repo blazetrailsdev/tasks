@@ -1,7 +1,7 @@
 ---
 title: "actionview: port ActionView.version and drop its version.rb exclusion row"
-status: draft
-updated: 2026-10-01
+status: in-progress
+updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8933
+claim: "2026-10-15T13:19:12Z"
+assignee: "dom-assertions-fragment-parses-with-nokogiri-html4"
 blocked-by: null
 closed-reason: null
 ---

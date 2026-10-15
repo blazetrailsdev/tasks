@@ -1,6 +1,6 @@
 ---
 title: "activesupport: MessagePack's Extensions and error classes are seated by extensions.ts, as extensions.rb:14-17 defines them"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0184-msgpack-gem-port"
 cluster: null

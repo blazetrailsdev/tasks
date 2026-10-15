@@ -1,7 +1,7 @@
 ---
 title: "respond-to-answers-object-to-yaml"
-status: ready
-updated: 2026-10-14
+status: in-progress
+updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8934
+claim: "2026-10-15T13:11:53Z"
+assignee: "change-generator-edits-compose-yaml-through-psych-load-file"
 blocked-by: null
 closed-reason: null
 ---

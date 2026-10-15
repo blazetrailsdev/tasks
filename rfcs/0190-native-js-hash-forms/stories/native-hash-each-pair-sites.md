@@ -1,6 +1,6 @@
 ---
 title: "Hash#each_pair on a plain object is a for…of over Object.entries: every package"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: substitution

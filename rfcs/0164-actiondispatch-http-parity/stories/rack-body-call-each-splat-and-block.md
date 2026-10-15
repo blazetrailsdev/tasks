@@ -1,6 +1,6 @@
 ---
 title: "rack-body-call-each-splat-and-block"
-status: claimed
+status: in-progress
 updated: 2026-10-15
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8932
 claim: "2026-10-15T12:24:15Z"
 assignee: "port-live-response-and-small-http-tests"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "msgpack: Array/Hash to_msgpack_with_packer are seats, not statics (core_ext.rb:67-85)"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0184-msgpack-gem-port"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "actionview-remaining-helper-namespaces-as-live-modules"
 status: ready
-updated: 2026-10-01
+updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []

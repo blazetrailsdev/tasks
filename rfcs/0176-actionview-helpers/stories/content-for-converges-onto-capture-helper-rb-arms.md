@@ -1,7 +1,7 @@
 ---
 title: "actionview: content_for converges onto capture_helper.rb's arms"
-status: draft
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8933
+claim: "2026-10-15T13:19:12Z"
+assignee: "dom-assertions-fragment-parses-with-nokogiri-html4"
 blocked-by: null
 closed-reason: null
 ---

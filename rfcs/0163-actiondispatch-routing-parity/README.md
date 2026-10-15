@@ -1,9 +1,9 @@
 ---
 rfc: "0163-actiondispatch-routing-parity"
 title: "ActionDispatch routing (beyond Journey) — the routing test suites to parity"
-status: active
+status: closed
 created: 2026-09-27
-updated: 2026-10-12
+updated: 2026-10-15
 owner: "@deanmarano"
 packages:
   - "actionpack"

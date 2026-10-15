@@ -1,7 +1,7 @@
 ---
 title: "number_with_delimiter is ActionView's helper living in ActiveSupport's number_helper.ts"
-status: draft
-updated: 2026-08-15
+status: ready
+updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
 packages:

@@ -1,6 +1,6 @@
 ---
 title: "Port the small middleware test remainders and converge their hand-rolled apps"
-status: ready
+status: claimed
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -14,8 +14,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-15T13:42:12Z"
+assignee: "cookie-jar-and-flash-missing-members"
 blocked-by: null
 closed-reason: null
 ---

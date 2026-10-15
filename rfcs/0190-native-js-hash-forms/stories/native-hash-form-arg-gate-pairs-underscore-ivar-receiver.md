@@ -1,6 +1,6 @@
 ---
 title: "The call-argument gate pairs a keyed native form on this._x with its @x Ruby site"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: null
