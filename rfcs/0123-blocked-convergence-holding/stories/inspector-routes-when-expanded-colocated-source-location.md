@@ -2,7 +2,7 @@
 title: "inspector-routes-when-expanded-colocated-source-location"
 status: blocked
 updated: 2026-10-15
-rfc: "0163-actiondispatch-routing-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
