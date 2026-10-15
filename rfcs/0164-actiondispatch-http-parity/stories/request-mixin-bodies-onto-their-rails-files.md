@@ -1,6 +1,6 @@
 ---
 title: "Move Request's and Response's inlined mixin bodies to the files that mirror their Rails modules"
-status: in-progress
+status: done
 updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null

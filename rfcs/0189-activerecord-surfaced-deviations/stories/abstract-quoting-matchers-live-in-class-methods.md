@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Quoting::ClassMethods holds all four class methods and reaches AbstractAdapter through extend"
-status: ready
-updated: 2026-10-11
+status: claimed
+updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T23:58:37Z"
+assignee: "abstract-class-as-a-static-field-is-inherited"
 blocked-by: null
 closed-reason: null
 ---

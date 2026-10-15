@@ -1,6 +1,6 @@
 ---
 title: "ActionController::Parameters: port hook_into_yaml_loading, init_with and encode_with"
-status: ready
+status: done
 updated: 2026-10-14
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
@@ -9,9 +9,9 @@ deps: ["psych-load-tags-dump-tags-and-domain-types"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8563
+claim: "2026-10-14T23:53:55Z"
+assignee: "active-record-legacy-yaml-load-tags"
 blocked-by: null
 closed-reason: null
 ---

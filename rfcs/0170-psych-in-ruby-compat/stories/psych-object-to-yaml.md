@@ -1,6 +1,6 @@
 ---
 title: "Port Object#to_yaml (psych/core_ext.rb) as ruby-compat toYaml"
-status: ready
+status: claimed
 updated: 2026-10-14
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T23:53:55Z"
+assignee: "active-record-legacy-yaml-load-tags"
 blocked-by: null
 closed-reason: null
 ---

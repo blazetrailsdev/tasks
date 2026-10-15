@@ -1,7 +1,7 @@
 ---
 title: "audit: sample class constructors whose Rails initialize works on self before super"
-status: ready
-updated: 2026-10-11
+status: claimed
+updated: 2026-10-14
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: tooling
 packages: ["scripts"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 0
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T23:57:42Z"
+assignee: "inlined-from-gate-pairs-constructors-as-compare-does"
 blocked-by: null
 closed-reason: null
 ---

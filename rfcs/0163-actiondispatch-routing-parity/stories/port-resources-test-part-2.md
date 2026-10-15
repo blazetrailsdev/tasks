@@ -1,6 +1,6 @@
 ---
 title: "Port controller/resources_test.rb lines 601-1471 under the Rails test names"
-status: ready
+status: in-progress
 updated: 2026-10-14
 rfc: "0163-actiondispatch-routing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["port-resources-test-part-1"]
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#8917
+claim: "2026-10-14T23:40:31Z"
+assignee: "port-resources-test-part-2"
 blocked-by: null
 closed-reason: null
 ---

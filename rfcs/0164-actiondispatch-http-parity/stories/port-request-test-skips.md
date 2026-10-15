@@ -1,6 +1,6 @@
 ---
 title: "Port request_test.rb's 28 skipped tests and sort its 30 extra"
-status: ready
+status: claimed
 updated: 2026-10-14
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 450
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T23:53:08Z"
+assignee: "port-request-test-skips"
 blocked-by: null
 closed-reason: null
 ---

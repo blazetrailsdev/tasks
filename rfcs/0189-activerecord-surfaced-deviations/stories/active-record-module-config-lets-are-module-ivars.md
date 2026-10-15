@@ -1,6 +1,6 @@
 ---
 title: "active-record-module-config-lets-are-module-ivars"
-status: ready
+status: claimed
 updated: 2026-10-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-14T23:58:37Z"
+assignee: "abstract-class-as-a-static-field-is-inherited"
 blocked-by: null
 closed-reason: null
 ---
