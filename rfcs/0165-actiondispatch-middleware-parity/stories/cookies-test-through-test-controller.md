@@ -36,3 +36,6 @@ second request — `cookie jar mutated by request persists on future requests`
   and `@response.cookies`, not bare jars.
 - `cookie jar mutated by request persists on future requests` is ported with
   its two requests.
+- The signed/encrypted cases ported on trails#8945 seed their fixtures through
+  the request's `Cookie` header and `get :get_signed_cookie` /
+  `get :get_encrypted_cookie`, as `cookies_test.rb:645-660` and `:869-888` do.

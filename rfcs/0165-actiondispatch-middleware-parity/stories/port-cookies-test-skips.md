@@ -40,5 +40,11 @@ One more test sits in `middleware/cookies.test.ts` and belongs here.
 
 ## Acceptance criteria
 
-- The 27 stubs are real tests with Rails' bodies, asserting through the
-  harness's `CookieAssertions`; the misplaced test moves here.
+- The 17 stubs the jar already supports are real tests with Rails' bodies,
+  asserting through the harness's `CookieAssertions`; the misplaced test moves
+  here.
+- The 9 stubs that need jar changes, and the real `Marshal` fixtures, are
+  `cookie-jar-serializer-fallbacks-and-legacy-cbc-upgrade`'s. The persistence
+  test and running every case through `TestController` / `TestCase#get` (the
+  incoming `Cookie` header included) are `cookies-test-through-test-controller`'s.
+  Scope narrowed by the repo owner's operator on trails#8945.
