@@ -13,6 +13,7 @@ packages:
   - i18n
   - bcrypt
   - did-you-mean
+  - ruby-compat
 clusters:
   - rack-api
   - rack-calls
