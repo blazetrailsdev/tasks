@@ -19,8 +19,8 @@ closed-reason: null
 ## Context
 
 `vendor/rails/v8.0.2/actionpack/lib/action_dispatch/system_testing/driver.rb`
-(`:6-78`) registers a factory with `Capybara.register_driver` and sets
-`Capybara.current_driver`. trails'
+(`:6-78`) hands a driver factory to the third-party session library and sets
+its current driver (`:36-45`, `:72-74`). trails'
 `packages/actionpack/src/action-dispatch/system-testing/driver.ts` launches
 Playwright directly, makes three of four `register_*` arms throw, takes no
 `app`, and has invented `newContext` / `newPage` / `close` members. Call

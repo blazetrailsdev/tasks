@@ -35,6 +35,6 @@ entry point (Rails generates `test/application_system_test_case.rb`).
   subclassing `SystemTestCase` with `drivenBy("selenium", { using: "headless_chrome" })`,
   mirroring Rails' template, plus the `system` project entry in the app's
   vitest config.
-- The devcontainer generator stops writing `CAPYBARA_SERVER_PORT`
+- The devcontainer generator stops writing its third-party server-port variable
   (`packages/trailties/src/generators/rails/devcontainer/devcontainer-generator.ts:141,246`)
   and uses a trails-named variable feeding `servedBy`.

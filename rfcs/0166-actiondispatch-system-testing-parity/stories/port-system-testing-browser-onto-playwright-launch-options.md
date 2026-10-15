@@ -42,6 +42,6 @@ as `launch`.
 - `preload` / `resolve_driver_path` resolve the browser executable through
   Playwright's `executablePath()` and raise if it is not installed, at the
   same point Rails' `DriverFinder` would.
-- No `selenium-webdriver` dependency and no Capybara name anywhere.
+- No `selenium-webdriver` dependency and no third-party session-library name.
 - Receipts cite the ratified section from
   `ratify-vitest-native-system-testing-section`.

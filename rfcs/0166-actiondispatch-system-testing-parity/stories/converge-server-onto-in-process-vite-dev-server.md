@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 `vendor/rails/v8.0.2/actionpack/lib/action_dispatch/system_testing/server.rb`
-(`:5-29`) points Capybara at Puma and turns on `always_include_port`;
+(`:5-29`) selects Puma as the app server and always includes the port;
 `SystemTestCase.start_application` (`system_test_case.rb:128-136`) mounts
 `Rails.application` under `map "/"` and calls `Server.new.run`;
 `served_by(host:, port:)` (`:166-169`) sets the server host and port. trails'
