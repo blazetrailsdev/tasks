@@ -40,7 +40,8 @@ which has `each`, so the body can be Rails' one line.
 
 ## Acceptance criteria
 
-- [ ] `StatementPool` includes `Enumerable`, and `each(block)` is `this.cache.each(block)`.
+- [ ] `StatementPool` includes `Enumerable`; `each(block)` stays the `for…of` over
+      `Object.entries(this.cache)` (the cache is a plain object per RFC 0190 open question 4).
 - [ ] Callers and tests that pass a two-argument block still work, or are updated to the pair
       shape `Hash#each` yields.
 - [ ] `pnpm parity:api:calls`, `pnpm parity:api:params` and `pnpm parity:api:extra:gate` stay green.
