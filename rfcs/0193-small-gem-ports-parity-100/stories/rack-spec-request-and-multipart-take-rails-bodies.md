@@ -2,7 +2,7 @@
 title: "rack spec_request.rb and spec_multipart.rb tests take Rails' bodies (assertion parity)"
 status: draft
 updated: 2026-10-15
-rfc: "0000-small-gem-ports-parity-100"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-tests
 packages: [rack]
 deps: [port-rack-spec-request-test-proxy-request-inherited-examples]

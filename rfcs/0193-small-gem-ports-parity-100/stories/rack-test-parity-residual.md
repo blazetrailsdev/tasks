@@ -2,7 +2,7 @@
 title: "rack-test residual: Methods alias and accessor, four missing tests, one skip, call and argument rows, pins"
 status: draft
 updated: 2026-10-15
-rfc: "0000-small-gem-ports-parity-100"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals
 packages: [rack-test]
 deps: []

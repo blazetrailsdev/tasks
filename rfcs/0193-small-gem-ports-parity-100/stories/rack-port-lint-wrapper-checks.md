@@ -2,7 +2,7 @@
 title: "Port Rack::Lint::Wrapper's checks and body/stream wrappers (lint.rb 6/26)"
 status: draft
 updated: 2026-10-15
-rfc: "0000-small-gem-ports-parity-100"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-api
 packages: [rack]
 deps: [rack-lint-wrapper-to-ary-unported]

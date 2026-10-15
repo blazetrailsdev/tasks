@@ -2,7 +2,7 @@
 title: "Port Rack::Session::Cookie (cookie.rb, 16 methods, 48 skipped tests)"
 status: draft
 updated: 2026-10-15
-rfc: "0000-small-gem-ports-parity-100"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-session
 packages: [rack-session]
 deps: [rack-session-port-encryptor]

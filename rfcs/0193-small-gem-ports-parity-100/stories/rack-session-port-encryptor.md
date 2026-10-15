@@ -2,7 +2,7 @@
 title: "Port Rack::Session::Encryptor (encryptor.rb, 12 methods, 16 skipped tests)"
 status: draft
 updated: 2026-10-15
-rfc: "0000-small-gem-ports-parity-100"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-session
 packages: [rack-session]
 deps: []

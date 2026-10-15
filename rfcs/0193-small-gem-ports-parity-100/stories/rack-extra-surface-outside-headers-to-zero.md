@@ -2,7 +2,7 @@
 title: "rack extra surface outside headers.ts to zero (23 novel, 50 moved), then gate rack"
 status: draft
 updated: 2026-10-15
-rfc: "0000-small-gem-ports-parity-100"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-extra
 packages: [rack]
 deps:

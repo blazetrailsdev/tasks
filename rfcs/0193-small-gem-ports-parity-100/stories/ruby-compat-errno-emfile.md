@@ -2,7 +2,7 @@
 title: "ruby-compat defines Errno::EMFILE for Rack::Multipart::MultipartPartLimitError"
 status: draft
 updated: 2026-10-15
-rfc: "0000-small-gem-ports-parity-100"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-api
 packages: [ruby-compat, rack]
 deps: []

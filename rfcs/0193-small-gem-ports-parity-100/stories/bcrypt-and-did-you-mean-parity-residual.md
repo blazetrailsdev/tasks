@@ -2,7 +2,7 @@
 title: "bcrypt and did-you-mean residual: pins, one bcrypt argument row, two did-you-mean moved extras"
 status: draft
 updated: 2026-10-15
-rfc: "0000-small-gem-ports-parity-100"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals
 packages: [bcrypt, did-you-mean]
 deps: []

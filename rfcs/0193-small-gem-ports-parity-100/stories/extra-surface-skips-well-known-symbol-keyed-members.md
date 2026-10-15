@@ -2,7 +2,7 @@
 title: "parity:api:extra scores well-known-Symbol-keyed members as novel public surface"
 status: draft
 updated: 2026-10-15
-rfc: "0000-small-gem-ports-parity-100"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: comparer
 packages: [rack]
 deps: []

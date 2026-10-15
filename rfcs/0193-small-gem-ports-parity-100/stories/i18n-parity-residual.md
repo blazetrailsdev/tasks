@@ -2,7 +2,7 @@
 title: "i18n residual: SubtreeProxy#inspect, MissingTranslation#options, six call-argument rows"
 status: draft
 updated: 2026-10-15
-rfc: "0000-small-gem-ports-parity-100"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals
 packages: [i18n]
 deps: [burn-down-and-enroll-i18n]
