@@ -1,6 +1,6 @@
 ---
 title: "Hash#merge on a plain object is an object spread: every package with a site"
-status: claimed
+status: in-progress
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: substitution
@@ -9,7 +9,7 @@ deps: [native-hash-each-pair-sites]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#8942
 claim: "2026-10-15T15:48:09Z"
 assignee: "key-read-report-receiver-unread-rows-converge"
 blocked-by: null

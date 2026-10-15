@@ -1,6 +1,6 @@
 ---
 title: "actionview: port ActiveRecordTestCase, SQLCounter and the remaining active_record_unit fixtures"
-status: claimed
+status: in-progress
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#8940
 claim: "2026-10-15T15:35:42Z"
 assignee: "actionview-port-active-record-test-case"
 blocked-by: null

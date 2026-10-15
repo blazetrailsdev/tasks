@@ -1,6 +1,6 @@
 ---
 title: "DatabaseStatements#with_yaml_fallback through YAML.dump"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity

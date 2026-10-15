@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SchemaCache._load_from omits the YAML.respond_to?(:unsafe_load) guard and its YAML.load arm"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: null

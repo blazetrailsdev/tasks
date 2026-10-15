@@ -1,6 +1,6 @@
 ---
 title: "build_column_serializer: port the `coder == ::YAML` arm"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity

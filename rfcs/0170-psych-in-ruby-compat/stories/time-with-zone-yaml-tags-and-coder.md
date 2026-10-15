@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone: YAML load/dump tags and init_with / encode_with"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity

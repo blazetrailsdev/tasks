@@ -1,6 +1,6 @@
 ---
 title: "Close RFC 0164 — call baselines, arm-throw row and residue"
-status: claimed
+status: done
 updated: 2026-10-15
 rfc: "0164-actiondispatch-http-parity"
 cluster: null
@@ -18,7 +18,7 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
+pr: trails#8941
 claim: "2026-10-15T15:55:17Z"
 assignee: "http-call-baselines-and-residue"
 blocked-by: null

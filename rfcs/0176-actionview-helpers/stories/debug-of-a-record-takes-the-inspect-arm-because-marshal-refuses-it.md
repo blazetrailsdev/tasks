@@ -1,6 +1,6 @@
 ---
 title: "DebugHelper#debug renders inspect for a record: Marshal.dump refuses it where Rails dumps it"
-status: claimed
+status: in-progress
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8940
 claim: "2026-10-15T15:35:42Z"
 assignee: "actionview-port-active-record-test-case"
 blocked-by: null

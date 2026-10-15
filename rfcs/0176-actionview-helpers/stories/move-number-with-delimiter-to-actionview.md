@@ -1,6 +1,6 @@
 ---
 title: "number_with_delimiter is ActionView's helper living in ActiveSupport's number_helper.ts"
-status: claimed
+status: in-progress
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: trails#8940
 claim: "2026-10-15T15:35:42Z"
 assignee: "actionview-port-active-record-test-case"
 blocked-by: null

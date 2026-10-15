@@ -1,6 +1,6 @@
 ---
 title: "form-builder-nested-attributes-probe-misses-ar-writer-spelling"
-status: claimed
+status: in-progress
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8940
 claim: "2026-10-15T15:35:42Z"
 assignee: "actionview-port-active-record-test-case"
 blocked-by: null
