@@ -14,6 +14,7 @@ packages:
   - "rack-session"
   - "actionpack"
   - "actionview"
+  - "ruby-compat"
 clusters:
   - "surfaced-bugs"
 related-rfcs:
