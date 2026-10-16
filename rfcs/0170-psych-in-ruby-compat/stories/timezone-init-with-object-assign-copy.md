@@ -1,6 +1,6 @@
 ---
 title: "TimeZone/TimeWithZone init_with copies a constructed instance onto the receiver (Object.assign)"
-status: claimed
+status: ready
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-10-16T03:14:51Z"
-assignee: "port-system-testing-browser-onto-playwright-launch-options"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
