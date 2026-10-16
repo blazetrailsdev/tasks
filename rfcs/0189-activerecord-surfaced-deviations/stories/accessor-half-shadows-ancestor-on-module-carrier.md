@@ -4,10 +4,10 @@ status: draft
 updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages: [ruby-compat, activesupport, activejob]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null
@@ -24,9 +24,29 @@ A JS property holds both halves. trails' `mattrWriter` (`packages/activesupport/
 
 A filler half that reads or writes through to the next object in the chain fixes dispatch. But `checkDefinitionVisibility` (`packages/ruby-compat/src/object.ts:706-728`) and the super lookup in `include.ts` (~:660) would then see the filler, and `respond_to?(:x=)` would wrongly answer true (`attribute_accessor_test.rb` `test_should_not_create_instance_writer`).
 
+The same split happens in the other direction across two included modules.
+`ActiveJob::QueuePriority` defines the reader `def priority` (it `instance_exec`s a
+stored Proc, `vendor/rails/v8.0.2/activejob/lib/active_job/queue_priority.rb:53-59`) and
+`ActiveJob::Core` defines the writer `attr_writer :priority`
+(`vendor/rails/v8.0.2/activejob/lib/active_job/core.rb:25`); `Base` includes both.
+ruby-compat's `include` gives each module its own link in the prototype chain
+(`Module#appendFeatures`, `packages/ruby-compat/src/include.ts`:
+`Object.defineProperties(link, Object.getOwnPropertyDescriptors(carrierOf(this)))`),
+and JS stops at the first link that has `priority`. With the reader as a getter on
+`QueuePriority`'s link, `job.priority = 123` (`set(priority: 123)`) throws on a
+getter-only property; with the reader as a method, the assignment creates an own
+field that hides it. Surfaced by the activejob codegen trial (spike
+`spike-ar-ruby-ir-ts-29583a`, `scripts/codegen/PROGRESS.md` steps 25-26): the
+generated `queue_priority_test.rb` "is assigned when perform_now / perform_later"
+fail on `job.priority is not a function`.
+
 ## Acceptance criteria
 
 - [ ] ruby-compat can represent an accessor property with one half absent, and that half defers to the next object in the prototype chain for get/set.
 - [ ] `method_defined?` / `respond_to?` / `rbFSend` / super lookup treat the absent half as undefined there and keep walking.
 - [ ] `mattrWriter` on a Module seats its instance writer unconditionally, and the `@inventedArm if` receipt is removed.
+- [ ] A reader in one included module and a writer in another both answer on the
+      includer: a unit test with two `new Module()`s, one defining a getter `x` and
+      one an `attrWriter("x")`, included into a class in either order; `obj.x = v`
+      reaches the writer and `obj.x` the reader.
 - [ ] `PolymorphicPathRoutesTest` and `ModuleAttributeAccessorTest` stay green.
