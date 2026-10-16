@@ -5,7 +5,11 @@ updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
-deps: []
+deps:
+  - cache-store-async-store-and-local-stores
+  - cache-store-async-consumers
+  - redis-cache-store-async-over-npm-client
+  - mem-cache-store-async-over-npm-client
 deps-rfc: []
 est-loc: null
 priority: null
