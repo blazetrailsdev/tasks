@@ -23,4 +23,4 @@ closed-reason: null
 ## Acceptance criteria
 
 - [ ] `DateTimeSelector` ported in `helpers/date-helper.ts` in Rails order; `DateHelper#select_datetime` … `#select_year` delegate to it.
-- [ ] The corresponding `date_helper_test.rb` select\_\* cases and `date_helper_i18n_test.rb` (unported) ported.
+- [ ] A representative `date_helper_test.rb` select\_\* case per `DateTimeSelector` entry point ported; the remaining select\_\* cases and `date_helper_i18n_test.rb` are tracked by `port-date-helper-select-tests-remainder`.
