@@ -5,7 +5,9 @@ updated: 2026-10-05
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: ["activejob"]
-deps: ["port-activejob-core"]
+deps:
+  - port-activejob-core
+  - class-attribute-module-singleton-arm
 deps-rfc: []
 est-loc: 300
 priority: 3
