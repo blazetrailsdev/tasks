@@ -11,10 +11,10 @@ import { mkdtempSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { migrate } from "./migrator.js";
-import { Rfc, Story } from "./models/index.js";
+import { Event, Rfc, Story } from "./models/index.js";
 import { setPriority, setRfcPriority } from "./verbs.js";
 import { exportState } from "./export.js";
-import { DB_OWNED, MARKDOWN_OWNED } from "./ingest.js";
+import { DB_OWNED, MARKDOWN_OWNED, ingestRfcForTest } from "./ingest.js";
 
 beforeEach(async () => {
   await Base.establishConnection({ adapter: "node-sqlite", database: ":memory:", pool: 1 });
@@ -92,8 +92,44 @@ describe("RFC priority ownership", () => {
     expect(result.changed).not.toContain(rel);
   });
 
+  it("is not reverted by a later ingest of an edited README", async () => {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-rfcprio-"));
+    mkdirSync(join(dir, "rfcs/0002-s"), { recursive: true });
+    const rel = "rfcs/0002-s/README.md";
+    const readme = (p: number) => `---\ntitle: S\nstatus: active\npriority: ${p}\n---\n\nbody\n`;
+
+    writeFileSync(join(dir, rel), readme(5));
+    await ingestRfcForTest(dir, rel, "0002-s");
+    expect((await Rfc.findBy({ id: "0002-s" }))!.priority).toBe(5);
+
+    await setRfcPriority("0002-s", 2);
+    writeFileSync(join(dir, rel), readme(9));
+    await ingestRfcForTest(dir, rel, "0002-s");
+
+    expect((await Rfc.findBy({ id: "0002-s" }))!.priority).toBe(2);
+  });
+
+  it("clears back to null in the README when cleared", async () => {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-rfcprio-"));
+    mkdirSync(join(dir, "rfcs/0001-r"), { recursive: true });
+    const rel = "rfcs/0001-r/README.md";
+    writeFileSync(join(dir, rel), "---\ntitle: R\nstatus: active\npriority: 3\n---\n\nbody\n");
+    await Rfc.where({ id: "0001-r" }).updateAll({ priority: 3, file_path: rel });
+
+    await setRfcPriority("0001-r", null);
+    await exportState({ tasksDir: dir, commit: false });
+
+    expect((await Rfc.findBy({ id: "0001-r" }))!.priority).toBeNull();
+    expect(readFileSync(join(dir, rel), "utf8")).toContain("priority: null");
+  });
+
   it("rejects a negative or non-integer priority", async () => {
     await expect(setRfcPriority("0001-r", -1)).rejects.toThrow();
     await expect(setRfcPriority("0001-r", 1.5)).rejects.toThrow();
+  });
+
+  it("rejects an RFC that does not exist", async () => {
+    await expect(setRfcPriority("9999-nope", 1)).rejects.toThrow();
+    expect((await Event.where({ verb: "rfc-priority" }).count()) as number).toBe(0);
   });
 });
