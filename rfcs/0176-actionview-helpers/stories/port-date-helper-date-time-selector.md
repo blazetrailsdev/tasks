@@ -1,17 +1,17 @@
 ---
 title: "DateHelper: port DateTimeSelector and the select_* helpers"
-status: ready
-updated: 2026-10-15
+status: in-progress
+updated: 2026-10-16
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
 deps: []
 deps-rfc: []
 est-loc: 700
-priority: 11
-pr: null
-claim: null
-assignee: null
+priority: null
+pr: trails#8994
+claim: "2026-10-16T20:14:55Z"
+assignee: "time-with-zone-marshal-load-calls-utc-not-getutc"
 blocked-by: null
 closed-reason: null
 ---

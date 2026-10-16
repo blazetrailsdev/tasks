@@ -1,6 +1,6 @@
 ---
 title: "Stop counting test/abstract/*_test.rb in actiondispatch's Ruby test population"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0167-actionpack-parity-gates"
 cluster: null

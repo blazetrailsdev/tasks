@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone#marshalLoad calls Time#utc, not getutc"
-status: ready
+status: in-progress
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 5
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8994
+claim: "2026-10-16T20:14:55Z"
+assignee: "time-with-zone-marshal-load-calls-utc-not-getutc"
 blocked-by: null
 closed-reason: null
 ---

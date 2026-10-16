@@ -1,6 +1,6 @@
 ---
 title: "The system-tests lane runs a real browser system test"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0167-actionpack-parity-gates"
 cluster: null

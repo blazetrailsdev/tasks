@@ -1,14 +1,14 @@
 ---
 title: "nokogiri-html5-document-parse-signature"
 status: ready
-updated: 2026-10-15
+updated: 2026-10-16
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 18
+priority: null
 pr: null
 claim: null
 assignee: null

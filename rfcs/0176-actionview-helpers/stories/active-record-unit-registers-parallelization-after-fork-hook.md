@@ -1,14 +1,14 @@
 ---
 title: "active-record-unit-registers-parallelization-after-fork-hook"
 status: ready
-updated: 2026-10-15
+updated: 2026-10-16
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 19
+priority: null
 pr: null
 claim: null
 assignee: null

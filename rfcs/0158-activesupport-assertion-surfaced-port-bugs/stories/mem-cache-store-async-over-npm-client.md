@@ -1,6 +1,6 @@
 ---
 title: "mem-cache-store-async-over-npm-client"
-status: draft
+status: blocked
 updated: 2026-10-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "owner decision 2026-10-15: avoid memcached for now"
 closed-reason: null
 ---
 

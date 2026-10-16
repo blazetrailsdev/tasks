@@ -1,7 +1,7 @@
 ---
 title: "cache-store-async-over-npm-clients"
 status: ready
-updated: 2026-09-25
+updated: 2026-10-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

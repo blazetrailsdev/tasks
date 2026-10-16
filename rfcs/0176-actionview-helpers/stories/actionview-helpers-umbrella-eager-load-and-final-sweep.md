@@ -1,7 +1,7 @@
 ---
 title: "Helpers umbrella: eager_load! and the 0-missing helper sweep"
 status: ready
-updated: 2026-10-15
+updated: 2026-10-16
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -20,7 +20,7 @@ deps:
   - port-atom-feed-helper
 deps-rfc: []
 est-loc: 60
-priority: 21
+priority: null
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "accessor-half-shadows-ancestor-on-module-carrier"
-status: claimed
+status: done
 updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 0
-pr: null
+pr: trails#8993
 claim: "2026-10-16T19:32:57Z"
 assignee: "accessor-half-shadows-ancestor-on-module-carrier"
 blocked-by: null

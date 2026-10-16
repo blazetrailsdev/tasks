@@ -1,14 +1,14 @@
 ---
 title: "Port ActionView::Helpers::TranslationHelper + translation_helper_test"
 status: ready
-updated: 2026-10-15
+updated: 2026-10-16
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: 13
+priority: null
 pr: null
 claim: null
 assignee: null

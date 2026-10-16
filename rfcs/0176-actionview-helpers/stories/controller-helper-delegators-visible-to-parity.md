@@ -1,14 +1,14 @@
 ---
 title: "ControllerHelper: declare the ten controller delegators on the Module"
 status: ready
-updated: 2026-10-15
+updated: 2026-10-16
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: 14
+priority: null
 pr: null
 claim: null
 assignee: null
