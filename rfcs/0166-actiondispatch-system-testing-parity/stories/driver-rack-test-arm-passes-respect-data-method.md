@@ -1,6 +1,6 @@
 ---
 title: "driver-rack-test-arm-passes-respect-data-method"
-status: draft
+status: ready
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone#marshalLoad calls Time#utc, not getutc"
-status: draft
+status: ready
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null

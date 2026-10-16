@@ -1,6 +1,6 @@
 ---
 title: "exception-wrapper-extract-source-drops-null-path-guard"
-status: draft
+status: done
 updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8982
+claim: "2026-10-16T16:15:26Z"
+assignee: "exception-wrapper-extract-source-drops-null-path-guard"
 blocked-by: null
 closed-reason: null
 ---

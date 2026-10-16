@@ -1,6 +1,6 @@
 ---
 title: "rack: Builder and URLMap call an app with app.call(env), not as a function"
-status: draft
+status: done
 updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8982
+claim: "2026-10-16T16:15:26Z"
+assignee: "exception-wrapper-extract-source-drops-null-path-guard"
 blocked-by: null
 closed-reason: null
 ---

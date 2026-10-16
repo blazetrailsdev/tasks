@@ -1,6 +1,6 @@
 ---
 title: "Converge ScreenshotHelper and SetupAndTeardown onto the Vitest lifecycle; re-describe screenshot_helper_test.rb"
-status: ready
+status: in-progress
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["converge-system-test-case-onto-test-case-with-page-and-expect-element"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8983
+claim: "2026-10-16T16:15:26Z"
+assignee: "exception-wrapper-extract-source-drops-null-path-guard"
 blocked-by: null
 closed-reason: null
 ---

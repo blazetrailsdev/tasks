@@ -1,6 +1,6 @@
 ---
 title: "A system Vitest project, a browser CI lane and the generated application system test case"
-status: ready
+status: in-progress
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["converge-system-test-case-onto-test-case-with-page-and-expect-element"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8984
+claim: "2026-10-16T16:44:58Z"
+assignee: "browser-resolve-driver-path-keeps-preset-path"
 blocked-by: null
 closed-reason: null
 ---

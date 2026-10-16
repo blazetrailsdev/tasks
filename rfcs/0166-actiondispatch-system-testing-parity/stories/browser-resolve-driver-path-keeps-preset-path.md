@@ -1,6 +1,6 @@
 ---
 title: "Browser#resolveDriverPath keeps a preset driver path"
-status: draft
+status: in-progress
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8984
+claim: "2026-10-16T16:44:58Z"
+assignee: "browser-resolve-driver-path-keeps-preset-path"
 blocked-by: null
 closed-reason: null
 ---

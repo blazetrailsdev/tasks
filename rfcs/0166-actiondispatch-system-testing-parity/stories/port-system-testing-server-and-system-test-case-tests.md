@@ -1,6 +1,6 @@
 ---
 title: "Port server_test.rb, system_test_case_test.rb and abstract_unit's DrivenBy classes"
-status: ready
+status: done
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8982
+claim: "2026-10-16T16:15:26Z"
+assignee: "exception-wrapper-extract-source-drops-null-path-guard"
 blocked-by: null
 closed-reason: null
 ---

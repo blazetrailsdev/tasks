@@ -1,6 +1,6 @@
 ---
 title: "SystemTestCase < ActiveSupport::TestCase with a Vitest page fixture and expect.element"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
