@@ -33,8 +33,10 @@ clusters:
 call Rails makes. Three things have grown on top of that purpose. First, two
 dispatch helpers cost about 1 µs per call on the mass-assignment path.
 Second, the call gates credit a native JS form for only some Ruby calls, so
-helpers like `isEmpty` exist mainly to satisfy a gate. Third, about 25
-exports have a single caller that uses a small part of them. This RFC does
+helpers like `isEmpty` exist mainly to satisfy a gate. Third, 62
+exports have exactly one importing file outside ruby-compat. This RFC
+inlines 24 of them, keeps those that own object-model state or are adapter
+seams, and triages the rest. This RFC does
 three things, in order:
 
 1. **Dispatch cost.** Make `rbObjRespondTo` / `rbFSend` cheap on a
@@ -108,7 +110,7 @@ Kept on purpose, with no substitution story:
 - The RFC 0190 hash helpers. trails#8903 and trails#8951 kept their remaining
   sites one by one.
 
-### Phase 1: dispatch cost (no semantic change)
+### Dispatch cost (no semantic change)
 
 - Memoize `writerSpelling`, or skip the regex when `attr` has no `_`.
 - `basicObjRespondTo` checks the core-receiver tables (string, array,
@@ -116,8 +118,10 @@ Kept on purpose, with no substitution story:
   those checks behind a receiver-kind test so a class instance goes straight
   to the walk. Every probe stays, in MRI order, for the receivers it can
   match.
-- Widen the existing `rb-f-send-cost-on-arel-visit-hot-path` to cover the
-  `sendInternal` preamble.
+- `rb-f-send-cost-on-arel-visit-hot-path` (RFC 0154) already covers the
+  `sendInternal` preamble and is not edited here. This RFC only orders it
+  next to `basic-obj-respond-to-instance-fast-path`, which shares the cache
+  below.
 - Cache, per prototype (a `WeakMap`), whether the receiver's chain defines
   `respondToMissing` / `isRespondTo`. A plain class instance without either
   answers by direct property lookup before any core-receiver probe.
@@ -151,7 +155,7 @@ Dispatch then follows one rule:
 | same, computed name                                                        | `recv[name](...)`, `recv[attr] = v`                         |
 | core value, CLAUDE.md Proxy row, or a `respondToMissing` definer           | `rbFSend` / `rbObjRespondTo`                                |
 
-### Phase 2: gate
+### Gate
 
 Each change adds a credit and never a suppression. No name joins
 `NO_JS_CALL_FORM`, and every credit is scoped to a Ripper-proven receiver
@@ -168,9 +172,9 @@ kind, as `POSITIONAL_ARRAY_ANALOGUES` already does.
   demand `rbFSend` over `recv[name](...)`, because `send` is not a scored name
   (`compare.ts:419-428`).
 
-### Phase 3: substitution and inlining
+### Substitution and inlining
 
-The sweeps are per package and per helper. Each needs the Phase 2 credit for
+The sweeps are per package and per helper. Each needs the gate credit for
 its helper first. Single-caller inlining needs no gate change, because none of
 the candidates is a credited name.
 
@@ -183,6 +187,8 @@ the candidates is a credited name.
   this RFC does not undo that.
 - **A runtime visibility carrier.** CLAUDE.md "Method visibility is
   compile-time only" rules it out.
+- **Inlining `keepIf`.** It has one caller (`routing/mapper.ts`), but
+  CLAUDE.md's hash table lists `keep_if` as "always helper", so it stays.
 
 ## Alternatives considered
 
@@ -194,50 +200,66 @@ the candidates is a credited name.
 
 ## Rollout
 
-1. Phase 1: `writer-spelling-camelize-memo`,
-   `basic-obj-respond-to-instance-fast-path`,
-   `collapse-visibility-variants-of-send-and-respond-to`, plus the existing
-   `rb-f-send-cost-on-arel-visit-hot-path`.
-2. Phase 2: `call-gate-credits-empty-size-on-proven-string-and-hash`,
+Gate groundwork lands before anything it credits or excuses is deleted or
+substituted. The dependency chain is: gate stories (phase 1), then the
+dispatch-cost and visibility-collapse stories (phase 2), then the sweeps and
+inlining (phase 3). `native-respond-to-and-send-literal-name-sites` (phase 3)
+depends on the collapse (phase 2), which depends on the three visibility
+compare stories (phase 1) and on `converge-four-divergent-public-send-ports`
+(RFC 0189).
+
+1. Phase 1, gate: `call-gate-credits-empty-size-on-proven-string-and-hash`,
    `native-form-analogue-for-two-arg-hash-fetch`,
    `native-form-analogue-for-hash-except-rest-destructure`,
    `ruby-compat-table-drops-kernel-send`,
    `compare-drops-include-private-only-arms`,
    `compare-visibility-reflection-calls-are-permanent-skips`,
    `call-args-drops-visibility-boolean-argument`.
-3. Phase 3: `native-is-empty-sites-activerecord-arel`,
+2. Phase 2, dispatch cost and visibility: `writer-spelling-camelize-memo`,
+   `basic-obj-respond-to-instance-fast-path`,
+   `collapse-visibility-variants-of-send-and-respond-to`, plus the existing
+   `rb-f-send-cost-on-arel-visit-hot-path` (RFC 0154).
+3. Phase 3, substitution and inlining: `native-is-empty-sites-activerecord-arel`,
    `native-is-empty-sites-remaining-packages`,
    `native-fetch-two-arg-literal-key-sites`,
+   `native-except-literal-key-sites`,
    `native-respond-to-and-send-literal-name-sites`,
    `inline-single-use-msgpack-packer-helpers`,
    `inline-single-use-string-byte-helpers`,
    `inline-single-use-numeric-and-array-helpers`,
-   `thor-command-visibility-enumerators-collapse`,
    `triage-ruby-compat-exports-with-no-external-importer`,
    `native-first-policy-docs`.
 
 ## Verification
 
-- Mass assignment of one `name=` attribute costs under 100 ns in
-  `rbObjRespondTo` + `rbFPublicSend` combined, down from about 2100 ns. This
-  is measured on dist with the audit's benchmark script.
-- `isEmpty` importers fall from 74 files to the receivers that dispatch
-  (Map / Set / a class answering `isEmpty`).
-- Every helper inlined by Phase 3 is gone from `packages/ruby-compat/src/index.ts`.
-- `pnpm parity:api:calls` and `pnpm parity:api:calls:args` stay green, with
-  no new baseline rows.
+- `AttributeAssignment#_assign_attribute` costs under 100 ns per assigned
+  `name=` attribute, down from about 2100 ns (`rbObjRespondTo` +
+  `rbFPublicSend`). This is measured on dist with the audit's plain-node
+  benchmark. `native-respond-to-and-send-literal-name-sites` owns the site.
+- `rbObjRespondTo` on a class-instance hit is under 80 ns, and on an `x=`
+  name under 550 ns.
+- `isEmpty` is imported by at most 20 non-test files outside ruby-compat. Each
+  remaining file is listed in its sweep PR with the dispatching receiver
+  (Map, Set, or a class answering `isEmpty`).
+- `fetch` and `except` keep only the sites their sweep PRs list as dispatching
+  or semantically different.
+- Every helper inlined by phase 3 is gone from
+  `packages/ruby-compat/src/index.ts`, and so are `rbFPublicSend`,
+  `rbObjPrivateMethods`, `rbObjProtectedMethods`, `rbObjPublicMethods` and
+  `rbModPublicMethodDefined`.
+- `pnpm parity:api:calls`, `pnpm parity:api:calls:args` and
+  `pnpm parity:api:calls:ruby-compat` stay green with no new baseline rows.
 
 ## Open questions
 
-1. **`keepIf` has one caller (`routing/mapper.ts`).** CLAUDE.md lists
-   `keep_if` as "always helper". Recommendation: keep it, since it is a
-   CLAUDE.md row, and leave it out of inlining.
-2. **Ruby-compat README rule 1 ("only what trails actually calls").** One
-   caller satisfies it today. Recommendation: amend the rule to "two or more
-   importing files, or object-model state / adapter seam", in
-   `native-first-policy-docs`.
+None. Both questions raised in drafting are resolved:
+
+1. **`keepIf`.** It is kept as a helper (see Non-goals).
+2. **ruby-compat README rule 1.** It is amended to "two or more importing
+   files, or object-model state / adapter seam" by `native-first-policy-docs`.
 
 ## Changelog
 
 - 2026-10-16: initial RFC, from the ruby-compat native audit.
 - 2026-10-16: visibility collapse; owner chose the removal path for `include_private` arms.
+- 2026-10-16: review: reordered phases to follow deps, folded the Thor story into the collapse, added the `except` sweep, numeric verification, resolved open questions.
