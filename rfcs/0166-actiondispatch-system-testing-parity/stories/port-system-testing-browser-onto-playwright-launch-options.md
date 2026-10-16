@@ -1,6 +1,6 @@
 ---
 title: "Port system_testing/browser.rb onto Playwright launch options"
-status: claimed
+status: in-progress
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["ratify-vitest-native-system-testing-section"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#8971
 claim: "2026-10-16T03:14:51Z"
 assignee: "port-system-testing-browser-onto-playwright-launch-options"
 blocked-by: null

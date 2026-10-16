@@ -1,6 +1,6 @@
 ---
 title: "Converge Server, start_application and served_by onto an in-process Vite dev server"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "debug-view-extends-action-view-base-and-renders-rescue-templates"
-status: ready
+status: claimed
 updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-16T12:44:55Z"
+assignee: "debug-view-extends-action-view-base-and-renders-rescue-templates"
 blocked-by: null
 closed-reason: null
 ---

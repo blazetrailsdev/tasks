@@ -1,9 +1,9 @@
 ---
 rfc: "0190-native-js-hash-forms"
 title: "Native JS hash forms: the call gates credit `in` / `delete` / `Object.assign` / element access as the Hash call they port, and the ruby-compat hash helpers shrink to what JS lacks"
-status: active
+status: closed
 created: 2026-10-10
-updated: 2026-10-11
+updated: 2026-10-16
 owner: "@deanmarano"
 priority: 2
 packages:

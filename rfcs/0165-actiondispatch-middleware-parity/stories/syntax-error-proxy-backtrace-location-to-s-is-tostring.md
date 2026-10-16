@@ -1,6 +1,6 @@
 ---
 title: "SyntaxErrorProxy::BacktraceLocation answers its to_s member through toString"
-status: draft
+status: ready
 updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null

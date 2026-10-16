@@ -1,6 +1,6 @@
 ---
 title: "Psych.parse answers Psych::Nodes and ToRuby visits them (Node#to_ruby, #each, predicates)"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
