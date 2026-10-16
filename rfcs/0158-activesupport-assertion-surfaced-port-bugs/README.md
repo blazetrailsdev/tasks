@@ -13,6 +13,7 @@ packages:
   - "rack"
   - "rack-session"
   - "actionpack"
+  - "actionview"
 clusters:
   - "surfaced-bugs"
 related-rfcs:
