@@ -8,6 +8,7 @@ owner: "@deanmarano"
 packages:
   - "actionpack"
 clusters: []
+priority: 3
 ---
 
 # RFC 0167 — ActionPack parity gates: fix the measurements, then enroll actionpack in every ratchet
