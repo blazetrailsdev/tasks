@@ -2,7 +2,7 @@
 title: "rack-builder-map-stores-block-generate-map-builds-per-entry"
 status: draft
 updated: 2026-10-16
-rfc: "0165-actiondispatch-middleware-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
