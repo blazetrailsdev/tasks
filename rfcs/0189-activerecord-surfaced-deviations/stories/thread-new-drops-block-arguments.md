@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: new Thread drops Thread.new's block arguments, so the reaper closes over frequency"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "parity: map.with_index { |x, i| } ported as map((x, i) => …) is charged a missing with_index"
-status: draft
+status: in-progress
 updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#8978
+claim: "2026-10-16T14:15:06Z"
+assignee: "call-gate-credits-map-with-index-as-the-indexed-callback"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: uniq takes no block, so Rails' uniq(&:__id__) sites hand-roll identity de-duplication"
-status: ready
+status: in-progress
 updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8978
+claim: "2026-10-16T14:15:06Z"
+assignee: "call-gate-credits-map-with-index-as-the-indexed-callback"
 blocked-by: null
 closed-reason: null
 ---

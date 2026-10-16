@@ -1,6 +1,6 @@
 ---
 title: "actionview: converge the asset-tag-helper stringify_keys call-args baseline rows"
-status: ready
+status: in-progress
 updated: 2026-10-16
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8978
+claim: "2026-10-16T14:15:06Z"
+assignee: "call-gate-credits-map-with-index-as-the-indexed-callback"
 blocked-by: null
 closed-reason: null
 ---

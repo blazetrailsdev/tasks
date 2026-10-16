@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: DelegateClass's constructor is typed with no parameters, so TimeZoneConverter carries a pass-through constructor Rails lacks"
-status: claimed
+status: done
 updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: null
+pr: trails#8977
 claim: "2026-10-16T13:49:50Z"
 assignee: "delegate-class-constructor-takes-no-object"
 blocked-by: null

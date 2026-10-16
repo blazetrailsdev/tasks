@@ -1,6 +1,6 @@
 ---
 title: "float-dig-single-ruby-compat-constant"
-status: draft
+status: done
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8977
+claim: "2026-10-16T14:22:10Z"
+assignee: "float-dig-single-ruby-compat-constant"
 blocked-by: null
 closed-reason: null
 ---

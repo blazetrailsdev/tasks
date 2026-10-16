@@ -1,6 +1,6 @@
 ---
 title: "debug-view-debug-params-uses-pp-and-templates-reach-inspect"
-status: ready
+status: claimed
 updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-16T14:44:53Z"
+assignee: "debug-view-debug-params-uses-pp-and-templates-reach-inspect"
 blocked-by: null
 closed-reason: null
 ---
