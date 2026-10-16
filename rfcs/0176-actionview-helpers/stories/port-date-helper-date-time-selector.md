@@ -1,6 +1,6 @@
 ---
 title: "DateHelper: port DateTimeSelector and the select_* helpers"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0176-actionview-helpers"
 cluster: null
