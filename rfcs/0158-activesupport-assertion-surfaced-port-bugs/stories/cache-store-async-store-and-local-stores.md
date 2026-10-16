@@ -22,6 +22,6 @@ Split from `cache-store-async-over-npm-clients`. `packages/activesupport/src/cac
 
 ## Acceptance criteria
 
-- The Store API and its entry hooks return promises. MemoryStore, FileStore (async fs only) and NullStore are converted.
+- The Store API and its entry hooks return promises. MemoryStore, FileStore and NullStore are converted. FileStore's bodies moving onto async fs calls is `file-store-async-fs-bodies`.
 - The activesupport cache tests and behaviors await them, with test names unchanged.
 - Consumers outside activesupport stay compiling: either through `cache-store-async-consumers` landing alongside, or with minimal awaits.
