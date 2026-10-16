@@ -15,6 +15,8 @@ packages:
   - "globalid"
   - "did-you-mean"
 clusters: []
+related-rfcs:
+  - "0192-package-entry-point-boot-cost"
 ---
 
 ## Summary
@@ -162,6 +164,13 @@ arrangement for native drivers (already correct).
 7. `files-field-for-leaf-packages` — −1.33 MB closure
 8. `temporal-polyfill-runtime-native-preference` — 154 KB bundle
 9. `package-size-budget-ci-gate` — ratchet the above
+
+RFC 0192 measures a different unit on the same subject: modules Node resolves
+and executes at boot, unbundled, rather than published or bundled bytes. Its
+`boot-graph-measurement-harness` watches the same class of regression as story
+9 above — a new module-scope import pulling a subsystem onto a hot path — so
+whichever of the two lands second should extend the first rather than stand up
+a second measurement tool.
 
 ## Provenance
 

@@ -30,6 +30,8 @@ packages:
 clusters:
   - "measurement"
   - "findings"
+related-rfcs:
+  - "0100-package-size-and-publish-shape"
 ---
 
 # RFC 0192 — Package entry-point shape and boot cost
@@ -58,6 +60,38 @@ The `packages` list above is broad because the migration touches every
 _consumer_ of the ruby-compat barrel. The packages whose own entry points are
 under examination are only three: `ruby-compat` (the target), plus `actionview`
 and `msgpack` (both measured, both answered no — see Design).
+
+## Relationship to RFC 0100
+
+[RFC 0100](../0100-package-size-and-publish-shape/README.md) covers package
+size and publish shape. It is adjacent and the two must not be conflated,
+because they measure different things:
+
+|         | 0100                                        | this RFC                              |
+| ------- | ------------------------------------------- | ------------------------------------- |
+| Unit    | published MB; bundled KB (esbuild metafile) | modules resolved and executed by Node |
+| Mode    | install-time and bundled                    | runtime, unbundled                    |
+| Subject | activerecord                                | ruby-compat                           |
+
+0100's own measurement records that no test-helper, fixture or canonical-schema
+module is reachable from the public entrypoint — its weight is install-time
+only. This RFC is about the opposite: modules that _are_ executed, every boot,
+unbundled, which is how trails runs in development, in tests and in the CLI.
+
+Two places they touch, and must stay coordinated:
+
+- **The CI gates overlap.** 0100's `package-size-budget-ci-gate` watches for "a
+  new module-scope import pulling a subsystem onto the `base.js` path"; this
+  RFC's `boot-graph-measurement-harness` watches per-package loaded/shipped
+  ratios. Those are the same class of regression caught two ways. Whichever
+  lands second should extend the first rather than stand up a second
+  measurement tool — see Open questions.
+- **`sideEffects` is a shared hazard.** 0100 records that `sideEffects: false`
+  is wrong for this codebase, because much of activerecord _is_ registration
+  side effects. This RFC's premise is narrower — that `ruby-compat`'s barrel
+  specifically is a pure re-export hub — and every migration story is required
+  to stop and report if a consumer's behaviour changes. That requirement exists
+  because of 0100's finding; do not weaken it to `sideEffects: false` anywhere.
 
 ## Motivation
 
@@ -260,11 +294,17 @@ near the 700 est-loc ceiling, so it may need splitting by subdirectory.
 
 ## Open questions
 
-1. **Should the harness gate CI or only report?** A hard gate on a module count
+1. **Should the harness be folded into 0100's `package-size-budget-ci-gate`?**
+   Both watch module-scope import regressions, from different units. Options:
+   one tool reporting both published size and boot-graph ratios; or two tools
+   with a shared collector. Recommendation: whichever story lands second
+   extends the first, and neither is marked done while two separate
+   measurement tools exist.
+2. **Should the harness gate CI or only report?** A hard gate on a module count
    is brittle against legitimate feature growth. **Resolved:** report in CI
    and gate only `ruby-compat`'s loaded count, which should never rise. The
    harness story's AC encodes this.
-2. **Does `msgpack` justify any work at all?** 21 modules over 6 call sites.
+3. **Does `msgpack` justify any work at all?** 21 modules over 6 call sites.
    Recommendation: file it, sequence it last via Phase 3 deps, and accept closing it as not-worth-it.
 
 ## Changelog
@@ -272,3 +312,6 @@ near the 700 est-loc ceiling, so it may need splitting by subdirectory.
 - 2026-10-13: initial RFC
 - 2026-10-14: review fixes — harness gate policy, measured union target,
   binding→SCC map, explicit story deps, `website` consumer, count terminology
+- 2026-10-16: cross-reference RFC 0100 — the two measure different units on
+  overlapping subjects; records the CI-gate overlap and the shared
+  `sideEffects` hazard. 0100 links back.
