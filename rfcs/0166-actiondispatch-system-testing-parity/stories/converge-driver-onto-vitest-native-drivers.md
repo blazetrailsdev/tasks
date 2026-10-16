@@ -1,7 +1,7 @@
 ---
 title: "Converge Driver's four register arms onto Playwright, webdriverio and rack-test"
-status: draft
-updated: 2026-10-15
+status: ready
+updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
 packages: ["actionpack"]

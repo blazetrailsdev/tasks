@@ -1,6 +1,6 @@
 ---
 title: "YAMLTree emits events into a ported Psych::TreeBuilder instead of building nodes directly"
-status: ready
+status: in-progress
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8968
+claim: "2026-10-16T01:45:05Z"
+assignee: "debug-view-extends-action-view-base-and-renders-rescue-templates"
 blocked-by: null
 closed-reason: null
 ---

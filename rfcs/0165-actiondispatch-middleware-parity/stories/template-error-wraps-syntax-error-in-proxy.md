@@ -1,6 +1,6 @@
 ---
 title: "template-error-wraps-syntax-error-in-proxy"
-status: claimed
+status: done
 updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8966
 claim: "2026-10-16T00:52:08Z"
 assignee: "debug-view-extends-action-view-base-and-renders-rescue-templates"
 blocked-by: null

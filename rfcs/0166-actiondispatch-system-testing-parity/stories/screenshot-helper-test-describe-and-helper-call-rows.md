@@ -1,7 +1,7 @@
 ---
 title: "Converge ScreenshotHelper and SetupAndTeardown onto the Vitest lifecycle; re-describe screenshot_helper_test.rb"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
 packages: ["actionpack"]

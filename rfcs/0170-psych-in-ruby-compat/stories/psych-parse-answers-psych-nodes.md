@@ -1,6 +1,6 @@
 ---
 title: "Psych.parse answers Psych::Nodes and ToRuby visits them (Node#to_ruby, #each, predicates)"
-status: ready
+status: in-progress
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8967
+claim: "2026-10-16T01:14:50Z"
+assignee: "index-with-yields-plain-object-for-string-keys"
 blocked-by: null
 closed-reason: null
 ---

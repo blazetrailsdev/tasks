@@ -1,7 +1,7 @@
 ---
 title: "A system Vitest project, a browser CI lane and the generated application system test case"
-status: draft
-updated: 2026-10-15
+status: ready
+updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
 packages: ["actionpack", "trailties"]

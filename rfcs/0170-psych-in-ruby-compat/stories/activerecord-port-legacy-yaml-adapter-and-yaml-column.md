@@ -1,6 +1,6 @@
 ---
 title: "activerecord: un-exclude legacy_yaml_adapter.rb and coders/yaml_column.rb once Psych lands"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: excluded-files

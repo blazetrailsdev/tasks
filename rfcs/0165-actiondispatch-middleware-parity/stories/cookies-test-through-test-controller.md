@@ -1,6 +1,6 @@
 ---
 title: "cookies-test-through-test-controller"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null

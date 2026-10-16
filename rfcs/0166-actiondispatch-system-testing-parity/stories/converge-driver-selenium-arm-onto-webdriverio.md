@@ -1,7 +1,7 @@
 ---
 title: "Port Driver's :selenium arm onto webdriverio (deferred: Playwright first)"
-status: draft
-updated: 2026-10-15
+status: closed
+updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
 packages: ["actionpack"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "don't want selenium now."
 ---
 
 ## Context

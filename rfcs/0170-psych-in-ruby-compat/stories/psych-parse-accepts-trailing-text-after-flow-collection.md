@@ -1,6 +1,6 @@
 ---
 title: "Psych.parse accepts trailing text after a flow collection as libyaml does"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
