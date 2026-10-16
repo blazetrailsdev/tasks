@@ -1,5 +1,5 @@
 ---
-title: "Triage the ~88 ruby-compat exports with no importer outside ruby-compat"
+title: "Triage the ruby-compat exports with no external importer, and the single-importer exports no inline story covers"
 status: draft
 updated: 2026-10-16
 rfc: "0000-ruby-compat-native-first"
@@ -23,5 +23,6 @@ and some are dead.
 
 ## Acceptance criteria
 
+- [ ] The audit also found 62 exports with exactly one importing file. 24 are covered by the three `inline-single-use-*` stories. The remaining ~38 are classified here too, as kept (object-model state, adapter seam, `keepIf`), inline (file a story), or type/value-only.
 - [ ] A table of each export, classified as internal-only (make it unexported), dead (delete) or test-only, in the PR body or a follow-up story per bucket.
 - [ ] Deletion stories are filed under this RFC. No code changes in this story.

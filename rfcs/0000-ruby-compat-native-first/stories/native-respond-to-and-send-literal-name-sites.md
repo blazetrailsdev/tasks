@@ -27,6 +27,7 @@ call gate does not score `send` or `respond_to?` (`lint-calls.ts:200-204`,
 ## Acceptance criteria
 
 - [ ] An inventory of literal-name sites, each classified as switch or keep, in the PR body.
-- [ ] Sites follow the RFC's Visibility dispatch table. A computed setter on a plain receiver is `recv[attr] = v`, which keeps `AttributeAssignment`'s `UnknownAttributeError` check as a native setter probe.
+- [ ] Sites follow the RFC's Visibility dispatch table.
+- [ ] `ActiveModel::AttributeAssignment#_assign_attribute` (`packages/activemodel/src/attribute-assignment.ts:66-69`) writes `this[attr] = v` behind a native setter probe, keeping the `UnknownAttributeError` arm. A plain-node dist bench shows under 100 ns per assigned attribute, with the numbers in the PR body.
 - [ ] Switched sites use the native form. Computed names, core-value receivers and `method_missing` receivers keep the helper.
 - [ ] The sites `converge-four-divergent-public-send-ports` converged keep their helper calls.

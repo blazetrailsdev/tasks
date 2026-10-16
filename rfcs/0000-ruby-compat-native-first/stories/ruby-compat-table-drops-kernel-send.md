@@ -27,4 +27,4 @@ today, and it would start demanding `rbFSend` if `send` were ever scored.
 ## Acceptance criteria
 
 - [ ] The row is removed, or moved to a forward-credit-only list with a comment citing `compare.ts:419-428`.
-- [ ] `pnpm parity:api:calls` and `pnpm parity:api:ruby-compat` (or whatever the gate's script is named) stay green.
+- [ ] `pnpm parity:api:calls` and `pnpm parity:api:calls:ruby-compat` (`scripts/api-compare/lint-ruby-compat-calls.ts`) stay green.

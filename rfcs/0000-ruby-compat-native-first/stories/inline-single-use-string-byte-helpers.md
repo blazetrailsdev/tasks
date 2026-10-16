@@ -29,4 +29,4 @@ Each of these helpers has one importing file:
 
 - [ ] Each caller gets the subset it uses, natively where JS has a form (`padStart`, `trimEnd`, `^`, `indexOf`).
 - [ ] Each export is deleted, unless a ruby-compat internal still uses it (then it stays unexported).
-- [ ] Before `rstrip` goes native, the PR checks whether `rstrip`'s NUL-stripping arm is reached.
+- [ ] `rstrip`'s NUL-stripping arm is either kept inline at the explain-pretty-printer site, with a test reaching it, or shown unreachable from that caller's input (PostgreSQL EXPLAIN text) and replaced by `trimEnd()`.

@@ -7,6 +7,7 @@ cluster: dispatch-cost
 packages: []
 deps:
   [
+    converge-four-divergent-public-send-ports,
     compare-drops-include-private-only-arms,
     compare-visibility-reflection-calls-are-permanent-skips,
     call-args-drops-visibility-boolean-argument,
@@ -36,7 +37,7 @@ The repo owner ruled (2026-10-16) that the dead arms are removed with a receipt 
 ## Acceptance criteria
 
 - [ ] `rbFPublicSend` is deleted. Each call becomes `rbFSend`, or the native form where `native-respond-to-and-send-literal-name-sites` would switch it anyway.
-- [ ] `rbObjPrivateMethods`, `rbObjProtectedMethods`, `rbObjPublicMethods` and `rbModPublicMethodDefined` are deleted. Their callers use `rbObjMethods` / method-defined.
+- [ ] `rbObjPrivateMethods`, `rbObjProtectedMethods`, `rbObjPublicMethods` and `rbModPublicMethodDefined` are deleted. `rbObjMethods` survives. `trailties/src/thor/command.ts` keeps Rails' call structure over one `rbObjMethods` call, and the Thor command tests pass. This story is the sole owner of `command.ts` in this RFC.
 - [ ] `rbObjRespondTo(obj, mid)` and `basicObjRespondTo(obj, mid)` drop the visibility parameter.
 - [ ] A Rails override keeps its Rails parameter list (`isRespondTo(name, includePrivate = false)`, `respondToMissing(name, includePrivate)`) so `parity:api:params` stays green. The parameter is not read.
 - [ ] Every arm whose only difference is `include_private` is removed. `compare-drops-include-private-only-arms` makes the gates accept the removal. A site that detector cannot prove carries `@missingRailsCall <call> — PERMANENT` against CLAUDE.md § "Method visibility is compile-time only".
@@ -45,5 +46,8 @@ The repo owner ruled (2026-10-16) that the dead arms are removed with a receipt 
 
 ## Notes
 
-`converge-four-divergent-public-send-ports` (RFC 0189) still stands. Its
-sites keep dynamic dispatch and spell it `rbFSend`.
+`converge-four-divergent-public-send-ports` (RFC 0189) lands first (a `deps`
+edge) and converges its four ports onto `rbFPublicSend`. This story then
+rewrites those call sites to `rbFSend` along with the other 62 calls. This
+story also owns the CLAUDE.md § "Method visibility is compile-time only"
+edit, and `native-first-policy-docs` does not touch that section.

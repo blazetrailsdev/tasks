@@ -1,5 +1,5 @@
 ---
-title: "Compare: public_send / private_methods / protected_methods / public_method_defined? are one ratified group, credited by rbFSend / rbObjMethods / method-defined"
+title: "Compare: public_send / private_methods / protected_methods / public_method_defined? are one permanent SKIP_GROUPS entry"
 status: draft
 updated: 2026-10-16
 rfc: "0000-ruby-compat-native-first"
