@@ -5,7 +5,7 @@ updated: 2026-10-16
 rfc: "0000-ruby-compat-native-first"
 cluster: substitution
 packages: []
-deps: [basic-obj-respond-to-instance-fast-path]
+deps: [basic-obj-respond-to-instance-fast-path, collapse-visibility-variants-of-send-and-respond-to]
 deps-rfc: []
 est-loc: 200
 priority: null
@@ -27,5 +27,6 @@ call gate does not score `send` or `respond_to?` (`lint-calls.ts:200-204`,
 ## Acceptance criteria
 
 - [ ] An inventory of literal-name sites, each classified as switch or keep, in the PR body.
+- [ ] Sites follow the RFC's Visibility dispatch table. A computed setter on a plain receiver is `recv[attr] = v`, which keeps `AttributeAssignment`'s `UnknownAttributeError` check as a native setter probe.
 - [ ] Switched sites use the native form. Computed names, core-value receivers and `method_missing` receivers keep the helper.
 - [ ] The sites `converge-four-divergent-public-send-ports` converged keep their helper calls.

@@ -28,6 +28,7 @@ in 143 files.
 
 - [ ] A receiver that is not a string, array, number, bigint, Map, Set, Date, temporal or plain hash skips straight to the descriptor walk.
 - [ ] Every probe keeps its MRI order for the receivers it can match, pinned by a test per probe.
+- [ ] Whether a prototype chain defines `respondToMissing` / `isRespondTo` is cached per prototype in a `WeakMap`, so the fast path pays no chain walk after the first call.
 - [ ] A dist bench shows a class-instance hit under 80 ns, with the numbers in the PR body.
 
 ## Notes

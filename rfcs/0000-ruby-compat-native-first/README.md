@@ -118,6 +118,36 @@ Kept on purpose, with no substitution story:
   match.
 - Widen the existing `rb-f-send-cost-on-arel-visit-hot-path` to cover the
   `sendInternal` preamble.
+- Cache, per prototype (a `WeakMap`), whether the receiver's chain defines
+  `respondToMissing` / `isRespondTo`. A plain class instance without either
+  answers by direct property lookup before any core-receiver probe.
+
+### Visibility: one send, one respond-to
+
+Trails has no runtime privates (CLAUDE.md § "Method visibility is
+compile-time only"). The visibility variants therefore collapse:
+
+- `rbFPublicSend` is deleted in favor of `rbFSend`, whose body it already
+  shares.
+- `rbObjPrivateMethods` / `rbObjProtectedMethods` / `rbObjPublicMethods` /
+  `rbModPublicMethodDefined` are deleted in favor of `rbObjMethods` /
+  method-defined.
+- `rbObjRespondTo` / `basicObjRespondTo` lose the visibility flag.
+
+A Rails override keeps its Rails parameter list and does not read
+`include_private`. **Removal path (owner ruling, 2026-10-16):** an arm whose
+only difference is `include_private` (`!include_private && super(name, true)`)
+is removed. The declaration carries
+`@missingRailsCall <call> — PERMANENT` against that CLAUDE.md section. The
+arm is not kept as dead Rails-shaped code.
+
+Dispatch then follows one rule:
+
+| Receiver                                                                   | Form                                                        |
+| -------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| trails class, no `respondToMissing` / `isRespondTo` in chain, literal name | `recv.m(...)`, `recv.x = v`, `typeof recv.m === "function"` |
+| same, computed name                                                        | `recv[name](...)`, `recv[attr] = v`                         |
+| core value, CLAUDE.md Proxy row, or a `respondToMissing` definer           | `rbFSend` / `rbObjRespondTo`                                |
 
 ### Phase 2: gate
 
@@ -163,7 +193,8 @@ the candidates is a credited name.
 ## Rollout
 
 1. Phase 1: `writer-spelling-camelize-memo`,
-   `basic-obj-respond-to-instance-fast-path`, plus the existing
+   `basic-obj-respond-to-instance-fast-path`,
+   `collapse-visibility-variants-of-send-and-respond-to`, plus the existing
    `rb-f-send-cost-on-arel-visit-hot-path`.
 2. Phase 2: `call-gate-credits-empty-size-on-proven-string-and-hash`,
    `native-form-analogue-for-two-arg-hash-fetch`,
@@ -204,3 +235,4 @@ the candidates is a credited name.
 ## Changelog
 
 - 2026-10-16: initial RFC, from the ruby-compat native audit.
+- 2026-10-16: visibility collapse; owner chose the removal path for `include_private` arms.
