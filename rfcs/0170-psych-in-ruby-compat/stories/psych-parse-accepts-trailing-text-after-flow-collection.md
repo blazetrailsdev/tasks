@@ -1,7 +1,7 @@
 ---
 title: "Psych.parse accepts trailing text after a flow collection as libyaml does"
-status: draft
-updated: 2026-10-15
+status: in-progress
+updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8964
+claim: "2026-10-16T00:45:26Z"
+assignee: "activerecord-port-legacy-yaml-adapter-and-yaml-column"
 blocked-by: null
 closed-reason: null
 ---

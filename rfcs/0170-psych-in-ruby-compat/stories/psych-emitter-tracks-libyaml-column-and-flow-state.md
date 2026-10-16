@@ -1,6 +1,6 @@
 ---
 title: "psych-emitter-tracks-libyaml-column-and-flow-state"
-status: draft
+status: closed
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicate of psych-emitter-owns-libyaml-scalar-analysis, which stays open with the same acceptance criteria"
 ---
 
 ## Context

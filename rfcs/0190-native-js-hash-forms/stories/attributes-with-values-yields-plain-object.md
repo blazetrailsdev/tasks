@@ -1,7 +1,7 @@
 ---
 title: "attributes-with-values-yields-plain-object"
-status: ready
-updated: 2026-10-15
+status: done
+updated: 2026-10-16
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8963
+claim: "2026-10-16T00:14:50Z"
+assignee: "attributes-with-values-yields-plain-object"
 blocked-by: null
 closed-reason: null
 ---

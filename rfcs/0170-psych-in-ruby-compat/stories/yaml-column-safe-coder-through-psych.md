@@ -1,7 +1,7 @@
 ---
 title: "Converge YAMLColumn::SafeCoder onto YAML.dump / safe_dump / unsafe_load / safe_load"
-status: in-progress
-updated: 2026-10-15
+status: done
+updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: fidelity
 packages: ["activerecord"]

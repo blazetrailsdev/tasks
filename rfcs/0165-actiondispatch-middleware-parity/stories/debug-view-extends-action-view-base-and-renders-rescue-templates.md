@@ -1,7 +1,7 @@
 ---
 title: "debug-view-extends-action-view-base-and-renders-rescue-templates"
 status: ready
-updated: 2026-10-15
+updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: []

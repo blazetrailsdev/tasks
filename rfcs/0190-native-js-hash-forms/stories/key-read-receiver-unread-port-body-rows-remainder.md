@@ -1,7 +1,7 @@
 ---
 title: "key-read-receiver-unread-port-body-rows-remainder"
-status: in-progress
-updated: 2026-10-15
+status: done
+updated: 2026-10-16
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []

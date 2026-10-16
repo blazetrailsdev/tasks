@@ -1,7 +1,7 @@
 ---
 title: "YAMLTree#tree answers Psych's node tree and Node#yaml emits it through a ported Visitors::Emitter"
-status: in-progress
-updated: 2026-10-15
+status: done
+updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
 packages: []

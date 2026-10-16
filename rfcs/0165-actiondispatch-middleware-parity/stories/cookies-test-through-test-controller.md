@@ -1,7 +1,7 @@
 ---
 title: "cookies-test-through-test-controller"
-status: ready
-updated: 2026-10-15
+status: in-progress
+updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8965
+claim: "2026-10-16T00:44:50Z"
+assignee: "cookies-test-through-test-controller"
 blocked-by: null
 closed-reason: null
 ---

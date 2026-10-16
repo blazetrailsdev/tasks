@@ -1,7 +1,7 @@
 ---
 title: "libyaml scalar analysis (simple keys, flow, column) moves into the ported Psych emitter"
-status: draft
-updated: 2026-10-15
+status: ready
+updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
 packages: []

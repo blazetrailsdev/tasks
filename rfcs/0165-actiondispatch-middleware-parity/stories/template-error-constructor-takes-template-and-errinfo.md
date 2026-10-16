@@ -1,7 +1,7 @@
 ---
 title: "template-error-constructor-takes-template-and-errinfo"
-status: draft
-updated: 2026-10-15
+status: claimed
+updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-16T00:52:08Z"
+assignee: "debug-view-extends-action-view-base-and-renders-rescue-templates"
 blocked-by: null
 closed-reason: null
 ---

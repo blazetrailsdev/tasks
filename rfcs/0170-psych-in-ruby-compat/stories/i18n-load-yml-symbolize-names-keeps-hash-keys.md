@@ -1,7 +1,7 @@
 ---
 title: "i18n-load-yml-symbolize-names-keeps-hash-keys"
-status: draft
-updated: 2026-10-15
+status: ready
+updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
 packages: []

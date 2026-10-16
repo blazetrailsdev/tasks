@@ -1,7 +1,7 @@
 ---
 title: "Port the remaining form_tag tests (enforce_utf8, block in ERB)"
-status: claimed
-updated: 2026-10-15
+status: done
+updated: 2026-10-16
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 6
-pr: null
+pr: trails#8962
 claim: "2026-10-15T23:54:17Z"
 assignee: "port-form-helper-file-field-check-box-radio-button"
 blocked-by: null

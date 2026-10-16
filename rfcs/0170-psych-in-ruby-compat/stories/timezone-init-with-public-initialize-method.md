@@ -1,7 +1,7 @@
 ---
 title: "TimeZone/TimeWithZone init_with go through an invented public initialize method"
-status: in-progress
-updated: 2026-10-15
+status: done
+updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
 packages: []

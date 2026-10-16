@@ -1,7 +1,7 @@
 ---
 title: "parity: resolveOwner pairs Integration::Session#initialize with the IntegrationTest constructor"
-status: claimed
-updated: 2026-10-15
+status: done
+updated: 2026-10-16
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8961
 claim: "2026-10-15T23:14:49Z"
 assignee: "resolve-owner-pairs-session-initialize-with-integration-test"
 blocked-by: null

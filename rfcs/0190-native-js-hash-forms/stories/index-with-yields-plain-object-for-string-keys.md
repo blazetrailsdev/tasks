@@ -1,6 +1,6 @@
 ---
 title: "indexWith yields a plain object for String elements; drop Object.fromEntries copies"
-status: draft
+status: ready
 updated: 2026-10-16
 rfc: "0190-native-js-hash-forms"
 cluster: null

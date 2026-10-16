@@ -1,6 +1,6 @@
 ---
 title: "TimeZone/TimeWithZone init_with copies a constructed instance onto the receiver (Object.assign)"
-status: draft
+status: ready
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null

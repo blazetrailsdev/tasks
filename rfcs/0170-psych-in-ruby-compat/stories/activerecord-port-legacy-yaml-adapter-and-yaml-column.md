@@ -1,7 +1,7 @@
 ---
 title: "activerecord: un-exclude legacy_yaml_adapter.rb and coders/yaml_column.rb once Psych lands"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: excluded-files
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["yaml-column-safe-coder-through-psych", "active-record-legacy-yaml-load-t
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8964
+claim: "2026-10-16T00:45:26Z"
+assignee: "activerecord-port-legacy-yaml-adapter-and-yaml-column"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "update_columns builds {} as Rails does; _update_record's transform_keys keeps Arel-attribute keys"
-status: in-progress
-updated: 2026-10-15
+status: done
+updated: 2026-10-16
 rfc: "0190-native-js-hash-forms"
 cluster: null
 packages: []

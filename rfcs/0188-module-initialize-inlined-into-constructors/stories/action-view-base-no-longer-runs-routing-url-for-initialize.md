@@ -1,7 +1,7 @@
 ---
 title: "ActionView::Base no longer runs Routing::UrlFor#initialize when RoutingUrlFor includes it at boot"
-status: in-progress
-updated: 2026-10-15
+status: done
+updated: 2026-10-16
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []
