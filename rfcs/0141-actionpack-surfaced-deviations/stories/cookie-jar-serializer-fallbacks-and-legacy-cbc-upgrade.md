@@ -2,7 +2,7 @@
 title: "cookie-jar-serializer-fallbacks-and-legacy-cbc-upgrade"
 status: ready
 updated: 2026-10-15
-rfc: "0165-actiondispatch-middleware-parity"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps:
