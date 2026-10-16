@@ -2,7 +2,7 @@
 title: "The system-tests lane runs a real browser system test"
 status: draft
 updated: 2026-10-16
-rfc: "0166-actiondispatch-system-testing-parity"
+rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []
 deps: []
