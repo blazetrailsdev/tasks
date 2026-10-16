@@ -18,13 +18,11 @@ closed-reason: null
 
 ## Context
 
-Split from `cache-store-async-over-npm-clients`. Once `cache-store-async-store-and-local-stores` makes the Store async, these synchronous consumers each need a deliberate answer (compare CLAUDE.md § "Serialization's dual sync/async hash"):
+Split from `cache-store-async-over-npm-clients`. `cache-store-async-store-and-local-stores` made the Store async and converted every consumer that has an async caller: the controller fragment API (`actionpack/src/abstract-controller/caching/fragments.ts`, `caching.ts#cache`), collection caching (`actionview/src/renderer/partial-renderer/collection-caching.ts`), the session `CacheStore` (prewarmed in `prepareSession`), and the view `cache` / `cacheIf` / `cacheUnless` helper chain (`actionview/src/helpers/cache-helper.ts`), which now returns a promise. One consumer is left.
 
-- `actionview/src/helpers/cache-helper.ts:45-62`: the view `cache` helper `safeConcat`s `fragmentFor(...)` synchronously, via `readFragment` -> `cacheStore.read` (`actionpack/src/abstract-controller/caching/fragments.ts:85-118`).
-- `actionview/src/renderer/partial-renderer/collection-caching.ts:72`: `collectionCache().readMulti(...)`.
-- `actionpack/src/action-dispatch/middleware/session/cache-store.ts:58-80`: session read/write/delete.
-- `actionpack/src/action-controller/metal/rate-limiting.ts:147` already awaits `increment`.
+A non-streaming template compiles to a synchronous function (`actionview/src/template.ts:408`, `Object.assign(function ...)`; only the `_streaming` variant is `async`). So `<%= context.cache("foo", {}, () => { %>bar<% }) %>` concatenates an unresolved promise, and the fragment's read and write land after the template returns. Rails' `cache` helper (`actionview/lib/action_view/helpers/cache_helper.rb:174-187`) is synchronous in an ERB body. The seven `ACLogSubscriberTest` "with fragment cache ..." tests (`actionpack/src/action-controller/controller/log-subscriber.test.ts`) are parked as `it.skip` under `// BLOCKED: cache-store-async-consumers`. The same wall stops session accessors from going async: `formAuthenticityToken` and `request.flash` read the session from inside a template.
 
 ## Acceptance criteria
 
-- Each consumer above is converted to await the Store, or its sync path is explicitly decided and recorded.
+- A template can await a helper. Either templates compile to `async` functions and the output buffer accepts awaited concatenation, or the view `cache` helper gets an explicitly decided shape that renders inside a sync template.
+- The seven parked `ACLogSubscriberTest` fragment-cache tests run green.
