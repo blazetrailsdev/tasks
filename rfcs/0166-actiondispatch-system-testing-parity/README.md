@@ -1,9 +1,9 @@
 ---
 rfc: "0166-actiondispatch-system-testing-parity"
 title: "ActionDispatch system testing — SystemTestCase, Driver, Browser and Server, native to Vite and Vitest"
-status: draft
+status: active
 created: 2026-09-27
-updated: 2026-10-15
+updated: 2026-10-16
 owner: "@deanmarano"
 packages:
   - "actionpack"
