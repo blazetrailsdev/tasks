@@ -2,7 +2,7 @@
 title: "Port mem_cache_store_test.rb once MemCacheStore descends from Rack::Session::Dalli"
 status: blocked
 updated: 2026-10-15
-rfc: "0165-actiondispatch-middleware-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["actionpack"]
 deps:
