@@ -1,6 +1,6 @@
 ---
 title: "libyaml scalar analysis (simple keys, flow, column) moves into the ported Psych emitter"
-status: claimed
+status: in-progress
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8970
 claim: "2026-10-16T03:44:51Z"
 assignee: "psych-emitter-owns-libyaml-scalar-analysis"
 blocked-by: null
