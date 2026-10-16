@@ -1,6 +1,6 @@
 ---
 title: "attributes-with-values-yields-plain-object"
-status: draft
+status: ready
 updated: 2026-10-15
 rfc: "0190-native-js-hash-forms"
 cluster: null

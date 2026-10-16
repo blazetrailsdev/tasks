@@ -1,6 +1,6 @@
 ---
 title: "middleware-tests-use-integration-build-app"
-status: claimed
+status: done
 updated: 2026-10-15
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8960
 claim: "2026-10-15T22:14:25Z"
 assignee: "cookies-test-through-test-controller"
 blocked-by: null

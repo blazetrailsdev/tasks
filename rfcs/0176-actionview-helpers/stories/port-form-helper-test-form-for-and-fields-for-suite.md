@@ -1,6 +1,6 @@
 ---
 title: "Port the form_for / fields_for / fields tests of form_helper_test.rb"
-status: in-progress
+status: done
 updated: 2026-10-15
 rfc: "0176-actionview-helpers"
 cluster: null
