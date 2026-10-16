@@ -1,6 +1,6 @@
 ---
 title: "rack-builder-map-stores-block-generate-map-builds-per-entry"
-status: draft
+status: ready
 updated: 2026-10-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Minitest::Test#metadata; screenshot_helper_test uses a real DrivenBySeleniumWithChrome host"
-status: draft
+status: ready
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
