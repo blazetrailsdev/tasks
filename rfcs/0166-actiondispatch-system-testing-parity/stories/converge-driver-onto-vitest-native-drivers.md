@@ -1,6 +1,6 @@
 ---
 title: "Converge Driver's four register arms onto Playwright, webdriverio and rack-test"
-status: ready
+status: in-progress
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["port-system-testing-browser-onto-playwright-launch-options"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8975
+claim: "2026-10-16T13:44:58Z"
+assignee: "converge-driver-onto-vitest-native-drivers"
 blocked-by: null
 closed-reason: null
 ---

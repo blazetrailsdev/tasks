@@ -1,6 +1,6 @@
 ---
 title: "port-form-field-tag-and-checkable-remaining-tests"
-status: draft
+status: ready
 updated: 2026-10-16
 rfc: "0176-actionview-helpers"
 cluster: null

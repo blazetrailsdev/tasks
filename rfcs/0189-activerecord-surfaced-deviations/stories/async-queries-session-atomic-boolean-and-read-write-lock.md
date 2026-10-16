@@ -1,6 +1,6 @@
 ---
 title: "activerecord: AsynchronousQueriesTracker::Session holds an AtomicBoolean and a ReadWriteLock, and finalize(wait) waits for readers"
-status: draft
+status: in-progress
 updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#8976
+claim: "2026-10-16T13:44:52Z"
+assignee: "async-queries-session-atomic-boolean-and-read-write-lock"
 blocked-by: null
 closed-reason: null
 ---

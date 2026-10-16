@@ -1,7 +1,7 @@
 ---
 title: "port-form-helper-test-form-for-and-fields-for-suite-remainder"
-status: draft
-updated: 2026-10-15
+status: ready
+updated: 2026-10-16
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []

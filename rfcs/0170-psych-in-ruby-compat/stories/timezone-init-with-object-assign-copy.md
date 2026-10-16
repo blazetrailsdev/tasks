@@ -1,6 +1,6 @@
 ---
 title: "TimeZone/TimeWithZone init_with copies a constructed instance onto the receiver (Object.assign)"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: trails#8971
+pr: trails#8973
 claim: "2026-10-16T10:14:52Z"
 assignee: "timezone-init-with-object-assign-copy"
 blocked-by: null

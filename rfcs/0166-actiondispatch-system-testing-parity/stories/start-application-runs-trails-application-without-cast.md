@@ -1,6 +1,6 @@
 ---
 title: "startApplication runs Trails.application with no cast (structural call on the TopLevel seat)"
-status: draft
+status: claimed
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-16T13:49:50Z"
+assignee: "delegate-class-constructor-takes-no-object"
 blocked-by: null
 closed-reason: null
 ---

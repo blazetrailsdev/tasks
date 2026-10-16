@@ -1,6 +1,6 @@
 ---
 title: "activemodel/activerecord: NumericalityValidator#validateEach takes precision and scale positionally where Rails takes keyword arguments"
-status: draft
+status: claimed
 updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: [activemodel, activerecord]
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-16T13:49:50Z"
+assignee: "delegate-class-constructor-takes-no-object"
 blocked-by: null
 closed-reason: null
 ---

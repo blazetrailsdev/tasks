@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the pool's query-cache version is a Concurrent::AtomicFixnum, not { value: number }"
-status: draft
+status: ready
 updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps:
   - ruby-compat-concurrent-timer-task-and-atomic-fixnum
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

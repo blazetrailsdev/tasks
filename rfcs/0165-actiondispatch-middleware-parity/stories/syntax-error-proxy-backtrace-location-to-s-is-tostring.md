@@ -1,6 +1,6 @@
 ---
 title: "SyntaxErrorProxy::BacktraceLocation answers its to_s member through toString"
-status: ready
+status: claimed
 updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-16T13:49:50Z"
+assignee: "delegate-class-constructor-takes-no-object"
 blocked-by: null
 closed-reason: null
 ---

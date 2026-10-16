@@ -1,6 +1,6 @@
 ---
 title: "debug-view-debug-params-uses-pp-and-templates-reach-inspect"
-status: draft
+status: ready
 updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null

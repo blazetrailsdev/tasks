@@ -1,6 +1,6 @@
 ---
 title: "Psych emitter writes the %YAML version directive for header:/version:"
-status: draft
+status: in-progress
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8974
+claim: "2026-10-16T13:14:55Z"
+assignee: "messages-marshal-with-fallback-uses-real-marshal"
 blocked-by: null
 closed-reason: null
 ---

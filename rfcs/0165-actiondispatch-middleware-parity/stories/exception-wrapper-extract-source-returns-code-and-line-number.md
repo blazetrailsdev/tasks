@@ -1,6 +1,6 @@
 ---
 title: "exception-wrapper-extract-source-returns-code-and-line-number"
-status: draft
+status: ready
 updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
