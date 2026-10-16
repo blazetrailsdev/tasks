@@ -1,6 +1,6 @@
 ---
 title: "Converge Server, start_application and served_by onto an in-process Vite dev server"
-status: ready
+status: in-progress
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["ratify-vitest-native-system-testing-section"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8969
+claim: "2026-10-16T02:44:53Z"
+assignee: "debug-view-extends-action-view-base-and-renders-rescue-templates"
 blocked-by: null
 closed-reason: null
 ---
