@@ -26,7 +26,7 @@ A filler half that reads or writes through to the next object in the chain fixes
 
 The same split happens in the other direction across two included modules.
 `ActiveJob::QueuePriority` defines the reader `def priority` (it `instance_exec`s a
-stored Proc, `vendor/rails/v8.0.2/activejob/lib/active_job/queue_priority.rb:53-59`) and
+stored Proc, `vendor/rails/v8.0.2/activejob/lib/active_job/queue_priority.rb:53-58`) and
 `ActiveJob::Core` defines the writer `attr_writer :priority`
 (`vendor/rails/v8.0.2/activejob/lib/active_job/core.rb:25`); `Base` includes both.
 ruby-compat's `include` gives each module its own link in the prototype chain
