@@ -1,6 +1,6 @@
 ---
 title: "Psych::Coder style/implicit/scalar/object; emit_coder ports all four arms"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null

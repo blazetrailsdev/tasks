@@ -1,6 +1,6 @@
 ---
 title: "Port dispatch/system_testing/driver_test.rb"
-status: ready
+status: in-progress
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["converge-driver-onto-vitest-native-drivers"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8980
+claim: "2026-10-16T15:14:52Z"
+assignee: "exception-wrapper-extract-source-returns-code-and-line-number"
 blocked-by: null
 closed-reason: null
 ---

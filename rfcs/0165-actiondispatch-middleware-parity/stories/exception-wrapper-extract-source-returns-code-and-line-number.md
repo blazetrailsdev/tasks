@@ -1,6 +1,6 @@
 ---
 title: "exception-wrapper-extract-source-returns-code-and-line-number"
-status: ready
+status: in-progress
 updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8980
+claim: "2026-10-16T15:14:52Z"
+assignee: "exception-wrapper-extract-source-returns-code-and-line-number"
 blocked-by: null
 closed-reason: null
 ---

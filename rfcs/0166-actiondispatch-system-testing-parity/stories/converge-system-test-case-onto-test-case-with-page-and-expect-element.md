@@ -1,6 +1,6 @@
 ---
 title: "SystemTestCase < ActiveSupport::TestCase with a Vitest page fixture and expect.element"
-status: claimed
+status: in-progress
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#8979
 claim: "2026-10-16T14:44:53Z"
 assignee: "debug-view-debug-params-uses-pp-and-templates-reach-inspect"
 blocked-by: null

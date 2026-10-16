@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: uniq takes no block, so Rails' uniq(&:__id__) sites hand-roll identity de-duplication"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

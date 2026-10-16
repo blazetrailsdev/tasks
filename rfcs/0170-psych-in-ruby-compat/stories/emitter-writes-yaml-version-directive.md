@@ -1,6 +1,6 @@
 ---
 title: "Psych emitter writes the %YAML version directive for header:/version:"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null

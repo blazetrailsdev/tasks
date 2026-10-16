@@ -1,6 +1,6 @@
 ---
 title: "Psych emitter writes an empty-collection or alias key simple, as libyaml does"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null

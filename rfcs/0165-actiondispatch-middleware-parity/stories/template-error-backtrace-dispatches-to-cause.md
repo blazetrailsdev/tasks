@@ -1,6 +1,6 @@
 ---
 title: "template-error-backtrace-dispatches-to-cause"
-status: ready
+status: in-progress
 updated: 2026-10-16
 rfc: "0165-actiondispatch-middleware-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8981
+claim: "2026-10-16T15:44:52Z"
+assignee: "template-error-backtrace-dispatches-to-cause"
 blocked-by: null
 closed-reason: null
 ---
