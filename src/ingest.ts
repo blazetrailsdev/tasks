@@ -8,6 +8,9 @@
  *   DB owns        status, pr, claim, assignee, blocked-by, closed-reason,
  *                  updated, priority           (written by the mutation verbs)
  *
+ * An RFC README is the other way round — its frontmatter is markdown-owned
+ * (status included) EXCEPT `priority`, which `tasks rfc-priority` owns.
+ *
  * The sets are DISJOINT, so ingest and export are two independent one-way
  * projections and cannot conflict. Every rule below exists to preserve that.
  *
@@ -468,7 +471,6 @@ async function ingestRfc(tasksDir: string, rel: string, rfcId: string): Promise<
   const fields = {
     title: str(fm.title),
     owner: str(fm.owner),
-    priority: int(fm.priority),
     superseded_by: str(fm["superseded-by"]),
     packages: JSON.stringify(fm.packages ?? []),
     clusters: JSON.stringify(fm.clusters ?? []),
@@ -500,6 +502,10 @@ async function ingestRfc(tasksDir: string, rel: string, rfcId: string): Promise<
       id: rfcId,
       ...fields,
       status: str(fm.status) ?? "draft",
+      // RFC priority is DB-owned (`tasks rfc-priority`), like a story's: the
+      // README's `priority:` seeds the row on insert and is ignored after, so
+      // an UPDATE above never reverts a priority set through the verb.
+      priority: int(fm.priority),
     });
   }
 }

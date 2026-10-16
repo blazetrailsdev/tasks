@@ -24,7 +24,7 @@
  * affected-row count IS the race resolution.
  */
 import { Base } from "@blazetrails/activerecord";
-import { Event, Story, STORY_STATUSES, type StoryStatus } from "./models/index.js";
+import { Event, Rfc, Story, STORY_STATUSES, type StoryStatus } from "./models/index.js";
 import { VerbExit } from "./db.js";
 
 /** ISO seconds, matching the `claim:` format the old CLI wrote. */
@@ -367,5 +367,35 @@ export async function setPriority(id: string, priority: number | null): Promise<
       detail: { arg: priority === null ? "(clear)" : String(priority) },
     });
     console.log(`priority ${priority === null ? "(clear)" : priority}: ${id}`);
+  });
+}
+
+/**
+ * An RFC's priority, which every story without its own inherits in the ready
+ * queue. DB-owned like a story's: this writes the row, and export carries it
+ * back out to the README. Editing the README's `priority:` does nothing once
+ * the RFC exists.
+ */
+export async function setRfcPriority(id: string, priority: number | null): Promise<void> {
+  if (priority !== null && (!Number.isInteger(priority) || priority < 0)) {
+    console.error(`error: priority must be a non-negative integer or "clear"`);
+    throw new VerbExit(1);
+  }
+  await Base.transaction(async () => {
+    if (!(await Rfc.findBy({ id }))) {
+      console.error(`error: no such RFC "${id}"`);
+      throw new VerbExit(1);
+    }
+    await Rfc.where({ id }).updateAll({ priority });
+    await Event.create({
+      at: nowIso(),
+      verb: "rfc-priority",
+      story_id: null,
+      rfc_id: id,
+      pr: null,
+      actor: null,
+      detail: JSON.stringify({ arg: priority === null ? "(clear)" : String(priority) }),
+    });
+    console.log(`rfc-priority ${priority === null ? "(clear)" : priority}: ${id}`);
   });
 }

@@ -35,6 +35,7 @@ import {
   recordSpawn,
   release,
   setPriority,
+  setRfcPriority,
   statusSet,
 } from "./verbs.js";
 import { newStory } from "./authoring.js";
@@ -70,6 +71,7 @@ Mutate:
   status-set <id...> <status> [--from STATUS]   (the last positional is the status;
                                    --from refuses the batch unless every id is in STATUS)
   priority <id> <n|clear>
+  rfc-priority <rfc> <n|clear>
   rehome <id...> --to <rfc> [--reason R] [--no-commit]
   rfc-status <rfc> <draft|active|postponed|closed> [--reason R] [--no-commit]
   set-deps <id> <csv> | set-deps <id> [--add a,b] [--remove a,b]   [--no-commit]
@@ -450,6 +452,13 @@ async function main(): Promise<number> {
       if (pos.length < 2) return usage();
       const raw = pos[1];
       await setPriority(pos[0], raw === "clear" ? null : Number(raw));
+      break;
+    }
+    // Unlike rfc-status, a row write: RFC priority is DB-owned (see ingest.ts).
+    case "rfc-priority": {
+      if (pos.length < 2) return usage();
+      const raw = pos[1];
+      await setRfcPriority(pos[0], raw === "clear" ? null : Number(raw));
       break;
     }
 

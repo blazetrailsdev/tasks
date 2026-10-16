@@ -12,7 +12,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { migrate } from "./migrator.js";
 import { Rfc, Story } from "./models/index.js";
-import { setPriority } from "./verbs.js";
+import { setPriority, setRfcPriority } from "./verbs.js";
 import { exportState } from "./export.js";
 import { DB_OWNED, MARKDOWN_OWNED } from "./ingest.js";
 
@@ -63,5 +63,37 @@ describe("priority ownership", () => {
     await exportState({ tasksDir: dir, commit: false });
 
     expect(readFileSync(join(dir, rel), "utf8")).toContain("priority: null");
+  });
+});
+
+describe("RFC priority ownership", () => {
+  it("carries a CLI-set RFC priority out to the README", async () => {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-rfcprio-"));
+    mkdirSync(join(dir, "rfcs/0001-r"), { recursive: true });
+    const rel = "rfcs/0001-r/README.md";
+    writeFileSync(join(dir, rel), "---\ntitle: R\nstatus: active\npriority: 5\n---\n\nbody\n");
+    await Rfc.where({ id: "0001-r" }).updateAll({ priority: 5, file_path: rel });
+
+    await setRfcPriority("0001-r", 2);
+    const result = await exportState({ tasksDir: dir, commit: false });
+
+    expect(result.changed).toContain(rel);
+    expect(readFileSync(join(dir, rel), "utf8")).toContain("priority: 2");
+  });
+
+  it("does not add a priority line to a README that has none", async () => {
+    const dir = mkdtempSync(join(tmpdir(), "tasks-rfcprio-"));
+    mkdirSync(join(dir, "rfcs/0001-r"), { recursive: true });
+    const rel = "rfcs/0001-r/README.md";
+    writeFileSync(join(dir, rel), "---\ntitle: R\nstatus: active\n---\n\nbody\n");
+    await Rfc.where({ id: "0001-r" }).updateAll({ file_path: rel });
+
+    const result = await exportState({ tasksDir: dir, commit: false });
+    expect(result.changed).not.toContain(rel);
+  });
+
+  it("rejects a negative or non-integer priority", async () => {
+    await expect(setRfcPriority("0001-r", -1)).rejects.toThrow();
+    await expect(setRfcPriority("0001-r", 1.5)).rejects.toThrow();
   });
 });
