@@ -1,6 +1,6 @@
 ---
 title: "activesupport: mattr_accessor on a ruby-compat Module defines no instance-side accessor for its includers and extenders"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

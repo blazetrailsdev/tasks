@@ -1,6 +1,6 @@
 ---
 title: "accessor-half-shadows-ancestor-on-module-carrier"
-status: draft
+status: claimed
 updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: [ruby-compat, activesupport, activejob]
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-16T19:32:57Z"
+assignee: "accessor-half-shadows-ancestor-on-module-carrier"
 blocked-by: null
 closed-reason: null
 ---

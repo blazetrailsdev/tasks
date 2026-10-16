@@ -1,6 +1,6 @@
 ---
 title: "Delete action-dispatch's root-level re-export shims and redirect.ts"
-status: claimed
+status: done
 updated: 2026-10-16
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["split-redirect-to-into-redirecting-and-flash"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#8990
 claim: "2026-10-16T18:44:55Z"
 assignee: "i18n-load-yml-symbolize-names-keeps-hash-keys"
 blocked-by: null

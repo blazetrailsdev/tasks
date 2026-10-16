@@ -1,6 +1,6 @@
 ---
 title: "i18n-load-yml-symbolize-names-keeps-hash-keys"
-status: ready
+status: in-progress
 updated: 2026-10-16
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8992
+claim: "2026-10-16T19:44:53Z"
+assignee: "i18n-load-yml-symbolize-names-keeps-hash-keys"
 blocked-by: null
 closed-reason: null
 ---

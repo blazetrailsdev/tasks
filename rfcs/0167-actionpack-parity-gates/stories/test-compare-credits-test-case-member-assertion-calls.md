@@ -1,6 +1,6 @@
 ---
 title: "test-compare credits tc.assertX member calls as assertions; drop bare-call alias wrappers"
-status: ready
+status: claimed
 updated: 2026-10-16
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-16T19:32:57Z"
+assignee: "accessor-half-shadows-ancestor-on-module-carrier"
 blocked-by: null
 closed-reason: null
 ---

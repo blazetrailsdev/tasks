@@ -1,6 +1,6 @@
 ---
 title: "Read the parameters of a def inside a class_eval heredoc"
-status: claimed
+status: done
 updated: 2026-10-16
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#8990
 claim: "2026-10-16T18:44:55Z"
 assignee: "i18n-load-yml-symbolize-names-keeps-hash-keys"
 blocked-by: null
