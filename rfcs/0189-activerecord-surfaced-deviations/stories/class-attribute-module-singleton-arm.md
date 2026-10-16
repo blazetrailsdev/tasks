@@ -1,6 +1,6 @@
 ---
 title: "activesupport: ClassAttribute.redefine skips Rails' attached-module arm, so a module's singleton-class callback chain cannot run"
-status: ready
+status: done
 updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#8985
+claim: "2026-10-16T17:09:05Z"
+assignee: "class-attribute-module-singleton-arm"
 blocked-by: null
 closed-reason: null
 ---

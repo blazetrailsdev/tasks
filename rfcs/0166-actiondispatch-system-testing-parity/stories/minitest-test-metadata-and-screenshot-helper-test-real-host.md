@@ -1,6 +1,6 @@
 ---
 title: "Minitest::Test#metadata; screenshot_helper_test uses a real DrivenBySeleniumWithChrome host"
-status: ready
+status: done
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8986
+claim: "2026-10-16T17:14:52Z"
+assignee: "driver-rack-test-arm-passes-respect-data-method"
 blocked-by: null
 closed-reason: null
 ---
