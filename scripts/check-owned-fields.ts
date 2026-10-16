@@ -28,6 +28,8 @@ const VERB_FOR: Record<string, string> = {
   "blocked-by": "tasks block <id> <reason>",
   "closed-reason": "tasks close <id> <reason>",
   updated: "(stamped automatically by any mutation verb)",
+  priority:
+    "tasks priority <id> <n|clear> (story) / tasks rfc-priority <rfc> <n|clear> (RFC README)",
 };
 
 function git(args: string[]): string {
@@ -83,12 +85,12 @@ function main(): void {
       continue;
     }
     if (!file.endsWith(".md")) continue;
-    // STORY files only. DB ownership is a statement about story rows; an RFC
-    // README's `status:` is markdown-owned (ingest carries it across, and
-    // editing it in a PR is the documented way to close an RFC), and its
-    // `priority:` is too — 60 READMEs carry one. Without this the guard
-    // rejected exactly the PRs it was meant to allow.
-    if (!file.includes("/stories/")) continue;
+    // An RFC README's frontmatter is markdown-owned — `status:` included
+    // (editing it in a PR is the documented way to close an RFC) — except
+    // `priority:`, which `tasks rfc-priority` owns. So READMEs are checked for
+    // that one key only.
+    const isReadme = /^rfcs\/[^/]+\/README\.md$/.test(file);
+    if (!isReadme && !file.includes("/stories/")) continue;
     if (!(line.startsWith("+") || line.startsWith("-"))) continue;
 
     const content = line.slice(1);
@@ -100,7 +102,7 @@ function main(): void {
 
     const key = /^([a-z-]+):/.exec(content)?.[1];
     if (!key) continue;
-    if (!(DB_OWNED as readonly string[]).includes(key)) continue;
+    if (isReadme ? key !== "priority" : !(DB_OWNED as readonly string[]).includes(key)) continue;
     // Only additions are violations; a deletion paired with an identical
     // addition is just reformatting, and prettier does that on main.
     if (line.startsWith("+")) violations.push({ file, field: key, line: content.trim() });

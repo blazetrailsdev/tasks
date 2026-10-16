@@ -153,6 +153,21 @@ export async function exportState(
     editFrontmatter(abs, edits);
     rfcsChanged.push(r.file_path);
   }
+  // RFCs: `priority`, which is DB-owned outright (`tasks rfc-priority`), so
+  // the README is only a mirror of the row. Same present-or-non-null rule as
+  // the story fields: most READMEs carry no `priority:` line at all.
+  for (const r of await Rfc.all().toArray()) {
+    if (!r.file_path) continue;
+    const abs = join(tasksDir, r.file_path);
+    if (!existsSync(abs)) continue;
+    const fmText = readFileSync(abs, "utf8").match(/^---\n([\s\S]*?)\n---\n/)?.[1] ?? "";
+    const have = ((parseYaml(fmText) ?? {}) as Record<string, unknown>).priority ?? null;
+    const want = r.priority ?? null;
+    if (have === want) continue;
+    if (want === null && !/^priority:/m.test(fmText)) continue;
+    editFrontmatter(abs, { priority: render("priority", want) });
+    if (!rfcsChanged.includes(r.file_path)) rfcsChanged.push(r.file_path);
+  }
   changed.push(...rfcsChanged);
 
   if (changed.length === 0 || !doCommit) {

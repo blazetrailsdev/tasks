@@ -38,10 +38,19 @@ cannot conflict.
   priority an agent set silently temporary — export never carried it out and
   the next ingest reverted it. Editing `priority:` in a story file still does
   nothing durable.
+- **An RFC README is markdown-owned except `priority`.** Its `status:` and the
+  rest of its frontmatter move by PR, but its `priority:` (inherited by every
+  story without one of its own) is DB-owned like a story's: set it with
+  `tasks rfc-priority <rfc> <n|clear>`. A new README's `priority:` seeds the
+  row on insert; after that ingest ignores it and export mirrors the DB value
+  back into the file.
 - **`tasks export`** (DB → git) writes only DB-owned fields, batched hourly into
   a single commit. Never in the mutation path.
 - CI **rejects any PR that edits a DB-owned field**, so a hand-edited
   `status: done` fails loudly instead of being silently ignored at ingest.
+  That includes a `priority:` line in an existing RFC README. Only
+  modifications are checked, so a NEW story or README may carry birth seeds
+  (`status:`, `priority:`) without tripping it.
 
 ## The atomic claim
 
