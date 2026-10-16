@@ -17,6 +17,7 @@ packages:
   - "actionpack"
   - "arel"
   - "rack"
+  - "activejob"
 clusters:
   - "connection-adapters"
   - "associations"
