@@ -35,3 +35,4 @@ The ported rescue templates also cannot reach Ruby core-ext calls from a templat
 - `debugParams` calls `PP.pp(cleanParams, "", 200)` (a sync PP or a sync entry point), and `prettyPrint` is deleted.
 - `routing_error.*.tse` call Ruby `inspect` on the route; `_request_and_response.text.tse` mirrors its `inspect.gsub` line.
 - "show formatted params" in `dispatch/debug-exceptions.test.ts` asserts `CGI.escapeHTML(PP.pp(params, +"", 200))` as `debug_exceptions_test.rb:462` does.
+- `_request_and_response.{html,text}.tse` spell `@request.env.slice(*@request.class::ENV_METHODS)` (`_request_and_response.html.erb:13`) with a hand-rolled `Object.fromEntries(...filter(Object.hasOwn))`; converge onto a Hash#slice reachable from a template body. `Object.hasOwn(this, "response")` for `defined?(@response)` is reviewed in the same pass.
