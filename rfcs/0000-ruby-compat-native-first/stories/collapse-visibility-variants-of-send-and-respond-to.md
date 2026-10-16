@@ -5,7 +5,12 @@ updated: 2026-10-16
 rfc: "0000-ruby-compat-native-first"
 cluster: dispatch-cost
 packages: []
-deps: []
+deps:
+  [
+    compare-drops-include-private-only-arms,
+    compare-visibility-reflection-calls-are-permanent-skips,
+    call-args-drops-visibility-boolean-argument,
+  ]
 deps-rfc: []
 est-loc: 150
 priority: null
@@ -34,7 +39,7 @@ The repo owner ruled (2026-10-16) that the dead arms are removed with a receipt 
 - [ ] `rbObjPrivateMethods`, `rbObjProtectedMethods`, `rbObjPublicMethods` and `rbModPublicMethodDefined` are deleted. Their callers use `rbObjMethods` / method-defined.
 - [ ] `rbObjRespondTo(obj, mid)` and `basicObjRespondTo(obj, mid)` drop the visibility parameter.
 - [ ] A Rails override keeps its Rails parameter list (`isRespondTo(name, includePrivate = false)`, `respondToMissing(name, includePrivate)`) so `parity:api:params` stays green. The parameter is not read.
-- [ ] Every arm whose only difference is `include_private` is removed. The enclosing declaration carries `@missingRailsCall <call> — PERMANENT` for the dropped `super(…, true)` / `respond_to?(…, true)` call. CLAUDE.md § "Method visibility is compile-time only" is the ratification the receipt points at.
+- [ ] Every arm whose only difference is `include_private` is removed. `compare-drops-include-private-only-arms` makes the gates accept the removal. A site that detector cannot prove carries `@missingRailsCall <call> — PERMANENT` against CLAUDE.md § "Method visibility is compile-time only".
 - [ ] CLAUDE.md § "Method visibility is compile-time only" is amended: the `rbFPublicSend` and `rbModPublicMethodDefined` bullets and the "two super calls are still ported as two calls" sentence now describe the removal path.
 - [ ] `pnpm parity:api:calls`, `parity:api:calls:args`, `parity:api:params` and `parity:api:extra:gate` are green. The ruby-compat extra mark is tightened.
 

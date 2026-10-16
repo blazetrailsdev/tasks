@@ -137,8 +137,10 @@ compile-time only"). The visibility variants therefore collapse:
 A Rails override keeps its Rails parameter list and does not read
 `include_private`. **Removal path (owner ruling, 2026-10-16):** an arm whose
 only difference is `include_private` (`!include_private && super(name, true)`)
-is removed. The declaration carries
-`@missingRailsCall <call> — PERMANENT` against that CLAUDE.md section. The
+is removed. The compare tools learn the shape
+(`compare-drops-include-private-only-arms`), so the removal needs no per-site
+receipt. `@missingRailsCall <call> — PERMANENT` is the fallback where the
+detector cannot prove the arm. The
 arm is not kept as dead Rails-shaped code.
 
 Dispatch then follows one rule:
@@ -199,7 +201,10 @@ the candidates is a credited name.
 2. Phase 2: `call-gate-credits-empty-size-on-proven-string-and-hash`,
    `native-form-analogue-for-two-arg-hash-fetch`,
    `native-form-analogue-for-hash-except-rest-destructure`,
-   `ruby-compat-table-drops-kernel-send`.
+   `ruby-compat-table-drops-kernel-send`,
+   `compare-drops-include-private-only-arms`,
+   `compare-visibility-reflection-calls-are-permanent-skips`,
+   `call-args-drops-visibility-boolean-argument`.
 3. Phase 3: `native-is-empty-sites-activerecord-arel`,
    `native-is-empty-sites-remaining-packages`,
    `native-fetch-two-arg-literal-key-sites`,
