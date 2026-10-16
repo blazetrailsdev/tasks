@@ -1,6 +1,6 @@
 ---
 title: "driver-rack-test-arm-passes-respect-data-method"
-status: ready
+status: closed
 updated: 2026-10-16
 rfc: "0166-actiondispatch-system-testing-parity"
 cluster: null
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8988
+claim: "2026-10-16T18:14:54Z"
+assignee: "driver-rack-test-arm-passes-respect-data-method"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: criterion 1 (honour respectDataMethod / follow data-method links) requires Capybara's RackTest driver or a finder/action DSL, both barred by the RFC 0166 owner ruling (packages/actionpack/CLAUDE.md 'System testing runs on Vitest'); the args convergence (respectDataMethod: true, ...@options, driver.rb:63-65) lands in trails#8988."
 ---
 
 ## Context
