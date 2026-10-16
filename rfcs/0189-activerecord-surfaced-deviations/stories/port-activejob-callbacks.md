@@ -2,7 +2,7 @@
 title: "Port ActiveJob::Callbacks (perform / enqueue chains and the six macros) with callbacks_test.rb"
 status: ready
 updated: 2026-10-05
-rfc: "0169-activejob-package-port"
+rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: ["activejob"]
 deps: ["port-activejob-enqueuing-and-configured-job", "port-activejob-test-fixture-jobs"]

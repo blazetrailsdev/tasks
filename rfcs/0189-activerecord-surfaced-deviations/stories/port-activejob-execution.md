@@ -2,7 +2,7 @@
 title: "Port ActiveJob::Execution (perform_now / execute / perform) async, and ratify the async shape in CLAUDE.md"
 status: ready
 updated: 2026-10-05
-rfc: "0169-activejob-package-port"
+rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: ["activejob"]
 deps: ["port-activejob-core"]
