@@ -42,4 +42,11 @@ ruby-compat Marshal must also handle, so those need checking with it.
 
 - `marshalWithFallback.dump` / `_load` are `Marshal.dump` / `Marshal.load`, as Rails.
 - The four `read rails 5 2 stable ...` cookie tests run unskipped and pass.
+- The tests parked on trails#8965 when `CookiesTest` moved onto `TestController`
+  run unskipped and pass: `signed cookie using default digest`,
+  `signed cookie using hybrid serializer can migrate marshal dumped value to json`,
+  `raise data overflow` (Rails asserts 5522 bytes), `signed cookie using custom digest`,
+  `signed cookie rotating secret and digest`,
+  `encrypted cookie using hybrid serializer can migrate marshal dumped value to json`
+  and `encrypted cookie rotating secret`. Each compares against real `Marshal` output.
 - The activesupport messages suites stay green.
