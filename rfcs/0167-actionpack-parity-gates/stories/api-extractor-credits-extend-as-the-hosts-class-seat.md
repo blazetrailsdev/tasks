@@ -1,7 +1,7 @@
 ---
 title: "api extractor credits extend(Host, Mod) as the host's class seat; Helpers extends Resolution through extend()"
-status: draft
-updated: 2026-10-04
+status: done
+updated: 2026-10-16
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8574
+claim: "2026-10-16T18:44:55Z"
+assignee: "i18n-load-yml-symbolize-names-keeps-hash-keys"
 blocked-by: null
 closed-reason: null
 ---

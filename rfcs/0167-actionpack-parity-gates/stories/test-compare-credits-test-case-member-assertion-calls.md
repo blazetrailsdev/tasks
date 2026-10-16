@@ -1,7 +1,7 @@
 ---
 title: "test-compare credits tc.assertX member calls as assertions; drop bare-call alias wrappers"
-status: draft
-updated: 2026-10-14
+status: ready
+updated: 2026-10-16
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []

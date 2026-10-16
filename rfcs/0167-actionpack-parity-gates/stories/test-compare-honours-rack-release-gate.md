@@ -1,7 +1,7 @@
 ---
 title: "test-compare-honours-rack-release-gate"
-status: draft
-updated: 2026-10-14
+status: ready
+updated: 2026-10-16
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []

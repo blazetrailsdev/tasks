@@ -1,6 +1,6 @@
 ---
 title: "TS extractor credits attrInternal on a moduleEval carrier"
-status: draft
+status: ready
 updated: 2026-10-16
 rfc: "0167-actionpack-parity-gates"
 cluster: null

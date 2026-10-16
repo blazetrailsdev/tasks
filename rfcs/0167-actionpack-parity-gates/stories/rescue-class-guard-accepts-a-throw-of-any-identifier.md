@@ -1,7 +1,7 @@
 ---
 title: "parity: isRescueClassGuard accepts a throw of any identifier, not only the catch binding"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-16
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []

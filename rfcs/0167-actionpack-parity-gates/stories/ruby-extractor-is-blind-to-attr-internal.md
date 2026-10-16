@@ -1,7 +1,7 @@
 ---
 title: "Teach the Ruby API extractor attr_internal and its reader/writer forms"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-16
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []

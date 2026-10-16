@@ -1,7 +1,7 @@
 ---
 title: "Burn actioncontroller's naming-class call-argument rows to zero"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-16
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]

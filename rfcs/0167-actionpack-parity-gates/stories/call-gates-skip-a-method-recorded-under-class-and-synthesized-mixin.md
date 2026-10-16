@@ -1,7 +1,7 @@
 ---
 title: "Call gates skip a method recorded under both a class and its synthesized mixin entity"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-16
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []
