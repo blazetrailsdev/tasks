@@ -5,7 +5,8 @@ updated: 2026-10-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - ruby-compat-concurrent-timer-task-and-atomic-fixnum
 deps-rfc: []
 est-loc: 60
 priority: null
