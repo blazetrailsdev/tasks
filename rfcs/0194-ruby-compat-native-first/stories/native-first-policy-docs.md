@@ -2,7 +2,7 @@
 title: "Docs: native-first rule in CLAUDE.md and ruby-compat README rule 1"
 status: draft
 updated: 2026-10-16
-rfc: "0000-ruby-compat-native-first"
+rfc: "0194-ruby-compat-native-first"
 cluster: inline
 packages: []
 deps:

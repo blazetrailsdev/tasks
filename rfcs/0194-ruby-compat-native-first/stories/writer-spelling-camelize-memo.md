@@ -2,7 +2,7 @@
 title: "ruby-compat: writerSpelling's regex camelize costs ~485 ns on every x= respond_to?/send"
 status: draft
 updated: 2026-10-16
-rfc: "0000-ruby-compat-native-first"
+rfc: "0194-ruby-compat-native-first"
 cluster: dispatch-cost
 packages: []
 deps: []

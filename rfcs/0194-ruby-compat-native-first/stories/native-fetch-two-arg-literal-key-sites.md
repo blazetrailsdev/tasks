@@ -2,7 +2,7 @@
 title: "Native hasOwn ternary at two-argument literal-key Hash#fetch sites on plain objects"
 status: draft
 updated: 2026-10-16
-rfc: "0000-ruby-compat-native-first"
+rfc: "0194-ruby-compat-native-first"
 cluster: substitution
 packages: []
 deps: [native-form-analogue-for-two-arg-hash-fetch]

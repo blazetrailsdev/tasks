@@ -2,7 +2,7 @@
 title: "Native .length / Object.keys for isEmpty in the packages outside activerecord and arel"
 status: draft
 updated: 2026-10-16
-rfc: "0000-ruby-compat-native-first"
+rfc: "0194-ruby-compat-native-first"
 cluster: substitution
 packages: []
 deps: [call-gate-credits-empty-size-on-proven-string-and-hash]

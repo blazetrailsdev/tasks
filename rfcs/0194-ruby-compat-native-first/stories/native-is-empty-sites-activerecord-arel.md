@@ -2,7 +2,7 @@
 title: "Native .length / Object.keys for isEmpty on proven string, array and plain-object receivers (activerecord, arel)"
 status: draft
 updated: 2026-10-16
-rfc: "0000-ruby-compat-native-first"
+rfc: "0194-ruby-compat-native-first"
 cluster: substitution
 packages: []
 deps: [call-gate-credits-empty-size-on-proven-string-and-hash]

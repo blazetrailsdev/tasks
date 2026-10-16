@@ -1,5 +1,5 @@
 ---
-rfc: "0000-ruby-compat-native-first"
+rfc: "0194-ruby-compat-native-first"
 title: "ruby-compat native-first: a helper only where it dispatches, credited native forms, and single-caller ports inlined"
 status: draft
 created: 2026-10-16
@@ -22,10 +22,7 @@ clusters:
   - inline
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — ruby-compat native-first
+# RFC 0194 — ruby-compat native-first
 
 ## Summary
 

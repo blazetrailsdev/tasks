@@ -2,7 +2,7 @@
 title: "Triage the ruby-compat exports with no external importer, and the single-importer exports no inline story covers"
 status: draft
 updated: 2026-10-16
-rfc: "0000-ruby-compat-native-first"
+rfc: "0194-ruby-compat-native-first"
 cluster: inline
 packages: []
 deps: []

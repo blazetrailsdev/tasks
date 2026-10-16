@@ -2,7 +2,7 @@
 title: "Call gate: credit .length for empty?/size/length on a Ripper-proven String or Hash receiver"
 status: draft
 updated: 2026-10-16
-rfc: "0000-ruby-compat-native-first"
+rfc: "0194-ruby-compat-native-first"
 cluster: gate
 packages: []
 deps: []

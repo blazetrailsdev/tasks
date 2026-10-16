@@ -2,7 +2,7 @@
 title: "Call gate: credit Object.hasOwn(h, k) ? h.k : d as two-argument Hash#fetch"
 status: draft
 updated: 2026-10-16
-rfc: "0000-ruby-compat-native-first"
+rfc: "0194-ruby-compat-native-first"
 cluster: gate
 packages: []
 deps: []

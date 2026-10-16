@@ -2,7 +2,7 @@
 title: "Inline rbBuiltinClassName / rbClassOf / rbAbsintSize / isStruct into msgpack's packer, their only caller"
 status: draft
 updated: 2026-10-16
-rfc: "0000-ruby-compat-native-first"
+rfc: "0194-ruby-compat-native-first"
 cluster: inline
 packages: []
 deps: []
