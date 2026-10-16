@@ -2,7 +2,7 @@
 title: "msgpack parity: MessagePack::CacheSerializer over a Cache::Entry"
 status: draft
 updated: 2026-10-16
-rfc: "0000-msgpack-differential-parity-rig"
+rfc: "0195-msgpack-differential-parity-rig"
 cluster: serializer
 packages: ["msgpack", "activesupport"]
 deps: ["msgpack-parity-corpus-format-and-ci-test"]

@@ -2,7 +2,7 @@
 title: "msgpack parity: corpus format and the Ruby-free CI corpus test"
 status: draft
 updated: 2026-10-16
-rfc: "0000-msgpack-differential-parity-rig"
+rfc: "0195-msgpack-differential-parity-rig"
 cluster: rig
 packages: ["msgpack"]
 deps: ["msgpack-parity-structural-shrinker"]

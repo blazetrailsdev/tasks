@@ -2,7 +2,7 @@
 title: "msgpack parity: the value-spec language and its TS builder"
 status: draft
 updated: 2026-10-16
-rfc: "0000-msgpack-differential-parity-rig"
+rfc: "0195-msgpack-differential-parity-rig"
 cluster: rig
 packages: ["msgpack"]
 deps: []

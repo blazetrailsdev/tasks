@@ -1,5 +1,5 @@
 ---
-rfc: "0000-msgpack-differential-parity-rig"
+rfc: "0195-msgpack-differential-parity-rig"
 title: "A differential parity rig for @blazetrails/msgpack, fuzzed against the msgpack gem"
 status: draft
 created: 2026-10-16
@@ -20,9 +20,7 @@ related-rfcs:
 priority: 5
 ---
 
-<!-- Unnumbered until merge -->
-
-# RFC — A differential parity rig for msgpack
+# RFC 0195 — A differential parity rig for msgpack
 
 ## Summary
 

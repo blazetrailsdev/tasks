@@ -2,7 +2,7 @@
 title: "msgpack parity: the str and bin families, encodings and invalid UTF-8"
 status: draft
 updated: 2026-10-16
-rfc: "0000-msgpack-differential-parity-rig"
+rfc: "0195-msgpack-differential-parity-rig"
 cluster: native
 packages: ["msgpack"]
 deps: ["msgpack-parity-corpus-format-and-ci-test"]

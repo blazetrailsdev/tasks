@@ -2,7 +2,7 @@
 title: "msgpack parity: structural shrinker for a failing value-spec"
 status: draft
 updated: 2026-10-16
-rfc: "0000-msgpack-differential-parity-rig"
+rfc: "0195-msgpack-differential-parity-rig"
 cluster: rig
 packages: ["msgpack"]
 deps: ["msgpack-parity-driver-and-byte-diff-report"]

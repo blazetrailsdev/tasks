@@ -2,7 +2,7 @@
 title: "msgpack parity: ext types 11 and 12, Range and Set"
 status: draft
 updated: 2026-10-16
-rfc: "0000-msgpack-differential-parity-rig"
+rfc: "0195-msgpack-differential-parity-rig"
 cluster: ext
 packages: ["msgpack", "activesupport"]
 deps: ["msgpack-parity-corpus-format-and-ci-test"]

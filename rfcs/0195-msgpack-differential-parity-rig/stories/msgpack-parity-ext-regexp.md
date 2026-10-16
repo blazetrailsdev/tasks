@@ -2,7 +2,7 @@
 title: "msgpack parity: ext type 16, Regexp and the MRI option letters"
 status: draft
 updated: 2026-10-16
-rfc: "0000-msgpack-differential-parity-rig"
+rfc: "0195-msgpack-differential-parity-rig"
 cluster: ext
 packages: ["msgpack", "activesupport"]
 deps: ["msgpack-parity-corpus-format-and-ci-test"]
