@@ -1,6 +1,6 @@
 ---
 title: "Generated singleton_class.public_instance_methods without the shim"
-status: draft
+status: ready
 updated: 2026-10-17
 rfc: "0185-ruby-ts-codegen"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "Port ActionView::Helpers::TranslationHelper + translation_helper_test"
-status: ready
-updated: 2026-10-16
+status: claimed
+updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-17T19:55:14Z"
+assignee: "activejob-arguments-serialize-accepts-a-hash"
 blocked-by: null
 closed-reason: null
 ---

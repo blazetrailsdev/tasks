@@ -1,6 +1,6 @@
 ---
 title: "Port caching_test.rb's 32 skipped fragment and collection caching tests"
-status: in-progress
+status: done
 updated: 2026-10-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

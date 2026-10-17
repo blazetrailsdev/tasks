@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat ports sort_by, sort_by!, inject, each_with_object and tally"
-status: draft
+status: ready
 updated: 2026-10-17
 rfc: "0185-ruby-ts-codegen"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

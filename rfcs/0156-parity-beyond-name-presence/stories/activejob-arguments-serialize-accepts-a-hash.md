@@ -1,6 +1,6 @@
 ---
 title: "activejob-arguments-serialize-accepts-a-hash"
-status: ready
+status: claimed
 updated: 2026-10-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-17T19:55:14Z"
+assignee: "activejob-arguments-serialize-accepts-a-hash"
 blocked-by: null
 closed-reason: null
 ---
