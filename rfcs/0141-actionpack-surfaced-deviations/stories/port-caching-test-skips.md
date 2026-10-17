@@ -9,7 +9,7 @@ deps:
   [
     "port-actionpack-view-and-helper-test-fixtures",
     "abstract-controller-class-attributes-and-helper-resolution",
-    "cache-store-async-over-npm-clients",
+    "cache-store-async-consumers",
   ]
 deps-rfc: []
 est-loc: 450
