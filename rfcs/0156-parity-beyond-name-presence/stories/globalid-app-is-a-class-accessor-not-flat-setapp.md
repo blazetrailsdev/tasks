@@ -1,7 +1,7 @@
 ---
 title: "globalid-app-is-a-class-accessor-not-flat-setapp"
-status: in-progress
-updated: 2026-10-16
+status: done
+updated: 2026-10-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

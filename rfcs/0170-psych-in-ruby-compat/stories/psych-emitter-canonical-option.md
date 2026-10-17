@@ -1,7 +1,7 @@
 ---
 title: "Psych.dump's canonical: true emits libyaml's canonical form"
-status: blocked
-updated: 2026-10-15
+status: closed
+updated: 2026-10-17
 rfc: "0170-psych-in-ruby-compat"
 cluster: null
 packages: []
@@ -13,8 +13,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "waits on psych-yaml-tree-answers-a-node-tree-emitted-by-node-yaml (story's own AC: lands with or after it; node yaml backend has no canonical style)"
-closed-reason: null
+blocked-by: null
+closed-reason: "Blocker psych-yaml-tree-answers-a-node-tree-emitted-by-node-yaml landed (trails#8958); the vendored libyaml emitter port (trails#8970/#8974/#8977) implements canonical style: ruby-compat/src/psych/emitter.ts honors canonical, the NotImplementedError arm is gone, and psych.trails.test.ts:310 'Psych.dump canonical' asserts libyaml's form on origin/main."
 ---
 
 ## Context

@@ -1,14 +1,14 @@
 ---
 title: "cache-store-async-consumers"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-10-17
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["actionview", "actionpack"]
 deps: ["cache-store-async-store-and-local-stores"]
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 0
 pr: null
 claim: null
 assignee: null
