@@ -22,6 +22,7 @@ clusters:
   - "mri-relocation"
   - "measurement"
   - "findings"
+  - "fidelity"
 related-rfcs:
   - "0129-ruby-compat"
   - "0138-ruby-compat-residual-convergence"
