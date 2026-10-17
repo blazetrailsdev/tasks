@@ -1,7 +1,7 @@
 ---
 title: "port-integration-runner-module-and-runner-tests"
-status: blocked
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: "2026-09-30T18:01:15Z"
+pr: trails#9006
+claim: "2026-10-17T18:35:12Z"
 assignee: "port-integration-runner-module-and-runner-tests"
-blocked-by: "Integration::Runner#create_session builds a separate Integration::Session (integration.rb:356-367) and its delegators forward to it (:370-384); trails has no Session class — IntegrationTest IS the session and integrationSession returns this. Needs integration-runner-merged-into-session to split them first."
+blocked-by: null
 closed-reason: null
 ---
 

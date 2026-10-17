@@ -1,7 +1,7 @@
 ---
 title: "converge-call-rows-surfaced-by-same-file-mixin-owner"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-10-17
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []

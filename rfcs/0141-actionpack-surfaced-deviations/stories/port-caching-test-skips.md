@@ -1,7 +1,7 @@
 ---
 title: "Port caching_test.rb's 32 skipped fragment and collection caching tests"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9007
+claim: "2026-10-17T18:36:03Z"
+assignee: "port-caching-test-skips"
 blocked-by: null
 closed-reason: null
 ---
