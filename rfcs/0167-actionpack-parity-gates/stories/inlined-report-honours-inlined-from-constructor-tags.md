@@ -1,6 +1,6 @@
 ---
 title: "inlined-report-honours-inlined-from-constructor-tags"
-status: in-progress
+status: done
 updated: 2026-10-17
 rfc: "0167-actionpack-parity-gates"
 cluster: null

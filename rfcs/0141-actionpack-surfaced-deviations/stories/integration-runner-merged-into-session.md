@@ -1,6 +1,6 @@
 ---
 title: "integration-runner-merged-into-session"
-status: ready
+status: claimed
 updated: 2026-10-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-17T01:32:22Z"
+assignee: "integration-runner-merged-into-session"
 blocked-by: null
 closed-reason: null
 ---

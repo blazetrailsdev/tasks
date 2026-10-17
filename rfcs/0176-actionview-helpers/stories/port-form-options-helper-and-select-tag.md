@@ -1,7 +1,7 @@
 ---
 title: "Port FormOptionsHelper, Tags::SelectRenderer and Tags::Select"
-status: ready
-updated: 2026-10-16
+status: in-progress
+updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -9,9 +9,9 @@ deps: ["port-form-tag-helper-field-tag-methods"]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9000
+claim: "2026-10-17T01:31:17Z"
+assignee: "cache-store-async-consumers"
 blocked-by: null
 closed-reason: null
 ---
