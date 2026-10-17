@@ -2,7 +2,7 @@
 title: "Application#config_for: add Rails' <name>.yml arm; receipt the .ts/.js arms"
 status: ready
 updated: 2026-10-14
-rfc: "0170-psych-in-ruby-compat"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: fidelity
 packages: ["trailties"]
 deps: ["configuration-file-parse-through-psych-unsafe-load"]
