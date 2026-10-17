@@ -36,7 +36,7 @@ different route, for the reasons that PR's measurements give:
   passes until no def turns async). Ported Minitest files run on activesupport's
   `testing/autorun`.
 
-trails#9004 is about 9,600 lines of generator source and tests; this RFC delivers working output over small PRs, so its size is recorded here rather than in `est-loc`.
+trails#9004 is about 9,600 lines of generator source and tests. This RFC's PR size ceiling is lifted so the generator lands working, so `est-loc` holds the per-story cap and the real size is recorded here.
 
 Measured on #9004's head:
 
