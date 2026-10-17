@@ -1,7 +1,7 @@
 ---
 title: "Burn actioncontroller's naming-class call-argument rows to zero"
-status: ready
-updated: 2026-10-16
+status: claimed
+updated: 2026-10-17
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-17T22:32:12Z"
+assignee: "converge-call-rows-surfaced-by-same-file-mixin-owner"
 blocked-by: null
 closed-reason: null
 ---

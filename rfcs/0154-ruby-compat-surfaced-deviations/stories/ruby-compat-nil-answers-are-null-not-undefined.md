@@ -1,6 +1,6 @@
 ---
 title: "first, last, zip and values_at answer nil as null, not undefined"
-status: draft
+status: ready
 updated: 2026-10-17
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

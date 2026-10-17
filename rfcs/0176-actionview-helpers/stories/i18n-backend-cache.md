@@ -1,6 +1,6 @@
 ---
 title: "i18n-backend-cache"
-status: draft
+status: blocked
 updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-17T22:02:38Z"
+assignee: "distance-of-time-in-words-drops-invented-defaults"
+blocked-by: "I18n.translate is synchronous but every ActiveSupport::Cache store's read/write is async (packages/activesupport/src/cache/store.ts:250,352), so Backend::Cache#_fetch (i18n backend/cache.rb) cannot read the store in-line; needs an owner decision on a sync cache seam"
 closed-reason: null
 ---
 

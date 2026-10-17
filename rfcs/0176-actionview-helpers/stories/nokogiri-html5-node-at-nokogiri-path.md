@@ -1,6 +1,6 @@
 ---
 title: "Move Nokogiri HTML5::Node and Attr to Nokogiri's file paths"
-status: draft
+status: in-progress
 updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9013
+claim: "2026-10-17T22:02:38Z"
+assignee: "distance-of-time-in-words-drops-invented-defaults"
 blocked-by: null
 closed-reason: null
 ---

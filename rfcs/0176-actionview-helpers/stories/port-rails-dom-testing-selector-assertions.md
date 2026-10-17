@@ -1,6 +1,6 @@
 ---
 title: "Port rails-dom-testing SelectorAssertions#assert_select over HTML5 css"
-status: draft
+status: ready
 updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null

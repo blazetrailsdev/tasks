@@ -1,6 +1,6 @@
 ---
 title: "Close RFC 0160 — call baselines and residue to zero"
-status: in-progress
+status: done
 updated: 2026-10-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
