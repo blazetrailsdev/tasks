@@ -1,7 +1,7 @@
 ---
 title: "html-sanitizer: port the Parser/Scrubber/Serializer concerns so HTML4 and HTML5 vendors parse with their own fragment"
-status: ready
-updated: 2026-10-16
+status: blocked
+updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-17T11:34:30Z"
+assignee: "actionview-url-and-sanitize-helper-concerns-and-sanitizer-memos"
+blocked-by: "Needs an owner decision: the HTML4 vendor must parse through a Nokogiri HTML4 fragment, but @blazetrails/nokogiri is parse5-backed and has no HTML4 parser (CLAUDE.md 'DOM testing is HTML5 only', trails#8947). rails-html-sanitizer/loofah are also not vendored."
 closed-reason: null
 ---
 

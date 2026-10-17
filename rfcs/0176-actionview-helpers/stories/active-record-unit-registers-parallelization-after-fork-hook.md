@@ -1,7 +1,7 @@
 ---
 title: "active-record-unit-registers-parallelization-after-fork-hook"
-status: ready
-updated: 2026-10-16
+status: closed
+updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9002
+claim: "2026-10-17T11:34:30Z"
+assignee: "actionview-url-and-sanitize-helper-concerns-and-sanitizer-memos"
 blocked-by: null
-closed-reason: null
+closed-reason: "PERMANENT: scripts/parity/conventions.ts SKIP_GROUPS ratifies after_fork_hook/after_fork_hooks as not mirrored (testing/parallelization.rb; vitest owns worker parallelism, no trails object for fork hooks). active-record-unit.ts's @missingRailsCall after_fork_hook receipt is now PERMANENT (trails#9002)."
 ---
 
 ## Context
