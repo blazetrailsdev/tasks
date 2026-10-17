@@ -1,5 +1,5 @@
 ---
-title: "Port Tags::CollectionHelpers, CollectionCheckBoxes, CollectionRadioButtons + form_collections_helper_test"
+title: "Port Tags::CollectionHelpers, CollectionCheckBoxes, CollectionRadioButtons"
 status: in-progress
 updated: 2026-10-17
 rfc: "0176-actionview-helpers"
@@ -24,5 +24,5 @@ closed-reason: null
 ## Acceptance criteria
 
 - [ ] `tags/collection-helpers.ts`, `collection-check-boxes.ts`, `collection-radio-buttons.ts` ported; FormBuilder exposes the collection methods.
-- [ ] `form_collections_helper_test.rb` ported.
+- [ ] `form_collections_helper_test.rb` is moved to `port-form-collections-helper-test`: every assertion in it is `assert_select`, which trails has not ported.
 - [ ] parity rows for these three files at 0 missing.
