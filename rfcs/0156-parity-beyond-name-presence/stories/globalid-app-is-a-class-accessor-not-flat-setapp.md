@@ -1,6 +1,6 @@
 ---
 title: "globalid-app-is-a-class-accessor-not-flat-setapp"
-status: draft
+status: in-progress
 updated: 2026-10-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#8998
+claim: "2026-10-16T23:58:13Z"
+assignee: "globalid-app-is-a-class-accessor-not-flat-setapp"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: add a wildcard subpath export so every module is reachable without the barrel"
-status: in-progress
+status: done
 updated: 2026-10-16
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"

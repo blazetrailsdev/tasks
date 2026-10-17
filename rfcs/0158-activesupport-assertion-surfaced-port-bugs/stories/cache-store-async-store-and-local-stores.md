@@ -1,6 +1,6 @@
 ---
 title: "cache-store-async-store-and-local-stores"
-status: draft
+status: done
 updated: 2026-10-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8997
+claim: "2026-10-16T23:13:24Z"
+assignee: "cache-store-async-store-and-local-stores"
 blocked-by: null
 closed-reason: null
 ---
