@@ -1,10 +1,10 @@
 ---
-title: "Create packages/solid-queue as a published workspace package and enroll it in compare"
+title: "Create packages/solid-cable as a published workspace package and enroll it in compare"
 status: draft
 updated: 2026-10-17
-rfc: "0000-solid-stack"
+rfc: "0196-solid-stack"
 cluster: solid-stack
-packages: ["solid-queue"]
+packages: ["solid-cable"]
 deps: ["vendor-solid-cache-queue-cable-gems"]
 deps-rfc: []
 est-loc: 200
@@ -17,8 +17,9 @@ closed-reason: null
 
 ## Context
 
-Same shape as `solid-cache-package-skeleton`. Takes
-`@blazetrails/activerecord` and `@blazetrails/activejob` as dependencies.
+Same shape as `solid-cache-package-skeleton` and RFC 0177's
+`actioncable-package-skeleton`. Takes `@blazetrails/activerecord`,
+`@blazetrails/actioncable` and `@blazetrails/activejob` as dependencies.
 
 ## Acceptance criteria
 

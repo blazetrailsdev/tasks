@@ -2,7 +2,7 @@
 title: "Create packages/solid-cache as a published workspace package and enroll it in compare"
 status: draft
 updated: 2026-10-17
-rfc: "0000-solid-stack"
+rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cache"]
 deps: ["vendor-solid-cache-queue-cable-gems"]

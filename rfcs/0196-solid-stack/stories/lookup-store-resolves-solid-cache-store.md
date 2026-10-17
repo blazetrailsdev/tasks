@@ -2,7 +2,7 @@
 title: "lookup_store(:solid_cache_store) resolves SolidCache::Store"
 status: draft
 updated: 2026-10-17
-rfc: "0000-solid-stack"
+rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["activesupport", "solid-cache"]
 deps: ["port-solid-cache-entry-model-and-store"]

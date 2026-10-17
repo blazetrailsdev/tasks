@@ -1,11 +1,11 @@
 ---
-title: "Port solid_queue:install"
+title: "Port solid_cache:install"
 status: draft
 updated: 2026-10-17
-rfc: "0000-solid-stack"
+rfc: "0196-solid-stack"
 cluster: solid-stack
-packages: ["solid-queue"]
-deps: ["port-solid-queue-supervisor"]
+packages: ["solid-cache"]
+deps: ["port-solid-cache-entry-model-and-store"]
 deps-rfc: []
 est-loc: 150
 pr: null
@@ -17,8 +17,8 @@ closed-reason: null
 
 ## Context
 
-`vendor/solid_queue/v1.1.3/lib/generators/solid_queue/install/install_generator.rb` and its
-`templates/` copy config/queue.yml, config/recurring.yml, db/queue_schema.rb and bin/jobs and set the production queue adapter into the app. trailties' generator base already has
+`vendor/solid_cache/v1.0.7/lib/generators/solid_cache/install/install_generator.rb` and its
+`templates/` copy config/cache.yml and db/cache_schema.rb and point production at :solid_cache_store into the app. trailties' generator base already has
 Thor-style `generate` / `template`
 (`packages/trailties/src/generators/actions.ts`, `base.ts`).
 

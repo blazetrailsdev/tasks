@@ -2,7 +2,7 @@
 title: "Port solid_cable:install"
 status: draft
 updated: 2026-10-17
-rfc: "0000-solid-stack"
+rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cable"]
 deps: ["port-solid-cable-adapter"]

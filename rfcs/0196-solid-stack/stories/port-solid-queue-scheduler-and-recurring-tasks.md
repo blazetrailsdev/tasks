@@ -2,7 +2,7 @@
 title: "Port SolidQueue::Scheduler and recurring tasks"
 status: draft
 updated: 2026-10-17
-rfc: "0000-solid-stack"
+rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]
 deps: ["port-solid-queue-worker"]

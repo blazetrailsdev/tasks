@@ -1,5 +1,5 @@
 ---
-rfc: "0000-solid-stack"
+rfc: "0196-solid-stack"
 title: "Solid Cache, Solid Queue and Solid Cable as the trails production backends"
 status: draft
 created: 2026-10-17
@@ -10,12 +10,7 @@ clusters:
   - solid-stack
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
-     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
-
-# RFC — Solid Cache, Solid Queue and Solid Cable as the trails production backends
+# RFC 0196 — Solid Cache, Solid Queue and Solid Cable as the trails production backends
 
 ## Summary
 

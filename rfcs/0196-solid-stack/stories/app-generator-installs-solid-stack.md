@@ -2,7 +2,7 @@
 title: "AppGenerator runs the Solid install generators unless --skip-solid"
 status: draft
 updated: 2026-10-17
-rfc: "0000-solid-stack"
+rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["trailties"]
 deps:
