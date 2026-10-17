@@ -190,3 +190,4 @@ None.
 
 - 2026-09-27: initial RFC
 - 2026-09-27: re-measured on trails `main` @ `2558bb83f4`: actiondispatch 1651/1780 methods; the five measurement defects all reproduce; sibling story counts updated (0160: 14, 0166: 8).
+- 2026-10-17: triage of the assertion mismatches (`triage-actionpack-assertion-mismatches`), measured on trails `main` @ `94b071b93d`. Marks in `assertion-mismatch-mark.json`: actiondispatch `{assertionCount: 312, kind: 468, value: 70}`, actioncontroller `{91, 158, 25}`, abstractcontroller `{5, 18, 0}`. Divergence is filed per file group as the eight `assertion-burndown-*` stories; the unmapped-helper residue (`assert_response` 70 rows, `assert_policy` 9, the cookie helpers 11, and others) as `assertion-kinds-map-actionpack-test-assertions`. actiondispatch's burndown naming rows went from 64 to 26; the rest are `naming-residue-burndown-actiondispatch-remainder`.
