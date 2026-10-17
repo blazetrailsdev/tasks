@@ -1,6 +1,6 @@
 ---
 title: "API.without_modules ignores its arguments and api.rb's load hooks are not run; Base::MODULES is a name list"
-status: claimed
+status: in-progress
 updated: 2026-10-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#9010
 claim: "2026-10-17T19:42:44Z"
 assignee: "api-without-modules-and-load-hooks-are-not-ported"
 blocked-by: null

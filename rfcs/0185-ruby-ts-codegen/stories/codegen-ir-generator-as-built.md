@@ -1,6 +1,6 @@
 ---
 title: "The IR generator as built: Prism IR, gem index, oracle-typed lowering, activejob pilot"
-status: draft
+status: in-progress
 updated: 2026-10-17
 rfc: "0185-ruby-ts-codegen"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 2500
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#9004
+claim: "2026-10-17T20:14:20Z"
+assignee: "codegen-ir-generator-as-built"
 blocked-by: null
 closed-reason: null
 ---

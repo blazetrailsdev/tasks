@@ -1,7 +1,7 @@
 ---
 title: "IR node set, Prism bridge and IR builder, with an IR dump CLI over activejob"
-status: draft
-updated: 2026-10-07
+status: closed
+updated: 2026-10-17
 rfc: "0185-ruby-ts-codegen"
 cluster: tooling
 packages: ["scripts"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the IR is built in Ruby (scripts/codegen/ruby/build-ir.rb, Prism to normalized JSON) with the gem index in gem-index.ts, delivered under codegen-ir-generator-as-built by trails#9004; the specified TS-side ir/ node types, prism-dump.rb bridge and codegen:ir CLI were not the design used."
 ---
 
 ## Context

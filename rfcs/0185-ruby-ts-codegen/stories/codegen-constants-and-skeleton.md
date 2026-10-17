@@ -1,7 +1,7 @@
 ---
 title: "Constant resolver, import planner and skeleton emitter over a virtual TypeScript program"
-status: draft
-updated: 2026-10-07
+status: closed
+updated: 2026-10-17
 rfc: "0185-ruby-ts-codegen"
 cluster: tooling
 packages: ["scripts"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: constants resolve through the gem index and resolve.ts (trails exports, TopLevel seats, namespace autoloads), delivered under codegen-ir-generator-as-built by trails#9004; generation emits full bodies directly, so no declaration-skeleton pass exists to build."
 ---
 
 ## Context

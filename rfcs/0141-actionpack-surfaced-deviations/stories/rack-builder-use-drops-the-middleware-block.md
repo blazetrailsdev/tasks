@@ -1,6 +1,6 @@
 ---
 title: "rack-builder-use-drops-the-middleware-block"
-status: draft
+status: in-progress
 updated: 2026-10-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9010
+claim: "2026-10-17T20:49:18Z"
+assignee: "rack-builder-use-drops-the-middleware-block"
 blocked-by: null
 closed-reason: null
 ---

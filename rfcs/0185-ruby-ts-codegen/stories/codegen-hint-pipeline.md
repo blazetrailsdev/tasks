@@ -1,7 +1,7 @@
 ---
 title: "Hint pipeline: sidecar format and validator, TracePoint recorder, model hint pass, and the activejob sidecar"
-status: draft
-updated: 2026-10-07
+status: closed
+updated: 2026-10-17
 rfc: "0185-ruby-ts-codegen"
 cluster: tooling
 packages: ["scripts"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: types come from an oracle extracted from the hand port (hand-oracle.ts), not from a trace-and-model hint sidecar; the generator built under codegen-ir-generator-as-built (trails#9004) has no sidecar to define, record or validate."
 ---
 
 ## Context

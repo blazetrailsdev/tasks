@@ -1,7 +1,7 @@
 ---
 title: "Lowering for expressions and control flow, the decline machinery and the one-shot driver: first typechecking output"
-status: draft
-updated: 2026-10-07
+status: closed
+updated: 2026-10-17
 rfc: "0185-ruby-ts-codegen"
 cluster: tooling
 packages: ["scripts"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: lowering and emission were built as lower.ts and emit.ts under codegen-ir-generator-as-built (trails#9004), with declines written inline rather than through a declined.ts template and re-emit loop; strict tsc on generated activejob (13 errors at #9004) is tracked by codegen-activejob-typechecks-strict."
 ---
 
 ## Context

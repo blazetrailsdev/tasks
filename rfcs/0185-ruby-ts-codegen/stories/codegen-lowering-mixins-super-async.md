@@ -1,7 +1,7 @@
 ---
 title: "Lowering for mixins, macros, super and the async fixpoint: the marker count falls"
-status: draft
-updated: 2026-10-07
+status: closed
+updated: 2026-10-17
 rfc: "0185-ruby-ts-codegen"
 cluster: tooling
 packages: ["scripts"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: mixins, super (including module initialize inlining) and the async fixpoint were built under codegen-ir-generator-as-built (trails#9004) on the oracle design, not on the checker-resolved edges this story assumes, so its marker-table baseline from codegen-lowering-and-first-output does not exist."
 ---
 
 ## Context

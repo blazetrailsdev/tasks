@@ -1,7 +1,7 @@
 ---
 title: "Pilot generation run over activejob: the report and the codegen/activejob branch"
-status: draft
-updated: 2026-10-07
+status: closed
+updated: 2026-10-17
 rfc: "0185-ruby-ts-codegen"
 cluster: tooling
 packages: ["scripts"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the activejob pilot was run as trails#9005, a draft PR with the generated tree in place of the hand port, not as a codegen/activejob branch with an audit report; its measured figures are in codegen-ir-generator-as-built."
 ---
 
 ## Context

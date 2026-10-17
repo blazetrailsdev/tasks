@@ -1,7 +1,7 @@
 ---
 title: "Probe lowering, checker-backed call resolver and the resolution report CLI, carrying the kill criterion"
-status: draft
-updated: 2026-10-07
+status: closed
+updated: 2026-10-17
 rfc: "0185-ruby-ts-codegen"
 cluster: tooling
 packages: ["scripts"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: calls resolve through the gem index plus the hand-port type oracle, not a TypeScript-checker resolver over a sidecar, so the 85% sidecar-resolution checkpoint has nothing to measure; call-parity is measured instead by measure-all.sh (2263 identical call sets on activerecord at trails#9004)."
 ---
 
 ## Context
