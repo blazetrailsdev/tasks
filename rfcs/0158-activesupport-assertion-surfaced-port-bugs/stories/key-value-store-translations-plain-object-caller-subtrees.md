@@ -2,7 +2,7 @@
 title: "i18n: KeyValue#store_translations merges a plain-object caller's subtrees (key_value.rb:86-100)"
 status: draft
 updated: 2026-10-16
-rfc: "0170-psych-in-ruby-compat"
+rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
