@@ -2,7 +2,7 @@
 title: "port-integration-runner-module-and-runner-tests"
 status: blocked
 updated: 2026-09-30
-rfc: "0123-blocked-convergence-holding"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps:
