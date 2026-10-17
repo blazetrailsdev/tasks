@@ -1,6 +1,6 @@
 ---
 title: "actionview-url-and-sanitize-helper-concerns-and-sanitizer-memos"
-status: in-progress
+status: done
 updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null

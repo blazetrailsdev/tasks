@@ -1,6 +1,6 @@
 ---
 title: "AtomFeedHelper: port (or record a true non-port) + atom_feed_helper_test"
-status: in-progress
+status: done
 updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null

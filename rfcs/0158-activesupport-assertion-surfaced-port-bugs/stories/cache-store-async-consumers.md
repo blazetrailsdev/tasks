@@ -1,6 +1,6 @@
 ---
 title: "cache-store-async-consumers"
-status: in-progress
+status: done
 updated: 2026-10-17
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
