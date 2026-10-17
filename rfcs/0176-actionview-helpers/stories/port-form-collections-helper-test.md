@@ -5,7 +5,8 @@ updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-rails-dom-testing-selector-assertions
 deps-rfc: []
 est-loc: null
 priority: null
