@@ -8,8 +8,6 @@ packages: []
 deps:
   - cache-store-async-store-and-local-stores
   - cache-store-async-consumers
-  - redis-cache-store-async-over-npm-client
-  - mem-cache-store-async-over-npm-client
 deps-rfc: []
 est-loc: null
 priority: null
