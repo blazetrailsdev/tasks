@@ -1,6 +1,6 @@
 ---
 title: "test-compare-honours-rack-release-gate"
-status: claimed
+status: in-progress
 updated: 2026-10-17
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8999
 claim: "2026-10-17T00:44:38Z"
 assignee: "inlined-report-honours-inlined-from-constructor-tags"
 blocked-by: null
