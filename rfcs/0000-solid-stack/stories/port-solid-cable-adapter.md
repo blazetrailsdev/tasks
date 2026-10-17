@@ -7,11 +7,12 @@ cluster: solid-stack
 packages: ["solid-cable"]
 deps:
   [
-    "vendor-solid-cache-queue-cable-gems",
+    "solid-cable-package-skeleton",
+    "port-activejob-execution",
     "port-actioncable-subscriber-map-base-adapter-and-channel-prefix",
   ]
 deps-rfc: []
-est-loc: 500
+est-loc: 450
 pr: null
 claim: null
 assignee: null
@@ -26,13 +27,17 @@ subclasses `SubscriptionAdapter::Base` and polls `SolidCable::Message`
 (`app/models/solid_cable/message.rb`) through a `Listener` thread. RFC 0177
 ports the base adapter and the subscriber map
 (`port-actioncable-subscriber-map-base-adapter-and-channel-prefix`). The
-Redis adapter is in the unported register.
+Redis adapter is in the unported register. The trim job
+(`app/jobs/solid_cable/trim_job.rb`) needs ActiveJob execution
+(`port-activejob-execution`, RFC 0169). The `solid_cable_messages` table comes
+from the gem's `lib/generators/solid_cable/install/templates/db/cable_schema.rb`.
 
 ## Acceptance criteria
 
-- `packages/solid-cable` exists (same skeleton shape as solid-cache), with the
+- In `packages/solid-cable` (from `solid-cable-package-skeleton`), the
   adapter, the `Message` model and the trim job ported at their Rails names.
-  The listener's polling loop is an async timer.
+  The table is built from the gem's `cable_schema.rb`, not a bespoke
+  table. The listener's polling loop is an async timer.
 - The gem's adapter tests run on all three AR adapters, through
   actioncable's shared `common.rb` behaviors once RFC 0177 ports them.
 - The solid_cable source turns on compare.

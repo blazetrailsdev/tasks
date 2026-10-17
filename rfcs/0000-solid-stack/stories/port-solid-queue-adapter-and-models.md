@@ -1,13 +1,18 @@
 ---
-title: "Port the solid_queue adapter, job and execution models; split the process layer"
+title: "Port the solid_queue adapter and its job and execution models"
 status: draft
 updated: 2026-10-17
 rfc: "0000-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]
-deps: ["vendor-solid-cache-queue-cable-gems", "port-activejob-queue-adapter-and-inline-adapter"]
+deps:
+  [
+    "solid-queue-package-skeleton",
+    "port-activejob-queue-adapter-and-inline-adapter",
+    "port-activejob-execution",
+  ]
 deps-rfc: []
-est-loc: 650
+est-loc: 600
 pr: null
 claim: null
 assignee: null
@@ -27,8 +32,9 @@ are already in the unported register (`scripts/parity/unported-files/activejob.t
 
 ## Acceptance criteria
 
-- `packages/solid-queue` exists, with the adapter and the job and execution
-  models ported. Enqueueing a job writes the Rails rows on all three adapters.
-- The process layer is filed as follow-up stories in this RFC, one per Rails
-  process class. Each one records the RFC's open question on fork versus
-  worker threads.
+- In `packages/solid-queue` (from `solid-queue-package-skeleton`), the
+  adapter and the job and execution models are ported. Tables come from the
+  gem's `lib/generators/solid_queue/install/templates/db/queue_schema.rb`. Enqueueing a job writes the Rails rows on all three adapters.
+- The process layer is not in scope: `port-solid-queue-worker`,
+  `port-solid-queue-dispatcher`, `port-solid-queue-scheduler-and-recurring-tasks`
+  and `port-solid-queue-supervisor` own it.

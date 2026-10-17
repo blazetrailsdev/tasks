@@ -23,8 +23,11 @@ closed-reason: null
 camelized name. The gem supplies
 `lib/active_support/cache/solid_cache_store.rb`, which defines
 `ActiveSupport::Cache::SolidCacheStore = SolidCache::Store`.
-`cache-lookup-store-has-no-mem-cache-or-redis-store` (RFC 0158) covers the
-`:mem_cache_store` / `:redis_cache_store` arms, which are parked.
+RFC 0158's `cache-lookup-store-has-no-mem-cache-or-redis-store` covered the
+`:mem_cache_store` / `:redis_cache_store` arms. Those stores are unported
+(`SOLID_STACK_ONLY`, trails#9009), so this PR closes that story; its parked
+tests stay skipped against the unported register. Only this story edits
+`lookupStore`.
 
 ## Acceptance criteria
 

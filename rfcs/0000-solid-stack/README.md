@@ -55,9 +55,11 @@ RFC 0169 (activejob) and RFC 0177 (actioncable) both list their Solid gem as
   of RFC 0177's base adapter and subscriber map.
 - **Solid Queue** ports the `:solid_queue` queue adapter, its job and execution
   models, and the worker, dispatcher and supervisor processes, on top of
-  RFC 0169's async adapter interface.
+  RFC 0169's async adapter interface. Each package gets its own skeleton
+  story, and each gem's `install` generator is its own story.
 - **Memcached and Redis** stay unported. Their Rails files are in the parity
-  unported-files register with a `SOLID_STACK_ONLY` reason: activesupport's
+  unported-files register (`scripts/parity/unported-files/{activesupport,actionpack,actioncable}.ts`
+  in trails, landed by trails#9009) with a `SOLID_STACK_ONLY` reason: activesupport's
   `cache/mem_cache_store.rb` and `cache/redis_cache_store.rb`, actionpack's
   `dispatch/session/mem_cache_store_test.rb`, and actioncable's
   `subscription_adapter/redis.rb`. ActiveJob's gem queue adapters were already
@@ -74,6 +76,13 @@ RFC 0169 (activejob) and RFC 0177 (actioncable) both list their Solid gem as
 
 - **Port Redis first, as Rails' pre-8 default.** That needs an npm client as a
   peer dependency and a Redis CI service. The Solid gems need neither.
+- **Leave the Solid gems unvendored and out of scope** (RFC 0169 / 0177's
+  stance). Then `trails new` has no production cache, queue or cable backend
+  without an external service, and the gems' tests never enter parity.
+- **One `@blazetrails/solid` package.** Rails ships three gems with separate
+  versions, gemspecs and test suites; one package would break the
+  one-package-per-source compare mapping and force apps that want only cache
+  to install the queue's process layer.
 
 ## Rollout
 
@@ -81,14 +90,22 @@ RFC 0169 (activejob) and RFC 0177 (actioncable) both list their Solid gem as
 2. Phase 2 (cache): `solid-cache-package-skeleton`,
    `port-solid-cache-entry-model-and-store`,
    `lookup-store-resolves-solid-cache-store`
-3. Phase 3 (cable): `port-solid-cable-adapter`
-4. Phase 4 (queue): `port-solid-queue-adapter-and-models`
-5. Phase 5: `app-generator-installs-solid-stack`
+3. Phase 3 (cable): `solid-cable-package-skeleton`, `port-solid-cable-adapter`
+4. Phase 4 (queue): `solid-queue-package-skeleton`,
+   `port-solid-queue-adapter-and-models`, `port-solid-queue-worker`,
+   `port-solid-queue-dispatcher`,
+   `port-solid-queue-scheduler-and-recurring-tasks`,
+   `port-solid-queue-supervisor`
+5. Phase 5 (generators): `solid-cache-install-generator`,
+   `solid-queue-install-generator`, `solid-cable-install-generator`,
+   `app-generator-installs-solid-stack`
 
 ## Verification
 
-- `parity:api` and `parity:test` report all three gems, with deltas that are
-  never negative.
+- `parity:api` and `parity:test` report all three gems. At RFC close each
+  gem is at 100% `parity:api` for its `lib/` and `app/` files and at least
+  90% `parity:test` (ported, not skipped), with any gap listed in the
+  unported register with a reason.
 - `ActiveSupport::Cache.lookup_store(:solid_cache_store)` returns a working
   store on SQLite, PostgreSQL and MariaDB.
 - An app generated with `trails new` runs cache, jobs and cable on the Solid
@@ -98,4 +115,7 @@ RFC 0169 (activejob) and RFC 0177 (actioncable) both list their Solid gem as
 
 - Should Solid Queue's supervisor fork worker processes or run them as worker
   threads? Node's `child_process.fork` does not copy the parent's heap
-  (CLAUDE.md, "Runtime facts Node does not expose").
+  (CLAUDE.md, "Runtime facts Node does not expose"). **Deferred to
+  `port-solid-queue-supervisor`**, which records the decision here. The
+  worker, dispatcher and scheduler stories run in-process and do not depend
+  on the answer.
