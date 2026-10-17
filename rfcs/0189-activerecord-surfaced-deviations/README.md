@@ -24,6 +24,7 @@ clusters:
   - "relation"
   - "model"
   - "rails-deviation"
+  - "fidelity"
 related-rfcs:
   - "0174-activerecord-api-parity-100"
   - "0175-activerecord-test-parity-100"
