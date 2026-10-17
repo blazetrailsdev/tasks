@@ -22,5 +22,5 @@ closed-reason: null
 
 ## Acceptance criteria
 
-- [ ] Four tag files ported one per Rails file, using SelectRenderer; the four helper + FormBuilder methods ported.
+- [ ] Four tag files ported one per Rails file, using SelectRenderer; the four helper + FormBuilder methods ported, plus `time_zone_options_for_select` (form_options_helper.rb) and `weekday_options_for_select`, which those tags render through (moved from `port-form-options-helper-and-select-tag`).
 - [ ] The matching `form_options_helper_test.rb` / i18n cases ported; parity rows for these four files and `form_options_helper.rb` at 0 missing.

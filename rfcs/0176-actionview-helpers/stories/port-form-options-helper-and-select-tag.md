@@ -22,6 +22,6 @@ closed-reason: null
 
 ## Acceptance criteria
 
-- [ ] `helpers/form-options-helper.ts` as a live Module (`select`, the `*options_for_select` / `options_from_collection_for_select` / `option_groups_from_collection_for_select` / `grouped_options_for_select` / `time_zone_options_for_select` / `weekday_options_for_select` family, privates), included where Rails includes it; FormBuilder#select.
+- [ ] `helpers/form-options-helper.ts` as a live Module (`select`, the `*options_for_select` / `options_from_collection_for_select` / `option_groups_from_collection_for_select` / `grouped_options_for_select` family; `time_zone_options_for_select` / `weekday_options_for_select` moved to `port-collection-grouped-time-zone-weekday-select-tags`, privates), included where Rails includes it; FormBuilder#select.
 - [ ] `tags/select-renderer.ts`, `tags/select.ts`.
 - [ ] The `options_for_select` / `select` parts of both test files ported (the rest go with the sibling story).
