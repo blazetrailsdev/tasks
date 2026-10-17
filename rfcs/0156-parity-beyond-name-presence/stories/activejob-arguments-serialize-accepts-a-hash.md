@@ -1,6 +1,6 @@
 ---
 title: "activejob-arguments-serialize-accepts-a-hash"
-status: in-progress
+status: done
 updated: 2026-10-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

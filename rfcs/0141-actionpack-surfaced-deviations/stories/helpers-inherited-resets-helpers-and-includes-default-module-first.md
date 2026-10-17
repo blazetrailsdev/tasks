@@ -1,6 +1,6 @@
 ---
 title: "AbstractController::Helpers inherited resets _helpers and includes the default helper module beneath class-body helpers"
-status: in-progress
+status: done
 updated: 2026-10-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

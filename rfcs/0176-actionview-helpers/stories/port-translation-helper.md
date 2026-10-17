@@ -1,6 +1,6 @@
 ---
 title: "Port ActionView::Helpers::TranslationHelper + translation_helper_test"
-status: in-progress
+status: done
 updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "rack-builder-use-drops-the-middleware-block"
-status: in-progress
+status: done
 updated: 2026-10-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Close RFC 0160 — call baselines and residue to zero"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-10-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]
@@ -25,9 +25,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9012
+claim: "2026-10-17T21:54:14Z"
+assignee: "testing-harness-parity-residue"
 blocked-by: null
 closed-reason: null
 ---
