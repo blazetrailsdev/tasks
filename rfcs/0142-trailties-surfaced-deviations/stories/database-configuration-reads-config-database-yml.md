@@ -2,7 +2,7 @@
 title: "Database configuration: add Rails' config/database.yml arm; receipt the .ts/.js/.json arms"
 status: ready
 updated: 2026-10-14
-rfc: "0170-psych-in-ruby-compat"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: fidelity
 packages: ["trailties", "activerecord"]
 deps: ["configuration-file-parse-through-psych-unsafe-load"]
