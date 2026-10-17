@@ -1,6 +1,6 @@
 ---
 title: "cache-store-async-consumers"
-status: claimed
+status: in-progress
 updated: 2026-10-17
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["cache-store-async-store-and-local-stores"]
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
+pr: trails#9003
 claim: "2026-10-17T02:04:30Z"
 assignee: "cache-store-async-consumers"
 blocked-by: null
