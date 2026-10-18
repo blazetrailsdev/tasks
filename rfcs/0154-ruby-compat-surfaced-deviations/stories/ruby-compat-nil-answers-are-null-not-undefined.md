@@ -1,6 +1,6 @@
 ---
 title: "first, last, zip and values_at answer nil as null, not undefined"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

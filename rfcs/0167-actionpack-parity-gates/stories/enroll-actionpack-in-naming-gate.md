@@ -1,7 +1,7 @@
 ---
 title: "Enroll actiondispatch, actioncontroller and abstractcontroller in the naming gate"
 status: ready
-updated: 2026-10-16
+updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]

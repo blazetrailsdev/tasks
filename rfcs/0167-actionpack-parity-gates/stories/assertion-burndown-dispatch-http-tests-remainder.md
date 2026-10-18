@@ -1,6 +1,6 @@
 ---
 title: "assertion-burndown-dispatch-http-tests-remainder"
-status: draft
+status: ready
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "temporal-seats-answer-iso8601-and-xmlschema"
-status: ready
+status: claimed
 updated: 2026-10-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-18T14:40:31Z"
+assignee: "temporal-seats-answer-iso8601-and-xmlschema"
 blocked-by: null
 closed-reason: null
 ---

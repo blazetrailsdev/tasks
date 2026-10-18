@@ -1,7 +1,7 @@
 ---
 title: "Port activerecord multifetch_cache_test.rb and relation_cache_test.rb"
 status: ready
-updated: 2026-10-17
+updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]

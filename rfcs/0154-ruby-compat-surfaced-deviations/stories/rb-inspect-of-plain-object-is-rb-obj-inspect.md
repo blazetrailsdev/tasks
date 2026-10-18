@@ -1,6 +1,6 @@
 ---
 title: "rb-inspect-of-plain-object-is-rb-obj-inspect"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

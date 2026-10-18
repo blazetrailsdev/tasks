@@ -1,6 +1,6 @@
 ---
 title: "Port actionpack/abstract/abstract_controller_test.rb"
-status: ready
+status: claimed
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-18T14:40:31Z"
+assignee: "temporal-seats-answer-iso8601-and-xmlschema"
 blocked-by: null
 closed-reason: null
 ---
