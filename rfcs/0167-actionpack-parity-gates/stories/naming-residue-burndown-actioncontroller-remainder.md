@@ -5,7 +5,9 @@ updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []
-deps: []
+deps:
+  - test-request-assign-parameters-binary-data-b
+  - instrumentation-status-code-reads-the-exception-class-path
 deps-rfc: []
 est-loc: 120
 priority: null
