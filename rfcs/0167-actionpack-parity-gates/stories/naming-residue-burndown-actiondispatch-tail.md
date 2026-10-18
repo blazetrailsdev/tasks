@@ -32,4 +32,6 @@ Remainder of `naming-residue-burndown-actiondispatch-remainder`. `pnpm parity:ap
 ## Acceptance criteria
 
 - Each row above is converged to the Rails identifier, or receipted with `@missingRailsName … — PERMANENT` where `classifyPair` files the pair permanent.
-- `pnpm parity:api:calls:args:report` shows 0 burndown-class naming rows for actiondispatch.
+- `pnpm parity:api:calls:args:report` shows none of the `pattern.ts`, `debug-locks.ts` or
+  `mapper.ts` `check_via` burndown rows. The exception-wrapper, public-exceptions, static and
+  integration rows moved to `naming-residue-burndown-actiondispatch-last`.

@@ -40,6 +40,10 @@ Rails body with the file's `draw()` helper, `t.get`, `t.response.body` and
 
 ## Acceptance criteria
 
-- Each row above that is a real divergence is converged by porting the Rails body.
-- `pnpm parity:test:assertions` shows no divergence rows for these tests, and the
+- Each row above that is a real divergence is converged by porting the Rails body, except
+  the seven moved to `assertion-burndown-dispatch-routing-test-scope-tail` (shallow nested
+  resources, custom resource routes are scoped, constraints are merged from scope, resources
+  are not pluralized, URL helpers raise message with mixed parameters when generation fails,
+  both paths with partial dynamic segments are recognised, block redirect commits flash).
+- `pnpm parity:test:assertions` shows no divergence rows for the remaining tests, and the
   actiondispatch mark in `scripts/test-compare/assertion-mismatch-mark.json` is tightened.
