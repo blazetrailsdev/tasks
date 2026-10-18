@@ -1,6 +1,6 @@
 ---
 title: "Port ERB::Erubi's add_text/add_expression/add_code/add_postamble hooks over an Erubi::Engine-shaped TSE compiler"
-status: draft
+status: closed
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: trails has no Erubi class; the bufvar test calls the TSE compiler directly (owner ruling on trails#9037)"
 ---
 
 ## Context

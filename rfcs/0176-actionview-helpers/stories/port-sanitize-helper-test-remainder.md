@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining sanitize_helper_test.rb tests"
-status: claimed
+status: done
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#9036
 claim: "2026-10-18T17:44:53Z"
 assignee: "assertion-burndown-dispatch-routing-test-remainder"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Port ERB::Erubi's bufvar option for the TSE compiler"
-status: ready
+status: in-progress
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9037
+claim: "2026-10-18T18:14:53Z"
+assignee: "actionview-helpers-umbrella-eager-load-and-final-sweep"
 blocked-by: null
 closed-reason: null
 ---

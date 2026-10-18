@@ -1,6 +1,6 @@
 ---
 title: "rb-equal-matches-a-ruby-date-against-its-temporal-seat"
-status: draft
+status: claimed
 updated: 2026-10-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-18T18:44:54Z"
+assignee: "rb-equal-matches-a-ruby-date-against-its-temporal-seat"
 blocked-by: null
 closed-reason: null
 ---

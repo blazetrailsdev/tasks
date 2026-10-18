@@ -1,7 +1,7 @@
 ---
 title: "Helpers umbrella: eager_load! and the 0-missing helper sweep"
-status: ready
-updated: 2026-10-16
+status: in-progress
+updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -21,9 +21,9 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9037
+claim: "2026-10-18T18:14:53Z"
+assignee: "actionview-helpers-umbrella-eager-load-and-final-sweep"
 blocked-by: null
 closed-reason: null
 ---

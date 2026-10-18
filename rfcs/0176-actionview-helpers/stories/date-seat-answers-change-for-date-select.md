@@ -1,6 +1,6 @@
 ---
 title: "date-seat-answers-change-for-date-select"
-status: draft
+status: ready
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "tagged-logging-tagged-awaits-an-async-block"
-status: draft
+status: ready
 updated: 2026-10-18
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "assertion-burndown-dispatch-http-tests-tail"
-status: draft
+status: claimed
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-18T18:44:54Z"
+assignee: "rb-equal-matches-a-ruby-date-against-its-temporal-seat"
 blocked-by: null
 closed-reason: null
 ---
