@@ -5,7 +5,10 @@ updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
-deps: ["naming-residue-burndown-actioncontroller", "naming-residue-burndown-actiondispatch"]
+deps:
+  - naming-residue-burndown-actioncontroller
+  - naming-residue-burndown-actiondispatch
+  - naming-residue-burndown-actioncontroller-remainder
 deps-rfc: []
 est-loc: 60
 priority: null
