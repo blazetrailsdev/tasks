@@ -1,6 +1,6 @@
 ---
 title: "Port actionpack abstract helper/render and controller capture suites"
-status: claimed
+status: done
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#9028
 claim: "2026-10-18T14:40:31Z"
 assignee: "temporal-seats-answer-iso8601-and-xmlschema"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "DateHelper: date_select/time_select/datetime_select tags and time_tag"
-status: ready
-updated: 2026-10-16
+status: claimed
+updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-18T15:56:44Z"
+assignee: "assertion-burndown-debug-exceptions-tests"
 blocked-by: null
 closed-reason: null
 ---
