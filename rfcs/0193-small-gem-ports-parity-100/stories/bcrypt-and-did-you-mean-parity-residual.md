@@ -1,6 +1,6 @@
 ---
 title: "bcrypt and did-you-mean residual: pins, one bcrypt argument row, two did-you-mean moved extras"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals

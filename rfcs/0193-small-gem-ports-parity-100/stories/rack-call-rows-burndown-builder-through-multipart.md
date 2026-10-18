@@ -1,6 +1,6 @@
 ---
 title: "Burn rack's call-mismatch rows to zero: builder, common_logger, directory, head, headers, lock, media_type, mime, mock_response, multipart"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-calls

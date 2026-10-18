@@ -1,6 +1,6 @@
 ---
 title: "A registered class answers JS ToString with its Ruby Module#to_s"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

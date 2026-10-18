@@ -1,6 +1,6 @@
 ---
 title: "hwia-to-hash-answers-a-plain-object-without-defaults"
-status: claimed
+status: in-progress
 updated: 2026-10-18
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#9024
 claim: "2026-10-18T01:28:24Z"
 assignee: "hwia-to-hash-answers-a-plain-object-without-defaults"
 blocked-by: null

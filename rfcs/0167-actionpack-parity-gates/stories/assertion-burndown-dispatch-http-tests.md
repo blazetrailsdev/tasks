@@ -1,6 +1,6 @@
 ---
 title: "Converge CSP, response, cookie-store and mime-type test assertion mismatches"
-status: claimed
+status: in-progress
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#9024
 claim: "2026-10-18T01:28:24Z"
 assignee: "hwia-to-hash-answers-a-plain-object-without-defaults"
 blocked-by: null

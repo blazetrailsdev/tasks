@@ -1,6 +1,6 @@
 ---
 title: "Converge dispatch/request_test assertion mismatches"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
