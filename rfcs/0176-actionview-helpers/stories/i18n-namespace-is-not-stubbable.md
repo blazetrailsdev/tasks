@@ -1,6 +1,6 @@
 ---
 title: "I18n is an ES module namespace, so assert_called_with(I18n, :translate) cannot stub it"
-status: draft
+status: ready
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Call-arg block padding resolves the callee by receiver, not by same-package name"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null

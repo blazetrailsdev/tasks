@@ -1,7 +1,7 @@
 ---
 title: "Port the remaining template/template_test.rb tests"
-status: ready
-updated: 2026-10-17
+status: in-progress
+updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9033
+claim: "2026-10-18T17:14:51Z"
+assignee: "port-abstract-layouts-test"
 blocked-by: null
 closed-reason: null
 ---

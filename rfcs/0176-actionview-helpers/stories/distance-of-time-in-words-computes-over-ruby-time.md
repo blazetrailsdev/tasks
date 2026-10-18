@@ -1,7 +1,7 @@
 ---
 title: "distance_of_time_in_words computes over ::Time, not a JS Date"
-status: draft
-updated: 2026-10-17
+status: ready
+updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "Converge debug-exceptions test assertion mismatches"
-status: ready
+status: in-progress
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9034
+claim: "2026-10-18T17:32:11Z"
+assignee: "assertion-burndown-debug-exceptions-tests"
 blocked-by: null
 closed-reason: null
 ---

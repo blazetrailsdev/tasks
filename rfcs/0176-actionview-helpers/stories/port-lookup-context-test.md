@@ -1,6 +1,6 @@
 ---
 title: "Port template/lookup_context_test.rb and move its misplaced tests"
-status: claimed
+status: done
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#9032
 claim: "2026-10-18T16:44:52Z"
 assignee: "assertion-burndown-debug-exceptions-tests"
 blocked-by: null

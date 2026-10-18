@@ -1,6 +1,6 @@
 ---
 title: "port-action-view-i18n-proxy"
-status: draft
+status: ready
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
