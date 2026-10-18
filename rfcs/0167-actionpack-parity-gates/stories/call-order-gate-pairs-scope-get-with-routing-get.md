@@ -1,6 +1,6 @@
 ---
 title: "Call-order gate pairs Scope#get (Ruby []) with Mapper's routing get"
-status: draft
+status: done
 updated: 2026-10-17
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9014
+claim: "2026-10-17T23:18:48Z"
+assignee: "call-order-gate-pairs-scope-get-with-routing-get"
 blocked-by: null
 closed-reason: null
 ---

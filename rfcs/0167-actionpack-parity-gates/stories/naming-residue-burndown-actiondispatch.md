@@ -1,7 +1,7 @@
 ---
 title: "Burn actiondispatch's naming-class call-argument rows to zero"
-status: ready
-updated: 2026-10-16
+status: in-progress
+updated: 2026-10-17
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
@@ -16,9 +16,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9016
+claim: "2026-10-17T23:22:35Z"
+assignee: "log-subscriber-level-helpers-keep-rails-names"
 blocked-by: null
 closed-reason: null
 ---

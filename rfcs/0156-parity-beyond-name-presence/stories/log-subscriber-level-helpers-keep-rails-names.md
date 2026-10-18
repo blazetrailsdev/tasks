@@ -1,6 +1,6 @@
 ---
 title: "log-subscriber-level-helpers-keep-rails-names"
-status: ready
+status: in-progress
 updated: 2026-10-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#9016
+claim: "2026-10-17T23:22:35Z"
+assignee: "log-subscriber-level-helpers-keep-rails-names"
 blocked-by: null
 closed-reason: null
 ---

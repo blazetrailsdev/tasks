@@ -1,6 +1,6 @@
 ---
 title: "Burn actiondispatch's remaining naming-class call-argument rows to zero"
-status: draft
+status: ready
 updated: 2026-10-17
 rfc: "0167-actionpack-parity-gates"
 cluster: null

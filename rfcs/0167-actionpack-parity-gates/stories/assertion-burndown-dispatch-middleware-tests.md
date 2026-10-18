@@ -1,6 +1,6 @@
 ---
 title: "Converge debug-exceptions, exception-wrapper and middleware-stack test assertion mismatches"
-status: draft
+status: ready
 updated: 2026-10-17
 rfc: "0167-actionpack-parity-gates"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port compiled_templates, partial_iteration, template_error, test_test and testing resolver suites"
-status: draft
+status: ready
 updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null

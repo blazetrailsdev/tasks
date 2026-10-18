@@ -1,7 +1,7 @@
 ---
 title: "Triage actionpack's assertion mismatches into per-file burn-down stories"
-status: ready
-updated: 2026-10-16
+status: in-progress
+updated: 2026-10-17
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
@@ -17,9 +17,9 @@ deps:
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9016
+claim: "2026-10-17T23:22:35Z"
+assignee: "log-subscriber-level-helpers-keep-rails-names"
 blocked-by: null
 closed-reason: null
 ---

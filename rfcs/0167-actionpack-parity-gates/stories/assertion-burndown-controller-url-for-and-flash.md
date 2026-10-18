@@ -1,6 +1,6 @@
 ---
 title: "Converge url_for, flash and flash_hash test assertion mismatches"
-status: draft
+status: claimed
 updated: 2026-10-17
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-17T23:44:50Z"
+assignee: "assertion-burndown-controller-url-for-and-flash"
 blocked-by: null
 closed-reason: null
 ---

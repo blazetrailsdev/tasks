@@ -1,6 +1,6 @@
 ---
 title: "trailties: production `trails server` loads all 18 CLI commands and vite, because the dev-server import is static"
-status: draft
+status: done
 updated: 2026-10-17
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
@@ -9,9 +9,9 @@ deps: ["boot-graph-measurement-harness"]
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9015
+claim: "2026-10-17T23:15:53Z"
+assignee: "trailties-main-entry-point-is-the-cli"
 blocked-by: null
 ---
 

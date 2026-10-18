@@ -1,6 +1,6 @@
 ---
 title: "DateHelper#distance_of_time_in_words translates through I18n, drops invented default table"
-status: in-progress
+status: done
 updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null

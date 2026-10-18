@@ -1,6 +1,6 @@
 ---
 title: "detailArgsForAny stores the :any variants sentinel and keys through DetailsKey.detailsCacheKey"
-status: draft
+status: done
 updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9014
+claim: "2026-10-17T23:18:51Z"
+assignee: "detail-args-for-any-stores-any-variants"
 blocked-by: null
 closed-reason: null
 ---

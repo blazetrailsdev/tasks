@@ -1,6 +1,6 @@
 ---
 title: "Converge CSP, response, cookie-store and mime-type test assertion mismatches"
-status: draft
+status: ready
 updated: 2026-10-17
 rfc: "0167-actionpack-parity-gates"
 cluster: null

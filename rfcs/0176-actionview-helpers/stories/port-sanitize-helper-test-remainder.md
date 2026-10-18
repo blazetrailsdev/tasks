@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining sanitize_helper_test.rb tests"
-status: draft
+status: ready
 updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null

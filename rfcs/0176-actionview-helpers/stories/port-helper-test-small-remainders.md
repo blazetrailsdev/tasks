@@ -1,6 +1,6 @@
 ---
 title: "Port the small remainders of the text, tag, TSE and JavaScript helper suites"
-status: draft
+status: ready
 updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null

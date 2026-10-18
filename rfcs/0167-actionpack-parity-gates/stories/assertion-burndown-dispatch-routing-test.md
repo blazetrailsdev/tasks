@@ -1,6 +1,6 @@
 ---
 title: "Converge dispatch/routing_test assertion mismatches"
-status: draft
+status: ready
 updated: 2026-10-17
 rfc: "0167-actionpack-parity-gates"
 cluster: null

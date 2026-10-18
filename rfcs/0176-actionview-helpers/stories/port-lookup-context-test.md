@@ -1,6 +1,6 @@
 ---
 title: "Port template/lookup_context_test.rb and move its misplaced tests"
-status: draft
+status: ready
 updated: 2026-10-17
 rfc: "0176-actionview-helpers"
 cluster: null
