@@ -1,7 +1,7 @@
 ---
 title: "rb-inspect-of-plain-object-is-rb-obj-inspect"
-status: ready
-updated: 2026-10-17
+status: in-progress
+updated: 2026-10-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9026
+claim: "2026-10-18T13:07:02Z"
+assignee: "rb-inspect-of-plain-object-is-rb-obj-inspect"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Burn actiondispatch's remaining naming-class call-argument rows to zero"
-status: ready
-updated: 2026-10-17
+status: in-progress
+updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9026
+claim: "2026-10-18T13:07:02Z"
+assignee: "rb-inspect-of-plain-object-is-rb-obj-inspect"
 blocked-by: null
 closed-reason: null
 ---
