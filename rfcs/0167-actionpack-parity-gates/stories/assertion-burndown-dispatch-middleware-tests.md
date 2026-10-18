@@ -1,6 +1,6 @@
 ---
 title: "Converge debug-exceptions, exception-wrapper and middleware-stack test assertion mismatches"
-status: claimed
+status: done
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#9020
 claim: "2026-10-18T00:44:52Z"
 assignee: "core-exception-classes-are-registered-constants"
 blocked-by: null

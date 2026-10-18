@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: "2026-10-18T00:44:52Z"
-assignee: "core-exception-classes-are-registered-constants"
+claim: "2026-10-18T01:28:24Z"
+assignee: "hwia-to-hash-answers-a-plain-object-without-defaults"
 blocked-by: null
 closed-reason: null
 ---

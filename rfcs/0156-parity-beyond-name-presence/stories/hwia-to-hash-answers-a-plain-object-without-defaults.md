@@ -1,7 +1,7 @@
 ---
 title: "hwia-to-hash-answers-a-plain-object-without-defaults"
-status: ready
-updated: 2026-10-17
+status: claimed
+updated: 2026-10-18
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-18T01:28:24Z"
+assignee: "hwia-to-hash-answers-a-plain-object-without-defaults"
 blocked-by: null
 closed-reason: null
 ---

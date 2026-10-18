@@ -1,7 +1,7 @@
 ---
 title: "bcrypt and did-you-mean residual: pins, one bcrypt argument row, two did-you-mean moved extras"
-status: draft
-updated: 2026-10-15
+status: in-progress
+updated: 2026-10-18
 rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals
 packages: [bcrypt, did-you-mean]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9021
+claim: "2026-10-18T01:24:43Z"
+assignee: "bcrypt-and-did-you-mean-parity-residual"
 blocked-by: null
 closed-reason: null
 ---

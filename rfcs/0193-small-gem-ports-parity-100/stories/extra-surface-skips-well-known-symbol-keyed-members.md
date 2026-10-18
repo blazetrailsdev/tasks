@@ -1,7 +1,7 @@
 ---
 title: "parity:api:extra scores well-known-Symbol-keyed members as novel public surface"
-status: draft
-updated: 2026-10-15
+status: closed
+updated: 2026-10-18
 rfc: "0193-small-gem-ports-parity-100"
 cluster: comparer
 packages: [rack]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: well-known-Symbol members are meant to be scored. trails CLAUDE.md § '$! is passed explicitly, and a response body is iterated async' says the Symbol.asyncIterator / Symbol.iterator protocol members serving a Rails each carry @noRailsEquivalent PERMANENT receipts, and ~dozens of such receipts exist (actionpack response.ts, cookies.ts, rack body-proxy.ts). The three rack names were resolved directly in the bundle PR instead of folded: files.ts [Symbol.iterator] and query-parser.ts static [Symbol.hasInstance] (the sanctioned is_a? port) receipted PERMANENT; response.ts [Symbol.for('[]')] deleted, since nothing in ruby-compat dispatches through that key and Response#get already ports Rack::Response#[] (alias of get_header, response.rb:177)."
 ---
 
 ## Context

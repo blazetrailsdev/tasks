@@ -1,6 +1,6 @@
 ---
 title: "A registered class answers JS ToString with its Ruby Module#to_s"
-status: claimed
+status: in-progress
 updated: 2026-10-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: null
+pr: trails#9019
 claim: "2026-10-18T00:14:54Z"
 assignee: "class-to-string-renders-ruby-module-to-s"
 blocked-by: null

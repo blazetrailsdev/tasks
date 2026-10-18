@@ -1,6 +1,6 @@
 ---
 title: "core-exception-classes-are-registered-constants"
-status: claimed
+status: done
 updated: 2026-10-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#9020
 claim: "2026-10-18T00:44:52Z"
 assignee: "core-exception-classes-are-registered-constants"
 blocked-by: null

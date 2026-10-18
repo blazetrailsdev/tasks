@@ -1,7 +1,7 @@
 ---
 title: "trailties: '.' entry mirrors rails.rb instead of resolving to the CLI"
 status: draft
-updated: 2026-10-17
+updated: 2026-10-18
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
 packages: ["trailties"]

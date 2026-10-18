@@ -1,7 +1,7 @@
 ---
 title: "Burn rack's call-mismatch rows to zero: builder, common_logger, directory, head, headers, lock, media_type, mime, mock_response, multipart"
-status: draft
-updated: 2026-10-15
+status: in-progress
+updated: 2026-10-18
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-calls
 packages: [rack]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9021
+claim: "2026-10-18T01:24:47Z"
+assignee: "rack-call-rows-burndown-builder-through-multipart"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "exception-message-defaults-to-class-name"
-status: ready
-updated: 2026-10-17
+status: in-progress
+updated: 2026-10-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9022
+claim: "2026-10-18T01:10:27Z"
+assignee: "exception-message-defaults-to-class-name"
 blocked-by: null
 closed-reason: null
 ---
