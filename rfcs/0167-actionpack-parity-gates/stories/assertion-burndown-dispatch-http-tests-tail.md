@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 1200
+est-loc: 600
 priority: null
 pr: null
 claim: null
@@ -22,7 +22,8 @@ closed-reason: null
 
 Remainder of `assertion-burndown-dispatch-http-tests-remainder`, whose PR ported
 `ContentSecurityPolicyTest` (`vendor/rails/v8.0.2/actionpack/test/dispatch/content_security_policy_test.rb:1-326`)
-to Rails' bodies and ran out of LOC. Still open, measured with
+to Rails' bodies and ran out of LOC. `session/cookie_store_test.rb` was split out to
+`assertion-burndown-dispatch-cookie-store-test`. Still open, measured with
 `pnpm parity:test --assertions --missing --package actiondispatch` on 2026-10-18:
 
 - **CSP integration classes** (`content_security_policy_test.rb:328-760`) →
@@ -41,18 +42,12 @@ to Rails' bodies and ran out of LOC. Still open, measured with
   (`isAssertionCallee` sites in `countAssertions` / `collectAssertionKinds`),
   folding a listed name only when it resolves to a same-file helper. That pair
   measured actiondispatch count 105→87, kind 160→132 with no other package moving.
-- **`session/cookie_store_test.rb:1-471`** → `dispatch/session/cookie-store.test.ts`:
-  every `CookieStoreTest` body is a unit test on a fake jar. Rails' bodies are
-  `IntegrationTest` requests through `CookieStore` with `with_test_route_set`, the
-  overridden `get` (`:433-447`) and same-file `assert_session_cookie` (`:77-95`,
-  a fold candidate). `actioncontroller/controller/flash.test.ts` `withTestRouteSet`
-  is the trails shape for the app.
 - **`response_test.rb`**: "can wait until commit" / "stream close" (`:13-25`),
   "each isnt called if str body is written" (`:42-60`), "message" (`:214-224`),
   "read ETag and Cache-Control" / "read strong ETag" (`:253-283`).
 
 ## Acceptance criteria
 
-- The three files' real divergences are converged by porting the Rails bodies.
+- The two files' real divergences are converged by porting the Rails bodies.
 - `pnpm parity:test --assertions` shows no divergence rows for them, and the
   actiondispatch mark is lowered with `pnpm parity:test:assertions:reseed`.
