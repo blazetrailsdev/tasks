@@ -1,6 +1,6 @@
 ---
 title: "thread-each-caller-location"
-status: in-progress
+status: ready
 updated: 2026-10-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: trails#9042
-claim: "2026-10-18T20:14:53Z"
-assignee: "exc-set-backtrace-accepts-nil-and-a-string"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

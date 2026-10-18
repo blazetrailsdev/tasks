@@ -1,6 +1,6 @@
 ---
 title: "activerecord: authenticate_by's found arm runs ~0.2 ms slower than its not-found arm, leaving the timing test marginal"
-status: done
+status: closed
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -15,7 +15,7 @@ pr: null
 claim: "2026-10-18T19:44:54Z"
 assignee: "authenticate-by-found-arm-is-systematically-slower-than-not-found"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: on main (2026-10-18, local PG17, 10 rounds x 1000 found / 1000 not-found authenticate_by calls) the median found-minus-not-found delta measured 0.038 ms and 0.077 ms on two runs, under the 0.15 ms target; the _instantiate overhead is already absorbed, no code change needed."
 ---
 
 ## Context

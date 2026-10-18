@@ -1,6 +1,6 @@
 ---
 title: "tagged-logging-tagged-awaits-an-async-block"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

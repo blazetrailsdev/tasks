@@ -1,6 +1,6 @@
 ---
 title: "Credit FormHelper's attr_internal :default_form_builder in parity:api"
-status: draft
+status: ready
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null

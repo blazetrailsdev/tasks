@@ -1,6 +1,6 @@
 ---
 title: "Port SelectorAssertions#assert_dom_email once ActionMailer exists"
-status: draft
+status: ready
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null

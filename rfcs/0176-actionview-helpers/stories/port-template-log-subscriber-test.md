@@ -1,6 +1,6 @@
 ---
 title: "Port template/log_subscriber_test.rb"
-status: claimed
+status: in-progress
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#9045
 claim: "2026-10-18T19:14:54Z"
 assignee: "assertion-burndown-dispatch-cookie-store-test"
 blocked-by: null

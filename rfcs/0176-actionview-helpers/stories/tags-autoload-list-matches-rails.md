@@ -1,6 +1,6 @@
 ---
 title: "Seat every Tags class and mirror tags.rb's full autoload list"
-status: draft
+status: ready
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null

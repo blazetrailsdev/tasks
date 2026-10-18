@@ -1,6 +1,6 @@
 ---
 title: 'Spell the :any variants sentinel as ":any" (Ruby Symbol convention)'
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
