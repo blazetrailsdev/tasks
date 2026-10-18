@@ -1,7 +1,7 @@
 ---
 title: "Triage actionpack's assertion mismatches into per-file burn-down stories"
-status: in-progress
-updated: 2026-10-17
+status: done
+updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]

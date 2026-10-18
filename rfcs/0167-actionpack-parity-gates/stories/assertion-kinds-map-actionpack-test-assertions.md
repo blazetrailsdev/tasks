@@ -1,7 +1,7 @@
 ---
 title: "Map actionpack test assertions in assertion-kinds"
-status: claimed
-updated: 2026-10-17
+status: done
+updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#9018
 claim: "2026-10-17T23:44:50Z"
 assignee: "assertion-burndown-controller-url-for-and-flash"
 blocked-by: null

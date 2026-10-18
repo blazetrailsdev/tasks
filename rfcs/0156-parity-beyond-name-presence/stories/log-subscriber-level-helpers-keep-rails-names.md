@@ -1,7 +1,7 @@
 ---
 title: "log-subscriber-level-helpers-keep-rails-names"
-status: in-progress
-updated: 2026-10-17
+status: done
+updated: 2026-10-18
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

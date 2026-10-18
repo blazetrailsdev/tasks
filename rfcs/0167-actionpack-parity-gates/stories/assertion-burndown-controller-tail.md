@@ -1,7 +1,7 @@
 ---
 title: "Converge the actioncontroller assertion-mismatch tail"
-status: in-progress
-updated: 2026-10-17
+status: done
+updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
