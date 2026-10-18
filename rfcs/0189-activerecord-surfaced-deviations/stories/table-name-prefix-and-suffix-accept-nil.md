@@ -1,14 +1,14 @@
 ---
 title: "activerecord: table_name_prefix / table_name_suffix accept nil and interpolate it as an empty string"
 status: ready
-updated: 2026-10-14
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 42
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "pg-server-error-result-is-a-pg-result"
 status: ready
-updated: 2026-10-14
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 64
 pr: null
 claim: null
 assignee: null

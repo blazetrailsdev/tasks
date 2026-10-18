@@ -1,6 +1,6 @@
 ---
 title: "Port ERB::Erubi's bufvar option for the TSE compiler"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null

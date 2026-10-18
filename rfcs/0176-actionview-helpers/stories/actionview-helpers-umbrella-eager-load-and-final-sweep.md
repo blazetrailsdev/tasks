@@ -1,6 +1,6 @@
 ---
 title: "Helpers umbrella: eager_load! and the 0-missing helper sweep"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null

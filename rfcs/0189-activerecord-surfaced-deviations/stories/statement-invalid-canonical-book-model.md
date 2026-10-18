@@ -1,7 +1,7 @@
 ---
 title: "statement_invalid port declares an ad-hoc Book instead of the canonical model"
 status: ready
-updated: 2026-10-14
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 50
-priority: null
+priority: 84
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "Open async-queries sessions from an executor boundary, not a lazy seed"
 status: ready
-updated: 2026-10-14
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 180
-priority: null
+priority: 66
 pr: null
 claim: null
 assignee: null

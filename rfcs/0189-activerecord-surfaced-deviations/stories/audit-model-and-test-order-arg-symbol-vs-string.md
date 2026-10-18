@@ -1,7 +1,7 @@
 ---
 title: "Sweep canonical model scopes and ported tests for string-vs-symbol order args"
 status: ready
-updated: 2026-07-27
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 57
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "Customer test model declares composed_of with class objects where Rails uses class-name Strings and inferred mappings"
 status: ready
-updated: 2026-10-14
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 100
-priority: null
+priority: 88
 pr: null
 claim: null
 assignee: null

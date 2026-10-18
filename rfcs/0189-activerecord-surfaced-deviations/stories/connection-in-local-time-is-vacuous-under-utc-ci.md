@@ -1,7 +1,7 @@
 ---
 title: "default_timezone: local is ignored by the datetime cast; its test is vacuous under TZ=UTC"
 status: ready
-updated: 2026-10-14
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 25
 pr: null
 claim: null
 assignee: null

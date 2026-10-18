@@ -1,7 +1,7 @@
 ---
 title: "Wire Locking::Optimistic#_touch_row/_update_row into the touch/update persistence path"
-status: ready
-updated: 2026-06-26
+status: closed
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -15,6 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "Delivered by trails#7730 (f811599323): base.ts:2413-2458 on origin/main routes _touchRow and _updateRow through LockingOptimistic._touchRow/_updateRow before _Persistence; the mirrors are no longer dead code."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveJob::Execution (perform_now / execute / perform) async, and ratify the async shape in CLAUDE.md"
 status: ready
-updated: 2026-10-16
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: ["activejob"]
@@ -10,7 +10,7 @@ deps:
   - class-attribute-module-singleton-arm
 deps-rfc: []
 est-loc: 300
-priority: 1
+priority: 38
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "assertion-burndown-dispatch-routing-test-scope-options"
-status: ready
+status: in-progress
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9039
+claim: "2026-10-18T19:06:54Z"
+assignee: "tagged-logging-tagged-awaits-an-async-block"
 blocked-by: null
 closed-reason: null
 ---

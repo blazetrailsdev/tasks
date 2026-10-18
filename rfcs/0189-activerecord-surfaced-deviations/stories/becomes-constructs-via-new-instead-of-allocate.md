@@ -1,7 +1,7 @@
 ---
 title: "becomes constructs via new with suppression flags where Rails uses klass.allocate"
 status: ready
-updated: 2026-10-14
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 70
 pr: null
 claim: null
 assignee: null

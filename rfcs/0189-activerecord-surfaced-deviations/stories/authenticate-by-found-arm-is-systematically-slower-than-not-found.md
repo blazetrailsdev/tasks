@@ -1,7 +1,7 @@
 ---
 title: "activerecord: authenticate_by's found arm runs ~0.2 ms slower than its not-found arm, leaving the timing test marginal"
-status: ready
-updated: 2026-10-11
+status: claimed
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps:
   - pg-mysql-timestamp-wire-cast-round-trips-instant-bigint-rational
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-18T19:44:54Z"
+assignee: "authenticate-by-found-arm-is-systematically-slower-than-not-found"
 blocked-by: null
 closed-reason: null
 ---

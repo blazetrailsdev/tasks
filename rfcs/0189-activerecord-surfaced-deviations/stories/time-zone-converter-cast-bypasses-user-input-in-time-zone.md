@@ -1,7 +1,7 @@
 ---
 title: "TimeZoneConverter#cast splits the in_time_zone arm and drops the infinite? and rescue arms"
 status: ready
-updated: 2026-10-14
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 27
 pr: null
 claim: null
 assignee: null

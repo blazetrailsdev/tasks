@@ -1,7 +1,7 @@
 ---
 title: "Port template/log_subscriber_test.rb"
-status: ready
-updated: 2026-10-17
+status: claimed
+updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-18T19:14:54Z"
+assignee: "assertion-burndown-dispatch-cookie-store-test"
 blocked-by: null
 closed-reason: null
 ---

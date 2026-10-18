@@ -1,7 +1,7 @@
 ---
 title: "after_initialize callbacks do not run on Model.new"
-status: ready
-updated: 2026-10-14
+status: closed
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#8774 (5d22e26ae1): Base constructor on origin/main (base.ts:1469-1471) runs initBlock then this._runInitializeCallbacks() on the non-allocating path, matching core.rb:479."
 ---
 
 ## Context

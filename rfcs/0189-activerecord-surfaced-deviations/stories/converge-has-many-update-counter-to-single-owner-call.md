@@ -1,7 +1,7 @@
 ---
 title: "Drop the three-way owner probe in has_many update_counter for Rails' single increment! call"
 status: ready
-updated: 2026-10-14
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 90
-priority: null
+priority: 69
 pr: null
 claim: null
 assignee: null

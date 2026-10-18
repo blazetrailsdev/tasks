@@ -1,6 +1,6 @@
 ---
 title: "Seat Date.beginning_of_week on the Date class; drop the DateCalculations re-export"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null

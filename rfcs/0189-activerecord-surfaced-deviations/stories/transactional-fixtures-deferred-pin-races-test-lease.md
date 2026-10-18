@@ -1,14 +1,14 @@
 ---
 title: "transactional-fixtures-deferred-pin-races-test-lease"
 status: ready
-updated: 2026-10-14
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

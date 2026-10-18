@@ -1,14 +1,14 @@
 ---
 title: "activerecord: registering a model under an alias does not rename the class"
 status: ready
-updated: 2026-10-10
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 71
 pr: null
 claim: null
 assignee: null

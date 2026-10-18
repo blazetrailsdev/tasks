@@ -1,7 +1,7 @@
 ---
 title: "Cover the Symbol/method-name arm of define_callback for collection add/remove callbacks"
 status: ready
-updated: 2026-07-27
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 82
 pr: null
 claim: null
 assignee: null

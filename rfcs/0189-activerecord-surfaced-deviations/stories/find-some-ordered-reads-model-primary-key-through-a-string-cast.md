@@ -1,14 +1,14 @@
 ---
 title: "activerecord: find_some_ordered reads model.primaryKey into a local and stringifies it for type_for_attribute"
 status: ready
-updated: 2026-10-11
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 73
 pr: null
 claim: null
 assignee: null

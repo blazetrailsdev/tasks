@@ -1,14 +1,14 @@
 ---
 title: "FixtureSet::File#validate: accept YAML::Omap as Rails does"
 status: ready
-updated: 2026-10-14
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: fidelity
 packages: ["activerecord"]
 deps: ["psych-omap", "configuration-file-parse-through-psych-unsafe-load"]
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 55
 pr: null
 claim: null
 assignee: null

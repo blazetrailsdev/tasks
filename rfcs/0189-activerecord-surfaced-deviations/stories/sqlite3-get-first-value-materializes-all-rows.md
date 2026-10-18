@@ -1,14 +1,14 @@
 ---
 title: "sqlite3 binding getFirstValue materializes every row instead of stepping one"
 status: ready
-updated: 2026-09-23
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 70
-priority: null
+priority: 36
 pr: null
 claim: null
 assignee: null

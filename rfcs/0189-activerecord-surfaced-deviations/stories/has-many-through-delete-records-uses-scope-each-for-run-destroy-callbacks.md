@@ -1,14 +1,14 @@
 ---
 title: "activerecord: has_many :through delete_records runs scope.each(&:_run_destroy_callbacks); Relation#each awaits its block"
 status: ready
-updated: 2026-10-11
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 68
 pr: null
 claim: null
 assignee: null

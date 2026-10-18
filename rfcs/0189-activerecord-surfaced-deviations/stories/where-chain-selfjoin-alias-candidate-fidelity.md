@@ -1,7 +1,7 @@
 ---
 title: "where.associated/missing self-join renders association-name alias instead of JoinDependency alias_candidate"
 status: ready
-updated: 2026-07-08
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 46
 pr: null
 claim: null
 assignee: null

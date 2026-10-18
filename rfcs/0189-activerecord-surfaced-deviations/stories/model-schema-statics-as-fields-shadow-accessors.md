@@ -1,14 +1,14 @@
 ---
 title: "model-schema-statics-as-fields-shadow-accessors"
-status: draft
-updated: 2026-10-15
+status: ready
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 11
 pr: null
 claim: null
 assignee: null

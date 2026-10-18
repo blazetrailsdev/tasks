@@ -1,14 +1,14 @@
 ---
 title: "activerecord: the save chain's schema warm and records built against a cold schema cache"
 status: ready
-updated: 2026-10-10
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 23
 pr: null
 claim: null
 assignee: null

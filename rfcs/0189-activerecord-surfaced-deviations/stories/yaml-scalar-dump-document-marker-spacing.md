@@ -1,7 +1,7 @@
 ---
 title: "YAMLColumn scalar dumps use '---\\nstr' not Ruby's '--- str'"
 status: ready
-updated: 2026-07-27
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: ["psych-safe-dump-and-restricted-yaml-tree", "yaml-column-safe-coder-through-psych"]
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 54
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "Application models declare table name and primary key through _tableName / _primaryKey, the backing fields"
 status: ready
-updated: 2026-10-14
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 33
 pr: null
 claim: null
 assignee: null

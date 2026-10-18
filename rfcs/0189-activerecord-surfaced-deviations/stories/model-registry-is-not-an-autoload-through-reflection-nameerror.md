@@ -1,7 +1,7 @@
 ---
 title: "Test model registry is not an autoload: through-reflection resolution raises NameError for canonical models that exist"
-status: ready
-updated: 2026-10-14
+status: claimed
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -9,10 +9,10 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-18T19:44:54Z"
+assignee: "authenticate-by-found-arm-is-systematically-slower-than-not-found"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "sqlite3 Pragmas#table_info and its private helpers are unported"
 status: ready
-updated: 2026-09-23
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 92
 pr: null
 claim: null
 assignee: null

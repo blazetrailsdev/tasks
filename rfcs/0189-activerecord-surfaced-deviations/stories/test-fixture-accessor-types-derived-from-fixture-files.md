@@ -1,7 +1,7 @@
 ---
 title: "test-fixture-accessor-types-derived-from-fixture-files"
 status: ready
-updated: 2026-10-10
+updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps:
   - named-route-helpers-untyped-on-controllers-and-tests
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 34
 pr: null
 claim: null
 assignee: null
