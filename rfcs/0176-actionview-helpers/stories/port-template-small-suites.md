@@ -1,7 +1,7 @@
 ---
 title: "Port compiled_templates, partial_iteration, template_error, test_test and testing resolver suites"
-status: ready
-updated: 2026-10-17
+status: claimed
+updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-18T16:44:52Z"
+assignee: "assertion-burndown-debug-exceptions-tests"
 blocked-by: null
 closed-reason: null
 ---

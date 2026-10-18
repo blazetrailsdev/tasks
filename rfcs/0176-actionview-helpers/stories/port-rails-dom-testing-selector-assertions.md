@@ -1,7 +1,7 @@
 ---
 title: "Port rails-dom-testing SelectorAssertions#assert_select over HTML5 css"
-status: ready
-updated: 2026-10-17
+status: in-progress
+updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9031
+claim: "2026-10-18T16:14:52Z"
+assignee: "port-helper-test-small-remainders"
 blocked-by: null
 closed-reason: null
 ---

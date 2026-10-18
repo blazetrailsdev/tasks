@@ -1,6 +1,6 @@
 ---
 title: "Port the small remainders of the text, tag, TSE and JavaScript helper suites"
-status: ready
+status: in-progress
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9031
+claim: "2026-10-18T16:14:52Z"
+assignee: "port-helper-test-small-remainders"
 blocked-by: null
 closed-reason: null
 ---

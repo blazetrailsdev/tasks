@@ -1,6 +1,6 @@
 ---
 title: "DateHelper: date_select/time_select/datetime_select tags and time_tag"
-status: claimed
+status: done
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-date-helper-date-time-selector", "port-form-options-helper-and-sele
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#9029
 claim: "2026-10-18T15:56:44Z"
 assignee: "assertion-burndown-debug-exceptions-tests"
 blocked-by: null

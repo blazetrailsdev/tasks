@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining asset_tag_helper_test.rb tests"
-status: claimed
+status: done
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#9029
 claim: "2026-10-18T15:56:44Z"
 assignee: "assertion-burndown-debug-exceptions-tests"
 blocked-by: null

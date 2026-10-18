@@ -1,6 +1,6 @@
 ---
 title: "assertion-burndown-dispatch-http-tests-remainder"
-status: ready
+status: in-progress
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9030
+claim: "2026-10-18T16:26:39Z"
+assignee: "assertion-burndown-dispatch-http-tests-remainder"
 blocked-by: null
 closed-reason: null
 ---
