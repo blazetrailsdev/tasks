@@ -1,6 +1,6 @@
 ---
 title: "ConnectionPool#with_connection: overlapping calls on an empty lease each check out a connection"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "actionview fixtures: stamp created_at with N.hours.ago.to_fs(:db), not globalThis.Date"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null

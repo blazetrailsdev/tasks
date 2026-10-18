@@ -1,7 +1,7 @@
 ---
 title: "Port the remaining actionpack/controller/view_paths_test.rb tests"
-status: ready
-updated: 2026-10-17
+status: done
+updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9044
+claim: "2026-10-18T21:14:52Z"
+assignee: "assertion-burndown-dispatch-routing-test-scope-tail"
 blocked-by: null
 closed-reason: null
 ---
