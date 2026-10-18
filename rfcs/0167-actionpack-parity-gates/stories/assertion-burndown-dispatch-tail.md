@@ -1,7 +1,7 @@
 ---
 title: "Converge the actiondispatch assertion-mismatch tail"
-status: ready
-updated: 2026-10-17
+status: claimed
+updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-18T11:58:40Z"
+assignee: "kernel-module-answers-rand"
 blocked-by: null
 closed-reason: null
 ---

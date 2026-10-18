@@ -1,6 +1,6 @@
 ---
 title: "hwia-to-hash-answers-a-plain-object-without-defaults"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
