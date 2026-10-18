@@ -1,6 +1,6 @@
 ---
 title: "Converge dispatch/routing_test assertion mismatches"
-status: claimed
+status: ready
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: "2026-10-18T11:58:40Z"
-assignee: "kernel-module-answers-rand"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

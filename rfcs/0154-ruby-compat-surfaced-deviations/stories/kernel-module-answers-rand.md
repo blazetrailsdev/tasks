@@ -1,6 +1,6 @@
 ---
 title: "kernel-module-answers-rand"
-status: claimed
+status: in-progress
 updated: 2026-10-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#9025
 claim: "2026-10-18T11:58:40Z"
 assignee: "kernel-module-answers-rand"
 blocked-by: null
