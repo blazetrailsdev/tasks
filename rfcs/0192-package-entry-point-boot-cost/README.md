@@ -146,11 +146,20 @@ controls.
 
 ### Why 54 and not 5 is the realistic floor
 
-`ruby-compat` contains **six circular import groups covering 41 of its 147
-modules, the largest a 28-module strongly-connected component**. An SCC cannot
-be partially loaded: entering it anywhere loads all of it. That is the
-mechanism behind the ~53-module floor, and it bounds what subpath exports alone
-can win. Breaking the SCC is a separate, larger question (see Non-goals).
+`ruby-compat` contains **six circular import groups covering 40 module files,
+the largest a 29-module strongly-connected component**. An SCC cannot be
+partially loaded: entering it anywhere loads all of it. That is the mechanism
+behind the ~53-module floor, and it bounds what subpath exports alone can win.
+Breaking the SCC is a separate question (see Non-goals).
+
+Method, because an earlier revision of this RFC reported 41 and 28: Tarjan over
+relative **value** imports only, walked recursively from the package root.
+`src/*.ts` and `dist/*.js` agree exactly (6 / 40 / 29), so the figure does not
+depend on which of the two is measured. Counting type-only imports as edges
+instead gives 7 groups over 62 modules, which is not the loading behaviour this
+section is about. The denominator is the package's module files, not the **147**
+above: that 147 counts only top-level `dist/*.js`, and 26 of the 40 cycle
+members are top-level.
 
 ## Design
 
@@ -166,7 +175,7 @@ The barrel stays and keeps working; this is additive and behaviour-preserving.
 The barrel is a pure re-export hub with no side effects, which is why this is
 safe — a story that discovers a side effect must stop and report it.
 
-Entering the 28-module SCC (see Motivation) loads all of it, so a subpath
+Entering the 29-module SCC (see Motivation) loads all of it, so a subpath
 import only wins if the module it names sits outside the SCC or the consumer
 already pays for the SCC. The Phase 1 harness therefore emits a
 **binding → owning module → SCC membership** map, and every Phase 2 codemod
@@ -206,9 +215,13 @@ ruby-compat fix**, not a separate task. No story.
 
 ## Non-goals
 
-- **Breaking ruby-compat's 28-module cycle.** It is what sets the ~53-module
+- **Breaking ruby-compat's 29-module cycle.** It is what sets the ~53-module
   floor, but it is a structural change to the MRI core emulation with fidelity
-  risk, and it is not needed to capture the 139→54 win. Wants its own RFC.
+  risk, and it is not needed to capture the 139→54 win. It belongs under this
+  RFC as its own story, not a separate RFC: it is one package's internal import
+  graph, scoped by the binding→SCC map Phase 1 already produces, and it shares
+  this RFC's acceptance measure. No such story is filed yet; filing it is not a
+  precondition for any phase here.
 - **Making Perry compile a full trails app.** Explicitly not the motivation
   here; see "This is not the native-compile blocker".
 - **activesupport subpath exports.** Measured: 429→364 modules, **15%**. Not
@@ -219,15 +232,32 @@ ruby-compat fix**, not a separate task. No story.
 ## This is not the native-compile blocker
 
 Recorded because this finding surfaced during native-compile work and the two
-must not be conflated. Perry (AOT TypeScript→native) fails on a full trails app
-by exhausting 32GB **while still collecting modules**, before codegen. No
-package-level restructuring in this RFC reaches that:
+must not be conflated.
 
-- The blocker scales with the **whole** graph (1,284), not one package's share.
+An earlier revision of this section said Perry (AOT TypeScript→native) fails on
+a full trails app by exhausting 32GB **while still collecting modules**, and
+that the blocker scales with the whole graph. **Both claims were wrong and are
+retracted.** The 32GB exhaustion happens in package **resolution**, before the
+first module is collected: `node_modules/@blazetrails/<pkg>/node_modules/@blazetrails`
+is a symlink back to `node_modules/@blazetrails`, and Perry's resolver follows
+it with no `realpath` dedup and no depth cap — 6.5M `openat` calls, 1,800-char
+paths, still descending when the kernel kills it. Deleting the 19 back-pointing
+scope symlinks makes the same app collect **1,713 modules** and reach
+`codegen: modules finished 1713/1713 (100%)`. Module count was never the
+mechanism, and there is no graph size at which this RFC's work would have
+avoided it.
+
+What remains true is the part that matters here: no package-level restructuring
+in this RFC reaches Perry's blockers, and the module graph is not where they
+live.
+
 - Perry's collection is eager regardless of import style: `await import(CONST)`
   was measured to collect **identically** to a static import (4 vs 4 modules).
   A runtime-computed specifier escapes collection but then refuses to run in an
   AOT binary.
+- The surviving Perry failures after resolution is fixed are link-time, in
+  specific packages (an undefined `createServer$2` from `vite`, an undefined
+  `I18n$info`), not a function of how many modules the graph holds.
 
 So the justification for this RFC is the Node-side boot cost on its own merits
 — ~81ms and 85 modules on the foundation layer, on every boot of every trails
@@ -315,3 +345,8 @@ near the 700 est-loc ceiling, so it may need splitting by subdirectory.
 - 2026-10-16: cross-reference RFC 0100 — the two measure different units on
   overlapping subjects; records the CI-gate overlap and the shared
   `sideEffects` hazard. 0100 links back.
+- 2026-10-17: three corrections. Retracted the native-compile blocker's
+  mechanism (32GB in resolution via a `node_modules` symlink cycle, not module
+  collection; 1,713 modules collect and codegen fine). Re-measured the cycles:
+  6 groups / 40 modules / largest 29, not 41 and 28, with the method stated.
+  Re-scoped breaking the SCC from "its own RFC" to a story under this one.
