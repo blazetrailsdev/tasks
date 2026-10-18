@@ -1,6 +1,6 @@
 ---
 title: "actionview fixtures: stamp created_at with N.hours.ago.to_fs(:db), not globalThis.Date"
-status: ready
+status: in-progress
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9043
+claim: "2026-10-18T20:44:57Z"
+assignee: "with-connection-overlapping-calls-on-an-empty-lease-check-out-twice"
 blocked-by: null
 closed-reason: null
 ---

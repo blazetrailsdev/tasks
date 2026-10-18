@@ -1,6 +1,6 @@
 ---
 title: "assertion-burndown-dispatch-routing-test-remainder"
-status: claimed
+status: in-progress
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#9040
 claim: "2026-10-18T19:44:54Z"
 assignee: "authenticate-by-found-arm-is-systematically-slower-than-not-found"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "assertion-burndown-dispatch-routing-test-scope-tail"
-status: draft
+status: ready
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null

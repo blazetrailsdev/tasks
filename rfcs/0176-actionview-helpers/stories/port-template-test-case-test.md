@@ -1,7 +1,7 @@
 ---
 title: "Port template/test_case_test.rb"
-status: ready
-updated: 2026-10-17
+status: in-progress
+updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9042
+claim: "2026-10-18T20:14:53Z"
+assignee: "exc-set-backtrace-accepts-nil-and-a-string"
 blocked-by: null
 closed-reason: null
 ---

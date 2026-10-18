@@ -1,6 +1,6 @@
 ---
 title: "test-request-assign-parameters-binary-data-b"
-status: draft
+status: ready
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null

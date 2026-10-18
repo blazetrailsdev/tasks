@@ -1,6 +1,6 @@
 ---
 title: "activerecord: authenticate_by's found arm runs ~0.2 ms slower than its not-found arm, leaving the timing test marginal"
-status: claimed
+status: done
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

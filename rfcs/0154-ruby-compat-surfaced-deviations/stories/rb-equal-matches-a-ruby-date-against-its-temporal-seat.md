@@ -1,6 +1,6 @@
 ---
 title: "rb-equal-matches-a-ruby-date-against-its-temporal-seat"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
