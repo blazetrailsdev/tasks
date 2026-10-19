@@ -1,5 +1,5 @@
 ---
-title: "Remove ruby-compat's Module class; modules are plain objects"
+title: "First step off ruby-compat's Module class: Kernel, Comparable and one package"
 status: draft
 updated: 2026-10-19
 rfc: "0154-ruby-compat-surfaced-deviations"
@@ -16,7 +16,7 @@ packages:
   ]
 deps: []
 deps-rfc: []
-est-loc: 700
+est-loc: 60
 priority: null
 pr: null
 claim: null
@@ -68,18 +68,14 @@ url-helpers module (CLAUDE.md § "Ruby protocol methods…"), and
 
 ## Acceptance criteria
 
-- `export class Module` is deleted from `packages/ruby-compat/src/include.ts`,
-  along with the carrier machinery (`carrierOf` and friends) that only it uses.
-- Every `new Module(...)` site is rewritten to the sanctioned plain-object
-  module shape (`include()` / `extend()` / `defineModule`), keeping the Rails
-  module name, members and include order.
+This story is the first step only (rescoped on trails#9048).
+
 - `Kernel` and `Comparable` in `include.ts` are plain-object modules.
-- The sites that relied on live include (methods defined after inclusion)
-  are ported without a carrier; any that cannot be are listed back to the
-  repo owner rather than kept on a new carrier-like shape.
-- CLAUDE.md passages that describe a `Module` instance (§ "`singleton_class`
-  is a per-object subclass", § "Ruby protocol methods…" lazy_route_set
-  bullet) are updated.
-- This is far over one PR: the first PR converts ruby-compat itself plus one
-  package, and files one story per remaining package (deps on this one), with
-  the class deleted in the last.
+- One package is converted to plain-object modules (nokogiri's
+  `Nokogiri::XML::Searchable`).
+- One story per remaining package is filed, each depending on this one,
+  plus `delete-ruby-compat-module-class-final`, which deletes the class,
+  its carrier machinery, the marshal arms and the CLAUDE.md passages, and
+  depends on every package story.
+- Sites with no carrier-free port are filed for the repo owner
+  (`ruby-compat-module-super-and-live-include-owner-decision`).
