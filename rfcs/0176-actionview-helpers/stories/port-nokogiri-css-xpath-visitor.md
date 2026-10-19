@@ -1,5 +1,5 @@
 ---
-title: "Port Nokogiri CSS parser and XPath visitor behind Searchable css"
+title: "Port Nokogiri CSS parser (on the racc runtime) and XPath visitor"
 status: ready
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
@@ -23,4 +23,6 @@ closed-reason: null
 ## Acceptance criteria
 
 - [ ] `CSS::Parser` and `CSS::XPathVisitor` ported at their Nokogiri paths, emitting the XPath Nokogiri emits.
-- [ ] An XPath evaluator over the HTML5 tree (or a libxml2 document mirroring it) runs that XPath, and the private evaluator is deleted along with its receipt.
+- [ ] The racc runtime the generated parser runs on is ported (vendored racc v1.8.0).
+
+Running that XPath over the HTML5 tree from `Searchable#css`, and deleting the private evaluator with its receipts, is `nokogiri-xpath-evaluator-behind-searchable-css`.
