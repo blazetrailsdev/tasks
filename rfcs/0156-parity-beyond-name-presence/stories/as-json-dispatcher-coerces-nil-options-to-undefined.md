@@ -1,6 +1,6 @@
 ---
 title: "as-json-dispatcher-coerces-nil-options-to-undefined"
-status: claimed
+status: in-progress
 updated: 2026-10-19
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9072
 claim: "2026-10-19T14:47:52Z"
 assignee: "burn-down-rfc0126-repairing-surfaced-call-rows"
 blocked-by: null

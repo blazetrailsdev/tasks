@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Reloader (reloader.rb has no TS file)"
-status: ready
+status: in-progress
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-api
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9071
+claim: "2026-10-19T15:17:45Z"
+assignee: "rack-port-reloader"
 blocked-by: null
 closed-reason: null
 ---

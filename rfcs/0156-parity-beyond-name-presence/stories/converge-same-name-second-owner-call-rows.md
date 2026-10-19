@@ -1,6 +1,6 @@
 ---
 title: "converge-same-name-second-owner-call-rows"
-status: claimed
+status: ready
 updated: 2026-10-19
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-19T14:47:52Z"
-assignee: "burn-down-rfc0126-repairing-surfaced-call-rows"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

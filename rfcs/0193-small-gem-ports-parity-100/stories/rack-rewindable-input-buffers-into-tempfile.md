@@ -1,6 +1,6 @@
 ---
 title: "rack-rewindable-input-buffers-into-tempfile"
-status: ready
+status: in-progress
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9071
+claim: "2026-10-19T15:17:49Z"
+assignee: "rack-rewindable-input-buffers-into-tempfile"
 blocked-by: null
 closed-reason: null
 ---

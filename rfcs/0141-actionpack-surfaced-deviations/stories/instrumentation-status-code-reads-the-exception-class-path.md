@@ -1,7 +1,7 @@
 ---
 title: "process_action passes error.class.name: path-seat actionpack errors so rbObjClassname answers it"
-status: draft
-updated: 2026-10-17
+status: in-progress
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9074
+claim: "2026-10-19T15:31:51Z"
+assignee: "instrumentation-status-code-reads-the-exception-class-path"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Rack::Headers extra surface to zero (10 novel, 19 moved in headers.ts)"
-status: ready
+status: in-progress
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-extra
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9071
+claim: "2026-10-19T15:17:38Z"
+assignee: "rack-headers-extra-surface-to-zero"
 blocked-by: null
 closed-reason: null
 ---
