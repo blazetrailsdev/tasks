@@ -1,6 +1,6 @@
 ---
 title: "actionview: modules are plain objects, not ruby-compat Module instances"
-status: draft
+status: in-progress
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9050
+claim: "2026-10-19T01:15:17Z"
+assignee: "actionview-drop-ruby-compat-module-class"
 blocked-by: null
 closed-reason: null
 ---

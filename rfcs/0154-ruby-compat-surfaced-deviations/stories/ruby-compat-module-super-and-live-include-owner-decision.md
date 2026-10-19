@@ -1,6 +1,6 @@
 ---
 title: "Owner ruling: module super, live include and plain-module naming without ruby-compat Module"
-status: draft
+status: closed
 updated: 2026-10-19
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Answered by RFC 0197 (active 2026-10-19): module super is inlined per RFC 0188 with @inlinedFrom widened to methods; live-include sites and plain-module naming each have a 0197 story."
 ---
 
 ## Context

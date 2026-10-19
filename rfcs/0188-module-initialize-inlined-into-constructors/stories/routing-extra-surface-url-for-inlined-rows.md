@@ -1,7 +1,7 @@
 ---
 title: "Clear parity:api:extra url_for.rb inlined-from rows on routes-proxy.ts and integration.ts"
-status: ready
-updated: 2026-10-15
+status: in-progress
+updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9054
+claim: "2026-10-19T01:45:19Z"
+assignee: "actionview-module-initializes-inlined"
 blocked-by: null
 closed-reason: null
 ---

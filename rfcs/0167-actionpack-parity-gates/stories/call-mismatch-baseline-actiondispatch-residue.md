@@ -1,7 +1,7 @@
 ---
 title: "Review and converge actiondispatch's last call-set baseline rows"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9053
+claim: "2026-10-19T01:10:20Z"
+assignee: "block-param-burndown-actiondispatch"
 blocked-by: null
 closed-reason: null
 ---

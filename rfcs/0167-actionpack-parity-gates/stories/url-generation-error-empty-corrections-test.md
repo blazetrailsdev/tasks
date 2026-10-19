@@ -1,7 +1,7 @@
 ---
 title: "Port routing_test 'correct for empty UrlGenerationError' body (corrections == [])"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9049
+claim: "2026-10-19T01:10:20Z"
+assignee: "block-param-burndown-actiondispatch"
 blocked-by: null
 closed-reason: null
 ---

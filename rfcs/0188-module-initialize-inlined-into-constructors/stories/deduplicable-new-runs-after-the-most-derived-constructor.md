@@ -1,7 +1,7 @@
 ---
 title: "deduplicable-new-runs-after-the-most-derived-constructor"
 status: ready
-updated: 2026-10-15
+updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
 packages: []

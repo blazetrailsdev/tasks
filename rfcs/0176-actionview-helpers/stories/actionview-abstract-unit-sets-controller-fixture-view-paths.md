@@ -1,7 +1,7 @@
 ---
 title: "actionview abstract-unit sets ActionController::Base.view_paths = FIXTURE_LOAD_PATH"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9051
+claim: "2026-10-19T01:13:23Z"
+assignee: "actionview-abstract-unit-sets-controller-fixture-view-paths"
 blocked-by: null
 closed-reason: null
 ---

@@ -25,6 +25,7 @@ clusters:
 related-rfcs:
   - "0154-ruby-compat-surfaced-deviations"
   - "0188-module-initialize-inlined-into-constructors"
+priority: 3
 ---
 
 # RFC 0197 — Ruby modules are plain objects or class modules: retire ruby-compat's Module class, inline module super

@@ -1,7 +1,7 @@
 ---
 title: "actionview: the five ActionView module initialize bodies are inlined"
-status: ready
-updated: 2026-10-15
+status: in-progress
+updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
 packages: ["actionview"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9054
+claim: "2026-10-19T01:45:19Z"
+assignee: "actionview-module-initializes-inlined"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "param-builder-make-params-is-hash-with-indifferent-access"
-status: ready
+status: closed
 updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "PERMANENT: ParamBuilder#makeParams stays a null-prototype plain object by repo-owner ruling 2026-10-18; the two HashWithIndifferentAccess assert_instance_of assertions are receipted in scripts/test-compare/assertion-receipts.ts"
 ---
 
 ## Context

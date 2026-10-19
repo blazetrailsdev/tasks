@@ -1,7 +1,7 @@
 ---
 title: "tse-compiler: an in-process expression parser with source spans, for Template#spot"
-status: ready
-updated: 2026-10-16
+status: done
+updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["tse-compiler", "actionview"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9051
+claim: "2026-10-19T01:13:23Z"
+assignee: "actionview-abstract-unit-sets-controller-fixture-view-paths"
 blocked-by: null
 closed-reason: null
 ---

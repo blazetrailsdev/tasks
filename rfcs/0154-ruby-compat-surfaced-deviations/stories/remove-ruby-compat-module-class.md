@@ -1,6 +1,6 @@
 ---
 title: "First step off ruby-compat's Module class: Kernel, Comparable and one package"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

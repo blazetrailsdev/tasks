@@ -1,7 +1,7 @@
 ---
 title: "headers-merge-bang-single-each-dispatch"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9053
+claim: "2026-10-19T01:10:20Z"
+assignee: "block-param-burndown-actiondispatch"
 blocked-by: null
 closed-reason: null
 ---
