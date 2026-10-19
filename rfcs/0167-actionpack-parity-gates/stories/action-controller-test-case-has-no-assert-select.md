@@ -2,7 +2,7 @@
 title: "action-controller-test-case-has-no-assert-select"
 status: ready
 updated: 2026-10-18
-rfc: "0123-blocked-convergence-holding"
+rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
 deps:
