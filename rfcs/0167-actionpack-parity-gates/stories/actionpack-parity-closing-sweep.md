@@ -1,7 +1,7 @@
 ---
 title: "Closing sweep: every actionpack parity row is 100%, owned, or a cited PERMANENT-SKIP"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
@@ -28,9 +28,9 @@ deps:
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9085
+claim: "2026-10-19T18:05:13Z"
+assignee: "actionpack-parity-closing-sweep"
 blocked-by: null
 closed-reason: null
 ---

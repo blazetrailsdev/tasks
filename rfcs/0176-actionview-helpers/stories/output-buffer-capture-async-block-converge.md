@@ -1,6 +1,6 @@
 ---
 title: "Converge OutputBuffer#capture's async-block arm to Rails' ensure shape"
-status: ready
+status: claimed
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-19T18:34:49Z"
+assignee: "nokogiri-xpath-evaluator-behind-searchable-css"
 blocked-by: null
 closed-reason: null
 ---

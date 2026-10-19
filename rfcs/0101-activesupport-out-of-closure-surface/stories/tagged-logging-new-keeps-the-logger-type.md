@@ -1,6 +1,6 @@
 ---
 title: "tagged-logging-new-keeps-the-logger-type"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

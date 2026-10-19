@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Session::Encryptor (encryptor.rb, 12 methods, 16 skipped tests)"
-status: ready
+status: claimed
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-session
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 550
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-19T18:48:35Z"
+assignee: "rack-session-port-encryptor"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "actionpack: modules are plain objects, not ruby-compat Module instances"
-status: claimed
+status: in-progress
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
+pr: trails#9084
 claim: "2026-10-19T17:12:12Z"
 assignee: "actionpack-drop-ruby-compat-module-class"
 blocked-by: null
