@@ -5,7 +5,9 @@ updated: 2026-10-17
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cable"]
-deps: ["vendor-solid-cache-queue-cable-gems"]
+deps:
+  - vendor-solid-cache-queue-cable-gems
+  - actioncable-package-skeleton
 deps-rfc: []
 est-loc: 200
 pr: null
