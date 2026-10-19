@@ -40,7 +40,16 @@ Still `new Module` / `superMethod` in `packages/activerecord/src`:
 - `attribute-methods.ts` `generatedAttributeMethods` / `core.ts` `generatedAssociationMethods` / `relation/delegation.ts` `GeneratedRelationMethods`: generated-method modules (`attribute_methods.rb:42-50`, `core.rb:442`, `relation/delegation.rb:57`).
 - `relation/query-methods.ts:1011` and `associations/builder/collection-association.ts:40`: `Module.new(&block)` from a user block (`query_methods.rb:` `extending!`, `builder/collection_association.rb:24-30`).
 
+**Untagged inlinings from the first slice (trails#9099):** the four `deduplicated` overrides inline `Deduplicable#deduplicated` (`connection_adapters/deduplicable.rb:24-26`) with no `@inlinedFrom` tag, because `scripts/api-compare/extract-ruby-api.rb:261` `INLINED_HOOKS` records spans only for `initialize`/`new`:
+
+- `connection-adapters/column.ts` (`column.rb:104-112`)
+- `connection-adapters/sql-type-metadata.ts` (`sql_type_metadata.rb:39-42`)
+- `connection-adapters/mysql/type-metadata.ts` (`mysql/type_metadata.rb:32-36`)
+- `connection-adapters/postgresql/type-metadata.ts` (`postgresql/type_metadata.rb:36-39`)
+
 ## Acceptance criteria
+
+- The four `deduplicated` overrides carry `@inlinedFrom ActiveRecord::ConnectionAdapters::Deduplicable#deduplicated rails/v8.0.2/activerecord/lib/active_record/connection_adapters/deduplicable.rb:24-26`, with the extractor extended so `pnpm parity:api:inlined` checks them.
 
 - Every module in the first list is a plain-object module, its `super` inlined per RFC 0197 with `@inlinedFrom` tags where the target lives in another `.rb`.
 - The live-include sites are settled by the repo owner's ruling, not by a new carrier.
