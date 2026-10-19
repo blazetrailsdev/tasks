@@ -1,6 +1,6 @@
 ---
 title: "Type the reflection hosts"
-status: ready
+status: in-progress
 updated: 2026-10-19
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: mixin-host-typing
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9090
+claim: "2026-10-19T19:52:26Z"
+assignee: "ar-type-reflection"
 blocked-by: null
 closed-reason: null
 ---

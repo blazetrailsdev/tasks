@@ -1,7 +1,7 @@
 ---
 title: "ActionController::TestCase#process accepts invented env: and headers: options"
-status: draft
-updated: 2026-09-30
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: RequestOptions (test-case.ts:99-108) has no env/headers keys"
 ---
 
 ## Context

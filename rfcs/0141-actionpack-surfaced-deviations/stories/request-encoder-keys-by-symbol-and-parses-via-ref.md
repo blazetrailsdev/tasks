@@ -1,7 +1,7 @@
 ---
 title: "RequestEncoder keys encoders by bare name; parser strips symbol instead of Mime::Type#ref"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

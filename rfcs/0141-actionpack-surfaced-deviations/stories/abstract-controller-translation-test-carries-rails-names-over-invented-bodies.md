@@ -1,7 +1,7 @@
 ---
 title: "abstract-controller/translation.test.ts carries Rails names over invented bodies"
-status: draft
-updated: 2026-10-10
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

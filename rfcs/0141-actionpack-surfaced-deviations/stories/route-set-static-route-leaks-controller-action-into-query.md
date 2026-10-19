@@ -1,7 +1,7 @@
 ---
 title: "route-set-static-route-leaks-controller-action-into-query"
-status: draft
-updated: 2026-10-14
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: journey/formatter.ts:94-99 deletes keys in route.defaults as formatter.rb:83-88; actionview url-helper.test.ts:156 asserts "http://example.com/other"'
 ---
 
 ## Context

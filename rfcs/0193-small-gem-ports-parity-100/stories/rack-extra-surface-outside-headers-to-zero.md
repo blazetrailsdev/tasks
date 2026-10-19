@@ -1,6 +1,6 @@
 ---
 title: "rack extra surface outside headers.ts to zero (23 novel, 50 moved), then gate rack"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-extra

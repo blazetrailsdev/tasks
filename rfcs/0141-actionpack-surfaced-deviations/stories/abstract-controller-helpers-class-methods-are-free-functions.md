@@ -1,7 +1,7 @@
 ---
 title: "AbstractController::Helpers ClassMethods (helper, clear_helpers, _helpers_for_modification) are free functions"
-status: draft
-updated: 2026-09-29
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: helper/clearHelpers/_helpersForModification are this-typed and seated on Helpers.ClassMethods Module (helpers.ts:154-275); base.ts declares static helper/helperMethod via extend"
 ---
 
 ## Context

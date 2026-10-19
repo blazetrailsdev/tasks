@@ -1,7 +1,7 @@
 ---
 title: "Journey::Nodes::Node: port Enumerable#grep, use find_all/each, drop [Symbol.iterator]"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

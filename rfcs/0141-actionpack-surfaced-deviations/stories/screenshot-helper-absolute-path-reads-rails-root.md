@@ -1,7 +1,7 @@
 ---
 title: "ScreenshotHelper#absolute_path joins Rails.root, not the cwd"
-status: draft
-updated: 2026-10-18
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

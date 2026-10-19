@@ -1,7 +1,7 @@
 ---
 title: "Response#to_a hands back a plain record where Rails hands back the case-insensitive Rack::Headers"
-status: draft
-updated: 2026-10-05
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: premise overruled: repo-owner ruling 2026-10-19 (recorded in response-to-a-passes-rack-headers-to-hash) is that the Rack triple's headers stay a plain object, never Rack::Headers/Hash — the opposite of this story's AC; the remaining toA work is owned by response-to-a-passes-rack-headers-to-hash"
 ---
 
 ## Context

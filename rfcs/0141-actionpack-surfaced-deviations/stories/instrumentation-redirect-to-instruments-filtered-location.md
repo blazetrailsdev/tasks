@@ -1,7 +1,7 @@
 ---
 title: "Instrumentation#redirect_to instruments redirect_to.action_controller with filtered_location"
-status: draft
-updated: 2026-09-29
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: instrumentation.ts:132-146 redirectTo instruments redirect_to.action_controller with payload.status/location = response.filteredLocation()"
 ---
 
 ## Context

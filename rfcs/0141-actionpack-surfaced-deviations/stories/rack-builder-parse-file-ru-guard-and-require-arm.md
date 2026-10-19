@@ -1,7 +1,7 @@
 ---
 title: "rack: Builder.parse_file takes the .ru guard and the require arm"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Journey::Path::Pattern builds regexp sources with local helpers instead of Regexp.union"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

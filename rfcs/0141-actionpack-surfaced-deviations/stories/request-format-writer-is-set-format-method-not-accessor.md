@@ -1,7 +1,7 @@
 ---
 title: "Request#format= is a setFormat() method where Rails has a plain writer"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

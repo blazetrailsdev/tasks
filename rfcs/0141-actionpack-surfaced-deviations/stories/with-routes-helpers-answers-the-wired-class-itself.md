@@ -1,7 +1,7 @@
 ---
 title: "withRoutesHelpers' Proxy gives url helpers to the wired class itself, not only its subclasses"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

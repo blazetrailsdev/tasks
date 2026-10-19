@@ -1,7 +1,7 @@
 ---
 title: "UploadedFile#initialize drops the encode!/force_encoding UTF-8 arm for filename and head"
-status: draft
-updated: 2026-10-14
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

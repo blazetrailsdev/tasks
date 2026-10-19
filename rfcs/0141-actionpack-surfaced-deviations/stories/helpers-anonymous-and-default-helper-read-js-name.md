@@ -1,7 +1,7 @@
 ---
 title: "Helpers' anonymous? and default_helper_module! read the JS name, not Module#name"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "abstract-controller: action callback macros call set_callback / skip_callback directly"
-status: draft
-updated: 2026-10-03
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

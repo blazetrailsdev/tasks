@@ -1,7 +1,7 @@
 ---
 title: "Integration::Session includes Minitest::Assertions (child session assert bubbles up)"
-status: draft
-updated: 2026-10-18
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

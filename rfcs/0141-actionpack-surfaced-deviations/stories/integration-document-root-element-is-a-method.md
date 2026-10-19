@@ -1,6 +1,6 @@
 ---
 title: "Integration::Runner#document_root_element is a method, not a getter"
-status: draft
+status: closed
 updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: integration.ts:726 documentRootElement() is now a method"
 ---
 
 ## Context

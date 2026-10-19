@@ -1,7 +1,7 @@
 ---
 title: "Request includes MimeNegotiation's methods directly; the mimeHost bridge and forwarders go"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "port-date-select-option-variant-tests"
-status: claimed
+status: in-progress
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9088
 claim: "2026-10-19T18:34:49Z"
 assignee: "nokogiri-xpath-evaluator-behind-searchable-css"
 blocked-by: null

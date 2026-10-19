@@ -1,7 +1,7 @@
 ---
 title: "render_to_string writes the response and then restores it, where Rails never touches it"
-status: draft
-updated: 2026-10-14
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: no oldBody/oldPerformed snapshot anywhere; metal/rendering.ts:130-140 renderToString is super + the respond_to?(:each) join, as rendering.rb:174-183"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "Converge OutputBuffer#capture's async-block arm to Rails' ensure shape"
-status: claimed
+status: blocked
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#9088
 claim: "2026-10-19T18:34:49Z"
 assignee: "nokogiri-xpath-evaluator-behind-searchable-css"
-blocked-by: null
+blocked-by: "owner decision: buffers.rb:72-79 capture is sync begin/yield/ensure; a TSE cache block awaits a nested render (writeFragmentFor, cache_helper.rb:292-295) and the compiled template writes through the shared _ob, so a one-arm capture restores @raw_buffer before the awaited writes land. Converging needs either a per-capture output buffer threaded into the compiled block or ratifying the then-arm as @inventedArm then — PERMANENT; repo owner to pick."
 closed-reason: null
 ---
 

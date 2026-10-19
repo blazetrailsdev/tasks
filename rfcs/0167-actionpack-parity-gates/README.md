@@ -1,9 +1,9 @@
 ---
 rfc: "0167-actionpack-parity-gates"
 title: "ActionPack parity gates — fix the measurements, then enroll actionpack in every ratchet"
-status: active
+status: closed
 created: 2026-09-27
-updated: 2026-10-16
+updated: 2026-10-19
 owner: "@deanmarano"
 packages:
   - "actionpack"

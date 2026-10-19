@@ -1,6 +1,6 @@
 ---
 title: "tagged-logging-new-keeps-the-logger-type"
-status: ready
+status: in-progress
 updated: 2026-10-19
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9089
+claim: "2026-10-19T19:51:57Z"
+assignee: "tagged-logging-new-keeps-the-logger-type"
 blocked-by: null
 closed-reason: null
 ---

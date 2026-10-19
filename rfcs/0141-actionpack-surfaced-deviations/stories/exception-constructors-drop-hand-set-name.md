@@ -1,6 +1,6 @@
 ---
 title: "actionpack exception constructors drop hand-set this.name now that classes are path-seated"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

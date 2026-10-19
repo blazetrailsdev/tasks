@@ -1,7 +1,7 @@
 ---
 title: "content-security-policy-predicate-returns-a-boolean-not-the-policy"
-status: draft
-updated: 2026-10-10
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: isContentSecurityPolicy returns request.contentSecurityPolicy (content-security-policy.ts:64-67), current* uses rbObjClone (:76-78), contentSecurityPolicy takes (enabled=true, options, block) with no resolved* names"
 ---
 
 ## Context

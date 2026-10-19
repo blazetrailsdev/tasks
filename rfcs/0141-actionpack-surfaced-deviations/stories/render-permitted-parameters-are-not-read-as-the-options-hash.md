@@ -1,7 +1,7 @@
 ---
 title: "render with permitted Parameters: _normalize_args' options = action is not read as a Hash downstream"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "ResponseAssertions: RESPONSE_PREDICATES, response_code and the redirect handle still diverge from response.rb"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]

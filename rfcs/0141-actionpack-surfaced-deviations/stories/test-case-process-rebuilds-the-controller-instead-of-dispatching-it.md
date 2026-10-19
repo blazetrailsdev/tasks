@@ -1,7 +1,7 @@
 ---
 title: "ActionController::TestCase#process rebuilds the controller instead of dispatching @controller"
-status: draft
-updated: 2026-09-28
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: process calls checkRequiredIvars, controller.clearInstanceVariablesBetweenRequests, recycleBang, wrapExecution(() => this.controller.dispatch(...)) (test-case.ts:260-261,429-431); the only `new klass()` is in setup (:332)"
 ---
 
 ## Context

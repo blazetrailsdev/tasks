@@ -1,7 +1,7 @@
 ---
 title: "actionview: port abstract_controller_test.rb's two local_prefixes tests under their Rails names (abstract_controller_test.rb:165-195)"
-status: draft
-updated: 2026-10-03
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionview", "actionpack"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: actionview/src/actionpack/abstract/abstract-controller.test.ts:221,227 port "overriding .local_prefixes adds prefix" and ".local_prefixes is inherited"'
 ---
 
 ## Context

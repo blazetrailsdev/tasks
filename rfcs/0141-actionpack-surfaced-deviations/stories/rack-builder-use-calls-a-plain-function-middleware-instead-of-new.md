@@ -1,7 +1,7 @@
 ---
 title: "rack-builder-use-calls-a-plain-function-middleware-instead-of-new"
-status: draft
-updated: 2026-10-17
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

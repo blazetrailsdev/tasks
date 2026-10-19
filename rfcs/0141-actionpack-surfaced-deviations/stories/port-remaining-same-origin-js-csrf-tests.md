@@ -1,7 +1,7 @@
 ---
 title: "Port the remaining same-origin JS request_forgery_protection tests onto the wired verify_same_origin_request"
-status: draft
-updated: 2026-09-29
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: all four tests are live in request-forgery-protection.test.ts:687,704,720,734 (no longer it.skip)"
 ---
 
 ## Context

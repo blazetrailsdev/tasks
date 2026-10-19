@@ -1,7 +1,7 @@
 ---
 title: "Rack::Utils.unescape and Rack::QueryParser throw on a non-UTF-8 percent-escape"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

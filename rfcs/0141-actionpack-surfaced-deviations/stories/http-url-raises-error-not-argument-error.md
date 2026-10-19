@@ -1,7 +1,7 @@
 ---
 title: "Http::URL raises ArgumentError for a missing host and an invalid protocol"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

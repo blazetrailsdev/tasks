@@ -1,7 +1,7 @@
 ---
 title: "raw-post-byte-form-body-parses-as-utf8"
-status: draft
-updated: 2026-10-14
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: its goal landed: assignParameters has the single new StringIO(b(data)) tail (test-case.ts:691-693) and test-case.trails.test.ts:77-81 parses t:"café" to "café"; json arm decodes via ActiveSupportJSON.decode(rawPost) (parameters.ts:25)'
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Port Mime::AllType as a subclass singleton with a nil symbol"
-status: draft
-updated: 2026-10-14
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: "action-controller"
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: AllType extends MimeType (mime-type.ts:406) with isAll override (:413); MimeType.ALL typed AllType (:403); isAll() on MimeType (:254)"
 ---
 
 ## Context

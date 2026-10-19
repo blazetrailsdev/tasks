@@ -1,7 +1,7 @@
 ---
 title: "QueryParser.each_pair ports the strict_query_string_separator and semicolon-compat arms"
-status: draft
-updated: 2026-10-11
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: query-parser.ts:7-54 now has COMPAT_SEP, SEMICOLON_COMPAT and the strictQueryStringSeparator / semicolon-compat arms"
 ---
 
 ## Context

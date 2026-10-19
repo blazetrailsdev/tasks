@@ -1,6 +1,6 @@
 ---
 title: "DebugExceptions#render_for_api_request public_sends to_<format> instead of reading HASH_CONVERSIONS"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

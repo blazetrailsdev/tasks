@@ -1,7 +1,7 @@
 ---
 title: "ActionDispatch::Request#initialize's own body and the reader memos it seeds are unported"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

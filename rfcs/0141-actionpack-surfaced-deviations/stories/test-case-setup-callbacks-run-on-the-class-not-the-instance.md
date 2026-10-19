@@ -1,7 +1,7 @@
 ---
 title: "test-case-setup-callbacks-run-on-the-class-not-the-instance"
-status: draft
-updated: 2026-09-29
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: IntegrationTest no longer has SetupAndTeardown.prepended / static override setup (integration.ts); activesupport test-case.ts:81 beforeSetup is an instance override"
 ---
 
 ## Context

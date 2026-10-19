@@ -1,7 +1,7 @@
 ---
 title: "Port request_forgery_protection_test.rb's assert_select and csrf_meta_tags skips"
 status: ready
-updated: 2026-10-06
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "ResponseAssertions: assert_redirected_to / normalize_argument_to_redirection / location_if_redirected mirror response.rb"
-status: draft
-updated: 2026-09-29
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: assertRedirectedTo reads response.location with the rbEqq early return and assert(rbEqq(...)) (assertions/response.ts:58-64); normalizeArgumentToRedirection falls back to Redirecting (:83); location_if_redirected uses response.location (:109). Remaining RESPONSE_PREDICATES half is owned by response-assertions-predicates-are-lambdas-not-response-predicates"
 ---
 
 ## Context

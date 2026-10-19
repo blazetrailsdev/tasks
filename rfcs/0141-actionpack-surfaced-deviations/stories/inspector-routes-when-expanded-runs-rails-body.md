@@ -1,7 +1,7 @@
 ---
 title: "inspector 'routes when expanded' runs the Rails body with Source Location rows"
-status: draft
-updated: 2026-10-14
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

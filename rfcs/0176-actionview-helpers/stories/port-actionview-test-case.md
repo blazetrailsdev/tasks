@@ -1,6 +1,6 @@
 ---
 title: "port-actionview-test-case"
-status: claimed
+status: ready
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-19T18:34:49Z"
-assignee: "nokogiri-xpath-evaluator-behind-searchable-css"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

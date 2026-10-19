@@ -1,7 +1,7 @@
 ---
 title: "ActionView render-path types narrow a binary String body to string | SafeBuffer"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

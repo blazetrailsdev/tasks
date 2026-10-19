@@ -1,7 +1,7 @@
 ---
 title: "PerFormTokensControllerTest reads the token through assert_select and Base64.urlsafe_decode64"
 status: ready
-updated: 2026-10-06
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

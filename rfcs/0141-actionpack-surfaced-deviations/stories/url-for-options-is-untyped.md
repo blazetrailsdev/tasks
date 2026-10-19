@@ -1,7 +1,7 @@
 ---
 title: "UrlForOptions is object; type it as full_url_for's arms"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

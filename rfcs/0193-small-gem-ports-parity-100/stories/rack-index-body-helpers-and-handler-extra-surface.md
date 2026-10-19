@@ -1,6 +1,6 @@
 ---
 title: "rack-index-body-helpers-and-handler-extra-surface"
-status: draft
+status: closed
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: work folded into trails#9086 (ceiling waived by owner)"
 ---
 
 ## Context

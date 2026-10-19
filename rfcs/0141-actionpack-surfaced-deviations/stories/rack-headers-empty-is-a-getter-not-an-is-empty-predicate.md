@@ -1,7 +1,7 @@
 ---
 title: "Rack::Headers#empty? is ported as an empty getter, not isEmpty"
-status: draft
-updated: 2026-10-05
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: no `get empty` in rack headers.ts; bare-metal.test.ts:113 now assertPredicate(..., (h) => h.isEmpty())"
 ---
 
 ## Context

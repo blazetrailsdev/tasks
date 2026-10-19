@@ -1,7 +1,7 @@
 ---
 title: 'ActionDispatch''s autoload_under "testing" block seats only Assertions: IntegrationTest, TestProcess, TestRequest, TestResponse and AssertionResponse are unseated'
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

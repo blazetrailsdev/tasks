@@ -1,7 +1,7 @@
 ---
 title: "IntegrationTest reads app.routes as a field; Rails calls app.routes (integration.rb:144,366)"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

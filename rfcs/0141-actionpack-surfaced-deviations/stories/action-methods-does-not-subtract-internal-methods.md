@@ -1,7 +1,7 @@
 ---
 title: "actionpack: AbstractController.actionMethods filters a hand-kept set instead of public methods minus internal_methods (abstract_controller/base.rb:77-107)"
-status: draft
-updated: 2026-10-03
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: actionMethods now = allPublic - internalMethods() + own (abstract-controller/base.ts:197-206); internalMethods walks to first abstract class"
 ---
 
 ## Context

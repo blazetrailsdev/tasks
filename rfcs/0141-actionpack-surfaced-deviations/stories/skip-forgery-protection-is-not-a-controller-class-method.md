@@ -1,7 +1,7 @@
 ---
 title: "skip_forgery_protection is a free function, not a Base class method; trailties expands it inline"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

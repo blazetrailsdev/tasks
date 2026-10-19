@@ -1,7 +1,7 @@
 ---
 title: "actionpack: UrlFor's @_routes ivar and the _routes reader are one property"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]

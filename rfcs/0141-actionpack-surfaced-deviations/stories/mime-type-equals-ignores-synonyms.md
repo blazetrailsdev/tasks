@@ -1,7 +1,7 @@
 ---
 title: "mime-type-equals-ignores-synonyms"
-status: draft
-updated: 2026-10-14
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: MimeType#equals walks [...this.synonyms, this] comparing to_s/to_sym (mime-type.ts:267-271)"
 ---
 
 ## Context

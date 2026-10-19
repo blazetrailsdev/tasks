@@ -1,7 +1,7 @@
 ---
 title: "withRoutesHelpers rejects a real RouteSet at the type level"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

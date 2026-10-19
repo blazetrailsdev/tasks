@@ -1,7 +1,7 @@
 ---
 title: "url-for-is-a-plain-object-module-not-a-linkable-module"
-status: draft
-updated: 2026-10-14
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: UrlFor is a real Module (url-for.ts:168); trailties action-view.ts:203 does RoutingUrlFor.include(UrlFor) with no anonymous wrapper"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "API#redirectTo override and headResponse are invented surface"
-status: draft
-updated: 2026-09-28
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: git grep redirectTo in api.ts and headResponse anywhere in packages/ on origin/main: no hits"
 ---
 
 ## Context

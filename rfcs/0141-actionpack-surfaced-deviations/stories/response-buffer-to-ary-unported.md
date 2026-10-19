@@ -1,7 +1,7 @@
 ---
 title: "response-buffer-to-ary-unported"
-status: draft
-updated: 2026-09-29
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: ResponseBuffer#toAry (response.ts:85-86) and RackBody#toAry (:210-211) ported; BODY_METHODS includes toAry (:68)"
 ---
 
 ## Context

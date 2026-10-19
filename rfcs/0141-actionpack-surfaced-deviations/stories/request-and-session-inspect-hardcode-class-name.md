@@ -1,7 +1,7 @@
 ---
 title: "Request#inspect / Session#inspect hardcode the class name instead of self.class.name"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

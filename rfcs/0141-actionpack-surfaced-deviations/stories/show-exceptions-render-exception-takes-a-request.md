@@ -1,7 +1,7 @@
 ---
 title: "ShowExceptions#render_exception takes a dup'd Request, not a bare env"
-status: draft
-updated: 2026-10-14
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: show-exceptions.ts:34 now calls this.renderException(request.dup(), wrapper) as show_exceptions.rb:40-41"
 ---
 
 ## Context

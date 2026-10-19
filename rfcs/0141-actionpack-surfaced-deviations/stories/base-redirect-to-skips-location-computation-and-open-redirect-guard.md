@@ -1,7 +1,7 @@
 ---
 title: "Base#redirectTo skips _compute_redirect_to_location, the nil guard and open-redirect enforcement"
-status: draft
-updated: 2026-09-28
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: metal/redirecting.ts:81-103 redirectTo runs nil guard, double-render, allowOtherHost, _extractRedirectToStatus, _computeRedirectToLocation, _ensureUrlIsHttpHeaderSafe, _enforceOpenRedirectProtection; base.ts:324 declares it; normalizeArgumentToRedirection falls back to Redirecting (assertions/response.ts:83)"
 ---
 
 ## Context

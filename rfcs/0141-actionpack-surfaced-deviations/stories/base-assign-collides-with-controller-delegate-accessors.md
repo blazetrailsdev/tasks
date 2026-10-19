@@ -1,7 +1,7 @@
 ---
 title: "base-assign-collides-with-controller-delegate-accessors"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "polymorphic_url and handle_model_call take a record with no to_model"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

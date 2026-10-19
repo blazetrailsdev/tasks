@@ -1,7 +1,7 @@
 ---
 title: "test-case-setup-request-bypasses-assign-parameters"
-status: draft
-updated: 2026-09-30
+status: closed
+updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Verified against trails origin/main (6ccf009f20) during 0141 refine 2026-10-19: setupRequest calls routes.generateExtras and request.assignParameters (test-case.ts:371-377); checkRequiredIvars ported (:486) and called first in process (:260)"
 ---
 
 ## Context
