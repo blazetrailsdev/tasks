@@ -102,10 +102,16 @@ A per-file only-shrink mark of the four patterns above over non-test
 - `pnpm parity:types:casts` fails when any file's count exceeds its mark or a
   new file appears with a non-zero count;
 - `pnpm parity:types:casts:tighten` writes marks DOWN only; there is no reseed;
-- a file at zero drops its row, and a rowless file must stay at zero.
+- a file at zero drops its row, and a rowless file must stay at zero;
+- the mark file is created once by a `--seed` bootstrap that refuses to run
+  when a mark file exists, so after it lands the only write path is down.
 
-Counting is lexical (the grep above, per occurrence) so the gate is cheap and
-matches what a reviewer greps. It runs in Preflight.
+**Unit of count: matching lines.** A file's count is exactly what
+`grep -cE` with the regex in § Motivation reports: a line holding two casts
+counts once, and the overlapping patterns (`(this as any` matches two of them)
+are never double-counted. The per-pattern figures in § Summary are separate
+greps and overlap, so they sum past the true total; the baseline is the
+single-regex line total, re-measured when the ratchet seeds. It runs in Preflight.
 
 ## Non-goals
 
@@ -131,18 +137,21 @@ matches what a reviewer greps. It runs in Preflight.
    `ar-type-persistence-core-base`, `ar-type-reflection`,
    `ar-type-relation-query-methods`, `ar-type-attribute-methods-model-schema`,
    `ar-type-associations`, `ar-type-connection-adapters-abstract`.
-2. `ar-type-test-helper-models`, after `ar-type-associations` (typed
+2. `ar-type-remaining-src`, the catch-all for every non-test file no cluster
+   story names, in any order.
+3. `ar-type-test-helper-models`, after `ar-type-associations` (typed
    association readers remove most model-file casts).
-3. `ar-cast-count-ratchet` last, seeded once from the remaining counts. A
+4. `ar-cast-count-ratchet` last, seeded once from the remaining counts. A
    per-file mark JSON tightened by parallel stories would conflict on nearly
    every merge, so the gate does not exist during the burndown.
 
 ## Verification
 
 - `pnpm parity:types:casts` is green on main and in Preflight.
-- Total occurrence count for non-test `packages/activerecord/src` falls from
-  the 2026-10-19 baseline by at least 50% when every story is done, with each
-  story's own target met.
+- The single-regex matching-line total for non-test
+  `packages/activerecord/src` falls by at least 40% from its 2026-10-19 value
+  when every story is done. The cluster stories own about 920 of the lines at
+  50–60% cuts (~490); `ar-type-remaining-src` owns the rest at 30% (~240).
 - `pnpm parity:api:extra:gate` stays green across every story with no mark or
   baseline widened.
 
@@ -155,4 +164,6 @@ matches what a reviewer greps. It runs in Preflight.
 ## Changelog
 
 - 2026-10-19: initial RFC
+- 2026-10-19: count unit fixed to matching lines; catch-all story added;
+  RFC target set to 40%; packages set on stories
 - 2026-10-19: ratchet moved to the end of the rollout to avoid mark-file merge conflicts

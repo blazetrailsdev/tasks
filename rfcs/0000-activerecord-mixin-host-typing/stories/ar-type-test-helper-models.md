@@ -4,7 +4,7 @@ status: draft
 updated: 2026-10-19
 rfc: "0000-activerecord-mixin-host-typing"
 cluster: test-model-typing
-packages: []
+packages: [activerecord]
 deps: [ar-type-associations]
 deps-rfc: []
 est-loc: 600

@@ -4,7 +4,7 @@ status: draft
 updated: 2026-10-19
 rfc: "0000-activerecord-mixin-host-typing"
 cluster: mixin-host-typing
-packages: []
+packages: [activerecord]
 deps: []
 deps-rfc: []
 est-loc: 400

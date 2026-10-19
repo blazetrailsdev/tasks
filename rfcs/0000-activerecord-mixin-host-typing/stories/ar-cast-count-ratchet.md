@@ -4,7 +4,7 @@ status: draft
 updated: 2026-10-19
 rfc: "0000-activerecord-mixin-host-typing"
 cluster: cast-ratchet
-packages: []
+packages: [activerecord]
 deps:
   [
     ar-type-persistence-core-base,
@@ -14,6 +14,7 @@ deps:
     ar-type-associations,
     ar-type-connection-adapters-abstract,
     ar-type-test-helper-models,
+    ar-type-remaining-src,
   ]
 deps-rfc: []
 est-loc: 250
@@ -46,7 +47,10 @@ magnet, so no mark file exists during the burndown.
 
 ## Acceptance criteria
 
-- [ ] A script counts occurrences per file of the four patterns over non-test `packages/activerecord/src` and compares against a committed per-file mark JSON.
+- [ ] Every story in `deps` is done before this lands; a late cluster story blocks the ratchet rather than seeding above its result.
+- [ ] A script counts matching lines per file (`grep -cE` semantics, the RFC's exact regex) over non-test `packages/activerecord/src` and compares against a committed per-file mark JSON.
+- [ ] Its total equals the sum of the RFC's `grep -rcE` on the same tree (asserted in the unit test or CI).
+- [ ] The mark file is produced by a one-time `--seed` run of the same script, which refuses when a mark file already exists; the seed PR states the seeded total.
 - [ ] `pnpm parity:types:casts` fails on any file above its mark and on a rowless file with a non-zero count.
 - [ ] `pnpm parity:types:casts:tighten` only writes marks down and drops zero rows; there is no reseed or write-up path.
 - [ ] Unit test for the mark logic (above-mark, new file, tighten-only-down).
