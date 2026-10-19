@@ -24,7 +24,7 @@ Left over from `rack-session-residual-pool-and-abstract-id` (pool.rb is 8/8, the
 
 - `packages/rack-session/src/pool.test.ts:225` "should merge sessions when
   multithreaded" is `it.skip` with a PERMANENT-SKIP line that cites no ratified
-  CLAUDE.md section. Rails: `vendor/rack-session/v2.1.1/test/spec_session_pool.rb:228-266`.
+  CLAUDE.md section. Rails: `vendor/rack-session/v2.1.0/test/spec_session_pool.rb:228-266`.
   Without `$DEBUG` the body is `1.must_equal 1; next`, but parity:test counts the
   6 static assertions, the rest behind `Thread.new` / `Thread.stop` / `join`.
 
