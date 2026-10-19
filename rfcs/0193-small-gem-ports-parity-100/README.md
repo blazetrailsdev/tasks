@@ -1,9 +1,9 @@
 ---
 rfc: "0193-small-gem-ports-parity-100"
 title: "Small non-Rails gem ports back to 100% parity"
-status: draft
+status: active
 created: 2026-10-15
-updated: 2026-10-15
+updated: 2026-10-19
 owner: "@deanmarano"
 packages:
   - rack
