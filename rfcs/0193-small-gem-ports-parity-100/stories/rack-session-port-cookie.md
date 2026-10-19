@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Session::Cookie (cookie.rb, 16 methods, 48 skipped tests)"
-status: claimed
+status: in-progress
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-session
@@ -9,7 +9,7 @@ deps: [rack-session-port-encryptor]
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
+pr: trails#9092
 claim: "2026-10-19T19:47:49Z"
 assignee: "rack-session-port-cookie"
 blocked-by: null

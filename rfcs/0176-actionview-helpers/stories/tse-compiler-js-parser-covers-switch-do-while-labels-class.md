@@ -1,6 +1,6 @@
 ---
 title: "tse-compiler parseScript: parse switch, do-while, labels and class"
-status: ready
+status: claimed
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-19T20:57:55Z"
+assignee: "rack-session-encryptor-drop-json-byte-form-arm"
 blocked-by: null
 closed-reason: null
 ---

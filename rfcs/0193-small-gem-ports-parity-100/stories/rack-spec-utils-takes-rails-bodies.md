@@ -1,6 +1,6 @@
 ---
 title: "rack-spec-utils-takes-rails-bodies"
-status: ready
+status: done
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9091
+claim: "2026-10-19T20:01:18Z"
+assignee: "rack-spec-headers-response-utils-lint-take-rails-bodies"
 blocked-by: null
 closed-reason: null
 ---

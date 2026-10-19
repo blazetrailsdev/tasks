@@ -1,6 +1,6 @@
 ---
 title: "Drop Encryptor's serializer === JSON byte-form arm (encryptor.rb:170-189)"
-status: ready
+status: claimed
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-19T20:57:55Z"
+assignee: "rack-session-encryptor-drop-json-byte-form-arm"
 blocked-by: null
 closed-reason: null
 ---

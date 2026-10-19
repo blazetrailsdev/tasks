@@ -1,6 +1,6 @@
 ---
 title: "tagged-logging-new-keeps-the-logger-type"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

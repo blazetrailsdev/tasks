@@ -1,6 +1,6 @@
 ---
 title: "Converge MockResponse#identify_cookie_attributes onto mock_response.rb"
-status: ready
+status: in-progress
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9093
+claim: "2026-10-19T20:17:53Z"
+assignee: "converge-mock-response-identify-cookie-attributes"
 blocked-by: null
 closed-reason: null
 ---
