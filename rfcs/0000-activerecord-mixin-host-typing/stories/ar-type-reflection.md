@@ -5,7 +5,7 @@ updated: 2026-10-19
 rfc: "0000-activerecord-mixin-host-typing"
 cluster: mixin-host-typing
 packages: []
-deps: [ar-cast-count-ratchet]
+deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
@@ -33,4 +33,4 @@ grep -rcE 'this: any\b|\(this as (any|unknown)|\bas any\b|as unknown as' --inclu
 - [ ] Typing only: no runtime change, no method moved out of its Rails-mirroring file; `include()` / `extend()` stay the mechanism.
 - [ ] `this: any` replaced by a type derived from the module (`Included<typeof Mod>`, `Extended<typeof Mod>`, a declaration-merged `interface Klass`) or a narrow host interface; no hand-copied `Base` signature list.
 - [ ] `pnpm parity:api:extra:gate` green, no mark or baseline widened (members of a merged interface and of `interface X extends Y` count).
-- [ ] `pnpm typecheck` green; `pnpm parity:types:casts:tighten` run and the lowered marks committed.
+- [ ] `pnpm typecheck` green; the before/after count from the RFC grep is in the PR body.

@@ -127,14 +127,15 @@ matches what a reviewer greps. It runs in Preflight.
 
 ## Rollout
 
-1. `ar-cast-count-ratchet` — the mark and gate first, so later stories
-   tighten it.
-2. Cluster stories, in any order after the ratchet:
+1. Cluster stories, in any order, measured with the grep above (no gate):
    `ar-type-persistence-core-base`, `ar-type-reflection`,
    `ar-type-relation-query-methods`, `ar-type-attribute-methods-model-schema`,
    `ar-type-associations`, `ar-type-connection-adapters-abstract`.
-3. `ar-type-test-helper-models`, after `ar-type-associations` (typed
+2. `ar-type-test-helper-models`, after `ar-type-associations` (typed
    association readers remove most model-file casts).
+3. `ar-cast-count-ratchet` last, seeded once from the remaining counts. A
+   per-file mark JSON tightened by parallel stories would conflict on nearly
+   every merge, so the gate does not exist during the burndown.
 
 ## Verification
 
@@ -154,3 +155,4 @@ matches what a reviewer greps. It runs in Preflight.
 ## Changelog
 
 - 2026-10-19: initial RFC
+- 2026-10-19: ratchet moved to the end of the rollout to avoid mark-file merge conflicts

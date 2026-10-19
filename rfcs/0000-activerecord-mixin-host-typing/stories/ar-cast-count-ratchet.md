@@ -5,7 +5,16 @@ updated: 2026-10-19
 rfc: "0000-activerecord-mixin-host-typing"
 cluster: cast-ratchet
 packages: []
-deps: []
+deps:
+  [
+    ar-type-persistence-core-base,
+    ar-type-reflection,
+    ar-type-relation-query-methods,
+    ar-type-attribute-methods-model-schema,
+    ar-type-associations,
+    ar-type-connection-adapters-abstract,
+    ar-type-test-helper-models,
+  ]
 deps-rfc: []
 est-loc: 250
 priority: null
@@ -30,6 +39,10 @@ Model it on `scripts/api-compare/param-name-mark.ts` / `.json` and the
 ```sh
 grep -rcE 'this: any\b|\(this as (any|unknown)|\bas any\b|as unknown as' --include='*.ts' --exclude='*.test.ts' packages/activerecord/src
 ```
+
+It lands **after** every cluster story, seeded once from the remaining
+counts. A per-file mark JSON tightened by parallel stories is a merge-conflict
+magnet, so no mark file exists during the burndown.
 
 ## Acceptance criteria
 
