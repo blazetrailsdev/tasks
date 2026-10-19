@@ -2,7 +2,7 @@
 title: "actionpack: helpers module populated without live include"
 status: draft
 updated: 2026-10-19
-rfc: "0000-plain-object-modules-replace-ruby-compat-module"
+rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
 packages: ["actionpack"]
 deps: ["class-modules-record-module-includes"]

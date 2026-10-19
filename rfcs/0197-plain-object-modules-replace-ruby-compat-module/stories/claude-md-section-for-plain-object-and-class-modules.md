@@ -2,7 +2,7 @@
 title: "CLAUDE.md: plain-object and class modules, module super inlined"
 status: draft
 updated: 2026-10-19
-rfc: "0000-plain-object-modules-replace-ruby-compat-module"
+rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: design
 packages: ["ruby-compat"]
 deps: []

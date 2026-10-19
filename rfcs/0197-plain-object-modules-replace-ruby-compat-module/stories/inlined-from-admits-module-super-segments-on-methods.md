@@ -2,7 +2,7 @@
 title: "Gates: @inlinedFrom marks a module method's super inlined into an includer's method"
 status: draft
 updated: 2026-10-19
-rfc: "0000-plain-object-modules-replace-ruby-compat-module"
+rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: tooling
 packages: ["scripts"]
 deps: []

@@ -1,5 +1,5 @@
 ---
-rfc: "0000-plain-object-modules-replace-ruby-compat-module"
+rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 title: "Ruby modules are plain objects or class modules: retire ruby-compat's Module class, inline module super"
 status: draft
 created: 2026-10-19
@@ -27,12 +27,7 @@ related-rfcs:
   - "0188-module-initialize-inlined-into-constructors"
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
-     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
-
-# RFC — Ruby modules are plain objects or class modules: retire ruby-compat's Module class, inline module super
+# RFC 0197 — Ruby modules are plain objects or class modules: retire ruby-compat's Module class, inline module super
 
 ## Summary
 

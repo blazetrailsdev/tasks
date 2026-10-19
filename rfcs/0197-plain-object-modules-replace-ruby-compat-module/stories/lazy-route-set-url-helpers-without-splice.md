@@ -2,7 +2,7 @@
 title: "trailties: LazyRouteSet url helpers without a prototype splice"
 status: draft
 updated: 2026-10-19
-rfc: "0000-plain-object-modules-replace-ruby-compat-module"
+rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
 packages: ["trailties", "actionpack"]
 deps: []
