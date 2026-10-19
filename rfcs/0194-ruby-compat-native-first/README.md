@@ -16,6 +16,7 @@ packages:
   - trailties
   - msgpack
   - "activejob"
+  - "rack"
 clusters:
   - dispatch-cost
   - gate
