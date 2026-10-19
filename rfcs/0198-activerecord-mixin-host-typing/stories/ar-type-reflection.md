@@ -1,8 +1,8 @@
 ---
-title: "Type the attribute-methods and model-schema hosts"
+title: "Type the reflection hosts"
 status: draft
 updated: 2026-10-19
-rfc: "0000-activerecord-mixin-host-typing"
+rfc: "0198-activerecord-mixin-host-typing"
 cluster: mixin-host-typing
 packages: [activerecord]
 deps: []
@@ -18,11 +18,10 @@ closed-reason: null
 
 ## Context
 
-`packages/activerecord/src/attribute-methods.ts` 32 and `model-schema.ts`
-35 (2026-10-19), plus `attribute-methods/primary-key.ts` (20) and
-`attribute-methods/composite-primary-key.ts` (9). activemodel's
-`AttributeMethodHost` (`packages/activemodel/src/attribute-methods.ts:134`)
-is the precedent for a narrow host interface.
+`packages/activerecord/src/reflection.ts` has 50 occurrences (2026-10-19),
+the joint highest source file. RFC 0009's w4 (reflection discriminated union,
+done) settled the macro union; what remains is reflection methods reading
+`activeRecord` / `options` / owner state through `any`.
 
 ```sh
 grep -rcE 'this: any\b|\(this as (any|unknown)|\bas any\b|as unknown as' --include='*.ts' --exclude='*.test.ts' packages/activerecord/src
@@ -30,7 +29,7 @@ grep -rcE 'this: any\b|\(this as (any|unknown)|\bas any\b|as unknown as' --inclu
 
 ## Acceptance criteria
 
-- [ ] Combined count for these four files drops by at least 60%.
+- [ ] `reflection.ts` count drops by at least 60%.
 - [ ] Typing only: no runtime change, no method moved out of its Rails-mirroring file; `include()` / `extend()` stay the mechanism.
 - [ ] `this: any` replaced by a type derived from the module (`Included<typeof Mod>`, `Extended<typeof Mod>`, a declaration-merged `interface Klass`) or a narrow host interface; no hand-copied `Base` signature list.
 - [ ] `pnpm parity:api:extra:gate` green, no mark or baseline widened (members of a merged interface and of `interface X extends Y` count).

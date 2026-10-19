@@ -1,5 +1,5 @@
 ---
-rfc: "0000-activerecord-mixin-host-typing"
+rfc: "0198-activerecord-mixin-host-typing"
 title: "ActiveRecord mixin-host typing: derived interfaces replace loose any and casts"
 status: draft
 created: 2026-10-19
@@ -13,10 +13,7 @@ clusters:
   - test-model-typing
 ---
 
-<!-- Unnumbered until merge: scripts/finalize-rfc.mjs swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — ActiveRecord mixin-host typing
+# RFC 0198 — ActiveRecord mixin-host typing
 
 ## Summary
 

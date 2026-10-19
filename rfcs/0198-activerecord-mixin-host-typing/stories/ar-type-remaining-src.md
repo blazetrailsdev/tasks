@@ -2,7 +2,7 @@
 title: "Type the remaining activerecord src files no cluster story owns"
 status: draft
 updated: 2026-10-19
-rfc: "0000-activerecord-mixin-host-typing"
+rfc: "0198-activerecord-mixin-host-typing"
 cluster: mixin-host-typing
 packages: [activerecord]
 deps: []
