@@ -18,6 +18,12 @@ deps:
     "headers-merge-bang-single-each-dispatch",
     "url-generation-error-empty-corrections-test",
     "naming-residue-burndown-actiondispatch-last",
+    "integration-test-answers-assert-select",
+    "param-builder-make-params-is-hash-with-indifferent-access",
+    "request-encoder-response-parsers-match-rails",
+    "ruby-assertion-extractor-counts-one-ruby-version-arm",
+    "screenshot-helper-relative-image-path-uses-relative-path-from",
+    "test-case-instance-assert-bumps-own-assertions",
   ]
 deps-rfc: []
 est-loc: 50
