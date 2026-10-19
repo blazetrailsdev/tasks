@@ -19,6 +19,7 @@ packages:
   - "arel"
   - "rack"
   - "actionview"
+  - "msgpack"
 clusters:
   - "mri-relocation"
   - "measurement"
