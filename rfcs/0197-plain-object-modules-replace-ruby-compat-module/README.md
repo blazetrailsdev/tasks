@@ -1,7 +1,7 @@
 ---
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 title: "Ruby modules are plain objects or class modules: retire ruby-compat's Module class, inline module super"
-status: draft
+status: active
 created: 2026-10-19
 updated: 2026-10-19
 owner: "@deanmarano"
@@ -252,9 +252,10 @@ to the includers directly. Each site is its own story:
    in each, like RFC 0188's Open question 1. Deferred: each conversion story's
    PR body states the count for its modules, and
    `delete-ruby-compat-module-class-final` totals them.
-2. **Widening `@inlinedFrom` from constructors to methods.** RFC 0188 holds the
-   closed list. Recommendation: widen it as Design says. Needs the owner's
-   ruling before this RFC goes `active`.
+2. **Widening `@inlinedFrom` from constructors to methods.** Resolved: the
+   owner approved the widening on 2026-10-19, on the grounds that the tag keeps
+   an inlined body in sync with its Rails source. Implemented by
+   `inlined-from-admits-module-super-segments-on-methods`.
 3. **Methods defined after inclusion.** Recommendation per site: reorder so the
    definitions exist before the include where Rails' own flow allows it (for
    example, the view class is built from `_helpers` on demand), else file the
@@ -264,3 +265,5 @@ to the includers directly. Each site is its own story:
 
 - 2026-10-19: drafted from the trails#9048 / trails#9050 sessions, with the
   `super` strategy taken from RFC 0188.
+- 2026-10-19: owner approved widening `@inlinedFrom` to module methods reached
+  by `super` (Open question 2); status `active`.
