@@ -20,9 +20,11 @@ clusters:
 
 ## Summary
 
-`packages/activerecord/src` (non-test) still carries 1741 lines of
-`this: any` (416), `(this as any|unknown` (336), `as any` (614) and
-`as unknown as` (375), measured 2026-10-19 on trails main `0996faab65`. Most
+`packages/activerecord/src` (non-test) still carries **1371 matching lines**
+of `this: any`, `(this as any|unknown`, `as any` and `as unknown as`
+(single regex, `grep -c`, trails main `0996faab65`, 2026-10-19). Grepped
+separately the patterns give 416 / 336 / 614 / 375 lines; they overlap, so
+those sum to 1741, above the true total. Most
 of them sit on module functions mixed into `Base` / `Relation` / reflections,
 where the host's type was never written down. This RFC replaces them with host
 types **derived from the modules themselves** and adds an only-shrink
@@ -150,8 +152,9 @@ single-regex line total, re-measured when the ratchet seeds. It runs in Prefligh
 - `pnpm parity:types:casts` is green on main and in Preflight.
 - The single-regex matching-line total for non-test
   `packages/activerecord/src` falls by at least 40% from its 2026-10-19 value
-  when every story is done. The cluster stories own about 920 of the lines at
-  50–60% cuts (~490); `ar-type-remaining-src` owns the rest at 30% (~240).
+  (1371 lines at `0996faab65`) when every story is done. The cluster and
+  model stories own 917 lines and their targets remove ~493;
+  `ar-type-remaining-src` owns the other 454 at 30% (~136): ~629, or 46%.
 - `pnpm parity:api:extra:gate` stays green across every story with no mark or
   baseline widened.
 

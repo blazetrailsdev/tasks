@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-About 800 of the 2026-10-19 lines sit in non-test `packages/activerecord/src`
+454 of the 1371 lines (2026-10-19, trails `0996faab65`) sit in non-test `packages/activerecord/src`
 files that no cluster story names (everything outside persistence/core/base,
 reflection, relation + query-methods, attribute-methods + model-schema,
 `associations/`, `connection-adapters/abstract/` and `test-helpers/models/`).
