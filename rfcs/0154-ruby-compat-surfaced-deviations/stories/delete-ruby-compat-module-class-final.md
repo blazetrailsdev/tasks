@@ -16,6 +16,7 @@ deps:
     "did-you-mean-drop-ruby-compat-module-class",
     "i18n-drop-ruby-compat-module-class",
     "msgpack-drop-ruby-compat-module-class",
+    "ruby-compat-module-super-and-live-include-owner-decision",
   ]
 deps-rfc: []
 est-loc: 600
