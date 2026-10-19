@@ -20,6 +20,7 @@ packages:
   - "rack"
   - "actionview"
   - "msgpack"
+  - "did-you-mean"
 clusters:
   - "mri-relocation"
   - "measurement"
