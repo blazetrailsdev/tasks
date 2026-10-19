@@ -1,6 +1,6 @@
 ---
 title: "param-builder-make-params-is-hash-with-indifferent-access"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null

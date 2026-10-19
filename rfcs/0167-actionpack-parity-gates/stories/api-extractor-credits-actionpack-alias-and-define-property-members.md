@@ -1,7 +1,7 @@
 ---
 title: "API extractor: credit module aliasMethod and defineProperty accessors; trace actioncontroller api.rb#initialize"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9049
+claim: "2026-10-19T00:01:51Z"
+assignee: "actionpack-api-port-residue"
 blocked-by: null
 closed-reason: null
 ---

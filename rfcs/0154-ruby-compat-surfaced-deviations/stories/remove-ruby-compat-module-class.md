@@ -1,6 +1,6 @@
 ---
 title: "First step off ruby-compat's Module class: Kernel, Comparable and one package"
-status: draft
+status: in-progress
 updated: 2026-10-19
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -18,9 +18,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9048
+claim: "2026-10-19T00:37:50Z"
+assignee: "remove-ruby-compat-module-class"
 blocked-by: null
 closed-reason: null
 ---

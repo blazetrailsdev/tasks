@@ -1,6 +1,6 @@
 ---
 title: "integration-test-answers-assert-select"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null

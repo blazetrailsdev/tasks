@@ -1,6 +1,6 @@
 ---
 title: "request-encoder-response-parsers-match-rails"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Port the Arguments GlobalID arm over @blazetrails/globalid"
-status: in-progress
-updated: 2026-10-18
+status: done
+updated: 2026-10-19
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob", "globalid"]
