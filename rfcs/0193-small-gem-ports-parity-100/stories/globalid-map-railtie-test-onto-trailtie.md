@@ -2,7 +2,7 @@
 title: "globalid: railtie_test.rb's 7 cases are credited from trailties (0/7 today)"
 status: draft
 updated: 2026-10-02
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
 deps: []

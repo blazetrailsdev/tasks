@@ -2,7 +2,7 @@
 title: "Burn down and enroll globalid"
 status: ready
 updated: 2026-08-24
-rfc: "0120-extra-surface-gating-rollout"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: api-compare
 packages: ["globalid"]
 deps: ["extra-surface-mark-dimensions"]

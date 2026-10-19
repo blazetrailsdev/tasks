@@ -2,7 +2,7 @@
 title: "rails-test-name-parity-rollout-globalid"
 status: ready
 updated: 2026-08-28
-rfc: "0127-fidelity-tooling-signals-and-hygiene"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
 deps: []

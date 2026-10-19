@@ -2,7 +2,7 @@
 title: "Rack::Recursive#include merges Rails' six env keys and raises ArgumentError"
 status: draft
 updated: 2026-08-22
-rfc: "0023-surfaced-deviations"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages:
   - "rack"

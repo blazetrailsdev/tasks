@@ -23,6 +23,7 @@ clusters:
   - rack-session
   - small-residuals
   - comparer
+  - "api-compare"
 priority: 2
 ---
 
