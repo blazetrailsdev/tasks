@@ -5,7 +5,9 @@ updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
-deps: ["action-controller-test-case-has-no-assert-select"]
+deps:
+  - action-controller-test-case-has-no-assert-select
+  - integration-test-answers-assert-select
 deps-rfc: []
 est-loc: 120
 priority: null
