@@ -50,7 +50,7 @@ No parity tool measures either package: nokogiri's `vendor/sources.ts` entry
 (`:447-463`) is `compareApi: false`, `compareTests: false`, and
 `html-sanitizer` is in `PACKAGES_OUTSIDE_MANIFEST`
 (`scripts/api-compare/config.ts:227`). The gaps are known from the helper
-suites that hit them, and from receipts in the code: 17
+suites that hit them, and from receipts in the code: 15
 `@noRailsEquivalent CONVERGEABLE nokogiri-xpath-evaluator-behind-searchable-css`
 tags in `packages/nokogiri/src/xml/searchable.ts` and 3
 `CONVERGEABLE html-sanitizer-parser-concerns` tags in
@@ -141,7 +141,7 @@ story's PR.
 ## Verification
 
 - No `@noRailsEquivalent CONVERGEABLE` receipt names a story of this RFC
-  (20 today: 17 in `nokogiri/src/xml/searchable.ts`, 3 in
+  (18 today: 15 in `nokogiri/src/xml/searchable.ts`, 3 in
   `html-sanitizer/src/html5.ts`), and `test_parser.rb` / `test_tokenizer.rb` are ported with names
   verbatim.
 - `SafeListSanitizer#sanitizeCss` exists, and the sanitizers are composed from
