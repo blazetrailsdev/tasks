@@ -1,6 +1,6 @@
 ---
 title: "Burn down actioncontroller's regrown naming residue (18 rows)"
-status: ready
+status: done
 updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9077
+claim: "2026-10-19T17:11:40Z"
+assignee: "naming-residue-burndown-actioncontroller-remainder"
 blocked-by: null
 closed-reason: null
 ---

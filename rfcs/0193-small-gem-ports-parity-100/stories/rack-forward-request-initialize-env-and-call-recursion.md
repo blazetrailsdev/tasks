@@ -1,6 +1,6 @@
 ---
 title: "rack-forward-request-initialize-env-and-call-recursion"
-status: draft
+status: in-progress
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9082
+claim: "2026-10-19T17:53:47Z"
+assignee: "rack-forward-request-initialize-env-and-call-recursion"
 blocked-by: null
 closed-reason: null
 ---

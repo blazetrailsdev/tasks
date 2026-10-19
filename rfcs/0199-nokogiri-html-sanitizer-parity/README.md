@@ -1,7 +1,7 @@
 ---
 rfc: "0199-nokogiri-html-sanitizer-parity"
 title: "Nokogiri and rails-html-sanitizer to parity"
-status: active
+status: closed
 created: 2026-10-19
 updated: 2026-10-19
 owner: "@deanmarano"

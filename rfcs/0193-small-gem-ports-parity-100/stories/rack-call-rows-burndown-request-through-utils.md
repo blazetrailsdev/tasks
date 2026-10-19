@@ -1,6 +1,6 @@
 ---
 title: "Burn rack's call-mismatch rows to zero: request, response, rewindable_input, show_exceptions, show_status, static, tempfile_reaper, urlmap, utils"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-calls

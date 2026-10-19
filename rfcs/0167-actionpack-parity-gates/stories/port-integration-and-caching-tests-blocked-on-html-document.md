@@ -1,7 +1,7 @@
 ---
 title: "Port the integration and caching tests skipped on htmlDocument"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9078
+claim: "2026-10-19T17:21:53Z"
+assignee: "port-integration-and-caching-tests-blocked-on-html-document"
 blocked-by: null
 closed-reason: null
 ---

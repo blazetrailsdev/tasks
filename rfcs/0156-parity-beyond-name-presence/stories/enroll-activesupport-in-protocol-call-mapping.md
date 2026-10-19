@@ -1,6 +1,6 @@
 ---
 title: "enroll-activesupport-in-protocol-call-mapping"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

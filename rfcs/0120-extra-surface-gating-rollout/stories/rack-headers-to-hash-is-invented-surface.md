@@ -1,7 +1,7 @@
 ---
 title: "Rack::Headers#toHash is invented surface; Hash#to_hash belongs on ruby-compat's Hash"
-status: draft
-updated: 2026-09-04
+status: done
+updated: 2026-10-19
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
+pr: trails#9071
 claim: null
 assignee: null
 blocked-by: null

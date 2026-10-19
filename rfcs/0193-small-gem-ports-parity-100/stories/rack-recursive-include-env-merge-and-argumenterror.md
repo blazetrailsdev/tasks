@@ -1,7 +1,7 @@
 ---
 title: "Rack::Recursive#include merges Rails' six env keys and raises ArgumentError"
-status: draft
-updated: 2026-08-22
+status: in-progress
+updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9082
+claim: "2026-10-19T17:41:43Z"
+assignee: "date-class-instance-d-lite-zero-private-readers"
 blocked-by: null
 closed-reason: null
 ---

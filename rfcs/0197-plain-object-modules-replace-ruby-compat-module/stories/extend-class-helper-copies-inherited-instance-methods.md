@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: extend through a plain module reaches a class helper's inherited instance methods"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null

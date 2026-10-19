@@ -1,7 +1,7 @@
 ---
 title: "Enroll actioncontroller and abstractcontroller in the naming gate"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
@@ -12,9 +12,9 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9081
+claim: "2026-10-19T17:28:32Z"
+assignee: "enroll-actionpack-in-naming-gate"
 blocked-by: null
 closed-reason: null
 ---

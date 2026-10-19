@@ -1,7 +1,7 @@
 ---
 title: "globalid: railtie_test.rb's 7 cases are credited from trailties (0/7 today)"
-status: draft
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9083
+claim: "2026-10-19T17:44:07Z"
+assignee: "globalid-map-railtie-test-onto-trailtie"
 blocked-by: null
 closed-reason: null
 ---

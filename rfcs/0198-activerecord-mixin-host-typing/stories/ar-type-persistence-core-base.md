@@ -1,6 +1,6 @@
 ---
 title: "Type the persistence / core / base mixin hosts"
-status: ready
+status: in-progress
 updated: 2026-10-19
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: mixin-host-typing
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9080
+claim: "2026-10-19T17:10:31Z"
+assignee: "ar-type-persistence-core-base"
 blocked-by: null
 closed-reason: null
 ---

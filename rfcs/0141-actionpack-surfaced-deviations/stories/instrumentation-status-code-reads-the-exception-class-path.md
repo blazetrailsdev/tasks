@@ -1,6 +1,6 @@
 ---
 title: "process_action passes error.class.name: path-seat actionpack errors so rbObjClassname answers it"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Converge Rack::Events onto events.rb (4/14 methods, call and argument rows)"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-api

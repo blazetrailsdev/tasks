@@ -1,6 +1,6 @@
 ---
 title: "activemodel-api-attributes-core-initialize-inlined"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Rails::Dom::Testing::Assertions is a plain-object module"
-status: draft
+status: in-progress
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9083
+claim: "2026-10-19T17:44:07Z"
+assignee: "globalid-map-railtie-test-onto-trailtie"
 blocked-by: null
 closed-reason: null
 ---

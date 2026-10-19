@@ -1,6 +1,6 @@
 ---
 title: "rack-rewindable-input-buffers-into-tempfile"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null

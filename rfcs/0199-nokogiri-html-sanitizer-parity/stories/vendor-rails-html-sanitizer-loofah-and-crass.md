@@ -1,6 +1,6 @@
 ---
 title: "Vendor rails-html-sanitizer, loofah and crass as read-anchors"
-status: ready
+status: done
 updated: 2026-10-19
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9079
+claim: "2026-10-19T17:23:07Z"
+assignee: "vendor-rails-html-sanitizer-loofah-and-crass"
 blocked-by: null
 closed-reason: null
 ---
