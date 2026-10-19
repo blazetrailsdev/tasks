@@ -15,6 +15,7 @@ packages:
   - arel
   - trailties
   - msgpack
+  - "activejob"
 clusters:
   - dispatch-cost
   - gate
