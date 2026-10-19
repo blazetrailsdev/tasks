@@ -1,5 +1,5 @@
 ---
-rfc: "0000-nokogiri-html-sanitizer-parity"
+rfc: "0199-nokogiri-html-sanitizer-parity"
 title: "Nokogiri and rails-html-sanitizer to parity"
 status: active
 created: 2026-10-19
@@ -14,10 +14,7 @@ related-rfcs:
   - "0193-small-gem-ports-parity-100"
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — Nokogiri and rails-html-sanitizer to parity
+# RFC 0199 — Nokogiri and rails-html-sanitizer to parity
 
 ## Summary
 

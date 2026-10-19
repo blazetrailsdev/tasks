@@ -2,7 +2,7 @@
 title: "Vendor rails-html-sanitizer, loofah and crass as read-anchors"
 status: ready
 updated: 2026-10-19
-rfc: "0000-nokogiri-html-sanitizer-parity"
+rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: [html-sanitizer]
 deps: []
