@@ -1,6 +1,6 @@
 ---
 title: "port-date-helper-select-tests-remainder"
-status: ready
+status: in-progress
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9069
+claim: "2026-10-19T14:43:34Z"
+assignee: "nokogiri-xpath-evaluator-behind-searchable-css"
 blocked-by: null
 closed-reason: null
 ---

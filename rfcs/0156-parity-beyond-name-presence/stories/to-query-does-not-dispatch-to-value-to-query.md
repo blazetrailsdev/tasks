@@ -1,7 +1,7 @@
 ---
 title: "to-query-does-not-dispatch-to-value-to-query"
-status: ready
-updated: 2026-09-28
+status: claimed
+updated: 2026-10-19
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-19T14:47:52Z"
+assignee: "burn-down-rfc0126-repairing-surfaced-call-rows"
 blocked-by: null
 closed-reason: null
 ---

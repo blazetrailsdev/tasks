@@ -1,6 +1,6 @@
 ---
 title: "Type the reflection hosts"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: mixin-host-typing

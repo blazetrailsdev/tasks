@@ -1,6 +1,6 @@
 ---
 title: "Type the canonical test-helper models"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: test-model-typing

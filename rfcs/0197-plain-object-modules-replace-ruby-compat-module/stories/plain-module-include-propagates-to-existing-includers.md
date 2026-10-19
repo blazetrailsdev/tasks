@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: an include into a plain module reaches classes that already include it"
-status: claimed
+status: blocked
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-10-19T13:54:10Z"
-assignee: "inlined-from-admits-module-super-segments-on-methods"
-blocked-by: null
+claim: null
+assignee: null
+blocked-by: "owner rejected a record of a plain module's includers (trails#9064); needs an owner decision on a carrier-free propagation shape"
 closed-reason: null
 ---
 

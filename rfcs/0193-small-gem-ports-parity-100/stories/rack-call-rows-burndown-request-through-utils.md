@@ -1,7 +1,7 @@
 ---
 title: "Burn rack's call-mismatch rows to zero: request, response, rewindable_input, show_exceptions, show_status, static, tempfile_reaper, urlmap, utils"
-status: draft
-updated: 2026-10-15
+status: in-progress
+updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-calls
 packages: [rack]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9066
+claim: "2026-10-19T14:18:20Z"
+assignee: "rack-call-rows-burndown-request-through-utils"
 blocked-by: null
 closed-reason: null
 ---

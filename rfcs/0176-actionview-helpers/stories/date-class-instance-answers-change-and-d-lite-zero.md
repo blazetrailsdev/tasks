@@ -1,6 +1,6 @@
 ---
 title: "Date class instances answer Date#change"
-status: ready
+status: done
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9065
+claim: "2026-10-19T14:01:12Z"
+assignee: "date-class-instance-answers-change-and-d-lite-zero"
 blocked-by: null
 closed-reason: null
 ---

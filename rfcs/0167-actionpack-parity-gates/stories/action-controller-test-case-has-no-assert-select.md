@@ -1,7 +1,7 @@
 ---
 title: "action-controller-test-case-has-no-assert-select"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: ["actionpack"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9068
+claim: "2026-10-19T14:02:39Z"
+assignee: "action-controller-test-case-has-no-assert-select"
 blocked-by: null
 closed-reason: null
 ---

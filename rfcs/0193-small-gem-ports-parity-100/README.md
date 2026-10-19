@@ -22,6 +22,7 @@ clusters:
   - rack-session
   - small-residuals
   - comparer
+priority: 2
 ---
 
 # RFC 0193 — Small non-Rails gem ports back to 100% parity

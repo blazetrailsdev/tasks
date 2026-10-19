@@ -1,7 +1,7 @@
 ---
 title: "rack: BodyProxy#close respond_to?, CommonLogger#log strftime and [:print:] escape"
-status: draft
-updated: 2026-10-18
+status: in-progress
+updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9066
+claim: "2026-10-19T14:18:17Z"
+assignee: "rack-body-proxy-and-common-logger-residue"
 blocked-by: null
 closed-reason: null
 ---

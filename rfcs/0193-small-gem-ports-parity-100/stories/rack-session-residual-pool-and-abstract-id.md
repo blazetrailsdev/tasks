@@ -1,7 +1,7 @@
 ---
 title: "rack-session residual: Pool#mutex, abstract/id call rows and argument row, two skipped tests"
-status: draft
-updated: 2026-10-15
+status: ready
+updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-session
 packages: [rack-session]

@@ -1,7 +1,7 @@
 ---
 title: "Converge Rack::Events onto events.rb (4/14 methods, call and argument rows)"
-status: draft
-updated: 2026-10-15
+status: in-progress
+updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-api
 packages: [rack]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9066
+claim: "2026-10-19T14:18:24Z"
+assignee: "rack-converge-events"
 blocked-by: null
 closed-reason: null
 ---

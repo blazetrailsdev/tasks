@@ -1,7 +1,7 @@
 ---
 title: "Rack::Headers extra surface to zero (10 novel, 19 moved in headers.ts)"
-status: draft
-updated: 2026-10-15
+status: ready
+updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-extra
 packages: [rack]

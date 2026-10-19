@@ -1,7 +1,7 @@
 ---
 title: "rack spec_headers, spec_response, spec_utils, spec_lint take Rails' bodies (assertion parity)"
-status: draft
-updated: 2026-10-15
+status: ready
+updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-tests
 packages: [rack]

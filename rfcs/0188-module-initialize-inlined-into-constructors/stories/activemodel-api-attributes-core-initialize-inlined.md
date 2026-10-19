@@ -1,6 +1,6 @@
 ---
 title: "activemodel-api-attributes-core-initialize-inlined"
-status: draft
+status: claimed
 updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-19T14:44:44Z"
+assignee: "activemodel-api-attributes-core-initialize-inlined"
 blocked-by: null
 closed-reason: null
 ---

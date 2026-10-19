@@ -1,6 +1,6 @@
 ---
 title: "controller-runtime-and-url-for-load-hook-initializes-guarded-inline"
-status: draft
+status: done
 updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9059
 claim: null
 assignee: null
 blocked-by: null

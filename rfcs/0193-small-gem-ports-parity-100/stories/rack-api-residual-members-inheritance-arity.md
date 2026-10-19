@@ -1,7 +1,7 @@
 ---
 title: "rack residual API: eight missing members, two inheritance gaps, four arity rows, two unpinned bodies"
-status: draft
-updated: 2026-10-15
+status: ready
+updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-api
 packages: [rack]

@@ -1,7 +1,7 @@
 ---
 title: "did-you-mean-top-level-spell-checkers-registry"
-status: draft
-updated: 2026-10-18
+status: in-progress
+updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9066
+claim: "2026-10-19T14:18:14Z"
+assignee: "did-you-mean-top-level-spell-checkers-registry"
 blocked-by: null
 closed-reason: null
 ---

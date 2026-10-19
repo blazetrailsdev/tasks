@@ -1,6 +1,6 @@
 ---
 title: "actionpack: helpers module populated without live include"
-status: claimed
+status: in-progress
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
@@ -9,7 +9,7 @@ deps: ["class-modules-record-module-includes"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#9063
 claim: "2026-10-19T13:39:55Z"
 assignee: "actionpack-helpers-module-defined-before-include"
 blocked-by: null

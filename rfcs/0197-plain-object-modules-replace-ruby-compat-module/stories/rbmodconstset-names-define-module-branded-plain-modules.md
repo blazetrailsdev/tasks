@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: rbModConstSet names a defineModule-built plain module"
-status: claimed
+status: in-progress
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#9063
 claim: "2026-10-19T13:39:55Z"
 assignee: "actionpack-helpers-module-defined-before-include"
 blocked-by: null

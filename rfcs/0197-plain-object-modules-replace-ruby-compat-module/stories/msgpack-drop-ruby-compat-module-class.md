@@ -1,6 +1,6 @@
 ---
 title: "msgpack: modules are plain objects, not ruby-compat Module instances"
-status: claimed
+status: done
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["remove-ruby-compat-module-class"]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9064
 claim: "2026-10-19T13:54:10Z"
 assignee: "inlined-from-admits-module-super-segments-on-methods"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "hasown-replaces-hasownproperty-call"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0082-ruby-ts-idiom-conversion-classes"
 cluster: null

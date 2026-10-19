@@ -11,6 +11,7 @@ clusters:
   - cast-ratchet
   - mixin-host-typing
   - test-model-typing
+priority: 3
 ---
 
 # RFC 0198 — ActiveRecord mixin-host typing

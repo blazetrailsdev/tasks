@@ -1,6 +1,6 @@
 ---
 title: "Type the associations hosts and association readers"
-status: draft
+status: in-progress
 updated: 2026-10-19
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: mixin-host-typing
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9070
+claim: "2026-10-19T14:48:24Z"
+assignee: "ar-type-associations"
 blocked-by: null
 closed-reason: null
 ---

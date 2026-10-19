@@ -1,6 +1,6 @@
 ---
 title: "load-hook-installed-module-initializes-and-activerecord-missing-tag-enrollment"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null

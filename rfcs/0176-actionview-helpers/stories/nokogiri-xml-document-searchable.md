@@ -1,6 +1,6 @@
 ---
 title: "Nokogiri XML::Document and XML::Node include Searchable"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
