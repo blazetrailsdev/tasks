@@ -1,5 +1,5 @@
 ---
-title: "Response#to_a passes @headers.to_hash, so the Rack triple carries Rack::Headers"
+title: "Response#to_a's @headers.to_hash answers a plain object from a JS-class Rack::Headers"
 status: draft
 updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
@@ -32,16 +32,15 @@ passes `this._headers.toH()`, a plain-object copy. Since trails#9071 made
 receipt is legal, and it is what keeps `actiondispatch` out of
 `NAMING_ENROLLED_PACKAGES` (`scripts/api-compare/lint-call-args.ts`).
 
-Swapping in `toHash()` was tried in the closing sweep for
-`actionpack-parity-closing-sweep` and reddened 85 actiondispatch tests. Every
-Rack-triple consumer reads the headers as a plain object (`headers["location"]`,
-`Object.entries`), for example `routing/redirection.test.ts:105` and
-`testing/integration.test.ts`. Converging means the Rack triple's headers
-answer `[]` reads as a `Rack::Headers` does (or every consumer reads through
-`Hash#[]`).
+Repo-owner ruling (2026-10-19): response headers are a plain object or a JS
+class, never a ruby-compat `Hash`. So `Rack::Headers` must not extend `Hash`
+(as it has since trails#9071), and the Rack triple's headers stay a plain
+object. Passing the current `Hash`-backed `toHash()` was tried in the closing
+sweep and reddened 85 actiondispatch tests, because every consumer reads
+`headers["location"]` / `Object.entries`.
 
 ## Acceptance criteria
 
-- `toA` passes `this._headers.toHash()` to `rackResponse`, as `response.rb:412` does.
-- Rack-triple header consumers in actionpack and rack read the `Rack::Headers` they are given; the Action Pack lane is green.
-- `actiondispatch` joins `NAMING_ENROLLED_PACKAGES` and `pnpm parity:api:calls:args` is green (this closes `enroll-actiondispatch-in-naming-gate`).
+- `Rack::Headers` (`packages/rack/src/headers.ts`) is a JS class, not a `Hash` subclass, per the ruling.
+- `toA` spells Rails' call, `this._headers.toHash()` (`response.rb:412`), and the Rack triple's headers are a plain object. The Action Pack and Rack lanes are green.
+- `actiondispatch` joins `NAMING_ENROLLED_PACKAGES` and `pnpm parity:api:calls:args` is green, which closes `enroll-actiondispatch-in-naming-gate`.
