@@ -20,6 +20,8 @@ clusters:
   - gate
   - substitution
   - inline
+  - enumerable
+  - native-sweep
 ---
 
 # RFC 0194 — ruby-compat native-first
