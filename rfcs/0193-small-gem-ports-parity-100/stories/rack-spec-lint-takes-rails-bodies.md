@@ -5,7 +5,8 @@ updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - rack-port-lint-wrapper-checks
 deps-rfc: []
 est-loc: null
 priority: null
