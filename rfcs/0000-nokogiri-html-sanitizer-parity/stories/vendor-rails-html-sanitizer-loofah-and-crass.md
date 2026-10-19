@@ -4,7 +4,7 @@ status: ready
 updated: 2026-10-19
 rfc: "0000-nokogiri-html-sanitizer-parity"
 cluster: null
-packages: []
+packages: [html-sanitizer]
 deps: []
 deps-rfc: []
 est-loc: 60

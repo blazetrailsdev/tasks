@@ -132,6 +132,13 @@ the vendoring story (an ingest still pending shows `0000-`):
    now holds. `html-sanitizer-parser-concerns` stays blocked on the HTML4
    ruling.
 
+5. `scripts/finalize-rfc.mjs` rewrites `0000-` only inside this directory,
+   so the bare `nokogiri-html-sanitizer-parity` mentions in
+   `0176-actionview-helpers/README.md` (Non-goals, Open question 2,
+   Changelog) and `0193-small-gem-ports-parity-100/README.md` (Non-goals)
+   become `<NNNN>-nokogiri-html-sanitizer-parity`, and both READMEs add it to
+   `related-rfcs` (0193 gains the field). One follow-up tasks commit.
+
 No 0176 story takes a `deps` edge: none of its open stories needs this work.
 The one parked helper test it unblocks (`sanitize_css` in
 `packages/actionview/src/template/sanitize-helper.test.ts`) is parked under
@@ -140,15 +147,27 @@ story's PR.
 
 ## Verification
 
-- No `@noRailsEquivalent CONVERGEABLE` receipt names a story of this RFC
-  (18 today: 15 in `nokogiri/src/xml/searchable.ts`, 3 in
-  `html-sanitizer/src/html5.ts`), and `test_parser.rb` / `test_tokenizer.rb` are ported with names
-  verbatim.
-- `SafeListSanitizer#sanitizeCss` exists, and the sanitizers are composed from
-  the Parser / Scrubber / Serializer concerns at their Rails names.
-- `vendor/sources.ts` lists rails-html-sanitizer, loofah and crass.
-- All seven stories (six rehomed, one filed) are done or closed with a `PERMANENT:` /
-  `FALSIFIED:` reason.
+The RFC closes when all seven of its stories (six rehomed, one filed) are
+done, or closed with a `PERMANENT:` / `FALSIFIED:` reason. What that means in
+the tree, since no parity tool measures these packages:
+
+- **Nokogiri.** `Searchable#css` on every document type runs
+  `css_rules_to_xpath` → `CSS.xpath_for` → an XPath evaluation, as
+  `vendor/nokogiri/v1.18.3/lib/nokogiri/xml/searchable.rb:229-270` does, and
+  the private selector matcher in `packages/nokogiri/src/xml/searchable.ts`
+  is deleted: 0 of today's 15 `CONVERGEABLE
+nokogiri-xpath-evaluator-behind-searchable-css` receipts remain. XML node
+  sets union by node identity, and `test_parser.rb` / `test_tokenizer.rb` are
+  ported with names verbatim.
+- **Sanitizer.** `vendor/sources.ts` lists rails-html-sanitizer, loofah and
+  crass; `SafeListSanitizer#sanitizeCss` exists; the sanitizers are composed
+  from the Parser / Scrubber / Serializer concerns at their Rails names, so 0
+  of today's 3 `CONVERGEABLE html-sanitizer-parser-concerns` receipts in
+  `packages/html-sanitizer/src/html5.ts` remain.
+- **The split itself.** After § "After merge": `pnpm tasks list --rfc
+<NNNN>-nokogiri-html-sanitizer-parity` shows the seven stories, `pnpm tasks
+list --rfc 0176-actionview-helpers` shows none of the six, and no README
+  mentions the unnumbered slug.
 
 ## Open questions
 
