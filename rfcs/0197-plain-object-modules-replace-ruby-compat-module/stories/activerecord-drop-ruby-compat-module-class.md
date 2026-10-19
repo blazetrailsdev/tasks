@@ -128,6 +128,8 @@ Plain-object `include()` copies methods onto the class prototype, so these have 
 
 ## Acceptance criteria
 
-- Every `new Module(...)` in `packages/activerecord/src` is a plain-object module (`include()` / `extend()` / `defineModule`, `Included<>` / `Extended<>`), keeping the Rails module name, members and include order.
-- No `instanceof Module` / `Module` type import from ruby-compat remains in the package.
-- Sites relying on live include (methods defined after inclusion) or module `super` that cannot be ported without a carrier are listed in the PR body for the repo owner, not worked around.
+Rescoped (trails#9099): the module-`super` and live-include sites, plus the four `deduplicated` `@inlinedFrom` tags, are carried by `activerecord-module-super-and-live-include-sites`.
+
+- Every namespace-only module in `packages/activerecord/src` (test-helper `Sharded`, `MyApplication::*`, `Admin`, `Cpk`, `Publisher`, `Namespaced`, `Web`) is a plain object seated by `registerConstant` / `rbModConstSet`.
+- Every module with no module `super` and no post-include definition (`Deduplicable`, `ForeignAssociation`, `ClassSpecificRelation`, abstract and MySQL `ColumnMethods`, `Validations`, `EncryptedFixtures`, `CommandRecorder::StraightReversions`, `Developer::ProjectsAssociationExtension2`) is a plain-object module, keeping the Rails module name, members and include order. A same-file `super` (`StraightReversions`, `Deduplicable#deduplicated`) is inlined per RFC 0197.
+- Sites relying on live include or module `super` are listed in the PR body for the repo owner and filed as the follow-up story, not worked around.
