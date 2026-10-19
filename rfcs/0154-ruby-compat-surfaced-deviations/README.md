@@ -18,6 +18,7 @@ packages:
   - "trailties"
   - "arel"
   - "rack"
+  - "actionview"
 clusters:
   - "mri-relocation"
   - "measurement"
