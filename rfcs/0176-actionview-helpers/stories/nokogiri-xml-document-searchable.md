@@ -1,6 +1,6 @@
 ---
 title: "Nokogiri XML::Document and XML::Node include Searchable"
-status: ready
+status: in-progress
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9062
+claim: "2026-10-19T13:43:56Z"
+assignee: "nokogiri-xml-document-searchable"
 blocked-by: null
 closed-reason: null
 ---

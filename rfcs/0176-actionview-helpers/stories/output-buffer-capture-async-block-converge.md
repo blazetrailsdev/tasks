@@ -1,6 +1,6 @@
 ---
 title: "Converge OutputBuffer#capture's async-block arm to Rails' ensure shape"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null

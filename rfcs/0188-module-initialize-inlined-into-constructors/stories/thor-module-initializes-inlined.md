@@ -1,6 +1,6 @@
 ---
 title: "trailties: Thor::Base, Actions, Invocation and Shell initialize are inlined into Thor and Thor::Group"
-status: claimed
+status: in-progress
 updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#9059
 claim: "2026-10-19T12:48:04Z"
 assignee: "deduplicable-new-runs-after-the-most-derived-constructor"
 blocked-by: null

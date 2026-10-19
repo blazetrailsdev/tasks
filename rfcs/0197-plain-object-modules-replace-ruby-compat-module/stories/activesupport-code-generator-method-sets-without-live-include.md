@@ -1,6 +1,6 @@
 ---
 title: "activesupport: CodeGenerator method sets without live include"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion

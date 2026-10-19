@@ -1,6 +1,6 @@
 ---
 title: "Gates: @inlinedFrom marks a module method's super inlined into an includer's method"
-status: ready
+status: claimed
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: tooling
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-19T13:54:10Z"
+assignee: "inlined-from-admits-module-super-segments-on-methods"
 blocked-by: null
 closed-reason: null
 ---

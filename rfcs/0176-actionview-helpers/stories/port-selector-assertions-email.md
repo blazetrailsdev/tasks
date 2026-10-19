@@ -1,7 +1,7 @@
 ---
 title: "Port SelectorAssertions#assert_dom_email once ActionMailer exists"
-status: ready
-updated: 2026-10-18
+status: blocked
+updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-19T13:12:06Z"
+assignee: "port-nokogiri-css-xpath-visitor"
+blocked-by: "waiting on an ActionMailer package: ActionMailer::Base.deliveries does not exist in trails (no packages/actionmailer)"
 closed-reason: null
 ---
 

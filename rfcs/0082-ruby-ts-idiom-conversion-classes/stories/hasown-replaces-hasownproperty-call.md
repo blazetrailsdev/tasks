@@ -1,6 +1,6 @@
 ---
 title: "hasown-replaces-hasownproperty-call"
-status: ready
+status: in-progress
 updated: 2026-10-19
 rfc: "0082-ruby-ts-idiom-conversion-classes"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9061
+claim: "2026-10-19T13:42:19Z"
+assignee: "hasown-replaces-hasownproperty-call"
 blocked-by: null
 closed-reason: null
 ---

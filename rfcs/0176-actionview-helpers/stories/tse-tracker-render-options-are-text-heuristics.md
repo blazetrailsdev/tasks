@@ -1,7 +1,7 @@
 ---
 title: "TSETracker's RubyTracker arms are text heuristics, not RenderParser"
-status: draft
-updated: 2026-10-18
+status: ready
+updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "Date class instances answer Date#change and d_lite_zero readers"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null

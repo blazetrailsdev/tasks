@@ -1,7 +1,7 @@
 ---
 title: "Port Nokogiri CSS parser (on the racc runtime) and XPath visitor"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9060
+claim: "2026-10-19T13:12:06Z"
+assignee: "port-nokogiri-css-xpath-visitor"
 blocked-by: null
 closed-reason: null
 ---
