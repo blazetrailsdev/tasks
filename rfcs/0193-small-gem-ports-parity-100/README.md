@@ -13,6 +13,7 @@ packages:
   - i18n
   - bcrypt
   - did-you-mean
+  - date
   - ruby-compat
 clusters:
   - rack-api
@@ -149,12 +150,13 @@ under this RFC instead of receipting the package.
   `vendor/sources.ts`, because Ruby's `Date`/`DateTime` surface lives in C
   (`ext/date/date_core.c`) and the extractor has nothing to read
   (`scripts/api-compare/config.ts`, `PACKAGES_OUTSIDE_MANIFEST`). Its test
-  parity is 137/137, so nothing is filed.
+  parity is 137/137. Behaviour gaps against `date_core.c` that a consumer
+  surfaces are still in scope (see Rollout phase 8).
 - **Packages with no vendored upstream.** `html-sanitizer`, `nokogiri`,
   `tse-compiler`, `trails-tsc`, `activerecord-cli` and `website` have no gem
   in `vendor/`, so no parity tool measures them and "100%" is undefined.
-  Vendoring `rails-html-sanitizer` / `loofah` / `nokogiri` to measure them
-  would be its own RFC.
+  `nokogiri` and `html-sanitizer` parity is owned by the
+  `nokogiri-html-sanitizer-parity` RFC.
 - **Gems scored inside another package.** `thor`, `sqlite3`, `pg` and
   `mysql2` are measured as their own manifest packages, but their TS lives in
   `trailties` and `activerecord` and each has its own RFC (0185/0186/0187 and
@@ -193,6 +195,11 @@ under this RFC instead of receipting the package.
    `rack-session-residual-pool-and-abstract-id`.
 7. Small residuals: `rack-test-parity-residual`, `globalid-parity-residual`,
    `i18n-parity-residual`, `bcrypt-and-did-you-mean-parity-residual`.
+8. Gem gaps surfaced by the ActionView helpers, rehomed from
+   `0176-actionview-helpers` on 2026-10-19: `i18n-backend-cache` (`I18n::Backend::Cache`;
+   blocked on a sync cache seam) and
+   `date-class-instance-d-lite-zero-private-readers` (`Date`'s private
+   `d_lite_zero` readers). Each un-skips the 0176 helper test that surfaced it.
 
 ## Verification
 
@@ -233,3 +240,6 @@ ratified CLAUDE.md section. A skip with no such citation counts as a gap.
 - 2026-10-15: review fixes: one owner per mismatch row, cross-story `deps`,
   receipted i18n/globalid rows converge rather than stay, new
   `ruby-compat-errno-emfile` story
+- 2026-10-19: `i18n-backend-cache` and
+  `date-class-instance-d-lite-zero-private-readers` rehomed in from
+  `0176-actionview-helpers`; `date` added to `packages`.
