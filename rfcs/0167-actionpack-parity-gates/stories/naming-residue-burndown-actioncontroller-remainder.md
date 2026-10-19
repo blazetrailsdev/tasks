@@ -1,7 +1,7 @@
 ---
 title: "Burn down actioncontroller's regrown naming residue (18 rows)"
-status: claimed
-updated: 2026-10-18
+status: ready
+updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-10-18T18:44:54Z"
-assignee: "rb-equal-matches-a-ruby-date-against-its-temporal-seat"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
