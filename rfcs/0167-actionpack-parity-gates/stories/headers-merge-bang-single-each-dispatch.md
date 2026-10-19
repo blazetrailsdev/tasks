@@ -1,6 +1,6 @@
 ---
 title: "headers-merge-bang-single-each-dispatch"
-status: draft
+status: ready
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null

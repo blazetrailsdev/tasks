@@ -1,6 +1,6 @@
 ---
 title: "Test model registry is not an autoload: through-reflection resolution raises NameError for canonical models that exist"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

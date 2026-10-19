@@ -1,6 +1,6 @@
 ---
 title: "RubyTrackerTests have no trails tracker to run against"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null

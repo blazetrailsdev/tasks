@@ -1,6 +1,6 @@
 ---
 title: "Port template/test_case_test.rb"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0176-actionview-helpers"
 cluster: null

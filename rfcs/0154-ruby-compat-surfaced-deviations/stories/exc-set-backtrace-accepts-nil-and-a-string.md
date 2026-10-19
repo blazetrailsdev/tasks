@@ -1,6 +1,6 @@
 ---
 title: "exc-set-backtrace-accepts-nil-and-a-string"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

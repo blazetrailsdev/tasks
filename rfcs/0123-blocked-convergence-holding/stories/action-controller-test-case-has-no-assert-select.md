@@ -1,7 +1,7 @@
 ---
 title: "action-controller-test-case-has-no-assert-select"
-status: blocked
-updated: 2026-10-01
+status: ready
+updated: 2026-10-18
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["actionpack"]
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "No HTML parser and no rails-dom-testing SelectorAssertions port exist on trails origin/main (3a51486280): @blazetrails/nokogiri has only xml/ and sax/, htmlDocument still throws for non-xml (action-dispatch/testing/assertions.ts:10-18), and 'git grep assertSelect -- packages' is empty. The parser is 0140's dom-assertions-fragment-parses-with-nokogiri-html4, itself blocked (libxml2-wasm is built without the HTML module; needs a custom wasm build or a parse5 decision). rails-dom-testing is not vendored either, so assert_select has no source to port from. Unblock once the HTML parser decision lands; est-loc 150 does not cover a SelectorAssertions port."
+blocked-by: null
 closed-reason: null
 ---
 

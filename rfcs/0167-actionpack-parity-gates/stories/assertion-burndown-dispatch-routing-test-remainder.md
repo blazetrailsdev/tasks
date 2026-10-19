@@ -1,6 +1,6 @@
 ---
 title: "assertion-burndown-dispatch-routing-test-remainder"
-status: in-progress
+status: done
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
 cluster: null
