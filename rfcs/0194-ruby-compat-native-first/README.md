@@ -229,7 +229,10 @@ function per ported method, at its convention name, taking
 generators and `each`-answerers all work, and so does an `each` that
 answers a promise. The mixin members become one-line this-typed delegations,
 and ActiveSupport's `index_by` / `many?` / `pluck` / `maximum` take any
-Iterable and call the core functions where Rails' body does. Rule 1 still
+Iterable and call the core functions where Rails' body does. `Enumerable` also becomes a class module whose constructor wraps any
+Iterable, so `new Enumerable(xs).partition(fn)` is a second spelling over
+the same bodies. The call gates credit it as `xs.partition`
+(`enumerable-wrapper-over-any-iterable`). Rule 1 still
 holds, so a function lands only with a caller. Hand-rolled loops porting
 `each_slice` / `min_by` / `tally` / `each_with_object` are those callers.
 
@@ -290,7 +293,8 @@ compare stories (phase 1) and on `converge-four-divergent-public-send-ports`
    `ruby-compat-native-required-lint` and
    `call-args-enumerable-free-function-receiver` come first. They are
    followed by `enumerable-free-functions-over-iterable`,
-   `enumerable-mixin-built-from-free-functions` and
+   `enumerable-mixin-built-from-free-functions`,
+   `enumerable-wrapper-over-any-iterable` and
    `enumerable-free-functions-for-hand-rolled-sites`, and by the sweeps
    `native-array-access-sites`, `native-array-set-op-sites`,
    `native-array-conversion-and-hash-sites` and `native-scalar-sites`.
@@ -336,3 +340,4 @@ None. Both questions raised in drafting are resolved:
 - 2026-10-16: visibility collapse; owner chose the removal path for `include_private` arms.
 - 2026-10-16: review: reordered phases to follow deps, folded the Thor story into the collapse, added the `except` sweep, numeric verification, resolved open questions.
 - 2026-10-19: owner rulings fold in native-required (lint + Array/Hash/scalar credits + sweeps) and Enumerable as free functions; kept helper families listed under Policy.
+- 2026-10-19: owner asked for the iterable wrapper too: `Enumerable` is a class module that wraps any Iterable.
