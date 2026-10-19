@@ -1,6 +1,6 @@
 ---
 title: "Burn actiondispatch's block-parameter mismatches to zero"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null

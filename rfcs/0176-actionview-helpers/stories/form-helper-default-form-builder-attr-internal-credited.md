@@ -1,7 +1,7 @@
 ---
 title: "Credit FormHelper's attr_internal :default_form_builder in parity:api"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9057
+claim: "2026-10-19T12:47:38Z"
+assignee: "form-helper-default-form-builder-attr-internal-credited"
 blocked-by: null
 closed-reason: null
 ---

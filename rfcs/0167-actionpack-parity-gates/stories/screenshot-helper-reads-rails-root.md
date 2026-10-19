@@ -1,6 +1,6 @@
 ---
 title: "screenshot-helper-reads-rails-root"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null

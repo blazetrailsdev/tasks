@@ -1,6 +1,6 @@
 ---
 title: "Delete ruby-compat's Module class and carrier machinery"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null

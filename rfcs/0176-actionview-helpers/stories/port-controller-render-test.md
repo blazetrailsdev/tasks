@@ -1,7 +1,7 @@
 ---
 title: "Port actionpack/controller/render_test.rb (actionview side)"
 status: ready
-updated: 2026-10-17
+updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]

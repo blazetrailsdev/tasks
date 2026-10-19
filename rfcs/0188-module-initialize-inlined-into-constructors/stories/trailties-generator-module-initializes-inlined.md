@@ -1,7 +1,7 @@
 ---
 title: "trailties: the five Rails generator and command module initialize bodies are inlined"
-status: ready
-updated: 2026-10-15
+status: claimed
+updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion
 packages: ["trailties"]
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-19T12:48:04Z"
+assignee: "deduplicable-new-runs-after-the-most-derived-constructor"
 blocked-by: null
 closed-reason: null
 ---

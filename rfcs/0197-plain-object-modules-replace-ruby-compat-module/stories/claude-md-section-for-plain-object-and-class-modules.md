@@ -1,6 +1,6 @@
 ---
 title: "CLAUDE.md: plain-object and class modules, module super inlined"
-status: draft
+status: in-progress
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: design
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9056
+claim: "2026-10-19T12:08:29Z"
+assignee: "activesupport-code-generator-method-sets-without-live-include"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activejob: Core#initialize is inlined into Base's constructor"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion

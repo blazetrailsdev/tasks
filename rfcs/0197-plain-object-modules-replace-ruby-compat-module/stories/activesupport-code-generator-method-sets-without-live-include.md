@@ -1,6 +1,6 @@
 ---
 title: "activesupport: CodeGenerator method sets without live include"
-status: draft
+status: in-progress
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9056
+claim: "2026-10-19T12:08:29Z"
+assignee: "activesupport-code-generator-method-sets-without-live-include"
 blocked-by: null
 closed-reason: null
 ---

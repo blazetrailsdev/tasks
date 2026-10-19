@@ -1,6 +1,6 @@
 ---
 title: "activemodel/activesupport: generated_attribute_methods without live include"
-status: draft
+status: blocked
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
-blocked-by: null
+pr: trails#9056
+claim: "2026-10-19T12:08:29Z"
+assignee: "activesupport-code-generator-method-sets-without-live-include"
+blocked-by: "Repo owner ruled out a list of a module's includers (trails#9056); methods defined on generated_attribute_methods after the include need a carrier-free port the owner has yet to choose"
 closed-reason: null
 ---
 

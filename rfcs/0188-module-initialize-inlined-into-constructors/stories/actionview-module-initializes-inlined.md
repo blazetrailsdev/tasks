@@ -1,6 +1,6 @@
 ---
 title: "actionview: the five ActionView module initialize bodies are inlined"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: conversion

@@ -1,6 +1,6 @@
 ---
 title: "Pin actionpack's 216 unpinned method bodies"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null

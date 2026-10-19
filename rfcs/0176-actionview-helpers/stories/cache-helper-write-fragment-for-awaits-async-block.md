@@ -1,7 +1,7 @@
 ---
 title: "cache-helper-write-fragment-for-awaits-async-block"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9055
+claim: "2026-10-19T12:07:14Z"
+assignee: "cache-helper-write-fragment-for-awaits-async-block"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: an include into a plain module reaches classes that already include it"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null

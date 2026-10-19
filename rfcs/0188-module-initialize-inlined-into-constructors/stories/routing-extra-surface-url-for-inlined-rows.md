@@ -1,6 +1,6 @@
 ---
 title: "Clear parity:api:extra url_for.rb inlined-from rows on routes-proxy.ts and integration.ts"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null

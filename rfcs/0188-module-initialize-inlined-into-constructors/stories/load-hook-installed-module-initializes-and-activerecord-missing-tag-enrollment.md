@@ -1,6 +1,6 @@
 ---
 title: "load-hook-installed-module-initializes-and-activerecord-missing-tag-enrollment"
-status: ready
+status: claimed
 updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-19T12:48:04Z"
+assignee: "deduplicable-new-runs-after-the-most-derived-constructor"
 blocked-by: null
 closed-reason: null
 ---
