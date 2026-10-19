@@ -5,7 +5,9 @@ updated: 2026-10-17
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cache"]
-deps: ["port-solid-cache-entry-model-and-store"]
+deps:
+  - port-solid-cache-entry-model-and-store
+  - lookup-store-resolves-solid-cache-store
 deps-rfc: []
 est-loc: 150
 pr: null
