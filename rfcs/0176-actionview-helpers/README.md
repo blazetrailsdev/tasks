@@ -3,7 +3,7 @@ rfc: "0176-actionview-helpers"
 title: "ActionView helpers — the helper half to parity"
 status: active
 created: 2026-10-01
-updated: 2026-10-15
+updated: 2026-10-19
 owner: "@deanmarano"
 priority: 3
 packages:
@@ -22,6 +22,7 @@ related-rfcs:
   - "0141-actionpack-surfaced-deviations"
   - "0160-actionpack-test-harness-parity"
   - "0170-psych-in-ruby-compat"
+  - "0193-small-gem-ports-parity-100"
 ---
 
 # RFC 0176 — ActionView helpers
@@ -252,6 +253,12 @@ this RFC goes active.
 - **`trails-tsc` view typing.** The open `trails-tsc-*` stories stay in RFC
   0140, which declares `trails-tsc` in its packages. They are not rendering
   core either, and may want their own home, but they are not helpers.
+- **Gem ports the helpers depend on.** `@blazetrails/nokogiri` and
+  `@blazetrails/html-sanitizer` parity belongs to the
+  `nokogiri-html-sanitizer-parity` RFC; `i18n` and `date` gem gaps belong to
+  `0193-small-gem-ports-parity-100`. A helper story here that needs one of
+  their stories waits on it through a cross-RFC `deps` edge; it does not own
+  the work. Eight such stories were rehomed out on 2026-10-19 (see Changelog).
 - **`ActionView::TestCase`** (`test_case.rb`). Excluded in the register as test
   harness; revisit only if a helper suite cannot be ported without it.
 
@@ -318,7 +325,9 @@ helper files hidden by the register, 8 Rails helper test files unported.
 2. **Which HTML parser backs `Nokogiri::HTML4`.** libxml2-wasm ships without
    libxml2's HTML module. A custom wasm build or an npm parser is a
    runtime-dependency decision that RFC 0160's `assert_select` story is waiting
-   on as well.
+   on as well. The decision itself is owned by the
+   `nokogiri-html-sanitizer-parity` RFC (`html-sanitizer-parser-concerns`);
+   no helper phase here waits on it.
 
 ## Changelog
 
@@ -330,3 +339,12 @@ helper files hidden by the register, 8 Rails helper test files unported.
   stated, and RFC 0141's routing table pointed here. Register-entry removal
   split by owning gap; activation preconditions listed; the stale
   `/layouts.rb` entry recorded in RFC 0140's Verification.
+- 2026-10-19: re-scoped to the helper goal. Rehomed out the gem-port stories:
+  `nokogiri-xpath-evaluator-behind-searchable-css`,
+  `nokogiri-xml-node-set-union-and-root-namespaces`,
+  `nokogiri-css-on-css-select`, `port-nokogiri-css-parser-and-tokenizer-tests`,
+  `html-sanitizer-parser-concerns` and `html-sanitizer-safe-list-sanitize-css`
+  to the `nokogiri-html-sanitizer-parity` RFC; `i18n-backend-cache` and
+  `date-class-instance-d-lite-zero-private-readers` to
+  `0193-small-gem-ports-parity-100`. No open story here depended on them, so
+  no `deps` edge was needed.
