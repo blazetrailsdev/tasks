@@ -5,7 +5,8 @@ updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []
-deps: []
+deps:
+  - response-to-a-passes-rack-headers-to-hash
 deps-rfc: []
 est-loc: null
 priority: null
