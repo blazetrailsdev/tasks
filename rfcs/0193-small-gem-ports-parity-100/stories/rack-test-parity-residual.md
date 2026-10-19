@@ -1,6 +1,6 @@
 ---
 title: "rack-test residual: Methods alias and accessor, four missing tests, one skip, call and argument rows, pins"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals

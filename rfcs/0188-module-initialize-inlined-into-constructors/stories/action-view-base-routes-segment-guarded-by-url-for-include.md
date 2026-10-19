@@ -1,6 +1,6 @@
 ---
 title: "ActionView::Base sets _routes only where Routing::UrlFor is in the ancestry"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null

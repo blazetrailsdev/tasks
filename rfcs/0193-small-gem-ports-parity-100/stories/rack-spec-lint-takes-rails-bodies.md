@@ -1,6 +1,6 @@
 ---
 title: "rack-spec-lint-takes-rails-bodies"
-status: ready
+status: blocked
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-19T22:37:49Z"
+assignee: "rack-spec-lint-takes-rails-bodies"
+blocked-by: "waiting on rack-port-lint-wrapper-checks: packages/rack/src/lint.ts is a 253-line invention without Rack::Lint::Wrapper (lint.rb:44+), so none of spec_lint.rb's must_match/must_equal messages (e.g. 'No env given', 'env should not be frozen, but is', session/logger checks, InputWrapper/ErrorWrapper) can pass; porting lint.rb plus ~990 lines of spec exceeds 800 LOC"
 closed-reason: null
 ---
 

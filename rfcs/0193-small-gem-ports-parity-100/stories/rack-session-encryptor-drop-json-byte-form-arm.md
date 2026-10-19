@@ -1,6 +1,6 @@
 ---
 title: "Drop Encryptor's serializer === JSON byte-form arm (encryptor.rb:170-189)"
-status: ready
+status: blocked
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-19T22:17:58Z"
+assignee: "rack-session-encryptor-drop-json-byte-form-arm"
+blocked-by: "needs marshal-dump-answers-binary-string-seat: Marshal.dump output is byte-form, JSON.dump is UTF-16; with no encoding tag serializePayload cannot interpolate both into bytes without the serializer test"
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Seat every Tags class and mirror tags.rb's full autoload list"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9101
+claim: "2026-10-19T22:17:58Z"
+assignee: "rack-session-encryptor-drop-json-byte-form-arm"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port template/render_test.rb"
-status: claimed
+status: done
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
+pr: trails#9100
 claim: "2026-10-19T21:57:49Z"
 assignee: "port-template-render-test"
 blocked-by: null

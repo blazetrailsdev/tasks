@@ -1,6 +1,6 @@
 ---
 title: "TSETracker's RubyTracker arms are text heuristics, not RenderParser"
-status: ready
+status: blocked
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-19T22:17:58Z"
+assignee: "rack-session-encryptor-drop-json-byte-form-arm"
+blocked-by: 'owner decision: the three RubyTrackerTests templates are Ruby call syntax (render partial: "x", ...), which no TS parse of the compiled template accepts; converging needs the test templates respelled as render({ ... }) and a ruling on option-key spelling (spacer_template vs spacerTemplate)'
 closed-reason: null
 ---
 
