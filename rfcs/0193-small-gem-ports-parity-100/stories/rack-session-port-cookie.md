@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Session::Cookie (cookie.rb, 16 methods, 48 skipped tests)"
-status: in-progress
+status: done
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-session

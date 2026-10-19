@@ -1,6 +1,6 @@
 ---
 title: "actionview-tests-needing-actionpack-controller-and-parameters"
-status: draft
+status: ready
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null

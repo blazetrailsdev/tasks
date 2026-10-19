@@ -1,6 +1,6 @@
 ---
 title: "rack-test residual: Methods alias and accessor, four missing tests, one skip, call and argument rows, pins"
-status: ready
+status: in-progress
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9098
+claim: "2026-10-19T21:28:30Z"
+assignee: "rack-session-residual-pool-and-abstract-id"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "rack-spec-headers-takes-rails-bodies"
-status: draft
+status: in-progress
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9098
+claim: "2026-10-19T21:28:30Z"
+assignee: "rack-session-residual-pool-and-abstract-id"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "ActionView::Base sets _routes only where Routing::UrlFor is in the ancestry"
-status: claimed
+status: in-progress
 updated: 2026-10-19
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9094
 claim: "2026-10-19T20:57:55Z"
 assignee: "rack-session-encryptor-drop-json-byte-form-arm"
 blocked-by: null

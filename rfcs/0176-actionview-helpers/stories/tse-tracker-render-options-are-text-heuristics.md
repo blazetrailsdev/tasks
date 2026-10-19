@@ -1,6 +1,6 @@
 ---
 title: "TSETracker's RubyTracker arms are text heuristics, not RenderParser"
-status: claimed
+status: ready
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: "2026-10-19T20:57:55Z"
-assignee: "rack-session-encryptor-drop-json-byte-form-arm"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

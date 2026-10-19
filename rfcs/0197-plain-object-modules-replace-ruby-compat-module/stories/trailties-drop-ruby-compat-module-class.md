@@ -1,6 +1,6 @@
 ---
 title: "trailties: modules are plain objects, not ruby-compat Module instances"
-status: claimed
+status: ready
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: "2026-10-19T20:57:55Z"
-assignee: "rack-session-encryptor-drop-json-byte-form-arm"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

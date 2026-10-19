@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: extend through a plain module reaches a class helper's inherited instance methods"
-status: claimed
+status: in-progress
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#9096
 claim: "2026-10-19T20:37:52Z"
 assignee: "activemodel-drop-ruby-compat-module-class"
 blocked-by: null

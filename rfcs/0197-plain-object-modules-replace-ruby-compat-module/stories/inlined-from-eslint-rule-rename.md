@@ -1,6 +1,6 @@
 ---
 title: "eslint: rename inlined-from-only-on-constructors now that it admits methods"
-status: ready
+status: in-progress
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9097
+claim: "2026-10-19T21:17:50Z"
+assignee: "inlined-from-eslint-rule-rename"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: modules are plain objects, not ruby-compat Module instances"
-status: ready
+status: in-progress
 updated: 2026-10-19
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9099
+claim: "2026-10-19T21:39:31Z"
+assignee: "activerecord-drop-ruby-compat-module-class"
 blocked-by: null
 closed-reason: null
 ---
