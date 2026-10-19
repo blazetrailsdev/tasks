@@ -1,6 +1,6 @@
 ---
 title: "middleware-stack-initialize-copy-not-dup"
-status: draft
+status: in-progress
 updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9053
+claim: "2026-10-19T02:10:36Z"
+assignee: "middleware-stack-initialize-copy-not-dup"
 blocked-by: null
 closed-reason: null
 ---

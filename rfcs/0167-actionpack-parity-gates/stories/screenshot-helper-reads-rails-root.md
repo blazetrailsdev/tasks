@@ -1,6 +1,6 @@
 ---
 title: "screenshot-helper-reads-rails-root"
-status: draft
+status: in-progress
 updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9053
+claim: "2026-10-19T02:10:39Z"
+assignee: "screenshot-helper-reads-rails-root"
 blocked-by: null
 closed-reason: null
 ---
