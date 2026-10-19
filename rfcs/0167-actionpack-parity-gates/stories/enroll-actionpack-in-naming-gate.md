@@ -1,5 +1,5 @@
 ---
-title: "Enroll actiondispatch, actioncontroller and abstractcontroller in the naming gate"
+title: "Enroll actioncontroller and abstractcontroller in the naming gate"
 status: ready
 updated: 2026-10-18
 rfc: "0167-actionpack-parity-gates"
@@ -29,7 +29,7 @@ abstractcontroller had one burndown row on 2026-09-27; confirm it is gone.
 
 ## Acceptance criteria
 
-- The three packages are in `NAMING_ENROLLED_PACKAGES` and
-  `pnpm parity:api:calls:args` is green.
-- CLAUDE.md's sentence that "the actionpack family … remain report-only" is
-  updated to match.
+- actioncontroller and abstractcontroller are in `NAMING_ENROLLED_PACKAGES`
+  and `pnpm parity:api:calls:args` is green.
+- actiondispatch's permanent pairs carry `@missingRailsName` receipts; its one
+  convergeable row and its enrollment are `enroll-actiondispatch-in-naming-gate`.
