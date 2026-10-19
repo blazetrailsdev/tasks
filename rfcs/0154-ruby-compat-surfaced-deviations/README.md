@@ -21,6 +21,7 @@ packages:
   - "actionview"
   - "msgpack"
   - "did-you-mean"
+  - "i18n"
 clusters:
   - "mri-relocation"
   - "measurement"
