@@ -33,11 +33,14 @@ isolate `length`).
 
 ## Converged shape
 
-`spot` parses the compiled source (TypeScript's parser is already a dependency
-through `typescript/unstable/*`) and answers the span of the innermost
+`spot` parses the compiled source with `@blazetrails/tse-compiler`'s
+`parseScript` (trails#9051) and answers the span of the innermost
 expression at the location's column, as `ErrorHighlight.spot` does.
 
 ## Acceptance criteria
 
 - The exception-wrapper cover's extract splits line 2 as `["<%= [].boom.", "length", " %>\n"]`.
 - Remove the `@missingRailsCall parse` receipt on `Template#spot` if the port calls a parse.
+- A `JsParseError` from `parseScript` (a form the parser does not cover, such as
+  `switch`) is rescued and `spot` answers `null`, Rails' `found = nil` arm
+  (`template.rb:232-245`).
