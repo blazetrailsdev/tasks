@@ -339,7 +339,9 @@ helper files hidden by the register, 8 Rails helper test files unported.
   stated, and RFC 0141's routing table pointed here. Register-entry removal
   split by owning gap; activation preconditions listed; the stale
   `/layouts.rb` entry recorded in RFC 0140's Verification.
-- 2026-10-19: re-scoped to the helper goal. Rehomed out the gem-port stories:
+- 2026-10-19: re-scoped to the helper goal. Gem-port stories leave by verb
+  (the two 0193 ones on 2026-10-19, the six others once the new RFC is
+  numbered):
   `nokogiri-xpath-evaluator-behind-searchable-css`,
   `nokogiri-xml-node-set-union-and-root-namespaces`,
   `nokogiri-css-on-css-select`, `port-nokogiri-css-parser-and-tokenizer-tests`,
