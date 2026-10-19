@@ -5,7 +5,8 @@ updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - marshal-dump-answers-binary-string-seat
 deps-rfc: []
 est-loc: 60
 priority: null
