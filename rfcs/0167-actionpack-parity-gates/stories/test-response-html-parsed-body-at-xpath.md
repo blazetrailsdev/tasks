@@ -5,7 +5,8 @@ updated: 2026-10-19
 rfc: "0167-actionpack-parity-gates"
 cluster: null
 packages: []
-deps: []
+deps:
+  - nokogiri-xpath-evaluator-behind-searchable-css
 deps-rfc: []
 est-loc: null
 priority: null
