@@ -1,7 +1,7 @@
 ---
 rfc: "0198-activerecord-mixin-host-typing"
 title: "ActiveRecord mixin-host typing: derived interfaces replace loose any and casts"
-status: draft
+status: active
 created: 2026-10-19
 updated: 2026-10-19
 owner: "@deanmarano"
