@@ -1,9 +1,9 @@
 ---
 rfc: "0120-extra-surface-gating-rollout"
 title: "Extra-surface gating rollout: an enrollment contract for parity:api:extra"
-status: draft
+status: active
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-10-19
 owner: "@deanmarano"
 packages:
   - "arel"
