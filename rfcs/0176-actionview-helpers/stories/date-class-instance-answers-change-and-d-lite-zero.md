@@ -1,5 +1,5 @@
 ---
-title: "Date class instances answer Date#change and d_lite_zero readers"
+title: "Date class instances answer Date#change"
 status: ready
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
@@ -22,5 +22,7 @@ trails#9055 seated ActiveSupport's `Date#change` (`vendor/rails/v8.0.2/activesup
 
 ## Acceptance criteria
 
-- `Date` instances answer `change` (as an instance method in AS core_ext/date/calculations) and the private `d_lite_zero` readers, as Ruby's Date does.
-- A test covers `DateTimeSelector` over a `Date` class instance with `discard_day` and with `time_select`.
+- `Date` instances answer `change` (as an instance method in AS core_ext/date/calculations), as Ruby's Date does.
+- A test covers `DateTimeSelector` over a `Date` class instance with `discard_day`.
+
+The private `d_lite_zero` readers and the `time_select` test were split out to `date-class-instance-d-lite-zero-private-readers`: seating them on `Date.prototype` flips I18n's `respond_to?(:sec)` date/time format choice.
