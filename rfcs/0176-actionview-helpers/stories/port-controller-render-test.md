@@ -5,7 +5,8 @@ updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
-deps: []
+deps:
+  - mirror-actionview-render-test-fixtures
 deps-rfc: []
 est-loc: 700
 priority: null
