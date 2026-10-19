@@ -50,6 +50,16 @@ three things, in order:
    behavior is identical. Inline single-caller helpers at their caller and
    delete the export.
 
+A 2026-10-19 extension adds two more threads:
+
+- **Native required.** The native form is required, not only credited.
+  The gates credit the Array, non-0190 Hash, numeric and String forms, and
+  a lint reds a listed helper called on a receiver whose static type makes
+  the native form identical.
+- **Enumerable as free functions.** Enumerable becomes one free function
+  per method, `partition(enum, fn)`, over any Iterable or `each`-answerer.
+  The `Enumerable` mixin and ActiveSupport's extensions are built on them.
+
 It extends RFC 0190 (native JS hash forms), which settled
 `hasKey` / `hashAref` / `hashAset` / `hashDelete` / `merge` / `eachPair`. Those
 helpers are out of scope here.
@@ -110,6 +120,19 @@ Kept on purpose, with no substitution story:
   the sanctioned spellings.
 - The RFC 0190 hash helpers. trails#8903 and trails#8951 kept their remaining
   sites one by one.
+
+**Native is required (owner ruling, 2026-10-19).** Where the native form
+is identical at a call site, the helper is not merely optional but wrong,
+and `ruby-compat-native-required-lint` enforces that. The helper families
+kept on purpose are the object model (`include` / `extend` / `defineModule`,
+`rbObjDup` / `rbObjClone`, singleton class, constants, `rbFSend` /
+`rbObjRespondTo` for computed names and `method_missing` receivers), the
+Hash semantics JS lacks (`fetch`, `deleteIf` / `keepIf` / `hashReplace`,
+the `Hash` class for its README features), exceptions and Kernel (error
+classes, `excSetupMessage`, `rbFLoad`, `block()` / `rbBlockGivenP`,
+`toEnum`), and `rbInspect` for Ruby-rendered messages. Any other helper
+survives only at sites where it dispatches or where semantics differ, and
+each sweep PR lists those sites.
 
 ### Dispatch cost (no semantic change)
 
@@ -173,11 +196,42 @@ kind, as `POSITIONAL_ARRAY_ANALOGUES` already does.
   demand `rbFSend` over `recv[name](...)`, because `send` is not a scored name
   (`compare.ts:419-428`).
 
+- Array forms on a proven `array` kind: `compact`, `uniq`, `union`,
+  `take` / `drop`, `to_h`, `zip`, `count` with a block, and `sort` with no
+  block (`native-analogues-array-calls`). Their `Array#*` rows leave
+  `RECEIVER_KEYED_RUBY_COMPAT_EXPORTS`, so the reverse reading stops
+  demanding the helper.
+- Hash `keys` / `transform_values` / `each_value` / `values_at` / `dup`, and
+  numeric and string `to_i` / `to_f` / `round` / `nan?` / `strip` / `chomp`,
+  each scoped to the kind and to the form that is actually identical
+  (`native-analogues-hash-and-scalar-calls`).
+- `call-args` reads argument 1 of an Enumerable free function as the Ruby
+  receiver and a trailing function as its block
+  (`call-args-enumerable-free-function-receiver`).
+- `blazetrails/ruby-compat-native-required` is a type-aware lint over an
+  only-grow helper list. Each sweep enrolls its helpers in its own PR.
+
 ### Substitution and inlining
 
 The sweeps are per package and per helper. Each needs the gate credit for
 its helper first. Single-caller inlining needs no gate change, because none of
 the candidates is a credited name.
+
+### Enumerable as free functions
+
+Enumerable is ported three times today. There is the `Enumerable` mixin in
+`ruby-compat/src/enumerable.ts:602`, the Array-only `partition` /
+`groupBy` / `first` in `array.ts`, and the Ruby-core `groupBy` / `tally` /
+`filterMap` / `inBatchesOf` in `activesupport/src/enumerable-utils.ts`.
+The owner chose free functions (2026-10-19). `enumerable.ts` exports one
+function per ported method, at its convention name, taking
+`Iterable<T> | Each<T>` as argument 1. Array, Set, Map (as pairs),
+generators and `each`-answerers all work, and so does an `each` that
+answers a promise. The mixin members become one-line this-typed delegations,
+and ActiveSupport's `index_by` / `many?` / `pluck` / `maximum` take any
+Iterable and call the core functions where Rails' body does. Rule 1 still
+holds, so a function lands only with a caller. Hand-rolled loops porting
+`each_slice` / `min_by` / `tally` / `each_with_object` are those callers.
 
 ## Non-goals
 
@@ -231,6 +285,17 @@ compare stories (phase 1) and on `converge-four-divergent-public-send-ports`
    `triage-ruby-compat-exports-with-no-external-importer`,
    `native-first-policy-docs`.
 
+4. Phase 4, native required and Enumerable (2026-10-19): gates
+   `native-analogues-array-calls`, `native-analogues-hash-and-scalar-calls`,
+   `ruby-compat-native-required-lint` and
+   `call-args-enumerable-free-function-receiver` come first. They are
+   followed by `enumerable-free-functions-over-iterable`,
+   `enumerable-mixin-built-from-free-functions` and
+   `enumerable-free-functions-for-hand-rolled-sites`, and by the sweeps
+   `native-array-access-sites`, `native-array-set-op-sites`,
+   `native-array-conversion-and-hash-sites` and `native-scalar-sites`.
+   Each sweep depends on its gate story and on the lint.
+
 ## Verification
 
 - `AttributeAssignment#_assign_attribute` costs under 100 ns per assigned
@@ -251,6 +316,12 @@ compare stories (phase 1) and on `converge-four-divergent-public-send-ports`
 - `pnpm parity:api:calls`, `pnpm parity:api:calls:args` and
   `pnpm parity:api:calls:ruby-compat` stay green with no new baseline rows.
 
+- `ruby-compat-native-required` is green with every helper converted by
+  phase 4 enrolled, and each surviving site carries a disable comment that
+  names its dispatching receiver or semantic difference.
+- `groupBy` / `partition` / `tally` / `filterMap` each have exactly one
+  definition, in `ruby-compat/src/enumerable.ts`.
+
 ## Open questions
 
 None. Both questions raised in drafting are resolved:
@@ -264,3 +335,4 @@ None. Both questions raised in drafting are resolved:
 - 2026-10-16: initial RFC, from the ruby-compat native audit.
 - 2026-10-16: visibility collapse; owner chose the removal path for `include_private` arms.
 - 2026-10-16: review: reordered phases to follow deps, folded the Thor story into the collapse, added the `except` sweep, numeric verification, resolved open questions.
+- 2026-10-19: owner rulings fold in native-required (lint + Array/Hash/scalar credits + sweeps) and Enumerable as free functions; kept helper families listed under Policy.
