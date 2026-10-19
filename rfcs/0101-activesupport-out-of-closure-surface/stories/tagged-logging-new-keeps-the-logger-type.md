@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-Rails' `TaggedLogging.new(logger)` returns the same logger it was given, extended with `TaggedLogging` (`vendor/rails/v8.0.2/activesupport/lib/active_support/tagged_logging.rb:121-134`). The logger keeps its own class and methods.
+Rails' `TaggedLogging.new(logger)` returns a clone of the logger it was given (`logger.clone`), extended with `TaggedLogging` (`vendor/rails/v8.0.2/activesupport/lib/active_support/tagged_logging.rb:121-134`). The clone keeps the logger's own class and methods.
 
 trails declares `new(logger: Logger): TaggedLogger` (`packages/activesupport/src/tagged-logging.ts:177`), so the result loses the type of the logger passed in.
 
