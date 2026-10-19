@@ -2,7 +2,7 @@
 title: "test-response-html-parsed-body-at-xpath"
 status: ready
 updated: 2026-10-19
-rfc: "0167-actionpack-parity-gates"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps:
