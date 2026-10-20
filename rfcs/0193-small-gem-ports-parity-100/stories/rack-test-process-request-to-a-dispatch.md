@@ -1,6 +1,6 @@
 ---
 title: "rack-test process_request: port @app.call(env).to_a as one dispatch, not an instanceof arm"
-status: ready
+status: claimed
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-20T15:54:00Z"
+assignee: "did-you-mean-pin-registry-and-null-checker-bodies"
 blocked-by: null
 closed-reason: null
 ---

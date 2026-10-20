@@ -1,6 +1,6 @@
 ---
 title: "ESLint exclude lists become per-file counts against the merge-base"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null

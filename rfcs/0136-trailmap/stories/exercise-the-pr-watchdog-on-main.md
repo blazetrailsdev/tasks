@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the PR watchdog's comment-and-fail path has never run"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0136-trailmap"
 cluster: null

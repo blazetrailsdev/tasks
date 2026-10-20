@@ -1,6 +1,6 @@
 ---
 title: "rack-test UploadedFile#append_to: drop prose from the String.new receipt or converge onto rbStrSNew"
-status: ready
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9128
+claim: "2026-10-20T15:54:00Z"
+assignee: "did-you-mean-pin-registry-and-null-checker-bodies"
 blocked-by: null
 closed-reason: null
 ---

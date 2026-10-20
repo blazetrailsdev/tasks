@@ -1,6 +1,6 @@
 ---
 title: "trailmap: manual spawn joins the dashboard's one control listener and its e2e harness"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0136-trailmap"
 cluster: null

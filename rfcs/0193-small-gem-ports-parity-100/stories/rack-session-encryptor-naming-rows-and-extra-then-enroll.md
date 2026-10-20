@@ -1,6 +1,6 @@
 ---
 title: "rack-session: three encryptor naming rows and one moved const to zero, then enroll in both gates"
-status: ready
+status: claimed
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-session
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-20T15:54:00Z"
+assignee: "did-you-mean-pin-registry-and-null-checker-bodies"
 blocked-by: null
 closed-reason: null
 ---

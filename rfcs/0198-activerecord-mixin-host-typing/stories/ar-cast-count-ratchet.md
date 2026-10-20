@@ -1,6 +1,6 @@
 ---
 title: "Per-file only-shrink count ratchet for activerecord casts"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: cast-ratchet

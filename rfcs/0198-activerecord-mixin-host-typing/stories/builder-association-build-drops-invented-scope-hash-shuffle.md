@@ -1,6 +1,6 @@
 ---
 title: "Move the scope/options shuffle out of Builder::Association.build into the macros"
-status: draft
+status: ready
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null

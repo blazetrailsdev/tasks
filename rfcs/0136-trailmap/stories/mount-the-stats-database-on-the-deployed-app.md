@@ -1,6 +1,6 @@
 ---
 title: "Mount the stats database and set STATS_DB on the deployed app, and document it"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0136-trailmap"
 cluster: null

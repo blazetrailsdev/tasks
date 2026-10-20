@@ -1,6 +1,6 @@
 ---
 title: "activerecord-test-support-extra-surface-burndown"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null

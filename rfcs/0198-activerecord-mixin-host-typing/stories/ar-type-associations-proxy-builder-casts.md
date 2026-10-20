@@ -1,6 +1,6 @@
 ---
 title: "Type CollectionProxy finders, builder macro and include_in_memory receivers"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
