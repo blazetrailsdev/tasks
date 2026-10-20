@@ -3,7 +3,7 @@ rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 title: "Ruby modules are plain objects or class modules: retire ruby-compat's Module class, inline module super"
 status: active
 created: 2026-10-19
-updated: 2026-10-19
+updated: 2026-10-20
 owner: "@deanmarano"
 packages:
   - "ruby-compat"
@@ -165,6 +165,39 @@ The closed list in `eslint/inlined-from-only-on-constructors.mjs` widens to
 module methods reached by `super`. arel's `inlined-from` bucket, the general
 case of a module member whose body sits on an includer, stays pinned at 0.
 
+### A module included by an open set of classes binds `super` at include time
+
+Inlining needs a list of the classes that include a module. A concern that
+application code includes directly (`ActiveModel::Dirty`, `Validations`,
+`Validations::Callbacks`, `Attributes`; `callbacks.trails.test.ts` includes
+`Validations::Callbacks` into its own classes) has no such list, so the rule
+above cannot reach every includer. For such a module, `include()` records the
+`super` instead (owner, 2026-10-20):
+
+- When `include()` copies a plain-object module's method `foo` onto
+  `klass.prototype` over a `foo` the prototype already answers (an earlier
+  module's copy, or the superclass's), it seats that earlier `foo` on
+  `klass.prototype` under a symbol private to the copied function. This is the
+  next `foo` in `klass`'s ancestry at the moment of the include, which is
+  where `include_modules_at` (`vendor/ruby/v3.3.11/class.c:1253`) puts the
+  module: a later include sits above an earlier one, and the superclass sits
+  beneath both.
+- The module method's Rails `super` is written `rbCallSuper(this, foo, ...args)`
+  (MRI `rb_call_super`, `vendor/ruby/v3.3.11/vm_eval.c:366`), which reads that
+  symbol off the receiver: one property read, no walk of a recorded ancestry,
+  no carrier link. With nothing seated, it falls through to `Kernel`, as every
+  Ruby ancestry ends in `Object`.
+- The body stays in the module's own file under its Rails name, so the call
+  gates pair it with its Rails body directly, and no includer carries
+  `@inlinedFrom` for it.
+- Limits: the seat is a snapshot, so a `foo` redefined on the superclass after
+  the include is not seen; and a method a class defines itself still is not
+  overwritten by the copy, so its own JS `super.foo()` skips the module, as for
+  every plain module.
+
+Inlining stays the rule for a module whose includers are a closed set of
+framework classes; this binding is for the open-set concerns.
+
 ### Naming a plain module
 
 `rb_mod_const_set` (`vendor/ruby/v3.3.11/object.c:2545`,
@@ -207,7 +240,9 @@ to the includers directly. Each site is its own story:
   carrier, which the owner ruled out.
 - **A shared `super` resolver that walks a recorded ancestry and calls the next
   copy.** This is a carrier in all but name: per-call indirection, and a body
-  the gates cannot pair.
+  the gates cannot pair. Binding `super` at include time (§ "A module included
+  by an open set of classes binds `super` at include time") differs on both
+  counts: nothing is walked at call time, and the body stays where it pairs.
 - **Copy the module's methods under mangled names and call those as `super`.**
   This is invented surface on every includer, and `parity:api:extra` counts it.
 
@@ -268,3 +303,6 @@ to the includers directly. Each site is its own story:
   `super` strategy taken from RFC 0188.
 - 2026-10-19: owner approved widening `@inlinedFrom` to module methods reached
   by `super` (Open question 2); status `active`.
+- 2026-10-20: owner approved binding a module method's `super` at include time
+  for modules that application code includes (§ "A module included by an open
+  set of classes binds `super` at include time"); activemodel converts first.
