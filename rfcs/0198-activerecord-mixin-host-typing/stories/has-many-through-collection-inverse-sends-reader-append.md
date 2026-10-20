@@ -24,3 +24,9 @@ closed-reason: null
 
 - [ ] The collection arm reads the inverse reader and appends with the proxy's `<<` (`concat`), as Rails does.
 - [ ] `has_many_through_associations_test.rb` build-through tests stay green on all adapters.
+
+## Reopened (trails#9157)
+
+The first convergence (trails#9151) wrote `void ...reader.push(...)` inside the sync `buildRecord`. When the built record has its pk set, `ForeignAssociation#foreign_key_present?` (`foreign_association.rb:5-11`) makes `isFindTarget()` true, so `concat` → `loadTarget` runs a SELECT that nothing awaits. That SELECT raced the test's teardown and made the `SQLite :memory:` lane red (red-422d8a49). trails#9157 restored `addToTarget`.
+
+Converging requires an async build path that awaits the `<<`, rather than a floating promise. The same fix covers the sibling has-one arm (`has_many_through_association.rb:104-105`, `record.send("#{inverse.name}=", ...)`). It is `void ...writer(...)` today, and `HasOneAssociation#replace(record, true)` awaits `loadTarget` and can `save` in a transaction, so it floats the same way.
