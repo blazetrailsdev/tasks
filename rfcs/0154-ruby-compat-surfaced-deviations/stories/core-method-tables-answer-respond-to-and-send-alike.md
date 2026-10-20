@@ -42,8 +42,4 @@ not consulted symmetrically.
 - `sendInternal` dispatches a `CLASS_METHOD_TABLE` entry for a class receiver
   whose own chain defines none.
 - `basicObjRespondTo` answers for an `OBJECT_METHOD_TABLE` entry.
-- `basicObjRespondTo` does not answer a Hash core method (`each`, …) for a
-  plain object that does not define it, so `rbObjRespondTo({ push() {} }, "each")`
-  is false, as `respond_to?` is for a non-Hash Ruby object. This unblocks
-  `rack-buffered-body-respond-to-each` (`vendor/rack/v3.1.14/lib/rack/response.rb:339`).
 - `object.trails.test.ts` covers both directions for both tables.
