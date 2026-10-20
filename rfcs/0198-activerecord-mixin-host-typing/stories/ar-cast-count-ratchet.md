@@ -47,12 +47,15 @@ magnet, so no mark file exists during the burndown.
 
 ## Acceptance criteria
 
-- [ ] Every story in `deps` is done before this lands; a late cluster story blocks the ratchet rather than seeding above its result.
-- [ ] A script counts matching lines per file (`grep -cE` semantics, the RFC's exact regex) over non-test `packages/activerecord/src` and compares against a committed per-file mark JSON.
-- [ ] Its total equals the sum of the RFC's `grep -rcE` on the same tree (asserted in the unit test or CI).
-- [ ] The mark file is produced by a one-time `--seed` run of the same script, which refuses when a mark file already exists; the seed PR states the seeded total.
-- [ ] `pnpm parity:types:casts` fails on any file above its mark and on a rowless file with a non-zero count.
-- [ ] `pnpm parity:types:casts:tighten` only writes marks down and drops zero rows; there is no reseed or write-up path.
-- [ ] Unit test for the mark logic (above-mark, new file, tighten-only-down).
+Owner ruling on trails#9129: no committed mark file (it is a merge-conflict
+magnet). The mark is the count at the merge-base with `origin/main`, so there
+is no `--seed` and no `:tighten`.
+
+- [ ] Every story in `deps` is done before this lands.
+- [ ] A script counts matching lines per file (`grep -cE` semantics, the RFC's exact regex) over non-test `packages/activerecord/src` and compares each file against its count at `git merge-base origin/main HEAD`.
+- [ ] Its total equals the sum of the RFC's `grep -rcE` on the same tree (asserted in the unit test or CI); the PR states the count at landing.
+- [ ] `pnpm parity:types:casts` fails on any file above its base count, and on a file absent at the base with a non-zero count.
+- [ ] No mark file is committed; nothing can raise the bar.
+- [ ] Unit test for the comparison (above base, new file, below base passes).
 - [ ] Runs in CI's Preflight job.
 - [ ] The RFC's open question (gate name and home) is answered in the PR.
