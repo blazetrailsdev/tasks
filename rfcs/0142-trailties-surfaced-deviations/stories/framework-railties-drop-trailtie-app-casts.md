@@ -1,6 +1,6 @@
 ---
 title: "framework-railties-drop-trailtie-app-casts"
-status: draft
+status: closed
 updated: 2026-10-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Shipped in trails#9117"
 ---
 
 ## Context

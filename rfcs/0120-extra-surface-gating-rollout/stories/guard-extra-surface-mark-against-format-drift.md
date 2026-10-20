@@ -1,6 +1,6 @@
 ---
 title: "extra-surface-mark.json has no drift or format check"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Drop the remaining 49 associations/** casts"
-status: ready
+status: in-progress
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9116
+claim: "2026-10-20T02:11:29Z"
+assignee: "ar-type-associations-remaining-49-casts"
 blocked-by: null
 closed-reason: null
 ---

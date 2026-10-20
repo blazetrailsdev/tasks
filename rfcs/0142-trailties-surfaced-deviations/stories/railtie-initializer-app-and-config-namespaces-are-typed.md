@@ -1,6 +1,6 @@
 ---
 title: "railtie-initializer-app-and-config-namespaces-are-typed"
-status: draft
+status: in-progress
 updated: 2026-10-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#9117
+claim: "2026-10-20T02:13:40Z"
+assignee: "railtie-initializer-app-and-config-namespaces-are-typed"
 blocked-by: null
 closed-reason: null
 ---

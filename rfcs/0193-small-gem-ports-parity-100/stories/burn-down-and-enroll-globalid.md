@@ -1,6 +1,6 @@
 ---
 title: "Burn down and enroll globalid"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: api-compare
