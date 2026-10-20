@@ -1,6 +1,6 @@
 ---
 title: "rack call-argument rows to zero (8 shape, 18 naming) and enroll rack in NAMING_ENROLLED_PACKAGES"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-calls

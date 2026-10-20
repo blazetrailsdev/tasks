@@ -1,7 +1,7 @@
 ---
 title: "Move the three hand-rolled MockLoggers onto ActiveSupport::LogSubscriber::TestHelper"
-status: draft
-updated: 2026-10-06
+status: in-progress
+updated: 2026-10-20
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9115
+claim: "2026-10-20T01:39:22Z"
+assignee: "move-local-mock-loggers-onto-log-subscriber-test-helper"
 blocked-by: null
 closed-reason: null
 ---

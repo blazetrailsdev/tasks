@@ -1,6 +1,6 @@
 ---
 title: "Report and ratchet @internal counts per package"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: api-compare

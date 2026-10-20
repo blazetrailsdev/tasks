@@ -1,6 +1,6 @@
 ---
 title: "TSE typed stand-in binds every name the run-time with chain resolves"
-status: draft
+status: ready
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null

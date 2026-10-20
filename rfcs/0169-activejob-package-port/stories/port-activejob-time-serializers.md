@@ -1,7 +1,7 @@
 ---
 title: "Port TimeObjectSerializer, DateSerializer, DateTimeSerializer, TimeSerializer and TimeWithZoneSerializer"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-20
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob", "date", "activesupport"]
@@ -9,9 +9,9 @@ deps: ["port-activejob-arguments"]
 deps-rfc: []
 est-loc: 300
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9115
+claim: "2026-10-20T01:29:18Z"
+assignee: "port-activejob-time-serializers"
 blocked-by: null
 closed-reason: null
 ---

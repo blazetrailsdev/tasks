@@ -1,6 +1,6 @@
 ---
 title: "api-compare: Ruby extractor records prepend; LEXICAL_PREPENDS hand map is deleted"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null

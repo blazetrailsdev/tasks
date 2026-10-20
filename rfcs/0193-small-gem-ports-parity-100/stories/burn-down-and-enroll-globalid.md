@@ -1,7 +1,7 @@
 ---
 title: "Burn down and enroll globalid"
-status: ready
-updated: 2026-08-24
+status: in-progress
+updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: api-compare
 packages: ["globalid"]
@@ -9,9 +9,9 @@ deps: ["extra-surface-mark-dimensions"]
 deps-rfc: []
 est-loc: 300
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#9113
+claim: "2026-10-20T01:10:43Z"
+assignee: "burn-down-and-enroll-globalid"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "classAttribute / mattrAccessor with no default read nil, not undefined"
-status: draft
-updated: 2026-10-19
+status: in-progress
+updated: 2026-10-20
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9115
+claim: "2026-10-20T01:39:19Z"
+assignee: "class-attribute-unset-default-reads-nil"
 blocked-by: null
 closed-reason: null
 ---
