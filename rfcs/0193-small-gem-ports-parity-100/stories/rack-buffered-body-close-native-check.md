@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-`Rack::Response::Helpers#buffered_body!` closes the body after copying it: `body.close if body.respond_to?(:close)` (`vendor/rack/v3.1.14/lib/rack/response.rb`, inside `buffered_body!` at `:339`). trails' `bufferedBodyBang` (`packages/rack/src/response.ts:223`) spells this `if (rbObjRespondTo(body, "close")) body.close();`.
+`Rack::Response::Helpers#buffered_body!` closes the body after copying it: `body.close if body.respond_to?(:close)` (`vendor/rack/v3.1.14/lib/rack/response.rb:349`). trails' `bufferedBodyBang` (`packages/rack/src/response.ts:223`) spells this `if (rbObjRespondTo(body, "close")) body.close();`.
 
 Owner ruling 2026-10-20 (closing `rack-buffered-body-respond-to-each` as FALSIFIED): a rack body's `respond_to?` check is native JS, not ruby-compat send/respond_to. Ten lines earlier, at `:214`, the same method already checks `each` as `typeof this._body.each === "function"`.
 
