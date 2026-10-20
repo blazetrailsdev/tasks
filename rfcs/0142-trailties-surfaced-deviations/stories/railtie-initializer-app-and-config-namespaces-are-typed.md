@@ -28,6 +28,6 @@ The generated activejob railtie (codegen-native-inference) reports about 36 erro
 
 ## Acceptance criteria
 
-- An initializer block receives the application typed: `InitializerBlock<C>` passes the `Application` (or the type `run_initializers` passes) rather than `...args: unknown[]`. A block's `app.config` type-checks.
+- An initializer block receives the application typed: `InitializerBlock<C>` passes the `Application`, which Rails hands every initializer (`run_initializers(group, self)`, `vendor/rails/v8.0.2/railties/lib/rails/application.rb:440`), rather than `...args: unknown[]`. A block's `app.config` type-checks.
 - A framework adds its config namespace to `Configuration` with a module augmentation (`declare module "@blazetrails/trailties" { interface Configuration { activeJob: OrderedOptions } }`, or the equivalent for the package that owns it), so `config.activeJob.x` type-checks. The Proxy run time is unchanged.
 - A trails test defines an initializer that reads `app.config` and a config namespace through the augmentation, with no cast.
