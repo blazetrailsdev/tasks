@@ -1,14 +1,14 @@
 ---
 title: "extra-surface-mark.json has no drift or format check"
-status: draft
-updated: 2026-08-24
+status: ready
+updated: 2026-10-19
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

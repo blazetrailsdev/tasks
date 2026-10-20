@@ -1,6 +1,6 @@
 ---
 title: "Type the relation and query-methods hosts"
-status: ready
+status: done
 updated: 2026-10-19
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: mixin-host-typing
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9104
+claim: "2026-10-19T23:20:53Z"
+assignee: "ar-type-relation-query-methods"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Decide whether activerecord-test-support belongs in the compared population"
-status: ready
-updated: 2026-08-24
+status: claimed
+updated: 2026-10-19
 rfc: "0120-extra-surface-gating-rollout"
 cluster: api-compare
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-19T23:57:56Z"
+assignee: "convergeable-tag-story-id"
 blocked-by: null
 closed-reason: null
 ---

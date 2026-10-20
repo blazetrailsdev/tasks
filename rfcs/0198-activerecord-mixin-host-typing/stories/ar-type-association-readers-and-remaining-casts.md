@@ -1,6 +1,6 @@
 ---
 title: "Expose association reader/owner/target types; drop remaining associations/** casts"
-status: draft
+status: in-progress
 updated: 2026-10-19
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9106
+claim: "2026-10-19T23:36:00Z"
+assignee: "ar-type-association-readers-and-remaining-casts"
 blocked-by: null
 closed-reason: null
 ---

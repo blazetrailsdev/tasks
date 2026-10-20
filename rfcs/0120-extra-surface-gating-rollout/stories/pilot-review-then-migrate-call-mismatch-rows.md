@@ -1,7 +1,7 @@
 ---
 title: "Pilot review-then-migrate of call-mismatch rows on globalid and rack"
-status: ready
-updated: 2026-08-24
+status: closed
+updated: 2026-10-19
 rfc: "0120-extra-surface-gating-rollout"
 cluster: api-compare
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Pilot scope gone: origin/main has no scripts/api-compare/call-mismatches-exclude/globalid/** and no rack/body-proxy.json (converged by trails#8435/#8951 et al.). Whole tree is now 58 shards vs the 201 the story cites; remaining rack shards (multipart/parser, query-parser, show-exceptions) were not in the pilot. File a fresh pilot against the current tree if still wanted."
 ---
 
 ## Context

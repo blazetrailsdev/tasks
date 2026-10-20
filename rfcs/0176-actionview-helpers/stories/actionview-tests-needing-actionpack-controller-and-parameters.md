@@ -1,6 +1,6 @@
 ---
 title: "actionview-tests-needing-actionpack-controller-and-parameters"
-status: ready
+status: done
 updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9105
+claim: "2026-10-19T23:26:43Z"
+assignee: "actionview-tests-needing-actionpack-controller-and-parameters"
 blocked-by: null
 closed-reason: null
 ---

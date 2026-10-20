@@ -1,6 +1,6 @@
 ---
 title: "rack residual API: eight missing members, two inheritance gaps, four arity rows, two unpinned bodies"
-status: claimed
+status: done
 updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-api
@@ -9,7 +9,7 @@ deps: [ruby-compat-errno-emfile]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#9102
 claim: "2026-10-19T22:57:51Z"
 assignee: "rack-api-residual-members-inheritance-arity"
 blocked-by: null

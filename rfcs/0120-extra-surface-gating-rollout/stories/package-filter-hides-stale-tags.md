@@ -1,14 +1,14 @@
 ---
 title: "parity:api:extra --package hides stale @noRailsEquivalent tags in every other package"
-status: draft
-updated: 2026-09-03
+status: ready
+updated: 2026-10-19
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

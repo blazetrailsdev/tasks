@@ -1,7 +1,7 @@
 ---
 title: "Widen the extra-surface mark to noCounterpartFiles and allowed"
-status: ready
-updated: 2026-08-24
+status: in-progress
+updated: 2026-10-19
 rfc: "0120-extra-surface-gating-rollout"
 cluster: api-compare
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9107
+claim: "2026-10-19T23:52:28Z"
+assignee: "extra-surface-mark-dimensions"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Burn down activerecord extra surface from 399 novel to enrollment"
-status: draft
-updated: 2026-08-24
+status: closed
+updated: 2026-10-19
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: activerecord burned novel+moved to zero and is gated rowless (ROWLESS_PACKAGES in scripts/api-compare/extra-surface-mark.ts on origin/main; no row in extra-surface-mark.json). Landed via trails#7734 (base area moved extras to zero) and #7735 (rowless pin) under the activerecord-extra-surface-receipt-burndown RFC."
 ---
 
 ## Context

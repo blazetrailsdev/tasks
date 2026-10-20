@@ -1,14 +1,14 @@
 ---
 title: "assert-includes-receipt-is-a-scoring-gap-not-permanent"
-status: draft
-updated: 2026-09-20
+status: ready
+updated: 2026-10-19
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "Reconcile activerecord's non-zero gate entry with the enrollment contract"
-status: draft
-updated: 2026-08-24
+status: closed
+updated: 2026-10-19
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: activerecord is no longer frozen at novel 399. origin/main extra-surface-mark.ts has activerecord in ROWLESS_PACKAGES (pinned novel=total=0), extra-surface-mark.json has no activerecord row, COUNTED_PACKAGES is []; tiers are now explicit (counted / tagged-only / rowless) in the module comment. Landed via trails#7734 + #7735 (retire activerecord's mark row, rowless pin)."
 ---
 
 ## Context

@@ -1,14 +1,14 @@
 ---
 title: "Ruby extractor records constant alias targets; resolveDelegatedClass drops its suffix fallback"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-10-19
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null
