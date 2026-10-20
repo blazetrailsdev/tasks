@@ -1,6 +1,6 @@
 ---
 title: "Enroll rack-test, bcrypt and did-you-mean in the naming and extra-surface gates"
-status: ready
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals
@@ -9,9 +9,9 @@ deps: ["rack-test-uploaded-file-append-to-receipt-prose"]
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9145
+claim: "2026-10-20T18:21:16Z"
+assignee: "conventions-ruby-reserved-word-identifiers"
 blocked-by: null
 closed-reason: null
 ---

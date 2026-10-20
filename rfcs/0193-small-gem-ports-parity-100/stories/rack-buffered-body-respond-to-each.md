@@ -1,7 +1,7 @@
 ---
 title: "rack Response#buffered_body! reads respond_to?(:each) through rbObjRespondTo"
-status: blocked
-updated: 2026-10-19
+status: closed
+updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 10
 priority: null
 pr: null
-claim: "2026-10-19T17:41:43Z"
-assignee: "date-class-instance-d-lite-zero-private-readers"
-blocked-by: "waiting on core-method-tables-answer-respond-to-and-send-alike (still draft): rbObjRespondTo answers a Hash core method for a plain object"
-closed-reason: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: 'FALSIFIED: owner ruling 2026-10-20 — a body''s respond_to?(:each) is ported as native JS (typeof body.each === "function"), not rbObjRespondTo; response.ts bufferedBodyBang already does this'
 ---
 
 ## Context

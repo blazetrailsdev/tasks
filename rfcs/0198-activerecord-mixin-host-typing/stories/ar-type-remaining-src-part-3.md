@@ -1,6 +1,6 @@
 ---
 title: "ar-type-remaining-src-part-3: encryptable-record, transactions and the rest"
-status: ready
+status: done
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9144
+claim: "2026-10-20T18:21:21Z"
+assignee: "ar-type-remaining-src-part-3"
 blocked-by: null
 closed-reason: null
 ---

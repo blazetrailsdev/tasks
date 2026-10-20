@@ -1,6 +1,6 @@
 ---
 title: "activemodel-activesupport-module-super-inlined-into-includers"
-status: ready
+status: claimed
 updated: 2026-10-20
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-20T18:44:16Z"
+assignee: "actionpack-module-super-inlined-into-includers"
 blocked-by: null
 closed-reason: null
 ---

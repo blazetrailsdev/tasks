@@ -1,7 +1,7 @@
 ---
 title: "plain-module-extend-reaches-singleton-class"
-status: ready
-updated: 2026-10-19
+status: claimed
+updated: 2026-10-20
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-20T18:44:16Z"
+assignee: "actionpack-module-super-inlined-into-includers"
 blocked-by: null
 closed-reason: null
 ---

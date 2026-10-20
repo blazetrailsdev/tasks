@@ -1,7 +1,7 @@
 ---
 title: "i18n-backend-cache"
-status: blocked
-updated: 2026-10-17
+status: closed
+updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-10-17T22:02:38Z"
-assignee: "distance-of-time-in-words-drops-invented-defaults"
-blocked-by: "I18n.translate is synchronous but every ActiveSupport::Cache store's read/write is async (packages/activesupport/src/cache/store.ts:250,352), so Backend::Cache#_fetch (i18n backend/cache.rb) cannot read the store in-line; needs an owner decision on a sync cache seam"
-closed-reason: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: "PERMANENT: owner ruling 2026-10-20 — I18n.translate is synchronous and every ActiveSupport::Cache store is async; a prewarmed in-process copy was considered and rejected, so I18n::Backend::Cache is not ported and actionview's 'translate caching backend' stays skipped"
 ---
 
 ## Context

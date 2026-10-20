@@ -1,7 +1,7 @@
 ---
 title: "date-class-instance-d-lite-zero-private-readers"
-status: blocked
-updated: 2026-10-19
+status: ready
+updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: "2026-10-19T17:41:43Z"
-assignee: "date-class-instance-d-lite-zero-private-readers"
-blocked-by: "owner decision: needs a seat rbFSend dispatches but respond_to? cannot see on a Date class instance; CLAUDE.md 'Method visibility is compile-time only' rules out a runtime visibility carrier, and TEMPORAL_METHOD_TABLE (ruby-compat object.ts:569) seats only JS Date/Temporal"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

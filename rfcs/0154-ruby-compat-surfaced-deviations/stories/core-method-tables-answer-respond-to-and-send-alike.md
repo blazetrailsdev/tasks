@@ -1,7 +1,7 @@
 ---
 title: "CLASS_METHOD_TABLE and OBJECT_METHOD_TABLE answer respond_to? and send alike"
 status: draft
-updated: 2026-10-06
+updated: 2026-10-20
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "globalid: BaseLocator#findRecords applies :includes and drops invented guards"
-status: ready
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9145
+claim: "2026-10-20T18:21:16Z"
+assignee: "conventions-ruby-reserved-word-identifiers"
 blocked-by: null
 closed-reason: null
 ---

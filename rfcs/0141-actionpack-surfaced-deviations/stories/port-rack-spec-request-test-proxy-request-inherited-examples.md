@@ -1,7 +1,7 @@
 ---
 title: "Port the 97 examples TestProxyRequest inherits in rack's spec_request.rb"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-10-20
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["rack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9146
+claim: "2026-10-20T18:45:14Z"
+assignee: "port-rack-spec-request-test-proxy-request-inherited-examples"
 blocked-by: null
 closed-reason: null
 ---
