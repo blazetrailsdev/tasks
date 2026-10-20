@@ -1,6 +1,6 @@
 ---
 title: "ViewReloader re-imports rebuilt template modules (cache_template_loading)"
-status: ready
+status: claimed
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-20T22:59:51Z"
+assignee: "actionview-render-plain-is-async-inside-capture-block"
 blocked-by: null
 closed-reason: null
 ---

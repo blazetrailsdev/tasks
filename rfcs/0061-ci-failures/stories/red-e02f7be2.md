@@ -1,6 +1,6 @@
 ---
 title: "Leaf Tests failing on main @e02f7be2"
-status: ready
+status: closed
 updated: 2026-10-20
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-20T22:55:33Z"
+assignee: "red-e02f7be2"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: rack-session cookie.test.ts 'adds to RACK_ERRORS on encryptor errors' tampers the cookie's last byte to \\0; when the random HMAC's last byte is already \\0 (1/256) nothing changes and no error is logged. Same as vendor/rack-session/v2.1.0/test/spec_session_cookie.rb:398-399. Passes locally 3/3; unrelated to e02f7be2 (actionview)."
 ---
 
 ## Context
