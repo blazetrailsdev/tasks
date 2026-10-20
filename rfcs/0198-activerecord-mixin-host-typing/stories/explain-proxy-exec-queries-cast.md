@@ -1,6 +1,6 @@
 ---
 title: "Reach Relation#execQueries from ExplainProxy#inspect without a cast"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null

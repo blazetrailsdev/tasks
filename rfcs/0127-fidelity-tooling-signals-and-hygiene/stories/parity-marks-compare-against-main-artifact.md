@@ -1,6 +1,6 @@
 ---
 title: "Pipeline-derived parity marks compare against main's CI artifact, not a committed JSON"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null

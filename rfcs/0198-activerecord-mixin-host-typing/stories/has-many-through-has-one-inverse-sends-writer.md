@@ -1,6 +1,6 @@
 ---
 title: "has-many-through-has-one-inverse-sends-writer"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null

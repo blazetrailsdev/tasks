@@ -1,6 +1,6 @@
 ---
 title: "ar-type-remaining-src-part-3: encryptable-record, transactions and the rest"
-status: draft
+status: ready
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null

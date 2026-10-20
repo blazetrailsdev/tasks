@@ -1,6 +1,6 @@
 ---
 title: "ActionController::TestCase::Behavior and ActionDispatch::Assertions are plain-object modules"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null

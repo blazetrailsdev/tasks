@@ -1,6 +1,6 @@
 ---
 title: "Extractor records def spans for method-level @inlinedFrom (not only initialize/new)"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
