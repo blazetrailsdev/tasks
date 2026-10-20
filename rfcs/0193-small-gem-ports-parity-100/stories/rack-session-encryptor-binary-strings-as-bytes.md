@@ -1,13 +1,14 @@
 ---
-title: "rack-session-encryptor-binary-strings-as-bytes"
+title: "Rack::Session::Encryptor holds its BINARY Strings as Uint8Array"
 status: ready
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
-packages: []
+packages:
+  - rack-session
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null
@@ -25,8 +26,12 @@ closed-reason: null
 
 Those two bodies, with `serialize_payload` / `deserialized_message` (left to `rack-session-encryptor-drop-json-byte-form-arm`), are the four rack-session pairs left unpinned by `rack-session-pin-cookie-and-encryptor-bodies`. The `slice!` row in `initialize` was converged there, and rack-session joined the extra-surface gate (rowless).
 
+The bridge is not limited to the two `digest` calls. `encryptor.ts` converts between latin1 strings and bytes at about 12 sites: the cipher iv, key, update and final calls (`:92-95`, `:115-119`, `:154`), `SecureRandom.randomBytes(...).toString("latin1")` (`:138`, `:194`), and both HMAC results (`:149`, `:173`). Holding BINARY data as `Uint8Array` reaches all of them, and every Ruby String operation the Rails body runs on that data: concatenation, `slice!`, the length checks and the signature compare. CLAUDE.md § "A String has no encoding tag either" rules that ruby-compat tags a `Uint8Array` only, so a string-taking arm in `HMAC.digest` that guesses latin1 is not a faithful option.
+
 ## Acceptance criteria
 
-- [ ] The encryptor holds its BINARY Strings as `Uint8Array` (ruby-compat's BINARY form), or HMAC.digest gets a faithful way to take a BINARY string, so both `digest` calls pass `this.cipherSecret` / `messageSecret` and `this.hmacSecret` / `signingData` with no `Buffer.from` and no receipt.
-- [ ] 0 rack-session rows in `call-arg-mismatches.json`. `cipher_secret_from_message_secret` and `compute_signature` are pinned with `tsx scripts/api-compare/body-pins.ts --pin encryptor.rb` (leaving out the two pairs the drop-json story owns).
-- [ ] rack-session is added to `NAMING_ENROLLED_PACKAGES` (`scripts/api-compare/lint-call-args.ts`), and `pnpm parity:api:calls:args` stays green.
+- [ ] `encryptor.ts` holds every BINARY String in `encryptor.rb` (secrets, iv, message secret, cipher text, signing data, signature, padding) as `Uint8Array`. No `Buffer.from(x, "latin1")` or `.toString("latin1")` is left in the file except where Rails itself converts to a String (the base64 boundary of `encrypt` / `decrypt`).
+- [ ] Both `digest` calls pass `this.cipherSecret` / `messageSecret` and `this.hmacSecret` / `signingData` directly, with no conversion and no receipt. `OpenSSL.HMAC.digest` in ruby-compat is unchanged.
+- [ ] The `cipher_secret_from_message_secret` and `compute_signature` `naming` rows are gone from `call-arg-mismatches.json`, and those two pairs are pinned with `tsx scripts/api-compare/body-pins.ts --pin encryptor.rb`. The `serialize_payload` / `deserialized_message` pins stay with `rack-session-encryptor-drop-json-byte-form-arm`.
+- [ ] If rack-session has no remaining `naming` rows, it is added to `NAMING_ENROLLED_PACKAGES` (`scripts/api-compare/lint-call-args.ts`). Otherwise the remaining rows are listed in the PR body. `pnpm parity:api:calls:args` stays green either way.
+- [ ] `encryptor.test.ts` and `encryptor.trails.test.ts` pass unchanged. A new `encryptor.trails.test.ts` case decrypts a cookie produced by the encryptor on `origin/main` before the change, committed as a fixture string, so the wire format is shown to be identical.
