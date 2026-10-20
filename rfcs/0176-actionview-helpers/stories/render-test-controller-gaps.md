@@ -50,6 +50,10 @@ closed-reason: null
   `annotate_rendered_view_with_filenames = true` and `DetailsKey.clear`, the controller render emits
   no `<!-- BEGIN` comment (template compile cache not keyed on the flag?).
 
+- `test_line_offset` / `test_line_offset_with_annotations_enabled` (`:828`, `:1531`): the
+  `ActionView::Template::Error` backtrace's first frame is `template.ts:504`, not the template's
+  line 1 — `Template::Error#backtrace` should lead with the template frame.
+
 ## Acceptance criteria
 
 - [ ] Each test above is un-skipped in `render.test.ts` and passes with the Rails body.
