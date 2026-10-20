@@ -6,7 +6,8 @@ rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages:
   - rack-session
-deps: []
+deps:
+  - marshal-dump-answers-binary-bytes
 deps-rfc: []
 est-loc: 260
 priority: null
