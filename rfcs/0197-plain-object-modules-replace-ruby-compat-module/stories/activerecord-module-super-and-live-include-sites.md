@@ -1,6 +1,6 @@
 ---
 title: "activerecord-module-super-and-live-include-sites"
-status: claimed
+status: ready
 updated: 2026-10-20
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-20T18:44:16Z"
-assignee: "actionpack-module-super-inlined-into-includers"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "date-class-instance-d-lite-zero-private-readers"
-status: ready
+status: claimed
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-20T19:48:40Z"
+assignee: "date-class-instance-d-lite-zero-private-readers"
 blocked-by: null
 closed-reason: null
 ---

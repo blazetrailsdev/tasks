@@ -1,6 +1,6 @@
 ---
 title: "Templates run tsc-emitted JS from build-views; delete the with-chain eval pipeline"
-status: ready
+status: in-progress
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9149
+claim: "2026-10-20T19:27:20Z"
+assignee: "actionview-template-compile-loads-precompiled-module"
 blocked-by: null
 closed-reason: null
 ---

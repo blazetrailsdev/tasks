@@ -1,6 +1,6 @@
 ---
 title: "rack-request-env-ported-as-its-own-module"
-status: draft
+status: closed
 updated: 2026-10-20
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the Env initializer test ports as a bare class with Env#initialize inlined (RFC 0188), done in trails#9146; no standalone module is needed."
 ---
 
 ## Context

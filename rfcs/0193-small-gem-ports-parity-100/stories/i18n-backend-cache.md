@@ -1,6 +1,6 @@
 ---
 title: "i18n-backend-cache"
-status: closed
+status: blocked
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
-closed-reason: "PERMANENT: owner ruling 2026-10-20 — I18n.translate is synchronous and every ActiveSupport::Cache store is async; a prewarmed in-process copy was considered and rejected, so I18n::Backend::Cache is not ported and actionview's 'translate caching backend' stays skipped"
+blocked-by: "owner decision: prewarm-and-peek rejected 2026-10-20; to be closed PERMANENT once translation-helper.test.ts's skip carries a PERMANENT-SKIP line"
+closed-reason: null
 ---
 
 ## Context

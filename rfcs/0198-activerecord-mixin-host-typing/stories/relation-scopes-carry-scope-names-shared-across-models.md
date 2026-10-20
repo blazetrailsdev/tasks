@@ -1,6 +1,6 @@
 ---
 title: "relation-scopes-carry-scope-names-shared-across-models"
-status: draft
+status: claimed
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-20T19:49:38Z"
+assignee: "ar-type-remaining-src-part-4"
 blocked-by: null
 closed-reason: null
 ---
