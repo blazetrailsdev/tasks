@@ -2,7 +2,7 @@
 title: "ruby-compat Marshal.dump answers ASCII-8BIT bytes (Uint8Array)"
 status: draft
 updated: 2026-10-19
-rfc: "0193-small-gem-ports-parity-100"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
