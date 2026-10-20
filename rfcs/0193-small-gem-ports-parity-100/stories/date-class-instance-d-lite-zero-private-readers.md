@@ -1,6 +1,6 @@
 ---
 title: "date-class-instance-d-lite-zero-private-readers"
-status: claimed
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#9150
 claim: "2026-10-20T19:48:40Z"
 assignee: "date-class-instance-d-lite-zero-private-readers"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "actionview-template-compile-imports-emitted-module"
-status: draft
+status: closed
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "DUPLICATE: absorbed into its parent story actionview-template-compile-loads-precompiled-module, shipped whole in trails#9149"
 ---
 
 ## Context
