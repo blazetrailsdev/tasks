@@ -25,7 +25,7 @@ Rendering gaps surfaced while porting the rest of
 
 - `render partial use last prepended format for partials with the same names` (`render_test.rb:115`): a partial rendered with `formats: :json` leaves `:json` ahead of `:html` for the next partial; trails renders "JSON" where Rails renders "HTML".
 - `render template with handlers` (`:138`): there is no `:builder` template handler (`action_view/template/handlers/builder.rb`).
-- `render template with localization on context level` / `render template with dashed locale` (`:170`, `:177`): `view.locale = "da"` raises `I18n::InvalidLocale` after `store_translations "da", {}` (`render_test.rb:34-35`).
+- `render template with syntax error` (`:212`): the fixture `test/syntax_error.html.erb` (`<%= foo(\n  1,\n  2,\n%>`) is a Ruby syntax error, but the TSE pipeline accepts it (and even `foo(1, 2,,`) and raises `foo is not a function` at run time instead of a `Template::Error` matching /syntax/ with `annotated_source_code[0]` `"1:    <%= foo("`.
 - `without compiled method container is deprecated` (`:458`): `Base#compiled_method_container` raises `NotImplementedError` (`action_view/base.rb:271-278`), but trails wraps it in `Template::Error`.
 - `render layout with a nested render layout call using block with render partial` (`:693`) and `cache fragments inside render layout call with block` (`:812`): a `render layout:` block whose body awaits a nested `render`/`cache` yields a Promise to `capture`, "no implicit conversion of Promise into String" / an empty capture.
 - `render with nested layout` (`:738`): `content_for :column do ... end` captures the outer `render layout:` block's content instead of its own.

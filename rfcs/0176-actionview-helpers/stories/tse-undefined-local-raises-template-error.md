@@ -28,7 +28,15 @@ as `it.skip` in `packages/actionview/src/template/render.test.ts`:
 `render template with errors` (`:373`),
 `render sub template with errors` (`:382`),
 `undefined method error references named class` (`:390`),
-`render partial without object or collection does not generate partial name local variable` (`:533`).
+`render partial without object or collection does not generate partial name local variable` (`:533`),
+`render runtime error` (`:218`), `render location conditional append` (`:231`) and
+`render location conditional append 2` (`:244`), whose fixtures
+(`test/runtime_error.html.erb`, `test/unparseable_runtime_error*.html.erb`) call the
+undefined `method_that_does_not_exist` and then read the spot through
+`ActionDispatch::ExceptionWrapper::SourceMapLocation#spot`, and
+`render error indentation` (`:364`), which is ported in the test with a
+`throw` expression but finds `TemplateError#lineNumber` nil for a
+`FixtureResolver` template (Rails reports `"11"`).
 
 ## Acceptance criteria
 
