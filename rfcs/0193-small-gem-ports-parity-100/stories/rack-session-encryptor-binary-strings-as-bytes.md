@@ -8,7 +8,7 @@ packages:
   - rack-session
 deps: []
 deps-rfc: []
-est-loc: 200
+est-loc: 260
 priority: null
 pr: null
 claim: null
@@ -32,6 +32,8 @@ The bridge is not limited to the two `digest` calls. `encryptor.ts` converts bet
 
 - [ ] `encryptor.ts` holds every BINARY String in `encryptor.rb` (secrets, iv, message secret, cipher text, signing data, signature, padding) as `Uint8Array`. No `Buffer.from(x, "latin1")` or `.toString("latin1")` is left in the file except where Rails itself converts to a String (the base64 boundary of `encrypt` / `decrypt`).
 - [ ] Both `digest` calls pass `this.cipherSecret` / `messageSecret` and `this.hmacSecret` / `signingData` directly, with no conversion and no receipt. `OpenSSL.HMAC.digest` in ruby-compat is unchanged.
-- [ ] The `cipher_secret_from_message_secret` and `compute_signature` `naming` rows are gone from `call-arg-mismatches.json`, and those two pairs are pinned with `tsx scripts/api-compare/body-pins.ts --pin encryptor.rb`. The `serialize_payload` / `deserialized_message` pins stay with `rack-session-encryptor-drop-json-byte-form-arm`.
+- [ ] The `cipher_secret_from_message_secret` and `compute_signature` `naming` rows are gone from `call-arg-mismatches.json`.
+- [ ] Folded in from `rack-session-encryptor-drop-json-byte-form-arm`: `serializePayload` and `deserializedMessage` lose their `this.serializer === JSON` arm (the `b()` before interpolation and the `forceEncoding(..., "UTF-8")` before `JSON.load`) and read line-for-line with `encryptor.rb:168-189`. With the payload a `Uint8Array`, `JSON.load` takes it as `JSON.parse` already does (`packages/ruby-compat/src/json.ts:95-101`, Ruby's `convert_encoding`, `vendor/ruby/v3.3.11/ext/json/parser/parser.rl:673-687`), so `Marshal.dump`'s return type elsewhere is untouched. "round-trips non-ASCII under serialize_json" in `encryptor.trails.test.ts` still passes.
+- [ ] All four pairs (`cipher_secret_from_message_secret`, `compute_signature`, `serialize_payload`, `deserialized_message`) are pinned with `tsx scripts/api-compare/body-pins.ts --pin encryptor.rb`, and `parity:api:calls` stays green for encryptor.rb.
 - [ ] If rack-session has no remaining `naming` rows, it is added to `NAMING_ENROLLED_PACKAGES` (`scripts/api-compare/lint-call-args.ts`). Otherwise the remaining rows are listed in the PR body. `pnpm parity:api:calls:args` stays green either way.
 - [ ] `encryptor.test.ts` and `encryptor.trails.test.ts` pass unchanged. A new `encryptor.trails.test.ts` case decrypts a cookie produced by the encryptor on `origin/main` before the change, committed as a fixture string, so the wire format is shown to be identical.
