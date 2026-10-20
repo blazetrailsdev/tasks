@@ -55,10 +55,10 @@ closed-reason: null
   line 1 — `Template::Error#backtrace` should lead with the template frame.
 
 - Casts in `render.test.ts` that cite this story: `request.format = :xml` in the
-  `render_with_filters` `before_action` (`render_test.rb:608-611`, no `format=` setter in the
-  `Request` type); `@name = nil` in `builder_layout_test` (`:240`, `name` is typed `string`
+  `render_with_filters` `before_action` (`render_test.rb:609`, no `format=` setter in the
+  `Request` type); `@name = nil` in `builder_layout_test` (`:243`, `name` is typed `string`
   because of the `name` helper collision above); `tag.div html, class: "errors"` in the
-  `field_error_proc` (`:1257`, `tag()` returns an untyped `TagBuilder` with no `div`).
+  `field_error_proc` (`:1356`, `tag()` returns an untyped `TagBuilder` with no `div`).
 
 ## Acceptance criteria
 
