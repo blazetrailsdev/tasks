@@ -5,7 +5,8 @@ updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
-deps: []
+deps:
+  - actionview-template-compile-loads-precompiled-module
 deps-rfc: []
 est-loc: null
 priority: null
