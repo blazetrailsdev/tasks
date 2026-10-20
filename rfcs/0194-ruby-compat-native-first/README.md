@@ -17,6 +17,7 @@ packages:
   - msgpack
   - "activejob"
   - "rack"
+  - "rack-test"
 clusters:
   - dispatch-cost
   - gate
