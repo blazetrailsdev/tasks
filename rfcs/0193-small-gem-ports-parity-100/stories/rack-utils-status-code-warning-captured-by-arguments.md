@@ -1,7 +1,7 @@
 ---
 title: "rack spec_utils obsolete-symbols test asserts warn's arguments (capture_warnings)"
-status: draft
-updated: 2026-10-19
+status: claimed
+updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-20T13:55:38Z"
+assignee: "globalid-extract-top-level-global-id-rb"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "ar-type-associations-remaining-46-casts"
-status: draft
+status: done
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9122
+claim: "2026-10-20T13:10:58Z"
+assignee: "ar-type-associations-remaining-46-casts"
 blocked-by: null
 closed-reason: null
 ---

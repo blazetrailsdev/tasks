@@ -1,7 +1,7 @@
 ---
 title: "Burn down and enroll abstractcontroller"
-status: ready
-updated: 2026-08-24
+status: in-progress
+updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: api-compare
 packages: ["abstractcontroller"]
@@ -9,9 +9,9 @@ deps: ["extra-surface-mark-dimensions"]
 deps-rfc: []
 est-loc: 400
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#9126
+claim: "2026-10-20T13:18:04Z"
+assignee: "document-curation-register-split"
 blocked-by: null
 closed-reason: null
 ---

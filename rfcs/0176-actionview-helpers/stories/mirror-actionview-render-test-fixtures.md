@@ -1,6 +1,6 @@
 ---
 title: "mirror-actionview-render-test-fixtures"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null

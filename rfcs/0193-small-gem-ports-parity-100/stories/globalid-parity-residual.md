@@ -1,6 +1,6 @@
 ---
 title: "globalid residual: GlobalID#app/#find, two inheritance gaps, uri/gid call rows, locator argument row, pin"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals

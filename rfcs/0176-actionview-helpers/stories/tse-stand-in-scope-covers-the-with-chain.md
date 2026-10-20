@@ -1,6 +1,6 @@
 ---
 title: "TSE typed stand-in binds every name the run-time with chain resolves"
-status: ready
+status: in-progress
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9125
+claim: "2026-10-20T13:14:09Z"
+assignee: "tse-stand-in-scope-covers-the-with-chain"
 blocked-by: null
 closed-reason: null
 ---

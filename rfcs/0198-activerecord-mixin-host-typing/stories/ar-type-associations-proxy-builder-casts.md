@@ -1,6 +1,6 @@
 ---
 title: "Type CollectionProxy finders, builder macro and include_in_memory receivers"
-status: draft
+status: in-progress
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9127
+claim: "2026-10-20T13:30:28Z"
+assignee: "ar-type-associations-proxy-builder-casts"
 blocked-by: null
 closed-reason: null
 ---

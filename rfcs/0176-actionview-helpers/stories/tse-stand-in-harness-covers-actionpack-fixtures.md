@@ -1,6 +1,6 @@
 ---
 title: "tse-stand-in-harness-covers-actionpack-fixtures"
-status: draft
+status: ready
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null

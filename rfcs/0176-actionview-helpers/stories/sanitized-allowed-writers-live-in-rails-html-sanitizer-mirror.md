@@ -1,7 +1,7 @@
 ---
 title: "Seat sanitized_allowed_*= writers in the rails-html-sanitizer.rb mirror"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []

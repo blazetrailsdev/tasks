@@ -1,6 +1,6 @@
 ---
 title: "globalid: locateSigned/locateManySigned pass only :for to SignedGlobalID.parse"
-status: draft
+status: claimed
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-20T13:55:38Z"
+assignee: "globalid-extract-top-level-global-id-rb"
 blocked-by: null
 closed-reason: null
 ---

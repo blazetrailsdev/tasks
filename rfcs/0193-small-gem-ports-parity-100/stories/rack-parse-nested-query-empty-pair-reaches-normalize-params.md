@@ -1,6 +1,6 @@
 ---
 title: "rack parse_nested_query: empty pair reaches _normalize_params, no invented skip"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null

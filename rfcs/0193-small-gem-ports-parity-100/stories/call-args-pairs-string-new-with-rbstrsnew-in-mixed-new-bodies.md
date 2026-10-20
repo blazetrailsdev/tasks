@@ -1,6 +1,6 @@
 ---
 title: "call-args-pairs-string-new-with-rbstrsnew-in-mixed-new-bodies"
-status: draft
+status: in-progress
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9128
+claim: "2026-10-20T13:37:58Z"
+assignee: "call-args-pairs-string-new-with-rbstrsnew-in-mixed-new-bodies"
 blocked-by: null
 closed-reason: null
 ---

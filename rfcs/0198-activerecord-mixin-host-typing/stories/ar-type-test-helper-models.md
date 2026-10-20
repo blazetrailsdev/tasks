@@ -1,7 +1,7 @@
 ---
 title: "Type the canonical test-helper models"
-status: ready
-updated: 2026-10-19
+status: done
+updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: test-model-typing
 packages: [activerecord]
@@ -9,9 +9,9 @@ deps: [ar-type-associations]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9124
+claim: "2026-10-20T13:12:53Z"
+assignee: "ar-type-test-helper-models"
 blocked-by: null
 closed-reason: null
 ---

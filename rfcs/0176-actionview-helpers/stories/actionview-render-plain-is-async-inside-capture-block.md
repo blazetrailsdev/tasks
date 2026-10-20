@@ -1,6 +1,6 @@
 ---
 title: "actionview-render-plain-is-async-inside-capture-block"
-status: draft
+status: ready
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null

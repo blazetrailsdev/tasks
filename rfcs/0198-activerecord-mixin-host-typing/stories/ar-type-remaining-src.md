@@ -1,7 +1,7 @@
 ---
 title: "Type the remaining activerecord src files no cluster story owns"
-status: ready
-updated: 2026-10-19
+status: done
+updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: mixin-host-typing
 packages: [activerecord]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9122
+claim: "2026-10-20T13:10:58Z"
+assignee: "ar-type-associations-remaining-46-casts"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Type Relation.model as a constructor of T so _new/_create drop their casts"
-status: draft
-updated: 2026-10-19
+status: done
+updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9124
+claim: "2026-10-20T13:12:53Z"
+assignee: "ar-type-test-helper-models"
 blocked-by: null
 closed-reason: null
 ---

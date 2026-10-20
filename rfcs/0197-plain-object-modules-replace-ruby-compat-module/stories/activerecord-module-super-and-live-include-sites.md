@@ -1,7 +1,7 @@
 ---
 title: "activerecord-module-super-and-live-include-sites"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-20
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages: []

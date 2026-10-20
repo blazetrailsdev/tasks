@@ -1,7 +1,7 @@
 ---
 title: "Port actionpack/controller/render_test.rb (actionview side)"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9128
+claim: "2026-10-20T13:37:58Z"
+assignee: "call-args-pairs-string-new-with-rbstrsnew-in-mixed-new-bodies"
 blocked-by: null
 closed-reason: null
 ---
