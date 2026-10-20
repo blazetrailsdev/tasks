@@ -1,7 +1,7 @@
 ---
 title: "Delete ruby-compat's Module class and carrier machinery"
-status: ready
-updated: 2026-10-19
+status: blocked
+updated: 2026-10-20
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages: ["ruby-compat"]
@@ -24,7 +24,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "220 new Module(...) sites remain outside ruby-compat (actionpack, etc.); waits on per-package RFC 0197 conversion stories"
 closed-reason: null
 ---
 

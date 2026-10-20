@@ -1,7 +1,7 @@
 ---
 title: "rack-test-methods-alias-accessor-and-missing-tests"
-status: ready
-updated: 2026-10-19
+status: claimed
+updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-20T12:57:45Z"
+assignee: "rack-test-methods-alias-accessor-and-missing-tests"
 blocked-by: null
 closed-reason: null
 ---

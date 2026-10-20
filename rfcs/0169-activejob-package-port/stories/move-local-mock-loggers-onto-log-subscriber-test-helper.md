@@ -1,6 +1,6 @@
 ---
 title: "Move the three hand-rolled MockLoggers onto ActiveSupport::LogSubscriber::TestHelper"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0169-activejob-package-port"
 cluster: null

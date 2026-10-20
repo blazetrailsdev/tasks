@@ -1,6 +1,6 @@
 ---
 title: "time-plus-duration-is-typed"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

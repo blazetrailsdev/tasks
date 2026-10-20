@@ -1,6 +1,6 @@
 ---
 title: "mirror-actionview-render-test-fixtures"
-status: ready
+status: in-progress
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9119
+claim: "2026-10-20T12:24:34Z"
+assignee: "mirror-actionview-render-test-fixtures"
 blocked-by: null
 closed-reason: null
 ---

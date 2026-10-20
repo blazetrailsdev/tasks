@@ -1,6 +1,6 @@
 ---
 title: "Drop the remaining 49 associations/** casts"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null

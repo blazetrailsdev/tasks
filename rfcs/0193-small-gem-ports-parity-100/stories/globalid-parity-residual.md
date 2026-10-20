@@ -1,7 +1,7 @@
 ---
 title: "globalid residual: GlobalID#app/#find, two inheritance gaps, uri/gid call rows, locator argument row, pin"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals
 packages: [globalid]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9120
+claim: "2026-10-20T12:22:51Z"
+assignee: "globalid-parity-residual"
 blocked-by: null
 closed-reason: null
 ---

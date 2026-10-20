@@ -1,6 +1,6 @@
 ---
 title: "Port TimeObjectSerializer, DateSerializer, DateTimeSerializer, TimeSerializer and TimeWithZoneSerializer"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0169-activejob-package-port"
 cluster: null

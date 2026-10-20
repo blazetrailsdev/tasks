@@ -1,6 +1,6 @@
 ---
 title: "rack parse_nested_query: empty pair reaches _normalize_params, no invented skip"
-status: ready
+status: in-progress
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9121
+claim: "2026-10-20T12:37:45Z"
+assignee: "rack-parse-nested-query-empty-pair-reaches-normalize-params"
 blocked-by: null
 closed-reason: null
 ---

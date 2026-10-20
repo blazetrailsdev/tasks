@@ -1,6 +1,6 @@
 ---
 title: "classAttribute / mattrAccessor with no default read nil, not undefined"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0169-activejob-package-port"
 cluster: null

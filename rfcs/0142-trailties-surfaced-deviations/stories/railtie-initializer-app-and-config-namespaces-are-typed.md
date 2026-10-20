@@ -1,6 +1,6 @@
 ---
 title: "railtie-initializer-app-and-config-namespaces-are-typed"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
