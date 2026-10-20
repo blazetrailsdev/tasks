@@ -1,6 +1,6 @@
 ---
 title: "base-constructor-passes-raw-attributes-to-assign-attributes"
-status: claimed
+status: in-progress
 updated: 2026-10-20
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9134
 claim: "2026-10-20T13:59:21Z"
 assignee: "base-constructor-passes-raw-attributes-to-assign-attributes"
 blocked-by: null

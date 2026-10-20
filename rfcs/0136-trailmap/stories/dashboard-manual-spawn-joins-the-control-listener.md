@@ -1,7 +1,7 @@
 ---
 title: "trailmap: manual spawn joins the dashboard's one control listener and its e2e harness"
-status: ready
-updated: 2026-10-15
+status: in-progress
+updated: 2026-10-20
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#71
+claim: "2026-10-20T14:01:25Z"
+assignee: "bump-the-ringo-pin-to-carry-the-write-path-and-smoke-cards"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "trailmap: the PR watchdog's comment-and-fail path has never run"
-status: ready
-updated: 2026-10-15
+status: in-progress
+updated: 2026-10-20
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#71
+claim: "2026-10-20T14:01:25Z"
+assignee: "bump-the-ringo-pin-to-carry-the-write-path-and-smoke-cards"
 blocked-by: null
 closed-reason: null
 ---

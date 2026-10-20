@@ -1,6 +1,6 @@
 ---
 title: "rails-test-name-parity-globalid-global-locator"
-status: claimed
+status: in-progress
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9132
 claim: "2026-10-20T13:55:38Z"
 assignee: "globalid-extract-top-level-global-id-rb"
 blocked-by: null

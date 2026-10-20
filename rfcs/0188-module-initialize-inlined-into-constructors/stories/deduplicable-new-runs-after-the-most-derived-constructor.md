@@ -1,6 +1,6 @@
 ---
 title: "deduplicable-new-runs-after-the-most-derived-constructor"
-status: claimed
+status: ready
 updated: 2026-10-20
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-20T13:59:21Z"
-assignee: "base-constructor-passes-raw-attributes-to-assign-attributes"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

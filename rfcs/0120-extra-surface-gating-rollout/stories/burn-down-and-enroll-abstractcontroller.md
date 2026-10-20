@@ -1,6 +1,6 @@
 ---
 title: "Burn down and enroll abstractcontroller"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: api-compare

@@ -1,6 +1,6 @@
 ---
 title: "rack-test process_request: port @app.call(env).to_a as one dispatch, not an instanceof arm"
-status: draft
+status: ready
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null

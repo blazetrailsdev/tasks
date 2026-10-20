@@ -1,6 +1,6 @@
 ---
 title: "Enroll did-you-mean and actionpackversion in the extra-surface gate"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: api-compare

@@ -1,6 +1,6 @@
 ---
 title: "Per-file only-shrink count ratchet for activerecord casts"
-status: claimed
+status: in-progress
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: cast-ratchet
@@ -19,7 +19,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#9129
 claim: "2026-10-20T13:57:57Z"
 assignee: "ar-cast-count-ratchet"
 blocked-by: null

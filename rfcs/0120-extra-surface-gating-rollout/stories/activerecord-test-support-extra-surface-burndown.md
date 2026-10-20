@@ -1,6 +1,6 @@
 ---
 title: "activerecord-test-support-extra-surface-burndown"
-status: draft
+status: in-progress
 updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9136
+claim: "2026-10-20T14:19:23Z"
+assignee: "assert-includes-receipt-is-a-scoring-gap-not-permanent"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "assert-includes-receipt-is-a-scoring-gap-not-permanent"
-status: ready
-updated: 2026-10-19
+status: blocked
+updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-20T14:19:23Z"
+assignee: "assert-includes-receipt-is-a-scoring-gap-not-permanent"
+blocked-by: "Owner decision: both acceptance paths conflict with the 2026-08-14 won't-do on map-vendored-minitest-and-drop-norailsequivalent (trails does not port minitest; vendored gem stays out of parity:api), and removing the helper means rewriting 26 call-site files (assertEmpty alone: 91). A minitest pseudo-package rooted at activesupport/src/testing would also pull testing/*.ts away from activesupport via overlappingSubDirs. Needs the owner to reverse that ruling or rule the tag PERMANENT."
 closed-reason: null
 ---
 

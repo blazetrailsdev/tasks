@@ -1,6 +1,6 @@
 ---
 title: "ESLint exclude lists become per-file counts against the merge-base"
-status: draft
+status: in-progress
 updated: 2026-10-20
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9135
+claim: "2026-10-20T14:25:53Z"
+assignee: "eslint-exclude-lists-become-merge-base-counts"
 blocked-by: null
 closed-reason: null
 ---

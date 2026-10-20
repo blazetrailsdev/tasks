@@ -1,7 +1,7 @@
 ---
 title: "Burn down and enroll i18n"
-status: ready
-updated: 2026-08-24
+status: in-progress
+updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: api-compare
 packages: ["i18n"]
@@ -9,9 +9,9 @@ deps: ["extra-surface-mark-dimensions", "convergeable-tag-story-id"]
 deps-rfc: []
 est-loc: 400
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#9136
+claim: "2026-10-20T14:19:23Z"
+assignee: "assert-includes-receipt-is-a-scoring-gap-not-permanent"
 blocked-by: null
 closed-reason: null
 ---

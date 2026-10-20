@@ -1,6 +1,6 @@
 ---
 title: "activesupport: Callbacks and LogSubscriber::TestHelper become plain modules with their includers' super inlined"
-status: ready
+status: claimed
 updated: 2026-10-20
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-20T14:18:13Z"
+assignee: "ar-type-remaining-src-part-2"
 blocked-by: null
 closed-reason: null
 ---
