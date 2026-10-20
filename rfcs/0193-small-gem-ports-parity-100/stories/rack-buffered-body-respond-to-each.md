@@ -5,7 +5,8 @@ updated: 2026-10-19
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - core-method-tables-answer-respond-to-and-send-alike
 deps-rfc: []
 est-loc: 10
 priority: null
