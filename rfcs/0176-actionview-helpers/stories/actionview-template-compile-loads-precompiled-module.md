@@ -1,5 +1,5 @@
 ---
-title: "Template#compile loads the precompiled .tse module; no eval outside test code"
+title: "Templates run tsc-emitted JS from build-views; delete the with-chain eval pipeline"
 status: ready
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
@@ -24,12 +24,15 @@ Repo-owner ruling (2026-10-19): file-backed `.tse` templates are precompiled, in
 - trails today: `packages/actionview/src/template.ts:419` `compile` builds `compiledSource()` (`:385`) and `(0, eval)`s it.
 - The build step already exists: `packages/trails-tsc/src/build-views.ts` writes `.trails/views/` and `watch-views.ts` rebuilds on change. It emits only type-checking stand-ins and `.d.ts` declarations, not the code that runs, and actionview never reads its output.
 
+- The run-time compiler is hand-rolled: `compiledSource()` (`packages/actionview/src/template.ts:385-416`) nests four `with` blocks (`TopLevel`, `this`, `__yield`, locals). `with` is sloppy-mode only and cannot appear in an ES module. That code is never type-checked, and nothing strips TypeScript from it.
+- `build-views` already builds a TypeScript program over typed per-template stand-ins (`virtualizeTse` and the template's scope in `packages/trails-tsc/src/plugins/tse.ts`), then calls `emitDeclarations` only (`build-views.ts:88`).
+
 ## Acceptance criteria
 
-- Add a root CLAUDE.md section, "Templates are precompiled (`Template#compile`'s `module_eval`)", ratifying the deviation. It also states that shipped code has no eval pipeline. Code cites it.
-- `build-views` emits one runtime JS module per `.tse` file, partials and unused templates included. Each module's function matches what `compiledSource()` produces today, including strict locals, `parameters`, and the source map. `build-views` and actionview share one code generator.
-- `Template#compile` keeps its Rails name and call site. Its body loads the template's emitted module through an awaited `import()` (the `rbFLoad` shape) and seats the method on `mod._compiledMethods`. A missing compiled module raises.
-- No `eval`, `new Function`, or `vm` call remains under any package's shipped `src/` (non-test files). Add a lint or guard test that fails on one.
-- String-source templates (`Template::Inline`, `render inline:`, a `Template.new` from a string) have no compiled module. In shipped code they raise when compiled. Name the error class and message, and cite the CLAUDE.md section where they are raised.
-- The eval-based compile moves to actionview test helpers (`src/test-helpers/` or the `testing` entry, never the main export). Test setup installs it so tests that build templates from strings keep working. It reuses the shared code generator.
-- Tests: a file-backed render uses the precompiled module. A file-backed template with no build output raises. In shipped code, an inline render raises. With the test helper installed, an inline render works.
+- Add a root CLAUDE.md section, "Templates are precompiled (`Template#compile`'s `module_eval`)". It ratifies the split: `compileJs` is the Erubi step, the typed stand-in is `compiled_source`, and `tsc` is the compiler. It states that shipped code has no eval pipeline. Code cites it.
+- `build-views` emits a runtime JS module (with a source map) from each template's stand-in through the TypeScript emitter, for every `.tse` file, partials and unused templates included.
+- `Template#compile` keeps its Rails name and call site. Its body loads the emitted module through an awaited `import()` (the `rbFLoad` shape) and seats the method on `mod._compiledMethods`. A missing compiled module raises.
+- Delete the `with`-chain `compiledSource()` body and the `(0, eval)` in `compile`. No `eval`, `new Function` or `vm` call remains in actionview or tse-compiler shipped `src/`. A guard test fails on one.
+- String-source templates (`Template::Inline`, `render inline:`, a `Template.new` from a string) raise in shipped code. Name the error class and message, and cite the section where they are raised.
+- An actionview test helper (not the main export) compiles a string-source template: it builds the same stand-in, runs `ts.transpileModule` (as `packages/trailties/src/template-builder/testing.ts` does), and evaluates the result. Test setup installs it.
+- Tests: a file-backed render runs the emitted module. A missing build raises. In shipped code, an inline render raises. With the helper installed, an inline render works.
