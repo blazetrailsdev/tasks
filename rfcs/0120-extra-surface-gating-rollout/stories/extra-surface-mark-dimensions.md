@@ -1,7 +1,7 @@
 ---
 title: "Widen the extra-surface mark to noCounterpartFiles and allowed"
-status: in-progress
-updated: 2026-10-19
+status: done
+updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: api-compare
 packages: []

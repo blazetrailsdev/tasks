@@ -1,7 +1,7 @@
 ---
 title: "CONVERGEABLE @noRailsEquivalent reasons must carry a story id"
-status: claimed
-updated: 2026-10-19
+status: in-progress
+updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: api-compare
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
+pr: trails#9109
 claim: "2026-10-19T23:57:56Z"
 assignee: "convergeable-tag-story-id"
 blocked-by: null

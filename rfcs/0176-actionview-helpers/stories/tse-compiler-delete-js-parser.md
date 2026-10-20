@@ -1,6 +1,6 @@
 ---
 title: "Delete tse-compiler's js-parser (no second compiler for Template#spot)"
-status: draft
+status: ready
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null

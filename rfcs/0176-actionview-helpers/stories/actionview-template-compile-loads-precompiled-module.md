@@ -1,6 +1,6 @@
 ---
 title: "Template#compile loads the precompiled .tse module; eval only for inline templates"
-status: draft
+status: ready
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null

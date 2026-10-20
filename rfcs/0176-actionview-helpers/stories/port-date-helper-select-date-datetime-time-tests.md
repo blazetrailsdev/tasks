@@ -1,7 +1,7 @@
 ---
 title: "port-date-helper-select-date-datetime-time-tests"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9112
+claim: "2026-10-20T00:48:55Z"
+assignee: "actionview-template-compile-loads-precompiled-module"
 blocked-by: null
 closed-reason: null
 ---

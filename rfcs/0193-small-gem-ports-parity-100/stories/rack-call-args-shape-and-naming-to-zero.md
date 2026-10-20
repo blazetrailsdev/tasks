@@ -1,7 +1,7 @@
 ---
 title: "rack call-argument rows to zero (8 shape, 18 naming) and enroll rack in NAMING_ENROLLED_PACKAGES"
-status: claimed
-updated: 2026-10-19
+status: in-progress
+updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-calls
 packages: [rack]
@@ -15,7 +15,7 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#9108
 claim: "2026-10-19T23:37:50Z"
 assignee: "rack-call-args-shape-and-naming-to-zero"
 blocked-by: null

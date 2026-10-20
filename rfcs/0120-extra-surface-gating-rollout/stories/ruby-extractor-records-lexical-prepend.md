@@ -1,7 +1,7 @@
 ---
 title: "api-compare: Ruby extractor records prepend; LEXICAL_PREPENDS hand map is deleted"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#9110
+claim: "2026-10-20T00:17:53Z"
+assignee: "rack-sendfile-variation-header-arm-vs-vendored"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Expose association reader/owner/target types; drop remaining associations/** casts"
-status: in-progress
-updated: 2026-10-19
+status: done
+updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
 packages: []

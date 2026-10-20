@@ -1,7 +1,7 @@
 ---
 title: "TimeWithZone and TimeZone spell Ruby <=> as compareTo, not compare"
-status: ready
-updated: 2026-10-19
+status: closed
+updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#9110
+claim: "2026-10-20T00:17:53Z"
+assignee: "rack-sendfile-variation-header-arm-vs-vendored"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: TimeWithZone and TimeZone mix in ruby-compat Comparable (packages/ruby-compat/src/comparable.ts), whose cmpint/equals/cmp dispatch on compareTo and whose contract member stdlib-mixin-surface.ts (RFC 0156) names compareTo; renaming to compare breaks every derived operator. The novel rows were discharged instead by OPERATOR_SPELLING_BY_FQN rows in trails#9110."
 ---
 
 ## Context

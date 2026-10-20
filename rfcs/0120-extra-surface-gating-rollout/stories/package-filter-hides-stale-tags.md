@@ -1,7 +1,7 @@
 ---
 title: "parity:api:extra --package hides stale @noRailsEquivalent tags in every other package"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-10-20
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9110
+claim: "2026-10-20T00:17:53Z"
+assignee: "rack-sendfile-variation-header-arm-vs-vendored"
 blocked-by: null
 closed-reason: null
 ---

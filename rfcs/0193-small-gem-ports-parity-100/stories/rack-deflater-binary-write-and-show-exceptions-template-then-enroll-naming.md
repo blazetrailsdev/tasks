@@ -1,7 +1,7 @@
 ---
 title: "rack-deflater-binary-write-and-show-exceptions-template-then-enroll-naming"
-status: draft
-updated: 2026-10-19
+status: in-progress
+updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9108
+claim: "2026-10-20T00:46:40Z"
+assignee: "rack-deflater-binary-write-and-show-exceptions-template-then-enroll-naming"
 blocked-by: null
 closed-reason: null
 ---
