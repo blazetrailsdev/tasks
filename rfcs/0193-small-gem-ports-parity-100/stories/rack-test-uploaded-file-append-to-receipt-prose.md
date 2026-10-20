@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: trails#9128
+pr: trails#9139
 claim: "2026-10-20T15:54:00Z"
 assignee: "did-you-mean-pin-registry-and-null-checker-bodies"
 blocked-by: null

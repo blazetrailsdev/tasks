@@ -1,6 +1,6 @@
 ---
 title: "rack spec_utils obsolete-symbols test asserts warn's arguments (capture_warnings)"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Pipeline-derived parity marks compare against main's CI artifact, not a committed JSON"
-status: draft
+status: in-progress
 updated: 2026-10-20
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9141
+claim: "2026-10-20T16:45:26Z"
+assignee: "parity-marks-compare-against-main-artifact"
 blocked-by: null
 closed-reason: null
 ---

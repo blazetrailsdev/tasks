@@ -1,6 +1,6 @@
 ---
 title: "Type named scopes so test-helper model scope bodies drop their remaining this: any"
-status: ready
+status: in-progress
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9142
+claim: "2026-10-20T16:39:48Z"
+assignee: "ar-type-test-helper-models-named-scope-receivers"
 blocked-by: null
 closed-reason: null
 ---

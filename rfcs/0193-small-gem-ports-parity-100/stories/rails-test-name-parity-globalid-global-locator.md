@@ -1,6 +1,6 @@
 ---
 title: "rails-test-name-parity-globalid-global-locator"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null

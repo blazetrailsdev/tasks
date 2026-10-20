@@ -1,6 +1,6 @@
 ---
 title: "i18n residual: SubtreeProxy#inspect, MissingTranslation#options, six call-argument rows"
-status: claimed
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals
@@ -9,7 +9,7 @@ deps: [burn-down-and-enroll-i18n]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#9139
 claim: "2026-10-20T15:54:00Z"
 assignee: "did-you-mean-pin-registry-and-null-checker-bodies"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "ActionController::TestCase::Behavior and ActionDispatch::Assertions are plain-object modules"
-status: claimed
+status: in-progress
 updated: 2026-10-20
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#9140
 claim: "2026-10-20T14:18:13Z"
 assignee: "ar-type-remaining-src-part-2"
 blocked-by: null

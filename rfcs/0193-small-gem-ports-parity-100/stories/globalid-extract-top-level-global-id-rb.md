@@ -1,6 +1,6 @@
 ---
 title: "Extract globalid's top-level lib/global_id.rb (deprecator, eager_load!)"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null

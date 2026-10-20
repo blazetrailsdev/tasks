@@ -1,6 +1,6 @@
 ---
 title: "Retire rbStrSNew: String.new ports as a native JS string, credited by the gate"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0194-ruby-compat-native-first"
 cluster: null

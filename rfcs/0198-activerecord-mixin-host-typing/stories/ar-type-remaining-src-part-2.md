@@ -1,6 +1,6 @@
 ---
 title: "ar-type-remaining-src-part-2"
-status: claimed
+status: in-progress
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9140
 claim: "2026-10-20T14:18:13Z"
 assignee: "ar-type-remaining-src-part-2"
 blocked-by: null

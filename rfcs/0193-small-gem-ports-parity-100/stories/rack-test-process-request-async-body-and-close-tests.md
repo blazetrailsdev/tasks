@@ -1,6 +1,6 @@
 ---
 title: "rack-test-process-request-async-body-and-close-tests"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null

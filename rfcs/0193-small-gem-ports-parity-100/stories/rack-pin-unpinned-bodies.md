@@ -1,6 +1,6 @@
 ---
 title: "rack: converge and pin the 25 unpinned bodies (events, reloader, headers, response, …)"
-status: claimed
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-api
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#9139
 claim: "2026-10-20T15:54:00Z"
 assignee: "did-you-mean-pin-registry-and-null-checker-bodies"
 blocked-by: null

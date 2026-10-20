@@ -1,6 +1,6 @@
 ---
 title: "conventions-ruby-reserved-word-identifiers"
-status: draft
+status: ready
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
