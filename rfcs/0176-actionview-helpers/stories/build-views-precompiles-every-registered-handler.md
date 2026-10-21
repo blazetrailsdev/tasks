@@ -1,17 +1,17 @@
 ---
 title: "build-views precompiles templates of every registered handler, not only .tse"
-status: draft
-updated: 2026-10-20
+status: claimed
+updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-21T00:47:23Z"
+assignee: "tse-undefined-local-raises-template-error"
 blocked-by: null
 closed-reason: null
 ---

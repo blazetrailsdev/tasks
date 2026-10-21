@@ -1,14 +1,14 @@
 ---
 title: "rb-equal-plain-module-identity-for-never-included-modules"
-status: draft
-updated: 2026-10-20
+status: ready
+updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 18
 pr: null
 claim: null
 assignee: null

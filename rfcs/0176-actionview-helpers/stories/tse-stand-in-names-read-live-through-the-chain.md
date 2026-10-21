@@ -1,14 +1,14 @@
 ---
 title: "TSE stand-in reads and writes free names live, as the with chain does"
-status: draft
-updated: 2026-10-20
+status: ready
+updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

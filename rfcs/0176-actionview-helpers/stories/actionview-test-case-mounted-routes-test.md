@@ -1,14 +1,14 @@
 ---
 title: "actionview-test-case-mounted-routes-test"
 status: ready
-updated: 2026-10-20
+updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 16
 pr: null
 claim: null
 assignee: null

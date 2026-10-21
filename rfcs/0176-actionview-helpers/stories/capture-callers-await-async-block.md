@@ -1,6 +1,6 @@
 ---
 title: "capture's callers await an async block like form_tag does"
-status: draft
+status: ready
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null

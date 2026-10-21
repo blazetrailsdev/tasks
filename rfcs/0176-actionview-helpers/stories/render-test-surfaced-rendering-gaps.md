@@ -1,7 +1,7 @@
 ---
 title: "render-test-surfaced-rendering-gaps"
 status: ready
-updated: 2026-10-20
+updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps:
   - port-builder-template-handler
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

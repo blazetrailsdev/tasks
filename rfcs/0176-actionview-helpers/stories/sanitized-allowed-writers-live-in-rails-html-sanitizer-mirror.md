@@ -1,14 +1,14 @@
 ---
 title: "Seat sanitized_allowed_*= writers in the rails-html-sanitizer.rb mirror"
 status: ready
-updated: 2026-10-20
+updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 14
 pr: null
 claim: null
 assignee: null

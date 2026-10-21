@@ -1,7 +1,7 @@
 ---
 title: "port-template-render-test-remainder"
-status: in-progress
-updated: 2026-10-20
+status: done
+updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
