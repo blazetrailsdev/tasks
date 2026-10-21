@@ -1,0 +1,35 @@
+---
+title: "Vendor image_processing 1.14.0 and mini_magick 5.2.0"
+status: draft
+updated: 2026-10-21
+rfc: "0000-image-processing-port"
+cluster: ip-vendor
+packages: ["image-processing", "mini-magick"]
+deps: []
+deps-rfc: []
+est-loc: 80
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+---
+
+## Context
+
+`vendor/rails/v8.0.2/Gemfile.lock` resolves `image_processing (1.14.0)` (`:289`,
+depending on `mini_magick (>= 4.9.5, < 6)` and `ruby-vips (>= 2.0.17, < 3)`)
+and `mini_magick (5.2.0)` (`:352`). Neither is in `vendor/sources.ts`. marcel's
+entry there (RFC 0201) is the shape: `ref`, `libPath`, `libEntryFile`,
+`compareApi: false`, `compareTests: false` until the package is ported.
+
+Sources: `https://github.com/janko/image_processing` tag `v1.14.0`,
+`https://github.com/minimagick/minimagick` tag `v5.2.0`.
+
+## Acceptance criteria
+
+- Both gems are entries in `vendor/sources.ts` and `vendor/sources.lock.json`,
+  fetched by `pnpm vendor:fetch` to `vendor/image_processing/v1.14.0` and
+  `vendor/mini_magick/v5.2.0`, comparison off.
+- Their test fixtures (image_processing's `test/fixtures/*.jpg|png`) are
+  reachable from the vendored tree.
