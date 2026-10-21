@@ -5,7 +5,8 @@ updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-builder-template-handler
 deps-rfc: []
 est-loc: null
 priority: null
