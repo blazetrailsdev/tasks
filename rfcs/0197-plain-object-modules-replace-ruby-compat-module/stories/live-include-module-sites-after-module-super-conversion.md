@@ -5,7 +5,9 @@ updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages: []
-deps: []
+deps:
+  - activemodel-activesupport-module-super-inlined-into-includers
+  - activerecord-module-super-and-live-include-sites
 deps-rfc: []
 est-loc: null
 priority: null
