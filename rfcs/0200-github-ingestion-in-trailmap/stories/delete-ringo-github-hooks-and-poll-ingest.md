@@ -2,7 +2,7 @@
 title: "Hooks off: delete ringo's GitHub hooks, the redelivery poller and poll-ingest"
 status: ready
 updated: 2026-10-21
-rfc: "0000-github-ingestion-in-trailmap"
+rfc: "0200-github-ingestion-in-trailmap"
 cluster: null
 packages: [trailties]
 deps: [cut-ringo-over-to-the-trailmap-relay, catch-up-missed-deliveries-on-reconnect]

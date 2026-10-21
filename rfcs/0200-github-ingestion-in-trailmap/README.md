@@ -1,5 +1,5 @@
 ---
-rfc: "0000-github-ingestion-in-trailmap"
+rfc: "0200-github-ingestion-in-trailmap"
 title: "trailmap ingests GitHub events and relays them to ringo"
 status: draft
 created: 2026-10-21

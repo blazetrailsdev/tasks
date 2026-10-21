@@ -2,7 +2,7 @@
 title: "ringo: act on the relay, audit direct deliveries against it, heal misses"
 status: ready
 updated: 2026-10-21
-rfc: "0000-github-ingestion-in-trailmap"
+rfc: "0200-github-ingestion-in-trailmap"
 cluster: null
 packages: []
 deps: [store-relay-audit-reports]

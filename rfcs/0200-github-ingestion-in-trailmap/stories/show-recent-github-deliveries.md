@@ -2,7 +2,7 @@
 title: "trailmap: deliveries page with counts, forwarder health and audit results"
 status: ready
 updated: 2026-10-21
-rfc: "0000-github-ingestion-in-trailmap"
+rfc: "0200-github-ingestion-in-trailmap"
 cluster: null
 packages: [actionview]
 deps:

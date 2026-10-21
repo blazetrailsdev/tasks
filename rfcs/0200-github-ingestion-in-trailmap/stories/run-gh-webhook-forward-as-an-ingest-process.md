@@ -2,7 +2,7 @@
 title: "trailmap: run gh webhook forward per enabled repo as an `ingest` process"
 status: ready
 updated: 2026-10-21
-rfc: "0000-github-ingestion-in-trailmap"
+rfc: "0200-github-ingestion-in-trailmap"
 cluster: null
 packages: [trailties]
 deps: [store-ingest-configuration-in-activerecord, receive-and-store-github-deliveries]

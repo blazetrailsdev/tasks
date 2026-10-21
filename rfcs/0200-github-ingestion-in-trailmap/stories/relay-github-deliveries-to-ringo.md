@@ -2,7 +2,7 @@
 title: "trailmap: relay stored deliveries to ringo, in order, re-signed"
 status: ready
 updated: 2026-10-21
-rfc: "0000-github-ingestion-in-trailmap"
+rfc: "0200-github-ingestion-in-trailmap"
 cluster: null
 packages: []
 deps: [receive-and-store-github-deliveries, run-gh-webhook-forward-as-an-ingest-process]
