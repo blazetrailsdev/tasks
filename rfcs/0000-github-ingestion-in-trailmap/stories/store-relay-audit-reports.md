@@ -26,7 +26,7 @@ body signed with `ringo_webhook_secret` (the same check as the receiver, on the
 fleet network only):
 
 - `{kind: "miss", repo, event, audit_key, detail}` stores a `RelayAudit` miss
-- `{kind: "tally", repo, event, window_start, window_end, matched, unmatched}`
+- `{kind: "tally", repo, event, window_start, window_end, matched, unmatched, duplicates}`
   stores a tally
 
 ## Acceptance criteria

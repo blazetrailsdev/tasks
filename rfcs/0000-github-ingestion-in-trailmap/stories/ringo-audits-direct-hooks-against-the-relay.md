@@ -37,14 +37,18 @@ The RFC's "Ringo audits the relay" is the spec. In btwebooks:
   - a direct entry unmatched after **10 minutes** is a **miss**: ringo
     replays it through the handler (heal) and POSTs a miss to trailmap's
     `/webhooks/audit`
+  - a healed key stays in the window for 24 h, so a relay that arrives after
+    the heal is **not** acted on. It's counted as `late` on the miss instead.
   - every 5 minutes it POSTs a tally per repo × event
-- record every acted-on audit key in ringo's handled log, so a delivery is
-  never acted on twice (Verification 2)
+- count, in the same in-memory window, any audit key ringo acts on more than
+  once (relay plus heal, or a repeated relay), and report it as the tally's
+  `duplicates`. That's the measure behind Verification 2, stored in trailmap,
+  with no ringo-side log file.
 
 ## Acceptance criteria
 
 - [ ] Mode `off` behaves exactly as today (existing tests pass unchanged)
 - [ ] Mode `audit`: a relayed event is acted on once, and its direct twin isn't acted on
 - [ ] A direct delivery with no relay within the window is healed once and reported as a miss
-- [ ] Tallies reach trailmap every 5 minutes
+- [ ] Tallies reach trailmap every 5 minutes, including `duplicates` (should stay 0; a test checks that a relay arriving after its heal is skipped, not counted as a duplicate)
 - [ ] A ringo restart in `audit` mode loses at most the in-memory window. That's documented, and the hooks' delivery history covers it.

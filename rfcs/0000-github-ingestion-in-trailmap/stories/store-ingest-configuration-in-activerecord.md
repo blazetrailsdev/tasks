@@ -38,7 +38,7 @@ stray migration.
   `connected_at`, `last_event_at`, `restarts`, `last_exit_code`,
   `stderr_tail`.
 - **`RelayAudit`** (new): `kind` (`miss` | `tally`), `repo`, `event`,
-  `audit_key`, `window_start`, `window_end`, `matched`, `unmatched`,
+  `audit_key`, `window_start`, `window_end`, `matched`, `unmatched`, `duplicates`,
   `detail`, `reported_at`.
 - **Seed:** the three tracked repos with `ingest_enabled`, their hooks' event
   lists, and hook ids 602873770, 670781774 and 674688087.

@@ -249,8 +249,8 @@ to that story's `deps-rfc` before work continues, per trailmap's CLAUDE.md.
 
 2. **Audit:** **7 consecutive days with zero `RelayAudit` misses** across all
    ingesting repos, including at least one trailmap deploy and one ringo deploy
-   in that window. Also **zero events handled twice**: each audit key is acted
-   on once, as ringo's handled-delivery log shows.
+   in that window. Also **zero events handled twice**: the summed
+   `RelayAudit.duplicates` over the same 7 days is 0.
 3. **After hooks off:** the three repos have no hook pointing at btwhooks, and
    `https://btwhooks.deanoftech.com/webhooks/github` doesn't answer from
    outside.
