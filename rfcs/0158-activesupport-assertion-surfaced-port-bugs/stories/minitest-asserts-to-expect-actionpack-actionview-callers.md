@@ -37,7 +37,10 @@ the actionpack-actionview package(s) (`grep -rl "testing/assertions" packages/ac
   replaces the built-in only at a call site where the built-in gives the wrong
   result for that value, by the table's "Use the Ruby matcher only when"
   column; a built-in that wrongly passes (`toBeFalsy` on `0`) counts. Where one
-  is used, the package's test tsconfig sees the matcher type augmentation.
+  is used, the package declares `@blazetrails/vitest-matchers` as a
+  devDependency and its tsconfig references `../vitest-matchers`, so `tsc`
+  sees the `declare module "vitest"` augmentation; the root `tsconfig.json`
+  reference alone does not reach a package's compile graph.
 - No ruby-compat call appears in a test to assert.
 - `ActiveSupport::Testing::Assertions` members (`assertNot`, `assertRaises`,
   `assertDifference`, …) stay.
