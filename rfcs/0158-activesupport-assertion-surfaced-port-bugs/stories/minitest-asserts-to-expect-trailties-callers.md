@@ -29,9 +29,18 @@ the trailties package(s) (`grep -rl "testing/assertions" packages/trailties`).
 
 ## Acceptance criteria
 
-- Every call of a Minitest helper in trailties uses its `expect` form from the
-  CONTRIBUTING.md table (Ruby truthiness for `assert`, `rbEqual` for values
-  with a Ruby `==`, `Math.abs` for `assert_in_delta`).
+- Every call of a Minitest helper uses its form from the CONTRIBUTING.md
+  table: `toBeRubyTruthy` / `toBeRubyFalsy` for `assert` / `refute` and
+  `assert_predicate` (`expect(o.isFoo()).toBeRubyTruthy()`), `toEqual` for
+  `assert_equal` (the registered equality tester applies Ruby `==`),
+  `toBeWithinDelta`, `toBeEmpty`, `toBeExactInstanceOf` for
+  `assert_instance_of`, `toBeInstanceOf` for `assert_kind_of`, `toRespondTo`,
+  and the built-ins `toBeNull`, `toBe`, `toContainEqual` / `toContain`,
+  `toMatch`. No `toBeTruthy` / `toBeFalsy` / `toBeCloseTo`, and no ruby-compat
+  call in a test to assert.
+- The package's test tsconfig sees the `@blazetrails/vitest-matchers` type
+  augmentation (a dependency plus a project reference), so the matchers
+  type-check.
 - `ActiveSupport::Testing::Assertions` members (`assertNot`, `assertRaises`,
   `assertDifference`, …) stay.
 - `pnpm parity:test:assertions` stays green.

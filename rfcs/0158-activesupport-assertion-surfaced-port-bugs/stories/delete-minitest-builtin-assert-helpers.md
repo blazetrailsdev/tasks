@@ -29,7 +29,7 @@ defines them in `vendor/minitest/*/lib/minitest/assertions.rb:171-812`, not in
 
 Also lift the `kindOf: "instanceOf"` HISTOGRAM_FOLD in
 `scripts/test-compare/assertion-kinds.ts` once the `toBeInstanceOf` ports of
-`assert_instance_of` are converged to `expect(o.constructor).toBe(cls)`, or
+`assert_instance_of` are converged to `toBeExactInstanceOf(cls)`, or
 file that as its own story if it does not fit.
 
 ## Acceptance criteria
