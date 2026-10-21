@@ -15,7 +15,15 @@ packages:
     "activejob",
     "did-you-mean",
   ]
-deps: []
+deps:
+  - actionpack-module-super-inlined-into-includers
+  - activemodel-activesupport-module-super-inlined-into-includers
+  - activerecord-module-super-and-live-include-sites
+  - actionview-module-super-remaining-modules
+  - trailties-thor-and-test-help-remaining-modules
+  - actionpack-route-set-helper-modules-without-live-include
+  - live-include-module-sites-after-module-super-conversion
+  - test-files-drop-ruby-compat-module
 deps-rfc: []
 est-loc: 300
 priority: null
