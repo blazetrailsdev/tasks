@@ -7,6 +7,8 @@ updated: 2026-10-19
 owner: "@deanmarano"
 packages:
   - activerecord
+  - "activemodel"
+  - "activesupport"
 clusters:
   - cast-ratchet
   - mixin-host-typing
