@@ -1,5 +1,5 @@
 ---
-rfc: "0000-image-processing-port"
+rfc: "0202-image-processing-port"
 title: "image_processing over sharp, and mini_magick shelling out"
 status: draft
 created: 2026-10-21
@@ -15,12 +15,7 @@ clusters:
   - ip-backends
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
-     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
-
-# RFC — image_processing over sharp, and mini_magick shelling out
+# RFC 0202 — image_processing over sharp, and mini_magick shelling out
 
 ## Summary
 

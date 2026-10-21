@@ -2,7 +2,7 @@
 title: "Port mini_magick, shelling out to ImageMagick through child_process"
 status: draft
 updated: 2026-10-21
-rfc: "0000-image-processing-port"
+rfc: "0202-image-processing-port"
 cluster: mini-magick
 packages: ["mini-magick"]
 deps: ["vendor-image-processing-and-mini-magick"]

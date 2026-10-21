@@ -2,7 +2,7 @@
 title: "ImageProcessing::Chainable as a thenable Proxy that collects operations"
 status: draft
 updated: 2026-10-21
-rfc: "0000-image-processing-port"
+rfc: "0202-image-processing-port"
 cluster: ip-core
 packages: ["image-processing"]
 deps: ["vendor-image-processing-and-mini-magick"]

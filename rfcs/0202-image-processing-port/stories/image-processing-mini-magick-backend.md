@@ -2,7 +2,7 @@
 title: "Port ImageProcessing::MiniMagick over the mini_magick port"
 status: draft
 updated: 2026-10-21
-rfc: "0000-image-processing-port"
+rfc: "0202-image-processing-port"
 cluster: ip-backends
 packages: ["image-processing"]
 deps: ["image-processing-pipeline-and-processor", "mini-magick-port"]
