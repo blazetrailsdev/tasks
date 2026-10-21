@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveJob::Enqueuing (perform_later / enqueue / perform_all_later) and ConfiguredJob, async"
-status: ready
-updated: 2026-10-05
+status: claimed
+updated: 2026-10-21
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-21T19:53:14Z"
+assignee: "port-activejob-enqueuing-and-configured-job"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port QueueAdapter, QueueAdapters.lookup, AbstractAdapter and InlineAdapter, and the inline lane's test setup"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0169-activejob-package-port"
 cluster: null

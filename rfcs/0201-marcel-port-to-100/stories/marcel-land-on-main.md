@@ -1,6 +1,6 @@
 ---
 title: "Land the generated marcel package on main, registered in CI"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0201-marcel-port-to-100"
 cluster: marcel-land
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9188
+claim: "2026-10-21T19:22:16Z"
+assignee: "marcel-land-on-main"
 blocked-by: null
 ---
 
