@@ -27,6 +27,8 @@ choosing `:enqueue_at` or `:enqueue` (`:19-23`); `perform_now` wrapping
 `halted_callback_hook` calling `super` and setting
 `@_halted_callback_hook_called` (`:47-50`).
 
+`ActiveJob.instrument_enqueue_all` already landed with `port-activejob-enqueuing-and-configured-job` (trails#9189, `packages/activejob/src/instrumentation.ts`), because `perform_all_later` cannot run without it; do not re-port it, extend that file.
+
 `Base` gains `include Instrumentation` (`base.rb:72`). RFC 0116's
 `jobruntime-instrument-drops-both-super-delegations` depends on this story: its
 `super` is this `instrument`.
