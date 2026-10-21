@@ -1,6 +1,6 @@
 ---
 title: "Take marcel to zero typecheck errors"
-status: ready
+status: done
 updated: 2026-10-21
 rfc: "0201-marcel-port-to-100"
 cluster: marcel-polish
@@ -9,9 +9,9 @@ deps: ["marcel-lib-native-idioms", "marcel-tests-native-and-typed"]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9188
+claim: "2026-10-21T20:10:01Z"
+assignee: "marcel-land-on-main"
 blocked-by: null
 ---
 

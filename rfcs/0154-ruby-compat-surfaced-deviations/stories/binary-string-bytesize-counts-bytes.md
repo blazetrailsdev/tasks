@@ -1,6 +1,6 @@
 ---
 title: "binary-string-bytesize-counts-bytes"
-status: claimed
+status: in-progress
 updated: 2026-10-21
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#9191
 claim: "2026-10-21T18:50:48Z"
 assignee: "binary-string-bytesize-counts-bytes"
 blocked-by: null

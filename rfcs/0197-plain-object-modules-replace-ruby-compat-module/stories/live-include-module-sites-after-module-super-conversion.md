@@ -1,6 +1,6 @@
 ---
 title: "live-include-module-sites-after-module-super-conversion"
-status: ready
+status: blocked
 updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -12,9 +12,9 @@ deps-rfc: []
 est-loc: null
 priority: 9
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-21T20:14:55Z"
+assignee: "module-count-ratchet-blocks-new-ruby-compat-modules"
+blocked-by: "waiting on a repo-owner ruling for live includes (methods defined on a module after a class includes it); the AC requires each site to convert under that ruling, which does not exist yet"
 closed-reason: null
 ---
 

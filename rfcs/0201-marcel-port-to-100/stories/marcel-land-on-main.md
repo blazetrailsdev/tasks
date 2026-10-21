@@ -1,6 +1,6 @@
 ---
 title: "Land the generated marcel package on main, registered in CI"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0201-marcel-port-to-100"
 cluster: marcel-land

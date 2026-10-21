@@ -1,6 +1,6 @@
 ---
 title: "Drop the generator's codegen-runtime and codegen-declined shims from marcel"
-status: ready
+status: done
 updated: 2026-10-21
 rfc: "0201-marcel-port-to-100"
 cluster: marcel-polish
@@ -9,9 +9,9 @@ deps: ["marcel-land-on-main"]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9188
+claim: "2026-10-21T20:16:54Z"
+assignee: "marcel-land-on-main"
 blocked-by: null
 ---
 

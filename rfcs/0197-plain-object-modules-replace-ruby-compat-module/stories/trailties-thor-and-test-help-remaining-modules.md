@@ -1,6 +1,6 @@
 ---
 title: "trailties: Thor Actions/Invocation/Shell and test_help reopenings drop ruby-compat Module"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#9190
+claim: "2026-10-21T20:14:55Z"
+assignee: "module-count-ratchet-blocks-new-ruby-compat-modules"
 blocked-by: null
 closed-reason: null
 ---

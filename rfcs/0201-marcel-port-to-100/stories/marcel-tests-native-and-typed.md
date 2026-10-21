@@ -1,6 +1,6 @@
 ---
 title: "Make marcel's tests and test helper plain, typed vitest"
-status: ready
+status: done
 updated: 2026-10-21
 rfc: "0201-marcel-port-to-100"
 cluster: marcel-polish
@@ -9,9 +9,9 @@ deps: ["marcel-drop-codegen-shims"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9188
+claim: "2026-10-21T20:16:54Z"
+assignee: "marcel-land-on-main"
 blocked-by: null
 ---
 

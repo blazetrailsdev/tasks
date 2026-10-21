@@ -1,6 +1,6 @@
 ---
 title: "autorun-adopts-minitest-test-subclasses"
-status: ready
+status: closed
 updated: 2026-10-21
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "avoiding minitest in favor of native vitest"
 ---
 
 ## Context

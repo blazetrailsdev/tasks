@@ -1,6 +1,6 @@
 ---
 title: "Marcel's magic-byte detection matches against binary IO bytes"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0201-marcel-port-to-100"
 cluster: marcel-polish
