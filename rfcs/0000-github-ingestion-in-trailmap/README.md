@@ -67,8 +67,9 @@ later stories can move handlers into trailmap one at a time behind it.
 - The trailmap image has no `gh`, and trails has no job or runner system. The
   ingest process is a plain Procfile process type.
 - The deploy token has `repo` scope, which can create repo hooks, but not
-  `admin:org_hook`. Forwarders are per repo, not `--org`, and the repo list is
-  ringo's `TRACKED_REPOS`.
+  `admin:org_hook`. Forwarders are per repo, not `--org`. The initial repo set
+  is ringo's `TRACKED_REPOS`, seeded into `RepositorySetting` rows (see
+  "Configuration and state live in ActiveRecord").
 - `gh webhook forward` flags: `--repo`/`--org`, `--events` (or `*`), `--url`,
   `--secret`, `--github-host`. With no `--url` it prints to stdout.
 
@@ -76,13 +77,13 @@ later stories can move handlers into trailmap one at a time behind it.
 
 ```text
 GitHub ──websocket──▶ gh webhook forward    (trailmap `ingest` process, one per repo)
-                         │ POST, signed with GITHUB_WEBHOOK_SECRET
+                         │ POST, signed with Setting github_webhook_secret
                          ▼
                       trailmap.web:8080/webhooks/github
                          ├─ verify HMAC; 200 "pong" on ping
                          ├─ store GithubDelivery (Hub/Postgres, raw body, GUID-unique)
-                         └─ if relay_to_ringo: POST raw body, re-signed with ringo's
-                            WEBHOOK_SECRET, to Setting.ringoBase()/webhooks/github
+                         └─ if relay_to_ringo: POST raw body, re-signed with
+                            Setting ringo_webhook_secret, to Setting.ringoBase()/webhooks/github
 ```
 
 - **Raw bytes are stored and relayed.** Signatures are computed over bytes, so
@@ -94,6 +95,42 @@ GitHub ──websocket──▶ gh webhook forward    (trailmap `ingest` process
   a row flip, not a deploy.
 - **Postgres (Hub) holds the deliveries.** This is high-volume, append-only
   fleet data, not the task domain's SQLite.
+
+## Configuration and state live in ActiveRecord
+
+Ringo keeps its configuration in env vars (`TRACKED_REPOS`, `WEBHOOK_SECRET`,
+`WEBHOOK_URL_SUBSTRING`, `POLL_INGEST_*`) and its state in JSON files
+(`pollingest-cursors.json` and its siblings). An env var can't be per-repo,
+can't be shown on a page, and can't change without a redeploy. A file is
+invisible, and it's lost when a container's filesystem is. This RFC doesn't
+carry that over. **Everything the ingest path reads or remembers is a Hub
+row**, behind a model and shown on a page. The environment holds only what a
+process needs before it can reach the database.
+
+| What                                                                           | Where                                                                                                                                  | Was (ringo)                                              |
+| ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| Which repos ingest, and which events                                           | `RepositorySetting` columns `ingest_enabled` and `ingest_events` (one row per `Repository`, already shown at `/:owner/:repo/settings`) | `TRACKED_REPOS` env, events fixed in each GitHub hook    |
+| The ringo hook id kept for cutover and rollback                                | `RepositorySetting.ringo_hook_id`                                                                                                      | found at runtime by `WEBHOOK_URL_SUBSTRING`              |
+| Inbound and relay signing secrets                                              | `Setting` keys `github_webhook_secret` and `ringo_webhook_secret`, values `encrypts`-ed; env fallback per `Setting.FALLBACKS`          | `WEBHOOK_SECRET` env                                     |
+| The GitHub token the forwarders use                                            | `Setting` key `github_token`, encrypted; the supervisor passes it to each `gh` child as `GH_TOKEN`; env fallback                       | `gh auth` on the host                                    |
+| Relay on/off                                                                   | `Setting` key `relay_to_ringo`                                                                                                         | n/a (`POLL_INGEST_WEBHOOKS` env, the closest equivalent) |
+| Each forwarder's life (started, connected, last event, exit code, stderr tail) | `IngestForwarder` row per repo, updated by the supervisor                                                                              | log lines only                                           |
+| Catch-up cursor (last delivery seen per repo)                                  | the newest `GithubDelivery.received_at` per repo, derived from the deliveries themselves                                               | `pollingest-cursors.json`                                |
+| Cutover state and history                                                      | `Setting` `relay_to_ringo` plus an `Event` row per flip (verb `ingest-cutover`)                                                        | n/a                                                      |
+
+Env vars that remain: the database URLs (`HUB_DATABASE_URL`), the AR
+encryption key material, and fallbacks during migration. A fallback is read
+only when no row is written, so each value moves into the table without a
+redeploy, as `Setting` already documents for `ringo_base`.
+
+**The supervisor reconciles from the table.** It re-reads `RepositorySetting`
+on an interval and starts or stops forwarders to match. Turning a repo's
+ingestion on or off is a settings-page click, not a config change and redeploy.
+
+Encryption at rest uses ActiveRecord's `encrypts`, which exists in the vendored
+build. If anything it needs is missing for a Hub model, that gap is a trails
+story, and until it lands the secret stays in its env fallback. Plaintext rows
+are not an acceptable stopgap.
 
 ## Rollout
 

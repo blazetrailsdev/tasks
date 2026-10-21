@@ -5,7 +5,7 @@ updated: 2026-10-21
 rfc: "0000-github-ingestion-in-trailmap"
 cluster: null
 packages: []
-deps: [receive-and-store-github-deliveries]
+deps: [store-ingest-configuration-in-activerecord, receive-and-store-github-deliveries]
 deps-rfc: []
 est-loc: 200
 priority: null
@@ -27,7 +27,7 @@ ringo change.
 
 - POSTs the stored **raw body** to `${Setting.ringoBase()}/webhooks/github`
   with `X-GitHub-Event`, `X-GitHub-Delivery` (the stored GUID) and
-  `X-Hub-Signature-256` computed with `RINGO_WEBHOOK_SECRET` (ringo's
+  `X-Hub-Signature-256` computed with `Setting` `ringo_webhook_secret` (ringo's
   `WEBHOOK_SECRET`)
 - marks the row `relayed`, or `failed` with the status and body excerpt
 - runs only when the `relay_to_ringo` Setting is on (default off)

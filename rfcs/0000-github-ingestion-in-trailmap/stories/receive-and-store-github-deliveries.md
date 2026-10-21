@@ -5,7 +5,7 @@ updated: 2026-10-21
 rfc: "0000-github-ingestion-in-trailmap"
 cluster: null
 packages: [actionpack, activerecord]
-deps: []
+deps: [store-ingest-configuration-in-activerecord]
 deps-rfc: []
 est-loc: 250
 priority: null
@@ -25,7 +25,7 @@ and a JSON body.
 
 Add `post "webhooks/github"` and a controller action that:
 
-- verifies `X-Hub-Signature-256` against `GITHUB_WEBHOOK_SECRET` (constant-time;
+- verifies `X-Hub-Signature-256` against `Setting` `github_webhook_secret` (constant-time;
   403 on a bad or missing signature, never logging the body)
 - answers `ping` with 200 `pong`
 - stores a `GithubDelivery` on **Hub** (Postgres): `guid` (unique), `event`,

@@ -30,8 +30,9 @@ atomic and reversible.
    repo × event counts (`/deliveries`) match each ringo hook's `/deliveries`
    for the same window, within what a restart window explains. Record the
    numbers on the PR.
-2. **Flip, in one command:** set `relay_to_ringo` on and PATCH hooks
-   602873770 (trails), 670781774 (tasks) and 674688087 (trailmap) to
+2. **Flip, in one command:** set the `relay_to_ringo` Setting on and PATCH each
+   ingesting repo's `RepositorySetting.ringo_hook_id` (seeded: 602873770,
+   670781774, 674688087) to
    `active: false`. If both paths are on, ringo acts on every event twice,
    and GUIDs differ so it can't dedupe.
 3. **Watch** for a day: reviews reach coder panes, the CI-fixer fires on a red
@@ -42,6 +43,6 @@ Rollback is the same script reversed: hooks back on, relay off.
 ## Acceptance criteria
 
 - [ ] The shadow counts are on the PR
-- [ ] `scripts/ringo-cutover.sh on|off` flips both together and prints the resulting state
+- [ ] `scripts/ringo-cutover.sh on|off` flips both together, reads the hook ids from `RepositorySetting` (none hardcoded), records an `Event` row (verb `ingest-cutover`, detail on|off), and prints the resulting state
 - [ ] After the flip, the three hooks' `/deliveries` show nothing new, and ringo's logs show relayed events being handled
 - [ ] Review, CI-fixer and merge-teardown each observed working once after the flip

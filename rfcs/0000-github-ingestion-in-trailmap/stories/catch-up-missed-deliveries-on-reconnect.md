@@ -34,10 +34,15 @@ Pick a backfill source, check that it works, and record the choice in the RFC:
   is lossy, so mark those rows `synthetic`.
 
 When a forwarder (re)connects, the supervisor backfills from the repo's last
-`received_at` up to now, skipping anything already stored.
+`received_at` up to now, skipping anything already stored. The cursor IS that
+newest `received_at`, read from `GithubDelivery`. There is no cursor file
+or column (ringo's `pollingest-cursors.json` is exactly what this replaces).
+A hook used as the backfill source is found through
+`RepositorySetting.ringo_hook_id`, not by matching URLs.
 
 ## Acceptance criteria
 
 - [ ] The source is chosen, with the evidence in the RFC
 - [ ] Stopping `ingest` for a few minutes while a PR is opened and closed leaves both events in `GithubDelivery` after restart
 - [ ] The backfill never duplicates a row that the live forwarder already stored
+- [ ] No state file is written; the restart picks up from the database alone
