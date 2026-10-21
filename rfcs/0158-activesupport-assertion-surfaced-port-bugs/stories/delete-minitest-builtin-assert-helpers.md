@@ -41,6 +41,11 @@ file that as its own story if it does not fit.
   `assertPredicate`, `assertNotPredicate`, `assertRespondTo`,
   `assertNotRespondTo`, `assertOperator`, `diff` and `message` are deleted from
   `testing/assertions.ts` and the activesupport index re-exports.
+- Every `toBeInstanceOf` port of a Rails `assert_instance_of` is converged to
+  `toBeExactInstanceOf`, and the `kindOf: "instanceOf"` entry is deleted from
+  `HISTOGRAM_FOLD` in `scripts/test-compare/assertion-kinds.ts`, so
+  `assert_kind_of` / `toBeInstanceOf` score `kindOf` in the gating histogram.
+  `pnpm parity:test:assertions` stays green without the fold.
 - `ActiveSupport::Testing::Assertions` members stay; `Assertion`, `Skip`,
   `UnexpectedError`, `Test`, `BacktraceFilter`, `Minitest` stay.
 - `pnpm parity:api:extra:gate` green; activesupport mark lowered with
