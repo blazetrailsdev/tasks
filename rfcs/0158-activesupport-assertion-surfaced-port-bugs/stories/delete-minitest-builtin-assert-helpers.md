@@ -5,7 +5,10 @@ updated: 2026-10-21
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
-deps: []
+deps:
+  - minitest-asserts-to-expect-activesupport-callers
+  - minitest-asserts-to-expect-trailties-callers
+  - minitest-asserts-to-expect-actionpack-actionview-callers
 deps-rfc: []
 est-loc: null
 priority: null
