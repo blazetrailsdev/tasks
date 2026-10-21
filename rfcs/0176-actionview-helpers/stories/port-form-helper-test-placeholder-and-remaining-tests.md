@@ -5,7 +5,8 @@ updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
-deps: []
+deps:
+  - placeholderable-inlined-into-text-field-and-text-area
 deps-rfc: []
 est-loc: 700
 priority: null
