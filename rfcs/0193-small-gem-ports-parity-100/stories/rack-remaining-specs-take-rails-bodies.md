@@ -1,6 +1,6 @@
 ---
 title: "rack remaining specs take Rails' bodies: deflater, files, static, builder, mock_response, mock_request, directory, rewindable_input, body_proxy, common_logger"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-tests

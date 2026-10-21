@@ -1,6 +1,6 @@
 ---
 title: "missing-template-detailed-message-spellcheck"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null

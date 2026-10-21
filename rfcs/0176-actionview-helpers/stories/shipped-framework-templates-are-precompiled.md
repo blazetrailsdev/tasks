@@ -1,6 +1,6 @@
 ---
 title: "Every shipped framework .tse (trailties welcome page) is copied and precompiled at build"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null

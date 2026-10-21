@@ -1,6 +1,6 @@
 ---
 title: "converge-view-controller-delegators-across-three-files"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9167
+claim: "2026-10-21T12:41:51Z"
+assignee: "tse-undefined-local-raises-template-error"
 blocked-by: null
 closed-reason: null
 ---

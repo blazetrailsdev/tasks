@@ -1,6 +1,6 @@
 ---
 title: "actionview-assertion-parity-measure-and-split"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9166
+claim: "2026-10-21T12:30:54Z"
+assignee: "port-builder-template-handler"
 blocked-by: null
 closed-reason: null
 ---
