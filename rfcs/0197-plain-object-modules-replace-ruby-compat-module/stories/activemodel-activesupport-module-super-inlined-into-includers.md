@@ -1,6 +1,6 @@
 ---
 title: "activemodel-activesupport-module-super-inlined-into-includers"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null

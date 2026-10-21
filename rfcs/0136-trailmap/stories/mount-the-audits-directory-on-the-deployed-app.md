@@ -1,6 +1,6 @@
 ---
 title: "Mount ringo's audits directory and set AUDITS_DIR on the deployed app"
-status: draft
+status: done
 updated: 2026-10-21
 rfc: "0136-trailmap"
 cluster: null

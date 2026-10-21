@@ -1,7 +1,7 @@
 ---
 title: "Port Rack::Lint::Wrapper's checks and body/stream wrappers (lint.rb 6/26)"
-status: ready
-updated: 2026-10-19
+status: done
+updated: 2026-10-21
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-api
 packages: [rack]
@@ -9,9 +9,9 @@ deps: [rack-lint-wrapper-to-ary-unported]
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9181
+claim: "2026-10-21T18:57:39Z"
+assignee: "rack-port-lint-wrapper-checks"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Action Pack Tests failing on main @ef14079f"
-status: ready
+status: done
 updated: 2026-10-21
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#9185
+claim: "2026-10-21T18:21:07Z"
+assignee: "red-ef14079f"
 blocked-by: null
 closed-reason: null
 ---

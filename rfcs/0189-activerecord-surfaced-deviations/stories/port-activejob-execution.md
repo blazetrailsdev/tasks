@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveJob::Execution (perform_now / execute / perform) async, and ratify the async shape in CLAUDE.md"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

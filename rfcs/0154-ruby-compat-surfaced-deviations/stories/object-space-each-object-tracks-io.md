@@ -1,6 +1,6 @@
 ---
 title: "object-space-each-object-tracks-io"
-status: draft
+status: done
 updated: 2026-10-21
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#9184
+claim: "2026-10-21T18:17:43Z"
+assignee: "object-space-each-object-tracks-io"
 blocked-by: null
 closed-reason: null
 ---

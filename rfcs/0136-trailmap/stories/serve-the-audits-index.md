@@ -1,6 +1,6 @@
 ---
 title: "Serve /audits and the audit viewer, with ringo's filename validation"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0136-trailmap"
 cluster: null
