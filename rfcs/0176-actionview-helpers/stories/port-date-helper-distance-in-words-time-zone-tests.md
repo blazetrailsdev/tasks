@@ -1,6 +1,6 @@
 ---
 title: "port-date-helper-distance-in-words-time-zone-tests"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9170
+claim: "2026-10-21T13:29:21Z"
+assignee: "placeholderable-inlined-into-text-field-and-text-area"
 blocked-by: null
 closed-reason: null
 ---

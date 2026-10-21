@@ -1,6 +1,6 @@
 ---
 title: "serialization-error-carries-rescued-cause"
-status: draft
+status: done
 updated: 2026-10-21
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9169
+claim: "2026-10-21T13:35:11Z"
+assignee: "serialization-error-carries-rescued-cause"
 blocked-by: null
 closed-reason: null
 ---

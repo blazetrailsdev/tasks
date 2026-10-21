@@ -1,6 +1,6 @@
 ---
 title: "finisher-runs-before-set-helpers-path-message-pack-after-finisher-hook"
-status: draft
+status: in-progress
 updated: 2026-10-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9171
+claim: "2026-10-21T13:50:13Z"
+assignee: "finisher-runs-before-set-helpers-path-message-pack-after-finisher-hook"
 blocked-by: null
 closed-reason: null
 ---

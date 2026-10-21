@@ -1,6 +1,6 @@
 ---
 title: "backtrace-cleaner-clean-frame-calls-to-s"
-status: draft
+status: done
 updated: 2026-10-21
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9168
+claim: "2026-10-21T13:26:06Z"
+assignee: "backtrace-cleaner-clean-frame-calls-to-s"
 blocked-by: null
 closed-reason: null
 ---

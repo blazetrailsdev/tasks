@@ -1,6 +1,6 @@
 ---
 title: "actionview-test-case-not-in-published-build"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
