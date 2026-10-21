@@ -5,7 +5,8 @@ updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
 packages: ["trailties", "actionpack"]
-deps: []
+deps:
+  - actionpack-route-set-helper-modules-without-live-include
 deps-rfc: []
 est-loc: 200
 priority: null
