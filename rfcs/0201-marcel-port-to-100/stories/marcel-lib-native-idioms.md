@@ -38,6 +38,14 @@ Ruby ones.
 - No inline dispatch lambda, `rbStrSend` slice or string `rbEqual` remains in
   `magic.ts` or `mime-type.ts` where the receiver's type is known; each kept
   helper is one CLAUDE.md's table keeps.
+- No string-keyed send remains where the name is a closed set:
+  `magicMatch`'s `rbFSend(MAGIC, method, …)` (`find` / `select`) is a direct
+  call (CLAUDE.md "A dispatch by name is spelled directly").
+- `Magic.remove` is `TYPE_PARENTS.delete(type)` alone, without the invented
+  `Array.isArray` arm; `Magic.add` returns what `MAGIC.unshift` returns in Ruby.
+- No inline Set/Map/Enumerator spread IIFE or `(_t = …) ?? false) !== false`
+  truthiness chain remains in `isChild`, `allByMagic`, `magicMatchIo` or
+  `MimeType.for`.
 - Parameters and fields carry real types (`string`, `Pathname`, IO), not
   `unknown` or `{}`.
 - Tests stay at 365 passing (or better).
