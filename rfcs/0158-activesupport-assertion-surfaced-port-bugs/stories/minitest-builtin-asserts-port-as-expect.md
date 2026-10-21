@@ -1,6 +1,6 @@
 ---
 title: "minitest-builtin-asserts-port-as-expect"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

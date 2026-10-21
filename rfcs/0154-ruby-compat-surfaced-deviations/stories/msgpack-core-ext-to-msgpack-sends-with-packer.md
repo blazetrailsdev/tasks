@@ -2,7 +2,7 @@
 title: "msgpack: CoreExt#to_msgpack sends to_msgpack_with_packer instead of calling it"
 status: draft
 updated: 2026-10-20
-rfc: "0193-small-gem-ports-parity-100"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

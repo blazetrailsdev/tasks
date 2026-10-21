@@ -7,6 +7,11 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: "FALSIFIED: the repo owner ruled built-in matchers stay the default on trails#9176; no lint or ratchet on matcher names (lint-js-semantics-matchers-in-ported-tests closed for the same reason)."
 updated: 2026-10-21
 ---
