@@ -1,6 +1,6 @@
 ---
 title: "autorun-adopts-minitest-test-subclasses"
-status: draft
+status: ready
 updated: 2026-10-21
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

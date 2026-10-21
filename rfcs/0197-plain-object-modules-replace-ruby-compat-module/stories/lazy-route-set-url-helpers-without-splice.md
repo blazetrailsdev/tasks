@@ -1,6 +1,6 @@
 ---
 title: "trailties: LazyRouteSet url helpers without a prototype splice"
-status: claimed
+status: blocked
 updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-10-21T14:24:34Z"
 assignee: "activemodel-activesupport-module-super-inlined-into-includers"
-blocked-by: null
+blocked-by: "waits on actionpack NamedRouteCollection url_helpers_module/path_helpers_module leaving ruby-compat Module (route-set-generate-url-helpers-rails-module-shape): method_missing_module is prepended to those live-include modules (lazy_route_set.rb:52-53), so it cannot become a plain module first"
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "activemodel-clone-value-calls-rb-obj-clone"
-status: ready
-updated: 2026-10-08
+status: in-progress
+updated: 2026-10-21
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9177
+claim: "2026-10-21T15:31:03Z"
+assignee: "binary-string-bytesize-counts-bytes"
 blocked-by: null
 closed-reason: null
 ---

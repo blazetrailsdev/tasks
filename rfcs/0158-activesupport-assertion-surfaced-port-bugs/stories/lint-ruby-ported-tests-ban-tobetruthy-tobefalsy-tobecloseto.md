@@ -1,12 +1,14 @@
 ---
 title: "lint-ruby-ported-tests-ban-tobetruthy-tobefalsy-tobecloseto"
-status: draft
+status: closed
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
+closed-reason: "FALSIFIED: the repo owner ruled built-in matchers stay the default on trails#9176; no lint or ratchet on matcher names (lint-js-semantics-matchers-in-ported-tests closed for the same reason)."
+updated: 2026-10-21
 ---
 
 ## Context
