@@ -15,6 +15,7 @@ packages:
   - did-you-mean
   - date
   - ruby-compat
+  - "scripts"
 clusters:
   - rack-api
   - rack-calls
