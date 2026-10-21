@@ -2,7 +2,7 @@
 title: "Enroll marcel in parity:api and parity:test at 100%"
 status: ready
 updated: 2026-10-21
-rfc: "0000-marcel-port-to-100"
+rfc: "0201-marcel-port-to-100"
 cluster: marcel-parity
 packages: ["marcel"]
 deps: ["marcel-typecheck-clean"]

@@ -2,7 +2,7 @@
 title: "Drop the generator's codegen-runtime and codegen-declined shims from marcel"
 status: ready
 updated: 2026-10-21
-rfc: "0000-marcel-port-to-100"
+rfc: "0201-marcel-port-to-100"
 cluster: marcel-polish
 packages: ["marcel"]
 deps: ["marcel-land-on-main"]

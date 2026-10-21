@@ -2,7 +2,7 @@
 title: "Make marcel's tests and test helper plain, typed vitest"
 status: ready
 updated: 2026-10-21
-rfc: "0000-marcel-port-to-100"
+rfc: "0201-marcel-port-to-100"
 cluster: marcel-polish
 packages: ["marcel"]
 deps: ["marcel-drop-codegen-shims"]
