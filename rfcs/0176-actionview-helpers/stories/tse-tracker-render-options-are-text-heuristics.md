@@ -1,6 +1,6 @@
 ---
 title: "Converge TSETracker's render-call reading onto the TSE AST"
-status: ready
+status: claimed
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-21T16:42:07Z"
+assignee: "tse-tracker-render-options-are-text-heuristics"
 blocked-by: null
 closed-reason: null
 ---

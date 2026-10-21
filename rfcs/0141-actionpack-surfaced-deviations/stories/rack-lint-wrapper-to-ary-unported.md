@@ -1,7 +1,7 @@
 ---
 title: "rack-lint-wrapper-to-ary-unported"
-status: ready
-updated: 2026-10-19
+status: claimed
+updated: 2026-10-21
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-21T16:11:02Z"
+assignee: "rack-lint-wrapper-to-ary-unported"
 blocked-by: null
 closed-reason: null
 ---
