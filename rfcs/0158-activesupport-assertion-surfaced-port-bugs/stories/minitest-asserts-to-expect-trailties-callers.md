@@ -29,18 +29,16 @@ the trailties package(s) (`grep -rl "testing/assertions" packages/trailties`).
 
 ## Acceptance criteria
 
-- Every call of a Minitest helper uses its form from the CONTRIBUTING.md
-  table: `toBeRubyTruthy` / `toBeRubyFalsy` for `assert` / `refute` and
-  `assert_predicate` (`expect(o.isFoo()).toBeRubyTruthy()`), `toEqual` for
-  `assert_equal` (the registered equality tester applies Ruby `==`),
-  `toBeWithinDelta`, `toBeEmpty`, `toBeExactInstanceOf` for
-  `assert_instance_of`, `toBeInstanceOf` for `assert_kind_of`, `toRespondTo`,
-  and the built-ins `toBeNull`, `toBe`, `toContainEqual` / `toContain`,
-  `toMatch`. No `toBeTruthy` / `toBeFalsy` / `toBeCloseTo`, and no ruby-compat
-  call in a test to assert.
-- The package's test tsconfig sees the `@blazetrails/vitest-matchers` type
-  augmentation (a dependency plus a project reference), so the matchers
-  type-check.
+- Every call of a Minitest helper uses the built-in Vitest matcher of its
+  CONTRIBUTING.md row (`toBeTruthy`, `toEqual`, `toBeCloseTo`,
+  `toBeInstanceOf`, `toHaveLength(0)`, …).
+- A `@blazetrails/vitest-matchers` matcher (`toBeRubyTruthy`, `toEqualRuby`,
+  `toBeWithinDelta`, `toBeExactInstanceOf`, `toBeEmpty`, `toRespondTo`)
+  replaces the built-in only at a call site where the built-in gives the wrong
+  result for that value, by the table's "Use the Ruby matcher only when"
+  column; a built-in that wrongly passes (`toBeFalsy` on `0`) counts. Where one
+  is used, the package's test tsconfig sees the matcher type augmentation.
+- No ruby-compat call appears in a test to assert.
 - `ActiveSupport::Testing::Assertions` members (`assertNot`, `assertRaises`,
   `assertDifference`, …) stay.
 - `pnpm parity:test:assertions` stays green.
