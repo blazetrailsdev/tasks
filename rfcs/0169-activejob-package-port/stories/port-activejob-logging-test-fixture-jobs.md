@@ -5,7 +5,8 @@ updated: 2026-10-21
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-activejob-logging
 deps-rfc: []
 est-loc: null
 priority: null
