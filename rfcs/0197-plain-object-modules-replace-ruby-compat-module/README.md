@@ -17,6 +17,7 @@ packages:
   - "i18n"
   - "msgpack"
   - "scripts"
+  - "activejob"
 clusters:
   - design
   - tooling
