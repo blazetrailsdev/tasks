@@ -5,7 +5,8 @@ updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - rack-lint-wrapper-class-unported
 deps-rfc: []
 est-loc: null
 priority: null
