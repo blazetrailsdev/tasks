@@ -1,6 +1,6 @@
 ---
 title: "rack-lint-wrapper-class-unported"
-status: draft
+status: in-progress
 updated: 2026-10-21
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9181
+claim: "2026-10-21T17:02:45Z"
+assignee: "rack-lint-wrapper-class-unported"
 blocked-by: null
 closed-reason: null
 ---

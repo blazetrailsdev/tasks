@@ -1,6 +1,6 @@
 ---
 title: "prepend-has-no-prepended-hook"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
