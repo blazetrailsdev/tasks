@@ -1,6 +1,6 @@
 ---
 title: "rack spec_request.rb and spec_multipart.rb tests take Rails' bodies (assertion parity)"
-status: claimed
+status: done
 updated: 2026-10-20
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-tests
@@ -9,7 +9,7 @@ deps: [port-rack-spec-request-test-proxy-request-inherited-examples]
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
+pr: trails#9154
 claim: "2026-10-20T22:53:32Z"
 assignee: "rack-spec-request-and-multipart-take-rails-bodies"
 blocked-by: null

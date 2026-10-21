@@ -1,6 +1,6 @@
 ---
 title: "ar-type-remaining-src-part-4: base include-list hosts, static accessors, and the unshipped strip pass"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null

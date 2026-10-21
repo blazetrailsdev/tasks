@@ -1,6 +1,6 @@
 ---
 title: "Delete tse-compiler's js-parser (no second compiler for Template#spot)"
-status: claimed
+status: done
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9152
 claim: "2026-10-20T22:59:51Z"
 assignee: "actionview-render-plain-is-async-inside-capture-block"
 blocked-by: null

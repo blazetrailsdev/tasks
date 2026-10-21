@@ -1,6 +1,6 @@
 ---
 title: "actionview-test-case-mounted-routes-test"
-status: claimed
+status: ready
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-20T22:59:51Z"
-assignee: "actionview-render-plain-is-async-inside-capture-block"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

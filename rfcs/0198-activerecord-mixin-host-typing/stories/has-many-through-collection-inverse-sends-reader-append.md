@@ -1,6 +1,6 @@
 ---
 title: "has-many-through-collection-inverse-sends-reader-append"
-status: in-progress
+status: ready
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: trails#9151
-claim: "2026-10-20T19:49:38Z"
-assignee: "ar-type-remaining-src-part-4"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "port-controller-render-test-remaining"
-status: claimed
+status: done
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: "2026-10-20T22:59:51Z"
-assignee: "actionview-render-plain-is-async-inside-capture-block"
+pr: trails#9155
+claim: "2026-10-20T23:02:33Z"
+assignee: "port-controller-render-test-remaining"
 blocked-by: null
 closed-reason: null
 ---

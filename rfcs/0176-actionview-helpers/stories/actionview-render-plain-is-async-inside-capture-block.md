@@ -1,6 +1,6 @@
 ---
 title: "actionview-render-plain-is-async-inside-capture-block"
-status: claimed
+status: in-progress
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,8 +9,8 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: "2026-10-20T22:59:51Z"
+pr: trails#9159
+claim: "2026-10-20T23:48:07Z"
 assignee: "actionview-render-plain-is-async-inside-capture-block"
 blocked-by: null
 closed-reason: null

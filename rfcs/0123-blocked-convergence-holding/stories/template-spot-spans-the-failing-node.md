@@ -1,7 +1,7 @@
 ---
 title: "Template#spot highlights to end of line instead of the failing node's span"
-status: ready
-updated: 2026-10-19
+status: closed
+updated: 2026-10-20
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "PERMANENT: Template#spot is line-based; no in-process JS parser (CLAUDE.md 'Templates are precompiled', trails#9152)"
 ---
 
 ## Context

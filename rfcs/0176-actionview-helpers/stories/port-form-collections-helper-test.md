@@ -1,6 +1,6 @@
 ---
 title: "port-form-collections-helper-test"
-status: claimed
+status: done
 updated: 2026-10-20
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: "2026-10-20T22:59:51Z"
-assignee: "actionview-render-plain-is-async-inside-capture-block"
+pr: trails#9156
+claim: "2026-10-20T23:13:57Z"
+assignee: "port-form-collections-helper-test"
 blocked-by: null
 closed-reason: null
 ---

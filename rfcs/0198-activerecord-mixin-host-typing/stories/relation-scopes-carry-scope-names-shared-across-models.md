@@ -1,6 +1,6 @@
 ---
 title: "relation-scopes-carry-scope-names-shared-across-models"
-status: in-progress
+status: done
 updated: 2026-10-20
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
