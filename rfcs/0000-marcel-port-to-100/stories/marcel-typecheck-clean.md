@@ -1,0 +1,31 @@
+---
+title: "Take marcel to zero typecheck errors"
+status: ready
+updated: 2026-10-21
+rfc: "0000-marcel-port-to-100"
+cluster: marcel-polish
+packages: ["marcel"]
+deps: ["marcel-lib-native-idioms", "marcel-tests-native-and-typed"]
+deps-rfc: []
+est-loc: 120
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+---
+
+## Context
+
+`tsc -p packages/marcel` reports 55 errors at `marcel-port` `3b165e0d11`, most
+from values typed `unknown` (destructured `match` results, ivar `let`s), a
+`File.open` options slot passed `undefined`, and `namespaces.ts`'s seat type
+literal. The two polish stories before this one remove most of them; this
+story takes the rest to zero.
+
+## Acceptance criteria
+
+- `tsc -p packages/marcel` reports 0 errors, tests included.
+- No `any`, no `as unknown as` double cast, no `@ts-expect-error`.
+- `namespaces.ts` is in the shape CLAUDE.md "Call-time constant resolution"
+  describes for a hand port.
