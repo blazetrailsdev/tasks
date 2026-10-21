@@ -1,7 +1,7 @@
 ---
 title: "trailties: LazyRouteSet url helpers without a prototype splice"
-status: claimed
-updated: 2026-10-20
+status: ready
+updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
 packages: ["trailties", "actionpack"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: "2026-10-20T20:33:54Z"
-assignee: "actionpack-module-super-inlined-into-includers"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
