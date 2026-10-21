@@ -1,6 +1,6 @@
 ---
 title: "register-render-parser-and-ruby-tracker-as-permanently-unported"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9175
+claim: "2026-10-21T14:30:11Z"
+assignee: "port-form-options-helper-select-tests-remainder"
 blocked-by: null
 closed-reason: null
 ---

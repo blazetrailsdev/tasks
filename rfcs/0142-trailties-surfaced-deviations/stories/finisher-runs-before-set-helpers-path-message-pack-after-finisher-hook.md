@@ -1,6 +1,6 @@
 ---
 title: "finisher-runs-before-set-helpers-path-message-pack-after-finisher-hook"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

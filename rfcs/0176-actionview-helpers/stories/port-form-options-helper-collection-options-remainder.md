@@ -1,6 +1,6 @@
 ---
 title: "port-form-options-helper-collection-options-remainder"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9173
+claim: "2026-10-21T14:00:57Z"
+assignee: "port-form-options-helper-collection-options-remainder"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "retire-stale-blocked-skip-citations-in-actionview-tests"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9174
+claim: "2026-10-21T14:05:15Z"
+assignee: "has-many-through-collection-inverse-sends-reader-append"
 blocked-by: null
 closed-reason: null
 ---

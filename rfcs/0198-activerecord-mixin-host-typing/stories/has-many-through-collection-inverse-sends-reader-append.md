@@ -1,7 +1,7 @@
 ---
 title: "has-many-through-collection-inverse-sends-reader-append"
-status: ready
-updated: 2026-10-20
+status: blocked
+updated: 2026-10-21
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-21T14:05:15Z"
+assignee: "has-many-through-collection-inverse-sends-reader-append"
+blocked-by: "owner decision: converging needs CollectionAssociation#build/buildRecord (sync in Rails and trails, collection-association.ts:195) to await concat's loadTarget when the built record's pk is set; an async build changes public CollectionProxy#build API"
 closed-reason: null
 ---
 
