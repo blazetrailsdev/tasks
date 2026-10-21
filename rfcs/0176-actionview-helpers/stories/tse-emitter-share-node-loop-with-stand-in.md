@@ -1,6 +1,6 @@
 ---
 title: "TSE stand-in and compileJs share one per-node emit loop"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null

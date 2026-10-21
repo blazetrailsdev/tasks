@@ -1,7 +1,7 @@
 ---
 title: "Nokogiri XML NodeSet union by pointer and root-namespace default"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "Enroll marcel in parity:api and parity:test at 100%"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0201-marcel-port-to-100"
 cluster: marcel-parity
@@ -9,9 +9,9 @@ deps: ["marcel-typecheck-clean"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9198
+claim: "2026-10-21T22:32:19Z"
+assignee: "marcel-parity-enrollment"
 blocked-by: null
 ---
 

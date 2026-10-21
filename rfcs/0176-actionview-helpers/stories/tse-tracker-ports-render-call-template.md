@@ -1,6 +1,6 @@
 ---
 title: "TSETracker ports render_call_template and its next-unless-template skip"
-status: draft
+status: ready
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null

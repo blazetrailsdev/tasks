@@ -1,6 +1,6 @@
 ---
 title: "capture's callers await an async block like form_tag does"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port EnqueueAfterTransactionCommit over a TopLevel.ActiveRecord seat, with its test"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0169-activejob-package-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "TSE stand-in reads and writes free names live, as the with chain does"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null

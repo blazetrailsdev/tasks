@@ -1,6 +1,6 @@
 ---
 title: "Port QueueAdapters::TestAdapter and add the AJ_ADAPTER=test CI lane"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0169-activejob-package-port"
 cluster: null

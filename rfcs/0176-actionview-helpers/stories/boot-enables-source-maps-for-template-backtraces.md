@@ -1,6 +1,6 @@
 ---
 title: "Trails boot enables source maps so precompiled template frames name the .tse line"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null

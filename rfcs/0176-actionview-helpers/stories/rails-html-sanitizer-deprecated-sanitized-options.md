@@ -1,6 +1,6 @@
 ---
 title: "Port rails-html-sanitizer's deprecated sanitized_* option readers/writers"
-status: draft
+status: ready
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
