@@ -1,6 +1,6 @@
 ---
 title: "minitest-builtin-asserts-port-as-expect"
-status: draft
+status: in-progress
 updated: 2026-10-21
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9176
+claim: "2026-10-21T15:17:42Z"
+assignee: "minitest-builtin-asserts-port-as-expect"
 blocked-by: null
 closed-reason: null
 ---

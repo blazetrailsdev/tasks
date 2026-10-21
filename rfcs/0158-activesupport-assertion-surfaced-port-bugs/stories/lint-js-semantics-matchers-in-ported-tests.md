@@ -1,6 +1,6 @@
 ---
 title: "lint-js-semantics-matchers-in-ported-tests"
-status: draft
+status: closed
 updated: 2026-10-21
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: repo owner ruled 2026-10-21 that built-in JS matchers stay the default; Ruby-semantics matchers are used only where the built-in gives the wrong result, so a ban on toBeTruthy/toBeFalsy/toBeCloseTo is wrong."
 ---
 
 ## Context

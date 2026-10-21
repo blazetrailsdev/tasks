@@ -1,6 +1,6 @@
 ---
 title: "test-case-rb-included-mattr-and-helper-block-credit"
-status: draft
+status: in-progress
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9175
+claim: "2026-10-21T15:33:30Z"
+assignee: "test-case-rb-included-mattr-and-helper-block-credit"
 blocked-by: null
 closed-reason: null
 ---

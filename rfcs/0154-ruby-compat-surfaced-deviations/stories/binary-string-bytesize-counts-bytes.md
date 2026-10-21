@@ -1,6 +1,6 @@
 ---
 title: "binary-string-bytesize-counts-bytes"
-status: draft
+status: blocked
 updated: 2026-10-21
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -8,11 +8,11 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-21T15:31:03Z"
+assignee: "binary-string-bytesize-counts-bytes"
+blocked-by: "owner decision: byte-form String representation (encoding-aware bytesize vs Uint8Array end to end), per acceptance criteria"
 closed-reason: null
 ---
 
