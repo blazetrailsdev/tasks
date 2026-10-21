@@ -5,7 +5,8 @@ updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-builder-gem-xml-markup
 deps-rfc: []
 est-loc: 250
 priority: 3
