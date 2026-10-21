@@ -1,6 +1,6 @@
 ---
 title: "rack remaining specs take Rails' bodies: deflater, files, static, builder, mock_response, mock_request, directory, rewindable_input, body_proxy, common_logger"
-status: claimed
+status: in-progress
 updated: 2026-10-21
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-tests
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#9164
 claim: "2026-10-21T01:48:28Z"
 assignee: "rack-remaining-specs-take-rails-bodies"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "tse-tracker-known-keys-are-camelcase"
-status: draft
+status: ready
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null

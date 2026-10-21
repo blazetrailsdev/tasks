@@ -1,7 +1,7 @@
 ---
 title: "Converge TSETracker's render-call reading onto the TSE AST"
-status: blocked
-updated: 2026-10-19
+status: ready
+updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: "2026-10-19T22:17:58Z"
-assignee: "rack-session-encryptor-drop-json-byte-form-arm"
-blocked-by: 'owner decision: the three RubyTrackerTests templates are Ruby call syntax (render partial: "x", ...), which no TS parse of the compiled template accepts; converging needs the test templates respelled as render({ ... }) and a ruling on option-key spelling (spacer_template vs spacerTemplate)'
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
