@@ -5,7 +5,8 @@ updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
 packages: ["actionpack"]
-deps: []
+deps:
+  - actionpack-module-super-inlined-into-includers
 deps-rfc: []
 est-loc: 250
 priority: null
