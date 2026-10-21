@@ -5,7 +5,8 @@ updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
-deps: []
+deps:
+  - time-at-num-exact-check-default-arm
 deps-rfc: []
 est-loc: 40
 priority: null
