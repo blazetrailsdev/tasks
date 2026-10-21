@@ -1,14 +1,14 @@
 ---
 title: "ruby-compat: an include into a plain module reaches classes that already include it"
 status: blocked
-updated: 2026-10-19
+updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 16
 pr: null
 claim: null
 assignee: null

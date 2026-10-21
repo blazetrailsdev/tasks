@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 2
 pr: trails#9178
 claim: "2026-10-21T14:04:34Z"
 assignee: "activemodel-activesupport-module-super-inlined-into-includers"

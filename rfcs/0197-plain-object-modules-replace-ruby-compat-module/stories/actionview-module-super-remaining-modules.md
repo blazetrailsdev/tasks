@@ -9,7 +9,7 @@ deps:
   - actionpack-module-super-inlined-into-includers
 deps-rfc: []
 est-loc: 500
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

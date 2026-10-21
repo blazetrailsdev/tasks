@@ -9,11 +9,11 @@ deps:
   - actionpack-route-set-helper-modules-without-live-include
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 14
 pr: null
 claim: "2026-10-21T14:24:34Z"
 assignee: "activemodel-activesupport-module-super-inlined-into-includers"
-blocked-by: "waits on actionpack NamedRouteCollection url_helpers_module/path_helpers_module leaving ruby-compat Module (route-set-generate-url-helpers-rails-module-shape): method_missing_module is prepended to those live-include modules (lazy_route_set.rb:52-53), so it cannot become a plain module first"
+blocked-by: "route-set-generate-url-helpers-rails-module-shape is done, but the url/path helper modules it prepends method_missing_module to (route-set.ts:543-544,810) are still ruby-compat Module on a live include; waits on actionpack-route-set-helper-modules-without-live-include"
 closed-reason: null
 ---
 

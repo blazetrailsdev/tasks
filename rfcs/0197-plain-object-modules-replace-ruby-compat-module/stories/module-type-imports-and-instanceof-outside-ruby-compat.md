@@ -26,7 +26,7 @@ deps:
   - test-files-drop-ruby-compat-module
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 12
 pr: null
 claim: null
 assignee: null

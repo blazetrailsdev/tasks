@@ -1,6 +1,6 @@
 ---
 title: "rack-lint-wrapper-class-unported"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

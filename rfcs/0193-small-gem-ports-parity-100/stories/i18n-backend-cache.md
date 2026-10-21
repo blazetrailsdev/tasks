@@ -1,7 +1,7 @@
 ---
 title: "i18n-backend-cache"
-status: blocked
-updated: 2026-10-20
+status: closed
+updated: 2026-10-21
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "owner decision: prewarm-and-peek rejected 2026-10-20; to be closed PERMANENT once translation-helper.test.ts's skip carries a PERMANENT-SKIP line"
-closed-reason: null
+blocked-by: null
+closed-reason: 'PERMANENT: CLAUDE.md § "A translation lookup is synchronous; the load is an awaited step" (trails#9180) — Cache#_fetch reads a cache store inside the lookup and every ActiveSupport::Cache read is async; prewarm-and-peek rejected by the repo owner 2026-10-20. The test carries a PERMANENT-SKIP receipt.'
 ---
 
 ## Context

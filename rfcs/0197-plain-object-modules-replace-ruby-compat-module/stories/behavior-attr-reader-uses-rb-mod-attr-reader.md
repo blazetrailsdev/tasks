@@ -1,14 +1,14 @@
 ---
 title: "Behavior's attr_reader ports through rbModAttrReader on a plain module"
-status: draft
-updated: 2026-10-20
+status: ready
+updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages: ["actionpack", "ruby-compat"]
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

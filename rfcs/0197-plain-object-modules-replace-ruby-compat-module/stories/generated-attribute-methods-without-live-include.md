@@ -1,14 +1,14 @@
 ---
 title: "activemodel/activesupport: generated_attribute_methods without live include"
 status: blocked
-updated: 2026-10-19
+updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
 packages: ["activemodel", "activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 15
 pr: trails#9056
 claim: "2026-10-19T12:08:29Z"
 assignee: "activesupport-code-generator-method-sets-without-live-include"

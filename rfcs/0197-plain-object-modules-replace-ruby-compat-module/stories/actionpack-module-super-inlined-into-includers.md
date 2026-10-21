@@ -1,14 +1,14 @@
 ---
 title: "actionpack-module-super-inlined-into-includers"
 status: claimed
-updated: 2026-10-20
+updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 4
 pr: null
 claim: "2026-10-20T20:33:54Z"
 assignee: "actionpack-module-super-inlined-into-includers"

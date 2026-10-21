@@ -1,7 +1,7 @@
 ---
 title: "hmt-build-record-awaits-collection-inverse-append"
-status: draft
-updated: 2026-10-20
+status: closed
+updated: 2026-10-21
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: trails#9157 (merged) reverted the 'void reader.push' arm to addToTarget (origin/main has-many-through-association.ts:155). The remaining async-build convergence for both collection and has_one arms is tracked by the blocked story has-many-through-collection-inverse-sends-reader-append (owner decision on async CollectionProxy#build)."
 ---
 
 ## Context

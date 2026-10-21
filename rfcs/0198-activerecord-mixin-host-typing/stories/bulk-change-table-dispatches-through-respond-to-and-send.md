@@ -1,14 +1,14 @@
 ---
 title: "bulkChangeTable dispatches through rbObjRespondTo/rbFSend, not an any-cast index"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-21
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

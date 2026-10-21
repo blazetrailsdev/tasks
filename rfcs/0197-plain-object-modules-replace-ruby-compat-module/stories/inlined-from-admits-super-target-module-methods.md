@@ -1,7 +1,7 @@
 ---
 title: "@inlinedFrom admits the module method a super chain reaches (Deduplicable#deduplicated)"
-status: draft
-updated: 2026-10-20
+status: closed
+updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages: ["activerecord"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#9147 (efa790c52c 'tag Deduplicable#deduplicated inlinings'): column.ts:128, sql-type-metadata.ts, mysql/type-metadata.ts, postgresql/type-metadata.ts each carry @inlinedFrom ActiveRecord::ConnectionAdapters::Deduplicable#deduplicated on origin/main"
 ---
 
 ## Context

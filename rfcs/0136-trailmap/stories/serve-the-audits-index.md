@@ -1,7 +1,7 @@
 ---
 title: "Serve /audits and the audit viewer, with ringo's filename validation"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-21
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#73
+claim: "2026-10-21T17:23:42Z"
+assignee: "serve-the-audits-index"
 blocked-by: null
 closed-reason: null
 ---

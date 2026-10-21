@@ -1,6 +1,6 @@
 ---
 title: "live-include-module-sites-after-module-super-conversion"
-status: draft
+status: ready
 updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -10,7 +10,7 @@ deps:
   - activerecord-module-super-and-live-include-sites
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null
