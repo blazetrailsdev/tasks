@@ -1,18 +1,19 @@
 ---
-title: "Cut ringo over: relay on and ringo's GitHub hooks off, in one step"
+title: "Cut over: set relay_to_ringo to audit"
 status: ready
 updated: 2026-10-21
 rfc: "0000-github-ingestion-in-trailmap"
 cluster: null
-packages: []
+packages: [trailties]
 deps:
   [
-    run-gh-webhook-forward-as-an-ingest-process,
     show-recent-github-deliveries,
     relay-github-deliveries-to-ringo,
+    ringo-audits-direct-hooks-against-the-relay,
+    catch-up-missed-deliveries-on-reconnect,
   ]
 deps-rfc: []
-est-loc: 30
+est-loc: 60
 priority: null
 pr: null
 claim: null
@@ -21,28 +22,26 @@ blocked-by: null
 closed-reason: null
 ---
 
+**Lands in:** trailmap.
+
 ## Context
 
-This is an operational story. The code is mostly a script that makes the flip
-atomic and reversible.
+The cutover is a row flip. Ringo reads the mode from trailmap, so there's no
+second switch to keep in step, and **no hook is touched**: in audit mode the
+direct hooks are receipts. Doing it as a trails task, not a shell script,
+keeps it going through the models (encrypted settings, the `Event` row).
 
-1. **Shadow sign-off.** For at least 24 h with the relay off, trailmap's
-   repo × event counts (`/deliveries`) match each ringo hook's `/deliveries`
-   for the same window, within what a restart window explains. Record the
-   numbers on the PR.
-2. **Flip, in one command:** set the `relay_to_ringo` Setting on and PATCH each
-   ingesting repo's `RepositorySetting.ringo_hook_id` (seeded: 602873770,
-   670781774, 674688087) to
-   `active: false`. If both paths are on, ringo acts on every event twice,
-   and GUIDs differ so it can't dedupe.
-3. **Watch** for a day: reviews reach coder panes, the CI-fixer fires on a red
-   main, merges tear down panes.
+- add task `ingest:mode <off|audit>` under `lib/tasks`. It writes
+  `relay_to_ringo` and an `Event` row (verb `ingest-mode`, detail the new mode,
+  actor `$USER`), then prints the resolved mode and the deliveries page's
+  current counts
+- precondition: Verification 1 holds. The task prints the shadow comparison
+  and refuses `audit` unless `--force`.
 
-Rollback is the same script reversed: hooks back on, relay off.
+Rollback: `ingest:mode off`.
 
 ## Acceptance criteria
 
-- [ ] The shadow counts are on the PR
-- [ ] `scripts/ringo-cutover.sh on|off` flips both together, reads the hook ids from `RepositorySetting` (none hardcoded), records an `Event` row (verb `ingest-cutover`, detail on|off), and prints the resulting state
-- [ ] After the flip, the three hooks' `/deliveries` show nothing new, and ringo's logs show relayed events being handled
-- [ ] Review, CI-fixer and merge-teardown each observed working once after the flip
+- [ ] `ingest:mode audit` flips the setting, records an `Event`, and ringo picks up the change within its 30 s cache
+- [ ] Verification 1's numbers are on the PR
+- [ ] After the flip, review relay, CI-fixer and merge teardown are each observed working through the relay

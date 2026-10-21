@@ -1,13 +1,18 @@
 ---
-title: "trailmap: a deliveries page with repo × event counts for the shadow check"
+title: "trailmap: deliveries page with counts, forwarder health and audit results"
 status: ready
 updated: 2026-10-21
 rfc: "0000-github-ingestion-in-trailmap"
 cluster: null
 packages: [actionview]
-deps: [receive-and-store-github-deliveries]
+deps:
+  [
+    store-ingest-configuration-in-activerecord,
+    receive-and-store-github-deliveries,
+    store-relay-audit-reports,
+  ]
 deps-rfc: []
-est-loc: 120
+est-loc: 160
 priority: null
 pr: null
 claim: null
@@ -16,19 +21,22 @@ blocked-by: null
 closed-reason: null
 ---
 
+**Lands in:** trailmap.
+
 ## Context
 
-Before cutover, someone has to see that trailmap receives what ringo's hooks
-receive. GUIDs differ between the two hooks, so the comparison is by count.
+This is the one page where an operator sees whether ingestion is healthy.
+It's behind SSO, with a `.json` twin.
 
-`/deliveries` (behind SSO like every other page) and `/deliveries.json`:
-
-- the most recent N rows: received_at, repo, event, action, relay_status,
-  relay_error
-- counts by repo × event over a selectable window (default 24 h)
+- recent `GithubDelivery` rows: received_at, repo, event, action,
+  relay_status, relay_error; `dead` rows are listed separately
+- counts by repo × event over a selectable window (default 24 h), which is
+  Verification 1's query
+- an `IngestForwarder` row per repo: connected, last event, restarts, last exit
+- per-repo relay lag, with the alert once a repo has been blocked for more than 15 minutes
+- `RelayAudit`: misses (newest first) and the latest tallies
 
 ## Acceptance criteria
 
-- [ ] The page and its JSON list recent rows and per-repo × event counts for a window
-- [ ] A failed relay's error is visible on the page
-- [ ] The RFC's Rollout section names the comparison query against each ringo hook's `/deliveries`
+- [ ] The page and its JSON show deliveries, counts by repo × event for a window, forwarder health, relay lag/alerts and audit misses/tallies
+- [ ] The count table matches Verification 1's SQL for the same window

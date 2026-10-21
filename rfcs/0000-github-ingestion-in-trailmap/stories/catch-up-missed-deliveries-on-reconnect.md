@@ -1,5 +1,5 @@
 ---
-title: "trailmap: backfill deliveries missed while a forwarder was disconnected"
+title: "trailmap: backfill events missed while a forwarder was disconnected"
 status: ready
 updated: 2026-10-21
 rfc: "0000-github-ingestion-in-trailmap"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: [run-gh-webhook-forward-as-an-ingest-process]
 deps-rfc: []
-est-loc: 150
+est-loc: 180
 priority: null
 pr: null
 claim: null
@@ -16,33 +16,35 @@ blocked-by: null
 closed-reason: null
 ---
 
+**Lands in:** trailmap.
+
 ## Context
 
-GitHub queues nothing for a dev hook while its websocket is down: during a
-deploy, a crash-restart or a network blip. Without a backfill, an event in
-that gap is gone, and a lost `pull_request closed` means a pane that never
-gets torn down.
+GitHub queues nothing for a dev hook while it's disconnected. During the audit
+phase, ringo heals the gap from its direct hooks. After the hooks are gone,
+this story is the only cover, so `delete-ringo-github-hooks-and-poll-ingest`
+depends on it.
 
-Pick a backfill source, check that it works, and record the choice in the RFC:
+**The source is REST state.** An inactive hook receives no deliveries, so it
+has nothing to backfill from (rejected in the RFC's Alternatives). On every
+forwarder (re)connect, the supervisor lists what changed since the cursor:
+PRs (`pulls?state=all&sort=updated`), reviews and review comments on those
+PRs, check runs and workflow runs for their head SHAs, and pushes from the
+repo's events feed. For each one with no stored delivery, it writes a
+**synthetic** `GithubDelivery` (`synthetic: true`, payload shaped like the
+webhook's, `occurred_at` from the object).
 
-- a **persistent, inactive repo hook** whose delivery history GitHub keeps
-  for ~3 days (`GET repos/<r>/hooks/<id>/deliveries`, then the payload by ID,
-  as ringo's `injectDelivery` does). Check whether an inactive hook still
-  records deliveries before relying on it.
-- the **REST state** (`pulls?state=all&sort=updated`, check-runs and workflow
-  runs since the last `received_at`), turned into synthetic deliveries. This
-  is lossy, so mark those rows `synthetic`.
-
-When a forwarder (re)connects, the supervisor backfills from the repo's last
-`received_at` up to now, skipping anything already stored. The cursor IS that
-newest `received_at`, read from `GithubDelivery`. There is no cursor file
-or column (ringo's `pollingest-cursors.json` is exactly what this replaces).
-A hook used as the backfill source is found through
-`RepositorySetting.ringo_hook_id`, not by matching URLs.
+- **The cursor** is the newest `occurred_at` for the repo, never
+  `received_at`, because backfilled rows arrive later than the events they
+  replay.
+- **With no rows yet** (a newly enabled repo), the floor is
+  `RepositorySetting.ingest_enabled_at`. It backfills nothing from before
+  ingestion was enabled.
+- **Window cap:** 24 h. A longer gap is logged on the deliveries page instead.
 
 ## Acceptance criteria
 
-- [ ] The source is chosen, with the evidence in the RFC
-- [ ] Stopping `ingest` for a few minutes while a PR is opened and closed leaves both events in `GithubDelivery` after restart
-- [ ] The backfill never duplicates a row that the live forwarder already stored
-- [ ] No state file is written; the restart picks up from the database alone
+- [ ] With `ingest` stopped for 5 minutes while a PR is opened and closed, both appear (synthetic) after restart
+- [ ] A synthetic row never duplicates a live one (match on subject id + action + occurred_at)
+- [ ] A new repo backfills nothing from before `ingest_enabled_at`
+- [ ] No state file is written

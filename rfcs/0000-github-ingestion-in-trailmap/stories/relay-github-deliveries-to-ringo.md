@@ -1,13 +1,13 @@
 ---
-title: "trailmap: relay stored deliveries to ringo, re-signed, behind a setting"
+title: "trailmap: relay stored deliveries to ringo, in order, re-signed"
 status: ready
 updated: 2026-10-21
 rfc: "0000-github-ingestion-in-trailmap"
 cluster: null
 packages: []
-deps: [store-ingest-configuration-in-activerecord, receive-and-store-github-deliveries]
+deps: [receive-and-store-github-deliveries, run-gh-webhook-forward-as-an-ingest-process]
 deps-rfc: []
-est-loc: 200
+est-loc: 220
 priority: null
 pr: null
 claim: null
@@ -16,32 +16,36 @@ blocked-by: null
 closed-reason: null
 ---
 
+**Lands in:** trailmap.
+
 ## Context
 
-Ringo's `Handler.ServeHTTP` (btwebooks `webhook/handler.go`) only checks the
-HMAC and then routes on `X-GitHub-Event`. `injectDelivery`
-(`webhook/pollingest.go`) already feeds it re-signed replays. A relay needs no
-ringo change.
+`lib/ringo-relay.ts`, run as a loop inside the `ingest` process, which is
+**the only relayer**. The receiver never relays, so nothing races to claim
+rows.
 
-`lib/ringo-relay.ts`:
-
-- POSTs the stored **raw body** to `${Setting.ringoBase()}/webhooks/github`
-  with `X-GitHub-Event`, `X-GitHub-Delivery` (the stored GUID) and
-  `X-Hub-Signature-256` computed with `Setting` `ringo_webhook_secret` (ringo's
-  `WEBHOOK_SECRET`)
-- marks the row `relayed`, or `failed` with the status and body excerpt
-- runs only when the `relay_to_ringo` Setting is on (default off)
-
-The receiver triggers a relay after it has answered. A sweep, run from the
-`ingest` process on an interval, retries `pending` and `failed` rows oldest
-first, with a bounded attempt count. Retries must stay in arrival order per
-repo, so a `closed` event can't reach ringo before the `opened` event for the
-same PR.
+- It sends only while `relay_to_ringo` is `audit`. Rows stored while it was
+  `off` (shadow) are never sent: ringo already acted on their direct twins.
+  The first pass after a flip marks rows older than the flip's `Event` as
+  `skipped`.
+- Per repo, it takes the oldest `pending`/`failed` row by `(received_at, id)`
+  and POSTs its raw body to `${Setting.ringoBase()}/webhooks/relay`, with
+  `X-GitHub-Event`, `X-GitHub-Delivery` and an HMAC from `Setting`
+  `ringo_webhook_secret`.
+- A **2xx** marks it `relayed`.
+- A **transient** failure (connection error, 5xx, 408, 429) marks it
+  `failed`, increments `relay_attempts`, and retries with backoff, capped at
+  5 minutes. It **blocks later rows for that repo**, and other repos carry on.
+- A **permanent** rejection (any other 4xx) marks it `dead` with the response,
+  and the repo moves on. Dead rows show on the deliveries page and are never
+  retried automatically.
+- It wakes every second. Latency target: p95 under 3 s from receipt to relay.
 
 ## Acceptance criteria
 
-- [ ] With the setting off, nothing is sent and rows stay `pending`
-- [ ] With it on, ringo accepts the relayed request: a test with a known secret checks the signature the way `verifySignature` does
-- [ ] A ringo 5xx or connection failure leaves the row `failed`, and the sweep delivers it once ringo is back
-- [ ] Rows are relayed in `received_at` order per repo, including on retry
-- [ ] It doesn't resolve ringo's origin anywhere except `Setting.ringoBase()`
+- [ ] With the mode `off`, nothing is sent
+- [ ] Ringo's `verifySignature` accepts the relayed signature (fixture with a known secret)
+- [ ] A ringo 5xx blocks that repo only, and it resumes in order once ringo is back
+- [ ] A 400 marks the row `dead`, and the next row for that repo is sent
+- [ ] Ties on `received_at` relay in `id` order
+- [ ] Ringo's origin comes only from `Setting.ringoBase()`

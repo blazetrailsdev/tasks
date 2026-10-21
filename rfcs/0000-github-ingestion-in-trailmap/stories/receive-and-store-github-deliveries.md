@@ -16,35 +16,37 @@ blocked-by: null
 closed-reason: null
 ---
 
+**Lands in:** trailmap.
+
 ## Context
 
-The front door the rest of the RFC hangs off. `gh webhook forward` (and,
-later, anything else) POSTs GitHub's request to trailmap exactly as GitHub
-would send it: `X-GitHub-Event`, `X-GitHub-Delivery`, `X-Hub-Signature-256`,
-and a JSON body.
+The front door. `gh webhook forward` POSTs GitHub's request as GitHub would:
+`X-GitHub-Event`, `X-GitHub-Delivery`, `X-Hub-Signature-256` and a JSON body.
 
-Add `post "webhooks/github"` and a controller action that:
+**First, check for framework gaps:** reading the raw request body, and skipping
+the SSO viewer guard and CSRF for this one action. If either is missing, file
+a trails story, add it to `deps-rfc`, and stop (trailmap CLAUDE.md).
 
-- verifies `X-Hub-Signature-256` against `Setting` `github_webhook_secret` (constant-time;
-  403 on a bad or missing signature, never logging the body)
+Then add `post "webhooks/github"` and an action that:
+
+- verifies `X-Hub-Signature-256` against `Setting` `github_webhook_secret`
+  (constant-time; 403 on a bad or missing signature; never logs the body)
 - answers `ping` with 200 `pong`
-- stores a `GithubDelivery` on **Hub** (Postgres): `guid` (unique), `event`,
-  `action`, `repo` (`repository.full_name`), `received_at`, `body` (the raw
-  request bytes as received; signatures are over bytes, so do not store
-  re-serialised JSON), `relay_status` (`pending`), `relayed_at`, `relay_error`
-- treats a repeated `guid` as success (200) without a second row
-
-The route is called service to service on the `fleet` network, not by a
-browser. It must not hit the SSO viewer guard or CSRF. If skipping either one
-for a single action needs framework support that trails lacks, that's a trails
-story, not a local workaround (trailmap CLAUDE.md). The same goes for reading
-the raw request body.
+- stores a **`GithubDelivery`** (Hub; this story owns its migration):
+  - `guid` (unique), `event`, `action`, `repo`
+  - `received_at` (arrival), `occurred_at` (the event's own time from the
+    payload, falling back to `received_at`)
+  - `body` (the raw bytes as received), `audit_key` (`sha256(body)`)
+  - `synthetic` (boolean, default false; true for catch-up rows)
+  - `relay_status` (`pending` | `relayed` | `failed` | `dead` | `skipped`), `relay_attempts`,
+    `relayed_at`, `relay_error`
+- treats a repeated `guid` as success (200), without adding a row
+- never relays. The `ingest` process does that.
 
 ## Acceptance criteria
 
-- [ ] Hub migration + `GithubDelivery` model, unique index on `guid`
+- [ ] The framework-gap check is done, and any gap is filed as a trails story
 - [ ] A valid signed POST stores one row; the same GUID again stores nothing and returns 200
 - [ ] A bad, missing or wrong-secret signature returns 403 and stores nothing
-- [ ] `ping` returns 200 `pong`
-- [ ] The stored body is byte-identical to the request body (test with a payload whose key order and whitespace a re-serialiser would change)
-- [ ] The route bypasses the SSO guard and CSRF, and no other route does
+- [ ] The stored body is byte-identical to the request (test with key order and whitespace a re-serialiser would change)
+- [ ] Only this route bypasses the SSO guard and CSRF
