@@ -5,7 +5,12 @@ updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
-deps: []
+deps:
+  - actionview-number-helper-test-assertions
+  - actionview-tag-helper-test-assertions
+  - actionview-truthy-falsy-assertion-kinds
+  - actionview-text-javascript-helper-test-assertions
+  - actionview-date-helper-assertion-helper-fold
 deps-rfc: []
 est-loc: null
 priority: null
