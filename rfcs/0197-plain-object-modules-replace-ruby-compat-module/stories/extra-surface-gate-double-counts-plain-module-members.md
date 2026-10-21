@@ -1,7 +1,7 @@
 ---
 title: "extra-surface-gate-double-counts-plain-module-members"
-status: draft
-updated: 2026-10-20
+status: done
+updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9163
+claim: "2026-10-21T01:13:19Z"
+assignee: "extra-surface-gate-double-counts-plain-module-members"
 blocked-by: null
 closed-reason: null
 ---

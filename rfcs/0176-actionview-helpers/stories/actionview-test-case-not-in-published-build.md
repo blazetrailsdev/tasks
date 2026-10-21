@@ -1,6 +1,6 @@
 ---
 title: "actionview-test-case-not-in-published-build"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 15
-pr: null
-claim: null
-assignee: null
+pr: trails#9162
+claim: "2026-10-21T01:07:06Z"
+assignee: "actionview-test-case-not-in-published-build"
 blocked-by: null
 closed-reason: null
 ---

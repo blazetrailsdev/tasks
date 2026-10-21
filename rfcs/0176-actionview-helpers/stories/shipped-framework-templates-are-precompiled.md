@@ -1,6 +1,6 @@
 ---
 title: "Every shipped framework .tse (trailties welcome page) is copied and precompiled at build"
-status: claimed
+status: in-progress
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: 7
-pr: null
+pr: trails#9161
 claim: "2026-10-21T00:47:23Z"
 assignee: "tse-undefined-local-raises-template-error"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "erubi-engine-members-or-tse-compiler-relocation-row"
-status: draft
+status: ready
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null

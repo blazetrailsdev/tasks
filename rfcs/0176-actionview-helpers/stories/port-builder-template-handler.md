@@ -1,6 +1,6 @@
 ---
 title: "Port ActionView Builder template handler and mirror .builder fixtures"
-status: claimed
+status: ready
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: 3
 pr: null
-claim: "2026-10-21T00:47:23Z"
-assignee: "tse-undefined-local-raises-template-error"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

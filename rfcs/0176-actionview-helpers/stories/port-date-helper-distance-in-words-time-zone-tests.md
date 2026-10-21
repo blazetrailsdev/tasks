@@ -1,6 +1,6 @@
 ---
 title: "port-date-helper-distance-in-words-time-zone-tests"
-status: draft
+status: ready
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
