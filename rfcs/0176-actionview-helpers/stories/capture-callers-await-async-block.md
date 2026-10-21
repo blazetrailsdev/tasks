@@ -1,6 +1,6 @@
 ---
 title: "capture's callers await an async block like form_tag does"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 13
-pr: null
-claim: null
-assignee: null
+pr: trails#9195
+claim: "2026-10-21T21:15:41Z"
+assignee: "tse-emitter-share-node-loop-with-stand-in"
 blocked-by: null
 closed-reason: null
 ---

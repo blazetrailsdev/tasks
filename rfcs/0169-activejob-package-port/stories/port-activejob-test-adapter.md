@@ -1,7 +1,7 @@
 ---
 title: "Port QueueAdapters::TestAdapter and add the AJ_ADAPTER=test CI lane"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-21
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]
@@ -9,9 +9,9 @@ deps: ["port-activejob-enqueuing-and-configured-job"]
 deps-rfc: []
 est-loc: 250
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9194
+claim: "2026-10-21T21:14:11Z"
+assignee: "port-activejob-enqueue-after-transaction-commit"
 blocked-by: null
 closed-reason: null
 ---

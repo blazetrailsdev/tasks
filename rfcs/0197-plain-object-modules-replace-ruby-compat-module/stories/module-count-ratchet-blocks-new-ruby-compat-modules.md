@@ -1,6 +1,6 @@
 ---
 title: "CI ratchet: new Module / superMethod / Module imports can only go down"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: tooling

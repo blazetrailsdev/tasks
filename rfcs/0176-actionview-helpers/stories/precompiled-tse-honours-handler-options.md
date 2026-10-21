@@ -1,6 +1,6 @@
 ---
 title: "Precompiled TSE stand-in honours Tse handler options (annotate filenames, trim, strip newlines)"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 8
-pr: null
-claim: null
-assignee: null
+pr: trails#9196
+claim: "2026-10-21T21:15:05Z"
+assignee: "build-views-precompiles-every-registered-handler"
 blocked-by: null
 closed-reason: null
 ---

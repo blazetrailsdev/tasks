@@ -1,6 +1,6 @@
 ---
 title: "trailties: Thor Actions/Invocation/Shell and test_help reopenings drop ruby-compat Module"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
