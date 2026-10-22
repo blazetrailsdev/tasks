@@ -1,9 +1,9 @@
 ---
 rfc: "0194-ruby-compat-native-first"
 title: "ruby-compat native-first: a helper only where it dispatches, credited native forms, and single-caller ports inlined"
-status: draft
+status: active
 created: 2026-10-16
-updated: 2026-10-16
+updated: 2026-10-22
 owner: "@deanmarano"
 packages:
   - ruby-compat
