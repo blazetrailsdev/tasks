@@ -1,6 +1,6 @@
 ---
 title: "CI: an actioncable-only diff extracts and compares only actioncable"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity

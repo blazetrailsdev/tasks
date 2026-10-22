@@ -1,7 +1,7 @@
 ---
 title: "actionview-api-residue-context-buffers-layouts-template"
-status: in-progress
-updated: 2026-10-21
+status: done
+updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
