@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveJob::Logging (logger, log_arguments, tag_logger)"
-status: ready
-updated: 2026-10-05
+status: done
+updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob", "activesupport"]
@@ -9,9 +9,9 @@ deps: ["port-activejob-instrumentation"]
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9211
+claim: "2026-10-22T12:23:36Z"
+assignee: "port-activejob-exceptions"
 blocked-by: null
 closed-reason: null
 ---

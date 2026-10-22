@@ -1,6 +1,6 @@
 ---
 title: "rack: RackResponse's header type does not admit the rack.hijack callback"
-status: claimed
+status: in-progress
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9210
 claim: "2026-10-22T11:41:25Z"
 assignee: "enroll-actioncable-in-compare-tooling-and-parity-gates"
 blocked-by: null

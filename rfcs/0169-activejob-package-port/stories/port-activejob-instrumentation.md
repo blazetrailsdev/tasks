@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveJob::Instrumentation and ActiveJob.instrument_enqueue_all"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null

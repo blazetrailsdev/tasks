@@ -1,7 +1,7 @@
 ---
 title: "Port TestHelper's performed-job assertions and perform_enqueued_jobs, with NotTestAdapterTest"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]
@@ -9,9 +9,9 @@ deps: ["port-activejob-test-helper-enqueued-assertions"]
 deps-rfc: []
 est-loc: 400
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9212
+claim: "2026-10-22T12:43:58Z"
+assignee: "port-activejob-queuing-and-queue-adapter-tests"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "trails server's Vite dev path forwards upgrade requests to the Rack handler"
-status: ready
-updated: 2026-10-21
+status: claimed
+updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["trailties"]
@@ -9,8 +9,8 @@ deps: ["rack-handler-node-offers-rack-hijack-on-upgrade"]
 deps-rfc: []
 est-loc: 200
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T12:57:56Z"
+assignee: "rack-hijack-returns-a-socket-io"
 blocked-by: null
 closed-reason: null
 ---

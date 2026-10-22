@@ -1,6 +1,6 @@
 ---
 title: "activejob-date-serializers-serialize-temporal-dates"
-status: draft
+status: ready
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null

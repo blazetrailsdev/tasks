@@ -1,6 +1,6 @@
 ---
 title: "Port TestHelper's setup/teardown and enqueued-job assertions, ActiveJob::TestCase, and test_case_test.rb"
-status: claimed
+status: done
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-activejob-test-adapter", "port-activejob-test-fixture-jobs"]
 deps-rfc: []
 est-loc: 400
 priority: 3
-pr: null
+pr: trails#9209
 claim: "2026-10-22T11:42:55Z"
 assignee: "port-activejob-serialization-tests"
 blocked-by: null

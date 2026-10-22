@@ -1,6 +1,6 @@
 ---
 title: "queue-adapter-test-default-async-disables-test-adapter"
-status: draft
+status: ready
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null

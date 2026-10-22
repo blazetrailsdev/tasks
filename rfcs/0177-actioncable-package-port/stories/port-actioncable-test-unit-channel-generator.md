@@ -1,6 +1,6 @@
 ---
 title: "Port TestUnit::Generators::ChannelGenerator"
-status: claimed
+status: in-progress
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
@@ -8,7 +8,7 @@ packages: ["trailties"]
 deps: ["actioncable-package-skeleton"]
 deps-rfc: []
 est-loc: 150
-pr: null
+pr: trails#9210
 claim: "2026-10-22T11:41:25Z"
 assignee: "enroll-actioncable-in-compare-tooling-and-parity-gates"
 blocked-by: null

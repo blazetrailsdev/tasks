@@ -1,6 +1,6 @@
 ---
 title: "rack-hijack-returns-a-socket-io"
-status: draft
+status: claimed
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T12:57:56Z"
+assignee: "rack-hijack-returns-a-socket-io"
 blocked-by: null
 closed-reason: null
 ---

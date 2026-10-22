@@ -1,7 +1,7 @@
 ---
 title: "ActiveJob.adapter_name answers is_a?(Module) for a plain-object module adapter"
-status: draft
-updated: 2026-10-21
+status: ready
+updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: []

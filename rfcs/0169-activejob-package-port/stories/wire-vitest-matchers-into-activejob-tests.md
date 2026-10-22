@@ -1,7 +1,7 @@
 ---
 title: "Wire @blazetrails/vitest-matchers types into activejob tests"
-status: draft
-updated: 2026-10-21
+status: ready
+updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: []

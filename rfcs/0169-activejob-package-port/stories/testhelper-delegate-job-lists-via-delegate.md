@@ -1,6 +1,6 @@
 ---
 title: "Converge TestHelper enqueued_jobs/performed_jobs onto delegate (fix delegate reader+writer pair)"
-status: draft
+status: ready
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Tests outside ruby-compat build plain/class modules, not new Module()"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: retire
