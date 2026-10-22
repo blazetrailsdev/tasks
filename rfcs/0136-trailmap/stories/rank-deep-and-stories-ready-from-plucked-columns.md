@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /up/deep and GET /stories/ready stall the process ~0.7s loading every story as a record"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null

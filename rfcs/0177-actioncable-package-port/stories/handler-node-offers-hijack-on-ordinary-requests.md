@@ -1,6 +1,6 @@
 ---
 title: "rack: Handler::Node offers rack.hijack only on upgrade requests"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: null
