@@ -39,9 +39,20 @@ The repo owner ruled (2026-10-16) that the dead arms are removed with a receipt 
 - [ ] `rbFPublicSend` is deleted. Each call becomes `rbFSend`, or the native form where `native-respond-to-and-send-literal-name-sites` would switch it anyway.
 - [ ] `rbObjPrivateMethods`, `rbObjProtectedMethods`, `rbObjPublicMethods` and `rbModPublicMethodDefined` are deleted. `rbObjMethods` survives. `trailties/src/thor/command.ts` keeps Rails' call structure over one `rbObjMethods` call, and the Thor command tests pass. This story is the sole owner of `command.ts` in this RFC.
 - [ ] `rbObjRespondTo(obj, mid)` and `basicObjRespondTo(obj, mid)` drop the visibility parameter.
+- [ ] `rbModPublicInstanceMethod` (`packages/ruby-compat/src/include.ts:1414`,
+      body `return rbModInstanceMethod(mod, mid)`) is deleted, and its one
+      caller (`packages/activerecord/src/attribute-methods.ts:107`) calls
+      `rbModInstanceMethod`. Added by this RFC's
+      residue audit (§ "Burndown ledger").
+- [ ] `checkDefinitionVisibility` (`packages/ruby-compat/src/object.ts:759`)
+      checks definition only, so it is renamed for what it does once
+      `rbModPublicMethodDefined` is gone.
 - [ ] A Rails override keeps its Rails parameter list (`isRespondTo(name, includePrivate = false)`, `respondToMissing(name, includePrivate)`) so `parity:api:params` stays green. The parameter is not read.
 - [ ] Every arm whose only difference is `include_private` is removed. `compare-drops-include-private-only-arms` makes the gates accept the removal. A site that detector cannot prove carries `@missingRailsCall <call> — PERMANENT` against CLAUDE.md § "Method visibility is compile-time only".
 - [ ] CLAUDE.md § "Method visibility is compile-time only" is amended: the `rbFPublicSend` and `rbModPublicMethodDefined` bullets and the "two super calls are still ported as two calls" sentence now describe the removal path.
+- [ ] CLAUDE.md § "A dispatch by name is spelled directly" is amended the same
+      way: its second fallback names `rbFSend` alone (owner ruling,
+      2026-10-22, recorded in § "Burndown ledger").
 - [ ] `pnpm parity:api:calls`, `parity:api:calls:args`, `parity:api:params` and `parity:api:extra:gate` are green. The ruby-compat extra mark is tightened.
 
 ## Notes
