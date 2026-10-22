@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat TCPSocket: read_nonblock, outbuf and backpressure"
-status: claimed
+status: done
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#9220
 claim: "2026-10-22T13:57:56Z"
 assignee: "tcpsocket-read-nonblock-outbuf-and-backpressure"
 blocked-by: null

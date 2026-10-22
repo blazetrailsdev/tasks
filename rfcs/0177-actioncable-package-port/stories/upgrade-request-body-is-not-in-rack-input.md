@@ -1,6 +1,6 @@
 ---
 title: "rack: an upgrade request's body is left on the socket, not in rack.input"
-status: claimed
+status: done
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9220
 claim: "2026-10-22T13:57:56Z"
 assignee: "tcpsocket-read-nonblock-outbuf-and-backpressure"
 blocked-by: null
