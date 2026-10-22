@@ -9,6 +9,9 @@ deps:
   - minitest-asserts-to-expect-activesupport-callers
   - minitest-asserts-to-expect-trailties-callers
   - minitest-asserts-to-expect-actionpack-actionview-callers
+  - minitest-asserts-to-expect-activerecord-callers
+  - minitest-asserts-to-expect-activemodel-callers
+  - minitest-asserts-to-expect-activejob-globalid-rack-test-arel-callers
 deps-rfc: []
 est-loc: 200
 priority: null
