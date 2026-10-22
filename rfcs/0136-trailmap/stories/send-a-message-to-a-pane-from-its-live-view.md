@@ -5,7 +5,8 @@ updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: []
+deps:
+  - ringo-sends-a-line-of-text-to-a-pane
 deps-rfc: []
 est-loc: 250
 priority: null
