@@ -5,7 +5,8 @@ updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - enroll-actioncable-in-compare-tooling-and-parity-gates
 deps-rfc: []
 est-loc: null
 priority: null
