@@ -39,7 +39,9 @@ call reaches it.
   constructor returns the Proxy as `OrderedOptions` does. A name the class does
   not answer reaches `methodMissing` with the Ruby name, except
   `PROTOCOL_PROBES` (`packages/ruby-compat/src/method-missing-proxy.ts`).
-- `Image`'s Proxy follows the owner's answer to the RFC's open question on
-  `respond_to_missing?` before it lands.
+- `Image`'s Proxy forwards every name but `PROTOCOL_PROBES` to `mogrify`, and
+  its `respondToMissing` answers `false` without gating the Proxy (owner
+  ruling, 2026-10-22, recorded in the RFC's Decisions). CLAUDE.md's `image.rb`
+  row states the exception to the table's `respond_to_missing?` rule.
 - `tool.test.ts`'s `#method_missing` examples and the `image_spec.rb` examples
   that call mogrify options by name pass.

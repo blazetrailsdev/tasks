@@ -133,15 +133,20 @@ PR body, so the generator can learn it; it does not regenerate.
 
 ## Open questions
 
-1. **`Image#respond_to_missing?` answers `false`** (`image.rb:471-473`) while
-   `Image#method_missing` (`image.rb:462-466`) sends every unknown name to
-   `mogrify`. CLAUDE.md "Ruby protocol methods with a different JS mechanism"
-   has a Proxy forward only what `respond_to_missing?` claims, which would
-   forward nothing. Ruby's `false` is there to keep `Array#flatten` off the
-   image (the comment at `image.rb:468-470`), the same reason `Core#to_ary` is
-   unported. Does `Image`'s Proxy forward every name but the protocol probes,
-   with the `respond_to_missing?` port answering `false`?
+None.
+
+## Decisions
+
+- **`Image`'s Proxy forwards every name but the protocol probes** (owner,
+  2026-10-22). `Image#method_missing` (`image.rb:462-466`) sends an unknown
+  name to `mogrify`, so `image.resize("100x100")` runs `mogrify -resize
+100x100` as in Ruby. `Image#respond_to_missing?` (`image.rb:471-473`) is
+  ported answering `false`, as Ruby's does to keep `Array#flatten` off the
+  image, and does not gate the Proxy. This is the exception to CLAUDE.md "Ruby
+  protocol methods with a different JS mechanism", where a Proxy forwards only
+  what `respond_to_missing?` claims; the `image.rb` row in that table records it.
 
 ## Changelog
 
 - 2026-10-22: initial RFC
+- 2026-10-22: `Image`'s Proxy forwards every name but the protocol probes (owner ruling)
