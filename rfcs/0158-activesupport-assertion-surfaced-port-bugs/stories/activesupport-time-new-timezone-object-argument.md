@@ -5,7 +5,8 @@ updated: 2026-09-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
-deps: []
+deps:
+  - date-time-seats-a-timezone-object-zone
 deps-rfc: []
 est-loc: 150
 priority: null
