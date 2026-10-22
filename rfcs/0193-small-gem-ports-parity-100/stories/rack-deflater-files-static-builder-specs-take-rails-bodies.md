@@ -1,5 +1,5 @@
 ---
-title: "rack-deflater-files-static-builder-specs-take-rails-bodies"
+title: "rack spec_deflater.rb takes the Rails spec bodies"
 status: draft
 updated: 2026-10-21
 rfc: "0193-small-gem-ports-parity-100"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 250
 priority: null
 pr: null
 claim: null
@@ -18,27 +18,17 @@ closed-reason: null
 
 ## Context
 
-Split from `rack-remaining-specs-take-rails-bodies`, which converged `spec_body_proxy.rb`,
-`spec_common_logger.rb`, `spec_mock_request.rb`, `spec_directory.rb`,
-`spec_rewindable_input.rb` and `spec_mock_response.rb` and hit the LOC ceiling.
+Split from `rack-remaining-specs-take-rails-bodies`. This story owned four specs. On 2026-10-22
+`spec_files.rb`, `spec_static.rb` and `spec_builder.rb` moved to
+`rack-files-spec-takes-rails-bodies`, `rack-static-spec-takes-rails-bodies` and
+`rack-builder-spec-takes-rails-bodies`, and this story keeps `spec_deflater.rb`.
 
-Still left, per `pnpm parity:test --package rack --assertions --missing`:
-
-- `packages/rack/src/deflater.test.ts` vs `vendor/rack/v3.1.14/test/spec_deflater.rb` (27 count mismatches)
-- `packages/rack/src/files.test.ts` vs `vendor/rack/v3.1.14/test/spec_files.rb` (17; plus 2 TS-only tests)
-- `packages/rack/src/static.test.ts` vs `vendor/rack/v3.1.14/test/spec_static.rb` (18; value mismatches show the tests use an invented `fallback` app and tmpdir tree instead of Rails' `DummyApp` / `test/cgi` DOCROOT)
-- `packages/rack/src/builder.test.ts` vs `vendor/rack/v3.1.14/test/spec_builder.rb` (11; plus 2 TS-only tests)
-
-The rack `test/cgi` DOCROOT fixtures now live at `packages/rack/test/cgi/` (copied from
-`vendor/rack/v3.1.14/test/cgi/`), except `cgi/assets/**`, which `spec_static.rb` needs: copy it
-in this story. `spec_builder.rb` also needs `vendor/rack/v3.1.14/test/builder/*.ru`.
-
-Residual kinds from the parent: `spec_common_logger.rb` "log in common log format" asserts
-`(0..1).must_include duration` (Range include; trails asserts `Range#isInclude` truthy), and
-`spec_mock_response.rb` "optionally makes Rack errors fatal" (`must_raise(...).message`).
+Measured on trails `a0874e9576` with a fresh build, `pnpm parity:test --package rack --assertions`:
+`packages/rack/src/deflater.test.ts` vs `vendor/rack/v3.1.14/test/spec_deflater.rb` has
+27 count and 27 kind mismatches.
 
 ## Acceptance criteria
 
-- [ ] Each of the four files takes the Rails test bodies verbatim (same fixtures, same apps, same assertions).
-- [ ] 0 assertion-count, kind and value mismatches for these files in `parity:test --package rack --assertions`.
-- [ ] TS-only tests in these Rails-named files move to `*.trails.test.ts` or are deleted.
+- [ ] `deflater.test.ts` takes the Rails spec bodies verbatim (same apps, same assertion kinds
+      and literal values), with test names unchanged.
+- [ ] 0 assertion-count, kind and value mismatches for `spec_deflater.rb`.
