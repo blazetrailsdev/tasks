@@ -5,7 +5,8 @@ updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - actionmailer-base-mail-and-collector
 deps-rfc: []
 est-loc: null
 priority: 6
