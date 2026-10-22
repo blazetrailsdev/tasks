@@ -1,6 +1,6 @@
 ---
 title: "Port Nokogiri test_parser.rb and test_tokenizer.rb"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null

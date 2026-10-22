@@ -1,6 +1,6 @@
 ---
 title: "Compare: an arm whose only difference is include_private is permanently unportable, not a missing call or arm"
-status: ready
+status: in-progress
 updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9252
+claim: "2026-10-22T21:01:45Z"
+assignee: "call-args-drops-visibility-boolean-argument"
 blocked-by: null
 ---
 

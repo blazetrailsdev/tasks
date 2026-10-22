@@ -1,6 +1,6 @@
 ---
 title: "Drop the tasks-only dokku mount now that the parent directory is mounted"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null

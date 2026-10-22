@@ -1,6 +1,6 @@
 ---
 title: "Compare: public_send / private_methods / protected_methods / public_method_defined? are one permanent SKIP_GROUPS entry"
-status: ready
+status: in-progress
 updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9252
+claim: "2026-10-22T21:01:45Z"
+assignee: "call-args-drops-visibility-boolean-argument"
 blocked-by: null
 ---
 

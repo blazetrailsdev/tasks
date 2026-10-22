@@ -1,6 +1,6 @@
 ---
 title: "Relation as a fragment cache name expands its async cache_key"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Search stories and RFCs — surface ringo never had"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null

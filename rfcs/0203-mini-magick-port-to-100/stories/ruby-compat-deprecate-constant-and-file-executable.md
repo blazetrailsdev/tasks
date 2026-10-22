@@ -1,6 +1,6 @@
 ---
 title: "Port Module#deprecate_constant and File.executable? to ruby-compat"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-prereqs
