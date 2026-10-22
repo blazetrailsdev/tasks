@@ -1,7 +1,7 @@
 ---
 title: "Port logging_test.rb cases 1\u201322 (:59-270)"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]
@@ -17,9 +17,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9221
+claim: "2026-10-22T15:30:16Z"
+assignee: "port-activejob-logging-test-part-1"
 blocked-by: null
 closed-reason: null
 ---

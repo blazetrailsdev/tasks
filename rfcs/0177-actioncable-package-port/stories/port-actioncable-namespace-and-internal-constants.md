@@ -1,6 +1,6 @@
 ---
 title: "Port lib/action_cable.rb: the ActionCable namespace, INTERNAL and ActionCable.server"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity

@@ -1,6 +1,6 @@
 ---
 title: "port-activejob-logging-test-fixture-jobs"
-status: ready
+status: claimed
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T15:46:39Z"
+assignee: "port-activejob-test-helper-test-performed-part-3"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port test_helper_test.rb EnqueuedJobsTest cases 39\u201376 and the small adapter classes"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
