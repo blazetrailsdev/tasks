@@ -5,8 +5,7 @@ updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
-deps:
-  - action-controller-test-case-has-no-assert-select
+deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
