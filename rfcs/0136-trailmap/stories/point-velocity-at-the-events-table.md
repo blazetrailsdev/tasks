@@ -5,7 +5,9 @@ updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
-deps: ["serve-the-read-verbs-as-json"]
+deps:
+  - serve-the-read-verbs-as-json
+  - retarget-the-velocity-story-at-ringo
 deps-rfc: []
 est-loc: 200
 priority: null
