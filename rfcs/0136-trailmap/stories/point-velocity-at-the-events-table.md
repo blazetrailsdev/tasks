@@ -1,15 +1,15 @@
 ---
-title: "Point /graphs/velocity at the events table instead of the git log"
+title: "ringo: flip TASKS_EVENTS_SOURCE to db so /graphs/velocity reads the events table"
 status: blocked
 updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
-packages: ["activerecord"]
+packages: []
 deps:
   - serve-the-read-verbs-as-json
   - retarget-the-velocity-story-at-ringo
 deps-rfc: []
-est-loc: 200
+est-loc: 40
 priority: null
 pr: null
 claim: null
@@ -20,35 +20,44 @@ closed-reason: null
 
 ## Context
 
-`/graphs/velocity` needs its own story, because it is the one consumer that
-does not read the task database at all — it reads the tasks repo's **git log**.
+**This is ringo work, in btwhooks — not trailmap work.** `/graphs/velocity` is
+ringo's page (`webhook/velocity.go`, `webhook/velocity_page.go`, routed in
+`main.go`). trailmap serves no velocity chart and parses no commit subjects;
+trailmap#68 claimed this story in a bundle and released it for that reason.
+btwhooks has no GitHub remote, so no trailmap or trails worker can open a PR
+for it: it is done by hand on the box, and it stays out of the trailmap spawn
+queue (it is `blocked` with that reason until someone takes it there).
 
-ringo's README describes it as a timestamped event stream: "Every tasks-CLI
-mutation is one commit whose subject is the verb it ran — `new:`,
-`status ready:`, `claim:`, `in-progress: <story> #<pr>`, `done:`, `close:`,
-`block:`", and counts agents spawned as distinct PR numbers on a week's
-`in-progress:` commits.
+The chart reads the tasks repo's **git log** today. ringo's README describes
+that log as an event stream — one commit per CLI verb, `new:`, `claim:`,
+`in-progress: <story> #<pr>`, `done:` and so on — but that is stale: only
+`tasks new` still commits per mutation, and state reaches git in hourly
+`state: sync N stories` batches. The per-verb subjects the chart parses are
+mostly no longer produced, so it is very likely undercounting.
 
-That description is stale, and the discrepancy has to be resolved before
-anything is deleted. Only `tasks new` still commits per mutation
-(`authoring.ts:170`); `verbs.ts:5-6` describes the commit-per-mutation flow in
-the past tense as the pre-SQLite design; and state now reaches git in hourly
-batches as `state: sync N stories` commits from `export`. So the per-verb
-subjects the chart parses are mostly no longer produced.
+Most of the replacement already exists. `webhook/taskevents.go` has a
+`TASKS_EVENTS_SOURCE` switch — `git` (THE DEFAULT), `db` (the `events` table,
+read straight out of `tasks.db`), `json` and `auto` — and the non-git paths
+synthesize commit subjects (`taskEventSubject`) so the one parser in
+`velocity.go` runs unchanged. What is left is to flip it and check the numbers.
 
-The `events` table is the intended replacement and is already written by every
-mutation. Point velocity at it through the API, and the chart stops depending
-on commit-message archaeology entirely.
-
-Establish first whether the current chart is already undercounting. If it is,
-say so when the fix lands — the weekly figures will move, and that should read
-as a correction rather than a regression.
+**Reconciled with the API.** This story first asked for the events table
+"through the API" (trailmap's `GET /events`). ringo's `db` source reads
+`tasks.db` directly, read-only, which `docs/write-protocol.md` in trailmap
+allows — every table is readable by both processes — and it is the same table
+`/events` serves. Going through HTTP would add a dependency on trailmap being
+up for a chart, and nothing else. The `db` source is the target; switching it to
+`/events` is a separate decision for when ringo stops opening `tasks.db` at
+all (RFC 0136 phase G).
 
 ## Acceptance criteria
 
-- `/graphs/velocity` reads the `events` table through the API.
-- Whether the git-log source was already undercounting is determined and
-  recorded, with the before/after figures.
-- Stories created, readied, claimed, done and closed per week, plus agents
-  spawned, are derived from events with the same weekly boundaries.
-- Nothing in velocity parses commit subjects.
+- `TASKS_EVENTS_SOURCE=db` is set for btwhooks (its dokku config or the
+  default in `eventsSource()`), and `/graphs/velocity` renders from it.
+- The weekly figures under `git` and under `db` are compared for the same
+  weeks and recorded on this story, saying whether git was undercounting —
+  the chart's numbers will move, and that should read as a correction.
+- A decision is recorded on whether the subject-synthesis layer
+  (`taskEventSubject` feeding the git-subject parser) goes, in favour of
+  deriving the weekly counts from event rows directly. If it goes, nothing in
+  velocity parses commit subjects.

@@ -109,6 +109,18 @@ application hits is supposed to _become_ a story against the framework.
 `pnpm trails:status` escalates to a non-zero exit once a failed run has held
 the pin for more than 48h.
 
+**Where the schedule lives: the host's crontab**, not btwhooks — promotion
+writes the main checkout's `node_modules`, which the btwhooks container
+bind-mounts, so the job must not run inside it. `scripts/track-trails-cron.sh`
+is the entry; `scripts/track-trails-cron.sh --crontab`, run from the main
+checkout, prints the line to install (hourly, at :17). It holds a lock so a
+long build never overlaps the next hour's run, and it turns a failed run into
+a GitHub issue on this repo titled "trails tracking is failing" — one issue,
+commented on by each further failure and closed by the next success — because
+cron's own report is mail nobody reads. A bump it makes is the
+`chore(vendor): track trails <sha>` commit, so `git log --grep 'track trails'`
+lists every move the job made.
+
 Bumping by hand still works and is still a normal thing to do:
 
 ```bash
