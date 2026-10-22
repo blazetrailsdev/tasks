@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Concurrent::TimerTask and Concurrent::AtomicFixnum"
-status: claimed
+status: done
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
@@ -8,7 +8,7 @@ packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
 est-loc: 250
-pr: null
+pr: trails#9215
 claim: "2026-10-22T12:57:56Z"
 assignee: "rack-hijack-returns-a-socket-io"
 blocked-by: null

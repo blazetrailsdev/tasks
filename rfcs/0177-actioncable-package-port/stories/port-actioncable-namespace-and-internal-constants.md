@@ -1,7 +1,7 @@
 ---
 title: "Port lib/action_cable.rb: the ActionCable namespace, INTERNAL and ActionCable.server"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable", "activesupport"]
@@ -12,9 +12,9 @@ deps:
   ]
 deps-rfc: []
 est-loc: 200
-pr: null
-claim: null
-assignee: null
+pr: trails#9217
+claim: "2026-10-22T13:21:19Z"
+assignee: "port-actioncable-channel-generator"
 blocked-by: null
 closed-reason: null
 ---

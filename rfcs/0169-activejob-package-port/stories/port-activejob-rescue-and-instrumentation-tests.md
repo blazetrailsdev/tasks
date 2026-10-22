@@ -1,7 +1,7 @@
 ---
 title: "Port rescue_test.rb and instrumentation_test.rb (10 cases)"
-status: ready
-updated: 2026-10-05
+status: done
+updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9216
+claim: "2026-10-22T13:09:49Z"
+assignee: "port-activejob-log-subscriber"
 blocked-by: null
 closed-reason: null
 ---

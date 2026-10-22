@@ -1,6 +1,6 @@
 ---
 title: "extractor-reexport-duplicates-module-entries"
-status: ready
+status: done
 updated: 2026-10-22
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 13
-pr: null
-claim: null
-assignee: null
+pr: trails#9190
+claim: "2026-10-22T13:08:10Z"
+assignee: "extractor-reexport-duplicates-module-entries"
 blocked-by: null
 closed-reason: null
 ---

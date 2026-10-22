@@ -1,7 +1,7 @@
 ---
 title: "Port test_helper_test.rb EnqueuedJobsTest cases 39\u201376 and the small adapter classes"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9219
+claim: "2026-10-22T13:39:41Z"
+assignee: "port-activejob-test-helper-test-enqueued-part-1"
 blocked-by: null
 closed-reason: null
 ---

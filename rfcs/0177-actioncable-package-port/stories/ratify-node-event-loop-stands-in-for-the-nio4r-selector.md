@@ -1,6 +1,6 @@
 ---
 title: "CLAUDE.md: Node's event loop stands in for Action Cable's nio4r selector loop"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity

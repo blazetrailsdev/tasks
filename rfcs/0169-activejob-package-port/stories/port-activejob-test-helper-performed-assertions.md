@@ -1,6 +1,6 @@
 ---
 title: "Port TestHelper's performed-job assertions and perform_enqueued_jobs, with NotTestAdapterTest"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null

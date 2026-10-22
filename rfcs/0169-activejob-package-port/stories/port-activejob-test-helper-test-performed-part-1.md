@@ -1,7 +1,7 @@
 ---
 title: "Port test_helper_test.rb PerformedJobsTest cases 1\u201342 (:829-1227)"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9218
+claim: "2026-10-22T13:40:21Z"
+assignee: "port-activejob-test-helper-test-performed-part-1"
 blocked-by: null
 closed-reason: null
 ---

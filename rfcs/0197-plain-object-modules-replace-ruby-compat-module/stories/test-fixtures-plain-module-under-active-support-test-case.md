@@ -1,7 +1,7 @@
 ---
 title: "activerecord: TestFixtures as a plain module beneath ActiveSupport::TestCase's module lifecycle"
-status: draft
-updated: 2026-10-21
+status: ready
+updated: 2026-10-22
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages: []
