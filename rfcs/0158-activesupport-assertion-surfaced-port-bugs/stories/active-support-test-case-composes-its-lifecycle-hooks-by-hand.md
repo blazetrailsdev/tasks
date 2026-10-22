@@ -7,7 +7,6 @@ cluster: null
 packages: []
 deps:
   - prepend-copies-onto-the-class-so-super-method-cannot-resume-from-it
-  - after-teardown-takes-a-test-parameter-rails-does-not-have
 deps-rfc: []
 est-loc: 300
 priority: null
