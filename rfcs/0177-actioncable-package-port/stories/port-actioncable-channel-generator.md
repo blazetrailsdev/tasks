@@ -5,7 +5,9 @@ updated: 2026-10-21
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["trailties"]
-deps: ["port-actioncable-test-unit-channel-generator"]
+deps:
+  - port-actioncable-test-unit-channel-generator
+  - thor-actions-template-is-unported
 deps-rfc: []
 est-loc: 550
 pr: null
