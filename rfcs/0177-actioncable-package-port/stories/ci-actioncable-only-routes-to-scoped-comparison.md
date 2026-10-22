@@ -1,6 +1,6 @@
 ---
 title: "ci-actioncable-only-routes-to-scoped-comparison"
-status: draft
+status: closed
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicates ci-actioncable-only-diffs-scope-rails-comparison-to-actioncable, which now carries the routing and depends on enrollment"
 ---
 
 ## Context

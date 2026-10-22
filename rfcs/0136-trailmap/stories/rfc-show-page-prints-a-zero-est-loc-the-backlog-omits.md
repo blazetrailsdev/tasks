@@ -1,7 +1,7 @@
 ---
 title: 'trailmap: the RFC show page prints "0 loc" for an est-loc of 0, where /backlog now prints nothing'
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#74
+claim: "2026-10-22T01:37:01Z"
+assignee: "bump-the-ringo-pin-to-carry-the-write-path-and-smoke-cards"
 blocked-by: null
 closed-reason: null
 ---

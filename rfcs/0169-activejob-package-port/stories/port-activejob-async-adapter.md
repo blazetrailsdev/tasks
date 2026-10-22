@@ -1,6 +1,6 @@
 ---
 title: "Port QueueAdapters::AsyncAdapter over ruby-compat's executors, with async_adapter_test.rb and the AJ_ADAPTER=async lane"
-status: claimed
+status: in-progress
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 3
-pr: null
+pr: trails#9203
 claim: "2026-10-22T00:44:22Z"
 assignee: "port-activejob-argument-serialization-test"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "point-velocity-at-the-events-table is ringo work: retarget it at btwhooks, where TASKS_EVENTS_SOURCE already exists"
 status: ready
-updated: 2026-10-15
+updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
 packages: []

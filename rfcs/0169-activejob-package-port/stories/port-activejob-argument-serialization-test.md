@@ -1,6 +1,6 @@
 ---
 title: "Port argument_serialization_test.rb (20 cases)"
-status: claimed
+status: in-progress
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -15,7 +15,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 3
-pr: null
+pr: trails#9203
 claim: "2026-10-22T00:44:22Z"
 assignee: "port-activejob-argument-serialization-test"
 blocked-by: null

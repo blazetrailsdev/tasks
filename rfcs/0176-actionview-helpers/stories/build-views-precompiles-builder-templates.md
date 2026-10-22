@@ -1,6 +1,6 @@
 ---
 title: "build-views precompiles .builder templates"
-status: draft
+status: ready
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null

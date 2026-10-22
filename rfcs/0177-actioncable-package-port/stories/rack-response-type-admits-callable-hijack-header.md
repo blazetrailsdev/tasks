@@ -1,6 +1,6 @@
 ---
 title: "rack-response-type-admits-callable-hijack-header"
-status: draft
+status: in-progress
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9206
+claim: "2026-10-22T01:58:36Z"
+assignee: "rack-response-type-admits-callable-hijack-header"
 blocked-by: null
 closed-reason: null
 ---

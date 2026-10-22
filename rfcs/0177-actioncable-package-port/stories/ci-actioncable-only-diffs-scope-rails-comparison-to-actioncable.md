@@ -1,7 +1,7 @@
 ---
 title: "CI: an actioncable-only diff extracts and compares only actioncable"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["scripts"]
@@ -9,9 +9,9 @@ deps:
   - enroll-actioncable-in-compare-tooling-and-parity-gates
 deps-rfc: []
 est-loc: 450
-pr: null
-claim: null
-assignee: null
+pr: trails#9206
+claim: "2026-10-22T01:31:23Z"
+assignee: "ci-actioncable-only-diffs-scope-rails-comparison-to-actioncable"
 blocked-by: null
 closed-reason: null
 ---

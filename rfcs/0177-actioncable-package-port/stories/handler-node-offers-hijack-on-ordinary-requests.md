@@ -1,7 +1,7 @@
 ---
 title: "rack: Handler::Node offers rack.hijack only on upgrade requests"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: null
 packages: ["rack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9206
+claim: "2026-10-22T01:31:23Z"
+assignee: "ci-actioncable-only-diffs-scope-rails-comparison-to-actioncable"
 blocked-by: null
 closed-reason: null
 ---
