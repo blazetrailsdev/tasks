@@ -8,6 +8,9 @@ packages: ["trails-tsc"]
 deps:
   - trails-tsc-emits-invalid-declares-for-a-real-app
   - trails-tsc-reads-more-than-one-schema-file
+  - trails-tsc-mistypes-serialized-columns-and-named-primary-keys
+  - trails-tsc-synthesized-attribute-writers-accept-anything
+  - trails-tsc-synthesizes-the-dirty-attribute-methods
 deps-rfc: []
 est-loc: 180
 priority: null
