@@ -15,6 +15,7 @@ packages:
   - "actionpack"
   - "actionview"
   - "ruby-compat"
+  - "activemodel"
 clusters:
   - "surfaced-bugs"
 related-rfcs:
