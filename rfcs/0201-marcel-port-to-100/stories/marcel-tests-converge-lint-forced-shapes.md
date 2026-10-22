@@ -1,6 +1,6 @@
 ---
 title: "Converge marcel's test helper extra arm and conditional extension tests to the gem"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0201-marcel-port-to-100"
 cluster: null

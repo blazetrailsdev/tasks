@@ -1,7 +1,7 @@
 ---
 title: "Port client_test.rb's unsubscribe, remote disconnect and server restart cases"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-21
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]

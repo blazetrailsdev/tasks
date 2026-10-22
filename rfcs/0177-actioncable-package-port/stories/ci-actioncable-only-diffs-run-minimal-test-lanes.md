@@ -1,16 +1,16 @@
 ---
 title: "CI: an actioncable-only diff runs only the lanes it can affect"
-status: draft
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-21
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["scripts"]
 deps: []
 deps-rfc: []
 est-loc: 350
-pr: null
-claim: null
-assignee: null
+pr: trails#9202
+claim: "2026-10-21T23:45:31Z"
+assignee: "actioncable-package-skeleton"
 blocked-by: null
 closed-reason: null
 ---

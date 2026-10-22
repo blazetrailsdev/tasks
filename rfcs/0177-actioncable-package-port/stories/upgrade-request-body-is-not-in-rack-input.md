@@ -1,7 +1,7 @@
 ---
 title: "rack: an upgrade request's body is left on the socket, not in rack.input"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-21
 rfc: "0177-actioncable-package-port"
 cluster: null
 packages: ["rack"]

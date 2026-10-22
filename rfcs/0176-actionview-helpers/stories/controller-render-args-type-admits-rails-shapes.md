@@ -1,6 +1,6 @@
 ---
 title: "ActionController render args type admits plain-object, assigns, hashlike locals and model shapes"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0176-actionview-helpers"
 cluster: null

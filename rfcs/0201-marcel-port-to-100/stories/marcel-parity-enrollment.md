@@ -1,6 +1,6 @@
 ---
 title: "Enroll marcel in parity:api and parity:test at 100%"
-status: in-progress
+status: done
 updated: 2026-10-21
 rfc: "0201-marcel-port-to-100"
 cluster: marcel-parity

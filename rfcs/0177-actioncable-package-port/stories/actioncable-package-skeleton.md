@@ -1,16 +1,16 @@
 ---
 title: "Create packages/actioncable as a published workspace package and wire it into CI"
-status: draft
-updated: 2026-10-02
+status: in-progress
+updated: 2026-10-21
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
 deps: []
 deps-rfc: []
 est-loc: 250
-pr: null
-claim: null
-assignee: null
+pr: trails#9202
+claim: "2026-10-21T23:45:31Z"
+assignee: "actioncable-package-skeleton"
 blocked-by: null
 closed-reason: null
 ---

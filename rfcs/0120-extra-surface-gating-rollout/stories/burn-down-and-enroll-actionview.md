@@ -1,6 +1,6 @@
 ---
 title: "burn-down-and-enroll-actionview"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9201
+claim: "2026-10-21T23:41:24Z"
+assignee: "activerecord-test-support-extra-surface-burndown-remainder"
 blocked-by: null
 closed-reason: null
 ---

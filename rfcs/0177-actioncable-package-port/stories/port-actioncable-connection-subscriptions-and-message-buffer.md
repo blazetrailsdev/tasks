@@ -1,7 +1,7 @@
 ---
 title: "Port Connection::Subscriptions and Connection::MessageBuffer"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-21
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]

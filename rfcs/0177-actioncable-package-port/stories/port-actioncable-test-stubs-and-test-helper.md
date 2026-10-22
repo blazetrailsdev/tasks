@@ -1,7 +1,7 @@
 ---
 title: "Port Action Cable's test stubs and test/test_helper.rb, with the first tests that use them"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-21
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]

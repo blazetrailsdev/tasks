@@ -1,7 +1,7 @@
 ---
 title: "rack: RackResponse's header type does not admit the rack.hijack callback"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-21
 rfc: "0177-actioncable-package-port"
 cluster: null
 packages: ["rack"]

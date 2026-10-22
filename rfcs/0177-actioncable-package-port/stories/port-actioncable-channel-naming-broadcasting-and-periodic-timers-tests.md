@@ -1,7 +1,7 @@
 ---
 title: "Port channel/naming_test.rb, broadcasting_test.rb and periodic_timers_test.rb"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-21
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]

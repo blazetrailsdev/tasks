@@ -1,6 +1,6 @@
 ---
 title: "ActiveJob.eager_load! loads every autoloaded constant: complete namespaces.ts loadPath and seats"
-status: ready
+status: in-progress
 updated: 2026-10-21
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9200
+claim: "2026-10-21T23:17:53Z"
+assignee: "port-activejob-test-fixture-jobs"
 blocked-by: null
 closed-reason: null
 ---

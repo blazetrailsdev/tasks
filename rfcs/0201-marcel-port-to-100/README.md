@@ -1,7 +1,7 @@
 ---
 rfc: "0201-marcel-port-to-100"
 title: "Marcel: from the generated port to 100%"
-status: active
+status: closed
 created: 2026-10-21
 updated: 2026-10-21
 owner: "@deanmarano"
