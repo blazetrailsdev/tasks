@@ -1,7 +1,7 @@
 ---
 title: "Native [0] / .at(-1) / .slice for first / last / take / drop on Array receivers"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: native-sweep
 packages: ["activemodel", "activerecord"]

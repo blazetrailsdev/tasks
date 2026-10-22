@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: basicObjRespondTo runs core-receiver probes before the prototype walk on every class instance"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: dispatch-cost
 packages: []

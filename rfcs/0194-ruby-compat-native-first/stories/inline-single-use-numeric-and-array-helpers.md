@@ -1,7 +1,7 @@
 ---
 title: "Inline single-caller numeric and array helpers at their callers"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: inline
 packages: []

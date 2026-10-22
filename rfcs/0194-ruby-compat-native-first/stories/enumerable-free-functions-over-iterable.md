@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: Enumerable as free functions over any Iterable or each-answerer, absorbing array.ts and enumerable-utils.ts duplicates"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: enumerable
 packages: ["ruby-compat", "activesupport", "activerecord"]

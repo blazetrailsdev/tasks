@@ -1,7 +1,7 @@
 ---
 title: "Call gate: credit native forms for Hash keys/transform_values/each_value/values_at/dup and numeric/string to_i/to_f/round/strip/chomp"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
 packages: ["ruby-compat"]

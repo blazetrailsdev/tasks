@@ -1,7 +1,7 @@
 ---
 title: "Call gate: credit a literal-key rest-destructure as Hash#except"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
 packages: []

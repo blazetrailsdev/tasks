@@ -25,6 +25,7 @@ clusters:
   - inline
   - enumerable
   - native-sweep
+priority: 3
 ---
 
 # RFC 0194 — ruby-compat native-first

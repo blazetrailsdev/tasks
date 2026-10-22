@@ -1,7 +1,7 @@
 ---
 title: "Call gate: credit native Array forms (compact/uniq/union/take/drop/to_h/zip/count/sort) on a proven array receiver"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
 packages: ["ruby-compat"]

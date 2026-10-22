@@ -1,6 +1,6 @@
 ---
 title: "rack-spec-lint-headers-body-early-hints-take-rails-bodies"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null

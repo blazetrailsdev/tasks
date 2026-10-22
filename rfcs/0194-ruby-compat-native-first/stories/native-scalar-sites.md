@@ -1,7 +1,7 @@
 ---
 title: "Native Math / Number / trim forms for toI / toF / round / isNan / max / min / strip / chomp / strlen where the value set makes them identical"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: native-sweep
 packages:

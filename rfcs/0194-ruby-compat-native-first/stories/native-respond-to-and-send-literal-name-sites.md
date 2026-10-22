@@ -1,7 +1,7 @@
 ---
 title: "Native member access for rbObjRespondTo / rbFSend with a literal name on a receiver with no respondToMissing"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: substitution
 packages: []

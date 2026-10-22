@@ -1,7 +1,7 @@
 ---
 title: "Use the Enumerable free functions where ported bodies hand-roll each_slice / min_by / max_by / tally / each_with_object / sort_by"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: enumerable
 packages: ["activerecord", "activesupport", "actionpack", "actionview"]

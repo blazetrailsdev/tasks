@@ -1,6 +1,6 @@
 ---
 title: "Search stories and RFCs — surface ringo never had"
-status: claimed
+status: in-progress
 updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trailmap#78
 claim: "2026-10-22T19:58:09Z"
 assignee: "drop-the-redundant-tasks-mount"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Compare: public_send / private_methods / protected_methods / public_method_defined? are one permanent SKIP_GROUPS entry"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
 packages: []

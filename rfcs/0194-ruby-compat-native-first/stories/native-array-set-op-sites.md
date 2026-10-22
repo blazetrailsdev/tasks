@@ -1,7 +1,7 @@
 ---
 title: "Native filter / Set / includes / join for compact / uniq / union / flatten / aryIncludes / aryJoin / aryCount over primitive elements"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: native-sweep
 packages: ["actionpack", "activemodel", "activerecord"]

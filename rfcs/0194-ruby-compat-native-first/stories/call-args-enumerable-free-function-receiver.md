@@ -1,7 +1,7 @@
 ---
 title: "call-args: argument 1 of an Enumerable free function is the Ruby receiver and a trailing function is the block"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
 packages: ["ruby-compat"]

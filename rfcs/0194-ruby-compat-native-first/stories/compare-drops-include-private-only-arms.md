@@ -1,7 +1,7 @@
 ---
 title: "Compare: an arm whose only difference is include_private is permanently unportable, not a missing call or arm"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
 packages: []

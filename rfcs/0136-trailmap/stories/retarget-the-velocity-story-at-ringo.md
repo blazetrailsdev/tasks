@@ -1,6 +1,6 @@
 ---
 title: "point-velocity-at-the-events-table is ringo work: retarget it at btwhooks, where TASKS_EVENTS_SOURCE already exists"
-status: claimed
+status: in-progress
 updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: tasks#290
 claim: "2026-10-22T19:58:09Z"
 assignee: "drop-the-redundant-tasks-mount"
 blocked-by: null

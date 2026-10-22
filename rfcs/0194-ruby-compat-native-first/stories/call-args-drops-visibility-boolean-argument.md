@@ -1,7 +1,7 @@
 ---
 title: "call-args: respond_to?(name, true) / methods(true) against a one-argument port is not a shape row"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
 packages: []
