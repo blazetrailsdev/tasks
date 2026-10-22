@@ -2,7 +2,7 @@
 title: "Call gates credit a getter-returned Proc invocation (Ruby's reader.call collapses in JS)"
 status: draft
 updated: 2026-10-21
-rfc: "0193-small-gem-ports-parity-100"
+rfc: "0156-parity-beyond-name-presence"
 cluster: comparer
 packages: ["scripts"]
 deps: []
