@@ -5,11 +5,7 @@ updated: 2026-10-21
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable", "scripts"]
-deps:
-  [
-    "actioncable-package-skeleton",
-    "ci-actioncable-only-diffs-scope-rails-comparison-to-actioncable",
-  ]
+deps: ["actioncable-package-skeleton"]
 deps-rfc: []
 est-loc: 350
 pr: null
