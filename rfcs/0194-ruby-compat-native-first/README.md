@@ -308,7 +308,7 @@ The other 222 are listed in Appendix A with their citations. They are
 ordinary MRI ports (numeric coercion, `sprintf`, `Kernel#Integer`, the error
 hierarchy's messages, `Symbol` / `String` conversions, constant lookup). None
 has a builtin whose result matches at every trails call site. Where a subset
-of call sites does have one, that is a 0194 native-form sweep at the call site
+of call sites does have one, that is one of this RFC's native-form sweeps at the call site
 and the export stays. § "Policy" is the rule: native wherever behaviour
 is identical, helper only where it dispatches or differs.
 
@@ -341,7 +341,7 @@ each, by family:
 #### DELETE · JS form — 28
 
 The helper's whole body is the JS builtin on the receivers trails passes, or
-it is an identity. 26 are already owned by 0194 sweeps. Each sweep first needs
+it is an identity. 26 are already owned by this RFC's sweeps. Each sweep first needs
 its gate credit, which § "Gate" orders before the sweep. Two are owned by
 nobody, and this RFC files
 **`delete-identity-and-alias-ruby-compat-helpers`** for them:
@@ -484,7 +484,7 @@ visibility at run time:
 - **Not residue, and stays:**
   - `objRespondToMissing` (`object.ts:746`) is the port of
     `BasicObject#respond_to_missing?`. A Rails override reaches it through
-    `super`, and its `priv` parameter is the Ruby parameter list, which 0194's
+    `super`, and its `priv` parameter is the Ruby parameter list, which this RFC's
     collapse story keeps.
   - `NoMethodError#isPrivateCall` reports whether the failed call was an
     fcall. That is a fact about the call, not about visibility.
@@ -547,7 +547,7 @@ No new gate is needed; four existing ones tighten:
 | -------------------------------------------- | ----------------------------------------------------------------------------------- | --------------------- |
 | no new `new Module(` / `superMethod(`        | `module-count-ratchet-blocks-new-ruby-compat-modules`                               | shipped (trails#9190) |
 | no new literal-name send                     | `pnpm parity:api:sends` (merge-base is the mark)                                    | live                  |
-| no helper where the native form is identical | 0194 `ruby-compat-native-required-lint`                                             | draft                 |
+| no helper where the native form is identical | `ruby-compat-native-required-lint`                                                  | draft                 |
 | no export without a caller                   | 0154 `ruby-compat-rule-1-call-site-gate` (only-shrink register of uncalled exports) | draft                 |
 
 **The `parity:api:extra` regime for ruby-compat.** The mark is
