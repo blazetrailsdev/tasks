@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: ["activerecord"]
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 120
@@ -23,8 +24,8 @@ with `static _tableName = "..."`, and `PullRequest` (app/models/pull-request.ts:
 adds `static _primaryKey = "number"`. Those are the framework's backing fields,
 not its API:
 
-- `packages/activerecord/src/base.ts:582` — `static _tableName: string | null = null;`
-- `packages/activerecord/src/base.ts:583` — `declare static _primaryKey?: ...`
+- `packages/activerecord/src/base.ts:464` — `static _tableName: string | null = null;`
+- `packages/activerecord/src/base.ts:465` — `declare static _primaryKey?: ...`
 - `packages/activerecord/src/base.ts:655-661` — the real `tableName` getter/setter
 - `packages/activerecord/src/base.ts:663-669` — the real `primaryKey` getter/setter
 
@@ -55,3 +56,9 @@ own reflection bug on `node-sqlite`.
 - [ ] one documented, setter-backed way to declare table name and primary key
 - [ ] a test that a subclass of a model declared that way resolves its own table
 - [ ] trailmap's `_tableName` / `_primaryKey` uses can be replaced with it
+
+## Audit 2026-10-22
+
+The `base.ts:655-669` accessor citations above are stale; the accessors now live
+in `model-schema.ts` / `attribute-methods/primary-key.ts`. Trails' own tests still spell
+the underscore field widely (e.g. `enum.test.ts`'s `static _tableName = "books"`).

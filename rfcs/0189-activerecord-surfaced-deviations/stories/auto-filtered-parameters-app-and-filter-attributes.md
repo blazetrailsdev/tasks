@@ -1,5 +1,5 @@
 ---
-title: "AutoFilteredParameters synthesizes `app` and never writes klass.filter_attributes"
+title: "AutoFilteredParameters#apply_filter never writes klass.filter_attributes and carries two invented guards"
 status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: 160
+est-loc: 100
 priority: 28
 pr: null
 claim: null
@@ -97,3 +97,13 @@ together.
       `encryption/auto-filtered-parameters.ts`.
 - [ ] `pnpm parity:api:calls` green; `pnpm parity:test` delta non-negative;
       SQLite, PostgreSQL and MySQL/MariaDB lanes green.
+
+## Audit 2026-10-22
+
+**Partly landed** (2026-10-22). The constructor now takes the application
+(`constructor(app: AutoFilteredParametersApp)`, `encryption/auto-filtered-parameters.ts:13`),
+its key is `filterParameters`, and `app` is a getter over `_app`, so the first axis is done.
+Still open, at `applyFilter` (`:73-86`): the `Encryption.config.addToFilterParameters` early
+return, the second `isExcludedFromFilterParameters(attribute)` check, and the missing
+`klass.filter_attributes += [attribute]`. Land `auto-filtered-parameters-model-name-element`
+first (it moves the tests onto canonical `Pirate` models).

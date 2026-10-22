@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 40
 priority: 52
 pr: null
 claim: null
@@ -32,7 +32,7 @@ VALID_UNSCOPING_VALUES = Set.new([:where, :select, :group, :order, :lock,
 `ArgumentError, "Called unscope() with invalid unscoping argument ':create_with'."`
 for `unscope(:create_with)`.
 
-`packages/activerecord/src/relation/query-methods.ts:629-660` (`UnscopeType` and
+`packages/activerecord/src/relation/query-methods.ts:482,503` (`UnscopeType` and
 `VALID_UNSCOPING_VALUES`) carries a 19th entry, `createWith`, so
 `unscope("createWith")` silently resets `_createWithAttrs` where Rails raises.
 The JSDoc above the type even lists `create_with` as if it were in the Rails

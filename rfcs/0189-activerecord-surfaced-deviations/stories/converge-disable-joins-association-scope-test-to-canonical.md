@@ -19,7 +19,7 @@ closed-reason: null
 
 ## Context
 
-`packages/activerecord/src/associations/disable-joins-association-scope.test.ts`
+`packages/activerecord/src/associations/disable-joins-association-scope.trails.test.ts`
 builds bespoke `djs_authors` / `djs_posts` / `djs_comments` tables inline
 (createTable + dropTable in before/after hooks) rather than going through the
 canonical schema. None of those table names exists in

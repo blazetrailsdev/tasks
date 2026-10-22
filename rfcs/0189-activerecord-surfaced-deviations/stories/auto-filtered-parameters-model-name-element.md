@@ -5,7 +5,6 @@ updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
-  - "activemodel"
   - "activerecord"
 deps: []
 deps-rfc: []
@@ -31,7 +30,7 @@ builds the filter as:
 
     filter = [("#{klass.model_name.element}" if klass.name), attribute.to_s].compact.join(".")
 
-`packages/activerecord/src/encryption/auto-filtered-parameters.ts:85` spells the
+`packages/activerecord/src/encryption/auto-filtered-parameters.ts:75` spells the
 first segment `underscore(klass.name)`. The two diverge for a namespaced class:
 `Admin::Post` has `model_name.element == "post"`, while `underscore` yields
 `"admin/post"`, so a namespaced model's encrypted attributes land in

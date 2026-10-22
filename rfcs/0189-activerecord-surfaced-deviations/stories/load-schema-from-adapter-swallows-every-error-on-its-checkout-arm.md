@@ -4,10 +4,11 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: 22
 pr: null
 claim: null
@@ -53,3 +54,13 @@ PostgreSQL / MariaDB lanes were not run with the `catch` removed.
 - [ ] `loadSchemaFromAdapter`'s no-leased-connection arm has no `try` / `catch`: an error from the checkout, the reflection or `loadSchemaBang` reaches the caller, as `model_schema.rb:534-546` re-raises it. The `@inventedArm try` receipt and the `verifying` flag are deleted.
 - [ ] Whether a class with no connection pool still returns quietly is decided against Rails (`connection_pool` raises `ConnectionNotEstablished`) and stated in the PR body.
 - [ ] Every test the removal reddens is fixed at its double or its setup, not by restoring the swallow.
+
+## Audit 2026-10-22
+
+Current shape (2026-10-22): `loadSchemaFromAdapter` is
+`packages/activerecord/src/model-schema.ts:530-553`. The no-lease arm is
+`try { return await pool.withConnection(...) } catch (error) { if (verifying) throw error; return; }`,
+and `pool = this.connectionPool()` is itself wrapped in a bare `try { } catch { return; }`
+(`:533-537`). The `@inventedArm try` receipt is gone; the declaration now carries
+`@noRailsEquivalent CONVERGEABLE activerecord-converge-schema-load-and-primary-key-convergeable-receipts`.
+This story still owns the swallow.

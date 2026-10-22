@@ -1,5 +1,5 @@
 ---
-title: "Message constructor drops Rails' headers: kwarg and coerces a nil payload to empty string"
+title: "Encryption::Message turns a nil payload into an empty string"
 status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: 90
+est-loc: 30
 priority: 50
 pr: null
 claim: null
@@ -67,3 +67,10 @@ is mostly signature work plus updating call sites.
 - [ ] Ported tests that build messages with headers use the kwarg, matching the
       Rails test bodies they are named after.
 - [ ] `parity:api` / `parity:api:extra` / `parity:test` deltas stay non-negative.
+
+## Audit 2026-10-22
+
+**Partly landed.** The constructor now takes Rails' `{ payload, headers = {} }`
+(`encryption/message.ts:10-20`) and `addHeader` / `addHeaders` are gone, so criteria 1, 3 and
+4 are met. What remains is `this.payload = payload ?? ""` (`:18`), which Rails writes as
+`@payload = payload`, and `equals` distinguishing nil from `""`.

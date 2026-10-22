@@ -4,7 +4,8 @@ status: draft
 updated: 2026-10-19
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 30
@@ -28,3 +29,8 @@ closed-reason: null
 - [ ] Port `AssociationReflection#actualSourceReflection` (protected, returns `this`) at the Rails position. `ThroughReflection#actualSourceReflection` becomes `this.sourceReflection!.actualSourceReflection()` with no cast and no `if (!src) return this` arm.
 - [ ] `hasScope` and `isNested` drop the optional chaining and mirror `reflection.rb:1069-1078`.
 - [ ] `parity:api:calls` and `parity:api:extra:gate` are green, and the reflection tests pass.
+
+## Audit 2026-10-22
+
+Current lines (2026-10-22): `reflection.ts:1254` (`hasScope`) and `:1431`
+(`actualSourceReflection`).

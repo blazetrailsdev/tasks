@@ -1,5 +1,5 @@
 ---
-title: "changed_in_place? for an immutable JS scalar is reachable only by writing Attribute's private fields"
+title: "Park the two normalized-attribute tests that mutate a String in place, instead of poking Attribute internals"
 status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: 120
+est-loc: 40
 priority: 61
 pr: null
 claim: null
@@ -77,3 +77,16 @@ caching silently breaks the fixture rather than the feature.
 - If the string case turns out to be genuinely unreachable in TS, say so at
   the call site with a cited `@noRailsEquivalent` / `@missingRailsCall` on the
   fixture rather than leaving a bare private-field write.
+
+## Audit 2026-10-22
+
+**Settled by root CLAUDE.md § "Ruby Strings are JS string primitives".** A test
+whose assertion turns on in-place String mutation is permanently unportable for that arm,
+and is parked as `it.skip` under a `PERMANENT-SKIP:` line citing that section, with its body
+kept as the Rails body. Both "normalizes changed-in-place value before validation" and
+"normalizes value on demand" (`normalized-attribute.test.ts:60-79`) set up with
+`@aircraft.name.downcase!` (`normalized_attribute_test.rb:35-46`) and today write
+`nameAttr._value` to fake it. Converged shape: delete the `_value` writes and park both, or
+port the "on demand" assertion through a route that does not need in-place mutation if one
+exists. A mutable-typed attribute would test a different Rails case, so it is not the
+answer here.

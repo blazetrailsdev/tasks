@@ -20,10 +20,10 @@ closed-reason: null
 ## Context
 
 `MigrationProxy.migration()`
-(`packages/activerecord/src/deprecator.ts:82-85`) memoizes the _promise_:
+(`packages/activerecord/src/migration.ts:1438-1445`) memoizes the _promise_:
 
 ```ts
-this._migrationPromise ??= this.loadMigrationAsync().then((m) => (this._migration = m));
+this._migration ??= this.loadMigration(); // loadMigration is async
 ```
 
 A rejected promise stays cached, so every later `migration()` call replays the
@@ -50,3 +50,8 @@ that raises on first evaluation but succeeds on re-require.
 - [ ] `Migrator#_runMigration`'s catch-path re-resolution
       (`packages/activerecord/src/migration.ts`) still raises the load error
       unwrapped after the change.
+
+## Audit 2026-10-22
+
+The memo moved to `MigrationProxy#migration` in `migration.ts:1440`, and it still
+caches the promise `async loadMigration()` (`:1445`) returns, so a rejection is replayed.

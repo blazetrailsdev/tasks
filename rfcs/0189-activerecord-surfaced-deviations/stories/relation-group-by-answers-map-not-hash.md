@@ -4,7 +4,9 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
+  - "ruby-compat"
 deps: []
 deps-rfc: []
 est-loc: 80
@@ -42,3 +44,9 @@ left on the ActiveSupport helper because the return type is public
       `Hash` as Ruby's is.
 - [ ] Callers and tests reading the result as a `Map` are updated.
 - [ ] `ENUMERABLE_DELEGATES` no longer imports ActiveSupport's `groupBy`.
+
+## Audit 2026-10-22
+
+Still present: `async groupBy<K>(fn): Promise<Map<K, T[]>>` at `relation.ts:637`.
+The direct shape is a call to ruby-compat's `Enumerable` `groupBy` over the loaded records,
+not an `rbFSend` with a literal name (root CLAUDE.md § "A dispatch by name is spelled directly").

@@ -46,3 +46,7 @@ same wall and be tempted into the same deviation.
 - `company_include_index`'s `addIndex` call is Rails-verbatim (no
   `ifNotExists`), and re-running `loadAdapterSpecificSchema` against an
   already-loaded database still succeeds.
+
+## Audit 2026-10-22
+
+Still present: `ifNotExists: true` at `support/load-schema-helper.ts:275`.

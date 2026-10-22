@@ -1,5 +1,5 @@
 ---
-title: "converge-relation-subquery-distinct-pk-materialization"
+title: "An eager-loaded limit/offset relation used as a subquery value raises NotImplementedError instead of materializing ids"
 status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: 47
 pr: null
 claim: null
@@ -95,3 +95,13 @@ justification rather than silently carried.
 - `_buildEagerIdSubquery` has exactly one remaining caller shape, or is removed.
 - Coordinate with the two sibling stories above so the three sites converge on
   one implementation rather than three.
+
+## Audit 2026-10-22
+
+Current state (2026-10-22): the throw is in
+`packages/activerecord/src/relation/predicate-builder/relation-handler.ts:40-58`, still
+`@nie disposition=TODO`. The absorbed `toSql` half is gone: `_buildEagerIdSubquery` no longer
+exists, and `FinderMethods#applyJoinDependency` (`relation/finder-methods.ts:505-525`) calls
+the adapter's `distinctRelationForPrimaryKey` (`connection-adapters/abstract/schema-statements.ts:1136`)
+as Rails does. This story is now only the relation-handler arm; the relation.ts:4719-4746
+citation above is stale.

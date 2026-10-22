@@ -20,19 +20,19 @@ closed-reason: null
 ## Context
 
 `packages/activerecord/src/signed-id.ts` memoizes the verifier as a static
-property: `(this as any)._signedIdVerifier = verifier`. JS static property
+property: `return (this._signedIdVerifier ??= ...)` (`signed-id.ts:26-49`). JS static property
 lookup walks the prototype chain, so a subclass that has never built its own
 verifier reads `Base`'s memo.
 
 Rails memoizes into a per-class instance variable —
 `@signed_id_verifier ||= ...`
-(`vendor/rails/activerecord/lib/active_record/signed_id.rb:82`) — and Ruby class
+(`vendor/rails/v8.0.2/activerecord/lib/active_record/signed_id.rb:82`) — and Ruby class
 ivars are NOT inherited: `Account.signed_id_verifier` builds its own from
 `signed_id_verifier_secret` even when `ActiveRecord::Base` already has one.
 
 Observable where a model's `signed_id_verifier_secret` differs from Base's, and
 in `Account.instance_variable_set :@signed_id_verifier, nil`-style resets
-(`vendor/rails/activerecord/test/cases/signed_id_test.rb:161,172`), where
+(`vendor/rails/v8.0.2/activerecord/test/cases/signed_id_test.rb:161,172`), where
 clearing the subclass memo should fall through to a rebuild, not to Base's
 cached verifier.
 
@@ -46,3 +46,10 @@ pre-existing, not introduced there.
 - `Base.signedIdVerifier` and `Account.signedIdVerifier` remain distinct after a
   subclass memo is cleared.
 - `signed-id.test.ts` stays green; test names unchanged.
+
+## Audit 2026-10-22
+
+The converged shape reads the memo only when it is an own property of the class
+asked (`Object.hasOwn(this, "_signedIdVerifier")`), the own-property memo guard root
+CLAUDE.md § "`inherited` is deferred to own-property memo guards" ratifies as the port
+of a Ruby class ivar.

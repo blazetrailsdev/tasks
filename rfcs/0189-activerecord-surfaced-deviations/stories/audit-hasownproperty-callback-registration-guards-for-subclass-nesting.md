@@ -60,3 +60,8 @@ other `hasOwnProperty`-keyed one-time-registration guards have not been audited.
 - Each conversion needs a regression test that fails on baseline: a subclass
   declaring the same association kind as its parent, asserting the callback
   runs once.
+
+## Audit 2026-10-22
+
+The fixed instance's `_AUTOSAVE_AROUND_SAVE_KEY` no longer exists in
+`autosave-association.ts` (2026-10-22); the audit of the other sites is still open.

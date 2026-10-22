@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 40
@@ -52,3 +53,8 @@ the remote adapter needs its own `databaseExists` that reaches
 - [ ] `new LibSQLRemoteAdapter({ database: "libsql://…" }).databaseExists()` does not answer from `File.exist?` on the URL.
 - [ ] A test drives it through a local `driver:` and asserts `true` for a reachable database.
 - [ ] No placeholder `database` value is reintroduced.
+
+## Audit 2026-10-22
+
+Still present: `libsql-remote-adapter.ts:43` is `include(LibSQLRemoteAdapter,
+SQLite3Adapter)` and the class defines no `databaseExists`.

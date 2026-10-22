@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 200
@@ -66,3 +67,8 @@ applied in a second pass at the end of `loadCanonicalSchema`. Then:
       `rebuildCanonicalTables` of either table.
 - [ ] `pnpm parity:schema` clean (`transcription-drift=0`).
 - [ ] AR suites green on SQLite, PG and MySQL/MariaDB.
+
+## Audit 2026-10-22
+
+Still hoisted: `define("students", ...)` at `support/canonical-schema.ts:942`
+precedes `define("lessons_students", ...)` at `:948`.

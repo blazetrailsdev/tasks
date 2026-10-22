@@ -33,8 +33,8 @@ and Rails' own test model uses it —
 `composed_of :fullname, ..., converter: :parse`.
 
 trails' `ComposedOfOptions.converter`
-(`packages/activerecord/src/aggregations.ts:45`) is function-only, so the
-Symbol arm is dropped and `packages/activerecord/src/test-helpers/models/customer.ts:139`
+(`packages/activerecord/src/aggregations.ts:25`) is function-only, so the
+Symbol arm is dropped and `packages/activerecord/src/test-helpers/models/customer.ts:142-147`
 spells it as a lambda wrapping `Fullname.parse`. PR #6828 added the matching
 String arm for `:constructor` (`aggregations.ts` `readerMethod`); `converter`
 is the remaining half.

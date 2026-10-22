@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 40
@@ -18,7 +19,7 @@ closed-reason: null
 
 ## Context
 
-`TokenDefinition#resolveToken` (`packages/activerecord/src/token-for.ts:67`)
+`TokenDefinition#resolveToken` (`packages/activerecord/src/token-for.ts:81`)
 ends with
 `model && JSON.stringify(this.payloadFor(model)) === JSON.stringify(payload)`.
 Rails compares the two arrays with `==`:
@@ -41,3 +42,7 @@ string, so the `||` is dead.
 - [ ] `resolveToken` compares with `rbEqual(this.payloadFor(model), payload)`.
 - [ ] `findSigned` and `findSignedBang` pass `combineSignedIdPurposes(purpose)` with no `|| undefined`.
 - [ ] `token-for.test.ts`, `token-for.trails.test.ts` and `signed-id.test.ts` pass unchanged.
+
+## Audit 2026-10-22
+
+Still present: `token-for.ts:81`, and the `|| undefined` at `signed-id.ts:104,124`.

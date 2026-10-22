@@ -4,11 +4,14 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
+  - "activerecord-cli"
+  - "trailties"
 deps:
   - named-route-helpers-untyped-on-controllers-and-tests
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: 34
 pr: null
 claim: null

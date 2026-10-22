@@ -25,7 +25,7 @@ Five rows in `scripts/parity/pipeline/canonical/query-known-gaps.json` —
 `ar-170`, `ar-173`, `ar-174`, `ar-176`, `ar-179` — are one deviation: a
 whole-number Float loses its decimal point when serialized into SQL.
 
-Rails, `activerecord/lib/active_record/connection_adapters/abstract/quoting.rb:82`
+Rails, `vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/abstract/quoting.rb:82`
 (`quote`), has `when Numeric then value.to_s`, and Ruby's `Float#to_s` renders
 `4.0` as `"4.0"`, `5.0` as `"5.0"`, `0.0` as `"0.0"`. JavaScript has one numeric
 type, so `String(4.0)` is `"4"` and the decimal is dropped. The gap shows up
@@ -56,3 +56,8 @@ rather than patching each `where` arm.
   pass.
 - Verified with both sides of the query pipeline plus
   `pnpm tsx scripts/parity/pipeline/query/diff.ts --rails-dir ... --trails-dir ...`.
+
+## Audit 2026-10-22
+
+The five rows are still in `scripts/parity/pipeline/canonical/query-known-gaps.json`
+(2026-10-22).

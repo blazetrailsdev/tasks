@@ -27,7 +27,7 @@ schedules its `FutureResult` onto `asynchronous_queries_session`, which exists
 only inside such a session.
 
 trails has no Executor to hook. `asynchronousQueriesTracker()`
-(`packages/activerecord/src/core.ts:655-659`) instead lazily seeds a tracker
+(`packages/activerecord/src/core.ts:635-640`) instead lazily seeds a tracker
 through `IsolatedExecutionState` as a stopgap, and
 `asynchronousQueriesSession()` (core.ts:667-669) reads `currentSession` off it.
 
@@ -52,11 +52,11 @@ PR #6850.
 An executor/reloader analogue that brackets a unit of work with
 `AsynchronousQueriesTracker.run()` / `.complete()`, so `asynchronousQueriesSession()`
 resolves inside a real session and the lazy `IsolatedExecutionState` seed in
-`core.ts:655-659` can be deleted rather than relied on.
+`core.ts:635-640` can be deleted rather than relied on.
 
 ## Acceptance criteria
 
 - [ ] A session is opened and completed at a request/work boundary, mirroring asynchronous_queries_tracker.rb:32-40, rather than seeded lazily on first read.
-- [ ] `asynchronousQueriesTracker()`'s stopgap seeding in core.ts:655-659 is deleted.
+- [ ] `asynchronousQueriesTracker()`'s stopgap seeding in core.ts:635-640 is deleted.
 - [ ] `relation-load-async.trails.test.ts`'s `beforeEach` no longer has to stand in for the Executor, and its explanatory comment (and the stale story citation at line 40) goes with it.
 - [ ] All three DB lanes green.

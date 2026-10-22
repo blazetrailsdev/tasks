@@ -5,8 +5,8 @@ updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
-  - "activemodel"
   - "activerecord"
+  - "activemodel"
 deps: []
 deps-rfc: []
 est-loc: 90

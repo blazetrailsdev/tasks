@@ -6,7 +6,7 @@ rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
   - "activerecord"
-  - "activesupport"
+  - "ruby-compat"
 deps: []
 deps-rfc: []
 est-loc: 120
@@ -70,3 +70,10 @@ runtime check, which needs no manifest and cannot go stale.
       "Category A" comments in the include block are replaced by that marker.
 - [ ] A regression case pins the measured instance: a class-body
       `attributeInDatabase` on `Base` is reported rather than silently winning.
+
+## Audit 2026-10-22
+
+`include()` now lives in `packages/ruby-compat/src/include.ts`, not
+`packages/activesupport/src/include.ts`, and since RFC 0197 its modules are plain objects
+copied onto the includer; the skip-when-the-class-body-owns-it check is there. The criteria
+are unchanged.

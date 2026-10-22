@@ -26,7 +26,7 @@ the `cast` -> `user_input_in_time_zone` call-set baseline row is gone. The
 branch-shape half is still open, and is what remains here.
 
 `TimeZoneConverter#cast`
-(`vendor/rails/activerecord/lib/active_record/attribute_methods/time_zone_conversion.rb:19-32`)
+(`vendor/rails/v8.0.2/activerecord/lib/active_record/attribute_methods/time_zone_conversion.rb:19-32`)
 has exactly four arms:
 
 ```ruby

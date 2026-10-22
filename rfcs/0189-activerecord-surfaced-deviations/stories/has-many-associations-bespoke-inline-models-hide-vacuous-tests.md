@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: 400
+est-loc: 200
 priority: 39
 pr: null
 claim: null
@@ -80,3 +80,9 @@ rather than fanning out.
   `cpk_books.id` is not auto-increment under its composite PK, so a null key
   part passes on SQLite and reds on the strict engines (this exact gap reded
   MariaDB on #6743 after the local SQLite run was green).
+
+## Audit 2026-10-22
+
+**Partly landed** (2026-10-22): `has-many-associations.test.ts` now declares 28
+inline `class X extends Base` models, down from 270. The inventory and conversion
+criteria apply to those 28.

@@ -4,7 +4,8 @@ status: draft
 updated: 2026-10-19
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 40
@@ -34,3 +35,7 @@ a `!`. One example is `_createRecord` in `packages/activerecord/src/persistence.
 - [ ] Confirm `attributeTypes()` carries the `Type.default_value` default so that `hashAref` never answers null, and converge it if it does not.
 - [ ] Type the no-block arm's return as `ValueType` (the block arm stays `fetch`), and remove the now-unnecessary `!` / null checks at the call sites.
 - [ ] `pnpm typecheck` green; no runtime change beyond the default convergence.
+
+## Audit 2026-10-22
+
+`static typeForAttribute(name, block?): ValueType | null` is at `base.ts:588`.

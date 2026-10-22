@@ -4,10 +4,11 @@ status: draft
 updated: 2026-10-19
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: null
 pr: null
 claim: null
@@ -30,3 +31,8 @@ The trails function also takes `assoc` as a parameter, where Rails makes it an i
 - [ ] Both bodies mirror Rails line for line: no invented guard arms, `Array(foreign_key)` handling for composite keys, and a `belongs_to?` check.
 - [ ] `isTargetReflectionHasAssociatedRecord` is a `this`-typed method, like its siblings.
 - [ ] The has_many :through tests stay green on all three adapters.
+
+## Audit 2026-10-22
+
+Current lines (2026-10-22): `has-many-through-association.ts:308,310` (the
+`throughScopeAttributes` guards) and `:344` (`isTargetReflectionHasAssociatedRecord`).

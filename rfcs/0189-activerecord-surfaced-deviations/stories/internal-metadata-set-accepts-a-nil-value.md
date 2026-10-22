@@ -1,5 +1,5 @@
 ---
-title: "InternalMetadata#set accepts nil so record_environment needs no cast"
+title: "Migrator#recordEnvironment casts envName as string; InternalMetadata#set already accepts null"
 status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: 90
+est-loc: 40
 priority: 41
 pr: null
 claim: null
@@ -57,3 +57,10 @@ consistent once the writer accepts it.
       its comment.
 - [ ] A test covers a bare-adapter (NullPool) Migrator's `record_environment`
       stamping NULL rather than the string "undefined".
+
+## Audit 2026-10-22
+
+**Partly landed.** `InternalMetadata#set(key: string, value: string | null)`
+(`internal-metadata.ts:100`) already accepts null, so the first criterion is met. What
+remains is the `as string` cast in `recordEnvironment` (`migration.ts:1815-1822`) and the
+NullPool test.

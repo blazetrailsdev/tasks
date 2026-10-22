@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 40
@@ -37,3 +38,7 @@ default type, so behaviour agrees today, by accident of the miss.
       (`vendor/rails/v8.0.2/activerecord/lib/active_record/model_schema.rb:481-490`) does through
       `attr_name.to_s`.
 - [ ] The three "find with a multiple sets of composite primary key" tests in `finder.test.ts` pass.
+
+## Audit 2026-10-22
+
+Still present: `relation/finder-methods.ts:645` calls `typeForAttribute(String(pk))`.

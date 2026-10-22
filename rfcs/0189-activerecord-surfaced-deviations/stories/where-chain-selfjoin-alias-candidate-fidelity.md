@@ -62,3 +62,7 @@ Relevant trails: `packages/activerecord/src/relation/predicate-builder.ts`
       trails-only SQL-shape assertion in `where-chain.trails.test.ts` (which PR
       #4790 pinned to the `children` alias) back to `children_comments` once the
       alias is converged.
+
+## Audit 2026-10-22
+
+`where-chain.trails.test.ts:42-46` still pins the `children` alias.

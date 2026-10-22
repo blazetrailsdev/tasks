@@ -4,7 +4,8 @@ status: draft
 updated: 2026-10-21
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 120
@@ -27,3 +28,8 @@ The order never mattered while the modules were ruby-compat `Module` carriers. S
 - The `include(Base, …)` sequence in `base.ts` follows `base.rb:283-332`. Where a module has no single TS include, its members are installed at its Rails position.
 - `Serializers::JSON` and AR `serializable_hash` sit at `base.rb:325`, after `Reflection`.
 - The activerecord suite stays green.
+
+## Audit 2026-10-22
+
+Current positions (2026-10-22): `include(Base, _Reflection.Reflection)` at
+`base.ts:2096` precedes `include(Base, AMDirty)` at `:2242`.

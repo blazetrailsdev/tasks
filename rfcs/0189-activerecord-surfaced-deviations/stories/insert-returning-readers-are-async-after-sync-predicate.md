@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 120
@@ -50,3 +51,9 @@ ahead of the peek, with no receipt at the site.
       carries a receipt at the site against packages/activerecord/CLAUDE.md,
       "Adapter facts are prewarmed and peeked".
 - [ ] `pnpm parity:api:calls` and `pnpm parity:api:arms:throws` stay green.
+
+## Audit 2026-10-22
+
+Current sites (2026-10-22): `abstract-adapter.ts:1334`,
+`abstract-mysql-adapter.ts:304`, `mysql2/database-statements.ts:97`,
+`mysql/database-statements.ts:103`.

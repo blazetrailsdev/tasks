@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: ["activerecord"]
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 200
@@ -23,9 +24,9 @@ table, never instantiated — but none can be written `abstract class`.
 TypeScript's `abstract` makes the constructor type abstract, and ActiveRecord's
 statics are typed against a concrete one:
 
-- `packages/activerecord/src/base.ts:722` — `static async loadSchema(this: typeof Base)`
-- `packages/activerecord/src/base.ts:1202-1218` — `static where<T extends typeof Base>(this: T, ...)`
-- `packages/activerecord/src/base.ts:1268` — `static async create<T extends typeof Base>(...)`
+- `packages/activerecord/src/base.ts:603` — `static async loadSchema(this: typeof Base)`
+- `packages/activerecord/src/base.ts:1072-1090` — `static where<T extends typeof Base>(this: T, ...)`
+- `packages/activerecord/src/base.ts:1139-1149` — `static async create<T extends typeof Base>(...)`
 - `packages/activerecord/src/model-schema.ts:166` — `columnNames(this: typeof Base)`
 
 So `abstract class CompareRun extends Stats` fails to typecheck at every static

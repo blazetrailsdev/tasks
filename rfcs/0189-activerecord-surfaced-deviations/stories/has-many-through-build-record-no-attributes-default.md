@@ -4,7 +4,8 @@ status: draft
 updated: 2026-10-21
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 30
@@ -26,3 +27,7 @@ Rails has no such default. `CollectionAssociation#build(attributes = nil)` (`col
 
 - `buildRecord` passes `attributes` through unchanged, as Rails does. Any default lives where Rails puts it (`Association#build_record` → `reflection.build_association(attributes)`).
 - The has-many-through suite stays green.
+
+## Audit 2026-10-22
+
+`attributes ??= {}` is at `has-many-through-association.ts:155`.

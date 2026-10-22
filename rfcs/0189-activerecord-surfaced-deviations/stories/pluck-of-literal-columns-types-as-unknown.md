@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: ["activerecord"]
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 150
@@ -19,7 +20,7 @@ closed-reason: null
 ## Context
 
 Surfaced by trailmap#31 and trailmap#33 (trails pin `9e17ddc98d`). `Relation#pluck` is declared
-`Promise<unknown[]>` (`packages/activerecord/src/relation/calculations.ts:150`), so a caller of
+`Promise<unknown[]>` (`packages/activerecord/src/relation/calculations.ts:183-192`), so a caller of
 `Story.pluck("id", "rfc_id", "status", "priority")` gets rows it cannot index without a type
 assertion or a runtime check. trailmap carries a `pluckedRow()` helper that throws on a non-array
 and then `String(...)`s each cell, and review asked for the assertion to go twice.

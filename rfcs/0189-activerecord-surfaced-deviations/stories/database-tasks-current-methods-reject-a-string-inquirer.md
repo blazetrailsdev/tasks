@@ -4,7 +4,10 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
+  - "activerecord-cli"
+  - "activesupport"
 deps: []
 deps-rfc: []
 est-loc: 80
@@ -25,7 +28,7 @@ whatever `Rails.env` is, and Rails' tests pass
 `ActiveSupport::StringInquirer.new("test")`
 (`vendor/rails/v8.0.2/activerecord/test/cases/tasks/database_tasks_test.rb:506,520,536,555`).
 
-trails types the parameter `string | EnvironmentInquirer` at 25 sites across
+trails types the parameter `string | EnvironmentInquirer` at 22 sites in `database-tasks.ts` across
 `packages/activerecord/src/tasks/database-tasks.ts` and
 `packages/activerecord/src/database-configurations.ts`. A `StringInquirer` is
 not assignable: it lacks the `"development?"` / `"test?"` / `"production?"`

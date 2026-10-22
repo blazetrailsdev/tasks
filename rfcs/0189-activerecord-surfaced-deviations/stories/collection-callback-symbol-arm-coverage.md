@@ -48,3 +48,13 @@ name to port here rather than inventing one.
   Rails counterpart goes in `associations/callbacks.trails.test.ts`.
 - Verify the test fails if the Symbol arm is changed to pass `(owner, record)`.
 - Canonical models/fixtures only.
+
+## Audit 2026-10-22
+
+The Rails test is already ported: "adding macro callbacks"
+(`associations/callbacks.test.ts:32`). It is vacuous for the Symbol arm because the
+canonical `Author#postsWithCallbacks` (`test-helpers/models/author.ts:545-550`) passes
+lambdas, where `author.rb:116-119` passes `before_add: :log_before_adding` etc. The converged
+shape is the model: give `Author` Rails' `log_before_adding` / `log_after_adding` /
+`log_before_removing` / `log_after_removing` methods and pass their names as strings, so the
+existing Rails tests exercise the Symbol arm.

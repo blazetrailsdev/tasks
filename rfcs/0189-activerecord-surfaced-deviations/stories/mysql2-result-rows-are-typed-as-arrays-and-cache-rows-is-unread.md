@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 120
@@ -41,3 +42,8 @@ removed from `defaultQueryOptions()`, as `async` was.
 - [ ] `Mysql2Result#toA()`'s type admits a hash row; no `as never` / `as unknown[][]` cast added in `src` to get there.
 - [ ] `cacheRows` is honoured with a trails test, or deleted from `defaultQueryOptions()`.
 - [ ] `pnpm typecheck` passes.
+
+## Audit 2026-10-22
+
+Still present: `toA(): unknown[][]` at `mysql2/client.ts:35` and
+`cacheRows: true` at `:211`.

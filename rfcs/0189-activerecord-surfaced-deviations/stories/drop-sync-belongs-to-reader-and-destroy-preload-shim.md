@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: 67
 pr: null
 claim: null
@@ -19,8 +19,7 @@ closed-reason: null
 
 ## Context
 
-`Base#_preloadBelongsToForDestroyCallbacks` (`packages/activerecord/src/base.ts:3849`,
-called from `destroy` at `base.ts:3923`) is a trails-only shim with no Rails
+`Base#_preloadBelongsToForDestroyCallbacks` (`packages/activerecord/src/base.ts:1456`) is a trails-only shim with no Rails
 counterpart. It exists solely so a **synchronous** `before_destroy` /
 `around_destroy` callback can read an unloaded `belongs_to` and get a record
 rather than trails' async-reader Promise.
@@ -36,7 +35,7 @@ Before the destroy callback chain runs, it:
    (`beforeOrAroundCallbackSources`).
 2. Stringifies **every instance method** on the model's prototype chain below
    `Base`, plus instance-own arrow-function fields
-   (`expandCallbackSourcesWithHelpers`, `base.ts:637`).
+   (`expandCallbackSourcesWithHelpers`, `base.ts:395`).
 3. Regex-scans that source text for each `belongs_to` reflection name,
    transitively expanding through helper methods
    (`referencesAssociationName`, `base.ts:620`).

@@ -26,13 +26,13 @@ User.where.not("name = 'Jon'")
 # SELECT * FROM users WHERE NOT (name = 'Jon')
 ```
 
-documented at `vendor/rails/activerecord/lib/active_record/relation/query_methods.rb:22-27`
+documented at `vendor/rails/v8.0.2/activerecord/lib/active_record/relation/query_methods.rb:22-27`
 and implemented by `not(opts, *rest)` forwarding straight to
 `build_where_clause(opts, rest).invert` (query_methods.rb:49-55), which handles
 the string form exactly as `where` does.
 
 trails cannot express this. `WhereChain#not`
-(`packages/activerecord/src/relation/query-methods.ts:66-78`) delegates to
+(`packages/activerecord/src/relation/query-methods.ts:80-82`) delegates to
 `Relation#whereNot`, whose overloads
 (`packages/activerecord/src/relation.ts:802-804`) are only:
 
@@ -64,3 +64,10 @@ explicitly excluded touching `Relation#whereNot`, so the gap was left in place.
 - Disambiguation must not regress the existing single-array
   sanitized-conditions form or the composite `(cols, tuples)` form — both are
   covered in `packages/activerecord/src/relation/composite-where.test.ts`.
+
+## Audit 2026-10-22
+
+`WhereChain#not` is now `not(opts: Record<string, unknown> | unknown[], ...rest)`
+(`relation/query-methods.ts:80-82`). The string overload is still absent. The converged
+shape is Rails' `build_where_clause(opts, rest).invert` on `WhereChain#not` itself, not a new
+overload on a `Relation#whereNot` Rails does not have.

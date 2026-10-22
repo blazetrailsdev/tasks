@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 120
@@ -53,3 +54,8 @@ peeked").
       with the inlined regexp gone.
 - [ ] No `await this.isMariadb()` caller can read a cold version: each either
       runs after the connection is configured or warms `databaseVersion` first.
+
+## Audit 2026-10-22
+
+Still present: `async isMariadb()` at `abstract-mysql-adapter.ts:213`, awaited by
+the `supports_*` predicates from `:223`.

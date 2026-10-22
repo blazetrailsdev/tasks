@@ -1,5 +1,5 @@
 ---
-title: "Customer test model declares composed_of with class objects where Rails uses class-name Strings and inferred mappings"
+title: "Customer's composed_of declarations spell out mappings Rails infers (gpsLocation)"
 status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: 100
+est-loc: 60
 priority: 88
 pr: null
 claim: null
@@ -58,3 +58,12 @@ mappings Rails infers.
       attribute-naming blocker written down.
 - [ ] `aggregations.test.ts`, `aggregations.trails.test.ts` and
       `reflection.test.ts` stay green.
+
+## Audit 2026-10-22
+
+**Partly landed** (2026-10-22): every `composedOf` in
+`test-helpers/models/customer.ts:104-150` already passes a class-name String, so the first
+criterion is met. The `converter: "parse"` and `constructor` spellings belong to
+`composed-of-converter-symbol-arm` and `composed-of-constructor-option-key`. What remains here
+is the mappings Rails infers: `gpsLocation` / `nonBlankGpsLocation` still declare
+`[["gps_location", "gpsLocation"]]` (`:127-135`), where `customer.rb` declares none.

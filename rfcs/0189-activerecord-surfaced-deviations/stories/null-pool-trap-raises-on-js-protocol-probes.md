@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 60
@@ -37,3 +38,8 @@ no method for") pins the raise for `then`, `toJSON`, `asymmetricMatch` and `node
       (an unanswered name reads `undefined`), and make the trap and the test agree with it.
 - [ ] `await pool` and `JSON.stringify({ pool })` on a pool-less adapter do not raise
       `NoMethodError`, or the reason they must is recorded as a receipt at the trap.
+
+## Audit 2026-10-22
+
+Still present: the trap reads `KERNEL_METHODS.has(prop) && !PROTOCOL_PROBES.has(prop)`
+(`connection-adapters/abstract/connection-pool.ts:82`).

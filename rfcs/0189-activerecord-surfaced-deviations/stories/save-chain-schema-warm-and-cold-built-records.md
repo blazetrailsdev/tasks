@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 150
@@ -41,3 +42,10 @@ trails#8774 gave such a record its column attributes on the first `_attributes` 
 - [ ] The `ensureSchemaLoaded()` await in `base.ts`'s `save` / `saveBang` chain is gone, or carries a receipt against the CLAUDE.md section.
 - [ ] The reproduction above is a test, on SQLite, PG and MySQL, and `adapters/postgresql/enum.test.ts` stays green.
 - [ ] `completeAttributesOnSchemaLoad` and its receipt on `Core`'s `constructor` are gone: either a cold `new` can no longer leave a record without its columns, or the repo owner rules the accessor permanent and the receipt says `PERMANENT` against a CLAUDE.md section.
+
+## Audit 2026-10-22
+
+Current citations (2026-10-22): the `ensureSchemaLoaded()` awaits are in
+`packages/activerecord/src/persistence.ts:70,94`; `completeAttributesOnSchemaLoad` is
+`core.ts:742` (receipted `@noRailsEquivalent CONVERGEABLE` this story at `:740`) and its
+call is receipted `@inventedArm ... CONVERGEABLE` this story at `base.ts:1333`.

@@ -46,3 +46,7 @@ autosave-association.ts) cloning the child error before wrapping.
 - The `toStrictEqual` accommodation in nested-error.test.ts is reverted to
   `toBe` and the deviation comment deleted.
 - Collection path unchanged (its identity assertions already pass).
+
+## Audit 2026-10-22
+
+Still present: `associations/nested-error.test.ts:125` uses `toStrictEqual`.

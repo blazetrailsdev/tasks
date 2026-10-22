@@ -1,5 +1,5 @@
 ---
-title: "Drop the three-way owner probe in has_many update_counter for Rails' single increment! call"
+title: "HasManyAssociation#update_counter_in_memory takes no reflection and writes the counter instead of calling increment"
 status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: 90
+est-loc: 40
 priority: 69
 pr: null
 claim: null
@@ -79,3 +79,12 @@ double that relied on a fallback arm gets a real model or the missing method.
       canonical model rather than reinstating the probe.
 - [ ] `pnpm parity:api:calls` / `:args` green; retired rows deleted by hand
       (only-shrink, no `--write`). AR suites pass on all three adapter lanes.
+
+## Audit 2026-10-22
+
+**Partly landed** (2026-10-22): `updateCounter` is now Rails' single unguarded
+`owner.incrementBang(...)` (`associations/has-many-association.ts:212-221`). What remains
+is `updateCounterInMemory` (`:223-231`): it has no `reflection = reflection()` parameter, and
+it reads `owner.readAttribute?.(counter)` / `writeAttribute?.(...)` / `clearAttributeChange?.(...)`
+where Rails calls `owner.increment(counter, difference)` and `clear_#{counter}_change`
+(`has_many_association.rb:105-110`).

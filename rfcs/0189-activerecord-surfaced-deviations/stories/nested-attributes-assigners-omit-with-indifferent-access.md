@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 80
@@ -37,3 +38,8 @@ RFC 0190's rule is that a consumer holds an HWIA where Rails does. Rails holds o
 - The helpers and the `reject_if` callback are typed for the `HashWithIndifferentAccess` they then receive, and the `Record | Map` unions added by #8767 on those signatures narrow to it.
 - The `reject_if` callbacks in `nested-attributes.test.ts`, `associations/nested-error.test.ts` and the `Pirate` / `Ship` test models still pass, read as Rails' procs read them.
 - `pnpm parity:api:calls` and `:calls:args` green with no baseline row or receipt added.
+
+## Audit 2026-10-22
+
+Still present: `packages/activerecord/src/nested-attributes.ts` has no
+`withIndifferentAccess` call.

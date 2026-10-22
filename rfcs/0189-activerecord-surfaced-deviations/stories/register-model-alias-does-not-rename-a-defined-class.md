@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 200
@@ -39,3 +40,8 @@ a different name (`registerModel("CpkOrder", CpkOrderPL)` in `associations.test.
 - [ ] A model class defined with a name keeps that name when it is later registered under another one: `rbModName(Klass)` does not change on `registerModel("Alias", Klass)`.
 - [ ] Each test that registers a class under an alias is ported to the Rails shape (the class defined under its Rails name, nested where Rails nests it), or the alias is shown to match the Rails constant.
 - [ ] A regression test asserts the derived foreign key of a has_many on an alias-registered class.
+
+## Audit 2026-10-22
+
+The aliases are still there: `associations.test.ts:443` and
+`adapters/postgresql/uuid.test.ts:459`.

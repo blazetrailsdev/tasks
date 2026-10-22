@@ -4,10 +4,11 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: 64
 pr: null
 claim: null
@@ -36,3 +37,7 @@ and `isCachedPlanFailure` read the literal.
       `pg/connection.ts` carries a `PG.Result` as `result`, not an object literal.
 - [ ] Every `PG_DIAG_*` field node-pg's `DatabaseError` exposes is readable through it, not only
       `PG_DIAG_SQLSTATE` and `PG_DIAG_SOURCE_FUNCTION`.
+
+## Audit 2026-10-22
+
+Still present: the literal is built at `pg/connection.ts:335-343`.

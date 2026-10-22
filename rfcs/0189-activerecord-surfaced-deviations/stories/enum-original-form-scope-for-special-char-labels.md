@@ -41,3 +41,8 @@ lands as `etc::GMT+1`. The original-form surface for special-char labels
       define_method scope surface, alongside the existing camelized scope.
 - [ ] The mangling test's scope call switches to the original label form and
       its deviation comment is removed.
+
+## Audit 2026-10-22
+
+Still present: the mangling test calls `(Klass as any)["etc::Gmt+1"]()` and
+`computer["isEtc::Gmt+1"]()` (`enum.test.ts:1015-1017`).

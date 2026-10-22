@@ -6,8 +6,7 @@ rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
   - "activemodel"
-  - "activerecord"
-  - "activesupport"
+  - "ruby-compat"
 deps: []
 deps-rfc: []
 est-loc: 180
@@ -78,3 +77,11 @@ caught rather than relied on not happening:
 
 Not done while the guarantee rests on a per-file loop that a new module can
 forget.
+
+## Audit 2026-10-22
+
+Still present: `for (const moduleFunction of Object.keys(Naming))` at
+`packages/activemodel/src/naming.ts:269`. Root CLAUDE.md § "A Ruby module is a plain object
+or a class module" now names the carrier: a class module (`static readonly [classModule] = true`)
+keeps singleton methods on statics and instance methods on its prototype. Converge `Naming`
+onto it.

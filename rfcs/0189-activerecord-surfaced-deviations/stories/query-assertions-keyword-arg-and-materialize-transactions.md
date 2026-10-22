@@ -1,5 +1,5 @@
 ---
-title: "Query assertions: schema toggle should be a defaulted option, not a required positional"
+title: "Query assertions take includeSchema as a positional middle parameter instead of a trailing keyword"
 status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
@@ -8,7 +8,7 @@ packages:
   - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: 120
+est-loc: 250
 priority: 76
 pr: null
 claim: null
@@ -97,3 +97,14 @@ needs its own verdict.
 - The other four `lease_connection` sites are triaged: implemented, or given a
   wide-exclude entry with a per-entry reason naming the sync-lease deviation.
 - `pnpm parity:api:calls` stays green.
+
+## Audit 2026-10-22
+
+**Partly landed** (2026-10-22): `assertQueriesCount` and `assertQueriesMatch`
+now open with `materializeTransactions()` (`testing/query-assertions.ts:52,86`), so the
+absorbed story's first criterion is met. What remains is the signature: `includeSchema` is
+still the second positional (`:46-50`), and about 209 call sites spell
+`assertQueriesCount(n, false, fn)`. The ruling on an optional positional before a block
+(root CLAUDE.md § "Ruby idioms that do not translate literally") governs the converged
+shape. The other four `lease_connection` sites in the absorbed story still need their
+verdicts.

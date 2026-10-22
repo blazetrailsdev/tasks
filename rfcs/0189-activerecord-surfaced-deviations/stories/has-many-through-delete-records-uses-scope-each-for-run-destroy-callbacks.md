@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 80
@@ -28,7 +29,7 @@ scope.each(&:_run_destroy_callbacks)
 count = scope.delete_all
 ```
 
-`packages/activerecord/src/associations/has-many-through-association.ts:207` is
+`packages/activerecord/src/associations/has-many-through-association.ts:231` is
 
 ```ts
 for (const r of (await scope.toArray()) as Base[]) await r._runDestroyCallbacks();

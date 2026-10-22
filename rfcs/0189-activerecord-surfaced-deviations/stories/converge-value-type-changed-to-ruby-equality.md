@@ -1,13 +1,14 @@
 ---
-title: "converge-value-type-changed-to-ruby-equality"
+title: "Unskip test_changes_in_place_ignores_key_order now that Type::Value#changed? uses Ruby equality"
 status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 40
 priority: 14
 pr: null
 claim: null
@@ -58,3 +59,13 @@ The sibling half — `Json#changed_in_place?` — was converged in that PR
 - [ ] Un-skip `test_changes_in_place_ignores_key_order` in
       `packages/activerecord/src/cases/json-shared-test-cases.ts` and delete the
       SKIP comment.
+
+## Audit 2026-10-22
+
+**Partly landed.** trails#7469 made `Type::Value#isChanged`
+`!rbEqual(oldValue, newValue)` (`packages/activemodel/src/type/value.ts:81-83`), and
+`Type::Serialized`'s private `valuesEqual` / `collectionsEqual` copy is gone. The first two
+acceptance criteria are met. What remains is the third: the test is still
+`it.skip("test_changes_in_place_ignores_key_order")` at
+`packages/activerecord/src/cases/json-shared-test-cases.ts:201`. Find why it still fails
+(start at `Json#changed_in_place?` and the record's `isChanged`), fix it there, and unskip.

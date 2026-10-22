@@ -4,10 +4,13 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
+  - "activesupport"
+  - "ruby-compat"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 250
 priority: 5
 pr: null
 claim: null
@@ -54,3 +57,9 @@ block in a new `Thread` would query on a different connection.
 - [ ] `withEncryptionContext`'s `@inventedArm run` receipt is gone, or the one call that opens the child context is the only addition and the repo owner has ruled on it.
 - [ ] The sibling and nested tests in `contexts.trails.test.ts` stay green, and a block still queries on its opener's leased connection.
 - [ ] The other thread-local block stacks named above are audited for the same sibling gap and converge through the same mechanism or are filed.
+
+## Audit 2026-10-22
+
+Still present: `packages/activerecord/src/encryption/contexts.ts:3-58` holds the
+module-private `AsyncContext<Block>` store, `blocks()` and `openBlock()`. The third
+acceptance criterion needs a repo-owner ruling if one opening call remains.

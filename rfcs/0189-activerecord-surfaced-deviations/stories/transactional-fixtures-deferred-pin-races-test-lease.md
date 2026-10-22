@@ -1,13 +1,14 @@
 ---
-title: "transactional-fixtures-deferred-pin-races-test-lease"
+title: "A pool established inside a transactional test races test code that leases from it before the deferred pin"
 status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: 4
 pr: null
 claim: null
@@ -51,3 +52,13 @@ under `// BLOCKED:` this story in
       share one checkout. Either way, only one connection is checked out.
 - [ ] `passing flags by array to adapter` is unskipped and green on the
       MariaDB lane, with Rails' body unchanged.
+
+## Audit 2026-10-22
+
+`setupTransactionalFixtures` still hands the pool to `deferConnectionPoolPin`
+(`packages/activerecord/src/test-fixtures.ts:285`), and `ConnectionPool#leaseConnection`
+(`connection-adapters/abstract/connection-pool.ts:322-326`) is still
+`lease.connection ||= await this.checkout()` with no guard across the `await`.
+trails#9043 gave `withConnection` a pending-checkout join (`connection-pool.ts:401-411`),
+but `leaseConnection` has none. The MariaDB test is still parked at
+`adapters/abstract-mysql-adapter/connection.test.ts:211`.

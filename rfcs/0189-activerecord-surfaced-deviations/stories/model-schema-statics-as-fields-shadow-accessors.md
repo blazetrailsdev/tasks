@@ -1,13 +1,14 @@
 ---
-title: "model-schema-statics-as-fields-shadow-accessors"
+title: "A static class field for tableName / primaryKey / sequenceName / inheritanceColumn / ignoredColumns shadows Base's accessor"
 status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: 11
 pr: null
 claim: null
@@ -37,3 +38,10 @@ form also skips those side effects.
 
 - [ ] For each static above, `class A extends Base { static x = v }` either has its setter's effect or is refused loudly, and `class B extends A {}` does not inherit it where Rails' ivar would not be inherited.
 - [ ] Tests cover the field form for each.
+
+## Audit 2026-10-22
+
+Overlaps `table-name-and-primary-key-are-declared-through-underscore-statics`,
+which owns the documented spelling for `tableName` / `primaryKey`; this story owns the
+field-form hazard for all five. `abstract-class-as-a-static-field-is-inherited`
+(trails#8921) is the converged precedent.

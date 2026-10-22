@@ -4,7 +4,12 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
+  - "activemodel"
+  - "activesupport"
+  - "ruby-compat"
+  - "activejob"
 deps: []
 deps-rfc: []
 est-loc: 120
@@ -54,3 +59,10 @@ hides the gap from the type tests.
       tsconfig `paths` alias) and fails on the current map
 - [ ] the same check is run over the other packages whose `exports` carry a
       `./*` wildcard, and each gap is fixed or filed
+
+## Audit 2026-10-22
+
+Still present at `packages/activerecord/package.json:49-52`. The packages
+whose `exports` end in the same `./*` wildcard as of 2026-10-22: activemodel, activejob,
+marcel, activerecord, solid-queue, builder, ruby-compat, activesupport, actioncable,
+actionview. trails#8995 added ruby-compat's wildcard in the same shape.

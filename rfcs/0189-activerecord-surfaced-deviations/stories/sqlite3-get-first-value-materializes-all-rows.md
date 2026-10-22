@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 70
@@ -47,3 +48,8 @@ so `rs.columns[0]` has no source there.
 - [ ] `getFirstValue` never materializes rows past the first on any binding.
 - [ ] A statement that returns no rows answers `null` on all four bindings.
 - [ ] The value comes from the first column by name, not from object key order.
+
+## Audit 2026-10-22
+
+Still present: `sqlite/better-sqlite3.ts:202-206` is
+`this.execute(sql, bindVars)[0]` then `Object.values(row)[0]`.

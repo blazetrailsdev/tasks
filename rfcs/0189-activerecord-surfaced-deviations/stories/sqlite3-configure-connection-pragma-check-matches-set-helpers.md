@@ -4,7 +4,8 @@ status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
 deps: []
 deps-rfc: []
 est-loc: 30
@@ -27,7 +28,7 @@ per-pragma setters (`foreign_keys=`, `journal_mode=`, …) in
 
 trails' `configureConnection`
 (`packages/activerecord/src/connection-adapters/sqlite3-adapter.ts`, the
-`DEFAULT_PRAGMAS` loop) checks `hasKey(Pragmas, "set" + camelize(pragma))`.
+`DEFAULT_PRAGMAS` loop) checks `Object.hasOwn(Pragmas, setter)` (`sqlite3-adapter.ts:1064`).
 Since trails#7996, the `Pragmas` object in `packages/activerecord/src/sqlite/pragmas.ts`
 also holds the public helpers `setBooleanPragma`, `setEnumPragma` and
 `setIntPragma` (gem `set_boolean_pragma` / `set_enum_pragma` / `set_int_pragma`,

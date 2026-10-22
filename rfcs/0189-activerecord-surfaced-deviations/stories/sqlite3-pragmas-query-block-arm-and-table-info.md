@@ -1,5 +1,5 @@
 ---
-title: "sqlite3 Pragmas#table_info and its private helpers are unported"
+title: "Port SQLite3::Pragmas#table_info with version_compare and tweak_default"
 status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"

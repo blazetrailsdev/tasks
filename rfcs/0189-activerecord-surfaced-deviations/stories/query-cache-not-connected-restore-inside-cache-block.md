@@ -49,3 +49,8 @@ match Rails.
 
 - [ ] Restore ordering in "cache is available when using a not connected connection" matches Rails' inside-the-block `ensure`, or the deviation is justified at the call site with the reason the JS analogue cannot express it.
 - [ ] Test still passes on sqlite/pg/mysql lanes.
+
+## Audit 2026-10-22
+
+Still present: `query-cache.test.ts:509-528` restores in a `finally` around the
+whole `Task.cache(...)` call.

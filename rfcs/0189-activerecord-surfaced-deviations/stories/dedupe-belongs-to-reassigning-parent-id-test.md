@@ -62,3 +62,7 @@ in `belongs-to-associations.test.ts`.
 - [ ] `belongs-to-associations.test.ts` is untouched and still credits the Rails
       test.
 - [ ] `pnpm parity:test --package activerecord` totals are unchanged or better.
+
+## Audit 2026-10-22
+
+Still present: `associations/singular-reader-stale-target.trails.test.ts:12,25`.

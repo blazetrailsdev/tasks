@@ -5,7 +5,6 @@ updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
-  - "activemodel"
   - "activerecord"
 deps: []
 deps-rfc: []
@@ -55,3 +54,8 @@ of these rows for exactly that reason. It is a live intermittent CI red.
   whole-second frozen-at:
   `PARITY_FROZEN_AT=... pnpm tsx scripts/parity/pipeline/run.ts --type=query --side={rails,trails}`
   then `pnpm tsx scripts/parity/pipeline/query/diff.ts --rails-dir ... --trails-dir ...`.
+
+## Audit 2026-10-22
+
+The three rows are still in `scripts/parity/pipeline/canonical/query-known-gaps.json`
+(2026-10-22).

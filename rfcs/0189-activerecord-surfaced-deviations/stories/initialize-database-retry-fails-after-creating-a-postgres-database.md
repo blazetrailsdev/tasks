@@ -1,13 +1,15 @@
 ---
-title: "initialize-database-retry-fails-after-creating-a-postgres-database"
+title: "initializeDatabase's NoDatabaseError retry leases from the stale pool after creating a PostgreSQL database"
 status: ready
 updated: 2026-10-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
-packages: []
+packages:
+  - "activerecord"
+  - "trailties"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: 6
 pr: null
 claim: null
@@ -71,3 +73,13 @@ SQLite is unaffected (connecting creates the file). It leaves the
       absent-database `migrate` case: it prints the migration lines and neither
       "All migrations are up to date." nor "Loaded schema from" when no schema
       file exists.
+
+## Audit 2026-10-22
+
+`initializeDatabase` is `packages/activerecord/src/tasks/database-tasks.ts:929-954`.
+Its `for (;;)` loop leases from the `pool` `withTemporaryPool` handed it on every attempt
+(`:936`), where Rails reads `migration_connection_pool` afresh after `create` and `retry`
+(`vendor/rails/v8.0.2/activerecord/lib/active_record/tasks/database_tasks.rb`,
+`initialize_database`). The converged shape reads the migration pool on each attempt
+and runs Rails' `schema_migration.table_exists?` through it, with no extra
+`execute("SELECT 1")` (`:937`), which Rails does not have.
