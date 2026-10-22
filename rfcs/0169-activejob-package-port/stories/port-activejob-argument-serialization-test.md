@@ -1,6 +1,6 @@
 ---
 title: "Port argument_serialization_test.rb (20 cases)"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null

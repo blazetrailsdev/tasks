@@ -1,7 +1,7 @@
 ---
 title: "Tests outside ruby-compat build plain/class modules, not new Module()"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: retire
 packages: ["actionpack", "actionview", "activemodel", "activerecord", "activesupport", "trailties"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 11
-pr: null
-claim: null
-assignee: null
+pr: trails#9208
+claim: "2026-10-22T11:43:28Z"
+assignee: "test-files-drop-ruby-compat-module"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "extractor-reexport-duplicates-module-entries"
 status: ready
-updated: 2026-10-21
+updated: 2026-10-22
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Port job_serialization_test.rb, serializers_test.rb and time_with_zone_serializer_test.rb (17 cases)"
-status: ready
-updated: 2026-10-05
+status: claimed
+updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]
@@ -16,8 +16,8 @@ deps-rfc: []
 est-loc: 300
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T11:42:55Z"
+assignee: "port-activejob-serialization-tests"
 blocked-by: null
 closed-reason: null
 ---

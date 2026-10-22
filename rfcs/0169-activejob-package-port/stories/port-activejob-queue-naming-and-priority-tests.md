@@ -1,7 +1,7 @@
 ---
 title: "Port queue_naming_test.rb and queue_priority_test.rb (20 cases)"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["activejob"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9207
+claim: "2026-10-22T11:42:13Z"
+assignee: "port-activejob-instrumentation"
 blocked-by: null
 closed-reason: null
 ---
