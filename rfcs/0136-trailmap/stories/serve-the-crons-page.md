@@ -5,7 +5,8 @@ updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
-deps: []
+deps:
+  - ringo-records-every-cron-run-as-an-event
 deps-rfc: []
 est-loc: 200
 priority: null
