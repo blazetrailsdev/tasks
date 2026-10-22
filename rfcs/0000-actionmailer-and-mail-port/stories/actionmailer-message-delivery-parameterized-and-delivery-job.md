@@ -5,7 +5,7 @@ updated: 2026-10-22
 rfc: "0000-actionmailer-and-mail-port"
 cluster: actionmailer
 packages: ["actionmailer"]
-deps: ["actionmailer-base-and-collector", "mail-delivery-methods-smtp-sendmail-file-test"]
+deps: ["actionmailer-base-mail-and-collector", "mail-delivery-methods-smtp-sendmail-file-test"]
 deps-rfc: []
 est-loc: 500
 priority: null
