@@ -29,7 +29,7 @@ class-level `load_image` / `save_image` hooks each backend defines.
 
 - `Pipeline` and `Processor` are ported; file IO and processing are async from
   the start, the builder chain stays sync until `call` / `await`.
-- `apply_operation` dispatches a queued name to the backend's mapping (see the
-  backend stories), raising `ImageProcessing::Error` for a name the backend has
-  no form for, per the RFC's open question 1 once ruled.
+- `apply_operation` sends a queued name to the backend's receiver as Ruby's
+  `public_send` does: the wasm-vips `Image` method of that libvips name, or an
+  ImageMagick option for MiniMagick.
 - `pipeline_test.rb` (29 examples) passes against the MiniMagick backend.

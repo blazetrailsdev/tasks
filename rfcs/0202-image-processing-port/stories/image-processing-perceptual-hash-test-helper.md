@@ -21,12 +21,12 @@ blocked-by: null
 (distance `<=` / `>` 3) over `DHashVips::IDHash.fingerprint` and `distance`
 (the `dhash-vips` gem), plus `fixture_image`, `copy_to_tempfile` and
 `assert_dimensions` (`Vips::Image.new_from_file(path).size`). Both backend test
-suites depend on them. Open question 4 rules which hash.
+suites depend on them. Open question 2 rules which hash.
 
 ## Acceptance criteria
 
 - The test helper exports `fixtureImage`, `copyToTempfile`, `assertDimensions`
   and the similarity assertions as vitest matchers or functions, per
   CONTRIBUTING.md "Porting a Minitest assertion".
-- The hash computes over sharp's raw pixels; with IDHash ported, distances on
+- IDHash is ported over wasm-vips (libvips, as dhash-vips' is), so distances on
   the gem's fixtures match `dhash-vips` (threshold 3).

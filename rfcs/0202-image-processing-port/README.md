@@ -1,6 +1,6 @@
 ---
 rfc: "0202-image-processing-port"
-title: "image_processing over sharp, and mini_magick shelling out"
+title: "image_processing over wasm-vips, and mini_magick shelling out"
 status: draft
 created: 2026-10-21
 updated: 2026-10-21
@@ -15,7 +15,7 @@ clusters:
   - ip-backends
 ---
 
-# RFC 0202 — image_processing over sharp, and mini_magick shelling out
+# RFC 0202 — image_processing over wasm-vips, and mini_magick shelling out
 
 ## Summary
 
@@ -25,7 +25,8 @@ the library ActiveStorage builds image variants with
 and the `mini_magick` gem (5.2.0, `Gemfile.lock:352`) its MiniMagick backend
 drives. The repo owner ruled the shape on 2026-10-21:
 
-- `ImageProcessing::Vips` is backed by npm **`sharp`**, which wraps libvips.
+- `ImageProcessing::Vips` is backed by npm **`wasm-vips`**, libvips compiled
+  to WebAssembly (first ruled `sharp`, switched the same day; see Alternatives).
 - `mini_magick` is ported as the gem is: it builds ImageMagick command lines and
   **shells out**, through `child_process`, async.
 - `ImageProcessing::Chainable` is a **Proxy that collects operations and is
@@ -44,7 +45,7 @@ minimagick/minimagick):
 | Part                                                         | Lines  | Notes                                                             |
 | ------------------------------------------------------------ | ------ | ----------------------------------------------------------------- |
 | `image_processing/{chainable,builder,pipeline,processor}.rb` | ~310   | pure Ruby builder and pipeline                                    |
-| `image_processing/vips.rb`                                   | 228    | over ruby-vips: becomes `sharp`                                   |
+| `image_processing/vips.rb`                                   | 228    | over ruby-vips: becomes `wasm-vips`                               |
 | `image_processing/mini_magick.rb`                            | 260    | over `mini_magick`                                                |
 | `mini_magick` lib                                            | ~1,280 | builds argv, runs `Open3.capture3` with a timeout (`shell.rb:35`) |
 
@@ -86,24 +87,33 @@ returning a builder from an `async` function or resolving a promise with it
 runs the pipeline. With no source, `Pipeline#initialize` raises "source file is
 not provided" (`pipeline.rb:11`), so the misuse fails loudly.
 
-### Vips over sharp
+### Vips over wasm-vips
 
-Every Vips processor method maps onto sharp:
+`wasm-vips` (0.0.19) is libvips built with Emscripten, and its API is the
+libvips object model ruby-vips also binds: `vips.Image.newFromFile`, and every
+libvips operation as a generated `Image` method under libvips' own name
+(`ImageAutoGen` in its `vips.d.ts`). So `vips.rb` ports call for call:
 
-| `vips.rb`                                                                                   | sharp                                                             |
-| ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `thumbnail`, `resize_to_limit/fit/fill/cover` (`size: :down`, `crop: :centre`, `MAX_COORD`) | `resize({ fit, position, withoutEnlargement })`                   |
-| sharpen, `SHARPEN_MASK` 3×3 scale 24 (`vips.rb:22-24`, `conv`)                              | `convolve({ width: 3, height: 3, kernel, scale: 24 })`            |
-| `autorot`, `rot90/180/270`, `similarity(angle:)`                                            | `rotate()`, `rotate(n, { background })`                           |
-| `resize_and_pad`, `gravity(extend:, background:)`, `add_alpha`                              | `resize({ fit: "contain", background })`, `extend`, `ensureAlpha` |
-| `composite(mode:, gravity:, offset:)`                                                       | `composite([{ input, blend, gravity, top, left }])`               |
-| `valid_image?`                                                                              | `sharp(path).stats()`                                             |
-| `save_image(quality:, saver:)`                                                              | `toFormat(fmt, { quality })`                                      |
+| `vips.rb` / ruby-vips                                                 | wasm-vips                                                |
+| --------------------------------------------------------------------- | -------------------------------------------------------- |
+| `Image.new_from_file`, `Image.thumbnail`, `#thumbnail_image`          | `Image.newFromFile`, `Image.thumbnail`, `thumbnailImage` |
+| `autorot`, `rot90/180/270`, `similarity(angle:)`                      | `autorot`, `rot90` …, `similarity`                       |
+| `gravity(extend:, background:)`, `composite`, `conv` (`SHARPEN_MASK`) | `gravity`, `composite` / `composite2`, `conv`            |
+| `write_to_file`, `write_to_buffer`, `has_alpha?`                      | `writeToFile`, `writeToBuffer`, `hasAlpha`               |
+| `set` / `set_type` / `set_value` / `remove` (`vips.rb:149-152`)       | `setString` / `setInt` / … , `remove`, `getFields`       |
+| `add_alpha` (ruby-vips Ruby, not a libvips operation)                 | ported as ruby-vips writes it, over `bandjoin`           |
+| `Vips::MAX_COORD`                                                     | the same constant, ported                                |
 
-A queued operation that is not one of `vips.rb`'s own methods is a libvips
-operation by name (`processor.rb:60`, `receiver.public_send`), which sharp does
-not expose generally. Those go through an explicit name → sharp table (`invert`
-→ `negate`, …); see Open questions.
+A queued operation that is not one of `vips.rb`'s own methods
+(`processor.rb:60`, `receiver.public_send`) is the `Image` method of that
+libvips name, as in Ruby. Absent from wasm-vips, as from sharp: loader / saver
+option introspection (`Vips::Introspect`, `vips_foreign_find_load`); see Open
+questions.
+
+`wasm-vips` is about 13 MB unpacked (with separate `heif` / `jxl` / `resvg`
+modules), runs on Node ≥ 17, threads through worker threads, and is bounded by
+WASM's 4 GB memory; it is slower than native libvips. It is declared an
+optional peer, like `pg` / `mysql2` in activerecord.
 
 ### mini_magick shells out
 
@@ -125,12 +135,15 @@ branch first; that is generator work, not stories here.
 - **ActiveStorage.** The consumer, its own RFC.
 - **GraphicsMagick** (`MiniMagick.graphicsmagick`, `configuration.rb:12`): kept
   as configuration, not exercised in CI.
-- **A ruby-vips-shaped binding** (wasm-vips): ruled out for sharp.
 
 ## Alternatives considered
 
-- **wasm-vips**, whose API mirrors libvips operation names: rejected by the
-  owner in favour of sharp.
+- **sharp**, native libvips with prebuilt binaries: ruled first, then dropped
+  by the owner on 2026-10-21. Its API is its own rather than libvips',
+  so queued operations by name, the metadata setters and ruby-vips-built
+  expected images in the tests would each need a hand mapping; wasm-vips keeps
+  `vips.rb`'s by-name dispatch. sharp stays the option if variant throughput
+  ever outweighs fidelity.
 - **A non-thenable builder** with only `call`: rejected; `await` reads as the
   trigger Ruby's `call` is.
 
@@ -139,7 +152,7 @@ branch first; that is generator work, not stories here.
 1. Vendor — `vendor-image-processing-and-mini-magick`
 2. mini_magick — `mini-magick-port`
 3. Core — `image-processing-chainable-thenable-proxy`, `image-processing-pipeline-and-processor`
-4. Backends — `image-processing-mini-magick-backend`, `image-processing-vips-backend-over-sharp`
+4. Backends — `image-processing-mini-magick-backend`, `image-processing-vips-backend-over-wasm-vips`
 5. Tests — `image-processing-perceptual-hash-test-helper`
 
 ## Verification
@@ -151,19 +164,18 @@ branch first; that is generator work, not stories here.
 
 ## Open questions
 
-1. **Unmapped libvips operations.** A queued name sharp has no form for: raise
-   `ImageProcessing::Error` when the pipeline runs (recommended), or
-   `PERMANENT-SKIP` the tests that use one.
-2. **Loader / saver option introspection** (`vips.rb:198-226`,
+1. **Loader / saver option introspection** (`vips.rb:198-226`,
    `Vips::Introspect`): a static per-format option list (recommended), or pass
-   every option to sharp's format call.
-3. **Metadata setters** `set` / `set_type` / `set_value` / `remove`
-   (`vips.rb:149-152`): map what `withMetadata` / `keepExif` express, and raise
-   for the rest (recommended).
-4. **The perceptual hash** `assert_similar` uses (`dhash-vips`'s IDHash): port
-   IDHash over sharp's raw pixels (recommended, so distances match the gem's
-   threshold of 3), or a different hash with its own threshold.
+   every option to the loader / saver and let libvips reject an unknown one.
+2. **The perceptual hash** `assert_similar` uses (`dhash-vips`'s IDHash): port
+   IDHash over wasm-vips (recommended: it is libvips, as dhash-vips' is, so
+   distances match the gem's threshold of 3).
+
+Settled by the switch to wasm-vips: unmapped operations (a queued name is the
+libvips operation, raising libvips' own error for an unknown one) and the
+metadata setters (present).
 
 ## Changelog
 
 - 2026-10-21: initial draft
+- 2026-10-21: Vips backend switched from sharp to wasm-vips (owner ruling)
