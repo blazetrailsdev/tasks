@@ -515,4 +515,10 @@ try {
 } catch {
   /* already closed */
 }
+// `process.exit` discards whatever stdout still holds, and a write to a pipe
+// is asynchronous where a write to a file is not — so `tasks list --json | jq`
+// used to get the first 64 KiB and a truncated document. Drain before exiting.
+await new Promise<void>((resolve) => {
+  process.stdout.write("", () => resolve());
+});
 process.exit(process.exitCode ?? 0);
