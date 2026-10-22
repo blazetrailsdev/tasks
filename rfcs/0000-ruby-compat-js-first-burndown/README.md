@@ -77,7 +77,7 @@ RFC is the **umbrella ledger** over all three. The repo owner ruled
   `sendInternal` another spelling). Some exist only because the `Module`
   carrier exists. Without a ledger, a worker picking any one of them cannot
   tell whether it is still wanted.
-- **The two ratified rulings this burndown rests on are already in CLAUDE.md.**
+- **The rulings this burndown rests on are already ratified in CLAUDE.md.**
   They are § "A Ruby module is a plain object or a class module" and
   § "Method visibility is compile-time only", together with § "A dispatch by
   name is spelled directly". This RFC re-opens none of them. It counts what is
@@ -432,6 +432,11 @@ come first.
 7. **Hold.** `ruby-compat-rule-1-call-site-gate` (0154), seeded with
    whatever is still uncalled.
 
+**Keeping the table current.** Step 1 makes the README table the ledger, and
+every later step deletes exports from it. So each DELETE story this RFC owns
+has a criterion to remove the README row for any export it deletes. Once
+step 7's rule-1 gate lands, it keeps the table and `index.ts` in sync.
+
 **Activation.** This RFC lands `draft`, and its stories cannot reach `ready`
 until the owner runs `pnpm tasks rfc-status <rfc> active`. **0194 is also
 still `draft`**, so steps 3–5 are unreachable until it is activated too.
@@ -454,8 +459,14 @@ still `draft`**, so steps 3–5 are unreachable until it is activated too.
 1. **Does the rule-1 gate also record the export count as a mark?** The
    recommendation is yes, as an only-shrink number beside its register, so a
    receipted-but-called addition is still visible. This is deferred to
-   `ruby-compat-rule-1-call-site-gate`'s own design (0154), and this RFC only
-   takes the `deps` edge.
+   `ruby-compat-rule-1-call-site-gate`'s own design (0154), and this RFC adds the
+   `deps` edges in that story's file. They make the gate wait for
+   `delete-send-name-guessing-arms`, `delete-identity-and-alias-ruby-compat-helpers`,
+   `delete-module-initialize-hook-machinery`,
+   `triage-ruby-compat-exports-with-no-external-importer`,
+   `collapse-visibility-variants-of-send-and-respond-to` and
+   `delete-ruby-compat-module-class-final`, so it does not seed its register
+   at 488.
 
 ## For the repo owner
 

@@ -40,6 +40,8 @@ omitted. `freeze`, the other no-op on a string, is already credited that way
 
 ## Acceptance criteria
 
+- [ ] Each export this PR deletes or unexports also loses its row in
+      `packages/ruby-compat/README.md`'s export table.
 - [ ] Every `strUminus(x)` call becomes `x`, and `strUminus` is deleted from
       `string/support.ts` and `index.ts`. Grep the hits before any regex
       rewrite: a bulk rewrite also catches test titles and sibling calls.

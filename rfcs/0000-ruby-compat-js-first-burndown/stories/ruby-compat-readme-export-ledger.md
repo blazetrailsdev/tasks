@@ -7,7 +7,7 @@ cluster: ledger
 packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
-est-loc: 0
+est-loc: 550
 pr: null
 claim: null
 assignee: null
@@ -32,7 +32,12 @@ hand: `kernelCatch` (`vm_eval.c:2342` `rb_f_catch`), `stringToSym`
 (`symbol.c:862` `rb_str_intern`), `classpaths` (`variable.c:364`
 `rb_class_path`), and `classModule`, a trails brand ratified by CLAUDE.md
 § "A Ruby module is a plain object or a class module". Those four JSDocs lack
-the citation the README's rule 2 requires.
+the citation the README's rule 2 requires: the first three need an MRI
+citation, and `classModule`, which has no MRI counterpart, needs a pointer to
+the CLAUDE.md section.
+
+The table is about 488 rows, against 118 today. If the PR goes over the
+ceiling, ship the JSDoc citations first and the table second.
 
 ## Acceptance criteria
 
@@ -41,6 +46,8 @@ the citation the README's rule 2 requires.
       RFC 0135 backend contract it serves.
 - [ ] `kernelCatch`, `stringToSym` and `classpaths` carry their
       `vendor/ruby/v3.3.11/<file>:<line>` citation in their own JSDoc.
+- [ ] `classModule`'s JSDoc carries `@noRailsEquivalent PERMANENT` and points
+      to CLAUDE.md § "A Ruby module is a plain object or a class module".
 - [ ] The README's prose claim matches the table: its rows equal `index.ts`'s
       value exports, counted with the RFC's Appendix B script.
 - [ ] Docs only: no export is added, removed or renamed here.

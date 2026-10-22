@@ -5,7 +5,15 @@ updated: 2026-09-24
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: ["ruby-compat"]
-deps: []
+deps:
+  [
+    "delete-send-name-guessing-arms",
+    "delete-identity-and-alias-ruby-compat-helpers",
+    "delete-module-initialize-hook-machinery",
+    "triage-ruby-compat-exports-with-no-external-importer",
+    "collapse-visibility-variants-of-send-and-respond-to",
+    "delete-ruby-compat-module-class-final",
+  ]
 deps-rfc: []
 est-loc: 250
 priority: null

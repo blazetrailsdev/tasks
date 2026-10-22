@@ -54,6 +54,8 @@ attribute names. `setX` is the ratified spelling of an async Ruby writer
 
 ## Acceptance criteria
 
+- [ ] Each export this PR deletes or unexports also loses its row in
+      `packages/ruby-compat/README.md`'s export table.
 - [ ] For each arm (`?` predicate, `RELOPS`, each operator, `writerSpelling`,
       and each core-receiver method table: `STRING_METHOD_TABLE`,
       `TEMPORAL_METHOD_TABLE`, `ARRAY_METHOD_TABLE`, `ENUMERABLE_METHOD_TABLE`,

@@ -53,6 +53,8 @@ Deleting the machinery makes two RFC 0154 drafts moot:
 
 ## Acceptance criteria
 
+- [ ] Each export this PR deletes or unexports also loses its row in
+      `packages/ruby-compat/README.md`'s export table.
 - [ ] The spans listed above are deleted. `initialize` and
       `initializeIncludedModules` leave `ruby-compat/src/index.ts` and the
       activesupport re-export.
