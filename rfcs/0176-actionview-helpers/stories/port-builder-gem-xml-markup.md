@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 900
+est-loc: 700
 priority: null
 pr: null
 claim: null
@@ -26,4 +26,4 @@ closed-reason: null
 
 - The builder gem is vendored (`vendor/builder/<version>`) and `Builder::XmlBase` / `XmlMarkup` are ported in a new package, with its spec/tests mirrored.
 - The `method_missing` tag dispatch is decided and recorded in the CLAUDE.md table.
-- `build-views` (or its sibling) emits a module for a `.builder` template, so `Handlers::Builder` can be registered and rendered.
+- The `.builder` precompile path is story `build-views-precompiles-builder-templates`.
