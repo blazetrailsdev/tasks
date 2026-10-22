@@ -5,7 +5,7 @@ updated: 2026-10-21
 rfc: "0202-image-processing-port"
 cluster: mini-magick
 packages: ["mini-magick"]
-deps: ["vendor-image-processing-and-mini-magick"]
+deps: ["vendor-image-processing-and-mini-magick", "mini-magick-parity-enrollment"]
 deps-rfc: []
 est-loc: 700
 priority: null
@@ -16,6 +16,11 @@ blocked-by: null
 ---
 
 ## Context
+
+The port is planned story by story in the `mini-magick-port-to-100` RFC,
+starting from the generated tree on the trails branch `mini-magick-port`. This
+story is done when that RFC's last story (`mini-magick-parity-enrollment`) is;
+it carries no work of its own.
 
 `mini_magick` 5.2.0 (`lib/` ~1,280 lines: `image.rb` 609, `tool.rb` 274,
 `image/info.rb` 151, `configuration.rb` 101, `shell.rb` 53) builds ImageMagick
