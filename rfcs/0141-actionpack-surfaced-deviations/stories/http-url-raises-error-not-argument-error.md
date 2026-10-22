@@ -1,5 +1,5 @@
 ---
-title: "Http::URL raises ArgumentError for a missing host and an invalid protocol"
+title: "Http::URL.normalize_protocol raises a bare Error, not ArgumentError"
 status: ready
 updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 40
+est-loc: 15
 priority: null
 pr: null
 claim: null
@@ -18,22 +18,19 @@ closed-reason: null
 
 ## Context
 
-`ActionDispatch::Http::URL` raises `ArgumentError` at two sites:
+`ActionDispatch::Http::URL.normalize_protocol` raises
+`ArgumentError, "Invalid :protocol option: #{protocol.inspect}"` for an
+unrecognised protocol (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/http/url.rb:144`).
+trails throws a bare `Error` there (`packages/actionpack/src/action-dispatch/http/url.ts:78`);
+the message already matches. The other site this story named, `full_url_for`'s
+missing-host raise, has converged (`url.ts:187`, `ArgumentError`).
 
-- `full_url_for`, when `:host` is missing
-  (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/http/url.rb:66`)
-- `normalize_protocol`, for an unrecognised `:protocol` (`url.rb:144`)
-
-trails throws a bare `Error` at both
-(`packages/actionpack/src/action-dispatch/http/url.ts:78` and `:180`). The
-message strings already match.
-
-`path_for` also guards `options.key?(:path)` (`url.rb:73`) where trails writes
-`"path" in options && options.path !== undefined`.
+`path_for` also guards `options.key?(:path)` (`url.rb:73`); check that trails'
+guard is the key test Rails makes and not a `!== undefined` read.
 
 ## Acceptance criteria
 
-- Both sites throw `ArgumentError` with Rails' message.
-- `pathFor`'s `:path` guard is the key test Rails makes.
-- A Rails test that asserts `ArgumentError` on a missing host passes with the
-  error class asserted.
+- `normalizeProtocol` throws ruby-compat's `ArgumentError` with Rails' message.
+- `pathFor`'s `:path` guard is `"path" in options` (Ruby `key?`).
+- The Rails `url_for_test.rb` / `url_test.rb` case asserting `ArgumentError` for
+  an invalid protocol asserts the class.

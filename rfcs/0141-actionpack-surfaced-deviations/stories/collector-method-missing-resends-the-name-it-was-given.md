@@ -45,6 +45,11 @@ nothing maps it to the TS spelling of the generated method. `sendInternal`
 (`packages/ruby-compat/src/object.ts`) already does this for a `foo?` predicate
 (`is_foo` camelized) but not for a plain snake_case name.
 
+The re-send itself stays a send: the name is a registered Mime symbol, and
+`Mime::Type.register` extends that set at run time, so this is CLAUDE.md § "A dispatch by
+name is spelled directly"'s third arm, which names `MimeResponds::Collector#any` as its
+example. What converges is the name-spelling step, not the dispatch.
+
 ## Acceptance criteria
 
 - `methodMissing`'s body is Rails' line for line: `Mime[symbol]`,

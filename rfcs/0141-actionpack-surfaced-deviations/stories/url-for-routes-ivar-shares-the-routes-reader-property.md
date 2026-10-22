@@ -34,6 +34,10 @@ read a null route set.
 
 The PR that ported `actionview/test/activerecord/controller_runtime_test.rb` narrowed the
 initializer to `if ("_routes" in this) this._routes = null;`, an arm Rails does not have.
+Since trails#8856 inlined `UrlFor#initialize` into the constructors, that guard lives at
+`packages/actionpack/src/action-controller/base.ts:496` and `action-controller/api.ts:151`
+(and `IntegrationTest`'s constructor, `action-dispatch/testing/integration.ts:243`); the
+per-module `Symbol("@_routes")` is `route-set.ts:893`.
 `_withRoutes` (`url-for.ts`) still reads and writes the `_routes` property where Rails touches
 the ivar, and `generateUrlHelpers` (`route-set.ts`) keeps a per-module `Symbol("@_routes")`.
 
@@ -41,7 +45,7 @@ the ivar, and `generateUrlHelpers` (`route-set.ts`) keeps a per-module `Symbol("
 
 - [ ] `@_routes` is one ivar key shared by `UrlFor#initialize`, `_with_routes` and the
       url_helpers `_routes` reader, distinct from the `_routes` method name.
-- [ ] The `"_routes" in this` guard in `UrlFor`'s initializer is deleted; the body is the
+- [ ] The `"_routes" in this` guard in each inlined `UrlFor#initialize` segment is deleted; the body is the
       unconditional `@_routes = nil` of `url_for.rb:112`.
 - [ ] `packages/actionview/src/activerecord/controller-runtime.test.ts`
       (`log with active record when redirecting`) and

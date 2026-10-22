@@ -1,5 +1,5 @@
 ---
-title: "enroll-actiondispatch-in-naming-gate"
+title: "Enroll actiondispatch in NAMING_ENROLLED_PACKAGES"
 status: ready
 updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
@@ -8,7 +8,7 @@ packages: []
 deps:
   - response-to-a-passes-rack-headers-to-hash
 deps-rfc: []
-est-loc: null
+est-loc: 10
 priority: null
 pr: null
 claim: null
@@ -22,22 +22,19 @@ closed-reason: null
 `enroll-actionpack-in-naming-gate` enrolled abstractcontroller (actioncontroller
 was already in) and receipted/renamed every actiondispatch naming row but one,
 so actiondispatch is still out of `NAMING_ENROLLED_PACKAGES`
-(`scripts/api-compare/lint-call-args.ts`). The remaining convergeable row:
+(`scripts/api-compare/lint-call-args.ts:106-122`).
 
-actiondispatch middleware/public-exceptions.ts render render_format (publicSend)
-
-Rails' `PublicExceptions#render`
-(`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/middleware/public_exceptions.rb:39-46`)
-builds `format = "to_#{content_type.to_sym}"` and calls
-`body.public_send(format)` when `body.respond_to?(format)`. trails branches on
-`:json` / `:xml` and calls `JSON.stringify` and a module-local `toXml` /
-`escapeXml` that Rails does not have. Converging needs the error body to answer
-Hash `to_json` / `to_xml` (ActiveSupport core-ext), reached through
-`rbObjRespondTo` / `rbFPublicSend`.
+The row this story was filed for, `middleware/public-exceptions.ts render
+render_format (publicSend)`, is gone: trails#9085 converged
+`PublicExceptions#render` onto `rbObjRespondTo` / `rbFPublicSend`
+(`public-exceptions.ts:47-48`). The remaining convergeable row is
+`toA rack_response (toHash)`, owned by `response-to-a-passes-rack-headers-to-hash`
+(this story's dep).
 
 ## Acceptance criteria
 
-- `render` mirrors Rails' body: the `format` local, the `respond_to?` guard and
-  `public_send`; the local `toXml` / `escapeXml` are gone.
+- Once the dep lands, `pnpm parity:api:calls:args:report` shows no convergeable
+  `naming` row for actiondispatch; any permanent pair carries its
+  `@missingRailsName` receipt.
 - `actiondispatch` joins `NAMING_ENROLLED_PACKAGES` and
   `pnpm parity:api:calls:args` is green.

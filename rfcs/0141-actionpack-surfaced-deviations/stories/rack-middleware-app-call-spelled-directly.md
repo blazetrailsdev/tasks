@@ -22,6 +22,14 @@ Each rack middleware calls the next app through `rbFSend(app, "call", env)`, a s
 
 Sites: about 27 non-test files in packages/rack/src, including builder.ts (3), conditional-get.ts, recursive.ts, static.ts (2 each), and cascade, common-logger, config, content-length, content-type, deflater, etag, events, head, lint, lock, logger, method-override, mock-request, null-logger, runtime, sendfile, show-exceptions, show-status, tempfile-reaper and urlmap.
 
+trails#9253 (merged after this story was filed) retyped every rack middleware's `app` as
+`RackApp | { call: RackApp }` and deliberately KEPT `rbFSend(app, "call", env)`, because a bare
+`app.call(env)` on a plain-function `RackApp` is `Function.prototype.call`, binding `env` as
+`this` and passing no argument. Converging therefore needs a repo-level decision first: either
+`RackApp` stops admitting a bare function (every middleware lambda in the repo becomes
+`{ call }`), or the `rbFSend` stays as the settled shape and this story closes. That choice is
+the repo owner's.
+
 ## Acceptance criteria
 
 - Each site is spelled `app.call(env)`. `RackApp` becomes a callable-object type `{ call(env) }`, with a plain function accepted the way Ruby's Proc#call is.

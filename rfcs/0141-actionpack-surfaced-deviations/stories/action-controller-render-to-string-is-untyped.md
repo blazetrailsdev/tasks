@@ -20,7 +20,7 @@ closed-reason: null
 
 PR trails#8315 typed `ActionController::Base#render` (`packages/actionpack/src/action-controller/base.ts`, `RenderArgs<P>` / `RenderOptions`). `render_to_string` takes the same argument list in Rails — `ActionController::Rendering#render_to_string(*)` (`vendor/rails/v8.0.2/actionpack/lib/action_controller/metal/rendering.rb:172-184`) calls `AbstractController::Rendering#render_to_string(*args, &block)` (`abstract_controller/rendering.rb:44-47`), which normalizes through the same `_normalize_render`.
 
-trails still types it `(...args: unknown[]): unknown` (`packages/actionpack/src/action-controller/metal/rendering.ts:127`, declared on `Base` at `base.ts:771`), so `this.renderToString({ acton: "new" })` or a wrong `status` compiles.
+trails still types it `(...args: unknown[]): unknown` (`packages/actionpack/src/action-controller/metal/rendering.ts:130`, declared on `Base` at `base.ts:639`), so `this.renderToString({ acton: "new" })` or a wrong `status` compiles.
 
 ## Converged shape
 
