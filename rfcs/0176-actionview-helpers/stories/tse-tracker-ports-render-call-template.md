@@ -1,7 +1,7 @@
 ---
 title: "TSETracker ports render_call_template and its next-unless-template skip"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9249
+claim: "2026-10-22T19:36:04Z"
+assignee: "tse-tracker-ports-render-call-template"
 blocked-by: null
 closed-reason: null
 ---

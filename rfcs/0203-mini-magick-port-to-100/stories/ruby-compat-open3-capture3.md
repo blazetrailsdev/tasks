@@ -1,6 +1,6 @@
 ---
 title: "Port Open3.capture3 to ruby-compat over the child-process adapter"
-status: ready
+status: claimed
 updated: 2026-10-22
 rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-prereqs
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T19:53:21Z"
+assignee: "ruby-compat-deprecate-constant-and-file-executable"
 blocked-by: null
 ---
 

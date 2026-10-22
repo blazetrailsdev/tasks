@@ -1,6 +1,6 @@
 ---
 title: "globalid: locateMany record index keeps an Array id distinct from its String spelling"
-status: draft
+status: in-progress
 updated: 2026-10-22
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9247
+claim: "2026-10-22T19:08:28Z"
+assignee: "globalid-locate-many-composite-key-distinct-from-string"
 blocked-by: null
 closed-reason: null
 ---

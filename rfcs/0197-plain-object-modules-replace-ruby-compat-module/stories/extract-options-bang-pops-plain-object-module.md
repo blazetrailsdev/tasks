@@ -1,6 +1,6 @@
 ---
 title: "extractOptionsBang pops a plain-object module as an options hash"
-status: claimed
+status: in-progress
 updated: 2026-10-22
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#9246
 claim: "2026-10-22T18:53:35Z"
 assignee: "included-mixins-overridable-beyond-conversion"
 blocked-by: null

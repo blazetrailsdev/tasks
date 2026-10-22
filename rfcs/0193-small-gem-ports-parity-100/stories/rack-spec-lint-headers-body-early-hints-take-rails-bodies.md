@@ -1,6 +1,6 @@
 ---
 title: "rack-spec-lint-headers-body-early-hints-take-rails-bodies"
-status: claimed
+status: in-progress
 updated: 2026-10-22
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9242
 claim: "2026-10-22T18:44:36Z"
 assignee: "rack-spec-lint-headers-body-early-hints-take-rails-bodies"
 blocked-by: null

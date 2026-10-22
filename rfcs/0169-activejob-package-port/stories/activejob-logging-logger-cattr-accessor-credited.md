@@ -1,6 +1,6 @@
 ---
 title: "activejob logging: credit the included-block logger cattr_accessor"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null

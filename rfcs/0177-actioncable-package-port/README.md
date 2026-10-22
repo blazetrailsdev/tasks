@@ -25,6 +25,7 @@ related-rfcs:
   - "0149-bare-keyed-option-hashes"
   - "0142-trailties-surfaced-deviations"
   - "0104-twitter-app-full-stack-integration"
+priority: 2
 ---
 
 # RFC 0177 — `@blazetrails/actioncable`

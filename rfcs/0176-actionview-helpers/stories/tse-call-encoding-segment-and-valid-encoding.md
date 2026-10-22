@@ -1,7 +1,7 @@
 ---
 title: "tse-call-encoding-segment-and-valid-encoding"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9247
+claim: "2026-10-22T19:08:28Z"
+assignee: "globalid-locate-many-composite-key-distinct-from-string"
 blocked-by: null
 closed-reason: null
 ---

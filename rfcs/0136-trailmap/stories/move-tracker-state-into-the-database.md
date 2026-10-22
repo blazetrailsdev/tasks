@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-10-22T18:56:33Z"
-assignee: "bump-the-ringo-pin-to-carry-the-write-path-and-smoke-cards"
+claim: "2026-10-22T19:58:09Z"
+assignee: "drop-the-redundant-tasks-mount"
 blocked-by: null
 closed-reason: null
 ---

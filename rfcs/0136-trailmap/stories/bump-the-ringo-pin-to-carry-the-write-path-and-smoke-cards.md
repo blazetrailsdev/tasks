@@ -1,6 +1,6 @@
 ---
 title: "Bump the vendored ringo pin to 0eeb2e1: the write path and the smoke cards"
-status: claimed
+status: done
 updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trailmap#76
 claim: "2026-10-22T18:56:33Z"
 assignee: "bump-the-ringo-pin-to-carry-the-write-path-and-smoke-cards"
 blocked-by: null

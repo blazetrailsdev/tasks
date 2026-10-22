@@ -8,6 +8,7 @@ owner: "@deanmarano"
 packages: ["solid-cache", "solid-queue", "solid-cable", "activesupport", "trailties"]
 clusters:
   - solid-stack
+priority: 3
 ---
 
 # RFC 0196 — Solid Cache, Solid Queue and Solid Cable as the trails production backends

@@ -1,7 +1,7 @@
 ---
 title: "Serve /crons read-only from trailmap, beside ringo"
-status: ready
-updated: 2026-10-12
+status: blocked
+updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-22T19:15:33Z"
+assignee: "send-a-message-to-a-pane-from-its-live-view"
+blocked-by: "prerequisite: the events table carries no cron-run records. ringo's merge/claim sweeps call the CLI with no identifying actor, and stats-sync, worktree sweep and smoke tiers never write events at all, so last-run/outcome cannot come from events. ringo must record each cron run as an event (e.g. verb cron-run, actor <job kind>, detail = outcome JSON) first."
 closed-reason: null
 ---
 

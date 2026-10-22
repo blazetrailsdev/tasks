@@ -1,7 +1,7 @@
 ---
 title: "Serve /deploys and /deploys/log read-only from trailmap"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#77
+claim: "2026-10-22T19:15:33Z"
+assignee: "send-a-message-to-a-pane-from-its-live-view"
 blocked-by: null
 closed-reason: null
 ---

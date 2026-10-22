@@ -1,6 +1,6 @@
 ---
 title: "Tags::Base#retrieve_autoindex: every object answers to_param"
-status: claimed
+status: in-progress
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#9246
 claim: "2026-10-22T18:53:35Z"
 assignee: "included-mixins-overridable-beyond-conversion"
 blocked-by: null

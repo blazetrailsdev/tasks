@@ -1,6 +1,6 @@
 ---
 title: "Vendor solid_cache, solid_queue and solid_cable at the Rails 8.0.2 lockfile versions"
-status: ready
+status: done
 updated: 2026-10-22
 rfc: "0196-solid-stack"
 cluster: solid-stack
@@ -8,9 +8,9 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-pr: null
-claim: null
-assignee: null
+pr: trails#9243
+claim: "2026-10-22T19:07:26Z"
+assignee: "vendor-solid-cache-queue-cable-gems"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activejob-date-serializers-serialize-temporal-dates"
-status: in-progress
+status: closed
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#9240
 claim: "2026-10-22T18:17:00Z"
 assignee: "activejob-date-serializers-serialize-temporal-dates"
 blocked-by: null
-closed-reason: null
+closed-reason: "PERMANENT: Rails' Date.new / DateTime.new port as gem-shaped values and Date.today / DateTime.current as Temporal (RFC 0088), so DateSerializer and TimeObjectSerializer accept both shapes; ruled by the repo owner on 2026-10-22 (trails#9240)."
 ---
 
 ## Context

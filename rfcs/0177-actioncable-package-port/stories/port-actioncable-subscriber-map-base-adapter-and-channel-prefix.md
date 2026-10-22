@@ -1,16 +1,16 @@
 ---
 title: "Port SubscriptionAdapter::SubscriberMap, Base and ChannelPrefix, with the async adapter contract"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-namespace-and-internal-constants"]
 deps-rfc: []
 est-loc: 300
-pr: null
-claim: null
-assignee: null
+pr: trails#9248
+claim: "2026-10-22T19:23:16Z"
+assignee: "port-actioncable-subscriber-map-base-adapter-and-channel-prefix"
 blocked-by: null
 closed-reason: null
 ---

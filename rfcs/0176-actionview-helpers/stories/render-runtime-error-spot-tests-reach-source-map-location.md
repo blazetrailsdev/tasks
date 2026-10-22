@@ -1,6 +1,6 @@
 ---
 title: "render-runtime-error-spot-tests-reach-source-map-location"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null

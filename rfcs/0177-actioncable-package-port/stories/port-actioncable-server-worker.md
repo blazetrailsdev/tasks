@@ -1,6 +1,6 @@
 ---
 title: "Port Server::Worker and Worker::ActiveRecordConnectionManagement"
-status: claimed
+status: in-progress
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
@@ -13,7 +13,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 300
-pr: null
+pr: trails#9244
 claim: "2026-10-22T18:47:08Z"
 assignee: "port-actioncable-connection-stream"
 blocked-by: null
