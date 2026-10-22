@@ -30,6 +30,13 @@ Because the port receives a function, it cannot name the predicate. `assertNoErr
 call, and its failure message lost the "to be empty?" text that a hand-built message used to carry.
 `assertNotPredicate` has the same shape.
 
+This is not a test-side helper question: CONTRIBUTING.md § "Porting a
+Minitest assertion" (trails#9176) already ports a test's `assert_predicate` as
+`expect(o.isFoo()).toBe(true)`. It survives only because a ported Rails body,
+`assert_no_error_reported`, calls Minitest's `assert_predicate`
+(`error-reporter-assertions.ts:99`). Whether that internal seat stays is the
+open question in `delete-minitest-builtin-assert-helpers`; settle it first.
+
 ## Acceptance criteria
 
 - [ ] `assertPredicate` / `assertNotPredicate` accept the predicate name (the trails spelling of

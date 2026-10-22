@@ -18,12 +18,28 @@ closed-reason: null
 
 ## Context
 
-Ruby's `Thread::Backtrace::Location#path` is a filesystem path. trails' `callerLocations` (`packages/activesupport/src/deprecation.ts:124-165`) keeps V8's `file://` URL in `path` for ESM frames. Only `absolutePath` is stripped and decoded.
+Ruby's `Thread::Backtrace::Location#path` is a filesystem path. trails'
+`callerLocations` (`packages/activesupport/src/deprecation.ts:124-170`) keeps
+V8's `file://` URL in `path` for ESM frames; only `absolutePath` is stripped
+and decoded (`:151-155`).
 
-As a result, `Mapping#routeSourceLocation` (`packages/actionpack/src/action-dispatch/routing/mapper.ts`, around line 894) reads `location.absolutePath ?? location.path` where Rails reads `location.path` (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/routing/mapper.rb:382-384`). The cleaned source location it renders also starts with `file://` when running from `dist`.
+`Mapping#routeSourceLocation`
+(`packages/actionpack/src/action-dispatch/routing/mapper.ts:905-912`) now reads
+`location.path` alone, as Rails does
+(`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/routing/mapper.rb:382-384`),
+so its `startsWith(actionDispatchDir)` test and the cleaned path it renders
+both see the `file://` URL when running from `dist`.
+
+`Deprecation::Reporting#extract_callstack` reads
+`frame.absolutePath ?? frame.path` (`deprecation.ts:292`); check that fallback
+against Rails' body
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/deprecation/reporting.rb`,
+`extract_callstack`).
 
 ## Acceptance criteria
 
-- `callerLocations` `path` is a decoded filesystem path for `file://` frames, matching Ruby's `Location#path`.
-- `routeSourceLocation` reads `location.path` alone, as Rails does.
-- Check other `absolutePath ?? path` readers (`deprecation.ts:~284`) against their Rails bodies.
+- `callerLocations`' `path` is a decoded filesystem path for `file://` frames,
+  matching Ruby's `Location#path`.
+- `extract_callstack` reads the frame the way Rails' body does, with no
+  `?? path` arm Rails lacks.
+- A `.trails.test.ts` pins `path` for an ESM frame.

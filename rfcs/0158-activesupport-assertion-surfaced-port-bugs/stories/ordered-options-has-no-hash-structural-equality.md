@@ -25,23 +25,24 @@ Hash: `assert_equal ({ good: true, bad: false, nested: { foo: "bar" } }), @crede
 (`activesupport/test/encrypted_configuration_test.rb:47`).
 
 trails' `OrderedOptions` (`packages/activesupport/src/ordered-options.ts`)
-stores its entries in a private `data` Map behind a Proxy. `assertEqual`'s
-`deepEqual` (`packages/activesupport/src/testing/assertions.ts`) compares by
-`JSON.stringify`, which serializes the instance as `{"data":{}}`. So trails#8197
-had to write that assertion as
+is a plain class (not a `Hash` subclass) that stores its entries in a
+private `data` Map behind a Proxy. Since trails#8224, `assertEqual` compares
+through ruby-compat's `rbEqual`, which has no `Hash#==` arm for an
+OrderedOptions. So trails#8197's assertion still reads
 `{ ...creds.something.toH(), nested: creds.something.nested.toH() }`
-(`encrypted-configuration.test.ts`, "reading configuration by key file").
+(`encrypted-configuration.test.ts:51`, "reading configuration by key file").
 
 ## Converged shape
 
-OrderedOptions compares equal to a Hash with the same contents, recursively,
-as `Hash#==` does, through whatever hook `assertEqual` / `rbEqual` honours
-(e.g. `asJson` / `toJSON` mirroring `Hash#as_json`, or a `==` / `eql` port).
-The test then passes `creds.something` directly.
+OrderedOptions answers `Hash#==` (`rb_hash_equal`, `vendor/ruby/v3.3.11/hash.c`)
+through the `==` hook `rbEqual` dispatches to, comparing its pairs with a Hash
+or plain object of the same contents, recursively. The test then asserts with
+the CONTRIBUTING.md `assert_equal` row for a value with Ruby `==`
+(`expect(rbEqual(act, exp)).toBe(true)` or `toEqualRuby`) on `creds.something`.
 
 ## Acceptance criteria
 
-- `assertEqual({ a: 1, nested: { b: 2 } }, orderedOptionsTree)` passes for an
-  equal nested tree and fails for an unequal one.
+- `rbEqual({ a: 1, nested: { b: 2 } }, orderedOptionsTree)` is true for an
+  equal nested tree and false for an unequal one, in both argument orders.
 - The `toH()` reconstruction in `encrypted-configuration.test.ts` is replaced
   by `creds.something`.

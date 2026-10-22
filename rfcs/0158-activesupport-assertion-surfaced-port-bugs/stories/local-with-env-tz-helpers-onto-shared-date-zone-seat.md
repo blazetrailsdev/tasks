@@ -1,5 +1,5 @@
 ---
-title: "local-with-env-tz-helpers-onto-shared-date-zone-seat"
+title: "activesupport tests: per-file withEnvTz copies move onto time-zone-test-helpers.ts"
 status: ready
 updated: 2026-09-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null
@@ -23,19 +23,22 @@ closed-reason: null
 on top of a `@blazetrails/date` local-zone seat (`resetLocalTimeZoneId(timeZoneId)`,
 `packages/date/src/time.ts:31`), with no `process.env`.
 
-Ten test files still carry their own copy of `withEnvTz`, and each one writes
-`process.env.TZ` and then calls `resetLocalTimeZoneId()`:
+Eleven activesupport test files still carry their own copy of `withEnvTz`,
+and each one writes `process.env.TZ` and then calls `resetLocalTimeZoneId()`
+(recounted 2026-10-22; activerecord's `base.test.ts` no longer writes
+`process.env.TZ`):
 
 - `packages/activesupport/src/time-ext.trails.test.ts:8`
 - `packages/activesupport/src/time-travel.test.ts:20`
-- `packages/activesupport/src/core-ext/time-ext.test.ts:121`
+- `packages/activesupport/src/core-ext/time-ext.test.ts:120`
 - `packages/activesupport/src/time-zone.test.ts:36`
 - `packages/activesupport/src/core-ext/date-ext.test.ts:50`
 - `packages/activesupport/src/core-ext/time/calculations.test.ts:7`
 - `packages/activesupport/src/core-ext/date-and-time-compatibility.test.ts:12`
-- `packages/activesupport/src/core-ext/string-ext.test.ts:204`
-- `packages/activesupport/src/core-ext/time/calculations.trails.test.ts:5`
-- `packages/activerecord/src/base.test.ts:151` (async)
+- `packages/activesupport/src/core-ext/string-ext.test.ts:203`
+- `packages/activesupport/src/core-ext/time/calculations.trails.test.ts:8`
+- `packages/activesupport/src/core-ext/time-with-zone.test.ts:51`
+- `packages/activesupport/src/json/encoding.test.ts:67`
 
 Some of these arms also read the zone through JS `Date` (for example `new Date(2000, 0, 1)`),
 which follows `process.env.TZ` and not the `@blazetrails/date` seat. Those reads
@@ -45,5 +48,4 @@ have to move to `Time.local` / `Time.at` before the file can switch helpers.
 
 - [ ] Every activesupport test that ports a Rails `with_env_tz` call imports
       `withEnvTz` from `time-zone-test-helpers.ts`, and no per-file copy is left.
-- [ ] activerecord's `base.test.ts` uses a shared async-capable form of the same helper.
 - [ ] No `process.env.TZ` write is left in those test files.

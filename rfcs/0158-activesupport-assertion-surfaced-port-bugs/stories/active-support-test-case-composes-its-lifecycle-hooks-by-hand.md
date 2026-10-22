@@ -30,13 +30,20 @@ Rails' `ActiveSupport::TestCase` defines neither `before_setup` nor `after_teard
 - `include ActiveSupport::Testing::TimeHelpers`: `after_teardown` is `travel_back; super` (`testing/time_helpers.rb:69-72`).
 - `Minitest::Test`'s `LifecycleHooks` answer both hooks with empty methods (`vendor/minitest/v5.27.0/lib/minitest/test.rb:148`).
 
-trails' `TestCase` (`packages/activesupport/src/test-case.ts:84,95`) holds two class-body methods that call the four modules' functions in sequence by hand and find the next link with `Object.getPrototypeOf(TestCase.prototype)`. TypeScript rejects `super` in a class with no `extends`, and the four modules are plain function namespaces with no `super` of their own. The methods also re-implement an `ensure` for a raising `travel_back`, which Rails gets from `ActiveRecord::TestFixtures#after_teardown`.
+trails' `TestCase` (`packages/activesupport/src/test-case.ts:81-100`) holds two class-body methods that call the four modules' functions in sequence by hand and find the next link with `Object.getPrototypeOf(TestCase.prototype)`. TypeScript rejects `super` in a class with no `extends`, and the four modules are plain function namespaces with no `super` of their own. The methods also re-implement an `ensure` for a raising `travel_back`, which Rails gets from `ActiveRecord::TestFixtures#after_teardown`.
 
-`after-teardown-takes-a-test-parameter-rails-does-not-have` removes the `test` parameter and gives SetupAndTeardown and TestsWithoutAssertions their `super`. This story is the rest: TaggedLogging, TimeHelpers, the `Minitest::Test` base, and deleting the class-body hooks.
+`after-teardown-takes-a-test-parameter-rails-does-not-have` (done, trails#8373) removed the `test` parameter and gave SetupAndTeardown and TestsWithoutAssertions their `super`. This story is the rest: TaggedLogging, TimeHelpers, the `Minitest::Test` base, and deleting the class-body hooks.
+
+RFC 0197 is retiring ruby-compat's `Module` carrier (root CLAUDE.md § "A Ruby
+module is a plain object or a class module"). A module method whose Rails body
+calls `super` on a module included by an open set of classes binds it with
+`rbCallSuper` at include time; `TestCase`'s prepended / included modules are
+such modules. The `prepend-copies-onto-the-class-so-super-method-cannot-resume-from-it`
+dependency is the old carrier's shape of that question.
 
 ## Converged shape
 
-`TaggedLogging`, `TimeHelpers`, `SetupAndTeardown` and `TestsWithoutAssertions` are live `Module`s whose hooks call `super` at Rails' position. `TestCase` includes the first two and prepends the last two, and extends a `Minitest::Test` whose `beforeSetup` / `afterTeardown` are empty. `test-case.ts` declares neither hook.
+`TaggedLogging`, `TimeHelpers`, `SetupAndTeardown` and `TestsWithoutAssertions` are modules whose hooks call `super` at Rails' position. `TestCase` includes the first two and prepends the last two, and extends a `Minitest::Test` whose `beforeSetup` / `afterTeardown` are empty. `test-case.ts` declares neither hook.
 
 ## Acceptance criteria
 

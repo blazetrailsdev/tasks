@@ -1,5 +1,5 @@
 ---
-title: "configuration-file-parse-through-psych-unsafe-load"
+title: "ConfigurationFile#parse reads YAML through Psych.unsafe_load_file / unsafe_load"
 status: ready
 updated: 2026-09-29
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
@@ -14,7 +14,7 @@ deps:
     "psych-libyaml-seam-without-top-level-await",
   ]
 deps-rfc: []
-est-loc: null
+est-loc: 40
 priority: null
 pr: null
 claim: null
@@ -27,45 +27,35 @@ closed-reason: null
 
 `ActiveSupport::ConfigurationFile#parse`
 (`vendor/rails/v8.0.2/activesupport/lib/active_support/configuration_file.rb:21-41`)
-reads its YAML through `YAML.unsafe_load_file(@content_path, **options)` /
-`YAML.unsafe_load(source, **options)`. trails'
-`packages/activesupport/src/configuration-file.ts` `parse` calls the `yaml`
-npm package's `parse(source, options)` directly.
+has two arms: when no ERB was rendered (`source == @content`) it calls
+`YAML.unsafe_load_file(@content_path, **options) || {}`, otherwise
+`YAML.unsafe_load(source, **options) || {}` (each with a `YAML.load*` fallback
+when `unsafe_load` is undefined).
 
-`psych-object-protocol-for-record-yaml-round-trip` added Psych's
-`unsafeLoad` to `packages/activesupport/src/yaml.ts` (a `ToRuby` visitor over
-`yaml.parseDocument`), which surfaced this as a `parity:api:calls` row
-(`activesupport configuration-file.ts parse unsafe_load`), carried as
-`@missingRailsCall unsafe_load — CONVERGEABLE` on `parse`.
+trails' `parse` (`packages/activesupport/src/configuration-file.ts:36-50`)
+has one arm: `yamlParse(source, options)`, the `psych-adapter` `parse`
+(`packages/ruby-compat/src/psych-adapter.ts:123`, `@noRailsEquivalent
+PERMANENT`), which hands the source to the npm `yaml` resolver rather than to
+Psych. It carries `@missingRailsCall load — PERMANENT` for the fallback arm.
 
-Converging needs `unsafeLoad` to cover what config files rely on and it does
-not yet:
+Every prerequisite this story waited on has landed in RFC 0170: Psych lives in
+ruby-compat (trails#8476), `Psych.unsafeLoad` and `Psych.unsafeLoadFile`
+exist (`packages/ruby-compat/src/psych.ts:240`, `:380`, trails#8918), the
+scalar scanner is ported (trails#8511), and `Psych::SyntaxError` is raised at
+every load (trails#8934). `EncryptedConfiguration` already reads through
+`Psych.unsafeLoad` (trails#8946). Psych answers `yes` / `on` as `true` where
+the npm resolver answers a String, so converging changes results; the tests
+should assert Rails' answer.
 
-- Psych's `<<` merge-key handling in `ToRuby#revive_hash`
-  (`vendor/ruby/v3.3.11/ext/psych/lib/psych/visitors/to_ruby.rb:344-380`) —
-  `database.yml`'s `<<: *default`.
-- the load options `parse` forwards (`symbolize_names:`, `aliases:`, …).
-- Psych scalar resolution (`ScalarScanner`) for the plain scalars config files
-  hold. Now its own story, `psych-scalar-scanner-tokenize`. Note that Psych
-  answers `yes` / `on` as `true` where `yaml.parse` answers a String, so
-  converging changes results; the tests should say which answer is Rails'.
+Two stories depend on this one: `database-configuration-reads-config-database-yml`
+and `config-for-reads-yml-through-configuration-file`.
 
 ## Acceptance criteria
 
-- [ ] `ConfigurationFile#parse` calls `unsafeLoad` (and the `_file` arm) as
-      Rails does, and the `@missingRailsCall unsafe_load — CONVERGEABLE` tag
-      on it is removed.
-- [ ] Existing `configuration-file` tests stay green.
-
-## Home (the psych-in-ruby-compat RFC)
-
-Psych moves out of `packages/activesupport/src/yaml.ts` into
-`packages/ruby-compat/src/psych*.ts` (layout: RFC Design §1) in
-`move-activesupport-yaml-into-ruby-compat-psych`. Write this story's code there, as `Psych` namespace
-members, and not in activesupport.
-
-Also (RFC matrix): `configuration_file.rb:37` rescues `Psych::SyntaxError`
-(`psych-syntax-error-and-exception-hierarchy`), and `configuration-file.ts:2`'s
-static `from "yaml"` import goes away with this convergence. Two stories depend
-on this one: `database-configuration-reads-config-database-yml` and
-`config-for-reads-yml-through-configuration-file`.
+- [ ] `parse` mirrors `configuration_file.rb:21-41`: the `source == @content`
+      arm calls `Psych.unsafeLoadFile(this.contentPath, options)`, the
+      rendered arm calls `Psych.unsafeLoad(source, options)`, each `|| {}` with
+      Ruby truthiness, and the `Psych.SyntaxError` rescue is unchanged.
+- [ ] `configuration-file.ts` no longer imports `psych-adapter`.
+- [ ] Existing `configuration-file` tests stay green, and a test pins a
+      `<<: *default` merge key and a `yes` scalar to Psych's answers.

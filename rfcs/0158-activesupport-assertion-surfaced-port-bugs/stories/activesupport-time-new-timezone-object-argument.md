@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-Parked in `packages/activesupport/src/core-ext/time-ext.test.ts`: `advance` and `change preserves fractional seconds on zoned time`. Both call `Time.new(y, m, d, h, mi, s, ActiveSupport::TimeZone["Moscow"])` (`vendor/rails/activesupport/test/core_ext/time_ext_test.rb:615-617` and `:530`). `Time.new` in `packages/date/src/time.ts:375` types `zone` as `string | number | TimeNewOptions | null`, so a zone object (Ruby's `local_to_utc` / `utc_to_local` protocol) is unsupported. `change preserves...` also needs `Time#inspect` to print `2005-10-30 00:00:00.99 -0400` and `Rational` seconds.
+Parked in `packages/activesupport/src/core-ext/time-ext.test.ts`: `advance` and `change preserves fractional seconds on zoned time`. Both call `Time.new(y, m, d, h, mi, s, ActiveSupport::TimeZone["Moscow"])` (`vendor/rails/activesupport/test/core_ext/time_ext_test.rb:615-617` and `:530`). `Time.new` in `packages/date/src/time.ts` types `zone` as `string | number | TimeNewOptions | null`, so a zone object (Ruby's `local_to_utc` / `utc_to_local` protocol) is unsupported. `change preserves...` also needs `Time#inspect` to print `2005-10-30 00:00:00.99 -0400` and `Rational` seconds.
 
 `advance` was parked whole because its 3 new assertions are in the same test body; its other 22 assertions passed before the change.
 

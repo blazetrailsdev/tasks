@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-Rails defines its whole `Enumerable` / `Array` / `Hash` / `Range` reopening in one file, `vendor/rails/v8.0.2/activesupport/lib/active_support/core_ext/enumerable.rb`. trails#8271 created its TS mirror, `packages/activesupport/src/core-ext/enumerable.ts`, and moved in `SoleItemExpectedError` (`enumerable.rb:21`) and `Range#sum` (`:241-253`). Every other method from that file still lives in `packages/activesupport/src/enumerable-utils.ts`, and `parity:api` reports each one as a "move":
+Rails defines its whole `Enumerable` / `Array` / `Hash` / `Range` reopening in one file, `vendor/rails/v8.0.2/activesupport/lib/active_support/core_ext/enumerable.rb`. trails#8271 created its TS mirror, `packages/activesupport/src/core-ext/enumerable.ts`, and moved in `SoleItemExpectedError` (`enumerable.rb:21`) and `Range#sum` (`:241-253`). A `maximum` has since been added there too (`core-ext/enumerable.ts:19`) while `enumerable-utils.ts:107` keeps its own, so `maximum` now has two definitions. Every other method from that file still lives in `packages/activesupport/src/enumerable-utils.ts` (as of 2026-10-22), and `parity:api` reports each one as a "move":
 
 - `minimum` (`enumerable.rb:32`), `maximum` (`:40`), `index_by` (`:52`), `index_with` (`:75`), `many?` (`:93`), `including` (`:112`), `exclude?` (`:118`), `excluding` / `without` (`:132`), `pluck` (`:145`), `pick` (`:161`), `compact_blank` (`:184`), `in_order_of` (`:197`), `sole` (`:211`)
 - `Hash#compact_blank` (`:222`), `Hash#compact_blank!` (`:232`), `Array#compact_blank!` (`:263`)
@@ -44,6 +44,6 @@ trails' `sole(collection, fn?)` takes an invented `fn` filter parameter that Rai
 ## Acceptance criteria
 
 - [ ] Every `core_ext/enumerable.rb` method listed above lives in `packages/activesupport/src/core-ext/enumerable.ts`. `parity:api` reports 0 moves for `core_ext/enumerable.rb`, and `index.ts` / test imports are re-pointed.
-- [ ] The `enumerable-utils.ts` <-> `core-ext/enumerable.ts` import cycle is gone.
+- [ ] The `enumerable-utils.ts` <-> `core-ext/enumerable.ts` import cycle is gone (`core-ext/enumerable.ts:11` imports `exclude` and `sum` back), and `maximum` has one definition.
 - [ ] `sole` mirrors `enumerable.rb:211-217` (`case count`, no `fn` parameter), and its callers are updated.
 - [ ] The dropped `body-pins.json` rows are re-pinned with `tsx scripts/api-compare/body-pins.ts --pin core_ext/enumerable.rb`.
