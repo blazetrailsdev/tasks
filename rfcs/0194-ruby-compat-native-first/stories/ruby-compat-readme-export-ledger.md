@@ -2,7 +2,7 @@
 title: "ruby-compat README: the rule-1 table becomes the full export ledger"
 status: draft
 updated: 2026-10-22
-rfc: "0000-ruby-compat-js-first-burndown"
+rfc: "0194-ruby-compat-native-first"
 cluster: ledger
 packages: ["ruby-compat"]
 deps: []
@@ -49,5 +49,5 @@ ceiling, ship the JSDoc citations first and the table second.
 - [ ] `classModule`'s JSDoc carries `@noRailsEquivalent PERMANENT` and points
       to CLAUDE.md § "A Ruby module is a plain object or a class module".
 - [ ] The README's prose claim matches the table: its rows equal `index.ts`'s
-      value exports, counted with the RFC's Appendix B script.
+      value exports, counted with this RFC's Appendix B script.
 - [ ] Docs only: no export is added, removed or renamed here.

@@ -2,7 +2,7 @@
 title: "Delete include.ts's initialize hook machinery, which no module feeds any more"
 status: draft
 updated: 2026-10-22
-rfc: "0000-ruby-compat-js-first-burndown"
+rfc: "0194-ruby-compat-native-first"
 cluster: deletion
 packages: ["ruby-compat", "activesupport", "actionpack", "activerecord", "trailties"]
 deps: []
