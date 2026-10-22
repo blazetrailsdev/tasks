@@ -2,7 +2,7 @@
 title: "Port Mail::Message's parts, encoding and parsing (message.rb:1626-2156)"
 status: draft
 updated: 2026-10-22
-rfc: "0000-actionmailer-and-mail-port"
+rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
 deps: ["mail-message-core"]

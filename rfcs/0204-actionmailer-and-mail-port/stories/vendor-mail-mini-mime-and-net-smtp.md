@@ -2,7 +2,7 @@
 title: "Vendor mail 2.8.1, mini_mime 1.1.5 and net-smtp 0.5.1 with their specs"
 status: draft
 updated: 2026-10-22
-rfc: "0000-actionmailer-and-mail-port"
+rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-vendor
 packages: ["mail", "mini-mime"]
 deps: []

@@ -1,5 +1,5 @@
 ---
-rfc: "0000-actionmailer-and-mail-port"
+rfc: "0204-actionmailer-and-mail-port"
 title: "ActionMailer, and the mail gem it builds messages with"
 status: draft
 created: 2026-10-22
@@ -19,9 +19,7 @@ clusters:
   - trailties
 ---
 
-<!-- Unnumbered until merge -->
-
-# RFC — ActionMailer, and the mail gem it builds messages with
+# RFC 0204 — ActionMailer, and the mail gem it builds messages with
 
 ## Summary
 

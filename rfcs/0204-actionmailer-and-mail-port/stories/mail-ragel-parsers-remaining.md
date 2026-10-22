@@ -2,7 +2,7 @@
 title: "Transliterate the remaining eleven mail parsers and gate regeneration drift in CI"
 status: draft
 updated: 2026-10-22
-rfc: "0000-actionmailer-and-mail-port"
+rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
 deps: ["mail-address-lists-parser-spike"]

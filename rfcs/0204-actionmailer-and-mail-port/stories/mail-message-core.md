@@ -2,7 +2,7 @@
 title: "Port Mail::Message's construction and header accessors (message.rb:1-1625)"
 status: draft
 updated: 2026-10-22
-rfc: "0000-actionmailer-and-mail-port"
+rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
 deps: ["mail-body-part-and-attachments"]

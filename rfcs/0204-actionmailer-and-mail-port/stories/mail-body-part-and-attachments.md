@@ -2,7 +2,7 @@
 title: "Port Mail::Body, Part, PartsList and AttachmentsList"
 status: draft
 updated: 2026-10-22
-rfc: "0000-actionmailer-and-mail-port"
+rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
 deps: ["mail-header-field-and-field-list", "mail-encodings-and-utilities", "mini-mime-port"]

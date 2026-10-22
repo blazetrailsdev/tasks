@@ -2,7 +2,7 @@
 title: "Port mini_mime with its vendored type DB"
 status: draft
 updated: 2026-10-22
-rfc: "0000-actionmailer-and-mail-port"
+rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mini-mime"]
 deps: ["vendor-mail-mini-mime-and-net-smtp"]

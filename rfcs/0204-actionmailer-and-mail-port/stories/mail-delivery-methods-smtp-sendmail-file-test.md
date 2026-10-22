@@ -2,7 +2,7 @@
 title: "Port mail's delivery methods: SMTP over nodemailer SMTPConnection, sendmail by spawn"
 status: draft
 updated: 2026-10-22
-rfc: "0000-actionmailer-and-mail-port"
+rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-delivery
 packages: ["mail"]
 deps: ["mail-message-parts-and-encoding", "net-smtp-port"]

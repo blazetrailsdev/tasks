@@ -2,7 +2,7 @@
 title: "Port Net::SMTP's client surface over nodemailer's SMTPConnection"
 status: draft
 updated: 2026-10-22
-rfc: "0000-actionmailer-and-mail-port"
+rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-delivery
 packages: ["net-smtp"]
 deps: ["vendor-mail-mini-mime-and-net-smtp"]
