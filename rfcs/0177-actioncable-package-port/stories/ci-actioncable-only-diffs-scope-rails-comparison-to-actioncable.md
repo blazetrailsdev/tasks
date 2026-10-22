@@ -5,7 +5,8 @@ updated: 2026-10-21
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["scripts"]
-deps: []
+deps:
+  - enroll-actioncable-in-compare-tooling-and-parity-gates
 deps-rfc: []
 est-loc: 450
 pr: null
