@@ -5,7 +5,8 @@ updated: 2026-10-19
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
-deps: []
+deps:
+  - actionmailer-message-delivery-parameterized-and-delivery-job
 deps-rfc: []
 est-loc: 120
 priority: null
