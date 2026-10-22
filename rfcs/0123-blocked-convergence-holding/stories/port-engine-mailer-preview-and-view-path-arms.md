@@ -5,7 +5,8 @@ updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: []
+deps:
+  - actionmailer-railtie-and-mailer-generator
 deps-rfc: []
 est-loc: 80
 priority: null
