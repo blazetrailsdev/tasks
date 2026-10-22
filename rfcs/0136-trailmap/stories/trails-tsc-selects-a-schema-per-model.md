@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc: per-model schema selection when two databases hold a same-named table"
-status: draft
-updated: 2026-10-15
+status: blocked
+updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Its own AC: start only when an app has a table name in two of its databases. trailmap origin/main (5f1f58f): db/schema.ts and db/hub_schema.ts share no table name, so the trigger has not fired."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "parity-credits-register-detail-generated-accessors"
-status: draft
+status: closed
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: synthesizing register_detail's methods in extract-ruby-api.rb scores the runtime-defined TS accessors missing/declaration-only (lookup_context.rb 39/47); the receipts it was to retire were not shipped."
 ---
 
 ## Context

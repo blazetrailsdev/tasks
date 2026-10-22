@@ -1,7 +1,7 @@
 ---
 title: "Load and register app/jobs classes in the finisher so job_class constantizes in a booted app"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["register-activejob-constants-for-class-name-round-trip", "port-activejob
 deps-rfc: []
 est-loc: 250
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9226
+claim: "2026-10-22T16:27:55Z"
+assignee: "eager-load-app-jobs-in-finisher"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc: synthesize the attribute-method family (Was, Changed, …) for columns and aliases"
-status: draft
-updated: 2026-10-15
+status: ready
+updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "nokogiri-css-on-css-select"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9227
+claim: "2026-10-22T16:21:27Z"
+assignee: "actionview-assertion-gate-enrollment"
 blocked-by: null
 closed-reason: null
 ---

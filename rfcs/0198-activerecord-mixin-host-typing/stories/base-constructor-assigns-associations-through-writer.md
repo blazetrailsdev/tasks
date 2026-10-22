@@ -1,7 +1,7 @@
 ---
 title: "base-constructor-assigns-associations-through-writer"
-status: ready
-updated: 2026-10-21
+status: claimed
+updated: 2026-10-22
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T16:52:16Z"
+assignee: "base-constructor-assigns-associations-through-writer"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port test_helper_test.rb PerformedJobsTest cases 43\u201384 (:1228-1662)"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null

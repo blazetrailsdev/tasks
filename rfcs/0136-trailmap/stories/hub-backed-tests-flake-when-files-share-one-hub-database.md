@@ -1,7 +1,7 @@
 ---
 title: "trailmap: hub-backed tests flake when test files share one hub database in parallel"
-status: draft
-updated: 2026-10-15
+status: closed
+updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trailmap#71 (3ca2d3d): test/support/hub-schema.ts on trailmap origin/main takes HUB_TEST_LOCK, an advisory lock held per test file, so hub files take turns; its comment names this exact interleaving (two-adapters lost rows to repo-tabs' truncateHub)."
 ---
 
 ## Context

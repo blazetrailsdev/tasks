@@ -1,7 +1,7 @@
 ---
 title: "rack: the 15 middleware spec files' assertion tail takes Rails' bodies"
-status: draft
-updated: 2026-10-21
+status: ready
+updated: 2026-10-22
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-tests
 packages: ["rack"]

@@ -1,7 +1,7 @@
 ---
 title: "Port I18n::Backend::CacheFile and retire its unported-files row"
-status: draft
-updated: 2026-10-21
+status: closed
+updated: 2026-10-22
 rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals
 packages: ["i18n"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'PERMANENT: root CLAUDE.md § "A translation lookup is synchronous; the load is an awaited step" (ratified by the repo owner 2026-10-21) makes I18n::Backend::Cache permanently unported: its _fetch reads an async ActiveSupport::Cache store inside the synchronous lookup.'
 ---
 
 ## Context

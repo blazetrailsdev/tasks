@@ -1,7 +1,7 @@
 ---
 title: "bulkChangeTable dispatches through rbObjRespondTo/rbFSend, not an any-cast index"
-status: ready
-updated: 2026-10-21
+status: closed
+updated: 2026-10-22
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "don't want this, prefer any-cast index"
 ---
 
 ## Context

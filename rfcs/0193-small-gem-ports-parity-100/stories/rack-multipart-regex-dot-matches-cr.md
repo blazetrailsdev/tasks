@@ -1,7 +1,7 @@
 ---
 title: "rack multipart regexes spell Ruby's . as [^\\n] (MULTIPART_CONTENT_TYPE)"
-status: draft
-updated: 2026-10-20
+status: claimed
+updated: 2026-10-22
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T16:53:09Z"
+assignee: "globalid-locate-many-index-by-converges"
 blocked-by: null
 closed-reason: null
 ---

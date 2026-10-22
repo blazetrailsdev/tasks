@@ -1,6 +1,6 @@
 ---
 title: "rack spec_static.rb takes the Rails spec bodies"
-status: draft
+status: claimed
 updated: 2026-10-22
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T16:52:16Z"
+assignee: "base-constructor-assigns-associations-through-writer"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "port-form-helper-test-placeholder-and-remaining-tests-remainder"
-status: ready
-updated: 2026-10-21
+status: claimed
+updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 650
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T16:53:09Z"
+assignee: "globalid-locate-many-index-by-converges"
 blocked-by: null
 closed-reason: null
 ---

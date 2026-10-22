@@ -1,16 +1,16 @@
 ---
 title: "Channel and connection classes carry their Ruby constant names and resolve through constantize"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable", "activesupport"]
 deps: ["port-actioncable-namespace-and-internal-constants"]
 deps-rfc: []
 est-loc: 250
-pr: null
-claim: null
-assignee: null
+pr: trails#9224
+claim: "2026-10-22T16:03:17Z"
+assignee: "actioncable-class-names-round-trip-through-constantize"
 blocked-by: null
 closed-reason: null
 ---

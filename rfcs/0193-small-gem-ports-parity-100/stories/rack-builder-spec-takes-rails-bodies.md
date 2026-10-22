@@ -1,6 +1,6 @@
 ---
 title: "rack spec_builder.rb takes the Rails spec bodies"
-status: draft
+status: ready
 updated: 2026-10-22
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null

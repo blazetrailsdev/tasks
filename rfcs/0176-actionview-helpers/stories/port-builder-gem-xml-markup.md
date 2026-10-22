@@ -1,7 +1,7 @@
 ---
 title: "port-builder-gem-xml-markup"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9225
+claim: "2026-10-22T16:23:59Z"
+assignee: "port-builder-gem-xml-markup"
 blocked-by: null
 closed-reason: null
 ---

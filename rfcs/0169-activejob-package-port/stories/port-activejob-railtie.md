@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveJob::Railtie into trailties and switch ActiveJob on in `trails new`"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null

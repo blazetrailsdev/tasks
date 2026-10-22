@@ -1,6 +1,6 @@
 ---
 title: "ClassAttribute.redefine's is_a?(Module) arm reads defineModule's moduleVisibility stamp, not a module test"
-status: ready
+status: claimed
 updated: 2026-10-22
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T16:53:09Z"
+assignee: "globalid-locate-many-index-by-converges"
 blocked-by: null
 closed-reason: null
 ---

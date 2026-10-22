@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveJob::Timezones and ActiveJob::Translation with timezones_test.rb and translation_test.rb"
-status: claimed
+status: done
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-activejob-callbacks", "converge-usezone-and-withlocale-to-restore-o
 deps-rfc: []
 est-loc: 200
 priority: 3
-pr: null
+pr: trails#9223
 claim: "2026-10-22T15:46:39Z"
 assignee: "port-activejob-test-helper-test-performed-part-3"
 blocked-by: null
