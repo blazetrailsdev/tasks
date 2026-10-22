@@ -12,7 +12,7 @@ deps:
   - trails-tsc-synthesized-attribute-writers-accept-anything
   - trails-tsc-synthesizes-the-dirty-attribute-methods
 deps-rfc: []
-est-loc: 180
+est-loc: 300
 priority: null
 pr: null
 claim: null

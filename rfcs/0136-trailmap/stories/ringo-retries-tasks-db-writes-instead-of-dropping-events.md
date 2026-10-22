@@ -8,7 +8,7 @@ packages: []
 deps:
   - move-tracker-state-into-the-database
 deps-rfc: []
-est-loc: 120
+est-loc: 80
 priority: null
 pr: null
 claim: null
