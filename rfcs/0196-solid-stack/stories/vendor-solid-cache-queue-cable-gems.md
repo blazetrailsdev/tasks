@@ -1,7 +1,7 @@
 ---
 title: "Vendor solid_cache, solid_queue and solid_cable at the Rails 8.0.2 lockfile versions"
-status: draft
-updated: 2026-10-17
+status: ready
+updated: 2026-10-22
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "activejob logging: credit the included-block logger cattr_accessor"
-status: draft
+status: in-progress
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9241
+claim: "2026-10-22T18:46:56Z"
+assignee: "activejob-logging-logger-cattr-accessor-credited"
 blocked-by: null
 closed-reason: null
 ---

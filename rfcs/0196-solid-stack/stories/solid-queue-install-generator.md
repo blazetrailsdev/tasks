@@ -1,7 +1,7 @@
 ---
 title: "Port solid_queue:install"
-status: draft
-updated: 2026-10-17
+status: ready
+updated: 2026-10-22
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]

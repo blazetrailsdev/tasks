@@ -1,6 +1,6 @@
 ---
 title: "trailmap: digest-stamp production assets so the generated far-future cache header can be adopted"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "trailmap: ranking functions take Story where they read six columns, so plucked rows are cast as unknown as Story"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null

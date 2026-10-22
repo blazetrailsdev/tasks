@@ -1,6 +1,6 @@
 ---
 title: "Port Connection::StreamEventLoop (timer, post, attach, detach, stop)"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity

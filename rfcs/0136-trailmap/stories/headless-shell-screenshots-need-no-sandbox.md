@@ -1,6 +1,6 @@
 ---
 title: "trailmap: CLAUDE.md's screenshot command aborts with 'No usable sandbox' on the box; it needs --no-sandbox"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null

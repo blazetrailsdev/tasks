@@ -1,7 +1,7 @@
 ---
 title: "Port SolidQueue::Supervisor and decide fork versus worker threads"
-status: draft
-updated: 2026-10-17
+status: ready
+updated: 2026-10-22
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]

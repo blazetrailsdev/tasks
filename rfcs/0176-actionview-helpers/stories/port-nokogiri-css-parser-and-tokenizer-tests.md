@@ -1,6 +1,6 @@
 ---
 title: "Port Nokogiri test_parser.rb and test_tokenizer.rb"
-status: claimed
+status: in-progress
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#9238
 claim: "2026-10-22T17:45:29Z"
 assignee: "build-views-precompiles-builder-templates"
 blocked-by: null

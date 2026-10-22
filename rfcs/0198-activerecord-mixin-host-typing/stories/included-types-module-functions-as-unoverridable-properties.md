@@ -1,6 +1,6 @@
 ---
 title: "Included<typeof M> types mixin functions as properties, so a Model subclass cannot override toParam"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "schedule-continuous-trails-tracking"
-status: ready
+status: claimed
 updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T18:56:33Z"
+assignee: "bump-the-ringo-pin-to-carry-the-write-path-and-smoke-cards"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "i18n: the 8 moved extra-surface names reach zero"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals

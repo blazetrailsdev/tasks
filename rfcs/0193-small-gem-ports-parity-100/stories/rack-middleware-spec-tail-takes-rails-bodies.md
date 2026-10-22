@@ -1,6 +1,6 @@
 ---
 title: "rack: the 15 middleware spec files' assertion tail takes Rails' bodies"
-status: ready
+status: in-progress
 updated: 2026-10-22
 rfc: "0193-small-gem-ports-parity-100"
 cluster: rack-tests
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9237
+claim: "2026-10-22T18:07:55Z"
+assignee: "rack-middleware-spec-tail-takes-rails-bodies"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "The controller test case's catch-all route uses a deprecated dynamic :action segment"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null

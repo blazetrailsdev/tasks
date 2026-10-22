@@ -1,7 +1,7 @@
 ---
 title: "Create packages/solid-queue as a published workspace package and enroll it in compare"
-status: draft
-updated: 2026-10-17
+status: ready
+updated: 2026-10-22
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]

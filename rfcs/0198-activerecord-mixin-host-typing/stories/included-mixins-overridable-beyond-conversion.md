@@ -1,6 +1,6 @@
 ---
 title: "Overridable method-signature interfaces for the remaining Included<> mixins a model extends"
-status: draft
+status: claimed
 updated: 2026-10-22
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T18:53:35Z"
+assignee: "included-mixins-overridable-beyond-conversion"
 blocked-by: null
 closed-reason: null
 ---

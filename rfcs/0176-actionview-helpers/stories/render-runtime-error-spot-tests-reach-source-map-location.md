@@ -1,7 +1,7 @@
 ---
 title: "render-runtime-error-spot-tests-reach-source-map-location"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9239
+claim: "2026-10-22T18:22:45Z"
+assignee: "port-form-with-test-remaining-tests-remainder"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port Connection::Stream over the hijacked Node socket"
-status: ready
-updated: 2026-10-21
+status: claimed
+updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
@@ -9,8 +9,8 @@ deps: ["port-actioncable-connection-stream-event-loop"]
 deps-rfc: []
 est-loc: 300
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T18:47:08Z"
+assignee: "port-actioncable-connection-stream"
 blocked-by: null
 closed-reason: null
 ---
