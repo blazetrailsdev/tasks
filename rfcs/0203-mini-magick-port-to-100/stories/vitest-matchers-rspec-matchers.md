@@ -2,7 +2,7 @@
 title: "Port the RSpec matchers mini_magick's specs use to @blazetrails/vitest-matchers"
 status: ready
 updated: 2026-10-22
-rfc: "0000-mini-magick-port-to-100"
+rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-prereqs
 packages: ["vitest-matchers"]
 deps: []

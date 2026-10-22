@@ -2,7 +2,7 @@
 title: "Enroll mini_magick in parity:api and parity:test at 100%"
 status: ready
 updated: 2026-10-22
-rfc: "0000-mini-magick-port-to-100"
+rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-parity
 packages: ["mini-magick"]
 deps: ["mini-magick-typecheck-clean"]

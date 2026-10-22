@@ -2,7 +2,7 @@
 title: "Run mini_magick's commands through Open3.capture3, async from Shell up"
 status: ready
 updated: 2026-10-22
-rfc: "0000-mini-magick-port-to-100"
+rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-runtime
 packages: ["mini-magick"]
 deps: ["mini-magick-land-on-main", "ruby-compat-open3-capture3"]

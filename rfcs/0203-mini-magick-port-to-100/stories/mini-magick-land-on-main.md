@@ -2,7 +2,7 @@
 title: "Land the generated mini_magick package on main, registered in CI"
 status: ready
 updated: 2026-10-22
-rfc: "0000-mini-magick-port-to-100"
+rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-land
 packages: ["mini-magick", "ruby-compat"]
 deps: ["vitest-matchers-rspec-matchers", "ruby-compat-deprecate-constant-and-file-executable"]

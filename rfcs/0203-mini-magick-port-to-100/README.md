@@ -1,5 +1,5 @@
 ---
-rfc: "0000-mini-magick-port-to-100"
+rfc: "0203-mini-magick-port-to-100"
 title: "mini_magick: from the generated port to 100%"
 status: active
 created: 2026-10-22
@@ -17,12 +17,7 @@ clusters:
   - mini-magick-parity
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
-     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
-
-# RFC — mini_magick: from the generated port to 100%
+# RFC 0203 — mini_magick: from the generated port to 100%
 
 ## Summary
 

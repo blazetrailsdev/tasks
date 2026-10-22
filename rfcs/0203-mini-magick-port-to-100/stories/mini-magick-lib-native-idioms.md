@@ -2,7 +2,7 @@
 title: "Converge mini_magick's lib bodies to native, typed TypeScript"
 status: ready
 updated: 2026-10-22
-rfc: "0000-mini-magick-port-to-100"
+rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-polish
 packages: ["mini-magick"]
 deps:
