@@ -6,7 +6,9 @@ rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
   - "activerecord"
-deps: []
+deps:
+  - composed-of-converter-symbol-arm
+  - composed-of-constructor-option-key
 deps-rfc: []
 est-loc: 60
 priority: 88
