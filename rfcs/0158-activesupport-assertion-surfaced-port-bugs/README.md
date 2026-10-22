@@ -16,6 +16,10 @@ packages:
   - "actionview"
   - "ruby-compat"
   - "activemodel"
+  - "activejob"
+  - "globalid"
+  - "rack-test"
+  - "arel"
 clusters:
   - "surfaced-bugs"
 related-rfcs:
