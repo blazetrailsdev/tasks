@@ -1,7 +1,7 @@
 ---
 title: "Port Server::Connections and Server::Base"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
@@ -14,9 +14,9 @@ deps:
   ]
 deps-rfc: []
 est-loc: 350
-pr: null
-claim: null
-assignee: null
+pr: trails#9258
+claim: "2026-10-22T22:35:33Z"
+assignee: "port-actioncable-channel-naming-and-broadcasting"
 blocked-by: null
 closed-reason: null
 ---

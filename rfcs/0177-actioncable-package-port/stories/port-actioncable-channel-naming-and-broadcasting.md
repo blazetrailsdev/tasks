@@ -1,7 +1,7 @@
 ---
 title: "Port Channel::Naming and Channel::Broadcasting"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
@@ -9,9 +9,9 @@ deps:
   ["actioncable-class-names-round-trip-through-constantize", "port-actioncable-server-broadcasting"]
 deps-rfc: []
 est-loc: 200
-pr: null
-claim: null
-assignee: null
+pr: trails#9258
+claim: "2026-10-22T22:35:33Z"
+assignee: "port-actioncable-channel-naming-and-broadcasting"
 blocked-by: null
 closed-reason: null
 ---

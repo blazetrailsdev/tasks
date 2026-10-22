@@ -1,6 +1,6 @@
 ---
 title: "extractOptionsBang pops a plain-object module as an options hash"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Port ActionView Builder template handler and mirror .builder fixtures"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9257
+claim: "2026-10-22T22:20:31Z"
+assignee: "port-builder-template-handler"
 blocked-by: null
 closed-reason: null
 ---

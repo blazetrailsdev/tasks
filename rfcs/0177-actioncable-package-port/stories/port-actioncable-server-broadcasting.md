@@ -1,6 +1,6 @@
 ---
 title: "Port Server::Broadcasting and Broadcaster"
-status: claimed
+status: done
 updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
@@ -8,7 +8,7 @@ packages: ["actioncable"]
 deps: ["port-actioncable-subscriber-map-base-adapter-and-channel-prefix"]
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: trails#9255
 claim: "2026-10-22T21:50:44Z"
 assignee: "port-actioncable-connection-client-socket-and-web-socket"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Port the solid_queue adapter and its job and execution models"
-status: ready
+status: in-progress
 updated: 2026-10-22
 rfc: "0196-solid-stack"
 cluster: solid-stack
@@ -13,9 +13,9 @@ deps:
   ]
 deps-rfc: []
 est-loc: 600
-pr: null
-claim: null
-assignee: null
+pr: trails#9256
+claim: "2026-10-22T22:05:42Z"
+assignee: "port-solid-queue-adapter-and-models"
 blocked-by: null
 closed-reason: null
 ---

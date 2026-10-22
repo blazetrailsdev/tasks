@@ -1,6 +1,6 @@
 ---
 title: "Tags::Select and render_collection_for await an async capture block"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
