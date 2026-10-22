@@ -1,6 +1,6 @@
 ---
 title: "TestHelper kwarg assertions raise unknown-keyword ArgumentError like assert_enqueued_with"
-status: claimed
+status: done
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9228
 claim: "2026-10-22T16:56:27Z"
 assignee: "activejob-log-subscriber-tally-keys-on-class-identity"
 blocked-by: null

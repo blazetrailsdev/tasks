@@ -1,6 +1,6 @@
 ---
 title: "trailmap: CLAUDE.md's screenshot command aborts with 'No usable sandbox' on the box; it needs --no-sandbox"
-status: claimed
+status: in-progress
 updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 5
 priority: null
-pr: null
+pr: trailmap#75
 claim: "2026-10-22T16:55:43Z"
 assignee: "bump-the-ringo-pin-to-carry-the-write-path-and-smoke-cards"
 blocked-by: null

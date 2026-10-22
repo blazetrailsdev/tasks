@@ -1,6 +1,6 @@
 ---
 title: "actionview skips: un-skip highlight sanitize, point builder and encoding skips at real receipts"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "i18n: the 8 moved extra-surface names reach zero"
-status: ready
+status: in-progress
 updated: 2026-10-22
 rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9234
+claim: "2026-10-22T17:38:00Z"
+assignee: "i18n-extra-surface-moved-names-to-zero"
 blocked-by: null
 closed-reason: null
 ---

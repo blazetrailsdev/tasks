@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: "2026-10-22T16:52:16Z"
-assignee: "base-constructor-assigns-associations-through-writer"
+claim: "2026-10-22T17:53:24Z"
+assignee: "rack-deflater-files-static-builder-specs-take-rails-bodies"
 blocked-by: null
 closed-reason: null
 ---

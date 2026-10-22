@@ -1,6 +1,6 @@
 ---
 title: "build-views precompiles .builder templates"
-status: ready
+status: claimed
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T17:45:29Z"
+assignee: "build-views-precompiles-builder-templates"
 blocked-by: null
 closed-reason: null
 ---

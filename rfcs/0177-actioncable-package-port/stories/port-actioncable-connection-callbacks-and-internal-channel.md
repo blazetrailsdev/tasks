@@ -1,16 +1,16 @@
 ---
 title: "Port Connection::Callbacks and Connection::InternalChannel"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-connection-identification-and-authorization"]
 deps-rfc: []
 est-loc: 250
-pr: null
-claim: null
-assignee: null
+pr: trails#9232
+claim: "2026-10-22T17:29:37Z"
+assignee: "port-actioncable-connection-callbacks-and-internal-channel"
 blocked-by: null
 closed-reason: null
 ---

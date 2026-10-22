@@ -1,7 +1,7 @@
 ---
 title: "Port Connection::StreamEventLoop (timer, post, attach, detach, stop)"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
@@ -14,9 +14,9 @@ deps:
   ]
 deps-rfc: []
 est-loc: 300
-pr: null
-claim: null
-assignee: null
+pr: trails#9232
+claim: "2026-10-22T17:29:37Z"
+assignee: "port-actioncable-connection-callbacks-and-internal-channel"
 blocked-by: null
 closed-reason: null
 ---

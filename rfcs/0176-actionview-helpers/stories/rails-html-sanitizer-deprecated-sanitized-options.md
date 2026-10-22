@@ -1,7 +1,7 @@
 ---
 title: "Port rails-html-sanitizer's deprecated sanitized_* option readers/writers"
-status: ready
-updated: 2026-10-21
+status: claimed
+updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T17:45:29Z"
+assignee: "build-views-precompiles-builder-templates"
 blocked-by: null
 closed-reason: null
 ---

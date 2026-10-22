@@ -1,6 +1,6 @@
 ---
 title: "Load and register app/jobs classes in the finisher so job_class constantizes in a booted app"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null

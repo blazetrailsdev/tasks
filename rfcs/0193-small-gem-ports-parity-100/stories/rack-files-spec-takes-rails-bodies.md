@@ -1,6 +1,6 @@
 ---
 title: "rack spec_files.rb takes the Rails spec bodies"
-status: claimed
+status: done
 updated: 2026-10-22
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#9229
 claim: "2026-10-22T16:52:16Z"
 assignee: "base-constructor-assigns-associations-through-writer"
 blocked-by: null

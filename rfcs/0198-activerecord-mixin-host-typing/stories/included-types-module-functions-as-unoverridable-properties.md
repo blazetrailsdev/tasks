@@ -1,17 +1,17 @@
 ---
 title: "Included<typeof M> types mixin functions as properties, so a Model subclass cannot override toParam"
-status: draft
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-22
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
 packages: ["activemodel", "activesupport"]
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#9231
+claim: "2026-10-22T17:22:56Z"
+assignee: "included-types-module-functions-as-unoverridable-properties"
 blocked-by: null
 closed-reason: null
 ---

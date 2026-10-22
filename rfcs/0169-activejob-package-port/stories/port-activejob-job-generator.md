@@ -1,6 +1,6 @@
 ---
 title: "Port `rails g job` as `trails g job`, replace the invented ApplicationJob stub, with job_generator_test.rb"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null

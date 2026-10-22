@@ -1,6 +1,6 @@
 ---
 title: "base-constructor-assigns-associations-through-writer"
-status: claimed
+status: blocked
 updated: 2026-10-22
 rfc: "0198-activerecord-mixin-host-typing"
 cluster: null
@@ -12,7 +12,7 @@ priority: 2
 pr: null
 claim: "2026-10-22T16:52:16Z"
 assignee: "base-constructor-assigns-associations-through-writer"
-blocked-by: null
+blocked-by: "Waits on has-one-replace-sync-arm-skips-load-and-remove-target / reopen-rfc-0087-constructor-arm-for-association-io-at-assignment: HasOneAssociation#replace's save arm is always an async IIFE, so routing the constructor through association(name).writer reds has_one tests ('assignAttributes cannot assign this attribute synchronously', has-one-associations.test.ts:338,990). syncWrite can only go once one Rails-shaped replace is sync on a new owner."
 closed-reason: null
 ---
 

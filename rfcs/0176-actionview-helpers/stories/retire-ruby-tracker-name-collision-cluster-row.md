@@ -1,7 +1,7 @@
 ---
 title: "Retire the dead ruby_tracker.rb NAME_COLLISION_CLUSTERS row"
-status: ready
-updated: 2026-10-21
+status: claimed
+updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T17:53:24Z"
+assignee: "rack-deflater-files-static-builder-specs-take-rails-bodies"
 blocked-by: null
 closed-reason: null
 ---

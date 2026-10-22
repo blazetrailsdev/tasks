@@ -1,6 +1,6 @@
 ---
 title: "rack spec_builder.rb takes the Rails spec bodies"
-status: ready
+status: in-progress
 updated: 2026-10-22
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9231
+claim: "2026-10-22T17:22:56Z"
+assignee: "included-types-module-functions-as-unoverridable-properties"
 blocked-by: null
 closed-reason: null
 ---

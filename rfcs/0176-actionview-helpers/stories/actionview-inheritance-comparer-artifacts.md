@@ -1,6 +1,6 @@
 ---
 title: "actionview inheritance 76/76: comparer token renames and import aliases, LookupContext drops extends Object"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
