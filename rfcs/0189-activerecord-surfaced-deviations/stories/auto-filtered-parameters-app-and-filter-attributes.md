@@ -6,7 +6,8 @@ rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
   - "activerecord"
-deps: []
+deps:
+  - auto-filtered-parameters-model-name-element
 deps-rfc: []
 est-loc: 100
 priority: 28
