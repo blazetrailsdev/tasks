@@ -1,7 +1,7 @@
 ---
 title: "burn-down-and-enroll-actionview"
-status: in-progress
-updated: 2026-10-21
+status: done
+updated: 2026-10-22
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []

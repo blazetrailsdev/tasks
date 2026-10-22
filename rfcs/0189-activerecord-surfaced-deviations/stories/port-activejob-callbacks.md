@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveJob::Callbacks (perform / enqueue chains and the six macros) with callbacks_test.rb"
-status: ready
-updated: 2026-10-18
+status: claimed
+updated: 2026-10-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: ["activejob"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: 37
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T00:44:58Z"
+assignee: "port-activejob-callbacks"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "actionview-tag-helper-test-assertions"
-status: ready
-updated: 2026-10-21
+status: claimed
+updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 180
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-22T00:48:07Z"
+assignee: "actionview-api-residue-context-rendering-class-methods"
 blocked-by: null
 closed-reason: null
 ---

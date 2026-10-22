@@ -1,7 +1,7 @@
 ---
 title: "Create packages/actioncable as a published workspace package and wire it into CI"
-status: in-progress
-updated: 2026-10-21
+status: done
+updated: 2026-10-22
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]

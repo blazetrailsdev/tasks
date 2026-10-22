@@ -1,7 +1,7 @@
 ---
 title: "ActiveJob.eager_load! loads every autoloaded constant: complete namespaces.ts loadPath and seats"
-status: in-progress
-updated: 2026-10-21
+status: done
+updated: 2026-10-22
 rfc: "0169-activejob-package-port"
 cluster: null
 packages: []
