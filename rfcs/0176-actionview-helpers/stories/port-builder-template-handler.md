@@ -7,6 +7,7 @@ cluster: null
 packages: []
 deps:
   - port-builder-gem-xml-markup
+  - build-views-precompiles-builder-templates
 deps-rfc: []
 est-loc: 250
 priority: 3
