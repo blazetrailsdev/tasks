@@ -16,6 +16,7 @@ packages:
   - "nokogiri"
   - "ruby-compat"
   - "tse-compiler"
+  - "trails-tsc"
 clusters: []
 related-rfcs:
   - "0140-actionview-rendering-core"
