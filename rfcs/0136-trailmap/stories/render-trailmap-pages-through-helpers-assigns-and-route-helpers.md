@@ -5,7 +5,9 @@ updated: 2026-10-15
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionview", "actionpack"]
-deps: ["re-vendor-trails-for-app-helpers"]
+deps:
+  - re-vendor-trails-for-app-helpers
+  - split-the-render-pages-the-rails-way-story
 deps-rfc: []
 est-loc: 280
 priority: null
