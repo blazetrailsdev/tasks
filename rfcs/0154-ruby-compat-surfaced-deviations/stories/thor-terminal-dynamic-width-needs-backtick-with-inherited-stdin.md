@@ -5,7 +5,8 @@ updated: 2026-10-01
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - ruby-compat-kernel-system-and-backtick-for-database-tasks
 deps-rfc: []
 est-loc: 150
 priority: null
