@@ -1,9 +1,9 @@
 ---
 rfc: "0206-minitest-port-and-assertions-to-expect"
 title: "Port minitest as its own package, and move test code onto Vitest expect"
-status: draft
+status: active
 created: 2026-10-22
-updated: 2026-10-22
+updated: 2026-10-23
 owner: "@deanmarano"
 packages:
   - minitest
