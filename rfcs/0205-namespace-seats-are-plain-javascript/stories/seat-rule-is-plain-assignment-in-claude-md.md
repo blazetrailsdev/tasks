@@ -1,6 +1,6 @@
 ---
 title: "Lean on ES imports: correct the call-time-constant-resolution rule in CLAUDE.md and the three package guides"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

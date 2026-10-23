@@ -1,6 +1,6 @@
 ---
 title: "render-test-surfaced-rendering-gaps"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0176-actionview-helpers"
 cluster: null

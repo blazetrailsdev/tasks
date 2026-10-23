@@ -1,6 +1,6 @@
 ---
 title: "no-ruby-compat-module-fallback-in-the-module-shape-rule"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Guides Code Type Check failing on main @6690a0bd"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0061-ci-failures"
 cluster: null
