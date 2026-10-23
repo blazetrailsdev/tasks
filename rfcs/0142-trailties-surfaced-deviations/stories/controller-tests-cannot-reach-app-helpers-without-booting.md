@@ -5,7 +5,8 @@ updated: 2026-10-12
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties", "actionpack"]
-deps: []
+deps:
+  - application-cannot-boot-under-vitest-because-initializers-import-natively
 deps-rfc: []
 est-loc: 120
 priority: null
