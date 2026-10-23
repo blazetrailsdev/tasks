@@ -5,7 +5,9 @@ updated: 2026-10-23
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]
-deps: ["port-solid-queue-worker"]
+deps:
+  - port-solid-queue-worker
+  - vendor-and-port-fugit-cron
 deps-rfc: []
 est-loc: 450
 pr: null
