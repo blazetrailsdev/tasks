@@ -5,8 +5,7 @@ updated: 2026-10-11
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
-deps:
-  - ruby-compat-pathname-join-and-file-join-to-path
+deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
