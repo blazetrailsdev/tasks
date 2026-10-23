@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-compare-app-models"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-10-23
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

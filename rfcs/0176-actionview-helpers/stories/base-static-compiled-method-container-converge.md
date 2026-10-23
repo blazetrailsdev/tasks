@@ -1,6 +1,6 @@
 ---
 title: "base-static-compiled-method-container-converge"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0176-actionview-helpers"
 cluster: null

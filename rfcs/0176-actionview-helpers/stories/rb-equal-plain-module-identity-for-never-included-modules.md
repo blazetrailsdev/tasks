@@ -1,6 +1,6 @@
 ---
 title: "rb-equal-plain-module-identity-for-never-included-modules"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0176-actionview-helpers"
 cluster: null

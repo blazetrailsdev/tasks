@@ -1,6 +1,6 @@
 ---
 title: "actionview-test-fixtures-under-test-fixtures"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0176-actionview-helpers"
 cluster: null

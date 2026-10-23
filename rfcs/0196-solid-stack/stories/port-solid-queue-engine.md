@@ -1,6 +1,6 @@
 ---
 title: "port-solid-queue-engine"
-status: draft
+status: ready
 updated: 2026-10-23
 rfc: "0196-solid-stack"
 cluster: null
