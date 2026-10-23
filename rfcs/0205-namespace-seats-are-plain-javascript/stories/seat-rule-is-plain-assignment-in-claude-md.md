@@ -57,9 +57,10 @@ the old rule. It is LOC-exempt.
       body calls `const_set`, with the 18-site table or a pointer to it, and
       that a surviving module-eval seat is a plain `Owner.Name = Klass`
       assignment.
-- [ ] The section points at the generated Ruby-path table (story
-      `derive-class-path-from-registered-namespaces`) rather than describing the
-      seat as what paths a class.
+- [ ] The section points at the Ruby-path table generated out of
+      `rails-api.json` (story `derive-class-path-from-registered-namespaces`,
+      whose id predates that design and is not a namespace walk) rather than
+      describing the seat as what paths a class.
 - [ ] The "converge onto" sentence in `packages/arel/CLAUDE.md` is replaced,
       and the arel section records that arel's cycle is real (65 of 92 modules)
       while 278 of its 287 reads are still deferred.

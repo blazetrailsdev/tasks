@@ -19,6 +19,16 @@ closed-reason: null
 
 ## Context
 
+**The story id predates the design.** `derive-class-path-from-registered-namespaces`
+names an earlier draft that derived the path at run time by walking the
+registered namespace objects. That was rejected — see this RFC's README
+"Alternatives considered" and
+`docs/claude-md-decision-history.md` § "Call-time constant resolution" — because
+a class reached by a plain ES import is not seated on a namespace at all, so
+there is nothing to walk. **The design is the generated table below**, as the
+story's title says. The id is kept because ten sibling stories carry it as a
+`deps` edge; do not implement a namespace walk on the strength of the slug.
+
 `rbModName` is `classpaths.get(klass)?.path ?? klass.name ?? null`
 (`packages/ruby-compat/src/object.ts:474`; `rbModToS` at `:444`, `rbObjClass`'s
 path read at `:460`, `Exception`'s at `exception.ts:43`, `Module#name` at
