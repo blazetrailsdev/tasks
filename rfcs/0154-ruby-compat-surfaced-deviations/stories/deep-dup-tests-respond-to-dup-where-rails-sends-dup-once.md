@@ -5,7 +5,8 @@ updated: 2026-10-09
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - rbfsend-does-not-dispatch-kernel-dup-or-clone
 deps-rfc: []
 est-loc: 60
 priority: null
