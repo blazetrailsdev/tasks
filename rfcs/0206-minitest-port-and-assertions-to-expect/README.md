@@ -22,6 +22,7 @@ clusters:
   - rails-bodies
   - assertion-tooling
   - expect-sweeps
+  - minitest-package
 priority: 2
 ---
 
