@@ -1,7 +1,7 @@
 ---
 title: "Use the Enumerable free functions where ported bodies hand-roll each_slice / min_by / max_by / tally / each_with_object / sort_by"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-23
 rfc: "0194-ruby-compat-native-first"
 cluster: enumerable
 packages: ["activerecord", "activesupport", "actionpack", "actionview"]
@@ -9,9 +9,9 @@ deps: ["enumerable-free-functions-over-iterable"]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9274
+claim: "2026-10-23T14:43:01Z"
+assignee: "basic-obj-respond-to-instance-fast-path"
 blocked-by: null
 closed-reason: null
 ---

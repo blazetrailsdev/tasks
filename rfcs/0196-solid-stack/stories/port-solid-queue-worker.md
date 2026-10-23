@@ -1,6 +1,6 @@
 ---
 title: "Port SolidQueue::Worker (poll, claim and perform ready executions)"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0196-solid-stack"
 cluster: solid-stack
