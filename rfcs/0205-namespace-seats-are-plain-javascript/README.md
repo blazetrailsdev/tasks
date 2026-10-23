@@ -1,9 +1,9 @@
 ---
 rfc: "0205-namespace-seats-are-plain-javascript"
 title: "A namespace seat is a plain JavaScript assignment: remove rbModConstSet from every site Rails does not const_set"
-status: draft
+status: active
 created: 2026-10-22
-updated: 2026-10-22
+updated: 2026-10-23
 owner: "@deanmarano"
 packages:
   - "ruby-compat"
