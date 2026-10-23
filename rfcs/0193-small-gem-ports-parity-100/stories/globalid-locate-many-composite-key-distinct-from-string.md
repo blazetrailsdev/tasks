@@ -1,7 +1,7 @@
 ---
 title: "globalid: locateMany record index keeps an Array id distinct from its String spelling"
-status: in-progress
-updated: 2026-10-22
+status: done
+updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []

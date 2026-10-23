@@ -29,7 +29,7 @@ clusters:
   - ledger
   - deletion
   - send
-priority: 3
+priority: 2
 ---
 
 # RFC 0194 — ruby-compat native-first

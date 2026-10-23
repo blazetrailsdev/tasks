@@ -1,7 +1,7 @@
 ---
 title: "render-test-surfaced-rendering-gaps"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-23
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#9272
+claim: "2026-10-23T02:06:05Z"
+assignee: "render-test-surfaced-rendering-gaps"
 blocked-by: null
 closed-reason: null
 ---

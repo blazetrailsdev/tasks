@@ -1,7 +1,7 @@
 ---
 title: "port-solid-queue-concurrency-controls"
-status: draft
-updated: 2026-10-22
+status: done
+updated: 2026-10-23
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9256
 claim: null
 assignee: null
 blocked-by: null

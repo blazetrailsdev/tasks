@@ -1,7 +1,7 @@
 ---
 title: "Port the solid_queue adapter and its job and execution models"
-status: in-progress
-updated: 2026-10-22
+status: done
+updated: 2026-10-23
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]

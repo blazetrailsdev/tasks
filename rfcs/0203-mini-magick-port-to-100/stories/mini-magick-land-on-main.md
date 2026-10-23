@@ -1,7 +1,7 @@
 ---
 title: "Land the generated mini_magick package on main, registered in CI"
-status: in-progress
-updated: 2026-10-22
+status: done
+updated: 2026-10-23
 rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-land
 packages: ["mini-magick", "ruby-compat"]

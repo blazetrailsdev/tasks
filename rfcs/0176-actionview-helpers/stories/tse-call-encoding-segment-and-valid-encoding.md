@@ -1,7 +1,7 @@
 ---
 title: "tse-call-encoding-segment-and-valid-encoding"
-status: in-progress
-updated: 2026-10-22
+status: done
+updated: 2026-10-23
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []

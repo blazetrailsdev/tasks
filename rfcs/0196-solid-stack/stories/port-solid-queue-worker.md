@@ -1,16 +1,16 @@
 ---
 title: "Port SolidQueue::Worker (poll, claim and perform ready executions)"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-23
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]
 deps: ["port-solid-queue-adapter-and-models", "port-activejob-execution"]
 deps-rfc: []
 est-loc: 450
-pr: null
-claim: null
-assignee: null
+pr: trails#9273
+claim: "2026-10-23T02:10:17Z"
+assignee: "port-solid-queue-worker"
 blocked-by: null
 closed-reason: null
 ---
