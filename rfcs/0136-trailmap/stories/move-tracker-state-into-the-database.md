@@ -1,7 +1,7 @@
 ---
 title: "Move tracker-state.json into the database as pr_states"
-status: claimed
-updated: 2026-10-22
+status: ready
+updated: 2026-10-23
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-10-22T19:58:09Z"
-assignee: "drop-the-redundant-tasks-mount"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
