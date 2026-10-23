@@ -1,14 +1,14 @@
 ---
-title: "Sweep activemodel's and activesupport's namespace seats to plain assignments"
-status: ready
-updated: 2026-10-23
+title: "Convert activemodel's and activesupport's namespace reads to ES imports"
+status: draft
+updated: 2026-10-22
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
 deps:
   - derive-class-path-from-registered-namespaces
 deps-rfc: []
-est-loc: 240
+est-loc: 260
 priority: null
 pr: null
 claim: null
@@ -19,50 +19,74 @@ closed-reason: null
 
 ## Context
 
-activemodel holds 34 seats (7 in tests) onto `ActiveModel`,
-`ActiveModel::Serializers` and `Validations`; activesupport holds 16 onto
-`ActiveSupport`, `Concurrent` and `TopLevel`.
-`activemodel/src/attribute.ts` is, with arel, one of the two places already
-converged to the helper, so it is a seat-for-seat reversal.
+activemodel holds 34 seats and 1 deferred read; activesupport holds 16 seats,
+21 deferred reads and 4 module-eval reads. `activemodel/src/attribute.ts` is,
+with arel, one of the two places already converged to the helper spelling.
 
-Three seats keep the helper, all activesupport:
-`ClassMethods` (`active_support/concern.rb:212`), a `concerning` topic
-(`core_ext/module/concerning.rb:133`), and a stubbed constant
-(`testing/constant_stubbing.rb:33-45`). activemodel keeps one: the `ATTR_`
-name constant (`active_model/attribute_methods.rb:584`,
-`const_set(const_name, attr_name) unless const_defined?(const_name)`).
+activesupport's four module-eval reads are `ActiveSupport.MessagePack` in
+`message-pack.ts` (a top-level `export const`) and the three
+`rbModConstSet(ActiveSupport.MessagePack!, …)` seats in
+`message-pack/extensions.ts`, which read the nested namespace while the
+module body runs. CLAUDE.md § "`active_support/message_pack` is loaded by an
+awaited step at boot" governs that module; keep the reads and record why.
+
+Four seats keep the helper: `ClassMethods` (`concern.rb:212`), a
+`concerning` topic (`core_ext/module/concerning.rb:133`), a stubbed
+constant (`testing/constant_stubbing.rb:33-45`), and activemodel's `ATTR_`
+name constant (`active_model/attribute_methods.rb:584`).
 
 `TopLevel` is Ruby's top-level `Object`
-(`packages/activesupport/src/namespaces.ts`); a seat onto it keeps whatever
-`registerConstant` behaviour the top-level table needs — read
-`rbModConstSet`'s `mod === Object` arm (`include.ts:117-120`) before
-rewriting one, since the derivation must answer a bare `"Trails"` there, not
-`"Object::Trails"`.
+(`packages/activesupport/src/namespaces.ts`) and is read at call time by
+design (`TopLevel.Trails!.env`); it is the ratified top-level seat and stays.
+Read `rbModConstSet`'s `mod === Object` arm (`include.ts:117-120`) before
+changing a seat onto it, since the generated table must answer a bare
+`\"Trails\"` there, not `\"Object::Trails\"`.
 
-Mechanical sweep. Each seat `rbModConstSet(Owner, "Name", Klass);` becomes
-`Owner.Name = Klass;`, and the `rbModConstSet` import is dropped from the
-file (or trimmed from a multi-name import). Keep any seat that mirrors a Rails
-`const_set` from the 18-site table in this RFC's README.
+## Converting a read
 
-The assignment is type-checked against the namespace object's declared
-property where the three-argument helper was not, so the sweep may surface a
-seat onto the wrong owner or under a name the namespace does not declare. Fix
-it — a wrong seat is the bug the helper was hiding, and widening the namespace
-type to admit it is not the remedy.
+A read inside a function or method body becomes a plain ES import, correct even
+inside a cycle:
 
-Enumerate with
-`grep -rn 'rbModConstSet(' --include=*.ts <paths>`.
+```ts
+import { Nodes } from "../namespaces.js";   // before
+not() { return new Nodes.Not(this); }
+
+import { Not } from "./unary.js";           // after
+not() { return new Not(this); }
+```
+
+A read at module-eval time — an `extends` clause, a top-level call, a
+top-level `new` — keeps the namespace read and is listed in the PR body with
+its reason. A TypeScript type position (`T extends Nodes.X`, `: Nodes.X`)
+becomes `import type`, which is erased and costs no edge.
+
+A seat `rbModConstSet(Owner, "Name", Klass)` is deleted where nothing reads
+the namespace property any more. Where a module-eval read remains, the seat
+becomes a plain `Owner.Name = Klass` assignment, which is type-checked where
+the three-argument helper was not. A seat mirroring a Rails `const_set` from
+the RFC's 18-site table keeps the helper and cites its Ruby site.
+
+Enumerate with `grep -rn 'rbModConstSet(' --include=*.ts <paths>` for the
+seats, and the RFC's deferred/module-eval classification for the reads.
 
 ## Acceptance criteria
 
-- [ ] Every seat in scope is a plain assignment; the only `rbModConstSet`
-      calls left in scope mirror a Rails `const_set` site, each citing it.
-- [ ] No `rbModConstSet` import remains in a file with no such call.
+- [ ] Every deferred read in scope is a plain ES import; every remaining
+      namespace read is module-eval-time and listed in the PR body with its
+      reason.
+- [ ] Every seat in scope is deleted, or is a plain assignment serving a
+      remaining module-eval read, or mirrors a cited Rails `const_set`.
+- [ ] No `rbModConstSet` import remains in a file with no such call, and no
+      `namespaces.js` import remains in a file with no namespace read.
 - [ ] `pnpm typecheck` passes with no namespace-object type widened to admit
-      a seat.
+      a seat, and no new `any` or cast introduced to make an import type-check.
+- [ ] **The built `dist/**.js` modules load as plain-node ESM entry modules,
+      each package entry and each converted module tried as the entry\*\* — the
+      check CLAUDE.md § "Call-time constant resolution" prescribes. A vitest
+      run enters a funnel module first and masks a TDZ, so a green suite is not
+      evidence here. This is the acceptance test for "the read was deferred
+      after all".
 - [ ] `rbModName` answers the same qualified path for every class in scope as
-      it did before the sweep (spot-check the classes named in any `inspect`,
-      error-message or STI assertion in the package's tests).
-- [ ] The package's built `dist` modules still load as ESM entry modules.
+      the pre-conversion snapshot from the generated-table story.
 - [ ] The touched test files pass; no full-suite run (CLAUDE.md "Working in
       this repo").

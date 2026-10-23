@@ -1,7 +1,7 @@
 ---
-title: "Gate rbModConstSet to the Rails const_set sites so the seat protocol cannot come back"
-status: ready
-updated: 2026-10-23
+title: "Gate both rbModConstSet and module-eval namespace reads so the mechanism cannot spread again"
+status: draft
+updated: 2026-10-22
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -17,7 +17,7 @@ deps:
   - sweep-msgpack-and-small-package-seats
   - sweep-ruby-compat-and-test-file-seats
 deps-rfc: []
-est-loc: 180
+est-loc: 240
 priority: null
 pr: null
 claim: null
@@ -30,30 +30,54 @@ closed-reason: null
 
 An added call is invisible to both call gates — CLAUDE.md § "Before you open
 the PR" says so explicitly: they flag what Rails does and the port omits, never
-the reverse. That blind spot is how this call reached 790 sites from 15 in four
-weeks with every ratchet green, and the docs amendment in
-`seat-rule-is-plain-assignment-in-claude-md` is a rule with nothing enforcing
-it.
+the reverse. That blind spot is how this reached 790 sites from 15 in four
+weeks with every ratchet green, so the docs correction in
+`seat-rule-is-plain-assignment-in-claude-md` is a rule with nothing behind it.
 
-`pnpm parity:api:sends` is the precedent: a per-file count, only-shrink, with
-no mark file, on trails#9129's reasoning that the base tree IS the mark. The
-same shape fits here, and after the sweeps the counts are near zero, so the
-gate starts at a floor worth holding.
+Two populations need holding, and the second is the one that actually matters:
+
+- **Seats.** `rbModConstSet` call sites, which after the conversions should be
+  only the ~18 mirroring a Rails `const_set`.
+- **Module-eval namespace reads.** The real escape hatch. A read at module-eval
+  time is legitimate but rare (fewer than ten framework sites, plus ~35
+  migration fixtures), and it is where the mechanism would quietly regrow,
+  because "it's a cycle" is always available as a reason. This set is
+  **enumerated and frozen**: the RFC's "What survives" list plus whatever each
+  conversion's PR body added.
+
+`pnpm parity:api:sends` is the precedent for the shape: a per-file count,
+only-shrink, with no mark file, on trails#9129's reasoning that the base tree
+IS the mark.
+
+A deferred read is not gated — it should not exist after the conversions, and
+if one appears it is a plain ES import waiting to be written, not a deviation
+to receipt.
 
 ## Acceptance criteria
 
 - [ ] A gate counts `rbModConstSet` call sites per non-test file and fails on
       any file above its count at the merge-base with `origin/main`. No mark
       file to seed or tighten.
-- [ ] A call site is exempt when it carries a citation of the Rails
-      `const_set` it mirrors, resolvable in `rails-api.json` — not a free-text
-      reason, and not a new baseline register (CLAUDE.md § "A documented
-      deviation is debt, not permission": this is the ordinary fidelity rule,
-      so there is nothing to baseline).
-- [ ] The gate runs in the `rails-comparison` CI job and is listed in
-      CLAUDE.md § "Before you open the PR" under the signature step.
-- [ ] A test fixture covers: a bare seat (red), a cited Rails `const_set`
-      (green), a citation naming a Ruby site with no `const_set` (red), and a
-      plain `Owner.Name = Klass` assignment (green, uncounted).
-- [ ] The committed counts after the sweeps are recorded in the story's PR
-      body, so a later regression is legible as a number.
+- [ ] A seat is exempt when it carries a citation of the Rails `const_set` it
+      mirrors, resolvable in `rails-api.json` — not free text, and not a new
+      baseline register (CLAUDE.md § "A documented deviation is debt, not
+      permission": this is the ordinary fidelity rule, so there is nothing to
+      baseline).
+- [ ] A second gate holds the frozen module-eval read set: a namespace property
+      read reachable at module-eval time (top-level statement, `extends`
+      clause, top-level `new`) in a file not on the list fails, and the failure
+      names the file and tells the author to write a plain ES import. A type
+      position does not count.
+- [ ] The frozen list is a checked-in file with one line per site and its
+      reason, seeded from the conversions' PR bodies, and is **only-shrink**:
+      adding a line is a reviewed decision with a named load-order cause, never
+      a mechanical step to turn a red run green.
+- [ ] Both gates run in the `rails-comparison` CI job and are listed in
+      CLAUDE.md § "Before you open the PR".
+- [ ] Fixtures cover: a bare seat (red); a cited Rails `const_set` (green); a
+      citation naming a Ruby site with no `const_set` (red); a deferred
+      namespace read (red, with the ES-import message); a module-eval read on
+      the list (green); the same read in an unlisted file (red); a
+      `T extends Nodes.X` type position (green).
+- [ ] The committed counts and the frozen list's size after the conversions are
+      recorded in the PR body, so a later regression is legible as a number.

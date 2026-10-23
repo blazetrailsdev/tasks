@@ -29,10 +29,13 @@ amendment so the queue and the rule change together.
 namespace seat in activerecord, activesupport, actionview, actionpack and
 trailties that binds a class or module is `rbModConstSet(Owner, "Name",
 value)`". Its premise — that a plain assignment "binds the constant and leaves
-the class unpathed" — is what the derivation falsifies.
+the class unpathed" — is answered by the generated path table, and its goal is
+the opposite of this RFC's: it would convert plain assignments into seats in
+five packages, where this RFC converts the reads they serve into ES imports.
 
-Two neighbours are written against the recorded table and need re-pointing, not
-closing: `seated-classes-answer-module-name-with-their-constant-path` and
+Two neighbours are written against the runtime `classpaths` table and need
+re-pointing at the generated one, not closing:
+`seated-classes-answer-module-name-with-their-constant-path` and
 `rb-path-to-class-reads-seated-path-whole-over-flat-constant-table`.
 
 The fifteen `class-to-string-seat-enroll-<package>` stories are the same
@@ -52,22 +55,25 @@ Also check `0141-actionpack-surfaced-deviations`
 `0133-rack-session-gem-port`'s three `ruby class path` stories,
 `0156`'s `seat-actioncontroller-exceptions-for-exception-inspect`, and
 `0189`'s `register-model-alias-does-not-rename-a-defined-class`: several are
-satisfied outright by the derivation.
+satisfied outright by the generated table.
 
 ## Acceptance criteria
 
 - [ ] `namespace-seats-bind-through-rb-mod-const-set` is closed
-      `FALSIFIED:` with a reason naming this RFC and the derivation.
+      `FALSIFIED:` with a reason naming this RFC: its premise is answered by
+      the generated path table and its direction is the inverse of the ruling
+      of 2026-10-22.
 - [ ] `seated-classes-answer-module-name-with-their-constant-path` and
       `rb-path-to-class-reads-seated-path-whole-over-flat-constant-table` are
-      rewritten against the derivation, or closed if it satisfies them.
+      rewritten against the generated table, or closed if it satisfies them.
 - [ ] Each `0141`, `0133`, `0156` and `0189` story listed above is read and
-      either closed as satisfied, or has a line added pointing at the
-      derivation so its claimant does not add a seat.
+      either closed as satisfied, or has a line added pointing at the generated
+      table and the ES-import rule, so its claimant does not add a seat.
 - [ ] The thirteen unenrolled `class-to-string-seat-enroll-<package>` stories
       are blocked on an explicit decision story, with the reason naming the
       duplication; the two enrolled packages are left as they are.
-- [ ] No open story's acceptance criteria ask for a new `rbModConstSet` seat
+- [ ] No open story's acceptance criteria ask for a new `rbModConstSet` seat,
+      or for a namespace read where an ES import would do
       (`grep -rl 'rbModConstSet' rfcs/*/stories/` returns only this RFC's and
       closed stories).
 - [ ] Every state change is a `tasks` verb, not a markdown edit of `status:`
