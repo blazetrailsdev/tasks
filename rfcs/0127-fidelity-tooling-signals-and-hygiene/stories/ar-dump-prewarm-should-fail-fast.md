@@ -2,7 +2,7 @@
 title: "ar_dump schema pre-warm should fail fast, not warn"
 status: draft
 updated: 2026-08-15
-rfc: "0023-surfaced-deviations"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []

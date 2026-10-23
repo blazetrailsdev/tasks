@@ -2,7 +2,7 @@
 title: "escape-typedoc double-escapes typedoc's \\< so generics render as literal &lt;"
 status: draft
 updated: 2026-08-13
-rfc: "0023-surfaced-deviations"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages:
   - "website"

@@ -2,7 +2,7 @@
 title: "Run examples/twitter-clone's typecheck in CI so the trails-tsc bin can't silently regress"
 status: ready
 updated: 2026-09-04
-rfc: "0023-surfaced-deviations"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []

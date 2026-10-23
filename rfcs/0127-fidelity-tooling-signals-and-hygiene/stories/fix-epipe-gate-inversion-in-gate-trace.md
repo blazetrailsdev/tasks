@@ -2,7 +2,7 @@
 title: "gate-trace.sh inverts its gates on a large diff (EPIPE + pipefail)"
 status: draft
 updated: 2026-08-27
-rfc: "0023-surfaced-deviations"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []

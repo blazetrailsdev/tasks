@@ -2,7 +2,7 @@
 title: "Lint: a test that rewrites TZ must drop Time's local-zone memo"
 status: draft
 updated: 2026-08-23
-rfc: "0023-surfaced-deviations"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages:
   - "date"

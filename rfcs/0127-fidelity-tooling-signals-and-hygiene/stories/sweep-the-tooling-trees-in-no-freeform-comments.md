@@ -2,7 +2,7 @@
 title: "sweep-the-tooling-trees-in-no-freeform-comments"
 status: draft
 updated: 2026-09-03
-rfc: "0023-surfaced-deviations"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []
