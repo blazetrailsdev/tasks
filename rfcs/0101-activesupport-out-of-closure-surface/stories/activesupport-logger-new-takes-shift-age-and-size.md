@@ -2,7 +2,7 @@
 title: "activesupport-logger-new-takes-shift-age-and-size"
 status: draft
 updated: 2026-10-23
-rfc: "0141-actionpack-surfaced-deviations"
+rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
 deps: []
