@@ -2,7 +2,7 @@
 title: "No adapter exposes Process.uid, so owned? predicates cannot port"
 status: draft
 updated: 2026-08-17
-rfc: "0023-surfaced-deviations"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages:
   - "ruby-compat"

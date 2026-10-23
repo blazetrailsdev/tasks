@@ -2,7 +2,7 @@
 title: "Decide: Tempfile uses sync fs primitives against the async-fs-only rule"
 status: draft
 updated: 2026-08-24
-rfc: "0023-surfaced-deviations"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages:
   - "ruby-compat"

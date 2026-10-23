@@ -2,7 +2,7 @@
 title: "BigDecimal's constructor raises TypeError where Kernel#BigDecimal raises ArgumentError"
 status: draft
 updated: 2026-08-20
-rfc: "0023-surfaced-deviations"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages:
   - "ruby-compat"

@@ -2,7 +2,7 @@
 title: "Release the fs-adapter flock on holder death, as flock(2) does"
 status: draft
 updated: 2026-08-13
-rfc: "0023-surfaced-deviations"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages:
   - "ruby-compat"
