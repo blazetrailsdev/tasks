@@ -1,6 +1,6 @@
 ---
 title: "Use the Enumerable free functions where ported bodies hand-roll each_slice / min_by / max_by / tally / each_with_object / sort_by"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0194-ruby-compat-native-first"
 cluster: enumerable

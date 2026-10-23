@@ -1,6 +1,6 @@
 ---
 title: "GlobalID.defaultLocator is async; converge via a zero-import Locator slot"
-status: ready
+status: in-progress
 updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9275
+claim: "2026-10-23T16:19:36Z"
+assignee: "blocklocator-locate-many-filters-nils"
 blocked-by: null
 closed-reason: null
 ---

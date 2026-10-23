@@ -1,6 +1,6 @@
 ---
 title: "rack-session and globalid: re-pin the 6 bodies that drifted unpinned"
-status: ready
+status: in-progress
 updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9275
+claim: "2026-10-23T16:19:36Z"
+assignee: "blocklocator-locate-many-filters-nils"
 blocked-by: null
 closed-reason: null
 ---
