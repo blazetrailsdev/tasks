@@ -55,7 +55,9 @@ This RFC does three things:
    default, a `@blazetrails/vitest-matchers` matcher where the built-in gives
    the wrong answer for the value under test. `@blazetrails/vitest-matchers`
    exists to make porting a Minitest or Rails assertion easy and faithful
-   (Ruby truthiness, Ruby `==`, exact class, `respond_to?`, delta).
+   (Ruby truthiness, Ruby `==`, exact class, `respond_to?`, delta). § "Matchers"
+   adds `toBeKindOf` for `assert_kind_of` and scores the existing `toInclude`
+   / `toHaveKey` for `assert_includes`.
 2. **Ported Rails bodies that call a Minitest assert call `expect` too**
    (owner ruling, 2026-10-23; § "Minitest asserts inside ported Rails
    bodies"), and the call gate credits `assert_equal` → `expect().toEqual` once,
@@ -280,12 +282,12 @@ It reads the matcher **name only**, so four spellings the table above uses
 score the wrong kind and would red the only-shrink `kind` counter in every
 gated package:
 
-| spelling                                                       | Rails kind         | scored today |
-| -------------------------------------------------------------- | ------------------ | ------------ |
-| `toBe(true)` / `toBe(false)` for `assert` / `assert_predicate` | `truthy` / `falsy` | `equal`      |
-| `toHaveLength(0)` for `assert_empty`                           | `empty`            | `length`     |
-| `toHaveProperty([k])` for `assert_includes` on a Hash          | `includes`         | unmapped     |
-| `expect(typeof o.m).toBe("function")` for `assert_respond_to`  | `respondTo`        | `equal`      |
+| spelling                                                                               | Rails kind         | scored today |
+| -------------------------------------------------------------------------------------- | ------------------ | ------------ |
+| `toBe(true)` / `toBe(false)` for `assert` / `assert_predicate`                         | `truthy` / `falsy` | `equal`      |
+| `toHaveLength(0)` for `assert_empty`                                                   | `empty`            | `length`     |
+| `toHaveProperty([k])` for `assert_includes` on a Hash (sweeps use `toInclude` instead) | `includes`         | unmapped     |
+| `expect(typeof o.m).toBe("function")` for `assert_respond_to`                          | `respondTo`        | `equal`      |
 
 The extractor already emits the matcher's literal first argument in lockstep
 (`values`, `extract-ts-core.ts:412-419`), so teaching `buildHistogram` to read
@@ -362,7 +364,7 @@ that finds a receipt now wrong for the new spelling fixes it in the same PR.
   dozen times and every PR would cross packages. Whole-file, per-package bins
   touch each file once.
 
-## Order of work
+## Rollout
 
 1. Tooling, independent, may land first:
    `assertion-kinds-reads-literal-matcher-arguments`,
