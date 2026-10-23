@@ -2,7 +2,7 @@
 title: "base-declared-members-overridable-as-methods"
 status: draft
 updated: 2026-10-22
-rfc: "0198-activerecord-mixin-host-typing"
+rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

@@ -1,5 +1,5 @@
 ---
-title: "rbModName derives a class's Ruby path from the registered namespace objects"
+title: "Generate each package's Ruby class-path table from rails-api.json instead of registering it at 790 seats"
 status: ready
 updated: 2026-10-23
 rfc: "0205-namespace-seats-are-plain-javascript"
@@ -8,7 +8,7 @@ packages: []
 deps:
   - seat-rule-is-plain-assignment-in-claude-md
 deps-rfc: []
-est-loc: 260
+est-loc: 320
 priority: null
 pr: null
 claim: null
@@ -19,46 +19,58 @@ closed-reason: null
 
 ## Context
 
+**The story id predates the design.** `derive-class-path-from-registered-namespaces`
+names an earlier draft that derived the path at run time by walking the
+registered namespace objects. That was rejected — see this RFC's README
+"Alternatives considered" and
+`docs/claude-md-decision-history.md` § "Call-time constant resolution" — because
+a class reached by a plain ES import is not seated on a namespace at all, so
+there is nothing to walk. **The design is the generated table below**, as the
+story's title says. The id is kept because ten sibling stories carry it as a
+`deps` edge; do not implement a namespace walk on the strength of the slug.
+
 `rbModName` is `classpaths.get(klass)?.path ?? klass.name ?? null`
 (`packages/ruby-compat/src/object.ts:474`; `rbModToS` at `:444`, `rbObjClass`'s
 path read at `:460`, `Exception`'s at `exception.ts:43`, `Module#name` at
 `include.ts:245`). The JavaScript fallback is already there; the `classpaths`
-WeakMap (`packages/ruby-compat/src/classpath.ts:8`) exists only to supply the
-`::` prefix, and it is filled by `rbModConstSet` at 790 declarations.
+WeakMap (`packages/ruby-compat/src/classpath.ts:8`) supplies only the `::`
+prefix, and `rbModConstSet` fills it at 790 declarations.
 
-The prefix is derivable. All 39 namespace objects already carry their own
-fully-qualified path in `name` — `{ name: "Arel::Nodes" }`,
-`{ name: "ActiveRecord::ConnectionAdapters" }` — across the 13
-`packages/*/src/namespaces.ts` files, each of which already calls
-`registerConstant` for its root. So a seated class's path is
-`owner.name + "::" + key`.
+Once the reads become plain ES imports, most classes are not seated on a
+namespace at all, so there is nothing for a runtime derivation to walk. The
+answer is already built: `scripts/api-compare/output/rails-api.json` holds
+every Ruby class's fully-qualified name and defining file —
+`"Arel::Nodes::NotEqual": { name: "NotEqual", fqn: "Arel::Nodes::NotEqual",
+superclass: "Binary", file: "nodes/binary.rb", … }` — and `parity:api` already
+matches each TS class to that counterpart, using the name and file-path
+translations in `docs/ruby-ts-conventions.md`.
 
-An eager walk does not work: a namespace is populated as its members' modules
-evaluate, so it would run before the seats. The walk is therefore lazy and
-memoized, which is the shape CLAUDE.md § "`inherited` is deferred to
-own-property memo guards" already settles for a fact JavaScript gives no
-definition-time hook for.
+So the path becomes a generated, checked-in table per package: verified by
+`parity:api` rather than by hand, a wrong or missing path is a CI red rather
+than a silently unqualified name, and a new class costs nothing at its
+declaration.
+
+This story lands the table and the `rbModName` read before any conversion, so
+every per-package conversion can assert paths are unchanged.
 
 ## Acceptance criteria
 
-- [ ] `registerNamespace(ns)` is exported from ruby-compat and called once per
-      namespace object in each `packages/*/src/namespaces.ts`, beside the
-      existing `registerConstant` call.
-- [ ] `rbModName` resolves in order: memoized path; `const_set`-bound path;
-      derived `owner.name + "::" + key` from the first registered namespace
-      holding `klass` as an own property, memoized on hit; `klass.name`; `null`.
-- [ ] `rbModToS`, `rbObjClass`'s path read, `Module#name` and `Exception`'s
-      class-name read all go through it, and `rbPathToClass` resolves a derived
-      path.
-- [ ] `classpaths` is documented as an internal memo of a derivation. No call
-      site outside ruby-compat writes it; `rbSetClassPathString` is unaffected
-      by this story.
-- [ ] A ruby-compat test asserts a class seated by plain assignment onto a
-      registered namespace answers its qualified path, that an unseated class
-      answers `klass.name`, and that an anonymous class answers `null`.
-- [ ] arel, whose 144 seats are already helper-bound, answers identical paths
-      before and after this story — the derivation agrees with the recorded
-      table. A disagreement is a bug in the derivation, not grounds to keep the
-      write.
-- [ ] Each touched package's built `dist` modules still load as ESM entry
-      modules, per CLAUDE.md § "Call-time constant resolution".
+- [ ] A generator, beside the existing api-compare manifest tooling, writes one
+      checked-in module per package mapping each exported class to its Ruby
+      `fqn`, built from `rails-api.json` and the `parity:api` TS↔Ruby match.
+- [ ] `rbModName` resolves in order: a `const_set`-bound path; a module-eval
+      seat's path; the generated table; `klass.name`; `null`. `rbModToS`,
+      `rbObjClass`'s path read, `Module#name`, `Exception`'s class-name read and
+      `rbPathToClass` all go through it.
+- [ ] `classpaths` keeps only the `const_set` and module-eval-seat writes and
+      is documented as such; no package outside ruby-compat writes it.
+- [ ] A CI check fails when a class in a Rails-matched file has no generated
+      path, or when the generated path disagrees with a `const_set`-bound one.
+- [ ] Every path `rbModName` answers today is answered identically after this
+      story, proven by a snapshot taken on `main` before it — arel, whose 144
+      seats are all helper-bound, is the reference.
+- [ ] A ruby-compat test covers a class with a generated path, one with a
+      `const_set`-bound path, an unseated class (`klass.name`), and an
+      anonymous class (`null`).
+- [ ] No regeneration is required to run the suite: the table is committed, and
+      a stale one is a CI red, not a local build step.

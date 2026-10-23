@@ -1,11 +1,11 @@
 ---
-title: 'assertNoErrorReported fails with Minitest''s "to be empty?" message, without an assertPredicate helper'
-status: draft
+title: "activesupport: assertPredicate takes the predicate name and builds Minitest's message"
+status: closed
 updated: 2026-10-23
-rfc: "0206-minitest-port-and-assertions-to-expect"
-cluster: close-out
-packages: [activesupport]
-deps: [activesupport-index-drops-minitest-assertion-exports]
+rfc: "0158-activesupport-assertion-surfaced-port-bugs"
+cluster: null
+packages: []
+deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: owner ruled 2026-10-23 (RFC 0206) that Minitest is not ported; assert_no_error_reported's assert_predicate becomes an expect call in the Rails body (ported-rails-assertion-bodies-call-expect)"
 ---
 
 ## Context
@@ -34,21 +34,13 @@ This is not a test-side helper question: CONTRIBUTING.md § "Porting a
 Minitest assertion" (trails#9176) already ports a test's `assert_predicate` as
 `expect(o.isFoo()).toBe(true)`. It survives only because a ported Rails body,
 `assert_no_error_reported`, calls Minitest's `assert_predicate`
-(`error-reporter-assertions.ts:99`). By owner ruling (2026-10-23, RFC 0206
-§ "Assertions inside ported Rails bodies") that call becomes plain `expect`
-with Rails' message. Rehomed from 0158 on
-2026-10-23: Minitest is vendored for reference, not ported, so the
-`assertPredicate` helper is deleted by
-`activesupport-index-drops-minitest-assertion-exports`. What survives is the
-message: Rails' `assert_no_error_reported` fails with
-`"Expected [...] to be empty?"`
-(`vendor/minitest/v5.27.0/lib/minitest/assertions.rb:394-397`).
+(`error-reporter-assertions.ts:99`). Whether that internal seat stays is the
+open question in `delete-minitest-builtin-assert-helpers`; settle it first.
 
 ## Acceptance criteria
 
-- [ ] `assertNoErrorReported`'s body is `expect(reports.isEmpty(), msg).toBe(true)` (no
-      `assertPredicate` helper), where `msg` is Minitest's
-      `"Expected #{mu_pp(reports)} to be empty?"` built from the vendored
-      source.
-- [ ] `error-reporter-assertions.trails.test.ts` "fails when something is
-      reported" asserts `/to be empty\?/` again.
+- [ ] `assertPredicate` / `assertNotPredicate` accept the predicate name (the trails spelling of
+      `:empty?`) and build Minitest's "Expected … to be <op>" / "to not be <op>" message.
+- [ ] `assertNoErrorReported` passes the name, and
+      `error-reporter-assertions.trails.test.ts` "fails when something is reported" asserts
+      `/to be empty\?/` again.

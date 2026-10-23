@@ -2,7 +2,7 @@
 title: "base-constructor-assigns-associations-through-writer"
 status: blocked
 updated: 2026-10-22
-rfc: "0198-activerecord-mixin-host-typing"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

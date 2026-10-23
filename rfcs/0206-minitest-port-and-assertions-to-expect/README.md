@@ -1,6 +1,6 @@
 ---
 rfc: "0206-minitest-port-and-assertions-to-expect"
-title: "Move test code onto Vitest expect, with vitest-matchers for Ruby semantics; Minitest stays vendored as reference"
+title: "Minitest is reference only: test code and ported Rails assertion bodies use Vitest expect"
 status: draft
 created: 2026-10-22
 updated: 2026-10-23
@@ -19,21 +19,17 @@ packages:
   - rack-test
   - minitest
 clusters:
+  - rails-bodies
   - assertion-tooling
   - expect-sweeps
-  - close-out
-  - minitest-package
+priority: 2
 ---
 
-# RFC 0206 — Move test code onto Vitest expect; Minitest stays vendored as reference
+# RFC 0206 — Minitest is reference only: test code and ported Rails assertion bodies use Vitest expect
 
 > `minitest-package` (cluster) and `minitest` (package) stay declared only
-> because the four closed `FALSIFIED` stories of the first draft still carry
-> them; nothing open is in that cluster.
->
-> The slug still says `minitest-port`: the tasks CLI has no RFC rename verb,
-> and every story row is keyed on this id. The title is what changed. **Nothing
-> in this RFC ports Minitest.**
+> because the four closed stories of the first draft still carry them; nothing
+> open is in that cluster.
 
 ## Summary
 
@@ -44,28 +40,30 @@ and a hand port of most of `Minitest::Assertions`
 (`vendor/minitest/v5.27.0/lib/minitest/assertions.rb`). Test code across ten
 packages calls the Minitest half: 5,938 call sites in 392 test files.
 
-By repo-owner ruling (2026-10-23): _"I don't want minitest ported, I want it
-vendored for reference, but I just want vitest-expect assertions that help with
-porting."_ So:
+By repo-owner ruling (2026-10-23), **Minitest is not ported.** It stays
+vendored at `vendor/minitest/v5.27.0/` as reference for porters: what each
+`assert_*` checks, and what its failure says. It gets no package, no
+`parity:api` enrollment, and RFC 0098's won't-do on
+`map-vendored-minitest-and-drop-norailsequivalent` stands. Vitest is the test
+framework, and its `expect` is the assertion API.
 
-1. **Minitest is not ported.** There is no `@blazetrails/minitest` package.
-   `vendor/minitest/v5.27.0/` stays vendored as reference only — what each
-   `assert_*` checks and the failure message it builds — and it is not
-   enrolled in `parity:api`. RFC 0098's won't-do on
-   `map-vendored-minitest-and-drop-norailsequivalent` stands.
-2. **Test code uses Vitest `expect`**, by CONTRIBUTING.md § "Porting a Minitest
-   assertion": the built-in matcher by default, a
-   `@blazetrails/vitest-matchers` matcher where the built-in gives the wrong
-   answer for the value under test. vitest-matchers exists so that porting a
-   Minitest/Rails assertion is easy and faithful (Ruby truthiness, Ruby `==`,
-   Ruby `include?`, `kind_of?`); § "Matchers" proposes what it still lacks.
-3. **The Minitest half of `testing/assertions.ts` is deleted** once its callers
-   are swept, leaving Rails' `ActiveSupport::Testing::Assertions` only.
+This RFC does three things:
 
-Rails' own assertion modules call Minitest assertions inside their bodies.
-By owner ruling (2026-10-23) those calls become plain `expect` with Rails'
-message as the second argument, and the call gate credits the equivalence once
-(§ "Assertions inside ported Rails bodies").
+1. **Test code stops calling Minitest helpers and uses Vitest `expect`**, by
+   CONTRIBUTING.md § "Porting a Minitest assertion": the built-in matcher by
+   default, a `@blazetrails/vitest-matchers` matcher where the built-in gives
+   the wrong answer for the value under test. `@blazetrails/vitest-matchers`
+   exists to make porting a Minitest or Rails assertion easy and faithful
+   (Ruby truthiness, Ruby `==`, exact class, `respond_to?`, delta).
+2. **Ported Rails bodies that call a Minitest assert call `expect` too**
+   (owner ruling, 2026-10-23; § "Minitest asserts inside ported Rails
+   bodies"), and the call gate credits `assert_equal` → `expect().toEqual` once,
+   from the same table, instead of a receipt at each site.
+3. **The Minitest half of `testing/assertions.ts` is deleted**, leaving the
+   Rails file and nothing else.
+
+When it is done, no source file in the repo defines or imports a Minitest
+assertion helper.
 
 ## Motivation
 
@@ -74,16 +72,13 @@ RFC 0158 (`minitest-builtin-asserts-port-as-expect`, done) wrote the table and
 filed caller sweeps plus a deletion. Since then the helpers spread through the
 `@blazetrails/activesupport` index into activerecord, activemodel, activejob,
 globalid, arel and rack-test, and the usage grew several-fold
-(`assertPredicate`: 22 files then, 99 now). RFC 0158's six
-`minitest-asserts-to-expect-*-callers` sweeps and
-`delete-minitest-builtin-assert-helpers` are closed as superseded by this RFC
-(2026-10-23), so the sweep and the deletion have one owner.
+(`assertPredicate`: 22 files then, 99 now).
 
-A hand-ported Minitest that test code imports is a second assertion library
-beside Vitest's, with its own failure messages and its own counter, scored as
-`@noRailsEquivalent` surface in a file that mirrors a different `.rb`. Porters
-need to know what `assert_includes` _means_; they read that in the vendored
-source and write the matching `expect`.
+The deletion could not land as written, because Rails' own testing modules
+call Minitest built-ins inside their bodies (measured below), and deleting the
+helpers would leave those bodies with nothing to call. That is the question
+this RFC settles: those bodies call `expect`, and the call gate knows that an
+`expect` chain is the port of a Minitest assert.
 
 ### Measurements
 
@@ -133,39 +128,69 @@ assumed (results quoted in the table).
 
 ## Design
 
-### The line through `testing/assertions.ts`
+### Minitest asserts inside ported Rails bodies
 
-**Stays in activesupport, at its Rails name:** `assertNot`, `assertRaises`
-(and its `assertRaise` alias), `assertNothingRaised`, `assertDifference`,
-`assertNoDifference`, `assertChanges`, `assertNoChanges`,
-`_assertNothingRaisedOrWarn`, `_callableToSourceString`, and `UNTRACKED` —
-`ActiveSupport::Testing::Assertions`
-(`vendor/rails/v8.0.2/activesupport/lib/active_support/testing/assertions.rb:21-252`).
-Likewise `MethodCallAssertions` and `ErrorReporterAssertions` are Rails files
-and stay.
+Ruled by the repo owner on 2026-10-23.
 
-**Deleted, once callers are swept:** the 22 test-facing Minitest helpers in the
-table below, plus `diff` and `message`
-(`vendor/minitest/v5.27.0/lib/minitest/assertions.rb:57,632`), and their
-re-exports from `packages/activesupport/src/index.ts` (around `:598-639`). How
-the Rails bodies that call them are written afterwards is § "Assertions inside ported Rails bodies".
+Rails' testing modules call Minitest from their Ruby bodies:
+`assertions.rb` calls `assert` (5), `assert_equal` (2), `refute_equal` (1),
+`assert_nil` (1), `assert_match` (1), `message` (27), `diff` (3), `mu_pp` (1);
+`method_call_assertions.rb` calls `assert_equal` (2) and `assert_mock` (1);
+`error_reporter_assertions.rb` calls `assert` (2), `assert_equal` (3) and
+`assert_predicate` (2). Eleven other non-test files that mirror Rails
+assertion modules call them too:
+`actionpack/src/action-dispatch/testing/assertions/routing.ts`,
+`actionview/src/testing/selector-assertions.ts`,
+`actionview/src/testing/selector-assertions/html-selector.ts`,
+`actionview/src/testing/dom-assertions.ts`, `activemodel/src/lint.ts`,
+`activerecord/src/testing/query-assertions.ts`,
+`activerecord/src/encryption/test-helpers.ts`, and five
+`activesupport/src/cache/behaviors/*-behavior.ts`.
 
-**Out of scope:** the Minitest runner classes that sit in activesupport today
-(`Assertion`, `Skip`, `UnexpectedError`, `BacktraceFilter`, `Test`, the
-`Minitest` module; `vendor/minitest/v5.27.0/lib/minitest.rb:1035-1190`,
-`lib/minitest/test.rb:10`) and `Mock` / `stub` / `assertMock`
-(`lib/minitest/mock.rb`). `ActiveSupport::TestCase`, `autorun.ts`,
-`setup-and-teardown.ts` and `tests-without-assertions.ts` read them, and their
-fate is a separate decision (Open question 2). This RFC neither moves nor
-deletes them.
+**Each such call is written as Vitest `expect`, the same spelling a test
+uses, chosen by the per-helper table below.** A failed `expect` throws an
+`AssertionError`, which is the role `Minitest::Assertion` plays: it fails the
+running `it`, and it propagates out of the Rails method unchanged. The Minitest
+`msg` argument is `expect`'s second argument, which Vitest prefixes to the
+failure text as Minitest prefixes `msg`:
+
+```ts
+// assert_difference: assert_equal(before + diff, after, error)
+expect(after, error).toEqual(before + diff);
+// assert_no_error_reported: assert_predicate(reports, :empty?, msg)
+expect(reports, msg).toHaveLength(0);
+// ActiveModel::Lint::Tests: assert_respond_to(model, :to_key)
+expect(model).toRespondTo("toKey");
+```
+
+Minitest's message machinery (`message`, `diff`, `mu_pp`) has no separate
+port. Where a Rails body builds a message with `message(msg) { ... }`, the
+string is built in place (`rbInspect` where Ruby's `mu_pp` inspects) and
+handed to `expect`.
+
+The Rails methods themselves (`assertDifference`, `assertChanges`,
+`assertRaises`, `assertQueries`, `assertSelect`, …) keep their Rails names and
+stay ported Rails API, called from tests exactly as now.
+
+**The call gate credits the equivalence once.** A Rails body that calls
+`assert_equal` and a TS body that calls `expect(...).toEqual` is not a missing
+call. `parity:api:calls` reads the same Minitest → matcher mapping as
+CONTRIBUTING.md § "Porting a Minitest assertion" and
+`scripts/test-compare/assertion-kinds.ts` (one table, not two), and counts an
+`expect` chain ending in a mapped matcher as making the Minitest call. Minitest's
+message machinery (`message`, `diff`, `mu_pp`) is credited by the same
+mapping as folded into `expect`'s message argument. No `@missingRailsCall`
+receipt and no baseline row is written for any of these. That is story
+`call-gate-credits-minitest-asserts-as-expect`, and it lands before the bodies
+are converted.
 
 ### Per-helper disposition
 
-For test code. Ported Rails bodies are § "Assertions inside ported Rails bodies". Three
+For test code, and for the ported Rails bodies in § "Minitest asserts inside ported Rails bodies". Three
 dispositions: **built-in** (a Vitest matcher means the same for every value it
 is used on), **matcher** (the built-in is wrong for some values and a
 `@blazetrails/vitest-matchers` matcher covers them, existing or proposed in
-§ "Matchers"), **delete** (the export goes away). "Gate" is the
+§ "Matchers"), **delete** (the test-facing export goes away). "Gate" is the
 `parity:test:assertions` kind the rewrite scores, against the kind
 `scripts/test-compare/assertion-kinds.ts` gives the Rails assertion.
 
@@ -184,7 +209,7 @@ is used on), **matcher** (the built-in is wrong for some values and a
 | `assertNotEmpty`     |    37 |    93 | built-in + existing | `.not.toHaveLength(0)` / `.not.toBeEmpty()`                                                                                                                         | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `notEmpty` → `notEmpty` (after the tooling story for `toHaveLength`)                                                                              |
 | `assertRespondTo`    |    49 |   171 | existing            | `toRespondTo("m")`                                                                                                                                                  | CONTRIBUTING's built-in is `expect(typeof o.m).toBe("function")`, which misses a name answered by `respond_to_missing?` and scores `equal`, never `respondTo`. `toRespondTo` is `rbObjRespondTo` and scores `respondTo`, so it is the one spelling that both answers right and keeps the kind                                                                                                                                            | `respondTo` → `respondTo`                                                                                                                         |
 | `assertNotRespondTo` |    31 |   104 | existing            | `.not.toRespondTo("m")`                                                                                                                                             | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `notRespondTo` → `notRespondTo`                                                                                                                   |
-| `assertIncludes`     |    24 |    79 | matcher             | `toInclude(o)` (Array, String, Set, Hash/`Map` key); `toContain` for a primitive in an Array or String                                                              | Minitest is `collection.include?(o)` (`assertions.rb:260`): `Array#include?` uses `==` and `Hash#include?` reads keys. `toInclude` is that (`rbEqual` per element, `hashHas` for a Hash). `toContainEqual` is structural and `toContain` on a `Map` ignores keys (probe)                                                                                                                                                                 | `includes` → `includes` once `vitest-matchers-to-include-scores-includes` lands                                                                   |
+| `assertIncludes`     |    24 |    79 | matcher             | `toInclude(o)` (Array, String, Set, Hash/`Map` key); `toContain` for a primitive in an Array or String                                                              | Minitest is `collection.include?(o)` (`assertions.rb:260`): `Array#include?` uses `==`, `Hash#include?` reads keys. `toInclude` is that (`rbEqual` per element, `hashHas` for a Hash). `toContainEqual` is structural and `toContain` on a `Map` ignores keys (probe)                                                                                                                                                                    | `includes` → `includes` once `vitest-matchers-to-include-scores-includes` lands                                                                   |
 | `assertNotIncludes`  |    11 |    19 | matcher             | `.not.toInclude(o)`                                                                                                                                                 | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `excludes` → `excludes` (same story)                                                                                                              |
 | `assertKindOf`       |    17 |    53 | built-in + matcher  | object of a class: `toBeInstanceOf(cls)`; primitive or module: `toBeKindOf(cls)`                                                                                    | The helper boxes (`Object(obj) instanceof cls`, `assertions.ts:953`); `toBeInstanceOf(String)` on `"x"` fails (probe), and a module in the ancestry is not an `instanceof`                                                                                                                                                                                                                                                               | `kindOf` → `kindOf`                                                                                                                               |
 | `assertNotKindOf`    |     1 |     5 | built-in + matcher  | `.not.toBeInstanceOf(cls)` / `.not.toBeKindOf(cls)`                                                                                                                 | as above; Minitest's `refute_kind_of` (`:721`)                                                                                                                                                                                                                                                                                                                                                                                           | no mapped kind either side: unchanged                                                                                                             |
@@ -193,10 +218,15 @@ is used on), **matcher** (the built-in is wrong for some values and a
 | `assertNotSame`      |     4 |     6 | built-in            | `.not.toBe(exp)`                                                                                                                                                    | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `notSame` → `notEqual`, folded                                                                                                                    |
 | `assertInDelta`      |     8 |    12 | existing            | `toBeWithinDelta(exp, delta)`                                                                                                                                       | `toBeCloseTo`'s digit count cannot say "within 0.001"                                                                                                                                                                                                                                                                                                                                                                                    | `inDelta` → `inDelta`                                                                                                                             |
 | `assertOperator`     |     2 |     3 | built-in            | `toBeGreaterThan` / `toBeLessThan` / `…OrEqual`                                                                                                                     | All three sites compare numbers. A Comparable non-number (`Time`, `Duration`) would need `expect(a.compareTo(b))…`; none exists today                                                                                                                                                                                                                                                                                                    | `operator` → `operator`                                                                                                                           |
-| `diff`, `message`    |   n/a |   n/a | delete              | none in test code; in Rails bodies, § "Assertions inside ported Rails bodies"                                                                                       | machinery; test code never calls them                                                                                                                                                                                                                                                                                                                                                                                                    | n/a                                                                                                                                               |
 
-Every one of the 22 helpers is then deleted from activesupport
-(`activesupport-index-drops-minitest-assertion-exports`).
+Bucket counts over the 22 test-facing helpers: **built-in 8** (`assertNil`,
+`assertNotNil`, `assertMatch`, `assertNoMatch`, `assertSame`, `assertNotSame`,
+`assertOperator`, and `assertNotKindOf` for an object), **built-in by default
+with a matcher fallback 8** (`assertEqual`, `assertNotEqual`,
+`assertPredicate`, `assertNotPredicate`, `assert`, `assertEmpty`,
+`assertNotEmpty`, `assertKindOf`), **matcher always 6** (`assertRespondTo`,
+`assertNotRespondTo`, `assertInstanceOf`, `assertInDelta`, `assertIncludes`,
+`assertNotIncludes`). Two matchers are new or newly scored (§ "Matchers").
 
 ### Matchers
 
@@ -270,75 +300,6 @@ those kinds are not value-bearing. It absorbs 0127's
 "assert_instance_of"`, re-scored with `as:`), so no receipt changes. A sweep
 that finds a receipt now wrong for the new spelling fixes it in the same PR.
 
-### Order of work
-
-1. Tooling, independent and first: `assertion-kinds-reads-literal-matcher-arguments`,
-   `vitest-matcher-to-be-kind-of`, `vitest-matchers-to-include-scores-includes`,
-   `call-gate-credits-minitest-asserts-as-expect`, then
-   `vitest-matchers-readme` (which documents the final set).
-2. The 24 `expect-sweep-*` stories, each depending on
-   `assertion-kinds-reads-literal-matcher-arguments` and the two matcher
-   stories. Each is a whole-file sweep over a measured bin of at most 300 call
-   sites (about 600 LOC), smallest blast radius first:
-   `expect-sweep-gem-packages`, then activejob, trailties, activemodel,
-   activesupport, actionview, activerecord, actionpack.
-3. `activesupport-index-drops-minitest-assertion-exports` rewrites the Rails
-   bodies to `expect(value, msg)` and deletes the helpers. It depends on every
-   sweep and on the call-gate story; then
-   `assert-predicate-takes-the-predicate-name-and-builds-minitests-message`.
-
-### Assertions inside ported Rails bodies (decided, owner 2026-10-23)
-
-Rails' testing modules call Minitest assertions in their own bodies. Without a
-Minitest port, and with the activesupport helpers deleted, these bodies are
-written as below. Sites (trails file:line, measured 2026-10-23 on `704e2fb347`):
-
-| trails file                                                                                                                                                                                 | Rails source                                                                        | Minitest calls in the Ruby body                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `activesupport/src/testing/assertions.ts:310-551` (`assertNot`, `assertRaises`, `assertDifference`, `assertNoDifference`, `assertChanges`, `assertNoChanges`, `_assertNothingRaisedOrWarn`) | `activesupport/lib/active_support/testing/assertions.rb`                            | `assert` 5, `assert_equal` 2, `refute_equal` 1, `assert_nil` 1, `assert_match` 1, `message` 27, `diff` 3, `mu_pp` 1 |
-| `activesupport/src/testing/method-call-assertions.ts:102,201`                                                                                                                               | `method_call_assertions.rb`                                                         | `assert_equal` 2, `assert_mock` 1                                                                                   |
-| `activesupport/src/testing/error-reporter-assertions.ts:99,112,123`                                                                                                                         | `error_reporter_assertions.rb`                                                      | `assert` 2, `assert_equal` 3, `assert_predicate` 2                                                                  |
-| `activesupport/src/testing/deprecation.ts:29,32,48`                                                                                                                                         | `testing/deprecation.rb`                                                            | `assert`, `assert_equal`                                                                                            |
-| `activemodel/src/lint.ts` (18 sites, `:8-76`)                                                                                                                                               | `active_model/lint.rb`                                                              | `assert_respond_to`, `assert`, `assert_equal`, `assert_kind_of`                                                     |
-| `activerecord/src/testing/query-assertions.ts:59,64,95,100`                                                                                                                                 | `active_record/testing/query_assertions.rb`                                         | `assert`                                                                                                            |
-| `actionpack/src/action-dispatch/testing/assertions/routing.ts:198,205,231,234`                                                                                                              | `action_dispatch/testing/assertions/routing.rb`                                     | `assert_equal`, `message`                                                                                           |
-| `actionview/src/testing/dom-assertions.ts:20`, `selector-assertions.ts:42,110-113`, `selector-assertions/html-selector.ts:75`                                                               | rails-dom-testing `dom_assertions.rb`, `selector_assertions.rb`, `html_selector.rb` | `assert`, `assert_equal`, `assert_operator`, `diff`                                                                 |
-| `activerecord/src/encryption/test-helpers.ts:365-441`                                                                                                                                       | `activerecord/test/cases/encryption/helper.rb`                                      | `assert_equal`, `assert_not_equal`                                                                                  |
-
-The five `activesupport/src/cache/behaviors/*-behavior.ts` files mirror Rails
-_test_ support (`activesupport/test/cache/behaviors/`) and are swept like any
-test file.
-
-**Ruling (Dean, 2026-10-23):**
-
-1. A ported Rails body that calls a Minitest assert uses plain Vitest `expect`,
-   with Rails' message as the second argument. A failed `expect` throws Vitest's
-   `AssertionError`, which plays the role of `Minitest::Assertion`.
-   - `assert_difference`'s inner `assert_equal` →
-     `expect(after, error).toEqual(before + diff)`
-   - `assert_no_error_reported`'s `assert_predicate` →
-     `expect(reports.isEmpty(), msg).toBe(true)`, or a vitest-matchers matcher
-     where Ruby truthiness matters
-   - `ActiveModel::Lint::Tests`' `assert_respond_to` →
-     `expect(rbObjRespondTo(model, "toKey")).toBe(true)`
-
-   `message { … }` / `diff` / `mu_pp` compositions are inlined as the string
-   they build, read off the vendored source (`assertions.rb:57`, `:632`, `:127`); the
-   call-gate story credits those three Minitest message builders as inlined,
-   the same once-only way. The ActiveSupport assertions
-   themselves (`assertDifference`, `assertChanges`, …) keep their Rails names,
-   stay ported Rails API, and are called from tests as they are now.
-
-2. **The call gate credits the equivalence once, not per site.**
-   `parity:api:calls` reads the same Minitest→`expect` mapping as
-   CONTRIBUTING.md § "Porting a Minitest assertion" — the table
-   `scripts/test-compare/assertion-kinds.ts` already encodes (`RAILS_MAP` /
-   `TRAILS_MAP`) — so `assert_equal` → `expect(…).toEqual` counts as making
-   the call. No `@missingRailsCall` receipts, no baseline rows. Story:
-   `call-gate-credits-minitest-asserts-as-expect` (assertion-tooling).
-3. Rejected: see Alternatives (matcher-recast ActiveSupport assertions;
-   module-private helpers).
-
 ### What a sweep must not do
 
 - **Never touch a `describe` / `it` string.** Test names are how `parity:test`
@@ -361,98 +322,99 @@ test file.
 
 ## Non-goals
 
-- **Porting Minitest**, as a package or otherwise. Rejected by the repo owner
-  (2026-10-23). `vendor/minitest/v5.27.0/` is reference, with `compareApi` and
-  `compareTests` both `false` in `vendor/sources.ts`.
+- **Porting Minitest**, as a package or as module-private helpers. Ruled out by
+  the repo owner (2026-10-23). `vendor/minitest/v5.27.0/` is reference only.
 - **The `ActiveSupport::Testing::Assertions` half.** Ported Rails API at its
-  Rails names; it stays (memory "Assert helper home is as testing assertions
-  not minitest").
-- **The runner classes and `Mock` / `stub`.** See § Design, "Out of scope".
-- **A `toBeNil` matcher.** Ruled out by the repo owner (2026-10-22).
-- **Changing CONTRIBUTING.md's table.** Ratified. The sweeps follow it; the
-  two matcher stories add rows to it, they do not change existing ones.
+  Rails names, matched by `parity:api` against `assertions.rb`; it stays where
+  it is.
+- **Minitest's runner and mock classes** (`Minitest::Test`, `Runnable`,
+  `Assertion`, `Mock`, `Object#stub`) that trails' `ActiveSupport::TestCase`,
+  `testing/autorun.ts` and `method-call-assertions.ts` lean on today. They are
+  the same question as this RFC (Minitest is not ported; Vitest is the runner),
+  but each needs its own Vitest-shaped answer; see Open questions.
+- **A `toBeNil` matcher.** Ruled out by the repo owner (2026-10-22): `nil` maps
+  to the JS value the port produces.
+- **Changing CONTRIBUTING.md's table.** Ratified. The gates are taught to agree
+  with it.
 
 ## Alternatives considered
 
+- **Port Minitest as `@blazetrails/minitest`**, enrolled in `parity:api`, with
+  ported Rails bodies importing their asserts from it (this RFC's first draft,
+  2026-10-22). Rejected by the repo owner (2026-10-23): Minitest is reference
+  for porting, not a framework trails runs on.
 - **Recast the ActiveSupport assertions as Vitest matchers**
-  (`expect(fn).toChange(...)` for `assert_difference` / `assert_changes`).
-  Rejected by the repo owner (2026-10-23): it drops the Rails names.
-- **Module-private `assertEqual`-style helpers** in each Rails-mirroring file,
-  so the call gates credit the call by name. Rejected by the repo owner
-  (2026-10-23): it is the Minitest port again under another name.
-- **Per-call `@missingRailsCall … PERMANENT` receipts** (about 90). Rejected
-  (2026-10-23): the gate credits the mapping once instead.
-
-- **Port Minitest as its own package (`@blazetrails/minitest`), enrolled in
-  `parity:api`, with ported Rails bodies importing from it.** This RFC's first
-  draft (2026-10-22). **Rejected by the repo owner 2026-10-23**: Minitest is
-  vendored for reference, not ported. Its stories
-  (`minitest-package-ports-assertions-rb`, `-mock`, `-runner-classes`,
-  `ported-rails-assertion-modules-import-minitest`) are closed `FALSIFIED`.
+  (`await expect(fn).toChange(() => Post.count(), 1)`). Natural Vitest, but it
+  drops the Rails names `assert_difference` / `assert_changes`, which a Rails
+  dev would not recognise. Rejected (2026-10-23).
+- **Module-private `assertEqual`-style helpers** kept beside the Rails bodies
+  that call them. That is the Minitest port again under another name. Rejected
+  (2026-10-23).
+- **A `@missingRailsCall` receipt at each Rails body's Minitest call.** Dozens
+  of receipts for one fact. The mapping table already states the fact once.
 - **Keep the Minitest half in activesupport, unexported from the index.**
-  Leaves uncredited `@noRailsEquivalent` surface in a file that mirrors a
-  different `.rb`, and a second assertion library beside Vitest's. Rejected
-  (2026-10-22).
+  Leaves uncredited extra surface in a file that mirrors a different `.rb`.
 - **"No new matcher".** The first draft held the seven existing matchers
   sufficient. Re-measured against Rails' usage (464 `assert_kind_of`, 700
   `assert_includes`), two gaps remain; see § "Matchers".
-- **Per-helper sweeps across the tree.** Each file touched up to a dozen times.
-  Whole-file, per-package bins touch each file once.
+- **Per-helper sweeps across the tree.** Each file would be touched up to a
+  dozen times and every PR would cross packages. Whole-file, per-package bins
+  touch each file once.
 
-## Rollout
+## Order of work
 
-1. Tooling — `assertion-kinds-reads-literal-matcher-arguments`,
+1. Tooling, independent, may land first:
+   `assertion-kinds-reads-literal-matcher-arguments`,
+   `call-gate-credits-minitest-asserts-as-expect`,
    `vitest-matcher-to-be-kind-of`, `vitest-matchers-to-include-scores-includes`,
-   `call-gate-credits-minitest-asserts-as-expect`, `vitest-matchers-readme`
-2. Sweeps — `expect-sweep-gem-packages`, `expect-sweep-activejob`,
-   `expect-sweep-trailties`, `expect-sweep-activemodel-1`, `-2`,
-   `expect-sweep-activesupport-1`, `-2`, `expect-sweep-actionview-1`, `-2`,
-   `expect-sweep-activerecord-1` … `-5`, `expect-sweep-actionpack-1` … `-10`
-3. Close-out —
-   `activesupport-index-drops-minitest-assertion-exports`,
-   `assert-predicate-takes-the-predicate-name-and-builds-minitests-message`
+   then `vitest-matchers-readme` (which documents the final set).
+2. `ported-rails-assertion-bodies-call-expect`: the three activesupport Rails
+   files and the eleven Rails-mirroring files above, after the call-gate story.
+3. The 24 `expect-sweep-*` stories, each after
+   `assertion-kinds-reads-literal-matcher-arguments` and the two matcher
+   stories. Each is a whole-file sweep
+   over a measured bin of at most 300 call sites (about 600 LOC), smallest
+   blast radius first: `expect-sweep-gem-packages`, then activejob, trailties,
+   activemodel, activesupport, actionview, activerecord, actionpack.
+4. Close-out: `activesupport-index-drops-minitest-assertion-exports`, after every sweep and the
+   bodies story.
 
 ## Verification
 
 - The import-resolved count in § Measurements reaches **0 call sites in 0 test
   files** (from 5,938 in 392).
 - `packages/activesupport/src/testing/assertions.ts` exports only the Rails
-  members listed in § Design, and none of the 22 Minitest helper names or
-  `diff` / `message` is exported from `@blazetrails/activesupport`.
-- No `packages/minitest` exists, and `vendor/sources.ts` has `compareApi:
-false` for minitest.
-- `pnpm parity:api:calls` / `parity:api:calls:args` green after the close-out,
-  through `call-gate-credits-minitest-asserts-as-expect`, with no new receipt
-  or baseline row.
+  members (`assertNot`, `assertRaises` / `assertRaise`,
+  `assertNothingRaised`, `assertDifference`, `assertNoDifference`,
+  `assertChanges`, `assertNoChanges`, `_assertNothingRaisedOrWarn`,
+  `_callableToSourceString`, `UNTRACKED`), and has no
+  `@noRailsEquivalent PERMANENT` tag.
+- `rg -l "\b(assertEqual|assertNil|assertPredicate|assertMatch)\(" packages/*/src`
+  is empty.
+- `pnpm parity:api:calls` and `pnpm parity:api:calls:args` green with no new
+  baseline rows and no `@missingRailsCall` naming a Minitest assert.
 - `pnpm parity:test:assertions` green at every step, with the `kind` counter
   never rising.
 
 ## Open questions
 
-1. **The Minitest runner classes in activesupport** (`Assertion`, `Skip`,
-   `UnexpectedError`, `BacktraceFilter`, `Test`, `Minitest`, `Mock`, `stub`).
-   They are a partial Minitest port that `ActiveSupport::TestCase` (`< Minitest::Test`)
-   and `autorun.ts` stand on. Under the 2026-10-23 ruling they are presumably
-   to go too, onto Vitest's runner; that is a larger change than this RFC and
-   needs its own RFC if Dean wants it. Not filed.
-2. **RFC 0158's nil/kind-of drafts** (`assert-nil-sweep-activerecord-*`,
-   `assert-nil-to-be-undefined-ports`, `shared-assert-kind-of-helper`) move
-   test code toward helpers this RFC deletes. Recommendation: close as
-   superseded when this RFC is activated. 0127's
-   `assert-empty-table-disagrees-with-kind-gate` is absorbed by
-   `assertion-kinds-reads-literal-matcher-arguments`.
+1. **Minitest's runner and mock classes.** `Minitest::Test` / `Runnable` /
+   `Assertion` (leaned on by `test-case.ts`, `testing/autorun.ts`,
+   `setup-and-teardown.ts`) and `Mock` / `stub` / `assert_mock`
+   (`method-call-assertions.ts`, 11 + 3 test files) are Minitest code living in
+   activesupport. Under this ruling they are not ported either; the natural
+   Vitest answers are Vitest's own lifecycle and `vi.fn` / `vi.spyOn`. Their
+   existing stories (0158 `minitest-object-stub-has-no-exported-port`,
+   `minitest-test-run-returns-the-test-not-result-from`) should be re-read
+   against this ruling. Decided by the repo owner; not in this RFC's scope.
 
 ## Changelog
 
-- 2026-10-23 — Owner ruled on assertions inside ported Rails bodies: plain
-  `expect(value, msg)`, credited once by the call gate; added
-  `call-gate-credits-minitest-asserts-as-expect`; matcher-recast and
-  module-private-helper alternatives recorded as rejected.
-
-- 2026-10-23 — Rewritten after the owner ruled Minitest is vendored for
-  reference, not ported. Dropped the `@blazetrails/minitest` package and its
-  cluster (four stories closed `FALSIFIED`); dropped the "reverses RFC 0098"
-  framing; added § "Matchers" (two matcher stories), § "Assertions inside ported Rails bodies", and
-  the deletion close-out; RFC 0158's overlapping sweeps and deletion closed as
-  superseded, `assert-predicate-takes-…` rehomed here.
-- 2026-10-22 — First draft (package port).
+- 2026-10-22: initial RFC (port Minitest as a package)
+- 2026-10-23: rewritten by owner ruling. Minitest is vendored reference only;
+  ported Rails bodies call `expect`; the call gate credits the mapping; the
+  `minitest-package` cluster is closed.
+- 2026-10-23: added § "Matchers" (`toBeKindOf`; `toInclude` / `toHaveKey`
+  scored as `includes`) with two assertion-tooling stories; the sweeps depend
+  on them. RFC 0158's six `minitest-asserts-to-expect-*-callers` sweeps and
+  `delete-minitest-builtin-assert-helpers` closed as superseded by this RFC.

@@ -1,6 +1,6 @@
 ---
 title: "Ported Rails assertion modules import Minitest from @blazetrails/minitest"
-status: draft
+status: closed
 updated: 2026-10-23
 rfc: "0206-minitest-port-and-assertions-to-expect"
 cluster: minitest-package
@@ -13,6 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "FALSIFIED: owner ruled 2026-10-23 that minitest is vendored for reference only, not ported"
 ---
 
 ## Context

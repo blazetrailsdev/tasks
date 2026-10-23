@@ -1,6 +1,6 @@
 ---
 title: "Sweep actionview (part 2 of 2) onto Vitest expect"
-status: draft
+status: ready
 updated: 2026-10-23
 rfc: "0206-minitest-port-and-assertions-to-expect"
 cluster: expect-sweeps

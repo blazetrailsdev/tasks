@@ -2,7 +2,7 @@
 title: "has-many-through-collection-inverse-sends-reader-append"
 status: blocked
 updated: 2026-10-21
-rfc: "0198-activerecord-mixin-host-typing"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

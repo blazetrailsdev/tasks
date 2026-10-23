@@ -1,58 +1,52 @@
 ---
-title: "parity:api:calls credits a Minitest assert in a Rails body as its CONTRIBUTING.md expect form"
+title: "Call gate credits a Minitest assert in a Rails body as its expect matcher"
 status: draft
 updated: 2026-10-23
 rfc: "0206-minitest-port-and-assertions-to-expect"
 cluster: assertion-tooling
-packages: []
-deps: [assertion-kinds-reads-literal-matcher-arguments]
+packages: ["activesupport"]
+deps: []
 deps-rfc: []
-est-loc: 200
+est-loc: 250
 priority: null
 pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: null
 ---
 
 ## Context
 
-Owner ruling (Dean, 2026-10-23; RFC 0206 § "Assertions inside ported Rails
-bodies"): a ported Rails body that calls a Minitest assert writes plain
-`expect(value, msg)`, and the call gate credits that equivalence **once**, not
-at each call site. Today `parity:api:calls` (`scripts/api-compare/lint-calls.ts`)
-would report `assert_equal` missing from `assertDifference` once the
-`assertEqual` helper is gone, because the TS body calls `expect` / `toEqual`.
+RFC 0206, owner ruling 2026-10-23: a ported Rails body that calls a Minitest
+assert is written as Vitest `expect` (§ "Minitest asserts inside ported Rails
+bodies"). Today `parity:api:calls` would report each such Rails call
+(`assert_equal`, `assert_nil`, `assert_predicate`, `assert_respond_to`,
+`assert_match`, `assert`, `refute_equal`, `assert_mock`, and the message
+machinery `message` / `diff` / `mu_pp`) as missing, because the TS body calls
+`expect(...)` and a matcher instead.
 
-Sites the mapping must credit: `packages/activesupport/src/testing/assertions.ts:310-551`,
-`method-call-assertions.ts`, `error-reporter-assertions.ts`, `deprecation.ts`,
-`packages/activemodel/src/lint.ts`, `packages/activerecord/src/testing/query-assertions.ts`,
-`packages/actionpack/src/action-dispatch/testing/assertions/routing.ts`,
-actionview's `dom-assertions.ts` / `selector-assertions.ts` /
-`selector-assertions/html-selector.ts`, `packages/activerecord/src/encryption/test-helpers.ts`.
-
-The Minitest→`expect` table is CONTRIBUTING.md § "Porting a Minitest
-assertion", encoded for the test comparison as `RAILS_MAP` / `TRAILS_MAP` in
-`scripts/test-compare/assertion-kinds.ts`.
+The Minitest → matcher mapping already exists twice: CONTRIBUTING.md
+§ "Porting a Minitest assertion" (prose table) and
+`scripts/test-compare/assertion-kinds.ts` (`RAILS_MAP` / `TRAILS_MAP`,
+`:263-269`, `:367-382`), which the assertion-kind gate uses on test files.
+Rails' own sites: `vendor/rails/v8.0.2/activesupport/lib/active_support/testing/assertions.rb`,
+`method_call_assertions.rb`, `error_reporter_assertions.rb`, plus the eleven
+Rails-mirroring files listed in the RFC.
 
 ## Acceptance criteria
 
-- [ ] `parity:api:calls` credits a Ruby call to a Minitest assert
-      (`assert`, `assert_equal`, `refute_equal`, `assert_nil`, `assert_match`,
-      `assert_predicate`, `assert_respond_to`, `assert_kind_of`,
-      `assert_operator`, … and `refute_*`) when the TS body has an
-      `expect(...)` chain whose terminal matcher maps to the same kind, by
-      reading `assertion-kinds.ts`'s maps — one shared source, no second table.
-- [ ] Minitest's message builders `message`, `diff` and `mu_pp`
-      (`vendor/minitest/v5.27.0/lib/minitest/assertions.rb:57`, `:632`,
-      `:127`), which Rails bodies call 27, 3 and 1 times in `assertions.rb`
-      alone and which the ruling inlines as strings, are credited once by
-      the same mechanism (a ruling-cited `SKIP_CALLS` group in
-      `lint-calls.ts`), not per site.
-- [ ] `parity:api:calls:args` does not report the `expect` form as an
-      argument-shape row for those calls.
-- [ ] No `@missingRailsCall` receipt and no baseline row is added for this;
-      any existing row it makes stale is deleted and the mark tightened.
-- [ ] Unit tests in `scripts/api-compare/` cover a credited `assert_equal` →
-      `toEqual`, a negated `refute_equal` → `.not.toEqual`, and a non-matching
-      matcher that stays reported.
+- [ ] The call-set gate (`scripts/api-compare/lint-calls.ts`) credits a Ruby
+      call to a Minitest assert when the TS body has an `expect(...)` chain
+      whose terminal matcher maps to that assert's kind, reading the mapping
+      from `assertion-kinds.ts` (one table; no second copy).
+- [ ] `message`, `diff` and `mu_pp` are credited as folded into `expect`'s
+      message argument (an `expect(x, msg)` call with two arguments), not
+      requiring a separate call.
+- [ ] The call-argument gate (`parity:api:calls:args`) does not pair a
+      Minitest assert site against an `expect` site as an args mismatch.
+- [ ] Unit tests in `scripts/api-compare/` cover: a mapped pair credited, an
+      unmapped matcher not credited, a negated matcher (`.not.toEqual`)
+      crediting `refute_equal`.
+- [ ] No `@missingRailsCall` receipt or baseline row is added for a Minitest
+      assert anywhere.

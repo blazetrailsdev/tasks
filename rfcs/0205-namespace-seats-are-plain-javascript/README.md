@@ -1,9 +1,9 @@
 ---
 rfc: "0205-namespace-seats-are-plain-javascript"
-title: "A namespace seat is a plain JavaScript assignment: remove rbModConstSet from every site Rails does not const_set"
-status: active
+title: "Lean on ES imports: namespace seating survives only where module evaluation order needs it"
+status: draft
 created: 2026-10-22
-updated: 2026-10-23
+updated: 2026-10-22
 owner: "@deanmarano"
 packages:
   - "ruby-compat"
@@ -35,215 +35,236 @@ related-rfcs:
 priority: 2
 ---
 
-# RFC 0205 — A namespace seat is a plain JavaScript assignment
+# RFC 0205 — Lean on ES imports
 
 ## Summary
 
-Seating a class on its namespace object is spelled
-`rbModConstSet(Owner, "Name", Klass)` in 790 places across 407 files. The
-operation underneath is `Owner.Name = Klass` — one JavaScript property
-assignment — and the helper's only other effect is a write into a
-`classpaths` WeakMap so `rbModName` answers `"Arel::Nodes::Not"` rather than
-JavaScript's own `"Not"`.
+A class reaches another class through a namespace object — `new Nodes.Not(this)`,
+`ActiveRecord.Base`, `Tags.PasswordField` — seated there by
+`rbModConstSet(Owner, "Name", Klass)` at 790 call sites in 407 files. The
+mechanism exists to give trails Ruby's call-time constant resolution, because
+an eager ESM `import` would close a load-order cycle.
 
-Rails calls `const_set` in **18 places** in the whole vendored tree. We call
-our port of it in **790**. The 772-site difference is not fidelity; it is a
-registration protocol trails invented, mandated in CLAUDE.md, and is still
-actively converging plain JavaScript assignments _into_.
+**ESM already provides call-time resolution inside a function body.** An
+`import` binding is live and is read when the expression runs, not when the
+module is evaluated, so `import { Not } from "./unary.js"` used inside a method
+is resolved at call time — exactly what Ruby's autoload bought Rails — and is
+safe even when the two modules are in a cycle. The TDZ failure the namespace
+objects were built to avoid happens only for a read evaluated _while the module
+body runs_: an `extends` clause, a top-level call, a top-level `new`.
 
-This RFC reverses that. The qualified Ruby path is kept — it is real Rails
-behaviour, visible in `inspect`, error messages, STI type columns and i18n
-keys — but it is **derived** from facts the port already holds instead of
-registered at every declaration. The 39 namespace objects each already carry
-their own fully-qualified path in `name` (`{ name: "Arel::Nodes" }`), so a
-seated class's path is `owner.name + "::" + key`: 39 facts in 13 files replace
-790 calls in 407. `rbModConstSet` survives only where the Rails body itself
-says `const_set`.
+Measured across all 15 packages:
 
-## Why this is wrong today
+| namespace reads                                                        | count   |
+| ---------------------------------------------------------------------- | ------- |
+| deferred — inside a function or method body, safe as a plain ES import | **631** |
+| module-eval — `extends` clause or top-level statement                  | **55**  |
+
+And of those 55, 8 are TypeScript type positions (`T extends
+Nodes.UpdateStatement`) that are erased before runtime, ~35 are
+`extends Migration.Current` in test-helper migration fixtures, where the
+superclass really is chosen at load time, and the genuine framework cases
+number **fewer than ten** — named individually in "What survives" below.
+
+So the default becomes the plain ES import, the namespace objects shrink to the
+handful of sites where module evaluation order actually needs them, and
+`rbModConstSet` is left only where the Rails body itself calls `const_set`
+(18 sites in the vendored Rails tree).
+
+## Why the current shape is wrong
+
+**It solves a problem ESM does not have.** The ratified rule in CLAUDE.md
+§ "Call-time constant resolution" opens "ESM has no equivalent. Every `import`
+is eager and evaluated before the importing module's body, so naming a constant
+in a method body still costs a module-eval edge." The first half is true and
+the second does not follow: the _edge_ is eager, the _read_ is not. A cycle is
+only fatal when a module needs a binding from the cycle while its own body is
+still running. 631 of 686 reads do not.
 
 **It is an invented call at 772 sites, and no gate can see it.** CLAUDE.md
-§ "Fidelity is the job" forbids a call Rails does not make, and § "Before you
-open the PR" says plainly that an added call is invisible to both call gates:
-they flag what Rails does and the port omits, never the reverse. So the one
-deviation class the ratchets structurally cannot catch is the one that grew
-from 15 sites to 790 in four weeks — every one of them a call whose Rails
-counterpart is a bare assignment.
+§ "Before you open the PR" says outright that an added call is invisible to
+both call gates — they flag what Rails does and the port omits, never the
+reverse. That is how this went from 15 sites to 790 in four weeks with every
+ratchet green.
 
-**It launders the type check.** `rbModConstSet` takes
-`(mod: Module | { readonly name: string } | …, id: string, value: T)`. Nothing
-relates `value` to the declared type of `mod[id]`, so a seat of the wrong
-class, or onto the wrong owner, type-checks. `Nodes.Not = Not` does not: the
-namespace objects are typed (`typeof NodesModule`), and the assignment is
-checked against the declared property. Routing 790 assignments through an
-untyped three-argument call discards a compile-time guarantee TypeScript was
-giving us for free. This is the "sidestepping JavaScript" cost, and it is not
-only aesthetic.
+**It discards what the import graph tells the reader and the compiler.** A
+plain `import { Not } from "./unary.js"` says where `Not` comes from, is
+checked, is renamed by a refactor, and is dropped by an unused-import lint. A
+`Nodes.Not` read says only that something, somewhere, seated it. The seat call
+itself takes `(mod: … | { readonly name: string }, id: string, value: T)` with
+nothing relating `value` to `mod[id]`, so a seat onto the wrong owner, or under
+a name the namespace does not declare, type-checks. 790 assignments gave up a
+compile-time guarantee TypeScript was giving for free.
 
-**It is a side table where JavaScript has the fact.** `rbModName` is
-`classpaths.get(klass)?.path ?? klass.name ?? null` — the JS fallback is
-already there, and the table exists only to supply the `::` prefix. The prefix
-is not new information: it is the owner's `name` plus the key the class is
-seated under, both of which the seat expression itself contains. The table
-records, at 790 call sites, something derivable from 39.
-
-**It reads as framework ceremony, not as Rails.** A Rails developer reading
+**It reads as framework ceremony.** A Rails developer opening
 `arel/nodes/binary.rb` sees `class Join < Binary; end` and no registration
-line at all. Our counterpart carries an import of `rbModConstSet` and a
-trailing call. Multiply by 407 files. The bar in CLAUDE.md is "would a Rails
-dev recognise this as the same method"; a per-declaration registration
-protocol that Rails has no line for does not clear it.
+line. Our counterpart carries an import of `rbModConstSet` and a trailing call,
+times 407 files.
 
 ## The design
 
-### A seat is `Owner.Name = Klass`
+### A read inside a body is a plain ES import
 
 ```ts
-// packages/arel/src/nodes/binary.ts
-export class Join extends Binary {}
-Nodes.Join = Join;
+// packages/arel/src/nodes/node.ts — before
+import { Nodes } from "../namespaces.js";
+not() { return new Nodes.Not(this); }
+
+// after
+import { Not } from "./unary.js";
+not() { return new Not(this); }
 ```
 
-No import, no helper, type-checked against `Nodes`' declared property. This is
-what every package outside arel and `activemodel/src/attribute.ts` already
-does, and the direction CLAUDE.md currently points _away_ from.
+`unary.ts` imports `node.ts` for `class Unary extends Node`, so this is inside
+arel's real 65-module cycle — and it is still correct, because `not()` runs
+long after both modules are evaluated. This is the shape for 631 reads.
 
-### A class's Ruby path is derived on first read, not registered
+### Module-eval reads keep call-time resolution
 
-`registerNamespace(ns)` records each of the 39 namespace objects in
-`namespaces.ts`, once, beside the `registerConstant` call that is already
-there. `rbModName(klass)` then resolves in this order:
+Where the read runs during module evaluation, the namespace stays, because the
+problem is real:
 
-1. a path already memoized for `klass` — the `classpaths` WeakMap stays, as an
-   internal **cache of a derivation** that no call site writes to;
-2. a `const_set`-bound path, for the Rails sites that genuinely call it;
-3. a derived path: the first registered namespace holding `klass` as an own
-   property, giving `owner.name + "::" + key`, memoized;
-4. `klass.name` — JavaScript's own answer, for an unseated class;
-5. `null`, for an anonymous one.
+```ts
+// packages/activerecord/src/base.ts
+include(Base, ActiveRecord.Scoping);
+```
 
-Step 3 is a walk over 39 objects on the first `name` read per class and never
-again. It replaces 790 eager writes with a lazy lookup, which is also the
-shape that stops the mechanism propagating: a new class seated with a plain
-assignment is pathed correctly with nothing added at its declaration.
+A direct import here would evaluate `scoping.ts` before `Base` exists. These
+sites keep the namespace read and are enumerated, not discovered — a new one
+needs a named reason, which is what the gate in story 12 enforces.
 
 ### `rbModConstSet` survives only where Rails says `const_set`
 
 The helper is a faithful port of `Module#const_set`
-(`vendor/ruby/v3.3.11/variable.c:3648-3668`) and stays exported for the sites
-whose Rails body calls it — the generated-module and generated-class cases,
-where there is no declaration to assign at and the constant name is computed:
+(`vendor/ruby/v3.3.11/variable.c:3648-3668`) and stays for the Rails sites that
+call it, all with a computed name and no declaration to assign at:
+`GeneratedAttributeMethods` (`attribute_methods.rb:43`),
+`GeneratedAssociationMethods` (`core.rb:340`), the mangled delegate and
+`GeneratedRelationMethods` (`relation/delegation.rb:40,65`), the HABTM join
+model (`associations.rb:1877`), an association extension module
+(`associations/builder/collection_association.rb:26`), the generated arel node
+classes (`arel/nodes/{binary,unary,function}.rb`), an `ATTR_` name constant
+(`activemodel/attribute_methods.rb:584`), `HelperMethods`
+(`abstract_controller/helpers.rb:232`), `Types` (`action_view/template.rb:189`),
+`ClassMethods` (`concern.rb:212`), a `concerning` topic
+(`concerning.rb:133`), a stubbed constant (`constant_stubbing.rb:33-45`), and
+`Object::APP_PATH` (`app_loader.rb:57`). Eighteen sites.
 
-| Rails site                                                                         | what it binds                                |
-| ---------------------------------------------------------------------------------- | -------------------------------------------- |
-| `activerecord/lib/active_record/attribute_methods.rb:43`                           | `GeneratedAttributeMethods`                  |
-| `activerecord/lib/active_record/core.rb:340`                                       | `GeneratedAssociationMethods`                |
-| `activerecord/lib/active_record/relation/delegation.rb:40,65`                      | mangled delegate, `GeneratedRelationMethods` |
-| `activerecord/lib/active_record/associations.rb:1877`                              | a HABTM join model                           |
-| `activerecord/lib/active_record/associations/builder/collection_association.rb:26` | an extension module                          |
-| `activerecord/lib/arel/nodes/{binary,unary,function}.rb`                           | the generated node classes                   |
-| `activemodel/lib/active_model/attribute_methods.rb:584`                            | an `ATTR_` name constant                     |
-| `actionpack/lib/abstract_controller/helpers.rb:232`                                | `HelperMethods`                              |
-| `actionview/lib/action_view/template.rb:189`                                       | `Types`                                      |
-| `activesupport/lib/active_support/concern.rb:212`                                  | `ClassMethods`                               |
-| `activesupport/lib/active_support/core_ext/module/concerning.rb:133`               | a `concerning` topic                         |
-| `activesupport/lib/active_support/testing/constant_stubbing.rb:33-45`              | a stubbed constant                           |
-| `railties/lib/rails/app_loader.rb:57`                                              | `Object::APP_PATH`                           |
+The rule is per body, not per count. A ported gem that calls `const_set`
+qualifies identically: thor's `rake_compat.rb:64`
+(`klass.const_set(const_name, Class.new(Thor))`) is the only such site outside
+Rails in the vendored sources trails ports, and is itself unported. racc's
+three (`statetransitiontable.rb:271,285,286`) are in a gem with no trails
+package. `vendor/ruby`'s are MRI internals, not a ported body.
 
-That is the whole permitted population: 18 Rails sites, and a trails call site
-is legitimate exactly when it mirrors one of them. The rule is the ordinary
-fidelity rule, not a new register — which is why it needs no baseline and no
-receipt shape. `rbModConstGet` / `rbModConstDefined` / `rbModConstants` /
-`registerConstant` are untouched: those stand in for dynamic lookups Rails
-really does make (adapter resolution, validator lookup), and there are nine of
-them.
+A surviving module-eval _seat_ is a plain assignment, `Owner.Name = Klass`,
+which is type-checked where the helper call was not.
+
+### The Ruby path is generated from the parity manifest, not registered
+
+The seat's other effect is a write into the `classpaths` WeakMap so `rbModName`
+answers `"Arel::Nodes::Not"` rather than JavaScript's `"Not"`. That path is
+real Rails behaviour — it surfaces in `inspect`, error messages, STI type
+columns and i18n keys — so it is kept. It does not need 790 runtime calls to
+record it: `scripts/api-compare/output/rails-api.json` already holds every Ruby
+class's `fqn` and defining file (`"Arel::Nodes::NotEqual": { fqn:
+"Arel::Nodes::NotEqual", file: "nodes/binary.rb", … }`), and `parity:api`
+already matches each TS class to that Ruby counterpart.
+
+So each package gets one **generated** module mapping its exported classes to
+their Ruby fqn, built by the existing manifest tooling and checked in, which
+`rbModName` consults before falling back to `klass.name`. Three properties the
+current shape lacks: it is verified by `parity:api` rather than by hand, a
+wrong or missing path is a CI red rather than a silently unqualified name, and
+adding a class costs nothing at its declaration.
+
+`rbModConstGet` / `rbModConstDefined` / `rbModConstants` / `registerConstant`
+are untouched: those stand in for dynamic lookups Rails really makes (adapter
+resolution, validator lookup), and there are nine of them.
+
+## What survives
+
+The complete module-eval population, to be confirmed per package by its sweep
+and then frozen by the gate:
+
+- `activerecord/src/base.ts` — `include(Base, ActiveRecord.Scoping)` and
+  `include(Base, ActiveRecord.Associations)`. The genuine `Base` cycle.
+- `actionpack/src/action-controller/test-case.ts` —
+  `include(Metal, Testing.Functional)`.
+- `actionpack/src/action-dispatch/testing/assertions/routing.ts` —
+  `class extends ActionDispatch.Integration.Session`.
+- `actionpack/src/action-dispatch/http/{mime-negotiation,parameters}.ts` and
+  `activesupport/src/message-pack/extensions.ts` — seats onto a _nested_
+  namespace read at module-eval time.
+- `activerecord/src/test-helpers/migrations/**` and
+  `test-helpers/anonymous-migration.ts` — ~35 `extends Migration.Current`.
+  A migration's superclass is genuinely chosen at load time and the files are
+  loaded by `rbFLoad` (CLAUDE.md § "A migration file is loaded by
+  `Kernel#load`"), so these stay; the sweep story confirms rather than converts
+  them.
+- arel's 8 `T extends Nodes.X` type positions convert to `import type`, which
+  is erased and costs no edge.
+
+Anything not on this list, after its sweep, is a plain ES import.
 
 ## Scope
 
-Stories 1–2 land the rule and the derivation. Stories 3–11 are the per-package
-sweeps, each mechanical: rewrite the seats as assignments, drop the imports,
-fix whatever the now-live type check rejects. Story 12 adds the gate. Story 13
-reverses the backlog that is still pushing the other way.
+Story 1 amends the four CLAUDE.md texts. Story 2 lands the generated path
+table. Stories 3–11 are the per-package conversions. Story 12 gates both
+`rbModConstSet` and module-eval namespace reads. Story 13 retires the backlog
+arm still scheduled to do the opposite.
 
-Sweep sizes (seats, excluding import lines):
-
-| package      | seats | package             | seats |
-| ------------ | ----- | ------------------- | ----- |
-| activerecord | 242   | activemodel         | 34    |
-| arel         | 144   | msgpack             | 19    |
-| actionpack   | 98    | activesupport       | 16    |
-| actionview   | 64    | trailties           | 14    |
-| activejob    | 60    | small packages      | 22    |
-| actioncable  | 40    | ruby-compat (tests) | 38    |
-
-Each sweep must re-run the ESM entry-module check CLAUDE.md
-§ "Call-time constant resolution" prescribes: a plain assignment is the same
-module-eval edge the helper call was, so no cycle changes, but the check is
-cheap and the failure mode is a TDZ throw at import time rather than a test
-red.
+Each conversion must re-run the ESM entry-module check CLAUDE.md
+§ "Call-time constant resolution" prescribes — a plain-node import of the
+**built** `dist/**.js` modules as entry modules, because a vitest run enters a
+funnel module first and masks a TDZ. That check is the acceptance test for
+"this read was deferred after all", and it is why the conversions are per
+package rather than one sweep.
 
 ## Out of scope
 
-- **The namespace objects themselves, and `ActiveSupport::Autoload`.** The
-  call-time property read (`new Nodes.Not(this)`) is ratified and correct, and
-  RFC 0151 settled the autoload surface. This RFC changes only how a class
-  gets _onto_ the namespace.
-- **Dropping the qualified path.** `"ActiveRecord::Base"` is Rails-visible
-  behaviour; deriving it is the point, losing it is not. If a derived path ever
-  disagrees with a seat-recorded one, the derivation is the bug.
+- **`ActiveSupport::Autoload` and the namespace objects' own existence.** The
+  objects stay — they remain the public `Arel.Nodes` / `ActiveRecord.Base`
+  surface a Rails developer reaches for, and RFC 0151 settled the autoload
+  layer. This RFC changes how _framework-internal_ code reaches a class.
+- **Dropping the qualified Ruby path.** It is Rails-visible behaviour;
+  generating it is the point.
 - **Application autoloading**, ratified absent in CLAUDE.md § "Trails has no
   autoloader".
 
 ## Alternatives considered
 
-**Keep the helper, add a lint rule bounding it.** Rejected: it leaves 790
-invented calls in the tree and 790 unchecked assignments, and the rule would
-have to carry an allowlist the size of the thing it bounds. The calls are the
-problem, not their rate of growth.
+**Seat with a plain assignment and keep every read going through the
+namespace.** This was this RFC's first draft, and it is only a relabeling: the
+790 calls become 790 assignments, the import graph still says nothing, and the
+reader still cannot tell where a class comes from. Rejected by the repo owner
+on 2026-10-22: "I only want the namespace seating when necessary, I want to
+lean on ES imports / exports."
 
-**Drop the path and let `rbModName` answer `klass.name`.** Rejected: it loses
-real Rails behaviour at prominent surfaces (STI type strings, error messages,
-`inspect`, i18n keys), and the path is derivable, so nothing is bought.
+**Convert the reads but keep the runtime `classpaths` registration.** Rejected:
+once a class is not seated on a namespace there is nothing to register it from,
+and the parity manifest already holds the answer with CI verification behind
+it.
 
-**Derive the path eagerly at module load, from the namespace objects.**
-Rejected: a namespace is populated as its members' modules evaluate, so an
-eager walk either runs before the seats or needs a hook that fires after them.
-The lazy read has no such ordering problem, and matches § "`inherited` is
-deferred to own-property memo guards" — the repo's settled answer for "a fact
-JavaScript has no definition-time hook for".
-
-**A decorator on each class.** Rejected: it is the same per-declaration
-ceremony with different syntax, and it is Rails-facing surface Rails has no
-line for.
+**Leave the deferred reads alone because they work.** Rejected: they are 631
+invented calls past a mechanism that costs a compile-time check and a readable
+import graph, and the rule that produced them is still in CLAUDE.md producing
+more.
 
 ## What this RFC reverses
 
-The propagation is doc-driven, so the docs change first. Four live texts tell
-an agent to spell a seat with the helper, and all four are amended by story 1:
+Four live texts tell an agent to spell a seat with the helper, all amended by
+story 1: root `CLAUDE.md` § "Call-time constant resolution" (including the
+"ESM has no equivalent" paragraph, which is the technical claim this RFC
+corrects), and the same section in `packages/arel/CLAUDE.md`,
+`packages/activesupport/CLAUDE.md` and `packages/activerecord/CLAUDE.md`. The
+arel one ends "This is the shape every package's plain `Owner.Name = klass`
+assignment and any remaining slot converge onto" — the sentence aiming the
+sweep the wrong way.
 
-- root CLAUDE.md § "Call-time constant resolution": "each autoloaded constant
-  is seated by its defining module with `rbModConstSet(Namespace, "Name",
-Klass)` — the constant binding is what paths it, as Ruby's `const_set` does".
-- `packages/arel/CLAUDE.md` § "Call-time constant resolution (arel)", which
-  ends "This is the shape every package's plain `Owner.Name = klass`
-  assignment and any remaining slot converge onto" — the sentence that aims the
-  sweep in the wrong direction.
-- the same section in `packages/activesupport/CLAUDE.md` and
-  `packages/activerecord/CLAUDE.md`.
-
-And an open backlog arm is still scheduled to finish the job, closed by story
-13:
-
-- `0154` `namespace-seats-bind-through-rb-mod-const-set` (est 500 LOC) —
-  "Every namespace seat in activerecord, activesupport, actionview, actionpack
-  and trailties … is `rbModConstSet(Owner, "Name", value)`". This is the direct
-  inverse of this RFC and closes `FALSIFIED:`.
-- `0154` `seated-classes-answer-module-name-with-their-constant-path` and
-  `rb-path-to-class-reads-seated-path-whole-over-flat-constant-table` — rewrite
-  onto the derivation.
-- the fifteen `0154` `class-to-string-seat-enroll-<package>` stories, which
-  enroll each package in a lint rule that writes a `static toString()` literal
-  per class from a manifest. That is the same registration-protocol mistake one
-  layer down — a hand-seeded constant path per declaration where the owner
-  already knows it — and story 13 holds the unenrolled packages pending its own
-  review rather than letting the arm continue by default.
+The backlog is still scheduled to finish the job, closed by story 13: `0154`'s
+`namespace-seats-bind-through-rb-mod-const-set` (est 500 LOC) asks for exactly
+the inverse, and fifteen `class-to-string-seat-enroll-<package>` stories enroll
+each package in a lint rule writing a hand-seeded Ruby path literal per class —
+the same registration-protocol mistake one layer down, and a duplicate of the
+generated table in story 2.
