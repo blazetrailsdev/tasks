@@ -1,6 +1,6 @@
 ---
 title: "GID URI query keys are camelCase where Rails emits snake_case"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null

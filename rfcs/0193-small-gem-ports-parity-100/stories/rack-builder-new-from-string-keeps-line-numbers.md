@@ -1,6 +1,6 @@
 ---
 title: "rack Builder.newFromString keeps the script's line numbers (eval path lineno)"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null

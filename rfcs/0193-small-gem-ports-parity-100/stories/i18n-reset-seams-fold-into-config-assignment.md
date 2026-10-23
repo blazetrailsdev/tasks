@@ -1,6 +1,6 @@
 ---
 title: "Fold i18n's resetConfig/resetClassConfig test seams into I18n.config= assignment"
-status: ready
+status: claimed
 updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-23T18:45:02Z"
+assignee: "globalid-create-keeps-nil-params-in-gid-query"
 blocked-by: null
 closed-reason: null
 ---

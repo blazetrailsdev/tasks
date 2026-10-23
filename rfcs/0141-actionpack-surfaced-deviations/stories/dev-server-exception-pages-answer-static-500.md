@@ -1,6 +1,6 @@
 ---
 title: "Development server answers static 500 for InvalidAuthenticityToken and routing errors"
-status: draft
+status: claimed
 updated: 2026-10-23
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-23T18:45:53Z"
+assignee: "dev-server-exception-pages-answer-static-500"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Nokogiri SyntaxError#level is a string union, not the gem's Integer with level predicates"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null

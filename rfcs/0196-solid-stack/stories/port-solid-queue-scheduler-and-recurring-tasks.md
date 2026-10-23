@@ -1,7 +1,7 @@
 ---
 title: "Port SolidQueue::Scheduler and recurring tasks"
-status: ready
-updated: 2026-10-22
+status: claimed
+updated: 2026-10-23
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]
@@ -9,8 +9,8 @@ deps: ["port-solid-queue-worker"]
 deps-rfc: []
 est-loc: 450
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-23T18:51:11Z"
+assignee: "port-solid-queue-dispatcher"
 blocked-by: null
 closed-reason: null
 ---

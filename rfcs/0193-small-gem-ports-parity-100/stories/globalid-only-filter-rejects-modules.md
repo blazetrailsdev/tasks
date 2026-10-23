@@ -1,6 +1,6 @@
 ---
 title: "only: filter accepts only classes; Rails accepts modules via model <= klass"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null

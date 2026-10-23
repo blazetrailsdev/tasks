@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc missing-table warning ignores primaryAbstractClass()"
-status: draft
+status: claimed
 updated: 2026-10-23
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-23T18:45:53Z"
+assignee: "dev-server-exception-pages-answer-static-500"
 blocked-by: null
 closed-reason: null
 ---
