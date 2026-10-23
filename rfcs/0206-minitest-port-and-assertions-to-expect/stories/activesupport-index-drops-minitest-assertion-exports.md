@@ -31,6 +31,7 @@ deps:
     expect-sweep-activesupport-2,
     expect-sweep-gem-packages,
     expect-sweep-trailties,
+    call-gate-credits-minitest-asserts-as-expect,
   ]
 deps-rfc: []
 est-loc: 500
@@ -61,9 +62,10 @@ decision": `testing/assertions.ts:310-551`, `method-call-assertions.ts`,
 `activerecord/src/testing/query-assertions.ts`,
 `action-dispatch/testing/assertions/routing.ts`, actionview's
 `dom-assertions.ts` / `selector-assertions.ts` / `html-selector.ts`,
-`activerecord/src/encryption/test-helpers.ts`). **This story does not start
-until Dean has picked an option in § "Open decision"**; it then rewrites those
-bodies to that shape.
+`activerecord/src/encryption/test-helpers.ts`). By owner ruling (2026-10-23, RFC
+§ "Assertions inside ported Rails bodies") each such call becomes plain
+`expect(value, railsMessage)`, credited by the call gate through
+`call-gate-credits-minitest-asserts-as-expect`.
 
 Baseline (2026-10-22, trails `1b769d8daa`): 5,938 import-resolved call sites
 in 392 test files.
@@ -75,12 +77,13 @@ in 392 test files.
       `ActiveSupport::Testing::Assertions` members stay. The runner classes
       (`Assertion`, `Test`, `Minitest`, …) and `Mock` / `stub` are untouched
       (RFC Open question 2).
-- [ ] Every ported Rails body listed above is written in the shape Dean chose
-      in § "Open decision", carrying Rails' failure message, and
-      `pnpm parity:api:calls` / `parity:api:calls:args` are green — by the
-      call-gate mapping (option A) or per-call receipts (option B), not by new
-      baseline rows. The ruling is written into trails CLAUDE.md as its own
-      section in the same PR.
+- [ ] Every Minitest call in the ported Rails bodies listed above is a plain
+      `expect(value, msg)` carrying Rails' failure message (e.g.
+      `expect(after, error).toEqual(before + diff)` in `assertDifference`;
+      `expect(rbObjRespondTo(model, "toKey")).toBe(true)` in `lint.ts`), and
+      `pnpm parity:api:calls` / `parity:api:calls:args` are green with no new
+      `@missingRailsCall` receipt and no new baseline row. The ruling is
+      written into trails CLAUDE.md as its own section in the same PR.
 - [ ] An ESLint `no-restricted-imports` entry stops any file importing the
       deleted names from `@blazetrails/activesupport`, so the tree cannot
       regress.

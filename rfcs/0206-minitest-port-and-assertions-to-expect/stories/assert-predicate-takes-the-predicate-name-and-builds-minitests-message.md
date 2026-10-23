@@ -34,8 +34,9 @@ This is not a test-side helper question: CONTRIBUTING.md § "Porting a
 Minitest assertion" (trails#9176) already ports a test's `assert_predicate` as
 `expect(o.isFoo()).toBe(true)`. It survives only because a ported Rails body,
 `assert_no_error_reported`, calls Minitest's `assert_predicate`
-(`error-reporter-assertions.ts:99`). Whether that internal seat stays is the
-open decision in RFC 0206 (§ "Open decision"). Rehomed from 0158 on
+(`error-reporter-assertions.ts:99`). By owner ruling (2026-10-23, RFC 0206
+§ "Assertions inside ported Rails bodies") that call becomes plain `expect`
+with Rails' message. Rehomed from 0158 on
 2026-10-23: Minitest is vendored for reference, not ported, so the
 `assertPredicate` helper is deleted by
 `activesupport-index-drops-minitest-assertion-exports`. What survives is the
@@ -45,10 +46,9 @@ message: Rails' `assert_no_error_reported` fails with
 
 ## Acceptance criteria
 
-- [ ] `assertNoErrorReported`'s body is written in the shape Dean chose in
-      RFC 0206 § "Open decision" (no `assertPredicate` helper), and on failure
-      reads Minitest's `"Expected #{mu_pp(reports)} to be empty?"`, built
-      from the vendored source (under option A,
-      `expect(reports.isEmpty(), msg).toBe(true)` with that `msg`).
+- [ ] `assertNoErrorReported`'s body is `expect(reports.isEmpty(), msg).toBe(true)` (no
+      `assertPredicate` helper), where `msg` is Minitest's
+      `"Expected #{mu_pp(reports)} to be empty?"` built from the vendored
+      source.
 - [ ] `error-reporter-assertions.trails.test.ts` "fails when something is
       reported" asserts `/to be empty\?/` again.
