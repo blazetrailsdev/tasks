@@ -5,7 +5,12 @@ updated: 2026-10-23
 rfc: "0206-minitest-port-and-assertions-to-expect"
 cluster: expect-sweeps
 packages: [actionpack]
-deps: [assertion-kinds-reads-literal-matcher-arguments]
+deps:
+  [
+    assertion-kinds-reads-literal-matcher-arguments,
+    vitest-matcher-to-be-kind-of,
+    vitest-matchers-to-include-scores-includes,
+  ]
 deps-rfc: []
 est-loc: 420
 priority: null
@@ -55,7 +60,8 @@ RFC's disposition table. The Ruby being ported is in
       `assertChanges`, …) are untouched.
 - [ ] Each call becomes exactly one `expect`, chosen per the RFC table:
       the built-in by default, an existing `@blazetrails/vitest-matchers`
-      matcher only where the built-in is wrong for that value. No new matcher.
+      matcher (existing, or the RFC's `toBeKindOf` / `toInclude`) only where
+      the built-in is wrong for that value.
 - [ ] `assertNil` / `assertNotNil` map to the JS value the code under test
       produces: `toBeNull` / `.not.toBeNull` for `null`,
       `toBeUndefined` / `toBeDefined` for `undefined`. A value that can be

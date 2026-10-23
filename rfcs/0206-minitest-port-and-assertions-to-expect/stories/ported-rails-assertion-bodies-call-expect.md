@@ -53,6 +53,14 @@ If the bodies are too many for one PR, split by package into sibling stories
       `refuteEqual`, `assertRespondTo`, `message`, `diff`).
 - [ ] Each Rails Minitest call is one `expect` at the same position in the
       body, with the same message text where Rails passes one.
+- [ ] Where Rails relies on Minitest's default message rather than passing
+      one, the body builds that default from the vendored source:
+      `assert_no_error_reported`'s `assert_predicate` reads
+      `"Expected #{mu_pp(reports)} to be empty?"`
+      (`vendor/minitest/v5.27.0/lib/minitest/assertions.rb:394-397`), and
+      `error-reporter-assertions.trails.test.ts` "fails when something is
+      reported" asserts `/to be empty\?/` (carried from 0158's closed
+      `assert-predicate-takes-the-predicate-name-and-builds-minitests-message`).
 - [ ] Existing tests of these methods' failure messages stay green; where a
       Vitest failure text differs from Minitest's, the test asserts on the
       Rails-supplied `msg` part.
