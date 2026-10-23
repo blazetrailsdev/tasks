@@ -2,7 +2,7 @@
 title: "Burn down the assertion mismatches first measured for actionpack, rack and trailties"
 status: ready
 updated: 2026-09-01
-rfc: "0023-surfaced-deviations"
+rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
 deps: []

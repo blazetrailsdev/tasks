@@ -2,7 +2,7 @@
 title: "Map the Rails-helper-twin assertion kinds both sides leave unmapped"
 status: draft
 updated: 2026-08-24
-rfc: "0023-surfaced-deviations"
+rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages:
   - "arel"
