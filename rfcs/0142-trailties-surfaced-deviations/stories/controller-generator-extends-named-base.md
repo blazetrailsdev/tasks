@@ -1,7 +1,7 @@
 ---
 title: "controller-generator-extends-named-base"
-status: draft
-updated: 2026-10-15
+status: closed
+updated: 2026-10-23
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of controller-generator-is-not-a-named-base: same convergence (ControllerGenerator < NamedBase, controller_generator.rb:5-38); trails#8947's private NamedBase mirrors and the controllerPathHelpers '::' gap are merged into the survivor."
 ---
 
 ## Context

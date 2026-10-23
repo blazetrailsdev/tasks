@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: rbInspect renders an object with no inspect as [object Object]; rbAnyToS prints the bare JS class name"
-status: draft
-updated: 2026-10-11
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of rb-any-to-s-uses-class-path-and-rb-inspect-falls-to-rb-obj-inspect. Both core gaps have landed: rbAnyToS names the class through rbModToS (trails#9019, object.ts:1448-1454) and inspectValue falls to rbObjInspect for a plain object (trails#9026, object.ts:1571). The NullPool test assertion that still accepts a bare class name is merged into the survivor."
 ---
 
 ## Context

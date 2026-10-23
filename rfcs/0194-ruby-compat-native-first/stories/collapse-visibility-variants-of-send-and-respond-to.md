@@ -1,7 +1,7 @@
 ---
 title: "Collapse the visibility variants of send / respond_to? onto rbFSend / rbObjRespondTo and remove dead include_private arms"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-23
 rfc: "0194-ruby-compat-native-first"
 cluster: dispatch-cost
 packages: []
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9266
+claim: "2026-10-23T00:20:34Z"
+assignee: "collapse-visibility-variants-of-send-and-respond-to"
 blocked-by: null
 ---
 

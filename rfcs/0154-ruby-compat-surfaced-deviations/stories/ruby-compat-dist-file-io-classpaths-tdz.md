@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat dist/file.js, io.js, yaml-tree.js throw classpaths TDZ as entry modules"
-status: draft
-updated: 2026-10-15
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of ruby-compat-object-and-marshal-entry-module-tdz: dist/file.js, dist/io.js and dist/psych/visitors/yaml-tree.js throw the same 'Cannot access classpaths before initialization' from the same cycle; those entry modules are merged into the survivor's criteria."
 ---
 
 ## Context

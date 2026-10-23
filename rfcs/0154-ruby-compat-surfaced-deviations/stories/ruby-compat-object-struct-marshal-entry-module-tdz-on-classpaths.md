@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: object.js, struct.js and marshal.js throw a classpaths TDZ when loaded as entry modules"
-status: draft
-updated: 2026-10-14
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of ruby-compat-object-and-marshal-entry-module-tdz: same classpaths TDZ when dist/object.js, dist/struct.js or dist/marshal.js is the plain-node entry module (object.ts <-> variable.ts registerConstant cycle). The struct.js entry and the bisect note are merged into the survivor."
 ---
 
 ## Context

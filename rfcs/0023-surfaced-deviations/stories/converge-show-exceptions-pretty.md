@@ -1,7 +1,7 @@
 ---
 title: "Converge Rack::ShowExceptions#pretty onto show_exceptions.rb:76-91 and drop the bespoke template helper"
-status: draft
-updated: 2026-08-12
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#9108
 claim: null
 assignee: null
 blocked-by: null

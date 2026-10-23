@@ -1,7 +1,7 @@
 ---
 title: "trails new: the generated config/environments use node:fs and process.*, so an app that forbids them cannot adopt them"
-status: draft
-updated: 2026-10-15
+status: closed
+updated: 2026-10-23
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of generated-environment-files-import-node-and-read-process: same four node:fs / process.env / process.stdout sites in the generated config/environments/*.ts; trailmap#70 context merged into the survivor."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Module#include drops a class module's accessors where include() keeps them"
-status: draft
-updated: 2026-10-06
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by RFC 0197: the gap is in Module#include (the ruby-compat Module class), which 0197 retires in favour of plain-object and class modules (delete-ruby-compat-module-class-final). The surviving accessor-halves gap on the plain-object path is plain-module-include-merges-accessor-halves."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "actionpack: new-base/render-file.test.ts builds its Pathname with Pathname#join, as render_file_test.rb:14 does"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

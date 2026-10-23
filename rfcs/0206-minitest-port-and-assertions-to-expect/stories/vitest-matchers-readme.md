@@ -1,7 +1,7 @@
 ---
 title: "vitest-matchers README: each matcher and the Ruby/JS gap that earns it"
 status: draft
-updated: 2026-10-22
+updated: 2026-10-23
 rfc: "0206-minitest-port-and-assertions-to-expect"
 cluster: assertion-tooling
 packages: [vitest-matchers]

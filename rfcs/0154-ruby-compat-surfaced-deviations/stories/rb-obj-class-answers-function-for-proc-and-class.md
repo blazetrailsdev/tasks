@@ -1,7 +1,7 @@
 ---
 title: "rbObjClass answers Function where Ruby answers Proc or Class"
-status: draft
-updated: 2026-09-22
+status: done
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8416
 claim: null
 assignee: null
 blocked-by: null

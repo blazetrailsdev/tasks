@@ -1,7 +1,7 @@
 ---
 title: "CurrentAttributes singletons are module-level, not IsolatedExecutionState-scoped; reset_all/clear_all unported"
-status: draft
-updated: 2026-08-18
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#7784
 claim: null
 assignee: null
 blocked-by: null

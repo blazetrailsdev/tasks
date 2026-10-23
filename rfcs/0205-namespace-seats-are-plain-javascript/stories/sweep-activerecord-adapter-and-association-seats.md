@@ -1,7 +1,7 @@
 ---
 title: "Sweep activerecord's adapter, association, encryption and CPK namespace seats"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-10-23
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

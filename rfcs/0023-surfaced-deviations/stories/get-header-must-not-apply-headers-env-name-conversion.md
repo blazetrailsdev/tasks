@@ -1,7 +1,7 @@
 ---
 title: "Request#get_header must not apply the Headers#[] name conversion"
-status: draft
-updated: 2026-08-17
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9034
 claim: null
 assignee: null
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Converge the 19 nested-class members trails declares on the wrong host (ungated packages)"
-status: ready
-updated: 2026-09-01
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []

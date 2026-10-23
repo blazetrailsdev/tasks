@@ -1,7 +1,7 @@
 ---
 title: "Duration#iso8601 inlines what Rails delegates to ISO8601Serializer"
-status: ready
-updated: 2026-07-27
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#6909
 claim: null
 assignee: null
 blocked-by: null

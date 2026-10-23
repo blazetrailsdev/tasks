@@ -1,7 +1,7 @@
 ---
 title: "test_help's before_setup reopenings are modules beneath the class, so Runner#before_setup runs first"
-status: ready
-updated: 2026-10-02
+status: done
+updated: 2026-10-23
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: trails#9190
 claim: null
 assignee: null
 blocked-by: null

@@ -1,14 +1,14 @@
 ---
 title: "Port the Inline, Async and Test subscription adapters and the shared adapter test modules"
-status: claimed
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-23
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-server-connections-and-base"]
 deps-rfc: []
 est-loc: 450
-pr: null
+pr: trails#9265
 claim: "2026-10-22T23:50:43Z"
 assignee: "port-actioncable-helper"
 blocked-by: null

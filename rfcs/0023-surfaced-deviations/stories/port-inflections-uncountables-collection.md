@@ -1,7 +1,7 @@
 ---
 title: "port-inflections-uncountables-collection"
-status: draft
-updated: 2026-08-11
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#6513
 claim: null
 assignee: null
 blocked-by: null

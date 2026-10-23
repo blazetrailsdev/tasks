@@ -1,7 +1,7 @@
 ---
 title: "Make Concern's non-prepend include lose to a class-body method"
-status: draft
-updated: 2026-08-28
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: trails#9050
 claim: null
 assignee: null
 blocked-by: null

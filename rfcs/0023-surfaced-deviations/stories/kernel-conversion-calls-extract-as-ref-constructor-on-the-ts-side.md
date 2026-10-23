@@ -1,7 +1,7 @@
 ---
 title: "call-args normalizes TS new Rational(...) to ref:constructor where Ruby's Kernel Rational() is ref:Rational"
-status: draft
-updated: 2026-08-23
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: trails#7240
 claim: null
 assignee: null
 blocked-by: null

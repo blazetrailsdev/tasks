@@ -1,7 +1,7 @@
 ---
 title: "Unify ruby-compat's two byte conventions (b()'s Latin-1 units vs bytes()'s lone-surrogate escapes)"
-status: draft
-updated: 2026-09-22
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by binary-string-bytesize-counts-bytes (trails#9191) and CLAUDE.md § 'A String has no encoding tag either': b() now answers a Uint8Array of the string's own UTF-8 bytes (packages/ruby-compat/src/string/b.ts:18-20), so bytes(b(s)) equals bytes(s) and the one-code-unit-per-byte convention this story wanted reconciled is retired. Remaining byte-form producers are binary-string-remaining-byte-form-producers."
 ---
 
 ## Context

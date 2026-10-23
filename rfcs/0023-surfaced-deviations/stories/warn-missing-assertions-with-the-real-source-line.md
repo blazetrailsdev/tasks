@@ -1,7 +1,7 @@
 ---
 title: "tests_without_assertions warns with file:0 — populate the real source line"
-status: draft
-updated: 2026-08-14
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8411
 claim: null
 assignee: null
 blocked-by: null

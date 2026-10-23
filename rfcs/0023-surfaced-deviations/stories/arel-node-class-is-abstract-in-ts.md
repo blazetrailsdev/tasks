@@ -1,7 +1,7 @@
 ---
 title: "Arel::Nodes::Node is instantiable in Rails but abstract in trails, forcing casts in mirrored tests"
-status: draft
-updated: 2026-08-25
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#7092
 claim: null
 assignee: null
 blocked-by: null

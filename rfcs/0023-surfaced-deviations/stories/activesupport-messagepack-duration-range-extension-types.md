@@ -1,7 +1,7 @@
 ---
 title: "Register the MessagePack Duration and Range extension types"
-status: draft
-updated: 2026-07-30
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: trails#8674
 claim: null
 assignee: null
 blocked-by: null

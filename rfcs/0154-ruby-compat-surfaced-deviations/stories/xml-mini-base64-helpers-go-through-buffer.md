@@ -1,7 +1,7 @@
 ---
 title: "XmlMini's Base64 helpers go through Buffer, not ruby-compat Base64"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "ParameterFilter#call traverses own properties, so a HashWithIndifferentAccess filters to empty"
-status: draft
-updated: 2026-08-17
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: trails#6649
 claim: null
 assignee: null
 blocked-by: null

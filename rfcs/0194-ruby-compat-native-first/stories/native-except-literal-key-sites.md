@@ -1,7 +1,7 @@
 ---
 title: "Native rest-destructure at literal-key Hash#except sites on plain objects"
-status: ready
-updated: 2026-10-22
+status: claimed
+updated: 2026-10-23
 rfc: "0194-ruby-compat-native-first"
 cluster: substitution
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-23T00:51:00Z"
+assignee: "native-except-literal-key-sites"
 blocked-by: null
 ---
 

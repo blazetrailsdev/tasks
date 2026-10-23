@@ -1,7 +1,7 @@
 ---
 title: "Converge core-ext/module.test.ts onto module_test.rb's real test bodies"
-status: draft
-updated: 2026-08-22
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#7850
 claim: null
 assignee: null
 blocked-by: null

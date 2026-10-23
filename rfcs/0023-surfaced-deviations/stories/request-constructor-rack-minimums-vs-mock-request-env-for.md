@@ -1,7 +1,7 @@
 ---
 title: "Drop Request's invented Rack-minimum env defaults in favour of Rack::MockRequest.env_for"
-status: draft
-updated: 2026-08-18
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: trails#7302
 claim: null
 assignee: null
 blocked-by: null

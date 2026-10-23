@@ -1,7 +1,7 @@
 ---
 title: "Delete orphaned entry-record.ts namespaceKey helper"
-status: ready
-updated: 2026-07-27
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
+pr: trails#6437
 claim: null
 assignee: null
 blocked-by: null

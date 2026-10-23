@@ -1,7 +1,7 @@
 ---
 title: "drain-queued-generators-in-generators-invoke"
 status: blocked
-updated: 2026-09-26
+updated: 2026-10-23
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "generators"
 packages: []
@@ -13,7 +13,7 @@ priority: 6
 pr: null
 claim: "2026-09-25T21:17:24Z"
 assignee: "drain-queued-generators-in-generators-invoke"
-blocked-by: "blocked on move-hand-written-generate-subcommand-flags-onto-generators: Generators.invoke('migration', ...) resolves to the rails:migration stub (packages/trailties/src/generators/rails/migration/migration-generator.ts), whose run() ignores attributes and emits an empty change(); Rails' rails:migration is hook_for :orm (railties/lib/rails/generators/rails/migration/migration_generator.rb:7) reaching active_record:migration. The column-aware generator (generators/migration-generator.ts) is reachable only via generate.ts's hand-written 'migration' subcommand. Draining queued generate calls through Generators.invoke therefore emits column-less create_users/create_sessions (verified), failing 'emits create_users and create_sessions migrations'. Unblocks once 'migration' via Generators.invoke reaches the column-aware generator."
+blocked-by: "blocked on rails-migration-generator-does-not-hook-orm: move-hand-written-generate-subcommand-flags-onto-generators landed (trails#8270), but Generators.invoke('migration') still reaches the rails:migration stub (packages/trailties/src/generators/rails/migration/migration-generator.ts, empty change()), which has no hook_for :orm (railties/lib/rails/generators/rails/migration/migration_generator.rb:7). Draining queued generate calls would emit column-less migrations."
 closed-reason: null
 ---
 

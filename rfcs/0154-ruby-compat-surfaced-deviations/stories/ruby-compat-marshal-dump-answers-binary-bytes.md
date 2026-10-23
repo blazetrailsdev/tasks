@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat Marshal.dump answers ASCII-8BIT bytes (Uint8Array)"
-status: draft
-updated: 2026-10-19
+status: done
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#9191
 claim: null
 assignee: null
 blocked-by: null

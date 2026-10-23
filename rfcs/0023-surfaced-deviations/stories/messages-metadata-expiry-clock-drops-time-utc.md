@@ -1,7 +1,7 @@
 ---
 title: "Messages::Metadata expiry clock reads a JS Date, dropping Rails' Time.now.utc calls"
-status: draft
-updated: 2026-08-23
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#7078
 claim: null
 assignee: null
 blocked-by: null

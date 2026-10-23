@@ -1,7 +1,7 @@
 ---
 title: "Port Rack's tag_multipart_encoding / find_encoding instead of no-op stubs"
-status: draft
-updated: 2026-08-18
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#7511
 claim: null
 assignee: null
 blocked-by: null

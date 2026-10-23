@@ -1,7 +1,7 @@
 ---
 title: "Duration.parse inlines what Rails delegates to ISO8601Parser"
-status: draft
-updated: 2026-08-18
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: trails#6909
 claim: null
 assignee: null
 blocked-by: null

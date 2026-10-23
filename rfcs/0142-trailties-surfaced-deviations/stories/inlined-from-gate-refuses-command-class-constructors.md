@@ -1,7 +1,7 @@
 ---
 title: "parity:api:inlined refuses @inlinedFrom on a commands/<dir>.ts command class constructor"
-status: ready
-updated: 2026-10-12
+status: done
+updated: 2026-10-23
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9059
 claim: null
 assignee: null
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "trailties' generator classify/dasherize shadow the ActiveSupport inflector with different semantics"
-status: draft
-updated: 2026-08-05
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#8097
 claim: null
 assignee: null
 blocked-by: null

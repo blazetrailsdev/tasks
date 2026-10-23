@@ -1,7 +1,7 @@
 ---
 title: "Object#try cannot dispatch the Ruby-core predicates trails spells as free functions"
-status: draft
-updated: 2026-08-21
+status: closed
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: CLAUDE.md § 'A dispatch by name is spelled directly' rules that a Rails try/send with a literal name is written as the direct call; hash/conversions.ts's inline nil guard plus isEmpty is that converged form."
 ---
 
 ## Context

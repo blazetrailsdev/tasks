@@ -1,7 +1,7 @@
 ---
 title: "extract_options! returns a tuple instead of mutating the receiver"
-status: draft
-updated: 2026-08-17
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#7755
 claim: null
 assignee: null
 blocked-by: null

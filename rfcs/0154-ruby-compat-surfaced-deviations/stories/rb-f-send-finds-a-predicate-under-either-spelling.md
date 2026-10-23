@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: rbFSend finds a predicate under its Ruby or is-spelling across every lookup"
-status: draft
-updated: 2026-10-03
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: ["ruby-compat"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of rb-f-send-predicate-name-misses-is-spelled-methods (same foo? -> isFoo lookup in sendInternal). Both asked to widen sendInternal's name guessing, which CLAUDE.md § 'A dispatch by name is spelled directly' forbids; the survivor is rewritten as the call-site convergence of numericality.ts NUMBER_CHECKS, and the general predicate arm is decided by 0194 delete-send-name-guessing-arms."
 ---
 
 ## Context

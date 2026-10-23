@@ -1,7 +1,7 @@
 ---
 title: "Type::Binary#changed_in_place? casts the new value where Rails compares it raw"
-status: draft
-updated: 2026-08-28
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#7469
 claim: null
 assignee: null
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "rbModName derives a class's Ruby path from the registered namespace objects"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-10-23
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

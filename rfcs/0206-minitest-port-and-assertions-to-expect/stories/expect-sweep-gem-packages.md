@@ -1,7 +1,7 @@
 ---
 title: "Sweep arel, globalid and rack-test onto Vitest expect"
 status: draft
-updated: 2026-10-22
+updated: 2026-10-23
 rfc: "0206-minitest-port-and-assertions-to-expect"
 cluster: expect-sweeps
 packages: [arel, globalid, rack-test]

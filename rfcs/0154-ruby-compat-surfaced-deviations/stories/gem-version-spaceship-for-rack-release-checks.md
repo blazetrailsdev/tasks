@@ -1,7 +1,7 @@
 ---
 title: "ActionDispatch::Constants ports its Rack 2 arm through Gem::Version#<=>"
-status: draft
-updated: 2026-10-15
+status: ready
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

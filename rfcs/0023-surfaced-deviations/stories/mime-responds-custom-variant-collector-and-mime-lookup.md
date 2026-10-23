@@ -1,7 +1,7 @@
 ---
 title: "Port VariantCollector and mime-type normalization in MimeResponds Collector#custom"
-status: ready
-updated: 2026-07-27
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: trails#8194
 claim: null
 assignee: null
 blocked-by: null

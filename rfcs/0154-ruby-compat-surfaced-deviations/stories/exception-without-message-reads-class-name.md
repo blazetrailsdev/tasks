@@ -1,7 +1,7 @@
 ---
 title: "unpark the debug_exceptions invalid-mime-type test and drop UnexpectedError's class-name arm"
-status: draft
-updated: 2026-10-15
+status: ready
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

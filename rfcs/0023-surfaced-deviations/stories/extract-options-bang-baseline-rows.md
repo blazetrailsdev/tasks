@@ -1,7 +1,7 @@
 ---
 title: "extract_options! baseline rows: port Array#last and settle the receiver-arg call shape"
-status: draft
-updated: 2026-08-13
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#7755
 claim: null
 assignee: null
 blocked-by: null

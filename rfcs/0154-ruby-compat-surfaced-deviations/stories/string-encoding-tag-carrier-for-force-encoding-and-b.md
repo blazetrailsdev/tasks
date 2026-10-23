@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: an encoding-tagged String so force_encoding tags, b and valid_encoding? read the tag"
-status: draft
-updated: 2026-09-30
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "PERMANENT: CLAUDE.md § 'A String has no encoding tag either' (ruled by the repo owner 2026-10-21) settles that trails adds no per-String encoding carrier — a Ruby String is a JS string primitive and an ASCII-8BIT String is a Uint8Array end to end. The tagged-but-undecoded representation this story asks for is the rejected carrier; tse-handler-ports-erb-encoding-tag-and-valid-encoding ports the UTF-8 arm under that ruling."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: send's predicate/writer camelizer does not collapse a run of underscores"
-status: draft
-updated: 2026-10-03
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the story asks sendInternal's camelized heuristic (packages/ruby-compat/src/object.ts) to learn another rule, which CLAUDE.md § 'A dispatch by name is spelled directly (send, public_send)' forbids (ruled 2026-10-20), and the story itself records that no Rails-derived name reaches the a__b= case, so there is no call site to converge. The camelize arms' fate is 0194 delete-send-name-guessing-arms."
 ---
 
 ## Context

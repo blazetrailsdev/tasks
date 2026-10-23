@@ -1,14 +1,14 @@
 ---
 title: "Port Helpers::ActionCableHelper#action_cable_meta_tag"
-status: claimed
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-23
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-server-connections-and-base"]
 deps-rfc: []
 est-loc: 150
-pr: null
+pr: trails#9265
 claim: "2026-10-22T23:50:43Z"
 assignee: "port-actioncable-helper"
 blocked-by: null

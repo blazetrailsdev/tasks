@@ -1,7 +1,7 @@
 ---
 title: "Converge Notifications.subscribe onto arity-preserving callback forwarding"
-status: ready
-updated: 2026-07-27
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#8064
 claim: null
 assignee: null
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "tasks-cli-invalid-time-value-breaks-list-and-show"
-status: draft
-updated: 2026-08-28
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []

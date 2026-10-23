@@ -1,7 +1,7 @@
 ---
 title: "kernelInteger rounds a Bignum to a double"
-status: draft
-updated: 2026-10-05
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of kernel-integer-loses-digits-past-2-53-and-rejects-binary-strings: both ask kernelInteger (packages/ruby-compat/src/kernel-integer.ts, rb_convert_to_integer object.c:3257) to answer a bigint past 2^53 instead of Number(...). The scalar-scanner.trails.test.ts Number(0x123456789abcdefn) assertions are merged into the survivor's criteria."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "MessageEncryptor should delegate sign/verify to a nested MessageVerifier"
-status: ready
-updated: 2026-07-27
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#6219
 claim: null
 assignee: null
 blocked-by: null

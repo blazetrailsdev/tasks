@@ -1,7 +1,7 @@
 ---
 title: "rbObjAsString renders a toS-answering object through JS String() instead of its to_s"
-status: draft
-updated: 2026-09-22
+status: done
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#8415
 claim: null
 assignee: null
 blocked-by: null

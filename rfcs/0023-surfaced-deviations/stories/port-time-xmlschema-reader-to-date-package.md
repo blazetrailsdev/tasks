@@ -1,7 +1,7 @@
 ---
 title: "Port Time.xmlschema to @blazetrails/date so XmlMini stops carrying its own copy of the stdlib regex"
-status: draft
-updated: 2026-08-13
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#7840
 claim: null
 assignee: null
 blocked-by: null

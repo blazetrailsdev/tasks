@@ -1,7 +1,7 @@
 ---
 title: "assign-attributes-hwia-each-pair"
-status: ready
-updated: 2026-07-04
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 9000000
-pr: null
+pr: trails#8757
 claim: null
 assignee: null
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "read_fragment drops Rails' html_safe step on the cached result"
-status: draft
-updated: 2026-08-24
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#9007
 claim: null
 assignee: null
 blocked-by: null

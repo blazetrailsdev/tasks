@@ -1,7 +1,7 @@
 ---
 title: "Port RemoteConnections and RemoteConnection"
-status: claimed
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-23
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
@@ -12,7 +12,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: trails#9265
 claim: "2026-10-22T23:50:43Z"
 assignee: "port-actioncable-helper"
 blocked-by: null

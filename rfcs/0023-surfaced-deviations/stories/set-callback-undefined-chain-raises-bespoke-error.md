@@ -1,7 +1,7 @@
 ---
 title: "set_callback on an undefined chain raises a bespoke Error, not Ruby's NoMethodError"
-status: draft
-updated: 2026-08-24
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: trails#8440
 claim: null
 assignee: null
 blocked-by: null

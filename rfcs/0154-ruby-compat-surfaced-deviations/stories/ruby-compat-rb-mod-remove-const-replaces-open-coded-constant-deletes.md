@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: port Module#remove_const as rbModRemoveConst; tests stop open-coding Reflect.deleteProperty"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

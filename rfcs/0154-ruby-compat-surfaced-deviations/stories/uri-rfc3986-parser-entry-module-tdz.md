@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: uri/rfc3986-parser.js throws a TDZ ReferenceError as an entry module"
-status: draft
-updated: 2026-10-08
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of three-built-modules-fail-as-plain-node-entry-modules, which already lists dist/uri/rfc3986-parser.js; the uri/common.js and uri/generic.js entry checks are merged into the survivor."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "scaffold-controller-set-resource-before-action"
-status: ready
-updated: 2026-09-28
+status: done
+updated: 2026-10-23
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 6
-pr: null
+pr: trails#8221
 claim: null
 assignee: null
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "StandardError#message does not default to the class name (exc_to_s)"
-status: draft
-updated: 2026-09-24
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: ["ruby-compat"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of exception-without-message-reads-class-name. The class-name default for a message-less Exception landed in trails#9022 (packages/ruby-compat/src/exception.ts, Exception#toS and the message getter over it, exc_to_s / exc_message error.c:1463,3303), StandardError extends Exception so it inherits it, and the one leftover AC (drop the UnexpectedError#message special case in packages/activesupport/src/testing/assertions.ts:288-290) is merged into the survivor."
 ---
 
 ## Context

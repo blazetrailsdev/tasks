@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: include(m1, m2) on a Module target does not carry m2 to m1's includers"
-status: draft
-updated: 2026-10-03
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by RFC 0197: a plain-object or class-module target now records the included module (include.ts:1684 trackIncludedModule; CLAUDE.md § 'A module that includes a module records it'), so the nested module reaches later includers. Only a ruby-compat Module target skips the record, and that class is being deleted by 0197 delete-ruby-compat-module-class-final, not repaired."
 ---
 
 ## Context

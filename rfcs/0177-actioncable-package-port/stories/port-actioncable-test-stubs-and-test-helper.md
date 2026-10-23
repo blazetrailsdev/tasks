@@ -1,16 +1,16 @@
 ---
 title: "Port Action Cable's test stubs and test/test_helper.rb, with the first tests that use them"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-23
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-server-connections-and-base"]
 deps-rfc: []
 est-loc: 350
-pr: null
-claim: null
-assignee: null
+pr: trails#9264
+claim: "2026-10-23T00:05:37Z"
+assignee: "port-actioncable-test-stubs-and-test-helper"
 blocked-by: null
 closed-reason: null
 ---

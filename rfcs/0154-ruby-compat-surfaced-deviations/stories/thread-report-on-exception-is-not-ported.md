@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: Thread does not report a dying thread's exception and has no report_on_exception"
-status: draft
-updated: 2026-10-12
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of thread-reports-the-exception-it-dies-of: both port Thread.report_on_exception (thread.c:704-706, :3078-3124) onto packages/ruby-compat/src/thread.ts. The connection_pool_test.rb:668-681 set/restore criterion is merged into the survivor."
 ---
 
 ## Context

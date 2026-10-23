@@ -1,7 +1,7 @@
 ---
 title: "Duration::Scalar's arithmetic drops Rails' Duration arms and the calculate dispatch"
-status: draft
-updated: 2026-08-21
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: trails#7820
 claim: null
 assignee: null
 blocked-by: null

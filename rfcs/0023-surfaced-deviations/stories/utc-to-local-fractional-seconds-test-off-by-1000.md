@@ -1,7 +1,7 @@
 ---
 title: "utc_to_local fractional-seconds test asserts a millisecond where Rails asserts a microsecond"
-status: draft
-updated: 2026-08-24
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: trails#7837
 claim: null
 assignee: null
 blocked-by: null

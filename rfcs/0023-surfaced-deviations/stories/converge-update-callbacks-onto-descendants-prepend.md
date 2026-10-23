@@ -1,7 +1,7 @@
 ---
 title: "__update_callbacks takes its target list as a parameter instead of computing descendants.prepend(self)"
-status: draft
-updated: 2026-08-19
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: trails#8440
 claim: null
 assignee: null
 blocked-by: null

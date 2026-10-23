@@ -1,7 +1,7 @@
 ---
 title: "Converge time-ext.ts's seven surfaced call-parity rows by moving the Time arm onto a gem-shaped receiver"
-status: draft
-updated: 2026-08-17
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#7078
 claim: null
 assignee: null
 blocked-by: null

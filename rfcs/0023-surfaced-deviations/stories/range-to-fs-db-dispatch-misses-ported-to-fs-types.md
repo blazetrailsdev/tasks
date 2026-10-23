@@ -1,7 +1,7 @@
 ---
 title: "RANGE_FORMATS[:db] endpoint dispatch falls back to String() for BigDecimal/PlainDateTime"
-status: draft
-updated: 2026-08-05
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8742
 claim: null
 assignee: null
 blocked-by: null

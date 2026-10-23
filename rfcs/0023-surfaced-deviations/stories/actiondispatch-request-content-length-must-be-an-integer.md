@@ -1,7 +1,7 @@
 ---
 title: "ActionDispatch::Request#content_length must answer an Integer, not undefined"
-status: ready
-updated: 2026-09-02
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 30
-pr: null
+pr: trails#8329
 claim: null
 assignee: null
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Move Minitest::Mock, Object#stub and assert_mock into @blazetrails/minitest"
 status: draft
-updated: 2026-10-22
+updated: 2026-10-23
 rfc: "0206-minitest-port-and-assertions-to-expect"
 cluster: minitest-package
 packages: [minitest, activesupport]

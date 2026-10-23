@@ -1,7 +1,7 @@
 ---
 title: "tests_without_assertions counter only sees vitest expect(), not the ported Minitest assert helpers"
-status: draft
-updated: 2026-08-16
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#7930
 claim: null
 assignee: null
 blocked-by: null

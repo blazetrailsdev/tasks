@@ -1,7 +1,7 @@
 ---
 title: "converge-reset-and-commit-csrf-token-onto-this-typed-mixin"
-status: ready
-updated: 2026-08-18
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#8576
 claim: null
 assignee: null
 blocked-by: null

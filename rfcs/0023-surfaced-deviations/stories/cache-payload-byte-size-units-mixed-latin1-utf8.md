@@ -1,7 +1,7 @@
 ---
 title: "Cache payload byte sizes mix latin1 and UTF-8 units in the compression decision"
-status: draft
-updated: 2026-08-13
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#9191
 claim: null
 assignee: null
 blocked-by: null

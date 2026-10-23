@@ -1,7 +1,7 @@
 ---
 title: "activesupport stops exporting the Minitest assertions, and test code cannot import them"
 status: draft
-updated: 2026-10-22
+updated: 2026-10-23
 rfc: "0206-minitest-port-and-assertions-to-expect"
 cluster: minitest-package
 packages: [activesupport, minitest]

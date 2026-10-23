@@ -1,7 +1,7 @@
 ---
 title: "LazyRouteSet injects a reload hook Rails names inline (engine/lazy_route_set.rb:12-104)"
-status: draft
-updated: 2026-08-25
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#7390
 claim: null
 assignee: null
 blocked-by: null

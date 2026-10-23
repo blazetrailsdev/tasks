@@ -1,7 +1,7 @@
 ---
 title: 'InjectIntoFile#invoke! spells String#+ directly, not rbFSend(…, "plus")'
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Gate rbModConstSet to the Rails const_set sites so the seat protocol cannot come back"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-10-23
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

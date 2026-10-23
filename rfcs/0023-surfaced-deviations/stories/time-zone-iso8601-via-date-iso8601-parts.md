@@ -1,7 +1,7 @@
 ---
 title: "TimeZone#iso8601: parse through Date._iso8601 / Date.ordinal"
-status: draft
-updated: 2026-08-19
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#6857
 claim: null
 assignee: null
 blocked-by: null

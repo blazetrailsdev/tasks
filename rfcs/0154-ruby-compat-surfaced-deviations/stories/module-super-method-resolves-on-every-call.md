@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: Module#superMethod resolves the next method on every call (133 ns vs 6 ns); Numeric#cast pays it"
-status: draft
-updated: 2026-10-02
+status: closed
+updated: 2026-10-23
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the hot path it measured is gone — ActiveModel::Type::Helpers::Numeric is now a class factory using native super (packages/activemodel/src/type/helpers/numeric.ts:58-83), and attributes.ts / dirty.ts no longer call superMethod. RFC 0197 replaces Module#superMethod with inlining and rbCallSuper rather than caching it, so a memo for it would be dead work."
 ---
 
 ## Context

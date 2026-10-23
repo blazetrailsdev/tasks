@@ -1,7 +1,7 @@
 ---
 title: "GlobalID#equals is not symmetric across signed/unsigned pairs"
-status: draft
-updated: 2026-08-17
+status: done
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: trails#7136
 claim: null
 assignee: null
 blocked-by: null

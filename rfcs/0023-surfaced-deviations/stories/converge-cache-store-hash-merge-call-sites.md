@@ -1,7 +1,7 @@
 ---
 title: "converge cache/store.ts's Hash#merge call sites so the call-set gate sees them"
-status: draft
-updated: 2026-08-13
+status: closed
+updated: 2026-10-23
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: CLAUDE.md's native-forms table makes h.merge(other) on a plain object {...h, ...other}; retrieve_pool_options' spread in cache/store.ts:131 is the converged form, not a dropped call."
 ---
 
 ## Context
