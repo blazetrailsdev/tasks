@@ -1,6 +1,6 @@
 ---
 title: "actionview-test-fixtures-under-test-fixtures"
-status: claimed
+status: in-progress
 updated: 2026-10-23
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9277
 claim: "2026-10-23T18:47:27Z"
 assignee: "actionview-test-fixtures-under-test-fixtures"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "GlobalID.create drops nil option params where Rails emits a bare query key"
-status: claimed
+status: done
 updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#9278
 claim: "2026-10-23T18:45:02Z"
 assignee: "globalid-create-keeps-nil-params-in-gid-query"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Rack::Session::Encryptor holds its BINARY Strings as Uint8Array"
-status: claimed
+status: in-progress
 updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 260
 priority: null
-pr: null
+pr: trails#9278
 claim: "2026-10-23T18:45:02Z"
 assignee: "globalid-create-keeps-nil-params-in-gid-query"
 blocked-by: null

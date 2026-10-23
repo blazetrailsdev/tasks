@@ -1,6 +1,6 @@
 ---
 title: "Port SolidQueue::Dispatcher and concurrency maintenance"
-status: claimed
+status: done
 updated: 2026-10-23
 rfc: "0196-solid-stack"
 cluster: solid-stack
@@ -8,7 +8,7 @@ packages: ["solid-queue"]
 deps: ["port-solid-queue-worker"]
 deps-rfc: []
 est-loc: 350
-pr: null
+pr: trails#9276
 claim: "2026-10-23T18:51:11Z"
 assignee: "port-solid-queue-dispatcher"
 blocked-by: null
