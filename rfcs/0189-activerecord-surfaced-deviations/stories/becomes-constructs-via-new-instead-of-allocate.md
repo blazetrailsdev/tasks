@@ -1,7 +1,7 @@
 ---
 title: "becomes constructs via new with suppression flags where Rails uses klass.allocate"
-status: ready
-updated: 2026-10-18
+status: closed
+updated: 2026-10-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "PERMANENT: root CLAUDE.md § 'A record is built with new Klass only' (ruled by the repo owner, trails#8659) ratifies that Persistence#becomes (persistence.rb:487-500, klass.allocate + initialize) reaches Base's constructor with _suppressAbstractCheck and _suppressStiNewDispatch set; an Object.create allocate was tried on trails#8661 and skips class-field initializers. The flags are the settled shape, not debt."
 ---
 
 ## Context

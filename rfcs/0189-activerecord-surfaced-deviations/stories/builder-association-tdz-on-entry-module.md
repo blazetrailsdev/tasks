@@ -1,7 +1,7 @@
 ---
 title: "builder/association.js TDZ-crashes when imported as an entry module"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-10-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

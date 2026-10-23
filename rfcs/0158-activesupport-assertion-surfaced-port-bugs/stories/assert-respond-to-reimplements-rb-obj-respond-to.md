@@ -1,7 +1,7 @@
 ---
 title: "assertRespondTo uses a private respondsTo instead of rbObjRespondTo"
-status: draft
-updated: 2026-09-25
+status: closed
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: trails#9176 ratified that assert_respond_to ports as expect(rbObjRespondTo(o, 'm')).toBe(true) (CONTRIBUTING.md § 'Porting a Minitest assertion'), and delete-minitest-builtin-assert-helpers deletes assertRespondTo / assertNotRespondTo with their private respondsTo / findDescriptor (testing/assertions.ts:612-636). Converging the helper onto rbObjRespondTo would rewrite code that is slated for deletion."
 ---
 
 ## Context

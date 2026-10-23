@@ -1,7 +1,7 @@
 ---
 title: "assertEqual compares via JSON.stringify, not Ruby == (all Hashes equal, key order significant)"
-status: draft
-updated: 2026-09-28
+status: done
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#8224
 claim: null
 assignee: null
 blocked-by: null

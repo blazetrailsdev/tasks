@@ -1,7 +1,7 @@
 ---
 title: "relation.js TDZ-crashes as an entry module"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-10-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 8
-pr: null
+pr: trails#7061
 claim: null
 assignee: null
 blocked-by: null

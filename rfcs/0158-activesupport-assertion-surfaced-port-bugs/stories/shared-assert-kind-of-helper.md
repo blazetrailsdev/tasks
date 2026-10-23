@@ -1,7 +1,7 @@
 ---
 title: "Port minitest assert_kind_of once instead of file-local assertKindOf copies"
-status: draft
-updated: 2026-10-01
+status: closed
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport", "activerecord", "actionpack"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: trails#9176 ratified that assert_kind_of ports as expect(o).toBeInstanceOf(cls), never as a helper (CONTRIBUTING.md § 'Porting a Minitest assertion'). The shared assertKindOf this story asked for now exists (activesupport testing/assertions.ts:942) and is deleted by delete-minitest-builtin-assert-helpers. The two file-local copies (actionpack controller/test-case.test.ts:253, activerecord result.test.ts:5) are callers, converged by minitest-asserts-to-expect-actionpack-actionview-callers and minitest-asserts-to-expect-activerecord-callers."
 ---
 
 ## Context

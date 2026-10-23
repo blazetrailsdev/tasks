@@ -1,7 +1,7 @@
 ---
 title: "Duration: <=> answers NaN for a non-Numeric operand where Rails answers nil; to_f answers an Integer value unchanged"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

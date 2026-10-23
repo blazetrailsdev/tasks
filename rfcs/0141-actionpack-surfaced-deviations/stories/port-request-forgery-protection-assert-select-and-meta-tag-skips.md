@@ -1,7 +1,7 @@
 ---
 title: "Port request_forgery_protection_test.rb's assert_select and csrf_meta_tags skips"
-status: ready
-updated: 2026-10-19
+status: closed
+updated: 2026-10-22
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "DUPLICATE of port-request-forgery-form-token-tag-tests: same fourteen it.skip stubs in request-forgery-protection.test.ts, whose BLOCKED lines already name the survivor; both of this story's deps are done and its context is merged into the survivor."
 ---
 
 ## Context

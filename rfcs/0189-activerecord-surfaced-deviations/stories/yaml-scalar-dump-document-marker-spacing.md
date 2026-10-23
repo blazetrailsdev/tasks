@@ -1,7 +1,7 @@
 ---
 title: "YAMLColumn scalar dumps use '---\\nstr' not Ruby's '--- str'"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-10-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

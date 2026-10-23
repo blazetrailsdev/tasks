@@ -1,6 +1,6 @@
 ---
 title: "minitest-asserts-to-expect-activerecord-callers"
-status: draft
+status: ready
 updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

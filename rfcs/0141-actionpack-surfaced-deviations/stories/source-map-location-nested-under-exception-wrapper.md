@@ -1,6 +1,6 @@
 ---
 title: "Seat SourceMapLocation as ExceptionWrapper::SourceMapLocation"
-status: draft
+status: ready
 updated: 2026-10-22
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

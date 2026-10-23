@@ -1,7 +1,7 @@
 ---
 title: "TestRequest DEFAULT_ENV seats .b binary strings as Rails does"
-status: draft
-updated: 2026-10-21
+status: ready
+updated: 2026-10-22
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

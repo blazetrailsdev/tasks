@@ -1,7 +1,7 @@
 ---
 title: "define_callbacks: reset per descendant, generate _run_name_callbacks, shallow set_callbacks"
-status: draft
-updated: 2026-09-25
+status: done
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#8441
 claim: null
 assignee: null
 blocked-by: null

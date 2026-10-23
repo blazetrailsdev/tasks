@@ -1,7 +1,7 @@
 ---
 title: "DisableJoinsAssociationScope walks the chain eagerly; DJAR sheds its count override"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-10-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 48
-pr: null
+pr: trails#8343
 claim: null
 assignee: null
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Time does not include DateAndTime::Zones, so Time#in_time_zone is not a method"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

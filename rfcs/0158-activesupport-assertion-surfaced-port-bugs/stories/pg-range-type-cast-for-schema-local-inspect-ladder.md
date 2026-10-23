@@ -1,7 +1,7 @@
 ---
 title: "PG OID::Range#typeCastForSchema uses a local instanceof inspect ladder instead of value.inspect"
-status: draft
-updated: 2026-09-25
+status: done
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#8751
 claim: null
 assignee: null
 blocked-by: null

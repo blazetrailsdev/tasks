@@ -1,7 +1,7 @@
 ---
 title: 'Mapper reads a ":action" path string as the Symbol :action'
-status: ready
-updated: 2026-10-19
+status: closed
+updated: 2026-10-22
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "DUPLICATE of mapper-colon-string-path-read-as-symbol: both cover the Mapper reading a ':action' path String as the Symbol :action; the survivor now lists all four test files (multipart, json, url-encoded, query-string params parsing)."
 ---
 
 ## Context

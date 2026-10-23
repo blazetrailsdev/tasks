@@ -1,7 +1,7 @@
 ---
 title: "activerecord: DatabaseTasks.migrate sends Migration.write instead of calling it"
-status: draft
-updated: 2026-10-20
+status: ready
+updated: 2026-10-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

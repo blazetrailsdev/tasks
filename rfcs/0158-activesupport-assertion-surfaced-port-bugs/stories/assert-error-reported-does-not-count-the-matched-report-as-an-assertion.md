@@ -1,7 +1,7 @@
 ---
 title: "activesupport: assert_error_reported does not count the matched report as an assertion"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

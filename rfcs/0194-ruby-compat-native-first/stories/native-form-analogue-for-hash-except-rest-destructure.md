@@ -1,6 +1,6 @@
 ---
 title: "Call gate: credit a literal-key rest-destructure as Hash#except"
-status: ready
+status: done
 updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9260
+claim: "2026-10-22T23:05:33Z"
+assignee: "native-analogues-array-calls"
 blocked-by: null
 ---
 

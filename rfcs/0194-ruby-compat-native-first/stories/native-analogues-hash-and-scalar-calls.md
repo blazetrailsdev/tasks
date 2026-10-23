@@ -1,6 +1,6 @@
 ---
 title: "Call gate: credit native forms for Hash keys/transform_values/each_value/values_at/dup and numeric/string to_i/to_f/round/strip/chomp"
-status: ready
+status: done
 updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9260
+claim: "2026-10-22T23:05:33Z"
+assignee: "native-analogues-array-calls"
 blocked-by: null
 closed-reason: null
 ---

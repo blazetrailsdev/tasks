@@ -1,7 +1,7 @@
 ---
 title: "HWIA/OrderedHash dump their bare JS class name in the !ruby/hash tag, not ActiveSupport::…"
-status: draft
-updated: 2026-09-30
+status: done
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: trails#8605
 claim: null
 assignee: null
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Move TS-only BacktraceCleanerKindTest into backtrace-cleaner.trails.test.ts"
-status: draft
-updated: 2026-10-21
+status: ready
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "TimeWithZone#in_time_zone delegates to utc.in_time_zone"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

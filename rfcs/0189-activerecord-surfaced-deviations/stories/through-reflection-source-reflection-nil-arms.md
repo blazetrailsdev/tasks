@@ -1,7 +1,7 @@
 ---
 title: "ThroughReflection: drop nil-tolerant source_reflection arms, port AssociationReflection#actual_source_reflection"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

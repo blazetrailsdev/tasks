@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Relation#pluck's loaded arm open-codes records.pluck over record.get"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

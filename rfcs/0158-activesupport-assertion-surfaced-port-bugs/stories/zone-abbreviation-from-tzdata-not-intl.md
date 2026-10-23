@@ -1,7 +1,7 @@
 ---
 title: "TimeZone abbreviation: answer tzdata's, not Intl's short name"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

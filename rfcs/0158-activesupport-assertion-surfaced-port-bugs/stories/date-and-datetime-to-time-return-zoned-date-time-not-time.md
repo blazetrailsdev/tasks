@@ -1,7 +1,7 @@
 ---
 title: "date-and-datetime-to-time-return-zoned-date-time-not-time"
-status: draft
-updated: 2026-09-25
+status: closed
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicate of date-and-datetime-to-time-return-time, which now carries this story's MRI/ActiveSupport citations, the free toTime removal and the test_date_conv.rb:16-20 criteria."
 ---
 
 ## Context

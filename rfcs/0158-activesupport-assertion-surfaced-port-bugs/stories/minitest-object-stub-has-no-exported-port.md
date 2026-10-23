@@ -1,7 +1,7 @@
 ---
 title: "request-forgery-protection tests hand-roll Minitest Object#stub with vi.spyOn"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["actionpack"]

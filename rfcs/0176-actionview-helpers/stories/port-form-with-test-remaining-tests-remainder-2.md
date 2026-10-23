@@ -1,6 +1,6 @@
 ---
 title: "Port form_with_test.rb remaining tests (remainder, part 2 of 3)"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null

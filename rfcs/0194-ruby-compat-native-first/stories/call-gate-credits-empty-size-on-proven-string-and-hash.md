@@ -1,6 +1,6 @@
 ---
 title: "Call gate: credit .length for empty?/size/length on a Ripper-proven String or Hash receiver"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: gate

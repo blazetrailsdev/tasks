@@ -1,6 +1,6 @@
 ---
 title: "Land the generated mini_magick package on main, registered in CI"
-status: ready
+status: in-progress
 updated: 2026-10-22
 rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-land
@@ -9,9 +9,9 @@ deps: ["vitest-matchers-rspec-matchers", "ruby-compat-deprecate-constant-and-fil
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9262
+claim: "2026-10-22T23:20:09Z"
+assignee: "mini-magick-land-on-main"
 blocked-by: null
 ---
 

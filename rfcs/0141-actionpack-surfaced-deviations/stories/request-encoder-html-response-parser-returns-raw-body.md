@@ -1,7 +1,7 @@
 ---
 title: "request-encoder-html-response-parser-returns-raw-body"
-status: ready
-updated: 2026-10-19
+status: done
+updated: 2026-10-22
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9076
 claim: null
 assignee: null
 blocked-by: null

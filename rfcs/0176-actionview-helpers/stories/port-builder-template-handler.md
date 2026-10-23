@@ -1,6 +1,6 @@
 ---
 title: "Port ActionView Builder template handler and mirror .builder fixtures"
-status: in-progress
+status: done
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null

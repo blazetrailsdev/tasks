@@ -1,6 +1,6 @@
 ---
 title: "Port form_with_test.rb remaining tests (remainder, part 3 of 3)"
-status: ready
+status: done
 updated: 2026-10-22
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["port-form-with-test-remaining-tests-remainder-2"]
 deps-rfc: []
 est-loc: 360
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9261
+claim: "2026-10-22T23:20:48Z"
+assignee: "port-form-with-test-remaining-tests-remainder-3"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "activesupport: Delegation.generate's NoMethodError names the receiver as MRI does"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

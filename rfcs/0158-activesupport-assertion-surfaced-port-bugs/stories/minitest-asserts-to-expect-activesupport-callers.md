@@ -1,7 +1,7 @@
 ---
 title: "minitest-asserts-to-expect-activesupport-callers"
-status: draft
-updated: 2026-10-21
+status: ready
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

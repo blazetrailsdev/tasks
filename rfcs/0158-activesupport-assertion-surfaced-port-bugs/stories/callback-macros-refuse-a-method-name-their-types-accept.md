@@ -1,7 +1,7 @@
 ---
 title: "Callback macros refuse the method name their types accept: no spelling for after_save :method"
-status: draft
-updated: 2026-10-12
+status: closed
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport", "activerecord"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the Symbol arm has a spelling. CallTemplate.build (activesupport callbacks.ts:289-299, since trails#6585) dispatches a ':name' string as MethodCall, the Ruby-Symbol-as-colon-string form CLAUDE.md § 'A Ruby Symbol is a JS string' prescribes, so afterSave(':closeRfcIfComplete') is after_save :close_rfc_if_complete. A bare string raising ArgumentError is Rails' own String arm (callbacks.rb CallTemplate.build), so the type admitting string is faithful."
 ---
 
 ## Context

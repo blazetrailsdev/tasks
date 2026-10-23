@@ -1,7 +1,7 @@
 ---
 title: "HashWithIndifferentAccess inlines the Hash#fetch, #replace and #slice Rails reaches by super; OrderedHash defines a replace Rails does not"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Sweep toBeUndefined ports of assert_nil onto assertNil"
-status: draft
-updated: 2026-09-30
+status: closed
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: trails#9176 (minitest-builtin-asserts-port-as-expect) ratified in CONTRIBUTING.md § 'Porting a Minitest assertion' that a Minitest built-in ports as a Vitest expect, never as a helper; assert_nil is expect(x).toBeNull() and refute_nil is .not.toBeNull(), and assertNil/assertNotNil are deleted by delete-minitest-builtin-assert-helpers. Moving toBeUndefined sites onto the assertNil helper is the wrong target; a toBeUndefined that ports assert_nil is a toBeNull port per that table, where an undefined failing is a port bug to fix in the code under test."
 ---
 
 ## Context

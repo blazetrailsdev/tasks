@@ -1,7 +1,7 @@
 ---
 title: "activesupport: reverseMerge / reverseMergeBang drop the other hash's keys when the receiver is a Hash"
-status: draft
-updated: 2026-10-05
+status: done
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: trails#9018
 claim: null
 assignee: null
 blocked-by: null

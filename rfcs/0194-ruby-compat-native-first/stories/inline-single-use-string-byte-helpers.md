@@ -1,6 +1,6 @@
 ---
 title: "Inline single-caller string and byte helpers at their callers"
-status: claimed
+status: done
 updated: 2026-10-22
 rfc: "0194-ruby-compat-native-first"
 cluster: inline
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9259
 claim: "2026-10-22T22:50:36Z"
 assignee: "inline-single-use-string-byte-helpers"
 blocked-by: null

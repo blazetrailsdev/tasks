@@ -1,7 +1,7 @@
 ---
 title: "EnumType#cast misses a numerically-equal bigint where Ruby's has_value? matches"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-10-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 16
-pr: null
+pr: trails#8724
 claim: null
 assignee: null
 blocked-by: null

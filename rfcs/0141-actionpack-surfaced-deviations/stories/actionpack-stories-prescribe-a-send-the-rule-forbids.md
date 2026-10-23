@@ -1,7 +1,7 @@
 ---
 title: "actionpack: seven stories' acceptance criteria prescribe rbFSend where the rule requires the direct call"
-status: draft
-updated: 2026-10-20
+status: done
+updated: 2026-10-22
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: tasks#292
 claim: null
 assignee: null
 blocked-by: null

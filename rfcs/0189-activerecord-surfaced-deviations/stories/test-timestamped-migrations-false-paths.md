@@ -1,7 +1,7 @@
 ---
 title: "Port Rails' timestamped_migrations=false cases for nextMigrationNumber/isValidateTimestamp"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-10-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

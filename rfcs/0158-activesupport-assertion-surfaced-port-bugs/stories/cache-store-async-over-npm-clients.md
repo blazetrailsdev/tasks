@@ -1,7 +1,7 @@
 ---
 title: "cache-store-async-over-npm-clients"
-status: ready
-updated: 2026-10-16
+status: closed
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: superseded by its split. Store plus Memory/File/Null async shipped as cache-store-async-store-and-local-stores (trails#8997) and the consumers as cache-store-async-consumers; the remaining arms are their own stories: mem-cache-store-async-over-npm-client, redis-cache-store-async-over-npm-client and file-store-async-fs-bodies."
 ---
 
 ## Context

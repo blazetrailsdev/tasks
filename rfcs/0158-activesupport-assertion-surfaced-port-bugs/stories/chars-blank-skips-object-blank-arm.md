@@ -1,7 +1,7 @@
 ---
 title: "chars-blank-skips-object-blank-arm"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

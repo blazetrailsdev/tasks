@@ -1,7 +1,7 @@
 ---
 title: "OrderedOptions lacks Hash#values, blocking config_for makes all hash methods available"
-status: draft
-updated: 2026-09-26
+status: ready
+updated: 2026-10-22
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
