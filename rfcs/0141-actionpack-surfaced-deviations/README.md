@@ -11,6 +11,7 @@ packages:
   - "trailties"
   - "actionview"
   - "rack"
+  - "activerecord-cli"
 clusters:
   - "action-controller"
   - "test-harness"

@@ -2,7 +2,7 @@
 title: "trails new omits @blazetrails/activejob, so generate scaffold crashes"
 status: draft
 updated: 2026-10-23
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
 deps: []
