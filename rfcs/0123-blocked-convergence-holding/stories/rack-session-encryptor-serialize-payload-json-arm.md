@@ -2,7 +2,7 @@
 title: "rack-session-encryptor-serialize-payload-json-arm"
 status: draft
 updated: 2026-10-23
-rfc: "0193-small-gem-ports-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
