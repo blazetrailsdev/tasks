@@ -2,7 +2,7 @@
 title: "nokogiri-xml-document-collects-non-fatal-diagnostics"
 status: draft
 updated: 2026-10-23
-rfc: "0193-small-gem-ports-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
