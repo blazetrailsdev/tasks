@@ -2,7 +2,7 @@
 title: "AllowBrowser#bot? must read parsed_user_agent, not a bespoke user-agent regex"
 status: ready
 updated: 2026-09-02
-rfc: "0023-surfaced-deviations"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

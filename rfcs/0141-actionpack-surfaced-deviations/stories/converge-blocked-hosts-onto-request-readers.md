@@ -2,7 +2,7 @@
 title: "Converge HostAuthorization#blocked_hosts onto the Rails reader calls"
 status: draft
 updated: 2026-08-18
-rfc: "0023-surfaced-deviations"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages:
   - "actionpack"

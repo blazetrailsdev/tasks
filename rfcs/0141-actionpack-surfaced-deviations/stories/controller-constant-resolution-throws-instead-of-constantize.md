@@ -2,7 +2,7 @@
 title: "Register controllers in the constant table so controllerClassFor can constantize instead of throwing"
 status: draft
 updated: 2026-07-28
-rfc: "0023-surfaced-deviations"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages:
   - "actionpack"

@@ -2,7 +2,7 @@
 title: "Drop Request::Session's structural Req stand-in for the real Request"
 status: draft
 updated: 2026-08-18
-rfc: "0023-surfaced-deviations"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages:
   - "actionpack"

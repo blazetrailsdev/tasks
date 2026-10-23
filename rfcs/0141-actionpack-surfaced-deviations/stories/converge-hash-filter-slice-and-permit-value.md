@@ -2,7 +2,7 @@
 title: "hash_filter: fold the invented private _hashFilter back into hash_filter and keep with_indifferent_access"
 status: draft
 updated: 2026-08-17
-rfc: "0023-surfaced-deviations"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages:
   - "actionpack"

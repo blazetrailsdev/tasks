@@ -2,7 +2,7 @@
 title: "UrlFor's action_methods override is ported but never installed"
 status: ready
 updated: 2026-07-27
-rfc: "0023-surfaced-deviations"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages:
   - "actionpack"
