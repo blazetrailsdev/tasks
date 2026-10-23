@@ -19,8 +19,8 @@ blocked-by: null
 
 RFC 0206 § "Matchers". Minitest's `assert_includes collection, obj` is
 `collection.include?(obj)` (`vendor/minitest/v5.27.0/lib/minitest/assertions.rb:260-266`;
-`refute_includes` `:700-706`), used 700 times across Rails' test suites
-(`grep -rhoE '\bassert_includes\b' vendor/rails/v8.0.2/*/test | wc -l`).
+`refute_includes` `:700-706`), used 700 times across Rails' test suites, plus 205 `assert_not_includes`
+(`grep -rhoE '\b(assert_includes|assert_not_includes)\b' vendor/rails/v8.0.2/*/test | sort | uniq -c`).
 `Array#include?` compares with `==` and `Hash#include?` reads keys. The
 built-ins miss both: `toContainEqual` is structural (a record element compares
 field by field, not by class and id), `toContain` on a `Map` ignores keys, and
