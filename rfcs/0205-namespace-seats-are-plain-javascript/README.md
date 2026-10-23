@@ -69,7 +69,7 @@ number **fewer than ten** — named individually in "What survives" below.
 So the default becomes the plain ES import, the namespace objects shrink to the
 handful of sites where module evaluation order actually needs them, and
 `rbModConstSet` is left only where the Rails body itself calls `const_set`
-(18 sites in the whole vendored tree).
+(18 sites in the vendored Rails tree).
 
 ## Why the current shape is wrong
 
@@ -149,6 +149,13 @@ classes (`arel/nodes/{binary,unary,function}.rb`), an `ATTR_` name constant
 `ClassMethods` (`concern.rb:212`), a `concerning` topic
 (`concerning.rb:133`), a stubbed constant (`constant_stubbing.rb:33-45`), and
 `Object::APP_PATH` (`app_loader.rb:57`). Eighteen sites.
+
+The rule is per body, not per count. A ported gem that calls `const_set`
+qualifies identically: thor's `rake_compat.rb:64`
+(`klass.const_set(const_name, Class.new(Thor))`) is the only such site outside
+Rails in the vendored sources trails ports, and is itself unported. racc's
+three (`statetransitiontable.rb:271,285,286`) are in a gem with no trails
+package. `vendor/ruby`'s are MRI internals, not a ported body.
 
 A surviving module-eval _seat_ is a plain assignment, `Owner.Name = Klass`,
 which is type-checked where the helper call was not.
