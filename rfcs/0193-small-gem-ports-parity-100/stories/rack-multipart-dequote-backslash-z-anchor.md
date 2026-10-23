@@ -1,7 +1,7 @@
 ---
 title: "rack: Parser#dequote spells Ruby's \\Z anchor"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []

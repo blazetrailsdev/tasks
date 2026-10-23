@@ -1,6 +1,6 @@
 ---
 title: "Port Helpers::ActionCableHelper#action_cable_meta_tag"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0177-actioncable-package-port"
 cluster: fidelity

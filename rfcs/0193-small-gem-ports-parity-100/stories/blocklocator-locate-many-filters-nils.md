@@ -1,7 +1,7 @@
 ---
 title: "BlockLocator#locateMany filters nils where Rails preserves positional alignment"
-status: draft
-updated: 2026-08-17
+status: ready
+updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages:

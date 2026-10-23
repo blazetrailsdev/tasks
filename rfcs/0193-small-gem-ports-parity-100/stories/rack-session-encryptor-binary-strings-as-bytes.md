@@ -1,7 +1,7 @@
 ---
 title: "Rack::Session::Encryptor holds its BINARY Strings as Uint8Array"
-status: blocked
-updated: 2026-10-20
+status: ready
+updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages:
@@ -12,9 +12,9 @@ deps-rfc: []
 est-loc: 260
 priority: null
 pr: null
-claim: "2026-10-20T19:48:40Z"
-assignee: "date-class-instance-d-lite-zero-private-readers"
-blocked-by: "waits on marshal-dump-answers-binary-bytes: Marshal.dump must answer BINARY bytes before the payload can be a Uint8Array"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "GlobalID.defaultLocator is async; converge via a zero-import Locator slot"
-status: draft
-updated: 2026-08-08
+status: ready
+updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages:

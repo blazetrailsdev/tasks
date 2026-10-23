@@ -1,6 +1,6 @@
 ---
 title: "Port the Inline, Async and Test subscription adapters and the shared adapter test modules"
-status: in-progress
+status: done
 updated: 2026-10-23
 rfc: "0177-actioncable-package-port"
 cluster: fidelity

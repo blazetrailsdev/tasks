@@ -1,7 +1,7 @@
 ---
 title: "Rack::Lint check_environment calls value.b for the non-ASCII check"
-status: draft
-updated: 2026-10-21
+status: ready
+updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []

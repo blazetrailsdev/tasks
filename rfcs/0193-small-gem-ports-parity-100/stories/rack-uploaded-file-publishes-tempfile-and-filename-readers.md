@@ -1,7 +1,7 @@
 ---
 title: "Rack::Multipart::UploadedFile has no tempfile or filename reader — port method_missing delegation instead"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []

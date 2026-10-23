@@ -1,7 +1,7 @@
 ---
 title: "rack-session and globalid: re-pin the 6 bodies that drifted unpinned"
-status: draft
-updated: 2026-10-21
+status: ready
+updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: small-residuals
 packages: ["rack-session", "globalid"]

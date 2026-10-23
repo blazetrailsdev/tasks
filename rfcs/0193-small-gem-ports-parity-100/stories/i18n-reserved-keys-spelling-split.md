@@ -1,7 +1,7 @@
 ---
 title: "Split RESERVED_KEYS into option-stripping and pattern-matching lists"
-status: draft
-updated: 2026-08-03
+status: ready
+updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages:

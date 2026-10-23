@@ -1,7 +1,7 @@
 ---
 title: "Fold i18n's resetConfig/resetClassConfig test seams into I18n.config= assignment"
-status: draft
-updated: 2026-10-20
+status: ready
+updated: 2026-10-23
 rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
