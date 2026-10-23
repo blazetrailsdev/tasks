@@ -1,5 +1,5 @@
 ---
-title: "burn-down-newly-measured-assertion-mismatches"
+title: "Burn down the assertion mismatches first measured for actionpack, rack and trailties"
 status: ready
 updated: 2026-09-01
 rfc: "0023-surfaced-deviations"
@@ -15,6 +15,10 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. assertion-mismatch-mark.json and :reseed retired by #9141 (ratchet compares against main's CI artifact); AC rewritten onto the current gate. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
 
 ## Context
 
@@ -59,8 +63,9 @@ pnpm parity:test --assertions --missing --package <pkg>
 - Per claimed slice, the trails test asserts what its Rails counterpart asserts
   — same number of assertions, same kinds, same literal expected values. Read
   the Rails test first; the test NAME never changes (CLAUDE.md).
-- `pnpm parity:test:assertions:reseed` lowers the slice's counters, and the
-  lowered mark is committed in the same PR.
+- `pnpm parity:test:assertions` is green and reports the slice's mismatches
+  lower than main's CI artifact. There is no mark file to commit: since
+  trails#9141 the ratchet compares against main's artifact.
 - No counter is raised, and `ASSERTION_REPORT_PACKAGES` is not reintroduced to
   scope a package back out of the measurement.
 - Split per package as claimed; actiondispatch (364/519/74) and rack (372/471/61)

@@ -28,7 +28,7 @@ Rails builds the generator inline and memoizes it in an ivar; there is no
 factory, no setter, and no teardown:
 
 ```ruby
-# vendor/rails/railties/lib/rails/engine/updater.rb:10-13
+# vendor/rails/v8.0.2/railties/lib/rails/engine/updater.rb:10-13
 def generator
   @generator ||= Rails::Generators::PluginGenerator.new ["plugin"],
     { engine: true }, { destination_root: ENGINE_ROOT }

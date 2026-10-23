@@ -17,13 +17,17 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. Time arm fixed (#8071 writes utcOffset); DateTime arm still writes offset() = 0 (extensions.ts:61,250). Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 PR #5634 mapped Rails' MessagePack temporal extension types onto Temporal:
 `DateTime` -> `Temporal.PlainDateTime` (type 5) and `Time` -> `Temporal.Instant`
 (type 7). Neither analogue carries a UTC offset, but Rails' payload format has an
 offset slot in both
-(`vendor/rails/activesupport/lib/active_support/message_pack/extensions.rb:138-167`:
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/message_pack/extensions.rb:138-167`:
 `write_datetime` writes `datetime.offset` as a rational, `write_time` writes
 `time.utc_offset`).
 

@@ -21,7 +21,7 @@ closed-reason: null
 
 Rails' `Messages::Codec` declares
 `class_attribute :default_serializer, default: :marshal`
-(`vendor/rails/activesupport/lib/active_support/messages/codec.rb:12-13`) and
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/messages/codec.rb:12-13`) and
 neither `MessageEncryptor` nor `MessageVerifier` overrides it.
 
 PR #5353 deviated: both subclasses set

@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 `ActionController::AllowBrowser::ClassMethods::BrowserBlocker#bot?`
-(`vendor/rails/actionpack/lib/action_controller/metal/allow_browser.rb:105-107`)
+(`vendor/rails/v8.0.2/actionpack/lib/action_controller/metal/allow_browser.rb:105-107`)
 is
 
     def bot?
@@ -42,7 +42,7 @@ delegates to, and it disagrees with it on every agent the parser knows and the
 regex does not (and vice versa).
 
 Surfaced in #7380: converging `Request#user_agent` onto
-`Rack::Request::Helpers#user_agent` (`vendor/rack/lib/rack/request.rb:201`)
+`Rack::Request::Helpers#user_agent` (`vendor/rack/v3.1.14/lib/rack/request.rb:201`)
 changed the reader's answer from `""` to `null` for a missing header, which
 forced the `?? ""` at this call site into view.
 

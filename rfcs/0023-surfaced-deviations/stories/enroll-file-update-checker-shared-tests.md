@@ -19,15 +19,15 @@ closed-reason: null
 ## Context
 
 PR #7166 ported `ActiveSupport::FileUpdateChecker`
-(`vendor/rails/activesupport/lib/active_support/file_update_checker.rb:34-163`)
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/file_update_checker.rb:34-163`)
 to `packages/activesupport/src/file-update-checker.ts` so that
 `ActiveRecord::Migration::CheckPending` could be rebuilt on Rails' shape
 (`migration.rb:648-681`).
 
 Its Rails coverage was NOT enrolled. Rails tests it through
-`vendor/rails/activesupport/test/file_update_checker_test.rb`, which mixes in
+`vendor/rails/v8.0.2/activesupport/test/file_update_checker_test.rb`, which mixes in
 `FileUpdateCheckerSharedTests`
-(`vendor/rails/activesupport/test/file_update_checker_shared_tests.rb`) — ~30
+(`vendor/rails/v8.0.2/activesupport/test/file_update_checker_shared_tests.rb`) — ~30
 tests built on `touch` timing loops (`wait`/`touch` helpers around mtime
 granularity) and, for two of them, `Process.fork`.
 

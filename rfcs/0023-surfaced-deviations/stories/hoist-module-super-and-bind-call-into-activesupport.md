@@ -18,6 +18,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. ruby-compat now has rbCallSuper (include.ts:1812, RFC 0197); accepts-multiparameter-time.ts:13 still hand-rolls superOf. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 Surfaced while landing PR #6778 (`converge-accepts-multiparameter-time-to-a-real-mixin`).
@@ -33,7 +37,7 @@ and knows nothing about the carrier `include()` splices in:
    a file-local `superOf(receiver, name, self)` that walks the prototype chain
    for the LAST link owning `name` and answers from that link's prototype,
    used by the mixin's `cast` / `assertValidValue`
-   (`vendor/rails/activemodel/lib/active_model/type/helpers/accepts_multiparameter_time.rb:17-31`,
+   (`vendor/rails/v8.0.2/activemodel/lib/active_model/type/helpers/accepts_multiparameter_time.rb:17-31`,
    whose `else super(value)` arms are the ones being spelled).
 2. `packages/activemodel/src/type/date.ts`, `date-time.ts`, `time.ts` — each
    class-body `valueFromMultiparameterAssignment` override reaches the mixin's

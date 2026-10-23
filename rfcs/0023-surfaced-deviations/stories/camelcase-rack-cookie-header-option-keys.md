@@ -1,15 +1,14 @@
 ---
-title: "camelCase the rack cookie-header option keys and drop the actionpack bridge"
+title: "Drop Response's rackCookieValue bridge now that rack reads camelCase cookie keys"
 status: draft
 updated: 2026-08-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
   - "actionpack"
-  - "rack"
 deps: []
 deps-rfc: []
-est-loc: 150
+est-loc: 60
 priority: null
 pr: null
 claim: null
@@ -17,6 +16,10 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. rack utils now reads camelCase keys; rackCookieValue bridge (response.ts:812) still exists, now only for expires. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
 
 ## Context
 

@@ -21,7 +21,7 @@ closed-reason: null
 
 Ruby's `only:` filter accepts a **Module**, not just a Class:
 `GlobalID::Locator.find_allowed?` tests `model <= klass`
-(`vendor/globalid/lib/global_id/locator.rb:207-213`), and `Module#<=` is true
+(`vendor/globalid/v1.3.0/lib/global_id/locator.rb:207-213`), and `Module#<=` is true
 when the class includes the module. Rails exercises this with four tests in
 `global_id_test.rb`:
 

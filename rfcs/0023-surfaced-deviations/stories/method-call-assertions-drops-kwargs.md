@@ -23,7 +23,7 @@ closed-reason: null
 to the mock; the trails port drops them entirely.
 
 Rails
-(`vendor/rails/activesupport/lib/active_support/testing/method_call_assertions.rb:20-34`):
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/testing/method_call_assertions.rb:20-34`):
 
 ```ruby
 def assert_called_with(object, method_name, args, returns: false, **kwargs, &block)

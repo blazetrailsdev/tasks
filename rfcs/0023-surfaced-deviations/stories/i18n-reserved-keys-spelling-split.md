@@ -24,7 +24,7 @@ closed-reason: null
 `fallbackOriginalLocale`, `exceptionHandler`) because the same list doubles as
 the translate-option keys, and trails options are camelCase.
 
-Rails spells them as snake_case Symbols at `vendor/i18n/lib/i18n.rb:19-34`, and
+Rails spells them as snake_case Symbols at `vendor/i18n/v1.14.8/lib/i18n.rb:19-34`, and
 the list feeds two different consumers:
 
 1. `Utils.except(options, *RESERVED_KEYS)` (`backend/base.rb:56`) — stripping

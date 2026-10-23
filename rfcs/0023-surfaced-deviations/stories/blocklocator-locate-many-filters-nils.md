@@ -21,7 +21,7 @@ closed-reason: null
 
 `GlobalID::Locator::BlockLocator#locate_many` maps every gid through `locate`
 and keeps the results as-is, nils included
-(`vendor/globalid/lib/global_id/locator.rb:241-243`):
+(`vendor/globalid/v1.3.0/lib/global_id/locator.rb:241-243`):
 
 ```ruby
 def locate_many(gids, options = {})

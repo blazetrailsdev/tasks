@@ -1,5 +1,5 @@
 ---
-title: "Active Support never mixes in I18n Backend::Fallbacks that instance_or_fallback depends on"
+title: "Port I18n::Railtie.init_fallbacks so config.i18n.fallbacks mixes Backend::Fallbacks into the backend"
 status: draft
 updated: 2026-08-16
 rfc: "0023-surfaced-deviations"
@@ -17,11 +17,15 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. premise wrong: active_support/i18n.rb only requires fallbacks (already loaded via i18n index.ts:77); the include is I18n::Railtie.init_fallbacks (i18n_railtie.rb:104), unported - retitle. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 `ActiveSupport::Inflector::Inflections.instance_or_fallback(locale)` walks
 `I18n.fallbacks[locale]` and returns the first already-built instance
-(`vendor/rails/activesupport/lib/active_support/inflector/inflections.rb:70-75`).
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/inflector/inflections.rb:70-75`).
 The port landed in PR #6604 and reads `I18n.fallbacks()` from
 `@blazetrails/i18n` directly.
 

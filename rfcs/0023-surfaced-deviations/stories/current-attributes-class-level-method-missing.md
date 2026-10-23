@@ -29,7 +29,7 @@ Rails puts three hooks on `CurrentAttributes`' singleton class, so **every**
 subclass answers **every** public instance method off the class itself:
 
 - `method_missing(name, ...)` → `instance.public_send(name, ...)`
-  (`vendor/rails/activesupport/lib/active_support/current_attributes.rb:178-180`)
+  (`vendor/rails/v8.0.2/activesupport/lib/active_support/current_attributes.rb:178-180`)
 - `respond_to_missing?(name, _)` → `instance.respond_to?(name) || super`
   (`current_attributes.rb:182-184`)
 - `method_added(name)` → `Delegation.generate(singleton_class, [name], to: :instance, as: self, nilable: false)`

@@ -1,5 +1,5 @@
 ---
-title: "converge-module-ext-generated-method-locations"
+title: "mattr_accessor drops the caller_locations location Rails threads into mattr_reader/mattr_writer"
 status: draft
 updated: 2026-08-13
 rfc: "0023-surfaced-deviations"
@@ -8,7 +8,7 @@ packages:
   - "activesupport"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 40
 priority: null
 pr: null
 claim: null
@@ -16,6 +16,10 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. delegate half landed in #8871; narrow to mattr_accessor location. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
 
 ## Context
 

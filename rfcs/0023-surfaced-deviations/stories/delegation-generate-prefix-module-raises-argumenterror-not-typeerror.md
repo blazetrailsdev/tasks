@@ -21,7 +21,7 @@ closed-reason: null
 
 ## Context
 
-Shipped in PR #6995. `vendor/rails/activesupport/lib/active_support/delegation.rb:26-29`:
+Shipped in PR #6995. `vendor/rails/v8.0.2/activesupport/lib/active_support/delegation.rb:26-29`:
 
     if prefix == true && /^[^a-z_]/.match?(to)
       raise ArgumentError, "Can only automatically set the delegation prefix when delegating to a method."

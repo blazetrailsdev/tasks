@@ -23,7 +23,7 @@ Rails' `config_accessor` takes a `default:` kwarg AND a block, and they are
 distinct inputs:
 
 ```ruby
-# vendor/rails/activesupport/lib/active_support/configurable.rb:107,126
+# vendor/rails/v8.0.2/activesupport/lib/active_support/configurable.rb:107,126
 def config_accessor(*names, instance_reader: true, instance_writer: true, instance_accessor: true, default: nil)
   ...
   send("#{name}=", block_given? ? yield : default)

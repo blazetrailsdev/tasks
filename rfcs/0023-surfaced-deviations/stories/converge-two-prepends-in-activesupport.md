@@ -5,7 +5,7 @@ updated: 2026-08-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
-  - "activesupport"
+  - "ruby-compat"
 deps: []
 deps-rfc: []
 est-loc: 180
@@ -16,6 +16,10 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. both moved to ruby-compat: prepend.ts:72 and include.ts:2085 still two prepend()s. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
 
 ## Context
 
@@ -32,7 +36,7 @@ claiming to mirror Ruby's `Module#prepend`:
   descriptors onto `klass.prototype` so the module's method wins over the class
   body. This is what a module's `prepend_features` hook installs, and it is what
   `Deprecation::DeprecatedConstantProxy#prepend_features` needs
-  (`vendor/rails/activesupport/lib/active_support/deprecation/proxy_wrappers.rb:161-164`,
+  (`vendor/rails/v8.0.2/activesupport/lib/active_support/deprecation/proxy_wrappers.rb:161-164`,
   whose body is `base.prepend(target)`). It is deliberately NOT re-exported from
   the index to avoid colliding with the other one.
 

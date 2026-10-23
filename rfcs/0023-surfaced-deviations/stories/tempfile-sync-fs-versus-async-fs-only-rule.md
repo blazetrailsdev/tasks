@@ -5,7 +5,7 @@ updated: 2026-08-24
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
-  - "activesupport"
+  - "ruby-compat"
 deps: []
 deps-rfc: []
 est-loc: 60
@@ -16,6 +16,10 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+
+## Refinement (2026-10-22): owner decision needed
+
+Re-verified against trails `origin/main` when 0023 was retired. maintainer decision still pending; Tempfile now lives in ruby-compat as a DelegateClass(File).
 
 ## Context
 

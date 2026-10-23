@@ -22,7 +22,7 @@ closed-reason: null
 `packages/activesupport/src/security.test.ts` is a trails-invented test file
 with no Rails counterpart. It re-tests `MessageEncryptor` and `MessageVerifier`
 behaviour that Rails already covers in
-`vendor/rails/activesupport/test/message_encryptor_test.rb` and
+`vendor/rails/v8.0.2/activesupport/test/message_encryptor_test.rb` and
 `message_verifier_test.rb`:
 
 - `security.test.ts:32-37` `raises on tampered encrypted value` duplicates

@@ -24,7 +24,7 @@ closed-reason: null
 Surfaced in review of the `:destroy_async` arm (RFC 0106 wave 4d, PR #6762).
 `HasManyAssociation#handle_dependency` calls
 `ids.each_slice(owner.class.destroy_association_async_batch_size || ids.size)`
-(`vendor/rails/activerecord/lib/active_record/associations/has_many_association.rb:52`),
+(`vendor/rails/v8.0.2/activerecord/lib/active_record/associations/has_many_association.rb:52`),
 which the trails body now routes through `eachSlice`
 (`packages/activesupport/src/enumerable-utils.ts:208-214`).
 

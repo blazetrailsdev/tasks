@@ -5,10 +5,10 @@ updated: 2026-08-20
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
-  - "activesupport"
+  - "ruby-compat"
 deps: []
 deps-rfc: []
-est-loc: 120
+est-loc: 40
 priority: null
 pr: null
 claim: null
@@ -16,6 +16,10 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. BigDecimal moved to ruby-compat; string arm raises ArgumentError now; parseRational (:462) and non-string fallback (:64) still TypeError. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
 
 ## Context
 

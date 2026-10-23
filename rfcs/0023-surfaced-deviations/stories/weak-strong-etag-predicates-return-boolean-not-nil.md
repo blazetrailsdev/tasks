@@ -24,7 +24,7 @@ closed-reason: null
 from both, because each is an `&&` chain fronted by the value-returning `etag?`:
 
 - `def weak_etag?; etag? && etag.start_with?('W/"'); end`
-  (`vendor/rails/actionpack/lib/action_dispatch/http/cache.rb:132-134`) — with no
+  (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/http/cache.rb:132-134`) — with no
   ETag header this evaluates to `nil`, not `false`.
 - `def strong_etag?; etag? && !weak_etag?; end` (`cache.rb:138-140`) — same.
 

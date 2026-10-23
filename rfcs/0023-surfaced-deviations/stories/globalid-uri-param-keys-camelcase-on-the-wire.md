@@ -22,7 +22,7 @@ closed-reason: null
 PR #5951 converged `SignedGlobalID.create` onto Rails' inherited
 `GlobalID.create`, whose param filter is
 `options.except(:app, :verifier, :for)`
-(`vendor/globalid/lib/global_id/global_id.rb:14`). Every other option key
+(`vendor/globalid/v1.3.0/lib/global_id/global_id.rb:14`). Every other option key
 therefore lands in the GID URI query — including SGID's expiration options,
 which is exactly what Rails does.
 

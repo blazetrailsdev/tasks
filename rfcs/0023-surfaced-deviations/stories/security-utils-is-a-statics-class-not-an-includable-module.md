@@ -20,13 +20,13 @@ closed-reason: null
 ## Context
 
 `ActiveSupport::SecurityUtils`
-(`vendor/rails/activesupport/lib/active_support/security_utils.rb:6`) is a module
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/security_utils.rb:6`) is a module
 with `module_function`, so a class can `include SecurityUtils` and call
 `secure_compare` / `fixed_length_secure_compare` as instance methods. Two Rails
 classes do: `SecureCompareRotator`
-(`vendor/rails/activesupport/lib/active_support/secure_compare_rotator.rb:33`)
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/secure_compare_rotator.rb:33`)
 and `MessageVerifier`
-(`vendor/rails/activesupport/lib/active_support/message_verifier.rb`).
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/message_verifier.rb`).
 
 trails ports it as a statics-only class
 (`packages/activesupport/src/security-utils.ts`), so the callers name it:

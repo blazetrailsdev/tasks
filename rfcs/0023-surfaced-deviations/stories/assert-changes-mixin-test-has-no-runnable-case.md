@@ -17,10 +17,14 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. still a {passed:false} flag at method-call-assertions.test.ts:210; Test#run now exists (testing/assertions.ts:129) so the converged shape is reachable. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 `test_assert_changes_when_assertions_are_included`
-(`vendor/rails/activesupport/test/testing/method_call_assertions_test.rb:189-201`)
+(`vendor/rails/v8.0.2/activesupport/test/testing/method_call_assertions_test.rb:189-201`)
 builds a real test case, RUNS it, and asserts the run passed:
 
 ```ruby

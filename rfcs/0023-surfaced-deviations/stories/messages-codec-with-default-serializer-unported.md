@@ -22,7 +22,7 @@ closed-reason: null
 `ActiveSupport::Messages::Codec.with(default_serializer: …)` is unported, so the
 `encrypted_file_test.rb` test named for it cannot assert what its name promises.
 
-Rails (`vendor/rails/activesupport/test/encrypted_file_test.rb:148-156`):
+Rails (`vendor/rails/v8.0.2/activesupport/test/encrypted_file_test.rb:148-156`):
 
 ```ruby
 test "can read encrypted file after changing default_serializer" do
@@ -52,7 +52,7 @@ the scenario.
 ## Converged shape
 
 Port `Messages::Codec`'s `default_serializer` seat and its block-scoped `with`
-override (`vendor/rails/activesupport/lib/active_support/messages/codec.rb`), then
+override (`vendor/rails/v8.0.2/activesupport/lib/active_support/messages/codec.rb`), then
 restore the test to Rails' two-block shape so the cross-serializer read is
 actually exercised.
 

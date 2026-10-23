@@ -6,7 +6,6 @@ rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
   - "actionpack"
-  - "activesupport"
 deps: []
 deps-rfc: []
 est-loc: 90
@@ -20,7 +19,7 @@ closed-reason: null
 
 ## Context
 
-`Session#inspect` (`vendor/rails/actionpack/lib/action_dispatch/request/session.rb:222-228`)
+`Session#inspect` (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/request/session.rb:222-228`)
 was ported in PR #6700:
 
 ```ruby

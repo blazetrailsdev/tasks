@@ -8,7 +8,7 @@ packages:
   - "activesupport"
 deps: []
 deps-rfc: []
-est-loc: 140
+est-loc: 60
 priority: null
 pr: null
 claim: null
@@ -16,6 +16,10 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. ruby-compat now has string-scanner.ts; both private copies remain -> delete both, import ruby-compat. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
 
 ## Context
 

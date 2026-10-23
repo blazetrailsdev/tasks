@@ -20,7 +20,7 @@ closed-reason: null
 ## Context
 
 `packages/activesupport/src/duration.ts` does not follow
-`vendor/rails/activesupport/lib/active_support/duration.rb`'s member order.
+`vendor/rails/v8.0.2/activesupport/lib/active_support/duration.rb`'s member order.
 Surfaced while placing `Duration#sum` in PR #6685 (the reviewer caught the
 commit message overclaiming): `sum` now sits immediately after `_parts`
 (`duration.rb:481-486`) and before `raiseTypeError` (`:520`), which is right,

@@ -6,10 +6,9 @@ rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
   - "actionpack"
-  - "activesupport"
 deps: []
 deps-rfc: []
-est-loc: 220
+est-loc: 120
 priority: null
 pr: null
 claim: null
@@ -17,6 +16,10 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. constantize now called, but controllerConstants.get() table lookup ahead of it is still an @inventedArm get receipted against this story (request.ts:703). Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
 
 ## Context
 
@@ -33,7 +36,7 @@ def controller_class_for(name)
       ...
 ```
 
-(`vendor/rails/actionpack/lib/action_dispatch/http/request.rb:94-110`)
+(`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/http/request.rb:94-110`)
 
 trails throws unconditionally instead
 (`packages/actionpack/src/action-dispatch/http/request.ts:961`), and its doc

@@ -5,7 +5,7 @@ updated: 2026-08-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
-  - "activesupport"
+  - "ruby-compat"
 deps: []
 deps-rfc: []
 est-loc: 200
@@ -17,10 +17,14 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. fs adapter moved to ruby-compat (fs-adapter.ts:166-200); still an O_EXCL 'wx' lockfile. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 `FileStore#lock_file` takes `File::LOCK_EX` and releases it in an `ensure`
-(`vendor/rails/activesupport/lib/active_support/cache/file_store.rb:140-153`).
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/cache/file_store.rb:140-153`).
 The kernel releases an `flock(2)` when the holding process dies, so a crash mid
 block cannot wedge later lockers.
 

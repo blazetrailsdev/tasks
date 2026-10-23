@@ -1,5 +1,5 @@
 ---
-title: "duration-sum-instant-arm-ignores-part-order"
+title: "Duration#sum's Time/Instant arm ignores the insertion order of @parts"
 status: draft
 updated: 2026-08-09
 rfc: "0023-surfaced-deviations"
@@ -17,6 +17,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. Duration#sum Instant/Date arm (duration.ts:466) still applyDurationPreservingNs without \_partKeys. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 Surfaced during review of PR #6286 (RFC 0088 story
@@ -25,7 +29,7 @@ Surfaced during review of PR #6286 (RFC 0088 story
 `@parts`.
 
 `ActiveSupport::Duration#sum`
-(`vendor/rails/activesupport/lib/active_support/duration.rb:397-419`) applies
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/duration.rb:397-419`) applies
 `@parts.each` in Ruby Hash insertion order — the order the parts were merged in
 (`:270-272`) — so `1.second + 1.day` applies seconds first and `1.day +
 1.second` applies days first. Around DST that changes the resulting instant.

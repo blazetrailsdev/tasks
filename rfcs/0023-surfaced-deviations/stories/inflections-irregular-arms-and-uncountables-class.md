@@ -1,5 +1,5 @@
 ---
-title: "inflections-irregular-arms-and-uncountables-class"
+title: "Inflections#irregular emits only some of Rails' singular rules"
 status: draft
 updated: 2026-08-12
 rfc: "0023-surfaced-deviations"
@@ -8,7 +8,7 @@ packages:
   - "activesupport"
 deps: []
 deps-rfc: []
-est-loc: 60
+est-loc: 30
 priority: null
 pr: null
 claim: null
@@ -17,13 +17,17 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. Uncountables half landed (#6513); irregular still emits 1 of 2 / 2 of 4 singular rules (inflections.ts). Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 Surfaced while burning down RFC 0096 wave-2 naming rows in
 `packages/activesupport/src/inflector/inflections.ts` (PR #6433).
 
 **`Inflections#irregular` drops four of Rails' `singular` calls.**
-`vendor/rails/activesupport/lib/active_support/inflector/inflections.rb`,
+`vendor/rails/v8.0.2/activesupport/lib/active_support/inflector/inflections.rb`,
 `def irregular(singular, plural)`:
 
 - the `s0.upcase == p0.upcase` branch emits **two** `plural` rules

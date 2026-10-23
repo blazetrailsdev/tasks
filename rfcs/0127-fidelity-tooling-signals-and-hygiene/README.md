@@ -10,6 +10,8 @@ packages:
   - activerecord
   - activesupport
   - arel
+  - website
+  - date
 clusters:
   - api-compare
   - lint

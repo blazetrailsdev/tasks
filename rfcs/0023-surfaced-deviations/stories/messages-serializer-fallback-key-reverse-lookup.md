@@ -17,6 +17,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. load now uses SERIALIZERS.key(this) (:61) but the key field (interface :42, each serializer) is still declared. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 `packages/activesupport/src/messages/serializer-with-fallback.ts` (added by
@@ -25,7 +29,7 @@ the serializer's own name in the
 `message_serializer_fallback.active_support` payload.
 
 Rails has no such field: `SerializerWithFallback#load`
-(`vendor/rails/activesupport/lib/active_support/messages/serializer_with_fallback.rb:22`)
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/messages/serializer_with_fallback.rb:22`)
 recovers the name with `SERIALIZERS.key(self)` — a reverse lookup by object
 identity. The field exists in trails only because the `*_allow_marshal`
 variants inherit `format` from the serializer they wrap

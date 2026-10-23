@@ -17,6 +17,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22): owner decision needed
+
+Re-verified against trails `origin/main` when 0023 was retired. trails has no static Klass.new (CLAUDE.md 'A record is built with new Klass only'); whether this is PERMANENT is Dean's call.
+
 ## Context
 
 `stub_any_instance`

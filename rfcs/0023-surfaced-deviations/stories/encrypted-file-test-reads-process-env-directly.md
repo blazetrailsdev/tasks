@@ -17,6 +17,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. adapter moved to ruby-compat; test still reads process.env at :29. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 `packages/activesupport/src/encrypted-file.test.ts:31` reads the environment
@@ -36,7 +40,7 @@ Pre-existing (not introduced by PR #6641, which touched the assertions in this
 file and left the setup alone), but it violates the standing no-`process.*` rule
 for package sources and it is the only such reference in the file.
 
-Rails reads `ENV["CONTENT_KEY"]` (`vendor/rails/activesupport/test/encrypted_file_test.rb:9`);
+Rails reads `ENV["CONTENT_KEY"]` (`vendor/rails/v8.0.2/activesupport/test/encrypted_file_test.rb:9`);
 the adapter's `env` is the trails spelling of `ENV`, so this is a pure
 convergence with no behavioral question.
 

@@ -1,5 +1,5 @@
 ---
-title: "mime-negotiation-format-reader-arity-vs-getter"
+title: "Request#format is a getter while MimeNegotiation#format takes Rails' optional _view_path"
 status: ready
 updated: 2026-07-27
 rfc: "0023-surfaced-deviations"
@@ -17,6 +17,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. still split: module format(this,\_viewPath) vs Request get format (request.ts:280); name the converged shape (method + setFormat writer). Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 Surfaced while converging the MimeNegotiation writers onto Rails-named
@@ -24,7 +28,7 @@ accessors (PR #5385), and it is the reason the reader half could not move onto
 the class module as a `get` accessor.
 
 Rails' reader takes an optional argument —
-`vendor/rails/actionpack/lib/action_dispatch/http/mime_negotiation.rb:63`:
+`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/http/mime_negotiation.rb:63`:
 
 ```ruby
 def format(_view_path = nil)

@@ -1,5 +1,5 @@
 ---
-title: "i18n-reset-seams-fold-into-config-assignment"
+title: "Fold i18n's resetConfig/resetClassConfig test seams into I18n.config= assignment"
 status: draft
 updated: 2026-10-20
 rfc: "0023-surfaced-deviations"
@@ -28,7 +28,7 @@ no story until `convergeable-tag-story-id` (RFC 0120) required one:
   `defaultSeparator` and `exceptionHandler` bindings.
 
 Ruby's suite resets by assigning a fresh `I18n.config`
-(`vendor/i18n/lib/i18n.rb` `config=`, `vendor/i18n/lib/i18n/config.rb`): the
+(`vendor/i18n/v1.14.8/lib/i18n.rb` `config=`, `vendor/i18n/v1.14.8/lib/i18n/config.rb`): the
 class-level state (`@@backend`, `@@default_locale`, …) and the normalized-key
 cache are both reached from there. In trails the class-level slots are module
 bindings and the key cache is module-global, so a fresh `Config` reaches

@@ -5,7 +5,7 @@ updated: 2026-08-17
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
-  - "activesupport"
+  - "ruby-compat"
 deps: []
 deps-rfc: []
 est-loc: 60
@@ -16,6 +16,10 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. adapters moved to ruby-compat; still no process uid; owned? unported. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
 
 ## Context
 
@@ -33,7 +37,7 @@ Two sites already work around the gap:
 - `packages/activesupport/src/core-ext/file/atomic.ts:57` reads `oldStat.uid` off
   a stat and chowns from it, rather than comparing against the process uid.
 - `packages/activesupport/src/encrypted-file.test.ts` (PR #6641) ports
-  `assert_predicate file, :owned?` (`vendor/rails/activesupport/test/encrypted_file_test.rb:58`)
+  `assert_predicate file, :owned?` (`vendor/rails/v8.0.2/activesupport/test/encrypted_file_test.rb:58`)
   by comparing the content file's uid to the _tmpdir's_ uid, since the tmpdir was
   created by the same process in `beforeEach`. Equivalent within that test's own
   setup, but it asserts "same owner as the tmpdir" rather than Rails' "owner is

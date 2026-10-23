@@ -18,6 +18,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. time-ext.json shard retired; formattedOffset sends isUtc/utcOffset for a RubyTime but keeps a JS Date getTimezoneOffset arm (core-ext/time/conversions.ts:67-69). Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 PR #6628 took `utc?` and `utc_offset` off the `date_time/calculations.rb`

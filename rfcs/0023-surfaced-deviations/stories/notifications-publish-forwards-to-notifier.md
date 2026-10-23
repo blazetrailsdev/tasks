@@ -21,7 +21,7 @@ closed-reason: null
 
 ## Context
 
-`vendor/rails/activesupport/lib/active_support/notifications.rb:200-202`:
+`vendor/rails/v8.0.2/activesupport/lib/active_support/notifications.rb:200-202`:
 
     def publish(name, *args)
       notifier.publish(name, *args)

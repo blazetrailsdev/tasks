@@ -5,7 +5,6 @@ updated: 2026-08-13
 rfc: "0023-surfaced-deviations"
 cluster: null
 packages:
-  - "activesupport"
   - "trailties"
 deps: []
 deps-rfc: []
@@ -18,10 +17,14 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. ruby-compat now has Pathname (pathname.ts:11); setRoot uses File.expandPath, no Pathname.new. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 `Rails::Engine::Configuration#root=`
-(`vendor/rails/railties/lib/rails/engine/configuration.rb:115-117`) is
+(`vendor/rails/v8.0.2/railties/lib/rails/engine/configuration.rb:115-117`) is
 
 ```ruby
 def root=(value)
@@ -65,13 +68,13 @@ this story.
 specifically to pin that `FileStore` accepts one:
 
 ```ruby
-# vendor/rails/activesupport/test/cache/stores/file_store_test.rb:21
+# vendor/rails/v8.0.2/activesupport/test/cache/stores/file_store_test.rb:21
 @cache_with_pathname = lookup_store(cache_dir: Pathname.new(cache_dir), expires_in: 60)
 ```
 
 which `test_key_transformation_with_pathname` (file_store_test.rb:67-71) then
 exercises. `FileStore#initialize` is `@cache_path = cache_path.to_s`
-(`vendor/rails/activesupport/lib/active_support/cache/file_store.rb:20-23`), so
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/cache/file_store.rb:20-23`), so
 the Pathname arm is the whole point of that test.
 
 With no `Pathname` class to construct, PR #6652 ported the test building the

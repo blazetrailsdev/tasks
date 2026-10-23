@@ -17,6 +17,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. jsonify still passes bigint raw to JSON.stringify (encoding.ts:44-52,70-72). Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 `ActiveSupport::JSON.encode` still throws on a JS `bigint`, because

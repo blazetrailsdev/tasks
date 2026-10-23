@@ -25,7 +25,7 @@ and reports two arity mismatches (the method is expected from two Ruby
 reopenings), `ruby()` vs `ts(value)`.
 
 Rails
-(`vendor/rails/activesupport/lib/active_support/core_ext/string/output_safety.rb:7-9`
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/core_ext/string/output_safety.rb:7-9`
 and `:13-15`) defines it as a zero-arg predicate on the receiver:
 
 ```ruby

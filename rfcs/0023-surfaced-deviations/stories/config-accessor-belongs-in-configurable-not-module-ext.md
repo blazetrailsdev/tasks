@@ -16,6 +16,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. Configurable.configAccessor exists (configurable.ts:53) but module-ext.ts:151 still exports a second configAccessor. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 Surfaced by PR #7084 while enrolling `activesupport` in

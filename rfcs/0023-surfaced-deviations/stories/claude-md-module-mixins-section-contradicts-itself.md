@@ -18,6 +18,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. CLAUDE.md:644 still opens with 'TS has no equivalent'. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 PR #6746 corrected CLAUDE.md's "Module mixins" section to say that Ruby's

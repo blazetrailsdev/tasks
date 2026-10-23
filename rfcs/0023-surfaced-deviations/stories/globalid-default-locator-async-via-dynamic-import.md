@@ -17,11 +17,15 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. still async + dynamic import (global-id.ts:124); converged shape is a namespace seat, the zero-import slot is retired. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 `GlobalID.default_locator` is a plain synchronous setter in Rails —
 `def default_locator(default_locator); Locator.default_locator = default_locator; end`
-(`vendor/globalid/lib/global_id/global_id.rb:34-36`).
+(`vendor/globalid/v1.3.0/lib/global_id/global_id.rb:34-36`).
 
 trails ships it `async` (`packages/globalid/src/global-id.ts`, ported in
 PR #6221) because `global-id.ts` reaches `Locator` through a **dynamic import**

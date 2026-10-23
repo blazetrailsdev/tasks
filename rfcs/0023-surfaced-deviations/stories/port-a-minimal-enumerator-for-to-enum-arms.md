@@ -17,6 +17,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. ruby-compat now has Enumerator/toEnum (enumerator.ts:160); extractBang/indexWith/Deprecators#each still drop the arm. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 Three ported methods drop Ruby's no-block `to_enum` arm because trails has no

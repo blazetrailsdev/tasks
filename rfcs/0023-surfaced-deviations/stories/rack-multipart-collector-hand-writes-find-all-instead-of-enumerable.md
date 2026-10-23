@@ -21,7 +21,7 @@ closed-reason: null
 Surfaced by PR #7145 (RFC 0121 enrollment of `rack`).
 
 `Rack::Multipart::Parser::Collector` does `include Enumerable`
-(`vendor/rack/lib/rack/multipart/parser.rb:139`) and defines only `each`
+(`vendor/rack/v3.1.14/lib/rack/multipart/parser.rb:139`) and defines only `each`
 (`parser.rb:149`). `Parser#result` then calls `@collector.find_all(&:file?)`
 (`parser.rb:247`) — `find_all` is Enumerable's, not the class's.
 

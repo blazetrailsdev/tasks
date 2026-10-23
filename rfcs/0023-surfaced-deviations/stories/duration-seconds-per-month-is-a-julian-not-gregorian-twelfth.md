@@ -8,7 +8,7 @@ packages:
   - "activesupport"
 deps: []
 deps-rfc: []
-est-loc: 40
+est-loc: 20
 priority: null
 pr: null
 claim: null
@@ -16,6 +16,10 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. only SECONDS_PER_WEEK literal (duration.ts:57) and the inSeconds cover test remain; est-loc 40->20. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
 
 ## Partially fixed in #6465
 
@@ -49,7 +53,7 @@ const SECONDS_PER_MONTH = 30.4375 * SECONDS_PER_DAY; // 1/12 of 365.25 * 86400
 ```
 
 which is **2629800**. Rails is
-`vendor/rails/activesupport/lib/active_support/duration.rb:117`:
+`vendor/rails/v8.0.2/activesupport/lib/active_support/duration.rb:117`:
 
 ```ruby
 SECONDS_PER_MONTH  = 2629746  # 1/12 of a gregorian year

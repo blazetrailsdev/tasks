@@ -1,5 +1,5 @@
 ---
-title: "Classify the 17 @noRailsEquivalent tags carrying no permanence claim"
+title: "Classify the last @noRailsEquivalent tag carrying no permanence claim (core-ext/securerandom.ts)"
 status: draft
 updated: 2026-08-27
 rfc: "0023-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 200
+est-loc: 10
 priority: null
 pr: null
 claim: null
@@ -15,6 +15,10 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. 17 -> 1 left: core-ext/securerandom.ts:16; est-loc 200->10. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
 
 ## Context
 

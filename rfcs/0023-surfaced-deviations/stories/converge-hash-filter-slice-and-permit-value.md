@@ -1,5 +1,5 @@
 ---
-title: "hash_filter must slice the params and extract permit_value"
+title: "hash_filter: fold the invented private _hashFilter back into hash_filter and keep with_indifferent_access"
 status: draft
 updated: 2026-08-17
 rfc: "0023-surfaced-deviations"
@@ -8,7 +8,7 @@ packages:
   - "actionpack"
 deps: []
 deps-rfc: []
-est-loc: 160
+est-loc: 40
 priority: null
 pr: null
 claim: null
@@ -16,6 +16,10 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. slice/permitValue now called, but inside an invented private \_hashFilter (strong-parameters.ts:632) that public hashFilter (:861) delegates to; filter.with_indifferent_access still dropped. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
 
 ## Context
 

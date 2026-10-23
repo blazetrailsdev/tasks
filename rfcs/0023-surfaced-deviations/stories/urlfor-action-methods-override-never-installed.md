@@ -17,10 +17,14 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. actionMethods (abstract-controller/url-for.ts:34) still a free function taking the base list, installed nowhere. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 Rails narrows a routed controller's action list by overriding
-`action_methods` — `vendor/rails/actionpack/lib/abstract_controller/url_for.rb`:
+`action_methods` — `vendor/rails/v8.0.2/actionpack/lib/abstract_controller/url_for.rb`:
 
 ```ruby
 module ClassMethods
@@ -72,7 +76,7 @@ this story picks should cover both, since Rails composes them by ordinary
 - Rails' memoization shape is preserved: the subtraction happens once and is
   invalidated by `clearActionMethodsBang` / `methodAdded`.
 - Tests ported from
-  `vendor/rails/actionpack/test/controller/url_for_test.rb` and
+  `vendor/rails/v8.0.2/actionpack/test/controller/url_for_test.rb` and
   `abstract/abstract_controller_test.rb` where they cover this, with names
   matching Rails verbatim; at least one asserts a named-route helper is NOT
   dispatchable as an action.

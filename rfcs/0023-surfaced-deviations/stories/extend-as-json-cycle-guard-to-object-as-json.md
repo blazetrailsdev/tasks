@@ -17,6 +17,10 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22): owner decision needed
+
+Re-verified against trails `origin/main` when 0023 was retired. extends an invented guard; Rails itself raises SystemStackError - left for Dean.
+
 ## Context
 
 The cycle guard PR #6787 added to `as_json` covers the two Rails recursion sites

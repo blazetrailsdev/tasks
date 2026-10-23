@@ -21,7 +21,7 @@ closed-reason: null
 
 `MethodSet`'s cache is a process-global singleton keyed by namespace —
 `METHOD_CACHES = Hash.new { |h, k| h[k] = Module.new }`
-(`vendor/rails/activesupport/lib/active_support/code_generator.rb:8`, ported at
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/code_generator.rb:8`, ported at
 `packages/activesupport/src/code-generator.ts:26`). Rails shares it too, but in
 Rails a cached entry is a compiled method under a _canonical_ name, so sharing is
 safe by construction: `define_cached_method` skips the block when the cache

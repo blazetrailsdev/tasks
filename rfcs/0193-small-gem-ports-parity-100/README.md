@@ -13,6 +13,7 @@ packages:
   - i18n
   - bcrypt
   - did-you-mean
+  - nokogiri
   - date
   - ruby-compat
   - "scripts"

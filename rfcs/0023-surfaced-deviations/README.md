@@ -19,6 +19,7 @@ packages:
   - "i18n"
   - "nokogiri"
   - "rack"
+  - "ruby-compat"
   - "trailties"
   - "website"
 clusters:

@@ -1,5 +1,5 @@
 ---
-title: "with-options-implicit-receiver-instance-eval-arm"
+title: "with_options drops the zero-arity instance_eval block arm"
 status: draft
 updated: 2026-08-07
 rfc: "0023-surfaced-deviations"
@@ -17,11 +17,15 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22): owner decision needed
+
+Re-verified against trails `origin/main` when 0023 was retired. zero-arity instance_eval arm still unported; JS cannot rebind a closed-over this for arrow blocks - possible PERMANENT, Dean's call.
+
 ## Context
 
 `packages/activesupport/src/core-ext/object/with-options.ts` ports
 `Object#with_options`
-(`vendor/rails/activesupport/lib/active_support/core_ext/object/with_options.rb:92`),
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/core_ext/object/with_options.rb:92`),
 but only one of its two block arms:
 
 ```ruby
@@ -42,7 +46,7 @@ The consequence is that implicit-receiver `with_options` is unsupported:
 end
 ```
 
-which is what `vendor/rails/activesupport/test/option_merger_test.rb:101-107`
+which is what `vendor/rails/v8.0.2/activesupport/test/option_merger_test.rb:101-107`
 (`test_option_merger_implicit_receiver`) exercises. That test is therefore
 absent from `packages/activesupport/src/option-merger.test.ts`.
 

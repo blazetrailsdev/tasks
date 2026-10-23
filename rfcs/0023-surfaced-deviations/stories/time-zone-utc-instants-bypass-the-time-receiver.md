@@ -1,5 +1,5 @@
 ---
-title: "TimeZone#local/at/now/utc_to_local build UTC instants on a JS Date seat, dropping Rails' Time.utc calls"
+title: "TimeZone#now builds its instant without Rails' time_now.utc.in_time_zone(self)"
 status: draft
 updated: 2026-08-23
 rfc: "0023-surfaced-deviations"
@@ -9,7 +9,7 @@ packages:
   - "date"
 deps: []
 deps-rfc: []
-est-loc: 150
+est-loc: 30
 priority: null
 pr: null
 claim: null
@@ -18,10 +18,14 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. at/local/utcToLocal now go through Time (#6959); only TimeZone#now (time-zone.ts:686-691) remains, carrying in_time_zone/utc receipts. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 Surfaced by #6891, which ported `DateTime#utc`
-(`vendor/rails/activesupport/lib/active_support/core_ext/date_time/calculations.rb:184-191`)
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/core_ext/date_time/calculations.rb:184-191`)
 and so put `utc` into the call-set population for the first time. Four
 pre-existing omissions in `packages/activesupport/src/values/time-zone.ts`
 became visible and had to be baselined
@@ -32,7 +36,7 @@ Every one is the same divergence: Rails builds a UTC instant by going through a
 `Time` receiver, and trails builds a JS `Date` (or reads one) instead, so the
 `Time.utc` / `.utc` call has no receiver to land on.
 
-Rails, `vendor/rails/activesupport/lib/active_support/values/time_zone.rb`:
+Rails, `vendor/rails/v8.0.2/activesupport/lib/active_support/values/time_zone.rb`:
 
 - `:363-366` `def local(*args)` — `time = Time.utc(*args)`, handed to
   `TimeWithZone.new(nil, self, time)`. trails' `local` (time-zone.ts:919-…)

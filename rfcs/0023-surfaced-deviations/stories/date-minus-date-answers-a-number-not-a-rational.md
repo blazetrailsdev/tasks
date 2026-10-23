@@ -23,7 +23,7 @@ closed-reason: null
 Shipped in PR #6286 and tracked here rather than left as prose.
 
 `minus_without_duration` is ruby/date's own `Date#-`
-(`vendor/rails/activesupport/lib/active_support/core_ext/date/calculations.rb:107`
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/core_ext/date/calculations.rb:107`
 aliases it; the implementation is `date_core.c` `d_lite_minus`). Against another
 Date it answers a **Rational** day count — `Date.new(2005,2,24) - Date.new(2005,2,21)`
 is `(3/1)`, not the Integer `3`.

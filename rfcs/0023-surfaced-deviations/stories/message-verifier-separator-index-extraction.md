@@ -20,7 +20,7 @@ closed-reason: null
 ## Context
 
 Rails' `MessageVerifier#extract_encoded`
-(`vendor/rails/activesupport/lib/active_support/message_verifier.rb:335-350`)
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/message_verifier.rb:335-350`)
 locates the signature by arithmetic, not by splitting: `separator_index_for`
 computes `length - digest_length_in_hex - SEPARATOR_LENGTH` and confirms the
 separator sits exactly there, where `digest_length_in_hex` comes from the

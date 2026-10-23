@@ -22,9 +22,9 @@ closed-reason: null
 Rails puts the two `inquiry` core exts in their own core_ext files, separate
 from the inquirer classes they construct:
 
-- `vendor/rails/activesupport/lib/active_support/core_ext/string/inquiry.rb:11-13`
+- `vendor/rails/v8.0.2/activesupport/lib/active_support/core_ext/string/inquiry.rb:11-13`
   — `class String; def inquiry; ActiveSupport::StringInquirer.new(self); end; end`
-- `vendor/rails/activesupport/lib/active_support/core_ext/array/inquiry.rb:15-17`
+- `vendor/rails/v8.0.2/activesupport/lib/active_support/core_ext/array/inquiry.rb:15-17`
   — `class Array; def inquiry; ActiveSupport::ArrayInquirer.new(self); end; end`
 
 trails puts both at the bottom of the class files instead

@@ -8,7 +8,7 @@ packages:
   - "arel"
 deps: []
 deps-rfc: []
-est-loc: 300
+est-loc: 120
 priority: null
 pr: null
 claim: null
@@ -16,6 +16,10 @@ assignee: null
 blocked-by: null
 closed-reason: null
 ---
+
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. queries helpers mapped (assertion-kinds.ts:131-134); difference/changes deliberately unmapped (:160-176); assert_valid_values/assert_invalid_values and suite-local helpers remain. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
 
 ## Context
 

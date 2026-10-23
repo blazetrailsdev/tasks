@@ -25,7 +25,7 @@ Surfaced by PR #7145 (RFC 0121 enrollment of `rack`).
 a `@noRailsEquivalent CONVERGEABLE` receipt to enrol the package:
 
 - `get tempfile()` — Rack reaches `@tempfile` through `method_missing`
-  (`vendor/rack/lib/rack/multipart/uploaded_file.rb:39`), which forwards every
+  (`vendor/rack/v3.1.14/lib/rack/multipart/uploaded_file.rb:39`), which forwards every
   unknown call to the tempfile object. There is no `tempfile` reader; calling
   `uf.tempfile` in Ruby would forward to `@tempfile.tempfile` and raise
   `NoMethodError`.
@@ -46,7 +46,7 @@ debt, not permission").
   `packages/rack/src/request.test.ts:1196` is the one site that reads it off an
   `UploadedFile`; the many other `.filename` reads in `multipart.test.ts` and
   `request.test.ts` are on the plain params hash `MimePart#getData` builds
-  (`vendor/rack/lib/rack/multipart/parser.rb:123`), which legitimately has a
+  (`vendor/rack/v3.1.14/lib/rack/multipart/parser.rb:123`), which legitimately has a
   `filename` key and is not affected.
 - Remove both `@noRailsEquivalent` tags. Re-run
   `pnpm exec tsx scripts/api-compare/extra-surface.ts` (exit 0, no STALE tag)

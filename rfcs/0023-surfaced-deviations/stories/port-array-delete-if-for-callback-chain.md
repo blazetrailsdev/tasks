@@ -17,12 +17,16 @@ blocked-by: null
 closed-reason: null
 ---
 
+## Refinement (2026-10-22)
+
+Re-verified against trails `origin/main` when 0023 was retired. CallbackChain#removeDuplicates/remove (callbacks.ts:837,843) still reassign a filtered copy; ruby-compat has a Hash deleteIf but no Array one. Where this note and the original text below disagree, the note is current; the acceptance criteria apply to what remains.
+
 ## Context
 
 Surfaced by PR #6377, which added Rails' `remove_duplicates` to
 `CallbackChain`. Rails spells it
 `@chain.delete_if { |c| callback.duplicates?(c) }`
-(`vendor/rails/activesupport/lib/active_support/callbacks.rb:658-662`) —
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/callbacks.rb:658-662`) —
 Ruby's `Array#delete_if`, an in-place removal.
 
 trails has no port of `Array#delete_if`
