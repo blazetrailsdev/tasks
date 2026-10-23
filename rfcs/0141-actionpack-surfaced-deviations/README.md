@@ -12,6 +12,7 @@ packages:
   - "actionview"
   - "rack"
   - "activerecord-cli"
+  - "activerecord"
 clusters:
   - "action-controller"
   - "test-harness"
