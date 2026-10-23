@@ -1,5 +1,5 @@
 ---
-title: "HelperMethodBuilder hand-rolls public_send with an invented 'undefined route helper' ArgumentError"
+title: "HelperMethodBuilder's handle_string/class/model_call hand-roll public_send"
 status: ready
 updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 50
+est-loc: 30
 priority: null
 pr: null
 claim: null
@@ -18,23 +18,23 @@ closed-reason: null
 
 ## Context
 
-Surfaced in trails#8230, which converged polymorphic helper names and routed `route_for`
-through `rbFPublicSend`. `HelperMethodBuilder` still hand-rolls Rails' `public_send`:
+`HelperMethodBuilder#polymorphic_method` now ends in `rbFPublicSend(target, method, ...)`
+(`packages/actionpack/src/action-dispatch/routing/polymorphic-routes.ts:266-268`), as
+`polymorphic_routes.rb:239-243` does, and the invented `undefined route helper`
+`ArgumentError` is gone. Three sites still hand-roll the dispatch:
 
-- `polymorphic_method` ends with `recipient.public_send(method, *args[, options])`
-  (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/routing/polymorphic_routes.rb:239-243`).
-  trails (`packages/actionpack/src/action-dispatch/routing/polymorphic-routes.ts:~256-264`) reads
-  `target[method]`, raises an invented `ArgumentError("undefined route helper …")`, and then calls
-  `helper.call(target, …)`. Rails raises `NoMethodError` from `public_send`.
-- `handle_string_call` / `handle_class_call` / `handle_model_call` (`polymorphic_routes.rb:258-289`)
-  are `target.public_send(...)`. trails does `(target[m] as …).call(target)` (`:~283`, `:~292`, `:~308`),
-  so a missing helper is a JS `TypeError` rather than `NoMethodError`, and a receiver's `method_missing` is
-  never reached. (`rbFPublicSend` dispatches a defined method exactly as `rbFSend` does — CLAUDE.md §
-  "Method visibility is compile-time only" — so this is about the call name and the error, not visibility.)
+- `handle_string_call` / `handle_class_call` / `handle_model_call`
+  (`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/routing/polymorphic_routes.rb:258-289`)
+  are `target.public_send(...)`. trails does `(target[m] as …).call(target, …)`
+  (`polymorphic-routes.ts:288`, `:297`, `:313`), so a missing helper is a JS `TypeError`
+  rather than `NoMethodError`, and a receiver's `method_missing` is never reached.
+
+The dispatched name is a named-route helper (`"#{prefix}#{name}_#{suffix}"`), and the set of
+route helpers is drawn by application code, so this is CLAUDE.md § "A dispatch by name is
+spelled directly"'s third arm (caller-supplied name from an open set): the send IS the port
+here, as `polymorphic_method` already shows.
 
 ## Acceptance criteria
 
-- All four sites dispatch through `rbFPublicSend(target, method, ...args)`, the port of
-  `Kernel#public_send` that `url-for.ts`'s `routeFor` already uses.
-- The invented `undefined route helper` `ArgumentError` is removed. A missing helper raises
-  `NoMethodError`, and the `polymorphic-routes.test.ts` expectations are updated to match.
+- The three sites dispatch through `rbFPublicSend(target, method, ...args)`.
+- A missing helper raises `NoMethodError`, and `polymorphic-routes.test.ts` asserts it.

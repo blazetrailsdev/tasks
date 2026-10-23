@@ -1,5 +1,5 @@
 ---
-title: 'ActionDispatch''s autoload_under "testing" block seats only Assertions: IntegrationTest, TestProcess, TestRequest, TestResponse and AssertionResponse are unseated'
+title: 'ActionDispatch''s autoload_under "testing" block misses IntegrationTest, TestRequest and AssertionResponse'
 status: ready
 updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 120
+est-loc: 80
 priority: null
 pr: null
 claim: null
@@ -35,28 +35,29 @@ autoload_under "testing" do
 end
 ```
 
-`packages/actionpack/src/namespaces.ts` mirrors one of them:
-`ActionDispatch.autoloadUnder("testing", () => { ActionDispatch.autoload("Assertions"); })`,
-seated by `testing/assertions.ts` with `rbModConstSet(ActionDispatch, "Assertions", Assertions)`.
-`IntegrationTest`, `TestProcess`, `TestRequest`, `TestResponse` and
-`AssertionResponse` exist as classes / modules in
-`packages/actionpack/src/action-dispatch/testing/` but are neither autoloaded on
-nor seated at `ActionDispatch`, so `ActionDispatch.IntegrationTest` is undefined
-and each is anonymous to `rbModName`. `Integration` (the module holding
-`RequestHelpers`, `Session`, `Runner`, `integration.rb:14-463`) has no trails
-constant at all; that half belongs to `integration-runner-merged-into-session`.
+`packages/actionpack/src/namespaces.ts:93-98` now autoloads four of them:
+`Assertions`, `Integration`, `TestProcess` and `TestResponse`. Three are still
+missing from the block and unseated at `ActionDispatch`, so
+`ActionDispatch.IntegrationTest` is undefined and each is anonymous to
+`rbModName`:
 
-`ActionController`'s `autoload_at "action_controller/test_case"` block
-(`action_controller.rb:69-73`) is the converged precedent in the same file.
+- `IntegrationTest` (`autoload :IntegrationTest, "action_dispatch/testing/integration"`)
+- `TestRequest` (`packages/actionpack/src/action-dispatch/testing/test-request.ts`)
+- `AssertionResponse` (`packages/actionpack/src/action-dispatch/testing/assertion-response.ts`)
+
+The block also lists them out of Rails' order (`TestRequest` sits between
+`TestProcess` and `TestResponse`). `ActionController`'s
+`autoload_at "action_controller/test_case"` block (`action_controller.rb:69-73`)
+is the converged precedent.
 
 ## Acceptance criteria
 
-- The `autoloadUnder("testing")` block in `namespaces.ts` lists the constants
-  `action_dispatch.rb:128-136` lists, in that order, with `loadPath` entries,
-  except `Integration`, which is added by the story that ports it.
-- Each is seated by its defining module with `rbModConstSet(ActionDispatch, "<Name>", …)`,
-  and `ActionDispatch`'s type carries it.
+- The `autoloadUnder("testing")` block in `namespaces.ts` lists all seven
+  constants in `action_dispatch.rb:128-136`'s order, with the explicit
+  `"action_dispatch/testing/integration"` path for `IntegrationTest`.
+- `IntegrationTest`, `TestRequest` and `AssertionResponse` are each seated by
+  their defining module with `rbModConstSet(ActionDispatch, "<Name>", …)`, and
+  `ActionDispatch`'s type carries them.
 - A test asserts each seat and its `ActionDispatch::<Name>` path.
-- The built `dist` modules for `testing/integration.js`, `test-process.js`,
-  `test-request.js`, `test-response.js` and `assertion-response.js` each import
-  as an entry module.
+- The built `dist` modules for `testing/integration.js`, `test-request.js` and
+  `assertion-response.js` each import as an entry module.

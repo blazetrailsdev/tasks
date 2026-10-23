@@ -1,5 +1,5 @@
 ---
-title: "PublicExceptions#render dispatches to_<format> instead of hard-coded json/xml arms"
+title: "PublicExceptions#render_html filters I18n.locale through an invented LOCALE_RE"
 status: ready
 updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 60
+est-loc: 10
 priority: null
 pr: null
 claim: null
@@ -18,21 +18,19 @@ closed-reason: null
 
 ## Context
 
-`ActionDispatch::PublicExceptions#render`
-(`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/middleware/public_exceptions.rb:43-50`)
-builds `format = "to_#{content_type.to_sym}"` and dispatches
-`body.public_send(format)` when `body.respond_to?(format)` (so `to_json`,
-`to_xml` from ActiveSupport's Hash core-ext). `render_html` (`:57-66`) builds
-`"#{public_path}/#{status}.#{I18n.locale}.html"` with no locale filter.
+`ActionDispatch::PublicExceptions#render_html`
+(`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/middleware/public_exceptions.rb:57-66`)
+builds `"#{public_path}/#{status}.#{I18n.locale}.html"` with no filter on the locale.
 
-`packages/actionpack/src/action-dispatch/middleware/public-exceptions.ts`
-instead hard-codes `:json` / `:xml` arms, a module-local `toXml` / `escapeXml`
-pair, and a `LOCALE_RE` guard on `I18n.locale` — none of which Rails has.
+`packages/actionpack/src/action-dispatch/middleware/public-exceptions.ts` guards
+`I18n.locale` with an invented `LOCALE_RE` (`:11`, `:67-69`), dropping the localized path
+when the locale does not match it.
+
+The `render` half of this story (deriving `to_<format>` and dispatching through
+`rbObjRespondTo` / `rbFPublicSend`, deleting `toXml` / `escapeXml`) landed in trails#9085
+(`public-exceptions.ts:47-48`).
 
 ## Acceptance criteria
 
-- `render` derives `to_<sym>` and dispatches through `rbObjRespondTo` /
-  `rbFPublicSend` (or the ported Hash `toJson` / `toXml` core-ext), in Rails'
-  branch order; `toXml`, `escapeXml` and `LOCALE_RE` are deleted.
-- `render_html` interpolates `I18n.locale` as Rails does.
+- `renderHtml` interpolates `I18n.locale` as Rails does; `LOCALE_RE` is deleted.
 - `public_exceptions_test.rb` tests still pass.

@@ -20,7 +20,7 @@ closed-reason: null
 
 `AbstractController::Base.action_methods` returns a `Set`
 (`vendor/rails/v8.0.2/actionpack/lib/abstract_controller/base.rb:84-97`, `Set.new(methods.reject…)`).
-trails' `AbstractController.actionMethods()` (`packages/actionpack/src/abstract-controller/base.ts:187`)
+trails' `AbstractController.actionMethods()` (`packages/actionpack/src/abstract-controller/base.ts:197`)
 returns `string[]` copied from a Set cache, so `actionview/test/actionpack/abstract/abstract_controller_test.rb`'s
 `assert_equal Set.new(["index"]), Me6.action_methods` is ported as `new Set(Me6.actionMethods())`.
 

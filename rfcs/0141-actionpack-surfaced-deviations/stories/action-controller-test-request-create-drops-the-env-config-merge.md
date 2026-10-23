@@ -1,5 +1,5 @@
 ---
-title: "ActionController::TestRequest.create drops the Rails.application.env_config merge and the indifferent cookie hash"
+title: "ActionController::TestRequest.create seeds rack.request.cookie_hash with a plain object, not with_indifferent_access"
 status: ready
 updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 60
+est-loc: 20
 priority: null
 pr: null
 claim: null
@@ -32,27 +32,15 @@ def self.create(controller_class)
 end
 ```
 
-trails' `TestRequest.create`
-(`packages/actionpack/src/action-controller/test-case.ts`) omits two things:
-
-- The `Rails.application.env_config.merge(env)` arm at `:59` is not ported at
-  all, so a functional test run with an application booted builds its request
-  without the application's `env_config` (`action_dispatch.*` keys such as
-  `action_dispatch.show_exceptions` and the key generator). `TopLevel.Trails`
-  (`packages/activesupport/src/namespaces.ts`) already carries `application`;
-  its type has no `envConfig()` member yet. The guard is a Rails `defined?`,
-  so the read is the guarded `TopLevel.Trails?.application` form.
-- `env["rack.request.cookie_hash"]` is seeded with a plain `{}` where Rails
-  seeds `{}.with_indifferent_access` (`:60`).
-
-`parity:api:calls` does not report either, so nothing gates them.
+The `Rails.application.env_config.merge(env)` arm has since landed
+(`packages/actionpack/src/action-controller/test-case.ts:583-585`, trails#8944).
+One line still differs: `env["rack.request.cookie_hash"]` is seeded with a plain
+`{}` (`test-case.ts:586`) where Rails seeds `{}.with_indifferent_access` (`:60`).
 
 ## Acceptance criteria
 
-- `TestRequest.create` merges `TopLevel.Trails.application.envConfig()` under
-  `env` when an application is set, in Rails' order (application config first,
-  `env` wins), and leaves `env` alone when none is.
-- `rack.request.cookie_hash` is seeded with the `with_indifferent_access`
-  analogue, or the story records why a bare hash is indistinguishable there.
-- A test in `test-case.trails.test.ts` shows a request built with an
-  application set carrying an `env_config` key, and one without.
+- `rack.request.cookie_hash` is seeded with activesupport's
+  `HashWithIndifferentAccess`, as `test_case.rb:60` does.
+- A test in `test-case.trails.test.ts` reads a cookie seeded under a String key
+  through the other key spelling Rails' HWIA answers, or the story records why
+  the seed is unobservable (the cookie jar never reads it back as a hash).

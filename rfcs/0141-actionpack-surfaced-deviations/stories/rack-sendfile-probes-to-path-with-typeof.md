@@ -26,6 +26,14 @@ A `Rack::Lint::Wrapper` (trails#9181) always defines `toPath` and answers it onl
 through `isRespondTo` (`lint.rb:910-916`). So Sendfile behind Lint calls
 `toPath()` on a body that has none.
 
+Tension to resolve first: the owner ruling of 2026-10-20 (recorded in
+`rack-buffered-body-close-native-check`) says a rack body's `respond_to?` check is native JS
+(`typeof x.m === "function"`), not ruby-compat's `rbObjRespondTo`. This story asks for the
+opposite at `sendfile.ts:30`, because `Lint::Wrapper` defines `toPath` unconditionally and
+answers `respond_to?(:to_path)` only through `isRespondTo` (`lint.rb:910-916`). Either
+`Lint::Wrapper` stops defining `toPath` when its body lacks one (so the native probe is right),
+or the ruling gets a stated exception for wrapped bodies.
+
 ## Acceptance criteria
 
 - [ ] `sendfile.ts` probes with `rbObjRespondTo(body, "toPath")` / `rbObjRespondTo(obody, "close")`, as Rails does with `respond_to?`.

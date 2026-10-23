@@ -45,4 +45,6 @@ which converged the rest of that story and left this one arm.
   `Object.defineProperty` are gone.
 - `controller.flash` reads the same way `request.flash` does, decided once in
   `Delegation.generate` for a String target whose member is an accessor.
-- The `@missingRailsCall delegate` receipt on `Flash` is deleted.
+- The `@missingRailsCall delegate` receipt on `Flash` (`flash.ts:83`) is deleted. Until
+  then it should name this story: it still points at
+  `base-included-modules-dispatch-privates-through-self` (RFC 0123, blocked).
