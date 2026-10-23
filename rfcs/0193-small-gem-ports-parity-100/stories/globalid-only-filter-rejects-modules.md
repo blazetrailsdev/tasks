@@ -2,7 +2,7 @@
 title: "only: filter accepts only classes; Rails accepts modules via model <= klass"
 status: draft
 updated: 2026-08-17
-rfc: "0023-surfaced-deviations"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages:
   - "globalid"

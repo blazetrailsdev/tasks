@@ -2,7 +2,7 @@
 title: "Rack's Collector includes Enumerable; trails hand-writes findAll"
 status: draft
 updated: 2026-08-28
-rfc: "0023-surfaced-deviations"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
 deps: []

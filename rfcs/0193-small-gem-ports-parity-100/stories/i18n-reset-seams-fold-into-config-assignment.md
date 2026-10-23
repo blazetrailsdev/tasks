@@ -2,7 +2,7 @@
 title: "Fold i18n's resetConfig/resetClassConfig test seams into I18n.config= assignment"
 status: draft
 updated: 2026-10-20
-rfc: "0023-surfaced-deviations"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages: []
 deps: []

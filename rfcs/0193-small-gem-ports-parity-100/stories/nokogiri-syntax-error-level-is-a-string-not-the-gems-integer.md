@@ -2,7 +2,7 @@
 title: "Nokogiri SyntaxError#level is a string union, not the gem's Integer with level predicates"
 status: draft
 updated: 2026-08-23
-rfc: "0023-surfaced-deviations"
+rfc: "0193-small-gem-ports-parity-100"
 cluster: null
 packages:
   - "nokogiri"
