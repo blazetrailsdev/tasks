@@ -274,37 +274,20 @@ that finds a receipt now wrong for the new spelling fixes it in the same PR.
 
 1. Tooling, independent and first: `assertion-kinds-reads-literal-matcher-arguments`,
    `vitest-matcher-to-be-kind-of`, `vitest-matchers-to-include-scores-includes`,
-   then `vitest-matchers-readme` (which documents the final set).
-2. The 24 `expect-sweep-*` stories, each depending on the three tooling
+   `call-gate-credits-minitest-asserts-as-expect`, then
+   `vitest-matchers-readme` (which documents the final set).
+2. The 24 `expect-sweep-*` stories, each depending on
+   `assertion-kinds-reads-literal-matcher-arguments` and the two matcher
    stories. Each is a whole-file sweep over a measured bin of at most 300 call
    sites (about 600 LOC), smallest blast radius first:
    `expect-sweep-gem-packages`, then activejob, trailties, activemodel,
    activesupport, actionview, activerecord, actionpack.
 3. `activesupport-index-drops-minitest-assertion-exports` rewrites the Rails
-   bodies to the chosen shape and deletes the helpers. It depends on every
-   sweep.
+   bodies to `expect(value, msg)` and deletes the helpers. It depends on every
+   sweep and on the call-gate story; then
+   `assert-predicate-takes-the-predicate-name-and-builds-minitests-message`.
 
-### What a sweep must not do
-
-- **Never touch a `describe` / `it` string.** Test names are how `parity:test`
-  matches, and a regex sweep over `assertEqual(` also hits an `it("assertEqual
-…")` title and a sibling `assertEqualRuby(` call (memory "Regex sweeps
-  rewrite test titles and sibling calls"). A sweep diff that changes a title
-  line is a bug, checked by `git diff -U0 | rg '^\+.*\b(it|describe|test)\('`
-  coming back empty of title changes.
-- **No added or dropped assertion** inside a name-matched test: the count
-  counter is only-shrink. One helper call is one `expect`.
-- **Mechanical rows:** `assertMatch`, `assertNoMatch`, `assertSame`,
-  `assertNotSame`, `assertInDelta`, `assertInstanceOf`, `assertRespondTo`,
-  `assertNotRespondTo`, `assertOperator` (numbers only).
-- **Rows that need eyes at every site:** `assert` / `assertPredicate` /
-  `assertNotPredicate` (is the value a `boolean`, or can it be `0` / `""`?),
-  `assertEqual` / `assertNotEqual` (does either side define Ruby `==`?),
-  `assertNil` / `assertNotNil` (which JS nil does the port produce?),
-  `assertEmpty` / `assertIncludes` (is the collection async, a `Map`, a
-  Hash?), `assertKindOf` (primitive?).
-
-## Assertions inside ported Rails bodies (decided, owner 2026-10-23)
+### Assertions inside ported Rails bodies (decided, owner 2026-10-23)
 
 Rails' testing modules call Minitest assertions in their own bodies. Without a
 Minitest port, and with the activesupport helpers deleted, these bodies are
@@ -340,7 +323,9 @@ test file.
      `expect(rbObjRespondTo(model, "toKey")).toBe(true)`
 
    `message { … }` / `diff` / `mu_pp` compositions are inlined as the string
-   they build, read off the vendored source. The ActiveSupport assertions
+   they build, read off the vendored source (`assertions.rb:57`, `:632`, `:127`); the
+   call-gate story credits those three Minitest message builders as inlined,
+   the same once-only way. The ActiveSupport assertions
    themselves (`assertDifference`, `assertChanges`, …) keep their Rails names,
    stay ported Rails API, and are called from tests as they are now.
 
@@ -353,6 +338,26 @@ test file.
    `call-gate-credits-minitest-asserts-as-expect` (assertion-tooling).
 3. Rejected: see Alternatives (matcher-recast ActiveSupport assertions;
    module-private helpers).
+
+### What a sweep must not do
+
+- **Never touch a `describe` / `it` string.** Test names are how `parity:test`
+  matches, and a regex sweep over `assertEqual(` also hits an `it("assertEqual
+…")` title and a sibling `assertEqualRuby(` call (memory "Regex sweeps
+  rewrite test titles and sibling calls"). A sweep diff that changes a title
+  line is a bug, checked by `git diff -U0 | rg '^\+.*\b(it|describe|test)\('`
+  coming back empty of title changes.
+- **No added or dropped assertion** inside a name-matched test: the count
+  counter is only-shrink. One helper call is one `expect`.
+- **Mechanical rows:** `assertMatch`, `assertNoMatch`, `assertSame`,
+  `assertNotSame`, `assertInDelta`, `assertInstanceOf`, `assertRespondTo`,
+  `assertNotRespondTo`, `assertOperator` (numbers only).
+- **Rows that need eyes at every site:** `assert` / `assertPredicate` /
+  `assertNotPredicate` (is the value a `boolean`, or can it be `0` / `""`?),
+  `assertEqual` / `assertNotEqual` (does either side define Ruby `==`?),
+  `assertNil` / `assertNotNil` (which JS nil does the port produce?),
+  `assertEmpty` / `assertIncludes` (is the collection async, a `Map`, a
+  Hash?), `assertKindOf` (primitive?).
 
 ## Non-goals
 

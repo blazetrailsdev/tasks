@@ -28,7 +28,7 @@ field by field, not by class and id), `toContain` on a `Map` ignores keys, and
 (`packages/vitest-matchers/src/index.ts`, its `includes()` helper uses `rbEqual`
 per element and `hashHas` for a Hash/`Map`) and `toHaveKey`, written for the
 RSpec ports, but `TRAILS_MAP` (`scripts/test-compare/assertion-kinds.ts:238-275`)
-has no entry for either, so a Minitest port that uses them scores no kind.
+has no entry for either, so a test that ports `assert_includes` with them scores no kind.
 
 ## Acceptance criteria
 

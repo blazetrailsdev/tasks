@@ -5,7 +5,7 @@ updated: 2026-10-23
 rfc: "0206-minitest-port-and-assertions-to-expect"
 cluster: assertion-tooling
 packages: []
-deps: []
+deps: [assertion-kinds-reads-literal-matcher-arguments]
 deps-rfc: []
 est-loc: 200
 priority: null
@@ -43,6 +43,12 @@ assertion", encoded for the test comparison as `RAILS_MAP` / `TRAILS_MAP` in
       `assert_operator`, … and `refute_*`) when the TS body has an
       `expect(...)` chain whose terminal matcher maps to the same kind, by
       reading `assertion-kinds.ts`'s maps — one shared source, no second table.
+- [ ] Minitest's message builders `message`, `diff` and `mu_pp`
+      (`vendor/minitest/v5.27.0/lib/minitest/assertions.rb:57`, `:632`,
+      `:127`), which Rails bodies call 27, 3 and 1 times in `assertions.rb`
+      alone and which the ruling inlines as strings, are credited once by
+      the same mechanism (a ruling-cited `SKIP_CALLS` group in
+      `lint-calls.ts`), not per site.
 - [ ] `parity:api:calls:args` does not report the `expect` form as an
       argument-shape row for those calls.
 - [ ] No `@missingRailsCall` receipt and no baseline row is added for this;
