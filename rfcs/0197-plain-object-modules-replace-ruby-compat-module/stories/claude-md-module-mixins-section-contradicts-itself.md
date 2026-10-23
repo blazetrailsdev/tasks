@@ -2,7 +2,7 @@
 title: "CLAUDE.md's Module mixins section contradicts itself after #6746"
 status: draft
 updated: 2026-08-19
-rfc: "0023-surfaced-deviations"
+rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages:
   - "activemodel"

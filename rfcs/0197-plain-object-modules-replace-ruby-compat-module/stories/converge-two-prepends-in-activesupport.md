@@ -2,7 +2,7 @@
 title: "Converge the two activesupport prepend() functions onto Ruby's Module#prepend"
 status: draft
 updated: 2026-08-13
-rfc: "0023-surfaced-deviations"
+rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages:
   - "ruby-compat"
