@@ -1,10 +1,10 @@
 ---
-title: "activesupport stops exporting the Minitest assertions, and test code cannot import them"
+title: "Delete the Minitest assertion helpers from activesupport and write the Rails bodies that called them without them"
 status: draft
 updated: 2026-10-23
 rfc: "0206-minitest-port-and-assertions-to-expect"
-cluster: minitest-package
-packages: [activesupport, minitest]
+cluster: close-out
+packages: [activesupport, actionpack, actionview, activemodel, activerecord]
 deps:
   [
     expect-sweep-actionpack-10,
@@ -31,11 +31,9 @@ deps:
     expect-sweep-activesupport-2,
     expect-sweep-gem-packages,
     expect-sweep-trailties,
-    ported-rails-assertion-modules-import-minitest,
-    minitest-package-ports-runner-classes,
   ]
 deps-rfc: []
-est-loc: 300
+est-loc: 500
 priority: null
 pr: null
 claim: null
@@ -45,37 +43,50 @@ blocked-by: null
 
 ## Context
 
-Close-out of the RFC. After every `expect-sweep-*` story and
-`ported-rails-assertion-modules-import-minitest`, no test file calls a Minitest
-assertion and every ported Rails module imports one from
-`@blazetrails/minitest`. `packages/activesupport/src/index.ts` (around
-`:598-639`) still re-exports the moved names. This supersedes RFC 0158's
-`delete-minitest-builtin-assert-helpers`, which proposed deleting the helpers
-outright; ported Rails bodies call them, so they move instead.
+Close-out of RFC 0206. Minitest is vendored for reference only, not ported
+(repo-owner ruling 2026-10-23), so the hand-ported Minitest helpers in
+`packages/activesupport/src/testing/assertions.ts` (`assert`, `assertEqual`,
+`assertNotEqual`, `assertNil`, `assertNotNil`, `assertSame`, `assertNotSame`,
+`assertInDelta`, `assertEmpty`, `assertNotEmpty`, `assertIncludes`,
+`assertNotIncludes`, `assertMatch`, `assertNoMatch`, `assertInstanceOf`,
+`assertKindOf`, `assertNotKindOf`, `assertPredicate`, `assertNotPredicate`,
+`assertRespondTo`, `assertNotRespondTo`, `assertOperator`, `diff`, `message`)
+and their re-exports from `packages/activesupport/src/index.ts` (around
+`:598-639`) are deleted once every `expect-sweep-*` story has landed. This
+supersedes RFC 0158's `delete-minitest-builtin-assert-helpers` (closed).
+
+Ported Rails bodies call these helpers (the site list is the RFC's § "Open
+decision": `testing/assertions.ts:310-551`, `method-call-assertions.ts`,
+`error-reporter-assertions.ts`, `deprecation.ts`, `activemodel/src/lint.ts`,
+`activerecord/src/testing/query-assertions.ts`,
+`action-dispatch/testing/assertions/routing.ts`, actionview's
+`dom-assertions.ts` / `selector-assertions.ts` / `html-selector.ts`,
+`activerecord/src/encryption/test-helpers.ts`). **This story does not start
+until Dean has picked an option in § "Open decision"**; it then rewrites those
+bodies to that shape.
 
 Baseline (2026-10-22, trails `1b769d8daa`): 5,938 import-resolved call sites
-in 392 test files; `pnpm parity:api:extra --package activesupport` total 764,
-24 of them in `testing/assertions.ts`.
+in 392 test files.
 
 ## Acceptance criteria
 
-- [ ] `packages/activesupport/src/testing/assertions.ts` exports exactly
-      `assertNot`, `assertRaises`, `assertRaise`, `assertNothingRaised`,
-      `assertDifference`, `assertNoDifference`, `assertChanges`,
-      `assertNoChanges`, `_assertNothingRaisedOrWarn`,
-      `_callableToSourceString` and `UNTRACKED`, and has no
-      `@noRailsEquivalent PERMANENT` tag.
-- [ ] The activesupport index re-exports no Minitest name. The `TestCase`
-      statics for Rails' `assert_not_*` aliases
-      (`vendor/rails/v8.0.2/activesupport/lib/active_support/test_case.rb:164-296`)
-      stay, pointing at `@blazetrails/minitest`.
-- [ ] An ESLint `no-restricted-imports` entry for `**/*.test.ts` forbids
-      importing the Minitest assertion names from `@blazetrails/minitest` or
-      `@blazetrails/activesupport` (Rails' `ActiveSupport::Testing::Assertions`
-      names, `stub` and `assertMock` stay allowed), so the tree cannot regress.
+- [ ] The 22 helpers plus `diff` and `message` are gone from
+      `testing/assertions.ts` and the activesupport index. Rails'
+      `ActiveSupport::Testing::Assertions` members stay. The runner classes
+      (`Assertion`, `Test`, `Minitest`, …) and `Mock` / `stub` are untouched
+      (RFC Open question 2).
+- [ ] Every ported Rails body listed above is written in the shape Dean chose
+      in § "Open decision", carrying Rails' failure message, and
+      `pnpm parity:api:calls` / `parity:api:calls:args` are green — by the
+      call-gate mapping (option A) or per-call receipts (option B), not by new
+      baseline rows. The ruling is written into trails CLAUDE.md as its own
+      section in the same PR.
+- [ ] An ESLint `no-restricted-imports` entry stops any file importing the
+      deleted names from `@blazetrails/activesupport`, so the tree cannot
+      regress.
 - [ ] Every `toBeInstanceOf` port of a Rails `assert_instance_of` is
       `toBeExactInstanceOf`, and `kindOf: "instanceOf"` is deleted from
       `HISTOGRAM_FOLD` in `scripts/test-compare/assertion-kinds.ts`, with
       `pnpm parity:test:assertions` green (carried over from 0158's story).
-- [ ] The RFC's import-resolved count reads 0; the PR body records the
-      activesupport `parity:api:extra` total before and after (expected 739).
+- [ ] The RFC's import-resolved count reads 0; the PR body records
+      `pnpm parity:api:extra --package activesupport` before and after.

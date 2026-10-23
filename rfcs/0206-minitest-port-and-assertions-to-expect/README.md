@@ -1,12 +1,11 @@
 ---
 rfc: "0206-minitest-port-and-assertions-to-expect"
-title: "Port minitest as its own package, and move test code onto Vitest expect"
+title: "Move test code onto Vitest expect, with vitest-matchers for Ruby semantics; Minitest stays vendored as reference"
 status: draft
 created: 2026-10-22
 updated: 2026-10-23
 owner: "@deanmarano"
 packages:
-  - minitest
   - activesupport
   - vitest-matchers
   - actionpack
@@ -18,67 +17,72 @@ packages:
   - globalid
   - arel
   - rack-test
+  - minitest
 clusters:
-  - minitest-package
   - assertion-tooling
   - expect-sweeps
+  - close-out
+  - minitest-package
 ---
 
-# RFC 0206 — Port minitest as its own package, and move test code onto Vitest expect
+# RFC 0206 — Move test code onto Vitest expect; Minitest stays vendored as reference
+
+> `minitest-package` (cluster) and `minitest` (package) stay declared only
+> because the four closed `FALSIFIED` stories of the first draft still carry
+> them; nothing open is in that cluster.
+>
+> The slug still says `minitest-port`: the tasks CLI has no RFC rename verb,
+> and every story row is keyed on this id. The title is what changed. **Nothing
+> in this RFC ports Minitest.**
 
 ## Summary
 
 `packages/activesupport/src/testing/assertions.ts` holds two things in one
 file: Rails' `ActiveSupport::Testing::Assertions`
 (`vendor/rails/v8.0.2/activesupport/lib/active_support/testing/assertions.rb`)
-and a port of most of `Minitest::Assertions`, `Minitest::Test` and the
-`Minitest` runner classes (`vendor/minitest/v5.27.0/lib/minitest.rb`,
-`lib/minitest/assertions.rb`, `lib/minitest/test.rb`). Test code across ten
+and a hand port of most of `Minitest::Assertions`
+(`vendor/minitest/v5.27.0/lib/minitest/assertions.rb`). Test code across ten
 packages calls the Minitest half: 5,938 call sites in 392 test files.
 
-This RFC does two things, by repo-owner ruling (2026-10-22):
+By repo-owner ruling (2026-10-23): _"I don't want minitest ported, I want it
+vendored for reference, but I just want vitest-expect assertions that help with
+porting."_ So:
 
-1. **Minitest becomes `@blazetrails/minitest`**, a gem port mirroring
-   `vendor/minitest/v5.27.0/lib`, enrolled in `parity:api`. The
-   Minitest members leave activesupport and lose their
-   `@noRailsEquivalent PERMANENT` receipts. Ported Rails code whose Ruby body
-   calls a Minitest assertion (`assert_difference` calls `assert_equal`;
-   `ActiveModel::Lint::Tests` calls `assert_respond_to`) imports it from there,
-   so the call gates keep crediting those calls. This reverses RFC 0098's
-   closed `map-vendored-minitest-and-drop-norailsequivalent` (won't-do,
-   2026-08-14), whose closing note asked for a fresh story if the decision
-   changed.
-2. **Test code stops calling Minitest helpers and uses Vitest `expect`**, by
-   CONTRIBUTING.md § "Porting a Minitest assertion": the built-in matcher by
-   default, a `@blazetrails/vitest-matchers` matcher only where the built-in
-   gives the wrong answer for the value under test. The existing seven
-   matchers cover every gap measured below, so **no new matcher is minted**.
-   Ruby `nil` maps onto the JS value the port actually produces (`null` or
-   `undefined`) rather than onto a `toBeNil` matcher.
+1. **Minitest is not ported.** There is no `@blazetrails/minitest` package.
+   `vendor/minitest/v5.27.0/` stays vendored as reference only — what each
+   `assert_*` checks and the failure message it builds — and it is not
+   enrolled in `parity:api`. RFC 0098's won't-do on
+   `map-vendored-minitest-and-drop-norailsequivalent` stands.
+2. **Test code uses Vitest `expect`**, by CONTRIBUTING.md § "Porting a Minitest
+   assertion": the built-in matcher by default, a
+   `@blazetrails/vitest-matchers` matcher where the built-in gives the wrong
+   answer for the value under test. vitest-matchers exists so that porting a
+   Minitest/Rails assertion is easy and faithful (Ruby truthiness, Ruby `==`,
+   Ruby `include?`, `kind_of?`); § "Matchers" proposes what it still lacks.
+3. **The Minitest half of `testing/assertions.ts` is deleted** once its callers
+   are swept, leaving Rails' `ActiveSupport::Testing::Assertions` only.
 
-When it is done, `testing/assertions.ts` is the ported Rails file and nothing
-else, `@blazetrails/minitest` is the ported gem, and no `*.test.ts` file
-imports a Minitest assertion.
+One question this cannot settle by itself: Rails' own assertion modules call
+Minitest assertions inside their bodies. § "Open decision" proposes how those
+bodies are written without a Minitest port. **It is Dean's call.**
 
 ## Motivation
 
 The CONTRIBUTING.md table is ratified, and the tree does not follow it.
 RFC 0158 (`minitest-builtin-asserts-port-as-expect`, done) wrote the table and
-filed three caller sweeps plus a deletion
-(`minitest-asserts-to-expect-activesupport-callers`,
-`-trailties-callers`, `-actionpack-actionview-callers`,
-`delete-minitest-builtin-assert-helpers`). Since then the helpers spread
-through the `@blazetrails/activesupport` index into activerecord, activemodel,
-activejob, globalid, arel and rack-test, which no sweep covers, and the usage
-grew several-fold (`assertPredicate`: 22 files then, 99 now).
+filed caller sweeps plus a deletion. Since then the helpers spread through the
+`@blazetrails/activesupport` index into activerecord, activemodel, activejob,
+globalid, arel and rack-test, and the usage grew several-fold
+(`assertPredicate`: 22 files then, 99 now). RFC 0158's six
+`minitest-asserts-to-expect-*-callers` sweeps and
+`delete-minitest-builtin-assert-helpers` are closed as superseded by this RFC
+(2026-10-23), so the sweep and the deletion have one owner.
 
-The deletion story cannot land as written either. Rails' own testing modules
-call Minitest built-ins inside their bodies (measured below), so deleting
-`assert`, `assertEqual`, `assertNil`, `assertMatch`, `assertPredicate`,
-`message` or `diff` would force the ported Rails bodies to drop calls their
-Ruby makes, which `parity:api:calls` reports as missing. A real home for
-Minitest is what lets the test-code half go away while the Rails half keeps its
-calls.
+A hand-ported Minitest that test code imports is a second assertion library
+beside Vitest's, with its own failure messages and its own counter, scored as
+`@noRailsEquivalent` surface in a file that mirrors a different `.rb`. Porters
+need to know what `assert_includes` _means_; they read that in the vendored
+source and write the matching `expect`.
 
 ### Measurements
 
@@ -133,92 +137,102 @@ assumed (results quoted in the table).
 **Stays in activesupport, at its Rails name:** `assertNot`, `assertRaises`
 (and its `assertRaise` alias), `assertNothingRaised`, `assertDifference`,
 `assertNoDifference`, `assertChanges`, `assertNoChanges`,
-`_assertNothingRaisedOrWarn`, `_callableToSourceString`, and `UNTRACKED`.
-These are `ActiveSupport::Testing::Assertions`
-(`vendor/rails/v8.0.2/activesupport/lib/active_support/testing/assertions.rb:21-252`),
-and `parity:api` matches the file against that `.rb`. Likewise
-`MethodCallAssertions` (`method_call_assertions.rb:9-64`) and
-`ErrorReporterAssertions` (`error_reporter_assertions.rb:62,88`) are Rails
-files and stay, minus the Minitest pieces that sit in them today (`Mock`,
-`MockExpectationError`, `stub`, `assertMock`: `vendor/minitest/v5.27.0/lib/minitest/mock.rb:10,241,286`).
-The `assert_not_*` aliases `ActiveSupport::TestCase` declares
-(`vendor/rails/v8.0.2/activesupport/lib/active_support/test_case.rb:164-296`)
-stay as `TestCase` statics, now pointing at `@blazetrails/minitest`.
+`_assertNothingRaisedOrWarn`, `_callableToSourceString`, and `UNTRACKED` —
+`ActiveSupport::Testing::Assertions`
+(`vendor/rails/v8.0.2/activesupport/lib/active_support/testing/assertions.rb:21-252`).
+Likewise `MethodCallAssertions` and `ErrorReporterAssertions` are Rails files
+and stay.
 
-**Moves to `@blazetrails/minitest`:** every Minitest member, at the file that
-mirrors its `.rb`:
+**Deleted, once callers are swept:** the 22 test-facing Minitest helpers in the
+table below, plus `diff` and `message`
+(`vendor/minitest/v5.27.0/lib/minitest/assertions.rb:57,632`), and their
+re-exports from `packages/activesupport/src/index.ts` (around `:598-639`). How
+the Rails bodies that call them are written afterwards is § "Open decision".
 
-| Ruby                                                                                                             | Ruby file                    | trails today                                                       |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------ |
-| `Minitest::Assertions` (`assert` `:171` … `refute` `:650`, `message` `:632`, `diff` `:57`)                       | `lib/minitest/assertions.rb` | `activesupport/src/testing/assertions.ts:540-1016`                 |
-| `Assertion` `:1035`, `Skip` `:1065`, `UnexpectedError` `:1074`, `BacktraceFilter` `:1190`, the `Minitest` module | `lib/minitest.rb`            | `activesupport/src/testing/assertions.ts:33-300`                   |
-| `Minitest::Test`                                                                                                 | `lib/minitest/test.rb:10`    | `activesupport/src/testing/assertions.ts` (`Test`)                 |
-| `Minitest::Mock`, `Object#stub`, `assert_mock`                                                                   | `lib/minitest/mock.rb`       | `activesupport/src/testing/method-call-assertions.ts:5-90,248-325` |
-
-Rails' modules call these Minitest members from their Ruby bodies, which is
-why they cannot simply be deleted: `assertions.rb` calls `assert` (5),
-`assert_equal` (2), `refute_equal` (1), `assert_nil` (1), `assert_match` (1),
-`message` (27), `diff` (3), `mu_pp` (1); `method_call_assertions.rb` calls
-`assert_equal` (2) and `assert_mock` (1); `error_reporter_assertions.rb` calls
-`assert` (2), `assert_equal` (3) and `assert_predicate` (2). Eleven other
-non-test files that mirror Rails assertion modules call them too:
-`actionpack/src/action-dispatch/testing/assertions/routing.ts`,
-`actionview/src/testing/selector-assertions.ts`,
-`actionview/src/testing/selector-assertions/html-selector.ts`,
-`actionview/src/testing/dom-assertions.ts`, `activemodel/src/lint.ts`,
-`activerecord/src/testing/query-assertions.ts`,
-`activerecord/src/encryption/test-helpers.ts`, and five
-`activesupport/src/cache/behaviors/*-behavior.ts`. They switch their import to
-`@blazetrails/minitest` and keep every call.
+**Out of scope:** the Minitest runner classes that sit in activesupport today
+(`Assertion`, `Skip`, `UnexpectedError`, `BacktraceFilter`, `Test`, the
+`Minitest` module; `vendor/minitest/v5.27.0/lib/minitest.rb:1035-1190`,
+`lib/minitest/test.rb:10`) and `Mock` / `stub` / `assertMock`
+(`lib/minitest/mock.rb`). `ActiveSupport::TestCase`, `autorun.ts`,
+`setup-and-teardown.ts` and `tests-without-assertions.ts` read them, and their
+fate is a separate decision (Open question 2). This RFC neither moves nor
+deletes them.
 
 ### Per-helper disposition
 
-For test code only; ported Rails code keeps calling the Minitest port. Three
+For test code. Ported Rails bodies are § "Open decision". Three
 dispositions: **built-in** (a Vitest matcher means the same for every value it
-is used on), **existing matcher** (the built-in is wrong for some values and a
-`@blazetrails/vitest-matchers` matcher already covers them), **delete** (the
-test-facing export goes away). No row needs a new matcher. "Gate" is the
+is used on), **matcher** (the built-in is wrong for some values and a
+`@blazetrails/vitest-matchers` matcher covers them, existing or proposed in
+§ "Matchers"), **delete** (the export goes away). "Gate" is the
 `parity:test:assertions` kind the rewrite scores, against the kind
 `scripts/test-compare/assertion-kinds.ts` gives the Rails assertion.
 
-| helper                                                                        | files | calls | disposition               | replacement                                                                                                                                                          | why the Ruby semantics do not bite                                                                                                                                                                                                                                                                                                                                                                                                       | gate                                                                                                                                              |
-| ----------------------------------------------------------------------------- | ----: | ----: | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `assertEqual`                                                                 |   129 | 2,136 | built-in + existing       | `toEqual(exp)`; `toBe(exp)` for a primitive; `toEqualRuby(exp)` where either side defines Ruby `==` (records, `Duration`, `BigDecimal`, `Time`, ruby-compat `Hash`)  | The helper is `rbEqual` (`assertions.ts:880`, minitest `assertions.rb:220`). `toEqual` agrees on primitives, Arrays, plain objects and Map contents (probe: a filled `Map` is not `toEqual` an empty one). It disagrees where Ruby `==` is a method: it ignores class (probe: `new A()` with `x = 1` `toEqual` `{ x: 1 }` passes), ignores `undefined` properties, and compares a record field by field where `==` compares class and id | `equal` → `equal` (`toBe` is `equal` too)                                                                                                         |
-| `assertNotEqual`                                                              |    14 |    49 | built-in + existing       | `.not.toEqual` / `.not.toEqualRuby`                                                                                                                                  | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `notEqual` → `notEqual`                                                                                                                           |
-| `assertPredicate`                                                             |    99 |   903 | built-in + existing       | boolean-typed predicate: `expect(o.isFoo()).toBe(true)`; value-returning predicate: `expect(o.foo()).toBeRubyTruthy()`                                               | Minitest's is `assert o1.__send__ op` (`assertions.rb:394`): Ruby truthiness. For a `boolean` value `toBe(true)` is exact; a value that can be `0` or `""` needs Ruby truthiness                                                                                                                                                                                                                                                         | `truthy` → **`equal` today for `toBe(true)`**; `truthy` once `assertion-kinds-reads-literal-matcher-arguments` lands. `toBeRubyTruthy` → `truthy` |
-| `assertNotPredicate`                                                          |    56 |   377 | built-in + existing       | `toBe(false)` / `toBeRubyFalsy()`                                                                                                                                    | as above; `toBeFalsy` wrongly passes on `0`                                                                                                                                                                                                                                                                                                                                                                                              | `falsy` → **`equal` today**; `falsy` after the tooling story                                                                                      |
-| `assert`                                                                      |    94 |   560 | built-in + existing       | `toBe(true)` for a boolean; `toBeTruthy()` where the value cannot be `0`, `""` or `NaN`; else `toBeRubyTruthy()`                                                     | `assert` is `test` truthiness (`assertions.rb:171`)                                                                                                                                                                                                                                                                                                                                                                                      | `truthy` → `truthy` (`toBe(true)`: as `assertPredicate`)                                                                                          |
-| `assertNil`                                                                   |   107 |   407 | built-in                  | `toBeNull()` where the port produces `null`; `toBeUndefined()` where it produces `undefined`                                                                         | Ruby has one `nil`. Map it onto the one JS value the port returns. A value that can be both is a port with two nils: converge the source or file it, do not hide it in the assertion. (Probe: `toBeNull` fails on `undefined`, as it should)                                                                                                                                                                                             | `nil` → `nil` (both)                                                                                                                              |
-| `assertNotNil`                                                                |    18 |    58 | built-in                  | `.not.toBeNull()` where the domain is `null \| T`; `toBeDefined()` where it is `undefined \| T`                                                                      | as above. `.not.toBeNull()` passes on `undefined` (probe), so it is only right where `undefined` cannot occur                                                                                                                                                                                                                                                                                                                            | `notNil` → `notNil` (both)                                                                                                                        |
-| `assertMatch`                                                                 |    42 |   514 | built-in                  | `expect(s).toMatch(m)`                                                                                                                                               | A string `m` is a literal in both (the helper escapes it, `assertions.ts:977`; probe: `toMatch(".")` on `"ab"` fails). The helper returns the `MatchData`; a call site that uses the result reads `m.exec(s)` itself                                                                                                                                                                                                                     | `match` → `match`                                                                                                                                 |
-| `assertNoMatch`                                                               |    13 |    57 | built-in                  | `.not.toMatch(m)`                                                                                                                                                    | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `noMatch` → `noMatch`                                                                                                                             |
-| `assertEmpty`                                                                 |    81 |   271 | built-in + existing       | `toHaveLength(0)` where the receiver has `length`; `toBeEmpty()` for `Map`, `Set`, a Hash or an `isEmpty` object                                                     | The helper calls `isEmpty` (`assertions.ts:649`). An async `isEmpty` (a `Relation`) returns a Promise, and `toBeEmpty` on a Promise fails (probe): `await` the collection's answer first                                                                                                                                                                                                                                                 | `empty` → **`length` today for `toHaveLength(0)`**; `empty` after the tooling story. `toBeEmpty` → `empty`                                        |
-| `assertNotEmpty`                                                              |    37 |    93 | built-in + existing       | `.not.toHaveLength(0)` / `.not.toBeEmpty()`                                                                                                                          | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `notEmpty` → `notEmpty` (after the tooling story for `toHaveLength`)                                                                              |
-| `assertRespondTo`                                                             |    49 |   171 | existing                  | `toRespondTo("m")`                                                                                                                                                   | CONTRIBUTING's built-in is `expect(typeof o.m).toBe("function")`, which misses a name answered by `respond_to_missing?` and scores `equal`, never `respondTo`. `toRespondTo` is `rbObjRespondTo` and scores `respondTo`, so it is the one spelling that both answers right and keeps the kind                                                                                                                                            | `respondTo` → `respondTo`                                                                                                                         |
-| `assertNotRespondTo`                                                          |    31 |   104 | existing                  | `.not.toRespondTo("m")`                                                                                                                                              | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `notRespondTo` → `notRespondTo`                                                                                                                   |
-| `assertIncludes`                                                              |    24 |    79 | built-in                  | Array: `toContainEqual(o)` (or `toContain` for a primitive); String / Set: `toContain(o)`; Hash key: `toHaveProperty([k])`; `Map` key: `expect(m.has(k)).toBe(true)` | Minitest is `collection.include?(o)` (`assertions.rb:260`): `Array#include?` uses `==`, so a record element needs `toContainEqual` with care or `toEqualRuby` over a found element; `toContain` on a `Map` does not look at keys (probe)                                                                                                                                                                                                 | `includes` → `includes`; `toHaveProperty` **unmapped today**, `includes` after the tooling story                                                  |
-| `assertNotIncludes`                                                           |    11 |    19 | built-in                  | `.not.` of the above                                                                                                                                                 | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `excludes` → `excludes`                                                                                                                           |
-| `assertKindOf`                                                                |    17 |    53 | built-in + existing       | object: `toBeInstanceOf(cls)`; primitive: `toBeExactInstanceOf(String)` / `(Number)`                                                                                 | The helper boxes (`Object(obj) instanceof cls`, `assertions.ts:953`); `toBeInstanceOf(String)` on `"x"` fails (probe). A primitive's `constructor` is its wrapper class, so the exact matcher is right there                                                                                                                                                                                                                             | `kindOf` → `kindOf` / `instanceOf` (folded together today by `HISTOGRAM_FOLD`)                                                                    |
-| `assertNotKindOf`                                                             |     1 |     5 | built-in                  | `.not.toBeInstanceOf(cls)`                                                                                                                                           | as above; Minitest's `refute_kind_of`                                                                                                                                                                                                                                                                                                                                                                                                    | no mapped kind either side (`NEGATION` has no `kindOf` entry, `RAILS_MAP` no `refute_kind_of`): unchanged                                         |
-| `assertInstanceOf`                                                            |     8 |    20 | existing                  | `toBeExactInstanceOf(cls)`                                                                                                                                           | `instance_of?` is the exact class (`assertions.rb:271`); `toBeInstanceOf` admits subclasses                                                                                                                                                                                                                                                                                                                                              | `instanceOf` → `instanceOf`                                                                                                                       |
-| `assertSame`                                                                  |    20 |    41 | built-in                  | `toBe(exp)`                                                                                                                                                          | `equal?` is identity; `Object.is` is identity for objects. Strings are primitives in trails (CLAUDE.md § "Ruby Strings are JS string primitives"), so two equal Ruby Strings that are different objects are one JS value: ratified                                                                                                                                                                                                       | `same` → `equal`, folded together by `HISTOGRAM_FOLD`                                                                                             |
-| `assertNotSame`                                                               |     4 |     6 | built-in                  | `.not.toBe(exp)`                                                                                                                                                     | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `notSame` → `notEqual`, folded                                                                                                                    |
-| `assertInDelta`                                                               |     8 |    12 | existing                  | `toBeWithinDelta(exp, delta)`                                                                                                                                        | `toBeCloseTo`'s digit count cannot say "within 0.001"                                                                                                                                                                                                                                                                                                                                                                                    | `inDelta` → `inDelta`                                                                                                                             |
-| `assertOperator`                                                              |     2 |     3 | built-in                  | `toBeGreaterThan` / `toBeLessThan` / `…OrEqual`                                                                                                                      | All three sites compare numbers. A Comparable non-number (`Time`, `Duration`) would need `expect(a.compareTo(b))…`; none exists today                                                                                                                                                                                                                                                                                                    | `operator` → `operator`                                                                                                                           |
-| `diff`, `message`                                                             |   n/a |   n/a | delete from activesupport | move to `@blazetrails/minitest` (`assertions.rb:57,632`)                                                                                                             | machinery; test code never calls them                                                                                                                                                                                                                                                                                                                                                                                                    | n/a                                                                                                                                               |
-| `Assertion`, `Skip`, `UnexpectedError`, `BacktraceFilter`, `Test`, `Minitest` |   n/a |   n/a | delete from activesupport | move to `@blazetrails/minitest`                                                                                                                                      | read by `testing/autorun.ts`, `test-case.ts`, `setup-and-teardown.ts`, `tests-without-assertions.ts`, which import them from the new package                                                                                                                                                                                                                                                                                             | n/a                                                                                                                                               |
-| `_takeAssertions`                                                             |   n/a |   n/a | moves                     | `@blazetrails/minitest` (the `assertions` counter, `assertions.rb` `self.assertions`)                                                                                | the counter lives with `assert`                                                                                                                                                                                                                                                                                                                                                                                                          | n/a                                                                                                                                               |
+| helper               | files | calls | disposition         | replacement                                                                                                                                                         | why the Ruby semantics do not bite                                                                                                                                                                                                                                                                                                                                                                                                       | gate                                                                                                                                              |
+| -------------------- | ----: | ----: | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `assertEqual`        |   129 | 2,136 | built-in + existing | `toEqual(exp)`; `toBe(exp)` for a primitive; `toEqualRuby(exp)` where either side defines Ruby `==` (records, `Duration`, `BigDecimal`, `Time`, ruby-compat `Hash`) | The helper is `rbEqual` (`assertions.ts:880`, minitest `assertions.rb:220`). `toEqual` agrees on primitives, Arrays, plain objects and Map contents (probe: a filled `Map` is not `toEqual` an empty one). It disagrees where Ruby `==` is a method: it ignores class (probe: `new A()` with `x = 1` `toEqual` `{ x: 1 }` passes), ignores `undefined` properties, and compares a record field by field where `==` compares class and id | `equal` → `equal` (`toBe` is `equal` too)                                                                                                         |
+| `assertNotEqual`     |    14 |    49 | built-in + existing | `.not.toEqual` / `.not.toEqualRuby`                                                                                                                                 | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `notEqual` → `notEqual`                                                                                                                           |
+| `assertPredicate`    |    99 |   903 | built-in + existing | boolean-typed predicate: `expect(o.isFoo()).toBe(true)`; value-returning predicate: `expect(o.foo()).toBeRubyTruthy()`                                              | Minitest's is `assert o1.__send__ op` (`assertions.rb:394`): Ruby truthiness. For a `boolean` value `toBe(true)` is exact; a value that can be `0` or `""` needs Ruby truthiness                                                                                                                                                                                                                                                         | `truthy` → **`equal` today for `toBe(true)`**; `truthy` once `assertion-kinds-reads-literal-matcher-arguments` lands. `toBeRubyTruthy` → `truthy` |
+| `assertNotPredicate` |    56 |   377 | built-in + existing | `toBe(false)` / `toBeRubyFalsy()`                                                                                                                                   | as above; `toBeFalsy` wrongly passes on `0`                                                                                                                                                                                                                                                                                                                                                                                              | `falsy` → **`equal` today**; `falsy` after the tooling story                                                                                      |
+| `assert`             |    94 |   560 | built-in + existing | `toBe(true)` for a boolean; `toBeTruthy()` where the value cannot be `0`, `""` or `NaN`; else `toBeRubyTruthy()`                                                    | `assert` is `test` truthiness (`assertions.rb:171`)                                                                                                                                                                                                                                                                                                                                                                                      | `truthy` → `truthy` (`toBe(true)`: as `assertPredicate`)                                                                                          |
+| `assertNil`          |   107 |   407 | built-in            | `toBeNull()` where the port produces `null`; `toBeUndefined()` where it produces `undefined`                                                                        | Ruby has one `nil`. Map it onto the one JS value the port returns. A value that can be both is a port with two nils: converge the source or file it, do not hide it in the assertion. (Probe: `toBeNull` fails on `undefined`, as it should)                                                                                                                                                                                             | `nil` → `nil` (both)                                                                                                                              |
+| `assertNotNil`       |    18 |    58 | built-in            | `.not.toBeNull()` where the domain is `null \| T`; `toBeDefined()` where it is `undefined \| T`                                                                     | as above. `.not.toBeNull()` passes on `undefined` (probe), so it is only right where `undefined` cannot occur                                                                                                                                                                                                                                                                                                                            | `notNil` → `notNil` (both)                                                                                                                        |
+| `assertMatch`        |    42 |   514 | built-in            | `expect(s).toMatch(m)`                                                                                                                                              | A string `m` is a literal in both (the helper escapes it, `assertions.ts:977`; probe: `toMatch(".")` on `"ab"` fails). The helper returns the `MatchData`; a call site that uses the result reads `m.exec(s)` itself                                                                                                                                                                                                                     | `match` → `match`                                                                                                                                 |
+| `assertNoMatch`      |    13 |    57 | built-in            | `.not.toMatch(m)`                                                                                                                                                   | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `noMatch` → `noMatch`                                                                                                                             |
+| `assertEmpty`        |    81 |   271 | built-in + existing | `toHaveLength(0)` where the receiver has `length`; `toBeEmpty()` for `Map`, `Set`, a Hash or an `isEmpty` object                                                    | The helper calls `isEmpty` (`assertions.ts:649`). An async `isEmpty` (a `Relation`) returns a Promise, and `toBeEmpty` on a Promise fails (probe): `await` the collection's answer first                                                                                                                                                                                                                                                 | `empty` → **`length` today for `toHaveLength(0)`**; `empty` after the tooling story. `toBeEmpty` → `empty`                                        |
+| `assertNotEmpty`     |    37 |    93 | built-in + existing | `.not.toHaveLength(0)` / `.not.toBeEmpty()`                                                                                                                         | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `notEmpty` → `notEmpty` (after the tooling story for `toHaveLength`)                                                                              |
+| `assertRespondTo`    |    49 |   171 | existing            | `toRespondTo("m")`                                                                                                                                                  | CONTRIBUTING's built-in is `expect(typeof o.m).toBe("function")`, which misses a name answered by `respond_to_missing?` and scores `equal`, never `respondTo`. `toRespondTo` is `rbObjRespondTo` and scores `respondTo`, so it is the one spelling that both answers right and keeps the kind                                                                                                                                            | `respondTo` → `respondTo`                                                                                                                         |
+| `assertNotRespondTo` |    31 |   104 | existing            | `.not.toRespondTo("m")`                                                                                                                                             | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `notRespondTo` → `notRespondTo`                                                                                                                   |
+| `assertIncludes`     |    24 |    79 | matcher             | `toInclude(o)` (Array, String, Set, Hash/`Map` key); `toContain` for a primitive in an Array or String                                                              | Minitest is `collection.include?(o)` (`assertions.rb:260`): `Array#include?` uses `==` and `Hash#include?` reads keys. `toInclude` is that (`rbEqual` per element, `hashHas` for a Hash). `toContainEqual` is structural and `toContain` on a `Map` ignores keys (probe)                                                                                                                                                                 | `includes` → `includes` once `vitest-matchers-to-include-scores-includes` lands                                                                   |
+| `assertNotIncludes`  |    11 |    19 | matcher             | `.not.toInclude(o)`                                                                                                                                                 | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `excludes` → `excludes` (same story)                                                                                                              |
+| `assertKindOf`       |    17 |    53 | built-in + matcher  | object of a class: `toBeInstanceOf(cls)`; primitive or module: `toBeKindOf(cls)`                                                                                    | The helper boxes (`Object(obj) instanceof cls`, `assertions.ts:953`); `toBeInstanceOf(String)` on `"x"` fails (probe), and a module in the ancestry is not an `instanceof`                                                                                                                                                                                                                                                               | `kindOf` → `kindOf`                                                                                                                               |
+| `assertNotKindOf`    |     1 |     5 | built-in + matcher  | `.not.toBeInstanceOf(cls)` / `.not.toBeKindOf(cls)`                                                                                                                 | as above; Minitest's `refute_kind_of` (`:721`)                                                                                                                                                                                                                                                                                                                                                                                           | no mapped kind either side: unchanged                                                                                                             |
+| `assertInstanceOf`   |     8 |    20 | existing            | `toBeExactInstanceOf(cls)`                                                                                                                                          | `instance_of?` is the exact class (`assertions.rb:271`); `toBeInstanceOf` admits subclasses                                                                                                                                                                                                                                                                                                                                              | `instanceOf` → `instanceOf`                                                                                                                       |
+| `assertSame`         |    20 |    41 | built-in            | `toBe(exp)`                                                                                                                                                         | `equal?` is identity; `Object.is` is identity for objects. Strings are primitives in trails (CLAUDE.md § "Ruby Strings are JS string primitives"), so two equal Ruby Strings that are different objects are one JS value: ratified                                                                                                                                                                                                       | `same` → `equal`, folded together by `HISTOGRAM_FOLD`                                                                                             |
+| `assertNotSame`      |     4 |     6 | built-in            | `.not.toBe(exp)`                                                                                                                                                    | as above                                                                                                                                                                                                                                                                                                                                                                                                                                 | `notSame` → `notEqual`, folded                                                                                                                    |
+| `assertInDelta`      |     8 |    12 | existing            | `toBeWithinDelta(exp, delta)`                                                                                                                                       | `toBeCloseTo`'s digit count cannot say "within 0.001"                                                                                                                                                                                                                                                                                                                                                                                    | `inDelta` → `inDelta`                                                                                                                             |
+| `assertOperator`     |     2 |     3 | built-in            | `toBeGreaterThan` / `toBeLessThan` / `…OrEqual`                                                                                                                     | All three sites compare numbers. A Comparable non-number (`Time`, `Duration`) would need `expect(a.compareTo(b))…`; none exists today                                                                                                                                                                                                                                                                                                    | `operator` → `operator`                                                                                                                           |
+| `diff`, `message`    |   n/a |   n/a | delete              | none in test code; in Rails bodies, § "Open decision"                                                                                                               | machinery; test code never calls them                                                                                                                                                                                                                                                                                                                                                                                                    | n/a                                                                                                                                               |
 
-Bucket counts over the 22 test-facing helpers: **built-in 10**
-(`assertNil`, `assertNotNil`, `assertMatch`, `assertNoMatch`,
-`assertIncludes`, `assertNotIncludes`, `assertNotKindOf`, `assertSame`,
-`assertNotSame`, `assertOperator`), **built-in by default with an existing
-matcher fallback 8** (`assertEqual`, `assertNotEqual`, `assertPredicate`,
-`assertNotPredicate`, `assert`, `assertEmpty`, `assertNotEmpty`,
-`assertKindOf`), **existing matcher always 4** (`assertRespondTo`,
-`assertNotRespondTo`, `assertInstanceOf`, `assertInDelta`), **new matcher 0**.
-Every helper is then deleted from the activesupport surface; none is deleted
-from the codebase, because the Minitest port keeps them for ported Rails code.
+Every one of the 22 helpers is then deleted from activesupport
+(`activesupport-index-drops-minitest-assertion-exports`).
+
+### Matchers
+
+The bar for a vitest-matchers matcher: a Minitest assertion that Rails' tests
+use often, whose Ruby meaning a built-in matcher gets wrong for values trails
+actually produces, and which no existing matcher already serves. Each one
+carries a `TRAILS_MAP` entry (`scripts/test-compare/assertion-kinds.ts`) in the
+same PR so the assertion-kind gate scores it as the Rails kind.
+
+**Already there, keep using:** `toEqualRuby` (`assert_equal`, `:220`),
+`toBeRubyTruthy` / `toBeRubyFalsy` (`assert` / `assert_predicate`, `:171`,
+`:394`), `toBeWithinDelta` (`assert_in_delta`, `:241`), `toBeEmpty`
+(`assert_empty`, `:188`), `toBeExactInstanceOf` (`assert_instance_of`,
+`:271`), `toRespondTo` (`assert_respond_to`, `:453`).
+
+**Proposed (draft stories):**
+
+| matcher                                           | Minitest assertion it serves          | vendored source                                                  | Rails test uses | built-in gets wrong                                                                                                                                                                                                                                                                                           | story                                        |
+| ------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------- | --------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| `toBeKindOf(cls)` (new)                           | `assert_kind_of` / `refute_kind_of`   | `vendor/minitest/v5.27.0/lib/minitest/assertions.rb:282`, `:721` |             464 | `toBeInstanceOf(String)` fails on `"x"` (no boxing), and cannot answer a module in the ancestry (`assert_kind_of Comparable, t`), which `isModuleIncluded` can                                                                                                                                                | `vitest-matcher-to-be-kind-of`               |
+| `toInclude(o)` / `toHaveKey(k)` (exist, unscored) | `assert_includes` / `refute_includes` | `assertions.rb:260`, `:700`                                      |             700 | `toContainEqual` is structural, not `rbEqual` (a record element); `toContain` on a `Map` ignores keys; `toHaveProperty` walks the prototype. `toInclude` is already Ruby `include?` (`packages/vitest-matchers/src/index.ts`, `includes()`), but `TRAILS_MAP` has no entry, so a port using it scores no kind | `vitest-matchers-to-include-scores-includes` |
+
+**Considered and not proposed:**
+
+- `toBeNil` — ruled out by the repo owner (2026-10-22); `nil` maps to the JS
+  value the port produces (`toBeNull` / `toBeUndefined`).
+- `toSatisfyPredicate("isFoo")` for `assert_predicate o, :foo?` and
+  `toSatisfyOperator(">", b)` for `assert_operator` (`:394`, `:315`; 130 Rails
+  uses) — each dispatches a method by name, which CLAUDE.md § "A dispatch by
+  name is spelled directly" forbids where the name is a literal, as it is at
+  every site. `expect(o.isFoo()).toBe(true)` / `toBeRubyTruthy()` and
+  `toBeGreaterThan` (or `expect(a.compareTo(b)).toBeGreaterThan(0)` for a
+  Comparable non-number) spell it directly.
+- `toBeWithinEpsilon` (`assert_in_epsilon`, `:253`) — 1 Rails use.
+- `toThrowSymbol` (`assert_throws`, `:500`) — 1 Rails use.
+- A custom-message matcher — Minitest's trailing `msg` is Vitest's
+  `expect(value, msg)`, built in.
 
 ### The assertion-kind gate
 
@@ -255,41 +269,20 @@ those kinds are not value-bearing. It absorbs 0127's
 "assert_instance_of"`, re-scored with `as:`), so no receipt changes. A sweep
 that finds a receipt now wrong for the new spelling fixes it in the same PR.
 
-Moving the Minitest helpers to a new package does not change what the
-extractor records: `isAssertionCallee` matches by name, not import path.
-
-### `@blazetrails/minitest`
-
-A new workspace package mirroring `vendor/minitest/v5.27.0/lib`. It depends on
-`@blazetrails/ruby-compat` only; activesupport depends on it. Because it sits
-below activesupport, it also gives the gem ports activesupport cannot import
-(`i18n`, `date`, `ruby-compat`) a Minitest to call, which RFC 0158's
-`assert-nil-helper-home-below-activesupport-for-gem-ports` asks for.
-
-Its `vendor/sources.ts` entry flips `compareApi` to `true` (`compareTests`
-stays `false`: Minitest's own suite is not ported). Members lose their
-`@noRailsEquivalent PERMANENT` receipts as `parity:api` starts crediting them.
-A new package needs the registrations in the memory note
-"New package needs ci yml and guard fixture" and, for each subpath another
-package imports, "New package subpath needs four registrations".
-
 ### Order of work
 
-1. `minitest-package-ports-assertions-rb` — the package, its enrollment, and
-   `Minitest::Assertions` moved in.
-2. `minitest-package-ports-runner-classes` and `minitest-package-ports-mock`
-   (parallel, non-overlapping files).
-3. `ported-rails-assertion-modules-import-minitest` — the eleven Rails-mirroring
-   files and activesupport's Rails half import from the new package.
-4. `assertion-kinds-reads-literal-matcher-arguments` and
-   `vitest-matchers-readme` (independent of 1–3; may land first).
-5. The 24 `expect-sweep-*` stories, each depending on step 4's tooling story.
-   Each is a whole-file sweep over a measured bin of at most 300 call sites
-   (about 600 LOC), smallest blast radius first: `expect-sweep-gem-packages`,
-   then activejob, trailties, activemodel, activesupport, actionview,
-   activerecord, actionpack.
-6. `activesupport-index-drops-minitest-assertion-exports` — depends on every
-   sweep and on step 3.
+1. Tooling, independent and first: `assertion-kinds-reads-literal-matcher-arguments`,
+   `vitest-matcher-to-be-kind-of`, `vitest-matchers-to-include-scores-includes`,
+   then `vitest-matchers-readme` (which documents the final set).
+2. The 24 `expect-sweep-*` stories, each depending on the three tooling
+   stories. Each is a whole-file sweep over a measured bin of at most 300 call
+   sites (about 600 LOC), smallest blast radius first:
+   `expect-sweep-gem-packages`, then activejob, trailties, activemodel,
+   activesupport, actionview, activerecord, actionpack.
+3. Dean settles § "Open decision"; then
+   `activesupport-index-drops-minitest-assertion-exports` rewrites the Rails
+   bodies to the chosen shape and deletes the helpers. It depends on every
+   sweep.
 
 ### What a sweep must not do
 
@@ -311,91 +304,139 @@ package imports, "New package subpath needs four registrations".
   `assertEmpty` / `assertIncludes` (is the collection async, a `Map`, a
   Hash?), `assertKindOf` (primitive?).
 
+## Open decision — assertions inside ported Rails bodies (for Dean)
+
+Rails' testing modules call Minitest assertions in their own bodies. Without a
+Minitest port, and with the activesupport helpers deleted, these bodies need a
+spelling. Sites (trails file:line, measured 2026-10-23 on `704e2fb347`):
+
+| trails file                                                                                                                                                                                 | Rails source                                                                        | Minitest calls in the Ruby body                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `activesupport/src/testing/assertions.ts:310-551` (`assertNot`, `assertRaises`, `assertDifference`, `assertNoDifference`, `assertChanges`, `assertNoChanges`, `_assertNothingRaisedOrWarn`) | `activesupport/lib/active_support/testing/assertions.rb`                            | `assert` 5, `assert_equal` 2, `refute_equal` 1, `assert_nil` 1, `assert_match` 1, `message` 27, `diff` 3, `mu_pp` 1 |
+| `activesupport/src/testing/method-call-assertions.ts:102,201`                                                                                                                               | `method_call_assertions.rb`                                                         | `assert_equal` 2, `assert_mock` 1                                                                                   |
+| `activesupport/src/testing/error-reporter-assertions.ts:99,112,123`                                                                                                                         | `error_reporter_assertions.rb`                                                      | `assert` 2, `assert_equal` 3, `assert_predicate` 2                                                                  |
+| `activesupport/src/testing/deprecation.ts:29,32,48`                                                                                                                                         | `testing/deprecation.rb`                                                            | `assert`, `assert_equal`                                                                                            |
+| `activemodel/src/lint.ts` (18 sites, `:8-76`)                                                                                                                                               | `active_model/lint.rb`                                                              | `assert_respond_to`, `assert`, `assert_equal`, `assert_kind_of`                                                     |
+| `activerecord/src/testing/query-assertions.ts:59,64,95,100`                                                                                                                                 | `active_record/testing/query_assertions.rb`                                         | `assert`                                                                                                            |
+| `actionpack/src/action-dispatch/testing/assertions/routing.ts:198,205,231,234`                                                                                                              | `action_dispatch/testing/assertions/routing.rb`                                     | `assert_equal`, `message`                                                                                           |
+| `actionview/src/testing/dom-assertions.ts:20`, `selector-assertions.ts:42,110-113`, `selector-assertions/html-selector.ts:75`                                                               | rails-dom-testing `dom_assertions.rb`, `selector_assertions.rb`, `html_selector.rb` | `assert`, `assert_equal`, `assert_operator`, `diff`                                                                 |
+| `activerecord/src/encryption/test-helpers.ts:365-441`                                                                                                                                       | `activerecord/test/cases/encryption/helper.rb`                                      | `assert_equal`, `assert_not_equal`                                                                                  |
+
+The five `activesupport/src/cache/behaviors/*-behavior.ts` files mirror Rails
+_test_ support (`activesupport/test/cache/behaviors/`) and are swept like any
+test file.
+
+**Options:**
+
+- **A (recommended). `expect` in the body, credited by the call gate.** Each
+  Minitest call becomes the `expect` its CONTRIBUTING.md row names, carrying
+  Rails' message as `expect(value, msg)` — e.g. `assert_difference`'s
+  `assert_equal(before + diff, after, error)` is
+  `expect(after, error).toEqual(before + diff)`. `message { … }` /
+  `diff` / `mu_pp` compositions are inlined as the string they build, read off
+  the vendored source. `parity:api:calls` gains one mapping table
+  (`assert_equal` ↔ `toEqual`/`toEqualRuby`, `assert` ↔
+  `toBeTruthy`/`toBeRubyTruthy`, …, reusing `assertion-kinds.ts`'s
+  `RAILS_MAP`/`TRAILS_MAP`) so the call is credited, not reported missing; no
+  per-site receipt. Failures raise Vitest's `AssertionError`, not
+  `Minitest::Assertion` — trails tests asserting
+  `assert_raises(Minitest::Assertion)` around `assert_difference` change to
+  the `Assertion` class the runner exposes (Open question 2).
+- **B. `expect` in the body, receipted per call.** As A, with no gate change:
+  each omitted call carries `@missingRailsCall assert_equal — PERMANENT`
+  against a new CLAUDE.md section ratifying "Minitest is not ported". About
+  90 receipts across the files above.
+- **C. Keep module-private copies.** Each Rails file keeps a non-exported
+  `assertEqual` etc. so the call gates credit the call by name. Rejected in
+  this proposal: it is the Minitest port again, split across nine files.
+
+Whichever is chosen is written into CLAUDE.md as a ratified section in the
+deletion story, and `assert-predicate-takes-the-predicate-name-and-builds-minitests-message`
+(rehomed from 0158) is reworded to the chosen shape: its requirement —
+`assertNoErrorReported`'s failure message reads Minitest's
+`"Expected [] to be empty?"` (`assertions.rb:394-399`) — stands either way.
+
 ## Non-goals
 
+- **Porting Minitest**, as a package or otherwise. Rejected by the repo owner
+  (2026-10-23). `vendor/minitest/v5.27.0/` is reference, with `compareApi` and
+  `compareTests` both `false` in `vendor/sources.ts`.
 - **The `ActiveSupport::Testing::Assertions` half.** Ported Rails API at its
-  Rails names, matched by `parity:api` against `assertions.rb`; it stays where
-  it is (memory "Assert helper home is as testing assertions not minitest").
-- **`stub` / `Mock` call sites in tests.** `Object#stub` and `Minitest::Mock`
-  are Minitest API with no CONTRIBUTING.md row and no Vitest twin of the same
-  meaning; they move to `@blazetrails/minitest` and their 11 + 3 test files
-  keep calling them.
-- **Porting Minitest's own test suite** (`compareTests: false`).
-- **A `toBeNil` matcher.** Ruled out by the repo owner (2026-10-22): `nil` maps
-  to the JS value the port produces.
-- **Changing CONTRIBUTING.md's table.** Ratified. The gate is taught to agree
-  with it, not the other way round.
+  Rails names; it stays (memory "Assert helper home is as testing assertions
+  not minitest").
+- **The runner classes and `Mock` / `stub`.** See § Design, "Out of scope".
+- **A `toBeNil` matcher.** Ruled out by the repo owner (2026-10-22).
+- **Changing CONTRIBUTING.md's table.** Ratified. The sweeps follow it; the
+  two matcher stories add rows to it, they do not change existing ones.
 
 ## Alternatives considered
 
-- **Keep the Minitest half in activesupport, unexported from the index.** It
-  would let tests stop importing it without a new package, but leaves the
-  members as uncredited `@noRailsEquivalent` surface in a file that mirrors a
-  different `.rb`, and still gives `i18n` / `date` no Minitest to call.
-  Rejected by the repo owner (2026-10-22).
-- **Delete the Minitest helpers (RFC 0158's
-  `delete-minitest-builtin-assert-helpers`).** Breaks the ported Rails bodies
-  that call them; see § Design.
-- **A `toBeNil` matcher** for `assert_nil`'s `null`/`undefined` pair. Ruled
-  out; see Non-goals.
-- **Per-helper sweeps across the tree.** Each file would be touched up to a
-  dozen times and every PR would cross packages. Whole-file, per-package bins
-  touch each file once.
+- **Port Minitest as its own package (`@blazetrails/minitest`), enrolled in
+  `parity:api`, with ported Rails bodies importing from it.** This RFC's first
+  draft (2026-10-22). **Rejected by the repo owner 2026-10-23**: Minitest is
+  vendored for reference, not ported. Its stories
+  (`minitest-package-ports-assertions-rb`, `-mock`, `-runner-classes`,
+  `ported-rails-assertion-modules-import-minitest`) are closed `FALSIFIED`.
+- **Keep the Minitest half in activesupport, unexported from the index.**
+  Leaves uncredited `@noRailsEquivalent` surface in a file that mirrors a
+  different `.rb`, and a second assertion library beside Vitest's. Rejected
+  (2026-10-22).
+- **"No new matcher".** The first draft held the seven existing matchers
+  sufficient. Re-measured against Rails' usage (464 `assert_kind_of`, 700
+  `assert_includes`), two gaps remain; see § "Matchers".
+- **Per-helper sweeps across the tree.** Each file touched up to a dozen times.
+  Whole-file, per-package bins touch each file once.
 
 ## Rollout
 
-1. Package — `minitest-package-ports-assertions-rb`,
-   `minitest-package-ports-runner-classes`, `minitest-package-ports-mock`,
-   `ported-rails-assertion-modules-import-minitest`
-2. Tooling — `assertion-kinds-reads-literal-matcher-arguments`,
+1. Tooling — `assertion-kinds-reads-literal-matcher-arguments`,
+   `vitest-matcher-to-be-kind-of`, `vitest-matchers-to-include-scores-includes`,
    `vitest-matchers-readme`
-3. Sweeps — `expect-sweep-gem-packages`, `expect-sweep-activejob`,
+2. Sweeps — `expect-sweep-gem-packages`, `expect-sweep-activejob`,
    `expect-sweep-trailties`, `expect-sweep-activemodel-1`, `-2`,
    `expect-sweep-activesupport-1`, `-2`, `expect-sweep-actionview-1`, `-2`,
    `expect-sweep-activerecord-1` … `-5`, `expect-sweep-actionpack-1` … `-10`
-4. Close-out — `activesupport-index-drops-minitest-assertion-exports`
+3. Close-out (after § "Open decision") —
+   `activesupport-index-drops-minitest-assertion-exports`,
+   `assert-predicate-takes-the-predicate-name-and-builds-minitests-message`
 
 ## Verification
 
 - The import-resolved count in § Measurements reaches **0 call sites in 0 test
   files** (from 5,938 in 392).
-- `rg -l '@noRailsEquivalent PERMANENT' packages/activesupport/src/testing/assertions.ts`
-  is empty (35 tags today).
-- `packages/activesupport/src/testing/assertions.ts` exports only the eleven
-  Rails members listed in § Design.
-- `pnpm parity:api` credits the Minitest members to `packages/minitest`.
-  activesupport is not in `parity:api:extra:gate` (it has no row in
-  `scripts/api-compare/extra-surface-mark.json` and is in neither
-  `TAGGED_ONLY_PACKAGES` nor `ROWLESS_PACKAGES`), so there is no mark to
-  tighten. Its measured `pnpm parity:api:extra --package activesupport` total
-  is **764** today (185 novel, 579 moved); `testing/assertions.ts` contributes
-  24 of them (10 novel, 14 moved, every one a Minitest name: `assertEqual`,
-  `assertEmpty`, `diff`, `message`, `filterBacktrace`, …) and
-  `testing/method-call-assertions.ts` 1. When the Minitest half has moved, the
-  total reads **739**, and those names are scored in `packages/minitest`
-  against `vendor/minitest` instead. The 35 `PERMANENT`-receipted members are
-  subtracted today, so they do not move the activesupport figure either way.
+- `packages/activesupport/src/testing/assertions.ts` exports only the Rails
+  members listed in § Design, and none of the 22 Minitest helper names or
+  `diff` / `message` is exported from `@blazetrails/activesupport`.
+- No `packages/minitest` exists, and `vendor/sources.ts` has `compareApi:
+false` for minitest.
+- `pnpm parity:api:calls` / `parity:api:calls:args` green after the close-out,
+  by whichever mechanism § "Open decision" picks.
 - `pnpm parity:test:assertions` green at every step, with the `kind` counter
   never rising.
 
 ## Open questions
 
-1. **Package layout of `minitest.rb` versus `lib/minitest/*.rb`.** The vendored
-   `libPath` is `lib/minitest`, which leaves `lib/minitest.rb` (the runner
-   classes) outside it. Recommendation: widen `libPath` to `lib` so
-   `minitest.rb` maps to `packages/minitest/src/minitest.ts`, the way the other
-   gem ports map their top-level file. Decided in
-   `minitest-package-ports-assertions-rb`.
-2. **RFC 0158's overlapping drafts.** `minitest-asserts-to-expect-activesupport-callers`,
-   `-trailties-callers`, `-actionpack-actionview-callers` and
-   `delete-minitest-builtin-assert-helpers` are superseded by this RFC's sweeps
-   and close-out; `assert-nil-sweep-activerecord-a-to-h`, `-associations-and-adapters`,
-   `-i-to-z`, `-to-be-undefined-ports` and `shared-assert-kind-of-helper` move
-   test code toward the helpers this RFC removes; 0127's
+1. **Assertions inside ported Rails bodies** — § "Open decision". Owner:
+   Dean. Blocks only the close-out.
+2. **The Minitest runner classes in activesupport** (`Assertion`, `Skip`,
+   `UnexpectedError`, `BacktraceFilter`, `Test`, `Minitest`, `Mock`, `stub`).
+   They are a partial Minitest port that `ActiveSupport::TestCase` (`< Minitest::Test`)
+   and `autorun.ts` stand on. Under the 2026-10-23 ruling they are presumably
+   to go too, onto Vitest's runner; that is a larger change than this RFC and
+   needs its own RFC if Dean wants it. Not filed.
+3. **RFC 0158's nil/kind-of drafts** (`assert-nil-sweep-activerecord-*`,
+   `assert-nil-to-be-undefined-ports`, `shared-assert-kind-of-helper`) move
+   test code toward helpers this RFC deletes. Recommendation: close as
+   superseded when this RFC is activated. 0127's
    `assert-empty-table-disagrees-with-kind-gate` is absorbed by
-   `assertion-kinds-reads-literal-matcher-arguments`. Recommendation: the repo
-   owner closes them as superseded when this RFC is activated.
+   `assertion-kinds-reads-literal-matcher-arguments`.
 
 ## Changelog
 
-- 2026-10-22: initial RFC
+- 2026-10-23 — Rewritten after the owner ruled Minitest is vendored for
+  reference, not ported. Dropped the `@blazetrails/minitest` package and its
+  cluster (four stories closed `FALSIFIED`); dropped the "reverses RFC 0098"
+  framing; added § "Matchers" (two matcher stories), § "Open decision", and
+  the deletion close-out; RFC 0158's overlapping sweeps and deletion closed as
+  superseded, `assert-predicate-takes-…` rehomed here.
+- 2026-10-22 — First draft (package port).
