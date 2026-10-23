@@ -5,7 +5,8 @@ updated: 2026-10-05
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - kernel-integer-loses-digits-past-2-53-and-rejects-binary-strings
 deps-rfc: []
 est-loc: 40
 priority: null
