@@ -40,6 +40,7 @@ is one. A `Temporal.ZonedDateTime` and a `Temporal.Instant`, the seats of `Time`
 - [ ] `Marshal.dump` of a `Temporal.PlainDateTime` is byte-equal to MRI's dump of the `DateTime` it
       seats, through `DateTime`'s inherited `marshal_dump`, and `Marshal.load` of it answers an equal
       `DateTime`.
-- [ ] Decide and port the `Time` seats: `w_object`'s `_dump` arm (`marshal.c:916-949`) and
-      `TYPE_USERDEF` on load (`marshal.c:2185-2215`), with `Time#_dump` / `Time._load`
-      (`time.c:5345-5720`), or file that half as its own story with the MRI bytes.
+- [ ] The `Time` seats (`Temporal.ZonedDateTime` / `Temporal.Instant`) are out of scope here:
+      their `_dump` / `TYPE_USERDEF` arms (`marshal.c:916-949`, `:2185-2215`) and
+      `Time#_dump` / `Time._load` (`time.c:5345-5720`) are `marshal-userdef-and-time-dump`.
+      Once that lands, a test confirms a Temporal `Time` seat dumps through it.

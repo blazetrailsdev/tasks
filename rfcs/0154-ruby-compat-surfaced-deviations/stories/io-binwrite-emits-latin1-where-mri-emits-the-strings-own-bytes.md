@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: null
 pr: null
 claim: null
@@ -18,31 +18,38 @@ closed-reason: null
 
 ## Context
 
-`IO#write` on a binmode stream now sends a JS string's own bytes, its UTF-8,
-matching MRI (`vendor/ruby/io.c:1904` `do_writeconv`; binmode only suppresses the
-transcode). `IO.binwrite` (`packages/ruby-compat/src/io.ts`, `rb_io_s_binwrite`,
-`vendor/ruby/io.c:12396`) still sends one byte per character through
-`binaryBytes`, so a UTF-8 string handed to it lands as latin-1:
+`IO.binwrite` (`packages/ruby-compat/src/io.ts:777-778`, `rb_io_s_binwrite`,
+`vendor/ruby/v3.3.11/io.c:12396`) still sends a JS string one byte per
+character through `binaryBytes` (`io.ts:123`), so a UTF-8 string lands as
+latin-1:
 
     ruby -e 'File.binwrite("/tmp/x", "なまえ"); p File.binread("/tmp/x").bytesize'
     # => 9   (trails: 3)
 
-It is left byte-per-char because it is `IO.binread`'s twin: `binread` answers an
-ASCII-8BIT String as one JS char per byte, and every current caller hands
-`binwrite` such a string back:
+MRI's binary mode only suppresses transcoding: a String is written as its own
+bytes. CLAUDE.md § "A String has no encoding tag either" (ruled 2026-10-21)
+settles the two seats: a JS string is UTF-8 text, and an ASCII-8BIT String is a
+`Uint8Array` end to end. `IO.binread` already answers a `Uint8Array`
+(`io.ts:763-765`), so the latin-1 read of a string argument is the only thing
+left of the old one-character-per-byte convention here.
 
-- `activerecord/src/migration.ts:1094` — `File.binwrite(source.filename, ...)`,
-  Rails `migration.rb:1106` `File.binwrite(migration.filename, source)`, where
-  `source` came from `File.binread` (`migration.ts:1071`). Converging only the
-  write half would double-encode a UTF-8 migration.
-- `activesupport/src/encrypted-file.ts:103` — base64 ASCII, unaffected.
-- `ruby-compat/src/io.trails.test.ts` "binread answers one character per byte,
-  and binwrite writes them back".
+The one round trip that leans on it is `Migration.copy`
+(`vendor/rails/v8.0.2/activerecord/lib/active_record/migration.rb:1074,1106`,
+`source = File.binread(migration.filename)` ... `File.binwrite(migration.filename, source)`):
+`packages/activerecord/src/migration.ts:1138` bridges the bytes into a latin-1
+string with `Buffer.from(File.binread(...)).toString("latin1")` for the `sub!`
+scan, and `:1179` writes that string back through `binwrite`. CLAUDE.md allows
+the one-character-per-byte read for a regex scan over binary data ("the bytes
+are read one character per byte for the scan and written back as bytes"), so
+the write-back must convert to bytes itself.
 
 ## Acceptance criteria
 
-- `IO.binwrite` writes a string's own bytes (UTF-8), and accepts a `Uint8Array`
-  for an ASCII-8BIT String's bytes, as `IO#write` does.
-- Every `binread` → `binwrite` round trip (migration copy above) passes bytes,
-  not a byte-per-char string, so a UTF-8 migration copies byte-for-byte.
-- The two io.trails.test.ts binwrite tests keep their names.
+- [ ] `IO.binwrite` writes a JS string's own UTF-8 bytes and a `Uint8Array`
+      as is, as `IO#write` does; `binaryBytes` is no longer applied to a
+      string argument there.
+- [ ] `Migration.copy` writes `source` back as bytes (the latin-1 scan string
+      turned back into a `Uint8Array`), so a migration containing UTF-8
+      copies byte for byte; a test copies one holding non-ASCII text.
+- [ ] `io.trails.test.ts`'s binread/binwrite tests keep their names and assert
+      the UTF-8 byte count for a string argument.

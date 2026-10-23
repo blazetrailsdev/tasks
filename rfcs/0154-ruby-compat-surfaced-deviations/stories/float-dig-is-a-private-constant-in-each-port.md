@@ -1,5 +1,5 @@
 ---
-title: "ruby-compat: Float::DIG is redeclared as a private constant at each site that names it"
+title: "floatRoundOverflow reads FLOAT_DIG instead of a 15 literal"
 status: draft
 updated: 2026-10-02
 rfc: "0154-ruby-compat-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: ["ruby-compat", "activemodel", "activerecord"]
 deps: []
 deps-rfc: []
-est-loc: 40
+est-loc: 5
 priority: null
 pr: null
 claim: null
@@ -18,17 +18,17 @@ closed-reason: null
 
 ## Context
 
-Surfaced in review of trails#8387. Rails names `::Float::DIG` at two sites, and trails spells it as a private `const FLOAT_DIG = 15` in each:
+MRI defines `Float::DIG` once: `rb_define_const(rb_cFloat, "DIG", INT2FIX(DBL_DIG))`
+(`vendor/ruby/v3.3.11/numeric.c:6283`). The two Rails readers are converged:
+ruby-compat exports `FLOAT_DIG` (`packages/ruby-compat/src/index.ts:280`), and
+`packages/activemodel/src/type/decimal.ts:69-70` (`decimal.rb:91-92`) and
+`packages/activerecord/src/validations/numericality.ts:11` (`numericality.rb:7`)
+import it.
 
-- `packages/activemodel/src/type/decimal.ts:19`, for `vendor/rails/v8.0.2/activemodel/lib/active_model/type/decimal.rb:91-92` (`precision.to_i > ::Float::DIG + 1`).
-- `packages/activerecord/src/validations/numericality.ts:3`, for `vendor/rails/v8.0.2/activerecord/lib/active_record/validations/numericality.rb:7` (`[column_precision_for(record, attribute) || Float::DIG, Float::DIG].min`).
-
-MRI defines it once: `rb_define_const(rb_cFloat, "DIG", INT2FIX(DBL_DIG))` at `vendor/ruby/v3.3.11/numeric.c:6283`. `packages/ruby-compat/src/numeric.ts`'s `floatRoundOverflow` also spells `15 + 2` for `DBL_DIG + 2` (`numeric.c:2546`).
-
-The converged shape is one `Float.DIG` seat in `@blazetrails/ruby-compat` (with its `@noRailsEquivalent PERMANENT` receipt and MRI citation), read at all three sites as `Float.DIG`.
+One literal is left: `floatRoundOverflow` in
+`packages/ruby-compat/src/numeric.ts:82` spells `DBL_DIG + 2`
+(`numeric.c:2546`) as `const floatDig = 15 + 2`.
 
 ## Acceptance criteria
 
-- [ ] `@blazetrails/ruby-compat` exports the constant once; neither `decimal.ts` nor `numericality.ts` declares its own.
-- [ ] `floatRoundOverflow` reads it instead of the literal.
-- [ ] `pnpm parity:api:extra:gate` stays green (the ruby-compat `total` mark moves only by a receipted member).
+- [ ] `floatRoundOverflow` reads `FLOAT_DIG + 2`, with no `15` literal.

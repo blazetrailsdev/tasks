@@ -1,5 +1,5 @@
 ---
-title: "ruby-compat: rbAnyToS names the class by rb_class_name; rbInspect of a plain instance is rb_obj_inspect"
+title: "Serialized and NullPool inspect tests assert the Rails constant path"
 status: draft
 updated: 2026-10-10
 rfc: "0154-ruby-compat-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 120
+est-loc: 40
 priority: null
 pr: null
 claim: null
@@ -18,32 +18,36 @@ closed-reason: null
 
 ## Context
 
-Surfaced by trails#8748, which ported `Type::Serialized#inspect`
-(`vendor/rails/v8.0.2/activerecord/lib/active_record/type/serialized.rb:33`,
-`define_method(:inspect, Kernel.instance_method(:inspect))`) as `rbObjInspect(this)`.
-`new Serialized(new StringType(), coder).inspect()` prints
+Both ruby-compat halves this story (and the duplicate
+`rb-inspect-renders-a-plain-object-through-to-string-and-bare-class-name`,
+closed into it) asked for have landed:
 
-    #<Serialized:0x00007f0000000008 @delegate_dc_obj=[object Object], @subtype=[object Object], @coder={…}>
+- `rbAnyToS` names the class through `rbModToS(obj.constructor)`
+  (`packages/ruby-compat/src/object.ts:1448-1454`, trails#9019), which answers
+  the constant path a class is seated under (`rb_any_to_s`,
+  `vendor/ruby/v3.3.11/object.c:693-701`).
+- `inspectValue` falls through to `rbObjInspect` for a plain object with no
+  `inspect` (`object.ts:1571`, trails#9026; `rb_inspect` → `rb_obj_inspect`,
+  `object.c:704,783-795`).
 
-where Ruby prints `#<ActiveRecord::Type::Serialized:0x… @delegate_dc_obj=#<ActiveModel::Type::String:0x… @true=…>, …>`.
-Two ruby-compat causes, both in `packages/ruby-compat/src/object.ts`:
+What is left is the two tests that were written to tolerate the old answers,
+and the seats they need:
 
-1. `rbAnyToS` (`:1095-1098`) names the class with `obj.constructor.name`. MRI's `rb_any_to_s`
-   (`vendor/ruby/v3.3.11/object.c:693-701`) uses `rb_class_name(CLASS_OF(obj))`, the full constant path.
-   `Serialized` IS registered (`registerConstant("ActiveRecord::Type::Serialized", Serialized)`,
-   `packages/activerecord/src/type/serialized.ts:88`) and `rbModName` (`object.ts:363`) answers the path;
-   `rbAnyToS` just does not ask it. `rbObjInspect` (`:1066`) inherits the short name through `rbAnyToS`.
-2. `rbInspect` / `inspectValue` (`:1187-1211`) falls through to `String(value)` for a class instance with
-   no `inspect`, giving `[object Object]`. MRI's `rb_inspect` (`object.c:704`) sends `inspect`, and an
-   object that defines none gets `Kernel#inspect` = `rb_obj_inspect` (`object.c:783-795`). `rbInspect`'s
-   own JSDoc records the gap ("a caller that does pass a class instance gets its `to_s`").
-
-`packages/activerecord/src/type/serialized.trails.test.ts` ("Serialized#inspect") currently accepts either
-class spelling because of (1).
+- `packages/activerecord/src/type/serialized.trails.test.ts:112` matches
+  `/^#<(ActiveRecord::Type::)?Serialized:0x…/`, accepting the bare name.
+  Ruby prints `#<ActiveRecord::Type::Serialized:0x…` for
+  `Type::Serialized#inspect` (`vendor/rails/v8.0.2/activerecord/lib/active_record/type/serialized.rb:33`).
+- `packages/activerecord/src/connection-pool.trails.test.ts:1118` asserts
+  `rbObjInspect(pool)` against `/^#<NullPool:0x…/`, where Ruby prints
+  `#<ActiveRecord::ConnectionAdapters::NullPool:0x…`, and reads `rbObjInspect`
+  where the test means `rbInspect`.
 
 ## Acceptance criteria
 
-- [ ] `rbAnyToS` names the class as `rb_class_name` does (the registered constant path via `rbModName`, the bare name only for an unregistered/anonymous class).
-- [ ] `rbInspect` of a class instance with no `inspect` answers `rbObjInspect(value)`, recursion-guarded as `rb_obj_inspect` is.
-- [ ] The `Serialized#inspect` trails test asserts `#<ActiveRecord::Type::Serialized:0x…` only, and no `[object Object]` in the output.
-- [ ] Callers whose output changes (grep `rbAnyToS(`, `rbObjInspect(`) are checked against the Rails string they mirror.
+- [ ] `Type::Serialized` and `ConnectionAdapters::NullPool` answer their Rails
+      constant path from `rbModToS` (seated through `rbModConstSet` on their
+      namespace, CLAUDE.md § "Call-time constant resolution", if they are not).
+- [ ] The Serialized test asserts `#<ActiveRecord::Type::Serialized:0x` only,
+      with no `[object Object]` in the output.
+- [ ] The NullPool test asserts `rbInspect(pool)` matches
+      `/^#<ActiveRecord::ConnectionAdapters::NullPool:0x/`.

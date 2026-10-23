@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 150
+est-loc: 30
 priority: null
 pr: null
 claim: null
@@ -23,14 +23,13 @@ closed-reason: null
 `activesupport/lib/active_support/xml_mini.rb` calls `::Base64.encode64` in the
 `"binary"` formatter (`:61`) and `::Base64.decode64` in the `"base64Binary"`
 parser and in `_parse_binary` / `_parse_file` (`:84,172,181`).
-ruby-compat's `Base64` (`packages/ruby-compat/src/base64.ts`) now has
-`decode64` and `strictEncode64`, but no `encode64`
-(`vendor/ruby/v3.3.11/lib/base64.rb:219`, `[bin].pack("m")`, 60-column lines).
+ruby-compat's `Base64` (`packages/ruby-compat/src/base64.ts`) now has both:
+`encode64` (`base64.ts:17-21`, `vendor/ruby/v3.3.11/lib/base64.rb:219`) and
+`decode64` (`base64.ts:45-54`, `base64.rb:241`). The local helpers are
+`xml-mini.ts:63-73`.
 
 ## Acceptance criteria
 
-- ruby-compat `Base64.encode64` exists with its MRI citation and receipt, over
-  `pack`'s `m` directive.
 - `xml-mini.ts` calls `Base64.encode64` and `Base64.decode64` at the sites Rails
   does, and the two local helpers and their `Buffer` use are gone.
 - `pnpm parity:api:calls` shows no new row for `xml-mini.ts`.

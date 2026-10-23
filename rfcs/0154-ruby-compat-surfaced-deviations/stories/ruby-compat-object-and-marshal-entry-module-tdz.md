@@ -40,3 +40,11 @@ this module is entered first").
       `object.js` and `marshal.js` included.
 - [ ] A test or CI step imports each built ruby-compat module as an entry, so a new module-eval
       read across the `object` / `include` cycle fails there.
+- [ ] The entry modules named by the two stories closed into this one also load:
+      `dist/struct.js` (`ruby-compat-object-struct-marshal-entry-module-tdz-on-classpaths`:
+      `object.ts` imports `registeredConstant` from `variable.ts`, whose top-level
+      `registerConstant` calls read `classpaths` from `object.ts`), and `dist/file.js`,
+      `dist/io.js` and `dist/psych/visitors/yaml-tree.js`
+      (`ruby-compat-dist-file-io-classpaths-tdz`). The fix is a sanctioned shape from
+      CLAUDE.md § "Call-time constant resolution" (each defining module seats its own
+      constant, as `rb_define_class` does), not a guard or a reordered import.

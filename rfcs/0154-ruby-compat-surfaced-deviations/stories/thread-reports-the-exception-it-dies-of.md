@@ -29,3 +29,9 @@ So a reaper thread whose `pool.reap` raises now dies silently. Before #8686 the 
 - [ ] `Thread` carries `reportOnException` (class default true, per-thread override), and a thread that dies of an exception writes Ruby's "terminated with exception" report through ruby-compat's `warn`.
 - [ ] A reaper thread killed by a `reap` error is reported, covered in `packages/activerecord/src/reaper.trails.test.ts`.
 - [ ] Existing `Thread` callers whose blocks reject on purpose (tests) set `reportOnException = false` where Ruby's would.
+- [ ] `Thread.report_on_exception` is a class-level reader and writer (methods, not a
+      data field; `vendor/ruby/v3.3.11/thread.c:3078-3124`), and the ported
+      `test_non_bang_disconnect_and_clear_reloadable_connections_throw_exception_if_threads_dont_return_their_conns`
+      in `packages/activerecord/src/connection-pool.test.ts` sets it to false and
+      restores it in its `finally`, as `connection_pool_test.rb:669,679-680` do.
+      Absorbed from `thread-report-on-exception-is-not-ported` (closed as a duplicate).

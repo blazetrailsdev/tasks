@@ -48,3 +48,8 @@ failure: `require 'uri/rfc2396_parser'` loads on its own
       Ruby resolves the constant at call time), not by a guard at the read.
 - [ ] A sweep importing every `packages/ruby-compat/dist/**/*.js` as entry
       module reports no failure.
+- [ ] `dist/uri/common.js` and `dist/uri/generic.js` also load as entry modules
+      (absorbed from `uri-rfc3986-parser-entry-module-tdz`: `uri/rfc3986-parser.ts`
+      imports `URI` / `InvalidURIError` from `uri/common.ts`, which holds
+      `RFC3986_PARSER = RFC3986_Parser.new` and imports the parser back), and
+      `packages/ruby-compat/src/uri*.test.ts` stay green.

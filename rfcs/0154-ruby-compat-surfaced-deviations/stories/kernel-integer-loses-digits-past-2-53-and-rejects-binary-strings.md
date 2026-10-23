@@ -42,3 +42,13 @@ in with `BigInt(new TextDecoder().decode(data))`.
 - `packages/msgpack/src/factory.test.ts`'s "registering an ext type for
   Integer" tests pass `kernelInteger` as the unpacker, as the gem spec passes
   `method(:Integer)`.
+- `kernelInteger`'s return type widens to `number | bigint` (it narrows
+  `rbIntParseCstr`'s `number | bigint` with `Number(...)` today,
+  `packages/ruby-compat/src/kernel-integer.ts:34-45`), and its callers are
+  audited for the widened type.
+- The six `Number(0x123456789abcdefn)` assertions in
+  `packages/ruby-compat/src/psych/scalar-scanner.trails.test.ts` assert the
+  exact `0x123456789abcdefn`, as `test_scan_int_commas_and_underscores`
+  (`vendor/ruby/v3.3.11/test/psych/test_scalar_scanner.rb:139-142`) does for
+  `Psych::ScalarScanner#parse_int` (`scalar_scanner.rb:109-111`). Absorbed
+  from `kernel-integer-rounds-a-bignum-to-a-double` (closed as a duplicate).

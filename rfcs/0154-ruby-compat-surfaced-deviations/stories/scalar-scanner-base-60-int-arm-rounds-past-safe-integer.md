@@ -28,7 +28,7 @@ The port, `packages/ruby-compat/src/psych/scalar-scanner.ts` (`tokenize`,
 trails#8511), computes `Number(rbStrToI(n)) * 60 ** Math.abs(e - 2)` in doubles.
 `rbStrToI` (`packages/ruby-compat/src/string/convert.ts:80`) already answers
 `number | bigint`; the arm narrows it. Same class of gap as
-`kernel-integer-rounds-a-bignum-to-a-double`, which covers `parse_int`
+`kernel-integer-loses-digits-past-2-53-and-rejects-binary-strings`, which covers `parse_int`
 (`scalar_scanner.rb:109-111`) and should land first so both arms answer a
 Bignum the same way.
 
@@ -36,6 +36,6 @@ Bignum the same way.
 
 - [ ] The base-60 integer arm answers the exact value for a sum outside the
       safe-integer range, in the representation
-      `kernel-integer-rounds-a-bignum-to-a-double` settles for `parseInt`.
+      `kernel-integer-loses-digits-past-2-53-and-rejects-binary-strings` settles for `parseInt`.
 - [ ] `scalar-scanner.trails.test.ts` covers `"9007199254740993:00:00"` against
       MRI's answer.

@@ -67,3 +67,51 @@ to name the direct call, drop the `sendInternal` change); or a duplicate of an 0
 - [ ] Every story rewritten to a call-site convergence names the trails `file:line` of the call
       site and the direct spelling.
 - [ ] Markdown-only PRs in the tasks repo; no DB-owned field hand-edited.
+
+## Verdicts (0154 refine, 2026-10-22)
+
+The nine of the twelve that live in RFC 0154 are triaged below, plus
+`rb-f-send-no-method-error-names-ts-spelling`, which turns on the same
+machinery. The other three
+(`thor-arguments-parse-name-rule-is-an-inline-regex`,
+`thor-encoded-instruction-sends-snake-case-name-verbatim`,
+`rb-f-send-dispatches-operators-for-codegen`) live in other RFCs and are left
+to their own refines.
+
+Name guessing:
+
+- `send-camelizer-does-not-collapse-underscore-runs` — closed `FALSIFIED`: the
+  forbidden widening, and no Rails-derived name reaches it.
+- `rb-f-send-predicate-name-misses-is-spelled-methods` — rewritten as a
+  call-site convergence: `numericality.ts:89-91` dispatches `NUMBER_CHECKS`
+  through a module-private registry, and `sendInternal`'s `isOdd` / `isEven`
+  arm (`object.ts:1224-1229`) is deleted.
+- `rb-f-send-finds-a-predicate-under-either-spelling` — closed as a duplicate
+  of the previous one.
+
+Call-site convergence (the motivating name is a literal):
+
+- `rbfsend-does-not-dispatch-string-operators-by-ruby-name` — rewritten:
+  `inject-into-file.ts:69-70` calls ruby-compat's `String#+` port directly.
+- `ruby-compat-generic-include-for-thor-enum-check` — rewritten: one direct
+  `include?` port called at `arguments.ts:213-218`; no `sendInternal` change.
+
+MRI-fidelity fixes to `Kernel#send` / `respond_to?` (kept, each now depends on
+0194 `delete-send-name-guessing-arms`, which decides which core-receiver arms
+survive as the computed-name floor):
+
+- `rbfsend-does-not-dispatch-kernel-dup-or-clone` — `Kernel#dup` /
+  `Kernel#clone` answer for every object (`rb_obj_dup`,
+  `vendor/ruby/v3.3.11/object.c:591`). Kept with no 0194 dependency: this is
+  method lookup reaching `Kernel`, not name guessing.
+- `rb-f-send-dispatches-the-names-respond-to-binds-for-core-receivers` and
+  `core-method-tables-answer-respond-to-and-send-alike` — `respond_to?` and
+  `send` must agree (`basic_obj_respond_to`, `vm_method.c:2864`;
+  `rb_f_send`, `vm_eval.c:1330`).
+- `rb-f-send-string-receiver-reads-js-length-not-rb-str-length` — its
+  motivating site (`thor/shell/wrapped-printer.ts:13`) already calls `strlen`
+  directly; what remains is a computed-name String send reaching the JS
+  `length` before `rb_str_length` (`string.c:2211`).
+- `rb-f-send-no-method-error-names-ts-spelling` — the message names the TS
+  spelling where MRI names the Ruby method (`rb_builtin_class_name`,
+  `error.c:1216`).

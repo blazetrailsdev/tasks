@@ -1,5 +1,5 @@
 ---
-title: "rbFSend does not dispatch a String operator sent by its Ruby name (`+`)"
+title: 'InjectIntoFile#invoke! spells String#+ directly, not rbFSend(…, "plus")'
 status: draft
 updated: 2026-10-05
 rfc: "0154-ruby-compat-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 80
+est-loc: 20
 priority: null
 pr: null
 claim: null
@@ -18,14 +18,31 @@ closed-reason: null
 
 ## Context
 
-`rbFSend` (`packages/ruby-compat/src/object.ts`, `sendInternal`) dispatches a String receiver's methods through `STRING_METHOD_TABLE` by their TS spelling, so `rbFSend("a", "plus", "b")` answers `"ab"`. The Ruby name does not dispatch: `rbFSend("a", "+", "b")` raises `NoMethodError: undefined method '+' for an instance of String`. `sendInternal` maps only `==`, `!=` and the four ordering operators (`RELOPS`) from their Ruby names.
+Triaged under `triage-send-name-guessing-stories-against-the-direct-call-rule`:
+this story asked `sendInternal` to dispatch a String receiver's operators by
+their Ruby names (`rbFSend("a", "+", "b")`). CLAUDE.md § "A dispatch by name is
+spelled directly" (ruled 2026-10-20) answers the motivating call site
+differently: its name is a literal, so it is spelled directly, and
+`sendInternal` learns nothing.
 
-MRI sends an operator by its own name (`rb_f_send`, `vendor/ruby/v3.3.11/vm_eval.c:1330`; `String#+` is `rb_str_plus`, `vendor/ruby/v3.3.11/string.c:2313`).
-
-Surfaced by trails#8551. `Thor::Actions::InjectIntoFile#invoke!` (`vendor/thor/v1.3.2/lib/thor/actions/inject_into_file.rb:53-57`) is `'\0' + replacement` / `replacement + '\0'`. The port (`packages/trailties/src/thor/actions/inject-into-file.ts`, `invokeBang`) spells both `rbFSend(..., "plus", ...)`. With a nil replacement before a flag, the error reads `undefined method 'plus' for an instance of NilClass` where Ruby's reads `undefined method '+' for nil`.
+`Thor::Actions::InjectIntoFile#invoke!`
+(`vendor/thor/v1.3.2/lib/thor/actions/inject_into_file.rb:53-57`) is
+`'\0' + replacement` / `replacement + '\0'`, two direct `String#+` calls
+(`rb_str_plus`, `vendor/ruby/v3.3.11/string.c:2313`). The port
+(`packages/trailties/src/thor/actions/inject-into-file.ts:69-70`) spells them
+`rbFSend("\\0", "plus", …)` / `rbFSend(…, "plus", "\\0")`, so a nil
+replacement raises `undefined method 'plus' for … NilClass` where Ruby raises
+`undefined method '+' for nil`.
 
 ## Acceptance criteria
 
-- [ ] `rbFSend(str, "+", other)` dispatches `String#+` (and the other operator names `STRING_METHOD_TABLE` carries under a TS spelling, e.g. `*`, `%`, `<<`, `=~`, `[]`), with a ruby-compat test per operator.
-- [ ] `rbFSend(null, "+", "x")` keeps raising `NoMethodError` naming `+`.
-- [ ] `InjectIntoFile#invokeBang` sends `"+"`, and its trails twin test (`inject-into-file.trails.test.ts`, "raises for a nil replacement") asserts the message.
+- [ ] `invokeBang` calls ruby-compat's `String#+` port directly
+      (`rbStrPlus`, `packages/ruby-compat/src/string/method-table.ts:281`, or
+      its string overload) for both operands, with no `rbFSend`.
+- [ ] A nil replacement raises what Ruby raises for each operand order:
+      `NoMethodError` "undefined method '+' for nil" for `replacement + '\0'`,
+      and `TypeError` "no implicit conversion of nil into String" for
+      `'\0' + replacement`, checked against `ruby` 3.3.11 and pinned in
+      `inject-into-file.trails.test.ts`.
+- [ ] `pnpm parity:api:sends` drops for `inject-into-file.ts`;
+      `parity:api:calls` stays green.

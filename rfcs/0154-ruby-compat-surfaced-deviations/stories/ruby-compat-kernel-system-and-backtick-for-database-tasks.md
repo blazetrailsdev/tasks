@@ -1,5 +1,5 @@
 ---
-title: "ruby-compat: Kernel#system and Kernel#backtick so database tasks shell out as Rails does"
+title: "ruby-compat ports Kernel#` for SQLiteDatabaseTasks#structure_load"
 status: draft
 updated: 2026-10-02
 rfc: "0154-ruby-compat-surfaced-deviations"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 250
+est-loc: 120
 priority: null
 pr: null
 claim: null
@@ -18,31 +18,36 @@ closed-reason: null
 
 ## Context
 
-Rails' database tasks shell out through two Kernel methods:
+Rails' database tasks shell out through two Kernel methods. The first has
+landed: ruby-compat ports `Kernel#system` as `rbFSystem`, and all three
+`run_cmd` ports call it (`packages/activerecord/src/tasks/sqlite-database-tasks.ts:112-115`,
+`mysql-database-tasks.ts:128-131`, `postgresql-database-tasks.ts:157-160`;
+`sqlite_database_tasks.rb:77-79`, `mysql_database_tasks.rb:110`,
+`postgresql_database_tasks.rb:120`).
 
-- `Kernel.system(cmd, *args, out: out)` in `run_cmd`
-  (`vendor/rails/v8.0.2/activerecord/lib/active_record/tasks/sqlite_database_tasks.rb:77-79`,
-  `mysql_database_tasks.rb:110`, `postgresql_database_tasks.rb:120`).
-- A backtick command in `SQLiteDatabaseTasks#structure_load` (`sqlite_database_tasks.rb:60-63`):
+The backtick is still missing. `SQLiteDatabaseTasks#structure_load`
+(`vendor/rails/v8.0.2/activerecord/lib/active_record/tasks/sqlite_database_tasks.rb:60-63`) is
 
 ```ruby
 flags = extra_flags.join(" ") if extra_flags
 `sqlite3 #{flags} #{db_config.database} < "#{filename}"`
 ```
 
-ruby-compat exports neither. The ports call `getChildProcessAsync().spawnSync(...)` and read `.status`
-(`packages/activerecord/src/tasks/sqlite-database-tasks.ts` `runCmd`, and the same in the MySQL and
-PostgreSQL task files). With no shell, `structureLoad` splits the joined `flags` on whitespace itself and
-redirects stdin through the adapter's `in:` option (trails#8419).
+ruby-compat has no ``Kernel#` `` (`rb_f_backquote`, `vendor/ruby/v3.3.11/io.c:10585`),
+so the port (`sqlite-database-tasks.ts:95-98`) splits `flags` on whitespace
+itself and calls `getChildProcessAsync().spawnSync("sqlite3", args, { in: filename })`
+with no shell.
 
-The story `ruby-compat-kernel-system-and-open3-capture2e` is marked done against trails#8305, but
-`packages/ruby-compat/src` has no `system` or `capture2e` export as of 2026-10-02; check what that story
-shipped before starting.
+`thor-terminal-dynamic-width-needs-backtick-with-inherited-stdin` needs the
+same port (with the caller's stdin inherited, as Ruby's backtick does) and
+depends on this story.
 
 ## Acceptance criteria
 
-- [ ] ruby-compat ports `Kernel#system` (`vendor/ruby/v3.3.11/process.c` `rb_f_system`: true / false / nil)
-      and ``Kernel#` `` (`rb_f_backquote`), async, each with its `@noRailsEquivalent PERMANENT` receipt.
-- [ ] The three `run_cmd` ports read `fail run_cmd_error(...) unless Kernel.system(...)`.
-- [ ] `SQLiteDatabaseTasks#structureLoad` runs Rails' command string through the backtick port, with no
-      flag splitting of its own.
+- [ ] ruby-compat ports ``Kernel#` `` (`rb_f_backquote`, `io.c:10585`), async,
+      running the command through `/bin/sh` with stdin inherited and stdout
+      captured, setting `$?`, with its `@noRailsEquivalent PERMANENT` receipt
+      and a `.trails.test.ts`.
+- [ ] `SQLiteDatabaseTasks#structureLoad` builds Rails' command string and
+      runs it through the port, with no flag splitting or `spawnSync` of its own.
+- [ ] The SQLite structure-load tests stay green.
