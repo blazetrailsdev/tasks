@@ -1,14 +1,14 @@
 ---
-title: "Sweep the remaining test-file seats and ruby-compat's own"
+title: "Sweep activemodel's and activesupport's namespace seats to plain assignments"
 status: draft
 updated: 2026-10-22
-rfc: "0000-namespace-seats-are-plain-javascript"
+rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
 deps:
   - derive-class-path-from-registered-namespaces
 deps-rfc: []
-est-loc: 300
+est-loc: 240
 priority: null
 pr: null
 claim: null
@@ -19,24 +19,25 @@ closed-reason: null
 
 ## Context
 
-111 seats sit in `*.test.ts` files across activerecord (24), activejob
-(18), actionview (11), actioncable (7), activemodel (7), trailties (7) and
-ruby-compat (30), plus 8 non-test ruby-compat seats. They seat test models and
-ad-hoc classes, most onto a test-case object or `Object`
-(`rbModConstSet(Object, "ViewLoadPathsTest", ViewLoadPathsTest)`,
-`rbModConstSet(InheritanceAttributeTest, "Company", this)`).
+activemodel holds 34 seats (7 in tests) onto `ActiveModel`,
+`ActiveModel::Serializers` and `Validations`; activesupport holds 16 onto
+`ActiveSupport`, `Concurrent` and `TopLevel`.
+`activemodel/src/attribute.ts` is, with arel, one of the two places already
+converged to the helper, so it is a seat-for-seat reversal.
 
-A test seat exists so a model's qualified name renders in an assertion, which
-is exactly what the derivation answers — but a test-case object is not a
-registered namespace, so decide per file whether to register the test case as
-a namespace or assert the unqualified name Rails' own test would print. Read
-the Rails test before changing an assertion; CLAUDE.md forbids renaming or
-reworking a test name.
+Three seats keep the helper, all activesupport:
+`ClassMethods` (`active_support/concern.rb:212`), a `concerning` topic
+(`core_ext/module/concerning.rb:133`), and a stubbed constant
+(`testing/constant_stubbing.rb:33-45`). activemodel keeps one: the `ATTR_`
+name constant (`active_model/attribute_methods.rb:584`,
+`const_set(const_name, attr_name) unless const_defined?(const_name)`).
 
-ruby-compat's own 30 test seats exercise `rbModConstSet` itself and mostly
-stay: they are the helper's unit tests, and the helper survives for the Rails
-`const_set` sites. Keep the coverage, drop only what tested the seat protocol
-this RFC removes, and move the path assertions onto the derivation.
+`TopLevel` is Ruby's top-level `Object`
+(`packages/activesupport/src/namespaces.ts`); a seat onto it keeps whatever
+`registerConstant` behaviour the top-level table needs — read
+`rbModConstSet`'s `mod === Object` arm (`include.ts:117-120`) before
+rewriting one, since the derivation must answer a bare `"Trails"` there, not
+`"Object::Trails"`.
 
 Mechanical sweep. Each seat `rbModConstSet(Owner, "Name", Klass);` becomes
 `Owner.Name = Klass;`, and the `rbModConstSet` import is dropped from the

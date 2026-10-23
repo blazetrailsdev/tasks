@@ -1,14 +1,14 @@
 ---
-title: "Sweep actioncable's namespace seats to plain assignments"
+title: "Sweep the remaining test-file seats and ruby-compat's own"
 status: draft
 updated: 2026-10-22
-rfc: "0000-namespace-seats-are-plain-javascript"
+rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
 deps:
   - derive-class-path-from-registered-namespaces
 deps-rfc: []
-est-loc: 190
+est-loc: 300
 priority: null
 pr: null
 claim: null
@@ -19,15 +19,24 @@ closed-reason: null
 
 ## Context
 
-actioncable holds 40 seats onto `ActionCable`, `ActionCable::Channel`,
-`ActionCable::Connection`, `ActionCable::Server`,
-`ActionCable::SubscriptionAdapter` and `ActionCable::Helpers`
-(`packages/actioncable/src/namespaces.ts`); 7 are in `*.test.ts` files.
+111 seats sit in `*.test.ts` files across activerecord (24), activejob
+(18), actionview (11), actioncable (7), activemodel (7), trailties (7) and
+ruby-compat (30), plus 8 non-test ruby-compat seats. They seat test models and
+ad-hoc classes, most onto a test-case object or `Object`
+(`rbModConstSet(Object, "ViewLoadPathsTest", ViewLoadPathsTest)`,
+`rbModConstSet(InheritanceAttributeTest, "Company", this)`).
 
-The package is mid-port (`Channel::Broadcasting`, `Server::Connections` and
-`Server::Base` landed in trails#9258), so rebase onto current `main` before
-enumerating and expect new seats to have appeared. No actioncable seat mirrors
-a Rails `const_set`.
+A test seat exists so a model's qualified name renders in an assertion, which
+is exactly what the derivation answers — but a test-case object is not a
+registered namespace, so decide per file whether to register the test case as
+a namespace or assert the unqualified name Rails' own test would print. Read
+the Rails test before changing an assertion; CLAUDE.md forbids renaming or
+reworking a test name.
+
+ruby-compat's own 30 test seats exercise `rbModConstSet` itself and mostly
+stay: they are the helper's unit tests, and the helper survives for the Rails
+`const_set` sites. Keep the coverage, drop only what tested the seat protocol
+this RFC removes, and move the path assertions onto the derivation.
 
 Mechanical sweep. Each seat `rbModConstSet(Owner, "Name", Klass);` becomes
 `Owner.Name = Klass;`, and the `rbModConstSet` import is dropped from the

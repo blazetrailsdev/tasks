@@ -1,14 +1,14 @@
 ---
-title: "Sweep arel's 144 namespace seats to plain assignments"
+title: "Sweep activerecord's core and relation namespace seats to plain assignments"
 status: draft
 updated: 2026-10-22
-rfc: "0000-namespace-seats-are-plain-javascript"
+rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
 deps:
   - derive-class-path-from-registered-namespaces
 deps-rfc: []
-est-loc: 480
+est-loc: 520
 priority: null
 pr: null
 claim: null
@@ -19,22 +19,20 @@ closed-reason: null
 
 ## Context
 
-arel holds 144 seats onto the `Arel` / `Arel::Attributes` /
-`Arel::Collectors` / `Arel::Nodes` / `Arel::Visitors` namespace objects
-(`packages/arel/src/namespaces.ts`), 114 of them onto `Nodes`. It is the
-package the helper spelling was settled on (trails PR 8370), so it is the
-reference sweep and the one that proves the derivation: its recorded paths and
-its derived paths must agree exactly.
+activerecord holds 242 seats, the largest population, so it splits in two.
+This story takes the `ActiveRecord.X`, `Scoping.X`, `Locking.X`,
+`AttributeMethods.X`, `TypeCaster.X`, `Tasks.X` and `Railties.X` seats
+and everything under `packages/activerecord/src/relation/`.
 
-`Nodes`, `Collectors` and `Visitors` are typed `typeof <barrel>Module`
-and are the public `Arel.Nodes` / `Arel.Collectors` / `Arel.Visitors`
-exports, so each assignment checks against a declared property.
+Four seats keep the helper, each mirroring a Rails `const_set`:
+`GeneratedAttributeMethods` (`attribute_methods.rb:43`),
+`GeneratedAssociationMethods` (`core.rb:340`), and the mangled delegate and
+`GeneratedRelationMethods` in delegation (`relation/delegation.rb:40,65`).
+Check each against RFC 0058's generated-module work before rewriting it.
 
-The generated node classes in `nodes/binary.ts`, `nodes/unary.ts` and
-`nodes/function.ts` keep the helper: Rails builds them with
-`const_set name, Class.new(Binary)` (`activerecord/lib/arel/nodes/binary.rb:122`,
-`unary.rb:41`, `function.rb:42`), a computed name with no declaration to
-assign at.
+24 of the package's seats are in `*.test.ts` files, seating canonical and
+ad-hoc models; those belong to the ruby-compat and test-file sweep story, not
+here.
 
 Mechanical sweep. Each seat `rbModConstSet(Owner, "Name", Klass);` becomes
 `Owner.Name = Klass;`, and the `rbModConstSet` import is dropped from the

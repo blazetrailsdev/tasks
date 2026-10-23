@@ -2,7 +2,7 @@
 title: "The seat rule is a plain assignment: amend CLAUDE.md and the three package guides"
 status: draft
 updated: 2026-10-22
-rfc: "0000-namespace-seats-are-plain-javascript"
+rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
 deps: []

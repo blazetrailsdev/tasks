@@ -1,14 +1,14 @@
 ---
-title: "Sweep activerecord's core and relation namespace seats to plain assignments"
+title: "Sweep activerecord's adapter, association, encryption and CPK namespace seats"
 status: draft
 updated: 2026-10-22
-rfc: "0000-namespace-seats-are-plain-javascript"
+rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
 deps:
   - derive-class-path-from-registered-namespaces
 deps-rfc: []
-est-loc: 520
+est-loc: 500
 priority: null
 pr: null
 claim: null
@@ -19,20 +19,24 @@ closed-reason: null
 
 ## Context
 
-activerecord holds 242 seats, the largest population, so it splits in two.
-This story takes the `ActiveRecord.X`, `Scoping.X`, `Locking.X`,
-`AttributeMethods.X`, `TypeCaster.X`, `Tasks.X` and `Railties.X` seats
-and everything under `packages/activerecord/src/relation/`.
+The second half of activerecord: the `ConnectionAdapters.X`,
+`Associations.X`, `Encryption.X`, `Sharded.X` and `Cpk.X` seats, plus
+the per-adapter files under `packages/activerecord/src/connection-adapters/`.
+`Cpk` alone carries 29.
 
-Four seats keep the helper, each mirroring a Rails `const_set`:
-`GeneratedAttributeMethods` (`attribute_methods.rb:43`),
-`GeneratedAssociationMethods` (`core.rb:340`), and the mangled delegate and
-`GeneratedRelationMethods` in delegation (`relation/delegation.rb:40,65`).
-Check each against RFC 0058's generated-module work before rewriting it.
+Two seats keep the helper: the HABTM join model
+(`associations.rb:1877`, `const_set join_model.name, join_model`) and the
+association extension module
+(`associations/builder/collection_association.rb:26`). Both bind a computed
+name, and the HABTM one is also touched by the
+`habtm-macro-body-lives-in-the-builder` story — coordinate rather than
+racing it.
 
-24 of the package's seats are in `*.test.ts` files, seating canonical and
-ad-hoc models; those belong to the ruby-compat and test-file sweep story, not
-here.
+An adapter's seats are read by `ConnectionAdapters.resolve`'s
+`rbModConstGet(Object, className)` path
+(`packages/activerecord/src/connection-adapters.ts`), which reads the
+top-level table `registerConstant` fills and is unaffected; do not convert
+that read.
 
 Mechanical sweep. Each seat `rbModConstSet(Owner, "Name", Klass);` becomes
 `Owner.Name = Klass;`, and the `rbModConstSet` import is dropped from the

@@ -1,14 +1,14 @@
 ---
-title: "Sweep activerecord's adapter, association, encryption and CPK namespace seats"
+title: "Sweep activejob's namespace seats to plain assignments"
 status: draft
 updated: 2026-10-22
-rfc: "0000-namespace-seats-are-plain-javascript"
+rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
 deps:
   - derive-class-path-from-registered-namespaces
 deps-rfc: []
-est-loc: 500
+est-loc: 260
 priority: null
 pr: null
 claim: null
@@ -19,24 +19,19 @@ closed-reason: null
 
 ## Context
 
-The second half of activerecord: the `ConnectionAdapters.X`,
-`Associations.X`, `Encryption.X`, `Sharded.X` and `Cpk.X` seats, plus
-the per-adapter files under `packages/activerecord/src/connection-adapters/`.
-`Cpk` alone carries 29.
+activejob holds 60 seats onto `ActiveJob`, `ActiveJob::QueueAdapters`
+and `ActiveJob::Serializers` (`packages/activejob/src/namespaces.ts`); 18
+are in `*.test.ts` files and belong to the test-file sweep story.
 
-Two seats keep the helper: the HABTM join model
-(`associations.rb:1877`, `const_set join_model.name, join_model`) and the
-association extension module
-(`associations/builder/collection_association.rb:26`). Both bind a computed
-name, and the HABTM one is also touched by the
-`habtm-macro-body-lives-in-the-builder` story — coordinate rather than
-racing it.
+activejob is the package with the most `rbModName` readers (12), so it is the
+sweep most likely to surface a derivation disagreement — a job's queue name and
+its serialized class string both read the path. Check
+`queue-adapters.ts`'s `rbModConstGet(QueueAdapters, camelize(name) + ADAPTER)`
+still resolves every adapter after the rewrite; that read is a faithful port of
+Rails' own lookup and stays.
 
-An adapter's seats are read by `ConnectionAdapters.resolve`'s
-`rbModConstGet(Object, className)` path
-(`packages/activerecord/src/connection-adapters.ts`), which reads the
-top-level table `registerConstant` fills and is unaffected; do not convert
-that read.
+No activejob seat mirrors a Rails `const_set`, so the package should end with
+none.
 
 Mechanical sweep. Each seat `rbModConstSet(Owner, "Name", Klass);` becomes
 `Owner.Name = Klass;`, and the `rbModConstSet` import is dropped from the

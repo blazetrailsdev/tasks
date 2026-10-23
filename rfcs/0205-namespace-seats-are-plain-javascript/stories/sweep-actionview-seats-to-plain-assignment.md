@@ -1,14 +1,14 @@
 ---
-title: "Sweep activemodel's and activesupport's namespace seats to plain assignments"
+title: "Sweep actionview's namespace seats to plain assignments"
 status: draft
 updated: 2026-10-22
-rfc: "0000-namespace-seats-are-plain-javascript"
+rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
 deps:
   - derive-class-path-from-registered-namespaces
 deps-rfc: []
-est-loc: 240
+est-loc: 300
 priority: null
 pr: null
 claim: null
@@ -19,25 +19,13 @@ closed-reason: null
 
 ## Context
 
-activemodel holds 34 seats (7 in tests) onto `ActiveModel`,
-`ActiveModel::Serializers` and `Validations`; activesupport holds 16 onto
-`ActiveSupport`, `Concurrent` and `TopLevel`.
-`activemodel/src/attribute.ts` is, with arel, one of the two places already
-converged to the helper, so it is a seat-for-seat reversal.
+actionview holds 64 seats, 35 of them onto `ActionView::Helpers::Tags`,
+the rest onto `ActionView` and `Serializers`
+(`packages/actionview/src/namespaces.ts`). 11 are in `*.test.ts` files and
+belong to the test-file sweep story.
 
-Three seats keep the helper, all activesupport:
-`ClassMethods` (`active_support/concern.rb:212`), a `concerning` topic
-(`core_ext/module/concerning.rb:133`), and a stubbed constant
-(`testing/constant_stubbing.rb:33-45`). activemodel keeps one: the `ATTR_`
-name constant (`active_model/attribute_methods.rb:584`,
-`const_set(const_name, attr_name) unless const_defined?(const_name)`).
-
-`TopLevel` is Ruby's top-level `Object`
-(`packages/activesupport/src/namespaces.ts`); a seat onto it keeps whatever
-`registerConstant` behaviour the top-level table needs — read
-`rbModConstSet`'s `mod === Object` arm (`include.ts:117-120`) before
-rewriting one, since the derivation must answer a bare `"Trails"` there, not
-`"Object::Trails"`.
+One seat keeps the helper: `Types`
+(`actionview/lib/action_view/template.rb:189`, `const_set(:Types, implementation)`).
 
 Mechanical sweep. Each seat `rbModConstSet(Owner, "Name", Klass);` becomes
 `Owner.Name = Klass;`, and the `rbModConstSet` import is dropped from the

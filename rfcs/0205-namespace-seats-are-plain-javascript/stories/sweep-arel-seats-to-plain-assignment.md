@@ -1,14 +1,14 @@
 ---
-title: "Sweep msgpack, nokogiri, rack, bcrypt, marcel, globalid and trailties seats"
+title: "Sweep arel's 144 namespace seats to plain assignments"
 status: draft
 updated: 2026-10-22
-rfc: "0000-namespace-seats-are-plain-javascript"
+rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
 deps:
   - derive-class-path-from-registered-namespaces
 deps-rfc: []
-est-loc: 200
+est-loc: 480
 priority: null
 pr: null
 claim: null
@@ -19,23 +19,22 @@ closed-reason: null
 
 ## Context
 
-The tail: msgpack 19 (`MessagePack`), trailties 14 (7 in tests), nokogiri
-6 (`Nokogiri::XML`), bcrypt 8, rack 5, marcel 2, globalid 1. One PR.
+arel holds 144 seats onto the `Arel` / `Arel::Attributes` /
+`Arel::Collectors` / `Arel::Nodes` / `Arel::Visitors` namespace objects
+(`packages/arel/src/namespaces.ts`), 114 of them onto `Nodes`. It is the
+package the helper spelling was settled on (trails PR 8370), so it is the
+reference sweep and the one that proves the derivation: its recorded paths and
+its derived paths must agree exactly.
 
-trailties' Thor seats are owned by
-`thor-parser-classes-seat-their-ruby-names-on-the-thor-class` and
-`thor-command-and-core-ext-seats-pass-an-object-literal`, both of which
-predate the settled spelling and are written against
-`rbSetClassPathString`. Read them first; this sweep supersedes their seat
-spelling, and the retire story re-points them.
+`Nodes`, `Collectors` and `Visitors` are typed `typeof <barrel>Module`
+and are the public `Arel.Nodes` / `Arel.Collectors` / `Arel.Visitors`
+exports, so each assignment checks against a declared property.
 
-bcrypt's `BCrypt::Errors` is a named module seating its error classes
-(trails#8454) and is read by error-message assertions — check those paths
-derive identically.
-
-No seat in these packages mirrors a Rails `const_set` except
-`Object::APP_PATH` in trailties
-(`railties/lib/rails/app_loader.rb:57`), if that path is ported.
+The generated node classes in `nodes/binary.ts`, `nodes/unary.ts` and
+`nodes/function.ts` keep the helper: Rails builds them with
+`const_set name, Class.new(Binary)` (`activerecord/lib/arel/nodes/binary.rb:122`,
+`unary.rb:41`, `function.rb:42`), a computed name with no declaration to
+assign at.
 
 Mechanical sweep. Each seat `rbModConstSet(Owner, "Name", Klass);` becomes
 `Owner.Name = Klass;`, and the `rbModConstSet` import is dropped from the

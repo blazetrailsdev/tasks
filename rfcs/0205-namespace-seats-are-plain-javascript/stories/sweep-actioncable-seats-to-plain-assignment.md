@@ -1,14 +1,14 @@
 ---
-title: "Sweep actionpack's 98 namespace seats to plain assignments"
+title: "Sweep actioncable's namespace seats to plain assignments"
 status: draft
 updated: 2026-10-22
-rfc: "0000-namespace-seats-are-plain-javascript"
+rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
 deps:
   - derive-class-path-from-registered-namespaces
 deps-rfc: []
-est-loc: 400
+est-loc: 190
 priority: null
 pr: null
 claim: null
@@ -19,23 +19,15 @@ closed-reason: null
 
 ## Context
 
-actionpack holds 98 seats onto `AbstractController`, `ActionController`
-(57 of them), `ActionDispatch`, `ActionDispatch::Http`,
-`ActionDispatch::Routing` and `ActionDispatch::Session`
-(`packages/actionpack/src/namespaces.ts`).
+actioncable holds 40 seats onto `ActionCable`, `ActionCable::Channel`,
+`ActionCable::Connection`, `ActionCable::Server`,
+`ActionCable::SubscriptionAdapter` and `ActionCable::Helpers`
+(`packages/actioncable/src/namespaces.ts`); 7 are in `*.test.ts` files.
 
-One seat keeps the helper: `HelperMethods`
-(`actionpack/lib/abstract_controller/helpers.rb:232`,
-`klass.const_set(:HelperMethods, mod)`), read back by
-`rbModConstGet(klass, "HelperMethods")` in
-`abstract-controller/helpers.ts`.
-
-Several open 0141 stories touch the same error-class seats
-(`seat-remaining-qualified-error-classes`,
-`exception-constructors-drop-hand-set-name`,
-`action-dispatch-testing-autoload-block-seats-only-assertions`). Read them
-first: each is now satisfied by the derivation rather than by a new seat, and
-the retire story re-points them.
+The package is mid-port (`Channel::Broadcasting`, `Server::Connections` and
+`Server::Base` landed in trails#9258), so rebase onto current `main` before
+enumerating and expect new seats to have appeared. No actioncable seat mirrors
+a Rails `const_set`.
 
 Mechanical sweep. Each seat `rbModConstSet(Owner, "Name", Klass);` becomes
 `Owner.Name = Klass;`, and the `rbModConstSet` import is dropped from the

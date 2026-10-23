@@ -1,14 +1,14 @@
 ---
-title: "Sweep actionview's namespace seats to plain assignments"
+title: "Sweep msgpack, nokogiri, rack, bcrypt, marcel, globalid and trailties seats"
 status: draft
 updated: 2026-10-22
-rfc: "0000-namespace-seats-are-plain-javascript"
+rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
 deps:
   - derive-class-path-from-registered-namespaces
 deps-rfc: []
-est-loc: 300
+est-loc: 200
 priority: null
 pr: null
 claim: null
@@ -19,13 +19,23 @@ closed-reason: null
 
 ## Context
 
-actionview holds 64 seats, 35 of them onto `ActionView::Helpers::Tags`,
-the rest onto `ActionView` and `Serializers`
-(`packages/actionview/src/namespaces.ts`). 11 are in `*.test.ts` files and
-belong to the test-file sweep story.
+The tail: msgpack 19 (`MessagePack`), trailties 14 (7 in tests), nokogiri
+6 (`Nokogiri::XML`), bcrypt 8, rack 5, marcel 2, globalid 1. One PR.
 
-One seat keeps the helper: `Types`
-(`actionview/lib/action_view/template.rb:189`, `const_set(:Types, implementation)`).
+trailties' Thor seats are owned by
+`thor-parser-classes-seat-their-ruby-names-on-the-thor-class` and
+`thor-command-and-core-ext-seats-pass-an-object-literal`, both of which
+predate the settled spelling and are written against
+`rbSetClassPathString`. Read them first; this sweep supersedes their seat
+spelling, and the retire story re-points them.
+
+bcrypt's `BCrypt::Errors` is a named module seating its error classes
+(trails#8454) and is read by error-message assertions — check those paths
+derive identically.
+
+No seat in these packages mirrors a Rails `const_set` except
+`Object::APP_PATH` in trailties
+(`railties/lib/rails/app_loader.rb:57`), if that path is ported.
 
 Mechanical sweep. Each seat `rbModConstSet(Owner, "Name", Klass);` becomes
 `Owner.Name = Klass;`, and the `rbModConstSet` import is dropped from the
