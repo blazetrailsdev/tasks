@@ -33,6 +33,5 @@ but the packages live in a monorepo subdirectory, which pnpm/npm git specifiers 
 ## Acceptance criteria
 
 - `AppBase` declares `edge` and `main` (alias `--master`) class options and `railsPrerelease`.
-- `railsGemfileEntry` gains the two branch arms in Rails' order, and the
-  `@missingRailsCall edge? — CONVERGEABLE trails-new-edge-and-main-options` receipt on it is removed.
+- `railsGemfileEntry` gains the two branch arms in Rails' order. (`railsGemfileEntry`, `packages/trailties/src/generators/app-base.ts:179`, carries no receipt today; add none.)
 - `trails new --edge` / `--main` write the branch specifiers; a generator test asserts each.

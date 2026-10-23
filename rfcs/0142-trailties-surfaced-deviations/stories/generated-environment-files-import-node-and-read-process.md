@@ -38,6 +38,12 @@ The generated files go through the adapters the framework itself uses —
 `env`, `stdout` and `getFs()`/`getPath()` from `@blazetrails/ruby-compat` — so
 `trails new` output passes the rule trails holds its own packages to.
 
+Merged from `app-generator-environment-files-reach-for-node-globals` (closed as duplicate):
+trailmap#70 had to decline the caching-dev toggle and `logTags` / `TaggedLogging`, and rewrites
+`RAILS_LOG_LEVEL` through `env` from `@blazetrails/ruby-compat`. The converged template writes
+the framework's own seams: ruby-compat's `env`, an async fs check (the `Rails.root.join(...).exist?`
+analogue), and ruby-compat's stdout stream as the logger target.
+
 ## Acceptance criteria
 
 - [ ] The three generated environment files contain no `node:` import and no `process.` reference.

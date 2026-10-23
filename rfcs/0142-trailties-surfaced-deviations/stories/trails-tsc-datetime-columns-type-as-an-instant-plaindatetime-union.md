@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: 1
 pr: null
 claim: null
@@ -27,6 +27,8 @@ narrows before formatting or comparing. Which one Rails yields depends on
 application config decides it. For a given app it's one type, not a union.
 
 Found auditing the types of a freshly scaffolded app (`trails new blog` + `generate scaffold Post title:string body:text`) on `main` `53a6249ae6`, while writing the README for PR #8195.
+
+The union is hard-coded in `packages/activerecord-cli/src/type-virtualization/type-registry.ts:19` (`datetime` maps to `Instant | PlainDateTime`).
 
 ## Converged shape
 

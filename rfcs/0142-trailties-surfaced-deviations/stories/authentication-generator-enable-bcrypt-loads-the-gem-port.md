@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 80
+est-loc: 30
 priority: null
 pr: null
 claim: null
@@ -31,8 +31,20 @@ adds the `bcryptjs` npm client to `package.json` instead, and nothing in a gener
 `@blazetrails/bcrypt`. A generated app whose `User` calls `hasSecurePassword` therefore raises
 `LoadError` at class definition.
 
+## Progress
+
+trails#8431 landed the first two criteria: `enableBcrypt`
+(`packages/trailties/src/generators/rails/authentication/authentication-generator.ts:101-125`)
+adds `@blazetrails/bcrypt` to `package.json` and inserts `import "@blazetrails/bcrypt";`
+into the generated `config/application.ts`. What remains is that it still adds the
+`bcryptjs` npm client beside it (`:106-107`), which Rails' `enable_bcrypt` has no analogue
+for, and the test still asserts on `bcryptjs`.
+
 ## Acceptance criteria
 
-- [ ] `enableBcrypt` adds `@blazetrails/bcrypt` (the gem port) to the generated app's dependencies, as Rails adds `gem "bcrypt"`.
-- [ ] The generated app loads the gem port before its models are defined (the app's analogue of `Bundler.require(*Rails.groups)` in `config/application.rb`), so a generated `User` with `hasSecurePassword` does not raise.
-- [ ] `authentication-generator.test.ts`'s "adds bcryptjs to the application's dependencies and installs it" is converged onto the gem port's name, with the Rails test name it mirrors kept verbatim.
+- [ ] `enableBcrypt` adds only `@blazetrails/bcrypt` (the gem port, which depends on its own
+      client), as Rails adds only `gem "bcrypt"` (`authentication_generator.rb:41-48`).
+- [ ] `authentication-generator.test.ts:182` ("adds bcryptjs to the application's dependencies
+      and installs it") asserts on `@blazetrails/bcrypt`; the test name is kept verbatim.
+- [ ] The generic loading of app gem ports is `generated-application-requires-its-gem-ports`,
+      not this story.

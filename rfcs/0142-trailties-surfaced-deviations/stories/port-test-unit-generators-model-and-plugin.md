@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-trails has no `TestUnit::Generators` at all. Rails ships them under
+trails now has `test_unit:channel`, `test_unit:job`, `test_unit:model` and `test_unit:scaffold` (`packages/trailties/src/generators/test-unit/`), but no shared `TestUnit::Generators::Base` and no `plugin` generator. Rails ships them under
 `vendor/rails/v8.0.2/railties/lib/rails/generators/test_unit/`
 (`model`, `plugin`, `controller`, `helper`, `integration`, `system`, `scaffold`, …).
 Their namespaces are `test_unit:<name>`, derived from `TestUnit::Generators::<Name>Generator`
@@ -41,8 +41,8 @@ cannot be ported until a `test_unit:*` generator exists for `lookup` to load:
 
 ## Acceptance criteria
 
-- `TestUnit::Generators::Base` and at least the `model` and `plugin` generators are
-  ported under `packages/trailties/src/generators/test-unit/`, and each one's namespace
+- `TestUnit::Generators::Base` and the `plugin` generator are
+  ported, the existing four rebased onto `Base`, under `packages/trailties/src/generators/test-unit/`, and each one's namespace
   is `test_unit:<name>`.
 - `generators.test.ts` ports `find by namespace with context`,
   `fallbacks for generators on find by namespace` and

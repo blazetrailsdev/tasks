@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 100
 priority: 1
 pr: null
 claim: null
@@ -25,6 +25,8 @@ The schema says `posts.id` is an integer primary key, so every caller that needs
 number narrows or casts.
 
 Found auditing the types of a freshly scaffolded app (`trails new blog` + `generate scaffold Post title:string body:text`) on `main` `53a6249ae6`, while writing the README for PR #8195.
+
+The virtualizer skips the `id` column outright (`packages/activerecord-cli/src/type-virtualization/synthesize.ts:166`, `if (col === "id") continue;`), though the schema parser already records its type (`activerecord-cli/src/tsc-wrapper/schema-ts-model-parser.ts:24-43`, `idColumn`).
 
 ## Converged shape
 

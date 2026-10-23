@@ -19,32 +19,32 @@ closed-reason: null
 ## Context
 
 trails#8228 ported `hook_for` (`vendor/rails/v8.0.2/railties/lib/rails/generators/base.rb:174-202`)
-as `GeneratorBase.hookFor` (`packages/trailties/src/generators/base.ts`), and seeded
-`config.app_generators` from `Rails::TestUnitRailtie`
-(`railties/lib/rails/test_unit/railtie.rb:7-13` → `packages/trailties/src/test-unit/trailtie.ts`).
-No production generator calls `hookFor` yet, so `testFramework`, `integrationTool`,
-`systemTests`, `orm`, `templateEngine`, `helper`, `resourceController` and `resourceRoute`
-control nothing. Test files, ORM files and templates are still written inline by each
-generator's `run`.
+as `GeneratorBase.hookFor` (`packages/trailties/src/generators/base.ts`). Since then most
+Rails `hook_for` sites have been wired:
 
-These are the Rails `hook_for` sites to converge:
+- `rails:model` `hookFor("orm", { required: true })` (`generators/rails/model/model-generator.ts:48`)
+- `active_record:model` `hookFor("testFramework")` (`generators/active-record/model/model-generator.ts:163`)
+- `rails:resource` `resource_controller` / `resource_route` (`generators/rails/resource/resource-generator.ts:39,55`)
+- `rails:scaffold` `scaffoldController` (`generators/rails/scaffold/scaffold-generator.ts:13`)
+- `rails:scaffold_controller` `resourceRoute` (`scaffold-controller-generator.ts:160`)
+- `rails:job` `testFramework` (`generators/rails/job/job-generator.ts:26`)
 
-- `rails/controller/controller_generator.rb:24`: `hook_for :template_engine, :test_framework, :helper`
-- `rails/model/model_generator.rb`: `hook_for :orm, required: true`
-- `rails/resource/resource_generator.rb:11-18`: `hook_for :resource_controller` (block) and `:resource_route`
-- `rails/scaffold/scaffold_generator.rb` / `rails/scaffold_controller/scaffold_controller_generator.rb`: `hook_for :scaffold_controller`, `:template_engine`, `:test_framework`, `:helper`, `:jbuilder`
-- `rails/integration_test/integration_test_generator.rb:6`: `hook_for :integration_tool, as: :integration`
-- `rails/system_test/system_test_generator.rb`: `hook_for :system_tests, as: :system`
+The sites still unwired each have their own story, so this one is only the cross-cutting
+behaviour check:
 
-Each hook needs its target generator (`test_unit:*`, `active_record:*`, `tse:*`).
-`port-test-unit-generators-model-and-plugin` covers the first `test_unit:*` ones, and
-`port-integration-test-generator` covers the integration generator. Related existing
-stories: `controller-generator-is-not-a-named-base` and
-`scaffold-generator-emits-controller-instead-of-hooking-resource-generator`.
+- controller's `hook_for :template_engine, :test_framework, :helper` →
+  `controller-generator-hook-targets-are-unported` / `controller-generator-is-not-a-named-base`
+- scaffold_controller's `:template_engine, :test_framework, :helper, :jbuilder` →
+  `scaffold-controller-hooks-test-framework-and-engine-arms`
+- `rails:migration`'s `hook_for :orm, required: true` → `rails-migration-generator-does-not-hook-orm`
+- `integration_test`'s `hook_for :integration_tool, as: :integration` → `port-integration-test-generator`
+- `system_test`'s `hook_for :system_tests, as: :system`
+  (`railties/lib/rails/generators/rails/system_test/system_test_generator.rb`): no
+  `generators/rails/system-test/` exists yet; port it here.
 
 ## Acceptance criteria
 
-- Each generator above declares its Rails `hook_for` with the Rails options, and the
-  inline test, ORM and template writes move to the hooked generators.
+- `rails:system_test` is ported with its `hook_for :system_tests, as: :system`.
 - `trails generate controller Foo --test-framework=nope` reports `nope [not found]`, and a
-  configured `config.generators.test_framework` changes which generator runs.
+  configured `config.generators.test_framework` changes which generator runs (a generator
+  test, landing once the controller hook story does).

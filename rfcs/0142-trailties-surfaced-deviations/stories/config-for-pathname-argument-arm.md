@@ -30,7 +30,7 @@ A `Pathname` is used as-is, so an app can read a config file from outside `confi
 
 ## Converged shape
 
-`configFor(name: string | <path object>, { env })` takes the Pathname arm first, exactly as Rails does. ruby-compat has no `Pathname` today, so decide first whether one lands there (`vendor/ruby/ext/pathname`) or whether a `URL` is the trails spelling. Then port the arm and the test.
+`configFor(name: string | Pathname, { env })` takes the Pathname arm first, exactly as Rails does, using ruby-compat's `Pathname` (`packages/ruby-compat/src/pathname.ts`, which now exists): `name instanceof Pathname ? name : new Pathname(`${configDir}/${name}`)`. The trails body is `Application#configFor` (`packages/trailties/src/application.ts:320`).
 
 ## Acceptance criteria
 

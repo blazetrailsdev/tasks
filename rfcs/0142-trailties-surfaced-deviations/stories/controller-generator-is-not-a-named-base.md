@@ -45,6 +45,15 @@ Review held that converting to `NamedBase` is not enough on its own:
 
 Hence the deps on `hook_for` and on template files.
 
+### Merged from `controller-generator-extends-named-base` (closed as duplicate)
+
+trails#8947 added private `assignNamesBang` / `regularClassPath` / `fileName` /
+`removePossibleSuffix` mirrors, plus `actions` / `classPath` / `_namedBaseFileName` fields, to
+`ControllerGenerator` (`packages/trailties/src/generators/rails/controller/controller-generator.ts:17`,
+still `extends GeneratorBase`). Paths still come from `controllerPathHelpers` (`:40`, `:99`),
+which splits only `/`, where `NamedBase#assign_names!` (`named_base.rb:175-179`) also splits `::`.
+Converging onto `NamedBase` deletes those mirrors.
+
 ## Acceptance criteria
 
 - `ControllerGenerator extends NamedBase`; `actions` and `skipRoutes` live on the instance

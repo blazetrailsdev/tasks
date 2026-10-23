@@ -26,7 +26,7 @@ for its owner/repository hierarchy.
 configurations to the one targeted:
 
 ```ts
-// packages/trailties/src/commands/db.ts:227
+// packages/trailties/src/commands/db.ts:236
 async function withRegisteredConfiguration<T>(config: HashConfig, fn: () => Promise<T>) {
   return withRegisteredConfigurations([config], config.envName, fn);
 }
