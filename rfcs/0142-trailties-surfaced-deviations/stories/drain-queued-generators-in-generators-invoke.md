@@ -5,7 +5,8 @@ updated: 2026-09-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "generators"
 packages: []
-deps: []
+deps:
+  - rails-migration-generator-does-not-hook-orm
 deps-rfc: []
 est-loc: null
 priority: 6
