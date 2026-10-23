@@ -1,7 +1,7 @@
 ---
 title: "Lean on ES imports: correct the call-time-constant-resolution rule in CLAUDE.md and the three package guides"
-status: draft
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-23
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 0
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9270
+claim: "2026-10-23T01:00:51Z"
+assignee: "seat-rule-is-plain-assignment-in-claude-md"
 blocked-by: null
 closed-reason: null
 ---

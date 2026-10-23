@@ -21,6 +21,7 @@ clusters:
   - rails-bodies
   - assertion-tooling
   - expect-sweeps
+priority: 2
 ---
 
 # RFC 0206 — Minitest is reference only: test code and ported Rails assertion bodies use Vitest expect

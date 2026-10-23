@@ -1,6 +1,6 @@
 ---
 title: "Native .length / Object.keys for isEmpty on proven string, array and plain-object receivers (activerecord, arel)"
-status: claimed
+status: done
 updated: 2026-10-23
 rfc: "0194-ruby-compat-native-first"
 cluster: substitution
@@ -9,7 +9,7 @@ deps: [call-gate-credits-empty-size-on-proven-string-and-hash]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#9268
 claim: "2026-10-23T00:51:00Z"
 assignee: "native-except-literal-key-sites"
 blocked-by: null

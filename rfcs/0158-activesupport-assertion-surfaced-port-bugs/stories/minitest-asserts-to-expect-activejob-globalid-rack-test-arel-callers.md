@@ -1,7 +1,7 @@
 ---
 title: "minitest-asserts-to-expect-activejob-globalid-rack-test-arel-callers"
-status: ready
-updated: 2026-10-22
+status: closed
+updated: 2026-10-23
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activejob", "globalid", "rack-test", "arel"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "SUPERSEDED: duplicate of RFC 0206's measured expect-sweep-* bins, which own the test-code sweep"
 ---
 
 ## Context

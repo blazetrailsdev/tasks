@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Enumerable as free functions over any Iterable or each-answerer, absorbing array.ts and enumerable-utils.ts duplicates"
-status: claimed
+status: done
 updated: 2026-10-23
 rfc: "0194-ruby-compat-native-first"
 cluster: enumerable
@@ -9,7 +9,7 @@ deps: ["call-args-enumerable-free-function-receiver"]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#9269
 claim: "2026-10-23T00:35:31Z"
 assignee: "enumerable-free-functions-over-iterable"
 blocked-by: null

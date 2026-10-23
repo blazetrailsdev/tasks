@@ -1,6 +1,6 @@
 ---
 title: "The assertion-kind gate reads toBe(true/false), toHaveLength(0) and toHaveProperty by their literal argument"
-status: draft
+status: ready
 updated: 2026-10-23
 rfc: "0206-minitest-port-and-assertions-to-expect"
 cluster: assertion-tooling

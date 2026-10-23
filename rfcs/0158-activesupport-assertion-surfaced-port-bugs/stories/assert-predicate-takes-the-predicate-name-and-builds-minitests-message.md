@@ -1,7 +1,7 @@
 ---
 title: "activesupport: assertPredicate takes the predicate name and builds Minitest's message"
-status: draft
-updated: 2026-10-04
+status: closed
+updated: 2026-10-23
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: owner ruled 2026-10-23 (RFC 0206) that Minitest is not ported; assert_no_error_reported's assert_predicate becomes an expect call in the Rails body (ported-rails-assertion-bodies-call-expect)"
 ---
 
 ## Context

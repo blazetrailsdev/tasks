@@ -1,7 +1,7 @@
 ---
 title: "Port Connection::Base"
-status: in-progress
-updated: 2026-10-22
+status: done
+updated: 2026-10-23
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]

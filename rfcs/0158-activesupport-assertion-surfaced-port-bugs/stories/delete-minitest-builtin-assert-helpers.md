@@ -1,7 +1,7 @@
 ---
 title: "Delete the Minitest built-in assertion helpers from activesupport testing/assertions.ts"
-status: draft
-updated: 2026-10-21
+status: closed
+updated: 2026-10-23
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -19,7 +19,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "SUPERSEDED: RFC 0206's activesupport-deletes-minitest-assertion-helpers owns the deletion"
 ---
 
 ## Context

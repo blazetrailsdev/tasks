@@ -1,6 +1,6 @@
 ---
 title: "Delete the Minitest assertion helpers; test code cannot import them"
-status: draft
+status: ready
 updated: 2026-10-23
 rfc: "0206-minitest-port-and-assertions-to-expect"
 cluster: expect-sweeps
