@@ -5,7 +5,8 @@ updated: 2026-10-20
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - delete-send-name-guessing-arms
 deps-rfc: []
 est-loc: 80
 priority: null
