@@ -1,7 +1,7 @@
 ---
 title: "twitter-clone smoke fails: its migrations extend Migration directly"
-status: ready
-updated: 2026-10-23
+status: claimed
+updated: 2026-10-24
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-24T19:49:34Z"
+assignee: "twitter-clone-smoke-migrations-extend-migration-directly"
 blocked-by: null
 closed-reason: null
 ---

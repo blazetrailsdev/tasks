@@ -1,7 +1,7 @@
 ---
 title: "A pool established inside a transactional test races test code that leases from it before the deferred pin"
-status: ready
-updated: 2026-10-18
+status: claimed
+updated: 2026-10-24
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 80
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-24T19:49:34Z"
+assignee: "twitter-clone-smoke-migrations-extend-migration-directly"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "build-views registers app handlers by loading config/initializers, not a --handlers flag"
-status: ready
-updated: 2026-10-23
+status: claimed
+updated: 2026-10-24
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-24T19:49:34Z"
+assignee: "twitter-clone-smoke-migrations-extend-migration-directly"
 blocked-by: null
 closed-reason: null
 ---

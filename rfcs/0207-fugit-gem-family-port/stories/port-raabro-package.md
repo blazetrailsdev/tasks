@@ -1,6 +1,6 @@
 ---
 title: "Port raabro as @blazetrails/raabro from generated output to 100%"
-status: draft
+status: ready
 updated: 2026-10-24
 rfc: "0207-fugit-gem-family-port"
 cluster: fugit-family
