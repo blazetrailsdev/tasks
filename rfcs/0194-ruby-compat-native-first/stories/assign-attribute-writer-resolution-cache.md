@@ -1,10 +1,10 @@
 ---
-title: "assign-attribute-writer-resolution-cache"
+title: "_assignAttribute resolves its writer from a per-prototype cache (under 100 ns dispatch overhead)"
 status: draft
 updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: null
-packages: []
+packages: [activemodel, ruby-compat]
 deps:
   - native-respond-to-and-send-literal-name-sites
 deps-rfc: []
