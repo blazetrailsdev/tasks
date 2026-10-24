@@ -1,7 +1,7 @@
 ---
 title: "Native member access for rbObjRespondTo / rbFSend with a literal name on a receiver with no respondToMissing"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: substitution
 packages: []
@@ -9,9 +9,9 @@ deps: [basic-obj-respond-to-instance-fast-path, collapse-visibility-variants-of-
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9288
+claim: "2026-10-24T21:20:37Z"
+assignee: "native-respond-to-and-send-literal-name-sites"
 blocked-by: null
 ---
 

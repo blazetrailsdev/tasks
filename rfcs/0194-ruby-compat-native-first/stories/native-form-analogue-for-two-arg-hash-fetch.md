@@ -1,6 +1,6 @@
 ---
 title: "Call gate: credit Object.hasOwn(h, k) ? h.k : d as two-argument Hash#fetch"
-status: claimed
+status: in-progress
 updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9287
 claim: "2026-10-24T20:50:44Z"
 assignee: "native-form-analogue-for-two-arg-hash-fetch"
 blocked-by: null

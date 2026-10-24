@@ -1,6 +1,6 @@
 ---
 title: "Lint: blazetrails/ruby-compat-native-required reds a listed helper called on an Array, string, number or plain-object receiver"
-status: claimed
+status: in-progress
 updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#9287
 claim: "2026-10-24T20:50:44Z"
 assignee: "native-form-analogue-for-two-arg-hash-fetch"
 blocked-by: null

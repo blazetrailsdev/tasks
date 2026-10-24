@@ -1,7 +1,7 @@
 ---
 title: "Triage the ruby-compat exports with no external importer, and the single-importer exports no inline story covers"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: inline
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 0
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9289
+claim: "2026-10-24T21:50:42Z"
+assignee: "triage-ruby-compat-exports-with-no-external-importer"
 blocked-by: null
 ---
 
