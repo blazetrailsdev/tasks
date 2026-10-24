@@ -1,6 +1,6 @@
 ---
 title: "Vendor raabro, chronic, et-orbi and fugit and register them for parity"
-status: draft
+status: done
 updated: 2026-10-24
 rfc: "0207-fugit-gem-family-port"
 cluster: fugit-family
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9283
+claim: "2026-10-24T18:25:28Z"
+assignee: "vendor-fugit-gem-family-sources"
 blocked-by: null
 closed-reason: null
 ---
