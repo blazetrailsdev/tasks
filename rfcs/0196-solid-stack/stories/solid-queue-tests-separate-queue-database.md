@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-tests-separate-queue-database"
-status: ready
+status: in-progress
 updated: 2026-10-23
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9281
+claim: "2026-10-23T23:32:58Z"
+assignee: "solid-queue-tests-separate-queue-database"
 blocked-by: null
 closed-reason: null
 ---
