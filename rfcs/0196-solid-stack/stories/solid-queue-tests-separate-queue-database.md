@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-tests-separate-queue-database"
-status: in-progress
-updated: 2026-10-23
+status: done
+updated: 2026-10-24
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
