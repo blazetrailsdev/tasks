@@ -2,7 +2,7 @@
 title: "Port et-orbi as @blazetrails/et-orbi from generated output to 100%"
 status: draft
 updated: 2026-10-24
-rfc: "0000-fugit-gem-family-port"
+rfc: "0207-fugit-gem-family-port"
 cluster: fugit-family
 packages: ["et-orbi", "activesupport"]
 deps: ["vendor-fugit-gem-family-sources", "port-chronic-package"]

@@ -1,5 +1,5 @@
 ---
-rfc: "0000-fugit-gem-family-port"
+rfc: "0207-fugit-gem-family-port"
 title: "fugit and its gem family (raabro, et-orbi, chronic) ported from generated output to 100%"
 status: draft
 created: 2026-10-24
@@ -23,10 +23,7 @@ related-rfcs:
 priority: 3
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — fugit and its gem family ported from generated output to 100%
+# RFC 0207 — fugit and its gem family ported from generated output to 100%
 
 ## Summary
 

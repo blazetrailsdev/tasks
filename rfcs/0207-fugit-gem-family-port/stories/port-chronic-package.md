@@ -2,7 +2,7 @@
 title: "Port chronic as @blazetrails/chronic from generated output to 100%"
 status: draft
 updated: 2026-10-24
-rfc: "0000-fugit-gem-family-port"
+rfc: "0207-fugit-gem-family-port"
 cluster: fugit-family
 packages: ["chronic"]
 deps: ["vendor-fugit-gem-family-sources"]
