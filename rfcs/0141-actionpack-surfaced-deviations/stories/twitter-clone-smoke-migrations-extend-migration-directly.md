@@ -1,6 +1,6 @@
 ---
 title: "twitter-clone smoke fails: its migrations extend Migration directly"
-status: in-progress
+status: done
 updated: 2026-10-24
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

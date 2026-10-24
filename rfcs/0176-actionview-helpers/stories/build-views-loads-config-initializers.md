@@ -1,6 +1,6 @@
 ---
 title: "build-views registers app handlers by loading config/initializers, not a --handlers flag"
-status: in-progress
+status: done
 updated: 2026-10-24
 rfc: "0176-actionview-helpers"
 cluster: null

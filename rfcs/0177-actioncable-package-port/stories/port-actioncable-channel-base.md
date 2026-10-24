@@ -1,16 +1,16 @@
 ---
 title: "Port Channel::Base"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-24
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-channel-streams", "ruby-compat-concurrent-timer-task-and-atomic-fixnum"]
 deps-rfc: []
 est-loc: 450
-pr: null
-claim: null
-assignee: null
+pr: trails#9290
+claim: "2026-10-24T22:20:40Z"
+assignee: "port-actioncable-channel-base"
 blocked-by: null
 closed-reason: null
 ---

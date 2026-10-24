@@ -1,6 +1,6 @@
 ---
 title: "Drop Kernel#send from RUBY_COMPAT_EXPORTS so the reverse reading can never demand rbFSend"
-status: in-progress
+status: done
 updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: gate

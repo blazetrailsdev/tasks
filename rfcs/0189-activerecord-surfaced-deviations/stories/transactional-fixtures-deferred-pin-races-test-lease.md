@@ -1,6 +1,6 @@
 ---
 title: "A pool established inside a transactional test races test code that leases from it before the deferred pin"
-status: in-progress
+status: done
 updated: 2026-10-24
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

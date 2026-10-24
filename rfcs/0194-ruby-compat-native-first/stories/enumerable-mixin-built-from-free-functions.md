@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: the Enumerable / AsyncEnumerable mixins delegate to the free functions; ActiveSupport's extensions take any Iterable"
-status: in-progress
+status: done
 updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: enumerable

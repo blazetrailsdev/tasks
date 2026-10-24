@@ -1,6 +1,6 @@
 ---
 title: "_assignAttribute resolves its writer from a per-prototype cache (under 100 ns dispatch overhead)"
-status: draft
+status: ready
 updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: null

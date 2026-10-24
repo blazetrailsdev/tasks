@@ -1,7 +1,7 @@
 ---
 title: "Port connection/base_test.rb, authorization_test.rb and cross_site_forgery_test.rb"
-status: ready
-updated: 2026-10-21
+status: claimed
+updated: 2026-10-24
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
@@ -9,8 +9,8 @@ deps: ["port-actioncable-connection-base", "port-actioncable-test-stubs-and-test
 deps-rfc: []
 est-loc: 400
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-24T22:50:39Z"
+assignee: "port-actioncable-connection-base-authorization-and-forgery-tests"
 blocked-by: null
 closed-reason: null
 ---

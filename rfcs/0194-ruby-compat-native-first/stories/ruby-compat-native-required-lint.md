@@ -1,6 +1,6 @@
 ---
 title: "Lint: blazetrails/ruby-compat-native-required reds a listed helper called on an Array, string, number or plain-object receiver"
-status: in-progress
+status: done
 updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
