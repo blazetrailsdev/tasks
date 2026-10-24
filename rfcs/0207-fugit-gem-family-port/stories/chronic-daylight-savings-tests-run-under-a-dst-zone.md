@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-`packages/chronic/src/daylight-savings.test.ts` ports `vendor/chronic/v0.10.2/test/test_daylight_savings.rb` (trails#9286). The tests cross the 2008 US DST boundaries (`Time.local(2008, 3, 9, ...)`, `Time.local(2008, 11, 2, ...)`), and only exercise `RepeaterTime#next`'s `offset_fix = midnight.gmt_offset - tomorrow_midnight.gmt_offset` (`vendor/chronic/v0.10.2/lib/chronic/repeaters/repeater_time.rb:66-67`) when the process local zone observes DST. CI runs in UTC, so `offset_fix` is always 0 and the four tests pass whatever the arithmetic does. Upstream chronic has the same gap.
+`packages/chronic/src/daylight-savings.test.ts` ports `vendor/chronic/v0.10.2/test/test_daylight_savings.rb` (trails#9286). The tests cross the 2008 US DST boundaries (`Time.local(2008, 3, 9, ...)`, `Time.local(2008, 11, 2, ...)`), and only exercise `RepeaterTime#next`'s `offset_fix = midnight.gmt_offset - tomorrow_midnight.gmt_offset` (`vendor/chronic/v0.10.2/lib/chronic/repeaters/repeater_time.rb:84-85`) when the process local zone observes DST. CI runs in UTC, so `offset_fix` is always 0 and the four tests pass whatever the arithmetic does. Upstream chronic has the same gap.
 
 ## Acceptance criteria
 
