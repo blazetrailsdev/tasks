@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite :memory: Tests (1) failing on main @eaec1307"
-status: in-progress
+status: done
 updated: 2026-10-24
 rfc: "0061-ci-failures"
 cluster: null
