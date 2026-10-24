@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: the Enumerable / AsyncEnumerable mixins delegate to the free functions; ActiveSupport's extensions take any Iterable"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: enumerable
 packages: ["ruby-compat", "activesupport"]
@@ -9,9 +9,9 @@ deps: ["enumerable-free-functions-over-iterable"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9285
+claim: "2026-10-24T20:20:37Z"
+assignee: "enumerable-mixin-built-from-free-functions"
 blocked-by: null
 closed-reason: null
 ---

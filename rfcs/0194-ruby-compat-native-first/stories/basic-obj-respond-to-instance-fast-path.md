@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: basicObjRespondTo runs core-receiver probes before the prototype walk on every class instance"
-status: claimed
+status: closed
 updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: dispatch-cost
@@ -13,6 +13,7 @@ pr: null
 claim: "2026-10-24T19:50:36Z"
 assignee: "basic-obj-respond-to-instance-fast-path"
 blocked-by: null
+closed-reason: "FALSIFIED: the probe gating and hasOwn walk landed in trails#9274; the remaining criteria (per-prototype WeakMap cache, <80 ns hit) conflict with live respond_to? semantics — nothing invalidates a prototype cache on include/extend/defineProperty/setPrototypeOf, #9274 review rejected it, and object.trails.test.ts pins a respondToMissing defined after the first query. Dist bench today: hit ~330 ns, miss ~540 ns; hasOwn costs ~18 ns/level so <80 ns is unreachable uncached, and an 'in' filter runs side-effecting Proxy has traps."
 ---
 
 ## Context

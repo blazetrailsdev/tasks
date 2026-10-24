@@ -1,6 +1,6 @@
 ---
 title: "Port chronic as @blazetrails/chronic from generated output to 100%"
-status: claimed
+status: in-progress
 updated: 2026-10-24
 rfc: "0207-fugit-gem-family-port"
 cluster: fugit-family
@@ -9,7 +9,7 @@ deps: ["vendor-fugit-gem-family-sources"]
 deps-rfc: []
 est-loc: 11000
 priority: null
-pr: null
+pr: trails#9286
 claim: "2026-10-24T19:14:02Z"
 assignee: "port-chronic-package"
 blocked-by: null
