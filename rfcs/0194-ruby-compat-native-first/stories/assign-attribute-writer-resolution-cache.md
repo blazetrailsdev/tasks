@@ -5,7 +5,8 @@ updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []
-deps: []
+deps:
+  - native-respond-to-and-send-literal-name-sites
 deps-rfc: []
 est-loc: null
 priority: null
