@@ -1,6 +1,6 @@
 ---
 title: "Port client_test.rb's unsubscribe, remote disconnect and server restart cases"
-status: in-progress
+status: done
 updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: fidelity

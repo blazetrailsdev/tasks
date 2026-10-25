@@ -1,6 +1,6 @@
 ---
 title: "Prove the published @rails/actioncable client talks to a trails server, and record the JS sources as non-ports"
-status: in-progress
+status: done
 updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
