@@ -1,6 +1,6 @@
 ---
 title: "Port et-orbi as @blazetrails/et-orbi from generated output to 100%"
-status: claimed
+status: in-progress
 updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: fugit-family
@@ -9,7 +9,7 @@ deps: ["vendor-fugit-gem-family-sources", "port-chronic-package"]
 deps-rfc: []
 est-loc: 6000
 priority: null
-pr: null
+pr: trails#9299
 claim: "2026-10-25T00:56:00Z"
 assignee: "port-et-orbi-package"
 blocked-by: null

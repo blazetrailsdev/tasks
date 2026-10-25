@@ -1,6 +1,6 @@
 ---
 title: "Rescuable#rescue_from ports respond_to?(:===) and keys by klass.name"
-status: in-progress
+status: done
 updated: 2026-10-25
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null

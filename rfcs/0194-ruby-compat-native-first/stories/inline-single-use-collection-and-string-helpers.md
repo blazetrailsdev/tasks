@@ -1,6 +1,6 @@
 ---
 title: "Inline the single-use ruby-compat collection and string helpers at their one caller"
-status: in-progress
+status: done
 updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: null

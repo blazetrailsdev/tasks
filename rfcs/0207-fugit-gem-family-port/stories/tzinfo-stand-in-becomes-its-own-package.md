@@ -1,6 +1,6 @@
 ---
 title: "tzinfo-stand-in-becomes-its-own-package"
-status: draft
+status: in-progress
 updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9298
+claim: "2026-10-25T02:08:44Z"
+assignee: "tzinfo-stand-in-becomes-its-own-package"
 blocked-by: null
 closed-reason: null
 ---

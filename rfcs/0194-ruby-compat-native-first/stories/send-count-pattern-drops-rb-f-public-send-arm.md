@@ -1,6 +1,6 @@
 ---
 title: "send-count: drop the dead rbFPublicSend arm from SEND_PATTERN"
-status: in-progress
+status: done
 updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: null
