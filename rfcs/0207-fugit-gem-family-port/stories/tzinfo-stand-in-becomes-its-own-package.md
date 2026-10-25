@@ -5,7 +5,8 @@ updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-et-orbi-package
 deps-rfc: []
 est-loc: null
 priority: null
