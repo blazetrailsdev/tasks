@@ -1,6 +1,6 @@
 ---
 title: "Native member access for rbObjRespondTo / rbFSend with a literal name on a receiver with no respondToMissing"
-status: in-progress
+status: done
 updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: substitution

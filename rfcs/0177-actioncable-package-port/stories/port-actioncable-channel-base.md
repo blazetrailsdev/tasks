@@ -1,6 +1,6 @@
 ---
 title: "Port Channel::Base"
-status: in-progress
+status: done
 updated: 2026-10-24
 rfc: "0177-actioncable-package-port"
 cluster: fidelity

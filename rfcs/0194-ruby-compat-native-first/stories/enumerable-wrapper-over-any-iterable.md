@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: Enumerable is a class module that also wraps any Iterable — new Enumerable(xs).partition(fn) — credited as xs.partition"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-24
 rfc: "0194-ruby-compat-native-first"
 cluster: enumerable
 packages: ["ruby-compat"]
@@ -9,9 +9,9 @@ deps: ["enumerable-mixin-built-from-free-functions", "call-args-enumerable-free-
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9292
+claim: "2026-10-24T23:20:37Z"
+assignee: "enumerable-wrapper-over-any-iterable"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port SubscriptionAdapter::PostgreSQL over LISTEN / NOTIFY"
-status: claimed
+status: done
 updated: 2026-10-24
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
@@ -8,7 +8,7 @@ packages: ["actioncable", "activerecord"]
 deps: ["port-actioncable-inline-async-and-test-adapters"]
 deps-rfc: []
 est-loc: 350
-pr: null
+pr: trails#9291
 claim: "2026-10-24T22:50:39Z"
 assignee: "port-actioncable-connection-base-authorization-and-forgery-tests"
 blocked-by: null

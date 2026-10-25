@@ -1,6 +1,6 @@
 ---
 title: "Port chronic as @blazetrails/chronic from generated output to 100%"
-status: in-progress
+status: done
 updated: 2026-10-24
 rfc: "0207-fugit-gem-family-port"
 cluster: fugit-family
