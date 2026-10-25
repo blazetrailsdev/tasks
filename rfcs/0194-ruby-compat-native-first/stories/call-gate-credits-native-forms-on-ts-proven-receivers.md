@@ -1,6 +1,6 @@
 ---
 title: "Call gate credits native empty?/except forms on TS-proven receivers; convert the remaining sites"
-status: in-progress
+status: done
 updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: null

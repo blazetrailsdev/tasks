@@ -1,6 +1,6 @@
 ---
 title: "Connection::Base#new_tagged_logger drops its invented JS-function arm"
-status: in-progress
+status: done
 updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: null

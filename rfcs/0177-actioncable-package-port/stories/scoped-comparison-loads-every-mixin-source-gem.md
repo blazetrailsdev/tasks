@@ -1,6 +1,6 @@
 ---
 title: "Scoped comparison loads the Rails lib of every gem a package mixes in"
-status: in-progress
+status: done
 updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: null
