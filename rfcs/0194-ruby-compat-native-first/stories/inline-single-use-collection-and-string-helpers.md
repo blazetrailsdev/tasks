@@ -1,6 +1,6 @@
 ---
 title: "Inline the single-use ruby-compat collection and string helpers at their one caller"
-status: claimed
+status: in-progress
 updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#9297
 claim: "2026-10-25T00:50:39Z"
 assignee: "rescue-from-ports-respond-to-case-equals"
 blocked-by: null

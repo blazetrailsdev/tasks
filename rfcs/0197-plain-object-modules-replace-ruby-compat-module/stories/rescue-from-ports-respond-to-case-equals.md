@@ -1,6 +1,6 @@
 ---
 title: "Rescuable#rescue_from ports respond_to?(:===) and keys by klass.name"
-status: claimed
+status: in-progress
 updated: 2026-10-25
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: trails#9297
 claim: "2026-10-25T00:50:39Z"
 assignee: "rescue-from-ports-respond-to-case-equals"
 blocked-by: null
