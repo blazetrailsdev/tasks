@@ -95,6 +95,7 @@ turns true.
 - [ ] A booted fixture app answers a WebSocket upgrade at `/cable` with a welcome message, and `config.action_cable.mount_path = nil` removes the route.
 - [ ] Both `configuration_test.rb` cases listed above are credited in `parity:test` for trailties: the first ported, the second carrying its `ActionCable.deprecator` assertion.
 - [ ] A plain-node import of the built engine module as the entry module succeeds.
+- [ ] The `action_cable.set_configs` initializer (`vendor/rails/v8.0.2/actioncable/lib/action_cable/engine.rb:43`) awaits `ActionCable.server.config.loadPubsubAdapter()` (trails#9304) once the cable config is set, so a booted app's synchronous `server.pubsub` (`server/base.rb:97`) answers the adapter without the app awaiting the load itself.
 
 ## Definition of done
 
