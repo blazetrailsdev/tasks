@@ -1,6 +1,6 @@
 ---
 title: "cache-fragment-name-awaits-nested-relation-keys"
-status: ready
+status: in-progress
 updated: 2026-10-25
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9313
+claim: "2026-10-25T21:18:44Z"
+assignee: "cache-fragment-name-awaits-nested-relation-keys"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port fugit as @blazetrails/fugit from generated output to 100%"
-status: claimed
+status: in-progress
 updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: fugit-family
@@ -15,7 +15,7 @@ deps:
 deps-rfc: []
 est-loc: 11000
 priority: null
-pr: null
+pr: trails#9312
 claim: "2026-10-25T19:29:39Z"
 assignee: "port-fugit-package"
 blocked-by: null

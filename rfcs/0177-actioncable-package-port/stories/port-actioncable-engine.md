@@ -1,7 +1,7 @@
 ---
 title: "Port ActionCable::Engine into trailties"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["trailties", "actioncable", "actionpack"]
@@ -15,9 +15,9 @@ deps:
   ]
 deps-rfc: []
 est-loc: 500
-pr: null
-claim: null
-assignee: null
+pr: trails#9314
+claim: "2026-10-25T21:18:13Z"
+assignee: "port-actioncable-engine"
 blocked-by: null
 closed-reason: null
 ---

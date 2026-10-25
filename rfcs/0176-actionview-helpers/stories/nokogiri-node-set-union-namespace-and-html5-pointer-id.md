@@ -1,6 +1,6 @@
 ---
 title: "Nokogiri NodeSet union: namespace nodes by libxml2 merge rule, integer pointer_id for HTML5 nodes"
-status: ready
+status: in-progress
 updated: 2026-10-25
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9313
+claim: "2026-10-25T21:18:44Z"
+assignee: "cache-fragment-name-awaits-nested-relation-keys"
 blocked-by: null
 closed-reason: null
 ---

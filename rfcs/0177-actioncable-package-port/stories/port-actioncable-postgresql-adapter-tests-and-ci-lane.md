@@ -1,16 +1,16 @@
 ---
 title: "Port subscription_adapter/postgresql_test.rb and run it against PostgreSQL in CI"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable", "scripts"]
 deps: ["port-actioncable-postgresql-adapter"]
 deps-rfc: []
 est-loc: 300
-pr: null
-claim: null
-assignee: null
+pr: trails#9314
+claim: "2026-10-25T21:18:13Z"
+assignee: "port-actioncable-engine"
 blocked-by: null
 closed-reason: null
 ---
