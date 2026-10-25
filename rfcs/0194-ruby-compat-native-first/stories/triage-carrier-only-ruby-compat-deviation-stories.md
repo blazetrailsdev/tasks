@@ -1,7 +1,7 @@
 ---
 title: "Triage the RFC 0154 drafts that exist only because of the Module carrier"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: ledger
 packages: ["ruby-compat"]

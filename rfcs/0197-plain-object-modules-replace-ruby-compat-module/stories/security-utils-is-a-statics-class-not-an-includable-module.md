@@ -1,7 +1,7 @@
 ---
 title: "SecurityUtils is a statics-only class, so include SecurityUtils callers name it instead"
-status: draft
-updated: 2026-08-06
+status: ready
+updated: 2026-10-25
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "Classify and switch the non-this literal-name rbObjRespondTo / rbFSend sites by receiver type"
-status: draft
-updated: 2026-10-24
+status: ready
+updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []

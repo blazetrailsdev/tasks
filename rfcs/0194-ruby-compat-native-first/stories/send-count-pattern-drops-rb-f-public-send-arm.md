@@ -1,7 +1,7 @@
 ---
 title: "send-count: drop the dead rbFPublicSend arm from SEND_PATTERN"
-status: draft
-updated: 2026-10-23
+status: claimed
+updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 10
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-25T00:50:39Z"
+assignee: "rescue-from-ports-respond-to-case-equals"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat README: the rule-1 table becomes the full export ledger"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: ledger
 packages: ["ruby-compat"]

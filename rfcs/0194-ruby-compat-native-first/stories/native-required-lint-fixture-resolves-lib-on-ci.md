@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-native-required rule tests: fixture project must resolve lib on CI so Map/Set exclusions are not vacuous"
-status: draft
-updated: 2026-10-24
+status: ready
+updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
 packages: []

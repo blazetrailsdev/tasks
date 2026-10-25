@@ -1,7 +1,7 @@
 ---
 title: "_assignAttribute resolves its writer from a per-prototype cache (under 100 ns dispatch overhead)"
-status: ready
-updated: 2026-10-24
+status: in-progress
+updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: [activemodel, ruby-compat]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9295
+claim: "2026-10-25T00:08:44Z"
+assignee: "assign-attribute-writer-resolution-cache"
 blocked-by: null
 closed-reason: null
 ---

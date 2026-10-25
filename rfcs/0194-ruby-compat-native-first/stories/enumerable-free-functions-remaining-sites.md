@@ -1,7 +1,7 @@
 ---
 title: "enumerable-free-functions-remaining-sites"
-status: draft
-updated: 2026-10-23
+status: ready
+updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Delete the identity strUminus and the duplicate hash inspect export"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: deletion
 packages: ["ruby-compat", "activerecord", "scripts"]

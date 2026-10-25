@@ -1,7 +1,7 @@
 ---
 title: "Move activesupport's Ruby-core minBy / maxBy / eachCons into ruby-compat Enumerable free functions"
-status: draft
-updated: 2026-10-23
+status: done
+updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9296
+claim: "2026-10-25T00:21:00Z"
+assignee: "claude-md-module-mixins-section-contradicts-itself"
 blocked-by: null
 closed-reason: null
 ---

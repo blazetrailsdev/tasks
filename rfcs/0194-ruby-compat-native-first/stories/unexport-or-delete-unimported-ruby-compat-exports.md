@@ -1,7 +1,7 @@
 ---
 title: "Delete the dead ruby-compat exports and unexport the internal-only ones"
-status: draft
-updated: 2026-10-24
+status: ready
+updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []

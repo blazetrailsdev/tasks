@@ -1,7 +1,7 @@
 ---
 title: "Native hash-helper sweep: converge hasKey/merge/eachPair/update/mergeBang sites and list them in ruby-compat-native-required"
-status: draft
-updated: 2026-10-24
+status: ready
+updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: substitution
 packages: []

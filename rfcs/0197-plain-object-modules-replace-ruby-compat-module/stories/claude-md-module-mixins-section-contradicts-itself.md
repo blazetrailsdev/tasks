@@ -1,7 +1,7 @@
 ---
 title: "CLAUDE.md's Module mixins section contradicts itself after #6746"
-status: draft
-updated: 2026-08-19
+status: done
+updated: 2026-10-25
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
 packages:
@@ -11,9 +11,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9296
+claim: "2026-10-25T00:21:00Z"
+assignee: "claude-md-module-mixins-section-contradicts-itself"
 blocked-by: null
 closed-reason: null
 ---
