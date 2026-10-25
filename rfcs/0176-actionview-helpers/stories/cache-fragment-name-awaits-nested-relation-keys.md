@@ -1,7 +1,7 @@
 ---
 title: "cache-fragment-name-awaits-nested-relation-keys"
 status: ready
-updated: 2026-10-23
+updated: 2026-10-25
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []

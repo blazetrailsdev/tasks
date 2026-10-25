@@ -1,6 +1,6 @@
 ---
 title: "Port raabro as @blazetrails/raabro from generated output to 100%"
-status: claimed
+status: in-progress
 updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: fugit-family
@@ -9,7 +9,7 @@ deps: ["vendor-fugit-gem-family-sources"]
 deps-rfc: []
 est-loc: 5000
 priority: null
-pr: null
+pr: trails#9307
 claim: "2026-10-25T14:49:19Z"
 assignee: "port-raabro-package"
 blocked-by: null

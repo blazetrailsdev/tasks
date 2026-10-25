@@ -1,6 +1,6 @@
 ---
 title: "generate-tzdata-isdst writes the stripped committed table"
-status: ready
+status: in-progress
 updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9306
+claim: "2026-10-25T15:13:48Z"
+assignee: "generate-tzdata-isdst-writes-the-stripped-committed-form"
 blocked-by: null
 closed-reason: null
 ---

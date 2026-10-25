@@ -1,7 +1,7 @@
 ---
 title: "builder-tag-blocks-await-async-blocks"
-status: draft
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-25
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9308
+claim: "2026-10-25T15:12:12Z"
+assignee: "builder-tag-blocks-await-async-blocks"
 blocked-by: null
 closed-reason: null
 ---

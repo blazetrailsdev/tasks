@@ -1,6 +1,6 @@
 ---
 title: "Connection::Base#new_tagged_logger drops its invented JS-function arm"
-status: claimed
+status: in-progress
 updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#9305
 claim: "2026-10-25T14:48:34Z"
 assignee: "connection-base-new-tagged-logger-invented-function-arm"
 blocked-by: null

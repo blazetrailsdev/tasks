@@ -1,7 +1,7 @@
 ---
 title: "Time.at num_exact accepts to_r/to_int objects (Duration)"
-status: draft
-updated: 2026-10-21
+status: ready
+updated: 2026-10-25
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []

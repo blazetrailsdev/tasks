@@ -1,6 +1,6 @@
 ---
 title: "Differential fuzz of raabro, chronic, et-orbi and fugit against the Ruby gems"
-status: draft
+status: ready
 updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: fugit-family

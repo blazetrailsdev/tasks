@@ -1,6 +1,6 @@
 ---
 title: "Call gate credits native empty?/except forms on TS-proven receivers; convert the remaining sites"
-status: claimed
+status: in-progress
 updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#9305
 claim: "2026-10-25T14:48:34Z"
 assignee: "connection-base-new-tagged-logger-invented-function-arm"
 blocked-by: null
