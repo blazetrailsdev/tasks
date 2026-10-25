@@ -1,16 +1,16 @@
 ---
 title: "Port connection/client_socket_test.rb and connection/stream_test.rb"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-connection-base", "port-actioncable-test-stubs-and-test-helper"]
 deps-rfc: []
 est-loc: 300
-pr: null
-claim: null
-assignee: null
+pr: trails#9310
+claim: "2026-10-25T17:01:41Z"
+assignee: "port-actioncable-client-test-harness-and-client-cases"
 blocked-by: null
 closed-reason: null
 ---

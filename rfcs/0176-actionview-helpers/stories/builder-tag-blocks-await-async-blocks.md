@@ -1,6 +1,6 @@
 ---
 title: "builder-tag-blocks-await-async-blocks"
-status: in-progress
+status: done
 updated: 2026-10-25
 rfc: "0176-actionview-helpers"
 cluster: null
