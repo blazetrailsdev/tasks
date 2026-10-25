@@ -1,6 +1,6 @@
 ---
 title: "Nokogiri NodeSet union: namespace nodes by libxml2 merge rule, integer pointer_id for HTML5 nodes"
-status: in-progress
+status: done
 updated: 2026-10-25
 rfc: "0176-actionview-helpers"
 cluster: null
