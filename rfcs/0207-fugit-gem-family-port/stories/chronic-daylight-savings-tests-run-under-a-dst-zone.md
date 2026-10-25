@@ -1,7 +1,7 @@
 ---
 title: "chronic: run the daylight-savings tests under a DST-observing local zone"
-status: draft
-updated: 2026-10-24
+status: in-progress
+updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9303
+claim: "2026-10-25T13:12:20Z"
+assignee: "chronic-daylight-savings-tests-run-under-a-dst-zone"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "SecurityUtils is a statics-only class, so include SecurityUtils callers name it instead"
-status: ready
+status: claimed
 updated: 2026-10-25
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-25T13:33:13Z"
+assignee: "converge-two-prepends-in-activesupport"
 blocked-by: null
 closed-reason: null
 ---

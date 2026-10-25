@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat BasicSocket#read waits for length bytes or EOF"
-status: draft
-updated: 2026-10-22
+status: claimed
+updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-25T13:33:13Z"
+assignee: "converge-two-prepends-in-activesupport"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port channel/stream_test.rb"
-status: ready
-updated: 2026-10-21
+status: done
+updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
@@ -14,9 +14,9 @@ deps:
   ]
 deps-rfc: []
 est-loc: 550
-pr: null
-claim: null
-assignee: null
+pr: trails#9302
+claim: "2026-10-25T13:12:43Z"
+assignee: "port-actioncable-channel-stream-test"
 blocked-by: null
 closed-reason: null
 ---

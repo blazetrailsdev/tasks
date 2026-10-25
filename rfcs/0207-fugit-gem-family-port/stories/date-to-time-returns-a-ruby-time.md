@@ -1,6 +1,6 @@
 ---
 title: "date-to-time-returns-a-ruby-time"
-status: draft
+status: in-progress
 updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9303
+claim: "2026-10-25T13:12:20Z"
+assignee: "chronic-daylight-savings-tests-run-under-a-dst-zone"
 blocked-by: null
 closed-reason: null
 ---
