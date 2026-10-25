@@ -1,16 +1,16 @@
 ---
 title: "Port channel/naming_test.rb, broadcasting_test.rb and periodic_timers_test.rb"
-status: ready
-updated: 2026-10-21
+status: done
+updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
 deps: ["port-actioncable-channel-base", "port-actioncable-test-stubs-and-test-helper"]
 deps-rfc: []
 est-loc: 250
-pr: null
-claim: null
-assignee: null
+pr: trails#9300
+claim: "2026-10-25T12:01:25Z"
+assignee: "port-actioncable-channel-base-and-rejection-tests"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "tzinfo-stand-in-becomes-its-own-package"
-status: in-progress
+status: done
 updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: null
