@@ -1,13 +1,13 @@
 ---
-title: "eotime-next-time-fast-enough-for-fugit-brute-frequency"
+title: "Make EoTime fast enough for fugit's brute_frequency spec to run in CI"
 status: draft
 updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: null
-packages: []
+packages: ["et-orbi", "tzinfo", "date", "fugit"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 300
 priority: null
 pr: null
 claim: null
