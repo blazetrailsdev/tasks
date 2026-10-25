@@ -37,3 +37,9 @@ dependency, `@blazetrails/date` `Time#compare` / `Time#equals`, and unparking
       and friends from it, and `TimeZone` stays in activesupport.
 - [ ] Decide and record whether tzinfo 2.x is vendored and compared, or the
       package is not API-compared.
+- [ ] `Timezone#periodForUtc` reads a period's base offset from transition data,
+      not the Jan 1 / Jul 1 probe in `packages/activesupport/src/values/time-zone.ts`
+      (wrong for zones whose standard offset changed mid-year or that keep DST all year).
+- [ ] `TimezonePeriod#equals` compares start/end transitions, as TZInfo 2's
+      `TransitionsTimezonePeriod#==` does, not abbreviation and offsets
+      (`vendor/et-orbi/v1.2.11/lib/et-orbi/time.rb:225` relies on it).
