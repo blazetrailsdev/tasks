@@ -7,7 +7,7 @@ cluster: solid-stack
 packages: ["solid-queue"]
 deps:
   - port-solid-queue-worker
-  - vendor-and-port-fugit-cron
+  - port-fugit-package
 deps-rfc: []
 est-loc: 450
 pr: null
