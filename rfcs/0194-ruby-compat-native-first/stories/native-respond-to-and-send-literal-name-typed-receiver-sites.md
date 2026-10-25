@@ -1,6 +1,6 @@
 ---
 title: "Classify and switch the non-this literal-name rbObjRespondTo / rbFSend sites by receiver type"
-status: ready
+status: claimed
 updated: 2026-10-25
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-25T14:48:34Z"
+assignee: "connection-base-new-tagged-logger-invented-function-arm"
 blocked-by: null
 closed-reason: null
 ---

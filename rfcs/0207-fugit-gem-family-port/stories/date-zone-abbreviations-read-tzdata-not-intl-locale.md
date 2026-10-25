@@ -1,6 +1,6 @@
 ---
 title: "date-zone-abbreviations-read-tzdata-not-intl-locale"
-status: in-progress
+status: done
 updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: null

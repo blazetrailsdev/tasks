@@ -1,6 +1,6 @@
 ---
 title: "Converge pubsub_adapter's require onto a LoadError#path-setting awaited require"
-status: claimed
+status: done
 updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9304
 claim: "2026-10-25T13:33:13Z"
 assignee: "converge-two-prepends-in-activesupport"
 blocked-by: null

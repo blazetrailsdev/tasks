@@ -1,6 +1,6 @@
 ---
 title: "Hoist the owner-based module super and UnboundMethod#bind_call spellings into activesupport's Module"
-status: claimed
+status: done
 updated: 2026-10-25
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -11,7 +11,7 @@ deps: []
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
+pr: trails#9304
 claim: "2026-10-25T13:33:13Z"
 assignee: "converge-two-prepends-in-activesupport"
 blocked-by: null

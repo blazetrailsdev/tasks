@@ -1,6 +1,6 @@
 ---
 title: "generate-tzdata-isdst writes the stripped committed table"
-status: draft
+status: ready
 updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: null
