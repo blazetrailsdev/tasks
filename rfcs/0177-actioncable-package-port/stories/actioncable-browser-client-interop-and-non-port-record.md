@@ -1,16 +1,16 @@
 ---
 title: "Prove the published @rails/actioncable client talks to a trails server, and record the JS sources as non-ports"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable", "scripts"]
 deps: ["port-actioncable-client-test-harness-and-client-cases"]
 deps-rfc: []
 est-loc: 250
-pr: null
-claim: null
-assignee: null
+pr: trails#9311
+claim: "2026-10-25T19:38:56Z"
+assignee: "actioncable-browser-client-interop-and-non-port-record"
 blocked-by: null
 closed-reason: null
 ---

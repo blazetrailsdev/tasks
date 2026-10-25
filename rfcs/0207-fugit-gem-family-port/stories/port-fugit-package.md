@@ -1,7 +1,7 @@
 ---
 title: "Port fugit as @blazetrails/fugit from generated output to 100%"
-status: ready
-updated: 2026-10-24
+status: claimed
+updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: fugit-family
 packages: ["fugit", "ruby-compat"]
@@ -16,8 +16,8 @@ deps-rfc: []
 est-loc: 11000
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-25T19:29:39Z"
+assignee: "port-fugit-package"
 blocked-by: null
 closed-reason: null
 ---

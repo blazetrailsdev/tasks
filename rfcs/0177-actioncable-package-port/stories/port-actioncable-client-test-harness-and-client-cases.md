@@ -1,6 +1,6 @@
 ---
 title: "Port client_test.rb's harness and its first four cases against a real server"
-status: in-progress
+status: done
 updated: 2026-10-25
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
