@@ -1,6 +1,6 @@
 ---
 title: "Generated apps run their TypeScript under plain node, not the tsx loader"
-status: claimed
+status: in-progress
 updated: 2026-10-26
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: trails#9354
 claim: "2026-10-26T20:49:16Z"
 assignee: "generated-apps-run-under-plain-node"
 blocked-by: null
