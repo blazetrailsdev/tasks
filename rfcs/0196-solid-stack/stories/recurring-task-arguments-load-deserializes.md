@@ -1,6 +1,6 @@
 ---
 title: "recurring-task-arguments-load-deserializes"
-status: draft
+status: ready
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null

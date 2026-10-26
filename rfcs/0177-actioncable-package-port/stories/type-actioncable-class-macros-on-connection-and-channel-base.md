@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: trails#9318
+pr: trails#9327
 claim: "2026-10-26T01:18:25Z"
 assignee: "configuration-test-framework-deprecators"
 blocked-by: null

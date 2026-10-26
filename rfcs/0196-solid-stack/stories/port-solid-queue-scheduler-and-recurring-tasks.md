@@ -1,6 +1,6 @@
 ---
 title: "Port SolidQueue::Scheduler and recurring tasks"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: solid-stack

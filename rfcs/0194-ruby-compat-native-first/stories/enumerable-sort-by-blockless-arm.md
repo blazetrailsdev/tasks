@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: Enumerable#sortBy answers its elements without a block (enum_sort_by RETURN_SIZED_ENUMERATOR)"
-status: draft
-updated: 2026-10-25
+status: in-progress
+updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9329
+claim: "2026-10-26T14:48:26Z"
+assignee: "create-with-value-and-finder-conditions-native-empty"
 blocked-by: null
 closed-reason: null
 ---

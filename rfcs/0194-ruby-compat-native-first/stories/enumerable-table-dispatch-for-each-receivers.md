@@ -1,6 +1,6 @@
 ---
 title: "enumerable-table-dispatch-for-each-receivers"
-status: draft
+status: ready
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null

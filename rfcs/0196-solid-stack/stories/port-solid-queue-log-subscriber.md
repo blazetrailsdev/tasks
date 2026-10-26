@@ -1,7 +1,7 @@
 ---
 title: "port-solid-queue-log-subscriber"
-status: draft
-updated: 2026-10-23
+status: ready
+updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: new Enumerable(x) answers Symbol.asyncIterator over a promise-answering each"
-status: draft
-updated: 2026-10-25
+status: ready
+updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []

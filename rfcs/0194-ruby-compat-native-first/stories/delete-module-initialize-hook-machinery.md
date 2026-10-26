@@ -1,6 +1,6 @@
 ---
 title: "Delete include.ts's initialize hook machinery, which no module feeds any more"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: deletion

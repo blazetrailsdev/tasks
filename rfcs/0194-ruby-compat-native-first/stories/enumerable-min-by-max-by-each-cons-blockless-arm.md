@@ -1,7 +1,7 @@
 ---
 title: "minBy/maxBy/eachCons/eachSlice answer a sized enumerator without a block"
-status: draft
-updated: 2026-10-25
+status: ready
+updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []

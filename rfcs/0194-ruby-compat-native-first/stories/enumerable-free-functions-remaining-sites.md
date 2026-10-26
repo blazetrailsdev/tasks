@@ -1,6 +1,6 @@
 ---
 title: "enumerable-free-functions-remaining-sites"
-status: ready
+status: in-progress
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9325
+claim: "2026-10-26T14:18:12Z"
+assignee: "enumerable-free-functions-remaining-sites"
 blocked-by: null
 closed-reason: null
 ---

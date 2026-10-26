@@ -1,6 +1,6 @@
 ---
 title: "Delete sendInternal's name-guessing arms that no computed-name caller reaches"
-status: ready
+status: in-progress
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: send
@@ -13,9 +13,9 @@ deps:
   ]
 deps-rfc: []
 est-loc: 300
-pr: null
-claim: null
-assignee: null
+pr: trails#9326
+claim: "2026-10-26T14:13:37Z"
+assignee: "delete-send-name-guessing-arms"
 blocked-by: null
 closed-reason: null
 ---

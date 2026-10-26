@@ -1,7 +1,7 @@
 ---
 title: "SolidQueue::Record reads connectsTo before the engine's config initializer runs"
-status: draft
-updated: 2026-10-24
+status: ready
+updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

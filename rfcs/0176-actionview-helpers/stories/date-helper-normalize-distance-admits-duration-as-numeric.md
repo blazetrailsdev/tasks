@@ -1,7 +1,7 @@
 ---
 title: "date-helper-normalize-distance-admits-duration-as-numeric"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-26
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9325
+claim: "2026-10-26T14:18:12Z"
+assignee: "enumerable-free-functions-remaining-sites"
 blocked-by: null
 closed-reason: null
 ---

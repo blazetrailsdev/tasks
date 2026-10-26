@@ -1,7 +1,7 @@
 ---
 title: "activesupport: spell Enumerable calls on Sets/Maps as new Enumerable(x).m(...)"
-status: draft
-updated: 2026-10-25
+status: ready
+updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []
