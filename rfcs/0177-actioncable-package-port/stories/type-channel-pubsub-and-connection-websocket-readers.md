@@ -1,6 +1,6 @@
 ---
 title: "Type Channel#pubsub and widen Connection#websocket so tests read them as Rails does"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0177-actioncable-package-port"
 cluster: null

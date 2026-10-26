@@ -1,6 +1,6 @@
 ---
 title: "extend() seats super so ClassMethods load_schema! overrides need no singleton prepend"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null

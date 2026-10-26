@@ -1,6 +1,6 @@
 ---
 title: "Type identified_by / rescue_from / channel callback macros on Connection::Base and Channel::Base"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0177-actioncable-package-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activesupport: spell Enumerable calls on Sets/Maps as new Enumerable(x).m(...)"
-status: ready
+status: in-progress
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9332
+claim: "2026-10-26T15:18:13Z"
+assignee: "enumerable-free-functions-async-and-each-with-index-sites"
 blocked-by: null
 closed-reason: null
 ---

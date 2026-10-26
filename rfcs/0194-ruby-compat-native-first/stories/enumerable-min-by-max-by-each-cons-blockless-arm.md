@@ -1,6 +1,6 @@
 ---
 title: "minBy/maxBy/eachCons/eachSlice answer a sized enumerator without a block"
-status: ready
+status: claimed
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-26T15:48:14Z"
+assignee: "enumerable-min-by-max-by-each-cons-blockless-arm"
 blocked-by: null
 closed-reason: null
 ---

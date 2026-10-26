@@ -1,6 +1,6 @@
 ---
 title: "enumerable-free-functions-remaining-sites"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "createWithValue and finder conditions empty? use native forms"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null

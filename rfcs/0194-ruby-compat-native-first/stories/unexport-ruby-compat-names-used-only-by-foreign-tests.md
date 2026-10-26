@@ -1,6 +1,6 @@
 ---
 title: "Unexport ruby-compat names only other packages' tests import"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null

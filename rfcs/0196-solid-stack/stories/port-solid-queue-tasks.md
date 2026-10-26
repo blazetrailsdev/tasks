@@ -1,7 +1,7 @@
 ---
 title: "port-solid-queue-tasks"
-status: draft
-updated: 2026-10-23
+status: claimed
+updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-26T15:57:28Z"
+assignee: "port-solid-queue-cli-and-pidfile"
 blocked-by: null
 closed-reason: null
 ---

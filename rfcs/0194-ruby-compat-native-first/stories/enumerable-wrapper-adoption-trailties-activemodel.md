@@ -1,6 +1,6 @@
 ---
 title: "trailties/activemodel: spell Enumerable calls on Sets/Maps as new Enumerable(x).m(...)"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null

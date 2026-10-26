@@ -1,6 +1,6 @@
 ---
 title: "Port SolidQueue::Supervisor and decide fork versus worker threads"
-status: claimed
+status: done
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: solid-stack
@@ -13,7 +13,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 500
-pr: null
+pr: trails#9330
 claim: "2026-10-26T14:33:58Z"
 assignee: "port-solid-queue-supervisor"
 blocked-by: null

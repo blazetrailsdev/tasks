@@ -1,7 +1,7 @@
 ---
 title: "Template lookup resolves test/hello_world_from_rxml to its kebab-case builder fixture"
-status: draft
-updated: 2026-10-25
+status: claimed
+updated: 2026-10-26
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-26T15:34:09Z"
+assignee: "define-module-inline-methods-reach-the-api-extractor"
 blocked-by: null
 closed-reason: null
 ---

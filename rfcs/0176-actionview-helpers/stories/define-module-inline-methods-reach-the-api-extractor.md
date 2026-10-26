@@ -1,6 +1,6 @@
 ---
 title: "The API extractor reads defineModule's inline methods; CollectionHelpers and RoutesHelpers go through defineModule"
-status: draft
+status: claimed
 updated: 2026-10-26
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-26T15:34:09Z"
+assignee: "define-module-inline-methods-reach-the-api-extractor"
 blocked-by: null
 closed-reason: null
 ---

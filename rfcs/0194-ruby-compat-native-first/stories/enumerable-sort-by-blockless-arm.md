@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Enumerable#sortBy answers its elements without a block (enum_sort_by RETURN_SIZED_ENUMERATOR)"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null

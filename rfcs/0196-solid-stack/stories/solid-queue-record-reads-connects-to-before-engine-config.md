@@ -1,6 +1,6 @@
 ---
 title: "SolidQueue::Record reads connectsTo before the engine's config initializer runs"
-status: ready
+status: claimed
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-26T15:57:28Z"
+assignee: "port-solid-queue-cli-and-pidfile"
 blocked-by: null
 closed-reason: null
 ---
