@@ -107,11 +107,23 @@ RFC 0169 (activejob) and RFC 0177 (actioncable) both list their Solid gem as
 - An app generated with `trails new` runs cache, jobs and cable on the Solid
   backends with no memcached or Redis service.
 
-## Open questions
+## Decisions
 
-- Should Solid Queue's supervisor fork worker processes or run them as worker
-  threads? Node's `child_process.fork` does not copy the parent's heap
-  (CLAUDE.md, "Runtime facts Node does not expose"). **Deferred to
-  `port-solid-queue-supervisor`**, which records the decision here. The
-  worker, dispatcher and scheduler stories run in-process and do not depend
-  on the answer.
+- **Solid Queue's supervisor runs its processes as threads, not forks.**
+  `Supervisor#start_process` (`vendor/solid_queue/v1.1.3/lib/solid_queue/supervisor.rb:76-88`)
+  forks a copy of the booted parent and calls `start` in the child. Node has
+  no `fork`: `child_process.fork` starts a fresh interpreter that shares
+  nothing with the parent (CLAUDE.md, "Runtime facts Node does not expose"),
+  and ruby-compat has no `fork`, `Process.kill` or `waitpid2`. Spawning one
+  `bin/jobs` child per configured process was rejected, because each child
+  would re-boot the app and re-read the configuration to find its slot, which
+  no Solid Queue code does. So `start_process` sets `mode = :async`, which
+  `Processes::Runnable` already supports (`processes/runnable.rb:5-17`), and
+  the supervisee runs in a ruby-compat `Thread`. Upstream made the same move
+  in solid_queue 1.2, which added an async supervisor mode. The Supervisor's
+  other methods keep their names and order: `forks` is keyed by process name
+  where Rails keys it by pid; `waitpid2` reaps a supervisee whose thread has
+  ended; `signal_process` runs what the child's own trap would
+  (`processes/supervised.rb:27-37`), which is `stop` for `TERM`/`INT` and a
+  thread kill for `QUIT`. Ruled by the repo owner on 2026-10-26
+  (`port-solid-queue-supervisor`).
