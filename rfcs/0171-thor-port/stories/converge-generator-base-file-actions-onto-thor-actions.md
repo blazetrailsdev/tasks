@@ -39,6 +39,16 @@ synchronously.
 - [ ] Those members are deleted. Call sites use Thor's `createFile` / `emptyDirectory` /
       `appendToFile` / `insertIntoFile` / `removeFile` / `template` / `copyFile` / `directory`
       and **await** them.
+- [ ] Moved from `thor-actions-template-is-unported` (trails' sync `createFile` shadows Thor's,
+      so `template` cannot run from a generator before this story):
+      `TestUnit::Generators::ModelGenerator#create_test_file` / `#create_fixture_file`
+      (`vendor/rails/v8.0.2/railties/lib/rails/generators/test_unit/model/model_generator.rb:15-17,21-25`)
+      call `template "unit_test.rb", …` / `template "fixtures.yml", …` over `.tt` files, and the
+      `@missingRailsCall template` receipts in
+      `packages/trailties/src/generators/test-unit/model/model-generator.ts` are deleted. The
+      private `template` copies in `packages/trailties/src/generators/app-generator.ts` and
+      `packages/trailties/src/generators/rails/db/system/change/change-generator.ts` are deleted
+      and their callers reach Thor's `template`.
 - [ ] `getCreatedFiles` has no Rails counterpart. Tests that read it assert on the destination
       tree instead, as Rails' `assert_file` does (`Rails::Generators::Testing::Assertions`).
 - [ ] `parity:api:extra --package trailties` drops by the deleted members, and

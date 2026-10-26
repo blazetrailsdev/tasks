@@ -63,15 +63,10 @@ the generator's private `outputBuffer`, so `capture` / `concat` inside a templat
 ## Acceptance criteria
 
 - [ ] The members above read complete in `parity:api --package thor`.
-- [ ] The migration generator's in-line render and the two private `template` copies go through
-      `Thor::Actions#template`.
-- [ ] `TestUnit::Generators::ModelGenerator#create_test_file` / `#create_fixture_file`
-      (`vendor/rails/v8.0.2/railties/lib/rails/generators/test_unit/model/model_generator.rb:15-17,21-25`)
-      call `template "unit_test.rb", …` / `template "fixtures.yml", …`. trails'
-      `packages/trailties/src/generators/test-unit/model/model-generator.ts` renders `TEMPLATES.*`
-      through `createFile` under a `@missingRailsCall template — CONVERGEABLE` receipt citing this
-      story. Both go through the ported `template`, and the receipt is deleted (otherwise closing
-      this story reds `stale-story-references`). Added on main by tasks#203 and kept through the
-      re-spec.
+- [ ] The migration generator's in-line render goes through `Thor::Actions::CapturableERB`, as
+      Rails' `migration_template` renders with `ERB.new(...).result(context)`. The two private
+      `template` copies and the test-unit model generator move to
+      `converge-generator-base-file-actions-onto-thor-actions`: trails' sync `GeneratorBase#createFile`
+      shadows Thor's, so `template` cannot run from a generator before that story.
 - [ ] `file_manipulation_spec.rb`'s `#copy_file` / `#link_file` / `#get` / `#template` cases are
       ported in `port-thor-file-manipulation-spec-part-1`.
