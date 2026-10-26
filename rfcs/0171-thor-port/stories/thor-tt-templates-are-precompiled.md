@@ -33,3 +33,4 @@ Constraints:
 - [ ] `CapturableERB#result` loads that module with an awaited `import()` and calls it with `this` bound to the context. A source with no emitted module raises `LoadError` ("cannot load such file -- <path>"), the same as `Template#compile`.
 - [ ] No `new Function` or `with` remains in `packages/thor/src`, and none in the migration generator's render.
 - [ ] Thor's test fixtures (`packages/thor/src/test-helpers/fixtures/doc/*.tt` and the `.rb` templates) are compiled for the thor tests.
+- [ ] The migration generator renders as Rails' `migration_template` does, with a plain `ERB.new(…, trim_mode: "-", eoutvar: "@output_buffer").result(binding)` (`vendor/rails/v8.0.2/railties/lib/rails/generators/migration.rb:65`), not `Thor::Actions::CapturableERB`, through the precompiled-module loader. trailties stops deep-importing `@blazetrails/thor/actions/file-manipulation`.
