@@ -2,7 +2,7 @@
 title: "Label every TS declaration with its naming shape"
 status: draft
 updated: 2026-10-26
-rfc: "0000-predicate-and-underscore-naming"
+rfc: "0208-predicate-and-underscore-naming"
 cluster: naming-shape-gate
 packages: ["scripts"]
 deps: ["rails-api-records-class-ivars"]

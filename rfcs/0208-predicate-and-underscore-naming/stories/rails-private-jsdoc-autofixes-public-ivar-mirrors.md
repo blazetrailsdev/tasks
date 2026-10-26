@@ -2,7 +2,7 @@
 title: "Autofix `@internal` onto public ivar-mirror members"
 status: draft
 updated: 2026-10-26
-rfc: "0000-predicate-and-underscore-naming"
+rfc: "0208-predicate-and-underscore-naming"
 cluster: ar-underscore-burndown
 packages: ["scripts", "activerecord"]
 deps: ["naming-shape-labels-in-extract-ts-api"]

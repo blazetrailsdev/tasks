@@ -2,7 +2,7 @@
 title: "Burn down activesupport naming-shape debt and enroll it in the gate"
 status: draft
 updated: 2026-10-26
-rfc: "0000-predicate-and-underscore-naming"
+rfc: "0208-predicate-and-underscore-naming"
 cluster: cross-package-burndown
 packages: ["activesupport"]
 deps: ["naming-shape-merge-base-gate"]

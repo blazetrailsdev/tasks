@@ -2,7 +2,7 @@
 title: "ActiveRecord adopts `has*` generated attribute predicates"
 status: draft
 updated: 2026-10-26
-rfc: "0000-predicate-and-underscore-naming"
+rfc: "0208-predicate-and-underscore-naming"
 cluster: ar-generated-predicates
 packages: ["activerecord"]
 deps: ["activemodel-attribute-method-suffix-maps-predicate-to-has-prefix"]

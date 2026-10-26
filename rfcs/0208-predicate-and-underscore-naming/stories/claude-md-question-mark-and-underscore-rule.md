@@ -2,7 +2,7 @@
 title: "CLAUDE.md: a `?` or `_` in a name"
 status: draft
 updated: 2026-10-26
-rfc: "0000-predicate-and-underscore-naming"
+rfc: "0208-predicate-and-underscore-naming"
 cluster: naming-shape-gate
 packages: []
 deps: []

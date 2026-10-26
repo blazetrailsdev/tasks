@@ -2,7 +2,7 @@
 title: "Make AR ivar mirrors `protected` where no `Host` interface reads them"
 status: draft
 updated: 2026-10-26
-rfc: "0000-predicate-and-underscore-naming"
+rfc: "0208-predicate-and-underscore-naming"
 cluster: ar-underscore-burndown
 packages: ["activerecord"]
 deps: ["rails-private-jsdoc-autofixes-public-ivar-mirrors"]

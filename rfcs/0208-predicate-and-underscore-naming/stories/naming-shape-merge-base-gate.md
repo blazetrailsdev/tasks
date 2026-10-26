@@ -2,7 +2,7 @@
 title: "Gate naming-shape debt against the merge-base, with no mark file"
 status: draft
 updated: 2026-10-26
-rfc: "0000-predicate-and-underscore-naming"
+rfc: "0208-predicate-and-underscore-naming"
 cluster: naming-shape-gate
 packages: ["scripts"]
 deps: ["naming-shape-labels-in-extract-ts-api"]

@@ -2,7 +2,7 @@
 title: "Take ActiveRecord's remaining naming-shape debt to zero"
 status: draft
 updated: 2026-10-26
-rfc: "0000-predicate-and-underscore-naming"
+rfc: "0208-predicate-and-underscore-naming"
 cluster: ar-underscore-burndown
 packages: ["activerecord"]
 deps:

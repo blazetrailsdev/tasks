@@ -1,5 +1,5 @@
 ---
-rfc: "0000-predicate-and-underscore-naming"
+rfc: "0208-predicate-and-underscore-naming"
 title: "Predicate and underscore naming: what Rails requires, what trails invented"
 status: draft
 created: 2026-10-26
@@ -29,9 +29,7 @@ clusters:
   - cross-package-burndown
 ---
 
-<!-- Unnumbered until merge. -->
-
-# RFC — Predicate and underscore naming: what Rails requires, what trails invented
+# RFC 0208 — Predicate and underscore naming: what Rails requires, what trails invented
 
 ## Summary
 
