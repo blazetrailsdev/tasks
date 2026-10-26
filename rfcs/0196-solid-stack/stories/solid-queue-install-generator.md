@@ -5,7 +5,10 @@ updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]
-deps: ["port-solid-queue-supervisor"]
+deps:
+  - port-solid-queue-supervisor
+  - thor-actions-template-is-unported
+  - generators-have-no-thor-source-paths-or-template-files
 deps-rfc: []
 est-loc: 150
 pr: null
