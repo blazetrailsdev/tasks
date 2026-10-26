@@ -13,6 +13,8 @@ packages:
   - activesupport
   - ruby-compat
   - "scripts"
+  - tzinfo
+  - date
 max-est-loc: 12000
 clusters:
   - fugit-family
