@@ -2,7 +2,7 @@
 title: "html-sanitizer-port-scrubbers"
 status: draft
 updated: 2026-09-30
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
 deps: []
