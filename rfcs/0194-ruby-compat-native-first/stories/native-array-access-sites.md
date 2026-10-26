@@ -1,6 +1,6 @@
 ---
 title: "Native [0] / .at(-1) / .slice for first / last / take / drop on Array receivers"
-status: claimed
+status: in-progress
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: native-sweep
@@ -9,7 +9,7 @@ deps: ["native-analogues-array-calls", "ruby-compat-native-required-lint"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#9348
 claim: "2026-10-26T18:32:13Z"
 assignee: "native-array-access-sites"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Native hasOwn ternary at two-argument literal-key Hash#fetch sites on plain objects"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: substitution
 packages: []
@@ -9,9 +9,9 @@ deps: [native-form-analogue-for-two-arg-hash-fetch]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9346
+claim: "2026-10-26T19:18:13Z"
+assignee: "native-fetch-two-arg-literal-key-sites"
 blocked-by: null
 ---
 

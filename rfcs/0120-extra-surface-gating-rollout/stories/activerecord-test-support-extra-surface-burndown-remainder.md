@@ -1,6 +1,6 @@
 ---
 title: "activerecord-test-support-extra-surface-burndown-remainder"
-status: claimed
+status: ready
 updated: 2026-10-26
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-26T18:59:10Z"
-assignee: "activerecord-test-support-extra-surface-burndown-remainder"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

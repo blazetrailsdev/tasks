@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-record-class-body-reads-config-after-initializers"
-status: draft
+status: ready
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "port-solid-queue-recurring-job"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null

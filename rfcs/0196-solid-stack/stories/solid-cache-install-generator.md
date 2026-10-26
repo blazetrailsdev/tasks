@@ -1,7 +1,7 @@
 ---
 title: "Port solid_cache:install"
-status: draft
-updated: 2026-10-17
+status: ready
+updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cache"]
@@ -15,6 +15,7 @@ claim: null
 assignee: null
 blocked-by: null
 closed-reason: null
+priority: 7
 ---
 
 ## Context

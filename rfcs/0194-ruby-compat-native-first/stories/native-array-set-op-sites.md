@@ -1,6 +1,6 @@
 ---
 title: "Native filter / Set / includes / join for compact / uniq / union / flatten / aryIncludes / aryJoin / aryCount over primitive elements"
-status: claimed
+status: in-progress
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: native-sweep
@@ -9,7 +9,7 @@ deps: ["native-analogues-array-calls", "ruby-compat-native-required-lint"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#9347
 claim: "2026-10-26T18:48:09Z"
 assignee: "native-array-set-op-sites"
 blocked-by: null
