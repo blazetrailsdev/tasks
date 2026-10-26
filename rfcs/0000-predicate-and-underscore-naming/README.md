@@ -57,14 +57,14 @@ From a scripted audit, run 2026-10-26. It was a `typescript-5` syntax-tree pass 
   property. No gate sees them.
 - **`_` is not converged.** AR has 975 `_`-prefixed declarations:
 
-  | Class                                     | Names | Sites | Status          |
-  | ----------------------------------------- | ----: | ----: | --------------- |
-  | Rails `_name`                             |   115 |   314 | required        |
-  | `@ivar` mirror, TS-public and untagged    |    90 |   151 | debt            |
-  | `@ivar` mirror, `@internal` or TS-private |   263 |   317 | fine            |
-  | Invented, public and untagged             |    62 |    79 | debt            |
-  | Invented, `@internal` with no receipt     |    34 |    47 | debt (RFC 0121) |
-  | Invented, TS-private                      |    65 |    73 | low priority    |
+  | Class                                     | Names | Sites | Status                                     |
+  | ----------------------------------------- | ----: | ----: | ------------------------------------------ |
+  | Rails `_name`                             |   115 |   314 | required                                   |
+  | `@ivar` mirror, TS-public and untagged    |    90 |   151 | debt                                       |
+  | `@ivar` mirror, `@internal` or TS-private |   263 |   317 | fine                                       |
+  | Invented, public and untagged             |    62 |    79 | debt                                       |
+  | Invented, `@internal` with no receipt     |    34 |    47 | re-measure (see Changes to existing gates) |
+  | Invented, TS-private                      |    65 |    73 | low priority                               |
 
   The unused-parameter `_` (201 sites), `_rest` (4) and reserved-word trailing
   `_` (30) are ratified and out of scope.
@@ -135,6 +135,20 @@ modifiers and tags, and the paired Ruby member in `rails-api.json`:
 | `snake`            | other `_` in a declaration name                                         | yes                                                  |
 | `js-protocol`      | a name from rule 5 (not `then`)                                         | yes, unless receipted                                |
 
+**Precedence.** A name gets the first row that matches, in this order:
+
+1. `receipted`
+2. `rails-underscore`
+3. `ivar`
+4. `private-helper`
+5. `q-suffix`
+6. `quoted-predicate`
+7. `js-protocol`
+8. `invented` (leading `_`)
+9. `snake`
+
+So a receipted ivar is `receipted`, and a Rails `_name` that is also an ivar name is `rails-underscore`. Rails' own name wins over the ivar reading. The table above is in the same order.
+
 Parameters and object keys are not labelled. `param-names.ts` already owns
 parameters, and object keys are data.
 
@@ -197,8 +211,12 @@ listed rows in these files reach 0", and its context is the listed rows.
 - **`blazetrails/rails-private-jsdoc`:** extend the autofix so it adds
   `@internal` to a public `ivar`-labelled member. Most of `ivarPublic`
   then burns down mechanically.
-- **`unbacked-internal-needs-receipt` (RFC 0121):** unchanged. It already owns
-  invented names that carry `@internal`.
+- **`unbacked-internal-needs-receipt` (an ESLint rule; RFC 0121):** unchanged.
+  AR is already enrolled (`enroll-activerecord-in-unbacked-internal-receipt-lint`,
+  done), so the rule accepts every AR `@internal` name it sees today, through
+  the private-methods manifest or a receipt. The audit's 34 "invented,
+  `@internal`, no receipt" names therefore need re-measuring with the label.
+  Any that come out `invented` belong to `ar-naming-shape-residue-to-zero`.
 - **RFC 0153:** `retire-q-suffix-crediting-in-extra-surface-and-naming` and
   the `rename-q-*` stories are done, so AR has no `Q` names. The `q-suffix`
   dimension is a backstop against regressions, and no burndown is planned.
@@ -245,27 +263,40 @@ listed rows in these files reach 0", and its context is the listed rows.
    - `ar-invented-underscore-adapter-driver-plumbing`
    - `ar-invented-underscore-base-and-schema-helpers`
    - `ar-snake-declaration-leftovers`
+   - `activemodel-attribute-method-suffix-maps-predicate-to-has-prefix`
    - `ar-generated-attribute-predicate-spelling`
+   - `ar-naming-shape-residue-to-zero`, which takes AR's `invented`,
+     `private-helper` and `jsProtocol` to 0 from `--list activerecord` after
+     the three targeted slices
 3. **Phase 3:** one `<pkg>-naming-shape-burndown` story per package, each of
    which enrolls its package in `ENROLLED` when it lands.
 
-### Proposed stories (not filed)
+### Stories
 
-| id                                                  |      est-loc | context                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| --------------------------------------------------- | -----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `rails-api-records-class-ivars`                     |          150 | The Ruby extractor records the `@ivar` names each class assigns, per class, in `rails-api.json`. Source: `vendor/rails/v8.0.2/**/lib`. Acceptance: `ActiveRecord::Core` lists `new_record`, `previously_new_record`, `destroyed`, `readonly`, `strict_loading_mode`, … (`core.rb` `init_internals`).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `naming-shape-labels-in-extract-ts-api`             |          250 | Add the `shape` field to `extract-ts-api.ts` declarations per the table above, plus the generated-predicate call-site row (`attribute-methods/query.ts:17`). Unit-test each label against fixtures.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `naming-shape-merge-base-gate`                      |          250 | Add `scripts/api-compare/lint-naming-shape.ts`, modelled on the `parity:api:sends` merge-base logic: rename pairing, per-file then per-package fallback, `ENROLLED = ["activerecord"]`, `--list`, and `output/naming-shape.json`. Wire it into the `rails-comparison` CI job.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `claude-md-question-mark-and-underscore-rule`       |         docs | The rule above. Cite `docs/ruby-ts-conventions.md:69-77` and `:120-128`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `extra-surface-underscore-candidate-private-only`   |           80 | `conventions.ts` (the `_`-prefixed last-candidate block): offer the candidate only when the Ruby method is private. Add receipts for any names it exposes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `rails-private-jsdoc-autofixes-public-ivar-mirrors` |          100 | Extend `eslint/rails-private-jsdoc.mjs` so a public member labelled `ivar` gets `@internal`. Run it on AR (90 names / 151 sites: `base.ts:1321-1324`, `core.ts:327,402,442,772-809`, `attribute-methods/dirty.ts:116-117`, `autosave-association.ts:28-39`, `persistence.ts:618,658`).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `ar-ivar-mirrors-become-protected`                  |          150 | Whatever the autofix leaves: prefer TS `protected` where no `Host` interface reads the name (Q4).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `ar-invented-underscore-relation-sync-twins`        |          200 | `_isRecordsSynchronous` (`relation.ts:464`, `collection-proxy.ts:429`, `relation/delegation.ts:192`) and `_isNone` (`relation/calculations.ts:137`, `finder-methods.ts:48`, `query-methods.ts:219`). Also `_loadResult`, `_fromLimitedIds`, `_applyEagerJoinDependency` and `_materializeDeferredDistinctPkPredicates`. Rails counterparts: `relation.rb` `none?` / `load`, `finder_methods.rb` `apply_join_dependency` / `limited_ids_for`. Inline each into its Rails method, or add a receipt.                                                                                                                                                                                                                                                                                                                                                 |
-| `ar-invented-underscore-adapter-driver-plumbing`    |          200 | `mysql2-adapter.ts:121,147,246`, `postgresql-adapter.ts:207-208`, `sqlite3-adapter.ts:1114-1143`, `sqlite3/database-statements.ts:121-123`. These are driver shims with no Rails counterpart: make them TS-private or add a `PERMANENT` receipt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `ar-invented-underscore-base-and-schema-helpers`    |          150 | `base.ts:560-568` (`_buildPkWhere*`), `base.ts:857-859` (the ratified `_suppress*` flags, which get receipts), `base.ts:2485`, `inheritance.ts:97,134,186`, `model-schema.ts:444`, `attribute-methods.ts:230`, `marshalling.ts:55,119`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `ar-snake-declaration-leftovers`                    |           40 | `relation/predicate-builder/association-query-value.ts:101` `id_value` and `test-fixtures.ts:272` `connection_name`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `ar-generated-attribute-predicate-spelling`         |          450 | `attribute-methods/query.ts:17-21` (drop the `"attribute?"` key and dispatch the `has` prefix to `queryAttribute`, Rails `query.rb:25-26`) and `primary-key.ts:207` (`"id?"` → `hasId`). Rails counterpart: `attribute_methods/query.rb` `attribute_method_suffix "?"` and `primary_key.rb` `ID_ATTRIBUTE_METHODS`. Needs the ActiveModel pattern machinery (`packages/activemodel/src/attribute-methods.ts`) to map a `?` suffix to a `has` prefix. Generation skips names already answered, so a column whose `has*` spelling is taken (`attribute` → `hasAttribute`, the port of `has_attribute?`) generates nothing, and Rails reaches that one through `query_attribute`. The 105 test reads (`record["approved?"]`, `attribute-methods.test.ts:761,901,906` `get ["title?"]`) become `hasApproved` / `hasTitle`, with test names unchanged. |
-| `<pkg>-naming-shape-burndown` ×6                    | 150–300 each | From `--list <pkg>`. Audit coarse counts of public untagged `_`: actionpack 123 (plus 17 `_setX`), actionview 88, activemodel 43, activesupport 36 (plus 23 quoted predicates), trailties 19, ruby-compat 8.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| id                                                                 | est-loc | cluster                 | deps                                                                                                                                                                                                |
+| ------------------------------------------------------------------ | ------: | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rails-api-records-class-ivars`                                    |     150 | naming-shape-gate       | —                                                                                                                                                                                                   |
+| `naming-shape-labels-in-extract-ts-api`                            |     250 | naming-shape-gate       | `rails-api-records-class-ivars`                                                                                                                                                                     |
+| `naming-shape-merge-base-gate`                                     |     250 | naming-shape-gate       | `naming-shape-labels-in-extract-ts-api`                                                                                                                                                             |
+| `claude-md-question-mark-and-underscore-rule`                      |    docs | naming-shape-gate       | —                                                                                                                                                                                                   |
+| `extra-surface-underscore-candidate-private-only`                  |      80 | ar-underscore-burndown  | `naming-shape-labels-in-extract-ts-api`                                                                                                                                                             |
+| `rails-private-jsdoc-autofixes-public-ivar-mirrors`                |     100 | ar-underscore-burndown  | `naming-shape-labels-in-extract-ts-api`                                                                                                                                                             |
+| `ar-ivar-mirrors-become-protected`                                 |     150 | ar-underscore-burndown  | `rails-private-jsdoc-autofixes-public-ivar-mirrors`                                                                                                                                                 |
+| `ar-invented-underscore-relation-sync-twins`                       |     200 | ar-underscore-burndown  | `naming-shape-merge-base-gate`                                                                                                                                                                      |
+| `ar-invented-underscore-adapter-driver-plumbing`                   |     200 | ar-underscore-burndown  | `naming-shape-merge-base-gate`                                                                                                                                                                      |
+| `ar-invented-underscore-base-and-schema-helpers`                   |     150 | ar-underscore-burndown  | `naming-shape-merge-base-gate`                                                                                                                                                                      |
+| `ar-snake-declaration-leftovers`                                   |      40 | ar-underscore-burndown  | `naming-shape-merge-base-gate`                                                                                                                                                                      |
+| `activemodel-attribute-method-suffix-maps-predicate-to-has-prefix` |     150 | ar-generated-predicates | —                                                                                                                                                                                                   |
+| `ar-generated-attribute-predicate-spelling`                        |     300 | ar-generated-predicates | `activemodel-attribute-method-suffix-maps-predicate-to-has-prefix`                                                                                                                                  |
+| `ar-naming-shape-residue-to-zero`                                  |     200 | ar-underscore-burndown  | `ar-invented-underscore-relation-sync-twins`, `ar-invented-underscore-adapter-driver-plumbing`, `ar-invented-underscore-base-and-schema-helpers`, `extra-surface-underscore-candidate-private-only` |
+| `actionpack-naming-shape-burndown`                                 |     250 | cross-package-burndown  | `naming-shape-merge-base-gate`                                                                                                                                                                      |
+| `actionview-naming-shape-burndown`                                 |     250 | cross-package-burndown  | `naming-shape-merge-base-gate`                                                                                                                                                                      |
+| `activemodel-naming-shape-burndown`                                |     250 | cross-package-burndown  | `naming-shape-merge-base-gate`                                                                                                                                                                      |
+| `activesupport-naming-shape-burndown`                              |     150 | cross-package-burndown  | `naming-shape-merge-base-gate`                                                                                                                                                                      |
+| `ruby-compat-naming-shape-burndown`                                |     150 | cross-package-burndown  | `naming-shape-merge-base-gate`                                                                                                                                                                      |
+| `trailties-naming-shape-burndown`                                  |     150 | cross-package-burndown  | `naming-shape-merge-base-gate`                                                                                                                                                                      |
+
+Each story file holds the Context (Rails and trails `file:line`) and the acceptance criteria. This table is only an index.
 
 Prior art. These are referenced, not duplicated:
 
@@ -283,10 +314,11 @@ Prior art. These are referenced, not duplicated:
   The burndown stories here exclude those names.
 - RFC 0126, `wide-call-analyzer-normalize-rails-private-underscore-prefix`:
   done. The call analyzer already strips a Rails-private `_`.
-- RFC 0120, `report-and-ratchet-internal-counts`, and RFC 0121's
-  `unbacked-internal-needs-receipt` enrollment: these own the invented
-  `@internal` names without a receipt (34 in AR). This RFC labels them
-  `invented` but files no story for them.
+- RFC 0120, `report-and-ratchet-internal-counts` (done), and RFC 0121,
+  `enroll-activerecord-in-unbacked-internal-receipt-lint` (done): these own
+  the receipt requirement for `@internal`. This RFC re-measures AR's names
+  against it, and `ar-naming-shape-residue-to-zero` owns any invented
+  residue.
 - RFC 0141, `abstract-controller-action-methods-drops-underscore-filter`:
   draft. It is actionpack's `_`-filter behaviour, not naming, so it is left
   to that RFC.
@@ -321,5 +353,6 @@ Prior art. These are referenced, not duplicated:
 - 2026-10-26: initial draft from the predicates/underscores audit, built on the
   merge-base gate shape (no mark file).
 - 2026-10-26: Q1 → generated predicates are `has*`; Q2 → `then` ratified.
+- 2026-10-26: review fixes: the label precedence is now explicit; added `ar-naming-shape-residue-to-zero`; split the generated-predicate work into an activemodel story and an AR story; the stories table is now an index generated from the files; the 0121 reference now names the done AR enrollment story; corrected story packages and added a measure-first clause.
 - 2026-10-26: self-review: added related-rfcs, corrected the prior-art statuses and RFC numbers, restated the audit figures inline, renamed `ar-ivar-mirrors-become-protected`, and resized the generated-predicate story to 450.
 - 2026-10-26: Q3 → invented names are labelled `invented`; Q4 → `@internal` autofix, then `protected`.

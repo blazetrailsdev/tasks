@@ -4,7 +4,7 @@ status: draft
 updated: 2026-10-26
 rfc: "0000-predicate-and-underscore-naming"
 cluster: naming-shape-gate
-packages: ["scripts"]
+packages: []
 deps: []
 deps-rfc: []
 est-loc: null

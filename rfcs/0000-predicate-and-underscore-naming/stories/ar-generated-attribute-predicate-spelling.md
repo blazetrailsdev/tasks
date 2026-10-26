@@ -1,13 +1,13 @@
 ---
-title: "Generated attribute predicates are `has*`"
+title: "ActiveRecord adopts `has*` generated attribute predicates"
 status: draft
 updated: 2026-10-26
 rfc: "0000-predicate-and-underscore-naming"
 cluster: ar-generated-predicates
-packages: ["activemodel", "activerecord"]
-deps: ["naming-shape-merge-base-gate"]
+packages: ["activerecord"]
+deps: ["activemodel-attribute-method-suffix-maps-predicate-to-has-prefix"]
 deps-rfc: []
-est-loc: 450
+est-loc: 300
 priority: null
 pr: null
 claim: null
@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-Ruled 2026-10-26: `attribute_method_suffix "?"` (`vendor/rails/v8.0.2/activerecord/lib/active_record/attribute_methods/query.rb`) generates `hasTitle` for `title?`. Today `packages/activerecord/src/attribute-methods/query.ts:17-21` registers the suffix `"?"` with pattern target `"attribute?": queryAttribute`, so a record answers `record["title?"]`, and `attribute-methods/primary-key.ts:207` lists `"id?"`. The ActiveModel pattern machinery (`packages/activemodel/src/attribute-methods.ts`) has to map the `?` suffix to a `has` prefix. The pattern target is a getter, per CLAUDE.md § "Generated attribute readers are properties". Generation skips a name the class already answers; the pattern target stays `queryAttribute`, because Rails' `attribute?` is a private alias of `query_attribute` (`query.rb:25-26`) and `hasAttribute` is already `has_attribute?`, and a column whose `has*` spelling is taken generates nothing. About 105 test reads (`record["approved?"]`, `attribute-methods.test.ts:761,901,906` `get ["title?"]`) change with it. Test names do not change.
+Ruled 2026-10-26: `attribute_method_suffix "?"` (`vendor/rails/v8.0.2/activerecord/lib/active_record/attribute_methods/query.rb`) generates `hasTitle` for `title?`. Today `packages/activerecord/src/attribute-methods/query.ts:17-21` registers the suffix `"?"` with pattern target `"attribute?": queryAttribute`, so a record answers `record["title?"]`, and `attribute-methods/primary-key.ts:207` lists `"id?"`. The ActiveModel mapping lands first (`activemodel-attribute-method-suffix-maps-predicate-to-has-prefix`). This story adopts it in AR. The pattern target is a getter, per CLAUDE.md § "Generated attribute readers are properties". Generation skips a name the class already answers; the pattern target stays `queryAttribute`, because Rails' `attribute?` is a private alias of `query_attribute` (`query.rb:25-26`) and `hasAttribute` is already `has_attribute?`, and a column whose `has*` spelling is taken generates nothing. About 105 test reads (`record["approved?"]`, `attribute-methods.test.ts:761,901,906` `get ["title?"]`) change with it. Test names do not change.
 
 ## Acceptance criteria
 

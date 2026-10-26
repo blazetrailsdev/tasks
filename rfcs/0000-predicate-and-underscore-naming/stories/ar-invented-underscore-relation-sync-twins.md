@@ -31,4 +31,4 @@ Names owned by `table-name-and-primary-key-are-declared-through-underscore-stati
 ## Acceptance criteria
 
 - [ ] Each name is inlined into, or renamed to, the Rails method it serves. Where that is impossible, it is TS-private or receipted.
-- [ ] The `invented` count drops for each touched file, and the call gates stay green.
+- [ ] `invented` reaches 0 for the names listed above, and the call gates stay green.
