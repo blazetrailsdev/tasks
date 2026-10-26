@@ -1,6 +1,6 @@
 ---
 title: "port-solid-queue-recurring-job"
-status: ready
+status: in-progress
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9338
+claim: "2026-10-26T17:35:59Z"
+assignee: "port-solid-queue-recurring-job"
 blocked-by: null
 closed-reason: null
 ---

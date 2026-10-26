@@ -1,6 +1,6 @@
 ---
 title: "SolidQueue::Record gets connectsTo when booted through the package entry"
-status: draft
+status: in-progress
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9339
+claim: "2026-10-26T17:48:43Z"
+assignee: "enumerable-table-dispatch-for-each-receivers"
 blocked-by: null
 closed-reason: null
 ---

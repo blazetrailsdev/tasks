@@ -1,6 +1,6 @@
 ---
 title: "recurring-schedule-selects-valid-tasks-on-construction"
-status: ready
+status: blocked
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-26T17:35:59Z"
+assignee: "port-solid-queue-recurring-job"
+blocked-by: "owner ruling pending on a sync valid? path in a constructor; deferred by owner 2026-10-26"
 closed-reason: null
 ---
 

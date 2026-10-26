@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Actions copy_file / link_file / get / template (TSE render, capture / concat) and route the migration generator's in-line render through it"
-status: ready
-updated: 2026-10-04
+status: claimed
+updated: 2026-10-26
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -14,8 +14,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-26T17:44:33Z"
+assignee: "thor-actions-template-is-unported"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "RoutesHelpers.with is a non-enumerable singleton, as def self.with"
-status: draft
+status: claimed
 updated: 2026-10-26
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-26T17:25:26Z"
+assignee: "render-hashlike-locals-and-view-ivars"
 blocked-by: null
 closed-reason: null
 ---

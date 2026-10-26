@@ -1,6 +1,6 @@
 ---
 title: "time-strftime-week-numbers-are-julian-before-1582"
-status: draft
+status: done
 updated: 2026-10-26
 rfc: "0207-fugit-gem-family-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9337
+claim: "2026-10-26T17:26:11Z"
+assignee: "time-strftime-week-numbers-are-julian-before-1582"
 blocked-by: null
 closed-reason: null
 ---

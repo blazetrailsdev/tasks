@@ -1,6 +1,6 @@
 ---
 title: "Template lookup resolves test/hello_world_from_rxml to its kebab-case builder fixture"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0176-actionview-helpers"
 cluster: null

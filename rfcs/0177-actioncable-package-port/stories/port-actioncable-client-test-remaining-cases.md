@@ -1,6 +1,6 @@
 ---
 title: "port-actioncable-client-test-remaining-cases"
-status: ready
+status: done
 updated: 2026-10-26
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9311
+claim: "2026-10-26T17:30:24Z"
+assignee: "claude-md-register-x-over-eager-load"
 blocked-by: null
 closed-reason: null
 ---

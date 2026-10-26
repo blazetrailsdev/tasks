@@ -1,6 +1,6 @@
 ---
 title: "Port solid_queue:install"
-status: ready
+status: blocked
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: solid-stack
@@ -12,9 +12,9 @@ deps:
 deps-rfc: []
 est-loc: 150
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-26T17:35:59Z"
+assignee: "port-solid-queue-recurring-job"
+blocked-by: "needs Thor::Actions#template (thor-actions-template-is-unported) and generator source_root/template files (generators-have-no-thor-source-paths-or-template-files)"
 closed-reason: null
 ---
 

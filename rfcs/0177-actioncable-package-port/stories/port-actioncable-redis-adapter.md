@@ -1,6 +1,6 @@
 ---
 title: "Port SubscriptionAdapter::Redis over an npm Redis client, with its connector tests"
-status: ready
+status: claimed
 updated: 2026-10-26
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
@@ -9,8 +9,8 @@ deps: ["port-actioncable-inline-async-and-test-adapters"]
 deps-rfc: []
 est-loc: 550
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-26T17:30:24Z"
+assignee: "claude-md-register-x-over-eager-load"
 blocked-by: null
 closed-reason: null
 ---

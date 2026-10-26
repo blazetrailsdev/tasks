@@ -1,6 +1,6 @@
 ---
 title: "enumerable-table-dispatch-for-each-receivers"
-status: ready
+status: in-progress
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9339
+claim: "2026-10-26T17:48:43Z"
+assignee: "enumerable-table-dispatch-for-each-receivers"
 blocked-by: null
 closed-reason: null
 ---
