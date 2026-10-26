@@ -24,5 +24,11 @@ closed-reason: null
 
 ## Acceptance criteria
 
-- `connects_to` runs from `record.ts`'s class body, as at `record.rb:7`, while an app booted through `@blazetrails/solid-queue` still connects to `config.solidQueue.connectsTo`. Two ways to get there: get a repo-owner ruling that ratifies the hook, or find a load-order shape that runs the class body after the initializers. Either way, remove the `onLoad` hook from `engine.ts` and both receipts.
-- The `tableNamePrefix` line converges onto how Rails applies the prefix, or is removed, and a configured prefix is honoured when the app is booted through the package entry.
+- The repo owner ruled (2026-10-26, trails#9349) that the `runOnce`
+  `onLoad("solid_queue_record")` hook stays: ESM evaluates `record.ts` before
+  any initializer, and trails has no autoloader. Both receipts become
+  `PERMANENT`, and the ruling is recorded in `packages/solid-queue/CLAUDE.md`.
+- `tableNamePrefix`: Rails defines no `SolidQueue.table_name_prefix=`
+  (`railties/lib/rails/engine.rb:396-404`), so there is no configured prefix to
+  honour. `record.ts` keeps its static default, and convergence onto the
+  `module_parents` walk is `solid-queue-models-named-under-solid-queue-namespace`.
