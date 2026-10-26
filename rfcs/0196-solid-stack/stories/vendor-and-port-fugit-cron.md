@@ -1,7 +1,7 @@
 ---
 title: "Vendor and port the fugit cron parser for SolidQueue::RecurringTask"
-status: draft
-updated: 2026-10-23
+status: closed
+updated: 2026-10-25
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by port-fugit-package (trails#9312), which ports the whole fugit gem"
 ---
 
 ## Context

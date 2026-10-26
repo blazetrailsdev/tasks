@@ -1,6 +1,6 @@
 ---
 title: "Make EoTime fast enough for fugit's brute_frequency spec to run in CI"
-status: blocked
+status: in-progress
 updated: 2026-10-25
 rfc: "0207-fugit-gem-family-port"
 cluster: null
@@ -10,10 +10,10 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#9315
 claim: "2026-10-25T21:19:08Z"
 assignee: "eotime-next-time-fast-enough-for-fugit-brute-frequency"
-blocked-by: "waiting on port-fugit-package: packages/fugit (Cron#nextTime, cron.test.ts with the parked example) is not on origin/main and has no PR yet"
+blocked-by: null
 closed-reason: null
 ---
 
