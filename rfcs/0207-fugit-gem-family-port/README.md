@@ -20,7 +20,7 @@ related-rfcs:
   - "0185-ruby-ts-codegen"
   - "0196-solid-stack"
   - "0193-small-gem-ports-parity-100"
-priority: 3
+priority: 1
 ---
 
 # RFC 0207 — fugit and its gem family ported from generated output to 100%

@@ -1,6 +1,6 @@
 ---
 title: "fugit At.parse rescue nil misses the TypeError standing in for NoMethodError"
-status: ready
+status: in-progress
 updated: 2026-10-26
 rfc: "0207-fugit-gem-family-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9320
+claim: "2026-10-26T01:48:15Z"
+assignee: "fugit-at-parse-rescue-misses-typeerror-nomethoderror"
 blocked-by: null
 closed-reason: null
 ---

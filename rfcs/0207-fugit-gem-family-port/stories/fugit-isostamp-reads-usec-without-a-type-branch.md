@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: trails#9316
+pr: trails#9317
 claim: "2026-10-25T23:24:49Z"
 assignee: "differential-fuzz-fugit-family-against-ruby"
 blocked-by: null

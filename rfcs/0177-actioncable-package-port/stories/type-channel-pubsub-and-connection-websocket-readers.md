@@ -1,6 +1,6 @@
 ---
 title: "Type Channel#pubsub and widen Connection#websocket so tests read them as Rails does"
-status: ready
+status: in-progress
 updated: 2026-10-26
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9318
+claim: "2026-10-26T01:18:25Z"
+assignee: "configuration-test-framework-deprecators"
 blocked-by: null
 closed-reason: null
 ---

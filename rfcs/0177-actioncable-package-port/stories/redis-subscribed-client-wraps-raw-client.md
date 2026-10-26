@@ -1,6 +1,6 @@
 ---
 title: "redis-subscribed-client-wraps-raw-client"
-status: draft
+status: closed
 updated: 2026-10-26
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: filed for a receipt the call-args gate does not accept; the Redis adapter port was deferred out of trails PR for eager-load-app-channels-in-finisher, so the premise no longer exists."
 ---
 
 ## Context

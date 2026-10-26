@@ -1,6 +1,6 @@
 ---
 title: "Load and register an application's app/channels classes"
-status: claimed
+status: in-progress
 updated: 2026-10-26
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
@@ -8,7 +8,7 @@ packages: ["trailties"]
 deps: ["port-actioncable-engine", "actioncable-class-names-round-trip-through-constantize"]
 deps-rfc: []
 est-loc: 250
-pr: null
+pr: trails#9319
 claim: "2026-10-26T00:58:36Z"
 assignee: "eager-load-app-channels-in-finisher"
 blocked-by: null

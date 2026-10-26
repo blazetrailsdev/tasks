@@ -1,6 +1,6 @@
 ---
 title: "configuration-test-framework-deprecators"
-status: ready
+status: blocked
 updated: 2026-10-26
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-26T01:18:25Z"
+assignee: "configuration-test-framework-deprecators"
+blocked-by: "waiting on ActionMailbox, ActionMailer, ActionText and ActiveStorage ports seating their deprecators; none of those packages exist yet"
 closed-reason: null
 ---
 
