@@ -1,6 +1,6 @@
 ---
 title: "Native hasOwn ternary at two-argument literal-key Hash#fetch sites on plain objects"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: substitution

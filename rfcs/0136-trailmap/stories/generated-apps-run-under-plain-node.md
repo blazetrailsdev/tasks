@@ -1,6 +1,6 @@
 ---
 title: "Generated apps run their TypeScript under plain node, not the tsx loader"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0136-trailmap"
 cluster: null
