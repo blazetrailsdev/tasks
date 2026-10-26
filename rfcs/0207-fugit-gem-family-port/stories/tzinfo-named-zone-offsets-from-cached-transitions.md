@@ -1,6 +1,6 @@
 ---
 title: "tzinfo named-zone offsets from cached transition data, not Intl per lookup"
-status: draft
+status: ready
 updated: 2026-10-26
 rfc: "0207-fugit-gem-family-port"
 cluster: null

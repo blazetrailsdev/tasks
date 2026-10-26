@@ -1,7 +1,7 @@
 ---
 title: "Make EoTime fast enough for fugit's brute_frequency spec to run in CI"
-status: in-progress
-updated: 2026-10-25
+status: done
+updated: 2026-10-26
 rfc: "0207-fugit-gem-family-port"
 cluster: null
 packages: ["et-orbi", "tzinfo", "date", "fugit"]

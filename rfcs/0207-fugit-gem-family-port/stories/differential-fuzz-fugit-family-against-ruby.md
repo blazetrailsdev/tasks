@@ -1,7 +1,7 @@
 ---
 title: "Differential fuzz of raabro, chronic, et-orbi and fugit against the Ruby gems"
-status: claimed
-updated: 2026-10-25
+status: in-progress
+updated: 2026-10-26
 rfc: "0207-fugit-gem-family-port"
 cluster: fugit-family
 packages: ["fugit", "et-orbi", "chronic", "raabro", "scripts"]
@@ -9,7 +9,7 @@ deps: ["port-fugit-package", "port-et-orbi-package", "port-chronic-package", "po
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#9316
 claim: "2026-10-25T23:24:49Z"
 assignee: "differential-fuzz-fugit-family-against-ruby"
 blocked-by: null

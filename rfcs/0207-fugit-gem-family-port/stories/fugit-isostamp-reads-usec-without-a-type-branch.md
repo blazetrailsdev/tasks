@@ -1,7 +1,7 @@
 ---
 title: "fugit isostamp reads t.usec without a Time/EoTime branch"
-status: claimed
-updated: 2026-10-25
+status: in-progress
+updated: 2026-10-26
 rfc: "0207-fugit-gem-family-port"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9316
 claim: "2026-10-25T23:24:49Z"
 assignee: "differential-fuzz-fugit-family-against-ruby"
 blocked-by: null
