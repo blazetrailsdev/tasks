@@ -2,7 +2,7 @@
 title: "html-sanitizer: port the Parser/Scrubber/Serializer concerns so HTML4 and HTML5 vendors parse with their own fragment"
 status: blocked
 updated: 2026-10-17
-rfc: "0176-actionview-helpers"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []

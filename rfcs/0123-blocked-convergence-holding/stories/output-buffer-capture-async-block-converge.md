@@ -2,7 +2,7 @@
 title: "Converge OutputBuffer#capture's async-block arm to Rails' ensure shape"
 status: blocked
 updated: 2026-10-19
-rfc: "0176-actionview-helpers"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
