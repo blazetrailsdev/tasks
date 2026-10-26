@@ -1,7 +1,7 @@
 ---
 title: "Delete sendInternal's name-guessing arms that no computed-name caller reaches"
 status: ready
-updated: 2026-10-25
+updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: send
 packages: ["ruby-compat", "scripts"]

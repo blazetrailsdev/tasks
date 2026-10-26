@@ -1,6 +1,6 @@
 ---
 title: "fugit brute_frequency examples fail under a DST local TZ"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0207-fugit-gem-family-port"
 cluster: null

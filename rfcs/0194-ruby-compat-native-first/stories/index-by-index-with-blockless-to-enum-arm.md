@@ -1,7 +1,7 @@
 ---
 title: "index-by-index-with-blockless-to-enum-arm"
-status: ready
-updated: 2026-10-25
+status: in-progress
+updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9321
+claim: "2026-10-26T12:14:58Z"
+assignee: "delete-identity-and-alias-ruby-compat-helpers"
 blocked-by: null
 closed-reason: null
 ---

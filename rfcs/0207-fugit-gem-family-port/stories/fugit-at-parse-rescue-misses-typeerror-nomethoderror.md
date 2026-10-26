@@ -1,6 +1,6 @@
 ---
 title: "fugit At.parse rescue nil misses the TypeError standing in for NoMethodError"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0207-fugit-gem-family-port"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Module initialize hook takes no constructor args, so AR Type::Date/DateTime/Time each repeat Internal::Timezone#initialize"
-status: done
-updated: 2026-10-23
+status: closed
+updated: 2026-10-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: trails#8895
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the module initialize hook machinery is deleted by trails#9321 (delete-module-initialize-hook-machinery)"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "Schema Parity (trails side) failing on main @b704de22"
-status: ready
+status: in-progress
 updated: 2026-10-26
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#9323
+claim: "2026-10-26T12:43:23Z"
+assignee: "red-b704de22"
 blocked-by: null
 closed-reason: null
 ---

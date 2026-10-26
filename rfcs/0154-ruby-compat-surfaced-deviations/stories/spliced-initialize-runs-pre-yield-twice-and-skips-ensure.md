@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: a spliced module initialize runs its pre-yield code twice and skips an ensure around super"
-status: draft
-updated: 2026-10-07
+status: closed
+updated: 2026-10-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the module initialize hook machinery is deleted by trails#9321 (delete-module-initialize-hook-machinery)"
 ---
 
 ## Context

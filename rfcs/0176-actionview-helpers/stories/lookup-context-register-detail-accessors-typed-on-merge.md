@@ -1,7 +1,7 @@
 ---
 title: "lookup-context-register-detail-accessors-typed-on-merge"
-status: ready
-updated: 2026-10-25
+status: in-progress
+updated: 2026-10-26
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9324
+claim: "2026-10-26T12:14:35Z"
+assignee: "lookup-context-register-detail-accessors-typed-on-merge"
 blocked-by: null
 closed-reason: null
 ---

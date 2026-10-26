@@ -1,16 +1,16 @@
 ---
 title: "Delete include.ts's initialize hook machinery, which no module feeds any more"
-status: ready
-updated: 2026-10-25
+status: in-progress
+updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: deletion
 packages: ["ruby-compat", "activesupport", "actionpack", "activerecord", "trailties"]
 deps: []
 deps-rfc: []
 est-loc: 350
-pr: null
-claim: null
-assignee: null
+pr: trails#9321
+claim: "2026-10-26T12:14:58Z"
+assignee: "delete-identity-and-alias-ruby-compat-helpers"
 blocked-by: null
 closed-reason: null
 ---

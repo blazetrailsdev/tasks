@@ -1,6 +1,6 @@
 ---
 title: "range-size-for-index-by-enumerator"
-status: draft
+status: in-progress
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9321
+claim: "2026-10-26T12:36:39Z"
+assignee: "range-size-for-index-by-enumerator"
 blocked-by: null
 closed-reason: null
 ---

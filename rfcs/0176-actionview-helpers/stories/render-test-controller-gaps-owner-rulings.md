@@ -1,7 +1,7 @@
 ---
 title: "render-test-controller-gaps-owner-rulings"
 status: ready
-updated: 2026-10-25
+updated: 2026-10-26
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
