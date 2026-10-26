@@ -24,6 +24,8 @@ The audit found these sites:
 - `base.ts:857-859` (`_suppressAbstractCheck` / `_suppressStiNewDispatch`, ratified in CLAUDE.md § "A record is built with `new Klass` only", so they get receipts).
 - `inheritance.ts:97,134,186` (`_computedBaseClass`, `__resetPrimaryAbstractClass`), `model-schema.ts:444` (`_schemaLoadPromise`), `attribute-methods.ts:230` (`_dangerousMethodsCache`) and `marshalling.ts:55,119` (`_marshalDump71`).
 
+Names owned by `table-name-and-primary-key-are-declared-through-underscore-statics` (RFC 0189) are out of scope here.
+
 ## Acceptance criteria
 
 - [ ] Each name is inlined into its Rails method, TS-private, or receipted, with the ratified flags receipted against their CLAUDE.md section.

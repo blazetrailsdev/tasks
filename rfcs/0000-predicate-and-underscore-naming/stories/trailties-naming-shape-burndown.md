@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-The audit's coarse count (`audits/predicates-underscores-20261026T164305Z.md`) is 19 TS-public untagged `_` declarations in `packages/trailties/src`, before the Rails/ivar split. Cut the work from `pnpm parity:api:naming-shape --list trailties`. If the rows exceed one PR, ship a slice and file the rest.
+The RFC audit's coarse count (2026-10-26) is 19 TS-public untagged `_` declarations in `packages/trailties/src`, before the Rails/ivar split. Cut the work from `pnpm parity:api:naming-shape --list trailties`. If the rows exceed one PR, ship a slice and file the rest.
 
 ## Acceptance criteria
 

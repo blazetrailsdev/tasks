@@ -26,6 +26,8 @@ The audit found these invented public `_` names on Relation code:
 
 The Rails counterparts are `vendor/rails/v8.0.2/activerecord/lib/active_record/relation.rb` `none?` / `load` and `relation/finder_methods.rb` `apply_join_dependency` / `limited_ids_for`.
 
+Names owned by `table-name-and-primary-key-are-declared-through-underscore-statics` (RFC 0189) are out of scope here.
+
 ## Acceptance criteria
 
 - [ ] Each name is inlined into, or renamed to, the Rails method it serves. Where that is impossible, it is TS-private or receipted.

@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-The naming-shape labeller needs to tell a Ruby `@ivar` mirror (`@new_record` → `_newRecord`) from an invented `_` name. Today the only source is a vendor grep that ignores which class assigns the ivar. The audit found 353 AR ivar-mirror names this way (`audits/predicates-underscores-20261026T164305Z.md`). The Ruby extractor that writes `rails-api.json` sees every `def` body, so it can record the `@foo` assignments per class.
+The naming-shape labeller needs to tell a Ruby `@ivar` mirror (`@new_record` → `_newRecord`) from an invented `_` name. Today the only source is a vendor grep that ignores which class assigns the ivar. The audit found 353 AR ivar-mirror names this way (RFC Motivation). The Ruby extractor that writes `rails-api.json` sees every `def` body, so it can record the `@foo` assignments per class.
 
 ## Acceptance criteria
 
