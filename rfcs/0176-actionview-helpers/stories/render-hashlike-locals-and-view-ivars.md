@@ -1,6 +1,6 @@
 ---
 title: "render-hashlike-locals-and-view-ivars"
-status: claimed
+status: in-progress
 updated: 2026-10-26
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9341
 claim: "2026-10-26T17:25:26Z"
 assignee: "render-hashlike-locals-and-view-ivars"
 blocked-by: null

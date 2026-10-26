@@ -1,7 +1,7 @@
 ---
 title: "Native Math / Number / trim forms for toI / toF / round / isNan / max / min / strip / chomp / strlen where the value set makes them identical"
-status: ready
-updated: 2026-10-22
+status: claimed
+updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: native-sweep
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-26T18:48:09Z"
+assignee: "native-array-set-op-sites"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Native [0] / .at(-1) / .slice for first / last / take / drop on Array receivers"
-status: ready
-updated: 2026-10-22
+status: claimed
+updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: native-sweep
 packages: ["activemodel", "activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-26T18:32:13Z"
+assignee: "native-array-access-sites"
 blocked-by: null
 closed-reason: null
 ---

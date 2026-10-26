@@ -1,7 +1,7 @@
 ---
 title: "i18n-core-string-helpers-move-to-ruby-compat"
-status: draft
-updated: 2026-10-20
+status: claimed
+updated: 2026-10-26
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-26T18:59:10Z"
+assignee: "activerecord-test-support-extra-surface-burndown-remainder"
 blocked-by: null
 closed-reason: null
 ---

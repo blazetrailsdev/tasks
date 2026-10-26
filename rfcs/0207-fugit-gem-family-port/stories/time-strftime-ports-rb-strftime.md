@@ -1,6 +1,6 @@
 ---
 title: "Time#strftime ports rb_strftime instead of reusing date_strftime"
-status: draft
+status: in-progress
 updated: 2026-10-26
 rfc: "0207-fugit-gem-family-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9344
+claim: "2026-10-26T18:30:29Z"
+assignee: "time-strftime-ports-rb-strftime"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "SolidQueue::Record gets connectsTo when booted through the package entry"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null

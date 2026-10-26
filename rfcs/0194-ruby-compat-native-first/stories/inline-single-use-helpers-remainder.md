@@ -1,6 +1,6 @@
 ---
 title: "inline-single-use-helpers-remainder"
-status: ready
+status: done
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9342
+claim: "2026-10-26T18:18:33Z"
+assignee: "inline-single-use-helpers-remainder"
 blocked-by: null
 closed-reason: null
 ---

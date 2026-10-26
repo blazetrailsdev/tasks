@@ -1,7 +1,7 @@
 ---
 title: "Native filter / Set / includes / join for compact / uniq / union / flatten / aryIncludes / aryJoin / aryCount over primitive elements"
-status: ready
-updated: 2026-10-22
+status: claimed
+updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: native-sweep
 packages: ["actionpack", "activemodel", "activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-26T18:48:09Z"
+assignee: "native-array-set-op-sites"
 blocked-by: null
 closed-reason: null
 ---

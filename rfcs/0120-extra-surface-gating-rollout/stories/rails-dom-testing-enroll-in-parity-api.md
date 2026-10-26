@@ -1,7 +1,7 @@
 ---
 title: "rails-dom-testing-enroll-in-parity-api"
-status: draft
-updated: 2026-10-21
+status: claimed
+updated: 2026-10-26
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-26T18:59:10Z"
+assignee: "activerecord-test-support-extra-surface-burndown-remainder"
 blocked-by: null
 closed-reason: null
 ---
