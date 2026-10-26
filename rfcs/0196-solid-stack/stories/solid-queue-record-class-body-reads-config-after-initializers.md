@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-record-class-body-reads-config-after-initializers"
-status: ready
+status: done
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9349
+claim: "2026-10-26T20:00:54Z"
+assignee: "solid-queue-record-class-body-reads-config-after-initializers"
 blocked-by: null
 closed-reason: null
 ---

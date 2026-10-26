@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-native-required rule tests: fixture project must resolve lib on CI so Map/Set exclusions are not vacuous"
-status: ready
-updated: 2026-10-25
+status: in-progress
+updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: gate
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9353
+claim: "2026-10-26T20:48:20Z"
+assignee: "native-required-lint-fixture-resolves-lib-on-ci"
 blocked-by: null
 closed-reason: null
 ---

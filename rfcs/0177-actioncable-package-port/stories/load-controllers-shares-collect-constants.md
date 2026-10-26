@@ -1,6 +1,6 @@
 ---
 title: "App controllers register through registerController, like registerModel/registerJob/registerChannel"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0177-actioncable-package-port"
 cluster: null

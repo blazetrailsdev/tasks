@@ -1,6 +1,6 @@
 ---
 title: "Native filter / Set / includes / join for compact / uniq / union / flatten / aryIncludes / aryJoin / aryCount over primitive elements"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: native-sweep

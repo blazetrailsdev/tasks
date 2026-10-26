@@ -1,6 +1,6 @@
 ---
 title: "Port SubscriptionAdapter::Redis over an npm Redis client, with its connector tests"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0177-actioncable-package-port"
 cluster: fidelity

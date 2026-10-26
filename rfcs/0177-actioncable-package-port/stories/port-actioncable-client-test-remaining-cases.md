@@ -1,6 +1,6 @@
 ---
 title: "port-actioncable-client-test-remaining-cases"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0177-actioncable-package-port"
 cluster: null

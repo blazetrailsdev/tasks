@@ -1,6 +1,6 @@
 ---
 title: "thor-tt-templates-are-precompiled"
-status: draft
+status: in-progress
 updated: 2026-10-26
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9351
+claim: "2026-10-26T20:30:54Z"
+assignee: "thor-tt-templates-are-precompiled"
 blocked-by: null
 closed-reason: null
 ---

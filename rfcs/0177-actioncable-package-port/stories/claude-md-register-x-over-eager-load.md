@@ -1,6 +1,6 @@
 ---
 title: "CLAUDE.md: scanned app classes register through a per-package registerX"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0177-actioncable-package-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Time#strftime ports rb_strftime instead of reusing date_strftime"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0207-fugit-gem-family-port"
 cluster: null

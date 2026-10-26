@@ -1,7 +1,7 @@
 ---
 title: "Docs: native-first rule in CLAUDE.md and ruby-compat README rule 1"
-status: ready
-updated: 2026-10-22
+status: done
+updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: inline
 packages: []
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 0
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9350
+claim: "2026-10-26T20:18:14Z"
+assignee: "native-first-policy-docs"
 blocked-by: null
 ---
 

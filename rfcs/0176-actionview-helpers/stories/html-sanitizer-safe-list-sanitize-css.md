@@ -1,7 +1,7 @@
 ---
 title: "html-sanitizer-safe-list-sanitize-css"
-status: blocked
-updated: 2026-10-17
+status: ready
+updated: 2026-10-26
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-10-17T22:02:38Z"
-assignee: "distance-of-time-in-words-drops-invented-defaults"
-blocked-by: "Loofah::HTML5::Scrub.scrub_css and Crass (its CSS parser) are not vendored (no vendor/loofah, vendor/crass, vendor/rails-html-sanitizer); vendor them first so the port can cite and mirror the source"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

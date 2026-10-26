@@ -1,7 +1,7 @@
 ---
 title: "html-sanitizer-port-scrubbers"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-10-26
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
