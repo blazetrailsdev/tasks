@@ -23,5 +23,6 @@ The RFC's shape table (`rails-underscore`, `ivar`, `private-helper`, `receipted`
 ## Acceptance criteria
 
 - [ ] Each extracted declaration carries `shape`.
+- [ ] Labels follow the RFC's first-match precedence (`receipted` > `rails-underscore` > `ivar` > `private-helper` > `q-suffix` > `quoted-predicate` > `js-protocol` > `invented` > `snake`). Unit tests cover the overlapping cases: a receipted ivar is `receipted`, and a Rails `_name` that is also an ivar name is `rails-underscore`.
 - [ ] Unit tests cover every shape, including the bang/predicate pairing, ivar per-class lookup and the `then` exemption.
 - [ ] On AR, the counts reproduce the audit within the classifier fixes: about 79 invented public, 151 ivar public untagged, 3 quoted predicate.
