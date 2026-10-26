@@ -1,6 +1,6 @@
 ---
 title: "fugit isostamp reads t.usec without a Time/EoTime branch"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0207-fugit-gem-family-port"
 cluster: null

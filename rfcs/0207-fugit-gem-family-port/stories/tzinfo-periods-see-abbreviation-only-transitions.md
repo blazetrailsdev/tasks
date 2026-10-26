@@ -1,6 +1,6 @@
 ---
 title: "tzinfo-periods-see-abbreviation-only-transitions"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0207-fugit-gem-family-port"
 cluster: null
