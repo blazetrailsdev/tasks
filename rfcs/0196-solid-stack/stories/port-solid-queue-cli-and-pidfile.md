@@ -1,6 +1,6 @@
 ---
 title: "Port SolidQueue Supervisor::Pidfiled and Pidfile (needs Process.kill)"
-status: claimed
+status: done
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9334
 claim: "2026-10-26T15:57:28Z"
 assignee: "port-solid-queue-cli-and-pidfile"
 blocked-by: null

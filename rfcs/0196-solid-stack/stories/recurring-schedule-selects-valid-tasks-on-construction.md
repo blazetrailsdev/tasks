@@ -1,6 +1,6 @@
 ---
 title: "recurring-schedule-selects-valid-tasks-on-construction"
-status: claimed
+status: ready
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-26T15:57:28Z"
-assignee: "port-solid-queue-cli-and-pidfile"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port solid_queue:install"
-status: claimed
+status: ready
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: solid-stack
@@ -9,8 +9,8 @@ deps: ["port-solid-queue-supervisor"]
 deps-rfc: []
 est-loc: 150
 pr: null
-claim: "2026-10-26T15:57:28Z"
-assignee: "port-solid-queue-cli-and-pidfile"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

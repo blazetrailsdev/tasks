@@ -1,6 +1,6 @@
 ---
 title: "port-solid-queue-tasks"
-status: claimed
+status: blocked
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-10-26T15:57:28Z"
 assignee: "port-solid-queue-cli-and-pidfile"
-blocked-by: null
+blocked-by: "trails has no Rake port: lib/solid_queue/tasks.rb's namespace/desc/task DSL and Engine.rakeTasks' load have nothing to define tasks on (trailtie.ts rakeTasks registers blocks no runner executes)"
 closed-reason: null
 ---
 

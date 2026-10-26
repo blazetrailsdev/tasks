@@ -1,6 +1,6 @@
 ---
 title: "enumerable-free-functions-async-and-each-with-index-sites"
-status: ready
+status: done
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9332
+claim: "2026-10-26T16:48:21Z"
+assignee: "enumerable-free-functions-async-and-each-with-index-sites"
 blocked-by: null
 closed-reason: null
 ---

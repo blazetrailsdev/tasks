@@ -1,7 +1,7 @@
 ---
 title: "Extract Thor into its own @blazetrails/thor package"
-status: draft
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-26
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9335
+claim: "2026-10-26T16:02:28Z"
+assignee: "extract-thor-into-its-own-package"
 blocked-by: null
 closed-reason: null
 ---

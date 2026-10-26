@@ -1,6 +1,6 @@
 ---
 title: "Every plain-object module carries a marker rbEqual and rbObjIsKindOf read"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0176-actionview-helpers"
 cluster: null
