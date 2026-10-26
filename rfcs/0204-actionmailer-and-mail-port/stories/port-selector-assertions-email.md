@@ -2,7 +2,7 @@
 title: "Port SelectorAssertions#assert_dom_email once ActionMailer exists"
 status: blocked
 updated: 2026-10-19
-rfc: "0176-actionview-helpers"
+rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
 deps:
