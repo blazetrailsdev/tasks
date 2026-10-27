@@ -1,13 +1,13 @@
 ---
-title: "port-crass-css-parser"
+title: "Port Crass (Tokenizer, Parser.parse_properties / parse_component_values / stringify)"
 status: draft
 updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null
-packages: []
+packages: ["html-sanitizer"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 700
 priority: null
 pr: null
 claim: null

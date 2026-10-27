@@ -1,14 +1,14 @@
 ---
-title: "port-loofah-scrubber-and-html5-scrub"
+title: "Port Loofah::Scrubber, HTML5::SafeList and HTML5::Scrub over @blazetrails/nokogiri"
 status: draft
 updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null
-packages: []
+packages: ["html-sanitizer"]
 deps:
   - port-crass-css-parser
 deps-rfc: []
-est-loc: null
+est-loc: 700
 priority: null
 pr: null
 claim: null
