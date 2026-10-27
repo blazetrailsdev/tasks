@@ -1,6 +1,6 @@
 ---
 title: "Delete Handlers.clear; tests restore handlers as Rails does"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null

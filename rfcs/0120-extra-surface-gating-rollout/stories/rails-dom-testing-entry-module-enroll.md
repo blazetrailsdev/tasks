@@ -1,6 +1,6 @@
 ---
 title: "Map Rails::Dom::Testing (testing.rb) into the rails-dom-testing parity package"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
