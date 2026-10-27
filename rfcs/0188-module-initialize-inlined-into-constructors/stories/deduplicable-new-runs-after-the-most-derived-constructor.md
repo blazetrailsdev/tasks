@@ -1,6 +1,6 @@
 ---
 title: "deduplicable-new-runs-after-the-most-derived-constructor"
-status: in-progress
+status: closed
 updated: 2026-10-27
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#9363
 claim: "2026-10-27T11:43:24Z"
 assignee: "deduplicable-new-runs-after-the-most-derived-constructor"
 blocked-by: null
-closed-reason: null
+closed-reason: "PERMANENT: JS has no hook after the most-derived constructor and a static Klass.new is ruled out; the new.target guard is ratified in CLAUDE.md § Runtime facts Node does not expose (trails#9363)"
 ---
 
 ## Context

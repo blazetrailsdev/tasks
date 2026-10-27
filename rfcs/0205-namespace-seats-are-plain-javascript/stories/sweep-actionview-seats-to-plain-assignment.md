@@ -1,7 +1,7 @@
 ---
 title: "Convert actionview's namespace reads to ES imports"
-status: ready
-updated: 2026-10-23
+status: in-progress
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9374
+claim: "2026-10-27T14:08:25Z"
+assignee: "sweep-actionview-seats-to-plain-assignment"
 blocked-by: null
 closed-reason: null
 ---

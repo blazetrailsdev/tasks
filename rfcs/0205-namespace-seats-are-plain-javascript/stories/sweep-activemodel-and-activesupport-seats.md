@@ -1,7 +1,7 @@
 ---
 title: "Convert activemodel's and activesupport's namespace reads to ES imports"
-status: ready
-updated: 2026-10-23
+status: claimed
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 260
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-27T14:18:14Z"
+assignee: "class-path-tables-load-under-deep-imports"
 blocked-by: null
 closed-reason: null
 ---

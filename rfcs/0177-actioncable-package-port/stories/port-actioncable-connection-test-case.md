@@ -1,6 +1,6 @@
 ---
 title: "Port Connection::TestCase, TestConnection, TestCookieJar and Assertions"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0177-actioncable-package-port"
 cluster: fidelity

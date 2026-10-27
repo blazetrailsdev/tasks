@@ -1,6 +1,6 @@
 ---
 title: "Port stdlib Logger and Benchmark.realtime to ruby-compat; ActiveSupport::Logger extends it"
-status: draft
+status: in-progress
 updated: 2026-10-27
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9373
+claim: "2026-10-27T14:42:03Z"
+assignee: "ruby-compat-stdlib-logger"
 blocked-by: null
 closed-reason: null
 ---

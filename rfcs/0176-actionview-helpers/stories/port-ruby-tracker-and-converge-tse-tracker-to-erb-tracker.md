@@ -1,6 +1,6 @@
 ---
 title: "Port RubyTracker and converge TSETracker to erb_tracker.rb (scan-loop add_dependencies, LAYOUT_DEPENDENCY)"
-status: ready
+status: in-progress
 updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9368
+claim: "2026-10-27T14:01:41Z"
+assignee: "port-ruby-tracker-and-converge-tse-tracker-to-erb-tracker"
 blocked-by: null
 closed-reason: null
 ---

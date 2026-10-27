@@ -15,6 +15,7 @@ clusters:
   - mini-magick-runtime
   - mini-magick-polish
   - mini-magick-parity
+priority: 2
 ---
 
 # RFC 0203 — mini_magick: from the generated port to 100%

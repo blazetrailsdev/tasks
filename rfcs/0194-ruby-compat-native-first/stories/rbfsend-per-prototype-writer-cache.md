@@ -1,6 +1,6 @@
 ---
 title: "rbfsend-per-prototype-writer-cache"
-status: claimed
+status: in-progress
 updated: 2026-10-27
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9371
 claim: "2026-10-27T13:48:17Z"
 assignee: "rbfsend-per-prototype-writer-cache"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Port Tool#method_missing and Image#method_missing as Proxies"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-27
 rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-runtime
 packages: ["mini-magick"]
@@ -9,9 +9,9 @@ deps: ["mini-magick-land-on-main"]
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9369
+claim: "2026-10-27T14:02:16Z"
+assignee: "mini-magick-cli-tool-shortcuts"
 blocked-by: null
 ---
 

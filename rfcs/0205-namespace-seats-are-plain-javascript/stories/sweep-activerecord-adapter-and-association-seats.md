@@ -1,6 +1,6 @@
 ---
 title: "Convert activerecord's adapter, association, encryption and CPK reads to ES imports"
-status: claimed
+status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 520
 priority: null
 pr: null
-claim: "2026-10-27T13:48:17Z"
-assignee: "rbfsend-per-prototype-writer-cache"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

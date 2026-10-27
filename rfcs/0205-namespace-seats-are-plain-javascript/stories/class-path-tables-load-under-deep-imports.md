@@ -1,6 +1,6 @@
 ---
 title: "Load each package's class-path table under deep imports before the seat sweeps remove seats"
-status: ready
+status: claimed
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-27T14:18:14Z"
+assignee: "class-path-tables-load-under-deep-imports"
 blocked-by: null
 closed-reason: null
 ---
