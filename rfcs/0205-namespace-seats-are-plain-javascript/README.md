@@ -200,7 +200,11 @@ away entirely, not only seating:
   and it reads the owner's own properties or a generated class-path table.
 - `registerConstant` and the top-level constant table `RCLASS_CONST_TBL` are
   deleted. Framework and core classes resolve through generated class-path
-  tables, and application classes through the shape the design story picks.
+  tables. Application classes resolve through a per-application class-path
+  table that trailties' eager boot scan fills, read the same way as the
+  generated tables. This supersedes the `registerX` ruling of 2026-10-26
+  (trails#9319); the reasoning is in
+  `application-classes-resolve-without-a-registration-call`.
 - Each module-eval survivor below gets its own plan to become an import.
 
 ## What survives
@@ -240,7 +244,7 @@ The lookup arm, added 2026-10-27:
 - `constant-lookup-helpers-keep-only-rails-const-get-sites`
 - `framework-register-constant-seats-retire-onto-class-path-tables`
 - `ruby-compat-core-classes-join-a-generated-class-path-table`
-- `application-classes-resolve-without-a-registration-call` (design ruling)
+- `application-classes-resolve-without-a-registration-call`
 - `test-suites-drop-register-model-and-register-constant`
 - `module-eval-namespace-reads-converge-to-imports`
 - `delete-register-constant-and-the-top-level-constant-table`, the finish
