@@ -34,6 +34,23 @@ which construct generators with `cwd: tmpDir` and never chdir. The encryption-ke
 master-key generators already converged (trails#9391): their tests `Dir.chdir(tmpDir)` in
 `beforeEach` and restore in `afterEach`.
 
+Every site (TS `packages/trailties/src/generators/rails/…` as of trails#9391 ↔ Rails
+`vendor/rails/v8.0.2/railties/lib/rails/generators/rails/…`):
+
+| TS site                                                    | Rails                                                                                           |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `credentials/credentials-generator.ts:32`                  | `credentials/credentials_generator.rb:16`                                                       |
+| `encrypted-file/encrypted-file-generator.ts:27`            | `encrypted_file/encrypted_file_generator.rb:10`                                                 |
+| `devcontainer/devcontainer-generator.ts:117`               | `devcontainer/devcontainer_generator.rb:49`                                                     |
+| `db/system/change/change-generator.ts:58`                  | `db/system/change/change_generator.rb:22`                                                       |
+| `db/system/change/change-generator.ts:103`                 | `db/system/change/change_generator.rb:49`                                                       |
+| `db/system/change/change-generator.ts:136`                 | `db/system/change/change_generator.rb:200`                                                      |
+| `db/system/change/change-generator.ts:143`                 | `db/system/change/change_generator.rb:184-186`                                                  |
+| `db/system/change/change-generator.ts:72`, `:120`          | none (trails-only `package.json` / `writeOrUpdate` arms)                                        |
+| `authentication/authentication-generator.ts:71,80,103,113` | none; Rails reads only `File.read("Gemfile")` (`authentication/authentication_generator.rb:42`) |
+
+A trails-only arm converges by deletion or by its owning story, not by a bare path.
+
 ## Acceptance criteria
 
 - [ ] Each listed call passes Rails' bare path; no `File.join(this.destinationRoot, …)` remains
