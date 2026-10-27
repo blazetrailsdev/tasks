@@ -23,6 +23,9 @@ packages:
   - "marcel"
   - "globalid"
   - "scripts"
+  - "rack-session"
+  - "date"
+  - "solid-queue"
 clusters:
   - design
   - retire
