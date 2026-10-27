@@ -1,6 +1,6 @@
 ---
 title: "Port Channel::TestCase, ChannelStub and ConnectionStub"
-status: claimed
+status: in-progress
 updated: 2026-10-27
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
@@ -13,7 +13,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 350
-pr: null
+pr: trails#9364
 claim: "2026-10-27T11:40:55Z"
 assignee: "port-actioncable-channel-test-case"
 blocked-by: null

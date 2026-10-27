@@ -1,7 +1,7 @@
 ---
 title: "pin-the-esm-deferred-read-premise-in-ci"
-status: draft
-updated: 2026-10-23
+status: in-progress
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9365
+claim: "2026-10-27T12:47:09Z"
+assignee: "pin-the-esm-deferred-read-premise-in-ci"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Retire the const_set seat backlog arm: close the inverse stories and hold the class-to-string enrollment"
-status: ready
-updated: 2026-10-23
+status: in-progress
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 0
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9365
+claim: "2026-10-27T12:15:31Z"
+assignee: "derive-class-path-from-registered-namespaces"
 blocked-by: null
 closed-reason: null
 ---

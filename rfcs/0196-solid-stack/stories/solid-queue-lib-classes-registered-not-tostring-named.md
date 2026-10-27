@@ -1,6 +1,6 @@
 ---
 title: "solid-queue lib classes are registered constants, not toString-named"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0196-solid-stack"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Enroll i18n in class-to-string-seat"
-status: draft
-updated: 2026-10-18
+status: blocked
+updated: 2026-10-27
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Held on decide-class-to-string-literal-against-generated-path-table: the static toString literal duplicates the Ruby path the RFC 0205 generated class-path table already answers through rbModName."
 closed-reason: null
 ---
 

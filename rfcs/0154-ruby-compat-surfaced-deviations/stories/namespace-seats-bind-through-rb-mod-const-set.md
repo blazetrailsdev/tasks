@@ -1,7 +1,7 @@
 ---
 title: "Namespace seats bind through rbModConstSet in every package; delete rbSetClassPathString (~500 LOC)"
-status: draft
-updated: 2026-10-02
+status: closed
+updated: 2026-10-27
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: RFC 0205 (namespace-seats-are-plain-javascript) answers its premise with the generated per-package class-path table (derive-class-path-from-registered-namespaces), so a plain assignment no longer leaves a class unpathed; and its direction, converting assignments into rbModConstSet seats in five packages, is the inverse of the repo owner's 2026-10-22 ruling to lean on ES imports and keep rbModConstSet only at Rails const_set sites."
 ---
 
 ## Context

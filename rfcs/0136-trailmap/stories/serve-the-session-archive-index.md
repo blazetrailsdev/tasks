@@ -1,6 +1,6 @@
 ---
 title: "Serve the session archive read-only from trailmap"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
