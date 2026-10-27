@@ -1,6 +1,6 @@
 ---
 title: "Class-path table applies TS_CLASS_RENAMES segments (Railtie/Railties/Rails)"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

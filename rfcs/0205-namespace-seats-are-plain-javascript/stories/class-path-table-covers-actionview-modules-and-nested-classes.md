@@ -1,6 +1,6 @@
 ---
 title: "Class-path table covers actionview modules, nested classes and test-case.ts so naming-only seats retire"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

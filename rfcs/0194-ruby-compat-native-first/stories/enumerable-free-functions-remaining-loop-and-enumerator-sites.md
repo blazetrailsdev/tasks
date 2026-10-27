@@ -1,7 +1,7 @@
 ---
 title: "enumerable-free-functions-remaining-loop-and-enumerator-sites"
-status: draft
-updated: 2026-10-26
+status: ready
+updated: 2026-10-27
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []

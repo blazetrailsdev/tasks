@@ -1,7 +1,7 @@
 ---
 title: "rbModConstGet raises for a non-constant name and reads later segments through ancestors"
-status: draft
-updated: 2026-10-03
+status: ready
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

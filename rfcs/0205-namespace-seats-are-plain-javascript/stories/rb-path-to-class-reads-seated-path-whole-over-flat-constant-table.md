@@ -1,7 +1,7 @@
 ---
 title: "Seat every intermediate namespace so rbPathToClass drops its whole-path table read"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

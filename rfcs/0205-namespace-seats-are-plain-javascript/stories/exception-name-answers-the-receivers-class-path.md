@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: Exception#name answers the receiver's own class path, not the nearest ancestor's assigned string"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: ["ruby-compat", "activerecord"]

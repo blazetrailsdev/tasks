@@ -1,7 +1,7 @@
 ---
 title: "Seat Thor::Command, HiddenCommand, DynamicCommand and CoreExt::HashWithIndifferentAccess on the real Thor constant"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

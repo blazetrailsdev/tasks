@@ -1,7 +1,7 @@
 ---
 title: "Seat ActionController / MimeNegotiation exception classes so exception_inspect uses rbInspect"
-status: draft
-updated: 2026-10-19
+status: ready
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

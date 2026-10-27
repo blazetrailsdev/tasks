@@ -1,6 +1,6 @@
 ---
 title: "Extractor: a function returning a class must not suppress the synthesized file module"
-status: draft
+status: in-progress
 updated: 2026-10-27
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9385
+claim: "2026-10-27T20:06:22Z"
+assignee: "activerecord-test-support-extra-surface-burndown-remainder"
 blocked-by: null
 closed-reason: null
 ---

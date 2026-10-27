@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: Kernel.abort is seated by its defining module, not from index.ts"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

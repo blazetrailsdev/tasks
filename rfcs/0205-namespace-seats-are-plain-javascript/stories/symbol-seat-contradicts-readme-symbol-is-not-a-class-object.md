@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: rbCSymbol is seated for Psych's path2class while the README says Symbol has no seat"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

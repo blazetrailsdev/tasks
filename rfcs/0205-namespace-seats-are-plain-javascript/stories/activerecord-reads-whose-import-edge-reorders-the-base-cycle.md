@@ -1,6 +1,6 @@
 ---
 title: "activerecord-reads-whose-import-edge-reorders-the-base-cycle"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "class-paths-resolve-for-entry-less-deep-imports"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

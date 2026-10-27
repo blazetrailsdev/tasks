@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-native-required: aryJoin row must not require .join over Symbol-string elements"
-status: draft
-updated: 2026-10-26
+status: claimed
+updated: 2026-10-27
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-27T20:39:19Z"
+assignee: "enumerable-free-functions-remaining-loop-and-enumerator-sites"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Delete registerConstant and the top-level constant table"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: retire

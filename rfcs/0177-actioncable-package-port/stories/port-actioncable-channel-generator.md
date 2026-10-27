@@ -1,7 +1,7 @@
 ---
 title: "Port Rails::Generators::ChannelGenerator and its templates"
-status: blocked
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-27
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["trailties"]
@@ -10,10 +10,10 @@ deps:
   - thor-actions-template-is-unported
 deps-rfc: []
 est-loc: 550
-pr: null
-claim: "2026-10-22T13:21:19Z"
+pr: trails#9387
+claim: "2026-10-27T20:31:56Z"
 assignee: "port-actioncable-channel-generator"
-blocked-by: "needs Thor::Actions#template/#copy_file (thor-actions-template-is-unported); story forbids a stand-in"
+blocked-by: null
 closed-reason: null
 ---
 

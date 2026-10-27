@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: restore enum_size / each_slice_size / each_cons_size as MRI's named functions"
-status: draft
-updated: 2026-10-26
+status: in-progress
+updated: 2026-10-27
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9386
+claim: "2026-10-27T20:08:43Z"
+assignee: "call-gate-credits-filter-length-count-and-nested-native-forms"
 blocked-by: null
 closed-reason: null
 ---

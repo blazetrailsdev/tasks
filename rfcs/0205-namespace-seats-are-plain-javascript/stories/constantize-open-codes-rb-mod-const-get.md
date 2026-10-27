@@ -1,7 +1,7 @@
 ---
 title: "Port rb_mod_const_get so constantize is Object.const_get alone"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

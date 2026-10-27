@@ -1,7 +1,7 @@
 ---
 title: "rbModName answers a class's inferred local-binding name where isAnonymous answers anonymous"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

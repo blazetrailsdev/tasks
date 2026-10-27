@@ -1,7 +1,7 @@
 ---
 title: "Seated activesupport classes answer Module#name with their constant path"
-status: draft
-updated: 2026-10-18
+status: ready
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

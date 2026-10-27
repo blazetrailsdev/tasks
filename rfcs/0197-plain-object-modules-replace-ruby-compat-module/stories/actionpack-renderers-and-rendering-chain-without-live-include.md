@@ -1,6 +1,6 @@
 ---
 title: "actionpack Renderers and the render_to_body chain become plain modules (Renderers.add live include)"
-status: draft
+status: blocked
 updated: 2026-10-27
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-27T20:07:12Z"
+assignee: "actionpack-proxy-and-url-for-module-super-sites"
+blocked-by: "owner decision pending: how a Renderers.add / Mime register after the include reaches existing includers (carrier and includer list both ruled out)"
 closed-reason: null
 ---
 

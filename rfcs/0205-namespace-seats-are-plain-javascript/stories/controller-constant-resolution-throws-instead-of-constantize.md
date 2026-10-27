@@ -1,7 +1,7 @@
 ---
 title: "Register controllers in the constant table so controllerClassFor can constantize instead of throwing"
-status: draft
-updated: 2026-07-28
+status: ready
+updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages:
