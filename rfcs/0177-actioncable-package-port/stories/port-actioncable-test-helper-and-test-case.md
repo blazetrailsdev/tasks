@@ -1,6 +1,6 @@
 ---
 title: "Port ActionCable::TestHelper and ActionCable::TestCase"
-status: claimed
+status: in-progress
 updated: 2026-10-27
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
@@ -9,7 +9,7 @@ deps:
   ["port-actioncable-inline-async-and-test-adapters", "port-actioncable-test-stubs-and-test-helper"]
 deps-rfc: []
 est-loc: 450
-pr: null
+pr: trails#9361
 claim: "2026-10-27T01:59:42Z"
 assignee: "port-actioncable-test-helper-and-test-case"
 blocked-by: null

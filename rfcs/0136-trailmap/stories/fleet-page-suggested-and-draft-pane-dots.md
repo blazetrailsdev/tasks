@@ -1,6 +1,6 @@
 ---
 title: "trailmap: suggested and draft pane dots on the fleet page"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
