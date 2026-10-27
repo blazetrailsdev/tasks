@@ -5,7 +5,8 @@ updated: 2026-10-26
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
-deps: []
+deps:
+  - port-ruby-tracker-and-converge-tse-tracker-to-erb-tracker
 deps-rfc: []
 est-loc: 80
 priority: null
