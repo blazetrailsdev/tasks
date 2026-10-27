@@ -7,6 +7,7 @@ cluster: null
 packages: []
 deps:
   - derive-class-path-from-registered-namespaces
+  - class-path-tables-load-under-deep-imports
 deps-rfc: []
 est-loc: 420
 priority: null
