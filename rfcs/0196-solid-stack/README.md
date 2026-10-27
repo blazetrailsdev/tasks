@@ -1,9 +1,9 @@
 ---
 rfc: "0196-solid-stack"
 title: "Solid Cache, Solid Queue and Solid Cable as the trails production backends"
-status: active
+status: draft
 created: 2026-10-17
-updated: 2026-10-22
+updated: 2026-10-27
 owner: "@deanmarano"
 packages: ["solid-cache", "solid-queue", "solid-cable", "activesupport", "trailties"]
 clusters:
