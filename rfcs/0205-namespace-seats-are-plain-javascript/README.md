@@ -1,9 +1,9 @@
 ---
 rfc: "0205-namespace-seats-are-plain-javascript"
 title: "Lean on ES imports: namespace seating survives only where module evaluation order needs it"
-status: draft
+status: active
 created: 2026-10-22
-updated: 2026-10-22
+updated: 2026-10-27
 owner: "@deanmarano"
 packages:
   - "ruby-compat"
