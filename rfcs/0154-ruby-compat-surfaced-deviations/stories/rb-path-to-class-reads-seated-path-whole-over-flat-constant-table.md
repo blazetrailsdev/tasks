@@ -53,3 +53,16 @@ framework namespaces missing from the table entirely.
       (`if (isRegisteredConstant(path)) return registeredConstant(path)`).
 - [ ] `packages/activerecord/src/yaml-serialization.test.ts` and
       `packages/activesupport/src/yaml.trails.test.ts` stay green.
+
+## RFC 0205 note
+
+Do not add a namespace seat to give a class its Ruby path. Since
+`derive-class-path-from-registered-namespaces`, `rbModName` / `rbModToS` /
+`rbObjClassname` answer a class's path from its package's generated table,
+`packages/<pkg>/src/class-paths.generated.ts` (`pnpm parity:class-paths`, gated
+in CI), whenever the package entry is loaded. A class missing from it is fixed
+by pairing it in `parity:api` (or exporting it), not by a seat. Reach a class
+from a method body with a plain ES import; the seat helper is kept only at the
+Rails bodies that call `const_set` (CLAUDE.md § "Call-time constant
+resolution"). Acceptance criteria below that ask for a seat are read through
+this note.

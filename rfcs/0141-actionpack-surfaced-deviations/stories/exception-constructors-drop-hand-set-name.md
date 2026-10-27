@@ -34,3 +34,16 @@ It has no line that sets a name: `Exception#class.name` comes from the constant 
   shared place (e.g. ruby-compat's exception base) instead of being hard-coded per class.
 - Error messages and the `inspect` output keep the Ruby class path. Tests that read `error.name` are updated to
   read `rbObjClassname(error)`.
+
+## RFC 0205 note
+
+Do not add a namespace seat to give a class its Ruby path. Since
+`derive-class-path-from-registered-namespaces`, `rbModName` / `rbModToS` /
+`rbObjClassname` answer a class's path from its package's generated table,
+`packages/<pkg>/src/class-paths.generated.ts` (`pnpm parity:class-paths`, gated
+in CI), whenever the package entry is loaded. A class missing from it is fixed
+by pairing it in `parity:api` (or exporting it), not by a seat. Reach a class
+from a method body with a plain ES import; the seat helper is kept only at the
+Rails bodies that call `const_set` (CLAUDE.md § "Call-time constant
+resolution"). Acceptance criteria below that ask for a seat are read through
+this note.
