@@ -5,7 +5,8 @@ updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: []
+deps:
+  - rfc-page-lifecycle-buttons-and-ready-all-drafts
 deps-rfc: []
 est-loc: 220
 priority: null
