@@ -5,7 +5,8 @@ updated: 2026-09-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - i18n-backend-fallbacks-is-a-class-factory-not-a-module
 deps-rfc: []
 est-loc: null
 priority: 6
