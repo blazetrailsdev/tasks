@@ -1,6 +1,6 @@
 ---
 title: "Tool::<Name> deprecated constants warn on read (tool.rb deprecate_constant)"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0203-mini-magick-port-to-100"
 cluster: null

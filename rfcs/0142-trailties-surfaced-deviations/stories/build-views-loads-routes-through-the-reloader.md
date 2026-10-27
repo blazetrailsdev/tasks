@@ -1,6 +1,6 @@
 ---
 title: "Build views loads routes through the reloader in a booted app"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
