@@ -5,7 +5,8 @@ updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-crass-css-parser
 deps-rfc: []
 est-loc: null
 priority: null
