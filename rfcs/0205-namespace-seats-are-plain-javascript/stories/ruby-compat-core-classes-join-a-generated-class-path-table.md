@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat's core classes resolve through a generated class-path table, not registerConstant"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: retire

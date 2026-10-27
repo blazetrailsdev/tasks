@@ -1,6 +1,6 @@
 ---
 title: "trails-server-runs-and-awaits-server-blocks"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Converge the module-eval namespace-read survivors to plain imports"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: conversion

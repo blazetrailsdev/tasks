@@ -1,7 +1,7 @@
 ---
 title: "Drop noCheck from mini-magick's tsconfig once it type-checks clean"
-status: draft
-updated: 2026-10-23
+status: blocked
+updated: 2026-10-27
 rfc: "0203-mini-magick-port-to-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 10
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-27T17:18:37Z"
+assignee: "ruby-compat-move-time-from-date"
+blocked-by: "waiting on mini-magick-typecheck-clean: tsc -p packages/mini-magick still reports 369 errors"
 closed-reason: null
 ---
 

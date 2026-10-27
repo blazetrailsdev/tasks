@@ -1,7 +1,7 @@
 ---
 title: "Make mini_magick's specs native, typed vitest"
-status: ready
-updated: 2026-10-22
+status: done
+updated: 2026-10-27
 rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-polish
 packages: ["mini-magick"]
@@ -9,9 +9,9 @@ deps: ["mini-magick-land-on-main"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9380
+claim: "2026-10-27T17:10:45Z"
+assignee: "mini-magick-shell-over-open3-capture3"
 blocked-by: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Convert actionpack's namespace reads to ES imports"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

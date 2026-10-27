@@ -1,6 +1,6 @@
 ---
 title: "prism-render-parser-walks-a-js-ast"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null

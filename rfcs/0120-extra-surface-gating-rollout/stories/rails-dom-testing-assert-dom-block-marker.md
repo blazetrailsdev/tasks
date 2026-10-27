@@ -1,6 +1,6 @@
 ---
 title: "rails-dom-testing-assert-dom-block-marker"
-status: draft
+status: in-progress
 updated: 2026-10-27
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9383
+claim: "2026-10-27T17:16:19Z"
+assignee: "activerecord-test-support-extra-surface-burndown-remainder"
 blocked-by: null
 closed-reason: null
 ---

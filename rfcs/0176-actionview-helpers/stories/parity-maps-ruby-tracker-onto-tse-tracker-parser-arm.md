@@ -1,6 +1,6 @@
 ---
 title: "parity:api measures ruby_tracker.rb against TSETracker's parser arm"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null

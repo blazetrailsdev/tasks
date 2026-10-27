@@ -1,6 +1,6 @@
 ---
 title: "twin-diff's end-to-end test runs in the rails CI job once the twin is on main"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Retire framework registerConstant seats onto the generated class-path tables"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: retire

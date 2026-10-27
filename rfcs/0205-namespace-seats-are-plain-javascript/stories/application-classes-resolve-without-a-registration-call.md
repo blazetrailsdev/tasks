@@ -1,6 +1,6 @@
 ---
 title: "Design: application models, controllers, jobs and channels resolve by name without a register* call"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: design

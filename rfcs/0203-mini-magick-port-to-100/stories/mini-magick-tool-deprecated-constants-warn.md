@@ -1,7 +1,7 @@
 ---
 title: "Tool::<Name> deprecated constants warn on read (tool.rb deprecate_constant)"
-status: draft
-updated: 2026-10-23
+status: in-progress
+updated: 2026-10-27
 rfc: "0203-mini-magick-port-to-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9381
+claim: "2026-10-27T17:18:37Z"
+assignee: "ruby-compat-move-time-from-date"
 blocked-by: null
 closed-reason: null
 ---

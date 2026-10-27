@@ -1,6 +1,6 @@
 ---
 title: "String-keyed constant lookups with a literal name become ES imports; computed ones keep only Rails const_get sites"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: conversion
