@@ -8,6 +8,7 @@ packages: ["trailties"]
 deps:
   - port-actioncable-test-unit-channel-generator
   - thor-actions-template-is-unported
+  - converge-generator-base-file-actions-onto-thor-actions
 deps-rfc: []
 est-loc: 550
 pr: trails#9387
