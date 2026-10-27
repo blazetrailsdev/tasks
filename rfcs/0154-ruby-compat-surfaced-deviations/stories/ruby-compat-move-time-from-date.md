@@ -5,7 +5,8 @@ updated: 2026-10-27
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - time-core-imports-nothing-from-date
 deps-rfc: []
 est-loc: null
 priority: 1
