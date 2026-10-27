@@ -1,6 +1,6 @@
 ---
 title: "pin-the-esm-deferred-read-premise-in-ci"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

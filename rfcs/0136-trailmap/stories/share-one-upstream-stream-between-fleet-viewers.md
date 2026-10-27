@@ -1,7 +1,7 @@
 ---
 title: "trailmap: the fleet relay opens one ringo connection per viewer"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#82
+claim: "2026-10-27T13:12:51Z"
+assignee: "serve-session-transcripts-and-files"
 blocked-by: null
 closed-reason: null
 ---

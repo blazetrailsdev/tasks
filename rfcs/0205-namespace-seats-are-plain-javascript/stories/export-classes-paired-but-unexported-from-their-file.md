@@ -1,6 +1,6 @@
 ---
 title: "Export the 16 paired-but-unexported classes so the generated class-path table names them"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

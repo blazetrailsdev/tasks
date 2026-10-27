@@ -1,6 +1,6 @@
 ---
 title: "Load each package's class-path table under deep imports before the seat sweeps remove seats"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

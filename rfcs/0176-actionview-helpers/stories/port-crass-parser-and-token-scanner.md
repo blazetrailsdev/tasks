@@ -1,6 +1,6 @@
 ---
 title: "port-crass-parser-and-token-scanner"
-status: draft
+status: closed
 updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicate of port-crass-css-parser, which now covers all of Crass in one PR"
 ---
 
 ## Context

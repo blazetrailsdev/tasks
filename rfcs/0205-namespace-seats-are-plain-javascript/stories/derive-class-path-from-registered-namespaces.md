@@ -1,6 +1,6 @@
 ---
 title: "Generate each package's Ruby class-path table from rails-api.json instead of registering it at 790 seats"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

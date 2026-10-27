@@ -1,6 +1,6 @@
 ---
 title: "Named route helpers are untyped on controllers and integration tests"
-status: ready
+status: in-progress
 updated: 2026-10-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9366
+claim: "2026-10-27T13:11:24Z"
+assignee: "named-route-helpers-untyped-on-controllers-and-tests"
 blocked-by: null
 closed-reason: null
 ---

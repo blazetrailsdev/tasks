@@ -1,7 +1,7 @@
 ---
 title: "perf-jsdoc-tag-for-hot-path-deviations"
-status: ready
-updated: 2026-10-26
+status: in-progress
+updated: 2026-10-27
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9367
+claim: "2026-10-27T13:18:08Z"
+assignee: "perf-jsdoc-tag-for-hot-path-deviations"
 blocked-by: null
 closed-reason: null
 ---
