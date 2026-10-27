@@ -1,6 +1,6 @@
 ---
 title: "tr-trans-caches-its-translation-tables"
-status: claimed
+status: in-progress
 updated: 2026-10-27
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#9378
 claim: "2026-10-27T14:48:41Z"
 assignee: "tr-trans-caches-its-translation-tables"
 blocked-by: null

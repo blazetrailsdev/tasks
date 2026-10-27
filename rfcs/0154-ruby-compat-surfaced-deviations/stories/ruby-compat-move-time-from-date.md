@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-move-time-from-date"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

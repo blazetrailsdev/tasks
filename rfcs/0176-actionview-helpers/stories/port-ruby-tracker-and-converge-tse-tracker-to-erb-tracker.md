@@ -1,6 +1,6 @@
 ---
 title: "Port RubyTracker and converge TSETracker to erb_tracker.rb (scan-loop add_dependencies, LAYOUT_DEPENDENCY)"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null

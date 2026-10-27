@@ -1,6 +1,6 @@
 ---
 title: "trails-server-runs-and-awaits-server-blocks"
-status: draft
+status: in-progress
 updated: 2026-10-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9375
+claim: "2026-10-27T15:11:29Z"
+assignee: "trails-server-runs-and-awaits-server-blocks"
 blocked-by: null
 closed-reason: null
 ---
