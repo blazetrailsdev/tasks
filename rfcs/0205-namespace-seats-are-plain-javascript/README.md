@@ -181,9 +181,27 @@ current shape lacks: it is verified by `parity:api` rather than by hand, a
 wrong or missing path is a CI red rather than a silently unqualified name, and
 adding a class costs nothing at its declaration.
 
-`rbModConstGet` / `rbModConstDefined` / `rbModConstants` / `registerConstant`
-are untouched: those stand in for dynamic lookups Rails really makes (adapter
-resolution, validator lookup), and there are nine of them.
+### Lookup goes too, not only definition
+
+An earlier draft left `rbModConstGet` / `rbModConstDefined` / `rbModConstants`
+/ `registerConstant` untouched as "nine" dynamic lookups. Measured on
+2026-10-27 they are far more: 587 `registerConstant` calls (139 non-test
+files), 38 `rbModConstGet`, 11 `rbModConstDefined`, 6 `rbModConstants`, and
+58 more calls into the top-level constant table, plus the invented
+`registerModel` / `registerController` / `registerJob` / `registerChannel` /
+`registerConnection` APIs (385 test call sites for `registerModel` alone).
+By repo-owner ruling (2026-10-27) the goal is for constant **lookup** to go
+away entirely, not only seating:
+
+- A string-keyed lookup with a literal name is a plain ES import, as
+  CLAUDE.md § "A dispatch by name is spelled directly" rules for `send`.
+- A computed-name lookup survives only where the Rails body calls
+  `const_get`, `const_defined?`, `constants`, `constantize` or `path2class`,
+  and it reads the owner's own properties or a generated class-path table.
+- `registerConstant` and the top-level constant table `RCLASS_CONST_TBL` are
+  deleted. Framework and core classes resolve through generated class-path
+  tables, and application classes through the shape the design story picks.
+- Each module-eval survivor below gets its own plan to become an import.
 
 ## What survives
 
@@ -216,6 +234,17 @@ Story 1 amends the four CLAUDE.md texts. Story 2 lands the generated path
 table. Stories 3–11 are the per-package conversions. Story 12 gates both
 `rbModConstSet` and module-eval namespace reads. Story 13 retires the backlog
 arm still scheduled to do the opposite.
+
+The lookup arm, added 2026-10-27:
+
+- `constant-lookup-helpers-keep-only-rails-const-get-sites`
+- `framework-register-constant-seats-retire-onto-class-path-tables`
+- `ruby-compat-core-classes-join-a-generated-class-path-table`
+- `application-classes-resolve-without-a-registration-call` (design ruling)
+- `test-suites-drop-register-model-and-register-constant`
+- `module-eval-namespace-reads-converge-to-imports`
+- `delete-register-constant-and-the-top-level-constant-table`, the finish
+  line, which depends on all of the above and the gate
 
 Each conversion must re-run the ESM entry-module check CLAUDE.md
 § "Call-time constant resolution" prescribes — a plain-node import of the

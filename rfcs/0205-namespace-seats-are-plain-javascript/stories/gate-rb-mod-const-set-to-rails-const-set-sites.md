@@ -49,15 +49,25 @@ Two populations need holding, and the second is the one that actually matters:
 only-shrink, with no mark file, on trails#9129's reasoning that the base tree
 IS the mark.
 
-A deferred read is not gated — it should not exist after the conversions, and
-if one appears it is a plain ES import waiting to be written, not a deviation
-to receipt.
+Lookup is gated too (repo-owner ruling, 2026-10-27: lookup goes, not only
+definition). A deferred namespace read, a string-literal name passed to a
+lookup helper, and a `registerConstant` call each regrow the mechanism with
+every other ratchet green, so each is counted. None of them is a deviation to
+receipt: a deferred read or a literal-name lookup is a plain ES import waiting
+to be written.
 
 ## Acceptance criteria
 
 - [ ] A gate counts `rbModConstSet` call sites per non-test file and fails on
       any file above its count at the merge-base with `origin/main`. No mark
       file to seed or tighten.
+- [ ] The same per-file, merge-base, only-shrink count covers: deferred
+      namespace property reads; calls to `rbModConstGet`, `rbConstGet`,
+      `rbModConstDefined`, `rbModConstants`, `isRegisteredConstant`,
+      `registeredConstant` and `rbPathToClass` whose name argument is a string
+      literal; and calls to `registerConstant`, `registerModel`,
+      `registerController`, `registerJob`, `registerChannel` and
+      `registerConnection`, test files included.
 - [ ] A seat is exempt when it carries a citation of the Rails `const_set` it
       mirrors, resolvable in `rails-api.json` — not free text, and not a new
       baseline register (CLAUDE.md § "A documented deviation is debt, not
