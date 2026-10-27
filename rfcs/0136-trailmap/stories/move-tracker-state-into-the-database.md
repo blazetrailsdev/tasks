@@ -1,6 +1,6 @@
 ---
 title: "Move tracker-state.json into the database as pr_states"
-status: ready
+status: blocked
 updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-27T11:42:11Z"
+assignee: "move-tracker-state-into-the-database"
+blocked-by: "trailmap half merged in trailmap#78; remaining work is ringo Go (btwebooks): dual write, per-row upsert, tracker-state.json backfill, debounce tests"
 closed-reason: null
 ---
 

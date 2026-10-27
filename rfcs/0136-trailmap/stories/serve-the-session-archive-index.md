@@ -1,6 +1,6 @@
 ---
 title: "Serve the session archive read-only from trailmap"
-status: ready
+status: in-progress
 updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#81
+claim: "2026-10-27T11:42:11Z"
+assignee: "move-tracker-state-into-the-database"
 blocked-by: null
 closed-reason: null
 ---

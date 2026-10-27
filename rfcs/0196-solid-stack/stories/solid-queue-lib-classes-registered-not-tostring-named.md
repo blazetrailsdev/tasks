@@ -1,6 +1,6 @@
 ---
 title: "solid-queue lib classes are registered constants, not toString-named"
-status: draft
+status: in-progress
 updated: 2026-10-27
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9362
+claim: "2026-10-27T11:44:38Z"
+assignee: "solid-queue-lib-classes-registered-not-tostring-named"
 blocked-by: null
 closed-reason: null
 ---

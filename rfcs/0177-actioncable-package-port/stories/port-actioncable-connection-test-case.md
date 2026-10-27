@@ -1,7 +1,7 @@
 ---
 title: "Port Connection::TestCase, TestConnection, TestCookieJar and Assertions"
-status: ready
-updated: 2026-10-21
+status: claimed
+updated: 2026-10-27
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
@@ -9,8 +9,8 @@ deps: ["port-actioncable-connection-base", "port-actioncable-test-helper-and-tes
 deps-rfc: []
 est-loc: 300
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-27T11:40:55Z"
+assignee: "port-actioncable-channel-test-case"
 blocked-by: null
 closed-reason: null
 ---

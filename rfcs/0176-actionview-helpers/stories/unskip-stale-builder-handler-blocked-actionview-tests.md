@@ -1,6 +1,6 @@
 ---
 title: "Un-skip the two actionview tests still BLOCKED on the landed Builder handler"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null

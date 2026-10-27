@@ -1,7 +1,7 @@
 ---
 title: "tasks list --json truncates at one pipe buffer, so every programmatic reader gets invalid JSON"
-status: ready
-updated: 2026-10-12
+status: done
+updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-27T11:42:45Z"
+assignee: "tasks-cli-json-truncates-through-a-pipe"
 blocked-by: null
 closed-reason: null
 ---

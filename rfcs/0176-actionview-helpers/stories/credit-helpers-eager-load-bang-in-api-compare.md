@@ -1,6 +1,6 @@
 ---
 title: "Credit ActionView::Helpers.eager_load! in api-compare (helpers.rb 306/306)"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null

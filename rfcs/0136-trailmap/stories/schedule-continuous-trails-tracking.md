@@ -1,6 +1,6 @@
 ---
 title: "schedule-continuous-trails-tracking"
-status: ready
+status: blocked
 updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-27T11:42:11Z"
+assignee: "move-tracker-state-into-the-database"
+blocked-by: "every track-trails run fails at candidate-smoke: tasks smoke breaks on trails main (Migration needs a version, conn.selectAll removed, id attribute write); cron wrapper exists (tasks#290) but the pin cannot move until tasks is ported"
 closed-reason: null
 ---
 

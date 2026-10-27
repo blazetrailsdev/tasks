@@ -1,7 +1,7 @@
 ---
 title: "Port Channel::TestCase, ChannelStub and ConnectionStub"
-status: ready
-updated: 2026-10-21
+status: claimed
+updated: 2026-10-27
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
@@ -14,8 +14,8 @@ deps:
 deps-rfc: []
 est-loc: 350
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-27T11:40:55Z"
+assignee: "port-actioncable-channel-test-case"
 blocked-by: null
 closed-reason: null
 ---
