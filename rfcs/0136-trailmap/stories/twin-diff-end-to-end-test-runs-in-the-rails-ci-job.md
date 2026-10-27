@@ -1,6 +1,6 @@
 ---
 title: "twin-diff's end-to-end test runs in the rails CI job once the twin is on main"
-status: draft
+status: in-progress
 updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#86
+claim: "2026-10-27T16:44:53Z"
+assignee: "twin-diff-end-to-end-test-runs-in-the-rails-ci-job"
 blocked-by: null
 closed-reason: null
 ---

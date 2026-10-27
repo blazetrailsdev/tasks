@@ -1,6 +1,6 @@
 ---
 title: "Drop mini_magick's codegen shims and its activesupport dependency"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-polish

@@ -1,6 +1,6 @@
 ---
 title: "rails-dom-testing-enroll-in-parity-api"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null

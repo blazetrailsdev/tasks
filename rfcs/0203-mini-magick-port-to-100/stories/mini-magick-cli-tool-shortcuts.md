@@ -1,6 +1,6 @@
 ---
 title: "Port mini_magick's CLI tool shortcuts (MiniMagick.convert, .identify, …)"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-runtime
