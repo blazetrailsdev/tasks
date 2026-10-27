@@ -1,6 +1,6 @@
 ---
 title: "Stream#write goes through write_nonblock and the event loop's pending writes, as Rails does"
-status: draft
+status: in-progress
 updated: 2026-10-27
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9384
+claim: "2026-10-27T22:33:05Z"
+assignee: "stream-write-goes-through-write-nonblock"
 blocked-by: null
 closed-reason: null
 ---

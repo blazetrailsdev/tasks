@@ -1,6 +1,6 @@
 ---
 title: "Call gate credits native hash forms on plain-object receivers Rails does not prove a Hash"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0194-ruby-compat-native-first"
 cluster: null

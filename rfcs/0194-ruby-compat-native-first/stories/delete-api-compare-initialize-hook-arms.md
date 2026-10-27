@@ -1,6 +1,6 @@
 ---
 title: "Delete api-compare's [initialize] hook arms, which no module feeds"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0194-ruby-compat-native-first"
 cluster: null

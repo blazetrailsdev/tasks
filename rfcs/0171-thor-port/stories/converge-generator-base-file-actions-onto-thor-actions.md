@@ -1,7 +1,7 @@
 ---
 title: "Converge GeneratorBase's hand-rolled file actions onto Thor::Actions and delete them"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-27
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -17,9 +17,9 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9391
+claim: "2026-10-27T22:46:26Z"
+assignee: "converge-generator-base-file-actions-onto-thor-actions"
 blocked-by: null
 closed-reason: null
 ---

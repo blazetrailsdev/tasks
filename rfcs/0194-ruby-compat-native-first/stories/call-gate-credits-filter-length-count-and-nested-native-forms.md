@@ -1,6 +1,6 @@
 ---
 title: "Call gates credit .filter(fn).length as count and native forms in nested arguments"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0194-ruby-compat-native-first"
 cluster: null

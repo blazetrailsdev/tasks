@@ -1,6 +1,6 @@
 ---
 title: "Extractor: a function returning a class must not suppress the synthesized file module"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0120-extra-surface-gating-rollout"
 cluster: null

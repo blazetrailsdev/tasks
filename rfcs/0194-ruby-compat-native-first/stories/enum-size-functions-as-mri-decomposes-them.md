@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: restore enum_size / each_slice_size / each_cons_size as MRI's named functions"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0194-ruby-compat-native-first"
 cluster: null
