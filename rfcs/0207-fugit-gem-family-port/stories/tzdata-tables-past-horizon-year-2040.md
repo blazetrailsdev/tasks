@@ -1,7 +1,7 @@
 ---
 title: "tzdata-tables-past-horizon-year-2040"
-status: draft
-updated: 2026-10-26
+status: in-progress
+updated: 2026-10-27
 rfc: "0207-fugit-gem-family-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9356
+claim: "2026-10-27T00:46:35Z"
+assignee: "fugit-fuzz-reads-rearguard-zoneinfo"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "parity: the comparer's guessed-mirror call-gate skip has no regression test"
-status: ready
-updated: 2026-10-13
+status: in-progress
+updated: 2026-10-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9355
+claim: "2026-10-27T00:02:19Z"
+assignee: "generated-app-needs-non-null-assertions-on-trails-application"
 blocked-by: null
 closed-reason: null
 ---

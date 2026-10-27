@@ -29,7 +29,7 @@ related-rfcs:
   - "0104-twitter-app-full-stack-integration"
   - "0141-actionpack-surfaced-deviations"
   - "0123-blocked-convergence-holding"
-priority: 2
+priority: 9
 ---
 
 # RFC 0142 — trailties surfaced deviations

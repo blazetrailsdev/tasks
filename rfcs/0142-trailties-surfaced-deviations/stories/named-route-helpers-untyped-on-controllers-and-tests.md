@@ -1,7 +1,7 @@
 ---
 title: "Named route helpers are untyped on controllers and integration tests"
 status: ready
-updated: 2026-09-30
+updated: 2026-10-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

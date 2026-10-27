@@ -1,7 +1,7 @@
 ---
 title: "i18n-railtie-initializers-unported"
 status: ready
-updated: 2026-09-28
+updated: 2026-10-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

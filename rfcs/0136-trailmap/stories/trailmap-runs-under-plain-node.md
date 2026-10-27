@@ -1,7 +1,7 @@
 ---
 title: "trailmap runs its TypeScript under plain node: .ts specifiers, no tsx"
-status: draft
-updated: 2026-10-26
+status: in-progress
+updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#79
+claim: "2026-10-27T00:10:02Z"
+assignee: "trailmap-runs-under-plain-node"
 blocked-by: null
 closed-reason: null
 ---

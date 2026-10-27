@@ -1,7 +1,7 @@
 ---
 title: "generated-app-needs-non-null-assertions-on-trails-application"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9355
+claim: "2026-10-27T00:02:19Z"
+assignee: "generated-app-needs-non-null-assertions-on-trails-application"
 blocked-by: null
 closed-reason: null
 ---
