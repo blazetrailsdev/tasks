@@ -1,6 +1,6 @@
 ---
 title: "Port Loofah::Scrubber, HTML5::SafeList and HTML5::Scrub over @blazetrails/nokogiri"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null

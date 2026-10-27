@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-models-named-under-solid-queue-namespace"
-status: ready
-updated: 2026-10-26
+status: claimed
+updated: 2026-10-27
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-27T01:59:58Z"
+assignee: "solid-queue-models-named-under-solid-queue-namespace"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "tzdata-tables-past-horizon-year-2040"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0207-fugit-gem-family-port"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "TSETracker ports ERBTracker#add_dependencies / add_dynamic_dependency / add_static_dependency"
-status: ready
-updated: 2026-10-26
+status: blocked
+updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -10,10 +10,10 @@ deps:
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
-blocked-by: null
+pr: trails#9358
+claim: "2026-10-27T01:18:07Z"
+assignee: "credit-helpers-eager-load-bang-in-api-compare"
+blocked-by: "routing render_dependencies through add_dependencies as erb_tracker.rb does needs port-ruby-tracker-and-converge-tse-tracker-to-erb-tracker; helpers ported in trails#9358"
 closed-reason: null
 ---
 

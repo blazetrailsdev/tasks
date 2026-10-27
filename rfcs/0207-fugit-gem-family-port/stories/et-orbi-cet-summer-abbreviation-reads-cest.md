@@ -1,6 +1,6 @@
 ---
 title: "et-orbi strftime %Z answers CEST for a summer CET instant (fuzz seed 20261025)"
-status: draft
+status: closed
 updated: 2026-10-27
 rfc: "0207-fugit-gem-family-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: fixed in trails#9316 (4f1b260e83), not a separate story"
 ---
 
 ## Context

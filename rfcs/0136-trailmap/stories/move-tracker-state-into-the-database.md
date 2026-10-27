@@ -1,7 +1,7 @@
 ---
 title: "Move tracker-state.json into the database as pr_states"
 status: ready
-updated: 2026-10-23
+updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]

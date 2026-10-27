@@ -1,6 +1,6 @@
 ---
 title: "configFor drops config_for's Pathname argument arm"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

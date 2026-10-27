@@ -1,7 +1,7 @@
 ---
 title: "html-sanitizer-safe-list-sanitize-css"
-status: ready
-updated: 2026-10-26
+status: blocked
+updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -14,7 +14,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "needs port-crass-css-parser and port-loofah-scrubber-and-html5-scrub"
 closed-reason: null
 ---
 

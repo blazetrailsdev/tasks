@@ -1,7 +1,7 @@
 ---
 title: "Differential fuzz of raabro, chronic, et-orbi and fugit against the Ruby gems"
-status: in-progress
-updated: 2026-10-26
+status: done
+updated: 2026-10-27
 rfc: "0207-fugit-gem-family-port"
 cluster: fugit-family
 packages: ["fugit", "et-orbi", "chronic", "raabro", "scripts"]

@@ -1,6 +1,6 @@
 ---
 title: "Port Crass (Tokenizer, Parser.parse_properties / parse_component_values / stringify)"
-status: draft
+status: ready
 updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null

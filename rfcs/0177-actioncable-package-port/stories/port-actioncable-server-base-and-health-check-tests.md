@@ -1,6 +1,6 @@
 ---
 title: "Port server/base_test.rb and server/health_check_test.rb"
-status: claimed
+status: done
 updated: 2026-10-27
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
@@ -13,7 +13,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: trails#9357
 claim: "2026-10-27T00:47:16Z"
 assignee: "port-actioncable-redis-adapter-live-tests-and-ci-service"
 blocked-by: null

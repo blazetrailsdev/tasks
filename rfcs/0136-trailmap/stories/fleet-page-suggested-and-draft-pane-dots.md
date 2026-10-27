@@ -1,7 +1,7 @@
 ---
 title: "trailmap: suggested and draft pane dots on the fleet page"
-status: ready
-updated: 2026-10-26
+status: in-progress
+updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#80
+claim: "2026-10-27T01:18:05Z"
+assignee: "fleet-page-suggested-and-draft-pane-dots"
 blocked-by: null
 closed-reason: null
 ---

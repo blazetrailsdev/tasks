@@ -1,7 +1,7 @@
 ---
 title: "schedule-continuous-trails-tracking"
 status: ready
-updated: 2026-10-23
+updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []

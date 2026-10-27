@@ -1,7 +1,7 @@
 ---
 title: "Un-skip the two actionview tests still BLOCKED on the landed Builder handler"
-status: ready
-updated: 2026-10-26
+status: in-progress
+updated: 2026-10-27
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["actionview"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9358
+claim: "2026-10-27T01:18:07Z"
+assignee: "credit-helpers-eager-load-bang-in-api-compare"
 blocked-by: null
 closed-reason: null
 ---

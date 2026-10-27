@@ -1,6 +1,6 @@
 ---
 title: "fugit-fuzz reads the rearguard zoneinfo from scripts/tzdata-zoneinfo.ts"
-status: blocked
+status: done
 updated: 2026-10-27
 rfc: "0207-fugit-gem-family-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: trails#9316
 claim: "2026-10-27T00:46:35Z"
 assignee: "fugit-fuzz-reads-rearguard-zoneinfo"
-blocked-by: "waiting on trails#9316 (fugit-fuzz not yet on main; scripts/fugit-fuzz/fuzz.ts does not exist)"
+blocked-by: null
 closed-reason: null
 ---
 

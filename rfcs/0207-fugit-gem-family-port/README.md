@@ -1,9 +1,9 @@
 ---
 rfc: "0207-fugit-gem-family-port"
 title: "fugit and its gem family (raabro, et-orbi, chronic) ported from generated output to 100%"
-status: active
+status: closed
 created: 2026-10-24
-updated: 2026-10-24
+updated: 2026-10-27
 owner: "@deanmarano"
 packages:
   - raabro

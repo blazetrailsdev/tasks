@@ -1,7 +1,7 @@
 ---
 title: "Serve the session archive read-only from trailmap"
 status: ready
-updated: 2026-10-12
+updated: 2026-10-27
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord"]

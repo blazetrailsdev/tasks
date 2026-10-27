@@ -1,7 +1,7 @@
 ---
 title: "Port ActionCable::TestHelper and ActionCable::TestCase"
-status: ready
-updated: 2026-10-21
+status: claimed
+updated: 2026-10-27
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
@@ -10,8 +10,8 @@ deps:
 deps-rfc: []
 est-loc: 450
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-27T01:59:42Z"
+assignee: "port-actioncable-test-helper-and-test-case"
 blocked-by: null
 closed-reason: null
 ---

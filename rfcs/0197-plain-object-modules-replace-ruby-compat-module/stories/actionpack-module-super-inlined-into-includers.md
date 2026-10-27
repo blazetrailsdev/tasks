@@ -1,6 +1,6 @@
 ---
 title: "actionpack-module-super-inlined-into-includers"
-status: claimed
+status: in-progress
 updated: 2026-10-27
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
+pr: trails#9359
 claim: "2026-10-27T00:53:29Z"
 assignee: "actionpack-module-super-inlined-into-includers"
 blocked-by: null

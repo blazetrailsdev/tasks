@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc-types-primary-key-from-the-schema"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
