@@ -34,3 +34,5 @@ away when the fuzz's Ruby side reads the rearguard zoneinfo (checked locally).
   `FUGIT_FUZZ_ZONEINFO` from `zoneinfo()` in `scripts/tzdata-zoneinfo.ts`.
 - `TZ=UTC pnpm tsx scripts/fugit-fuzz/fuzz.ts --seed 20261025 --count 2000 --surface eo`
   has no Casablanca `dst` case.
+- The same run has no `2040-06-28 ... CET` case (fixed in the readers by
+  `tzdata-tables-past-horizon-year-2040`).

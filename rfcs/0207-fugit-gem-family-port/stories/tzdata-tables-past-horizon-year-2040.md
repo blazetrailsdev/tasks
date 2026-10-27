@@ -44,5 +44,4 @@ probably needs to extend the zone's final annual rule past the horizon instead.
   data source) between `HORIZON_YEAR` and `GENERATE_UP_TO`. Regression values
   come from Ruby 3.3.11 + tzinfo 2.0.6.
 - The committed tables do not grow by more than a few percent.
-- `TZ=UTC pnpm tsx scripts/fugit-fuzz/fuzz.ts --seed 20261025 --count 2000 --surface eo`
-  has no `2040-06-28 ... CET` case.
+- A regression row covers the fuzz's `2040-06-28 13:19:26` Paris case (`CEST`).
