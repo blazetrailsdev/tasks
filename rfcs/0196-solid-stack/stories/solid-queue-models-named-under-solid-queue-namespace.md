@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-models-named-under-solid-queue-namespace"
-status: draft
+status: ready
 updated: 2026-10-26
 rfc: "0196-solid-stack"
 cluster: null

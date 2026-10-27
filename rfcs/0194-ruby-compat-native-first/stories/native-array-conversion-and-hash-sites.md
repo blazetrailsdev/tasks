@@ -1,6 +1,6 @@
 ---
 title: "Native Object.fromEntries / Object.keys / spread for toH / zip / keys / transformValues / eachValue / valuesAt / dup on plain receivers"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0194-ruby-compat-native-first"
 cluster: native-sweep

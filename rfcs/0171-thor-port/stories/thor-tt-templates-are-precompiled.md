@@ -1,6 +1,6 @@
 ---
 title: "thor-tt-templates-are-precompiled"
-status: in-progress
+status: done
 updated: 2026-10-26
 rfc: "0171-thor-port"
 cluster: null

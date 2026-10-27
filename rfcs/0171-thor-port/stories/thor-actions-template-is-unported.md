@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Actions copy_file / link_file / get / template (TSE render, capture / concat) and route the migration generator's in-line render through it"
-status: blocked
+status: done
 updated: 2026-10-26
 rfc: "0171-thor-port"
 cluster: null
@@ -13,10 +13,10 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: trails#9343
+pr: trails#9351
 claim: "2026-10-26T17:44:33Z"
 assignee: "thor-actions-template-is-unported"
-blocked-by: "waits on thor-tt-templates-are-precompiled (owner ruling 2026-10-26 on trails#9343: .tt templates are precompiled; no eval pipeline)"
+blocked-by: null
 closed-reason: null
 ---
 
