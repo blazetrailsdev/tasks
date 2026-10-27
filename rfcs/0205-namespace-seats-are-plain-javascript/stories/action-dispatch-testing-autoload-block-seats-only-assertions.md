@@ -1,6 +1,6 @@
 ---
 title: 'ActionDispatch''s autoload_under "testing" block misses IntegrationTest, TestRequest and AssertionResponse'
-status: claimed
+status: in-progress
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#9389
 claim: "2026-10-27T20:39:19Z"
 assignee: "enumerable-free-functions-remaining-loop-and-enumerator-sites"
 blocked-by: null

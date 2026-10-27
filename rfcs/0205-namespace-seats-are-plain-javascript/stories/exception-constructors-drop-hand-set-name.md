@@ -1,6 +1,6 @@
 ---
 title: "actionpack exception constructors drop hand-set this.name now that classes are path-seated"
-status: claimed
+status: in-progress
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9389
 claim: "2026-10-27T20:39:19Z"
 assignee: "enumerable-free-functions-remaining-loop-and-enumerator-sites"
 blocked-by: null

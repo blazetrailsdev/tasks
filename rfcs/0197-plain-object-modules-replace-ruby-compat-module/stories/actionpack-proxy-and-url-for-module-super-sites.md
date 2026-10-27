@@ -1,6 +1,6 @@
 ---
 title: "actionpack Collector, Live, Integration, RoutingAssertions, Mapper and UrlFor super sites use rbCallSuper"
-status: claimed
+status: in-progress
 updated: 2026-10-27
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#9390
 claim: "2026-10-27T20:07:12Z"
 assignee: "actionpack-proxy-and-url-for-module-super-sites"
 blocked-by: null
