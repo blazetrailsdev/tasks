@@ -2,7 +2,7 @@
 title: "activerecord-test-support-helper-stand-ins-and-harness"
 status: draft
 updated: 2026-10-27
-rfc: "0120-extra-surface-gating-rollout"
+rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
