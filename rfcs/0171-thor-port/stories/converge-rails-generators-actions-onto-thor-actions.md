@@ -1,7 +1,7 @@
 ---
 title: "Converge Rails::Generators::Actions (generate, rake, git, environment, route, initializer, …) onto Thor's run / in_root / inject actions"
-status: claimed
-updated: 2026-10-27
+status: in-progress
+updated: 2026-10-28
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 550
 priority: 2
-pr: null
+pr: trails#9393
 claim: "2026-10-27T23:53:34Z"
 assignee: "converge-rails-generators-actions-onto-thor-actions"
 blocked-by: null

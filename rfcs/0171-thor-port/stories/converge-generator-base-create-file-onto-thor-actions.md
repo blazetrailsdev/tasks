@@ -1,7 +1,7 @@
 ---
 title: "converge-generator-base-create-file-onto-thor-actions"
-status: draft
-updated: 2026-10-27
+status: blocked
+updated: 2026-10-28
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "waiting on rebase-generator-base-onto-thor-group (still unclaimed, no PR): GeneratorBase has no Thor::Shell, so Thor::Actions file actions raise on base.shell.sayStatus"
 closed-reason: null
 ---
 
