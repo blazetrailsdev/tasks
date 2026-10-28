@@ -1,5 +1,5 @@
 ---
-title: "Converge Rails::Generators::Actions (generate, rake, git, environment, route, initializer, …) onto Thor's run / in_root / inject actions"
+title: "Converge Rails::Generators::Actions (rake, git, environment, route, initializer, …) onto Thor's run / in_root / inject actions"
 status: in-progress
 updated: 2026-10-28
 rfc: "0171-thor-port"
@@ -41,4 +41,8 @@ Both use `getChildProcess().spawnSync` and a local `requireAsyncFs`, not Thor.
       `requireAsyncFs` are gone.
 - [ ] Members with no Rails counterpart that stay in `trails-actions.ts` (for example `pkg`, the
       npm analogue of `gem`) carry receipts.
+- [ ] `generate` / `rails_command` are out of scope: their convergence (and the `pendingGenerators`
+      queue) belongs to `converge-generators-actions-generate-onto-rails-command`, and the Gemfile
+      family (`gem`, `gem_group`, `github`, `add_source` and their helpers) to
+      `converge-generators-actions-gemfile-family-onto-package-json`.
 - [ ] `parity:api:calls` rows for `actions.rb` converge (delete and `tighten`).
