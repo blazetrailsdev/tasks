@@ -1,7 +1,7 @@
 ---
 title: "Spawn loop panel: last spawn time and next-spawn countdown"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#88
+claim: "2026-10-28T12:04:01Z"
+assignee: "port-pr-82-to-the-rails-twin"
 blocked-by: null
 closed-reason: null
 ---

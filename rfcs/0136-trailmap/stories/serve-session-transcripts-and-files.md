@@ -1,7 +1,7 @@
 ---
 title: "Serve /sessions/transcript, /sessions/file and /sessions/pane"
-status: in-progress
-updated: 2026-10-27
+status: done
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionpack"]

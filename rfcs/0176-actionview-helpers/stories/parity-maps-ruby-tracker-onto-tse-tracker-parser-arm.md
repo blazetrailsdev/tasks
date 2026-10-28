@@ -1,6 +1,6 @@
 ---
 title: "parity:api measures ruby_tracker.rb against TSETracker's parser arm"
-status: claimed
+status: in-progress
 updated: 2026-10-28
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#9395
 claim: "2026-10-28T11:49:47Z"
 assignee: "parity-maps-ruby-tracker-onto-tse-tracker-parser-arm"
 blocked-by: null

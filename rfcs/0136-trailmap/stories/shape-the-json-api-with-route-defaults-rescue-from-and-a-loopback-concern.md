@@ -1,7 +1,7 @@
 ---
 title: "Shape the JSON API with route format defaults, rescueFrom and a loopback concern"
-status: in-progress
-updated: 2026-10-27
+status: done
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionpack"]

@@ -1,6 +1,6 @@
 ---
 title: "Take mini_magick to zero tsc errors and no any"
-status: claimed
+status: in-progress
 updated: 2026-10-28
 rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-polish
@@ -9,7 +9,7 @@ deps: ["mini-magick-lib-native-idioms", "mini-magick-specs-native-and-typed"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#9396
 claim: "2026-10-28T11:49:07Z"
 assignee: "mini-magick-image-hash-sync-over-async-signature"
 blocked-by: null

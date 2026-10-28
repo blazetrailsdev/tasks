@@ -1,6 +1,6 @@
 ---
 title: "mini-magick-image-hash-sync-over-async-signature"
-status: claimed
+status: in-progress
 updated: 2026-10-28
 rfc: "0203-mini-magick-port-to-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9396
 claim: "2026-10-28T11:49:07Z"
 assignee: "mini-magick-image-hash-sync-over-async-signature"
 blocked-by: null

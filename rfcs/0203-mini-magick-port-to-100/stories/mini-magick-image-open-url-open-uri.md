@@ -1,6 +1,6 @@
 ---
 title: "Image.open URL arm: port OpenURI::OpenRead#open"
-status: claimed
+status: in-progress
 updated: 2026-10-28
 rfc: "0203-mini-magick-port-to-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#9396
 claim: "2026-10-28T11:49:07Z"
 assignee: "mini-magick-image-hash-sync-over-async-signature"
 blocked-by: null
