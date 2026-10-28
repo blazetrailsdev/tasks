@@ -24,6 +24,6 @@ specs, so vendor from the GitHub tags (`mikel/mail`, `discourse/mini_mime`,
 
 ## Acceptance criteria
 
-- `vendor/mail/v2.8.1/`, `vendor/mini_mime/v1.1.5/` and `vendor/net-smtp/v0.5.1/`
+- `vendor/mail/2.8.1/`, `vendor/mini_mime/v1.1.5/` and `vendor/net-smtp/v0.5.1/`
   populate via `pnpm vendor:fetch`, with `spec/` / `test/` included.
 - `sources.lock.json` records each tag's sha.

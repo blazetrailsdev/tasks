@@ -17,7 +17,7 @@ blocked-by: null
 
 ## Context
 
-`vendor/mail/v2.8.1/lib/mail/multibyte/` (767 lines: `chars.rb`, `unicode.rb`, `utils.rb`) is a
+`vendor/mail/2.8.1/lib/mail/multibyte/` (767 lines: `chars.rb`, `unicode.rb`, `utils.rb`) is a
 copy of ActiveSupport's `Multibyte`, used by `Utilities` and
 `UnstructuredField` to fold and truncate by character. trails already ports
 `ActiveSupport::Multibyte::Chars`.

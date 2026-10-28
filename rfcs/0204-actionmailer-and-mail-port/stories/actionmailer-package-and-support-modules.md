@@ -25,8 +25,9 @@ blocked-by: null
 
 ## Acceptance criteria
 
-- Package registered per the new-package checklist (ci.yml, guard fixture,
-  parity enrolment).
+- Package registered and enrolled in parity by the same eight-step
+  checklist `mini-mime-port` lists (its entry is a new `actionmailer` package
+  under the `rails` source in `vendor/sources.ts`).
 - Every file above ported at its Ruby names; their tests
   (`log_subscriber_test.rb`, `mail_helper_test.rb`,
   `delivery_methods_test.rb`, …) pass once `Base` lands.

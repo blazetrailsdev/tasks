@@ -17,7 +17,7 @@ blocked-by: null
 
 ## Context
 
-`vendor/mail/v2.8.1/lib/mail/body.rb` (305: boundary splitting, encoding), `part.rb` (119),
+`vendor/mail/2.8.1/lib/mail/body.rb` (305: boundary splitting, encoding), `part.rb` (119),
 `parts_list.rb` (131: sort order) and `attachments_list.rb` (107, over
 `MiniMime`).
 

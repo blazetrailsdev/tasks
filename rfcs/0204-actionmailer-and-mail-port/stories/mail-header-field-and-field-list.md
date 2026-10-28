@@ -17,7 +17,7 @@ blocked-by: null
 
 ## Context
 
-`vendor/mail/v2.8.1/lib/mail/header.rb` (237), `field.rb` (283, the field-name to class table and
+`vendor/mail/2.8.1/lib/mail/header.rb` (237), `field.rb` (283, the field-name to class table and
 lazy parsing), `field_list.rb` (header ordering) and `indifferent_hash.rb`
 (147). `FieldList`'s ordering fixes the header order ActionMailer's tests assert.
 

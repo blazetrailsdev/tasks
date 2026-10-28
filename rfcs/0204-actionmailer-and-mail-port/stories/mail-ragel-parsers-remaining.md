@@ -17,7 +17,7 @@ blocked-by: null
 
 ## Context
 
-The other eleven `vendor/mail/v2.8.1/lib/mail/parsers/*.rb` files (content type, disposition,
+The other eleven `vendor/mail/2.8.1/lib/mail/parsers/*.rb` files (content type, disposition,
 location, transfer encoding, date-time, envelope-from, message ids, mime version,
 phrase lists, received), run through the spike's script.
 

@@ -17,10 +17,10 @@ blocked-by: null
 
 ## Context
 
-`vendor/mail/v2.8.1/lib/mail/message.rb` is 2,156 lines; lines 1-1625 are `initialize` (`:107`),
+`vendor/mail/2.8.1/lib/mail/message.rb` is 2,156 lines; lines 1-1625 are `initialize` (`:107`),
 the header accessor family, `[]` / `[]=`, `charset`, `content_type`,
 `mime_version`, `delivery_method`, `register_for_delivery_notification`
-and their docs. Also `vendor/mail/v2.8.1/lib/mail/mail.rb` (262: `Mail.new`, `defaults`,
+and their docs. Also `vendor/mail/2.8.1/lib/mail/mail.rb` (262: `Mail.new`, `defaults`,
 `register_interceptor` / `register_observer`, `inform_*`).
 
 ## Acceptance criteria

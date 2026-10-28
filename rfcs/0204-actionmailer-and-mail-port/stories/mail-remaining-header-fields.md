@@ -17,7 +17,7 @@ blocked-by: null
 
 ## Context
 
-The rest of `vendor/mail/v2.8.1/lib/mail/fields/`: content-type, content-disposition,
+The rest of `vendor/mail/2.8.1/lib/mail/fields/`: content-type, content-disposition,
 content-transfer-encoding, content-id, content-location, content-description,
 mime-version, date, message-id, in-reply-to, references, received, subject,
 comments, keywords, optional field.

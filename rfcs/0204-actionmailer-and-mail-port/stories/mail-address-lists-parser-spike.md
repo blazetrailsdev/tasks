@@ -17,11 +17,11 @@ blocked-by: null
 
 ## Context
 
-`vendor/mail/v2.8.1/lib/mail/parsers/address_lists_parser.rb` is the largest Ragel output and the
+`vendor/mail/2.8.1/lib/mail/parsers/address_lists_parser.rb` is the largest Ragel output and the
 one `Mail::Address` stands on. Ragel 6 has no JavaScript target, so the RFC
 recommends a script that transliterates the generated Ruby (Open question 1).
 This story proves or kills that before the other eleven parsers are taken on.
-It also ports `vendor/mail/v2.8.1/lib/mail/parser_tools.rb`.
+It also ports `vendor/mail/2.8.1/lib/mail/parser_tools.rb`.
 
 ## Acceptance criteria
 

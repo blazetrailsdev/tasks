@@ -17,7 +17,7 @@ blocked-by: null
 
 ## Context
 
-`vendor/mail/v2.8.1/lib/mail/fields/` holds 39 files (1,824 lines). This slice is the bases and the
+`vendor/mail/2.8.1/lib/mail/fields/` holds 39 files (1,824 lines). This slice is the bases and the
 address fields (~730 lines): `common_field.rb`, `common_address_field.rb`,
 `common_date_field.rb`, `common_message_id_field.rb`, `named_*`,
 `structured_field.rb`, `unstructured_field.rb` (RFC 2047 encoded-word folding)

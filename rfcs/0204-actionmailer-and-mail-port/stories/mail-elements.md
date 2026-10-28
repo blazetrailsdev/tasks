@@ -17,7 +17,7 @@ blocked-by: null
 
 ## Context
 
-`vendor/mail/v2.8.1/lib/mail/elements/` (521 lines, 12 files): `Address`, `AddressList`,
+`vendor/mail/2.8.1/lib/mail/elements/` (521 lines, 12 files): `Address`, `AddressList`,
 `PhraseList`, `ContentTypeElement`, `DateTimeElement`, `ReceivedElement`
 and the rest, each wrapping one parser. `Mail::Address` backs ActionMailer's
 `email_address_with_name`.
