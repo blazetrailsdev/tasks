@@ -1,5 +1,5 @@
 ---
-title: "String-keyed constant lookups with a literal name become ES imports; computed ones keep only Rails const_get sites"
+title: "String-keyed constant lookups become ES imports, or explicit registries where the name is computed"
 status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
@@ -75,12 +75,13 @@ Related backlog to read first, and to fold in where it overlaps:
 
 - [ ] No call to a lookup helper above passes a string-literal name; each is
       a plain ES import (a deferred read) or an `import type`.
-- [ ] Every remaining call cites, on its enclosing declaration's JSDoc or the
-      PR body, the Rails `file:line` whose body calls `const_get`,
-      `const_defined?`, `constants`, `constantize` or `path2class`.
-- [ ] A remaining `rbModConstGet(Owner, name)` with `Owner` other than `Object`
-      resolves through `Owner`'s own properties and never reaches
-      `RCLASS_CONST_TBL`.
+- [ ] No call to a lookup helper above remains with a computed name. Each
+      becomes an explicit registry read: a generated class-path table, the
+      application table from `application-classes-resolve-without-a-registration-call`,
+      or a module-private map beside the reader for a closed set (queue
+      adapters, Marshal's `path2class`, MessagePack's `load_class`). It cites
+      the Rails `file:line` whose `const_get` / `constantize` it replaces.
+      No ported `const_get` walk answers it (owner ruling, 2026-10-28).
 - [ ] The built `dist/**.js` of each touched package loads as a plain-node
       ESM entry module (CLAUDE.md § "Call-time constant resolution").
 - [ ] Touched test files pass.

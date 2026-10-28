@@ -46,10 +46,11 @@ table or read it outside a ported Rails lookup. Then these can go:
 
 - [ ] The names above are deleted, with their exports, from ruby-compat's
       `index.ts`.
-- [ ] `constantize`'s body reads as Rails' `Object.const_get` walk
-      (`vendor/rails/v8.0.2/activesupport/lib/active_support/inflector/methods.rb`)
-      over namespace properties and the generated tables, with no
-      `isRegisteredConstant` arm.
+- [ ] `constantize` and `rbPathToClass` resolve a name through the explicit
+      registries only (the generated class-path tables and the application
+      table), with no `isRegisteredConstant` arm and no `const_get` walk over
+      namespace properties (owner ruling, 2026-10-28). `rbModConstGet` and
+      `rbConstGet` are deleted with the table.
 - [ ] The gate from `gate-rb-mod-const-set-to-rails-const-set-sites` reports
       zero `registerConstant` calls and is narrowed to forbid the name.
 - [ ] `pnpm parity:modules` and `parity:api:extra:gate` for ruby-compat are

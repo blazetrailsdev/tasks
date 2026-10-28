@@ -3,7 +3,7 @@ rfc: "0205-namespace-seats-are-plain-javascript"
 title: "Lean on ES imports: namespace seating survives only where module evaluation order needs it"
 status: active
 created: 2026-10-22
-updated: 2026-10-27
+updated: 2026-10-28
 owner: "@deanmarano"
 packages:
   - "ruby-compat"
@@ -195,9 +195,15 @@ away entirely, not only seating:
 
 - A string-keyed lookup with a literal name is a plain ES import, as
   CLAUDE.md § "A dispatch by name is spelled directly" rules for `send`.
-- A computed-name lookup survives only where the Rails body calls
-  `const_get`, `const_defined?`, `constants`, `constantize` or `path2class`,
-  and it reads the owner's own properties or a generated class-path table.
+- A computed-name lookup becomes an **explicit registry**: a declared map from
+  the Ruby-visible name to the class, read at the call site, as that section
+  rules for a computed `send`. This holds even where the Rails body calls
+  `const_get`, `const_defined?`, `constants`, `constantize` or `path2class`.
+  trails does not port a `const_get` walk over namespace properties to
+  answer such a call (repo-owner ruling, 2026-10-28, on closed trails#9397).
+  The generated class-path tables and the per-application table below are
+  the registries. Where a closed set needs its own registry, it is a
+  module-private table beside the reader.
 - `registerConstant` and the top-level constant table `RCLASS_CONST_TBL` are
   deleted. Framework and core classes resolve through generated class-path
   tables. Application classes resolve through a per-application class-path
