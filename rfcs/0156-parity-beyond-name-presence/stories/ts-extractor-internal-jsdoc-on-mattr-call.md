@@ -2,7 +2,7 @@
 title: "Extractor: honor @internal on a mattrAccessor/cattrAccessor .call statement"
 status: draft
 updated: 2026-10-27
-rfc: "0120-extra-surface-gating-rollout"
+rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
 deps: []
