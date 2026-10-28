@@ -47,4 +47,8 @@ Also outstanding:
       `templates/` directory, and the receipt is removed.
 - [ ] The private `template` copies in `app-generator.ts`, `change-generator.ts` and both
       authentication generators are deleted; `GeneratorBase` declares Thor's `template`.
+- [ ] `NamedBase#template` overrides Thor's `template` to record the file through
+      `Generators.addGeneratedFile(super)` inside `inside_template`
+      (`vendor/rails/v8.0.2/railties/lib/rails/generators/named_base.rb:20-27`); until it does, a
+      named generator's files reach no `after_generate` callback (`generators.rb:319`).
 - [ ] Split by LOC under the ceiling, one generator family per PR.
