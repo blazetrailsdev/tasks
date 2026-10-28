@@ -1,6 +1,6 @@
 ---
 title: "mini-magick-image-ctor-block-async-combine-options"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0203-mini-magick-port-to-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Drop noCheck from mini-magick's tsconfig once it type-checks clean"
-status: blocked
-updated: 2026-10-27
+status: closed
+updated: 2026-10-28
 rfc: "0203-mini-magick-port-to-100"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-10-27T17:18:37Z"
 assignee: "ruby-compat-move-time-from-date"
-blocked-by: "waiting on mini-magick-typecheck-clean: tsc -p packages/mini-magick still reports 369 errors"
-closed-reason: null
+blocked-by: null
+closed-reason: "Delivered by trails#9396 (e8579001ff, 'zero tsc errors'): origin/main packages/mini-magick/tsconfig.json no longer contains noCheck; mini-magick-typecheck-clean is done"
 ---
 
 ## Context

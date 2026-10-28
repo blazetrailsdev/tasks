@@ -1,9 +1,9 @@
 ---
 rfc: "0203-mini-magick-port-to-100"
 title: "mini_magick: from the generated port to 100%"
-status: active
+status: closed
 created: 2026-10-22
-updated: 2026-10-22
+updated: 2026-10-28
 owner: "@deanmarano"
 packages:
   - mini-magick
