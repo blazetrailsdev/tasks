@@ -161,8 +161,8 @@ The backends:
 
 - **`tmux.ts`:** runs the binary with `execFile`, never through a shell, and
   takes `{ bin, socket }`. It parses `-F` output in one place.
-- **`rmux.ts`:** `extends TmuxBackend` with rmux's binary and socket flag. It
-  overrides only where the contract suite shows rmux differs.
+- **`rmux.ts`:** `extends TmuxBackend` with `bin` set to `rmux`. Probing
+  showed no command or format differences (open question 2).
 
 ### Pane identity and discovery
 
@@ -308,21 +308,50 @@ and each one blocks a named step.
 
 ## Open questions
 
-1. **Does rmux support `#{…}` formats and `pipe-pane` well enough for
-   `TmuxBackend` to be reused as-is?**
-   - Options: subclass with overrides, or use rmux's snapshot SDK.
-   - Recommendation: subclass. `mux-rmux-backend` decides, using the
-     contract suite.
-2. **Should pane logs be optional per backend?**
-   - Options: require `pipeTo`, or fall back to polling `capture`.
-   - Recommendation: make `pipeTo` optional and turn session archiving off
-     for that instance when it is missing. Polling loses output between polls
-     and would give the archive gaps nobody can see.
-3. **Where does the registry live?**
-   - Options: `muxd`'s own SQLite file, or trailmap's DB over its API.
-   - Recommendation: `muxd`'s own SQLite file on `/mnt/theta`. Pane control
-     must keep working when trailmap is down, and 0136 already accepts that
-     trailmap being down stops the CLI, not the panes.
+None left. Each one is resolved below.
+
+1. **Where does pane control run? Resolved: a host-side helper.** `muxd`
+   runs on the host as a systemd user unit, not in a container (owner
+   decision, 2026-10-28). See **Topology**.
+2. **Can `TmuxBackend` be reused for rmux? Resolved: yes, as a subclass that
+   changes only the binary.** This was tested against rmux 0.7.1 (Homebrew)
+   on 2026-10-28, on an isolated `-L` socket. Every tmux command `sender.go`
+   issues behaves as it does in tmux:
+   - `list-panes` / `list-windows -a -F` with `pane_id`,
+     `pane_current_path`, `window_name`, `pane_active`, `window_index` and
+     `window_id`
+   - `new-window` / `split-window -P -F '#{pane_id}'`, which return `%N` ids
+   - `send-keys -l` (a 3,013-byte literal including `é→✓` arrived intact),
+     and named keys `Enter`, `C-c` and `Escape`
+   - `capture-pane -p`, `-e` and `-S -N`
+   - `display-message -p` with formats
+   - `pipe-pane -o`, which toggles on and off (`#{pane_pipe}` 1 then 0) and
+     writes the raw stream
+   - `rename-window`, `select-pane -T`, `select-window`, and `move-window`
+     (the index moved to 7)
+   - `set-option`, `kill-pane`, `kill-window`, `kill-server`
+   - a missing pane fails with `can't find pane` and a non-zero exit
+   - `#{pane_current_path}` follows a `cd`, so rmux sets
+     `reportsLiveCwd = true`
+
+   One thing to know: a socket path passed to `-S` must fit the Unix
+   socket-path limit (about 108 bytes). rmux fails with `File name too long`
+   instead of falling back, so instance config should prefer `-L <name>` or
+   a short `-S` path.
+
+   `mux-rmux-backend` still runs the contract suite and the 3-day fleet
+   soak. The snapshot SDK stays unused unless the contract suite fails.
+
+3. **Must every backend provide pane logs? Resolved: no.** `pipeTo` is
+   optional. An instance without it turns session archiving off and shows a
+   "no archive" badge on its panes. Polling `capture` was rejected: it drops
+   output between polls, so the archive would have gaps nobody can see. Both
+   tmux and rmux provide `pipeTo`.
+4. **Where does the registry live? Resolved: `muxd`'s own SQLite file** at
+   `/mnt/theta/trails/muxd/muxd.db`. Pane control must keep working when
+   trailmap is down, and putting it in trailmap's DB would make every pane
+   lookup depend on the web app. trailmap reads pane state through `muxd`'s
+   API.
 
 ## Changelog
 
@@ -339,3 +368,9 @@ and each one blocks a named step.
   - the Go write-failure baseline is now measured during the G3 soak,
   - the `/link` binding to the registry is now owned by a story,
   - corrected the count of primitive call sites.
+- 2026-10-28: resolved the open questions:
+  - pane control runs as a host-side helper (owner decision),
+  - rmux reuses `TmuxBackend` unchanged, per a probe of every `sender.go`
+    tmux command against rmux 0.7.1,
+  - pane logs are optional per backend,
+  - the registry lives in `muxd`'s own SQLite file.

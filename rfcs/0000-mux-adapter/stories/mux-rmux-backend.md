@@ -18,10 +18,10 @@ blocked-by: null
 
 ## Context
 
-Open question 1 of the RFC. First try rmux as a drop-in through its tmux shim; otherwise subclass `TmuxBackend`.
+A probe against rmux 0.7.1 found no differences in any tmux command `sender.go` uses (RFC open question 2). This story makes that permanent: `RmuxBackend` is `TmuxBackend` with `bin: "rmux"`.
 
 ## Acceptance criteria
 
 - [ ] `lib/mux/rmux.ts` passes the contract suite
-- [ ] Open question 1 is answered in the RFC (formats, `pipe-pane`)
+- [ ] Instance config rejects an `-S` socket path longer than the Unix socket-path limit and points to `-L`
 - [ ] A 3-day run of the fleet on an rmux instance meets G4-level failure rates
