@@ -1,6 +1,6 @@
 ---
 title: "Convert activejob's namespace reads to ES imports"
-status: claimed
+status: in-progress
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 280
 priority: null
-pr: null
+pr: trails#9407
 claim: "2026-10-28T15:49:23Z"
 assignee: "ruby-compat-rb-define-module-reopens-a-namespace"
 blocked-by: null

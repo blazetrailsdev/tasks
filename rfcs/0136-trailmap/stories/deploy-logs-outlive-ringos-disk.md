@@ -1,7 +1,7 @@
 ---
 title: "Move each deploy log off ringo's disk so /deploys/log works without ringo"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []

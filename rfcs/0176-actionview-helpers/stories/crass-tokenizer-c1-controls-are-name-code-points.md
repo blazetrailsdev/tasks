@@ -1,6 +1,6 @@
 ---
 title: "Crass facade reads U+0080-U+009F as name code points, as Crass does"
-status: ready
+status: claimed
 updated: 2026-10-28
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T16:26:59Z"
+assignee: "crass-parse-properties-at-rule-tests"
 blocked-by: null
 closed-reason: null
 ---

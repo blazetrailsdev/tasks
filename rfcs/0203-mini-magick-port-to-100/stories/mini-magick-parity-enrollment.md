@@ -1,6 +1,6 @@
 ---
 title: "Enroll mini_magick in parity:api and parity:test at 100%"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-parity

@@ -1,6 +1,6 @@
 ---
 title: "rails/: /sessions/pane replays a pane log instead of answering 501"
-status: draft
+status: ready
 updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null

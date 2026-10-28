@@ -1,7 +1,7 @@
 ---
 title: "Perceptual-hash test helper for image_processing's assert_similar"
-status: draft
-updated: 2026-10-21
+status: ready
+updated: 2026-10-28
 rfc: "0202-image-processing-port"
 cluster: ip-backends
 packages: ["image-processing"]

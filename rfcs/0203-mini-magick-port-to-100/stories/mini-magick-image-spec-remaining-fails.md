@@ -1,6 +1,6 @@
 ---
 title: "Pass the 18 image_spec examples left it.fails (get_pixels, pack S, ctor block)"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0203-mini-magick-port-to-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Port Loofah::Scrubber, HTML5::SafeList and HTML5::Scrub over @blazetrails/nokogiri"
-status: ready
-updated: 2026-10-27
+status: claimed
+updated: 2026-10-28
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["html-sanitizer"]
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 700
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T16:26:59Z"
+assignee: "crass-parse-properties-at-rule-tests"
 blocked-by: null
 closed-reason: null
 ---

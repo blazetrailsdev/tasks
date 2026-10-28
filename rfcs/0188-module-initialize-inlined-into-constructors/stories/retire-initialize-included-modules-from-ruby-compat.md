@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: delete initializeIncludedModules and the initialize registries"
-status: ready
-updated: 2026-10-15
+status: closed
+updated: 2026-10-28
 rfc: "0188-module-initialize-inlined-into-constructors"
 cluster: retire
 packages: ["ruby-compat"]
@@ -35,7 +35,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'landed outside this story: trails#9321 deleted the module initialize hooks from ruby-compat; origin/main has no initializeIncludedModules and no defineMethod("initialize") anywhere'
 ---
 
 ## Context

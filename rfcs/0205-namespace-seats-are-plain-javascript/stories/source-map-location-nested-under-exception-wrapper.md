@@ -1,7 +1,7 @@
 ---
 title: "Seat SourceMapLocation as ExceptionWrapper::SourceMapLocation"
-status: ready
-updated: 2026-10-22
+status: claimed
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T16:19:26Z"
+assignee: "call-gate-credits-typed-fetch-on-plain-object-config-receivers"
 blocked-by: null
 closed-reason: null
 ---

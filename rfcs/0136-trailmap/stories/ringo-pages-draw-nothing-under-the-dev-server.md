@@ -1,7 +1,7 @@
 ---
 title: "Ringo-drawn pages stay on Loading under the development server"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []

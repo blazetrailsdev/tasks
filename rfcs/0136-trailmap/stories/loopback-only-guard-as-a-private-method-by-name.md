@@ -1,6 +1,6 @@
 ---
 title: "LoopbackOnly: register requireLoopback by name as a private method once trails supports both"
-status: draft
+status: ready
 updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null

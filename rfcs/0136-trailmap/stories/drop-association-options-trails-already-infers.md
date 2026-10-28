@@ -1,7 +1,7 @@
 ---
 title: "Drop the foreign_key/class_name options trails already infers on 8 associations"
-status: draft
-updated: 2026-10-27
+status: ready
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []

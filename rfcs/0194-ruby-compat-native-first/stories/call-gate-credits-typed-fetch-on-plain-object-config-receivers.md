@@ -1,7 +1,7 @@
 ---
 title: "call-gate-credits-typed-fetch-on-plain-object-config-receivers"
-status: draft
-updated: 2026-10-27
+status: claimed
+updated: 2026-10-28
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T16:19:26Z"
+assignee: "call-gate-credits-typed-fetch-on-plain-object-config-receivers"
 blocked-by: null
 closed-reason: null
 ---

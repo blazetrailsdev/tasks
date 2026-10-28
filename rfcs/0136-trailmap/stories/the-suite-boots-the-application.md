@@ -1,7 +1,7 @@
 ---
 title: "The suite boots the application, so tests run under its configuration"
-status: draft
-updated: 2026-10-26
+status: ready
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []

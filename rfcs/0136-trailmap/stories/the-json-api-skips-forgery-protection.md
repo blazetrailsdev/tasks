@@ -1,7 +1,7 @@
 ---
 title: "The JSON API skips forgery protection, so mutation verbs work outside test"
-status: draft
-updated: 2026-10-26
+status: ready
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []

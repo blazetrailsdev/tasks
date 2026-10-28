@@ -1,7 +1,7 @@
 ---
 title: "/sessions/file refuses files over 128 MiB and the pane view replays only 2 MiB"
-status: draft
-updated: 2026-10-27
+status: ready
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []

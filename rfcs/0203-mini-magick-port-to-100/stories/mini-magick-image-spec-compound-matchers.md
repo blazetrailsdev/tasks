@@ -1,6 +1,6 @@
 ---
 title: "Port image_spec's be_a(...).and be_nonzero compound checks in full"
-status: draft
+status: claimed
 updated: 2026-10-28
 rfc: "0203-mini-magick-port-to-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T16:25:34Z"
+assignee: "mini-magick-extra-surface-gate-enrollment"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Confirm ringo's transcript page escapes its fields and works under trailmap's CSP sandbox"
-status: draft
+status: ready
 updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
