@@ -2,7 +2,7 @@
 title: "Port the screen classifiers and string helpers to `lib/mux/screen.ts`"
 status: draft
 updated: 2026-10-28
-rfc: "0000-mux-adapter"
+rfc: "0210-mux-adapter"
 cluster: mux-foundation
 packages: []
 deps:

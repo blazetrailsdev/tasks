@@ -2,7 +2,7 @@
 title: "Migrate stored pane ids to `PaneRef` and add `/whoami` for scripts"
 status: draft
 updated: 2026-10-28
-rfc: "0000-mux-adapter"
+rfc: "0210-mux-adapter"
 cluster: mux-cutover
 packages: []
 deps:

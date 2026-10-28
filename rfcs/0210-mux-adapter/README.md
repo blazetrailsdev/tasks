@@ -1,5 +1,5 @@
 ---
-rfc: "0000-mux-adapter"
+rfc: "0210-mux-adapter"
 title: "Multiplexer adapter: fleet pane control in TypeScript, behind one interface for tmux and rmux"
 status: draft
 created: 2026-10-28
@@ -14,9 +14,7 @@ clusters:
   - mux-backends
 ---
 
-<!-- Unnumbered until merge. -->
-
-# RFC — Multiplexer adapter: fleet pane control in TypeScript, behind one interface for tmux and rmux
+# RFC 0210 — Multiplexer adapter: fleet pane control in TypeScript, behind one interface for tmux and rmux
 
 ## Summary
 

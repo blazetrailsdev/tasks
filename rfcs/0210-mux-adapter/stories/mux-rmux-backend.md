@@ -2,7 +2,7 @@
 title: "rmux backend"
 status: draft
 updated: 2026-10-28
-rfc: "0000-mux-adapter"
+rfc: "0210-mux-adapter"
 cluster: mux-backends
 packages: []
 deps:
