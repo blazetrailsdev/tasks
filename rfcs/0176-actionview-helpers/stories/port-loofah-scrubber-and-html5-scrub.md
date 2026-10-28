@@ -1,6 +1,6 @@
 ---
 title: "Port Loofah::Scrubber, HTML5::SafeList and HTML5::Scrub over @blazetrails/nokogiri"
-status: ready
+status: in-progress
 updated: 2026-10-28
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9420
+claim: "2026-10-28T22:16:03Z"
+assignee: "crass-invalid-escape-delim-carries-error"
 blocked-by: null
 closed-reason: null
 ---

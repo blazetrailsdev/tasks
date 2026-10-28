@@ -1,6 +1,6 @@
 ---
 title: "Hub and Stats use connectsTo, and the connecting initializers go"
-status: ready
+status: claimed
 updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T22:52:30Z"
+assignee: "check-the-transcript-page-under-its-csp-sandbox"
 blocked-by: null
 closed-reason: null
 ---

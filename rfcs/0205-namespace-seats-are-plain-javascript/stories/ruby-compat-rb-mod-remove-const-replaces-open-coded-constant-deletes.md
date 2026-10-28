@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: port Module#remove_const as rbModRemoveConst; tests stop open-coding Reflect.deleteProperty"
-status: ready
-updated: 2026-10-23
+status: claimed
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 15
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T22:19:20Z"
+assignee: "datetime-to-datetime-temporal-rubyclass-tag-retires"
 blocked-by: null
 closed-reason: null
 ---
