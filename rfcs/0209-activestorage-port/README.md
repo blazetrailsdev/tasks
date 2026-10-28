@@ -136,7 +136,9 @@ memory stays sync.
   Mass assignment (`User.create!(avatar: file)`, `update(avatar: file)`) goes
   through the awaitable `setAttributes` that association writers already use;
   the sync `assignAttributes` and the constructor raise for an attachment key
-  rather than park a promise for `save` to drain. The upload stays in the async
+  rather than park a promise for `save` to drain. `setAttributes` is the multi-attribute form
+  (`await user.setAttributes({ name, avatar })`); there is no generic `set`,
+  which would be invented surface duplicating it. The upload stays in the async
   `after_commit` (`attached/model.rb:144`). `attach`, `detach`, `purge` and
   `purge_later` on `One` / `Many` are async, since each reads, saves or
   deletes. `has_many_attached`'s `photos=` is `setPhotos` the same way.
