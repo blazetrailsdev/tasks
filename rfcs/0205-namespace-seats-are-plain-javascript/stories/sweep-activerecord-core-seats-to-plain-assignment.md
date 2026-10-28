@@ -1,7 +1,7 @@
 ---
 title: "Convert activerecord's core and relation namespace reads to ES imports"
-status: in-progress
-updated: 2026-10-27
+status: done
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
