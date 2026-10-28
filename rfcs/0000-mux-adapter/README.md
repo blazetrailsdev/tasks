@@ -243,9 +243,32 @@ and each one blocks a named step.
 ## Non-goals
 
 - **cmux.** It is macOS-only, and the fleet host is Linux. Supporting it means
-  a second `muxd` on a Mac, with cwd and registry rules for a backend that
-  reports no live cwd. The registry design leaves room for that, but it is a
-  follow-up RFC ("cmux backend via a remote muxd"), not this one.
+  a second `muxd` on a Mac. That is a follow-up RFC ("cmux backend via a
+  remote muxd"), not this one. A probe of cmux 0.65.2.2 on macOS 15.7
+  (2026-10-28) gives that RFC its starting facts:
+  - **Works:**
+    - `new-workspace --cwd --name --focus false` and `new-split`, which
+      return refs
+    - `send`, which queues input until the PTY is ready
+    - `send-key` (`enter`, `ctrl+c`, `escape`)
+    - `read-screen` with `--scrollback --lines`; a 3,013-byte literal with
+      `é→✓` arrived intact
+    - `rename-workspace`, `list-panes`, `workspace list`, `close-workspace`
+  - **No live cwd.** After a `cd`, the surface still showed its spawn
+    directory. cmux sets `reportsLiveCwd = false`, so find depends on the
+    registry's spawn cwd and `/link` (see **Pane identity and discovery**).
+  - **No `pipe-pane` equivalent,** so a cmux instance runs with session
+    archiving off (open question 3).
+  - **Socket access is closed by default.** The `cmuxOnly` mode refuses any
+    process not started inside cmux, which includes `muxd`. `password` mode
+    works, but in 0.65.2.2 the password must be set in Settings; a
+    `socketPassword` in `cmux.json` is ignored. So the setup can't be done
+    from config alone.
+  - **`exists` must use `workspace list`.** `identify --workspace <closed
+ref>` exits 0 and reports the focused workspace instead of failing.
+  - **Native ids should be UUIDs** (`--id-format uuids`), not the short
+    `workspace:N` refs, so registry keys never depend on how refs are
+    numbered.
 - **Moving the spawn loop, webhook ingest, SSE or `:8081` out of ringo.** RFC
   0136's boundary stands except for pane control.
 - **Running `muxd` inside trailmap's container.** That keeps every mount
@@ -374,3 +397,5 @@ None left. Each one is resolved below.
     tmux command against rmux 0.7.1,
   - pane logs are optional per backend,
   - the registry lives in `muxd`'s own SQLite file.
+- 2026-10-28: recorded the cmux 0.65.2.2 probe results in the cmux non-goal
+  for the follow-up RFC.
