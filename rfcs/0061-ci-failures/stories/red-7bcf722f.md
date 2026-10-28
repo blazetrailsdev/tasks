@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite :memory: Tests (1) failing on main @7bcf722f"
-status: ready
+status: closed
 updated: 2026-10-27
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-27T23:22:49Z"
+assignee: "red-7bcf722f"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: solid-queue scheduler.test.ts 'run more than one instance of the scheduler with recurring tasks' hit SQLITE_BUSY (database is locked) on the shared file DB; commit 7bcf722f touches only ruby-compat IO; test passes locally."
 ---
 
 ## Context

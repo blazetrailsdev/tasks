@@ -1,6 +1,6 @@
 ---
 title: "Converge GeneratorBase's hand-rolled file actions onto Thor::Actions and delete them"
-status: in-progress
+status: done
 updated: 2026-10-27
 rfc: "0171-thor-port"
 cluster: null

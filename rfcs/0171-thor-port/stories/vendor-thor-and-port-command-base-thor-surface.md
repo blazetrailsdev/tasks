@@ -1,7 +1,7 @@
 ---
 title: "Rebase Rails::Command::Base onto the Thor port (Base < Thor, Error < Thor::Error, Behavior's Thor::Base.shell) and delete its stand-ins"
-status: ready
-updated: 2026-10-04
+status: claimed
+updated: 2026-10-27
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -16,8 +16,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-27T23:59:41Z"
+assignee: "vendor-thor-and-port-command-base-thor-surface"
 blocked-by: null
 closed-reason: null
 ---
