@@ -2,7 +2,7 @@
 title: "activerecord: Core#initialize is Base's constructor, with API#initialize inlined at its super"
 status: ready
 updated: 2026-10-11
-rfc: "0188-module-initialize-inlined-into-constructors"
+rfc: "0123-blocked-convergence-holding"
 cluster: conversion
 packages: ["activerecord"]
 deps: ["activerecord-base-includes-activemodel-api-instead-of-extending-model"]
