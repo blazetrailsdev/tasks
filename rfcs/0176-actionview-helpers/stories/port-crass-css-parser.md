@@ -1,7 +1,7 @@
 ---
 title: "Crass facade over @csstools (parse_properties / parse_component_values / stringify)"
-status: ready
-updated: 2026-10-27
+status: claimed
+updated: 2026-10-28
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: ["html-sanitizer"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T11:49:47Z"
+assignee: "parity-maps-ruby-tracker-onto-tse-tracker-parser-arm"
 blocked-by: null
 closed-reason: null
 ---

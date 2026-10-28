@@ -1,7 +1,7 @@
 ---
 title: "Take mini_magick to zero tsc errors and no any"
-status: ready
-updated: 2026-10-22
+status: claimed
+updated: 2026-10-28
 rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-polish
 packages: ["mini-magick"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T11:49:07Z"
+assignee: "mini-magick-image-hash-sync-over-async-signature"
 blocked-by: null
 ---
 

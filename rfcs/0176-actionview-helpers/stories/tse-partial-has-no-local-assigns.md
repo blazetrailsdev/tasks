@@ -1,7 +1,7 @@
 ---
 title: "A .tse partial cannot read an optional local, so every caller must pass it"
-status: draft
-updated: 2026-10-27
+status: done
+updated: 2026-10-28
 rfc: "0176-actionview-helpers"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9149
+claim: "2026-10-28T11:49:47Z"
+assignee: "parity-maps-ruby-tracker-onto-tse-tracker-parser-arm"
 blocked-by: null
 closed-reason: null
 ---
