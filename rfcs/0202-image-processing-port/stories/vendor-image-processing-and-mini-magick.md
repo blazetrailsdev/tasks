@@ -1,6 +1,6 @@
 ---
 title: "Vendor image_processing 1.14.0 (mini_magick 5.2.0 is already vendored)"
-status: claimed
+status: in-progress
 updated: 2026-10-28
 rfc: "0202-image-processing-port"
 cluster: ip-vendor
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: trails#9408
 claim: "2026-10-28T16:28:55Z"
 assignee: "vendor-image-processing-and-mini-magick"
 blocked-by: null

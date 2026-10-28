@@ -1,6 +1,6 @@
 ---
 title: "Name ActionController::Parameters at module eval without a const_set seat for its YAML hook"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

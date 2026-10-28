@@ -1,6 +1,6 @@
 ---
 title: "rbModConstMissing's NameError drops uninitialized_constant's receiver"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

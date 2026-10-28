@@ -1,6 +1,6 @@
 ---
 title: "prism-render-parser-walks-a-js-ast"
-status: claimed
+status: blocked
 updated: 2026-10-28
 rfc: "0176-actionview-helpers"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-10-28T16:26:59Z"
 assignee: "crass-parse-properties-at-rule-tests"
-blocked-by: null
+blocked-by: "owner decision: JS parser for actionview runtime (typescript/unstable as a runtime dependency vs another parser); bundle hard rule forbids new third-party runtime deps"
 closed-reason: null
 ---
 

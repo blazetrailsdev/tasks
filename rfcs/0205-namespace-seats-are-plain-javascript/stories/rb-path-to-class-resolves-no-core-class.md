@@ -1,6 +1,6 @@
 ---
 title: "rbPathToClass resolves no core class, so Marshal.load needs Hash seated by the caller"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

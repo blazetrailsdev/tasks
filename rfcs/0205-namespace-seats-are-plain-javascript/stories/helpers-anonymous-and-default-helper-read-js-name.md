@@ -1,6 +1,6 @@
 ---
 title: "Helpers' anonymous? and default_helper_module! read the JS name, not Module#name"
-status: claimed
+status: in-progress
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9411
 claim: "2026-10-28T16:19:26Z"
 assignee: "call-gate-credits-typed-fetch-on-plain-object-config-receivers"
 blocked-by: null

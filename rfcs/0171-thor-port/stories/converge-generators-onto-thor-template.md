@@ -1,6 +1,6 @@
 ---
 title: "converge-generators-onto-thor-template"
-status: draft
+status: in-progress
 updated: 2026-10-28
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9410
+claim: "2026-10-28T16:41:26Z"
+assignee: "converge-generators-onto-thor-template"
 blocked-by: null
 closed-reason: null
 ---

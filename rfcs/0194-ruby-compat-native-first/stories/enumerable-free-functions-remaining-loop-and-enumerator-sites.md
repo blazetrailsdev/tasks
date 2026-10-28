@@ -1,6 +1,6 @@
 ---
 title: "enumerable-free-functions-remaining-loop-and-enumerator-sites"
-status: ready
+status: claimed
 updated: 2026-10-28
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T16:49:19Z"
+assignee: "enumerable-free-functions-remaining-loop-and-enumerator-sites"
 blocked-by: null
 closed-reason: null
 ---

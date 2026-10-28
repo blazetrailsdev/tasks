@@ -1,6 +1,6 @@
 ---
 title: "solid-queue test helper and test job classes are registered constants, not toString-named"
-status: claimed
+status: in-progress
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#9411
 claim: "2026-10-28T16:19:26Z"
 assignee: "call-gate-credits-typed-fetch-on-plain-object-config-receivers"
 blocked-by: null

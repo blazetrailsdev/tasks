@@ -1,6 +1,6 @@
 ---
 title: "Give msgpack's C-defined classes and nokogiri class-path table rows so their seats can go plain"
-status: claimed
+status: ready
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: "2026-10-28T16:19:26Z"
-assignee: "call-gate-credits-typed-fetch-on-plain-object-config-receivers"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

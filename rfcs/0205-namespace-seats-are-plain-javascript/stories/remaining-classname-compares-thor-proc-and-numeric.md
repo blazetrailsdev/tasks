@@ -1,6 +1,6 @@
 ---
 title: "Remaining rbObjClassname compares: thor Proc checks and ActiveModel numeric class compare"
-status: ready
+status: claimed
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T16:49:19Z"
+assignee: "enumerable-free-functions-remaining-loop-and-enumerator-sites"
 blocked-by: null
 closed-reason: null
 ---
