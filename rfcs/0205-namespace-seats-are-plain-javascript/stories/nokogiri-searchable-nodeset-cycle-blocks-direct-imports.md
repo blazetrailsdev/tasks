@@ -1,6 +1,6 @@
 ---
 title: "Break nokogiri's Searchable/NodeSet load cycle so its XML reads become direct imports"
-status: ready
+status: in-progress
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9416
+claim: "2026-10-28T17:49:26Z"
+assignee: "routing-url-for-and-collector-plain-modules"
 blocked-by: null
 closed-reason: null
 ---

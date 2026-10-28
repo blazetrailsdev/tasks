@@ -1,6 +1,6 @@
 ---
 title: "crass-parse-properties-at-rule-tests"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0176-actionview-helpers"
 cluster: null

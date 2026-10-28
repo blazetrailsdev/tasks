@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Tests (1) failing on main @e22ae087"
-status: ready
+status: closed
 updated: 2026-10-28
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T17:44:45Z"
+assignee: "red-e22ae087"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: solid-queue scheduler.test.ts 'run more than one instance of the scheduler with recurring tasks' hit SQLite BusyException (database is locked) under CI load; e22ae087 only touched packages/website; passes 3/3 locally."
 ---
 
 ## Context

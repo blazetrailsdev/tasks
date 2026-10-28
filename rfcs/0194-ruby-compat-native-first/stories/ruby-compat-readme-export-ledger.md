@@ -1,16 +1,16 @@
 ---
 title: "ruby-compat README: the rule-1 table becomes the full export ledger"
-status: ready
-updated: 2026-10-25
+status: in-progress
+updated: 2026-10-28
 rfc: "0194-ruby-compat-native-first"
 cluster: ledger
 packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
 est-loc: 550
-pr: null
-claim: null
-assignee: null
+pr: trails#9415
+claim: "2026-10-28T17:19:34Z"
+assignee: "ruby-compat-readme-export-ledger"
 blocked-by: null
 closed-reason: null
 ---

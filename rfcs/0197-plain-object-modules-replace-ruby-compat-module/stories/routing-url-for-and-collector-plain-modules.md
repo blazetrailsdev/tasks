@@ -1,6 +1,6 @@
 ---
 title: "routing-url-for-and-collector-plain-modules"
-status: ready
+status: blocked
 updated: 2026-10-28
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-28T17:49:26Z"
+assignee: "routing-url-for-and-collector-plain-modules"
+blocked-by: "Live include: ActionView::RoutingUrlFor.include(ActionDispatch::Routing::UrlFor) runs in actionview/railtie.rb:100 (trailties action-view.ts onLoad) after view classes include RoutingUrlFor, and Collector#generate_method_for_mime runs from Mime::Type.register_callback (collector.rb:21-23); both wait on the owner's live-include decision (same as actionpack-renderers-and-rendering-chain-without-live-include)"
 closed-reason: null
 ---
 
