@@ -1,7 +1,7 @@
 ---
 title: "Register controllers in the constant table so controllerClassFor can constantize instead of throwing"
-status: ready
-updated: 2026-10-27
+status: done
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9389
+claim: "2026-10-28T14:19:08Z"
+assignee: "native-fetch-ternary-sites-audit-forwarded-undefined-keywords"
 blocked-by: null
 closed-reason: null
 ---

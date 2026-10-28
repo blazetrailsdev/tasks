@@ -1,6 +1,6 @@
 ---
 title: "track-trails-from-main-in-trailmap"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null

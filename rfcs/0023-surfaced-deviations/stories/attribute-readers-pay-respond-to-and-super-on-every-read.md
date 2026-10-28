@@ -1,6 +1,6 @@
 ---
 title: "activemodel: a plain attribute read still pays respond_to? and super dispatch, ~1.5-2x 9e17ddc98d"
-status: draft
+status: closed
 updated: 2026-10-28
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "filed under retired 0023; superseded by the package-bucket copy"
 ---
 
 ## Context

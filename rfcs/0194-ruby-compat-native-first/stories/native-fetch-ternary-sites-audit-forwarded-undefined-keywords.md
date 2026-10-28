@@ -1,6 +1,6 @@
 ---
 title: "Audit converted fetch ternaries for keywords forwarded as undefined"
-status: ready
+status: in-progress
 updated: 2026-10-28
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9400
+claim: "2026-10-28T14:19:08Z"
+assignee: "native-fetch-ternary-sites-audit-forwarded-undefined-keywords"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Vendor image_processing 1.14.0 (mini_magick 5.2.0 is already vendored)"
 status: draft
-updated: 2026-10-28
+updated: 2026-10-21
 rfc: "0202-image-processing-port"
 cluster: ip-vendor
 packages: ["image-processing"]

@@ -1,7 +1,7 @@
 ---
 title: "Retire Array#compact/count/include? ruby-compat rows once their sites write the native form"
-status: ready
-updated: 2026-10-27
+status: claimed
+updated: 2026-10-28
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T14:49:24Z"
+assignee: "retire-array-helper-rows-after-native-sweep"
 blocked-by: null
 closed-reason: null
 ---

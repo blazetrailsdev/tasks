@@ -12,7 +12,7 @@ priority: null
 pr: trailmap#89
 claim: "2026-10-28T13:08:18Z"
 assignee: "split-the-render-pages-the-rails-way-story"
-blocked-by: "criteria 1-3 in trailmap#89; criterion 4 needs trails story view-shim-scope-falls-back-to-any-for-unknown-names (unknown names type as any)"
+blocked-by: "criteria 1-3 landed in trailmap#89; criterion 4 needs trails story view-shim-unknown-name-types-as-any"
 closed-reason: null
 ---
 

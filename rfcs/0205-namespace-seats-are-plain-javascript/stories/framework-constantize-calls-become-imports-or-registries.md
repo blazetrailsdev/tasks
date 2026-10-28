@@ -1,6 +1,6 @@
 ---
 title: "framework-constantize-calls-become-imports-or-registries"
-status: draft
+status: ready
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

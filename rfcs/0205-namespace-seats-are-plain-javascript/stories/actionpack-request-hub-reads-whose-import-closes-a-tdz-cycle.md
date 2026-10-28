@@ -1,6 +1,6 @@
 ---
 title: "Break the request.ts cycle so actionpack's five remaining Request reads become imports"
-status: ready
+status: blocked
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-28T14:19:08Z"
+assignee: "native-fetch-ternary-sites-audit-forwarded-undefined-keywords"
+blocked-by: "Needs owner decision: reproduced — csp.ts importing Request from request.ts makes 'CspRequest' TDZ when csp.ts is the entry (request.ts:856 include(Request, CspRequest) runs before csp.ts body). Rails includes ContentSecurityPolicy::Request in request.rb:27 and the module lives in content_security_policy.rb, so no file move keeps Rails layout; every static-ESM fix needs the mixin hoisted or moved. Namespace read is the sanctioned module-eval shape."
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Class-path table applies TS_CLASS_RENAMES segments (Railtie/Railties/Rails)"
-status: ready
-updated: 2026-10-27
+status: claimed
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T14:49:24Z"
+assignee: "retire-array-helper-rows-after-native-sweep"
 blocked-by: null
 closed-reason: null
 ---

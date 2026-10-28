@@ -1,7 +1,7 @@
 ---
 title: "rbModConstGet raises for a non-constant name and reads later segments through ancestors"
-status: ready
-updated: 2026-10-27
+status: closed
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: owner ruling 2026-10-28 (closed trails#9397): no ported const_get walk; computed lookups become explicit registries, tracked by constant-lookup-helpers-keep-only-rails-const-get-sites."
 ---
 
 ## Context

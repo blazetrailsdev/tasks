@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: Exception#name answers the receiver's own class path, not the nearest ancestor's assigned string"
-status: ready
-updated: 2026-10-27
+status: claimed
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: ["ruby-compat", "activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T14:49:24Z"
+assignee: "retire-array-helper-rows-after-native-sweep"
 blocked-by: null
 closed-reason: null
 ---

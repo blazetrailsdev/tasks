@@ -1,6 +1,6 @@
 ---
 title: "Rebase GeneratorBase onto Thor::Group + Thor::Shell and delete its dispatch / invoke / hook / say copies"
-status: claimed
+status: done
 updated: 2026-10-28
 rfc: "0171-thor-port"
 cluster: null
@@ -16,7 +16,7 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: 2
-pr: null
+pr: trails#9399
 claim: "2026-10-28T13:01:29Z"
 assignee: "rebase-generator-base-onto-thor-group"
 blocked-by: null

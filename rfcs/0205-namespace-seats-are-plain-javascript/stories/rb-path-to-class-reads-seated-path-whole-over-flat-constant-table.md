@@ -1,7 +1,7 @@
 ---
 title: "Seat every intermediate namespace so rbPathToClass drops its whole-path table read"
-status: ready
-updated: 2026-10-27
+status: closed
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: owner ruling 2026-10-28 (closed trails#9397): rbPathToClass is not refined into a per-segment const walk; it resolves through explicit registries and the table is deleted by delete-register-constant-and-the-top-level-constant-table."
 ---
 
 ## Context

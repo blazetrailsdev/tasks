@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc-views: an unknown name in a template types as any, so tsc accepts it"
-status: draft
+status: closed
 updated: 2026-10-28
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "filed under retired 0023; superseded by the package-bucket copy"
 ---
 
 ## Context

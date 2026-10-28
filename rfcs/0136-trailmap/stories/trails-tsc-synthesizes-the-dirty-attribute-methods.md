@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc: synthesize the attribute-method family (Was, Changed, …) for columns and aliases"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9402
+claim: "2026-10-28T14:43:06Z"
+assignee: "split-the-render-pages-the-rails-way-story"
 blocked-by: null
 closed-reason: null
 ---

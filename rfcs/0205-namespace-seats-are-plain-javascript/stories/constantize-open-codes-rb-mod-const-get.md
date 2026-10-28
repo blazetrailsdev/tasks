@@ -1,6 +1,6 @@
 ---
 title: "Port rb_mod_const_get so constantize is Object.const_get alone"
-status: in-progress
+status: closed
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#9397
 claim: "2026-10-28T13:19:20Z"
 assignee: "enumerable-free-functions-remaining-loop-and-enumerator-sites"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: owner ruling 2026-10-28 — constantize/const_get lookups are replaced by plain ES imports and explicit registries, not a ported rb_mod_const_get walk (trails#9397 closed)."
 ---
 
 ## Context

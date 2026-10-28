@@ -1,7 +1,7 @@
 ---
 title: "Vendor mail 2.8.1, mini_mime 1.1.5 and net-smtp 0.5.1 with their specs"
-status: draft
-updated: 2026-10-22
+status: in-progress
+updated: 2026-10-28
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-vendor
 packages: ["mail", "mini-mime"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9401
+claim: "2026-10-28T14:56:28Z"
+assignee: "vendor-mail-mini-mime-and-net-smtp"
 blocked-by: null
 ---
 

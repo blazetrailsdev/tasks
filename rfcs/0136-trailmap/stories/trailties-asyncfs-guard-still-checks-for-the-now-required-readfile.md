@@ -1,7 +1,7 @@
 ---
 title: "The trailties AsyncFs guard still checks for the now-required readFile"
-status: ready
-updated: 2026-10-12
+status: done
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9393
+claim: "2026-10-28T14:43:06Z"
+assignee: "split-the-render-pages-the-rails-way-story"
 blocked-by: null
 closed-reason: null
 ---
