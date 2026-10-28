@@ -2,7 +2,7 @@
 title: "activemodel: API, Attributes and SerializeCastValue initialize are inlined into their includers' constructors"
 status: blocked
 updated: 2026-10-14
-rfc: "0188-module-initialize-inlined-into-constructors"
+rfc: "0123-blocked-convergence-holding"
 cluster: conversion
 packages: ["activemodel"]
 deps:
