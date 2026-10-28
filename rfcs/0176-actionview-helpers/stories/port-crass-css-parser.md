@@ -43,21 +43,30 @@ Rule and stylesheet parsing (`parse_rules`, `parse_stylesheet`,
 
 ## Acceptance criteria
 
-- `@csstools/css-tokenizer` and `@csstools/css-parser-algorithms` added as
-  exact-version dependencies of `html-sanitizer`.
-- `packages/html-sanitizer/src/crass.ts` (+ `crass/parser.ts`, mirroring
-  `crass.rb` / `crass/parser.rb`) exposes `Crass.parseProperties`,
-  `Crass.Parser` with `#parseComponentValues`, and `Parser.stringify`. Each
-  maps `@csstools` tokens and component values to Crass node objects
-  (`{ node: "ident", raw, value, ... }`; a Ruby Symbol is a JS string per
-  CLAUDE.md). Facade-only members carry `@noRailsEquivalent PERMANENT`.
-- Crass's tests for those entry points ported: `test_parse_properties.rb`,
-  `test_serialization.rb`, and the `component_value_list` / `declaration_list`
-  groups of `test_css_parsing_tests.rb` over `test/css-parsing-tests/*.json`.
+- `@csstools/css-tokenizer` added as an exact-version dependency of
+  `html-sanitizer`. `@csstools/css-parser-algorithms` is not used: its
+  component-value tree drops the non-standard `:whitespace` / `:semicolon` /
+  `:tokens` nodes that `parse_properties` returns and `stringify` reads
+  (`crass/parser.rb:74-122,276-323`), so the parser subset those entry points
+  reach is ported line for line over the mapped tokens instead.
+- `packages/html-sanitizer/src/crass.ts` (+ `crass/parser.ts`,
+  `crass/token-scanner.ts`, mirroring `crass.rb` / `crass/parser.rb` /
+  `crass/token-scanner.rb`) exposes `Crass.parseProperties`, `Crass.Parser`
+  with `#parseComponentValues`, and `Parser.stringify`. `crass/tokenizer.ts`
+  maps `@csstools` tokens onto the token hashes `Tokenizer#create_token`
+  builds (a Ruby Symbol is a JS string per CLAUDE.md). Facade-only members
+  carry `@noRailsEquivalent PERMANENT`.
+- Crass's tests for those entry points ported: `test_parse_properties.rb`
+  (its two at-rule tests by `crass-parse-properties-at-rule-tests`) and the
+  `component_value_list` / `declaration_list` groups of
+  `test_css_parsing_tests.rb` over `test/css-parsing-tests/*.json`.
+  `test_serialization.rb` is not ported: every test there builds its tree
+  with `Crass.parse` / `Parser.parse_rules` (`test_serialization.rb:14,25,31,38,68`),
+  which this decision leaves unported.
 - Where `@csstools` tokenizes differently from Crass (Crass follows an older
   spec draft: `bad_url`, unicode-range, escapes), the facade maps to Crass's
   output. Any test that can't match is parked with a `PERMANENT-SKIP:` line
   naming the spec difference.
-- The test files for rules and stylesheets (`test_parse_rules.rb`,
-  `test_parse_stylesheet.rb`, `shared/parse_rules.rb`) get `UNPORTED_FILES`
-  rows citing this decision.
+- No `UNPORTED_FILES` rows for the rule and stylesheet test files: crass is
+  `compareTests: false` in `vendor/sources.ts`, so `parity:test` never reads
+  them.
