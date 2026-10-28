@@ -1,57 +1,59 @@
 ---
 rfc: "0202-image-processing-port"
-title: "image_processing over wasm-vips, and mini_magick shelling out"
+title: "image_processing over wasm-vips, on the mini_magick port"
 status: draft
 created: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-28
 owner: "@deanmarano"
 packages:
   - image-processing
-  - mini-magick
 clusters:
   - ip-vendor
-  - mini-magick
   - ip-core
   - ip-backends
 ---
 
-# RFC 0202 — image_processing over wasm-vips, and mini_magick shelling out
+# RFC 0202 — image_processing over wasm-vips, on the mini_magick port
 
 ## Summary
 
 Port the `image_processing` gem (1.14.0, `vendor/rails/v8.0.2/Gemfile.lock:289`),
 the library ActiveStorage builds image variants with
 (`activestorage/lib/active_storage/transformers/image_processing_transformer.rb:4`),
-and the `mini_magick` gem (5.2.0, `Gemfile.lock:352`) its MiniMagick backend
-drives. The repo owner ruled the shape on 2026-10-21:
+over the `mini_magick` gem (5.2.0, `Gemfile.lock:352`) its MiniMagick backend
+drives. mini_magick itself is ported by RFC 0203
+(`mini-magick-port-to-100`) and has landed as `packages/mini-magick`; this RFC
+consumes it. The repo owner ruled the shape on 2026-10-21:
 
 - `ImageProcessing::Vips` is backed by npm **`wasm-vips`**, libvips compiled
   to WebAssembly (first ruled `sharp`, switched the same day; see Alternatives).
 - `mini_magick` is ported as the gem is: it builds ImageMagick command lines and
-  **shells out**, through `child_process`, async.
+  **shells out**, through `child_process`, async. That port is RFC 0203's, and
+  is on `main`.
 - `ImageProcessing::Chainable` is a **Proxy that collects operations and is
   thenable**: `await` runs the pipeline, as `call` does.
 
 ## Motivation
 
 trails has no image pipeline. The gem is small (lib 802 lines, 178 tests), its
-core is pure Ruby, and both backends now have a decided Node footing. It is the
+core is pure Ruby, and both backends now have a Node footing: wasm-vips for
+Vips, and the landed `@blazetrails/mini-magick` for MiniMagick. It is the
 prerequisite for ActiveStorage variants, and a second gem for the
 generate-then-polish process RFC 0201 used for marcel.
 
-Shape of the source (tag `v1.14.0` of janko/image_processing, and `v5.2.0` of
-minimagick/minimagick):
+Shape of the source (tag `v1.14.0` of janko/image_processing; mini_magick
+`v5.2.0` is vendored at `vendor/mini_magick/v5.2.0` already):
 
-| Part                                                         | Lines  | Notes                                                             |
-| ------------------------------------------------------------ | ------ | ----------------------------------------------------------------- |
-| `image_processing/{chainable,builder,pipeline,processor}.rb` | ~310   | pure Ruby builder and pipeline                                    |
-| `image_processing/vips.rb`                                   | 228    | over ruby-vips: becomes `wasm-vips`                               |
-| `image_processing/mini_magick.rb`                            | 260    | over `mini_magick`                                                |
-| `mini_magick` lib                                            | ~1,280 | builds argv, runs `Open3.capture3` with a timeout (`shell.rb:35`) |
+| Part                                                         | Lines  | Notes                                                 |
+| ------------------------------------------------------------ | ------ | ----------------------------------------------------- |
+| `image_processing/{chainable,builder,pipeline,processor}.rb` | ~310   | pure Ruby builder and pipeline                        |
+| `image_processing/vips.rb`                                   | 228    | over ruby-vips: becomes `wasm-vips`                   |
+| `image_processing/mini_magick.rb`                            | 260    | over `mini_magick`                                    |
+| `mini_magick` lib                                            | ~1,280 | ported by RFC 0203 (`packages/mini-magick`), not here |
 
 Tests: image_processing has 178 in Minitest::Spec style (`describe` / `it` /
 `before`), comparing images by perceptual hash (`dhash-vips`,
-`test/test_helper.rb:47-51`). mini_magick has ~137 RSpec examples.
+`test/test_helper.rb:47-51`).
 
 ## Design
 
@@ -115,24 +117,31 @@ modules), runs on Node ≥ 17, threads through worker threads, and is bounded by
 WASM's 4 GB memory; it is slower than native libvips. It is declared an
 optional peer, like `pg` / `mysql2` in activerecord.
 
-### mini_magick shells out
+### mini_magick is RFC 0203's
 
-`MiniMagick::Shell#execute` (`shell.rb:35`) is `Open3.capture3(env, *command,
-stdin_data:, …)` under a timeout: `child_process.execFile` / `spawn` with the
-same argv, stdin and environment, async, raising `MiniMagick::Error` /
-`TimeoutError` as the gem does. ImageMagick 7's `magick` is used when found,
-else the IM6 tools (`mini_magick.rb:19-27`); CI installs ImageMagick.
+`MiniMagick::Shell#execute` (`shell.rb:29-40`) runs `Open3.capture3` under a
+timeout; RFC 0203 ported it over ruby-compat's `Open3.capture3`, async from
+`Shell` up (`mini-magick-shell-over-open3-capture3`, trails#9380), with
+`Tool#method_missing` and `Image#method_missing` as Proxies
+(`mini-magick-method-missing-proxies`, trails#9369) and zero `tsc` errors
+(`mini-magick-typecheck-clean`, trails#9396). Its parity enrollment
+(`mini-magick-parity-enrollment`) is open as trails#9398. The MiniMagick
+backend here calls `@blazetrails/mini-magick`'s `Tool` as `mini_magick.rb`
+calls `MiniMagick::Tool`, and every call it makes is async because
+`Tool#call` is. ImageMagick on the CI runner is installed by RFC 0203.
 
 ### Process
 
-Each package goes marcel's way (RFC 0201): vendor, generate a starting point
+image_processing goes marcel's way (RFC 0201): vendor, generate a starting point
 with the Ruby-to-TS generator, polish on a branch, land. The generator gains
 Minitest::Spec (`describe` / `it` / `before`) and RSpec support on its own
 branch first; that is generator work, not stories here.
 
 ## Non-goals
 
-- **ActiveStorage.** The consumer, its own RFC.
+- **ActiveStorage.** The consumer, its own RFC (`activestorage-port`), whose
+  variant stories depend on this RFC's backends.
+- **mini_magick.** RFC 0203's.
 - **GraphicsMagick** (`MiniMagick.graphicsmagick`, `configuration.rb:12`): kept
   as configuration, not exercised in CI.
 
@@ -149,17 +158,17 @@ branch first; that is generator work, not stories here.
 
 ## Rollout
 
-1. Vendor — `vendor-image-processing-and-mini-magick`
-2. mini_magick — `mini-magick-port`
-3. Core — `image-processing-chainable-thenable-proxy`, `image-processing-pipeline-and-processor`
-4. Backends — `image-processing-mini-magick-backend`, `image-processing-vips-backend-over-wasm-vips`
-5. Tests — `image-processing-perceptual-hash-test-helper`
+1. Vendor — `vendor-image-processing-and-mini-magick` (image_processing only;
+   mini_magick is vendored)
+2. Core — `image-processing-chainable-thenable-proxy`, `image-processing-pipeline-and-processor`
+3. Backends — `image-processing-mini-magick-backend`, `image-processing-vips-backend-over-wasm-vips`
+4. Tests — `image-processing-perceptual-hash-test-helper`
 
 ## Verification
 
-- `mini_magick`'s and `image_processing`'s ported tests pass, each skip a
+- `image_processing`'s ported tests pass, each skip a
   `PERMANENT-SKIP` citing a ruling here.
-- `parity:api` and `parity:test` report both packages at 100%.
+- `parity:api` and `parity:test` report image-processing at 100%.
 - CLAUDE.md's `method_missing` table has the Chainable row.
 
 ## Open questions
@@ -179,3 +188,8 @@ metadata setters (present).
 
 - 2026-10-21: initial draft
 - 2026-10-21: Vips backend switched from sharp to wasm-vips (owner ruling)
+- 2026-10-28: aligned with RFC 0203 and the landed `packages/mini-magick`: the
+  `mini-magick-port` story is removed (RFC 0203 replaces it), the vendor story
+  covers image_processing only, the MiniMagick backend depends on
+  `mini-magick-typecheck-clean`, and `mini-magick` leaves this RFC's packages
+  and clusters
